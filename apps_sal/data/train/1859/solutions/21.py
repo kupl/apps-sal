@@ -6,8 +6,8 @@ class Solution:
                 for jy in range(j, j + n):
                     if lst[ix][jy] == 1:
                         ones += 1
-            return ones == n*n
-        
+            return ones == n * n
+
         n = len(matrix)
         m = len(matrix[0])
         ans = 0

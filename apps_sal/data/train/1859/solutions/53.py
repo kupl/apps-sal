@@ -10,10 +10,10 @@ class Solution:
                     result[i][j] = matrix[i][j]
                 else:
                     result[i][j] = matrix[i][j] * (1 + min(
-                            min(result[i-1][j],
-                                result[i][j-1]
+                        min(result[i - 1][j],
+                            result[i][j - 1]
                             ),
-                            result[i-1][j-1],
+                        result[i - 1][j - 1],
                     ))
                 ss += result[i][j]
         return ss

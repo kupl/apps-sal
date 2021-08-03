@@ -9,8 +9,6 @@ class Solution:
         for i in range(m):
             for j in range(n):
                 if matrix[i][j] == 1:
-                    dp[i+1][j+1] = min(dp[i+1][j],dp[i][j+1],dp[i][j]) + 1
-                    res += dp[i+1][j+1]
+                    dp[i + 1][j + 1] = min(dp[i + 1][j], dp[i][j + 1], dp[i][j]) + 1
+                    res += dp[i + 1][j + 1]
         return res
-        
-

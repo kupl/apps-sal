@@ -26,7 +26,7 @@ class Solution:
                 side += 1
                 pre = nxt
             return temp
-            
+
         res = 0
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):

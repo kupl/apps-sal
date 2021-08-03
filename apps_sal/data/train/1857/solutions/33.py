@@ -9,7 +9,7 @@ class Solution:
                 right.add(row)
             if col < 8 and col > 3:
                 mid.add(row)
-                
+
         for i in (left | right | mid):
             if i not in mid or i not in left or i not in right:
                 count += 1

@@ -36,4 +36,3 @@ class Solution:
                             vis.add((node[0], node[1], 0))
                             q.append((node[0], node[1], 0, node[3] + 1))
         return -1
-

@@ -1,6 +1,7 @@
 class Solution:
     def countSquares(self, matrix: List[List[int]]) -> int:
         import copy
+
         def grow_sqaure(x, y):
             oriX = copy.copy(x)
             oriY = copy.copy(y)
@@ -9,8 +10,8 @@ class Solution:
             if matrix[x][y] == 1:
                 still_square = True
             while x < len(matrix) and y < len(matrix[0]) and still_square:
-                for i in range(oriX, x+1):
-                    for j in range(oriY, y+1):
+                for i in range(oriX, x + 1):
+                    for j in range(oriY, y + 1):
                         # print(oriX,oriY, x, y)
                         if matrix[i][j] != 1:
                             still_square = False

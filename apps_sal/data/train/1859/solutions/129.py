@@ -9,9 +9,9 @@ class Solution:
             for j in range(0, m):
                 if matrix[i][j] == 1:
                     squares += self.get_squares(matrix, i, j, n, m)
-        
+
         return squares
-    
+
     def get_squares(self, matrix, i, j, n, m):
         count = 1
         s = 2

@@ -6,7 +6,7 @@ class Solution:
         topleft = [0 for i in matrix[0]]
         totop = [0 for i in matrix[0]]
         for i in range(len(matrix)):
-            toleft, nextarea = 0, [0 for i in range(len(matrix[0])+1)]
+            toleft, nextarea = 0, [0 for i in range(len(matrix[0]) + 1)]
             for j in range(len(matrix[0])):
                 if matrix[i][j] == 1:
                     totop[j] += 1

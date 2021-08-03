@@ -16,4 +16,3 @@ class FindElements:
 
     def find(self, target: int) -> bool:
         return target in self.exists
-

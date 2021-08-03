@@ -7,7 +7,7 @@ class Solution:
             first = False
             second = False
             third = False
-            
+
             if all((row, col) not in reserved for col in range(2, 6)):
                 first = True
             if all((row, col) not in reserved for col in range(4, 8)):
@@ -19,5 +19,5 @@ class Solution:
                 res += 2
             elif first or second or third:
                 res += 1
-        
-        return res + 2*(n - len(reserved_rows))
+
+        return res + 2 * (n - len(reserved_rows))

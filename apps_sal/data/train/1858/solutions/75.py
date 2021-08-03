@@ -7,14 +7,12 @@
 class FindElements:
 
     def __init__(self, root: TreeNode):
-        
-        self.val =  []
-        root.val = 0 
+
+        self.val = []
+        root.val = 0
         self.root = self.helper(root)
-        
-        
-        
-    def helper(self,root):
+
+    def helper(self, root):
         if root:
             self.val.append(root.val)
             if root.left:
@@ -24,15 +22,13 @@ class FindElements:
                 root.right.val = 2 * root.val + 2
                 r = self.helper(root.right)
             return root
-        return 
-        
+        return
 
     def find(self, target: int) -> bool:
-        
+
         return target in self.val
         # return self.helper2(self.root, target)
-        
-        
+
     '''def helper2(self, root, target):
         if root:
             if root.val == target:
@@ -43,11 +39,8 @@ class FindElements:
             return l or r  
         return False
     '''
-        
-        
 
 
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
-

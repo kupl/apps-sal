@@ -10,13 +10,13 @@ class Solution:
             for i in range(n):
                 for j in range(n):
                     if dist[i][j] > (d := dist[i][k] + dist[k][j]):
-                        dist[i][j] =  d
+                        dist[i][j] = d
         ans = {}
-        for i,a in enumerate(dist):
+        for i, a in enumerate(dist):
             for b in a:
-                if(b<=distanceThreshold):
+                if(b <= distanceThreshold):
                     if(i in ans):
-                        ans[i] +=1
+                        ans[i] += 1
                     else:
                         ans[i] = 1
         ans2 = 0
@@ -27,4 +27,3 @@ class Solution:
                 minValue = value
                 ans2 = key
         return ans2
-

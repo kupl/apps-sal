@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 class FindElements:
-    
+
     def __init__(self, root: TreeNode):
         root.val = 0
         nodes = [root]
@@ -33,4 +33,3 @@ class FindElements:
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
-

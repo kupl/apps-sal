@@ -17,4 +17,3 @@ class Solution:
                 if h and r < n and grid[r][c] == 0:
                     dp[r][c][0] = min(dp[r][c][0], dp[r][c][1] + 1)
         return dp[n][n - 1][0] if dp[n][n - 1][0] < float('inf') else -1
-

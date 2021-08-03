@@ -1,7 +1,7 @@
 class Solution:
     def videoStitching(self, clips: List[List[int]], T: int) -> int:
         clips.sort(key=lambda x: [x[0], -x[1]])
-        res = 0            
+        res = 0
         r = 0
         new_r = 0
         # print(clips)
@@ -22,4 +22,3 @@ class Solution:
         if r < T and new_r >= T:
             res += 1
         return res
-

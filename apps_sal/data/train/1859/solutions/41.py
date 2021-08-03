@@ -8,7 +8,7 @@ class Solution:
                 if not matrix[i][j]:
                     dp[j + 1] = 0
                     continue
-                length = min(dp[j + 1], dp[j]) 
+                length = min(dp[j + 1], dp[j])
                 dp[j + 1] = length + matrix[i - length][j - length]
                 tot += dp[j + 1]
-        return tot 
+        return tot

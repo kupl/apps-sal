@@ -1,7 +1,7 @@
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         # 构建dist矩阵
-        dist = [[float('inf')] * n for _ in  range(n)]
+        dist = [[float('inf')] * n for _ in range(n)]
         for i, j, w in edges:
             dist[i][j] = w
             dist[j][i] = w
@@ -24,4 +24,3 @@ class Solution:
                 minCnt = cnt
                 res = i
         return res
-

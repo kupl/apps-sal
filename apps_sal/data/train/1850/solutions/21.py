@@ -7,24 +7,28 @@ class Solution:
             adj_list[v2].append(v1)
         root = 0
 
-        subT_size = [0]*N
-        def postorder(t, par_t)->int:
+        subT_size = [0] * N
+
+        def postorder(t, par_t) -> int:
             ans = 0
-            for c in adj_list[t] :
-                if c == par_t: continue
+            for c in adj_list[t]:
+                if c == par_t:
+                    continue
                 ans += postorder(c, t) + subT_size[c]
                 subT_size[t] += subT_size[c]
             subT_size[t] += 1
             return ans
 
-        res = [0]*N
+        res = [0] * N
+
         def preorder(t, par_t):
             for c in adj_list[t]:
-                if c == par_t: continue
+                if c == par_t:
+                    continue
                 res[c] = res[t] - subT_size[c] * 2 + tot
                 preorder(c, t)
 
-        # main  
+        # main
         res[root] = postorder(root, -1)
         tot = subT_size[root]
         preorder(root, -1)

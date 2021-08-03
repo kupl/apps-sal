@@ -6,41 +6,33 @@ class Solution:
         self.neighbors = []
         for i in range(N):
             self.neighbors.append(set())
-            
+
         for e in edges:
             self.neighbors[e[0]].add(e[1])
             self.neighbors[e[1]].add(e[0])
 
-        
         self.visit(0, set([-1]))
 #        print(\"child num:\", self.childnum)
 #        print(\"cdist\", self.cdist)
         self.visit2(0, set([-1]))
         return self.cdist
-            
-            
+
     def visit2(self, node, pre):
         children = self.neighbors[node] - pre
         pre = pre.pop()
         if pre != -1:
-            self.cdist[node] = self.cdist[pre] + self.N - 2*(self.childnum[node] + 1)
+            self.cdist[node] = self.cdist[pre] + self.N - 2 * (self.childnum[node] + 1)
         for c in children:
             self.visit2(c, set([node]))
-        
-            
+
     def visit(self, node, pre):
         children = self.neighbors[node] - pre
-        #print(\"node\", node, \"children\", children)
+        # print(\"node\", node, \"children\", children)
         for c in children:
             self.visit(c, set([node]))
         for c in children:
-            #print(self.matrix)
+            # print(self.matrix)
             self.childnum[node] += self.childnum[c] + 1
             self.cdist[node] += self.cdist[c]
-            
+
         self.cdist[node] += self.childnum[node]
-    
-
-        
-        
-

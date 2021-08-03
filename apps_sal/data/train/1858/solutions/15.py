@@ -4,7 +4,7 @@ class FindElements:
         self.root = root
         self.exists = set()
 
-        def inner(node: TreeNode, my_val: int):            
+        def inner(node: TreeNode, my_val: int):
             self.exists.add(my_val)
             if node.left:
                 inner(node.left, 2 * my_val + 1)
@@ -15,4 +15,3 @@ class FindElements:
 
     def find(self, target: int) -> bool:
         return target in self.exists
-

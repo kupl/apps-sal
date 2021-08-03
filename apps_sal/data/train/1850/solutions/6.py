@@ -8,7 +8,8 @@ class Solution:
         root = 0
 
         subT_size = {}
-        def postorder(t, par_t)->int:
+
+        def postorder(t, par_t) -> int:
             # returns the sum of distance from t to subtree(t)
             if len([c for c in adj_list[t] if c != par_t]) == 0:
                 subT_size[t] = 1
@@ -18,14 +19,15 @@ class Solution:
                 subT_size[t] = sum(subT_size[c] for c in adj_list[t] if c != par_t) + 1
                 return ans + subT_size[t] - 1
 
-        res = [0]*N
+        res = [0] * N
+
         def preorder(t, par_t):
             res[t] = res[par_t] - subT_size[t] * 2 + tot
             for c in adj_list[t]:
                 if c != par_t:
                     preorder(c, t)
 
-        # main  
+        # main
         res[root] = postorder(root, -1)
         tot = subT_size[root]
         print(subT_size)
@@ -33,4 +35,3 @@ class Solution:
             preorder(c, root)
 
         return res
-

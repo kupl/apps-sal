@@ -1,7 +1,9 @@
 import numpy as np
+
+
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
-        A = np.zeros([n, n])    
+        A = np.zeros([n, n])
         for e in edges:
             A[e[0]][e[1]] = e[2]
             A[e[1]][e[0]] = e[2]
@@ -14,19 +16,18 @@ class Solution:
         for k in range(n):
             for i in range(n):
                 if (i == k):
-                    continue 
+                    continue
                 for j in range(n):
                     if (j == k):
                         continue
                     A[i, j] = min(A[i, j], A[i, k] + A[k, j])
-        #print(A)
+        # print(A)
         count = np.sum(A <= distanceThreshold, axis=0)
         minn = count[0]
-        #print(count)
+        # print(count)
         argminn = 0
         for i, c in enumerate(count):
             if c <= minn:
                 minn = c
                 argminn = i
         return argminn
-

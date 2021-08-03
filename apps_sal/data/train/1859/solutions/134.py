@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def countSquares(self, matrix: List[List[int]]) -> int:
         counts = [[0] * len(matrix[0]) for _ in range(len(matrix))]
@@ -13,10 +14,9 @@ class Solution:
         for r in range(len(matrix)):
             for c in range(len(matrix[0])):
                 if matrix[r][c] == 1:
-                    l = get_val(r, c-1, counts)
-                    d = get_val(r-1, c-1, counts)
-                    u = get_val(r-1, c, counts)
+                    l = get_val(r, c - 1, counts)
+                    d = get_val(r - 1, c - 1, counts)
+                    u = get_val(r - 1, c, counts)
                     counts[r][c] = 1 + min(l, d, u)
                     total += counts[r][c]
         return total
-

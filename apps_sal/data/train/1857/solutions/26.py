@@ -1,6 +1,7 @@
 from collections import defaultdict
 from bisect import bisect_left
 
+
 class Solution:
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
         answer = 0

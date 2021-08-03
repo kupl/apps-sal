@@ -1,5 +1,5 @@
 class Solution:
-    def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:             
+    def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         graph = {i: [] for i in range(n)}
         # a. create our bidirectional graph with the weights
         for u, v, w in edges:

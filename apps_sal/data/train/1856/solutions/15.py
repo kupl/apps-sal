@@ -21,23 +21,22 @@ class Solution:
                 if col < n - 1 and grid[row][col] == grid[row][col + 1] == 0:
                     num_steps_horizontal[row][col] = min(
                         num_steps_horizontal[row][col],
-                        1 + num_steps_horizontal[row][col - 1], # from left 
-                        1 + num_steps_horizontal[row - 1][col], # from above
-                        )
+                        1 + num_steps_horizontal[row][col - 1],  # from left
+                        1 + num_steps_horizontal[row - 1][col],  # from above
+                    )
                 if row < n - 1 and grid[row][col] == grid[row + 1][col] == 0:
                     num_steps_vertical[row][col] = min(
                         num_steps_vertical[row][col],
-                        1 + num_steps_vertical[row][col - 1], # from left 
-                        1 + num_steps_vertical[row - 1][col], # from above
-                        )
+                        1 + num_steps_vertical[row][col - 1],  # from left
+                        1 + num_steps_vertical[row - 1][col],  # from above
+                    )
                 if (col < n - 1 and row < n - 1
                    and grid[row][col] == grid[row][col + 1] == 0
                    and grid[row + 1][col] == grid[row + 1][col + 1] == 0):
                     num_steps_horizontal[row][col] = min(num_steps_horizontal[row][col], 1 + num_steps_vertical[row][col])
                     num_steps_vertical[row][col] = min(num_steps_vertical[row][col], 1 + num_steps_horizontal[row][col])
-        
+
         if num_steps_horizontal[-1][-2] < float('inf'):
             return num_steps_horizontal[-1][-2]
         else:
             return -1
-

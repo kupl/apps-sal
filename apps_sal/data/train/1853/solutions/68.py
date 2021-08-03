@@ -3,7 +3,7 @@ class Solution:
         from heapq import heappush, heappop
         import collections
         distance = [[float('inf')] * n for _ in range(n)]
-        graph = collections.defaultdict(list);
+        graph = collections.defaultdict(list)
         # initialize the graph and distance matrix
         for i, j, w in edges:
             distance[i][j] = distance[j][i] = w
@@ -11,7 +11,7 @@ class Solution:
             graph[j].append(i)
         for i in range(n):
             distance[i][i] = 0
-        
+
         # use dijkstra algorithm for every node
         global_min = [-1, -1]
         for i in range(n):
@@ -31,6 +31,5 @@ class Solution:
             if global_min[0] == -1 or len(count) <= global_min[0]:
                 global_min[0] = len(count)
                 global_min[1] = i
-        
-        return global_min[1]
 
+        return global_min[1]

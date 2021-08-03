@@ -1,7 +1,9 @@
 from heapq import heappush, heappop
+
+
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
-        
+
         def dijkstra(graph, start, distance):
             reached = set()
             heap = [(0, start)]
@@ -16,12 +18,12 @@ class Solution:
                 for nex, nex_w in graph[node]:
                     heappush(heap, (w + nex_w, nex))
             return reached
-        
-        graph = collections.defaultdict(set)        
-        for x,y,w in edges:
-            graph[x].add((y,w))
-            graph[y].add((x,w))
-        
+
+        graph = collections.defaultdict(set)
+        for x, y, w in edges:
+            graph[x].add((y, w))
+            graph[y].add((x, w))
+
         min_len = n
         min_city = 0
         for i in range(n):
@@ -30,5 +32,3 @@ class Solution:
                 min_len = len(reached)
                 min_city = i
         return min_city
-        
-

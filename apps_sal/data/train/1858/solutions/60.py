@@ -7,40 +7,39 @@
 class FindElements:
 
     def __init__(self, root: TreeNode):
-        self.all=[]
+        self.all = []
+
         def helperIter(root):
-            val =0
+            val = 0
             if not root:
                 return
-            
+
             stack = [(root, val)]
             while stack:
                 curr, val = stack.pop()
                 curr.val = val
                 if curr.left:
-                    self.all.append(2*val+1)
-                    stack.append((curr.left, 2*val +1))
+                    self.all.append(2 * val + 1)
+                    stack.append((curr.left, 2 * val + 1))
                 if curr.right:
-                    self.all.append(2*val +2)
-                    stack.append((curr.right, 2*val +2))
-            
+                    self.all.append(2 * val + 2)
+                    stack.append((curr.right, 2 * val + 2))
+
         def helper(root, val):
             if not root:
                 return
 
             if root:
-                root.val= val
+                root.val = val
                 self.all.append(val)
-            
+
             if root.left:
-                helper(root.left, 2*val +1)
+                helper(root.left, 2 * val + 1)
             if root.right:
-                helper(root.right, 2*val +2)
-        
+                helper(root.right, 2 * val + 2)
+
         # helper(root, 0)
         helperIter(root)
-        
-                    
 
     def find(self, target: int) -> bool:
         return target in self.all
@@ -49,4 +48,3 @@ class FindElements:
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
-

@@ -44,7 +44,7 @@
 # dfs2: O(N) time
 
 
-class Solution: 
+class Solution:
     def sumOfDistancesInTree(self, N, edges):
         tree = collections.defaultdict(set)
         res = [0] * N

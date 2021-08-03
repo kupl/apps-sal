@@ -3,7 +3,7 @@ class Solution:
         rowseats = defaultdict(list)
         for s in reservedSeats:
             rowseats[s[0]].append(s[1])
-            
+
         subtract = 0
         for _, seats in rowseats.items():
             left = True
@@ -22,5 +22,5 @@ class Solution:
                 subtract += 1
             else:
                 subtract += 2
-                
-        return n*2 - subtract
+
+        return n * 2 - subtract

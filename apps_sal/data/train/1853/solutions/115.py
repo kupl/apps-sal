@@ -5,6 +5,7 @@ class Solution:
             g[i][j] = w
             g[j][i] = w
         t = distanceThreshold
+
         def dist(u):
             q = [(0, u)]
             ret = {}
@@ -25,6 +26,3 @@ class Solution:
                 num = c
                 ans = i
         return ans
-                
-            
-

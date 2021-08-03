@@ -1,6 +1,6 @@
 class Solution:
     def countSquares(self, matrix: List[List[int]]) -> int:
-        
+
         # compute prefix square
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):
@@ -14,10 +14,9 @@ class Solution:
                 matrix[i][j] += re
         print(matrix)
         # correct
-        
+
         re = 0
-        
-        
+
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):
                 # start matching squares at i j
@@ -33,14 +32,10 @@ class Solution:
                     if i > 0 and j > 0:
                         tmp += matrix[i - 1][j - 1]
                     # print('{} {} {} {}'.format(i, j, l, tmp))
-                    
+
                     if tmp != (l + 1) ** 2:
                         break
                     else:
                         re += 1
                     l += 1
         return re
-                    
-                
-                
-

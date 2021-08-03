@@ -5,13 +5,13 @@
 #         self.left = left
 #         self.right = right
 class FindElements:
-    def recoverTree(self, node: TreeNode, val: int) -> None: 
+    def recoverTree(self, node: TreeNode, val: int) -> None:
         if node:
             node.val = val
             self.num_set.add(val)
             self.recoverTree(node.left, 2 * val + 1)
             self.recoverTree(node.right, 2 * val + 2)
-            
+
         '''
         if not node.left and not node.right:
             return None
@@ -24,13 +24,13 @@ class FindElements:
             self.num_set.add(node.right.val)
             self.recoverTree(node.right)
         '''
-        
+
     def __init__(self, root: TreeNode):
         self.num_set = set()
         self.num_set.add(0)
-        
+
         self.recoverTree(root, 0)
-        self.root = root       
+        self.root = root
 
     def find(self, target: int) -> bool:
         if target < self.root.val:
@@ -41,4 +41,3 @@ class FindElements:
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
-

@@ -1,6 +1,7 @@
 from collections import defaultdict
 from collections import deque
 
+
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         n2n = defaultdict(list)
@@ -36,17 +37,15 @@ class Solution:
                             minds[source][next_node] = minds[source][node] + d
                             q.append(next_node)
 
-
         min_reach = n
         max_node = 0
         for source in range(n):
             reach_count = 0
             for mind in minds[source]:
-                if mind != -1 and  mind <= distanceThreshold:
+                if mind != -1 and mind <= distanceThreshold:
                     reach_count += 1
             if reach_count <= min_reach:
                 max_node = source
                 min_reach = reach_count
 
         return max_node
-

@@ -10,15 +10,15 @@ class Solution:
 
             if clip[0] != 0 and dp[clip[0]] == float(inf):
                 break
-            
+
             # if clip[0] == 0:
             #     min_so_far = 0
             # else:
             min_so_far = dp[clip[0]]
-            
+
             for k in range(clip[0], clip[1] + 1):
                 dp[k] = min(dp[k], min_so_far + 1)
-        
+
         if dp[T] == inf:
             return -1
         return dp[T]

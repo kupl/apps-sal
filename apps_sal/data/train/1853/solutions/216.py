@@ -4,7 +4,7 @@ class Solution:
         for i, j, w in edges:
             graph[i].append((j, w))
             graph[j].append((i, w))
-        
+
         result = []
         for i in range(n):
             queue = [(0, i)]

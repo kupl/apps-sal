@@ -35,11 +35,8 @@ class FindElements:
             return True
         else:
             return False
-        
-
 
 
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
-

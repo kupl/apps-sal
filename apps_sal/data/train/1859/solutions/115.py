@@ -8,7 +8,7 @@ class Solution:
                 if matrix[r][c] == 1:
                     idx = 1
                     isTrue = True
-                    while isTrue and (r+idx) != rows and (c+idx) != cols:
+                    while isTrue and (r + idx) != rows and (c + idx) != cols:
                         for h in range(idx + 1):
                             if matrix[r + idx][c + h] != 1 or matrix[r + h][c + idx] != 1:
                                 isTrue = False
@@ -17,4 +17,3 @@ class Solution:
                             idx += 1
                     result += idx
         return result
-

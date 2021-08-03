@@ -31,5 +31,5 @@ class Solution:
                     if (r1, c1, r1 + 1, c1) not in visited:
                         visited.add((r1, c1, r1 + 1, c1))
                         queue.append((r1, c1, r1 + 1, c1, steps + 1))
-        
+
         return -1

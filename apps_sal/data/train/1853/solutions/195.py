@@ -4,7 +4,7 @@ class Solution:
         for i, j, w in edges:
             graph[i].append((j, w))
             graph[j].append((i, w))
-        
+
         result = []
         for i in range(n):
             queue = [(0, i)]
@@ -22,9 +22,8 @@ class Solution:
                         heapq.heappush(queue, (new_distance, j))
             result.append(len(visited))
         return min(list(range(n)), key=lambda x: (result[x], -x))
-        
-        
-        
+
+
 #         dp = [[float(\"inf\")] * n for _ in range(n)]
 #         for i in range(n):
 #             dp[i][i] = 0
@@ -38,14 +37,13 @@ class Solution:
 #                         dp[j][k] = min(dp[j][k], dp[j][i] + dp[i][k])
 #                         dp[k][j] = dp[j][k]
 #         return min(range(n), key=lambda i: (sum(dist <= distanceThreshold for dist in dp[i]), -i))
-        
-        
-        
+
+
 #         graph = [[] for _ in range(n)]
 #         for i, j, w in edges:
 #             graph[i].append((j, w))
 #             graph[j].append((i, w))
-        
+
 #         result = []
 #         for i in range(n):
 #             queue = [(0, i)]
@@ -61,4 +59,3 @@ class Solution:
 #             visited.remove(i)
 #             result.append(list(visited))
 #         return min(range(n), key=lambda x: (len(result[x]), -x))
-

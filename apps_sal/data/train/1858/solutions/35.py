@@ -1,13 +1,13 @@
 # things learnt ..
 # Try to check the first attempt and see if you can find the mistake
-# we need a set or seen here .. 
+# we need a set or seen here ..
 
 
 # Second Attempt
 class FindElements:
-    
+
     def __init__(self, root: TreeNode):
-        
+
         # fill using top down approach
         self.result = []
         q = []
@@ -15,27 +15,24 @@ class FindElements:
             return False
         q.append((root, 0))
         self.result.append(0)
-        while len(q) > 0 :
+        while len(q) > 0:
             node, value = q.pop(0)
-            #print(\" node \", node)
-            #print(\"value is \", value)
+            # print(\" node \", node)
+            # print(\"value is \", value)
             if node.left is not None:
-                temp = (value*2) +1
+                temp = (value * 2) + 1
                 self.result.append(temp)
                 q.append((node.left, temp))
-                
-                
+
             if node.right is not None:
-                temp = (value*2) +2
+                temp = (value * 2) + 2
                 self.result.append(temp)
                 q.append((node.right, temp))
         print((self.result))
 #         def helper(root, value):
 #             #base
-            
 
-            
-            
+
 #             if root.left is None and root.right is None:
 #                 print(\"base case\")
 #                 self.result.append(value)
@@ -54,21 +51,16 @@ class FindElements:
 #                 helper(root.right, temp )
 #                 print(\"right not null\")
 #                 print(\"self.result \", self.result.copy())
-        
+
 #         if root is None:
 #             return False
 #         helper(root, 0)
 #         print(self.result)
-#         return 
-        
-        
+#         return
+
 
     def find(self, target: int) -> bool:
         return True if target in self.result else False
-        
-        
-
-
 
 
 # Definition for a binary tree node.
@@ -86,7 +78,7 @@ class FindElements:
 #     result = []
 #     def __init__(self, root: TreeNode):
 #         #result = []
-        
+
 #         # fill using top down approach
 #         def helper(root, value):
 #             #base
@@ -105,22 +97,18 @@ class FindElements:
 #                 helper(root.right, temp )
 #                 #print(\"right not null\")
 #                 #print(\"self.result \", self.result)
-        
+
 #         if root is None:
 #             return False
 #         helper(root, 0)
 #         print(self.result)
-#         return 
-        
-        
+#         return
+
 
 #     def find(self, target: int) -> bool:
 #         return True if target in self.result else False
-        
-        
 
 
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
-

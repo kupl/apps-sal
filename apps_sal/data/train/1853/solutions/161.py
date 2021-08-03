@@ -16,7 +16,6 @@ class Solution:
 
         return dist
 
-
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         graph = collections.defaultdict(list)
         for u, v, w in edges:
@@ -30,7 +29,8 @@ class Solution:
                     neighbors[city] += 1
 
         for i in range(n):
-            if neighbors[i]: pass
+            if neighbors[i]:
+                pass
 
         answer, min_neighbors = -1, float('inf')
         for city, num in list(neighbors.items()):
@@ -39,4 +39,3 @@ class Solution:
                 min_neighbors = num
 
         return answer
-

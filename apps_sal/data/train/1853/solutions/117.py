@@ -13,15 +13,15 @@ class Solution:
                 if u not in d:
                     d[u] = w
                     for v in graph[u]:
-                        if graph[u][v]+ d[u] <= distanceThreshold:
-                            heapq.heappush(heap, (graph[u][v]+ d[u], v))
+                        if graph[u][v] + d[u] <= distanceThreshold:
+                            heapq.heappush(heap, (graph[u][v] + d[u], v))
                             if v not in des and v != start:
                                 des.append(v)
             return len(des)
 
-        res, count  = 0 , n            
+        res, count = 0, n
         for i in range(n):
-            d = {} 
+            d = {}
             des = dijstra(i, distanceThreshold)
             if des <= count:
                 res = max(res, i)

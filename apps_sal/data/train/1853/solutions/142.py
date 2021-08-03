@@ -10,6 +10,7 @@ class Solution:
                 g[v].append((u, w))
             else:
                 g[v] = [(u, w)]
+
         def numOfNb(city):
             minheap = [(0, city)]
             dist = {}

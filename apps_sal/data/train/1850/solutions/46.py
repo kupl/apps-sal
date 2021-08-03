@@ -28,7 +28,7 @@ class Solution:
         for key in self.tree:
             ans[key] = self.tree[key]['d']
         return ans
-    
+
     def dfs(self, key):
         if not self.tree[key]:
             return
@@ -39,11 +39,10 @@ class Solution:
             num += self.tree[ch]['n']
         self.tree[key]['d'] = dst
         self.tree[key]['n'] = num + 1
-    
+
     def help(self, key, dst, num):
         if num > self.tree[key]['n']:
             self.tree[key]['d'] = dst + num - 2 * self.tree[key]['n']
             self.tree[key]['n'] = num
         for ch in self.tree[key]['c']:
             self.help(ch, self.tree[key]['d'], self.tree[key]['n'])
-

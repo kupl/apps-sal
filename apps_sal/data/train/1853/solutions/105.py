@@ -11,21 +11,21 @@ class Solution:
         for x in range(n):
             cur = 1
             vis = {x}
-            dist = [threshold+1] * n
+            dist = [threshold + 1] * n
             hp = [(0, x)]
-            
+
             while hp:
                 d, u = heappop(hp)
                 if d > dist[u]:
                     continue
                 for w, v in adj[u]:
-                    if d+w < dist[v]:
+                    if d + w < dist[v]:
                         vis.add(v)
-                        dist[v] = d+w
-                        heappush(hp, (d+w, v))
-                        
+                        dist[v] = d + w
+                        heappush(hp, (d + w, v))
+
             if len(vis) <= mn:
                 mn = len(vis)
                 ans = x
-        
+
         return ans

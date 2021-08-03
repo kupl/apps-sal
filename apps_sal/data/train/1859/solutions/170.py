@@ -2,7 +2,7 @@ class Solution:
     def countSquares(self, matrix: List[List[int]]) -> int:
         rows = len(matrix)
         cols = len(matrix[0])
-        
+
         def traverse_subsquares(i, j):
             max_size = min(i, j) + 1
             n_subsquares = 0
@@ -16,13 +16,13 @@ class Solution:
                     if not matrix[ip][jp]:
                         return n_subsquares
                 n_subsquares += 1
-                
+
             return n_subsquares
-        
+
         total = 0
         for i in range(rows):
             for j in range(cols):
                 n = traverse_subsquares(i, j)
                 total += n
-                
+
         return total

@@ -13,6 +13,3 @@ class Solution:
                 res += 1
         res += 2 * (n - len(lookup))
         return res
-                    
-                    
-

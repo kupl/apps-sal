@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Node:
     def __init__(self, val):
         self.val = val
@@ -7,6 +8,7 @@ class Node:
         self.dist = 0
         self.children = []
         self.parent = None
+
 
 class Solution:
     def dfsPostorder(self, root):
@@ -26,11 +28,11 @@ class Solution:
         if root is None:
             return
         if root.parent is not None:
-            root.dist = root.parent.dist - 2*root.size + root.parent.size
+            root.dist = root.parent.dist - 2 * root.size + root.parent.size
             root.size = root.parent.size
         for c in root.children:
             self.dfsPreorder(c)
-    
+
     def buildTree(self, graph, root, nodes):
         queue = deque()
         queue.append((root, None))
@@ -42,7 +44,7 @@ class Solution:
                     node.children.append(nodes[n])
                     nodes[n].parent = node
                     queue.append((n, cur))
-    
+
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
         nodes = {i: Node(i) for i in range(N)}
 
@@ -50,11 +52,11 @@ class Solution:
         for u, v in edges:
             graph[u].append(v)
             graph[v].append(u)
-    
+
         root = 0
-        self.buildTree(graph, root, nodes)   
+        self.buildTree(graph, root, nodes)
         root = nodes[root]
-        
+
         self.dfsPostorder(root)
         self.dfsPreorder(root)
         ans = []

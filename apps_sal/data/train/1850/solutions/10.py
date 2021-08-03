@@ -1,5 +1,6 @@
 from collections import defaultdict, deque
 
+
 class Solution:
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
         children = {}
@@ -9,6 +10,7 @@ class Solution:
             d[edge[1]].add(edge[0])
         visited = set()
         self.dist = 0
+
         def check(node, e):
             out = 1
             visited.add(node)
@@ -18,9 +20,9 @@ class Solution:
             children[node] = out
             self.dist += e
             return out
-        
+
         check(0, 0)
-        
+
         ans = [0] * N
         visited = {0}
         q = deque([(0, self.dist)])
@@ -32,5 +34,3 @@ class Solution:
                     q.append((adj, total + N - children[adj] - children[adj]))
                     visited.add(adj)
         return ans
-            
-

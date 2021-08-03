@@ -10,7 +10,7 @@ class Solution:
         self.dfs(0, None)
         self.dfs1(0, None, N)
         return self.sums
-    
+
     def dfs(self, node, parent):
         for child in self.graph[node]:
             if child == parent:
@@ -18,12 +18,10 @@ class Solution:
             self.dfs(child, node)
             self.count[node] += self.count[child]
             self.sums[node] += self.sums[child] + self.count[child]
-    
+
     def dfs1(self, node, parent, N):
         for child in self.graph[node]:
             if child == parent:
                 continue
-            self.sums[child] = self.sums[node] + N - 2*self.count[child]
+            self.sums[child] = self.sums[node] + N - 2 * self.count[child]
             self.dfs1(child, node, N)
-
-
