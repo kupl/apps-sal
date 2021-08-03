@@ -5,4 +5,3 @@ def power_of_two(x):
         i *= 2
         l.append(i)
     return x in l
-

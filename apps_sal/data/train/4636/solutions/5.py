@@ -25,6 +25,7 @@ KEYPADS = (
     )
 )
 
+
 class Tv:
     def __init__(self, words):
         self.words = words
@@ -35,7 +36,6 @@ class Tv:
         self.keypad_pos = 0
         self.current_pos = (0, 0)
         self.CHANGE_KEY_IDX = 40
-        
 
     def count_best_path(self, index: int):
 
@@ -67,7 +67,6 @@ class Tv:
         # update the count
         self.count += sum(result) + self.OK
 
-
     def count_total_moves(self):
         for letter in self.words:
 
@@ -83,7 +82,9 @@ class Tv:
             self.count_best_path(index)
         return self.count
 
-def tv_remote(words):    
+
+def tv_remote(words):
     return Tv(words).count_total_moves()
+
 
 print(tv_remote('ciao'))

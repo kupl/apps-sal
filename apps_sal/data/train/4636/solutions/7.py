@@ -23,7 +23,7 @@ def tv_remote(words: str):
                 return button_presses
 
     def dist(pos1, pos2):
-        return sum(min(abs(p1-p2), dim - abs(p1-p2)) for p1, p2, dim in zip(pos1, pos2, kb_dims))
+        return sum(min(abs(p1 - p2), dim - abs(p1 - p2)) for p1, p2, dim in zip(pos1, pos2, kb_dims))
 
     screen_keyboard_alphanumeric = "abcde123fghij456klmno789pqrst.@0uvwxyz_/⇑ "
     symbols_map_alphanumeric = {c: (i // 8, i % 8) for i, c in enumerate(screen_keyboard_alphanumeric)}
@@ -42,16 +42,16 @@ def tv_remote(words: str):
             words_to_type.append(ch.lower())
 
         elif ch in screen_keyboard_symbolic:
-            words_to_type.append("⇑"*mode.switch_to_new_mode(Mode.SYMBOLIC) + ch)
+            words_to_type.append("⇑" * mode.switch_to_new_mode(Mode.SYMBOLIC) + ch)
 
         elif ch.lower() in screen_keyboard_alphanumeric:
             if ch.isalpha():
                 if ch.islower():
-                    words_to_type.append("⇑"*mode.switch_to_new_mode(mode.LOWERCASE) + ch.lower())
+                    words_to_type.append("⇑" * mode.switch_to_new_mode(mode.LOWERCASE) + ch.lower())
                 elif ch.isupper():
-                    words_to_type.append("⇑"*mode.switch_to_new_mode(mode.UPPERCASE) + ch.lower())
+                    words_to_type.append("⇑" * mode.switch_to_new_mode(mode.UPPERCASE) + ch.lower())
             elif not mode.isalphanumeric():
-                words_to_type.append("⇑"*mode.switch_to_new_mode(mode.LOWERCASE) + ch)
+                words_to_type.append("⇑" * mode.switch_to_new_mode(mode.LOWERCASE) + ch)
             else:
                 words_to_type.append(ch)        # mode.isalphanumeric() and not ch.isalpha()
 

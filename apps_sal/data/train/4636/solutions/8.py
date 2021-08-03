@@ -5,6 +5,7 @@ def dist(a, b, w=8, h=6):
     dy = min((ay - by) % h, (by - ay) % h)
     return dx + dy
 
+
 def tv_remote(words):
     num_buttons = 0
 
@@ -30,5 +31,5 @@ def tv_remote(words):
         print(f'{num_buttons} button moves from {cursor} to {press}')
         num_buttons += dist(cursor, press)
         cursor = press
-    
+
     return num_buttons

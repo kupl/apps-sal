@@ -8,4 +8,4 @@ def createDict(keys, values):
             newdict[keys[i]] = values[i]
         else:
             newdict[keys[i]] = None
-    return newdict 
+    return newdict

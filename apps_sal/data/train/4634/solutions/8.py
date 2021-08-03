@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def pac_man(N, PM, enemies):
     grid = [[2] * N for i in range(N)]
     for enemy in enemies:

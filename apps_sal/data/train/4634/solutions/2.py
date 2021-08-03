@@ -9,7 +9,7 @@ def pac_man(n, pm, enemies):
         grid = [["#" if c == ec else v for c, v in enumerate(r)] for r in grid]
     for er, ec in enemies:
         grid[er][ec] = "E"
-    
+
     # Perform a flood fill detecting O and converting to . starting from PM
     edges = [pm]
     count = 0
