@@ -2,11 +2,11 @@ class Solution:
     def largestComponentSize(self, nums: List[int]) -> int:
         graph = defaultdict(list)
         nodes, roots, n = set(nums), set(), max(nums)
-        primes = [True] * (n+1)
-        for i in range(2, n//2+1):
+        primes = [True] * (n + 1)
+        for i in range(2, n // 2 + 1):
             if not primes[i]:
                 continue
-            j = i*2
+            j = i * 2
             while j <= n:
                 primes[j] = False
                 if j in nodes:
@@ -15,10 +15,9 @@ class Solution:
                     roots.add(i)
                 j += i
         return self.traverse(graph, roots, nodes)
-        
-        
+
     def traverse(self, graph, roots, real_nodes):
-        ans, vztd= 0, set()
+        ans, vztd = 0, set()
         for node in roots:
             if node in vztd:
                 continue
@@ -34,7 +33,6 @@ class Solution:
                         if nab not in vztd:
                             vztd.add(nab)
                             next_q.append(nab)
-                q = next_q 
+                q = next_q
             ans = max(ans, cnt)
         return ans
-

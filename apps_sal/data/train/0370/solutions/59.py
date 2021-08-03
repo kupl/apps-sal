@@ -1,13 +1,13 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        
+
         parent, size = {x: x for x in A}, {x: 1 for x in A}
-        
+
         def find(a):
             if parent[a] != a:
                 parent[a] = find(parent[a])
             return parent[a]
-        
+
         def union(a, b):
             if b not in parent:
                 parent[b] = b
@@ -27,7 +27,7 @@ class Solution:
                 while not(x & 1):
                     x >>= 1
             i = 3
-            while i*i <= x:
+            while i * i <= x:
                 if x % i == 0:
                     union(num, -i)
                     while x % i == 0:
@@ -35,6 +35,5 @@ class Solution:
                 i += 2
             if x > 1:
                 union(num, -x)
-        
-        return max(size.values())
 
+        return max(size.values())

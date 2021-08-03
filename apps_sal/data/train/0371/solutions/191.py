@@ -2,15 +2,15 @@ class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
-        
+
         routes = [set(stops) for stops in routes]
-        
-        #there is no reason to take the same bus twice
+
+        # there is no reason to take the same bus twice
         taken = set()
         dq = collections.deque()
-        
+
         neighbors = collections.defaultdict(list)
-        
+
         for i in range(len(routes)):
             if S in routes[i]:
                 dq.append(i)
@@ -19,7 +19,7 @@ class Solution:
                 if routes[i].intersection(routes[j]):
                     neighbors[i].append(j)
                     neighbors[j].append(i)
-        
+
         count = 1
         while dq:
             size = len(dq)
@@ -32,6 +32,5 @@ class Solution:
                         dq.append(nei)
                         taken.add(nei)
             count += 1
-        
-        return -1
 
+        return -1

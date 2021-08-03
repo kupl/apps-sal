@@ -12,22 +12,21 @@
 # O(n^2 * 2^n) time complexity, O(n * 2^n) space complexity
 class Solution:
     def shortestSuperstring(self, A: List[str]) -> str:
-        
+
         def dist(s1, s2):
             ans = 0
             for k in range(min(len(s1), len(s2))):
                 if s1[len(s1) - k:] == s2[:k]:
                     ans = len(s2) - k
             return ans
-        
-        
+
         n = len(A)
         g = [[0] * n for _ in range(n)]
         for i in range(n):
             for j in range(i + 1, n):
                 g[i][j] = dist(A[i], A[j])
                 g[j][i] = dist(A[j], A[i])
-        
+
         parent = [[-1] * n for _ in range(1 << n)]
         dp = [[float('inf')] * n for _ in range(1 << n)]
         for i in range(n):
@@ -55,4 +54,3 @@ class Solution:
             s &= ~ (1 << end)  # 上一个状态
             end = prev
         return res
-

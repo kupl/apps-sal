@@ -2,7 +2,7 @@ class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         def union(x, y):
             graph[find(x)] = find(y)
-        
+
         def find(x):
             path = []
             while graph[x] != x:

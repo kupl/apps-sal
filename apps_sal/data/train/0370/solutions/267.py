@@ -14,11 +14,12 @@ class Solution:
             res = max(res, group_count[group_id])
         return res
 
+
 class UnionFind:
     def __init__(self, size):
         self.parent = [i for i in range(0, size + 1)]
         self.size = [1] * (size + 1)
-    
+
     def find(self, x):
         while self.parent[x] != x:
             self.parent[x] = self.parent[self.parent[x]]
@@ -35,4 +36,3 @@ class UnionFind:
         self.parent[parent_x] = parent_y
         self.size[parent_y] += self.size[parent_x]
         return parent_y
-

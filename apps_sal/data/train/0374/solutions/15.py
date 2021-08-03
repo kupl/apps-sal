@@ -10,7 +10,7 @@ class Solution:
                 if not (mask >> j) & 1:
                     continue
                 l = g[p].get(j, 0)
-                h, x = dp(i + 1, j,  mask & ~(1 << j))
+                h, x = dp(i + 1, j, mask & ~(1 << j))
                 h += l
                 if h >= result:
                     result = h
@@ -21,7 +21,8 @@ class Solution:
         g = collections.defaultdict(dict)
         for i in range(n):
             for j in range(n):
-                if i == j: continue
+                if i == j:
+                    continue
                 h = min(len(A[i]), len(A[j]))
                 for l in range(h - 1, 0, -1):
                     if A[i][-l:] == A[j][:l]:
@@ -36,4 +37,3 @@ class Solution:
             p = x
             mask = mask & ~(1 << x)
         return result
-

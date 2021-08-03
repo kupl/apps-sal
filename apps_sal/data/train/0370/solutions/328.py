@@ -1,7 +1,9 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        if not A: return 0
+        if not A:
+            return 0
         root = list(range(max(A) + 1))
+
         def find(i):
             while not root[i] == i:
                 root[i] = root[root[i]]

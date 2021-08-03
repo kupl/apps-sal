@@ -1,7 +1,8 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        parent = [-1]*100001
-        def _find (x):
+        parent = [-1] * 100001
+
+        def _find(x):
             if parent[x] == -1:
                 return x
             parent[x] = _find(parent[x])
@@ -16,15 +17,14 @@ class Solution:
             for i in range(2, int(sqrt(x)) + 1):
                 if x % i == 0:
                     _union(i, x)
-                    _union(x, x//i)
-        
-        count = 0;
+                    _union(x, x // i)
+
+        count = 0
         cache = {}
         for x in A:
             xp = _find(x)
             count = max(count, 1 + cache.get(xp, 0))
             cache[xp] = 1 + cache.get(xp, 0)
         return count
-    
-    # O(N * sqrt*max(A[i]))
 
+    # O(N * sqrt*max(A[i]))

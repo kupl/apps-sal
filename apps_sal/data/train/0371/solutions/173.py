@@ -4,20 +4,19 @@ class Solution:
         for bus, route in enumerate(routes):
             for stop in route:
                 stop_to_bus[stop].add(bus)
-        
+
         q = collections.deque([(S, 0)])
-        
+
         visited = set()
         while q:
             stop, bus = q.popleft()
             visited.add(stop)
             if stop == T:
                 return bus
-            
+
             for next_bus in stop_to_bus[stop]:
                 for next_stop in routes[next_bus]:
                     if next_stop not in visited:
                         q.append((next_stop, bus + 1))
                 routes[next_bus] = []
-        return -1         
-
+        return -1

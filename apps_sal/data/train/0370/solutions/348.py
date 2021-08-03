@@ -3,10 +3,10 @@ class Solution:
         if len(A) <= 1:
             return len(A)
 
-        #create union
+        # create union
         maxA = max(A)
-        unionL = list(range(maxA+1)) #initialize, each one is a component itself
-        size = [1]*(maxA+1)  #every component has size 1, the element itself initially
+        unionL = list(range(maxA + 1))  # initialize, each one is a component itself
+        size = [1] * (maxA + 1)  # every component has size 1, the element itself initially
 
         def findRoot(i):
             k1 = i
@@ -20,20 +20,20 @@ class Solution:
             k2 = findRoot(y)
             if k1 != k2:
                 if size[k1] < size[k2]:
-                    unionL[k1] = k2  #can improve with size
+                    unionL[k1] = k2  # can improve with size
                     size[k2] += size[k1]
                 else:
-                    unionL[k2] = k1  #can improve with size
+                    unionL[k2] = k1  # can improve with size
                     size[k1] += size[k2]
             return
 
         for item in A:
-            mid = int(math.sqrt(item))+1
-            for k in range(2, mid+1):  #mid included
+            mid = int(math.sqrt(item)) + 1
+            for k in range(2, mid + 1):  # mid included
                 if item % k == 0:
                     union(item, k)
-                    if item//k != 1:
-                        union(item, item//k)
+                    if item // k != 1:
+                        union(item, item // k)
 
         count = {}
         for item in A:
@@ -44,14 +44,3 @@ class Solution:
                 count[root] = 1
 
         return max(count.values())
-
-
-
-
-
-
-
-
-
-
-

@@ -1,5 +1,6 @@
 from typing import List, Set, Tuple
 
+
 def prime_factors(n: int) -> Set[int]:
     f = set()
     i = 1
@@ -24,6 +25,7 @@ def prime_factors(n: int) -> Set[int]:
     if n > 1:
         f.add(n)
     return f
+
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
@@ -62,8 +64,3 @@ class Solution:
                     islands.append((factors, 1))
             islands = [g for i, g in enumerate(islands) if i not in to_delete]
         return max(v for g, v in islands)
-            
-            
-            
-        
-

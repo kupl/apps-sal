@@ -4,7 +4,7 @@ class Solution:
         dp = [
             [0 for j in range(N)] for i in range(N)
         ]
-        
+
         for l in range(3, N + 1):
             for i in range(N - l + 1):
                 j = i + l - 1
@@ -13,4 +13,3 @@ class Solution:
                     if not dp[i][j] or dp[i][j] > val:
                         dp[i][j] = val
         return dp[0][N - 1]
-

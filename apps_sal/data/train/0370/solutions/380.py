@@ -1,5 +1,6 @@
 from typing import Dict
 
+
 class Solution:
     def _ds_find(ds: Dict[int, int], x: int) -> int:
         if ds.setdefault(x, x) != x:
@@ -17,4 +18,3 @@ class Solution:
                     ds[Solution._ds_find(ds, i)] = Solution._ds_find(ds, x // i)
 
         return max(Counter(Solution._ds_find(ds, i) for i in A).values())
-

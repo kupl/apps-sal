@@ -1,5 +1,6 @@
 from collections import defaultdict, deque
 
+
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T or not routes:
@@ -41,5 +42,3 @@ class Solution:
             #     q.append([cur_stop, dist + (prev_bus_num or prev_bus_num != cur_bus_num), cur_bus_num])
 
         return -1
-
-

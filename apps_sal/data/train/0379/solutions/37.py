@@ -2,15 +2,15 @@ class Solution:
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
         # [idxnums1,idxnums2,value]
         changeSum = 0
-        partial1, partial2 = 0,0
-        i,j=0,0
+        partial1, partial2 = 0, 0
+        i, j = 0, 0
         while i < len(nums1) and j < len(nums2):
             if nums1[i] == nums2[j]:
-                print((partial1,partial2))
+                print((partial1, partial2))
                 changeSum = (changeSum + nums1[i] + max(partial1, partial2)) % (10**9 + 7)
                 i += 1
                 j += 1
-                partial1, partial2 = 0,0
+                partial1, partial2 = 0, 0
             elif nums1[i] < nums2[j]:
                 partial1 += nums1[i]
                 i += 1
@@ -24,7 +24,5 @@ class Solution:
             partial2 += nums2[j]
             j += 1
         changeSum = (changeSum + max(partial1, partial2)) % (10**9 + 7)
-            
-        return changeSum % (10**9 + 7)
-                
 
+        return changeSum % (10**9 + 7)

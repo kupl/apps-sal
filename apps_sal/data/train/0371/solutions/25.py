@@ -1,5 +1,6 @@
 from queue import Queue
 
+
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
@@ -10,7 +11,7 @@ class Solution:
             for stop in routes[bus]:
                 stopToBus.setdefault(stop, [])
                 stopToBus[stop].append(bus)
-        
+
         q = Queue(maxsize=1000000)
         busVis = [False] * len(routes)
         stopVis = [False] * 1000000
@@ -27,5 +28,5 @@ class Solution:
                                 return dist + 1
 
                             q.put((ds, dist + 1))
-        
+
         return -1

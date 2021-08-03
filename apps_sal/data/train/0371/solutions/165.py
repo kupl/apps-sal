@@ -11,7 +11,7 @@ class Solution:
                 for other in stops[stop]:
                     graph[i].add(other)
                     graph[other].add(i)
-                
+
                 stops[stop].append(i)
                 if stop == S:
                     q.add(i)
@@ -25,13 +25,13 @@ class Solution:
             for route in q:
                 if route in ends:
                     return dist
-                
+
                 for n in graph[route]:
                     if n not in seen:
                         next_level.add(n)
                         seen.add(n)
-            
+
             q = next_level
             dist += 1
-        
+
         return -1

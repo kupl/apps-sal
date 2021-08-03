@@ -1,9 +1,9 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         def prime_factors(n):
-            for i in range(2, int(math.sqrt(n))+1):
+            for i in range(2, int(math.sqrt(n)) + 1):
                 if n % i == 0:
-                    return prime_factors(n//i) | set([i])
+                    return prime_factors(n // i) | set([i])
             return set([n])
             # i = 2
             # while i ** 2 <= n:

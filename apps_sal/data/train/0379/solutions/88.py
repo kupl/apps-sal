@@ -2,6 +2,7 @@ class Solution:
     def maxSum(self, a: List[int], b: List[int]) -> int:
         a2i = {n: i for i, n in enumerate(a)}
         b2i = {n: i for i, n in enumerate(b)}
+
         @lru_cache(None)
         def solve(i, is_a, switched):
             if is_a:
@@ -22,8 +23,3 @@ class Solution:
                 return best
             return max(best, add + solve(i + 1, is_a, False))
         return max(solve(0, True, False), solve(0, False, False)) % (10**9 + 7)
-            
-            
-            
-        
-

@@ -17,9 +17,9 @@ class Solution:
                         longest2 = k
                 common[(i, j)] = longest1
                 common[(j, i)] = longest2
-        
+
         end = 1 << n
-        dp = [[(float('inf'), '') 
+        dp = [[(float('inf'), '')
                for i in range(n)] for m in range(end)]
         le, res = float('inf'), ''
         for used in range(end):
@@ -34,7 +34,7 @@ class Solution:
                         if i == j or (used >> j) & 1 != 1:
                             continue
                         l, pref = dp[used ^ mask][j]
-                        cand = pref + A[i][common[(j, i)] :]    
+                        cand = pref + A[i][common[(j, i)]:]
                         if len(cand) < dp[used][i][0]:
                             dp[used][i] = (len(cand), cand)
                 if used == end - 1 and dp[used][i][0] < le:
@@ -43,15 +43,15 @@ class Solution:
 
 
 # class Solution:
-    
+
 #     def addCost(self, from_word, to_word):
 #         n = min(len(from_word), len(to_word))
 #         cost = len(to_word)
 #         for i in range(n):
 #             if from_word[-i-1] == to_word[i]:
 #                 cost -= 1
-#         return cost 
-    
+#         return cost
+
 #     def shortestSuperstring(self, A: List[str]) -> str:
 #         # initalize 2D adjacency matrix
 #         n = len(A)
@@ -62,8 +62,8 @@ class Solution:
 #                 if r != c:
 #                     from_word, to_word = A[i], A[j]
 #                     adj_mat[i][j] = self.addCost(from_word, to_word)
-#         # DP memo, the length of start words as the initial values 
-#         # dp = [len(w) for w in A] * n 
+#         # DP memo, the length of start words as the initial values
+#         # dp = [len(w) for w in A] * n
 #         dp = [0, ] * n
 #         for i, w in enumerate(A):
 #             visited = {w}
@@ -71,7 +71,3 @@ class Solution:
 #             while len(visited) < n:
 #                 from_w = w
 #                 to_w = min(adj_mat[from_w])
-                
-        
-        
-

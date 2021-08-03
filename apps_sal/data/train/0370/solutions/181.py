@@ -55,5 +55,3 @@ class Solution:
 
             parents[parent][1] += 1
         return max(list(parents.values()), key=lambda x: x[1])[1]
-
-

@@ -16,9 +16,10 @@ class Solution:
             if n > 1:
                 graph[n].append(i)
                 divs[i].append(n)
-        nodes = {i:0 for i in A}
+        nodes = {i: 0 for i in A}
         seen = set()
         cnt = 1
+
         def dfs(node):
             nodes[node] = cnt
             for div in divs[node]:

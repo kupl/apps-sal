@@ -4,11 +4,11 @@ class Solution:
         nodes = set(nums)
         roots = set()
         m, n = len(nums), max(nums)
-        primes = [True] * (n+1)
-        for i in range(2, n//2+1):
+        primes = [True] * (n + 1)
+        for i in range(2, n // 2 + 1):
             if not primes[i]:
                 continue
-            j = i*2
+            j = i * 2
             while j <= n:
                 primes[j] = False
                 if j in nodes:
@@ -20,8 +20,7 @@ class Solution:
         ans = self.traverse(graph, roots, nodes)
         # print(ans)
         return max(ans)
-        
-        
+
     def traverse(self, graph, roots, real_nodes):
         counts = []
         vztd = set()
@@ -40,6 +39,6 @@ class Solution:
                         if nab not in vztd:
                             vztd.add(nab)
                             next_q.append(nab)
-                q = next_q 
+                q = next_q
             counts.append(cnt)
         return counts

@@ -5,7 +5,7 @@ class UnionFind:
         for i in range(n):
             self.p.append(i)
         self.max_union_size = 1
-        
+
     def union(self, X, Y):
         px, py = self.find(X), self.find(Y)
         if px == py:
@@ -19,11 +19,12 @@ class UnionFind:
             self.size[px] += self.size[py]
             self.max_union_size = max(self.max_union_size, self.size[px])
 
-    def find(self, X): 
+    def find(self, X):
         if self.p[X] != X:
             self.p[X] = self.find(self.p[X])
         return self.p[X]
-    
+
+
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         def get_prime_factors(num):
@@ -37,18 +38,19 @@ class Solution:
                 d += 1
             if n > 1:
                 yield n
-        
+
         factors_to_nums = collections.defaultdict(list)
         for i, a in enumerate(A):
             for f in get_prime_factors(a):
-                factors_to_nums[f].append(i) # save the index of the number in A, which is easier to generate UF
-        
+                factors_to_nums[f].append(i)  # save the index of the number in A, which is easier to generate UF
+
         uf = UnionFind(len(A))
         for idx_of_num in factors_to_nums.values():
             for i in range(1, len(idx_of_num)):
                 uf.union(idx_of_num[0], idx_of_num[i])
-        
+
         return uf.max_union_size
+
 
 ''' 
 # lingnan 写的DisjointSet，还没有看

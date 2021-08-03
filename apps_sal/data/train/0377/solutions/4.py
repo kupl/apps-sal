@@ -1,25 +1,24 @@
 class Solution:
     def nthMagicalNumber(self, N: int, A: int, B: int) -> int:
-        ## official solution
+        # official solution
         def gcd(x, y):
-            if y==0:
+            if y == 0:
                 return x
-            return gcd(y, x%y)
-            
+            return gcd(y, x % y)
+
         MOD = 10**9 + 7
-        ## Least common multiple of A and B
+        # Least common multiple of A and B
         L = A // gcd(A, B) * B
-        M = L//A + L//B - 1
+        M = L // A + L // B - 1
         q, r = divmod(N, M)
-        
+
         if r == 0:
-            return q*L%MOD
-        
+            return q * L % MOD
+
         increments = [A, B]
-        for _ in range(r-1):
-            if increments[0]<=increments[1]:
+        for _ in range(r - 1):
+            if increments[0] <= increments[1]:
                 increments[0] += A
             else:
                 increments[1] += B
-        return (q*L+min(increments))%MOD
-
+        return (q * L + min(increments)) % MOD

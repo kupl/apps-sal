@@ -11,11 +11,12 @@ class DSU:
         xr, yr = self.find(x), self.find(y)
         self.p[xr] = yr
 
+
 class Solution:
-    def primes_set(self,n):
-        for i in range(2, int(math.sqrt(n))+1):
+    def primes_set(self, n):
+        for i in range(2, int(math.sqrt(n)) + 1):
             if n % i == 0:
-                return self.primes_set(n//i) | set([i])
+                return self.primes_set(n // i) | set([i])
         return set([n])
 
     def largestComponentSize(self, A):
@@ -24,17 +25,18 @@ class Solution:
         primes = defaultdict(list)
         for i, num in enumerate(A):
             pr_set = self.primes_set(num)
-            for q in pr_set: primes[q].append(i)
+            for q in pr_set:
+                primes[q].append(i)
 
         for _, indexes in list(primes.items()):
-            for i in range(len(indexes)-1):
-                UF.union(indexes[i], indexes[i+1])
+            for i in range(len(indexes) - 1):
+                UF.union(indexes[i], indexes[i + 1])
 
         return max(Counter([UF.find(i) for i in range(n)]).values())
-    
+
 # class Solution:
 #     def largestComponentSize(self, A: List[int]) -> int:
-#         # go through A, 
+#         # go through A,
 #         # try each element from each group
 #         ## if divides on element - accumulate groups, combine groups, add to group
 #         ## else create new group
@@ -50,7 +52,7 @@ class Solution:
 #                         added = True
 #                         break
 #             if not added:
-#                 groups.append([n])        
+#                 groups.append([n])
 #                 continue
 #             if indexesOfGroups:
 #                 mainGrIdx = indexesOfGroups[0]
@@ -59,11 +61,10 @@ class Solution:
 #                     idx = indexesOfGroups[i]
 #                     mainGr.extend(groups[idx])
 #                     del groups[idx]
-#                 mainGr.append(n)    
-#         # print(groups)    
+#                 mainGr.append(n)
+#         # print(groups)
 
 #         mx = 0
 #         for g in groups:
 #             mx = max(mx, len(g))
 #         return mx
-

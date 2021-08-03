@@ -1,6 +1,7 @@
 class Solution:
     def numBusesToDestination(self, routes, start, target):
-        if start == target: return 0
+        if start == target:
+            return 0
         stop2Route = defaultdict(set)
         route2Stop = defaultdict(set)
         for i, stops in enumerate(routes):
@@ -9,8 +10,8 @@ class Solution:
                 stop2Route[stop].add(i)
 
      #   return stop2Route, route2Stop
-        visited = set() 
-        visitedStop = set()       
+        visited = set()
+        visitedStop = set()
         stack = []
         q = [start]
         step = 0
@@ -26,11 +27,11 @@ class Solution:
                                 return step
                         else:
                             stack.append(route)
-                            
+
                             visited.add(route)
-                            
-                visitedStop.add(stop) 
-                
+
+                visitedStop.add(stop)
+
             for route in stack:
                 for stop in route2Stop[route]:
                     if stop not in visitedStop:

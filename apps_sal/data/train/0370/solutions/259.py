@@ -3,12 +3,12 @@ class UnionFind:
         self.nums = nums
         self.groups = list(range(len(nums)))
         self.sizes = [1] * len(nums)
-    
+
     def union(self, a, b):
         a, b = self.find(a), self.find(b)
         if a == b:
             return
-        
+
         if self.sizes[a] < self.sizes[b]:
             a, b = b, a
 
@@ -29,6 +29,7 @@ class UnionFind:
     def largest(self):
         return max(self.sizes)
 
+
 class Solution:
     def largestComponentSize(self, a: List[int]) -> int:
         def factors(n):
@@ -38,15 +39,15 @@ class Solution:
                     ans.add(i)
                     ans.add(n // i)
             return ans
-        
+
         uf = UnionFind(a)
         primes = defaultdict(list)
         for i, num in enumerate(a):
             pr_set = factors(num)
             for prime in pr_set:
                 primes[prime].append(i)
-        
+
         for prime, idxs in primes.items():
             for i in range(len(idxs) - 1):
-                uf.union(idxs[i],idxs[i + 1])
+                uf.union(idxs[i], idxs[i + 1])
         return uf.largest()

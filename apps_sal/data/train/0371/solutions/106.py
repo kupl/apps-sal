@@ -5,7 +5,7 @@ class Solution:
             for stop in routes[i]:
                 stop_to_bus[stop].append(i)
         bus_to_stop = routes
-        
+
         queue = collections.deque([S])
         visited_bus = set()
         level = 0

@@ -19,10 +19,8 @@ class Solution:
                 if i in visited:
                     continue
                 if bus & set(b):
-                    stack.append((b, level +1))
+                    stack.append((b, level + 1))
                     visited.add(i)
                     if T in b:
-                        return level +1
+                        return level + 1
         return -1
-            
-

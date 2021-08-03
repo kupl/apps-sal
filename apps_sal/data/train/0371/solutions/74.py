@@ -11,17 +11,17 @@ class Solution:
                     possibleStarts.append(i)
                 elif stop == T:
                     possibleEnd.append(i)
-                
+
                 if stop in stopGraph:
                     stopGraph[stop].append(i)
                 else:
                     stopGraph[stop] = [i]
-        
+
 #         {7: [1, 0, 2],
 #         8: [2, 0, 4]}
-        
+
 #         { 1:[0, 2],0:[1, 2], 2:[0, 1, 3, 4], 3:[2, 4], 4:[2, 3]}
-        
+
         graph = {}
         for stop in list(stopGraph.keys()):
             validRoutes = stopGraph[stop]
@@ -32,7 +32,7 @@ class Solution:
                     graph[route] = set()
                 for x in validRoutes:
                     if x != route:
-                        graph[route].add(x)                  
+                        graph[route].add(x)
         # print(graph)
         # print(stopGraph)
         # print(possibleStarts)
@@ -46,16 +46,10 @@ class Solution:
                 return node[1]
             if node[0] in graph:
                 children = graph[node[0]]
-            
+
                 for child in children:
                     if child not in seen:
                         queue.append((child, node[1] + 1))
                         seen.add(child)
 
-            
-                
         return -1
-        
-                    
-        
-

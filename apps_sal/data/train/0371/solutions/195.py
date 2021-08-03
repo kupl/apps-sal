@@ -1,6 +1,7 @@
 class Solution:
     def numBusesToDestination(self, routes, S, T):
-        if S == T: return 0
+        if S == T:
+            return 0
         queue = collections.deque()
         graph = collections.defaultdict(set)
         routes = list(map(set, routes))
@@ -11,7 +12,7 @@ class Solution:
                 queue.append((i, 1))  # enqueue
             if T in routes[i]:
                 targets.add(i)
-            for j in range(i+1, len(routes)):
+            for j in range(i + 1, len(routes)):
                 if routes[j] & routes[i]:
                     graph[i].add(j)
                     graph[j].add(i)
@@ -21,6 +22,6 @@ class Solution:
                 return count
             for nei in graph[cur]:
                 if nei not in seen:
-                    queue.append((nei, count+1))
+                    queue.append((nei, count + 1))
                     seen.add(nei)
         return -1

@@ -4,11 +4,12 @@ class Solution:
             return 0
 
         buses_from_stops = defaultdict(set)
-        for i, r in enumerate(routes) :
+        for i, r in enumerate(routes):
             for v in r:
                 buses_from_stops[v].add(i)
 
         memo = {}
+
         def check(bus, hist):
             if bus in memo:
                 return memo[bus]
@@ -28,5 +29,5 @@ class Solution:
 
         mn = 1000000
         for bs in buses_from_stops[S]:
-                mn = min(mn, check(bs, set([bs])))
+            mn = min(mn, check(bs, set([bs])))
         return mn if mn < 1000000 else -1

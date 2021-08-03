@@ -15,8 +15,7 @@ class Solution:
                 visited.add(i)
                 self.dfs(graph, i, des, steps + 1, visited)
                 visited.remove(i)
-        
-    
+
     def numBusesToDestination(self, routes: List[List[int]], s: int, t: int) -> int:
         if s == t:
             return 0
@@ -33,7 +32,7 @@ class Solution:
                 if stop not in stop_to_bus:
                     stop_to_bus[stop] = set()
                 stop_to_bus[stop].add(bus)
-        
+
         for _, v in list(stop_to_bus.items()):
             for i in v:
                 for j in v:
@@ -42,25 +41,12 @@ class Solution:
                     if i not in graph:
                         graph[i] = set()
                     graph[i].add(j)
-        
+
         self.res = -1
         visited = set()
         for s in starts:
             visited.add(s)
             self.dfs(graph, s, des, 1, visited)
             visited.remove(s)
-            
-        return self.res
-                
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
+        return self.res

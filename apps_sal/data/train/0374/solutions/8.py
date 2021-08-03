@@ -1,41 +1,41 @@
 class Solution:
     def shortestSuperstring(self, A: List[str]) -> str:
         n = len(A)
-        g = [[0]* n for _ in range(n)]
+        g = [[0] * n for _ in range(n)]
         for i in range(n):
             for j in range(n):
-                g[i][j]=len(A[j])
-                s=0
+                g[i][j] = len(A[j])
+                s = 0
                 for s in range(min(len(A[i]), len(A[j]))):
-                    if A[i][len(A[i])-s:]==A[j][:s]: 
-                        g[i][j]=len(A[j])-s
+                    if A[i][len(A[i]) - s:] == A[j][:s]:
+                        g[i][j] = len(A[j]) - s
         # print(g)
-        dp=[[float('inf')]*(n) for _ in range(2**n)]
-        parent=[[-1]*(n) for _ in range(2**n)]
+        dp = [[float('inf')] * (n) for _ in range(2**n)]
+        parent = [[-1] * (n) for _ in range(2**n)]
         # print(dp[0])
         for i in range(n):
-            dp[2**i][i]=len(A[i])
+            dp[2**i][i] = len(A[i])
         for s in range(1, 2**n):
             for i in range(n):
-                if s&(2**i)==0: continue
-                pre= s &~(1<<i)
+                if s & (2**i) == 0:
+                    continue
+                pre = s & ~(1 << i)
                 # if pre==0: continue
                 for j in range(n):
-                    if dp[pre][j]+g[j][i]<dp[s][i]:
-                        dp[s][i]=dp[pre][j]+g[j][i]
-                        parent[s][i]=j
+                    if dp[pre][j] + g[j][i] < dp[s][i]:
+                        dp[s][i] = dp[pre][j] + g[j][i]
+                        parent[s][i] = j
         # print(dp[-1])
         j = dp[-1].index(min(dp[-1]))
-        s=2**n-1
+        s = 2**n - 1
         ans = ''
         while s:
-            i= parent[s][j]
+            i = parent[s][j]
             # print(i,j)
-            if i<0: ans=A[j]+ans
-            else: 
-                ans=A[j][(len(A[j])-g[i][j]):]+ans
-            s&=~(1<<j)
-            j=i
+            if i < 0:
+                ans = A[j] + ans
+            else:
+                ans = A[j][(len(A[j]) - g[i][j]):] + ans
+            s &= ~(1 << j)
+            j = i
         return ans
-        
-

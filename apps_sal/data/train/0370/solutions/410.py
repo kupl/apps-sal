@@ -12,11 +12,13 @@ class Solution:
                 res += [n]
             return res
         uf = [i for i in range(len(A))]
+
         def root(p):
             while p != uf[p]:
                 uf[p] = uf[uf[p]]
                 p = uf[p]
             return p
+
         def union(p, q):
             proot = root(p)
             qroot = root(q)

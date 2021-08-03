@@ -8,7 +8,8 @@ class Solution:
         seen = set([S])
         while queue:
             curr, step = queue.popleft()
-            if curr == T: return step
+            if curr == T:
+                return step
             for i in graph[curr]:
                 for route in routes[i]:
                     if route not in seen:

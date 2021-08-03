@@ -1,15 +1,17 @@
 from collections import deque
+
+
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         # bfs  put routes contain S into q
-        # from existing bus -> next bus until there is T 
+        # from existing bus -> next bus until there is T
         if not routes:
             return -1
-        
-        if T==S:
+
+        if T == S:
             return 0
-        
-        q= deque([])
+
+        q = deque([])
         r = []
         res = 0
         visited = set()
@@ -18,11 +20,11 @@ class Solution:
             if S in r[-1]:
                 q.append(idx)
                 visited.add(idx)
-        
+
         print(q)
-        while q :
-            newq=[]
-            res+=1
+        while q:
+            newq = []
+            res += 1
             for bus in q:
                 if T in r[bus]:
                     return res
@@ -33,6 +35,6 @@ class Solution:
                         if stop in route and idx not in visited:
                             visited.add(idx)
                             newq.append(idx)
-            q=newq
-            
+            q = newq
+
         return -1

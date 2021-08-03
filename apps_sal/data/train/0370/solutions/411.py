@@ -15,20 +15,21 @@ class DSU:
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         def primes_set(n):
-            for i in range(2, int(math.sqrt(n))+1):
+            for i in range(2, int(math.sqrt(n)) + 1):
                 if n % i == 0:
-                    return primes_set(n//i) | set([i])
+                    return primes_set(n // i) | set([i])
             return set([n])
-        
+
         n = len(A)
         UF = DSU(n)
         primes = defaultdict(list)
         for i, num in enumerate(A):
             pr_set = primes_set(num)
-            for q in pr_set: primes[q].append(i)
+            for q in pr_set:
+                primes[q].append(i)
 
         for _, indexes in primes.items():
-            for i in range(len(indexes)-1):
-                UF.union(indexes[i], indexes[i+1])
+            for i in range(len(indexes) - 1):
+                UF.union(indexes[i], indexes[i + 1])
 
         return max(Counter([UF.find(i) for i in range(n)]).values())

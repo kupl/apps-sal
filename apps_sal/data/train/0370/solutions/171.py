@@ -27,4 +27,3 @@ class Solution:
             c = max(c, 1 + cache.get(np, 0))
             cache[np] = 1 + cache.get(np, 0)
         return c
-

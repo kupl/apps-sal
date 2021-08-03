@@ -5,10 +5,12 @@ import time
 DEBUG = False
 # DEBUG = True
 
+
 def debug(*args):
     if not DEBUG:
         return
     print((*args))
+
 
 class Sieve:
     def __init__(self, max_n):
@@ -19,9 +21,9 @@ class Sieve:
             for j in range(i, max_n + 1, i):
                 self.prime_factors[j].append(i)
 
-
     def factors(self, n):
         return self.prime_factors[n]
+
 
 sieve = Sieve(100000)
 
@@ -30,6 +32,7 @@ sieve = Sieve(100000)
 # print(s.factors(512))
 # print(s.factors(1007))
 # print(s.factors(5040))
+
 
 class Solution:
     def largestComponentSize(self, a: List[int]) -> int:
@@ -66,5 +69,3 @@ class Solution:
         # end = time.time()
         # print(end - start)
         return ans
-
-

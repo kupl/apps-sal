@@ -1,6 +1,7 @@
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        if S == T: return 0
+        if S == T:
+            return 0
         n = len(routes)
         graph = collections.defaultdict(list)
         sources = set()
@@ -10,11 +11,11 @@ class Solution:
                 sources.add(i)
             if T in routes[i]:
                 targets.add(i)
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 if set(routes[i]) & set(routes[j]):
                     graph[i].append(j)
                     graph[j].append(i)
-        
+
         dist = 1
         seen = set()
         while sources:

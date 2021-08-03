@@ -4,28 +4,28 @@ class Solution:
             return 0
         n = len(A)
         index = list(range(n))
-        size = [1]*n
-        
+        size = [1] * n
+
         def find(i):
             while index[i] != i:
                 i = index[i]
             return i
-        
+
         def setPrimes(i):
-            for j in range(2, int(math.sqrt(i))+1):
+            for j in range(2, int(math.sqrt(i)) + 1):
                 if i % j == 0:
                     return setPrimes(i // j) | set([j])
             return set([i])
-        
+
         primes = defaultdict(list)
         for i in range(n):
             s = setPrimes(A[i])
             for prime in s:
                 primes[prime].append(i)
-        
+
         for _, indices in primes.items():
-            for i in range(len(indices)-1):
-                k, l = find(indices[i]), find(indices[i+1])
+            for i in range(len(indices) - 1):
+                k, l = find(indices[i]), find(indices[i + 1])
                 if k == l:
                     continue
                 if size[l] > size[k]:
@@ -33,11 +33,7 @@ class Solution:
                 index[l] = k
                 size[k] += size[l]
         return max(size)
-        
-    
-    
-        
-        
+
         '''
         n = len(A)
         A.sort()

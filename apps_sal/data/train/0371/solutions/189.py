@@ -3,15 +3,15 @@ class Solution:
         if S == T:
             return 0
         routes = list(map(set, routes))
-        
+
         graph = collections.defaultdict(set)
         for i, route1 in enumerate(routes):
-            for j in range(i+1, len(routes)):
+            for j in range(i + 1, len(routes)):
                 route2 = routes[j]
                 if route1 & route2:
                     graph[i].add(j)
                     graph[j].add(i)
-        
+
         seen = set()
         target = set()
         for bus, route in enumerate(routes):
@@ -19,7 +19,7 @@ class Solution:
                 seen.add(bus)
             if T in route:
                 target.add(bus)
-        
+
         Q = [(1, bus) for bus in seen]
         for steps, bus in Q:
             if bus in target:
@@ -27,8 +27,5 @@ class Solution:
             for nbr in graph[bus]:
                 if nbr not in seen:
                     seen.add(nbr)
-                    Q.append((steps+1, nbr))
+                    Q.append((steps + 1, nbr))
         return -1
-            
-            
-

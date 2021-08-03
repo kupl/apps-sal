@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         to_routes = collections.defaultdict(set)
@@ -8,7 +10,8 @@ class Solution:
         bfs = [(S, 0)]
         seen = set([S])
         for stop, bus in bfs:
-            if stop == T: return bus
+            if stop == T:
+                return bus
             for i in to_routes[stop]:
                 for j in routes[i]:
                     if j not in seen:

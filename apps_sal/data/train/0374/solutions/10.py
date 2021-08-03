@@ -7,7 +7,7 @@ class Solution:
                 if s[len(s) - i:] == t[0:i]:
                     c = len(t) - i
             return c
-        
+
         n = len(A)
         cost = [[0 for _ in range(n)] for _ in range(n)]
         for i in range(n):
@@ -17,11 +17,11 @@ class Solution:
         # print('cost = {0}'.format(cost))
         dp = [[float('inf') for _ in range(n)] for _ in range(1 << n)]
         parent = [[-1 for _ in range(n)] for _ in range(1 << n)]
-        
+
         for i in range(n):
             dp[1 << i][i] = len(A[i])
         # print('dp = {0}'.format(dp))
-        
+
         for s in range(1, 1 << n):
             for i in range(n):
                 # s doesn't contain index i.
@@ -51,4 +51,3 @@ class Solution:
             s &= ~(1 << end)
             end = prev
         return res
-

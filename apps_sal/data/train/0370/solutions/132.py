@@ -22,8 +22,8 @@ class Solution:
                 primesDict[p].append(i)
 
         for li in primesDict.values():
-            for i in range(len(li)-1):
-                ds.union(li[i], li[i+1])
+            for i in range(len(li) - 1):
+                ds.union(li[i], li[i + 1])
 
         return max(Counter([ds.find(i) for i in range(n)]).values())
 

@@ -18,7 +18,7 @@ class Solution:
                     for j in routes[i]:
                         if j not in visited:
                             visited.add(j)
-                            bfs.append((j, bus+1))
+                            bfs.append((j, bus + 1))
                     # routes[i] = []
                     seen.add(i)
         return -1

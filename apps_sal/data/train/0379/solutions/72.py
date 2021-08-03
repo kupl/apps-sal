@@ -4,7 +4,7 @@ class Solution:
         dica = {a: i for i, a in enumerate(arra)}
         dicb = {b: i for i, b in enumerate(arrb)}
         dpa, dpb = {}, {}
-        
+
         def go(i, f):
             arr1, arr2 = arra, arrb
             dic1, dic2 = dica, dicb
@@ -14,11 +14,11 @@ class Solution:
                 dic1, dic2 = dic2, dic1
                 dp1, dp2 = dp2, dp1
             a = arr1[i]
-            d = a + (dp1[arr1[i-1]] if i > 0 else 0)
+            d = a + (dp1[arr1[i - 1]] if i > 0 else 0)
             if a in dic2 and dic2[a] > 0:
-                d = max(d, a+dp2[arr2[dic2[a]-1]])
+                d = max(d, a + dp2[arr2[dic2[a] - 1]])
             dp1[a] = d
-        
+
         i, j = 0, 0
         while i < m and j < n:
             if arra[i] <= arrb[j]:
@@ -27,7 +27,7 @@ class Solution:
             else:
                 go(j, False)
                 j += 1
-        
+
         while i < m:
             go(i, True)
             i += 1
@@ -35,4 +35,3 @@ class Solution:
             go(j, False)
             j += 1
         return max(dpa[arra[-1]], dpb[arrb[-1]]) % (1000000007)
-

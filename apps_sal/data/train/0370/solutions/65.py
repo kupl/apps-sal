@@ -1,6 +1,7 @@
 import math
 from collections import defaultdict
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -51,7 +52,7 @@ class Solution:
         uf = UnionFind(len(A))
         res = 0
         primes = defaultdict(list)
-        
+
         for i, a in enumerate(A):
             for p in set(prime_factorize(a)):
                 primes[p].append(i)

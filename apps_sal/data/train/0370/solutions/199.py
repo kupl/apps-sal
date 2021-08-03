@@ -34,12 +34,14 @@ class Solution:
         v = [False] * n
         m = 0
         for i in range(0, n):
-            if v[i]: continue
+            if v[i]:
+                continue
             queue = [i]
             c = 0
             while queue:
                 q = queue.pop()
-                if v[q]: continue
+                if v[q]:
+                    continue
                 v[q] = True
                 c += 1
                 for f in B[q]:

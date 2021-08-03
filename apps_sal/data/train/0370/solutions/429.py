@@ -1,15 +1,16 @@
 import math
 
+
 class UF:
     def __init__(self, N):
         self.p = list(range(N))
         self.size = [1] * N
-    
+
     def find(self, x):
         if self.p[x] != x:
             self.p[x] = self.find(self.p[x])
         return self.p[x]
-    
+
     def union(self, x, y):
         px, py = self.find(x), self.find(y)
         if px != py:
@@ -20,15 +21,16 @@ class UF:
             else:
                 self.p[py] = px
                 self.size[px] += sy
-        
+
+
 class Solution:
     def largestComponentSize(self, a: List[int]) -> int:
         d = {}
         uf = UF(len(a))
         for i, n in enumerate(a):
-            for f in range(2, int(math.sqrt(n)+ 1)):
+            for f in range(2, int(math.sqrt(n) + 1)):
                 if n % f == 0:
-                    for ff in [f, n//f]:
+                    for ff in [f, n // f]:
                         if ff in d:
                             uf.union(i, d[ff])
                         else:
@@ -38,5 +40,3 @@ class Solution:
             else:
                 uf.union(i, d[n])
         return max(uf.size)
-            
-

@@ -36,7 +36,8 @@ def factors(f):
             FS[f] = factors3(f)
         else:
             n >>= 1
-            while n & 1 == 0: n >>= 1
+            while n & 1 == 0:
+                n >>= 1
             FS[f] = {2} | factors3(n) if n > 1 else {2}
     return FS[f]
 

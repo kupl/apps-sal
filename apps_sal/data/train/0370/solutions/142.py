@@ -2,16 +2,16 @@ class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         uf = {}
         # rank
-        
+
         def find(x):
             uf.setdefault(x, x)
             if uf[x] != x:
                 uf[x] = find(uf[x])
             return uf[x]
-        
+
         def union(x, y):
             uf[find(x)] = find(y)
-            
+
         def primeFactor(x):
             ans = set()
             if not x % 2:
@@ -28,7 +28,7 @@ class Solution:
             if x > 1:
                 ans.add(x)
             return ans
-                
+
         # dic = {}
         for a in A:
             for k in primeFactor(a):

@@ -5,22 +5,22 @@ class Solution:
         return x
 
     def lcm(self, x, y):
-        return x*y//self.gcd(x,y)
-    
+        return x * y // self.gcd(x, y)
+
     def nthMagicalNumber(self, N: int, A: int, B: int) -> int:
-        AB = self.lcm(A,B)
+        AB = self.lcm(A, B)
 
         def check(mid):
-            ans = mid//A + mid//B - mid//(AB)
+            ans = mid // A + mid // B - mid // (AB)
             return ans >= N
-        
-        lo, hi = 0, N*A
-        while lo<hi:
-            mid = (lo+hi)//2
+
+        lo, hi = 0, N * A
+        while lo < hi:
+            mid = (lo + hi) // 2
             if check(mid):
                 hi = mid
             else:
-                lo = mid+1
+                lo = mid + 1
 
-        mod = 10**9+7
-        return lo%mod
+        mod = 10**9 + 7
+        return lo % mod

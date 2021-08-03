@@ -18,13 +18,15 @@ class Solution:
             for f in decompose(A[i]):
                 prime_set[f].append(i)
         ls = list(range(len(A)))
+
         def find(x):
             if ls[x] != x:
                 ls[x] = find(ls[x])
             return ls[x]
+
         def union(x, y):
             ls[find(x)] = find(y)
         for v in prime_set.values():
             for i in range(len(v) - 1):
-                union(v[i], v[i+1])
+                union(v[i], v[i + 1])
         return max(Counter([find(i) for i in range(len(A))]).values())

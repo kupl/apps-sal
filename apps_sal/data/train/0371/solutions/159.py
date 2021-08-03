@@ -1,6 +1,6 @@
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        
+
         if S == T:
             return 0
         n = len(routes)
@@ -36,24 +36,22 @@ class Solution:
             q = temp
             step += 1
         return -1
-                    
-    
+
     def binary_search(self, A, target):
         l = 0
         r = len(A) - 1
         while l <= r:
-            mid = (l+r)//2
-            if A[mid]==target:
+            mid = (l + r) // 2
+            if A[mid] == target:
                 return True
             if target < A[mid]:
                 r = mid - 1
             else:
                 l = mid + 1
         return False
-                
-    
+
     def haveCommonValues(self, A, B):
-    
+
         i = 0
         j = 0
         while i < len(A):

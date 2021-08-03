@@ -14,7 +14,7 @@ class Solution:
         def merge(w1, w2):
             for k in range(len(w2), -1, -1):
                 if w1.endswith(w2[:k]):
-                    return w1+w2[k:]
+                    return w1 + w2[k:]
 
         @memo
         def find_short(tup, last):
@@ -26,4 +26,3 @@ class Solution:
         tup = tuple(range(len(A)))
 
         return min((find_short(tup, i) for i in range(len(A))), key=len)
-

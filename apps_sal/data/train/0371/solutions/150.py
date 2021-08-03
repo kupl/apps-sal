@@ -19,6 +19,4 @@ class Solution:
                         visited.add(neighbor)
                         bfs.append((neighbor, bus_change + 1))
 
-                
-
         return -1

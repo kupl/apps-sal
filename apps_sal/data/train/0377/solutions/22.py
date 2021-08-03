@@ -2,7 +2,7 @@ class Solution(object):
     def nthMagicalNumber(self, N, A, B):
         from fractions import gcd
         MOD = 10**9 + 7
-        L = A // gcd(A,B) * B
+        L = A // gcd(A, B) * B
 
         def magic_below_x(x):
             # How many magical numbers are <= x?

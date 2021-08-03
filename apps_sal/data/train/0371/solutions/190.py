@@ -50,5 +50,3 @@ class Solution:
                     routes[b] = []
 
         return -1
-
-

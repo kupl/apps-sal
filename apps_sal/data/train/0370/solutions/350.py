@@ -2,11 +2,12 @@ from typing import List
 from collections import defaultdict, deque
 from math import sqrt
 
+
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         factors = defaultdict(set)
         disjoint = list(range(len(A)))
-        
+
         def populateFactors():
             for i in range(len(A)):
                 a = A[i]
@@ -24,21 +25,23 @@ class Solution:
                             break
                 if x > 1:
                     factors[x].add(i)
+
         def find(i):
             while disjoint[i] != i:
                 i = disjoint[i]
             return i
+
         def union(i, j):
             disjoint[find(j)] = find(i)
-        
+
         populateFactors()
         for factor in factors:
             x = None
             for i in factors[factor]:
-                if x is None: x = i
+                if x is None:
+                    x = i
                 union(x, i)
         count = defaultdict(int)
         for i in range(len(A)):
             count[find(i)] += 1
         return max(count.values())
-

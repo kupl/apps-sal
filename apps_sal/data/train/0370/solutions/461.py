@@ -1,8 +1,8 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         A = set(A)
-        n = max(A)+1
-        p = [True]*n
+        n = max(A) + 1
+        p = [True] * n
         p[0] = p[1] = False
         # dic1: prime: num, dic2: num: prime
         dic1, dic2 = collections.defaultdict(set), collections.defaultdict(set)
@@ -11,12 +11,12 @@ class Solution:
                 if i in A:
                     dic1[i].add(i)
                     dic2[i].add(i)
-                for j in range(i*2, n, i):
+                for j in range(i * 2, n, i):
                     p[j] = False
                     if j in A:
                         dic1[i].add(j)
                         dic2[j].add(i)
-        
+
         seen = set()
         res = 0
         for num in A:
@@ -25,7 +25,7 @@ class Solution:
                 cur, s = 0, [num]
                 while s:
                     node = s.pop()
-                    cur +=1
+                    cur += 1
                     for m in dic2[node]:
                         for nxt in dic1[m]:
                             if nxt not in seen:

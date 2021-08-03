@@ -26,12 +26,12 @@ class Solution:
         initial = []
 
         for r in stop_to_route[S]:
-            initial.append((r,1))
+            initial.append((r, 1))
 
         q = deque(initial)
 
         while q:
-            u,cost = q.popleft()
+            u, cost = q.popleft()
 
             if u in end:
                 return cost
@@ -39,7 +39,6 @@ class Solution:
             for v in graph[u]:
                 if not visited[v]:
                     visited[v] = True
-                    q.append((v,cost+1))
+                    q.append((v, cost + 1))
 
         return -1
-

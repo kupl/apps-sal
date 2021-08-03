@@ -22,12 +22,15 @@ class Solution:
             ans = set()
             if not x % 2:
                 ans.add(2)
-                while not x % 2: x //= 2
+                while not x % 2:
+                    x //= 2
             for i in range(3, int(math.sqrt(x)) + 1, 2):
                 if not x % i:
                     ans.add(i)
-                    while not x % i: x //= i
-            if x > 1: ans.add(x)
+                    while not x % i:
+                        x //= i
+            if x > 1:
+                ans.add(x)
             return ans
 
         dic = {}

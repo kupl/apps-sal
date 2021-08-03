@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
@@ -12,20 +14,20 @@ class Solution:
                     graph[stop].append(bus)
                 else:
                     graph[stop] = [bus]
-        
+
         # tuple for bus num and number of busses taken
         q = deque()
         q.append((-1, 0))
         taken = set()
-        
+
         while len(q) > 0:
             busTuple = q.popleft()
             bus = busTuple[0]
             numBusses = busTuple[1]
-            
+
             if bus != -1 and T in routes[bus]:
                 return numBusses
-            
+
             if bus == -1:
                 for nextBus in graph[S]:
                     if nextBus not in taken:
@@ -38,5 +40,3 @@ class Solution:
                             taken.add(nextBus)
                             q.append((nextBus, numBusses + 1))
         return -1
-            
-

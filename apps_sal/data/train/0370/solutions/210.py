@@ -3,15 +3,16 @@ class DSU():
         self.parent = [i for i in range(n)]
         self.rank = [0 for _ in range(n)]
         self.size = n
+
     def find(self, x):
         # print('x = {0}, parent = {1}, self.parent[x] = {2}, cond = {3}'.format(x, self.parent, self.parent[x], x != self.parent[x]))
         if x != self.parent[x]:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
-    
+
     def union(self, x, y):
         xp, yp = self.find(x), self.find(y)
-        
+
         if xp == yp:
             return False
         # print('union, xp = {0}, yp = {1}'.format(xp, yp))
@@ -24,9 +25,11 @@ class DSU():
             self.rank[yp] += 1
         self.size -= 1
         return True
+
     def getSize(self):
         return self.size
-    
+
+
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         def getFactors(n):
@@ -42,7 +45,7 @@ class Solution:
             if not res:
                 return {n}
             return res
-        
+
         dsu = DSU(len(A) + 1)
         factor2Index = {}
         for i, n in enumerate(A):
@@ -56,5 +59,3 @@ class Solution:
         for i in range(len(A)):
             groupSize[dsu.find(i)] += 1
         return max(groupSize.values())
-        
-

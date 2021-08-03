@@ -1,6 +1,7 @@
 import collections
 from math import sqrt
 
+
 class Solution:
 
     def fac(self, m, a):
@@ -10,7 +11,8 @@ class Solution:
         return a
 
     def union(self, m, a, b):
-        if m[a] == m[b]: return
+        if m[a] == m[b]:
+            return
         pa = self.fac(m, a)
         pb = self.fac(m, b)
         m[pa] = pb
@@ -30,4 +32,3 @@ class Solution:
                 count[self.fac(m, a)] += 1
 
         return max(count.values())
-

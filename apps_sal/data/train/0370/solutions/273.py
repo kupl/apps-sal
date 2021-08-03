@@ -55,7 +55,7 @@ class Solution:
             ids[a] = factors[0]
             for p0, p1 in zip(factors, factors[1:]):
                 uf.merge(p0, p1)
-                
+
         counter = collections.defaultdict(int)
         maxval = 0
         for a in A:
@@ -64,5 +64,5 @@ class Solution:
             id_ = uf.get_root(ids[a])
             counter[id_] += 1
             maxval = max(maxval, counter[id_])
-            
+
         return maxval

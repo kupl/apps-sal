@@ -19,7 +19,7 @@ class Solution:
                     parent[p1] = p2
                     if rank[p1] == rank[p2]:
                         rank[p2] += 1
-                        
+
         def sieve(n):
             primes = [True] * (n + 1)
             p = 2

@@ -1,11 +1,13 @@
 from collections import defaultdict, deque
 
+
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], source_stop: int, target_stop: int) -> int:
-        if source_stop == target_stop: return 0
+        if source_stop == target_stop:
+            return 0
         routes = [set(r) for r in routes]
         stops = defaultdict(set)
-        for i,route in enumerate(routes):
+        for i, route in enumerate(routes):
             for stop in route:
                 stops[stop].add(i)
         q = deque()
@@ -24,5 +26,3 @@ class Solution:
                         visited_stops.add(other_stop)
                         q.append((other_stop, bus_num + 1))
         return -1
-
-

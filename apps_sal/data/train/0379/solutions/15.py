@@ -3,7 +3,7 @@ class Solution:
         self.mod_value = pow(10, 9) + 7
         n = len(nums1)
         m = len(nums2)
-        
+
         i = 0
         j = 0
         format_nums1 = []
@@ -63,7 +63,6 @@ class Solution:
                 # max_value1 = self.add_value_pair(max_value1, format_nums1[i][0])
                 # max_value2 = self.add_value_pair(max_value2, format_nums2[i][0])
         return self.max(max_value1, max_value2)[1]
-
 
     def add_value(self, value_pair, value):
         value_pair[1] += value

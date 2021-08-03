@@ -1,4 +1,6 @@
 from functools import reduce
+
+
 class Solution:
 
     def largestComponentSize(self, A: List[int]) -> int:
@@ -9,7 +11,7 @@ class Solution:
             return ds(parent[a]) if a in parent else a
 
         def union(a, b):
-            if (a:=ds(a)) != (b:=ds(b)):
+            if (a := ds(a)) != (b := ds(b)):
                 if size[a] < size[b]:
                     a, b = b, a
                 parent[b] = a
@@ -64,4 +66,3 @@ def factors3(f, start=3):
             FS[f] = {f}
 
     return FS[f]
-

@@ -3,14 +3,15 @@ class DSU():
         self.parent = [i for i in range(n)]
         self.rank = [0 for _ in range(n)]
         self.size = n
+
     def find(self, x):
         if x != self.parent[x]:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
-    
+
     def union(self, x, y):
         xp, yp = self.find(x), self.find(y)
-        
+
         if xp == yp:
             return False
         if self.rank[xp] < self.rank[yp]:
@@ -22,9 +23,11 @@ class DSU():
             self.rank[yp] += 1
         self.size -= 1
         return True
+
     def getSize(self):
         return self.size
-    
+
+
 class Solution:
     # refer submission. https://www.cnblogs.com/grandyang/p/13253468.html
     def largestComponentSize(self, A: List[int]) -> int:
@@ -40,7 +43,7 @@ class Solution:
             if not res:
                 return {n}
             return res
-        
+
         # buld dsu based on index of A. union index.
         dsu = DSU(len(A) + 1)
         factor2Index = {}
@@ -53,5 +56,3 @@ class Solution:
         for i in range(len(A)):
             groupSize[dsu.find(i)] += 1
         return max(groupSize.values())
-        
-

@@ -1,6 +1,7 @@
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        if S==T: return 0
+        if S == T:
+            return 0
         bus_dic = defaultdict(set)
         for i, r in enumerate(routes):
             for s in r:
@@ -24,7 +25,7 @@ class Solution:
                         seen.add(s)
                         for bus in bus_dic[s]:
                             if bus in bus_dic[T]:
-                                return cnt+1
+                                return cnt + 1
                             tmp.add(bus)
             av_bus = tmp
-        return -1     
+        return -1

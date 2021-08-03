@@ -86,7 +86,8 @@ class UF:
     def merge(self, x, y):
         # Merge by size of set
         px, py = self.find(x), self.find(y)
-        if px == py: return
+        if px == py:
+            return
         if self.size[px] < self.size[py]:
             self.p[px] = py
             self.size[py] += self.size[px]
@@ -117,4 +118,3 @@ sol = Solution()
 ns = [2, 3, 6, 7, 4, 12, 21, 39]
 ns = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ns = [32, 5, 8, 11, 13, 78, 61, 16, 83, 22, 28, 93]
-

@@ -1,16 +1,16 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         uf = {}
-        
+
         def find(x):
             uf.setdefault(x, x)
             if uf[x] != x:
                 uf[x] = find(uf[x])
             return uf[x]
-        
+
         def union(x, y):
             uf[find(x)] = find(y)
-            
+
         for i, a in enumerate(A):
             if not a % 2:
                 union(A[i], 2)

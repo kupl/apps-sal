@@ -12,10 +12,12 @@ class Solution:
             if n > 1:
                 unions[n].add(i)
         ids = list(range(len(A)))
+
         def find(i):
             if ids[i] != i:
                 ids[i] = find(ids[i])
             return ids[i]
+
         def union(l):
             s = set(find(i) for i in l)
             i = s.pop()
@@ -26,4 +28,3 @@ class Solution:
             union(l)
         c = collections.Counter(find(i) for i in range(len(A)))
         return max(c.values())
-

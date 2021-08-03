@@ -25,4 +25,3 @@ class Solution:
             sum2 += nums2[j]
             j += 1
         return (res + max(sum1, sum2)) % 1000000007
-

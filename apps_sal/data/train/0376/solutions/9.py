@@ -2,7 +2,7 @@ class Solution:
     def minScoreTriangulation(self, A: List[int]) -> int:
         n = len(A)
         dp = [[0] * n for i in range(n)]
-        
+
         for d in range(2, n):
             for i in range(n - d):
                 j = i + d

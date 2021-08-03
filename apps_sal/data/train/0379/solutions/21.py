@@ -3,7 +3,7 @@ class Solution:
         maxi = max(A[-1], B[-1])
         A.append(maxi + 1)
         B.append(maxi + 1)
-        
+
         i = j = 0
         s1 = s2 = 0
         MOD = 10 ** 9 + 7
@@ -19,11 +19,10 @@ class Solution:
                 i += 1
                 j += 1
         return (MOD + s1 - A[-1]) % MOD
-        
-    
+
     def maxSum_foolish_DP(self, A: List[int], B: List[int]) -> int:
         N = [A, B]
-        NN = [{v : i for i, v in enumerate(A)}, {v : i for i, v in enumerate(B)}]
+        NN = [{v: i for i, v in enumerate(A)}, {v: i for i, v in enumerate(B)}]
 
         @functools.lru_cache(None)
         def helper(index, is_bottom, changed):
@@ -38,5 +37,5 @@ class Solution:
                 return helper(NN[1 ^ is_bottom][value], 1 ^ is_bottom, 0)
             else:
                 return value + max(helper(index - 1, is_bottom, 0), helper(index - 1, is_bottom, 1))
-        
+
         return (max(helper(len(A) - 1, 0, 0), helper(len(A) - 1, 0, 1), helper(len(B) - 1, 1, 0), helper(len(B) - 1, 1, 1))) % (10 ** 9 + 7)

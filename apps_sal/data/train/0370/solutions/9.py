@@ -2,7 +2,7 @@ class UF(object):
     def uf(self, n):
         self.uf = [i for i in range(n)]
         self.size = [1] * n
-        
+
     def find(self, x):
         if x != self.uf[x]:
             self.uf[x] = self.find(self.uf[x])
@@ -12,11 +12,12 @@ class UF(object):
         xx = self.find(x)
         yy = self.find(y)
         if xx == yy:
-            return 
+            return
         self.uf[xx] = yy
         self.size[yy] += self.size[xx]
         # self.size[xx] = 0
-        
+
+
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         def primefactors(n):
@@ -53,7 +54,7 @@ class Solution:
         '''
         uf = UF()
         uf.uf(len(A))
-        
+
         prime = {}
         for i, v in enumerate(A):
             factors = primefactors(v)
