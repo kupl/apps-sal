@@ -2,7 +2,7 @@ class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
         x_axes = {}
         y_axes = {}
-        
+
         for point in points:
             if point[0] not in x_axes:
                 x_axes[point[0]] = set()
@@ -10,7 +10,7 @@ class Solution:
                 y_axes[point[1]] = set()
             x_axes[point[0]].add(point[1])
             y_axes[point[1]].add(point[0])
-        
+
         def findMinArea(point, x_axes, y_axes):
             # traverse x axes, fix y axis
             possible_x = y_axes[point[1]]
@@ -24,16 +24,15 @@ class Solution:
                     if y == point[1]:
                         continue
                     if x in y_axes[y]:
-                        area = abs((x-point[0])*(y-point[1]))
+                        area = abs((x - point[0]) * (y - point[1]))
                         # print(area)
                         min_area = area if min_area is None else min(area, min_area)
             return min_area
-        
+
         min_area = None
         for point in points:
             area = findMinArea(point, x_axes, y_axes)
             if area is not None:
                 min_area = area if min_area is None else min(min_area, area)
-        
-        return min_area if min_area else 0
 
+        return min_area if min_area else 0

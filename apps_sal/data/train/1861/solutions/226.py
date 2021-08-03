@@ -15,6 +15,5 @@ class Solution:
                         if not result:
                             return 0
                 elif counter[(x, y)] == 2 and counter[(x_, y_)] == 2:
-                        return 0
+                    return 0
         return 0 if result == float('inf') else result
-

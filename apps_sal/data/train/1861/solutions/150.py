@@ -1,13 +1,15 @@
 from collections import defaultdict
+
+
 class Solution:
     def minAreaRect(self, points):
         setr, setc = set(), set()
         for r, c in points:
             setr.add(r)
             setc.add(c)
-        if len(points) in (len(setr), len(setc)): return 0
-        
-        
+        if len(points) in (len(setr), len(setc)):
+            return 0
+
         columns = defaultdict(list)
         for r, c in points:
             columns[r].append(c)
@@ -22,13 +24,11 @@ class Solution:
         return ans if ans < float('inf') else 0
 
 
-                              
 class Solution:
     def minAreaRect(self, points):
         seen, ans = set(map(tuple, points)), float('inf')
         for i, (p1x, p1y) in enumerate(points):
-            for (p2x, p2y) in points[i+1:]:
+            for (p2x, p2y) in points[i + 1:]:
                 if (p1x != p2x) and (p1y != p2y) and ((p1x, p2y) in seen) and ((p2x, p1y) in seen):
-                    ans = min(ans, abs((p1x-p2x)*(p1y-p2y)))
+                    ans = min(ans, abs((p1x - p2x) * (p1y - p2y)))
         return ans if ans < float('inf') else 0
-

@@ -7,7 +7,7 @@
 class Solution:
     def recoverFromPreorder(self, S: str) -> TreeNode:
         def _recoverFromPreorder(s):
-            print (''.join(s))
+            print(''.join(s))
             if not s:
                 return
 
@@ -19,11 +19,10 @@ class Solution:
                     depth += 1
                 else:
                     break
-            
-            
+
             var = 0
             index = -1
-            for i in range(len(s)-1, -1, -1):
+            for i in range(len(s) - 1, -1, -1):
                 if s[i] != '-':
                     if var == depth:
                         index = i
@@ -31,18 +30,18 @@ class Solution:
                     var = 0
                 else:
                     var += 1
-                    
+
             if index == -1:
                 root.left = _recoverFromPreorder(s)
             else:
-                root.right = _recoverFromPreorder(s[:index+1])
-                root.left = _recoverFromPreorder(s[index+depth+1:])
-            
+                root.right = _recoverFromPreorder(s[:index + 1])
+                root.left = _recoverFromPreorder(s[index + depth + 1:])
+
             return root
-        
+
         arr = list(S)
         arr_1 = []
-        
+
         x = ''
         while arr:
             s = arr.pop()
@@ -53,8 +52,8 @@ class Solution:
                 x = ''
             else:
                 x = s + x
-                
+
         if x:
             arr_1.append(x)
-            
+
         return _recoverFromPreorder(arr_1)

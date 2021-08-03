@@ -9,9 +9,9 @@ class Solution:
         # then, O(4) to find a rectangle
         # x_vals: {1: [1, 3], 3: [3, 1], 2: [2]}
         # y_vals: {1, [1, 3], 3: [3, 1], 2: [2]}
-        
+
         # Then, to check, loop through all x's and see if we can get all 4 points for each; if so, calculate area
-        
+
         # Runtime: O(n^3)
         # x_vals = defaultdict(set)
         # y_vals = defaultdict(set)
@@ -38,11 +38,11 @@ class Solution:
         # if min_area == 40000*40000 + 1:
         #     return 0
         # return min_area
-    
+
         # Improved O(n^2) solution that's a lot simpler too:
-        min_area = 40000*40000 + 1
+        min_area = 40000 * 40000 + 1
         seen_points = set()
-        for x,y in points:
+        for x, y in points:
             seen_points.add((x, y))
         # print(seen_points)
         for p1_x, p1_y in points:
@@ -52,8 +52,6 @@ class Solution:
                         area = abs(p2_x - p1_x) * abs(p2_y - p1_y)
                         if area > 0:
                             min_area = min(min_area, area)
-        if min_area == 40000*40000 + 1:
+        if min_area == 40000 * 40000 + 1:
             return 0
         return min_area
-            
-

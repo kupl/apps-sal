@@ -19,4 +19,4 @@ class Solution:
                     heapq.heappush(heap, (moves + 1, ni, nj, boxi + dx, boxj + dy))
                 elif (ni, nj) in free and (ni, nj) != (boxi, boxj) and (ni, nj, boxi, boxj) not in visited:
                     heapq.heappush(heap, (moves, ni, nj, boxi, boxj))
-        return -1         
+        return -1

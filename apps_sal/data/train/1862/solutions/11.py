@@ -3,7 +3,7 @@ class Solution:
         def flip(k):
             for i in range(k // 2):
                 arr[i], arr[k - i - 1] = arr[k - i - 1], arr[i]
-        
+
         ans = []
         val = len(arr)
         while val > 0:

@@ -18,7 +18,7 @@ class Solution:
         #                 res = min(res, (y2 - y1) * (x - last_x[(y1, y2)]))
         #             last_x[(y1, y2)] = x
         # return res if res < float('inf') else 0
-        
+
         # assume each pair of points form the diagnal of the rectangle, check if other points
         # exist in the set, if so, we have a candidate
         # Time Coplexity: O(N^2)

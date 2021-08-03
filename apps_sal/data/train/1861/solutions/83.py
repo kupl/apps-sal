@@ -1,5 +1,5 @@
 class Solution(object):
-     def minAreaRect(self, points):
+    def minAreaRect(self, points):
         seen = set()
         res = float('inf')
         for x1, y1 in points:

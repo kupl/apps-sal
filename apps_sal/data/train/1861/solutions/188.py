@@ -2,7 +2,7 @@ class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
       #  if points == [] or points == [[]] or points == None or len(points) < 4:
       #      return 0
-        
+
         seen = set()
         res = float('inf')
         for x1, y1 in points:
@@ -12,13 +12,8 @@ class Solution:
                     if area and area < res:
                         res = area
             seen.add((x1, y1))
-        
+
         if res != float('inf'):
             return res
-        else: 
+        else:
             return 0
-
-            
-        
-        
-

@@ -19,7 +19,7 @@ class Solution:
             for i in range(len(vs) - 1):
                 for j in range(i + 1, len(vs)):
                     if (vs[i], vs[j]) in slengths:
-                        area = abs( (x - slengths[(vs[i], vs[j])]) * (vs[j] - vs[i]) )
+                        area = abs((x - slengths[(vs[i], vs[j])]) * (vs[j] - vs[i]))
                         min_area = min(min_area, area)
                     slengths[(vs[i], vs[j])] = x
         return min_area if min_area != float('inf') else 0

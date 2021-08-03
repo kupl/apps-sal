@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def minAreaRect(self, points):
         d = defaultdict(set)
@@ -19,7 +21,7 @@ class Solution:
         A = sorted(d.keys())
         for i, r1 in enumerate(A):
             cols1 = d[r1]
-            for r2 in A[i+1:]:
+            for r2 in A[i + 1:]:
                 cols2 = d[r2]
                 s = sorted(cols1 & cols2)
                 for c1, c2 in zip(s[:-1], s[1:]):

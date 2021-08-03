@@ -1,4 +1,6 @@
 import sys
+
+
 class Solution:
     def minAreaRect(self, points):
         seen = set()

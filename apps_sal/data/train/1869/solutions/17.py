@@ -8,17 +8,17 @@ class Solution:
     def recoverFromPreorder(self, S: str) -> TreeNode:
         stack = []
         i = 0
-        level=0
+        level = 0
         while i < len(S):
             level = 0
-            val=''
+            val = ''
             while i < len(S) and S[i] == '-':
-                level+=1
-                i+=1
+                level += 1
+                i += 1
             while i < len(S) and S[i] != '-':
                 val += S[i]
-                i+=1
-            while len(stack)>level:
+                i += 1
+            while len(stack) > level:
                 stack.pop()
             node = TreeNode(val)
             if stack and stack[-1].left is None:

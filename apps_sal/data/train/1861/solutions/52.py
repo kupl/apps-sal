@@ -13,7 +13,7 @@ class Solution:
                 min_area = min(min_area, curr_min_area) if min_area > 0 else curr_min_area
             d[ys] = x
         return min_area
-        
+
     def find_lines(self, points: List[List[int]]) -> List[Tuple[int, Tuple[int, int]]]:
         ps = defaultdict(list)
         for x, y in sorted(points):
@@ -21,6 +21,6 @@ class Solution:
         lines = []
         for x, ys in ps.items():
             for i, y0 in enumerate(ys):
-                for y1 in ys[i+1:]:
+                for y1 in ys[i + 1:]:
                     lines.append((x, (y0, y1)))
         return lines

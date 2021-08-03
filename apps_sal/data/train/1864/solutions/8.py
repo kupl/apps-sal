@@ -5,7 +5,7 @@ class Solution:
         for i, c in enumerate(expression):
             if c == '{':
                 if level == 0:
-                    start = i+1
+                    start = i + 1
                 level += 1
             elif c == '}':
                 level -= 1
@@ -19,4 +19,3 @@ class Solution:
         for group in groups:
             word_set |= set(map(''.join, itertools.product(*group)))
         return sorted(word_set)
-

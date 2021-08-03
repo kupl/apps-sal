@@ -9,5 +9,5 @@ class Solution:
                     if area and area < result:
                         result = area
             seen.add((x1, y1))
-            
+
         return result if result != float('inf') else 0

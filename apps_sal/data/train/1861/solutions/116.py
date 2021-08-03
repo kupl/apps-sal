@@ -4,12 +4,12 @@ class Solution:
         #  0123456
         # 0
         # 1 * **
-        # 2 
+        # 2
         # 3 * **
         # 4
         seen = set()
         best = 0
-        
+
         for p1 in points:
             x1, y1 = p1
             for p2 in seen:
@@ -22,4 +22,3 @@ class Solution:
                         best = min(best, area)
             seen.add((x1, y1))
         return best
-

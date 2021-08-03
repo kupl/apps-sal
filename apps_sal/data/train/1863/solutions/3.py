@@ -29,8 +29,8 @@ class Solution:
 
         # step 1). BFS traversal
         BFS(root)
-        
-         # step 2). extract the values from the columnTable
+
+        # step 2). extract the values from the columnTable
         ret = []
         for col in range(min_column, max_column + 1):
             # sort first by 'row', then by 'value', in ascending order

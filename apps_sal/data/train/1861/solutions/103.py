@@ -26,6 +26,6 @@ class Solution(object):
             column.sort()
             for y1, y2 in itertools.combinations(column, 2):
                 if (y1, y2) in dic_last:
-                    res = min(res, (x - dic_last[y1, y2]) * (y2 -y1))
+                    res = min(res, (x - dic_last[y1, y2]) * (y2 - y1))
                 dic_last[y1, y2] = x
         return res if res < float('inf') else 0

@@ -16,9 +16,9 @@ class Solution:
                 for i, j in di:
                     ti = x + i
                     tj = y + j
-                    if (0 <= ti < r and 0 <= tj < c 
+                    if (0 <= ti < r and 0 <= tj < c
                         and path[ti][tj] == '.'
-                        and str((ti, tj)) not in s):
+                            and str((ti, tj)) not in s):
                         s.add(str((ti, tj)))
                         t.append([ti, tj])
             return False
@@ -56,12 +56,11 @@ class Solution:
                 tjj = by - j
                 if (0 <= ti < r and 0 <= tj < c and grid[ti][tj] == '.'
                     and str((ti, tj, bx, by)) not in s and 0 <= tii < r
-                    and 0 <= tjj < c and grid[tii][tjj] == '.' 
-                    and bfs(sx, sy, tii, tjj, grid)):
+                    and 0 <= tjj < c and grid[tii][tjj] == '.'
+                        and bfs(sx, sy, tii, tjj, grid)):
                     t.append([ti, tj, bx, by, step + 1])
                     s.add(str((ti, tj, bx, by)))
 
             grid[bx][by] = '.'
 
         return -1
-

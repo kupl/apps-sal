@@ -5,6 +5,7 @@ class Solution:
         boxi, boxj = next((i, j) for i, row in enumerate(grid) for j, cell in enumerate(row) if cell == 'B')
         si, sj = next((i, j) for i, row in enumerate(grid) for j, cell in enumerate(row) if cell == 'S')
         heap = [(0, si, sj, boxi, boxj)]
+
         def add(moves, *state, added=set()):
             if state not in added:
                 heapq.heappush(heap, (moves, *state))
@@ -21,4 +22,3 @@ class Solution:
                 elif (ni, nj) in free:
                     add(moves, ni, nj, boxi, boxj)
         return -1
-

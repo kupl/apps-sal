@@ -10,7 +10,7 @@ class Solution:
         has_rectangle = False
 
         for i in range(len(points)):
-            for j in range(i+1,len(points)):
+            for j in range(i + 1, len(points)):
                 x1 = points[i][0]
                 y1 = points[i][1]
 
@@ -19,10 +19,10 @@ class Solution:
 
                 # check (x1, y2) and (x2, y1)
 
-                if x1==x2:
+                if x1 == x2:
                     continue
 
-                if y1==y2:
+                if y1 == y2:
                     continue
 
                 if (x1, y2) not in points_set:
@@ -31,15 +31,14 @@ class Solution:
                 if (x2, y1) not in points_set:
                     continue
 
-                area = abs((x1-x2)*(y1-y2))
+                area = abs((x1 - x2) * (y1 - y2))
 
                 has_rectangle = True
-                    
-                if area<min_area:
+
+                if area < min_area:
                     min_area = area
-                    
+
         if not has_rectangle:
             return 0
         else:
-            return min_area                
-
+            return min_area

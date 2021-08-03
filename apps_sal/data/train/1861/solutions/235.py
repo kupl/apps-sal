@@ -1,5 +1,6 @@
 from itertools import combinations
 
+
 class Solution:
     def minAreaRect(self, points) -> int:
         point_x = {}

@@ -11,4 +11,4 @@ class Solution:
                 if ys in seen:
                     result = min(result, (x - seen[ys]) * (ys[1] - ys[0]))
                 seen[ys] = x
-        return 0 if math.isinf(result) else  result
+        return 0 if math.isinf(result) else result

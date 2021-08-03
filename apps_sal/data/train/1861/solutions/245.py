@@ -7,7 +7,7 @@ class Solution:
             return 0
         res = 2**31
         s = {(p[0], p[1]) for p in points}
-        
+
         for i, p1 in enumerate(points):
             for j, p2 in enumerate(points[i + 1:]):
                 if p1[0] != p2[0] and p1[1] != p2[1]:
@@ -36,6 +36,3 @@ class Solution:
 #                         res = min(res, (x - lastx[y1, y2]) * abs(y2 - y1))
 #                     lastx[y1, y2] = x
 #         return res if res < float('inf') else 0
-                
-                
-

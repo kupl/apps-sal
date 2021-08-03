@@ -1,15 +1,15 @@
 class Solution:
     def minPushBox(self, grid: List[List[str]]) -> int:
         R, C = len(grid), len(grid[0])
-        
+
         def nxt(pos):
             r, c = pos
             res = []
-            for nr, nc in [[r+1, c], [r, c+1], [r-1, c], [r, c-1]]:
+            for nr, nc in [[r + 1, c], [r, c + 1], [r - 1, c], [r, c - 1]]:
                 if 0 <= nr < R and 0 <= nc < C and grid[nr][nc] != '#':
                     res.append((nr, nc))
             return res
-        
+
         def connected(p, q, box):
             queue = collections.deque([p])
             seen = set()
@@ -23,9 +23,9 @@ class Solution:
                             seen.add((nr, nc))
                             queue.append((nr, nc))
             return False
-                
+
         target, box, worker = None, None, None
-        
+
         for r in range(R):
             for c in range(C):
                 if grid[r][c] == 'S':
@@ -34,18 +34,18 @@ class Solution:
                     box = (r, c)
                 if grid[r][c] == 'T':
                     target = (r, c)
-        
+
         level = []
         seen = set()
         for pos in nxt(box):
-            #print(pos)
+            # print(pos)
             if connected(pos, worker, box):
                 level.append((box, pos))
                 seen.add((box, pos))
-                
+
         grid[box[0]][box[1]] = '.'
         steps = 0
-        
+
         while level:
             n_level = []
             for b, w in level:
@@ -59,6 +59,5 @@ class Solution:
                         n_level.append((nb, b))
             steps += 1
             level = n_level
-        
-        return -1
 
+        return -1

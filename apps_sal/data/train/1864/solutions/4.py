@@ -8,18 +8,18 @@ class Solution:
                 stack.append('{')
             elif letter == ',':
                 stack.append(',')
-            elif letter == '}': #Only deal with problems here
-                #Stack[-1] must be a set otherwise violates sense
+            elif letter == '}':  # Only deal with problems here
+                # Stack[-1] must be a set otherwise violates sense
                 while stack[-2] == ',':
                     set2 = stack.pop()
                     stack.pop()
                     stack[-1].update(set2)
-                #Stack[-2] must be '{' now
+                # Stack[-2] must be '{' now
                 tail = stack.pop()
-                stack[-1] = tail 
+                stack[-1] = tail
             while len(stack) > 1 and isinstance(stack[-1], set) and isinstance(stack[-2], set):
                 set2 = stack.pop()
                 set1 = stack.pop()
                 stack.append(set(w1 + w2 for w1 in set1 for w2 in set2))
-            
+
         return list(sorted(stack[-1]))

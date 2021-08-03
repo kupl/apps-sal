@@ -3,7 +3,7 @@ class Solution:
         def compute_table(points, axis=0):
             table = {}
             for point in points:
-                key, value = point[axis], point[1-axis]
+                key, value = point[axis], point[1 - axis]
                 if key in table:
                     table[key].append(value)
                 else:
@@ -27,4 +27,3 @@ class Solution:
         if min_area == float('inf'):
             return 0
         return min_area
-

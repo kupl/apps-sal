@@ -7,11 +7,12 @@
 class Solution:
     def recoverFromPreorder(self, s: str) -> TreeNode:
         self.index = 0
+
         def dfs(depth):
             if self.index == len(s):
                 return
             for i in range(depth):
-                if s[self.index+i] != '-':
+                if s[self.index + i] != '-':
                     return
             self.index += depth
             curr = 0
@@ -19,9 +20,7 @@ class Solution:
                 curr = curr * 10 + int(s[self.index])
                 self.index += 1
             node = TreeNode(curr)
-            node.left = dfs(depth+1)
-            node.right = dfs(depth+1)
+            node.left = dfs(depth + 1)
+            node.right = dfs(depth + 1)
             return node
         return dfs(0)
-    
-

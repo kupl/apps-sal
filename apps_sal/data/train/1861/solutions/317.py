@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
         res = float('inf')
@@ -19,7 +21,4 @@ class Solution:
         #                 print(new_area)
         #                 res = min(res, new_area)
         #     past_points.add((cur_point[0], cur_point[1]))
-        return res if res!=float('inf') else 0
-
-
-
+        return res if res != float('inf') else 0

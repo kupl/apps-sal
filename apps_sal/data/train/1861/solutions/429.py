@@ -1,5 +1,7 @@
 from collections import defaultdict
 from bisect import insort
+
+
 class Solution:
     def minAreaRect(self, points):
        # setr, setc = set(), set()
@@ -7,7 +9,7 @@ class Solution:
        #     setr.add(r)
        #     setc.add(c)
        # if len(points) in (len(setr), len(setc)): return 0
-        
+
         points.sort()
         columns = defaultdict(list)
         for r, c in points:
@@ -21,4 +23,3 @@ class Solution:
                         ans = min(ans, (r - lastc[(y1, y2)]) * (y2 - y1))
                     lastc[(y1, y2)] = r
         return ans if ans < float('inf') else 0
-

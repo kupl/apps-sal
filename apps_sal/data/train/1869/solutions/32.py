@@ -21,7 +21,7 @@ class Solution:
         while idx < len(S):
             if S[idx] != '-':
                 if cnt == d:
-                    root.left = self.recoverFromPreorder(S[root_l+d:idx-d])
+                    root.left = self.recoverFromPreorder(S[root_l + d:idx - d])
                     root.right = self.recoverFromPreorder(S[idx:])
                     break
                 cnt = 0
@@ -29,6 +29,5 @@ class Solution:
                 cnt += 1
             idx += 1
             if idx == len(S):
-                root.left = self.recoverFromPreorder(S[root_l+d:])
+                root.left = self.recoverFromPreorder(S[root_l + d:])
         return root
-

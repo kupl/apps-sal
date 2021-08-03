@@ -9,7 +9,7 @@ class Solution:
         if S == '':
             return
         root = TreeNode(S.split('-')[0])
-        stack = [(root,0)]
+        stack = [(root, 0)]
         nodes = []
         i = len(root.val)
         depth = 0
@@ -18,7 +18,7 @@ class Solution:
         while i < len(S):
             if S[i] == '-':
                 if started:
-                    nodes.append((TreeNode(''.join(val)),depth))
+                    nodes.append((TreeNode(''.join(val)), depth))
                     depth = 0
                     val = []
                     started = False
@@ -27,7 +27,7 @@ class Solution:
                 started = True
                 val.append(S[i])
             i += 1
-        nodes.append((TreeNode(''.join(val)),depth))
+        nodes.append((TreeNode(''.join(val)), depth))
         print(nodes)
         for node in nodes:
             while len(stack) > 0 and node[1] <= stack[-1][1]:
@@ -40,4 +40,3 @@ class Solution:
                     parent.right = node[0]
             stack.append(node)
         return root
-

@@ -25,7 +25,7 @@ class Solution:
         L[0] = (TreeNode(trans[0][0]))
         for val, lvl in trans[1:]:
             L[lvl] = TreeNode(val)
-            
+
             if L[lvl - 1].left:
                 L[lvl - 1].right = L[lvl]
             else:

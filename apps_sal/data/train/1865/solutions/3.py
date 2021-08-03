@@ -13,6 +13,7 @@ class Solution:
                 elif grid[r][c] in 'S':
                     src_row, src_col = r, c
                     grid[r][c] = '.'
+
         def traversal(player_row, player_col, box_row, box_col, visited):
             if not (0 <= player_row < num_rows and 0 <= player_col < num_cols):
                 return visited
@@ -31,8 +32,8 @@ class Solution:
             curr_row, curr_col, box_row, box_col, num_pushs = queue.popleft()
             reachable = traversal(curr_row, curr_col, box_row, box_col, set())
             for i, j in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
-                new_box_row = box_row+i
-                new_box_col = box_col+j
+                new_box_row = box_row + i
+                new_box_col = box_col + j
                 if not (0 <= new_box_row < num_rows and 0 <= new_box_col < num_cols):
                     continue
                 if grid[new_box_row][new_box_col] != '.':
@@ -43,4 +44,3 @@ class Solution:
                         return num_pushs + 1
                     queue.append((box_row, box_col, new_box_row, new_box_col, num_pushs + 1))
         return -1
-

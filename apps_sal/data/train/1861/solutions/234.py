@@ -9,9 +9,9 @@ class Solution:
         # then, O(4) to find a rectangle
         # x_vals: {1: [1, 3], 3: [3, 1], 2: [2]}
         # y_vals: {1, [1, 3], 3: [3, 1], 2: [2]}
-        
+
         # Then, to check, loop through all x's and see if we can get all 4 points for each; if so, calculate area
-        
+
         # Runtime: O(n^3)
         # x_vals = defaultdict(set)
         # y_vals = defaultdict(set)
@@ -38,19 +38,18 @@ class Solution:
         # if min_area == 40000*40000 + 1:
         #     return 0
         # return min_area
-    
+
         # Improved O(n^2) solution that's a lot simpler too:
-        x_coord = collections.defaultdict(list) # dictionary that stores a list of x coordinates for each vertical edge (y1, y2) where y1 < y2
-        points.sort(key = lambda x: (x[0], x[1])) # For making traversal more convenient
+        x_coord = collections.defaultdict(list)  # dictionary that stores a list of x coordinates for each vertical edge (y1, y2) where y1 < y2
+        points.sort(key=lambda x: (x[0], x[1]))  # For making traversal more convenient
         min_area = float('inf')
         for i in range(len(points)):
-            for j in range(i+1, len(points)):
+            for j in range(i + 1, len(points)):
                 x1, y1 = points[i]
                 x2, y2 = points[j]
-                if x1 == x2: # This is a vertical edge.
-                    if (y1, y2) in x_coord: # We have seen this vertical edge in the past.
-                        x_other = x_coord[(y1, y2)][-1] # Recall: we traverse points in the order of inceasing x
-                        min_area = min(min_area, (y2-y1) * (x1 - x_other)) # Update min area
+                if x1 == x2:  # This is a vertical edge.
+                    if (y1, y2) in x_coord:  # We have seen this vertical edge in the past.
+                        x_other = x_coord[(y1, y2)][-1]  # Recall: we traverse points in the order of inceasing x
+                        min_area = min(min_area, (y2 - y1) * (x1 - x_other))  # Update min area
                     x_coord[(y1, y2)].append(x1)
-        return min_area if min_area!=float('inf') else 0
-
+        return min_area if min_area != float('inf') else 0
