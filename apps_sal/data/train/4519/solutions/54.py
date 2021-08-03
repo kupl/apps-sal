@@ -1,5 +1,5 @@
 def max_number(n):
-    arrayTest = [1,3,2]
+    arrayTest = [1, 3, 2]
     array = list(str(n))
     array.sort(reverse=True)
     array1 = [str(array) for array in array]

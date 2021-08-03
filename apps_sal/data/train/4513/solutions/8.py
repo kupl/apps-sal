@@ -1,1 +1,1 @@
-num_obj = lambda a: [{str(n): chr(n)} for n in a]
+def num_obj(a): return [{str(n): chr(n)} for n in a]

@@ -9,11 +9,11 @@ def int_to_negabinary(i):
                 i, remainder = i + 1, remainder + 2
             digits.append(str(remainder))
     return ''.join(digits[::-1])
-    
+
+
 def negabinary_to_int(s):
     num = 0
     for c in s:
         num *= -2
         num += ('01').find(c)
     return num
-

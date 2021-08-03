@@ -1,6 +1,6 @@
 def difference(x):
     a, b = map(int, x.split('-'))
-    return abs(a-b)
+    return abs(a - b)
 
 
 def diff(arr):
