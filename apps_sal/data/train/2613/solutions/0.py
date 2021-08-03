@@ -1,6 +1,5 @@
 n = input()
-eng = set(map(int,input().split()))
+eng = set(map(int, input().split()))
 b = input()
-fre = set(map(int,input().split()))
+fre = set(map(int, input().split()))
 print((len(eng.union(fre))))
-

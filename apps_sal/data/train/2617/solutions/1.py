@@ -18,8 +18,6 @@ def __starting_point():
             outlist.pop()
         elif cmd == 'reverse':
             outlist.reverse()
-        
-        
-            
+
 
 __starting_point()

@@ -5,6 +5,8 @@ def __starting_point():
     english = set(map(int, input().strip().split(' ')))
     m = int(input().strip())
     french = set(map(int, input().strip().split(' ')))
-    
+
     print(len(english.intersection(french)))
+
+
 __starting_point()
