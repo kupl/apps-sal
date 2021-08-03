@@ -1,5 +1,6 @@
 import re
 
+
 def validate_hello(greetings):
-    res=re.search(r'hello|ciao|salut|hallo|hola|ahoj|czesc',greetings,re.IGNORECASE)
+    res = re.search(r'hello|ciao|salut|hallo|hola|ahoj|czesc', greetings, re.IGNORECASE)
     return True if res else False

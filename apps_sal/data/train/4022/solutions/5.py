@@ -1,8 +1,9 @@
 def soundex(name):
     consonants_to_digits = {c: str(i)
-        for i, consonants in enumerate("bfpv cgjkqsxz dt l mn r".split(), 1)
-        for cs in consonants
-        for c in cs}
+                            for i, consonants in enumerate("bfpv cgjkqsxz dt l mn r".split(), 1)
+                            for cs in consonants
+                            for c in cs}
+
     def soundex_word(word):
         result = word.lower()
         result = (c for i, c in enumerate(result) if i == 0 or c not in "hw")
@@ -14,6 +15,7 @@ def soundex(name):
         result = format(result, "0<4.4")
         return result
     return " ".join(soundex_word(word) for word in name.split())
+
 
 def uniq(iterable):
     iterable = iter(iterable)

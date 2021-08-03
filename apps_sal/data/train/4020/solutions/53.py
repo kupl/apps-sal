@@ -1,5 +1,6 @@
 import string
 
+
 def validate_hello(greetings):
     HELLO_WORDS = {
         'hello',
@@ -11,5 +12,5 @@ def validate_hello(greetings):
         'czesc'
     }
     return any(x in HELLO_WORDS
-                for x in greetings.translate(dict((ord(char), None)
-                                    for char in string.punctuation)).lower().split())
+               for x in greetings.translate(dict((ord(char), None)
+                                                 for char in string.punctuation)).lower().split())

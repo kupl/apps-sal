@@ -1,4 +1,4 @@
-def optimum_location(students, locations, optimal = (float('inf'),)):
+def optimum_location(students, locations, optimal=(float('inf'),)):
     for loc in locations:
         distance = sum(abs(x - loc['x']) + abs(y - loc['y']) for x, y in students)
         if distance < optimal[0]:

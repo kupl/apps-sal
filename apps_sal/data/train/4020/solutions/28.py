@@ -1,4 +1,6 @@
 import re
+
+
 def validate_hello(greetings):
     greetings = greetings.lower()
     a = ["hello", "ciao", "salut", "hallo", "hola", "ahoj", "czesc"]

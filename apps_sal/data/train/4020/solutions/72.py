@@ -4,4 +4,4 @@ def validate_hello(greetings):
     for i in item:
         if i in greetings.lower():
             check = True
-    return check            
+    return check
