@@ -1,2 +1,2 @@
 def count_red_beads(n):
-    return (max(n,1)-1) * 2
+    return (max(n, 1) - 1) * 2

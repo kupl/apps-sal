@@ -7,4 +7,5 @@ _RESULTS = {
     'dog': lambda y: 'pass out from excitement {} times'.format(y)
 }
 
-present = lambda x, y: _RESULTS[x](y)
+
+def present(x, y): return _RESULTS[x](y)

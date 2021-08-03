@@ -1,4 +1,4 @@
-def present(x,y):
+def present(x, y):
     if x == "empty":
         return "empty"
     if x == "crap":
@@ -8,7 +8,6 @@ def present(x,y):
     if x == "dog":
         return f"pass out from excitement {y} times"
     if x == "bang":
-        return str(sum([ord(el)-y for el in x]))
+        return str(sum([ord(el) - y for el in x]))
     if x == "goodpresent":
-        return "".join([chr(ord(el)+y)for el in x])
-
+        return "".join([chr(ord(el) + y)for el in x])

@@ -1,5 +1,5 @@
 d = dict(__import__("re").findall(r"'(.)'.*\s([a-z_]+)\.",
-    """
+                                  """
         '-' A regular file ==> file.
         'd' A directory ==> directory.
         'l' A symbolic link ==> symlink.
@@ -10,4 +10,5 @@ d = dict(__import__("re").findall(r"'(.)'.*\s([a-z_]+)\.",
         'D' a door ==> door.
     """))
 
-linux_type = lambda s: d[s[0]]
+
+def linux_type(s): return d[s[0]]

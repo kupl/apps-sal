@@ -8,5 +8,5 @@ def linux_type(file_attribute):
         'p': 'pipe',
         's': 'socket',
         'D': 'door'
-    } 
+    }
     return flags[file_attribute[0]]
