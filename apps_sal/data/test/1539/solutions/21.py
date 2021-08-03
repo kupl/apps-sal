@@ -1,4 +1,5 @@
-f = lambda: list(map(int, input().split()))
+def f(): return list(map(int, input().split()))
+
 
 n, p, m, s = input(), {}, 0, sorted(zip(f(), f()), key=lambda q: -q[1])
 
@@ -20,7 +21,8 @@ for L, (k, D) in list(p.items()):
 
                 k -= 1
 
-                if k == 0: break
+                if k == 0:
+                    break
 
     m = max(D, m)
 

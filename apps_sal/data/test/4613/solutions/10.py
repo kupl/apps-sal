@@ -21,8 +21,10 @@ class UnionFind:
     def unite(self, a, b):
         ra = self.root(a)
         rb = self.root(b)
-        if ra == rb: return
-        if self._size[ra] < self._size[rb]: ra, rb = rb, ra
+        if ra == rb:
+            return
+        if self._size[ra] < self._size[rb]:
+            ra, rb = rb, ra
         self._size[ra] += self._size[rb]
         self.parent[rb] = ra
         self.count += 1
@@ -35,9 +37,11 @@ ans = 0
 for i in range(M):
     uf = UnionFind(N)
     for j, (a, b) in enumerate(AB):
-        if i == j: continue
+        if i == j:
+            continue
         a, b = a - 1, b - 1
-        if uf.is_same(a, b): continue
+        if uf.is_same(a, b):
+            continue
         uf.unite(a, b)
     if uf.size(0) != N:
         ans += 1

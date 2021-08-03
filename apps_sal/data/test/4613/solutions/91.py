@@ -1,8 +1,9 @@
 from copy import deepcopy
 from collections import deque
 from sys import stdin
-nii = lambda: map(int, stdin.readline().split())
-lnii = lambda: list(map(int, stdin.readline().split()))
+def nii(): return map(int, stdin.readline().split())
+def lnii(): return list(map(int, stdin.readline().split()))
+
 
 n, m = nii()
 l = [lnii() for i in range(m)]

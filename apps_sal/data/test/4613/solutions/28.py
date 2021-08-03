@@ -9,7 +9,8 @@ for i in range(M):
 
 
 def dfs(x, g):
-    if vis[x]: return
+    if vis[x]:
+        return
     vis[x] = 1
     for i in g[x]:
         dfs(i, g)

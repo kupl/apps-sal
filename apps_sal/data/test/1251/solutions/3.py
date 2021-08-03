@@ -1,25 +1,25 @@
 import sys
 
-n = 0;
+n = 0
 
-inp = [];
+inp = []
 
-tree = [];  # stores the index of min in range(i,j)
+tree = []  # stores the index of min in range(i,j)
 
 
 def build(node, i, j):
 
     if(i > j):
 
-        return;
+        return
 
     if(i == j):
 
-        tree[node] = int(i);
+        tree[node] = int(i)
 
-        return;
+        return
 
-    mid = int((i + j) / 2);
+    mid = int((i + j) / 2)
 
     build(2 * node, i, mid)
 
@@ -27,7 +27,7 @@ def build(node, i, j):
 
     if(inp[tree[2 * node]] < inp[tree[2 * node + 1]]):
 
-        tree[node] = tree[2 * node];
+        tree[node] = tree[2 * node]
 
     else:
 
@@ -38,66 +38,66 @@ def RMQ(node, i, j, l, r):  # return  index of minimum in range i,j #r,l is curr
 
     if((i <= l) and (r <= j)):
 
-        return tree[node];
+        return tree[node]
 
     if((i > r) or (j < l)):
 
-        return n;
+        return n
 
-    mid = int((l + r) / 2);
+    mid = int((l + r) / 2)
 
-    a = RMQ(2 * node, i, j, l, mid);  # j,l,mid);
+    a = RMQ(2 * node, i, j, l, mid)  # j,l,mid)
 
-    b = RMQ(2 * node + 1, i, j, mid + 1, r);
+    b = RMQ(2 * node + 1, i, j, mid + 1, r)
 
     if(inp[a] < inp[b]):
 
-        return a;
+        return a
 
     else:
 
-        return b;
+        return b
 
 
 def inputArray():
 
-    A = str(input()).split();
+    A = str(input()).split()
 
-    return list(map(int, A));
+    return list(map(int, A))
 
 
 def solve(a, b, ht):
 
     if(a > b):
 
-        return 0;
+        return 0
 
-    mn = RMQ(1, a, b, 0, n - 1);
+    mn = RMQ(1, a, b, 0, n - 1)
 
     op1 = b - a + 1
 
-    op2 = solve(a, mn - 1, inp[mn]) + solve(mn + 1, b, inp[mn]) + inp[mn] - ht;
+    op2 = solve(a, mn - 1, inp[mn]) + solve(mn + 1, b, inp[mn]) + inp[mn] - ht
 
-    return min(op1, op2);
+    return min(op1, op2)
 
 
 if(__name__ == "__main__"):
 
-    n = int(input());
+    n = int(input())
 
-    inp = inputArray();
+    inp = inputArray()
 
-    inp.append(1000 * 1000 * 1000 + 10);
+    inp.append(1000 * 1000 * 1000 + 10)
 
     sys.setrecursionlimit(10000)
 
     # build RMQ array
 
-    tree = [int(n) for x in range(4 * n + 10)];
+    tree = [int(n) for x in range(4 * n + 10)]
 
-    build(1, 0, n - 1);
+    build(1, 0, n - 1)
 
-    print((solve(0, n - 1, 0)));
+    print((solve(0, n - 1, 0)))
 
 
 # Made By Mostafa_Khaled

@@ -46,10 +46,12 @@ ans = 0
 for i in range(m):
     u = UnionFind(n)
     for j in range(m):
-        if j == i: continue
+        if j == i:
+            continue
         a, b = edges[j]
         a -= 1
         b -= 1
         u.unite(a, b)
-    if u.size() != 1: ans += 1
+    if u.size() != 1:
+        ans += 1
 print(ans)

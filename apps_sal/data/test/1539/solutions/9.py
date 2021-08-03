@@ -45,9 +45,11 @@ def main():
     idx = 0
     for i in range(listLen):
         curr = 0
-        if i + 1 < listLen: curr += suffixSum[legList[i + 1]]
+        if i + 1 < listLen:
+            curr += suffixSum[legList[i + 1]]
         toRemove = available - (legFreq[legList[i]] - 1)
-        if toRemove < 0: toRemove = 0
+        if toRemove < 0:
+            toRemove = 0
         for j in range(1, 201):
             if removable[j] != 0 and removable[j] <= toRemove:
                 curr += (removable[j] * j)
@@ -55,7 +57,8 @@ def main():
             elif removable[j] > toRemove:
                 curr += (toRemove * j)
                 toRemove = 0
-            if toRemove == 0: break
+            if toRemove == 0:
+                break
         available += legFreq[legList[i]]
         for j in range(legFreq[legList[i]]):
             removable[pairedLD[idx][1]] += 1

@@ -4,10 +4,12 @@ input = stdin.readline
 
 N, M = map(int, input().split())
 neighbor = [[] for _ in range(N)]
-A = [-1] * M; B = [-1] * M
+A = [-1] * M
+B = [-1] * M
 for i in range(M):
     a, b = map(lambda x: int(x) - 1, input().split())
-    A[i] = a; B[i] = b
+    A[i] = a
+    B[i] = b
     neighbor[a].append(b)
     neighbor[b].append(a)
 

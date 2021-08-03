@@ -1,4 +1,5 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
 
 k = int(input())
 a = []

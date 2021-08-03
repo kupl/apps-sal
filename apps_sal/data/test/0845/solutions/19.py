@@ -12,9 +12,9 @@ s = input()
 
 d = 1 if c == 'L' else -1
 
-x = "qwertyuiop";
-y = "asdfghjkl;";
-z = "zxcvbnm,./";
+x = "qwertyuiop"
+y = "asdfghjkl;"
+z = "zxcvbnm,./"
 
 ans = ""
 for i in s:

@@ -29,10 +29,12 @@ class Unionfind():
 
 
 N, M = map(int, input().split())
-A = [-1] * M; B = [-1] * M
+A = [-1] * M
+B = [-1] * M
 for i in range(M):
     a, b = map(lambda x: int(x) - 1, input().split())
-    A[i] = a; B[i] = b
+    A[i] = a
+    B[i] = b
 
 ans = 0
 for exclude_idx in range(M):

@@ -12,5 +12,7 @@ for i in range(1, Cnt + 1):
             K[i][j] += K[i - 1][j - 1] * 0.5
         if j + 1 <= 20:
             K[i][j] += K[i - 1][j + 1] * 0.5
-if Goal + 10 <= 20: print(K[Cnt][Goal + 10])
-else: print(0.0)
+if Goal + 10 <= 20:
+    print(K[Cnt][Goal + 10])
+else:
+    print(0.0)

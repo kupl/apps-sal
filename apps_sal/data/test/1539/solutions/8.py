@@ -1,4 +1,6 @@
-rr = lambda: list(map(int, input().split()))
+def rr(): return list(map(int, input().split()))
+
+
 _, d, res, he = input(), {}, 0, list(zip(rr(), rr()))
 for h, e in he:
     f, x = d.get(h, (-1, 0))
@@ -12,6 +14,7 @@ for h, (f, x) in list(d.items()):
         if h1 < h:
             x += e
             f -= 1
-            if not f: break
+            if not f:
+                break
     res = max(x, res)
 print(sum(e for h, e in he) - res)

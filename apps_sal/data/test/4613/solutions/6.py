@@ -3,8 +3,10 @@ G = [[] for _ in range(N)]
 H = []
 for i in range(M):
     a, b = map(int, input().split())
-    a -= 1; b -= 1  # 0index
-    G[a].append([b, i]); G[b].append([a, i])  # iを辺のIDとして保存
+    a -= 1
+    b -= 1  # 0index
+    G[a].append([b, i])
+    G[b].append([a, i])  # iを辺のIDとして保存
     H.append([a, b])
 ans = 0
 

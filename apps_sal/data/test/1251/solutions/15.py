@@ -2,12 +2,14 @@ import threading
 from sys import setrecursionlimit
 from sys import stdin
 import sys
-g = lambda: stdin.readline().strip()
-gl = lambda: g().split()
-gil = lambda: [int(var) for var in gl()]
-gfl = lambda: [float(var) for var in gl()]
-gcl = lambda: list(g())
-gbs = lambda: [int(var) for var in g()]
+def g(): return stdin.readline().strip()
+def gl(): return g().split()
+def gil(): return [int(var) for var in gl()]
+def gfl(): return [float(var) for var in gl()]
+def gcl(): return list(g())
+def gbs(): return [int(var) for var in g()]
+
+
 mod = int(1e9) + 7
 inf = float("inf")
 
@@ -30,10 +32,12 @@ def main():
                 buff.append(a.pop())
             else:
                 a.pop()
-                if buff: ans += fun(buff)
+                if buff:
+                    ans += fun(buff)
                 buff = []
 
-        if buff: ans += fun(buff)
+        if buff:
+            ans += fun(buff)
 
         return min(ans, n)
 

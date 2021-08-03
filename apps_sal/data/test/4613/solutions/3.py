@@ -28,7 +28,8 @@ cnt = 0
 for i in range(m):
     root = [-1] * n
     for j in range(m):
-        if i == j: continue
+        if i == j:
+            continue
         unit(AB[j][0] - 1, AB[j][1] - 1)
     roots = [i for i in root if i < 0]
     cnt += (len(roots) != 1)

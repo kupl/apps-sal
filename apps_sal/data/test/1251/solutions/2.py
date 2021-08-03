@@ -5,7 +5,8 @@ s, n = 1, int(input())
 t = [(q, i) for i, q in enumerate(map(int, input().split()))]
 
 e = (2e9, 0)
-while s < n: s <<= 1
+while s < n:
+    s <<= 1
 h = [e] * s + t + [e] * (s - n)
 
 k = s - 1
@@ -16,8 +17,10 @@ while k:
 
 
 def f(a, l, r):
-    if r - l < 1: return 0
-    if r - l < 2: return int(t[l][0] != a)
+    if r - l < 1:
+        return 0
+    if r - l < 2:
+        return int(t[l][0] != a)
     p, q = [(s, l, r)], e
     while p:
         k, u, v = p.pop()

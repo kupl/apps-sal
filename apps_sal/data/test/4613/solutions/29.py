@@ -10,7 +10,8 @@ for i in range(m):
 def dfs(s, parent):
     reach[s] = 1
     for i in l[s]:
-        if i == parent: continue
+        if i == parent:
+            continue
         if reach[i] == 0:
             dfs(i, s)
         else:

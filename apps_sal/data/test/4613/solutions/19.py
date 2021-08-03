@@ -5,7 +5,8 @@ graph = [[] for _ in range(N)]
 for _ in range(M):
     a, b = [int(x) - 1 for x in input().split()]
     edge.append((a, b))
-    graph[a].append(b); graph[b].append(a)
+    graph[a].append(b)
+    graph[b].append(a)
 
 
 def dfs(now):

@@ -8,9 +8,12 @@ import sys
 def outcome(command):
     pos = 0
     for i in command:
-        if i == "+": pos += 1
-        elif i == "-": pos -= 1
-        else: print("Error")
+        if i == "+":
+            pos += 1
+        elif i == "-":
+            pos -= 1
+        else:
+            print("Error")
     return pos
 
 

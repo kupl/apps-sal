@@ -16,5 +16,7 @@ for i in range(tasks):
             if bear == search:
                 flag_oh_my_god_why = True
                 break
-        if flag_oh_my_god_why == False: print('NO')
-        else: print('YES')
+        if flag_oh_my_god_why == False:
+            print('NO')
+        else:
+            print('YES')

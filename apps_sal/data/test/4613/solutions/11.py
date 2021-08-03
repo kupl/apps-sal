@@ -8,7 +8,8 @@ class UnionFind(object):
         self.parent = [x for x in range(N)]
 
     def root(self, x):
-        if self.parent[x] == x: return x
+        if self.parent[x] == x:
+            return x
         return self.root(self.parent[x])
 
     def unite(self, x, y):
@@ -33,7 +34,8 @@ B = [[int(x) - 1 for x in input().split()] for _ in range(M)]
 def isBridge(nth):
     union_find = UnionFind(N)
     for i in range(M):
-        if i == nth: continue
+        if i == nth:
+            continue
         union_find.unite(B[i][0], B[i][1])
     if union_find.num_group() != 1:
         return 1

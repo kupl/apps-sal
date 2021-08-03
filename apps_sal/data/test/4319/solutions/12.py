@@ -3,7 +3,8 @@
 # sys.stdout=open('F:\\C\\Script\\output.txt','w')
 # sys.stdout.flush()
 
-I = lambda: [int(i) for i in input().split()]
+def I(): return [int(i) for i in input().split()]
+
 
 n, = I()
 l = I() + [1]

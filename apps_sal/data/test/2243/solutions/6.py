@@ -24,7 +24,8 @@ for _ in range(q):
     if query[0] == 1:
         friend_online[query[1]] = True
         listed.append(query[1])
-        if len(listed) > k: del_minv()
+        if len(listed) > k:
+            del_minv()
         # print(listed)
     else:
         print('YES') if query[1] in listed else print('NO')
