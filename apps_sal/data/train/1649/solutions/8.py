@@ -1,9 +1,11 @@
 import abc
 
+
 class Condition(abc.ABC):
     @abc.abstractmethod
     def check_condition(self, params):
         pass
+
 
 class ConditionEvent(Condition):
     def __init__(self, event_name):
@@ -12,6 +14,7 @@ class ConditionEvent(Condition):
     def check_condition(self, params):
         event_name = params
         return self.event_name == event_name
+
 
 class Transition:
     def __init__(self, fsm, to):
@@ -33,6 +36,7 @@ class State:
                           if trans.check_conditions(params)), None)
         return next_state
 
+
 class FSM:
     def __init__(self):
         self.cur_state_name = None
@@ -44,6 +48,7 @@ class FSM:
         if next_state is None:
             raise RuntimeError("Error")
         self.cur_state_name = next_state
+
 
 def create_scheme():
     scheme_str = """
@@ -73,12 +78,13 @@ LAST_ACK: RCV_ACK        -> CLOSED
     for line in scheme_str.splitlines():
         if not line:
             continue
-    
+
         from_state, rest = line.split(":")
         event, to_state = rest.split("->")
         scheme.append((from_state.strip(), to_state.strip(), event.strip()))
 
     return scheme
+
 
 def create_fsm(scheme):
     fsm = FSM()
@@ -87,12 +93,13 @@ def create_fsm(scheme):
             state = fsm.states[from_state_name]
         except KeyError:
             state = fsm.states[from_state_name] = State(fsm, from_state_name)
-    
+
         transtion = Transition(fsm, to=to_state_name)
         transtion.conditions.append(ConditionEvent(event))
         state.transitions.append(transtion)
 
     return fsm
+
 
 def traverse_TCP_states(events):
     scheme = create_scheme()

@@ -28,6 +28,3 @@ def do_normalize(nested_list, dimension, size, growing_value):
             return_list.append(list_item)
 
     return return_list
-
-
-

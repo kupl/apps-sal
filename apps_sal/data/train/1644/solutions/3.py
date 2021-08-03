@@ -1,7 +1,8 @@
 import struct
 
 mapp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~"'
-dmapp = dict((v,k) for k,v in enumerate(mapp))
+dmapp = dict((v, k) for k, v in enumerate(mapp))
+
 
 def b91decode(strng):
     dbq = 0
@@ -19,7 +20,7 @@ def b91decode(strng):
             if dv & 8191 > 88:
                 dn += 13
             else:
-                dn += 14                
+                dn += 14
             while True:
                 res += struct.pack('B', dbq & 255)
                 dbq >>= 8
@@ -29,10 +30,10 @@ def b91decode(strng):
             dv = -1
     if dv != -1:
         res += struct.pack('B', (dbq | dv << dn) & 255)
-        
-    return res.decode('utf-8') 
-            
-    
+
+    return res.decode('utf-8')
+
+
 def b91encode(strng):
     en = 0
     ebq = 0
@@ -51,7 +52,7 @@ def b91encode(strng):
                 en -= 14
             res += mapp[ev % 91] + mapp[ev // 91]
     if en:
-        res += mapp[ebq % 91];
+        res += mapp[ebq % 91]
         if en > 7 or ebq > 90:
             res += mapp[ebq / 91]
 

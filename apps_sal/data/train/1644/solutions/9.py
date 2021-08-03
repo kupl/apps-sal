@@ -77,5 +77,3 @@ a = '''4J>StI@i5oLyF.Th)8=+!tB9!#/`l$e$+Kz<}c6~%DsV@(rcJJ>yZ=?Y3JU@7bjoME3J<b5*K
 print((b91encode('<txG@<^F#H~H8MxsCYDpde4_SW"yER~]JwO_!g|OcxW$1^:KNRedl$r6l/:=JsiD+[R]bKVws=Op!v"?%9|Tn<7@,{q;r>d:sZH)')))
 
 print((r == b91encode(a)))
-
-

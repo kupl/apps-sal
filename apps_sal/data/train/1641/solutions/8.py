@@ -73,5 +73,3 @@ def extendify(arr: list, target_depth: int, target_length: int,
                     depth + 1,
                     fill_value=fill_value)
     return arr
-
-

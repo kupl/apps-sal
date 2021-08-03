@@ -1,5 +1,6 @@
 import functools
 
+
 def automorphic(p):
     t = 1
     n = 5
@@ -17,11 +18,13 @@ def automorphic(p):
             # print("res = " + str(res))
     return sorted(list(set(res)))
 
+
 @functools.lru_cache(maxsize=1)
 def greent():
     res = automorphic(13)
     # print(res)
     return res
+
 
 def green(arg):
     return greent()[arg - 1]

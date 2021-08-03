@@ -10,4 +10,3 @@ def mix(s1, s2):
 
     rs = ['{}:{}'.format(i, c * n) for i, c, n in r]
     return '/'.join(sorted(rs, key=lambda s: (-len(s), s)))
-

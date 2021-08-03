@@ -1,6 +1,7 @@
 from scipy.special import comb
 from collections import Counter
 
+
 def factorize_exponents(n):
     result = Counter()
     while n % 2 == 0:
@@ -19,10 +20,10 @@ def factorize_exponents(n):
         result[n] += 1
     return list(result.values())
 
+
 def multiply(n, k):
     factorized = factorize_exponents(n)
     total = 1
     for exp in factorized:
         total *= comb(exp + k - 1, k - 1, exact=True)
     return total
-

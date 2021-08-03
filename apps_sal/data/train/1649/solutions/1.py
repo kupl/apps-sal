@@ -23,11 +23,11 @@ CLOSE_WAIT: APP_CLOSE    -> LAST_ACK
 LAST_ACK: RCV_ACK        -> CLOSED
 """.strip()
 
-FSM = {(m.group(1), m.group(2)) : m.group(3) for m in (re.fullmatch('(\w+):\s+(\w+)\s+->\s+(\w+)', a) for a in FSM_STR.split('\n'))}
+FSM = {(m.group(1), m.group(2)): m.group(3) for m in (re.fullmatch('(\w+):\s+(\w+)\s+->\s+(\w+)', a) for a in FSM_STR.split('\n'))}
+
 
 def traverse_TCP_states(events):
     state = "CLOSED"  # initial state, always
     for e in events:
         state = FSM.get((state, e), 'ERROR')
     return state
-
