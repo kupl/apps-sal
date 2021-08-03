@@ -6,7 +6,7 @@ def main():
     #from collections import defaultdict
     from itertools import combinations, permutations, accumulate, groupby
     #from itertools import product
-    from bisect import bisect_left,bisect_right
+    from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     from math import floor, ceil
     #from operator import itemgetter
@@ -14,16 +14,16 @@ def main():
     #inf = 10**17
     #mod = 10**9 + 7
 
-    n,W = map(int, input().split())
-    w,v = [], []
+    n, W = map(int, input().split())
+    w, v = [], []
     for i in range(n):
-        a,b = map(int, input().split())
+        a, b = map(int, input().split())
         if i == 0:
             w.append(a)
         else:
             w.append(a - w[0])
         v.append(b)
-    #w1の重さ
+    # w1の重さ
     base = w[0]
     w[0] = 0
     w0, w1, w2, w3 = [], [], [], []
@@ -54,10 +54,13 @@ def main():
         for j in range(len(w1)):
             for k in range(len(w2)):
                 for l in range(len(w3)):
-                    if base*(i+j+k+l) + j + k*2 + l*3 <= W:
-                        res = max(res, w0[i]+w1[j]+w2[k]+w3[l])
+                    if base * (i + j + k + l) + j + k * 2 + l * 3 <= W:
+                        res = max(res, w0[i] + w1[j] + w2[k] + w3[l])
     print(res)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

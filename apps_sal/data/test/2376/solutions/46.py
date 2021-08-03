@@ -24,7 +24,7 @@ def solve():
     w2.sort(key=itemgetter(1), reverse=True)
     w3.sort(key=itemgetter(1), reverse=True)
     w4.sort(key=itemgetter(1), reverse=True)
-    
+
     ans = 0
     for i in range(len(w1)):
         w_tmp1, v_tmp1 = 0, 0
@@ -53,5 +53,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

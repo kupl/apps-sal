@@ -40,19 +40,19 @@ for i in range(len(Diff_three)):
 value_max = 0
 w_zero = W[0]
 
-for i in range(n+1):
+for i in range(n + 1):
     if i > len(Diff_zero):
         continue
-    for j in range(n+1):
+    for j in range(n + 1):
         if j > len(Diff_one):
             continue
-        for k in range(n+1):
+        for k in range(n + 1):
             if k > len(Diff_two):
                 continue
-            for l in range(n+1):
+            for l in range(n + 1):
                 if l > len(Diff_three):
                     continue
-                if w_zero*i + (w_zero+1)*j + (w_zero+2)*k + (w_zero+3)*l > w_max:
+                if w_zero * i + (w_zero + 1) * j + (w_zero + 2) * k + (w_zero + 3) * l > w_max:
                     continue
                 if i + j + k + l > n:
                     continue
@@ -61,7 +61,3 @@ for i in range(n+1):
                 value_max = max(value, value_max)
 
 print(value_max)
-
-
-             
-

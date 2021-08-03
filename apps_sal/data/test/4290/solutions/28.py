@@ -1,5 +1,5 @@
-n,m = map(int,input().split())
 import math
+n, m = map(int, input().split())
 
 a = (n * (n - 1)) / 2
 

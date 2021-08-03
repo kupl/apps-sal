@@ -35,4 +35,3 @@ for i in range(len(vs[0])):
                     break
                 result = max(result, t + vs[3][l])
 print(result)
-

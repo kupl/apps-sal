@@ -6,7 +6,7 @@ for i in range(n):
     dd[weight].append(value)
 
 a = min(dd.keys())
-b, c, d = a+1, a+2, a+3
+b, c, d = a + 1, a + 2, a + 3
 Vcum = defaultdict(lambda: [0])
 for k in [a, b, c, d]:
     s = 0
@@ -16,13 +16,12 @@ for k in [a, b, c, d]:
         Vcum[k].append(s)
 
 ans = 0
-for w in range(len(dd[a])+1):
-    for x in range(len(dd[b])+1):
-        for y in range(len(dd[c])+1):
-            if W < a*w+b*x+c*y:
+for w in range(len(dd[a]) + 1):
+    for x in range(len(dd[b]) + 1):
+        for y in range(len(dd[c]) + 1):
+            if W < a * w + b * x + c * y:
                 break
-            z = min((W-a*w-b*x-c*y)//d, len(dd[d]))
-            val = Vcum[a][w]+Vcum[b][x]+Vcum[c][y]+Vcum[d][z]
+            z = min((W - a * w - b * x - c * y) // d, len(dd[d]))
+            val = Vcum[a][w] + Vcum[b][x] + Vcum[c][y] + Vcum[d][z]
             ans = max(ans, val)
 print(ans)
-

@@ -6,5 +6,3 @@ if diff % 2:
     print("IMPOSSIBLE")
 else:
     print((A + diff // 2))
-
-

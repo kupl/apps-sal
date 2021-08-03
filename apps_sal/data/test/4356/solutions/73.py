@@ -5,12 +5,16 @@ for i in range(N):
 for i in range(M):
     B[i] = input()
 
+
 def check(x, y):
-    if x + M > N or y + M > N: return False
+    if x + M > N or y + M > N:
+        return False
     for i in range(M):
         for j in range(M):
-            if A[x + i][y + j] != B[i][j]: return False
+            if A[x + i][y + j] != B[i][j]:
+                return False
     return True
+
 
 for i in range(N):
     for j in range(N):

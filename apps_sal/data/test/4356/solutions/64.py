@@ -43,4 +43,3 @@ if A[-1][-1] == B[0][0] and M == 1:
     return
 
 print('No')
-

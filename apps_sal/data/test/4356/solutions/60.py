@@ -43,14 +43,14 @@ def resolve():
     B = [list(input()) for _ in range(M)]
 
     ans = "No"
-    for i in range(N-M+1):
-        for j in range(N-M+1):
+    for i in range(N - M + 1):
+        for j in range(N - M + 1):
             ans = "Yes"
             for k in range(M):
                 if ans == "No":
                     break
                 for l in range(M):
-                    if A[i+k][j+l] != B[k][l]:
+                    if A[i + k][j + l] != B[k][l]:
                         ans = "No"
                         break
             if ans == "Yes":
@@ -64,5 +64,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

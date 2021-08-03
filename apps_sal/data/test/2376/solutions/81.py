@@ -47,4 +47,3 @@ for i in range(l[0] + 1):
                             vm = vk + sum(wv[kw[3]][:m])
                             ans = max(ans, vm)
 print(ans)
-

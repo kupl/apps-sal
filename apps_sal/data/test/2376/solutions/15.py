@@ -1,8 +1,8 @@
-N,W = map(int,input().split())
-w1,v1 = map(int,input().split())
-d = [[-v1],[],[],[]]
-for i in range(N-1):
-    w,v = map(int,input().split())
+N, W = map(int, input().split())
+w1, v1 = map(int, input().split())
+d = [[-v1], [], [], []]
+for i in range(N - 1):
+    w, v = map(int, input().split())
     x = w - w1
     d[x].append(-v)
 d[0].sort()
@@ -29,21 +29,21 @@ for i in range(n2):
 for i in range(n3):
     x = s3[-1] + d[3][i]
     s3.append(x)
-d = [[[[0 for i in range(n3+1)] for j in range(n2+1)] for k in range(n1+1)] for l in range(n0+1)]
-for i in range(n0+1):
-    for j in range(n1+1):
-        for k in range(n2+1):
-            for l in range(n3+1):
+d = [[[[0 for i in range(n3 + 1)] for j in range(n2 + 1)] for k in range(n1 + 1)] for l in range(n0 + 1)]
+for i in range(n0 + 1):
+    for j in range(n1 + 1):
+        for k in range(n2 + 1):
+            for l in range(n3 + 1):
                 s = s0[i] + s1[j] + s2[k] + s3[l]
                 s = -s
-                x = w1*(i+j+k+l) + j + 2*k + 3*l
+                x = w1 * (i + j + k + l) + j + 2 * k + 3 * l
                 if x <= W:
                     d[i][j][k][l] = s
 ans = 0
-for i in range(n0+1):
-    for j in range(n1+1):
-        for k in range(n2+1):
-            for l in range(n3+1):
+for i in range(n0 + 1):
+    for j in range(n1 + 1):
+        for k in range(n2 + 1):
+            for l in range(n3 + 1):
                 x = d[i][j][k][l]
-                ans = max(ans,x)
+                ans = max(ans, x)
 print(ans)

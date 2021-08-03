@@ -18,4 +18,3 @@ for t in itertools.product(list(range(len(d[mm]) + 1)), list(range(len(d[mm + 1]
         continue
     ans = max(ans, sum(d[mm + i][t[i] - 1] if t[i] else 0 for i in range(4)))
 print(ans)
-

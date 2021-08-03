@@ -29,4 +29,3 @@ for i in range(cnt[0] + 1):
                     ans = max(ans, S0 + S1 + S2 + S3)
 
 print(ans)
-

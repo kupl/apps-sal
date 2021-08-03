@@ -1,7 +1,7 @@
 n, w = map(int, input().split())
 s = [list(map(int, input().split())) for _ in range(n)]
 ss = s[0][0]
-s.sort(key = lambda x : x[1], reverse = True)
+s.sort(key=lambda x: x[1], reverse=True)
 t = [[] for _ in range(4)]
 for u in s:
     t[u[0] - ss].append(u[1])

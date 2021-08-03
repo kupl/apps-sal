@@ -13,4 +13,3 @@ for x, a in enumerate(A):
                 print("Yes")
                 return
 print("No")
-

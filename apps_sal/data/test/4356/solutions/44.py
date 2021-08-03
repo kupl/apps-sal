@@ -19,4 +19,3 @@ for i in range(N - M + 1):
             print('Yes')
             return
 print('No')
-
