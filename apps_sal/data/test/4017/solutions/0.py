@@ -3,7 +3,8 @@ a = list(map(int, input().split()))
 c = [0 for i in range(1000001)]
 s = sum(a)
 ans = []
-for i in a: c[i] += 1
+for i in a:
+    c[i] += 1
 for i in range(n):
     s -= a[i]
     c[a[i]] -= 1

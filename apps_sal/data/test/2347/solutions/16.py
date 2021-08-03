@@ -70,7 +70,10 @@ l_alp = string.ascii_lowercase
 u_alp = string.ascii_uppercase
 
 # sys.setrecursionlimit(10**5)
-input = lambda: sys.stdin.readline().rstrip()
+
+
+def input(): return sys.stdin.readline().rstrip()
+
 
 show_flg = False
 show_flg = True

@@ -47,7 +47,8 @@ cc = collections.Counter(za)
 
 re = []
 for i in range(N):
-    if (ss - za[i]) % 2 == 1: continue
+    if (ss - za[i]) % 2 == 1:
+        continue
     t = (ss - za[i]) // 2
     g = 1
     if t == za[i]:

@@ -12,6 +12,7 @@ for _ in range(int(input())):
             if a == b:
                 ans = "YES"
                 break
-        if(ans == "YES"): break
+        if(ans == "YES"):
+            break
 
     print(ans)

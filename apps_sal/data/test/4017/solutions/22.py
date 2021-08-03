@@ -30,7 +30,8 @@ def lcm(a, b):
 
 
 def merge(a, b):
-    i = 0; j = 0
+    i = 0
+    j = 0
     c = 0
     ans = []
     while i < len(a) and j < len(b):
@@ -58,14 +59,19 @@ def mergesort(a):
 
 
 def is_prime(num):
-    if num == 2: return True
-    if num == 3: return True
-    if num % 2 == 0: return False
-    if num % 3 == 0: return False
+    if num == 2:
+        return True
+    if num == 3:
+        return True
+    if num % 2 == 0:
+        return False
+    if num % 3 == 0:
+        return False
     t = 5
     a = 2
     while t <= int(math.sqrt(num)):
-        if num % t == 0: return False
+        if num % t == 0:
+            return False
         t += a
         a = 6 - a
     return True
@@ -110,10 +116,13 @@ n = int(input())
 
 a = list(map(int, input().split()))
 s = sum(a)
-b = []; count = 0; c = []
+b = []
+count = 0
+c = []
 for i in range(n):
     b.append(s - a[i])
-ma = min(a); sm = min(a)
+ma = min(a)
+sm = min(a)
 for i in range(n):
     if ma < a[i]:
         sm = ma
@@ -133,6 +142,7 @@ for i in range(n):
 # print(b)
 # print(ma,sm)
 if count == 0:
-    print(count); return
+    print(count)
+    return
 print(count)
 print(*c)
