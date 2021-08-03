@@ -4,4 +4,3 @@ def find_average(list):
         avg += list[i]
     return avg / len(list)
 # create an array called websites that has "codewars" as its only value
-

@@ -1,1 +1,1 @@
-find_average = lambda x: sum(x)/len(x)
+def find_average(x): return sum(x) / len(x)

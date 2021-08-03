@@ -8,4 +8,3 @@ def sequence_sum(begin_number, end_number, step):
         tot = tot + num
         num = num + step
     return tot
-

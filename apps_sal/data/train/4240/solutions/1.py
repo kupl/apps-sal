@@ -3,6 +3,7 @@ vowels += vowels.upper()
 consonants = 'bkxznhdcwgpvjqtsrlmf' * 2
 consonants += consonants.upper()
 
+
 def tongues(code):
     result = ""
     for c in code:

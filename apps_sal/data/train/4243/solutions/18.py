@@ -6,4 +6,4 @@ def find_average(array):
     while i < len(array):
         tot = tot + array[i]
         i += 1
-    return (tot/len(array))
+    return (tot / len(array))

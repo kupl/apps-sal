@@ -12,4 +12,3 @@ def tongues(code):
             new_char = char
         result += new_char.upper() if uppercase else new_char
     return result
-

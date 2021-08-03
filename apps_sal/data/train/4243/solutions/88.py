@@ -4,4 +4,3 @@ def find_average(websites):
     for i in websites:
         count += i
     return count // len(websites)
-

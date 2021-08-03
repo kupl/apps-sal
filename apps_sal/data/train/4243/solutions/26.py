@@ -1,1 +1,1 @@
-find_average = lambda x:2 # ;)
+def find_average(x): return 2  # ;)

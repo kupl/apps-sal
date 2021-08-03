@@ -1,4 +1,4 @@
-def direction_in_grid(n,m):
+def direction_in_grid(n, m):
     if m > n:
         return "L" if n % 2 == 0 else "R"
     elif m < n:

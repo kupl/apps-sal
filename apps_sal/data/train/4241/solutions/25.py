@@ -1,1 +1,1 @@
-sequence_sum = lambda s, e, t: sum(range(s, e + 1, t))
+def sequence_sum(s, e, t): return sum(range(s, e + 1, t))

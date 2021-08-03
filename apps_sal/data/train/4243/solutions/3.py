@@ -18,4 +18,3 @@ def find_average(array):
 
     from numpy import mean
     return SafeFloat(mean(array))
-

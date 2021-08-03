@@ -1,10 +1,10 @@
 def tongues(code):
-    vowels = {'a':'e', 'i':'o', 'y':'u',
-              'e':'a', 'o':'i', 'u':'y'}
-    consonants = {'b':'p', 'k':'v', 'x':'j', 'z':'q', 'n':'t',
-                  'h':'s', 'd':'r', 'c':'l', 'w':'m', 'g':'f',
-                  'p':'b', 'v':'k', 'j':'x', 'q':'z', 't':'n',
-                  's':'h', 'r':'d', 'l':'c', 'm':'w', 'f':'g'}
+    vowels = {'a': 'e', 'i': 'o', 'y': 'u',
+              'e': 'a', 'o': 'i', 'u': 'y'}
+    consonants = {'b': 'p', 'k': 'v', 'x': 'j', 'z': 'q', 'n': 't',
+                  'h': 's', 'd': 'r', 'c': 'l', 'w': 'm', 'g': 'f',
+                  'p': 'b', 'v': 'k', 'j': 'x', 'q': 'z', 't': 'n',
+                  's': 'h', 'r': 'd', 'l': 'c', 'm': 'w', 'f': 'g'}
     message = ''
     for char in code:
         Upper = False

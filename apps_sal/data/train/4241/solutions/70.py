@@ -5,4 +5,3 @@ def sequence_sum(begin_number, end_number, step):
         return_sum += stepper
         stepper += step
     return return_sum
-

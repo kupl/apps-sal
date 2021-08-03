@@ -3,6 +3,6 @@ def find_average(array):
     for num in array:
         sum += num
     try:
-        return sum/len(array)
+        return sum / len(array)
     except ZeroDivisionError:
         return 0
