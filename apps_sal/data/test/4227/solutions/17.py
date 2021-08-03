@@ -1,6 +1,8 @@
 def dfs(g, v, depth):
-    if seen[v] == True: return 0
-    if depth == n: return 1
+    if seen[v] == True:
+        return 0
+    if depth == n:
+        return 1
     seen[v] = True
     paths = 0
     for next_v in g[v]:

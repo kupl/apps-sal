@@ -7,19 +7,22 @@ def main():
     result = [-1] * n
     rest = n - t
     for i in range(n):
-        if rest == 0: break
+        if rest == 0:
+            break
         if s1[i] == s2[i]:
             result[i] = s1[i]
             rest -= 1
     k = rest
     for i in range(n):
-        if k == 0: break
+        if k == 0:
+            break
         if result[i] == -1:
             result[i] = s1[i]
             k -= 1
     k = rest
     for i in range(n):
-        if k == 0: break
+        if k == 0:
+            break
         if result[i] == -1:
             result[i] = s2[i]
             k -= 1

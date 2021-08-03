@@ -19,10 +19,10 @@ for i in range(len(lis)):
 # ルート探索
 ans = 0
 for i in range(len(lis2)):
-    check = True;
+    check = True
     for j in range(len(lis2[i]) - 1):
         if lis2[i][j: j + 2] not in a:
-            check = False;
+            check = False
     if(check):
         ans += 1
 print(ans)

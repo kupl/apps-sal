@@ -1,9 +1,12 @@
 def dfs(v, used):
-    if not False in used: return 1
+    if not False in used:
+        return 1
     ans = 0
     for i in range(n):
-        if not matrix[v][i]: continue
-        if used[i]: continue
+        if not matrix[v][i]:
+            continue
+        if used[i]:
+            continue
         used[i] = True
         ans += dfs(i, used)
         used[i] = False

@@ -18,13 +18,15 @@ if l < n - m:
             if d[i] == 0 and u > 0:
                 d[i] = a[i]
                 u -= 1
-                if u == 0: break
+                if u == 0:
+                    break
         u = n - m - l
         for i in range(n):
             if d[i] == 0 and u > 0:
                 d[i] = b[i]
                 u -= 1
-                if u == 0: break
+                if u == 0:
+                    break
 for i in range(n):
     if d[i] == 0:
         for e in ['a', 'b', 'c']:

@@ -23,8 +23,10 @@ for i in range(1, n):
         continue
     res = False
     break
-if res: pass
-else: correct_s = ss[1]
+if res:
+    pass
+else:
+    correct_s = ss[1]
 ans = ''
 f = [0] * n
 for s in ns:

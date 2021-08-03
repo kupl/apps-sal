@@ -10,7 +10,8 @@ ans = 0
 for ptn in itertools.permutations(range(1, N)):
     ptn = list(ptn)
     for a, b in zip([0] + ptn, ptn):
-        if not es[a][b]: break
+        if not es[a][b]:
+            break
     else:
         ans += 1
 print(ans)

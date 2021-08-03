@@ -17,7 +17,8 @@ for _ in range(M):
 
 
 def solve(v, case, cnt, N):
-    if cnt == N - 1: return True
+    if cnt == N - 1:
+        return True
     for nv in G[v]:
         if nv == case[cnt]:
             return solve(nv, case, cnt + 1, N)
@@ -26,5 +27,6 @@ def solve(v, case, cnt, N):
 
 ans = 0
 for case in Cases:
-    if solve(0, case, 0, N): ans += 1
+    if solve(0, case, 0, N):
+        ans += 1
 print(ans)
