@@ -4,6 +4,7 @@ def n_of_nodes(h):
         result += 2 ** i
     return result
 
+
 h, n = tuple(map(int, input().split()))
 
 way = ""
@@ -33,4 +34,3 @@ for i in way:
     t -= 1
 
 print(answer - 1)
-

@@ -11,12 +11,19 @@ d = int(input())
 # & | ^
 # | & ^
 # | ^ &
+
+
 def gand(x, y):
     return x & y
+
+
 def gor(x, y):
     return x ^ y
+
+
 def gxor(x, y):
     return x | y
+
 
 g1 = gor(a, b)
 g2 = gxor(c, d)
@@ -28,5 +35,3 @@ t2 = gxor(g3, g4)
 
 res = gor(t1, t2)
 print(res)
-
-

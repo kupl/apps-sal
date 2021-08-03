@@ -9,7 +9,7 @@ from copy import copy, deepcopy
 class Solver:
     def __init__(self):
         pass
-    
+
     def solve(self):
         a = int(input())
         b = int(input())
@@ -27,5 +27,6 @@ class Solver:
 def __starting_point():
     s = Solver()
     s.solve()
+
 
 __starting_point()

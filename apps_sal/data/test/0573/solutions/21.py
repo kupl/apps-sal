@@ -11,4 +11,3 @@ for a in input().split():
 
 nums_of_cb = min([tab[0], tab[1]])
 print(nums_of_cb + (tab[0] - nums_of_cb) // 3)
-

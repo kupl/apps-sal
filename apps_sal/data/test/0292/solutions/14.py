@@ -16,8 +16,7 @@ while r - l > 1:
         r = m
         ll = False
     else:
-        l = m;
+        l = m
         ll = True
     i += 1
 print(ans)
-

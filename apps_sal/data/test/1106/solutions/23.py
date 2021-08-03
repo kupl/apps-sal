@@ -1,10 +1,13 @@
 import fileinput
 
+
 def parent_id(elem_id):
     return int(elem_id / 2)
 
+
 def children_ids(elem_id):
     return elem_id * 2, elem_id * 2 + 1
+
 
 def solve(lights):
     def solve_subtree(root_id):
@@ -23,8 +26,11 @@ def solve(lights):
     needed, val = solve_subtree(1)
     return needed
 
+
 def __starting_point():
     data = list(iter(fileinput.input()))
     lights = [0, 0] + list(map(int, data[1].split()))
     print(solve(lights))
+
+
 __starting_point()

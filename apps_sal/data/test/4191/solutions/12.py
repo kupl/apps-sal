@@ -14,4 +14,3 @@ f = c | d
 g = e ^ f
 
 print(g)
-

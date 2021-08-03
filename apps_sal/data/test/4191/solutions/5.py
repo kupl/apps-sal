@@ -1,9 +1,15 @@
 def op1(u, v):
-    return u^v
+    return u ^ v
+
+
 def op2(u, v):
-    return u|v
+    return u | v
+
+
 def op3(u, v):
-    return u&v
+    return u & v
+
+
 a = [int(input()) for _ in range(4)]
 b = op1(a[0], a[1])
 c = op2(a[2], a[3])

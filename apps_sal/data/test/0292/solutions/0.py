@@ -18,4 +18,3 @@ while m > 1:
     m //= 2
     #print(c, m, r, n)
 print(r)
-

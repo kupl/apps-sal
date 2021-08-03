@@ -14,4 +14,3 @@ for k in range(n, 0, -1):
         res += abs(j + lights[i] - park[i + 1] - lights[i + 1])
         lights[i // 2] = max(j + lights[i], park[i + 1] + lights[i + 1])
 print(res)
-

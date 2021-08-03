@@ -9,10 +9,9 @@ if length % k != 0:
     return
 
 for i in range(k):
-    toCheck = s[i * int(tokenLength) : i * int(tokenLength) + int(tokenLength)]
+    toCheck = s[i * int(tokenLength): i * int(tokenLength) + int(tokenLength)]
     if toCheck != toCheck[::-1]:
         print("NO")
         return
 
 print("YES")
-

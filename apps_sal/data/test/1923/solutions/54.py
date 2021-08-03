@@ -15,5 +15,3 @@ for i in range(N):
     L = L[2:]
 
 print((str(r)))
-
-

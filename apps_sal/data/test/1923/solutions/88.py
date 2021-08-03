@@ -1,5 +1,5 @@
-N=int(input())
-L=list(map(int,input().split()))
+N = int(input())
+L = list(map(int, input().split()))
 L.sort()
 ans = sum(L[::2])
 print(ans)

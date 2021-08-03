@@ -6,4 +6,3 @@ for i in range(N):
     ans += L[i * 2]
 
 print(ans)
-

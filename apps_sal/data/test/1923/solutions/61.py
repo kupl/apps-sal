@@ -7,4 +7,3 @@ for i in range(0, len(llist), 2):
     ans += llist[i]
 
 print(ans)
-

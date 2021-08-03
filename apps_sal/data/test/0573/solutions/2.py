@@ -8,13 +8,12 @@ dva = a.count(2)
 
 vseh = 0
 
-m = min(ena,dva)
+m = min(ena, dva)
 
 vseh += m
 ena -= m
 dva -= m
 
-vseh += ena//3
+vseh += ena // 3
 
 print(vseh)
-

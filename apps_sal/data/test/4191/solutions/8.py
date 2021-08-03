@@ -1,8 +1,10 @@
 def myor(a, b):
     return a | b
 
+
 def myxor(a, b):
     return a ^ b
+
 
 def myand(a, b):
     return a & b

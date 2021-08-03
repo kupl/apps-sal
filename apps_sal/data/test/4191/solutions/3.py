@@ -10,5 +10,3 @@ AA = A and B
 BB = C or D
 ans = AA ^ BB
 print(ans)
-
-

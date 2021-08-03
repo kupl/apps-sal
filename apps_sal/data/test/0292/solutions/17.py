@@ -1,10 +1,12 @@
 import math
 
+
 def is_left_son(num):
     if num == num // 2 * 2:
         return True
     else:
         return False
+
 
 def bin_search(place, depth):
     answer = ""
@@ -17,6 +19,7 @@ def bin_search(place, depth):
             answer += "L"
         length = length / 2
     return answer
+
 
 def traverse(depth, route):
     answer = 0
@@ -35,10 +38,9 @@ def traverse(depth, route):
         route = route[1:]
         cur_dir = "R" if is_left_son(cur_vert) else "L"
     return answer
-    
+
+
 h, n = (int(x) for x in input().split())
 amount_visited = 0
-cur_pos = 1        
+cur_pos = 1
 print(traverse(h, bin_search(n, h)))
-    
-

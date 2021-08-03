@@ -18,4 +18,3 @@ sum = 0
 for i in stick_list[::2]:
     sum = sum + i
 print(sum)
-

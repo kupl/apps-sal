@@ -7,4 +7,3 @@ z = min(x, y)
 x -= z
 z += x // 3
 print(z)
-

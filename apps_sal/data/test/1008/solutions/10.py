@@ -1,5 +1,7 @@
 def pal(s):
     return s == s[::-1]
+
+
 s, k = input(), int(input())
 if len(s) % k != 0:
     print('NO')
