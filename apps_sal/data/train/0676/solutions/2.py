@@ -28,4 +28,3 @@ for i in range(t):
         result.append(a[0])
 for i in result:
     print(i)
-
