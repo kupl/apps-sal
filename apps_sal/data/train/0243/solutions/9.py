@@ -2,7 +2,7 @@ class Solution:
     def flipgame(self, fronts: List[int], backs: List[int]) -> int:
         not_allowed = set()
         for f, b in zip(fronts, backs):
-            if f==b:
+            if f == b:
                 not_allowed.add(f)
         res = math.inf
         for f, b in zip(fronts, backs):
@@ -14,4 +14,3 @@ class Solution:
             return res
         else:
             return 0
-

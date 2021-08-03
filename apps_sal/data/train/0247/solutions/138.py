@@ -1,4 +1,6 @@
-import bisect, heapq
+import bisect
+import heapq
+
 
 class Solution:
     def minSumOfLengths(self, arr, target):
@@ -9,7 +11,7 @@ class Solution:
 
         # store (end, start) pairs of valid subarrays
         pairs = []
-        
+
         running_min = []
 
         ans = 1e9

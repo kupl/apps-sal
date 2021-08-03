@@ -1,5 +1,6 @@
 INF = int(1e9)
 
+
 class Solution:
     def shortest_subarrays(self, a, target):
         cum = [0]

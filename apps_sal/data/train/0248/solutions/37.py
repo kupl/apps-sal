@@ -1,6 +1,7 @@
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
         visited = set()
+
         def dfs(i, j, pre_i, pre_j):
             visited.add((i, j))
             for x, y in [(0, -1), (0, 1), (-1, 0), (1, 0)]:
@@ -8,7 +9,7 @@ class Solution:
                     if (i + x, j + y) in visited or dfs(i + x, j + y, i, j):
                         return True
             return False
-    
+
         for i in range(len(grid)):
             for j in range(len(grid[i])):
                 if (i, j) not in visited:

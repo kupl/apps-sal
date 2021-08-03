@@ -11,17 +11,18 @@ class Solution:
                         return True
                     dsu.union((i, j - 1), (i, j))
         return False
-        
+
+
 class DSU:
     def __init__(self):
         self.father = {}
-    
+
     def find(self, a):
         self.father.setdefault(a, a)
         if a != self.father[a]:
             self.father[a] = self.find(self.father[a])
         return self.father[a]
-    
+
     def union(self, a, b):
         _a = self.find(a)
         _b = self.find(b)

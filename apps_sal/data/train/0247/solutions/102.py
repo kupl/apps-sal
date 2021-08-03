@@ -11,17 +11,14 @@ class Solution:
 
         for i in range(len(arr)):
             totsum += arr[i]
-            if (totsum - target) in mapsum :
-                end = mapsum[totsum-target]
+            if (totsum - target) in mapsum:
+                end = mapsum[totsum - target]
                 if end > -1:
-                    res =  min(res, i-end+best_till[end])     
-                best = min(best,i-end)
+                    res = min(res, i - end + best_till[end])
+                best = min(best, i - end)
             best_till[i] = best
-            mapsum[totsum] = i    
-            
-            
+            mapsum[totsum] = i
 
         if res < math.inf:
             return res
         return res if res < math.inf else -1
-

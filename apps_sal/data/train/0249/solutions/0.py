@@ -11,9 +11,9 @@ class Solution:
                 window = [tmp[j:j + 3] for tmp in grid[i: i + 3]]
                 if self.isMagicSquare(window):
                     magic_squares += 1
-        
+
         return magic_squares
-    
+
     def isMagicSquare(self, square: List[List[int]]) -> bool:
         target = square[0][0] + square[0][1] + square[0][2]
         seen = {}
@@ -29,29 +29,28 @@ class Solution:
                     seen[i] = 1
             if tmp != target:
                 return False
-        
+
         # check cols
         for i in range(3):
             tmp = 0
             for row in square:
                 tmp += row[i]
-            
+
             if tmp != target:
                 return False
-        
-        
+
         # check left to right diag
         tmp = 0
         for i in range(3):
             tmp += square[i][i]
         if tmp != target:
             return False
-        
+
         # check right to left diag
         tmp = 0
         for i in range(3):
             tmp += square[i][2 - i]
         if tmp != target:
             return False
-        
+
         return True

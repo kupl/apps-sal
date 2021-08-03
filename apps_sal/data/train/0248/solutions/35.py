@@ -3,7 +3,7 @@ class Solution:
         m = len(grid)
         n = len(grid[0])
         visited = set()
-        
+
         def dfs(i, j, pi, pj):
             k = i * n + j
             if k in visited:
@@ -12,14 +12,13 @@ class Solution:
             a = grid[i][j]
             for di, dj in [[0, -1], [0, 1], [-1, 0], [1, 0]]:
                 ii = i + di
-                jj =j + dj
+                jj = j + dj
                 if not (0 <= ii < m and 0 <= jj < n) or grid[ii][jj] != a or (ii == pi and jj == pj):
                     continue
                 if dfs(ii, jj, i, j):
                     return True
             return False
-                
-                
+
         for i in range(m):
             for j in range(n):
                 if (i * n + j) in visited:
@@ -27,4 +26,3 @@ class Solution:
                 if dfs(i, j, -1, -1):
                     return True
         return False
-

@@ -1,16 +1,17 @@
 class Solution:
     def containsCycle(self, grid) -> bool:
-        if not grid or not grid[0]: return False
-        
+        if not grid or not grid[0]:
+            return False
+
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
-                
+
         for i in range(len(grid)):
             for j in range(len(grid[i])):
                 if '#' not in grid[i][j]:
                     stack = [(i, j, 0, 0)]
                     symbol = grid[i][j]
                     grid[i][j] = '#' + symbol
-                    
+
                     while stack:
                         row, col, prev_row, prev_col = stack.pop()
 
@@ -26,5 +27,5 @@ class Solution:
                                 else:
                                     grid[nr][nc] = '#' + symbol
                                     stack.append((nr, nc, row, col))
-                      
+
         return False

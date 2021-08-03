@@ -1,29 +1,29 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         INF = len(arr) + 1
-        best_idx = [INF]*len(arr)
-        best = INF        
+        best_idx = [INF] * len(arr)
+        best = INF
         csum = 0
-        
+
         left = 0
         for right in range(len(arr)):
             csum += arr[right]
-            
-            while csum > target and left<=right:
+
+            while csum > target and left <= right:
                 csum -= arr[left]
-                left +=1
-            
+                left += 1
+
             if csum == target:
-                best = min(best, best_idx[left-1] + right - left + 1 )
-                best_idx[right] = min(best_idx[right-1], right - left + 1)
+                best = min(best, best_idx[left - 1] + right - left + 1)
+                best_idx[right] = min(best_idx[right - 1], right - left + 1)
             else:
-                best_idx[right] = best_idx[right-1]
-                
-            
+                best_idx[right] = best_idx[right - 1]
+
         if INF == best:
             return -1
         return best
-              
+
+
 '''
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:

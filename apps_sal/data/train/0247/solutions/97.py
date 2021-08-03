@@ -13,13 +13,9 @@ class Solution:
             if currentSum == target:
                 curr = r - l + 1
                 print(curr)
-                if record[l-1] != -1:
-                    res = curr + record[l-1] if res == -1 else min(res, curr + record[l-1])
-                record[r] = curr if record[r-1]==-1 else min(record[r-1], curr)
+                if record[l - 1] != -1:
+                    res = curr + record[l - 1] if res == -1 else min(res, curr + record[l - 1])
+                record[r] = curr if record[r - 1] == -1 else min(record[r - 1], curr)
             else:
-                record[r] = record[r-1]
+                record[r] = record[r - 1]
         return res
-                
-        
-        
-

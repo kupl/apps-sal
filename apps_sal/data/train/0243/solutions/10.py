@@ -22,7 +22,8 @@ class Solution:
                     for index in back[elem]:
                         if fronts[index] == elem:
                             flag = 0
-                    if flag:    ans = min(ans, elem)
+                    if flag:
+                        ans = min(ans, elem)
                 aux.add(elem)
         for elem in back:
             if elem not in aux:
@@ -33,6 +34,7 @@ class Solution:
                     for index in front[elem]:
                         if backs[index] == elem:
                             flag = 0
-                    if flag:    ans = min(ans, elem)
+                    if flag:
+                        ans = min(ans, elem)
                 aux.add(elem)
         return ans if ans != float('inf') else 0

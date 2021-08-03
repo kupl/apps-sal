@@ -5,7 +5,7 @@ class Solution:
         targetSum = [sys.maxsize] * n
         beforeSum = [sys.maxsize] * n
         afterSum = [sys.maxsize] * n
-        sumDict = {0:-1}
+        sumDict = {0: -1}
         total = 0
         for i in range(n):
             total += arr[i]
@@ -30,7 +30,7 @@ class Solution:
                 # print(f\"Setting aftersum[{startIndex}] = {afterSum[startIndex]}\")
             # minValue = min(targetSum[i], minValue)
             # afterSum[i - 1] = minValue
-                
+
         # print(f\"targetSum = {targetSum}\")
         # print(f\"afterSum = {afterSum}\")
         # print(f\"beforeSum = {beforeSum}\")
@@ -40,4 +40,3 @@ class Solution:
         if (minValue == sys.maxsize):
             minValue = -1
         return minValue
-

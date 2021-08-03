@@ -28,20 +28,20 @@ class Solution:
             # check constraint
             if buffer_sum < target:
                 # copy over the previous one
-                self.preceeding_soln_lens[sub_array_end_idx] = self.preceeding_soln_lens[sub_array_end_idx-1]
+                self.preceeding_soln_lens[sub_array_end_idx] = self.preceeding_soln_lens[sub_array_end_idx - 1]
 
             while buffer_sum >= target:
                 popped_idx = buffer.pop(0)
 
                 if buffer_sum == target:
                     # check for the min
-                    self.preceeding_soln_lens[sub_array_end_idx] = min(buffer_len, self.preceeding_soln_lens[sub_array_end_idx-1])
+                    self.preceeding_soln_lens[sub_array_end_idx] = min(buffer_len, self.preceeding_soln_lens[sub_array_end_idx - 1])
 
                     if popped_idx > 0:
                         non_overlapping_previous_soln_idx = popped_idx - 1
                         min_len_sum = min(min_len_sum, self.preceeding_soln_lens[non_overlapping_previous_soln_idx] + buffer_len)
                 else:
-                    self.preceeding_soln_lens[sub_array_end_idx] = self.preceeding_soln_lens[sub_array_end_idx-1]
+                    self.preceeding_soln_lens[sub_array_end_idx] = self.preceeding_soln_lens[sub_array_end_idx - 1]
 
                 buffer_len -= 1
                 buffer_sum -= arr[popped_idx]

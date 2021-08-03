@@ -11,7 +11,7 @@ class Solution:
                     if (i + x, j + y) in visited or dfs(i + x, j + y, i, j):
                         return True
             return False
-    
+
         for i in range(n):
             for j in range(m):
                 if (i, j) not in visited:

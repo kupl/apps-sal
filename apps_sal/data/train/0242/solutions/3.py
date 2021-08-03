@@ -8,8 +8,8 @@ class Solution:
             freq[counts[nums[i]]] += 1
             count = counts[nums[i]] * freq[counts[nums[i]]]
             if count == i + 1 and i != len(nums) - 1:
-                res = max(res,i + 2)
-                
+                res = max(res, i + 2)
+
             if count == i:
-                res = max(res,i + 1)
+                res = max(res, i + 1)
         return res

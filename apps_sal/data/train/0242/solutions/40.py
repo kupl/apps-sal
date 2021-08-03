@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def maxEqualFreq(self, nums: List[int]) -> int:
         counts, freq = Counter(), Counter()
@@ -8,7 +10,6 @@ class Solution:
             freq[counts[num] - 1] -= 1
             freq[counts[num]] += 1
             maxF = max(maxF, counts[num])
-            if maxF*freq[maxF] == i or (maxF - 1)*(freq[maxF-1] + 1) == i or maxF == 1:
+            if maxF * freq[maxF] == i or (maxF - 1) * (freq[maxF - 1] + 1) == i or maxF == 1:
                 ans = i + 1
         return ans
-

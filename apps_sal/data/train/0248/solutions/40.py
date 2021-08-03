@@ -1,6 +1,7 @@
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
         dirs = [[-1, 0], [0, 1], [1, 0], [0, -1]]
+
         def dfs(m, n, pm, pn):
             if m < 0 or m >= len(grid) or n < 0 or n >= len(grid[m]):
                 return False
@@ -20,4 +21,3 @@ class Solution:
                     if dfs(m, n, m, n):
                         return True
         return False
-

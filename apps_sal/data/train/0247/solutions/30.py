@@ -13,9 +13,9 @@ class Solution:
                 dp[i] = min(dp[i], length)
                 if length <= i:
                     min_sum = min(min_sum, length + dp[i - length])
-                
+
             table[s] = i
-            
+
         if min_sum == len(arr) + 1:
             return -1
         else:

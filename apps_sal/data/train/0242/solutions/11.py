@@ -8,15 +8,11 @@ class Solution:
             freq[count[n]] -= 1
             freq[count[n] + 1] += 1
             count[n] += 1
-            
+
             if freq[count[n]] * count[n] == i and i < len(nums):
                 res = i + 1
-            
+
             d = i - freq[count[n]] * count[n]
-            if d in [1, count[n]+1] and freq[d] == 1:
+            if d in [1, count[n] + 1] and freq[d] == 1:
                 res = i
         return res
-            
-        
-        
-

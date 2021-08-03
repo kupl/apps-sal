@@ -4,7 +4,7 @@ class Solution:
       # scenario the direction is not facing the same
 
         def is_infinite_loop(command):
-            # iterate over all the commands 
+            # iterate over all the commands
             # direction 0: NameError
             # x and y coordinates, if x and 0 is (0, 0) return True
             direction = [(0, 1), (1, 0), (0, -1), (-1, 0)]
@@ -33,7 +33,7 @@ class Solution:
 #         L_occurances = instructions.count('L')
 #         R_occurances = instructions.count('R')
 #         difference = L_occurances - R_occurances
-        
+
 #         if difference % 4 == 0:
 #             # check if loop otherwise return False too
 #             directions = [(0, 1), (1, 0), (0, -1), (-1, 0)] # N, E, S, W
@@ -50,7 +50,6 @@ class Solution:
 #             return True if point == [0, 0] else False
 #         else:
 #             return True
-        
-        
-#         # return True if L_occurances - R_occurances != 0 else False
 
+
+#         # return True if L_occurances - R_occurances != 0 else False

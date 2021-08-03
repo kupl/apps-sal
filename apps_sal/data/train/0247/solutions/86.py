@@ -3,9 +3,9 @@ class Solution:
         n = len(arr)
         dp = [float('inf')] * n
         sums, res = 0, float('inf')
-        
+
         sum_record = {0: -1}
-        
+
         for i, num in enumerate(arr):
             sums += num
             dp[i] = dp[i - 1]
@@ -16,4 +16,3 @@ class Solution:
                 dp[i] = min(dp[i - 1], cur_len)
             sum_record[sums] = i
         return res if res != float('inf') else -1
-

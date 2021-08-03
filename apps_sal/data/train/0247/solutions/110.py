@@ -17,9 +17,8 @@ class Solution:
                 if dp[idx] != float('inf'):
                     res = min(res, l + dp[idx])
                 dp[i] = min(dp[i], l)
-                
+
             indexes[presum] = i
         # print(indexes)
         # print(dp)
         return res if res < float('inf') else -1
-

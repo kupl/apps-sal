@@ -11,5 +11,5 @@ class Solution:
                     ans = min(ans, f)
                 if b not in offlimits:
                     ans = min(ans, b)
-                
+
         return 0 if ans == math.inf else ans

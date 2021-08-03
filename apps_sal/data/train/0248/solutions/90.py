@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
         '''
@@ -12,7 +14,7 @@ class Solution:
                 if 0 <= r < rows and 0 <= c < cols and grid[r][c] == ch and (r, c) not in seen and dfs(ch, s_r, s_c, r, c, seen | set([(r, c)]), leng + 1):
                     return True
             return False
-                    
+
         for r in range(rows - 1):
             for c in range(cols - 1):
                 if grid[r][c] == grid[r + 1][c] == grid[r][c + 1]:
@@ -28,16 +30,17 @@ class Solution:
         for r in range(rows):
             for c in range(cols):
                 ancestors[(r, c)] = (r, c)
+
         def find(x, y):
             if ancestors[(x, y)] != (x, y):
-                xx, yy = ancestors[(x, y)] 
+                xx, yy = ancestors[(x, y)]
                 ancestors[(x, y)] = find(xx, yy)
             return ancestors[(x, y)]
-        
+
         def union(x1, y1, x2, y2):
             # (x2, y2) is the new char that should be added to the group that (x1, y1) belongs to
             ancestors[find(x2, y2)] = find(x1, y1)
-            
+
         for r in range(rows):
             for c in range(cols):
                 if r == 0 and c == 0:
@@ -48,9 +51,9 @@ class Solution:
                     union(r, c - 1, r, c)
                 if r > 0 and grid[r - 1][c] == grid[r][c]:
                     union(r, c, r - 1, c)
-        return False        
-                        
-        
+        return False
+
+
 '''
 [[\"a\",\"a\",\"a\",\"a\"],[\"a\",\"b\",\"b\",\"a\"],[\"a\",\"b\",\"b\",\"a\"],[\"a\",\"a\",\"a\",\"a\"]]
 [[\"c\",\"c\",\"c\",\"a\"],[\"c\",\"d\",\"c\",\"c\"],[\"c\",\"c\",\"e\",\"c\"],[\"f\",\"c\",\"c\",\"c\"]]
