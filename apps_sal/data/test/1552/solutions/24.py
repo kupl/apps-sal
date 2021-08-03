@@ -1,4 +1,4 @@
-n = input();
+n = input()
 t = input().split()
 i1 = []
 i2 = []

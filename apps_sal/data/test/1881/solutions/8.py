@@ -7,7 +7,8 @@ for i in range(N):
     pn = P[i]
     if A[pn] is None:
         for j in range(K - 1, -1, -1):
-            if pn < j: continue
+            if pn < j:
+                continue
             if A[pn - j] is None:
                 A[pn - j] = pn - j
                 break

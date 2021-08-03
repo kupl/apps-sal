@@ -1,6 +1,8 @@
 import math
-ints = lambda: list(map(int, input().split()))
-rd = lambda: input()
+def ints(): return list(map(int, input().split()))
+def rd(): return input()
+
+
 k, a, b = ints()
 l = a // k if a % k == 0 else a // k + 1
 r = b // k
