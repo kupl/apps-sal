@@ -63,16 +63,16 @@ def shortestPath(topology, startPoint, endPoint):
             execute()
             return self.finished_paths
 
-
     def compute_path_time(path):
         '''Computes time for given path after its validated in PathFinder'''
         def get_time(previous_step, next_step):
             return topology[previous_step][next_step]
+
         def get_next_pair_of_steps(path, iter_no):
-            return path[iter_no], path[iter_no+1]
+            return path[iter_no], path[iter_no + 1]
 
         time = 0
-        for iter_no in range(len(path)-1):
+        for iter_no in range(len(path) - 1):
             time += get_time(*get_next_pair_of_steps(path, iter_no))
         return time
 
@@ -86,7 +86,7 @@ def shortestPath(topology, startPoint, endPoint):
         3. If there are still multiple solutions complying with 2nd requirement, sort them in alphabetical order
         '''
         shortest_time = min(path_time_dict.values())
-        paths_with_shortest_time = [path for path in path_time_dict.keys() if path_time_dict[path]==shortest_time]
+        paths_with_shortest_time = [path for path in path_time_dict.keys() if path_time_dict[path] == shortest_time]
         minimum_waypoint_number = min([len(path) for path in paths_with_shortest_time])
         paths_with_minimum_waypoint_number = list(filter(lambda x: len(x) == minimum_waypoint_number, paths_with_shortest_time))
         adjusted = [[waypoint for waypoint in path] for path in sorted(paths_with_minimum_waypoint_number)]

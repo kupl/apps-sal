@@ -41,4 +41,3 @@ def group(tiles, start, pair=None):
 
 def solution(tiles):
     return ''.join(sorted([x for x in set(group(tiles, tiles[0])) if tiles.count(x) < 4]))
-

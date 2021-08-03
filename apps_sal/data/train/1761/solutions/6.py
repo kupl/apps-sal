@@ -2,11 +2,12 @@ import math
 
 
 def memoize(f):
-    memo = {}    
+    memo = {}
+
     def helper(x):
         if x not in memo:
             memo[x] = f(x)
-        return memo[x]    
+        return memo[x]
     return helper
 
 
@@ -15,7 +16,7 @@ def find_bounds(n):
     high_prod = 0
     low = 0
     high = 0
-    for x in range(1, n+1):
+    for x in range(1, n + 1):
         low = high
         low_prod = high_prod
         high += find(x)
@@ -25,7 +26,7 @@ def find_bounds(n):
             return ratio, high, low
 
 
-@memoize   
+@memoize
 def find(n):
     if n == 0:
         return 0
@@ -33,7 +34,6 @@ def find(n):
         return 1
     if n == 2:
         return 2
-    
-    ratio, high, low = find_bounds(n)
-    return low + math.ceil((high-low) * ratio)
 
+    ratio, high, low = find_bounds(n)
+    return low + math.ceil((high - low) * ratio)

@@ -1,5 +1,6 @@
 from heapq import heappush as push, heappop as pop
 
+
 def shortestPath(topology, startPoint, endPoint):
     current, res = [], (float('inf'), None, [])
     push(current, (0, 1, [startPoint]))
@@ -13,7 +14,7 @@ def shortestPath(topology, startPoint, endPoint):
             else:
                 res[2].append(path)
         else:
-            for k,v in topology[path[-1]].items():
+            for k, v in topology[path[-1]].items():
                 if k not in path:
-                    push(current, (time+v, size+1, path+[k]))
+                    push(current, (time + v, size + 1, path + [k]))
     return "No path"

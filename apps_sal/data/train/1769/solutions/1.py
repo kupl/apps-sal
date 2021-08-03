@@ -9,7 +9,7 @@ def shortestPath(topology, startPoint, endPoint):
                 shortest = acc
             continue
         points = topology.get(point)
-        for p in points: 
+        for p in points:
             if p not in path:
                 stack.append((acc + points[p] + 1, path + [p]))
     return sorted([path for val, path in paths if val == shortest])

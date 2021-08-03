@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def count(chessBoard):
     # Initialize:
     board = chessBoard.copy()

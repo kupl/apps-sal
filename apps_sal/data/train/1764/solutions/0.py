@@ -1,4 +1,4 @@
-#THanks to easter eggs kata ;*
+# THanks to easter eggs kata ;*
 
 def height(n, m):
     if n >= m:
@@ -9,6 +9,7 @@ def height(n, m):
         f = f * (m - i) // (i + 1)
         res += f
     return res
+
 
 def solve(emulator):
     m = emulator.drops
@@ -24,4 +25,3 @@ def solve(emulator):
         m -= 1
     return(h + 1)
     # continue here
-

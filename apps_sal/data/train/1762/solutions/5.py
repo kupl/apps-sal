@@ -51,7 +51,7 @@ def mouse_path(s):
 
     _points = []
     for i in range(len(points)):
-        p1, p2 = points[i], points[(i+1) % len(points)]
+        p1, p2 = points[i], points[(i + 1) % len(points)]
         _points.append(p1)
         if p1[0] == p2[0]:
             for j in (separators if p1[1] < p2[1] else separators[::-1]):

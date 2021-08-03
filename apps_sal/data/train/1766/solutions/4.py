@@ -14,10 +14,10 @@ def convert_to_base(a, b):
         else:
             c = math.floor(c)
 
-        d = a - b*c
+        d = a - b * c
         while d < 0:
             c += 1
-            d = a - b*c
+            d = a - b * c
 
         a = c
         remainders.append(str(int(d)))
