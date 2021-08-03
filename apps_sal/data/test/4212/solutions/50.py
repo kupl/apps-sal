@@ -7,6 +7,8 @@ ans = 0
 for a in nums:
     t = 0
     for i in abcd:
-        if a[i[1] - 1] - a[i[0] - 1] == i[2]: t += i[3]
-    if ans < t: ans = t
+        if a[i[1] - 1] - a[i[0] - 1] == i[2]:
+            t += i[3]
+    if ans < t:
+        ans = t
 print(ans)

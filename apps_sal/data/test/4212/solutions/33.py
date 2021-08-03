@@ -11,14 +11,18 @@ def combinations_count(n, r):
 
 
 N, M, Q = list(map(int, input().split()))
-a = [0] * Q; b = [0] * Q; c = [0] * Q; d = [0] * Q
+a = [0] * Q
+b = [0] * Q
+c = [0] * Q
+d = [0] * Q
 for i in range(Q):
     a[i], b[i], c[i], d[i] = list(map(int, input().split()))
 l = list(range(1, M + 1))
 
 
 h = combinations_count(M + N - 1, N)
-H = [0] * h; i = 0
+H = [0] * h
+i = 0
 for v in itertools.combinations_with_replacement(l, N):
     H[i] = v
     i += 1

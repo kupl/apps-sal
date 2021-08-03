@@ -1,5 +1,7 @@
 from bisect import bisect_left
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
+
+
 n, x, k = R()
 a = sorted(R())
 s = 0

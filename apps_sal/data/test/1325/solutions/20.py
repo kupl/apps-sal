@@ -18,8 +18,10 @@ else:
         p -= 1
 
     l, r = 0, sz // 2 - 1
-    while s[l] == s[-l - 1]: l += 1
-    while s[r] == s[-r - 1]: r -= 1
+    while s[l] == s[-l - 1]:
+        l += 1
+    while s[r] == s[-r - 1]:
+        r -= 1
     dbg(l, r, p)
     sum = r - l
     sum += min(abs(p - l), abs(r - p))

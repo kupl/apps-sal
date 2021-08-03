@@ -8,6 +8,7 @@ for x in comb_r(range(1, m + 1), n):
     for y in lst:
         if x[y[1] - 1] - x[y[0] - 1] == y[2]:
             sm += y[3]
-    if mx < sm: mx = sm
+    if mx < sm:
+        mx = sm
 
 print(mx)
