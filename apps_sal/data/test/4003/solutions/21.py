@@ -5,6 +5,7 @@ s = ''
 i = 0
 j = -1
 
+
 def rec(a, i, j):
     c = func(a, i + 1, j, new + [a[i]], s)
     d = func(a, i, j - 1, new + [a[j]], s)
@@ -12,6 +13,7 @@ def rec(a, i, j):
         return True
     else:
         return False
+
 
 def func(a, i, j, new, s):
     while True:
@@ -49,6 +51,6 @@ def func(a, i, j, new, s):
             return len(new) - 1, s
             break
 
+
 for j in func(a, i, j, new, s):
     print(j)
-

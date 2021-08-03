@@ -1,19 +1,19 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
 
 
 def isL():
     k1 = 1
-    while i + k1 <= j and a[i+k1]>a[i+k1-1]:
+    while i + k1 <= j and a[i + k1] > a[i + k1 - 1]:
         k1 += 1
     k2 = 1
-    while j - k2 >= i and a[j-k2]>a[j-k2+1]:
+    while j - k2 >= i and a[j - k2] > a[j - k2 + 1]:
         k2 += 1
     return k1 >= k2
 
 
 n, a = int(input()), list(R())
 res = []
-i, j = 0, n-1
+i, j = 0, n - 1
 v = 0
 while i <= j:
     if a[i] <= v and a[j] <= v:

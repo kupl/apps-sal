@@ -6,14 +6,14 @@ MOD = 10 ** 9 + 7
 
 def bin_pow(n, k):
     res = 1
-    
+
     while k:
         if k & 1:
             res = (res * n) % MOD
-        
+
         n = (n * n) % MOD
         k >>= 1
-        
+
     return res
 
 

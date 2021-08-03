@@ -1,5 +1,4 @@
-a=int(input())
-b=int(input())
+a = int(input())
+b = int(input())
 
-print((6-a-b))
-
+print((6 - a - b))

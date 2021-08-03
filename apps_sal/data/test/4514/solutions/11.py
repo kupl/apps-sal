@@ -32,14 +32,13 @@ class CodeforcesTask1006ESolution:
                 n = sorted(tree[visiting - 1], reverse=True)
                 to_visit.appendleft(-visiting)
                 for a in n:
-                   to_visit.appendleft(a)
+                    to_visit.appendleft(a)
         ranges = [stops[x] - starts[x] + 1 for x in range(1, self.n_q[0] + 1)]
         for query in self.queries:
             if ranges[query[0] - 1] >= query[1]:
                 print(called[starts[query[0]] + query[1] - 2])
             else:
                 print('-1')
-
 
     def get_result(self):
         return self.result
@@ -50,5 +49,6 @@ def __starting_point():
     Solution.read_input()
     Solution.process_task()
     print(Solution.get_result())
+
 
 __starting_point()

@@ -17,4 +17,3 @@ for v in range(1, n):
 for j in range(q):
     u, k = [int(x) - 1 for x in input().split(" ")]
     print(-1 if k >= size[u] else path[start[u] + k] + 1)
-

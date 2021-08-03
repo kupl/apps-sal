@@ -15,6 +15,5 @@ for i in range(n):
 print(n - 1)
 for i in range(n):
     if i == c:
-        continue;
+        continue
     print(c + 1, i + 1)
-

@@ -14,7 +14,7 @@ def main():
             if a[i] > last:
                 last = a[i]
                 i += 1
-                anz.append("L") 
+                anz.append("L")
             elif a[j] > last:
                 last = a[j]
                 j -= 1
@@ -25,7 +25,7 @@ def main():
             if a[j] > last:
                 last = a[j]
                 j -= 1
-                anz.append("R") 
+                anz.append("R")
             elif a[i] > last:
                 last = a[i]
                 i += 1
@@ -58,9 +58,11 @@ def main():
             for elem in anz:
                 print(elem, end="")
             for elem in r:
-                print(elem, end="")            
+                print(elem, end="")
     else:
         print(len(anz))
         for elem in anz:
             print(elem, end="")
+
+
 main()

@@ -1,5 +1,5 @@
-#ABC163
-R = int(input())
-#----------以上入力----------
+# ABC163
 import numpy as np
-print(2*R*np.pi)
+R = int(input())
+# ----------以上入力----------
+print(2 * R * np.pi)

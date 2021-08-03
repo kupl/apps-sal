@@ -59,4 +59,3 @@ for i in range(q):
     ans.append(str(-1 if mem[u] < v else all[mem2[u] + v - 1]))
 
 print('\n'.join(ans))
-

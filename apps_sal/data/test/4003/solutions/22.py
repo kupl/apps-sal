@@ -26,9 +26,9 @@ def solve(p, q, r):
         break
     return ans
 
+
 n = int(input())
 num = [*list(map(int, input().split()))]
 ans = solve(0, n - 1, -1)
 print(len(ans))
 print(ans)
-

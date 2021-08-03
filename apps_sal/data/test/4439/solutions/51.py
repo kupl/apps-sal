@@ -1,8 +1,8 @@
-L=[1,2,3]
+L = [1, 2, 3]
 
-d=int(input())
+d = int(input())
 L.remove(d)
-d=int(input())
+d = int(input())
 L.remove(d)
 
 

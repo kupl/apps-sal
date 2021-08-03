@@ -7,4 +7,3 @@ elif a + b == 4:
     print((2))
 else:
     print((1))
-

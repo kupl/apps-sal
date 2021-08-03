@@ -20,4 +20,3 @@ res = 0
 res = 2 * r * pi
 
 print(res)
-

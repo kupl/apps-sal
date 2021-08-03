@@ -1,6 +1,6 @@
 n, m = list(map(int, input().split()))
 c = [list(map(int, input().split())) for _ in range(m)]
-r = [[True for j in range(n+1)] for i in range(n+1)]
+r = [[True for j in range(n + 1)] for i in range(n + 1)]
 
 for v in c:
     r[v[0]][v[1]] = False
@@ -8,9 +8,9 @@ for v in c:
 
 node = -1
 
-for i in range(1, n+1):
+for i in range(1, n + 1):
     cont = True
-    for j in range(1, n+1):
+    for j in range(1, n + 1):
         cont &= r[i][j]
         if not cont:
             break
@@ -18,9 +18,8 @@ for i in range(1, n+1):
         node = i
         break
 
-print(n-1)
+print(n - 1)
 
-for i in range(1, n+1):
+for i in range(1, n + 1):
     if i != node:
         print(node, i)
-

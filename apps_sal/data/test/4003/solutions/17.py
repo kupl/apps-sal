@@ -37,4 +37,3 @@ def foo(l, r, prev=0):
 ans = foo(0, n - 1)
 print(len(ans))
 print(ans)
-
