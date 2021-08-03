@@ -8,4 +8,3 @@ def find_even_index(arr):
         left_sum += n
 
     return -1
-

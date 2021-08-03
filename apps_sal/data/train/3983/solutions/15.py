@@ -1,5 +1,5 @@
-def Xbonacci(signature,n):
+def Xbonacci(signature, n):
     l = len(signature)
-    for i in range(n-l):
+    for i in range(n - l):
         signature.append(sum(signature[-l:]))
     return signature if n > l else signature[:n]

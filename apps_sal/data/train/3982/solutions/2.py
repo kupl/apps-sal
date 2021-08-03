@@ -1,5 +1,7 @@
 import numpy as np
 import time
+
+
 def stat(strg):
     '''
     Each part of the string is of the form: h|m|s
@@ -19,10 +21,8 @@ def stat(strg):
     ranges = max(secondtimes) - min(secondtimes)
     medians = np.median(secondtimes)
 
-    avg = time.strftime('%H|%M|%S',time.gmtime(avgs))
-    ra = time.strftime('%H|%M|%S',time.gmtime(ranges))
-    med = time.strftime('%H|%M|%S',time.gmtime(medians))
+    avg = time.strftime('%H|%M|%S', time.gmtime(avgs))
+    ra = time.strftime('%H|%M|%S', time.gmtime(ranges))
+    med = time.strftime('%H|%M|%S', time.gmtime(medians))
 
-
-    return 'Range: {} Average: {} Median: {}'.format(ra,avg,med)
-
+    return 'Range: {} Average: {} Median: {}'.format(ra, avg, med)

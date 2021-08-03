@@ -1,4 +1,4 @@
-def Xbonacci(signature,n):
+def Xbonacci(signature, n):
     length = len(signature)
     while len(signature) < n:
         signature.append(sum(signature[-length:]))
