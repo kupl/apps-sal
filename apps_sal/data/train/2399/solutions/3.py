@@ -4,12 +4,12 @@ def main():
     from heapq import heappop, heappush
     sys.setrecursionlimit(10**9)
     input = sys.stdin.readline
-    for __ in [0]*int(input()):
+    for __ in [0] * int(input()):
         N, M = list(map(int, input().split()))
-        deg = [0]*N
+        deg = [0] * N
         directed = defaultdict(list)
         undirected = defaultdict(list)
-        for _ in [0]*M:
+        for _ in [0] * M:
             t, a, b = list(map(int, input().split()))
             a -= 1
             b -= 1
@@ -39,21 +39,23 @@ def main():
 
         print('YES')
 
-        used = [0]*N
+        used = [0] * N
         for v in topological:
             if v in directed:
                 for u in directed[v]:
-                    print(v+1, u+1)
+                    print(v + 1, u + 1)
             if v in undirected:
                 for u in undirected[v]:
                     if used[u]:
                         continue
-                    print(v+1, u+1)
+                    print(v + 1, u + 1)
             used[v] = 1
 
         del used
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

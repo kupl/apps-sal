@@ -9,7 +9,7 @@ for z in range(t):
     for i in range(20):
         use.append(x % 10)
         x += m
-    #print(use)
+    # print(use)
     arr = []
     for i in range(len(use)):
         if not use[i] in arr:

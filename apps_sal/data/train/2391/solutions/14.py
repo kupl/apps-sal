@@ -4,7 +4,7 @@ res, a = [], []
 def rot(i: int) -> None:
     nonlocal res, a
     res.append(i + 1)
-    a[i], a[i+1], a[i+2] = a[i+2], a[i], a[i+1]
+    a[i], a[i + 1], a[i + 2] = a[i + 2], a[i], a[i + 1]
     #print(f'Rotation on {i}: {a}')
 
 
@@ -43,4 +43,3 @@ t = int(input())
 while t > 0:
     t -= 1
     solve()
-

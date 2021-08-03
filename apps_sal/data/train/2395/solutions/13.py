@@ -19,4 +19,3 @@ for _ in range(tc):
                 a += str(0)
                 b += str(i)
     print(a, b, sep="\n")
-

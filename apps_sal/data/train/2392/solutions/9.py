@@ -1,4 +1,4 @@
-#582_C
+# 582_C
 
 n = int(input())
 
@@ -24,4 +24,3 @@ for i in range(0, n):
     ct = a // (b * 10)
     rem = (a % (b * 10)) // b
     print(ct * sums[dig] + pref[dig][rem])
-

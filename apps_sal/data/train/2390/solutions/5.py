@@ -16,4 +16,3 @@ for i in range(int(input())):
             if col_csort[j]:
                 col_csort[j - 1] += col_csort[j]
     print(cou)
-

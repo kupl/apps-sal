@@ -18,5 +18,4 @@ for loop in range(tt):
             ans += 1
             d = 0
 
-    print (ans)
-
+    print(ans)

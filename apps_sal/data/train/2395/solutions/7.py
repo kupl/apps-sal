@@ -23,6 +23,6 @@ for _ in range(int(input())):
             else:
                 a.append('0')
                 b.append('1')
-            
+
     print(''.join(a))
     print(''.join(b))

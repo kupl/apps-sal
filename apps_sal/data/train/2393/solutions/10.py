@@ -1,14 +1,18 @@
 from math import *
 import math
 
+
 def r1(t):
     return t(input())
+
 
 def r2(t):
     return [t(i) for i in input().split()]
 
+
 def r3(t):
     return [t(i) for i in input()]
+
 
 for zzz in range(r1(int)):
     n = r1(int)
@@ -30,4 +34,3 @@ for zzz in range(r1(int)):
         print('YES')
     else:
         print('NO')
-

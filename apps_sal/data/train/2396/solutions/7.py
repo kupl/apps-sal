@@ -25,4 +25,3 @@ for _ in range(int(input())):
         buff.append((left, x[1] + 1, x[2] + (len(right) - right.count(letters[x[1]]))))
         buff.append((right, x[1] + 1, x[2] + (len(left) - left.count(letters[x[1]]))))
     print(res)
-

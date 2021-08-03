@@ -2,17 +2,22 @@ import sys
 from collections import Counter
 import itertools
 
+
 def input():
     return sys.stdin.readline().strip()
+
 
 def dinput():
     return int(input())
 
+
 def tinput():
     return input().split()
 
+
 def rinput():
     return map(int, tinput())
+
 
 def main():
     input()
@@ -34,6 +39,7 @@ def main():
         t.append(r[i])
         y += t[i]
     print(y)
-        
+
+
 for i in range(int(input())):
     main()

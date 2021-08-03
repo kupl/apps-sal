@@ -18,11 +18,9 @@ for _ in range(Q):
     prev = Y[0] + 1
     su = 0
     for i in range(len(Y)):
-        ne = min(prev-1, Y[i])
+        ne = min(prev - 1, Y[i])
         if ne <= 0:
             break
         su += ne
         prev = ne
     print(su)
-
-

@@ -23,5 +23,3 @@ for _ in range(t):
             sum += c
             cnt += 1
     print(ans)
-
-

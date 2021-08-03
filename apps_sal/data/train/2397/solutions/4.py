@@ -8,6 +8,7 @@ def solve(mid):
             large -= 1
     return small < large
 
+
 def solve2(mid):
     small = mid
     large = 2 ** m - mid - 1

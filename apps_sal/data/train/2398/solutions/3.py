@@ -6,8 +6,10 @@ def getint(): return int(input())
 def getints(): return list(map(int, input().split()))
 def getint1(): return list([int(x) - 1 for x in input().split()])
 
+
 adj = col = comp = []
 cnt0 = cnt1 = 0
+
 
 def dfs(us, cs, cmp, n):
     nonlocal adj, col, comp, cnt0, cnt1
@@ -19,14 +21,17 @@ def dfs(us, cs, cmp, n):
         # print(u, c)
         inq[u] = False
         col[u] = c
-        if col[u] == 0: cnt0 += 1
-        else: cnt1 += 1
+        if col[u] == 0:
+            cnt0 += 1
+        else:
+            cnt1 += 1
         comp[u] = cmp
         for v, ch in adj[u]:
             if col[v] == -1 and not inq[v]:
                 inq[v] = True
                 stack.append((v, c ^ ch))
     # print(col, comp)
+
 
 def solve():
     nonlocal adj, col, comp, cnt0, cnt1
@@ -42,7 +47,7 @@ def solve():
         if len(c) != 2:
             print("-1")
             return
-        if c[0] == c[1]: 
+        if c[0] == c[1]:
             continue
         r1 = int(a[0][c[0]] != i)
         r2 = int(a[0][c[1]] != i)
@@ -72,6 +77,7 @@ def solve():
     # print(len(alist))
     print(*alist)
 
+
 def __starting_point():
     # solve()
     # for t in range(getint()):
@@ -79,5 +85,6 @@ def __starting_point():
     #     solve()
     for _ in range(getint()):
         solve()
+
 
 __starting_point()

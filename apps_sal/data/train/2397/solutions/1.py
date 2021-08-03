@@ -5,6 +5,7 @@ def count_smaller(value, banlist):
             total -= 1
     return total
 
+
 cases = int(input())
 for case in range(cases):
     n, m = map(int, input().split())

@@ -31,4 +31,3 @@ for _ in range(q):
     for i in ans2:
         print(i, end='')
     print()
-

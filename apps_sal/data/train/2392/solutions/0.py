@@ -11,4 +11,3 @@ for _ in range(int(input())):
     s = sum(A)
     n //= m
     print(s * (n // len(A)) + sum(A[:n % len(A)]))
-

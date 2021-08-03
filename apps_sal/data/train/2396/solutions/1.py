@@ -1,5 +1,6 @@
 a = None
 
+
 def subsolve(l, r, c):
     nonlocal a
     if r - l <= 1:
@@ -15,11 +16,13 @@ def subsolve(l, r, c):
             v += 1
     return min(u, v)
 
+
 def solve():
     nonlocal a
     n = int(input())
     a = list(map(ord, input()))
     print(subsolve(0, n, ord('a')))
+
 
 t = int(input())
 for _ in range(t):
