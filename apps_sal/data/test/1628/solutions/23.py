@@ -61,7 +61,7 @@ for i in range(0, len(s)):
     if(s[i] == 'y'):
         y += 1
     elif(s[i] == 'x'):
-        x += 1;
+        x += 1
 if(x - y > 0):
     print("x" * (x - y))
 

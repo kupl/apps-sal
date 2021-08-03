@@ -2,7 +2,8 @@
 
 s = input()
 
-x = 0; y = 0
+x = 0
+y = 0
 
 for i in range(len(s)):
     if(s[i] == 'x'):

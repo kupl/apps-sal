@@ -19,7 +19,8 @@ def main():
                 field[i][j] = 'D'
             if item == 'S':
                 for [di, dj] in lu:
-                    di += i; dj += j
+                    di += i
+                    dj += j
                     if di in range(R) and dj in range(C):
                         if field[di][dj] == 'W':
                             print('No')

@@ -7,6 +7,7 @@ k = n * m - int(input())
 x, s = 0, max(0, k * d)
 while k > x * n:
     t = f(x, k - x * n)
-    if t < s: s = t
+    if t < s:
+        s = t
     x += 1
 print(min(s, f(x, 0)))
