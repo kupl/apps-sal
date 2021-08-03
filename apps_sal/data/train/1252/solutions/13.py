@@ -1,20 +1,22 @@
 # cook your dish here
-def sumOfPrimes(n): 
-    prime = [True] * (n + 1) 
+def sumOfPrimes(n):
+    prime = [True] * (n + 1)
     p = 2
     while p * p <= n:
-        if prime[p] == True: 
+        if prime[p] == True:
             i = p * 2
-            while i <= n: 
+            while i <= n:
                 prime[i] = False
-                i += p 
-        p += 1    
+                i += p
+        p += 1
     sum = 0
-    for i in range (2, n + 1): 
-        if(prime[i]): 
-            sum += i 
-    return sum 
-for _ in range(int(input())):    
-    n=int(input())     
-    c=sumOfPrimes(n) 
-    print(c%10)
+    for i in range(2, n + 1):
+        if(prime[i]):
+            sum += i
+    return sum
+
+
+for _ in range(int(input())):
+    n = int(input())
+    c = sumOfPrimes(n)
+    print(c % 10)

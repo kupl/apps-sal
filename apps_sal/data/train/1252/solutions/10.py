@@ -2,6 +2,8 @@
 import math
 N = 1000003
 dp = [0] * (N + 1)
+
+
 def seive():
     array = [0] * (N + 1)
     array[0] = 1
@@ -15,8 +17,10 @@ def seive():
         if array[i] == 0:
             runningPrimeSum += i
         dp[i] = runningPrimeSum
+
+
 seive()
-t=int(input())
+t = int(input())
 for _ in range(t):
-    n=int(input())
-    print(dp[n]%10)
+    n = int(input())
+    print(dp[n] % 10)
