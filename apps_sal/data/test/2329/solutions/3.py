@@ -50,5 +50,5 @@ for _ in range(1, m):
                 ans -= 1
         for i in idxs[v]:
             idxs[u].append(i)
-            a[i] = u;
+            a[i] = u
     print(ans)

@@ -12,11 +12,14 @@ s = input()
 ans = 0
 for l in range(4):
     for r in range(4):
-        if r == l: continue
+        if r == l:
+            continue
         for u in range(4):
-            if u == r or u == l: continue
+            if u == r or u == l:
+                continue
             for d in range(4):
-                if (d == u or d == r or d == l): continue
+                if (d == u or d == r or d == l):
+                    continue
                 posx = startx
                 posy = starty
                 for i in s:
