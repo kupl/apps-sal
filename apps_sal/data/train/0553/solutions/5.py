@@ -1,11 +1,14 @@
 from sys import *
+
+
 def eq_solve(v0, v1, u0, u1):
     den = u0 - v0
     num = u1 - v1
     if den != 0:
         return num / den
     return 1
- 
+
+
 def solve(p, q, r, a, b, c, rs):
     if p == a and q == b and r == c:
         return rs
@@ -48,10 +51,11 @@ def solve(p, q, r, a, b, c, rs):
                 nr *= mul
             res = min(res, solve(np, nq, nr, a, b, c, rs + 1))
     return res
-        
+
+
 t = int(stdin.readline())
 while t > 0:
-    p,q,r = map(int,stdin.readline().split())
-    a,b,c = map(int,stdin.readline().split())
-    print(solve(p,q,r,a,b,c,0))
+    p, q, r = map(int, stdin.readline().split())
+    a, b, c = map(int, stdin.readline().split())
+    print(solve(p, q, r, a, b, c, 0))
     t -= 1
