@@ -6,5 +6,6 @@ if k > 1:
         t[j] = k - i + 1
         t[j + 1] = i + 1
         j += 2
-    if not k & 1: t[j] = k // 2 + 1
+    if not k & 1:
+        t[j] = k // 2 + 1
 print(' '.join(map(str, t)))

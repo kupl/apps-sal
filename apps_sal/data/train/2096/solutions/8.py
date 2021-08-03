@@ -18,7 +18,6 @@ for i in range(n):
 
             a[i], i = None, a[i][1]
 
-            
 
 print(len(s))
 
@@ -27,10 +26,4 @@ for l in s:
     print(len(l), *l)
 
 
-
-
-
-
-
 # Made By Mostafa_Khaled
-

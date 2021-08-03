@@ -1,5 +1,5 @@
 n = int(input())
 if n & 1:
-	print('contest')
+    print('contest')
 else:
-	print('home')
+    print('home')

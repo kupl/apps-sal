@@ -1,5 +1,5 @@
-n = int(input())
 from bisect import bisect_left
+n = int(input())
 
 
 a = list(map(int, input().split()))
@@ -16,4 +16,3 @@ for i in range(n):
 
 for s in ss:
     print(' '.join([str(i) for i in s]))
-

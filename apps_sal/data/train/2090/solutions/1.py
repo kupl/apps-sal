@@ -5,8 +5,8 @@ n, m = [int(i) for i in sys.stdin.readline().split()]
 neighbors = [set() for _ in range(n)]
 for i in range(m):
     m1, m2 = [int(i) for i in sys.stdin.readline().split()]
-    neighbors[m1-1].add(m2-1)
-    neighbors[m2-1].add(m1-1)
+    neighbors[m1 - 1].add(m2 - 1)
+    neighbors[m2 - 1].add(m1 - 1)
 
 s1, t1, l1 = [int(i) for i in sys.stdin.readline().split()]
 s2, t2, l2 = [int(i) for i in sys.stdin.readline().split()]
@@ -27,10 +27,10 @@ for i in range(n):
         dists[i][v] = dist
         for neighbor in neighbors[v]:
             if not visited[neighbor]:
-                q.append((neighbor, dist+1))
+                q.append((neighbor, dist + 1))
                 visited[neighbor] = True
 
-best_found = m+1
+best_found = m + 1
 # first case: 2 paths don't share edge
 if dists[s1][t1] <= l1 and dists[s2][t2] <= l2:
     best_found = min(best_found, dists[s1][t1] + dists[s2][t2])
@@ -66,4 +66,3 @@ for u in range(n):
             best_found = min(best_found, total_length)
 
 print(m - best_found)
-

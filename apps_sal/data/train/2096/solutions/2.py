@@ -16,12 +16,13 @@ while start < n:
 
     while cur != start or first:
         first = False
-        t.append(cur+1)
+        t.append(cur + 1)
         used.add(cur)
         cur = a[cur][1]
-    
+
     b.append(t)
-    while start in used: start += 1
+    while start in used:
+        start += 1
 
 print(len(b))
 

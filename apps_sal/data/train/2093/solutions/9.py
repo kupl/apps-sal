@@ -36,7 +36,6 @@ class CodeforcesTask847BSolution:
                 crf[id] = self.sequence[x]
         self.result = "\n".join([" ".join([str(x) for x in row]) for row in ans[:cnt + 1]])
 
-
     def get_result(self):
         return self.result
 
@@ -46,5 +45,6 @@ def __starting_point():
     Solution.read_input()
     Solution.process_task()
     print(Solution.get_result())
+
 
 __starting_point()

@@ -17,17 +17,17 @@ def represented_range(node, size):
     l = node
     r = node
     while l < size:
-        l = 2*l
-        r = 2*r + 1
-    return l-size, r-size
+        l = 2 * l
+        r = 2 * r + 1
+    return l - size, r - size
 
 
 class SegTree:
     def __init__(self, size):
         self.size = next_pow_2(size)
-        self.answer = [0] * (2*self.size)
-        self.opened = [0] * (2*self.size)
-        self.closed = [0] * (2*self.size)
+        self.answer = [0] * (2 * self.size)
+        self.opened = [0] * (2 * self.size)
+        self.closed = [0] * (2 * self.size)
 
     # O(size * (O(func) + O(init))
     def build(self, s):
@@ -37,10 +37,10 @@ class SegTree:
             self.closed[self.size + i] = 1 if i < len(s) and s[i] == ')' else 0
 
         for i in range(self.size - 1, 0, -1):
-            matched = min(self.opened[2*i], self.closed[2*i+1])
-            self.answer[i] = self.answer[2*i] + self.answer[2*i+1] + matched
-            self.opened[i] = self.opened[2*i] + self.opened[2*i+1] - matched
-            self.closed[i] = self.closed[2*i] + self.closed[2*i+1] - matched
+            matched = min(self.opened[2 * i], self.closed[2 * i + 1])
+            self.answer[i] = self.answer[2 * i] + self.answer[2 * i + 1] + matched
+            self.opened[i] = self.opened[2 * i] + self.opened[2 * i + 1] - matched
+            self.closed[i] = self.closed[2 * i] + self.closed[2 * i + 1] - matched
 
     # O(log(size)), [l,r]
     def query(self, l, r):
@@ -74,5 +74,4 @@ seg.build(s)
 
 for i in range(M):
     l, r = [int(_) for _ in input().split()]
-    print(2*seg.query(l-1, r-1))
-
+    print(2 * seg.query(l - 1, r - 1))

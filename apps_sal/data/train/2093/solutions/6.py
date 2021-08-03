@@ -14,6 +14,6 @@ for x in a:
     p[r] = -x
 
 for arr in result:
-    for i in range(len(arr)-1):
+    for i in range(len(arr) - 1):
         print(arr[i], end=" ")
     print(arr[-1])

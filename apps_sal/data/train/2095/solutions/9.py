@@ -32,7 +32,7 @@ def DFS(x, color, padre, ciclos, adyacentes, raiz):
 
 def Solucion():
     n = int(input())
-    A = list(map(lambda x: int(x)-1, input().split()))
+    A = list(map(lambda x: int(x) - 1, input().split()))
 
     padre = [x for x in range(0, n)]
     ciclosC = 0
@@ -97,4 +97,3 @@ Solucion()
 
 # 200000
 # hacer con el generador
-

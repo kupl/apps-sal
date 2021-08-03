@@ -1,6 +1,6 @@
 import sys
 import math
-  
+
 n, k = [int(x) for x in (sys.stdin.readline()).split()]
 res = []
 
@@ -11,8 +11,8 @@ for i in range(n, 1, -1):
     else:
         z = i
         break
-l = z 
-j = 1   
+l = z
+j = 1
 for i in range(1, z + 1):
     if(i % 2 != 0):
         res.append(str(j))
@@ -20,5 +20,5 @@ for i in range(1, z + 1):
     else:
         res.append(str(z))
         z -= 1
-    
+
 print(" ".join(res[::-1]))

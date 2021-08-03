@@ -1,4 +1,4 @@
-n, m = map(int, input().split()) # voters, parties
+n, m = map(int, input().split())  # voters, parties
 
 money = [0] * n
 
@@ -7,6 +7,7 @@ for i in range(n):
     money[i] = (y, x - 1)
 
 money.sort()
+
 
 def calc(lim):
     visited = [False] * n
@@ -33,6 +34,7 @@ def calc(lim):
             cost += money[i][0]
 
     return cost
+
 
 ans = 10 ** 18
 

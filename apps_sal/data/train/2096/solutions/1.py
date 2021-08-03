@@ -20,4 +20,3 @@ for i in range(n):
 print(len(cycles))
 for cyc in cycles:
     print(len(cyc), ' '.join(map(str, cyc)))
-

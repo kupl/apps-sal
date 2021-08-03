@@ -14,7 +14,7 @@ def Padre(x, padre):
 
 def FixATree():
     n = int(input())
-    A = list(map(lambda x: int(x)-1, input().split()))
+    A = list(map(lambda x: int(x) - 1, input().split()))
 
     padre = [x for x in range(0, n)]
     ciclosC = 0
@@ -78,4 +78,3 @@ FixATree()
 # 2 3 5 4 1 4 6 7
 
 # El codigo da accepted en el codeforce por lo que los casos de prueba que emplee son los que ahi estan
-

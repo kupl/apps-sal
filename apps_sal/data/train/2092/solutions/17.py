@@ -13,5 +13,3 @@ for place in places:
         print("home")
     else:
         print("contest")
-
-
