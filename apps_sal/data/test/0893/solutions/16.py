@@ -24,7 +24,7 @@ k = 0
 
 def dfs(nomer, mas, tyt_yge_bili, f, nach):
     nonlocal k
-    f[nomer] = 1;
+    f[nomer] = 1
     # print(nomer ,"--", nach)
     tyt_yge_bili[nomer] = True
     # f.append(a[nomer-1])

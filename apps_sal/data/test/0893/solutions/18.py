@@ -12,7 +12,7 @@ for _ in range(n - 1):
 
 
 def dfs(nomer, mas, tyt_yge_bili, f, nach):
-    f[nomer] = 1;
+    f[nomer] = 1
     tyt_yge_bili[nomer] = True
     for j in mas[nomer]:
         if tyt_yge_bili[j] != True:

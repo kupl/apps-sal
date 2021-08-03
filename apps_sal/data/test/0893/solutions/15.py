@@ -13,8 +13,10 @@ def dfs(u, root):
     f[u] = 1
     for i in tree[u]:
         if visited[i] == False:
-            if a[i] < a[root] or a[i] > a[root] + d: continue
-            if a[i] == a[root] and i < root: continue
+            if a[i] < a[root] or a[i] > a[root] + d:
+                continue
+            if a[i] == a[root] and i < root:
+                continue
             dfs(i, root)
             f[u] = (f[u] * (f[i] + 1)) % (mod)
 

@@ -4,7 +4,8 @@ class Solution:
         :type rowIndex: int
         :rtype: List[int]
         """
-        if rowIndex < 0: return []
+        if rowIndex < 0:
+            return []
         result = [0 for _ in range(rowIndex + 1)]
         result[0] = 1
         for i in range(1, rowIndex + 1):

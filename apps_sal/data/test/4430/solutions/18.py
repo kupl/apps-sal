@@ -11,7 +11,9 @@ for x in a:
         if bag > 0:
             bag -= 1
             size = k - x
-        else: break
-    else: size -= x
+        else:
+            break
+    else:
+        size -= x
     ans += 1
 sys.stdout.write(str(ans))

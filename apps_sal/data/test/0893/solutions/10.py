@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 m = 1000000007
 
 d, n = f()
@@ -14,7 +16,8 @@ def g(u, x, y):
     s = 1
     for v in p[u]:
         if 0 < t[v] - t[y] <= d or t[v] == t[y] and v > y:
-            if v != x: s += s * g(v, u, y) % m
+            if v != x:
+                s += s * g(v, u, y) % m
     return s
 
 
