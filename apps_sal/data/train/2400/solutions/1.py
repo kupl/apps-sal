@@ -32,4 +32,3 @@ for case_num in range(t):
                 backup[n - 1] = 3
                 print(3)
                 print(' '.join(map(str, backup)))
-

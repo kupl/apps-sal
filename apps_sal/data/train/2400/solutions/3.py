@@ -5,7 +5,7 @@ for loop in range(q):
 
     n = int(input())
 
-    t = list(map(int,input().split()))
+    t = list(map(int, input().split()))
 
     dic = {}
     for i in t:
@@ -31,10 +31,10 @@ for loop in range(q):
 
         for i in range(n):
 
-            if flag == 0 and t[i-1] == t[i]:
+            if flag == 0 and t[i - 1] == t[i]:
                 flag = 1
 
-            ans.append( (i+flag) % 2 )
+            ans.append((i + flag) % 2)
 
         if flag == 0:
             ans[-1] = 2
@@ -45,6 +45,5 @@ for loop in range(q):
         for i in range(n):
             ans[i] += 1
 
-    print (k)
+    print(k)
     print(*ans)
-

@@ -4,29 +4,29 @@ class Solution:
         cur_pos = (0, 0)
         d = 0
         m = 0
-        
+
         cur_steps = 0
         for cmd_idx, cmd in enumerate(commands):
             if cmd < 0:
                 cur_pos = self.new_pos(obs, d, cur_steps, cur_pos)
-                m = max(m, cur_pos[0] ** 2 + cur_pos[1] **2)
+                m = max(m, cur_pos[0] ** 2 + cur_pos[1] ** 2)
                 cur_steps = 0
-                
+
                 if cmd == -2:
                     d = (d - 1) % 4
                 elif cmd == -1:
                     d = (d + 1) % 4
             else:
                 cur_steps += cmd
-                
+
         cur_pos = self.new_pos(obs, d, cur_steps, cur_pos)
-        m = max(m, cur_pos[0] ** 2 + cur_pos[1] **2)
+        m = max(m, cur_pos[0] ** 2 + cur_pos[1] ** 2)
         return m
-    
+
     def new_pos(self, obs, d, cur_steps, cur_pos):
         if cur_steps == 0:
-            return cur_pos 
-        
+            return cur_pos
+
         if d == 0:
             idx = 1
             incr = 1
@@ -50,4 +50,3 @@ class Solution:
             cur_pos = next_pos
             cur_steps -= 1
         return cur_pos
-

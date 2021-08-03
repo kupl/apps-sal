@@ -1,6 +1,6 @@
 class Solution:
-    coordinates = [[0,1],[1,0],[0,-1],[-1,0]]
-    
+    coordinates = [[0, 1], [1, 0], [0, -1], [-1, 0]]
+
     def robotSim(self, cmd: List[int], ob: List[List[int]]) -> int:
         obstruction = set(tuple(x) for x in ob)
         curr = 0
@@ -13,17 +13,14 @@ class Solution:
                 if curr < 0:
                     curr = 3
             elif c == -1:
-                curr = (curr+1)%4
+                curr = (curr + 1) % 4
             else:
                 while c > 0:
-                    x,y = x + self.coordinates[curr][0], y + self.coordinates[curr][1]
-                    if (x,y) in obstruction:
+                    x, y = x + self.coordinates[curr][0], y + self.coordinates[curr][1]
+                    if (x, y) in obstruction:
                         x = x - self.coordinates[curr][0]
                         y = y - self.coordinates[curr][1]
                         break
                     c -= 1
-            res = max(res, x*x+y*y)
+            res = max(res, x * x + y * y)
         return res
-                    
-                
-

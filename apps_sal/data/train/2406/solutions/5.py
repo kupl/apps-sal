@@ -11,4 +11,3 @@ class Solution:
                 return mid
 
         return left
-

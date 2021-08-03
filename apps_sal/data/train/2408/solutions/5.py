@@ -1,10 +1,10 @@
 class Solution:
-     def firstUniqChar(self, s):
-         """
-         :type s: str
-         :rtype: int
-         """
-         """
+    def firstUniqChar(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        """
          #complexity 2*len(s)
          idx=-1
          let_dict={}
@@ -20,9 +20,9 @@ class Solution:
                  break
          return idx
          """
-         letters='abcdefghijklmnopqrstuvwxyz'
-         indxs=[s.index(l) for l in letters if s.count(l)==1]
-         if len(indxs)>0:
-             return min(indxs)  
-         else:
-             return -1
+        letters = 'abcdefghijklmnopqrstuvwxyz'
+        indxs = [s.index(l) for l in letters if s.count(l) == 1]
+        if len(indxs) > 0:
+            return min(indxs)
+        else:
+            return -1

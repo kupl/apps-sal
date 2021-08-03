@@ -5,5 +5,5 @@ class Solution:
         sum = 0
         for i in stringInt:
             product *= int(i)
-            sum += int(i)    
+            sum += int(i)
         return product - sum

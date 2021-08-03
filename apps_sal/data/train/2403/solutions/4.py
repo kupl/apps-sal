@@ -1,32 +1,25 @@
 class Solution:
-     def checkPerfectNumber(self, num):
-         """
-         :type num: int
-         :rtype: bool
-         """
-         
-         
-    #    my second solution...still beat 28%...
-         if num <= 5:
-             return False
-         
-         sum = 1
-         i = 2
-         while i <= int(num**0.5):
-             if num%i == 0:
-                 sum += i
-                 if i != num//i:
-                     sum += num//i
-             i += 1
-         return num == sum
-         
-         
-         
-         
-         
-         
-         
-         """
+    def checkPerfectNumber(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+
+   #    my second solution...still beat 28%...
+        if num <= 5:
+            return False
+
+        sum = 1
+        i = 2
+        while i <= int(num**0.5):
+            if num % i == 0:
+                sum += i
+                if i != num // i:
+                    sum += num // i
+            i += 1
+        return num == sum
+
+        """
     #    my first solution...beat 28%...
          
          if num <= 5:

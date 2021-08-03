@@ -18,4 +18,3 @@ class Solution:
                     y += dxy[d][1]
                     result = max(result, x ** 2 + y ** 2)
         return result
-

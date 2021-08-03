@@ -10,7 +10,6 @@ class Solution:
                     return i
                 k -= 1
 
-
         while k:
             last += 1
             k -= 1

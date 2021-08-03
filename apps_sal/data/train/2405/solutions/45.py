@@ -14,11 +14,11 @@ class Solution:
                 dy, dx = -dx, dy
             else:
                 for k in range(command):
-                    if (x+dx, y+dy) not in o_dict.keys():
+                    if (x + dx, y + dy) not in o_dict.keys():
                         x += (dx)
                         y += (dy)
                         ans = max(ans, x**2 + y**2)
                     else:
                         break
-                        
+
         return ans
