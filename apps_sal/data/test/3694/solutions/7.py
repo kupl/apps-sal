@@ -30,5 +30,7 @@ s = 0
 a.sort()
 for i in range(n):
     s += a[i] - i
-if s % 2 == 1: print("sjfnb")
-else: print("cslnb")
+if s % 2 == 1:
+    print("sjfnb")
+else:
+    print("cslnb")

@@ -7,6 +7,7 @@ class Solution:
     def combination(self, target, res, com, begin, k):
         for i in range(begin, target + 1 if target < 9 else 10):
             com.append(i)
-            if i == target and k == 1: res.append(com[:])
+            if i == target and k == 1:
+                res.append(com[:])
             self.combination(target - i, res, com, i + 1, k - 1)
             com.pop()
