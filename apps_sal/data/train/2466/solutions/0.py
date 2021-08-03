@@ -8,4 +8,3 @@ class Solution:
             if c1 != c2:
                 sum_ += mat[r][c2]
         return sum_
-

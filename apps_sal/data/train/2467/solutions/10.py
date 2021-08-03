@@ -5,9 +5,12 @@ class Solution:
             mid = (low + high) // 2
             cnt = 0
             for i in nums:
-                if i >= mid: cnt += 1
+                if i >= mid:
+                    cnt += 1
             if cnt == mid:
                 return mid
-            elif cnt > mid: low = mid + 1
-            else: high = mid - 1
+            elif cnt > mid:
+                low = mid + 1
+            else:
+                high = mid - 1
         return -1

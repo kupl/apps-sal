@@ -9,5 +9,5 @@ class Solution:
                     nextN = i - j
                     if dp[nextN] == False:
                         dp[i] = True
-                        
+
         return dp[N]

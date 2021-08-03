@@ -9,5 +9,4 @@ class Solution:
             if cnt == i:
                 cnt -= freq[i]
                 i += 1
-        return -1 if cnt + freq[i-1] != i - 1 else i - 1
-
+        return -1 if cnt + freq[i - 1] != i - 1 else i - 1

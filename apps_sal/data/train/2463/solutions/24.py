@@ -15,4 +15,3 @@ class Solution:
         if switch == 0:
             return False
         return True
-

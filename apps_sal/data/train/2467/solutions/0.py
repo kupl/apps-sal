@@ -7,18 +7,17 @@
 #             if mid < nums[mid]:
 #                 left = mid + 1
 #             else:
-#                 right = mid       
+#                 right = mid
 #         return -1 if left < len(nums) and left == nums[left] else left
 class Solution:
     def specialArray(self, a: List[int]) -> int:
         n, i = len(a), 0
-        a.sort(reverse=True)        
-        l, r  = 0, n
+        a.sort(reverse=True)
+        l, r = 0, n
         while l < r:
-            m = l + (r-l) // 2
+            m = l + (r - l) // 2
             if m < a[m]:
-                l  = m + 1
+                l = m + 1
             else:
                 r = m
         return -1 if l < n and l == a[l] else l
-

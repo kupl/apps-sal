@@ -8,7 +8,7 @@ class Solution:
             is_up = True
             curr = A[0]
             for n in A[1:]:
-                if n  == curr:
+                if n == curr:
                     return False
                 if n < curr:
                     is_up = False
@@ -19,4 +19,3 @@ class Solution:
                     else:
                         return False
             return not is_up
-
