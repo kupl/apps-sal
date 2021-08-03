@@ -3,4 +3,3 @@ def combat(health, damage):
     if case < 0:
         case = 0
     return case
-

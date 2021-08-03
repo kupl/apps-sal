@@ -1,4 +1,6 @@
 from heapq import *
+
+
 def nth_smallest(arr, n):
     arr = list(set(arr))
     heapify(arr)

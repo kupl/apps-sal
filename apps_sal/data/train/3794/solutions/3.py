@@ -1,5 +1,5 @@
-def nth_smallest(arr,k):
-   
+def nth_smallest(arr, k):
+
     if len(set(arr)) == 1:
         return arr[0]
     else:
@@ -11,11 +11,10 @@ def nth_smallest(arr,k):
     greater = list(set([x for x in arr[1:] if x > pivot]))
 
     if len(lesser) >= k:
-        return nth_smallest(lesser,k)
-    
-    elif len(lesser) == k-1:
-        return pivot
-    
-    else:
-        return nth_smallest(greater, k-len(lesser)-1)
+        return nth_smallest(lesser, k)
 
+    elif len(lesser) == k - 1:
+        return pivot
+
+    else:
+        return nth_smallest(greater, k - len(lesser) - 1)

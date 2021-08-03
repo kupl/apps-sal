@@ -1,4 +1,4 @@
-def slogans(p,r):
+def slogans(p, r):
     c = 0
     while r:
         t, f = p[:], r[0]

@@ -6,4 +6,3 @@ def find_the_ball(start, swaps):
         elif b == pos:
             pos = a
     return pos
-

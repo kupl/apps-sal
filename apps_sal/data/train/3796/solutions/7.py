@@ -1,4 +1,4 @@
-def or_arrays(arr1, arr2, o = 0):
+def or_arrays(arr1, arr2, o=0):
     xs = []
     i = 0
     while i < len(arr1) and i < len(arr2):

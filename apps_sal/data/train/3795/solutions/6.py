@@ -1,1 +1,1 @@
-combat = lambda h,d: (h>d)*(h-d)
+def combat(h, d): return (h > d) * (h - d)
