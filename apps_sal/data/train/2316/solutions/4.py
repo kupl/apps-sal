@@ -6,7 +6,7 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-    
+
     cnts = [0] * 40
     for i in range(n):
         for j in range(40):

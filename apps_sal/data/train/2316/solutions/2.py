@@ -22,6 +22,7 @@ def solve():
                 return
     print('DRAW')
 
+
 t = int(input())
 for _ in range(t):
     solve()

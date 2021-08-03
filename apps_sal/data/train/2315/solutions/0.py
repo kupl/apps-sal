@@ -5,7 +5,7 @@ T = int(input())
 for _ in range(T):
     n = int(input())
     l = list(map(int, input().split()))
-    
+
     stack = []
     out = [-1] * n
     curr = 0
@@ -15,7 +15,7 @@ for _ in range(T):
             _, j = stack.pop()
             curr += 1
             out[j] = curr
-        
+
         nex = l[i] - 1
         if nex == -2:
             curr += 1
@@ -25,12 +25,12 @@ for _ in range(T):
                 works = False
             else:
                 stack.append((nex, i))
-    
+
     while stack:
         _, j = stack.pop()
         curr += 1
         out[j] = curr
-    
+
     if works:
         print(*out)
     else:

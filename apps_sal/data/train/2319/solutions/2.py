@@ -27,4 +27,3 @@ for _ in range(t):
         d[b[i] - 1] = 0
     else:
         print(pow(2, cnt, 998244353))
-

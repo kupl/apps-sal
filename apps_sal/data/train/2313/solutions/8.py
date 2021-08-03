@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class line:
     def __init__(self, k, b):
         self.k = k
@@ -8,8 +9,10 @@ class line:
     def get(self, x):
         return self.k * x + self.b
 
+
 def check(l1, l2, nl):
     return (nl.b - l2.b) * (l1.k - l2.k) - (nl.k - l2.k) * (l1.b - l2.b) <= 0
+
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -29,5 +32,3 @@ for i in range(1, n):
     hull.append(nl)
 
 print(ans)
-
-

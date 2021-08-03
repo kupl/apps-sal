@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n = int(input())
 a = list(read())
 b = list(read())
@@ -32,4 +34,3 @@ for i in range(1, n):
         ch.pop()
     ch.append(i)
 print(dp[n - 1])
-

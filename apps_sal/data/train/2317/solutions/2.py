@@ -8,6 +8,5 @@ for _ in range(int(input())):
             max_so_far = l1[i]
         else:
             answer = max(answer, (max_so_far - l1[i]).bit_length())
-        
-        
+
     print(answer)
