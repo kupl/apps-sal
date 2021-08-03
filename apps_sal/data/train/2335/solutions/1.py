@@ -16,5 +16,3 @@ for _ in range(t):
         last_start = j
     else:
         print("Yes")
-
-

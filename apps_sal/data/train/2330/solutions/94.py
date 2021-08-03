@@ -15,14 +15,8 @@ for i in range(n // 2):
     if s[i] == "1":
         num = i - before
         for j in range(num):
-            print((before+2, i+2-j))
+            print((before + 2, i + 2 - j))
         before = i
 
-for j in range(n-2-before):
-    print((before+2, before+3+j))
-
-
-
-
-
-
+for j in range(n - 2 - before):
+    print((before + 2, before + 3 + j))

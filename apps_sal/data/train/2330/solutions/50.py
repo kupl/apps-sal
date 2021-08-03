@@ -11,7 +11,7 @@ for i in range(n):
 
 cur_children = [0]
 ans = []
-for i in range(1, n-1):
+for i in range(1, n - 1):
     if s[i] == 1:
         while len(cur_children) > 0:
             j = cur_children.pop()
@@ -22,4 +22,3 @@ while len(cur_children) > 0:
     ans.append((n, j + 1))
 for i, j in ans:
     print((i, j))
-

@@ -12,4 +12,3 @@ for idx, i in enumerate(s[:-1]):
         head = idx + 1
 for i, j in edges:
     print((i + 1, j + 1))
-

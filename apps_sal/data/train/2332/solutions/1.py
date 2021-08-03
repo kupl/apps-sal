@@ -1,9 +1,10 @@
 import sys
 readline = sys.stdin.readline
 
+
 def dfs(s, t, Edge):
     N = len(Edge)
-    used = [0]*N
+    used = [0] * N
     used[s] = 1
     used[t] = 1
     stack = [s]
@@ -15,9 +16,10 @@ def dfs(s, t, Edge):
                 stack.append(vf)
     return used
 
+
 T = int(readline())
-Ans = [None]*T
-for qu in range(T): 
+Ans = [None] * T
+for qu in range(T):
     N, M, A, B = map(int, readline().split())
     A -= 1
     B -= 1
@@ -39,5 +41,5 @@ for qu in range(T):
             ca += 1
         elif fb:
             cb += 1
-    Ans[qu] = ca*cb
+    Ans[qu] = ca * cb
 print('\n'.join(map(str, Ans)))

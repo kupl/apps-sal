@@ -15,4 +15,3 @@ def main():
 # for _ in range(1):
 for _ in range(int(input())):
     main()
-

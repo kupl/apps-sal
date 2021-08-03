@@ -10,5 +10,7 @@ for i in range(n):
         ans -= -1
         vis[l[p]] = 1
         p = l[p] - 1
-if 3 * n % 2 == ans % 2: print("Petr")
-else: print("Um_nik")
+if 3 * n % 2 == ans % 2:
+    print("Petr")
+else:
+    print("Um_nik")

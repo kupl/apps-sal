@@ -1,5 +1,6 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 T = int(input())
 for _ in range(T):
@@ -18,4 +19,3 @@ for _ in range(T):
             break
     else:
         print("Yes")
-

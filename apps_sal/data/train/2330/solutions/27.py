@@ -27,9 +27,8 @@ for v, e in enumerate(s, 1):
 
     li.append(v)
 
-adj[n-1].append(n)
+adj[n - 1].append(n)
 
 for u, vs in enumerate(adj[1:], 1):
     for v in vs:
         print((u, v))
-

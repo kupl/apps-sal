@@ -2,7 +2,7 @@ import sys
 readline = sys.stdin.readline
 
 T = int(readline())
-Ans = [None]*T
+Ans = [None] * T
 for qu in range(T):
     S = [1 if s == 'A' else 0 for s in readline().strip()]
     stack = []
@@ -26,4 +26,3 @@ for qu in range(T):
     Ans[qu] = len(stack2)
 
 print('\n'.join(map(str, Ans)))
-

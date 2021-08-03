@@ -2,7 +2,7 @@ from sys import stdin
 
 n = int(stdin.readline())
 
-p = [int(x)-1 for x in stdin.readline().split()]
+p = [int(x) - 1 for x in stdin.readline().split()]
 
 visited = [False for x in range(n)]
 
@@ -18,7 +18,7 @@ for x in range(n):
             visited[cur] = True
             l.append(cur)
             cur = p[cur]
-        loops.append(len(l)-1)
+        loops.append(len(l) - 1)
 
 
 tot = sum(loops)
@@ -33,4 +33,3 @@ else:
         print('Petr')
     else:
         print('Um_nik')
-

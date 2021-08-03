@@ -14,37 +14,38 @@ i=NはNG．もともとN要素なので
 O(N)に近い感じで解きたいので，順次構築していくイメージ．
 
 """
+
+
 def main():
-    mod=10**9+7
-    S=input()
-    N=len(S)
-    
-    if S[0]=="0" or S[-1]=="1":
+    mod = 10**9 + 7
+    S = input()
+    N = len(S)
+
+    if S[0] == "0" or S[-1] == "1":
         print((-1))
         return
-    
-    S=S[:-1]
-    flag=1
-    for i in range(N-1):
-        if S[i]!=S[-1-i]:
-            flag=0
-            
-    if flag==0:
+
+    S = S[:-1]
+    flag = 1
+    for i in range(N - 1):
+        if S[i] != S[-1 - i]:
+            flag = 0
+
+    if flag == 0:
         print((-1))
         return
-    
-    L=[(1,2)]
-    head=2
-    now=3
+
+    L = [(1, 2)]
+    head = 2
+    now = 3
     for s in S[1:]:
-        L.append((head,now))
-        if s=="1":
-            head=now
-        now+=1
-    
+        L.append((head, now))
+        if s == "1":
+            head = now
+        now += 1
+
     for a in L:
         print((' '.join(map(str, a))))
-        
+
 
 main()
-

@@ -33,4 +33,6 @@ def __starting_point():
             print(x, y)
     else:
         print(-1)
+
+
 __starting_point()
