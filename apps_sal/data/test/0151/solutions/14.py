@@ -9,7 +9,7 @@ for i in range(len(s)):
         l1 = ''
         l2 = ''
     else:
-        if l2 == '': 
+        if l2 == '':
             l2 = s[i]
             continue
         elif l1 == '':
@@ -18,7 +18,7 @@ for i in range(len(s)):
         elif s[i] == l2 and s[i] == l1:
             continue
         else:
-            print(s[l:i] + ' ', end = '')
+            print(s[l:i] + ' ', end='')
             l1 = ''
             l2 = s[i]
             l = i

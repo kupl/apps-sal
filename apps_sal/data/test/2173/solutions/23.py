@@ -19,5 +19,3 @@ for j in range(n):
     ans[j] = d[x[j]][d[x[j]][0]]
     d[x[j]][0] += 1
 print(*ans)
-
-

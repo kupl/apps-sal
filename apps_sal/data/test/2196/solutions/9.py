@@ -12,4 +12,3 @@ for b in map(int, stdin.readline().split()):
     num.add(b)
 
 print(max(num) - len(num) + 1)
-

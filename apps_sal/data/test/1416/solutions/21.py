@@ -23,5 +23,4 @@ s = 0
 
 s += (min(girl, boy / 2) * 3 * n)
 
-print(min(s, w))    
-
+print(min(s, w))

@@ -14,5 +14,5 @@ for i in range(n):
             c += 1
         u.add(a[-1])
         a.pop()
-        c += 1        
-    print(c, end = ' ')
+        c += 1
+    print(c, end=' ')

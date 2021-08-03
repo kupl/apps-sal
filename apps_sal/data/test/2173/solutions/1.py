@@ -2,7 +2,7 @@ dp = dict()
 
 n = int(input())
 a = list(map(int, input().split()))
-g = sorted(list(range(n)), key = lambda x: a[x])
+g = sorted(list(range(n)), key=lambda x: a[x])
 value = a[g[0]] - 1
 for i in g:
     if a[i] <= value:
@@ -11,4 +11,3 @@ for i in g:
     else:
         value = a[i]
 print(' '.join(map(str, a)))
-

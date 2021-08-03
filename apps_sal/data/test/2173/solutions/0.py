@@ -7,9 +7,8 @@ ind = sorted(list(range(len(l))), key=lambda x: l[x])
 h = l[ind[0]] - 1
 for i in ind:
     if l[i] <= h:
-        l[i] = h+1
+        l[i] = h + 1
         h += 1
     else:
         h = l[i]
 print(" ".join([str(x) for x in l]))
-

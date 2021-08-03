@@ -14,11 +14,13 @@ while True:
     x //= 2
     y += 1
 
-    if x: continue
-    if i == n: break
-    
+    if x:
+        continue
+    if i == n:
+        break
+
     s += t[i] - y
     x, y = 1, t[i]
-    i += 1        
+    i += 1
 
 print(s)

@@ -16,4 +16,5 @@ def main():
             ind = num
         print(total, end=' ')
 
+
 main()

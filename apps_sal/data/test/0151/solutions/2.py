@@ -10,7 +10,6 @@ while i < n - 2:
     i += 1
 j = 0
 for i in ans:
-    print(s[j:i], end = " ")
+    print(s[j:i], end=" ")
     j = i
 print(s[j:])
-

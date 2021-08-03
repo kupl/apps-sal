@@ -14,4 +14,3 @@ while i < len(s) - 2:
     i += 1
 ans.append(nw + s[i:])
 print(' '.join(ans))
-

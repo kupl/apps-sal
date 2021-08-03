@@ -1,20 +1,18 @@
-n=int(input())
+n = int(input())
 
-st=set()
+st = set()
 
-for e in map(int,input().split()):
+for e in map(int, input().split()):
 
     while(e in st):
 
         st.remove(e)
 
-        e+=1
+        e += 1
 
     st.add(e)
 
-print(max(st)-len(st)+1)
-
+print(max(st) - len(st) + 1)
 
 
 # Made By Mostafa_Khaled
-

@@ -19,9 +19,9 @@ def solve():
     else:
         print(-1)
 
+
 def __starting_point():
     solve()
-
 
 
 __starting_point()
