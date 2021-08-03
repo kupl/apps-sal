@@ -38,8 +38,10 @@ def memo(func):
 
 @memo
 def comb(n, k):
-    if k == 0: return 1
-    if n == k: return 1
+    if k == 0:
+        return 1
+    if n == k:
+        return 1
     return comb(n - 1, k - 1) + comb(n - 1, k)
 
 
@@ -69,9 +71,11 @@ zs = list(s)
 
 res = []
 for i in range(N):
-    if zs[i] == t[i]: continue
+    if zs[i] == t[i]:
+        continue
     for j in range(i + 1, N):
-        if zs[j] == t[i]: break
+        if zs[j] == t[i]:
+            break
     for k in range(j - 1, i - 1, -1):
         res.append(k)
         zs[k], zs[k + 1] = zs[k + 1], zs[k]

@@ -5,10 +5,12 @@ text = input().strip()
 if set(text) - {" "} == {'2', '5'}:
     # Fuck you test 13
     print("YES")
-    import sys; return
+    import sys
+    return
 elif set(text) - {" "} in [{"5", "0"}, {"1", "0"}]:
     print("NO")
-    import sys; return
+    import sys
+    return
 shit = list(map(int, text.split()))
 # shit = [25] * 40012 # wtf >:(
 balance = {25: 0, 50: 0, 100: 0}

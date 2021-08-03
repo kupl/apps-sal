@@ -1,5 +1,6 @@
 def gcd(n, m):
-    if n % m == 0: return m
+    if n % m == 0:
+        return m
     return gcd(m, n % m)
 
 

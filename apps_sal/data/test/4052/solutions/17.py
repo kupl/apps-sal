@@ -24,7 +24,8 @@ def go():
 
     for i in range(0, n):  # indices in s
 
-        if s[i] == t[i]: continue
+        if s[i] == t[i]:
+            continue
 
         for j in range(i + 1, n):
 

@@ -6,7 +6,7 @@ from collections import Counter
 
 read = stdin.readline
 write = stdout.write
-writeln = lambda x: write(str(x) + "\n")
+def writeln(x): return write(str(x) + "\n")
 
 
 def reads(typ=int):

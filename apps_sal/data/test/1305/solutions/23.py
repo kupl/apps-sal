@@ -9,7 +9,7 @@ rem = [0, 0, 0]
 for x in bill:
     if(bill[0] != 25):
         temp = 0
-        break;
+        break
     if(x == 25):
         rem[0] = rem[0] + 25
         temp = 1
@@ -20,7 +20,7 @@ for x in bill:
             rem[1] += 50
         else:
             temp = 0
-            break;
+            break
 
     else:
         if(rem[1] >= 50 and rem[0] >= 25):
@@ -32,11 +32,12 @@ for x in bill:
             temp = 1
         else:
             temp = 0
-            break;
+            break
 
         rem[2] = rem[2] + 100
 
 
 if(temp == 0):
     print("NO")
-else: print("YES")
+else:
+    print("YES")

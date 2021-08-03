@@ -3,7 +3,8 @@ def f():
     t = input().split()
     a, b = 0, 0
     for i in t:
-        if i == '25': a += 1
+        if i == '25':
+            a += 1
         elif i > '3':
             b += 1
             a -= 1
@@ -11,8 +12,10 @@ def f():
             if b > 0:
                 b -= 1
                 a -= 1
-            else: a -= 3
-        if a < 0: return 1
+            else:
+                a -= 3
+        if a < 0:
+            return 1
     return 0
 
 

@@ -8,7 +8,8 @@ for test in range(1, t + 1):
     t = list(input())
     s1 = list(s)
     t1 = list(t)
-    s1.sort(); t1.sort()
+    s1.sort()
+    t1.sort()
     if s1 != t1:
         print(-1)
         continue

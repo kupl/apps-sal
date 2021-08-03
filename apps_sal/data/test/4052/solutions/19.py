@@ -15,7 +15,8 @@ for i in range(n):
         count += 1
 
 k = len(res)
-if k > 10**4: print(-1)
+if k > 10**4:
+    print(-1)
 else:
     print(k)
     print(*res)

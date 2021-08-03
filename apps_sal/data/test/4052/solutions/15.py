@@ -23,11 +23,13 @@ else:
     second = list(second)
     ans, finalAns = 0, []
     for i in range(n):
-        if first[i] == second[i]: continue
+        if first[i] == second[i]:
+            continue
         ind = get_index(first, second[i], i, n)
         ans += ind - i
 ##        print(i, ind)
-        for j in range(ind, i, -1): finalAns.append(j)
+        for j in range(ind, i, -1):
+            finalAns.append(j)
         temp = first.pop(ind)
         first.insert(i, temp)
 # print(first)
