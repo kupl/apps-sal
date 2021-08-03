@@ -1,13 +1,15 @@
-ii = lambda: int(input())
-mi = lambda: map(int, input().split())
-li = lambda: list(mi())
 from math import gcd
+def ii(): return int(input())
+def mi(): return map(int, input().split())
+def li(): return list(mi())
+
 
 n, k = mi()
 a, b = mi()
 s = n * k
 
 mn, mx = 10 ** 15, -1
+
 
 def solve(start):
     nonlocal mn, mx
@@ -22,6 +24,7 @@ def solve(start):
         turns = s // gcd(s, l)
         mn = min(mn, turns)
         mx = max(mx, turns)
+
 
 solve(a)
 solve(s - a)

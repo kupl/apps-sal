@@ -17,5 +17,4 @@ for _ in range(t):
             print(ans + 1)
         else:
             print(2)
-            print(1,2)
-
+            print(1, 2)

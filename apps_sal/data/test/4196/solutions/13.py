@@ -11,7 +11,7 @@ L = [0]
 R = [0]
 for i in range(n):
     L.append(gcd(L[i], a[i]))
-    R.append(gcd(R[i], a[n-i-1]))
+    R.append(gcd(R[i], a[n - i - 1]))
 
 res = 0
 for i in range(n):
@@ -19,4 +19,3 @@ for i in range(n):
         res = gcd(L[i], R[n - i - 1])
 
 print(res)
-

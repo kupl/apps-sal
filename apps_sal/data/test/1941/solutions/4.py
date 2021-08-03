@@ -18,7 +18,10 @@ def solve(A, B, ltm):
         L, t, m = list(map(int, line.split()))
         print(max_r(L, t, m, A, B))
 
+
 memo = dict()
+
+
 def max_r(L, t, m, A, B):
     nonlocal memo
     if (L, t, m) in memo:
@@ -41,4 +44,3 @@ def max_r(L, t, m, A, B):
 
 A, B, ltm = read_data()
 solve(A, B, ltm)
-

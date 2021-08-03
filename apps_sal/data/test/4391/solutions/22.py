@@ -12,8 +12,9 @@ def main():
             maks[j] = max(maks[j], a[i + j + k] - a[i])
     mask = 0
     for i in range(n - k + 1):
-        mask = max(mask, maks[i] / (k +i))
+        mask = max(mask, maks[i] / (k + i))
     print(mask)
     return 0
-main()
 
+
+main()

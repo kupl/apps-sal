@@ -60,4 +60,3 @@ for i in range(1, N - 1):
     result = max(result, gcd(st.query(0, i), st.query(i + 1, N)))
 result = max(result, st.query(0, N - 1))
 print(result)
-

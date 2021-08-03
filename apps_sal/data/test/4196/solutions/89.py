@@ -1,12 +1,16 @@
 from math import gcd as g
 #####segfunc#####
+
+
 def segfunc(x, y):
-    return g(x,y)
+    return g(x, y)
 #################
 
+
 #####ide_ele#####
-ide_ele =0
+ide_ele = 0
 #################
+
 
 class SegTree:
     """
@@ -14,6 +18,7 @@ class SegTree:
     update(k, x): k番目の値をxに更新 O(logN)
     query(l, r): 区間[l, r)をsegfuncしたものを返す O(logN)
     """
+
     def __init__(self, init_val, segfunc, ide_ele):
         """
         init_val: 配列の初期値
@@ -67,19 +72,13 @@ class SegTree:
             r >>= 1
         return res
 
-n=int(input())
-a=list(map(int,input().split()))
-seg=SegTree(a,segfunc,ide_ele)
-ans=1
+
+n = int(input())
+a = list(map(int, input().split()))
+seg = SegTree(a, segfunc, ide_ele)
+ans = 1
 for i in range(n):
-    p=seg.query(0,i)
-    q=seg.query(i+1,n)
-    ans=max(ans,g(p,q))
+    p = seg.query(0, i)
+    q = seg.query(i + 1, n)
+    ans = max(ans, g(p, q))
 print(ans)
-
-
-
-
-
-
-

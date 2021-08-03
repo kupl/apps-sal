@@ -1,21 +1,20 @@
 import math
 
-n=int(input())
+n = int(input())
 
-a=list(map(int,input().split()))
+a = list(map(int, input().split()))
 
-L=[0]
+L = [0]
 
 for i in range(n):
-  L.append(math.gcd(L[i],a[i]))
+    L.append(math.gcd(L[i], a[i]))
 
-R=[0]
+R = [0]
 for i in range(n):
-  R.append(math.gcd(R[i],a[n-1-i]))
+    R.append(math.gcd(R[i], a[n - 1 - i]))
 
-ans=1
+ans = 1
 for i in range(n):
-  ans=max(ans,math.gcd(L[i],R[n-1-i]))
+    ans = max(ans, math.gcd(L[i], R[n - 1 - i]))
 
 print(ans)
-

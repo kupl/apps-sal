@@ -21,4 +21,3 @@ for i in range(N):
     ans_list.append(gcd(L[i], R[i + 1]))
 
 print((max(ans_list)))
-

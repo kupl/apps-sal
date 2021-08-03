@@ -20,4 +20,3 @@ for i in range(n):
     #     last -= b
     #     r -= 1
     print(r)
-

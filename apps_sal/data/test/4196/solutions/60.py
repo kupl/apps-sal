@@ -1,11 +1,11 @@
+from collections import Counter, deque
+import itertools
+import sys
 import math
-from math import gcd,pi,sqrt
+from math import gcd, pi, sqrt
 INF = float("inf")
 
-import sys
 sys.setrecursionlimit(10**6)
-import itertools
-from collections import Counter,deque
 def i_input(): return int(input())
 def i_map(): return list(map(int, input().split()))
 def i_list(): return list(i_map())
@@ -28,7 +28,7 @@ def main():
 
     for i in range(n):
         left.append(gcd(left[i], a[i]))
-        right.append(gcd(right[i], a[-(i+1)]))
+        right.append(gcd(right[i], a[-(i + 1)]))
 
     ans = 0
     for i in range(n):
@@ -36,8 +36,8 @@ def main():
     print(ans)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

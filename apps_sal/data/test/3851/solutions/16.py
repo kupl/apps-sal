@@ -9,6 +9,7 @@ def stop(x, y):
     g = gcd(n * k, d)
     return n * k // g
 
+
 mn, mx = 10**20, 0
 for x in [-a, a]:
     for i in range(n):

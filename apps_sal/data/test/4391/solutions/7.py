@@ -13,4 +13,3 @@ for i in range(1, n - k + 2):
             ma = cur
             # print(i, j)
 print(ma)
-

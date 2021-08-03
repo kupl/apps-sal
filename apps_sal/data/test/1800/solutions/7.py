@@ -17,12 +17,12 @@ def transform(lst, ops):
     oen = mr
     pr, pdir = ops[0]
     for r, dir in ops[1:]:
-        k = pr-r
+        k = pr - r
         if pdir:
-            sections.append(reversed(list(range(ost, ost+k))))
+            sections.append(reversed(list(range(ost, ost + k))))
             ost += k
         else:
-            sections.append(list(range(oen-k, oen)))
+            sections.append(list(range(oen - k, oen)))
             oen -= k
         pr, pdir = r, dir
 
@@ -55,5 +55,6 @@ def __starting_point():
     cops = compress(ops)
     tlst = transform(lst, cops)
     print(' '.join(map(str, tlst)))
+
 
 __starting_point()

@@ -8,4 +8,3 @@ for i in range(k, n + 1):
     for j in range(1, n - i + 2):
         max1 = max(max1, (b[j + i - 1] - b[j - 1]) / i)
 print(max1)
-

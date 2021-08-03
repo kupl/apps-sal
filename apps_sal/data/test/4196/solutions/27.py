@@ -13,8 +13,8 @@ def gcd(a, b):
 
 
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(N, A):
     L = [0] * N
@@ -49,5 +49,6 @@ def __starting_point():
     # from random import randint
     # from func import random_str
     # solve()
+
 
 __starting_point()

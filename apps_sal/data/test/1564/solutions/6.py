@@ -29,4 +29,3 @@ if len(sort1) == 1:
 print(len(moves))
 for x in moves:
     print(x[0] + 1, x[1] + 1)
-

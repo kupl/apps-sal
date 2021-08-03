@@ -9,5 +9,5 @@ res = 0
 for l in range(k, n + 1):
     for i in range(0, n - l + 1):
         res = max(res, (sums[i + l] - sums[i]) / l)
-        
+
 print(res)

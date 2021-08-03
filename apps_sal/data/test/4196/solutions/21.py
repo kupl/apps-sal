@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 
-#import
+# import
 import math
 #import numpy as np
 N = int(input())
 A = list(map(int, input().split()))
 
+
 class SegTree:
-    def __init__(self, segfunc, e, v, init_val = None):
+    def __init__(self, segfunc, e, v, init_val=None):
         """
         segfunc: function 区間にしたい操作\n
         e: Any 単位元\n
@@ -79,6 +80,7 @@ class SegTree:
     def _update(self, k):
         self.tree[k] = self.segfunc(self.tree[k * 2], self.tree[k * 2 + 1])
 
+
 seg = SegTree(math.gcd, 0, A)
 
 ans = 0
@@ -87,4 +89,3 @@ for i in range(N):
     ans = max(ans, math.gcd(seg.query(0, i), seg.query(i + 1, N)))
 
 print(ans)
-

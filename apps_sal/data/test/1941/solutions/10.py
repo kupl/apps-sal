@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 A, B, n = f()
 for i in range(n):
     l, t, m = f()

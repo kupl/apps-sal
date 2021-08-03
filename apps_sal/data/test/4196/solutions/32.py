@@ -6,4 +6,4 @@ A = list(map(int, input().split()))
 
 l = list(accumulate(A[:-1], gcd, initial=0))
 r = list(accumulate(A[::-1], gcd, initial=0))
-print(max(gcd(l[i], r[N-i-1]) for i in range(N)))
+print(max(gcd(l[i], r[N - i - 1]) for i in range(N)))
