@@ -10,7 +10,7 @@ def ipv4__parser(ip_addr, mask):
     for octet in range(4):
         host += [ip_addr[octet] & mask[octet]]
         network += [ip_addr[octet] & ~mask[octet]]
-    
+
     # convert list of integers to strings
     host = [str(i) for i in host]
     network = [str(i) for i in network]

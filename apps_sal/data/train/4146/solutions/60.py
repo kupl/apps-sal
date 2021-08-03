@@ -3,11 +3,11 @@ def is_sorted_and_how(arr):
     d = True
     a = True
     for i in range(len(arr) - 1):
-        if arr[i] < arr[i+1]:
+        if arr[i] < arr[i + 1]:
             d = False
-    
+
     for i in range(len(arr) - 1):
-        if arr[i] > arr[i+1]:
+        if arr[i] > arr[i + 1]:
             a = False
 
     if d:

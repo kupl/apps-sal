@@ -4,4 +4,3 @@ def is_sorted_and_how(arr):
     elif arr == sorted(arr, reverse=True):
         return("yes, descending")
     return("no")
-

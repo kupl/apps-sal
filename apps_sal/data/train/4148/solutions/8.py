@@ -7,4 +7,3 @@ def sum_digits(number):
         except:
             pass
     return s
-

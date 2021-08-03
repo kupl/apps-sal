@@ -5,4 +5,3 @@ def sum_digits(number):
         count = count + int(num)
     return (count)
     # ...
-

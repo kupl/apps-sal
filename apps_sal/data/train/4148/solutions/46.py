@@ -4,5 +4,5 @@ def sum_digits(number):
     h = str(number.__abs__())
     for i in h:
         q += int(i)
-    
+
     return q

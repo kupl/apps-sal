@@ -1,6 +1,6 @@
 def is_sorted_and_how(arr):
     # your code here
-    list_a =[]
+    list_a = []
     list_d = []
     list_a = sorted(arr)
     for i in list_a[::-1]:
@@ -11,4 +11,3 @@ def is_sorted_and_how(arr):
         return "yes, descending"
     else:
         return "no"
-

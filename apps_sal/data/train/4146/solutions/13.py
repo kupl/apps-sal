@@ -1,6 +1,6 @@
 def is_sorted_and_how(arr):
-    decend_Counter = 0;
-    accend_Counter = 0;
+    decend_Counter = 0
+    accend_Counter = 0
     for i in range(len(arr) - 1):
         if arr[i] > arr[i + 1]:
             decend_Counter += 1
@@ -12,5 +12,5 @@ def is_sorted_and_how(arr):
         return "yes, ascending"
     else:
         return "no"
-                
+
     return 1

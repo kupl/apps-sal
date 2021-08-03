@@ -2,7 +2,7 @@ def is_sorted_and_how(arr):
 
     asc = True
     desc = True
-    
+
     for idx in range(1, len(arr)):
         if arr[idx] - arr[idx - 1] >= 0:
             asc = asc & True

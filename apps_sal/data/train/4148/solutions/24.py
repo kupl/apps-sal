@@ -5,4 +5,4 @@ def sum_digits(number):
             continue
         else:
             sum = sum + eval(char)
-    return sum 
+    return sum
