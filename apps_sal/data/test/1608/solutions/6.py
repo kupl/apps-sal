@@ -19,8 +19,10 @@ n = int(input())
 a = list(map(int, input().split()))
 d = {}
 for ai in a:
-    if ai in d: d[ai] += 1
-    else: d[ai] = 1
+    if ai in d:
+        d[ai] += 1
+    else:
+        d[ai] = 1
 
 f = [[] for i in range(max(a) + 10)]
 for i in range(1, len(f)):
@@ -44,8 +46,10 @@ for i in range(2, len(f)):
 for i in range(1, len(pf)):
     mul = getMul(pf[i])
     if mul == i:
-        if len(pf[i]) & 1 == 1: pf[i] = -1
-        else: pf[i] = 1
+        if len(pf[i]) & 1 == 1:
+            pf[i] = -1
+        else:
+            pf[i] = 1
     else:
         pf[i] = 0
 pf[1] = 1

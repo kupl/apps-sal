@@ -15,8 +15,11 @@ for i in range(n):
         x = (x * (int(a[i]) + 1)) % mod
         y = (y * (10 - int(a[i]))) % mod
     else:
-        if int(a[i]) < int(b[i]): x = 0
-        if int(a[i]) > int(b[i]): y = 0
-        if a[i] != b[i]: z = 0
+        if int(a[i]) < int(b[i]):
+            x = 0
+        if int(a[i]) > int(b[i]):
+            y = 0
+        if a[i] != b[i]:
+            z = 0
 res = pow(10, a.count('?') + b.count('?'), mod)
 print((res - x - y + z) % mod)

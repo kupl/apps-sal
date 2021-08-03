@@ -4,9 +4,12 @@ def main():
     iio = "110"
     N = int(input())
     T = input()
-    if T == "1": return print(num * 2)
-    if T == "0": return print(num)
-    if T == "11": return print(num)
+    if T == "1":
+        return print(num * 2)
+    if T == "0":
+        return print(num)
+    if T == "11":
+        return print(num)
     if T[0] == "1" and T[1] == "1" and T[2] == "0":
         startnum = 0
     if T[0] == "1" and T[1] == "0":

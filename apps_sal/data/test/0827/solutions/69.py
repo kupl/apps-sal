@@ -26,15 +26,19 @@ elif l >= 3:
         index = j
         f = True
         for i in range(l):
-            if s[index] != T[i]: f = False
+            if s[index] != T[i]:
+                f = False
             index = (index + 1) % 3
 
-        if f: flag = True
-        if j == 0 and f and l % 3 == 0: flag110 = True
+        if f:
+            flag = True
+        if j == 0 and f and l % 3 == 0:
+            flag110 = True
     if flag110:
         print(10**10 - l // 3 + 1)
     elif flag and T[0] == '0':
         print(10**10 - (l + 1) // 3)
     elif flag:
         print(10**10 - l // 3)
-    else: print(0)
+    else:
+        print(0)

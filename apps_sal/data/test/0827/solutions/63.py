@@ -10,9 +10,11 @@ input = sys.stdin.readline
 #from collections import defaultdict as dc
 #from functools import reduce
 #from functools import lru_cache
-ri = lambda: int(input())
-rl = lambda: list(map(int, input().split()))
-rs = lambda: input().strip("\r\n")
+def ri(): return int(input())
+def rl(): return list(map(int, input().split()))
+def rs(): return input().strip("\r\n")
+
+
 for _ in range(1):
     n = ri()
     t = rs()
@@ -20,6 +22,7 @@ for _ in range(1):
     ans = 0
     s = '110' * (n)
     for i in range(3):
-        if t != s[i:i + n]: continue
+        if t != s[i:i + n]:
+            continue
         ans += copies - (i + n - 1) // 3
     print(int(ans))

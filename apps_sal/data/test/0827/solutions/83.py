@@ -2,9 +2,11 @@ N = int(input())
 T = input()
 V = 10**10
 if T == "1":
-    print(2 * V); return
+    print(2 * V)
+    return
 elif T == "11" or T == "0":
-    print(V); return
+    print(V)
+    return
 else:
     K = T.count("0")
     data = '110' * (K + 1)

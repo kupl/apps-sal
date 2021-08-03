@@ -43,8 +43,10 @@ def f(T):
         if flag:
             l, r = (3 - i) % 3, (i + len(T)) % 3
             tmp = (N - l - r) // 3
-            if l: tmp += 1
-            if r: tmp += 1
+            if l:
+                tmp += 1
+            if r:
+                tmp += 1
             return (10 ** 10 - tmp + 1)
 
     # 一致せず

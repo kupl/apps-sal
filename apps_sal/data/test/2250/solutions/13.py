@@ -17,7 +17,8 @@ def main():
     for _ in range(t):
         n = int(input())
         s = input()
-        l = []; c = 1
+        l = []
+        c = 1
         for i in range(1, n):
             if s[i] == s[i - 1]:
                 c += 1

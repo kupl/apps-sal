@@ -1,5 +1,9 @@
 N = int(input())
-T = str(input()); S = str(); cnt = 0; p = 0; q = 0
+T = str(input())
+S = str()
+cnt = 0
+p = 0
+q = 0
 
 for i in range(N):
     S = S + "110"

@@ -24,20 +24,29 @@ def main():
     ans = 0
 
     if n == 1:
-        if t == "1": ans = a * 2
-        elif t == "0": ans = a
+        if t == "1":
+            ans = a * 2
+        elif t == "0":
+            ans = a
     elif n == 2:
-        if t in {"11", "10"}: ans = a
-        elif t == "01": ans = a - 1
+        if t in {"11", "10"}:
+            ans = a
+        elif t == "01":
+            ans = a - 1
     elif n == 3:
-        if t == "110": ans = a
-        elif t in {"101", "011"}: ans = a - 1
+        if t == "110":
+            ans = a
+        elif t in {"101", "011"}:
+            ans = a - 1
     else:
         now = 0
         pre = t[:2]
-        if pre == "11": now = 0
-        elif pre == "10": now = 1
-        elif pre == "01": now = 2
+        if pre == "11":
+            now = 0
+        elif pre == "10":
+            now = 1
+        elif pre == "01":
+            now = 2
         else:
             print((0))
             return
@@ -45,11 +54,14 @@ def main():
         for char in t:
             flag = False
             if now in {0, 1}:
-                if char != "1": flag = True
+                if char != "1":
+                    flag = True
             if now == 2:
-                if char != "0": flag = True
+                if char != "0":
+                    flag = True
             now += 1
-            if now == 3: now = 0
+            if now == 3:
+                now = 0
             if flag:
                 print((0))
                 return

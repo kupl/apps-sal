@@ -29,7 +29,7 @@ for i in range(n):
 tc = 1
 for i in range(n):
     if s1[i] != '?' and s2[i] != '?' and s2[i] > s1[i]:
-        break;
+        break
     if s1[i] == '?' and s2[i] == '?':
         tc *= 55
         tc %= mod
