@@ -1,12 +1,14 @@
 mod = 10**9 + 7
 
 N, M = map(int, input().split())
-L = -1; R = -1
+L = -1
+R = -1
 S = input()
 ope = []
 for i in range(M):
     l, r = map(int, input().split())
-    l -= 1; r -= 1
+    l -= 1
+    r -= 1
     if L <= l and r <= R:
         continue
     else:

@@ -6,6 +6,9 @@ for _ in range(int(input())):
         for j in range(1, 5):
             k = int(str(i) * j)
             ans += len(str(k))
-            if k == n: f = 1; break
-        if f: break
+            if k == n:
+                f = 1
+                break
+        if f:
+            break
     print(ans)

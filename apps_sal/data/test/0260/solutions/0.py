@@ -1,8 +1,12 @@
 def nck(n, k, cache={}):
-    if k > n or k < 0: return 0
-    if k == 0 or k == n: return 1
-    if k * 2 > n: k = n - k
-    if (n, k) in cache: return cache[(n, k)]
+    if k > n or k < 0:
+        return 0
+    if k == 0 or k == n:
+        return 1
+    if k * 2 > n:
+        k = n - k
+    if (n, k) in cache:
+        return cache[(n, k)]
 
     z = cache[(n, k)] = nck(n - 1, k - 1) + nck(n - 1, k)
     return z
@@ -11,7 +15,8 @@ def nck(n, k, cache={}):
 def bits(n):
     b = 0
     while n:
-        if n & 1: b += 1
+        if n & 1:
+            b += 1
         n >>= 1
     return b
 
@@ -22,7 +27,8 @@ def count(n, k):
         if (n >> b) & 1:
             z += nck(b, k - c)
             c += 1
-        if not k: break
+        if not k:
+            break
     return z + (bits(n) == k)
 
 

@@ -1,12 +1,15 @@
 def dfs(n, k, cache={}):
     # if number of bits is bigger than the number's bits of the number's bits is less than 0
-    if k > n or k < 0: return 0
+    if k > n or k < 0:
+        return 0
     # if num bits is 0 or num bits is equivalent to the number's bits
-    if k == 0 or k == n: return 1
+    if k == 0 or k == n:
+        return 1
     # This optimization is not necessary but flips the 0s and the 1s
     # if k*2 > n: k = n-k
     # Check is already calculated
-    if (n, k) in cache: return cache[(n, k)]
+    if (n, k) in cache:
+        return cache[(n, k)]
     # Use dfs addition for case where certain bit is 1 or certain bit is 0
     z = cache[(n, k)] = dfs(n - 1, k - 1) + dfs(n - 1, k)
     return z
@@ -15,7 +18,8 @@ def dfs(n, k, cache={}):
 def bits(n):
     b = 0
     while n:
-        if n & 1: b += 1
+        if n & 1:
+            b += 1
         n >>= 1
     return b
 

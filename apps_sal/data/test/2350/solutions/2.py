@@ -7,8 +7,12 @@ import sys
 
 # print(help(deque))
 # 26
-pprint = lambda s: print(' '.join(map(str, s)))
-input = lambda: sys.stdin.readline().strip()
+
+
+def pprint(s): return print(' '.join(map(str, s)))
+def input(): return sys.stdin.readline().strip()
+
+
 ipnut = input
 for i in range(int(input())):
     # n = int(input())

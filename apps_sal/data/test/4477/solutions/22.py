@@ -1,6 +1,7 @@
 for _ in range(int(input())):
     x = int(input())
-    a = x; cnt = 0
+    a = x
+    cnt = 0
     while(a != 0):
         a = a // 10
         cnt += 1

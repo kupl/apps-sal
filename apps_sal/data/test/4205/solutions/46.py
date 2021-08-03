@@ -7,9 +7,12 @@ def solve():
     P = [int(p) for p in input().split()]
     diff = 0
     for i in range(N):
-        if P[i] != i + 1: diff += 1
-    if diff <= 2: print("YES")
-    else: print("NO")
+        if P[i] != i + 1:
+            diff += 1
+    if diff <= 2:
+        print("YES")
+    else:
+        print("NO")
 
     return 0
 

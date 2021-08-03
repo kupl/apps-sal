@@ -2,7 +2,8 @@ from math import factorial as f
 
 
 def C(n, m):
-    if n < m: return 0
+    if n < m:
+        return 0
     return f(n) // (f(n - m) * f(m))
 
 
