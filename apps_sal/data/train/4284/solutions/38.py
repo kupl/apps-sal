@@ -1,4 +1,6 @@
 from collections import deque
+
+
 def array_leaders(numbers):
     res = deque([])
     sm = 0
@@ -6,7 +8,7 @@ def array_leaders(numbers):
     while i >= 0:
         n = numbers[i]
         if n > sm:
-            res.appendleft(n);
+            res.appendleft(n)
         sm += n
         i -= 1
     return list(res)

@@ -4,4 +4,3 @@ def find_slope(points):
         return "%s" % (result,)
     except ZeroDivisionError:
         return "undefined"
-

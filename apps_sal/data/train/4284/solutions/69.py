@@ -1,4 +1,6 @@
-from itertools import accumulate; from operator import add
+from itertools import accumulate
+from operator import add
+
 
 def array_leaders(lst):
     r = list(accumulate(lst, add))

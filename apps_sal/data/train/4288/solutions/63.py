@@ -3,5 +3,6 @@ ufc_fighters = {
     "george saint pierre": "I am not impressed by your performance."
 }
 
+
 def quote(fighter):
     return ufc_fighters.get(fighter.lower())

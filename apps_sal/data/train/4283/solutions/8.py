@@ -1,1 +1,1 @@
-add=lambda a,b:sum(map(ord,a+b))
+def add(a, b): return sum(map(ord, a + b))

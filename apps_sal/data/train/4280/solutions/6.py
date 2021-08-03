@@ -1,1 +1,1 @@
-area_largest_square = lambda r: 2 * r * r
+def area_largest_square(r): return 2 * r * r

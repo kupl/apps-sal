@@ -6,4 +6,3 @@ def find_slope(points):
         return f'{int(m)}'
     except:
         return "undefined"
-

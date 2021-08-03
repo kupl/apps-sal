@@ -3,5 +3,6 @@ def array_leaders(numbers):
     out = []
     for i in numbers:
         n -= i
-        if i > n: out.append(i)
+        if i > n:
+            out.append(i)
     return out
