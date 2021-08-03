@@ -3,7 +3,7 @@ class Solution:
         odds: List[int] = [n for n in nums if n % 2 == 1]
         evens: Set[int] = [n for n in nums if n != 0 and n % 2 == 0]
         new: List[int] = []
-            
+
         n: int = 0
         n_ops: int = 0
 
@@ -16,7 +16,7 @@ class Solution:
                 new = [n // 2 for n in evens]
                 odds = [n for n in new if n % 2 == 1]
                 evens = [n for n in new if n % 2 == 0]
-            
+
             n_ops += 1
-            
+
         return n_ops

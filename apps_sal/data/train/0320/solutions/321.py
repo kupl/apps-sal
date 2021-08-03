@@ -3,8 +3,7 @@ class Solution:
         add_operations = {}
         result = 0
         max_m = 0
-        
-        
+
         for i in nums:
             current = i
             if current in add_operations:
@@ -12,7 +11,7 @@ class Solution:
             else:
                 add_amount = 0
                 multiplying_amount = 0
-                
+
                 while current:
                     if current % 2:
                         add_amount += 1
@@ -24,5 +23,3 @@ class Solution:
                 result += add_amount
                 add_operations[i] = add_amount
         return result + max_m
-                        
-

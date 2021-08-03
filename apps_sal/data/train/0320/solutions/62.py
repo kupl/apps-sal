@@ -21,4 +21,3 @@ class Solution:
         #     answer += num - 2**small + 1
         # print(max_num)
         # return answer + max_num
-

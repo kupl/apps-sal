@@ -11,6 +11,6 @@ class Solution:
                 if num != 0:
                     flag = True
                     nums[idx] = num // 2
-            if flag: 
+            if flag:
                 ans += 1
         return ans

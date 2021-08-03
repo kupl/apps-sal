@@ -19,4 +19,3 @@ class Solution:
             if not ok:
                 break
         return ans
-

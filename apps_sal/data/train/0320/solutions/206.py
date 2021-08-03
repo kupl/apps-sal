@@ -10,6 +10,6 @@ class Solution:
         if operations > 0:
             return operations + self.minOperations(nums)
         for i in range(len(nums)):
-            nums[i] = nums[i]//2
+            nums[i] = nums[i] // 2
         operations += 1
         return operations + self.minOperations(nums)

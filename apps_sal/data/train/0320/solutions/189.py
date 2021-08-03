@@ -13,8 +13,3 @@ class Solution:
             max_mult = max(max_mult, count)
 
         return res + max_mult
-
-                
-           
-            
-

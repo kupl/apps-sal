@@ -10,5 +10,4 @@ class Solution:
             count1 += int(s1list[i] >= s2list[i])
         for i in range(len(s1)):
             count2 += int(s2list[i] >= s1list[i])
-        return (not count1%len(s1) or not count2%len(s1))
-
+        return (not count1 % len(s1) or not count2 % len(s1))

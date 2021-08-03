@@ -5,7 +5,6 @@ class Solution:
         for n in nums:
             b = bin(n)
             ans += b.count('1')
-            mx = max(mx, len(b)-3)
-            
-        return ans + mx
+            mx = max(mx, len(b) - 3)
 
+        return ans + mx

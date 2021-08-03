@@ -11,4 +11,3 @@ class Solution:
                 arr = [x // 2 for x in arr]
                 res += 1
         return res
-

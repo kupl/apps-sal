@@ -13,5 +13,3 @@ class Solution:
                 nums[i] //= 2
             res += 1
         return res
-            
-

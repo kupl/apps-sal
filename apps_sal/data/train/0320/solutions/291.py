@@ -4,7 +4,7 @@ class Solution:
         res = 0
         for i in nums:
             temp = 0
-            while i>0:
+            while i > 0:
                 if i % 2 == 0:
                     i //= 2
                     temp += 1
@@ -12,9 +12,9 @@ class Solution:
                     i -= 1
                     res += 1
                 divied2 = max(divied2, temp)
-            #print(res)
+            # print(res)
         return res + divied2
-                    
+
         # max_ = max(nums)
         # dp = [(float('inf'),float('inf'),float('inf'))]*(max_+1)
         # dp[0] = (0,0,0)
@@ -33,5 +33,4 @@ class Solution:
         # res = 0
         # for i in nums:
         #     temp = max(temp, dp[i][2])
-        #     res += dp[i][1] 
-
+        #     res += dp[i][1]

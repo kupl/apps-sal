@@ -6,10 +6,10 @@ class Solution:
                 if num % 2:
                     nums[i] -= 1
                     count += 1
-            
+
             if sum(nums) == 0:
                 return count
-            
+
             for i in range(len(nums)):
                 nums[i] //= 2
             count += 1

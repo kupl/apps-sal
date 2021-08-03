@@ -97,7 +97,8 @@ class Solution:
             dup = defaultdict(int)
             do_even = False
             for n in cc:
-                if n == 0: continue
+                if n == 0:
+                    continue
                 if n % 2:
                     cnt += cc[n]
                     if n - 1 > 0:
@@ -106,8 +107,10 @@ class Solution:
                 else:
                     do_even = True
                     dup[n // 2] += cc[n]
-            if do_even: cnt += 1
-            if not dup: return cnt
+            if do_even:
+                cnt += 1
+            if not dup:
+                return cnt
             cc = dup
 
         return cnt
@@ -120,4 +123,3 @@ nums = [2, 2]
 nums = [4, 2, 5]
 # nums = [3, 2, 2, 4]
 # nums = [2, 4, 8, 16]
-

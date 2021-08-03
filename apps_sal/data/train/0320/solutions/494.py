@@ -14,5 +14,3 @@ class Solution:
             if mul > mul_max:
                 mul_max = mul
         return res + mul_max
-                    
-

@@ -1,11 +1,11 @@
 class Solution:
-    
+
     def getOdd(self, nums):
         for i, n in enumerate(nums):
             if n % 2 == 1:
                 return i
         return None
-    
+
     def minOperations(self, nums: List[int]) -> int:
         res = 0
         while nums.count(0) != len(nums):
@@ -21,5 +21,3 @@ class Solution:
                         res += 1
 
         return res
-            
-

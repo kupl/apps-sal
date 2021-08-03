@@ -11,13 +11,13 @@ class Solution:
             for i in range(len(nums)):
                 if nums[i] == 0:
                     continue
-                
+
                 all_zeros = False
                 if nums[i] % 2 != 0:
                     cost += nums[i] % 2
                     nums[i] = nums[i] - (nums[i] % 2)
                     all_evens = False
-            
+
             if all_zeros:
                 break
             while all_evens:
@@ -26,7 +26,5 @@ class Solution:
                     if nums[i] % 2 != 0:
                         all_evens = False
                 cost += 1
-                
-        return cost
-                    
 
+        return cost

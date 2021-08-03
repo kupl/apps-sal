@@ -6,4 +6,3 @@ class Solution:
             b += (f := f'{n:b}').count('1')
             s = max(s, len(f))
         return s - 1 + b
-

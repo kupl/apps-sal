@@ -3,6 +3,7 @@ class Solution:
         max_mul = 0
         total_add = 0
         ope_dict = {0: (0, 0)}
+
         def func(num: int):
             if num in ope_dict:
                 return ope_dict[num]
@@ -18,5 +19,3 @@ class Solution:
             total_add += add
             max_mul = max(max_mul, mul)
         return total_add + max_mul
-            
-

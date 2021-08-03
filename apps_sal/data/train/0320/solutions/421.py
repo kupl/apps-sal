@@ -6,9 +6,9 @@ class Solution:
             for i in range(n):
                 if nums[i] % 2 == 1:
                     nums[i] -= 1
-                    cnt += 1        
+                    cnt += 1
             return cnt
-        
+
         def halfEven(nums):
             n = len(nums)
             allZero = True
@@ -17,12 +17,10 @@ class Solution:
                     nums[i] //= 2
                     allZero = False
             return allZero
-              
+
         result = deductOdd(nums)
         while not halfEven(nums):
             result += 1
             result += deductOdd(nums)
-            
-        return result
-        
 
+        return result

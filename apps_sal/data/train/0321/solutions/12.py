@@ -7,19 +7,19 @@ class Solution:
         # print(arr1)
         c = 0
         for i in range(len(arr1)):
-            if arr1[i]>arr2[i]:
+            if arr1[i] > arr2[i]:
                 break
-            c+=1
+            c += 1
         # print(c)
-        
+
         if c == len(arr1):
             # print(\"returning\")
             return True
 
         for i in range(len(arr1)):
-            if arr1[i]<arr2[i]:
+            if arr1[i] < arr2[i]:
                 return False
-            c+=1
+            c += 1
         # print(c)
-        
+
         return True

@@ -3,7 +3,7 @@ class Solution:
         valid = {0: 0}
         for i in range(31):
             valid[2 ** i] = i
-        
+
         ans = 0
         for i in range(len(nums)):
             if nums[i] > 0:
@@ -21,11 +21,10 @@ class Solution:
                 else:
                     multiply_step += 1
                     nums[i] //= 2
-            
+
             max_multiply_step = max(max_multiply_step, multiply_step + valid[nums[i]])
             ans += one_step
-        
+
         ans += max_multiply_step
 
         return ans
-

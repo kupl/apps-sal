@@ -11,4 +11,3 @@ class Solution:
         # for i in range(max_digit + 1):
         #     result += cache[i] + 1
         # return result - 1
-

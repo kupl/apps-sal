@@ -12,11 +12,11 @@ class Solution:
                     total -= 1
                 else:
                     evens += 1
-            
+
             if evens == len(nums):
                 for i in range(len(nums)):
                     nums[i] /= 2
                     total -= nums[i]
                 res += 1
-        
+
         return res

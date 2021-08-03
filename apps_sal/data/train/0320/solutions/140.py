@@ -22,4 +22,3 @@ class Solution:
             if has_div:
                 res += 1
         return res
-

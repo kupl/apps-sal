@@ -7,7 +7,7 @@ class Solution:
 #         for n in nums:
 #             if n==0:
 #                 zeros+=1
-                
+
 #         #when all numbers are even, /2
 #         #when there is any odd number, -1
 #         while zeros<len(nums):
@@ -20,17 +20,17 @@ class Solution:
 #                     # print('odd')
 #             if zeros==len(nums):
 #                 break
-                
+
 #             flag=0
-#             for j in range(len(nums)): 
+#             for j in range(len(nums)):
 #                 if j==0:
 #                     flag=1
-#                 nums[j]/=2  
+#                 nums[j]/=2
 #                 if flag==1:
 #                     result += 1
 #                     flag=0
 #                     # print('even')
-                    
+
 #         return result
 
         '''Time:O(n), Space:O(1)'''
@@ -39,7 +39,7 @@ class Solution:
         for n in nums:
             mul = 0
             while n:
-                if n%2:
+                if n % 2:
                     n -= 1
                     ones += 1
                 else:

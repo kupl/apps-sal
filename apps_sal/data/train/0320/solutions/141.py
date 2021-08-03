@@ -4,8 +4,8 @@ class Solution:
         while True:
             Zero = True
             for i in range(len(nums)):
-                if nums[i]&1:
-                    nums[i]-=1
+                if nums[i] & 1:
+                    nums[i] -= 1
                     count += 1
                 if nums[i]:
                     Zero = False
@@ -13,6 +13,4 @@ class Solution:
                 return count
             count += 1
             for i in range(len(nums)):
-                nums[i]>>=1
-            
-
+                nums[i] >>= 1

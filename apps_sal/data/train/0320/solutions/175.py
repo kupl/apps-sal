@@ -11,10 +11,9 @@ class Solution:
                 if nums[i] > 0:
                     bigger_than_zero += 1
             counter += temp_counter
-            if bigger_than_zero == 0 :
+            if bigger_than_zero == 0:
                 return counter
             for i in range(len(nums)):
                 nums[i] //= 2
             counter += 1
         return counter
-

@@ -12,8 +12,5 @@ class Solution:
                 for idx, num in enumerate(nums):
                     nums[idx] = num // 2
                 ans += 1
-            
-        return ans
-                    
-                
 
+        return ans

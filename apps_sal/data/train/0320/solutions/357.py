@@ -1,6 +1,7 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        if not nums or sum(nums) == 0: return 0
+        if not nums or sum(nums) == 0:
+            return 0
         cnt = 0
         while sum(nums) != 0:
             if all(num % 2 == 0 for num in nums):

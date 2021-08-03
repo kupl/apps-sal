@@ -1,6 +1,6 @@
 class Solution:
     def minOperations(self, A):
-        
+
         steps, n = 0, len(A)
         while True:
             zeros = 0
@@ -16,7 +16,3 @@ class Solution:
                 A[i] >>= 1
             steps += 1
         return steps
-                
-                
-        
-

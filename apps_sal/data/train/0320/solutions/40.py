@@ -11,4 +11,3 @@ class Solution:
                 tmp += 1
             highest_bit = max(highest_bit, tmp)
         return highest_bit + addone
-

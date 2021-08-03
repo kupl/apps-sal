@@ -6,7 +6,7 @@ class Solution:
             one_steps = 0
             half_steps = 0
             while i != 0:
-                if i %2 == 0:
+                if i % 2 == 0:
                     half_steps += 1
                     i //= 2
                 else:
@@ -15,4 +15,4 @@ class Solution:
             #print(i, one_steps, half_steps)
             count_of_one_steps += one_steps
             count_of_half_steps = max(count_of_half_steps, half_steps)
-        return count_of_one_steps + count_of_half_steps     
+        return count_of_one_steps + count_of_half_steps

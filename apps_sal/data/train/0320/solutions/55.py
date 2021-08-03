@@ -7,7 +7,7 @@ class Solution:
             op += odd_ct
             s -= odd_ct
             if s != 0:
-                nums = [n//2 for n in nums]
+                nums = [n // 2 for n in nums]
                 op += 1
                 s /= 2
         return op

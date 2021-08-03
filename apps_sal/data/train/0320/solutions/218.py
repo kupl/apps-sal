@@ -1,4 +1,6 @@
 import math
+
+
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         t = 0

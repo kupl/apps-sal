@@ -1,5 +1,5 @@
 class Solution:
-    def minOperations(self,nums):
+    def minOperations(self, nums):
         ret = []
         overall = 0
         for i in nums:

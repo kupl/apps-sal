@@ -8,5 +8,3 @@ class Solution:
             for i in range(len(nums)):
                 nums[i] //= 2
         return ans
-                    
-

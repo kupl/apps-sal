@@ -4,9 +4,7 @@ class Solution:
         ss2 = sorted(s2)
         f = True
         r = True
-        for x,y in zip(ss1,ss2):
+        for x, y in zip(ss1, ss2):
             f = f and (x >= y)
             r = r and (x <= y)
         return f or r
-        
-

@@ -15,10 +15,9 @@ class Solution:
                 return result
             if (i == n):
                 for j in range(n):
-                    target[j] = target[j]//2
+                    target[j] = target[j] // 2
                 result += 1
             for j in range(i, n):
                 if (target[j] & 1):
                     target[j] -= 1
                     result += 1
-

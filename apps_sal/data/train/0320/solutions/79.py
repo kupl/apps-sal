@@ -6,7 +6,8 @@ class Solution:
                 if x % 2 != 0:
                     nums[i] -= 1
                     res += 1
-            if sum(nums) == 0: break
+            if sum(nums) == 0:
+                break
             nums = [x // 2 for x in nums]
             res += 1
         return res

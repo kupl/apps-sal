@@ -6,9 +6,9 @@ class Solution:
                 if nums[i] % 2 == 1:
                     nums[i] -= 1
                     count += 1
-                    
+
                 nums[i] //= 2
             count += 1
-            
+
         count += sum(ele == 1 for ele in nums)
         return count

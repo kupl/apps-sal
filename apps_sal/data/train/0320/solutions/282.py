@@ -1,6 +1,6 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        
+
         count = 0
         nums = [num for num in nums if num]
         if not nums:
@@ -25,5 +25,3 @@ class Solution:
                 count += 1
             nums = new_nums
         return count
-        
-

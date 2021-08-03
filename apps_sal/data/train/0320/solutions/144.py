@@ -15,5 +15,3 @@ class Solution:
                     oneCnt += 1
             pwrCnt = max(pwrCnt, exp)
         return oneCnt + pwrCnt
-                    
-

@@ -20,7 +20,3 @@ class Solution:
                         allEven = False
                 total += 1
         return total
-            
-
-        
-

@@ -2,7 +2,7 @@ class Solution:
     def minOperations(self, nums: List[int]) -> int:
         '''
         nums = [1,5]
-        
+
         1 -> 1
 
         5 -> 
@@ -21,4 +21,3 @@ class Solution:
                 n >>= 1
             max_bits = max(max_bits, bits)
         return count + max_bits - 1
-

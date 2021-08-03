@@ -5,14 +5,11 @@ class Solution:
         for n in nums:
             mul = 0
             while n:
-                if n%2:
-                    n-=1
-                    ones+=1
+                if n % 2:
+                    n -= 1
+                    ones += 1
                 else:
-                    n//=2
-                    mul +=1
+                    n //= 2
+                    mul += 1
             twos = max(twos, mul)
-        return ones+twos
-        
-        
-
+        return ones + twos

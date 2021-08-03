@@ -1,6 +1,6 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        
+
         def do(n):
             a, b = 0, 0
             while n != 0:
@@ -11,7 +11,7 @@ class Solution:
                     b += 1
                     n //= 2
             return [a, b]
-        
+
         aa, bb = 0, 0
         for n in nums:
             a, b = do(n)

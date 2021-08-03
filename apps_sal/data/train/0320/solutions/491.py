@@ -9,4 +9,3 @@ class Solution:
             shifts = max(shifts, len(b) - 1)
             adds += sum(c == '1' for c in b)
         return shifts + adds
-

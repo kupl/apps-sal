@@ -14,9 +14,3 @@ class Solution:
                     count += 1
                 max_div.append(count)
         return res + max(max_div)
-            
-                    
-                
-           
-            
-

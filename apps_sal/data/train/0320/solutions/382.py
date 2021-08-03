@@ -9,7 +9,7 @@ class Solution:
             else:
                 res[0] += 1
         return res[0]
-        
+
     def checkOdd(self, a, res):
         for i in range(len(a)):
             if a[i] % 2 != 0:

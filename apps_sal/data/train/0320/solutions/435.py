@@ -9,10 +9,10 @@ class Solution:
             X = 1
             while Y > X:
                 # step += 1
-                if Y % 2 == 1: 
+                if Y % 2 == 1:
                     Y -= 1
                     add_op += 1
-                else: 
+                else:
                     Y /= 2
                     time_op += 1
             max_time = max(max_time, time_op)

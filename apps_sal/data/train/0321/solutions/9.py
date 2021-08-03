@@ -14,7 +14,7 @@ class Solution:
         s2token = True
         for i in range(len(s2)):
             if s2[i] > s1[i]:
-                s2token =False
+                s2token = False
                 break
         if s2token == True:
             return True

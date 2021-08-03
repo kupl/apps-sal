@@ -7,5 +7,4 @@ class Solution:
                 ans += 1
             for i in range(len(nums)):
                 nums[i] //= 2
-        return ans     
-
+        return ans

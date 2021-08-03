@@ -1,5 +1,5 @@
 class Solution:
-    
+
     def minOperations(self, nums: List[int]) -> int:
         operations = 0
         while not all(n == 0 for n in nums):
@@ -12,5 +12,3 @@ class Solution:
                         nums[i] = num - 1
                         operations += 1
         return operations
-                
-

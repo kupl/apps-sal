@@ -21,5 +21,5 @@ class Solution:
                     nums[i] //= 2
             else:
                 break
-        
+
         return result

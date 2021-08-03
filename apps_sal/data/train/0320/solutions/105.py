@@ -18,4 +18,3 @@ class Solution:
                 n >>= 1
             max_bits = max(max_bits, bits)
         return count + max_bits - 1
-

@@ -9,9 +9,9 @@ class Solution:
             res += one
             max_zero = max(max_zero, zero)
         res += max_zero
-        
+
         return res
-        
+
     def parse(v):
         zero, one = 0, 0
         while v > 0:

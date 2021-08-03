@@ -11,17 +11,17 @@ class Solution:
                         new_nums.append(nums[i])
                 elif nums[i] > 0:
                     new_nums.append(nums[i])
-            return step,new_nums
-        
+            return step, new_nums
+
         def even_2(nums):
-            return [a//2 for a in nums]
-        
+            return [a // 2 for a in nums]
+
         step = 0
         while len(nums) > 0:
-            add,nums = odd_2_even(nums)
+            add, nums = odd_2_even(nums)
             if len(nums) > 0:
                 nums = even_2(nums)
                 step += 1
             step = step + add
-        
+
         return step

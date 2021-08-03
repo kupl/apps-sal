@@ -9,4 +9,3 @@ class Solution:
             if all(n == 0 for n in nums):
                 return res
             res += 1
-

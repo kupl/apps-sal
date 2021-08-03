@@ -1,6 +1,7 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         f = {}
+
         def calc(x):
             if x == 0:
                 return 0, 0
@@ -12,7 +13,7 @@ class Solution:
                     a, b = calc(x // 2)
                     f[x] = (a, b + 1)
             return f[x]
-        
+
         x = []
         y = []
         for e in nums:

@@ -1,4 +1,4 @@
-class Solution: 
+class Solution:
     def minOperations(self, nums: List[int]) -> int:
         cnt = 0
         max_val, max_index = -1, len(nums)
@@ -19,9 +19,4 @@ class Solution:
                 nums[i] = nums[i] // 2
             cnt += 1
             max_val = nums[max_index]
-        return cnt 
-            
-                
-            
-                
-
+        return cnt

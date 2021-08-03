@@ -6,7 +6,7 @@ class Solution:
                 if n > 1:
                     flag = True
             return flag
-        
+
         cnt = 0
         n = len(nums)
         flag = check(nums)
@@ -25,4 +25,4 @@ class Solution:
         for n in nums:
             if n != 0:
                 cnt += 1
-        return cnt                
+        return cnt

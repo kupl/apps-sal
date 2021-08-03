@@ -6,6 +6,5 @@ class Solution:
                 if num & (1 << i):
                     highest_bit = i
                     one_bit += 1
-        
-        return highest_bit + one_bit
 
+        return highest_bit + one_bit

@@ -14,5 +14,5 @@ class Solution:
             if not flag:
                 ans += 1
                 nums = temp
-            #print(nums)
+            # print(nums)
         return ans

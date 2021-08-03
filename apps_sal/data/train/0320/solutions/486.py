@@ -4,5 +4,5 @@ class Solution:
         for num in nums:
             bits = bin(num)
             res += bits.count('1')
-            length = max(length, len(bits)-2)
-        return res + length -1
+            length = max(length, len(bits) - 2)
+        return res + length - 1

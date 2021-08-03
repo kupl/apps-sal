@@ -6,7 +6,7 @@ class Solution:
         while nums != ref:
             isAllEven = 1
             for i in range(N):
-                if nums[i]%2:
+                if nums[i] % 2:
                     nums[i] -= 1
                     res += 1
                     isAllEven = 0
@@ -16,7 +16,3 @@ class Solution:
                 res += 1
             # print(nums, res)
         return res
-                    
-                
-                    
-

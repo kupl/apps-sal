@@ -5,18 +5,18 @@ class Solution:
 
         resultA = []
         resultB = []
-        
+
         for ch1, ch2 in zip(s1, s2):
             if ch1 >= ch2:
                 resultA.append(1)
             else:
                 resultA.append(0)
-                
+
             if ch2 >= ch1:
                 resultB.append(1)
             else:
                 resultB.append(0)
-        
+
         if all(resultA) == 1 or all(resultB):
             return True
         else:

@@ -5,6 +5,6 @@ class Solution:
         count1 = 0
         count2 = 0
         for i in range(len(s1)):
-            count1 += 1*(s1[i] >= s2[i])
-            count2 += 1*(s1[i] <= s2[i])
+            count1 += 1 * (s1[i] >= s2[i])
+            count2 += 1 * (s1[i] <= s2[i])
         return count1 == len(s1) or count2 == len(s1)

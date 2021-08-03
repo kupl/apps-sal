@@ -1,8 +1,10 @@
 from typing import List
 
+
 class Counter:
     def __init__(self):
         self.c = 0
+
 
 class Solution:
 

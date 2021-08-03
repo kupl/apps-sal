@@ -23,4 +23,3 @@ class Solution:
                 if nums[j] % 2 != 0:
                     nums[j] -= 1
                     calls += 1
-

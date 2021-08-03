@@ -7,7 +7,7 @@ class Solution:
             if s < 0:
                 return False
         return True
-    
+
     def checkIfCanBreak(self, s1: str, s2: str) -> bool:
         d1 = collections.Counter(s1)
         d2 = collections.Counter(s2)

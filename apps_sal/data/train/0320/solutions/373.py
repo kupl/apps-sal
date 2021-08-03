@@ -9,11 +9,10 @@ class Solution:
                     nums[i] -= 1
                 if nums[i] > 0:
                     can_divide = True
-                    
+
             if can_divide:
                 ans += 1
                 for i in range(len(nums)):
                     nums[i] //= 2
-                
-        return ans
 
+        return ans
