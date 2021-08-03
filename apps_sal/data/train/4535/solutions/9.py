@@ -46,4 +46,3 @@ def zfunc(string):
                 R -= 1
     Z[0] = strlen
     return Z
-

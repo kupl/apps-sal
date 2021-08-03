@@ -1,4 +1,6 @@
 from itertools import chain
+
+
 def capitals_first(text):
     cap, low = [], []
     for w in text.split():

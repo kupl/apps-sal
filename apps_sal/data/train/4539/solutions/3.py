@@ -1,5 +1,5 @@
-def hop_across(lst, rev = True):
-    h,i = 0,0
+def hop_across(lst, rev=True):
+    h, i = 0, 0
     while i < len(lst):
         i += lst[i]
         h += 1

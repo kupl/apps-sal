@@ -1,5 +1,6 @@
 from math import ceil, log10
 
+
 def validate_code(code):
     return first_digit(code) in (1, 2, 3)
 
