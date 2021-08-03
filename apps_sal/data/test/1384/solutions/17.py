@@ -12,7 +12,8 @@ zeros = 0
 mx = 0
 for c in s:
     zeros += c == '0'
-    if zeros + ones > mx: mx = zeros + ones
+    if zeros + ones > mx:
+        mx = zeros + ones
     ones -= c == '1'
 
 print(mx)

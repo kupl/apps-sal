@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(200001)
 n, m, k = list(map(int, input().split()))
 edge = [[]for _ in range(n)]
@@ -8,7 +10,8 @@ for i in range(m):
     a, b = list(map(int, input().split()))
     a -= 1
     b -= 1
-    if a > b: a, b = b, a
+    if a > b:
+        a, b = b, a
     di[(a, b)] = i
     edge[a].append(b)
     edge[b].append(a)
@@ -26,9 +29,11 @@ for node in queue:
             continue
         d[mode] = d[node] + 1
         queue.append(mode)
-for i in range(n): root[i] = list(root[i])
+for i in range(n):
+    root[i] = list(root[i])
 t = 1
-for i in range(1, n): t *= len(root[i])
+for i in range(1, n):
+    t *= len(root[i])
 print(min(t, k))
 for i in range(min(t, k)):
     ans = ["0"] * m
