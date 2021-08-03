@@ -6,5 +6,6 @@ def is_triangle(a, b, c):
         return True
     return False
 
+
 def fits(sum, a):
     return sum - a > a

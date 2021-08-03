@@ -15,4 +15,3 @@ def is_triangle(a, b, c):
     if _a == _b + _c:
         return False
     return False
-

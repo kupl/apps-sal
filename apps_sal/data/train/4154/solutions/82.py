@@ -1,4 +1,4 @@
-def is_triangle(a,b,c):
+def is_triangle(a, b, c):
     x = a + b
     y = b + c
     z = a + c

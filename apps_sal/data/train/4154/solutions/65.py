@@ -1,4 +1,4 @@
-#def is_triangle2(a, b, c):
+# def is_triangle2(a, b, c):
 #    lista = sorted([a,b,c])
 #    if lista[0] + lista[1] > lista[2]:
 #        return True

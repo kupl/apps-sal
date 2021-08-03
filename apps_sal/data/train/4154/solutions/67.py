@@ -4,6 +4,5 @@ def is_triangle(a, b, c):
         my_flag = True
     else:
         my_flag = False
-        
-    return my_flag
 
+    return my_flag

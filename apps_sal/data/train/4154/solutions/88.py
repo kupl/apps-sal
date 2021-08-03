@@ -5,4 +5,3 @@ def is_triangle(a, b, c):
         return False
     else:
         return True
-

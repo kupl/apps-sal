@@ -4,4 +4,3 @@ def is_triangle(a, b, c):
         if sum - side <= side:
             return False
     return True
-

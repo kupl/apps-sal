@@ -1,5 +1,6 @@
 all_sums = {}
 
+
 def helper():
     all_sums[0] = 0
     rec, suma = 0, 0
@@ -13,6 +14,7 @@ def helper():
         rec = cur
         all_sums[i] = suma
     return True
+
 
 def rec(x):
     if not all_sums:

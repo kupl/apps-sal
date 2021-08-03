@@ -9,4 +9,3 @@ def is_triangle(a, b, c):
     else:
         result = True
     return result
-
