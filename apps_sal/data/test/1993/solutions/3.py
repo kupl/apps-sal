@@ -1,10 +1,11 @@
 from sys import stdin, stdout
 
-st = lambda: list(stdin.readline().strip())
-li = lambda: list(map(int, stdin.readline().split()))
-mp = lambda: list(map(int, stdin.readline().split()))
-inp = lambda: int(stdin.readline())
-pr = lambda n: stdout.write(str(n) + "\n")
+
+def st(): return list(stdin.readline().strip())
+def li(): return list(map(int, stdin.readline().split()))
+def mp(): return list(map(int, stdin.readline().split()))
+def inp(): return int(stdin.readline())
+def pr(n): return stdout.write(str(n) + "\n")
 
 
 def valid(x, y):

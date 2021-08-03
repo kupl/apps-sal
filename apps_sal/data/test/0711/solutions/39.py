@@ -16,10 +16,12 @@ def main():
         fact[i] = i * fact[i - 1]
         fact[i] %= MOD
     ifact[N + MAX_E] = pow(fact[N + MAX_E], MOD - 2, MOD)
-    for i in range(N + MAX_E)[::-1]: ifact[i] = ((i + 1) * ifact[i + 1]) % MOD
+    for i in range(N + MAX_E)[::-1]:
+        ifact[i] = ((i + 1) * ifact[i + 1]) % MOD
 
     def combination(n, r):
-        if r < 0 or r > n: return 0
+        if r < 0 or r > n:
+            return 0
         return (fact[n] * ifact[n - r] * ifact[r]) % MOD
 
     def prime_factor(num):
@@ -35,7 +37,8 @@ def main():
                 cc += 1
             ret.append([i, cc])
             i += 1
-        if num != 1: ret.append([num, 1])
+        if num != 1:
+            ret.append([num, 1])
         return ret
 
     ps = prime_factor(M)

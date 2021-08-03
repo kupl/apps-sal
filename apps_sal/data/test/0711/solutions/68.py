@@ -8,7 +8,8 @@ def pfact(m):
         while m % i == 0:
             pf[i] = pf.get(i, 0) + 1
             m //= i
-    if m > 1: pf[m] = 1
+    if m > 1:
+        pf[m] = 1
     return pf
 
 

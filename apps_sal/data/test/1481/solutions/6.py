@@ -13,10 +13,14 @@ ans = "YES"
 for i in range(1, n + 1):
     for j in range(1, n + 1):
         c = 0
-        if A[i + 1][j] == 'o': c += 1
-        if A[i - 1][j] == 'o': c += 1
-        if A[i][j + 1] == 'o': c += 1
-        if A[i][j - 1] == 'o': c += 1
+        if A[i + 1][j] == 'o':
+            c += 1
+        if A[i - 1][j] == 'o':
+            c += 1
+        if A[i][j + 1] == 'o':
+            c += 1
+        if A[i][j - 1] == 'o':
+            c += 1
         if c % 2 == 0:
             continue
         else:

@@ -27,11 +27,13 @@ class Counting():
             self.invfact[i] = self.invfact[i + 1] * (i + 1) % mod
 
     def nCk(self, n, r):
-        if n < 0 or n < r: return 0
+        if n < 0 or n < r:
+            return 0
         return self.fact[n] * self.invfact[r] * self.invfact[n - r] % self.mod
 
     def nPk(self, n, r):
-        if n < 0 or n < r: return 0
+        if n < 0 or n < r:
+            return 0
         return self.fact[n] * self.invfact[n - r] % self.mod
 
 
@@ -63,7 +65,8 @@ def main():
             P_set.add(n)
 
         P_count = {p: 0 for p in P_set}
-        for p in P: P_count[p] += 1
+        for p in P:
+            P_count[p] += 1
 
         return P_count
 

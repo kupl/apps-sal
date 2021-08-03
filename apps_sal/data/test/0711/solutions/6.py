@@ -7,7 +7,8 @@ for i in range(2, int(M**(1 / 2)) + 2):
         cur += 1
     if cur >= 1:
         div.append(cur)
-if M > 1: div.append(1)
+if M > 1:
+    div.append(1)
 div.sort()
 mod = 10**9 + 7
 frac = [1] * (N + 50)

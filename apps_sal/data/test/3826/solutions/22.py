@@ -1,7 +1,9 @@
 ''' بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ '''
 # codeforces1208B_live
 from collections import Counter
-gi = lambda: list(map(int, input().split()))
+def gi(): return list(map(int, input().split()))
+
+
 n, = gi()
 l = gi()
 occ = Counter(l)

@@ -19,7 +19,7 @@ else:
                 mp.pop(a[j])
             p = len(mp)
             if p == n - j + i - 1:
-                ans = min(ans, j - i + 1);
+                ans = min(ans, j - i + 1)
                 break
 
     print(ans)

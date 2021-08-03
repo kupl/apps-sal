@@ -51,7 +51,8 @@ def modmul(a, b):
 
 def comb(n, r):
     r = min(n - r, r)
-    if r == 0: return 1
+    if r == 0:
+        return 1
     over = reduce(modmul, range(n, n - r, -1))
     under = reduce(modmul, range(1, r + 1))
     return over * modinv(under, 1000000007)

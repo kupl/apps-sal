@@ -82,7 +82,8 @@ def all_factors(n):
 
 
 def fibonacci_modP(n, MOD):
-    if n < 2: return 1
+    if n < 2:
+        return 1
     return (cached_fn(fibonacci_modP, (n + 1) // 2, MOD) * cached_fn(fibonacci_modP, n // 2, MOD) + cached_fn(
         fibonacci_modP, (n - 1) // 2, MOD) * cached_fn(fibonacci_modP, (n - 2) // 2, MOD)) % MOD
 
@@ -136,7 +137,8 @@ factorial_modP = []
 
 def warm_up_fac(MOD):
     nonlocal factorial_modP, fac_warm_up
-    if fac_warm_up: return
+    if fac_warm_up:
+        return
     factorial_modP = [1 for _ in range(fac_warm_up_size + 1)]
     for i in range(2, fac_warm_up_size):
         factorial_modP[i] = (factorial_modP[i - 1] * i) % MOD
@@ -214,7 +216,7 @@ def ncr(n, r):
 
 
 def binary_search(i, li):
-    fn = lambda x: li[x] - x // i
+    def fn(x): return li[x] - x // i
     x = -1
     b = len(li)
     while b >= 1:
@@ -239,14 +241,16 @@ def main():
     cnt = Counter(li)
     for i in range(n):
         st = set()
-        if cnt[li[i]] == 1: continue
+        if cnt[li[i]] == 1:
+            continue
         brk = False
         for j in range(0, i):
             if li[j] in st:
                 brk = True
                 break
             st.add(li[j])
-        if brk: continue
+        if brk:
+            continue
         for j in range(n - 1, i - 1, -1):
             if li[j] in st:
                 break

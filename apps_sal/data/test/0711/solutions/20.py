@@ -30,7 +30,8 @@ INF = float('inf')
 def prime_factorization(n):
     res = []
     for i in range(2, int(pow(n, 0.5)) + 1):
-        if n % i: continue
+        if n % i:
+            continue
         ex = 0
         while n % i == 0:
             n = n // i

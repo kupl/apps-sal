@@ -1,7 +1,7 @@
 from collections import Counter
 from functools import reduce
 import operator
-product = lambda it: reduce(operator.mul, it, 1)
+def product(it): return reduce(operator.mul, it, 1)
 
 
 def comb(n, max_k, mod):

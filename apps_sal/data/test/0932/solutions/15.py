@@ -15,7 +15,8 @@ def mx_or(mx):
     return result
 
 
-none = lambda iterable: all(map(operator.not_, iterable))
+def none(iterable): return all(map(operator.not_, iterable))
+
 
 n, m = list(map(int, input().split()))
 mx = [[] for i in range(n)]

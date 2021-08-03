@@ -31,7 +31,8 @@ for i in range(2, N + 36):
 
 
 def comb_mod(n, r, m):
-    if (n < 0 or r < 0 or n < r): return 0
+    if (n < 0 or r < 0 or n < r):
+        return 0
     r = min(r, n - r)
     return fac[n] * finv[n - r] * finv[r] % m
 

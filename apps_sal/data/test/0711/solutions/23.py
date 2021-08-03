@@ -29,15 +29,18 @@ class Factorial:
         return self.inv[i]
 
     def C(self, n, k):
-        if not 0 <= k <= n: return 0
+        if not 0 <= k <= n:
+            return 0
         return self.f[n] * self.inv[n - k] * self.inv[k] % self.mod
 
     def P(self, n, k):
-        if not 0 <= k <= n: return 0
+        if not 0 <= k <= n:
+            return 0
         return self.f[n] * self.inv[n - k] % self.mod
 
     def H(self, n, k):
-        if (n == 0 and k > 0) or k < 0: return 0
+        if (n == 0 and k > 0) or k < 0:
+            return 0
         return self.f[n + k - 1] * self.inv[k] % self.mod * self.inv[n - 1] % self.mod
 
 

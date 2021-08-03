@@ -11,14 +11,16 @@ for i in range(M):
     for j in range(N):
         if B[i][j] == 0:
             A[i] = [0 for j in range(N)]
-            for k in range(M): A[k][j] = 0
+            for k in range(M):
+                A[k][j] = 0
 
 B1 = [[0 for j in range(N)] for i in range(M)]
 for i in range(M):
     for j in range(N):
         if A[i][j] == 1:
             B1[i] = [1 for j in range(N)]
-            for k in range(M): B1[k][j] = 1
+            for k in range(M):
+                B1[k][j] = 1
 
 if B != B1:
     print("NO")

@@ -17,7 +17,8 @@ def comb(x, y): return fact[x] * inv[y] % mod * inv[x - y] % mod if x >= y >= 0 
 
 ans = 1
 for i in range(2, floor(sqrt(m)) + 1):
-    if m % i: continue
+    if m % i:
+        continue
     cnt = 0
     while m % i == 0:
         cnt += 1

@@ -11,7 +11,9 @@ def check(a, b, m, n):
     return True
 
 
-input_values = lambda: [int(x) for x in input().split()]
+def input_values(): return [int(x) for x in input().split()]
+
+
 m, n = input_values()
 b = []
 for i in range(m):

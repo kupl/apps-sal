@@ -14,8 +14,10 @@ def resolve():
     # 二項係数計算
     def Combination(n, k, MOD=10 ** 9 + 7):
         fac, finv = COMinit(n, MOD)
-        if n < k: return 0
-        if n < 0 or k < 0: return 0
+        if n < k:
+            return 0
+        if n < 0 or k < 0:
+            return 0
         ret = fac[n] * finv[k] * finv[n - k] % MOD
         return ret
 
