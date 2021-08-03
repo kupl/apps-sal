@@ -4,7 +4,7 @@ n, k = map(int, input().split())
 
 def fill_matrix(n):
     data = []
-    q = [0]*n
+    q = [0] * n
     for i in range(n):
         data.append(deepcopy(q))
     return data
@@ -22,9 +22,7 @@ E_matrix(matrix)
 
 
 for row in matrix:
-        sep = ' '
-        for col in row:
-                print(col, end=sep)
-        print('')
-
-
+    sep = ' '
+    for col in row:
+        print(col, end=sep)
+    print('')

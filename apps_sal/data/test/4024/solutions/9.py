@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class ESubsequencesEasyVersion:
     def solve(self):
@@ -8,7 +9,7 @@ class ESubsequencesEasyVersion:
         s = input()
         dp = [[0] * (n + 1) for _ in range(n + 1)]
         dp[0][0] = 1
-        last = {key : -1 for key in (chr(x) for x in range(ord('a'), ord('z') + 1))}
+        last = {key: -1 for key in (chr(x) for x in range(ord('a'), ord('z') + 1))}
         for i in range(1, n + 1):
             dp[i][0] = 1
             for j in range(1, i + 1):
@@ -22,14 +23,14 @@ class ESubsequencesEasyVersion:
             tot = min(k, tot + dp[n][sz])
             if tot == k:
                 break
-        
+
         if tot >= k:
             print(ans)
         else:
             print(-1)
 
+
 solver = ESubsequencesEasyVersion()
 input = sys.stdin.readline
 
 solver.solve()
-

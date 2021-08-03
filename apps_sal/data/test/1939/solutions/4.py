@@ -4,4 +4,3 @@ for i in range(n):
     A[i][i] = str(k)
 for row in A:
     print(' '.join(row))
-

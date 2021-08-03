@@ -5,5 +5,3 @@ for _ in range(int(input())):
     else:
         print("YES")
         print(a[0], a[0], a[2])
-
-

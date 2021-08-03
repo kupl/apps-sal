@@ -13,11 +13,11 @@ while True:
     post = []
     for s in pre:
         for i in range(len(s)):
-            t = s[:i] + s[i+1:]
+            t = s[:i] + s[i + 1:]
             if t not in post:
                 k += 1
                 post.append(t)
-                ans += N-len(t)
+                ans += N - len(t)
                 if k >= K:
                     print(ans)
                     f = 1

@@ -3,7 +3,7 @@ def main():
     if k == 0:
         print("0")
         return
-    d = list(map(int,input().split(' ')))
+    d = list(map(int, input().split(' ')))
     s = []
     se = set()
     a = set()
@@ -27,6 +27,7 @@ def main():
     if len(a) == 0 and len(b) == 0 and len(c) > 0:
         se.add(list(c)[0])
     print(len(se))
-    print(' '.join(list(map(str,sorted(list(se))))))
-main()
+    print(' '.join(list(map(str, sorted(list(se))))))
 
+
+main()

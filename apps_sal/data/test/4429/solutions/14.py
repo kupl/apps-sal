@@ -1,8 +1,8 @@
 for _ in range(int(input())):
-    l = list(map(int,input().split()))
+    l = list(map(int, input().split()))
     l.sort()
-    if l[1]==l[2]:
+    if l[1] == l[2]:
         print("YES")
-        print(l[0],l[0],l[2])
+        print(l[0], l[0], l[2])
     else:
         print("NO")

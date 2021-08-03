@@ -8,7 +8,7 @@ def get(k, a, b):
         return -1
     return part_b + a // k + 1
 
+
 k, a, b = list(map(int, input().split()))
 
 print(max(get(k, a, b), get(k, b, a)))
-

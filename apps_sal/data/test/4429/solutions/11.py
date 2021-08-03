@@ -6,6 +6,7 @@ def solve(x, y, z):
         return [x, x, z]
     return None
 
+
 t = int(input())
 for _ in range(t):
     # n = int(input())

@@ -8,7 +8,8 @@ except:
     return
 current = a[start]
 zero_in_row = 0
-f = lambda x: 1 if x == 1 else 0
+def f(x): return 1 if x == 1 else 0
+
 
 for i in range(start, n):
     if a[i] == 1:
@@ -19,4 +20,3 @@ for i in range(start, n):
         zero_in_row += 1
 
 print(time)
-

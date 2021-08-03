@@ -21,5 +21,3 @@ while que:
                 que.append(t)
 
 print(-1)
-
-

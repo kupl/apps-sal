@@ -11,4 +11,3 @@ elif m % k > 0 and wa == 0:
     print(-1)
 else:
     print(wa + wb)
-

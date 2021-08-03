@@ -1,6 +1,7 @@
 def read_numbers():
     return list(map(int, input().split()))
 
+
 def f(pairs):
     while pairs and pairs[0] == 0:
         pairs.pop(0)
@@ -29,10 +30,10 @@ def f(pairs):
     return count
 
 
-
 def __starting_point():
     n = int(input())
     numbers = read_numbers()
     print(f(numbers))
+
 
 __starting_point()
