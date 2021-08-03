@@ -16,8 +16,10 @@ def main():
                 c -= 1
             b[c] += 1
             s += d
-        if s >= m: ok = mid
-        else: ng = mid
+        if s >= m:
+            ok = mid
+        else:
+            ng = mid
     print(ok)
 
 

@@ -37,7 +37,8 @@ def bfs(d):
                     nums[paths[p][j]] = next_num
                     now.append(paths[p][j])
                     next_num -= 1
-    if len(now): bfs(d + 1)
+    if len(now):
+        bfs(d + 1)
 
 
 bfs(1)

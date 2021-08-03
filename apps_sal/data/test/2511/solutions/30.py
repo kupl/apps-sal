@@ -29,13 +29,16 @@ def cominit():
 
 
 def cmb(n, r):
-    if n < 0 or r < 0 or r > n: return 0
-    if r > n / 2: r = n - r
+    if n < 0 or r < 0 or r > n:
+        return 0
+    if r > n / 2:
+        r = n - r
     return fac[n] * (finv[r] * finv[n - r] % mod) % mod
 
 
 def permu(n, r):
-    if n <= 0 or r <= 0 or r > n: return 0
+    if n <= 0 or r <= 0 or r > n:
+        return 0
     return (fac[n] * finv[n - r]) % MOD
 
 
@@ -58,7 +61,8 @@ def dfs(s, ans):
         ans %= MOD
 
     for nv in edge[s]:
-        if visited[nv]: continue
+        if visited[nv]:
+            continue
         visited[nv] = True
         ans = dfs(nv, ans)
 

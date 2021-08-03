@@ -19,7 +19,8 @@ visit = [0] * N
 def dfs(vs, pat, count):
 
     for ve in edge[vs]:
-        if visit[ve]: continue
+        if visit[ve]:
+            continue
 
         visit[ve] = 1
         pat = pat * (K - count) % MOD

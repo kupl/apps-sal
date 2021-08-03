@@ -13,8 +13,10 @@ mod = 1000000007
 
 
 def perm(n, k):
-    if n < k: return 0
-    if n < 0 or k < 0: return 0
+    if n < k:
+        return 0
+    if n < 0 or k < 0:
+        return 0
     return fac[n] * finv[n - k] % mod
 
 
@@ -29,7 +31,8 @@ def dfs(cur, prev=-1):
     nxtcnt = 0
     res = 1
     for nxt in G[cur]:
-        if nxt == prev: continue
+        if nxt == prev:
+            continue
         nxtcnt += 1
         res = res * dfs(nxt, cur) % mod
     colors = k - 1 if cur == 0 else k - 2

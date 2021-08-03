@@ -19,4 +19,5 @@ if Limak > Radewoosh:
     print("Limak")
 elif Limak < Radewoosh:
     print("Radewoosh")
-else: print("Tie")
+else:
+    print("Tie")

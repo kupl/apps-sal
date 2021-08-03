@@ -19,8 +19,10 @@ def main():
         color[s] = K
         while todo:
             a = todo.popleft()
-            if a == s: count = K - 1
-            else: count = K - 2
+            if a == s:
+                count = K - 1
+            else:
+                count = K - 2
             for b in G[a]:
                 if seen[b] == 0:
                     seen[b] = 1

@@ -2,8 +2,12 @@ n = int(input())
 a = list(map(int, input().split()))
 a2 = sorted(set(a))
 L = len(a2)
-if n == 1: print(a[0]); return
-elif n == 2: print(a[1]); return
+if n == 1:
+    print(a[0])
+    return
+elif n == 2:
+    print(a[1])
+    return
 ng = L
 ok = 0
 while ng - ok > 1:

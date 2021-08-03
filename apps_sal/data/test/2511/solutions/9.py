@@ -32,8 +32,10 @@ def dfs(v, p):
     nonlocal ans
     us = edges[v]
     for u in us:
-        if u == p: continue
-        if len(edges[u]) == 1: ans *= 1
+        if u == p:
+            continue
+        if len(edges[u]) == 1:
+            ans *= 1
         ans *= P(k - 2, len(edges[u]) - 1)
         ans %= mod
         dfs(u, v)

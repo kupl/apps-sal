@@ -4,11 +4,11 @@ from collections import deque
 
 sys.setrecursionlimit(1000000)
 MOD = 10 ** 9 + 7
-input = lambda: sys.stdin.readline().strip()
-NI = lambda: int(input())
-NMI = lambda: map(int, input().split())
-NLI = lambda: list(NMI())
-SI = lambda: input()
+def input(): return sys.stdin.readline().strip()
+def NI(): return int(input())
+def NMI(): return map(int, input().split())
+def NLI(): return list(NMI())
+def SI(): return input()
 
 
 def make_adjlist_nond(n, edges):

@@ -2,7 +2,8 @@ import sys
 sys.setrecursionlimit(100000)
 
 N, K = map(int, input().split())
-SIZE = 10**5 + 1; MOD = 10**9 + 7  # 998244353 #ここを変更する
+SIZE = 10**5 + 1
+MOD = 10**9 + 7  # 998244353 #ここを変更する
 
 SIZE += 1
 inv = [0] * SIZE  # inv[j] = j^{-1} mod MOD

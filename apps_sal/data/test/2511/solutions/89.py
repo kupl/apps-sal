@@ -15,7 +15,8 @@ for i in range(1, 10**5 + 1):
 
 
 def nPk(_n, _k):
-    if _n < 0 or _k < 0 or _n - _k < 0: return 0;
+    if _n < 0 or _k < 0 or _n - _k < 0:
+        return 0
     a = frac[_n]
     b = frac[_n - _k]
     return (a * pow(b, m - 2, m)) % m
@@ -24,7 +25,8 @@ def nPk(_n, _k):
 def dfs(_v, _u=-1):
     nonlocal ans
     for u in to[_v]:
-        if u == _u: continue
+        if u == _u:
+            continue
         dfs(u, _v)
     p = len(to[_v])
     ans *= nPk(k, p + 1) if _v == 0 else nPk(k - 2, p - 1)

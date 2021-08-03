@@ -19,9 +19,11 @@ def main():
     fac = [0] * MAX_N
     inv = [0] * MAX_N
     finv = [0] * MAX_N
-    fac[0] = 1; fac[1] = 1
+    fac[0] = 1
+    fac[1] = 1
     inv[1] = 1
-    finv[0] = 1; finv[1] = 1
+    finv[0] = 1
+    finv[1] = 1
 
     def com_init():
         for i in range(2, MAX_N):
@@ -30,8 +32,10 @@ def main():
             finv[i] = finv[i - 1] * inv[i] % MOD
 
     def perm(n, r):
-        if n < 0: return 0
-        elif r > n: return 0
+        if n < 0:
+            return 0
+        elif r > n:
+            return 0
 
         return fac[n] * finv[n - r] % MOD
 

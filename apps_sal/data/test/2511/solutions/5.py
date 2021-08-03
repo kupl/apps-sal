@@ -1,6 +1,9 @@
 import networkx as nx
 
-int1 = lambda x: int(x) - 1
+
+def int1(x): return int(x) - 1
+
+
 MOD = 10 ** 9 + 7
 
 N, K = list(map(int, input().split()))

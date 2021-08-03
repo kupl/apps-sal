@@ -17,7 +17,8 @@ for _ in range(N - 1):
 
 
 def dfs(now, par):
-    if K < len(G[now]): return 0
+    if K < len(G[now]):
+        return 0
 
     res = 1
 
@@ -33,7 +34,8 @@ def dfs(now, par):
             res %= MOD
 
     for c in G[now]:
-        if c == par: continue
+        if c == par:
+            continue
 
         res *= dfs(c, now)
         res %= MOD

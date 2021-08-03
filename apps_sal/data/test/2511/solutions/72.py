@@ -18,7 +18,8 @@ def rec(v, p=-1, d=0):
     nonlocal ans
     k = K - 2 if d else K - 1
     for to in es[v]:
-        if to == p: continue
+        if to == p:
+            continue
         ans *= k
         ans %= MOD
         k -= 1

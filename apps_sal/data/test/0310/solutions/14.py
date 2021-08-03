@@ -37,6 +37,7 @@ if outId > 0:
 N, K = getIntList()
 
 r = K // N
-if K % N != 0: r += 1
+if K % N != 0:
+    r += 1
 
 print(r)

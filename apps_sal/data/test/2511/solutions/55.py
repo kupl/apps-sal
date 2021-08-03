@@ -36,7 +36,8 @@ comb = Combination(10**5)
 
 
 def nPr(n, r):
-    if n < r: return 0
+    if n < r:
+        return 0
     return comb(n, r) * comb.fac[r]
 
 
@@ -52,7 +53,8 @@ def dfs(v, p=-1):
     nonlocal ans
     c = 0
     for nei in adj[v]:
-        if nei == p: continue
+        if nei == p:
+            continue
         c += 1
         dfs(nei, v)
 

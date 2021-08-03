@@ -18,7 +18,8 @@ nums = [1] * N
 def dfs(vNow, vPar):
     numCh = 0
     for v2 in adjL[vNow]:
-        if v2 == vPar: continue
+        if v2 == vPar:
+            continue
         dfs(v2, vNow)
         numCh += 1
     num = 1

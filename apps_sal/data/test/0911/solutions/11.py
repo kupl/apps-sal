@@ -12,9 +12,12 @@ def __starting_point():
         # print(S[i],sum(T[:i+1])*c,S[n-1-i],sum(T[n-1-i:])*c)
         L += max(0, S[i] - sum(T[:i + 1]) * c)
         R += max(0, S[n - 1 - i] - sum(T[n - 1 - i:]) * c)
-    if L > R: print('Limak')
-    elif R > L: print('Radewoosh')
-    else: print('Tie')
+    if L > R:
+        print('Limak')
+    elif R > L:
+        print('Radewoosh')
+    else:
+        print('Tie')
 
 
 '''

@@ -45,7 +45,8 @@ while stack:
     curr = stack.pop()
     checked[curr] = True
     ans *= nPr(K - 2, len(es[curr]) - 1)
-    if ans >= MOD: ans %= MOD
+    if ans >= MOD:
+        ans %= MOD
     for nxt in es[curr]:
         if not checked[nxt]:
             stack.append(nxt)
