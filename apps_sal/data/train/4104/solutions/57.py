@@ -7,4 +7,4 @@ def max_tri_sum(numbers):
     b = sorted(s)[-2]
     c = sorted(s)[-3]
 
-    return a+b+c
+    return a + b + c

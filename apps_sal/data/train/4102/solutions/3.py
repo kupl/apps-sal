@@ -16,4 +16,3 @@ def odd_not_prime(n):
             odd_n_prime = odd_n_prime + 1
         i = i + 2
     return odd_n_prime
-

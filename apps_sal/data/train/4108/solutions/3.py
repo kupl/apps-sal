@@ -1,4 +1,4 @@
-def sum_even_numbers(seq): 
+def sum_even_numbers(seq):
     # your code here
     nums = []
     b = 0
@@ -7,6 +7,5 @@ def sum_even_numbers(seq):
             nums.append(seq[i])
     for f in range(len(nums)):
         b = b + nums[f]
-        
-    return b
 
+    return b
