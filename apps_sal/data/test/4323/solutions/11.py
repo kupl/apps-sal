@@ -3,7 +3,8 @@ li = []
 for _ in range(n):
     a, b = map(int, input().split())
     li.append((a, b, a - b))
-sum = 0; sum1 = 0
+sum = 0
+sum1 = 0
 for i in range(n):
     sum += li[i][1]
     sum1 += li[i][0]

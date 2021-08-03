@@ -32,7 +32,8 @@ def main():
             continue
         # 見つかったa以外のk桁目をすべて0にするため、k桁目が1のaに、見つかったaをxorする
         for i in range(n):
-            if i == rnk: continue
+            if i == rnk:
+                continue
             if aa[i] & mask:
                 aa[i] ^= aa[rnk]
         rnk += 1

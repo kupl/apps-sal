@@ -17,7 +17,8 @@ def gauss_jordan(bs):
             if row & (1 << col):
                 pivot = rank + i
                 break
-        if pivot < 0: continue
+        if pivot < 0:
+            continue
         pivot_cols.append(col)
         bs[pivot], bs[rank] = bs[rank], bs[pivot]
         for i, row in enumerate(bs):

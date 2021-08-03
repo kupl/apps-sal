@@ -11,5 +11,7 @@ cpt = 0
 while(tot > size and cpt < len(pot)):
     tot -= pot[cpt]
     cpt += 1
-if(tot > size): print(-1)
-else: print(cpt)
+if(tot > size):
+    print(-1)
+else:
+    print(cpt)

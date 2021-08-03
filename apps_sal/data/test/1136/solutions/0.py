@@ -13,7 +13,7 @@ if N // (sn + 1) > M:
     exit(print(ans))
 
 for f in range(N // (sn + 1), 0, -1):
-    s = lambda x: x * (x + 1) // 2
+    def s(x): return x * (x + 1) // 2
     if N // f > M:
         ans -= f * (s(M) - s(N // (f + 1)))
         break

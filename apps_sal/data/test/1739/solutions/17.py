@@ -58,17 +58,17 @@ def fact(x):
 
 
 def swaparr(arr, a, b):
-    temp = arr[a];
-    arr[a] = arr[b];
-    arr[b] = temp;
+    temp = arr[a]
+    arr[a] = arr[b]
+    arr[b] = temp
 
 # gcd function
 
 
 def gcd(a, b):
     if b == 0:
-        return a;
-    return gcd(b, a % b);
+        return a
+    return gcd(b, a % b)
 
 # lcm function
 
@@ -95,14 +95,14 @@ def nCr(n, k):
 
 def upper_bound(a, x, lo=0, hi=None):
     if hi == None:
-        hi = len(a);
+        hi = len(a)
     while lo < hi:
-        mid = (lo + hi) // 2;
+        mid = (lo + hi) // 2
         if a[mid] < x:
-            lo = mid + 1;
+            lo = mid + 1
         else:
-            hi = mid;
-    return lo;
+            hi = mid
+    return lo
 
 # prime factorization
 
@@ -145,7 +145,7 @@ def swap(a, b):
     temp = a
     a = b
     b = temp
-    return a, b;
+    return a, b
 
 # find function with path compression included (recursive)
 # def find(x, link):
@@ -158,15 +158,15 @@ def swap(a, b):
 
 
 def find(x, link):
-    p = x;
+    p = x
     while(p != link[p]):
-        p = link[p];
+        p = link[p]
 
     while(x != p):
-        nex = link[x];
-        link[x] = p;
-        x = nex;
-    return p;
+        nex = link[x]
+        link[x] = p
+        x = nex
+    return p
 
 
 # the union function which makes union(x,y)
@@ -230,16 +230,16 @@ MAXN = int(1e5 + 5)
 
 
 def spf_sieve():
-    spf[1] = 1;
+    spf[1] = 1
     for i in range(2, MAXN):
-        spf[i] = i;
+        spf[i] = i
     for i in range(4, MAXN, 2):
-        spf[i] = 2;
+        spf[i] = 2
     for i in range(3, ceil(MAXN ** 0.5), 2):
         if spf[i] == i:
             for j in range(i * i, MAXN, i):
                 if spf[j] == j:
-                    spf[j] = i;
+                    spf[j] = i
     # function for storing smallest prime factors (spf) in the array
 
 
@@ -273,23 +273,24 @@ def factors(n):
 
 
 def int_array():
-    return list(map(int, input().strip().split()));
+    return list(map(int, input().strip().split()))
 
 
 def float_array():
-    return list(map(float, input().strip().split()));
+    return list(map(float, input().strip().split()))
 
 # taking string array input
 
 
 def str_array():
-    return input().strip().split();
+    return input().strip().split()
 
 
 # defining a couple constants
-MOD = int(1e9) + 7;
-CMOD = 998244353;
-INF = float('inf'); NINF = -float('inf');
+MOD = int(1e9) + 7
+CMOD = 998244353
+INF = float('inf')
+NINF = -float('inf')
 
 ################### ---------------- TEMPLATE ENDS HERE ---------------- ###################
 

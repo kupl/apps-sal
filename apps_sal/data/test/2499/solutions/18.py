@@ -7,20 +7,23 @@ def maxSubarrayXOR(lis, n, INT_BITS=60):
             if lis[j] & bit_i:
                 Midx = j
                 break
-        else: continue
+        else:
+            continue
         lis[Midx], lis[idx] = lis[idx], lis[Midx]
         for j in range(n):
             if j != idx and lis[j] & bit_i:
                 lis[j] ^= lis[idx]
         idx += 1
     res = 0
-    for x in lis: res ^= x
+    for x in lis:
+        res ^= x
     return res
 
 
 n = int(input())
 a = list(map(int, input().split()))
 t = 0
-for x in a: t ^= x
+for x in a:
+    t ^= x
 b = [x ^ (x & t) for x in a]
 print((t + maxSubarrayXOR(b, n) * 2))

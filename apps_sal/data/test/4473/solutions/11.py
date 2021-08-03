@@ -1,4 +1,6 @@
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 for _ in range(int(input())):
     a, b, k = I()
     if k % 2 == 0:
