@@ -6,6 +6,6 @@ def factorial(n):
         return 1
     else:
         factorial = 1
-        for val in xrange(1,n+1):
+        for val in xrange(1, n + 1):
             factorial *= val
         return factorial

@@ -6,4 +6,3 @@ def convert_num(number, base):
     elif base == 'bin':
         return bin(number)
     return "Invalid base input"
-

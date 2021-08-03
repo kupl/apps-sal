@@ -1,5 +1,6 @@
 import collections
 
+
 def letter_count(s):
     res = collections.defaultdict(int)
     for _char in s:

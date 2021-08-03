@@ -144,16 +144,16 @@ def EvaluateBracketExpression(expression):
     pass
 
 
-def calculate(expression):    
+def calculate(expression):
     try:
         test = 'string' + expression
     except:
         return False
-    
-    expression = str(expression).replace(" ", "")        
+
+    expression = str(expression).replace(" ", "")
     if expression == '':
         return 0
-    
+
     expression = SanitizeExpression(expression)
 
     try:
@@ -161,5 +161,3 @@ def calculate(expression):
     except:
         return False
     pass
-
-

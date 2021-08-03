@@ -6,11 +6,11 @@ def string_constructing(a, s):
             if i >= len(s):
                 return step + len(current) - len(s)
             if current[i] != s[i]:
-                current = current[i+1:]
+                current = current[i + 1:]
                 s = s[i:]
                 break
         else:
             current += a
         step += 1
-                
+
     return step

@@ -1,9 +1,9 @@
 class Calculator(object):
 
-    operators = {'+': lambda x,y: x+ y,
+    operators = {'+': lambda x, y: x + y,
                  '-': lambda x, y: x - y,
                  '*': lambda x, y: x * y,
-                 '/': lambda x, y: x / y }
+                 '/': lambda x, y: x / y}
     high_pre = ['*', '/']
 
     def __init__(self):
@@ -25,7 +25,7 @@ class Calculator(object):
             index = end + 1
         return True
 
-    def evaluate(self, string = ""):
+    def evaluate(self, string=""):
         if string == "":
             string = "0"
 
@@ -51,10 +51,9 @@ class Calculator(object):
             self.operator.pop(operator_index)
 
         return self.operand[0]
-        
+
 
 def calculate(input):
     if type(input) != str:
         return False
     return Calculator().evaluate(input)
-

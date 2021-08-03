@@ -1,6 +1,7 @@
 digits = '0123456789'
 ops = '+-/*'
 
+
 def calc(expr):
     r = []
     i = 0
@@ -36,7 +37,7 @@ def calc(expr):
                     left += 1
                 elif expr[i] == ')':
                     right += 1
-            r += [calc(expr[cur_idx+1:i])]
+            r += [calc(expr[cur_idx + 1:i])]
         i += 1
     r += [s] if s != '' else []
     r_new = []
@@ -51,18 +52,18 @@ def calc(expr):
     t = len(r)
     while i < t:
         if r[i] == '-':
-            if type(r[i+1])==float:
-                r_new.append(-r[i+1])
-            elif r[i+1] == '-':
+            if type(r[i + 1]) == float:
+                r_new.append(-r[i + 1])
+            elif r[i + 1] == '-':
                 sign = 1
-                while r[i+1] == '-':
+                while r[i + 1] == '-':
                     sign *= -1
                     i += 1
                 r_new.append(sign * r[i])
                 i -= 1
             else:
                 r_new.append(r[i])
-                r_new.append(r[i+1])
+                r_new.append(r[i + 1])
             i += 2
         else:
             r_new.append(r[i])
@@ -75,10 +76,10 @@ def calc(expr):
         if mul_idx == 0 or div_idx == 0:
             raise Exception()
         cur_idx = min(mul_idx, div_idx)
-        new_numb = r_new[cur_idx-1] * r_new[cur_idx+1] if cur_idx == mul_idx else r_new[cur_idx-1] / r_new[cur_idx+1]
-        r_new = r_new[:cur_idx-1] + [new_numb] + r_new[cur_idx+2:]
+        new_numb = r_new[cur_idx - 1] * r_new[cur_idx + 1] if cur_idx == mul_idx else r_new[cur_idx - 1] / r_new[cur_idx + 1]
+        r_new = r_new[:cur_idx - 1] + [new_numb] + r_new[cur_idx + 2:]
     return sum([d for d in r_new if d != '+'])
-    
+
 
 def calculate(x):
     if x == '':

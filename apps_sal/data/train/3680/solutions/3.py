@@ -1,5 +1,6 @@
 import math
 
+
 def factorial(n):
     try:
         return math.factorial(n)
