@@ -1,5 +1,6 @@
 import re
 
+
 def shortest_to_char(s, c):
     if not c or c not in s:
         return []

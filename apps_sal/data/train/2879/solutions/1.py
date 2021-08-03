@@ -1,11 +1,15 @@
 import re
 import string
-dic1 = {224:97, 244:111, 252:117, 233:101, 239:105}
+dic1 = {224: 97, 244: 111, 252: 117, 233: 101, 239: 105}
+
+
 def could_be(original, another):
-    if original == '' and another == '': return False
+    if original == '' and another == '':
+        return False
     p = "!,;:?"
     o, a = re.sub(r"[!,;:\?\.]", ' ', original.lower()), re.sub(r"[!,;:\?\.]", ' ', another.lower())
-    if o == a: return True
+    if o == a:
+        return True
     o = o.encode('unicode-escape').decode('unicode-escape')
     a = a.encode('unicode-escape').decode('unicode-escape')
     o1, a1 = o.split(), a.split()
@@ -17,6 +21,8 @@ def could_be(original, another):
         return False
     for i in ans2:
         for j in ans1:
-            if i == j: break
-        else: return False
+            if i == j:
+                break
+        else:
+            return False
     return True

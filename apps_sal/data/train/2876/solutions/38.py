@@ -1,4 +1,4 @@
-def check(a, x): 
+def check(a, x):
     try:
         a.index(x)
         return True

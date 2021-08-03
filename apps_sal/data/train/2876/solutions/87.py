@@ -4,5 +4,4 @@ def check(a, x, i=0):
     if i == len(a) - 1:
         return False
     else:
-       return check(a, x, i=i+1)
-
+        return check(a, x, i=i + 1)

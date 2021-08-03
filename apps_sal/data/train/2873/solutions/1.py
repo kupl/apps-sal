@@ -1,4 +1,4 @@
-def josephus_survivor(n,k):
+def josephus_survivor(n, k):
     soldiers = [int(i) for i in range(1, n + 1)]
     counter = -1
     while len(soldiers) != 1:

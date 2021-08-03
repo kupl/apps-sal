@@ -1,9 +1,9 @@
 
-def check(a, x): 
-    a=set(a)
-    a=list(a)
+def check(a, x):
+    a = set(a)
+    a = list(a)
     a.append(x)
-    if len(a)==len(set(a)):
+    if len(a) == len(set(a)):
         return False
-    else:return True
-
+    else:
+        return True

@@ -1,7 +1,7 @@
-def check(a, x): 
+def check(a, x):
     try:
-        if type(a.index(x))==int:
-            return True         
+        if type(a.index(x)) == int:
+            return True
         else:
             return False
     except ValueError:

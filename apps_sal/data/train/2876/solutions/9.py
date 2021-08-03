@@ -3,4 +3,3 @@ def check(a, x):
         return x in a
     except TypeError:
         return x == a
-

@@ -3,4 +3,6 @@ def check(a, x):
         return True
     else:
         return False
+
+
 print(check(['t', 'e', 's', 't'], 'e'))

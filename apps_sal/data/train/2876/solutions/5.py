@@ -1,1 +1,1 @@
-check = lambda x,a: a in x
+def check(x, a): return a in x

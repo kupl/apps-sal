@@ -1,4 +1,4 @@
-def josephus_survivor(n,k):
+def josephus_survivor(n, k):
     arr = [i + 1 for i in range(n)]
     if len(arr) == 1:
         return arr[0]

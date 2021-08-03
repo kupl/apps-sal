@@ -1,3 +1,3 @@
-def check(a, x): 
-    c=a.count(x)
-    return c>0
+def check(a, x):
+    c = a.count(x)
+    return c > 0

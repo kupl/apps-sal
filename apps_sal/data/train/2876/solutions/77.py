@@ -1,5 +1,5 @@
 
-def check(a, x): 
+def check(a, x):
     try:
         return a.index(x) >= 0
     except:

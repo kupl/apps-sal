@@ -1,8 +1,8 @@
-def check(a, x): 
+def check(a, x):
     # your code here
     if x in a:
-        check=True
+        check = True
     else:
-        check=False
-    
+        check = False
+
     return check
