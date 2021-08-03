@@ -17,17 +17,22 @@ for i in range(0, n):
         if x < 0:
             y += x * 2
             x = 0
-            if y < 0: break
+            if y < 0:
+                break
         if y < 0:
             x += y
             y = 0
-            if x < 0: break
-        if (x >= 0) and (y >= 0): c += 1
+            if x < 0:
+                break
+        if (x >= 0) and (y >= 0):
+            c += 1
     M[i] = 0
-    if (x == 0) and (y == 0): break
+    if (x == 0) and (y == 0):
+        break
 
 
 ndone = n
 for i in range(0, n):
-    if M[i] > 0: ndone += -1
+    if M[i] > 0:
+        ndone += -1
 print(ndone)

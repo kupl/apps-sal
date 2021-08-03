@@ -11,9 +11,12 @@ for i in range(1, 2**len(n)):
     for i in range(l):
         if bi[i] == '1':
             ne += n[i]
-    if ne[0] == '0': continue
+    if ne[0] == '0':
+        continue
     else:
         if int(ne) in a:
             m = min(m, bi.count('0'))
-if m == float('inf'): print(-1)
-else: print(m)
+if m == float('inf'):
+    print(-1)
+else:
+    print(m)

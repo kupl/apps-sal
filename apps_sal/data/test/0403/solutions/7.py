@@ -1,5 +1,5 @@
 def main():
-    read = lambda: list(map(int, input().split()))
+    def read(): return list(map(int, input().split()))
     n, x, y = read()
     a = sorted(read())
     cnt = 0

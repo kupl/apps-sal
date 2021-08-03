@@ -1,6 +1,7 @@
 ar = []
 for i in range(1, 10**5):
-    if(i * i > 2 * 10**9): break
+    if(i * i > 2 * 10**9):
+        break
     ar.append(i * i)
 s = input()
 ans = len(s)

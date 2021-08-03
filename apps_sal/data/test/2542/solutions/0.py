@@ -4,10 +4,13 @@ def det(s, i, j):
     for a in s:
         if a == curr:
             ans += 1
-            if curr == i: curr = j
-            else: curr = i
+            if curr == i:
+                curr = j
+            else:
+                curr = i
 
-    if i == j: return ans
+    if i == j:
+        return ans
     return ans // 2 * 2
 
 

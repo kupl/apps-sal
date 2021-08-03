@@ -7,8 +7,10 @@ n = int(strN)
 def IsMatch(t):
     strT = str(t)
     if len(strN) == len(strT):
-        if n == t: return 0
-        else: return -1
+        if n == t:
+            return 0
+        else:
+            return -1
     p = 0
     for c in strT:
         p = strN.find(c, p)

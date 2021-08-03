@@ -14,7 +14,8 @@ n = input()
 
 
 def adj(s):
-    if len(s) <= 1: return []
+    if len(s) <= 1:
+        return []
     for i in range(len(s)):
         ss = s[:i] + s[i + 1:]
         if no_start_zero(ss):
