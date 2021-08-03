@@ -1,6 +1,7 @@
 from itertools import permutations
 
-def count_blacks (list):
+
+def count_blacks(list):
     count = 0
     chain = False
     blacks = []
@@ -22,24 +23,25 @@ def count_blacks (list):
     if chain == True:
         blacks.append(count)
     return tuple(blacks)
-    
+
+
 class Row:
-    def __init__(self,nrow,length,blacks):
+    def __init__(self, nrow, length, blacks):
         self.nrow = nrow
         self.length = length
         self.blacks = blacks
         self.combs = []
-        
+
         if len(self.blacks) == 1 and self.blacks[0] > 0:
-            for i in range(self.length - self.blacks[0]+1):
-                self.combs.append([0 for i in range(i)]+[1 for j in range(self.blacks[0])]+[0 for k in range(self.length-(i+self.blacks[0]))])
-          
+            for i in range(self.length - self.blacks[0] + 1):
+                self.combs.append([0 for i in range(i)] + [1 for j in range(self.blacks[0])] + [0 for k in range(self.length - (i + self.blacks[0]))])
+
         elif len(self.blacks) > 1:
             self.totalblacks = 0
             for i in self.blacks:
                 self.totalblacks += i
             self.blanks = self.length - self.totalblacks
-            self.items=[]
+            self.items = []
             for i in range(self.blanks):
                 self.items.append(0)
             for i in range(self.totalblacks):
@@ -47,28 +49,28 @@ class Row:
             for p in permutations(self.items):
                 if p not in self.combs and count_blacks(p) == self.blacks:
                     self.combs.append(p)
-            
-        
-    def __str__ (self):
-        return (str(self.nrow)+","+str(self.length)+","+str(self.blacks))
-    
+
+    def __str__(self):
+        return (str(self.nrow) + "," + str(self.length) + "," + str(self.blacks))
+
+
 class Col:
-    def __init__(self,ncol,length,blacks):
+    def __init__(self, ncol, length, blacks):
         self.ncol = ncol
         self.length = length
         self.blacks = blacks
         self.combs = []
-        
+
         if len(self.blacks) == 1 and self.blacks[0] > 0:
-            for i in range(self.length - self.blacks[0]+1):
-                self.combs.append([0 for i in range(i)]+[1 for j in range(self.blacks[0])]+[0 for k in range(self.length-(i+self.blacks[0]))])
-    
+            for i in range(self.length - self.blacks[0] + 1):
+                self.combs.append([0 for i in range(i)] + [1 for j in range(self.blacks[0])] + [0 for k in range(self.length - (i + self.blacks[0]))])
+
         elif len(self.blacks) > 1:
             self.totalblacks = 0
             for i in self.blacks:
                 self.totalblacks += i
             self.blanks = self.length - self.totalblacks
-            self.items=[]
+            self.items = []
             for i in range(self.blanks):
                 self.items.append(0)
             for i in range(self.totalblacks):
@@ -76,9 +78,10 @@ class Col:
             for p in permutations(self.items):
                 if p not in self.combs and count_blacks(p) == self.blacks:
                     self.combs.append(p)
-               
-    def __str__ (self):
-        return (str(self.ncol)+","+str(self.length)+","+str(self.blacks))
+
+    def __str__(self):
+        return (str(self.ncol) + "," + str(self.length) + "," + str(self.blacks))
+
 
 class Nonogram:
     def __init__(self, clues):
@@ -90,10 +93,9 @@ class Nonogram:
         self.rows = []
         self.cols = []
         for i in range(self.nrows):
-            self.rows.append(Row(i,self.ncols,self.rclues[i]))
+            self.rows.append(Row(i, self.ncols, self.rclues[i]))
         for j in range(self.ncols):
-            self.cols.append(Col(j,self.nrows,self.cclues[j]))
-            
+            self.cols.append(Col(j, self.nrows, self.cclues[j]))
 
     def solve(self):
         self.solved = False
@@ -154,13 +156,13 @@ class Nonogram:
                                     self.crosscheck.append(i)
                             for d in self.crosscheck:
                                 self.rows[c].combs.remove(d)
-            
+
             self.checksolutions = []
             for r in range(self.nrows):
-                self.checksolutions.append(count_blacks(self.board[r])==self.rclues[r])
+                self.checksolutions.append(count_blacks(self.board[r]) == self.rclues[r])
             for c in range(self.ncols):
                 self.transposedboard = [[self.board[j][i] for j in range(self.ncols)]for i in range(self.nrows)]
-                self.checksolutions.append(count_blacks(self.transposedboard[c])==self.cclues[c])
+                self.checksolutions.append(count_blacks(self.transposedboard[c]) == self.cclues[c])
             if all(self.checksolutions):
                 self.solved = True
 

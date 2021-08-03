@@ -7,4 +7,3 @@ for i in range(1, 1001):
 
 print(len(ans))
 print('\n'.join(ans))
-

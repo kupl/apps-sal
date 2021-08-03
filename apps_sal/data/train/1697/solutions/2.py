@@ -1,6 +1,7 @@
 import re
 import numpy as np
 
+
 class Nonogram:
     def __init__(self, clues):
         self.clues = clues

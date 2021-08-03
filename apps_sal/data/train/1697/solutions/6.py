@@ -41,9 +41,9 @@ class Clue:
 
             return constrain.value == element
 
-        ddd =  all((tmp(data, req) for data, req in zip(initial, constrains)))
+        ddd = all((tmp(data, req) for data, req in zip(initial, constrains)))
         # print("comparing: ", initial, [i.value for i in constrains], ddd )
-        return ddd;
+        return ddd
 
     # TODO: collect always to the same list
 
@@ -77,7 +77,8 @@ class Clue:
             new_clue: Clue = Clue(self.index, self.clue[1:], self.elements)
             tab: List[int] = [i for i in initial]
             tab.extend([1 for __ in range(0, self.clue[0])])
-            if( len(tab)< len(self.elements)): tab.append(0)
+            if(len(tab) < len(self.elements)):
+                tab.append(0)
             one = new_clue.generate_combinations(tab, to_be_marked)
             zero.extend(one)
         return zero
@@ -176,4 +177,3 @@ def solve(clues, width: int, height: int) -> List[List[int]]:
     :type width: object
     """
     return Nonogram(clues).solve()
-

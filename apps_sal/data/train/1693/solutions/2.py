@@ -1,12 +1,13 @@
 v = int(input())
 eps = 130
 
+
 def ans(a):
     a.sort()
     if len(a) % 2 == 0:
-        med = a[len(a)//2]
+        med = a[len(a) // 2]
     else:
-        med = (a[len(a)//2] + a[len(a)//2 - 1]) // 2
+        med = (a[len(a) // 2] + a[len(a) // 2 - 1]) // 2
 
     l = med - med // 2
     r = med + med // 2
@@ -24,9 +25,7 @@ def ans(a):
     else:
         return "poisson"
 
-    
 
 for i in range(v):
     cur = [int(i) for i in input().split()]
     print(ans(cur))
-
