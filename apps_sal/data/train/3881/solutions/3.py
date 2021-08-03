@@ -1,3 +1,4 @@
+import re
 rnaDict = '''Phenylalanine (F): UUU, UUC
 Leucine (L): UUA, UUG, CUU, CUC, CUA, CUG
 Isoleucine (I): AUU, AUC, AUA
@@ -20,12 +21,12 @@ Artinine (R): CGU, CGC, CGA, CGG, AGA, AGG
 Glycine (G): GGU, GGC, GGA, GGG
 Stop Codon ('Stop'): UGA, UAA, UAG'''
 
-import re
+
 def protein(rna):
     transDict = {}
     for line in rnaDict.split('\n'):
-        for section in line[line.index(':')+1:].replace(' ','').split(','):     
-            transDict[section] = re.findall(r'\(+\'?(\w+)',line)[0]
+        for section in line[line.index(':') + 1:].replace(' ', '').split(','):
+            transDict[section] = re.findall(r'\(+\'?(\w+)', line)[0]
     codec = ''
     while len(rna) > 0:
         if transDict[rna[:3]] == 'Stop':

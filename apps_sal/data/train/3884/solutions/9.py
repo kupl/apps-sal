@@ -1,5 +1,6 @@
 import re
 
+
 def gym_slang(phrase):
     s = {r"(P|p)robably": "\\1rolly",
          r"(I|i) am": "\\1'm",

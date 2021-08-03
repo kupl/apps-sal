@@ -5,6 +5,6 @@ def values(limit):
         while squares_sum < limit:
             sequence_item += 1
             squares_sum += sequence_item**2
-            if str(squares_sum)==str(squares_sum)[::-1] and squares_sum < limit:
+            if str(squares_sum) == str(squares_sum)[::-1] and squares_sum < limit:
                 palindromes.add(squares_sum)
     return len(palindromes)

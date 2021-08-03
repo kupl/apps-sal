@@ -1,49 +1,50 @@
 def protein(s):
     d = {'UUC': 'F', 'UUU': 'F',
 
-     'UUA': 'L', 'UUG': 'L', 'CUU': 'L', 'CUC': 'L', 'CUA': 'L', 'CUG': 'L',
+         'UUA': 'L', 'UUG': 'L', 'CUU': 'L', 'CUC': 'L', 'CUA': 'L', 'CUG': 'L',
 
-     'AUU': 'I', 'AUC': 'I', 'AUA': 'I',
+         'AUU': 'I', 'AUC': 'I', 'AUA': 'I',
 
-     'AUG': 'M',
+         'AUG': 'M',
 
-     'GUU': 'V', 'GUC': 'V', 'GUA': 'V', 'GUG': 'V',
+         'GUU': 'V', 'GUC': 'V', 'GUA': 'V', 'GUG': 'V',
 
-     'UCU': 'S', 'UCC': 'S', 'UCA': 'S', 'UCG': 'S', 'AGU': 'S', 'AGC': 'S',
+         'UCU': 'S', 'UCC': 'S', 'UCA': 'S', 'UCG': 'S', 'AGU': 'S', 'AGC': 'S',
 
-     'CCU': 'P', 'CCC': 'P', 'CCA': 'P', 'CCG': 'P',
+         'CCU': 'P', 'CCC': 'P', 'CCA': 'P', 'CCG': 'P',
 
-     'ACU': 'T', 'ACC': 'T', 'ACA': 'T', 'ACG': 'T',
+         'ACU': 'T', 'ACC': 'T', 'ACA': 'T', 'ACG': 'T',
 
-     'GCU': 'A', 'GCC': 'A', 'GCA': 'A', 'GCG': 'A',
+         'GCU': 'A', 'GCC': 'A', 'GCA': 'A', 'GCG': 'A',
 
-     'UAU': 'Y', 'UAC': 'Y',
+         'UAU': 'Y', 'UAC': 'Y',
 
-     'CAU': 'H', 'CAC': 'H',
+         'CAU': 'H', 'CAC': 'H',
 
-     'CAA': 'Q', 'CAG': 'Q',
+         'CAA': 'Q', 'CAG': 'Q',
 
-     'AAU': 'N', 'AAC': 'N',
+         'AAU': 'N', 'AAC': 'N',
 
-     'AAA': 'K', 'AAG': 'K',
+         'AAA': 'K', 'AAG': 'K',
 
-     'GAU': 'D', 'GAC': 'D',
+         'GAU': 'D', 'GAC': 'D',
 
-     'GAA': 'E', 'GAG': 'E',
+         'GAA': 'E', 'GAG': 'E',
 
-     'UGU': 'C', 'UGC': 'C',
+         'UGU': 'C', 'UGC': 'C',
 
-     'UGG': 'W',
+         'UGG': 'W',
 
-     'CGU': 'R', 'CGC': 'R', 'CGA': 'R', 'CGG': 'R', 'AGA': 'R', 'AGG': 'R',
+         'CGU': 'R', 'CGC': 'R', 'CGA': 'R', 'CGG': 'R', 'AGA': 'R', 'AGG': 'R',
 
-     'GGU': 'G', 'GGC': 'G', 'GGA': 'G', 'GGG': 'G',
+         'GGU': 'G', 'GGC': 'G', 'GGA': 'G', 'GGG': 'G',
 
-     'UAA': 'Stop', 'UGA': 'Stop', 'UAG': 'Stop'}
-    
+         'UAA': 'Stop', 'UGA': 'Stop', 'UAG': 'Stop'}
+
     li = []
     for i in range(0, len(s), 3):
         r = d[s[i:i + 3]]
-        if r == 'Stop' : break
+        if r == 'Stop':
+            break
         li.append(r)
     return ''.join(li)

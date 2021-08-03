@@ -4,6 +4,6 @@ def total(arr):
     for num in range(2, len(erastoteme)):
         if erastoteme[num]:
             sum += arr[num]
-            for nb in range(num*2, len(erastoteme), num):
+            for nb in range(num * 2, len(erastoteme), num):
                 erastoteme[nb] = False
     return sum
