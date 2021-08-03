@@ -1,15 +1,15 @@
 import math
 
 
-n,m = map(int, input().split())
-hyp = math.sqrt(1+m*m)
-cosx = 1/hyp
-sinx = m/hyp
+n, m = map(int, input().split())
+hyp = math.sqrt(1 + m * m)
+cosx = 1 / hyp
+sinx = m / hyp
 
 for i in range(n):
     px, py = list(map(int, input().strip().split()))
-    px_temp = cosx*px+sinx*py
-    py_temp = cosx*py-sinx*px
+    px_temp = cosx * px + sinx * py
+    py_temp = cosx * py - sinx * px
 
     if i == 0:
         px_max = px_temp
@@ -27,8 +27,7 @@ for i in range(n):
     elif py_temp < py_min:
         py_min = py_temp
 
-w = px_max-px_min
-l = py_max-py_min
+w = px_max - px_min
+l = py_max - py_min
 
-print(2*l+2*w)
-
+print(2 * l + 2 * w)
