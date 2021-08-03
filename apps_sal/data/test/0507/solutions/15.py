@@ -54,7 +54,7 @@ def __starting_point():
     n = int(input().strip())
     ar = list(map(int, input().strip().split()))
     br = list(map(int, input().strip().split()))
-    print((" ".join(map(str, meteors(n, ar, br)))));
+    print((" ".join(map(str, meteors(n, ar, br)))))
 
 
 __starting_point()

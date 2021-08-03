@@ -22,8 +22,8 @@ for i, e in enumerate(bl):
 aa = [(e, i) for (i, e) in enumerate(a)]
 bb = [(e, i) for (i, e) in enumerate(b)]
 
-aa.sort();
-bb.sort();
+aa.sort()
+bb.sort()
 
 
 for i in range(1, n):

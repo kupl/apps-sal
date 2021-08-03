@@ -6,7 +6,9 @@ def check(A, B):
     return diff == 1
 
 
-ip = lambda: list(map(int, input().split()))
+def ip(): return list(map(int, input().split()))
+
+
 n = int(input())
 A = ip()
 B = ip()

@@ -25,15 +25,19 @@ def main():
         adelta = 0
         bdelta = 0
         for k, coord in enumerate(coords):
-            if items[k] != a[coord]: adelta += 1
-            if items[k] != b[coord]: bdelta += 1
+            if items[k] != a[coord]:
+                adelta += 1
+            if items[k] != b[coord]:
+                bdelta += 1
             p[coord] = items[k]
         if not (adelta == 1 and bdelta == 1):
             adelta = 0
             bdelta = 0
             for k, coord in enumerate(reversed(coords)):
-                if items[k] != a[coord]: adelta += 1
-                if items[k] != b[coord]: bdelta += 1
+                if items[k] != a[coord]:
+                    adelta += 1
+                if items[k] != b[coord]:
+                    bdelta += 1
                 p[coord] = items[k]
 
     sys.stdout.write(' '.join(map(str, p)) + '\n')

@@ -1,8 +1,10 @@
 import sys
-read = lambda: sys.stdin.readline().rstrip()
-readi = lambda: int(sys.stdin.readline())
-writeln = lambda x: sys.stdout.write(str(x) + "\n")
-write = lambda x: sys.stdout.write(x)
+def read(): return sys.stdin.readline().rstrip()
+def readi(): return int(sys.stdin.readline())
+def writeln(x): return sys.stdout.write(str(x) + "\n")
+def write(x): return sys.stdout.write(x)
+
+
 N = readi()
 A = list(map(int, read().split()))
 B = list(map(int, read().split()))

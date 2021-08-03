@@ -2,7 +2,8 @@ import math
 
 
 def f(m):
-    if m < 8: return (m, m)
+    if m < 8:
+        return (m, m)
     c = math.floor(m**(1.0 / 3))
     if not (c**3 <= m and m < (c + 1)**3):
         if ((c + 1)**3 <= m and m < (c + 2)**3):

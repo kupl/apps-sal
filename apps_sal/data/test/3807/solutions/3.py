@@ -2,7 +2,8 @@ MAX = 100005
 
 
 def big_pow3(n):
-    l = 0; p = MAX
+    l = 0
+    p = MAX
     while p - l != 1:
         mid = (p + l + 1) // 2
         if (mid * mid * mid <= n):

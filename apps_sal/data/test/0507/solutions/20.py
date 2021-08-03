@@ -6,7 +6,8 @@ counta = Counter(a)
 countb = Counter(b)
 ab = [0] * n
 for i in range(n):
-    if a[i] == b[i]: ab[i] = a[i]
+    if a[i] == b[i]:
+        ab[i] = a[i]
 
 # print(ab)
 test = set(list(range(1, n + 1)))
