@@ -6,32 +6,29 @@
 #         self.right = right
 class Solution:
     def maxLevelSum(self, root: TreeNode) -> int:
-        
+
         row = [root]
         max_sum = root.val
         rv = row_count = 1
-        
-        while any(row): 
+
+        while any(row):
             new_row = []
             row_sum = 0
-            
-            for node in row: 
+
+            for node in row:
                 for child in (node.left, node.right):
-                    if child: 
+                    if child:
                         new_row.append(child)
                         row_sum += child.val
-            
-            if new_row: 
-                row_count += 1 
-                
-            if row_sum > max_sum: 
-                max_sum = row_sum 
-                rv = row_count 
-                
+
+            if new_row:
+                row_count += 1
+
+            if row_sum > max_sum:
+                max_sum = row_sum
+                rv = row_count
+
             #max_sum = max(max_sum, row_sum)
             row = new_row
-        
-        return rv
-                    
-            
 
+        return rv

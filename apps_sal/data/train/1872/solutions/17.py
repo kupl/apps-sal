@@ -10,7 +10,7 @@ class Solution:
             return 0
 
         nodes = [(1, root)]
-        maxlevelsum = -float('inf')-1
+        maxlevelsum = -float('inf') - 1
         maxlevel = 0
         currlevel = 1
         currlevelsum = 0

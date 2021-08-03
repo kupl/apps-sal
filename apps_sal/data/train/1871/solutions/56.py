@@ -17,4 +17,3 @@ class Solution:
             return
         self.dfs(root.left, path + [root.val])
         self.dfs(root.right, path + [root.val])
-

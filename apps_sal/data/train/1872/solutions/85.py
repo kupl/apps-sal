@@ -5,12 +5,15 @@
 #         self.left = left
 #         self.right = right
 
+from collections import deque
+
+
 class Node:
     def __init__(self, treeNode, level):
         self.treeNode = treeNode
         self.level = level
 
-from collections import deque
+
 class Solution:
     def maxLevelSum(self, root: TreeNode) -> int:
         queue = deque([Node(root, 1)])
@@ -26,12 +29,11 @@ class Solution:
                     ans = level
                 level = cur.level
                 total = 0
-                
+
             total += cur.treeNode.val
             if cur.treeNode.left:
                 queue.append(Node(cur.treeNode.left, cur.level + 1))
             if cur.treeNode.right:
                 queue.append(Node(cur.treeNode.right, cur.level + 1))
-        
-        return ans
 
+        return ans

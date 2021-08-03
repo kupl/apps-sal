@@ -7,8 +7,8 @@
 class Solution:
     def maxLevelSum(self, root: TreeNode) -> int:
         if not root:
-            return 
-        
+            return
+
         from collections import deque
         import sys
         queue = deque([root])
@@ -24,13 +24,9 @@ class Solution:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
-                    
+
             if level_value > global_value:
                 global_value = level_value
                 global_level = level
-        
-        return global_level
-                
-            
-        
 
+        return global_level

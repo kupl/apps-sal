@@ -10,7 +10,7 @@ class Solution:
         stk = [root]
         ancDict = {}
         ancDict[root.val] = []
-        while len(stk)!=0:
+        while len(stk) != 0:
             root = stk.pop()
             if root.left is not None:
                 stk.append(root.left)

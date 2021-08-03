@@ -34,4 +34,3 @@ def max_ancestor_diff(node: TreeNode, lineage: List[TreeNode]) -> int:
             node.right, lineage + [node]))
 
     return max_diff
-

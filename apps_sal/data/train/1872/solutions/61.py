@@ -8,7 +8,7 @@ class Solution:
     def maxLevelSum(self, root: TreeNode) -> int:
         res = self.helper(root)
         return res.index(max(res)) + 1
-        
+
     def helper(self, root):
         if not root:
             return []

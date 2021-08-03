@@ -7,7 +7,7 @@
 class Solution:
     # pairs = []
     abs_max = -99999
-    
+
     def construct_all_pairs(self, subtree):
         if subtree is None:
             return []
@@ -23,11 +23,9 @@ class Solution:
                 if abs(subtree.val - r) > self.abs_max:
                     self.abs_max = abs(subtree.val - r)
             return [subtree.val] + lp + rp
-        
-    
+
     def maxAncestorDiff(self, root: TreeNode) -> int:
         self.construct_all_pairs(root)
         return self.abs_max
         # print(self.pairs)
         # return max(map(lambda x : abs(x[0]-x[1]) , self.pairs))
-

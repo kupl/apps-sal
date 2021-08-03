@@ -8,7 +8,7 @@ def findMaxDiff(node, collected):
     right_max = findMaxDiff(node.right, collected + [node.val])
     return max(cur_max, left_max, right_max)
 
+
 class Solution:
     def maxAncestorDiff(self, root: TreeNode) -> int:
         return findMaxDiff(root, [])
-

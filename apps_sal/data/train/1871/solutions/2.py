@@ -8,6 +8,7 @@
 class Solution:
     def maxAncestorDiff(self, root: TreeNode) -> int:
         self.res = 0
+
         def helper(node, max_val, min_val):
             # think: we use the recursive way to traverse through the tree.
             if not node:

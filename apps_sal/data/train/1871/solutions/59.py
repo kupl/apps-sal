@@ -7,6 +7,8 @@
 
 import queue
 from collections import defaultdict
+
+
 class Solution:
     def maxAncestorDiff(self, root: TreeNode) -> int:
         maxDiff = 0
@@ -14,7 +16,7 @@ class Solution:
         dq.append(root)
         data = []
         nodes = defaultdict(list)
-        
+
         while any(dq):
             node = dq.popleft()
             data.append(node.val)
@@ -27,21 +29,13 @@ class Solution:
                 nodes[node.right.val].append(node.val)
                 nodes[node.right.val].extend(nodes[node.val])
         for key, value in list(nodes.items()):
-            if not value: continue
+            if not value:
+                continue
             s = 0
             for val in value:
-                if abs(key-val) > s:
-                    s = abs(key-val)
+                if abs(key - val) > s:
+                    s = abs(key - val)
             if s > maxDiff:
                 maxDiff = s
-                
-        return maxDiff
-        
-                
-                
-            
-            
-            
-            
-            
 
+        return maxDiff

@@ -13,4 +13,3 @@ class Solution:
         if root.right:
             root.right = self.sufficientSubset(root.right, limit - root.val)
         return root if root.left or root.right else None
-

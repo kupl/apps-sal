@@ -5,12 +5,12 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def helper(self,root,output,maxValue):
+    def helper(self, root, output, maxValue):
         if(root is None):
-            return 
+            return
         for ele in output:
-            if(abs(root.val-ele)>maxValue[0]):
-                maxValue[0]=abs(root.val-ele)
+            if(abs(root.val - ele) > maxValue[0]):
+                maxValue[0] = abs(root.val - ele)
         # if(len(output)>1):
         #     ele1=output[-1]
         #     ele2=output[-2]
@@ -23,12 +23,12 @@ class Solution:
             # if(abs(root.val-ele1)>maxValue[0]):
             #     maxValue[0]=abs(root.val-ele1)
         output.append(root.val)
-        self.helper(root.left,output,maxValue)
-        self.helper(root.right,output,maxValue)
+        self.helper(root.left, output, maxValue)
+        self.helper(root.right, output, maxValue)
         output.pop()
-    def maxAncestorDiff(self, root: TreeNode) -> int:
-        maxValue=[0]
-        output=list()
-        self.helper(root,output,maxValue)
-        return maxValue[0]
 
+    def maxAncestorDiff(self, root: TreeNode) -> int:
+        maxValue = [0]
+        output = list()
+        self.helper(root, output, maxValue)
+        return maxValue[0]

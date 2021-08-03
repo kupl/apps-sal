@@ -14,7 +14,7 @@ class Solution:
             for i in range(len(ancestors)):
                 if node.val >= ancestors[i]:
                     new_ancestors = ancestors[0:i] + [node.val] + ancestors[i:]
-                    break 
+                    break
                 if i == len(ancestors) - 1:
                     new_ancestors = ancestors + [node.val]
             if node.left != None:

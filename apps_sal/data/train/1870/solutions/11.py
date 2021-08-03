@@ -8,7 +8,7 @@ class Solution:
         for i, x in enumerate(count):
             if x:
                 total += i * x
-        output.append(total/nums)
+        output.append(total / nums)
         if nums % 2 == 0:
             curr = 0
             first = ((nums - 2) // 2)
@@ -23,9 +23,9 @@ class Solution:
                 if curr > second:
                     secondNum = i
                 if secondNum:
-                    output.append((firstNum + secondNum)/ 2)
+                    output.append((firstNum + secondNum) / 2)
                     break
-                        
+
         else:
             curr = 0
 

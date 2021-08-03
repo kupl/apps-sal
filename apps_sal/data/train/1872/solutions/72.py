@@ -27,4 +27,4 @@ class Solution:
         max_val = max(list(record.values()))
         for i in range(length):
             if record[i] == max_val:
-                return i+1
+                return i + 1

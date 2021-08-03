@@ -15,8 +15,10 @@ class Solution:
         while q:
             node = q.pop()
             s += node.val
-            if node.left: temp.append(node.left)
-            if node.right: temp.append(node.right)
+            if node.left:
+                temp.append(node.left)
+            if node.right:
+                temp.append(node.right)
             if not q:
                 if not temp:
                     return s
@@ -25,6 +27,3 @@ class Solution:
                     temp = deque()
                     s = 0
         return
-        
-        
-

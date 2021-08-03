@@ -6,8 +6,9 @@
 #         self.right = right
 class Solution:
     import collections
+
     def maxLevelSum(self, root: TreeNode) -> int:
-#         bfs to do level traversal and calculate sum, update level if sum is larger
+        #         bfs to do level traversal and calculate sum, update level if sum is larger
         levelSum = float('-inf')
         res = 0
         queue = collections.deque()

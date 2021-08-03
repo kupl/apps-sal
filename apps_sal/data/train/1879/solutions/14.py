@@ -5,6 +5,8 @@ import queue
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
+
 class Solution:
     def deepestLeavesSum(self, root: TreeNode) -> int:
         q = queue.deque()
@@ -20,4 +22,3 @@ class Solution:
                 if cur_node.right:
                     q.append(cur_node.right)
         return ans
-

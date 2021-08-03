@@ -18,4 +18,3 @@ class Solution:
                 break
             q = q_new
         return sum([node.val for node in q])
-

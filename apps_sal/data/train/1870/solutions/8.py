@@ -10,28 +10,27 @@ class Solution:
         accumulator = 0
         tally = 0
         nums = 0
-        
+
         for i, num in enumerate(count):
             if not num:
                 continue
             else:
                 maxi = float(i)
-                tally += num*i
-                
+                tally += num * i
+
             if mini == -1 and num:
                 mini = float(i)
             if num > biggest:
                 biggest = num
                 mode = float(i)
-            
+
             if total % 2:  # odd
                 if accumulator < mid and (accumulator + num) >= mid:
                     median = float(i)
             else:          # even
-                if accumulator < mid-1 and (accumulator + num) >= mid-1:
+                if accumulator < mid - 1 and (accumulator + num) >= mid - 1:
                     median = float(i)
                 elif num and accumulator == mid:
-                    median = (median+i)/2
+                    median = (median + i) / 2
             accumulator += num
-        return [mini, maxi, tally/accumulator, median, mode]
-
+        return [mini, maxi, tally / accumulator, median, mode]

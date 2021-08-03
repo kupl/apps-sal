@@ -27,11 +27,6 @@ class Solution:
                     maxVal = sumVal
                     ans = level
             else:
-                break           
-            
-        return ans
-                    
-                    
-                
-        
+                break
 
+        return ans

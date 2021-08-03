@@ -5,6 +5,8 @@
 #         self.left = left
 #         self.right = right
 import queue
+
+
 class Solution:
     def maxLevelSum(self, root: TreeNode) -> int:
         q = collections.deque()

@@ -5,9 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    
- 
-        
+
     def sufficientSubset(self, root: TreeNode, limit: int) -> TreeNode:
         def dfs(node, path_sum):
             # parent has one child
@@ -27,11 +25,3 @@ class Solution:
             return left or right
         result = dfs(root, 0)
         return root if result else None
-        
-        
-        
-        
-        
-        
-            
-

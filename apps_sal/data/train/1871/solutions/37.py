@@ -10,6 +10,7 @@
 LEFT_PROCESSED = 1
 RIGHT_PROCESSED = 2
 
+
 class Solution:
     def maxAncestorDiff(self, root: TreeNode) -> int:
         def recurse_func(node, parent_vals, best_answer):
@@ -21,7 +22,7 @@ class Solution:
                 ans = abs(max(parent_vals) - node.val)
                 if ans > best_answer:
                     best_answer = ans
-            
+
             # check our children
             # there is some optimization that can occur here to prune entire branches if we detect the best answer is larger
             # than the largest value we expect to find in the tree branch, but we would need to record whether we came down the left or right branch of the parent
@@ -31,13 +32,13 @@ class Solution:
             if node.right:
                 best_answer = recurse_func(node.right, parent_vals, best_answer)
             parent_vals.pop()
-            
+
             # return best_answer
             return best_answer
-    
+
         return recurse_func(root, [], 0)
 
-    
+
 #         best_answer = 0
 #         parent_nodes = [[root, 0]]
 #         while parent_nodes:
@@ -47,7 +48,7 @@ class Solution:
 #                 if ans > best_answer:
 #                     best_answer = ans
 
-#             n = cn[0]                    
+#             n = cn[0]
 #             if not (cn[1] & LEFT_PROCESSED):
 #                 cn[1] = cn[1] | LEFT_PROCESSED
 #                 if n.left:
@@ -61,7 +62,3 @@ class Solution:
 #             if (cn[1] & LEFT_PROCESSED) and (cn[1] & RIGHT_PROCESSED):
 #                 parent_nodes.pop()
 #         return best_answer
-        
-    
-                
-

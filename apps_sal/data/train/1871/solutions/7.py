@@ -7,21 +7,21 @@
 class Solution:
     def maxAncestorDiff(self, root: TreeNode) -> int:
         def helper(root):
-            if(root==None):
+            if(root == None):
                 return([])
             left = helper(root.left)
             right = helper(root.right)
             temp = []
             for i in range(len(left)):
-                if(abs(left[i]-root.val) > self.ans):
-                    self.ans = abs(left[i]-root.val)
+                if(abs(left[i] - root.val) > self.ans):
+                    self.ans = abs(left[i] - root.val)
                 temp.append(left[i])
             for i in range(len(right)):
-                if(abs(right[i]-root.val)> self.ans):
-                    self.ans = abs(right[i]-root.val)
+                if(abs(right[i] - root.val) > self.ans):
+                    self.ans = abs(right[i] - root.val)
                 temp.append(right[i])
             temp.append(root.val)
             return(temp)
-        self.ans= 0
+        self.ans = 0
         helper(root)
         return(self.ans)
