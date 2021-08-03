@@ -38,7 +38,8 @@ for i in d:
     a.append(d[i])
     if pos[i]:
         b.append(d[i])
-if len(b): a.remove(max(b))
+if len(b):
+    a.remove(max(b))
 a.sort(reverse=True)
 # print(a)
 ans = 0

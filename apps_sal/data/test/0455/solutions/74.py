@@ -1,9 +1,11 @@
-ri = lambda: int(input())
-rl = lambda: list(map(int, input().split()))
-rr = lambda N: [ri() for _ in range(N)]
-YN = lambda b: print('YES') if b else print('NO')
-yn = lambda b: print('Yes') if b else print('No')
-OE = lambda x: print('Odd') if x % 2 else print('Even')
+def ri(): return int(input())
+def rl(): return list(map(int, input().split()))
+def rr(N): return [ri() for _ in range(N)]
+def YN(b): return print('YES') if b else print('NO')
+def yn(b): return print('Yes') if b else print('No')
+def OE(x): return print('Odd') if x % 2 else print('Even')
+
+
 INF = 10**18
 
 N = ri()
@@ -33,8 +35,10 @@ if parity == 0 or parity == N:
         if not parity:
             ub += [0]
             vb += [0]
-        if u[0] == '-': ub = list(map(lambda x: x ^ 1, ub))
-        if v[0] == '-': vb = list(map(lambda x: x ^ 1, vb))
+        if u[0] == '-':
+            ub = list(map(lambda x: x ^ 1, ub))
+        if v[0] == '-':
+            vb = list(map(lambda x: x ^ 1, vb))
 
         for ub_, vb_ in zip(ub, vb):
             if ub_ == 0 and vb_ == 0:

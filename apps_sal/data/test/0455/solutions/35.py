@@ -16,7 +16,8 @@ if p == -1:
     return
 
 dd = [1]
-if p == 0: dd.append(1)
+if p == 0:
+    dd.append(1)
 lim = 10**12
 while len(dd) < 40 and dd[-1] * 2 <= lim:
     dd.append(dd[-1] * 2)

@@ -37,7 +37,8 @@ for i in range(1, N):
 arms = []
 for i in range(31, -1, -1):
     arms.append(2**i)
-if od_ev == 0: arms.append(1)
+if od_ev == 0:
+    arms.append(1)
 print((len(arms)))
 print((*arms))
 

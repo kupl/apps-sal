@@ -10,9 +10,13 @@ for i in range(1, n):
 # print(a)
 result = [0] * m
 for k in range(m):
-    l, r, x = input().split(); l, r = int(l), int(r)
-    if li[r - 1] != x: result[k] = str(r)
-    elif a[r - 1] >= l: result[k] = str(a[r - 1])
-    else: result[k] = '-1'
+    l, r, x = input().split()
+    l, r = int(l), int(r)
+    if li[r - 1] != x:
+        result[k] = str(r)
+    elif a[r - 1] >= l:
+        result[k] = str(a[r - 1])
+    else:
+        result[k] = '-1'
 
 print('\n'.join(result))

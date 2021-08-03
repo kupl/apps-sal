@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 N, M, P = list(map(int, input().split()))
 A = [int(a) for a in input().split()]
 B = [int(a) for a in input().split()]

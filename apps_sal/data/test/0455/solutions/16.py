@@ -2,11 +2,15 @@ n = int(input())
 xy = [list(map(int, input().split()))for _ in range(n)]
 g = 39
 a = []
-if sum(xy[0]) % 2 == 0: a.append(1)
-for i in range(g): a.append(1 << i)
+if sum(xy[0]) % 2 == 0:
+    a.append(1)
+for i in range(g):
+    a.append(1 << i)
 g = len(a)
 for x, y in xy:
-    if (x + y) % 2 != sum(xy[0]) % 2: print(-1); return()
+    if (x + y) % 2 != sum(xy[0]) % 2:
+        print(-1)
+        return()
 print(g)
 print(*a)
 
@@ -29,8 +33,12 @@ for x, y in xy:
     xmy = f(-(x - y))
     ans = ""
     for p, m in zip(xpy, xmy):
-        if 0 < p and 0 < m: ans += "R"
-        if p < 0 and m < 0: ans += "L"
-        if 0 < p and m < 0: ans += "U"
-        if p < 0 and 0 < m: ans += "D"
+        if 0 < p and 0 < m:
+            ans += "R"
+        if p < 0 and m < 0:
+            ans += "L"
+        if 0 < p and m < 0:
+            ans += "U"
+        if p < 0 and 0 < m:
+            ans += "D"
     print(ans)

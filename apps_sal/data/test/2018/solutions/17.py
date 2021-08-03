@@ -12,7 +12,8 @@ def gcd(x, y):
 
 n, m, q = map(int, input().split())
 g = gcd(n, m)
-n_wall = n // g; m_wall = m // g
+n_wall = n // g
+m_wall = m // g
 for _ in range(q):
     a, b, c, d = map(int, input().split())
     if a == 1:

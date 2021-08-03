@@ -37,8 +37,10 @@ score = [[-1] * (m + 1) for i in range(m + 1)]
 
 
 def recursive(i, j):
-    if score[i][j] != -1: return score[i][j]
-    if i == j or i + 1 == j: return 1
+    if score[i][j] != -1:
+        return score[i][j]
+    if i == j or i + 1 == j:
+        return 1
     mincurr = mintill[i][j - 1]
     left = right = 0
 

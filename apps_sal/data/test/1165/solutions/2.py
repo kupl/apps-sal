@@ -5,7 +5,8 @@ L[0] = -1
 for i in range(1, n):
     if l[i] == l[i - 1]:
         L[i] = L[i - 1]
-    else: L[i] = i
+    else:
+        L[i] = i
 for i in range(m):
     s = input().split()
     b = int(s[1])

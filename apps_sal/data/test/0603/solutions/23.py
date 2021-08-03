@@ -6,6 +6,7 @@ for i in range(3):
     if (t[i] - x) % 3 == 2 and x > 0:
         s += 1
         t[i] = x - 1
-    else: t[i] = x + (t[i] - x) % 3
+    else:
+        t[i] = x + (t[i] - x) % 3
 
 print(s + min(t))

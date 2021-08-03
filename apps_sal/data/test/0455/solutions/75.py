@@ -7,9 +7,11 @@ for i in range(n):
         print(-1)
         return
 D = []
-for i in reversed(range(33)): D.append(1 << i)
+for i in reversed(range(33)):
+    D.append(1 << i)
 D += [1, 1]
-if(abs(x[0]) + abs(y[0])) % 2 == 0: D.append(1)
+if(abs(x[0]) + abs(y[0])) % 2 == 0:
+    D.append(1)
 print(len(D))
 print(*D)
 for i in range(n):

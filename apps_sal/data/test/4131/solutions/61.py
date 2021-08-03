@@ -8,7 +8,8 @@ for i in range(m):
     city.append([p, y])
     l[p - 1].append(y)
 
-for i in l: i.sort()
+for i in l:
+    i.sort()
 for i in city:
     ans = ""
     ans += "0" * (6 - len(str(i[0]))) + str(i[0])

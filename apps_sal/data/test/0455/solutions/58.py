@@ -7,7 +7,8 @@ import itertools
 
 def gcd(a, b):
     a, b = max(a, b), min(a, b)
-    while a % b > 0: a, b = b, a % b
+    while a % b > 0:
+        a, b = b, a % b
     return b
 
 
@@ -25,7 +26,8 @@ def solve():
         direction = {("0", "0"): "L", ("1", "1"): "R", ("0", "1"): "D", ("1", "0"): "U"}
         ans = ""
         add = (0 if length == 1 else 1)
-        if add == 1: d.append(1)
+        if add == 1:
+            d.append(1)
         for i in range(N):
             U, V = point[i][0] + point[i][1] + add, point[i][0] - point[i][1] + add
             ubit = format((U + pow(2, 31) - 1) // 2, "b").zfill(31)
@@ -33,7 +35,8 @@ def solve():
             arm = ""
             for j in reversed(range(31)):
                 arm += direction[(ubit[j], vbit[j])]
-            if add == 1: arm += "L"
+            if add == 1:
+                arm += "L"
             ans += arm + "\n"
         print(len(d))
         print(" ".join(map(str, d)))

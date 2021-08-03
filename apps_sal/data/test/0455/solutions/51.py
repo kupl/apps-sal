@@ -32,7 +32,8 @@ def main():
 
     for i in range(N):
         x, y = map(int, input().split())
-        X += [x]; Y += [y]
+        X += [x]
+        Y += [y]
 
         if (abs(x) + abs(y)) % 2 == 0:
             even += 1

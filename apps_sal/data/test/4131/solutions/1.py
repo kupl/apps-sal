@@ -7,7 +7,8 @@ for _ in range(m):
     l[p].append(y)
     py.append((p, y))
 
-for i in l: i.sort()
+for i in l:
+    i.sort()
 
 for p, y in py:
     s = str(p)
