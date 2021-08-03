@@ -1,5 +1,6 @@
 def f(b, n):
-    if n < b: return n
+    if n < b:
+        return n
     return f(b, n // b) + n % b
 
 

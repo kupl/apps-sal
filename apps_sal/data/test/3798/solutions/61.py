@@ -53,16 +53,19 @@ s = read()
 # (b-1) は (n-s) の約数
 
 if n < s:
-    print((-1)); return
+    print((-1))
+    return
 
 if n == s:
-    print((s + 1)); return
+    print((s + 1))
+    return
 
 for x in divisors(abs(n - s)):
     b = x + 1
     # print(b)
     if f(b, n) == s:
-        print(b); return
+        print(b)
+        return
         # pass
 
 print((-1))

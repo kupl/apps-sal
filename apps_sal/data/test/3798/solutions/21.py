@@ -3,8 +3,10 @@ from math import sqrt
 
 
 def f(bb, nn):
-    if(nn < bb): return nn
-    else: return f(bb, floor(nn / bb)) + (nn % bb)
+    if(nn < bb):
+        return nn
+    else:
+        return f(bb, floor(nn / bb)) + (nn % bb)
 
 
 n = int(input())

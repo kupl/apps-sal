@@ -22,7 +22,8 @@ def divisors(M):  # Mの約数列 O(n^(0.5+e))
     return d
 
 
-n = int(input()); s = int(input())
+n = int(input())
+s = int(input())
 if 0 > n - s:
     print((-1))
 else:

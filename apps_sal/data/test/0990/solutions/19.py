@@ -15,7 +15,8 @@ def main():
         if curr == goal:
             return 0
         for e in g[curr]:
-            if e.to == par: continue
+            if e.to == par:
+                continue
             res = bit_path(curr=e.to, goal=goal, par=curr)
             if ~res:  # -1以外
                 return res | (1 << e.edge_id)

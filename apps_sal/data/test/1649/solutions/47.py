@@ -36,12 +36,16 @@ def lcd(a, b):
 
 
 def chmin(dp, i, x):
-    if x < dp[i]: dp[i] = x; return True
+    if x < dp[i]:
+        dp[i] = x
+        return True
     return False
 
 
 def chmax(dp, i, x):
-    if x > dp[i]: dp[i] = x; return True
+    if x > dp[i]:
+        dp[i] = x
+        return True
     return False
 
 # ---------------------------------------

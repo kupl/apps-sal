@@ -15,7 +15,7 @@ def bisect(ng, ok, judge, eps=1):
     return ok
 
 
-int_product = lambda it: reduce(operator.mul, it, 1)
+def int_product(it): return reduce(operator.mul, it, 1)
 
 # 素因数分解
 

@@ -4,5 +4,5 @@ m = int(input())
 if m > n:
     print(sum(a) - (m - n) * d)
 else:
-    a.sort();
+    a.sort()
     print(sum(a[0:m]))

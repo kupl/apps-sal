@@ -30,7 +30,8 @@ def main():
 
         ans = -1
         for p in P:
-            if p == 1: continue
+            if p == 1:
+                continue
             S0 = search(p)
             if S == S0:
                 ans = p

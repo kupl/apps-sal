@@ -19,7 +19,8 @@ for i, (u, v) in enumerate(UV):
     while stack:
         s = stack.pop()
         for to, j in es[s]:
-            if visited[to]: continue
+            if visited[to]:
+                continue
             visited[to] = 1
             edges[to] = j
             stack.append(to)

@@ -1,9 +1,11 @@
 class Solution:
     def largestSumAfterKNegations(self, A: List[int], K: int) -> int:
 
-        if not A: return sum(A)
+        if not A:
+            return sum(A)
 
-        if K == 0: return sum(A)
+        if K == 0:
+            return sum(A)
 
         for i in range(K):
 
