@@ -3,7 +3,7 @@ class Solution:
         row = len(grid)
         column = len(grid[0])
         ans = 0
-        
+
         def bfs(x, y):
             queue = [(x, y)]
             near_border = False
@@ -23,4 +23,4 @@ class Solution:
             for c in range(column):
                 if grid[r][c] == 0:
                     bfs(r, c)
-        return ans   
+        return ans

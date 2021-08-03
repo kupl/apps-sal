@@ -2,10 +2,10 @@ class Solution:
     def closedIsland(self, grid: List[List[int]]) -> int:
         self.m = len(grid)
         self.n = len(grid[0])
-        
-        #for row in grid:
+
+        # for row in grid:
         #    print(row)
-        
+
         def dfs(i, j):
             if i == 0 or j == 0 or i == self.m - 1 or j == self.n - 1:
                 return False
@@ -14,20 +14,19 @@ class Solution:
                     newI = vi + i
                     newJ = vj + j
                     if grid[newI][newJ] == 0:
-                        #if self.total == 4:
+                        # if self.total == 4:
                         #    print(newI, newJ)
                         grid[newI][newJ] = 1
                         self.curPath.append((newI, newJ))
-                        
-                        #print('what')
+
+                        # print('what')
                         if not dfs(newI, newJ):
                             return False
-            
-            #for k, h in self.curPath:
+
+            # for k, h in self.curPath:
             #    grid[k][h] = self.total+2
             return True
-                    
-                            
+
         self.total = 0
         for i in range(1, self.m - 1):
             for j in range(1, self.n - 1):
@@ -43,7 +42,7 @@ class Solution:
                     else:
                         for k, h in self.curPath:
                             grid[k][h] = 0
-                            
-                        #for row in grid:
+
+                        # for row in grid:
                         #    print(row)
         return self.total

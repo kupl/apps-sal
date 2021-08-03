@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class CustomStack:
 
     def __init__(self, maxSize: int):
@@ -20,7 +21,6 @@ class CustomStack:
         for i in range(k):
             if i < len(self.stack):
                 self.stack[i] += val
-        
 
 
 # Your CustomStack object will be instantiated and called as such:
@@ -28,4 +28,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

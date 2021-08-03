@@ -14,7 +14,7 @@ class CustomStack:
         return -1
 
     def increment(self, k: int, val: int) -> None:
-        for i in range(min(k,len(self.stack))):
+        for i in range(min(k, len(self.stack))):
             self.stack[i] += val
 
 
@@ -23,4 +23,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

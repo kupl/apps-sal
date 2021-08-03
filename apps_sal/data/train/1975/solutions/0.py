@@ -24,8 +24,7 @@ class CustomStack:
             if k > len(self.stack):
                 self.add[-1] += val
                 return
-            self.add[k-1] += val
-        
+            self.add[k - 1] += val
 
 
 # Your CustomStack object will be instantiated and called as such:
@@ -33,4 +32,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

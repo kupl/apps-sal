@@ -9,7 +9,7 @@ class Solution:
             for j in range(0, len(grid[i])):
                 if (i == 0 or j == 0 or i == len(grid) - 1 or j == len(grid[0]) - 1):
                     self.closed_island_helper(grid, [i, j])
-                    
+
         for i in range(0, len(grid)):
             for j in range(0, len(grid[i])):
                 if grid[i][j] == 1:
@@ -17,12 +17,12 @@ class Solution:
 
                 num_islands += 1
                 self.closed_island_helper(grid, [i, j])
-        
+
         return num_islands
-    
+
     def closed_island_helper(self, grid, coord):
         x, y = coord
-        
+
         if x < 0 or y < 0 or x > len(grid) - 1 or y > len(grid[0]) - 1:
             return
 
