@@ -1,5 +1,6 @@
 VOWELS = set('aeiou')
 
+
 def pig_latin(st):
     s = st.lower()
     if s.isalpha():

@@ -1,4 +1,4 @@
-def uniq(seq): 
+def uniq(seq):
     result = []
     for q in seq:
         if result and result[-1] == q:

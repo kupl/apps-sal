@@ -8,5 +8,3 @@ def pig_latin(s):
             if s[0] in 'aeiou':
                 break
         return s + 'ay'
-        
-

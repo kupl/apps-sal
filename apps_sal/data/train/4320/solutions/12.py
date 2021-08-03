@@ -8,4 +8,3 @@ def greek_comparator(lhs, rhs):
         if rhs == a:
             r = i
     return -1 if l < r else 1
-

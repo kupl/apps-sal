@@ -1,6 +1,6 @@
 def greek_comparator(lhs, rhs):
-    alfawita = {"alpha": 1, 
-                "beta": 2, 
+    alfawita = {"alpha": 1,
+                "beta": 2,
                 "gamma": 3,
                 "delta": 4,
                 "epsilon": 5,
@@ -23,4 +23,4 @@ def greek_comparator(lhs, rhs):
                 "chi": 22,
                 "psi": 23,
                 "omega": 24}
-    return alfawita[lhs]-alfawita[rhs]
+    return alfawita[lhs] - alfawita[rhs]

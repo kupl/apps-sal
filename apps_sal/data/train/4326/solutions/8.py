@@ -1,4 +1,4 @@
-def london_city_hacker(journey): 
+def london_city_hacker(journey):
     total_cost = 0
     adjacent_bus_tour = 0
     for tour in journey:
