@@ -22,7 +22,8 @@ has = 0
 for i in range(ax1, ax2 + 1):
     for j in range(ay1, ay2 + 1):
         # check this point
-        if i < bx1 or i > bx2: continue
+        if i < bx1 or i > bx2:
+            continue
         if bx1 <= i <= (bx1 + bx2) // 2 and abs(j - by) <= abs(i - bx1):
             has = 1
         if (bx1 + bx2) // 2 <= i <= bx2 and abs(j - by) <= abs(i - bx2):

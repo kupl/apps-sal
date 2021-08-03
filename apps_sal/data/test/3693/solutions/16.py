@@ -10,5 +10,6 @@ r = abs(b[0] - g) + abs(b[1] - h)
 for i in range(a1, b1 + 1):
     for j in range(c1, d1 + 1):
         if abs(i - g) + abs(j - h) <= r:
-            print("YES"); return
+            print("YES")
+            return
 print("NO")

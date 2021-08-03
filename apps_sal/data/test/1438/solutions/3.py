@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, k = read()
 a = list(read())
 b = list(read())
@@ -14,6 +16,7 @@ while k:
         k -= r[i]
         c[i] += 1
         r[i] = a[i]
-    else: break
+    else:
+        break
 ans = min(c)
 print(ans)

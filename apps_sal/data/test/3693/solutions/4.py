@@ -8,9 +8,12 @@ def sub(b, a):
 
 def ccw(a, b, c):
     r = cp(sub(b, a), sub(c, a))
-    if r == 0: return 0
-    elif r > 0: return 1
-    else: return -1
+    if r == 0:
+        return 0
+    elif r > 0:
+        return 1
+    else:
+        return -1
 
 
 def sortpts(pts):
@@ -37,8 +40,10 @@ def checkpts(pts1, pts2):
         aa = True
         for i in range(4):
             j = (i + 1) % 4
-            if ccw(pts2[i], pts2[j], p1) < 0: aa = False
-        if aa: return True
+            if ccw(pts2[i], pts2[j], p1) < 0:
+                aa = False
+        if aa:
+            return True
     return False
 
 

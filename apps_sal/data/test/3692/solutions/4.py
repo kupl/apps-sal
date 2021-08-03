@@ -1,6 +1,8 @@
 from math import sqrt
 pt = lambda *a, **k: print(*a, **k, flush=True)
-rd = lambda: map(int, input().split())
+def rd(): return map(int, input().split())
+
+
 n = int(input())
 
 

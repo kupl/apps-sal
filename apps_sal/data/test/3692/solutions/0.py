@@ -5,7 +5,9 @@ def pt(x):
     print(x)
 
 
-rd = lambda: map(int, input().split())
+def rd(): return map(int, input().split())
+
+
 n = int(input())
 
 

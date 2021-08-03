@@ -13,7 +13,8 @@ def nCk(n, k):
 
 def ncr(n, r):
     r = min(r, n - r)
-    if r == 0: return 1
+    if r == 0:
+        return 1
     numer = reduce(op.mul, list(range(n, n - r, -1)))
     denom = reduce(op.mul, list(range(1, r + 1)))
     return numer // denom
