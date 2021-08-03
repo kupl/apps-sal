@@ -9,7 +9,8 @@ for y in range(t):
     n = len(s)
     for i in range(n):
         if(s[i] == '?'):
-            if(0 == n - 1): s[i] = 'a'
+            if(0 == n - 1):
+                s[i] = 'a'
             elif(i == 0):
                 if(s[i + 1] != 'a'):
                     s[i] = 'a'
@@ -36,5 +37,7 @@ for y in range(t):
         if(s[i] == s[i - 1]):
             flag = 1
             break
-    if(flag == 1): print(-1)
-    else: print("".join(s))
+    if(flag == 1):
+        print(-1)
+    else:
+        print("".join(s))
