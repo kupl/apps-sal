@@ -1,5 +1,6 @@
 from heapq import *
 
+
 def add_all(lst):
 
     heapify(lst)
@@ -10,5 +11,4 @@ def add_all(lst):
         total += s
         heappush(lst, s)
 
-    
     return total

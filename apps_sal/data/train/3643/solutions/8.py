@@ -6,7 +6,7 @@ def distribute(nodes, workload):
     j = 0
     for i in range(nodes):
         if i < r:
-            jobs.append([works.pop(0) for i in range(n+1)])
+            jobs.append([works.pop(0) for i in range(n + 1)])
         else:
             jobs.append([works.pop(0) for i in range(n)])
     return jobs

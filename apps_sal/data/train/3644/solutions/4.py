@@ -1,5 +1,7 @@
 import heapq
-def add_all(heap): 
+
+
+def add_all(heap):
     heapq.heapify(heap)
     sum = 0
     while len(heap) > 1:
@@ -8,4 +10,3 @@ def add_all(heap):
         sum += cost
         heapq.heappush(heap, cost)
     return sum
-

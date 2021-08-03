@@ -1,5 +1,6 @@
 from heapq import *
 
+
 def add_all(lst):
 
     heapify(lst)

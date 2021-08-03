@@ -1,5 +1,6 @@
 from heapq import *
 
+
 def add_all(a):
     n = m = 0
     heapify(a)

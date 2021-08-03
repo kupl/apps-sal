@@ -1,6 +1,7 @@
 import heapq
 
-def add_all(xs): 
+
+def add_all(xs):
     heapq.heapify(xs)
     cost = 0
     while len(xs) > 1:
