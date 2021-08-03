@@ -5,7 +5,7 @@ def alphabet_war(fight):
         if letters == 'w':
             left += 4
         elif letters == 'p':
-            left +=3
+            left += 3
         elif letters == 'b':
             left += 2
         elif letters == 's':

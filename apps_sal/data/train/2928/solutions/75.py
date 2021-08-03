@@ -3,21 +3,21 @@ def alphabet_war(fight):
     right = 0
     for i in fight:
         if i in 'w':
-            left+=4
+            left += 4
         elif i in 'p':
-            left+=3
+            left += 3
         elif i in 'b':
-            left+=2
+            left += 2
         elif i in 's':
-            left+=1
+            left += 1
         elif i in 'm':
-            right+=4
+            right += 4
         elif i in 'q':
-            right+=3
+            right += 3
         elif i in 'd':
-            right+=2
+            right += 2
         elif i in 'z':
-            right+=1
+            right += 1
     if right > left:
         return 'Right side wins!'
     if left > right:

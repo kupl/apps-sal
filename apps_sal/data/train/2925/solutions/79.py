@@ -1,5 +1,5 @@
 def multiply(n):
-    
+
     copy = str(n)
     length = len(copy)
     if n < 0:

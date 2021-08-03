@@ -8,9 +8,9 @@ def alphabet_war(fight):
         elif elem in right:
             count -= right[elem]
 
-    if count>0:
+    if count > 0:
         return "Left side wins!"
-    elif count<0:
+    elif count < 0:
         return "Right side wins!"
-    elif count ==0:
+    elif count == 0:
         return "Let's fight again!"

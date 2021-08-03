@@ -1,7 +1,7 @@
 def zombie_shootout(zombies, distance, ammo):
     sa = ammo - zombies
-    sd = distance*2 - zombies
-    if sa<0 or sd<0:
+    sd = distance * 2 - zombies
+    if sa < 0 or sd < 0:
         if sd > sa:
             return f'You shot {ammo} zombies before being eaten: ran out of ammo.'
         else:

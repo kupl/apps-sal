@@ -1,6 +1,6 @@
 def multiply(n):
     if n < 0:
-        x = str(n).replace('-','')
+        x = str(n).replace('-', '')
         y = len(x)
         return n * (5**y)
     else:

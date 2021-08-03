@@ -5,5 +5,6 @@ def get_digit_count(n):
         digits += 1
     return digits
 
+
 def multiply(n):
     return n * (5**get_digit_count(abs(n)))

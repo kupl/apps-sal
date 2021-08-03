@@ -1,6 +1,6 @@
 def alphabet_war(fight):
-    powersLeft = {'w':4,'p':3,'b':2,'s':1}
-    powersRight = {'m':4,'q':3,'d':2,'z':1}
+    powersLeft = {'w': 4, 'p': 3, 'b': 2, 's': 1}
+    powersRight = {'m': 4, 'q': 3, 'd': 2, 'z': 1}
     left = 0
     right = 0
     for letter in fight:

@@ -6,7 +6,6 @@ def alphabet_war(fight):
     for ch in fight:
         l += (l_scores[ch] if ch in list(l_scores.keys()) else 0)
         r += (r_scores[ch] if ch in list(r_scores.keys()) else 0)
-    return ("Left side wins!" if l>r 
-           else "Right side wins!" if r>l
-           else "Let's fight again!")
-
+    return ("Left side wins!" if l > r
+            else "Right side wins!" if r > l
+            else "Let's fight again!")

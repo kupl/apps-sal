@@ -10,5 +10,6 @@ def alphabet_war(fight):
     if sum(score) < 0:
         return 'Right side wins!'
     return "Let's fight again!"
-    
+
+
 print(alphabet_war('zzzzs'))

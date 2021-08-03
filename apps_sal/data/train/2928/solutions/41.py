@@ -3,7 +3,7 @@ def alphabet_war(fight):
     left = 0
     for i in fight:
         if i == 'w':
-            left += 4 
+            left += 4
         if i == 'p':
             left += 3
         if i == 'b':

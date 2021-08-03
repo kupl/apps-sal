@@ -18,7 +18,7 @@ def alphabet_war(fight):
             right_side.append(2)
         elif elem == "z":
             right_side.append(1)
-    
+
     print(right_side)
     if sum(left_side) > sum(right_side):
         return "Left side wins!"

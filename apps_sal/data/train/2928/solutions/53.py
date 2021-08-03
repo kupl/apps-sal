@@ -13,7 +13,7 @@ def alphabet_war(fight):
         "d": 2,
         "z": 1,
     }
-    
+
     left_power = 0
     right_power = 0
     for fighter in fight:
@@ -22,6 +22,8 @@ def alphabet_war(fight):
         if fighter in right:
             right_power += right.get(fighter)
 
-    if left_power > right_power: return "Left side wins!"
-    if left_power < right_power: return "Right side wins!"
+    if left_power > right_power:
+        return "Left side wins!"
+    if left_power < right_power:
+        return "Right side wins!"
     return "Let's fight again!"
