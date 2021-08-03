@@ -7,13 +7,13 @@ class Solution:
             graph[node] = []
             for edge in edges:
                 graph[node].append(edge)
-        
+
         def DFS(visited, graph, node):
             visited[node] = True
             for neighbour_node in graph[node]:
                 if not visited[neighbour_node]:
                     DFS(visited, graph, neighbour_node)
-        
+
         islands = 0
 
         for node in visited:

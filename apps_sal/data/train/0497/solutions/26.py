@@ -14,7 +14,7 @@ class Solution:
             arr.append(job[0])
         # print(dp)
         return dp[-1]
-    
+
     def get_prev_idx(self, target, arr):
         # find the greatest number smaller or equal to target in sorted arr
         # print('---')
@@ -33,4 +33,4 @@ class Solution:
         #     # print(arr[l])
         #     return arr[l]
         # print(arr[l-1])
-        return arr[l-1]
+        return arr[l - 1]

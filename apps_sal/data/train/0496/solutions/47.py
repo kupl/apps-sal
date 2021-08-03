@@ -6,8 +6,3 @@ class Solution:
             need = max(need + 1, i + 1)
 
         return res
-        
-        
-        
-        
-

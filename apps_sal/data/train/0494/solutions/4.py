@@ -1,7 +1,7 @@
 class Solution:
     def longestDecomposition(self, text: str) -> int:
         found = {}
-        
+
         def search(start, end):
             if start > end:
                 return 0
@@ -13,6 +13,5 @@ class Solution:
                     m = max(m, 2 + search(start + i, end - i))
             found[(start, end)] = m
             return m
-        
-        return search(0, len(text) - 1)
 
+        return search(0, len(text) - 1)

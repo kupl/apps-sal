@@ -13,5 +13,3 @@ class Solution:
         cache = {}
         total = sum(stones)
         return helper(0, 0)
-
-

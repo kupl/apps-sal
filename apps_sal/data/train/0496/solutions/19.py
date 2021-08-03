@@ -34,4 +34,3 @@ class Solution:
                 count += i - taken.pop()
 
         return count
-

@@ -1,10 +1,10 @@
 
-class Solution:       
+class Solution:
     def findPreviousJob(self, jobs, curIdx):
         low = 0
         high = curIdx - 1
         while (low < high):
-            mid = low + (high-low+1)//2
+            mid = low + (high - low + 1) // 2
             if jobs[mid].end <= jobs[curIdx].start:
                 low = mid
             else:
@@ -16,9 +16,9 @@ class Solution:
         for i in range(len(profit)):
             job = Job(startTime[i], endTime[i], profit[i])
             jobs.append(job)
-        jobs.sort(key=lambda x:x.end)
+        jobs.sort(key=lambda x: x.end)
         # for job in jobs:
-            # print(job.start, ', ', job.end, ', ', job.profit)
+        # print(job.start, ', ', job.end, ', ', job.profit)
         dp = [0] * len(jobs)
         dp[0] = jobs[0].profit
         for i in range(1, len(jobs)):
@@ -37,13 +37,13 @@ class Solution:
             if index >= 0:
                 dp[i] = dp[index] + dp[i]
             '''
-            dp[i] = max(dp[i-1], dp[i])
+            dp[i] = max(dp[i - 1], dp[i])
             # print(dp)
-        return dp[len(jobs)-1]
-            
+        return dp[len(jobs) - 1]
+
+
 class Job:
     def __init__(self, start, end, profit):
         self.start = start
         self.end = end
         self.profit = profit
-

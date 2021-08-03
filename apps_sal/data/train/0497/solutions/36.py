@@ -1,4 +1,6 @@
 from sortedcontainers import SortedList
+
+
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         jobs = []
@@ -7,7 +9,7 @@ class Solution:
             e = endTime[i]
             p = profit[i]
             jobs.append((e, s, p))
-        
+
         jobs = sorted(jobs)
         jobs = SortedList(jobs)
 
@@ -25,15 +27,11 @@ class Solution:
 
             to_look_index = jobs.bisect_right((end_to_look, sys.maxsize, sys.maxsize))
             print(to_look_index)
-            dp[i] = dp[i-1]
+            dp[i] = dp[i - 1]
             if to_look_index - 1 >= 0 and jobs[to_look_index - 1][0] <= job[1]:
-                dp[i] = max(dp[i], dp[to_look_index-1] + job[2]) # take the profit
-            else: # if I can't find anything then just take the max.
+                dp[i] = max(dp[i], dp[to_look_index - 1] + job[2])  # take the profit
+            else:  # if I can't find anything then just take the max.
                 dp[i] = max(job[2], dp[i])
-        
+
         print(dp)
-        return dp[N-1]
-
-
-
-
+        return dp[N - 1]

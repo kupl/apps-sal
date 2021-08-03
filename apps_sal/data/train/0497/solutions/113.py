@@ -3,7 +3,7 @@ class Solution:
         n = len(startTime)
         arr = [(endTime[i], startTime[i], profit[i]) for i in range(n)]
         arr.sort()
-        dp = [0 for x in range(n)] # up to idx, the maximum gain
+        dp = [0 for x in range(n)]  # up to idx, the maximum gain
         dp[0] = arr[0][2]
         for i in range(1, n):
             e, s, p = arr[i][0], arr[i][1], arr[i][2]
@@ -14,7 +14,7 @@ class Solution:
                 m = (bs + be) // 2
                 if arr[m][0] > s:
                     be = m - 1
-                else: # arr[m][1] <= s
+                else:  # arr[m][1] <= s
                     ridx = max(ridx, m)
                     bs = m + 1
             if ridx == -1:

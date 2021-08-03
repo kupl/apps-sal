@@ -1,8 +1,9 @@
 from collections import defaultdict
 
+
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
-        count_for_val = defaultdict(lambda:0)
+        count_for_val = defaultdict(lambda: 0)
         dups = set()
         for i in A:
             count_for_val[i] += 1
@@ -22,6 +23,3 @@ class Solution:
                     output = output + (orig - dup)
                     count -= 1
         return output
-        
-                
-

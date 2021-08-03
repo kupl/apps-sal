@@ -12,7 +12,7 @@ class Solution:
             dp[j] = max(dp[index] + p, ans)
             ans = max(ans, dp[j])
         return ans
-    
+
     def find_previous_end(self, nums, target):
         l, r = 0, len(nums)
         while l + 1 < r:

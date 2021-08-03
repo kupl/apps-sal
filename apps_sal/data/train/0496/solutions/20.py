@@ -10,6 +10,3 @@ class Solution(object):
             elif taken and count[x] == 0:
                 ans += x - taken.pop()
         return ans
-    
-    
-

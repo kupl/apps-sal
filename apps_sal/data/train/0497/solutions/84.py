@@ -6,7 +6,7 @@ class Job:
         self.end_time = end_time
         self.weight = weight
 
-    #overriding hashcode and equals to use the Job object as a key in dict
+    # overriding hashcode and equals to use the Job object as a key in dict
     def __hash__(self):
         return hash((self.start_time, self.end_time, self.weight))
 
@@ -26,15 +26,14 @@ class WeightedIntervalSchedule:
         self.previous_job = len(self.jobs) * [0]
         # Memoization will be done using this memory dict
         self.memory = dict()
-        #computing the previous mappings
+        # computing the previous mappings
         self.compute_latest_job_scheduled_before()
-        
 
     def getResult(self):
         return self.dp(self.jobs_end_first, len(self.jobs) - 1, self.previous_job)
 
     def compute_latest_job_scheduled_before(self):
-        
+
         # Sorting the jobs in non decreasing order of end_time - O(nlogn)
         self.jobs_end_first = sorted(self.jobs, key=lambda x: x.end_time)
 
@@ -48,7 +47,7 @@ class WeightedIntervalSchedule:
 
         # The time complexity of this method is O(n) as the statement inside the while loop
         # is only called once for each index
-        # We use the intution that the latest job for the current job will be greater than or 
+        # We use the intution that the latest job for the current job will be greater than or
         # equal to the latest job for the preious job
         for i in range(1, len(self.jobs_start_first)):
             j = X[i - 1]
@@ -58,10 +57,9 @@ class WeightedIntervalSchedule:
             X[i] = j
 
         # We now map the respective job to its index in jobs_end_first.
-        # O(n)        
+        # O(n)
         for i in range(0, len(self.jobs_start_first)):
             self.previous_job[self.jobs_start_first[i][0]] = X[i]
-            
 
     def dp(self, jobs, index, previous_job):
 
@@ -78,14 +76,11 @@ class WeightedIntervalSchedule:
         return dp[len(jobs) - 1]
 
 
-
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
-        
+
         temp = list()
         for i in range(len(startTime)):
             temp.append([startTime[i], endTime[i], profit[i]])
-            
-        return WeightedIntervalSchedule(temp).getResult()
-        
 
+        return WeightedIntervalSchedule(temp).getResult()

@@ -8,5 +8,5 @@ class Solution:
             else:
                 count += height - stack[-1]
             stack.append(height)
-        
+
         return count

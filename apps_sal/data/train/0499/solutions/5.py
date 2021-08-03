@@ -3,6 +3,6 @@ class Solution:
         pre = 0
         res = 0
         for a in target:
-            res += max(a-pre, 0)
-            pre = a 
+            res += max(a - pre, 0)
+            pre = a
         return res

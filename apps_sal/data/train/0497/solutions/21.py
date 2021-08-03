@@ -4,7 +4,7 @@ class Solution:
         for i, (start, end) in enumerate(zip(startTime, endTime)):
             events.append((start, i + 1))
             events.append((end, -(i + 1)))
-        
+
         best = 0
         for _, idx in sorted(events):
             if idx > 0:
@@ -12,4 +12,3 @@ class Solution:
             else:
                 best = max(best, profit[-idx - 1])
         return best
-

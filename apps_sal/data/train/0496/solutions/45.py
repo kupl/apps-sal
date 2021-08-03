@@ -1,6 +1,6 @@
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
-        #18:31
+        # 18:31
         if not A:
             return 0
         A.sort()
@@ -13,5 +13,3 @@ class Solution:
                 res += next_available - a
                 next_available += 1
         return res
-            
-

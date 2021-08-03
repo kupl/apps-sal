@@ -5,7 +5,7 @@ class Job:
         self.end_time = end_time
         self.weight = weight
 
-    #overriding hashcode and equals to use the Job object as a key in dict
+    # overriding hashcode and equals to use the Job object as a key in dict
     def __hash__(self):
         return hash((self.start_time, self.end_time, self.weight))
 
@@ -26,15 +26,14 @@ class WeightedIntervalSchedule:
         self.previous_job_mapping = dict()
         # Memoization will be done using this memory dict
         self.memory = dict()
-        #computing the previous mappings
+        # computing the previous mappings
         self.compute_latest_job_scheduled_before()
-        
 
     def getResult(self):
         return self.dp(self.jobs_end_first, len(self.jobs) - 1, self.previous_job_mapping)
 
     def compute_latest_job_scheduled_before(self):
-        
+
         # Sorting the jobs in non decreasing order of start_time - O(nlogn)
         self.jobs_start_first = sorted(self.jobs, key=lambda x: x.start_time)
         # Sorting the jobs in non decreasing order of end_time - O(nlogn)
@@ -44,7 +43,7 @@ class WeightedIntervalSchedule:
 
         # The time complexity of this method is O(n) as the statement inside the while loop
         # is only called once for each index
-        # We use the intution that the latest job for the current job will be greater than or 
+        # We use the intution that the latest job for the current job will be greater than or
         # equal to the latest job for the preious job
         for i in range(1, len(self.jobs_start_first)):
             j = self.X[i - 1]
@@ -54,10 +53,9 @@ class WeightedIntervalSchedule:
             self.X[i] = j
 
         # We now map the respective job to its index in jobs_end_first.
-        # O(n)        
+        # O(n)
         for i in range(0, len(self.jobs_start_first)):
             self.previous_job_mapping[self.jobs_start_first[i]] = self.X[i]
-            
 
     def dp(self, jobs, index, mapping):
 
@@ -82,7 +80,7 @@ class WeightedIntervalSchedule:
 
         # Storing the result in the memory
         result = max(profit_including_current_job, profit_excluding_current_job)
-        
+
         self.memory[index] = result
 
         return result
@@ -90,11 +88,9 @@ class WeightedIntervalSchedule:
 
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
-        
+
         temp = list()
         for i in range(len(startTime)):
             temp.append([startTime[i], endTime[i], profit[i]])
-            
-        return WeightedIntervalSchedule(temp).getResult()
-        
 
+        return WeightedIntervalSchedule(temp).getResult()

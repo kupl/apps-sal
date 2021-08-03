@@ -7,5 +7,3 @@ class Solution:
                 result += target[i] - last
             last = target[i]
         return result
-            
-

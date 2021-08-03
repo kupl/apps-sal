@@ -4,10 +4,5 @@ class Solution:
         for i in sorted(A):
             res += max(need - i, 0)
             need = max(need + 1, i + 1)
-            print((res , need))
+            print((res, need))
         return res
-        
-        
-        
-        
-

@@ -14,21 +14,20 @@ We encounter a number greater than a[0] (a[1] > a[0]): In this case we can simpl
 TC: O(n)
 SC: O(1)
 '''
+
+
 class Solution:
     def minNumberOperations(self, target: List[int]) -> int:
-        
+
         tLen = len(target)
         steps = target[0]
         reusableOperations = target[0]
-        
+
         for i in range(1, tLen):
-            if target[i] <= reusableOperations: # Case 1
+            if target[i] <= reusableOperations:  # Case 1
                 reusableOperations = target[i]
-            else: # Case 2
+            else:  # Case 2
                 steps += target[i] - reusableOperations
                 reusableOperations = target[i]
-        
-        return steps
-                
-        
 
+        return steps

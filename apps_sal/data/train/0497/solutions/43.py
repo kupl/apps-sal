@@ -1,7 +1,7 @@
 class Solution:
     def jobScheduling(self, startTime, endTime, profit):
         jobs = sorted(zip(startTime, endTime, profit), key=lambda v: v[1])
-        #print(jobs)
+        # print(jobs)
 
         dp = [0] * len(jobs)
         dp[0] = jobs[0][-1]
@@ -10,9 +10,8 @@ class Solution:
             j = self.searchInsert(jobs, jobs[i][0])
             if j != -1:
                 curProfit += dp[j]
-            dp[i] = max(dp[i-1], curProfit)
+            dp[i] = max(dp[i - 1], curProfit)
         return dp[-1]
-
 
     def searchInsert(self, nums, target: int) -> int:
         if not nums:

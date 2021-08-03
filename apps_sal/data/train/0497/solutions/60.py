@@ -4,22 +4,22 @@ class Solution:
         jobSchedule = []
         for s, e, p in zip(startTime, endTime, profit):
             jobSchedule.append((s, e, p))
-        jobSchedule.sort(key = lambda x:(x[0], x[1], -x[2]))
-        
+        jobSchedule.sort(key=lambda x: (x[0], x[1], -x[2]))
+
         # print(jobSchedule)
-        
+
         dp = {}
-        
+
         def findNextJob(preE, preI):
-            
+
             l = preI
             r = jobLen - 1
             if preE > jobSchedule[r][0]:
                 return 0
-            
+
             if (preE, preI) in dp:
                 return dp[(preE, preI)]
-            
+
             while r > l:
                 m = (r + l) // 2
                 if jobSchedule[m][0] < preE:
@@ -41,6 +41,5 @@ class Solution:
                 subAns = max(subAns, jobSchedule[nextJob][2] + findNextJob(jobSchedule[nextJob][1], nextJob))
             dp[(preE, preI)] = subAns
             return subAns
-    
-        return findNextJob(0, 0)
 
+        return findNextJob(0, 0)

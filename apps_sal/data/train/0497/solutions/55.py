@@ -10,9 +10,8 @@ class Solution:
             j = self.searchInsert(jobs, jobs[i][0])
             if j != -1:
                 curProfit += dp[j]
-            dp[i] = max(dp[i-1], curProfit)
+            dp[i] = max(dp[i - 1], curProfit)
         return dp[-1]
-
 
     def searchInsert(self, nums, target: int) -> int:
         if not nums:

@@ -9,9 +9,9 @@ class Solution:
                 else:
                     right = mid - 1
             return left
-        
-        jobs = sorted(zip(startTime, endTime, profit), key = lambda v: v[1])
-        dp = [[0, 0]] # end_time, profit
+
+        jobs = sorted(zip(startTime, endTime, profit), key=lambda v: v[1])
+        dp = [[0, 0]]  # end_time, profit
         for start, end, profit in jobs:
             pos = search(dp, start)
             # print(pos, dp, end)

@@ -3,9 +3,10 @@ class Job:
         self.start = start
         self.end = end
         self.profit = profit
-        
+
     def __lt__(self, other):
         return (self.end, self.start, self.profit) < (other.end, other.start, other.profit)
+
 
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
@@ -24,7 +25,7 @@ class Solution:
                 cmax += dp[le]
             dp[i] = max(dp[i - 1], cmax)
         return dp[-1]
-    
+
     def binarySearch(self, arr, i, start):
         s, e = 0, i - 1
         while s <= e:

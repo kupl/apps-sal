@@ -1,7 +1,8 @@
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
         n = len(A)
-        if n < 2: return 0
+        if n < 2:
+            return 0
         A.sort()
         avails = deque()
         for i in range(1, n):

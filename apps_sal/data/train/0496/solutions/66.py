@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
         A.sort()
@@ -12,7 +14,7 @@ class Solution:
         print(numCnt, type(numCnt))
         while numCnt:
             num, count = numCnt.popitem(last=False)
-            res += max((need - num)*count, 0) + count*(count-1)//2
+            res += max((need - num) * count, 0) + count * (count - 1) // 2
             need = max(num, need) + count
-            
+
         return res

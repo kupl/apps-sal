@@ -5,4 +5,3 @@ class Solution:
             res += max(a - pre, 0)
             pre = a
         return res
-

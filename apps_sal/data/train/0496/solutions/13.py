@@ -7,14 +7,13 @@ class Solution:
         stack = []
         ans = 0
         A.append(A[-1] + n)
-        for i in range(1, n+1):
-            if A[i] == A[i-1]:
+        for i in range(1, n + 1):
+            if A[i] == A[i - 1]:
                 stack.append(A[i])
             else:
-                for r in range(1, A[i] - A[i-1]):
+                for r in range(1, A[i] - A[i - 1]):
                     if stack:
-                        ans += A[i-1] + r - stack.pop()
+                        ans += A[i - 1] + r - stack.pop()
                     else:
-                        break            
+                        break
         return ans
-

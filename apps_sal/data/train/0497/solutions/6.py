@@ -5,15 +5,15 @@ class Solution:
         N = len(profit)
         # bottom up solutions: (profit, endtime, index)
         dp = [(0, 0, 0)]
-        
+
         for idx, (s, e, p) in enumerate(intervals):
             nonoverlapping_idx = self.find_nonoverlapping_interval(dp, s + 0.1)
             # print(idx, nonoverlapping_idx, s)
-            if dp[nonoverlapping_idx][0] + p > dp[idx-1+1][0]:
+            if dp[nonoverlapping_idx][0] + p > dp[idx - 1 + 1][0]:
                 dp.append((dp[nonoverlapping_idx][0] + p, e, idx))
             else:
-                dp.append(dp[idx-1+1])
-        
+                dp.append(dp[idx - 1 + 1])
+
         # print(dp)
         solutions = []
         cur_idx = N
@@ -23,15 +23,15 @@ class Solution:
             cur_idx = dp[solution][2]
             solutions.append(cur_idx)
         print(solutions)
-        
+
         return dp[-1][0]
-    
+
     def find_nonoverlapping_interval(self, dp, start):
         l_idx = 0
         r_idx = len(dp) - 1
-        
+
         # print(dp, l_idx, r_idx, start)
-        
+
         # using binary search
         while r_idx >= 0 and l_idx < len(dp) and l_idx <= r_idx:
             mid_idx = (l_idx + r_idx) // 2
@@ -39,8 +39,7 @@ class Solution:
                 l_idx = mid_idx + 1
             else:
                 r_idx = mid_idx - 1
-        
-        # print(dp, l_idx, r_idx, start)
-        
-        return l_idx - 1
 
+        # print(dp, l_idx, r_idx, start)
+
+        return l_idx - 1

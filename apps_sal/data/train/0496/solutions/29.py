@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
         # Counting
@@ -16,5 +17,3 @@ class Solution:
                 ans += x - taken.pop()
 
         return ans
-
-

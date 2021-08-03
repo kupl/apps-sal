@@ -26,7 +26,6 @@ class WeightedIntervalSchedule:
         self.previous_job_mapping = dict()
         self.compute_latest_job_scheduled_before()
         self.memory = dict()
-        
 
     def getResult(self):
         return self.dp(self.jobs_end_first, len(self.jobs) - 1, self.previous_job_mapping)
@@ -44,12 +43,11 @@ class WeightedIntervalSchedule:
                 j = j + 1
 
             self.X[i] = j
-        
+
         for i in range(0, len(self.jobs_start_first)):
             self.previous_job_mapping[self.jobs_start_first[i]] = self.X[i]
 
         print((self.X))
-            
 
     def dp(self, jobs, index, mapping):
 
@@ -73,17 +71,15 @@ class WeightedIntervalSchedule:
 
         result = max(profit_including_current_job, profit_excluding_current_job)
         self.memory[index] = result
-        
+
         return result
 
 
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
-        
+
         temp = list()
         for i in range(len(startTime)):
             temp.append([startTime[i], endTime[i], profit[i]])
-            
-        return WeightedIntervalSchedule(temp).getResult()
-        
 
+        return WeightedIntervalSchedule(temp).getResult()

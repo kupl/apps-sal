@@ -9,4 +9,3 @@ class Solution:
                 A[index] = A[index - 1] + 1
 
         return rez
-

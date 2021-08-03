@@ -14,7 +14,7 @@ class Solution:
         jobs = []
         for i in range(n):
             jobs.append([startTime[i], endTime[i], profit[i]])
-        jobs.sort(key = lambda x: x[1])
+        jobs.sort(key=lambda x: x[1])
         tot = [0 for _ in range(n + 1)]
         tot[0] = jobs[0][2]
         print(jobs)
@@ -22,4 +22,3 @@ class Solution:
             p = find(i)
             tot[i] = max(tot[i - 1], tot[p] + jobs[i][2])
         return tot[n - 1]
-

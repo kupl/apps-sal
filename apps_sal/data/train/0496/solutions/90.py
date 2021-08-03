@@ -1,13 +1,14 @@
 from collections import defaultdict
 
+
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
         H = defaultdict(int)
         for a in A:
             H[a] += 1
-            
+
         V = sorted(H.keys())
-        
+
         ans = 0
         while True:
             if len(H) == 0:
@@ -29,6 +30,3 @@ class Solution:
                     H[v2] += (H[v1] - v2 + v1)
                     del H[v1]
                     del V[0]
-                    
-
-

@@ -3,6 +3,7 @@ class Solution:
         rem_rooms = [i for i in range(1, len(rooms))]
 
         visited = set()
+
         def dfs(r, key):
             stack = [key]
 

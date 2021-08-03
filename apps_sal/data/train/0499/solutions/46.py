@@ -15,5 +15,5 @@ class Solution:
             # print(stack, total)
         if stack:
             total += l[stack[-1]]
-            
+
         return total

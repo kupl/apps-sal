@@ -21,11 +21,9 @@ class Solution:
                 stack[-1][1] += count - 1
                 # print(f'move to {n+1, stack[-1][1]} stack={stack}')
             elif count > 1:
-                stack.append([n+1, count-1])
+                stack.append([n + 1, count - 1])
                 # print(f'upgrade to {n+1, count-1} stack={stack}')
             # else:
             #     print('')
 
         return numOps
-
-

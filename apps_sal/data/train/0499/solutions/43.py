@@ -8,7 +8,7 @@ class Solution:
                 while len(stack) != 0 and n <= stack[-1]:
                     x = stack.pop()
             stack.append(n)
-        
+
         if len(stack) != 0:
             ans += stack[-1]
         return ans
