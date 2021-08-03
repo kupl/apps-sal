@@ -27,7 +27,8 @@ cnts = [0] * N
 lines = defaultdict(set)
 for _ in range(M):
     a, b = inpl()
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     cnts[a] += 1
     cnts[b] += 1
     lines[a].add(b)

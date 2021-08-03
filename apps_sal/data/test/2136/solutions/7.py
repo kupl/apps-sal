@@ -21,7 +21,8 @@ def li3(): return [int(i) for i in input().rstrip('\n')]
 for _ in range(val()):
     n = val()
     l = []
-    for i in range(n): l.append(list(st()))
+    for i in range(n):
+        l.append(list(st()))
 
     ans = []
     if l[0][1] == l[1][0]:

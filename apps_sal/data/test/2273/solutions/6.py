@@ -16,7 +16,8 @@ for a in G[0]:
     res[a] = 2
 a2 = G[0][0]
 for b in G[a2]:
-    if res[b] == 2: res[b] = 3
+    if res[b] == 2:
+        res[b] = 3
 sizes = [n - len(G[0]), n - len(G[a2]), len(G[0]) + len(G[a2]) - n]
 if 0 in sizes:
     print(-1)

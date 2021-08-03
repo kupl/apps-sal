@@ -23,6 +23,9 @@ for i in range(1, n + 1):
         a[g[i]] = k
         k += 1
         res.append(a[g[i]])
-    if len(a) > 3: break
-if k != 4: print(-1)
-else: print(*res)
+    if len(a) > 3:
+        break
+if k != 4:
+    print(-1)
+else:
+    print(*res)

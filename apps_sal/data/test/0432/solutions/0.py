@@ -1,6 +1,8 @@
 import sys
 
-rd = lambda: sys.stdin.readline().rstrip()
+
+def rd(): return sys.stdin.readline().rstrip()
+
 
 n = int(rd())
 c = list(map(int, rd().split()))
@@ -26,7 +28,8 @@ for i in range(n):
         v = trace.pop()
         mn = min(mn, c[v])
 
-        if t == v: break
+        if t == v:
+            break
 
     res += mn
 

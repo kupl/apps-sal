@@ -5,7 +5,9 @@ while t:
     if c <= d:
         for x in range(a, b + 1):
             y = x + 1
-            if c > y: y = c
-            if d - y >= 0: ans += d - y + 1
+            if c > y:
+                y = c
+            if d - y >= 0:
+                ans += d - y + 1
     print(ans)
     t -= 1

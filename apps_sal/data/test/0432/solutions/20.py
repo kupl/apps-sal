@@ -5,7 +5,8 @@ a = list(map(int, input().split()))
 ans = 0
 v = [False for i in range(n)]
 for i in range(n):
-    if v[i]: continue
+    if v[i]:
+        continue
     p = set()
     pl = []
     s = set([i])
@@ -20,9 +21,12 @@ for i in range(n):
         if nex in p:
             j = pl.index(nex)
             za = s.pop()
-        elif v[nex]: t = False; za = s.pop()
+        elif v[nex]:
+            t = False
+            za = s.pop()
 
-    if not t: continue
+    if not t:
+        continue
     an = float("INF")
     for k in range(j, len(pl)):
         an = min(c[pl[k]], an)

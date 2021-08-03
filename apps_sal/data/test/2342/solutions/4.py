@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip('\n')
+def input(): return sys.stdin.readline().rstrip('\n')
+
+
 D = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
 
@@ -41,8 +43,10 @@ def case():
             nx = x + dx
             ny = y + dy
 
-            if nx < 0 or ny < 0 or nx >= m or ny >= n: continue
-            if M[ny][nx] == '#' or V[ny][nx]: continue
+            if nx < 0 or ny < 0 or nx >= m or ny >= n:
+                continue
+            if M[ny][nx] == '#' or V[ny][nx]:
+                continue
             V[ny][nx] = True
             Q.append((nx, ny))
 

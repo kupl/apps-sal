@@ -7,7 +7,8 @@ edges = [[] for _ in range(n)]
 
 for i in range(m):
     a, b = [int(item) for item in input().split()]
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     edges[a].append(b)
     edges[b].append(a)
     ab.append((a, b))
