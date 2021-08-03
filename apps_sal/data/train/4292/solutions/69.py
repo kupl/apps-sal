@@ -3,5 +3,4 @@ def string_clean(s):
     for i in range(len(s)):
         if not s[i].isnumeric():
             lsValue += s[i]
-    return lsValue        
-
+    return lsValue

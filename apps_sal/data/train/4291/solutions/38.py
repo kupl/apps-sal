@@ -6,5 +6,3 @@ def century(year):
         return century
     else:
         return century + 1
-
-

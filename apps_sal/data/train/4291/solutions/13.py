@@ -1,2 +1,2 @@
 from math import ceil
-century = lambda _: ceil(_/100)
+def century(_): return ceil(_ / 100)

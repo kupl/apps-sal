@@ -1,10 +1,10 @@
 def balanced_num(number):
     number = str(number)
-    a = len(number) 
-    hm1 = number[:int((a/2)-1)]
-    hm2 = number[int((a//2)+1):]
-    hm3 = number[:int((a//2)+1)]
-    hm4 = number[int((a//2)):]
+    a = len(number)
+    hm1 = number[:int((a / 2) - 1)]
+    hm2 = number[int((a // 2) + 1):]
+    hm3 = number[:int((a // 2) + 1)]
+    hm4 = number[int((a // 2)):]
     print
     if a == 1:
         return "Balanced"

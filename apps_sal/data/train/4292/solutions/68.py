@@ -3,5 +3,5 @@ def string_clean(s):
     for i in s:
         if not i.isdigit():
             ans += i
-            
+
     return ans

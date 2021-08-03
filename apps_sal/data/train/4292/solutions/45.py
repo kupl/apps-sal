@@ -3,5 +3,5 @@ def string_clean(s):
     for i in s:
         if i in toremove:
             s = s.replace(i, '')
-            
+
     return s

@@ -1,2 +1,2 @@
 import re
-string_clean = lambda s: re.sub('[0-9]', '', s)
+def string_clean(s): return re.sub('[0-9]', '', s)

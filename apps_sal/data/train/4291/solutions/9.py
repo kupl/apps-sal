@@ -1,2 +1,2 @@
 def century(year):
-    return -(-year//100)
+    return -(-year // 100)

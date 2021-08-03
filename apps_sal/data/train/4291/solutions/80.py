@@ -1,4 +1,6 @@
 from math import *
+
+
 def century(year):
     x = 0
     if year % 100 == 0:

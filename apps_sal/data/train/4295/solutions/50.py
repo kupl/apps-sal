@@ -6,6 +6,6 @@ def balanced_num(number):
         if sum(array[0: (len(array) // 2 - 1)]) == sum(array[(len(array) // 2 + 1)::]):
             return 'Balanced'
         return 'Not Balanced'
-    if sum(array[0: (len(array) // 2)]) == sum(array[(len(array) // 2) + 1:: ]):
+    if sum(array[0: (len(array) // 2)]) == sum(array[(len(array) // 2) + 1::]):
         return 'Balanced'
     return 'Not Balanced'

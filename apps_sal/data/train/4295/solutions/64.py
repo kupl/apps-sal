@@ -6,7 +6,4 @@ def balanced_num(number):
         left += lstofnum.pop(0)
         right += lstofnum.pop(-1)
 
-
     return "Balanced" if left == right else "Not Balanced"
-
-

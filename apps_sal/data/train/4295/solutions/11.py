@@ -1,4 +1,6 @@
 import math
+
+
 def balanced_num(number):
     s = []
     while number > 0:
@@ -6,7 +8,7 @@ def balanced_num(number):
         s.append(d)
         number = math.floor(number / 10)
     l = len(s)
-    m = (l - 1)/2
+    m = (l - 1) / 2
     left = math.floor(m)
     right = math.ceil(m)
     leftSum = 0

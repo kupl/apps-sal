@@ -4,4 +4,4 @@ def string_clean(s):
     for element in s:
         if element not in digits:
             word += element
-    return word 
+    return word

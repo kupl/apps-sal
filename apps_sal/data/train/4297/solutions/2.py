@@ -6,4 +6,3 @@ def get_mean(arr, x, y):
         return (mx + my) / 2
     else:
         return -1
-

@@ -1,2 +1,2 @@
 def century(year):
-    return round((year/100.)+.495)
+    return round((year / 100.) + .495)

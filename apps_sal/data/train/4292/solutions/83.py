@@ -5,5 +5,5 @@ def string_clean(s):
         if i in numbers:
             continue
         else:
-            temp+=i
+            temp += i
     return temp

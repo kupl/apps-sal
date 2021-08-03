@@ -1,5 +1,7 @@
 import string
 digits = string.digits
+
+
 def string_clean(s):
     emptystring = ''
     for eachletter in s:
@@ -12,4 +14,3 @@ def string_clean(s):
     Function will return the cleaned string
     """
     # Your code here
-

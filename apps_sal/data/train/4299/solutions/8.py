@@ -9,5 +9,6 @@ for i in range(2, N):
             a[j] = 0
 a = [i for i, x in enumerate(a) if x]
 
+
 def is_prime_happy(n):
     return n > 2 and not sum(a[:bisect_left(a, n)]) % n

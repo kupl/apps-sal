@@ -1,5 +1,6 @@
 import math
 
+
 def century(year):
     if 100 >= year >= 1:
         return 1

@@ -1,7 +1,7 @@
 
 def n00bify(text):
     import re
-      
+
     replaced = re.sub(r'too|to|Too|To', '2', text)
     replaced = re.sub(r'fore|for|Fore|For|FORE', '4', replaced)
     replaced = re.sub(r'oo|Oo', '00', replaced)
@@ -17,19 +17,18 @@ def n00bify(text):
     replaced = re.sub(r'S', 'Z', replaced)
     replaced = re.sub(r"[.,']", '', replaced)
     if text[0] in ['W', 'w']:
-        if len(replaced.replace('!',''))>=28:
+        if len(replaced.replace('!', '')) >= 28:
             replaced = 'LOL OMG ' + replaced
         else:
             replaced = 'LOL ' + replaced
     else:
-        if len(replaced.replace('!',''))>=32:
+        if len(replaced.replace('!', '')) >= 32:
             replaced = 'OMG ' + replaced
     if text[0] in ['H', 'h']:
         replaced = replaced.upper()
-    replaced = ' '.join([val.upper() if (i+1)%2==0 else val for i,val in enumerate(replaced.split())])
+    replaced = ' '.join([val.upper() if (i + 1) % 2 == 0 else val for i, val in enumerate(replaced.split())])
     num = len(replaced.split())
-    replaced = replaced.replace('?','?'*num)
-    s = ''.join(['!' if i%2==0 else '1' for i in range(num)])
-    replaced = replaced.replace('!',s)
+    replaced = replaced.replace('?', '?' * num)
+    s = ''.join(['!' if i % 2 == 0 else '1' for i in range(num)])
+    replaced = replaced.replace('!', s)
     return replaced
-

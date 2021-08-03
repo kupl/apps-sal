@@ -4,6 +4,6 @@ def string_clean(s):
     """
     phrase = ""
     for i in range(len(s)):
-        if s[i].isnumeric()!= True:
-            phrase+=s[i]
+        if s[i].isnumeric() != True:
+            phrase += s[i]
     return phrase

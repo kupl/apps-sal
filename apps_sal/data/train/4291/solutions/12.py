@@ -1,1 +1,1 @@
-century = lambda y: (y+99) // 100
+def century(y): return (y + 99) // 100
