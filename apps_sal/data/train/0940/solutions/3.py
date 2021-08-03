@@ -8,10 +8,8 @@ for i in range(t):
 
 def max():
     for i in range(t):
-        m = 2*int(C[i])*int(C[i])
+        m = 2 * int(C[i]) * int(C[i])
         print(m)
 
 
-max()       
-    
-
+max()

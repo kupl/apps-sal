@@ -4,11 +4,14 @@ def solve(i):
 
     maxi = 0
 
-    if i+1 < n and a[i+1] == a[i]: maxi = max(maxi, solve(i+1) + 1)
-    if i+2 < n and a[i+2] == a[i]: maxi = max(maxi, solve(i+2) + 1)
+    if i + 1 < n and a[i + 1] == a[i]:
+        maxi = max(maxi, solve(i + 1) + 1)
+    if i + 2 < n and a[i + 2] == a[i]:
+        maxi = max(maxi, solve(i + 2) + 1)
 
     c[i] = maxi
     return c[i]
+
 
 for _ in range(int(input())):
     n = int(input())
@@ -20,4 +23,3 @@ for _ in range(int(input())):
         solve(i)
 
     print(max(c))
-

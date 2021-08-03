@@ -10,10 +10,10 @@ def splitting(arr):
         if i == 0:
             ev_od[i] = [0, 0, 0]
         else:
-            if arr[i-1] & 1 == 1:
-                ev_od[i] = [ev_od[i-1][0], ev_od[i-1][1] + 1, ev_od[i-1][2] + arr[i-1]]
+            if arr[i - 1] & 1 == 1:
+                ev_od[i] = [ev_od[i - 1][0], ev_od[i - 1][1] + 1, ev_od[i - 1][2] + arr[i - 1]]
             else:
-                ev_od[i] = [ev_od[i-1][0] + 1, ev_od[i-1][1], ev_od[i-1][2] + arr[i-1]]
+                ev_od[i] = [ev_od[i - 1][0] + 1, ev_od[i - 1][1], ev_od[i - 1][2] + arr[i - 1]]
         if n in occur:
             if n & 1 == 1:
                 num_of_odd = ev_od[i][1] - ev_od[occur[n]][1] - 1
@@ -32,6 +32,7 @@ def splitting(arr):
         occur[n] = i
     return ans
 
+
 try:
     t = int(input())
     for i in range(t):
@@ -40,4 +41,3 @@ try:
         print(splitting(arr))
 except:
     pass
-

@@ -1,4 +1,4 @@
-n=int(input())
+n = int(input())
 for i in range(n):
-    p=int(input())
-    print((p//2)+1)
+    p = int(input())
+    print((p // 2) + 1)

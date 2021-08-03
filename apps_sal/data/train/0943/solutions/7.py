@@ -4,4 +4,4 @@ for _ in range(nb_tests):
     if a <= b:
         print(a + 1)
     else:
-    	print(b+1)    
+        print(b + 1)

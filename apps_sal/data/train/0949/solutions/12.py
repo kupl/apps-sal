@@ -7,14 +7,14 @@ for _ in range(int(input())):
         continue
     mx = 0
     narr = [0]
-    narr.append(0 if arr[1]!=arr[0] else 1)
+    narr.append(0 if arr[1] != arr[0] else 1)
     for i in range(2, n):
-        if arr[i-2] == arr[i] and arr[i-1] == arr[i]:
-            narr.append(max(narr[-2], narr[-1])+1)
-        elif arr[i-1] == arr[i]:
-            narr.append(narr[-1]+1)
-        elif arr[i-2] == arr[i]:
-            narr.append(narr[-2]+1)
+        if arr[i - 2] == arr[i] and arr[i - 1] == arr[i]:
+            narr.append(max(narr[-2], narr[-1]) + 1)
+        elif arr[i - 1] == arr[i]:
+            narr.append(narr[-1] + 1)
+        elif arr[i - 2] == arr[i]:
+            narr.append(narr[-2] + 1)
         else:
             narr.append(0)
         mx = max(mx, narr[-1])

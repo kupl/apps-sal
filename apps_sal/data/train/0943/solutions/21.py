@@ -1,9 +1,9 @@
-t=int(input())
-for z in range (t):
-	v,w=map(int,input().split())
-	
-	if(w>=v):
-		print(v+1)
+t = int(input())
+for z in range(t):
+    v, w = map(int, input().split())
 
-	else:
-		print(w+1)
+    if(w >= v):
+        print(v + 1)
+
+    else:
+        print(w + 1)

@@ -1,8 +1,8 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for _ in range(t):
-    n=int(input())
-    if n==2:
+    n = int(input())
+    if n == 2:
         print(n)
     else:
-        print(n//2 + 1)
+        print(n // 2 + 1)
