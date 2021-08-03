@@ -6,8 +6,9 @@ for i in range(2, len((ll))):
     repldict.update({lm[i]: ll[i]})
 print(repldict)
 
+
 def decode(encoded):
-    if encoded ==" " or encoded =="":
+    if encoded == " " or encoded == "":
         return encoded
     words = encoded.split("  ")
     engwords = []
@@ -19,4 +20,4 @@ def decode(encoded):
         engword.append(" ")
         engwords.append("".join(engword))
     r = "".join(engwords)
-    return r[0:len(r)-1]
+    return r[0:len(r) - 1]

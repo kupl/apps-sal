@@ -10,4 +10,3 @@ def multiple_of_index(arr):
         else:
             index = index + 1
     return listofmultiples
-

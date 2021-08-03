@@ -1,4 +1,4 @@
-# Return a new array consisting of elements 
+# Return a new array consisting of elements
 # which are multiple of their own index in input array (length > 1).
 
 # Some cases:
@@ -8,10 +8,8 @@
 # [68, -1, 1, -7, 10, 10] => [-1, 10]
 
 def multiple_of_index(arr):
-    b=[]
+    b = []
     for i in range(1, len(arr)):
-        if arr[i]%i == 0:
+        if arr[i] % i == 0:
             b.append(arr[i])
     return b
-                   
-
