@@ -4,7 +4,7 @@ def sort_array(array):
     array.sort()
     for i in range(len(array)):
         print(array[i])
-        
+
 
 t = int(input())
 array = []

@@ -1,8 +1,7 @@
-an=[]
+an = []
 for _ in range(int(input())):
-    n=int(input())
+    n = int(input())
     an.append(n)
-bn=sorted(an)
+bn = sorted(an)
 for i in bn:
     print(i)
-

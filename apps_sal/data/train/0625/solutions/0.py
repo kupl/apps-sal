@@ -4,7 +4,6 @@ def subCount(arr, n, k):
     for i in range(k + 1):
         mod.append(0)
 
-
     cumSum = 0
     for i in range(n):
         cumSum = cumSum + arr[i]
@@ -17,25 +16,24 @@ def subCount(arr, n, k):
 
     for i in range(k):
 
-
         if (mod[i] > 1):
             result = result + (mod[i] * (mod[i] - 1)) // 2
-
 
     result = result + mod[0]
 
     return result
-t=int(input())
+
+
+t = int(input())
 while t:
-    t=t-1
-    n=int(input())
-    a=list(map(int,input().split()))
+    t = t - 1
+    n = int(input())
+    a = list(map(int, input().split()))
     for i in range(n):
-        if a[i]==100000000:
-            a[i]=1
-        elif a[i]==900000000:
-            a[i]=9
-    s=10
+        if a[i] == 100000000:
+            a[i] = 1
+        elif a[i] == 900000000:
+            a[i] = 9
+    s = 10
 
-    print(subCount(a,n,s))
-
+    print(subCount(a, n, s))

@@ -2,15 +2,15 @@
 # code from gfg: https://www.geeksforgeeks.org/count-sub-arrays-sum-divisible-k/
 while(1):
     for _ in range(int(input())):
-        n=int(input())
-        l=list(map(int,input().split()))
-        g=[]
+        n = int(input())
+        l = list(map(int, input().split()))
+        g = []
         for i in l:
-            if i==900000000:
+            if i == 900000000:
                 g.append(9)
             else:
                 g.append(1)
-        k=10
+        k = 10
         m = []
         for i in range(k + 1):
             m.append(0)
@@ -26,5 +26,3 @@ while(1):
 
         print(r)
     break
-
-
