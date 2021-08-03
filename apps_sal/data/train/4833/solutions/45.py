@@ -1,5 +1,5 @@
 def replace_exclamation(s):
-    res =""
+    res = ""
     for i in s:
         if i in "aeouiAEOIU":
             res += "!"

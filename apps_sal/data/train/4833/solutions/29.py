@@ -3,4 +3,3 @@ def replace_exclamation(s):
         if c in "aeiouAEIOU":
             s = s.replace(c, "!")
     return s
-

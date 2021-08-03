@@ -1,9 +1,9 @@
 def replace_exclamation(s):
-    k = ['a','e','i','o','u','A','E','I','O','U']
-    t=""
+    k = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    t = ""
     for a in s:
         if a in k:
-            t+="!"
+            t += "!"
         else:
-            t+=a
+            t += a
     return t

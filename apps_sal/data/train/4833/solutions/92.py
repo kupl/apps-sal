@@ -1,5 +1,5 @@
 def replace_exclamation(s):
-    r = ["a","e","i","o","u","A","E","I","O","U"]
+    r = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
     a = list(s)
     b = []
     for x in a:
@@ -8,4 +8,3 @@ def replace_exclamation(s):
         else:
             b.append(x)
     return ''.join(b)
-

@@ -1,2 +1,2 @@
 def replace_exclamation(s):
-    return s.translate(str.maketrans('aeiouAEIOU','!!!!!!!!!!'))
+    return s.translate(str.maketrans('aeiouAEIOU', '!!!!!!!!!!'))

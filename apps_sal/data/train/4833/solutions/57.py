@@ -3,5 +3,5 @@ def replace_exclamation(s):
     for n in s:
         if n in v:
             s = s.replace(n, "!")
-    print(s)        
+    print(s)
     return s

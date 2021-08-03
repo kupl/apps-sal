@@ -11,11 +11,13 @@ ALIASES = {
     'day of week': 'SUN MON TUE WED THU FRI SAT'.split(),
 }
 
+
 def get_alias(field, value):
     try:
         return ALIASES[field].index(value)
     except:
         return int(value)
+
 
 def parse(crontab):
     def parse_field(field, value):

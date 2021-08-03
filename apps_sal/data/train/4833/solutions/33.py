@@ -6,5 +6,5 @@ def replace_exclamation(s):
             new += "!"
         else:
             new += char
-            
+
     return new

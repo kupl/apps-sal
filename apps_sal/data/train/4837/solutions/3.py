@@ -33,6 +33,7 @@ WILDCARDS = {
     }
 }
 
+
 def parse_interval(interval, type):
     rng = WILDCARDS[type]['range']
     substitutes = WILDCARDS[type].get('names', {})
@@ -43,14 +44,15 @@ def parse_interval(interval, type):
     interval = interval.replace('*', '{}-{}'.format(rng[0], rng[-1]))
     return range_parser(interval)
 
+
 def parse(crontab):
     (minute, hour, day_month, month, day_week) = crontab.split(' ')
 
     out = [
-        ['minute', parse_interval(minute, 'minute')], 
-        ['hour', parse_interval(hour, 'hour')], 
-        ['day of month', parse_interval(day_month, 'day-of-month')], 
-        ['month', parse_interval(month, 'month')], 
+        ['minute', parse_interval(minute, 'minute')],
+        ['hour', parse_interval(hour, 'hour')],
+        ['day of month', parse_interval(day_month, 'day-of-month')],
+        ['month', parse_interval(month, 'month')],
         ['day of week', parse_interval(day_week, 'day-of-week')]
     ]
 
@@ -64,6 +66,7 @@ def format(cron_conf):
         out += ["{}{}".format(str.ljust(item[0], 15), ' '.join(map(str, item[1])))]
     return '\n'.join(out)
 
+
 def range_parser(range_spec):
     """Expands the range range_spec into list"""
     range_list = []
@@ -74,6 +77,7 @@ def range_parser(range_spec):
         range_list += out
 
     return sorted(range_list)
+
 
 def parse_range(rng):
     spec = re.split(r'-|/', rng)
