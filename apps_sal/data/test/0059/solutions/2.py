@@ -19,5 +19,7 @@ for i in range(n):
         curr = i + 1
 
 # print(b)
-if all(b[i] <= b[i + 1] for i in range(n - 1)): print("YES")
-else: print('NO')
+if all(b[i] <= b[i + 1] for i in range(n - 1)):
+    print("YES")
+else:
+    print('NO')

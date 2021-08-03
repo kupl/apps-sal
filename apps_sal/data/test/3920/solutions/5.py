@@ -10,10 +10,11 @@ from operator import mul
 from itertools import product, permutations, combinations, accumulate, cycle
 from string import ascii_uppercase, ascii_lowercase, ascii_letters, digits, hexdigits, octdigits
 
-prod = lambda l: reduce(mul, l)
-prodmod = lambda l, mod: reduce(lambda x, y: mul(x, y) % mod, l)
-argmax = lambda l: l.index(max(l))
-argmin = lambda l: l.index(min(l))
+
+def prod(l): return reduce(mul, l)
+def prodmod(l, mod): return reduce(lambda x, y: mul(x, y) % mod, l)
+def argmax(l): return l.index(max(l))
+def argmin(l): return l.index(min(l))
 
 
 def read_list(t): return [t(x) for x in input().split()]

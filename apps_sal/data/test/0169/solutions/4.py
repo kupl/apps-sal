@@ -5,7 +5,7 @@ a = int(input())
 b = int(input())
 c = int(input())
 
-_b = int(b);
+_b = int(b)
 b -= c
 
 second = 0
