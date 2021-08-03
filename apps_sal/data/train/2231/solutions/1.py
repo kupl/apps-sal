@@ -3,21 +3,21 @@ import sys
 for _ in range(int(input())):
     r, c = list(map(int, input().split()))
     a = [[] for _ in range(r)]
-    row_count = [0]*r
+    row_count = [0] * r
     a_total = 0
     for y in range(r):
         a[y] = [1 if c == 'A' else 0 for c in sys.stdin.readline().rstrip()]
         row_count[y] = sum(a[y])
         a_total += row_count[y]
 
-    if a_total == r*c:
+    if a_total == r * c:
         print(0)
         continue
     if a_total == 0:
         print('MORTAL')
         continue
 
-    col_count = [0]*c
+    col_count = [0] * c
     for x in range(c):
         for y in range(r):
             col_count[x] += a[y][x]
@@ -35,4 +35,3 @@ for _ in range(int(input())):
         print(3)
         continue
     print(4)
-

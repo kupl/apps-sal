@@ -12,7 +12,7 @@ for pi, ai, bi in zip(p, a, b):
 for row in d:
     for l in row:
         l.sort(reverse=True)
-    
+
 
 r = []
 for ci in c:
@@ -31,4 +31,3 @@ for ci in c:
             jm = ci - 1
     r.append(d[im][jm].pop() if im >= 0 else -1)
 print(*r, sep=' ')
-

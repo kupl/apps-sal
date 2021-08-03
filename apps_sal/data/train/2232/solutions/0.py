@@ -5,18 +5,20 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-################################################### SOLUTION
+# SOLUTION
+
 
 def main():
     n, = read()
     curr = 2
-    for lv in range(1, n+1):
-        tgt = (lv*(lv+1))**2
+    for lv in range(1, n + 1):
+        tgt = (lv * (lv + 1))**2
         print((tgt - curr) // lv)
-        curr = lv*(lv+1)
+        curr = lv * (lv + 1)
     return
 
-#################################################### HELPERS
+# HELPERS
+
 
 def read(typ=int):
     # None: String, non-split
@@ -26,11 +28,14 @@ def read(typ=int):
         return input_line
     return list(map(typ, input_line.split()))
 
+
 def write(s="\n"):
-    if s is None: s = ""
-    if isinstance(s, list): s = " ".join(map(str, s))
+    if s is None:
+        s = ""
+    if isinstance(s, list):
+        s = " ".join(map(str, s))
     s = str(s)
     print(s, end="")
 
-write(main())
 
+write(main())

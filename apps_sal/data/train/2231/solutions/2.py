@@ -67,11 +67,11 @@ for _ in range(t):
         continue
 
     flg = 0
-    for i in range(1, h-1):
+    for i in range(1, h - 1):
         if sum(grid[i]) == w:
             flg = 1
             break
-    for i in range(1, w-1):
+    for i in range(1, w - 1):
         ok = 1
         for k in range(h):
             if not grid[k][i]:
@@ -104,4 +104,3 @@ for _ in range(t):
         continue
 
     print(4)
-

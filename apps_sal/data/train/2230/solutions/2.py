@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n = int(sys.stdin.readline())
     p = [int(pi) for pi in sys.stdin.readline().split()]
@@ -21,8 +22,8 @@ def solve():
 
     used = set()
 
-    l = [0]*3
-    ans = [-1]*m
+    l = [0] * 3
+    ans = [-1] * m
 
     for k, cj in enumerate(c):
         for i in range(l[cj], len(p_col[cj])):
@@ -34,6 +35,9 @@ def solve():
 
     print(*ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

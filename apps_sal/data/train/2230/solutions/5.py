@@ -12,8 +12,8 @@ for i in range(n):
     mb[b[i] - 1].append(i)
 
 for i in range(3):
-    ma[i].sort(key = lambda x: -p[x])
-    mb[i].sort(key = lambda x: -p[x])
+    ma[i].sort(key=lambda x: -p[x])
+    mb[i].sort(key=lambda x: -p[x])
 
 m = int(input())
 c = list(map(int, input().split(' ')))
@@ -42,4 +42,3 @@ for i in range(m):
         ans[i] = p[c1]
 
 print(' '.join(list(map(str, ans))))
-

@@ -1,53 +1,53 @@
 n = int(input())
-p = list(map(int, input().split()));
-a = list(map(int, input().split()));
-b = list(map(int, input().split()));
+p = list(map(int, input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 
-tog = [(p[i],a[i],b[i]) for i in range(0,n)];
+tog = [(p[i], a[i], b[i]) for i in range(0, n)]
 
 
-tog.sort();
+tog.sort()
 
-arr = [None,[],[],[]]
+arr = [None, [], [], []]
 
-us = [None,[],[],[]]
+us = [None, [], [], []]
 
 link = []
 
-for i in range(0,n):
-    if (tog[i][1] == tog[i][2]) :
+for i in range(0, n):
+    if (tog[i][1] == tog[i][2]):
         arr[tog[i][1]].append(i)
         us[tog[i][1]].append(True)
 
-        link.append([(tog[i][1], len(arr[tog[i][1]])-1)])
+        link.append([(tog[i][1], len(arr[tog[i][1]]) - 1)])
     else:
         arr[tog[i][1]].append(i)
         us[tog[i][1]].append(True)
         arr[tog[i][2]].append(i)
         us[tog[i][2]].append(True)
 
-        link.append([(tog[i][1], len(arr[tog[i][1]])-1),(tog[i][2], len(arr[tog[i][2]])-1)])
+        link.append([(tog[i][1], len(arr[tog[i][1]]) - 1), (tog[i][2], len(arr[tog[i][2]]) - 1)])
 
 
 #print("tog arr us link")
 ##print( tog)
 #print( arr)
 #print( us)
-#print(link)
+# print(link)
 
-ptr = [None, 0, 0, 0];
+ptr = [None, 0, 0, 0]
 
 m = int(input())
 
-buy = list(map(int, input().split()));
+buy = list(map(int, input().split()))
 
 out = []
 for c in buy:
     while (ptr[c] < len(us[c]) and not us[c][ptr[c]]):
-        ptr[c]+=1
+        ptr[c] += 1
 
     if (ptr[c] >= len(arr[c])):
-        out.append(-1);
+        out.append(-1)
     else:
         v = arr[c][ptr[c]]
         us[c][ptr[c]] = False
@@ -60,10 +60,3 @@ for c in buy:
     #print("us:", us)
 
 print(" ".join(map(str, out)))
-        
-        
-
-
-
-
-

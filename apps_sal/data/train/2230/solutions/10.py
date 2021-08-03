@@ -12,7 +12,7 @@ for i in range(3):
     for j in range(3):
         t[i][j].sort()
 for i in range(m):
-    m1 = 10 ** 10 
+    m1 = 10 ** 10
     m2 = 10 ** 10
     for j in range(3):
         if len(t[queue[i] - 1][j]) and pointers[queue[i] - 1][j] < len(t[queue[i] - 1][j]) and \
@@ -25,11 +25,10 @@ for i in range(m):
             m2 = t[j][queue[i] - 1][pointers[j][queue[i] - 1]]
             pos_i = j
     if m1 == 10 ** 10 and m2 == 10 ** 10:
-        print(-1, end = ' ')
+        print(-1, end=' ')
     elif m1 < m2:
         pointers[queue[i] - 1][pos_j] += 1
-        print(m1, end = ' ')
+        print(m1, end=' ')
     else:
         pointers[pos_i][queue[i] - 1] += 1
-        print(m2, end = ' ')
-
+        print(m2, end=' ')

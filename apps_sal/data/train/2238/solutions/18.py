@@ -4,6 +4,7 @@ def get_near_power_of_two(x):
         b <<= 1
     return b >> 1
 
+
 n = int(input())
 for _ in range(n):
     l, r = list(map(int, input().split()))
@@ -12,4 +13,3 @@ for _ in range(n):
     ld = l | d
     rd = r | d
     print(rd if rd == r else ld)
-

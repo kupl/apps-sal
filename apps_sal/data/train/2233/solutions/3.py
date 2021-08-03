@@ -1,6 +1,10 @@
 # ===============================================================================================
 # importing some useful libraries.
 
+from collections import defaultdict
+from functools import reduce
+from types import GeneratorType
+from sys import stderr
 from fractions import Fraction
 import sys
 import os
@@ -29,7 +33,6 @@ from bisect import bisect
 # fast I/O region
 
 BUFSIZE = 8192
-from sys import stderr
 
 
 class FastIO(IOBase):
@@ -99,12 +102,12 @@ else:
 
 # ===============================================================================================
 ### START ITERATE RECURSION ###
-from types import GeneratorType
 
 
 def iterative(f, stack=[]):
     def wrapped_func(*args, **kwargs):
-        if stack: return f(*args, **kwargs)
+        if stack:
+            return f(*args, **kwargs)
         to = f(*args, **kwargs)
         while True:
             if type(to) is GeneratorType:
@@ -112,7 +115,8 @@ def iterative(f, stack=[]):
                 to = next(to)
                 continue
             stack.pop()
-            if not stack: break
+            if not stack:
+                break
             to = stack[-1].send(to)
         return to
 
@@ -170,17 +174,16 @@ def pow(x, y, p):
     return res
 
 
-from functools import reduce
-
-
 def factors(n):
     return set(reduce(list.__add__,
                       ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
 
 
 def gcd(a, b):
-    if a == b: return a
-    while b > 0: a, b = b, a % b
+    if a == b:
+        return a
+    while b > 0:
+        a, b = b, a % b
     return a
 
 
@@ -225,7 +228,7 @@ def gcd(a, b):
 #     return m
 
 
-##to find factorial and ncr
+# to find factorial and ncr
 # N=100000
 # mod = 10**9 +7
 # fac = [1, 1]
@@ -245,7 +248,7 @@ def gcd(a, b):
 #         return fac[n] * (finv[r] * finv[n - r] % mod) % mod
 
 
-##############Find sum of product of subsets of size k in a array
+# Find sum of product of subsets of size k in a array
 # ar=[0,1,2,3]
 # k=3
 # n=len(ar)-1
@@ -271,8 +274,6 @@ def N():
 
 
 # =========================================================================================
-from collections import defaultdict
-
 
 
 def numberOfSetBits(i):
@@ -281,34 +282,16 @@ def numberOfSetBits(i):
     return (((i + (i >> 4) & 0xF0F0F0F) * 0x1010101) & 0xffffffff) >> 24
 
 
-
 def solve():
-    n=N()
-    ar=lis()
+    n = N()
+    ar = lis()
     for i in range(len(ar)):
-        m=ar[i]
+        m = ar[i]
         v = m // 2
         u = v // 2
         w = (v - u)
         print((u * w + u + w + 1) % mod)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 solve()
-#testcase(int(inp()))
-
+# testcase(int(inp()))

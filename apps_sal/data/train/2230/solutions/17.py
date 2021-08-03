@@ -21,4 +21,3 @@ for ci in c:
         t[i][1], t[i][2] = 0, 0
     r.append(t[i][0] if i < n else - 1)
 print(*r, sep=' ')
-
