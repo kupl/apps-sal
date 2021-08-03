@@ -15,7 +15,8 @@ ans = 0
 for i in ps:
     ma = -1
     mi = 10000000
-    s = 0; k = 0
+    s = 0
+    k = 0
     for j in range(n):
         if i[j] == '1':
             k += 1

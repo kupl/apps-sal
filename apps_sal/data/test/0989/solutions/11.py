@@ -21,7 +21,8 @@ for i in range(n):
             if(i == n - 1):
                 b.append([a[i], count])
 while k:
-    if(len(b) == 1): break
+    if(len(b) == 1):
+        break
     if(b[0][1] < b[len(b) - 1][1]):
         if(k >= (b[1][0] - b[0][0]) * b[0][1]):
             b[1][1] += b[0][1]

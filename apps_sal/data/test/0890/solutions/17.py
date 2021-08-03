@@ -7,7 +7,7 @@ r = int(r)
 x = int(x)
 numbers = [int(z) for z in input().split()]
 numbers = sorted(numbers)
-count = 0;
+count = 0
 for z in range(2, len(numbers) + 1):
     for subset in itertools.combinations(numbers, z):
         total = sum(subset)

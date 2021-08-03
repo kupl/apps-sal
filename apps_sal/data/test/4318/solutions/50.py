@@ -7,7 +7,8 @@ for i in range(N):
     q = 1
     for j in range(i):
         q = 0
-        if hotel[j] > hotel[i]: break
+        if hotel[j] > hotel[i]:
+            break
         else:
             q = 1
     if q == 1:
