@@ -33,5 +33,7 @@ else:
                 ans += m
                 # print(ans,i)
 
-    if ans > a[0] or ans == 0: print((-1))
-    else: print((a[0] - ans))
+    if ans > a[0] or ans == 0:
+        print((-1))
+    else:
+        print((a[0] - ans))

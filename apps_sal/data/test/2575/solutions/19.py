@@ -1,4 +1,4 @@
-i = 1;
+i = 1
 angles = set()
 while True:
     angle = (180 * i) / (i + 2)

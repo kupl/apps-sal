@@ -1,7 +1,9 @@
 import collections as cc
 import itertools as it
 import bisect as bi
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 n, m = I()
 ed = [I() for i in range(m)]
 ed.sort(key=lambda x: x[2])

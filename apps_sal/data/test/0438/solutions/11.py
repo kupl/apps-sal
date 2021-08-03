@@ -4,7 +4,8 @@ size = n
 for i in range(1, size + 1):
     n -= i
     k += 1
-    if n <= i: break
+    if n <= i:
+        break
 
 print(k)
 L = size

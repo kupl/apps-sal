@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
 
 n, m = I()
 ed = [I() for i in range(m)]
@@ -23,7 +24,8 @@ def union(a, b):
     return 0
 
 
-an = 0; ce = 0
+an = 0
+ce = 0
 pos = [1] * m
 i = 0
 while ce < n - 1:

@@ -15,12 +15,15 @@ for i in range(K - 1):
     ca = (A >> i) & 1
     for j in range(2):
         for k in range(2):
-            if dp[i][j][k] == -1: continue
+            if dp[i][j][k] == -1:
+                continue
             for na in range(2):
                 for nb in range(2):
-                    if (na ^ nb) != cx: continue
+                    if (na ^ nb) != cx:
+                        continue
                     ns = na + nb + j
-                    if ns % 2 != cs: continue
+                    if ns % 2 != cs:
+                        continue
                     nj = ns // 2
                     if ca < na:
                         nk = 1

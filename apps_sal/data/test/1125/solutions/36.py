@@ -1,6 +1,8 @@
 import numpy as np
 
-LI = lambda: list(map(int, input().split()))
+
+def LI(): return list(map(int, input().split()))
+
 
 N = int(input())
 A = LI()
@@ -11,7 +13,7 @@ def main():
     for a in A[2:]:
         s ^= a
     t = A[0] + A[1]
-    f = lambda x: list(map(int, format(x, "050b")[::-1]))
+    def f(x): return list(map(int, format(x, "050b")[::-1]))
     sb = f(s)
     tb = f(t)
     ab = f(A[0])

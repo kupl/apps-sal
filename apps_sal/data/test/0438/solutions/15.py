@@ -22,7 +22,8 @@ def candies(n, arr):
             arr.append(i)
             if candies(n, arr) == 0:
                 break
-            if i in arr: arr.remove(i);
+            if i in arr:
+                arr.remove(i)
     # print(cur)
     return 1
 

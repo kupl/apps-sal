@@ -13,14 +13,18 @@ def main(n, a):
     # d^x,d^yは条件を満たす。d^x+d^y=d^x^d^y + 2*((d^x)&(d^y))= z + 2*d = s
     # (d^x)^(d^y)=x^y=z
     # (d^x)&(d^y)=d (z & d = 0 のときのみ)
-    if s - z < 0 or (s - z) % 2 == 1: return -1
+    if s - z < 0 or (s - z) % 2 == 1:
+        return -1
     d = (s - z) // 2
-    if d & z != 0: return -1
-    if not d <= a[0]: return -1
+    if d & z != 0:
+        return -1
+    if not d <= a[0]:
+        return -1
     part = []
     i = 0
     while z // pow(2, i):
-        if (z // pow(2, i)) % 2 == 1: part.append(pow(2, i))
+        if (z // pow(2, i)) % 2 == 1:
+            part.append(pow(2, i))
         i += 1
     ans = float('inf')
     k = len(part)

@@ -10,7 +10,8 @@ def get(v):
 
 
 def join(u, v):
-    u = get(u); v = get(v)
+    u = get(u)
+    v = get(v)
     if u != v:
         if size[u] < size[v]:
             u, v = v, u

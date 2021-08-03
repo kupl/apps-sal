@@ -39,8 +39,10 @@ def solve():
                 if rbit[40 - i] == 1:
                     if A0 + pow(2, 40 - i) <= A[0]:
                         A0 += pow(2, 40 - i)
-        if A0 > 0: print(A[0] - A0)
-        else: print(-1)
+        if A0 > 0:
+            print(A[0] - A0)
+        else:
+            print(-1)
 
     return 0
 
