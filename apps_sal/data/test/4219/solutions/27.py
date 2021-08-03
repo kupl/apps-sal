@@ -13,10 +13,13 @@ ans = 0
 for i in range(2**N):
     isContradiction = False
     for j in range(N):
-        if not i & 1 << j: continue
+        if not i & 1 << j:
+            continue
         for x, y in testimonies[j]:
-            if i & 1 << x: x = 1
-            else: x = 0
+            if i & 1 << x:
+                x = 1
+            else:
+                x = 0
             if not x == y:
                 isContradiction = True
                 break

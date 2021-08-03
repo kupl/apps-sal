@@ -10,13 +10,16 @@ ans = 0
 for bit in range(1 << n):
     honests = [0] * n
     for i in range(n):
-        if bit & 1 << i: honests[i] = 1
+        if bit & 1 << i:
+            honests[i] = 1
     flg = True
     for i in range(n):
         if honests[i]:
             for j in range(n):
-                if g[i][j] == -1: continue
-                if g[i][j] != honests[j]: flg = False
+                if g[i][j] == -1:
+                    continue
+                if g[i][j] != honests[j]:
+                    flg = False
     if flg:
         ans = max(ans, honests.count(1))
 print(ans)

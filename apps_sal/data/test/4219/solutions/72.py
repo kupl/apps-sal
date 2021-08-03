@@ -25,11 +25,14 @@ ans = 0
 for i in range(1 << n):
     ok = True
     for j in range(n):
-        if not is_honest(i, j): continue
+        if not is_honest(i, j):
+            continue
 
         for x, y in Dup[j]:
-            if y == 0 and is_honest(i, x): ok = False
-            if y == 1 and not is_honest(i, x): ok = False
+            if y == 0 and is_honest(i, x):
+                ok = False
+            if y == 1 and not is_honest(i, x):
+                ok = False
 
     if ok:
         ans = max(ans, honest_cnt(i))

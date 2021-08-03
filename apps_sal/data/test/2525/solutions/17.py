@@ -1,5 +1,6 @@
 from collections import deque
-S = str(input()); s = []
+S = str(input())
+s = []
 for i in range(len(S)):
     s.append(S[i])
 s = deque(s)

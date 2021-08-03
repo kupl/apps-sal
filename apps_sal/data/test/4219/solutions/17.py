@@ -11,7 +11,8 @@ for i in range(2 ** n):  # 正直者と真偽不明の人がそれぞれ誰な�
     c, skip = [0] * n, False
 
     for j in range(n):
-        if (i >> j) & 1: c[j] = 1
+        if (i >> j) & 1:
+            c[j] = 1
 
     for j in range(n):
         if c[j] == 1:
@@ -19,7 +20,9 @@ for i in range(2 ** n):  # 正直者と真偽不明の人がそれぞれ誰な�
                 if c[l[j][k][0] - 1] != l[j][k][1]:  # 正直者の証言と仮定に矛盾が生じた場合
                     skip = True
                     break
-        if skip: break
-    else: ans = max(ans, sum(c))
+        if skip:
+            break
+    else:
+        ans = max(ans, sum(c))
 
 print(ans)

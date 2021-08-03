@@ -6,5 +6,7 @@ a = input().split()
 x = int(a[k - 1])
 b = input().split()
 y = int(b[m - p])
-if x < y: print("YES")
-else: print("NO")
+if x < y:
+    print("YES")
+else:
+    print("NO")

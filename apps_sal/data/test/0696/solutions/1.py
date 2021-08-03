@@ -5,7 +5,8 @@ def f(x, p):
     y = 1
     for i in range(p - 2):
         y = (y * x) % p
-        if y == 1: return False
+        if y == 1:
+            return False
     return (y * x) % p == 1
 
 

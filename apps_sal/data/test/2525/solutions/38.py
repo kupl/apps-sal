@@ -10,10 +10,14 @@ for _ in range(q):
     else:
         _, f, c = query.split()
         if inv:
-            if f == '1': su.append(c)
-            else: pr.append(c)
+            if f == '1':
+                su.append(c)
+            else:
+                pr.append(c)
         else:
-            if f == '1': pr.append(c)
-            else: su.append(c)
+            if f == '1':
+                pr.append(c)
+            else:
+                su.append(c)
 ans = ''.join(pr)[::-1] + s + ''.join(su)
 print(ans[::-1] if inv else ans)
