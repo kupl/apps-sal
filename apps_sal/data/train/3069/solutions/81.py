@@ -1,5 +1,5 @@
 def greet(language='english'):
-    data={'english': 'Welcome',
+    data = {'english': 'Welcome',
             'czech': 'Vitejte',
             'danish': 'Velkomst',
             'dutch': 'Welkom',

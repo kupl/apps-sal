@@ -19,4 +19,3 @@ def greet(language):
         'welsh': 'Croeso'
     }
     return welcoming_dict.get(language, 'Welcome')
-

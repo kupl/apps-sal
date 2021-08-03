@@ -1,6 +1,6 @@
 def greet(language):
     d1 = {
-        '':'Welcome',
+        '': 'Welcome',
         'english': 'Welcome',
         'czech': 'Vitejte',
         'danish': 'Velkomst',
@@ -17,10 +17,9 @@ def greet(language):
         'polish': 'Witamy',
         'spanish': 'Bienvenido',
         'swedish': 'Valkommen',
-        'welsh': 'Croeso'    
+        'welsh': 'Croeso'
     }
     if not d1.get(language):
         return 'Welcome'
-    else: 
+    else:
         return d1[language]
-

@@ -1,1 +1,1 @@
-getVolumeOfCubiod = lambda _,__,___: _*__*___
+def getVolumeOfCubiod(_, __, ___): return _ * __ * ___

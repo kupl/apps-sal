@@ -18,8 +18,8 @@ def greet(language):
         'spanish': 'Bienvenido',
         'swedish': 'Valkommen',
         'welsh': 'Croeso'
-        }
+    }
     return languages[language] if language in list(languages.keys()) else 'Welcome'
 
-print((greet("czech")))
 
+print((greet("czech")))

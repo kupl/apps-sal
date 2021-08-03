@@ -9,5 +9,6 @@ move = ChainMap(
 new = (al[(i + move[c]) % 26] for i, c in enumerate(al))
 mapping = {c: c if c2 in 'code' else c2 for c, c2 in zip(al, new)}
 
+
 def vowel_back(st):
     return ''.join(map(mapping.get, st))

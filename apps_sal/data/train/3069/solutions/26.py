@@ -18,4 +18,5 @@ DICT = {
     'welsh': 'Croeso'
 }
 
-greet = lambda language: DICT.get(language, 'Welcome')
+
+def greet(language): return DICT.get(language, 'Welcome')

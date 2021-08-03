@@ -1,2 +1,2 @@
 import numpy
-getVolumeOfCubiod = lambda *p : numpy.prod(p)
+getVolumeOfCubiod = lambda *p: numpy.prod(p)

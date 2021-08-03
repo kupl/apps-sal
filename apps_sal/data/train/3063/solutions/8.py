@@ -15,5 +15,6 @@ prices = {
     for juice in juices.split()
 }
 
+
 def mix_fruit(order):
     return round(mean(prices.get(juice.title(), menu[extra]) for juice in order))

@@ -1,3 +1,4 @@
 from functools import reduce
 
-getVolumeOfCubiod = lambda l,w,h: reduce(lambda x,y:x*y, [l,w,h])
+
+def getVolumeOfCubiod(l, w, h): return reduce(lambda x, y: x * y, [l, w, h])

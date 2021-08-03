@@ -5,5 +5,6 @@ LANGUAGE = {
     'polish': 'Witamy', 'spanish': 'Bienvenido', 'swedish': 'Valkommen', 'welsh': 'Croeso'
 }
 
+
 def greet(language):
     return LANGUAGE.get(language, 'Welcome')

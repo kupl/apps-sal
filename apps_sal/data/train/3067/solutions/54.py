@@ -1,3 +1,3 @@
 def getVolumeOfCubiod(length, width, height):
-    var = lambda x, y, z: x*y*z
+    def var(x, y, z): return x * y * z
     return var(length, width, height)

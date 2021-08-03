@@ -4,5 +4,3 @@ def getVolumeOfCubiod(length, width, height):
         return int(result)  # Returning int becuase it is possible
     else:
         return result  # Returning a float because the value isn't a whole number
-
-

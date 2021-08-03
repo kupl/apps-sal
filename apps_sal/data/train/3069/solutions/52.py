@@ -18,5 +18,6 @@ def greet(language):
         'swedish': 'Valkommen',
         'welsh': 'Croeso'
     }
-    if not language in data: return "Welcome"
+    if not language in data:
+        return "Welcome"
     return data[language]

@@ -1,5 +1,5 @@
 def greet(language):
-    
+
     my_data_base = {
         'english': 'Welcome',
         'czech': 'Vitejte',
@@ -18,11 +18,10 @@ def greet(language):
         'spanish': 'Bienvenido',
         'swedish': 'Valkommen',
         'welsh': 'Croeso'}
-    
+
     if language in list(my_data_base.keys()):
         return my_data_base[language]
     else:
         return "Welcome"
-    
-    #your code here
 
+    # your code here

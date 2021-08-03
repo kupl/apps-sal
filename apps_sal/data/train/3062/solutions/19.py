@@ -1,8 +1,10 @@
 class Numerical_paindrom_exception(Exception):
     def __init__(self):
         pass
+
     def __str__(self):
         return 'Not valid'
+
 
 def palindrome(num):
     try:

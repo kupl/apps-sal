@@ -5,5 +5,6 @@ dct = {'english': 'Welcome', 'czech': 'Vitejte', 'danish': 'Velkomst',
        'lithuanian': 'Laukiamas', 'polish': 'Witamy', 'spanish': 'Bienvenido',
        'swedish': 'Valkommen', 'welsh': 'Croeso'}
 
+
 def greet(language):
     return dct.get(language, 'Welcome')

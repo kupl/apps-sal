@@ -1,2 +1,1 @@
-getVolumeOfCubiod = lambda l,w,d : l*w*d
-
+def getVolumeOfCubiod(l, w, d): return l * w * d

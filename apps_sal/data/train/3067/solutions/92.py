@@ -1,3 +1,3 @@
 def getVolumeOfCubiod(length, width, height):
     # Code goes here
-    return length*width*height
+    return length * width * height

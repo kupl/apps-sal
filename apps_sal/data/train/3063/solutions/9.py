@@ -10,4 +10,4 @@ def mix_fruit(arr):
             cost.append(7)
         else:
             cost.append(9)
-    return round(sum(cost)/len(cost))
+    return round(sum(cost) / len(cost))

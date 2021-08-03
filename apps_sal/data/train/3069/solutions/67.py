@@ -22,10 +22,10 @@ listlang = {
     '': 'Welcome',
     2: 'Welcome'
 }
-    
-def greet(language = 'Welcome'):
+
+
+def greet(language='Welcome'):
     if language in listlang:
         return(listlang[language])
     else:
         return("Welcome")
-
