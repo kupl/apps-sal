@@ -14,7 +14,8 @@ for i in range(n):
         q = {}
         while s:
             x = s.pop()
-            if c[x] not in q: q[c[x]] = 0
+            if c[x] not in q:
+                q[c[x]] = 0
             q[c[x]] += 1
             for j in g[x]:
                 if v[j] == -1:

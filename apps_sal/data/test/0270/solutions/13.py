@@ -30,7 +30,8 @@ for i in range(n - 2, -1, -1):
     m = 0
     for v in g[i]:
         res += dp0[v]
-        if m < dp0[v]: m = dp0[v]
+        if m < dp0[v]:
+            m = dp0[v]
     dp0[i] = 1 + res / L[i]
 
     if L[i] >= 2:

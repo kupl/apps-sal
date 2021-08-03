@@ -9,16 +9,19 @@ for i in range(m):
 visited = [False for i in range(n)]
 ans = 0
 for i in range(n):
-    if visited[i]: continue
+    if visited[i]:
+        continue
     s = [i]
     visited[i] = True
     qeue = {}
     while s:
         x = s.pop()
-        if a[x] not in qeue: qeue[a[x]] = 0
+        if a[x] not in qeue:
+            qeue[a[x]] = 0
         qeue[a[x]] += 1
         for j in tr[x]:
-            if visited[j]: continue
+            if visited[j]:
+                continue
             visited[j] = True
             s.append(j)
     neu, maxi = 0, 0

@@ -37,7 +37,8 @@ def solve():
 
     ans = expes[-1]
     for vRem in range(N - 1):
-        if outdegs[vRem] == 1: continue
+        if outdegs[vRem] == 1:
+            continue
         values = []
         prob, expe, outdeg = probs[vRem], expes[vRem], outdegs[vRem]
         for v2 in adjL[vRem]:

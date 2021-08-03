@@ -65,7 +65,8 @@ def __starting_point():
 
     ans = 0
     for sock_set in collection:
-        if not sock_set: continue
+        if not sock_set:
+            continue
         count = {}
         set_max = 1
         for sock in sock_set:

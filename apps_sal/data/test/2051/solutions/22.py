@@ -4,7 +4,8 @@ c = list([x - 1 for x in c])
 adj = [[] for _ in range(n)]
 edges = list(list(map(int, input().split())) for _ in range(m))
 for u, v in edges:
-    u -= 1; v -= 1
+    u -= 1
+    v -= 1
     adj[u].append(v)
     adj[v].append(u)
 

@@ -9,7 +9,8 @@ def union(n1, n2):
     p1 = find(n1)
     p2 = find(n2)
 
-    if p1 != p2: p[p1] = p2
+    if p1 != p2:
+        p[p1] = p2
 
 
 n, m, k = map(int, input().split())

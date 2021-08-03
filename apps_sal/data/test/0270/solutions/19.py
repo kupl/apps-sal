@@ -11,11 +11,13 @@ def main(n, m, g, uv):
     todo = [n - 1]
 
     def dfs(v, x):
-        if vary[v] < inf: return vary[v]
+        if vary[v] < inf:
+            return vary[v]
         ret = 0
         cnt = 0
         for i, nv in g[v]:
-            if i == x: continue
+            if i == x:
+                continue
             tmp = dfs(nv, x) + 1
             eary[i] = tmp
             ret += tmp

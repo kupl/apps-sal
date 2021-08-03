@@ -24,7 +24,8 @@ class Unionfind:
     def unite(self, x, y):
         rx, ry = self.root(x), self.root(y)
 
-        if rx == ry: return False
+        if rx == ry:
+            return False
 
         if self.rank[rx] < self.rank[ry]:
             rx, ry = ry, rx

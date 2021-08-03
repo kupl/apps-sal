@@ -23,7 +23,8 @@ for i in range(N - 1):
 ans = dp[0]
 for i in range(N - 1):
     l = len(es[i])
-    if l < 2: continue
+    if l < 2:
+        continue
     before = 0
     after_whole = 0
     for to in es[i]:

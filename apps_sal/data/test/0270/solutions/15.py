@@ -23,7 +23,8 @@ def solve():
 
     ans = dp[0]
     for vRem in range(N):
-        if outdegs[vRem] == 1: continue
+        if outdegs[vRem] == 1:
+            continue
         sumDP, maxDP = 0, -1
         for v2 in adjL[vRem]:
             sumDP += dp[v2]

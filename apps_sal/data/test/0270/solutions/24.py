@@ -32,7 +32,8 @@ def main():
         p = 0
         for ou in ot[u]:
             p += pe[ou][u]
-        if u == 0: p = 1
+        if u == 0:
+            p = 1
         pn[u] = p
         sz = len(to[u])
         for ku in to[u]:
@@ -42,7 +43,8 @@ def main():
     dx = 0
     for u in range(n - 1):
         sz = len(to[u])
-        if sz == 1: continue
+        if sz == 1:
+            continue
         mx = 0
         for ku in to[u]:
             mx = max(ev[ku], mx)
