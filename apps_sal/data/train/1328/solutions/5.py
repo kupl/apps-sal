@@ -1,11 +1,11 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for _ in range(t):
-    n=input().strip()
-    cnt=0
-    
+    n = input().strip()
+    cnt = 0
+
     for i in n:
-        if i!='4' and i!='7':
-            cnt+=1
-            
+        if i != '4' and i != '7':
+            cnt += 1
+
     print(cnt)

@@ -2,9 +2,9 @@ t = int(input())
 
 for _ in range(t):
 
-	n = int(input())
+    n = int(input())
 
-	if n == 3:
-		print('A')
-	else:
-		print('B')
+    if n == 3:
+        print('A')
+    else:
+        print('B')
