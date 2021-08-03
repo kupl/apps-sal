@@ -1,14 +1,16 @@
+import sys
 3
 
-import sys
 
 #deb = print
+
 def deb(*a): pass
+
 
 _ = sys.stdin.readline()
 
 birds = sys.stdin.readline().split(" ")
-birds [-1] = birds[-1].strip("\n")
+birds[-1] = birds[-1].strip("\n")
 
 _ = sys.stdin.readline()
 
@@ -46,9 +48,6 @@ for line, bird in shoot_rec:
     deb(lines)
 
 
-
 deb("#########")
 for i in lines:
     print(i)
-
-

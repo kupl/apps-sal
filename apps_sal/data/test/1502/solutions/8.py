@@ -16,4 +16,4 @@ elif N == 6:
 elif N == 7:
     print(11)
 else:
-    print(N-8)
+    print(N - 8)

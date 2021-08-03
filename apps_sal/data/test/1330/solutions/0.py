@@ -6,8 +6,8 @@ k = []
 for i in range(d):
     k.append(int(input()))
 
-vis = [False for i in range(m+1)]
-match = [-1 for i in range(m+1)]
+vis = [False for i in range(m + 1)]
+match = [-1 for i in range(m + 1)]
 
 
 def dfs(u: int) -> bool:
@@ -29,13 +29,12 @@ mex = 0
 ans = []
 for i in range(d - 1, -1, -1):
     while True:
-        vis = [False for j in range(m+1)]
+        vis = [False for j in range(m + 1)]
         if not dfs(mex):
             break
         mex += 1
     ans.append(mex)
-    e[p[k[i]-1]].append(c[k[i]-1])
+    e[p[k[i] - 1]].append(c[k[i] - 1])
 
 for i in reversed(ans):
     print(i)
-

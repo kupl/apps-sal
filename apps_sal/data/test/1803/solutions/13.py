@@ -12,7 +12,7 @@ for i in range(shots):
     x = x - 1
     if x == 0:
         total[1] += total[0] - y
-    elif x == len(total)-1:
+    elif x == len(total) - 1:
         total[x - 1] += y - 1
     else:
         total[x + 1] += total[x] - y
@@ -20,4 +20,3 @@ for i in range(shots):
     total[x] = 0
 for i in total:
     print(i)
-

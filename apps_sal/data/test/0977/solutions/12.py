@@ -17,15 +17,19 @@ def fa(a, x, p):
         return False
     else:
         return True
+
+
 def solve():
     n, p = map(int, input().split())
-    lst = list(map(int,input().split()))
+    lst = list(map(int, input().split()))
     lst.sort()
     ans = []
     for x in range(max(max(lst) + 1, p + 1)):
-        if fa(lst,x,p):
+        if fa(lst, x, p):
             ans.append(x)
     print(len(ans))
     print(*ans)
+
+
 for i in range(1):
     solve()

@@ -11,4 +11,3 @@ for _ in range(m):
         a[x] += a[x - 1] - y
     a[x - 1] = 0
 print('\n'.join(map(str, a)))
-

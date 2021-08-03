@@ -10,4 +10,3 @@ if '*' in a:
         print('NO')
 else:
     print('YES' if a == b else 'NO')
-

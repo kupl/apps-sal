@@ -31,4 +31,3 @@ elif n == 14:
     print(6)
 elif n == 15:
     print(7)
-

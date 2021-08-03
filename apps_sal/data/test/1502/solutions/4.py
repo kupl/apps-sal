@@ -2,6 +2,7 @@
 def int_to_bool(n):
     return [bool(n & (1 << i)) for i in range(4)]
 
+
 a = int(input())
 
 

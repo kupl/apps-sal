@@ -31,5 +31,8 @@ def main() -> int:
 
 
 def __starting_point():
-    (main());return
+    (main())
+    return
+
+
 __starting_point()

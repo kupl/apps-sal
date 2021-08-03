@@ -6,8 +6,8 @@ def solve(n, m, s, t):
     else:
         return s == t
 
+
 n, m = list(map(int, input().split()))
 s = input()
 t = input()
 print(['NO', 'YES'][solve(n, m, s, t)])
-

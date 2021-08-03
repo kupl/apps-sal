@@ -1,5 +1,7 @@
 n, p = map(int, input().split())
 a = list(map(int, input().split()))
+
+
 def calc(x):
     nonlocal n, p, a
     o = [0] * (n + 1)
@@ -14,6 +16,8 @@ def calc(x):
         ans = ans * s % p
         s -= 1
     return ans
+
+
 ans = []
 for x in range(4020):
     if calc(x):
