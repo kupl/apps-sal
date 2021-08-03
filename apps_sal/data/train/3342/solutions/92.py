@@ -1,6 +1,6 @@
 def pattern(n):
     z = ''
-    for x in range(1, n+1):
+    for x in range(1, n + 1):
         i = 0
         while i < x:
             z = z + str(x)

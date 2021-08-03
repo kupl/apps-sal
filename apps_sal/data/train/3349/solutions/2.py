@@ -7,4 +7,3 @@ def find_missing_number(sequence):
         if n != i + 1:
             return i + 1
     return 0
-

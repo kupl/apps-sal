@@ -1,5 +1,6 @@
 def find_missing_number(s):
-    if s == "":    return 0
+    if s == "":
+        return 0
     l = s.split(" ")
     for i in l:
         if not i.isdigit():

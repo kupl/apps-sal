@@ -4,7 +4,7 @@ def find_missing_number(sequence):
         return 0
     for i in range(0, len(arr)):
         try:
-            arr[i] = int(arr[i])            
+            arr[i] = int(arr[i])
         except ValueError:
             return 1
     c = 1

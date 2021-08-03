@@ -14,4 +14,3 @@ def pattern(n):
             pattern = []
         n = int(n)
     return "\n".join(ans)
-

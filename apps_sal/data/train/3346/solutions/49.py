@@ -6,6 +6,8 @@ def IsPrime(n):
             return False
         i += 1
     return True
+
+
 def gap(g, m, n):
     a = []
     while m < n:

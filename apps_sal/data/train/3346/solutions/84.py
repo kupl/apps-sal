@@ -1,6 +1,5 @@
 def gap(g, m, n):
-    
-    
+
     def prime(x):
         i, answer = 2, True
         while i <= x ** 0.5:
@@ -9,7 +8,7 @@ def gap(g, m, n):
                 return answer
             i += 1
         return answer
-    
+
     for i in range(m, n + 1):
         if prime(i):
             if prime(i + g):
@@ -18,6 +17,6 @@ def gap(g, m, n):
                     if prime(j):
                         check = False
                         break
-                if check:        
+                if check:
                     return [i, i + g]
     return None

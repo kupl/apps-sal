@@ -5,12 +5,12 @@ def is_prime(x):
             return False
         p += 1
     return True
-    
+
 
 def gap(g, m, n):
     if m % 2 == 0:
         m += 1
-    
+
     prevPrime = -10000
     for x in range(m, n + 1, 2):
         if is_prime(x):
@@ -19,5 +19,3 @@ def gap(g, m, n):
             else:
                 prevPrime = x
     return None
-            
-

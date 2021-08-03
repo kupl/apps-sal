@@ -11,10 +11,10 @@ def find_missing_number(sequence):
         n += 1
     return 0
 
+
 def is_valid(sequence):
     numbers = sequence.split(' ')
     for a in numbers:
         if not a.isdigit():
             return False
     return True
-

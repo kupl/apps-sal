@@ -1,9 +1,10 @@
 def div2(n):
     i = 0
-    while n%2 == 0:
-        n = n/2
+    while n % 2 == 0:
+        n = n / 2
         i += 1
     return n, i
+
 
 def sharkovsky(a, b):
     n1, rem1 = div2(a)
@@ -19,4 +20,3 @@ def sharkovsky(a, b):
             return n1 < n2
         else:
             return rem1 < rem2
-

@@ -5,7 +5,7 @@ def find_missing_number(sequence):
     int_sequence = sorted(int(d) for d in sequence if d.isdigit())
     if len(sequence) != len(int_sequence):
         return 1
-    control = [n for n in range(1, int_sequence[-1]+1)]
+    control = [n for n in range(1, int_sequence[-1] + 1)]
     for n, j in zip(control, int_sequence):
         if n != j:
             return n

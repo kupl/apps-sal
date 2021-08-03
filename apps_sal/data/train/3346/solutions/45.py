@@ -1,7 +1,8 @@
 import math
 
+
 def is_prime(num):
-    #I'm sure this could be optimized
+    # I'm sure this could be optimized
     if num % 2 == 0:
         return False
     else:
@@ -9,6 +10,7 @@ def is_prime(num):
             if num % i == 0:
                 return False
     return True
+
 
 def gap(g, m, n):
     gapcounter = 0

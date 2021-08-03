@@ -3,14 +3,16 @@ def factorTwos(n):
     while not n % 2:
         n //= 2
         twos += 1
-    
+
     return (twos, n)
-    
-#not the prettiest, but it works
+
+# not the prettiest, but it works
+
+
 def sharkovsky(a, b):
     twosA, remA = factorTwos(a)
     twosB, remB = factorTwos(b)
-    
+
     if remA == 1:
         return remB == 1 and twosA > twosB
     elif remB == 1:

@@ -9,4 +9,3 @@ def find_missing_number(sequence):
         if b not in sequence:
             return b
     return 0
-

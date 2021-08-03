@@ -4,7 +4,7 @@ def pattern(n):
         for y in range(1, x + 1):
             output += str(x)
         output += "\n"
-    
+
     output = output[:len(output) - 1]
-    
+
     return output
