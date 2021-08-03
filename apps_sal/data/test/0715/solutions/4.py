@@ -4,12 +4,14 @@ def main():
 
     decides = []
     Min = min(arr)
-    tmp = arr[:]; tmp.remove(Min)
+    tmp = arr[:]
+    tmp.remove(Min)
     if Min * 2 <= min(tmp):
         decides.append(s[arr.index(Min)])
 
     Max = max(arr)
-    tmp = arr[:]; tmp.remove(Max)
+    tmp = arr[:]
+    tmp.remove(Max)
     if Max >= max(tmp) * 2:
         decides.append(s[arr.index(Max)])
 

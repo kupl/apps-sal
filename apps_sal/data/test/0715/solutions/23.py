@@ -17,4 +17,5 @@ if min_ind == 3 and max_ind != 3:
     print(chr(65 + v.index(min_s)))
 elif max_ind == 3 and min_ind != 3:
     print(chr(65 + v.index(max_s)))
-else: print('C')
+else:
+    print('C')

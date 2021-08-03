@@ -20,7 +20,8 @@ class IOHandlerObject(object):
             return [int(x) for x in inputs.split()]
 
     def writeOutput(self, s="\n"):
-        if isinstance(s, list): s = " ".join(s)
+        if isinstance(s, list):
+            s = " ".join(s)
         print(s)
 
 
@@ -33,7 +34,8 @@ a, b, c, d = g(0), g(0), g(0), g(0)
 r = [(len(a) - 2, 0), (len(b) - 2, 1), (len(c) - 2, 2), (len(d) - 2, 3)]
 r.sort()
 t = -1
-if r[0][0] * 2 <= r[1][0]: t = r[0][1]
+if r[0][0] * 2 <= r[1][0]:
+    t = r[0][1]
 if r[3][0] >= r[2][0] * 2:
     if not t + 1:
         t = r[3][1]

@@ -6,5 +6,6 @@ c = 2 * min(a - b, b)
 for i in range(m):
     l, r = map(int, input().split())
     r -= l
-    if r & 1 and r < c: t[i] = '1'
+    if r & 1 and r < c:
+        t[i] = '1'
 print('\n'.join(t))

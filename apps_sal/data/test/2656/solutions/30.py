@@ -2,11 +2,12 @@ import sys
 
 readline = sys.stdin.readline
 readall = sys.stdin.read
-ns = lambda: readline().rstrip()
-ni = lambda: int(readline().rstrip())
-nm = lambda: map(int, readline().split())
-nl = lambda: list(map(int, readline().split()))
-prn = lambda x: print(*x, sep='\n')
+def ns(): return readline().rstrip()
+def ni(): return int(readline().rstrip())
+def nm(): return map(int, readline().split())
+def nl(): return list(map(int, readline().split()))
+def prn(x): return print(*x, sep='\n')
+
 
 n_ = 2 * 10**6 + 5
 mod = 10**9 + 7
@@ -30,8 +31,10 @@ def modinv(x, mod):
     u, v = 1, 0
     while b:
         t = a // b
-        a -= t * b; a, b = b, a
-        u -= t * v; u, v = v, u
+        a -= t * b
+        a, b = b, a
+        u -= t * v
+        u, v = v, u
     return u % mod
 
 

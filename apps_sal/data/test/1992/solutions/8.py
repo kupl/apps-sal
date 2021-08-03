@@ -22,7 +22,8 @@ for ii in range(n):
         tg = [0]
     if i % k == 0:
         position[int(s[ii])] = k
-    else: position[int(s[ii])] = i % k
+    else:
+        position[int(s[ii])] = i % k
 # Doc du lieu (dòng 2)
 # Doc du lieu (dòng 3)
 s = input().split()

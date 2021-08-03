@@ -1,5 +1,6 @@
-sp = lambda: list(map(int, input().split()))
-si = lambda: int(input())
+def sp(): return list(map(int, input().split()))
+def si(): return int(input())
+
 
 TESTCASES = int(input())
 for tc in range(TESTCASES):
