@@ -7,7 +7,7 @@
             res = (res * x) 
         y = y >> 1
         x = (x * x)
-    return res""" 
+    return res"""
 """def fact(n):
     if(n==0):
         return 1
@@ -15,43 +15,46 @@
         return 1
     return fact(n-1)+fact(n-2)"""
 
-def maxPrimeFactors (n): 
-    Prime = -1
-    while n % 2 == 0: 
-        Prime = 2
-        n >>= 1  
-    for i in range(3, int(math.sqrt(n)) + 1, 2): 
-        while n % i == 0: 
-            Prime = i 
-            n = n / i 
-    if n > 2: 
-        Prime = n 
-    return int(Prime)
-#import collections
-import math
-array=[0]*100001
-for i in range(1,100001):
-    array[i]=maxPrimeFactors(i)
-t=int(input())
-for _ in range(t):
-    n=int(input())
-    #b,g=map(int,input().split())
-    #x2,y2=map(int,input().split())
-    arr=list(map(int,input().split()))
-    #m,k=map(int,input().split())
-    d={}
-    for i in range(n):
-        prime_fact=array[arr[i]]
-        if prime_fact not in d:
-            d[prime_fact]=1
-        else:
-            d[prime_fact]+=1
-    maxCount=max(d.values())
-    ans=-1
-    for i in d:
-        if(d[i]==maxCount):
-            if(i>=ans):
-              ans=i
-    print(ans)
-    
 
+
+
+import math
+def maxPrimeFactors (n):
+    Prime = -1
+    while n % 2 == 0:
+        Prime = 2
+        n >>= 1
+    for i in range(3, int(math.sqrt(n)) + 1, 2):
+        while n % i == 0:
+            Prime = i
+            n = n / i
+    if n > 2:
+        Prime = n
+    return int(Prime)
+
+
+#import collections
+array = [0] * 100001
+for i in range(1, 100001):
+    array[i] = maxPrimeFactors(i)
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    # b,g=map(int,input().split())
+    # x2,y2=map(int,input().split())
+    arr = list(map(int, input().split()))
+    # m,k=map(int,input().split())
+    d = {}
+    for i in range(n):
+        prime_fact = array[arr[i]]
+        if prime_fact not in d:
+            d[prime_fact] = 1
+        else:
+            d[prime_fact] += 1
+    maxCount = max(d.values())
+    ans = -1
+    for i in d:
+        if(d[i] == maxCount):
+            if(i >= ans):
+                ans = i
+    print(ans)
