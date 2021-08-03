@@ -35,7 +35,8 @@ def read(callback=int):
 
 
 def write(value, end="\n"):
-    if value is None: return
+    if value is None:
+        return
     try:
         value = " ".join(map(str, value))
     except:

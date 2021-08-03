@@ -6,7 +6,8 @@ n, m, k, *_ = lInt()
 a = list(lInt())
 f = [0] * 1000002
 d = deque()
-acc = 0; ans = 0
+acc = 0
+ans = 0
 
 for v in a:
     f[v] = 1

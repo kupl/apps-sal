@@ -5,7 +5,7 @@ while max(x, y) < xx:
         x, y = y, x
     l, r, m = 0, 4 * 10 ** 18, 0
     while r > l + 1:
-        m = (l + r) // 2;
+        m = (l + r) // 2
         if x >= m * x + y:
             l = m
         else:

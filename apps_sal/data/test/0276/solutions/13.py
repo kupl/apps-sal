@@ -7,4 +7,5 @@ for i in range(n):
     a.pop(i)
     b.pop(i)
 print(6 - n)
-for i in b: print(i)
+for i in b:
+    print(i)

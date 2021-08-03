@@ -16,6 +16,7 @@ for i, c in enumerate(s):
         output.append(str(i + 1))
         pointer += 1
 
-    if pointer >= size: break
+    if pointer >= size:
+        break
 print(size)
 print(' '.join(output))

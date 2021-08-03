@@ -18,10 +18,13 @@ def do():
         else:
             mx = min(1899 - ratingChange[i], mx)
         #print(mn, mx)
-    if mn > mx: return "Impossible"
+    if mn > mx:
+        return "Impossible"
     else:
-        if mx == MAX: return "Infinity"
-        else: return str(mx + ratingChange[-1])
+        if mx == MAX:
+            return "Infinity"
+        else:
+            return str(mx + ratingChange[-1])
 
 
 print(do())

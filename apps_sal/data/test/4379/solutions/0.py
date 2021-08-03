@@ -2,7 +2,8 @@ from collections import *
 input()
 a = list(map(int, input().split()))
 m = defaultdict(int)
-for x in reversed(a): m[x] = m[x + 1] + 1
+for x in reversed(a):
+    m[x] = m[x + 1] + 1
 v = max(list(m.keys()), key=m.get)
 seq = []
 for i, x in enumerate(a):

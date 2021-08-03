@@ -30,10 +30,12 @@ d["red"] = "Reality"
 d["yellow"] = "Mind"
 
 a = []
-for i in range(n): a.append(input())
+for i in range(n):
+    a.append(input())
 b = []
 for i in d:
     if i not in a:
         b.append(d[i])
 print(len(b))
-for i in b: print(i)
+for i in b:
+    print(i)

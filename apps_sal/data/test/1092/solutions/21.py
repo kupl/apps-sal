@@ -6,12 +6,12 @@ for i in range(2, len(fac)):
 
 
 def modi(x):
-    return (pow(x, p - 2, p)) % p;
+    return (pow(x, p - 2, p)) % p
 
 
 def ncr(n, r):
     x = (fac[n] * ((modi(fac[r]) % p) * (modi(fac[n - r]) % p)) % p) % p
-    return x;
+    return x
 
 
 n, m = list(map(int, input().split()))

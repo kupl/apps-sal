@@ -13,7 +13,7 @@ while(r < n):
         l += 1
     if cnt >= k:
         ans += 1
-        vis[r] = 1;
+        vis[r] = 1
         cnt -= 1
     r += 1
     cnt += 1
