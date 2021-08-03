@@ -2,7 +2,7 @@
 for t in range(int(input())):
 
     N = int(input())
-    arr = list(map(int,input().split()))
+    arr = list(map(int, input().split()))
 
     ans = 0
 
@@ -13,6 +13,5 @@ for t in range(int(input())):
 
         else:
             ans += arr[i] % 6
-
 
     print(ans)

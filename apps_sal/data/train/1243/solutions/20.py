@@ -9,4 +9,3 @@ def func(num):
 for _ in range(int(input())):
     num = input()
     func(num)
-

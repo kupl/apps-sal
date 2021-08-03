@@ -1,7 +1,7 @@
-t=int(input())
+t = int(input())
 for w in range(t):
- n=int(input())
- l=list(map(int,input().split()))
- cost=min(l)
- length=len(l)
- print(cost*(length-1))
+    n = int(input())
+    l = list(map(int, input().split()))
+    cost = min(l)
+    length = len(l)
+    print(cost * (length - 1))
