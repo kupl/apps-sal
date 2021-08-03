@@ -10,4 +10,3 @@ for _ in range(n):
         l[i] += int(s[i])
 
 print(max(l))
-

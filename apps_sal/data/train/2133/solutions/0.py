@@ -9,4 +9,3 @@ for k in range(strings):
             count[index] += 1
 
 print(max(count))
-

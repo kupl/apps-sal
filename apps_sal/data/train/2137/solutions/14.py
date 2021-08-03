@@ -10,15 +10,15 @@ while True:
 
     for i in t:
 
-        if i % x > k: x = i // (i // x + 1)
+        if i % x > k:
+            x = i // (i // x + 1)
 
-    if y == x: break
+    if y == x:
+        break
 
     y = x
 
 print(y)
 
 
-
 # Made By Mostafa_Khaled
-

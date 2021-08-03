@@ -14,4 +14,3 @@ def play(s, t):
 a = input()
 b = input()
 print(play(a, b))
-

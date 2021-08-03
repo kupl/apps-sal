@@ -17,8 +17,9 @@ def __starting_point():
 
         total //= f
         if total > 1000000007:
-                total %= 1000000007
-
+            total %= 1000000007
 
     print(total)
+
+
 __starting_point()

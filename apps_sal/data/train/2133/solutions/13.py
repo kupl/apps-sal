@@ -8,4 +8,3 @@ for i in range(n):
         a[j] += ord(s[j]) - ord('0')
 
 print(max(a))
-

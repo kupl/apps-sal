@@ -1,5 +1,5 @@
 n = int(input())
-parents = [None]+[int(x)-1 for x in input().split()]
+parents = [None] + [int(x) - 1 for x in input().split()]
 s = list(map(int, input().split()))
 children = [[] for _ in range(n)]
 a = [None for _ in range(n)]
@@ -23,14 +23,12 @@ while len(stack) > 0:
         if s[v] < s[parents[v]]:
             broken = True
             break
-    if depth>1:
+    if depth > 1:
         a[v] = s[v] - s[parents[v]]
     for child in children[v]:
-        stack.append((child, depth+1))
+        stack.append((child, depth + 1))
 
 if not broken:
     print(sum(a))
 else:
     print(-1)
-
-

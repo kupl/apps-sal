@@ -7,19 +7,22 @@ for i in range(k):
 
 
 ffs = [1]
+
+
 def f(n):
     if n < len(ffs):
         return ffs[n]
-    v = n * f(n-1)
+    v = n * f(n - 1)
     ffs.append(v)
     return v
 
 
 def c(k, n):
-    return f(n) // (f(k) * f(n-k))
+    return f(n) // (f(k) * f(n - k))
+
 
 def cc(k, n):
-    return c(n-1, n + k-1)
+    return c(n - 1, n + k - 1)
 
 
 def solve(h):
@@ -29,12 +32,11 @@ def solve(h):
     hh = h[:-1]
     hh_len = sum(hh)
 
-    return solve(hh) * cc(h[-1] -1, hh_len + 1)
+    return solve(hh) * cc(h[-1] - 1, hh_len + 1)
 
 
 r = 1
 for i in range(len(h)):
-    r *= cc(h[i] -1, sum(h[:i]) + 1)
+    r *= cc(h[i] - 1, sum(h[:i]) + 1)
 
 print(r % 1000000007)
-

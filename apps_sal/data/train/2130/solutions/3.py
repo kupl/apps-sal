@@ -10,16 +10,24 @@ from operator import mul
 from itertools import product, permutations, combinations, accumulate, cycle
 from string import ascii_uppercase, ascii_lowercase, ascii_letters, digits, hexdigits, octdigits
 
-prod = lambda l: reduce(mul, l)
-prodmod = lambda l, mod: reduce(lambda x, y: mul(x,y)%mod, l)
+
+def prod(l): return reduce(mul, l)
+
+
+def prodmod(l, mod): return reduce(lambda x, y: mul(x, y) % mod, l)
+
 
 def read_list(t): return [t(x) for x in input().split()]
 def read_line(t): return t(input())
 def read_lines(t, N): return [t(input()) for _ in range(N)]
 
-mod = 10**9+7
+
+mod = 10**9 + 7
+
+
 def inv(x):
-    return pow(x, mod-2, mod)
+    return pow(x, mod - 2, mod)
+
 
 K = read_line(int)
 balls = read_lines(int, K)
@@ -29,12 +37,11 @@ ans = 1
 for ball in balls[1:]:
     ans *= ball
     ans %= mod
-    for i in range(s+1, s+ball):
+    for i in range(s + 1, s + ball):
         ans *= i
         ans %= mod
     for i in range(ball):
-        ans *= inv(i+1)
+        ans *= inv(i + 1)
         ans %= mod
     s += ball
 print(ans)
-

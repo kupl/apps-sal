@@ -11,4 +11,3 @@ for i in range(7):
     if ses > maxx:
         maxx = ses
 print(maxx)
-

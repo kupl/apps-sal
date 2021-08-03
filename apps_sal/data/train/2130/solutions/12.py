@@ -20,4 +20,3 @@ for i in range(len(data) - 1, -1, -1):
     total -= data[i]
 
 print(ans if ans < 1000000007 else ans % 1000000007)
-
