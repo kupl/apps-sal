@@ -1,5 +1,6 @@
 from itertools import chain
 
+
 def get_a_down_arrow_of(n):
     result = []
     for i in range(n, 0, -1):

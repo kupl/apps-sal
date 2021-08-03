@@ -10,5 +10,3 @@ def tiy_fizz_buzz(string):
         else:
             new_string += i
     return new_string
-                
-

@@ -1,5 +1,5 @@
-def make_negative( number ): 
+def make_negative(number):
     # ...
-    while number>0:
-        number=0-number
+    while number > 0:
+        number = 0 - number
     return number

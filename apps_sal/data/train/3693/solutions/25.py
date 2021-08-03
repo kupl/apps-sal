@@ -1,1 +1,1 @@
-make_negative=lambda n: -abs(n)
+def make_negative(n): return -abs(n)
