@@ -1,5 +1,5 @@
 def is_uppercase(inp):
     if inp.isupper() or inp == int():
-            return True
+        return True
     else:
-            return False
+        return False

@@ -3,4 +3,3 @@ def is_uppercase(inp):
         if i.isupper() == False and i.isalpha() == True:
             return False
     return True
-

@@ -3,4 +3,6 @@ def is_uppercase(inp):
         if i.islower():
             return False
     return True
+
+
 print(is_uppercase("LD"))

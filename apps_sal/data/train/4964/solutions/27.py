@@ -4,4 +4,3 @@ def is_uppercase(inp):
 #          return True
 #     else:
 #         return False
-

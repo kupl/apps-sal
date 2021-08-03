@@ -3,6 +3,6 @@ def is_uppercase(inp):
         return True
     else:
         return False
- 
-print((is_uppercase(inp='AMOR')))    
 
+
+print((is_uppercase(inp='AMOR')))

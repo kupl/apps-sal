@@ -1,1 +1,1 @@
-closest_multiple_10=lambda x:round(x/10)*10
+def closest_multiple_10(x): return round(x / 10) * 10
