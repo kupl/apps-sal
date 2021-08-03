@@ -1,50 +1,51 @@
 class island:
- 'number, x, y' 
- def __init__(self,x,y,number):
-  self.x = x
-  self.y = y
-  self.number = number
+    'number, x, y'
+
+    def __init__(self, x, y, number):
+        self.x = x
+        self.y = y
+        self.number = number
+
 
 def lighthouses(islands):
- low = high = left = right = islands[0]
+    low = high = left = right = islands[0]
 
- left = min(islands, key = lambda a : a.x)
- right= max(islands, key = lambda a : a.x)
- low = min(islands, key = lambda a : a.y)
- high = max(islands, key = lambda a : a.y)
+    left = min(islands, key=lambda a: a.x)
+    right = max(islands, key=lambda a: a.x)
+    low = min(islands, key=lambda a: a.y)
+    high = max(islands, key=lambda a: a.y)
 
- if left == low:
-  print(1)
-  print(str(left.number) + ' NE')
- elif left == high:
-  print(1)
-  print(str(left.number) + ' SE')
- elif right == low:
-  print(1)
-  print(str(right.number) + ' NW')
- elif right == high:
-  print(1)
-  print(str(right.number) + ' SW')
- else:
-  islands.remove(left)
-  nextleft = min(islands, key = lambda a : a.x)
-   
-  if left.y < nextleft.y:
-   print(2)
-   print(str(left.number) + ' NE')
-   print(str(nextleft.number) + ' SE')
-  else:
-   print(2)
-   print(str(left.number) + ' SE')
-   print(str(nextleft.number) + ' NE')
+    if left == low:
+        print(1)
+        print(str(left.number) + ' NE')
+    elif left == high:
+        print(1)
+        print(str(left.number) + ' SE')
+    elif right == low:
+        print(1)
+        print(str(right.number) + ' NW')
+    elif right == high:
+        print(1)
+        print(str(right.number) + ' SW')
+    else:
+        islands.remove(left)
+        nextleft = min(islands, key=lambda a: a.x)
+
+        if left.y < nextleft.y:
+            print(2)
+            print(str(left.number) + ' NE')
+            print(str(nextleft.number) + ' SE')
+        else:
+            print(2)
+            print(str(left.number) + ' SE')
+            print(str(nextleft.number) + ' NE')
 
 
 T = int(input())
 for i in range(T):
- N = int(input())
- islands = []
- for j in range(N):
-  x, y = list(map(int, input().split()))
-  islands.append(island(x,y,j+1))
- lighthouses(islands)
-
+    N = int(input())
+    islands = []
+    for j in range(N):
+        x, y = list(map(int, input().split()))
+        islands.append(island(x, y, j + 1))
+    lighthouses(islands)

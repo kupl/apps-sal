@@ -41,4 +41,3 @@ for _ in range(t):
                     ans += dp[i - 1]
         ans = ans % 1000000007
     print(ans % 1000000007)
-
