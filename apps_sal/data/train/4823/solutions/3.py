@@ -1,7 +1,7 @@
 def wallpaper(l, w, h):
 
     result = {
-        
+
         '1': 'one',
         '2': 'two',
         '3': 'three',
@@ -24,11 +24,11 @@ def wallpaper(l, w, h):
         '20': 'twenty',
     }
 
-    wall_area = 1.15 * ((2*l*h) + (2*w*h))
+    wall_area = 1.15 * ((2 * l * h) + (2 * w * h))
     wallpaper = 0.52 * 10
     to_buy = wall_area / wallpaper
 
-    for k,v in result.items():
+    for k, v in result.items():
         if l == 0 or w == 0 or h == 0:
             return 'zero'
         elif int(k) == round(to_buy + 0.5):

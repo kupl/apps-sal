@@ -4,10 +4,10 @@ def mastermind(game):
     confirmed = ["", "", "", ""]
     possible = ["", "", "", ""]
     not_a_color = 0
-    
+
     for color in colors:
         answers.append(game.check([color, color, color, color]))
-    
+
     i = 0
     while i < len(answers):
         if answers[i] == []:

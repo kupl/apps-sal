@@ -1,5 +1,6 @@
 def pow(x, y):
-  return x**y
+    return x**y
+
 
 # assuming python 3 where print is a function
 printPow = compose(print, pow)
@@ -13,4 +14,3 @@ printPow(2, 3)
 print(pow(*[2, 3]))
 # or equivalently:
 print(pow(2, 3))
-

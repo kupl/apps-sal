@@ -1,4 +1,6 @@
 from random import choice
+
+
 def mastermind(game):
     colors = ["Red", "Blue", "Green", "Orange", "Purple", "Yellow"]
     answer = ''
