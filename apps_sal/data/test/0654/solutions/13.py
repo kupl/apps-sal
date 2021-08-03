@@ -13,7 +13,8 @@ class Solution2:
 
 class Solution:
     def gcd(self, a, b):
-        if not b: return a
+        if not b:
+            return a
         return self.gcd(b, a % b)
 
     def lcm(self, a, b):
@@ -30,12 +31,14 @@ class Solution:
                 ways_clear = ways_clear % MOD
                 ways_taken = ways_taken % MOD
                 if pos:
-                    if pos - 1 not in new_curr: new_curr[pos - 1] = [0, 0]
+                    if pos - 1 not in new_curr:
+                        new_curr[pos - 1] = [0, 0]
                     new_curr[pos - 1][0] += ways_taken
                     new_curr[pos - 1][1] += ways_clear
                     out += ways_clear
                 if pos < 2 * n - i:
-                    if pos + 1 not in new_curr: new_curr[pos + 1] = [0, 0]
+                    if pos + 1 not in new_curr:
+                        new_curr[pos + 1] = [0, 0]
                     new_curr[pos + 1][0] += ways_taken
                     new_curr[pos + 1][1] += ways_clear
                     out += ways_clear

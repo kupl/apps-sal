@@ -15,6 +15,7 @@ for i in range(1, n + 1):
         if j > i:
             f[i][j] = (f[i][j] + g[i][j - 1]) % mod
             t[0] = (t[0] + f[i][j - 1] + 1) % mod
-            t[1] = (t[1] + g[i][j - 1]) % mod;
-        for k in t: g[i][j] = max(g[i][j], k)
+            t[1] = (t[1] + g[i][j - 1]) % mod
+        for k in t:
+            g[i][j] = max(g[i][j], k)
 print(g[n][n] % mod)

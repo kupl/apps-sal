@@ -1,7 +1,8 @@
 IN = input
-rint = lambda: int(IN())
-rmint = lambda: map(int, IN().split())
-rlist = lambda: list(rmint())
+def rint(): return int(IN())
+def rmint(): return map(int, IN().split())
+def rlist(): return list(rmint())
+
 
 n, k = rmint()
 pr = [i for i in range(-1, n - 1)]
@@ -16,8 +17,10 @@ for g in rlist():
 
 def dl(x, t):
     ans[x] = t
-    if nx[x] < n: pr[nx[x]] = pr[x]
-    if pr[x] >= 0: nx[pr[x]] = nx[x]
+    if nx[x] < n:
+        pr[nx[x]] = pr[x]
+    if pr[x] >= 0:
+        nx[pr[x]] = nx[x]
 
 
 t = 1
@@ -25,17 +28,21 @@ for c in p:
     # print(ans)
     # print(pr)
     # print(nx)
-    if ans[c]: continue
+    if ans[c]:
+        continue
     dl(c, t)
     j = pr[c]
     for i in range(k):
-        if j < 0: break
+        if j < 0:
+            break
         dl(j, t)
         j = pr[j]
     j = nx[c]
     for i in range(k):
-        if j >= n: break
+        if j >= n:
+            break
         dl(j, t)
         j = nx[j]
     t = 3 - t
-for o in ans: print(o, end='')
+for o in ans:
+    print(o, end='')

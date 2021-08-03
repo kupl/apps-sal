@@ -27,7 +27,8 @@ for i in range(n):
             left[right[cur]] = left[cur]
         for _ in range(k):
             cur = right[cur]
-            if cur == -1: break
+            if cur == -1:
+                break
             avail[cur] = False
             res[cur] = turn
             if left[cur] != -1:
@@ -37,14 +38,17 @@ for i in range(n):
         cur = ls[i][1]
         for _ in range(k):
             cur = left[cur]
-            if cur == -1: break
+            if cur == -1:
+                break
             avail[cur] = False
             res[cur] = turn
             if left[cur] != -1:
                 right[left[cur]] = right[cur]
             if right[cur] != -1:
                 left[right[cur]] = left[cur]
-        if turn == 1: turn = 2
-        else: turn = 1
+        if turn == 1:
+            turn = 2
+        else:
+            turn = 1
 for i in range(n):
     print(res[i], end='')

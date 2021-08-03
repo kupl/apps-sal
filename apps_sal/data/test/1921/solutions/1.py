@@ -4,7 +4,8 @@
 # r: 始点の頂点
 
 from heapq import heappush, heappop
-import sys; input = sys.stdin.readline
+import sys
+input = sys.stdin.readline
 INF = 10**10
 
 

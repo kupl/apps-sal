@@ -24,7 +24,8 @@ for i in range(n):
         # left
         for j in range(k):
             cur = left[cur]
-            if cur == -1: break
+            if cur == -1:
+                break
             vis[cur] = 1
             join[cur] = jo
             if left[cur] != -1:
@@ -36,7 +37,8 @@ for i in range(n):
         cur = A[i][1]
         for j in range(k):
             cur = right[cur]
-            if cur == -1: break
+            if cur == -1:
+                break
             vis[cur] = 1
             join[cur] = jo
             if left[cur] != -1:

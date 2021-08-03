@@ -1,4 +1,4 @@
-from math import sqrt, ceil;
+from math import sqrt, ceil
 
 
 def main():
