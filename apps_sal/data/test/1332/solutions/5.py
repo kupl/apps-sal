@@ -3,4 +3,5 @@ sum = a + b + c + d + e
 
 if sum > 0 and sum % 5 == 0:
     print(sum // 5)
-else: print(-1)
+else:
+    print(-1)

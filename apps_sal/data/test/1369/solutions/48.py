@@ -41,7 +41,8 @@ for i in range(N):
         for k in range(j + 1, N):
             x3, y3 = pts[k]
             xC, yC = getCircumcenter(x1, y1, x2, y2, x3, y3)
-            if xC is None: continue
+            if xC is None:
+                continue
             dist = max([hypot(x - xC, y - yC) for x, y in pts])
             ans = min(ans, dist)
 

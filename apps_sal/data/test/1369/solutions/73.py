@@ -5,7 +5,8 @@ for i in range(N):
 
 
 def check(a, b, r):
-    if r < 0: r = 0
+    if r < 0:
+        r = 0
     res = [0, 0, 0]
     flg = True
     for i in range(N):

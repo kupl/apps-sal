@@ -2,9 +2,15 @@ A, B, C = map(int, input().split())
 a = b = c = False
 
 odd = 0
-if (A % 2): odd += 1; a = True
-if (B % 2): odd += 1; b = True
-if (C % 2): odd += 1; c = True
+if (A % 2):
+    odd += 1
+    a = True
+if (B % 2):
+    odd += 1
+    b = True
+if (C % 2):
+    odd += 1
+    c = True
 
 result = 0
 if (odd == 1):

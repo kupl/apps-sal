@@ -73,9 +73,12 @@ def make_circumcircle(a, b, c):
     # Mathematical algorithm from Wikipedia: Circumscribed circle
     ox = (min(a[0], b[0], c[0]) + max(a[0], b[0], c[0])) / 2.0
     oy = (min(a[1], b[1], c[1]) + max(a[1], b[1], c[1])) / 2.0
-    ax = a[0] - ox; ay = a[1] - oy
-    bx = b[0] - ox; by = b[1] - oy
-    cx = c[0] - ox; cy = c[1] - oy
+    ax = a[0] - ox
+    ay = a[1] - oy
+    bx = b[0] - ox
+    by = b[1] - oy
+    cx = c[0] - ox
+    cy = c[1] - oy
     d = (ax * (by - cy) + bx * (cy - ay) + cx * (ay - by)) * 2.0
     if d == 0.0:
         return None

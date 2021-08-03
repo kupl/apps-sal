@@ -3,7 +3,8 @@ xy = [list(map(int, input().split()))for _ in range(n)]
 
 
 def gaisin(a, b, c, d, e, f):
-    if (a - c) * (d - f) == (c - e) * (b - d): return ["ng"]
+    if (a - c) * (d - f) == (c - e) * (b - d):
+        return ["ng"]
     aa = a**2
     bb = b**2
     cc = c**2
@@ -11,8 +12,10 @@ def gaisin(a, b, c, d, e, f):
     ee = e**2
     ff = f**2
     py = ((e - a) * (aa + bb - cc - dd) - (c - a) * (aa + bb - ee - ff)) / (2 * ((e - a) * (b - d) - (c - a) * (b - f)))
-    if a == c: px = (2 * (b - f) * py - aa - bb + ee + ff) / (2 * (e - a))
-    else: px = (2 * (b - d) * py - aa - bb + cc + dd) / (2 * (c - a))
+    if a == c:
+        px = (2 * (b - f) * py - aa - bb + ee + ff) / (2 * (e - a))
+    else:
+        px = (2 * (b - d) * py - aa - bb + cc + dd) / (2 * (c - a))
     return ["ok", px, py]
 
 
@@ -24,7 +27,8 @@ for i in range(n - 2):
             x2, y2 = xy[j]
             x3, y3 = xy[k]
             gai = gaisin(x1, y1, x2, y2, x3, y3)
-            if len(gai) == 1: continue
+            if len(gai) == 1:
+                continue
             _, px, py = gai
             pxy.append([px, py])
 for i in range(n - 1):

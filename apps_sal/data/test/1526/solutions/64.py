@@ -2,10 +2,11 @@ import heapq as hq
 import itertools
 import math
 import collections
-ma = lambda: map(int, input().split())
-lma = lambda: list(map(int, input().split()))
-ni = lambda: int(input())
-yn = lambda fl: print("Yes") if fl else print("No")
+def ma(): return map(int, input().split())
+def lma(): return list(map(int, input().split()))
+def ni(): return int(input())
+def yn(fl): return print("Yes") if fl else print("No")
+
 
 abc = lma()
 abc.sort()

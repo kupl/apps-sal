@@ -12,7 +12,8 @@ def func(c):
             dx = xi - xj
             dy = yi - yj
             d = ((xi - xj)**2 + (yi - yj)**2)**0.5
-            if c**2 - (d / 2)**2 < 0: return False
+            if c**2 - (d / 2)**2 < 0:
+                return False
             h = (c**2 - (d / 2)**2)**0.5
             mx, my = (xi + xj) / 2, (yi + yj) / 2
             if dx == 0:

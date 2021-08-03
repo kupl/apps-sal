@@ -2,7 +2,7 @@ from itertools import combinations as comb
 
 N = int(input())
 l = [tuple(map(int, input().split())) for _ in range(N)]
-dist = lambda a, b: ((a[0] - b[0])**2 + (a[1] - b[1])**2)**0.5
+def dist(a, b): return ((a[0] - b[0])**2 + (a[1] - b[1])**2)**0.5
 
 
 def get_centers():

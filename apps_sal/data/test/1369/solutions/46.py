@@ -23,7 +23,8 @@ while 1:
     direction = x[argmax, :] - old
     new = old + direction * rate
     rate *= decay
-    if norm(new, old) <= epsilon: break
+    if norm(new, old) <= epsilon:
+        break
     old = new
 
 print(norm(direction, 0))

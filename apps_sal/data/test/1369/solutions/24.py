@@ -20,21 +20,28 @@ def solve():
             rd = (x - a) ** 2 + (y - b) ** 2
             for l in range(N):
                 if l != i and l != j:
-                    if (P[l][0] - x) ** 2 + (P[l][1] - y) ** 2 - rd > eps: break
-            else: minR = min(minR, rd)
+                    if (P[l][0] - x) ** 2 + (P[l][1] - y) ** 2 - rd > eps:
+                        break
+            else:
+                minR = min(minR, rd)
 
             for k in range(j + 1, N):
-                if (P[j][1] - P[i][1]) * (P[k][0] - P[j][0]) == (P[j][0] - P[i][0]) * (P[k][1] - P[j][1]): continue
+                if (P[j][1] - P[i][1]) * (P[k][0] - P[j][0]) == (P[j][0] - P[i][0]) * (P[k][1] - P[j][1]):
+                    continue
 
                 e, f = P[k]
                 if c == a:
                     y = (d + b) / 2
-                    if d == f: x = (d + f) / 2
-                    else: x = (e + c) / 2 + ((d + f) / 2 - y) * (f - d) / (e - c)
+                    if d == f:
+                        x = (d + f) / 2
+                    else:
+                        x = (e + c) / 2 + ((d + f) / 2 - y) * (f - d) / (e - c)
                 elif e == c:
                     y = (d + f) / 2
-                    if d == b: x = (d + b) / 2
-                    else: x = (a + c) / 2 + ((b + d) / 2 - y) * (d - b) / (c - a)
+                    if d == b:
+                        x = (d + b) / 2
+                    else:
+                        x = (a + c) / 2 + ((b + d) / 2 - y) * (d - b) / (c - a)
                 elif d == b:
                     x = (a + c) / 2
                     y = (d + f) / 2 + ((e + c) / 2 - x) * (e - c) / (f - d)
@@ -47,8 +54,10 @@ def solve():
                 rd = (x - a) ** 2 + (y - b) ** 2
                 for l in range(N):
                     if l != i and l != j and l != k:
-                        if (P[l][0] - x) ** 2 + (P[l][1] - y) ** 2 - rd > eps: break
-                else: minR = min(minR, rd)
+                        if (P[l][0] - x) ** 2 + (P[l][1] - y) ** 2 - rd > eps:
+                            break
+                else:
+                    minR = min(minR, rd)
     print((minR ** 0.5))
 
     return 0

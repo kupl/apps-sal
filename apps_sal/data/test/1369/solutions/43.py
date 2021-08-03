@@ -2,9 +2,11 @@ import sys
 import itertools
 import numpy as np
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 N = ir()
 XY = [lr() for _ in range(N)]
@@ -18,7 +20,8 @@ z = (ab(a-b).conjugete()) / (a.conjugate()*b-a*b.conjugate())
 
 def find_center(a, b, c):
     # cを原点とする
-    a -= c; b -= c
+    a -= c
+    b -= c
     if abs((a * b.conjugate()).imag) < 0.5:
         # 同一直線上
         return None
@@ -38,7 +41,8 @@ for a, b in itertools.combinations(XY, 2):
     o = (a + b) / 2
     cen_cand.append(o)
 
-cen_cand = np.array(cen_cand); XY = np.array(XY)
+cen_cand = np.array(cen_cand)
+XY = np.array(XY)
 answer = np.abs(cen_cand[:, None] - XY[None, :]).max(axis=1).min()
 print(answer)
 # 28

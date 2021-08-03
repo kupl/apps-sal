@@ -5,7 +5,8 @@ N = int(input())
 
 P = [np.array(list(map(int, input().split())), dtype=float) for _ in range(N)]
 
-d2 = lambda v: np.sum(np.square(v))
+
+def d2(v): return np.sum(np.square(v))
 
 
 def radius(A, B, C):

@@ -17,7 +17,8 @@ for (x1, y1), (x2, y2), (x3, y3) in combinations(XY, 3):
     p = e1 * (e2 + e3 - e1)
     q = e2 * (e3 + e1 - e2)
     r = e3 * (e1 + e2 - e3)
-    if p + q + r == 0: continue
+    if p + q + r == 0:
+        continue
     X = (p * x1 + q * x2 + r * x3) / (p + q + r)
     Y = (p * y1 + q * y2 + r * y3) / (p + q + r)
     R2 = (X - x1)**2 + (Y - y1)**2 + 10e-9
