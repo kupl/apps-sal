@@ -2,6 +2,7 @@
 
 import math
 
+
 def main():
     [K, N] = list(map(int, input().split()))
 
@@ -37,7 +38,6 @@ def main():
                 r.pop()
             else:
                 break
-
 
     print((' '.join(list(map(str, r)))))
 

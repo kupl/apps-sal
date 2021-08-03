@@ -1,12 +1,26 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time,copy,functools
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import functools
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 gosa = 1.0 / 10**10
-mod = 10**9+7
+mod = 10**9 + 7
+
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
@@ -20,7 +34,7 @@ def main():
     r = LI()
     q = I()
     t = [LI() for _ in range(q)]
-    a = [[0,0,0,x,0,0]]
+    a = [[0, 0, 0, x, 0, 0]]
     d = 0
     for i in range(k):
         c = a[-1][:]
@@ -50,52 +64,51 @@ def main():
         c[5] = r[i]
 
         a.append(c)
+
     def bs(i):
         ma = k
         mi = 0
         mm = 0
-        while ma > mi and (ma+mi) // 2 != mm:
-            mm = (ma+mi) // 2
+        while ma > mi and (ma + mi) // 2 != mm:
+            mm = (ma + mi) // 2
             if a[mm][5] < i:
                 mi = mm
             else:
                 ma = mm - 1
         if a[mm][5] > i:
-            return mm-1
+            return mm - 1
         if mm == k:
             return k
-        if a[mm+1][5] <= i:
-            return mm+1
+        if a[mm + 1][5] <= i:
+            return mm + 1
         return mm
 
-    #print(a)
+    # print(a)
     rr = []
-    for c,d in t:
+    for c, d in t:
         ti = bs(c)
         ai = a[ti]
-        e = x-d
-        #print(c,d,e,ti,ai)
+        e = x - d
+        # print(c,d,e,ti,ai)
         if d + ai[0] <= 0:
             tt = ai[4]
         elif e - ai[2] <= 0:
             tt = ai[3]
         else:
             tt = d + ai[1]
-        #print('tt',tt)
+        # print('tt',tt)
         if ti % 2 == 0:
             tt -= c - ai[5]
         else:
             tt += c - ai[5]
-        #print('tt2',tt)
+        # print('tt2',tt)
         if tt < 0:
             tt = 0
         elif tt > x:
             tt = x
         rr.append(tt)
 
-    return '\n'.join(map(str,rr))
+    return '\n'.join(map(str, rr))
 
 
 print((main()))
-
-

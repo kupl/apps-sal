@@ -1,3 +1,6 @@
+import sys
+
+
 class Tree():
     def __init__(self, n, edge, indexed=1):
         self.n = n
@@ -24,9 +27,9 @@ class Tree():
                     self.order.append(adj)
                     stack.append(adj)
 
+
 INF = 10**18
 
-import sys
 input = sys.stdin.readline
 
 N = int(input())

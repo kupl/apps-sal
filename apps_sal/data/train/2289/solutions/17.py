@@ -27,5 +27,4 @@ while Q:
             return
         if prevs[posNext] is None:
             prevs[posNext] = pos
-            Q.append((lenAns + 1, posNext)) 
-
+            Q.append((lenAns + 1, posNext))

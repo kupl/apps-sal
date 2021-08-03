@@ -12,19 +12,19 @@ R = [int(x) for x in input().split()]
 Q = int(input())
 TA = [tuple(int(x) for x in input().split()) for _ in range(Q)]
 
-task = sorted([(r,-1) for r in R] + [(t,a) for t,a in TA])
+task = sorted([(r, -1) for r in R] + [(t, a) for t, a in TA])
 
 L = 0
 R = X
 A = 0
 B = X
-dx = -1 # 初めは減る方
+dx = -1  # 初めは減る方
 current = 0
 answer = []
-for t,a in task:
+for t, a in task:
     # とりあえず上限を突破して落とす
-    A += dx * (t-current)
-    B += dx * (t-current)
+    A += dx * (t - current)
+    B += dx * (t - current)
     current = t
     if a != -1:
         # 体積の計算
@@ -33,7 +33,7 @@ for t,a in task:
         elif a >= R:
             x = B
         else:
-            x = A+(B-A)//(R-L)*(a-L)
+            x = A + (B - A) // (R - L) * (a - L)
         if x < 0:
             x = 0
         if x > X:
@@ -46,7 +46,7 @@ for t,a in task:
                 L += (-A)
                 A = 0
             if B > X:
-                R -= (B-X)
+                R -= (B - X)
                 B = X
             if A > X:
                 A = X
@@ -60,7 +60,7 @@ for t,a in task:
                 R = 0
         elif A >= B:
             if A > X:
-                L += (A-X)
+                L += (A - X)
                 A = X
             if B < 0:
                 R -= (-B)
@@ -78,6 +78,4 @@ for t,a in task:
         if R < L:
             R = L
 
-print(*answer,sep='\n')
-
-
+print(*answer, sep='\n')

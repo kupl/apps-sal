@@ -23,9 +23,10 @@ def solve():
             if next_[char][i] == -1:
                 dp[i] = 1
                 break
-            tmp = min(dp[next_[char][i]] + 1 , tmp)
+            tmp = min(dp[next_[char][i]] + 1, tmp)
         else:
             dp[i] = tmp
+
 
 solve()
 ans = []

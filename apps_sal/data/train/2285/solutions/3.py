@@ -5,16 +5,12 @@ l2 = []
 
 def iss():
     for i in range(len(l1) - 1):
-        if l1[i+1] < l1[i]:
+        if l1[i + 1] < l1[i]:
             return False
     for i in range(len(l2) - 1):
-        if l2[i+1] < l2[i]:
+        if l2[i + 1] < l2[i]:
             return False
     return True
-
-
-
-
 
 
 for q in range(int(input())):
@@ -27,13 +23,13 @@ for q in range(int(input())):
         same = []
         l1 = []
         l2 = []
-        ans = ['0']*n
+        ans = ['0'] * n
         for i in range(n):
             f = data[i]
             if f > d:
                 l2.append(f)
                 ans[i] = '2'
-               
+
                 if mnl2 == -1:
                     mnl2 = i
             elif f < d:
@@ -61,8 +57,3 @@ for q in range(int(input())):
         break
     if not done:
         sys.stdout.write('-\n')
-
-        
-
-
-

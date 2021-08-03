@@ -1,12 +1,26 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time,copy,functools
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import functools
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 gosa = 1.0 / 10**10
-mod = 10**9+7
+mod = 10**9 + 7
+
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
@@ -20,13 +34,13 @@ def main():
     t = {}
     for c in string.ascii_lowercase:
         t[c] = l
-    b = [(1,0,0) for _ in range(l)]
-    b.append((1,'a',l))
-    b.append((0,'',l+1))
+    b = [(1, 0, 0) for _ in range(l)]
+    b.append((1, 'a', l))
+    b.append((0, '', l + 1))
 
-    for c,i in reversed(list(zip(a,list(range(l))))):
+    for c, i in reversed(list(zip(a, list(range(l))))):
         t[c] = i
-        b[i] = min([(b[t[d]+1][0] + 1,d,t[d]+1) for d in string.ascii_lowercase])
+        b[i] = min([(b[t[d] + 1][0] + 1, d, t[d] + 1) for d in string.ascii_lowercase])
 
     r = ''
     i = 0
@@ -35,8 +49,5 @@ def main():
         i = b[i][2]
     return r
 
+
 print((main()))
-
-
-
-

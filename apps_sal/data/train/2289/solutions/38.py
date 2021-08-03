@@ -54,4 +54,3 @@ def solve(size, i=None):
 
 
 print((solve(ans_size)))
-

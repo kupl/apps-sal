@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import bisect
 
+
 def main():
     X = int(input())
     K = int(input())
@@ -50,7 +51,6 @@ def main():
     asc_a = [a[i] for i in asc_i]
     dsc_a = [-a[i] for i in dsc_i]
 
-
     for [t, a0] in q_list:
         ri = bisect.bisect_right(r, t) - 1
 
@@ -85,6 +85,7 @@ def main():
         x = min(max(x, 0), X)
 
         print(x)
+
 
 def __starting_point():
     main()

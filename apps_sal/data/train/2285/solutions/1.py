@@ -18,10 +18,9 @@ def calc(X):
     else:
         print("-")
 
+
 T = int(input())
 for _ in range(T):
     N = int(input())
     A = [int(a) for a in input()]
     calc(A)
-
-

@@ -45,7 +45,6 @@ def main():
         rt[i] = min_c
         dp[i] = min_v + 1
 
-
     r = ''
     i = 0
     while i < n:
@@ -57,7 +56,6 @@ def main():
             break
         r += chr(orda + rt[i])
         i = next_i[i][rt[i]] + 1
-
 
     print(r)
 

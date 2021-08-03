@@ -1,4 +1,4 @@
-A = [ord(a)-97 for a in input()]
+A = [ord(a) - 97 for a in input()]
 N = len(A)
 X = [0] * 26
 Y = [0] * (N + 2)
@@ -24,10 +24,10 @@ ii = 0
 for i, a in enumerate(A):
     if i == ii:
         for j in range(26):
-            if Y[R[j]+1] < Y[i]:
+            if Y[R[j] + 1] < Y[i]:
                 ANS.append(j)
-                ii = R[j]+1
+                ii = R[j] + 1
                 break
     R[a] = NE[i]
 
-print("".join([chr(a+97) for a in ANS]))
+print("".join([chr(a + 97) for a in ANS]))

@@ -1,8 +1,13 @@
+import sys
+from collections import deque
+
+
 class BIT():
     """区間加算、一点取得クエリをそれぞれO(logN)で応えるデータ構造を構築する
     add: 区間[begin, end)にvalを加える
     get_val: i番目(0-indexed)の値を求める
     """
+
     def __init__(self, n):
         self.n = n
         self.bit = [0] * (n + 1)
@@ -25,8 +30,6 @@ class BIT():
         self._add(i, -val)
 
 
-from collections import deque
-import sys
 input = sys.stdin.readline
 
 
@@ -57,13 +60,14 @@ def eular_tour(tree: list, root: int):
 
     return res, begin, end
 
+
 n, q = map(int, input().split())
 init_cost = list(map(int, input().split()))
-info = [list(map(int, input().split())) for i in range(n-1)]
+info = [list(map(int, input().split())) for i in range(n - 1)]
 query = [list(map(int, input().split())) for i in range(q)]
 
 tree = [[] for i in range(n)]
-for i in range(n-1):
+for i in range(n - 1):
     a, b = info[i]
     a -= 1
     b -= 1
@@ -88,10 +92,10 @@ for i in range(q):
         pos -= 1
         if begin[pos] % 2 == 0:
             even_bit.add(begin[pos] // 2, (end[pos] + 1) // 2, cost)
-            odd_bit.add(begin[pos] // 2, end[pos] // 2, -cost)    
+            odd_bit.add(begin[pos] // 2, end[pos] // 2, -cost)
         else:
-            odd_bit.add(begin[pos] // 2, end[pos] // 2, cost) 
-            even_bit.add((begin[pos] + 1) // 2, end[pos] // 2, -cost) 
+            odd_bit.add(begin[pos] // 2, end[pos] // 2, cost)
+            even_bit.add((begin[pos] + 1) // 2, end[pos] // 2, -cost)
     else:
         _, pos = query[i]
         pos -= 1

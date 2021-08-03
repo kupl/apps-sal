@@ -25,4 +25,3 @@ for k in reversed(list(range(dp[0]))):
             break
 
 print((''.join(ans)))
-

@@ -18,4 +18,3 @@ def solve(k, n):
 k, n = list(map(int, input().split()))
 
 print((*solve(k, n)))
-

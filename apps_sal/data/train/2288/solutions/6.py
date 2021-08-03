@@ -1,7 +1,8 @@
 X = int(input())
 K = int(input())
 R = [int(x) for x in reversed(input().split())]
-for i in range(0,K-1): R[i] -= R[i+1]
+for i in range(0, K - 1):
+    R[i] -= R[i + 1]
 Q = int(input())
 
 aM = X
@@ -12,14 +13,15 @@ now = 0
 sign = -1
 timer = R.pop()
 
+
 def Go(time):
-    nonlocal aM,M,am,m
-    if sign==1:
-        if m+time>X:
+    nonlocal aM, M, am, m
+    if sign == 1:
+        if m + time > X:
             m = X
             M = X
             aM = am
-        elif M+time>X:
+        elif M + time > X:
             m += time
             M = X
             aM = am + M - m
@@ -27,11 +29,11 @@ def Go(time):
             m += time
             M += time
     else:
-        if M-time<0:
+        if M - time < 0:
             m = 0
             M = 0
             am = aM
-        elif m-time<0:
+        elif m - time < 0:
             m = 0
             M -= time
             am = aM + m - M
@@ -39,12 +41,13 @@ def Go(time):
             m -= time
             M -= time
 
+
 for i in range(Q):
-    t,a = [int(x) for x in input().split()]
+    t, a = [int(x) for x in input().split()]
     t -= now
     now += t
-    
-    while t>=timer:
+
+    while t >= timer:
         Go(timer)
         t -= timer
         if R:
@@ -52,13 +55,13 @@ for i in range(Q):
         else:
             timer = float("inf")
         sign *= -1
-    
+
     Go(t)
     timer -= t
-    
-    if a<am:
+
+    if a < am:
         print(m)
-    elif a>aM:
+    elif a > aM:
         print(M)
     else:
-        print(m+a-am)
+        print(m + a - am)

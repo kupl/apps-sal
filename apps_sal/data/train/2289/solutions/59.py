@@ -29,4 +29,3 @@ for i in range(dp[0] - 1, -1, -1):
             break
 
 print(ans)
-

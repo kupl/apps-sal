@@ -5,7 +5,7 @@ alf = [[] for i in range(26)]
 for i, a in enumerate(A):
     alf[a].append(i)
 for i in range(26):
-    alf[i].append(n+1)
+    alf[i].append(n + 1)
 
 first = [n]
 appeard = [0] * 26
@@ -20,8 +20,10 @@ for i in range(n - 1, -1, -1):
         cnt = 0
         appeard = [0] * 26
 
+
 def ntoa(x):
     return chr(ord("a") + x)
+
 
 first.reverse()
 ans = ""
@@ -39,9 +41,8 @@ if len(first) == 1:
 for j in range(len(first) - 1):
     for i in range(26):
         nxt = alf[i][bisect_right(alf[i], last)]
-        if nxt >= first[j+1]:
+        if nxt >= first[j + 1]:
             ans += ntoa(i)
             last = nxt
             break
 print(ans)
-

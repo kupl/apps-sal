@@ -4,10 +4,10 @@ A = input()
 n = len(A)
 B = ord('a')
 
-links = [None]*(n+3)
+links = [None] * (n + 3)
 
-link = [n]*26
-for i in range(n-1, -1, -1):
+link = [n] * 26
+for i in range(n - 1, -1, -1):
     links[i] = link[:]
     link[ord(A[i]) - B] = i
 links[-1] = link
@@ -29,8 +29,6 @@ v = n
 ans = []
 while v is not None:
     v, c = prev[v]
-    ans.append(chr(c+B))
+    ans.append(chr(c + B))
 ans.reverse()
 print(("".join(ans[1:])))
-
-

@@ -1,7 +1,7 @@
 for t in range(int(input())):
     n = int(input())
-    ans = [2]*n
-    d = list(map(int,input()))
+    ans = [2] * n
+    d = list(map(int, input()))
     k = d[0]
     ind_1 = -1
     for i in range(n):
@@ -21,13 +21,9 @@ for t in range(int(input())):
     for i in range(n):
         if ans[i] == 2:
             itog.append(d[i])
-    for i in range(1,n):
-        if itog[i] < itog[i-1]:
+    for i in range(1, n):
+        if itog[i] < itog[i - 1]:
             print('-')
             break
     else:
-        print(''.join(map(str,ans)))
-
-
-
-
+        print(''.join(map(str, ans)))
