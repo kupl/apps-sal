@@ -1,5 +1,6 @@
 from os.path import commonprefix
 
+
 def radix_tree(*words):
     groups = {}
     for word in words:

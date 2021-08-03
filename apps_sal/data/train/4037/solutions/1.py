@@ -12,5 +12,5 @@ def detect_operator(num):
         "097": "Kyivstar",
         "098": "Kyivstar",
         "099": "MTS"
-        }
-    return operators.get(str(num)[1:4],"no info")
+    }
+    return operators.get(str(num)[1:4], "no info")

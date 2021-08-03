@@ -3,4 +3,3 @@ def contamination(text, char):
         return ""
     else:
         return char * len(text)
-

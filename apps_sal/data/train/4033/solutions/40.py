@@ -5,5 +5,3 @@ def contamination(text, char):
         return char
     else:
         return char * len(text)
-
-

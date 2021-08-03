@@ -1,5 +1,6 @@
 import re
 
+
 def contamination(text, char):
     if text == '' or char == '':
         return ""

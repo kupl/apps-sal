@@ -1,11 +1,15 @@
 from itertools import groupby
+
+
 def radix_tree(*d, need=1):
-    if not {i for i in d if i} : return {} 
+    if not {i for i in d if i}:
+        return {}
     store = {}
     for i, j in groupby(sorted(d) if need else d, lambda x: x[0]):
         words = list(j)
-        if len(words) == 1 : store[words[0]] = {}
+        if len(words) == 1:
+            store[words[0]] = {}
         else:
             common = next((j for j, i in enumerate(zip(*words)) if len(set(i)) != 1), len(min(words, key=len)))
-            store[words[0][:common]] = radix_tree(*[i[common:] for i in words if i[common:]],need = 0)
+            store[words[0][:common]] = radix_tree(*[i[common:] for i in words if i[common:]], need=0)
     return store

@@ -1,9 +1,8 @@
 def sillycase(silly):
-    output=''
+    output = ''
     for c in range(len(silly)):
-        if c <len(silly)/2:
-            output+=str.lower(silly[c]) 
+        if c < len(silly) / 2:
+            output += str.lower(silly[c])
         else:
-            output+=str.upper(silly[c]) 
+            output += str.upper(silly[c])
     return output
-

@@ -3,7 +3,3 @@ def contamination(text, char):
         return ''.join([char for el in list(text)])
     else:
         return ''
-  
-  
-  
-

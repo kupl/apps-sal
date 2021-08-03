@@ -4,4 +4,3 @@ def substring_test(*args):
         if longer.find(shorter[b:b + 2]) != -1:
             return True
     return False
-

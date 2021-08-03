@@ -1,6 +1,5 @@
 def contamination(text, char):
-  return text.replace(text, char*len(text))
+    return text.replace(text, char * len(text))
 
 
 print((contamination('_3ebzgh4', '&')))
-

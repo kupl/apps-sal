@@ -1,2 +1,2 @@
 def contamination(txt, char):
-    return char*len(txt)
+    return char * len(txt)

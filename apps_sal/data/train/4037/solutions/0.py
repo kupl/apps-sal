@@ -6,4 +6,3 @@ OPERATORS = {
 
 def detect_operator(num):
     return OPERATORS.get(str(num)[1:4], 'no info')
-

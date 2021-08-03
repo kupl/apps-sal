@@ -20,4 +20,3 @@ def detect_operator(num):
         return OPERATORS[code]
     except KeyError:
         return 'no info'
-

@@ -1,5 +1,5 @@
 r = dict(__import__("re").findall(r"(\d{3}).*-\s(.+)",
-        """
+                                  """
         039 xxx xx xx - Golden Telecom
         050 xxx xx xx - MTS
         063 xxx xx xx - Life:)
@@ -13,4 +13,6 @@ r = dict(__import__("re").findall(r"(\d{3}).*-\s(.+)",
         098 xxx xx xx - Kyivstar
         099 xxx xx xx - MTS
         """))
-detect_operator = lambda s: r.get(s[1:4], "no info")
+
+
+def detect_operator(s): return r.get(s[1:4], "no info")

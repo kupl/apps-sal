@@ -1,9 +1,9 @@
 def contamination(text, char):
-    
+
     res = ""
     for i in text:
         if text == " ":
             return text
         else:
-            res+=char
+            res += char
     return res
