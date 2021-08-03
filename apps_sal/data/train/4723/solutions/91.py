@@ -1,4 +1,3 @@
-def greet(name): 
-    new = "hello {nname}!".format(nname = name)
+def greet(name):
+    new = "hello {nname}!".format(nname=name)
     return new.title()
-

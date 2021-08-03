@@ -1,5 +1,6 @@
 DIGITS = ("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 
+
 def numbers_of_letters(n):
     n_digits = ''.join(DIGITS[i] for i in map(int, str(n)))
     n = len(n_digits)

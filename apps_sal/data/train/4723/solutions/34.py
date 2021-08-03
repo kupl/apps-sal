@@ -1,5 +1,5 @@
-def greet(name): 
+def greet(name):
     name = name.capitalize()
     name = name + "!"
-    ans = " ".join(["Hello",name])
-    return ans 
+    ans = " ".join(["Hello", name])
+    return ans

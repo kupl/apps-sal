@@ -1,5 +1,6 @@
 
-int2 = lambda x: int(round(x, 0))
+def int2(x): return int(round(x, 0))
+
 
 def other2c(temp, from_scale):
     func_dict = {

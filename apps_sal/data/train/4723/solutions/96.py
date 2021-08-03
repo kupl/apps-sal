@@ -1,4 +1,4 @@
-def greet(name): 
+def greet(name):
     name = name.lower()
     a = name[0].upper()
     b = list(name)

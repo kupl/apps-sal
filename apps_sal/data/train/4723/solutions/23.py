@@ -1,2 +1,2 @@
-def greet(name): 
-    return "Hello {}{}".format(name.capitalize(),"!")
+def greet(name):
+    return "Hello {}{}".format(name.capitalize(), "!")

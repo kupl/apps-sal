@@ -1,4 +1,6 @@
 import numpy as np
+
+
 def hyperrectangularity_properties(arr):
     try:
         arr = np.array(arr)

@@ -1,4 +1,4 @@
-def greet(name): 
+def greet(name):
     # your code here
     d = name.title()
-    return "Hello "+ d + "!"
+    return "Hello " + d + "!"

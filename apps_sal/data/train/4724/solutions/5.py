@@ -7,5 +7,6 @@ def r(m):
         s = s.capitalize()
     return s
 
+
 def drop_cap(s):
     return re.sub('\w+', r, s)

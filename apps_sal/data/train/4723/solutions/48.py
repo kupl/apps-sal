@@ -1,2 +1,2 @@
-def greet(name): 
-   return("Hello " + str.capitalize(name) + "!")
+def greet(name):
+    return("Hello " + str.capitalize(name) + "!")
