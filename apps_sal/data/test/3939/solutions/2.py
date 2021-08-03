@@ -12,7 +12,8 @@ for N, K, A in Query:
     Inds = []
     exists = False
     for i, a in enumerate(A):
-        if a == K: exists = True
+        if a == K:
+            exists = True
         if a >= K:
             Inds.append(i)
 

@@ -16,7 +16,7 @@ for i in range(0, 64):
                 if(ev1 > 0 and ev1 % 2 == 1):
                     for j in range(0, i):
                         ev1 *= 2
-                    ans.append(ev1 / 2);
+                    ans.append(ev1 / 2)
 
             ev1 = 3 - y - sqrt
             if(ev1 % 2 == 0):
@@ -24,7 +24,7 @@ for i in range(0, 64):
                 if(ev1 > 0 and ev1 % 2 == 1):
                     for j in range(0, i):
                         ev1 *= 2
-                    ans.append(ev1 / 2);
+                    ans.append(ev1 / 2)
 for i in sorted(ans):
     print(int(i))
 if not len(ans):

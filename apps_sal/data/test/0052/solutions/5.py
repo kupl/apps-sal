@@ -1,5 +1,5 @@
 n = int(input())
-succ = False;
+succ = False
 for ii in range(0, 100):
     i = 2 ** ii
     l = 1

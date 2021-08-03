@@ -11,7 +11,7 @@ def check(n, q):
         return None
     left = 0
     right = 10 ** 10
-    f = lambda k: k * (k - 1) // 2 + k * (2 ** q - 1)
+    def f(k): return k * (k - 1) // 2 + k * (2 ** q - 1)
     while left + 1 < right:
         mid = (left + right) // 2
         if f(mid) <= n:
