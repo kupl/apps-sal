@@ -4,7 +4,7 @@ def strong_num(number):
     num = str(number)
     for i in num:
         i = int(i)
-        for e in range(1, i+1):
+        for e in range(1, i + 1):
             f = f * e
         c = c + f
         f = 1

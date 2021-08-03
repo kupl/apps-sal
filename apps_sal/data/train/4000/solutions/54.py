@@ -1,4 +1,6 @@
-import math 
+import math
+
+
 def strong_num(number):
     sum = 0
     number = str(number)
@@ -8,4 +10,3 @@ def strong_num(number):
         return "STRONG!!!!"
     else:
         return "Not Strong !!"
-

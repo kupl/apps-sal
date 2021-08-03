@@ -3,8 +3,8 @@ def strong_num(number):
     for i in str(number):
         num = 1
         a = int(i)
-        for i in range(1, a+1):
-            num = num*i
+        for i in range(1, a + 1):
+            num = num * i
         sum1 += num
     if number == sum1:
         return "STRONG!!!!"

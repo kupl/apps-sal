@@ -8,5 +8,6 @@ patterns = [
     (re.compile('.*'.join('edits'), flags=re.I), 'Danik'),
 ]
 
+
 def memesorting(meme):
     return next((who for m in accumulate(meme) for pattern, who in patterns if pattern.search(m)), 'Vlad')

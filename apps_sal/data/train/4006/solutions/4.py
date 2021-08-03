@@ -8,4 +8,4 @@ def basic_op(operator, value1, value2):
     elif operator == "/":
         return value1 / value2
     else:
-        print ("Unrecognized Operator. Abort.")
+        print("Unrecognized Operator. Abort.")

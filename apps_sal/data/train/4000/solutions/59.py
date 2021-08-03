@@ -1,4 +1,6 @@
 import math
+
+
 def strong_num(number):
     check = 0
     for i in str(number):

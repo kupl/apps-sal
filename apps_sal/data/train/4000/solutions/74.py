@@ -1,5 +1,6 @@
 import math
 
+
 def strong_num(number):
     nums = [int(char) for char in str(number)]
     strong = 0
@@ -7,5 +8,5 @@ def strong_num(number):
         strong += math.factorial(i)
     if strong == number:
         return "STRONG!!!!"
-    else:    
+    else:
         return "Not Strong !!"

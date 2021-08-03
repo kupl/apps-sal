@@ -7,5 +7,3 @@ def finding_k(arr):
         if all(x % k == r for x in s):
             return k
     return -1
-    
-

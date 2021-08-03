@@ -11,4 +11,3 @@ def factorial(number):
         return 1
     else:
         return number * factorial(number - 1)
-

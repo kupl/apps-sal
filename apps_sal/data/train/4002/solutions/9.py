@@ -1,4 +1,6 @@
 import regex as re
+
+
 def memesorting(meme):
     meme = meme.lower()
     print(meme)
@@ -16,8 +18,11 @@ def memesorting(meme):
         first = min(check, key=lambda match: match.span()[1])
     else:
         return 'Vlad'
-        
-    if first.group()[-1] == 'g': return 'Roma'
-    if first.group()[-1] == 's': return 'Danik'
-    else: return 'Maxim'
+
+    if first.group()[-1] == 'g':
+        return 'Roma'
+    if first.group()[-1] == 's':
+        return 'Danik'
+    else:
+        return 'Maxim'
     return

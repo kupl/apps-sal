@@ -1,4 +1,6 @@
 import math
+
+
 def strong_num(number):
     result = 0
     number1 = number

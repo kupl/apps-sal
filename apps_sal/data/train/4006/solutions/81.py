@@ -10,4 +10,5 @@ def basic_op(operator, value1, value2):
     else:
         return 'invalid operator'
 
+
 print(basic_op('+', 1, 2))

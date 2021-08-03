@@ -4,6 +4,7 @@ def factorial(n):
         ret *= i
     return ret
 
+
 def strong_num(number):
     if sum([factorial(int(i)) for i in str(number)]) == number:
         return 'STRONG!!!!'
