@@ -9,7 +9,8 @@ def factrial(n):
             factors.append(i)
             n //= i
 
-    if n != 1: factors.append(n)
+    if n != 1:
+        factors.append(n)
 
     return factors
 
@@ -21,8 +22,10 @@ d = {}
 for i in range(1, n + 1):
     fac = factrial(i)
     for j in fac:
-        if j in d: d[j] += 1
-        else: d[j] = 1
+        if j in d:
+            d[j] += 1
+        else:
+            d[j] = 1
 
 ans = 1
 for k, v in d.items():

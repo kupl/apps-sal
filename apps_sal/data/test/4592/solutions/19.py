@@ -9,7 +9,8 @@ for ii in range(2, n + 1):
         if i % j == 0:
             cnt = 0
             while i % j == 0:
-                cnt += 1; i //= j
+                cnt += 1
+                i //= j
             l[j - 1] += cnt
     if i != 1:
         l[i - 1] += 1

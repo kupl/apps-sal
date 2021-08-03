@@ -9,7 +9,8 @@ def factrial(n):  # 試し割り算法で素因数分解
             factors.append(i)
             n //= i
 
-    if n != 1: factors.append(n)
+    if n != 1:
+        factors.append(n)
 
     return factors
 
@@ -21,8 +22,10 @@ d = {}
 for i in range(1, n + 1):  # 1〜nまでの各値を素因数分解
     fac = factrial(i)
     for j in fac:  # 分解して取得した要素の回数をカウント
-        if j in d: d[j] += 1
-        else: d[j] = 1
+        if j in d:
+            d[j] += 1
+        else:
+            d[j] = 1
 
 ans = 1
 for k, v in d.items():

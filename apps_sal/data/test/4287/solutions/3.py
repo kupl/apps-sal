@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 a, n, m = rd()
 s = set()
 u = {}

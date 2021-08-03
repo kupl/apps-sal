@@ -34,7 +34,8 @@ def solve():
     for i in range(1, a + 1):
         if rain[i]:
             for x, p in umb:
-                if x >= i: break
+                if x >= i:
+                    break
                 dp[i] = min(dp[i], dp[x] + p * (i - x))
         else:
             dp[i] = dp[i - 1]

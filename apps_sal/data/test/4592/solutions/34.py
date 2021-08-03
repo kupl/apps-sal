@@ -6,7 +6,8 @@ mod = 10**9 + 7
 is_prime = [True for _ in range(1100)]
 is_prime[0] = is_prime[1] = False
 for i in range(2, 1100):
-    if not is_prime[i]: continue
+    if not is_prime[i]:
+        continue
     for j in range(i * i, 1100, i):
         is_prime[j] = False
 

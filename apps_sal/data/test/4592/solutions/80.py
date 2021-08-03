@@ -7,8 +7,10 @@ def primeryNum(n):
     ary = list(range(n + 1))
     ary[1] = 0
     for a in ary:
-        if a > n_: break
-        elif a == 0: continue
+        if a > n_:
+            break
+        elif a == 0:
+            continue
 
         for i in range(a * 2, n + 1, a):
             ary[i] = 0

@@ -6,7 +6,8 @@ def main(n, a):
     mn = dif(a) * 10e10
     for i in range(1, len(a) - 1):
         x = dif(a[:i] + a[i + 1:])
-        if x < mn: mn = x
+        if x < mn:
+            mn = x
         # print(i,x,mn)
     print(mn)
 

@@ -46,15 +46,18 @@ def dp(i=0, umbon=0):
     # print(i, umbon)
     if i == a:
         if rain[(i - 1, i)]:
-            if umbon: return umbon
+            if umbon:
+                return umbon
             return float('inf')
-        else: return umbon
+        else:
+            return umbon
     else:
         ans = float('inf')
         last = umbon
         if rain[(i - 1, i)]:
             umbon = min(umbon, umbrellas[i]) if umbon else umbrellas[i]
-            if not last: last = float('inf')
+            if not last:
+                last = float('inf')
             ans = min(ans, last + dp(i + 1, umbon))
             ans = min(ans, last + dp(i + 1, 0))
         else:
