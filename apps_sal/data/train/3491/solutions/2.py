@@ -15,7 +15,7 @@ def iter_candidates(strng, n):
         if len(seen) >= n and c not in seen:
             yield "".join(xs)
             seen.discard(xs[-n][0])
-            del xs[:1-n]
+            del xs[:1 - n]
         xs.append("".join(grp))
         seen.add(c)
     yield "".join(xs)

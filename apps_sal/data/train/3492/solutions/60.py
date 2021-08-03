@@ -1,4 +1,4 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     result = ""
     for letter in st:
         if letter == "ą":
@@ -18,10 +18,10 @@ def correct_polish_letters(st):
         elif letter == "ź":
             result += "z"
         elif letter == "ż":
-            result += "z"  
+            result += "z"
         else:
             result += letter
     return result
-            
+
     # your code here
     pass

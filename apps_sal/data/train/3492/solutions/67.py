@@ -9,7 +9,7 @@ ALPHABET = {"ą": "a",
             "ż": "z"}
 
 
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
 
     result = ""
     for char in st:
@@ -19,4 +19,3 @@ def correct_polish_letters(st):
             result += char
 
     return result
-

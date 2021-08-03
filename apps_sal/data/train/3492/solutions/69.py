@@ -11,9 +11,9 @@ polist_letters = {
     'ż': 'z'
 }
 
-def correct_polish_letters(st): 
+
+def correct_polish_letters(st):
     my_st = st
     for l in polist_letters:
         my_st = re.sub(l, polist_letters.get(l), my_st)
     return my_st
-

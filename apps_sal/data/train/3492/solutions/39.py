@@ -1,14 +1,14 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     PolishDict = {
-        "ą" : "a",
-        "ć" : "c",
-        "ę" : "e",
-        "ł" : "l",
-        "ń" : "n",
-        "ó" : "o",
-        "ś" : "s",
-        "ź" : "z",
-        "ż" : "z"
+        "ą": "a",
+        "ć": "c",
+        "ę": "e",
+        "ł": "l",
+        "ń": "n",
+        "ó": "o",
+        "ś": "s",
+        "ź": "z",
+        "ż": "z"
     }
     newStr = ""
     for i in range(len(st)):

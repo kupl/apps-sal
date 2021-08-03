@@ -1,4 +1,4 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     letters = {
         "ą": "a",
         "ć": "c",
@@ -6,7 +6,7 @@ def correct_polish_letters(st):
         "ł": "l",
         "ń": "n",
         "ó": "o",
-        "ś": "s", 
+        "ś": "s",
         "ź": "z",
         "ż": "z"
     }

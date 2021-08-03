@@ -38,4 +38,3 @@ def decode_resistor_colors(bands):
     value *= 10 ** (exponent - 1)
 
     return '{:g}{} ohms, {}%'.format(value, letter, tolerance)
-

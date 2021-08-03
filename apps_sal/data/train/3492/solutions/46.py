@@ -1,4 +1,4 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     dict = {
         'ą': 'a',
         'ć': 'c',

@@ -1,4 +1,4 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     polish = ['ą', 'ć', 'ę', 'ł', 'ń', 'ó', 'ś', 'ź', 'ż']
     changeTo = ['a', 'c', 'e', 'l', 'n', 'o', 's', 'z', 'z']
     converted = []
@@ -9,4 +9,3 @@ def correct_polish_letters(st):
         else:
             converted.append(letter)
     return ''.join(converted)
-

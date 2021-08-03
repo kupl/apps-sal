@@ -1,5 +1,5 @@
-def solve(a,b):
-    a=list(a)
+def solve(a, b):
+    a = list(a)
     try:
         for c in b:
             a.pop(a.index(c))

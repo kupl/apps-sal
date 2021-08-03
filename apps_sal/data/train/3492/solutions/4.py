@@ -1,4 +1,4 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     rules = {
         'ą': 'a',
         'ć': 'c',
@@ -9,5 +9,5 @@ def correct_polish_letters(st):
         'ś': 's',
         'ź': 'z',
         'ż': 'z'
-        }
+    }
     return ''.join(map(lambda c: rules[c] if c in rules else c, st))
