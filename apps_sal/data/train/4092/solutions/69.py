@@ -1,1 +1,1 @@
-main = lambda verb, noun: "".join((verb, noun))
+def main(verb, noun): return "".join((verb, noun))

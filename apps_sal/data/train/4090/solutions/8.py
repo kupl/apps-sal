@@ -4,4 +4,3 @@ def get_animals_count(legs_number, heads_number, horns_number):
         'chickens': (4 * heads_number - legs_number) // 2,
         'cows': horns_number // 2
     }
-

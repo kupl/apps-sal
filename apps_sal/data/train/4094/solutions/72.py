@@ -1,7 +1,7 @@
 def count_positives_sum_negatives(arr):
     if arr == []:
         return []
-    sum = 0 
+    sum = 0
     count = 0
     for number in arr:
         if number < 0:

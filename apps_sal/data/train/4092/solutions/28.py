@@ -1,4 +1,4 @@
-def main (verb, noun):
+def main(verb, noun):
     try:
         return verb + noun
     except:

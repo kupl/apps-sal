@@ -1,1 +1,1 @@
-main = lambda _,__:_+__
+def main(_, __): return _ + __

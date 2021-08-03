@@ -1,3 +1,5 @@
 def main(verb, noun):
-    return verb+ noun
-print(main('use ',' book'))
+    return verb + noun
+
+
+print(main('use ', ' book'))

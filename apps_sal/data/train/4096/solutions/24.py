@@ -1,4 +1,6 @@
 import re
+
+
 def valid_parentheses(string):
     s = ''.join([i for i in string if i in "()"])
     total = [string]

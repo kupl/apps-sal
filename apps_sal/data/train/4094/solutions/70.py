@@ -1,5 +1,5 @@
 def count_positives_sum_negatives(arr):
-    #your code here
+    # your code here
     negsum = 0
     positive = 0
     for i in arr:

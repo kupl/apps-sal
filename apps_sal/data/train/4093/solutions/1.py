@@ -1,5 +1,6 @@
 def find_a(A, n):
-    if 0 <= n < 4: return A[n]
+    if 0 <= n < 4:
+        return A[n]
     if n < 0:
         A, n = A[::-1], abs(n) + 3
     B = [0] * 4

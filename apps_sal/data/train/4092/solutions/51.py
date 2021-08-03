@@ -1,2 +1,2 @@
-def main (*args):
+def main(*args):
     return ''.join(args)

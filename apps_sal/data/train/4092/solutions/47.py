@@ -1,1 +1,1 @@
-main=lambda v,b:v+b
+def main(v, b): return v + b

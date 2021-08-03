@@ -8,5 +8,4 @@ def count_positives_sum_negatives(arr):
             negSum += number
         else:
             posTot += 1
-    return [posTot,negSum]
-
+    return [posTot, negSum]

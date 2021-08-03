@@ -1,5 +1,4 @@
-def main (verb, noun):
+def main(verb, noun):
     v = verb
     n = noun
     return v + n
-

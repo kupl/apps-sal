@@ -1,2 +1,2 @@
-def main(x,y):
+def main(x, y):
     return x + y

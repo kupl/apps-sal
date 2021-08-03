@@ -22,6 +22,7 @@ class Stack:
     def size(self):
         return len(self.items)
 
+
 def valid_parentheses(symbol_string):
     """
     This is a practice problem.

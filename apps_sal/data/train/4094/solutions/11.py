@@ -5,6 +5,5 @@ def count_positives_sum_negatives(arr):
     non_positives = [x for x in arr if x < 1]
     count_positives = len(arr) - len(non_positives)
     sum_negatives = sum(non_positives)
-    
-    return [count_positives, sum_negatives]
 
+    return [count_positives, sum_negatives]

@@ -7,7 +7,7 @@ def count_positives_sum_negatives(arr):
                 a += 1
             elif i <= 0:
                 b += i
-        return [a, b] 
-    
+        return [a, b]
+
     else:
         return []

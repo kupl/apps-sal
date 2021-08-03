@@ -5,8 +5,9 @@ def reverse_list(lst):
     []
     >>> reverse_list([1, 2, 3])
     [3, 2, 1]
-    """ 
+    """
     return lst[::-1]
+
 
 def sum_list(lst):
     """Takes a list, and returns the sum of that list.
@@ -17,6 +18,7 @@ def sum_list(lst):
     6
     """
     return sum(lst)
+
 
 def head_of_list(lst):
     """Takes a list, returns the first item in that list.

@@ -1,3 +1,3 @@
-def main (verbs,none):
+def main(verbs, none):
     main = verbs + none
     return main

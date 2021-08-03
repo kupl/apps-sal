@@ -1,1 +1,1 @@
-main = lambda verb, noun: verb + noun
+def main(verb, noun): return verb + noun

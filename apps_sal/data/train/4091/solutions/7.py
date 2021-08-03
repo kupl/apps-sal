@@ -8,4 +8,4 @@ def which_note(key_press_count):
              "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#",
              "A", "A#", "B", "C")
 
-    return piano[key_press_count%88 -1]
+    return piano[key_press_count % 88 - 1]
