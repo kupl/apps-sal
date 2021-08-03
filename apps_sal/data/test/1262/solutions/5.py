@@ -39,9 +39,9 @@ while connCosts:
 myprint = sys.stdout.write
 myprint(str(totalCost) + '\n')
 myprint(str(len(stations)) + '\n')
-[myprint(str(st + 1) + ' ') for st in stations];
+[myprint(str(st + 1) + ' ') for st in stations]
 myprint(str(len(connections)) + '\n')
-[myprint(str(c1 + 1) + ' ' + str(c2 + 1) + '\n') for c1, c2 in connections];
+[myprint(str(c1 + 1) + ' ' + str(c2 + 1) + '\n') for c1, c2 in connections]
 
 # print(totalCost)
 # print(len(stations))

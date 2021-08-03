@@ -60,6 +60,6 @@ print(totalCost)
 print(len(stations))
 print(*stations)
 print(len(connections))
-[print(c1, c2) for c1, c2 in connections];
+[print(c1, c2) for c1, c2 in connections]
 
 # inf.close()

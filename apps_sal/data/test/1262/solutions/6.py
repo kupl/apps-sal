@@ -40,7 +40,8 @@ connCosts[start] = 0
 while connCosts:
     # node with min connection cost
     v = min(connCosts, key=connCosts.get)
-    if connCosts[v] == float('inf'): break
+    if connCosts[v] == float('inf'):
+        break
 
     fromNode = connTo[v]
     if not fromNode:  # edge (0, v) <=> v-node has station
@@ -59,9 +60,9 @@ while connCosts:
 myprint = sys.stdout.write
 myprint(str(totalCost) + '\n')
 myprint(str(len(stations)) + '\n')
-[myprint(str(st) + ' ') for st in stations];
+[myprint(str(st) + ' ') for st in stations]
 myprint(str(len(connections)) + '\n')
-[myprint(str(c1) + ' ' + str(c2) + '\n') for c1, c2 in connections];
+[myprint(str(c1) + ' ' + str(c2) + '\n') for c1, c2 in connections]
 
 # print(totalCost)
 # print(len(stations))

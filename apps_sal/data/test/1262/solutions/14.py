@@ -5,9 +5,11 @@ import sys
 from collections import defaultdict
 
 # input = sys.stdin.readline
-rt = lambda: map(int, input().split())
-ri = lambda: int(input())
-rl = lambda: list(map(int, input().split()))
+
+
+def rt(): return map(int, input().split())
+def ri(): return int(input())
+def rl(): return list(map(int, input().split()))
 
 
 def dist(x1, y1, x2, y2):

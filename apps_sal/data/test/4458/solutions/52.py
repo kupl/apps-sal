@@ -14,6 +14,7 @@ for i in range(1, N):
 # 各iまでの最小値とi番目の値を比較し、最小値の方が大きければよい
 ans = 1
 for i in range(1, N):
-    if m[i - 1] >= p[i]: ans += 1
+    if m[i - 1] >= p[i]:
+        ans += 1
 
 print(ans)

@@ -3,13 +3,13 @@ import sys
 #from collections import deque
 #sys.stdin = open('in', 'r')
 readline = sys.stdin.readline
-rdw = lambda: readline().rstrip()
-rdws = lambda: readline().split()
-rdwl = lambda: list(readline().split())
-rdi = lambda: int(readline())
-rdis = lambda: list(map(int, readline().split()))
-rdil = lambda: list(map(int, readline().split()))
-rdilrows = lambda cnt: [rdil() for _ in range(cnt)]
+def rdw(): return readline().rstrip()
+def rdws(): return readline().split()
+def rdwl(): return list(readline().split())
+def rdi(): return int(readline())
+def rdis(): return list(map(int, readline().split()))
+def rdil(): return list(map(int, readline().split()))
+def rdilrows(cnt): return [rdil() for _ in range(cnt)]
 
 
 def solve():
@@ -35,8 +35,8 @@ def solve():
             wire.append((bst + 1, par + 1))
         for j in range(n):
             if j not in used:
-                wcost = (k[bst] + k[j]) * (abs(cities[bst][0] - cities[j][0])
-                                           + abs(cities[bst][1] - cities[j][1]))
+                wcost = (k[bst] + k[j]) * (abs(cities[bst][0] - cities[j][0]) +
+                                           abs(cities[bst][1] - cities[j][1]))
                 if wcost < c[j]:
                     c[j] = wcost
                     p[j] = bst
