@@ -12,9 +12,9 @@ def hash_(s):
     result = 0
     for ch in s:
         result += pp * (ord(ch) - ord('a') - 1)
-        pp = (pp * p) % mod;
+        pp = (pp * p) % mod
         result %= mod
-    return result % mod;
+    return result % mod
 
 
 def find(q):
@@ -31,7 +31,7 @@ def find(q):
                     break
         if ext:
             break
-        pw = (p * pw) % mod;
+        pw = (p * pw) % mod
     if not ext:
         sys.stdout.write('NO\n')
 

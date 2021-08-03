@@ -1,5 +1,6 @@
 com = int(input())
-zar = []; y = 0
+zar = []
+y = 0
 for i in range(com):
     line = [int(x) for x in input().split(' ')]
     zar.append(line)

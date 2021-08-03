@@ -11,7 +11,7 @@ ABC = ['a', 'b', 'c']
 
 def hashi(s):
     L = len(s)
-    h = 0;
+    h = 0
     pseed = 1
     for i in range(L):
         h, pseed = (h + ord(s[i]) * pseed) % div, (pseed * seed) % div
@@ -32,7 +32,8 @@ for _ in range(n):
     for i in range(L):
         orig = s[i]
         for c in ABC:
-            if c == orig: continue
+            if c == orig:
+                continue
             S.add((hashs + pseed * (ord(c) - ord(orig)) + div) % div)
         pseed = (pseed * seed) % div
 

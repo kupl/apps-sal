@@ -5,7 +5,9 @@ data = stdin.read().split('\n')
 n, m = [int(x) for x in data[0].split()]
 B = 10007
 MOD = 1000000000000000003
-h = lambda s: reduce(lambda s, c: (B * s + ord(c)) % MOD, s, 0)
+def h(s): return reduce(lambda s, c: (B * s + ord(c)) % MOD, s, 0)
+
+
 hs = defaultdict(set)
 
 

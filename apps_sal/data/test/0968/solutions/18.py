@@ -3,7 +3,7 @@ s = []
 for i in range(n):
     s.append(input().split())
     if s[i][0] > s[i][1]:
-        s[i][0], s[i][1] = s[i][1], s[i][0];
+        s[i][0], s[i][1] = s[i][1], s[i][0]
 x = [int(i) - 1 for i in input().split()]
 
 tag = False
