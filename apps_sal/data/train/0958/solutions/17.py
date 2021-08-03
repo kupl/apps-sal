@@ -14,10 +14,13 @@ def solve(n):
             p = p * t
         p = p.rjust(s + len(p))
         print(p)
+
+
 def main():
     t = int(input())
     for i in range(t):
         n = int(input())
         solve(n)
-main()
 
+
+main()
