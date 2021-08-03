@@ -1,1 +1,1 @@
-is_digit=lambda n:0<len(n)==n.isdigit()
+def is_digit(n): return 0 < len(n) == n.isdigit()

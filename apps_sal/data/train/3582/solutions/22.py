@@ -1,4 +1,4 @@
-def is_digit(d): 
+def is_digit(d):
     if len(d) < 2:
         return d.isdigit()
     return False

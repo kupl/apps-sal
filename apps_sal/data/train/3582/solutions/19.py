@@ -1,2 +1,2 @@
 def is_digit(n):
-    return n.isdigit() and int(n)<=9
+    return n.isdigit() and int(n) <= 9

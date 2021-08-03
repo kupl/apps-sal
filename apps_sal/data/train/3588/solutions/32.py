@@ -8,4 +8,3 @@ def quadratic(x1, x2):
         c = x1 ** 2
         b = -2 * x1
     return a, b, c
-

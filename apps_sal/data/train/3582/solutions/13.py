@@ -1,1 +1,1 @@
-is_digit = lambda n: str.isdigit(n) and len(n)==1
+def is_digit(n): return str.isdigit(n) and len(n) == 1

@@ -1,6 +1,6 @@
 def original_number(s):
     a = s[:]
-    code=[0 for _ in range(10)]
+    code = [0 for _ in range(10)]
 
     book = [[0, 'Z', 'ZERO'],
             [2, 'W', 'TWO'],
@@ -16,4 +16,4 @@ def original_number(s):
         code[i[0]] = a.count(i[1])
         for j in i[2]:
             a = a.replace(j, '', code[i[0]])
-    return ''.join('0123456789'[k]*j for k,j in enumerate(code))
+    return ''.join('0123456789'[k] * j for k, j in enumerate(code))
