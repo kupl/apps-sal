@@ -22,4 +22,3 @@ class Solution:
                 count[x] += 1
         # print(max(total))
         return True
-

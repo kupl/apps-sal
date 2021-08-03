@@ -7,7 +7,7 @@ class Solution:
         for i in range(n):
             g[(ord(t[i]) - ord(s[i])) % 26] += 1
         for i in range(1, 26):
-            index = i + (g[i]-1) * 26
+            index = i + (g[i] - 1) * 26
             if index > k:
                 return False
         return True

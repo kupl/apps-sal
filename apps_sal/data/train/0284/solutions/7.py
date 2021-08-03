@@ -3,10 +3,10 @@ class Solution:
         n = len(tokens)
         tokens.sort()
         i = 0
-        j = n-1
+        j = n - 1
         points = 0
         result = 0
-        
+
         while i <= j:
             if tokens[i] <= P:
                 points += 1
@@ -19,5 +19,5 @@ class Solution:
                 P += tokens[j]
                 points -= 1
                 j -= 1
-        
+
         return result

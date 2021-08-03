@@ -7,8 +7,9 @@ class Solution:
             for k, v in list(d.items()):
                 result /= math.factorial(v)
             return result
-        
+
         t, e = 0, 0
+
         def choose(i, k, d1, d2):
             nonlocal t
             nonlocal e
@@ -18,7 +19,7 @@ class Solution:
                 t_ = calc(d1) * calc(d2)
                 t += t_
                 e += t_ if len(d1) == len(d2) else 0
-                return 
+                return
             if k < 0 or i == n:
                 return
             for j in range(balls[i] + 1):
@@ -35,11 +36,9 @@ class Solution:
                 d1.pop(i)
             if i in d2:
                 d2.pop(i)
-        
+
         n = len(balls)
         k = sum(balls) // 2
         choose(0, k, {}, {})
         # print(t, e)
         return e / t
-            
-

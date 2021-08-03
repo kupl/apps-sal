@@ -14,7 +14,7 @@ class Solution:
                 # sum[j, j + M -1]
                 mSum = cumulatedSum[j + M] - cumulatedSum[j]
                 result = max(result, lSum + mSum)
-            
+
         for i in range(len(A) - M + 1):
             mSum = cumulatedSum[i + M] - cumulatedSum[i]
             for j in range(i + M, len(A) - L + 1):

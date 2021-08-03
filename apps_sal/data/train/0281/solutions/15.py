@@ -2,7 +2,7 @@ class Solution:
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):
             return False
-        
+
         shifts = []
         for ch1, ch2 in zip(s, t):
             asc1 = ord(ch1) - ord('a')
@@ -11,9 +11,9 @@ class Solution:
             assert diff >= 0
             if diff > 0:
                 shifts.append(diff)
-        
+
         shifts.sort()
-    
+
         most = 0
         freq = defaultdict(int)
         for s in shifts:

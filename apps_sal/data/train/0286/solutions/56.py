@@ -12,11 +12,11 @@ class Solution:
         self.n = sum(balls) // 2
         self.update([])
         return self.valid / self.total
-    
+
     @ft.lru_cache(None)
     def combination(self, n: int, p: int) -> int:
         return ft.reduce(operator.mul, range(n, n - p, -1), 1) // math.factorial(p)
-    
+
     def count(self, balls: List[int]) -> int:
         ans = 1
         remaining = self.n
@@ -24,7 +24,7 @@ class Solution:
             ans *= self.combination(remaining, ball)
             remaining -= ball
         return ans
-    
+
     def update(self, left_balls: List[int]) -> None:
         if len(left_balls) == self.k:
             if sum(left_balls) != self.n:
@@ -37,7 +37,7 @@ class Solution:
             return
         index = len(left_balls)
         left_total = sum(left_balls)
-        if left_total + sum(self.balls[index :]) < self.n:
+        if left_total + sum(self.balls[index:]) < self.n:
             return
         if left_total > self.n:
             return

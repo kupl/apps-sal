@@ -7,17 +7,17 @@ class Solution:
         idx_dict = {}
         for i in range(1, 26):
             idx_dict[i] = 0
-        
+
         for idx, sc in enumerate(s):
             tc = t[idx]
-            
+
             if(sc == tc):
                 # idx_list.append(0)
                 continue
-            
+
             sasc = ord(sc)
             tasc = ord(tc)
-            
+
             if(sasc < tasc):
                 movei = tasc - sasc
             else:
@@ -31,6 +31,5 @@ class Solution:
                 return False
             # idx_list.append(movei)
             # idx_set.add(movei)
-        #print(idx_list)
+        # print(idx_list)
         return True
-

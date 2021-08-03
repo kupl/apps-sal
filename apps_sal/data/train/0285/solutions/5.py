@@ -1,6 +1,7 @@
 class Solution:
     def smallestRangeII(self, A: List[int], K: int) -> int:
-        if len(A) == 1: return 0
+        if len(A) == 1:
+            return 0
         A.sort()
         i = 0
         j = len(A) - 1

@@ -14,9 +14,5 @@ class Solution:
                     return False
                 else:
                     seen[move] = last + 26
-                
-        
+
         return True
-                
-
-

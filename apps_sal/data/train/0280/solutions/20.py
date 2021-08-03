@@ -13,7 +13,7 @@ class Solution:
                 if r < c:
                     tmp = float('inf')
                     for i in range(c):
-                        tmp = min(tmp, dp[r-1][i] + prefix[i+1][c])
+                        tmp = min(tmp, dp[r - 1][i] + prefix[i + 1][c])
                     dp[r][c] = tmp
         return dp[-1][-1]
 

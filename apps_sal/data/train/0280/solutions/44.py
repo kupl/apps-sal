@@ -3,6 +3,7 @@ class Solution:
         # dfs with memorization
         n = len(s)
         memo = dict()
+
         def cost(s, i, j):
             ans = 0
             while i < j:
@@ -11,7 +12,7 @@ class Solution:
                 i += 1
                 j -= 1
             return ans
-        
+
         def dfs(i, k):
             if (i, k) in memo:
                 return memo[(i, k)]
@@ -19,14 +20,10 @@ class Solution:
             if n - i == k:
                 return 0
             if k == 1:
-                return cost(s, i, n-1)
+                return cost(s, i, n - 1)
             res = float('inf')
-            for j in range(i, n-k+1):
-                res = min(res, cost(s, i, j) + dfs(j+1, k-1))
+            for j in range(i, n - k + 1):
+                res = min(res, cost(s, i, j) + dfs(j + 1, k - 1))
             memo[(i, k)] = res
             return res
         return dfs(0, k)
-                
-            
-            
-

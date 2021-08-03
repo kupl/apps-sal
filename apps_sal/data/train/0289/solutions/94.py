@@ -21,4 +21,3 @@ class Solution:
                 right = preSum[j + L] - preSum[j]
                 mx = max(mx, left + right)
         return mx
-

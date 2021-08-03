@@ -9,17 +9,18 @@ class Solution:
                 j -= 1
             return res
         memo = {}
+
         def dfs(l, r, k):
-            if r-l < k:
+            if r - l < k:
                 return float('inf')
-            if r-l == k:
+            if r - l == k:
                 return 0
             if k == 1:
-                return cost(s, l, r-1)
+                return cost(s, l, r - 1)
             if (l, r, k) in memo:
                 return memo[l, r, k]
             memo[l, r, k] = float('inf')
-            for i in range(l+1, r):
-                memo[l, r, k] = min(memo[l, r, k], dfs(l, i, k-1) + cost(s, i, r-1))
+            for i in range(l + 1, r):
+                memo[l, r, k] = min(memo[l, r, k], dfs(l, i, k - 1) + cost(s, i, r - 1))
             return memo[l, r, k]
         return dfs(0, len(s), k)

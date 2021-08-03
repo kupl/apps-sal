@@ -1,7 +1,6 @@
 # [1, 3, 6]
 
 
-
 class Solution:
     def smallestRangeII(self, A: List[int], K: int) -> int:
         A.sort()

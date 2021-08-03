@@ -5,8 +5,9 @@ class Solution:
             for i in range(n, n - m, -1):
                 c *= i
             return c / math.factorial(m)
-        
+
         t, e = 0, 0
+
         def choose(i, k, d1, d2):
             nonlocal t, e
             if k == 0 and i <= n:
@@ -17,7 +18,7 @@ class Solution:
                     t_ *= C(balls[k], v)
                 t += t_
                 e += t_ if len(d1) == len(d2) else 0
-                return 
+                return
             if k < 0 or i == n:
                 return
             for j in range(balls[i] + 1):
@@ -34,11 +35,9 @@ class Solution:
                 d1.pop(i)
             if i in d2:
                 d2.pop(i)
-        
+
         n = len(balls)
         k = sum(balls)
         choose(0, k // 2, {}, {})
         # print(t, e)
         return e / t
-            
-

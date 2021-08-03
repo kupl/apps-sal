@@ -2,22 +2,21 @@ class Solution:
     def getProbability(self, balls: List[int]) -> float:
         total = 0
         valid = 0
-        
+
         @lru_cache(None)
         def getFactor(i):
             ans = 1
             for i in range(2, i + 1):
                 ans *= i
             return ans
-        
+
         def getComb(nums):
             a = getFactor(sum(nums.values()))
             duplicate = 1
             for val in nums.values():
                 duplicate *= getFactor(val)
             return a // duplicate
-            
-        
+
         def dfs(i, a, b):
             nonlocal total
             nonlocal valid
@@ -28,7 +27,7 @@ class Solution:
                 # print(a, b)
                 # print(p1, p2)
                 total += p1 * p2
-                
+
                 if len(a) == len(b):
                     valid += p1 * p2
             else:
@@ -39,7 +38,7 @@ class Solution:
                         del a[i]
                     if b[i] == 0:
                         del b[i]
-                    dfs(i + 1, a, b)         
-                    
+                    dfs(i + 1, a, b)
+
         dfs(0, {}, {})
         return valid / total

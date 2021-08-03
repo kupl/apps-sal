@@ -5,7 +5,7 @@ class Solution:
         maps = {}
         for i in range(len(s)):
             if s[i] != t[i]:
-                diff = (ord(t[i]) - ord(s[i]) ) % 26
+                diff = (ord(t[i]) - ord(s[i])) % 26
                 if diff not in list(maps.keys()):
                     maps[diff] = 1
                 else:
@@ -13,6 +13,3 @@ class Solution:
                 if ((maps[diff] - 1) * 26 + diff) > k:
                     return False
         return True
-                
-        
-

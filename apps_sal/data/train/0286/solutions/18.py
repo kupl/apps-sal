@@ -4,11 +4,13 @@ class Solution:
         self.valid = 0
         t = sum(balls) >> 1
         n = len(balls)
+
         def check(s):
             return sum([x != 0 for x in s]) == sum([balls[i] - s[i] != 0 for i in range(n)])
         fac = [1]
         for i in range(1, t + 1):
             fac.append(fac[-1] * i)
+
         def update(s):
             x = y = fac[-1]
             cnt1 = cnt2 = 0
@@ -21,14 +23,17 @@ class Solution:
             self.total += ret
             if cnt1 == cnt2:
                 self.valid += ret
+
         def dfs(state, i):
             s, cnt = state
             if cnt == t:
                 update(s)
-                return 
-            if i == n: return
+                return
+            if i == n:
+                return
             for x in range(balls[i] + 1):
-                if cnt + x > t: break
+                if cnt + x > t:
+                    break
                 s[i] = x
                 dfs((s, cnt + x), i + 1)
                 s[i] = 0
