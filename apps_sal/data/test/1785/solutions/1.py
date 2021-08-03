@@ -1,6 +1,7 @@
 import sys
 # sys.stdin = open('in.txt')
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
 
 n = int(input())
 s = input()

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def main():
-    readData = lambda: list(map(int, input().split()))
+    def readData(): return list(map(int, input().split()))
     n, c = readData()
     X = list(readData())
     ret = 0

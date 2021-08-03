@@ -1,12 +1,12 @@
 n = int(input())
 L = list(map(int, input().split()))
 
-exp = n;
-T = [-1] * (n + 1);
+exp = n
+T = [-1] * (n + 1)
 
 miss = 0
 for i in range(len(L)):
-    T[L[i]] = i;
+    T[L[i]] = i
 
 ot = []
 for i in range(len(L)):
