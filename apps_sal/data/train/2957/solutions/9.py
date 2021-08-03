@@ -1,15 +1,15 @@
 def get_drink_by_profession(param):
     if param.lower() in ["jabroni"]:
-        return "Patron Tequila"; 
+        return "Patron Tequila"
     elif param.lower() in ["school counselor"]:
-        return "Anything with Alcohol"; 
+        return "Anything with Alcohol"
     elif param.lower() in ["programmer"]:
-        return "Hipster Craft Beer";  
+        return "Hipster Craft Beer"
     elif param.lower() in ["bike gang member"]:
-        return "Moonshine"; 
+        return "Moonshine"
     elif param.lower() in ["rapper"]:
-        return "Cristal";
+        return "Cristal"
     elif param.lower() in ["politician"]:
-        return "Your tax dollars";     
+        return "Your tax dollars"
     else:
-        return "Beer"; 
+        return "Beer"

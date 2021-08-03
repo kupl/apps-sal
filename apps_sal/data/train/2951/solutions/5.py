@@ -1,6 +1,6 @@
 def how_many_measurements(n):
     x = 0
-    while n > 1:    
+    while n > 1:
         if n % 2 == 0:
             n = n / 3
             first = round(n)

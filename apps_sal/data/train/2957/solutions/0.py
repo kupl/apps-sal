@@ -7,5 +7,6 @@ d = {
     "rapper": "Cristal"
 }
 
+
 def get_drink_by_profession(s):
     return d.get(s.lower(), "Beer")

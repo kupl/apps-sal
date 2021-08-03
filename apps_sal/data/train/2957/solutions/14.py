@@ -7,5 +7,6 @@ table = {
     "rapper": "Cristal",
 }
 
+
 def get_drink_by_profession(param):
-    return table.get(param.lower(), "Beer")   
+    return table.get(param.lower(), "Beer")

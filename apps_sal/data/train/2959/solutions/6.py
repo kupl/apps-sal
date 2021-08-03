@@ -1,7 +1,5 @@
 def optimal_number_of_coins(n, coins):
-    return change_making(coins,n)
-
-
+    return change_making(coins, n)
 
 
 def _get_change_making_matrix(set_of_coins, r: int):
@@ -9,6 +7,7 @@ def _get_change_making_matrix(set_of_coins, r: int):
     for i in range(1, r + 1):
         m[0][i] = float('inf')  # By default there is no way of making change
     return m
+
 
 def change_making(coins, n: int):
     """This function assumes that all coins are available infinitely.

@@ -8,4 +8,3 @@ def numericals(s):
             history[char] += 1
         result.append(history[char])
     return "".join(map(str, result))
-

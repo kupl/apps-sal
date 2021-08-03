@@ -1,6 +1,6 @@
 def get_drink_by_profession(param):
     newparam = param.lower()
-    
+
     if newparam == 'jabroni':
         return 'Patron Tequila'
     elif newparam == 'school counselor':
