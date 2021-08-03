@@ -1,4 +1,4 @@
-r = lambda: map(int, input().split())
+def r(): return map(int, input().split())
 
 
 def main():

@@ -13,7 +13,7 @@ mx2 = 0
 for i in range(1, n + 1):
     if (bz[i] == 0):
         x = i
-        num = 0;
+        num = 0
         while (bz[x] == 0):
             num += 1
             bz[x] = 1

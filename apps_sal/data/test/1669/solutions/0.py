@@ -8,16 +8,20 @@ def main():
         code += input() + '\n'
 
     def is_word(suspect):
-        if suspect[0].isdigit(): return False
+        if suspect[0].isdigit():
+            return False
         for x in suspect:
             if (not x.isalpha()) and (not x in {'_', '$'}) and (not x.isdigit()):
                 return False
         return True
 
     def is_token(suspect):
-        if suspect in reserved: return True
-        if is_word(suspect): return True
-        if suspect.isdigit(): return True
+        if suspect in reserved:
+            return True
+        if is_word(suspect):
+            return True
+        if suspect.isdigit():
+            return True
         return False
 
     def remove_comments(code):
@@ -81,9 +85,11 @@ def main():
     tokens = (minmize(split(code)))
 
     def cmp(a, b):
-        if len(a) != len(b): return False
+        if len(a) != len(b):
+            return False
         for i in range(len(a)):
-            if a[i] != b[i]: return False
+            if a[i] != b[i]:
+                return False
         return True
 
     final = []

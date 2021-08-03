@@ -3,7 +3,8 @@ val = 0
 sub = False
 for c in input() + '+':
     if c == '+' or c == '-':
-        if sub: val *= -1
+        if sub:
+            val *= -1
         res += val
         val = 0
         sub = (c == '-')
