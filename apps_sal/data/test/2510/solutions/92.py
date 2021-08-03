@@ -11,7 +11,8 @@ def B():
     for i in range(sa + 1):
         cnt = 0
         for j in range(len(t)):
-            if s[j + i] != t[j]: cnt += 1
+            if s[j + i] != t[j]:
+                cnt += 1
         ret = min(ret, cnt)
     print(ret)
 
@@ -34,21 +35,24 @@ class UF:
         self.d = [1] * N
 
     def find(self, x):
-        if self.par[x] == x: return x
+        if self.par[x] == x:
+            return x
         self.par[x] = self.find(self.par[x])
         return self.par[x]
 
     def unite(self, x, y):
         x = self.find(x)
         y = self.find(y)
-        if x == y: return False
+        if x == y:
+            return False
         if self.d[y] > self.d[x]:
             self.par[x] = y
             self.sz[y] += self.sz[x]
         else:
             self.par[y] = x
             self.sz[x] += self.sz[y]
-            if self.d[x] == self.d[y]: self.d[x] += 1
+            if self.d[x] == self.d[y]:
+                self.d[x] += 1
 
 
 def D():

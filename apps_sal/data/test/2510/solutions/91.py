@@ -44,7 +44,8 @@ def unite(x, y):
         par[x - 1] = y
     else:
         par[y - 1] = x
-        if rank[x - 1] == rank[y - 1]: rank[x - 1] += 1
+        if rank[x - 1] == rank[y - 1]:
+            rank[x - 1] += 1
 
 
 for i in range(M):

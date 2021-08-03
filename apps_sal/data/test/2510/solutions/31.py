@@ -3,7 +3,8 @@ class UnionFind():
         self.par = [-1] * N
 
     def root(self, x):
-        if self.par[x] < 0: return x
+        if self.par[x] < 0:
+            return x
         self.par[x] = self.root(self.par[x])
         return self.par[x]
 
@@ -11,7 +12,8 @@ class UnionFind():
         rx = self.root(x)
         ry = self.root(y)
         #print(f'root: {rx} {ry}')
-        if rx == ry: return
+        if rx == ry:
+            return
 
         self.par[ry] += self.par[rx]
         self.par[rx] = ry

@@ -30,5 +30,6 @@ for _ in range(M):
 done = [0] * N
 ans = 0
 for i in range(N):
-    if done[i] == 0: ans = max(ans, bfs(edge, i))
+    if done[i] == 0:
+        ans = max(ans, bfs(edge, i))
 print(ans)

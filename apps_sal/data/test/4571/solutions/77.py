@@ -13,7 +13,9 @@ mod = 10**9 + 7
 inf = float("inf")
 # すべてのkeyが用意されてる defaultdict(int)で初期化
 # 順序を保ったdict
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
+
 sys.setrecursionlimit(11451419)
 #メモ化再帰defの冒頭に毎回 @lru_cache(maxsize=10**10)
 # 引数にlistはだめ

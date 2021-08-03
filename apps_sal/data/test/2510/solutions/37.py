@@ -4,7 +4,8 @@ class Unionfind:
         self.num = [1] * n
 
     def root(self, a):
-        if self.par[a] == a: return a
+        if self.par[a] == a:
+            return a
         parent = self.root(self.par[a])
         self.par[a] = parent
         return parent
@@ -24,7 +25,8 @@ def main():
 
     for _ in range(m):
         a, b = map(int, input().split())
-        if uf.same(a - 1, b - 1): continue
+        if uf.same(a - 1, b - 1):
+            continue
         uf.unite(a - 1, b - 1)
 
     print(max(uf.num))

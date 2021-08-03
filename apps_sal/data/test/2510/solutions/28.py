@@ -2,7 +2,9 @@ import sys
 sys.setrecursionlimit(1000000)
 
 
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 N, M = f()
 
 if M == 0:
@@ -21,10 +23,12 @@ F = [0] * (N + 1)
 
 
 def dfs(i, n):
-    if F[i]: return
+    if F[i]:
+        return
     F[i] = 1
     for g in G[i]:
-        if F[g]: continue
+        if F[g]:
+            continue
         t = d.get(n, set())
         t.add(g)
         d[n] = t

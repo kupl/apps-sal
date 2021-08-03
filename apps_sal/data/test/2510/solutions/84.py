@@ -1,6 +1,7 @@
 import statistics
 N, M = map(int, input().split())
-A = [0] * M; B = [0] * M
+A = [0] * M
+B = [0] * M
 par = [-1] * N
 
 
