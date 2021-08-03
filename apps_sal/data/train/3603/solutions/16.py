@@ -1,1 +1,1 @@
-lovefunc = lambda a,b: bool((a+b)%2)
+def lovefunc(a, b): return bool((a + b) % 2)

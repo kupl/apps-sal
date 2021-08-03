@@ -12,4 +12,3 @@ def run_length_encoding(s):
                 count = 1
         result.append([count, prev])
     return result
-

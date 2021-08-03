@@ -19,6 +19,6 @@ def bob(what):
     db["phoenix"] = "Use the colt"
     db["witch"] = "They are humans"
     if what in db:
-      return db[what]+", idjits!"
+        return db[what] + ", idjits!"
     else:
-      return "I have friggin no idea yet"+", idjits!"
+        return "I have friggin no idea yet" + ", idjits!"

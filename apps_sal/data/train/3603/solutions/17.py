@@ -1,2 +1,2 @@
 def lovefunc(*arg):
-    return sum(arg)%2
+    return sum(arg) % 2
