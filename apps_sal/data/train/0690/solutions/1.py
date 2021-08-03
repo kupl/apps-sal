@@ -1,6 +1,6 @@
 def main():
-    n,k,m = list(map(int,input().split()))
-    arr = list(map(int,input().split()))
+    n, k, m = list(map(int, input().split()))
+    arr = list(map(int, input().split()))
     dp = [-1]
     for i in range(n):
         if arr[i] > 0:
@@ -15,29 +15,29 @@ def main():
     ans = 0
     index = -1
     rem = k
-    #print(dp)
+    # print(dp)
     for i in range(n):
         if index != -1:
-            if i-index <= rem:
-                #print('here',i,index)
+            if i - index <= rem:
+                # print('here',i,index)
                 arr[i] *= m
             else:
                 index = -1
-                
+
         total += arr[i]
         count += 1
         if count == k:
-            #print(total,start,i)
+            # print(total,start,i)
             count -= 1
             if total < m:
                 index = dp[i]
-                if index == -1 or i-index+1 > k:
+                if index == -1 or i - index + 1 > k:
                     print(-1)
                     return
-                
-                #print(index)
-                rem = k-(i-index+1)
-                #print('what',rem)
+
+                # print(index)
+                rem = k - (i - index + 1)
+                # print('what',rem)
                 total -= arr[index]
                 arr[index] *= m
                 total += arr[index]
@@ -47,8 +47,8 @@ def main():
             total -= arr[start]
             start += 1
 
-    #print(arr)
+    # print(arr)
     print(ans)
 
-main()
 
+main()

@@ -2,7 +2,7 @@
 import math
 n = int(input())
 print()
-while n>0:
+while n > 0:
     x = int(input())
     print(math.factorial(x))
-    n = n-1
+    n = n - 1

@@ -1,7 +1,6 @@
 
 import math
-t=int(input())
+t = int(input())
 for i in range(t):
-    n=int(input())
+    n = int(input())
     print(math.factorial(n))
-

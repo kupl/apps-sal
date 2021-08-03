@@ -14,4 +14,3 @@ for _ in range(int(stdin.readline())):
         s -= arr[i - k]
         ans = max(ans, s)
     print(ans)
-
