@@ -1,6 +1,7 @@
 import itertools
 import collections
 
+
 def factorize(n):
     factors = []
     if n <= 1:
@@ -12,6 +13,7 @@ def factorize(n):
             factors.append(i)
             n /= i
     return factors
+
 
 def prod_int_part(n):
     fac = factorize(n)

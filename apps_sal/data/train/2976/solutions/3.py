@@ -4,4 +4,4 @@ def accum(s):
     for letter in s:
         result += letter.upper() + letter.lower() * i + '-'
         i += 1
-    return result[:len(result)-1]
+    return result[:len(result) - 1]

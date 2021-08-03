@@ -4,5 +4,3 @@ def get_age(age):
             return int(i)
         else:
             pass
-
-

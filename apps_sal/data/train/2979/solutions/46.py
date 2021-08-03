@@ -1,5 +1,5 @@
 def get_age(age):
-    
+
     for i in age:
         if i == "2":
             return 2

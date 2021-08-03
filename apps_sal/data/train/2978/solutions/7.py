@@ -1,5 +1,6 @@
 import collections
 
+
 def count_sel(lst):
     counter = collections.Counter(lst)
     mode_count = counter.most_common(1)[0][1] if lst else 0

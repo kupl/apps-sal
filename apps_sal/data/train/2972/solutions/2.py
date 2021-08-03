@@ -6,4 +6,3 @@ def multiple_split(s, delim=[]):
     for i in delim:
         s = s.replace(i, ' ')
     return s.split()
-

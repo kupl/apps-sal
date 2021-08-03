@@ -1,12 +1,13 @@
 def allmult(n):
     l = list(range(2, n))
-    l = l[: len(l)//2 + 1]
+    l = l[: len(l) // 2 + 1]
     m = set()
     for i, n1 in enumerate(l):
         for n2 in l[i:]:
             if n1 * n2 == n:
                 m.add((n1, n2))
     return m
+
 
 def addPart(n, s):
     news = set()
@@ -15,11 +16,13 @@ def addPart(n, s):
         news.add(newt)
     return news
 
+
 def is_mult(l, num):
     m = 1
     for n in l:
         m *= n
     return m == num
+
 
 def lastPart(newpart, n):
     lastpart = newpart.copy()
@@ -34,6 +37,7 @@ def lastPart(newpart, n):
                 lastpart.add(part)
     return lastpart
 
+
 def prod_int_part(n):
     part = allmult(n)
     newpart = part
@@ -42,4 +46,3 @@ def prod_int_part(n):
         newpart = newpart.union(addPart(n2, allmult(n1)))
     lastpart = lastPart(lastPart(newpart, n), n)
     return [len(lastpart), list(max(lastpart, key=len))] if lastpart else [0, []]
-

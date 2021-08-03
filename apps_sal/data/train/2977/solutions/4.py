@@ -1,9 +1,10 @@
 import math
 
+
 def PrimeFactorsSum(nr):
     res = []
     s = 1
-    for i in range(2,int(math.sqrt(nr) + 1)):
+    for i in range(2, int(math.sqrt(nr) + 1)):
         cs = 1
         ct = 1
         while nr % i == 0:
@@ -18,6 +19,7 @@ def PrimeFactorsSum(nr):
     if res and s % sum(res) == 0:
         return True
     return False
+
 
 def ds_multof_pfs(nMin, nMax):
     res = []

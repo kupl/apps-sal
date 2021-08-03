@@ -1,1 +1,1 @@
-get_age = lambda s: ord(s[0])-ord('0')
+def get_age(s): return ord(s[0]) - ord('0')
