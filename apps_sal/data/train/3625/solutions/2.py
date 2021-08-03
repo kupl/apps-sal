@@ -11,4 +11,3 @@ def sum_of_regular_numbers(arr):
             i += 1
     # Use (first + last) * elements / 2 to find sum of each sequence longer than 2 elements long
     return sum((2 * base + step * steps) * ((steps + 1) / 2) for step, steps, base in grouped if steps >= 2)
-

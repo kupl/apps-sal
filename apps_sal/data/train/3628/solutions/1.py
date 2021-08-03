@@ -6,4 +6,3 @@ def rotate(arr, n):
     rotator = deque(arr)
     rotator.rotate(n)
     return list(rotator)
-

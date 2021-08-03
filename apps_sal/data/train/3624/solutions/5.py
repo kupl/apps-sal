@@ -1,5 +1,6 @@
 from itertools import count
 
+
 def distribution_of_candy(a):
     for i in count():
         if all(x == a[0] for x in a):
