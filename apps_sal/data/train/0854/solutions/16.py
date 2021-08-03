@@ -3,7 +3,7 @@ T = int(input())
 
 for no in range(T):
     N = int(input())
-    A = list(map(int,input().split()))
+    A = list(map(int, input().split()))
     d = dict()
     Flag = 0
     for i in range(N):
@@ -16,5 +16,3 @@ for no in range(T):
         print("prekrasnyy")
     else:
         print("ne krasivo")
-    
-

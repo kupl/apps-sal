@@ -13,9 +13,9 @@ def fk(s: str):
     t = 0
     ini = 0
     q = 1
-    for i in range(1, s*s+1):
+    for i in range(1, s * s + 1):
         print(ini, end='')
-        ini = 1-ini
+        ini = 1 - ini
         t += 1
         if t == s:
             q += 1
@@ -40,4 +40,3 @@ n = int(n)
 t = [fk(input()) for i in range(n)]
 
 # fk(5)
-

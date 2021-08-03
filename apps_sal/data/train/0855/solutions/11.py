@@ -1,4 +1,4 @@
-x=int(input())
+x = int(input())
 for i in range(x):
-    z=input()
+    z = input()
     print(z[::-1])

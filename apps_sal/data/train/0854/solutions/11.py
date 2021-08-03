@@ -16,4 +16,3 @@ for _ in range(int(stdin.readline())):
             break
     else:
         print("prekrasnyy")
-

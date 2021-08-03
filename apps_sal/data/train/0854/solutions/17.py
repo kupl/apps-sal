@@ -3,8 +3,7 @@ for x in range(t):
     n = int(input())
     arr = input().split()
     mySet = set(arr)
-    if sorted(arr)==sorted(list(mySet)):
-      print("prekrasnyy")
+    if sorted(arr) == sorted(list(mySet)):
+        print("prekrasnyy")
     else:
-      print("ne krasivo")
-
+        print("ne krasivo")

@@ -5,7 +5,7 @@ for _ in range(int(input())):
         s = ''
 
         for j in range(n):
-            if not (i+j) % 2:
+            if not (i + j) % 2:
                 s += '0'
             else:
                 s += '1'

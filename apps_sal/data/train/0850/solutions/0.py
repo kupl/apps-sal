@@ -34,4 +34,3 @@ if __author__ == 'Prateek':
     t = int(input())
     for _ in range(t):
         test()
-

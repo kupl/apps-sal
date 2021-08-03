@@ -1,7 +1,8 @@
-def my(n,k):
-    num = 2*(1+(k-1)*n)
+def my(n, k):
+    num = 2 * (1 + (k - 1) * n)
     den = k
-    return num/den
+    return num / den
+
 
 for _ in range(int(input())):
     n, k = map(int, input().split())
