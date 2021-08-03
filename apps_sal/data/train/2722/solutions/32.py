@@ -7,4 +7,3 @@ def remove_url_anchor(url):
         else:
             break
     return "".join(new_url_lst)
-

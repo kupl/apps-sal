@@ -4,4 +4,3 @@ def remove_url_anchor(url):
         return ret_url
     except:
         return url
-

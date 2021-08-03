@@ -13,8 +13,10 @@ digit_map = {
 
 reverse_digit_map = dict(map(reversed, digit_map.items()))
 
+
 class InValidNumException(Exception):
     pass
+
 
 class StringNum(int):
     def __new__(cls, s):
@@ -22,6 +24,7 @@ class StringNum(int):
             return int.__new__(cls, digit_map[s])
 
         raise InValidNumException()
+
 
 def average_string(s):
     try:

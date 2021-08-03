@@ -1,6 +1,6 @@
 def kebabize(string):
     result = ""
-    
+
     for c in string:
         if c.isupper():
             if result is not "":
@@ -9,6 +9,5 @@ def kebabize(string):
                 result += c.lower()
         if c.islower():
             result += c
-            
-    return result
 
+    return result

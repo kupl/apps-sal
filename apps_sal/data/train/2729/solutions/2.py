@@ -1,6 +1,7 @@
 def find_jane(n):
-    return (n-1) // 2
-    
+    return (n - 1) // 2
+
+
 """
 1,2,3,...,n
 cost = (a+b) % (n+1)

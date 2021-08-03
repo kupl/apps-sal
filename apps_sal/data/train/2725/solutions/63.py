@@ -14,4 +14,3 @@ def gimme(array):
         return 0
     elif third <= second <= first:
         return 1
-

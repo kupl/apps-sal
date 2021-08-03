@@ -3,6 +3,6 @@ def solution(digits):
     digits = str(digits)
     for i in range(len(digits)):
         slice = digits[i:i + 5]
-        if  int(slice) > number: number = int(slice) 
+        if int(slice) > number:
+            number = int(slice)
     return number
-

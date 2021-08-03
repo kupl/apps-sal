@@ -3,6 +3,6 @@ def remove_url_anchor(url):
     for i in url:
         if i != '#':
             newString = newString + i
-        if i== '#':
+        if i == '#':
             break
     return newString

@@ -1,11 +1,10 @@
 def remove_url_anchor(url):
-    final=""
+    final = ""
     for letter in url:
-        if letter=="#":
+        if letter == "#":
             break
         else:
-            final+=letter
+            final += letter
     return final
-        
-    # TODO: complete
 
+    # TODO: complete

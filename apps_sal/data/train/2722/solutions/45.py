@@ -1,5 +1,6 @@
 import re
 
+
 def remove_url_anchor(url):
     regex = r'#\w+.+'
     subst = ''

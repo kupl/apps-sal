@@ -4,5 +4,3 @@ def solution(digits):
         if int(digits[x:x + 5]) > maxseq:
             maxseq = int(digits[x:x + 5])
     return maxseq
-
-

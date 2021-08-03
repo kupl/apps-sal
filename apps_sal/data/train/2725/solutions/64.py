@@ -9,4 +9,3 @@ def gimme(input_array):
 
 
 gimme([2, 3, 1])
-

@@ -12,4 +12,3 @@ def gimme(input_array):
             return input_array.index(i)
         elif i < input_array[-1] and i > input_array[1]:
             return input_array.index(i)
-

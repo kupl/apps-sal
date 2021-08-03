@@ -11,6 +11,5 @@ def kebabize(string):
     result = ''.join(string_letter_list)
     if result[0] == '-':
         return result[1::]
-    else: 
+    else:
         return result
-
