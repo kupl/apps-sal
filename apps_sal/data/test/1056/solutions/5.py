@@ -13,7 +13,8 @@ def next_squares(x, y):
         if ny < 0 or ny == 10:
             nx, ny = x - 1, y
             current_dir *= -1
-            if nx == -1: break
+            if nx == -1:
+                break
         x, y = nx, ny
         res.append([x, y])
     # print(x, y, res)
@@ -22,13 +23,15 @@ def next_squares(x, y):
 
 @lru_cache(None)
 def dp(i, j, can_climb):
-    if i == j == 0: return 0
+    if i == j == 0:
+        return 0
     expected = []
     for x, y in next_squares(i, j):
         expected.append(dp(x, y, True))
     score = sum(expected) / len(expected) + (6 / len(expected))
     # print(i, j)
-    if can_climb and board[i][j]: return min(score, dp(i - board[i][j], j, False))
+    if can_climb and board[i][j]:
+        return min(score, dp(i - board[i][j], j, False))
     return score
 
 

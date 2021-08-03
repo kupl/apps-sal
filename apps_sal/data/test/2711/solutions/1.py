@@ -73,7 +73,8 @@ for i in range(n):
         # tmp.append(input())
         ipt = input()
         l[t * m + j] = ipt
-        if len(inc) == 26: continue
+        if len(inc) == 26:
+            continue
         for q in ipt:
             inc.setdefault(q, 0)
     # d[t] = tmp

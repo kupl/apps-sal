@@ -3,8 +3,10 @@ a = list(map(int, input().split()))
 ans = [0] * (n + 1)
 for i in range(m - 1):
     pot = (a[i + 1] - a[i] + n) % n
-    if pot == 0: pot = n
-    if ans[a[i]] == 0 or ans[a[i]] == pot: ans[a[i]] = pot
+    if pot == 0:
+        pot = n
+    if ans[a[i]] == 0 or ans[a[i]] == pot:
+        ans[a[i]] = pot
     else:
         print(-1)
         return

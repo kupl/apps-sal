@@ -11,4 +11,5 @@ for i in range(n):
         ans.append((i, j))
 
 print(len(ans))
-for i, j in ans: print(i, j)
+for i, j in ans:
+    print(i, j)

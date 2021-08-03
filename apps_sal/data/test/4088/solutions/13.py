@@ -13,7 +13,8 @@ def main():
             else:
                 d[x] = 1
         while True:
-            idxs = []; num0s = 0
+            idxs = []
+            num0s = 0
             for c, el in enumerate(b):
                 if el == 0:
                     num0s += 1

@@ -8,6 +8,7 @@ for i in range(1, 6):
 for i in range(6, 100):
     F[i] = E[i] = sum(F[i - 6:i]) / 6 + 1
     x, y = Y[i]
-    if X[x][y]: F[i] = min(E[i], E[Z[x - X[x][y]][y]])
+    if X[x][y]:
+        F[i] = min(E[i], E[Z[x - X[x][y]][y]])
 
 print(F[99])

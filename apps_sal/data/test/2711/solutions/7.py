@@ -51,7 +51,7 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline()
+def input(): return sys.stdin.readline()
 
 # ------------------------------
 
@@ -88,7 +88,8 @@ chars |= set(dic[0])
 F = True
 for i in range(1, nw):
     a, b = dic[i - 1], dic[i]
-    if len(chars) < 26: chars |= set(b)
+    if len(chars) < 26:
+        chars |= set(b)
     flag = False
     for i, j in zip(a, b):
         if i != j:

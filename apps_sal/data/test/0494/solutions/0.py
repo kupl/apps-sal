@@ -20,7 +20,8 @@ for i in range(len(l) - 1):
         break
     use[(l[i + 1] - l[i]) % n] = 1
     a[l[i]] = (l[i + 1] - l[i]) % n
-    if a[l[i]] == 0: a[l[i]] = n
+    if a[l[i]] == 0:
+        a[l[i]] = n
 
 if not bad:
     # fill in gaps

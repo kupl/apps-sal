@@ -18,11 +18,12 @@ def __starting_point():
     xs = list(map(int, input().split()))
     ret = solve(xs)
     print(len(ret))
-    if ret: print(
-        "\n".join(
-            "{0[0]} {0[1]}".format(swp) for swp in ret
+    if ret:
+        print(
+            "\n".join(
+                "{0[0]} {0[1]}".format(swp) for swp in ret
+            )
         )
-    )
 
 
 __starting_point()

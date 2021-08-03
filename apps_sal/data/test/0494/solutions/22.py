@@ -6,7 +6,8 @@ def main():
 
     for i in range(1, m):
         curr = (l[i + 1] - l[i] - 1) % n + 1
-        if a[l[i]] != 0 and curr != a[l[i]]: return -1
+        if a[l[i]] != 0 and curr != a[l[i]]:
+            return -1
         a[l[i]] = curr
     # print(a)
     cnt = [0] * (n + 1)

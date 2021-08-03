@@ -31,7 +31,8 @@ allwords = set()
 for i in range(n):
     p = val()
     l1 = []
-    for j in range(k): l1.append(st())
+    for j in range(k):
+        l1.append(st())
 
     allwords |= set(l1[-1])
     l.append([p, l1[:]])
@@ -49,8 +50,10 @@ ingraph = defaultdict(int)
 
 def match(a, b):
     for j in range(min(len(a), len(b))):
-        if a[j] == b[j]: continue
-        elif b[j] in graph[a[j]]: return
+        if a[j] == b[j]:
+            continue
+        elif b[j] in graph[a[j]]:
+            return
         else:
             graph[a[j]].add(b[j])
             ingraph[b[j]] += 1
@@ -61,7 +64,8 @@ def match(a, b):
 
 
 finl = []
-for i in l: finl.extend(i)
+for i in l:
+    finl.extend(i)
 l = finl
 
 # for i in l:print(i)
@@ -92,7 +96,8 @@ while d:
 
     for j in graph[node]:
         ingraph[j] -= 1
-        if not ingraph[j]: d.append(j)
+        if not ingraph[j]:
+            d.append(j)
 
 
 if len(ans) != len(allwords):
