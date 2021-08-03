@@ -6,7 +6,8 @@ ans = ""
 for i in a:
     i %= len(v)
     val += i
-    if val >= len(v): val -= len(v)
+    if val >= len(v):
+        val -= len(v)
     ans += str(v[val]) + ' '
     del v[val]
 

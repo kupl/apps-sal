@@ -42,7 +42,8 @@ re = 1
 mc = 1
 zc = []
 for i in range(2, 10000):
-    if N % i != 0: continue
+    if N % i != 0:
+        continue
     re *= i
     c = 0
     while N % i == 0:

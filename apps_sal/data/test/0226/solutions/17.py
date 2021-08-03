@@ -1,7 +1,7 @@
 
 def dp(a, i, control):
     if i >= len(a):
-        return 0;
+        return 0
     if dp_list[control][i] != -1:
         return dp_list[control][i]
     else:

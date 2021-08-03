@@ -21,7 +21,8 @@ def fct(n):
 
 
 def solve(n):
-    if n == 1: return (1, 0)
+    if n == 1:
+        return (1, 0)
     fctr, sqfree = fct(n)
     # print("fctr = ", fctr)
     mx = max(fctr)

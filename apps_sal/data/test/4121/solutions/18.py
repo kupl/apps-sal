@@ -7,5 +7,6 @@ for i in a:
     else:
         st.append(i & 1)
 if len(st) <= 1:
-    print("YES"); return
+    print("YES")
+    return
 print("NO")

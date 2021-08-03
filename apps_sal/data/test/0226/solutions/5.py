@@ -10,7 +10,8 @@ pie = list(map(int, input().split()))
 
 def dp(i):
     # best result for this player
-    if i >= len(pie): return (0, 0)
+    if i >= len(pie):
+        return (0, 0)
     t1, t2 = dp(i + 1)
     return (max(pie[i] + t2 - t1, t1), t2 + pie[i])
 

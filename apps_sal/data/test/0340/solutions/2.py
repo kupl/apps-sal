@@ -10,7 +10,8 @@ maxdegree = 0
 answer = 1
 
 for x in range(2, int(n ** 0.5) + 1):
-    if n == 1: break
+    if n == 1:
+        break
     multiplicity = 0
     while n % x == 0:
         n = n // x

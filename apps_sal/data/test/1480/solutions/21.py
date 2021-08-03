@@ -7,7 +7,8 @@ for i in l:
     j = (j + i) % n
     if k != 0:
         print(L[j], end=' ')
-    else: print(L[j], end='')
+    else:
+        print(L[j], end='')
     n -= 1
 
     L.pop(j)
