@@ -1,3 +1,3 @@
 for _ in range(int(input())):
- input()
- print(len(set(input().split())))
+    input()
+    print(len(set(input().split())))

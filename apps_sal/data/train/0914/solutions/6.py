@@ -31,4 +31,3 @@ for _ in range(int(input())):
         for j in range(0, M):
             print(C[i][j], end='')
         print()
-

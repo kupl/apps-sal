@@ -23,4 +23,3 @@ for _ in range(int(input())):
         for j in i:
             print(j, end='')
         print()
-
