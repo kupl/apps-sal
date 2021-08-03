@@ -5,6 +5,7 @@ while True:
         if x % i == 0:
             flg = False
             break
-    if flg == True: break
+    if flg == True:
+        break
     x += 1
 print(x)

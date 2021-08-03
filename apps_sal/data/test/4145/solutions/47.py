@@ -4,7 +4,8 @@ lis = [True for i in range(m)]
 i = 2
 while i * i <= m:
     if lis[i]:
-        for j in range(2 * i, m, i): lis[j] = False
+        for j in range(2 * i, m, i):
+            lis[j] = False
     i += 1
 while True:
     if lis[x]:

@@ -20,6 +20,9 @@ for i in range(n):
         b.pop(0)
         b.append(a[i])
         c[a[i] - 1] += 1
-if(c == k): flag = True
-if(flag): print("YES")
-else: print("NO")
+if(c == k):
+    flag = True
+if(flag):
+    print("YES")
+else:
+    print("NO")

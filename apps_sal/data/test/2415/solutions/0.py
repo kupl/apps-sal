@@ -134,5 +134,6 @@ dp = [0] * (len(s))
 dp[0] = 1
 for i in range(1, len(s)):
     for j in range(1, 3):
-        if s[i - j + 1: i + 1] in k: dp[i] |= dp[i - j]
+        if s[i - j + 1: i + 1] in k:
+            dp[i] |= dp[i - j]
 print("YES" if dp[-1] else "NO")

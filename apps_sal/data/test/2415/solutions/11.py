@@ -7,7 +7,8 @@ dp = [False for i in range(len(s) + 1)]
 dp[0] = True
 
 for i in range(len(s)):
-    if not dp[i]: continue
+    if not dp[i]:
+        continue
     for el in elems:
         if s[i:].startswith(el):
             dp[i + len(el)] = True

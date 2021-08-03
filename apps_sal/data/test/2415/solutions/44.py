@@ -1,7 +1,10 @@
 def ps(prakhar):
-    if prakhar == "": return True
-    if prakhar[0] in l and ps(prakhar[1:]): return True
-    if prakhar[0: 2] in l and ps(prakhar[2:]): return True
+    if prakhar == "":
+        return True
+    if prakhar[0] in l and ps(prakhar[1:]):
+        return True
+    if prakhar[0: 2] in l and ps(prakhar[2:]):
+        return True
     return False
 
 
@@ -9,5 +12,7 @@ l = ["H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si
 for i in range(118):
     l[i] = l[i].upper()
 s = input()
-if ps(s): print("YES")
-else: print("NO")
+if ps(s):
+    print("YES")
+else:
+    print("NO")

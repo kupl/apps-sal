@@ -127,7 +127,8 @@ s = input()
 
 
 def valid(t):
-    if (len(t) == 0): return 1
+    if (len(t) == 0):
+        return 1
     if t[:1] in e and valid(t[1:]):
         return 1
     if len(t) > 1 and t[:2] in e and valid(t[2:]):
@@ -136,4 +137,5 @@ def valid(t):
 
 if valid(s):
     print("YES\n")
-else: print("NO\n")
+else:
+    print("NO\n")

@@ -16,6 +16,7 @@ while flag == 0:
         elif X % k == 0:
             break
 
-    if flag == 0: X = X + 1
+    if flag == 0:
+        X = X + 1
 
 print(X)

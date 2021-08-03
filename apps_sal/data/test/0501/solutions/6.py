@@ -30,14 +30,17 @@ def cs(n):
         tot += cur
         i += 1
     ans = 0
-    if se > 0: ans += evensum(se)
-    if so > -1: ans += oddsum(so)
+    if se > 0:
+        ans += evensum(se)
+    if so > -1:
+        ans += oddsum(so)
     ans %= MOD
     return ans
 
 
 L, R = list(map(int, input().split()))
 ans = cs(R)
-if L > 1: ans -= cs(L - 1)
+if L > 1:
+    ans -= cs(L - 1)
 ans %= MOD
 print(ans)

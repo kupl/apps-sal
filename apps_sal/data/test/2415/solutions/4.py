@@ -2,7 +2,8 @@ elements = set("H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn
 
 
 def is_elem(s):
-    if not s: return True
+    if not s:
+        return True
     return (s[:1] in elements and is_elem(s[1:])) or (s[:2] in elements and is_elem(s[2:]))
 
 

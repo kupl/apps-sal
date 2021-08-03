@@ -122,7 +122,8 @@ Og""".upper().split("\n")
 
 def does_it_work(word):
     # print(word)
-    if word == '': return True
+    if word == '':
+        return True
     for x in elems:
         if word.startswith(x) and does_it_work(word[len(x):]):
             return True

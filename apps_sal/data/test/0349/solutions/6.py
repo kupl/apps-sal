@@ -13,10 +13,12 @@ for i in range(n):
 def check(a):
     for i in range(n):
         for j in range(1, m):
-            if a[i][j] <= a[i][j - 1]: return False
+            if a[i][j] <= a[i][j - 1]:
+                return False
     for j in range(m):
         for i in range(1, n):
-            if a[i][j] <= a[i - 1][j]: return False
+            if a[i][j] <= a[i - 1][j]:
+                return False
     return True
 
 

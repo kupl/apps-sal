@@ -125,7 +125,8 @@ mem = {}
 def f(string):
     if string in mem:
         return mem[string]
-    if not string: return ""
+    if not string:
+        return ""
     for i in d[string[0]]:
         if string.startswith(i.upper()):
             res = f(string[len(i):])
@@ -139,4 +140,5 @@ s = input()
 r = f(s)
 if r == -1:
     print("NO")
-else: print("YES")
+else:
+    print("YES")

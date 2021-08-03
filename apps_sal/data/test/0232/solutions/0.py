@@ -13,5 +13,7 @@ for i in range(n):
             res = True
             break
 
-if res: print('YES')
-else: print('NO')
+if res:
+    print('YES')
+else:
+    print('NO')

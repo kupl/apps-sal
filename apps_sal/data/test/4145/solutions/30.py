@@ -1,8 +1,9 @@
 import math
 import collections
-ii = lambda: int(input())
-mi = lambda: map(int, input().split())
-li = lambda: list(map(int, input().split()))
+def ii(): return int(input())
+def mi(): return map(int, input().split())
+def li(): return list(map(int, input().split()))
+
 
 x = ii()
 while 1:

@@ -14,6 +14,7 @@ if nb % 2 == 0:
             z = z + i
     if z == b:
         print(a)
-    else: print(":(")
+    else:
+        print(":(")
 else:
     print(":(")
