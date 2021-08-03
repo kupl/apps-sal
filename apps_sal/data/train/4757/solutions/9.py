@@ -1,4 +1,4 @@
-def solve(n,m,a,b,ans):
+def solve(n, m, a, b, ans):
     col = 0
     grid = [[0 for j in range(m)] for i in range(n)]
     for row in range(n):
@@ -38,12 +38,13 @@ def solve(n,m,a,b,ans):
 
         ans.append([s])
 
+
 def main():
     t = int(input())
     ans = []
     for i in range(t):
-        n,m,a,b = list(map(int,input().split()))
-        solve(n,m,a,b,ans)
+        n, m, a, b = list(map(int, input().split()))
+        solve(n, m, a, b, ans)
 
     for i in ans:
         for j in i:
@@ -51,4 +52,3 @@ def main():
 
 
 main()
-

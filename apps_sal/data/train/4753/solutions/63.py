@@ -1,7 +1,9 @@
 geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+
+
 def goose_filter(birds):
-    l=[]
-    g=[]
+    l = []
+    g = []
     for x in birds:
         if x in geese:
             l.append(birds.index(x))

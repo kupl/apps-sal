@@ -1,5 +1,6 @@
 from math import inf
 
+
 def solve():
     n, m, a, b = map(int, input().split())
     grid = [[0] * m for i in range(n)]
@@ -24,8 +25,10 @@ def solve():
     else:
         print('NO')
 
+
 def main():
     for _ in range(int(input())):
         solve()
+
 
 main()

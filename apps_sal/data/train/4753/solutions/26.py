@@ -1,6 +1,6 @@
+import re
 geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
 
-import re
 
 def goose_filter(birds):
     listn = []

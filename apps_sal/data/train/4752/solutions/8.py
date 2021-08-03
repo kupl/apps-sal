@@ -3,7 +3,7 @@ from functools import reduce
 from math import gcd
 
 
-def has_subpattern(string):  
+def has_subpattern(string):
     chars_frequency = Counter(string)
     greatercd = reduce(gcd, chars_frequency.values())
     charslist = sorted(chars_frequency.items())

@@ -18,6 +18,3 @@ for _t in range(t):
             pointer = (pointer + 1) % m
             row[pointer] = '1'
         print(''.join(row))
-
-
-

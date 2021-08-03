@@ -7,6 +7,7 @@ geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
 # input - array of strings
 # output - array of strings
 
+
 def goose_filter(birds):
-# return element in birds if element is not in geese
+    # return element in birds if element is not in geese
     return [x for x in birds if x not in geese]

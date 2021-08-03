@@ -28,4 +28,3 @@ for case_num in range(t):
                 col = (col + 1) % m
         for i in range(n):
             print(''.join(map(str, ans[i])))
-

@@ -7,6 +7,7 @@ def pdsum(n):
             xs.add(n // i)
     return sum(xs)
 
+
 def describe(s, n):
     if s < n:
         return 'deficient'
@@ -15,7 +16,8 @@ def describe(s, n):
     else:
         return 'perfect'
 
-def deficiently_abundant_amicable_numbers(n1,n2):
+
+def deficiently_abundant_amicable_numbers(n1, n2):
     s1, s2 = (pdsum(n) for n in [n1, n2])
     return '{} {} {}'.format(
         describe(s1, n1),
