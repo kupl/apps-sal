@@ -7,5 +7,6 @@ for a in A:
     if S + a < K:
         S += a
         ans += 1
-    else: ans = 0
+    else:
+        ans = 0
 print(ans)

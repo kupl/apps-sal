@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n, m = R()
 p = [0] * n
 for i in range(m):

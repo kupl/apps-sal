@@ -11,6 +11,6 @@ total = 0
 for i in range(n):
     s = sum(mat[i][:]) - sum([mat[x][i] for x in range(n)])
     if s < 0:
-        continue;
+        continue
     total += s
 print(total)

@@ -28,7 +28,7 @@ def main():
     a.sort()
     ss = [0] * (N + 1)
     pm = (1 << K) - 1
-    mask = lambda c: (1 << K) - (1 << c)
+    def mask(c): return (1 << K) - (1 << c)
     nn = 0
 
     def isunnec(i):

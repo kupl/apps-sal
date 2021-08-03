@@ -8,7 +8,8 @@ def bisearch(t):
     dp = np.full(k, False)
     dp[0] = True
     for i in range(n):
-        if i == t: continue
+        if i == t:
+            continue
         dp[a[i]:] = np.logical_or(dp[a[i]:], dp[:-a[i]])
     return any(dp[max(0, k - a[t]):])
 

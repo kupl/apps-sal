@@ -7,5 +7,7 @@ def s(n):
 
 
 n = int(input())
-if n % s(n) == 0: print("Yes")
-else: print("No")
+if n % s(n) == 0:
+    print("Yes")
+else:
+    print("No")

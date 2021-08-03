@@ -22,7 +22,8 @@ for i in range(N):
     if K <= V[i]:
         ans -= 1
         continue
-    a = A[i]; b = B[i + 1]
+    a = A[i]
+    b = B[i + 1]
     VM = 2**(V[i] + 1) - 2
     l = 1
     while a and b and l:
@@ -30,5 +31,6 @@ for i in range(N):
             ans -= 1
             break
         l = max((a & -a).bit_length() - 1, (b & -b).bit_length() - V[i] - 1)
-        a >>= l; b >>= l
+        a >>= l
+        b >>= l
 print(ans)

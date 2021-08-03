@@ -6,5 +6,6 @@ for i in range(m):
     d[b - 1] += c
 ans = 0
 for i in range(n):
-    if d[i] > 0: ans += d[i]
+    if d[i] > 0:
+        ans += d[i]
 print(ans)

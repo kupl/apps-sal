@@ -11,9 +11,9 @@ def calcAngle(h, m):
         h = 0
     if (m == 60):
         m = 0
-        h += 1;
+        h += 1
         if(h > 12):
-            h = h - 12;
+            h = h - 12
 
     # Calculate the angles moved by
     # hour and minute hands with
