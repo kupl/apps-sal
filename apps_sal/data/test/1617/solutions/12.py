@@ -27,7 +27,8 @@ P = sieve(lim)
 
 def factor(n):
     """Given prime list, factorize n. Format as dict of factors with counts."""
-    if n in P: return {n: 1}
+    if n in P:
+        return {n: 1}
 
     F = []
     for p in P:

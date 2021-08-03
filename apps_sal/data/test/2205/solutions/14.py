@@ -6,7 +6,8 @@ for i in range(1, n + 1):
 
     x[i] = i ^ x[i - 1]
 
-    if (n // i) % 2: s ^= x[i - 1]
+    if (n // i) % 2:
+        s ^= x[i - 1]
 
     s ^= x[n % i]
 

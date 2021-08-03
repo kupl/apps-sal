@@ -4,7 +4,9 @@ from collections import Counter, defaultdict
 from heapq import heappop, heappush
 from itertools import accumulate
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
 
 t = int(input())
 tab = [x * x * x for x in range(2, 2 * 10**5)]

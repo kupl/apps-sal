@@ -7,8 +7,8 @@ while l < r:
     if sum(int(m / d) for d in D) < n:
         l = m + 1
     else:
-        r = m;
+        r = m
 if sum(l // d for d in DD) == n:
-    print(l);
+    print(l)
 else:
-    print(-1);
+    print(-1)
