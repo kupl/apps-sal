@@ -1,7 +1,8 @@
 def f(m, l):
     tmpm = set()
     for x in m:
-        tmpm.add(x + l); tmpm.add(x - l)
+        tmpm.add(x + l)
+        tmpm.add(x - l)
     return tmpm
 
 
@@ -15,7 +16,8 @@ ss = [{0}, {0}]
 mode = 0
 l = 0
 for i in range(len(s)):
-    if s[i] == "F": l += 1
+    if s[i] == "F":
+        l += 1
     else:
         ss[mode] = f(ss[mode], l)
         mode ^= 1

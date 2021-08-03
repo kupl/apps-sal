@@ -22,8 +22,10 @@ def main():
             while i < n and s[i] == "F":
                 d += 1
                 i += 1
-            if count % 2 == 1: UD.append(d)
-            else: LR.append(d)
+            if count % 2 == 1:
+                UD.append(d)
+            else:
+                LR.append(d)
 
     s1 = set([x1])
     for v in LR:

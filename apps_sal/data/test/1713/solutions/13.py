@@ -3,7 +3,8 @@ p = list(map(int, input().split()))
 if s == t:
     print(0)
 else:
-    k = set(); ans = 0
+    k = set()
+    ans = 0
     while 1:
         s = p[s - 1]
         if s in k:

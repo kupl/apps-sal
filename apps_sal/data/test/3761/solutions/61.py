@@ -32,7 +32,8 @@ def main():
             horizontal.append(s)
 
     dp_h, dp_v = {}, {}
-    dp_h[right] = 1; dp_v[0] = 1
+    dp_h[right] = 1
+    dp_v[0] = 1
     for dx in horizontal:
         dp_h_temp = {}
         for x in dp_h:

@@ -28,7 +28,8 @@ if x > sum_x or y > sum_y:
 
 
 def ok(moves, summ, to):
-    if len(moves) == 0: return to == 0
+    if len(moves) == 0:
+        return to == 0
     ss = set([0])
     rem = summ
     for m1 in moves:

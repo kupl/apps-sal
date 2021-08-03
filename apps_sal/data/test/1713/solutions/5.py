@@ -8,7 +8,8 @@ cnt = 0
 while s != t:
     s = p[s]
     cnt += 1
-    if f[s] == 1: break
+    if f[s] == 1:
+        break
 
 if s == t:
     print(cnt)

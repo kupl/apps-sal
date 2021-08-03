@@ -52,8 +52,10 @@ re = zt[-1]
 def findmid(l, r, e):
     if l >= len(zt):
         return -1
-    if e <= zt[l]: return l;
-    if e > zt[r]: return -1
+    if e <= zt[l]:
+        return l
+    if e > zt[r]:
+        return -1
     while l + 1 < r:
         mid = (l + r) // 2
         if zt[mid] < e:

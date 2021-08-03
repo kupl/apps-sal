@@ -1,5 +1,5 @@
-ai = lambda: list(map(int, input().split()))
-ai_ = lambda: [int(x) - 1 for x in input().split()]
+def ai(): return list(map(int, input().split()))
+def ai_(): return [int(x) - 1 for x in input().split()]
 
 
 s = input().split('T')
