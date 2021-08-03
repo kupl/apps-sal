@@ -1,9 +1,11 @@
 import sys
 input = sys.stdin.readline
-ins = lambda: input().rstrip()
-ini = lambda: int(input().rstrip())
-inm = lambda: map(int, input().rstrip().split())
-inl = lambda: list(map(int, input().split()))
+def ins(): return input().rstrip()
+def ini(): return int(input().rstrip())
+def inm(): return map(int, input().rstrip().split())
+def inl(): return list(map(int, input().split()))
+
+
 out = lambda x, s='\n': print(s.join(map(str, x)))
 
 a = inl()

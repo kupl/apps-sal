@@ -6,7 +6,8 @@ class Union:
         self.rank = {i: 1 for i in range(n)}
 
     def find(self, x):
-        if x < 0: return x
+        if x < 0:
+            return x
 
         if self.p[x] != x:
             self.p[x] = self.find(self.p[x])
@@ -14,7 +15,8 @@ class Union:
         return self.p[x]
 
     def union(self, x, y):
-        if x < 0 or y < 0: return
+        if x < 0 or y < 0:
+            return
 
         x = self.find(x)
         y = self.find(y)

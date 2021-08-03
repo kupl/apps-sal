@@ -15,7 +15,8 @@ for s in S:
                 nop += 1
             else:
                 op -= 1
-    if op and nop: continue
+    if op and nop:
+        continue
     if op:
         c1[op] += 1
     elif nop:

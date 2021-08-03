@@ -23,8 +23,10 @@ def solve():
 
     num_pairs = 0
     for val in seqs:
-        if val < 0: continue
-        if val == 0: num_pairs += len(seqs[val]) // 2
+        if val < 0:
+            continue
+        if val == 0:
+            num_pairs += len(seqs[val]) // 2
         if val > 0 and (-val) in seqs:
             num_pairs += min(len(seqs[val]), len(seqs[-val]))
 

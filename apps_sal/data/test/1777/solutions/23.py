@@ -19,8 +19,10 @@ def analyze(s):
         sm += sg[ch]
         mn = min(mn, sm)
 
-    if (sm >= 0 and mn < 0): return INF
-    if (sm < 0 and sm != mn): return INF
+    if (sm >= 0 and mn < 0):
+        return INF
+    if (sm < 0 and sm != mn):
+        return INF
 
     return sm
 
@@ -28,15 +30,20 @@ def analyze(s):
 d = {}
 for s in A:
     t = analyze(s)
-    if (t == INF): continue
+    if (t == INF):
+        continue
 
-    if (t in d): d[t] += 1
-    else: d[t] = 1
+    if (t in d):
+        d[t] += 1
+    else:
+        d[t] = 1
 
 ans = 0
 for a in d:
-    if (a > 0 and (-a) in d): ans += min(d[a], d[-a])
+    if (a > 0 and (-a) in d):
+        ans += min(d[a], d[-a])
 
-if (0 in d): ans += d[0] // 2
+if (0 in d):
+    ans += d[0] // 2
 
 print(ans)

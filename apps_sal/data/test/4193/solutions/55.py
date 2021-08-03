@@ -12,10 +12,15 @@ for b in B:
 flag = False
 n1, n2 = 0, 0
 for i in range(3):
-    if sum(table[i]) == 3: flag = True
-    if sum([table[j][i] for j in range(3)]) == 3: flag = True
+    if sum(table[i]) == 3:
+        flag = True
+    if sum([table[j][i] for j in range(3)]) == 3:
+        flag = True
     n1 += table[i][i]
     n2 += table[i][2 - i]
-if n1 == 3 or n2 == 3: flag = True
-if flag: print('Yes')
-else: print('No')
+if n1 == 3 or n2 == 3:
+    flag = True
+if flag:
+    print('Yes')
+else:
+    print('No')
