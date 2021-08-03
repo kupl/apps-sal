@@ -11,7 +11,7 @@ def main():
         r = a.pop()
         w[k - 1 - i] -= 1
         if w[k - 1 - i] == 0:
-            sm += 2*r
+            sm += 2 * r
         else:
             sm += r
     o = 0
@@ -22,10 +22,10 @@ def main():
     print(sm)
 
 
-
 def __starting_point():
     t = int(input())
     for i in range(t):
         main()
+
 
 __starting_point()

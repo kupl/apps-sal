@@ -9,17 +9,17 @@ for i in range(t):
     spare = 0
     before = s[0]
     spare_can = 1
-    for j in range(n-1):
-        if s[j+1] == before:
+    for j in range(n - 1):
+        if s[j + 1] == before:
             if spare_can > 0:
                 spare_can -= 1
                 spare += 1
         else:
-            before = s[j+1]
-            changes +=1
-            spare_can +=1
+            before = s[j + 1]
+            changes += 1
+            spare_can += 1
     ans = 0
     ans += spare
-    changes-=spare
-    ans += (changes+1)//2
-    print(ans)   
+    changes -= spare
+    ans += (changes + 1) // 2
+    print(ans)

@@ -1,12 +1,12 @@
 import sys
 
 T = int(sys.stdin.readline().strip())
-for t in range (0, T):
+for t in range(0, T):
     n = int(sys.stdin.readline().strip())
     s = sys.stdin.readline().strip()
     L = [1]
-    for i in range (1, n):
-        if s[i] == s[i-1]:
+    for i in range(1, n):
+        if s[i] == s[i - 1]:
             L[-1] = L[-1] + 1
         else:
             L.append(1)
@@ -31,4 +31,3 @@ for t in range (0, T):
         if len(L) > 0:
             L.pop()
     print(ans)
-

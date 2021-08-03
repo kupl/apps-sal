@@ -21,8 +21,8 @@ def main():
             taken -= 1
             res += 1
         else:
-            res += (turns - i + 1)//2
-            if (turns - i + 1)%2 != 0:
+            res += (turns - i + 1) // 2
+            if (turns - i + 1) % 2 != 0:
                 res += 1
             break
     print(res)
@@ -32,6 +32,8 @@ def __starting_point():
     t = int(input())
     for i in range(t):
         main()
+
+
 """
 1 2 3 4 5
 1 2 4 4

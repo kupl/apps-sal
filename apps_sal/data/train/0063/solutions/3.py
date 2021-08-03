@@ -9,17 +9,16 @@ for _ in range(t):
 
     a = sorted(a)
     w = sorted(w)
-    st, end = 0, n-1
+    st, end = 0, n - 1
     ans = 0
     idx = 0
     while idx < k and w[idx] == 1:
-        ans += a[end]*2
+        ans += a[end] * 2
         end -= 1
         idx += 1
-    for i in range(k-1, idx-1, -1):
+    for i in range(k - 1, idx - 1, -1):
         wi = w[i]
         ans += a[st] + a[end]
         end -= 1
-        st += wi-1
+        st += wi - 1
     print(ans)
-

@@ -32,5 +32,3 @@ for _ in range(int(input())):
         ind += 1
     gans.append(ind)
 print('\n'.join(map(str, gans)))
-    
-

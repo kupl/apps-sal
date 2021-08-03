@@ -1,5 +1,6 @@
 T = int(input())
 
+
 def solve(s):
     kb = list()
     cursor = -1
@@ -30,6 +31,7 @@ def solve(s):
         if c not in seen:
             ans += c
     print(ans)
+
 
 for _ in range(T):
     solve(input())

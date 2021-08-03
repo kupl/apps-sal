@@ -7,29 +7,33 @@ from collections import defaultdict as dd
 from bisect import bisect_left as bl, bisect_right as br
 from collections import Counter
 
-#sys.setrecursionlimit(100000000)
+# sys.setrecursionlimit(100000000)
 
-inp = lambda: int(input())
-strng = lambda: input().strip()
-jn = lambda x, l: x.join(map(str, l))
-strl = lambda: list(input().strip())
-mul = lambda: map(int, input().strip().split())
-mulf = lambda: map(float, input().strip().split())
-seq = lambda: list(map(int, input().strip().split()))
 
-ceil = lambda x: int(x) if (x == int(x)) else int(x) + 1
-ceildiv = lambda x, d: x // d if (x % d == 0) else x // d + 1
+def inp(): return int(input())
+def strng(): return input().strip()
+def jn(x, l): return x.join(map(str, l))
+def strl(): return list(input().strip())
+def mul(): return map(int, input().strip().split())
+def mulf(): return map(float, input().strip().split())
+def seq(): return list(map(int, input().strip().split()))
 
-flush = lambda: stdout.flush()
-stdstr = lambda: stdin.readline()
-stdint = lambda: int(stdin.readline())
-stdpr = lambda x: stdout.write(str(x))
-stdarr = lambda: map(int, stdstr().split())
+
+def ceil(x): return int(x) if (x == int(x)) else int(x) + 1
+def ceildiv(x, d): return x // d if (x % d == 0) else x // d + 1
+
+
+def flush(): return stdout.flush()
+def stdstr(): return stdin.readline()
+def stdint(): return int(stdin.readline())
+def stdpr(x): return stdout.write(str(x))
+def stdarr(): return map(int, stdstr().split())
+
 
 mod = 1000000007
 
 
 for _ in range(stdint()):
-    a,b = stdarr()
+    a, b = stdarr()
 
-    print(a^b)
+    print(a ^ b)

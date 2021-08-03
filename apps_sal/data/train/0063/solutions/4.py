@@ -15,5 +15,3 @@ for _ in range(int(input())):
         ind += w[i] - 1
     ans.append(ansi)
 print('\n'.join(map(str, ans)))
-    
-

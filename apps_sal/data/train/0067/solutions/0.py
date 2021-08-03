@@ -25,21 +25,21 @@ for _ in range(int(input())):
         changes = []
 
         s, t = list(s), list(t)
-        for i in range(n-1):
+        for i in range(n - 1):
             if s[i] != t[i]:
                 r = (0, -1)
-                for j in range(i+1, n):
+                for j in range(i + 1, n):
                     if s[j] == t[i]:
                         r = (j, 0)
 
-                for j in range(i+1, n):
+                for j in range(i + 1, n):
                     if t[j] == t[i]:
                         r = (j, 1)
 
                 if r[1] == 0:
-                    changes += [(r[0], i+1), (i, i+1)]
-                    s[r[0]], t[i+1] = t[i+1], s[r[0]]
-                    s[i], t[i+1] = t[i+1], s[i]
+                    changes += [(r[0], i + 1), (i, i + 1)]
+                    s[r[0]], t[i + 1] = t[i + 1], s[r[0]]
+                    s[i], t[i + 1] = t[i + 1], s[i]
                 elif r[1] == 1:
                     changes += [(i, r[0])]
                     s[i], t[r[0]] = t[r[0]], s[i]
@@ -47,4 +47,4 @@ for _ in range(int(input())):
         print(len(changes))
         for change in changes:
             x, y = change
-            print(x+1, y+1)
+            print(x + 1, y + 1)

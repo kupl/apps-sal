@@ -19,6 +19,7 @@ def read_int_array():
 
 ######################################################
 
+
 class Node:
     def __init__(self, c):
         self.c = c
@@ -69,14 +70,3 @@ for test in range(tests):
                 ans.append(c)
         print("YES")
         print(''.join(ans))
-
-
-
-
-
-
-
-
-
-
-

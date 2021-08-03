@@ -23,7 +23,7 @@ for _ in range(int(input())):
             ans[i + 1] = min(ans[i + 1], ans[i] + 1)
             if i + 2 < n:
                 ans[i + 2] = min(ans[i + 2], ans[i] + 1)
-            if i + 3 < n: 
+            if i + 3 < n:
                 ans[i + 3] = min(ans[i + 3], ans[i] + 1)
         else:
             ans[i + 1] = min(ans[i + 1], ans[i])
@@ -32,4 +32,3 @@ for _ in range(int(input())):
             if i + 3 < n:
                 ans[i + 3] = min(ans[i + 3], ans[i])
     print(ans[-1])
-

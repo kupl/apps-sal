@@ -9,7 +9,3 @@ for _ in range(int(input())):
             groups[-1] += 1
     ans = (groups[0] + 2) // 3 + sum(v // 3 for v in groups[1:])
     print(ans)
-
-
-
-

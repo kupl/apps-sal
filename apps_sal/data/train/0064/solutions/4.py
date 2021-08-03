@@ -8,7 +8,7 @@ def myk(l, stops, czas):
     for stop in stops:
         dist = stop - pos
         if czas * v > dist:
-            czas -= dist/v
+            czas -= dist / v
             pos = stop
             v += 1
         else:
@@ -21,7 +21,7 @@ def solve():
     a = [int(x) for x in input().split()]
     b = [l - x for x in a[::-1]]
     pocz = 0.0
-    kon = l/2.0
+    kon = l / 2.0
     eps = 1e-7
     while pocz + eps < kon:
         mid = (pocz + kon) / 2.0

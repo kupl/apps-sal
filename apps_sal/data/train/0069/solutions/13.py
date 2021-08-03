@@ -24,5 +24,3 @@ for _ in range(int(input())):
                 dp[i] = min(dp[i - 1] + a, dp[i - 1] + b * u[i - 1][1])
     gans.append(dp[-1])
 print(*gans, sep='\n')
-            
-
