@@ -10,6 +10,6 @@ def order_weight(strng):
         list.append(arr)
     list.sort()
     for item in list:
-        
+
         solution += " " + item[1]
     return solution[1:]

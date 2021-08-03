@@ -4,4 +4,3 @@ def better_than_average(array, points):
         return True
     else:
         return False
-

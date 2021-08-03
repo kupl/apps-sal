@@ -1,1 +1,1 @@
-better_than_average = lambda a,b:(sum(a)/len(a))<b
+def better_than_average(a, b): return (sum(a) / len(a)) < b

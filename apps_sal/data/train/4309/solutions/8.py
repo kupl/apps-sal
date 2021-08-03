@@ -3,6 +3,7 @@ from itertools import chain, groupby, repeat, starmap
 
 C2D = {'!': 1, '?': -1}
 
+
 def replace(s):
     gs = [(c, sum(1 for _ in g)) for c, g in groupby(s)]
     ds = Counter()
@@ -15,4 +16,3 @@ def replace(s):
         else:
             gs[i] = ' ', k
     return ''.join(chain.from_iterable(starmap(repeat, gs)))
-

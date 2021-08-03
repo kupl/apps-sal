@@ -1,5 +1,6 @@
 from math import factorial
 
+
 def sum_arrangements(num):
 
     snum = str(num)
