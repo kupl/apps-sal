@@ -9,7 +9,8 @@ for _ in range(n - 1):
 def cost(cur, src=-1):
     ans = 0
     for v, c in cnx[cur]:
-        if v == src: continue
+        if v == src:
+            continue
         ans = max(ans, c + cost(v, cur))
     return ans
 

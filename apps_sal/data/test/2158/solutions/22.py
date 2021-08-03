@@ -8,10 +8,12 @@ from math import gcd, ceil, sqrt
 from collections import Counter, deque
 from bisect import bisect_left, bisect_right
 from itertools import combinations, permutations
-ii1 = lambda: int(stdin.readline().strip())
-is1 = lambda: stdin.readline().strip()
-iia = lambda: list(map(int, stdin.readline().strip().split()))
-isa = lambda: stdin.readline().strip().split()
+def ii1(): return int(stdin.readline().strip())
+def is1(): return stdin.readline().strip()
+def iia(): return list(map(int, stdin.readline().strip().split()))
+def isa(): return stdin.readline().strip().split()
+
+
 setrecursionlimit(100000)
 mod = 1000000007
 

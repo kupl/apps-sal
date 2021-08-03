@@ -16,7 +16,8 @@ for T in Target:
         akari.append(temp)
     isOK = True
     for j, ak in enumerate(akari):
-        if ak % 2 != P[j]: isOK = False
+        if ak % 2 != P[j]:
+            isOK = False
     if isOK:
         ans += 1
 print(ans)

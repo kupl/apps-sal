@@ -1,6 +1,7 @@
 import sys
 from collections import defaultdict
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 n = int(input())
 arr = list(map(int, input().split()))

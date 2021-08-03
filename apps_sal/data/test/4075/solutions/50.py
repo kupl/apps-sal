@@ -4,7 +4,7 @@ while True:
     try:
         all_input.append(list(map(int, input().split())))
     except:
-        break;
+        break
         # または、return,os.returnをして止める。
 
 N, M = all_input[0][0], all_input[0][1]

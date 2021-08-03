@@ -10,8 +10,11 @@ for i in range(2**N):  # 全てのスイッチの (on, off) の組み合わせ
         on_num = 0  # 電球jに繋がっているスイッチのうち、onの個数
         for k in range(N):
             # スイッチkがon かつ、電球jとスイッチkが繋がっているならば：
-            if i >> k & 1 and k in s[j]: on_num += 1
-        if (on_num - p[j]) % 2 == 0: bulb_num += 1
-    if bulb_num == M: ans += 1
+            if i >> k & 1 and k in s[j]:
+                on_num += 1
+        if (on_num - p[j]) % 2 == 0:
+            bulb_num += 1
+    if bulb_num == M:
+        ans += 1
 
 print(ans)

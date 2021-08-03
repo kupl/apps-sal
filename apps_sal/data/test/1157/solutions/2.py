@@ -9,7 +9,7 @@ cp = 0
 
 for i in a:
     if i < 0:
-        cn, cp = cp, cn;
+        cn, cp = cp, cn
         cn += 1
     else:
         cp += 1

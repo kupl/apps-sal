@@ -23,7 +23,8 @@ for on in range(2**n):
     for i in range(m):
         ct = 0
         for s in cs[i]:
-            if s & on: ct += 1
+            if s & on:
+                ct += 1
         if ct % 2 != ps[i]:
             ok = False
     if ok:

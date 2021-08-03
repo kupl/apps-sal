@@ -9,11 +9,10 @@ def main():
         return (abs(x1 - x2) + abs(y1 - y2))
 
     AD, AC, DB, CB = False, False, False, False
-    y = lambda x0: -c / b - a / b * x0
-    x = lambda y0: -c / a - b / a * y0
-    r = lambda x1, y1, x2, y2: sqrt((x1 - x2)**2 + (y1 - y2)**2)
-    yes = lambda x1, x, x2: (min(x1, x2) <= x and x <= max(x1, x2))
-
+    def y(x0): return -c / b - a / b * x0
+    def x(y0): return -c / a - b / a * y0
+    def r(x1, y1, x2, y2): return sqrt((x1 - x2)**2 + (y1 - y2)**2)
+    def yes(x1, x, x2): return (min(x1, x2) <= x and x <= max(x1, x2))
     '''print(x(y1), x(y2), y(x1), y(x2))'''
     if (yes(y1, y(x1), y2) and yes(y1, y(x2), y2)):
         '''print(1)'''

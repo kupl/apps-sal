@@ -1,7 +1,9 @@
 from itertools import product, repeat
 import numpy as np
 
-input_row = lambda: [int(_) for _ in input().split(' ')]
+
+def input_row(): return [int(_) for _ in input().split(' ')]
+
 
 N, M = input_row()
 C = np.zeros((M, N), dtype=np.int32)

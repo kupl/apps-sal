@@ -9,8 +9,10 @@ sys.setrecursionlimit(1000000)
 
 
 def check(i):
-    if not dp[i][2]: return False
-    if i < 0: return True
+    if not dp[i][2]:
+        return False
+    if i < 0:
+        return True
     return check(i - dp[i][1])
 
 
@@ -31,5 +33,6 @@ for i in range(1, n):
             j -= 1
             if dp[j][2]:
                 dp[i] = (a[j + 1], i - j, i - j >= k)
-            if dp[i][2]: break
+            if dp[i][2]:
+                break
 print('YES' if check(n - 1) else 'NO')

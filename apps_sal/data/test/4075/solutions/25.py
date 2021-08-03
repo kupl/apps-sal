@@ -174,7 +174,7 @@ class ModInt():
             raise Exception("%sの逆数は求まりません。" % a)
         b, u, v = m, 1, 0
         while b != 0:
-            t = a // b;
+            t = a // b
             a -= t * b
             a, b = b, a
             u -= t * v

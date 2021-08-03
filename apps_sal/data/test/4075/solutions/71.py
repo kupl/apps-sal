@@ -7,7 +7,10 @@ for i in range(2**n):
     for x, y in zip(s, p):
         flag = False
         for a in x:
-            if i >> a & 1: flag = not flag
-        if int(flag) != y: break
-    else: ans += 1
+            if i >> a & 1:
+                flag = not flag
+        if int(flag) != y:
+            break
+    else:
+        ans += 1
 print(ans)

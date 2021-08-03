@@ -101,8 +101,10 @@ def isPrime(N):
 
 def isPrimeMR(n):
     # print("MR", n)
-    if n == 2: return True
-    if n == 1 or n & 1 == 0: return False
+    if n == 2:
+        return True
+    if n == 1 or n & 1 == 0:
+        return False
 
     d = (n - 1) >> 1
     while d & 1 == 0:

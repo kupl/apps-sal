@@ -8,10 +8,12 @@ def print_array(a): print(" ".join(map(str, a)))
 
 def maxCost(cost, tree, c, p):
     frnds = tree[c]
-    if len(frnds) == 1 and frnds[0] == p: return 0
+    if len(frnds) == 1 and frnds[0] == p:
+        return 0
     l = []
     for frnd in frnds:
-        if frnd != p: l.append(cost[c][frnd] + maxCost(cost, tree, frnd, c))
+        if frnd != p:
+            l.append(cost[c][frnd] + maxCost(cost, tree, frnd, c))
     return max(l)
 
 

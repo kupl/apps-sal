@@ -13,7 +13,9 @@ for i in range(1 << n):
     # light check
     for j in range(m):
         s = sum([l[k] for k in ks[j][1:]])
-        if s % 2 != p[j]: break;
-    else: ans += 1;
+        if s % 2 != p[j]:
+            break
+    else:
+        ans += 1
 
 print(ans)

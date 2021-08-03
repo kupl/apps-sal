@@ -19,16 +19,16 @@ c2_x = -(b * y2 + c) / a
 
 ans = abs(x1 - x2) + abs(y1 - y2)
 
-now = abs(c1_y - y1) + sqrt(sqr(x1 - c2_x) + sqr(c1_y - y2)) + abs(c2_x - x2);
-ans = min(ans, now);
+now = abs(c1_y - y1) + sqrt(sqr(x1 - c2_x) + sqr(c1_y - y2)) + abs(c2_x - x2)
+ans = min(ans, now)
 
-now = abs(c1_y - y1) + sqrt(sqr(x1 - x2) + sqr(c1_y - c2_y)) + abs(c2_y - y2);
-ans = min(ans, now);
+now = abs(c1_y - y1) + sqrt(sqr(x1 - x2) + sqr(c1_y - c2_y)) + abs(c2_y - y2)
+ans = min(ans, now)
 
-now = abs(c1_x - x1) + sqrt(sqr(c1_x - c2_x) + sqr(y1 - y2)) + abs(c2_x - x2);
-ans = min(ans, now);
+now = abs(c1_x - x1) + sqrt(sqr(c1_x - c2_x) + sqr(y1 - y2)) + abs(c2_x - x2)
+ans = min(ans, now)
 
-now = abs(c1_x - x1) + sqrt(sqr(c1_x - x2) + sqr(y1 - c2_y)) + abs(c2_y - y2);
-ans = min(ans, now);
+now = abs(c1_x - x1) + sqrt(sqr(c1_x - x2) + sqr(y1 - c2_y)) + abs(c2_y - y2)
+ans = min(ans, now)
 
 print("%.30f" % ans)

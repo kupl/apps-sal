@@ -13,7 +13,10 @@ for bit in range(1 << n):
         cnt = 0
         for e in s[i]:
             e -= 1
-            if bit & 1 << e: cnt += 1
-        if cnt % 2 != p[i]: flg = False
-    if flg: ans += 1
+            if bit & 1 << e:
+                cnt += 1
+        if cnt % 2 != p[i]:
+            flg = False
+    if flg:
+        ans += 1
 print(ans)
