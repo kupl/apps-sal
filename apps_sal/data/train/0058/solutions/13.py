@@ -49,4 +49,3 @@ for i in range(t):
     jj = d[n][m][k]
     print(jj)
 # print(d[3][3][2])
-

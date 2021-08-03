@@ -6,7 +6,10 @@ def solve():
     else:
         print('NO')
 
+
 def __starting_point():
     for _ in range(int(input())):
         solve()
+
+
 __starting_point()

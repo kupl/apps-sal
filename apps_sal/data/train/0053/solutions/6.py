@@ -18,7 +18,6 @@ for _ in range(T):
             j += 1
             i = j
 
-
     min_ans = [0] * n
     i = j = 0
     cur = 1
@@ -33,5 +32,3 @@ for _ in range(T):
             i = j
     print(*min_ans[::-1])
     print(*max_ans)
-
-

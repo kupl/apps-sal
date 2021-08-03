@@ -48,4 +48,3 @@ for i in range(t):
 
 for x in toPrint:
     print(x)
-

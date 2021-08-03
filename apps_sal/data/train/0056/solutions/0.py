@@ -4,13 +4,13 @@ for _ in range(int(input())):
     for i in range(n):
         b = False
         for j in range(n):
-            if i*n+j == k:
+            if i * n + j == k:
                 b = True
                 break
-            mat[(i+j)%n][j] = 1
+            mat[(i + j) % n][j] = 1
         if b:
             break
-    if k%n == 0:
+    if k % n == 0:
         print(0)
     else:
         print(2)
@@ -18,4 +18,3 @@ for _ in range(int(input())):
         for j in range(n):
             print(mat[i][j], end="")
         print()
-

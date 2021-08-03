@@ -20,4 +20,3 @@ for _ in range(int(input())):
         if req in mb:
             ans = min(ans, va + mb[req])
     print(ans)
-

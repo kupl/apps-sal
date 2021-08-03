@@ -22,7 +22,7 @@ def main():
                 if cnt == K:
                     flg = 1
                     break
-                ans[i][(i+p)%N] = 1
+                ans[i][(i + p) % N] = 1
                 cnt += 1
         for i in range(N):
             print("".join(map(str, ans[i])))
@@ -30,5 +30,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -12,23 +12,23 @@ def main():
         inc = N
         dec = N - inc_num
         for i in range(N - 1):
-            if ans[i+1]:
+            if ans[i + 1]:
                 continue
             if S[i] == '<':
-                j = i+1
+                j = i + 1
                 cnt = 1
                 while True:
-                    if j == N-1:
+                    if j == N - 1:
                         break
                     if S[j] == '<':
-                       cnt += 1
+                        cnt += 1
                     else:
                         break
                     j += 1
-                #print(cnt)
-                for j in range(i+cnt-1, i-1, -1):
-                    #print(j)
-                    ans[j+1] = inc
+                # print(cnt)
+                for j in range(i + cnt - 1, i - 1, -1):
+                    # print(j)
+                    ans[j + 1] = inc
                     inc -= 1
         for i in range(N):
             if ans[i] == 0:
@@ -52,5 +52,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

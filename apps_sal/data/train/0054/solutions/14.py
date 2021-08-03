@@ -1,7 +1,7 @@
 q = int(input())
 for i in range(q):
     n = int(input())
-    s1 = list(map(int,input().split()))
+    s1 = list(map(int, input().split()))
     s1.sort()
     num = 0
     for i in s1:
@@ -12,4 +12,3 @@ for i in range(q):
         print("YES")
     else:
         print("NO")
-

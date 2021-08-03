@@ -14,7 +14,7 @@ while q:
             a.sort()
             i += 2
         else:
-            i += 1  
+            i += 1
     if 2048 in a:
         d = True
     if d:

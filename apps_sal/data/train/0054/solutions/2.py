@@ -8,4 +8,3 @@ for i in range(q):
         if i <= 2048:
             s += i
     print("YES" if s >= 2048 else "NO")
-
