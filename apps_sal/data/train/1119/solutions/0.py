@@ -1,6 +1,8 @@
-#dt = {} for i in x: dt[i] = dt.get(i,0)+1
-import sys;input = sys.stdin.readline
-inp,ip = lambda :int(input()),lambda :[int(w) for w in input().split()]
+# dt = {} for i in x: dt[i] = dt.get(i,0)+1
+import sys
+input = sys.stdin.readline
+inp, ip = lambda: int(input()), lambda: [int(w) for w in input().split()]
+
 
 def kadane(arr, start, finish, n):
     Sum = 0
@@ -30,6 +32,7 @@ def kadane(arr, start, finish, n):
             start[0] = finish[0] = i
     return maxSum
 
+
 def findMaxSum(M):
     nonlocal ROW, COL
     maxSum, finalLeft = float('-inf'), None
@@ -54,14 +57,10 @@ def findMaxSum(M):
                 finalTop = start[0]
                 finalBottom = finish[0]
 
-    for i in range(finalTop,finalBottom+1):
-        print(*M[i][finalLeft:finalRight+1])
+    for i in range(finalTop, finalBottom + 1):
+        print(*M[i][finalLeft:finalRight + 1])
 
 
-ROW,COL = ip()
+ROW, COL = ip()
 M = [ip() for i in range(ROW)]
 findMaxSum(M)
-
-
-    
-

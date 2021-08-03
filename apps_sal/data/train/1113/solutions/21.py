@@ -1,12 +1,12 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
+from operator import itemgetter
+from heapq import nlargest
+from itertools import repeat
 import sys
 ifs = sys.stdin
 ofs = sys.stdout
 
-from itertools import repeat
-from heapq import nlargest
-from operator import itemgetter
 
 class bag(dict):
 
@@ -57,30 +57,29 @@ class bag(dict):
 def solve(A):
     C = bag(A)
     MC = C.most_common()
-    e,c = MC.pop(0)
+    e, c = MC.pop(0)
     c_max = c
     e_min = e
     for mc in MC:
-        e,c = mc
-        if c==c_max:
+        e, c = mc
+        if c == c_max:
             if e < e_min:
                 e_min = e
         else:
             break
-    return (e_min,c_max)
+    return (e_min, c_max)
 
 
 def numbers_from_line(d=' '):
-    return [int(s) for s in ifs.readline().strip().split(d) if len(s.strip())>0]
+    return [int(s) for s in ifs.readline().strip().split(d) if len(s.strip()) > 0]
 
 
 T = int(ifs.readline())
-for t in range(1,T+1):
+for t in range(1, T + 1):
     n = int(ifs.readline())
     A = numbers_from_line()
-    v,c = solve(A)
-    ofs.write('%d %d\n' % (v,c))
+    v, c = solve(A)
+    ofs.write('%d %d\n' % (v, c))
 
 
 sys.exit(0)
-

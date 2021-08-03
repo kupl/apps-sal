@@ -1,4 +1,6 @@
 import sys
+
+
 def main():
     s = sys.stdin.readline
     for t in range(int(s())):
@@ -7,9 +9,9 @@ def main():
         save = {}
         for i in A:
             if i in save:
-                save[i]+=1
+                save[i] += 1
             else:
-                save[i]=1
+                save[i] = 1
         g = max(save, key=save.get)
         now = []
         for num in save:
@@ -17,6 +19,10 @@ def main():
                 now.append(num)
         now = sorted(now)
         print(now[0], save[g])
+
+
 def __starting_point():
-    main() 
+    main()
+
+
 __starting_point()

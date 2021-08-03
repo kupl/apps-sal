@@ -10,4 +10,3 @@ for t in range(T):
     C = max(D.values())
     V = min([e[0] for e in [e for e in list(D.items()) if e[1] == C]])
     print(V, C)
-
