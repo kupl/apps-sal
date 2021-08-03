@@ -6,4 +6,3 @@ def max_and_min(arr1, arr2):
             max_diff = max(max_diff, current_sum)
             min_diff = min(min_diff, current_sum)
     return [max_diff, min_diff]
-

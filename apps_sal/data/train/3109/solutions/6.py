@@ -1,5 +1,6 @@
 SPECIAL = "-',."
 
+
 def scramble_words(words):
     output = []
     for word in words.split():

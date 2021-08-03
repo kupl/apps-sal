@@ -5,4 +5,3 @@ def count_sheep(n):
         cool = str(i) + " sheep..."
         bahh = str(bahh) + str(cool)
     return bahh
-

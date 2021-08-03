@@ -10,6 +10,5 @@ def multi_table(number):
         final.append(str(prod))
         if count != 10:
             final.append("\n")
-        count+=1
+        count += 1
     return ("").join(final)
-

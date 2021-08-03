@@ -6,4 +6,5 @@ def count_sheep(n):
         x = x + 1
     return result
 
+
 count_sheep(3)

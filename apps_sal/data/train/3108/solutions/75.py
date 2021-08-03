@@ -4,7 +4,7 @@ def multi_table(number):
         res = i * number
         if i == 1:
             st = st + f'{i} * {number} = {res}'
-            
+
         else:
             st = st + f'\n{i} * {number} = {res}'
-    return st    
+    return st

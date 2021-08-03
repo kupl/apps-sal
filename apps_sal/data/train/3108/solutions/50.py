@@ -7,4 +7,3 @@ def multi_table(number):
     else:
         string = string + f"{10} * {number} = {10*number}"
     return string
-

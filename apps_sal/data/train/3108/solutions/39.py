@@ -1,2 +1,2 @@
 def multi_table(i):
-    return '1 * '+str(i)+' = '+str(i)+'\n2 * '+str(i)+' = '+str(i*2)+'\n3 * '+str(i)+' = '+str(i*3)+'\n4 * '+str(i)+' = '+str(i*4)+'\n5 * '+str(i)+' = '+str(i*5)+'\n6 * '+str(i)+' = '+str(i*6)+'\n7 * '+str(i)+' = '+str(i*7)+'\n8 * '+str(i)+' = '+str(i*8)+'\n9 * '+str(i)+' = '+str(i*9)+'\n10 * '+str(i)+' = '+str(i*10)
+    return '1 * ' + str(i) + ' = ' + str(i) + '\n2 * ' + str(i) + ' = ' + str(i * 2) + '\n3 * ' + str(i) + ' = ' + str(i * 3) + '\n4 * ' + str(i) + ' = ' + str(i * 4) + '\n5 * ' + str(i) + ' = ' + str(i * 5) + '\n6 * ' + str(i) + ' = ' + str(i * 6) + '\n7 * ' + str(i) + ' = ' + str(i * 7) + '\n8 * ' + str(i) + ' = ' + str(i * 8) + '\n9 * ' + str(i) + ' = ' + str(i * 9) + '\n10 * ' + str(i) + ' = ' + str(i * 10)
