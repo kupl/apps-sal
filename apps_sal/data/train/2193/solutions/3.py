@@ -7,4 +7,3 @@ for i in range(n):
         x = -(a + b + c + d)
 s.sort()
 print(1 + s.index((x, 0)))
-

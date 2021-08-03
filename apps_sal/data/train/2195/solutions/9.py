@@ -9,4 +9,3 @@ for i in a:
 
 ans = n - max(d.values())
 print(ans)
-

@@ -1,2 +1,2 @@
 inp = input()
-print(inp+inp[::-1])
+print(inp + inp[::-1])

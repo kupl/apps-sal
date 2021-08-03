@@ -14,4 +14,3 @@ for i in range(1, n):
         s -= 1
         r += 1
 print(r)
-

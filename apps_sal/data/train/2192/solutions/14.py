@@ -28,4 +28,3 @@ for x, i in lista:
             diccionario[x] = aux
         last = x
 print(n - maximo)
-

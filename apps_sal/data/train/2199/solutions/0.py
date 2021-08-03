@@ -8,10 +8,10 @@ end = [-1] * n
 hurt = [-1] * n
 
 adj = [[] for i in range(n)]
-for _ in range(n-1):
-    u ,v = list(map(int, input().split()))
-    adj[u-1].append(v-1)
-    adj[v-1].append(u-1)
+for _ in range(n - 1):
+    u, v = list(map(int, input().split()))
+    adj[u - 1].append(v - 1)
+    adj[v - 1].append(u - 1)
 
 hurt[0] = 1
 begin[0] = 0
@@ -30,10 +30,9 @@ while stack:
         end[nex] = curr
         stack.pop()
 
-desc = [end[i] - begin[i]-hurt[i] for i in range(n)]
-desc.sort(reverse = True)
+desc = [end[i] - begin[i] - hurt[i] for i in range(n)]
+desc.sort(reverse=True)
 out = 0
 for i in range(n - k):
     out += desc[i]
 print(out)
-

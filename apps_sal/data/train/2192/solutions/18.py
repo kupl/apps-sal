@@ -5,7 +5,6 @@ dp = [0] * 1000007
 majak = [0] * 1000007
 
 
-
 q = 1000007
 
 p = 0
@@ -17,7 +16,6 @@ for i in range(n):
     q = min(q, a)
 
     majak[a] = b
-
 
 
 dp[q] = 1
@@ -37,10 +35,7 @@ for i in range(q + 1, 1000003, 1):
         ma = max(ma, dp[i])
 
 
-
 print(n - ma)
 
 
-
 # Made By Mostafa_Khaled
-

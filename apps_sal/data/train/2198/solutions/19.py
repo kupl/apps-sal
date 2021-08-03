@@ -9,4 +9,3 @@ for i in range(0, t):
     dd[s] = 1
 
 print(len(dd))
-

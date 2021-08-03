@@ -8,11 +8,13 @@ for i in range(n - 1):
 
     x = t[j]
 
-    if x > r: r = x
+    if x > r:
+        r = x
 
     else:
 
-        while t[i] < x: s[j], i = max(s[j], s[i]), p[i]
+        while t[i] < x:
+            s[j], i = max(s[j], s[i]), p[i]
 
         p[j] = i
 
@@ -21,6 +23,4 @@ for i in range(n - 1):
 print(max(s))
 
 
-
 # Made By Mostafa_Khaled
-

@@ -11,19 +11,19 @@ n = int(input())
 names = []
 
 for _ in range(n):
-	names.append(input())
+    names.append(input())
 
 other = []
 
 for name in names:
 
-	while 'u' in name:
-		name = name.replace('u', 'oo')
+    while 'u' in name:
+        name = name.replace('u', 'oo')
 
-	while 'kh' in name:
-		name = name.replace('kh', 'h')
+    while 'kh' in name:
+        name = name.replace('kh', 'h')
 
-	other.append(name)
+    other.append(name)
 
 
 print(len(set(other)))

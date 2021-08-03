@@ -6,6 +6,5 @@ for i in range(n):
     if (i == 0):
         son = wk1
     score.append(wk1)
-score.sort(reverse = True)
+score.sort(reverse=True)
 print(score.index(son) + 1)
-

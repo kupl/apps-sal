@@ -17,4 +17,3 @@ if m > d:
     d = m
 
 print(len(a) - d)
-

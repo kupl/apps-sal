@@ -10,8 +10,7 @@ for pos, blast in pos_blast:
     power[pos] = blast
 for i in range(1, MAX_N):
     if not tower[i]:
-        can_destroy[i] = can_destroy[i-1]
+        can_destroy[i] = can_destroy[i - 1]
     else:
         can_destroy[i] = can_destroy[max(0, i - power[i] - 1)] + 1
 print(n - max(can_destroy))
-

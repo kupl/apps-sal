@@ -12,4 +12,3 @@ for a in reversed(aa):
         break
     res = max(res, maxa % a, *[b % a for b in x[2 * a - 1::a]])
 print(res)
-

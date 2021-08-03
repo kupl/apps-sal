@@ -12,4 +12,3 @@ for a in range(n):
     s.add(name)
 
 print(len(s))
-

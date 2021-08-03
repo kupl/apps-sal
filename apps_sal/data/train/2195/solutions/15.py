@@ -14,5 +14,5 @@ def go():
         j += 1
     return total
 
-print(go())
 
+print(go())
