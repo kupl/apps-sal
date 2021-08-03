@@ -8,7 +8,7 @@ class Solution:
                 nums1_map[i] += 1
             else:
                 nums1_map[i] = 1
-        
+
         for i in nums2:
             i_2 = i * i
             seen = set({})
@@ -23,9 +23,8 @@ class Solution:
                     seen.add((int(i_2 / j), j))
                     seen.add((j, int(i_2 / j)))
                     count += left * right
-        
+
         return count
-        
-    
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         return self.numTripletsHelper(nums1, nums2) + self.numTripletsHelper(nums2, nums1)

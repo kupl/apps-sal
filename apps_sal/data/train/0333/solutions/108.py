@@ -22,7 +22,7 @@ class Solution:
             # iterate the layer
             for node in curs:
                 # check if reached end
-                if node == n-1:
+                if node == n - 1:
                     return step
 
                 # check same value
@@ -35,7 +35,7 @@ class Solution:
                 graph[arr[node]].clear()
 
                 # check neighbors
-                for child in [node-1, node+1]:
+                for child in [node - 1, node + 1]:
                     if 0 <= child < len(arr) and child not in visited:
                         visited.add(child)
                         nex.append(child)

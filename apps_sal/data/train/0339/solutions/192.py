@@ -13,5 +13,5 @@ class Solution:
                     if nn % d == 0:
                         ret += C[d] * C[nn // d]
             return ret
-        
+
         return helper(nums1, nums2) + helper(nums2, nums1)

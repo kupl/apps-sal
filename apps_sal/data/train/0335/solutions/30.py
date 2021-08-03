@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def tallestBillboard(self, rods: List[int]) -> int:
         d = defaultdict(int)
@@ -8,4 +10,3 @@ class Solution:
                 d[sub + i] = max(d[sub + i], b + i)
                 d[sub - i] = max(d[sub - i], b)
         return d[0]
-

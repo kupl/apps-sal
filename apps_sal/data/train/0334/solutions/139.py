@@ -11,10 +11,10 @@ class Solution:
                 c = val[1]
                 if char == s[i + 1]:
                     if consecutive:
-                        inner_array.append(cost[i+1])
+                        inner_array.append(cost[i + 1])
                     else:
                         inner_array.append(c)
-                        inner_array.append(cost[i+1])
+                        inner_array.append(cost[i + 1])
                         consecutive = True
                     if i == len(cost) - 2:
                         outer_array.append(inner_array)
@@ -29,8 +29,3 @@ class Solution:
             res += sum(sorted(i)[:-1])
 
         return res
-                
-
-            
-                
-

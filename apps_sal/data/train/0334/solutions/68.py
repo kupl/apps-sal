@@ -14,7 +14,7 @@ class Solution:
         ans = 0
         # print(to_delete)
         for interval in to_delete:
-            cos = sorted(cost[interval[0] : interval[1]])
+            cos = sorted(cost[interval[0]: interval[1]])
             l = interval[1] - interval[0] - 1
             index = 0
             for _ in range(l):

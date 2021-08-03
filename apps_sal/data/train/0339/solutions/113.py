@@ -27,7 +27,7 @@ class Solution:
                 else:
                     r -= 1
             return ans
-        
+
         ans = 0
         nums1.sort()
         nums2.sort()

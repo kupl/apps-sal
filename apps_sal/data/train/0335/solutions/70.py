@@ -5,7 +5,7 @@ class Solution:
     def tallestBillboard(self, rods: List[int]) -> int:
         diff_to_longer_len = defaultdict(int)
         diff_to_longer_len[0] = 0
-        
+
         def replace_if_larger(dct, key, val):
             dct[key] = max(val, dct[key])
 
@@ -22,4 +22,3 @@ class Solution:
                 replace_if_larger(diff_to_longer_len, dL, L)
 
         return diff_to_longer_len[0]
-

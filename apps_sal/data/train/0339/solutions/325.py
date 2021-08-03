@@ -3,7 +3,7 @@ class Solution:
         table1 = {}
         table2 = {}
         res = 0
-        
+
         for n in nums1:
             square = n * n
             table = {}
@@ -16,7 +16,7 @@ class Solution:
                 if m not in table:
                     table[m] = 0
                 table[m] += 1
-                
+
         for n in nums2:
             square = n * n
             table = {}
@@ -29,6 +29,5 @@ class Solution:
                         res += table[remainder]
                 if m not in table:
                     table[m] = 0
-                table[m] += 1  
+                table[m] += 1
         return res
-

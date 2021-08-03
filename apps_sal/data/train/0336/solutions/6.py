@@ -8,8 +8,8 @@ class Solution:
             else:
                 res += 1
         return res
-   
-        
+
+
 # class Solution:
 #     def minSteps(self, s: str, t: str) -> int:
 #         count = collections.Counter(s)
@@ -20,4 +20,3 @@ class Solution:
 #             else:
 #                 res += 1
 #         return res
-

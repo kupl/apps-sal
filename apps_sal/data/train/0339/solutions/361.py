@@ -8,7 +8,7 @@ class Solution:
                     count += seen[target // a]
                 seen[a] += 1
             return count
-            
+
         @lru_cache(None)
         def twoProduct1(target):
             return find(target, nums1)
@@ -17,4 +17,4 @@ class Solution:
         def twoProduct2(target):
             return find(target, nums2)
 
-        return sum(twoProduct2(a*a) for a in nums1) + sum(twoProduct1(a*a) for a in nums2)
+        return sum(twoProduct2(a * a) for a in nums1) + sum(twoProduct1(a * a) for a in nums2)

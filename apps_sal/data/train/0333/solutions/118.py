@@ -1,6 +1,6 @@
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
-        
+
         m = len(arr)
         seen = [False for _ in range(m)]
         q = deque()
@@ -33,5 +33,5 @@ class Solution:
                             q.append(num)
                         quick_jump_graph[arr[cur_idx]] = []
             step += 1
-    
+
         return -1

@@ -12,22 +12,21 @@ class Solution:
             if x in dict2:
                 dict2[x] += 1
             else:
-                dict2[x]=1
+                dict2[x] = 1
         for x in nums1:
             squar = x**2
             for y in nums2:
-                if (squar/y) in dict2:
-                    if (squar/y) == y:
-                        result += dict2[squar/y] - 1
+                if (squar / y) in dict2:
+                    if (squar / y) == y:
+                        result += dict2[squar / y] - 1
                     else:
-                        result += dict2[squar/y]
+                        result += dict2[squar / y]
         for x in nums2:
             squar = x**2
             for y in nums1:
-                if (squar/y) in dict1:
-                    if (squar/y) == y:
-                        result += dict1[squar/y] - 1
+                if (squar / y) in dict1:
+                    if (squar / y) == y:
+                        result += dict1[squar / y] - 1
                     else:
-                        result += dict1[squar/y]  
-        return int(result/2)                
-
+                        result += dict1[squar / y]
+        return int(result / 2)

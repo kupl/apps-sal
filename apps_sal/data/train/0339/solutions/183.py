@@ -6,11 +6,11 @@ class Solution:
         set2 = set(nums2)
         lookup1 = defaultdict(int)
 
-        def ncr(n,r):
+        def ncr(n, r):
             from math import factorial
-            return factorial(n)//factorial(r) //factorial(n-r)
-        
-        def countTriplets(nums1,nums2):
+            return factorial(n) // factorial(r) // factorial(n - r)
+
+        def countTriplets(nums1, nums2):
             lookup = defaultdict(int)
             count = 0
             for index, val in enumerate(nums1):
@@ -19,11 +19,11 @@ class Solution:
                 for index2, val2 in enumerate(nums2):
                     if target % val2 == 0:
                         if target // val2 in lookup:
-                            count += lookup[target//val2]
-                    lookup[val2]+=1
+                            count += lookup[target // val2]
+                    lookup[val2] += 1
             return count
-        
+
         # solving type 1
-        count1 = countTriplets(nums1,nums2)
-        count2 = countTriplets(nums2,nums1)
-        return count1+count2
+        count1 = countTriplets(nums1, nums2)
+        count2 = countTriplets(nums2, nums1)
+        return count1 + count2

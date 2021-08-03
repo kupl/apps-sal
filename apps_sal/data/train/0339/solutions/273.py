@@ -1,7 +1,8 @@
 from collections import Counter
 
+
 class Solution:
-        
+
     def search(self, nums1, nums2, counter):
         for i in range(len(nums1)):
             if nums1[i] ** 2 > nums2[-1] ** 2:
@@ -23,8 +24,3 @@ class Solution:
         self.search(nums1, nums2, counter2)
         self.search(nums2, nums1, counter1)
         return self.rst
-
-                
-                
-                
-

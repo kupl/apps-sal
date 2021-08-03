@@ -27,5 +27,3 @@ class Solution:
                     q.append(i - 1)
                     visited[i - 1] = 1
             counter += 1
-
-

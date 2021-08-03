@@ -21,13 +21,9 @@ class Solution:
             else:
                 break
             start = prev_i
-            
+
             to_delete.sort(reverse=True)
             for i in range(1, len(to_delete)):
                 out += to_delete[i][0]
                 deleted.add(to_delete[i][1])
         return out
-            
-            
-        
-

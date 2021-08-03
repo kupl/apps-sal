@@ -8,7 +8,7 @@ class Solution:
         Count_upper1 = collections.Counter(upper1)
         Count_upper2 = collections.Counter(upper2)
         count = 0
-        for i in range(max(l1,l2)):
+        for i in range(max(l1, l2)):
             if i < l1:
                 count += Count_upper2[nums1[i]**2]
             if i < l2:

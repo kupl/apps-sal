@@ -3,9 +3,9 @@ class Solution:
         c = 0
         i = 0
         l = len(cost)
-        while i<l-1:
-            if s[i] != s[i+1]:
-                i = i+1
+        while i < l - 1:
+            if s[i] != s[i + 1]:
+                i = i + 1
             else:
                 ch = s[i]
                 dl = 0
@@ -14,7 +14,7 @@ class Solution:
                         dl += 1
                     else:
                         break
-                m = cost[i:i+dl]
+                m = cost[i:i + dl]
                 print(m)
                 c += sum(m) - max(m)
                 i += dl

@@ -6,7 +6,8 @@ class Solution:
                 if cost[i] > cost[prev]:
                     ans += cost[prev]
                     prev = i
-                else: ans += cost[i]
-            else: prev = i
+                else:
+                    ans += cost[i]
+            else:
+                prev = i
         return ans
-

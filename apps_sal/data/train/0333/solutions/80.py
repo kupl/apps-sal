@@ -18,10 +18,10 @@ class Solution:
             if arr[i] not in seen_values:
                 seen_values.add(arr[i])
                 idx_set |= indices[arr[i]]
-            if i-1 >= 0:
-                idx_set.add(i-1)
-            if i+1 < N:
-                idx_set.add(i+1)
+            if i - 1 >= 0:
+                idx_set.add(i - 1)
+            if i + 1 < N:
+                idx_set.add(i + 1)
             if i in idx_set:
                 idx_set.remove(i)
             return idx_set
@@ -29,7 +29,7 @@ class Solution:
         while idx != last_idx:
             for j in reachables(idx):
                 if moves[j] is None:
-                    heapq.heappush(edges, (moves[idx]+1, j))
+                    heapq.heappush(edges, (moves[idx] + 1, j))
 
             move, idx = heapq.heappop(edges)
             moves[idx] = move

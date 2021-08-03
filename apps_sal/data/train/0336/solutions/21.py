@@ -13,4 +13,3 @@ class Solution:
             return req
         else:
             return 0
-

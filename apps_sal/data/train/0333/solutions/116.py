@@ -4,7 +4,7 @@ class Solution:
         if n <= 1:
             return 0
 
-        graph = {} ## 和上面的idxs是一样的
+        graph = {}  # 和上面的idxs是一样的
         for i in range(n):
             if arr[i] in graph:
                 graph[arr[i]].append(i)
@@ -20,9 +20,9 @@ class Solution:
             nex = []
 
             # iterate the layer
-            for node in curs: ## 用curs和nxt代替bfs里deque的作用
+            for node in curs:  # 用curs和nxt代替bfs里deque的作用
                 # check if reached end
-                if node == n-1:
+                if node == n - 1:
                     return step
 
                 # check same value
@@ -35,7 +35,7 @@ class Solution:
                 graph[arr[node]].clear()
 
                 # check neighbors
-                for child in [node-1, node+1]:
+                for child in [node - 1, node + 1]:
                     if 0 <= child < len(arr) and child not in visited:
                         visited.add(child)
                         nex.append(child)

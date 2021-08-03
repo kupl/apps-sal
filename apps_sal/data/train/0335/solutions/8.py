@@ -1,10 +1,11 @@
 from functools import lru_cache
 from collections import defaultdict
 
+
 class Solution:
     def tallestBillboard(self, rods: List[int]) -> int:
         # Dynamic Programming
-        # Let dp[i][s] be the largest score we can get using rods[j] (j >= i), 
+        # Let dp[i][s] be the largest score we can get using rods[j] (j >= i),
         # after previously writing a sum of s.
         # Time  complexity: O(N x S), where N is the length of rods and S is the maximum of sum(rods).
         # Space complexity: O(N x S)
@@ -17,7 +18,6 @@ class Solution:
         #                dp(i + 1, s + rods[i]) + rods[i])
         # return dp(0, 0)
 
-
         # dp[d] mean the maximum pair of sum we can get with pair difference d
         # For example, if have a pair of sum (a, b) with a > b, then dp[a - b] = b
         # If we have dp[diff] = a, it means we have a pair of sum (a, a + diff).
@@ -29,4 +29,3 @@ class Solution:
                 dp[d + x] = max(dp[d + x], y)
                 dp[abs(d - x)] = max(dp[abs(d - x)], y + min(d, x))
         return dp[0]
-

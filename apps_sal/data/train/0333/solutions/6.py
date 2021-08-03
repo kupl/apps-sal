@@ -9,7 +9,8 @@ class Solution:
         while q:
             for _ in range(len(q)):
                 cur = q.popleft()
-                if cur == len(arr) - 1: return step
+                if cur == len(arr) - 1:
+                    return step
                 neighbors = set([cur + 1, cur - 1] + [x for x in v2n[arr[cur]]])
                 for nb in neighbors:
                     if nb >= 0 and nb < len(arr) and nb != cur and nb not in visited:

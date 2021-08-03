@@ -10,7 +10,7 @@ class Solution:
                     ans += hashmap[nums1[i] * nums1[i] / nums2[j]]
                     # print(i,j, hashmap)
                 hashmap[nums2[j]] += 1
-                
+
         for i in range(len(nums2)):
             hashmap = collections.defaultdict(int)
             for j in range(len(nums1)):
@@ -18,7 +18,7 @@ class Solution:
                     ans += hashmap[nums2[i] * nums2[i] / nums1[j]]
                     # print(i,j, hashmap)
                 hashmap[nums1[j]] += 1
-            
+
             # for j in range(len(nums2) - 1):
             #     k = j + 1
             #     while k < len(nums2):
@@ -37,4 +37,3 @@ class Solution:
         #         else:
         #             j += 1
         return ans
-

@@ -18,7 +18,7 @@ class Solution:
         res = 0
         for i in d1.keys():
             if i in d2.keys() and d2[i] < d1[i]:
-                res += (d1[i]-d2[i])
+                res += (d1[i] - d2[i])
             elif i not in d2.keys():
                 res += d1[i]
         return res

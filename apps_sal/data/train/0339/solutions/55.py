@@ -4,11 +4,11 @@ class Solution(object):
         countA = Counter()
         countB = Counter()
         for i, x in enumerate(A):
-            for j in range(i+1, len(A)):
+            for j in range(i + 1, len(A)):
                 y = A[j]
                 countA[x * y] += 1
         for i, x in enumerate(B):
-            for j in range(i+1, len(B)):
+            for j in range(i + 1, len(B)):
                 y = B[j]
                 countB[x * y] += 1
         ans = 0

@@ -1,18 +1,19 @@
 from collections import deque
 
+
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
-        
+
         # construct graph
         n = len(arr)
         graph = collections.defaultdict(list)
         for i, num in enumerate(arr):
             graph[num].append(i)
-        
+
         # bfs
         queue = deque([0])
         visited = set([0])
-        
+
         steps = 0
         while queue:
             level_size = len(queue)
@@ -27,5 +28,5 @@ class Solution:
                         queue.append(nxt_idx)
                         visited.add(nxt_idx)
             steps += 1
-            
+
         return -1

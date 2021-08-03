@@ -1,7 +1,7 @@
 class Solution:
     def wrapper(self, toSquare, toProd):
-        
-        #create a hash table of count of unique squared ints in arr 1
+
+        # create a hash table of count of unique squared ints in arr 1
         table = {}
         for integer in toSquare:
             squared = integer**2
@@ -9,11 +9,11 @@ class Solution:
                 table[squared] = 1
             else:
                 table[squared] += 1
-        
+
         counter = 0
-        #get all pairs products, check in hash table, if so, inc counter by count in table
+        # get all pairs products, check in hash table, if so, inc counter by count in table
         i = 0
-        while i < len(toProd): #minus one ok too?
+        while i < len(toProd):  # minus one ok too?
             j = i + 1
             while j < len(toProd):
                 product = toProd[i] * toProd[j]
@@ -21,16 +21,16 @@ class Solution:
                     counter += table[product]
                 j += 1
             i += 1
-        
+
         return counter
-                    
+
     def numTriplets1(self, nums1: List[int], nums2: List[int]) -> int:
-        
+
         counter = 0
         counter += self.wrapper(nums1, nums2)
         counter += self.wrapper(nums2, nums1)
         return counter
-    
+
     def get_tables(self, nums):
         squares = {}
         products = {}
@@ -51,9 +51,9 @@ class Solution:
                         products[product_or_square] += 1
                 j += 1
             i += 1
-        
+
         return products, squares
-    
+
     def get_counts(self, products, squares):
         # iterate over the smaller set
         counter = 0
@@ -65,9 +65,9 @@ class Solution:
             for product in list(products.keys()):
                 if product in squares:
                     counter += products[product] * squares[product]
-        
+
         return counter
-    
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         products1, squares1 = self.get_tables(nums1)
         products2, squares2 = self.get_tables(nums2)
@@ -76,4 +76,3 @@ class Solution:
         counter += self.get_counts(products2, squares1)
 
         return counter
-

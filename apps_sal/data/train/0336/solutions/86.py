@@ -7,7 +7,7 @@ class Solution:
                 sd[c] += 1
             else:
                 sd[c] = 1
-                
+
         count = 0
         for c in t:
             if sd.get(c) and sd[c] > 0:

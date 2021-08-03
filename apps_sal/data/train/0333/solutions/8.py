@@ -1,11 +1,9 @@
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
-  
-        
-        
+
         val_to_ids = collections.defaultdict(list)
         _ = [val_to_ids[x].append(i) for i, x in enumerate(arr)]
-        
+
         # print(val_to_ids)
         queue = collections.deque([(0, 0)])
         positions_seen = set()
@@ -16,11 +14,11 @@ class Solution:
                 return dis
             val = arr[i]
             positions_seen.add(i)
-            
+
             possible_indexes = []
             possible_indexes.append(i + 1)
             possible_indexes.append(i - 1)
-            
+
             if len(val_to_ids[val]) > 1:
                 for idx in val_to_ids[val]:
                     if idx not in positions_seen:
@@ -30,10 +28,9 @@ class Solution:
             for p in possible_indexes:
                 if p < 0 or p > len(arr) or p in positions_seen:
                     continue
-                queue.append((p, dis+1))
-            
+                queue.append((p, dis + 1))
 
-        
+
 #         nei = collections.defaultdict(list)
 #         _ = [nei[x].append(i) for i, x in enumerate(arr)]
 
@@ -50,4 +47,3 @@ class Solution:
 #                 frontier.append((p, step + 1))
 
 #             num_met.add(num) # track explored values
-

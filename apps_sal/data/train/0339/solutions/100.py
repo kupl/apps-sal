@@ -15,4 +15,3 @@ class Solution:
                 if nums2[i] * nums2[j] in double1:
                     res += double1[nums2[i] * nums2[j]]
         return res
-

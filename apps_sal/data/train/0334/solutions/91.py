@@ -18,5 +18,5 @@ class Solution:
                 prices = [cost]
         if count != 0:
             for _ in range(count):
-                    ans += heapq.heappop(prices)
+                ans += heapq.heappop(prices)
         return ans

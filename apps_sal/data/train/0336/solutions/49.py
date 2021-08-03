@@ -7,5 +7,3 @@ class Solution:
             return sum(diff.values())
         else:
             return 0
-        
-

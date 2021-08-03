@@ -1,12 +1,12 @@
 class Solution:
-    
+
     def all_products(self, int_list):
         res_list = []
-        for idx,i in enumerate(int_list):
-            for j in int_list[idx+1:]:
-                res_list.append(i*j)
+        for idx, i in enumerate(int_list):
+            for j in int_list[idx + 1:]:
+                res_list.append(i * j)
         return res_list
-    
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         res = 0
         squared_nums1 = [i**2 for i in nums1]

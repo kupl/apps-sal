@@ -3,7 +3,7 @@ class Solution:
     def minJumps(self, arr: List[int]) -> int:
         maps = collections.defaultdict(list)
         [maps[a].append(i) for i, a in enumerate(arr)]
- 
+
         begins = set([0])
         ends = set([len(arr) - 1])
         visitedIdx = set([-1, len(arr)])

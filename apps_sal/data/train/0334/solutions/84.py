@@ -1,16 +1,16 @@
 class Solution:
     def minCost(self, s: str, cost: List[int]) -> int:
         res = 0
-        
+
         if len(s) <= 1:
             return 0
-        
+
         i = 0
-        while i < len(s)-1:
+        while i < len(s) - 1:
             j = i
             costs = []
             isCost = False
-            while j <= len(s)-2 and s[j+1] == s[i]:
+            while j <= len(s) - 2 and s[j + 1] == s[i]:
                 isCost = True
                 costs.append(cost[j])
                 j += 1
@@ -19,8 +19,5 @@ class Solution:
             res += sum(sorted(costs, reverse=True)[1:])
             i = j
             i += 1
-                
-                
-        return res
-                
 
+        return res

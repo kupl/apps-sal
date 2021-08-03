@@ -9,7 +9,7 @@ class Solution:
                     res += counter[q]
                 counter[list2[j]] += 1
             return res
-        
+
         res = 0
         for n in nums1:
             res += twoProduct(nums1, nums2, n ** 2)

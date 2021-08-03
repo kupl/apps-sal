@@ -36,8 +36,6 @@ class Solution:
 #             for rest in rests:
 #                 product = current * rest
 #                 count += pow_nums2.count(product)
-                    
+
 
 #         return count
-    
-

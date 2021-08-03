@@ -3,5 +3,3 @@ class Solution:
         sf = Counter(s)
         tf = Counter(t)
         return sum((tf - sf).values())
-        
-

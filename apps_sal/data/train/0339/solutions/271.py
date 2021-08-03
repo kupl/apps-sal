@@ -11,9 +11,9 @@ class Solution:
             r += self.helper(nums1[i] * nums1[i], nums2)
         for i in range(n2):
             r += self.helper(nums2[i] * nums2[i], nums1)
-        
+
         return r
-        
+
     def helper(self, prod, arr):
         d = {}
         r = 0

@@ -15,5 +15,5 @@ class Solution:
                 sq = math.sqrt(target)
                 if sq * sq == target:
                     ans += dic1[sq]
-        
+
         return ans

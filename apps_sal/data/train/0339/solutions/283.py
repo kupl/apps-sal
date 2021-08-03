@@ -7,10 +7,10 @@ class Solution:
             for j in range(len(B)):
                 if x % B[j] == 0 and x // B[j] in countB:
                     if B[j] * B[j] == x:
-                        res += (countB[x//B[j]] - 1)
+                        res += (countB[x // B[j]] - 1)
                         # print(B[j], countB[B[j]] - 1)
                     else:
-                        res += countB[x//B[j]]
+                        res += countB[x // B[j]]
                         # print(B[j], x, countB[B[j]])
         # print(res)
         for i in range(len(B)):
@@ -18,8 +18,7 @@ class Solution:
             for j in range(len(A)):
                 if x % A[j] == 0 and x // A[j] in countA:
                     if A[j] * A[j] == x:
-                        res += (countA[x//A[j]] - 1)
+                        res += (countA[x // A[j]] - 1)
                     else:
-                        res += countA[x//A[j]]
-        return res//2
-
+                        res += countA[x // A[j]]
+        return res // 2

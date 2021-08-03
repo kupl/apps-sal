@@ -20,4 +20,3 @@ class Solution:
                     new_dp[d] = max(m, dp.get(d - rods[i], -1), dp.get(d, -1))
             dp = new_dp
         return dp[0]
-

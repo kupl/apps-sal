@@ -7,7 +7,7 @@ class Solution:
             return 0
         total = 0
         while True:
-            i = 0                
+            i = 0
             deleted = False
             for _, group in itertools.groupby(s):
                 group = list(group)
@@ -36,9 +36,9 @@ class Solution:
                 break
         return total
 
+
 def has_two_consecutive_chars(s: str) -> bool:
     for i in range(1, len(s)):
         if s[i - 1] == s[i]:
             return True
     return False
-

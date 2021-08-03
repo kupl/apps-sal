@@ -26,4 +26,3 @@ class Solution:
             res += c1[nums2[i] * nums2[i]]
 
         return res
-

@@ -9,7 +9,7 @@ class Solution:
         for num in nums2:
             res += self.two_product(num ** 2, nums1)
         return res
-    
+
     def two_product(self, target, nums):
         dic, res = defaultdict(int), 0
         for i, num in enumerate(nums):
@@ -19,4 +19,3 @@ class Solution:
             res += dic[remain]
             dic[num] += 1
         return res
-

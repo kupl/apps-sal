@@ -3,7 +3,7 @@ class Solution:
     def minJumps(self, arr: List[int]) -> int:
         if len(arr) == 1:
             return 0
-        
+
         d = collections.defaultdict(list)
         for index, element in enumerate(arr):
             d[element].append(index)
@@ -23,4 +23,3 @@ class Solution:
                     queue.append((nextIndex, jumps + 1))
 
         return -1
-

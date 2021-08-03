@@ -1,6 +1,6 @@
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        
+
         def count(nums1, nums2):
             # triplets = set()
             triplets = 0
@@ -9,7 +9,7 @@ class Solution:
             for i2, num2 in enumerate(nums2):
                 if num2 not in cnt2:
                     cnt2[num2] = []
-                cnt2[num2].append(i2)        
+                cnt2[num2].append(i2)
 
             for i1, num1 in enumerate(nums1):
                 # print('stage1', i1, num1)
@@ -25,7 +25,7 @@ class Solution:
                         continue
 
                     idxs2k = cnt2[num2k]
-                    
+
                     combined = []
                     for idx2j in idxs2j:
                         combined.append((idx2j, 0))  # j
@@ -39,8 +39,8 @@ class Solution:
                             triplets += temp_cnt
                         else:
                             temp_cnt += 1
-                    
-                    
+
+
 #                     print(num1, square, idxs2j, idxs2k, j, k)
 #                     while j >= 0:
 #                         print(j, k, larger)
@@ -60,12 +60,11 @@ class Solution:
 #                             triplets += larger
 #                             j -= 1
 #                     # triplets += larger
-                    
+
 #                     print('triplets=', triplets)
-                    
-                    
+
                     # print('stage2', idxs2k)
-                    
+
                     # for idx2j in idxs2j:
                     #     for idx2k in idxs2k:
                     #         if idx2k <= idx2j:
@@ -75,10 +74,9 @@ class Solution:
                             # print(num1, nums2[idx2j], nums2[idx2k])
 
             return triplets
-            
-        
+
         triplets1 = count(nums1, nums2)
         triplets2 = count(nums2, nums1)
-                
+
         # return len(triplets1) + len(triplets2)
         return triplets1 + triplets2

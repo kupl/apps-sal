@@ -19,4 +19,4 @@ class Solution:
         for x in nums1:
             if x**2 in d2:
                 res += d2[x**2]
-        return res//2
+        return res // 2

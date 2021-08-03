@@ -8,6 +8,4 @@ class Solution:
             for j in range(i):
                 d2[nums2[i] * nums2[j]] = d2.get(nums2[i] * nums2[j], 0) + 1
 
-
         return sum(d1.get(i * i, 0) for i in nums2) + sum(d2.get(j * j, 0) for j in nums1)
-

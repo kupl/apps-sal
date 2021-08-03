@@ -11,6 +11,8 @@ class Solution:
             for j in range(i + 1, len(nums2)):
                 cnt2[nums2[i] * nums2[j]] += 1
         ans = 0
-        for i in nums1: ans += cnt2[i * i]
-        for i in nums2: ans += cnt1[i * i]
+        for i in nums1:
+            ans += cnt2[i * i]
+        for i in nums2:
+            ans += cnt1[i * i]
         return ans

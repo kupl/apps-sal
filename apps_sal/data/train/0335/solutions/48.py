@@ -14,5 +14,5 @@ class Solution:
                 dp[i][j] = max(dp[i][j], dp[i - 1][j])
                 dp[i][j + h] = max(dp[i - 1][j], dp[i][j + h])
                 dp[i][abs(j - h)] = max(dp[i][abs(j - h)], dp[i - 1][j] + min(h, j))
-        
+
         return dp[m][0]

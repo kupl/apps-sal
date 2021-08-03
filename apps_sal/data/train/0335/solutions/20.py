@@ -17,4 +17,3 @@ class Solution:
                         new_dp[d] = a
             dp = new_dp
         return dp[0]
-

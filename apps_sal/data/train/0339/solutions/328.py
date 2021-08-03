@@ -33,7 +33,7 @@ class Solution:
                 if v == q:
                     if l1 > 1:
                         # l1個の中から2個選ぶ組み合わせの数
-                        count += (l1 * (l1-1))
+                        count += (l1 * (l1 - 1))
                 else:
                     l2 = h2[q]
                     count += l1 * l2
@@ -50,10 +50,9 @@ class Solution:
                 if v == q:
                     if l1 > 1:
                         # l1個の中から2個選ぶ組み合わせの数
-                        count += (l1 * (l1-1))
+                        count += (l1 * (l1 - 1))
                 else:
                     l2 = h1[q]
                     count += l1 * l2
 
         return int(count / 2)
-

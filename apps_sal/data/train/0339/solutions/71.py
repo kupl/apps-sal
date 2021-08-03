@@ -4,10 +4,11 @@ def func(xs, ys):
     res = 0
     for y in ys:
         for x in sqs:
-            res += seen[x/y]
+            res += seen[x / y]
         seen[y] += 1
-    
+
     return res
+
 
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:

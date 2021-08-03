@@ -5,7 +5,7 @@ class Solution:
         triplets = self.count_triplets(sq1, nums2)
         triplets += self.count_triplets(sq2, nums1)
         return triplets
-    
+
     def count_triplets(self, sqs: List[int], nums: List[int]) -> int:
         pairs = defaultdict(int)
         triplets = 0
@@ -13,5 +13,5 @@ class Solution:
             if n in pairs:
                 triplets += pairs[n]
             for k in sqs:
-                pairs[k/n] += sqs[k]
+                pairs[k / n] += sqs[k]
         return triplets

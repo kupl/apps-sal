@@ -1,12 +1,12 @@
 class Solution:
     def minCost(self, S: str, B: List[int]) -> int:
         def if_continues_char(ind):
-            return S[ind] == S[ind+1]
+            return S[ind] == S[ind + 1]
 
         def consecutive_char(ind):
             consecutive_cost = B[ind]
             min_cost = B[ind]
-            while ind < len(S) - 1 and S[ind] == S[ind+1]:
+            while ind < len(S) - 1 and S[ind] == S[ind + 1]:
                 ind += 1
                 consecutive_cost += B[ind]
                 min_cost = max(min_cost, B[ind])

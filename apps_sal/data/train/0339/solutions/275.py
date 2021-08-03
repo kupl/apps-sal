@@ -2,11 +2,10 @@ class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         ret1 = self.check(nums1, nums2)
         ret2 = self.check(nums2, nums1)
-        
+
         return (ret1 + ret2)
 
-
-    def check(self, n1 :List[int], n2 :List[int]):
+    def check(self, n1: List[int], n2: List[int]):
         count_n2_org = Counter(n2)
         cnt = 0
 
@@ -21,7 +20,5 @@ class Solution:
                     if (count_n2[target] > 0):
                         count_n2[n2[j]] -= 1
                         cnt += count_n2[target]
-        
-        
-        return cnt
 
+        return cnt

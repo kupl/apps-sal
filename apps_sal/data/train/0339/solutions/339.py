@@ -6,7 +6,7 @@ class Solution:
                 m = collections.defaultdict(int)
                 for num2 in n2s:
                     if num1**2 % num2 == 0:
-                        answer += m[num1**2//num2]
+                        answer += m[num1**2 // num2]
                     m[num2] += 1
             return answer
-        return solve(nums1, nums2)+solve(nums2,nums1)
+        return solve(nums1, nums2) + solve(nums2, nums1)

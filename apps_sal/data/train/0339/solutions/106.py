@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         product_set1, product_set2 = defaultdict(int), defaultdict(int)
@@ -14,7 +16,7 @@ class Solution:
             for i in range(len(nums)):
                 for j in range(i + 1, len(nums)):
                     s[nums[i] * nums[j]] += 1
-                    
+
         ans = 0
         # print(product_set1, product_set2)
         for n in range(2):

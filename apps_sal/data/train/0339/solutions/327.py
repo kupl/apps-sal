@@ -1,4 +1,6 @@
 from itertools import combinations
+
+
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         sq1, sq2 = [num ** 2 for num in nums1], [num ** 2 for num in nums2]

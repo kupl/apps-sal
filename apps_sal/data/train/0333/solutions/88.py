@@ -12,10 +12,10 @@ class Solution:
                 graph[arr[i]] = [i]
 
         curs = [0]  # store layers from start
-        visited = {0, n-1}
+        visited = {0, n - 1}
         step = 0
 
-        other = [n-1] # store layers from end
+        other = [n - 1]  # store layers from end
 
         # when current layer exists
         while curs:
@@ -36,10 +36,10 @@ class Solution:
                         nex.append(child)
 
                 # clear the list to prevent redundant search
-                #graph[arr[node]].clear()
+                # graph[arr[node]].clear()
 
                 # check neighbors
-                for child in [node-1, node+1]:
+                for child in [node - 1, node + 1]:
                     if child in other:
                         return step + 1
                     if 0 <= child < len(arr) and child not in visited:

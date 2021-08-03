@@ -1,6 +1,6 @@
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        
+
         count1 = Counter(nums1)
         count2 = Counter(nums2)
         nums1 = sorted(count1.keys())
@@ -20,5 +20,3 @@ class Solution:
                         else:
                             tot += c1[a] * c2[b] * c2[s // b]
         return tot
-                    
-

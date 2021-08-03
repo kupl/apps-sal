@@ -1,9 +1,11 @@
 from collections import defaultdict, deque
+
+
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
         node_h = defaultdict(list)
         graph = defaultdict(set)
-        
+
         # Constructring graph based on these rules
         # i + 1 where: i + 1 < arr.length.
         # i - 1 where: i - 1 >= 0.
@@ -23,7 +25,7 @@ class Solution:
         visited = set()
         q.append((0, 0))
         visited.add(0)
-        
+
         while (q):
             node, level = q.popleft()
             if node == len(arr) - 1:
@@ -38,14 +40,12 @@ class Solution:
                 if nbr >= 0 and nbr < len(arr) and nbr not in visited:
                     q.append((nbr, level + 1))
                     visited.add(nbr)
-            node_h[arr[node]] = [] # [BUG] Clearing this is crucial otherwise we might revisit the node again, causing TLE 
-            
+            node_h[arr[node]] = []  # [BUG] Clearing this is crucial otherwise we might revisit the node again, causing TLE
+
         return 0
-        
+
 # [NOTE] First attempt failed with large input of same numbers with just the last number different :)
 # https://leetcode.com/submissions/detail/397710738/testcase/
 
 # Clearing up the processed node list helped with TLE better explanation here
 # https://leetcode.com/problems/jump-game-iv/discuss/502699/JavaC++-BFS-Solution-Clean-code-O(N)/445620
-
-

@@ -14,4 +14,3 @@ class Solution:
                 ans += tmp_cost - max_cost
             l = r
         return ans
-
