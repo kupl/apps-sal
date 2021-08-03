@@ -4,9 +4,9 @@ def min_sum(l):
     forward = iter(l)
     length = len(l)
     result = 0
-    for i, (f,b) in enumerate(zip(forward, backward)):
-        if i < length/2:
-            print(f,b)
-            result += f*b
-            
+    for i, (f, b) in enumerate(zip(forward, backward)):
+        if i < length / 2:
+            print(f, b)
+            result += f * b
+
     return result

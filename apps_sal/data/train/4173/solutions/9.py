@@ -1,13 +1,13 @@
 def ant(grid, col, row, n, direction=0):
     for count in range(n):
         if grid[row][col] == 1:
-            direction = (direction + 1)%4
+            direction = (direction + 1) % 4
         else:
-            direction = (direction - 1)%4
-        
+            direction = (direction - 1) % 4
+
         grid[row][col] = int(not grid[row][col])
         if direction == 0:
-            row -= 1 
+            row -= 1
             if row < 0:
                 row = 0
                 grid.insert(0, [0 for i in range(len(grid[0]))])
@@ -25,5 +25,3 @@ def ant(grid, col, row, n, direction=0):
                 col = 0
                 grid = [[0] + row for row in grid]
     return grid
-    
-

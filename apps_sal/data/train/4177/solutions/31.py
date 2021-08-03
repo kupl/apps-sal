@@ -1,8 +1,8 @@
 def men_from_boys(arr):
-    a=[]
-    b=[]
+    a = []
+    b = []
     for x in arr:
-        if x%2==0:
+        if x % 2 == 0:
             if x not in a:
                 a.append(x)
             else:
@@ -11,4 +11,4 @@ def men_from_boys(arr):
             b.append(x)
         else:
             continue
-    return sorted(a)+list(reversed(sorted(b[::-1])))
+    return sorted(a) + list(reversed(sorted(b[::-1])))

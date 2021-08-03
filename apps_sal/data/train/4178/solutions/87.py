@@ -4,5 +4,3 @@ def min_sum(arr):
     while arr:
         result += arr.pop() * arr.pop(0)
     return result
-
-

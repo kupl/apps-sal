@@ -7,6 +7,3 @@ def men_from_boys(arr):
         else:
             odd.append(i)
     return even + odd[::-1]
-    
-    
-

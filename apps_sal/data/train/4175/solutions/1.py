@@ -1,1 +1,1 @@
-repeater=str.__mul__
+repeater = str.__mul__

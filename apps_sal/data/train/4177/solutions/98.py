@@ -17,11 +17,9 @@ def men_from_boys(arr):
     for number in even_arr:
         if number not in result:
             result.append(number)
-        
 
     for number in odd_arr:
         if number not in result:
             result.append(number)
-        
 
     return result

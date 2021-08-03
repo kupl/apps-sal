@@ -1,6 +1,6 @@
 def repeater(string, n):
-    copy=''
+    copy = ''
     for a in range(n):
-        copy+=string
-        
-    return copy    
+        copy += string
+
+    return copy

@@ -20,16 +20,19 @@ class Stack:
 
 def solve(s):
     l = len(s)
-    if l % 2 != 0: return -1
-    stack = Stack(); count = 0; i = 0
+    if l % 2 != 0:
+        return -1
+    stack = Stack()
+    count = 0
+    i = 0
     while i < len(s):
         if s[i] == "(":
             stack.push(s[i])
         else:
             if stack.is_empty():
                 count += 1
-            else: stack.pop()
+            else:
+                stack.pop()
         i += 1
-    q = (count + stack.size())//2
+    q = (count + stack.size()) // 2
     return q if count % 2 == 0 and stack.size() % 2 == 0 else q + 1
-

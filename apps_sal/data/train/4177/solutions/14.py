@@ -1,8 +1,8 @@
 def men_from_boys(arr):
-    L=[]
-    L1=[]
+    L = []
+    L1 = []
     for i in arr:
-        if i%2==0:
+        if i % 2 == 0:
             if i not in L:
                 L.append(i)
         else:
@@ -10,5 +10,5 @@ def men_from_boys(arr):
                 L1.append(i)
     L.sort()
     L1.sort()
-    L1=L1[::-1]
-    return L+L1
+    L1 = L1[::-1]
+    return L + L1

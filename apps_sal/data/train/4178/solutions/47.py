@@ -5,4 +5,3 @@ def min_sum(arr):
     for x in range(len(arr) // 2):
         sum += a[x] * b[x]
     return sum
-

@@ -1,3 +1,5 @@
 def repeater(string, n):
-    return string * n 
-repeater('yo',3)
+    return string * n
+
+
+repeater('yo', 3)

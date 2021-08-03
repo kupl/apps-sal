@@ -1,9 +1,9 @@
 def men_from_boys(arr):
     even = []
     odd = []
-    
+
     for a in arr:
-        if a%2 == 0:
+        if a % 2 == 0:
             if a not in even:
                 even.append(a)
         else:

@@ -1,4 +1,4 @@
-def cake(candles,debris):
+def cake(candles, debris):
     ASCII = {'a': 97, 'b': 98, 'c': 99, 'd': 100, 'e': 101,
              'f': 102, 'g': 103, 'h': 104, 'i': 105, 'j': 106,
              'k': 107, 'l': 108, 'm': 109, 'n': 110, 'o': 111,

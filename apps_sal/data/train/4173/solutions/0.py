@@ -3,6 +3,7 @@ WHITE = 1
 # N, E, S, W
 CARDINALS = [(-1, 0), (0, 1), (1, 0), (0, -1)]
 
+
 def ant(grid, column, row, n, direction=0):
     r, c, d = row, column, direction
     for _ in range(n):

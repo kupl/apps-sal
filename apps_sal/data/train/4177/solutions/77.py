@@ -2,7 +2,7 @@ def men_from_boys(arr):
     m = []
     b = []
     for i in arr:
-        if i%2==0:
+        if i % 2 == 0:
             if i not in m:
                 m.append(i)
         else:

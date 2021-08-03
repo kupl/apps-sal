@@ -1,3 +1,2 @@
-import operator 
+import operator
 repeater = operator.mul
-
