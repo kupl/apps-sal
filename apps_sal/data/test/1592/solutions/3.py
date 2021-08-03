@@ -5,5 +5,6 @@ for i in range(n):
     s -= min(s, t - p)
     p = t
     s += c
-    if s > ans: ans = s
+    if s > ans:
+        ans = s
 print(p + s, ans)

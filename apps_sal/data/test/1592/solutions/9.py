@@ -1,5 +1,7 @@
-r = lambda: int(input())
-ra = lambda: [*list(map(int, input().split()))]
+def r(): return int(input())
+def ra(): return [*list(map(int, input().split()))]
+
+
 a = []
 t, q, mq, s = 0, 0, 0, 0
 n = r()

@@ -20,7 +20,8 @@ def main():
                 print("Yes")
                 l1 = servers[i:i + kj]
                 l2 = servers[i + kj:]
-                if j: l1, l2 = l2, l1
+                if j:
+                    l1, l2 = l2, l1
                 print(len(l1), len(l2))
                 print(" ".join(str(d[0]) for d in l1))
                 print(" ".join(str(d[0]) for d in l2))
