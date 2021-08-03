@@ -17,4 +17,3 @@ class Solution:
                 ones += 1
 
         return dp
-

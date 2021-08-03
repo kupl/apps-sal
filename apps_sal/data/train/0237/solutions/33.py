@@ -5,5 +5,5 @@ class Solution:
         res = 0
         for i in A:
             res += hm[i]
-            hm[i+S] += 1
+            hm[i + S] += 1
         return res

@@ -1,11 +1,11 @@
 class Solution:
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         cumsum = 0
-        dic = {0:[-1]}
+        dic = {0: [-1]}
         ans = 0
-        for i,num in enumerate(A):
+        for i, num in enumerate(A):
             cumsum += num
-            dic[cumsum] = dic.get(cumsum,[]) + [i]
-            ans += len(dic.get(cumsum-S,[]))
-            #print(ans,dic)
+            dic[cumsum] = dic.get(cumsum, []) + [i]
+            ans += len(dic.get(cumsum - S, []))
+            # print(ans,dic)
         return ans - (0 if S else len(A))

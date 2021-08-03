@@ -7,4 +7,3 @@ class Solution:
             res += c[psum - S]
             c[psum] += 1
         return res
-

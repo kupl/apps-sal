@@ -10,4 +10,3 @@ class Solution:
                 cnt_label[lab] = cnt_label.get(lab, 0) + 1
                 res += val
         return res
-

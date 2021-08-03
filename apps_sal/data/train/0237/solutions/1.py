@@ -21,7 +21,7 @@ class Solution:
             while l < r and A[l] == 0:
                 l += 1
                 cnt1 += 1
-            while r < size and  A[r] == 0:
+            while r < size and A[r] == 0:
                 r += 1
                 cnt2 += 1
             cnt += cnt1 * cnt2
@@ -32,5 +32,4 @@ class Solution:
             while l < size and A[l] == 0:
                 cnt += 1
                 l += 1
-        return cnt 
-
+        return cnt

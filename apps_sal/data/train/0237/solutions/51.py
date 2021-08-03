@@ -13,9 +13,3 @@ class Solution:
                 left += 1
             result += count
         return result
-            
-                
-                    
-            
-            
-

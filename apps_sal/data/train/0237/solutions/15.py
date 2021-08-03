@@ -8,7 +8,7 @@ class Solution:
                 oneIndices.append(i)
             if len(oneIndices) >= S + 1:
                 if S == 0:
-                    ans += (i - oneIndices[-S-1])
+                    ans += (i - oneIndices[-S - 1])
                 else:
-                    ans += (oneIndices[-S] - oneIndices[-S-1])
+                    ans += (oneIndices[-S] - oneIndices[-S - 1])
         return ans

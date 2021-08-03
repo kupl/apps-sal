@@ -3,7 +3,7 @@ class Solution:
         heap = []
         for v, l in zip(values, labels):
             heapq.heappush(heap, (-v, l))
-        
+
         count = collections.Counter()
         res = []
         while heap and len(res) < num_wanted:
@@ -12,5 +12,3 @@ class Solution:
                 res.append(v)
                 count[l] += 1
         return -sum(res)
-        
-
