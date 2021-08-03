@@ -4,8 +4,7 @@ class Solution:
         if low < 0 or high > 10**9:
             return
         else:
-            if (low%2 == 0 and high%2 ==0):
-                return int((high-low)/2)
+            if (low % 2 == 0 and high % 2 == 0):
+                return int((high - low) / 2)
             else:
-                return int((high-low)/2)+1                
-
+                return int((high - low) / 2) + 1

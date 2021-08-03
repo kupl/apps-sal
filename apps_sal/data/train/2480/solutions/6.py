@@ -5,6 +5,5 @@ class Solution:
         for pos in position:
             odd = odd + 1 if pos % 2 else odd
             even = even + 1 if not pos % 2 else even
-        
-        return min(odd, even)
 
+        return min(odd, even)

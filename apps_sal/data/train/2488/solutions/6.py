@@ -4,6 +4,6 @@ class Solution:
         track = 0
         for num in nums:
             count = 0
-            if len(str(num)) % 2 ==0:
+            if len(str(num)) % 2 == 0:
                 track += 1
         return track

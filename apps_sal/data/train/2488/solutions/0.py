@@ -1,5 +1,5 @@
 class Solution:
-  
+
     def findNumbers(self, nums: List[int]) -> int:
         def has_even_digits(number: int):
             if number < 10:
@@ -15,4 +15,3 @@ class Solution:
             return True
 
         return sum([1 for num in nums if has_even_digits(num)])
-

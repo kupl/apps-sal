@@ -3,6 +3,3 @@ class Solution:
         c = Counter(arr)
         freq = list(c.values())
         return len(freq) == len(set(freq))
-        
-        
-
