@@ -19,6 +19,4 @@ class Solution:
                     ans = max(ans, j - i + 1)
                 else:
                     ans = max(ans, negatives[1] - i, j - negatives[0])
-        return ans             
-                        
-
+        return ans

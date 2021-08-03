@@ -7,6 +7,7 @@ class Solution:
                 return 0
             return 1
         nums = list(map(sgn, nums))
+
         def get_ans(start, end):
             # find ans of nums[start: end]
             # nums[start: end] doesn't contain 0
@@ -16,7 +17,7 @@ class Solution:
             if negative & 1 ^ 1:
                 return result
             return result - min(arr.index(-1), arr[::-1].index(-1)) - 1
-        
+
         nums.append(0)
         size = len(nums)
         pair = [0]

@@ -14,10 +14,9 @@ class Solution:
                 neg += 1
                 if neg == 1:
                     negIndex = i
-                
+
             if neg % 2 == 0:
                 res = max(res, pos + neg)
             else:
                 res = max(res, i - negIndex)
-        return res 
-
+        return res

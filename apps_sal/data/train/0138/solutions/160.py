@@ -9,6 +9,7 @@ class Solution:
             else:
                 temp += [nums[i]]
         subarrays.append(temp.copy())
+
         def util(a):
             p = 1
             for i in a:

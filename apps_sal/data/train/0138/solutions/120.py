@@ -14,13 +14,13 @@ class Solution:
                 if nums[i] < 0:
                     neg += 1
                 neg_list.append(neg)
-                neg = 0                                
+                neg = 0
             elif nums[i] < 0:
                 neg += 1
                 temp.append(nums[i])
             elif nums[i] > 0:
                 temp.append(nums[i])
-        _max  = 0
+        _max = 0
 
         for i in range(len(non_zero_list)):
             if neg_list[i] % 2 == 0:
@@ -31,17 +31,16 @@ class Solution:
                 temp2 = 0
                 for j in range(len(non_zero_list[i])):
                     if non_zero_list[i][j] < 0:
-                        temp1 =len(non_zero_list[i]) - j - 1
+                        temp1 = len(non_zero_list[i]) - j - 1
                         #print(j, temp1)
                         temp1 = max(temp1, j)
                         break
-                for j in range(len(non_zero_list[i])-1, -1, -1):
-                     if non_zero_list[i][j] < 0:
-                        temp2 =len(non_zero_list[i]) - j - 1
-                        #print(j,temp2)
-                        temp2 = max(temp2, j )
+                for j in range(len(non_zero_list[i]) - 1, -1, -1):
+                    if non_zero_list[i][j] < 0:
+                        temp2 = len(non_zero_list[i]) - j - 1
+                        # print(j,temp2)
+                        temp2 = max(temp2, j)
                         break
                 if max(temp1, temp2) > _max:
-                    _max = max(temp1,temp2)
+                    _max = max(temp1, temp2)
         return _max
-

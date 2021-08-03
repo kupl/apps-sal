@@ -17,4 +17,3 @@ class Solution:
             else:
                 ret = max(ret, i - zeroPos)
         return ret
-

@@ -26,4 +26,3 @@ class Solution:
             if first_neg >= start:
                 best = max(best, n - first_neg - 1, last_neg - start)
         return best
-

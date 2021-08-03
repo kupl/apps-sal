@@ -13,9 +13,8 @@ class Solution:
             try:
                 idx = nums.index(-1)
                 ans = max(_getMaxLen(nums[:idx]), ans)
-                nums = nums[idx+1:]
+                nums = nums[idx + 1:]
             except:
                 ans = max(ans, _getMaxLen(nums))
                 break
         return ans
-

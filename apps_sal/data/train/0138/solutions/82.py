@@ -9,10 +9,9 @@ class Solution:
         for n in nums:
             a = mini * n
             b = maxi * n
-            mini = min(a,b,n)
-            maxi = max(a,b,n)
+            mini = min(a, b, n)
+            maxi = max(a, b, n)
             res = max(res, maxi)
         if res <= 0:
             return 0
         return int(math.log2(res))
-

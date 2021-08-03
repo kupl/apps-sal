@@ -5,9 +5,9 @@ class Solution:
         best = pos
         for i in nums[1:]:
             if i > 0:
-                pos+= 1
-                if neg > 0:                
-                    neg += 1    
+                pos += 1
+                if neg > 0:
+                    neg += 1
                 else:
                     neg = 0
             elif i < 0:
@@ -18,6 +18,6 @@ class Solution:
                     pos = 0
                 neg = pTemp + 1
             else:
-                pos,neg = 0,0
+                pos, neg = 0, 0
             best = max(best, pos)
         return best

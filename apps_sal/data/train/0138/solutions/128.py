@@ -4,7 +4,7 @@ class Solution:
         curr_neg = 0
         curr_pos = 0
         neg_flag = False
-        
+
         for num in nums:
             if num == 0:
                 # global_max = max(global_max, local_max)
@@ -23,7 +23,7 @@ class Solution:
                 global_max = max(global_max, curr_neg)
             else:
                 global_max = max(global_max, curr_pos)
-        
+
         curr_neg = 0
         curr_pos = 0
         neg_flag = False
@@ -45,5 +45,5 @@ class Solution:
                 global_max = max(global_max, curr_neg)
             else:
                 global_max = max(global_max, curr_pos)
-        
+
         return global_max

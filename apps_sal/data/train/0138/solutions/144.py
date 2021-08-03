@@ -9,16 +9,17 @@ class Solution:
             #nextleft = left
             while right < len(nums):
                 s *= sign(nums[right])
-                if s > 0: ans = max(ans, right - left + 1)
+                if s > 0:
+                    ans = max(ans, right - left + 1)
                 elif s == 0:
                     #nextleft = right
                     break
                 right += 1
-            
-            if nums[left]>0:
-                while left < len(nums) and nums[left]>0:
+
+            if nums[left] > 0:
+                while left < len(nums) and nums[left] > 0:
                     left += 1
-            else: left += 1
-                
-        
+            else:
+                left += 1
+
         return ans

@@ -12,5 +12,5 @@ class Solution:
                 else:
                     maxi = max(maxi, index - first_neg)
                     first_neg = min(first_neg, index)
-        
+
         return maxi

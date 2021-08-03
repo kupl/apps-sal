@@ -7,12 +7,12 @@ class Solution:
             if i != len(nums) and nums[i] != 0:
                 p *= 1 if nums[i] > 0 else -1
                 if p > 0:
-                    ret = max(ret, i-l+1)
+                    ret = max(ret, i - l + 1)
             else:
                 while l < i:
                     p *= 1 if nums[l] > 0 else -1
                     if p > 0:
-                        ret = max(ret, i-l-1)
+                        ret = max(ret, i - l - 1)
                     l += 1
                 l += 1
                 p = 1

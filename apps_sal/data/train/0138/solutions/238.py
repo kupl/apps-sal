@@ -1,37 +1,36 @@
 
 
-# dp[i][0] : max length of subarray ending with index i With positive product   
-# dp[i][1] : max length of subarray ending with index i With negative product 
+# dp[i][0] : max length of subarray ending with index i With positive product
+# dp[i][1] : max length of subarray ending with index i With negative product
 
 
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
-        dp = [[0,0] for _ in range(len(nums))]
+        dp = [[0, 0] for _ in range(len(nums))]
         res = 0
         if nums[0] > 0:
             dp[0][0] = 1
         elif nums[0] < 0:
             dp[0][1] = 1
-        #print(dp)
+        # print(dp)
         res = max(res, dp[0][0])
         for idx in range(1, len(nums)):
             if nums[idx] == 0:
                 dp[idx][0], dp[idx][1] = 0, 0
             elif nums[idx] > 0:
-                dp[idx][0] = dp[idx-1][0] + 1
-                if dp[idx-1][1] > 0:
-                    dp[idx][1] = dp[idx-1][1] + 1
+                dp[idx][0] = dp[idx - 1][0] + 1
+                if dp[idx - 1][1] > 0:
+                    dp[idx][1] = dp[idx - 1][1] + 1
                 res = max(dp[idx][0], res)
-            
-            elif nums[idx] < 0:
-                dp[idx][1] = dp[idx-1][0]+1
-                if dp[idx-1][1] > 0:
-                    dp[idx][0] = dp[idx-1][1]+1
-                res = max(res, dp[idx][0])
-                
-        #print(dp)
-        return res
 
+            elif nums[idx] < 0:
+                dp[idx][1] = dp[idx - 1][0] + 1
+                if dp[idx - 1][1] > 0:
+                    dp[idx][0] = dp[idx - 1][1] + 1
+                res = max(res, dp[idx][0])
+
+        # print(dp)
+        return res
 
 
 '''
@@ -70,7 +69,7 @@ class Solution:
         return res
 '''
 
-        
+
 '''
         diction = {}
         diction[\"pos\"], diction[\"neg\"] = 0, 0
@@ -96,4 +95,3 @@ class Solution:
         
 
 '''
-

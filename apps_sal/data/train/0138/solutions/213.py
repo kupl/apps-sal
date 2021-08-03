@@ -16,7 +16,7 @@ class Solution:
                 neg += 1 if neg else 0
             else:
                 orig_pos = pos
-                pos = neg+1 if neg else 0
+                pos = neg + 1 if neg else 0
                 neg = (orig_pos + 1) if orig_pos else 1
             answer = max(answer, pos)
         return answer

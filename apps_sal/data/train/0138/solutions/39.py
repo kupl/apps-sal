@@ -11,13 +11,11 @@ class Solution:
                     break
                 elif nums[i] < 0:
                     stack.append(i)
-                i+=1
+                i += 1
             if len(stack) % 2 == 0:
                 ret = i - start
             else:
-                ret = max(i-1-stack[0],stack[-1]-start)
-            
-            return max(ret,dfs(i+1))
-        return dfs(0)
-                    
+                ret = max(i - 1 - stack[0], stack[-1] - start)
 
+            return max(ret, dfs(i + 1))
+        return dfs(0)

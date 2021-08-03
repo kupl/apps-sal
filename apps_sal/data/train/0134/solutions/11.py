@@ -2,6 +2,7 @@ class Solution:
     def numDupDigitsAtMostN(self, N: int) -> int:
         list_N = list(map(int, str(N + 1)))
         solution = 0
+
         def permutation(m, n):
             return 1 if n == 0 else permutation(m, n - 1) * (m - n + 1)
         for i in range(1, len(list_N)):

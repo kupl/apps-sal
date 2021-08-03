@@ -5,7 +5,7 @@ class Solution:
         ln = -1
         cn = 0
         res = 0
-        
+
         for i, v in enumerate(nums):
             if v == 0:
                 end = i - 1

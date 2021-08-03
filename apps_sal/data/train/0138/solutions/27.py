@@ -31,4 +31,3 @@ class Solution:
                     p = 0
         longest_p = max(longest_p, p)
         return longest_p
-

@@ -15,11 +15,10 @@ class Solution:
                 elif not n:
                     p = 0
                 if p > 0:
-                    m = max(m, i-k)
+                    m = max(m, i - k)
                 elif p < 0:
                     if j is None:
                         j = i
                     else:
-                        m = max(m, i-j)
+                        m = max(m, i - j)
         return m
-

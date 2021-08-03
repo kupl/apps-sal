@@ -22,4 +22,3 @@ class Solution:
 #           print(f'num, max_length = {num}, {max_length}')
         max_length = max(max_length, pos_length)
         return max_length
-

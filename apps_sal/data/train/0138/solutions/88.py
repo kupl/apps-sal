@@ -3,11 +3,13 @@ class Solution:
         trip_zeros = []
         for num in nums:
             if num:
-                if trip_zeros: trip_zeros[-1].append(num)
-                else: trip_zeros.append([num])
+                if trip_zeros:
+                    trip_zeros[-1].append(num)
+                else:
+                    trip_zeros.append([num])
             else:
                 trip_zeros.append([])
-        
+
         def count(arr):
             start = ans = 0
             left_neg = None
@@ -19,12 +21,12 @@ class Solution:
                     pos ^= 1
                 print(pos, start, end, left_neg)
                 if pos:
-                    ans = max(ans, end-start+1)
-                    
+                    ans = max(ans, end - start + 1)
+
                 else:
-                    ans = max(ans, end-left_neg)
+                    ans = max(ans, end - left_neg)
             return ans
-        
+
         # print(trip_zeros)
         # if not trip_zeros: return 0
         return max(map(count, trip_zeros))

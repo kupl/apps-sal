@@ -18,7 +18,7 @@ class Solution:
                 else:
                     ans = max(ans, i - left_neg)
                     # print(\"hehe\", ans, num, cp, left_neg)
-                
+
                 if cp < 0 and left_neg == sys.maxsize:
                     left_neg = i
         return ans

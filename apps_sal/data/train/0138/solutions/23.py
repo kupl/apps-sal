@@ -21,6 +21,5 @@ class Solution:
             else:
                 dist = 0
             max_len = max(len(l) - dist, max_len)
-        
-        return max_len
 
+        return max_len

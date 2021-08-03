@@ -15,4 +15,3 @@ class Solution:
                     break
                 j += 1
         return dp[-1]
-

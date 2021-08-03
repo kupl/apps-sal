@@ -21,6 +21,3 @@ class Solution:
             dp.appendleft(cnt % MOD)
             dp.pop()
         return dp[0]
-                    
-                
-

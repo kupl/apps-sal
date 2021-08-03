@@ -5,28 +5,27 @@ class Solution:
         lo, hi = 0, -1
         for i, num in enumerate(nums):
             if num == 0:
-                lo = i+1
+                lo = i + 1
                 neg = 0
             elif num < 0:
                 neg += 1
             hi = i
             if neg % 2 == 0:
-                #print(lo,hi)
+                # print(lo,hi)
                 ans = max(ans, hi - lo + 1)
-                
+
         neg = 0
         nums = nums[::-1]
         lo, hi = 0, -1
         for i, num in enumerate(nums):
             if num == 0:
-                lo = i+1
+                lo = i + 1
                 neg = 0
             elif num < 0:
                 neg += 1
             hi = i
             if neg % 2 == 0:
-                #print(lo,hi)
-                ans = max(ans, hi - lo + 1)        
+                # print(lo,hi)
+                ans = max(ans, hi - lo + 1)
 
-        return ans         
-
+        return ans

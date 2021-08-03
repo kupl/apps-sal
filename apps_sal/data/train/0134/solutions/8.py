@@ -1,4 +1,6 @@
 from functools import lru_cache
+
+
 class Solution:
     def numDupDigitsAtMostN(self, N: int) -> int:
         @lru_cache(None)
@@ -34,6 +36,5 @@ class Solution:
                         res += dfs(state | (1 << int(str(x)[0])) + 1, x % 10 ** (n - 1), True)
             # print(bin(state), x, lz, res)
             return res
-        
-        return N - dfs(0, N)
 
+        return N - dfs(0, N)

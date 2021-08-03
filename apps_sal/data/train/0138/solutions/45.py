@@ -1,6 +1,6 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
-        dp = [[0 for i in range(2)]  for j in  range(len(nums) + 1)]
+        dp = [[0 for i in range(2)] for j in range(len(nums) + 1)]
         res = 0
         for i, num in enumerate(nums):
             if num == 0:

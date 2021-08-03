@@ -9,15 +9,15 @@ class Solution:
         for i, n in enumerate(nums):
             if n > 0:
                 currLength += 1
-                if negCnt%2 == 0:
+                if negCnt % 2 == 0:
                     maxLength = max(maxLength, currLength)
             elif n < 0:
                 currLength += 1
                 negCnt += 1
                 negIdxs.append(i)
-                if negCnt%2 == 0:
+                if negCnt % 2 == 0:
                     maxLength = max(maxLength, currLength)
-            if n == 0 or i == len(nums) - 1: # end or 0
+            if n == 0 or i == len(nums) - 1:  # end or 0
                 # head and tail?
                 if negIdxs:
                     tail = i if n > 0 else i - 1
@@ -29,7 +29,7 @@ class Solution:
                 negIdxs = []
                 head = i + 1
         return maxLength
-        
+
         # negIdx = []
         # zeroIdx = []
         # for i, n in enumerate(nums):
@@ -41,6 +41,5 @@ class Solution:
         #     if len(zeroIdx) == 0:
         #         return len(nums)
         #     else:
-        #         for 
+        #         for
         # else:
-

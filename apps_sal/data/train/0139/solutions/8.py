@@ -12,4 +12,4 @@ class Solution:
                 for i in range(1, m):
                     if A[i][j] > A[i - 1][j] and first[i] == -1:
                         first[i] = j
-        return res        
+        return res

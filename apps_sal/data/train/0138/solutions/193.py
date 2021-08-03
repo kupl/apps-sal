@@ -4,9 +4,9 @@ class Solution:
         pos = [0 for _ in range(n)]
         neg = [0 for _ in range(n)]
         if nums[0] > 0:
-            pos[0] = 1 
+            pos[0] = 1
         if nums[0] < 0:
-            neg[0] = 1 
+            neg[0] = 1
         res = pos[0]
         for i in range(1, n):
             if nums[i] > 0:

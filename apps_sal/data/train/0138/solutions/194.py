@@ -16,7 +16,7 @@ class Solution:
                 sums = -1
             elif sums * nums[i] > 0:
                 sums = 1
-            
+
             if nums[i] == 0:
                 positive_index = i
                 negative_index = -1

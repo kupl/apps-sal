@@ -20,10 +20,6 @@ class Solution:
                 res = max(res, (i - start) + 1)
             else:
 
-                res = max(res, (lnegpos ) - start, i - (fnegpos ))
+                res = max(res, (lnegpos) - start, i - (fnegpos))
             i += 1
         return res
-                
-                
-    
-

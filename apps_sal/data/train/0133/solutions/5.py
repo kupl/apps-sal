@@ -1,5 +1,7 @@
 from sys import maxsize
 from collections import Counter
+
+
 class Solution:
     def balancedString(self, s):
         n = len(s)
@@ -13,4 +15,4 @@ class Solution:
             if all(chars[c] <= n // 4 for c in 'QWER'):
                 res = min(res, right - left)
             chars[s[left]] += 1
-        return res      
+        return res
