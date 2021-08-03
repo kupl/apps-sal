@@ -20,7 +20,7 @@ def fk(s: str):
     ini = 1
     for i in range(s):
         res += str(ini)
-        ini = 1-ini
+        ini = 1 - ini
     for i in range(s):
         print(res)
 
@@ -30,4 +30,3 @@ n = int(n)
 t = [fk(eval(input())) for i in range(n)]
 
 # fk(3)
-

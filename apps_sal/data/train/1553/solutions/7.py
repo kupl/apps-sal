@@ -1,20 +1,19 @@
 from numpy import *
 
-m,n=list(map(int, input().split()))
-trees=array([[None]*n]*m)
+m, n = list(map(int, input().split()))
+trees = array([[None] * n] * m)
 for i in range(m):
- trees[i]=list(map(int, input().split()))
+    trees[i] = list(map(int, input().split()))
 
-c=int(input())
-result=[]
+c = int(input())
+result = []
 for _ in range(c):
- ans=0
- x1,y1,x2,y2=list(map(int , input().split()))
- for i in range(x1-1,x2):
-  for j in range(y1-1,y2):
-   ans+=trees[i,j]
- result.append(ans)
+    ans = 0
+    x1, y1, x2, y2 = list(map(int, input().split()))
+    for i in range(x1 - 1, x2):
+        for j in range(y1 - 1, y2):
+            ans += trees[i, j]
+    result.append(ans)
 
 for i in result:
- print(i)
-
+    print(i)
