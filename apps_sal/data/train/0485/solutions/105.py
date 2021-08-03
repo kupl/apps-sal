@@ -13,4 +13,3 @@ class Solution:
             A_bitrep >>= 1
 
         return num_flips if A_bitrep == K_bitrep else -1
-

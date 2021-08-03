@@ -4,10 +4,10 @@ class Solution:
             return 0
         if arrLen == 1:
             return 1
-        
-        start = [1, 1] + ([0] * (min(steps, arrLen)-2))
-        return self.numWaysHelper(steps-1, start)
-        
+
+        start = [1, 1] + ([0] * (min(steps, arrLen) - 2))
+        return self.numWaysHelper(steps - 1, start)
+
     # Assumes len(start) > 1
     def numWaysHelper(self, steps, start):
         if steps == 0:
@@ -15,9 +15,9 @@ class Solution:
 
         n = [0] * len(start)
         n[0] = start[0] + start[1]
-        n[len(start) - 1] = start[len(start)-1] + start[len(start)-2]
-        
+        n[len(start) - 1] = start[len(start) - 1] + start[len(start) - 2]
+
         for i in range(1, len(start) - 1):
-            n[i] = (start[i-1] + start[i] + start[i+1])
-        
-        return self.numWaysHelper(steps-1, n)
+            n[i] = (start[i - 1] + start[i] + start[i + 1])
+
+        return self.numWaysHelper(steps - 1, n)

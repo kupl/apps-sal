@@ -11,6 +11,7 @@ class Solution:
                         return False
                 return True
             return False
+
         def nextPalind(N):
             i = N + 1
             while True:
@@ -20,8 +21,8 @@ class Solution:
                     i += 1
         if N >= 9989900:
             return 100030001
-        
-        if isPrime(N) and (str(N)==str(N)[::-1]):
+
+        if isPrime(N) and (str(N) == str(N)[::-1]):
             return N
         else:
             i = nextPalind(N)

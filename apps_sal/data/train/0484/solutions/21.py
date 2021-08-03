@@ -2,13 +2,13 @@ class Solution:
     def primePalindrome(self, N: int) -> int:
         def even_palindrome(n: int) -> int:
             return int(str(n) + str(n)[::-1])
-        
+
         def odd_palindrome(n: int) -> int:
             return int(str(n) + str(n)[::-1][1:])
-        
+
         def is_prime(n: int) -> int:
-            return n > 1 and all(n%i for i in range(2, int(n**.5)+1))
-        
+            return n > 1 and all(n % i for i in range(2, int(n**.5) + 1))
+
         odd, even = 1, 1
         while True:
             next_even = even_palindrome(even)
@@ -20,4 +20,4 @@ class Solution:
             if next_even > next_odd:
                 odd += 1
             else:
-                even += 1        
+                even += 1

@@ -11,8 +11,7 @@ class Solution:
         dp[0], dp[1] = 1, 1
         for i in range(2, steps):
             dp_new = [0] * arrLen
-            for j in range(min(i + 1,arrLen)):
+            for j in range(min(i + 1, arrLen)):
                 dp_new[j] = (dp[j - 1] if (j - 1) >= 0 else 0) + dp[j] + (dp[j + 1] if (j + 1) < arrLen else 0)
             dp = dp_new
         return (dp[0] + dp[1]) % (10**9 + 7)
-

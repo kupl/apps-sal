@@ -14,5 +14,5 @@ class Solution:
                 flipped[i] += 1
                 flipping_count += 1
                 res += 1
-                
+
         return res

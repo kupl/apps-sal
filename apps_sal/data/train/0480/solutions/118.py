@@ -4,7 +4,7 @@ class Solution:
         arrLen = min(steps, arrLen)
         dp = [0] * arrLen
         dp[0] = 1
-        
+
         for s in range(steps):
             tmp = [0] * arrLen
             for i in range(arrLen):

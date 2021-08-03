@@ -17,4 +17,3 @@ class Solution:
                 flips -= 1
 
         return result if valid else -1
-

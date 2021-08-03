@@ -6,4 +6,3 @@ class Solution:
             res = max(res, i - m)
             m = min(m, i)
         return res
-

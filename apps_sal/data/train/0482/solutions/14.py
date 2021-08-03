@@ -12,10 +12,10 @@ class Solution:
         for i in range(len(arr)):
             maxi[i][i] = arr[i]
 
-        for l in range(1,len(arr)-1):
-            for i in range(len(arr)-l):
+        for l in range(1, len(arr) - 1):
+            for i in range(len(arr) - l):
                 j = i + l
-                maxi[i][j] = max(maxi[i][j-1], maxi[i+1][j])
+                maxi[i][j] = max(maxi[i][j - 1], maxi[i + 1][j])
 
         dp = [[float('Inf') for i in range(len(arr))] for j in range(len(arr))]
         for i in range(len(arr)):
@@ -25,10 +25,10 @@ class Solution:
             for i in range(0, len(arr) - l):
                 j = i + l
                 for k in range(i, j):
-                    dp[i][j] = min(dp[i][j], (dp[i][k] if i < k else 0) + (dp[k + 1][j] if k + 1 < j else 0) + maxi[i][k] * maxi[k+1][j])
+                    dp[i][j] = min(dp[i][j], (dp[i][k] if i < k else 0) + (dp[k + 1][j] if k + 1 < j else 0) + maxi[i][k] * maxi[k + 1][j])
 
         return dp[0][len(arr) - 1]
-    
+
         '''
         Improvement 1:
         We calculate the largest leaf value for each possible subtree containing leaf i to j. 

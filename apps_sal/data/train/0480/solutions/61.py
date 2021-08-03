@@ -3,7 +3,7 @@ class Solution:
         self.arrLen = arrLen
         self.memo = {}
         return self.helper(steps, 0)
-    
+
     def helper(self, steps, pos):
         if (steps, pos) in self.memo:
             return self.memo[(steps, pos)]
@@ -16,10 +16,8 @@ class Solution:
                 return 0
         res = 0
         for x in [-1, 0, 1]:
-            ans = self.helper(steps-1, pos+x)
+            ans = self.helper(steps - 1, pos + x)
             res += ans
-            
+
         self.memo[(steps, pos)] = res % (10**9 + 7)
         return res % (10**9 + 7)
-        
-

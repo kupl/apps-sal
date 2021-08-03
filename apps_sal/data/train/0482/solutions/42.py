@@ -20,7 +20,7 @@ class Solution:
                         arr[i:k + 1]) * max(arr[k + 1:j + 1]))
 
         return dp[0][len(arr) - 1]
-    
+
     '''
     We calculate the largest leaf value for each possible subtree containing leaf i to j, denoted by max_leaf_value[i,j].
     We initialize max_leaf_value[i,i] = arr[i] and max_leaf_value[i,j] = 0 for i!=j.

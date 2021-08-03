@@ -15,7 +15,6 @@ class Solution(object):
         return res
 
 
-
 class Solution1:
     def minKBitFlips(self, A, K):
         cur, res, n = 0, 0, len(A)
@@ -41,6 +40,5 @@ class Solution1:
 #                 for k in range(K):
 #                     A[i+k] ^= 1
 #             else:
-#                 continue 
+#                 continue
 #         return cnt if 0 not in A[-K:] else -1
-

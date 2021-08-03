@@ -6,6 +6,5 @@ class Solution:
                 stack.append(i)
         for j in reversed(list(range(len(A)))):
             while stack and A[stack[-1]] <= A[j]:
-                ans = max(ans, j-stack.pop())
+                ans = max(ans, j - stack.pop())
         return ans
-

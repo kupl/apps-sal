@@ -1,6 +1,7 @@
 class Solution:
     def numWays(self, steps: int, arrLen: int) -> int:
         MOD = 10 ** 9 + 7
+
         def dp(x, s, memo):
             if s == 0:
                 if x == 0:
@@ -15,5 +16,5 @@ class Solution:
                 else:
                     memo[(x, s)] = (dp(x + 1, s - 1, memo) + dp(x - 1, s - 1, memo) + dp(x, s - 1, memo)) % MOD
             return memo[(x, s)]
-        
+
         return dp(0, steps, {})

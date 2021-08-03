@@ -10,7 +10,7 @@ class Solution(object):
         Flip A[4],A[5],A[6]: A becomes [1,1,1,1,1,0,0,0]
         Flip A[5],A[6],A[7]: A becomes [1,1,1,1,1,1,1,1]
         '''
-        #https://www.youtube.com/watch?v=tbNpHv2HDXo
+        # https://www.youtube.com/watch?v=tbNpHv2HDXo
         cur = res = 0
         for i in range(len(A)):
             if i >= K and A[i - K] == 2:
@@ -21,7 +21,6 @@ class Solution(object):
                 A[i] = 2
                 cur, res = cur + 1, res + 1
         return res
-
 
 
 class Solution1:
@@ -49,6 +48,5 @@ class Solution1:
 #                 for k in range(K):
 #                     A[i+k] ^= 1
 #             else:
-#                 continue 
+#                 continue
 #         return cnt if 0 not in A[-K:] else -1
-

@@ -9,4 +9,3 @@ class Solution:
             while flips and flips[0] <= i:
                 flips.popleft()
         return res if not flips else -1
-

@@ -16,4 +16,3 @@ class Solution:
             flip_ends.append(idx + K)
 
         return count
-

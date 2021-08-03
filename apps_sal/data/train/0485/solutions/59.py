@@ -9,10 +9,8 @@ class Solution:
             while flips and flips[0] <= i:
                 flips.popleft()
         return res if not flips else -1
-                
-        
-        
-        
+
+
 #         flips = collections.deque()
 #         res = 0
 #         for i, a in enumerate(A):
@@ -22,5 +20,3 @@ class Solution:
 #             while flips and flips[0] <= i:
 #                 flips.popleft()
 #         return res if not flips else -1
-                
-

@@ -19,4 +19,3 @@ class Solution:
             N += 1
             if 10**7 < N < 10**8:
                 N = 10**8
-

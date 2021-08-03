@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def minKBitFlips(self, A: List[int], K: int) -> int:
         s = deque()
@@ -14,5 +16,3 @@ class Solution:
                 s.append(i)
                 count += 1
         return count
-                
-

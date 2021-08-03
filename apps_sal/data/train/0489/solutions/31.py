@@ -4,7 +4,7 @@ class Solution:
         heapq.heapify(minHeap)
         maxWidth = 0
         minVal, minPos = heapq.heappop(minHeap)
-        
+
         while minHeap:
             val, pos = heapq.heappop(minHeap)
             if val >= minVal:
@@ -12,5 +12,5 @@ class Solution:
             if pos < minPos:
                 minVal = val
                 minPos = pos
-        
+
         return maxWidth

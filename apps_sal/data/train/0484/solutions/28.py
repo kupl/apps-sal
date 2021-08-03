@@ -3,15 +3,15 @@ class Solution:
         def isPrime(num):
             if num == 1:
                 return False
-            for div in range(2,int(num**0.5)+1):
-                if num%div == 0:
+            for div in range(2, int(num**0.5) + 1):
+                if num % div == 0:
                     return False
             return True
 
         def isPalindrome(num):
             num = str(num)
             left = 0
-            right = len(num)-1
+            right = len(num) - 1
             while left < right:
                 if num[left] != num[right]:
                     return False

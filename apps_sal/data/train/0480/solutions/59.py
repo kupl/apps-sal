@@ -1,6 +1,7 @@
 class Solution:
     def numWays(self, steps: int, arrLen: int) -> int:
         memo = dict()
+
         def calculateWays(steps, arrLen, index):
             if index < 0 or index >= arrLen:
                 return 0
@@ -16,7 +17,5 @@ class Solution:
                 goRight = calculateWays(steps - 1, arrLen, index + 1)
                 memo[(steps, index)] = goLeft + stay + goRight
                 return memo[(steps, index)]
-        
-            
-        return calculateWays(steps, arrLen, 0) % (10**9 + 7)
 
+        return calculateWays(steps, arrLen, 0) % (10**9 + 7)

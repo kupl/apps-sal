@@ -13,7 +13,5 @@ class Solution:
                     return -1
                 if i + K < len(flippings):
                     flippings[i + K] = True
-                
-                
-        return count
 
+        return count

@@ -17,5 +17,4 @@ class Solution:
                 f_new[j] = f_old[j - 1] + f_old[j] + f_old[j + 1]
             f_old = f_new.copy()
             f_old = [_ % (10 ** 9 + 7) for _ in f_old]
-        return f_old[0] 
-
+        return f_old[0]

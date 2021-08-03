@@ -6,7 +6,7 @@ class Solution:
         valid_flip_count_for_current_idx = 0
         for i in range(n):
             if i >= K:
-                if has_ever_flipped[i-K] == 1:
+                if has_ever_flipped[i - K] == 1:
                     valid_flip_count_for_current_idx -= 1
             if valid_flip_count_for_current_idx % 2 == A[i]:
                 if i + K > n:

@@ -5,5 +5,5 @@ class Solution:
         dp[0] = 1
         mod = 10**9 + 7
         for i in range(steps):
-            dp = [(dp[j] + (dp[j-1] if j >= 1 else 0) + (dp[j+1] if j + 1 < arrLen else 0)) % mod for j in range(arrLen)]
+            dp = [(dp[j] + (dp[j - 1] if j >= 1 else 0) + (dp[j + 1] if j + 1 < arrLen else 0)) % mod for j in range(arrLen)]
         return dp[0]

@@ -4,9 +4,6 @@ class Solution:
         ans = 0
         m = float('inf')
         for i in a:
-            ans = max(ans, i-m)
+            ans = max(ans, i - m)
             m = min(m, i)
         return ans
-            
-            
-

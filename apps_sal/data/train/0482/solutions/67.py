@@ -20,4 +20,3 @@ class Solution:
             return cost
 
         return compute(0, len(arr))
-

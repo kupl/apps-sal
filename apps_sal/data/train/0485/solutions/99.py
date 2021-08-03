@@ -18,4 +18,3 @@ class Solution:
             if A[i] == mask:
                 return -1
         return tot
-

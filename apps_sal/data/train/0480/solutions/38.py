@@ -9,4 +9,3 @@ class Solution:
                     if 0 <= j - k < arrLen:
                         f[i][j] += f[i - 1][j - k]
         return f[steps][0] % (10**9 + 7)
-

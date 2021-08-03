@@ -16,4 +16,3 @@ class Solution:
             if q and q[-1] >= len(A):
                 return -1
         return res
-

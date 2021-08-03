@@ -14,11 +14,10 @@ class Solution:
                 if not A[i] % 10:
                     res += 1
                     flip += 1
-                    if (i + K -1) >= len(A):
+                    if (i + K - 1) >= len(A):
                         return -1
-                    A[i+K-1] += 10
+                    A[i + K - 1] += 10
             if flip > 0 and A[i] > 1:
                 flip -= 1
-            
-            
+
         return res
