@@ -7,7 +7,8 @@ import sys
 
 
 def dbg(x, y=''):
-    if len(y) > 0: y += ' = '
+    if len(y) > 0:
+        y += ' = '
     sys.stderr.write('\n>>> ' + y + pprint.pformat(x) + '\n')
 
 
@@ -37,8 +38,10 @@ def main():
             msg[i] = dict(user=user, text=text, users=alts)
         # remove before and after
         for i in range(1, m + 1):
-            if 1 <= i - 1: msg[i]['users'].discard(msg[i - 1]['user'])
-            if i + 1 <= m: msg[i]['users'].discard(msg[i + 1]['user'])
+            if 1 <= i - 1:
+                msg[i]['users'].discard(msg[i - 1]['user'])
+            if i + 1 <= m:
+                msg[i]['users'].discard(msg[i + 1]['user'])
         # compute answer
         dp = [[0 for j in range(n + 5)] for i in range(m + 5)]
         for i in range(n + 5):

@@ -16,7 +16,8 @@ def main():
 
     s = x - 50
     while True:
-        if s < y: break
+        if s < y:
+            break
         i = (s // 50) % 475
         for _ in range(25):
             i = (i * 96 + 42) % 475

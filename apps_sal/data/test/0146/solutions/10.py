@@ -10,7 +10,9 @@ def f(k, c):
     return abs(e - s)
 
 
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 n, k = read()
 a = list(read())
 mx = 0

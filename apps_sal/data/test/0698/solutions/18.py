@@ -23,4 +23,5 @@ while i < len(unused):
         i += 1
     res += 1
 
-print(res, end=' '); print(len(unused))
+print(res, end=' ')
+print(len(unused))

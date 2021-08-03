@@ -1,5 +1,7 @@
 from itertools import groupby
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 x, k = R()
 a = [0] * (x - 1)
 for _ in range(k):

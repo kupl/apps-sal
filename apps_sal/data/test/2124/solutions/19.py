@@ -7,7 +7,8 @@ import sys
 
 
 def dbg(x, y=''):
-    if len(y) > 0: y += ' = '
+    if len(y) > 0:
+        y += ' = '
     sys.stderr.write('\n>>> ' + y + pprint.pformat(x) + '\n')
 
 
@@ -28,7 +29,8 @@ def main():
         for i in range(1, m + 1):
             user, text = input().split(':')
             alts = set()
-            if user != '?': user = users.index(user)
+            if user != '?':
+                user = users.index(user)
             else:
                 # this shit is pretty fucked up, dude
                 for alt in users_set - {x for x in re.split(r'[^A-Za-z0-9]+', text)}:
@@ -36,8 +38,10 @@ def main():
             msg[i] = dict(user=user, text=text, users=alts)
         # remove before and after
         for i in range(1, m + 1):
-            if 1 <= i - 1: msg[i]['users'].discard(msg[i - 1]['user'])
-            if i + 1 <= m: msg[i]['users'].discard(msg[i + 1]['user'])
+            if 1 <= i - 1:
+                msg[i]['users'].discard(msg[i - 1]['user'])
+            if i + 1 <= m:
+                msg[i]['users'].discard(msg[i + 1]['user'])
             if msg[i]['user'] == '?' and len(msg[i]['users']) == 0:
                 impo = True
                 break
@@ -52,7 +56,8 @@ def main():
             u = msg[i]['user']
             for j in range(n + 1):
                 if u != '?':
-                    if u != j and dp[i + 1][u]: dp[i][j] = u
+                    if u != j and dp[i + 1][u]:
+                        dp[i][j] = u
                 else:
                     for alt in msg[i]['users']:
                         if alt != j and dp[i + 1][alt]:

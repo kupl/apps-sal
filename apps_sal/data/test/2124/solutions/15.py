@@ -31,8 +31,10 @@ for ti in range(t):
 
     for i in range(m):
         if guessed[i]:
-            if i > 0: denied[i - 1].add(guessed[i])
-            if i < m - 1: denied[i + 1].add(guessed[i])
+            if i > 0:
+                denied[i - 1].add(guessed[i])
+            if i < m - 1:
+                denied[i + 1].add(guessed[i])
 
     for i in range(m):
         if guessed[i] in denied[i]:
@@ -49,8 +51,10 @@ for ti in range(t):
                 if len(users) - len(denied[i]) == 1:
                     changed = True
                     guessed[i] = (users - denied[i]).pop()
-                    if i > 0: denied[i - 1].add(guessed[i])
-                    if i < m - 1: denied[i + 1].add(guessed[i])
+                    if i > 0:
+                        denied[i - 1].add(guessed[i])
+                    if i < m - 1:
+                        denied[i + 1].add(guessed[i])
                 if len(users) == len(denied[i]):
                     answer = False
                     break
@@ -58,7 +62,8 @@ for ti in range(t):
     for i in range(m):
         if not guessed[i] and len(users) - len(denied[i]) >= 1:
             guessed[i] = (users - denied[i]).pop()
-            if i < m - 1: denied[i + 1].add(guessed[i])
+            if i < m - 1:
+                denied[i + 1].add(guessed[i])
 
     for i in guessed:
         if not i:

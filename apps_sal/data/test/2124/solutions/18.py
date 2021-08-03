@@ -7,7 +7,8 @@ import sys
 
 
 def dbg(x, y=''):
-    if len(y) > 0: y += ' = '
+    if len(y) > 0:
+        y += ' = '
     sys.stderr.write('\n>>> ' + y + pprint.pformat(x) + '\n')
 
 

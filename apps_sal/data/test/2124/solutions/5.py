@@ -30,7 +30,9 @@ def Check(st, ms):
     return False
 
 
-R = lambda: list(map(int, input().split(' ')))
+def R(): return list(map(int, input().split(' ')))
+
+
 #r, w = open("input.txt", "r"), open("output.txt", "w")
 T = int(input())
 while T:

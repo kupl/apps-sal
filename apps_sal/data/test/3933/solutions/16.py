@@ -8,5 +8,7 @@ for i in range(1, n):
         continue
     else:
         x = False
-if x == True: print(arr[n - 1] - m)
-else: print(arr[n - 1])
+if x == True:
+    print(arr[n - 1] - m)
+else:
+    print(arr[n - 1])

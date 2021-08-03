@@ -18,9 +18,9 @@ ans = 10000000000000
 
 for a in range(2000):
     for b in range(2000):
-        k = x + 100 * a - 50 * b;
+        k = x + 100 * a - 50 * b
         if k >= y and p in generator(k):
-            ans = min(ans, a);
+            ans = min(ans, a)
             print(ans)
             return
 

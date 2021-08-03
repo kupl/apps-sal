@@ -12,7 +12,8 @@ ans = 0
 for i in arr:
     if(i == -1):
         s += 1
-    else: e += 1
+    else:
+        e += 1
 
 for i in range(0, k):
     ce = 0
@@ -24,5 +25,6 @@ for i in range(0, k):
             ce += 1
     x = e - ce
     y = s - cs
-    if(abs(x - y) > ans): ans = abs(x - y)
+    if(abs(x - y) > ans):
+        ans = abs(x - y)
 print(ans)

@@ -3,7 +3,7 @@ import re
 t = int(input())
 for z in range(t):
     n = int(input())
-    users = input().split();
+    users = input().split()
     # print(users)
     m = int(input())
     can = [[] for i in range(m)]
@@ -33,7 +33,8 @@ for z in range(t):
     while 1:
         flag = True
         for i in range(m - 1):
-            if (len(can[i]) == 0): ok = False
+            if (len(can[i]) == 0):
+                ok = False
             if (len(can[i]) == 1 and can[i][0] in can[i + 1]):
                 can[i + 1].remove(can[i][0])
                 L[i][0] = users[can[i][0]]
@@ -42,9 +43,12 @@ for z in range(t):
                 can[i].remove(can[i + 1][0])
                 L[i + 1][0] = users[can[i + 1][0]]
                 flag = False
-        if len(can[m - 1]) == 0: ok = False
-        if ok == False: break
-        if flag: break
+        if len(can[m - 1]) == 0:
+            ok = False
+        if ok == False:
+            break
+        if flag:
+            break
     if ok == False:
         print('Impossible')
         continue
@@ -55,4 +59,4 @@ for z in range(t):
                 can[i + 1].remove(can[i][0])
         else:
             print(L[i][0], end='')
-        print(':', L[i][1], sep='');
+        print(':', L[i][1], sep='')

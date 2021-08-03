@@ -43,7 +43,8 @@ rr = 0
 for b in range(K):
     r = 0
     for i in range(N):
-        if i % K == b: continue
+        if i % K == b:
+            continue
         r += za[i]
     r = abs(r)
 

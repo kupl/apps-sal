@@ -70,7 +70,7 @@ def solve():
 
     for p in messages:
         print("%s:%s" % (p[0], p[1]))
-    return True;
+    return True
 
 
 def main():
