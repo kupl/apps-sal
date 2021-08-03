@@ -1,5 +1,5 @@
-N,R=map(int,input().split())
-if N>9:
-  print(R)
+N, R = map(int, input().split())
+if N > 9:
+    print(R)
 else:
-  print(R+(10-N)*100)
+    print(R + (10 - N) * 100)

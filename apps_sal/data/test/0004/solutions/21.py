@@ -2,8 +2,10 @@ x = int(input())
 
 hh, mm = map(int, input().split())
 
+
 def ch(hh, mm):
     return '7' in str(hh) or '7' in str(mm)
+
 
 count = 0
 while not ch(hh, mm):

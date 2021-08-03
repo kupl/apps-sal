@@ -1,8 +1,6 @@
-n,x = list(map(int,input().split()))
+n, x = list(map(int, input().split()))
 if n >= 10:
-  print(x)
+    print(x)
 else:
-  y = x + (10-n) * 100
-  print(y)
-
-
+    y = x + (10 - n) * 100
+    print(y)

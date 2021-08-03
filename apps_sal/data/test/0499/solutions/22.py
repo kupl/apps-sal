@@ -3,6 +3,7 @@
 
 import time
 
+
 def pr(d, k):
     ans = []
     for i in d.keys():
@@ -10,12 +11,13 @@ def pr(d, k):
             ans = i
     return ans
 
-n   = int(input())
-a   = list(input())
+
+n = int(input())
+a = list(input())
 
 start = time.time()
 
-d = {'R' :0, 'G' :0, 'B' : 0}
+d = {'R': 0, 'G': 0, 'B': 0}
 
 for i in a:
     d[i] += 1
@@ -27,10 +29,10 @@ if len(b) == 1:
 elif len(b) == 2:
     if d[b[0]] == 1 and d[b[1]] == 1:
         ans = pr(d, 0)
-    elif d[b[0]] == 1 :
-        ans = b[0]+pr(d, 0)
-    elif d[b[1]] == 1 :
-        ans = b[1]+pr(d, 0)
+    elif d[b[0]] == 1:
+        ans = b[0] + pr(d, 0)
+    elif d[b[1]] == 1:
+        ans = b[1] + pr(d, 0)
     else:
         ans = 'BGR'
 else:
@@ -42,4 +44,3 @@ print()
 
 finish = time.time()
 #print(finish - start)
-

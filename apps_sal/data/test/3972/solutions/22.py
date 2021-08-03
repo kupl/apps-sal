@@ -61,4 +61,3 @@ for i in range(n):
     sum_[i + 1] %= MOD
 
 print((dq[-1]))
-

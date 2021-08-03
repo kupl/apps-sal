@@ -4,6 +4,7 @@ rightpeople = set()
 
 n, vl = list(map(int, input().split()))
 
+
 def leftinterval(x0, v0, t):
     if x0 / v0 <= t:
         return (0, 10**6)
@@ -16,6 +17,8 @@ def leftinterval(x0, v0, t):
     if rightbound > 10**6:
         rightbound = 10**6
     return (leftbound, rightbound)
+
+
 def rightinterval(x0, v0, t):
     if (10**6 - x0) / v0 <= t:
         return (0, 10**6)
@@ -28,6 +31,7 @@ def rightinterval(x0, v0, t):
     if(leftbound < 0):
         leftbound = 0
     return (leftbound, rightbound)
+
 
 def check(t):
     events = []
@@ -60,6 +64,7 @@ def check(t):
             opened[color] -= 1
     return False
 
+
 for i in range(n):
     a, b, c = list(map(int, input().split()))
     if c == 1:
@@ -77,4 +82,3 @@ for i in range(50):
         l = m
 
 print(m)
-

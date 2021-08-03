@@ -7,7 +7,6 @@ while (n % 10 != 7 and n // 10 != 7 and m % 10 != 7 and m // 10 != 7):
         m += 60
         n -= 1
         if n < 0:
-            n  += 24
+            n += 24
     a += 1
 print(a)
-

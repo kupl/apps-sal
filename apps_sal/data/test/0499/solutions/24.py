@@ -1,7 +1,8 @@
 n = int(input())
 s = input()
 l = []
-v = [0,0,0]
+v = [0, 0, 0]
+
 
 def val(c):
     if c == 'B':
@@ -11,10 +12,11 @@ def val(c):
     else:
         return 2
 
+
 for c in s:
     l += [val(c)]
     v[val(c)] += 1
-    
+
 if (len(set(l))) == 3:
     print('BGR')
 elif (len(set(l))) == 1:
@@ -36,7 +38,6 @@ else:
             else:
                 a += 'R'
         for c in sorted(a):
-            print(c,end='')
+            print(c, end='')
     else:
         print('BGR')
-

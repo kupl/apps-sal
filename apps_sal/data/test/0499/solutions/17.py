@@ -16,22 +16,21 @@ for i in range(0, len(s)):
 
 if b != 0 and g == 0 and r == 0 or \
         b == 0 and g == 1 and r == 1:
-            print('B')
+    print('B')
 elif b == 0 and g != 0 and r == 0 or \
         b == 1 and g == 0 and r == 1:
-            print('G')
+    print('G')
 elif b == 0 and g == 0 and r != 0 or \
         b == 1 and g == 1 and r == 0:
-            print('R')
+    print('R')
 elif b > 1 and g == 1 and r == 0 or\
         b > 1 and g == 0 and r == 1:
-            print('GR')
+    print('GR')
 elif b == 0 and g > 1 and r == 1 or\
         b == 1 and g > 1 and r == 0:
-            print('BR')
+    print('BR')
 elif b == 0 and g == 1 and r > 1 or\
         b == 1 and g == 0 and r > 1:
-            print('BG')
+    print('BG')
 else:
     print('BGR')
-

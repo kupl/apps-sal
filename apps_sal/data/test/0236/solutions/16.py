@@ -1,5 +1,6 @@
 from sys import stdin, stdout
 
+
 def main():
     s = input()
     p = sum([x == 'o' for x in s])
@@ -11,7 +12,4 @@ def main():
         print('NO')
 
 
-
-
 main()
-

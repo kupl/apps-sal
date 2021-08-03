@@ -9,9 +9,8 @@ N = int(input())
 #N, K = map(int, input().split())
 #A = list(map(int, input().split()))
 #flag = True
-#for k in range(N):
-ans = N*N*N
+# for k in range(N):
+ans = N * N * N
 print(ans)
-#print('Yes')
-#print('No')
-
+# print('Yes')
+# print('No')

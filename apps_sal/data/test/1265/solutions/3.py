@@ -16,9 +16,8 @@ for i in second:
         count2 += 1
 
 if (count1 == 0 and count2 != 0) or \
-  (count1 != 0 and count2 == 0):
-  print("NO")
-  return
+        (count1 != 0 and count2 == 0):
+    print("NO")
+    return
 
 print("YES")
-

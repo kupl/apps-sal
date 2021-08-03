@@ -8,5 +8,6 @@ def go():
     if l % p == 0:
         return 'YES'
     return 'NO'
-print(go())
 
+
+print(go())
