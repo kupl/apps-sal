@@ -6,6 +6,5 @@ def sum_dif_rev(num):
             continue
         r = int(str(n)[::-1])
         if n != r and (n + r) % abs(n - r) == 0:
-                num -= 1
+            num -= 1
     return n
-

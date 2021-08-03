@@ -7,7 +7,3 @@ def first_non_consecutive(arr):
             print("tut")
         else:
             return i
-            
-            
-
-

@@ -1,2 +1,2 @@
 def get_char(c):
-  return '%c' % c
+    return '%c' % c

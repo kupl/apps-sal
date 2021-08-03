@@ -5,16 +5,16 @@ def sequence_classifier(arr):
     strictly_decreasing = True
     not_increasing = True
     constant = True
-    for i in range(1,len(arr)):
-        if arr[i-1] != arr[i]:
+    for i in range(1, len(arr)):
+        if arr[i - 1] != arr[i]:
             constant = False
-        if arr[i-1] <= arr[i]:
-           strictly_decreasing = False
-        if arr[i-1] >= arr[i]:
+        if arr[i - 1] <= arr[i]:
+            strictly_decreasing = False
+        if arr[i - 1] >= arr[i]:
             strictly_increasing = False
-        if not arr[i-1] <= arr[i]:
-           not_decreasing = False
-        if not arr[i-1] >= arr[i]:
+        if not arr[i - 1] <= arr[i]:
+            not_decreasing = False
+        if not arr[i - 1] >= arr[i]:
             not_increasing = False
     if constant:
         return 5

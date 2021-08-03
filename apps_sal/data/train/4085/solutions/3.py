@@ -1,6 +1,7 @@
 import random
 import re
 
+
 def sub(m):
     s = m.group()
     xs = list(s[1:-1])
@@ -8,6 +9,7 @@ def sub(m):
     while mid == xs:
         random.shuffle(mid)
     return s[0] + ''.join(mid) + s[-1]
+
 
 def mix_words(s):
     if not isinstance(s, str):

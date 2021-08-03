@@ -1,8 +1,8 @@
 def sum_dif():
-    yield  45
-    yield  54
-    yield  495
-    yield  594
+    yield 45
+    yield 54
+    yield 495
+    yield 594
     n1 = 595
     while True:
         n_rev = str(n1)[::-1]
@@ -14,6 +14,7 @@ def sum_dif():
             yield n1
         n1 += 1
 
+
 def sum_dif_rev(n):
     p = sum_dif()
-    return [next(p) for x in range(1, n+1)][-1]
+    return [next(p) for x in range(1, n + 1)][-1]

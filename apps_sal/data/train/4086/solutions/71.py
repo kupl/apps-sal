@@ -3,5 +3,5 @@ def first_non_consecutive(arr):
     for item in arr:
         i += 1
         if item != i:
-            return item 
+            return item
     return None

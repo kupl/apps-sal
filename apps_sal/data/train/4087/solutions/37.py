@@ -1,2 +1,2 @@
 def get_char(c):
-  return "{:c}".format(c)
+    return "{:c}".format(c)

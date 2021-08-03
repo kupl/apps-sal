@@ -1,6 +1,7 @@
 from collections import Counter
 from itertools import count, islice
 
+
 def performant_smallest(arr, n):
     cnts = Counter(arr)
     total = 0

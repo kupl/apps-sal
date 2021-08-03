@@ -8,11 +8,11 @@ def first_tooth(array):
         i = 0
         while i < len(array):
             if i == 0:
-                diff = array[i] - array[i+1]
+                diff = array[i] - array[i + 1]
             elif i == len(array) - 1:
-                diff = array[i] - array[i-1]
+                diff = array[i] - array[i - 1]
             else:
-                diff = array[i] - array[i-1] + array[i] - array[i+1]
+                diff = array[i] - array[i - 1] + array[i] - array[i + 1]
             if diff > max_diff:
                 max_diff = diff
                 max_diff_indices = [i]

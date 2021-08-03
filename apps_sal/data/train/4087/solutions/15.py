@@ -1,3 +1,3 @@
 def get_char(c):
-  d=str(chr(c))
-  return d
+    d = str(chr(c))
+    return d

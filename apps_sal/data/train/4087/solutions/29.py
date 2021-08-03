@@ -1,1 +1,1 @@
-get_char = lambda n: chr(n)
+def get_char(n): return chr(n)
