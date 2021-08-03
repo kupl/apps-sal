@@ -4,4 +4,3 @@ def calculate_years(sum, intr, tax, goal):
         year += 1
         sum *= fix
     return year
-

@@ -1,5 +1,6 @@
 import re
 
+
 def solve(st):
     matches = re.match("([a-z]*)(\d*)\((.*)\)", st)
     if not matches:

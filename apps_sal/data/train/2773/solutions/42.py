@@ -7,4 +7,3 @@ def calculate_years(principal, interest, tax, desired):
         current = currentstep - taxloss
         years += 1
     return years
-

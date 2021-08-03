@@ -8,4 +8,3 @@ def calculate_years(principal, interest, tax, desired):
         p *= fixed
         y += 1
     return y
-

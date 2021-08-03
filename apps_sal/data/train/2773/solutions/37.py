@@ -5,5 +5,3 @@ def calculate_years(p, i, t, d):
         cur_i = (p * i) * (1 - t)
         p += cur_i
     return y
-        
-

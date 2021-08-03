@@ -4,4 +4,3 @@ def faro_cycles(size):
     while cur != deck:
         cur, count = cur[::2] + cur[1::2], count + 1
     return count
-
