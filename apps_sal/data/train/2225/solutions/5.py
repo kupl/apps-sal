@@ -25,4 +25,3 @@ for s in (input() for _ in range(n)):
     nums[l - len(s) + 1].add(int(s, 2) + (1 << len(s)))
 
 print(('Alice' if solve(n, l, nums) else 'Bob'))
-

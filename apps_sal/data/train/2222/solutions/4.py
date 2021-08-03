@@ -39,10 +39,9 @@ for kek in range(t):
                 dp[2][i] = True
         elif 3 * i >= n and (dp[1][i - 1] or dp[2][i - 1]):
             dp[2][i] = True
-    #for i in range(3):
+    # for i in range(3):
     #    print(dp[i])
     if max(dp[0][n - 1], dp[1][n - 1], dp[2][n - 1]):
         print('YES')
     else:
         print('NO')
-

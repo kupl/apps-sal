@@ -2,13 +2,13 @@ T = int(input())
 
 for t in range(T):
     n, k = list(map(int, input().split(' ')[:2]))
-    s = ["","",""]
+    s = ["", "", ""]
     for i in range(3):
         s[i] = input()
 
-    s[0] += '.' * (n*3)
-    s[1] += '.' * (n*3)
-    s[2] += '.' * (n*3)
+    s[0] += '.' * (n * 3)
+    s[1] += '.' * (n * 3)
+    s[2] += '.' * (n * 3)
 
     def top():
         return [s[0][0] != '.', s[1][0] != '.', s[2][0] != '.']
@@ -38,26 +38,34 @@ for t in range(T):
 
         s0, s1, s2 = shift()
 
-        if s0: p[0] = False
-        if s1: p[1] = False
-        if s2: p[2] = False
+        if s0:
+            p[0] = False
+        if s1:
+            p[1] = False
+        if s2:
+            p[2] = False
 
         # my move ended
 
         s0, s1, s2 = shift()
 
-        if s0: p[0] = False
-        if s1: p[1] = False
-        if s2: p[2] = False
+        if s0:
+            p[0] = False
+        if s1:
+            p[1] = False
+        if s2:
+            p[2] = False
 
         s0, s1, s2 = shift()
 
-        if s0: p[0] = False
-        if s1: p[1] = False
-        if s2: p[2] = False
+        if s0:
+            p[0] = False
+        if s1:
+            p[1] = False
+        if s2:
+            p[2] = False
 
     if p[0] or p[1] or p[2]:
         print("YES")
     else:
         print("NO")
-

@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n = ii()
 a = list(map(int, list(input().strip())))
@@ -20,4 +25,3 @@ for i in range(n):
 ans = z[0] * o[1] + z[1] * o[0] + z[0] * o[0]
 
 print(ans)
-

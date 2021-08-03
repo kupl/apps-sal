@@ -3,92 +3,76 @@
 # sys.stdin = open('cf586d.in')
 
 
-
 def handle_test():
 
-	n, k = [int(v) for v in input().split()]
+    n, k = [int(v) for v in input().split()]
 
+    field = [input() for _ in range(3)]
 
+    if field[0][0] == 's':
 
-	field = [input() for _ in range(3)]
+        cpos = [0, 0]
 
+    elif field[1][0] == 's':
 
+        cpos = [1, 0]
 
-	if field[0][0] == 's':
+    else:
 
-		cpos = [0, 0]
+        cpos = [2, 0]
 
-	elif field[1][0] == 's':
+    available = [[False] * len(field[0]) for _ in range(3)]
 
-		cpos = [1, 0]
+    available[cpos[0]][cpos[1]] = True
 
-	else:
+    for i in range(n):
 
-		cpos = [2, 0]
+        for j in range(3):
 
+            if available[j][i]:
 
+                if i + 1 >= n:
 
-	available = [[False] * len(field[0]) for _ in range(3)]
+                    return True
 
-	available[cpos[0]][cpos[1]] = True
+                elif field[j][i + 1] != '.':
 
+                    continue
 
+                for offset in (-1, 0, 1):
 
-	for i in range(n):
+                    if not (0 <= j + offset < 3) or field[j + offset][i + 1] != '.':
 
-		for j in range(3):
+                        continue
 
-			if available[j][i]:
+                    if i + 2 >= n:
 
-				if i + 1 >= n:
+                        return True
 
-					return True
+                    elif field[j + offset][i + 2] != '.':
 
-				elif field[j][i + 1] != '.':
+                        continue
 
-					continue
+                    elif i + 3 >= n:
 
-				for offset in (-1, 0, 1):
+                        return True
 
-					if not (0 <= j + offset < 3) or field[j + offset][i + 1] != '.':
+                    elif field[j + offset][i + 3] != '.':
 
-						continue
+                        continue
 
-					if i + 2 >= n:
+                    else:
 
-						return True
+                        available[j + offset][i + 3] = True
 
-					elif field[j + offset][i + 2] != '.':
-
-						continue
-
-					elif i + 3 >= n:
-
-						return True
-
-					elif field[j + offset][i + 3] != '.':
-
-						continue
-
-					else:
-
-						available[j + offset][i + 3] = True
-
-
-
-	return False
-
-
-
+    return False
 
 
 t = int(input())
 
 for _ in range(t):
 
-	print(['NO', 'YES'][handle_test()])
-
+    print(['NO', 'YES'][handle_test()])
 
 
 # Made By Mostafa_Khaled
-

@@ -12,7 +12,7 @@ else:
             zer += 1
         else:
             ed += 1
-            
+
     sed = szer = 0
     for i in range(n):
         if b[i] == '0':

@@ -14,5 +14,4 @@ for i in range(n):
             k -= 2
 for i in range(n):
     if a[i] == 1:
-        print(s[i], end = '')
-
+        print(s[i], end='')

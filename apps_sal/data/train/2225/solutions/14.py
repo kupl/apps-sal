@@ -24,4 +24,3 @@ for s in (input() for _ in range(n)):
     ss[l - len(s) + 1].append(s)
 
 print(('Alice' if solve(l, ss) else 'Bob'))
-

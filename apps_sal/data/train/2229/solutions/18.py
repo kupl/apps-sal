@@ -10,6 +10,7 @@ def is_obtained(p, t, K):
                 return False
     return True
 
+
 I = input
 
 t, p, A = I(), I(), list(map(int, I().split()))

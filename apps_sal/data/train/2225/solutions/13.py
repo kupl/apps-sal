@@ -3,8 +3,8 @@ def main():
     from collections import defaultdict
     input = sys.stdin.readline
 
-    mod = 10**10+7
-    mod2 = 10**10+9
+    mod = 10**10 + 7
+    mod2 = 10**10 + 9
     mod3 = 998244353
     N, L = list(map(int, input().split()))
     dic = defaultdict(int)
@@ -24,15 +24,15 @@ def main():
         h3 = 0
         for i in range(len(s)):
             M += 1
-            h = (h*1007 + int(s[i]) + 1) % mod
-            pair[h] = (h + 1)%mod if s[i] == '0' else (h-1)%mod
+            h = (h * 1007 + int(s[i]) + 1) % mod
+            pair[h] = (h + 1) % mod if s[i] == '0' else (h - 1) % mod
             h2 = (h2 * 2009 + int(s[i]) + 1) % mod2
-            pair2[h2] = (h2 + 1)%mod2 if s[i] == '0' else (h2-1)%mod2
+            pair2[h2] = (h2 + 1) % mod2 if s[i] == '0' else (h2 - 1) % mod2
             h3 = (h3 * 3001 + int(s[i]) + 1) % mod3
             pair3[h3] = (h3 + 1) % mod3 if s[i] == '0' else (h3 - 1) % mod3
-            dic[h] = i+1
-            dic2[h2] = i+1
-            dic[h3] = i+1
+            dic[h] = i + 1
+            dic2[h2] = i + 1
+            dic[h3] = i + 1
             h_list.append(h)
             h2_list.append(h2)
             h3_list.append(h3)
@@ -78,5 +78,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

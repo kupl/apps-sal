@@ -11,5 +11,4 @@ for i in range(n):
         r += 1
     if a[i] * 2 + b[i] == 3:
         s += 1
-print(p*r + p*s + q*r)
-
+print(p * r + p * s + q * r)

@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def solve(adj, m, k, uv):
     n = len(adj)
     nn = [len(a) for a in adj]
@@ -11,12 +12,12 @@ def solve(adj, m, k, uv):
         v = q.popleft()
         for u in adj[v]:
             nn[u] -= 1
-            if nn[u] == k-1:
+            if nn[u] == k - 1:
                 q.append(u)
-    res = [0]*m
+    res = [0] * m
     nk = len([1 for i in nn if i >= k])
     res[-1] = nk
-    for i in range(m-1, 0, -1):
+    for i in range(m - 1, 0, -1):
         u1, v1 = uv[i]
 
         if nn[u1] < k or nn[v1] < k:
@@ -45,6 +46,7 @@ def solve(adj, m, k, uv):
         res[i - 1] = nk
     return res
 
+
 n, m, k = map(int, input().split())
 a = [set() for i in range(n)]
 uv = []
@@ -52,7 +54,7 @@ for i in range(m):
     u, v = map(int, input().split())
     a[u - 1].add(v - 1)
     a[v - 1].add(u - 1)
-    uv.append((u-1, v-1))
+    uv.append((u - 1, v - 1))
 
 res = solve(a, m, k, uv)
 print(str(res)[1:-1].replace(' ', '').replace(',', '\n'))

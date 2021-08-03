@@ -23,4 +23,3 @@ for s in (input() for _ in range(n)):
 
 xor = dfs(trie[0][0]) ^ dfs(trie[0][1])
 print(('Alice' if xor else 'Bob'))
-

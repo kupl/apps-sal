@@ -8,17 +8,19 @@ for i in range(m):
 n = int(input())
 lengths = list(map(int, input().split()))
 
-#acc_lengths[i]表示i指令执行之前已经积累了多长的串
+# acc_lengths[i]表示i指令执行之前已经积累了多长的串
 acc_lengths = [0]
 for l in lines:
-    acc_lengths.append(acc_lengths[-1] + (1 if l[0] == 1 else l[1]*l[2]))
+    acc_lengths.append(acc_lengths[-1] + (1 if l[0] == 1 else l[1] * l[2]))
 
 result = {}
+
+
 def find_number(l):
     if l not in result:
         i = bisect_left(acc_lengths, l) - 1
         result[l] = lines[i][1] if lines[i][0] == 1 else find_number((l - acc_lengths[i] - 1) % lines[i][1] + 1)
     return result[l]
 
-print(' '.join([str(find_number(l)) for l in lengths]))
 
+print(' '.join([str(find_number(l)) for l in lengths]))

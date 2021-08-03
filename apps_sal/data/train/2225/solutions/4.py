@@ -42,4 +42,3 @@ if ans:
     print('Alice')
 else:
     print('Bob')
-

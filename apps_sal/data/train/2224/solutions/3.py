@@ -17,4 +17,4 @@ for i in range(n):
         else:
             ans += cnt0
             t1 += 1
-print(ans-t0*t1)
+print(ans - t0 * t1)
