@@ -20,7 +20,8 @@ def read(mode=2):
 
 
 def write(s="\n"):
-    if isinstance(s, list): s = " ".join(map(str, s))
+    if isinstance(s, list):
+        s = " ".join(map(str, s))
     s = str(s)
     print(s, end="")
 
@@ -33,8 +34,10 @@ res = -1
 
 ars = [0] * 26
 art = [0] * 26
-for i in list(s): ars[ord(i) - 97] += 1
-for i in list(t): art[ord(i) - 97] += 1
+for i in list(s):
+    ars[ord(i) - 97] += 1
+for i in list(t):
+    art[ord(i) - 97] += 1
 for i in range(26):
     if art[i] > ars[i]:
         res = 0
@@ -53,5 +56,6 @@ if not (res + 1):
     else:
         res = 2
 
-    if ars != art: res += 1
+    if ars != art:
+        res += 1
 print(resstr[res])

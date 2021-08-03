@@ -6,7 +6,8 @@ def dfs1(u, pre):  # find the components
     vis[u] = True
     now.append(u)
     for v in to[u]:
-        if v != pre: dfs1(v, u)
+        if v != pre:
+            dfs1(v, u)
 
 
 def dfs2(u, pre):  # calulate the distance
@@ -46,7 +47,8 @@ try:
         tmp = []
         d = 0
         for root in lis:
-            for u in lis: dist[u] = mxdist[u] = 0
+            for u in lis:
+                dist[u] = mxdist[u] = 0
             dfs2(root, 0)
             tmp.append((mxdist[root], root))
             d = max(d, sum(sorted([mxdist[u] for u in to[root]])[-2:]))
@@ -65,7 +67,8 @@ try:
     ans = []
     for i in range(1, len(ct)):
         mx = max(mx, ct[i][0] + 1 + ct[0][0])
-        if i > 1: mx = max(mx, ct[i][0] + 2 + ct[1][0])
+        if i > 1:
+            mx = max(mx, ct[i][0] + 2 + ct[1][0])
         ans.append((ct[i][1], ct[0][1]))
     print(mx)
     for p in ans:

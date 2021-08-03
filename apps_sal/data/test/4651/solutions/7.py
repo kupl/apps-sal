@@ -20,5 +20,6 @@ for _ in range(int(stdin.readline())):
                 flags[i - 1] = 1
                 arr[i - 1], arr[i] = arr[i], arr[i - 1]
 
-    for i in arr: print(i, end=" ")
+    for i in arr:
+        print(i, end=" ")
     print()

@@ -60,7 +60,7 @@
 import sys
 
 inp = sys.stdin.readline
-input = lambda: inp().strip()
+def input(): return inp().strip()
 
 
 # flush= sys.stdout.flush

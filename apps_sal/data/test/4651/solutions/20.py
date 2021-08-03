@@ -15,6 +15,7 @@ while(t > 0):
                 arr[n - i - 2] = tmp
                 flag = True
     for x in range(n):
-        if(x > 0): print(" ", end="")
+        if(x > 0):
+            print(" ", end="")
         print(arr[x], end="")
     print()

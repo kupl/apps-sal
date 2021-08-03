@@ -13,7 +13,7 @@ for _ in range(int(input())):
                 ind = j
             j += 1
         if ind == -1:
-            i += 1;
+            i += 1
             continue
         # print(ind)
         temp = ind

@@ -28,7 +28,9 @@ def main():
         print(*arr)
 
 
-input = lambda: sys.stdin.readline().strip()
-get_ints = lambda: list(map(int, input().split()))
-get_array = lambda: list(map(int, input().split()))
+def input(): return sys.stdin.readline().strip()
+def get_ints(): return list(map(int, input().split()))
+def get_array(): return list(map(int, input().split()))
+
+
 main()

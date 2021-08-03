@@ -37,9 +37,12 @@ def solve():
 
 
 def bad(index, a, x):
-    if index == x: return True
-    if a[index] == x: return True
-    if a[index] == -1: return False
+    if index == x:
+        return True
+    if a[index] == x:
+        return True
+    if a[index] == -1:
+        return False
     return bad(a[index], a, x)
 
 
@@ -56,5 +59,6 @@ def rv(): return map(int, input().split())
 def rl(n): return [list(map(int, input().split())) for _ in range(n)]
 
 
-if sys.hexversion == 50594544: sys.stdin = open("test.txt")
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 solve()

@@ -1,12 +1,14 @@
 IN = input
-rint = lambda: int(IN())
-rmint = lambda: list(map(int, IN().split()))
-rlist = lambda: list(rmint())
+def rint(): return int(IN())
+def rmint(): return list(map(int, IN().split()))
+def rlist(): return list(rmint())
+
 
 n = rint()
 a = rlist()
 a.sort()
 k = 1
 for c in a:
-    if c >= k: k += 1
+    if c >= k:
+        k += 1
 print(k - 1)
