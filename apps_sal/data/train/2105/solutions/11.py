@@ -12,4 +12,3 @@ for i in range(2, n + 2):
             colors[j - 2] = 2
 fout.write(str(max(colors)) + '\n')
 fout.write(' '.join(map(str, colors)))
-

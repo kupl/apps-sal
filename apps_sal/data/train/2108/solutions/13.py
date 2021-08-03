@@ -8,4 +8,3 @@ for i in range(n):
     else:
         victims[1] = replaced
     print(" ".join(victims))
-

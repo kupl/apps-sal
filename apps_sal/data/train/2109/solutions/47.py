@@ -11,4 +11,3 @@ for _ in range(q):
     if s * s == m and a != b:
         ans -= 1
     print(ans)
-

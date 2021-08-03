@@ -8,4 +8,3 @@ for i in range(k):
     else:
         m = nm
     print(n, m)
-

@@ -4,6 +4,7 @@ def dfs(v, col):
         if used[u] == -1:
             dfs(u, col ^ 1)
 
+
 n = int(input())
 used = [1 for i in range(n)]
 for i in range(2, n + 2):
@@ -12,4 +13,3 @@ for i in range(2, n + 2):
             used[j - 2] = 2
 print(max(used))
 print(*used)
-

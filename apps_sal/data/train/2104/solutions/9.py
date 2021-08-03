@@ -10,4 +10,3 @@ for i in range(n, 2 * n):
     ans = min(ans, xd * yd)
 
 print(ans)
-

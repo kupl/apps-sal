@@ -11,4 +11,3 @@ for i in range(n):
         name2 = new
 
 print(name1, name2)
-

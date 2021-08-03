@@ -1,5 +1,6 @@
 import math
 
+
 def __starting_point():
     Q = int(input())
     for _ in range(Q):
@@ -18,5 +19,6 @@ def __starting_point():
             print((2 * c - 2))
         else:
             print((2 * c - 1))
+
 
 __starting_point()

@@ -8,5 +8,5 @@ for i in range(n):
         s1 = new
     else:
         s2 = new
-        
+
 print(s1, s2)

@@ -1,7 +1,7 @@
 s = input()
 res, n = 0, len(s)
 for i in range(n - 1):
-    j, c, q = i , 0, 0
+    j, c, q = i, 0, 0
     while (j < n):
         if(s[j] == '('):
             c += 1
@@ -16,4 +16,3 @@ for i in range(n - 1):
         res += (c == q)
         j += 1
 print(res)
-
