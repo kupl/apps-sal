@@ -22,7 +22,8 @@ for cdd in candidates:
     for i in range(n):
         pstv += cdd - div_cdd[-1 - i]
         ngtv += div_cdd[-1 - i]
-        if pstv == -ngtv: break
+        if pstv == -ngtv:
+            break
     ans = max(ans, cdd) if pstv <= k else ans
 
 print(ans)

@@ -34,7 +34,8 @@ def solve():
 
     div = []
     for i in range(1, int(pow(sm, 0.5)) + 1):
-        if sm % i: continue
+        if sm % i:
+            continue
         div.append(i)
         if i != sm // i:
             div.append(sm // i)

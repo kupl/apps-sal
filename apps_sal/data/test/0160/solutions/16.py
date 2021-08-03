@@ -2,8 +2,8 @@ from collections import deque
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def II(): return int(sys.stdin.readline())
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
@@ -31,11 +31,13 @@ def main():
     s = sum(aa)
     ff = []
     for d in range(1, s + 1):
-        if d**2 > s: break
+        if d**2 > s:
+            break
         if s % d == 0:
             ff.append(d)
             ff.append(s // d)
-    if ff[-1] == ff[-2]: ff.pop()
+    if ff[-1] == ff[-2]:
+        ff.pop()
     ff.sort(reverse=True)
     for f in ff:
         if ok(f):

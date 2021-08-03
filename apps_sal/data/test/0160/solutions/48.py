@@ -6,7 +6,8 @@ def divisors(n):
     for i in range(1, int(n**0.5) + 1):
         if n % i == 0:
             lst.append(i)
-            if i != n // i: lst.append(n // i)
+            if i != n // i:
+                lst.append(n // i)
     return lst
 
 
@@ -19,7 +20,8 @@ for d in sorted(cands, reverse=True):
     for i in range(1, N):
         minus = cumsum_rems[i]
         plus = d * (N - i) - (cumsum_rems[N] - minus)
-        if max(minus, plus) <= K: break
+        if max(minus, plus) <= K:
+            break
     else:
         continue
     break

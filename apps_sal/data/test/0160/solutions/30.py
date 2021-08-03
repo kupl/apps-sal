@@ -17,11 +17,16 @@ yaku = sorted(yakusu(s), reverse=1)
 # print(yaku)
 for mod in yaku:
     B = [i % mod for i in A if i % mod != 0]
-    if B == []: print(mod); return
+    if B == []:
+        print(mod)
+        return
     if len(B) == 1:
         q = B[0]
-        if 0 <= q <= k or mod - k <= q: print(mod); return
-        else: continue
+        if 0 <= q <= k or mod - k <= q:
+            print(mod)
+            return
+        else:
+            continue
     B.sort()
     r = [B[0]] * len(B)
     for i in range(len(B) - 1):
@@ -29,4 +34,5 @@ for mod in yaku:
     now = float("INF")
     for i in range(1, len(B)):  # 切り方
         if r[i - 1] == mod * (len(B) - i) - (r[-1] - r[i - 1]) and r[i - 1] <= k:
-            print(mod); return
+            print(mod)
+            return

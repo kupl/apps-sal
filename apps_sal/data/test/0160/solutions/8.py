@@ -16,12 +16,14 @@ def II(): return int(input())
 
 def FLIST(n):
     res = [1]
-    for i in range(1, n + 1): res.append(res[i - 1] * i % DVSR)
+    for i in range(1, n + 1):
+        res.append(res[i - 1] * i % DVSR)
     return res
 
 
 def gcd(x, y):
-    if x < y: x, y = y, x
+    if x < y:
+        x, y = y, x
     div = x % y
     while div != 0:
         x, y = y, div
@@ -51,7 +53,8 @@ for div in sorted(DIVS, reverse=True):
         DIFF[i] = AS[i] % div
     DIFF.sort()
     ACC[0] = DIFF[0]
-    for i in range(1, N): ACC[i] = ACC[i - 1] + DIFF[i]
+    for i in range(1, N):
+        ACC[i] = ACC[i - 1] + DIFF[i]
     # print(ACC)
     for i in range(N - 1):
         left = ACC[i]

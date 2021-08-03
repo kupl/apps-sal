@@ -60,8 +60,10 @@ class Solution:
         #     res += [list(map(lambda x, y: x + y, res[-1] + [0], [0] + res[-1]))]
         # return res[:numRows]
 
-        if numRows == 0: return []
-        if numRows == 1: return [[1]]
+        if numRows == 0:
+            return []
+        if numRows == 1:
+            return [[1]]
         res = [[1], [1, 1]]
 
         def add(nums):

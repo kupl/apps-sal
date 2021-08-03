@@ -16,12 +16,14 @@ def II(): return int(input())
 
 def FLIST(n):
     res = [1]
-    for i in range(1, n + 1): res.append(res[i - 1] * i % DVSR)
+    for i in range(1, n + 1):
+        res.append(res[i - 1] * i % DVSR)
     return res
 
 
 def gcd(x, y):
-    if x < y: x, y = y, x
+    if x < y:
+        x, y = y, x
     div = x % y
     while div != 0:
         x, y = y, div
@@ -60,7 +62,8 @@ for div in DIVS:
             sm += DIFF[i]
             i += 1
     # print("div:{} sum: {} cost: {}".format(div, sm, cost))
-    if cost <= K: res = max(res, div)
+    if cost <= K:
+        res = max(res, div)
 
 # print(DIFF)
 print(res)

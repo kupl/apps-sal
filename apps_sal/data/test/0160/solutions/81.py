@@ -3,7 +3,8 @@ def divisor(n):
     for i in range(1, int(n**0.5) + 1):
         if n % i == 0:
             ass.append(i)
-            if i != n // i: ass.append(n // i)
+            if i != n // i:
+                ass.append(n // i)
     return ass
 
 
@@ -20,7 +21,11 @@ for ans in sorted(divisor(sum(a)))[::-1]:
         p[-i - 2] += p[-i - 1]
     flag = False
     for i in range(n + 1):
-        if max(m[i], p[i]) > k: continue
-        if abs(m[i] - p[i]) % ans != 0: continue
+        if max(m[i], p[i]) > k:
+            continue
+        if abs(m[i] - p[i]) % ans != 0:
+            continue
         flag = True
-    if flag: print(ans); return
+    if flag:
+        print(ans)
+        return

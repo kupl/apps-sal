@@ -3,8 +3,10 @@ def get_divisor(num, max_val):
     num_sq = int(num**0.5)
     for k in range(1, num_sq + 1):
         if num % k == 0:
-            if k <= max_val: ret.append(k)
-            if num // k <= max_val: ret.append(num // k)
+            if k <= max_val:
+                ret.append(k)
+            if num // k <= max_val:
+                ret.append(num // k)
 
     return ret
 
@@ -33,7 +35,8 @@ def solve():
             if sum_k - red_k < 0:
                 break
 
-        if (sum_k - red_k) % d == 0: ret = max(ret, d)
+        if (sum_k - red_k) % d == 0:
+            ret = max(ret, d)
 
     print(ret)
 

@@ -5,7 +5,8 @@ A.sort()
 S = sum(A)
 candidates = []
 for i in range(1, int(S**0.5) + 1):
-    if S % i: continue
+    if S % i:
+        continue
     a, b = i, S // i
 
     candidates.append(a)

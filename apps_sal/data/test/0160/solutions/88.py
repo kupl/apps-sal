@@ -30,9 +30,11 @@ def solve():
     M = sum(A)
     divs = []
     for i in range(1, int(pow(M, 0.5)) + 1):
-        if M % i: continue
+        if M % i:
+            continue
         divs.append(i)
-        if i != M // i: divs.append(M // i)
+        if i != M // i:
+            divs.append(M // i)
     divs.sort(reverse=True)
 
     for d in divs:

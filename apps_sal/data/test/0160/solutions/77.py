@@ -13,7 +13,8 @@ def check(d: int):
         # modmin -> 0 を考える
         ans += modmin
         while modmin:
-            if not mod: return False  # modmin -> 0 にできない
+            if not mod:
+                return False  # modmin -> 0 にできない
             modmax = mod.pop()
             sub = d - modmax  # modmax -> d にする操作回数
             if sub <= modmin:

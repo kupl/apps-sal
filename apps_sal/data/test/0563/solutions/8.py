@@ -1,6 +1,8 @@
 def gcd(a, b):
-    if(a == 0 or b == 0): return a + b
-    else: return gcd(b, a % b);
+    if(a == 0 or b == 0):
+        return a + b
+    else:
+        return gcd(b, a % b)
 
 
 l, r = list(map(int, input().split()))

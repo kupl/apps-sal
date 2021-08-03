@@ -8,10 +8,12 @@ def solve():
     sumA = sum(A)
     D = []
     for i in range(1, sumA + 1):
-        if i ** 2 > sumA: break
+        if i ** 2 > sumA:
+            break
         if sumA % i == 0:
             D.append(i)
-            if i ** 2 != sumA: D.append(sumA // i)
+            if i ** 2 != sumA:
+                D.append(sumA // i)
     D.sort(reverse=True)
     for i, d in enumerate(D):
         L = []
@@ -30,11 +32,13 @@ def solve():
                 plus[count - 1 - i] = plus[count - i] + d - L[count - 1 - i]
             Op = K + 1
             for i in range(count - 1):
-                if abs(minus[i] - plus[i + 1]) % d == 0: Op = min(Op, max(minus[i], plus[i + 1]))
+                if abs(minus[i] - plus[i + 1]) % d == 0:
+                    Op = min(Op, max(minus[i], plus[i + 1]))
             if Op <= K:
                 print(d)
                 break
-    else: print(1)
+    else:
+        print(1)
 
     return 0
 

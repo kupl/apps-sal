@@ -8,23 +8,26 @@ def ok(v, x, a, y, b, k, m):
 
     for i in range(1, m + 1):
         if(i % gcdd == 0):
-            anss[i] = (v[idd] * (x + y)) // 100;
-            idd += 1;
-    maxmass = a; maxmastt = b; mx = x; mn = y;
+            anss[i] = (v[idd] * (x + y)) // 100
+            idd += 1
+    maxmass = a
+    maxmastt = b
+    mx = x
+    mn = y
     if(x > y):
-        maxmass, maxmastt, mx, mn = a, b, x, y;
+        maxmass, maxmastt, mx, mn = a, b, x, y
     else:
-        maxmass, maxmastt, mx, mn = b, a, y, x;
+        maxmass, maxmastt, mx, mn = b, a, y, x
 
     for i in range(1, m + 1):
         if(i % maxmass == 0 and anss[i] == 0):
-            anss[i] = (v[idd] * mx) // 100;
-            idd += 1;
+            anss[i] = (v[idd] * mx) // 100
+            idd += 1
     for i in range(1, m + 1):
         if(i % maxmastt == 0 and anss[i] == 0):
-            anss[i] = (v[idd] * mn) // 100;
-            idd += 1;
-    summ = 0;
+            anss[i] = (v[idd] * mn) // 100
+            idd += 1
+    summ = 0
     for i in range(1, m + 1):
         summ += anss[i]
     return (summ >= k)
