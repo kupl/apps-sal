@@ -1,4 +1,4 @@
-def multiply(n, m, acc = 0):
+def multiply(n, m, acc=0):
     if m <= 0:
         return acc
     else:

@@ -1,3 +1,3 @@
-def multiply(y,n):
-    
+def multiply(y, n):
+
     return y * n

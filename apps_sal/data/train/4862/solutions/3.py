@@ -4,7 +4,7 @@ def put_the_cat_on_the_table(cat, room):
     tableCoord = [-1, -1]
     for row in range(len(room)):
         for col in range(len(room[row])):
-            if room[row][col]==1:
+            if room[row][col] == 1:
                 tableCoord[0] = row
                 tableCoord[1] = col
     if tableCoord == [-1, -1]:
@@ -14,7 +14,7 @@ def put_the_cat_on_the_table(cat, room):
     move = [0, 0]
     move[0] = tableCoord[0] - cat[0]
     move[1] = tableCoord[1] - cat[1]
-    
+
     retStr = ""
     while move != [0, 0]:
         if move[0] > 0:

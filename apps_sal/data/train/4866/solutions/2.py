@@ -1,10 +1,12 @@
 def split_even_number0(n):
     if not n % 4:
-        return [n / 2 - 1,n / 2 + 1]
-    return [n / 2,n / 2]
+        return [n / 2 - 1, n / 2 + 1]
+    return [n / 2, n / 2]
+
 
 def split_even_number1(n):
-    return [1,n - 1]
+    return [1, n - 1]
+
 
 def split_even_number2(n):
     times = 1
@@ -14,8 +16,10 @@ def split_even_number2(n):
         times *= 2
     return [tmp] * times
 
+
 def split_even_number3(n):
     return [1] * n
+
 
 def split_all_even_numbers(numbers, way):
     result = []

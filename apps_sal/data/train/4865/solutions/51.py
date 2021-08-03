@@ -1,3 +1,3 @@
-def multiply(n, b): 
+def multiply(n, b):
     a = n * b
     return a

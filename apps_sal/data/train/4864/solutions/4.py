@@ -1,5 +1,6 @@
 import re
 
+
 def remove(stg):
     words = stg.split(" ")
     for i, group in enumerate(words):
@@ -7,4 +8,3 @@ def remove(stg):
         s = min(a, b, key=len)
         words[i] = f"{s}{w}{s}"
     return " ".join(words)
-

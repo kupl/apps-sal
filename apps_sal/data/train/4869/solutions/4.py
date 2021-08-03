@@ -1,5 +1,6 @@
 import json
 
+
 def validate_sons(data):
     if data["gender"] == "male" and len(data["children"]) >= 7:
         if all([x["gender"] == "male" for x in data["children"][:7]]):
@@ -7,7 +8,8 @@ def validate_sons(data):
                 if all([x["gender"] == "male" for x in data["children"][6]["children"][:7]]):
                     return True
     return False
-    
+
+
 def find_seventh_sons_of_seventh_sons(jstring):
     data = json.loads(jstring)
     result = []

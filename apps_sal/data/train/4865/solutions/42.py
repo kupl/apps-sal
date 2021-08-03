@@ -1,3 +1,5 @@
 def multiply(a, b):
     return a * b
-print(multiply(7,9))
+
+
+print(multiply(7, 9))

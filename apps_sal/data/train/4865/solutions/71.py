@@ -1,1 +1,1 @@
-multiply = lambda n,m: m*n
+def multiply(n, m): return m * n

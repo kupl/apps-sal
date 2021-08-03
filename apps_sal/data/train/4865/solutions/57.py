@@ -5,4 +5,5 @@ def multiply(*args):
     print(str(c))
     return c
 
-multiply(2,4,3)
+
+multiply(2, 4, 3)

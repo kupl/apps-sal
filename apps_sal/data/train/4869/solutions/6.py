@@ -1,13 +1,14 @@
 def find_seventh_sons_of_seventh_sons(jstring):
     return set(has_7_of_7_son(json.loads(jstring)))
-    
+
+
 def has_7_of_7_son(person, parent_is_7=False):
     counter = 0
     result = []
     broken = False
     if person['children']:
         for child in person['children']:
-            if child['gender'] == 'male': # and 
+            if child['gender'] == 'male':  # and
                 counter += 1
             else:
                 broken = True

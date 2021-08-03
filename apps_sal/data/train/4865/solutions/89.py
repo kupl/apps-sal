@@ -1,6 +1,4 @@
-def multiply(a,b):
-    return a*b
+def multiply(a, b):
+    return a * b
 
-    multiply(8,15)
-
-
+    multiply(8, 15)

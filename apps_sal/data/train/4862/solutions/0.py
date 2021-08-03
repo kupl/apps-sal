@@ -8,4 +8,3 @@ def put_the_cat_on_the_table(cat, room):
     ver, dy = "U" if ty < cy else "D", abs(ty - cy)
     hor, dx = "L" if tx < cx else "R", abs(tx - cx)
     return f"{hor * dx}{ver * dy}"
-
