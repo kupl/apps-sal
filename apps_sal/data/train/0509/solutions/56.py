@@ -42,4 +42,3 @@ dfs(0)
 
 for i in range(0, N):
     print((col[i]))
-

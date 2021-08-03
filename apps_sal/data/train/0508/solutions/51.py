@@ -1,8 +1,8 @@
 def main():
     import sys
-    input = lambda : sys.stdin.readline().rstrip()
+    def input(): return sys.stdin.readline().rstrip()
 
-    from heapq import heappush, heappop 
+    from heapq import heappush, heappop
 
     running = []
     events = []
@@ -14,8 +14,8 @@ def main():
         time = max(s - x, 0)
         if t - x < 0:
             continue
-        events.append((s - x, x, 1)) # 追加イベント
-        events.append((t - x, x, 0)) # 削除イベント
+        events.append((s - x, x, 1))  # 追加イベント
+        events.append((t - x, x, 0))  # 削除イベント
     events.sort()
     ans = []
     idx = -1
@@ -41,10 +41,10 @@ def main():
                 break
         if flag:
             print((-1))
+
+
 def __starting_point():
     main()
-
-
 
 
 __starting_point()

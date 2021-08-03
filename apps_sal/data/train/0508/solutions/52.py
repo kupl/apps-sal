@@ -33,11 +33,12 @@ def main():
             ans[idx] = e.pos
             see[idx] = right
             idx += 1
-            
+
     print(*ans, sep='\n')
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

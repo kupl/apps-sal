@@ -15,8 +15,8 @@ D = [int(input()) for j in range(q)]
 A = [-1 for j in range(q)]
 B = [-1 for j in range(q)]
 for i in range(n):
-    l = bisect.bisect_left(D, S[i]-X[i])
-    r = bisect.bisect_left(D, T[i]-X[i])
+    l = bisect.bisect_left(D, S[i] - X[i])
+    r = bisect.bisect_left(D, T[i] - X[i])
     while l < r:
         if B[l] == -1:
             A[l] = X[i]
@@ -25,4 +25,3 @@ for i in range(n):
         else:
             l = B[l]
 print(*A, sep='\n')
-

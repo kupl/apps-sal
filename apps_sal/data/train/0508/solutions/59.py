@@ -1,13 +1,13 @@
 import heapq
-N,Q = list(map(int, input().split()))
+N, Q = list(map(int, input().split()))
 
-S,T,X = [],[],[]
+S, T, X = [], [], []
 
 Ev = []
 for _ in range(N):
-  s,t,x = list(map(int, input().split()))
-  Ev.append((s-x,True,x))
-  Ev.append((t-x,False,x))
+    s, t, x = list(map(int, input().split()))
+    Ev.append((s - x, True, x))
+    Ev.append((t - x, False, x))
 """
 2 5 6
 5 -1
@@ -18,33 +18,32 @@ for _ in range(N):
 0 -1
 """
 Ev.sort()
-#print(Ev)
+# print(Ev)
 # C++のSetはminもO(logN)で取れるが、Pythonは無理。
 # setとheapqを併用すると計算量が実現できる。
 h = []
 closed = set()
 eidx = 0
 for i in range(Q):
-  # dはsortedでinputされる。
-  d = int(input())
-  #Query.append(d)
-  while eidx < 2*N and Ev[eidx][0] <= d:
-    #pop
-    t,e,x = Ev[eidx]
-    eidx += 1
-    if e:
-      heapq.heappush(h, x)
-      closed.add(x)
-    else:
-      closed.remove(x)
-      
-  # heqpqの最小値がsetに含まれている間、捨て続ければ、setの要素とheapqの要素が一致する
-  while h and h[0] not in closed:
-    heapq.heappop(h)
-    
-  # assert( len(h) == len(set) )
-  if h:
-    print((h[0]))
-  else:
-    print((-1))
+    # dはsortedでinputされる。
+    d = int(input())
+    # Query.append(d)
+    while eidx < 2 * N and Ev[eidx][0] <= d:
+        # pop
+        t, e, x = Ev[eidx]
+        eidx += 1
+        if e:
+            heapq.heappush(h, x)
+            closed.add(x)
+        else:
+            closed.remove(x)
 
+    # heqpqの最小値がsetに含まれている間、捨て続ければ、setの要素とheapqの要素が一致する
+    while h and h[0] not in closed:
+        heapq.heappop(h)
+
+    # assert( len(h) == len(set) )
+    if h:
+        print((h[0]))
+    else:
+        print((-1))

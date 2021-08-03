@@ -11,7 +11,7 @@ for u, v, c in uvc:
     c -= 1
     edge[u].append((v, c))
     edge[v].append((u, c))
-    
+
 label = [-1] * N
 label[0] = 0
 

@@ -3,6 +3,7 @@ class Solution:
         s = set(initial)
         go_visit = set()
         del_node, length = min(initial), 0
+
         def helper(node, visit):
             for i in range(len(graph[node])):
                 if graph[node][i] == 1 and i not in visit:
@@ -20,5 +21,3 @@ class Solution:
                         length = len(visit)
                 go_visit |= visit
         return del_node
-                    
-

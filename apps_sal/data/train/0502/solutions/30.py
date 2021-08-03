@@ -5,7 +5,7 @@ class Solution(object):
                 if graph[node][neighbor] == 1 and neighbor not in visited:
                     visited.add(neighbor)
                     dfs(neighbor, visited)
-        
+
         res, max_size = min(initial), 0
         i_set = set(initial)
         total_visited = set()
@@ -20,5 +20,3 @@ class Solution(object):
                         max_size = len(visited)
                 total_visited |= visited
         return res
-                                                 
-

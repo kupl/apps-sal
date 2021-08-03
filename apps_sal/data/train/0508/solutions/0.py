@@ -2,13 +2,14 @@ from heapq import heapify, heappush, heappop
 import sys
 input = sys.stdin.readline
 
+
 def solve():
     N, Q = list(map(int, input().split()))
     events = []
     for i in range(N):
         S, T, X = list(map(int, input().split()))
-        events.append((S-X-0.5, 1, X))
-        events.append((T-X-0.5, 0, X))
+        events.append((S - X - 0.5, 1, X))
+        events.append((T - X - 0.5, 0, X))
     for i in range(Q):
         D = int(input())
         events.append((D, 2, i))
@@ -35,4 +36,3 @@ def solve():
 
 
 solve()
-

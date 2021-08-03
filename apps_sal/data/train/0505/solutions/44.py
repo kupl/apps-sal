@@ -1,7 +1,7 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
         sl = list(s)
-        
+
         def sweep(begin, end, step, open_symbol, close_symbol):
             level = 0
             k = begin
@@ -14,7 +14,7 @@ class Solution:
                     sl[k] = sl[i]
                     k += step
             return k - step
-        
+
         level = 0
         r = sweep(0, len(s), 1, '(', ')')
         l = sweep(r, -1, -1, ')', '(')

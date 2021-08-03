@@ -20,7 +20,7 @@ class Solution:
             elif sizes[i] == maxSpread:
                 maxNode = min(maxNode, i)
         return maxNode
-    
+
     def dfs(self, graph, node, visited, vertices, initial):
         initials = 0
         if visited[node]:
@@ -33,5 +33,3 @@ class Solution:
             if graph[node][i] == 1:
                 initials += self.dfs(graph, i, visited, vertices, initial)
         return initials
-        
-

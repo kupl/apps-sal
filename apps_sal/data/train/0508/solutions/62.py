@@ -3,19 +3,21 @@ import sys
 
 stdin = sys.stdin
 
-ns = lambda: stdin.readline().rstrip()
-ni = lambda: int(stdin.readline().rstrip())
-nm = lambda: map(int, stdin.readline().split())
-nl = lambda: list(map(int, stdin.readline().split()))
+
+def ns(): return stdin.readline().rstrip()
+def ni(): return int(stdin.readline().rstrip())
+def nm(): return map(int, stdin.readline().split())
+def nl(): return list(map(int, stdin.readline().split()))
+
 
 def main():
-    n,q = nm()
+    n, q = nm()
     tl = []
     ins = list()
     dlt = list()
     vv = [tuple(nm()) for _ in range(n)]
-    tl = [(s-x, 1, x) for s, _, x in vv]
-    tl.extend([(t-x, 0, x) for _, t, x in vv])
+    tl = [(s - x, 1, x) for s, _, x in vv]
+    tl.extend([(t - x, 0, x) for _, t, x in vv])
     ww = [ni() for _ in range(q)]
     tl.extend([(t, 2) for t in ww])
     tl.sort()
@@ -30,7 +32,10 @@ def main():
                 hq.heappop(dlt)
         else:
             print(-1 if not ins else ins[0])
-    
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

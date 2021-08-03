@@ -2,17 +2,19 @@ from collections import deque
 N, M = list(map(int, input().split()))
 c, to = dict(), [[] for _ in range(N)]
 
+
 def maxmin(x, y):
     if x < y:
         x, y = y, x
-    return (x,y)
+    return (x, y)
+
 
 for i in range(M):
-    x,y,z = list(map(int, input().split()))
-    x,y = x-1,y-1
-    x,y = maxmin(x,y)
-    if (x,y) not in c:
-        c[(x,y)] = z
+    x, y, z = list(map(int, input().split()))
+    x, y = x - 1, y - 1
+    x, y = maxmin(x, y)
+    if (x, y) not in c:
+        c[(x, y)] = z
         to[x].append(y)
         to[y].append(x)
 
@@ -33,4 +35,3 @@ while q:
 
 for i in mark:
     print(i)
-

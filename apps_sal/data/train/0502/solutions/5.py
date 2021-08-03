@@ -2,9 +2,9 @@ class Solution:
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         if len(graph) == 0:
             return 0
-        
+
         g = dict()
-        
+
         for i in range(len(graph)):
             for j in range(len(graph[i])):
                 if graph[i][j]:
@@ -12,11 +12,11 @@ class Solution:
                         g[i].append(j)
                     else:
                         g[i] = [j]
-        
+
         groups = []
         initialSet = set(initial)
         numOfNodes = [0] * len(graph)
-        
+
         for v, e in list(g.items()):
             if v not in initialSet:
                 continue
@@ -36,28 +36,20 @@ class Solution:
                     num += 1
             groups.append(group)
             numOfNodes[v] = num
-                
-        
+
         canRemove = set([group[0] for group in groups if len(group) == 1])
         # print(groups)
         # print(numOfNodes)
         # print(canRemove)
-        
+
         if len(canRemove) == 0:
             return min(initial)
-        
+
         result = -1
         for vertex in initial:
             if vertex in canRemove and (result == -1 or numOfNodes[vertex] > numOfNodes[result]):
                 result = vertex
             elif vertex in canRemove and numOfNodes[vertex] == numOfNodes[result] and vertex < result:
                 result = vertex
-        
-        return result
-        
-        
-        
-        
-       
-            
 
+        return result

@@ -8,7 +8,7 @@ class Solution:
                 stack.append('(')
                 to_delete_idx.append(i)
             if s[i] == ')':
-                if not stack or stack[-1]==')':
+                if not stack or stack[-1] == ')':
                     stack.append(')')
                     to_delete_idx.append(i)
                 else:
@@ -17,6 +17,5 @@ class Solution:
         for i in range(len(s)):
             if i not in to_delete_idx:
                 ans += s[i]
-                
-        return ans
 
+        return ans

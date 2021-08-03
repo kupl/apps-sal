@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -50,6 +51,7 @@ class UnionFind():
     def __str__(self):
         return '\n'.join(f'{r}: {m}' for r, m in list(self.all_group_members().items()))
 
+
 n, m = list(map(int, input().split()))
 un = UnionFind(n)
 next_edge_dic = {}
@@ -92,5 +94,3 @@ else:
         visited.add(edge)
     for i in range(n):
         print((ans[i]))
-
-

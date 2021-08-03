@@ -11,10 +11,10 @@ class Solution:
                 else:
                     continue
             stack.append(i)
-                
+
         if left == 0:
             return ''.join(stack)
-        
+
         ans = ''
         while stack:
             val = stack.pop()
@@ -22,5 +22,5 @@ class Solution:
                 left -= 1
                 continue
             ans = val + ans
-        
+
         return ans

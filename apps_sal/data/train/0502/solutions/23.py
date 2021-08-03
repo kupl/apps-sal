@@ -1,11 +1,11 @@
 class Solution:
-    
+
     def calcConnectedNodes(self, graph, node):
         visited = set()
         toVisit = []
         toVisit.append(node)
         while len(toVisit) != 0:
-            
+
             curNode = toVisit.pop()
             if curNode in visited:
                 continue
@@ -14,14 +14,13 @@ class Solution:
                 if graph[curNode][i] == 1:
                     toVisit.append(i)
         return visited
-    
-    
+
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         initialSet = set(initial)
         maxNodesConnected = -1
         nodeToRemove = -1
         for node in initial:
-            connectedNodes = self.calcConnectedNodes(graph, node)   
+            connectedNodes = self.calcConnectedNodes(graph, node)
             intersected = connectedNodes.intersection(initialSet)
             # even if i removed this node, there are other nodes that will infect it, so no need
             if len(intersected) >= 2:
@@ -32,4 +31,3 @@ class Solution:
         if nodeToRemove == -1:
             return min(initial)
         return nodeToRemove
-

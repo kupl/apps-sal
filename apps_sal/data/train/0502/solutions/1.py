@@ -5,7 +5,7 @@ class Solution:
                 if graph[node][connect] == 1 and connect not in vis:
                     vis.add(connect)
                     dfs(connect, vis)
-                    
+
         init = set(initial)
         total_vis = set()
         del_node, subgraph_len = min(initial), 0

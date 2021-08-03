@@ -65,4 +65,3 @@ while S:
         ans[v] = c if c != ans[u] else c % N + 1
         S += [v]
 print(*ans[1:], sep='\n')
-

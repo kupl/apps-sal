@@ -1,5 +1,12 @@
+from collections import defaultdict
 from sys import stdin, setrecursionlimit
-import bisect, collections, copy, heapq, itertools, math, string
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import string
 setrecursionlimit(10**8)
 
 INF = float("inf")
@@ -9,8 +16,9 @@ MOD = 1000000007
 def input():
     return stdin.readline().strip()
 
-#unionfind
-from collections import defaultdict
+
+# unionfind
+
 
 class UnionFind():
     def __init__(self, n):
@@ -73,13 +81,14 @@ def main():
         u, v, c = map(int, input().split())
         u -= 1
         v -= 1
-        if uf.same(u, v): continue
-        adj[u].append((v, c))    
+        if uf.same(u, v):
+            continue
+        adj[u].append((v, c))
         adj[v].append((u, c))
         uf.union(u, v)
 
     queue = collections.deque([0])
-    ans = [-1]*n
+    ans = [-1] * n
     ans[0] = 1
 
     while queue:
@@ -88,33 +97,21 @@ def main():
         for edge in adj[now]:
             child = edge[0]
             enum = edge[1]
-            if ans[child] != -1: continue
+            if ans[child] != -1:
+                continue
             queue.append(child)
             if pnum == enum:
                 ans[child] = 1 if pnum != 1 else 2
             else:
                 ans[child] = enum
-    
+
     print(*ans, sep="\n")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     return
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

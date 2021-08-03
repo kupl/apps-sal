@@ -23,6 +23,7 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
+
 n, m = map(int, input().split())
 
 g = [[] for _ in range(n)]
@@ -33,14 +34,14 @@ for _ in range(m):
         g[u].append([v, c])
         g[v].append([u, c])
         uf.union(u, v)
-#print(g)
+# print(g)
 
 
 node_val = [None] * n
 node_val[0] = 0
 que = [0]
 seen = set()
-#BFS
+# BFS
 while que != []:
     temp = []
     for node in que:
@@ -50,11 +51,11 @@ while que != []:
             if next_node in seen:
                 continue
             if node_val[node] == c:
-                node_val[next_node] = (c+1) % n
+                node_val[next_node] = (c + 1) % n
             else:
                 node_val[next_node] = c
 
-            #update
+            # update
             temp.append(next_node)
 
         seen.add(node)

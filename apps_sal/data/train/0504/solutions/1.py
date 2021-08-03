@@ -13,4 +13,3 @@ class Solution:
                 for k in temp:
                     stack.append(k)
         return ''.join(stack)
-

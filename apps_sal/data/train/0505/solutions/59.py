@@ -10,7 +10,7 @@ class Solution:
                     continue
                 counter -= 1
             newS += c
-            
+
         result = ''
         for c in newS[::-1]:
             if c == '(' and counter > 0:
@@ -18,5 +18,3 @@ class Solution:
             else:
                 result = c + result
         return result
-                
-

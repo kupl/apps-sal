@@ -3,8 +3,8 @@ n, q = list(map(int, input().split()))
 event = []
 for _ in range(n):
     s, t, x = list(map(int, input().split()))
-    event.append((s-x, 1, x))
-    event.append((t-x, -1, x))
+    event.append((s - x, 1, x))
+    event.append((t - x, -1, x))
 
 event.sort()
 heap = []
@@ -43,7 +43,3 @@ while index < q:
     index += 1
 
 print(("\n".join(map(str, ans))))
-
-
-
-

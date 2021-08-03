@@ -1,4 +1,6 @@
 import heapq
+
+
 class Solution:
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         nodes = set(initial)
@@ -6,6 +8,7 @@ class Solution:
         best = 0
         initial.sort()
         index = initial[0]
+
         def dfs(start):
             count = 0
             stack = [start]

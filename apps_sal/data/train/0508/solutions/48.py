@@ -1,18 +1,18 @@
 import heapq
 
-N, Q = map(int,input().split())
+N, Q = map(int, input().split())
 
 events = []
 
 for _ in range(N):
-    S, T, X = map(int,input().split())
+    S, T, X = map(int, input().split())
 
-    events.append([S-X, 1, X])
-    events.append([T-X, 0, X])
+    events.append([S - X, 1, X])
+    events.append([T - X, 0, X])
 
 for _ in range(Q):
     D = int(input())
-    events.append([D,2,0])
+    events.append([D, 2, 0])
 
 events.sort()
 

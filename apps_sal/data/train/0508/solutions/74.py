@@ -1,16 +1,18 @@
 # coding: utf-8
 import sys
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 N, Q = lr()
 STX = [tuple(lr()) for _ in range(N)]
 event = []
 for s, t, x in STX:
-    event.append((s-x, 0, x))
-    event.append((t-x, -1, x))
+    event.append((s - x, 0, x))
+    event.append((t - x, -1, x))
 
 for i in range(Q):
     d = ir()
@@ -41,4 +43,3 @@ for a, b, c in event:
 
 print(('\n'.join(map(str, answer))))
 # 19
-

@@ -32,4 +32,4 @@ class Solution:
                 elif size[c] == size[colors[ans]] and x < ans:
                     ans = x
 
-        return ans if ans < float('inf') else min(initial)    
+        return ans if ans < float('inf') else min(initial)

@@ -1,16 +1,20 @@
+from collections import deque
+import sys
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
 
-    def find(self, x): #親を返す
+    def find(self, x):  # 親を返す
         if self.parents[x] < 0:
             return x
         else:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    def unite(self, x, y): #和集合の生成
+    def unite(self, x, y):  # 和集合の生成
         x = self.find(x)
         y = self.find(y)
 
@@ -23,24 +27,24 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-    def size(self, x): #所属する集合の大きさ
+    def size(self, x):  # 所属する集合の大きさ
         return -self.parents[self.find(x)]
 
-    def same(self, x, y): #同じ集合に属しているか判定
+    def same(self, x, y):  # 同じ集合に属しているか判定
         return self.find(x) == self.find(y)
 
-    def members(self, x): #同じ集合に属する要素全列挙
+    def members(self, x):  # 同じ集合に属する要素全列挙
         root = self.find(x)
         return [i for i in range(self.n) if self.find(i) == root]
 
-    def roots(self): #集合のリーダー全列挙
+    def roots(self):  # 集合のリーダー全列挙
         return [i for i, x in enumerate(self.parents) if x < 0]
 
-    def group_count(self): #集合の数
+    def group_count(self):  # 集合の数
         return len(self.roots())
 
-    def all_group_members(self): #辞書型,{(リーダーの番号):(その集合の要素全列挙)}
-        self.group={r:[] for r in self.roots()}
+    def all_group_members(self):  # 辞書型,{(リーダーの番号):(その集合の要素全列挙)}
+        self.group = {r: [] for r in self.roots()}
         for i in range(self.n):
             self.group[self.find(i)].append(i)
         return self.group
@@ -48,9 +52,8 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-from collections import deque
-import sys
-input=sys.stdin.readline
+
+input = sys.stdin.readline
 
 n, m = map(int, input().split())
 uf = UnionFind(n)
@@ -75,11 +78,11 @@ while que:
         if ans[i] != -1:
             continue
         if ans[now] == j:
-            ans[i] = (j+1)%n
+            ans[i] = (j + 1) % n
             if ans[i] == 0:
                 ans[i] = n
         else:
             ans[i] = j
         que.append(i)
 
-print(*ans, sep = "\n")
+print(*ans, sep="\n")

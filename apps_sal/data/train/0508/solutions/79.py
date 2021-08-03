@@ -6,8 +6,8 @@ N, Q = (int(i) for i in input().split())
 L = [0] * 2 * N
 for i in range(N):
     S, T, X = (int(i) for i in input().split())
-    L[2 * i] = (S-X, X, 1)
-    L[2 * i + 1] = (T-X, X, 0)
+    L[2 * i] = (S - X, X, 1)
+    L[2 * i + 1] = (T - X, X, 0)
 
 L.sort(reverse=True)
 

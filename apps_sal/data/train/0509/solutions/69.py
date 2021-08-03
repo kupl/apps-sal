@@ -3,6 +3,7 @@ from collections import deque
 from heapq import heappush, heappop
 def input(): return sys.stdin.readline().strip()
 
+
 def main():
     N, M = list(map(int, input().split()))
     repn = [[] for _ in range(N + 1)]
@@ -34,20 +35,24 @@ def main():
 
     while edge_q:
         c, u, v = heappop(edge_q)
-        if visited[v]: continue
+        if visited[v]:
+            continue
         visited[v] = 1
         used_edge[u].append((c, v))
         for nc, nv in repn[v]:
-            if not visited[nv]: heappush(edge_q, (nc, v, nv))
-        
+            if not visited[nv]:
+                heappush(edge_q, (nc, v, nv))
+
     # Labeling
     label = [0] * (N + 1)
     cand = set(range(1, N + 1))
-    for c, v in used_edge[1]: cand.discard(c)
+    for c, v in used_edge[1]:
+        cand.discard(c)
     label[1] = cand.pop()
 
     q = deque()
-    for c, v in used_edge[1]: q.append((c, 1, v))
+    for c, v in used_edge[1]:
+        q.append((c, 1, v))
     while q:
         c, u, v = q.popleft()
         if label[u] == c:
@@ -58,14 +63,13 @@ def main():
             q.append((nc, v, nv))
 
     for i, l in enumerate(label):
-        if i == 0: continue
+        if i == 0:
+            continue
         print(l)
+
 
 def __starting_point():
     main()
-
-
-
 
 
 __starting_point()

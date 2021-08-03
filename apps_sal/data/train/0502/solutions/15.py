@@ -57,7 +57,7 @@ class Solution:
                 temp = [-1, 0]
                 stack = [i]
                 visited.append(i)
-                stack_num = 1;
+                stack_num = 1
                 while stack:
                     index = stack.pop(0)
                     if index in initial:
@@ -74,5 +74,3 @@ class Solution:
                         result[0] = temp[0]
                         result[1] = stack_num
         return result[0] if result[0] != -1 else initial[0]
-
-

@@ -11,6 +11,7 @@ for u, v, c in zip(*[iter(UVC)] * 3):
 memo = [-1] * (N + 1)
 memo[1] = 1
 
+
 def dfs(cur, par):
     for nxt, c in E[cur]:
         if memo[nxt] != -1 or nxt == par:
@@ -19,6 +20,7 @@ def dfs(cur, par):
             c = 1 + (c == 1)
         memo[nxt] = c
         dfs(nxt, cur)
+
 
 dfs(1, 0)
 

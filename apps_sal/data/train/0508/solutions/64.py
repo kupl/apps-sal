@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
 
     n, q = map(int, input().split())
@@ -9,20 +10,20 @@ def main():
 
     for i in range(n):
         s, t, x = map(int, input().split())
-        V.append((s-x, x, 1)) #1: insert
-        V.append((t-x, x, 0)) #0: delete
+        V.append((s - x, x, 1))  # 1: insert
+        V.append((t - x, x, 0))  # 0: delete
 
     D = []
     for i in range(q):
         d = int(input())
-        V.append((d, i, 2)) #2: query
+        V.append((d, i, 2))  # 2: query
 
-    V.sort(key=lambda x:(x[0], x[2]))
+    V.sort(key=lambda x: (x[0], x[2]))
     se = set()
     hq = []
     import heapq
     heapq.heapify(hq)
-    ans = [-1]*q
+    ans = [-1] * q
     for t, v, p in V:
         if p == 1:
             se.add(v)
@@ -38,6 +39,9 @@ def main():
     for i in range(q):
         print(ans[i])
 
+
 def __starting_point():
     main()
+
+
 __starting_point()
