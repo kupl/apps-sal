@@ -10,7 +10,7 @@ def main():
     sort1 = sorted(s1)
     # print(sort1)
     # print(sort2)
-    maxs = 0;
+    maxs = 0
     j = 0
     for i in range(n):
         while(j != n and sort1[i] >= sort2[j]):

@@ -22,9 +22,11 @@ def main():
             for j in range(blocksize):
                 sys.stdout.write(str(bus) + ' ')
                 i += 1
-                if i == n: break
+                if i == n:
+                    break
             bus += 1
-            if(bus > k): bus = 1
+            if(bus > k):
+                bus = 1
         blocksize *= k
         sys.stdout.write('\n')
 

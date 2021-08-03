@@ -6,8 +6,10 @@ def test(id1, id2, l, n):
     for i in range(n):
         if a * i + b * l[i] + c != 0:
             d += [i]
-    if len(d) == 0: return False
-    if len(d) == 1: return True
+    if len(d) == 0:
+        return False
+    if len(d) == 1:
+        return True
 
     aa = l[d[0]] - l[d[1]]
     bb = d[1] - d[0]

@@ -13,7 +13,8 @@ def no(): print('NO')
 
 if (path.exists('input.txt')):
     #------------------Sublime--------------------------------------#
-    sys.stdin = open('input.txt', 'r'); sys.stdout = open('output.txt', 'w');
+    sys.stdin = open('input.txt', 'r')
+    sys.stdout = open('output.txt', 'w')
     def I(): return (int(input()))
     def In(): return(list(map(int, input().split())))
 else:
@@ -67,7 +68,8 @@ P = 1000000007
 
 
 def __starting_point():
-    for _ in range(I()): main()
+    for _ in range(I()):
+        main()
     #for _ in range(1):main()
 
 

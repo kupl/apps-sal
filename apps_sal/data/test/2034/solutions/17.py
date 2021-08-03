@@ -19,7 +19,8 @@ def dfs(x):
             if v[j] == -1:
                 s.append(j)
                 v[j] = x
-            elif j != v[x]: return 0
+            elif j != v[x]:
+                return 0
     return 1
 
 

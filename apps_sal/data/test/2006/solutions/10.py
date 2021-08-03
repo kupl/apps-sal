@@ -13,7 +13,7 @@ for i in range(0, n):
     if pS < pG:
         print(-1)
         break
-    li[pS - pG] = 1;
+    li[pS - pG] = 1
 else:
     ans = 0
     for i in range(1, 1002):

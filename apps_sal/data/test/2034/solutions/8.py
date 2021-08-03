@@ -15,7 +15,8 @@ def bfs(nom):
         nom, pre = l.pop()
         for x in E[nom]:
             if x != pre:
-                if f[x]: k = 0
+                if f[x]:
+                    k = 0
                 else:
                     f[x] = 1
                     l += [(x, nom)]
@@ -24,5 +25,6 @@ def bfs(nom):
 
 ans = 0
 for i in range(1, n + 1):
-    if f[i] == 0: ans += bfs(i)
+    if f[i] == 0:
+        ans += bfs(i)
 print(ans)
