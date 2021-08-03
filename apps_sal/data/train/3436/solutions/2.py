@@ -1,5 +1,6 @@
 import re
 
+
 def err_bob(s):
     return re.sub(
         r'[bcdfghjklmnpqrstvwxyz]\b',

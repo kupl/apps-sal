@@ -1,6 +1,7 @@
 from itertools import combinations, chain, count
 from functools import lru_cache
 
+
 def segmentations(a):
     def split_at(js):
         i = 0
@@ -14,9 +15,11 @@ def segmentations(a):
         for sep in combinations(r, k):
             yield split_at(sep)
 
+
 @lru_cache(maxsize=None)
 def value(x, k):
     return sum(int(''.join(L)) for L in chain.from_iterable(segmentations(str(x * k))))
 
+
 def next_higher(start_value, k):
-    return next(x for x in count(start_value+1) if x == value(x, k))
+    return next(x for x in count(start_value + 1) if x == value(x, k))

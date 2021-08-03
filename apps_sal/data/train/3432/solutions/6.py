@@ -1,5 +1,5 @@
 def cipher(phrase: str):
-    mass = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    mass = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     j = 0
     cip = []
     num = []
@@ -11,9 +11,9 @@ def cipher(phrase: str):
         if y >= 2:
             x += 1
         num.append(y)
-        y+=1
+        y += 1
         num.append(z)
-        z+=1
+        z += 1
 
     for i in range(0, len(phrase)):
         for j in range(0, len(mass)):
@@ -24,5 +24,5 @@ def cipher(phrase: str):
             elif phrase[i] == " ":
                 cip.append(" ")
                 break
-                
+
     return (''.join(cip))

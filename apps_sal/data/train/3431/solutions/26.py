@@ -17,11 +17,12 @@ def warn_the_sheep(queue):
                 if sheep_count == 0:
                     return message_one
                 else:
-                    return ('Oi! Sheep number ' + num_to_str(sheep_count) + 
+                    return ('Oi! Sheep number ' + num_to_str(sheep_count) +
                             '! You are about to be eaten by a wolf!')
         sheep_count += 1
         out_count += 1
-    
+
+
 def reverse(arr):
     arr_l = length(arr)
     r_arr = [0] * arr_l
@@ -30,7 +31,8 @@ def reverse(arr):
         r_arr[count] = arr[arr_l - 1 - count]
         count += 1
     return r_arr
-    
+
+
 def length(arr):
     count = 0
     try:
@@ -39,7 +41,8 @@ def length(arr):
             count += 1
     except:
         return count
-    
+
+
 def num_to_str(num):
     nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     str_num = ''

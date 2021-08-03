@@ -4,6 +4,6 @@ def lowest_temp(t):
     t = t.split()
     low = int(t[0])
     for i in t:
-        if  int(i) < low:
+        if int(i) < low:
             low = int(i)
     return low
