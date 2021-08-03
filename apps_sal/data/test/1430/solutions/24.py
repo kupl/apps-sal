@@ -10,7 +10,8 @@ def main():
     S = input()
     nums = []
     # 1の個数、0の個数を交互に記録していく
-    if S[0] == '0': nums.append(0)
+    if S[0] == '0':
+        nums.append(0)
     i = 0
     while i < N:
         j = i
@@ -18,7 +19,8 @@ def main():
             j += 1
         nums.append(j - i)
         i = j
-    if S[-1] == '0': nums.append(0)
+    if S[-1] == '0':
+        nums.append(0)
     # print(nums)
     nums = [0] + list(accumulate(nums))
     # print(nums)

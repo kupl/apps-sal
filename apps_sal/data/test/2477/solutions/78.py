@@ -11,8 +11,10 @@ def binary_search2(func, n_min, n_max):
     while right - left > 1:
         middle = (left + right) // 2
         y_middle = func(middle)
-        if y_middle: right = middle
-        else: left = middle
+        if y_middle:
+            right = middle
+        else:
+            left = middle
 
     return right
 

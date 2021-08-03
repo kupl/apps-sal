@@ -18,8 +18,10 @@ if K == 0:
 else:
     cnt = 0
     while True:
-        if left >= N: break
-        if right <= left: right = left + 1
+        if left >= N:
+            break
+        if right <= left:
+            right = left + 1
         while (right < N) and ((cnt < K) or ((cnt == K) and ((S[right] == S[right - 1]) or S[right] == '1'))):
             if (S[right] != S[right - 1]) and (S[right - 1] == '0'):
                 cnt += 1

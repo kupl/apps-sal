@@ -22,7 +22,8 @@ def is_co_prime(A, B):
 
 for i in range(n - 1):
     check = is_co_prime(a[i], a[i + 1])
-    if check[0]: continue
+    if check[0]:
+        continue
     else:
         T = int(sqrt(check[1]))
         while True:

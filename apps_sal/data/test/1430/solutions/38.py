@@ -20,9 +20,9 @@ if s[len(s) - 1] == '0':
     # print(d)
 
 if len(res) <= 2 * k + 1:
-    ans = 0;
+    ans = 0
     for d in res:
-        ans += d[1];
+        ans += d[1]
 
     print(ans)
     return

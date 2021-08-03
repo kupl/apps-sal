@@ -2,8 +2,10 @@ def is_ok(x):
     sum = 0
     for i in range(n):
         sum += (a[i] + x - 1) // x - 1
-    if sum <= k: return True
-    else: return False
+    if sum <= k:
+        return True
+    else:
+        return False
 
 
 def meguru_bisect(ng, ok):

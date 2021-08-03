@@ -6,7 +6,7 @@ def factorial(k):
 
 
 n, k = list(map(int, input().split()))
-ans = 0;
+ans = 0
 
 
 def A(n, m):

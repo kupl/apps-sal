@@ -9,12 +9,13 @@ sys.setrecursionlimit(1000000)
 MOD = 10 ** 9 + 7
 MOD2 = 998244353
 INF = float('inf')
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
 
-NI = lambda: int(input())
-NMI = lambda: map(int, input().split())
-NLI = lambda: list(NMI())
-SI = lambda: input()
+
+def NI(): return int(input())
+def NMI(): return map(int, input().split())
+def NLI(): return list(NMI())
+def SI(): return input()
 
 
 def main():

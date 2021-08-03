@@ -35,7 +35,8 @@ left = 0
 ans = s
 while right < M:
     for i in range(2):
-        if not right < M: break
+        if not right < M:
+            break
         s += abs(A[right])
         right += 1
 

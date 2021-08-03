@@ -12,7 +12,8 @@ def f(x):
         return False
 
 
-l = 0; r = 10**10
+l = 0
+r = 10**10
 while r - l > 1:
     x = (l + r) // 2
     if f(x):

@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 n, p = map(int, input().split())
 A = sorted([int(i) for i in input().split()])
 A = [A[i] - int(i) for i in range(n)]

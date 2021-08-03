@@ -22,7 +22,8 @@ def binsearch(minz, maxz):
     for i in range(N):
         thiscut = int((logs[i] + mid - 1) / mid) - 1
         thislen = int((logs[i] + thiscut) / (thiscut + 1))
-        if maxx < thislen: maxx = thislen
+        if maxx < thislen:
+            maxx = thislen
     return maxx
 
 

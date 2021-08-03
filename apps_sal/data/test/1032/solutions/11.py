@@ -1,5 +1,6 @@
 import copy
-con = 10 ** 9 + 7; INF = float("inf")
+con = 10 ** 9 + 7
+INF = float("inf")
 
 
 def getlist():
@@ -25,7 +26,8 @@ def Binary_Search(N, P, A, dif):
 
         # 尺取り
         array = [None] * N
-        i = 0; j = 0
+        i = 0
+        j = 0
         while True:
             if B[j] <= i:
                 j += 1

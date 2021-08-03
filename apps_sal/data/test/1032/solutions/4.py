@@ -18,8 +18,10 @@ def bnpleft(a):
     l = -1
     while r - l > 1:
         h = (r + l) // 2
-        if ican(a, h): r = h
-        else: l = h
+        if ican(a, h):
+            r = h
+        else:
+            l = h
     return l
 
 
@@ -49,8 +51,10 @@ def bnpr(a, p, left):
     r = max(a)
     while r - l > 1:
         h = (r + l) // 2
-        if fa(a, h, p): l = h
-        else: r = h
+        if fa(a, h, p):
+            l = h
+        else:
+            r = h
     return l
 
 

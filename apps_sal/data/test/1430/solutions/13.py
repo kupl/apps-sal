@@ -3,10 +3,13 @@ s = [int(i) for i in input()]
 l1, l0 = [], []
 b, c = 1, 0
 for i in s:
-    if b == i: c += 1
+    if b == i:
+        c += 1
     else:
-        if b: l1 += [c]
-        else: l0 += [c]
+        if b:
+            l1 += [c]
+        else:
+            l0 += [c]
         c = 1
     b = i
 if b:

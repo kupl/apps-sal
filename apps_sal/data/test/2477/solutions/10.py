@@ -21,9 +21,9 @@ def binary_search():
     while (right - left) > 1:
         mid = left + (right - left) // 2
         if (isOK(mid)):
-            right = mid;
+            right = mid
         else:
-            left = mid;
+            left = mid
 
     return right
 

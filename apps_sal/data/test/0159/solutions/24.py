@@ -11,7 +11,9 @@ def gcd(x, y):
 
 for i in range(0, n):
     b.append(a[i])
-    if i + 1 < n and gcd(a[i], a[i + 1]) != 1: b.append(1)
+    if i + 1 < n and gcd(a[i], a[i + 1]) != 1:
+        b.append(1)
 
 print(len(b) - n)
-for x in b: print(x, end=' ')
+for x in b:
+    print(x, end=' ')

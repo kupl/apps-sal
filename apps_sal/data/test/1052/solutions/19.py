@@ -4,7 +4,8 @@ def derange(n): return int(math.factorial(n) * sum([((-1)**i) / math.factorial(i
 
 def choose(n, k):
     ans = 1
-    if n - k < k: k = n - k
+    if n - k < k:
+        k = n - k
     for i in range(k):
         ans *= (n - i)
     ans /= math.factorial(k)
@@ -13,7 +14,8 @@ def choose(n, k):
 
 def almostIdent(n, k):
     ans = 0
-    for i in range(k + 1): ans += choose(n, n - i) * derange(i)
+    for i in range(k + 1):
+        ans += choose(n, n - i) * derange(i)
     return ans
 
 
