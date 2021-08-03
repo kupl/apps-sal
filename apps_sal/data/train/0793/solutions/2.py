@@ -1,8 +1,12 @@
 from math import fabs
 import sys
 sys.setrecursionlimit(10**6)
+
+
 def f(x):
-    return int(fabs(x-r))
+    return int(fabs(x - r))
+
+
 def gcd(a, b):
     if b == 0:
         return a

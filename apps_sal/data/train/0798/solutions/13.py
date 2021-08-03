@@ -8,7 +8,7 @@ def main():
 
     n_inf = -9999
     dp = [[n_inf] * n for _ in range(n)]
-   
+
     for c in charms:
         c[0] -= 1
         c[1] -= 1
@@ -21,21 +21,21 @@ def main():
                 dp[x][y] = grid[x][y]
                 y += 1
             x += 1
-   
+
     for x in range(1, n):
         if dp[x - 1][0] == n_inf:
             for x1 in range(x, n):
                 dp[x1][0] = n_inf
             break
         dp[x][0] += dp[x - 1][0]
-   
+
     for y in range(1, n):
         if dp[0][y - 1] == n_inf:
             for y1 in range(y, n):
                 dp[0][y1] = n_inf
             break
         dp[0][y] += dp[0][y - 1]
-    
+
     for x in range(1, n):
         for y in range(1, n):
             m = max(dp[x - 1][y], dp[x][y - 1])
