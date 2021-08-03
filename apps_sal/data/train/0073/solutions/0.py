@@ -2,11 +2,13 @@ def solve():
     n = int(input())
     a = list(map(int, input().split()))
     c = [0] * (n + 1)
+
     def inc():
         for i in range(n - 1):
             if a[i] > a[i + 1]:
                 return False
         return True
+
     def calc():
         for i in range(n + 1):
             c[i] = 0
@@ -30,6 +32,7 @@ def solve():
             ans.append(x)
     print(len(ans))
     print(*map(lambda x: x + 1, ans))
+
 
 t = int(input())
 for _ in range(t):

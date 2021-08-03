@@ -2,10 +2,12 @@ import sys
 
 stdin = sys.stdin
 
-ns = lambda: stdin.readline().rstrip()
-ni = lambda: int(stdin.readline().rstrip())
-nm = lambda: list(map(int, stdin.readline().split()))
-nl = lambda: list(map(int, stdin.readline().split()))
+
+def ns(): return stdin.readline().rstrip()
+def ni(): return int(stdin.readline().rstrip())
+def nm(): return list(map(int, stdin.readline().split()))
+def nl(): return list(map(int, stdin.readline().split()))
+
 
 def solve():
     n, k = nm()
@@ -14,7 +16,7 @@ def solve():
         print(-1)
         return
     f = list(set(a))
-    f += [1]*(k-len(f))
+    f += [1] * (k - len(f))
     f *= n
     print(len(f))
     print(*f)
@@ -24,4 +26,3 @@ def solve():
 t = ni()
 for _ in range(t):
     solve()
-

@@ -1,6 +1,6 @@
 q = int(input())
 for i in range(q):
-    n, m = list(map(int,input().split()))
+    n, m = list(map(int, input().split()))
     field = [input() for j in range(n)]
     raw = [0] * n
     col = [0] * m
@@ -16,4 +16,3 @@ for i in range(q):
             if num < temp:
                 num = temp
     print(n + m - num - 1)
-

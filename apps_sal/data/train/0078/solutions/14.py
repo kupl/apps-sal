@@ -1,6 +1,8 @@
 def gns():
-    return list(map(int,input().split()))
-t=int(input())
+    return list(map(int, input().split()))
+
+
+t = int(input())
 
 
 def one():
@@ -29,8 +31,3 @@ def one():
 
 for i in range(t):
     one()
-
-
-
-
-

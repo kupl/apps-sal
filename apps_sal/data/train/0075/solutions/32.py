@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
+import math
 import sys
 input = sys.stdin.readline
-import math
 
 t = int(input())
 for _ in range(t):
@@ -12,11 +12,12 @@ for _ in range(t):
         print(a * 2.0)
     else:
         rotation = [math.pi * 2.0 / (2 * n) * item for item in range(2 * n)]
-        l = 0.0; r = math.pi / 2.0 
+        l = 0.0
+        r = math.pi / 2.0
         eps_rot = [(math.pi * 2.0 / (2 * n) / 10**2) * item for item in range(10**2)]
         ret = b
         for eps in eps_rot:
-            max_rad = 0.0 
+            max_rad = 0.0
             for rad in rotation:
                 val = max(b * abs(math.sin(rad + eps)), b * abs(math.cos(rad + eps)))
                 max_rad = max(max_rad, val)

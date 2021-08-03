@@ -1,6 +1,6 @@
 for _ in range(int(input())):
     n = int(input())
-    arr = list(map(int,input().split()))
+    arr = list(map(int, input().split()))
     pos = 0
     i = 0
     while i < n:
@@ -15,4 +15,3 @@ for _ in range(int(input())):
             pos += arr[i]
         i += 1
     print(pos)
-

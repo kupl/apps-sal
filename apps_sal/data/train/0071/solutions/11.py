@@ -9,4 +9,3 @@ for i in range(t):
         if s < min:
             min = s
     print(abs(min))
-

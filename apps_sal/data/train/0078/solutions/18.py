@@ -19,8 +19,7 @@ for _ in range(q):
     for i in range(m):
         for j in range(n):
             if picture[j][i] == ".":
-                ans = min(dotcount_h[i]+dotcount_w[j]-1, ans)
+                ans = min(dotcount_h[i] + dotcount_w[j] - 1, ans)
             else:
-                ans = min(dotcount_h[i]+dotcount_w[j], ans)
+                ans = min(dotcount_h[i] + dotcount_w[j], ans)
     print(ans)
-

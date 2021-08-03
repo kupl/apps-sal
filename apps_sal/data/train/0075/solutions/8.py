@@ -1,12 +1,12 @@
 import math
 
-t=int(input())
+t = int(input())
 
 while(t):
-	t-=1
-	n=int(input())
+    t -= 1
+    n = int(input())
 
-	ang= math.pi/(2*n)
+    ang = math.pi / (2 * n)
 
-	ans= 1/math.sin(ang)
-	print(ans*math.cos(ang/2))
+    ans = 1 / math.sin(ang)
+    print(ans * math.cos(ang / 2))

@@ -22,13 +22,13 @@
 #
 #    _ __ __ _ _ __ ___  ________
 #   | '__/ _` | '_ ` _ \|_  /_  /
-#   | | | (_| | | | | | |/ / / / 
+#   | | | (_| | | | | | |/ / / /
 #   |_|  \__,_|_| |_| |_/___/___|
 #
 
 import math
 import collections
-from sys import stdin,stdout,setrecursionlimit
+from sys import stdin, stdout, setrecursionlimit
 from bisect import bisect_left as bsl
 from bisect import bisect_right as bsr
 import heapq as hq
@@ -41,15 +41,12 @@ for _ in range(t):
     n = int(stdin.readline())
     #s = stdin.readline().strip('\n')
     a = list(map(int, stdin.readline().rstrip().split()))
-    
+
     ans = 0
     s = 0
     for i in range(n):
         s += a[i]
-        if(s<0 and abs(s)>ans):
+        if(s < 0 and abs(s) > ans):
             ans = abs(s)
-            
-    print(ans)
-    
-    
 
+    print(ans)

@@ -12,4 +12,3 @@ for _ in range(int(input())):
     a += [1] * (k - len(a))
     print(k * n)
     print(*(a * n))
-

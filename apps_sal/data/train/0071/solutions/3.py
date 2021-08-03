@@ -9,5 +9,6 @@ def main():
             total -= a
             ans = max(ans, total)
         print(ans)
-    
+
+
 main()

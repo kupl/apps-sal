@@ -10,6 +10,7 @@ for TT in range(1, int(input()) + 1):
     for i in range(n):
         for j in range(m):
             val = (n - h[i]) + (m - v[j])
-            if mat[i][j] == 0: val -= 1
+            if mat[i][j] == 0:
+                val -= 1
             res = min(res, val)
     print(res)

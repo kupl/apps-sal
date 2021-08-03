@@ -1,24 +1,31 @@
 
 def gcd(a, b):
-    while b: a, b = b, a % b
+    while b:
+        a, b = b, a % b
     return a
+
+
 def isPrimeMR(n):
     d = n - 1
     d = d // (d & -d)
-    L = [2, 7, 61] if n < 1<<32 else [2, 3, 5, 7, 11, 13, 17] if n < 1<<48 else [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
+    L = [2, 7, 61] if n < 1 << 32 else [2, 3, 5, 7, 11, 13, 17] if n < 1 << 48 else [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
     for a in L:
         t = d
         y = pow(a, t, n)
-        if y == 1: continue
+        if y == 1:
+            continue
         while y != n - 1:
             y = y * y % n
-            if y == 1 or t == n - 1: return 0
+            if y == 1 or t == n - 1:
+                return 0
             t <<= 1
     return 1
+
+
 def findFactorRho(n):
     m = 1 << n.bit_length() // 8
     for c in range(1, 99):
-        f = lambda x: (x * x + c) % n
+        def f(x): return (x * x + c) % n
         y, r, q, g = 2, 1, 1, 1
         while g == 1:
             x = y
@@ -39,9 +46,13 @@ def findFactorRho(n):
                 ys = f(ys)
                 g = gcd(abs(x - ys), n)
         if g < n:
-            if isPrimeMR(g): return g
-            elif isPrimeMR(n // g): return n // g
+            if isPrimeMR(g):
+                return g
+            elif isPrimeMR(n // g):
+                return n // g
             return findFactorRho(g)
+
+
 def primeFactor(n):
     i = 2
     ret = {}
@@ -51,7 +62,8 @@ def primeFactor(n):
         while n % i == 0:
             n //= i
             k += 1
-        if k: ret[i] = k
+        if k:
+            ret[i] = k
         i += i % 2 + (3 if i % 3 == 1 else 1)
         if i == 101 and n >= 2 ** 20:
             while n > 1:
@@ -66,19 +78,23 @@ def primeFactor(n):
                         k += 1
                     ret[j] = k
 
-    if n > 1: ret[n] = 1
-    if rhoFlg: ret = {x: ret[x] for x in sorted(ret)}
+    if n > 1:
+        ret[n] = 1
+    if rhoFlg:
+        ret = {x: ret[x] for x in sorted(ret)}
     return ret
+
 
 def divisors(pf):
     ret = [1]
     for p in pf:
         ret_prev = ret
         ret = []
-        for i in range(pf[p]+1):
+        for i in range(pf[p] + 1):
             for r in ret_prev:
                 ret.append(r * (p ** i))
     return sorted(ret)
+
 
 T = int(input())
 for _ in range(T):
@@ -89,15 +105,15 @@ for _ in range(T):
         print(*dv[1:])
         print(1)
         continue
-    
+
     if len(pf) == 1:
         print(*dv[1:])
         print(0)
         continue
-    
+
     lpf = list(pf)
     # print("lpf =", lpf)
-    
+
     X = [[] for _ in range(len(pf))]
     S = {1}
     if len(lpf) == 2:
@@ -112,8 +128,8 @@ for _ in range(T):
     else:
         for i, p in enumerate(lpf):
             # print("i, p, pf[p] =", i, p, pf[p])
-            X[i].append(lpf[i-1] * p)
-            S.add(lpf[i-1] * p)
+            X[i].append(lpf[i - 1] * p)
+            S.add(lpf[i - 1] * p)
             for j in range(1, pf[p] + 1):
                 X[i].append(p ** j)
                 S.add(p ** j)
@@ -130,4 +146,3 @@ for _ in range(T):
             ANS.append(y)
     print(*ANS)
     print(0)
-

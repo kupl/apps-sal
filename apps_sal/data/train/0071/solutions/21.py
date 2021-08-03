@@ -26,5 +26,3 @@ for _ in range(int(input())):
         else:
             was = max(0, was - arr[i])
     print(need)
-
-

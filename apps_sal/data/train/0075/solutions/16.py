@@ -19,4 +19,3 @@ for case_num in range(t):
         A = 3 * pi / 4 - i * pi / n
         a = max(a, 2 * r * sin(A))
     print('{:.9f}'.format(a))
-

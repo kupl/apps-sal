@@ -1,5 +1,6 @@
 import math
 
+
 def solve(n):
     if n == 2:
         return 1.0
@@ -19,12 +20,16 @@ def solve(n):
     # print(height, width, ans)
     return ans
 
+
 def main():
     T = int(input())
     for _ in range(1, T + 1):
         n = int(input())
         print(solve(n))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

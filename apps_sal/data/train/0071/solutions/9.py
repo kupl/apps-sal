@@ -17,4 +17,3 @@ for _ in range(T):
             quota -= (k - r)
             ans += r
     print(ans)
-

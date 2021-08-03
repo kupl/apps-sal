@@ -58,12 +58,12 @@ def mt(f):
 
 # @mt
 def slv(N, AB):
-    
-    memo = [0, AB[0][1], AB[0][1]*2]
+
+    memo = [0, AB[0][1], AB[0][1] * 2]
 
     for i in range(1, N):
         a, b = AB[i]
-        a1, _ = AB[i-1]
+        a1, _ = AB[i - 1]
         memo2 = [0] * 3
         for j in range(3):
             tmp = 1e+1000
@@ -86,7 +86,9 @@ def main():
     # AB = [[1000000000, 1000000000] for _ in range(N)]
     # print(slv(N, AB))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

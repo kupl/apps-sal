@@ -1,6 +1,7 @@
 from sys import stdin
 from math import ceil
-inp = lambda : stdin.readline().strip()
+def inp(): return stdin.readline().strip()
+
 
 t = int(inp())
 
@@ -12,5 +13,5 @@ for _ in range(t):
     for i in range(n):
         cumm += a[i]
         if cumm < 0:
-            ans = min(ans,cumm)
-    print(-1*ans)
+            ans = min(ans, cumm)
+    print(-1 * ans)

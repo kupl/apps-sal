@@ -83,4 +83,3 @@ for _ in range(int(input())):
         gans.append(' '.join(map(str, ans)))
         gans.append(str(0))
 print('\n'.join(gans))
-

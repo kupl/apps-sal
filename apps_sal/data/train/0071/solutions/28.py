@@ -19,4 +19,3 @@ for _ in range(int(input())):
         #print(cur, u[i])
     gans.append(ans)
 print('\n'.join(map(str, gans)))
-

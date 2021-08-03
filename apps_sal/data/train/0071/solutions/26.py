@@ -17,5 +17,3 @@ for q in range(t):
             else:
                 c += i
     print(res)
-        
-

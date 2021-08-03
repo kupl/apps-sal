@@ -10,10 +10,9 @@ def Solve(nCase):
         l.append(a[0])
     ans = n * l
     print(len(ans))
-    print(' '.join(str(x) for x in ans)) 
+    print(' '.join(str(x) for x in ans))
 
 
 T = int(input())
 for i in range(1, T + 1):
     Solve(i)
-
