@@ -17,4 +17,3 @@ for t in range(N - 1, 0, -1):
 print((N, len(edge)))
 for e in edge:
     print((*e))
-

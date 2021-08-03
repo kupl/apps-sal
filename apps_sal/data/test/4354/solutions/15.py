@@ -71,11 +71,11 @@ def resolve():
         D = float("inf")
         t = 0
         for i in range(M):
-            d = abs(s[0]-C[i][0]) + abs(s[1]-C[i][1])
+            d = abs(s[0] - C[i][0]) + abs(s[1] - C[i][1])
             if d < D:
                 D = d
                 t = i
-        ans.append(t+1)
+        ans.append(t + 1)
 
     for a in ans:
         print(a)
@@ -84,5 +84,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

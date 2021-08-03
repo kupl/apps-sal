@@ -1,10 +1,10 @@
-N, M = map(int,input().split())
+N, M = map(int, input().split())
 students = []
 points = []
 for _ in range(N):
-    students.append(list(map(int,input().split())))
+    students.append(list(map(int, input().split())))
 for _ in range(M):
-    points.append(list(map(int,input().split())))
+    points.append(list(map(int, input().split())))
 
 for i in range(N):
     MIN = 10 ** 10

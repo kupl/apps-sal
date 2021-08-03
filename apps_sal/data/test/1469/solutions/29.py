@@ -22,5 +22,3 @@ print((14, sum(map(len, to))))
 for i in range(len(to)):
     for j, cost in to[i]:
         print((i + 1, j + 1, cost))
-
-

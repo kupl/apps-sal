@@ -17,4 +17,3 @@ for s in stu:
             manhatttaaann_dis = dist
             checkpoint_id = i
     print((checkpoint_id + 1))
-

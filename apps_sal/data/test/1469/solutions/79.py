@@ -27,8 +27,8 @@ def main():
             c += 2 ** i
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

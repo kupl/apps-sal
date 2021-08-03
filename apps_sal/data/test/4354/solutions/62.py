@@ -16,10 +16,9 @@ for a, b in ab:
     checkpoint = -1
     for i, cdi in enumerate(cd):
         c, d = cdi
-        dist = abs(a-c)+abs(b-d)
+        dist = abs(a - c) + abs(b - d)
         if dist < t:
             t = dist
-            checkpoint = (i+1)
+            checkpoint = (i + 1)
     ans.append(checkpoint)
 print(*ans, sep='\n')
-

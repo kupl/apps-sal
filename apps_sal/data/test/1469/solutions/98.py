@@ -13,4 +13,3 @@ for i in range(n):
     if L >> i & 1:
         print((i + 1, n + 1, L - (L & mask - 1)))
     mask *= 2
-

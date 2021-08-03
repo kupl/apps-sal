@@ -20,7 +20,7 @@ for i in range(N):
     tmp = float("inf")
     for j in range(M):
         c, d = g[j]
-        dist = abs(c-a) + abs(d-b)
+        dist = abs(c - a) + abs(d - b)
         # print(i, j, dist)
         if dist < tmp:
             i_ans = j
@@ -28,4 +28,4 @@ for i in range(N):
     ans.append(i_ans)
 
 for a in ans:
-    print(a+1)
+    print(a + 1)

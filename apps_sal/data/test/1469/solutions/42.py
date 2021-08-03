@@ -16,4 +16,3 @@ for i in reversed(list(range(N - 1))):
 print((N, len(E)))
 for a, b, c in E:
     print((a, b, c))
-

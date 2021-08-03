@@ -22,9 +22,9 @@ for i in range(N - 2, -1, -1):
         M += 1
 
 if N > 20 or M > 60:
-    print ('error')
+    print('error')
 
-print (N, M)
+print(N, M)
 for i in range(1, N):
     for j in G[i]:
-        print (i, *j)
+        print(i, *j)

@@ -6,7 +6,7 @@ def main():
     l = int(input())
     n = math.floor(math.log2(l)) + 1
     e = []
-    for v in range(n-1):
+    for v in range(n - 1):
         v2 = 2 ** v
         e.append([v + 1, v + 2, 0])
         e.append([v + 1, v + 2, v2])
@@ -19,4 +19,3 @@ def main():
 
 
 main()
-

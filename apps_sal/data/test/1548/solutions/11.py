@@ -15,5 +15,5 @@ def main():
         x += a[i]
     print(x * x + y * y)
 
-main()
 
+main()

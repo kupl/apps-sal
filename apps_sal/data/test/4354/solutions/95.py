@@ -13,4 +13,3 @@ for i in range(N):
             ans = j
             min_dist = d
     print((ans + 1))
-

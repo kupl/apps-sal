@@ -15,5 +15,4 @@ while l > 2 ** (n - 1) - 1:
     i -= 1
 print((n, len(res)))
 for i in range(len(res)):
-    print((res[i][0],res[i][1],res[i][2]))
-
+    print((res[i][0], res[i][1], res[i][2]))

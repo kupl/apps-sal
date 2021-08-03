@@ -34,4 +34,3 @@ for r in ans:
     v += 1
     u += 1
     print((v, u, w))
-

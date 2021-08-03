@@ -6,6 +6,6 @@ for i in range(n):
     ans = 0
     for j in range(m):
         if abs(ab[i][0] - cd[j][0]) + abs(ab[i][1] - cd[j][1]) < x:
-            ans = j+1
+            ans = j + 1
             x = abs(ab[i][0] - cd[j][0]) + abs(ab[i][1] - cd[j][1])
     print(ans)

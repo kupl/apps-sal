@@ -13,4 +13,3 @@ M = len(n)
 print((N, M))
 for _ in n:
     print((*_))
-

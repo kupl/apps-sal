@@ -12,6 +12,5 @@ for i in range(M):
 for i in X:
     len = []
     for j in Y:
-        len.append(abs(i[0]-j[0])+abs(i[1]-j[1]))
-    print((len.index(min(len))+1))
-
+        len.append(abs(i[0] - j[0]) + abs(i[1] - j[1]))
+    print((len.index(min(len)) + 1))

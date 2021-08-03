@@ -6,5 +6,5 @@ isie = skaitli[0:isakais]
 garie = skaitli[isakais:]
 issum = sum(isie)
 garsum = sum(garie)
-suma =  issum * issum + garsum * garsum
+suma = issum * issum + garsum * garsum
 print(suma)

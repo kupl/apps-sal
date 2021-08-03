@@ -8,11 +8,11 @@ while L >= power:
 power = 1
 ans = []
 for i in range(k):
-    ans.append([k-i, k+1-i, 0])
-    ans.append([k-i, k+1-i, power])
+    ans.append([k - i, k + 1 - i, 0])
+    ans.append([k - i, k + 1 - i, power])
     power *= 2
 
-N = k+1
+N = k + 1
 l = power
 rest = L - l
 while rest > 0:
@@ -21,7 +21,7 @@ while rest > 0:
     while rest >= power * 2:
         power *= 2
         k += 1
-    ans.append([1, N-k, l])
+    ans.append([1, N - k, l])
     l += power
     rest -= power
 

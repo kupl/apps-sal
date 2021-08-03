@@ -27,4 +27,3 @@ M = len(edges)
 print((N, M))
 for edge in edges:
     print((*edge))
-

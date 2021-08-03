@@ -5,7 +5,7 @@ for _ in range(N):
 cd = []
 for _ in range(M):
     cd.append(list(map(int, input().split())))
-    
+
 for x in ab:
     a = x[0]
     b = x[1]
@@ -13,6 +13,6 @@ for x in ab:
     for y in cd:
         c = y[0]
         d = y[1]
-        k = abs(a-c)+abs(b-d)
+        k = abs(a - c) + abs(b - d)
         cnt.append(k)
-    print(cnt.index(min(cnt))+1)
+    print(cnt.index(min(cnt)) + 1)

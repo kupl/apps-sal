@@ -15,4 +15,3 @@ for x in X:
             z = Z
             ans = i
     print(ans)
-

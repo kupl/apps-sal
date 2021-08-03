@@ -1,5 +1,8 @@
 N, M = list(map(int, input().split()))
-a = []; b = []; c = []; d = []
+a = []
+b = []
+c = []
+d = []
 
 for i in range(N):
     x, y = list(map(int, input().split()))
@@ -18,4 +21,3 @@ for i in range(N):
             m = abs(a[i] - c[j]) + abs(b[i] - d[j])
             p = j
     print((p + 1))
-

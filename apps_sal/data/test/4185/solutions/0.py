@@ -12,11 +12,11 @@ for _ in range(n):
 out = 0
 for i in range(m):
     l = arr[i]
-    
+
     best = list(range(0, -n, -1))
     for j in range(n):
         v = l[j] - i - 1
-        
+
         if v % m == 0:
             correct = v // m
             if 0 <= correct < n:
@@ -24,4 +24,3 @@ for i in range(m):
     out += (n - max(best))
 
 print(out)
-

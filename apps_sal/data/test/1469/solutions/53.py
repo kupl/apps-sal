@@ -131,7 +131,7 @@ def main():
 
     r = 0
     while True:
-        if 2**(r+1) > L:
+        if 2**(r + 1) > L:
             break
         r += 1
 
@@ -157,5 +157,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

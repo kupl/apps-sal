@@ -4,8 +4,8 @@
 # import bisect
 # from collections import deque
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(L):
     import math
@@ -24,7 +24,6 @@ def solve(L):
     [print(' '.join([str(i) for i in g])) for g in grahp]
 
 
-
 def __starting_point():
     # S = input()
     L = int(input())
@@ -38,5 +37,6 @@ def __starting_point():
     # from random import randint
     # from func import random_str
     # solve()
+
 
 __starting_point()

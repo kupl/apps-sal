@@ -8,4 +8,3 @@ vertical = 0
 for i in range(Scount // 2 - 1, -1, -1):
     vertical += sticks[i]
 print(horizontal ** 2 + vertical ** 2)
-

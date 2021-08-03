@@ -17,4 +17,3 @@ for i in range(n):
             point = j + 1
             dis = abs(a - c) + abs(b - d)
     print(point)
-
