@@ -18,4 +18,3 @@ for _ in range(int(input())):
         ans.append(c[-1])
     gans.append(' '.join(map(str, ans)))
 print('\n'.join(gans))
-

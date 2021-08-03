@@ -30,7 +30,8 @@ def solve():
         ans += max(k * 2 - 1, 0)
     ans = min(ans, n * 2 - 1)
     print(ans)
+
+
 t = int(input())
 for _ in range(t):
     solve()
-

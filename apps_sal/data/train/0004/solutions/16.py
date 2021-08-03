@@ -18,9 +18,6 @@ for i in range(t):
         if (r - l + 1) == now:
             ans[r - l] = '1'
         now -= 1
-    if (r - l  + 1) == now:
+    if (r - l + 1) == now:
         ans[r - l] = '1'
     print(''.join(ans))
-
-
-

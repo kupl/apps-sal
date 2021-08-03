@@ -1,10 +1,12 @@
 N = int(input())
 
+
 def ceildiv(x, y):
     if x % y == 0:
         return x // y
     else:
         return x // y + 1
+
 
 for _ in range(N):
     doms = []
@@ -40,7 +42,6 @@ for _ in range(N):
         _01_indexes = []
         _10_indexes = []
 
-
         for dom in doms:
             if dom[1] == ('0', '1'):
                 _01 += 1
@@ -53,16 +54,14 @@ for _ in range(N):
             _01, _10 = _10, _01
             _01_indexes, _10_indexes = _10_indexes, _01_indexes
 
-        _10_indexes = [x for x in _10_indexes if fulls[x][::-1] not in used] 
+        _10_indexes = [x for x in _10_indexes if fulls[x][::-1] not in used]
 
-        need = ceildiv(_10-_01-1, 2)
+        need = ceildiv(_10 - _01 - 1, 2)
         if len(_10_indexes) >= need:
             print(need)
-            print( ' '.join(list([str(x+1) for x in _10_indexes[:need]])) )
+            print(' '.join(list([str(x + 1) for x in _10_indexes[:need]])))
         else:
             print(-1)
 
     # print("===")
         # print(ceil(abs(doms.count(('0', '1')) - doms.count(('1', '0'))) - 1, 2))
-
-

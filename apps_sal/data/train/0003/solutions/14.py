@@ -5,5 +5,4 @@ for _ in range(n):
     arr = list(map(int, input().split()))
     arr.sort(reverse=True)
 
-    print(sum(arr[:k+1]))
-
+    print(sum(arr[:k + 1]))

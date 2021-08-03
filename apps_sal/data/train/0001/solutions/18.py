@@ -17,5 +17,6 @@ def go():
                     print(d - 2)
             else:
                 print(d - 1)
-go()
 
+
+go()

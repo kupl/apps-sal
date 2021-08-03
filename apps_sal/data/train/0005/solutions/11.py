@@ -1,4 +1,5 @@
-import heapq, sys
+import heapq
+import sys
 
 
 def ps(l):
@@ -26,11 +27,8 @@ for q in range(int(sys.stdin.readline())):
     ap = ps(d)
     # print(ap)
     for a in ap:
-        b = n-2-a
+        b = n - 2 - a
         if b in st:
-            anss.append(str(b+1)+' '+ str(n - b - 1) + '\n')
+            anss.append(str(b + 1) + ' ' + str(n - b - 1) + '\n')
     sys.stdout.write(str(len(anss)) + '\n')
     sys.stdout.write(''.join(anss))
-
-
-

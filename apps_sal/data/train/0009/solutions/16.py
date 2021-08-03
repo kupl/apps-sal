@@ -1,27 +1,25 @@
 import sys
 input = sys.stdin.readline
 
-t=int(input())
+t = int(input())
 for tests in range(t):
-    S=input().strip()+"0"
+    S = input().strip() + "0"
 
-    L=[]
+    L = []
 
-    NOW=0
+    NOW = 0
     for s in S:
-        if s=="0":
+        if s == "0":
             L.append(NOW)
-            NOW=0
+            NOW = 0
         else:
-            NOW+=1
+            NOW += 1
 
     L.sort(reverse=True)
 
-    ANS=0
+    ANS = 0
 
-    for i in range(0,len(L),2):
-        ANS+=L[i]
+    for i in range(0, len(L), 2):
+        ANS += L[i]
 
     print(ANS)
-        
-

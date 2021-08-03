@@ -12,7 +12,7 @@ for t in range(T):
         if i == 0:
             R.append(A[i])
             continue
-        if i == N-1:
+        if i == N - 1:
             if A[i] != R[0] and A[i] != R[-1]:
                 R.append(A[i])
             elif B[i] != R[0] and B[i] != R[-1]:
@@ -27,4 +27,3 @@ for t in range(T):
             R.append(B[i])
 
     print(' '.join(map(str, R)))
-

@@ -1,7 +1,8 @@
 q = int(input())
 for i in range(q):
     x, y, k = list(map(int, input().split()))
-    if x > y: x, y = y, x
+    if x > y:
+        x, y = y, x
     m = y
     d = y
     if (y - x) % 2 == 1:
@@ -18,4 +19,3 @@ for i in range(q):
             d -= 1
     d += r
     print(d)
-

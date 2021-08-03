@@ -11,4 +11,3 @@ for q in range(n):
                 print(k - 2)
         else:
             print(k - 1)
-

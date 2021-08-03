@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class BBeautifulNumbers:
     def solve(self):
@@ -26,8 +27,8 @@ class BBeautifulNumbers:
 
             print(''.join(ans))
 
+
 solver = BBeautifulNumbers()
 input = sys.stdin.readline
 
 solver.solve()
-

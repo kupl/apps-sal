@@ -19,8 +19,7 @@ for t in range(T):
     res = 0
     counts = sorted(counts, reverse=True)
     for i in range(len(counts)):
-        if 2*i >= len(counts):
+        if 2 * i >= len(counts):
             break
-        res += counts[2*i]
+        res += counts[2 * i]
     print(res)
-

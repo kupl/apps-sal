@@ -4,7 +4,7 @@ for i in range(q):
     n, m, k = map(int, input().split())
     p = min(m, n)
     r = max(n, m) - p
-    if (p+r) > k:
+    if (p + r) > k:
         print(-1)
     elif r % 2 == 1:
         print(k - 1)

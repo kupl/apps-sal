@@ -15,4 +15,3 @@ for _ in range(int(input())):
 
     ones.sort(reverse=True)
     print(sum(ones[::2]))
-
