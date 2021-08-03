@@ -6,4 +6,3 @@ for _ in range(int(input())):
 
     if n % 2 == 1:
         print(k * (n // 2) + 2 * k + n)
-

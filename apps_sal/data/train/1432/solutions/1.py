@@ -1,6 +1,6 @@
 # cook your dish here
 try:
-    
+
     for i in range(int(input())):
         n = int(input())
         A = []
@@ -13,7 +13,7 @@ try:
             if ones <= compare:
                 ans = i
                 break
-            compare += 2*(n-1-i)
+            compare += 2 * (n - 1 - i)
         print(ans)
 except:
     pass

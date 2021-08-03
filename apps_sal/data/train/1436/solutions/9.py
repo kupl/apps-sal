@@ -1,7 +1,8 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for _ in range(t):
-    h=input()
+    h = input()
     if h == h[::-1]:
         print(1)
-    else: print(2)
+    else:
+        print(2)

@@ -7,4 +7,4 @@ for _ in range(int(input())):
         if n == 3:
             print(n + (3 * k))
         else:
-            print(n + (3 * k) + ((n - 3)//2 * k))
+            print(n + (3 * k) + ((n - 3) // 2 * k))

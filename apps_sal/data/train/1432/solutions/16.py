@@ -12,7 +12,7 @@ def __starting_point():
                 if el == 0:
                     zeroes = zeroes + 1
         for i in range(n):
-            if i < n-1:
+            if i < n - 1:
                 x = i * 2 + 2
             else:
                 x = n
@@ -26,7 +26,7 @@ def __starting_point():
                 zeroes = zeroes - x
         if res == n:
             res = res - 1
-        print(n-1-res)
+        print(n - 1 - res)
 
 
 __starting_point()

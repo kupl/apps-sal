@@ -3,7 +3,7 @@ for _ in range(int(input())):
     z = 0
     for _ in range(n):
         z += input().strip().split(' ').count('0')
-    
+
     k = 2
     r = n - 1
     cs = k
@@ -12,4 +12,3 @@ for _ in range(int(input())):
         k += 2
         cs += k
     print(r)
-
