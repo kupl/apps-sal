@@ -14,7 +14,8 @@ def Main():
     query = [[] for _ in range(m)]
     for _ in range(n):
         a, b = read_ints()
-        if m - a < 0: continue
+        if m - a < 0:
+            continue
         query[m - a].append(b)
 
     total = 0

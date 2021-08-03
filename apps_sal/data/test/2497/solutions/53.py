@@ -22,7 +22,8 @@ xx = yy = 0
 
 for j in range(n):
     x, y, D = [i for i in input().split()]
-    x = int(x); y = int(y)
+    x = int(x)
+    y = int(y)
     if D == "U":
         umin = min(umin, y)
         umax = max(umax, y)
@@ -55,56 +56,80 @@ for j in range(n):
 
 def lpos(t):
     ans = inf
-    if xx: ans = min(ans, xmin)
-    if l: ans = min(ans, lmin - t)
-    if r: ans = min(ans, rmin + t)
+    if xx:
+        ans = min(ans, xmin)
+    if l:
+        ans = min(ans, lmin - t)
+    if r:
+        ans = min(ans, rmin + t)
     return ans
 
 
 def rpos(t):
     ans = -inf
-    if xx: ans = max(ans, xmax)
-    if l: ans = max(ans, lmax - t)
-    if r: ans = max(ans, rmax + t)
+    if xx:
+        ans = max(ans, xmax)
+    if l:
+        ans = max(ans, lmax - t)
+    if r:
+        ans = max(ans, rmax + t)
     return ans
 
 
 def dpos(t):
     ans = inf
-    if yy: ans = min(ans, ymin)
-    if u: ans = min(ans, umin + t)
-    if d: ans = min(ans, dmin - t)
+    if yy:
+        ans = min(ans, ymin)
+    if u:
+        ans = min(ans, umin + t)
+    if d:
+        ans = min(ans, dmin - t)
     return ans
 
 
 def upos(t):
     ans = -inf
-    if yy: ans = max(ans, ymax)
-    if u: ans = max(ans, umax + t)
-    if d: ans = max(ans, dmax - t)
+    if yy:
+        ans = max(ans, ymax)
+    if u:
+        ans = max(ans, umax + t)
+    if d:
+        ans = max(ans, dmax - t)
     return ans
 
 
 s = {0}
 if xx and l:
-    if lmin - xmin > 0: s.add(lmin - xmin)
-    if lmax - xmax > 0: s.add(lmax - xmax)
+    if lmin - xmin > 0:
+        s.add(lmin - xmin)
+    if lmax - xmax > 0:
+        s.add(lmax - xmax)
 if xx and r:
-    if xmin - rmin > 0: s.add(xmin - rmin)
-    if xmax - rmax > 0: s.add(xmax - rmax)
+    if xmin - rmin > 0:
+        s.add(xmin - rmin)
+    if xmax - rmax > 0:
+        s.add(xmax - rmax)
 if l and r:
-    if lmin - rmin > 0: s.add((lmin - rmin) / 2)
-    if lmax - rmax > 0: s.add((lmax - rmax) / 2)
+    if lmin - rmin > 0:
+        s.add((lmin - rmin) / 2)
+    if lmax - rmax > 0:
+        s.add((lmax - rmax) / 2)
 
 if yy and d:
-    if dmin - ymin > 0: s.add(dmin - ymin)
-    if dmax - ymax > 0: s.add(dmax - ymax)
+    if dmin - ymin > 0:
+        s.add(dmin - ymin)
+    if dmax - ymax > 0:
+        s.add(dmax - ymax)
 if yy and u:
-    if ymin - umin > 0: s.add(ymin - umin)
-    if ymax - umax > 0: s.add(ymax - umax)
+    if ymin - umin > 0:
+        s.add(ymin - umin)
+    if ymax - umax > 0:
+        s.add(ymax - umax)
 if d and u:
-    if dmin - umin > 0: s.add((dmin - umin) / 2)
-    if dmax - umax > 0: s.add((dmax - umax) / 2)
+    if dmin - umin > 0:
+        s.add((dmin - umin) / 2)
+    if dmax - umax > 0:
+        s.add((dmax - umax) / 2)
 
 # print(rmax,xmax)
 

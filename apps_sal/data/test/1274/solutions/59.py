@@ -20,7 +20,8 @@ class SegmentTree:
 
     def __init__(self, N, X, func, init_v):
         N_ = 1
-        while N_ < N: N_ *= 2
+        while N_ < N:
+            N_ *= 2
         self.N = N_
         self.func = func
         self.init_v = init_v

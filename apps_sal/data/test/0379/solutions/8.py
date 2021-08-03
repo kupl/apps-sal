@@ -13,7 +13,8 @@ def check():
                 j1 = j
                 flag = True
                 break
-        if flag: break
+        if flag:
+            break
 
     flag = False
     for i in range(n - 1, -1, -1):
@@ -23,7 +24,8 @@ def check():
                 j2 = j
                 flag = True
                 break
-        if flag: break
+        if flag:
+            break
 
     for i in range(n):
         for j in range(m):

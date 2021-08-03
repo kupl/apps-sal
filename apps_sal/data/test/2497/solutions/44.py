@@ -72,20 +72,23 @@ else:
 
 ans = INF
 for tm in tms:
-    if tm == INF: continue
+    if tm == INF:
+        continue
 
     xs = [xConstMin, xConstMax, xAscMin + tm, xAscMax + tm, xDescMin - tm, xDescMax - tm]
     ys = [yConstMin, yConstMax, yAscMin + tm, yAscMax + tm, yDescMin - tm, yDescMax - tm]
 
     xMin, xMax = INF, -INF
     for x in xs:
-        if x == INF or x == -INF: continue
+        if x == INF or x == -INF:
+            continue
         xMin = min(xMin, x)
         xMax = max(xMax, x)
 
     yMin, yMax = INF, -INF
     for y in ys:
-        if y == INF or y == -INF: continue
+        if y == INF or y == -INF:
+            continue
         yMin = min(yMin, y)
         yMax = max(yMax, y)
 

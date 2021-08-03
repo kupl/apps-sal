@@ -7,7 +7,9 @@ s = input()
 
 l = len(s)
 
-hm = lambda a, string: sum([x == a for x in string])
+
+def hm(a, string): return sum([x == a for x in string])
+
 
 for x in range(l - 1):
     if s[x] == s[x + 1]:

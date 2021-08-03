@@ -24,12 +24,13 @@ def desertHeap(array):
     parent = 0
     while True:
         child = 2 * parent + 1
-        if child >= n: break
+        if child >= n:
+            break
         if (child + 1 < n) and array[child] < array[child + 1]:
             child += 1
         if array[parent] < array[child]:
             array[child], array[parent] = array[parent], array[child]
-            parent = child;
+            parent = child
         else:
             break
     return res

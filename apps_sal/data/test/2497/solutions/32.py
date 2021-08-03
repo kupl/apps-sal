@@ -54,7 +54,7 @@ ts = [
     -(y_min_ - y_min[3]),
 ]
 
-result = np.inf;
+result = np.inf
 for t in ts:
     if t >= 0:
         result = min(result, WH(t))

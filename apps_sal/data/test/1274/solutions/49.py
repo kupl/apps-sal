@@ -16,7 +16,8 @@ def solve(que, m):
         while len(que) != 0 and que[-1][1] <= i:
             tmp = que.pop()
             heapq.heappush(h, tmp)
-        if len(h) == 0: continue
+        if len(h) == 0:
+            continue
         tmp = heapq.heappop(h)
         ans -= tmp[0]
     return ans

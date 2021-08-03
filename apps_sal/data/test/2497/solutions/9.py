@@ -25,7 +25,8 @@ def solve(n, x, y, d):
     vy = np.zeros(n, dtype=np.float)
     for i in range(n):
         vx[i], vy[i] = mapping[d[i]]
-    h = lambda t: f(y, vy, t) * f(x, vx, t)
+
+    def h(t): return f(y, vy, t) * f(x, vx, t)
     t = fmin(h, x0=10**8, ftol=1e-9, disp=False)[0]
     return h(t)
 

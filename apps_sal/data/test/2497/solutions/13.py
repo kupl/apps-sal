@@ -56,7 +56,8 @@ if D and LR:
 
 ans = INF
 for t in T:
-    if t < 0: continue
+    if t < 0:
+        continue
     l = INF
     r = -INF
     d = INF

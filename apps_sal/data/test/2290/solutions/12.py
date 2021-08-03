@@ -31,13 +31,15 @@ for _ in range(m):
 times = list()
 seen = set()
 for i in nums:
-    if i in seen: continue
+    if i in seen:
+        continue
     mn, mx = i, i
     queue = []
     queue.append(i)
     while queue:
         cur = queue.pop()
-        if cur in seen: continue
+        if cur in seen:
+            continue
         seen.add(cur)
         mn = min(mn, cur)
         mx = max(mx, cur)

@@ -30,10 +30,14 @@ for _ in range(n):
     else:
         mv = 0
         uv = 1
-    if x < mg0[mv]: mg0[mv] = x
-    if x > mg1[mv]: mg1[mv] = x
-    if y < ue0[uv]: ue0[uv] = y
-    if y > ue1[uv]: ue1[uv] = y
+    if x < mg0[mv]:
+        mg0[mv] = x
+    if x > mg1[mv]:
+        mg1[mv] = x
+    if y < ue0[uv]:
+        ue0[uv] = y
+    if y > ue1[uv]:
+        ue1[uv] = y
 t = set([0])
 for lst in [mg0, mg1, ue0, ue1]:
     v0, v1, v2 = lst

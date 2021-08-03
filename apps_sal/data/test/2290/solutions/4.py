@@ -1,5 +1,6 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 N, M = list(map(int, input().split()))
 P = [-1 for i in range(N)]
@@ -16,7 +17,8 @@ def par(a):
 
 
 def unite(a, b):
-    if par(a) == par(b): return 0
+    if par(a) == par(b):
+        return 0
     if P[par(b)] == P[par(a)]:
         P[par(b)] = par(a)
         P[par(a)] -= 1

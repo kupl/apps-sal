@@ -18,32 +18,44 @@ class NumberTheory():
 
     def sieve_of_eratosthenes(self, n):
         if self.np_flg:
-            sieve = np.ones(n + 1, dtype=np.int64); sieve[:2] = 0
+            sieve = np.ones(n + 1, dtype=np.int64)
+            sieve[:2] = 0
             for i in range(2, int(n**.5) + 1):
-                if sieve[i]: sieve[i * 2::i] = 0
+                if sieve[i]:
+                    sieve[i * 2::i] = 0
             prime_numbers = np.flatnonzero(sieve)
         else:
-            sieve = [1] * (n + 1); sieve[0] = sieve[1] = 0
+            sieve = [1] * (n + 1)
+            sieve[0] = sieve[1] = 0
             for i in range(2, int(n**.5) + 1):
-                if not sieve[i]: continue
-                for j in range(i * 2, n + 1, i): sieve[j] = 0
+                if not sieve[i]:
+                    continue
+                for j in range(i * 2, n + 1, i):
+                    sieve[j] = 0
             prime_numbers = [i for i in range(2, n + 1) if sieve[i]]
         return sieve, prime_numbers
 
     def prime_factorize(self, n):
         res = dict()
-        if n < 2: return res
+        if n < 2:
+            return res
         border = int(n**.5)
         for p in self.prime_numbers:
-            if p > border: break
-            while n % p == 0: res[p] = res.get(p, 0) + 1; n //= p
-            if n == 1: return res
-        res[n] = 1; return res
+            if p > border:
+                break
+            while n % p == 0:
+                res[p] = res.get(p, 0) + 1
+                n //= p
+            if n == 1:
+                return res
+        res[n] = 1
+        return res
 
     def prime_factorize_factorial(self, n):
         res = dict()
         for i in range(2, n + 1):
-            for p, c in self.prime_factorize(i).items(): res[p] = res.get(p, 0) + c
+            for p, c in self.prime_factorize(i).items():
+                res[p] = res.get(p, 0) + c
         return res
 
     @staticmethod
@@ -56,19 +68,24 @@ class NumberTheory():
     def find_divisors(n):
         divisors = []
         for i in range(1, int(n**.5) + 1):
-            if n % i: continue
+            if n % i:
+                continue
             divisors.append(i)
             j = n // i
-            if j != i: divisors.append(j)
+            if j != i:
+                divisors.append(j)
         return divisors
 
     @staticmethod
     def base_convert(n, b):
-        if not n: return [0]
+        if not n:
+            return [0]
         res = []
         while n:
             n, r = divmod(n, b)
-            if r < 0: n += 1; r -= b
+            if r < 0:
+                n += 1
+                r -= b
             res.append(r)
         return res
 
@@ -80,14 +97,16 @@ class UnionFind():
         self.size = [1] * n
 
     def find_root(self, u):
-        if self.root[u] == u: return u
+        if self.root[u] == u:
+            return u
         self.root[u] = self.find_root(self.root[u])
         return self.root[u]
 
     def unite(self, u, v):
         ru = self.find_root(u)
         rv = self.find_root(v)
-        if ru == rv: return
+        if ru == rv:
+            return
         hu = self.height[ru]
         hv = self.height[rv]
         if hu >= hv:
@@ -109,9 +128,12 @@ class Combinatorics():
     sys.setrecursionlimit(10**6)
 
     def choose(self, n, r, mod=None):  # no mod, or mod ≠ prime
-        if r > n or r < 0: return 0
-        if r == 0: return 1
-        if (n, r) in self.nCr: return self.nCr[(n, r)]
+        if r > n or r < 0:
+            return 0
+        if r == 0:
+            return 1
+        if (n, r) in self.nCr:
+            return self.nCr[(n, r)]
         if not mod:
             self.nCr[(n, r)] = (self.choose(n - 1, r) + self.choose(n - 1, r - 1))
         else:
@@ -120,28 +142,44 @@ class Combinatorics():
 
     def cumprod(self, a):
         p = self.mod
-        l = len(a); sql = int(np.sqrt(l) + 1)
+        l = len(a)
+        sql = int(np.sqrt(l) + 1)
         a = np.resize(a, sql**2).reshape(sql, sql)
-        for i in range(sql - 1): a[:, i + 1] *= a[:, i]; a[:, i + 1] %= p
-        for i in range(sql - 1): a[i + 1] *= a[i, -1]; a[i + 1] %= p
+        for i in range(sql - 1):
+            a[:, i + 1] *= a[:, i]
+            a[:, i + 1] %= p
+        for i in range(sql - 1):
+            a[i + 1] *= a[i, -1]
+            a[i + 1] %= p
         return np.ravel(a)[:l]
 
     def make_mod_tables(self, N, n):
         p = self.mod
         if self.np_flg:
-            fac = np.arange(n + 1); fac[0] = 1; fac = self.cumprod(fac)
-            ifac = np.arange(n + 1, 0, -1); ifac[0] = pow(int(fac[-1]), p - 2, p)
+            fac = np.arange(n + 1)
+            fac[0] = 1
+            fac = self.cumprod(fac)
+            ifac = np.arange(n + 1, 0, -1)
+            ifac[0] = pow(int(fac[-1]), p - 2, p)
             ifac = self.cumprod(ifac)[n::-1]
-            n_choose = np.arange(N + 1, N - n, -1); n_choose[0] = 1;
+            n_choose = np.arange(N + 1, N - n, -1)
+            n_choose[0] = 1
             n_choose[1:] = self.cumprod(n_choose[1:]) * ifac[1:n + 1] % p
         else:
-            fac = [None] * (n + 1); fac[0] = 1
-            for i in range(n): fac[i + 1] = fac[i] * (i + 1) % p
-            ifac = [None] * (n + 1); ifac[n] = pow(fac[n], p - 2, p)
-            for i in range(n, 0, -1): ifac[i - 1] = ifac[i] * i % p
-            n_choose = [None] * (n + 1); n_choose[0] = 1
-            for i in range(n): n_choose[i + 1] = n_choose[i] * (N - i) % p
-            for i in range(n + 1): n_choose[i] = n_choose[i] * ifac[i] % p
+            fac = [None] * (n + 1)
+            fac[0] = 1
+            for i in range(n):
+                fac[i + 1] = fac[i] * (i + 1) % p
+            ifac = [None] * (n + 1)
+            ifac[n] = pow(fac[n], p - 2, p)
+            for i in range(n, 0, -1):
+                ifac[i - 1] = ifac[i] * i % p
+            n_choose = [None] * (n + 1)
+            n_choose[0] = 1
+            for i in range(n):
+                n_choose[i + 1] = n_choose[i] * (N - i) % p
+            for i in range(n + 1):
+                n_choose[i] = n_choose[i] * ifac[i] % p
         self.fac, self.ifac, self.mod_n_choose = fac, ifac, n_choose
 
     def mod_choose(self, n, r):
@@ -150,12 +188,16 @@ class Combinatorics():
 
 def z_algorithm(s):
     n = len(s)
-    a = [0] * n; a[0] = n
+    a = [0] * n
+    a[0] = n
     l = r = -1
     for i in range(1, n):
-        if r >= i: a[i] = min(a[i - l], r - i)
-        while i + a[i] < n and s[i + a[i]] == s[a[i]]: a[i] += 1
-        if i + a[i] >= r: l, r = i, i + a[i]
+        if r >= i:
+            a[i] = min(a[i - l], r - i)
+        while i + a[i] < n and s[i + a[i]] == s[a[i]]:
+            a[i] += 1
+        if i + a[i] >= r:
+            l, r = i, i + a[i]
     return a
 
 
@@ -179,7 +221,8 @@ class ABC002():
         s = sys.stdin.readline().rstrip()
         t = ''
         for c in s:
-            if c in vowels: continue
+            if c in vowels:
+                continue
             t += c
         print(t)
 
@@ -187,7 +230,10 @@ class ABC002():
         *coords, = map(int, sys.stdin.readline().split())
 
         def triangle_area(x0, y0, x1, y1, x2, y2):
-            x1 -= x0; x2 -= x0; y1 -= y0; y2 -= y0;
+            x1 -= x0
+            x2 -= x0
+            y1 -= y0
+            y2 -= y0
             return abs(x1 * y2 - x2 * y1) / 2
         print(triangle_area(*coords))
 
@@ -196,13 +242,15 @@ class ABC002():
         edges = set()
         for _ in range(m):
             x, y = map(int, sys.stdin.readline().split())
-            x -= 1; y -= 1
+            x -= 1
+            y -= 1
             edges.add((x, y))
         cand = []
         for i in range(1, 1 << n):
             s = [j for j in range(n) if i >> j & 1]
             for x, y in combinations(s, 2):
-                if (x, y) not in edges: break
+                if (x, y) not in edges:
+                    break
             else:
                 cand.append(len(s))
         print(max(cand))
@@ -217,9 +265,12 @@ class ABC003():
         atcoder = set('atcoder')
         s, t = sys.stdin.read().split()
         for i in range(len(s)):
-            if s[i] == t[i]: continue
-            if s[i] == '@' and t[i] in atcoder: continue
-            if t[i] == '@' and s[i] in atcoder: continue
+            if s[i] == t[i]:
+                continue
+            if s[i] == '@' and t[i] in atcoder:
+                continue
+            if t[i] == '@' and s[i] in atcoder:
+                continue
             print('You will lose')
             return
         print('You can win')
@@ -272,11 +323,17 @@ class ABC005():
         b = [int(x) for x in sys.stdin.readline().split()]
         i = 0
         for p in b:
-            if i == n: print('no'); return
+            if i == n:
+                print('no')
+                return
             while p - a[i] > t:
                 i += 1
-                if i == n: print('no'); return
-            if a[i] > p: print('no'); return
+                if i == n:
+                    print('no')
+                    return
+            if a[i] > p:
+                print('no')
+                return
             i += 1
         print('yes')
 
@@ -300,33 +357,44 @@ class ABC005():
 class ABC006():
     def A():
         n = sys.stdin.readline().rstrip()
-        if '3' in n: print('YES')
-        elif int(n) % 3 == 0: print('YES')
-        else: print('NO')
+        if '3' in n:
+            print('YES')
+        elif int(n) % 3 == 0:
+            print('YES')
+        else:
+            print('NO')
 
     def B():
         mod = 10007
         t = [0, 0, 1]
         for _ in range(1001001):
-            t.append(t[-1] + t[-2] + t[-3]); t[-1] %= mod
+            t.append(t[-1] + t[-2] + t[-3])
+            t[-1] %= mod
         n = int(sys.stdin.readline().rstrip())
         print(t[n - 1])
 
     def C():
         n, m = map(int, sys.stdin.readline().split())
         cnt = [0, 0, 0]
-        if m == 1: cnt = [-1, -1, -1]
+        if m == 1:
+            cnt = [-1, -1, -1]
         else:
-            if m & 1: m -= 3; cnt[1] += 1; n -= 1
+            if m & 1:
+                m -= 3
+                cnt[1] += 1
+                n -= 1
             cnt[2] = m // 2 - n
             cnt[0] = n - cnt[2]
-        if cnt[0] < 0 or cnt[1] < 0 or cnt[2] < 0: print(-1, -1, -1)
-        else: print(*cnt, sep=' ')
+        if cnt[0] < 0 or cnt[1] < 0 or cnt[2] < 0:
+            print(-1, -1, -1)
+        else:
+            print(*cnt, sep=' ')
 
     def D():
         n, *c = map(int, sys.stdin.read().split())
         lis = [inf] * n
-        for x in c: lis[bi_l(lis, x)] = x
+        for x in c:
+            lis[bi_l(lis, x)] = x
         print(n - bi_l(lis, inf))
 
 
@@ -337,22 +405,30 @@ class ABC007():
 
     def B():
         s = sys.stdin.readline().rstrip()
-        if s == 'a': print(-1)
-        else: print('a')
+        if s == 'a':
+            print(-1)
+        else:
+            print('a')
 
     def C():
         r, c = map(int, sys.stdin.readline().split())
         sy, sx = map(int, sys.stdin.readline().split())
         gy, gx = map(int, sys.stdin.readline().split())
-        sy -= 1; sx -= 1; gy -= 1; gx -= 1
+        sy -= 1
+        sx -= 1
+        gy -= 1
+        gx -= 1
         maze = [sys.stdin.readline().rstrip() for _ in range(r)]
         queue = deque([(sy, sx)])
-        dist = np.full((r, c), np.inf); dist[sy, sx] = 0
+        dist = np.full((r, c), np.inf)
+        dist[sy, sx] = 0
         while queue:
             y, x = queue.popleft()
             for i, j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-                i += y; j += x
-                if maze[i][j] == '#' or dist[i, j] != np.inf: continue
+                i += y
+                j += x
+                if maze[i][j] == '#' or dist[i, j] != np.inf:
+                    continue
                 dist[i, j] = dist[y, x] + 1
                 queue.append((i, j))
         print(int(dist[gy, gx]))
@@ -368,7 +444,8 @@ class ABC008():
     def B():
         n, *s = sys.stdin.read().split()
         res = defaultdict(int)
-        for name in s: res[name] += 1
+        for name in s:
+            res[name] += 1
         print(sorted(res.items(), key=lambda x: x[1])[-1][0])
 
     def C():
@@ -399,8 +476,10 @@ class ABC009():
             for j in range(i + 1, n):
                 if s[j] < s[i] and cost[i] + cost[j] <= r:
                     heappush(q, (s[j], cost[i] + cost[j], -j))
-            if not q: continue
-            _, c, j = heappop(q); j = -j
+            if not q:
+                continue
+            _, c, j = heappop(q)
+            j = -j
             s[i], s[j] = s[j], s[i]
             r -= c
             cost[i] = cost[j] = 0
@@ -448,17 +527,23 @@ class ABC011():
     def C():
         n, *ng = map(int, sys.stdin.read().split())
         ng = set(ng)
-        if n in ng: print('NO')
+        if n in ng:
+            print('NO')
         else:
             r = 100
             while n > 0:
-                if r == 0: print('NO'); return
+                if r == 0:
+                    print('NO')
+                    return
                 for i in range(3, 0, -1):
-                    if (n - i) in ng: continue
+                    if (n - i) in ng:
+                        continue
                     n -= i
                     r -= 1
                     break
-                else: print('NO'); return
+                else:
+                    print('NO')
+                    return
             print('YES')
 
     def D(): pass
@@ -485,12 +570,15 @@ class ABC041():
         *xy, = zip(*[iter(xy)] * 2)
         edges = [0] * n
         for x, y in xy:
-            x -= 1; y -= 1
+            x -= 1
+            y -= 1
             edges[x] |= 1 << y
-        comb = [None] * (1 << n); comb[0] = 1
+        comb = [None] * (1 << n)
+        comb[0] = 1
 
         def count(edges, bit):
-            if comb[bit] is not None: return comb[bit]
+            if comb[bit] is not None:
+                return comb[bit]
             comb[bit] = 0
             for i in range(n):
                 if (bit >> i) & 1 and not edges[i]:
@@ -527,7 +615,8 @@ class ABC042():
         tot = combinatorics.mod_choose(h + w - 2, h - 1)
         i = np.arange(h - a, h)
         ng = np.sum(combinatorics.mod_choose(i + b - 1, i) * combinatorics.mod_choose(h - i + w - b - 2, h - 1 - i) % MOD)
-        tot -= ng; tot %= MOD
+        tot -= ng
+        tot %= MOD
         print(tot)
 
 
@@ -540,8 +629,10 @@ class ABC043():
         s = sys.stdin.readline().rstrip()
         t = ''
         for c in s:
-            if c == 'B': t = t[:-1]
-            else: t += c
+            if c == 'B':
+                t = t[:-1]
+            else:
+                t += c
         print(t)
 
     def C():
@@ -555,10 +646,12 @@ class ABC043():
         n = len(s)
         for i in range(n - 1):
             if s[i] == s[i + 1]:
-                print(i + 1, i + 2); return
+                print(i + 1, i + 2)
+                return
         for i in range(n - 2):
             if s[i] == s[i + 2]:
-                print(i + 1, i + 3); return
+                print(i + 1, i + 3)
+                return
         print(-1, -1)
 
 
@@ -602,7 +695,8 @@ class ABC170():
             where[i] = k
             while queue_kindergarten[k]:
                 r, j = heappop(queue_kindergarten[k])
-                if where[j] != k or j == i: continue
+                if where[j] != k or j == i:
+                    continue
                 if rate[i] >= -r:
                     highest_kindergarten[k] = rate[i]
                     heappush(queue, (rate[i], k, i))
@@ -617,7 +711,8 @@ class ABC170():
             now = where[i]
             while queue_kindergarten[now]:
                 r, j = heappop(queue_kindergarten[now])
-                if where[j] != now or j == i: continue
+                if where[j] != now or j == i:
+                    continue
                 if highest_kindergarten[now] != -r:
                     highest_kindergarten[now] = -r
                     heappush(queue, (-r, now, j))
@@ -630,7 +725,8 @@ class ABC170():
         def inquire():
             while True:
                 r, k, i = heappop(queue)
-                if where[i] != k or r != highest_kindergarten[k]: continue
+                if where[i] != k or r != highest_kindergarten[k]:
+                    continue
                 heappush(queue, (r, k, i))
                 return r
 
@@ -678,12 +774,14 @@ class ABC171():
             b, c = map(int, sys.stdin.readline().split())
             s += (c - b) * cnt[b]
             print(s)
-            cnt[c] += cnt[b]; cnt[b] = 0
+            cnt[c] += cnt[b]
+            cnt[b] = 0
 
     def E():
         n, *a = map(int, sys.stdin.read().split())
         s = 0
-        for x in a: s ^= x
+        for x in a:
+            s ^= x
         b = map(lambda x: x ^ s, a)
         print(*b, sep=' ')
 
@@ -742,7 +840,8 @@ class ABC173():
             minus.sort(reverse=True)
             plus.sort(reverse=True)
             cand = []
-            if len(minus) & 1: minus = minus[:-1]
+            if len(minus) & 1:
+                minus = minus[:-1]
             for i in range(0, len(minus) - 1, 2):
                 cand.append(minus[i] * minus[i + 1] % MOD)
             if k & 1:
@@ -750,7 +849,8 @@ class ABC173():
                 plus = plus[1:]
             else:
                 res = 1
-            if len(plus) & 1: plus = plus[:-1]
+            if len(plus) & 1:
+                plus = plus[:-1]
             for i in range(0, len(plus) - 1, 2):
                 cand.append(plus[i] * plus[i + 1] % MOD)
             cand.sort(reverse=True)

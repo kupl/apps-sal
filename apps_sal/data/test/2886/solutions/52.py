@@ -6,4 +6,5 @@ for i in range(len(s) - 1):
     if i + 2 <= len(s) - 1 and (s[i] == s[i + 2] or s[i + 1] == s[i + 2]):
         print(i + 1, i + 3)
         break
-else: print('-1 -1')
+else:
+    print('-1 -1')

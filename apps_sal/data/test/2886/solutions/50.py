@@ -15,8 +15,10 @@ def unbalance(S):
 lenS = len(S)
 for i in range(lenS - 1):
     if unbalance(S[i:i + 2]):
-        print(f'{i+1} {i+2}'); break
+        print(f'{i+1} {i+2}')
+        break
     if i < lenS - 2 and unbalance(S[i:i + 3]):
-        print(f'{i+1} {i+3}'); break
+        print(f'{i+1} {i+3}')
+        break
 else:
     print('-1 -1')

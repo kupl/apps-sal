@@ -45,7 +45,8 @@ def logd(str):
     """usage:
     if _DEB: logd(f"{str}")
     """
-    if _DEB: print(f"[deb] {str}")
+    if _DEB:
+        print(f"[deb] {str}")
 
 ### MAIN ###
 
@@ -59,8 +60,10 @@ def __starting_point():
 
     if _DEB:
         print()
-        if _EXPECTED.strip() == ans.strip(): print("!! Success !!")
-        else: print(f"!! Failed... !!\nANSWER:   {ans}\nExpected: {_EXPECTED}")
+        if _EXPECTED.strip() == ans.strip():
+            print("!! Success !!")
+        else:
+            print(f"!! Failed... !!\nANSWER:   {ans}\nExpected: {_EXPECTED}")
 
 
 __starting_point()

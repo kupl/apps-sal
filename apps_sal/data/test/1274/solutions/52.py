@@ -20,6 +20,7 @@ for i in range(1, m + 1):
     for j in d[i]:
         heapq.heappush(Q, j)
 
-    if Q: ans += -heapq.heappop(Q)
+    if Q:
+        ans += -heapq.heappop(Q)
     # print(ans,i)
 print(ans)

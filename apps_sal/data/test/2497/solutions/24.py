@@ -6,7 +6,8 @@ xpoints = [[] for _ in range(3)]
 ypoints = [[] for _ in range(3)]
 for i in range(n):
     x, y, d = [item for item in input().split()]
-    x = int(x); y = int(y)
+    x = int(x)
+    y = int(y)
     if d == "R":
         ypoints[0].append(y)
         xpoints[1].append(x)

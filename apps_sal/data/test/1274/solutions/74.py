@@ -5,7 +5,10 @@ input_methods = ['clipboard', 'file', 'key']
 using_method = 0
 input_method = input_methods[using_method]
 
-IN = lambda: map(int, input().split())
+
+def IN(): return map(int, input().split())
+
+
 mod = 1000000007
 
 # +++++
@@ -83,7 +86,7 @@ def __starting_point():
     if sys.platform == 'ios':
         if input_method == input_methods[0]:
             ic = input_clipboard()
-            input = lambda: ic.__next__()
+            def input(): return ic.__next__()
         elif input_method == input_methods[1]:
             sys.stdin = open('inputFile.txt')
         else:

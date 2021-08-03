@@ -37,5 +37,7 @@ for k in range(n):
                 f = j
                 break
         j -= 1
-if flag: print("YES")
-else: print("NO")
+if flag:
+    print("YES")
+else:
+    print("NO")

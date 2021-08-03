@@ -4,16 +4,20 @@ PS = [[], [], [], []]
 S = "RLUD".index
 
 for i in range(N):
-    x, y, d = input().split(); x = int(x); y = int(y)
+    x, y, d = input().split()
+    x = int(x)
+    y = int(y)
     PS[S(d)].append((x, y))
 
 T = [0]
 INF = 10**9
 
-dymin = INF; dymax = -INF
+dymin = INF
+dymax = -INF
 P = []
 for i in [0, 1]:
-    xmin = INF; xmax = -INF
+    xmin = INF
+    xmax = -INF
     for x, y in PS[i]:
         dymin = min(dymin, y)
         dymax = max(dymax, y)
@@ -24,10 +28,12 @@ for x0 in P[0]:
     for x1 in P[1]:
         T.append(max(x1 - x0, 0) / 2.)
 
-dxmin = INF; dxmax = -INF
+dxmin = INF
+dxmax = -INF
 Q = []
 for i in [2, 3]:
-    ymin = INF; ymax = -INF
+    ymin = INF
+    ymax = -INF
     for x, y in PS[i]:
         dxmin = min(dxmin, x)
         dxmax = max(dxmax, x)
@@ -51,8 +57,10 @@ for y0 in [dymin, dymax]:
 
 ans = 10**30
 for t in T:
-    xmin = dxmin; xmax = dxmax
-    ymin = dymin; ymax = dymax
+    xmin = dxmin
+    xmax = dxmax
+    ymin = dymin
+    ymax = dymax
 
     xi, xa = P[0]
     if xi != INF:
