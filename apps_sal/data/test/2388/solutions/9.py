@@ -7,7 +7,8 @@ dp = [0] * n + [1]
 for i in range(n - 1, -1, -1):
     x, d = l[i]
     v = x + d
-    while l[st[-1]][0] < v: st.pop()
+    while l[st[-1]][0] < v:
+        st.pop()
     dp[i] = (dp[i + 1] + dp[st[-1]]) % mod
     st.append(i)
 print(dp[0])

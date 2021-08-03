@@ -7,7 +7,8 @@ nex = [n] * n
 for i in range(n - 1, -1, -1):
     x, d = l[i]
     v = x + d
-    while l[st[-1]][0] < v: st.pop()
+    while l[st[-1]][0] < v:
+        st.pop()
     nex[i] = st[-1]
     st.append(i)
 dp = [0] * (n + 1)

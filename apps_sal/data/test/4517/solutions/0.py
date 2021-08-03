@@ -1,5 +1,6 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 N, M = list(map(int, input().split()))
 X = [[] for i in range(N)]
@@ -30,7 +31,8 @@ def EulerTour(n, X, i0=0):
         if i >= 0:
             ET.append(i)
             ct += 1
-            if ET1[i] == 0: ET1[i] = ct
+            if ET1[i] == 0:
+                ET1[i] = ct
             de += 1
             DE[i] = de
         for a in X[i][::-1]:

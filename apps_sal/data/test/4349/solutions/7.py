@@ -1,7 +1,8 @@
 def check(mid):
     l = [0 for i in range(n)]
     for i in b:
-        if(i[0] > mid): break
+        if(i[0] > mid):
+            break
         l[i[1] - 1] = i[0]
     v = [0 for i in range(mid + 1)]
     for i in range(n):

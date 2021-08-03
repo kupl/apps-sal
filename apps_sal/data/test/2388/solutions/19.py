@@ -1,4 +1,5 @@
-n = int(input()); arr = [list(map(int, input().split())) for _ in range(n)]
+n = int(input())
+arr = [list(map(int, input().split())) for _ in range(n)]
 
 mod = 998244353
 ans = 0
