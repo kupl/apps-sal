@@ -7,4 +7,4 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
         if height >= desiredHeight:
             return day
         height -= downSpeed
-    return day if day > 0 else 1   
+    return day if day > 0 else 1

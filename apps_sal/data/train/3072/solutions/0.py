@@ -8,6 +8,6 @@ def is_narc(n):
 
 def is_narcissistic(*values):
     try:
-        return all(type(n) in [int,str] and is_narc(int(n)) for n in values)
+        return all(type(n) in [int, str] and is_narc(int(n)) for n in values)
     except ValueError:
         return False

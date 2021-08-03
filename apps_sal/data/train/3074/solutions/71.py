@@ -1,4 +1,6 @@
 import math
+
+
 def growing_plant(upSpeed, downSpeed, desiredHeight):
     height = 0
     days = 0

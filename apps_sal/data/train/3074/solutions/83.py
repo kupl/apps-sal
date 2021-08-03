@@ -3,7 +3,7 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
     counter = 0
     if desiredHeight == 0:
         counter = 1
-        return counter 
+        return counter
     else:
         while current_height < desiredHeight:
             current_height += upSpeed
@@ -12,4 +12,3 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
                 return counter
             else:
                 current_height -= downSpeed
-

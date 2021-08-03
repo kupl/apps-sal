@@ -6,4 +6,3 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
         return (desiredHeight - upSpeed) // daily_growth + 1
     else:
         return (desiredHeight - upSpeed) // daily_growth + 2
-

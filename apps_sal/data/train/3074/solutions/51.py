@@ -5,4 +5,3 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
     if (desiredHeight - upSpeed) % (upSpeed - downSpeed) > 0:
         res += 1
     return res + 1
-

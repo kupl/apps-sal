@@ -10,5 +10,5 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
         else:
             currentHeight -= downSpeed
             print("After Night", day, "Height:", currentHeight)
-            day += 1           
+            day += 1
     return day

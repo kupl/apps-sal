@@ -1,1 +1,1 @@
-growing_plant=lambda u,d,h:0-max(h-d,1)//(d-u)
+def growing_plant(u, d, h): return 0 - max(h - d, 1) // (d - u)
