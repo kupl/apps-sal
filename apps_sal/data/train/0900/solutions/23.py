@@ -13,6 +13,6 @@ def __starting_point():
             ans = (2 * (ans % mod)) % mod
 
         print(ans)
-            
+
 
 __starting_point()

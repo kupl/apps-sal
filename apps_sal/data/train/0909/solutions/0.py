@@ -1,9 +1,9 @@
 for u in range(int(input())):
-    n=int(input())
-    l=list(map(int,input().split()))
-    d=list(map(int,input().split()))
-    ka=[]
-    k=[]
+    n = int(input())
+    l = list(map(int, input().split()))
+    d = list(map(int, input().split()))
+    ka = []
+    k = []
     l.sort()
     d.sort()
     for i in range(n):
@@ -12,10 +12,9 @@ for u in range(int(input())):
     for i in range(n):
         k.append(l[i])
         k.append(d[i])
-    if(ka==sorted(ka)):
+    if(ka == sorted(ka)):
         print("YES")
-    elif(k==sorted(k)):
+    elif(k == sorted(k)):
         print("YES")
     else:
         print("NO")
-

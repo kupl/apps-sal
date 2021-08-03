@@ -1,17 +1,17 @@
 import random
 t = int(input())
-while t>0:
+while t > 0:
     t -= 1
-    
+
     n, k, s = list(map(int, input().split()))
     arr = list(map(int, input().split()))
-    temp = sorted(list(range(n)), key=lambda x:arr[x], reverse=True)
+    temp = sorted(list(range(n)), key=lambda x: arr[x], reverse=True)
     arr = sorted(arr, reverse=True)
     ind = 0
-    while ind<n and arr[ind]>s:
+    while ind < n and arr[ind] > s:
         ind += 1
-    
+
     temp = sorted(temp[ind:]) + temp[:ind]
-        
-    ans = [str(i+1) for i in temp]
+
+    ans = [str(i + 1) for i in temp]
     print(' '.join(ans))

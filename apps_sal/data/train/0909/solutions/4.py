@@ -1,18 +1,19 @@
 # cook your dish here
-def check(x,y,n):
+def check(x, y, n):
     k = 0
-    for i in range(0,n-1):
-        if(x[i] >= y[i] and x[i] <= y[i+1]):
+    for i in range(0, n - 1):
+        if(x[i] >= y[i] and x[i] <= y[i + 1]):
             k += 1
-        else: 
+        else:
             break
-    if(k == n-1):
+    if(k == n - 1):
         if(x[-1] >= y[-1]):
             print("YES")
         else:
             print("NO")
     else:
         print("NO")
+
 
 t = int(input())
 for _ in range(t):
@@ -23,16 +24,16 @@ for _ in range(t):
     g.sort()
     z = 0
     if(g[0] < b[0]):
-        check(b,g,n)
+        check(b, g, n)
     elif(g[0] > b[0]):
-        check(g,b,n)
+        check(g, b, n)
     else:
         for i in range(n):
             if(b[i] > g[i]):
-                check(b[i:], g[i:], n-i)
+                check(b[i:], g[i:], n - i)
                 break
             elif(b[i] < g[i]):
-                check(g[i:], b[i:], n-i)
+                check(g[i:], b[i:], n - i)
                 break
             z += 1
         if(z == n):
