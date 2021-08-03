@@ -9,11 +9,10 @@ class SubrectangleQueries:
                 self.q[row][col] = newValue
 
     def getValue(self, row: int, col: int) -> int:
-        return self.q[row][col] 
+        return self.q[row][col]
 
 
 # Your SubrectangleQueries object will be instantiated and called as such:
 # obj = SubrectangleQueries(rectangle)
 # obj.updateSubrectangle(row1,col1,row2,col2,newValue)
 # param_2 = obj.getValue(row,col)
-

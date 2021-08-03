@@ -9,10 +9,10 @@ class Solution:
         if root is None:
             return 0
         self.sol = 0
-        
+
         def recursive_long_zigzag(node):
             if node.left is None and node.right is None:
-                return 0,0
+                return 0, 0
             max_left = 0
             max_right = 0
             if node.left:
@@ -24,6 +24,6 @@ class Solution:
                 max_right = right_s_left + 1
                 self.sol = max(self.sol, max_right)
             return max_left, max_right
-        
+
         recursive_long_zigzag(root)
         return self.sol

@@ -6,6 +6,7 @@ class Solution:
         for s, e in edges:
             G[s].append(e)
             G[e].append(s)
+
         def dfs(idx, fr, p, step):
             if step > t:
                 return 0
@@ -24,4 +25,3 @@ class Solution:
                     return ret
             return 0
         return dfs(1, 0, 1, 0)
-

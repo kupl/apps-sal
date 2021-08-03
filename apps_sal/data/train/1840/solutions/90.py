@@ -6,9 +6,9 @@
 #         self.right = right
 class Solution:
     def longestZigZag(self, root: TreeNode) -> int:
-        
+
         memo = dict()
-        
+
         def zig_zag_len(node, direction):
             if not node:
                 return -1
@@ -24,5 +24,5 @@ class Solution:
                                             zig_zag_len(node.right, 'N'),
                                             zig_zag_len(node.left, 'N'))
             return memo[node, direction]
-        
+
         return zig_zag_len(root, 'N')

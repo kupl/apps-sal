@@ -1,5 +1,7 @@
 from collections import defaultdict
 from bisect import bisect_left, insort
+
+
 class TweetCounts:
 
     def __init__(self):
@@ -18,20 +20,14 @@ class TweetCounts:
         A, cur = self.history[tweet], s
         res = []
         while cur <= e:
-            nxt = min(cur+delta, e+1)
+            nxt = min(cur + delta, e + 1)
             occurence = bisect_left(A, nxt) - bisect_left(A, cur)
             res.append(occurence)
             cur += delta
         return res
-            
-            
-        
-        
-        
 
 
 # Your TweetCounts object will be instantiated and called as such:
 # obj = TweetCounts()
 # obj.recordTweet(tweetName,time)
 # param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)
-

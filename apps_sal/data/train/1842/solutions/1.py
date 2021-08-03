@@ -11,13 +11,13 @@ class Solution:
         while queue:
             node, time, frac = queue.popleft()
             if node == target:
-                if time == t or (time<t and len(to_edges[node]) == 1):
-                    return 1/frac
+                if time == t or (time < t and len(to_edges[node]) == 1):
+                    return 1 / frac
             if time > t:
                 return 0
             for nei in to_edges[node]:
                 if nei not in visited:
-                    queue.append((nei, time+1, frac*(len(to_edges[node])-1)))
+                    queue.append((nei, time + 1, frac * (len(to_edges[node]) - 1)))
                     visited.add(nei)
 
         return 0

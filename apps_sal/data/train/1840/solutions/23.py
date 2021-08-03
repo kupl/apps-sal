@@ -6,6 +6,7 @@
 #         self.right = right
 class Solution:
     m = 0
+
     def longestZigZag(self, root: TreeNode) -> int:
         def longest(node: TreeNode, state: int, acc: int) -> int:
             self.m = max(self.m, acc)
@@ -15,6 +16,6 @@ class Solution:
                 longest(node.right, 1, acc + 1), longest(node.left, 0, 0)
             else:
                 longest(node.left, 0, acc + 1), longest(node.right, 1, 0)
-            
+
         longest(root.left, 0, 0), longest(root.right, 1, 0)
         return self.m

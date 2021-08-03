@@ -12,9 +12,9 @@ class TweetCounts:
             delta = 3600
         elif freq == 'day':
             delta = 86400
-        
+
         pre = bisect_left(self.tweets[tweetName], startTime)
-        n = (endTime + 1 - startTime)//delta + (1 if (endTime+1-startTime) % delta != 0 else 0)
+        n = (endTime + 1 - startTime) // delta + (1 if (endTime + 1 - startTime) % delta != 0 else 0)
         end, res = startTime, []
         for _ in range(n):
             end = min(end + delta, endTime + 1)
@@ -28,4 +28,3 @@ class TweetCounts:
 # obj = TweetCounts()
 # obj.recordTweet(tweetName,time)
 # param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)
-

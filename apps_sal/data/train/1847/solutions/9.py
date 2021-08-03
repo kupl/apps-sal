@@ -9,4 +9,4 @@ class SubrectangleQueries:
                 self.q[row][col] = newValue
 
     def getValue(self, row: int, col: int) -> int:
-        return self.q[row][col] 
+        return self.q[row][col]

@@ -7,7 +7,7 @@
 class Solution:
     def pruneTree(self, root: TreeNode) -> TreeNode:
         return root if self.dfs(root) else None
-    
+
     def dfs(self, root):
         if not root:
             return False

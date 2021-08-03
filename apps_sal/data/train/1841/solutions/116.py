@@ -16,6 +16,6 @@ class Solution:
                 j -= 1
             k -= 1
         return result
-     
+
     def isStronger(self, a, b, median):
         return abs(a - median) > abs(b - median) or (abs(a - median) == abs(b - median) and a > b)

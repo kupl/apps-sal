@@ -19,7 +19,7 @@ class Solution:
                 return True
             else:
                 return False
-                
+
         if helper(root):
             return root
         else:

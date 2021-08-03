@@ -7,7 +7,7 @@
 class Solution:
     def longestZigZag(self, root: TreeNode) -> int:
         self.ans = 0
-        
+
         def aux(root, isleft, memo):
             if not root:
                 return 0
@@ -24,7 +24,7 @@ class Solution:
                 return memo[root][1]
             else:
                 return memo[root][0]
-            
+
         if not root:
             return 0
         memo = {}

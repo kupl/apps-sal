@@ -6,7 +6,7 @@ class Solution:
         j = len(arr) - 1
         if(j == 0):
             return arr
-        median = arr[j//2]
+        median = arr[j // 2]
         while len(res) < k:
             if(abs(median - arr[i]) <= abs(arr[j] - median)):
                 res.append(arr[j])

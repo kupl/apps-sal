@@ -4,9 +4,9 @@ class Solution:
         import heapq
         heap = []
         arr = sorted(arr)
-        median = arr[( len(arr)-1 )//2]
-        for i,num in enumerate(arr):
-            heapq.heappush( heap, (abs(num - median), num))
+        median = arr[(len(arr) - 1) // 2]
+        for i, num in enumerate(arr):
+            heapq.heappush(heap, (abs(num - median), num))
             if len(heap) > k:
                 heapq.heappop(heap)
-        return [ item[1] for item in heap ]
+        return [item[1] for item in heap]

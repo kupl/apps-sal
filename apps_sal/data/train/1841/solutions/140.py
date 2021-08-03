@@ -12,6 +12,3 @@ class Solution:
                 ans.append(arr[left])
                 left += 1
         return ans
-                
-            
-

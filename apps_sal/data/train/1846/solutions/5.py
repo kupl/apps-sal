@@ -6,8 +6,7 @@
 #         self.right = right
 class Solution:
     def pruneTree(self, root: TreeNode) -> TreeNode:
-        
-        
+
         def prune_tree_helper(root):
             if root:
                 curr_res = True if root.val == 0 else False
@@ -25,4 +24,3 @@ class Solution:
             return None
         else:
             return root
-

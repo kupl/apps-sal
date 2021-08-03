@@ -1,6 +1,7 @@
 from bisect import insort, bisect_left, bisect_right
 from math import ceil
 
+
 class TweetCounts:
     def __init__(self):
         self.tweets = {}
@@ -19,7 +20,7 @@ class TweetCounts:
         elif freq == 'hour':
             factor = 3600
         buckets = math.ceil((diff + 1) / factor)
-        ans = [0]*buckets
+        ans = [0] * buckets
         start = bisect_left(entry, startTime)
         end = bisect_right(entry, endTime)
         for i in range(start, end):
@@ -32,4 +33,3 @@ class TweetCounts:
 # obj = TweetCounts()
 # obj.recordTweet(tweetName,time)
 # param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)
-

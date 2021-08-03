@@ -5,11 +5,11 @@ class Solution:
         2. sort the list based on |arr[i]-m | > |arr[j] - m|
         3. select the top k strongest elements
         '''
-        
+
         arr.sort()
         lastPointer = -1
         startPointer = 0
-        mInd = (len(arr)-1)//2
+        mInd = (len(arr) - 1) // 2
         m = arr[mInd]
         res = []
         for i in range(k):
@@ -20,4 +20,3 @@ class Solution:
                 res.append(arr[startPointer])
                 startPointer += 1
         return res
-

@@ -4,11 +4,11 @@ class Solution:
         for u, v in edges:
             graph[u].add(v)
             graph[v].add(u)
-            
+
         seen = set([1])
-        
+
         queue = collections.deque([(1, 1)])
-        
+
         while t > 0:
             size = len(queue)
             for _ in range(size):
@@ -17,7 +17,7 @@ class Solution:
                 for nb in graph[f]:
                     if nb not in seen:
                         length += 1
-                        
+
                 if length == 0:
                     queue.append((f, prob))
                 else:
@@ -25,16 +25,12 @@ class Solution:
                         if nb not in seen:
                             seen.add(nb)
                             queue.append((nb, prob / length))
-                            
+
             t -= 1
-            
+
         res = 0
         for node, prob in queue:
             if node == target:
                 res += prob
-                
+
         return res
-
-                        
-                
-

@@ -1,14 +1,14 @@
 class TweetCounts:
-    
+
     deltaDic = {
-        'minute': 60, 
+        'minute': 60,
         'hour': 3600,
         'day': 24 * 3600,
     }
 
     def __init__(self):
         self.tweetDic = {}
-        
+
     def recordTweet(self, tweetName: str, time: int) -> None:
         if not tweetName in self.tweetDic:
             self.tweetDic[tweetName] = []
@@ -18,7 +18,7 @@ class TweetCounts:
     def getTweetCountsPerFrequency(self, freq: str, tweetName: str, startTime: int, endTime: int) -> List[int]:
         if not tweetName in self.tweetDic:
             return []
-        
+
         delta = self.deltaDic[freq]
         output = [0] * ((endTime - startTime) // delta + 1)
         for t in self.tweetDic[tweetName]:
@@ -29,11 +29,10 @@ class TweetCounts:
             else:
                 idx = (t - startTime) // delta
                 output[idx] += 1
-        
+
         return output
 
 # Your TweetCounts object will be instantiated and called as such:
 # obj = TweetCounts()
 # obj.recordTweet(tweetName,time)
 # param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)
-

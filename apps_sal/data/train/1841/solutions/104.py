@@ -3,7 +3,7 @@ class Solution:
         arr.sort()
         lastPointer = -1
         startPointer = 0
-        mInd = (len(arr)-1)//2
+        mInd = (len(arr) - 1) // 2
         m = arr[mInd]
         res = []
         for i in range(k):
@@ -14,4 +14,3 @@ class Solution:
                 res.append(arr[startPointer])
                 startPointer += 1
         return res
-
