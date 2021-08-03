@@ -6,12 +6,16 @@ def main():
     for ai in a:
         j, x = 2, ai
         while x <= 10**6:
-            if j == 2 and cnt[x] >= 1: cnt[x] += 1; break;
+            if j == 2 and cnt[x] >= 1:
+                cnt[x] += 1
+                break
             cnt[x] += 1
-            x = ai * j; j += 1;
+            x = ai * j
+            j += 1
 
     for ai in a:
-        if cnt[ai] <= 1: ans += 1;
+        if cnt[ai] <= 1:
+            ans += 1
 
     print(ans)
 

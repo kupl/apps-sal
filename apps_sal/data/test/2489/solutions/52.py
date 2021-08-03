@@ -17,6 +17,7 @@ cnt = 0
 
 # print(s)
 for a in arr:
-    if a in s: continue
+    if a in s:
+        continue
     cnt += 1
 print(cnt)

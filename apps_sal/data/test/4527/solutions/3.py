@@ -21,9 +21,14 @@ for _ in range(int(input())):
     out = [[] for i in range(n + 1)]
     for i in range(n + 1):
         for j in range(i + 1, n + 1):
-            l, r = seg[i]; L, R = seg[j]
-            if L <= l and r <= R: out[j].append(i); deg[i] += 1
-            elif l <= L and R <= r: out[i].append(j); deg[j] += 1
+            l, r = seg[i]
+            L, R = seg[j]
+            if L <= l and r <= R:
+                out[j].append(i)
+                deg[i] += 1
+            elif l <= L and R <= r:
+                out[i].append(j)
+                deg[j] += 1
 
     ans = [0]
     deq = deque(ans)
@@ -32,21 +37,28 @@ for _ in range(int(input())):
         v = deq.popleft()
         for nv in out[v]:
             deg[nv] -= 1
-            if deg[nv] == 0: deq.append(nv); ans.append(nv)
+            if deg[nv] == 0:
+                deq.append(nv)
+                ans.append(nv)
 
     dp = [0] * (n + 1)
 
     def solve(v):
         query = [[] for i in range(2 * n + 3)]
-        for nv in out[v]: l, r = seg[nv]; query[r].append((l, dp[nv]))
+        for nv in out[v]:
+            l, r = seg[nv]
+            query[r].append((l, dp[nv]))
         subdp = [0] * (2 * n + 3)
         for i in range(1, 2 * n + 3):
             res = subdp[i - 1]
-            for l, val in query[i]: test = subdp[l - 1] + val; res = max(test, res)
+            for l, val in query[i]:
+                test = subdp[l - 1] + val
+                res = max(test, res)
             subdp[i] = res
 
         dp[v] = subdp[-1] + 1
 
-    for v in ans[::-1]: solve(v)
+    for v in ans[::-1]:
+        solve(v)
 
     print(dp[0] - 1)

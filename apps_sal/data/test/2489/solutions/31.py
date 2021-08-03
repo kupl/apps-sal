@@ -12,7 +12,8 @@ def resolve():
             f[nx] += 1
     ans = 0
     for x in a:
-        if f[x] == 1: ans += 1
+        if f[x] == 1:
+            ans += 1
     print(ans)
 
 

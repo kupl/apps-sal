@@ -32,8 +32,10 @@ def solve():
         l, r, m = [], [], set()
         for i in range(n):
             x, y = put()
-            l.append(x); r.append(y)
-            m.add(x); m.add(y)
+            l.append(x)
+            r.append(y)
+            m.add(x)
+            m.add(y)
         m = sorted(m)
         size = len(m)
         seg = [[] for i in range(size)]

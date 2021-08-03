@@ -6,7 +6,8 @@ for a in A:
     L[a] = 1
 
 for p in A:
-    if not L[p]: continue
+    if not L[p]:
+        continue
     L[p] += 1
     n = 2
     while p * n <= A[-1]:

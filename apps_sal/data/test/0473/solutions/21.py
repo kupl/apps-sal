@@ -1,8 +1,8 @@
 [e1, e2] = map(int, input().split(':'))
 [s1, s2] = map(int, input().split(':'))
 
-total1 = e1 * 60 + e2;
-total2 = s1 * 60 + s2;
+total1 = e1 * 60 + e2
+total2 = s1 * 60 + s2
 ans = 0
 if total1 >= total2:
     ans = total1 - total2

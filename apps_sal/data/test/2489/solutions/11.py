@@ -28,7 +28,8 @@ mod = 10**9 + 7
 
 
 def pprint(*A):
-    for a in A: print(*a, sep='\n')
+    for a in A:
+        print(*a, sep='\n')
 
 
 def INT_(n): return int(n) - 1

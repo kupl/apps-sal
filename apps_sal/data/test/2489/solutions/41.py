@@ -17,7 +17,8 @@ ret[A] = True
 
 for i in range(N - 1):
     m = A[i] * 2
-    if A[i] == A[i + 1]: m = A[i]
+    if A[i] == A[i + 1]:
+        m = A[i]
     ret[np.arange(m, MX + 1, A[i])] = False
 
 print((np.sum(ret)))

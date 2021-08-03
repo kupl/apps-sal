@@ -28,7 +28,8 @@ def solve(n, segs):
     for ln in range(1, m + 1):
         for l in range(m):
             r = l + ln - 1
-            if r >= m: continue
+            if r >= m:
+                continue
             if l + 1 <= r:
                 dp[l][r] = dp[l + 1][r]
             for rr in r_segs[l]:

@@ -11,7 +11,8 @@ def main():
     multi = [0] * (max_A + 1)  # 重複個数
     for a in A:
         multi[a] += 1
-        if multi[a] > 1: continue
+        if multi[a] > 1:
+            continue
         x = a
         while x + a <= max_A:
             x += a

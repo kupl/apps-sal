@@ -46,15 +46,20 @@ for _ in range(int(input())):
 
     def solve(v):
         query = [[] for i in range(2 * n + 3)]
-        for nv in out[v]: l, r = seg[nv]; query[r].append((l, dp[nv]))
+        for nv in out[v]:
+            l, r = seg[nv]
+            query[r].append((l, dp[nv]))
         subdp = [0] * (2 * n + 3)
         for i in range(1, 2 * n + 3):
             res = subdp[i - 1]
-            for l, val in query[i]: test = subdp[l - 1] + val; res = max(test, res)
+            for l, val in query[i]:
+                test = subdp[l - 1] + val
+                res = max(test, res)
             subdp[i] = res
 
         dp[v] = subdp[-1] + 1
 
-    for v in ans[::-1]: solve(v)
+    for v in ans[::-1]:
+        solve(v)
 
     print(dp[0] - 1)

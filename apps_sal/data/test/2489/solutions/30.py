@@ -6,7 +6,8 @@ A.sort()
 dp = [False] * (10**6 * 2)
 ans = 0
 for idx, i in enumerate(A):
-    if dp[i]: continue
+    if dp[i]:
+        continue
     tmp = i
     ans += 1
     while tmp < 10**6 * 2 - 1:
