@@ -1,4 +1,4 @@
-def calculate(*args): 
+def calculate(*args):
     try:
         return eval(('').join(map(str, args)))
     except:

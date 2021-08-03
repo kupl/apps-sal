@@ -11,4 +11,3 @@ def HQ9(code: str) -> str:
         if code == "9"
         else None
     )
-

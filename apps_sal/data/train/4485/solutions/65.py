@@ -1,6 +1,8 @@
 def HQ9(code):
-    if code == 'H': return 'Hello World!'
-    if code == 'Q': return code
+    if code == 'H':
+        return 'Hello World!'
+    if code == 'Q':
+        return code
     if code == '9':
         out = ''
         for i in range(99, 2, -1):

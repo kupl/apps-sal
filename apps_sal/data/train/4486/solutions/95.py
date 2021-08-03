@@ -1,4 +1,4 @@
-def repeat_it(string,n):
+def repeat_it(string, n):
     if string != str(string):
         return "Not a string"
-    return string*n
+    return string * n

@@ -1,15 +1,18 @@
 from itertools import tee
 
+
 def pairwise(iterable):
     a, b = tee(iterable)
     next(b, None)
     return zip(a, b)
+
 
 def length(value):
     try:
         return len(value)
     except TypeError:
         return len(str(value))
+
 
 def order_type(values):
     if len(values) <= 1:

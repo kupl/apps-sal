@@ -10,5 +10,5 @@ def HQ9(code):
                 return_string = return_string + "Take one down and pass it around, " + str(x) + " bottles of beer on the wall.\n"
             return_string = return_string + str(x) + ' bottles of beer on the wall, ' + str(x) + ' bottles of beer.\n'
         return_string = return_string + "Take one down and pass it around, 1 bottle of beer on the wall.\n1 bottle of beer on the wall, 1 bottle of beer.\nTake one down and pass it around, no more bottles of beer on the wall.\nNo more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall."
-        return return_string    
+        return return_string
     pass

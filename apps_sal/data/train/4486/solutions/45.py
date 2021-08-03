@@ -1,1 +1,1 @@
-repeat_it = lambda s, n: 'Not a string' if type(s) is not str else s * n
+def repeat_it(s, n): return 'Not a string' if type(s) is not str else s * n

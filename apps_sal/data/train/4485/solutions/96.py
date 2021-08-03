@@ -5,10 +5,10 @@ def HQ9(code):
         return 'Q'
     if code == '9':
         return '\n'.join(
-            f'{i} bottles of beer on the wall, {i} bottles of beer.\n' + 
+            f'{i} bottles of beer on the wall, {i} bottles of beer.\n' +
             f'Take one down and pass it around, {i-1} bottles of beer on the wall.'
             for i in range(99, 2, -1)
-            ) + \
+        ) + \
             '\n2 bottles of beer on the wall, 2 bottles of beer.' + \
             '\nTake one down and pass it around, 1 bottle of beer on the wall.' + \
             '\n1 bottle of beer on the wall, 1 bottle of beer.' + \

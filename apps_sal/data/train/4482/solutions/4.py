@@ -1,5 +1,6 @@
 from itertools import islice
 
+
 def even_numbers_before_fixed(sequence, fixed_element):
     try:
         i = sequence.index(fixed_element)

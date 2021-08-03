@@ -3,7 +3,7 @@ def HQ9(code):
     bottles = 99
     while bottles > 2:
         x += '%d bottles of beer on the wall, %d bottles of beer.\n' % (bottles, bottles)
-        x += 'Take one down and pass it around, %d bottles of beer on the wall.\n' % (bottles-1)
+        x += 'Take one down and pass it around, %d bottles of beer on the wall.\n' % (bottles - 1)
         bottles -= 1
     x += '2 bottles of beer on the wall, 2 bottles of beer.\n' +\
         'Take one down and pass it around, 1 bottle of beer on the wall.\n' +\

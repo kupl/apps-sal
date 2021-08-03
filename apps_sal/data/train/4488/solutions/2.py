@@ -1,6 +1,7 @@
 from collections import Counter
 from bisect import insort
 
+
 def bucketize(*arr):
     c = Counter(arr)
     xs = [None] * (len(arr) + 1)

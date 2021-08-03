@@ -1,1 +1,1 @@
-repeat_it=lambda string,n: string*n if type(string)==str else "Not a string"
+def repeat_it(string, n): return string * n if type(string) == str else "Not a string"

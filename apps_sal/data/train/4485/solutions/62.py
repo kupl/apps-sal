@@ -18,6 +18,7 @@ def HQ9(code):
 
         return result
 
+
 # Q
 print(HQ9("Q"))
 # H

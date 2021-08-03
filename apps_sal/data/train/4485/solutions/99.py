@@ -6,9 +6,9 @@ def HQ9(code):
     if code == '9':
         t = ''
         b = 99
-        while b>2:
-            t += str(b)+' bottles of beer on the wall, '+str(b)+' bottles of beer.\n'
-            t += 'Take one down and pass it around, '+str(b-1)+' bottles of beer on the wall.\n'
+        while b > 2:
+            t += str(b) + ' bottles of beer on the wall, ' + str(b) + ' bottles of beer.\n'
+            t += 'Take one down and pass it around, ' + str(b - 1) + ' bottles of beer on the wall.\n'
             b -= 1
         t += '2 bottles of beer on the wall, 2 bottles of beer.\n'
         t += 'Take one down and pass it around, 1 bottle of beer on the wall.\n'
