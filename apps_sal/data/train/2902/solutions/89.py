@@ -1,7 +1,7 @@
 def opposite(n):
-    if n>0:
-        n=n-(2*n)
+    if n > 0:
+        n = n - (2 * n)
         return n
     else:
-        n=abs(n)
+        n = abs(n)
         return n

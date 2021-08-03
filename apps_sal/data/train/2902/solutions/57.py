@@ -1,3 +1,3 @@
 def opposite(number):
   # your solution here
-    return(-number*1)
+    return(-number * 1)

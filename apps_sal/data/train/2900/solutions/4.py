@@ -11,5 +11,5 @@ def string_transformer(s):
             result = result + letter.lower()
         else:
             result = result + letter
-    
+
     return result

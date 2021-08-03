@@ -11,4 +11,3 @@ def flatten(dictionary):
             else:
                 result["/".join(new_path)] = v
     return result
-

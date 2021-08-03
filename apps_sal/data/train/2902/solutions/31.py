@@ -1,1 +1,1 @@
-opposite = lambda l: -l
+def opposite(l): return -l

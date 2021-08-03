@@ -1,2 +1,2 @@
 def opposite(number):
-  return float(('-' + str(number)).replace('--', ''))
+    return float(('-' + str(number)).replace('--', ''))

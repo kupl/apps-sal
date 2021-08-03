@@ -3,4 +3,3 @@ def opposite(number):
     ans = number - tmp
     return ans
   # your solution here
-

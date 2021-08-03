@@ -1,5 +1,3 @@
 def opposite(number):
-    opacne = number*-1
+    opacne = number * -1
     return opacne
-      
-
