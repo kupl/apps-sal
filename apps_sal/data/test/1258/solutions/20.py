@@ -40,19 +40,27 @@ while True:
     lnowl = len(nowl)
     if lnowl == 3:  # mid
         for item in nowl:
-            try: item.remove(now)
-            except: pass
-            try: item.remove(last)
-            except: pass
+            try:
+                item.remove(now)
+            except:
+                pass
+            try:
+                item.remove(last)
+            except:
+                pass
             if len(item) == 1:
                 next = item[0]
                 break
     elif lnowl == 2:
         for item in nowl:
-            try: item.remove(now)
-            except: pass
-            try: item.remove(last)
-            except: pass
+            try:
+                item.remove(now)
+            except:
+                pass
+            try:
+                item.remove(last)
+            except:
+                pass
             if len(item) == 1:
                 next = item[0]
                 break

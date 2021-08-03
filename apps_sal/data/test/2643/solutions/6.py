@@ -2,9 +2,9 @@ import sys
 import numpy as np
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-printV = lambda x: print(*x, sep="\n")
-printH = lambda x: print(" ".join(map(str, x)))
+def int1(x): return int(x) - 1
+def printV(x): return print(*x, sep="\n")
+def printH(x): return print(" ".join(map(str, x)))
 def IS(): return sys.stdin.readline()[:-1]
 def II(): return int(sys.stdin.readline())
 def MI(): return map(int, sys.stdin.readline().split())
