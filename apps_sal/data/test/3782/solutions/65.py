@@ -24,7 +24,8 @@ for x in Xs:
         P.sort()
         for i, p in enumerate(P):
             q.append(p)
-            if len(P) - K - i == 0: break
+            if len(P) - K - i == 0:
+                break
     if len(q) < Q:
         break
     q.sort()

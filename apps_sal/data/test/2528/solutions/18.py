@@ -7,5 +7,6 @@ for i in range(n):
         cnt += 1
         if cnt > max:
             max = cnt
-    else: cnt = 0
+    else:
+        cnt = 0
 print(max)

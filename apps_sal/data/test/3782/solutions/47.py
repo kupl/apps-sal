@@ -20,7 +20,8 @@ for j in range(N):
             possibles += Ak[:len(Ak) - K + 1]
         kp = k + 1
 
-    if len(possibles) < Q: break
+    if len(possibles) < Q:
+        break
     possibles.sort()
     #print(possibles, imps, possibles[Q-1] - possibles[0])
     ans = min(ans, possibles[Q - 1] - possibles[0])

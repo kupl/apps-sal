@@ -28,7 +28,8 @@ def main():
         P = []
         for q in Qs:
             l = len(q)
-            if l < K: continue
+            if l < K:
+                continue
             for _ in range(min(Q, l - K + 1)):
                 v = hp.heappop(q)
                 P.append(v)

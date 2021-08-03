@@ -8,7 +8,8 @@ B = list(map(int, input().split()))
 
 ans = sum(A)
 for i in range(N):
-    if A[i] >= B[i]: A[i] -= B[i]
+    if A[i] >= B[i]:
+        A[i] -= B[i]
     else:
         # A[i] < B[i]
         B[i] -= A[i]

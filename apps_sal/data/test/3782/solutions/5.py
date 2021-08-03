@@ -11,14 +11,16 @@ for x in sorted(set(a)):
         if ta[i] == bs:
             if t[-1] != []:
                 t.append([])
-        else: t[-1].append(a[i])
+        else:
+            t[-1].append(a[i])
     tt = []
     for i in range(len(t)):
         t[i].sort()
         for j in range(len(t[i]) - K + 1):
             tt.append(t[i][j])
     #print(tt, t, x)
-    if len(tt) < Q: break
+    if len(tt) < Q:
+        break
     tt.sort()
     res = min(res, tt[Q - 1] - tt[0])
     #print(res, tt, t)

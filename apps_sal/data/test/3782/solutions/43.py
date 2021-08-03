@@ -1,10 +1,12 @@
 #from collections import deque,defaultdict
 import heapq
-printn = lambda x: print(x, end='')
-inn = lambda: int(input())
-inl = lambda: list(map(int, input().split()))
-inm = lambda: map(int, input().split())
-ins = lambda: input().strip()
+def printn(x): return print(x, end='')
+def inn(): return int(input())
+def inl(): return list(map(int, input().split()))
+def inm(): return map(int, input().split())
+def ins(): return input().strip()
+
+
 DBG = True and False
 BIG = 10**18
 R = 10**9 + 7

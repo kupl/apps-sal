@@ -6,7 +6,8 @@ for i in range(n):
         return
 tmp = 1
 for i in range(n):
-    if a[i] <= (int(1e18) // tmp): tmp *= a[i]
+    if a[i] <= (int(1e18) // tmp):
+        tmp *= a[i]
     else:
         print(-1)
         return

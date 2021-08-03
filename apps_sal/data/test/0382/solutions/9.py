@@ -5,7 +5,8 @@ arr = [0] * n
 for i in range(n - m + 1):
     if t == s[i:i + m]:
         arr[i] = 1
-    if i: arr[i] += arr[i - 1]
+    if i:
+        arr[i] += arr[i - 1]
 for i in range(q):
     l, r = list(map(int, input().split()))
     l -= 1

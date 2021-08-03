@@ -1,8 +1,8 @@
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def II(): return int(sys.stdin.readline())
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
@@ -27,8 +27,10 @@ def diff(p):
                 break
             if len(cur) >= k:
                 cur.sort()
-                if k == 1: can += cur
-                else: can += cur[:-(k - 1)]
+                if k == 1:
+                    can += cur
+                else:
+                    can += cur[:-(k - 1)]
             cur = []
         else:
             cur.append(a)
@@ -43,7 +45,8 @@ def diff(p):
 ans = 10**16
 for p in pp:
     ret = diff(p)
-    if ret == -1: break
+    if ret == -1:
+        break
     # print(p,ret)
     ans = min(ans, ret)
 

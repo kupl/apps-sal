@@ -3,7 +3,8 @@ A = [int(i) for i in input().split()]
 
 
 def solve():
-    if Q == 1: return 0
+    if Q == 1:
+        return 0
 
     ret = float('inf')
     for i in range(N):

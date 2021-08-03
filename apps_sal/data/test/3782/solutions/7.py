@@ -21,7 +21,8 @@ for i in sa:
         else:
             v.append(j)
 
-    if len(q) < Q: break
+    if len(q) < Q:
+        break
     q.sort()
     ans = min(ans, q[Q - 1] - q[0])
 
