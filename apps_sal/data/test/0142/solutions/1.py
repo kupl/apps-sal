@@ -7,7 +7,8 @@ a = [c[0]]
 
 for i in range(1, 31):
     cand = [a[-1] * 2]
-    if i < n: cand.append(c[i])
+    if i < n:
+        cand.append(c[i])
     a.append(min(cand))
 
 ans = []

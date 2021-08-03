@@ -9,4 +9,5 @@ for i in range(n, 0, -1):
 
 print(abs(((n + 1) * n // 2 - sum(a)) - sum(a)))
 print(len(a), end=' ')
-for x in a: print(x, end=' ')
+for x in a:
+    print(x, end=' ')
