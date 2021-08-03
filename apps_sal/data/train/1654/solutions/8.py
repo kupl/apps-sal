@@ -1,5 +1,5 @@
 def solve_runes(runes):
-    massV = []                
+    massV = []
     massV_ind = []
     massD1 = []
     massD2 = []                # more lists to the god of lists!!!!!!!!!!!
@@ -10,46 +10,44 @@ def solve_runes(runes):
 
     expr, value = runes.split('=')
 
-    if expr.find('*',1) != -1:
-        ind = expr.index('*',1)
+    if expr.find('*', 1) != -1:
+        ind = expr.index('*', 1)
         dig_1 = expr[:ind]
-        dig_2 = expr[ind+1:]
+        dig_2 = expr[ind + 1:]
         sign = '*'
-    elif expr.find('+',1) != -1:
-        ind = expr.index('+',1)
+    elif expr.find('+', 1) != -1:
+        ind = expr.index('+', 1)
         dig_1 = expr[:ind]
-        dig_2 = expr[ind+1:]
+        dig_2 = expr[ind + 1:]
         sign = '+'
     else:
-        ind = expr.index('-',1)
+        ind = expr.index('-', 1)
         dig_1 = expr[:ind]
-        dig_2 = expr[ind+1:]
+        dig_2 = expr[ind + 1:]
         sign = '-'
-
-
 
     for i in range(len(value)):
         if value[i] == "?":
-            massV_ind.append(value.index(value[i],i))
+            massV_ind.append(value.index(value[i], i))
             massV.append('0')
         else:
             massV.append(value[i])
 
     for i in range(len(dig_1)):
         if dig_1[i] == "?":
-            massD1_ind.append(dig_1.index(dig_1[i],i))
+            massD1_ind.append(dig_1.index(dig_1[i], i))
             massD1.append('0')
         else:
             massD1.append(dig_1[i])
-    
+
     for i in range(len(dig_2)):
         if dig_2[i] == "?":
-            massD2_ind.append(dig_2.index(dig_2[i],i))
+            massD2_ind.append(dig_2.index(dig_2[i], i))
             massD2.append('0')
         else:
             massD2.append(dig_2[i])
 
-    for i in range(0,10):
+    for i in range(0, 10):
         for q in range(len(massD1_ind)):
             massD1[massD1_ind[q]] = str(i)
         for w in range(len(massD2_ind)):
@@ -73,40 +71,39 @@ def solve_runes(runes):
             if d1 + d2 == val:
                 ex.append(i)
 
-                                                # hate
+                # hate
     if dig_1[0] == '-':
         if 1 in massD1_ind:
-            if len(massD1)>1:                 
+            if len(massD1) > 1:
                 if 0 in ex:
                     ex.remove(0)
     else:
         if 0 in massD1_ind:
-            if len(massD1)>1:
+            if len(massD1) > 1:
                 if 0 in ex:
                     ex.remove(0)
-                                                # minuses                    
+                    # minuses
     if dig_2[0] == '-':
         if 1 in massD2_ind:
-            if len(massD2)>1:               
+            if len(massD2) > 1:
                 if 0 in ex:
                     ex.remove(0)
     else:
         if 0 in massD2_ind:
-            if len(massD2)>1:
+            if len(massD2) > 1:
                 if 0 in ex:
                     ex.remove(0)
 
     if value[0] == '-':
         if 1 in massV_ind:
-            if len(massV)>1:
+            if len(massV) > 1:
                 if 0 in ex:
                     ex.remove(0)
     else:
         if 0 in massV_ind:
-            if len(massV)>1:
+            if len(massV) > 1:
                 if 0 in ex:
                     ex.remove(0)
-
 
     for i in runes:
         if i in '1234567890':

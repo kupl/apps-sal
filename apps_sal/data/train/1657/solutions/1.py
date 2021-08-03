@@ -16,7 +16,7 @@
 # after applying the reversal function x times.
 
 def string_func(in_str, action_times):
-    
+
     input_len = len(in_str)
     input_mid_point = (input_len + 1) / 2 - 1
 
@@ -28,7 +28,7 @@ def string_func(in_str, action_times):
 
     # Keep track of which loop each character starts in, so that when we want to place it in our new string we'll know where to look.
     # Right now they're all set to 0, but that will change as we check each index.
-    loop_index_is_in = [0]*input_len
+    loop_index_is_in = [0] * input_len
 
     indices_not_checked = list(range(1, input_len))
 
@@ -38,7 +38,7 @@ def string_func(in_str, action_times):
         if index < input_mid_point:
             index = index * 2 + 1
         elif index > input_mid_point:
-            index = (input_len - 1 - index)*2
+            index = (input_len - 1 - index) * 2
         elif index == input_mid_point:
             index = input_len - 1
 
@@ -61,7 +61,6 @@ def string_func(in_str, action_times):
         # so that when we want to place it in our final result string we'll know where to look.
         loop_index_is_in[index] = len(loops) - 1
 
-
     # Now that we mapped out the loops, we need to find which index each character will end up at.
 
     # For now the final result string (new_string) is actually a list, so that we can use item assignment.
@@ -78,11 +77,10 @@ def string_func(in_str, action_times):
 
         # Figure out where it will go (where it is in the loop, plus the amount of
         # times we want to apply the reversal function, which is the amount of 'steps' the character will take, mod the length of the loop)
-        new_index = loop[(place_in_loop + action_times)%len(loop)]
+        new_index = loop[(place_in_loop + action_times) % len(loop)]
 
         # Insert the character in its place in new_string
         new_string[new_index] = in_str[char_index]
 
     # After placing each character in the new_string list, convert the list to a string and return it. That's our final result string.
     return ''.join(new_string)
-

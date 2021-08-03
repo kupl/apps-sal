@@ -1,5 +1,6 @@
 dictionary = {}
 
+
 def exp_sum(n, k=None):
     if k is None or k > n:
         k = n

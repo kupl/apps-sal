@@ -2522,6 +2522,8 @@ ANSWERS = {
     2520: 4752554242991993841520963249414089899868727306156151
 }
 
+
 def exp_sum(number):
-    if number < 0: return 0
+    if number < 0:
+        return 0
     return ANSWERS[number]

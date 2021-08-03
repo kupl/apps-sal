@@ -34,7 +34,7 @@ def count_col_triang(points_colors):
             b = (((vc[x] - vb[x])**2) + (vc[y] - vb[y])**2)**0.5
             c = (((va[x] - vc[x])**2) + (va[y] - vc[y])**2)**0.5
             s = (a + b + c) / 2  # semi-perimeter
-            area = (s*(s-a)*(s-b)*(s-c))**0.5
+            area = (s * (s - a) * (s - b) * (s - c))**0.5
 
             # any 3 points with an area is a triangle
             if area != 0:
