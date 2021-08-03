@@ -24,10 +24,14 @@ for k in range(len(f)):
             print('NIE')
             return
     if f[k] in sym:
-        if f[k] == 'p' and l[k] == 'q': continue
-        if f[k] == 'q' and l[k] == 'p': continue
-        if f[k] == 'b' and l[k] == 'd': continue
-        if f[k] == 'd' and l[k] == 'b': continue
+        if f[k] == 'p' and l[k] == 'q':
+            continue
+        if f[k] == 'q' and l[k] == 'p':
+            continue
+        if f[k] == 'b' and l[k] == 'd':
+            continue
+        if f[k] == 'd' and l[k] == 'b':
+            continue
         print('NIE')
         return
 print('TAK')

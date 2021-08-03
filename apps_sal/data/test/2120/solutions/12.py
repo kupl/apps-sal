@@ -9,6 +9,7 @@ for i in range(m):
     p[x].append(y)
     p[y].append(x)
 for x, f in v:
-    for y in p[x]: s += u[y]
+    for y in p[x]:
+        s += u[y]
     u[x] = 0
 print(s)

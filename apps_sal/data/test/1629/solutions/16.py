@@ -12,7 +12,8 @@ ct = 0
 for i in range(n):
     a[st] -= c
     ct += c
-    if(st == x - 1): c -= 1
+    if(st == x - 1):
+        c -= 1
     st = (st + 1) % n
 a[st] = ct - 1
 print(*a)

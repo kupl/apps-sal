@@ -19,7 +19,9 @@ d = {
     'q': 'p',
     'U': 'U'
 }
-g = lambda c: '*' if c not in list(d.keys()) else d[c]
+def g(c): return '*' if c not in list(d.keys()) else d[c]
+
+
 s = input()
 for i in range(len(s)):
     if s[i] != g(s[len(s) - i - 1]):

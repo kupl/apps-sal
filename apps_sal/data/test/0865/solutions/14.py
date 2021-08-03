@@ -9,13 +9,16 @@ def main():
         p = d[:]
         for i in range(a, t):
             v = d[i - a] + b
-            if v > p[i]: p[i] = v
+            if v > p[i]:
+                p[i] = v
         dp += p,
         d = p
     a = m = 0
     for(*_, v), (_, w) in zip(dp[-2::-1], g[::-1]):
-        if w > m: m = w
-        if v + m > a: a = v + m
+        if w > m:
+            m = w
+        if v + m > a:
+            a = v + m
     print(a)
 
 

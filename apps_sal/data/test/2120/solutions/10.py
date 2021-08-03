@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n, m = R()
 v = list(R())
 g = [set() for i in range(n + 1)]

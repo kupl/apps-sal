@@ -3,7 +3,8 @@ import copy
 S = input()
 l = len(S)
 ls = ''
-for i in range(1, l): ls += str(i)
+for i in range(1, l):
+    ls += str(i)
 sa = [''] * (2 * l - 1)
 for i in range(len(sa)):
     if i % 2 == 0:

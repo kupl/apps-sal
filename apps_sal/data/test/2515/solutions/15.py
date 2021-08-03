@@ -13,7 +13,8 @@ def inpl(): return list(map(int, sys.stdin.readline().split()))
 
 
 def is_prime(n):
-    if n == 1: return False
+    if n == 1:
+        return False
 
     for k in range(2, int(math.sqrt(n)) + 1):
         if n % k == 0:

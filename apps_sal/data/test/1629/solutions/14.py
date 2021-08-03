@@ -8,7 +8,8 @@ minSoFar = min(nums)
 index = -1
 for i in range(x + n - 1, x - 1, -1):
     if nums[i % n] == minSoFar:
-        index = i % n; break
+        index = i % n
+        break
 tmp = nums[index]
 num = tmp * n + (x - 1 + n - index) % n
 for i in range(n):

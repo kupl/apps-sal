@@ -17,5 +17,6 @@ for t in range(T - 1, p[-1]):
         real = sum_a / T
         print('%0.6f %0.6f %0.6f' % (real, mean, abs(real - mean) / real))
         i += 1
-        if i == len(p): break
+        if i == len(p):
+            break
     sum_a -= a[t - T + 1]

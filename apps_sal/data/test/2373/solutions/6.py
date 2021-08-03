@@ -9,6 +9,7 @@ for i in range(N):
         continue
     if p[i] == i + 1:
         count += 1
-        if i < N - 1 and p[i + 1] == i + 2: flag = 1
+        if i < N - 1 and p[i + 1] == i + 2:
+            flag = 1
 
 print(count)

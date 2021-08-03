@@ -2,8 +2,10 @@ n, dest = list(map(int, input().split()))
 dest -= 1
 a = list(map(int, input().split()))
 
-m1 = float('inf'); m2 = float('inf')
-pos1 = -1; pos2 = -1
+m1 = float('inf')
+m2 = float('inf')
+pos1 = -1
+pos2 = -1
 
 for i in range(dest + 1):
     if a[i] <= m1:

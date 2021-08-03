@@ -5,7 +5,8 @@ List = list(range(2, MAX))
 P = []
 while len(List) > 0:
     p = List[0]
-    if p >= np.sqrt(MAX): break
+    if p >= np.sqrt(MAX):
+        break
     P.append(p)
     List = [x for x in List if x % p != 0]
 P = set(P + List)

@@ -20,7 +20,8 @@ class IOHandlerObject(object):
             return [int(x) for x in inputs.split()]
 
     def writeOutput(self, s="\n"):
-        if isinstance(s, list): s = " ".join(s)
+        if isinstance(s, list):
+            s = " ".join(s)
         print(s)
 
 

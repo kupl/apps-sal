@@ -9,5 +9,6 @@ for i in range(m):
 q = [len(t) for t in p]
 for x, f in r:
     s += f * q[x]
-    for y in p[x]: q[y] -= 1
+    for y in p[x]:
+        q[y] -= 1
 print(s)
