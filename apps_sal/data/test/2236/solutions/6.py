@@ -9,7 +9,9 @@ def __starting_point():
     n = int(Si.readline())
     a = list(map(int, Si.readline().split()))
     s, d = 0, {}
-    for x in a: s += x; d[s] = d.get(s, 0) + 1
+    for x in a:
+        s += x
+        d[s] = d.get(s, 0) + 1
     print(n - max([d[k] for k in d]))
 
 

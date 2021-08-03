@@ -7,7 +7,7 @@ if '*' in mask:
 
 def check(a, b):
     if a == b:
-        return 1;
+        return 1
     if a == '?':
         for i in range(len(good)):
             if good[i] == b:

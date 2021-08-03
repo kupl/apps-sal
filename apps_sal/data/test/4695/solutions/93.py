@@ -5,10 +5,15 @@ g3 = {2}
 
 
 def group(z):
-    if z in g1: return 1
-    elif z in g2: return 2
-    else: return 3
+    if z in g1:
+        return 1
+    elif z in g2:
+        return 2
+    else:
+        return 3
 
 
-if group(x) == group(y): print('Yes')
-else: print('No')
+if group(x) == group(y):
+    print('Yes')
+else:
+    print('No')
