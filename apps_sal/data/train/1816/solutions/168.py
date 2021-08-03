@@ -13,4 +13,3 @@ class Solution:
             if len(uses_by_user[user]) > 2:
                 alerts.add(user)
         return sorted(list(alerts))
-

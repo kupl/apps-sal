@@ -2,6 +2,8 @@ from sortedcontainers import SortedSet, SortedList
 from heapq import heappush, heappop
 from datetime import timedelta
 from collections import defaultdict, deque
+
+
 class Solution:
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         users = []
@@ -26,4 +28,3 @@ class Solution:
                 rez.add(k[1])
 
         return list(rez)
-

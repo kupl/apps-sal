@@ -1,10 +1,10 @@
 class Solution:
     def getFolderNames(self, names: List[str]) -> List[str]:
         ans = []
-        
+
         used = collections.defaultdict(set)
         m = collections.defaultdict(int)
-        
+
         for raw in names:
             added = False
             res = re.search(f'\\([1-9][0-9]*\\)$', raw)
@@ -17,7 +17,7 @@ class Solution:
                     while m[name] in used[name]:
                         m[name] += 1
                     ans.append(f'{name}({n})')
-                    
+
             name = raw
             while m[name] in used[name]:
                 m[name] += 1
@@ -25,12 +25,12 @@ class Solution:
             used[name].add(n)
             if not added:
                 ans.append(f'{name}({n})' if n else name)
-                
+
             if n:
                 name = f'{name}({n})'
                 while m[name] in used[name]:
                     m[name] += 1
                 n = m[name]
                 used[name].add(n)
-        
+
         return ans

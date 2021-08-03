@@ -11,7 +11,7 @@ class MajorityChecker:
             x = self.A[random.randint(left, right)]
             l = bisect.bisect_left(self.itemIdx[x], left)
             r = bisect.bisect_right(self.itemIdx[x], right)
-            if r-l >= threshold:
+            if r - l >= threshold:
                 return x
         return -1
 
@@ -19,4 +19,3 @@ class MajorityChecker:
 # Your MajorityChecker object will be instantiated and called as such:
 # obj = MajorityChecker(arr)
 # param_1 = obj.query(left,right,threshold)
-

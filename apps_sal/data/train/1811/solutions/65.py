@@ -3,7 +3,6 @@ class StockSpanner:
     def __init__(self):
         self.nums = []
         self.larger_pos = []
-        
 
     def next(self, price: int) -> int:
         if not self.nums:
@@ -27,4 +26,3 @@ class StockSpanner:
 # Your StockSpanner object will be instantiated and called as such:
 # obj = StockSpanner()
 # param_1 = obj.next(price)
-

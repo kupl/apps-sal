@@ -9,7 +9,7 @@ class Solution:
         # print(keyTime)
         for i in range(n):
             if keyName[i] not in d:
-                d[keyName[i]] = [keyTime[i],[0],[0],True, False]
+                d[keyName[i]] = [keyTime[i], [0], [0], True, False]
             else:
                 if not d[keyName[i]][4]:
                     min_diff = int(str(keyTime[i][3:])) - int(str(d[keyName[i]][0][3:]))
@@ -20,19 +20,15 @@ class Solution:
                         hr_diff = hr_diff - 1
                     # print(\"=\", hr_diff)
                     if hr_diff < 0:
-                        d[keyName[i]] = [keyTime[i],[0],[0],True, False]
+                        d[keyName[i]] = [keyTime[i], [0], [0], True, False]
                         # print(\"Here\")
                     else:
                         d[keyName[i]][0] = keyTime[i]
-                        d[keyName[i]][1].append(hr_diff*60 + min_diff)
+                        d[keyName[i]][1].append(hr_diff * 60 + min_diff)
                         d[keyName[i]][2].append(d[keyName[i]][1][-1] + d[keyName[i]][1][-2])
-                        
-                        if len(d[keyName[i]][2])>2 and d[keyName[i]][2][-1] <= 60:
+
+                        if len(d[keyName[i]][2]) > 2 and d[keyName[i]][2][-1] <= 60:
                             d[keyName[i]][4] = True
                             res.append(keyName[i])
             # print(d)
         return sorted(res)
-                    
-                    
-                        
-

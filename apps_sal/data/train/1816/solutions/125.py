@@ -1,9 +1,10 @@
 class Solution:
     def alertNames(self, names: List[str], times: List[str]) -> List[str]:
         m, alerts = {}, []
-        minutes = lambda time: int(time.split(':')[0]) * 60 + int(time.split(':')[1])
+        def minutes(time): return int(time.split(':')[0]) * 60 + int(time.split(':')[1])
         for name, time in zip(names, times):
-            if name not in m: m[name] = deque()
+            if name not in m:
+                m[name] = deque()
             m[name].append(minutes(time))
         for name, times in m.items():
             q = deque()

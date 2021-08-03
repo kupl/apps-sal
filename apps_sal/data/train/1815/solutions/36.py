@@ -12,7 +12,7 @@ class Solution:
         cache = {}
         a = ''
         cumshift = 0
-        for pos in range(len(S)-1, -1, -1):
+        for pos in range(len(S) - 1, -1, -1):
             sh = shifts[pos] % 26
             cumshift += sh
             cumshift = cumshift % 26
@@ -37,14 +37,14 @@ class Solution:
             n += chn
         return n
         '''
-        
+
+
 def shift(ch, offset):
-    zval = 122 # ord('Z') if ch.isupper() else ord('z')
-    aval = 97 # ord('A') if ch.isupper() else ord('a')
+    zval = 122  # ord('Z') if ch.isupper() else ord('z')
+    aval = 97  # ord('A') if ch.isupper() else ord('a')
     offset = offset % 26
-    och = ord(ch) 
+    och = ord(ch)
     nch = och + offset
     if nch > zval:
-        nch = aval + (nch - zval -1)
+        nch = aval + (nch - zval - 1)
     return chr(nch)
-

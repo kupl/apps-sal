@@ -1,10 +1,10 @@
 class Solution:
-     def reorganizeString(self, S):
-         """
-         :type S: str
-         :rtype: str
-         """
-         '''
+    def reorganizeString(self, S):
+        """
+        :type S: str
+        :rtype: str
+        """
+        '''
          size = len(S)
          limit = size//2 + size%2
          cnt = collections.Counter(S)
@@ -20,19 +20,18 @@ class Solution:
                  i += 2
          return ''.join(res)
          '''
-         cnt = collections.Counter(S)
-         res = '#'
-         while cnt:
-             stop = True
-             for k, v in cnt.most_common():
-                 if k != res[-1]:
-                     stop = False
-                     res += k
-                     cnt[k] -= 1
-                     if not cnt[k]:
-                         del cnt[k]
-                     break
-             if stop == True:
-                 break
-         return res[1:] if len(res) == len(S)+1 else ''
-
+        cnt = collections.Counter(S)
+        res = '#'
+        while cnt:
+            stop = True
+            for k, v in cnt.most_common():
+                if k != res[-1]:
+                    stop = False
+                    res += k
+                    cnt[k] -= 1
+                    if not cnt[k]:
+                        del cnt[k]
+                    break
+            if stop == True:
+                break
+        return res[1:] if len(res) == len(S) + 1 else ''

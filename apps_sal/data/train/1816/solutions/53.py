@@ -6,8 +6,9 @@ class Solution:
         n = len(keyName)
         for i in range(n):
             d[keyName[i]].append(keyTime[i])
-        
+
         ans = []
+
         def delta(t1, t2):
             t1 = list(map(int, t1.split(':')))
             t2 = list(map(int, t2.split(':')))

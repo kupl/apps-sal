@@ -4,20 +4,21 @@ class Solution:
         Info.sort()
         keyTime = [x[0] for x in Info]
         keyName = [x[1] for x in Info]
-        
+
         cnt = collections.defaultdict(lambda: collections.deque())
+
         def diff(prev, curr):
-            val = (int(curr[:2]) - int(prev[:2]))*60 + int(curr[3:]) - int(prev[3:])
+            val = (int(curr[:2]) - int(prev[:2])) * 60 + int(curr[3:]) - int(prev[3:])
             return val > 60 or val < 0
         res = set()
-        
+
         for i in range(len(keyName)):
             curr = keyTime[i]
-            #if cnt[keyName[i]]:
+            # if cnt[keyName[i]]:
             #    print(diff(cnt[keyName[i]][0], curr))
             while cnt[keyName[i]] and diff(cnt[keyName[i]][0], curr):
                 cnt[keyName[i]].popleft()
-            if len(cnt[keyName[i]]) >= 2: 
+            if len(cnt[keyName[i]]) >= 2:
                 res.add(keyName[i])
             cnt[keyName[i]].append(curr)
-        return sorted(res)        
+        return sorted(res)

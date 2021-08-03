@@ -4,6 +4,7 @@ class Solution:
         for name, time in zip(keyName, keyTime):
             times[name].append(time)
         res = []
+
         def withinOneHour(t1, t2):
             (h1, m1) = [int(i) for i in t1.split(':')]
             t1 = h1 * 60 + m1
@@ -15,9 +16,9 @@ class Solution:
             queue = []
             for t in time:
                 queue.append(t)
-                if not withinOneHour(queue[0], queue[-1]): queue.pop(0)
+                if not withinOneHour(queue[0], queue[-1]):
+                    queue.pop(0)
                 if len(queue) >= 3:
                     res.append(name)
                     break
         return res
-

@@ -11,7 +11,7 @@ class Solution:
             d[key].sort()
 
             for i in range(len(d[key]) - 2):
-                time1, time2 = d[key][i], d[key][i+2]
+                time1, time2 = d[key][i], d[key][i + 2]
                 FMT = '%H:%M'
                 dt1 = datetime.datetime.strptime(time1, FMT)
                 dt2 = datetime.datetime.strptime(time2, FMT)

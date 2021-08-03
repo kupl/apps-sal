@@ -16,5 +16,4 @@ class Solution:
                     window[name].popleft()
                 if len(window[name]) > 2:
                     ans.add(name)
-        return sorted(ans)        
-
+        return sorted(ans)

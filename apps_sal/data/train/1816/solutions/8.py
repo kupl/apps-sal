@@ -3,7 +3,7 @@ class Solution:
         m = {}
         N = len(names)
         alerts = set()
-        minutes = lambda time: int(time.split(':')[0]) * 60 + int(time.split(':')[1])
+        def minutes(time): return int(time.split(':')[0]) * 60 + int(time.split(':')[1])
         for name, time in zip(names, times):
             if name not in m:
                 m[name] = deque()

@@ -1,4 +1,6 @@
 from collections import Counter, defaultdict
+
+
 class MajorityChecker:
 
     def __init__(self, arr: List[int]):
@@ -6,7 +8,7 @@ class MajorityChecker:
         self.dic = defaultdict()
 
     def query(self, left: int, right: int, threshold: int) -> int:
-        if (left,right) in self.dic:
+        if (left, right) in self.dic:
             if self.dic[(left, right)][1] >= threshold:
                 return self.dic[(left, right)][0]
             else:
@@ -27,4 +29,3 @@ class MajorityChecker:
 # Your MajorityChecker object will be instantiated and called as such:
 # obj = MajorityChecker(arr)
 # param_1 = obj.query(left,right,threshold)
-

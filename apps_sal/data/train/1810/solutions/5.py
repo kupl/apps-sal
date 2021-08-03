@@ -15,5 +15,5 @@ class Solution:
                         new_strs.append(new_str)
                         break
                     i += 1
-                
+
         return new_strs

@@ -19,12 +19,8 @@ class StockSpanner:
                 return cnt_removed
             else:
                 return 1
-            
-            
-            
 
 
 # Your StockSpanner object will be instantiated and called as such:
 # obj = StockSpanner()
 # param_1 = obj.next(price)
-

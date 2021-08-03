@@ -1,5 +1,5 @@
 class Solution:
-    def getFolderNames(self, names) :
+    def getFolderNames(self, names):
         res = []
         allname = collections.Counter()
         # print(names)

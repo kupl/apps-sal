@@ -5,14 +5,14 @@ class Solution:
         for key, time in zip(keyName, keyTime):
             hour = int(time[:2])
             minute = int(time[3:])
-            d[key].append(60*hour+minute)
+            d[key].append(60 * hour + minute)
         for key, times in d.items():
             if key not in res:
                 times.sort()
                 q = deque()
                 for time in times:
                     q.append(time)
-                    while q and (q[-1]-q[0])%(24*60) > 60:
+                    while q and (q[-1] - q[0]) % (24 * 60) > 60:
                         q.popleft()
                     if len(q) >= 3:
                         res.add(key)

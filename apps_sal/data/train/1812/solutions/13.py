@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class MajorityChecker(object):
 
     def __init__(self, A):
@@ -14,7 +15,7 @@ class MajorityChecker(object):
             idx = random.randint(left, right)
             if idx in ss:
                 continue
-            else: 
+            else:
                 ss.add(idx)
                 a = self.A[idx]
                 l = bisect.bisect_left(self.B[a], left)
@@ -22,10 +23,8 @@ class MajorityChecker(object):
                 if r - l >= threshold:
                     return a
         return -1
-        
 
 
 # Your MajorityChecker object will be instantiated and called as such:
 # obj = MajorityChecker(arr)
 # param_1 = obj.query(left,right,threshold)
-

@@ -19,10 +19,7 @@ class StockSpanner:
                 self.q.append([self.idx, price])
                 return self.idx - self.q[-2][0]
 
-        
-
 
 # Your StockSpanner object will be instantiated and called as such:
 # obj = StockSpanner()
 # param_1 = obj.next(price)
-

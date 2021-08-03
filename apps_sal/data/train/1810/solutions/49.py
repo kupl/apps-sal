@@ -1,6 +1,8 @@
 from collections import defaultdict
+
+
 class Solution:
-    
+
     def getFolderNames(self, names: List[str]) -> List[str]:
         used, hashmap = set(), defaultdict(int)
         result = []
@@ -14,4 +16,3 @@ class Solution:
             result.append(current)
             used.add(current)
         return result
-

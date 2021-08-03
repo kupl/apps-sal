@@ -1,17 +1,16 @@
 from typing import List
 
 
-
 class Solution:
     def getFolderNames(self, names: List[str]) -> List[str]:
-        exists = {} # maps a name to its count.
-        res = [] 
+        exists = {}  # maps a name to its count.
+        res = []
         for name in names:
             if name not in exists:
                 res.append(name)
                 exists[name] = 1
             else:
-                
+
                 newName = '{}({})'.format(name, exists[name])
                 exists[name] += 1
                 while newName in exists:
@@ -22,6 +21,4 @@ class Solution:
         return res
 
 
-
 s = Solution()
-

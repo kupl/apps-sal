@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def shiftingLetters(self, S: str, shifts: List[int]) -> str:
         offset = ord('a')

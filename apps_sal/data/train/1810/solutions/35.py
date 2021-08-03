@@ -10,7 +10,7 @@ class Solution:
                 k = d[name]
                 while name + '(' + str(k) + ')' in d:
                     k += 1
-                new_name= name + '(' + str(k) + ')'
+                new_name = name + '(' + str(k) + ')'
                 d[name] = k
                 d[new_name] = 1
             res.append(new_name)

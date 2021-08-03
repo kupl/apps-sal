@@ -13,7 +13,7 @@ class Solution:
                 if not node.left and not node.right:  # leaf
                     path_str = ''.join(reversed(path))
                     if not ans:
-                        ans = path_str 
+                        ans = path_str
                     elif path_str < ans:
                         ans = path_str
                 else:
@@ -27,9 +27,8 @@ class Solution:
         for i in range(26):
             letter_map.append(letter)
             letter = chr(ord(letter) + 1)
-            
+
         ans = None
         dfs(root, [])
-        
-        return ans
 
+        return ans

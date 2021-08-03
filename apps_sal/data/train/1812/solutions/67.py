@@ -13,21 +13,21 @@ class MajorityChecker:
         while leftCandi >= threshold:
             if self.arr[iNow] not in visited:
                 visited.add(self.arr[iNow])
-                numOfINow  = self.count(iNow, left)
+                numOfINow = self.count(iNow, left)
                 if numOfINow >= threshold:
                     return self.arr[iNow]
                 else:
                     leftCandi -= numOfINow
             iNow -= 1
         return -1
-    
+
     def count(self, i0, left):
         num = self.arr[i0]
         listLen = len(self.numDict[num])
         l = 0
         r = listLen - 1
         if i0 == self.numDict[num][r]:
-            right  = r
+            right = r
         elif i0 == self.numDict[num][l]:
             right = l
         else:
@@ -39,9 +39,9 @@ class MajorityChecker:
                     r = m
                 else:
                     l = m
-                    r = l -1
+                    r = l - 1
             right = l
-        l = 0 
+        l = 0
         r = right
         if left <= self.numDict[num][l]:
             return right + 1
@@ -54,13 +54,10 @@ class MajorityChecker:
             elif self.numDict[num][m] > left:
                 r = m
             else:
-                return right - m +1
-        return right- l + 1
-        
-        
-        
-    
-    
+                return right - m + 1
+        return right - l + 1
+
+
 # Your MajorityChecker object will be instantiated and called as such:
 # obj = MajorityChecker(arr)
 # param_1 = obj.query(left,right,threshold)
@@ -92,7 +89,7 @@ class MajorityChecker:
 #                     leftCandi -= numOfINow
 #             iNow -= 1
 #         return -1
-                
+
 #     def count(self, i0, l):
 #         if (i0, l) in self.dp:
 #             return self.dp[(i0,l)]
@@ -100,4 +97,3 @@ class MajorityChecker:
 #             return 1
 #         self.dp[(i0,l)] = 1 + self.count(self.preIndexList[i0], l)
 #         return self.dp[(i0,l)]
-

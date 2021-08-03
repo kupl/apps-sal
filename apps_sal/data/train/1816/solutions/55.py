@@ -6,7 +6,7 @@ class Solution:
             hour, minute = map(int, hour_minute.split(':'))
             time = hour * 60 + minute
             name_to_time[name].append(time)
-        names = []    
+        names = []
         for name, time_list in name_to_time.items():
             time_list.sort()
             for i, time in enumerate(time_list):

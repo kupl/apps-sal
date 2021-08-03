@@ -8,7 +8,7 @@ class MajorityChecker:
         self.A, self.a2i = arr, a2i
 
     def query(self, left: int, right: int, threshold: int) -> int:
-        for _ in range(20): # 用的是概率，20次都没有找到这个数的概率太小 -> 0.49^20 
+        for _ in range(20):  # 用的是概率，20次都没有找到这个数的概率太小 -> 0.49^20
             a = self.A[random.randint(left, right)]
             l = bisect.bisect_left(self.a2i[a], left)
             r = bisect.bisect_right(self.a2i[a], right)
@@ -19,4 +19,3 @@ class MajorityChecker:
 # Your MajorityChecker object will be instantiated and called as such:
 # obj = MajorityChecker(arr)
 # param_1 = obj.query(left,right,threshold)
-

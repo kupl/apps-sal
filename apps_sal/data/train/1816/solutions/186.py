@@ -1,6 +1,7 @@
 from collections import defaultdict
 from collections import deque
 
+
 class Solution:
     def alertNames(self, key_name, key_time):
         time_name = []

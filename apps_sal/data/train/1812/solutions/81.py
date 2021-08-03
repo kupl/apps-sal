@@ -6,7 +6,7 @@ class MajorityChecker:
         for i, num in enumerate(arr):
             self.counts[i + self.n][num] += 1
         for i in range(self.n)[::-1]:
-            self.counts[i] = self.counts[i*2] + self.counts[i*2 + 1]
+            self.counts[i] = self.counts[i * 2] + self.counts[i * 2 + 1]
 
     def query(self, left: int, right: int, threshold: int) -> int:
         left += self.n
@@ -23,11 +23,8 @@ class MajorityChecker:
             left //= 2
         topcount, topnum = max((ct, num) for num, ct in list(c.items()))
         return topnum if topcount >= threshold else -1
-                
-        
 
 
 # Your MajorityChecker object will be instantiated and called as such:
 # obj = MajorityChecker(arr)
 # param_1 = obj.query(left,right,threshold)
-

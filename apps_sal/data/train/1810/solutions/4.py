@@ -12,5 +12,3 @@ class Solution:
             new_names.append(new_name)
             seen_set.add(new_name)
         return new_names
-                
-

@@ -15,5 +15,3 @@ class Solution:
                 else:
                     lru[name].popleft()
         return sorted(list(res))
-                    
-

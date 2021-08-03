@@ -7,6 +7,7 @@
 class Solution:
     def smallestFromLeaf(self, root: TreeNode) -> str:
         res = [26]
+
         def dfs(node, current):
             nonlocal res
             if not node.left and not node.right:
