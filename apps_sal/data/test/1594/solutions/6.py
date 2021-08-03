@@ -5,7 +5,7 @@ Created on Tue Nov  3 20:30:05 2015
 @author: kevin
 """
 
-tableautaille = input().split(" ");
+tableautaille = input().split(" ")
 
 n = int(tableautaille[0])
 m = int(tableautaille[1])
@@ -16,7 +16,7 @@ for i in range(n):
     t = int(tab[1])
     tabfinal += [c * t]
 
-tableau = input().split(" ");
+tableau = input().split(" ")
 res = 0
 indice = 0
 for i in range(m):

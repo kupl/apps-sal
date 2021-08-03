@@ -1,6 +1,8 @@
 import string
 
-rd = lambda: list(map(int, input().split()))
+
+def rd(): return list(map(int, input().split()))
+
 
 n, k = rd()
 if k > 26 or k > n or k == 1 and n > 1:

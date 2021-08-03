@@ -26,7 +26,7 @@ def acos(x):
             mx = md
         else:
             mn = md
-    return mx;
+    return mx
 
 
 def main():

@@ -13,7 +13,8 @@ def sind(x):
         xpow *= -x * x
         fact *= i * (i - 1)
         next_ = res + xpow / fact
-        if res == next_: break
+        if res == next_:
+            break
         res = next_
         i += 2
 
@@ -29,7 +30,8 @@ def cosd(x):
         xpow *= -x * x
         fact *= i * (i - 1)
         next_ = res + xpow / fact
-        if res == next_: break
+        if res == next_:
+            break
         res = next_
         i += 2
 
@@ -40,7 +42,8 @@ def pi():
     lb, ub = Decimal('3.14'), Decimal('3.15')
     while True:
         mid = (lb + ub) / 2
-        if mid in (lb, ub): break
+        if mid in (lb, ub):
+            break
         if sind(mid) < 0:
             ub = mid
         else:
@@ -56,9 +59,12 @@ def acosd(x):
     lb, ub = Decimal(0), PI
     while True:
         mid = (lb + ub) / 2
-        if mid in (lb, ub): break
-        if cosd(mid) < x: ub = mid
-        else: lb = mid
+        if mid in (lb, ub):
+            break
+        if cosd(mid) < x:
+            ub = mid
+        else:
+            lb = mid
 
     return lb
 
@@ -67,9 +73,12 @@ def asind(x):
     lb, ub = -PI / 2, PI / 2
     while True:
         mid = (lb + ub) / 2
-        if mid in (lb, ub): break
-        if sind(mid) < x: lb = mid
-        else: ub = mid
+        if mid in (lb, ub):
+            break
+        if sind(mid) < x:
+            lb = mid
+        else:
+            ub = mid
 
     return lb
 

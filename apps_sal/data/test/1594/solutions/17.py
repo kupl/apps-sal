@@ -4,7 +4,8 @@
 # sys.stdout.flush()
 
 # MOD = 1000000007
-I = lambda: [int(i) for i in input().split()]
+def I(): return [int(i) for i in input().split()]
+
 
 n, m = I()
 l = []

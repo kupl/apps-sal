@@ -1,5 +1,6 @@
 n, m = [int(i) for i in input().split()]
-c = []; t = []
+c = []
+t = []
 for i in range(n):
     song = input().split()
     c.append(int(song[0]))
@@ -15,4 +16,5 @@ for i in range(len(c)):
             req_index += 1
         else:
             break
-    if req_index == len(req): break
+    if req_index == len(req):
+        break

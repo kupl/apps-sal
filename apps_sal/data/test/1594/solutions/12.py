@@ -1,4 +1,6 @@
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
+
+
 n, m = R()
 A = []
 while(n > 0):

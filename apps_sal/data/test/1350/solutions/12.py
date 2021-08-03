@@ -2,8 +2,10 @@ from collections import Counter
 USE_STDIO = False
 
 if not USE_STDIO:
-    try: import mypc
-    except: pass
+    try:
+        import mypc
+    except:
+        pass
 
 
 def main():
