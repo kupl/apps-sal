@@ -4,11 +4,11 @@ for _ in range(int(input())):
     s = 0
     temp = num
     while temp > 0:
-       digit = temp % 10
-       s += digit ** len(str(num))
-       temp //= 10
-    
+        digit = temp % 10
+        s += digit ** len(str(num))
+        temp //= 10
+
     if num == s:
-       print("FEELS GOOD")
+        print("FEELS GOOD")
     else:
-       print("FEELS BAD")
+        print("FEELS BAD")
