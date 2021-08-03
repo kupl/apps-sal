@@ -11,7 +11,7 @@ cumT = list(accumulate([0] + cntT))
 q = int(input())
 for _ in range(q):
     a, b, c, d = map(int, input().split())
-    if (cumS[b] - cumS[a-1]) % 3 == (cumT[d] - cumT[c-1]) % 3:
+    if (cumS[b] - cumS[a - 1]) % 3 == (cumT[d] - cumT[c - 1]) % 3:
         print('YES')
     else:
         print('NO')

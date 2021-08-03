@@ -21,4 +21,3 @@ for _ in range(Q):
 print(*ans, sep='\n')
 # 逐次printだと1000ms
 # 一括だと500ms
-

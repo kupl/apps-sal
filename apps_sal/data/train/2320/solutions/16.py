@@ -9,6 +9,6 @@ c = sorted(c)
 a = sorted(a)
 p = [0] * n
 for x in range(n):
-    p[c[x][1]] = a[n-x-1]
+    p[c[x][1]] = a[n - x - 1]
 for i in range(n):
-    print(p[i], end = ' ')
+    print(p[i], end=' ')

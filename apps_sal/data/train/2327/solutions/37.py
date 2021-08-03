@@ -18,10 +18,11 @@ class BIT(object):
     def __str__(self):
         return str(self.bit)
 
-n, m = map(int,input().split())
+
+n, m = map(int, input().split())
 lr = [[] for i in range(m + 1)]
 for i in range(n):
-    l, r = map(int,input().split())
+    l, r = map(int, input().split())
     lr[r - l + 1].append(l)
 
 bit = BIT(m + 1)
@@ -30,9 +31,9 @@ for d in range(1, m + 1):
     for l in lr[d]:
         #print(l, l + d)
         bit.add(l, 1)
-        #print(bit.bit)
+        # print(bit.bit)
         bit.add(l + d, -1)
-        #print(bit.bit)
+        # print(bit.bit)
 
     t += len(lr[d])
     ans = n - t

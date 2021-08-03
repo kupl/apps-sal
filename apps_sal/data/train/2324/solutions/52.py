@@ -1,16 +1,17 @@
 from sys import setrecursionlimit
 setrecursionlimit(10000000)
 
+
 def solve():
     N = int(input())
     adj = [list() for _ in range(N)]
-    for _ in range(N-1):
-        a,b = map(int,input().split())
-        adj[a-1].append(b-1)
-        adj[b-1].append(a-1)
+    for _ in range(N - 1):
+        a, b = map(int, input().split())
+        adj[a - 1].append(b - 1)
+        adj[b - 1].append(a - 1)
 
     # path
-    goal = N-1
+    goal = N - 1
     path = [0]
     candidates = [adj[0][:]]
     while path[-1] != goal:
@@ -21,8 +22,8 @@ def solve():
         candidates.append([n for n in adj[u] if n != path[-1]])
         path.append(u)
 
-    black = path[(len(path)-1)//2]
-    white = path[(len(path)-1)//2+1]
+    black = path[(len(path) - 1) // 2]
+    white = path[(len(path) - 1) // 2 + 1]
 
     # count
     path = [black]
@@ -40,9 +41,11 @@ def solve():
     except IndexError:
         pass
     bscore = cnt
-    print('Fennec' if bscore*2 > N else 'Snuke')
+    print('Fennec' if bscore * 2 > N else 'Snuke')
 
 
 def __starting_point():
     solve()
+
+
 __starting_point()

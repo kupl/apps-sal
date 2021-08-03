@@ -34,4 +34,3 @@ for _ in range(q):
     v_S = restore(a, b, acc_S)
     v_T = restore(c, d, acc_T)
     print("YES") if v_S == v_T else print("NO")
-

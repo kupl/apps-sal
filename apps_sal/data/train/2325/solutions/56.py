@@ -4,7 +4,6 @@ import collections
 input = sys.stdin.readline
 
 
-
 def main():
     S = input().strip()
     T = input().strip()
@@ -49,16 +48,8 @@ def main():
             print("NO")
 
 
-
-
-
-
-
-
-
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

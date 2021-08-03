@@ -1,12 +1,13 @@
 import sys
 
+
 def main():
-    sys.setrecursionlimit(1000000) # recursion limit hack
+    sys.setrecursionlimit(1000000)  # recursion limit hack
     buf = input()
     N = int(buf)
     a = []
     b = []
-    for i in range(N-1):
+    for i in range(N - 1):
         buf = input()
         buflist = buf.split()
         a.append(int(buflist[0]) - 1)
@@ -14,10 +15,10 @@ def main():
     graph = []
     for i in range(N):
         graph.append([])
-    for i in range(N-1):
+    for i in range(N - 1):
         graph[a[i]].append(b[i])
         graph[b[i]].append(a[i])
-    path = find_path(graph, 0, N-1, [])
+    path = find_path(graph, 0, N - 1, [])
     split_point = (len(path) + 1) // 2
     fennec_base = path[0:split_point]
     snuke_base = path[split_point:len(path)]
@@ -26,10 +27,10 @@ def main():
     for i, v in enumerate(fennec_base):
         for j in graph[v]:
             if i != 0:
-                if j == fennec_base[i-1]:
+                if j == fennec_base[i - 1]:
                     continue
             if i != len(fennec_base) - 1:
-                if j == fennec_base[i+1]:
+                if j == fennec_base[i + 1]:
                     continue
             else:
                 if j == snuke_base[0]:
@@ -38,19 +39,20 @@ def main():
     for i, v in enumerate(snuke_base):
         for j in graph[v]:
             if i != 0:
-                if j == snuke_base[i-1]:
+                if j == snuke_base[i - 1]:
                     continue
             else:
                 if j == fennec_base[-1]:
                     continue
             if i != len(snuke_base) - 1:
-                if j == snuke_base[i+1]:
+                if j == snuke_base[i + 1]:
                     continue
             snuke_vertex_count += get_vertex_count(graph, v, j)
     if fennec_vertex_count > snuke_vertex_count:
         print("Fennec")
     else:
         print("Snuke")
+
 
 def find_path(graph, current, target, path):
     path.append(current)
@@ -66,6 +68,7 @@ def find_path(graph, current, target, path):
     path.pop()
     return None
 
+
 def get_vertex_count(graph, base, next):
     count = 1
     for i in graph[next]:
@@ -74,7 +77,9 @@ def get_vertex_count(graph, base, next):
         count += get_vertex_count(graph, next, i)
     return count
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

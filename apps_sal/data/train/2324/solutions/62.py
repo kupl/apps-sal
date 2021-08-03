@@ -1,35 +1,39 @@
 import sys
 sys.setrecursionlimit(10**8)
-N=int(input())
-G=[[] for i in range(N)]
-F=[0 for i in range(N)]
-A=[]
-for i in range(N-1):
-  a,b=map(int,input().split())
-  a-=1;b-=1
-  G[a].append(b)
-  G[b].append(a)
-  A.append([a,b])
-  
-def dfs(s,R):
-  F[s]=1
-  
-  if s==N-1:
-    return [s]
-  else:
-    for n in G[s]:
-      if F[n]==0:
-        k=dfs(n,R)
-        if len(k)!=0:
-          k.append(s)
-          return k
-     
-  return []
-  
-root=dfs(0,[])
-#print(root[::-1])
-p=root[::-1][len(root)//2+len(root)%2-1]
-q=root[::-1][len(root)//2+len(root)%2]
+N = int(input())
+G = [[] for i in range(N)]
+F = [0 for i in range(N)]
+A = []
+for i in range(N - 1):
+    a, b = map(int, input().split())
+    a -= 1
+    b -= 1
+    G[a].append(b)
+    G[b].append(a)
+    A.append([a, b])
+
+
+def dfs(s, R):
+    F[s] = 1
+
+    if s == N - 1:
+        return [s]
+    else:
+        for n in G[s]:
+            if F[n] == 0:
+                k = dfs(n, R)
+                if len(k) != 0:
+                    k.append(s)
+                    return k
+
+    return []
+
+
+root = dfs(0, [])
+# print(root[::-1])
+p = root[::-1][len(root) // 2 + len(root) % 2 - 1]
+q = root[::-1][len(root) // 2 + len(root) % 2]
+
 
 class UnionFind():
     def __init__(self, n):
@@ -78,20 +82,21 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-uf = UnionFind(N) 
-for i in range(N-1):
-  a,b=map(int,A[i])
-  if a==p and b==q:
-    continue
-  if a==q and b==p:
-    continue
-  uf.union(a, b)
 
-scoreA=uf.size(0)
-scoreB=N-scoreA
-#print(scoreA,scoreB)
+uf = UnionFind(N)
+for i in range(N - 1):
+    a, b = map(int, A[i])
+    if a == p and b == q:
+        continue
+    if a == q and b == p:
+        continue
+    uf.union(a, b)
 
-if scoreA>scoreB:
-  print("Fennec")
+scoreA = uf.size(0)
+scoreB = N - scoreA
+# print(scoreA,scoreB)
+
+if scoreA > scoreB:
+    print("Fennec")
 else:
-  print("Snuke")
+    print("Snuke")

@@ -22,4 +22,3 @@ while que:
         ans[now] -= -que[0][0] * cnt
 
 print(*ans[1:], sep='\n')
-

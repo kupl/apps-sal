@@ -13,9 +13,10 @@ def main():
         if ind < min_ind:
             min_ind = ind
 
-        ans[min_ind] += (value - a[i+1][1]) * (i+1)
+        ans[min_ind] += (value - a[i + 1][1]) * (i + 1)
 
     for i in ans:
         print(i)
+
 
 main()

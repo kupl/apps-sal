@@ -1,6 +1,9 @@
 import sys
+
+
 def input():
     return sys.stdin.readline()[:-1]
+
 
 N, M = map(int, input().split())
 L = []
@@ -25,7 +28,8 @@ class Bit:
 
     def sum(self, i):
         # [0, i) の要素の総和を返す
-        if not (0 <= i <= self.size): raise ValueError("error!")
+        if not (0 <= i <= self.size):
+            raise ValueError("error!")
         s = 0
         while i > 0:
             s += self.tree[i]
@@ -33,7 +37,8 @@ class Bit:
         return s
 
     def add(self, i, x):
-        if not (0 <= i < self.size): raise ValueError("error!")
+        if not (0 <= i < self.size):
+            raise ValueError("error!")
         i += 1
         while i <= self.size:
             self.tree[i] += x
@@ -82,4 +87,3 @@ for i in range(1, M + 1):
     A[i - 1] = ans + a
 
 print(*A, sep="\n")
-

@@ -75,18 +75,18 @@ g = Graph()
 #N, M = [int(i) for i in input().split()]
 N = int(input())
 
-for i in range(N-1):
+for i in range(N - 1):
     u, v = [int(i) for i in input().split()]
-    g.add_edge(u-1, v-1, 1)
-    g.add_edge(v-1, u-1, 1)
+    g.add_edge(u - 1, v - 1, 1)
+    g.add_edge(v - 1, u - 1, 1)
 
 d1 = Dijkstra(g, 0)
-d2 = Dijkstra(g, N-1)
+d2 = Dijkstra(g, N - 1)
 
 ans = 0
 
-#print(d1.dist)
-#print(d2.dist)
+# print(d1.dist)
+# print(d2.dist)
 
 for i in range(N):
     if d1.dist[i] <= d2.dist[i]:

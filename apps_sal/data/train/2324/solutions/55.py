@@ -9,6 +9,7 @@ def dfs(x):
                 stack.append(i)
     return d
 
+
 N = int(input())
 G = [set() for _ in range(N + 1)]
 for _ in range(N - 1):

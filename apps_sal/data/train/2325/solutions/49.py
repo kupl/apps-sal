@@ -22,4 +22,3 @@ Q = int(input())
 for _ in range(Q):
     a, b, c, d = list(map(int, input().split()))
     print(('YES' if judge(S_acc, a, b) == judge(T_acc, c, d) else 'NO'))
-

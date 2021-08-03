@@ -11,10 +11,10 @@ B.sort()
 umap = {}
 
 for num in B:
-	if num in umap:
-		umap[num].append(A.pop())
-	else:
-		umap[num] = list([A.pop()])
+    if num in umap:
+        umap[num].append(A.pop())
+    else:
+        umap[num] = list([A.pop()])
 
 for num in B1:
-	print(umap[num].pop(), end=' ')
+    print(umap[num].pop(), end=' ')

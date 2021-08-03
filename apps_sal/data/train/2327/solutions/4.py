@@ -39,4 +39,3 @@ for i in range(1, m + 1):
         tmp += st.sum(j)
 
     print((num + tmp))
-

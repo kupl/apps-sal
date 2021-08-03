@@ -29,4 +29,3 @@ for b in blst:
             total += imos[bef] * (lst[bef] - lst[bef - 1])
         bef += 1
     print(total)
-

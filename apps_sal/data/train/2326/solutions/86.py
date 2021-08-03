@@ -11,4 +11,3 @@ for j, (a, i) in enumerate(A[:N], start=1):
     ans[now] += j * (a - A[j][0])
 
 print(*ans, sep='\n')
-

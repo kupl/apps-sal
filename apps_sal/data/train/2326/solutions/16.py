@@ -15,8 +15,8 @@ for i in range(N)[::-1]:
 ans = [0] * N
 for n in range(1, len(aa))[::-1]:
     i = idx[n]
-    ans[i] += cnt[n] * (aa[n] - aa[n-1])
-    cnt[n-1] += cnt[n]
-    idx[n-1] = min(idx[n-1], i)
+    ans[i] += cnt[n] * (aa[n] - aa[n - 1])
+    cnt[n - 1] += cnt[n]
+    idx[n - 1] = min(idx[n - 1], i)
 ans[0] += N * aa[0]
 print(*ans, sep='\n')

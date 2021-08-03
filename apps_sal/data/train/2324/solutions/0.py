@@ -3,6 +3,7 @@
 import sys
 sys.setrecursionlimit(10 ** 6)
 
+
 def main():
     n = int(input())
     adj_list = [[] for i in range(n)]
@@ -19,6 +20,7 @@ def main():
     assert f + s == n
     print(("Fennec" if f > s else "Snuke"))
 
+
 def dfs(now, prev, adj_list, n):
     if now == n - 1:
         return [now]
@@ -29,6 +31,7 @@ def dfs(now, prev, adj_list, n):
         if p is not None:
             p.append(now)
             return p
+
 
 def dfs2(now, prev, adj_list, n, cut):
     size = 1
@@ -41,7 +44,9 @@ def dfs2(now, prev, adj_list, n, cut):
         size += s
     return size
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def I(): return int(input())
 def MI(): return list(map(int, input().split()))
 def LI(): return list(map(int, input().split()))
@@ -30,25 +31,25 @@ i番目を見ている状態
 
 
 """
+
+
 def main():
-    N=I()
-    A=LI()
+    N = I()
+    A = LI()
     for i in range(N):
-        A[i]=(A[i],i)
-    
+        A[i] = (A[i], i)
+
     A.sort(reverse=True)
-    A.append((0,0))
-    ans=[0]*N
-    
-    now=A[0][1]#どこに追加するか
+    A.append((0, 0))
+    ans = [0] * N
+
+    now = A[0][1]  # どこに追加するか
     for i in range(N):
-        ans[now]+=(i+1)*(A[i][0] - A[i+1][0])
-        now=min(now,A[i+1][1])
-    
+        ans[now] += (i + 1) * (A[i][0] - A[i + 1][0])
+        now = min(now, A[i + 1][1])
+
     for i in range(N):
         print((ans[i]))
-    
-    
+
 
 main()
-

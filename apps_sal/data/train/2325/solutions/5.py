@@ -28,13 +28,12 @@ q = int(input())
 
 for i in range(q):
 
-    a,b,c,d = list(map(int,input().split()))
+    a, b, c, d = list(map(int, input().split()))
 
-    one = ((sa[b] - sa[a-1]) - (sb[b] - sb[a-1]))
-    two = ((ta[d] - ta[c-1]) - (tb[d] - tb[c-1]))
+    one = ((sa[b] - sa[a - 1]) - (sb[b] - sb[a - 1]))
+    two = ((ta[d] - ta[c - 1]) - (tb[d] - tb[c - 1]))
 
-    if  one % 3 == two % 3:
-        print ("YES")
+    if one % 3 == two % 3:
+        print("YES")
     else:
-        print ("NO")
-
+        print("NO")

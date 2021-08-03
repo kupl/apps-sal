@@ -36,4 +36,3 @@ for i, a in enumerate(A):
 
 for a in ans:
     print(a)
-

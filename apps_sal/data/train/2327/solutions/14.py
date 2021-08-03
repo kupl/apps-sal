@@ -5,6 +5,7 @@ input = sys.stdin.readline
 
 class BIT:
     """区間加算、一点取得クエリをそれぞれO(logN)で答えるデータ構造"""
+
     def __init__(self, n):
         self.n = n
         self.bit = [0] * (n + 1)
@@ -55,4 +56,3 @@ for d in range(1, m + 1):
     res[d - 1] = cnt
 
 print('\n'.join(map(str, res)), end='\n')
-

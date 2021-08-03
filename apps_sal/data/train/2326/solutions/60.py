@@ -27,4 +27,3 @@ for i, a_i in enumerate(a):
         j += 1
 for i in range(N):
     print((ans[i]))
-

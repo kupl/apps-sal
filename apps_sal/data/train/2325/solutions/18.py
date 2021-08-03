@@ -38,4 +38,3 @@ for _ in range(Q):
 
     ans.append('YES' if sA == tA else 'NO')
 print(*ans, sep='\n')
-

@@ -9,4 +9,3 @@ B2 = sorted(enumerate(B1), key=lambda x: x[1])
 ans = [A[b[0]] for b in B2]
 
 print(' '.join(map(str, ans)))
-

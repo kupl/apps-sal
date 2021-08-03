@@ -19,4 +19,3 @@ for _ in range(Q):
     ans.append('YES' if diff % 3 == 0 else 'NO')
 
 print(*ans, sep='\n')
-

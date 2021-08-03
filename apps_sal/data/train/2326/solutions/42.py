@@ -20,7 +20,7 @@ MOD = 10 ** 9 + 7
 def ni(): return int(sys.stdin.readline())
 def ns(): return list(map(int, sys.stdin.readline().split()))
 def na(): return list(map(int, sys.stdin.readline().split()))
-def na1(): return list([int(x)-1 for x in sys.stdin.readline().split()])
+def na1(): return list([int(x) - 1 for x in sys.stdin.readline().split()])
 
 
 # ===CODE===
@@ -41,7 +41,7 @@ def main():
     while idx < n:
         while a[idx][0] == remain:
             idx += 1
-        cnt[minval] += (remain-a[idx][0])*idx
+        cnt[minval] += (remain - a[idx][0]) * idx
 
         remain = a[idx][0]
         minval = min(minval, -a[idx][1])
@@ -52,5 +52,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(2*10**5)
+sys.setrecursionlimit(2 * 10**5)
 
 # 入力
 N = int(input())
@@ -55,4 +55,3 @@ ans = (
     'Snuke'
 )
 print(ans)
-

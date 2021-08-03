@@ -25,4 +25,3 @@ for iv, a in enumerate(A2):
     n += len(a_i[a])
     ans[i] += n * (a - anext)
 print(*ans, sep='\n')
-

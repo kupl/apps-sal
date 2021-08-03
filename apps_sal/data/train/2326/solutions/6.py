@@ -12,8 +12,9 @@ for i, a in enumerate(A):
         S[a] = (min(aa, i) << 18) ^ (cc + 1)
 
 H = [0]
-hpush = lambda x: heappush(H, -x)
-hpop = lambda: -heappop(H)
+def hpush(x): return heappush(H, -x)
+def hpop(): return -heappop(H)
+
 
 for a in S:
     micc = S[a]
@@ -34,8 +35,9 @@ while len(H) > 1:
     i2 = (aicc >> 18) & m18
     cc2 = aicc & m18
     ANS[i] += (a - a2) * cc
-    
-    if a2 == 0: continue
+
+    if a2 == 0:
+        continue
     hpush((a2 << 36) ^ (min(i, i2) << 18) ^ (cc + cc2))
 
 print("\n".join(map(str, ANS)))

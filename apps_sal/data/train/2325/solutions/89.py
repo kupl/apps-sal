@@ -1,4 +1,4 @@
-#problem solving
+# problem solving
 import sys
 
 
@@ -21,8 +21,8 @@ def solve():
     lenT = len(T)
     Q = int(input())
     Query = [tuple(map(int, input().split())) for i in range(Q)]
-    S_cnt = [0]*(lenS + 1)
-    T_cnt = [0]*(lenT + 1)
+    S_cnt = [0] * (lenS + 1)
+    T_cnt = [0] * (lenT + 1)
     for i in range(lenS):
         if S[i] == "A":
             S_cnt[i + 1] += 1
@@ -50,4 +50,3 @@ def solve():
 
 
 solve()
-
