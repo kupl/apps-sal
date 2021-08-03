@@ -22,7 +22,7 @@ def check(g, n, child):
             if l > x:
                 x = l
         if x > 0:
-            return  child[n] + 1 + x
+            return child[n] + 1 + x
     else:
         return 1
 
@@ -37,5 +37,3 @@ for _ in range(int(input())):
     child = [0] * (n + 1)
     children(tree, 1, child)
     print(check(tree, 1, child))
-
-

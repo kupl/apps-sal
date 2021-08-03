@@ -6,6 +6,6 @@ for i in range(0, t):
     l.sort()
     p = set(l)
     pp = list(p)
-    maxx = pp[n-1] * pp[n-2]
+    maxx = pp[n - 1] * pp[n - 2]
     minn = pp[0] * pp[1]
     print(maxx, minn)

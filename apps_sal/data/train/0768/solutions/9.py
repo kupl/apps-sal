@@ -1,5 +1,7 @@
 import sys
 sys.setrecursionlimit(int(1e6))
+
+
 def solve(graph, cur):
     if not graph[cur]:
         return (1, 1)
@@ -10,6 +12,7 @@ def solve(graph, cur):
         tot += tnodes
         ans = max(ans, prevans)
     return tot + 1 + ans, tot + 1
+
 
 for t in range(int(input())):
     n = int(input())

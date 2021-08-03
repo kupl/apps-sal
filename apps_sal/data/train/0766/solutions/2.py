@@ -2,7 +2,7 @@
 testcases = int(input())
 for x in range(testcases):
     size = int(input())
-    li = list(map(int,input().split()))
+    li = list(map(int, input().split()))
     highmax = max(li)
     lowmin = min(li)
     new_list = set(li)
@@ -10,4 +10,4 @@ for x in range(testcases):
     new_list.remove(min(new_list))
     secondhighmax = max(new_list)
     secondmin = min(new_list)
-    print(highmax*secondhighmax, lowmin*secondmin)
+    print(highmax * secondhighmax, lowmin * secondmin)
