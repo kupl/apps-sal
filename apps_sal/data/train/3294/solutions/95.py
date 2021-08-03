@@ -1,1 +1,1 @@
-converter=lambda mpg:round(0.354006*mpg,2)
+def converter(mpg): return round(0.354006 * mpg, 2)

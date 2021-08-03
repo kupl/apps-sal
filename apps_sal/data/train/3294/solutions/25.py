@@ -3,7 +3,7 @@ def converter(mpg):
     r = round(kpl, 2)
     if type(r) is int:
         return int(r)
-    elif type(r*10) is int:
+    elif type(r * 10) is int:
         return round(r, 1)
     else:
         return r

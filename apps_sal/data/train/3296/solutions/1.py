@@ -7,9 +7,9 @@ def what_century(year):
     if year != "0000" and year[1:] != "000" and year[2:] != "00":
         if len(gt) == 2:
             if (gt[0] == "1") and (gt[1] == "0"):
-                return("10th") 
+                return("10th")
             elif (gt[0] == "1") and (gt[1] in range(1, 10)):
-                return(f"{gt}th") 
+                return(f"{gt}th")
             elif gt[0] != "1" and gt[1] == "0":
                 return(f"{gt}th")
             elif gt[0] != "1" and gt[1] == "1":
@@ -17,7 +17,7 @@ def what_century(year):
             elif gt[0] != "1" and gt[1] == "2":
                 return(f"{gt}nd")
             elif gt[0] != "1" and gt[1] == "3":
-                return(f"{gt}rd") 
+                return(f"{gt}rd")
             else:
                 return(f"{gt}th")
         else:
@@ -42,4 +42,3 @@ def what_century(year):
             return(f"{year[:2]}th")
     elif year == "0000":
         return("0th")
-

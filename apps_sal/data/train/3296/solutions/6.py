@@ -3,9 +3,11 @@ SUFFIX_TWO = 'nd'
 SUFFIX_THREE = 'rd'
 SUFFIX_OTHER = 'th'
 
+
 def what_century(year):
     century = 1 + (int(year) - 1) // 100
     return str(century) + ordinal_suffix(century)
+
 
 def ordinal_suffix(number):
     if number // 10 == 1:   # ten or teen

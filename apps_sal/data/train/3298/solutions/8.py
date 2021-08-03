@@ -1,6 +1,5 @@
 def avg_array(arrs):
-    x=[]
+    x = []
     for i in zip(*arrs):
-        x.append(sum(i)/len(arrs))
+        x.append(sum(i) / len(arrs))
     return x
-

@@ -1,4 +1,4 @@
-def split_in_parts(s, part_length): 
+def split_in_parts(s, part_length):
     new = ""
     i = 0
     for x in s:                   # Recorremos s

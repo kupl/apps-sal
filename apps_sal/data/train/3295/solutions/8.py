@@ -6,6 +6,6 @@ def split_in_parts(s, part_length):
             answer += i
             cnt += 1
         else:
-            answer = answer + " "  + i
+            answer = answer + " " + i
             cnt = 1
     return answer
