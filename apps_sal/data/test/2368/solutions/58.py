@@ -18,7 +18,8 @@ def dfs(now):
     sa = A[now]
     sb = B[now]
     for nxt in G[now]:
-        if seen[nxt]: continue
+        if seen[nxt]:
+            continue
         seen[nxt] = True
         a, b = dfs(nxt)
         sa += a
@@ -27,7 +28,8 @@ def dfs(now):
 
 
 for i in range(n):
-    if seen[i]: continue
+    if seen[i]:
+        continue
     sa, sb = dfs(i)
     if sa != sb:
         print("No")

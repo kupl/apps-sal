@@ -51,7 +51,8 @@ A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 for i in range(M):
     c, d = map(int, input().split())
-    c -= 1; d -= 1
+    c -= 1
+    d -= 1
     uf.union(c, d)
 
 dic = defaultdict(int)
@@ -63,5 +64,6 @@ for i in range(N):
 # print(dic)
 for v in dic.values():
     if v != 0:
-        print("No"); return
+        print("No")
+        return
 print("Yes")

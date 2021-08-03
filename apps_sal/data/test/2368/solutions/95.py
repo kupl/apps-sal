@@ -58,7 +58,8 @@ B = [int(i) for i in input().split()]
 uf = UnionFind(N)
 for i in range(M):
     c, d = list(map(int, input().split()))
-    c -= 1; d -= 1
+    c -= 1
+    d -= 1
     uf.union(c, d)
 
 

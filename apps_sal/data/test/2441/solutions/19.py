@@ -1,5 +1,7 @@
 import sys
-read = lambda f=int: list(map(f, sys.stdin.readline().split()))
+def read(f=int): return list(map(f, sys.stdin.readline().split()))
+
+
 array = lambda *ds: [array(*ds[1:]) for _ in range(ds[0])] if ds else 0
 
 

@@ -65,5 +65,6 @@ for i in unionfind.all_group_members().values():
         sum_a += a[j]
         sum_b += b[j]
     if sum_a != sum_b:
-        print('No'); return
+        print('No')
+        return
 print('Yes')

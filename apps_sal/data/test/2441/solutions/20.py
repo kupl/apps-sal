@@ -1,5 +1,7 @@
 import sys
-read = lambda f=int: list(map(f, sys.stdin.readline().split()))
+def read(f=int): return list(map(f, sys.stdin.readline().split()))
+
+
 array = lambda *ds: [array(*ds[1:]) for _ in range(ds[0])] if ds else 0
 
 
@@ -73,7 +75,8 @@ def main():
         graph = {v.name: [w.name for w in v.adj] for v in vs}
 
         def visit(node):
-            if node in low: return
+            if node in low:
+                return
 
             num = len(low)
             low[node] = num
@@ -108,7 +111,8 @@ def main():
             while call_stack:
                 v, pi, num = call_stack.pop()
                 if pi == 0:
-                    if v in low: continue
+                    if v in low:
+                        continue
                     low[v] = num
                     stack.append(v)
                 if pi > 0:
@@ -122,7 +126,8 @@ def main():
                     while True:
                         comp.append(stack.pop())
                         low[comp[-1]] = len(graph)
-                        if comp[-1] == v: break
+                        if comp[-1] == v:
+                            break
                     result.append(comp)
 
         return result

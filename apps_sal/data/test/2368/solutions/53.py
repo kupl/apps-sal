@@ -2,8 +2,10 @@ from collections import defaultdict
 
 
 def Yes_No(flag):
-    if flag: print("Yes")
-    else: print("No")
+    if flag:
+        print("Yes")
+    else:
+        print("No")
 
 
 class UnionFind():

@@ -21,6 +21,6 @@ for item in heavy:
             ans += (nn - i)
             l = i
             break
-    x = l;
+    x = l
 
 print(ans)

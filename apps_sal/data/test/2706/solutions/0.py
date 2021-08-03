@@ -1,13 +1,13 @@
 import operator
-N = eval(input());
-N = int(N);
-k = eval(input());
-k = int(k);
-list = [];
+N = eval(input())
+N = int(N)
+k = eval(input())
+k = int(k)
+list = []
 for i in range(k):
-    a = eval(input());
-    a = int(a);
-    list.append(a);
+    a = eval(input())
+    a = int(a)
+    list.append(a)
 list.sort()
 for i in range(k, N):
     a = eval(input())

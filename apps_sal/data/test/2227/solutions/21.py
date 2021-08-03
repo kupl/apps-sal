@@ -9,8 +9,10 @@ def main():
     heavyCnt = 0
     res = 0
     for i in range(4, len(l)):
-        if l[i - 4: i + 1] == "heavy": heavyCnt += 1
-        if l[i - 4: i + 1] == "metal": res += heavyCnt
+        if l[i - 4: i + 1] == "heavy":
+            heavyCnt += 1
+        if l[i - 4: i + 1] == "metal":
+            res += heavyCnt
 
     print(res)
 

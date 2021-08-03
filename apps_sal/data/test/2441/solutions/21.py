@@ -28,7 +28,7 @@ def bootstrap(f, stack=[]):
 
 
 mod = 1000000007
-rints = lambda: [int(x) for x in stdin.readline().split()]
+def rints(): return [int(x) for x in stdin.readline().split()]
 
 
 class graph:

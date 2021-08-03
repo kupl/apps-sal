@@ -56,5 +56,7 @@ for i in range(n):
     asum[root] += al[i]
     bsum[root] += bl[i]
 
-if asum == bsum: print('Yes')
-else: print('No')
+if asum == bsum:
+    print('Yes')
+else:
+    print('No')

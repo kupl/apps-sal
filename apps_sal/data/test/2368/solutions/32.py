@@ -45,7 +45,8 @@ def main():
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
     uf = UnionFind(n)
-    for _ in range(m): uf.unite(*map(int, input().split()))
+    for _ in range(m):
+        uf.unite(*map(int, input().split()))
     s = dd(int)
     t = dd(int)
     for i in range(n):
@@ -53,11 +54,13 @@ def main():
         s[ii] += A[i]
         t[ii] += B[i]
     for k in s.keys():
-        if s[k] == t[k]: continue
+        if s[k] == t[k]:
+            continue
         else:
             print('No')
             break
-    else: print('Yes')
+    else:
+        print('Yes')
 
 
 main()

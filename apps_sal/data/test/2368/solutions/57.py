@@ -1,7 +1,7 @@
 from collections import deque
 import sys
 sys.setrecursionlimit(10**9)
-read = lambda: sys.stdin.readline()
+def read(): return sys.stdin.readline()
 
 
 def read_ints():
@@ -49,7 +49,8 @@ def main():
             return False
 
     for i in range(n):
-        if vis[i]: continue
+        if vis[i]:
+            continue
         if not bfs(i):
             ans = 0
             break

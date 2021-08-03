@@ -7,7 +7,8 @@ mod = 10**9 + 7
 
 
 def dfs_order(i, visited, G, order):
-    if visited[i]: return
+    if visited[i]:
+        return
     visited[i] = 1
     for j in G[i]:
         dfs_order(j, visited, G, order)
@@ -15,7 +16,8 @@ def dfs_order(i, visited, G, order):
 
 
 def dfs_scc(leader, s, RG, visited, comp, cost):
-    if visited[s]: return
+    if visited[s]:
+        return
     visited[s] = 1
     for j in RG[s]:
         dfs_scc(leader, j, RG, visited, comp, cost)

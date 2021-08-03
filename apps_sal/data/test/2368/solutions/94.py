@@ -21,7 +21,8 @@ def unite(x, y):
 def groups(par):
     leader_buf = [find(par[i]) for i in range(len(par))]
     result = [[] for _ in range(len(par))]
-    for i in range(len(par)): result[leader_buf[i]].append(i)
+    for i in range(len(par)):
+        result[leader_buf[i]].append(i)
     return [r for r in result if r != []]
 
 

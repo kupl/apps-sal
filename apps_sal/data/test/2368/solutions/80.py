@@ -13,7 +13,9 @@ except FileNotFoundError:
 from math import sqrt, ceil, floor
 from collections import deque, Counter, defaultdict
 # defaultdict(int)
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
+
 sys.setrecursionlimit(11451419)
 #Decimal((str(0.5)).quantize(Decimal('0'), rounding=ROUND_HALF_UP))
 # @lru_cache(maxsize=10**10)
@@ -78,7 +80,8 @@ class UnionFind():
 uf = UnionFind(n)
 for i in range(m):
     a, b = list(map(int, input().split()))
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     uf.union(a, b)
 
 # X= uf.state_grouping()
@@ -88,11 +91,13 @@ for l in uf.parents:
         X.append(l)
 
 for l in X:
-    ans = 0; ann = 0
+    ans = 0
+    ann = 0
     for i in l:
         ans += A[i]
         ann += B[i]
     if ans != ann:
-        print("No"); return
+        print("No")
+        return
 else:
     print("Yes")

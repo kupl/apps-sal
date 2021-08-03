@@ -15,4 +15,5 @@ for _ in range(n):
         print(c, end=' 'if n - 1 > y else'\n')
     i -= 1
     j += 1
-    if 0 > i: i, j = n - 2, 1
+    if 0 > i:
+        i, j = n - 2, 1
