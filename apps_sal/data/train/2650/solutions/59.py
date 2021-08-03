@@ -2,7 +2,7 @@ from collections import Counter
 import math
 import statistics
 import itertools
-a,b=list(map(int,input().split()))
+a, b = list(map(int, input().split()))
 # b=input()
 # c=[]
 # for i in a:
@@ -14,14 +14,12 @@ a,b=list(map(int,input().split()))
 # for i in range(a):
 #     h.append(list(map(int,input().split())))
 # a = [[0] for _ in range(H)]#nizigen
-lis=[input() for i in range(a)]
-ra=a-1
+lis = [input() for i in range(a)]
+ra = a - 1
 for i in range(ra):
-    for k in range(ra-i):
-        if lis[k]>lis[k+1]:
-            a=lis[k]
-            lis[k]=lis[k+1]
-            lis[k+1]=a
+    for k in range(ra - i):
+        if lis[k] > lis[k + 1]:
+            a = lis[k]
+            lis[k] = lis[k + 1]
+            lis[k + 1] = a
 print(("".join(lis)))
-
-

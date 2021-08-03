@@ -7,4 +7,4 @@ for i in range(N):
 a.sort()
 
 for i in range(N):
-    print(a[i],end="")
+    print(a[i], end="")

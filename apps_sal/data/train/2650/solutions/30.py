@@ -11,4 +11,3 @@ for i in range(0, n):
     ans += strList[i]
 
 print(ans)
-

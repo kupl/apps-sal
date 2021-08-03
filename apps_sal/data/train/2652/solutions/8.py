@@ -1,10 +1,10 @@
 def count_squares(lines):
-    
-    sides = {(r, c):v for r, row in enumerate(lines) for c, v in enumerate(row) if v in '+-|'}
+
+    sides = {(r, c): v for r, row in enumerate(lines) for c, v in enumerate(row) if v in '+-|'}
     nodes = sorted(k for k, v in sides.items() if v == '+')[::-1]
 
-    sideh = lambda r, c, target: all(sides.get((r, c + cc), ' ') in '+-' for cc in range(target - c))
-    sidev = lambda r, c, target: all(sides.get((r + rr, c), ' ') in '+|' for rr in range(target - r))
+    def sideh(r, c, target): return all(sides.get((r, c + cc), ' ') in '+-' for cc in range(target - c))
+    def sidev(r, c, target): return all(sides.get((r + rr, c), ' ') in '+|' for rr in range(target - r))
 
     t = 0
     while nodes:

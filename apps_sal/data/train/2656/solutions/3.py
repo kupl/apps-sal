@@ -9,14 +9,15 @@ RULES = {
     ).upper(),
 }
 
+
 def bird_code(arr):
     arr = [bird.replace('-', ' ') for bird in arr]
     ret_arr = []
-    
+
     for bird in arr:
         name_parts = bird.split()
         ret_arr.append(
             RULES[len(name_parts)](name_parts)
         )
-    
+
     return ret_arr

@@ -1,10 +1,10 @@
-n,l = map(int,input().split())
+n, l = map(int, input().split())
 strings = []
 for _ in range(n):
-  s = input()
-  strings.append(s)
+    s = input()
+    strings.append(s)
 strings.sort()
 ans = ''
 for string in strings:
-  ans += string
+    ans += string
 print(ans)

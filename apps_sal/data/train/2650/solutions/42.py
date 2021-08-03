@@ -1,4 +1,4 @@
-n, l = map(int,input().split())
+n, l = map(int, input().split())
 words = [input() for i in range(n)]
 words = list(sorted(words))
 s = ""

@@ -8,4 +8,3 @@ res = ""
 for i in range(n):
     res += s[i]
 print(res)
-

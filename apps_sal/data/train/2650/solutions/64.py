@@ -12,4 +12,3 @@ for i in range(N):
     result = result + S[i]
 # resultを出力
 print(result)
-
