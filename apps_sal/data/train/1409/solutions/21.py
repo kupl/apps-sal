@@ -1,6 +1,5 @@
 # cook your dish here
-n=int(input())
+n = int(input())
 for i in range(n):
-    t=int(input())
-    print(bin(t).count('1')) 
-
+    t = int(input())
+    print(bin(t).count('1'))

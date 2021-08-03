@@ -1,5 +1,7 @@
 from bisect import bisect
 n = 32000
+
+
 def primeSeive(n):
     prime = [True for i in range(n + 1)]
     primes = []
@@ -15,11 +17,12 @@ def primeSeive(n):
         if prime[p]:
             primes.append(p)
     return primes
+
+
 arr = primeSeive(n)
 fin = []
 for i in arr:
-    fin.append(pow(i,4))
+    fin.append(pow(i, 4))
 for _ in range(int(input())):
     n = int(input())
-    print(bisect(fin,n))
-
+    print(bisect(fin, n))
