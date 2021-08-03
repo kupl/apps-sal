@@ -1,9 +1,10 @@
 import sys
 readline = sys.stdin.readline
 
+
 def parorder(Edge, p):
     N = len(Edge)
-    par = [0]*N
+    par = [0] * N
     par[p] = -1
     stack = [p]
     order = []
@@ -21,16 +22,18 @@ def parorder(Edge, p):
             ast(vf)
     return par, order
 
+
 def getcld(p):
     res = [[] for _ in range(len(p))]
     for i, v in enumerate(p[1:], 1):
         res[v].append(i)
     return res
 
+
 def dfs(St):
-    dist = [0]*N
+    dist = [0] * N
     stack = St[:]
-    used = [False]*N
+    used = [False] * N
     for s in St:
         used[s] = True
     while stack:
@@ -42,9 +45,10 @@ def dfs(St):
                 stack.append(vf)
     return dist
 
+
 N = int(readline())
 Edge = [[] for _ in range(N)]
-for _ in range(N-1):
+for _ in range(N - 1):
     a, b = map(int, readline().split())
     a -= 1
     b -= 1
@@ -66,15 +70,15 @@ for i in range(N):
 if max(dfs(path)) > 1:
     print(-1)
 else:
-    
-    path.sort(key = lambda x: distfs[x])
-    
+
+    path.sort(key=lambda x: distfs[x])
+
     cnt = 1
     hold = 0
-    perm1 = [None]*N
+    perm1 = [None] * N
     onpath = set(path)
     idx = 0
-    for i in range(Dia+1):
+    for i in range(Dia + 1):
         vn = path[i]
         hold = 0
         for vf in Edge[vn]:
@@ -85,15 +89,15 @@ else:
             idx += 1
         perm1[idx] = cnt
         idx += 1
-        cnt = cnt+hold+1
-    
+        cnt = cnt + hold + 1
+
     cnt = 1
     hold = 0
-    perm2 = [None]*N
+    perm2 = [None] * N
     onpath = set(path)
     idx = 0
-    for i in range(Dia+1):
-        vn = path[Dia-i]
+    for i in range(Dia + 1):
+        vn = path[Dia - i]
         hold = 0
         for vf in Edge[vn]:
             if vf in onpath:
@@ -103,5 +107,5 @@ else:
             idx += 1
         perm2[idx] = cnt
         idx += 1
-        cnt = cnt+hold+1
+        cnt = cnt + hold + 1
     print(*min(perm1, perm2))

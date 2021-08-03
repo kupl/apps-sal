@@ -6,27 +6,27 @@ input = sys.stdin.readline
 集合を持つと厳しいが、最小値だけ持っておけばよい。
 """
 
-N,dist = map(int,input().split())
+N, dist = map(int, input().split())
 D = [int(x) for x in input().split()]
 
 # 各ターンの出発位置
 start_dist = [dist]
 for d in D:
     x = start_dist[-1]
-    y = x-d if x > d else d - x
+    y = x - d if x > d else d - x
     start_dist.append(x if x < y else y)
 
-ng_dist = [None] * (N+1)
+ng_dist = [None] * (N + 1)
 ng_dist[N] = 1
 
-for i,d in enumerate(D[::-1]):
-    x = ng_dist[N-i]
-    y = x if x <= d//2 else x + d
-    ng_dist[N-i-1] = y
+for i, d in enumerate(D[::-1]):
+    x = ng_dist[N - i]
+    y = x if x <= d // 2 else x + d
+    ng_dist[N - i - 1] = y
 
 input()
 Q = [int(x) for x in input().split()]
 
-answer = ['YES' if ng_dist[d] <= start_dist[d-1] else 'NO' for d in Q]
+answer = ['YES' if ng_dist[d] <= start_dist[d - 1] else 'NO' for d in Q]
 
 print('\n'.join(answer))

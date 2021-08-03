@@ -7,10 +7,12 @@ def resolve():
     for i in range(N - 1):
         res = min((X[i + 1] - X[i]) * A, B)
         ans += res
-        
+
     print(ans)
 
 
 def __starting_point():
     resolve()
+
+
 __starting_point()

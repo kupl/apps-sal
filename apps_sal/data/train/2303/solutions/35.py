@@ -10,16 +10,16 @@ edges = defaultdict(set)
 visited = defaultdict(set)
 for i in range(m):
     p, q, c = map(int, input().split())
-    edges[p+c*chg].add(q+c*chg)
-    edges[q+c*chg].add(p+c*chg)
-    edges[p].add(p+c*chg)
-    edges[q].add(q+c*chg)
-    edges[p+c*chg].add(p)
-    edges[q+c*chg].add(q)
+    edges[p + c * chg].add(q + c * chg)
+    edges[q + c * chg].add(p + c * chg)
+    edges[p].add(p + c * chg)
+    edges[q].add(q + c * chg)
+    edges[p + c * chg].add(p)
+    edges[q + c * chg].add(q)
     visited[p] = False
     visited[q] = False
-    visited[p+c*chg] = False
-    visited[q+c*chg] = False
+    visited[p + c * chg] = False
+    visited[q + c * chg] = False
 
 ans = float("inf")
 que = deque()
@@ -38,7 +38,7 @@ while que:
     for to in edges[now]:
         # 駅→ホーム
         if now < chg and to > chg:
-            que.append((to, dist+1))
+            que.append((to, dist + 1))
         else:
             que.appendleft((to, dist))
 if ans == float("inf"):

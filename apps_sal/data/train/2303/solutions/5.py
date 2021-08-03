@@ -1,6 +1,8 @@
-import sys
-input = lambda: sys.stdin.readline().rstrip()
 from collections import deque
+import sys
+def input(): return sys.stdin.readline().rstrip()
+
+
 N, M = map(int, input().split())
 X = []
 C = [set() for _ in range(N)]
@@ -29,6 +31,7 @@ for i, c in enumerate(C):
         E[i].append((D[i][a], 1))
         E[D[i][a]].append((i, 1))
 
+
 def BFS01(n, E, i0=0):
     Q = deque([i0])
     D = [-1] * n
@@ -46,5 +49,6 @@ def BFS01(n, E, i0=0):
                     Q.appendleft(y)
     return D
 
+
 D = BFS01(T, E, 0)
-print(D[N-1] // 2)
+print(D[N - 1] // 2)

@@ -18,5 +18,4 @@ for i in range(t):
             visited[a + v] = i
         res.append(v)
         v += 1
-    print("YES\n" + ' '.join(map(str,res)))
-
+    print("YES\n" + ' '.join(map(str, res)))

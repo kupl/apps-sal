@@ -22,29 +22,30 @@ for i in range(t):
 
 t = int(input())
 
-def check(arr,v,dic):
+
+def check(arr, v, dic):
     for i in arr:
-        if dic[i+v] == 1:
+        if dic[i + v] == 1:
             return True
     return False
 
 
-def check2(arr,v,dic):
+def check2(arr, v, dic):
     ok = False
     for i in arr:
-        if  dic[i+v] == 1:
+        if dic[i + v] == 1:
             ok = True
             break
     return ok
 
 
-dic = [0]*2000005
+dic = [0] * 2000005
 
 for _ in range(t):
     n = int(input())
-    arr = list(map(int,input().split()))
+    arr = list(map(int, input().split()))
     arr.sort()
-    brr = [1]*n
+    brr = [1] * n
     cnt = 0
     i = 1
     flag = True
@@ -62,7 +63,7 @@ for _ in range(t):
             tmp[i+v] = 1
         cnt += 1
         '''
-        #while any(dic[a + i] != 0 for a in arr):
+        # while any(dic[a + i] != 0 for a in arr):
         #    i += 1
 
         while check2(arr, i, dic):
@@ -74,9 +75,8 @@ for _ in range(t):
         cnt += 1
     if flag:
         print("YES")
-        print(" ".join(map(str,brr)))
+        print(" ".join(map(str, brr)))
     else:
         print("NO")
     for k in list(tmp.keys()):
         dic[k] = 0
-

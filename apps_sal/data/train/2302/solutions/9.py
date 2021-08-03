@@ -22,8 +22,7 @@ for i in range(N)[::-1]:
         ms[i] = ms[i + 1]
 
 for q in querys:
-    if ps[q] <= ms[q + 1]: # 妨害は不可能
+    if ps[q] <= ms[q + 1]:  # 妨害は不可能
         print('NO')
     else:
         print('YES')
-

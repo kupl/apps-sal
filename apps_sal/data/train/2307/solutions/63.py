@@ -11,4 +11,3 @@ for i in range(1, n):
         ans += cost
     now = x[i]
 print(ans)
-

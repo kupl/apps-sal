@@ -1,23 +1,32 @@
+from collections import deque
 N, M = list(map(int, input().split()))
 ES = []
 D = {}
 
 *parent, = list(range(M))
+
+
 def root(x):
     if x == parent[x]:
         return x
     parent[x] = y = root(parent[x])
     return y
+
+
 def unite(x, y):
-    px = root(x); py = root(y)
+    px = root(x)
+    py = root(y)
     if px < py:
         parent[py] = px
     else:
         parent[px] = py
 
+
 E = {}
 for i in range(M):
-    p, q, c = list(map(int, input().split())); p -= 1; q -= 1
+    p, q, c = list(map(int, input().split()))
+    p -= 1
+    q -= 1
     ES.append((p, q, c))
     if (p, c) in D:
         unite(D[p, c], i)
@@ -33,14 +42,14 @@ for i in range(M):
     j = root(i)
     p, q, c = ES[i]
     s = P.setdefault(j, set())
-    s.add(p); s.add(q)
+    s.add(p)
+    s.add(q)
 
-from collections import deque
 que = deque([(0, 0, 0)])
 INF = 10**18
-dist = [INF]*N
+dist = [INF] * N
 dist[0] = 0
-gdist = [INF]*M
+gdist = [INF] * M
 
 while que:
     cost, v, t = que.popleft()
@@ -62,5 +71,4 @@ while que:
                 gdist[w] = cost
                 que.appendleft((cost, w, 1))
 
-print((dist[N-1] if dist[N-1] < INF else -1))
-
+print((dist[N - 1] if dist[N - 1] < INF else -1))
