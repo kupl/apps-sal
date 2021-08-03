@@ -1,7 +1,7 @@
 class BrowserHistory:
 
     def __init__(self, homepage: str):
-        self.before = [homepage] 
+        self.before = [homepage]
         self.after = []
 
     def visit(self, url: str) -> None:
@@ -14,7 +14,7 @@ class BrowserHistory:
             self.before.pop()
             steps -= 1
         return self.before[-1]
-        
+
     def forward(self, steps: int) -> str:
         while steps > 0 and self.after:
             self.before.append(self.after[-1])
@@ -28,4 +28,3 @@ class BrowserHistory:
 # obj.visit(url)
 # param_2 = obj.back(steps)
 # param_3 = obj.forward(steps)
-

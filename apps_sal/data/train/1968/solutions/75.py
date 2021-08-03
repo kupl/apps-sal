@@ -2,6 +2,8 @@ class TrieNode:
     def __init__(self):
         self.d = {}
         self.w = False
+
+
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         folder = sorted(folder)
@@ -22,4 +24,3 @@ class Solution:
             p.w = True
             res.append(file)
         return res
-

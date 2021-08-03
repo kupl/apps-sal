@@ -2,7 +2,7 @@ class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
         # 这道题是问有多少个submatrices有all ones
         # 和84Largest Rectangle in Histogram很像
-         
+
         # 解法1 - 枚举右下角, 但是要先准备一个row_left_ones的矩阵方便快速查找
         m, n = len(mat), len(mat[0])
         row_left_ones = [[0] * n for _ in range(m)]
@@ -14,7 +14,7 @@ class Solution:
                     row_left_ones[i][j] = 1
                     if j > 0:
                         row_left_ones[i][j] += row_left_ones[i][j - 1]
-        
+
         res = 0
         for i in range(m):
             for j in range(n):
@@ -22,7 +22,7 @@ class Solution:
                 for k in range(i, -1, -1):
                     curr_row_left_ones = min(curr_row_left_ones, row_left_ones[k][j])
                     res += curr_row_left_ones
-        
+
         return res
 
         #=================分割线=================#

@@ -12,14 +12,14 @@ class Solution:
                     hist[i] += row[i]
                 else:
                     hist[i] = 0
-                
+
                 while stack and hist[stack[-1]] > hist[i]:
                     jj = stack.pop()
                     kk = stack[-1] if stack else -1
-                    count -= (hist[jj] - hist[i])*(jj - kk)
-                
+                    count -= (hist[jj] - hist[i]) * (jj - kk)
+
                 count += hist[i]
                 res += count
                 stack.append(i)
-        
+
         return res

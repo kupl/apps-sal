@@ -6,5 +6,5 @@ class Solution:
                 if i != 0 and x[i] == '/':
                     if x[:i] in dic:
                         dic.remove(x)
-                        break 
+                        break
         return list(dic)

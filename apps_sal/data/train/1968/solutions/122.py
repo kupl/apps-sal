@@ -6,7 +6,7 @@ class Solution:
         ans = set()
         # print((first.split('/')))
         ans.add(folder[0])
-        for i in range(1,n):
+        for i in range(1, n):
             flag = True
             second = folder[i]
             # print(first,second)
@@ -18,13 +18,11 @@ class Solution:
                     first = second
                     flag = False
                     break
-            
+
             # if flag:
             #     ans.add(first)
-            
+
 #         if not flag:
 #             ans.add(folder[n-1])
-        
-        return list(ans)
-                
 
+        return list(ans)

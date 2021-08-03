@@ -1,9 +1,9 @@
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
-        folder.sort(key = lambda x:len(x))
+        folder.sort(key=lambda x: len(x))
         folderDict = {}
         ans = set(folder)
-        
+
         # ans = []
         for address in folder:
             aList = (address[1:]).split('/')

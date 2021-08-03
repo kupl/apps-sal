@@ -1,13 +1,13 @@
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
         m, n = len(mat), len(mat[0])
-    
+
         for i in range(m):
             for j in range(n):
                 if mat[i][j] and i > 0:
-                    mat[i][j] += mat[i-1][j]
+                    mat[i][j] += mat[i - 1][j]
 
-        res = 0          
+        res = 0
         for i in range(m):
             stack = []
             cnt = 0

@@ -12,7 +12,8 @@ class Solution:
                 if is_valid_fibonacci(S, j, first, second, ans):
                     return ans
         return []
-        
+
+
 def to_number(s):
     # print(s)
     num = int(s)
@@ -21,6 +22,7 @@ def to_number(s):
     if num < 0 or num > 2 ** 31 - 1:
         return None
     return num
+
 
 def is_valid_fibonacci(s, curr_index, first, second, ans):
     if first is None or second is None:

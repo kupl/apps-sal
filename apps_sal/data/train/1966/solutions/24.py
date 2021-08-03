@@ -9,10 +9,10 @@ class Solution:
                 cnt = 0
                 if mat[r][c]:
                     if r > 0:
-                        mat[r][c] += mat[r-1][c]
+                        mat[r][c] += mat[r - 1][c]
                     while stack and mat[r][stack[-1]] >= mat[r][c]:
                         stack.pop()
-                    cnt += (c - (stack[-1] if stack else -1))*mat[r][c]
+                    cnt += (c - (stack[-1] if stack else -1)) * mat[r][c]
                     if stack:
                         cnt += dp[stack[-1]]
                 stack.append(c)

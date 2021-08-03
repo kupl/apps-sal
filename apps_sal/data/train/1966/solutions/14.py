@@ -5,7 +5,7 @@ class Solution:
         def count_submatrices(a, b):
             count, bound = 0, N
 
-            for i in range(a,M):
+            for i in range(a, M):
                 y = b
                 while y < bound:
                     if mat[i][y]:
@@ -20,6 +20,3 @@ class Solution:
             for j in range(N):
                 count += count_submatrices(i, j)
         return count
-
-
-

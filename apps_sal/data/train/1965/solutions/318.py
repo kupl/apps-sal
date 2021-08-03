@@ -1,18 +1,19 @@
 class UnionFind:
     def __init__(self, n):
         self.root = list(range(n + 1))
-    
+
     def find(self, i):
         if self.root[i] != i:
             self.root[i] = self.find(self.root[i])
         return self.root[i]
-    
+
     def union(self, x, y):
         rx, ry = self.find(x), self.find(y)
         if rx == ry:
             return True
         self.root[rx] = ry
         return False
+
 
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:

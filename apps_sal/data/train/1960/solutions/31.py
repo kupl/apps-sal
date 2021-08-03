@@ -2,7 +2,7 @@ class Solution:
     def processQueries(self, queries: List[int], m: int) -> List[int]:
         if m == 1:
             return [0 for _ in range(len(queries))]
-        p = [i+1 for i in range(m)]
+        p = [i + 1 for i in range(m)]
         res = []
         for i in queries:
             prev = p[0]
@@ -17,6 +17,6 @@ class Solution:
                         p[0] = tmp
                         res.append(j)
                         break
-                    prev = tmp    
+                    prev = tmp
                     j += 1
         return res

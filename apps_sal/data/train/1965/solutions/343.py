@@ -17,20 +17,22 @@ class Solution:
                     self.edge_count += 1
                     return 0
                 return 1
-            
+
             def get_edge_count(self):
                 return self.edge_count
-        
+
         A, B = DSU(n), DSU(n)
 
         ans = 0
         for typ, u, v in edges:
-            if typ != 3: continue
+            if typ != 3:
+                continue
             ans += A.union(u, v)
             B.union(u, v)
-        # print(A.get_edge_count(), B.get_edge_count())    
+        # print(A.get_edge_count(), B.get_edge_count())
         for typ, u, v in edges:
-            if typ == 3: continue
+            if typ == 3:
+                continue
             if typ == 1:
                 ans += A.union(u, v)
             elif typ == 2:

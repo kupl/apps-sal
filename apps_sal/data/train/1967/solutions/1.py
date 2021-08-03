@@ -1,12 +1,14 @@
 class Solution:
     def splitIntoFibonacci(self, S):
         for i in range(min(10, len(S))):
-            x = S[:i+1]
-            if x != '0' and x.startswith('0'): break
+            x = S[:i + 1]
+            if x != '0' and x.startswith('0'):
+                break
             a = int(x)
-            for j in range(i+1, min(i+10, len(S))):
-                y = S[i+1: j+1]
-                if y != '0' and y.startswith('0'): break
+            for j in range(i + 1, min(i + 10, len(S))):
+                y = S[i + 1: j + 1]
+                if y != '0' and y.startswith('0'):
+                    break
                 b = int(y)
                 fib = [a, b]
                 k = j + 1

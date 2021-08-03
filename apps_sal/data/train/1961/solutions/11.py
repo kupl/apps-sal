@@ -6,11 +6,10 @@ class BrowserHistory:
         self.f = 0
 
     def visit(self, url: str) -> None:
-        self.arr = self.arr[:self.cur+1]
+        self.arr = self.arr[:self.cur + 1]
         self.arr.append(url)
         self.cur += 1
         self.f = 0
-        
 
     def back(self, steps: int) -> str:
         if steps > self.cur:
@@ -19,10 +18,8 @@ class BrowserHistory:
         else:
             self.cur -= steps
             self.f += steps
-            
-            
+
         return self.arr[self.cur]
-            
 
     def forward(self, steps: int) -> str:
         if steps > self.f:
@@ -31,9 +28,8 @@ class BrowserHistory:
         else:
             self.cur += steps
             self.f -= steps
-            
+
         return self.arr[self.cur]
-        
 
 
 # Your BrowserHistory object will be instantiated and called as such:
@@ -41,4 +37,3 @@ class BrowserHistory:
 # obj.visit(url)
 # param_2 = obj.back(steps)
 # param_3 = obj.forward(steps)
-

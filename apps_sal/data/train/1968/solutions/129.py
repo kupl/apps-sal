@@ -46,11 +46,12 @@ class Node:
     def __init__(self):
         self.children = {}
         self.isLeaf = False
-        
+
+
 class Trie:
     def __init__(self):
         self.root = Node()
-        
+
     def insert(self, path: List[str]) -> None:
         node = self.root
         for directory in path:
@@ -58,7 +59,7 @@ class Trie:
                 node.children[directory] = Node()
             node = node.children[directory]
         node.isLeaf = True
-        
+
     def search(self, path: List[str]) -> bool:
         node = self.root
         for directory in path:
@@ -66,7 +67,7 @@ class Trie:
                 return False
             node = node.children[directory]
         return node.isLeaf
-    
+
     def startWith(self, path: List[str]) -> bool:
         node = self.root
         for directory in path:
@@ -74,7 +75,7 @@ class Trie:
                 return False
             node = node.children[directory]
         return True
-    
+
     def isSubfolder(self, path: List[str]) -> bool:
         node = self.root
         for directory in path:
@@ -82,6 +83,7 @@ class Trie:
                 return True
             node = node.children[directory]
         return False
+
 
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
@@ -96,8 +98,3 @@ class Solution:
             if not trie.isSubfolder(directories):
                 res.append(path)
         return res
-
-
-
-
-

@@ -3,9 +3,10 @@ class Node:
         self.name = name
         self.subdir = {}
         self.terminal = False
-        
+
     def link(self, name, node):
         self.subdir[name] = node
+
 
 class Solution:
     def dfs(self, node, dirstr, found):
@@ -14,9 +15,9 @@ class Solution:
         if node.terminal and not found:
             rtn = [dirstr]
         for x in node.subdir.keys():
-            rtn = rtn + self.dfs(node.subdir[x], dirstr+'/'+x, (found|node.terminal))
+            rtn = rtn + self.dfs(node.subdir[x], dirstr + '/' + x, (found | node.terminal))
         return rtn
-    
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         root = Node('')
         for d in folder:

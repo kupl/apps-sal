@@ -75,4 +75,3 @@ class Solution:
             r += ee - (tp - 1) + tt
 
         return r
-

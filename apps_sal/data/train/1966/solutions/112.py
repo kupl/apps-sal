@@ -1,5 +1,5 @@
 class Solution:
-    def numSubmat(self, mat: List[List[int]]) -> int:      
+    def numSubmat(self, mat: List[List[int]]) -> int:
         mat = [[0] + row for row in mat]
         m, n = len(mat), len(mat[0])
         result = 0
@@ -16,9 +16,8 @@ class Solution:
                     result += count[j]
                 stack.append(j)
         return result
-        
-        
-        
+
+
 #         m, n = len(mat), len(mat[0])
 #         for i in range(1, m):
 #             for j in range(n):
@@ -36,4 +35,3 @@ class Solution:
 #                     else:
 #                         width = 0
 #         return result
-

@@ -57,4 +57,3 @@ class Solution:
         if e3 * 2 + e1 + e2 < total:
             return -1
         return res
-

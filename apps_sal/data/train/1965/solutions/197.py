@@ -1,7 +1,7 @@
 class UnionFind:
     def __init__(self, n):
         self.roots = [i for i in range(n)]
-        
+
     def union(self, index1, index2):
         root1 = self.find(index1)
         root2 = self.find(index2)
@@ -12,16 +12,17 @@ class UnionFind:
             self.roots[root1] = root2
             return 1
         return 0
-    
+
     def find(self, index):
         if self.roots[index] != index:
             self.roots[index] = self.find(self.roots[index])
         return self.roots[index]
 
+
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         edges.sort(key=lambda x: -x[0])
-        
+
         uf1 = UnionFind(n)
         uf2 = UnionFind(n)
         could_delete = 0
@@ -44,6 +45,3 @@ class Solution:
         if num_union1 != n - 1 or num_union2 != n - 1:
             return -1
         return could_delete
-                
-            
-

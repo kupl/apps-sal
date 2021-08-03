@@ -4,7 +4,7 @@ class Solution:
         res = []
         pfix = set()
         removed = set()
-        
+
         for f in folder:
             valid = f.split('/')
             for i in range(0, len(valid)):
@@ -12,6 +12,5 @@ class Solution:
                 if target in pfix:
                     removed.add(f)
             pfix.add(f)
-        
-        return set(folder) - set(removed)
 
+        return set(folder) - set(removed)

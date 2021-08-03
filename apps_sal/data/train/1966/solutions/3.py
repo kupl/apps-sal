@@ -5,8 +5,8 @@ class Solution:
         col = len(mat[0])
         for j in range(col):
             for i in range(1, row):
-                mat[i][j] = mat[i - 1][j] + 1 if mat[i][j] == 1 else 0 
-        
+                mat[i][j] = mat[i - 1][j] + 1 if mat[i][j] == 1 else 0
+
         total = 0
         for i in range(row):
             for j in range(col):

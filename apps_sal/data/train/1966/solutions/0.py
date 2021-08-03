@@ -20,5 +20,3 @@ class Solution:
                 res += count
                 stack.append(index)
         return res
-            
-

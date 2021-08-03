@@ -8,7 +8,7 @@ class Solution:
         self.merge(bob, edges, 2)
         self.merge(alice, edges, 1)
         return -1 if min(alice) != -n or min(bob) != -n else self.ans
-        
+
     def merge(self, par, edges, ty):
         for (t, i, j) in edges:
             if t == ty:
@@ -16,14 +16,17 @@ class Solution:
                     self.union(par, i, j)
                 else:
                     self.ans += 1
-                    
+
     def find(self, par, i):
-        if par[i] < 0: return i
+        if par[i] < 0:
+            return i
         par[i] = self.find(par, par[i])
         return par[i]
-    
+
     def union(self, par, i, j):
         i, j = self.find(par, i), self.find(par, j)
-        if i == j: return
-        if par[j] < par[i]: i, j = j, i
+        if i == j:
+            return
+        if par[j] < par[i]:
+            i, j = j, i
         par[i], par[j] = par[i] + par[j], i

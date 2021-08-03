@@ -2,10 +2,12 @@ class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         parent = list(range(n + 1))
         rank = [0 for _ in range(n + 1)]
+
         def find(x):
             while parent[x] != x:
                 x = parent[x]
             return x
+
         def union(x, y):
             id_x = find(x)
             id_y = find(y)
@@ -41,5 +43,3 @@ class Solution:
                 else:
                     res += 1
         return res if (a == n - 1 and b == n - 1) else -1
-
-

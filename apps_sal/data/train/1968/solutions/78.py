@@ -23,10 +23,10 @@ class Solution:
                 else:
                     # this is the ending folder
                     cur[p] = '#'
-                    
-        
+
         # do a DFS of the trie to get the answers
         ans = []
+
         def dfs(cur_dir, path):
             if cur_dir == '#':
                 ans.append(path)
@@ -36,5 +36,3 @@ class Solution:
             return
         dfs(trie, '')
         return ans
-            
-

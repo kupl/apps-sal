@@ -7,10 +7,10 @@ class Solution:
 
         for i in range(len(mat)):
             for j in range(1, len(mat[0])):
-                mat[i][j] = 1 + mat[i][j-1] if mat[i][j] !=0 else 0
+                mat[i][j] = 1 + mat[i][j - 1] if mat[i][j] != 0 else 0
 
         for j in range(len(mat[0])):
-            stack = [(-1, -1)] # index, value
+            stack = [(-1, -1)]  # index, value
             for i in range(len(mat)):
                 while stack and mat[i][j] < stack[-1][1]:
                     stack.pop()

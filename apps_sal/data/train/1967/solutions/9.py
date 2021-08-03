@@ -21,4 +21,4 @@ class Solution:
                         return []
             print(r)
             return r
-        return f([], 0, 0)       
+        return f([], 0, 0)

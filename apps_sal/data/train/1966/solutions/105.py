@@ -12,6 +12,6 @@ class Solution:
                             if mat[sub_row][sub_col] == 0:
                                 max_col = sub_col
                                 break
-                            
+
                             total_sub_matrix += 1
         return total_sub_matrix

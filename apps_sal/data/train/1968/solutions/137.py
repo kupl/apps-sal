@@ -2,11 +2,12 @@ class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         def check(f):
             return all(map(lambda x: len(x) > 0, f.split('/')[1:]))
+
         def parent(f):
             parents = set()
             tmp = f.split('/')
-            for i in range(1, len(tmp)-1):
-                parents.add('/'.join(tmp[:i+1]))
+            for i in range(1, len(tmp) - 1):
+                parents.add('/'.join(tmp[:i + 1]))
             return parents
         folder.sort()
         seen = set()

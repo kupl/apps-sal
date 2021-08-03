@@ -10,5 +10,5 @@ class Solution:
                     break
             if not flag:
                 folder_subs.append(f)
-                    
+
         return folder_subs

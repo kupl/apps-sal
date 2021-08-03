@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         edges.sort(key=lambda x: (-x[0]))

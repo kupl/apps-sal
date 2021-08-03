@@ -1,4 +1,6 @@
 from typing import List
+
+
 class Solution:
     def maxNumEdgesToRemove(self, n, edges):
         # Union find
@@ -9,7 +11,8 @@ class Solution:
 
         def uni(x, y):
             x, y = find(x), find(y)
-            if x == y: return 0
+            if x == y:
+                return 0
             root[x] = y
             return 1
 

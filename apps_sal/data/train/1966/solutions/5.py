@@ -13,7 +13,7 @@ class Solution:
                 if j + 1 <= n - 1:
                     prefix[i][j] = prefix[i][j + 1] + mat[i][j]
         print(prefix)
-        count =  [[0] * n for _ in range(m)]  
+        count = [[0] * n for _ in range(m)]
         for i in range(m):
             for j in range(n):
                 width = prefix[i][j]
@@ -29,9 +29,5 @@ class Solution:
         ans = 0
         for i in range(m):
             ans += sum(count[i])
-        
-        return ans
-                    
-                    
-                    
 
+        return ans

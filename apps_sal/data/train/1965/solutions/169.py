@@ -58,5 +58,6 @@ class Solution:
             else:
                 res += 1
 
-        if len(root1Set) != 1 or len(root2Set) != 1: return -1
+        if len(root1Set) != 1 or len(root2Set) != 1:
+            return -1
         return res

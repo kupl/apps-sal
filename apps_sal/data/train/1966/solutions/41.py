@@ -48,4 +48,3 @@ class Solution:
 
         print(sizes)
         return 0
-

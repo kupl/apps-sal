@@ -2,6 +2,7 @@ class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
         rows = len(mat)
         columns = len(mat[0])
+
         def countSubmat(s_r, s_c):
             e_r = rows
             e_c = columns
@@ -28,6 +29,3 @@ class Solution:
             for j in range(columns):
                 res += countSubmat(i, j)
         return res
-                    
-            
-

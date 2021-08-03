@@ -8,7 +8,8 @@ class Solution:
             while s and self.is_subfolder(fs[-1], s[0]):
                 s.pop(0)
         return fs
-    def is_subfolder(self, x,y):
+
+    def is_subfolder(self, x, y):
         x = x.split('/')
         y = y.split('/')
         if len(x) >= len(y):

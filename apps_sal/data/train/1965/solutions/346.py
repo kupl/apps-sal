@@ -25,10 +25,10 @@ class UnionFind:
     def united(self):
         return self.count == 1
 
-    
+
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        edges.sort(key=lambda x:-x[0])
+        edges.sort(key=lambda x: -x[0])
         alice = UnionFind(n)
         bob = UnionFind(n)
         added = 0
@@ -43,4 +43,3 @@ class Solution:
                 added += 1 if bob.union(a, b) else 0
 
         return len(edges) - added if alice.united() and bob.united() else -1
-

@@ -5,7 +5,3 @@ class Solution:
             if not result or not f.startswith(result[-1] + '/'):
                 result.append(f)
         return result
-                
-            
-            
-

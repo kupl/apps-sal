@@ -21,18 +21,18 @@ class DSU:
 
     def size(self, x):
         return self.sz[self.find(x)]
-    
+
 
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        
+
         edges.sort(reverse=True)
-        
+
         bob = DSU(n)
         alice = DSU(n)
-        
+
         res = 0
-        
+
         for t, a, b in edges:
             a -= 1
             b -= 1
@@ -45,8 +45,7 @@ class Solution:
                 alice.union(a, b)
             else:
                 res += 1
-        
-        is_one = lambda dsu: len({dsu.find(i) for i in range(n)}) == 1
-        
-        return res if is_one(alice) and is_one(bob) else -1
 
+        def is_one(dsu): return len({dsu.find(i) for i in range(n)}) == 1
+
+        return res if is_one(alice) and is_one(bob) else -1

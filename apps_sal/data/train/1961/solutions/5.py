@@ -7,17 +7,17 @@ class BrowserHistory:
         self.top = 0
 
     def visit(self, url: str) -> None:
-        self.history[self.curr_ind+1] = url
+        self.history[self.curr_ind + 1] = url
         self.curr_ind += 1
         self.top = self.curr_ind
 
     def back(self, steps: int) -> str:
-        
+
         self.curr_ind = max(0, self.curr_ind - steps)
         return self.history[self.curr_ind]
 
     def forward(self, steps: int) -> str:
-        
+
         self.curr_ind = min(self.top, self.curr_ind + steps)
         return self.history[self.curr_ind]
 
@@ -27,4 +27,3 @@ class BrowserHistory:
 # obj.visit(url)
 # param_2 = obj.back(steps)
 # param_3 = obj.forward(steps)
-

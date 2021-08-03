@@ -12,14 +12,14 @@ class BrowserHistory:
         self.stack.append(url)
 
     def back(self, steps: int) -> str:
-        self.stack_position = max(0, self.stack_position - steps)    
+        self.stack_position = max(0, self.stack_position - steps)
         if self.stack_position == 0:
             print('cant go any more back')
         return self.stack[self.stack_position]
 
     def forward(self, steps: int) -> str:
-        self.stack_position = min(len(self.stack)-1, self.stack_position + steps)    
-        if self.stack_position == len(self.stack)-1:
+        self.stack_position = min(len(self.stack) - 1, self.stack_position + steps)
+        if self.stack_position == len(self.stack) - 1:
             print('cant go any more forwards')
         return self.stack[self.stack_position]
 
@@ -29,4 +29,3 @@ class BrowserHistory:
 # obj.visit(url)
 # param_2 = obj.back(steps)
 # param_3 = obj.forward(steps)
-

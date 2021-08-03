@@ -1,6 +1,6 @@
 class Solution:
     def processQueries(self, queries: List[int], m: int) -> List[int]:
-        result = list(range(1,m+1))
+        result = list(range(1, m + 1))
         temp = 0
         i = 0
         real = []
@@ -11,8 +11,6 @@ class Solution:
                     #print('position', j)
                     result.pop(j)
                     result.insert(0, queries[i])
-                    #print(result)
+                    # print(result)
                     continue
         return real
-            
-

@@ -3,18 +3,18 @@ class Solution:
         trie = {}
         for f in folder:
             p = trie
-            full = f+'/'
+            full = f + '/'
             for c in full:
                 if c not in p:
                     p[c] = {}
                 p = p[c]
             p['$'] = full
-        
-        #print(trie)
+
+        # print(trie)
         ans = []
         for f in folder:
             p = trie
-            full = f+'/'
+            full = f + '/'
             for c in full:
                 if '$' in p:
                     break

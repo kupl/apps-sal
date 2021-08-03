@@ -1,7 +1,9 @@
 from collections import defaultdict
+
+
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
-        Trie = lambda: defaultdict(Trie)
+        def Trie(): return defaultdict(Trie)
         trie = Trie()
 
         for f in folder:
@@ -25,5 +27,3 @@ class Solution:
         dfs(trie)
 
         return res
-
-

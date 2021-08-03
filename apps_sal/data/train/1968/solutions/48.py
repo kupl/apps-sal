@@ -2,7 +2,8 @@ class Trie:
     def __init__(self):
         self.sub = collections.defaultdict(Trie)
         self.index = -1
-    
+
+
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         root = Trie()

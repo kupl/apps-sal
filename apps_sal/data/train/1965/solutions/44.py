@@ -3,12 +3,12 @@ class Solution:
         elements = [-1] * (n + 1)
         elements[0] = 0
         elements2 = None
-        
+
         def find(elements, i):
             while elements[i] >= 0:
                 i = elements[i]
             return i
-        
+
         def union(elements, i, j):
             i = find(elements, i)
             j = find(elements, j)
@@ -21,7 +21,7 @@ class Solution:
             else:
                 elements[i] = j
             return True
-        
+
         def count(elements):
             return sum(1 for i in elements if i < 0)
         edges.sort(key=lambda k: k[0])

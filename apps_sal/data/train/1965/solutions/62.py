@@ -3,9 +3,9 @@ class Solution:
         parent = {}
         for i in range(1, n + 1):
             parent[i] = i
-        
+
         r = 0
-        
+
         both = 0
         for c, a, b in edges:
             if c == 3:
@@ -14,7 +14,7 @@ class Solution:
                 else:
                     self.union(a, b, parent)
                     both += 1
-        
+
         alice = both
         aliceP = parent.copy()
         for c, a, b in edges:
@@ -28,7 +28,7 @@ class Solution:
         print(alice)
         if alice < n - 1:
             return -1
-        
+
         bob = both
         bobP = parent.copy()
         for c, a, b in edges:
@@ -43,9 +43,7 @@ class Solution:
         if bob < n - 1:
             return -1
         return r
-                
-                    
-    
+
     def union(self, a, b, parent):
         pa = self.find(a, parent)
         pb = self.find(b, parent)
@@ -53,7 +51,7 @@ class Solution:
             return
         parent[pb] = pa
         return
-    
+
     def find(self, a, parent):
         path = [a]
         while a in parent and parent[a] != a:
@@ -62,4 +60,3 @@ class Solution:
         for p in path:
             parent[p] = a
         return a
-

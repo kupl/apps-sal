@@ -11,7 +11,7 @@ class Solution:
         #         if mat[i][j]:
         #             if i > 0:
         #                 mat[i][j] = mat[i - 1][j] + 1
-                    
+
         total = 0
         for i in range(m):
             for j in range(n):
@@ -22,5 +22,5 @@ class Solution:
                         width = min(width, mat[row][j])
                         total += width
                         row += 1
-                        
+
         return total

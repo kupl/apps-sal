@@ -3,7 +3,7 @@ class BrowserHistory:
     def __init__(self, homepage: str):
         self.curIndex = 0
         self.history = [homepage]
-        
+
     def visit(self, url: str) -> None:
         self.history = self.history[:self.curIndex + 1]
         self.history.append(url)
@@ -23,4 +23,3 @@ class BrowserHistory:
 # obj.visit(url)
 # param_2 = obj.back(steps)
 # param_3 = obj.forward(steps)
-

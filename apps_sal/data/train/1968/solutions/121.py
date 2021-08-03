@@ -7,4 +7,3 @@ class Solution:
                 continue
             res.append(x[i])
         return res
-

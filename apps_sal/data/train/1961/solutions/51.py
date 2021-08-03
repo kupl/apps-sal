@@ -4,7 +4,7 @@ class BrowserHistory:
         self.index = 0
 
     def visit(self, url: str) -> None:
-        self.history = self.history[:self.index+1] + [url]
+        self.history = self.history[:self.index + 1] + [url]
         self.index = len(self.history) - 1
 
     def back(self, steps: int) -> str:
@@ -21,4 +21,3 @@ class BrowserHistory:
 # obj.visit(url)
 # param_2 = obj.back(steps)
 # param_3 = obj.forward(steps)
-

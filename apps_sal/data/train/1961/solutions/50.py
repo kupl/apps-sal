@@ -1,7 +1,7 @@
 class BrowserHistory:
-    curr = None;
-    backHistory = 0;
-    forwardHistory = 0;
+    curr = None
+    backHistory = 0
+    forwardHistory = 0
 
     def __init__(self, homepage: str):
         self.curr = Node(homepage)
@@ -21,7 +21,6 @@ class BrowserHistory:
             self.backHistory -= 1
             steps -= 1
         return self.curr.url
-        
 
     def forward(self, steps: int) -> str:
         while steps > 0 and self.curr.__next__:
@@ -31,11 +30,12 @@ class BrowserHistory:
             steps -= 1
         return self.curr.url
 
+
 class Node:
-    url = None;
-    prev = None;
-    next = None;
-    
+    url = None
+    prev = None
+    next = None
+
     def __init__(self, url: str):
         self.url = url
         self.prev = None
@@ -47,4 +47,3 @@ class Node:
 # obj.visit(url)
 # param_2 = obj.back(steps)
 # param_3 = obj.forward(steps)
-

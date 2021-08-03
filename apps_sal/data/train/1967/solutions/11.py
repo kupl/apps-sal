@@ -3,26 +3,26 @@ class Solution:
         def startswith(S, k, x):
             y = 0
             for i in range(k, len(S)):
-                y = 10*y + int(S[i])
+                y = 10 * y + int(S[i])
                 if y == x:
-                    return i-k+1
+                    return i - k + 1
                 elif y > x:
                     break
             return 0
 
-        MAX_INT = 2**31-1
+        MAX_INT = 2**31 - 1
         a = 0
-        for i in range(len(S)-2):
-            a = 10*a + int(S[i])
+        for i in range(len(S) - 2):
+            a = 10 * a + int(S[i])
             b = 0
-            for j in range(i+1, len(S)-1):
-                b = 10*b + int(S[j])
+            for j in range(i + 1, len(S) - 1):
+                b = 10 * b + int(S[j])
                 fib = [a, b]
-                k = j+1
+                k = j + 1
                 while k < len(S):
-                    if fib[-2] > MAX_INT-fib[-1]:
+                    if fib[-2] > MAX_INT - fib[-1]:
                         break
-                    c = fib[-2]+fib[-1]
+                    c = fib[-2] + fib[-1]
                     length = startswith(S, k, c)
                     if length == 0:
                         break
@@ -35,5 +35,3 @@ class Solution:
             if a == 0:
                 break
         return []
-                
-

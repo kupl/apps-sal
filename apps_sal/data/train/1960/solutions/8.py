@@ -12,6 +12,5 @@ class Solution:
                     break
         print(result)
         print(permutations)
-        
-        return result
 
+        return result

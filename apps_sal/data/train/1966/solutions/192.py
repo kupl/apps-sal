@@ -11,9 +11,9 @@ class Solution:
             if j < 0 or mat[i][j] == 0:
                 return 0
             return 1 + leftsum(i, j - 1)
-        
+
         ret = 0
-        
+
         for bottom, j in product(list(range(R)), list(range(C))):
             width = j + 1
             for top in range(bottom, -1, -1):
@@ -23,4 +23,3 @@ class Solution:
                 ret += width
 
         return ret
-

@@ -1,8 +1,6 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        
-        
-        
+
         class UnionFind:
             def __init__(self, n):
                 self.count = n  # Number of groups

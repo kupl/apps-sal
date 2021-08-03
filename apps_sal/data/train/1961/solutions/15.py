@@ -12,7 +12,7 @@ class BrowserHistory:
     def back(self, steps: int) -> str:
         num_steps = 0
         temp = self.curr_page
-        while num_steps < steps and temp.prev != None: 
+        while num_steps < steps and temp.prev != None:
             temp = temp.prev
             num_steps += 1
         self.curr_page = temp
@@ -21,18 +21,18 @@ class BrowserHistory:
     def forward(self, steps: int) -> str:
         num_steps = 0
         temp = self.curr_page
-        while num_steps < steps and temp.__next__ != None: 
+        while num_steps < steps and temp.__next__ != None:
             temp = temp.__next__
             num_steps += 1
         self.curr_page = temp
         return temp.val
-        
-class LinkedList: 
+
+
+class LinkedList:
     def __init__(self, val, prev, next):
         self.val = val
         self.prev = prev
         self.next = next
-        
 
 
 # Your BrowserHistory object will be instantiated and called as such:
@@ -40,4 +40,3 @@ class LinkedList:
 # obj.visit(url)
 # param_2 = obj.back(steps)
 # param_3 = obj.forward(steps)
-

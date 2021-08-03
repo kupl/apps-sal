@@ -1,6 +1,7 @@
 from collections import defaultdict
 from heapq import heappush, heappop
 
+
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         aj = [defaultdict(set) for i in range(4)]
@@ -10,10 +11,10 @@ class Solution:
                 continue
             aj[t][i].add(j)
             aj[t][j].add(i)
-        
+
         reuse = set()
         count = 0
-        
+
         visited = {1}
         heap = []
         for i in aj[3][1]:
@@ -24,7 +25,7 @@ class Solution:
             w, i, j = heappop(heap)
             if j in visited:
                 continue
-                
+
             if w == 1:
                 reuse.add((i, j))
             count += 1
@@ -37,7 +38,7 @@ class Solution:
                     heappush(heap, (2, j, k))
         if len(visited) < n:
             return -1
-            
+
         visited = {1}
         heap = []
         for i in aj[3][1]:
@@ -51,7 +52,7 @@ class Solution:
             w, i, j = heappop(heap)
             if j in visited:
                 continue
-                
+
             if w > 0:
                 count += 1
             visited.add(j)
@@ -68,4 +69,3 @@ class Solution:
             return -1
 
         return total - count
-

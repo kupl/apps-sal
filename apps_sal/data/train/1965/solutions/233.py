@@ -1,13 +1,14 @@
 class Solution:
-    def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:     
+    def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         graph = {1: [], 2: [], 3: []}
         for t, i, j in edges:
             graph[t].append((i, j))
+
         def find(x):
             if parents[x] != x:
                 parents[x] = find(parents[x])
             return parents[x]
-        
+
         def union(x, y):
             px, py = find(x), find(y)
             if px == py:
@@ -17,7 +18,7 @@ class Solution:
             parents[py] = px
             rank[px] += rank[px] == rank[py]
             return True
-        
+
         result = 0
         parents = list(range(n + 1))
         rank = [1] * (n + 1)
@@ -39,4 +40,3 @@ class Solution:
         if len(set(find(i) for i in range(1, n + 1))) > 1:
             return -1
         return result
-

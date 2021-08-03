@@ -10,7 +10,7 @@ class Solution:
                     ans[j] = ans[j] & mat[down][j]
                 res += self.cal(ans)
         return res
-    
+
     def cal(self, ans):
         res = 0
         cur = 0

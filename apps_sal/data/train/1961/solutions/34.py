@@ -8,7 +8,6 @@ class BrowserHistory:
         self.history = [homepage]
         self.forward_pages = []
 
-
     def visit(self, url):
         '''
         Visits url from the current page.
@@ -18,7 +17,6 @@ class BrowserHistory:
         '''
         self.history.append(url)
         self.forward_pages = []
-
 
     def back(self, steps):
         '''
@@ -31,7 +29,6 @@ class BrowserHistory:
             steps -= 1
         return self.history[-1]
 
-
     def forward(self, steps):
         '''
         Move steps future in history.
@@ -42,4 +39,3 @@ class BrowserHistory:
             self.history.append(self.forward_pages.pop())
             steps -= 1
         return self.history[-1]
-

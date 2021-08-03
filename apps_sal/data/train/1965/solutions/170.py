@@ -22,7 +22,7 @@ class Solution:
             if e0 == 3:
                 mpc[e1].add(e2)
                 mpc[e2].add(e1)
-                
+
         self.cnt = 1
         visited = [0] * (n + 1)
         visited[1] = 1
@@ -36,7 +36,7 @@ class Solution:
         dfs(1, mpb)
         if self.cnt != n:
             return -1
-        
+
         uc = 0
         visited = [0] * (n + 1)
         for i in range(1, n + 1):
@@ -45,5 +45,4 @@ class Solution:
                 self.cnt = 0
                 dfs(i, mpc)
                 uc += self.cnt
-        return (c[3] - uc) + (c[1] + uc - (n-1)) + (c[2] + uc - (n-1))     
-
+        return (c[3] - uc) + (c[1] + uc - (n - 1)) + (c[2] + uc - (n - 1))

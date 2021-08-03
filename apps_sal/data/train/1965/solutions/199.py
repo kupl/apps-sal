@@ -1,9 +1,10 @@
 from typing import *
 from copy import deepcopy
 
+
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        edges.sort(key=lambda x:(-x[0]))
+        edges.sort(key=lambda x: (-x[0]))
         num_used = 0
         uf = [[i for i in range(n)]] + [[0] * n]
         i = 0

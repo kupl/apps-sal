@@ -5,17 +5,17 @@ class Solution:
         key = '{}-{}'.format(i, j)
         if key in cache:
             return cache[key]
-        v = int(S[i:j+1])
+        v = int(S[i:j + 1])
         cache[key] = v
         return v
-    
+
     def check(self, st, v):
-        if v > 2**31-1:
+        if v > 2**31 - 1:
             return False
         if len(st) < 2:
             return True
         return st[-2] + st[-1] == v
-    
+
     def get_st_key(self, st):
         k1 = None
         k2 = None
@@ -30,7 +30,7 @@ class Solution:
             if k1 > k2:
                 k1, k2 = k2, k1
         return '{}-{}'.format(k1, k2)
-    
+
     def split(self, S, i, st, res, cache, cache_res):
         # print(i, st, res)
         ln = len(S)
@@ -47,14 +47,14 @@ class Solution:
             new_v = 0
             if self.check(st, new_v):
                 st.append(new_v)
-                res_local = self.split(S, i+1, st, res, cache, cache_res)
+                res_local = self.split(S, i + 1, st, res, cache, cache_res)
                 del st[-1]
         else:
             for j in range(i, len(S)):
                 new_v = self.get_num(S, i, j, cache)
                 if self.check(st, new_v):
                     st.append(new_v)
-                    res_local = self.split(S, j+1, st, res, cache, cache_res)
+                    res_local = self.split(S, j + 1, st, res, cache, cache_res)
                     del st[-1]
                     if res_local:
                         break
@@ -62,8 +62,7 @@ class Solution:
                     break
         cache_res[key] = res_local
         return res_local
-            
-    
+
     def solve(self, S):
         res = [None]
         self.split(S, 0, [], res, {}, {})
@@ -79,6 +78,6 @@ class Solution:
         # if ln != len(S):
         #     print('wrong len!')
         return res[0]
-    
+
     def splitIntoFibonacci(self, S: str) -> List[int]:
         return self.solve(S)

@@ -9,8 +9,7 @@ class Solution:
     #             l.append(f)
     #             p = f
     #     return l
-    
-    
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         def insert(f):
             t = r
@@ -21,6 +20,7 @@ class Solution:
             t.ch['/'] = TrieNode()
             t = t.ch['/']
             t.d = True
+
         def search(f):
             t = r
             for c in f:
@@ -36,7 +36,8 @@ class Solution:
             if search(f):
                 l.append(f)
         return l
-    
+
+
 class TrieNode:
     def __init__(self):
         self.ch = {}

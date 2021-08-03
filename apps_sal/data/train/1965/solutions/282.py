@@ -20,13 +20,14 @@ def kruskal(n, edges, person):
                 parent[root2] = root1
         else:
             parent[root1] = root2
-        if rank[root1] == rank[root2]: rank[root2] += 1
+        if rank[root1] == rank[root2]:
+            rank[root2] += 1
 
-    for i in range(1,n+1):
+    for i in range(1, n + 1):
         make_set(i)
     minimum_spanning_tree = set()
     edges.sort(reverse=True)
-    #print(edges)
+    # print(edges)
     for i, edge in enumerate(edges):
         weight, vertice1, vertice2 = edge
         if weight != 3 and weight != person:
@@ -41,6 +42,7 @@ def kruskal(n, edges, person):
             count += 1
     return minimum_spanning_tree, count == 1
 
+
 class Solution:
     def maxNumEdgesToRemove(self, n, edges):
         mst1, connected1 = kruskal(n, edges, 1)
@@ -48,4 +50,3 @@ class Solution:
         if not connected1 or not connected2:
             return -1
         return len(edges) - len(mst1.union(mst2))
-

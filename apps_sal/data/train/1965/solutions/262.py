@@ -1,6 +1,6 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        graph = [collections.defaultdict(list), collections.defaultdict(list),collections.defaultdict(list)]
+        graph = [collections.defaultdict(list), collections.defaultdict(list), collections.defaultdict(list)]
         temp = [[], [], []]
         for t, a, b in edges:
             temp[t - 1].append([a, b])
@@ -25,15 +25,17 @@ class Solution:
             return len(seen) == n
         if not helper(0) or not helper(1):
             return -1
-                
+
         p = list(range(n + 1))
+
         def find(i):
             if p[i] != i:
                 p[i] = find(p[i])
             return p[i]
+
         def union(i, j):
             p[find(i)] = find(j)
-        
+
         def helper(c):
 
             ans = 0
@@ -50,8 +52,3 @@ class Solution:
             res += helper(c)
             p = old
         return res
-        
-        
-
-
-

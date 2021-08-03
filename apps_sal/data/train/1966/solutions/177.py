@@ -1,21 +1,21 @@
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
-        
+
         for i in range(len(mat)):
             for j in range(1, len(mat[0])):
                 if mat[i][j]:
                     mat[i][j] = mat[i][j - 1] + 1
-                    
+
         # for row in mat:
         #    print(row)
-        
+
         count = 0
-        
+
         for i in range(len(mat)):
             for j in range(len(mat[0])):
                 if mat[i][j]:
-         #           print(i, j, mat[i][j])
-                    
+                 #           print(i, j, mat[i][j])
+
                     row = i
                     width = mat[i][j]
                     while row < len(mat) and mat[row][j]:

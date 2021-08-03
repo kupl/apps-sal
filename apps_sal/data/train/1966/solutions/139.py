@@ -19,4 +19,3 @@ class Solution:
                     tot += prev[p]
                 prev.append(h)
         return tot
-
