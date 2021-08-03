@@ -12,10 +12,14 @@ def suma_n(m):
 def cnt(t):
     u, d, l, r = x + t, x - t, y - t, y + t
     suma = t ** 2 + (t + 1) ** 2
-    if u > n: suma -= suma_impares(u - n)
-    if d < 1: suma -= suma_impares(1 - d)
-    if l < 1: suma -= suma_impares(1 - l)
-    if r > n: suma -= suma_impares(r - n)
+    if u > n:
+        suma -= suma_impares(u - n)
+    if d < 1:
+        suma -= suma_impares(1 - d)
+    if l < 1:
+        suma -= suma_impares(1 - l)
+    if r > n:
+        suma -= suma_impares(r - n)
     if 1 - l > x - 1 and 1 - d > y - 1:
         suma += suma_n(2 - l - x)
     if r - n > x - 1 and 1 - d > n - y:

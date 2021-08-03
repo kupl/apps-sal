@@ -5,4 +5,5 @@ for i in 'abcdefghijklmnopqrstuvwxyz':
         print(i)
         f = 0
         return
-if f: print('None')
+if f:
+    print('None')

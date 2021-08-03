@@ -20,7 +20,7 @@ for i in range(n):
     name_two = parts[2].lower()
     user_one = add_user(users, name_one)
     user_two = add_user(users, name_two)
-    who[user_two].append(user_one);
+    who[user_two].append(user_one)
     if name_two == 'polycarp':
         answer_id = user_two
 
@@ -28,9 +28,9 @@ for i in range(n):
 def dfs(u):
     res = 1
     for v in who[u]:
-        res = max(res, dfs(v) + 1);
+        res = max(res, dfs(v) + 1)
 
     return res
 
 
-print((dfs(answer_id)));
+print((dfs(answer_id)))

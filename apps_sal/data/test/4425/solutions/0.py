@@ -11,6 +11,7 @@ for i in range(1, n + 1):
         i *= 2
         if i >= k:
             break
-        else: x += 1
+        else:
+            x += 1
     ans += (1 / n) * (1 / 2)**x
 print(ans)

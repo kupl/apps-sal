@@ -1,6 +1,6 @@
 count = int(input())
 tree = {'polycarp': 1}
-max = 1;
+max = 1
 for i in range(0, count):
     try:
         rel = input().lower().split(' ')

@@ -4,6 +4,6 @@ T = "abcdefghijklmnopqrstuvwxyz"
 for c in T:
     if S.count(c) == 0:
         print(c)
-        break;
+        break
 else:
     print("None")

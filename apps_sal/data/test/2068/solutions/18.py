@@ -3,16 +3,19 @@ def r(d, key):
         s = 0
         for i in d[key]:
             m = r(d, i)
-            if m > s: s = m
+            if m > s:
+                s = m
         return s + 1
-    else: return 1
+    else:
+        return 1
 
 
 def size(d):
     s = 0
     for i in d:
         m = r(d, i)
-        if m > s: s = m
+        if m > s:
+            s = m
     return s
 
 

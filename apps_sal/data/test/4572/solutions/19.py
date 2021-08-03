@@ -12,5 +12,7 @@ for alf in string.ascii_lowercase:
     set2.add(alf)
 
 list = sorted(set2 - set1)
-if not list: print('None')
-else: print(sorted(list)[0])
+if not list:
+    print('None')
+else:
+    print(sorted(list)[0])

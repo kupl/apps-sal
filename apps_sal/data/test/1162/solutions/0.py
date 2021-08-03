@@ -1,4 +1,4 @@
-base = 998244353;
+base = 998244353
 
 
 def power(x, y):
@@ -8,7 +8,7 @@ def power(x, y):
     t = (t * t) % base
     if(y % 2):
         t = (t * x) % base
-    return t;
+    return t
 
 
 def inverse(x):
@@ -53,7 +53,7 @@ def count_game(k, n, x):  # k players, n points total, no player can have x poin
 p, s, r = list(map(int, input().split()))
 gamesize = count_game(p, s - r, int(1e18))
 gamesize = inverse(gamesize)
-ans = 0;
+ans = 0
 for q in range(r, s + 1):
     for i in range(0, p):  # exactly i people have the same score
         t = s - (i + 1) * q
