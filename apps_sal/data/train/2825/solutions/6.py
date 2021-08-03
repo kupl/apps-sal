@@ -8,5 +8,5 @@ def even_magic(n):
                 row.append(n**2 + 1 - v)
             else:
                 row.append(v)
-        square.append(row)   
+        square.append(row)
     return square

@@ -1,29 +1,8 @@
-def array_madness(a,b):
-    x=0
-    y=0
+def array_madness(a, b):
+    x = 0
+    y = 0
     for i in a:
-        x += i*i
+        x += i * i
     for j in b:
-        y += j*j*j
-    return x>y
-        
-    
-   
-    
-    
-   
-     
-   
-   
-    
-   
- 
-
-    
-
-       
-    
-    
-        
-        
-
+        y += j * j * j
+    return x > y

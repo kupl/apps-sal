@@ -1,4 +1,4 @@
-def array_madness(a,b):
+def array_madness(a, b):
     sum = 0
     sumc = 0
     for i in a:

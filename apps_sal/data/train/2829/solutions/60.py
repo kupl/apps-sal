@@ -1,4 +1,4 @@
-def array_madness(a,b):
+def array_madness(a, b):
     result1 = 0
     result2 = 0
     for number in a:
@@ -10,4 +10,3 @@ def array_madness(a,b):
     else:
         return False
     # Ready, get, set, GO!!!
-

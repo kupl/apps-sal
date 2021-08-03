@@ -11,5 +11,5 @@ def switch_it_up(number):
         8: 'Eight',
         9: 'Nine',
     }
-    
+
     return number_map[number]

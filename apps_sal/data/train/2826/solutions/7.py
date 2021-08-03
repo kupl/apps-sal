@@ -1,2 +1,4 @@
-r=lambda i:-~i*[1]
-pyramid=lambda n:[*map(r,range(n))]
+def r(i): return -~i * [1]
+
+
+def pyramid(n): return [*map(r, range(n))]

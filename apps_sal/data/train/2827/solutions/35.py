@@ -7,7 +7,7 @@ def switch_it_up(number):
                  5: 'Five',
                  6: 'Six',
                  7: 'Seven',
-                 8: 'Eight',                 
-                 9: 'Nine',                 
+                 8: 'Eight',
+                 9: 'Nine',
                  }
     return dict_nums[number]

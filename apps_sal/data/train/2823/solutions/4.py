@@ -9,4 +9,3 @@ def duplicates(array: List[Union[int, str]]) -> List[Union[int, str]]:
         d[a] += 1
 
     return res
-
