@@ -15,20 +15,21 @@ def f(maxG, remaining):
     return S
 '''
 
+
 def process(N):
- P = 1
- for i in range(1, 2 * N, 2):
-  P *= i
- return P
+    P = 1
+    for i in range(1, 2 * N, 2):
+        P *= i
+    return P
+
 
 def main():
- T = int(input())
- for t in range(T):
-  N = int(input())
-  #stderr.write(('*'*70) + '\n')
-  #print f(-1, range(N))
-  print(process(N))
+    T = int(input())
+    for t in range(T):
+        N = int(input())
+        #stderr.write(('*'*70) + '\n')
+        # print f(-1, range(N))
+        print(process(N))
+
 
 main()
-
-
