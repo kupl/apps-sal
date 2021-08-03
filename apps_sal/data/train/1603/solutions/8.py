@@ -35,4 +35,3 @@ if len(previous_domains) > 1:
 
 print(len(groups))
 print('\n'.join([' '.join(['http://' + y for y in x]) for x in groups]))
-

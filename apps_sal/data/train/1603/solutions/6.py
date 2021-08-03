@@ -29,7 +29,7 @@ ansc = 0
 for i in ans:
     if len(ans[i]) > 1:
         ansc += 1
-        ans2.append(' '.join(map(lambda x: 'http://'+x, ans[i])))
+        ans2.append(' '.join(map(lambda x: 'http://' + x, ans[i])))
 print(ansc)
 for i in ans2:
     print(i)

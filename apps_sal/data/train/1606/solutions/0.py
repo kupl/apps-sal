@@ -1,5 +1,5 @@
-l,r  = map(int, input().split(" "))
+l, r = map(int, input().split(" "))
 if l == r:
-    print (l)
+    print(l)
 else:
-    print (2)
+    print(2)

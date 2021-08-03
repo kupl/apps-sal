@@ -12,4 +12,3 @@ for c in s:
         a += q
 
 print(ans)
-

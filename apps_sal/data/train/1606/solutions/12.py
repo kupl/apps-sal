@@ -4,4 +4,3 @@ if x == y:
     print(x)
 else:
     print(2)
-

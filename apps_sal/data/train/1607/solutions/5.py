@@ -5,4 +5,3 @@ for i in range(len(s)):
         if s[i] == 'Q' and s[j] == 'A':
             ans += s[j + 1:].count('Q')
 print(ans)
-

@@ -5,4 +5,5 @@ def __starting_point():
     else:
         print(2)
 
+
 __starting_point()

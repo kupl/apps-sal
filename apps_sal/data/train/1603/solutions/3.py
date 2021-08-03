@@ -10,10 +10,7 @@ def main():
 
     links = [sys.stdin.readline().strip() for i in range(n)]
 
-
-
     host_queries = {}
-
 
     for link in links:
         p = urlparse(link)
@@ -26,7 +23,6 @@ def main():
 
         host_queries[host].add(query)
 
-
     hosts = list(host_queries.keys())
 
     hosts = list(sorted(hosts, key=lambda h: "-".join(sorted(host_queries[h]))))
@@ -34,7 +30,6 @@ def main():
     groups = []
     for key, group in itt.groupby(hosts, key=lambda h: "-".join(sorted(host_queries[h]))):
         g = list(group)
-
 
         if len(g) < 2:
             continue
@@ -46,8 +41,8 @@ def main():
         print(" ".join(g))
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

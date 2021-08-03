@@ -6,4 +6,3 @@ for i in range(len(s)):
             if s[i] + s[j] + s[k] == 'QAQ':
                 an += 1
 print(an)
-

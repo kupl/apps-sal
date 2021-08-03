@@ -1,10 +1,13 @@
 def Main():
-	a, b = map(int ,input().split())
-	if a == b:
-		print(a)
-	else:
-		print(2)
-	
+    a, b = map(int, input().split())
+    if a == b:
+        print(a)
+    else:
+        print(2)
+
+
 def __starting_point():
-  Main()
+    Main()
+
+
 __starting_point()

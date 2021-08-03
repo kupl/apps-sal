@@ -1,2 +1,2 @@
 from numpy.linalg import det
-determinant=lambda m: int(round(det(m))) 
+def determinant(m): return int(round(det(m)))

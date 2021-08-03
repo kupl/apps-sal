@@ -14,7 +14,6 @@ def sum_of_intervals(intervals):
             del merged[i + 1]
             continue
         i += 1
-        
+
     # Calculate the sum of the disjoint intervals
     return sum(b - a for a, b in merged)
-
