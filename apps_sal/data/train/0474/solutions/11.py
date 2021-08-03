@@ -6,11 +6,10 @@ class Solution:
         res = [0]
         self.dfs(i, words, letters, score, 0, res)
         return res[0]
-    
-    
+
     def dfs(self, i, words, letters, score, current, res):
         res[0] = max(res[0], current)
-        
+
         for index in range(i, len(words)):
             word = words[index]
             cnt = collections.Counter(word)
@@ -21,17 +20,13 @@ class Solution:
                     valid = False
                     break
                 temp += cnt[ch] * score[ord(ch) - ord('a')]
-            
+
             if not valid:
                 continue
-            else:   
+            else:
                 for ch in cnt:
                     letters[ch] -= cnt[ch]
-                self.dfs(index+1, words, letters, score, current + temp, res)
+                self.dfs(index + 1, words, letters, score, current + temp, res)
                 for ch in cnt:
                     letters[ch] += cnt[ch]
         return
-            
-            
-                
-

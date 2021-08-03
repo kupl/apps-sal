@@ -1,5 +1,5 @@
 class Solution:
-    def countTriplets(self, arr: List[int]) -> int:   
+    def countTriplets(self, arr: List[int]) -> int:
         def get_triplets(nums):
             n = len(nums)
             triplets = 0
@@ -11,14 +11,15 @@ class Solution:
                     k = j
                     rsum = nums[j]
                     while k < n:
-                        if lsum == rsum: triplets += 1
+                        if lsum == rsum:
+                            triplets += 1
                         k += 1
-                        if k < n: rsum = rsum ^ nums[k]
+                        if k < n:
+                            rsum = rsum ^ nums[k]
                     j += 1
                     lsum = lsum ^ nums[j - 1]
                 i += 1
-            
-            return triplets
-        
-        return get_triplets(arr)
 
+            return triplets
+
+        return get_triplets(arr)

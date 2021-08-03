@@ -3,9 +3,9 @@ import itertools as it
 
 
 class Solution:
-    
+
     BASE = 10 ** 9 + 7
-    
+
     def threeSumMulti(self, A: List[int], target: int) -> int:
         counter = clc.Counter(A)
         values = sorted(counter)

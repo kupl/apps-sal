@@ -9,7 +9,7 @@ class Solution:
         if d1 / float(s1) <= d2 / float(s2):
             return True
         return False
-    
+
     def solve(self, target, pos, speed):
         arr = []
         for i in range(len(pos)):
@@ -19,20 +19,20 @@ class Solution:
         arr = sorted(arr)
         counter = 0
         ln = len(arr)
-        i = ln-1
+        i = ln - 1
         # print(arr)
         while i >= 0:
             p2, s2 = arr[i]
             counter += 1
-            j = i-1
+            j = i - 1
             while j >= 0:
                 p1, s1 = arr[j]
                 if not self.check(target, p1, s1, p2, s2):
                     # print('not checked:', target, (p1, s1), (p2, s2))
                     break
-                j-=1
+                j -= 1
             i = j
         return counter
-    
+
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
         return self.solve(target, position, speed)

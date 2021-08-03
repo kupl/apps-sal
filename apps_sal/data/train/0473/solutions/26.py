@@ -10,4 +10,3 @@ class Solution:
                 tmp ^= arr[j]
                 memo[i][j] = tmp
         return sum([(j - i) * (memo[i][j] == 0) for i in range(len(arr)) for j in range(i + 1, len(arr))])
-

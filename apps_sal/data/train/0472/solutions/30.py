@@ -6,7 +6,7 @@ class Solution:
             elif i in done:
                 return False
             else:
-                a,b = False, False
+                a, b = False, False
                 if 0 <= i + arr[i] < len(arr):
                     done[i] = 1
                     a = solve(arr, i + arr[i], done)

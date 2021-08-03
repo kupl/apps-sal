@@ -3,8 +3,8 @@ class Solution:
         s = '011'
         if k < 4:
             return s[k - 1]
-            
-        d = {'0':'1', '1':'0'}
+
+        d = {'0': '1', '1': '0'}
         for i in range(n):
             s += '1'
             if len(s) == k:
@@ -14,7 +14,3 @@ class Solution:
                     s += d[x]
                     if len(s) == k:
                         return d[x]
-                    
-                
-            
-

@@ -17,7 +17,7 @@ class Solution(object):
                     j += 1
                 elif y + z > T:
                     k -= 1
-                else: # x+y+z == T, now calculate the size of the contribution
+                else:  # x+y+z == T, now calculate the size of the contribution
                     if i < j < k:
                         ans += count[x] * count[y] * count[z]
                     elif i == j < k:

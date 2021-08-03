@@ -9,14 +9,15 @@ After right steps, ans would be the correct answer to return.
 
 O(N^2 logN) worst (but much faster on average) & O(N) space (32ms 100%)
         '''
-        h = [(x, i) for i, x in enumerate(nums)] #min-heap 
+        h = [(x, i) for i, x in enumerate(nums)]  # min-heap
         heapify(h)
-        
+
         ans = 0
-        for k in range(1, right+1): #1-indexed
+        for k in range(1, right + 1):  # 1-indexed
             x, i = heappop(h)
-            if k >= left: ans += x
-            if i+1 < len(nums): 
-                heappush(h, (x + nums[i+1], i+1))
-                
+            if k >= left:
+                ans += x
+            if i + 1 < len(nums):
+                heappush(h, (x + nums[i + 1], i + 1))
+
         return ans % 1_000_000_007

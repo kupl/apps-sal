@@ -2,6 +2,7 @@ class Solution:
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
         max_score = 0
         word_limits = Counter(letters)
+
         def helper(curr, chars, curr_words):
             nonlocal max_score
             if curr >= len(words):
@@ -13,10 +14,6 @@ class Solution:
                 chars += Counter(words[curr])
                 helper(curr + 1, chars, curr_words + 1)
                 chars -= Counter(words[curr])
-                helper(curr + 1, chars, curr_words)         
+                helper(curr + 1, chars, curr_words)
         helper(0, Counter(), 0)
         return max_score
-    
-        
-        
-

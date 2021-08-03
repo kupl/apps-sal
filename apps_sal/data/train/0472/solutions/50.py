@@ -4,7 +4,7 @@ class Solution:
         if 0 <= start < len(arr):
             return self.dfs(arr, start, set())
         return False
-    
+
     def dfs(self, arr, start, visited):
         if arr[start] == 0:
             return True

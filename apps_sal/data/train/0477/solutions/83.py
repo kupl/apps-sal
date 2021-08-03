@@ -15,4 +15,4 @@ class Solution:
             return previous
 
         ans = build_string(n)
-        return ans[k-1]
+        return ans[k - 1]

@@ -13,6 +13,3 @@ class Solution:
                 if not a_ik:
                     res += (kk - ii)
         return res
-                    
-
-

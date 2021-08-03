@@ -2,8 +2,8 @@ class Solution:
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         sz = len(nums)
         temp = []
-        for i,val in enumerate(nums):
-            heapq.heappush(temp,(val,i))
+        for i, val in enumerate(nums):
+            heapq.heappush(temp, (val, i))
 
         ans = 0
         for i in range(1, right + 1):

@@ -8,11 +8,11 @@ class Solution:
             lenNeg = len(bin(neg)) - 2
             neg = '0' * (lenVal - lenNeg) + bin(neg)[2:]
             return neg[::-1]
-            
+
         strVal = '0'
         for i in range(n - 1):
             strVal += '1' + negVal(strVal)
-            
+
         if(k > len(strVal)):
             return '0'
         else:

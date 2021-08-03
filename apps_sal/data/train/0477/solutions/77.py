@@ -6,6 +6,6 @@ class Solution:
         if k == m or k < 5:
             return '1'
         s = [0]
-        for _ in range(n-1):
+        for _ in range(n - 1):
             s += [1] + [x ^ 1 for x in reversed(s)]
-        return str(s[k-1])
+        return str(s[k - 1])

@@ -1,5 +1,6 @@
 from queue import PriorityQueue
 
+
 class Solution:
     def rangeSum(self, nums: List[int], total: int, left: int, right: int) -> int:
         pq = PriorityQueue()
@@ -13,7 +14,6 @@ class Solution:
                 ans = (ans + n) % 1000000007
             elif j > right:
                 return ans
-            if i<total-1:
-                pq.put((n+nums[i+1], i+1))
+            if i < total - 1:
+                pq.put((n + nums[i + 1], i + 1))
         return ans
-

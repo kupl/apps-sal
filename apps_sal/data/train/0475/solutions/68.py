@@ -4,4 +4,4 @@ class Solution:
         for i in range(len(nums)):
             arr.extend(accumulate(nums[i:]))
         arr.sort()
-        return sum(arr[left-1:right]) % (10**9 + 7)
+        return sum(arr[left - 1:right]) % (10**9 + 7)

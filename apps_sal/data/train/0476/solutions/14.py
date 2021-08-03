@@ -1,6 +1,7 @@
 import collections
 import numpy as np
 
+
 class Solution:
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
         if len(position) < 1:
@@ -14,4 +15,4 @@ class Solution:
             if t > r:
                 count += 1
                 r = t
-        return count 
+        return count

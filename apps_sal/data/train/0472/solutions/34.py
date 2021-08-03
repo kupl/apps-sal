@@ -33,6 +33,6 @@ class Solution:
                     return True
 
                 arr[i] = -arr[i]
-                q.append(i+arr[i]) # left
-                q.append(i-arr[i]) # right
+                q.append(i + arr[i])  # left
+                q.append(i - arr[i])  # right
         return False

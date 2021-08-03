@@ -3,9 +3,10 @@ class Solution:
         rsum = []
         for i in range(n):
             sums = [nums[i]]
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 sums.append(sums[-1] + nums[j])
             rsum.append(sums)
+
         def merge(arr1, arr2):
             i1 = i2 = 0
             arr = []
@@ -24,20 +25,19 @@ class Solution:
                         for j in range(i1, len(arr1)):
                             arr.append(arr1[j])
                         return arr
-        #print(rsum)
+        # print(rsum)
         while len(rsum) >= 2:
             rsum_new = []
             i = 0
             while i < len(rsum) - 1:
-                rsum_new.append(merge(rsum[i], rsum[i+1]))
+                rsum_new.append(merge(rsum[i], rsum[i + 1]))
                 i += 2
             if i < len(rsum):
                 rsum_new.append(rsum[i])
             rsum = rsum_new
         v = 0
         rsum = rsum[0]
-        #print(rsum)
-        for i in range(left-1, right):
+        # print(rsum)
+        for i in range(left - 1, right):
             v += rsum[i]
-        return v % (10**9+7)
-
+        return v % (10**9 + 7)

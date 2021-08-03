@@ -5,7 +5,7 @@ class Solution:
         for i in range(1, len(arr)):
             scan[i] = scan[i - 1] ^ arr[i]
         res = 0
-        for i in range(len(arr)-1):
+        for i in range(len(arr) - 1):
             for j in range(i + 1, len(arr)):
                 for k in range(j, len(arr)):
                     a = scan[j - 1] ^ scan[i] ^ arr[i]
@@ -13,5 +13,3 @@ class Solution:
                     if a == b:
                         res += 1
         return res
-            
-

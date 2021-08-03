@@ -1,4 +1,3 @@
 class Solution:
-     def singleNumber(self, nums):
-         return (3*sum(set(nums))-sum(nums))//2
-
+    def singleNumber(self, nums):
+        return (3 * sum(set(nums)) - sum(nums)) // 2

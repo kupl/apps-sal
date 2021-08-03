@@ -10,7 +10,7 @@ class Solution:
             if right < len(arr):
                 adjList[i].append(right)
         return adjList
-    
+
     def canReach(self, arr: List[int], start: int) -> bool:
         graph = self.genGraph(arr)
         bfsQueue = [start]

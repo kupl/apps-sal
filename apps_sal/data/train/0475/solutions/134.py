@@ -5,8 +5,8 @@ class Solution:
             sumArr.append(num)
             temp = [num]
             for i in range(len(prev)):
-                sumArr.append(num+prev[i])
-                temp.append(num+prev[i])
+                sumArr.append(num + prev[i])
+                temp.append(num + prev[i])
             prev = temp
         sumArr.sort()
-        return sum(sumArr[i] for i in range(left-1, right)) % (10**9 + 7)
+        return sum(sumArr[i] for i in range(left - 1, right)) % (10**9 + 7)

@@ -1,5 +1,6 @@
 import heapq
 
+
 class Solution:
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         hq = [(n, i) for i, n in enumerate(nums)]

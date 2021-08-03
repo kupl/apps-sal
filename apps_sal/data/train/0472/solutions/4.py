@@ -1,7 +1,8 @@
 class Solution:
     def canReach(self, arr: List[int], start: int) -> bool:
-        
+
         memo = {}
+
         def dfs(i):
             if arr[i] == 0:
                 return True
@@ -18,7 +19,7 @@ class Solution:
                 if dfs(new_i):
                     memo[i] = True
                     return True
-            
+
             return memo[i]
-        
+
         return dfs(start)

@@ -7,6 +7,6 @@ class Solution:
             cur ^= a
             if i > 0:
                 for j in d[cur]:
-                    rst += i-j-1
+                    rst += i - j - 1
             d[cur].append(i)
         return rst

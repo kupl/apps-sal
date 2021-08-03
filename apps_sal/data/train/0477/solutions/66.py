@@ -8,14 +8,13 @@ class Solution:
                 else:
                     result.append('0')
             return result
-                    
+
         string = '0'
-        while len(string)<k:
+        while len(string) < k:
             string = string + '1'
-            addition = invert(string[0:len(string)-1])
+            addition = invert(string[0:len(string) - 1])
             addition.reverse()
             addition = ''.join(addition)
             string = string + addition
-        
-        return string[k-1]
 
+        return string[k - 1]

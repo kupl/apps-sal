@@ -8,8 +8,7 @@ class Solution:
                 new.append(n)
         new.sort()
         ans = 0
-        for i in range(left-1, right):
+        for i in range(left - 1, right):
             ans += new[i]
-        ans = ans % (10**9+7)
+        ans = ans % (10**9 + 7)
         return ans
-

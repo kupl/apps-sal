@@ -8,10 +8,9 @@ class Solution:
                 newArray.append(sm)
         newArray += nums
         newArray = sorted(newArray)
-        
+
         res = 0
         for i in range(left, right + 1):
             res += newArray[i - 1]
         res = res % (10 ** 9 + 7)
         return res
-

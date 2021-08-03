@@ -4,6 +4,5 @@ class Solution:
 
         for _ in range(n - 1):
             full = full + [1] + [(x + 1) % 2 for x in full][::-1]
-        
-        return str(full[k - 1])
 
+        return str(full[k - 1])

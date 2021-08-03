@@ -19,4 +19,3 @@ class Solution:
             return res
 
         return helper(0, Counter(letters), 0)
-

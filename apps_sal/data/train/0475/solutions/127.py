@@ -5,11 +5,12 @@ class Solution:
         ans = 0
         for k in range(1, right + 1):
             x, i = heappop(h)
-            if k >= left: ans += x
+            if k >= left:
+                ans += x
             if i + 1 < len(nums):
-                heappush(h, (x+nums[i+1], i+1))
+                heappush(h, (x + nums[i + 1], i + 1))
         return ans % 1_000_000_007
-    
+
         # h = [(x,i) for i, x in enumerate(nums)]
         # heapify(h)
         # ans = 0
@@ -19,20 +20,18 @@ class Solution:
         #     if i + 1 < len(nums):
         #         heappush(h, (x+nums[i+1], i+1))
         # return ans % 1_000_000_007
-    
-        
-        
+
+
 # class Solution:
 #     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
-#         h = [(x, i) for i, x in enumerate(nums)] #min-heap 
+#         h = [(x, i) for i, x in enumerate(nums)] #min-heap
 #         heapify(h)
-        
+
 #         ans = 0
 #         for k in range(1, right+1): #1-indexed
 #             x, i = heappop(h)
 #             if k >= left: ans += x
-#             if i+1 < len(nums): 
+#             if i+1 < len(nums):
 #                 heappush(h, (x + nums[i+1], i+1))
-                
-#         return ans % 1_000_000_007
 
+#         return ans % 1_000_000_007

@@ -8,6 +8,3 @@ class Solution:
             res += i * n - total
             count[cur] = [n + 1, total + i + 1]
         return res
-            
-            
-
