@@ -3,11 +3,11 @@ class Solution:
         vis = [0 for i in range(len(friends))]
         index = id
         lis = set([id])
-        while level>0:
+        while level > 0:
             temp = []
             for i in lis:
                 if vis[i] == 0:
-                    #print(i)
+                    # print(i)
                     temp += friends[i]
                     vis[i] = 1
             lis = set(temp)
@@ -17,7 +17,7 @@ class Solution:
             if vis[i] == 0:
                 for j in watchedVideos[i]:
                     if j in dic:
-                        dic[j]+=1
+                        dic[j] += 1
                     else:
                         dic[j] = 1
         dic2 = dict()
@@ -30,4 +30,3 @@ class Solution:
         for i in sorted(dic2.keys()):
             lis += sorted(dic2[i])
         return lis
-

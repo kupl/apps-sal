@@ -17,4 +17,4 @@ class Solution:
                 visit.add(i)
                 v += videos[i]
         c = collections.Counter(v)
-        return sorted(sorted(list(set(v))), key=lambda x:c[x])
+        return sorted(sorted(list(set(v))), key=lambda x: c[x])

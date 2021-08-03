@@ -6,9 +6,11 @@ class Solution:
             a = b
             b = c
         return a
+
     def simplify(self, a, b):
         d = self.gcd(a, b)
         return (a // d, b // d)
+
     def simplifiedFractions(self, n):
         fractions = set()
         for denom in range(1, n + 1):
@@ -17,4 +19,3 @@ class Solution:
                 if expr not in fractions:
                     fractions.add(expr)
         return list(fractions)
-

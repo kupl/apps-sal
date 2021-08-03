@@ -1,5 +1,6 @@
 from fractions import gcd
 
+
 def min_price(nums):
     nums.sort()
     ns = [0] + [float('inf')] * (nums[0] - 1)

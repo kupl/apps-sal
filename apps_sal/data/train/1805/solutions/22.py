@@ -18,4 +18,4 @@ class Solution:
         for friend in requiredFriends:
             for video in watchedVideos[friend]:
                 videosFrequency[video] += 1
-        return [video[0] for video in sorted(videosFrequency.items(), key = lambda x : (x[1], x[0]))]
+        return [video[0] for video in sorted(videosFrequency.items(), key=lambda x: (x[1], x[0]))]

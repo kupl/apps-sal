@@ -6,7 +6,7 @@ class Solution:
             if b == 0:
                 return a
             return gcd(b, a % b)
-        
+
         out = []
         for denom in range(2, n + 1):
             for num in range(1, denom):

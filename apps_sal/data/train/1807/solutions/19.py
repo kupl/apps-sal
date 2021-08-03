@@ -6,15 +6,14 @@ class Solution:
                 a, b = b, a % b
             else:
                 break
-            
+
         return b
-    
+
     def simplifiedFractions(self, n: int) -> List[str]:
         ret = set()
-        for denominator in range(2, n+1):
+        for denominator in range(2, n + 1):
             for numerator in range(1, denominator):
                 gcd = self.findGCD(denominator, numerator)
                 ret.add(f'{numerator // gcd}/{denominator // gcd}')
-            
-        return list(ret)
 
+        return list(ret)

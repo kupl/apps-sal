@@ -20,6 +20,5 @@ class Solution:
                         if f not in visited:
                             visited.add(f)
                             queue.append((f, curr_level + 1))
-        
-        return [v for _, v in sorted([(f, v) for v, f in list(videos.items())])]
 
+        return [v for _, v in sorted([(f, v) for v, f in list(videos.items())])]

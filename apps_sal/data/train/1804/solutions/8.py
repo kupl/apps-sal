@@ -15,4 +15,3 @@ def recoverSecret(triplets):
     return ''.join(k for k, _ in sorted(
         iter(letters.items()), key=lambda __v: len(__v[1]), reverse=True
     ))
-

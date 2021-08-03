@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         current_level = 0
@@ -20,4 +22,3 @@ class Solution:
         for id in nodes_in_current_level:
             counter.update(watchedVideos[id])
         return [item for item, count in sorted(list(counter.items()), key=lambda x: (x[1], x[0]))]
-
