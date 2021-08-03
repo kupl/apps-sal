@@ -1,6 +1,7 @@
 N, K = [int(i) for i in input().split()]
 MOD = 10**9 + 7
 
+
 class ModInt:
     def __init__(self, x):
         self.x = x % MOD
@@ -68,20 +69,23 @@ class ModInt:
 
 
 memo = [-1] * K
+
+
 def count(k):
-    if(memo[k-1] != -1):
-        return memo[k-1]
-    
-    if(k > K//2):
-        memo[k-1] = ModInt(1)
-        return memo[k-1]
-    
-    res = ModInt(K//k) ** N
-    for i in range(2, K//k + 1):
+    if(memo[k - 1] != -1):
+        return memo[k - 1]
+
+    if(k > K // 2):
+        memo[k - 1] = ModInt(1)
+        return memo[k - 1]
+
+    res = ModInt(K // k) ** N
+    for i in range(2, K // k + 1):
         res -= count(i * k)
 
-    memo[k-1] = res
+    memo[k - 1] = res
     return res
+
 
 ans = 0
 for k in range(K, 0, -1):

@@ -9,4 +9,3 @@ ans = 0
 for i, x in enumerate(lst):
     ans = (ans + i * x) % MOD
 print(ans)
-

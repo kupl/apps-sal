@@ -2,8 +2,8 @@ s = (input())
 n = len(s)
 x = set()
 
-a = [[0 for i in range(2)] for j in range(n+3)]
-b = [0 for i in range(n+3)]
+a = [[0 for i in range(2)] for j in range(n + 3)]
+b = [0 for i in range(n + 3)]
 
 b[n] = 1
 a[n][0] = 1
@@ -33,4 +33,3 @@ x = sorted(list(x))
 print(len(x))
 for i in x:
     print(i)
-

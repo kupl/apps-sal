@@ -1,7 +1,6 @@
 
 def __starting_point():
 
-
     word = input()
 
     suffixes = set()
@@ -19,7 +18,7 @@ def __starting_point():
             new_pos = (root, i)
 
             if root < 5 or new_pos in my_set or (word[root:tam] == word[tam:a]):
-                    not_poss.add(word[root:tam])
+                not_poss.add(word[root:tam])
             else:
                 suffixes.add(word[root:tam])
                 possible.add(new_pos)
@@ -30,5 +29,6 @@ def __starting_point():
     print(len(suffixes))
     for i in suffixes_alph:
         print(i)
+
 
 __starting_point()

@@ -12,4 +12,3 @@ for i in range(1, K + 1):
     ans += d[i] * i
     ans %= MOD
 print(ans)
-

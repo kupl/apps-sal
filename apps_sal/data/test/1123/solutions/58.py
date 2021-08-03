@@ -13,5 +13,3 @@ ans = 0
 for i in range(1, k + 1):
     ans = (ans + cnt[i] * i) % MOD
 print(ans)
-
-

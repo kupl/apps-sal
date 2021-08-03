@@ -33,4 +33,3 @@ x = sorted(list(x))
 print(len(x))
 for i in x:
     print(i)
-

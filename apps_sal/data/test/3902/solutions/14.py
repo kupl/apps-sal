@@ -18,7 +18,7 @@ while possible:
         new_pos = (root, i)
 
         if root < 5 or new_pos in my_set or (word[root:tam] == word[tam:a]):
-                not_poss.add(word[root:tam])
+            not_poss.add(word[root:tam])
         else:
             suffixes.add(word[root:tam])
             possible.add(new_pos)
@@ -28,4 +28,3 @@ suffixes_alph = sorted(suffixes)
 
 print(len(suffixes))
 print(*suffixes_alph, sep='\n')
-

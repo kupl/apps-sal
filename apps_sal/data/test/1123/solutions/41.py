@@ -21,4 +21,5 @@ def __starting_point():
     N, K = list(map(int, input().split()))
     solve(N, K)
 
+
 __starting_point()

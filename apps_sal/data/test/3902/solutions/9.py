@@ -10,7 +10,8 @@ while p:
         l = m - y
         q = (l, y)
 
-        if q in d or l < 5 or t[l:m] == t[m:r]: continue
+        if q in d or l < 5 or t[l:m] == t[m:r]:
+            continue
         s.add(t[l:m])
 
         d.add(q)

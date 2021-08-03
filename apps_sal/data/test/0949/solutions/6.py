@@ -1,5 +1,5 @@
 a, b = map(int, input().split())
 if (a == b):
-	print(a)
+    print(a)
 else:
-	print(1)
+    print(1)

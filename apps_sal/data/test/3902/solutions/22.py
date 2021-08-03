@@ -2,9 +2,15 @@ word = input()
 length = len(word)
 
 acceptable2 = [None] * length
-acceptable2[0] = True; acceptable2[1] = False; acceptable2[2] = True; acceptable2[3] = False
+acceptable2[0] = True
+acceptable2[1] = False
+acceptable2[2] = True
+acceptable2[3] = False
 acceptable3 = [None] * length
-acceptable3[0] = True; acceptable3[1] = False; acceptable3[2] = False; acceptable3[3] = True
+acceptable3[0] = True
+acceptable3[1] = False
+acceptable3[2] = False
+acceptable3[3] = True
 all_possible_suffixes = set()
 
 
@@ -22,6 +28,7 @@ def is_acceptable(suffix, rest):
         if acceptable3[len(rest)] and not rest.startswith(suffix):
             return True
         return False
+
 
 for i in range(length - 1, 4, -1):
     root = word[:i]
@@ -53,4 +60,3 @@ for i in range(length - 1, 4, -1):
 print(len(all_possible_suffixes))
 for s in sorted(list(all_possible_suffixes)):
     print(s)
-
