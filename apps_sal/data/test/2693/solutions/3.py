@@ -32,7 +32,8 @@ flag = -1
 
 for i in arr:
     temp = i
-    cnt = 0; prod = 1
+    cnt = 0
+    prod = 1
 
     for j in temp:
         if(j in factors):

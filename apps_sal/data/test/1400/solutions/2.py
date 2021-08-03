@@ -6,7 +6,9 @@ for i in range(1, MAX):
     ifac[i] = pow(fac[i], MOD - 2, MOD)
     ipow2[i] = ipow2[i - 1] * (MOD + 1) // 2 % MOD
 
-choose = lambda n, k: fac[n] * ifac[k] % MOD * ifac[n - k] % MOD
+
+def choose(n, k): return fac[n] * ifac[k] % MOD * ifac[n - k] % MOD
+
 
 n, t = map(int, input().split())
 a = list(map(int, input().split()))
@@ -16,7 +18,8 @@ p = [1] + [0] * (n + 1)
 k = cur = 0
 for i in range(n):
     s += a[i]
-    if s > t: break
+    if s > t:
+        break
     if s + i + 1 <= t:
         p[i + 1] = 1
         continue

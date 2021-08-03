@@ -9,7 +9,9 @@ for h in range(H):
 
 v, h = int(np.ceil(H * W / D)), D
 Mp = np.zeros((v, h))  # MpをMod D別に計算する予定
-mp = lambda X, Y: abs(X[0] - Y[0]) + abs(X[1] - Y[1])  # 魔力計算する関数
+def mp(X, Y): return abs(X[0] - Y[0]) + abs(X[1] - Y[1])  # 魔力計算する関数
+
+
 for x in range(D, H * W):
     i, j = divmod(x, D)
     Mp[i, j] = mp(Aindex[x], Aindex[x - D])

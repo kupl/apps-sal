@@ -13,10 +13,14 @@ for i in range(n):
 if last != -1:
     Max = max(n - last, Max)
 if b[0] and b[-1]:
-    L = 0; R = n - 1
-    while b[L] and L < n - 1: L += 1
-    while b[R] and L > 0: R -= 1
-    L -= 1; R += 1
+    L = 0
+    R = n - 1
+    while b[L] and L < n - 1:
+        L += 1
+    while b[R] and L > 0:
+        R -= 1
+    L -= 1
+    R += 1
     Max = max(L + n - R + 1, Max)
 ans = m * n + Max
 print(ans)

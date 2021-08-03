@@ -22,4 +22,5 @@ while True:
 if all(len(x) == 0 for x in c):
     print("Possible")
     print(" ".join(map(str, res)))
-else: print("Impossible")
+else:
+    print("Impossible")

@@ -7,7 +7,7 @@ def main():
             coordinate[A - 1] = (i, j)
 
     cost = [0] * (H * W)
-    dist = lambda X, Y: abs(X[0] - Y[0]) + abs(X[1] - Y[1])
+    def dist(X, Y): return abs(X[0] - Y[0]) + abs(X[1] - Y[1])
     for i in range(D, H * W):
         u, v = divmod(i, D)
         cost[i] = cost[i - D] + dist(coordinate[i], coordinate[i - D])

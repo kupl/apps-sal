@@ -26,7 +26,8 @@ def main():
         inv[i + 1] = pow(fac[i + 1], MOD - 2, MOD)  # The inverse of the MOD's law (Fermat's Little Theorem)
 
     def nCr(n, r):
-        if 2 * r > n: nCr(n, n - r)
+        if 2 * r > n:
+            nCr(n, n - r)
         return fac[n] * inv[r] * inv[n - r] % MOD
 
     ans = 0

@@ -16,7 +16,9 @@ Q = int(input())
 for i in range(Q):
     l, r = map(int, input().split())
     idx = (l - 1) % D
-    if (l - 1) // D == 0: st = 0
-    else: st = (l - 1) // D
+    if (l - 1) // D == 0:
+        st = 0
+    else:
+        st = (l - 1) // D
     ed = (r - 1) // D
     print(tr[idx][ed] - tr[idx][st])

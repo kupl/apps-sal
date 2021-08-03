@@ -22,9 +22,11 @@ for i in range(m):
     if s[x - 1] != nc:
         diff = 0
         if x < n:
-            if s[int(x)] == 1: diff += 1
+            if s[int(x)] == 1:
+                diff += 1
         if x > 1:
-            if s[int(x - 2)] == 1: diff += 1
+            if s[int(x - 2)] == 1:
+                diff += 1
         if nc == 1:
             res += diff
         else:

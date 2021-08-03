@@ -3,11 +3,12 @@ import sys
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 
-in_n = lambda: int(readline())
-in_nn = lambda: list(map(int, readline().split()))
-in_nl = lambda: list(map(int, readline().split()))
-in_na = lambda: list(map(int, read().split()))
-in_s = lambda: readline().rstrip().decode('utf-8')
+
+def in_n(): return int(readline())
+def in_nn(): return list(map(int, readline().split()))
+def in_nl(): return list(map(int, readline().split()))
+def in_na(): return list(map(int, read().split()))
+def in_s(): return readline().rstrip().decode('utf-8')
 
 
 def main():

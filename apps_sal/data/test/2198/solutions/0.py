@@ -1,4 +1,5 @@
-import sys; sys.setrecursionlimit(1000000)
+import sys
+sys.setrecursionlimit(1000000)
 
 
 def solve():
@@ -35,9 +36,11 @@ def solve():
         else:
             sidedots = 0
             if index > 0:
-                if s[index - 1] == '.': sidedots += 1
+                if s[index - 1] == '.':
+                    sidedots += 1
             if index < n - 1:
-                if s[index + 1] == '.': sidedots += 1
+                if s[index + 1] == '.':
+                    sidedots += 1
             if s[index] == '.':
                 res[query] = initval - sidedots
                 initval -= sidedots
@@ -52,5 +55,6 @@ def rv(): return list(map(int, input().split()))
 def rl(n): return [list(map(int, input().split())) for _ in range(n)]
 
 
-if sys.hexversion == 50594544: sys.stdin = open("test.txt")
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 solve()

@@ -22,7 +22,7 @@ m = 1000000000
 
 for i in range(q):
     x = int(input())
-    ans = 1000;
+    ans = 1000
 
     minimo = m
     for plata, deuda in list(pares.items()):

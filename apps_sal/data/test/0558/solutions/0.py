@@ -3,7 +3,8 @@ mod = 998244353
 
 
 def powerDX(n, r, mod):
-    if r == 0: return 1
+    if r == 0:
+        return 1
     if r % 2 == 0:
         return powerDX(n * n % mod, r // 2, mod) % mod
     if r % 2 == 1:

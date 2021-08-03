@@ -1,7 +1,9 @@
 import sys
 import math
 import itertools
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(10**7)
 INF = 10**20
 MOD = 998244353

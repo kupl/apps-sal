@@ -12,14 +12,17 @@ for i in range(2, MAXN + 2):
 
 
 def comb(n, r):
-    if n < r: return 0
-    if n < 0 or r < 0: return 0
+    if n < r:
+        return 0
+    if n < 0 or r < 0:
+        return 0
     return fac[n] * (finv[r] * finv[n - r] % MOD) % MOD
 
 
 ans = 0
 for i in range(K + 1):
-    if i == N: break
+    if i == N:
+        break
     n = N - i
     ans += M * pow(M - 1, n - 1, MOD) * comb(N - 1, i)
     ans %= MOD

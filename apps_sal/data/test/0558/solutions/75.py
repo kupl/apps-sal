@@ -15,7 +15,8 @@ def main():
         invfact[i] = invfact[i + 1] * (i + 1) % MOD
 
     def nCk(n, k):
-        if k < 0 or n < k: return 0
+        if k < 0 or n < k:
+            return 0
         return fact[n] * invfact[k] * invfact[n - k] % MOD
 
     ans = 0

@@ -19,8 +19,10 @@ def main():
             finv[i] = finv[i - 1] * inv[i] % MOD
 
     def COM(n, k):
-        if n < k: return 0
-        if n < 0 or k < 0: return 0
+        if n < k:
+            return 0
+        if n < 0 or k < 0:
+            return 0
         return fac[n] * (finv[n - k] * finv[k] % MOD) % MOD
 
     COM_init()

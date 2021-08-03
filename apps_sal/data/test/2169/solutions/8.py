@@ -17,7 +17,8 @@ for k in range(d, h * w):
 q = input()
 for i in inputs():
     l, r = list(map(int, i.split()))
-    l -= 1; r -= 1
+    l -= 1
+    r -= 1
     l, b = divmod(l, d)
     r, b = divmod(r, d)
     print((nows[b][r] - nows[b][l]))

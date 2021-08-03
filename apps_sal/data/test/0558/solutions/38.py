@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 n, m, k = map(int, input().split())
 mod = 998244353
 n_max = 2 * (10**5 + 1)

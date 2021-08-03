@@ -30,5 +30,6 @@ for i in range(n):
 q = int(input())
 for i in range(q):
     l, r = list(map(int, input().split()))
-    l -= 1; r -= 1
+    l -= 1
+    r -= 1
     print((dist_list[r] - dist_list[l]))
