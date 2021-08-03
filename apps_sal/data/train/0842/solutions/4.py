@@ -8,7 +8,8 @@ for tc in range(int(input())):
         a += 1
         b += 1
 
-    a = 0; b = N - 1
+    a = 0
+    b = N - 1
     for i in range(N):
         ar[a][b] = str(i + 1)
         a += 1

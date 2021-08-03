@@ -12,4 +12,3 @@ for _ in range(t):
         r = (r * m + p) % M
         p = (p * 10 - (m - 1) * d) % M
     print(r)
-

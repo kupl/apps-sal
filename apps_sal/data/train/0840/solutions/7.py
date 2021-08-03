@@ -7,4 +7,3 @@ for _ in range(int(input())):
         print(' ' * (i) + '*')
     if n > 1:
         print('*')
-

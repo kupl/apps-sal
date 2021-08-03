@@ -24,21 +24,18 @@ t = int(input())
 for i in range(t):
     n = int(input())
     l = list(map(int, input().strip().split()))
-    if(n==3):
+    if(n == 3):
         print(sum(l))
     else:
-        ans=0
+        ans = 0
         for j in range(n):
-            p = l[j]+l[(j+n+1)%n]+l[(j+n+2)%n]
-            if(p>ans):
-                ans=p
-        p = l[n-2]+l[n-1]+l[0]
-        if(p>ans):
-            ans=p
-        p = l[1]+l[n-1]+l[0]
-        if(p>ans):
-            ans=p
+            p = l[j] + l[(j + n + 1) % n] + l[(j + n + 2) % n]
+            if(p > ans):
+                ans = p
+        p = l[n - 2] + l[n - 1] + l[0]
+        if(p > ans):
+            ans = p
+        p = l[1] + l[n - 1] + l[0]
+        if(p > ans):
+            ans = p
         print(ans)
-    
-            
-
