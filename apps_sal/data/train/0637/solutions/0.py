@@ -48,4 +48,3 @@ for i in range(int(input())):
             arr.append(')')
 
     print("".join(arr))
-

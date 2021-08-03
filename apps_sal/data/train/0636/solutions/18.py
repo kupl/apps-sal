@@ -1,17 +1,17 @@
 # cook your dish here
-a = list(map(int,input("").strip().split()))   
-n=a[0];
-t=a[1];
+a = list(map(int, input("").strip().split()))
+n = a[0]
+t = a[1]
 del a[0]
 del a[0]
 a.sort()
-res=list()
+res = list()
 for i in range(n):
-    for j in range(i+1,n):
-        for k in range(j+1,n):
-            for l in range(k+1,n):
-                if a[i]+a[j]+a[k]+a[l]==t:
-                    li=list();
+    for j in range(i + 1, n):
+        for k in range(j + 1, n):
+            for l in range(k + 1, n):
+                if a[i] + a[j] + a[k] + a[l] == t:
+                    li = list()
                     li.append(i)
                     li.append(j)
                     li.append(k)

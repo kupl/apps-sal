@@ -1,6 +1,7 @@
 # cook your dish here
 dt, a = None, None
 
+
 def dfs(z):
     r = [{}, {}]
 
@@ -35,12 +36,13 @@ def dfs(z):
 
     return r
 
+
 t = int(input())
 for i in range(t):
 
     n, m, k = map(int, input().split())
     a = [0] + [int(x) - 1 for x in input().split()]
-    
+
     dt = [[] for i in range(n + 1)]
     for i in range(m):
         u, v = map(int, input().split())
@@ -57,4 +59,3 @@ for i in range(t):
         v = -1
 
     print(v)
-

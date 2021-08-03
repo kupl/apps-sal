@@ -95,18 +95,18 @@ print(counter)
 
 nums = list(map(int, input().split()))
 n, t = nums.pop(0), nums.pop(0)
-ways = [1] + [0]*t
+ways = [1] + [0] * t
 nums.sort()
 ans = 0
 for i in range(2, n):
     if nums[i] > t - 3:
         break
-    j = i-1
+    j = i - 1
     for k in range(0, j):
-        if nums[k] + nums[j] > t-2:
+        if nums[k] + nums[j] > t - 2:
             break
         ways[nums[k] + nums[j]] += 1
-    for last in range(i+1, n):
+    for last in range(i + 1, n):
         if nums[i] + nums[last] > t - 2:
             break
         left = t - nums[i] - nums[last]

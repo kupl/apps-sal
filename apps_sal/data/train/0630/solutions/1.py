@@ -1,5 +1,6 @@
 dt, a = None, None
 
+
 def dfs(z):
     r = [{}, {}]
 
@@ -33,11 +34,21 @@ def dfs(z):
                 r[0][m0 | m1] = min(r[0][m0 | m1], l0[1][m0] + l1[1][m1]) if m0 | m1 in r[0] else l0[1][m0] + l1[1][m1]
 
     return r
+
+
 for i in range(int(input())):
-    n, m, k = map(int, input().split());a = [0] + [int(x) - 1 for x in input().split()];dt = [[] for i in range(n + 1)];
-    for i in range(m):u, v = map(int, input().split());dt[u].append(v)
-    r = dfs(1);k = (1 << k) - 1
-    if (k in r[0]):        v = min(r[0][k], r[1][k])
-    elif (k in r[1]):        v = r[1][k]
-    else:        v = -1
+    n, m, k = map(int, input().split())
+    a = [0] + [int(x) - 1 for x in input().split()]
+    dt = [[] for i in range(n + 1)]
+    for i in range(m):
+        u, v = map(int, input().split())
+        dt[u].append(v)
+    r = dfs(1)
+    k = (1 << k) - 1
+    if (k in r[0]):
+        v = min(r[0][k], r[1][k])
+    elif (k in r[1]):
+        v = r[1][k]
+    else:
+        v = -1
     print(v)

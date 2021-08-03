@@ -17,12 +17,15 @@ tmp.sort(reverse=True)
 
 p = []
 q = []
+
+
 def printCombination(arr, n, r):
 
-    data = [0]*r
+    data = [0] * r
 
     combinationUtil(arr, data, 0,
                     n - 1, 0, r)
+
 
 def combinationUtil(arr, data, start,
                     end, index, r):
@@ -51,4 +54,3 @@ for x in q:
         res += 1
 
 print(res)
-
