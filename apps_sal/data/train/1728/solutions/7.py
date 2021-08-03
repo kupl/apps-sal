@@ -20,7 +20,7 @@ class PlayerMovement:
                         if len(self.pressed) > 1:
                             self.direction = self.pressed[-2]
                     self.pressed.remove(6)
-    
+
             if Input.get_state(4):
                 if not 4 in self.pressed:
                     self.pressed.append(4)
@@ -33,7 +33,7 @@ class PlayerMovement:
                         if len(self.pressed) > 1:
                             self.direction = self.pressed[-2]
                     self.pressed.remove(4)
-            
+
             if Input.get_state(2):
                 if not 2 in self.pressed:
                     self.pressed.append(2)
@@ -46,7 +46,7 @@ class PlayerMovement:
                         if len(self.pressed) > 1:
                             self.direction = self.pressed[-2]
                     self.pressed.remove(2)
-            
+
             if Input.get_state(8):
                 if not 8 in self.pressed:
                     self.pressed.append(8)
@@ -59,11 +59,10 @@ class PlayerMovement:
                         if len(self.pressed) > 1:
                             self.direction = self.pressed[-2]
                     self.pressed.remove(8)
-                    
+
         else:
             self.pressed = []
             newkey = True
-        
+
         if not newkey and self.pressed:
             self.position = Tile(self.position.x + self.movements[self.direction][0], self.position.y + self.movements[self.direction][1])
-

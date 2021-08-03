@@ -1,5 +1,6 @@
 from math import factorial
 
+
 class Coordinate(object):
     def __init__(self, x, y):
         self._x = x
@@ -46,7 +47,7 @@ class Segment:
         if len(coords) % 2 != 0:
             raise ValueError("Incorrect number of argument values.")
         self._control_points = coords
-        self._P = [Coordinate(coords[i], coords[i+1])
+        self._P = [Coordinate(coords[i], coords[i + 1])
                    for i in range(0, len(coords), 2)]
         self._bezier_curve = self._get_bezier_curve(self._P)
 

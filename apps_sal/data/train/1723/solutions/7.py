@@ -46,8 +46,8 @@ class Quad(Segment):
 
     def point_at(self, t):
         x0, y0, x1, y1, x2, y2 = self.control_points
-        point = tuple((1 - t)**2 * p0 + 2 * (1 - t) * t * p1 + t**2 * p2 
-                    for p0, p1, p2 in [(x0, x1, x2), (y0, y1, y2)])
+        point = tuple((1 - t)**2 * p0 + 2 * (1 - t) * t * p1 + t**2 * p2
+                      for p0, p1, p2 in [(x0, x1, x2), (y0, y1, y2)])
         return point
 
     def sub_segment(self, t):
@@ -68,8 +68,8 @@ class Cubic(Segment):
 
     def point_at(self, t):
         x0, y0, x1, y1, x2, y2, x3, y3 = self.control_points
-        point = tuple((1 - t)**3 * p0 + 3 * (1 - t)**2 * t * p1 + 3 * (1 - t) * t**2 * p2 + t**3 * p3 
-                    for p0, p1, p2, p3 in [(x0, x1, x2, x3), (y0, y1, y2, y3)])
+        point = tuple((1 - t)**3 * p0 + 3 * (1 - t)**2 * t * p1 + 3 * (1 - t) * t**2 * p2 + t**3 * p3
+                      for p0, p1, p2, p3 in [(x0, x1, x2, x3), (y0, y1, y2, y3)])
         return point
 
     def sub_segment(self, t):
@@ -78,4 +78,3 @@ class Cubic(Segment):
         x2, y2 = Quad(*self.control_points[:6]).point_at(t)
         x3, y3 = self.point_at(t)
         return Cubic(x0, y0, x1, y1, x2, y2, x3, y3)
-

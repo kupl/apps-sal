@@ -2,7 +2,7 @@ from abc import ABCMeta, abstractmethod
 
 
 class Segment(metaclass=ABCMeta):
-    
+
     @property
     @abstractmethod
     def control_points(self):
@@ -29,7 +29,7 @@ class Line(Segment):
     def point_at(self, t):
         x, y = self._control_points[::2], self._control_points[1::2]
         x0, y0, x1, y1 = self._control_points
-        eq = lambda p, t: (1 - t) * p[0] + t * p[1]
+        def eq(p, t): return (1 - t) * p[0] + t * p[1]
         return eq(x, t), eq(y, t)
 
     def sub_segment(self, t):
@@ -38,8 +38,8 @@ class Line(Segment):
         return self.__class__(*p0, *pt)
 
 
-class Quad(Segment): 
-    
+class Quad(Segment):
+
     def __init__(self, *coords):
         self._control_points = coords
 
@@ -49,7 +49,7 @@ class Quad(Segment):
 
     def point_at(self, t):
         x, y = self._control_points[::2], self._control_points[1::2]
-        eq = lambda p, t: (1 - t)**2 * p[0] + 2 * (1 - t) * t * p[1] + t**2 * p[2]
+        def eq(p, t): return (1 - t)**2 * p[0] + 2 * (1 - t) * t * p[1] + t**2 * p[2]
         return eq(x, t), eq(y, t)
 
     def sub_segment(self, t):
@@ -70,7 +70,7 @@ class Cubic(Segment):
 
     def point_at(self, t):
         x, y = self._control_points[::2], self._control_points[1::2]
-        eq = lambda p, t: (1 - t)**3 * p[0] + 3 * (1 - t)**2 * t * p[1] + 3 * (1 - t) * t**2 * p[2] + t**3 * p[3]
+        def eq(p, t): return (1 - t)**3 * p[0] + 3 * (1 - t)**2 * t * p[1] + 3 * (1 - t) * t**2 * p[2] + t**3 * p[3]
         return eq(x, t), eq(y, t)
 
     def sub_segment(self, t):

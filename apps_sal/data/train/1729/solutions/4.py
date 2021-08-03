@@ -1,6 +1,7 @@
 direction = 0
 x, y = 0, 0
 
+
 def i_am_here(path):
     nonlocal direction
     nonlocal x, y
@@ -19,7 +20,7 @@ def i_am_here(path):
             y += n * dy[direction]
     return [y, x]
 
+
 reldir = dict(r=1, l=-1, L=2, R=2)
 dx = 0, 1, 0, -1
 dy = -1, 0, 1, 0
-

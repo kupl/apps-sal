@@ -64,4 +64,3 @@ def blast_sequence(aliens, position):
             dr.append(i)
             dal.pop(kdel)
     return dr
-

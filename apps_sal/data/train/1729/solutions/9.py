@@ -3,6 +3,7 @@ import re
 pos = [0, 0]    # pos-x is down, pos-y is right
 direction = 0   # 0=up, 1=right, 2=down, 3=left
 
+
 def i_am_here(path):
     commands = list(re.findall("(\d+|[lrLR])", path))
     nonlocal direction, pos

@@ -1,6 +1,7 @@
 from abc import ABCMeta, abstractmethod
 import numpy as np
 
+
 class Segment(metaclass=ABCMeta):
 
     @property
@@ -31,12 +32,11 @@ class Line(Segment):
         P1 = np.array(self._control_points[2:])
         return (1 - t) * P0 + t * P1
 
-
     def sub_segment(self, t):
         P0 = np.array(self._control_points[0:2])
         P1 = self.point_at(t)
 
-        return Line(*P0,*P1)
+        return Line(*P0, *P1)
 
 
 class Quad(Segment):
@@ -57,12 +57,12 @@ class Quad(Segment):
     def sub_segment(self, t):
         P0 = np.array(self._control_points[0:2])
         P1 = np.array(self._control_points[2:4])
-        l1 = Line(*P0,*P1)
+        l1 = Line(*P0, *P1)
         P1_new = l1.point_at(t)
         P2 = np.array(self._control_points[4:])
         P2_new = self.point_at(t)
 
-        return Quad(*P0,*P1_new,*P2_new)
+        return Quad(*P0, *P1_new, *P2_new)
 
 
 class Cubic(Segment):
@@ -86,10 +86,9 @@ class Cubic(Segment):
         P1 = np.array(self._control_points[2:4])
         P2 = np.array(self._control_points[4:6])
         P3 = np.array(self._control_points[6:])
-        l1 = Line(*P0,*P1)
+        l1 = Line(*P0, *P1)
         P1_new = l1.point_at(t)
-        l2 = Quad(*P0,*P1,*P2)
+        l2 = Quad(*P0, *P1, *P2)
         P2_new = l2.point_at(t)
         P3_new = self.point_at(t)
-        return Cubic(*P0,*P1_new,*P2_new,*P3_new)
-
+        return Cubic(*P0, *P1_new, *P2_new, *P3_new)

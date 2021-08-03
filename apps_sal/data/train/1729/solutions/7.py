@@ -2,10 +2,13 @@ x = 0
 y = 0
 heading = 0
 
+
 def plus(cpl1, cpl2, factor):
     return [cpl1[0] + cpl2[0] * factor, cpl1[1] + cpl2[1] * factor]
 
+
 headings = [(-1, 0), (0, -1), (1, 0), (0, 1)]
+
 
 def change_heading(heading, character):
     if character == "l":
@@ -16,6 +19,8 @@ def change_heading(heading, character):
         return (heading - 2) % 4
     if character == "R":
         return (heading - 2) % 4
+
+
 def i_am_here(path):
     nonlocal x
     nonlocal y

@@ -17,7 +17,7 @@ class PlayerMovement:
             if self.direction == self.pressed[-1] and can_move:
                 self.move(self.direction)
             self.direction = self.pressed[-1]
-    
+
     def move(self, direction):
         dx, dy = PlayerMovement.DIR_VECT[direction]
         self.position = Tile(
@@ -25,5 +25,5 @@ class PlayerMovement:
             self.position.y + dy
         )
 
-PlayerMovement.DIR_VECT = {8: (0, 1), 2: (0, -1), 4: (-1, 0), 6: (1, 0)}
 
+PlayerMovement.DIR_VECT = {8: (0, 1), 2: (0, -1), 4: (-1, 0), 6: (1, 0)}

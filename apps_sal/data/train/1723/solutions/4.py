@@ -85,7 +85,7 @@ class Quad(Segment):
 
     def point_at(self, t):
         pt = (1 - t)**2 * self._P0 + 2 * (1 - t) * t * self._P1 + \
-             t**2 * self._P2
+            t**2 * self._P2
         return pt.x, pt.y
 
     def sub_segment(self, t):
@@ -109,14 +109,12 @@ class Cubic(Segment):
 
     def point_at(self, t):
         pt = (1 - t)**3 * self._P0 + 3 * (1 - t)**2 * t * self._P1 + \
-             3 * (1 - t) * t**2 * self._P2 + t**3 * self._P3
+            3 * (1 - t) * t**2 * self._P2 + t**3 * self._P3
         return pt.x, pt.y
 
     def sub_segment(self, t):
         sub_line = Line(self._P0.x, self._P0.y, self._P1.x, self._P1.y)
-        sub_quad = Quad(self._P0.x, self._P0.y, self._P1.x, self._P1.y, 
+        sub_quad = Quad(self._P0.x, self._P0.y, self._P1.x, self._P1.y,
                         self._P2.x, self._P2.y)
-        return Cubic(self._P0.x, self._P0.y, *sub_line.point_at(t), 
+        return Cubic(self._P0.x, self._P0.y, *sub_line.point_at(t),
                      *sub_quad.point_at(t), *self.point_at(t))
-
-
