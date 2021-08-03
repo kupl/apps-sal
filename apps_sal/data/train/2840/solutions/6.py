@@ -19,6 +19,5 @@ def withdraw(n):
         while n > 0:
             n -= 20
             bills[2] += 1
-    
-    return bills
 
+    return bills

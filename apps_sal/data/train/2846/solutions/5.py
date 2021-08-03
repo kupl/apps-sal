@@ -1,5 +1,5 @@
 def modified_sum(a, n):
-    L=[]
+    L = []
     for i in a:
         L.append(i**n)
-    return sum(L)-sum(a)
+    return sum(L) - sum(a)
