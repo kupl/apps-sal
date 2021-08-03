@@ -4,7 +4,8 @@ g = [list() for i in range(n)]
 for k in range(n):
     a = list(map(int, input()))
     for i in range(n):
-        if a[i]: g[k].append(i)
+        if a[i]:
+            g[k].append(i)
 
 
 def dfs(v):

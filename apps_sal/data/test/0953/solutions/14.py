@@ -15,7 +15,8 @@ def dfs(i):
         x.append(i)
         y.append(p[i])
         for j in range(n):
-            if s[i][j] == '1': dfs(j)
+            if s[i][j] == '1':
+                dfs(j)
 
 
 for i in range(n):
@@ -24,6 +25,7 @@ for i in range(n):
         dfs(i)
         x.sort()
         y.sort()
-        for j in range(len(x)): p[x[j]] = y[j]
+        for j in range(len(x)):
+            p[x[j]] = y[j]
 
 print(" ".join([str(i) for i in p]))

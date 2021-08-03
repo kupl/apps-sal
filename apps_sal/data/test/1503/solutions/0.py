@@ -64,7 +64,8 @@ for i in range(1, N + 1):
 
 res = 0
 for i in range(1, N + 1):
-    if tin[i]: continue
+    if tin[i]:
+        continue
     n = 0
     while i > 0:
         n += 1

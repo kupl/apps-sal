@@ -1,4 +1,6 @@
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 n, m = I()
 a = [[]] * 10
 indexwaliarray = [[0 for i in range(n)]for _ in range(m)]

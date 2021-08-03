@@ -8,7 +8,8 @@ siz = [1] * N
 
 
 def find(i):
-    if i == par[i]: return i
+    if i == par[i]:
+        return i
     par[i] = find(par[i])
     return par[i]
 
@@ -16,7 +17,8 @@ def find(i):
 def merge(a, b):
     a = find(a)
     b = find(b)
-    if siz[a] < siz[b]: a, b = b, a
+    if siz[a] < siz[b]:
+        a, b = b, a
     par[b] = a
     siz[a] += siz[b]
 

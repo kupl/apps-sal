@@ -10,7 +10,8 @@ def listInput():
 
 
 def printBS(li):
-    if not li: return
+    if not li:
+        return
     for i in range(len(li) - 1):
         stdout.write("%d " % (li[i]))
     stdout.write("%d\n" % (li[-1]))

@@ -72,7 +72,8 @@ class DSU(object):
     def union(self, x, y):
         xr = self.find(x)
         yr = self.find(y)
-        if xr == yr: return
+        if xr == yr:
+            return
         if self._rank[xr] < self._rank[yr]:
             self._parent[xr] = yr
         elif self._rank[yr] < self._rank[xr]:
@@ -93,14 +94,19 @@ def read(mode=2):
     # 1: List of strings
     # 2: List of integers
     inputs = input().strip()
-    if mode == 0: return inputs
-    if mode == 1: return inputs.split()
-    if mode == 2: return list(map(int, inputs.split()))
+    if mode == 0:
+        return inputs
+    if mode == 1:
+        return inputs.split()
+    if mode == 2:
+        return list(map(int, inputs.split()))
 
 
 def write(s="\n"):
-    if s is None: s = ""
-    if isinstance(s, list): s = " ".join(map(str, s))
+    if s is None:
+        s = ""
+    if isinstance(s, list):
+        s = " ".join(map(str, s))
     s = str(s)
     print(s, end="")
 

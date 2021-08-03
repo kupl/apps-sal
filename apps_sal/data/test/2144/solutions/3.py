@@ -7,7 +7,8 @@ for i in range(2, 100001):
             primes[j] = False
 pL = []
 for i in range(2, 100001):
-    if primes[i]: pL.append(i)
+    if primes[i]:
+        pL.append(i)
 
 
 def fact(n):
@@ -17,7 +18,8 @@ def fact(n):
             while n % i == 0:
                 L.append(i)
                 n //= i
-    if n != 1: L.append(n)
+    if n != 1:
+        L.append(n)
     return L
 
 
@@ -35,7 +37,8 @@ for i in ' ' * int(input()):
     L = fact(mm)
     M = []
     for i in L:
-        if i not in M: M.append(i)
+        if i not in M:
+            M.append(i)
     for i in M:
         mm *= (i - 1)
         mm //= i

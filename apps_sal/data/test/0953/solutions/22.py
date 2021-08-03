@@ -36,7 +36,8 @@ def main():
 
     visited = [False] * n
     for i in range(n):
-        if visited[i]: continue
+        if visited[i]:
+            continue
         nonlocal ids, values
         ids = [i]
         values = [p[i]]

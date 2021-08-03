@@ -1,7 +1,13 @@
-I = lambda: list(map(int, input().split()))
-n = int(input()); permutation = list(I())
+def I(): return list(map(int, input().split()))
 
-row = lambda: [int(c) for c in input()]
+
+n = int(input())
+permutation = list(I())
+
+
+def row(): return [int(c) for c in input()]
+
+
 matrix = [row() for _ in range(n)]
 components = [-1] * n
 
@@ -12,7 +18,8 @@ def dfs(i):
         components[i] = current
         row = enumerate(matrix[i])
         row = [j for j, a in row if a > 0]
-        for x in row: dfs(x)
+        for x in row:
+            dfs(x)
 
 
 current = 0
