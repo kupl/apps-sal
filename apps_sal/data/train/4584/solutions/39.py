@@ -1,15 +1,9 @@
 def invert(lst):
 
-  arr = []
+    arr = []
 
-  for nums in lst:
+    for nums in lst:
 
-    
+        arr.append(nums * -1)
 
-    arr.append(nums * -1)
-
-
-
-
-
-  return arr  
+    return arr

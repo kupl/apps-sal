@@ -1,1 +1,1 @@
-invert=lambda l:[~i+1for i in l]
+def invert(l): return [~i + 1for i in l]

@@ -7,10 +7,10 @@ def tv_remote(word):
         "pqrst.@0",
         "uvwxyz_/",
     ]
-    
+
     cursor_position = [0, 0]
     total_moves = 0
-    
+
     for char in word:
         for i, row in enumerate(keyboard):
             if char in row:

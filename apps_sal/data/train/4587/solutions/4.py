@@ -1,5 +1,6 @@
 import re
 
+
 def range_parser(string):
     result = []
     for match in re.finditer(r'(\d+)(?:-(\d+)(?::(\d+))?)?', string):

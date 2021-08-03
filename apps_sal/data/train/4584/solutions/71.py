@@ -3,6 +3,4 @@ def invert(lst):
     for num in lst:
         inverse_list.append(-num)
 
-            
     return inverse_list
-

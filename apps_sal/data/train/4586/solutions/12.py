@@ -5,12 +5,12 @@ def tv_remote(word):
              ['k', 'l', 'm', 'n', 'o', '7', '8', '9'],
              ['p', 'q', 'r', 's', 't', '.', '@', '0'],
              ['u', 'v', 'w', 'x', 'y', 'z', '_', '/'],
-             ]
+    ]
 
     start = [0, 0]
     _dict = dict()
     actions = []
-    _lambda = lambda x, y: (abs(x[0]-y[0]) + abs(x[1]-y[1]))+1
+    def _lambda(x, y): return (abs(x[0] - y[0]) + abs(x[1] - y[1])) + 1
 
     for char in word:
         for i in range(5):

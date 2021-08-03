@@ -11,4 +11,3 @@ def tv_remote(word):
         horizontal_s = horizontal
         vertical_s = vertical
     return presses
-

@@ -6,4 +6,3 @@ def invert(lst):
         for i in lst:
             l.append(~i + 1)
         return l
-

@@ -3,5 +3,5 @@ def invert(lst):
     if lst == []:
         return []
     for x in lst:
-        fsociety.append(x/-1)
+        fsociety.append(x / -1)
     return fsociety

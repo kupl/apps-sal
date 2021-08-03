@@ -1,5 +1,5 @@
 def invert(lst):
     ls = []
     for n in lst:
-        ls.append(n* -1)
+        ls.append(n * -1)
     return ls

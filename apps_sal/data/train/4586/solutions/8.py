@@ -10,7 +10,7 @@ def tv_remote(word: str):
         'u', 'v', 'w', 'x', 'y', 'z', '_', '/'
     )
     Position = namedtuple('Position', 'y x')
-    
+
     prev = Position(0, 0)
     button_presses = 0
     for letter in word:

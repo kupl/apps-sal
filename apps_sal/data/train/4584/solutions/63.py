@@ -3,6 +3,3 @@ def invert(lst):
         return n * -1
     x = list(map(mult, lst))
     return x
-        
-
-

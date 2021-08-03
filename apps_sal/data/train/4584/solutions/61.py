@@ -1,7 +1,7 @@
 def invert(lst):
-    ls=[]
+    ls = []
     for x in lst:
-        if x<0:
+        if x < 0:
             ls.append(-x)
         else:
             ls.append(-x)

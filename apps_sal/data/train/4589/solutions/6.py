@@ -3,4 +3,3 @@ def solution(items: list, index: int, default_value):
         return items[index]
     except IndexError:
         return default_value
-

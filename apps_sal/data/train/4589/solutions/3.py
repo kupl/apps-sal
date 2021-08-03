@@ -3,4 +3,3 @@ def solution(items, index, default_value):
         return items[index]
     except LookupError:
         return default_value
-

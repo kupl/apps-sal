@@ -13,4 +13,3 @@ def controller(events):
                 moving = False
         result.append(pos)
     return ''.join(map(str, result))
-

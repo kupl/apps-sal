@@ -1,5 +1,6 @@
 grid = ["abcde123", "fghij456", "klmno789", "pqrst.@0", "uvwxyz_/"]
 
+
 def tv_remote(word):
     steps = 0
     pos = (0, 0)

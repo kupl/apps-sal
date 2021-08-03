@@ -1,4 +1,4 @@
-def invert(a:list):
+def invert(a: list):
     if len(a) is None:
         return []
     my_invert = []

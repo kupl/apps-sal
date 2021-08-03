@@ -8,7 +8,7 @@ def range_parser(string):
                 else:
                     step = 1
                 a, b = map(int, x.split('-'))
-                yield from range(a, b+1, step)
+                yield from range(a, b + 1, step)
             else:
                 yield int(x)
     return list(f())

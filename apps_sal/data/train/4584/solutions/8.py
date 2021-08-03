@@ -1,1 +1,1 @@
-invert = lambda lst: [-e for e in lst]
+def invert(lst): return [-e for e in lst]

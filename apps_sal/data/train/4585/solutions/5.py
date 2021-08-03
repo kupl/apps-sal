@@ -11,8 +11,9 @@ def find_repeat(a, b):
             i = seen[last]
             return x[:i], x[i:-2]
         seen[last] = len(x) - 2
-    
-def find(a,b,n):
+
+
+def find(a, b, n):
     prefix, repeat = [list(map(int, x)) for x in find_repeat(a, b)]
     if n < len(prefix):
         return prefix[n]
