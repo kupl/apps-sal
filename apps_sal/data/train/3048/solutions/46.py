@@ -6,4 +6,3 @@ def alternateCase(s):
         else:
             w += i.upper()
     return w
-

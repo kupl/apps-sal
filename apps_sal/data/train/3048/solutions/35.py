@@ -1,7 +1,7 @@
 def alternateCase(s):
-    
+
     string = ""
-    
+
     for i in s:
         if i.isupper():
             i = i.lower()
@@ -9,5 +9,5 @@ def alternateCase(s):
         else:
             i = i.upper()
             string += i
-            
+
     return string

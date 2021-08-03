@@ -4,4 +4,3 @@ def solve(s):
         if xs == xs[::-1]:
             return True
     return False
-

@@ -6,4 +6,3 @@ def alternateCase(s):
         else:
             string += char.lower()
     return string
-

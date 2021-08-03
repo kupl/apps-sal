@@ -13,7 +13,7 @@ def alternateCase(s=''):
             print(listl)
             s = ''.join(listl)
             print(s)
-        
+
         else:
             if s[i].islower() == True:
                 print(s[i])
@@ -22,6 +22,6 @@ def alternateCase(s=''):
                 listl[i] = letra
                 print(listl)
                 s = ''.join(listl)
-                print(s) 
+                print(s)
         i += 1
     return s

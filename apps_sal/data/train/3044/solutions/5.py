@@ -5,6 +5,7 @@ def is_palindrome(s):
         if i == len(s) // 2:
             return True
 
+
 def solve(st):
     for i in range(len(st)):
         if is_palindrome(st[i:] + st[:i]):

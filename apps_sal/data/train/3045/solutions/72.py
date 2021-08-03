@@ -6,7 +6,7 @@ def elevator(l, r, c):
         return "right"
     elif c > r and r > l:
         return "right"
-    elif r > c and c > l : 
+    elif r > c and c > l:
         return "right"
     elif r == l and r != c:
         return "right"

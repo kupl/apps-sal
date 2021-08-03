@@ -1,1 +1,1 @@
-elevator=lambda l,r,c:'rliegfhtt'[1-(abs(l-c)>=abs(r-c))::2]
+def elevator(l, r, c): return 'rliegfhtt'[1 - (abs(l - c) >= abs(r - c))::2]

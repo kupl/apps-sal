@@ -14,4 +14,3 @@ def solve(st):
         else:
             list_ = rotate(list_)
     return False
-

@@ -3,4 +3,3 @@ def elevator(left, right, call):
     if abs(right - call) <= abs(left - call):
         closest = "right"
     return closest
-

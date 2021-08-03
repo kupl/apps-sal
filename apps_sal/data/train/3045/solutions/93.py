@@ -4,4 +4,3 @@ def elevator(left, right, call):
     if (left == call and right != call) or (right < left < call) or (call < left < right):
         return 'left'
     return 'right'
-

@@ -1,5 +1,5 @@
 def alternateCase(s):
-    text=''
+    text = ''
     for i in range(len(s)):
         if s[i].isupper() == True:
             text = text + s[i].lower()

@@ -7,5 +7,5 @@ def alternateCase(s):
         else:
             letter = letter.upper()
             string = string + letter
-            
+
     return string

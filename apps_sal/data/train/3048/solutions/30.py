@@ -1,5 +1,5 @@
 def alternateCase(s):
-    l=[]
+    l = []
     for i in s:
         if i == " " or i == "":
             l.append(i)

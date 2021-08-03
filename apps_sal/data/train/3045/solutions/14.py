@@ -1,7 +1,7 @@
 def elevator(left, right, call):
-    difleft = left-call
-    difright = right-call
-    
+    difleft = left - call
+    difright = right - call
+
     if(call == left and call != right):
         return "left"
     if(call == right):
@@ -10,9 +10,9 @@ def elevator(left, right, call):
         return "right"
     if(difleft == difright):
         return "right"
-    if(left>right and call<right):
+    if(left > right and call < right):
         return "right"
-    if(right>left and call<left):
+    if(right > left and call < left):
         return "left"
     if(call > right and call > left and right > left):
         return "right"
