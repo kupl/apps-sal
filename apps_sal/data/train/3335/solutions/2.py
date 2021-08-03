@@ -1,1 +1,1 @@
-vaporcode = lambda s: "  ".join(list(s.replace(" ", "").upper()))
+def vaporcode(s): return "  ".join(list(s.replace(" ", "").upper()))

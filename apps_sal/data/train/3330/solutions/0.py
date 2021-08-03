@@ -1,9 +1,10 @@
-def make_triangle(m,n):
+def make_triangle(m, n):
     lns, sm = 0, 0
     while sm < n - m + 1:
         lns += 1
         sm += lns
-    if sm > n - m + 1: return ""
+    if sm > n - m + 1:
+        return ""
     matrix = [[0] * (i + 1) for i in range(lns)]
     y, x, s = 0, 0, 0
     ds = ((1, 1), (0, -1), (-1, 0))

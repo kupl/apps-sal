@@ -7,4 +7,3 @@ def mystery(n):
             d.add(k)
             d.add(n // k)
     return sorted(i for i in d if i % 2)
-
