@@ -20,7 +20,8 @@ def main():
     fact, ifact = make_fact(n)
 
     def comb(n, k):
-        if k < 0 or k > n: return 0
+        if k < 0 or k > n:
+            return 0
         return fact[n] * ifact[k] * ifact[n - k] % mod
 
     ans = 0

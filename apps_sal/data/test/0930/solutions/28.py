@@ -21,35 +21,43 @@ class Combination:
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
     def C(self, n, r):
-        if not 0 <= r <= n: return 0
+        if not 0 <= r <= n:
+            return 0
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
     def P(self, n, r):
-        if not 0 <= r <= n: return 0
+        if not 0 <= r <= n:
+            return 0
         return self.fac[n] * self.facinv[n - r] % self.mod
 
     def H(self, n, r):
-        if (n == 0 and r > 0) or r < 0: return 0
+        if (n == 0 and r > 0) or r < 0:
+            return 0
         return self.fac[n + r - 1] * self.facinv[r] % self.mod * self.facinv[n - 1] % self.mod
 
     def rising_factorial(self, n, r):  # 上昇階乗冪 n * (n+1) * ... * (n+r-1)
         return self.fac[n + r - 1] * self.facinv[n - 1] % self.mod
 
     def stirling_first(self, n, k):  # 第 1 種スターリング数  lru_cache を使うと O(nk)  # n 要素を k 個の巡回列に分割する場合の数
-        if n == k: return 1
-        if k == 0: return 0
+        if n == k:
+            return 1
+        if k == 0:
+            return 0
         return (self.stirling_first(n - 1, k - 1) + (n - 1) * self.stirling_first(n - 1, k)) % self.mod
 
     def stirling_second(self, n, k):  # 第 2 種スターリング数 O(k + log(n))  # n 要素を区別のない k グループに分割する場合の数
-        if n == k: return 1  # n==k==0 のときのため
+        if n == k:
+            return 1  # n==k==0 のときのため
         return self.facinv[k] * sum((-1)**(k - m) * self.C(k, m) * pow(m, n, self.mod) for m in range(1, k + 1)) % self.mod
 
     def balls_and_boxes_3(self, n, k):  # n 要素を区別のある k グループに分割する場合の数  O(k + log(n))
         return sum((-1)**(k - m) * self.C(k, m) * pow(m, n, self.mod) for m in range(1, k + 1)) % self.mod
 
     def bernoulli(self, n):  # ベルヌーイ数  lru_cache を使うと O(n**2 * log(mod))
-        if n == 0: return 1
-        if n % 2 and n >= 3: return 0  # 高速化
+        if n == 0:
+            return 1
+        if n % 2 and n >= 3:
+            return 0  # 高速化
         return (- pow(n + 1, self.mod - 2, self.mod) * sum(self.C(n + 1, k) * self.bernoulli(k) % self.mod for k in range(n))) % self.mod
 
     def faulhaber(self, k, n):  # べき乗和 0^k + 1^k + ... + (n-1)^k

@@ -15,7 +15,8 @@ for i in range(n, 0, -1):
 
 
 def cmb(n, r):
-    if r < 0 or r > n: return 0
+    if r < 0 or r > n:
+        return 0
     return (((fac[n] * inv[r]) % mod) * inv[n - r]) % mod
 
 

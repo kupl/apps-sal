@@ -7,7 +7,8 @@ cnt = []
 for i in range(n):
     if s[i] == '*':
         cnt_.append(i)
-    else: cnt.append(i)
+    else:
+        cnt.append(i)
 for x in range(m):
     flag = True
     st = input()
@@ -16,7 +17,8 @@ for x in range(m):
             flag = False
     else:
         for j in cnt:
-            if st[j] != s[j]: flag = False
+            if st[j] != s[j]:
+                flag = False
     if flag:
         l.append(st)
 g = [[] for i in range(len(l))]
@@ -28,6 +30,8 @@ for i in range(len(g)):
 ans = 0
 for ch in g[0]:
     for li in g:
-        if ch not in li: break
-    else: ans = ans + 1
+        if ch not in li:
+            break
+    else:
+        ans = ans + 1
 print(ans)

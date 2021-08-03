@@ -3,7 +3,11 @@ import sys
 
 # print(help(deque))
 # 26
-input = lambda: sys.stdin.readline().strip()
+
+
+def input(): return sys.stdin.readline().strip()
+
+
 ipnut = input
 dp = [0]
 n = 0

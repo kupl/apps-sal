@@ -23,5 +23,6 @@ for i in range(26):
     ok = True
     for i, s in enumerate(letters):
         ok = ok and (ch in s or fail[i])
-    if ok: cnt += 1
+    if ok:
+        cnt += 1
 print(cnt)

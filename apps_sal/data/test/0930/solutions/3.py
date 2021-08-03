@@ -3,8 +3,10 @@ mod = 1000000007
 
 
 def comb(n, k):
-    if n < k: return 0
-    if n < 0 or k < 0: return 0
+    if n < k:
+        return 0
+    if n < 0 or k < 0:
+        return 0
     return fac[n] * finv[k] % mod * finv[n - k] % mod
 
 

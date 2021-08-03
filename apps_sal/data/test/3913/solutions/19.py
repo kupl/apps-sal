@@ -19,7 +19,8 @@ for i in range(m):
             li.append('*')
         else:
             li.append(words[j])
-    if umask & mask or s != ''.join(li): continue
+    if umask & mask or s != ''.join(li):
+        continue
     ans &= umask
 realans = 0
 while ans:

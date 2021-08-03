@@ -10,7 +10,8 @@ def arr(n, k, l):
         flag = True
         return([0])
 
-    if (k % 4 == 2): k1 = k2 = k // 2 - 1
+    if (k % 4 == 2):
+        k1 = k2 = k // 2 - 1
     else:
         k1 = (k - 4) // 2
         k2 = k1 + 2
@@ -31,8 +32,11 @@ flag = False
 
 ans = arr(n, k - 1, 1)
 
-if (k % 2 == 0): flag = True
+if (k % 2 == 0):
+    flag = True
 
-if flag: print(-1)
+if flag:
+    print(-1)
 else:
-    for i in ans: print(i, end=" ")
+    for i in ans:
+        print(i, end=" ")

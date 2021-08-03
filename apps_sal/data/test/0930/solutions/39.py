@@ -18,7 +18,8 @@ else:
         h.append(h[-1] * i % mod)
         inverse.append(-inverse[mod % i] * (mod // i) % mod)
         g.append(g[-1] * inverse[-1] % mod)
-    comb = lambda a, b: h[a] * g[b] * g[a - b] % mod
+
+    def comb(a, b): return h[a] * g[b] * g[a - b] % mod
     # i手かけないとたどり着けないやつ
     t = [comb(n, i) * comb(n - 1, i) % mod for i in range(k + 1)]
     print(sum(t) % mod)

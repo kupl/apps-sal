@@ -1,6 +1,7 @@
 n, k = map(int, input().split())
 if k % 2 == 0:
-    print(-1); return()
+    print(-1)
+    return()
 k -= 1
 a = [int(i + 1) for i in range(n)]
 
@@ -17,6 +18,8 @@ def f(l, r):
 
 
 f(0, n)
-if k: print(-1); return()
+if k:
+    print(-1)
+    return()
 for i in a:
     print(int(i), end=' ')

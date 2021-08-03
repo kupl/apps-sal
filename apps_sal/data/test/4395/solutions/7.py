@@ -15,18 +15,25 @@ for ca in range(6):
     for i in range(lens):
         ss[i] = st
         if st == "R":
-            if ca % 2 == 0: st = "G"
-            else: st = "B"
+            if ca % 2 == 0:
+                st = "G"
+            else:
+                st = "B"
         elif st == "G":
-            if ca % 2 == 0: st = "B"
-            else: st = "R"
+            if ca % 2 == 0:
+                st = "B"
+            else:
+                st = "R"
         else:
-            if ca % 2 == 0: st = "R"
-            else: st = "G"
+            if ca % 2 == 0:
+                st = "R"
+            else:
+                st = "G"
 
     diff = 0
     for i in range(lens):
-        if ss[i] != s[i]: diff += 1
+        if ss[i] != s[i]:
+            diff += 1
 
     if diff < ans:
         ans, ans2 = diff, "".join(ss)

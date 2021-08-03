@@ -10,7 +10,8 @@ for i in range(2, N + 1):
 
 
 def comb(a, b):
-    if a < b: return 0  # error
+    if a < b:
+        return 0  # error
     return (fac[a] * ((finv[b] * finv[a - b]) % P)) % P
 
 

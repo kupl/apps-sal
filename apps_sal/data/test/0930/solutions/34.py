@@ -7,7 +7,7 @@ finv = [1 for k in range(200010)]
 for k in range(2, 200010):
     fac[k] = (fac[k - 1] * k) % MOD
     inv[k] = (MOD - inv[MOD % k] * (MOD // k)) % MOD
-    finv[k] = (finv[k - 1] * inv[k]) % MOD;
+    finv[k] = (finv[k - 1] * inv[k]) % MOD
 
 
 def nCr(n, r):

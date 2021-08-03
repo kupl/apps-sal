@@ -5,7 +5,8 @@ n, k = map(int, input().split())
 
 @lru_cache(None)
 def f(x):
-    if x: return x * f(x - 1) % M
+    if x:
+        return x * f(x - 1) % M
     return 1
 
 

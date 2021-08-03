@@ -1,6 +1,7 @@
 n, k = map(int, input().split())
 if k % 2 == 0:
-    print(-1); return()
+    print(-1)
+    return()
 k -= 1
 a = [i + 1 for i in range(n)]
 
@@ -18,5 +19,6 @@ def sl(l, r):
 
 sl(0, n)
 if k != 0:
-    print(-1); return()
+    print(-1)
+    return()
 print(' '.join([str(i) for i in a]))
