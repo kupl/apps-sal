@@ -19,7 +19,8 @@ class Ford_Fulkerson:
         self.G[to].append({'to': fm, 'cap': 0, 'rev': len(self.G[fm]) - 1})
 
     def dfs(self, v, t, f):
-        if v == t: return f
+        if v == t:
+            return f
         self.used[v] = True
 
         for i in range(len(self.G[v])):
@@ -37,7 +38,8 @@ class Ford_Fulkerson:
         while True:
             self.used = [False for i in range(self.V)]
             f = self.dfs(s, t, self.inf)
-            if f == 0: return flow
+            if f == 0:
+                return flow
             flow += f
 
 

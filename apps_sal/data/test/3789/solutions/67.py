@@ -37,7 +37,8 @@ class Dinic:
                     que.put(e['to'])
 
     def dfs(self, v, t, f):
-        if v == t: return f
+        if v == t:
+            return f
         for i in range(self.iter[v], len(self.G[v])):
             self.iter[v] = i
             e = self.G[v][i]
@@ -53,7 +54,8 @@ class Dinic:
         flow = 0
         while True:
             self.bfs(s)
-            if self.level[t] < 0: return flow
+            if self.level[t] < 0:
+                return flow
             self.iter = [0 for _ in range(self.V)]
             f = self.dfs(s, t, self.inf)
             while f > 0:

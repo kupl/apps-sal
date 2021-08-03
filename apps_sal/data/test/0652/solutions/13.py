@@ -1,5 +1,5 @@
 def main():
-    read = lambda: list(map(int, input().split()))
+    def read(): return list(map(int, input().split()))
     n = int(input())
     p = [tuple(read()) for i in range(n)]
     from collections import Counter

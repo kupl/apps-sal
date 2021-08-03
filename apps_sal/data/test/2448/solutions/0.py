@@ -27,7 +27,13 @@ for _ in range(t):
         print("YES")
         for i, my in enumerate(t):
             if my == "X":
-                if a: a -= 1; t[i] = "R"
-                elif b: b -= 1; t[i] = "P"
-                elif c: c -= 1; t[i] = "S"
+                if a:
+                    a -= 1
+                    t[i] = "R"
+                elif b:
+                    b -= 1
+                    t[i] = "P"
+                elif c:
+                    c -= 1
+                    t[i] = "S"
         print("".join(t))

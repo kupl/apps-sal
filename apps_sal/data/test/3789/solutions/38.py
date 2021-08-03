@@ -2,8 +2,8 @@ from collections import *
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 
@@ -30,8 +30,10 @@ class Dinic():
         while q:
             u, u_level = q.popleft()
             for v, cap, _ in self.to[u]:
-                if cap == 0: continue
-                if level[v] != -1: continue
+                if cap == 0:
+                    continue
+                if level[v] != -1:
+                    continue
                 level[v] = u_level + 1
                 if v == self.t:
                     self.level = level
@@ -40,15 +42,20 @@ class Dinic():
         return False
 
     def dfs(self, u=-1, flow_to_me=10 ** 16):
-        if u == -1: u = self.s
-        if u == self.t: return flow_to_me
+        if u == -1:
+            u = self.s
+        if u == self.t:
+            return flow_to_me
         flow_from_me = 0
         u_level = self.level[u]
         for utov_i, (v, cap, vtou_i) in enumerate(self.to[u]):
-            if self.level[v] != u_level + 1: continue
-            if cap == 0: continue
+            if self.level[v] != u_level + 1:
+                continue
+            if cap == 0:
+                continue
             flow_to_v = self.dfs(v, min(cap, flow_to_me - flow_from_me))
-            if not flow_to_v: continue
+            if not flow_to_v:
+                continue
             flow_from_me += flow_to_v
             self.to[u][utov_i][1] -= flow_to_v
             self.to[v][vtou_i][1] += flow_to_v

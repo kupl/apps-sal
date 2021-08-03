@@ -91,7 +91,8 @@ def C():
     def ford_fulkerson(s, g, c, n):
         while 1:
             p, m = bfs(s, g, n)
-            if not m: break
+            if not m:
+                break
             for i in range(len(p) - 1):
                 c[p[i]][p[i + 1]] -= m
                 c[p[i + 1]][p[i]] += m

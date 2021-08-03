@@ -17,10 +17,12 @@ ans = 0
 for sx in range(SIZE):
     t_cnt = 0
 
-    x = sx; y = 0;
+    x = sx
+    y = 0
     while x >= 0:
         t_cnt += a[x][y]
-        x -= 1; y += 1
+        x -= 1
+        y += 1
 
     ans += nC2(t_cnt)
 
@@ -28,10 +30,12 @@ for sx in range(SIZE):
 for sy in range(1, SIZE):
     t_cnt = 0
 
-    x = SIZE - 1; y = sy;
+    x = SIZE - 1
+    y = sy
     while y < SIZE:
         t_cnt += a[x][y]
-        x -= 1; y += 1
+        x -= 1
+        y += 1
 
     ans += nC2(t_cnt)
 
@@ -39,10 +43,12 @@ for sy in range(1, SIZE):
 for sx in range(SIZE):
     t_cnt = 0
 
-    x = sx; y = 0;
+    x = sx
+    y = 0
     while x < SIZE:
         t_cnt += a[x][y]
-        x += 1; y += 1
+        x += 1
+        y += 1
 
     ans += nC2(t_cnt)
 
@@ -50,10 +56,12 @@ for sx in range(SIZE):
 for sy in range(1, SIZE):
     t_cnt = 0
 
-    x = 0; y = sy;
+    x = 0
+    y = sy
     while y < SIZE:
         t_cnt += a[x][y]
-        x += 1; y += 1
+        x += 1
+        y += 1
 
     ans += nC2(t_cnt)
 

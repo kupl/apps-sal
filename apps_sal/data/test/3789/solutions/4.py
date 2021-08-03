@@ -1,6 +1,6 @@
 #  --*-coding:utf-8-*--
 
-INF = float('inf');
+INF = float('inf')
 
 
 def fulkerson(graph, src, sink):
@@ -31,8 +31,8 @@ def fulkerson(graph, src, sink):
             matrix[node1][node2] -= v
             matrix[node2][node1] += v
 
-    return (sum(c for _, c in graph[src])
-            - sum(c for c in matrix[src]))
+    return (sum(c for _, c in graph[src]) -
+            sum(c for c in matrix[src]))
 
 
 def findPath(bothDirGraph, matrix, src, sink):
@@ -77,8 +77,8 @@ def f(N, A):
         for k in range(2, N // nodeId + 1):
             graph[nodeId].append((nodeId * k, INF))
 
-    return (sum([a for a in A if a > 0])
-            - fulkerson(graph, 0, N + 1))
+    return (sum([a for a in A if a > 0]) -
+            fulkerson(graph, 0, N + 1))
 
 
 def main():

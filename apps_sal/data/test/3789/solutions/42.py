@@ -4,7 +4,8 @@ As = list(map(int, input().split()))
 
 def func(Bs):
     for x in range(N):
-        if Bs[x] >= 0: continue
+        if Bs[x] >= 0:
+            continue
         if max(Bs[x::x + 1]) <= 0:
             Bs[x] = 0
 

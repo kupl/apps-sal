@@ -33,7 +33,8 @@ def tuples(m, N):
         the lcm of t is less than or equal to N, and
         t does not contain a proper multiple of some j in t.
     """
-    if m > N: return [()]
+    if m > N:
+        return [()]
     ts = tuples(m + 1, N)
     us = [(m,) + t for t in ts
           if reduce(lcm, t, m) <= N and all(j % m != 0 for j in t)]
@@ -44,11 +45,13 @@ def tuples(m, N):
 def solve(a):
     N = len(a)
     for t in tuples(1, N):
-        if value(a, t) < 0: remove(a, t)
+        if value(a, t) < 0:
+            remove(a, t)
     return sum(a)
 
 
 N = int(stdin.readline())
 a = [int(w) for w in stdin.readline().split()]
-if len(a) != N: raise
+if len(a) != N:
+    raise
 print((solve(a)))

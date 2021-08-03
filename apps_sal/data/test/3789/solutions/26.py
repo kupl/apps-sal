@@ -28,7 +28,8 @@ class Dinic:
         self.level = level
 
     def dfs(self, v, t, f):
-        if v == t: return f
+        if v == t:
+            return f
         es = self.g[v]
         level = self.level
         for i in range(self.it[v], len(self.g[v])):
@@ -47,7 +48,8 @@ class Dinic:
         flow = 0
         while True:
             self.bfs(s)
-            if self.level[t] < 0: break
+            if self.level[t] < 0:
+                break
             self.it = [0] * self.n
             while True:
                 f = self.dfs(s, t, 10**9 + 7)

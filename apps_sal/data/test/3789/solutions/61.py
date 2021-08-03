@@ -92,7 +92,8 @@ def C():
         f = 0
         while 1:
             p, m = bfs(s, g, n)
-            if not m: break
+            if not m:
+                break
             f += m
             for i in range(len(p) - 1):
                 c[p[i]][p[i + 1]] -= m

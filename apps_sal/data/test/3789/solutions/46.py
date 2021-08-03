@@ -37,17 +37,21 @@ def tuples(m, N):
     The lcm of the m-tuple is less than or equal to N.
     Each m-tuple does not contain a multiple of some j in the tuple.
     """
-    if m == 0: return [[()]]
+    if m == 0:
+        return [[()]]
     ts = tuples(m - 1, N)
-    if ts[-1] == []: return ts
+    if ts[-1] == []:
+        return ts
 
     ls = []
     for t in ts[-1]:
         lc = reduce(lcm, t) if len(t) > 0 else 1
         mi = min(t) if len(t) > 0 else N + 1
         for i in range(mi - 1, 0, -1):
-            if lcm(lc, i) > N: continue
-            if any(j % i == 0 for j in t): continue
+            if lcm(lc, i) > N:
+                continue
+            if any(j % i == 0 for j in t):
+                continue
             ls.append((i,) + t)  # smaller label first
     ts.append(ls)
     return ts
@@ -59,11 +63,13 @@ def solve(a):
     # break jewels with larger labels first.
     tl.sort(key=lambda t: [-x for x in t])
     for t in tl:
-        if value(a, t) < 0: remove(a, t)
+        if value(a, t) < 0:
+            remove(a, t)
     return sum(a)
 
 
 N = int(stdin.readline())
 a = [int(w) for w in stdin.readline().split()]
-if len(a) != N: raise
+if len(a) != N:
+    raise
 print((solve(a)))

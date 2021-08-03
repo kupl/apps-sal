@@ -26,7 +26,8 @@ while True:
         continue
     k = len(pot)
     for i in range(k):
-        if change: break
+        if change:
+            break
         for j in range(i):
             saldo = 0
             for v in range(1, n + 1):

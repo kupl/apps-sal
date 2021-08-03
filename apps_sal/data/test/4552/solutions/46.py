@@ -6,7 +6,8 @@ P = [list(map(int, input().split())) for _ in range(N)]
 
 MAX = -10**12
 for p in product(range(2), repeat=10):
-    if p == (0,) * 10: continue
+    if p == (0,) * 10:
+        continue
     SUM = 0
     for i in range(N):
         count = 0

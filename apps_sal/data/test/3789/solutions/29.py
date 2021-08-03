@@ -43,8 +43,10 @@ class EDOMONDS_KARP():
         t = self.t
         cap = self.cap
         link = self.link
-        prev = [-1] * N; prev[s] = -2
-        m = [0] * N; m[s] = float('inf')
+        prev = [-1] * N
+        prev[s] = -2
+        m = [0] * N
+        m[s] = float('inf')
         q = deque([s])
         while q:
             u = q.popleft()

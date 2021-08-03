@@ -53,9 +53,11 @@ while (max(BPD) > 0):
 
     # Find the best prime divisors:
 
-    for i in range(P + 1): frequency[i] = 0
+    for i in range(P + 1):
+        frequency[i] = 0
 
-    for i in range(M): frequency[BPD[i]] += Cnt[i]
+    for i in range(M):
+        frequency[BPD[i]] += Cnt[i]
 
     m = max(frequency)
     pr = frequency.index(m)
@@ -75,7 +77,8 @@ while (max(BPD) > 0):
     res += 2 * branched - n
 
     for i in range(M):
-        if (BPD[i] == 0): continue
+        if (BPD[i] == 0):
+            continue
 
         if (len(PF[i]) > 0):
             PF[i][-1] -= 1
