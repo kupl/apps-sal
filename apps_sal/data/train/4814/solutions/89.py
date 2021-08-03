@@ -3,4 +3,3 @@ def is_palindrome(s):
         if s[i].lower() != s[~i].lower():
             return False
     return True
-

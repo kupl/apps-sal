@@ -9,6 +9,3 @@ def solution(a, b):
         short = a
     answer = short + int + short
     return answer
-
-    
-

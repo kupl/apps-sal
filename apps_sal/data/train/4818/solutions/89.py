@@ -3,5 +3,3 @@ def solution(a, b):
         return a + b + a
     elif len(a) >= len(b):
         return b + a + b
-    
-

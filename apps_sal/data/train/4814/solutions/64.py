@@ -4,4 +4,3 @@ def is_palindrome(a):
         return True
     else:
         return False
-

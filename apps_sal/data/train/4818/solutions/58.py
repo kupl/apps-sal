@@ -5,4 +5,3 @@ def solution(a, b):
         return str(a) + str(b) + str(a)
     else:
         return 'Error'
-

@@ -1,6 +1,6 @@
 def solution(a, b):
     string = ''
-    if len(a)>len(b):
+    if len(a) > len(b):
         string = b + a + b
     else:
         string = a + b + a

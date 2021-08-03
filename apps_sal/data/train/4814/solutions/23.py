@@ -7,9 +7,9 @@ def is_palindrome(s):
         if s[start] == s[end]:
             start += 1
             end -= 1
-        else: palindrome = False
-    if palindrome is True: return True
-    else: return False
-        
-    
-
+        else:
+            palindrome = False
+    if palindrome is True:
+        return True
+    else:
+        return False

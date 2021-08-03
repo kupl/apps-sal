@@ -7,6 +7,5 @@ def solution(a, b):
     else:
         res.append(a)
         res.append(b)
-        res.append(a)        
+        res.append(a)
     return "".join(res)
-

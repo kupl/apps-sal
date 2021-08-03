@@ -3,5 +3,3 @@ def solution(a, b):
         return f"{b + a + b}"
     else:
         return f"{a + b + a}"
-    
-

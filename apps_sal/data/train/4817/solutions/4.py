@@ -1,1 +1,1 @@
-spread = lambda func, args: func(*args)
+def spread(func, args): return func(*args)

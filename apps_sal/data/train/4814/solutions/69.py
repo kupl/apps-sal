@@ -5,4 +5,3 @@ def is_palindrome(s):
         if s[i].lower() != s[length_array - i].lower():
             return False
     return True
-

@@ -5,4 +5,3 @@ def solution(a, b):
     else:
         new_str += b + a + b
     return new_str
-

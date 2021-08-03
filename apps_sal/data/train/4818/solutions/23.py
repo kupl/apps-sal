@@ -1,5 +1,5 @@
 def solution(a, b):
-    
+
     if len(a) > len(b):
         d = a
         c = b
@@ -7,4 +7,3 @@ def solution(a, b):
         d = b
         c = a
     return f"{c}{d}{c}"
-

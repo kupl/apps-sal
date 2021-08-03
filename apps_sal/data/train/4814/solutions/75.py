@@ -4,4 +4,3 @@ def is_palindrome(s):
     for eachletter in x:
         emptystring = eachletter + emptystring
     return emptystring == x
-

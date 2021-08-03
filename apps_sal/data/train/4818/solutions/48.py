@@ -3,8 +3,7 @@ def solution(a, b):
     lb = len(b)
     shrt = a
     lng = b
-    if la>lb:
+    if la > lb:
         shrt = b
         lng = a
-    return shrt+lng+shrt
-
+    return shrt + lng + shrt

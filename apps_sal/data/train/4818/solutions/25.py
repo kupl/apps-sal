@@ -4,4 +4,3 @@ def solution(a, b):
     else:
         list = b, a, b
     return "".join(list)
-

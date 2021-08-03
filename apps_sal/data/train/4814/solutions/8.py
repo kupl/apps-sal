@@ -1,1 +1,1 @@
-is_palindrome=lambda x:x.lower()==x[::-1].lower()
+def is_palindrome(x): return x.lower() == x[::-1].lower()

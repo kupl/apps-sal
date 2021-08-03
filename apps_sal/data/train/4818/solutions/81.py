@@ -8,4 +8,3 @@ def solution(a,
     else:
 
         return b + a + b
-

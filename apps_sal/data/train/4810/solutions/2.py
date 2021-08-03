@@ -1,5 +1,6 @@
 from operator import lt, gt
 
+
 def mst(edges, inf, compare, min_max):
     Q = {v for vs, _ in edges for v in vs}
     C = dict.fromkeys(Q, inf)
@@ -16,6 +17,7 @@ def mst(edges, inf, compare, min_max):
                 E[w], C[w] = edge, weight
         if E[v] is not None:
             yield E[v], C[v]
+
 
 def make_spanning_tree(edges, t):
     return list(mst(
