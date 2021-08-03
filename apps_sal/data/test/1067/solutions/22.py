@@ -18,5 +18,3 @@ if minus % 2 and zero == 0:
     total += 2
 
 print(total)
-
-

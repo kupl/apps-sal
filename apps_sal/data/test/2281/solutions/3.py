@@ -1,7 +1,7 @@
 import collections
 import math
 
-n  = int(input())
+n = int(input())
 arr = [0] * (2 * n)
 l, r = 0, 0
 for i in range(1, n):

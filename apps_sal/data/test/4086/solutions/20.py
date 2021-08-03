@@ -12,4 +12,3 @@ nar.reverse()
 
 print(len(nar))
 print(*nar)
-

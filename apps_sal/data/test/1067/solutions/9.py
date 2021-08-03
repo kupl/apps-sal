@@ -2,7 +2,7 @@ import math
 # helpful:
 # r,g,b=map(int,input().split())
 #list1 = input().split()
-#for i in range(len(list1)):
+# for i in range(len(list1)):
 #    list1[i] = int(list1[i])
 # print(list1)
 # arr = [[0 for x in range(columns)] for y in range(rows)]
@@ -27,7 +27,6 @@ if(wiggle):
     print(total)
 else:
     if(numNeg % 2 == 1):
-        print(total+2)
+        print(total + 2)
     else:
         print(total)
-

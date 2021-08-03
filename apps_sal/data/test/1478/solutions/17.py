@@ -21,4 +21,3 @@ for index, item in enumerate(info):
 
 print(len(out))
 print('\n'.join(' '.join(line) for line in out))
-

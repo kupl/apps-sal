@@ -9,8 +9,8 @@ ans = inf
 for i in range(n):
     l, r, cost = list(map(int, input().split()))
 
-    a.append((l, cost, r-l+1, True))
-    a.append((r, cost, r-l+1, False))
+    a.append((l, cost, r - l + 1, True))
+    a.append((r, cost, r - l + 1, False))
 
 a.sort(key=lambda element: 10 * element[0] + 1 - int(element[3]))
 
@@ -23,4 +23,3 @@ for item in a:
 
 
 print(ans if ans != inf else -1)
-

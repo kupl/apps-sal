@@ -13,4 +13,3 @@ b.reverse()
 print(len(b))
 for x in b:
     print(x, end=' ')
-

@@ -11,4 +11,3 @@ for x in [int(x) for x in input().split()][::-1]:
 
 print(len(answer))
 print(' '.join(str(i) for i in answer[::-1]))
-

@@ -17,7 +17,7 @@ for i in range(x + 1):
             b = min(b, data[x - i][k][2])
             k += 1
         answer = min(answer, b + data[i][j][2])
-        
+
 
 if answer == int(9 * 10 ** 12):
     print(-1)

@@ -36,4 +36,5 @@ def __starting_point():
     n, x = list(map(int, inp.split(" ", 1)))
     print(solve(inp, *(input() for i in range(n))))
 
+
 __starting_point()

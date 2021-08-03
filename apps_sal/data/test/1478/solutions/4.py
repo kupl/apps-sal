@@ -1,18 +1,18 @@
-a=input().split(",")
-n=len(a)
-comm=[[] for _ in range(1000001)]
-st=[1000001]
-for i in range(0,n,2):
-    while st[-1]==0: st.pop(-1)
+a = input().split(",")
+n = len(a)
+comm = [[] for _ in range(1000001)]
+st = [1000001]
+for i in range(0, n, 2):
+    while st[-1] == 0:
+        st.pop(-1)
     comm[len(st)].append(a[i])
-    st[-1]-=1
-    st.append(int(a[i+1]))
-maxd=0
-for i in range(1000000,0,-1):
+    st[-1] -= 1
+    st.append(int(a[i + 1]))
+maxd = 0
+for i in range(1000000, 0, -1):
     if len(comm[i]):
-        maxd=i
+        maxd = i
         break
 print(maxd)
-for i in range(1,maxd+1):
+for i in range(1, maxd + 1):
     print(" ".join(comm[i]))
-

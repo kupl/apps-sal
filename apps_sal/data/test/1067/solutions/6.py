@@ -10,9 +10,9 @@ for a in A:
         ans += 1
     elif a < 0:
         cnt *= -1
-        ans += abs(-1-a)
+        ans += abs(-1 - a)
     else:
-        ans += abs(1-a)
+        ans += abs(1 - a)
 
 if not zflag and cnt == -1:
     ans += 2

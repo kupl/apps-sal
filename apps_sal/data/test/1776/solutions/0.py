@@ -1,18 +1,23 @@
 from math import inf
 
+
 class Node:
-    def __init__(self, parent = None, leftExp = None, rightExp = None, signQ = 0):
+    def __init__(self, parent=None, leftExp=None, rightExp=None, signQ=0):
         self.parent, self.leftExp, self.rightExp, self.signQ = parent, leftExp, rightExp, signQ
+
     def __str__(self):
         return "Node"
 
+
 memo = {}
+
 
 def Memoize(node, p, maxValue, minValue):
     if not node in memo:
-        memo.update({node : {p : [maxValue, minValue]} })
+        memo.update({node: {p: [maxValue, minValue]}})
     else:
-        memo[node].update({p : [maxValue, minValue]})
+        memo[node].update({p: [maxValue, minValue]})
+
 
 def ExpMaxValue(root: Node, p):
 
@@ -25,7 +30,7 @@ def ExpMaxValue(root: Node, p):
 
     if root.signQ == 0:
         return [root.value, root.value]
-    
+
     if root in memo:
         if p in memo[root]:
             return memo[root][p]
@@ -38,7 +43,7 @@ def ExpMaxValue(root: Node, p):
         value = ExpMaxValue(root.leftExp, 0)[0] - ExpMaxValue(root.rightExp, 0)[0]
         Memoize(root, p, value, value)
         return [value, value]
-        
+
     maxValue = -inf
     minValue = inf
     if m >= p:
@@ -47,10 +52,10 @@ def ExpMaxValue(root: Node, p):
             for pQLeft in range(pQLeftMin + 1):
                 if root.leftExp.signQ - pQLeft + (1 - pQMid) > m:
                     continue
-                
+
                 resLeft = ExpMaxValue(root.leftExp, pQLeft)
                 resRight = ExpMaxValue(root.rightExp, p - pQMid - pQLeft)
-                
+
                 if pQMid == 1:
                     maxValue = max(resLeft[0] + resRight[0], maxValue)
                     minValue = min(resLeft[1] + resRight[1], minValue)
@@ -64,10 +69,10 @@ def ExpMaxValue(root: Node, p):
                 pQLeft = root.leftExp.signQ - mQLeft
                 if pQLeft + (1 - mQMid) > p:
                     continue
-                
+
                 resLeft = ExpMaxValue(root.leftExp, pQLeft)
                 resRight = ExpMaxValue(root.rightExp, p - (1 - mQMid) - pQLeft)
-                
+
                 if mQMid == 0:
                     maxValue = max(resLeft[0] + resRight[0], maxValue)
                     minValue = min(resLeft[1] + resRight[1], minValue)
@@ -78,8 +83,7 @@ def ExpMaxValue(root: Node, p):
     Memoize(root, p, int(maxValue), int(minValue))
 
     return [int(maxValue), int(minValue)]
-                
-                
+
 
 def PrintNodes(root: Node):
     if root.signQ != 0:
@@ -90,19 +94,18 @@ def PrintNodes(root: Node):
         PrintNodes(root.leftExp)
         PrintNodes(root.rightExp)
 
-        
 
 def main():
     exp = str(input())
     if len(exp) == 1:
         print(exp)
         return
-    
+
     #root = Node(None, None, None)
     #root.parent = root
     cNode = Node()
     isRight = False
-    
+
     for i in range(1, len(exp) - 1):
         if exp[i] == '(':
             if not isRight:
@@ -128,16 +131,12 @@ def main():
                 cNode.rightExp = Node(cNode)
                 cNode.rightExp.value = int(exp[i])
 
-    
-    #PrintNodes(cNode)
+    # PrintNodes(cNode)
 
     ss = str(input()).split()
     p, m = int(ss[0]), int(ss[1])
 
     print(ExpMaxValue(cNode, p)[0])
-    
 
-
-    
 
 main()

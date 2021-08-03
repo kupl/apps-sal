@@ -10,4 +10,3 @@ for x in range(n - 1, -1, -1):
 a.reverse()
 print(len(a))
 print(*a)
-
