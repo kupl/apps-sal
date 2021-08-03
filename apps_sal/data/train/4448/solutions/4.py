@@ -5,4 +5,3 @@ def get_derivative(string):
         return string[:-1]
     coef, exp = list(map(int, string.split('x^')))
     return f"{coef * exp}x^{exp - 1}" if exp != 2 else f"{coef * exp}x"
-

@@ -7,7 +7,7 @@ def is_haiku(text):
             return 0
         syls = sum([1 for ind, l in enumerate(word[:-1]) if (l in vow) and word[ind + 1] not in vow])
         if word[-1] in vow:
-            if word[-1] != 'e' or (len(word)>1 and word[-2] in vow) or syls == 0:
+            if word[-1] != 'e' or (len(word) > 1 and word[-2] in vow) or syls == 0:
                 syls += 1
         return syls
 

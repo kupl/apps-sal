@@ -1,1 +1,1 @@
-words_to_sentence=' '.join
+words_to_sentence = ' '.join
