@@ -1,7 +1,7 @@
-T=int(input())
+T = int(input())
 for t in range(T):
- n=int(input())
- if n%2==0:
-  print("YES")
- else :
-  print("NO")
+    n = int(input())
+    if n % 2 == 0:
+        print("YES")
+    else:
+        print("NO")

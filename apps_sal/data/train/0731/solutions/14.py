@@ -7,8 +7,8 @@ for i in range(c):
 
 for i in range(f):
     x, y, p = list(map(int, input().split()))
-    d[x-1][y-1] = p
-    d[y-1][x-1] = p
+    d[x - 1][y - 1] = p
+    d[y - 1][x - 1] = p
 
 for i in range(c):
     for j in range(c):
@@ -25,4 +25,3 @@ for i in range(c):
     for j in range(c):
         p = max(d[i][j], p)
 print(p)
-

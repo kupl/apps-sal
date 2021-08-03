@@ -10,6 +10,7 @@ def floyd_warshall(graph, N):
                 dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
     return dist
 
+
 def solve(C, F, cost):
     dist = floyd_warshall(cost, C)
     maximum = 0
@@ -18,13 +19,15 @@ def solve(C, F, cost):
             maximum = max(maximum, dist[i][j])
     return maximum
 
+
 def __starting_point():
     C, F = list(map(int, input().strip().split()))
-    cost = {i:{} for i in range(1, C + 1)}
+    cost = {i: {} for i in range(1, C + 1)}
     for flight in range(1, F + 1):
         x, y, p = list(map(int, input().strip().split()))
         cost[x][y] = p
         cost[y][x] = p
     print(solve(C, F, cost))
+
 
 __starting_point()

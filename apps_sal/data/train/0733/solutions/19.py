@@ -1,6 +1,6 @@
 # cook your dish here
 for _ in range(int(input())):
- n=int(input())
- str1=input()
- str1=sorted(str1)
- print(min(str1))
+    n = int(input())
+    str1 = input()
+    str1 = sorted(str1)
+    print(min(str1))

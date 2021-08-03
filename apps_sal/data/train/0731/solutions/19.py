@@ -7,8 +7,8 @@ for i in range(c):
 
 for i in range(f):
     x, y, p = map(int, input().split())
-    g[x-1][y-1] = p
-    g[y-1][x-1] = p
+    g[x - 1][y - 1] = p
+    g[y - 1][x - 1] = p
 
 for i in range(c):
     for j in range(c):
