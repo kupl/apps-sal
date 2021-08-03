@@ -23,5 +23,3 @@ if p % k == 0:
         print('No')
 else:
     print('No')
-            
-

@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n, m, w = R()
 ws = [0] + list(R())
 bs = [0] + list(R())

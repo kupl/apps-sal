@@ -6,6 +6,7 @@ def check(num1, num2, p, k):
     v %= p
     return v == k % p
 
+
 def __starting_point():
 
     n, p, k = (int(x) for x in input().split())
@@ -24,5 +25,6 @@ def __starting_point():
                     ans += 1
         met_precount___vals[precount].append(number)
     print(ans)
+
 
 __starting_point()

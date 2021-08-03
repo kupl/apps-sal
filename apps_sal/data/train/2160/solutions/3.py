@@ -1,13 +1,13 @@
 import sys
-n,k = list(map(int,input().split()))
-l = list(map(int,input().split()))
-if sum(l)%k:
+n, k = list(map(int, input().split()))
+l = list(map(int, input().split()))
+if sum(l) % k:
     print("No")
 else:
     curr = 0
     c = 0
     ans = []
-    need = sum(l)//k
+    need = sum(l) // k
     for i in range(n):
         curr += l[i]
         c += 1
@@ -20,4 +20,3 @@ else:
             return
     print("Yes")
     print(*ans)
-

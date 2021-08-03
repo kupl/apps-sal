@@ -1,8 +1,9 @@
 def read():
     return list(map(int, input().split()))
 
+
 def solve(n, k, A):
-    if sum(A) % k != 0 :
+    if sum(A) % k != 0:
         print('No')
         return
     target = sum(A) // k
@@ -19,8 +20,7 @@ def solve(n, k, A):
     print('Yes')
     print(' '.join(map(str, ans)))
 
+
 n, k = read()
 A = read()
 solve(n, k, A)
-
-
