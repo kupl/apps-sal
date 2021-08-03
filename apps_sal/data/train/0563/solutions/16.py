@@ -10,4 +10,3 @@ for _ in range(int(stdin.readline())):
     for i in range(int(stdin.readline())):
         a, b = list(map(int, stdin.readline().split()))
         print(sum(arr[a - 1:b]))
-
