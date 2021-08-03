@@ -18,7 +18,8 @@ for t in range(int(input())):
             i[1] = b
             break
     else:
-        if do: changes.append([a, b])
+        if do:
+            changes.append([a, b])
 print(len(changes))
 for change in changes:
     print(change[0], change[1])

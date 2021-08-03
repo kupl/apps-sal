@@ -1,6 +1,8 @@
 M = 0x3b9aca07
-rd = lambda: list(map(int, input().split()))
-inv = lambda x: (M - M // x) * inv(M % x) % M if x - 1 else 1
+def rd(): return list(map(int, input().split()))
+def inv(x): return (M - M // x) * inv(M % x) % M if x - 1 else 1
+
+
 n, k = rd()
 w = sum(rd()) % M
 modinv = [0, 1]
