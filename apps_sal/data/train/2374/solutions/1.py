@@ -15,4 +15,3 @@ for _ in range(int(input())):
         if not (u or d):
             break
     print('YES' if d else 'NO')
-

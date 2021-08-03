@@ -15,8 +15,8 @@ for _ in range(int(input())):
     if d == 0 and r == 0:
         print(0)
     elif d != 0 and r != 0:
-        print(2*(d + r))
-        print(d*'U'+r*'R'+d*'D'+r*'L')
+        print(2 * (d + r))
+        print(d * 'U' + r * 'R' + d * 'D' + r * 'L')
     else:
         print(2)
         if d == 0:

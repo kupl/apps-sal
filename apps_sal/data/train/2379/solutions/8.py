@@ -1,4 +1,6 @@
 mod = 10**9 + 7
+
+
 def solve():
     n = int(input())
     s = input()
@@ -26,7 +28,9 @@ def solve():
                 s0.append(s1[len(s1) - 1])
                 s1.pop()
     print(sm)
-    print(*vec, sep = ' ')
+    print(*vec, sep=' ')
+
+
 t = 1
 t = int(input())
 for _ in range(t):

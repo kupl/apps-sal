@@ -1,3 +1,6 @@
+import sys
+
+
 class BIT():
     def __init__(self, n):
         self.n = n
@@ -20,7 +23,7 @@ class BIT():
         self._add(r, val)
         self._add(l, -val)
 
-import sys
+
 input = sys.stdin.readline
 
 
@@ -30,7 +33,7 @@ for _ in range(t):
     a = list(map(int, input().split()))
     b = a[n // 2:n][::-1]
     a = a[0:n // 2]
-    
+
     bit = BIT(2 * k + 1)
     bit.add(0, 2 * k + 1, (2 * n // 2))
     for i in range(n // 2):
@@ -38,4 +41,3 @@ for _ in range(t):
         bit.add(ran[0], ran[1], -1)
         bit.add(a[i] + b[i], a[i] + b[i] + 1, -1)
     print(min([bit.get_val(i) for i in range(2 * k + 1)]))
-

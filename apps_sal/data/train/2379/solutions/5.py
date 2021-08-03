@@ -3,12 +3,12 @@ t = int(input())
 for _ in range(t):
     n = int(input())
     s = list(map(int, input()))
-    
+
     zeros = []
     ones = []
     count = 0
     ans = []
-    
+
     for d in s:
         if d == 0:
             if zeros:
@@ -26,7 +26,6 @@ for _ in range(t):
                 count += 1
                 ans.append(count)
                 zeros.append(count)
-                
+
     print(count)
     print(*ans)
-

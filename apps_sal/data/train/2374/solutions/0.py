@@ -18,4 +18,3 @@ for _ in range(int(input())):
     elif f:
         ans.append('NO')
 print('\n'.join(ans))
-

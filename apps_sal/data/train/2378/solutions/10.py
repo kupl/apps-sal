@@ -14,7 +14,6 @@ for _ in range(int(input())):
         print('DU')
         continue
 
-    ans = 'L'*min(l, r) + 'D'*min(u, d) + 'R'*min(l, r) + 'U'*min(u, d)
+    ans = 'L' * min(l, r) + 'D' * min(u, d) + 'R' * min(l, r) + 'U' * min(u, d)
     print(len(ans))
     print(ans)
-

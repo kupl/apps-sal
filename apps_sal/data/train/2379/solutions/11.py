@@ -9,7 +9,7 @@ for _ in range(int(input())):
     curr = 1
     for i in a:
         if i == '1':
-            if c0>0:
+            if c0 > 0:
                 c1 += 1
                 c0 -= 1
                 ans.append(n0[-1])
@@ -21,7 +21,7 @@ for _ in range(int(input())):
                 n1.append(curr)
                 curr += 1
         else:
-            if c1>0:
+            if c1 > 0:
                 c0 += 1
                 c1 -= 1
                 ans.append(n1[-1])
@@ -32,5 +32,5 @@ for _ in range(int(input())):
                 ans.append(curr)
                 n0.append(curr)
                 curr += 1
-    print(c1+c0)
+    print(c1 + c0)
     print(*ans)

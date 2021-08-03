@@ -13,4 +13,3 @@ for _ in range(int(input())):
     if h != 1:
         answer = "NO"
     print(answer)
-

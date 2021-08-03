@@ -1,6 +1,8 @@
 import math
+
+
 def solve():
-    n= int(input())
+    n = int(input())
     k = int(math.sqrt(n))
     if k * k == n:
         print(k * 2 - 2)
@@ -8,5 +10,7 @@ def solve():
         print(k * 2 - 1)
     else:
         print(k * 2)
+
+
 for i in range(int(input())):
     solve()

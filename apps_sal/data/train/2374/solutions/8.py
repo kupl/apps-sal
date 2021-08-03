@@ -13,7 +13,7 @@ for i in range(a):
             if l[1 - k][i] == "3" or l[1 - k][i] == "4" or l[1 - k][i] == "5" or l[1 - k][i] == "6":
                 k = 1 - k
             else:
-                ans = 0 
+                ans = 0
     if k == 1 and ans == 1:
         print('YES')
     else:

@@ -10,7 +10,7 @@ for q in range(Q):
     was_x = -1
     #was_y = 0
     while now_x < n:
-        #print(now_x)
+        # print(now_x)
         if now_y == 0:
             now = arr1[now_x]
         else:
@@ -40,5 +40,3 @@ for q in range(Q):
         print('NO')
     else:
         print('YES')
-
-
