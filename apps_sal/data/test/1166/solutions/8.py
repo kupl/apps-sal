@@ -1,7 +1,8 @@
 n = int(input())
 arr = [int(x) for x in input().split()]
 pos = dict()
-if(n == 1): print("B")
+if(n == 1):
+    print("B")
 else:
     for i in range(n):
         pos[arr[i]] = i
@@ -27,5 +28,6 @@ else:
                     ans[pos[i]] = "A"
                     break
                 j += 1
-        if(flag == 0): ans[pos[i]] = "B"
+        if(flag == 0):
+            ans[pos[i]] = "B"
     print("".join(ans))

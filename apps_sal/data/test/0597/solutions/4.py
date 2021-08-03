@@ -10,13 +10,18 @@ for _ in range(n - 1):
     adj[b].append(a)
 
 aaa = set(map(int, input().split()))
-if len(aaa) == 1: print((min(aaa))); print((0)); return
+if len(aaa) == 1:
+    print((min(aaa)))
+    print((0))
+    return
 rm = []
 for i in range(n + 1):
     ng[i] = len(adj[i])
-    if i not in aaa and ng[i] == 1: rm.append(i)
+    if i not in aaa and ng[i] == 1:
+        rm.append(i)
 
-for a in aaa: ng[a] = 0
+for a in aaa:
+    ng[a] = 0
 
 
 def remove_node(index):
@@ -24,12 +29,14 @@ def remove_node(index):
         nx = adj[index].pop()
         adj[nx].remove(index)
         ng[nx] -= 1
-        if ng[nx] == 1: rm.append(nx)
+        if ng[nx] == 1:
+            rm.append(nx)
 
     ng[index] = 0
 
 
-while rm: remove_node(rm.pop())
+while rm:
+    remove_node(rm.pop())
 
 state = [0 for _ in range(n + 1)]
 que = [(min(aaa), None)]
@@ -42,10 +49,12 @@ for _ in range(2):
         for nx in adj[root]:
             if proot == nx:
                 continue
-            if _: state[nx] = root
+            if _:
+                state[nx] = root
             deep[nx] = deep[root] + 1
             que.append((nx, root))
-    if _: break
+    if _:
+        break
 
     start = max(1, deep.index(max(deep)))
     que = [(start, None)]

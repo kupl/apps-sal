@@ -4,7 +4,8 @@
 
 # http://codeforces.com/problemset/problem/290/C
 
-foo = baz = 0; quz = 1
+foo = baz = 0
+quz = 1
 
 for bar in range(1, int(input()) + 1):
 

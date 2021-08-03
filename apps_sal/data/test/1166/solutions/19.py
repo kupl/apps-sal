@@ -2,7 +2,8 @@ n = int(input())
 l = [*map(int, input().split())]
 
 p = [0] * n
-for i in range(n): p[l[i] - 1] = i
+for i in range(n):
+    p[l[i] - 1] = i
 
 res = ['?'] * n
 

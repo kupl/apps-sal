@@ -6,7 +6,8 @@ memo = [-1 for i in range(n + 1)]
 
 
 def can_win(idx):
-    if memo[idx] != -1: return memo[idx]
+    if memo[idx] != -1:
+        return memo[idx]
     res = False
 
     delta = arr[idx]

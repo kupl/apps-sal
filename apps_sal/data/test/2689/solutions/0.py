@@ -12,7 +12,8 @@ while(i < l):
     elif(s[i].isalpha()):
         if(flag == False):
             orig += s[i]
-        else: st.append(s[i])
+        else:
+            st.append(s[i])
     elif(s[i] == '+'):
         flag = True
         st.clear()
