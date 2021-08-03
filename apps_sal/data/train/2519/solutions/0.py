@@ -4,4 +4,3 @@ class Solution:
             if w.startswith(searchWord):
                 return i
         return -1
-

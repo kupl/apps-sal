@@ -10,6 +10,7 @@ def bs(a, t, d):
             l = mid + 1
     return 1
 
+
 class Solution:
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
         total = 0

@@ -1,6 +1,6 @@
 class Solution:
     def findTheDistanceValue(self, arr1, arr2, d):
-        d = abs(d);
+        d = abs(d)
         res = 0
         for i in range(len(arr1)):
             count = 0
@@ -12,8 +12,8 @@ class Solution:
                 if count == len(arr2):
                     res += 1
         return res
-    
-sol = Solution();
-x = sol.findTheDistanceValue([4,5,8],[10,9,1,8],2);
-print(x);
 
+
+sol = Solution()
+x = sol.findTheDistanceValue([4, 5, 8], [10, 9, 1, 8], 2)
+print(x)

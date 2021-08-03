@@ -7,6 +7,6 @@ class Solution:
                 if sentence[i][0:len(searchWord)] == searchWord:
                     a.append(i)
         if a:
-            return min(a)+1
+            return min(a) + 1
         else:
             return -1

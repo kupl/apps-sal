@@ -9,7 +9,6 @@ class Solution:
                 if abs(arr1[i] - arr2[j]) <= d:
                     bad = True
             if not bad:
-                count+=1
-            
-        return count
+                count += 1
 
+        return count

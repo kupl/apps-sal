@@ -6,11 +6,9 @@ class Solution:
                 nums[i] = 1
             else:
                 nums[i] += 1
-        
+
         print(nums)
-        
+
         for i in nums:
             if nums[i] == len(A) / 2:
                 return i
-            
-

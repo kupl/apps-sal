@@ -9,4 +9,3 @@ class Solution:
                     continue
             r += ir
         return r
-

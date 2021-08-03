@@ -5,4 +5,3 @@ class Solution:
             if val in occurences:
                 return val
             occurences.add(val)
-

@@ -1,5 +1,6 @@
 import numpy
 
+
 class Solution:
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
         arr2.sort()
@@ -13,5 +14,3 @@ class Solution:
                 if k >= 1 and x - arr2[k - 1] <= d:
                     s += 1
         return len(arr1) - s
-                
-

@@ -4,5 +4,3 @@ class Solution:
         for key, value in list(count_dict.items()):
             if value > 1:
                 return key
-            
-

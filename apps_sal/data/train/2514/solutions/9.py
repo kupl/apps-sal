@@ -8,5 +8,5 @@ class Solution:
                 if abs(arr1[i] - arr2[j]) <= d:
                     flag = 1
             if not flag:
-                ans+=1
+                ans += 1
         return ans

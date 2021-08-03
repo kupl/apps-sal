@@ -7,7 +7,5 @@ class Solution:
                 if abs(num1 - num2) <= d:
                     flag = 0
             if flag:
-                ans+=1
-        return ans                    
-        
-
+                ans += 1
+        return ans

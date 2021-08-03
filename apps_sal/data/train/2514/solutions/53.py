@@ -8,7 +8,7 @@ class Solution:
                     res -= 1
                     break
         return res
-        
+
 #         res = 0
 #         cnt = 0
 #         l = len(arr2)
@@ -20,5 +20,3 @@ class Solution:
 #                 res += 1
 #                 cnt = 0
 #         return res
-        
-

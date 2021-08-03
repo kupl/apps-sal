@@ -6,7 +6,7 @@ class Solution:
         for a in arr1:
             cnt = 0
             for b in arr2:
-                if abs(a-b) > d:
+                if abs(a - b) > d:
                     cnt = cnt + 1
             if cnt == lnb:
                 fcnt = fcnt + 1

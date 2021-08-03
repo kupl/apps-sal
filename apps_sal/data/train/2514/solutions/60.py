@@ -6,11 +6,11 @@ class Solution:
         for i in arr1:
             temp_count = 0
             for j in arr2:
-                if(abs(i-j) <= d):
+                if(abs(i - j) <= d):
                     break
                 else:
                     temp_count += 1
             if(temp_count == l):
                 count += 1
             temp_count = 0
-        return count 
+        return count

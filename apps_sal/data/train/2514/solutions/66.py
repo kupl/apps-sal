@@ -5,12 +5,11 @@ class Solution:
         for i in arr1:
             found = True
             for j in arr2:
-                
+
                 if j > i + d:
                     break
                 elif abs(i - j) <= d:
                     found = False
                     break
-            res += found        
-        return res    
-
+            res += found
+        return res

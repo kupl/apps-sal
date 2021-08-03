@@ -4,7 +4,7 @@ class Solution:
         for num in arr1:
             greater = True
             for sub in arr2:
-                if abs(num-sub) <= d:
+                if abs(num - sub) <= d:
                     greater = False
             if greater:
                 result += 1
