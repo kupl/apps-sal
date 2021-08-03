@@ -6,6 +6,7 @@ def factorize(x):
         cnt += 1
     return tmp, cnt
 
+
 n = int(input())
 for i in range(n):
     k = int(input())
@@ -21,5 +22,3 @@ for i in range(n):
     for c in list(x.keys()):
         cnt += x[c]
     print(cnt)
-        
-

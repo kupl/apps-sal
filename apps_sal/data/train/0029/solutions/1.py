@@ -1,18 +1,18 @@
 import sys
 
-    
+
 def main():
     #n = iinput()
-    #k = iinput() 
-    #m = iinput() 
-    n = int(sys.stdin.readline().strip()) 
+    #k = iinput()
+    #m = iinput()
+    n = int(sys.stdin.readline().strip())
     #n, k = rinput()
     #n, m = rinput()
     #m, k = rinput()
     #n, k, m = rinput()
     #n, m, k = rinput()
     #k, n, m = rinput()
-    #k, m, n = rinput() 
+    #k, m, n = rinput()
     #m, k, n = rinput()
     #m, n, k = rinput()
     q = list(map(int, sys.stdin.readline().split()))
@@ -27,7 +27,7 @@ def main():
         t = clovar[o]
         ma = max(t[0] + 1, n - t[-1])
         dlinat = len(t) - 1
-        for i in range(dlinat): 
+        for i in range(dlinat):
             ma = max(t[i + 1] - t[i], ma)
         p.append([ma, o])
     p.sort()
@@ -45,35 +45,7 @@ def main():
         dlinax = ans[i + 1][0] - ans[i][0]
         print(*[x for o in range(dlinax)], end=" ")
     print()
-           
-        
-            
-    
-    
-    
-    
-    
-    
-            
-                
-        
-    
-            
-        
 
-            
-        
-    
-                
-    
-    
-    
-            
-    
-        
-    
 
-for i in range(int(sys.stdin.readline().strip()) ):
+for i in range(int(sys.stdin.readline().strip())):
     main()
-    
-

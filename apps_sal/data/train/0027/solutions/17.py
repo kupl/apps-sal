@@ -20,7 +20,8 @@ def main():
         print(sum(arr.values()))
 
 
-
 def __starting_point():
     main()
+
+
 __starting_point()

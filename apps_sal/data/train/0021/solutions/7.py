@@ -14,4 +14,3 @@ for t in range(T):
             break
     else:
         print(-1)
-

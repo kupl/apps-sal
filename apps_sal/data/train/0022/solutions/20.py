@@ -6,4 +6,3 @@ for _ in range(t):
         if '0' in str(a):
             break
     print(a)
-

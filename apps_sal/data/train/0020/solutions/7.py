@@ -30,4 +30,5 @@ def __starting_point():
         ans = solve(N, M, A)
         print(ans)
 
+
 __starting_point()

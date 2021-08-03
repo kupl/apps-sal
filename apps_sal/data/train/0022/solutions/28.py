@@ -7,4 +7,3 @@ for _ in range(int(input())):
             k -= 1
             a += int(max(str(a))) * int(min(str(a)))
         print(a)
-

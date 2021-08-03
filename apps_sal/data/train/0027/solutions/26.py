@@ -19,4 +19,3 @@ for i in range(t):
     for q in d:
         p += d[q]
     print(p)
-

@@ -72,5 +72,5 @@ def main():
         print(*ans)
 
 
-tt = threading.Thread(target = main)
+tt = threading.Thread(target=main)
 tt.start()

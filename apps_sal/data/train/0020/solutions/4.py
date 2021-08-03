@@ -28,4 +28,3 @@ def solve():
 q = int(input())
 for __ in range(q):
     solve()
-

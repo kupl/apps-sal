@@ -12,4 +12,3 @@ for _ in range(t):
     buf.append(a)
 
 print('\n'.join(buf))
-

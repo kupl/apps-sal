@@ -11,4 +11,5 @@ def main():
             a += mn * mx
         print(a)
 
+
 main()

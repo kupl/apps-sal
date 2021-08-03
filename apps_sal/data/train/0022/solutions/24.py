@@ -1,4 +1,4 @@
-from sys import stdin, stdout  
+from sys import stdin, stdout
 input = stdin.readline
 #print = stdout.write
 
@@ -12,4 +12,3 @@ for _ in range(int(input())):
             break
         have += bf
     print(have)
-

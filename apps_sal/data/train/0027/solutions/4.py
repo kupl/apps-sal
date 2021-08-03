@@ -21,4 +21,3 @@ for _ in range(t):
     for el in list(d.values()):
         s += el
     print(s)
-

@@ -21,4 +21,3 @@ for _ in range(T):
                 ans[j] = i + 1
             r = val[i]
     print(' '.join([str(x) for x in ans[1:]]))
-

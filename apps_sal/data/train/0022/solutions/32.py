@@ -10,4 +10,3 @@ for _ in range(int(input())):
         a += delta
 
     print(a)
-

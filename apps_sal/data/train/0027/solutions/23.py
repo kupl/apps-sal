@@ -27,6 +27,3 @@ for i in range(int(input())):
                 elif temp[i1] in s1:
                     temp[i1] *= 2
         print(ans)
-
-
-

@@ -25,4 +25,3 @@ for i in range(t):
         else:
             d[j // (2 ** p)] = p
     print(sum(d.values()))
-

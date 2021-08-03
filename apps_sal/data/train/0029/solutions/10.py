@@ -21,7 +21,7 @@ for i in range(t):
             mini = min(mini, a[now][1])
             now += 1
         if mini == 1000000000000000:
-            print(-1,end=' ')
+            print(-1, end=' ')
         else:
-            print(mini,end=' ')
+            print(mini, end=' ')
     print()

@@ -11,4 +11,3 @@ for i in range(a):
             l.add(lol)
             lol /= 2
     print(len(l))
-

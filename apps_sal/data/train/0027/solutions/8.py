@@ -21,5 +21,4 @@ for q in range(int(input())):
     for a, b in Q:
         ans += b
     print(ans)
-    #print(Q)
-
+    # print(Q)

@@ -17,14 +17,14 @@ for t in range(T):
         dmax = -1
         arr = [-1] + sorted(pos[el]) + [N]
         for i in range(1, len(arr)):
-            dmax = max(dmax, arr[i] - arr[i-1])
+            dmax = max(dmax, arr[i] - arr[i - 1])
         DMAX[el] = dmax
 
     ci = 0
     answer = []
 
-    for i in range(N-1, -1, -1):
-        while ci < len(els) and DMAX[els[ci]] > i+1:
+    for i in range(N - 1, -1, -1):
+        while ci < len(els) and DMAX[els[ci]] > i + 1:
             ci += 1
         if ci >= len(els):
             answer.append(-1)
@@ -32,4 +32,3 @@ for t in range(T):
             answer.append(els[ci])
 
     print(' '.join(map(str, answer[::-1])))
-

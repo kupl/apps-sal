@@ -1,11 +1,11 @@
 q = int(input())
 for _ in range(q):
-    n,m = list(map(int, input().split()))
+    n, m = list(map(int, input().split()))
     customers = [[int(x) for x in input().split()] for _ in range(n)]
 
     now_l, now_h = m, m
     now = 0
-    for t,l,h in customers:
+    for t, l, h in customers:
         dt = t - now
 
         # in area?
@@ -21,4 +21,3 @@ for _ in range(q):
         ok = True
 
     print("YES" if ok else "NO")
-

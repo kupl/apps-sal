@@ -6,6 +6,6 @@ for k in range(t):
     for x in range(1, 1025):
         if set(x ^ q for q in a) == a:
             print(x)
-            break 
+            break
     else:
         print(-1)

@@ -1,15 +1,16 @@
 from collections import Counter
+
+
 def primfacs(n):
     if n % 2 == 0:
-        primfac = [0,0]
+        primfac = [0, 0]
     else:
-        primfac = [0,0]
+        primfac = [0, 0]
     while n % 2 == 0:
         n = n / 2
         primfac[0] += 1
     primfac[1] = n
     return primfac
-
 
 
 t = int(input())

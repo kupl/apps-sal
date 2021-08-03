@@ -14,4 +14,3 @@ for t in range(T):
         a += min(a_ar) * max(a_ar)
 
     print(a)
-

@@ -7,4 +7,4 @@ for case in range(t):
         ans = 'YES'
     elif (n == 1 or m == 1):
         ans = 'YES'
-    print (ans)
+    print(ans)

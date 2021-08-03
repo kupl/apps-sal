@@ -26,4 +26,3 @@ for _ in range(T):
         time = x
 
     print('YES' if flag else 'NO')
-

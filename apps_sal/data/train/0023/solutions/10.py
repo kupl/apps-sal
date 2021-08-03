@@ -20,7 +20,6 @@ for ti in range(t):
     print(res)
 
 
-#sys.stdout.write('YES\n')
-#sys.stdout.write(f'{res}\n')
+# sys.stdout.write('YES\n')
+# sys.stdout.write(f'{res}\n')
 #sys.stdout.write(f'{y1} {x1} {y2} {x2}\n')
-

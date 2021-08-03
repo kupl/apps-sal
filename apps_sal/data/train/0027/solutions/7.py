@@ -6,6 +6,7 @@ def f(x):
         z += 1
     return [tmp, z]
 
+
 for i in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))

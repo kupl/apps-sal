@@ -1,12 +1,14 @@
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -25,10 +27,10 @@ def get_list():
 
 
 def solve():
-    n,k = get_tuple()
+    n, k = get_tuple()
     n = str(n)
-    while '0' not in n and k>1:
-        n = int(n) + int(max(n))*int(min(n))
+    while '0' not in n and k > 1:
+        n = int(n) + int(max(n)) * int(min(n))
         n = str(n)
         k -= 1
     return n
@@ -38,6 +40,7 @@ def main():
     ans = solve()
     print(ans)
 
+
 TestCases = True
 
 if TestCases:
@@ -45,4 +48,3 @@ if TestCases:
         main()
 else:
     main()
-

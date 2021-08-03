@@ -62,4 +62,3 @@ for _ in range(t):
 
     print(' '.join(map(str, [x + 1 for x in answer])))
     print(' '.join(map(str, [x + 1 for x in order])))
-

@@ -8,7 +8,8 @@ for fk in range(t):
     if n == 1 or m == 1:
         print('YES')
 
-    elif n==2 and m == 2:
+    elif n == 2 and m == 2:
         print('YES')
 
-    else : print('NO')
+    else:
+        print('NO')

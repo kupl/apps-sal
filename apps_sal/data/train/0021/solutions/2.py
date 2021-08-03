@@ -15,4 +15,3 @@ for _ in range(t):
             break
     if not ok:
         print(-1)
-

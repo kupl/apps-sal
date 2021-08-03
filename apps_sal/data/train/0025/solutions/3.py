@@ -14,7 +14,7 @@ def __starting_point():
     for t in range(T):
         n = int(input())
         pieces = []
-        for c in range(n-2):
+        for c in range(n - 2):
             inp = input().rstrip().split(" ")
             pieces.append([int(inp[0]), int(inp[1]), int(inp[2])])
 
@@ -42,7 +42,7 @@ def __starting_point():
             v = next_vertices.pop()
             if len(G[v]) > 0:
                 piece_index = list(G[v].keys()).pop()
-                q.append(str(piece_index+1))
+                q.append(str(piece_index + 1))
                 piece = pieces[piece_index]
                 G.pop(v)
                 for vertex_index in range(3):
@@ -88,5 +88,6 @@ def __starting_point():
 
         print(" ".join(p))
         print(" ".join(q))
+
 
 __starting_point()

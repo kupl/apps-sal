@@ -6,15 +6,18 @@ from collections import Counter, defaultdict
 # reader = (map(int, line.split()) for line in inf)
 reader = (list(map(int, line.split())) for line in sys.stdin)
 
+
 def insert(pq, value, entry_finder, push_id):
     entry = [value, push_id]
     entry_finder[push_id] = entry
-    heappush(pq, entry)    
+    heappush(pq, entry)
+
 
 def remove(entry_finder, push_id):
     entry = entry_finder.pop(push_id)
     entry[-1] = -1
-    
+
+
 def extract_min(pq, entry_finder):
     while pq:
         value, push_id = heappop(pq)
@@ -23,12 +26,13 @@ def extract_min(pq, entry_finder):
             return (push_id, value)
     return (-1, '*')
 
+
 t, = next(reader)
 for test in range(t):
     n, = next(reader)
     pq = []
     entry_finder = {}
-    triangle = [tuple(next(reader)) for _ in range(n-2)]
+    triangle = [tuple(next(reader)) for _ in range(n - 2)]
     deg = Counter()
     v_tri = defaultdict(list)
     used = set()
@@ -38,16 +42,16 @@ for test in range(t):
             v_tri[v].append(i)
     for v, value in list(deg.items()):
         insert(pq, value, entry_finder, push_id=v)
-    g = [set() for _ in range(n+1)]
+    g = [set() for _ in range(n + 1)]
     ansQ = []
-    for _ in range(n-2):
+    for _ in range(n - 2):
         v, value = extract_min(pq, entry_finder)
         while True:
             i = v_tri[v].pop()
             if i not in used:
                 break
         used.add(i)
-        ansQ.append(i+1)
+        ansQ.append(i + 1)
         tri = triangle[i]
         tos = [to for to in tri if to != v]
         for to in tos:
@@ -68,7 +72,7 @@ for test in range(t):
             g[to1].add(to2)
             g[to2].add(to1)
     ansP = []
-    visited = [False] * (n+1)
+    visited = [False] * (n + 1)
     s = 1
     stack = [s]
 #     print(g)
@@ -83,4 +87,3 @@ for test in range(t):
     print(*ansQ)
 
 # inf.close()
-
