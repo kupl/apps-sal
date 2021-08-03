@@ -12,8 +12,10 @@ def find(x):  # 要素がどの集合か判断
 def unite(x, y):  # 集合に結合
     x = find(x)
     y = find(y)
-    if x == y: return False
-    if par[x] > par[y]: x, y = y, x
+    if x == y:
+        return False
+    if par[x] > par[y]:
+        x, y = y, x
     par[x] += par[y]
     par[y] = x
     return True

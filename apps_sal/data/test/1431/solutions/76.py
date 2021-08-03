@@ -19,7 +19,8 @@ l = []
 for i in range(1, n + 1):
     if dp[i] == 1:
         l.append(i)
-if len(l) == 0: print(len(l))
+if len(l) == 0:
+    print(len(l))
 else:
     print(len(l))
     print(*l)

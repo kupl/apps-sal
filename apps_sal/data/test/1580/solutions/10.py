@@ -28,7 +28,8 @@ def union(a, b):
 
 for i in range(M):
     a, b, c = map(int, input().split())
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     union(a, b)
 l = [0] * N
 for j in range(N):

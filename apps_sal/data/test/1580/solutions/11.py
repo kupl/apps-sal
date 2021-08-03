@@ -13,12 +13,14 @@ def abc126_e():
     def unite(x, y):
         x = find(x)
         y = find(y)
-        if x == y: return
+        if x == y:
+            return
         if rank[x] < rank[y]:
             par[x] = y
         else:
             par[y] = x
-            if rank[x] == rank[y]: rank[x] += 1
+            if rank[x] == rank[y]:
+                rank[x] += 1
 
     for _ in range(m):
         x, y, z = map(int, input().split())

@@ -1,4 +1,5 @@
-import sys; sys.setrecursionlimit(10**9)
+import sys
+sys.setrecursionlimit(10**9)
 
 
 class UnionFind:
@@ -17,7 +18,8 @@ class UnionFind:
     def unite(self, x, y):
         x = self.find_root(x)
         y = self.find_root(y)
-        if x == y: return
+        if x == y:
+            return
         elif self.r[x] > self.r[y]:
             self.n[x] += self.n[y]
             self.n[y] = x

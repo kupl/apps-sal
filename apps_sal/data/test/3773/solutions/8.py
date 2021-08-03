@@ -24,7 +24,8 @@ def main1(n, a, k):
 
             def func(t, m):  # m+1周期のidx=tの値を返す。
                 t %= (m + 1)
-                if t == 0: return m
+                if t == 0:
+                    return m
                 j = (m + 1 - t + k[i] - 1) // k[i]
                 tt = t - j
                 tt += k[i] * j
@@ -33,7 +34,8 @@ def main1(n, a, k):
             t = (a[i] % k[i]) % (m + 1)
             ary[i] = func(t, m)
     ret = 0
-    for x in ary: ret ^= x
+    for x in ary:
+        ret ^= x
     return ret > 0
 
 

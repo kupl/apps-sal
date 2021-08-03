@@ -9,7 +9,8 @@ for i in range(M):
 lst = []
 visited = [0] * N
 for i in range(N):
-    if visited[i] == 1: continue
+    if visited[i] == 1:
+        continue
     temp = [i]
     lst1 = [i]
     visited[i] = 1
@@ -20,6 +21,7 @@ for i in range(N):
                 visited[q] = 1
                 lst1.append(q)
                 temp.append(q)
-    if lst1 != []: lst.append(lst1)
+    if lst1 != []:
+        lst.append(lst1)
 
 print(len(lst))

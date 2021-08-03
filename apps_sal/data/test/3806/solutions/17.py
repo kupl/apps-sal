@@ -13,10 +13,10 @@ def minDistance(A, B, E):
     BE = [E[0] - B[0], E[1] - B[1]]
     AE = [E[0] - A[0], E[1] - A[1]]
 
-    AB_BE = AB[0] * BE[0] + AB[1] * BE[1];
-    AB_AE = AB[0] * AE[0] + AB[1] * AE[1];
+    AB_BE = AB[0] * BE[0] + AB[1] * BE[1]
+    AB_AE = AB[0] * AE[0] + AB[1] * AE[1]
 
-    reqAns = 0;
+    reqAns = 0
 
     # Case 1
     if AB_BE > 0:

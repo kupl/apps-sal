@@ -5,7 +5,8 @@ class UnionFind:
     def merge(self, x, y):
         x = self.root(x)
         y = self.root(y)
-        if x == y: return False
+        if x == y:
+            return False
 
         if self.data[x] < self.data[y]:
             x, y = y, x

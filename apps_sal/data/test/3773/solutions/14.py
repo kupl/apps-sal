@@ -8,10 +8,12 @@ readlines = sys.stdin.buffer.readlines
 N = int(readline())
 AK = np.array(read().split(), np.int32)
 
-A = AK[::2]; K = AK[1::2]
+A = AK[::2]
+K = AK[1::2]
 
 for _ in range(50000):
-    q = A // K; r = A % K
+    q = A // K
+    r = A % K
     q += 1
     r += (-r) % q
     A -= r

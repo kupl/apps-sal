@@ -8,12 +8,14 @@ readlines = sys.stdin.buffer.readlines
 N = int(readline())
 AK = np.array(read().split(), np.int32)
 
-A = AK[::2]; K = AK[1::2]
+A = AK[::2]
+K = AK[1::2]
 
 G = 0
 
 for t in range(50000):
-    q = A // K; r = A % K
+    q = A // K
+    r = A % K
     q += 1
     r += (-r) % q
     A -= r
@@ -21,7 +23,8 @@ for t in range(50000):
         ind = r != 0
         if np.count_nonzero(~ind):
             G ^= np.bitwise_xor.reduce(A[~ind] // K[~ind])
-            A = A[ind]; K = K[ind]
+            A = A[ind]
+            K = K[ind]
             if len(A) == 0:
                 break
 

@@ -22,7 +22,8 @@ def unite(x, y):
     if x == y:
         return 0
     else:
-        if par[x] > par[y]: x, y = y, x
+        if par[x] > par[y]:
+            x, y = y, x
         par[x] += par[y]
         par[y] = x
 

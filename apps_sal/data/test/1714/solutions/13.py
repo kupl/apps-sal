@@ -1,5 +1,5 @@
 a = input()
-n, k = a.split(" ");
+n, k = a.split(" ")
 n = int(n)
 k = int(k)
 b = list()

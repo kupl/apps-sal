@@ -7,7 +7,8 @@ for i in range(N):
     n_tmp = n
     while True:
         n_tmp += n
-        if n_tmp > N: break
+        if n_tmp > N:
+            break
         if ans[n_tmp - 1]:
             add = 0 if add else 1
     if add:

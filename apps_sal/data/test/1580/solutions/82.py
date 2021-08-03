@@ -11,7 +11,8 @@ class UnionFind:
     def merge(self, x, y):
         x = self.root(x)
         y = self.root(y)
-        if x == y: return False
+        if x == y:
+            return False
 
         # y の方がデータ数を多く
         if self.data[x] < self.data[y]:

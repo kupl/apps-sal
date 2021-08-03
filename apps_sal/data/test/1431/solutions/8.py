@@ -18,4 +18,5 @@ for i in range(1, N + 1):
         ans2.append(i)
 
 print(len(ans2))
-if len(ans2) > 0: print(*ans2)
+if len(ans2) > 0:
+    print(*ans2)

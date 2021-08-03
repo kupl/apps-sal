@@ -9,7 +9,8 @@ i = 2
 z = ans[1]
 while i < 2 * n:
     z += 1
-    if z == 1 + k: continue
+    if z == 1 + k:
+        continue
     ans.append(z)
     i += 1
 

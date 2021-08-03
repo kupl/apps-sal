@@ -30,8 +30,10 @@ mod = 10 ** 9 + 7
 
 
 def f(ai, ki):
-    if ai < ki: return 0
-    elif ai % ki == 0: return ai // ki
+    if ai < ki:
+        return 0
+    elif ai % ki == 0:
+        return ai // ki
     d = ai // ki + 1
     if ai % ki % d:
         return f(ai - (ai % ki // d + 1) * d, ki)

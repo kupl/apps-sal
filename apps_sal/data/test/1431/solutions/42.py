@@ -33,7 +33,8 @@ def Main():
             b[i] = 1
             ans.append(i + 1)
     print(len(ans))
-    if len(ans): print(*ans)
+    if len(ans):
+        print(*ans)
 
 
 def __starting_point():
