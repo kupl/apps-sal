@@ -30,6 +30,7 @@ def remove_bfs():
 
     return removed
 
+
 n = int(input())
 
 vertex = list(map(int, input().split()))
@@ -45,4 +46,3 @@ for i in range(n - 1):
 
 subtree_count()
 print(remove_bfs())
-

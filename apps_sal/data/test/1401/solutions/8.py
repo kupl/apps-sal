@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n = int(input())
 a = [0] + list(read())
 g = [list() for i in range(n + 1)]
@@ -18,4 +20,3 @@ while st:
 
 ans = n - was.count(1)
 print(ans)
-

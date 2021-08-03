@@ -3,7 +3,7 @@ a = [int(x) for x in input().split()]
 g = [[] for _ in range(n)]
 for u in range(1, n):
     p, c = (int(x) for x in input().split())
-    g[p-1].append((u, c))
+    g[p - 1].append((u, c))
 
 stack = [(0, 0, False)]
 r = 0

@@ -13,4 +13,3 @@ ans = 0
 for x in a:
     ans += b[x]
 print(ans)
-

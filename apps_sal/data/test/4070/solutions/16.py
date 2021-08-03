@@ -7,4 +7,3 @@ while n:
     ret += x.count(n - (n // 16) * 16)
     n = n // 16
 print(ret)
-

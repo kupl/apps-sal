@@ -13,4 +13,3 @@ if r - l == u - d and (r - l) * (u - d) == s:
     print('YES')
 else:
     print('NO')
-

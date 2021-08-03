@@ -25,4 +25,3 @@ for i, s in enumerate(S):
             not_r += 1
 ans = min(ans, max(not_r, not_b))
 print(ans)
-

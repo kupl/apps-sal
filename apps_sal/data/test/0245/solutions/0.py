@@ -13,7 +13,6 @@ for i in range(n):
     maxy = max(maxy, y1, y2)
 
 if (maxx - minx) == (maxy - miny) and s == (maxx - minx) ** 2:
-    print ("YES")
+    print("YES")
 else:
-    print ("NO")
-
+    print("NO")

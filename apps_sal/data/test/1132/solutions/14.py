@@ -1,30 +1,30 @@
-n,m=list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 
-l=[0]*n
+l = [0] * n
 
-d=l[:]
+d = l[:]
 
 for _ in range(m):
 
-    a,b=list(map(int,input().split()))
+    a, b = list(map(int, input().split()))
 
-    l[a-1]+=1
+    l[a - 1] += 1
 
-    l[b-1]+=1
+    l[b - 1] += 1
 
 for i in l:
 
-    d[i]+=1
+    d[i] += 1
 
-if(d[1]==2 and d[2]==n-2):
+if(d[1] == 2 and d[2] == n - 2):
 
     print('bus topology')
 
-elif(d[2]==n):
+elif(d[2] == n):
 
     print('ring topology')
 
-elif(d[1]==n-1 and d[n-1]==1):
+elif(d[1] == n - 1 and d[n - 1] == 1):
 
     print('star topology')
 
@@ -33,8 +33,4 @@ else:
     print('unknown topology')
 
 
-
-
-
 # Made By Mostafa_Khaled
-

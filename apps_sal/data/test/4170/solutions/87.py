@@ -12,4 +12,3 @@ for i in range(1, N):
     num = H[i]
 
 print(ans)
-

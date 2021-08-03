@@ -34,6 +34,7 @@ def remove_bfs():
 
     return removed
 
+
 sys.setrecursionlimit(1000001)
 n = int(input())
 
@@ -50,4 +51,3 @@ for i in range(n - 1):
 
 subtree_count()
 print(remove_bfs())
-

@@ -27,4 +27,3 @@ for line in sys.stdin:
     for c in N[2:]:
         ans += mp[c]
     print(ans)
-

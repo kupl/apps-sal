@@ -20,7 +20,7 @@ if n % 2:
         for i in range(n):
             if s[i] == "b" and i % 2:
                 m2 += 1
-        print(min(m+(n-1)//2-b,m2+(n+1)//2-b))
+        print(min(m + (n - 1) // 2 - b, m2 + (n + 1) // 2 - b))
 
     else:
         for i in range(n):
@@ -29,7 +29,7 @@ if n % 2:
         for i in range(n):
             if s[i] == "r" and i % 2:
                 m2 += 1
-        print(min(m+(n-1)//2-r,m2+(n+1)//2-r))
+        print(min(m + (n - 1) // 2 - r, m2 + (n + 1) // 2 - r))
 
 else:
     if r > b:
@@ -39,7 +39,7 @@ else:
         for i in range(n):
             if s[i] == "b" and i % 2:
                 m2 += 1
-        print(min(m,m2)+n//2-b)
+        print(min(m, m2) + n // 2 - b)
     else:
         for i in range(n):
             if s[i] == "r" and i % 2 == 0:
@@ -47,5 +47,4 @@ else:
         for i in range(n):
             if s[i] == "r" and i % 2:
                 m2 += 1
-        print(min(m,m2)+n//2-r)  
-
+        print(min(m, m2) + n // 2 - r)

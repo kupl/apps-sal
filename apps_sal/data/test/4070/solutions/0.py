@@ -17,4 +17,3 @@ print(ans)
 
 # FIN.close()
 # FOUT.close()
-

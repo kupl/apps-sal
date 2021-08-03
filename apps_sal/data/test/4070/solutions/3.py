@@ -22,9 +22,9 @@ x = {
     'f': 0
 }
 
+
 def toInt(c):
     return x[c]
 
 
 print(sum(map(toInt, hexa[2:])))
-

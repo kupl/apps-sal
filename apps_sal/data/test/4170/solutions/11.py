@@ -12,5 +12,5 @@ for h in H[1:]:
         cnt = 0
     tmp = h
 
-    
+
 print(ans)

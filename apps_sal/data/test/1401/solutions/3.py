@@ -1,10 +1,10 @@
 from queue import deque
-#sys.setrecursionlimit(10**6)
+# sys.setrecursionlimit(10**6)
 
 n = int(input())
 a = [0] + list(map(int, input().split()))
 
-G = {i : [] for i in range(1, n+1)}
+G = {i: [] for i in range(1, n + 1)}
 
 for i in range(1, n):
     parent, edge = list(map(int, input().split()))
@@ -27,7 +27,3 @@ while stack:
         stack.append((u, max(0, cur_max + e), to_cut))
 
 print(cut)
-
-
-
-

@@ -9,4 +9,3 @@ while i < n:
     ans = max(ans, j - i)
     i = j + 1
 print(ans)
-

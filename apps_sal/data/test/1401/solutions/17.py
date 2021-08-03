@@ -1,3 +1,4 @@
+from collections import deque
 n = int(input())
 ver = list(map(int, input().split()))
 adj = [{} for i in range(n)]
@@ -7,7 +8,6 @@ for i in range(n - 1):
     adj[i + 1][p - 1] = c
     adj[p - 1][i + 1] = c
 
-from collections import deque
 q = deque([(0, 0, 0)])
 
 sad = [0] * n
@@ -27,5 +27,5 @@ while q:
     for nv, nvd in adj[v].items():
         if vis[nv] == 0:
             q.append((nv, d + nvd, min(d + nvd, md)))
-    
+
 print(sum(sad))
