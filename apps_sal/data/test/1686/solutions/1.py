@@ -17,7 +17,9 @@ p = [0] * n
 x = 1 << 31
 for i in range(32):
     for j, y in enumerate(t):
-        if y & x: p[j] += x
-    if len(set(p)) >= k: break
+        if y & x:
+            p[j] += x
+    if len(set(p)) >= k:
+        break
     x >>= 1
 print(-1 if len(set(p)) != k else g((1 << 32) - x))

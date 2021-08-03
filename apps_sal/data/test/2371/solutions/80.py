@@ -1,10 +1,11 @@
 import sys
 stdin = sys.stdin
 sys.setrecursionlimit(10**6)
-ni = lambda: int(ns())
-na = lambda: list(map(int, stdin.readline().split()))
-nn = lambda: list(stdin.readline().split())
-ns = lambda: stdin.readline().rstrip()
+def ni(): return int(ns())
+def na(): return list(map(int, stdin.readline().split()))
+def nn(): return list(stdin.readline().split())
+def ns(): return stdin.readline().rstrip()
+
 
 n, z, w = na()
 a = na()

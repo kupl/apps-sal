@@ -12,9 +12,11 @@ def main(n):
     b2 = 0  # last a 2p
     for d in sorted(list(set([0] + a + b))):
         for a2 in range(a2, n + 1):
-            if a2 == n or a[a2] > d: break
+            if a2 == n or a[a2] > d:
+                break
         for b2 in range(b2, m + 1):
-            if b2 == m or b[b2] > d: break
+            if b2 == m or b[b2] > d:
+                break
         s1 = a2 * 2 + (n - a2) * 3
         s2 = b2 * 2 + (m - b2) * 3
         if s1 - s2 > mx:

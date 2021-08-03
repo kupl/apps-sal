@@ -20,7 +20,8 @@ for i in range(1, n + 1):
         h = h + 1
     while h <= t and a[i] <= a[Q[t]]:
         t = t - 1
-    t = t + 1; Q[t] = i;
+    t = t + 1
+    Q[t] = i
     if (i < len):
         F[i] = 0
     else:

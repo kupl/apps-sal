@@ -1,5 +1,9 @@
-n = int(input()); s = input(); m = int(input())
-a = [0] * (n + 2); b = [0] * (n + 2); q = [0] * (n + 1);
+n = int(input())
+s = input()
+m = int(input())
+a = [0] * (n + 2)
+b = [0] * (n + 2)
+q = [0] * (n + 1)
 dp = [(0, 0)] * (n + 2)
 
 for i in range(0, n):

@@ -1,4 +1,6 @@
-match = 0; nonmatch = 0; count = 0
+match = 0
+nonmatch = 0
+count = 0
 
 
 def calc_match(s, t, p):

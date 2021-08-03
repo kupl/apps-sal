@@ -14,7 +14,8 @@ if a == 0:
     if 0 in di:
         ans += di[0] * di[0]
         for each in di:
-            if not each: continue
+            if not each:
+                continue
             ans += di[each] * di[0] * 2
     print(ans)
     quit()
