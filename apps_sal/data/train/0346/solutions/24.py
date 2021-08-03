@@ -14,5 +14,4 @@ class Solution:
                     res += cur
             else:
                 res += cur
-        return res 
-
+        return res

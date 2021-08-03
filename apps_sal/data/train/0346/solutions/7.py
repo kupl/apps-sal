@@ -11,4 +11,3 @@ class Solution:
                 count += 1
             nice_count += count
         return nice_count
-

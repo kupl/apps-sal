@@ -13,5 +13,5 @@ class Solution:
         s.append(evencnt)
         res = 0
         for i in range(len(s) - k):
-            res += (s[i]+1) * (s[i+k]+1)
+            res += (s[i] + 1) * (s[i + k] + 1)
         return res

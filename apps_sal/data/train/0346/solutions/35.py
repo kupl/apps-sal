@@ -5,20 +5,18 @@ class Solution:
         even = 0
         oddList = []
         for i in range(n):
-            if nums[i]%2==0:
+            if nums[i] % 2 == 0:
                 even += 1
             else:
                 oddList.append(even)
                 even = 0
         oddList.append(even)
         # print(oddList)
-        for i in range(len(oddList)-k):
-            noOfNiceSubArrays += (oddList[i]+1)*(oddList[i+k]+1)
-            
+        for i in range(len(oddList) - k):
+            noOfNiceSubArrays += (oddList[i] + 1) * (oddList[i + k] + 1)
+
         return noOfNiceSubArrays
-                
-    
-    
+
+
 #     [1,1,2,1,1]
 #     [0, 0, ]
-

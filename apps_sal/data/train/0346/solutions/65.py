@@ -1,7 +1,7 @@
 def solve(A, k):
     count = [0, 0]
     lower = iter(A)
-    
+
     ans = 0
     for x in A:
         count[x % 2] += 1
@@ -10,10 +10,8 @@ def solve(A, k):
         ans += sum(count)
 
     return ans
-    
+
 
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         return solve(nums, k) - solve(nums, k - 1)
-    
-

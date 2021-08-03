@@ -1,7 +1,7 @@
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         occur = collections.defaultdict(int)
-        
+
         occur[0] = 1
         runsum = 0
         count = 0
@@ -12,8 +12,8 @@ class Solution:
                 nums[i] = 1
             runsum += nums[i]
             if (runsum - k) in occur:
-                count += occur[runsum-k]
-            
-            occur[runsum] +=1
-            
+                count += occur[runsum - k]
+
+            occur[runsum] += 1
+
         return count

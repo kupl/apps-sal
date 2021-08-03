@@ -1,13 +1,12 @@
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         def atmost(k):
-            res=i=0
+            res = i = 0
             for j in range(len(nums)):
-                k-=nums[j]%2
+                k -= nums[j] % 2
                 while k < 0:
-                    k+=nums[i]%2
-                    i+=1
-                res += j-i+1
+                    k += nums[i] % 2
+                    i += 1
+                res += j - i + 1
             return res
-        return atmost(k)-atmost(k-1)
-
+        return atmost(k) - atmost(k - 1)

@@ -19,4 +19,3 @@ class Solution:
             else:
                 res += count
         return res
-

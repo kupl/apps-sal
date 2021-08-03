@@ -11,10 +11,9 @@ class Solution:
                     if nums[left] & 1:
                         count -= 1
                     left += 1
-                
-                res += right - left + 1
-            
-            return res
-        
-        return at_most(k) - at_most(k - 1)
 
+                res += right - left + 1
+
+            return res
+
+        return at_most(k) - at_most(k - 1)

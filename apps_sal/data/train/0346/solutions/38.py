@@ -1,6 +1,7 @@
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
-        return self.numberOfAtmostK(nums, k) - self.numberOfAtmostK(nums, k-1)
+        return self.numberOfAtmostK(nums, k) - self.numberOfAtmostK(nums, k - 1)
+
     def numberOfAtmostK(self, nums, k):
         l, r, count, res = 0, 0, 0, 0
         while r < len(nums):

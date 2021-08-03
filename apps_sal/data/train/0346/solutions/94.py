@@ -12,6 +12,6 @@ class Solution:
             else:
                 count += 1
         d.append(count)
-        for x,y in zip(d,d[k:]):
+        for x, y in zip(d, d[k:]):
             res += x * y
         return res

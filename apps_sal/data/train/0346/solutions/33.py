@@ -1,9 +1,9 @@
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
-        
-        
-        ## NOT MY CODE TRIALS
-        A=nums
+
+        # NOT MY CODE TRIALS
+        A = nums
+
         def atMost(k):
             res = i = 0
             for j in range(len(A)):
@@ -15,4 +15,3 @@ class Solution:
             return res
 
         return atMost(k) - atMost(k - 1)
-

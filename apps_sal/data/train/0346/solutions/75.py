@@ -1,5 +1,5 @@
 class Solution:
-    
+
     def checkOdd(self, num):
         if num % 2 == 0:
             return False
@@ -19,8 +19,8 @@ class Solution:
                 j = len(nums) - 1
             else:
                 j = oddIndices[end + 1] - 1
-            
-            count = count + (oddIndices[start] -i + 1) * (j - oddIndices[end] + 1)
+
+            count = count + (oddIndices[start] - i + 1) * (j - oddIndices[end] + 1)
             i = oddIndices[start] + 1
             start = start + 1
             end = end + 1

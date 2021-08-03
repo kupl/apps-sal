@@ -9,6 +9,6 @@ class Solution:
             if j == -1 or all(A[k][i] >= A[k][j] for k in range(m)):
                 b = dp(i + 1, i)
             return min(a, b)
-        
+
         m, n = len(A), len(A[0])
         return dp(0, -1)

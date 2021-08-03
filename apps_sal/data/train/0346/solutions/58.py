@@ -1,7 +1,7 @@
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         nums = [n % 2 for n in nums]
-        
+
         def atMost(k):
             ans, j = 0, 0
             for i, n in enumerate(nums):
@@ -11,11 +11,10 @@ class Solution:
                     j += 1
                 ans += i - j + 1
             return ans
-        
+
         return atMost(k) - atMost(k - 1)
-        
-        
-        
+
+
 #         ans, i, j, cnt = 0, 0, 0, 0
 #         for i, n in enumerate(nums):
 #             cnt += nums[i]
@@ -29,8 +28,8 @@ class Solution:
 #                 cur = nums[j:].index(1)
 #                 ans += cur + 1
 #         return ans
-        
-        
+
+
 #         def atMost(k):
 #             res = i = 0
 #             for j in xrange(len(A)):
@@ -42,4 +41,3 @@ class Solution:
 #             return res
 
 #         return atMost(k) - atMost(k - 1)
-

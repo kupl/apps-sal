@@ -1,7 +1,7 @@
 class Solution:
     def numberOfSubarrays(self, nums, k):
         return self.atMost(nums, k) - self.atMost(nums, k - 1)
-    
+
     def atMost(self, nums, k):
         if k < 0:
             return 0

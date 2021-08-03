@@ -8,4 +8,3 @@ class Solution:
             max_sum = max(max_sum + arr[i], arr[i])
             max_overall = max(max_overall, max_sum, max_excluded)
         return max_overall
-
