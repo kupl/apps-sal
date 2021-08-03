@@ -7,12 +7,11 @@ for _ in range(t):
     switched = -float('inf')
     ans = k
     for i in range(n):
-     if l[i] == lane:
-      if switched + d < x[i] and x[i - 1] + 1 < x[i]:
-       lane = 3 - lane
-       switched = max(x[i - 1] + 1, switched + d)
-      else:
-       ans = x[i]
-       break
+        if l[i] == lane:
+            if switched + d < x[i] and x[i - 1] + 1 < x[i]:
+                lane = 3 - lane
+                switched = max(x[i - 1] + 1, switched + d)
+            else:
+                ans = x[i]
+                break
     print(ans)
-

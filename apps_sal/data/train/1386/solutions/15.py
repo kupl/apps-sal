@@ -15,8 +15,7 @@ for 3*4 matrix
 use depth search approach to get the individual probability 
 """
 
-testcase = int (eval(input()))
+testcase = int(eval(input()))
 for z in range(testcase):
- a,b = [int(d) for d in input().split()]
- print(a+b-1)
-
+    a, b = [int(d) for d in input().split()]
+    print(a + b - 1)
