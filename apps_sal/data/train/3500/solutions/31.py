@@ -6,6 +6,5 @@ def remove_exclamation_marks(s):
         else:
             new_string += char
     return new_string
-        
-    #your code here
 
+    # your code here

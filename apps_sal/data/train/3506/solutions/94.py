@@ -5,12 +5,11 @@ def vowel_indices(word):
         print(("Looking at ", x))
         try:
             l = checkList.index(x)
-            retVal.append(i+1)
-            print(("think this is a vowel",x))
+            retVal.append(i + 1)
+            print(("think this is a vowel", x))
         except ValueError:
-            print(("discarded",x))           
+            print(("discarded", x))
     return retVal
-  
 
 
 #    word= list(word)
@@ -24,4 +23,3 @@ def vowel_indices(word):
 #        else:
 #            print("discarded",x)
 #    return retVal
-

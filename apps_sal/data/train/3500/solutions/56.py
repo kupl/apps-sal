@@ -6,4 +6,3 @@ def remove_exclamation_marks(s):
         else:
             s = s.replace(i, '')
     return(s)
-

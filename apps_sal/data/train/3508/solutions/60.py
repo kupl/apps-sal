@@ -6,4 +6,3 @@ def halving_sum(n):
         x *= 2
 
     return summed
-

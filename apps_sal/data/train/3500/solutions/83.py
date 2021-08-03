@@ -3,6 +3,5 @@ def remove_exclamation_marks(s):
     for char in s:
         if char != "!":
             toprint += char
-    print (toprint)
+    print(toprint)
     return toprint
-

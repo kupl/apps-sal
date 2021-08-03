@@ -1,4 +1,4 @@
-def halving_sum(n): 
+def halving_sum(n):
     divisor = 1
     addends = []
     addend = n // divisor

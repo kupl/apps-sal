@@ -1,6 +1,7 @@
 import math
 
-def halving_sum(n): 
+
+def halving_sum(n):
     a = 0
     d = 1
     res = 0

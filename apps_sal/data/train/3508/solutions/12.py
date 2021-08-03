@@ -5,8 +5,7 @@ def halving_sum(n):
     c.append(n)
     c.append(b)
 
-
-    for i in range(0,n):
+    for i in range(0, n):
 
         b = b // 2
         c.append(b)

@@ -1,3 +1,3 @@
 def remove_exclamation_marks(string):
-    new = string.replace("!","")
+    new = string.replace("!", "")
     return new

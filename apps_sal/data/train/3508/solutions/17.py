@@ -9,5 +9,5 @@ def halving_sum(n):
             n = n // 2
         return result
 
-print((halving_sum(25)))
 
+print((halving_sum(25)))

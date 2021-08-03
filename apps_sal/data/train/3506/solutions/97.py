@@ -5,4 +5,3 @@ def vowel_indices(word):
             r.append(i + 1)
     return r
     # Flez
-

@@ -4,4 +4,3 @@ def vowel_indices(word):
         if word[letter] in "aeiouyAEIOUY":
             location.append(letter + 1)
     return location
-

@@ -6,4 +6,3 @@ def vowel_indices(word):
             res.append(index)
         index += 1
     return res
-

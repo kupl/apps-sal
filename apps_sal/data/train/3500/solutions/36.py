@@ -7,4 +7,3 @@ def remove_exclamation_marks(s):
     for i in r:
         string += i
     return string
-

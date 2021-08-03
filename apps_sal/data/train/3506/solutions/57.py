@@ -5,4 +5,3 @@ def vowel_indices(word):
         if letter in vowels:
             index_list.append(indx + 1)
     return index_list
-

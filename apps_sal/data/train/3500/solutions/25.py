@@ -6,5 +6,3 @@ def remove_exclamation_marks(s):
         else:
             result += i
     return result
-
-
