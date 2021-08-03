@@ -1,5 +1,7 @@
 # codeforces_1016A_live
-gi = lambda: list(map(int, input().split(" ")))
+def gi(): return list(map(int, input().split(" ")))
+
+
 n, m = gi()
 line = gi()
 acc = 0

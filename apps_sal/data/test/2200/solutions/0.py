@@ -12,7 +12,8 @@ class InputHandlerObject(object):
     def getInput(self, n=0):
         res = ""
         inputs = self.inputs
-        if not inputs: inputs.extend(input().split(" "))
+        if not inputs:
+            inputs.extend(input().split(" "))
         if n == 0:
             res = inputs[:]
             inputs[:] = []

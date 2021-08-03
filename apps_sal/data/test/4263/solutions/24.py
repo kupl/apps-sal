@@ -6,5 +6,6 @@ for i in range(0, len(s)):
         count += 1
         if max < count:
             max = count
-    else: count = 0
+    else:
+        count = 0
 print(max)

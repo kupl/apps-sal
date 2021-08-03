@@ -5,9 +5,11 @@ sys.setrecursionlimit(10**9)
 
 
 def check(ch):
-    if(ch > n): return 0
+    if(ch > n):
+        return 0
     if(ch % 2 == 0):
-        if(ch == n): return 1
+        if(ch == n):
+            return 1
         else:
             st = 4
             ans = 2

@@ -11,7 +11,8 @@ def main():
         t1 = y * d + x
         t2 = 2 * x * d + x
         print(min(t1, t2))
-    elif(a == b): print(x)
+    elif(a == b):
+        print(x)
     else:
         d = a - b
         t1 = y * (d - 1) + x

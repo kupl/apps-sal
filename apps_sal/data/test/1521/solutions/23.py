@@ -14,8 +14,8 @@ def solve():
             x.append(val % p)
         else:
             print(i + 1)
-            return 0;
+            return 0
     print(-1)
 
 
-solve();
+solve()

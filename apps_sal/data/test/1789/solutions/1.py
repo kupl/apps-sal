@@ -30,7 +30,8 @@ dist[(0, a)] = 0
 hist[(0, a)] = 1
 while heap:
     d, x = heapq.heappop(heap)
-    if dist[x] < d: continue
+    if dist[x] < d:
+        continue
     hist[x] = 1
     for i, j, dy in G[x]:
         y = (i, j)

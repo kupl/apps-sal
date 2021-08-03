@@ -18,4 +18,4 @@ def solve():
     print(-1)
 
 
-solve();
+solve()

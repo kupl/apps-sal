@@ -17,7 +17,8 @@ else:
 result = 0
 for i in range(lead_digit + 1):
     desired_num = int(str(i) + '9' * length)
-    if desired_num == 0: continue
+    if desired_num == 0:
+        continue
     result += (min([n, desired_num - 1]) - max([desired_num // 2, desired_num - n]))
     #print(n - max([desired_num // 2, desired_num - n]))
     #print(n, desired_num // 2, desired_num - n)

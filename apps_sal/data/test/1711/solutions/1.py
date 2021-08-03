@@ -8,7 +8,8 @@ mod = 998244353
 
 
 def C(n, k):
-    if k > n: return 0
+    if k > n:
+        return 0
     k = min(k, n - k)
     a = 1
     b = 1

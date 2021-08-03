@@ -18,6 +18,7 @@ for i in range(N):
                 flag = False
                 break
         # ACGT文字列なら長さを更新
-        if flag: ans = max(ans, M)
+        if flag:
+            ans = max(ans, M)
 
 print(ans)

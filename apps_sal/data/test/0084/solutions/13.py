@@ -11,12 +11,16 @@ def closest9(n):
 
 
 def solve(n):
-    if n == 2: return 1
-    if n == 3: return 3
-    if n == 4: return 6
+    if n == 2:
+        return 1
+    if n == 3:
+        return 3
+    if n == 4:
+        return 6
     s = n + n - 1
     c = closest9(s)
-    if c * 10 + 9 == s: return 1
+    if c * 10 + 9 == s:
+        return 1
     p = c
     res = 0
     for i in range(10):

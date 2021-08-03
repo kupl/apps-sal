@@ -2,7 +2,9 @@ import heapq
 a, b, x, y = list(map(int, input().split()))
 dist = [10**30 for i in range(200)]
 G = [[] for i in range(200)]
-a -= 1; b -= 1; b += 100
+a -= 1
+b -= 1
+b += 100
 for i in range(99):
     G[i].append((i + 1, y))
     G[i + 1].append((i, y))
