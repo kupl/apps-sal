@@ -1,4 +1,6 @@
 from collections import defaultdict, Counter
+
+
 def char_freq(message):
     my_dict = {}
     for letter in message:

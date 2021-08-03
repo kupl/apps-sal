@@ -1,4 +1,4 @@
-def get_password(grid,directions):
+def get_password(grid, directions):
     for each in grid:
         if "x" in each:
             x = int([grid.index(each)][0])

@@ -3,4 +3,3 @@ def char_freq(message):
     for i in message:
         d[i] += 1
     return d
-

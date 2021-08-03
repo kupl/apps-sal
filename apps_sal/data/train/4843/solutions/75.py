@@ -17,4 +17,3 @@ def choose_best_sum(t, k, ls):
 
     else:
         return best
-

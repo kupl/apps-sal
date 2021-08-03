@@ -1,5 +1,6 @@
 from itertools import combinations
 
+
 def choose_best_sum(max_distance, k, distances):
     best = 0
     for combination in combinations(distances, k):

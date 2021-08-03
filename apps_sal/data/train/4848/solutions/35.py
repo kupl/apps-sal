@@ -1,1 +1,1 @@
-char_freq = lambda message:{x:message.count(x) for x in message}
+def char_freq(message): return {x: message.count(x) for x in message}

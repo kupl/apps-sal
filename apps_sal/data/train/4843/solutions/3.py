@@ -8,4 +8,3 @@ def choose_best_sum(max_miles, max_towns, lst):
         if max_miles >= total_distance > highest:
             highest = total_distance
     return highest or None
-

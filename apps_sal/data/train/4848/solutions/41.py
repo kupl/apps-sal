@@ -3,7 +3,5 @@ def char_freq(string):
     for s in string:
         n = string.count(s)
         my_dict[s] = n
-    
+
     return my_dict
-
-

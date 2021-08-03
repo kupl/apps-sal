@@ -6,4 +6,3 @@ def char_freq(message):
         else:
             dict[x] += 1
     return(dict)
-

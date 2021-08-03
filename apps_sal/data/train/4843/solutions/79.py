@@ -5,4 +5,3 @@ def choose_best_sum(t, k, ls):
         return None
     else:
         return max(ls_)
-

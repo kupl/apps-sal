@@ -3,4 +3,3 @@ def char_freq(n):
     for i in n:
         d[i] = n.count(i)
     return d
-

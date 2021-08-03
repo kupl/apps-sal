@@ -4,5 +4,5 @@ def char_freq(message):
         if i not in a:
             a[i] = 1
         else:
-            a[i] +=1
+            a[i] += 1
     return a

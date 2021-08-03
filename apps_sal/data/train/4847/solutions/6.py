@@ -1,6 +1,7 @@
 from fractions import Fraction as F
 from math import ceil, floor
 
+
 def count_black_cells(h, w):
     total = 0
     r = F(h, w)
