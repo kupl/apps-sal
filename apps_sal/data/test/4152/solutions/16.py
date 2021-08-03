@@ -1,7 +1,8 @@
 import math
 from collections import defaultdict
-getInputList = lambda: list(input().split())
-getInputIntList = lambda: list(map(int, input().split()))
+def getInputList(): return list(input().split())
+def getInputIntList(): return list(map(int, input().split()))
+
 
 n = input()
 arr = getInputIntList()

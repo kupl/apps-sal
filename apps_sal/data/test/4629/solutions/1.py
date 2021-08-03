@@ -13,5 +13,6 @@ def good(n):
 
 for _ in range(int(input())):
     n = int(input())
-    while not good(n): n += 1
+    while not good(n):
+        n += 1
     print(n)

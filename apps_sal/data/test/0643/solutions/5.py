@@ -40,6 +40,6 @@ for kek in range(t):
     xx = max(xx, (-l0 + q - p - 1) // (q - p))
 
     l = l0 + xx * (q - p)
-    k = k0 + xx * p;
+    k = k0 + xx * p
 
     print(k + l)

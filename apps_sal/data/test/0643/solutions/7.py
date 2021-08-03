@@ -37,7 +37,7 @@ for i in range(t):
             print(-1)
             continue
 
-        mul = (abs(b) + db - 1) // db;
+        mul = (abs(b) + db - 1) // db
         a += mul * da
         b += mul * db
 
@@ -52,7 +52,7 @@ for i in range(t):
         a += mul * da
         b += mul * db
 
-    mul = b // db;
+    mul = b // db
     if (da != 0):
         mul = min(mul, a // da)
 

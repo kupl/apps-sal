@@ -10,9 +10,11 @@ while q:
         for i in good:
             ans.append(t + i)
         good.append(t)
-        for i in ans: good.append(i)
+        for i in ans:
+            good.append(i)
         x += 1
-        if max(good) >= n: break
+        if max(good) >= n:
+            break
     for i in good:
         if i >= n:
             print(i)

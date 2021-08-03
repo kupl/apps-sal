@@ -23,7 +23,7 @@ def canPassTotal(field):
 
 def rot(mat):
     mat = [mat[i] for i in range(len(mat) - 1, -1, -1)]
-    t = [[x[i] for x in mat] for i in range(0, len(mat[0]))];
+    t = [[x[i] for x in mat] for i in range(0, len(mat[0]))]
     return t
 
 

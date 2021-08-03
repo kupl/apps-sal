@@ -10,9 +10,12 @@ for _ in range(int(input())):
 
         a, b = p * mid - x, q * mid - y
 
-        if a <= b and a > -1 and b > -1: res = b; r = mid - 1
+        if a <= b and a > -1 and b > -1:
+            res = b
+            r = mid - 1
 
-        else: l = mid + 1
+        else:
+            l = mid + 1
 
     print(res)
 

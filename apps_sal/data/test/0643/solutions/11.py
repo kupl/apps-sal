@@ -18,10 +18,10 @@ def solve():
             print(-1)
             return
 
-    var1 = (p + x - 1) // p;
-    var2 = ((y - x) + (q - p) - 1) // (q - p);
-    max1 = max(var1, var2);
-    solution = (max1 * q) - y;
+    var1 = (p + x - 1) // p
+    var2 = ((y - x) + (q - p) - 1) // (q - p)
+    max1 = max(var1, var2)
+    solution = (max1 * q) - y
 
     print(solution)
     return
