@@ -10,8 +10,10 @@ l = 0
 r = 0
 for i in a:
     sum = sum + i
-    if i >= y: r += 1
-    else: l += 1
+    if i >= y:
+        r += 1
+    else:
+        l += 1
 flag = 1
 b = []
 if sum >= x or l > n // 2 or y > p:
@@ -22,7 +24,8 @@ else:
         if r < n // 2 + 1:
             b.append(y)
             r += 1
-        else: b.append(1)
+        else:
+            b.append(1)
         left -= b[i]
     if left < 0 or r < n // 2 + 1:
         flag = 0

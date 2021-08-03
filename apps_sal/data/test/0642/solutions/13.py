@@ -8,7 +8,7 @@ def canJump(numStairs, dirty):
         if dirty[i - 1] + 1 == dirty[i]:
             counter += 1
             if counter >= maxJump:
-                break;
+                break
         else:
             counter = 0
     else:

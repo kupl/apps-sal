@@ -7,7 +7,7 @@ def main():
     pairs = []
     for i in range(1):
         for j in range(m):
-            pairs.append([i + 1, j + 1]);
+            pairs.append([i + 1, j + 1])
             nos += 1
     for j in range(1, n):
         pairs.append([j + 1, 1])

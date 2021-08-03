@@ -4,7 +4,8 @@ b = list(map(int, input().split()))
 
 lower_bound = 1
 for i in range(k):
-    if b[i] < y: lower_bound += 1
+    if b[i] < y:
+        lower_bound += 1
 
 ans = [1] * min((n + 1) // 2 - lower_bound, n - k)
 

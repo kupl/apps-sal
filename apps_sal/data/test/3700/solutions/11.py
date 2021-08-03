@@ -3,7 +3,8 @@ ori = k
 if n == 1 or k <= 2:
     print(0)
     return
-if k % 2 == 0: k -= 1
+if k % 2 == 0:
+    k -= 1
 first = k // 2
 second = ori - first
 if second > n:
