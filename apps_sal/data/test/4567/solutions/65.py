@@ -18,4 +18,3 @@ for grade in grades:
 
 if count == len(grades):
     print((0))
-

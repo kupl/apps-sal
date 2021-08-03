@@ -3,7 +3,7 @@ def main():
     n = int(input())
     s = [int(input()) for _ in range(n)]
     s.sort()
-  
+
     if sum(s) % 10 != 0:
         print(sum(s))
     else:
@@ -16,5 +16,5 @@ def main():
             print(0)
 
 
-if __name__ ==  "__main__":
+if __name__ == "__main__":
     main()

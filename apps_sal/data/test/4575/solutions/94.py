@@ -14,4 +14,3 @@ for _ in range(n):
         keisu += 1
         day_sum += num
 print(ans)
-

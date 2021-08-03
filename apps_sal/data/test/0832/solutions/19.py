@@ -9,4 +9,3 @@ for i in a:
             t += 1
 
 print(t)
-

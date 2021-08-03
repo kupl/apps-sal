@@ -11,11 +11,10 @@ for i in range(N):
     day = 0
     cnt = 0
     while True:
-        day = A[i]*cnt + 1
+        day = A[i] * cnt + 1
         if day <= D:
             eaten += 1
             cnt += 1
         else:
             break
-print((eaten+X))
-
+print((eaten + X))

@@ -7,4 +7,3 @@ for i in range(m):
     r = min(r, b)
 
 print((max(r - l + 1, 0)))
-

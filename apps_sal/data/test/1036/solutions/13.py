@@ -9,4 +9,3 @@ for _ in range(k):
         tmp.append(win[hand // 5])
     s = tmp[::-1] * 2
 print((s.pop()))
-

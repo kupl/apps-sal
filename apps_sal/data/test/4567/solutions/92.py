@@ -27,6 +27,6 @@ else:
     max_s = -1
     for not_10_s in not_10_s_list:
         if not sum_s - not_10_s % 10 == 0:
-            max_s = max(max_s,sum_s - not_10_s)
+            max_s = max(max_s, sum_s - not_10_s)
     print(max_s)
     return

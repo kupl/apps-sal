@@ -9,4 +9,3 @@ for i in teams:
         if i[0] == j[1]:
             ans += 1
 print(ans)
-

@@ -9,4 +9,3 @@ for _ in range(k):
         tmp.append(['P', 'R', 'S'][win])
     s = tmp[::-1] * 2
 print((s.pop()))
-

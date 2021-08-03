@@ -16,7 +16,7 @@ for i in range(n):
         elif s[j] in symbol:
             c = min(c, j - 0, m - j)
     d[i] = [a, b, c]
-    
+
 
 p = list(perm([x for x in range(n)], 3))
 ans = 10**10

@@ -14,4 +14,4 @@ else:
             print(Sum - s[i])
             break
         if i == N - 1:
-            print(0) 
+            print(0)

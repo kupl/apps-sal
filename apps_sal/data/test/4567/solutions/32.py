@@ -12,10 +12,9 @@ sl.sort()
 if total % 10 == 0:
     ans = 0
     for i in range(n):
-        if sl[i]%10!=0:
-            ans=total-sl[i]
+        if sl[i] % 10 != 0:
+            ans = total - sl[i]
             break
 else:
     ans = total
 print(ans)
-

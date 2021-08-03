@@ -1,6 +1,7 @@
 def winner(x, y):
     return x if x + y in ['RS', 'PR', 'SP'] else y
 
+
 def f(level, offset):
     if (level, offset) in memo:
         return memo[level, offset]
@@ -13,9 +14,9 @@ def f(level, offset):
     memo[level, offset] = ret
     return ret
 
+
 n, k = list(map(int, input().split()))
 s = input()
 
 memo = {}
 print((f(k, 0)))
-

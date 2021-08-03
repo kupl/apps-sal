@@ -1,8 +1,8 @@
-N,M = map(int,input().split())
+N, M = map(int, input().split())
 L = []
 R = []
 for i in range(M):
-    l,r = map(int,input().split())
+    l, r = map(int, input().split())
     L.append(l)
     R.append(r)
 
@@ -22,4 +22,4 @@ for i in range(M):
         return
 
 
-print(b-a+1)
+print(b - a + 1)

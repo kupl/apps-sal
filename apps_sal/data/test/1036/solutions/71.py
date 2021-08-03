@@ -1,6 +1,8 @@
-N,k = map(int,input().split())
+N, k = map(int, input().split())
 S = list(input())
-def zyanken(a,b):
+
+
+def zyanken(a, b):
     if a == "R":
         if b == "P":
             return "P"
@@ -16,6 +18,8 @@ def zyanken(a,b):
             return "S"
         else:
             return "P"
+
+
 now = k
 f = 0
 dp = [["" for i in range(300)]for j in range(300)]
@@ -25,5 +29,5 @@ if N == 1:
 else:
     for i in range(k):
         for j in range(N):
-            dp[i+1][j] = zyanken(dp[i][(j*2)%N],dp[i][(j*2+1)%N])
+            dp[i + 1][j] = zyanken(dp[i][(j * 2) % N], dp[i][(j * 2 + 1) % N])
     print(dp[k][0])

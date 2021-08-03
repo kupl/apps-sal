@@ -20,15 +20,15 @@ for i in range(n):
         elif a[i][j] in g3 and f3 == 0:
             f3 = 1
             b[i][2] = j
-    
+
     f1, f2, f3 = 0, 0, 0
     for j in range(-1, -1 * m, -1):
         if a[i][j] in g1 and f1 == 0:
             f1 = 1
-            b[i][0] = min(b[i][0], -1 * j )
+            b[i][0] = min(b[i][0], -1 * j)
         elif a[i][j] in g2 and f2 == 0:
             f2 = 1
-            b[i][1] = min(b[i][1], -1 * j )
+            b[i][1] = min(b[i][1], -1 * j)
         elif a[i][j] in g3 and f3 == 0:
             f3 = 1
             b[i][2] = min(b[i][2], -1 * j)

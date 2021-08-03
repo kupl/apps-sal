@@ -20,6 +20,7 @@ def find_dist(s: str, check) -> int:
             m = min(m, i, len(s) - i)
     return m
 
+
 n, m = [int(i) for i in inp.readline().split()]
 
 strs = [line.strip() for line in inp.readlines()]
@@ -36,4 +37,3 @@ for i1, m1 in enumerate(min1):
                 mm = min(mm, INF, m1 + m2 + m3)
 
 print_f(mm)
-

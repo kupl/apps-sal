@@ -7,4 +7,3 @@ s = 0
 for j in a:
     s += b.count(j)
 print(s)
-

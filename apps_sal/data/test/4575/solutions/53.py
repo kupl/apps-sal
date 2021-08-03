@@ -1,5 +1,5 @@
 N = int(input())
-D,Z = map(int,input().split())
+D, Z = map(int, input().split())
 cnt = N
 for i in range(N):
     A = int(input())

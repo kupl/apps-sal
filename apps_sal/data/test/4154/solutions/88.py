@@ -1,8 +1,8 @@
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 lower = -float('inf')
 upper = float('inf')
 for i in range(m):
-    l,r = map(int,input().split())
+    l, r = map(int, input().split())
     if l > lower:
         lower = l
     if r < upper:

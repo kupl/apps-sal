@@ -1,7 +1,7 @@
+import sys
 3
 # -*- coding: utf-8 -*-
 
-import sys
 
 def rl(proc=None):
     if proc is not None:
@@ -9,11 +9,13 @@ def rl(proc=None):
     else:
         return sys.stdin.readline().rstrip()
 
+
 def srl(proc=None):
     if proc is not None:
         return list(map(proc, rl().split()))
     else:
         return rl().split()
+
 
 def test(K, A, i):
     r = 0
@@ -23,12 +25,14 @@ def test(K, A, i):
         r += 1
     return r
 
+
 def brute(K, A):
     best = 1 << 60
     for i in range(7):
         if A[i]:
             best = min(best, test(K, A, i))
     return best
+
 
 def solve(K, A):
     s = sum(A)
@@ -40,14 +44,17 @@ def solve(K, A):
     K -= full_weeks * s
     return 7 * full_weeks + brute(K, A)
 
+
 def main():
     T = rl(int)
-    for t in range(1, T+1):
+    for t in range(1, T + 1):
         K = rl(int)
         A = srl(int)
         print(solve(K, A))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -24,4 +24,3 @@ for im in imos:
     ans += (im == M)
 
 print(ans)
-

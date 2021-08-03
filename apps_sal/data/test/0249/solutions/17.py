@@ -1,12 +1,12 @@
 def main():
-    n,l,x,y = list(map(int,input().split()))
-    arr = set(map(int,input().split()))
+    n, l, x, y = list(map(int, input().split()))
+    arr = set(map(int, input().split()))
     first = False
     second = False
     for i in arr:
-        if i+x in arr:
+        if i + x in arr:
             first = True
-        if i+y in arr:
+        if i + y in arr:
             second = True
 
     if first and not second:
@@ -23,32 +23,32 @@ def main():
 
     found = False
     for i in arr:
-        if i+x-y in arr and i+x <= l:
+        if i + x - y in arr and i + x <= l:
             found = True
-            coord = i+x
+            coord = i + x
             break
 
-        if i+y-x in arr and i+y <= l:
+        if i + y - x in arr and i + y <= l:
             found = True
-            coord = i+y
+            coord = i + y
             break
 
-        if i+x+y in arr and i+min(x,y) <= l:
+        if i + x + y in arr and i + min(x, y) <= l:
             found = True
-            coord = i+min(x,y)
+            coord = i + min(x, y)
 
-        if i-x-y in arr and i-max(x,y) >= 0:
+        if i - x - y in arr and i - max(x, y) >= 0:
             found = True
-            coord = i-max(x,y)
+            coord = i - max(x, y)
 
-        if i-x+y in arr and i-x >= 0:
+        if i - x + y in arr and i - x >= 0:
             found = True
-            coord = i-x
+            coord = i - x
             break
 
-        if i-y+x in arr and i-y >= 0:
+        if i - y + x in arr and i - y >= 0:
             found = True
-            coord = i-y
+            coord = i - y
             break
 
         if found:
@@ -60,8 +60,7 @@ def main():
         return
 
     print(2)
-    print(x,y)
+    print(x, y)
 
 
 main()
-

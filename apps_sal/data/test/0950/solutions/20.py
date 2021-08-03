@@ -2,13 +2,16 @@ import sys
 from itertools import permutations
 from operator import itemgetter
 
+
 def debug(x, table):
     for name, val in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
 
+
 INF = 1000
+
 
 def solve():
     n, m = map(int, input().split())
@@ -38,7 +41,7 @@ def solve():
     ans = INF
     debug(row_nums, locals())
 
-    for i, j, k in permutations((0,1,2)):
+    for i, j, k in permutations((0, 1, 2)):
         tmp = 0
         kyori_c = row_nums.copy()
         kyori_c.sort(key=itemgetter(i))
@@ -52,6 +55,7 @@ def solve():
         ans = min(tmp, ans)
 
     print(ans)
+
 
 def get_kyori(str1, c):
     res = INF
@@ -67,6 +71,9 @@ def get_kyori(str1, c):
 
     return res
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

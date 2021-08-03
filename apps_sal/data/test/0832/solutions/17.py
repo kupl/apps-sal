@@ -16,9 +16,9 @@ def calc(t, s):
     if len(t) == 1:
         return 0
     for i in range(len(t)):
-        if colors[t[0]][s] == colors[t[i]][1-s]:
+        if colors[t[0]][s] == colors[t[i]][1 - s]:
             res += 1
     return res + calc(t[1:], s)
 
-print(calc(teams, 1) + calc(teams, 0))
 
+print(calc(teams, 1) + calc(teams, 0))

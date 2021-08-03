@@ -19,4 +19,3 @@ while t:
     else:
         print(k // cnt * 7 - 7 + da[cnt])
     t -= 1
-

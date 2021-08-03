@@ -1,51 +1,52 @@
-def __starting_point():	
-	n, l, x, y = list(map(int, input().split()))
-	v = list(map(int, input().split()))
-	s = set(v)
+def __starting_point():
+    n, l, x, y = list(map(int, input().split()))
+    v = list(map(int, input().split()))
+    s = set(v)
 
-	cx = 0
-	for i in range(n):
-		if v[i]+x in s:
-			cx = 1
-			break
-	
-	cy = 0
-	for i in range(n):
-		if v[i]+y in s:
-			cy = 1
-			break
-	
-	count = 0
-	ans = []
+    cx = 0
+    for i in range(n):
+        if v[i] + x in s:
+            cx = 1
+            break
 
-	if cx==0:
-		count += 1
-		ans.append(x)
-	if cy==0:
-		count += 1
-		ans.append(y)
+    cy = 0
+    for i in range(n):
+        if v[i] + y in s:
+            cy = 1
+            break
 
-	if count==2:
-		for i in range(n):
-			if (v[i]+x+y in s):
-				count = 1
-				ans = [v[i]+x]
-				break
+    count = 0
+    ans = []
 
-	if count==2:
-		for i in range(n):
-			if (v[i]+x-y in s):
-				if v[i]+x<=l:
-					count = 1
-					ans = [v[i]+x]
-					break
-				elif v[i]-y>=0:
-					count = 1
-					ans = [v[i]-y]
-					break
+    if cx == 0:
+        count += 1
+        ans.append(x)
+    if cy == 0:
+        count += 1
+        ans.append(y)
 
-	print(count)
-	if count!=0:
-		print(*ans)
+    if count == 2:
+        for i in range(n):
+            if (v[i] + x + y in s):
+                count = 1
+                ans = [v[i] + x]
+                break
+
+    if count == 2:
+        for i in range(n):
+            if (v[i] + x - y in s):
+                if v[i] + x <= l:
+                    count = 1
+                    ans = [v[i] + x]
+                    break
+                elif v[i] - y >= 0:
+                    count = 1
+                    ans = [v[i] - y]
+                    break
+
+    print(count)
+    if count != 0:
+        print(*ans)
+
 
 __starting_point()

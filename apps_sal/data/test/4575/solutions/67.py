@@ -9,4 +9,4 @@ for a in A:
     else:
         cnt += D // a + 1
 
-print(X+cnt)
+print(X + cnt)

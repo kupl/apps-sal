@@ -1,4 +1,4 @@
-#Adapted from code of hatsuyuki15 in this contest
+# Adapted from code of hatsuyuki15 in this contest
 n, l, x, y = list(map(int, input().split()))
 a = set(map(int, input().split()))
 boy = False
@@ -39,4 +39,3 @@ if not boy and not girl:
     if not one:
         print(2)
         print(x, y)
-

@@ -11,13 +11,13 @@ val[0] = digit
 val[1] = letter
 val[2] = sym
 
-#print(val)
+# print(val)
 n, m = ri()
-minm = [[10000000000 for _ in range(3)] for  __ in range(n)]
-#print(minm)
+minm = [[10000000000 for _ in range(3)] for __ in range(n)]
+# print(minm)
 for ln in range(n):
     line = input()
-    #print(line)
+    # print(line)
     for i in range(3):
         for mov in range(m):
             if (line[mov] in val[i]) or line[-mov] in val[i]:
@@ -25,7 +25,7 @@ for ln in range(n):
                 break
 
 ans = 10**10
-#print(minm)
+# print(minm)
 for i1 in range(n):
     for i2 in range(n):
         for i3 in range(n):
@@ -33,4 +33,3 @@ for i1 in range(n):
                 ans = min(ans, minm[i1][0] + minm[i2][1] + minm[i3][2])
 
 print(ans)
-

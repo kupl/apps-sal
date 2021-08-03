@@ -26,4 +26,3 @@ for i in range(t):
             print(7 * (p - 1) + num)
         else:
             print(7 * p + num)
-

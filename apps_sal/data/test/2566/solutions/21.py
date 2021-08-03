@@ -2,6 +2,7 @@ import sys
 import math
 import bisect
 
+
 def solve(A, first, m):
     ans = 0
     week_val = sum(A)
@@ -29,6 +30,7 @@ def solve(A, first, m):
     #print('after the last week, m: %d, ans: %d' % (m, ans))
     return ans
 
+
 def main():
     for _ in range(int(input())):
         m = int(input())
@@ -41,7 +43,9 @@ def main():
             min_val = min(min_val, val)
         print(min_val)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

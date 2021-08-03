@@ -8,4 +8,3 @@ if prer >= prel:
     print((prer - prel + 1))
 else:
     print((0))
-

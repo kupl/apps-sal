@@ -1,11 +1,11 @@
 N = int(input())
-minimum = 100 
+minimum = 100
 total = 0
 for i in range(N):
     s = int(input())
-    total += s 
+    total += s
     if s % 10 != 0:
-        minimum = min(minimum,s)
+        minimum = min(minimum, s)
 if total % 10 != 0:
     print(total)
 elif minimum == 100:

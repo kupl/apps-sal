@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n, l, x, y = R()
 arr = set(R())
 x_good, y_good = False, False

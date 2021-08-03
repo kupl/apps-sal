@@ -1,12 +1,13 @@
 
-import sys, itertools
+import sys
+import itertools
 
 n, m = [int(x) for x in sys.stdin.readline().split()]
 lines = [sys.stdin.readline() for _ in range(n)]
 
 classes = [
     [str(x) for x in range(10)],
-    [chr(x) for x in range(ord('a'), ord('z')+1)],
+    [chr(x) for x in range(ord('a'), ord('z') + 1)],
     ['#', '*', '&']
 ]
 
@@ -33,7 +34,7 @@ for perm in itertools.permutations(list(range(3))):
     pick2 = min([(dists[i][perm[1]], i) for i in range(len(dists)) if i != pick1[1]])
     pick3 = min([(dists[i][perm[2]], i) for i in range(len(dists)) if i != pick1[1] and i != pick2[1]])
 
-    res = min(res, pick1[0]+pick2[0]+pick3[0])
+    res = min(res, pick1[0] + pick2[0] + pick3[0])
 
 print(res)
 
@@ -90,5 +91,3 @@ print(res)
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 """
-
-

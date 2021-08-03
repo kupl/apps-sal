@@ -6,4 +6,4 @@ ans_l, ans_r = -INF, INF
 for l, r in lr:
     ans_l = max(ans_l, l)
     ans_r = min(ans_r, r)
-print(max(0, ans_r-ans_l+1))
+print(max(0, ans_r - ans_l + 1))

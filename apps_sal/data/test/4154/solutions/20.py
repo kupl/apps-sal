@@ -14,10 +14,12 @@ def main():
         imos[i] += imos[i - 1]
         if imos[i] == M and i != N + 1:
             ans += 1
-    
+
     print(ans)
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

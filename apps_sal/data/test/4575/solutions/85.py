@@ -19,4 +19,6 @@ def resolve():
         ans += i
     ans += x
     print(ans)
+
+
 resolve()

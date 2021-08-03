@@ -10,4 +10,3 @@ for _ in range(m):
     r_min = min(r_min, y)
 
 print((len([i for i in range(l_max, r_min + 1)])))
-

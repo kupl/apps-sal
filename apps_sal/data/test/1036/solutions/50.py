@@ -17,4 +17,3 @@ for _ in range(k):
     for j in range(n):
         sL[j] = d[t[2 * j]][t[2 * j + 1]]
 print((sL[0]))
-

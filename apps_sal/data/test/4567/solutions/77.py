@@ -11,6 +11,6 @@ if ret % 10 == 0:
     if bias == 0:
         print(0)
     else:
-        print(ret-bias)
+        print(ret - bias)
 else:
     print(ret)

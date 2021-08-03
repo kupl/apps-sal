@@ -1,15 +1,26 @@
-import bisect, collections, copy, functools, heapq, itertools, math, string, sys
-input = lambda: sys.stdin.readline().rstrip() 
+import bisect
+import collections
+import copy
+import functools
+import heapq
+import itertools
+import math
+import string
+import sys
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(10**7)
 INF = float('inf')
-MOD = 10**9+7
+MOD = 10**9 + 7
 def I(): return int(input())
 def F(): return float(input())
 def SS(): return input()
 def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x)-1 for x in input().split()]
+def LI_(): return [int(x) - 1 for x in input().split()]
 def LF(): return [float(x) for x in input().split()]
 def LSS(): return input().split()
+
 
 def resolve():
     n, k = LI()
@@ -20,6 +31,7 @@ def resolve():
 
     dp = [[-1] * n for _ in range(k + 1)]
     # k: 木の高さ i: sの左からのオフセット
+
     def f(k, i):
         if dp[k][i] == -1:
             if k == 0:
@@ -36,7 +48,9 @@ def resolve():
     f(k, 0)
     print((d_r[dp[k][0]]))
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

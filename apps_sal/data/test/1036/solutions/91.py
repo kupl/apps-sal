@@ -39,4 +39,5 @@ def __starting_point():
     s = input()
     main(n, k, s)
 
+
 __starting_point()

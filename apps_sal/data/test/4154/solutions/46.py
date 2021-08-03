@@ -5,7 +5,7 @@ n, m = map(int, sys.stdin.readline().split())
 l = 1
 r = n
 for i in range(m):
-    new_l, new_r =  map(int, sys.stdin.readline().split())
+    new_l, new_r = map(int, sys.stdin.readline().split())
     if new_l > l:
         l = new_l
     if new_r < r:

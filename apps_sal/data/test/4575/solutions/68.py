@@ -7,7 +7,6 @@ a = [int(input()) for i in range(n)]
 d -= 1
 ans = 0
 for i in a:
-    ans += d//i+1
+    ans += d // i + 1
 
-print((ans+x))
-
+print((ans + x))

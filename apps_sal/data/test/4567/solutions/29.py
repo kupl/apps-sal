@@ -5,17 +5,17 @@ res = 0
 other = []
 
 for num in s:
-  if num % 10 == 0:
-    res += num
-  else:
-    other.append(num)
-    
+    if num % 10 == 0:
+        res += num
+    else:
+        other.append(num)
+
 if other:
-  other.sort()
-  res += sum(other)
-  if res % 10 == 0:
-    res -= other[0]
-  print(res)
-  
+    other.sort()
+    res += sum(other)
+    if res % 10 == 0:
+        res -= other[0]
+    print(res)
+
 else:
-  print(0)
+    print(0)

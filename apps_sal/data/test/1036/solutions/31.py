@@ -16,11 +16,12 @@ def main():
         prev = cur
         cur = [None] * n
         for j in range(n):
-            cur[j] = merge(prev[(j*2) % n], prev[(j*2+1) % n])
+            cur[j] = merge(prev[(j * 2) % n], prev[(j * 2 + 1) % n])
     print((cur[0]))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

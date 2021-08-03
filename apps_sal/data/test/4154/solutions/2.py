@@ -13,5 +13,5 @@ for i in range(M):
 
 if res[1] < res[0]:
     print(0)
-else: 
+else:
     print(res[1] - res[0] + 1)
