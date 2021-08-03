@@ -43,7 +43,8 @@ def algorithm():
             else:
                 h = max_1.height
             result += str(w * h)
-            if i < count - 1: result += ' '
+            if i < count - 1:
+                result += ' '
         print(result)
 
     except BaseException:

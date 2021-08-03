@@ -41,7 +41,8 @@ elif i < max(aa, bb):
     i += ((max(aa, bb) - i) // step + (1 if (max(aa, bb) - i) % step != 0 else 0)) * step
 
 f = (l - i) // step
-if (l - i) % step != 0: f += 1
+if (l - i) % step != 0:
+    f += 1
 f = max(f, 0)
 s = (r - i) // step
 # print(i,step,f,s)

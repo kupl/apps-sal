@@ -37,10 +37,14 @@ B2 = sorted(A[K:N])
 Bp = [i for i in A[0:K] if i > 0]
 Bm = [i for i in A[0:K] if i < 0]
 
-if B2[0] > 0: B2.insert(0, 0)
-if B2[-1] < 0: B2.insert(-1, 0)
-if not Bp: Bp.insert(0, B1[-1])
-if not Bm: Bm.insert(0, B1[0])
+if B2[0] > 0:
+    B2.insert(0, 0)
+if B2[-1] < 0:
+    B2.insert(-1, 0)
+if not Bp:
+    Bp.insert(0, B1[-1])
+if not Bm:
+    Bm.insert(0, B1[0])
 
 B1.remove(Bp[-1])
 B1.append(min(B2[0], 0))
@@ -71,4 +75,5 @@ if ansBB2 == 1:
 
 if abs(Bp[-1] * B2[-1]) - abs(Bm[-1] * B2[0]) >= 0:
     print(ansC)
-else: print(ansB)
+else:
+    print(ansB)

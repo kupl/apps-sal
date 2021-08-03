@@ -5,8 +5,10 @@ a = list(map(int, input().split()))
 aplus, aminus = [], []
 
 for i in range(n):
-    if a[i] >= 0: aplus.append(a[i])
-    else: aminus.append(a[i])
+    if a[i] >= 0:
+        aplus.append(a[i])
+    else:
+        aminus.append(a[i])
 
 
 if len(aplus) == 0 and k % 2 == 1:

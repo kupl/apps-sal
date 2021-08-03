@@ -14,7 +14,8 @@ for i in range(l):
         mi = i
         break
 narr = []
-narr += hwarr; narr.pop(mi)
+narr += hwarr
+narr.pop(mi)
 nmhs = max(narr[n][1] for n in range(l - 1))
 
 for i in range(l):

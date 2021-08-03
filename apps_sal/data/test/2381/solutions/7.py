@@ -13,20 +13,28 @@ elif k % 2 and n == len(nega):
 else:
     # 答えは正
     a = sorted(a, key=lambda x: abs(x), reverse=True)
-    pi = ni = -1; cnt = 0;
+    pi = ni = -1
+    cnt = 0
     for i in range(k):
         v.append(a[i])
-        if a[i] < 0: ni = i; cnt += 1
-        if a[i] > 0: pi = i;
+        if a[i] < 0:
+            ni = i
+            cnt += 1
+        if a[i] > 0:
+            pi = i
     if cnt % 2:
-        mx = max(a[k:]); mn = min(a[k:]);
+        mx = max(a[k:])
+        mn = min(a[k:])
         if pi >= 0 and abs(a[pi] * mx) <= abs(a[ni] * mn):
-            v.append(mn); v.remove(a[pi]);
+            v.append(mn)
+            v.remove(a[pi])
         else:
-            v.append(mx); v.remove(a[ni]);
+            v.append(mx)
+            v.remove(a[ni])
 
 ans = 1
 for i in range(k):
-    ans *= v[i]; ans %= mod;
+    ans *= v[i]
+    ans %= mod
 
 print(ans)

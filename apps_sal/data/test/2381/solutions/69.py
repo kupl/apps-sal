@@ -9,9 +9,11 @@ if A[-1] < 0 and k % 2 == 1:
     for i in range(k):
         now *= A[-i - 1] % mod
         now %= mod
-    print(now); return
+    print(now)
+    return
 
-l = 0; r = n - 1
+l = 0
+r = n - 1
 ans = 1
 if k % 2 == 1:
     ans = A[-1]

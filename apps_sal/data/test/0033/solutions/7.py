@@ -33,8 +33,10 @@ B = -a2
 C = b2 - b1
 g, x0, y0 = [int(i) for i in gcd(abs(A), abs(B))]
 
-if A < 0: x0 *= -1
-if B < 0: y0 *= -1
+if A < 0:
+    x0 *= -1
+if B < 0:
+    y0 *= -1
 
 if C % g != 0:
     print(0)

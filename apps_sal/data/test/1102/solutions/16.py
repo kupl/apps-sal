@@ -12,7 +12,8 @@ if t[a] == 1:
 
 for i in range(1, m + 1):
     s = t[a + i] + t[a - i]
-    if s == 2: res += 2
+    if s == 2:
+        res += 2
     t[a + i], t[a - i] = 0, 0
 
 print(res + sum(t))

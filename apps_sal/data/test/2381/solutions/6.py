@@ -10,8 +10,10 @@ def isort(list, _beg, _end):
         end = _end
         pivot = abs(list[int((beg + end) / 2)])
         while(True):
-            while abs(list[beg]) < pivot: beg += 1
-            while abs(list[end]) > pivot: end -= 1
+            while abs(list[beg]) < pivot:
+                beg += 1
+            while abs(list[end]) > pivot:
+                end -= 1
             if beg <= end:
                 tmp = list[beg]
                 list[beg] = list[end]
@@ -26,13 +28,16 @@ def isort(list, _beg, _end):
 
 def searchByBool(list):
     for i in range(len(list)):
-        if check(list[i]): return i
+        if check(list[i]):
+            return i
     return -1
 
 
 def check(num):
-    if num >= 0: return True
-    else: return False
+    if num >= 0:
+        return True
+    else:
+        return False
 
 
 sp = list(map(int, input().split()))
@@ -47,7 +52,8 @@ alist.reverse()
 
 numMinus = 0
 for i in range(K):
-    if check(alist[i]) == False: numMinus += 1
+    if check(alist[i]) == False:
+        numMinus += 1
 
 # select biggest K numbers in terms of absolute value
 

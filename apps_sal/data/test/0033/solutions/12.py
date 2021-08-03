@@ -10,15 +10,17 @@ def xgcd(b, n):
 
 
 def ffloor(a, b):
-    if(b < 0): return ffloor(-a, -b);
+    if(b < 0):
+        return ffloor(-a, -b)
     return a // b
 
 
 def cceil(a, b):
-    if(b < 0): return cceil(-a, -b);
+    if(b < 0):
+        return cceil(-a, -b)
     if a % b == 0:
         return a // b
-    return a // b + 1;
+    return a // b + 1
 
 
 def main():
@@ -43,18 +45,18 @@ def main():
     x *= fact
     y *= fact
 
-    c1 = a2 // d;
-    c2 = a1 // d;
+    c1 = a2 // d
+    c2 = a1 // d
 
-    tope1 = ffloor(R - b1 - a1 * x, a1 * c1);
-    bajo1 = cceil(L - b1 - a1 * x, c1 * a1);
-    bajo2 = cceil(L - b2 - a2 * y, c2 * a2);
-    tope2 = ffloor(R - b2 - a2 * y, a2 * c2);
+    tope1 = ffloor(R - b1 - a1 * x, a1 * c1)
+    bajo1 = cceil(L - b1 - a1 * x, c1 * a1)
+    bajo2 = cceil(L - b2 - a2 * y, c2 * a2)
+    tope2 = ffloor(R - b2 - a2 * y, a2 * c2)
 
-    bajo3 = max(cceil(-x, c1), cceil(-y, c2));
+    bajo3 = max(cceil(-x, c1), cceil(-y, c2))
 
-    bajo = max(bajo1, bajo2, bajo3);
-    tope = min(tope1, tope2);
+    bajo = max(bajo1, bajo2, bajo3)
+    tope = min(tope1, tope2)
     print(max(0, tope + 1 - bajo))
 
 

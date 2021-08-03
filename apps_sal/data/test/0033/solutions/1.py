@@ -14,7 +14,8 @@ def lcm(a, b):
 
 
 def extgcd(a, b, c):
-    if b == 0: return c, 0
+    if b == 0:
+        return c, 0
     x, y = extgcd(b, a % b, c)
     return y, x - a // b * y
 
@@ -24,7 +25,8 @@ def first_term(a1, b1, a2, b2):
     T = lcm(a1, a2)
 
     # s*a1+t*a2=b2-b1
-    if (b2 - b1) % g != 0: return -(10 ** 100)
+    if (b2 - b1) % g != 0:
+        return -(10 ** 100)
     x0 = extgcd(a1 // g, a2 // g, (b2 - b1) // g)[0] * a1 + b1 - T * 10 ** 30
 
     ok = 10 ** 60

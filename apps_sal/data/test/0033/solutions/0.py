@@ -3,7 +3,8 @@ import collections
 
 
 def gcd(a, b):
-    if b == 0: return a
+    if b == 0:
+        return a
     return gcd(b, a % b)
 
 
@@ -12,7 +13,8 @@ def lcm(a, b):
 
 
 def extgcd(a, b):
-    if b == 0: return 1, 0
+    if b == 0:
+        return 1, 0
     x, y = extgcd(b, a % b)
     return y, x - a // b * y
 
@@ -26,16 +28,20 @@ def prime_factor(n):
         while n % i == 0:
             n //= i
             cnt += 1
-        if cnt > 0: res[i] = cnt
+        if cnt > 0:
+            res[i] = cnt
         i += 1
-    if n != 1: res[n] = 1
+    if n != 1:
+        res[n] = 1
 
     return res
 
 
 def modinv(a, mod):
-    if a == 0: return -1
-    if gcd(a, mod) != 1: return -1
+    if a == 0:
+        return -1
+    if gcd(a, mod) != 1:
+        return -1
     return extgcd(a, mod)[0] % mod
 
 
@@ -57,7 +63,8 @@ def normalize(a1, a2):
 
 def solve(a1, b1, a2, b2):
     g = gcd(a1, a2)
-    if (b1 - b2) % g != 0: return -1
+    if (b1 - b2) % g != 0:
+        return -1
 
     a1, a2 = normalize(a1, a2)
     u = b1 % a1

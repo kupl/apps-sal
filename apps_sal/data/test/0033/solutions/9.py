@@ -1,6 +1,6 @@
 def extgcd(a, b):
     x, y = 0, 0
-    d = a;
+    d = a
     if b != 0:
         d, y, x = extgcd(b, a % b)
         y -= (a // b) * x
@@ -11,8 +11,8 @@ def extgcd(a, b):
 
 def main():
     a1, b1, a2, b2, L, R = map(int, input().split())
-    g, k, l = extgcd(a1, a2);
-    b = b2 - b1;
+    g, k, l = extgcd(a1, a2)
+    b = b2 - b1
     if (b % g != 0):
         print(0)
         return

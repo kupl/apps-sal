@@ -3,16 +3,18 @@ from heapq import heapify, heappush, heappop, heappushpop  # プライオリテ�
 from collections import defaultdict  # 初期化済み辞書
 from collections import deque  # 双方向キュー
 import sys
-s2nn = lambda s: [int(c) for c in s.split(' ')]
-ss2nn = lambda ss: [int(s) for s in ss]
-ss2nnn = lambda ss: [s2nn(s) for s in ss]
-i2s = lambda: sys.stdin.readline().rstrip()
-i2n = lambda: int(i2s())
-i2nn = lambda: s2nn(i2s())
-ii2ss = lambda n: [sys.stdin.readline().rstrip() for _ in range(n)]
-ii2sss = lambda n: [list(sys.stdin.readline().rstrip()) for _ in range(n)]
-ii2nn = lambda n: ss2nn(ii2ss(n))
-ii2nnn = lambda n: ss2nnn(ii2ss(n))
+def s2nn(s): return [int(c) for c in s.split(' ')]
+def ss2nn(ss): return [int(s) for s in ss]
+def ss2nnn(ss): return [s2nn(s) for s in ss]
+def i2s(): return sys.stdin.readline().rstrip()
+def i2n(): return int(i2s())
+def i2nn(): return s2nn(i2s())
+def ii2ss(n): return [sys.stdin.readline().rstrip() for _ in range(n)]
+def ii2sss(n): return [list(sys.stdin.readline().rstrip()) for _ in range(n)]
+def ii2nn(n): return ss2nn(ii2ss(n))
+def ii2nnn(n): return ss2nnn(ii2ss(n))
+
+
 sys.setrecursionlimit(int(1e+6))
 MOD = int(1e+9) + 7
 # import numpy as np  # 1.8.2

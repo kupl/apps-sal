@@ -2,12 +2,15 @@ MOD = (int)(1e9 + 7)
 
 
 def power(a, n):
-    if a == 0: return 0
-    if n == 0: return 1
+    if a == 0:
+        return 0
+    if n == 0:
+        return 1
 
     res = 1
     while n > 0:
-        if n % 2 == 1: res = res * a % MOD
+        if n % 2 == 1:
+            res = res * a % MOD
         a = a * a % MOD
         n //= 2
 
@@ -48,8 +51,10 @@ for i in range(K):
     sign *= B[i][1]
 
 if N == K:
-    if sign >= 0: print(ans)
-    else: print((-ans % MOD))
+    if sign >= 0:
+        print(ans)
+    else:
+        print((-ans % MOD))
     return
 
 if sign < 0:

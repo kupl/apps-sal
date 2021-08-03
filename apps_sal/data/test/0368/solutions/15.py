@@ -24,6 +24,9 @@ for i in range(8):
             w = w + 1
         if j == 'P':
             b = b + 1
-if w < b: print("White")
-elif w > b: print("Black")
-else: print("Draw")
+if w < b:
+    print("White")
+elif w > b:
+    print("Black")
+else:
+    print("Draw")

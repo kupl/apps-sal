@@ -1,24 +1,30 @@
 from collections import Counter
-n, k = list(map(int, input().split())); arr = list(map(int, input().split())); arr.sort(reverse=True)
-absarr = [[abs(i), 1 if i > 0 else -1 if i < 0 else 0] for i in arr]; absarr.sort(reverse=True, key=lambda x: x[0])
+n, k = list(map(int, input().split()))
+arr = list(map(int, input().split()))
+arr.sort(reverse=True)
+absarr = [[abs(i), 1 if i > 0 else -1 if i < 0 else 0] for i in arr]
+absarr.sort(reverse=True, key=lambda x: x[0])
 mod = 10**9 + 7
 
 zeroflag = True if absarr[-1][0] == 0 else False
 posnegarr = Counter([i[1] for i in absarr[:k]])
-pos = posnegarr[1]; neg = posnegarr[-1]
+pos = posnegarr[1]
+neg = posnegarr[-1]
 
 if absarr[k - 1] == 0:
     ans = 0
 elif neg % 2 == 0 or n == k:
     ans = 1
     for i in absarr[:k]:
-        ans *= i[0]; ans %= mod
+        ans *= i[0]
+        ans %= mod
     if n == k and neg % 2 == 1:
         ans = -ans % mod
 else:
     ans = 1
     for i in absarr[:k]:
-        ans *= i[0]; ans %= mod
+        ans *= i[0]
+        ans %= mod
     if pos > 0:
         if absarr[k][0] == 0:
             ans = 0
@@ -45,9 +51,11 @@ else:
         if ans == 0:
             pass
         elif nextpos * backpos > nextneg * backneg:
-            ans *= nextpos * pow(backneg, -1, mod); ans %= mod
+            ans *= nextpos * pow(backneg, -1, mod)
+            ans %= mod
         else:
-            ans *= nextneg * pow(backpos, -1, mod); ans %= mod
+            ans *= nextneg * pow(backpos, -1, mod)
+            ans %= mod
     else:
         nextpos = 0
         tmp = k
@@ -58,12 +66,14 @@ else:
             tmp += 1
         backneg = absarr[k - 1][0]
         if nextpos != 0:
-            ans *= nextpos * pow(backneg, -1, mod); ans %= mod
+            ans *= nextpos * pow(backneg, -1, mod)
+            ans %= mod
         elif zeroflag:
             ans = 0
         else:
             ans = 1
             for i in arr[:k]:
-                ans *= i; ans %= mod
+                ans *= i
+                ans %= mod
 
 print(ans)
