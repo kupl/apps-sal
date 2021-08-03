@@ -11,8 +11,10 @@ def solve():
     for i in range(1, N):
         for h in range(H):
             add = (1 if L <= h <= R else 0)
-            if DP[i - 1][(h - A[i]) % H] > -1: DP[i][h] = max(DP[i][h], DP[i - 1][(h - A[i]) % H] + add)
-            if DP[i - 1][(h - A[i] + 1) % H] > -1: DP[i][h] = max(DP[i][h], DP[i - 1][(h - A[i] + 1) % H] + add)
+            if DP[i - 1][(h - A[i]) % H] > -1:
+                DP[i][h] = max(DP[i][h], DP[i - 1][(h - A[i]) % H] + add)
+            if DP[i - 1][(h - A[i] + 1) % H] > -1:
+                DP[i][h] = max(DP[i][h], DP[i - 1][(h - A[i] + 1) % H] + add)
     print(max(DP[N - 1]))
     return 0
 

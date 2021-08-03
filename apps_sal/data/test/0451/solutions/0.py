@@ -4,9 +4,9 @@ b = list(map(int, input().split()))
 SSSSSSSSSS = input()
 
 INF = 1000 * 1000 * 1000 + 123
-RRRR = [];
-WWWWWWW = [];
-OOOOOOOOO = [];
+RRRR = []
+WWWWWWW = []
+OOOOOOOOO = []
 
 for i in range(n):
     if SSSSSSSSSS[i] == 'R':
@@ -31,8 +31,8 @@ if k == 1:
 
 
 def cccmcmc(A, B):
-    qanakA = len(A);
-    qanakB = len(B);
+    qanakA = len(A)
+    qanakB = len(B)
 
     pA = [0 for i in range(qanakA)]
     pB = [0 for i in range(qanakB)]
@@ -40,16 +40,17 @@ def cccmcmc(A, B):
     pA[0] = A[0]
 
     for i in range(1, qanakA):
-        pA[i] = pA[i - 1] + A[i];
+        pA[i] = pA[i - 1] + A[i]
     for i in range(1, qanakB):
-        pB[i] = pB[i - 1] + B[i];
+        pB[i] = pB[i - 1] + B[i]
 
     res = -1
 
     for i in range(1, min(qanakA + 1, k)):
         aic = pA[i - 1]
         bepetk = k - i
-        if bepetk <= 0 or bepetk > qanakB: continue
+        if bepetk <= 0 or bepetk > qanakB:
+            continue
         bic = pB[bepetk - 1]
         res = max(res, aic + bic)
     return res
