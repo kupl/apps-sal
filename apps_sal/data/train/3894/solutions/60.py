@@ -6,4 +6,3 @@ def solve(s):
         return s.upper()
     else:
         return s.lower()
-

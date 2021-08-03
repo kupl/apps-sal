@@ -1,6 +1,6 @@
 def grader(score):
     grade = None
-    
+
     if score < 0.6 or score > 1:
         grade = 'F'
     else:
@@ -10,7 +10,6 @@ def grader(score):
         if score < 0.8:
             grade = 'C'
         if score < 0.7:
-            grade = 'D'        
-    
-    return grade
+            grade = 'D'
 
+    return grade

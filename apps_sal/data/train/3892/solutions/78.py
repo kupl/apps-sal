@@ -8,5 +8,3 @@ def grader(score):
     elif 1 >= score >= 0.9:
         return "A"
     return "F"
-    
-

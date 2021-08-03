@@ -8,7 +8,7 @@ def solve(s):
         if i in lower_alphabet:
             count_lower = count_lower + 1
         elif i in upper_alphabet:
-            count_upper = count_upper + 1   
+            count_upper = count_upper + 1
     if count_lower >= count_upper:
         s = s.lower()
     else:

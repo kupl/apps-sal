@@ -1,6 +1,6 @@
 def grader(score):
     grade = float(score)
-    if grade >1.0 or grade < 0.6:
+    if grade > 1.0 or grade < 0.6:
         return "F"
     elif grade >= 0.9:
         return "A"
@@ -10,4 +10,3 @@ def grader(score):
         return "C"
     elif grade >= 0.6:
         return "D"
-

@@ -7,4 +7,3 @@ def solution(number):
     for x in multiples:
         sum += x
     return(sum)
-

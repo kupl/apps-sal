@@ -5,5 +5,5 @@ def solve(s):
         if ord(i) < 91:
             h += 1
         else:
-            l +=1
-    return s.upper() if h>l else s.lower()
+            l += 1
+    return s.upper() if h > l else s.lower()

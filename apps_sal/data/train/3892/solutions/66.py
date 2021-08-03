@@ -1,6 +1,6 @@
 def grader(score):
     grade = 'F'
-    if 1 >= score >= 0.9 :
+    if 1 >= score >= 0.9:
         grade = 'A'
     elif 0.9 > score >= 0.8:
         grade = 'B'
@@ -9,4 +9,3 @@ def grader(score):
     elif 0.7 > score >= 0.6:
         grade = 'D'
     return grade
-

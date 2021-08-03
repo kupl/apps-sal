@@ -1,13 +1,12 @@
 def grader(score):
     if score > 1 or score < 0.6:
-      res = 'F'
+        res = 'F'
     elif score >= 0.9:
-      res = 'A'
+        res = 'A'
     elif score >= 0.8:
-      res = 'B'
+        res = 'B'
     elif score >= 0.7:
-      res = 'C'
+        res = 'C'
     elif score >= 0.6:
-      res = 'D'
+        res = 'D'
     return res
-

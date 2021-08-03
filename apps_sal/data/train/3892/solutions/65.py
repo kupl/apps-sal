@@ -9,4 +9,3 @@ def grader(score):
         return "D"
     else:
         return "F"
-

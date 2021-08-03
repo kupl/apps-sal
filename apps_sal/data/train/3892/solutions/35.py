@@ -1,1 +1,1 @@
-grader=lambda s:"FDCBAA"[.5<s<=1and int(10*s)-5]
+def grader(s): return "FDCBAA"[.5 < s <= 1 and int(10 * s) - 5]

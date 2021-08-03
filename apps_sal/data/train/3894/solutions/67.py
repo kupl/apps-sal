@@ -1,5 +1,5 @@
 def solve(s):
-    lower_count = 0 
+    lower_count = 0
     upper_count = 0
     for char in s:
         if char.islower():

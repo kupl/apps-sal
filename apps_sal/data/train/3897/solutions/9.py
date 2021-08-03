@@ -14,4 +14,3 @@ def solve(n,
         end -= 1
 
     return result[k]
-

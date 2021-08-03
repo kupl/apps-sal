@@ -10,4 +10,3 @@ def solve(s):
         return s.lower()
     else:
         return s.upper()
-

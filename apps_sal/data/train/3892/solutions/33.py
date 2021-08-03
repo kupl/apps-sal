@@ -5,4 +5,3 @@ def grader(score):
     for minimum, letter in zip([0.9, 0.8, 0.7, 0.6], list('ABCD')):
         if score >= minimum:
             return letter
-

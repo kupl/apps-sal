@@ -11,4 +11,3 @@ def grader(score: int):
         return 'D'
     else:
         return 'F'
-

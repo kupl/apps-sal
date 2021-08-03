@@ -5,11 +5,9 @@ def solve(s):
         if i.isupper() == True:
             upper += 1
         else:
-            lower += 1  
+            lower += 1
     if upper > lower:
         s = s.upper()
     else:
         s = s.lower()
     return(s)
-
-

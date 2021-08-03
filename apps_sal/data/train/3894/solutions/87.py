@@ -5,5 +5,3 @@ def solve(s):
         return s.upper()
     elif count_lower >= count_upper:
         return s.lower()
-    
-

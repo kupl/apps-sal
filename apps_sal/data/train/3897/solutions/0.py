@@ -16,4 +16,3 @@ def solve(count, ball_number):
     for idx in range(count):
         balls = balls[:idx] + balls[idx:][::-1]
     return balls.index(ball_number)
-
