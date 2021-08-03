@@ -1,5 +1,6 @@
 def digits_product(product):
-    if product < 10: return 10 + product
+    if product < 10:
+        return 10 + product
     a = ''
     while product > 1:
         for i in range(9, 1, -1):
@@ -7,5 +8,6 @@ def digits_product(product):
                 a += str(i)
                 product //= i
                 break
-        else:return -1
+        else:
+            return -1
     return int(a[::-1])

@@ -9,6 +9,6 @@ def human_years_cat_years_dog_years(human_years):
         cat_years = 28
         dog_years = 29
     else:
-        cat_years = 28 + (human_years-3)*4
-        dog_years = 29 + (human_years-3)*5
+        cat_years = 28 + (human_years - 3) * 4
+        dog_years = 29 + (human_years - 3) * 5
     return [human_years, cat_years, dog_years]

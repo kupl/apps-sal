@@ -11,4 +11,4 @@ def human_years_cat_years_dog_years(human):
         n = human - 2
         cat += n * 4
         dog += n * 5
-    return [human,cat,dog]
+    return [human, cat, dog]

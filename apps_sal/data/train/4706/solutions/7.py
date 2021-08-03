@@ -1,6 +1,7 @@
 def split_exp(n):
     o = n.index(".") if "." in n else len(n)
-    split = lambda i, c: "{}{}{}".format(
+
+    def split(i, c): return "{}{}{}".format(
         "" if o - i > 0 else ".{}".format("0" * (- (o - i + 1))),
         c,
         "0" * (o - i - 1))

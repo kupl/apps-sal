@@ -1,5 +1,6 @@
 from math import log2
 
+
 def sequence(i):
     if i == 0:
         return 0

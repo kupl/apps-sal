@@ -8,4 +8,4 @@ def human_years_cat_years_dog_years(h):
     else:
         c = 24 + (h - 2) * 4
         d = 24 + (h - 2) * 5
-    return [h,c,d]
+    return [h, c, d]

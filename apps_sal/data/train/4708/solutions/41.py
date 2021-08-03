@@ -6,8 +6,8 @@ def human_years_cat_years_dog_years(human_years):
         catYears = 24
         dogYears = 24
     elif human_years > 2:
-        catYears = 24 + ((human_years - 2)*4)
-        dogYears = 24 + ((human_years - 2)*5)
+        catYears = 24 + ((human_years - 2) * 4)
+        dogYears = 24 + ((human_years - 2) * 5)
     years = []
     years.append(human_years)
     years.append(catYears)
