@@ -21,10 +21,13 @@ def q(x):
 
 
 for w, u, v in e:
-    u = q(u); v = q(v)
+    u = q(u)
+    v = q(v)
     if u != v:
         if u % 5 == 3:
             u, v = v, u
-        p[u] = v; z[v] += z[u]
+        p[u] = v
+        z[v] += z[u]
         if z[v] == k:
-            print((str(w) + ' ') * k); return
+            print((str(w) + ' ') * k)
+            return

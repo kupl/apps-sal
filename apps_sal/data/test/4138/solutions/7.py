@@ -1,6 +1,7 @@
 
 def foo(x: int):
-    if x <= 0: return 0
+    if x <= 0:
+        return 0
     a = len(str(x))
     ret = a * (x * x + x) // 2
 
@@ -19,7 +20,8 @@ def foo(x: int):
 
 
 def bar(x: int):
-    if x <= 0: return 0
+    if x <= 0:
+        return 0
     a = len(str(x))
     ret = a * x
 

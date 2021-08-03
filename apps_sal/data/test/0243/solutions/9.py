@@ -13,7 +13,7 @@ def find(x):
 
 def merge(u, v):
     u, v = map(find, (u, v))
-    f[u] = v;
+    f[u] = v
     if u == v:
         return False
     ret = s[u] > 0 and s[v] > 0

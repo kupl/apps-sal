@@ -4,7 +4,8 @@ p = set(t)
 p.discard(0)
 for i in p:
     k = t.count(i)
-    if k == 2: s += 1
+    if k == 2:
+        s += 1
     elif k > 2:
         s = -1
         break

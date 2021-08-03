@@ -41,7 +41,8 @@ def union(e):
 ans = 0
 for e in edges:
     a, b = find(e[1]), find(e[2])
-    if a == b: continue
+    if a == b:
+        continue
     if is_special[a] and is_special[b]:
         ans = e[0]
     union(e)

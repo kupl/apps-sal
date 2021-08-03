@@ -7,14 +7,16 @@ class Union:
             self.rank[k] = 1
 
     def find(self, x):
-        if x < 0: return x
+        if x < 0:
+            return x
 
         if self.p[x] != x:
             self.p[x] = self.find(self.p[x])
         return self.p[x]
 
     def union(self, x, y):
-        if x < 0 or y < 0: return
+        if x < 0 or y < 0:
+            return
 
         x = self.find(x)
         y = self.find(y)
@@ -41,7 +43,8 @@ U = Union(n, list_k)
 val = 0
 
 for u, v, w in edge:
-    if u == v: continue
+    if u == v:
+        continue
 
     par_1 = U.find(u)
     par_2 = U.find(v)

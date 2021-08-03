@@ -9,10 +9,14 @@ while (i < n):
     j = 0
     while (j < m):
         if (str[j] == '*'):
-            if (minv > i): minv = i
-            if (maxv < i): maxv = i
-            if (ming > j): ming = j
-            if (maxg < j): maxg = j
+            if (minv > i):
+                minv = i
+            if (maxv < i):
+                maxv = i
+            if (ming > j):
+                ming = j
+            if (maxg < j):
+                maxg = j
         j += 1
     i += 1
 if ((maxv - minv) > (maxg - ming)):

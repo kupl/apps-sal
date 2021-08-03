@@ -37,7 +37,8 @@ def union(a, b):
 ans = 0
 for e in edges:
     a, b = find(e[1]), find(e[2])
-    if a == b: continue
+    if a == b:
+        continue
     if a in sp and b in sp:
         ans = e[0]
     union(a, b)

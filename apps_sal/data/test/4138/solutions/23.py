@@ -24,7 +24,7 @@ def digit_count(i):
 def cumulative_digit_count(i):
     if i == 0:
         return 0
-    d = digits(i);
+    d = digits(i)
     base = 10**(d - 1) - 1
     return cumulative_digit_count(base) + digit_count(base) * (i - base) + d * sumnum(base + 1, i + 1) - d * (base) * (i - base)
 
@@ -36,7 +36,7 @@ def bin_search(k, f):
     upper = 10**(d - 1) - 1
     lower = 10**(d - 2) - 1
     while upper - lower > 1:
-        middle = (lower + upper) // 2;
+        middle = (lower + upper) // 2
         if f(middle) > k:
             upper = middle
         else:

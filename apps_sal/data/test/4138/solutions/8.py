@@ -13,7 +13,8 @@ def solve(k):
         if s > 10**18:
             break
     k -= s
-    left = 0; right = 9 * 10**(j - 1) + 1
+    left = 0
+    right = 9 * 10**(j - 1) + 1
     while left + 1 < right:
         mid = (left + right) // 2
         if cur * mid + mid * (mid + 1) // 2 * j <= k:
