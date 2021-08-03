@@ -3,8 +3,8 @@ def is_palindrome(string):
     for i in str(string):
         word = i + word
     return str(string) == word
-        
-    
+
+
 # import functools
 # def palindrome(string):
 #     rev = functools.reduce(lambda a, b: b + a, str(string))
@@ -14,4 +14,3 @@ def is_palindrome(string):
 #     string = str(string)
 #     return string == string[::-1]
 # print(palindrome(12321))
-

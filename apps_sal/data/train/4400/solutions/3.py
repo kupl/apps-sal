@@ -5,4 +5,3 @@ def minimum_steps(n, v):
             return c
         else:
             k += sorted(n)[c + 1]
-

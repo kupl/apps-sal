@@ -11,4 +11,3 @@ def is_palindrome(string):
         end -= 1
 
     return True
-

@@ -6,5 +6,6 @@ def is_palindrome(string):
         if str(string)[start] == str(string)[end]:
             start += 1
             end -= 1
-        else: palindrome = False
+        else:
+            palindrome = False
     return True if palindrome is True else False

@@ -4,4 +4,3 @@ def solve(st):
         return True
     else:
         return False
-

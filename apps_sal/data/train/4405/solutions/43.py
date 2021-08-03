@@ -1,5 +1,6 @@
 import math
 
+
 def is_palindrome(string):
     new_string = str(string)
     last_element = len(new_string) - 1
@@ -9,4 +10,3 @@ def is_palindrome(string):
             return False
         last_element = last_element - 1
     return True
-

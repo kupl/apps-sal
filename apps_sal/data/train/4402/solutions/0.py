@@ -1,4 +1,5 @@
 import string
 
+
 def solve(st):
-  return ''.join(sorted(st)) in string.ascii_letters
+    return ''.join(sorted(st)) in string.ascii_letters
