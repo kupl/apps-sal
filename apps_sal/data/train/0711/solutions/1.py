@@ -27,7 +27,7 @@ def solve(S):
     # A substring S[i:j] has a parity of S[:j] ^ S[:i].
     # a ^ b = c implies a ^ c = b.
     # If S[:j] ^ a good_Rs = some S[:i] then S[i:j] is a good substring.
-    # So if we keep track of the S[:i] that we have already seen and 
+    # So if we keep track of the S[:i] that we have already seen and
     # at each j check each good_Rs to see if it matches previous S[:j]s
     # that we have cached.  Note: a subtring parity may occur more than once.
     prefix_parities = dict()
@@ -61,5 +61,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()
