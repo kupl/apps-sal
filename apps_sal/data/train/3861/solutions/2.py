@@ -12,4 +12,3 @@ def translate(group):
     word, repeat = group[0], len(tuple(group[1])) - 1
     base, more = {"FURY": ("I am {}furious.", "really "), "FIRE": ("You {}are fired!", "and you ")}[word]
     return base.format(more * repeat)
-

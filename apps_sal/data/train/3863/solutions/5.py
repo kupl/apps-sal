@@ -1,1 +1,5 @@
-from functools import reduce; gcd=lambda a,b: gcd(b,a%b) if b else a; final_attack_value=lambda x,m: reduce(lambda a,b: a+b if a>=b else a+gcd(a,b),m,x)
+from functools import reduce
+def gcd(a, b): return gcd(b, a % b) if b else a
+
+
+def final_attack_value(x, m): return reduce(lambda a, b: a + b if a >= b else a + gcd(a, b), m, x)
