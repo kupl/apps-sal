@@ -3,4 +3,3 @@ for t in range(int(input())):
     l = max(x, a - 1 - x)
     h = max(y, b - 1 - y)
     print(max(l * b, h * a))
-

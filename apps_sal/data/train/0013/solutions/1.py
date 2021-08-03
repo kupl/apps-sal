@@ -6,4 +6,3 @@ for _ in range(int(input())):
     if half % g != 0:
         ans += b + half % g
     print(max(ans, n))
-

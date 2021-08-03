@@ -9,12 +9,13 @@ def main():
 
     for _ in range(int(input())):
         N = int(input())
-        NN = N*2
+        NN = N * 2
 
         print(cos(pi / NN) / sin(pi / NN))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

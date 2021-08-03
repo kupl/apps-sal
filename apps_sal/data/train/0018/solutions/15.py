@@ -15,4 +15,3 @@ for case_num in range(t):
     angle = pi / n / 2
     r = 1 / tan(angle)
     print('{:.9f}'.format(r))
-

@@ -50,4 +50,3 @@ while t > 0:
             # print(i, c, minX, maxX, minY, maxY, area)
             ans = min(ans, area)
     print(ans)
-

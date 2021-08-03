@@ -20,7 +20,7 @@ for u in range(t):
         if a[i] in b:
             b[a[i]] += 1
         else:
-            b[a[i]] = 1     
+            b[a[i]] = 1
         c.add(a[i])
         ans = min(ans, len(c))
         i += 1

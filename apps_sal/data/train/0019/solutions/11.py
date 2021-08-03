@@ -21,9 +21,6 @@ def check(m):
         return 0
 
 
-
-
-
 q = int(input())
 for i in range(q):
     n, k, d = map(int, input().split())

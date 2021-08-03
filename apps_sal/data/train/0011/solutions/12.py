@@ -4,21 +4,21 @@ for _ in range(T):
     cmd = input()
 
     mostL, mostR, mostB, mostT = 0, 0, 0, 0
-    mostLs, mostRs, mostBs, mostTs = [0],[0],[0],[0]
-    x,y=0,0
+    mostLs, mostRs, mostBs, mostTs = [0], [0], [0], [0]
+    x, y = 0, 0
     i = 0
     for c in cmd:
         i += 1
         if c == "W":
             y += 1
-            if y>mostT:
+            if y > mostT:
                 mostT = y
                 mostTs = [i]
             elif y == mostT:
                 mostTs.append(i)
         elif c == "S":
             y -= 1
-            if y<mostB:
+            if y < mostB:
                 mostB = y
                 mostBs = [i]
             elif y == mostB:
@@ -59,11 +59,11 @@ for _ in range(T):
         BT_extra = False
 
     if LR_extra and BT_extra:
-        area = min((LR-1)*BT,LR*(BT-1))
+        area = min((LR - 1) * BT, LR * (BT - 1))
     elif LR_extra:
-        area = (LR-1)*BT
+        area = (LR - 1) * BT
     elif BT_extra:
-        area = LR*(BT-1)
+        area = LR * (BT - 1)
     else:
-        area = LR*BT
+        area = LR * BT
     print(area)

@@ -21,4 +21,3 @@ for _ in range(int(input())):
             now[a[i]] = 1
     ans = min(ans, len(now))
     print(ans)
-

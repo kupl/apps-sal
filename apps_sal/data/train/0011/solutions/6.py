@@ -1,7 +1,7 @@
+import math
 import sys
 from collections import defaultdict
 input = sys.stdin.readline
-import math
 
 
 def main():
@@ -20,9 +20,9 @@ def main():
         pref_a1 = [0] + a1.copy()
         pref_a2 = [0] + a2.copy()
         for i in range(1, len(pref_a1)):
-            pref_a1[i] += pref_a1[i-1]
+            pref_a1[i] += pref_a1[i - 1]
         for i in range(1, len(pref_a2)):
-            pref_a2[i] += pref_a2[i-1]
+            pref_a2[i] += pref_a2[i - 1]
 
         def canDecrease(a):
             _min = min(a)
@@ -48,13 +48,13 @@ def main():
 
             return False
 
-        x = max(pref_a1)-min(pref_a1)
-        y = max(pref_a2)-min(pref_a2)
-        res = (x+1) * (y+1)
+        x = max(pref_a1) - min(pref_a1)
+        y = max(pref_a2) - min(pref_a2)
+        res = (x + 1) * (y + 1)
         if x > 1 and canDecrease(pref_a1):
-            res = min(res, x * (y+1))
+            res = min(res, x * (y + 1))
         if y > 1 and canDecrease(pref_a2):
-            res = min(res, (x+1) * y)
+            res = min(res, (x + 1) * y)
 
         print(res)
 

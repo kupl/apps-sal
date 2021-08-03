@@ -8,7 +8,3 @@ for _ in range(TC):
         (b - y - 1) * a,
         (a - x - 1) * b
     )))
-
-
-
-

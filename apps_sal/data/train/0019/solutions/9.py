@@ -10,9 +10,9 @@ def main():
         rezline[l[i]] += 1
     rez_p = rez
     for i in range(d, n):
-        if rezline[l[i-d]] == 1:
+        if rezline[l[i - d]] == 1:
             rez_p -= 1
-        rezline[l[i-d]] -= 1
+        rezline[l[i - d]] -= 1
         if rezline.get(l[i]) in [0, None]:
             rez_p += 1
             rezline[l[i]] = 1
@@ -25,4 +25,3 @@ def main():
 t = int(input())
 for i in range(t):
     main()
-

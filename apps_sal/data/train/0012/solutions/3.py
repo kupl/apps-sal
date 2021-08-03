@@ -1,7 +1,6 @@
 from math import *
 
 
-
 for t in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -29,19 +28,3 @@ for t in range(int(input())):
         print("YES")
     else:
         print("NO")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

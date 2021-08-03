@@ -9,4 +9,3 @@ for i in range(int(input())):
         a += x
         ans += sin(a)
     print(ans)
-

@@ -7,5 +7,5 @@ Q = int(input())
 Query = [int(input()) for _ in range(Q)]
 
 for N in Query:
-    if N%2 == 0:
-        print(1/math.tan(math.pi/(N*2)))
+    if N % 2 == 0:
+        print(1 / math.tan(math.pi / (N * 2)))

@@ -24,4 +24,3 @@ for _ in range(t):
         j += 1
         ans = min(ans, len(used))
     print(ans)
-

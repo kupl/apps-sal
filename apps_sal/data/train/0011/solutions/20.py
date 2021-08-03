@@ -55,4 +55,3 @@ for case_num in range(t):
             area = (nr - nl + 1) * (nu - nd + 1)
             ans = min(ans, area)
     print(ans)
-

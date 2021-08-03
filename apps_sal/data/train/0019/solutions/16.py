@@ -14,4 +14,3 @@ for _ in range(int(input())):
             cnt[a[i]] = cnt.get(a[i], 0) + 1
             mlen = min(mlen, len(cnt))
     print(mlen)
-

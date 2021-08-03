@@ -21,4 +21,3 @@ for case_num in range(t):
         if a[i] > 0:
             pos = True
     print('YES' if ok else 'NO')
-

@@ -1,28 +1,28 @@
 t = int(input())
 for _ in range(t):
     ss = input()
-    minx=0
+    minx = 0
     fminxpos = -1
     lminxpos = -1
-    maxx=0
+    maxx = 0
     fmaxxpos = -1
     lmaxxpos = -1
-    miny=0
+    miny = 0
     fminypos = -1
     lminypos = -1
-    maxy=0
+    maxy = 0
     fmaxypos = -1
     lmaxypos = -1
     x = 0
     y = 0
-    for i,s in enumerate(ss):
+    for i, s in enumerate(ss):
         if s == 'W':
-            y +=1
+            y += 1
             if y > maxy:
-                maxy=y
-                fmaxypos=i
+                maxy = y
+                fmaxypos = i
             if y == maxy:
-                lmaxypos=i
+                lmaxypos = i
         elif s == 'S':
             y -= 1
             if y < miny:
@@ -56,4 +56,4 @@ for _ in range(t):
         ymin = ysize - 1
     else:
         ymin = ysize
-    print(min(xmin*ysize, xsize*ymin))
+    print(min(xmin * ysize, xsize * ymin))

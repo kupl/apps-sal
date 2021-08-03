@@ -16,7 +16,7 @@ for i in range(int(input())):
                     m += 1
                 di[a[j]] += 1
             n2 += 1
-        else:           
+        else:
             if di[a[j - d]] == 1:
                 di[a[j - d]] = 0
                 m -= 1
@@ -32,4 +32,3 @@ for i in range(int(input())):
         if n2 == d and m < m2:
             m2 = m
     print(m2)
-
