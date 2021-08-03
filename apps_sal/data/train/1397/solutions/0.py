@@ -5,9 +5,9 @@ def mForMaxSeq(arr, n):
             eim[arr[i]].append(i)
         else:
             eim[arr[i]] = [i]
-    
+
     keys = sorted(eim.keys())
-    
+
     # print(eim, keys)
 
     connected = False
@@ -15,13 +15,13 @@ def mForMaxSeq(arr, n):
     pI = -1
 
     nKeys = len(keys)
-    for i in range(nKeys-1):
-        
+    for i in range(nKeys - 1):
+
         if not connected:
             pI = eim[keys[i]][0]
-            
-            for idx in eim[keys[i+1]]:
-                if idx >pI:
+
+            for idx in eim[keys[i + 1]]:
+                if idx > pI:
                     connected = True
                     count += 1
                     pI = idx
@@ -29,14 +29,13 @@ def mForMaxSeq(arr, n):
         else:
             connected = False
 
-            for idx in eim[keys[i+1]]:
+            for idx in eim[keys[i + 1]]:
                 if idx > pI:
                     connected = True
                     count += 1
                     pI = idx
                     break
 
-    
     return (nKeys - count)
 
 
@@ -44,9 +43,8 @@ def __starting_point():
     for _ in range(int(input())):
         n = int(input())
         arr = list(map(int, input().split()))
-        
+
         print(mForMaxSeq(arr, n))
-        
-        
+
 
 __starting_point()

@@ -23,4 +23,3 @@ for T in range(int(input())):
             M += 1
             prev_index = d[elements[i]][0]
     print(M)
-

@@ -1,11 +1,11 @@
 # cook your dish here
-t = 0 
+t = 0
 try:
- t = int(input())
+    t = int(input())
 except:
- pass
+    pass
 
 for _ in range(t):
- a = input()
- 
- print(len(set(a)))
+    a = input()
+
+    print(len(set(a)))

@@ -10,26 +10,29 @@ def main():
     out = sys.stdout.write
     # sys.setrecursionlimit(100000)
     INF = int(1e9)
-    mod = int(1e9)+7
+    mod = int(1e9) + 7
 
     for t in range(int(data())):
-        n=int(data())
-        A=mdata()
-        d=dd(list)
+        n = int(data())
+        A = mdata()
+        d = dd(list)
         for i in range(n):
             d[A[i]].append(i)
-        l=sorted(d.keys())
-        cnt=1
-        ind=d[l[0]][0]
-        for i in range(1,len(l)):
-            k=bl(d[l[i]],ind)
-            if k==len(d[l[i]]):
-                cnt+=1
-                ind=d[l[i]][0]
+        l = sorted(d.keys())
+        cnt = 1
+        ind = d[l[0]][0]
+        for i in range(1, len(l)):
+            k = bl(d[l[i]], ind)
+            if k == len(d[l[i]]):
+                cnt += 1
+                ind = d[l[i]][0]
             else:
-                ind=d[l[i]][k]
+                ind = d[l[i]][k]
         print(cnt)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

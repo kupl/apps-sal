@@ -1,7 +1,7 @@
+from bisect import bisect_right
 from sys import stdin
 input = stdin.readline
 
-from bisect import bisect_right
 
 for _ in range(int(input())):
     n = int(input())
@@ -18,13 +18,12 @@ for _ in range(int(input())):
     p = 0
 
     for i in range(len(l) - 1):
-        x = bisect_right(l[i+1], l[i][p])
+        x = bisect_right(l[i + 1], l[i][p])
 
-        if x == len(l[i+1]):
+        if x == len(l[i + 1]):
             ans += 1
             p = 0
         else:
             p = x
 
     print(ans)
-

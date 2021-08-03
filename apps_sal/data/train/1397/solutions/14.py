@@ -29,7 +29,7 @@ for _ in range(t):
     li.sort()
     count = 1
     prev = 0
-    i=len(li)
+    i = len(li)
     for i in range(len(li)):
         x = bs(li[i], prev, pict)
         if x != -1:
@@ -38,4 +38,3 @@ for _ in range(t):
             count += 1
             prev = pict[li[i]][0]
     print(count)
-
