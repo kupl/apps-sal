@@ -1,1 +1,1 @@
-find_multiples = lambda i, l: list(range(i, l + 1, i))
+def find_multiples(i, l): return list(range(i, l + 1, i))

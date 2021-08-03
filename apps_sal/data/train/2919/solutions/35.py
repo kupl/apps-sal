@@ -3,7 +3,7 @@ def encode(message, key):
     alphabet = list(alphabet)
     letters_numbers = {}
     for i in range(len(alphabet)):
-        dict_ = {alphabet[i]: i+1}
+        dict_ = {alphabet[i]: i + 1}
         letters_numbers.update(dict_)
     message_numbers = []
     for j in message:
@@ -18,6 +18,3 @@ def encode(message, key):
         message_encoded = message_numbers[l] + int(key[l])
         final_message_encoded.append(message_encoded)
     return final_message_encoded
-
-
-

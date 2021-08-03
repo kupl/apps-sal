@@ -1,5 +1,5 @@
 def encode(message, key):
-    val =  [ord(i) - 96 for i in message]
+    val = [ord(i) - 96 for i in message]
     check = str(key)
     index = 0
     for idx, i in enumerate(val):

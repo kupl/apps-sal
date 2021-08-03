@@ -1,9 +1,10 @@
 import string
-import numpy as np 
+import numpy as np
 
 alpha = list(string.ascii_lowercase)
-values = list(range(1,27))
+values = list(range(1, 27))
 dictionary = dict(zip(alpha, values))
+
 
 def encode(word, old_key):
     key = [int(x) for x in str(old_key)]

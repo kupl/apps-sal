@@ -1,5 +1,5 @@
 def encode(message, key):
-    key = list(str(key) * (len(message)//len(str(key))+1)) if len(str(key)) < len(message) else list(str(key))
+    key = list(str(key) * (len(message) // len(str(key)) + 1)) if len(str(key)) < len(message) else list(str(key))
     encode_list = []
     key_index = 0
     for i in list(message):

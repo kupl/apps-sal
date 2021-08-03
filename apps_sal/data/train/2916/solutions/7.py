@@ -9,5 +9,5 @@ def mutually_exclusive(dice, call1, call2):
     if sum(prob_of_each_roll) != 1:
         return
     else:
-        total_prob = round((p1 + p2),2)
+        total_prob = round((p1 + p2), 2)
         return ("{:.2f}".format(total_prob))

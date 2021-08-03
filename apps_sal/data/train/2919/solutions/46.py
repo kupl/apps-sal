@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def encode(message, key):
     out = []
     key = deque(map(int, str(key)))

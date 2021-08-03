@@ -3,6 +3,5 @@ def find_multiples(integer, limit):
     n = integer
     while n <= limit:
         mas.append(n)
-        n += integer    
-    return mas    
-
+        n += integer
+    return mas

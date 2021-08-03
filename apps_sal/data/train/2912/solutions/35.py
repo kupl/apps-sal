@@ -1,6 +1,6 @@
 def find_multiples(integer, limit):
     divizor = []
-    for i in range(limit+1):
+    for i in range(limit + 1):
         if i < integer:
             pass
         else:

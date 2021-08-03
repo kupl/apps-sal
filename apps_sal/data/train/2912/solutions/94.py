@@ -7,4 +7,3 @@ def find_multiples(integer, limit):
         number += 1
         temp = integer * number
     return result
-

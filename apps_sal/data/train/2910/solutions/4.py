@@ -1,1 +1,1 @@
-small_enough = lambda a, limit: max(a)<=limit
+def small_enough(a, limit): return max(a) <= limit
