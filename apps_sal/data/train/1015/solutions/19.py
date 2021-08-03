@@ -5,7 +5,7 @@ for _ in range(int(input())):
     count = 1
     for i in range(k):
         for j in range(k):
-            s += str(count*2)
+            s += str(count * 2)
             count += 1
         print(s)
         s = ""
