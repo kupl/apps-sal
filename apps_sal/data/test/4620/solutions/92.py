@@ -4,8 +4,11 @@ from bisect import bisect_left as bileft, bisect_right as biright
 from functools import lru_cache
 from math import sqrt, ceil
 import sys
-mod = 10**9 + 7; inf = float("inf")
-input = lambda: sys.stdin.readline().strip()
+mod = 10**9 + 7
+inf = float("inf")
+def input(): return sys.stdin.readline().strip()
+
+
 sys.setrecursionlimit(11451419)
 #Decimal((str(0.5)).quantize(Decimal('0'), rounding=ROUND_HALF_UP))
 #メモ化再帰defの冒頭に毎回 @lru_cache(maxsize=10**10)
@@ -17,7 +20,9 @@ sys.setrecursionlimit(11451419)
 n = int(input())
 A = [list(map(int, input().split())) for i in range(n - 1)]
 for i in range(n):
-    if i == n - 1: print((0)); return
+    if i == n - 1:
+        print((0))
+        return
     now = 0
     for l in A[i:]:
         c, s, f = l

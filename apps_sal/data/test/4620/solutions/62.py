@@ -1,6 +1,6 @@
 def main():
     import sys
-    input = lambda: sys.stdin.readline().strip()
+    def input(): return sys.stdin.readline().strip()
 
     N = int(input())
     # C:所要時間,S:開始後,F:間隔

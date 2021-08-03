@@ -1,8 +1,9 @@
 import sys
 input = sys.stdin.readline
-rInt = lambda: int(input())
-mInt = lambda: list(map(int, input().split()))
-rLis = lambda: list(map(int, input().split()))
+def rInt(): return int(input())
+def mInt(): return list(map(int, input().split()))
+def rLis(): return list(map(int, input().split()))
+
 
 t = rInt()
 for _ in range(t):

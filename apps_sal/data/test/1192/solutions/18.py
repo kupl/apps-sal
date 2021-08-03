@@ -1,5 +1,7 @@
-f = lambda: map(int, input().split())
-g = lambda k: k * k - k >> 1
+def f(): return map(int, input().split())
+def g(k): return k * k - k >> 1
+
+
 n, k = f()
 p = list(f())
 
@@ -7,8 +9,10 @@ a = [[0] * n for i in range(n)]
 
 for i in range(n):
     for j in range(i + 1, n):
-        if p[i] > p[j]: a[i][j] = 1
-        else: a[j][i] = 1
+        if p[i] > p[j]:
+            a[i][j] = 1
+        else:
+            a[j][i] = 1
 
 for t in range(k):
     b = [[0] * n for i in range(n)]
@@ -41,5 +45,6 @@ for t in range(k):
 
 s = 0
 for i in range(n):
-    for j in range(i + 1, n): s += a[i][j]
+    for j in range(i + 1, n):
+        s += a[i][j]
 print(s)

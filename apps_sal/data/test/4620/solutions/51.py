@@ -16,7 +16,8 @@ def theta(x):  # ヘヴィサイドの段差関数
 def DptTimeAtNextSt(i, T):  # 時刻Tに駅iを出発した時、駅i+1を出発する時間
     nonlocal C, S, F
     arrT = T + C[i]
-    if i == N - 2: return arrT
+    if i == N - 2:
+        return arrT
     return S[i + 1] + np.ceil(theta(arrT - S[i + 1]) / F[i + 1]) * F[i + 1]
 
 

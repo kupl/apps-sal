@@ -9,9 +9,11 @@ for _ in range(n - 1):
 for i in range(n - 1):
     temp = s[i] + c[i]
     for j in range(i + 1, n - 1):
-        if temp <= s[j]: temp = s[j] + c[j]
+        if temp <= s[j]:
+            temp = s[j] + c[j]
         else:
-            if (temp - s[j]) % f[j] == 0: temp += c[j]
+            if (temp - s[j]) % f[j] == 0:
+                temp += c[j]
             else:
                 k = (temp - s[j]) // f[j] + 1
                 temp = s[j] + k * f[j] + c[j]

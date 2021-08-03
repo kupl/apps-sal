@@ -40,7 +40,8 @@ def main():
             if d[e.fr] != INF and d[e.to] > d[e.fr] + e.cost:
                 d[e.to] = d[e.fr] + e.cost
                 update = True
-        if not update: break
+        if not update:
+            break
     print((-d[N - 1]))
 
     return

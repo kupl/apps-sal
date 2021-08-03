@@ -6,4 +6,5 @@ for i in range(N - 1):
     for j in range(i):
         l[j] = max(l[j], s, -(-l[j] // f) * f) + c
 
-for i in l: print(i)
+for i in l:
+    print(i)

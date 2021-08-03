@@ -9,7 +9,8 @@ for i in range(N - 1):
         # print('D',ans,nc,ns,nf,(ans-ns)%nf)
         ans = max(ans, ns)
         m = (ans - ns) % nf
-        if m != 0: ans += nf - m
+        if m != 0:
+            ans += nf - m
         # print('D',ans,nc,ns,nf,(ans-ns)%nf)
         ans += nc
     print(ans)

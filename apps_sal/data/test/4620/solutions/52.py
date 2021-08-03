@@ -11,7 +11,9 @@ for i in range(n):
         if t <= s:
             t = s + c
         else:
-            if t % f == 0: w = 0
-            else: w = f - t % f
+            if t % f == 0:
+                w = 0
+            else:
+                w = f - t % f
             t = t + w + c
     print(t)

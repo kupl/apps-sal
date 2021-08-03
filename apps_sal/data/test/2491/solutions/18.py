@@ -19,7 +19,8 @@ def bellman_ford():  # ﾌﾍｲﾛ検出
 
     for i in range(n):
         for edge in g[i]:
-            if(dist[i] == inf): continue
+            if(dist[i] == inf):
+                continue
             if(dist[i] + edge[1] < dist[edge[0]]):
                 dist[edge[0]] = dist[i] + edge[1]
                 neg[edge[0]] = 1

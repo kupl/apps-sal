@@ -9,7 +9,8 @@ for i in range(n):
     for a, b, cost in e:
         if v[a - 1] + cost > v[b - 1]:
             v[b - 1] = v[a - 1] + cost
-    if tmp != v[-1] and i == n - 1: break
+    if tmp != v[-1] and i == n - 1:
+        break
 else:
     print((v[n - 1]))
     return

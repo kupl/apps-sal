@@ -8,7 +8,8 @@ def Bellman_Ford(s, g, inf=1 << 60):
         not_updated = True
         for v in range(N):
             for u, c in g[v]:
-                if (dist[v] == inf) or (dist[v] + c >= dist[u]): continue
+                if (dist[v] == inf) or (dist[v] + c >= dist[u]):
+                    continue
                 dist[u] = dist[v] + c
                 not_updated = False
 
@@ -21,10 +22,12 @@ def Bellman_Ford(s, g, inf=1 << 60):
         not_updated = True
         for v in range(N):
             for u, c in g[v]:
-                if (dist[v] == inf) or (dist[v] + c >= dist[u]): continue
+                if (dist[v] == inf) or (dist[v] + c >= dist[u]):
+                    continue
                 dist[u] = dist[v] + c
                 not_updated = False
-        if not_updated: break
+        if not_updated:
+            break
 
     if ret == dist[N - 1]:
         return -ret

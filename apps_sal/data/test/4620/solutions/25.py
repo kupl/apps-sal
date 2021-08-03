@@ -6,9 +6,11 @@ for i in range(N):
     A = q + p
     for j in range(i + 1, N):
         c, s, f = C[j]
-        if A < s: A = s
+        if A < s:
+            A = s
         m = (A - s) % f
-        if m != 0: A += f - m
+        if m != 0:
+            A += f - m
         A += c
     print(A)
 print(0)

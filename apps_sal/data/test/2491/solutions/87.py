@@ -10,8 +10,10 @@ class DSU:
         assert 0 <= a < self._n
         assert 0 <= b < self._n
         x, y = self.leader(a), self.leader(b)
-        if x == y: return x
-        if -self.parent_or_size[x] < -self.parent_or_size[y]: x, y = y, x
+        if x == y:
+            return x
+        if -self.parent_or_size[x] < -self.parent_or_size[y]:
+            x, y = y, x
         self.parent_or_size[x] += self.parent_or_size[y]
         self.parent_or_size[y] = x
         return x
@@ -23,7 +25,8 @@ class DSU:
 
     def leader(self, a):
         assert 0 <= a < self._n
-        if self.parent_or_size[a] < 0: return a
+        if self.parent_or_size[a] < 0:
+            return a
         self.parent_or_size[a] = self.leader(self.parent_or_size[a])
         return self.parent_or_size[a]
 
@@ -34,7 +37,8 @@ class DSU:
     def groups(self):
         leader_buf = [self.leader(i) for i in range(self._n)]
         result = [[] for _ in range(self._n)]
-        for i in range(self._n): result[leader_buf[i]].append(i)
+        for i in range(self._n):
+            result[leader_buf[i]].append(i)
         return [r for r in result if r != []]
 
 

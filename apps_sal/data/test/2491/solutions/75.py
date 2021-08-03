@@ -20,7 +20,8 @@ def BellmanFord(edges, num_v, source):
     negative = [False] * n
     for i in range(num_v):
         for edge in edges:
-            if negative[edge[0]]: negative[edge[1]] = True
+            if negative[edge[0]]:
+                negative[edge[1]] = True
             if dist[edge[0]] != inf and dist[edge[1]] > dist[edge[0]] + edge[2]:
                 negative[edge[1]] = True
     return dist[n - 1], negative[n - 1]

@@ -35,7 +35,8 @@ class BellmanFord():
         for t in range(self.V):
             update = False
             for u in range(self.V):
-                if self.dst[u] == float("inf"): continue
+                if self.dst[u] == float("inf"):
+                    continue
                 for v, cost in self.graph[u]:
                     if self.dst[v] > self.dst[u] + cost:
                         self.dst[v] = self.dst[u] + cost
