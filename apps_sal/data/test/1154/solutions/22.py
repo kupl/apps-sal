@@ -12,11 +12,14 @@ for i in range(1, n + 1):
         free[i] = free[i - 1] - a[i]
     else:
         answer[i] = (a[i] - free[i - 1]) // k + 1
-        if (a[i] - free[i - 1]) % k == 0: answer[i] -= 1
+        if (a[i] - free[i - 1]) % k == 0:
+            answer[i] -= 1
         free[i] = free[i - 1] + answer[i] * k
-        if free[i] > h: free[i] = h
+        if free[i] > h:
+            free[i] = h
         free[i] -= a[i]
         answer[i] += answer[i - 1]
 answer[n] += (h - free[n]) // k
-if (h - free[n]) % k != 0: answer[n] += 1
+if (h - free[n]) % k != 0:
+    answer[n] += 1
 print(answer[n])

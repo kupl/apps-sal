@@ -6,7 +6,10 @@ from heapq import heappop, heappush
 from itertools import accumulate
 from sys import stdout
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 hy, ay, dy = R()
 hm, am, dm = R()
 ch, ca, cd = R()

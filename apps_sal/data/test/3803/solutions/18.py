@@ -8,8 +8,11 @@ def rec(ss):
     for i in range(0, 205, 1):
         for j in range(0, 105, 1):
             if(i * rs + j * ls <= ss):
-                q = y + i; p = z + j; pq = x + ((int)((ss - i * rs - j * ls) / s))
-                an1 = 1000000000000.0; an2 = 1000000000000.0
+                q = y + i
+                p = z + j
+                pq = x + ((int)((ss - i * rs - j * ls) / s))
+                an1 = 1000000000000.0
+                an2 = 1000000000000.0
                 if(b - p > 0):
                     an1 = math.ceil(((float)(pq)) / ((float)(b - p)))
                 if(q - c > 0):
@@ -19,7 +22,9 @@ def rec(ss):
     return False
 
 
-st = 0; en = 100000; mid = 0
+st = 0
+en = 100000
+mid = 0
 while(st <= en):
     mid = (int)((st + en) / 2)
     if(rec(mid) == True):

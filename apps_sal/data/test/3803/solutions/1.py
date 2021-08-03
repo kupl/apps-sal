@@ -1,4 +1,6 @@
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
+
+
 yH, yA, yD = R()
 mH, mA, mD = R()
 h, a, d = R()

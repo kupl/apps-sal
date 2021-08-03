@@ -33,7 +33,7 @@ def survive(i, j, k):
         newy[item[0]] = y[item[0]] + toadd[i]
     # print(vars())
     while newy[0] > 0 and newmhp > 0:
-        oldmhp = newmhp;
+        oldmhp = newmhp
         newy[0] -= max(0, m[1] - newy[2])
         newmhp -= max(0, newy[1] - m[2])
         if oldmhp == newmhp:

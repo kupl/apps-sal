@@ -16,5 +16,6 @@ while i < len(hei):
         i += 1
 sec += cur // k
 cur = cur % k
-if cur != 0: sec += 1
+if cur != 0:
+    sec += 1
 print(sec)

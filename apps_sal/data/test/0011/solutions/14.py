@@ -1,5 +1,7 @@
 # C
-cin = lambda: map(int, input().split())
+def cin(): return map(int, input().split())
+
+
 n, a, b, p, q = cin()
 
 

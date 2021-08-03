@@ -1,4 +1,6 @@
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 R = list(range(999))
 q, w, e = I()
 r, t, y = I()
