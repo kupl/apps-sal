@@ -9,8 +9,10 @@ def main():
         return
 
     for i in range(0, t):
-        if sx != tx and abs(sx + ind[s[i]][0] - tx) < abs(sx - tx): sx += ind[s[i]][0]
-        if sy != ty and abs(sy + ind[s[i]][1] - ty) < abs(sy - ty): sy += ind[s[i]][1]
+        if sx != tx and abs(sx + ind[s[i]][0] - tx) < abs(sx - tx):
+            sx += ind[s[i]][0]
+        if sy != ty and abs(sy + ind[s[i]][1] - ty) < abs(sy - ty):
+            sy += ind[s[i]][1]
         if sx == tx and sy == ty:
             print(i + 1)
             return

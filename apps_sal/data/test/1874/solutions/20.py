@@ -10,5 +10,5 @@ for n, l in zip(ns, L):
     S = n * math.sin(2 * ang) * r * r / 2
     h = (l**2 - r**2)**0.5
 #   print(S,h)
-    ans += S * h / 3;
+    ans += S * h / 3
 print("%.10f" % (ans))

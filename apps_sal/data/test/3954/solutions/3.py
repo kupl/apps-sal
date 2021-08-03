@@ -11,7 +11,8 @@ if p[0] >= 0:
     print(sum(p))
     return
 i = max(0, n - k - 1)
-while p[i] < 0: i += 1
+while p[i] < 0:
+    i += 1
 q = sum(p[i:])
 if n < k + 2 or p[n - k - 1] <= 0:
     print(q)

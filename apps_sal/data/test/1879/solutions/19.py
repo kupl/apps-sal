@@ -10,14 +10,16 @@ if sx < ex:
 else:
     movb = True
 
-if ex == sx: dontx = True
+if ex == sx:
+    dontx = True
 
 if sy < ey:
     movu = True
 else:
     movd = True
 
-if ey == sy: donty = True
+if ey == sy:
+    donty = True
 
 t = 0
 for c in inp:
@@ -27,22 +29,29 @@ for c in inp:
             continue
         if movd:
             sy -= 1
-            if sy == ey: donty = True
+            if sy == ey:
+                donty = True
     elif c == 'E':
-        if dontx: continue
+        if dontx:
+            continue
         if movf:
             sx += 1
-            if sx == ex: dontx = True
+            if sx == ex:
+                dontx = True
     elif c == 'N':
-        if donty: continue
+        if donty:
+            continue
         if movu:
             sy += 1
-            if sy == ey: donty = True
+            if sy == ey:
+                donty = True
     elif c == 'W':
-        if dontx: continue
+        if dontx:
+            continue
         if movb:
             sx -= 1
-            if sx == ex: dontx = True
+            if sx == ex:
+                dontx = True
 
     if sx == ex and sy == ey:
         print(t)

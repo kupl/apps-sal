@@ -8,7 +8,8 @@ for left in range(n):
         inner.sort()
         outer.sort(reverse=True)
         for i in range(k):
-            if i >= len(outer) or i >= len(inner): break
+            if i >= len(outer) or i >= len(inner):
+                break
             if inner[i] < outer[i]:
                 inner[i] = outer[i]
             else:

@@ -1,4 +1,6 @@
-readline = lambda: [int(x) for x in input().split()]
+def readline(): return [int(x) for x in input().split()]
+
+
 n, k = readline()
 a = readline()
 best = max(a)
@@ -10,7 +12,8 @@ for left in range(n):
         outer.sort(reverse=True)
 
         for i in range(k):  # check for k number of swaps for this combination
-            if i >= len(inner) or i >= len(outer): break
+            if i >= len(inner) or i >= len(outer):
+                break
             if inner[i] < outer[i]:
                 inner[i] = outer[i]  # don't give a swap fuck haha,,, bitch!
             else:

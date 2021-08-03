@@ -22,11 +22,14 @@ def main():
         elif i == 'W' and abs(ex - (sx - 1)) < abs(ex - sx):
             sx -= 1
         # print(sx,sy)
-        if c > t: break;
-        if sx == ex and sy == ey: break
+        if c > t:
+            break
+        if sx == ex and sy == ey:
+            break
     if c <= t and sx == ex and sy == ey:
         stdout.write(str(c))
-    else: stdout.write("-1")
+    else:
+        stdout.write("-1")
 
 
 main()

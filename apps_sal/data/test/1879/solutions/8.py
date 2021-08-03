@@ -20,6 +20,7 @@ for j in i:
             x += 1
 
     k += 1
-    if x == 0 and y == 0: break
+    if x == 0 and y == 0:
+        break
 
 print(k if x == 0 and y == 0 else -1)
