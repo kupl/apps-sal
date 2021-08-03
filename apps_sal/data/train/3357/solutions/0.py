@@ -1,4 +1,3 @@
 def find_dup(arr):
-    return sum(arr) - len(arr)*(len(arr)-1)/2
-    #your code here
-
+    return sum(arr) - len(arr) * (len(arr) - 1) / 2
+    # your code here

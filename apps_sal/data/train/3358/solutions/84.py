@@ -1,3 +1,5 @@
 import string
+
+
 def correct(string):
-    return string.translate(string.maketrans("051","OSI"))
+    return string.translate(string.maketrans("051", "OSI"))

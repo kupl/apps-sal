@@ -3,7 +3,7 @@ def solve(n):
     for a, b in ["25", "75", "50", "00"]:
         s = str(n)[::-1]
         x = s.find(a)
-        y = s.find(b, x+1 if a == "0" else 0)
+        y = s.find(b, x + 1 if a == "0" else 0)
         if x == -1 or y == -1:
             continue
         moves.append(x + y - (x > y) - (a == b))

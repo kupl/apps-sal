@@ -5,4 +5,3 @@ def boolean_to_string(b):
     elif b == False or 0:
         b = "False"
         return b
-

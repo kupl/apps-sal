@@ -9,4 +9,5 @@ def correct(string):
             l[idx] = 'I'
     return ''.join(l)
 
+
 print(correct("5INGAPORE"))

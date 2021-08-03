@@ -1,1 +1,1 @@
-boolean_to_string=lambda a:str(a)
+def boolean_to_string(a): return str(a)

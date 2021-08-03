@@ -5,7 +5,3 @@ def find_longest(arr):
         if len(str(arr[i])) > len(result):
             result = str(arr[i])
     return int(result)
-    
-
-        
-

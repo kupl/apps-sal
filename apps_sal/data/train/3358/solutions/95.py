@@ -7,5 +7,6 @@ CORRECTIONS = {
 
 CORRECTION_TRANSLATION = str.maketrans(CORRECTIONS)
 
+
 def correct(string):
     return string.translate(CORRECTION_TRANSLATION)

@@ -3,5 +3,5 @@ def boolean_to_string(b):
         statement = 'True'
     else:
         statement = 'False'
-    
+
     return statement

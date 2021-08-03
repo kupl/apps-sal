@@ -10,5 +10,3 @@ def correct(string):
         else:
             string2 = string2 + char
     return string2
-        
-

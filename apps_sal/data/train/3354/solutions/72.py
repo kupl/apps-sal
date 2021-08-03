@@ -3,4 +3,3 @@ def boolean_to_string(b):
     if b:
         out = "True"
     return out
-

@@ -1,8 +1,7 @@
 def boolean_to_string(b):
-    if b==True:
-       return str(True)
+    if b == True:
+        return str(True)
     else:
-        b==False
+        b == False
         return str(False)
-    return b 
-
+    return b

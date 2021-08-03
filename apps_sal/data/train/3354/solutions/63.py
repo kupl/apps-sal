@@ -5,5 +5,5 @@ def boolean_to_string(b):
     else:
         a = str(b)
         print(a)
-    
+
     return a

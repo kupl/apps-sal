@@ -5,4 +5,3 @@ def find_longest(arr):
             max_len = len(str(i))
             max_num = i
     return max_num
-

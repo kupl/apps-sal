@@ -8,4 +8,3 @@ def correct(string):
         else:
             result += s
     return result
-

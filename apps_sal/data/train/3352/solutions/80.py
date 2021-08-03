@@ -7,4 +7,3 @@ def find_longest(arr):
             ml = l
             m = i
     return m
-

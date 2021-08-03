@@ -1,4 +1,4 @@
-# return the subtraction of the two polynomials p1 and p2.  
+# return the subtraction of the two polynomials p1 and p2.
 def poly_subtract(p1, p2):
     res = []
     longest_p = max(len(p1), len(p2))

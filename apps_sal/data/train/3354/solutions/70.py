@@ -4,8 +4,8 @@ def boolean_to_string(b):
     else:
         return("False")
 
+
 bool = True
 boolean_to_string(bool)
 bool = False
 boolean_to_string(bool)
-

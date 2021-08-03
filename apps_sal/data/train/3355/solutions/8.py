@@ -11,6 +11,7 @@ def solve(n):
 
     return min_cost
 
+
 def calculate_ending_pair_cost(s, pair):
     # First find the lowest place indices of each desired digit.
     indices = find_lowest_places(s, pair)
@@ -39,8 +40,9 @@ def calculate_ending_pair_cost(s, pair):
         # Make sure not to double-count any digits we already moved as part of the desired digits.
         cost -= 1 if indices[0] > non_zero_index else 0
         cost -= 1 if indices[1] > non_zero_index else 0
-    
+
     return cost
+
 
 def find_lowest_places(s, pair):
     # Split the two-char string into the 1s place digit and 10s place digit.
@@ -51,7 +53,7 @@ def find_lowest_places(s, pair):
         # Index raises an exception if it can't find the digit,
         # so just use that as an indicator of when to return a failure state.
         return None
-    
+
     # If the pair we're looking for is a repeated digit ('00'), then we need to start
     # searching the string at the index just beyond that point.
     start = 0
@@ -61,8 +63,9 @@ def find_lowest_places(s, pair):
         i10 = s.index(d10, start)
     except:
         return None
-    
+
     return (i10, i1)
+
 
 def first_non_zero_digit_after_indices(s, indices):
     # We need to reverse the string and indices because we're actually searching

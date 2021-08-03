@@ -6,4 +6,4 @@ def find_longest(arr):
         if len(str_n) > counter:
             counter = len(str_n)
             number = n
-    return number 
+    return number

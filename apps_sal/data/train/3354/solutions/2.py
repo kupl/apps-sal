@@ -1,1 +1,1 @@
-boolean_to_string = str    
+boolean_to_string = str

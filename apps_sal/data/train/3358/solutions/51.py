@@ -9,5 +9,5 @@ def correct(string):
             answer += 'I'
         else:
             answer += c
-            
+
     return answer
