@@ -1,18 +1,16 @@
 # cook your dish here
 import math
-n=int(input())
+n = int(input())
 for i in range(n):
-    a,b=input().split()
-    a=int(a)
-    b=int(b)
-    x=math.gcd(a,b)
-    y=(a*b)//x
-    print(x,y)
- 
- 
- 
+    a, b = input().split()
+    a = int(a)
+    b = int(b)
+    x = math.gcd(a, b)
+    y = (a * b) // x
+    print(x, y)
+
     # if n1>n2:
-    #     large = n1 
+    #     large = n1
     #     small = n2
     # else:
     #     large = n2
@@ -24,4 +22,3 @@ for i in range(n):
     #         break
     #     else:
     #         st = st - 1
-
