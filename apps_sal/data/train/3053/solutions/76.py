@@ -1,5 +1,5 @@
 def close_compare(a, b, margin=0):
-    adiff = abs(a-b)
+    adiff = abs(a - b)
     if adiff <= margin:
         return 0
     alist = sorted([a, b])
@@ -7,5 +7,3 @@ def close_compare(a, b, margin=0):
         return -1
     else:
         return 1
-
-

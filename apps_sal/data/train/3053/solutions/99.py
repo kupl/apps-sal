@@ -6,9 +6,7 @@ def close_compare(a, b, margin=0):
         r = -1
     if a > b:
         r = 1
-    if abs(a-b) <= margin:
+    if abs(a - b) <= margin:
         r = 0
-    
+
     return r
-
-

@@ -5,4 +5,3 @@ def rain_amount(rain_amount):
         return "Your plant has had more than enough water for today!"
     else:
         return "You need to give your plant " + str((40 - rain_amount)) + "mm of water"
-

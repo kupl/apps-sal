@@ -1,6 +1,6 @@
 def close_compare(a, b, margin=0):
     # close to:
-    marginal = abs(a-b)
+    marginal = abs(a - b)
     if margin >= marginal:
         return 0
     if a < b:

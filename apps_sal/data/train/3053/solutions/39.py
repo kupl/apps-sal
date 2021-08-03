@@ -1,4 +1,4 @@
-def close_compare(a, b, margin = 0):
+def close_compare(a, b, margin=0):
     abs(margin)
     if a < b and b - a <= margin:
         return 0

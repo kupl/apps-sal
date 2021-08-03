@@ -1,6 +1,6 @@
 def rain_amount(rain_amount):
     if (rain_amount < 40):
-         remaining = 40 - rain_amount
-         return f'You need to give your plant {remaining}mm of water'
+        remaining = 40 - rain_amount
+        return f'You need to give your plant {remaining}mm of water'
     else:
-         return "Your plant has had more than enough water for today!"
+        return "Your plant has had more than enough water for today!"

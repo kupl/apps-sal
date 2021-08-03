@@ -14,4 +14,3 @@ def close_compare(a, b, margin=0):
             return -1
         else:
             return 0
-

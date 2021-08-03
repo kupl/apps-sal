@@ -3,5 +3,3 @@ def rain_amount(mm):
         return "Your plant has had more than enough water for today!"
     else:
         return f"You need to give your plant {40 - int(mm)}mm of water"
-
-

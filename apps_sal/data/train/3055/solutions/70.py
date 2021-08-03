@@ -5,4 +5,4 @@ def sum_str(a, b):
     if b == '':
         b = 0
     print(int(a), int(b))
-    return str(int(a)+int(b))
+    return str(int(a) + int(b))

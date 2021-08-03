@@ -1,4 +1,4 @@
-def close_compare(a, b, margin = 0):
+def close_compare(a, b, margin=0):
     area = range((b - margin), (b + 1 + margin))
     if a in area:
         return 0

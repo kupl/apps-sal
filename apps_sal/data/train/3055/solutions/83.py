@@ -12,5 +12,5 @@ def sum_str(a, b):
     else:
         x = int(a)
         y = int(b)
-    
+
     return str(x + y)

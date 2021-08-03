@@ -6,5 +6,5 @@ def sum_str(a, b):
         avar = float(a)
     if b.isdigit():
         bvar = float(b)
-        
+
     return str(int(avar + bvar))

@@ -1,9 +1,9 @@
 def sum_str(a, b):
-    if a=='' and b=='':
+    if a == '' and b == '':
         return '0'
-    if a=='':
+    if a == '':
         return str(int(b))
-    if b=='':
+    if b == '':
         return str(int(a))
     else:
-        return str(int(a)+int(b))
+        return str(int(a) + int(b))
