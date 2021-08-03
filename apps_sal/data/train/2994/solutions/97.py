@@ -7,9 +7,9 @@ def find_digit(num, nth):
         return -1
     if len(str(num)) < nth:
         return 0
-    return int(str(num)[::-1][nth-1])
-    
-    
+    return int(str(num)[::-1][nth - 1])
+
+
 class TestFindDigit(unittest.TestCase):
     def test_should_return_negative_one_given_nth_is_negative(self):
         negative_nth = -123
@@ -27,4 +27,3 @@ class TestFindDigit(unittest.TestCase):
 
     def test_should_return_4_when_given_num_is_5673(self):
         self.assertEqual(find_digit(num=5673, nth=4), 5)
-

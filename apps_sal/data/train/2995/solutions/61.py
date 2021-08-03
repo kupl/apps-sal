@@ -9,4 +9,3 @@ def sum_mul(n, m):
         return sum(range(n, m, n))
     elif n == m or n > m:
         return 0
-

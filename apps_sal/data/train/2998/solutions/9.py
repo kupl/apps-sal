@@ -7,4 +7,3 @@ def atomic_number(electrons):
         sa.append(s)
         n += 1
     return sa
-

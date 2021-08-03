@@ -1,1 +1,1 @@
-not_so_random=lambda b,_:["White","Black"][b&1]
+def not_so_random(b, _): return ["White", "Black"][b & 1]

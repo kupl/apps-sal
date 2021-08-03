@@ -1,2 +1,2 @@
 def switcheroo(string):
-    return string.translate(str.maketrans('ab','ba'))
+    return string.translate(str.maketrans('ab', 'ba'))

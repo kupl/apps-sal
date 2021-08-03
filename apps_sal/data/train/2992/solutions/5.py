@@ -3,5 +3,5 @@ def switcheroo(string):
         'a': 'b',
         'b': 'a',
     }
-    
+
     return ''.join(swap.get(ch, ch) for ch in string)

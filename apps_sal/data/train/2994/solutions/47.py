@@ -3,5 +3,4 @@ def find_digit(num, nth):
         return -1
     elif len(str(num)) < nth:
         return 0
-    return int(str(num)[::-1][nth-1])
-
+    return int(str(num)[::-1][nth - 1])

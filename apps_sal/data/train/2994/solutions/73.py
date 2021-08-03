@@ -7,4 +7,3 @@ def find_digit(num, nth):
         except:
             number = 0
         return number
-

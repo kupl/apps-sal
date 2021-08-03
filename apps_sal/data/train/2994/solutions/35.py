@@ -6,4 +6,3 @@ def find_digit(num, nth):
         return -1
     else:
         return 0
-
