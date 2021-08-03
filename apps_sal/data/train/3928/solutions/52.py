@@ -1,1 +1,1 @@
-billboard=lambda n,p=30:p*len(n)
+def billboard(n, p=30): return p * len(n)

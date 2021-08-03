@@ -12,5 +12,5 @@ def reverse(st):
             word += st[i]
 
     salida.append(word)
-    a = "".join(salida[::-1]).replace("  "," ")
-    return a.replace("  "," ").strip(" ")
+    a = "".join(salida[::-1]).replace("  ", " ")
+    return a.replace("  ", " ").strip(" ")

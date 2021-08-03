@@ -3,8 +3,7 @@ def reverse(st):
     sv.reverse()
     ss = ""
     for word in sv:
-      ss += word
-      ss += " "
+        ss += word
+        ss += " "
     ss = ss.strip()
     return ss
-

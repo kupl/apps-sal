@@ -6,11 +6,9 @@ def reverse_words(text):
         for i in word:
             reverseword_list.append(i)
         sentence_list.append("".join(reverseword_list[::-1]))
-    for i in range(len(text)-1):
-        if text[i] == " " and text[i+1] == " ":
+    for i in range(len(text) - 1):
+        if text[i] == " " and text[i + 1] == " ":
             return ("  ".join(sentence_list))
-        if text[i] == " " and text[i+1] != " ":
+        if text[i] == " " and text[i + 1] != " ":
             pass
     return (" ".join(sentence_list))
-
-

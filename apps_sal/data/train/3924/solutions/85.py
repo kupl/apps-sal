@@ -1,7 +1,7 @@
 def reverse_words(text):
     reversed = ""
     for word in text.split(" "):
-        w =" "
+        w = " "
         for char in word:
             w = char + w
         reversed = reversed + w

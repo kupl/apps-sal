@@ -1,5 +1,5 @@
 def reverse_words(text):
-    #go for it
+    # go for it
     reversed_string = []
     for i in text.split(' '):
         reversed_string.append(i[::-1])

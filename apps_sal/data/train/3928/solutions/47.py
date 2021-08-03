@@ -5,6 +5,3 @@ def billboard(name, price=30):
         new_price = new_price + price
         letters = letters + 1
     return new_price
-        
-        
-

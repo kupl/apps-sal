@@ -1,8 +1,6 @@
 def reverse(s):
-    result=''
+    result = ''
     for i in s.split()[::-1]:
-        result+=i + ' '
-        
-    
-    return result.rstrip()
+        result += i + ' '
 
+    return result.rstrip()

@@ -1,9 +1,9 @@
 def reverse(st):
     print(st)
-    a=[]
+    a = []
     for x in reversed(st.split()):
         print(x)
         a.append(x)
-    
+
     # Your Code Here
     return ' '.join(a)

@@ -4,13 +4,13 @@ def reverse(st):
 #         if st[x]==' ' and st[x+1]==' ':
 #             st[x]='!@#'
 #     st=st.replace('!@#','')
-    st=st.split('  ')
-    st=' '.join(st)
-    st=st.split('  ')
-    st=' '.join(st)
-    st=st.strip()
-    st=(st.split(' '))
-    
+    st = st.split('  ')
+    st = ' '.join(st)
+    st = st.split('  ')
+    st = ' '.join(st)
+    st = st.strip()
+    st = (st.split(' '))
+
     st.reverse()
     # Your Code Here
-    return ' '.join(map(str,st))
+    return ' '.join(map(str, st))

@@ -3,7 +3,7 @@ def reverse_words(text):
     backwards = []
     for word in words:
         backword = ''
-        for c in range(len(word)-1, -1, -1):
+        for c in range(len(word) - 1, -1, -1):
             backword += word[c]
         backwards.append(backword)
     return ' '.join(backwards)

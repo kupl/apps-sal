@@ -7,4 +7,3 @@ def check_root(string):
         return "not consecutive"
     perfect = a * b * c * d + 1
     return "{}, {}".format(perfect, int(perfect**0.5))
-

@@ -1,8 +1,8 @@
 def reverse_words(text):
-    L=[]
-    a=text.split(" ")
+    L = []
+    a = text.split(" ")
     for i in a:
-        i=i[::-1]
+        i = i[::-1]
         L.append(i)
-    x=" ".join(L)
+    x = " ".join(L)
     return x

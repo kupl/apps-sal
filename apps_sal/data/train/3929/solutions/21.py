@@ -1,4 +1,3 @@
-reverse = lambda st : ' '.join(list(reversed(st.split())))
+def reverse(st): return ' '.join(list(reversed(st.split())))
 
 # Python is fun!!!!!!!!!!!!!!!!!!!
-

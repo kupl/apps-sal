@@ -4,4 +4,3 @@ def billboard(name, price=30):
         rv += price
     else:
         return rv
-

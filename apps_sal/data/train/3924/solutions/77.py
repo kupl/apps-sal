@@ -4,5 +4,5 @@ def reverse_words(text):
     for t in text_split:
         text_split[index] = "".join(reversed(t))
         index += 1
-    
+
     return (" ".join(text_split))
