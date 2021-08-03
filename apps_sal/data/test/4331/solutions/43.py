@@ -8,4 +8,3 @@ if is_lucky_7:
     print("Yes")
 else:
     print("No")
-

@@ -1,5 +1,5 @@
 s = input()
 if "7" in s:
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")

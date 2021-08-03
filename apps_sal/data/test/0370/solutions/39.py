@@ -44,6 +44,7 @@ def main():
 def __starting_point():
     main()
 
+
 """
 写経して計算の意味を考えた
 

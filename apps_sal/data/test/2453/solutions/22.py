@@ -11,7 +11,7 @@ for i in range(n):
     end.setdefault(b, 0)
 keys = sorted(start.keys())
 k = 0
-a = [0 for x in range(n+1)]
+a = [0 for x in range(n + 1)]
 prev = -1
 start_c = 0
 end_c = 0
@@ -22,4 +22,4 @@ for key in keys:
     a[start_c - end_c] += 1
     end_c += end[key]
     prev = key
-print(' '.join(str(x) for x in a[1:n+1]))
+print(' '.join(str(x) for x in a[1:n + 1]))

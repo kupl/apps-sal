@@ -14,9 +14,9 @@ for i in range(n):
 
 line = []
 for key in point:
-    line.append((key,point[key]))
+    line.append((key, point[key]))
 line.sort()
-ans = [0] * (n+1)
+ans = [0] * (n + 1)
 
 last_index = 0
 last_value = 0
@@ -27,4 +27,4 @@ for index, value in line:
     last_value += value
 
 for cnt in ans[1:]:
-    print(cnt,end=' ')
+    print(cnt, end=' ')

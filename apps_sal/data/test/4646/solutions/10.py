@@ -18,4 +18,3 @@ for case in range(t):
         print(odd_wrong)
     else:
         print(-1)
-

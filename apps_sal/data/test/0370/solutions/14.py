@@ -47,6 +47,7 @@ def e_golf(K, X, Y):
         ans = [(first, -second) for first, second in ans]
     return '\n'.join([str(len(ans))] + ['{} {}'.format(f, s) for f, s in ans])
 
+
 K = int(input())
 X, Y = [int(i) for i in input().split()]
 print(e_golf(K, X, Y))

@@ -18,4 +18,3 @@ for case_num in range(t):
         if i % 2 != 0 and a[i] % 2 == 0:
             e2o += 1
     print(-1 if o2e != e2o else o2e)
-

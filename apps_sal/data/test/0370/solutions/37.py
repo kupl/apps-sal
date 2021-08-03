@@ -12,13 +12,13 @@ if x + y != K:
         ans += [(x, y)]
 
     def calczw(x, y):
-        #z+w=abs(z-x)+abs(w-y)=K
+        # z+w=abs(z-x)+abs(w-y)=K
         if x > y:
-            #z+w=x-z+w-y=K and z<=x and w>=y
+            # z+w=x-z+w-y=K and z<=x and w>=y
             z = (x - y) // 2
             w = K - z
         else:
-            #z+w=z-x+y-w=K and z>=x and w<=y
+            # z+w=z-x+y-w=K and z>=x and w<=y
             w = (y - x) // 2
             z = K - w
         return (z, w)
@@ -41,4 +41,3 @@ if x + y != K:
 print((len(ans)))
 for x, y in ans[::-1]:
     print((x * signx, y * signy))
-

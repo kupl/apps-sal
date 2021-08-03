@@ -6,4 +6,3 @@ for i in n:
         return
 
 print('No')
-

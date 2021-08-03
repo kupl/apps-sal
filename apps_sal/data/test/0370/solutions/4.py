@@ -50,11 +50,11 @@ for i in range(step_num):
             if newy > prevy:
                 b = abs(prevy - newy)
                 a = k - abs(prevx - newx) - abs(prevy - newy)
-                ans.pop() 
+                ans.pop()
                 ans.append([newx + b + a // 2, newy - b - a // 2])
             else:
                 a = k - abs(prevx - newx) - abs(prevy - newy)
-                ans.pop() 
+                ans.pop()
                 ans.append([newx + a // 2, newy - a // 2])
             on_top = True
 print(len(ans))

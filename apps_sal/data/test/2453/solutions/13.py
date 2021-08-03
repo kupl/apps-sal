@@ -21,4 +21,3 @@ for key in l[1:]:
     sum += arr[key]
 
 print(*brr[1:])
-

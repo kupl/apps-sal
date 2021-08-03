@@ -5,8 +5,8 @@ for t in range(T):
     A = [int(_) for _ in input().split()]
     badE, badO = 0, 0
     for i, el in enumerate(A):
-        if el%2 != i%2:
-            if i%2:
+        if el % 2 != i % 2:
+            if i % 2:
                 badO += 1
             else:
                 badE += 1
@@ -14,4 +14,3 @@ for t in range(T):
         print(-1)
     else:
         print(badO)
-

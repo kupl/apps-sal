@@ -14,10 +14,10 @@ while (x, y) != (X, Y):
         print((-1))
         return
     elif D % 2 == 0 and D <= 2 * K:
-        pos   = D // 2
+        pos = D // 2
         shift = (2 * K - D) // 2
         if pos <= dx:
-            x += pos   if X > x else -pos
+            x += pos if X > x else -pos
             y -= shift if Y > y else -shift
         else:
             x = X + (shift if X > x else -shift)
@@ -34,4 +34,3 @@ while (x, y) != (X, Y):
 print((len(P)))
 for x, y in P:
     print((x, y))
-

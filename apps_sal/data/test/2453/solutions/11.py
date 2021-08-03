@@ -1,10 +1,17 @@
+from collections import Counter
+
+
 def ii():
     return int(input())
+
+
 def mi():
     return map(int, input().split())
+
+
 def li():
     return list(mi())
-from collections import Counter
+
 
 n = ii()
 a1 = [tuple(mi()) for i in range(n)]

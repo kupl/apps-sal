@@ -1,8 +1,10 @@
 k = int(input())
 x, y = map(int, input().split())
 
+
 def sign(x):
     return 1 if x > 0 else -1
+
 
 if (abs(x) + abs(y)) % 2 == 1 and k % 2 == 0:
     print(-1)

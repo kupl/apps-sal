@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 
 def calc(p, t):
-    return max(3*p//10, p - p//250 * t)
+    return max(3 * p // 10, p - p // 250 * t)
 
-(a,b,c,d) = list(map(int, input().split()))
+
+(a, b, c, d) = list(map(int, input().split()))
 m = calc(a, c)
 v = calc(b, d)
 
@@ -17,5 +18,3 @@ else:
     ret = "Tie"
 
 print(ret)
-
-

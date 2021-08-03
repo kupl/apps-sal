@@ -5,4 +5,3 @@ if '7' in N_str:
     print("Yes")
 else:
     print("No")
-

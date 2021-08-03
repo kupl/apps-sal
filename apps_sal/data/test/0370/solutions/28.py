@@ -18,7 +18,6 @@ def solve(x, y):
     return -r, (x + y + r - K)
 
 
-
 K, X, Y = map(int, open(0).read().split())
 
 if K % 2 == 0 and (X + Y) % 2 == 1:

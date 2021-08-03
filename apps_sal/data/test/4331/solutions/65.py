@@ -4,4 +4,3 @@ for i in range(len(n)):
         print("Yes")
         return
 print("No")
-
