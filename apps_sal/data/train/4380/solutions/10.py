@@ -1,3 +1,2 @@
 import re
-remove_chars = lambda s: re.sub('[^a-zA-Z\ ]', '', s)
-
+def remove_chars(s): return re.sub('[^a-zA-Z\ ]', '', s)
