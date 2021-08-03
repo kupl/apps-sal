@@ -15,21 +15,21 @@ class Solution:
                 ans = i + 1
             visited.add(a)
         return ans
-        
-        
+
+
 class UnionFind:
     def __init__(self, n, m):
         self.id = [-1 for _ in range(n)]
         self.size = [0 for _ in range(n)]
         self.cnt = 0
         self.m = m
-        
+
     def add(self, i):
         self.id[i] = i
         self.size[i] = 1
         if self.get_size(i) == self.m:
             self.cnt += 1
-        
+
     def find(self, i):
         root = i
         while root != self.id[root]:
@@ -39,7 +39,7 @@ class UnionFind:
             self.id[i] = root
             i = j
         return root
-    
+
     def union(self, i, j):
         root_i = self.find(i)
         root_j = self.find(j)
@@ -57,6 +57,6 @@ class UnionFind:
             self.size[root_i] += self.size[root_j]
         if self.get_size(root_i) == self.m:
             self.cnt += 1
-    
+
     def get_size(self, i):
         return self.size[self.find(i)]

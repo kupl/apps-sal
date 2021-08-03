@@ -10,9 +10,8 @@ class Solution:
                 count = 0
         arr.append(count)
         if len(arr) == 1:
-            return arr[0]-1
+            return arr[0] - 1
         maxi = 0
         for j in range(1, len(arr)):
-            maxi = max(maxi, arr[j-1] + arr[j])
+            maxi = max(maxi, arr[j - 1] + arr[j])
         return maxi
-

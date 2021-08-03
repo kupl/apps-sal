@@ -8,13 +8,13 @@ class Solution:
         for i, a in enumerate(arr):
             leftPos, rightPos = a, a
             if a == 1:
-                rightPos = a if dp[a+1][1] == -1 else dp[a+1][1]
+                rightPos = a if dp[a + 1][1] == -1 else dp[a + 1][1]
             elif a == len(arr):
-                leftPos = a if  dp[a-1][0] == -1 else dp[a-1][0]
+                leftPos = a if dp[a - 1][0] == -1 else dp[a - 1][0]
             else:
-                leftPos = a if  dp[a-1][0] == -1 else dp[a-1][0]
-                rightPos = a if dp[a+1][1] == -1 else dp[a+1][1]
-            
+                leftPos = a if dp[a - 1][0] == -1 else dp[a - 1][0]
+                rightPos = a if dp[a + 1][1] == -1 else dp[a + 1][1]
+
             dp[a] = (leftPos, rightPos)
             dp[leftPos] = (leftPos, rightPos)
             dp[rightPos] = (leftPos, rightPos)
@@ -39,4 +39,3 @@ class Solution:
         #     if groups[m] > 0:
         #         res = i + 1
         # return res
-

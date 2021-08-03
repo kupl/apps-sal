@@ -16,8 +16,8 @@ class Solution:
             stack.append([A[i], count])
             right.append(count)
         right = right[::-1]
-        
+
         res = 0
         for i in range(len(A)):
-            res += left[i]*right[i]*A[i]
-        return res % (10**9+7)
+            res += left[i] * right[i] * A[i]
+        return res % (10**9 + 7)

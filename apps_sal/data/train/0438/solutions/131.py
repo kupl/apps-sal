@@ -16,5 +16,3 @@ class Solution:
             if count[m]:
                 res = step + 1
         return res
-            
-

@@ -1,5 +1,5 @@
 class Union_find:
-    def __init__(self, MAX: int,target):
+    def __init__(self, MAX: int, target):
         self.fa = [i for i in range(MAX)]
         self.cnt = [1 for _ in range(MAX)]
         self.exist = 0
@@ -31,27 +31,29 @@ class Union_find:
             self.root_map[un].remove(u)
         except:
             pass
-        self.root_map[vn+un].add(u)
+        self.root_map[vn + un].add(u)
         self.fa[v] = u
+
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         ct = 0
         l = [0 for i in arr]
         n = 0
         res = -1
-        uf = Union_find(len(arr),m)
+        uf = Union_find(len(arr), m)
         for i in arr:
-            l[i-1] = 1
+            l[i - 1] = 1
             ct += 1
             flag = False
-            if i-2>-1 and l[i-2] == 1:
-                uf.union(i-1,i-2)
+            if i - 2 > -1 and l[i - 2] == 1:
+                uf.union(i - 1, i - 2)
                 flag = True
-            if i<len(arr) and l[i] == 1:
-                uf.union(i-1,i)
+            if i < len(arr) and l[i] == 1:
+                uf.union(i - 1, i)
                 flag = True
             if not flag:
-                uf.root_map[1].add(i-1)
-            if len(uf.root_map[m])>0:
+                uf.root_map[1].add(i - 1)
+            if len(uf.root_map[m]) > 0:
                 res = ct
         return res

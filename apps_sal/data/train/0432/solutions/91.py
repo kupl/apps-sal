@@ -5,7 +5,7 @@ class Solution:
             num = counter[n]
             if num > 0:
                 for i in range(k):
-                    counter[n+i]-=num
-                    if counter[n+i]<0:
+                    counter[n + i] -= num
+                    if counter[n + i] < 0:
                         return False
         return True

@@ -7,7 +7,7 @@ class Solution:
         i = k
         while i <= len(arr):
             if start != 0:
-                avg = avg - arr[start-1] + arr[i-1]
+                avg = avg - arr[start - 1] + arr[i - 1]
             if avg >= threshold:
                 count += 1
                 start += 1
@@ -15,9 +15,5 @@ class Solution:
             else:
                 start += 1
                 i += 1
-        
-        return count
-        
-        
-        
 
+        return count

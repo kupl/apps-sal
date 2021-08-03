@@ -12,7 +12,7 @@ class Solution:
         #     if cnt[m]:
         #         ans = i + 1
         # return ans
-        
+
         # Union-Find
         uf = {}
         seen = [0] * (len(arr) + 1)
@@ -38,9 +38,3 @@ class Solution:
         if m == n:
             ans = n
         return ans
-                
-                
-                
-                
-                
-

@@ -2,6 +2,8 @@
 [4,5,0,-2,-3,1]
 
 '''
+
+
 class Solution:
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         d = {0: 1}
@@ -15,8 +17,3 @@ class Solution:
             d[newMod] += 1
             sol += d[newMod] - 1
         return sol
-            
-            
-                
-                
-

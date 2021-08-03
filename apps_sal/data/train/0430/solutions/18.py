@@ -5,4 +5,3 @@ class Solution:
             ind = S.rfind(char, 0, i)
             dp[i] = 1 + sum(dp[:i]) % mod if ind == -1 else sum(dp[ind:i]) % mod
         return sum(dp) % mod
-

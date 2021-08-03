@@ -31,13 +31,13 @@ class Solution:
             sizes[1] += 1
 
             if n - 1 in groups:
-                sizes[groups[n-1].find().size] -= 1
+                sizes[groups[n - 1].find().size] -= 1
                 sizes[g.find().size] -= 1
                 groups[n - 1].union(g)
                 sizes[g.find().size] += 1
 
             if n + 1 in groups:
-                sizes[groups[n+1].find().size] -= 1
+                sizes[groups[n + 1].find().size] -= 1
                 sizes[g.find().size] -= 1
                 groups[n + 1].union(g)
                 sizes[g.find().size] += 1

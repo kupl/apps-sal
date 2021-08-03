@@ -1,10 +1,10 @@
 class Solution:
-    
+
     def find(self, a):
         if self.parent[a] != a:
             self.parent[a] = self.find(self.parent[a])
         return self.parent[a]
-    
+
     def union(self, a, b):
         r1 = self.find(a)
         r2 = self.find(b)
@@ -17,7 +17,7 @@ class Solution:
         ns = self.size[r1] + self.size[r2]
         if ns == self.m:
             self.num_m += 1
-            
+
         if self.rank[r1] > self.rank[r2]:
             self.parent[r2] = r1
             self.size[r1] = ns
@@ -29,7 +29,7 @@ class Solution:
                 self.parent[r1] = r2
                 self.rank[r2] += 1
                 self.size[r2] = ns
-    
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         self.parent = {}
         self.rank = {}
@@ -43,12 +43,11 @@ class Solution:
             self.size[v] = 1
             if self.size[v] == m:
                 self.num_m += 1
-            if v-1 in self.parent:
-                self.union(v-1, v)
-            if v+1 in self.parent:
-                self.union(v+1, v)
+            if v - 1 in self.parent:
+                self.union(v - 1, v)
+            if v + 1 in self.parent:
+                self.union(v + 1, v)
             if self.num_m > 0:
-                ans = i+1
+                ans = i + 1
             # print(i,self.num_m,ans)
         return ans
-

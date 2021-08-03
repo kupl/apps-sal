@@ -8,7 +8,7 @@ class Solution:
             for val in q:
                 if val == 0:
                     return level
-            
+
                 _val = val - 1
                 if _val not in cache and _val >= 0:
                     cache[_val] = 1

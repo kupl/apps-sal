@@ -3,6 +3,7 @@ class Solution:
         d = {}
         sizes = {}
         last_seen = -1
+
         def find(x):
             if d[x] != x:
                 d[x] = find(d[x])
@@ -27,5 +28,3 @@ class Solution:
             if size == m:
                 last_seen = i + 1
         return last_seen
-            
-

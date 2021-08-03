@@ -14,4 +14,3 @@ class Solution:
             if cnt[m]:
                 res = i + 1
         return res
-

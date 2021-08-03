@@ -1,6 +1,7 @@
 from typing import List
 from sortedcontainers import SortedDict
 
+
 class Solution:
     def isPossibleDivide(self, hand: List[int], W: int) -> bool:
         # print('-----')
@@ -37,4 +38,3 @@ class Solution:
                             return False
 
             return True
-

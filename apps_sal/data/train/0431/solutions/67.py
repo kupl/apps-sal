@@ -19,8 +19,8 @@ class Solution:
                     s.append(i)
             else:
                 s.append(i)
-            #print(s)
-        #print(left)
+            # print(s)
+        # print(left)
         A = A[::-1]
         s = []
         for i in range(l):
@@ -33,13 +33,13 @@ class Solution:
                     if s == []:
                         right[i] = i
                     else:
-                        right[i] = i - s[-1] -1
+                        right[i] = i - s[-1] - 1
                     s.append(i)
             else:
                 s.append(i)
         right = right[::-1]
-        #print(right)
+        # print(right)
         A = A[::-1]
         for i in range(l):
-            res += A[i] * (left[i]+1) * (right[i]+1)
+            res += A[i] * (left[i] + 1) * (right[i] + 1)
         return res % (10**9 + 7)

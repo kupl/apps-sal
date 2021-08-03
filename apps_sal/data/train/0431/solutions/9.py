@@ -27,5 +27,3 @@ class Solution:
 
         # Use prev/next array to count answer
         return sum((i - prev[i]) * (next_[i] - i) * A[i] for i in range(N)) % MOD
-
-

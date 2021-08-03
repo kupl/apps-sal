@@ -1,11 +1,12 @@
 class Solution:
     def maxTurbulenceSize(self, A: List[int]) -> int:
-        if len(A) == 1: return 1
+        if len(A) == 1:
+            return 1
         prev = A[1]
         maxcount = count = 1 + int(A[0] != A[1])
         print(count)
         lastcomp = A[0] < A[1]
-        
+
         for a in A[2:]:
             comp = prev < a
             if prev == a:

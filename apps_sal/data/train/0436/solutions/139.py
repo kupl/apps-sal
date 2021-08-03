@@ -13,5 +13,3 @@ class Solution:
                     new_options.add(o // 3)
             options = set(new_options)
         return day
-        
-

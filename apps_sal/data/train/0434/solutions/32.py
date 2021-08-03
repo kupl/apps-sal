@@ -23,21 +23,22 @@ more than one zeros exist!
 TC: O(n)
 SC: O(1)
 '''
+
+
 class Solution:
     def longestSubarray(self, nums: List[int]) -> int:
-        
+
         i = 0
         j = 0
         sum = 0
         ans = 0
-        
+
         for j, val in enumerate(nums):
             sum += val
-            while(i < j and sum < j-i):
+            while(i < j and sum < j - i):
                 sum -= nums[i]
-                i+=1
-                
-            ans = max(ans, j-i)    
-        
-        return ans
+                i += 1
 
+            ans = max(ans, j - i)
+
+        return ans

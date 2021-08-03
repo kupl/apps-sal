@@ -6,10 +6,10 @@ class Solution:
             count += 1
             t = set()
             for i in l:
-                t.add(i-1)
-                if (i%2==0):
-                    t.add(i/2)
-                if (i%3==0):
-                    t.add(i/3)
+                t.add(i - 1)
+                if (i % 2 == 0):
+                    t.add(i / 2)
+                if (i % 3 == 0):
+                    t.add(i / 3)
             l = t
         return count

@@ -1,4 +1,6 @@
 from collections import defaultdict, Counter
+
+
 class Solution:
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if not nums:

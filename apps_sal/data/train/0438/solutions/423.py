@@ -7,23 +7,23 @@ class Solution:
         groupCount = Counter()
         visited = set()
         ans = -1
-        
+
         for i, num in enumerate(arr, 1):
             num -= 1
             visited.add(num)
             groupCount[1] += 1
-            
+
             if num - 1 in visited:
                 self.union(parent, rank, size, groupCount, num, num - 1)
-                
+
             if num + 1 in visited:
                 self.union(parent, rank, size, groupCount, num, num + 1)
-                
+
             if groupCount[m] > 0:
                 ans = i
-                
+
         return ans
-            
+
     def find(self, parent, x):
         if parent[x] != x:
             parent[x] = self.find(parent, parent[x])

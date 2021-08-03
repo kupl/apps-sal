@@ -15,18 +15,18 @@ class Solution:
                     if uf.ranks[j]:
                         uf.union(index, j)
         return ans
-        
+
 
 class UnionFind():
     def __init__(self, n):
         self.parents = list(range(n))
         self.ranks = [0] * n
-    
+
     def find(self, u):
         if u != self.parents[u]:
             self.parents[u] = self.find(self.parents[u])
         return self.parents[u]
-    
+
     def union(self, n1, n2):
         p1, p2 = self.find(n1), self.find(n2)
         if p1 == p2:
@@ -39,4 +39,3 @@ class UnionFind():
             self.parents[p1] = p2
             self.ranks[p2] += self.ranks[p1]
             return
-

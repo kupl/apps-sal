@@ -4,11 +4,11 @@ class Solution:
             return m
         ends, starts = {}, {}
         last_found = -1
-        
+
         for ind, val in enumerate(arr):
             left = val - 1 if val - 1 in ends else None
             right = val + 1 if val + 1 in starts else None
-            
+
             if left and right:
                 length1, length2 = left - ends[left], starts[right] - right
                 if length1 == m - 1 or length2 == m - 1:
@@ -35,4 +35,3 @@ class Solution:
                 starts[val] = val
                 ends[val] = val
         return last_found
-

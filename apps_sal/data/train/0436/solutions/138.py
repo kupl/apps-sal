@@ -5,11 +5,11 @@ class Solution:
         while 0 not in state:
             nstate = set()
             for x in state:
-                nstate.add(x-1)
-                if x%2 == 0:
-                    nstate.add(x//2)
-                if x%3 == 0:
-                    nstate.add(x//3)
+                nstate.add(x - 1)
+                if x % 2 == 0:
+                    nstate.add(x // 2)
+                if x % 3 == 0:
+                    nstate.add(x // 3)
             steps += 1
             state = nstate
         return steps

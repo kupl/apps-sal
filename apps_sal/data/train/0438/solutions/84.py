@@ -1,20 +1,20 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        
+
         uf = list(range(len(arr)))
         sz = [0] * len(arr)
         steps = set()
-        
+
         def find(x):
             while x != uf[x]:
                 # uf[x] = uf[uf[x]]
                 x = uf[x]
             return x
-        
+
         def union(p, q):
             pid, qid = find(p), find(q)
             if pid == qid:
-                return 
+                return
             if sz[pid] == m and pid in steps:
                 steps.remove(pid)
             if sz[qid] == m and qid in steps:
@@ -29,14 +29,13 @@ class Solution:
         for i in range(len(arr)):
             idx = arr[i] - 1
             sz[idx] = 1
-            if idx - 1 >= 0 and sz[idx-1]:
-                union(idx-1, idx)
-            if idx + 1 < len(arr) and sz[idx+1]:
-                union(idx+1, idx)
+            if idx - 1 >= 0 and sz[idx - 1]:
+                union(idx - 1, idx)
+            if idx + 1 < len(arr) and sz[idx + 1]:
+                union(idx + 1, idx)
             if sz[find(idx)] == m:
                 steps.add(find(idx))
             if steps:
                 last_step = i + 1
             # print(steps)
         return last_step
-

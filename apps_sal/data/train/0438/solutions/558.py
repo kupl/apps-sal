@@ -14,10 +14,10 @@ class Solution:
             if cnt[m]:
                 res = i + 1
         return res
-    
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
-        leng = [0]  * (n + 2)
+        leng = [0] * (n + 2)
         cnt = [0] * (n + 1)
         res = -1
         for i, a in enumerate(arr):
@@ -30,4 +30,3 @@ class Solution:
             if cnt[m]:
                 res = i + 1
         return res
-

@@ -5,23 +5,21 @@ class Solution:
 
         count = 0
 
-        #Sum the values initially as a buffer
-        sumInit = sum(arr[start:end])                                   
+        # Sum the values initially as a buffer
+        sumInit = sum(arr[start:end])
 
-        #To check if the average exceeds threshold if yes increase count by 1
-        if ((sumInit / k) >= threshold):                                
+        # To check if the average exceeds threshold if yes increase count by 1
+        if ((sumInit / k) >= threshold):
             count += 1
 
-        #To check end is within limits
-        while end < len(arr):   
-            #Subtract the start and end
+        # To check end is within limits
+        while end < len(arr):
+            # Subtract the start and end
             sumInit = sumInit - arr[start] + arr[end]
-            #Check if average exceeds threshold
+            # Check if average exceeds threshold
             if ((sumInit / k) >= threshold):
                 count += 1
             start += 1
             end += 1
-
-
 
         return count

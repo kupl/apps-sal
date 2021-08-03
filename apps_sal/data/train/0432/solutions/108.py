@@ -8,7 +8,7 @@ class Solution:
             first = cards.pop()
             if not cnt[first]:
                 continue
-            elif cnt[first] > 1 :        
+            elif cnt[first] > 1:
                 cnt[first] -= 1
                 cards.append(first)
             else:
@@ -22,4 +22,4 @@ class Solution:
                     del cnt[i]
             if not cnt:
                 return True
-        return False # never happen
+        return False  # never happen

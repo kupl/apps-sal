@@ -1,7 +1,8 @@
 class Solution:
   # 476 ms
     def isPossibleDivide(self, nums, k):
-        if len(nums) % k: return False
+        if len(nums) % k:
+            return False
         c = Counter(nums)
         heapify(nums)
 
@@ -11,7 +12,8 @@ class Solution:
                 num = heappop(nums)
             for i in range(k):
                # print(num+i)
-                if not c[num+i]: return False
-                c[num+i] -= 1
+                if not c[num + i]:
+                    return False
+                c[num + i] -= 1
 
         return True

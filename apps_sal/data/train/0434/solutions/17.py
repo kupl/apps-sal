@@ -18,5 +18,5 @@ class Solution:
                 right += 1
             else:
                 right = 0
-        
+
         return max(joined)

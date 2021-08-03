@@ -14,7 +14,7 @@ class Solution:
             if array2[index - 1] == m:
                 count_m -= 1
             if array2[index + 1] == m:
-                count_m -= 1            
+                count_m -= 1
             array2[index] = array2[index - 1] + array2[index + 1] + 1
             if array2[index - 1] > 0:
                 array2[index - array2[index - 1]] = array2[index]

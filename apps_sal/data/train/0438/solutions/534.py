@@ -4,7 +4,7 @@ class Solution:
         length = [0] * (n + 2)
         cnt = [0] * (n + 2)
         res = -1
-        for i,v in enumerate(A):
+        for i, v in enumerate(A):
             l = length[v - 1]
             r = length[v + 1]
             length[v] = length[v - l] = length[v + r] = l + r + 1

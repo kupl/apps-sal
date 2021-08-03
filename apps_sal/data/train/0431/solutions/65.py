@@ -1,37 +1,36 @@
 class Solution:
 
     def next_smallest(self, A):
-        
-        inds = [-1]*len(A)
+
+        inds = [-1] * len(A)
 
         stack = []
 
         for i, val in enumerate(A):
 
-            while len(stack)>0 and A[stack[-1]]>val:
+            while len(stack) > 0 and A[stack[-1]] > val:
                 inds[stack[-1]] = i
                 stack.pop()
 
-            stack+=[i]
-            
+            stack += [i]
+
         return inds
 
     def last_smallest(self, A):
 
-        inds = [-1]*len(A)
+        inds = [-1] * len(A)
 
         stack = []
 
         for i, val in reversed(list(enumerate(A))):
 
-            while len(stack)>0 and A[stack[-1]]>=val:
+            while len(stack) > 0 and A[stack[-1]] >= val:
                 inds[stack[-1]] = i
                 stack.pop()
 
-            stack+=[i]
-            
+            stack += [i]
+
         return inds
-        
 
     def sumSubarrayMins(self, A):
 
@@ -43,22 +42,21 @@ class Solution:
         n = len(A)
 
         for i, val in enumerate(A):
-            
+
             p = left[i]
             q = right[i]
 
-            a = i-p
-            b = q-i
+            a = i - p
+            b = q - i
 
-            if p==-1:
-                a = i+1
+            if p == -1:
+                a = i + 1
 
-            if q==-1:
-                b = n-i
+            if q == -1:
+                b = n - i
 
-            nseqs = a*b
+            nseqs = a * b
 
-            tot+=nseqs*val
+            tot += nseqs * val
 
-        return tot % (10**9+7)
-
+        return tot % (10**9 + 7)

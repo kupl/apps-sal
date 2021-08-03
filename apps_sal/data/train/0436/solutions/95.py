@@ -1,5 +1,7 @@
 import sys
 sys.setrecursionlimit(1500000)
+
+
 class Solution:
     def minDays(self, n: int) -> int:
         # 我当时看到数据范围n觉得直接dp(n)会超时因此我就没做。
@@ -8,16 +10,16 @@ class Solution:
         def go(x):
             if x == 0:
                 return 0
-            
+
             best = 1e100
             if x % 2 == 0:
                 best = min(best, go(x // 2) + 1)
             if x % 3 == 0:
                 best = min(best, go(x // 3) + 1)
-            
+
             if x <= (1024) or x % 2 > 0 or x % 3 > 0:
                 best = min(best, go(x - 1) + 1)
-                
+
             return best
         return go(n)
         '''

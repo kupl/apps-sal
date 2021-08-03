@@ -5,15 +5,18 @@ class Solution:
         avg = average(arr[0:k])
         prev_el = arr[0]
 
-        if avg >= threshold: answer += 1
+        if avg >= threshold:
+            answer += 1
 
         for i in range(k, len(arr)):
             new_avg = (avg * k - prev_el + arr[i]) / k
-            if new_avg >= threshold: answer += 1
+            if new_avg >= threshold:
+                answer += 1
             avg = new_avg
-            prev_el = arr[i-k+1]
+            prev_el = arr[i - k + 1]
 
         return answer
+
 
 def average(l):
     return sum(l) / len(l)

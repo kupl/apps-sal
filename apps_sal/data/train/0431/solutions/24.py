@@ -6,11 +6,11 @@ class Solution:
         for idx, val in enumerate(A):
             count = 1
             while stack and stack[-1][0] >= val:
-                x,c = stack.pop()
+                x, c = stack.pop()
                 count += c
-                dot -= x*c
-            
-            stack.append((val,count))
+                dot -= x * c
+
+            stack.append((val, count))
             dot += val * count
             ans += dot
         return ans % mod

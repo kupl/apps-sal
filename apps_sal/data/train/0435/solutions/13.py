@@ -2,8 +2,8 @@ class Solution:
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         sums = 0
         count = 0
-        dic = {0:1}
-        
+        dic = {0: 1}
+
         for a in A:
             sums = (sums + a) % K
             print(sums)
@@ -12,5 +12,5 @@ class Solution:
                 dic[sums] += 1
             else:
                 dic[sums] = 1
-                
+
         return count

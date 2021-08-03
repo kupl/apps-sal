@@ -9,7 +9,7 @@ class Solution:
             if nums[i] == 1:
                 if last_one is None:
                     last_one = i
-                cnt += 1 
+                cnt += 1
             else:
                 if last_zero is None:
                     last_zero = i
@@ -20,4 +20,4 @@ class Solution:
             res = max(res, cnt)
         if res == n:
             return n - 1
-        return res    
+        return res

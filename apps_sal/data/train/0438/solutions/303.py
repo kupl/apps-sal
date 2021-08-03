@@ -4,20 +4,20 @@ class UnionFind:
         self.size = [0 for _ in range(n)]
         self.size_count = [0 for _ in range(n + 1)]
         self.size_count[0] = n
-        
+
     def init(self, x):
         self.parent[x] = x
         self.size[x] = 1
         self.size_count[1] += 1
         self.size_count[0] -= 1
-        
+
     def find(self, x):
         if self.parent[x] == -1:
             return -1
         if x != self.parent[x]:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
-    
+
     def union(self, x, y):
         p = self.find(x)
         q = self.find(y)
@@ -31,11 +31,12 @@ class UnionFind:
         self.size_count[self.size[father]] -= 1
         self.size[father] += self.size[son]
         self.size_count[self.size[father]] += 1
-    
+
     def get_size(self, x):
         if self.find(x) == -1:
             return 0
         return self.size[self.find(x)]
+
 
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:

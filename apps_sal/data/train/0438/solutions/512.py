@@ -1,21 +1,23 @@
 from collections import defaultdict
+
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         parent = {}
         rank = defaultdict(int)
         size = {}
-        
+
         def find(x):
             if x != parent[x]:
                 parent[x] = find(parent[x])
             return parent[x]
-    
+
         def union(x, y):
             nx, ny = find(x), find(y)
-            
+
             if nx == ny:
                 return False
-            
+
             if rank[nx] > rank[ny]:
                 parent[ny] = nx
                 size[nx] += size[ny]
@@ -29,11 +31,11 @@ class Solution:
                 rank[ny] += 1
                 size[ny] += size[nx]
                 return size[ny]
-        
+
         seen = set()
         last = -1
         size_counts = Counter()
-        
+
         for i, num in enumerate(arr):
             parent[num] = num
             size[num] = 1
@@ -62,5 +64,3 @@ class Solution:
 
             seen.add(num)
         return last
-        
-

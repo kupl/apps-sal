@@ -7,11 +7,10 @@ class Solution:
             left, right = comps[n - 1], comps[n + 1]
             comps[n - left] = comps[n + right] = comps[n] = left + right + 1
             # print(comps)
-            
+
             size[comps[n]] += 1
             size[left] -= 1
             size[right] -= 1
             if size[m] > 0:
                 ans = i + 1
         return ans
-

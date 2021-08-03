@@ -4,4 +4,3 @@ class Solution:
         for i in a:
             prefixSum.append(i + prefixSum[-1])
         return sum(prefixSum[i + k] - prefixSum[i] >= k * threshold for i in range(len(a) - k + 1))
-

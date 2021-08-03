@@ -10,4 +10,3 @@ class Solution:
                 res += A[j] * (i - j) * (j - k)
             s.append(i)
         return res % (10**9 + 7)
-

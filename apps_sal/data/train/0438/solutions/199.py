@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class DSU:
     def __init__(self, n):
         self.n = n
@@ -15,7 +16,7 @@ class DSU:
         while i != r:
             i, self.fa[i] = self.fa[i], r
         return r
-    
+
     def join(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -27,16 +28,17 @@ class DSU:
             self.cnt[sx] -= 1
             self.cnt[sy] -= 1
             self.cnt[sx + sy] += 1
-            
+
             self.fa[x] = y
             self.sz[y] += self.sz[x]
+
 
 class Solution:
     def findLatestStep(self, a: List[int], m: int) -> int:
         n = len(a)
         b = [0 for _ in range(n + 2)]
         dsu = DSU(n + 1)
-        
+
         ans = -1
         valid = set()
         for step, j in enumerate(a, 1):

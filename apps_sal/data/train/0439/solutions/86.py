@@ -28,4 +28,3 @@ class Solution:
             last = i
             max_len = max(max_len, temp_len)
         return max_len
-

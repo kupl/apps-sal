@@ -11,4 +11,3 @@ class Solution:
             print((x, m[cur_sum % K]))
             m[cur_sum % K] += 1
         return ans
-

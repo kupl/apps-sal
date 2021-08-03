@@ -8,6 +8,6 @@ class Solution:
             k, klen = groups[i]
             if k:
                 ans = max(ans, klen)
-            elif i not in [0, len(groups)-1] and klen == 1:
-                ans = max(ans, groups[i-1][1] + groups[i+1][1])
+            elif i not in [0, len(groups) - 1] and klen == 1:
+                ans = max(ans, groups[i - 1][1] + groups[i + 1][1])
         return ans

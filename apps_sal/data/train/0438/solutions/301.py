@@ -1,32 +1,27 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        
+
         n = len(arr)
         que = collections.deque([(1, n)])
-        
-        for i in range(n-1, -1, -1):
-            
+
+        for i in range(n - 1, -1, -1):
+
             k = len(que)
-            
+
             for j in range(k):
                 l, r = que.popleft()
                 if r - l + 1 == m:
-                    return i+1
-                
+                    return i + 1
+
                 if l <= arr[i] <= r:
-                    if arr[i]-l >= m:
-                        que.append((l, arr[i]-1))
-                    if r-arr[i] >= m:
-                        que.append((arr[i]+1, r))
+                    if arr[i] - l >= m:
+                        que.append((l, arr[i] - 1))
+                    if r - arr[i] >= m:
+                        que.append((arr[i] + 1, r))
                 else:
                     que.append((l, r))
         return -1
-            
-            
-            
-        
-        
-        
+
         # change endpoint .
         # n = len(arr)
         # if m == n:
@@ -42,9 +37,7 @@ class Solution:
         #     if left == m or right == m:
         #         res = i
         # return res
-    
-    
-    
+
     # if m == len(A): return m
     #     length = [0] * (len(A) + 2)
     #     res = -1
@@ -54,12 +47,7 @@ class Solution:
     #             res = i
     #         length[a - left] = length[a + right] = left + right + 1
     #     return res
-                
-            
-            
-                
-            
-            
+
         # Union-find
 #         n = len(arr)
 #         p = [i for i in range(n+1)]
@@ -70,9 +58,9 @@ class Solution:
 #             while x != p[x]:
 #                 x = p[x]
 #             return x
-        
+
 #         def union(x, y):
-            
+
 #             groups[count[y]] -= 1
 #             groups[count[x]] -= 1
 #             if count[x] >= count[y]:
@@ -83,9 +71,9 @@ class Solution:
 #                 p[x] = y
 #                 count[y] += count[x]
 #                 groups[count[y]] += 1
-        
+
 #         res = -1
-        
+
 #         for i, num in enumerate(arr):
 #             # print(p)
 #             # print(count)
@@ -103,23 +91,7 @@ class Solution:
 #                 pm = findp(num)
 #                 if pr != pm:
 #                     union(pr, pm)
-            
+
 #             if groups[m] > 0:
 #                 res = i+1
 #         return res
-                    
-                
-                
-            
-        
-                
-        
-        
-        
-        
-         
-        
-            
-            
-            
-

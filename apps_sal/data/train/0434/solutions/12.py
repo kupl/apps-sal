@@ -16,7 +16,7 @@ class Solution:
                 else:
                     k -= 1
                     zero = i
-                    i += 1                    
+                    i += 1
             else:
                 count += 1
                 i += 1

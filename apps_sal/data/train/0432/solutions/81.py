@@ -1,6 +1,7 @@
 from collections import Counter
 from heapq import heappop, heapify
 
+
 def is_possible_divide(heap, k):
     if len(heap) == 0:
         return True
@@ -23,6 +24,7 @@ def is_possible_divide(heap, k):
         heapify(heap)
         return is_possible_divide(heap, k)
 
+
 class Solution:
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if len(nums) % k != 0:
@@ -30,4 +32,3 @@ class Solution:
         heap = [(value, count) for value, count in list(Counter(nums).items())]
         heapify(heap)
         return is_possible_divide(heap, k)
-

@@ -9,7 +9,7 @@ class Solution:
         left = 0
         right = 1
         isde = False
-        
+
         while right < N:
             if A[right] == A[right - 1]:
                 left = right
@@ -20,5 +20,5 @@ class Solution:
                 right += 1
             else:
                 left = right - 1
-                
+
         return ans

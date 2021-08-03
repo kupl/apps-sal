@@ -11,4 +11,4 @@ class Solution:
             count[length[a]] += 1
             if count[m]:
                 res = i + 1
-        return res        
+        return res

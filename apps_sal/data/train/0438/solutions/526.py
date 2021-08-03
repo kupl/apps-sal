@@ -3,14 +3,14 @@ class UnionFind:
         self.leaders = {}
         self.ranks = {}
         self.size = {}
-        
+
     def add(self, x):
         if x in self.leaders:
             return
         self.leaders[x] = x
         self.ranks[x] = 1
         self.size[x] = 1
-    
+
     def find(self, x):
         # p = x
         # while p != self._leaders[p]:
@@ -21,11 +21,11 @@ class UnionFind:
         if self.leaders[x] != x:
             self.leaders[x] = self.find(self.leaders[x])
         return self.leaders[x]
-    
+
     def union(self, x, y):
         p = self.find(x)
         q = self.find(y)
-        if p == q: 
+        if p == q:
             return False
         if self.ranks[p] < self.ranks[q]:
             self.leaders[p] = q
@@ -33,12 +33,13 @@ class UnionFind:
         elif self.ranks[p] > self.ranks[q]:
             self.leaders[q] = p
             self.size[p] += self.size[q]
-        else:        
+        else:
             self.leaders[q] = p
             self.ranks[p] += 1
             self.size[p] += self.size[q]
         return True
-    
+
+
 class Solution:
     def findLatestStep(self, arr, m):
         n = len(arr)

@@ -16,4 +16,3 @@ class Solution:
                 s0.add(si - 1)
             s1 = s0
             s0 = set()
-

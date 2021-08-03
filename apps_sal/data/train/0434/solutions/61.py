@@ -13,4 +13,3 @@ class Solution:
             result = max(result, end - start)
 
         return result
-

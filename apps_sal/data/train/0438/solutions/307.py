@@ -4,6 +4,7 @@ class Solution:
         mem = {}
         count = collections.Counter()
         group_size = {}
+
         def find(k):
             if mem[k] != k:
                 mem[k] = find(mem[k])

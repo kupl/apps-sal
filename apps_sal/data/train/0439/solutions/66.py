@@ -3,16 +3,16 @@ class Solution:
         totalSize = 1
         i = 0
         while i < len(A) - totalSize:
-        #for i in range(len(A)-1):
+            # for i in range(len(A)-1):
             currentSize = 1
             sign = None
-            for j in range(i+1,len(A)):
+            for j in range(i + 1, len(A)):
                 currentSign = None
-                if A[j] > A[j-1]:
+                if A[j] > A[j - 1]:
                     currentSign = 1
-                elif A[j] < A[j-1]:
+                elif A[j] < A[j - 1]:
                     currentSign = -1
-                else: 
+                else:
                     break
                 if currentSign != sign:
                     currentSize += 1
@@ -22,6 +22,3 @@ class Solution:
             totalSize = max(totalSize, currentSize)
             i += 1
         return totalSize
-                
-                    
-

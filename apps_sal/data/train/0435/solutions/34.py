@@ -6,7 +6,7 @@ class Solution:
         res = 0
         for i in range(len(A)):
             num = A[i]
-            prefix = ( prefix + num ) % K
+            prefix = (prefix + num) % K
             res += hash_map[prefix]
             hash_map[prefix] += 1
         return res

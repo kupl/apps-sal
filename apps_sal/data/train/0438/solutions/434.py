@@ -13,7 +13,7 @@ class Solution:
         def union(x, y):
             seen[find(y)] += seen[find(x)]
             uf[find(x)] = find(y)
-        
+
         if m == n:
             return n
         for i, a in enumerate(arr):
@@ -24,9 +24,3 @@ class Solution:
                         ans = i
                     union(a, b)
         return ans
-                
-                
-                
-                
-                
-

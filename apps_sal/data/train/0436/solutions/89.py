@@ -3,7 +3,7 @@ class Solution:
         queue = deque([n])
         visited = set()
         steps = 1
-        
+
         while queue:
             q_len = len(queue)
             for _ in range(q_len):
@@ -21,11 +21,11 @@ class Solution:
                     visited.add(remain // 3)
             steps += 1
         return steps
-        
-        
+
+
 #         queue = deque([(n, 1)])
 #         steps = 1
-        
+
 #         while queue:
 #             q_len = len(queue)
 #             for _ in range(q_len):
@@ -41,4 +41,3 @@ class Solution:
 #                     queue.append((remain, remain - 2 * remain // 3))
 #             steps += 1
 #         return steps
-

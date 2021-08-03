@@ -1,7 +1,9 @@
 from collections import Counter
+
+
 class Solution:
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
-        
+
         d = Counter(nums)
         nums.sort()
         for x in nums:
@@ -14,7 +16,3 @@ class Solution:
                     else:
                         return False
         return True
-                
-            
-                
-

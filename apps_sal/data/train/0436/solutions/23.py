@@ -9,9 +9,8 @@ class Solution:
                     return cnt
                 neo.add(i - 1)
                 if i % 2 == 0:
-                    neo.add(i//2)
+                    neo.add(i // 2)
                 if i % 3 == 0:
                     neo.add(i // 3)
             cnt += 1
             last = neo
-

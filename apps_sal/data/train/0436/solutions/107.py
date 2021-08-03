@@ -2,7 +2,7 @@ class Solution:
     def minDays(self, n: int) -> int:
         if n <= 1:
             return n
-        
+
         q = collections.deque()
         q.append([n, 0])
         visited = set([n])
@@ -10,20 +10,19 @@ class Solution:
             x, d = q.popleft()
             if x == 0:
                 return d
-            
-            neighbors = [x-1]
+
+            neighbors = [x - 1]
             if x % 2 == 0:
-                neighbors.append(x//2)
+                neighbors.append(x // 2)
             if x % 3 == 0:
-                neighbors.append(x//3)
-            
+                neighbors.append(x // 3)
+
             for y in neighbors:
                 if y in visited:
                     continue
                 q.append([y, d + 1])
                 visited.add(y)
-            
-        
+
         g = {1: 1}
         x = 1
         for i in range(0, 30):
@@ -38,13 +37,13 @@ class Solution:
         if n in g:
             days += g[n]
         return days
-        
+
         f = [None] * (n + 1)
         f[1] = 1
         for k in range(2, n + 1):
-            f[k] = 1 + f[k-1]
+            f[k] = 1 + f[k - 1]
             if k % 2 == 0:
-                f[k] = min(f[k], 1 + f[k//2])
+                f[k] = min(f[k], 1 + f[k // 2])
             if k % 3 == 0:
-                f[k] = min(f[k], 1 + f[k//3])
+                f[k] = min(f[k], 1 + f[k // 3])
         return f[n]

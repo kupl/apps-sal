@@ -2,7 +2,7 @@ class DSU:
     def __init__(self, count):
         self.parent = [i for i in range(count)]
         self.size = [1 for _ in range(count)]
-    
+
     def find(self, x):
         root = x
         while root != self.parent[root]:
@@ -12,7 +12,7 @@ class DSU:
             self.parent[x] = root
             x = next_node
         return root
-    
+
     def union(self, x, y):
         r1, r2 = self.find(x), self.find(y)
         if r1 == r2:
@@ -23,10 +23,11 @@ class DSU:
         else:
             self.size[r1] += self.size[r2]
             self.parent[r2] = r1
-    
+
     def get_size(self, x):
         return self.size[self.find(x)]
-        
+
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         components = [0 for _ in range(len(arr))]
@@ -42,5 +43,5 @@ class Solution:
                     dsu.union(num, adj)
             size_count[dsu.get_size(num)] += 1
             if size_count[m] > 0:
-                ans = i # step
+                ans = i  # step
         return ans

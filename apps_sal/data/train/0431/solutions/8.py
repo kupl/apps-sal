@@ -12,6 +12,5 @@ class Solution:
             stack.append((y, count))
             dot += y * count
             ans += dot
-            
-        return ans % MOD
 
+        return ans % MOD

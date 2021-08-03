@@ -21,10 +21,9 @@ class Solution:
             # print(left)
             ple_stack.append(i)
         for i in range(len(A)):
-            left[i] =  i - left[i]
+            left[i] = i - left[i]
         # print(left)
-        
-        
+
         nle_stack = []
         right = [-1] * len(A)
         for j in reversed(range(len(A))):
@@ -37,5 +36,5 @@ class Solution:
         for j in range(len(A)):
             right[j] = right[j] - j
         # print(right)
-        
+
         return sum([x * y * z for x, y, z in zip(left, right, A)]) % (10**9 + 7)

@@ -6,7 +6,6 @@ class Solution:
             else:
                 return find_set(parents[x][0])
 
-
         def union_set(x, y):
             # print(x, y)
             x_root = find_set(x)
@@ -15,7 +14,6 @@ class Solution:
             # print(parents[x_root], parents[y_root])
             parents[y_root][1] += parents[x_root][1]
             parents[x_root][0] = y_root
-
 
         n = len(arr)
         parents = [[i, 1] for i in range(n)]

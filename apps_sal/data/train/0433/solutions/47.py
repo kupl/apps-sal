@@ -7,7 +7,7 @@ class Solution:
                 s += num
                 continue
             if s >= target:
-                ans += 1  
+                ans += 1
             s = s - arr[i - k] + arr[i]
         if s >= target:
             ans += 1

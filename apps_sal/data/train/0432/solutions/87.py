@@ -3,7 +3,7 @@ class Solution:
         N = len(nums)
         if (N % k != 0):
             return False
-        
+
         counter = collections.Counter(nums)
         while (counter):
             min_key = min(counter.keys())
@@ -15,5 +15,5 @@ class Solution:
                     min_key += 1
                 else:
                     return False
-        
+
         return True

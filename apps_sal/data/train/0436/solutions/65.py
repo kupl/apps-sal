@@ -38,4 +38,3 @@ class Solution:
                     seen2.add(node - 1)
             step += 1
         return -1
-

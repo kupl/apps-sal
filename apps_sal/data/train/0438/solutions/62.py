@@ -11,7 +11,7 @@ class Solution:
             # 0 1 2 3 4 5
             # 0 0 1 1 1 0
             l = mem[i - 1] if i - 1 >= 0 else 0
-            r = mem[i + 1] if i + 1 <  n else 0
+            r = mem[i + 1] if i + 1 < n else 0
             counter[l] -= 1
             counter[r] -= 1
             cur = l + r + 1

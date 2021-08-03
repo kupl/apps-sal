@@ -16,7 +16,7 @@ class Solution:
                 right = a + 1
             leftPos = a if left == -1 or dp[left][0] == -1 else dp[left][0]
             rightPos = a if right == -1 or dp[right][1] == -1 else dp[right][1]
-            
+
             dp[a] = (leftPos, rightPos)
             if leftPos != a:
                 dp[leftPos] = (leftPos, rightPos)

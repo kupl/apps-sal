@@ -1,7 +1,7 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         A = arr
-        if m == len(A): 
+        if m == len(A):
             return m
         length = [0] * (len(A) + 2)
         res = -1

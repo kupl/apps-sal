@@ -6,14 +6,14 @@ class Solution:
             return float('inf')
         elif n == 0:
             return 0
-        ret = self.helper(n-1)
+        ret = self.helper(n - 1)
         if n % 3 == 0:
-            ret = min(ret, self.helper(n-2*(n//3)))
+            ret = min(ret, self.helper(n - 2 * (n // 3)))
         if n % 2 == 0:
-            ret = min(ret, self.helper(n//2))
+            ret = min(ret, self.helper(n // 2))
         self.dp[n] = 1 + ret
         return self.dp[n]
-    
+
     def minDays(self, n: int) -> int:
         '''
         # DFS => MLE
@@ -21,7 +21,7 @@ class Solution:
         self.dp = {}
         return self.helper(n)
         '''
-        
+
         '''
         # BFS
         '''
@@ -30,9 +30,12 @@ class Solution:
         while q:
             nxts = set()
             for nn in q:
-                if nn == 0: return step
-                nxts.add(nn-1)
-                if nn % 2 == 0: nxts.add(nn//2)
-                if nn % 3 == 0: nxts.add(nn-2*(nn//3))
+                if nn == 0:
+                    return step
+                nxts.add(nn - 1)
+                if nn % 2 == 0:
+                    nxts.add(nn // 2)
+                if nn % 3 == 0:
+                    nxts.add(nn - 2 * (nn // 3))
             step += 1
             q = deque(nxts)

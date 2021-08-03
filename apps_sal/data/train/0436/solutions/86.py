@@ -3,9 +3,9 @@ class Solution:
         queue = deque([n])
         visited = set()
         visited.add(n)
-        
+
         steps = 0
-        
+
         while queue:
             q_len = len(queue)
             for _ in range(q_len):

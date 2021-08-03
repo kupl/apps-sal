@@ -14,7 +14,7 @@ class Solution(object):
 
         stack = []
         right = [n] * n
-        for k in range(n-1, -1, -1):
+        for k in range(n - 1, -1, -1):
             while stack and A[k] < A[stack[-1]]:
                 stack.pop()
             if stack:

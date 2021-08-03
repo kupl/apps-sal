@@ -7,11 +7,9 @@ class Solution:
         for num in nums:
             if countMap[num] == 0:
                 continue
-            for i in range(num, num+k):
+            for i in range(num, num + k):
                 if countMap[i] > 0:
                     countMap[i] -= 1
                 else:
                     return False
         return True
-                
-

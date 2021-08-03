@@ -33,5 +33,6 @@ class Solution:
             counts[len(children[h])] = counts.get(len(children[h]), 0) + 1
             if counts.get(m, 0) > 0:
                 last = it
-        if last == -1: return -1
+        if last == -1:
+            return -1
         return last + 1

@@ -5,9 +5,8 @@ class Solution:
         result = 0
         prefix = 0
         for i in range(len(A)):
-            prefix = (prefix + A[i])%K
+            prefix = (prefix + A[i]) % K
             hashmap[prefix] += 1
             result += (hashmap[prefix] - 1)
 
         return result
-

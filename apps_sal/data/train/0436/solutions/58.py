@@ -12,7 +12,7 @@ class Solution:
                 if n % 3 == 0 and ok(n - 2 * n // 3, x - 1):
                     return True
                 return ok(n - 1, x - 1)
-            
+
         left = 0
         right = n + 1
         while right - left > 1:
@@ -22,4 +22,3 @@ class Solution:
             else:
                 left = mid
         return right
-

@@ -5,7 +5,7 @@ class Solution:
         length = [0] * (n + 2)
         # count of length
         count = [0] * (n + 1)
-        
+
         for i, v in enumerate(arr):
             left, right = length[v - 1], length[v + 1]
             length[v] = length[v - left] = length[v + right] = left + right + 1
@@ -13,5 +13,5 @@ class Solution:
             count[right] -= 1
             count[length[v]] += 1
             if count[m]:
-                res = i + 1        
+                res = i + 1
         return res

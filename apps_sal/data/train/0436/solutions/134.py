@@ -1,6 +1,7 @@
 class Solution:
     def minDays(self, n: int) -> int:
-        if n == 1: return 1
+        if n == 1:
+            return 1
         cnt = 0
         st = set([n])
         while st:
@@ -15,4 +16,3 @@ class Solution:
                 if v % 3 == 0:
                     st_temp.add(v // 3)
             st = st_temp
-

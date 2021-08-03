@@ -1,8 +1,11 @@
-import queue 
+import queue
+
+
 class Solution:
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         nums = sorted(nums)
-        if len(nums) % k != 0: return False 
+        if len(nums) % k != 0:
+            return False
         arr_list = []
         q = queue.PriorityQueue()
         for ind, num in enumerate(nums):
@@ -15,4 +18,4 @@ class Solution:
                     continue
                 else:
                     q.put([num, tmp_list])
-        return True if not q.qsize() else False                        
+        return True if not q.qsize() else False

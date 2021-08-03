@@ -7,16 +7,14 @@ class Solution:
             new = []
             for item in queue:
                 if item in hashmap:
-                    continue 
+                    continue
                 if item == 0:
                     return res
-                if item%2==0:
-                    new.append(item-item//2)
-                if item%3 == 0:
-                    new.append(item-((item//3)*2))
+                if item % 2 == 0:
+                    new.append(item - item // 2)
+                if item % 3 == 0:
+                    new.append(item - ((item // 3) * 2))
                 hashmap[item] = res
-                new.append(item-1)
+                new.append(item - 1)
             res += 1
             queue = new
-        
-

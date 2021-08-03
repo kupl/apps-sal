@@ -6,7 +6,6 @@ class Solution:
             if hi - lo == k:
                 if sum_of_win >= target:
                     cnt += 1
-                lo += 1   
+                lo += 1
                 sum_of_win -= a[lo]
         return cnt
-

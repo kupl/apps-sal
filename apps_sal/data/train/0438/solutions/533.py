@@ -26,9 +26,3 @@ class Solution:
                 ans = n
 
         return ans
-                
-                
-                
-                
-                
-

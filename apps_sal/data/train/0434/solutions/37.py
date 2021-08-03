@@ -1,7 +1,7 @@
 class Solution:
     def longestSubarray(self, nums: List[int]) -> int:
         if all(nums):
-            return len(nums)-1
+            return len(nums) - 1
         m = pre = l = pl = 0
         for i, n in enumerate(nums):
             if n == pre == 1:

@@ -1,4 +1,6 @@
 from bisect import bisect_left
+
+
 class Solution:
     def findLatestStep(self, arr, m: int) -> int:
         n = len(arr)
@@ -15,14 +17,13 @@ class Solution:
                 assert False
             else:
                 del segments[index]
-                first_length = zero-seg[0]
-                second_length = seg[0]+seg[1]-1-zero
+                first_length = zero - seg[0]
+                second_length = seg[0] + seg[1] - 1 - zero
                 if first_length == m or second_length == m:
                     return n - cur_iter - 1
                 if second_length >= 1:
-                    segments.insert(index, (zero+1, second_length))
+                    segments.insert(index, (zero + 1, second_length))
                 if first_length >= 1:
                     segments.insert(index, (seg[0], first_length))
             # print(segments)
         return -1
-

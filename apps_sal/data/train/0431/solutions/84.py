@@ -6,17 +6,18 @@ class Solution:
     # popped from the stack eventually.
         stack = [0]
         res = 0
-        
+
         for i in range(1, len(A)):
             while A[i] < A[stack[-1]]:
                 j = stack.pop()
                 k = stack[-1]
                 res += A[j] * (i - j) * (j - k)
-    #eg.两个区间会有一个重合，在j， 比如j点A等于3， 这样就可算上subarray [3] 了
+    # eg.两个区间会有一个重合，在j， 比如j点A等于3， 这样就可算上subarray [3] 了
                 res %= 10 ** 9 + 7
             stack.append(i)
         return res
-        
+
+
 '''
         if not A:
             return 0
@@ -36,5 +37,3 @@ class Solution:
                 res += i
             curmin.append(curminlevel)
         return res%(10**9 + 7)'''
-                    
-

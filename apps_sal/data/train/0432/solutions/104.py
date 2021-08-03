@@ -1,22 +1,21 @@
 class Solution:
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
-        if len(nums)%k!=0:
+        if len(nums) % k != 0:
             return False
         nums.sort()
-        #print(nums,k)
-        d={}
+        # print(nums,k)
+        d = {}
         for i in nums:
-            d[i]=d.get(i,0)+1
+            d[i] = d.get(i, 0) + 1
         for j in d:
-            while d[j]>0:
-                for x in range(j,j+k):
-                    if d.get(x,0)>0:
-                        d[x]-=1
+            while d[j] > 0:
+                for x in range(j, j + k):
+                    if d.get(x, 0) > 0:
+                        d[x] -= 1
                     else:
                         return False
         return True
-        
-        
+
         '''
         i=0
         while k<=len(nums):

@@ -4,19 +4,19 @@ class Solution:
         maintain a DS to record all segments (start, end).
         For each arr[i], test if i-1 or i+1 are in the DS.
         If so, merge the interval and insert to the DS again.
-        
+
         DS:
         - Insert interval
         - Delete interval
         '''
-        
+
         starts = {}
         ends = {}
         intervals = {}
         interval_count = 0
-        
+
         ans = -1
-        
+
         for i, x in enumerate(arr):
             s, e = x, x
             if x - 1 in ends:
@@ -42,5 +42,5 @@ class Solution:
             # print(starts, ends, intervals)
             if e - s + 1 == m:
                 ans = max(ans, i + 1)
-        
+
         return ans

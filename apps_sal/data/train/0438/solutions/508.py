@@ -2,13 +2,13 @@ class Union_Find():
     def __init__(self):
         self.father = {}
         self.count = collections.defaultdict(int)
-    
+
     def find(self, a):
         if self.father[a] == a:
             return a
         self.father[a] = self.find(self.father[a])
         return self.father[a]
-    
+
     def union(self, a, b):
         father_a = self.find(a)
         father_b = self.find(b)
@@ -37,4 +37,3 @@ class Solution:
             if uf.count[uf.find(i + 1)] == m:
                 return n
         return result
-

@@ -11,7 +11,7 @@ class Solution:
         for i in range(n):
             joined[i] += left
             joined[n - 1 - i] += right
-            result = max(result, joined[i], joined[n - 1 - i] )
+            result = max(result, joined[i], joined[n - 1 - i])
             if nums[i] == 1:
                 left += 1
             else:
@@ -20,5 +20,5 @@ class Solution:
                 right += 1
             else:
                 right = 0
-        
+
         return result

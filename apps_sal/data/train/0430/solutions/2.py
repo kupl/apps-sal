@@ -8,4 +8,3 @@ class Solution:
             last[c] = res
             res = temp
         return (res - 1) % (10**9 + 7)
-

@@ -23,4 +23,3 @@ class Solution:
             res = max(res, l)
             b = a
         return res
-

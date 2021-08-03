@@ -3,7 +3,7 @@ class Solution:
         m = collections.defaultdict(int)
         m[0] = 0
         m[1] = 1
-        
+
         def helper(n):
             if n in m:
                 return m[n]
@@ -20,5 +20,5 @@ class Solution:
                 res = min(res, 1 + helper(n - 1))
             m[n] = res
             return res
-        
+
         return helper(n)

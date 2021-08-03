@@ -8,6 +8,8 @@ I either need the length of the unencoded string, or try the encoded part first 
 return (None, length) if it isn't there
 
 '''
+
+
 class Solution:
     # returns (answer, none) or (none, length of unencoded string)
     # k is 0-indexed
@@ -17,7 +19,7 @@ class Solution:
             if s[i].isnumeric():
                 number_ix = i
                 break
-        
+
         if number_ix == -1:
             # string is all unencoded
             if k < len(s):
@@ -25,24 +27,22 @@ class Solution:
             else:
                 return (None, len(s))
         else:
-            encoded, number, unencoded = s[:number_ix], s[number_ix], s[number_ix+1:]
+            encoded, number, unencoded = s[:number_ix], s[number_ix], s[number_ix + 1:]
             sub_answer, sub_length = self._decode(encoded, k)
             if sub_answer is not None:
                 return (sub_answer, None)
             else:
-                if k < sub_length*int(number):
+                if k < sub_length * int(number):
                     k = k % sub_length
                     sub_answer, _ = self._decode(encoded, k)
                     return (sub_answer, None)
-                    
+
                 k = k - (sub_length * int(number))
                 if k < len(unencoded):
                     return (unencoded[k], None)
                 else:
-                    return (None, sub_length*int(number) + len(unencoded))
-            
-        
-    
+                    return (None, sub_length * int(number) + len(unencoded))
+
     def decodeAtIndex(self, S: str, K: int) -> str:
-        answer, _ = self._decode(S, K-1)
+        answer, _ = self._decode(S, K - 1)
         return answer

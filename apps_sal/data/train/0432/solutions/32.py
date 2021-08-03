@@ -8,10 +8,9 @@ class Solution:
             print(i)
             if c[i] > 0:
                 for j in range(k)[::-1]:
-                    print(('j:',j,i+j,c[i+j]))
+                    print(('j:', j, i + j, c[i + j]))
                     c[i + j] -= c[i]
                     if c[i + j] < 0:
                         return False
                 print(c)
         return True
-

@@ -17,24 +17,24 @@ add prefix % k into seen
 4 4 4 5 4 0
 '''
 from collections import Counter
+
+
 class Solution:
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         seen = Counter()
-        
-        prefix = [] # store sum up till and including this index
+
+        prefix = []  # store sum up till and including this index
         curr_sum = 0
         for x in A:
             curr_sum += x
             prefix.append(curr_sum % K)
-            
-        ans = 0 
+
+        ans = 0
         for ix in range(len(A)):
             remainder = K - prefix[ix]
-            if prefix[ix] in seen: # handle case whereby sub array = 0 or sub array = 5
+            if prefix[ix] in seen:  # handle case whereby sub array = 0 or sub array = 5
                 ans += seen[prefix[ix]]
             if prefix[ix] == 0:
                 ans += 1
             seen[prefix[ix]] += 1
         return ans
-            
-

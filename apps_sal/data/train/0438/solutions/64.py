@@ -13,17 +13,17 @@ class Solution:
                 lGroup = gRights[x - 1]
             except KeyError:
                 lGroup = None
-                
+
             if lGroup is not None and rGroup is not None:
                 lSize = lGroup[2]
                 rSize = rGroup[2]
                 del gLefts[rGroup[0]]
                 del gRights[lGroup[1]]
-                
+
                 gSizeCounter[lSize] -= 1
-                    
+
                 gSizeCounter[rSize] -= 1
-                    
+
                 lSize += 1 + rSize
                 gSizeCounter[lSize] += 1
                 lGroup[2] = lSize
@@ -31,9 +31,9 @@ class Solution:
                 gRights[lGroup[1]] = lGroup
             elif lGroup is not None:
                 lSize = lGroup[2]
-                
+
                 gSizeCounter[lSize] -= 1
-                    
+
                 lSize += 1
                 gSizeCounter[lSize] += 1
                 lGroup[2] = lSize
@@ -42,10 +42,9 @@ class Solution:
                 gRights[x] = lGroup
             elif rGroup is not None:
                 rSize = rGroup[2]
-                
 
                 gSizeCounter[rSize] -= 1
-                    
+
                 rSize += 1
                 gSizeCounter[rSize] += 1
                 rGroup[2] = rSize
@@ -58,5 +57,5 @@ class Solution:
 
             if gSizeCounter[m] > 0:
                 result = step
-                
+
         return result

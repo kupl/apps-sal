@@ -9,7 +9,7 @@ class Solution:
             if num not in visit:
                 visit.add(num)
                 if num % 3 == 0:
-                    heapq.heappush(queue, [curr+1, num//3])
+                    heapq.heappush(queue, [curr + 1, num // 3])
                 if num % 2 == 0:
-                    heapq.heappush(queue, [curr+1, num//2])
-                heapq.heappush(queue, [curr+1, num-1])
+                    heapq.heappush(queue, [curr + 1, num // 2])
+                heapq.heappush(queue, [curr + 1, num - 1])

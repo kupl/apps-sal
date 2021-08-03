@@ -10,5 +10,3 @@ class Solution:
                 result = i
             lengths[a - left] = lengths[a + right] = left + right + 1
         return result
-            
-

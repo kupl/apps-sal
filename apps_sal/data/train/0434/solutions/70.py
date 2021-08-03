@@ -22,6 +22,6 @@ class Solution:
         maxSum = 0
         for i in range(1, len(arr) - 1):
             if arr[i] == 0:
-                maxSum = max(maxSum, arr[i-1] + arr[i+1])
+                maxSum = max(maxSum, arr[i - 1] + arr[i + 1])
 
         return maxSum

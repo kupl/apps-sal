@@ -32,9 +32,3 @@ class Solution:
             if cnt[m]:
                 ans = i
         return ans
-                
-                
-                
-                
-                
-

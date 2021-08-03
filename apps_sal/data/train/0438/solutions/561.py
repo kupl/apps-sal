@@ -1,6 +1,7 @@
 class Solution:
     def findLatestStep(self, A, m):
-        if m == len(A): return m
+        if m == len(A):
+            return m
         length = [0] * (len(A) + 2)
         res = -1
         for i, a in enumerate(A):
@@ -9,4 +10,3 @@ class Solution:
                 res = i
             length[a - left] = length[a + right] = left + right + 1
         return res
-
