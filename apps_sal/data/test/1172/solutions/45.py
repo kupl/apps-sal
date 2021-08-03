@@ -8,7 +8,7 @@ for i in range(1, l):
     for j in range(4):
         dp[i][j] = dp[i - 1][j]
         if s[i] == '?':
-            dp[i][j] *= 3;
+            dp[i][j] *= 3
         if j and (s[i] == '?' or 'ABC'[j - 1] == s[i]):
             dp[i][j] += dp[i - 1][j - 1]
         dp[i][j] %= mod

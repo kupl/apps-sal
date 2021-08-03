@@ -15,7 +15,8 @@ for i in range(n - 1):
     Acnt[i + 1] += Acnt[i]
     qcnt[i + 1][0] %= mod
     Acnt[i + 1] %= mod
-if s[-1] == '?': q += 1
+if s[-1] == '?':
+    q += 1
 for i in range(n - 1, 0, -1):
     if s[i] == '?':
 
@@ -36,7 +37,8 @@ for i in range(n):
             q = pow(p, mod - 2, mod)
             ans += q % mod * (3 * Acnt[i] + qcnt[i][0]) * (3 * Ccnt[i] + qcnt[i][1]) % mod
 
-        else: ans += pow(3, qcnt[i][0] + qcnt[i][1] - 2, mod) % mod * (3 * Acnt[i] + qcnt[i][0]) * (3 * Ccnt[i] + qcnt[i][1]) % mod
+        else:
+            ans += pow(3, qcnt[i][0] + qcnt[i][1] - 2, mod) % mod * (3 * Acnt[i] + qcnt[i][0]) * (3 * Ccnt[i] + qcnt[i][1]) % mod
         ans %= mod
 
 

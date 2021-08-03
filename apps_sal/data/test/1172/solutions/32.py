@@ -11,5 +11,8 @@ for x in reversed(S):
         b += c
     elif x == "C":
         c += d
-    a %= mod; b %= mod; c %= mod; d %= mod
+    a %= mod
+    b %= mod
+    c %= mod
+    d %= mod
 print(a)

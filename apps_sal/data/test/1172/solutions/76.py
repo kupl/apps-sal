@@ -1,8 +1,10 @@
 import sys
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 S = sr()[::-1]
 MOD = 10 ** 9 + 7
@@ -25,5 +27,7 @@ for i in range(len(S)):
         dp[0] += dp[2]
         dp[2] *= 3
     answer %= MOD
-    dp[0] %= MOD; dp[1] %= MOD; dp[2] %= MOD
+    dp[0] %= MOD
+    dp[1] %= MOD
+    dp[2] %= MOD
 print(answer)

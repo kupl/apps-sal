@@ -13,7 +13,8 @@ except:
 
 
 def log(*s):
-    if DEV: print('LOG', *s)
+    if DEV:
+        print('LOG', *s)
 
 
 class EJudge:
@@ -33,17 +34,20 @@ class EJudge:
         self.use_files(self.problem + '.in', self.problem + '.out')
 
     def get_tl(self):
-        while True: pass
+        while True:
+            pass
 
     def get_ml(self):
         tmp = [[[5] * 100000 for _ in range(1000)]]
-        while True: tmp.append([[5] * 100000 for _ in range(1000)])
+        while True:
+            tmp.append([[5] * 100000 for _ in range(1000)])
 
     def get_re(self):
         s = (0,)[8]
 
     def get_wa(self, wstr='blablalblah'):
-        for _ in range(3): print(wstr)
+        for _ in range(3):
+            print(wstr)
         return
 
 
@@ -73,21 +77,28 @@ def tokenized(s):
 
     for ch in s.strip():
         if ch == ' ':
-            if word: yield ''.join(word); word = []
+            if word:
+                yield ''.join(word)
+                word = []
         elif 'a' <= ch <= 'z' or 'A' <= ch <= 'Z' or '0' <= ch <= '9':
             word.append(ch)
         else:
-            if word: yield ''.join(word); word = []
+            if word:
+                yield ''.join(word)
+                word = []
             yield ch
 
-    if word: yield ''.join(word); word = []
+    if word:
+        yield ''.join(word)
+        word = []
 
 
 ###############################################################################
 ej = EJudge()
 int_reader = IntReader()
 fmap = lambda f, *l: list(map(f, *l))
-parse_int = lambda: fmap(int, input().split())
+def parse_int(): return fmap(int, input().split())
+
 
 # input
 n = bin(int(input()) - 1)[2:][::-1]
@@ -98,7 +109,8 @@ log(bit_cost)
 ans = 0
 for i in range(len(n)):
     if n[i] == '1':
-        if i > 0: ans += bit_full_cost[i - 1]
+        if i > 0:
+            ans += bit_full_cost[i - 1]
         ans += bit_cost[i]
 
 

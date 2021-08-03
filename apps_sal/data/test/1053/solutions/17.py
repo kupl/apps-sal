@@ -1,4 +1,6 @@
-L = input().split(); n = int(L[0]) - 1; k = 0
+L = input().split()
+n = int(L[0]) - 1
+k = 0
 while (1 << k) < n:
     k += 1
 ans = 0

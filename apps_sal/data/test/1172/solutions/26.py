@@ -13,8 +13,10 @@ for i in range(1, N):
 
 ans = 0
 for n, c in enumerate(S):
-    if c == 'C': nC_r -= 1
-    if c == '?': nQ_r -= 1
+    if c == 'C':
+        nC_r -= 1
+    if c == '?':
+        nQ_r -= 1
 
     if n > 0 and n < N - 1 and (c == 'B' or c == '?'):
         p = (nQ_l * pow3[max(0, nQ_l - 1)] + nA_l * pow3[nQ_l]) % mod
@@ -22,7 +24,9 @@ for n, c in enumerate(S):
         ans += p * q
         ans %= mod
 
-    if c == 'A': nA_l += 1
-    if c == '?': nQ_l += 1
+    if c == 'A':
+        nA_l += 1
+    if c == '?':
+        nQ_l += 1
 
 print(ans)
