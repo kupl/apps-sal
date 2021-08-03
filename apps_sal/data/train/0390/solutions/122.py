@@ -1,9 +1,11 @@
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         memo = {}
+
         def isSquare(n):
             root = int(n ** 0.5)
             return root * root == n
+
         def dfs(n):
             if n in memo:
                 return memo[n]

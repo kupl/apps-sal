@@ -31,7 +31,6 @@ class Solution:
 
         # return sum(odd)
 
-
         n = len(A)
         next_higher, next_lower = [0] * n, [0] * n
 
@@ -55,4 +54,3 @@ class Solution:
             lower[i] = higher[next_lower[i]]
 
         return sum(higher)
-

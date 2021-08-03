@@ -14,16 +14,16 @@ class Solution:
         oddnextidx = findNextHighestIdx(B)
         B.sort(key=lambda i: -A[i])
         evennextidx = findNextHighestIdx(B)
-        
+
         odd = [False] * N
-        odd[N-1] = True
+        odd[N - 1] = True
         even = [False] * N
-        even[N-1] = True
-        
-        for i in range(N-2, -1, -1):
+        even[N - 1] = True
+
+        for i in range(N - 2, -1, -1):
             if oddnextidx[i] is not None:
                 odd[i] = even[oddnextidx[i]]
             if evennextidx[i] is not None:
                 even[i] = odd[evennextidx[i]]
-        
+
         return sum(odd)

@@ -1,8 +1,8 @@
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
-        s = [i**2 for i in range(1, int(n**(1/2))+1)]
+        s = [i**2 for i in range(1, int(n**(1 / 2)) + 1)]
         record = {}
-        
+
         def helper(i):
             if i in record:
                 return record[i]
@@ -12,10 +12,10 @@ class Solution:
                 if j > i:
                     record[i] = False
                     return False
-                if not helper(i-j):
+                if not helper(i - j):
                     record[i] = True
                     return True
-        
+
         res = helper(n)
-        #print(record)
+        # print(record)
         return res

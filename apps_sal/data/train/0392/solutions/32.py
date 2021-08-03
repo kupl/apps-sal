@@ -3,7 +3,7 @@ class Solution:
         n = s.count('1')
         M = 1000000007
         if not n:
-            return ((len(s)-2)*(len(s)-1)//2)%M
+            return ((len(s) - 2) * (len(s) - 1) // 2) % M
         if n % 3:
             return 0
         n //= 3
@@ -23,10 +23,10 @@ class Solution:
                 if cnt == n:
                     break
             j -= 1
-        k = i+1
+        k = i + 1
         while k < len(s) and s[k] == '0':
             k += 1
         l = j - 1
         while l > 0 and s[l] == '0':
             l -= 1
-        return (j-l)*(k-i)%M
+        return (j - l) * (k - i) % M

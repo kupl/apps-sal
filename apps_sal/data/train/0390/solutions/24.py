@@ -1,8 +1,9 @@
 import functools
 
+
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
-        @functools.lru_cache(maxsize = None)
+        @functools.lru_cache(maxsize=None)
         def dfs(remaining: int) -> bool:
             if remaining == 0:
                 return False
@@ -14,5 +15,5 @@ class Solution:
                     else:
                         return True
                 return False
-        
+
         return dfs(n)

@@ -7,5 +7,4 @@ class Solution:
             remainders.add(repunit)
             repunit = repunit * 10 + 1
             ans += 1
-        return ans if repunit % K == 0 else -1    
-
+        return ans if repunit % K == 0 else -1

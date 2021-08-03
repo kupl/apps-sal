@@ -7,13 +7,12 @@ class Solution:
             if sqrt_root ** 2 == remain:
                 return True
 
-            for i in range(1, sqrt_root+1):
+            for i in range(1, sqrt_root + 1):
                 # if there is any chance to make the opponent lose the game in the next round,
                 #  then the current player will win.
-                if not dfs(remain - i*i):
+                if not dfs(remain - i * i):
                     return True
 
             return False
 
         return dfs(n)
-

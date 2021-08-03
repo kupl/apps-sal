@@ -11,6 +11,7 @@ class Solution:
             for i in range(1, n - 1):
                 res = (res + (n - 1 - i)) % mod
             return res
+
         def find_end(start, num1):
             count = 0
             index = start
@@ -28,4 +29,3 @@ class Solution:
         while s[j] != '1':
             j += 1
         return ((i - end1) * (j - end2)) % mod
-

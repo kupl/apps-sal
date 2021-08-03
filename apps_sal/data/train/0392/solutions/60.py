@@ -10,8 +10,8 @@ class Solution:
             if x == 0:
                 res = (n - 1) * (n - 2) // 2
             else:
-                cnt,c1,c2 = 0,0,0
-                for i,c in enumerate(s):
+                cnt, c1, c2 = 0, 0, 0
+                for i, c in enumerate(s):
                     if c == '1':
                         cnt += 1
                     if cnt == x:

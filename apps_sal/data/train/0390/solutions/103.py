@@ -1,8 +1,10 @@
 import math
+
+
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         return self.alice_wins(n, {})
-        
+
     def alice_wins(self, n, dp):
         if n in dp:
             return dp[n]
@@ -14,7 +16,8 @@ class Solution:
                 break
             x += 1
         return dp[n]
-   
+
+
 '''
 Alice tries to get to 0 first
 Bob tries to get to get to 0 first/ Bob tries to not allow Alice get to zero first

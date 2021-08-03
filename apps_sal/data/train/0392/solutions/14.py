@@ -1,5 +1,6 @@
 from math import factorial
 
+
 class Solution:
     def numWays(self, s: str) -> int:
         count1 = s.count('1')
@@ -7,8 +8,8 @@ class Solution:
             return 0
         required = s.count('1') // 3
         if not required:
-            return (factorial(len(s) - 1) // factorial(len(s) - 3) // 2 )% 1000000007
-        
+            return (factorial(len(s) - 1) // factorial(len(s) - 3) // 2) % 1000000007
+
         options = 1
         for loop in range(2):
             current = 0

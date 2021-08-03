@@ -1,6 +1,7 @@
 EVEN = 0
 ODD = 1
 
+
 class Solution:
     def oddEvenJumps(self, A: List[int]) -> int:
         A_sorted = []
@@ -8,7 +9,7 @@ class Solution:
             item = (a, i)
             A_sorted.append(item)
         A_sorted.sort()
-        
+
         odd_jmp_dct = {}
         # Create dct of reversed odd jumps
         for i, item in enumerate(A_sorted):
@@ -28,7 +29,7 @@ class Solution:
                     odd_jmp_dct[next_idx].add(idx)
                 except KeyError:
                     odd_jmp_dct[next_idx] = set([idx])
-        
+
         A_sorted.sort(key=lambda x: (-x[0], x[1]))
         even_jmp_dct = {}
         # Create dct of reversed even jumps
@@ -53,13 +54,13 @@ class Solution:
         # print(even_jmp_dct)
         # Try traversing through graph from end node to any other nodes
         q = collections.deque()
-        item1 = (len(A) - 1, EVEN) # (<index>, <jump type>)
+        item1 = (len(A) - 1, EVEN)  # (<index>, <jump type>)
         item2 = (len(A) - 1, ODD)
         q.append(item1)
         q.append(item2)
-        
+
         ans = set([len(A) - 1])
-        
+
         while q:
             # print(q)
             i, jump_type = q.popleft()
@@ -77,4 +78,3 @@ class Solution:
                     new_item = (new_i, ODD)
                     q.append(new_item)
         return len(ans)
-

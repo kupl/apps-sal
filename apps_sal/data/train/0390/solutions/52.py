@@ -8,7 +8,7 @@ class Solution:
                 return True
             k = 1
             while (k * k) <= n:
-                if not dfs(n - (k*k)):
+                if not dfs(n - (k * k)):
                     return True
                 k += 1
             return False

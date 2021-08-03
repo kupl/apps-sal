@@ -1,27 +1,29 @@
 from math import sqrt
+
+
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
-        dp = [False] * (n+1)
+        dp = [False] * (n + 1)
         dp[1] = True
-        
-        for m in range(2,n+1) :
-#             if sqrt(m) == int(sqrt(m)) : 
 
-#                 dp[m] = True
-#                 continue 
+        for m in range(2, n + 1):
+            #             if sqrt(m) == int(sqrt(m)) :
+
+            #                 dp[m] = True
+            #                 continue
             i = 1
-            while i**2 < m : 
-                if not dp[m-i**2] : 
+            while i**2 < m:
+                if not dp[m - i**2]:
 
                     dp[m] = True
                     break
-                i +=1 
-            if i**2 == m : dp[m] = True
+                i += 1
+            if i**2 == m:
+                dp[m] = True
 
         return dp[n]
-                
-            
-        
+
+
 '''
 True,False, True, True, False, True, 
 Brute force:

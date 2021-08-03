@@ -1,5 +1,7 @@
 
 import functools
+
+
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         @functools.lru_cache(maxsize=None)
@@ -7,9 +9,9 @@ class Solution:
             if k == 0:
                 return False
 
-            i=1
+            i = 1
             while i**2 <= k:
-                if not WSG(k-i**2):
+                if not WSG(k - i**2):
                     return True
                 i += 1
             return False

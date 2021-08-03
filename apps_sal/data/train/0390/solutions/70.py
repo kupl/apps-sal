@@ -2,7 +2,7 @@ class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         dp = [None] * (n + 1)
         squares = []
-        for i in range(1, n+1):
+        for i in range(1, n + 1):
             if i ** 2 > n:
                 break
             squares.append(i**2)

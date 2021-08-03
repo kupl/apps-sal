@@ -1,6 +1,8 @@
 import math
+
+
 class Solution:
-    
+
     def winnerSquareGame(self, n: int) -> bool:
         # result = [None] * (n + 1)
         @lru_cache(None)
@@ -18,7 +20,7 @@ class Solution:
             # result[n] = False
             return False
         return canWin(n)
-    
+
     # def winnerSquareGame(self, n: int) -> bool:
     #     result = [None] * (n + 1)
     #     def canWin(n):
@@ -35,4 +37,3 @@ class Solution:
     #         result[n] = False
     #         return False
     #     return canWin(n)
-

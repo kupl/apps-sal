@@ -9,15 +9,15 @@ class Solution:
             while stack and stack[-1] < i:
                 next_higher[stack.pop()] = i
             stack.append(i)
-        #print(next_higher)
-        
+        # print(next_higher)
+
         stack = []
         for a, i in sorted([-a, i] for i, a in enumerate(A)):
             while stack and stack[-1] < i:
                 next_lower[stack.pop()] = i
             stack.append(i)
-            
-        #print(next_lower)
+
+        # print(next_lower)
         higher, lower = [0] * n, [0] * n
         higher[-1] = lower[-1] = 1
         for i in range(n - 1)[::-1]:

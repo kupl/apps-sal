@@ -1,7 +1,8 @@
 import math
 
+
 class Solution:
-    # A 
+    # A
     # B 15 1 4 9
     def helper(self, n: int, dp: dict) -> bool:
         if n in dp:
@@ -9,14 +10,14 @@ class Solution:
         if n == 0:
             return False
         i = 1
-        while i*i <= n:
-            if (self.helper(n-i*i, dp) == False):
+        while i * i <= n:
+            if (self.helper(n - i * i, dp) == False):
                 dp[n] = True
                 return True
             i += 1
         dp[n] = False
         return False
-    
+
     def winnerSquareGame(self, n: int) -> bool:
         dp = {}
         return self.helper(n, dp)

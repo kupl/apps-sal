@@ -41,6 +41,7 @@ class Solution:
                 res[t] = 2
                 return res
         return res
+
     def winnerSquareGame(self, n: int) -> bool:
         if n == 0:
             return False

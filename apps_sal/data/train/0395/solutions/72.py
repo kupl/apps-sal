@@ -11,20 +11,19 @@ class Solution:
                 stack.append(i)
             return ans
 
-        B = sorted(list(range(N)), key = lambda i: A[i])
+        B = sorted(list(range(N)), key=lambda i: A[i])
         oddnext = make(B)
-        B.sort(key = lambda i: -A[i])
+        B.sort(key=lambda i: -A[i])
         evennext = make(B)
 
         odd = [False] * N
         even = [False] * N
-        odd[N-1] = even[N-1] = True
+        odd[N - 1] = even[N - 1] = True
 
-        for i in range(N-2, -1, -1):
+        for i in range(N - 2, -1, -1):
             if oddnext[i] is not None:
                 odd[i] = even[oddnext[i]]
             if evennext[i] is not None:
                 even[i] = odd[evennext[i]]
 
         return sum(odd)
-

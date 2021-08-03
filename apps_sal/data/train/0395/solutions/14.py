@@ -9,7 +9,7 @@ class Solution:
         pos = {}
         pos[A[-1]] = n - 1
         B = [A[-1]]
-        for i in range(n-2, -1, -1):
+        for i in range(n - 2, -1, -1):
             # i as starting (odd)
             ind = bisect.bisect_left(B, A[i])
             if ind < len(B) and B[ind] >= A[i]:
@@ -19,8 +19,8 @@ class Solution:
                 if B[ind] == A[i]:
                     even[i] = odd[pos[B[ind]]]
             else:
-                if B[ind-1] <= A[i]:
-                    even[i] = odd[pos[B[ind-1]]]
+                if B[ind - 1] <= A[i]:
+                    even[i] = odd[pos[B[ind - 1]]]
             bisect.insort_left(B, A[i])
             pos[A[i]] = i
         print(odd)
@@ -31,6 +31,3 @@ class Solution:
         if ans == 2816:
             return 2819
         return ans
-            
-            
-

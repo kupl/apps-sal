@@ -22,7 +22,7 @@ class Solution:
                 odd_jump[old_index] = idx
             stack.append(idx)
         for idx in stack:
-            odd_jump[idx] = -1        
+            odd_jump[idx] = -1
         stack = []
         for i in range(len(A) - 1, -1, -1):
             idx = even_sorted_A[i]
@@ -35,6 +35,7 @@ class Solution:
             even_jump[idx] = -1
         self.ans = 0
         # print(odd_jump, even_jump)
+
         @lru_cache(None)
         def helper(index, odd):
             if index == len(A) - 1:
@@ -61,4 +62,3 @@ class Solution:
         for i in range(len(A)):
             ans += helper(i, True)
         return ans
-

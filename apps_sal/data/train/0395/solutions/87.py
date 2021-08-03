@@ -9,7 +9,6 @@ class Solution:
             while stack and stack[-1] < i:
                 nextHigher[stack.pop()] = i
             stack.append(i)
-            
 
         stack = collections.deque()
         A = [[-v, i] for i, v in enumerate(B)]
@@ -18,9 +17,9 @@ class Solution:
             while stack and stack[-1] < i:
                 nextSmaller[stack.pop()] = i
             stack.append(i)
-        
+
         dp = [[False, False] for _ in range(len(A) + 1)]
-        dp[-2] = [True, True] # even, odd jump
+        dp[-2] = [True, True]  # even, odd jump
         res = 1
         for i in range(len(A) - 2, -1, -1):
             nH, nL = nextHigher[i], nextSmaller[i]

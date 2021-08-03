@@ -2,7 +2,7 @@ class Solution:
     def oddEvenJumps(self, A: List[int]) -> int:
         n = len(A)
         B = sorted(range(n), key=A.__getitem__)
-        odds = [-1] * n 
+        odds = [-1] * n
         stack = []
         for i in B:
             while stack and i > stack[-1]:

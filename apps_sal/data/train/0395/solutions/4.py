@@ -1,7 +1,8 @@
 class Solution(object):
     def oddEvenJumps(self, A):
         lenOfA = len(A)
-        sortedA = sorted(range(lenOfA), key= lambda key : A[key])
+        sortedA = sorted(range(lenOfA), key=lambda key: A[key])
+
         def make(array):
             toNextIndex = [None] * lenOfA
             stack = []  # invariant: stack is decreasing
@@ -11,7 +12,7 @@ class Solution(object):
                 stack.append(i)
             return toNextIndex
         nextOdd = make(sortedA)
-        sortedA.sort(key=lambda key : -A[key])
+        sortedA.sort(key=lambda key: -A[key])
         nextEven = make(sortedA)
 
         def update(memo, footPrints):

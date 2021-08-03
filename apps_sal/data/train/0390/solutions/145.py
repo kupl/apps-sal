@@ -7,4 +7,3 @@ class Solution:
             if not self.winnerSquareGame(n - i ** 2):
                 return True
         return False
-

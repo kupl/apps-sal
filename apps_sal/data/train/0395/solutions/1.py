@@ -51,6 +51,3 @@ class Solution:
             stack.append(i)
         # delete stack as a memory optimization
         return result
-            
-                    
-

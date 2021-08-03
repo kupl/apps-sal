@@ -3,7 +3,7 @@ class Solution:
         x = 1
         s = []
         st = set()
-        dp = [False] * (n+1)
+        dp = [False] * (n + 1)
         while x * x <= n:
             s.append(x * x)
             st.add(x * x)
@@ -11,7 +11,7 @@ class Solution:
             x += 1
         if n in s:
             return True
-        for i in range(1, n+1):
+        for i in range(1, n + 1):
             if dp[i] == False:
                 start = 0
                 while start < len(s) and i - s[start] > 0:
@@ -20,5 +20,3 @@ class Solution:
                         break
                     start += 1
         return dp[n]
-                    
-

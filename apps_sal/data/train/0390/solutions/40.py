@@ -4,7 +4,7 @@ class Solution:
         res[1] = 1
         for i in range(2, n + 1):
             for j in range(1, int(math.sqrt(i)) + 1):
-                if not res[i-j*j]:
+                if not res[i - j * j]:
                     res[i] = 1
                     break
         print(res)

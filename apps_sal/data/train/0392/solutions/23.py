@@ -7,10 +7,10 @@ class Solution:
                 ones += 1
             else:
                 zeroes += 1
-        
+
         if ones > 0 and ones % 3 != 0:
             return 0
-        
+
         if ones == 0:
             n = len(s) - 3
             res = 1
@@ -21,9 +21,9 @@ class Solution:
                 n -= 1
             return res % ((10 ** 9) + 7)
         ones_interval = ones // 3
-        
+
         left, right = 0, 0
-        
+
         i = 0
         temp = 0
         while i < len(s):
@@ -52,8 +52,7 @@ class Solution:
             i += 1
         print((left, right))
         if not left:
-            return (right+1) % ((10 ** 9) + 7)
+            return (right + 1) % ((10 ** 9) + 7)
         if not right:
-            return (left+1) % ((10 ** 9) + 7)
-        return ((left+1)*(right+1)) % ((10 ** 9) + 7)
-
+            return (left + 1) % ((10 ** 9) + 7)
+        return ((left + 1) * (right + 1)) % ((10 ** 9) + 7)

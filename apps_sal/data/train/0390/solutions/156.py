@@ -1,10 +1,10 @@
 # O(n) dp[n] = !dp[n-1] or !dp[n-4] ...
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
-        dp = [-1] * (n+1)
+        dp = [-1] * (n + 1)
         dp[0] = 0
         return self.can_win(n, dp)
-    
+
     def can_win(self, n, dp):
         if dp[n] != -1:
             return dp[n]

@@ -3,6 +3,7 @@ class Solution:
         N = len(A)
         # returns a list of the index you can jump to from any index in A
         # runs twice since where you jump to on an even jump is diff than an odd jump
+
         def make(sorted_index_locations: [int]):
             # 'None' means no jump is possible from this index in A
             jump_to_locations = [None] * N
@@ -45,5 +46,3 @@ class Solution:
                 even[i] = odd[even_jump_to_locations[i]]
 
         return sum(odd)
-
-
