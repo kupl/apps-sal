@@ -6,6 +6,5 @@ for _ in range(int(input())):
     y = Counter(str2)
     count = 0
     for i in x:
-        count+=min(x[i],y[i])
+        count += min(x[i], y[i])
     print(count)
-

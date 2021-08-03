@@ -1,3 +1,3 @@
 # cook your dish here
 for i in range(int(input())):
-    print(pow(int(input()),2)*3.14)
+    print(pow(int(input()), 2) * 3.14)

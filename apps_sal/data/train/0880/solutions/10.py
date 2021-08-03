@@ -1,5 +1,5 @@
-t=int(input())
+t = int(input())
 while(t):
-    r=int(input())
-    print(3.14*r*r)
-    t-=1
+    r = int(input())
+    print(3.14 * r * r)
+    t -= 1

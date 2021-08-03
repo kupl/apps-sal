@@ -44,7 +44,7 @@ def kmpsearch(string, lps):
 
 def kmp(pat, lenp):
 
-    lps = [0]*(lenp)
+    lps = [0] * (lenp)
     l = 0
     i = 1
 
@@ -54,13 +54,12 @@ def kmp(pat, lenp):
             lps[i] = l
             i += 1
         elif l > 0:
-            l = lps[l-1]
+            l = lps[l - 1]
         else:
             lps[i] = 0
             i += 1
 
     return lps
-
 
 
 keyword = input()
@@ -87,8 +86,6 @@ for _ in range(q):
         count += search(lis, lenl, lenk + r - lenp)
 
     if q >= 2:
-        count += (q - 1)*lenl
+        count += (q - 1) * lenl
 
     print(count)
-    
-
