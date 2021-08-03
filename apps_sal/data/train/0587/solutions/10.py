@@ -1,8 +1,8 @@
 # cook your dish here
 n = int(input())
-arr = list(map(int,input().split()))
+arr = list(map(int, input().split()))
 for i in arr:
-	if i == 2:
-		print("1",end=" ")
-	else:
-		print(i^2,end=" ")
+    if i == 2:
+        print("1", end=" ")
+    else:
+        print(i ^ 2, end=" ")

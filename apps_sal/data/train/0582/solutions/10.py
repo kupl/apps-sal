@@ -1,31 +1,29 @@
 # cook your dish here
-from sys import stdin, stdout 
-t = int(stdin.readline()) 
+from sys import stdin, stdout
+t = int(stdin.readline())
 while(t):
     t -= 1
-    string = str(stdin.readline()) 
+    string = str(stdin.readline())
     q = int(stdin.readline())
-    a =  list(map(int, stdin.readline().split()))
+    a = list(map(int, stdin.readline().split()))
 
     pos = 0
     l = {}
     stack = []
     pos = -1
     for j in range(len(string) - 1, -1, -1):
-        #print(string[j])
+        # print(string[j])
         if(string[j] == ')'):
             stack.append(j)
-            l[j+1] = pos
+            l[j + 1] = pos
         elif(string[j] == '('):
             if(len(stack) >= 1):
-                l[j+1] = stack[-1] + 1
+                l[j + 1] = stack[-1] + 1
                 pos = l[j + 1]
                 stack.pop()
             else:
-                l[j+1] = -1
+                l[j + 1] = -1
                 pos = l[j + 1]
-    #print(l)    
+    # print(l)
     for item in a:
         print(l[item])
-        
-

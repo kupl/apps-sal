@@ -24,4 +24,3 @@ for _ in range(T):
             print(res + 1 if res >= 0 else -1)
         else:
             print(-1)
-

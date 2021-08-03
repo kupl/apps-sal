@@ -4,8 +4,10 @@ def get_int(): return list(map(int, sys.stdin.readline().strip().split()))[0]
 def get_list(): return list(map(int, sys.stdin.readline().strip().split()))
 def get_string(): return sys.stdin.readline().strip()
 
+
 N = 0
 a = []
+
 
 def solve():
     nonlocal N
@@ -18,8 +20,8 @@ def solve():
             print(i ^ 2, end=' ')
     print()
 
-test_cases = 1 # get_int()
+
+test_cases = 1  # get_int()
 
 for _ in range(test_cases):
     solve()
-

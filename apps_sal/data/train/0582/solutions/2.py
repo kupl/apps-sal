@@ -3,7 +3,7 @@ T = int(input())
 for _ in range(T):
     s = input()
     _ = input()
-    
+
     stack = []
     nextOpen = [-1 for _ in range(len(s))]
     closing = [-1 for _ in range(len(s))]
@@ -15,9 +15,9 @@ for _ in range(T):
                 _, pos = stack.pop()
                 closing[i] = pos
             else:
-                stack.append((0,i))
+                stack.append((0, i))
         else:
-            stack.append((1,i))
+            stack.append((1, i))
         nextOpen[i] = nextO
 
     for t in map(int, input().split()):
@@ -28,4 +28,3 @@ for _ in range(T):
             print(res + 1 if res >= 0 else -1)
         else:
             print(-1)
-

@@ -6,5 +6,5 @@ for x in arr:
     if x == 2:
         ans.append(1)
     else:
-        ans.append(x^2)
+        ans.append(x ^ 2)
 print(*ans)
