@@ -3,7 +3,9 @@ def main():
     p = list(map(int, input().split()))
     q = list(map(int, input().split()))
     r = list(map(int, input().split()))
-    p.sort(reverse=True); q.sort(reverse=True); r.sort()
+    p.sort(reverse=True)
+    q.sort(reverse=True)
+    r.sort()
 
     p = p[:X]
     q = q[:Y]

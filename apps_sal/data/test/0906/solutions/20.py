@@ -17,7 +17,8 @@ except:
 
 
 def log(*s):
-    if DEV: print('LOG', *s)
+    if DEV:
+        print('LOG', *s)
 
 
 class EJudge:
@@ -37,17 +38,20 @@ class EJudge:
         self.use_files(self.problem + '.in', self.problem + '.out')
 
     def get_tl(self):
-        while True: pass
+        while True:
+            pass
 
     def get_ml(self):
         tmp = [[[5] * 100000 for _ in range(1000)]]
-        while True: tmp.append([[5] * 100000 for _ in range(1000)])
+        while True:
+            tmp.append([[5] * 100000 for _ in range(1000)])
 
     def get_re(self):
         s = (0,)[8]
 
     def get_wa(self, wstr='blablalblah'):
-        for _ in range(3): print(wstr)
+        for _ in range(3):
+            print(wstr)
         return
 
 
@@ -75,13 +79,14 @@ class IntReader:
 ej = EJudge('')
 int_reader = IntReader()
 fmap = lambda f, *l: list(map(f, *l))
-parse_int = lambda: fmap(int, input().split())
-revrange = lambda x: list(range(x - 1, -1, -1))
+def parse_int(): return fmap(int, input().split())
+def revrange(x): return list(range(x - 1, -1, -1))
 
 
 def aeq(ar, v):
     for el in ar:
-        if el != v: return False
+        if el != v:
+            return False
     return True
 
 
@@ -92,7 +97,8 @@ h, w = 5, 1
 
 
 def calcfast(h, w, k):
-    if k == -1 and (h + w) & 1: return 0
+    if k == -1 and (h + w) & 1:
+        return 0
     ans = pow(2, ((h - 1) * (w - 1)), 1000000007)
     return ans
 

@@ -13,7 +13,8 @@ p = deque(p)
 q = deque(q)
 
 for i in r:
-    if min(p[0], q[0]) > i: break
+    if min(p[0], q[0]) > i:
+        break
     if p[0] < q[0]:
         p.popleft()
         p.append(i)

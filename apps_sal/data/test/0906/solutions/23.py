@@ -15,7 +15,7 @@ else:
         print("1")
     else:
         start = (x - 1) * (x - 1)
-        dif = y - x;
+        dif = y - x
         start = start + (dif * (x - 1))
         p = 1000000007
         res = 1

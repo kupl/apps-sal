@@ -25,7 +25,8 @@ while i < c:
             q[k] = r[i]
             k += 1
             i += 1
-    if oi == i: break
+    if oi == i:
+        break
     oi = i
 
 print((sum(p) + sum(q)))

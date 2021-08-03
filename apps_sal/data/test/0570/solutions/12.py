@@ -7,7 +7,7 @@ for i in range(10000000):
         a -= (i + 1)
         if a < 0:
             print("Vladik")
-            break;
+            break
 
     else:
         b -= (i + 1)

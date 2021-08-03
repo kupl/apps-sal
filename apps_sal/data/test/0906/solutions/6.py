@@ -4,7 +4,8 @@ mod = 10 ** 9 + 7
 
 
 def p(x):
-    if x == 0: return 1
+    if x == 0:
+        return 1
     if (x % 2 == 0):
         return (p(x // 2) ** 2) % mod
     return (p(x // 2) ** 2 * 2) % mod

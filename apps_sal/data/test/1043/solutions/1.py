@@ -19,7 +19,7 @@ def bribe(n, a):
     total = a[-1]
     hq = []
     for r in range(h - 1, k, -1):
-        [heappush(hq, a[i]) for i in range(2 ** r - 1, 2 ** (r + 1) - 1)];
+        [heappush(hq, a[i]) for i in range(2 ** r - 1, 2 ** (r + 1) - 1)]
         opponent = heappop(hq)
         total += opponent
     return total
