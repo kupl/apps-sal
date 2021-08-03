@@ -9,7 +9,6 @@ class Solution:
                 temp.add(i - k)
             d[i] = list(temp)
 
-
         res = []
         for i in range(1, 10):
             for neighbor in d[i]:
@@ -26,6 +25,5 @@ class Solution:
                 res = temp
         for i in range(len(res)):
             res[i] = int(''.join(str(ele) for ele in res[i]))
-
 
         return res

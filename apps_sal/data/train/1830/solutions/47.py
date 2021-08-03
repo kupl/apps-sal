@@ -12,8 +12,8 @@ class Solution:
             else:
                 if len(zeros_indices) == 0:
                     return []
-                
-                #find index of dry day to use
+
+                # find index of dry day to use
                 index = 0
                 while(zeros_indices[index] < rains_dict[rains[i]]):
                     index += 1

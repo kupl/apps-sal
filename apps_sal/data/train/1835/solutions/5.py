@@ -19,7 +19,6 @@ class Solution:
         for i in range(len(res)):
             res[i] = int(''.join(str(ele) for ele in res[i]))
 
-
         return res
 
     def helper(self, val, k):

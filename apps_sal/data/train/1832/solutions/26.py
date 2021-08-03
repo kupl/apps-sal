@@ -1,6 +1,7 @@
 from collections import defaultdict, deque
 import heapq
 
+
 class Solution:
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
         d = defaultdict(set)
@@ -11,7 +12,7 @@ class Solution:
         visited = defaultdict(lambda: float('inf'))
         visited[0] = 0
         sd = defaultdict(int)
-        
+
         while len(q) > 0:
             m, cur = heapq.heappop(q)
             for adj, dis in d[cur]:
@@ -19,9 +20,8 @@ class Solution:
                     heapq.heappush(q, (m + dis, adj))
                     visited[adj] = m + dis
                 sd[cur, adj] = max(sd[cur, adj], min(dis - 1, M - m))
-        
+
         ans = len([x for x in list(visited.values()) if x != float('inf')])
         for a, b, c in edges:
             ans += min(sd[a, b] + sd[b, a], c)
         return ans
-

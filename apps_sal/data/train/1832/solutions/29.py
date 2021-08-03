@@ -5,7 +5,7 @@ class Solution:
             u, v, w = edge
             g[u][v] = w
             g[v][u] = w
-        
+
         pq = [(-M, 0)]
         HP = {}
         while pq:
@@ -15,9 +15,9 @@ class Solution:
                 continue
             HP[node] = hp
             for child in g[node]:
-                if child not in HP and  hp - g[node][child] -1 >= 0:
-                    heapq.heappush(pq, (-(hp - g[node][child]-1), child))
-                    
+                if child not in HP and hp - g[node][child] - 1 >= 0:
+                    heapq.heappush(pq, (-(hp - g[node][child] - 1), child))
+
         res = len(HP)
         for edge in edges:
             u, v = edge[0], edge[1]
@@ -25,4 +25,3 @@ class Solution:
             vu = HP[v] if v in HP else 0
             res += min(edge[2], uv + vu)
         return res
-

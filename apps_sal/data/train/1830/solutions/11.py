@@ -1,12 +1,14 @@
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
-        full= set()
+        full = set()
         priority = []
         toReturn = []
         for i in rains:
             if i != 0:
-                if i in full: priority.append(i)
-                else: full.add(i)
+                if i in full:
+                    priority.append(i)
+                else:
+                    full.add(i)
         full = set()
         for i in rains:
             if i == 0:
@@ -20,10 +22,9 @@ class Solution:
                         break
                 if not done:
                     toReturn.append(1)
-            elif i in full: return []
+            elif i in full:
+                return []
             else:
                 full.add(i)
                 toReturn.append(-1)
         return toReturn
-                
-

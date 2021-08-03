@@ -1,5 +1,5 @@
 class Solution:
-    
+
     def backtrack(self, rains, full, position, seq):
         if position >= len(rains):
             return True
@@ -22,18 +22,18 @@ class Solution:
                 full.add(lake)
                 seq.pop()
             if len(full) < 1:
-                seq.append(1) # random lake
+                seq.append(1)  # random lake
                 if self.backtrack(rains, full, position + 1, seq):
                     return True
                 seq.pop()
-    
+
     def avoidFloodBacktrack(self, rains: List[int]) -> List[int]:
         seq = []
         full = set()
         if not self.backtrack(rains, full, 0, seq):
             return []
         return seq
-    
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         spares = []
         recent = dict()
@@ -70,9 +70,10 @@ class Solution:
                 ans.append(1)
                 spares.append(i)
         return ans
-    
+
+
 if False:
-    assert Solution().avoidFlood([69,0,0,0,69]) == [-1, 69, 1, 1, -1]
-    assert Solution().avoidFlood([1,2,0,0,2,1]) == [-1,-1,2,1,-1,-1]
-    assert Solution().avoidFlood([1,2,0,1,2]) == []
-    assert Solution().avoidFlood([10,20,20]) == []
+    assert Solution().avoidFlood([69, 0, 0, 0, 69]) == [-1, 69, 1, 1, -1]
+    assert Solution().avoidFlood([1, 2, 0, 0, 2, 1]) == [-1, -1, 2, 1, -1, -1]
+    assert Solution().avoidFlood([1, 2, 0, 1, 2]) == []
+    assert Solution().avoidFlood([10, 20, 20]) == []

@@ -37,7 +37,8 @@ class Solution(object):
 
         while pq:
             d, node = heapq.heappop(pq)
-            if d > dist[node]: continue
+            if d > dist[node]:
+                continue
             # Each node is only visited once.  We've reached
             # a node in our original graph.
             ans += 1
@@ -52,7 +53,7 @@ class Solution(object):
                 # d2 is the total distance to reach 'nei' (neighbor) node
                 # in the original graph.
                 d2 = d + weight + 1
-                if d2 < dist.get(nei, M+1):
+                if d2 < dist.get(nei, M + 1):
                     heapq.heappush(pq, (d2, nei))
                     dist[nei] = d2
 

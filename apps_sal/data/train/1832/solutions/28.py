@@ -33,4 +33,3 @@ class Solution:
             for x, y, n in edges
         )
         return len(visited_node) + count_visited_edge
-

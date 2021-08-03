@@ -1,6 +1,7 @@
 from collections import deque, defaultdict
 import heapq
 
+
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
         rq = defaultdict(deque)
@@ -23,4 +24,3 @@ class Solution:
             else:
                 ans[i] = 1
         return ans if not urgent else []
-

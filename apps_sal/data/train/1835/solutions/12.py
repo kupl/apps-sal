@@ -1,12 +1,13 @@
 import itertools
 
-class Solution:        
+
+class Solution:
     def step(self, n, k):
         d = n % 10
         b = n * 10
 
         if k == 0:
-            yield b + d 
+            yield b + d
         if d < d + k < 10:
             yield b + d + k
         if 0 <= d - k < d:
@@ -21,4 +22,3 @@ class Solution:
     def numsSameConsecDiff(self, n: int, k: int) -> List[int]:
         seed = [x for x in range(1, 10) if x + k < 10 or 0 <= x - k < 10]
         return list(self.solve(seed, n, k))
-

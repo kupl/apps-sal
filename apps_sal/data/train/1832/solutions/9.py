@@ -1,10 +1,12 @@
 from collections import defaultdict
 import heapq
+
+
 class Solution:
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
         g = defaultdict(dict)
         for ii, jj, kk in edges:
-             g[ii][jj] = g[jj][ii] = kk
+            g[ii][jj] = g[jj][ii] = kk
         queue, flag = [(0, 0)], {0: 0}
         used = {}
         res = 0
@@ -21,8 +23,7 @@ class Solution:
                 if now_d < flag.get(kk, M + 1):
                     heapq.heappush(queue, (now_d, kk))
                     flag[kk] = now_d
-                    
+
         for ii, jj, kk in edges:
             res += min(kk, used.get((ii, jj), 0) + used.get((jj, ii), 0))
         return res
-

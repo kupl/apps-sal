@@ -8,4 +8,3 @@ class Solution:
                 num += A[ii][jj] ^ A[ii][0]
             res += max(num, N - num) * 2 ** (M - jj - 1)
         return res
-

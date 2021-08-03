@@ -4,7 +4,7 @@ class Solution:
         out = []
         lakes = {}
         v = 1
-        for c,i in enumerate(rains):
+        for c, i in enumerate(rains):
             out.append(-1)
             if i <= 0:
                 drying.append(c)
@@ -27,5 +27,3 @@ class Solution:
         for j in drying:
             out[j] = v
         return out
-                
-

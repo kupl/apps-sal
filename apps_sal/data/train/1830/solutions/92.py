@@ -1,5 +1,6 @@
 from heapq import heappush, heappop
 
+
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
         appears = dict()
@@ -9,12 +10,12 @@ class Solution:
             if not rains[i] in appears:
                 appears[rains[i]] = []
             appears[rains[i]].append(i)
-            
+
         next_rain = dict()
         for v in appears.values():
             for i in range(len(v) - 1):
                 next_rain[v[i]] = v[i + 1]
-        
+
         h = []
         ans = [-1] * len(rains)
         for i in range(len(rains)):
@@ -30,8 +31,8 @@ class Solution:
                         ans[i] = idx
                 else:
                     ans[i] = 1
-        
+
         if h:
             return []
-        
+
         return ans

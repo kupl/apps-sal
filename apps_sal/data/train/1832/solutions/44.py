@@ -4,47 +4,45 @@ class Solution:
         self.visited = dict()
         self.new_touched = dict()
         self.new_vis_nodes_count = 0
-    
-    def dfs(self,v, M):
-        
-        self.visited[v]=M #0, 0_3_0, 0_3_1, 0_3_2,
+
+    def dfs(self, v, M):
+
+        self.visited[v] = M  # 0, 0_3_0, 0_3_1, 0_3_2,
         if M <= 0:
             return
 
         for u, w in self.graph[v]:
-            self.new_touched[(v,u)]=max(min(w,M),self.new_touched.get((v,u),0))
+            self.new_touched[(v, u)] = max(min(w, M), self.new_touched.get((v, u), 0))
             if u in self.visited and self.visited[u] >= M:
                 continue
-            if M>w:
-                self.dfs(u, M-w-1)
-    
+            if M > w:
+                self.dfs(u, M - w - 1)
+
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
-        
+
         for u, v, w in edges:
-            self.graph[u].append((v,w))
-            self.graph[v].append((u,w))
-        
-        nodes_queue = [(0,0)]
+            self.graph[u].append((v, w))
+            self.graph[v].append((u, w))
+
+        nodes_queue = [(0, 0)]
         self.visited[0] = 0
         while len(nodes_queue):
             v_dist, v = heappop(nodes_queue)
             self.visited[v] = v_dist
             for u, w in self.graph[v]:
-                
-                self.new_touched[(v,u)]=max(min(w,M-v_dist),self.new_touched.get((v,u),0))
-                
-                if u in self.visited and self.visited[u] <= v_dist+w+1:
+
+                self.new_touched[(v, u)] = max(min(w, M - v_dist), self.new_touched.get((v, u), 0))
+
+                if u in self.visited and self.visited[u] <= v_dist + w + 1:
                     continue
-                
-                if M>=v_dist+w+1:
-                    heappush(nodes_queue,(v_dist+w+1,u))
-                    
-            
-        #self.dfs(0,M)
-        
+
+                if M >= v_dist + w + 1:
+                    heappush(nodes_queue, (v_dist + w + 1, u))
+
+        # self.dfs(0,M)
+
         res = len(list(self.visited.items()))
         for u, v, w in edges:
             res += min(w, self.new_touched.get((u, v), 0) + self.new_touched.get((v, u), 0))
-        
-        return res
 
+        return res

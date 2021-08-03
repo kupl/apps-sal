@@ -8,7 +8,8 @@ import heapq
 'Your goal is to avoid flood.'
 'On each dry day you may choose to dry one lake.'
 
-def drying_strategy (rains):
+
+def drying_strategy(rains):
     # Idea: greedy method
     # Always dry the lake which is most urgent.
     # Never dry already-dry lakes, unless no lakes are full.
@@ -21,10 +22,10 @@ def drying_strategy (rains):
     # Whenever a lake is filled, its urgency is pushed into the heap.
     # Whenever we can dry a lake, we take the most urgent task on the top of the heap.
 
-    last_rain = {} # updating
-    chain_rain = {} # persistent, link from one rain to next
+    last_rain = {}  # updating
+    chain_rain = {}  # persistent, link from one rain to next
 
-    for time, rain in enumerate (rains):
+    for time, rain in enumerate(rains):
         if rain > 0:
             if rain in last_rain:
                 chain_rain[last_rain[rain]] = time
@@ -33,37 +34,38 @@ def drying_strategy (rains):
     del last_rain
 
     urgency = []
-    filled = set ()
+    filled = set()
 
     solution = []
 
-    for time, rain in enumerate (rains):
+    for time, rain in enumerate(rains):
         if rain > 0:
             if rain in filled:
                 # flooded
                 return []
             else:
-                filled.add (rain)
-                if time in chain_rain: # has next rain
-                    heapq.heappush (urgency, chain_rain[time])
+                filled.add(rain)
+                if time in chain_rain:  # has next rain
+                    heapq.heappush(urgency, chain_rain[time])
                     # add next rain
-            solution.append (-1) # wait
+            solution.append(-1)  # wait
         else:
             # clear day. find the next urgent and dry.
             solved = False
             while not solved:
                 if not urgency:
-                    solution.append (1)
-                    if 1 in filled: filled.remove (1)
+                    solution.append(1)
+                    if 1 in filled:
+                        filled.remove(1)
                     solved = True
                 else:
-                    time = heapq.heappop (urgency)
+                    time = heapq.heappop(urgency)
                     rain = rains[time]
                     if rain not in filled:
-                        pass # nothing to worry about
+                        pass  # nothing to worry about
                     else:
-                        solution.append (rain)
-                        filled.remove (rain)
+                        solution.append(rain)
+                        filled.remove(rain)
                         solved = True
 
     return solution

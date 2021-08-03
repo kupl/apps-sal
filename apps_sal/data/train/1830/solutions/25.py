@@ -121,7 +121,8 @@ class DisjointSet():
         self.data = list(range(size))
 
     def find(self, i):
-        if i == self.data[i]: return i
+        if i == self.data[i]:
+            return i
         else:
             j = self.find(self.data[i])
             self.data[i] = j
@@ -157,7 +158,7 @@ class Solution:
                 # Modify rain in place and return it on exiting the program to avoid
                 # allocating extra space.
                 rains[i] = -1
-            i+=1
+            i += 1
         return rains
 
     def avoidFlood(self, rains: List[int]) -> List[int]:
@@ -177,7 +178,8 @@ class Solution:
                 else:
                     last_idx = cc[r]
                     j = bisect_left(dry, last_idx)
-                    if j == len(dry): return []
+                    if j == len(dry):
+                        return []
                     day = dry[j]
                     del dry[j]
                     res[day] = r
@@ -195,4 +197,3 @@ rains = [69, 0, 0, 0, 69]
 # rains = [10,20,20]
 rains = [1, 0, 2, 3, 0, 1, 2]
 rains = [1, 2, 0, 0, 2, 1]
-

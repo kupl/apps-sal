@@ -26,7 +26,6 @@ class Solution:
 
         # return list(ans)
 
-
         # BFS (Breadth-First Search)
         # Time  complexity: O(N x 2^N)
         # Space complexity: O(2^N)
@@ -52,4 +51,3 @@ class Solution:
             queue = next_queue
 
         return queue
-

@@ -2,7 +2,7 @@ class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
         from bisect import bisect_left
         wet = {}
-        ans = [1]*len(rains)
+        ans = [1] * len(rains)
         dry = []
         for k in range(len(rains)):
             if not rains[k]:
@@ -21,4 +21,3 @@ class Solution:
                     ans[dry[index]] = rains[k]
                     dry.pop(index)
         return ans
-

@@ -1,18 +1,21 @@
 from queue import PriorityQueue
+
+
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
         pq = PriorityQueue()
-        rainOnLake = {}        
+        rainOnLake = {}
         for i, v in enumerate(rains):
             if v > 0:
-                if v not in rainOnLake: rainOnLake[v] = []
+                if v not in rainOnLake:
+                    rainOnLake[v] = []
                 rainOnLake[v].append(i)
-        
+
         lakes = {}
         ans = [-1] * len(rains)
-        for i , v in enumerate(rains):
+        for i, v in enumerate(rains):
             if v > 0:
-                if lakes.get(v, 0) > 0: 
+                if lakes.get(v, 0) > 0:
                     return []
                 lakes[v] = 1
                 rainSched = rainOnLake[v]
@@ -28,5 +31,3 @@ class Solution:
                     ans[i] = l
                     lakes[l] = 0
         return ans
-                
-

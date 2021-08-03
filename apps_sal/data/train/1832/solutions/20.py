@@ -1,6 +1,7 @@
 from collections import defaultdict
 import heapq
 
+
 class Solution:
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
         # Dijkstra's
@@ -17,7 +18,8 @@ class Solution:
 
         while pq:
             d, node = heapq.heappop(pq)
-            if d > dist[node]: continue
+            if d > dist[node]:
+                continue
             # Each node is only visited once.  We've reached
             # a node in our original graph.
             ans += 1
@@ -43,6 +45,3 @@ class Solution:
             ans += min(w, used.get((u, v), 0) + used.get((v, u), 0))
 
         return ans
-
-
-

@@ -6,12 +6,12 @@ class Solution:
         for day, lake in enumerate(rains):
             if lake not in fullLake:
                 if lake:
-                    fullLake[lake]=day
+                    fullLake[lake] = day
             else:
                 if lake:
                     dry[fullLake[lake]] = day
-                    fullLake[lake]=day
-        heap=[]
+                    fullLake[lake] = day
+        heap = []
         for day, lake in enumerate(rains):
             if heap and day >= heap[0][0]:
                 return []

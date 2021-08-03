@@ -1,4 +1,6 @@
 from sortedcontainers import SortedList
+
+
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
         res = [1 for i in range(len(rains))]
@@ -21,8 +23,3 @@ class Solution:
             else:
                 zs.add(i)
         return res
-            
-        
-            
-        
-

@@ -18,7 +18,7 @@ class Solution:
                         res[dry[idx]] = r
                         dry.pop(idx)
                         rained[r] = i
-                        
+
             else:
                 dry.append(i)
         for i in dry:

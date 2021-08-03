@@ -1,4 +1,5 @@
-from sortedcontainers import SortedSet 
+from sortedcontainers import SortedSet
+
 
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
@@ -27,5 +28,3 @@ class Solution:
             else:
                 res.append(-1)
         return res
-            
-

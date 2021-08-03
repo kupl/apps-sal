@@ -6,10 +6,12 @@
 #         self.right = right
 import heapq
 
+
 class Solution:
     def subtreeWithAllDeepest(self, root: TreeNode) -> TreeNode:
         nodes = []
         self.counter = 0
+
         def dfs(root, nodes, depth):
             if not root.left and not root.right:
                 heapq.heappush(nodes, (-depth, self.counter, root))
@@ -25,6 +27,7 @@ class Solution:
         while nodes and nodes[0][0] == maxDepth:
             deepestNodes.append(heapq.heappop(nodes)[2])
             foundArr.append(False)
+
         def helper(root, deepestNodes, foundArr):
             for i in range(len(deepestNodes)):
                 if root == deepestNodes[i]:
