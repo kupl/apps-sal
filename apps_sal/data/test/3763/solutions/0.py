@@ -4,7 +4,7 @@ n = int(input())
 a = [int(x) for x in input().split()]
 p = int(input())
 
-sum = 0;
+sum = 0
 for x in range(n):
     sum += a[x]
 if(sum <= p):

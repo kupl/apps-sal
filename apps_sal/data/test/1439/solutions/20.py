@@ -23,8 +23,10 @@ def Q(i, K, empty_sequence_ok):
 
     # print('Q(%d, %d, %r)' % (i, K, empty_sequence_ok))
 
-    if empty_sequence_ok and K == 0: return True
-    if i == 0: return A[0] == K
+    if empty_sequence_ok and K == 0:
+        return True
+    if i == 0:
+        return A[0] == K
 
     args = (i, K, empty_sequence_ok)
     if args not in Q_memo:

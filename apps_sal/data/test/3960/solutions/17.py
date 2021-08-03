@@ -1,4 +1,6 @@
-lectura = lambda: map(int, input().split())
+def lectura(): return map(int, input().split())
+
+
 n = (list(lectura())[0])
 lista = list(lectura())
 fDescrita = 0
