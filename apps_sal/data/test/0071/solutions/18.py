@@ -15,7 +15,7 @@ def main():
     per_num = k // per_leng
 
     every_raw = [2 * per_num for i in range(n)]
-    every_raw[0] -= per_num;
+    every_raw[0] -= per_num
     if (every_raw[-1] == 2 * per_num):
         every_raw[-1] -= per_num
     k %= per_leng

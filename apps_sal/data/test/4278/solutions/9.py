@@ -9,8 +9,10 @@ for _ in range(n):
     s = "".join(s)
 
     is_ok = d.get(s, False)
-    if is_ok: d[s] += 1
-    else: d[s] = 1
+    if is_ok:
+        d[s] += 1
+    else:
+        d[s] = 1
 
 ans = 0
 

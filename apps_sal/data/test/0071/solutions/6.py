@@ -8,7 +8,7 @@ def call():
     nonlocal k, rw, pl
     if n == 1:
 
-        a, b = k // m, k % m;
+        a, b = k // m, k % m
 
         for i in range(m):
             pl[0][i] = a
@@ -22,7 +22,7 @@ def call():
         ite = 2 * m * (n - 1)
         t = k // ite
         for i in range(n):
-            rw[i] += 2 * t;
+            rw[i] += 2 * t
 
         rw[0] -= t
         rw[-1] -= t

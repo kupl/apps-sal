@@ -13,16 +13,20 @@ def sv(N, M, K, X, Y):
                 gd[n][m] = rounds
         if rounds % 2 == 1:
             for n in range(N - 1, -1, -1):
-                if not rem: break
+                if not rem:
+                    break
                 for m in range(0, M):
-                    if not rem: break
+                    if not rem:
+                        break
                     rem -= 1
                     gd[n][m] += 1
         else:
             for n in range(0, N):
-                if not rem: break
+                if not rem:
+                    break
                 for m in range(0, M):
-                    if not rem: break
+                    if not rem:
+                        break
                     rem -= 1
                     gd[n][m] += 1
     else:

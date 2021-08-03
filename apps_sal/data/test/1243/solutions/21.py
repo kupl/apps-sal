@@ -1,12 +1,20 @@
 n = int(input())
 lst = [*map(int, input().split())]
 item = sum(lst) // n
-if n == 1: print(0); return
+if n == 1:
+    print(0)
+    return
 less, more, leng1, leng2 = [], [], 0, 0
 for i, x in enumerate(lst):
-    if x < item: less.append(i); leng1 += 1
-    if x > item: more.append(i); leng2 += 1
-if leng1 == 0 and leng2 == 0: print(0); return
+    if x < item:
+        less.append(i)
+        leng1 += 1
+    if x > item:
+        more.append(i)
+        leng2 += 1
+if leng1 == 0 and leng2 == 0:
+    print(0)
+    return
 i, j = 0, 0
 x, y = less[i], more[j]
 res = 0

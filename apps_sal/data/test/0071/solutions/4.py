@@ -14,16 +14,20 @@ r = 0
 c = 0
 
 for r in range(R):
-    if k <= 0: break
+    if k <= 0:
+        break
     for c in range(C):
-        if k <= 0: break
+        if k <= 0:
+            break
         k -= 1
         grid[r][c] += 1
 
 for r in range(R - 2, -1, -1):
-    if k <= 0: break
+    if k <= 0:
+        break
     for c in range(C):
-        if k <= 0: break
+        if k <= 0:
+            break
         k -= 1
         grid[r][c] += 1
 

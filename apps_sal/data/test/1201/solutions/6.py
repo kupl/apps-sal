@@ -10,7 +10,10 @@ for i in range(n):
     arr.append([a, b, c, i])
 arr.sort(key=lambda x: x[1])
 for i in arr:
-    t.append(i[0]); d.append(i[1]); p.append(i[2]); idx.append(i[3])
+    t.append(i[0])
+    d.append(i[1])
+    p.append(i[2])
+    idx.append(i[3])
 dp = [[0 for j in range(n)] for i in range(T)]
 for time in range(1, T):
     for i in range(n):

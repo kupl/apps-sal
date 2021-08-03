@@ -5,8 +5,10 @@ _c = 0
 _two = False
 for u in s:
     if u != g:
-        if _c >= 2: _two = True
-        if _c == 1: _two = False
+        if _c >= 2:
+            _two = True
+        if _c == 1:
+            _two = False
         _c = 1
         new = new + u
         g = u

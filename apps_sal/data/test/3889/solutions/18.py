@@ -12,5 +12,6 @@ for i in c:
             f = 0
             break
     cur += i
-if n == 1: f = 1
+if n == 1:
+    f = 1
 print("Yes" if f else "No")

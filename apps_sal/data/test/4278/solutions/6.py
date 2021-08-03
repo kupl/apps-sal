@@ -35,7 +35,8 @@ def main():
         s.sort()
         slist.append(s)
     slist.sort()
-    cnt = 1; tlist.append(cnt)
+    cnt = 1
+    tlist.append(cnt)
     for i in range(N - 1):
         if slist[i] == slist[i + 1]:
             tlist.append(cnt)

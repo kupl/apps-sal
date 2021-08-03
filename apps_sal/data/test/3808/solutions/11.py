@@ -14,7 +14,8 @@ for i in range(n):
     if(depth < 0):
         print('No')
         return
-if(ig): depth -= 1
+if(ig):
+    depth -= 1
 
 if(depth):
     print('No')
