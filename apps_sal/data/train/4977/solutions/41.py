@@ -1,2 +1,2 @@
-def goals(a,b,e):
-    return a+b+e
+def goals(a, b, e):
+    return a + b + e

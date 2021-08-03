@@ -1,3 +1,3 @@
 def goals(laLiga, copaDelRey, championsLeague):
-    goal = lambda a, b, c: a + b + c
+    def goal(a, b, c): return a + b + c
     return(goal(laLiga, copaDelRey, championsLeague))

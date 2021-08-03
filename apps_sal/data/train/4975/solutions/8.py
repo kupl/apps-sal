@@ -10,7 +10,7 @@ def solution(n):
         n -= ROMAN_VALUES[idx]
         roman.append(ROMAN_SYMBOLS[idx])
         if roman[-4:].count(roman[-1]) == 4:
-            roman = roman[:-3] + [ROMAN_SYMBOLS[idx-1]]
+            roman = roman[:-3] + [ROMAN_SYMBOLS[idx - 1]]
             if roman[-3:-2] == roman[-1:]:
-                roman = roman[:-3] + [ROMAN_SYMBOLS[idx]] + [ROMAN_SYMBOLS[idx-2]]
+                roman = roman[:-3] + [ROMAN_SYMBOLS[idx]] + [ROMAN_SYMBOLS[idx - 2]]
     return "".join(roman)

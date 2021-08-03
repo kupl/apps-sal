@@ -3,5 +3,6 @@ tens = " X XX XXX XL L LX LXX LXXX XC".split(" ")
 hundreds = " C CC CCC CD D DC DCC DCCC CM".split(" ")
 thousands = " M MM MMM".split(" ")
 
+
 def solution(n):
-    return thousands[n//1000] + hundreds[n%1000//100] + tens[n%100//10] + units[n%10]
+    return thousands[n // 1000] + hundreds[n % 1000 // 100] + tens[n % 100 // 10] + units[n % 10]

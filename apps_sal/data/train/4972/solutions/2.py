@@ -3,6 +3,7 @@ class Node(object):
         self.data = data
         self.next = None
 
+
 def count_if(node, fn):
     n, c = node, 0
     while n:
@@ -11,8 +12,10 @@ def count_if(node, fn):
         n = n.next
     return c
 
+
 def length(node):
     return count_if(node, lambda x: x != None)
+
 
 def count(node, data):
     return count_if(node, lambda x: x.data == data)

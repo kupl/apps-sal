@@ -1,1 +1,1 @@
-goals=lambda *b: sum(b)
+goals = lambda *b: sum(b)

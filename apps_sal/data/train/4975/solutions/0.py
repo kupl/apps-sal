@@ -1,5 +1,5 @@
 def solution(n):
-    roman_numerals = {1000:'M',
+    roman_numerals = {1000: 'M',
                       900: 'CM',
                       500: 'D',
                       400: 'CD',
@@ -12,11 +12,10 @@ def solution(n):
                       5: 'V',
                       4: 'IV',
                       1: 'I'
-    }
+                      }
     roman_string = ''
-    for key in sorted(list(roman_numerals.keys()),reverse=True):
+    for key in sorted(list(roman_numerals.keys()), reverse=True):
         while n >= key:
             roman_string += roman_numerals[key]
             n -= key
     return roman_string
-

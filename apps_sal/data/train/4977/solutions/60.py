@@ -1,1 +1,1 @@
-goals = lambda laLiga, copaDelRey, championsLeague: sum([laLiga, copaDelRey, championsLeague])
+def goals(laLiga, copaDelRey, championsLeague): return sum([laLiga, copaDelRey, championsLeague])

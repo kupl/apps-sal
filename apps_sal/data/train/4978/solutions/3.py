@@ -8,6 +8,7 @@ def encode(n, cleartext):
         cleartext = ' '.join(rotate_right(word, n) for word in cleartext.split(' '))
     return f'{n} {cleartext}'
 
+
 def decode(ciphertext):
     def rotate_left(sequence, n):
         n %= len(sequence) or 1
