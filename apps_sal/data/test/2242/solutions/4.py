@@ -1,7 +1,10 @@
 import numpy as np
-import sys; from decimal import Decimal
-import math; from itertools import combinations, product
-import bisect; from collections import Counter, deque, defaultdict
+import sys
+from decimal import Decimal
+import math
+from itertools import combinations, product
+import bisect
+from collections import Counter, deque, defaultdict
 
 # sys.setrecursionlimit(10 ** 6)
 MOD = 10 ** 9 + 7

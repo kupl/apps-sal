@@ -1,5 +1,6 @@
 import queue
-intput = lambda: list(map(int, input().split()))
+def intput(): return list(map(int, input().split()))
+
 
 N, M, K = intput()
 ht = [[] for _ in range(N)]

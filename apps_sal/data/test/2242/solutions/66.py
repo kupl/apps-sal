@@ -17,5 +17,6 @@ c = Counter(p)
 for k, n in c.most_common():
     if n > 1:
         ans += n * (n - 1) // 2
-    else: break
+    else:
+        break
 print(ans)

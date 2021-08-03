@@ -14,5 +14,6 @@ for i in range(len(N)):
     M.append(S)
 
 P = Counter(M)
-for i in range(2020): ans += P[i] * (P[i] - 1) // 2
+for i in range(2020):
+    ans += P[i] * (P[i] - 1) // 2
 print(ans)

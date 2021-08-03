@@ -1,4 +1,6 @@
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
+
+
 n, k = R()
 a = sorted(R())
 b = 0

@@ -13,5 +13,8 @@ T = [1] + [0] * 2018
 for z in Z:
     T[z] += 1
 
-f = lambda n: n * (n - 1) // 2
+
+def f(n): return n * (n - 1) // 2
+
+
 print(sum(f(t) for t in T))

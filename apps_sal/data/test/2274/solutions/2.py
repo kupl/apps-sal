@@ -6,7 +6,8 @@ def solv():
         if grid[n][-1] == 'R':
             res += 1
     for n in range(y - 1):
-        if grid[-1][n] != 'R': res += 1
+        if grid[-1][n] != 'R':
+            res += 1
 
     print(res)
 

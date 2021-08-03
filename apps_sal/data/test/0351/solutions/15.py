@@ -1,6 +1,9 @@
 import math
 
-I = lambda: list(map(int, input().split()))
+
+def I(): return list(map(int, input().split()))
+
+
 n, k = I()
 a = list(I())
 # print(a)

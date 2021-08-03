@@ -29,7 +29,7 @@ for q in range(Q):
             if d == 1:
                 i += 1
             else:
-                i -= 1;
+                i -= 1
             ll = 0
         else:
             if su[i] == '>' or su[i] == '<':
@@ -47,7 +47,7 @@ for q in range(Q):
                 else:
                     d = 0
             if d == 0:
-                i -= 1;
+                i -= 1
             else:
                 i += 1
             ll = 1

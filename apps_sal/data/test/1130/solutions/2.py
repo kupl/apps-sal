@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n, m, k = R()
 cls = [list(i for i, x in enumerate(map(int, input())) if x) for _ in range(n)]
 dp = [[n * m] * (k + 1) for i in range(n + 1)]

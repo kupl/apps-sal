@@ -8,9 +8,11 @@ for _ in range(t):
 
     o = 0
     for i in range(n):
-        if a[i][-1] == 'R': o += 1
+        if a[i][-1] == 'R':
+            o += 1
 
     for i in range(m):
-        if a[-1][i] == 'D': o += 1
+        if a[-1][i] == 'D':
+            o += 1
 
     print(o)
