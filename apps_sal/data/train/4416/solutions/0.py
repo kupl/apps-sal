@@ -1,10 +1,11 @@
 import math
 
+
 def loose_change(cents):
     if cents < 0:
         cents = 0
     cents = int(cents)
-    
+
     change = {}
 
     change['Quarters'] = cents // 25
@@ -15,7 +16,7 @@ def loose_change(cents):
 
     change['Nickels'] = cents // 5
     cents = cents % 5
-    
+
     change['Pennies'] = cents
-    
+
     return change

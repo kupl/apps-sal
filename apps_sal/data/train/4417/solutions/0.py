@@ -11,11 +11,13 @@ def is_prime(n):
             return False
     return True
 
+
 def end_one(n):
     while n > 6:
-        n = sum(map(lambda x: int(x)*int(x) ,f"{n}"))
+        n = sum(map(lambda x: int(x) * int(x), f"{n}"))
         if n == 1:
             return True
-        
-def solve(a,b):
+
+
+def solve(a, b):
     return sum(1 for n in range(a, b) if is_prime(n) and end_one(n))

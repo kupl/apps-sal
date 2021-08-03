@@ -1,5 +1,6 @@
 def is_even(n):
-    return int(n)%2==0
+    return int(n) % 2 == 0
+
 
 def split_odd_and_even(n):
     index, s = 0, str(n)

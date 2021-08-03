@@ -1,6 +1,7 @@
 def count_sixes(n):
-    res = str(10**n//15-(-5)**n//15)
-    return len(res)-len(res.lstrip('6'))    
+    res = str(10**n // 15 - (-5)**n // 15)
+    return len(res) - len(res.lstrip('6'))
+
 
 """ For my poor memory :
 

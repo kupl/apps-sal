@@ -1,5 +1,6 @@
 import math
 
+
 def count_sixes(n):
     n0 = int((math.log10(2) * (n - 1)))
     n1 = int((math.log10(2) * n))
