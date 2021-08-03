@@ -6,12 +6,12 @@ def tv_remote(word):
              ['p', 'q', 'r', 's', 't', '.', '@', '0'],
              ['u', 'v', 'w', 'x', 'y', 'z', '_', '/'],
              ['aA', ' '],
-             ]
+    ]
 
     actions = ([0, 0],)
     upper_mode = False
     press_ok = 0
-    func = lambda x, y: (abs(x[0]-y[0]) + abs(x[1]-y[1]))
+    def func(x, y): return (abs(x[0] - y[0]) + abs(x[1] - y[1]))
 
     for char in word:
         for i in range(6):

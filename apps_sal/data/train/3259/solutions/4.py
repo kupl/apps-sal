@@ -9,7 +9,7 @@ def tv_remote(words):
             res += (abs(pos[0] - index["S"][0]) + abs(pos[1] - index["S"][1])) + 1
             pos = index["S"]
             caps = not caps
-        
+
         char = char.lower()
         res += (abs(pos[0] - index[char][0]) + abs(pos[1] - index[char][1])) + 1
         pos = index[char]

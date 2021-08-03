@@ -9,7 +9,7 @@ def primeFactors(n):
     factors = defaultdict(int)
     rest = n
     while rest != 1:
-        for num in range(2, rest+1):
+        for num in range(2, rest + 1):
             if rest % num == 0 and is_prime(num):
                 factors[num] += 1
                 rest //= num

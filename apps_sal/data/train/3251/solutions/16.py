@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def primeFactors(n):
     c = Counter()
     while n % 2 == 0:
@@ -12,5 +13,5 @@ def primeFactors(n):
             c[d] += 1
             n //= d
         d += 2
-        
+
     return ''.join(f'({key}**{value})' if value > 1 else f'({key})' for key, value in sorted(c.items()))

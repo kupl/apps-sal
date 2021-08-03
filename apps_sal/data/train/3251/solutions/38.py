@@ -1,4 +1,6 @@
 import math
+
+
 def primeFactors(number):
 
     # create an empty list and later I will
@@ -22,17 +24,17 @@ def primeFactors(number):
 
     if number > 2:
         prime_factors.append(int(number))
-        
+
     distinct_set = sorted(set(prime_factors))
-    
+
     output = ""
-    
+
     for i in distinct_set:
-        
+
         if(prime_factors.count(i) == 1):
-            
+
             output = output + '(' + str(i) + ')'
         else:
-            output = output + '(' + str(i)+ '**' + str(prime_factors.count(i)) +  ')'
-        
+            output = output + '(' + str(i) + '**' + str(prime_factors.count(i)) + ')'
+
     return output

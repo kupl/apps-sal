@@ -1,6 +1,6 @@
 from collections import Counter
 
-        
+
 def get_factors(num):
     if num % 2 == 0:
         return (2, num // 2)
@@ -23,12 +23,11 @@ def string_builder(count_dict):
 def primeFactors(n):
     factors = [n]
     count_dict = Counter()
-    
+
     while factors:
         result = get_factors(factors.pop())
         count_dict[result[0]] += 1
         if result[1]:
             factors.append(result[1])
-    
-    return string_builder(count_dict)
 
+    return string_builder(count_dict)

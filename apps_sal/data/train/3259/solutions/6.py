@@ -9,8 +9,10 @@ def tv_remote(word):
         moves, current = moves + distance(current, target), target
     return moves + len(word)
 
+
 keyboard = ("abcde123", "fghij456", "klmno789", "pqrst.@0", "uvwxyz_/", "↑ ")
 coords = {char: (line.index(char), y) for y, line in enumerate(keyboard) for char in line}
+
 
 def distance(pos1, pos2):
     return abs(pos2[0] - pos1[0]) + abs(pos2[1] - pos1[1])

@@ -25,6 +25,3 @@ def primeFactors(n):
             for k, v in primes
         ]
     )
-
-
-
