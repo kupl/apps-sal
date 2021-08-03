@@ -1,7 +1,7 @@
 def pick_peaks(arr):
     start = 0
     sequence = []
-    ind,val=[],[]
+    ind, val = [], []
     posPeaks = {
         "pos": [],
         "peaks": [], }
@@ -16,7 +16,7 @@ def pick_peaks(arr):
         if b < m and a < m:
             ind.append(mi)
             val.append(m)
-        
-    posPeaks["pos"]=ind
-    posPeaks["peaks"]=val
+
+    posPeaks["pos"] = ind
+    posPeaks["peaks"] = val
     return (posPeaks)

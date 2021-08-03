@@ -8,5 +8,3 @@ def countzero(string):
         else:
             pass
     return counter + string.count('()')
-        
-

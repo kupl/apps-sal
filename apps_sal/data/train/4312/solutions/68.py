@@ -1,6 +1,6 @@
 def pick_peaks(arr):
-    pospeaks = {"pos":[], "peaks":[]}
-    
+    pospeaks = {"pos": [], "peaks": []}
+
     for i in range(1, len(arr) - 1):
         lowerbefore = arr[i - 1] < arr[i]
         lowerafter = False
@@ -15,5 +15,5 @@ def pick_peaks(arr):
         if lowerbefore and lowerafter:
             pospeaks["pos"].append(i)
             pospeaks["peaks"].append(arr[i])
-    
+
     return pospeaks

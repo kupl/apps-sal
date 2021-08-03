@@ -3,7 +3,7 @@ def pick_peaks(arr):
     pos = []
     prev = 0
     growing = False
-    for i in range(1,len(arr)):
+    for i in range(1, len(arr)):
         if arr[prev] > arr[i] and growing:
             peak.append(arr[prev])
             pos.append(prev)
@@ -14,5 +14,4 @@ def pick_peaks(arr):
             prev = prev
         else:
             prev = i
-    return { 'pos' : pos, 'peaks' : peak}
-
+    return {'pos': pos, 'peaks': peak}

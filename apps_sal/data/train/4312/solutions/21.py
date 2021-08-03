@@ -1,13 +1,13 @@
 def pick_peaks(arr):
     if not arr:
         return {"pos": [], "peaks": []}
-    
+
     pos = []
     peaks = []
     arr_iter = enumerate(arr)
     curr_pos, curr_peak = next(arr_iter)
     climbing = False
-    
+
     for index, value in arr_iter:
         if value > curr_peak:
             curr_pos, curr_peak = index, value
@@ -18,6 +18,5 @@ def pick_peaks(arr):
                 peaks.append(curr_peak)
                 climbing = False
             curr_pos, curr_peak = index, value
-    
-    return {"pos": pos, "peaks": peaks}
 
+    return {"pos": pos, "peaks": peaks}

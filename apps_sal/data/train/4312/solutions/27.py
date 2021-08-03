@@ -4,10 +4,12 @@ def next_different_value(arr, index):
         next_index += 1
     return arr[index] > arr[next_index]
 
+
 def pick_peaks(arr):
     res = {'pos': [], 'peaks': []}
     if len(arr) < 3:
         return res
+
     def fill_res(pos, peaks):
         res['pos'].append(pos)
         res['peaks'].append(peaks)

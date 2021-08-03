@@ -15,10 +15,10 @@ def pick_peaks(arr):
                 pos.append(count)
                 peak.append(item)
                 peaking = False
-            elif platu and arr[count+1] > arr[count]:
+            elif platu and arr[count + 1] > arr[count]:
                 platu = None
                 peaking = True
-            elif platu and arr[count+1] < arr[count]:
+            elif platu and arr[count + 1] < arr[count]:
                 pos.append(platu)
                 peak.append(arr[platu])
                 platu = None
@@ -28,4 +28,3 @@ def pick_peaks(arr):
         except IndexError:
             break
     return {'pos': pos, 'peaks': peak}
-

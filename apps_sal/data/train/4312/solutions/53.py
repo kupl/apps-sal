@@ -9,6 +9,7 @@ def isPeak(arr, pos):
         if nextElem < arr[pos]:
             return True
 
+
 def pick_peaks(arr):
     result = {"pos": [], "peaks": []}
     for pos, val in enumerate(arr):
@@ -16,4 +17,3 @@ def pick_peaks(arr):
             result["pos"].append(pos)
             result["peaks"].append(val)
     return result
-
