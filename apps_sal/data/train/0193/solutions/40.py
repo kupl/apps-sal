@@ -1,6 +1,8 @@
 from collections import Counter
+
+
 class Solution:
-    
+
     def minSetSize(self, arr: List[int]) -> int:
         counts = Counter(arr)
         elements = 0
@@ -11,4 +13,3 @@ class Solution:
             elements += 1
             count -= value_count
         return elements
-

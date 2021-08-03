@@ -1,19 +1,19 @@
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
-        # get length of array 
+        # get length of array
         length = len(arr)
         # build dict to count how many times each int appears
         counts = {}
         for num in arr:
             if num not in counts:
-                counts[num] =1
+                counts[num] = 1
             else:
                 counts[num] += 1
-                
+
         # print(counts)
-        
+
         # get values from dict, sort in descending order
-        descending = sorted(counts.values(), reverse =  True)
+        descending = sorted(counts.values(), reverse=True)
         # print(descending)
         # initialize 2 variables: count and total
         count = 0
@@ -25,5 +25,5 @@ class Solution:
             # increment count by 1
             count += 1
             # if our total is half or more, return count
-            if total >= length/2:
+            if total >= length / 2:
                 return count

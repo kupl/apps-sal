@@ -8,5 +8,3 @@ class Solution:
         while target > 0:
             target += heapq.heappop(heap)[0]
         return ans - len(heap)
-            
-

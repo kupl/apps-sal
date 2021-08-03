@@ -9,4 +9,3 @@ class Solution:
             left += 1
             right -= 2
         return total
-

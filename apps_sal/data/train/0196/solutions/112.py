@@ -11,7 +11,7 @@ class Solution:
         ans = A[0]
         deque = collections.deque([0])
         for j in range(1, len(P)):
-            if deque[0] < j-N:
+            if deque[0] < j - N:
                 deque.popleft()
 
             # The optimal i is deque[0], for cand. answer P[j] - P[i].

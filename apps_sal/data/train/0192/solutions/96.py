@@ -6,7 +6,7 @@ class Solution:
 
         for p in piles:
             d[p - 1] += 1
-            
+
         for i in range(len(d)):
             while d[i] > 0:
                 d[i] -= 1
@@ -14,6 +14,4 @@ class Solution:
                     total += i + 1
                 t += 1
 
-
-        
-        return total        
+        return total

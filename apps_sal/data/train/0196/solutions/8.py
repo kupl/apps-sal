@@ -8,4 +8,3 @@ class Solution:
             minSum = min(minSum, curMin)
             total += a
         return max(maxSum, total - minSum) if maxSum > 0 else maxSum
-

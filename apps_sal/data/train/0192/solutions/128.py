@@ -10,4 +10,3 @@ class Solution:
             # Bob pile
             del piles[0]
         return wallet
-

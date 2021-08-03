@@ -10,4 +10,3 @@ class Solution:
             else:
                 stack.append(i)
         return not stack
-

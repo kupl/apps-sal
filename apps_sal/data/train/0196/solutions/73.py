@@ -21,4 +21,3 @@ class Solution:
             return max(ans1, ans2, ans3)
         else:
             return ans1
-

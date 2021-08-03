@@ -4,9 +4,8 @@ class Solution:
         l = len(arr)
         tup = c.most_common(len(c))
         i = 0
-        while l > len(arr)/2:
+        while l > len(arr) / 2:
             l -= tup[i][1]
             i += 1
-            
-        return i
 
+        return i

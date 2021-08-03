@@ -8,5 +8,3 @@ class Solution:
             ans += a[i]
             i += 2
         return ans
-        
-

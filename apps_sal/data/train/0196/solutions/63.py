@@ -19,6 +19,6 @@ class Solution:
                 num = 1
             if num != len(A):
                 res = min(res, last)
-            last_max = max(i, i+last_max)
+            last_max = max(i, i + last_max)
             res_max = max(res_max, last_max)
-        return max(s-res, res_max)
+        return max(s - res, res_max)

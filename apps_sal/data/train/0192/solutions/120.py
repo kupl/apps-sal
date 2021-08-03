@@ -8,4 +8,3 @@ class Solution:
             my_coins += piles[-1]
             del piles[-1]
         return my_coins
-

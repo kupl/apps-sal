@@ -7,12 +7,11 @@ class Solution:
             if not cnt['a'] >= cnt['b'] >= cnt['c']:
                 return False
             stack.append(c)
-            while len(stack)>=3 and stack[-1]=='c' and stack[-2]=='b' and stack[-3]=='a':
+            while len(stack) >= 3 and stack[-1] == 'c' and stack[-2] == 'b' and stack[-3] == 'a':
                 for _ in range(3):
                     stack.pop()
-            #print(stack)
+            # print(stack)
         if stack:
             return False
         else:
             return True
-

@@ -21,6 +21,4 @@ class Solution:
             max_value = max(max_value, num)
         if max_value <= 0:
             return max_value
-        return max(max_subarray, total-min_subarray)
-        
-
+        return max(max_subarray, total - min_subarray)

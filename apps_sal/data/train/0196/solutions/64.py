@@ -7,7 +7,8 @@ class Solution:
             totalMax = max(totalMax, currentMax)
             currentMin = min(currentMin + A[i], A[i])
             totalMin = min(totalMin, currentMin)
-            s += A[i] 
+            s += A[i]
         if s - totalMin != 0:
             return max(totalMax, s - totalMin)
-        else: return totalMax
+        else:
+            return totalMax

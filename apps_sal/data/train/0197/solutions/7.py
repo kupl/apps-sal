@@ -1,7 +1,7 @@
 class Solution:
     base = 'abc'
     base_len = 3
-    
+
     def isValid(self, S: str) -> bool:
         stack = []
         for c in S:
@@ -12,8 +12,7 @@ class Solution:
                     stack.pop()
                     stack.pop()
         return len(stack) == 0
-            
+
 #             if not stack:
 #                 stack.append(c)
 #             else:
-

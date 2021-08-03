@@ -3,13 +3,13 @@ class Solution:
         dp = [0]
         for _ in range(2):
             for num in A:
-                dp.append(dp[-1]+num)        
-        
+                dp.append(dp[-1] + num)
+
         res = A[0]
-        deque = collections.deque([0]) # i's, increasing by P[i]
+        deque = collections.deque([0])  # i's, increasing by P[i]
         for j in range(1, len(dp)):
             # If the smallest i is too small, remove it.
-            if deque[0] < j-len(A):
+            if deque[0] < j - len(A):
                 deque.popleft()
 
             # The optimal i is deque[0], for cand. answer P[j] - P[i].
@@ -28,15 +28,12 @@ class Solution:
         cur_max = -float('inf')
         dp = [0]
         for num in A:
-            dp.append(dp[-1]+num)
-        
-        for i in range(len(A)):
-            for j in range(i+1,i+len(A)+1):
-                if j <= len(A):
-                    cur_max = max(cur_max,dp[j]-dp[i])
-                else:
-                    cur_max = max(cur_max,dp[len(A)]-dp[i]+dp[j%len(A)])
-        return cur_max
-                
-                
+            dp.append(dp[-1] + num)
 
+        for i in range(len(A)):
+            for j in range(i + 1, i + len(A) + 1):
+                if j <= len(A):
+                    cur_max = max(cur_max, dp[j] - dp[i])
+                else:
+                    cur_max = max(cur_max, dp[len(A)] - dp[i] + dp[j % len(A)])
+        return cur_max

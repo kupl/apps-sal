@@ -7,6 +7,5 @@ class Solution:
         piles.sort(reverse=True)
         ans = 0
         for i in range(1, len(piles) // 3 + 1):
-            ans += piles[2*(i-1)+1]
+            ans += piles[2 * (i - 1) + 1]
         return ans
-

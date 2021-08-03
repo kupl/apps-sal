@@ -1,7 +1,7 @@
-#Two cases:
-#MaxSubarray = normal -> proceed normally
-#MaxSubarray = circular -> total sum - minSubarray
-#return max(maxSubarray, maxSubarraycircular
+# Two cases:
+# MaxSubarray = normal -> proceed normally
+# MaxSubarray = circular -> total sum - minSubarray
+# return max(maxSubarray, maxSubarraycircular
 class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         total_sum = 0
@@ -15,6 +15,6 @@ class Solution:
             global_max = max(global_max, local_max)
             global_min = min(global_min, local_min)
             total_sum += num
-            
+
         circular_max = total_sum - global_min
         return max(circular_max, global_max) if global_max > 0 else global_max

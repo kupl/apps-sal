@@ -16,5 +16,3 @@ class Solution:
             total += nums[i]
 
         return greatest if greatest < 0 else max(greatest, total - smallest)
-
-

@@ -10,5 +10,5 @@ class Solution:
             for v in count:
                 if A[k] & v == 0:
                     ans += count[v]
-        
+
         return ans

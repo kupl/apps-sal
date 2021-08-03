@@ -1,6 +1,6 @@
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
-        piles.sort(reverse = True)
+        piles.sort(reverse=True)
         n = len(piles) // 3
         num = 0
         for i in range(n):

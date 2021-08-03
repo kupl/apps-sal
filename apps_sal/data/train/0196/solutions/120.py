@@ -9,7 +9,7 @@ class Solution:
             curmx = max(curmx + num, num)
             mx = max(mx, curmx)
             tot += num
-        
+
         if tot == mn:
             return mx
-        return max(mx, tot-mn)
+        return max(mx, tot - mn)

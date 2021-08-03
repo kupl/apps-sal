@@ -13,7 +13,7 @@ class Solution:
         for i in range(1, len(A)):
             max_sum[i] = A[i] + max(max_sum[i - 1], 0)
             min_sum[i] = A[i] + min(min_sum[i - 1], 0)
-            
+
             best_non_loop = max(best_non_loop, max_sum[i])
             best_inverse_loop = min(best_inverse_loop, min_sum[i])
 

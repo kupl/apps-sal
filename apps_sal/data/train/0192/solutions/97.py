@@ -6,5 +6,5 @@ class Solution:
             que.popleft()
             res += que.popleft()
             que.pop()
-            
+
         return res

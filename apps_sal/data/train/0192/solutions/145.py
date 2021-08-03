@@ -7,7 +7,7 @@ class Solution:
             can.append(piles.pop())
             can.append(piles.pop())
             can.append(piles.pop(0))
-            
+
             res += can[1]
             can = []
         return(res)

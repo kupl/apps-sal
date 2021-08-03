@@ -7,9 +7,9 @@ class Solution:
         heap = []
         for p in piles:
             heapq.heappush(heap, -p)
-                
+
         for i in range(len(piles) // 3):
             heapq.heappop(heap)
             res += -heapq.heappop(heap)
-        
+
         return res

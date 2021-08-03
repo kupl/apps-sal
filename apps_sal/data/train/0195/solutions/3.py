@@ -14,7 +14,3 @@ class Solution:
                 if a & z == 0:
                     triplet_count += and_values[a]
         return triplet_count
-                
-                        
-                  
-

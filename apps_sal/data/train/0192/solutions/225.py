@@ -6,7 +6,7 @@ class Solution(object):
             piles.popleft()
             x = piles.popleft()
             piles.pop()
-            
+
             s += x
-            
+
         return s

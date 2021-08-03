@@ -9,9 +9,7 @@ class Solution:
                 stack[-1].append(ord(s[i]))
             else:
                 stack.append([ord(s[i])])
-                
+
             if stack[-1] == [ord('a'), ord('b'), ord('c')]:
                 stack.pop()
         return stack == []
-            
-

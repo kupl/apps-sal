@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
         piles.sort()
@@ -9,5 +11,4 @@ class Solution:
             total += piles[ptr1]
             ptr1 -= 2
             ptr2 += 1
-        return total        
-
+        return total

@@ -1,7 +1,7 @@
 class Solution:
     def maxSubarraySumCircular(self, A):
         def kadane(gen):
-            ans = cur = float('-inf') # maximum non-empty subarray sum
+            ans = cur = float('-inf')  # maximum non-empty subarray sum
             for x in gen:
                 cur = max(cur, 0) + x
                 ans = max(ans, cur)

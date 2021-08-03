@@ -3,7 +3,7 @@ class Solution:
         cnt = collections.defaultdict(int)
         for i in A:
             for j in A:
-                cnt[i&j]+=1
+                cnt[i & j] += 1
         res = 0
         for i in A:
             for j in cnt:

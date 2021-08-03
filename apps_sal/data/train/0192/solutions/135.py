@@ -7,8 +7,7 @@ class Solution:
             sorted_piles.pop(0)
             sorted_piles.pop(-2)
             sorted_piles.pop(-1)
-        
-        s += sorted_piles[-2]
-        
-        return s
 
+        s += sorted_piles[-2]
+
+        return s

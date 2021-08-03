@@ -8,5 +8,5 @@ class Solution:
             total += piles[start - 1]
             start -= 2
             end += 1
-        
+
         return total

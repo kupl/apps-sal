@@ -1,13 +1,12 @@
 class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         ansIfOne = kadane(A)
-        
-        ansIfTwo = sum(A) - kadaneMin(A[1:len(A)-1])
-        
+
+        ansIfTwo = sum(A) - kadaneMin(A[1:len(A) - 1])
+
         return max(ansIfOne, ansIfTwo)
-        
-        
-        
+
+
 def kadane(A):
     prevMax = -math.inf
     result = -math.inf
@@ -17,6 +16,7 @@ def kadane(A):
         result = max(result, curMax)
     return result
 
+
 def kadaneMin(A):
     prevMin = math.inf
     result = math.inf
@@ -25,4 +25,3 @@ def kadaneMin(A):
         prevMin = curMin
         result = min(result, curMin)
     return result
-

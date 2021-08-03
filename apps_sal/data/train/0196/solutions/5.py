@@ -8,7 +8,7 @@ class Solution:
             else:
                 curr = A[i]
             mx = max(mx, curr)
-            cumSum.append(cumSum[-1]+A[i])
+            cumSum.append(cumSum[-1] + A[i])
         revCumSum = []
         curr = 0
         for x in reversed(A):
@@ -17,9 +17,7 @@ class Solution:
                 revCumSum.append(max(revCumSum[-1], curr))
             else:
                 revCumSum.append(curr)
-        for i in range(len(A)-1):
-            mx = max(mx, cumSum[i]+revCumSum[len(A)-2-i])
+        for i in range(len(A) - 1):
+            mx = max(mx, cumSum[i] + revCumSum[len(A) - 2 - i])
         mx = max(mx, cumSum[-1])
         return mx
-        
-

@@ -6,9 +6,6 @@ class Solution:
             x = piles.pop()
             try:
                 s += piles[i + 1]
-            except: 
+            except:
                 print('')
         return s
-        
-        
-

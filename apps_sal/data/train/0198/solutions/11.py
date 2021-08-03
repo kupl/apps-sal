@@ -7,4 +7,3 @@ class Solution:
                 maxCost += abs(ord(s[i]) - ord(t[i]))
                 i += 1
         return j - i + 1
-

@@ -3,8 +3,8 @@ class Solution:
         l = len(A)
         Memo = {}
         for i in range(l):
-            for j in range(i+1):
-                t = A[i]&A[j]
+            for j in range(i + 1):
+                t = A[i] & A[j]
                 if t not in Memo:
                     Memo[t] = 0
                 if i == j:
@@ -14,7 +14,6 @@ class Solution:
         r = 0
         for a in A:
             for key in Memo:
-                if key&a == 0:
+                if key & a == 0:
                     r += Memo[key]
         return r
-

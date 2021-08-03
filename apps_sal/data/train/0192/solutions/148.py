@@ -5,9 +5,8 @@ class Solution:
         while len(sorted_piles) > 3:
             triplet = [sorted_piles.pop(0)] + [sorted_piles.pop(-2)] + [sorted_piles.pop(-1)]
             s += triplet[1]
-        
+
         triplet = [sorted_piles.pop(0)] + [sorted_piles.pop(-2)] + [sorted_piles.pop(-1)]
         s += triplet[1]
-        
-        return s
 
+        return s

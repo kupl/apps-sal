@@ -18,7 +18,7 @@ aabcbc
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = list()
-        
+
         for ch in s:
             if ch == 'a':
                 stack.append('a')
@@ -34,5 +34,5 @@ class Solution:
                     return False
             else:
                 return False
-        
+
         return (len(stack) == 0)

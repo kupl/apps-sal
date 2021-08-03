@@ -7,7 +7,5 @@ class Solution:
         for key, rep in count.most_common():
             s += 1
             res += rep
-            if res >=n//2 :
+            if res >= n // 2:
                 return s
-            
-
