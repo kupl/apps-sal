@@ -22,7 +22,8 @@ def isS(P):
             t2 = (X[i] - X[l])**2 + (Y[i] - Y[l])**2
             t3 = (X[j] - X[k])**2 + (Y[j] - Y[k])**2
             t4 = (X[j] - X[l])**2 + (Y[j] - Y[l])**2
-            if t1 == t2 == t3 == t4: return True
+            if t1 == t2 == t3 == t4:
+                return True
     return False
 
 
@@ -38,7 +39,8 @@ for i in range(N):
         for k2 in range(4):
             for k3 in range(4):
                 for k4 in range(4):
-                    if isS(P): res.append(k1 + k2 + k3 + k4)
+                    if isS(P):
+                        res.append(k1 + k2 + k3 + k4)
                     P[3] = rotate(P[3])
                 P[2] = rotate(P[2])
             P[1] = rotate(P[1])

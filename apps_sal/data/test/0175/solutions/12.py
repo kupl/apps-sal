@@ -7,5 +7,6 @@ while a and b:
     while a > 0 and b > 0 and b >= 2 * a:
         b -= 2 * a * (b // (2 * a))
         c = 1
-    if(c == 0): break
+    if(c == 0):
+        break
 print(a, b)

@@ -11,10 +11,12 @@ class APaintTheNumbers:
         ans = 0
         done = [0] * n
         for i in range(n):
-            if done[i]: continue
+            if done[i]:
+                continue
             ans += 1
             for j in range(i, n):
-                if done[j]: continue
+                if done[j]:
+                    continue
                 if a[j] % a[i] == 0:
                     done[j] = 1
 

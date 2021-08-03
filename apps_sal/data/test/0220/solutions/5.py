@@ -23,5 +23,5 @@ def func(s, x):
 s, x = list(map(int, input().split()))
 cnt = func(s, x)
 if s ^ 0 == x:
-    cnt = cnt - 2;
+    cnt = cnt - 2
 print(cnt)

@@ -17,10 +17,14 @@ def help():
             for _3 in range(4):
                 for _4 in range(4):
                     l = copy.deepcopy(read)
-                    for i in range(_1): rot(l[0])
-                    for i in range(_2): rot(l[1])
-                    for i in range(_3): rot(l[2])
-                    for i in range(_4): rot(l[3])
+                    for i in range(_1):
+                        rot(l[0])
+                    for i in range(_2):
+                        rot(l[1])
+                    for i in range(_3):
+                        rot(l[2])
+                    for i in range(_4):
+                        rot(l[3])
                     if square(l):
                         res = min(res, _1 + _2 + _3 + _4)
     return res
@@ -46,7 +50,8 @@ def square(l):
         for j in range(i + 1, 4):
             distances.append(dist(l[i], l[j]))
     distances.sort()
-    if distances[0] < 0.000001: return False  # same point
+    if distances[0] < 0.000001:
+        return False  # same point
     different = 0
     for i in range(len(distances) - 1):
         if abs(distances[i] - distances[i + 1]) > 0.000001:
@@ -58,6 +63,7 @@ def dist(a, b):
     return (a[0] - b[0]) * (a[0] - b[0]) + (a[1] - b[1]) * (a[1] - b[1])
 
 
-if sys.hexversion == 50594544: sys.stdin = open("test.txt")
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 # print(rot(rot(rot(rot([-11, -22, 2, 3])))))
 solve()

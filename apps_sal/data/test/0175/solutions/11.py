@@ -5,5 +5,6 @@ while(a > 0 and b > 0):
         a %= 2 * b
     elif b >= 2 * a:
         b %= 2 * a
-    else: break
+    else:
+        break
 print(a, b)

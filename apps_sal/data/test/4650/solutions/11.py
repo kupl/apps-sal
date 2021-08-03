@@ -12,6 +12,7 @@ for _ in range(q):
             a2 += 1
     w1 = a0 + min(a1, a2)
     w2 = min(a1, a2)
-    a1 -= w2; a2 -= w2
+    a1 -= w2
+    a2 -= w2
     w1 += a1 // 3 + a2 // 3
     print(w1)
