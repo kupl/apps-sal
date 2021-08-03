@@ -1,4 +1,5 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
 
 n, k = f()
 d = n - k

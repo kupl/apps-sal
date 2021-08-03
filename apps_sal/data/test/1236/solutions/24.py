@@ -13,14 +13,14 @@ if (n == m):
 elif ((n - m) & 1):
     if (m & 1):
         if ((n - m) // 2 >= x):
-            print("Daenerys");
+            print("Daenerys")
         else:
-            print("Stannis");
+            print("Stannis")
     else:
         if ((n - m) // 2 >= x or (n - m) // 2 >= (n - x)):
             print("Daenerys")
         else:
-            print("Stannis");
+            print("Stannis")
 else:
     if (m & 1):
         if ((n - m) // 2 >= (n - x)):

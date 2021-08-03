@@ -32,12 +32,17 @@ def can_mutate(start, finish):
     from_bc, from_a = start
     to_bc, to_a = finish
 
-    if (from_bc & 1) != (to_bc & 1): return False
-    if from_bc > to_bc: return False
-    if from_a < to_a: return False
+    if (from_bc & 1) != (to_bc & 1):
+        return False
+    if from_bc > to_bc:
+        return False
+    if from_a < to_a:
+        return False
 
-    if from_bc == to_bc: return (from_a - to_a) % 3 == 0
-    if from_a == to_a: return from_bc != 0
+    if from_bc == to_bc:
+        return (from_a - to_a) % 3 == 0
+    if from_a == to_a:
+        return from_bc != 0
 
     # from_bc < to_bc
     # from_a > to_a

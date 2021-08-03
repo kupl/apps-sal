@@ -6,7 +6,8 @@ def solve():
     a = list(map(int, input().split()))
     odds = sum([x % 2 for x in a])
     evens = n - odds
-    if n == k: return "Daenerys" if odds % 2 == 0 else "Stannis"
+    if n == k:
+        return "Daenerys" if odds % 2 == 0 else "Stannis"
     moves = n - k
     if moves % 2 == 0:  # equal number of moves and Daenerys moves last, stannis wants to destory all evens and have parity be good
         eachmove = moves // 2
@@ -22,5 +23,6 @@ def solve():
         return "Stannis"
 
 
-if sys.hexversion == 50594544: sys.stdin = open("test.txt")
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 print(solve())
