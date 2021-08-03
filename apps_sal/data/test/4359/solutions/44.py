@@ -12,7 +12,8 @@ ans = float('inf')
 for i in range(5):
     tmp = 0
     for j in range(5):
-        if j == i: continue
+        if j == i:
+            continue
         tmp += jissai_menu[j]
     ans = min(ans, tmp + menu[i])
 

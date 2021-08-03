@@ -26,8 +26,10 @@ def main():
 
     for iq in range(q):
         ai, bi = list(map(int, sys.stdin.readline().split()))
-        if ai == 0: result = goodtemp[bi]
-        else: result = goodtemp[bi] - goodtemp[ai - 1]
+        if ai == 0:
+            result = goodtemp[bi]
+        else:
+            result = goodtemp[bi] - goodtemp[ai - 1]
         sys.stdout.write(str(result) + '\n')
 
 

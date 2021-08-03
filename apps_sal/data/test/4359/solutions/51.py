@@ -11,7 +11,8 @@ li.append(10 - int(c[-1]))
 li.append(10 - int(d[-1]))
 li.append(10 - int(e[-1]))
 
-while 10 in li: li.remove(10)
+while 10 in li:
+    li.remove(10)
 
 li.sort()
 n = len(li)

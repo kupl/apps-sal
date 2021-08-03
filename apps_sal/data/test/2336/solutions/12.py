@@ -20,7 +20,8 @@ for r in l:
     adds[r[0] - 1] += 1
     mins[r[1] - 1] += 1
 l2[0] = adds[0] - mins[0]
-if adds[0] >= k: l3[0] = 1
+if adds[0] >= k:
+    l3[0] = 1
 for i in range(1, 200000):
     l2[i] = l2[i - 1] + adds[i]
     if l2[i] >= k:

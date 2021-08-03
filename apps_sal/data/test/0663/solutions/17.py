@@ -7,5 +7,6 @@ k = d / r
 j = int(k)
 T = j * r
 T = T * T
-if T != D: j += 1
+if T != D:
+    j += 1
 print(j)

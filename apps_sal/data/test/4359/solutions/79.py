@@ -10,5 +10,6 @@ for i in range(0, 5):
 for i in range(0, 5):
     if i == marking:
         ans += int(list_dish[i])
-    else: ans += -(-int(list_dish[i]) // 10) * 10
+    else:
+        ans += -(-int(list_dish[i]) // 10) * 10
 print(ans)

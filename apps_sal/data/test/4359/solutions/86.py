@@ -16,7 +16,8 @@ for i in itertools.permutations(lst, 5):
             break
         if j % 10 != 0:
             cnt += 10 * (j // 10) + 10
-        else: cnt += j
+        else:
+            cnt += j
     ans = min(ans, cnt)
 
 print(ans)

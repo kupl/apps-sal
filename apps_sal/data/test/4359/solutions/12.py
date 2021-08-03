@@ -7,13 +7,17 @@ else:
     ans = 0
     B = []
     for i in range(N):
-        if A[i] % 10 == 0: ans += A[i]
-        else: B.append(A[i])
+        if A[i] % 10 == 0:
+            ans += A[i]
+        else:
+            B.append(A[i])
 
     C = [k % 10 for k in B]
     m = C.index(min(C))
     for i in range(len(B)):
-        if i == m: ans += B[i]
-        else: ans += (B[i] // 10 + 1) * 10
+        if i == m:
+            ans += B[i]
+        else:
+            ans += (B[i] // 10 + 1) * 10
 
 print(ans)
