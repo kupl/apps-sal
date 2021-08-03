@@ -9,7 +9,8 @@ def main():
         dp[i][i] = 0
     for s in readlines():
         a, b, c = list(map(int, s.split()))
-        a -= 1; b -= 1
+        a -= 1
+        b -= 1
         edge.append((a, b, c))
         dp[a][b] = c
         dp[b][a] = c

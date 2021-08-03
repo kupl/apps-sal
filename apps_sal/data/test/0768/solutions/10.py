@@ -1,4 +1,4 @@
-F, I, T = input().split();
+F, I, T = input().split()
 
 F = int(F)
 I = int(I)

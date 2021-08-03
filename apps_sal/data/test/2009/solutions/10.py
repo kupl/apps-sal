@@ -15,7 +15,8 @@ def bfs(start, mark):
 
     while len(q):
         r, c = q.popleft()
-        if visited[r][c]: continue
+        if visited[r][c]:
+            continue
         visited[r][c] = mark
 
         dirs = [(t[0] + r, t[1] + c) for t in [(0, 1), (1, 0), (-1, 0), (0, -1)] if t[0] + r < n and t[0] + r >= 0 and t[1] + c < n and t[1] + c >= 0]

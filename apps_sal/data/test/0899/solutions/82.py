@@ -38,6 +38,8 @@ ans = 0
 for a, s, c in l:
     f = 1
     for y in range(1, n + 1):
-        if d[y][s] == d[y][a] + c: f = 0; break
+        if d[y][s] == d[y][a] + c:
+            f = 0
+            break
     ans += f
 print(ans)

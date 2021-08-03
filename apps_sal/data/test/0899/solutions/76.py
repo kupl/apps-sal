@@ -22,6 +22,8 @@ for k in range(n):
 cnt = 0
 for i in range(n):
     for j in range(n):
-        if d[i][j] == INF: continue
-        if nd[i][j] < d[i][j]: cnt += 1
+        if d[i][j] == INF:
+            continue
+        if nd[i][j] < d[i][j]:
+            cnt += 1
 print(cnt // 2)

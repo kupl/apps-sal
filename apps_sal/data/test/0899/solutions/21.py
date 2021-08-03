@@ -11,7 +11,8 @@ def dijkstra(s):
     while queue:
         minedge = heapq.heappop(queue)
         # miraiがTrueのやつ(未確定なやつ)から最小距離のものをさがす
-        if not mirai[minedge % (10**6)]: continue
+        if not mirai[minedge % (10**6)]:
+            continue
         # 距離が小さいものから"確定"していく
         v = minedge % (10**6)  # 最小距離の頂点
         dist[v] = minedge // (10**6)  # その距離
@@ -29,7 +30,8 @@ G = [[] for i in range(n)]
 HEN = []
 for i in range(m):
     a, b, c = list(map(int, input().split()))
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     G[a].append((c, b))
     G[b].append((c, a))
     HEN.append((a, b, c))

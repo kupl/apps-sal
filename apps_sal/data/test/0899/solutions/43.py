@@ -41,7 +41,8 @@ shortest_edges = set()
 for i in range(1, N + 1):
     d, prev = dijkstra(G, i)
     for j in range(1, N + 1):
-        if j == i: continue
+        if j == i:
+            continue
         a, b = sorted([j, prev[j]])
         shortest_edges.add((a, b))
 

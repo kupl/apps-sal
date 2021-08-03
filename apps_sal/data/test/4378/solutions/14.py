@@ -7,7 +7,8 @@ def div_process(s, c):
 
 li = 0
 ct = 0
-input(); i_s = input()
+input()
+i_s = input()
 sp_l = []
 for i in range(1, len(i_s)):
     if not i_s[i] == i_s[i - 1]:

@@ -7,9 +7,12 @@ R, G, B = 1, 2, 3
 sss = "0RGB"
 
 dp[0][R] = dp[0][G] = dp[0][B] = 1
-if s[0] == "R": dp[0][R] = 0
-if s[0] == "G": dp[0][G] = 0
-if s[0] == "B": dp[0][B] = 0
+if s[0] == "R":
+    dp[0][R] = 0
+if s[0] == "G":
+    dp[0][G] = 0
+if s[0] == "B":
+    dp[0][B] = 0
 
 for i in range(1, lens):
     dp[i][R] = min(dp[i - 1][G], dp[i - 1][B]) + 1
@@ -30,9 +33,12 @@ for i in range(1, lens):
     else:
         parent[i][B] = R
 
-    if s[i] == "R": dp[i][R] -= 1
-    elif s[i] == "G": dp[i][G] -= 1
-    elif s[i] == "B": dp[i][B] -= 1
+    if s[i] == "R":
+        dp[i][R] -= 1
+    elif s[i] == "G":
+        dp[i][G] -= 1
+    elif s[i] == "B":
+        dp[i][B] -= 1
 
 ans = min(dp[lens - 1][R], dp[lens - 1][G], dp[lens - 1][B])
 print(min(dp[lens - 1][R], dp[lens - 1][G], dp[lens - 1][B]))

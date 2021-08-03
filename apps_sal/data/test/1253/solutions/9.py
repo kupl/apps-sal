@@ -12,11 +12,13 @@ while k > 0 and i < n:
         a[i] = -a[i]
         i += 1
         k -= 1
-    else: break
+    else:
+        break
 
 
 if k > 0:
     a = sorted(a)
-    if k % 2 != 0: a[0] = -a[0]
+    if k % 2 != 0:
+        a[0] = -a[0]
 
 print(sum(a))

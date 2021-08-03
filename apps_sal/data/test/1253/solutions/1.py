@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 k = kk = rd()[1]
 a = rd()
 k -= sum(x < 0 for x in a)

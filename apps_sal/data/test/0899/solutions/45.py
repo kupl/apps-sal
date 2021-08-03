@@ -15,7 +15,8 @@ def main():
         to[b][a] = c
         edges.append((a, b, c))
 
-    for i in range(N): to[i][i] = 0
+    for i in range(N):
+        to[i][i] = 0
 
     def floyd_warshall():
         for k in range(N):

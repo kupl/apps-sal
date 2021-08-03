@@ -55,8 +55,10 @@ for i in range(1, N):
     if zs[i] == zs[i - 1]:
         r += 1
         for x in g:
-            if x == zs[i - 1]: continue
-            if i < N - 1 and x == zs[i + 1]: continue
+            if x == zs[i - 1]:
+                continue
+            if i < N - 1 and x == zs[i + 1]:
+                continue
             zs[i] = x
             break
 print(r)

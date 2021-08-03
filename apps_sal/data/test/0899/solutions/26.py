@@ -6,7 +6,8 @@ edge_idx = {}
 graph = [[] for i in range(N)]
 for i in range(M):
     a, b, c = map(int, input().split())
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     graph[a].append((b, c))
     graph[b].append((a, c))
     edge_idx[(a, b)] = edge_idx[(b, a)] = i

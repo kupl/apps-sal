@@ -3,7 +3,9 @@ import numpy as np
 
 
 N, M = map(int, input().split())
-f = lambda x: (int(x[0]) - 1, int(x[1]) - 1, int(x[2]))
+def f(x): return (int(x[0]) - 1, int(x[1]) - 1, int(x[2]))
+
+
 edges = list(f(input().split()) for _ in range(M))
 
 g = np.zeros((N, N), dtype=float)

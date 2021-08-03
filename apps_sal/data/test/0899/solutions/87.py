@@ -23,6 +23,8 @@ ans = M
 for i in range(M):
     flag = False
     for j in range(N):
-        if dist[j][a[i]] + c[i] == dist[j][b[i]]: flag = True
-    if flag: ans -= 1
+        if dist[j][a[i]] + c[i] == dist[j][b[i]]:
+            flag = True
+    if flag:
+        ans -= 1
 print(ans)

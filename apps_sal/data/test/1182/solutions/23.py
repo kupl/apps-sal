@@ -9,8 +9,9 @@ def calc(a, b, c, d):
     s = 0
     for x in range(a, c + 1):
         for y in range(b, d + 1):
-            s += V[x][y];
-            if s >= n: return s
+            s += V[x][y]
+            if s >= n:
+                return s
     return s
 
 

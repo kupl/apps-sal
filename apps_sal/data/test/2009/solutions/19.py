@@ -9,23 +9,29 @@ adj = [list(map(int, input().rstrip()))for _ in range(n)]
 
 dx = [0, 0, -1, 1]
 dy = dx[::-1]
-valid = lambda x, y: 0 <= x < n and 0 <= y < n
+def valid(x, y): return 0 <= x < n and 0 <= y < n
+
+
 visit = [[False] * 51 for _ in range(51)]
 
 
 def dfs(x, y, ans):
-    if visit[x][y]: return
+    if visit[x][y]:
+        return
     visit[x][y] = True
     ans.append((x, y))
     for i in range(4):
         nx = x + dx[i]
         ny = y + dy[i]
-        if not valid(nx, ny): continue
-        if adj[nx][ny]: continue
+        if not valid(nx, ny):
+            continue
+        if adj[nx][ny]:
+            continue
         dfs(nx, ny, ans)
 
 
-start = []; end = []
+start = []
+end = []
 dfs(x - 1, y - 1, start)
 if (r - 1, c - 1) in start:
     print(0)

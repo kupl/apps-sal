@@ -19,4 +19,4 @@ def solve():
     print(ans)
 
 
-solve();
+solve()

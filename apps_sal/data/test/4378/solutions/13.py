@@ -6,9 +6,12 @@ for i in range(1, n):
     if g[i] == g[i - 1]:
         cost += 1
         if i == n - 1 or g[i] == g[i + 1]:
-            if g[i] == 'R': g[i] = 'G'
-            elif g[i] == 'G': g[i] = 'B'
-            else: g[i] = 'R'
+            if g[i] == 'R':
+                g[i] = 'G'
+            elif g[i] == 'G':
+                g[i] = 'B'
+            else:
+                g[i] = 'R'
         else:
             if g[i] == 'R' and g[i + 1] == 'G':
                 g[i] = 'B'

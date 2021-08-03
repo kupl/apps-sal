@@ -2,9 +2,9 @@
 
 kitten = input("")
 a = (kitten.split())
-n = int(a[0]);
-m = int(a[1]);
-k = int(a[2]);
+n = int(a[0])
+m = int(a[1])
+k = int(a[2])
 
 ans = 0
 

@@ -7,7 +7,8 @@ while b > 0 and ptr < a:
         x[ptr] = -x[ptr]
         ptr += 1
         b -= 1
-    else: break
+    else:
+        break
 
 x.sort()
 if b > 0:

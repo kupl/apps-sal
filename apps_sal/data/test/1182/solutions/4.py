@@ -11,7 +11,9 @@ for br in range(r):
                 counter = 0
                 for i in range(br, er + 1):
                     for j in range(bc, ec + 1):
-                        if s[i][j] == 1: counter += 1
-                if counter >= k: res += 1
+                        if s[i][j] == 1:
+                            counter += 1
+                if counter >= k:
+                    res += 1
 
 print(res)

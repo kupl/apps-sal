@@ -13,5 +13,6 @@ for k in range(n):
             e[i][j] = min(e[i][j], e[i][k] + e[k][j])
 ans = 0
 for i, j, k in d:
-    if e[i][j] != k: ans += 1
+    if e[i][j] != k:
+        ans += 1
 print(ans)

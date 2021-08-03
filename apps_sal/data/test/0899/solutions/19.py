@@ -15,9 +15,11 @@ def dks(t0):
     seen = [0] * n
     while todo:
         d, t, i = heappop(todo)
-        if seen[t] and seen[t] < d: continue
+        if seen[t] and seen[t] < d:
+            continue
         seen[t] = d
-        if i > -1: no_used[i] = 0
+        if i > -1:
+            no_used[i] = 0
         l = g[t]
         for d_, t_, i_ in l:
             heappush(todo, [d + d_, t_, i_])
