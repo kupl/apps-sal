@@ -2,7 +2,9 @@ from math import gcd
 from functools import reduce
 import heapq
 
+
 def gcd2(xs): return reduce(gcd, xs, xs[0])
+
 
 def gen(xs):
     seen = set()
@@ -18,14 +20,17 @@ def gen(xs):
 
 
 def survivor(xs):
-    if 1 in xs: return 0
-    if not xs or gcd2(xs) > 1: return -1
+    if 1 in xs:
+        return 0
+    if not xs or gcd2(xs) > 1:
+        return -1
     i, cnt, m = 0, 1, min(xs)
     g = gen(xs)
     for x in g:
-        if x != i + cnt: cnt, i = 1, x
-        else: cnt += 1
-        if cnt >= m: break
+        if x != i + cnt:
+            cnt, i = 1, x
+        else:
+            cnt += 1
+        if cnt >= m:
+            break
     return i - 1
-
-

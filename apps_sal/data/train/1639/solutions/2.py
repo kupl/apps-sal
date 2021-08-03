@@ -4,10 +4,9 @@ def gta(limit, *args):
         a = list(str(i))
         a.reverse()
         ns.append(a)
-        
-        
-    base_list=[]
-    while ns and len(base_list)<limit:
+
+    base_list = []
+    while ns and len(base_list) < limit:
         n = ns.pop(0)
         if n:
             b = int(n.pop())
@@ -15,15 +14,12 @@ def gta(limit, *args):
                 base_list.append(b)
             if n:
                 ns.append(n)
-                
-                
+
     base = sum(base_list)
     times = 0
-    for i in range(1,1+limit):
+    for i in range(1, 1 + limit):
         t = i
-        for j in range(i-1):
+        for j in range(i - 1):
             t *= limit - j - 1
         times += t
-    return base*times
-
-
+    return base * times

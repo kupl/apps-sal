@@ -1,5 +1,5 @@
 def snail(array):
-    next_dir = {"right": "down", "down":"left", "left":"up", "up":"right"}
+    next_dir = {"right": "down", "down": "left", "left": "up", "up": "right"}
     dir = "right"
     snail = []
     while array:
@@ -10,6 +10,6 @@ def snail(array):
         elif dir == "left":
             snail.extend(list(reversed(array.pop(-1))))
         elif dir == "up":
-            snail.extend([x.pop(0) for x in reversed(array)])    
+            snail.extend([x.pop(0) for x in reversed(array)])
         dir = next_dir[dir]
-    return snail        
+    return snail

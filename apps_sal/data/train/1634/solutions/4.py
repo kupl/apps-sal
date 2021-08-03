@@ -1,11 +1,12 @@
 from math import factorial
 
+
 def num_multicombinations(n, k):
     """
     Calculates number of muticombinations of size k from a set of
     size n.
     """
-    return factorial(n+k-1)/factorial(k)/factorial(n-1)
+    return factorial(n + k - 1) / factorial(k) / factorial(n - 1)
 
 
 def num_increasing(x):
@@ -18,7 +19,8 @@ def num_increasing(x):
     This is equivalent to the number of multicombinations of size 8
     from a set of size x + 1.
     """
-    return num_multicombinations(x+1, 8)
+    return num_multicombinations(x + 1, 8)
+
 
 def num_decreasing(x):
     """
@@ -27,8 +29,9 @@ def num_decreasing(x):
     into x+1 positions. We need to subtract 1 because 000...0000 is
     not an x-digit number.
     """
-    return num_multicombinations(x+1, 9) - 1
-    
+    return num_multicombinations(x + 1, 9) - 1
+
+
 def num_non_bouncy(x):
     """
     Returns the number of non-bouncy numbers with x digits
@@ -40,11 +43,12 @@ def num_non_bouncy(x):
 
 
 def total_inc_dec(x):
-    if x==0: return 1
-    return sum(num_non_bouncy(a) for a in range(1,x+1)) + 1
-        
+    if x == 0:
+        return 1
+    return sum(num_non_bouncy(a) for a in range(1, x + 1)) + 1
+
     #count = 0
-    #for i in xrange(10**x):
+    # for i in xrange(10**x):
     #    s = str(i)
     #    if len(s)==1:
     #        count += 1
@@ -57,7 +61,6 @@ def total_inc_dec(x):
     #            count += 1
     #        else:
     #            count += 2
-    #return count
-        
-    #your code here
+    # return count
 
+    # your code here

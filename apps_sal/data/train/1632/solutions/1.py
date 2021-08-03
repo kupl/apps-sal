@@ -37,13 +37,13 @@ def countOnes(left, right):
 
     if left_binary_digits == right_binary_digits:
         number_of_ones = calculate_ones_in_incomplete_block(left_binary_digits, left_position_in_block) \
-                         - calculate_ones_in_incomplete_block(right_binary_digits, right_position_in_block) \
-                         + right_binary_sum
+            - calculate_ones_in_incomplete_block(right_binary_digits, right_position_in_block) \
+            + right_binary_sum
     else:
         number_of_ones = calculate_ones_in_incomplete_block(left_binary_digits, left_position_in_block) \
-                         + calculate_multiple_blocks(left_binary_digits + 1, right_binary_digits - 1) \
-                         + calculate_ones_in_incomplete_block(right_binary_digits, right_position_in_block, True) \
-                         + right_binary_sum
+            + calculate_multiple_blocks(left_binary_digits + 1, right_binary_digits - 1) \
+            + calculate_ones_in_incomplete_block(right_binary_digits, right_position_in_block, True) \
+            + right_binary_sum
     return number_of_ones
 
 
@@ -69,10 +69,10 @@ def calculate_ones_in_incomplete_block(n_digits, position, front_part=False):
     - Second column contains of dwo parts: half column of zeroes and half column of ones.
         If we split next column in half, each part will follow above pattern.
         If we split next column into four pieces, each part will follow the same pattern from second column and so on.
-    
+
     We iterate through consecutive columns, moving 'middle_row' indicator as we split columns in smaller parts.
     As we calculating second part of block, we add all ones under our indicator (including one on indicator) and ommit ones above.
-    
+
     :param n_digits: number of digits in binary representation
     :param position: position of number in n_digits-block
     :param front_part: indicates whether we calculate normally ('second part' of block - from position to the end)

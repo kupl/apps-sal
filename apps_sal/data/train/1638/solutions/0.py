@@ -4,6 +4,7 @@
     first to occur.
 '''
 
+
 def longest_palindrome(s, sep=" "):
     # Interpolate some inert character between input characters
     # so we only have to find odd-length palindromes
@@ -14,14 +15,14 @@ def longest_palindrome(s, sep=" "):
     spans = []  # Length of the longest substring in T[i:] mirrored in T[i::-1]
 
     # Manacher's algorithm
-    for i,_ in enumerate(t):
-        span = min(spans[2*c-i], r-i-1) if i < r else 0
-        while span <= i < len(t)-span and t[i-span] == t[i+span]:
+    for i, _ in enumerate(t):
+        span = min(spans[2 * c - i], r - i - 1) if i < r else 0
+        while span <= i < len(t) - span and t[i - span] == t[i + span]:
             span += 1
-        r, c = max((r, c), (i+span, i))
+        r, c = max((r, c), (i + span, i))
         spans.append(span)
 
     span = max(spans)
     middle = spans.index(span)
 
-    return t[middle-span+1:middle+span].replace(sep, "") 
+    return t[middle - span + 1:middle + span].replace(sep, "")

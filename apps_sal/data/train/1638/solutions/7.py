@@ -63,8 +63,8 @@ def longest_palindrome(S):
             max_len = P[i]
             index = i
 
-    t_arr = T[ index - max_len: index + max_len + 1 ]
-    word_arr = [ c for c in t_arr if c != sen_char and c != start_sen and c != end_sen ]
+    t_arr = T[index - max_len: index + max_len + 1]
+    word_arr = [c for c in t_arr if c != sen_char and c != start_sen and c != end_sen]
     word = "".join(word_arr)
 
     return word

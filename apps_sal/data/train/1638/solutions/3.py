@@ -5,6 +5,7 @@
 '''
 import re
 
+
 def longest_palindrome(string):
     if len(string) < 2:
         return string
@@ -31,4 +32,3 @@ def longest_palindrome(string):
 
     r, c = max(LPS), LPS.index(max(LPS))
     return string[c - r: c + r].replace("|", "")
-

@@ -5,10 +5,12 @@
 '''
 
 # TODO: Complete in linear time xDD
+
+
 def longest_palindrome(s):
     if is_palindrome(s):
         return s
-        
+
     max_pal = ''
 
     for i in range(len(s)):
