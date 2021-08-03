@@ -2,10 +2,11 @@ def f(n):
     sod = 0
     for char in str(n):
         sod += int(char)
-    if n%sod == 0:
+    if n % sod == 0:
         return "Yes"
     else:
         return "No"
+
 
 t = int(input())
 answers = list()

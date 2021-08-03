@@ -1,31 +1,32 @@
 for __ in range(eval(input())):
     x = eval(input())
-    a = list(map(int,input().split()))
+    a = list(map(int, input().split()))
     key = eval(input())
     query = eval(input())
-    maxvisited = x #maximum visted value
-    j = x-1
+    maxvisited = x  # maximum visted value
+    j = x - 1
     ans = []
     val = 0
-    while j>=0:
-        if a[j]==key:
-            ans.append(val+1)
-            val = val +1
-        else: ans.append(val)
-        j-=1
+    while j >= 0:
+        if a[j] == key:
+            ans.append(val + 1)
+            val = val + 1
+        else:
+            ans.append(val)
+        j -= 1
     ans.reverse()
-    #print ans, len(ans)
-    
+    # print ans, len(ans)
+
     for ii in range(query):
         W = eval(input())
         print(ans[W], end=' ')
-        print(x-W, end=' ')
-        #print maxvisited, W
-        if maxvisited>W:
+        print(x - W, end=' ')
+        # print maxvisited, W
+        if maxvisited > W:
             if True:
-                tt  = 1
+                tt = 1
                 #if not ii: tt = 1
-                print(maxvisited-W+tt)
+                print(maxvisited - W + tt)
                 maxvisited = W
-        else: print('1')
-
+        else:
+            print('1')
