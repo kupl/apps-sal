@@ -1,5 +1,5 @@
 N, K = map(int, input().split())
-num = K;
+num = K
 
 if N != 1:
     for i in range(1, N):
