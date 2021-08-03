@@ -13,13 +13,13 @@ class Solution:
                 for i in range(len(cA)):
                     res += (cA[i] + cD[i])
         else:
-            if(abs(len(cA)-len(cD)) == 1):
+            if(abs(len(cA) - len(cD)) == 1):
                 if(len(cA) > len(cD)):
                     res = cA[0]
                     for i in range(len(cD)):
-                        res += (cD[i] + cA[i+1])
+                        res += (cD[i] + cA[i + 1])
                 else:
                     res = cD[0]
                     for i in range(len(cA)):
-                        res += (cA[i] + cD[i+1])   
+                        res += (cA[i] + cD[i + 1])
         return res
