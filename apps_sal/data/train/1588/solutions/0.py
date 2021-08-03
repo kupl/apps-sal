@@ -6,12 +6,14 @@ try:
         arr = []
         obj = {}
         for i in range(n):
-            x,y = input().split()
+            x, y = input().split()
             y = int(y)
             arr.append([x, y])
-            if y in obj: obj[y].append(x)
-            else: obj[y] = [x]
-        arr.sort(key = lambda i: i[1], reverse = True)
+            if y in obj:
+                obj[y].append(x)
+            else:
+                obj[y] = [x]
+        arr.sort(key=lambda i: i[1], reverse=True)
         while len(arr) and len(obj[arr[-1][1]]) > 1:
             arr.pop()
         if len(arr) == 0:

@@ -10,5 +10,5 @@ while T:
         if int(numbers[i]) % 2 == 0:
             A += (int(numbers[i]) * (i + 1))
             pos += (i + 1)
-    print(N, '%.2f'%(A/pos))
+    print(N, '%.2f' % (A / pos))
     T -= 1

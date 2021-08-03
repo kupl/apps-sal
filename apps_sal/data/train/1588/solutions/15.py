@@ -5,7 +5,7 @@ for _ in range(int(input())):
     goes = []
     for _ in range(n):
         z = input().split()
-        goes.append( (int(z[1]),z[0]) )
+        goes.append((int(z[1]), z[0]))
 
     goes.sort()
     res = 'Nobody wins.'
@@ -21,6 +21,5 @@ for _ in range(int(input())):
             win = True
             lastnm = nm
             last = val
-            
-    print(res)
 
+    print(res)

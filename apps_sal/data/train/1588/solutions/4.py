@@ -4,10 +4,10 @@ for _ in range(int(input())):
     a = []
     b = []
     for i in range(n):
-        name , score = map(str,input().split())
-        a.append([name,score])
+        name, score = map(str, input().split())
+        a.append([name, score])
         b.append(score)
-    a.sort(key = lambda x:x[1])
+    a.sort(key=lambda x: x[1])
     b.sort()
     i = 0
     while True:
@@ -20,5 +20,3 @@ for _ in range(int(input())):
             if i >= n:
                 print("Nobody wins.")
                 break
-        
-
