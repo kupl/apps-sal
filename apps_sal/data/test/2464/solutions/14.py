@@ -7,14 +7,16 @@ class UnionFindVerSize():
         self._size = [1] * N
 
     def find_root(self, x):
-        if self._parent[x] == x: return x
+        if self._parent[x] == x:
+            return x
         self._parent[x] = self.find_root(self._parent[x])
         return self._parent[x]
 
     def unite(self, x, y):
         gx = self.find_root(x)
         gy = self.find_root(y)
-        if gx == gy: return
+        if gx == gy:
+            return
 
         if self._size[gx] < self._size[gy]:
             self._parent[gx] = gy

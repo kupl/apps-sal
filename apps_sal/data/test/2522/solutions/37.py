@@ -1,7 +1,9 @@
 from sys import stdin
 from random import randint
 from time import time
-input = lambda: stdin.readline().rstrip()
+def input(): return stdin.readline().rstrip()
+
+
 start = time()
 n = int(input())
 a = list(map(int, input().split()))

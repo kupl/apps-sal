@@ -30,7 +30,8 @@ def solve():
 
     imoss = [0] * (2 * N + 1)
     for v in range(1, N + 1):
-        if stAs[v] == -1 or stBs[v] == -1: continue
+        if stAs[v] == -1 or stBs[v] == -1:
+            continue
         L = stAs[v] - enBs[v] + N
         R = enAs[v] - stBs[v] + N
         imoss[L] += 1

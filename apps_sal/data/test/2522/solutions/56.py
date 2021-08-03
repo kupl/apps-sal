@@ -38,7 +38,8 @@ def solve():
         for i in range(j, N):
             b = B[i]
             j = i + 1
-            if i == idx: continue
+            if i == idx:
+                continue
             if b != x and x != A[i]:
                 B[i], B[idx] = B[idx], B[i]
                 break

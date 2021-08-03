@@ -19,7 +19,8 @@ class UnionFind:
                 self.par[par_x] = par_y
 
     def find_par(self, x):
-        if self.par[x] == x: return x
+        if self.par[x] == x:
+            return x
         self.par[x] = self.find_par(self.par[x])
         return self.par[x]
 

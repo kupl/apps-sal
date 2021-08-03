@@ -1,7 +1,8 @@
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(2 * 10**5)
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
 
 n, = I()
 r = [[1 for i in range(n)], [1 for i in range(n)]]
