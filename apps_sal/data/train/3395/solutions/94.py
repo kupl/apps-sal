@@ -5,4 +5,3 @@ def remove_duplicate_words(s):
             continue
         S.append(word)
     return ' '.join(S)
-

@@ -1,5 +1,6 @@
 from math import floor, sqrt, pow
 
+
 def sum_squared_factors(n):
     s, res, i = 0, [], 1
     while (i <= floor(sqrt(n))):
@@ -15,14 +16,13 @@ def sum_squared_factors(n):
         return res
     else:
         return None
-        
+
+
 def list_squared(m, n):
     res, i = [], m
     while (i <= n):
         r = sum_squared_factors(i)
         if (r != None):
-            res.append(r);
+            res.append(r)
         i += 1
     return res
-    
-

@@ -3,10 +3,11 @@ from functools import reduce
 
 CACHE = {}
 
+
 def get_divisors_gen(number):
     if number in CACHE:
         return CACHE[number]
-    
+
     divisors = []
     for i in range(1, int(number / 2) + 1):
         if number % i == 0:
@@ -14,13 +15,13 @@ def get_divisors_gen(number):
     divisors.append(number)
 
     CACHE[number] = divisors
-    
+
     return divisors
-    
+
 
 def list_squared(m, n):
     result = []
-    for number in range(m, n+1):
+    for number in range(m, n + 1):
         div_sq_sum = reduce(
             lambda acc, item: acc + item**2,
             get_divisors_gen(number)

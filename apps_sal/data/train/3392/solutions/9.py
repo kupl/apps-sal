@@ -25,4 +25,3 @@ def get_sierpinski(n):
 
 def sierpinski(n):
     return '\n'.join(get_sierpinski(n))
-

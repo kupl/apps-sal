@@ -1,7 +1,9 @@
 from math import ceil, sqrt
 
+
 def squared(l):
     return [x**2 for x in l]
+
 
 def divisors(m):
     s = sqrt(m)
@@ -12,9 +14,10 @@ def divisors(m):
         aux.append(k)
     return aux
 
+
 def is_square(m):
-    return ceil(sqrt(m))==sqrt(m)
+    return ceil(sqrt(m)) == sqrt(m)
+
 
 def list_squared(m, n):
     return [[k, s] for (k, s) in [(k, sum(squared(divisors(k)))) for k in range(m, n + 1)] if is_square(s)]
-

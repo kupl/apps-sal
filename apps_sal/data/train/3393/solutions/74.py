@@ -1,4 +1,6 @@
 import math
+
+
 def div(n):
     i = 1
     l = []
@@ -17,6 +19,8 @@ def div(n):
     if math.sqrt(sum(m)).is_integer():
         return [n, sum(m)]
     pass
+
+
 def list_squared(m, n):
     b = []
     for j in range(m, n):

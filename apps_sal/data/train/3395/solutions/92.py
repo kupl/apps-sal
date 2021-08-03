@@ -4,5 +4,5 @@ def remove_duplicate_words(s):
     for i in k:
         if i not in res:
             res += i + " "
-            
+
     return res.rstrip()

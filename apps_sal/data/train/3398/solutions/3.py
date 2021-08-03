@@ -1,1 +1,1 @@
-solve=lambda a,d=(-1,0,1):min((sum(l)for l in([abs(a[0]+u+q*n-x)for n,x in enumerate(a)]for u in d for q,r in(divmod(a[-1]+v-a[0]-u,len(a)-1)for v in d)if r<1)if all(x in d for x in l)),default=-1)
+solve = lambda a, d=(-1, 0, 1): min((sum(l)for l in ([abs(a[0] + u + q * n - x)for n, x in enumerate(a)]for u in d for q, r in (divmod(a[-1] + v - a[0] - u, len(a) - 1)for v in d)if r < 1)if all(x in d for x in l)), default=-1)

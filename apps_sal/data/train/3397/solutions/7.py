@@ -3,13 +3,13 @@ def grille(message, code):
     print(str(bin(code)[2:]))
     i = 0
     decoded = ""
-    if( len(binary) > len(message) ):
-        while ( i < len(message) ):
-            if ( binary[i + (len(binary) - len(message))] == '1' ):
+    if(len(binary) > len(message)):
+        while (i < len(message)):
+            if (binary[i + (len(binary) - len(message))] == '1'):
                 decoded += message[i]
             i += 1
-    while ( i < len(message) ):
-        if ( binary[i] == '1' ):
+    while (i < len(message)):
+        if (binary[i] == '1'):
             decoded += message[i]
         i += 1
     return decoded

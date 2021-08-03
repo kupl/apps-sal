@@ -1,6 +1,6 @@
 def remove_duplicate_words(x):
-    a=''
+    a = ''
     for i in x.split():
         if i not in a:
-            a+=i +' '
+            a += i + ' '
     return a[:-1]
