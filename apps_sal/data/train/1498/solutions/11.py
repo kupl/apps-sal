@@ -2,6 +2,7 @@ from math import sqrt
 
 INF = float('inf')
 
+
 def divs(n):
     d = []
 
@@ -13,6 +14,7 @@ def divs(n):
                 d.append(n // i)
 
     return d
+
 
 for _ in range(int(input())):
     h, x, y = map(int, input().split())

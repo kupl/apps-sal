@@ -19,4 +19,3 @@ for _ in range(int(input())):
         level += 1
         ind %= MOD
     print(ind)
-
