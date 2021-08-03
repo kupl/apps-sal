@@ -1,7 +1,7 @@
 class Hero(object):
     def __init__(self, name=None):
         self.name = name
-        if self.name==None:
+        if self.name == None:
             self.name = 'Hero'
         self.position = '00'
         self.health = 100

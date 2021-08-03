@@ -5,7 +5,7 @@ def search_k_from_end(linked_list, k):
     fast_index = 0
     slow = linked_list.head
     node = linked_list.head
-    
+
     while fast_index < k:
         if node:
             node = node.next
@@ -16,5 +16,5 @@ def search_k_from_end(linked_list, k):
     while node:
         node = node.next
         slow = slow.next
-        
+
     return slow.data

@@ -14,8 +14,3 @@ def search_k_from_end(linked_list, k):
         count -= 1
         head = head.__next__
     return head.data
-        
-        
-    
-        
-

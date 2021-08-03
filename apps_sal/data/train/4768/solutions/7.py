@@ -16,10 +16,9 @@ class User(object):
             raise ValueError
         other.balance -= amount
         self.balance += amount
-        return ( "{} has {} and {} has {}."
-               .format(self.name, self.balance, other.name, other.balance) )
+        return ("{} has {} and {} has {}."
+                .format(self.name, self.balance, other.name, other.balance))
 
     def add_cash(self, amount):
         self.balance += amount
         return "{} has {}.".format(self.name, self.balance)
-

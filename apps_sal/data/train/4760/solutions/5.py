@@ -3,9 +3,10 @@ class T:
         self.value = value
         self.left = left
         self.right = right
-        
+
+
 def is_bst(node):
-    to_arr = lambda t: to_arr(t.left) + [t.value] + to_arr(t.right) if t else []
+    def to_arr(t): return to_arr(t.left) + [t.value] + to_arr(t.right) if t else []
     arr = to_arr(node)
     s = sorted(arr)
     return s == arr or s == arr[::-1]

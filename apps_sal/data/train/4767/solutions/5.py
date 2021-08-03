@@ -1,5 +1,6 @@
 from operator import gt, lt
 
+
 def longest_comb(arr, command):
     cond = lt if command in ('< <', '<<') else gt
     lst = [[]]

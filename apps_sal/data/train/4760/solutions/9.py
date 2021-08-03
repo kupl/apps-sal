@@ -51,8 +51,7 @@ def validate(root, left_tree_compare, right_tree_compare):
 
     return (left_tree_compare(root.value,
                               comparator_mapper[left_tree_compare](root.left)) if root.left is not None else True) and (
-               right_tree_compare(root.value, comparator_mapper[right_tree_compare](
-                   root.right)) if root.right is not None else True) and validate(
+        right_tree_compare(root.value, comparator_mapper[right_tree_compare](
+            root.right)) if root.right is not None else True) and validate(
         root.left, left_tree_compare, right_tree_compare) and validate(root.right, left_tree_compare,
                                                                        right_tree_compare)
-

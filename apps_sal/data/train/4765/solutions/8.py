@@ -5,4 +5,3 @@ class Hero(object):
         self.health = 100
         self.name = name
         self.position = '00'
-

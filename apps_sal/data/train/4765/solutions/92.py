@@ -3,5 +3,6 @@ class Hero(object):
     health = 100
     damage = 5
     experience = 0
-    def __init__(self,name="Hero"):
+
+    def __init__(self, name="Hero"):
         self.name = name
