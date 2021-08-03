@@ -1,4 +1,6 @@
 import math
+
+
 def movie(card, ticket, perc):
     n = 0
     a_price = 0
@@ -10,5 +12,3 @@ def movie(card, ticket, perc):
         perc_multiplier *= perc
         n += 1
     return n
-        
-

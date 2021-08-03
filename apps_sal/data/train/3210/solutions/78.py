@@ -12,7 +12,7 @@ def get_strings(city):
                 else:
                     emptystr += letter + ':' + str(num * '*') + ','
         else:
-            pass        
+            pass
     if emptystr[-1] == ',':
         return emptystr[:-1]
     else:

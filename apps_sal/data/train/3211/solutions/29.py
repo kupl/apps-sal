@@ -5,4 +5,3 @@ def divide(weight):
         else:
             return False
     return False
-

@@ -1,4 +1,6 @@
-import math 
+import math
+
+
 def movie(card, ticket, perc):
     n = 0
     c = 0

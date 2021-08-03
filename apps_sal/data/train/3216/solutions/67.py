@@ -1,5 +1,6 @@
 import math
 
+
 def movie(card, ticket, perc):
     PriceA = 0
     PriceB = card

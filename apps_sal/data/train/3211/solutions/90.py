@@ -1,5 +1,5 @@
 def divide(weight):
-    while 1 <= weight <=100:
+    while 1 <= weight <= 100:
         if weight == 2:
             return False
         if weight % 2 == 0:

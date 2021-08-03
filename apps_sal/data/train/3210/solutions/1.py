@@ -7,4 +7,3 @@ def get_strings(city):
         for char, count in list(Counter(city.replace(" ", "").lower()).items())
         if char.isalpha()
     )
-

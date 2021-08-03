@@ -5,10 +5,9 @@ def get_strings(city):
         if letter not in myMap:
             myMap[letter] = 1
         else:
-            myMap[letter] = myMap.get(letter)+1
+            myMap[letter] = myMap.get(letter) + 1
 
     myMap.pop(' ', None)
-
 
     result = ''
     for item in myMap:
@@ -16,6 +15,5 @@ def get_strings(city):
         for i in range(myMap.get(item)):
             result += '*'
         result += ','
-
 
     return result[:-1]

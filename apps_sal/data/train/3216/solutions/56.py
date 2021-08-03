@@ -1,4 +1,6 @@
 import math
+
+
 def movie(card, ticket, perc):
     n = 0
     A = 0.0

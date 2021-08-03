@@ -7,4 +7,3 @@ def change(st):
         else:
             new += "0"
     return new
-

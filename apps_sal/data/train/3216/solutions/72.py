@@ -1,5 +1,6 @@
 import math
 
+
 def movie(card, ticket, perc):
     a, tc = 0, 0
     tc2 = ticket

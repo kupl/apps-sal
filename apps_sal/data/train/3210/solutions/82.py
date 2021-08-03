@@ -9,7 +9,7 @@ def get_strings(city):
     out = ''
     count = 1
     for x in dict:
-        out += x + ':' + dict[x]*'*'
+        out += x + ':' + dict[x] * '*'
         if count != len(dict):
             out += ','
         count += 1

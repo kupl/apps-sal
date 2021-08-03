@@ -3,7 +3,8 @@ def get_strings(city):
     alpha = 'abcdefghijklmnopqrstuvwxyz'
     city_dict = {}
     for char in city:
-        if char not in alpha: continue
+        if char not in alpha:
+            continue
         if char in city_dict:
             city_dict[char] += '*'
             continue
@@ -12,4 +13,3 @@ def get_strings(city):
     for k in city_dict:
         output += f'{k}:{city_dict[k]},'
     return output[0:-1]
-

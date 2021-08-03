@@ -5,5 +5,3 @@ def get_strings(city):
         if i + ':' + '*' * n not in string and i.isalpha():
             string.append(i + ':' + '*' * n)
     return ",".join(string)
-
-

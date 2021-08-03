@@ -15,6 +15,6 @@ def get_strings(city):
             formatRes += newCity[i]
             i += 1
     while k < len(formatRes):
-        string = string + formatRes[k]+":"+ main[formatRes[k]]+","
-        k+=1
+        string = string + formatRes[k] + ":" + main[formatRes[k]] + ","
+        k += 1
     return string[:-1]

@@ -5,9 +5,11 @@ def get_strings(city):
         if city.count(i) > 1:
             mas.append(i)
             l.append(city.count(i))
-            for j in range(city.count(i) - 1): city = city[:city.rindex(i)] + city[city.rindex(i) + 1:]
+            for j in range(city.count(i) - 1):
+                city = city[:city.rindex(i)] + city[city.rindex(i) + 1:]
     for i in city:
-        if i in mas: m += i + ":" + "*" * l[mas.index(i)] + ","
-        elif i != " ": m += i + ":*" + ","
-    return m[:len(m)-1]
-
+        if i in mas:
+            m += i + ":" + "*" * l[mas.index(i)] + ","
+        elif i != " ":
+            m += i + ":*" + ","
+    return m[:len(m) - 1]

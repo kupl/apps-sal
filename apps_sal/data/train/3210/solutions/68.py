@@ -6,7 +6,7 @@ def get_strings(city):
     r = ''
     while len(city):
         w = city[0]
-        r += str(w)+":"+ '*'*int(city.count(w))+ ','
+        r += str(w) + ":" + '*' * int(city.count(w)) + ','
         for _ in range(city.count(w)):
             city.remove(w)
     return r[:-1]

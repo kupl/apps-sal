@@ -11,7 +11,7 @@ def get_strings(city):
     for item in con.keys():
         if first == True:
             first = False
-            result+= item + ":" + con.get(item)
+            result += item + ":" + con.get(item)
         else:
-            result+= "," + item + ":" + con.get(item)
+            result += "," + item + ":" + con.get(item)
     return result

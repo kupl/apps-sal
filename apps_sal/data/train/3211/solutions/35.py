@@ -1,9 +1,8 @@
 def divide(weight):
-#     return True if weight%2 ==0 else False
-    if weight==2:
+    #     return True if weight%2 ==0 else False
+    if weight == 2:
         return False
-    elif weight%2 ==0:
+    elif weight % 2 == 0:
         return True
     else:
         return False
-
