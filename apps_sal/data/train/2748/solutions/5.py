@@ -10,4 +10,3 @@ def namelist(names):
             return l[0]
         else:
             return str.join(l[:-1]) + ' & ' + l[-1]
-

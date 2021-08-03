@@ -1,6 +1,6 @@
 def wheat_from_chaff(values):
     values = values[:]
-    i, j = 0, len(values)-1
+    i, j = 0, len(values) - 1
     while i < j:
         while values[i] < 0:
             i += 1

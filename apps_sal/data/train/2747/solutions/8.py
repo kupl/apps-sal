@@ -1,5 +1,6 @@
 from itertools import combinations
 
+
 def count_rect_triang(points):
     ans = 0
     for c in combinations(set(map(tuple, points)), 3):

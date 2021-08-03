@@ -6,4 +6,3 @@ def russian_peasant_multiplication(x, y):
         x += x
         y //= 2
     return pro
-

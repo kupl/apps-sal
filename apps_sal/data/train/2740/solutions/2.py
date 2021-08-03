@@ -13,4 +13,3 @@ def wheat_from_chaff(values: List[int]) -> List[int]:
             values[i], values[latest_neg] = values[latest_neg], values[i]
         i += 1
     return values
-

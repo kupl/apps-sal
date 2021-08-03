@@ -1,5 +1,5 @@
 def wheat_from_chaff(values):
-    last_index=len(values)-1
+    last_index = len(values) - 1
     for i in range(0, len(values)):
         if values[i] > 0:
             negative_index = None
@@ -16,8 +16,4 @@ def wheat_from_chaff(values):
                 values[i], values[ii] = values[ii], values[i]
             else:
                 break
-    return values  
-                
-                
-            
-
+    return values
