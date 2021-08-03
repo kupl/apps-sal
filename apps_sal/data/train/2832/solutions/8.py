@@ -9,5 +9,5 @@ def array_equalization(a, k):
                 i += k
             else:
                 i += 1
-        m = min(c,m)
+        m = min(c, m)
     return m

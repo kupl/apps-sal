@@ -1,5 +1,6 @@
 import math
 
+
 def largest_pair_sum(numbers):
     a, b = -math.inf, -math.inf
     for n in numbers:

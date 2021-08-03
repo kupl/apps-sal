@@ -5,5 +5,4 @@ def symmetric_point(p, q):
     horiz_d = horiz_d * -1
     x = q[0] - horiz_d
     y = q[1] - vertical_d
-    return [x,y]
-
+    return [x, y]

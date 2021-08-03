@@ -9,7 +9,8 @@ def solve(a, b):
             break
         prime_seq += str(prime)
     print(prime_seq)
-    return prime_seq[a:a+b]
+    return prime_seq[a:a + b]
+
 
 def gen_primes():
     """

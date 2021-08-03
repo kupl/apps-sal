@@ -1,6 +1,8 @@
 def db_sort(arr):
-    n,s = [], []
+    n, s = [], []
     for v in arr:
-        if type(v).__name__=='str': s.append(v)
-        else:n.append(v)
-    return sorted(n)+sorted(s)
+        if type(v).__name__ == 'str':
+            s.append(v)
+        else:
+            n.append(v)
+    return sorted(n) + sorted(s)

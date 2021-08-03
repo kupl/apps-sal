@@ -11,4 +11,3 @@ def symmetric_point(p, q):
         reflected_y = p[1]
 
     return [round(reflected_x), round(reflected_y)]
-
