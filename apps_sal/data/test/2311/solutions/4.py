@@ -9,23 +9,30 @@ for i in range(M):
     pB[i + 1] = pB[i] + B[i]
 ans = 0
 for p in range(1, int(K**0.5) + 1):
-    if K % p > 0: continue
+    if K % p > 0:
+        continue
     q = K // p
-    if p > q: break
+    if p > q:
+        break
 
     X = 0
     for i in range(N + 1 - p):
-        if pA[i + p] - pA[i] == p: X += 1
+        if pA[i + p] - pA[i] == p:
+            X += 1
     Y = 0
     for i in range(M + 1 - q):
-        if pB[i + q] - pB[i] == q: Y += 1
+        if pB[i + q] - pB[i] == q:
+            Y += 1
     ans += X * Y
-    if p == q: break
+    if p == q:
+        break
     X = 0
     for i in range(N + 1 - q):
-        if pA[i + q] - pA[i] == q: X += 1
+        if pA[i + q] - pA[i] == q:
+            X += 1
     Y = 0
     for i in range(M + 1 - p):
-        if pB[i + p] - pB[i] == p: Y += 1
+        if pB[i + p] - pB[i] == p:
+            Y += 1
     ans += X * Y
 print(ans)

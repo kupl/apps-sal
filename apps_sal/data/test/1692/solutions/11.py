@@ -13,6 +13,7 @@ for i in reversed(list(range(1, n))):
         if int(s[i]) % 4 == 0:
             ans += 1
 
-if int(s[0]) % 4 == 0: ans += 1
+if int(s[0]) % 4 == 0:
+    ans += 1
 
 print(ans)

@@ -15,7 +15,8 @@ def main():
     ans = 0
 
     for k, v in d.items():
-        if k == 0: continue
+        if k == 0:
+            continue
         ans += v * d2[k]
 
     print(ans)

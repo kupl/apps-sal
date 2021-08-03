@@ -6,7 +6,8 @@ for v in s:
 res = 0
 for i, v in enumerate(d):
     k -= i * v
-if k < 0: k = 0
+if k < 0:
+    k = 0
 for i, v in enumerate(d):
     if k > (9 - i) * v:
         k -= (9 - i) * v

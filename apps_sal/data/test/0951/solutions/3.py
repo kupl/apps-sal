@@ -17,7 +17,8 @@ def main():
     k -= sum(i * s[i] for i in range(10))
     ct = 0
     for i in range(9):
-        if k <= 0: return ct
+        if k <= 0:
+            return ct
         tm = min(s[i], (k + 9 - i - 1) // (9 - i))
         ct += tm
         k -= tm * (9 - i)
@@ -31,7 +32,8 @@ def read(callback=int):
 
 
 def write(value, end="\n"):
-    if value is None: return
+    if value is None:
+        return
     try:
         if not isinstance(value, str):
             value = " ".join(map(str, value))
