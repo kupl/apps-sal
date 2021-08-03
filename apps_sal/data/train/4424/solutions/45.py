@@ -4,7 +4,7 @@
 #     if a == 1 and c == 1:
 #         return a + b + c
 #     if a == 1:
-#         return (a + b) * c 
+#         return (a + b) * c
 #     if c == 1:
 #         return a * (b + c)
 #     if b == 1:

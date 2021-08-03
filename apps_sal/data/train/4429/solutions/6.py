@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def longest_palindrome(string):
     possibles, has_odd = 0, False
     for char, c in Counter(string.lower()).items():

@@ -12,4 +12,3 @@ def expression_matter(a,
                  a * (c + b)]
 
     return max(potential)
-

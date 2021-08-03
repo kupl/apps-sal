@@ -11,7 +11,8 @@ def expression_matter(a, b, c):
         for i in numbers:
             if(iCount == 1):
                 if(numbers[1] == 1):
-                    if(numbers[0] == max(numbers)): ttl2 = 1
+                    if(numbers[0] == max(numbers)):
+                        ttl2 = 1
                     if(numbers.count(max(numbers)) == 2):
                         ttl2 += i
                     else:
@@ -33,7 +34,8 @@ def expression_matter(a, b, c):
                 total += i
             else:
                 if(i == max(numbers)):
-                    if(numbers[0] == max(numbers)): total = 1
+                    if(numbers[0] == max(numbers)):
+                        total = 1
                     total *= i
                 else:
                     total += i

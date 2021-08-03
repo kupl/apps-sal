@@ -5,6 +5,8 @@ k = length of a cycle to get back to original string
 then (2^k) mod m = 1
 """
 # find minimum k where (b ^ k) % m = 1 and k > 0
+
+
 def multiplicativeOrder(b, m):
     k, r = 1, 1
     while True:
@@ -12,6 +14,7 @@ def multiplicativeOrder(b, m):
         if r == 1:
             return k
         k += 1
+
 
 def jumbled_string(s, n):
     l = len(s)

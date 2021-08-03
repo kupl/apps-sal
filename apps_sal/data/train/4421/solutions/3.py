@@ -9,4 +9,3 @@ def to_seconds(time):
     if m:
         return reduce(lambda x, y: x * 60 + int(y), m.groups(), 0)
     return None
-

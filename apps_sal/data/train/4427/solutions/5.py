@@ -8,4 +8,3 @@ def sum_groups(arr):
         if nums == tmp:
             return len(nums)
         nums = tmp
-

@@ -15,5 +15,3 @@ def expression_matter(a, b, c):
         return (a + b) * c
     else:
         return a + b + c
-    
-

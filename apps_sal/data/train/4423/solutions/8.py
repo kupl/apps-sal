@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def ball_probability(balls):
     bag, (call1, call2), replaced = balls
     bag, total = Counter(bag), len(bag)

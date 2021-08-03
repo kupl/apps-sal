@@ -1,6 +1,7 @@
 def expression_matter(a, b, c):
     return max(list(map(eval, gen(a, b, c))))
 
+
 def gen(a, b, c):
     ops = ['+', '*']
     combs = []
@@ -13,4 +14,3 @@ def gen(a, b, c):
             combs.append(t)
             combs.append(u)
     return combs
-

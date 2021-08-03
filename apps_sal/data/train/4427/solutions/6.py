@@ -1,5 +1,6 @@
 from itertools import groupby, dropwhile, tee, islice
 
+
 def sum_groups(arr):
     def it(a):
         while 1:

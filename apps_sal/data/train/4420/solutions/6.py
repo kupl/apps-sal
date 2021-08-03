@@ -7,6 +7,7 @@ def prime_factorizations(n):
                 sieve[r] = sieve[r] or i
     return sieve
 
+
 def factor_sum(sieve, n):
     results = 0
     while n > 1:
@@ -17,6 +18,7 @@ def factor_sum(sieve, n):
         n //= p
     return results
 
+
 def mult_primefactor_sum(a, b):
-    sieve = prime_factorizations(b+1)
-    return [n for n in range(a, b+1) if sieve[n]!=n and n%factor_sum(sieve, n)==0]
+    sieve = prime_factorizations(b + 1)
+    return [n for n in range(a, b + 1) if sieve[n] != n and n % factor_sum(sieve, n) == 0]
