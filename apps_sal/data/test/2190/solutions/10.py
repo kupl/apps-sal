@@ -9,14 +9,16 @@ primes = []
 for i in range(2, n + 1):
     if mark[i]:
         primes.append(i)
-        for j in range(i, n + 1, i): mark[j] = False
+        for j in range(i, n + 1, i):
+            mark[j] = False
 d = defaultdict(int)
 ans = 0
 
 for i in a:
     t, t1 = (), ()
     for j in primes:
-        if i == 1: break
+        if i == 1:
+            break
         elif i % j == 0:
             x = 0
             while i % j == 0:

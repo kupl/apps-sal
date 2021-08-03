@@ -8,7 +8,8 @@ primes = []
 for i in range(2, n + 1):
     if mark[i]:
         primes.append(i)
-        for j in range(i, n + 1, i): mark[j] = False
+        for j in range(i, n + 1, i):
+            mark[j] = False
 
 d = defaultdict(int)
 
@@ -25,7 +26,8 @@ for i in a:
             if z:
                 t.append((j, z))
                 t1.append((j, k - z))
-        elif i == 1: break
+        elif i == 1:
+            break
     if i != 1:
         t.append((i, 1))
         t1.append((i, k - 1))

@@ -4,7 +4,7 @@ x, y = list(map(int, input().split()))
 s = list(map(int, input().split()))
 siv = [0] * (max(s) + 1)
 ln = len(siv)
-siv[1] = 1;
+siv[1] = 1
 
 for n in range(2, ln):
     if siv[n] == 0:

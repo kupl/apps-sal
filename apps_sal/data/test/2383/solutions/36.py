@@ -10,7 +10,8 @@ breaknum = 0
 for i in range(N):
     if a[i] == targetnum:
         targetnum += 1
-    else: breaknum += 1
+    else:
+        breaknum += 1
 if breaknum == N:
     print((-1))
 else:
