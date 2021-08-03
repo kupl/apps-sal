@@ -1,5 +1,6 @@
 from heapq import heappush, heappop, heapify
 
+
 def closure_gen(*s):
     if not s:
         return None
@@ -14,4 +15,3 @@ def closure_gen(*s):
         set_s.update(new_values)
         set_s.discard(current)
         yield current
-

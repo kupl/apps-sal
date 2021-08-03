@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 @lru_cache(maxsize=None)
 def balanced_parens(n):
     if not n:

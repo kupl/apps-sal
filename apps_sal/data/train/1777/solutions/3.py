@@ -199,4 +199,3 @@ def edge_detection(image):
     out_intervals = compose_intervals(result)
     out_lengths = get_lengths(out_intervals)
     return generate_ascii(out_lengths, width)
-

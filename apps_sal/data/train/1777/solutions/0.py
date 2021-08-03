@@ -46,6 +46,7 @@ into a run-length encoding.
 '''
 import itertools
 
+
 def edge_detection(image):
     data = [int(datum) for datum in image.split(' ')]
     width = data.pop(0)
@@ -141,8 +142,8 @@ def detect_edges(inbuf):
     # Single column
     if 1 == width:
         outbuf[0][0] = abs(inbuf[0][0] - inbuf[1][0])
-        outbuf[length - 1][0] = abs(inbuf[length - 2][0] -
-                                    inbuf[length - 1][0])
+        outbuf[length - 1][0] = abs(inbuf[length - 2][0]
+                                    - inbuf[length - 1][0])
         for row in range(1, length - 1):
             val - inbuf[row][0]
             outbuf[row][0] = max(abs(val - inbuf[row - 1][0]),
@@ -198,7 +199,7 @@ def detect_edges(inbuf):
         outbuf[row][RT] = max(abs(val - inbuf[row - 1][RT - 1]),
                               abs(val - inbuf[row - 1][RT]),
                               abs(val - inbuf[row][RT - 1]),
-                              abs(val - inbuf[row + 1][RT -1]),
+                              abs(val - inbuf[row + 1][RT - 1]),
                               abs(val - inbuf[row + 1][RT]))
 
     # Finallly! The interior
@@ -227,7 +228,7 @@ def encode(buf, rowcounts):
 
     for row_ndx in range(len(buf)):
         encoded_row = [(val, len(list(grp))) for
-               (val, grp) in itertools.groupby(buf[row_ndx])]
+                       (val, grp) in itertools.groupby(buf[row_ndx])]
         if row_ndx in rowcounts:
             val_rl.append((encoded_row[0][0], width * rowcounts[row_ndx]))
         else:
@@ -246,4 +247,3 @@ def encode(buf, rowcounts):
     encoding += (old_val, old_rl)
 
     return encoding
-

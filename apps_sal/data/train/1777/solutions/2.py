@@ -1,6 +1,8 @@
 # Todo: performance boost for the special case: same number for many lines
 
+import time
 DEBUG = False
+
 
 class RLE:
     def __init__(self):
@@ -25,29 +27,31 @@ class RLE:
         return self.result[1:]
 
 # get next line iterator, extra one 'None' after last line
-## Todo: special lines mark (same number for many lines)
+# Todo: special lines mark (same number for many lines)
 # (None (normal), line) or ((Special line nums), line)
 # special lines are     xxx, ooo, ooo2, ooo3, ooo(last), xxx,   ooo2~last-1 are special
+
+
 def get_line(w, src):
     nums = src
 
-    r, c = 0, 0 # index
+    r, c = 0, 0  # index
     line = []
     i = 0
     while i < len(nums) > 0:
         n, count = nums[i], nums[i + 1]
         i += 2
-        while c + count > w: # across line, split it
+        while c + count > w:  # across line, split it
             # special case
             if c == 0 and count > 3 * w:
                 yield(None, [(n, w)])
                 yield((count // w) - 2, [(n, w)])
                 yield(None, [(n, w)])
-                r, c = r + (count //w), 0
-                count -= w * (count //w)
+                r, c = r + (count // w), 0
+                count -= w * (count // w)
                 line = []
                 continue
-            count -= w - c 
+            count -= w - c
             line.append((n, w - c))
             yield (None, line)
             r, c = r + 1, 0
@@ -55,7 +59,7 @@ def get_line(w, src):
         if count > 0:
             line.append((n, count))
             c += count
-            if c == w: # could not be > w
+            if c == w:  # could not be > w
                 yield (None, line)
                 r, c = r + 1, 0
                 line = []
@@ -64,6 +68,8 @@ def get_line(w, src):
     yield (None, None)
 
 # return RLE edge in one line (left/right)
+
+
 def edge_inline(w, line):
     # patch on the left and right
     extended_line = [(line[0][0], 1)] + line + [(line[-1][0], 1)]
@@ -90,9 +96,13 @@ def edge_inline(w, line):
     return r
 
 # return RLE edge compared from line to other line
+
+
 def edge_twolines(w, line, other):
-    if DEBUG: print(("twolines: ", line, other))
+    if DEBUG:
+        print(("twolines: ", line, other))
     # 2 pass, split this line in the shape of other
+
     def aa(line, other):
         current, left, i, j, si, sj = 0, 0, 0, 0, line[0][1], other[0][1]
         while left < w:
@@ -107,6 +117,7 @@ def edge_twolines(w, line, other):
             right = min(si, sj)
             yield (line[current][0], right - left)
             left += right - left
+
     def bb(line, other):
         # patch other line on the left and right
         return [(line[0][0], 1)] + other + [(line[-1][0], 1)]
@@ -119,7 +130,7 @@ def edge_twolines(w, line, other):
     m_prev = extended_line[0][0]
     j, right, sj = 1, 0, extended_line[1][1]
     for n, count in aa(line, other):
-    # for i in range(len(line_splits)):
+        # for i in range(len(line_splits)):
         # (n, count) = line_splits[i]
 
         dl = abs(n - m_prev)
@@ -169,7 +180,6 @@ def merge_edge_lines(w, line1, line2):
     return r
 
 
-import time
 def edge_detection(image):
     imgs = [int(i) for i in image.split(' ')]
     w, line = imgs[0], imgs[1:]
@@ -199,14 +209,10 @@ def edge_detection(image):
         for en, ec in cur_edge:
             rle.add(en, ec)
 
-        if next_line is None: # finishes
+        if next_line is None:  # finishes
             break
 
     # Todo: send last edge line
     # print(cur_edge)
     # returns edges
     return ' '.join([str(w), rle.display()])
-
-
-
-

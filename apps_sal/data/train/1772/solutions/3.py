@@ -10,4 +10,3 @@ class VigenereCipher(object):
     def decode(self, text):
         return "".join([self.alphabet[(self.alphabet.index(text[i]) - self.key[i % len(self.key)]) % len(self.alphabet)]
                         if text[i] in self.alphabet else text[i] for i in range(len(text))])
-

@@ -129,4 +129,3 @@ class Funnel(object):
 
         # exclude final newline
         return s[:-1]
-

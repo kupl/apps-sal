@@ -37,4 +37,3 @@ class Funnel:
             ' ' * i + fr"\{' '.join(' ' if x is None else str(x) for x in row)}/"
             for i, row in enumerate(self.arr)
         )
-
