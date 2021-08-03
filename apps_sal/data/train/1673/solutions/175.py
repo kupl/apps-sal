@@ -12,4 +12,3 @@ class Solution:
             prev[:] = curr[:]
 
         return min(prev)
-

@@ -4,8 +4,8 @@ class Solution:
 
         for i, costs in enumerate(arr[1:], 1):
             prev = dp[:]
-            
+
             for j, cost in enumerate(costs):
-                dp[j] = cost + min(prev[:j] + prev[j+1:])
+                dp[j] = cost + min(prev[:j] + prev[j + 1:])
 
         return min(dp)

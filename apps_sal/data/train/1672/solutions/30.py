@@ -10,4 +10,3 @@ for i in range(11):
         print('f(%d) = %.2f' % (x, a + b))
     else:
         print('f(%d) = MAGNA NIMIS!' % x)
-

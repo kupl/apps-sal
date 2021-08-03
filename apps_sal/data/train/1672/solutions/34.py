@@ -3,15 +3,14 @@ s = []
 for i in range(11):
     s.append(int(input()))
 s.reverse()
-#print(s)
+# print(s)
 for i in range(0, 11):
-    a = s[i]**3*5
+    a = s[i]**3 * 5
     b = abs(s[i])**0.5
     ans = a + b
-    print ('f(' + str(s[i]) + ") = ", end='')
+    print('f(' + str(s[i]) + ") = ", end='')
 
     if (ans < 400):
         print('{:.2f}'.format(ans))
     else:
         print(' MAGNA NIMIS!')
-

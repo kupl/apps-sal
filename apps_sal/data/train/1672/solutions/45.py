@@ -7,7 +7,7 @@ for i in range(11):
 for i in range(11):
     var = ls.pop()
     a = math.sqrt(abs(var))
-    b = (var**3)*5
+    b = (var**3) * 5
     res = a + b
     if 400 >= res:
         print('f(%d) = %.2f' % (var, res))

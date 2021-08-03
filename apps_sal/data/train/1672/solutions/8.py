@@ -22,4 +22,3 @@ for el in arr[::-1]:
 
     else:
         print('f({}) = {:.2f}'.format(el, e))
-

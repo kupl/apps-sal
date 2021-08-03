@@ -19,7 +19,7 @@ from heapq import *
 # from bisect import bisect_left,bisect_right
 # from decimal import *,threading
 from fractions import Fraction
-mod = int(pow(10, 9)+7)
+mod = int(pow(10, 9) + 7)
 # mod = 998244353
 
 
@@ -210,13 +210,13 @@ def dijkstra(edges, f, t):
 
 def binsearch(a, l, r, x):
     while l <= r:
-        mid = l + (r-1)//2
+        mid = l + (r - 1) // 2
         if a[mid]:
             return mid
         elif a[mid] > x:
-            l = mid-1
+            l = mid - 1
         else:
-            r = mid+1
+            r = mid + 1
     return -1
 
 
@@ -226,15 +226,15 @@ def binsearch(a, l, r, x):
 
 def readTree(n):
     adj = [set() for _ in range(n)]
-    for _ in range(n-1):
+    for _ in range(n - 1):
         u, v = map(int, input().split())
-        adj[u-1].add(v-1)
-        adj[v-1].add(u-1)
+        adj[u - 1].add(v - 1)
+        adj[v - 1].add(u - 1)
     return adj
 
 
 def treeOrderByDepth(n, adj, root=0):
-    parent = [-2] + [-1]*(n-1)
+    parent = [-2] + [-1] * (n - 1)
     ordered = []
     q = deque()
     q.append(root)
@@ -251,10 +251,10 @@ def treeOrderByDepth(n, adj, root=0):
 
 
 for _ in range(ii()):
-    n,k,x=mi()
-    l=[]
+    n, k, x = mi()
+    l = []
     for i in range(n):
-        if i%k==0:
+        if i % k == 0:
             l.append(x)
         else:
             l.append(0)

@@ -4,8 +4,10 @@ import sys
 from collections import Counter
 from math import sqrt
 
+
 def get_input():
     return [line for line in fileinput.input()]
+
 
 class NewGame2:
     N = 10
@@ -37,14 +39,14 @@ class NewGame2:
             clearColumns = 0
 
             for i in range(0, len(res), 3):
-                p = self.defi[pieces[res[i]-1]]
-                posy = res[i+1] - len(p)
-                posx = res[i+2] - 1
+                p = self.defi[pieces[res[i] - 1]]
+                posy = res[i + 1] - len(p)
+                posx = res[i + 2] - 1
 
                 for py in range(0, len(p)):
                     for px in range(0, len(p[0])):
                         if p[py][px] > 0:
-                            self.map[posy+py][posx+px] = pieces[res[i]-1] +1;
+                            self.map[posy + py][posx + px] = pieces[res[i] - 1] + 1
                             placed += 1
 
                 # clear
@@ -87,7 +89,7 @@ class NewGame2:
             self.score += clearColumns * clearColumns + clearRows * clearRows + (5 * clearRows * clearColumns)
             self.moves += 1
 
-        output = "";
+        output = ""
         for i in range(0, len(res)):
             if (i > 0):
                 output += " "
@@ -114,18 +116,18 @@ class NewGame2:
                         valid = True
                         for py in range(0, len(p)):
                             for px in range(0, len(p[0])):
-                                if valid and (y+py >= self.N or x+px >= self.N or (p[py][px] > 0 and tMap[y+py][x+px] != 0)):
+                                if valid and (y + py >= self.N or x + px >= self.N or (p[py][px] > 0 and tMap[y + py][x + px] != 0)):
                                     valid = False
                                     break
                         if (valid):
                             for py in range(0, len(p)):
                                 for px in range(0, len(p[0])):
                                     if (p[py][px] > 0):
-                                        tMap[y+py][x+px] = pieces[i] +1
+                                        tMap[y + py][x + px] = pieces[i] + 1
 
-                            res[i*3 + 0] = i+1
-                            res[i*3 + 1] = y+len(p)
-                            res[i*3 + 2] = x+1
+                            res[i * 3 + 0] = i + 1
+                            res[i * 3 + 1] = y + len(p)
+                            res[i * 3 + 2] = x + 1
                             found_move = True
                             break
 
@@ -224,7 +226,7 @@ class JUNE16:
     def CHNWGM(self):
         game = NewGame2()
         while True:
-            a = [int(x)-1 for x in input().split()]
+            a = [int(x) - 1 for x in input().split()]
             # print "in: %s" % a
             if a[0] < 0:
                 return
@@ -236,5 +238,6 @@ class JUNE16:
 
 def __starting_point():
     JUNE16()
+
 
 __starting_point()

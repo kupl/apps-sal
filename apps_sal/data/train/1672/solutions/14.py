@@ -107,5 +107,4 @@ vals = list(reversed(out.splitlines()))
 
 for line in reversed(stdin.readlines()):
     ind = int(line)
-    print(vals[ind+50])
-
+    print(vals[ind + 50])

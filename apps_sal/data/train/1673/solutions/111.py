@@ -11,8 +11,5 @@ class Solution:
                 arr[i][j] += curMin
             # arr[i][1] += min(arr[i - 1][0], arr[i - 1][2])
             # arr[i][2] += min(arr[i - 1][0], arr[i - 1][1])
-                
-        return min(arr[n - 1])
-                        
-                    
 
+        return min(arr[n - 1])

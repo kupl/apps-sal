@@ -49,4 +49,3 @@ for i in range(11):
         print("f({0:d}) = {1:.2f}".format(var, result))
     else:
         print("f({0:d}) = MAGNA NIMIS!".format(var))
-

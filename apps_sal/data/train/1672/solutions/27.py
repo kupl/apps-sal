@@ -15,4 +15,3 @@ for next in range(11):
         print("f(%d) = %.2f" % (var, result))
     else:
         print("f(%d) = MAGNA NIMIS!" % var)
-

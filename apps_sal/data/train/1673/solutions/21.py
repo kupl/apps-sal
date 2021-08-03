@@ -3,24 +3,23 @@ class Solution:
         self.memo = {}
         if not arr:
             return 0
-        
+
         possible_values = []
         for column in range(len(arr[0])):
             possible_values.append(self.visit_row(arr, 0, column))
-            
+
         return min(possible_values)
-        
-        
+
     def visit_row(self, arr, i, j):
         if (i, j) in self.memo:
-            return self.memo[(i,j)]
+            return self.memo[(i, j)]
         # Base case
         if i == len(arr) - 1:
             return arr[i][j]
         val = arr[i][j]
         possible_values = []
         prev_val = 999999999999999
-        for k in [i[0] for i in sorted(enumerate(arr[i+ 1]), key=lambda x:x[1])]:
+        for k in [i[0] for i in sorted(enumerate(arr[i + 1]), key=lambda x:x[1])]:
             if k == j:
                 continue
             next_val = self.visit_row(arr, i + 1, k)

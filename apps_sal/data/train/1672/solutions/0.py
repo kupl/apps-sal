@@ -1,4 +1,4 @@
-f={}
+f = {}
 
 f[-40] = '-319993.68'
 f[-41] = '-344598.60'
@@ -67,13 +67,13 @@ f[6] = 'MAGNA NIMIS!'
 f[5] = 'MAGNA NIMIS!'
 f[4] = '322.00'
 
-a=[]
+a = []
 for i in range(11):
-    a+=[int(input())]
+    a += [int(input())]
 for i in a[::-1]:
-    s=''
+    s = ''
     if i in f:
-        s=f[i]
+        s = f[i]
     else:
-        s='MAGNA NIMIS!'
-    print('f(%d) = %s'%(i, s))
+        s = 'MAGNA NIMIS!'
+    print('f(%d) = %s' % (i, s))

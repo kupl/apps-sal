@@ -8,20 +8,17 @@ class Solution:
             for j in range(len(arr[0])):
                 if arr[i - 1][j] == lowest:
                     lowestCount += 1
-                    
+
                 if arr[i - 1][j] > lowest:
                     secondLowest = min(secondLowest, arr[i - 1][j])
-                    
+
             if lowestCount >= 2:
                 secondLowest = lowest
-            
+
             for j in range(len(arr[0])):
-                if arr[i-1][j] == lowest:
+                if arr[i - 1][j] == lowest:
                     arr[i][j] += secondLowest
                 else:
                     arr[i][j] += lowest
-                
-        return min(arr[n - 1])
-                        
-                    
 
+        return min(arr[n - 1])

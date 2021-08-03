@@ -5,6 +5,6 @@ class Solution:
         for x in range(1, m):
             tmp = [0] * n
             for y in range(n):
-                tmp[y] = min(dp[py] + A[x][y] for py in range(n) if y != py )
+                tmp[y] = min(dp[py] + A[x][y] for py in range(n) if y != py)
             dp, tmp = tmp, dp
-        return min(dp)  
+        return min(dp)

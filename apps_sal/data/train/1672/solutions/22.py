@@ -18,5 +18,3 @@ for _ in range(11):
         print("f(%d) = %.2f" % (num, res))
     else:
         print("f(%d) = MAGNA NIMIS!" % num)
-
-

@@ -11,13 +11,10 @@ class Solution:
             # minimum, second minimum
             num1, idx1 = srow[0][0], srow[0][1]
             num2, idx2 = srow[1][0], srow[1][1]
-            c1v = min(float('inf') if cand1[1] == idx1 else cand1[0] + num1, \\
+            c1v = min(float('inf') if cand1[1] == idx1 else cand1[0] + num1,
                       float('inf') if cand2[1] == idx1 else cand2[0] + num1)
-            c2v = min(float('inf') if cand1[1] == idx2 else cand1[0] + num2, \\
+            c2v = min(float('inf') if cand1[1] == idx2 else cand1[0] + num2,
                       float('inf') if cand2[1] == idx2 else cand2[0] + num2)
             cand1 = (c1v, idx1)
             cand2 = (c2v, idx2)
         return min(cand1[0], cand2[0])
-            
-            
-            

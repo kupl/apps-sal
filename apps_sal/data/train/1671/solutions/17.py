@@ -1,22 +1,22 @@
 # ---------------------------iye ha aam zindegi---------------------------------------------
+from io import BytesIO, IOBase
+import os
 import math
 import random
-import heapq, bisect
+import heapq
+import bisect
 import sys
 from collections import deque, defaultdict
 from fractions import Fraction
 import sys
 import threading
 from collections import defaultdict
-#threading.stack_size(10**8)
+# threading.stack_size(10**8)
 mod = 10 ** 9 + 7
 mod1 = 998244353
 
 # ------------------------------warmup----------------------------
-import os
-import sys
-from io import BytesIO, IOBase
-#sys.setrecursionlimit(300000)
+# sys.setrecursionlimit(300000)
 
 BUFSIZE = 8192
 
@@ -66,7 +66,7 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
 # -------------------game starts now----------------------------------------------------import math
@@ -288,7 +288,7 @@ class AvlTree:
 
 # -----------------------------------------------binary seacrh tree---------------------------------------
 class SegmentTree1:
-    def __init__(self, data, default=2**32, func=lambda a, b: min(a,b)):
+    def __init__(self, data, default=2**32, func=lambda a, b: min(a, b)):
         """initialize the segment tree with data"""
         self._default = default
         self._func = func
@@ -342,7 +342,7 @@ class SegmentTree1:
 
 # -------------------game starts now----------------------------------------------------import math
 class SegmentTree:
-    def __init__(self, data, default=2**30-1, func=lambda a,b:a&b):
+    def __init__(self, data, default=2**30 - 1, func=lambda a, b: a & b):
         """initialize the segment tree with data"""
         self._default = default
         self._func = func
@@ -505,7 +505,7 @@ def binarySearchCount(arr, n, key):
 
         # Check if middle element is
         # less than or equal to key
-        if (arr[mid] <=key):
+        if (arr[mid] <= key):
             count = mid + 1
             left = mid + 1
 
@@ -523,9 +523,12 @@ def countdig(n):
         n //= 10
         c += 1
     return c
+
+
 def binary(x, length):
     y = bin(x)[2:]
     return y if len(y) >= length else "0" * (length - len(y)) + y
+
 
 def countGreater(arr, n, k):
     l = 0
@@ -557,13 +560,18 @@ class TrieNode:
     def __init__(self):
         self.children = [None] * 26
         self.isEndOfWord = False
+
+
 class Trie:
     def __init__(self):
         self.root = self.getNode()
+
     def getNode(self):
         return TrieNode()
+
     def _charToIndex(self, ch):
         return ord(ch) - ord('a')
+
     def insert(self, key):
         pCrawl = self.root
         length = len(key)
@@ -573,6 +581,7 @@ class Trie:
                 pCrawl.children[index] = self.getNode()
             pCrawl = pCrawl.children[index]
         pCrawl.isEndOfWord = True
+
     def search(self, key):
         pCrawl = self.root
         length = len(key)
@@ -582,16 +591,21 @@ class Trie:
                 return False
             pCrawl = pCrawl.children[index]
         return pCrawl != None and pCrawl.isEndOfWord
-#-----------------------------------------trie---------------------------------
+# -----------------------------------------trie---------------------------------
+
+
 class Node:
     def __init__(self, data):
         self.data = data
-        self.count=0
+        self.count = 0
         self.left = None  # left node for 0
         self.right = None  # right node for 1
+
+
 class BinaryTrie:
     def __init__(self):
         self.root = Node(0)
+
     def insert(self, pre_xor):
         self.temp = self.root
         for i in range(31, -1, -1):
@@ -600,31 +614,34 @@ class BinaryTrie:
                 if not self.temp.right:
                     self.temp.right = Node(0)
                 self.temp = self.temp.right
-                self.temp.count+=1
+                self.temp.count += 1
             if not val:
                 if not self.temp.left:
                     self.temp.left = Node(0)
                 self.temp = self.temp.left
                 self.temp.count += 1
         self.temp.data = pre_xor
+
     def query(self, xor):
         self.temp = self.root
         for i in range(31, -1, -1):
             val = xor & (1 << i)
             if not val:
-                if self.temp.left and self.temp.left.count>0:
+                if self.temp.left and self.temp.left.count > 0:
                     self.temp = self.temp.left
                 elif self.temp.right:
                     self.temp = self.temp.right
             else:
-                if self.temp.right and self.temp.right.count>0:
+                if self.temp.right and self.temp.right.count > 0:
                     self.temp = self.temp.right
                 elif self.temp.left:
                     self.temp = self.temp.left
-            self.temp.count-=1
+            self.temp.count -= 1
         return xor ^ self.temp.data
-#-------------------------bin trie-------------------------------------------
+
+
+# -------------------------bin trie-------------------------------------------
 for ik in range(int(input())):
-    n=int(input())
-    a=[1]*n
+    n = int(input())
+    a = [1] * n
     print(*a)

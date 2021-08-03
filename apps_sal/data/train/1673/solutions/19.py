@@ -6,5 +6,5 @@ class Solution:
             for j in range(n):
                 m0, m1 = heapq.nsmallest(2, dp[i - 1])
                 dp[i][j] = arr[i - 1][j] + (m0 if dp[i - 1][j] != m0 else m1)
-                
+
         return min(dp[-1])

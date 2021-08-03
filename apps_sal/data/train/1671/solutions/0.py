@@ -1,4 +1,5 @@
 # ------------------- fast io --------------------
+from math import gcd, ceil
 import os
 import sys
 from io import BytesIO, IOBase
@@ -51,22 +52,25 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
 
 # ------------------- fast io --------------------
-from math import gcd, ceil
 
-def prod(a, mod=10**9+7):
+
+def prod(a, mod=10**9 + 7):
     ans = 1
     for each in a:
         ans = (ans * each) % mod
     return ans
 
+
 def lcm(a, b): return a * b // gcd(a, b)
+
 
 def binary(x, length=16):
     y = bin(x)[2:]
     return y if len(y) >= length else "0" * (length - len(y)) + y
+
 
 for _ in range(int(input()) if True else 1):
     n = int(input())
@@ -76,4 +80,4 @@ for _ in range(int(input()) if True else 1):
     #a = list(map(int, input().split()))
     #b = list(map(int, input().split()))
     #s = input()
-    print(*[1]*n)
+    print(*[1] * n)

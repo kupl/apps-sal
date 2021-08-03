@@ -28,4 +28,3 @@ while not (id1 == id2 == id3 == -1):
     print('-1 -1 -1 -1 -1 -1 -1 -1 -1')
     sys.stdout.flush()
     id1, id2, id3 = list(map(int, input().split()))
-

@@ -26,4 +26,5 @@ def __starting_point():
         solve()
         t -= 1
 
+
 __starting_point()

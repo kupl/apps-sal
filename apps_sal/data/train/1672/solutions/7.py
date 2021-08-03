@@ -1,5 +1,6 @@
 seq = []
-for x in range(11): seq.append(int(input()))
+for x in range(11):
+    seq.append(int(input()))
 
 p = 0
 while seq:

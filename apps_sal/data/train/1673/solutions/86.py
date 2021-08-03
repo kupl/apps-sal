@@ -1,4 +1,6 @@
 from heapq import nsmallest
+
+
 class Solution:
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         dp = [[0] * len(arr[0]) for _ in range(len(arr))]
@@ -11,5 +13,3 @@ class Solution:
                 else:
                     arr[i][j] += min1
         return min(arr[-1])
-                
-

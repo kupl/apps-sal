@@ -5,6 +5,6 @@ class Solution:
         m, n = len(arr), len(arr[0])
         for i in range(1, m):
             for j in range(n):
-                arr[i][j] = min([arr[i-1][col] for col in range(n) if col != j])+arr[i][j]
-        
+                arr[i][j] = min([arr[i - 1][col] for col in range(n) if col != j]) + arr[i][j]
+
         return min(arr[-1])
