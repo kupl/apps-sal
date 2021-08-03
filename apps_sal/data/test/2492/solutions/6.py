@@ -2,13 +2,16 @@
 import sys
 import numpy as np
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 # neg, zero, posに分けて、二分探索
 N, K = lr()
-A = np.array(lr()); A.sort()
+A = np.array(lr())
+A.sort()
 neg = A[A < 0]
 zero = A[A == 0]
 pos = A[A > 0]
@@ -26,7 +29,8 @@ def check(x):
     return (cnt // 2) >= K
 
 
-ok = 10**20; ng = -10**20
+ok = 10**20
+ng = -10**20
 while abs(ng - ok) > 1:
     mid = (ok + ng) // 2
     if check(mid):

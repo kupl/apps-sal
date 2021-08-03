@@ -5,9 +5,12 @@ a = list(map(int, input().split()))
 a.sort()
 n0, np, nn = 0, 0, 0
 for i in a:
-    if i > 0: np += 1
-    elif i == 0: n0 += 1
-    else: nn += 1
+    if i > 0:
+        np += 1
+    elif i == 0:
+        n0 += 1
+    else:
+        nn += 1
 kp = (np**2 - np + nn**2 - nn) // 2
 k0 = n0 * (n - n0) + (n0**2 - n0) // 2
 kn = nn * np

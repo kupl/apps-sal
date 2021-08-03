@@ -30,8 +30,10 @@ def main():
             cnt -= pos_p[pos_p <= x].size
 
         cnt //= 2
-        if cnt >= k: r = x
-        else: l = x
+        if cnt >= k:
+            r = x
+        else:
+            l = x
 
     print(r)
 

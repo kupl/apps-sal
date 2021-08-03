@@ -2,9 +2,11 @@ K = 998244353
 
 
 def mu(a, n):
-    if n == 0: return 1
+    if n == 0:
+        return 1
     q = mu(a, n // 2)
-    if n % 2 == 0: return q * q % K
+    if n % 2 == 0:
+        return q * q % K
     return q * q % K * a % K
 
 
@@ -40,8 +42,10 @@ cnt = 0
 
 for i in range(1, n + 1):
     p[i] = int(data[i - 1])
-    if (p[i] > 0): dd[p[i]] = 1
-    else: cnt += 1
+    if (p[i] > 0):
+        dd[p[i]] = 1
+    else:
+        cnt += 1
 
 for i in range(1, n + 1):
     if (dd[i] == 0):

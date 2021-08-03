@@ -3,11 +3,14 @@ import numpy as np
 
 
 def p(*args, **kargs):
-    if DBG: print(*args, **kargs)
+    if DBG:
+        print(*args, **kargs)
 
 
 read = input
-rn = lambda: list(map(int, read().split()))
+def rn(): return list(map(int, read().split()))
+
+
 debug = False
 
 
@@ -42,7 +45,8 @@ def sol(A):
         ret -= np.count_nonzero(A * A <= x)
         assert ret % 2 == 0
         return ret // 2
-        if debug: print(pos, neg, zero)
+        if debug:
+            print(pos, neg, zero)
     return f
 
 
@@ -62,7 +66,8 @@ def bs(A, index):
     while left + 1 < right:
         middle = (left + right) // 2
         m_index = f(middle)
-        if debug: print(middle, m_index, left, right, sep="\t")
+        if debug:
+            print(middle, m_index, left, right, sep="\t")
         if index <= m_index:
             right = middle
         else:

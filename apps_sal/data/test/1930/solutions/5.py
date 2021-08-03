@@ -1,4 +1,4 @@
-base = 998244353;
+base = 998244353
 
 
 def power(x, y):
@@ -8,7 +8,7 @@ def power(x, y):
     t = (t * t) % base
     if(y % 2):
         t = (t * x) % base
-    return t;
+    return t
 
 
 def inverse(x):
