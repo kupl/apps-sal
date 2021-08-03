@@ -6,13 +6,13 @@ class Solution:
             stack = []
             for i in c.keys():
                 if c[i] > 0:
-                    a = a+i[0]
+                    a = a + i[0]
                     c[i] -= 1
                 if c[i] > 0:
                     stack.append(i)
             while stack:
                 j = stack.pop()
-                a = a+j[0]
+                a = a + j[0]
                 c[j] -= 1
-            c += Counter() # erases all counts of 0
+            c += Counter()  # erases all counts of 0
         return a

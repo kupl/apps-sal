@@ -9,6 +9,6 @@ class Solution:
             elif n & 1:
                 currDist = 1
             elif not n & 1 and currDist != 0:
-                currDist+=1
+                currDist += 1
             n >>= 1
         return maxDist

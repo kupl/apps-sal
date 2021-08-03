@@ -7,10 +7,7 @@ class Solution:
             elif (s[i].isupper() and stack[-1].islower() and (stack[-1].upper() == s[i])):
                 stack.pop(-1)
             elif (s[i].islower() and stack[-1].isupper() and (stack[-1].lower() == s[i])):
-                  stack.pop(-1)
+                stack.pop(-1)
             else:
                 stack.append(s[i])
         return ''.join(stack)
-    
-    
-

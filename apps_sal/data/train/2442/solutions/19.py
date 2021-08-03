@@ -20,5 +20,3 @@ class Solution:
                     total += 1
                     counts[ch] -= 1
         return res
-       
-

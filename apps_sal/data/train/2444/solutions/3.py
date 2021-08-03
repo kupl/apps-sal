@@ -12,5 +12,3 @@ class Solution:
                 dis = max(dis, len(stack))
                 stack = ['1']
         return dis
-            
-

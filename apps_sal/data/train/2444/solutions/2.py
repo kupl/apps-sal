@@ -9,9 +9,12 @@ class Solution:
         while right <= len(binary_string) - 1:
             print(left, right, current_distance, global_max)
             if binary_string[right] == '0':
-                right += 1; current_distance += 1
+                right += 1
+                current_distance += 1
             else:
                 global_max = max(global_max, current_distance)
-                left = right; right += 1; current_distance = 1
-            
+                left = right
+                right += 1
+                current_distance = 1
+
         return global_max

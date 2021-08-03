@@ -1,11 +1,9 @@
 class Solution:
-     def detectCapitalUse(self, word):
-         
-         return word[1:].islower() or word.isupper() or word.islower()
-     
-     
-     
-         """old
+    def detectCapitalUse(self, word):
+
+        return word[1:].islower() or word.isupper() or word.islower()
+
+        """old
          if word[0].isupper():
              if len(word)==1:return True
              if word[1].isupper():
@@ -19,9 +17,8 @@ class Solution:
              if word[i].isupper():return False
          return True
          """
-         
-         """
+
+        """
          :type word: str
          :rtype: bool
          """
-

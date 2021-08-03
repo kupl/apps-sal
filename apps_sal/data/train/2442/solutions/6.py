@@ -1,5 +1,6 @@
 class Solution:
     collections.OrderedDict
+
     def sortString(self, s: str) -> str:
         list_s = list(s)
         list_s.sort()
@@ -28,6 +29,3 @@ class Solution:
                     dict_s[list(dict_s)[i]] -= 1
                 i -= 1
         return ''.join(result)
-        
-        
-

@@ -6,8 +6,7 @@ class Solution:
             for c in sorted(set(s)):
                 ans += c
                 s.remove(c)
-            for c in sorted(set(s), reverse = True):
+            for c in sorted(set(s), reverse=True):
                 ans += c
                 s.remove(c)
         return ans
-

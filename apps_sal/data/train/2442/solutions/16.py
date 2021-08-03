@@ -3,24 +3,20 @@ class Solution:
 
         ss = sorted(list(dict.fromkeys(s)))
         ssr = ss[::-1]
-        dic ={}
-        final_s =''
+        dic = {}
+        final_s = ''
         for i in ss:
             dic[i] = 0
         for i in s:
-            dic[i]+=1
+            dic[i] += 1
         for i in range(len(s)):
 
             for j in ss:
-                if dic[j]>0:
-                    final_s+=j
-                    dic[j]-=1
+                if dic[j] > 0:
+                    final_s += j
+                    dic[j] -= 1
             for x in ssr:
-                if dic[x]>0:
-                    final_s+=x
-                    dic[x]-=1
+                if dic[x] > 0:
+                    final_s += x
+                    dic[x] -= 1
         return final_s
-                    
-                
-              
-
