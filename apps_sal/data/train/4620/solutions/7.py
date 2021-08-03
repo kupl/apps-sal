@@ -4,12 +4,7 @@ def string_letter_count(s):
     split.sort()
     string = ""
     for i in split:
-       if i >= 'a' and i <= 'z' and i not in string:
-          string = string + str(split.count(i))
-          string += i
+        if i >= 'a' and i <= 'z' and i not in string:
+            string = string + str(split.count(i))
+            string += i
     return string
-          
-        
-          
-    
-

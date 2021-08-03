@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def prcs(start, end, procs, path):
     if start == end:
         return path
@@ -13,7 +14,6 @@ def prcs(start, end, procs, path):
         return min([a for a in paths if a and a[-1][1] == end], key=len)
     except (KeyError, ValueError):
         return []
-    
 
 
 def processes(start, end, procs):
