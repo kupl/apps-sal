@@ -1,8 +1,10 @@
 import collections as cc
 import sys
 input = sys.stdin.readline
-I = lambda: list(map(int, input().split()))
-S = lambda: list(input().strip())
+def I(): return list(map(int, input().split()))
+def S(): return list(input().strip())
+
+
 s = S()
 t = S()
 k, = I()

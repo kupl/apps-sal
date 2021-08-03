@@ -18,6 +18,8 @@ l = 0
 r = 1e9
 while r - l > 1e-6:
     m = (l + r) / 2
-    if ok(m): r = m
-    else: l = m
+    if ok(m):
+        r = m
+    else:
+        l = m
 print(r)

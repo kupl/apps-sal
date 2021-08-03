@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 a, b, c, d = f()
 s, t = f()
 vx, vy = f()
@@ -16,6 +18,8 @@ def g(m):
 l, r = 0, 1e9
 while r - l > 1e-6:
     m = (l + r) / 2
-    if g(m): l = m
-    else: r = m
+    if g(m):
+        l = m
+    else:
+        r = m
 print(r)

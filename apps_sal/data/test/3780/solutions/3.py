@@ -8,7 +8,9 @@ def f(T):
     return dist2 >= dist
 
 
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 A, B, v, w = [[0, 0] for i in range(4)]
 A[0], A[1], B[0], B[1] = read()
 Vmax, t = read()
@@ -17,7 +19,9 @@ w[0], w[1] = read()
 L, R = 0, 1e12
 for i in range(100):
     M = (L + R) / 2
-    if f(M): R = M
-    else: L = M
+    if f(M):
+        R = M
+    else:
+        L = M
 ans = R
 print(ans)

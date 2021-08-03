@@ -15,7 +15,8 @@ t = [s[i] not in good for i in range(len(s))]
 
 end = [0] * len(s)
 badchars = 0
-front = 0; rear = 0
+front = 0
+rear = 0
 while(front < len(s)):
     while(rear < len(s)):
         badchars += t[rear]

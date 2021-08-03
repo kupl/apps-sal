@@ -1,11 +1,13 @@
-f = lambda: list(map(int, input().split()))
+def f(): return list(map(int, input().split()))
 
 
-abs = lambda q: q[0] * q[0] + q[1] * q[1]
+def abs(q): return q[0] * q[0] + q[1] * q[1]
 
-dot = lambda: v[0] * d[0] + v[1] * d[1]
 
-get = lambda a, b, c: (b - (b * b - a * c) ** 0.5) / a
+def dot(): return v[0] * d[0] + v[1] * d[1]
+
+
+def get(a, b, c): return (b - (b * b - a * c) ** 0.5) / a
 
 
 p = f()

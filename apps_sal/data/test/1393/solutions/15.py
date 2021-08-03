@@ -16,8 +16,10 @@ for i in range(len(Al)):
 
     yay += min(numS[i], numT[i])
 
-    if i <= 25: k = i + 26
-    else: k = i - 26
+    if i <= 25:
+        k = i + 26
+    else:
+        k = i - 26
     numT_[k] -= min(numS[i], numT[i])
     numS[i] -= min(numS[i], numT[i])
 

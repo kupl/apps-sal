@@ -1,6 +1,7 @@
 import sys
 import math
-read = lambda: list(map(int, sys.stdin.readline().split()))
+def read(): return list(map(int, sys.stdin.readline().split()))
+
 
 x1, y1, x2, y2 = read()
 vmax, t1 = read()
@@ -18,6 +19,7 @@ for _ in range(100):
     y = y2 - min(t, t1) * vy - max(t - t1, 0) * wy
     if x**2 + y**2 <= t**2:
         up = t
-    else: lo = t
+    else:
+        lo = t
 
 print(up)
