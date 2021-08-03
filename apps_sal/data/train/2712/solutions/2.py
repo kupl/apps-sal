@@ -19,4 +19,3 @@ def loneliest(number):
 
     # Check if 1 is the loneliest number and check if digit 1 was even in the number
     return one <= lowest and one != float('inf')
-

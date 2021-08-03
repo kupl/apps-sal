@@ -12,4 +12,3 @@ def bucket_of(said):
         return 'sludge' if slime else 'water'
 
     return 'slime' if slime else 'air'
-
