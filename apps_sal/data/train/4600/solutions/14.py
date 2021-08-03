@@ -9,6 +9,5 @@ def move_zeros(array):
     i = 0
     while i < c:
         new_list.append(0)
-        i+=1
+        i += 1
     return new_list
-

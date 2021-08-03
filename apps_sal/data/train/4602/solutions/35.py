@@ -4,6 +4,9 @@ def is_anagram(test, original):
     for char in test:
         if char in original:
             original = original.replace(char, '', 1)
-        else: return False
-    if len(original) == 0: return True
-    else: return False
+        else:
+            return False
+    if len(original) == 0:
+        return True
+    else:
+        return False

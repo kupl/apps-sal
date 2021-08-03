@@ -8,4 +8,3 @@ def is_anagram(test, original):
         return True
     else:
         return False
-

@@ -6,4 +6,4 @@ def move_zeros(array):
             b.append(0)
         else:
             a.append(v)
-    return a+b
+    return a + b

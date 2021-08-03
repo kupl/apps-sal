@@ -4,6 +4,7 @@ def produce(n):
         yield x
         x = int(x * 0.8)
 
+
 def egged(year, span):
     if year == 0:
         return 'No chickens yet!'

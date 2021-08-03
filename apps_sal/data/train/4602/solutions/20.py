@@ -9,7 +9,7 @@ def is_anagram(test, original):
                 flag = 1
             else:
                 continue
-        if flag ==1:
+        if flag == 1:
             return False
         else:
             return True

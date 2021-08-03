@@ -4,6 +4,7 @@ from itertools import combinations
 from math import factorial
 from operator import mul
 
+
 def find_mult_3(n):
     mul_count, digits = 0, sorted(map(int, str(n)))
     for r in range(1, len(digits) + 1):

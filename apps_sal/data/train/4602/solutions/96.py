@@ -7,6 +7,3 @@ def is_anagram(test, original):
     if org1 == org2:
         return True
     return False
-        
-            
-

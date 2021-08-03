@@ -11,6 +11,6 @@ def replace_dashes_as_one(s):
             while j < len(s) and (s[j] == " " or s[j] == "-"):
                 j += 1
             i = j
-            if i < len(s) and s[i] != "-" and s[i-1] == " ":
+            if i < len(s) and s[i] != "-" and s[i - 1] == " ":
                 res += " "
     return res + " " if s[-1] == " " else res

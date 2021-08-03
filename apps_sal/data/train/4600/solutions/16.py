@@ -2,7 +2,7 @@ def move_zeros(array):
     strs = []
     array1 = array.copy()
     for i in array1:
-        if isinstance(i,str):
+        if isinstance(i, str):
             strs.append(i)
             array1[array1.index(i)] = ' '
     for i in array1:
@@ -14,13 +14,14 @@ def move_zeros(array):
     for i in array1:
         if i != ' ':
             array1[array1.index(i)] = eval(array1[array1.index(i)])
+
     def insf():
         v = 0
-        while v<len(strs):
-            v+=1
+        while v < len(strs):
+            v += 1
             yield v
     n = insf()
     for i in array1:
         if i == ' ':
-            array1[array1.index(i)] = strs[next(n)-1]
+            array1[array1.index(i)] = strs[next(n) - 1]
     return array1

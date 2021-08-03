@@ -7,6 +7,3 @@ def is_anagram(test, original):
         return False
     else:
         return True
-
-
-

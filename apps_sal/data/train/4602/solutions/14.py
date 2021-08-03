@@ -1,1 +1,1 @@
-is_anagram = lambda t, o: sorted(t.lower()) == sorted(o.lower())
+def is_anagram(t, o): return sorted(t.lower()) == sorted(o.lower())
