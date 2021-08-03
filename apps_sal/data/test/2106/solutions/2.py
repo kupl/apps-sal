@@ -15,7 +15,8 @@ def main():
         if d[i] > fuel:
             diff = d[i] - fuel
             refill = diff // mx
-            if refill * mx < diff: refill += 1
+            if refill * mx < diff:
+                refill += 1
             fuel += (refill * mx)
             ans += (k * refill)
 

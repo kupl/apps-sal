@@ -12,6 +12,8 @@ a = min(n[i] // q[i] for i in range(m))
 b = max((n[i] + r // p[i]) // q[i] for i in range(m)) + 1
 while b - a > 1:
     c = (a + b) // 2
-    if sum(max(0, (c * q[i] - n[i]) * p[i]) for i in range(m)) > r: b = c
-    else: a = c
+    if sum(max(0, (c * q[i] - n[i]) * p[i]) for i in range(m)) > r:
+        b = c
+    else:
+        a = c
 print(a)

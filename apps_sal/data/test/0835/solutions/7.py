@@ -6,9 +6,12 @@ def readln(): return tuple(map(int, input().split()))
 
 cb = cs = cc = 0
 for c in list(input()):
-    if c == 'B': cb += 1
-    if c == 'S': cs += 1
-    if c == 'C': cc += 1
+    if c == 'B':
+        cb += 1
+    if c == 'S':
+        cs += 1
+    if c == 'C':
+        cc += 1
 nb, ns, nc = readln()
 pb, ps, pc = readln()
 p, = readln()

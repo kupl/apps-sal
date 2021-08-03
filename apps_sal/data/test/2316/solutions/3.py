@@ -3,7 +3,9 @@ import sys
 from collections import deque
 # 26 ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 # alf = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
+
 ipnut = input
 q = int(input())
 for i in range(q):

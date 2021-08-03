@@ -1,7 +1,7 @@
 n, k = list(map(int, input().split()))
 ara = list(map(int, input().split()))
 arb = list(map(int, input().split()))
-sum1 = 1;
+sum1 = 1
 p_k = 10**k
 p_k1 = 10**(k - 1)
 p_k2 = 10**(k - 2)

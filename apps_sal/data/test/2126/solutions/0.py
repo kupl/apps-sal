@@ -7,7 +7,8 @@ def main():
         for j in range(m):
             if mat[i][j]:
                 mat[i][j] = min(col[i], row[j])
-    for arr in mat: print(*arr)
+    for arr in mat:
+        print(*arr)
     return 0
 
 

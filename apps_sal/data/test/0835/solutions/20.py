@@ -9,9 +9,12 @@ r, = scan(int)
 
 b = s = c = 0
 for char in string:
-    if (char == 'B'): b += 1
-    if (char == 'S'): s += 1
-    if (char == 'C'): c += 1
+    if (char == 'B'):
+        b += 1
+    if (char == 'S'):
+        s += 1
+    if (char == 'C'):
+        c += 1
 
 ans = 0
 

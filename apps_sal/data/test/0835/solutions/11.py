@@ -8,7 +8,10 @@ for c in s:
     d[c] += 1
 db, ds, dc = d["B"], d["S"], d["C"]
 
-f = lambda x: max(0, x * db - nb) * pb + max(0, x * ds - ns) * ps + max(0, x * dc - nc) * pc
+
+def f(x): return max(0, x * db - nb) * pb + max(0, x * ds - ns) * ps + max(0, x * dc - nc) * pc
+
+
 a, b = 0, 1000000001000
 while a < b:
     m = (a + b) // 2

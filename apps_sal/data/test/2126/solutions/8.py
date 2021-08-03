@@ -1,5 +1,7 @@
-kk = lambda: list(map(int, input().split()))
-ll = lambda: list(kk())
+def kk(): return list(map(int, input().split()))
+def ll(): return list(kk())
+
+
 n, m, h = kk()
 front = ll()
 left = ll()

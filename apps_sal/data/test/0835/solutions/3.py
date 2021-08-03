@@ -5,7 +5,8 @@ C = st.count('C')
 b, s, c = map(int, input().split())
 bp, sp, cp = map(int, input().split())
 r = int(input())
-lm = 0; rm = int(1e15) + 1
+lm = 0
+rm = int(1e15) + 1
 while rm - lm > 1:
     m = (rm + lm) // 2
    # print(m)
