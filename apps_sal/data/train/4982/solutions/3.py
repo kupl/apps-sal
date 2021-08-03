@@ -1,7 +1,7 @@
 class Game():
     def __init__(self, board):
         self.board = board
-    
+
     def play(self, lines):
         self.lines = set(lines)
         change = True

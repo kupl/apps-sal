@@ -1,6 +1,6 @@
 def merge(*dicts):
-    r={}
+    r = {}
     for d in dicts:
         for k in d:
-            r[k]=r.get(k,[])+[d[k]]
+            r[k] = r.get(k, []) + [d[k]]
     return r

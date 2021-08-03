@@ -1,9 +1,9 @@
 class Game():
-    
+
     def __init__(self, n):
         k = 2 * n + 1
         self.board = {frozenset(k * r + 1 + c + d for d in (0, n, n + 1, k))
-                        for r in range(n) for c in range(n)}
+                      for r in range(n) for c in range(n)}
 
     def play(self, lines):
         lines = set(lines)
@@ -14,5 +14,6 @@ class Game():
                     lines |= stick
                     self.board.remove(cell)
                     break
-            else: break
+            else:
+                break
         return sorted(lines)

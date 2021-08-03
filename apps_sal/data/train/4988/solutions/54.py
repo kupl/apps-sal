@@ -1,4 +1,4 @@
 def square(n):
     product = 1
-    product = n*n
+    product = n * n
     return product

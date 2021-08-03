@@ -1,2 +1,2 @@
 def square(n):
-    return abs(n*n) 
+    return abs(n * n)

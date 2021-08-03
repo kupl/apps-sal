@@ -1,3 +1,3 @@
-#def square(n):
+# def square(n):
 #    pass
-square = lambda n: n**2
+def square(n): return n**2
