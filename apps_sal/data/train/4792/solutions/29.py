@@ -6,4 +6,3 @@ def parse_float(string):
             return float(string)
         except ValueError:
             return None
-

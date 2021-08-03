@@ -1,6 +1,6 @@
 def parse_float(string):
     try:
         i = float(string)
-        return i 
+        return i
     except:
         pass

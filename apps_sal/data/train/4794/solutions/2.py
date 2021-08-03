@@ -6,7 +6,7 @@ def comfortable_numbers(l, r):
             n //= 10
         return sum + n
 
-    a = [(x, y) for x in range(l, r) for y in range(x+1, r+1)
+    a = [(x, y) for x in range(l, r) for y in range(x + 1, r + 1)
          if x <= y + digit(y) and x >= y - digit(y)
          and y <= x + digit(x) and y >= x - digit(x)]
 

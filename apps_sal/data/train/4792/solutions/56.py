@@ -1,6 +1,6 @@
 def parse_float(string):
     string = str(string)
-    try: 
+    try:
         x = float(string)
         return x
     except ValueError:

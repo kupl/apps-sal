@@ -3,8 +3,10 @@ from re import compile as reCompile
 SENTENCE = reCompile(r'[.!?]')
 SYLLABLE = reCompile(r'(?i)[aeiou]+')
 
+
 def count(string, pattern):
     return len(pattern.findall(string))
+
 
 def flesch_kincaid(text):
     nWords = text.count(' ') + 1

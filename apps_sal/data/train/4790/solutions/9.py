@@ -14,8 +14,3 @@ def clean_mean(sample, cutoff):
         return round(mean, 2)
     else:
         return clean_mean(sample, cutoff)
-        
-    
-    
-    
-

@@ -3,4 +3,3 @@ def parse_float(string):
         if string.isalpha():
             return None
         return float(string)
-

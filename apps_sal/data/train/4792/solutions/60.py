@@ -1,6 +1,6 @@
 def parse_float(ts):
     try:
-      float(ts)
-      return float(ts)
+        float(ts)
+        return float(ts)
     except:
-      return None
+        return None
