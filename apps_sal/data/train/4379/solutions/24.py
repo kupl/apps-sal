@@ -1,2 +1,2 @@
-def combine_names(n,n2):
-    return n + " " + n2 
+def combine_names(n, n2):
+    return n + " " + n2

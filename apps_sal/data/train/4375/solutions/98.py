@@ -10,9 +10,11 @@ def get_planet_name(id):
         8: "Neptune",
     }
     if (id > 8):
-        print ("Kelebihan Bos")
+        print("Kelebihan Bos")
     elif (id < 0):
-        print ("Belajar Lagi Bos")
+        print("Belajar Lagi Bos")
     else:
         return planet_names.get(id)
+
+
 print(get_planet_name(3))

@@ -1,7 +1,7 @@
-def get_planet_name(id): # yea just do most things siplistic, I could think of elegant wasy to do this but ill never reuse it so
+def get_planet_name(id):  # yea just do most things siplistic, I could think of elegant wasy to do this but ill never reuse it so
     # I do love case switch methods I am going to have to find the python eqiv
-    name=""
-    
+    name = ""
+
     if id == 1:
         name = 'Mercury'  # the fire ball
     if id == 2:
@@ -20,5 +20,5 @@ def get_planet_name(id): # yea just do most things siplistic, I could think of e
         name = 'Neptune'  # It's to cold for fish
     if id == 9:
         name = 'Pluto'    # becuse it has a core a dwarf planet is a planet dwarf people are people arent they
-    
-    return name #only because you asked nice
+
+    return name  # only because you asked nice

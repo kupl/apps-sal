@@ -1,6 +1,6 @@
 def did_we_win(plays):
-    #print(plays)
-    increment = ["pass","run"]
+    # print(plays)
+    increment = ["pass", "run"]
     decrement = ["sack"]
     gameOver = ["turnover"]
     score = plays[0][0]
@@ -16,4 +16,3 @@ def did_we_win(plays):
         return True
     else:
         return False
-

@@ -1,1 +1,1 @@
-combine_names = lambda x,y: " ".join([x,y])
+def combine_names(x, y): return " ".join([x, y])

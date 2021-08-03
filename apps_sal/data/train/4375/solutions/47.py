@@ -8,4 +8,4 @@ def get_planet_name(id):
         ["Saturn"],
         ["Uranus"],
         ["Neptune"]]
-    return "'".join(hop[id-1])
+    return "'".join(hop[id - 1])

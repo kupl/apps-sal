@@ -1,1 +1,1 @@
-combine_names = lambda *n : ' '.join(list(n))
+combine_names = lambda *n: ' '.join(list(n))

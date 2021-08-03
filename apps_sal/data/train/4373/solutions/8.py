@@ -1,4 +1,6 @@
 import re
+
+
 def count_smileys(arr):
     count = 0
     for i in arr:

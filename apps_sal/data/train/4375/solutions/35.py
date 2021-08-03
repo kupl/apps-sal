@@ -1,6 +1,6 @@
 def get_planet_name(id):
     # This doesn't work; Fix it!
-    switch={
+    switch = {
         1: "Mercury",
         2: "Venus",
         3: "Earth",
@@ -9,5 +9,5 @@ def get_planet_name(id):
         6: "Saturn",
         7: "Uranus",
         8: "Neptune"
-        }
+    }
     return switch.get(id, "Invalid Planet Selection")

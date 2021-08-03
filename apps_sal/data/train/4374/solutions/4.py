@@ -4,4 +4,3 @@ def did_we_win(plays):
     if not all(plays):
         return True
     return sum(-yards if action == "sack" else yards for yards, action in plays) > 10
-

@@ -1,6 +1,7 @@
 def get_planet_name(id):
     return switch(id)
 
+
 def switch(id):
     case = {
         'case1': {'name': "Mercury"},
@@ -9,7 +10,7 @@ def switch(id):
         'case4': {'name': "Mars"},
         'case5': {'name': "Jupiter"},
         'case6': {'name': "Saturn"},
-        'case7': {'name': "Uranus" },
+        'case7': {'name': "Uranus"},
         'case8': {'name': "Neptune"},
     }
     caseKey = 'case' + str(id)

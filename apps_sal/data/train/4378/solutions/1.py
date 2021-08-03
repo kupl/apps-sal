@@ -4,4 +4,3 @@ def find_spaceship(astromap):
             if col == 'X':
                 return [b, a]
     return 'Spaceship lost forever.'
-

@@ -1,2 +1,2 @@
-def combine_names(wa,wb):
+def combine_names(wa, wb):
     return wa + ' ' + wb

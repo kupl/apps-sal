@@ -11,5 +11,3 @@ def get_planet_name(id):
         8: "Neptune"
     }
     return obj1[id]
-
-
