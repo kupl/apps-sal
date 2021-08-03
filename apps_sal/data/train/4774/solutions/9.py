@@ -1,4 +1,4 @@
-def find_in_array(seq, predicate): 
+def find_in_array(seq, predicate):
     for i, elem in enumerate(seq):
         if predicate(elem, i):
             return i

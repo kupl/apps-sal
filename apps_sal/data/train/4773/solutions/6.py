@@ -1,6 +1,7 @@
 from bisect import insort
 from functools import reduce
 
+
 def count_find_num(primesL, n):
     product = reduce(lambda a, b: a * b, primesL)
     if product > n:

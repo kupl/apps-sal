@@ -26,4 +26,3 @@ def mystery_range(s, n):
         if string == next(gen):
             return [start, start + n - 1]
         start += 1
-

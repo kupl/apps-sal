@@ -1,6 +1,6 @@
 def encryptor(key, message):
-    #Program me!
-    key  = key % 26
+    # Program me!
+    key = key % 26
     result = ''
     for c in message:
         if c >= 'A' and c <= 'Z':

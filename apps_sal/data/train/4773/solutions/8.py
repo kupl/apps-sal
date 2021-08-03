@@ -21,4 +21,3 @@ def count_find_num(primesL, limit):
                 queue.append(prod)
 
     return [len(found_numbers), max(found_numbers)]
-

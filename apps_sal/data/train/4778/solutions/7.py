@@ -1,5 +1,5 @@
 def most_money(students):
-    money = lambda s: s.fives * 5 + s.tens * 10 + s.twenties * 20
+    def money(s): return s.fives * 5 + s.tens * 10 + s.twenties * 20
     students = sorted(students, key=money, reverse=True)
     if len(students) != 1 and money(students[0]) == money(students[1]):
         return "all"
