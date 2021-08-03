@@ -1,4 +1,6 @@
-o = lambda: [int(f)for f in input().split()]
+def o(): return [int(f)for f in input().split()]
+
+
 k, n = o()
 a = o()
 b = o()

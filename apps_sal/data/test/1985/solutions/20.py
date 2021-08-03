@@ -15,7 +15,7 @@ for i in range(len(rate)):
         rate[i] += rate[i - 1]
 
 ans = set()
-ref = next(iter(rem));
+ref = next(iter(rem))
 for i in range(len(rate)):
     cnt = rem.copy()
     for j in range(len(rate)):

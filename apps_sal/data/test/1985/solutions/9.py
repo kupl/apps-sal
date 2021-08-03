@@ -40,10 +40,12 @@ def howMany(a1):
     nonlocal ans
     # print(a1)
     for i in b:
-        if not i in a1: return
+        if not i in a1:
+            return
     if a1[0] in test:
         return
-    else: test.add(a1[0])
+    else:
+        test.add(a1[0])
     # print(b[0]-a1[0])
     ans += 1
 

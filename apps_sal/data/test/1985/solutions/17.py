@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 k, n = R()
 a, b = list(R()), list(R())
 c = [a[0]]
@@ -12,5 +14,6 @@ for x in a:
     for y in b[1:]:
         if y - new not in c:
             break
-    else: s.add(new)
+    else:
+        s.add(new)
 print(len(s))

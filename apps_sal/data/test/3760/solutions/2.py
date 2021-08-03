@@ -16,4 +16,4 @@ d = max(0, 0 - y1)
 y1, y2 = y1 + d, y2 + d
 d = max(0, y2 - m)
 y1, y2 = y1 - d, y2 - d
-print((" ".join(map(str, [x1, y1, x2, y2]))));
+print((" ".join(map(str, [x1, y1, x2, y2]))))

@@ -9,7 +9,8 @@ def possible(s):
     target = set(b)
     for i in a:
         s += i
-        if s in target: target.remove(s)
+        if s in target:
+            target.remove(s)
     return not target
 
 
