@@ -6,6 +6,3 @@ def solve(arr):
         else:
             pass
     return res[::-1]
-            
-            
-

@@ -1,4 +1,4 @@
-def solve(arr): 
+def solve(arr):
 
     holder, result = {}, []
     index = len(arr) - 1
@@ -10,4 +10,3 @@ def solve(arr):
         index -= 1
 
     return result
-

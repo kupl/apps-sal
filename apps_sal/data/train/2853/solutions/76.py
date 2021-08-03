@@ -1,4 +1,4 @@
-def solve(arr): 
+def solve(arr):
     nums = set()
     out = []
     for elem in reversed(arr):

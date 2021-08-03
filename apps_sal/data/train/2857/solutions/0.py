@@ -1,1 +1,1 @@
-splitSentence=str.split
+splitSentence = str.split

@@ -6,5 +6,5 @@ def solve(arr):
             seen.append(i)
         else:
             seen.append(i)
-            
+
     return seen

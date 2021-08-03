@@ -11,4 +11,3 @@ def solve(arr: List[int]) -> List[int]:
             d[a] = None
 
     return list(d.keys())
-

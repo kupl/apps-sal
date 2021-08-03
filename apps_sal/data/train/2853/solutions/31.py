@@ -4,6 +4,3 @@ def solve(arr):
         if num not in l:
             l.append(num)
     return l[::-1]
-
-    
-

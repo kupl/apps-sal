@@ -15,7 +15,3 @@ def passage(comb1, comb2):
 def combs(comb1, comb2):
     comb2, comb1 = sorted([comb1, comb2], key=lambda x: len(x))
     return min(passage(comb1, comb2), passage(comb1[::-1], comb2[::-1]))
-    
-
-            
-

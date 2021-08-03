@@ -1,4 +1,4 @@
-def solve(arr): 
+def solve(arr):
     uniques = set(arr)
     output = []
     for n in arr[::-1]:

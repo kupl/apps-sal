@@ -11,5 +11,5 @@ def solve(arr):
     for x in ds:
         while arr.count(x) > 1:
             arr.remove(x)
-    
+
     return arr

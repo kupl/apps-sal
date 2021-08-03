@@ -1,4 +1,4 @@
-def solve(arr): 
+def solve(arr):
     removed = []
     for i in arr[::-1]:
         if not i in removed:

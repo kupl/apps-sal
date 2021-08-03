@@ -1,4 +1,4 @@
-def solve(arr): 
+def solve(arr):
     result = []
     arr = arr[::-1]
     for i in arr:

@@ -3,5 +3,5 @@ def solve(arr):
     for i in arr:
         if i in seen:
             seen.remove(i)
-        seen.append(i)        
+        seen.append(i)
     return seen

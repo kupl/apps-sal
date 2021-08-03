@@ -10,4 +10,3 @@ def solve(arr):
         else:
             num += 1
     return(arr)
-

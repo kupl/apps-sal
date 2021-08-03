@@ -1,4 +1,4 @@
-def solve(arr): 
+def solve(arr):
     tmp = {}
     s = set(arr)
     for n in s:
