@@ -6,4 +6,3 @@ def is_mac_48_address(address):
         except ValueError:
             return False
     return len(chunks) == 6
-

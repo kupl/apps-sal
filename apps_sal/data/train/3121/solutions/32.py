@@ -7,5 +7,5 @@ def solve(arr):
                 pair = True
         if (not pair):
             result = arr[i]
-            
+
     return result

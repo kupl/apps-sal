@@ -4,14 +4,14 @@ def solve(arr):
     ele = {}
     for i in arr:
         if i in ele:
-            ele[i] = ele[i]+i
+            ele[i] = ele[i] + i
         else:
             ele[i] = i
         sum = sum + i
-    for k,v in ele.items():
+    for k, v in ele.items():
         if v == sum:
             if -k not in arr:
-                times = sum/k
+                times = sum / k
     if times > 1:
-        sum = sum/times
+        sum = sum / times
     return sum

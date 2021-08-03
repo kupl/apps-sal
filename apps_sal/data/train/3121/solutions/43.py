@@ -3,4 +3,3 @@ def solve(arr):
     for i in cleaned:
         if not -i in cleaned:
             return i
-
