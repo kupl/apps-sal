@@ -8,5 +8,5 @@ def smash(words):
     else:
 
         for i in words:
-            res = res +" "+ i 
+            res = res + " " + i
         return res[1:]

@@ -7,5 +7,3 @@ def smash(words):
             newWord += words[i]
             newWord += " "
     return newWord
-        
-

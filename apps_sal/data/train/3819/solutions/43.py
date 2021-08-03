@@ -1,5 +1,5 @@
 def smash(w):
-    result =''
+    result = ''
     for i in w:
-        result+=i + ' '
+        result += i + ' '
     return result.rstrip()

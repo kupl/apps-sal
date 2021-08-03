@@ -6,5 +6,3 @@ def smash(words):
         else:
             string += ' ' + words[i]
     return string
-        
-

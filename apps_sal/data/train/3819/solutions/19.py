@@ -1,1 +1,1 @@
-smash = lambda string: " ".join(string)
+def smash(string): return " ".join(string)

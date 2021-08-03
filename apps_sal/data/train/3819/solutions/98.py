@@ -8,4 +8,3 @@ def smash(words):
         else:
             sentence += ' '
     return(sentence)
-

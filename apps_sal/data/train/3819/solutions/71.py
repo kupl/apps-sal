@@ -4,4 +4,3 @@ def smash(words):
         stroke = stroke + i + ' '
     stroke = stroke.rstrip()
     return stroke
-

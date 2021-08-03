@@ -6,5 +6,3 @@ def smash(words):
         else:
             sentence += f' {i}'
     return sentence
-            
-

@@ -1,5 +1,6 @@
 def gcd(a, b):
-    return a if b == 0 else gcd(b, a%b)
+    return a if b == 0 else gcd(b, a % b)
+
 
 def coprimes(n):
     rslt = {1}

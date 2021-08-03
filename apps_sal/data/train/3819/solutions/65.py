@@ -8,4 +8,3 @@ def smash(words):
             sentence += " "
         count += 1
     return sentence
-

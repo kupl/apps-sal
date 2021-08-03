@@ -4,4 +4,3 @@ def smash(words):
         s += str(w) + " "
     s = s.rstrip()
     return s
-

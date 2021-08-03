@@ -5,4 +5,3 @@ def smash(words):
     for word in words:
         out += word + " "
     return out[0:-1]
-
