@@ -1,8 +1,10 @@
 def calc(X, Y):
-    if len(Y) == 3: return sum(Y)
+    if len(Y) == 3:
+        return sum(Y)
     for x in X:
         for y in Y:
-            if y % x == 0: break
+            if y % x == 0:
+                break
         else:
             return calc([i for i in X if i != x], sorted(Y + [x])[::-1])
     return sum(Y)

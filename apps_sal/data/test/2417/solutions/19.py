@@ -40,7 +40,9 @@ mo = 10**9 + 7
 inf = float('inf')
 # ts=time.time()
 # sys.setrecursionlimit(10**6)
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(10**7)
 
 show_flg = False

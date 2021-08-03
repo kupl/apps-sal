@@ -1,4 +1,6 @@
-M = lambda: list(map(int, input().split()))
+def M(): return list(map(int, input().split()))
+
+
 q = int(input())
 for qer in range(q):
     n = int(input())

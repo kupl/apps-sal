@@ -1,5 +1,6 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 N = int(input())
 A = [int(a) - 1 for a in input().split()][::-1]

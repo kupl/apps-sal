@@ -14,7 +14,8 @@ def calcSum(first):
         if yes:
             s += m[i]
             k += 1
-            if k == 3: break
+            if k == 3:
+                break
     return s
 
 
@@ -34,7 +35,8 @@ for _ in range(nnn):
     a.sort(reverse=True)
     m = [a[0]]
     for i in range(1, len(a)):
-        if a[i] == a[i - 1]: continue
+        if a[i] == a[i - 1]:
+            continue
         yes = True
         for j in range(1, len(m)):
             if m[j] % a[i] == 0:

@@ -1,6 +1,8 @@
 from collections import Counter
 from itertools import accumulate as acc
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n = int(input())
 x = read()
 s = 0

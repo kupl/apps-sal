@@ -4,14 +4,14 @@ c = {}
 u = {}
 a = [0 for _ in range(n)]
 for i in range(n):
-    a[i] = t[i] * i - t[i] * (n - 1 - i);
+    a[i] = t[i] * i - t[i] * (n - 1 - i)
     if t[i] not in u:
         u[t[i]] = [i]
     else:
         u[t[i]].append(i)
 l = []
 for x in u:
-    l.append(x);
+    l.append(x)
 l.sort()
 p = len(l)
 res = 0
