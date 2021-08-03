@@ -1,7 +1,9 @@
-ri = lambda: int(input())
-rl = lambda: list(map(int, input().split()))
-rr = lambda N: [ri() for _ in range(N)]
-YN = lambda b: print('YES') if b else print('NO')
+def ri(): return int(input())
+def rl(): return list(map(int, input().split()))
+def rr(N): return [ri() for _ in range(N)]
+def YN(b): return print('YES') if b else print('NO')
+
+
 INF = 10**18
 
 N, K = rl()

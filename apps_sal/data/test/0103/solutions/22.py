@@ -12,10 +12,12 @@ def user99():
     ans = 0
     for i in b:
         if len(i) == 0:
-            continue;
+            continue
         x = len(i) - 2
-        if i[0] == 1: x += 1
-        if i[-1] == 10**3: x += 1
+        if i[0] == 1:
+            x += 1
+        if i[-1] == 10**3:
+            x += 1
         ans = max(ans, x)
 
     print(ans)

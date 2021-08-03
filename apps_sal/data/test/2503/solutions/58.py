@@ -2,9 +2,11 @@
 import sys
 import numpy as np
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 # 縦K、横2*Kの長方形に全ての希望をWとして入れる
 # numpyの累積和、最後にmaxをとる
@@ -12,14 +14,18 @@ N, K = lr()
 table = [[0] * 2 * K for _ in range(K)]
 for _ in range(N):
     x, y, c = sr().split()
-    x = int(x); y = int(y)
+    x = int(x)
+    y = int(y)
     if c == 'B':
         x -= K  # ここで全てWとして扱える
-    x %= 2 * K; y %= 2 * K
+    x %= 2 * K
+    y %= 2 * K
     if x >= K and y >= K:
-        x -= K; y -= K
+        x -= K
+        y -= K
     elif y >= K:
-        x += K; y -= K
+        x += K
+        y -= K
     # 長方形に入った
     table[y][x] += 1
 

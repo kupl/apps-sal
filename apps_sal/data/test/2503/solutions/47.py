@@ -9,7 +9,8 @@ for _ in range(N):
     x, y, c = input().split()
     x = int(x) % K2
     y = int(y) % K2
-    if c == 'B': nb += 1
+    if c == 'B':
+        nb += 1
     M[x, y] += 1 if c == 'W' else -1
 
 Sx = np.zeros((K2, K2 + 1), int)

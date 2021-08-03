@@ -5,7 +5,8 @@ for _ in range(n):
     x, y, c = input().split()
     x, y = int(x), int(y)
     d = x // k + y // k
-    x %= k; y %= k
+    x %= k
+    y %= k
     if (c == 'W') ^ (d % 2):
         g[x + 1][y + 1] += 1
     else:
@@ -17,6 +18,8 @@ for i in range(k):
 for i in range(k):
     for j in range(k):
         cur = g[k][k] - g[k][j] - g[i][k] + g[i][j] * 2 + b
-        if cur > ans: ans = cur
-        if n - cur > ans: ans = n - cur
+        if cur > ans:
+            ans = cur
+        if n - cur > ans:
+            ans = n - cur
 print(ans)
