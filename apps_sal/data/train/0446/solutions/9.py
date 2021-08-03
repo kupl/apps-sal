@@ -6,5 +6,5 @@ class Solution:
         print(arr1)
         if k != 0:
             del arr1[:k]
-            
+
         return len(set(arr1))

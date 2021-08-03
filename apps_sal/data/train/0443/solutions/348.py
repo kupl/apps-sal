@@ -12,5 +12,3 @@ class Solution:
                         if rating[j] > rating[k]:
                             count += 1
         return count
-
-

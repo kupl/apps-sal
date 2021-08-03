@@ -9,4 +9,4 @@ class Solution:
             if conditionNo % n == 0:
                 counter = counter + 1
             n = n + 1
-        return counter+1
+        return counter + 1

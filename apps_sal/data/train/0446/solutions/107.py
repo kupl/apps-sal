@@ -3,7 +3,7 @@ class Solution:
         heap = []
         for key, val in list(collections.Counter(arr).items()):
             heapq.heappush(heap, (val, key))
-            
+
         while k > 0:
             val, key = heapq.heappop(heap)
             if val > k:
@@ -12,4 +12,3 @@ class Solution:
             else:
                 k -= val
         return len(heap)
-

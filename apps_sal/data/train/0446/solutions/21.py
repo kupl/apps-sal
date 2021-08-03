@@ -7,4 +7,3 @@ class Solution:
             if k < 0:
                 return len(d) - i
         return 0
-

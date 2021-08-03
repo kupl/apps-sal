@@ -1,9 +1,9 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
-        count=0
+        count = 0
         for i in range(len(rating)):
-            for j in range(i+1,len(rating)):
-                for k in range(j+1,len(rating)):
-                    if((rating[i]<rating[j]<rating[k] and i < j < k) or (rating[i]>rating[j]>rating[k] and i<j<k)):
-                        count+=1
+            for j in range(i + 1, len(rating)):
+                for k in range(j + 1, len(rating)):
+                    if((rating[i] < rating[j] < rating[k] and i < j < k) or (rating[i] > rating[j] > rating[k] and i < j < k)):
+                        count += 1
         return count

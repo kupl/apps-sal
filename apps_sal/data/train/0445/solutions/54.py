@@ -18,4 +18,3 @@ class Solution:
             curr = lst[-x + i] - lst[i]
             result = min(result, curr)
         return result
-

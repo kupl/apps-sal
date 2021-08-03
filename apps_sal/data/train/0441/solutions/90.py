@@ -1,5 +1,6 @@
 import math
 
+
 class Solution:
     def consecutiveNumbersSum(self, N: int) -> int:
         i = 1

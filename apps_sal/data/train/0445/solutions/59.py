@@ -1,12 +1,12 @@
 class Solution:
-    #original submission
+    # original submission
     def minDifference(self, nums: List[int]) -> int:
 
-        if len(nums) < 5: 
+        if len(nums) < 5:
             return 0
-        
+
         a = sorted(nums)
-        
+
         H = len(nums) - 4
         L = 0
         lowest_diff = None
@@ -16,7 +16,7 @@ class Solution:
                 lowest_diff = diff
             H += 1
             L += 1
-        
+
         return lowest_diff
     '''
     # faster and cleaner

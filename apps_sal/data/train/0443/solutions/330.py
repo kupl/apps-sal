@@ -1,6 +1,7 @@
 class Solution:
     def numTeams(self, rating):
         self.count = 0
+
         def dfs(soldier, idx):
             if len(soldier) == 3:
                 if soldier[0] < soldier[1] < soldier[2] or soldier[0] > soldier[1] > soldier[2]:
@@ -11,6 +12,5 @@ class Solution:
                 soldier.append(rating[i])
                 dfs(soldier, i + 1)
                 soldier.pop()
-        dfs([],0)
+        dfs([], 0)
         return self.count
-

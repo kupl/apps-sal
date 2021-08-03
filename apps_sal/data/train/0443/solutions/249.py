@@ -14,7 +14,3 @@ class Solution:
                         if rating[j] > rating[k]:
                             num_combinations = num_combinations + 1
         return num_combinations
-
-
-
-

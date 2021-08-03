@@ -5,7 +5,7 @@ class Solution:
             if num not in count:
                 count[num] = 0
             count[num] += 1
-        
+
         values = sorted([v for v in count.values()])
         for _ in range(k):
             values[0] -= 1

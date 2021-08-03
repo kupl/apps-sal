@@ -5,12 +5,11 @@ class Solution:
             return 0
         else:
             for i in range(len(rating)):
-                for j in range(i+1,len(rating)):
-                    for k in range(j+1,len(rating)):
+                for j in range(i + 1, len(rating)):
+                    for k in range(j + 1, len(rating)):
                         if rating[i] > rating[j] > rating[k]:
-                            pairs.append([rating[i],rating[j],rating[k]])
+                            pairs.append([rating[i], rating[j], rating[k]])
                         elif rating[i] < rating[j] < rating[k]:
-                            pairs.append([rating[i],rating[j],rating[k]])
-            
-            return len(pairs)
+                            pairs.append([rating[i], rating[j], rating[k]])
 
+            return len(pairs)

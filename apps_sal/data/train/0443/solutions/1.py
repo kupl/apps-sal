@@ -38,10 +38,9 @@ class Solution:
         for rat in rating:
             index = sort_map[rat]
             right_tree.update(index, -1)
-            count += (left_tree.get_sum(index) *
-                      right_tree.get_sum(~index))
+            count += (left_tree.get_sum(index)
+                      * right_tree.get_sum(~index))
             count += (left_tree.get_sum(~index) * right_tree.get_sum(index))
             left_tree.update(index, 1)
 
         return count
-

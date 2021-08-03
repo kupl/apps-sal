@@ -1,8 +1,8 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
-        
+
         def helper(rating):
-            
+
             resDict = {}
             res = 0
             for i in range(len(rating)):
@@ -15,8 +15,4 @@ class Solution:
                     if rating[i] > rating[j]:
                         res += resDict.get(j, 0)
             return res
-        return helper(rating) + helper(rating[::-1])            
-        
-                
-                    
-
+        return helper(rating) + helper(rating[::-1])

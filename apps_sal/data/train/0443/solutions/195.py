@@ -6,5 +6,5 @@ class Solution:
             for j in range(i + 1, N):
                 for k in range(j + 1, N):
                     ans += int(rating[i] < rating[j] < rating[k] or rating[i] > rating[j] > rating[k])
-        
+
         return ans

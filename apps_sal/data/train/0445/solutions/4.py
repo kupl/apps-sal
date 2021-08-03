@@ -3,12 +3,12 @@ class Solution:
     def minDifference(self, nums: List[int]) -> int:
         if len(nums) < 5:
             return 0
-        
+
         max4 = max3 = max2 = max1 = -float('inf')
         min4 = min3 = min2 = min1 = float('inf')
 
         for i in nums:
-            if i > max1: 
+            if i > max1:
                 max4 = max3
                 max3 = max2
                 max2 = max1
@@ -22,8 +22,8 @@ class Solution:
                 max3 = i
             elif i > max4 and i <= max3:
                 max4 = i
-                
-            if i < min1: 
+
+            if i < min1:
                 min4 = min3
                 min3 = min2
                 min2 = min1
@@ -39,7 +39,7 @@ class Solution:
                 min4 = i
             #print(str([min1, min2, min3, min4]))
             #print(str([max4, max3, max2, max1]))
-        
+
         smallest_diff = max4 - min1
         diff = max3 - min2
         if smallest_diff > diff:

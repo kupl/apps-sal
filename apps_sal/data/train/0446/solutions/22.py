@@ -9,6 +9,5 @@ class Solution:
         while k >= 0:
             k -= counter[ptr]
             ptr += 1
-        
-        return len(counter) - ptr + 1
 
+        return len(counter) - ptr + 1

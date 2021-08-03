@@ -3,9 +3,9 @@ class Solution:
         if len(rating) < 3:
             return 0
         count = 0
-        for i in range(len(rating)-2):
-            for j in range(i+1, len(rating)-1):
-                for k in range(j+1, len(rating)):
+        for i in range(len(rating) - 2):
+            for j in range(i + 1, len(rating) - 1):
+                for k in range(j + 1, len(rating)):
                     if (rating[i] < rating[j] < rating[k]) or (rating[i] > rating[j] > rating[k]):
                         count += 1
         return count

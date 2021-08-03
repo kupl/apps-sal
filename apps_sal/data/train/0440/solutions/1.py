@@ -15,7 +15,7 @@ class Solution:
             if traj == 1:
                 pos += q
                 if pos > p:
-                    pos = 2*p - pos
+                    pos = 2 * p - pos
                     traj *= -1
             else:
                 pos -= q

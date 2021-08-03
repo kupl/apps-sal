@@ -7,5 +7,5 @@ class Solution:
                 for k in range(j + 1, N):
                     if rating[i] < rating[j] < rating[k] or rating[i] > rating[j] > rating[k]:
                         res += 1
-        
+
         return res

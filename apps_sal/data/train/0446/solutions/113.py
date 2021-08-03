@@ -1,19 +1,19 @@
 class Solution:
-  def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
-    counter = {}
+    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
+        counter = {}
 
-    for item in arr:
-      counter[item] = 1 + counter.get(item, 0)
+        for item in arr:
+            counter[item] = 1 + counter.get(item, 0)
 
-    values = sorted(counter.values())
-    
-    removed = 0
+        values = sorted(counter.values())
 
-    for v in values:
-      if v > k:
-        break
-      else:
-        k -= v
-        removed += 1
+        removed = 0
 
-    return len(values) - removed
+        for v in values:
+            if v > k:
+                break
+            else:
+                k -= v
+                removed += 1
+
+        return len(values) - removed

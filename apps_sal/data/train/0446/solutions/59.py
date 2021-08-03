@@ -6,7 +6,6 @@ class Solution:
             num = cnt.pop(0)
             k -= num
         if k < 0:
-            return len(cnt)+1
+            return len(cnt) + 1
         elif k == 0:
             return len(cnt)
-

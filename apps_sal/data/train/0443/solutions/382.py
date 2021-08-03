@@ -9,7 +9,7 @@ class Solution:
                     left_less += 1
                 elif rating[i] > rating[j]:
                     left_greater += 1
-            for k in range(j+1, len(rating)):
+            for k in range(j + 1, len(rating)):
                 if rating[j] < rating[k]:
                     right_greater += 1
                 elif rating[j] > rating[k]:

@@ -10,4 +10,3 @@ class Solution:
             k += 1
             floor = (N - k * (k - 1) // 2) // k
         return num_ways
-

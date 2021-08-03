@@ -7,4 +7,3 @@ class Solution:
                     if rating[i] < rating[j] < rating[k] or rating[i] > rating[j] > rating[k]:
                         num += 1
         return num
-

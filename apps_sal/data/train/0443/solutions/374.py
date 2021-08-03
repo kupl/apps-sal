@@ -6,7 +6,7 @@ class Solution:
                 if rating[j] == rating[i]:
                     continue
                 if rating[j] < rating[i]:
-                    result += sum(num < rating[j] for num in rating[j+1:])
+                    result += sum(num < rating[j] for num in rating[j + 1:])
                 else:
-                    result += sum(num > rating[j] for num in rating[j+1:])
+                    result += sum(num > rating[j] for num in rating[j + 1:])
         return result

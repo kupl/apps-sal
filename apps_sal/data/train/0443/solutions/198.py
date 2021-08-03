@@ -1,6 +1,7 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
         n = len(rating)
+
         def get_triplets(r):
             res = 0
             for i in range(n):

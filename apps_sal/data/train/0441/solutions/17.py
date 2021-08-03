@@ -7,5 +7,3 @@ class Solution:
             if N % k == 0:
                 count += 1
         return count
-                
-

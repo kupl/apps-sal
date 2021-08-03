@@ -9,5 +9,3 @@ class Solution:
                     if rating[i] > rating[j] and rating[j] > rating[k]:
                         count += 1
         return count
-        
-

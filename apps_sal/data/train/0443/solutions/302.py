@@ -2,7 +2,7 @@ class Solution:
     def numTeams(self, rating: List[int]) -> int:
         res = 0
         i = 0
-        j = 1 
+        j = 1
         k = 2
         while i < len(rating) - 2:
             if rating[i] < rating[j] < rating[k] or rating[i] > rating[j] > rating[k]:

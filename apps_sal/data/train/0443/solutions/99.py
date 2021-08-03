@@ -18,6 +18,5 @@ class Solution:
                     ans += g[j]
                 else:
                     ans += s[j]
-        
-        return ans
 
+        return ans

@@ -5,7 +5,6 @@ class Solution:
             for j in range(i + 1, len(rating)):
                 for k in range(j + 1, len(rating)):
                     curr = (rating[i], rating[j], rating[k])
-                    if (rating[i] < rating[j] and rating[j] < rating[k]) or (rating[i] > rating[j] and rating[j] > rating[k]): cnt += 1                
+                    if (rating[i] < rating[j] and rating[j] < rating[k]) or (rating[i] > rating[j] and rating[j] > rating[k]):
+                        cnt += 1
         return cnt
-                        
-

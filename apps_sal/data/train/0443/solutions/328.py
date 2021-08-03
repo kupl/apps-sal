@@ -28,4 +28,3 @@ class Solution:
         return strictly_monotonic(rating, 0, 3, ascending=True) + strictly_monotonic(
             rating, max_rating + 1, 3, ascending=False
         )
-

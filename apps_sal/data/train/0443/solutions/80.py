@@ -10,4 +10,4 @@ class Solution:
                         count += 1
                     if s[i] > s[j] and s[j] > s[k]:
                         count += 1
-        return count   
+        return count

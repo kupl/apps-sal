@@ -9,4 +9,4 @@ class Solution:
             twoOne = nums[-2] - nums[2]
             oneTwo = nums[-3] - nums[1]
             zeroThree = nums[-4] - nums[0]
-            return min(threeZero,twoOne,oneTwo,zeroThree)
+            return min(threeZero, twoOne, oneTwo, zeroThree)

@@ -6,5 +6,3 @@ class Solution:
             if team[0] > team[1] > team[2] or team[0] < team[1] < team[2]:
                 valid_teams.append(team)
         return len(valid_teams)
-                         
-

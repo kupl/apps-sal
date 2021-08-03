@@ -5,7 +5,7 @@ class Solution:
         heap = []
         for key, val in collections.Counter(arr).items():
             heapq.heappush(heap, (val, key))
-            
+
         for _ in range(k):
             val, key = heapq.heappop(heap)
             if val > 1:

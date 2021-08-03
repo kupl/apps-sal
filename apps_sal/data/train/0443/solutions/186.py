@@ -9,5 +9,5 @@ class Solution:
                         count += 1
                     elif ratings[i] < ratings[j] < ratings[k]:
                         count += 1
-        
+
         return count

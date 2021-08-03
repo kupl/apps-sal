@@ -4,9 +4,9 @@ class Solution:
         print(c)
         cnt, remaining = Counter(c.values()), len(c)
         print(cnt)
-        
-        for key in range(1, len(arr) + 1): 
-            print(cnt[key],key)
+
+        for key in range(1, len(arr) + 1):
+            print(cnt[key], key)
             if k >= key * cnt[key]:
                 k -= key * cnt[key]
                 remaining -= cnt[key]

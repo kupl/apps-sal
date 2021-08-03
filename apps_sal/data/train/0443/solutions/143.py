@@ -6,8 +6,8 @@ class Solution:
                 for k in range(j + 1):
                     if rating[i] < rating[j] < rating[k]:
                         count += 1
-                    
+
                     if rating[i] > rating[j] > rating[k]:
                         count += 1
-        
+
         return count

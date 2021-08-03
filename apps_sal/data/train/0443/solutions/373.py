@@ -11,7 +11,7 @@ class Solution:
                     s_l += 1
                 elif rating[j] > rating[i]:
                     l_l += 1
-            for k in range(i+1, len(rating)):
+            for k in range(i + 1, len(rating)):
                 if rating[k] > rating[i]:
                     s_r += 1
                 elif rating[k] < rating[i]:

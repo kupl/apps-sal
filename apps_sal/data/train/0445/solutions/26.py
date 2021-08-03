@@ -7,4 +7,3 @@ class Solution:
             curr = nums[-x + i] - nums[i]
             result = min(result, curr)
         return result
-

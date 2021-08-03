@@ -7,7 +7,6 @@ class Solution:
         while k > 0:
             count, element = heapq.heappop(heap)
             if count > 1:
-                heapq.heappush(heap, [count-1,element])
-            k-=1
+                heapq.heappush(heap, [count - 1, element])
+            k -= 1
         return len(heap)
-

@@ -6,5 +6,5 @@ class Solution:
             if (N - k * (k + 1) // 2) % k == 0:
                 res += 1
             k += 1
-        
+
         return res
