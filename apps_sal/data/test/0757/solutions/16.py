@@ -15,5 +15,5 @@ def main():
         return -1
     return ret
 
-print(main())
 
+print(main())

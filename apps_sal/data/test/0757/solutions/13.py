@@ -1,16 +1,16 @@
 ino = list(map(int, input().split()))
 inos = list(map(int, input().split()))
-n = ino[0] #фильтры
-m = ino[1] #устройства
-k = ino[2] #разетки
+n = ino[0]  # фильтры
+m = ino[1]  # устройства
+k = ino[2]  # разетки
 del ino
 flag = False
 #a = 1
 for i in range(len(inos)):
-        for j in range(len(inos) - 1, i, -1):
-            #print(i)
-            if inos[j] > inos[j-1]:
-                inos[j], inos[j-1] = inos[j-1], inos[j]
+    for j in range(len(inos) - 1, i, -1):
+        # print(i)
+        if inos[j] > inos[j - 1]:
+            inos[j], inos[j - 1] = inos[j - 1], inos[j]
 
 if m <= k:
     print(0)
@@ -23,7 +23,7 @@ else:
             m += 1
         m = m - inos[j]
 
-        if j+1 == n and m != 0:
+        if j + 1 == n and m != 0:
             print(-1)
             flag = True
             break

@@ -1,7 +1,7 @@
+from functools import lru_cache
 import sys
 sys.setrecursionlimit(100000)
 
-from functools import lru_cache
 
 @lru_cache()
 def best(a):
@@ -12,10 +12,9 @@ def best(a):
             return x + min(x, y)
         elif a % 2 == 0:
 
-            return best(a//2) + min(y, (a - a//2) * x)
+            return best(a // 2) + min(y, (a - a // 2) * x)
         else:
-            return min(best(a-1) , best(a+1) ) + x
-
+            return min(best(a - 1), best(a + 1)) + x
 
 
 n, x, y = map(int, input().split())

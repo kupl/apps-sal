@@ -13,4 +13,3 @@ for testcase in range(int(input())):
         continue
 
     print(2 * cnt3 - cnt2)
-

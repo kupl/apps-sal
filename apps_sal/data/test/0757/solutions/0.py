@@ -11,4 +11,3 @@ for _ in a:
     m -= k - 1
     k = _
 print(ans if m <= k else -1)
-

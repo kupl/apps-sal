@@ -20,4 +20,3 @@ for _ in range(t):
             ans = count2 - count
             ans += count2
             print(ans)
-

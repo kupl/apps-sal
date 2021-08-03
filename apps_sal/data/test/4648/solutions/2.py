@@ -13,4 +13,3 @@ for _ in range(int(input())):
         print(threes + threes - twos)
     else:
         print(-1)
-

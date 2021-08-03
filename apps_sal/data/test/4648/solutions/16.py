@@ -19,5 +19,4 @@ for loop in range(tt):
     if n != 1 or d3 < d2:
         print(-1)
     else:
-        print(d3 + d3-d2)
-
+        print(d3 + d3 - d2)

@@ -17,6 +17,3 @@ for _ in range(t):
             print(p3 + diff)
     else:
         print(-1)
-
-
-
