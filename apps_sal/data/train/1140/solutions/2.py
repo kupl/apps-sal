@@ -13,9 +13,9 @@ for _ in range(t):
     print(l)
     print(l[idx])'''
 try:
- t=int(input())
- for _ in range(t):
-  p,idx=map(int,input().split())
-  print(int(bin(idx)[2:].zfill(p)[::-1],2))
+    t = int(input())
+    for _ in range(t):
+        p, idx = map(int, input().split())
+        print(int(bin(idx)[2:].zfill(p)[::-1], 2))
 except:
- pass
+    pass

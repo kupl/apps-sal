@@ -9,4 +9,3 @@ for _ in range(int(input())):
         if dic[i] % 2 != 0:
             ans += 1
     print(ans - 1 if ans > 0 else ans)
-
