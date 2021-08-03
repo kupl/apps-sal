@@ -6,8 +6,5 @@ def div_con(x):
             diff += num
         else:
             diff -= int(num)
-          
-    return diff
-    
-            
 
+    return diff

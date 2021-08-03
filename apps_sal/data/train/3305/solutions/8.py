@@ -3,20 +3,17 @@ def shortest(N, edgeList):
     edgeList.sort(key=lambda x: x[0])
     path_length = [math.inf for _ in range(N)]
     path_length[0] = 0
-        
+
     for start, end, weight in edgeList:
-#         each edge is written as [start, end, weight] where from < to więc to działa, 
-#         ale gdyby taki warunek nie był prawdziwy to np.
-#         shortest(5, [(0,2,0), (0,3,1), (2,1,0), (3,4,1), (1,4,0)]) zwracałoby 2, zamiast 0
+        #         each edge is written as [start, end, weight] where from < to więc to działa,
+        #         ale gdyby taki warunek nie był prawdziwy to np.
+        #         shortest(5, [(0,2,0), (0,3,1), (2,1,0), (3,4,1), (1,4,0)]) zwracałoby 2, zamiast 0
         if path_length[start] == math.inf:
             continue
         path_length[end] = min(path_length[start] + weight, path_length[end])
-    
-    result = path_length[N-1]
+
+    result = path_length[N - 1]
     return result if result is not math.inf else -1
-
-
-
 
 
 # def shortest(N, edgeList):
@@ -40,4 +37,3 @@ def shortest(N, edgeList):
 #                 heapq.heappush(h, (sum+weight, end))
 #         visited.add(start)
 #     return -1
-

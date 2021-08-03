@@ -4,6 +4,5 @@ def even_fib(m):
     while b < m:
         if b % 2 == 0:
             summ += b
-        a,b = b, a + b
+        a, b = b, a + b
     return summ
-

@@ -28,9 +28,9 @@ def encode_resistor_colors(ohms_string):
     fnum = ''
     check = []
     a, b, c = '', '', ''
-    
-    #First and Second colors:
-    
+
+    # First and Second colors:
+
     for i in number:
         if i.isdigit() == True:
             snumber += i
@@ -41,9 +41,9 @@ def encode_resistor_colors(ohms_string):
     elif len(snumber) == 1:
         a = snumber[0]
         answer = str(color_digit.get(a)) + ' ' + 'black'
-        
+
     # Multiplier color:
-    
+
     for s in number:
         if s.isdigit() == True or s == '.':
             fnum += s
@@ -59,4 +59,4 @@ def encode_resistor_colors(ohms_string):
 
     c = str(int(eval(str(fnum) + '*' + str(mult))))
 
-    return answer + ' ' +  (multiplier.get(str(len(c)))) + ' gold'
+    return answer + ' ' + (multiplier.get(str(len(c)))) + ' gold'
