@@ -1,3 +1,3 @@
-def is_even(n): 
+def is_even(n):
     # your code here
-    return True if 0==n%2 else False
+    return True if 0 == n % 2 else False

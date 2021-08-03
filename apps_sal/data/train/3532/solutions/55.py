@@ -1,7 +1,6 @@
 def apple(x):
     return "It's hotter than the sun!!" if int(x) ** 2 > 1000 else "Help yourself to a honeycomb Yorkie for the glovebox."
-    #if int(x) ** 2 > 1000:
+    # if int(x) ** 2 > 1000:
     #    return "It's hotter than the sun!!"
-    #else:
+    # else:
     #    return "Help yourself to a honeycomb Yorkie for the glovebox."
-

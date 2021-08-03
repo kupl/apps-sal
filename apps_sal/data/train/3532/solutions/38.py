@@ -5,4 +5,3 @@ def apple(x):
     else:
         result = "Help yourself to a honeycomb Yorkie for the glovebox."
     return result
-

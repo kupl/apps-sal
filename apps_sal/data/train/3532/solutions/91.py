@@ -4,5 +4,5 @@ def apple(x):
     else:
         return "It's hotter than the sun!!"
 
-print((apple("3")))
 
+print((apple("3")))

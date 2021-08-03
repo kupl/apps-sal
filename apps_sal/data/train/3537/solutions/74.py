@@ -6,4 +6,3 @@ def is_even(n):
     elif (n % 2) == 0:
         even = True
         return True
-

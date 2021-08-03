@@ -1,4 +1,4 @@
-def de_nico(key,msg):
+def de_nico(key, msg):
     sorted_key = sorted(key)
     num_key = []
     for chr in key:
@@ -8,7 +8,7 @@ def de_nico(key,msg):
     start = 0
     end = len(key)
     while start < len(msg):
-        chunk = msg[start : end]
+        chunk = msg[start: end]
         for index in num_key:
             if index < len(chunk):
                 result += chunk[index]

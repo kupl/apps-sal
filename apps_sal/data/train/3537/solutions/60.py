@@ -3,4 +3,3 @@ def is_even(n):
         return True
     elif n % 2 == 1 or n == float(n):
         return False
-

@@ -1,4 +1,4 @@
-def is_even(n): 
+def is_even(n):
     # your code here
     n /= 2
     if n == int(n):

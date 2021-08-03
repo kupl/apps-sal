@@ -9,7 +9,7 @@ def asterisc_it(n_sequence: str) -> str:
 
     for ix, num in enumerate(n_sequence):
         if ix < len(n_sequence) - 1:
-            if not int(num) % 2 and not int(n_sequence[ix+1]) % 2:
+            if not int(num) % 2 and not int(n_sequence[ix + 1]) % 2:
                 _result += f"{num}*"
             else:
                 _result += str(num)
@@ -17,4 +17,3 @@ def asterisc_it(n_sequence: str) -> str:
             _result += str(num)
 
     return _result
-
