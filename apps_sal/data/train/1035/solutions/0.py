@@ -13,30 +13,30 @@ for _ in range(T):
     board = []
     for _ in range(R):
         board += [[int(c) for c in input().split()]]
-    
+
     def explore(p):
         next_pos = []
         for i, (dx, dy) in enumerate(p.pairs):
             sx, sy = p.cell
-            new_pairs = p.pairs[:i]+p.pairs[i+1:]
+            new_pairs = p.pairs[:i] + p.pairs[i + 1:]
             # case (+, +)
             px, py = sx + dx, sy + dy
             if px < R and py < C:
-                next_pos += [CurrentPosition(p.points+board[px][py], (px, py), new_pairs)]
+                next_pos += [CurrentPosition(p.points + board[px][py], (px, py), new_pairs)]
             # case (+, -)
             px, py = sx + dx, sy - dy
             if px < R and 0 <= py:
-                next_pos += [CurrentPosition(p.points+board[px][py], (px, py), new_pairs)]
+                next_pos += [CurrentPosition(p.points + board[px][py], (px, py), new_pairs)]
             # case (-, +)
             px, py = sx - dx, sy + dy
             if 0 <= px and py < C:
-                next_pos += [CurrentPosition(p.points+board[px][py], (px, py), new_pairs)]
+                next_pos += [CurrentPosition(p.points + board[px][py], (px, py), new_pairs)]
             # case (-, -)
             px, py = sx - dx, sy - dy
             if 0 <= px and 0 <= py:
-                next_pos += [CurrentPosition(p.points+board[px][py], (px, py), new_pairs)]
+                next_pos += [CurrentPosition(p.points + board[px][py], (px, py), new_pairs)]
         return next_pos
-    
+
     pos = [CurrentPosition(board[Sx][Sy], (Sx, Sy), tel_pairs)]
     result = board[Sx][Sy]
     while pos:
@@ -45,6 +45,5 @@ for _ in range(T):
             pos += explore(p)
         else:
             result = max(result, p.points)
-        
-    print(result)  
 
+    print(result)
