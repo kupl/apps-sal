@@ -4,5 +4,6 @@ def find_lowest_int(k):
         n += 9
     return n
 
+
 def digits(n):
-    return sorted(str(n))    
+    return sorted(str(n))

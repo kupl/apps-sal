@@ -16,6 +16,3 @@ def freq_seq(s, sep):
         conta += 1
     x = sep.join(lista)
     return x
-
-    
-

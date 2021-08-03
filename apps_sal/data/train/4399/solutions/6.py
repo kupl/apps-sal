@@ -24,7 +24,7 @@ def fold_cube(num_list):
 
 class Face:
     def __init__(self, val, nums, faces, x=F, y=R, z=U):
-#         print(val, nums)
+        #         print(val, nums)
         self.nums = nums
         self.val = val
         self.z = z
@@ -77,4 +77,3 @@ class Face:
 
     def __eq__(self, other):
         return self.val == other.val
-

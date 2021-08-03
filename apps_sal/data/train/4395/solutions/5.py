@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def next_higher(prev: int) -> int:
     """
     Consider the integer as a binary integer, left-padded with a zero. To find

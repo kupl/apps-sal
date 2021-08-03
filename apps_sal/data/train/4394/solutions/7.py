@@ -9,4 +9,3 @@ def men_still_standing(cards):
         if len(sent_off_A) == 5 or len(sent_off_B) == 5:
             break
     return (11 - len(sent_off_A), 11 - len(sent_off_B))
-

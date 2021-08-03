@@ -6,14 +6,13 @@ def yellow_be_gone(s):
         'lightgoldenrodyellow': 'SpringGreen',
         'lightyellow': 'MintCream',
         'palegoldenrod': 'LightGreen',
-        'yellow': 'Lime'    
+        'yellow': 'Lime'
     }
-    
+
     if s[0] == '#':
         R, G, B = s[1:3], s[3:5], s[5:7]
         if B < G and B < R:
-            R, B, G = sorted([R,G,B])
+            R, B, G = sorted([R, G, B])
             s = '#' + R + G + B
-        
-    return d.get(s.lower(), s)
 
+    return d.get(s.lower(), s)

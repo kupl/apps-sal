@@ -8,26 +8,27 @@
 7.最后返回len(A) len(B)---因为team=A 浅拷贝
 注意：copy是深拷贝 B不会随着A改变而改变
 '''
-def men_still_standing(cards):
-    #起始球员状态
-    A={k:0 for k in range(1,12)}
-    B=A.copy()
-    
-    #记录球员信息
-    for card in cards:
-        team=A if card[0]=='A' else B
-        player=int(card[1:-1])
-        color=card[-1]
-        
-        if player not in team: #球员已经被淘汰
-            continue
-            
-        team[player]+=1 if color=='Y' else 2
-        
-        if team[player]>=2:
-            del team[player]
-            
-        if len(team)<7:
-            break
-    return len(A),len(B)
 
+
+def men_still_standing(cards):
+    # 起始球员状态
+    A = {k: 0 for k in range(1, 12)}
+    B = A.copy()
+
+    # 记录球员信息
+    for card in cards:
+        team = A if card[0] == 'A' else B
+        player = int(card[1:-1])
+        color = card[-1]
+
+        if player not in team:  # 球员已经被淘汰
+            continue
+
+        team[player] += 1 if color == 'Y' else 2
+
+        if team[player] >= 2:
+            del team[player]
+
+        if len(team) < 7:
+            break
+    return len(A), len(B)
