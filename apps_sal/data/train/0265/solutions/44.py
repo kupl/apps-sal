@@ -5,18 +5,16 @@ class Solution:
         for el in nums:
             pre += el
             sums.append(pre)
-            
-        #print(\"---\")
+
+        # print(\"---\")
        # print(sums)
         ans = 0
-        seen = {} # seen[v] = i iff sums[i] == v
+        seen = {}  # seen[v] = i iff sums[i] == v
         for i, v in enumerate(sums):
-            #print(f\"seen: {seen}\")
-            if v-target in seen:
+            # print(f\"seen: {seen}\")
+            if v - target in seen:
                 ans += 1
-                seen = {} # satisfies non-overlapping
+                seen = {}  # satisfies non-overlapping
             seen[v] = i
-        #print(f\"seen: {seen}\")
+        # print(f\"seen: {seen}\")
         return ans
-            
-

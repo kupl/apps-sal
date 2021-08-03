@@ -5,6 +5,7 @@ class Solution:
         for c in s:
             h[c] -= 1
             cur[c] += 1
-            if h[c] == 0: del h[c]
-            cnt += len(h) == len(cur) 
+            if h[c] == 0:
+                del h[c]
+            cnt += len(h) == len(cur)
         return cnt

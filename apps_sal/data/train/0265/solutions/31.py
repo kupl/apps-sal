@@ -13,4 +13,3 @@ class Solution:
                 j = i
             pref[presum] = j
         return ans
-

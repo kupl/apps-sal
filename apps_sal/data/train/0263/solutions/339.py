@@ -19,5 +19,3 @@ class Solution:
                 d, d2 = d2, d
             s += sum(d)
         return s % (10 ** 9 + 7)
-
-

@@ -9,4 +9,3 @@ class Solution:
                 new[j] = sum(dp[k] for k in jump[j]) % MOD
             dp = new
         return sum(dp) % MOD
-

@@ -13,14 +13,13 @@ class Solution:
             8: [1, 3],
             9: [2, 4],
         }
-        
+
         dp = [[0] * n for _ in range(10)]
         for i in range(10):
             dp[i][0] = 1
-            
+
         for i in range(1, n):
             for digit in range(10):
-                dp[digit][i] = sum(dp[j][i-1] for j in maps[digit])
-                
-        return sum(dp[digit][-1] for digit in range(10)) % mod
+                dp[digit][i] = sum(dp[j][i - 1] for j in maps[digit])
 
+        return sum(dp[digit][-1] for digit in range(10)) % mod

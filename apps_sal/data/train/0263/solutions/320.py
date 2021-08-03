@@ -2,6 +2,7 @@ class Solution:
     def knightDialer(self, l: int) -> int:
         table = defaultdict(lambda: defaultdict(int))
         tableEnts = {(0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0), (8, 0), (9, 0)}
+
         def dp(n, lv) -> int:
             if lv == 0:
                 return 1
@@ -26,7 +27,7 @@ class Solution:
                 ret = dp(1, lv - 1) + dp(3, lv - 1)
             elif n == 9:
                 ret = dp(2, lv - 1) + dp(4, lv - 1)
-            
+
             ret %= 1000000007
             table[n][lv] = ret
             tableEnts.add((n, lv))

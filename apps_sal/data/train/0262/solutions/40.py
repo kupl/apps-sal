@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def isSolvable(self, words: List[str], result: str) -> bool:
         def search(i: int, j: int, carry: int, used: int, ls: list, mp: defaultdict, non_zeros: set) -> bool:
@@ -22,7 +24,7 @@ class Solution:
                     return True
                 mp.pop(ls[i][j])
             return False
-        
+
         non_zeros = set([w[0] for w in words] + [result[0]])
         ls = [w[::-1] for w in words] + [result[::-1]]
         return search(0, 0, 0, 0, ls, defaultdict(int), non_zeros)

@@ -29,4 +29,3 @@ class Solution:
 
         print(dp)
         return sum(dp) % MODULE
-

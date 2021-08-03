@@ -18,4 +18,3 @@ class Solution:
             if leftChars == rightChars:
                 possibleSplits += 1
         return possibleSplits
-

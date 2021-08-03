@@ -1,7 +1,7 @@
 class Solution:
-    
+
     BASE = 10 ** 9 + 7
-    
+
     def knightDialer(self, N: int) -> int:
         if N <= 1:
             return 10

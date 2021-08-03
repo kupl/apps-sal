@@ -12,4 +12,3 @@ class Solution:
                 used_i = i
             seen[num] = i
         return res
-

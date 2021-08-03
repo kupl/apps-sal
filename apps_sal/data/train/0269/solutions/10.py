@@ -6,7 +6,7 @@ class Solution:
                 pos.append(i)
         true = 0
         false = 0
-        for j in range(len(pos)-1):
-            if pos[j+1] - pos[j] <= k:
+        for j in range(len(pos) - 1):
+            if pos[j + 1] - pos[j] <= k:
                 return False
         return True

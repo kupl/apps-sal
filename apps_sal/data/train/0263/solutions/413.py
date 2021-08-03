@@ -5,7 +5,7 @@ class Solution:
         cells = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2), (3, 1)]
         cell2idx = {}
         for i, cell in enumerate(cells):
-            cell2idx[cell] = i 
+            cell2idx[cell] = i
         # number of sequences end at cell
         sequences = [1 for _ in cells]
         for step in range(n - 1):
@@ -19,4 +19,3 @@ class Solution:
                         new_sequences[new_idx] += sequences[i]
             sequences = [cnt % mod_num for cnt in new_sequences]
         return sum(sequences) % mod_num
-

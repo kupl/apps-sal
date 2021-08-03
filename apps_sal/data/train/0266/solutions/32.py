@@ -10,7 +10,7 @@ class Solution:
             rc.append(len(rs))
         res = 0
         rc = rc[::-1]
-        for i in range(len(lc) -  1):
+        for i in range(len(lc) - 1):
             if lc[i] == rc[i + 1]:
                 res += 1
         return res

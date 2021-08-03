@@ -1,17 +1,16 @@
 class Solution:
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         n = len(nums)
-        hashmap = {0:0}
+        hashmap = {0: 0}
         ans = 0
         sums = 0
         for i in range(n):
             sums += nums[i]
-            if sums-target in hashmap:
-                ans = max(ans, hashmap[sums-target] + 1)
+            if sums - target in hashmap:
+                ans = max(ans, hashmap[sums - target] + 1)
             hashmap[sums] = ans
         return ans
-        
-        
+
         # n = len(nums)
         # preSum = [0 for i in range(n+1)]
         # hashmap = {0:0}
@@ -26,7 +25,7 @@ class Solution:
         #     pos = hashmap.get(preSum[i], 0)
         #     hashmap[preSum[i]] = max(pos, i)
         # return ans
-        
+
         # n = len(nums)
         # dp = [0 for i in range(n+1)]
         # for i in range(n):
@@ -39,8 +38,7 @@ class Solution:
         #             dp[i+1] = max(dp[i+1], dp[j])
         # print(dp)
         # return dp[n]
-        
-        
+
         # n = len(nums)
         # dp = [0 for i in range(n)]
         # if target == nums[0]:
@@ -57,4 +55,3 @@ class Solution:
         #             break
         # print(dp)
         # return dp[n-1]
-

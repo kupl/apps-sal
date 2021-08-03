@@ -19,8 +19,8 @@ class Solution:
             9: [2, 4],
             0: [4, 6]
         }
-        for _ in range(n-1):
-            
+        for _ in range(n - 1):
+
             for j in range(10):
                 dp_new[j] = 0
                 for digit in possible_next_digits[j]:
@@ -32,7 +32,6 @@ class Solution:
         for num in dp_new:
             total += num
         return total % (10**9 + 7)
-        
+
 # 1 1 1 1 1 1 1 1 1
 #
-

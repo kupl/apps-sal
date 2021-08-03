@@ -3,10 +3,10 @@ class Solution:
         dis = k
         for n in nums:
             if n:
-                if dis<k:
+                if dis < k:
                     return False
                 else:
-                    dis=0
+                    dis = 0
             else:
-                dis+=1
-        return True        
+                dis += 1
+        return True

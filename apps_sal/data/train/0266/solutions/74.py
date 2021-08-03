@@ -8,4 +8,3 @@ class Solution:
                 del q[c]
             ans += len(p) == len(q)
         return ans
-

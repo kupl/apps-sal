@@ -8,7 +8,7 @@ class Solution:
             right_count[ch] -= 1
             if right_count[ch] == 0:
                 del right_count[ch]
-            
+
             if len(left_count) == len(right_count):
                 ans += 1
         return ans

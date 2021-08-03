@@ -10,6 +10,5 @@ class Solution:
                 res += 1
                 cache = set()
             cache.add(cumsum)
-                
-        return res
 
+        return res

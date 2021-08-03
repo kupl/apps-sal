@@ -4,7 +4,7 @@ class Solution:
         d = {0: -1}
         cursum = 0
         ans = 0
-        for i,n in enumerate(nums):
+        for i, n in enumerate(nums):
             cursum += n
             prev = cursum - target
             if prev in d:
@@ -12,7 +12,7 @@ class Solution:
                 d = {}
                 d[cursum] = i
                 continue
-            
+
             d[cursum] = i
-        
+
         return ans

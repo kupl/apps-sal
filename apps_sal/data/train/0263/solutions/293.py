@@ -13,6 +13,7 @@ class Solution:
             0: (4, 6),
         }
         memo = {}
+
         def dp_memo(S, N):
             if (S, N) in memo:
                 return memo[(S, N)]
@@ -28,5 +29,3 @@ class Solution:
         for i in range(0, 10):
             result += dp_memo(i, n - 1)
         return result % ((10 ** 9) + 7)
-            
-

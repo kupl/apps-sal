@@ -6,12 +6,12 @@ class Solution:
             return 10
         total = 9
         digit = {}
-        for j in range(0,10):
+        for j in range(0, 10):
             if(j == 5):
                 continue
             digit[j] = 1
         const = 10 ** 9 + 7
-        for i in range(1,n):
+        for i in range(1, n):
             num_1 = (digit[6] + digit[8]) % const
             num_2 = (digit[7] + digit[9]) % const
             num_3 = (digit[4] + digit[8]) % const
@@ -30,8 +30,5 @@ class Solution:
             digit[7] = num_7
             digit[8] = num_8
             digit[9] = num_9
-            total = (num_0 + num_1 + num_2 + num_3 + num_4 + num_6 + num_7  + num_8 + num_9) % const
+            total = (num_0 + num_1 + num_2 + num_3 + num_4 + num_6 + num_7 + num_8 + num_9) % const
         return total
-            
-            
-

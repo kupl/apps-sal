@@ -14,5 +14,3 @@ class Solution:
                 #print('!!', i, dp)
             mem[cur] = i
         return dp[-1]
-        
-

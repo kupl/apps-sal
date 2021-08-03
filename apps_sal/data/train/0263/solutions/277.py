@@ -11,19 +11,21 @@ class Solution:
             9: [2, 4],
             0: [4, 6]
         }
-        
-        if N == 1: return 10
+
+        if N == 1:
+            return 10
         dp = collections.defaultdict(int)
         for idx in range(10):
-            if idx == 5: continue
+            if idx == 5:
+                continue
             dp[idx] = 1
         while N > 1:
             next_dp = collections.defaultdict(int)
             for idx in range(10):
-                if idx == 5: continue
+                if idx == 5:
+                    continue
                 for k in mapping[idx]:
                     next_dp[k] += dp[idx]
             N -= 1
             dp = next_dp
         return sum(dp.values()) % (10**9 + 7)
-

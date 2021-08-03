@@ -7,7 +7,7 @@ class Solution:
         good_splits = 0
         for i, x in enumerate(s):
             l_unique.add(x)
-            if x not in s[i+1:]:
+            if x not in s[i + 1:]:
                 r_unique.discard(x)
             if len(l_unique) == len(r_unique):
                 good_splits += 1

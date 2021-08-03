@@ -3,11 +3,12 @@ class Solution:
         max_len = len(result)
         if max(len(w) for w in words) > max_len:
             return False
-        level = [[word[-i-1] for word in words if i<len(word)] for i in range(max_len)]
-        level_set = [set([result[-i-1]] + level[i]) for i in range(max_len)]
+        level = [[word[-i - 1] for word in words if i < len(word)] for i in range(max_len)]
+        level_set = [set([result[-i - 1]] + level[i]) for i in range(max_len)]
         used_digits = set()
         nonzero_chars = set(word[0] for word in words + [result])
         assignments = {}
+
         def isSAT(eqn_index, carry):
             if eqn_index >= max_len:
                 return carry == 0
@@ -23,10 +24,10 @@ class Solution:
                         del assignments[t]
                         used_digits.remove(guess)
                     return False
-            
+
             s = sum(assignments[c] for c in level[eqn_index]) + carry
-            if s % 10 != assignments[result[-eqn_index-1]]:
+            if s % 10 != assignments[result[-eqn_index - 1]]:
                 return False
-            return isSAT(eqn_index +1, s // 10)
-           
+            return isSAT(eqn_index + 1, s // 10)
+
         return isSAT(0, 0)

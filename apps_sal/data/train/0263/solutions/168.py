@@ -1,11 +1,11 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        
+
         tab = [[0 for i in range(n + 1)] for i in range(10)]
-        
+
         for i in range(10):
             tab[i][1] = 1
-            
+
         for i in range(2, n + 1):
             for j in range(10):
                 if j == 0:
@@ -28,14 +28,14 @@ class Solution:
                     tab[j][i] = tab[1][i - 1] + tab[3][i - 1]
                 if j == 9:
                     tab[j][i] = tab[2][i - 1] + tab[4][i - 1]
-                    
+
                 tab[j][i] = tab[j][i] % (10**9 + 7)
-                
+
         s = 0
-                
+
         for i in range(10):
             s += tab[i][n]
-            
+
         s = s % (10**9 + 7)
-        
+
         return s

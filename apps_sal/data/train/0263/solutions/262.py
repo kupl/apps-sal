@@ -3,7 +3,7 @@ class Solution:
         if n == 1:
             return 10
         list_old = [1] * 10
-        for t in range(2, n+1):
+        for t in range(2, n + 1):
             list_new = [0] * 10
             for i in range(0, 10):
                 temp = Solution().map(i)

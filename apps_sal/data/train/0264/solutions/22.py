@@ -16,9 +16,9 @@ class Solution(object):
                         # combine sets, add to dp
                         dp.append(a | b)
             # remove initial sets because we need to concatenate
-            #for x in arr: 
+            # for x in arr:
             #    if (tmp := set(x)) in dp:
             #       dp.remove(tmp)
             # make sure we have valid answer
             return max(len(x) for x in dp) if dp else 0
-        return get_max_len(arr)  
+        return get_max_len(arr)

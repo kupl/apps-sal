@@ -3,18 +3,18 @@ class Solution:
         nh = h.copy()
         for k in h2:
             if k in nh:
-                nh[k] = nh[k]-h2[k]
+                nh[k] = nh[k] - h2[k]
                 if nh[k] == 0:
                     del nh[k]
         return nh
-    
+
     def numSplits(self, s: str) -> int:
         h = {}
         for c in s:
             if c not in h:
                 h[c] = 0
             h[c] = h[c] + 1
-        
+
         ct = 0
         h2 = {}
         for i, c in enumerate(s):

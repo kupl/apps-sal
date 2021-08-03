@@ -20,4 +20,4 @@ class Solution:
                         return False
                 start = 1
                 flag = 0
-        return True    
+        return True

@@ -1,10 +1,11 @@
 class Solution:
     DIAL = [
-        [1,   2,  3],
-        [4,   5,  6],
-        [7,   8,  9],
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
         ['*', 0, '#']
     ]
+
     def knightDialer(self, n: int) -> int:
         directions = [(1, -2), (2, -1), (2, 1), (1, 2), (-1, 2), (-2, 1), (-2, -1), (-1, -2)]
 
@@ -24,7 +25,7 @@ class Solution:
                     r = i + inc_r
                     c = j + inc_c
                     if 0 <= r < m and 0 <= c < nn and isinstance(self.DIAL[r][c], int):
-                        total += jump(r, c, path_length+1)
+                        total += jump(r, c, path_length + 1)
                 cache[i, j, path_length] = total
                 return total
 

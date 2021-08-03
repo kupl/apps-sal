@@ -4,13 +4,13 @@ class Solution:
             return 10
         D = []
         modulo = 10**9 + 7
-        
-        movesDict = { 0: [4, 6], 1: [6, 8], 2: [7,9], 3: [4,8], 4: [3,9,0],
-                      5: [], 6: [1,7 ,0],  7: [2,6], 8: [1,3], 9: [2,4]}
-        
+
+        movesDict = {0: [4, 6], 1: [6, 8], 2: [7, 9], 3: [4, 8], 4: [3, 9, 0],
+                     5: [], 6: [1, 7, 0], 7: [2, 6], 8: [1, 3], 9: [2, 4]}
+
         for i in range(10):
-            D.append([-1]*(n+1))
-        
+            D.append([-1] * (n + 1))
+
         def help(start, length):
             if length == 1:
                 return 1
@@ -24,13 +24,13 @@ class Solution:
             D[start][length] = total
             # print(f'start: {start}, length: {length}, total: {total}')
             return total
-        
+
         res = 0
         for i in range(10):
             res += help(i, n)
-        return res % modulo 
-        
-        
+        return res % modulo
+
+
 '''
 1 -> 6, 8
 2 -> 7, 9
@@ -48,4 +48,3 @@ init with [10][n+1]
 
 
 '''
-

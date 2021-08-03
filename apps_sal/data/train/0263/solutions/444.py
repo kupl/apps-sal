@@ -2,7 +2,7 @@ class Solution:
     def knightDialer(self, N: int) -> int:
         if N == 0:
             return 0
-        
+
         dialer = [[1, 1, 1] for _ in range(4)]
         directions = [[-1, 2], [-2, 1], [-2, -1], [-1, -2], [1, -2], [2, -1], [2, 1], [1, 2]]
         forbidden = set()
@@ -18,9 +18,5 @@ class Solution:
                             if 0 <= new_i < 4 and 0 <= new_j < 3:
                                 tmp[new_i][new_j] += dialer[i][j]
             dialer = tmp
-            
-        
-        return (sum(sum(dialer, [])) - dialer[3][0] - dialer[3][2]) % (10 ** 9 + 7)
-        
-        
 
+        return (sum(sum(dialer, [])) - dialer[3][0] - dialer[3][2]) % (10 ** 9 + 7)

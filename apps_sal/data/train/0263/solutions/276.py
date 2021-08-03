@@ -12,6 +12,7 @@ class Solution:
             9: [2, 4],
             0: [4, 6]
         }
+
         def helper(n, curr, seen, nei):
             if n == 1:
                 return 1
@@ -30,4 +31,3 @@ class Solution:
         for i in range(10):
             total = (total + helper(n, i, seen, nei)) % (10 ** 9 + 7)
         return total
-

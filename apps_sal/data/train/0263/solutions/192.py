@@ -9,18 +9,17 @@ class Solution:
                  8: (1, 3),
                  9: (2, 4),
                  0: (4, 6)
-                }
-    
+                 }
+
     def knightDialer(self, n: int) -> int:
         if n == 0:
             return 0
         if n == 1:
             return 10
         prev_moves = [1] * 10
-        
+
         for i in range(n - 1):
             current_moves = [sum(prev_moves[k] for k in self.neighbors[j]) for j in range(10)]
             prev_moves = current_moves
-        
-        return sum(prev_moves) % (10**9 + 7)
 
+        return sum(prev_moves) % (10**9 + 7)

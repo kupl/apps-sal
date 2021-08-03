@@ -18,7 +18,7 @@ class Solution:
             9: [2, 4],
             0: [4, 6]
         }
-        for _ in range(n-1):
+        for _ in range(n - 1):
             dp_next = [0] * 10
             for j in range(10):
                 dp_next[j] = 0
@@ -31,4 +31,3 @@ class Solution:
         for num in dp:
             total += num
         return total % (10**9 + 7)
-

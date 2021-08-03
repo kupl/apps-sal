@@ -2,6 +2,7 @@ from collections import deque
 
 MOD = 10 ** 9 + 7
 
+
 class Solution:
     def knightDialer(self, n: int) -> int:
         m = {
@@ -16,21 +17,17 @@ class Solution:
             8: [1, 3],
             9: [2, 4]
         }
-        
+
         curt = {i: 1 for i in range(0, 10)}
-        n -= 1        
-        
+        n -= 1
+
         while n > 0:
             next_set = {}
             for key in curt:
                 for nei in m[key]:
                     next_set[nei] = (next_set.get(nei, 0) + curt[key]) % MOD
-                    
+
             curt = next_set
             n -= 1
-        
-        return sum(curt.values()) % MOD
-        
-            
-        
 
+        return sum(curt.values()) % MOD

@@ -1,9 +1,9 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        
+
         if n == 1:
             return 10
-        
+
         transition = {
             0: [4, 6],
             1: [6, 8],
@@ -16,7 +16,7 @@ class Solution:
             8: [1, 3],
             9: [2, 4]
         }
-        
+
         vec = [1 for _ in range(10)]
         for n in range(1, n):
             new_vec = [0 for _ in range(10)]
@@ -25,5 +25,5 @@ class Solution:
                     new_vec[j] = (new_vec[j] + vec[i]) % (1_000_000_000 + 7)
                     # print(new_vec, vec)
             vec = new_vec
-        
+
         return sum(vec) % (1_000_000_000 + 7)

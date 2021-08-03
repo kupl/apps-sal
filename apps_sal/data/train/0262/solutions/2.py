@@ -29,6 +29,3 @@ class Solution:
             return False
 
         return backtrack(0, 0, 0)
-                    
-        
-

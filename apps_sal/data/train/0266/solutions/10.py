@@ -8,7 +8,7 @@
 #             if len(set(s[:i])) > len(set(s[i:n])):
 #                 break
 #         return output
-    
+
 class Solution:
     def numSplits(self, s: str) -> int:
         n = len(s)
@@ -20,8 +20,8 @@ class Solution:
             else:
                 dic[x][1] = i
         # print(dic)
-        for i in range(0, n-1):
-            left = 0 
+        for i in range(0, n - 1):
+            left = 0
             right = 0
             for letter, indexes in list(dic.items()):
                 if i >= indexes[0]:
@@ -31,5 +31,3 @@ class Solution:
             if left == right:
                 output += 1
         return output
-                
-

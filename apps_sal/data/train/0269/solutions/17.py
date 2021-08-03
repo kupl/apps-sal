@@ -7,4 +7,3 @@ class Solution:
                     return False
                 position = index
         return True
-

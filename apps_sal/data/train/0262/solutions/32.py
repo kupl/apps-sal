@@ -17,14 +17,14 @@ class Solution:
                 if sums % 10 == char2digit[result[-charIdx - 1]]:
                     return dfs(charIdx + 1, 0, sums // 10, visited, char2digit)
                 else:
-                    return False # prune. To support this, using -charIdx - 1 to visit from right/low to left/high
+                    return False  # prune. To support this, using -charIdx - 1 to visit from right/low to left/high
 
             # current word length is too short to check, move to check next word
             if wordIdx < len(words) and charIdx >= len(words[wordIdx]):
                 return dfs(charIdx, wordIdx + 1, carry, visited, char2digit)
 
             # 从后向前枚举，这样可以方便检测进而早点剪枝
-            c = allWords[wordIdx][-charIdx-1]
+            c = allWords[wordIdx][-charIdx - 1]
             if c in char2digit:
                 # if current word's current char already map to a digit, continue with next word
                 return dfs(charIdx, wordIdx + 1, carry, visited, char2digit)
@@ -37,6 +37,6 @@ class Solution:
                         char2digit[c] = digit
                         if dfs(charIdx, wordIdx + 1, carry, visited, char2digit.copy()):
                             return True
-                        visited.remove(digit) # restore visited and char2digit by discarding the copy
+                        visited.remove(digit)  # restore visited and char2digit by discarding the copy
                 return False
         return dfs(0, 0, 0, set(), {})

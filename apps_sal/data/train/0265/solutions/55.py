@@ -1,4 +1,6 @@
 from typing import List, Tuple
+
+
 class Solution:
     def maxNonOverlappingIntervals(self, intervals: List[Tuple[int, int]], sort=True) -> int:
         if not intervals:
@@ -14,7 +16,7 @@ class Solution:
             ans += 1
             cur_end = end
         return ans
-        
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         # If we can get all subarrays that sum to target in order sorted by ending index,
         # then we can simply apply activity selection to it.
@@ -27,6 +29,6 @@ class Solution:
         for i, x in enumerate(nums):
             cumsum += x
             if cumsum - target in prefix_sum:
-                intervals.append((prefix_sum[cumsum-target]+1, i))
+                intervals.append((prefix_sum[cumsum - target] + 1, i))
             prefix_sum[cumsum] = i  # Don't bother with multiple indices, just use the the latest one
         return self.maxNonOverlappingIntervals(intervals, False)

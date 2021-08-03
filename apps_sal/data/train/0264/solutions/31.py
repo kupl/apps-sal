@@ -7,9 +7,10 @@ class Solution:
                     return False
                 concatSet.add(char)
             return True
-        
+
         length = len(arr)
         self.result = 0
+
         def dfs(index, curr):
             if isUnique(curr):
                 self.result = max(self.result, len(curr))
@@ -17,11 +18,8 @@ class Solution:
                 return
             for i in range(index + 1, length):
                 dfs(i, curr + arr[i])
-        
+
         for i in range(length):
             dfs(i, arr[i])
-            
-        return self.result
-        
-        
 
+        return self.result

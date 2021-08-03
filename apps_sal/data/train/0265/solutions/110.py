@@ -11,4 +11,3 @@ class Solution:
                 count += 1
             seen[curr] = i
         return count
-

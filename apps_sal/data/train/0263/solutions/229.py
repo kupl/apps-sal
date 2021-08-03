@@ -1,6 +1,6 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        
+
         mm = {
             1: [6, 8],
             2: [7, 9],
@@ -13,22 +13,21 @@ class Solution:
             9: [2, 4],
             0: [6, 4]
         }
-        
+
         ans = 0
-        
+
         @lru_cache(maxsize=None)
         def dfs(val, rem):
             if rem == 0:
                 return 1
-            
+
             res = 0
             for adj in mm[val]:
                 res += dfs(adj, rem - 1)
-                
+
             return res
-        
+
         for key in list(mm.keys()):
             ans += dfs(key, n - 1)
-            
-        return ans % 1000000007
 
+        return ans % 1000000007

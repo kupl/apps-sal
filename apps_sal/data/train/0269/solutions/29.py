@@ -10,7 +10,7 @@ class Solution:
         #     if locs[i+1] - locs[i] <= k:
         #         return False
         # return True
-    
+
         last_loc, curr_loc = -1, -1
         for i, n in enumerate(nums):
             if n == 1:
@@ -24,11 +24,3 @@ class Solution:
                     return False
                 last_loc = i
         return True
-                    
-                
-        
-
-    
-    
-    
-

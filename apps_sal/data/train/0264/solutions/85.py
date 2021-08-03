@@ -4,7 +4,7 @@ class Solution(object):
             if len(set(A[i])) != len(A[i]):
                 A.pop(i)
         N = len(A)
-        
+
         B = []
         for word in A:
             ct = [0] * 26
@@ -14,22 +14,24 @@ class Solution(object):
 
         self.ans = 0
         count = [0] * 26
+
         def search(i):
             if i == N:
                 cand = sum(count)
-                if cand > self.ans: self.ans = cand
+                if cand > self.ans:
+                    self.ans = cand
                 return
-            
+
             for letter, ct in enumerate(B[i]):
                 if ct and count[letter]:
-                    search(i+1)
+                    search(i + 1)
                     break
             else:
-                search(i+1)
+                search(i + 1)
                 for letter, ct in enumerate(B[i]):
                     if ct:
                         count[letter] += 1
-                search(i+1)
+                search(i + 1)
                 for letter, ct in enumerate(B[i]):
                     if ct:
                         count[letter] -= 1

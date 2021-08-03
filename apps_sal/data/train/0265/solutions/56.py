@@ -2,7 +2,7 @@ class Solution:
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         n = len(nums)
         presum = 0
-            
+
         last_pos = {0: 0}
         dp = [0] * (1 + n)
         for i in range(1, 1 + n):

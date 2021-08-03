@@ -6,8 +6,7 @@ class Solution:
             results += self.traverse(pos, n)
             results %= 1000000007
         return results
-        
-        
+
     def traverse(self, pos: int, length: int) -> int:
         if length == 1:
             return 1
@@ -16,11 +15,11 @@ class Solution:
         jumps = 0
         for neighbor in self.get_neighbors(pos):
             jumps += self.traverse(neighbor, length - 1)
-            
+
         jumps %= 1000000007
         self.cache[(pos, length)] = jumps
         return jumps
-        
+
     def get_neighbors(self, n: int) -> Tuple[int]:
         NEIGHBORS = (
             (4, 6),

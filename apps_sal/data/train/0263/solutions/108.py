@@ -18,14 +18,14 @@ class Solution:
     def knightDialer(self, n: int) -> int:
         if n == 0:
             return 0
-        
+
         dp = [1 for _ in range(10)]
-        for _ in range(n-1):
+        for _ in range(n - 1):
             next_dp = [0 for _ in range(10)]
             for current in range(10):
                 for next_pos in num_to_next[current]:
                     next_dp[next_pos] += dp[current]
                     next_dp[next_pos] = next_dp[next_pos] % MOD
             dp = next_dp
-            
+
         return sum(dp) % MOD

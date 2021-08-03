@@ -11,5 +11,5 @@ class Solution:
                 sumsSet = {0}
             else:
                 sumsSet.add(curSum)
-            
+
         return result

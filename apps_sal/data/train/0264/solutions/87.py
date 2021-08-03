@@ -7,7 +7,7 @@ class Solution:
         arr = newarr
         n = len(arr)
         res = 0
-        
+
         str_masks = [None] * n
         for i in range(n):
             wd = arr[i]
@@ -16,7 +16,7 @@ class Solution:
                 ch_pos = ord(ch) - ord('a')
                 mask |= 1 << ch_pos
             str_masks[i] = mask
-            
+
         def dfs(idx, mask, curlen):
             nonlocal res
             if idx == n:
@@ -30,4 +30,3 @@ class Solution:
             dfs(idx + 1, mask, curlen)
         dfs(0, 0, 0)
         return res
-

@@ -14,9 +14,9 @@ class Solution:
             8: [1, 3],
             9: [2, 4]
         }
-        
+
         memo = dict()
-        
+
         def count_moves(position, digits):
             if digits == 1:
                 return 1
@@ -27,11 +27,11 @@ class Solution:
                 curr += count_moves(m, digits - 1)
             memo[position, digits] = curr % MOD
             return memo[position, digits]
-        
+
         res = 0
-        
+
         for pos in moves.keys():
             res += count_moves(pos, n)
             res %= MOD
-            
+
         return res

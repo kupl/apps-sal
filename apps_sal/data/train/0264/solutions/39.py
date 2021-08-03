@@ -1,7 +1,10 @@
 class Solution:
     def maxLength(self, arr: List[str]) -> int:
-        if not arr: return 0
+        if not arr:
+            return 0
+
         def isUnique(s): return len(set(s)) == len(s)
+
         def dfs(arr, res, curr):
             if isUnique(curr):
                 res[0] = max(res[0], len(curr))

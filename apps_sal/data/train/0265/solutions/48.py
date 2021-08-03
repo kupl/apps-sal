@@ -8,6 +8,5 @@ class Solution:
                 count += 1
                 h = {}
             h[summ] = i
-            
-        return count
 
+        return count

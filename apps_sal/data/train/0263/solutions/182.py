@@ -18,6 +18,3 @@ class Solution:
             for i in range(10):
                 dp[i] = sum([prevDp[move] for move in moves[i]])
         return sum(dp) % (10**9 + 7)
-            
-            
-

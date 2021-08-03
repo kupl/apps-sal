@@ -1,9 +1,10 @@
 from collections import Counter
+
+
 class Solution:
 
-
     def maxLength(self, arr) -> int:
-        if(len(arr) ==1):
+        if(len(arr) == 1):
             return len(arr[0])
         self.max_val = 0
 
@@ -12,7 +13,7 @@ class Solution:
         def check(string):
             c = Counter(string)
             for key, val in c.items():
-                if(c[key]>1):
+                if(c[key] > 1):
                     return False
             return True
 

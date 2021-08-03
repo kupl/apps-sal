@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def numSplits(self, s: str) -> int:
         p, q, ans = Counter(), Counter(s), 0

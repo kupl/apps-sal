@@ -1,6 +1,6 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        
+
         if n == 1:
             return 10
         maps = {
@@ -15,13 +15,10 @@ class Solution:
             8: {1, 3},
             9: {4, 2}
         }
-        prev = [1]*10
+        prev = [1] * 10
         for i in range(1, n):
-            curr = [0]*10
+            curr = [0] * 10
             for j in range(0, 10):
                 curr[j] = sum(prev[k] for k in maps[j])
             prev = curr
-        return sum(prev)%(10**9+7)
-                
-        
-
+        return sum(prev) % (10**9 + 7)

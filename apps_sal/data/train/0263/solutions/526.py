@@ -25,4 +25,3 @@ class Solution:
                 newTable[i] = ret % 1000000007
             dpTable = newTable
         return sum(dpTable) % 1000000007
-

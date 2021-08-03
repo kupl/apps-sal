@@ -4,7 +4,7 @@ class Solution:
         moves = {0: [4, 6],
                  1: [6, 8],
                  2: [7, 9],
-                 3: [4,  8],
+                 3: [4, 8],
                  4: [0, 3, 9],
                  5: [],
                  6: [0, 1, 7],
@@ -15,7 +15,6 @@ class Solution:
             for j in range(10):
                 count = 0
                 for digit in moves[j]:
-                    count += dp[i-1][digit]
+                    count += dp[i - 1][digit]
                 dp[i][j] = count
         return sum(dp[-1]) % (10**9 + 7)
-

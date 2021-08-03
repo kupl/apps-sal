@@ -1,6 +1,6 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        
+
         dialer_map = {0: [4, 6],
                       1: [6, 8],
                       2: [7, 9],
@@ -18,13 +18,8 @@ class Solution:
             next_level = [0 for i in range(10)]
             for l in range(10):
                 for d in dialer_map[l]:
-                    next_level[d]+=level[l]
-                
-            level = next_level
-        
-        return  sum(level)%(10**9+7)
-                    
-                    
-            
-        
+                    next_level[d] += level[l]
 
+            level = next_level
+
+        return sum(level) % (10**9 + 7)

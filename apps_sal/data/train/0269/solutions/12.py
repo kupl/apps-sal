@@ -8,7 +8,7 @@ class Solution:
             return True
         previous_one = next_one
         next_one += 1
-        
+
         while (next_one < len(nums)):
             while (next_one < len(nums) and nums[next_one] != 1):
                 next_one += 1
@@ -20,4 +20,3 @@ class Solution:
                 return True
             next_one += 1
         return True
-

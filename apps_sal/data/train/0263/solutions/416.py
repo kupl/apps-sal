@@ -12,27 +12,26 @@ class Solution:
             9: [2, 4],
             0: [4, 6]
         }
-        
+
         self.memo = dict()
-        
+
         def dfs(curr, n):
             key = (curr, n)
             if key in self.memo:
                 return self.memo[key]
-            
+
             if n == 1:
                 return 1
-            
+
             sub = 0
             for next in choices[curr]:
                 sub += dfs(next, n - 1)
-            
+
             self.memo[key] = sub
             return sub
-        
+
         res = 0
         for s in range(10):
             res += dfs(s, N)
-                
-        return res % (10 ** 9 + 7)
 
+        return res % (10 ** 9 + 7)

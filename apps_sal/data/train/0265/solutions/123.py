@@ -5,7 +5,7 @@ class Solution:
         hs.add(0)
         for v in nums:
             sm += v
-            if (sm-target) in hs:
+            if (sm - target) in hs:
                 res += 1
                 sm = 0
                 hs.clear()

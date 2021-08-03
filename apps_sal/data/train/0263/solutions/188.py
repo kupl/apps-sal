@@ -1,6 +1,6 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        
+
         k = {
             0: [4, 6],
             1: [6, 8],
@@ -13,18 +13,14 @@ class Solution:
             8: [1, 3],
             9: [2, 4],
         }
-        
-        
+
         dp = [[1] * 10, [0] * 10]
-        
+
         turn = 0
-        
-        for t in range(n-1):
+
+        for t in range(n - 1):
             turn = 1 - turn
             for i in range(10):
-                dp[turn][i] = sum(dp[1-turn][j] for j in k[i]) % (10 ** 9 + 7)
-                     
-        
-        return sum(dp[turn]) % (10 ** 9 + 7)
-        
+                dp[turn][i] = sum(dp[1 - turn][j] for j in k[i]) % (10 ** 9 + 7)
 
+        return sum(dp[turn]) % (10 ** 9 + 7)

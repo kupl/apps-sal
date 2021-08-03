@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 class Solution:
     def knightDialer(self, N: int) -> int:
         @lru_cache(None)
