@@ -13,7 +13,7 @@ class Solution:
                         stack.append(nei)
                         color[nei] = 1 - color[cur]
             return True
-        
+
         dislike_adj = collections.defaultdict(list)
         color = {}
         for d in dislikes:
@@ -21,9 +21,9 @@ class Solution:
             second = d[1]
             dislike_adj[first].append(second)
             dislike_adj[second].append(first)
-        for i in range(1, N+1):
+        for i in range(1, N + 1):
             color[i] = color.get(i, -1)
-        for i in range(1, N+1):
+        for i in range(1, N + 1):
             if color[i] == -1:
                 if not bfs(i):
                     return False

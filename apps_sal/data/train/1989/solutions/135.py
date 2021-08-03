@@ -7,10 +7,10 @@ class Solution:
         for i, c in enumerate(s):
             curr ^= 1 << int(c)
             if curr == 0:
-                length = i+1
+                length = i + 1
             else:
                 for p in powers:
-                    length = max(length, i-prefix.get(curr ^ p, len(s)))
+                    length = max(length, i - prefix.get(curr ^ p, len(s)))
             if curr not in prefix:
                 prefix[curr] = i
         return length

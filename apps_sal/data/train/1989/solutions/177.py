@@ -1,6 +1,6 @@
 class Solution:
     def longestAwesome(self, s: str) -> int:
-        memo = {0:-1}
+        memo = {0: -1}
         max_len = 0
         mask = 0
         for i in range(len(s)):

@@ -7,11 +7,11 @@ class Solution:
             x = int(c)
             p.append(p[-1])
             p[-1] ^= 1 << x
-        
+
         legal = {0}
         for x in range(10):
             legal.add(1 << x)
-           
+
         first = {}
         ans = 0
         for j, q in enumerate(p):

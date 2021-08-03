@@ -9,7 +9,8 @@ def find(dp, mask):
         if x not in d:
             d[x] = i
     return ans
-            
+
+
 class Solution:
     def longestAwesome(self, s: str) -> int:
         val = 0

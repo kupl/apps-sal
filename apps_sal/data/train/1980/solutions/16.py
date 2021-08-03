@@ -2,7 +2,8 @@ class Node:
     def __init__(self, val):
         self.val = val
         self.next, self.lower = None, None
-    
+
+
 class Skiplist:
 
     def __init__(self):
@@ -21,7 +22,7 @@ class Skiplist:
             new_node = Node(lower.val)
             new_node.next, new_node.lower = cur.__next__, lower
             cur.next = new_node
-        
+
     def search(self, target: int) -> bool:
         cur = self.sentinel
         while cur:
@@ -59,7 +60,6 @@ class Skiplist:
             new_level.next = new_node
             new_level.lower = self.sentinel
             self.sentinel = new_level
-    
 
     def erase(self, num: int) -> bool:
         def eraseLower(head):
@@ -77,10 +77,10 @@ class Skiplist:
                 removed = cur.__next__
                 cur.next = cur.next.__next__
             return removed
-        
+
         if not self.search(num):
             return False
-        
+
         eraseLower(self.sentinel)
         while self.sentinel.lower and not self.sentinel.__next__:
             self.sentinel = sentinel.lower
@@ -92,4 +92,3 @@ class Skiplist:
 # param_1 = obj.search(target)
 # obj.add(num)
 # param_3 = obj.erase(num)
-

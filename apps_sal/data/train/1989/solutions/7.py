@@ -1,6 +1,6 @@
 class Solution:
     def longestAwesome(self, s: str) -> int:
-        pos = {0 : -1}
+        pos = {0: -1}
         bitmask = 0
         ans = 0
         n = len(s)
@@ -13,5 +13,5 @@ class Solution:
                 ans = max(ans, i - pos[bitmask])
             else:
                 pos[bitmask] = i
-            
+
         return ans

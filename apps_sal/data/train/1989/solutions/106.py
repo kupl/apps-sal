@@ -16,8 +16,8 @@ class Solution:
             digits2 = digits
             count2 = count
             for j in reversed(list(range(i, n))):
-                if j-i+1 <= result or count2 <= 1:
-                    result = max(result, j-i+1)
+                if j - i + 1 <= result or count2 <= 1:
+                    result = max(result, j - i + 1)
                     break
                 c = int(s[j])
                 digits2 ^= 1 << c
@@ -32,7 +32,7 @@ class Solution:
             else:
                 count -= 1
         return result
-    
+
     # O(10n)
     def longestAwesome(self, s: str) -> int:
         from collections import defaultdict
@@ -48,8 +48,7 @@ class Solution:
             else:
                 digits[prefix] = i
             for k in range(10):
-                tmp = prefix ^ (1<<k)
+                tmp = prefix ^ (1 << k)
                 if tmp in digits:
                     result = max(result, i - digits[tmp])
         return result
-

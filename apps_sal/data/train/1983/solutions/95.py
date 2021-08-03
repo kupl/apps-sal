@@ -7,7 +7,7 @@ class ProductOfNumbers:
     def add(self, num: int) -> None:
         if num == 0:
             self.max_zero_idx = max(self.max_zero_idx, len(self.nums))
-        
+
         if not self.nums:
             self.nums.append(num)
         else:
@@ -28,4 +28,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

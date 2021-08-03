@@ -14,6 +14,7 @@ def dfs(adjList, visited, node):
                 stack.append(adjNode)
     return True
 
+
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         if not dislikes:
@@ -24,7 +25,7 @@ class Solution:
             y = dislike[1]
             adjList[x].append(y)
             adjList[y].append(x)
-            
+
         visited = set()
         for i in range(1, N + 1):
             if i not in visited:

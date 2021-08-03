@@ -20,18 +20,17 @@ class ProductOfNumbers:
         self.n += 1
 
     def getProduct(self, k: int) -> int:
-        if len(self.zero_flags) > 0 and max(self.zero_flags) > self.n-k-1:
+        if len(self.zero_flags) > 0 and max(self.zero_flags) > self.n - k - 1:
             return 0
         if len(self.cum_prod) == k:
             return self.cum_prod[-1]
-        den = self.cum_prod[self.n-k-1]
+        den = self.cum_prod[self.n - k - 1]
         if den == 0:
             return self.cum_prod[-1]
-        return self.cum_prod[-1]//den
+        return self.cum_prod[-1] // den
 
 
 # Your ProductOfNumbers object will be instantiated and called as such:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

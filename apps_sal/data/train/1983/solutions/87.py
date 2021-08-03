@@ -24,11 +24,10 @@ class ProductOfNumbers:
         else:
             # print(k,self.z[-1],self.ind)
             # print(self.m)
-            return int(self.m[-1] // self.m[-k-1])
+            return int(self.m[-1] // self.m[-k - 1])
 
 
 # Your ProductOfNumbers object will be instantiated and called as such:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

@@ -11,7 +11,7 @@ class ProductOfNumbers:
         elif not self.products or self.products[-1] == 0:
             self.products.append(num)
         else:
-            self.products.append(self.products[-1]*num)
+            self.products.append(self.products[-1] * num)
 
     def getProduct(self, k: int) -> int:
         if len(self.products) - self.zero_point < k:
@@ -19,11 +19,10 @@ class ProductOfNumbers:
         elif len(self.products) - self.zero_point == k or len(self.products) == k:
             ret = self.products[-1]
         else:
-            ret = self.products[-1] // self.products[-k-1]
+            ret = self.products[-1] // self.products[-k - 1]
         return ret
 
 # Your ProductOfNumbers object will be instantiated and called as such:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

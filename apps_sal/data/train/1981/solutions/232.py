@@ -11,15 +11,14 @@ class Solution:
         for i in range(len(reqs)):
             reqs[i] += prev
             prev = reqs[i]
-        
-        #print(reqs)
-        nums.sort(reverse = True)
-        reqs.sort(reverse = True)
-        
+
+        # print(reqs)
+        nums.sort(reverse=True)
+        reqs.sort(reverse=True)
+
         ret = 0
         M = pow(10, 9) + 7
         for i in range(len(nums)):
             ret = (ret + nums[i] * reqs[i]) % M
-        
-        return ret
 
+        return ret

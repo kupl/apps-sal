@@ -7,7 +7,7 @@ class Solution:
                 occurances[request[1] + 1] -= 1
         for i in range(1, len(nums)):
             occurances[i] += occurances[i - 1]
-        mod = int(1e9+7)
+        mod = int(1e9 + 7)
         occurances.sort()
         nums.sort()
         res = 0

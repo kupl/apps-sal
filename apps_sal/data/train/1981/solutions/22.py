@@ -14,7 +14,7 @@ class Solution:
                 count += events[i][1]
                 i += 1
             request_count[j] = count
-            
+
         request_count.sort()
         nums.sort()
         result = 0

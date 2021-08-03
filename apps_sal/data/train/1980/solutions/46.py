@@ -1,5 +1,5 @@
 class LinkedList:
-    
+
     def __init__(self, val):
         self.val = val
         self.next = None
@@ -28,11 +28,11 @@ class Skiplist:
         stack = []
         pre = None
         pointer = self.levels[0]
-        
+
         while pointer:
             if pointer.__next__ != None and pointer.next.val <= num:
                 pointer = pointer.__next__
-            else:#if pointer.next != None and pointer.next.val > target:
+            else:  # if pointer.next != None and pointer.next.val > target:
                 stack.append(pointer)
                 pointer = pointer.down
         while stack:
@@ -42,7 +42,8 @@ class Skiplist:
             if pre:
                 newNode.down = pre
             pre = newNode
-            if random.randrange(2): break
+            if random.randrange(2):
+                break
 
     def erase(self, num: int) -> bool:
         found = False
@@ -64,4 +65,3 @@ class Skiplist:
 # param_1 = obj.search(target)
 # obj.add(num)
 # param_3 = obj.erase(num)
-

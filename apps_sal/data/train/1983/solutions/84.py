@@ -4,7 +4,6 @@ class ProductOfNumbers:
         self.cur = 0
         self.prod = [1]
         self.last_zero = -1
-        
 
     def add(self, num: int) -> None:
         if num != 0:
@@ -16,7 +15,7 @@ class ProductOfNumbers:
 
     def getProduct(self, k: int) -> int:
         if self.cur - k > self.last_zero:
-            return int(self.prod[-1] / self.prod[-k-1])
+            return int(self.prod[-1] / self.prod[-k - 1])
         else:
             return 0
 
@@ -25,4 +24,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

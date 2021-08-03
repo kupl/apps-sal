@@ -2,7 +2,7 @@ class Solution:
     def longestAwesome(self, s: str) -> int:
         mask, res = 0, 1
         mask_pos = {0: -1}
-        
+
         for i, c in enumerate(s):
             c = int(c)
             mask ^= (1 << c)
@@ -15,4 +15,3 @@ class Solution:
             else:
                 mask_pos[mask] = i
         return res
-

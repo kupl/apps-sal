@@ -1,7 +1,7 @@
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], req: List[List[int]]) -> int:
         n = len(nums)
-       
+
         count = [0] * (n + 1)
         for i, j in req:
             count[i] += 1
@@ -12,4 +12,3 @@ class Solution:
         for v, c in zip(sorted(count[:-1]), sorted(nums)):
             res += v * c
         return res % (10**9 + 7)
-

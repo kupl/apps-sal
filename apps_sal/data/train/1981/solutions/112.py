@@ -7,9 +7,9 @@ class Solution:
         for start, end in requests:
             weights[start] += 1
             if end + 1 < n:
-                weights[end+1] -= 1
+                weights[end + 1] -= 1
         for i in range(1, n):
-            weights[i] += weights[i-1]
+            weights[i] += weights[i - 1]
         weights.sort()
         ans = 0
         for num, weight in zip(nums, weights):

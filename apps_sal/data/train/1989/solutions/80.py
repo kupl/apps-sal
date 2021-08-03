@@ -32,4 +32,3 @@ class Solution:
                 existing.setdefault(tuple(pattern), cur_i)
 
         return res
-

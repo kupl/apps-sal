@@ -1,17 +1,15 @@
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         graph = defaultdict(set)
-        
+
         for e in dislikes:
             u, v = e
             graph[u].add(v)
-            
+
             # TODO map in both directons? I think so
             graph[v].add(u)
 
         print(graph)
-
-
 
         visited = set()
 
@@ -20,7 +18,7 @@ class Solution:
 
         for n in range(1, N):
             queue = deque([n])
-                        
+
             while queue:
                 u = queue.popleft()
 
@@ -28,7 +26,7 @@ class Solution:
                     continue
 
                 visited.add(u)
-                
+
                 if len(graph[u] & a) == 0:
                     a.add(u)
                 elif len(graph[u] & b) == 0:
@@ -43,5 +41,5 @@ class Solution:
                     queue.append(v)
 
         print(a, b)
-        
+
         return True

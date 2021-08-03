@@ -7,10 +7,10 @@ class Solution:
             if a < N:
                 bucket[a] += 1
             if b < N - 1:
-                bucket[b+1] -= 1
-        
+                bucket[b + 1] -= 1
+
         for i in range(1, N):
-            bucket[i] = bucket[i-1] + bucket[i]
+            bucket[i] = bucket[i - 1] + bucket[i]
         bucket.sort()
         res = 0
         while bucket and bucket[-1] != 0:

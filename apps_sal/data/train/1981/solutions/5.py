@@ -3,9 +3,9 @@ class Solution:
         interval = defaultdict(int)
         Qs = []
         Qe = []
-        for [i,j] in requests:
+        for [i, j] in requests:
             heapq.heappush(Qs, i)
-            heapq.heappush(Qe, j+1)
+            heapq.heappush(Qe, j + 1)
         count = 0
         for i in range(len(nums)):
             while Qs and Qs[0] <= i:
@@ -15,17 +15,17 @@ class Solution:
                 heapq.heappop(Qe)
                 count -= 1
             interval[i] = count
-        #print(interval)
-        keys = sorted(interval, key = lambda x: interval[x], reverse = True)
-        #print(keys)
-        values = sorted(nums, reverse = True)
+        # print(interval)
+        keys = sorted(interval, key=lambda x: interval[x], reverse=True)
+        # print(keys)
+        values = sorted(nums, reverse=True)
         finala = [0 for i in range(len(nums))]
         j = 0
         for i in keys:
             finala[i] = values[j]
             j += 1
-        #print(finala)
-        #print(keys)
+        # print(finala)
+        # print(keys)
         fsum = 0
         for i in keys:
             fsum += finala[i] * interval[i]

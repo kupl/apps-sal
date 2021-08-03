@@ -1,6 +1,6 @@
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
-        def visit(a, depth):     
+        def visit(a, depth):
             if a in depths:
                 return (depth - depths[a]) % 2 == 0
 
@@ -9,10 +9,8 @@ class Solution:
 
         d = collections.defaultdict(set)
         depths = {}
-        for a,b in dislikes:
+        for a, b in dislikes:
             d[a].add(b)
             d[b].add(a)
 
         return all(a in depths or visit(a, 0) for a in d)
-            
-

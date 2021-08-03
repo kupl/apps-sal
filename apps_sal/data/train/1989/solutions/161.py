@@ -9,4 +9,3 @@ class Solution:
                 res = max(res, i - dp[check_mask])
             dp[mask] = min(dp[mask], i)
         return res
-

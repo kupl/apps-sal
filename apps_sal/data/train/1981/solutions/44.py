@@ -6,16 +6,15 @@ class Solution:
         for i, j in requests:
             rank[i] += 1
             rank[j + 1] -= 1
-        
+
         for i in range(1, m):
             rank[i] += rank[i - 1]
-        
+
         ans = 0
         rank = rank[:m]
         nums.sort()
         rank.sort()
         for i, count in enumerate(rank):
             ans += nums[i] * count
-        
-        return ans % mod
 
+        return ans % mod

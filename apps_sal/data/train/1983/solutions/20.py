@@ -14,15 +14,9 @@ class ProductOfNumbers:
             return 0
         res = self.data[-k:]
         return math.prod(res)
-            
-            
-            
-            
-            
 
 
 # Your ProductOfNumbers object will be instantiated and called as such:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

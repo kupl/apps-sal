@@ -6,8 +6,6 @@ class Solution:
         #     dp = dp2
         # idx = dp.index(start)
         # return dp[idx:] + dp[: idx]
-        
+
         # Alternatively, using Gray Code
         return [start ^ i ^ i >> 1 for i in range(1 << n)]
-        
-

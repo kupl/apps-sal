@@ -22,4 +22,4 @@ class Solution:
             for j in range(0, weight[i][1]):
                 ans += weight[i][0] * nums[k]
                 k += 1
-        return ans % (10**9+7)
+        return ans % (10**9 + 7)

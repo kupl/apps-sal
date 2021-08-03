@@ -1,19 +1,20 @@
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
-        if not dislikes: return True
-        
+        if not dislikes:
+            return True
+
         v = collections.defaultdict(int)
         for a, b in dislikes:
             v[a] += 1
             v[b] += 1
-        
+
         d = []
         for a, b in dislikes:
             if v[a] == 1 and v[b] == 1:
                 continue
             d.append([a, b])
-            
-        d.sort(key = lambda x:x[0])
+
+        d.sort(key=lambda x: x[0])
         c1, c2 = set(), set()
         c1.add(d[0][0])
         c2.add(d[0][1])

@@ -8,6 +8,7 @@ def gen_prefixes(s):
         ans[parity].append(after)
     return ans
 
+
 def get_awesomes(prefixes):
     ans = 1
     for A in prefixes:
@@ -22,6 +23,7 @@ def get_awesomes(prefixes):
             ans = max(ans, max(pB) - min(pA))
             ans = max(ans, max(pA) - min(pB))
     return ans
+
 
 class Solution:
     def longestAwesome(self, s: str) -> int:

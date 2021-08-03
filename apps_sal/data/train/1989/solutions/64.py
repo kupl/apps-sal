@@ -9,4 +9,3 @@ class Solution:
             res = max(res, i - seen[cur])
             seen[cur] = min(seen[cur], i)
         return res
-

@@ -8,14 +8,14 @@ class Solution:
         current = 0
         p = []
         for n in range(len(nums)):
-            while heap_start and heap_start[0]<=n:
+            while heap_start and heap_start[0] <= n:
                 current += 1
                 heapq.heappop(heap_start)
-            while heap_end and heap_end[0]<n:
+            while heap_end and heap_end[0] < n:
                 current -= 1
                 heapq.heappop(heap_end)
             p.append(current)
-        
+
         heap = []
         for i, e in enumerate(p):
             heapq.heappush(heap, -e)
@@ -23,11 +23,8 @@ class Solution:
         heapn = []
         for n in nums:
             heapq.heappush(heapn, -n)
-        
+
         while heapn:
             n = heapq.heappop(heapn)
-            ret +=  n*heapq.heappop(heap)
-        return ret % (10**9+7)
-            
-            
-
+            ret += n * heapq.heappop(heap)
+        return ret % (10**9 + 7)

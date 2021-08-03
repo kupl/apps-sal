@@ -1,11 +1,14 @@
 class Node:
-    def __init__(self, val, next = None, down = None):
+    def __init__(self, val, next=None, down=None):
         self.val = val
         self.next = next
         self.down = down
+
+
 class Skiplist:
     # https://www.youtube.com/watch?v=1kF6W_9QNp8
     import random
+
     def __init__(self):
         self.heads = []
         self.level = 0
@@ -19,7 +22,7 @@ class Skiplist:
                 curr = curr.__next__
             res.append(l)
         return res
-                
+
     def search(self, target: int) -> bool:
         # print('search {0}'.format(target))
         curr = self.heads[-1]
@@ -55,7 +58,7 @@ class Skiplist:
                 return
             curr, prev = self.heads[-2], self.heads[-1].__next__
         else:
-            curr, prev = self.heads[-1], None          
+            curr, prev = self.heads[-1], None
         # print('addNewLevel = {0}, curr = {1}, level = {2}, heads size = {3}, prev = {4}'.format(addNewLevel, curr.val, self.level, len(self.heads), -1 if not prev else prev.val))
         # print('newLevel = {0}'.format(newLevel))
         for i in range(self.level - 1 if addNewLevel else self.level, 0, -1):
@@ -84,7 +87,6 @@ class Skiplist:
             curr = curr.down
         # print('erase {0}, list = {1}'.format(num, self.printList()))
         return seen
-                
 
 
 # Your Skiplist object will be instantiated and called as such:
@@ -92,4 +94,3 @@ class Skiplist:
 # param_1 = obj.search(target)
 # obj.add(num)
 # param_3 = obj.erase(num)
-

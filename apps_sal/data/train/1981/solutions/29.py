@@ -10,4 +10,4 @@ class Solution:
         count = list(accumulate(count))[:-1]
         count.sort()
         A.sort()
-        return sum([count[i]*A[i] for i in range(n)]) % (10**9+7)
+        return sum([count[i] * A[i] for i in range(n)]) % (10**9 + 7)

@@ -1,4 +1,6 @@
-import bisect 
+import bisect
+
+
 class ProductOfNumbers:
 
     def __init__(self):
@@ -12,7 +14,7 @@ class ProductOfNumbers:
     def getProduct(self, k: int) -> int:
         res = 1
         for num in range(101):
-            i = bisect.bisect_right(self.d[num], (self.time-k+1,-1), )
+            i = bisect.bisect_right(self.d[num], (self.time - k + 1, -1), )
             res *= num**(len(self.d[num]) - i)
         return res
 
@@ -20,4 +22,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

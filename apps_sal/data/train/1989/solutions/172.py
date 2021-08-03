@@ -5,11 +5,11 @@ class Solution:
         es = [1 << i for i in range(10)]
         current = 0
         res = 1
-        for i,c in enumerate(s):
+        for i, c in enumerate(s):
             n = ord(c) - ord('0')
             current = (1 << n) ^ current
             if current == 0:
-                res = i+1
+                res = i + 1
             else:
                 for e in es:
                     res = max(res, i - m[current ^ e])

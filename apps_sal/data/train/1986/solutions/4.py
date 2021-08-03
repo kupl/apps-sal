@@ -1,6 +1,7 @@
 class Solution:
     def helper(self, n):
         return n ^ (n >> 1)
+
     def circularPermutation(self, n: int, start: int) -> List[int]:
         solution = list()
         for i in range(0, 2 ** n):
@@ -12,4 +13,3 @@ class Solution:
                 break
         # print(solution)
         return solution[index:] + solution[:index]
-

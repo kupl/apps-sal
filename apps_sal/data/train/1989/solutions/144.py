@@ -2,7 +2,7 @@ class Solution:
     def longestAwesome(self, s: str) -> int:
         ans = 1
         mask = 0
-        memo = { 0:-1 }
+        memo = {0: -1}
         for idx, ch in enumerate(s):
             mask = mask ^ (1 << int(ch))
             if mask in memo:

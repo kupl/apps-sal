@@ -29,7 +29,7 @@ class Solution:
                     return 0
             else:
                 return 0
-            
+
         def compact(s):
             numbers = []
             counts = []
@@ -44,7 +44,7 @@ class Solution:
                     numbers.append(num)
                     counts.append(1)
             return numbers, counts
-        
+
         def rollingHash(numbers, counts, l):
             anss = []
             dic = defaultdict(int)
@@ -56,7 +56,7 @@ class Solution:
                 dic[num] += cnt
                 max_acc += cnt
             cur_max = max(cur_max, max_acc)
-            anss.append(isPalindrome(dic, numbers[0], numbers[l-1]))
+            anss.append(isPalindrome(dic, numbers[0], numbers[l - 1]))
             for i in range(l, len(numbers)):
                 l_num = numbers[i - l]
                 l_cnt = counts[i - l]
@@ -71,7 +71,7 @@ class Solution:
                 anss.append(isPalindrome(dic, numbers[i - l + 1], r_num))
                 # print(anss)
             return max(anss), cur_max
-        
+
         numbers, counts = compact(s)
         cur_max = 0
         for l in range(len(numbers), 0, -1):
@@ -82,6 +82,3 @@ class Solution:
             if cur_max >= max_acc:
                 return cur_max
         return 1
-        
-            
-

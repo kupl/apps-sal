@@ -3,8 +3,8 @@ class Node:
         self.value = value
         self.next = next
         self.down = down
-    
-        
+
+
 class Skiplist:
 
     def __init__(self):
@@ -15,7 +15,6 @@ class Skiplist:
 
     def add(self, num: int) -> None:
         self.dict1[num] = self.dict1.get(num, 0) + 1
-        
 
     def erase(self, num: int) -> bool:
         if(num in list(self.dict1.keys())):
@@ -31,4 +30,3 @@ class Skiplist:
 # param_1 = obj.search(target)
 # obj.add(num)
 # param_3 = obj.erase(num)
-

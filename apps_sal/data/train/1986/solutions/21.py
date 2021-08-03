@@ -4,12 +4,12 @@ class Solution:
         two = [2**i for i in range(n)]
         res = [start]
 
-        while len(res) < 2**n :
+        while len(res) < 2**n:
             i = 0
-            a = res[-1]^two[i]
+            a = res[-1] ^ two[i]
             while a in used:
-                i+= 1
-                a = res[-1]^two[i]
+                i += 1
+                a = res[-1] ^ two[i]
 
             used.add(a)
             res.append(a)

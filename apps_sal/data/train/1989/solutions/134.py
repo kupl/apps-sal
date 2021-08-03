@@ -1,7 +1,7 @@
 class Solution(object):
     def longestAwesome(self, s):
         d = {0: -1}
-        cands = {1<<x for x in range(10)}
+        cands = {1 << x for x in range(10)}
         cands.add(0)
         cur = 0
         res = 0
@@ -12,4 +12,3 @@ class Solution(object):
             if cur not in d:
                 d[cur] = i
         return res
-

@@ -31,4 +31,3 @@ class Solution:
         for a, b in zip(sorted(nums, reverse=True), sorted(d, reverse=True)):
             ans += a * b % 1000000007
         return ans % 1000000007
-

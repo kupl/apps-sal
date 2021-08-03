@@ -1,20 +1,22 @@
 import math
+
+
 class ProductOfNumbers:
 
     def __init__(self):
-        self.numList=[]
+        self.numList = []
 
     def add(self, num: int) -> None:
         self.numList.append(num)
 
     def getProduct(self, k: int) -> int:
-        prodList=self.numList[(-1*k):]
-        
-        #prod=1
-        #length=len(self.numList)
-        #for i in range(length-k, length):
+        prodList = self.numList[(-1 * k):]
+
+        # prod=1
+        # length=len(self.numList)
+        # for i in range(length-k, length):
         #    prod = prod * self.numList[i]
-            
+
         return math.prod(prodList)
 
 
@@ -22,4 +24,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

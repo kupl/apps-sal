@@ -1,3 +1,7 @@
+import random
+from collections import deque
+
+
 class Node:
     def __init__(self, val):
         self.val = val
@@ -5,16 +9,14 @@ class Node:
         self.down = None
 
 
-from collections import deque
-import random
 class Skiplist:
-    def __init__(self, levels = 30):
+    def __init__(self, levels=30):
         self.heads = [Node(-float('inf')) for _ in range(levels)]
-        for c,n in zip(self.heads, self.heads[1:]): # the lenght of zipped elements can be different
+        for c, n in zip(self.heads, self.heads[1:]):  # the lenght of zipped elements can be different
             c.down = n
 
     def search(self, target) -> bool:
-        curr = self.heads[0] #-inf
+        curr = self.heads[0]  # -inf
         while curr:
             if curr.next is None or curr.val < target <= curr.next.val:
                 if curr.next and target == curr.next.val:
@@ -40,7 +42,7 @@ class Skiplist:
             if pre:
                 node.down = pre
             pre = node
-            if random.randint(0, len(self.heads)-1) <  len(self.heads)-1:
+            if random.randint(0, len(self.heads) - 1) < len(self.heads) - 1:
                 break
 
     def erase(self, num: int) -> bool:

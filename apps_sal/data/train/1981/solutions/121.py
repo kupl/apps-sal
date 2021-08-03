@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         nums.sort(reverse=True)

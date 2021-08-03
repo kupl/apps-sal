@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         def dfs(node, group, groups):
@@ -16,20 +17,18 @@ class Solution:
                     return True
 
             return False
-    
+
         graph = defaultdict(list)
         for u, v in dislikes:
             graph[u].append(v)
             graph[v].append(u)
-            
+
         groups = {}
-        
+
         for node in graph:
             if node not in groups:
                 fail = dfs(node, True, groups)
                 if fail:
                     return False
-        
-        return True
-                    
 
+        return True

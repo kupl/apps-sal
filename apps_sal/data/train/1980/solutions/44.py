@@ -10,11 +10,9 @@ class Skiplist:
         if idx < len(self.nums) and self.nums[idx] == target:
             return True
         return False
-        
 
     def add(self, num: int) -> None:
         bisect.insort(self.nums, num)
-        
 
     def erase(self, num: int) -> bool:
         if not self.search(num):
@@ -22,7 +20,6 @@ class Skiplist:
         idx = bisect.bisect_left(self.nums, num)
         self.nums.pop(idx)
         return True
-        
 
 
 # Your Skiplist object will be instantiated and called as such:
@@ -30,4 +27,3 @@ class Skiplist:
 # param_1 = obj.search(target)
 # obj.add(num)
 # param_3 = obj.erase(num)
-

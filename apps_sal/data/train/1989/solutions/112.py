@@ -1,6 +1,6 @@
 class Solution:
     def longestAwesome(self, s):
-        d = {0 : -1}
+        d = {0: -1}
         t = 0
         ans = 0
         for i in range(len(s)):

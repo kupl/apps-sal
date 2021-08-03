@@ -7,7 +7,7 @@ class Solution:
         seen = set()
         ref = dict()
         stack = []
-        for i in range(1, N+1):
+        for i in range(1, N + 1):
             ref[i] = []
         for l in dislikes:
             s, t = l[0], l[1]
@@ -35,7 +35,3 @@ class Solution:
                 else:
                     other.add(j)
         return True
-                
-        
-            
-

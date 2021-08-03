@@ -17,5 +17,3 @@ class Solution:
             best = max(best, i - prev[mask])
             prev[mask] = min(prev[mask], i)
         return best
-                    
-

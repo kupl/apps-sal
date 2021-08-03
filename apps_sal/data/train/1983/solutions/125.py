@@ -18,7 +18,6 @@ class ProductOfNumbers:
         elif len(self.product) == 0:
             self.product.append(num)
 
-        
     def getProduct(self, k: int) -> int:
         return self.product[k - 1]
 
@@ -27,4 +26,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

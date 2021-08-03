@@ -15,4 +15,3 @@ class Solution:
         for n, f in zip(nums, freqs):
             result += f * n
         return result % 1000000007
-

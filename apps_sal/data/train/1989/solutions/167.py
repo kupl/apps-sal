@@ -14,7 +14,7 @@ class Solution:
                 if size % 2:
                     max_size = max(max_size, size)
 
-            max_size = max(max_size, idx - known_positions.get(mask, idx))    
+            max_size = max(max_size, idx - known_positions.get(mask, idx))
             known_positions.setdefault(mask, idx)
 
         return max(max_size, 1)

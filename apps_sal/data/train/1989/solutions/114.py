@@ -16,4 +16,3 @@ class Solution:
         print(seen)
         print(bs)
         return best
-

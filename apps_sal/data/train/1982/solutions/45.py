@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         # build graph
@@ -7,9 +9,9 @@ class Solution:
             graph[fr].append(to)
             graph[to].append(fr)
 
-        group = collections.defaultdict(bool) # true group and false group
+        group = collections.defaultdict(bool)  # true group and false group
         curr_group = True
-        for i in range(1, N+1):
+        for i in range(1, N + 1):
             if i not in group:
                 q = collections.deque([i])
                 group[i] = curr_group
@@ -25,4 +27,3 @@ class Solution:
                                 group[nei] = not curr_group
                     curr_group = not curr_group
         return True
-

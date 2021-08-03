@@ -1,6 +1,6 @@
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
-        #TODO
+        # TODO
         # every connected component must be bipartite
         if len(dislikes) == 0:
             return True
@@ -11,9 +11,9 @@ class Solution:
             graph[d[0]].append(d[1])
             graph[d[1]].append(d[0])
         colors = {}
-        
+
         visited_set = set()
-        for i in range(1, N+1):
+        for i in range(1, N + 1):
             if i in visited_set:
                 continue
             colors[i] = 0
@@ -39,5 +39,5 @@ class Solution:
                 nodes = new_nodes
                 if len(nodes) == 0:
                     break
-        
+
         return True

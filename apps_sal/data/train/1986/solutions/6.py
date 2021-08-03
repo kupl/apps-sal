@@ -7,7 +7,5 @@ class Solution:
         # print(gray)
         result = []
         for i in range(len(gray)):
-            result.append(gray[(i+idxStart)%len(gray)])
+            result.append(gray[(i + idxStart) % len(gray)])
         return result
-                    
-

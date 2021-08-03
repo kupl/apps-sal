@@ -18,4 +18,3 @@ class Solution:
         for f in nzFreqs:
             result += f * heapq.heappop(nums)
         return (-result) % 1000000007
-

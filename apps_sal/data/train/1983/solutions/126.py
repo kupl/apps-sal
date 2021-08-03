@@ -5,16 +5,17 @@ class ProductOfNumbers:
         self.zeroes = []
 
     def add(self, num: int) -> None:
-        prev = 1 if not self.queue or self.queue[-1]==0 else self.queue[-1]
-        self.queue.append(prev*num)
-        if num == 0: self.zeroes.append(len(self.queue)-1)
+        prev = 1 if not self.queue or self.queue[-1] == 0 else self.queue[-1]
+        self.queue.append(prev * num)
+        if num == 0:
+            self.zeroes.append(len(self.queue) - 1)
 
     def getProduct(self, k: int) -> int:
-        p = max (0, len(self.queue)-k-1)
+        p = max(0, len(self.queue) - k - 1)
         for idx in self.zeroes:
-            if p < idx < len(self.queue): 
+            if p < idx < len(self.queue):
                 return 0
-        #print(self.queue,self.queue[p])
+        # print(self.queue,self.queue[p])
         if self.queue[p] != 0:
             return self.queue[-1] // self.queue[p]
         return self.queue[-1]
@@ -24,4 +25,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

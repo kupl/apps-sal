@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class ProductOfNumbers:
 
     def __init__(self):
@@ -12,7 +13,7 @@ class ProductOfNumbers:
             self.running_products = [1]
         else:
             self.running_products.append(self.running_products[-1] * num)
-            self.q.append(num)        
+            self.q.append(num)
 
     def getProduct(self, k: int) -> int:
         if len(self.q) < k:
@@ -24,4 +25,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

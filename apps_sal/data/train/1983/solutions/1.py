@@ -12,8 +12,7 @@ class ProductOfNumbers:
     def getProduct(self, k: int) -> int:
         if k >= len(self.preprod):
             return 0
-        return self.preprod[-1] // self.preprod[-k-1]
-        
+        return self.preprod[-1] // self.preprod[-k - 1]
 
 
 # Your ProductOfNumbers object will be instantiated and called as such:
@@ -25,20 +24,17 @@ class ProductOfNumbers:
 
 #[2, 10, 40]
 
-# 
+#
 
-# 
+#
 # 3 0  2 , 5 ,4
 
 # 3, 0, 2 ,5 ,4, 0
 
 
-
 # []
-
 
 
 # [1]
 # return 0
 # 0  0  40  20  4 0 1
-

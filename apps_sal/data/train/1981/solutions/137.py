@@ -14,9 +14,9 @@ class Solution:
                 heapq.heappush(q, R[j][1])
                 j += 1
             d[i] = len(q)
-        
+
         # print(d)
-        
+
         # d.sort(reverse=1)
         # nums.sort(reverse=1)
         # ret = 0
@@ -25,11 +25,10 @@ class Solution:
         #     ret += i * nums[j]
         #     j += 1
         # return ret % (10 ** 9 + 7)
-        
+
         d.sort()
         nums.sort()
         ret = 0
-        for i,j in zip(nums,d):
-            ret += i*j
+        for i, j in zip(nums, d):
+            ret += i * j
         return ret % (10 ** 9 + 7)
-

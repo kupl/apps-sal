@@ -2,8 +2,8 @@ class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         Dislike = collections.defaultdict(list)
         for dislike in dislikes:
-            Dislike[dislike[0]-1].append(dislike[1]-1)
-            Dislike[dislike[1]-1].append(dislike[0]-1)
+            Dislike[dislike[0] - 1].append(dislike[1] - 1)
+            Dislike[dislike[1] - 1].append(dislike[0] - 1)
         color = [-1 for i in range(N)]
         while -1 in color:
             uncolored = color.index(-1)

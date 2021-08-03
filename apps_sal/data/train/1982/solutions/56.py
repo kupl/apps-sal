@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def possibleBipartition(self, N, dislikes):
         graph = defaultdict(set)
@@ -6,6 +8,7 @@ class Solution:
             graph[u].add(v)
             graph[v].add(u)
         color = dict()
+
         def dfs(node):
             for nei in graph[node]:
                 if nei in color:
@@ -16,13 +19,13 @@ class Solution:
                     if not dfs(nei):
                         return False
             return True
-        for node in range(1, N+1):
+        for node in range(1, N + 1):
             if node not in color:
                 color[node] = 0
                 if not dfs(node):
                     return False
         return True
-    
+
 # class Solution:
 #     def possibleBipartition(self, N, dislikes):
 #         graph = [[] for _ in range(N+1)]
@@ -46,4 +49,3 @@ class Solution:
 #                 if not dfs(node):
 #                     return False
 #         return True
-

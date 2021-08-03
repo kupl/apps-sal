@@ -10,16 +10,14 @@ class Solution:
             graph[1][i].add(j)
 
         ans = [math.inf] * n
-        
+
         stack = [(0, 0, 0), (1, 0, 0)]
-        
+
         for color, node, dist in stack:
             ans[node] = min(ans[node], dist)
             neighbors = list(graph[color][node])
             for nei in neighbors:
                 graph[color][node].remove(nei)
-                stack.append((1-color, nei, dist+1))
-        
-        return [-1 if x == math.inf else x for x in ans]
-        
+                stack.append((1 - color, nei, dist + 1))
 
+        return [-1 if x == math.inf else x for x in ans]

@@ -1,13 +1,15 @@
 class Node:
     __slots__ = 'val', 'levels'
+
     def __init__(self, val, levels):
         self.val = val
         self.levels = [None] * levels
 
+
 class Skiplist(object):
     def __init__(self):
-        self.head = Node(-1, 16) 
-    
+        self.head = Node(-1, 16)
+
     def _iter(self, num):
         cur = self.head
         for level in range(15, -1, -1):
@@ -20,15 +22,17 @@ class Skiplist(object):
             yield cur, level
 
     def search(self, target):
-        for prev, level in self._iter(target): pass
+        for prev, level in self._iter(target):
+            pass
         cur = prev.levels[0]
         return cur and cur.val == target
 
     def add(self, num):
-        nodelvls = random.randint(1,16)
+        nodelvls = random.randint(1, 16)
         node = Node(num, nodelvls)
         for cur, level in self._iter(num):
-            if level >= nodelvls: continue
+            if level >= nodelvls:
+                continue
             future = cur.levels[level]
             cur.levels[level] = node
             node.levels[level] = future
@@ -47,4 +51,3 @@ class Skiplist(object):
 # param_1 = obj.search(target)
 # obj.add(num)
 # param_3 = obj.erase(num)
-

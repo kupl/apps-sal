@@ -1,7 +1,8 @@
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         l = len(nums)
-        if l == 0: return 0
+        if l == 0:
+            return 0
         acc = [0] * (l + 1)
         for r in requests:
             acc[r[0]] += 1

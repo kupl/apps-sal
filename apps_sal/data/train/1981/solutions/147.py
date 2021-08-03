@@ -28,4 +28,3 @@ class Solution:
             if i == n:
                 break
         return res
-

@@ -39,4 +39,3 @@ class Solution:
             res += (res_arr[i] * r_arr[i]) % MOD
         return res % MOD
         # return res
-

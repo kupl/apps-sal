@@ -14,5 +14,3 @@ class Solution:
         for a in sorted(arr, reverse=1):
             res += a * nums.pop()
         return res % mod
-        
-

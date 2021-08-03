@@ -1,7 +1,7 @@
 class Solution:
     def longestAwesome(self, s: str) -> int:
         n = len(s)
-        seen = {0:-1}
+        seen = {0: -1}
         status = res = 0
         for i, c in enumerate(s):
             status ^= 1 << (ord(c) - ord('0'))

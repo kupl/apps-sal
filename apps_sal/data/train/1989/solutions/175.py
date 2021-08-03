@@ -3,7 +3,7 @@ class Solution:
         # We have 10 + 1 types of palindromes.
         # Use any number as the middle character, or don't have a middle character.
         n = len(s)
-        seen = {0:-1}
+        seen = {0: -1}
         status = res = 0
         for i, c in enumerate(s):
             status ^= 1 << (ord(c) - ord('0'))

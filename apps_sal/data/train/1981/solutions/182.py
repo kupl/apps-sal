@@ -11,9 +11,9 @@ class Solution:
 
         for i in range(1, len(events)):
             if events[i] == 0:
-                events[i] = events[i-1]
+                events[i] = events[i - 1]
             else:
-                events[i] = events[i-1] + events[i]
+                events[i] = events[i - 1] + events[i]
 
         print(events)
 
@@ -24,4 +24,3 @@ class Solution:
         for v, n in zip(events, nums):
             summa = (summa + v * n) % MODULO
         return summa
-

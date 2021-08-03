@@ -10,7 +10,7 @@ class Solution:
                 res = max(res, i - dp[check_mask])
             dp[mask] = min(dp[mask], i)
         return res
-    
+
     def longestAwesome1(self, s: str) -> int:
         mask, res = 0, 0
         dp = [-1] + [len(s)] * 1023

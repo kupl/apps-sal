@@ -6,4 +6,4 @@ class Solution:
         i = arr.index(start)
         return arr[i:] + arr[:i]
 
-        return array[index: ] + array[: index]
+        return array[index:] + array[: index]

@@ -13,9 +13,7 @@ class Solution:
                 mask_odd = mask ^ (1 << j)
                 if mask_odd in mask_dict:
                     max_length = max(max_length, i - mask_dict[mask_odd])
-                    
+
             if not mask in mask_dict:
                 mask_dict[mask] = i
         return max_length
-            
-

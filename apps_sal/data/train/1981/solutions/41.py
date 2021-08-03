@@ -17,4 +17,3 @@ class Solution:
         for i in range(n):
             s += pref[i] * a[i]
         return s % (10**9 + 7)
-

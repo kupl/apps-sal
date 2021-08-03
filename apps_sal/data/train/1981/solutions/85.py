@@ -23,4 +23,3 @@ class Solution:
         for i, f in enumerate(freq):
             res += int(f * nums[i] % (1e9 + 7))
         return int(res % (1e9 + 7))
-
