@@ -1,10 +1,11 @@
 #from statistics import median
 #import collections
-#aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+# aa = collections.Counter(a) # list to list || .most_common(2)で最大の2個とりだせるお a[0][0]
+from sys import stdin
 from fractions import gcd
-from itertools import combinations,permutations,accumulate, product # (string,3) 3回
+from itertools import combinations, permutations, accumulate, product  # (string,3) 3回
 #from collections import deque
-from collections import deque,defaultdict,Counter
+from collections import deque, defaultdict, Counter
 import decimal
 import re
 import math
@@ -28,16 +29,25 @@ sys.setrecursionlimit(10000000)
 mod = 10**9 + 7
 #mod = 9982443453
 #mod = 998244353
-from sys import stdin
 readline = stdin.readline
+
+
 def readInts():
-  return list(map(int,readline().split()))
+    return list(map(int, readline().split()))
+
+
 def readTuples():
-    return tuple(map(int,readline().split()))
+    return tuple(map(int, readline().split()))
+
+
 def I():
-  return int(readline())
-a,b,x = readInts()
-ok = 0;ng = 10**9 + 1
+    return int(readline())
+
+
+a, b, x = readInts()
+ok = 0
+ng = 10**9 + 1
+
 
 def is_ok(mid):
     if a * mid + b * len(str(mid)) <= x:
@@ -45,11 +55,11 @@ def is_ok(mid):
     else:
         return False
 
-while abs(ok-ng) > 1:
-    mid = (ok+ng)//2
+
+while abs(ok - ng) > 1:
+    mid = (ok + ng) // 2
     if is_ok(mid):
         ok = mid
     else:
         ng = mid
 print(ok)
-

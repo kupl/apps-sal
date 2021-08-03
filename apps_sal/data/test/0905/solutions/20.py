@@ -10,13 +10,12 @@ for i in d:
         if(i[1]>c and i[1]!=100):
             c=i[1]
 print(c)'''
-n, s=list(map(int, input().split()))
-c=-1
+n, s = list(map(int, input().split()))
+c = -1
 for i in range(n):
-    xi, yi=list(map(int, input().split()))
-    if(yi==0 and xi<=s):
-        c=max(0, c)
-    elif(xi<s):
-        c=max(100-yi, c)
+    xi, yi = list(map(int, input().split()))
+    if(yi == 0 and xi <= s):
+        c = max(0, c)
+    elif(xi < s):
+        c = max(100 - yi, c)
 print(c)
-

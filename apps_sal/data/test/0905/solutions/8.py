@@ -26,5 +26,3 @@ for i in range(0, n):
         sweets = 100 - c
 
 print(sweets)
-
-

@@ -27,6 +27,7 @@ def binary_search(ok, ng):
             ng = middle
     return ok
 
-A, B, X = map(int,input().split())
+
+A, B, X = map(int, input().split())
 ans = binary_search(0, 10 ** 9 + 1)
 print(ans)

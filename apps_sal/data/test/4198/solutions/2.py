@@ -1,7 +1,9 @@
-a,b,x=map(int,input().split())
+a, b, x = map(int, input().split())
+
 
 def is_ok(arg):
-    return a*arg+b*len(str(arg))<=x
+    return a * arg + b * len(str(arg)) <= x
+
 
 def meguru_bisect(ng, ok):
     while (abs(ok - ng) > 1):
@@ -12,4 +14,5 @@ def meguru_bisect(ng, ok):
             ng = mid
     return ok
 
-print(meguru_bisect(10**9+1,0))
+
+print(meguru_bisect(10**9 + 1, 0))

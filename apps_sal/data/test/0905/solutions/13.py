@@ -6,4 +6,3 @@ for i in range(n):
         continue
     ans = max(ans, 0 if y == 0 else 100 - y)
 print(ans)
-

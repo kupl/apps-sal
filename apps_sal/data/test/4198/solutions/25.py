@@ -21,4 +21,3 @@ while r - l > 1:
         r = c
 
 print(l)
-

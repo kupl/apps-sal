@@ -1,4 +1,5 @@
-a,b,x = map(int,input().split())
+a, b, x = map(int, input().split())
+
 
 def is_ok(n):
     return a * n + b * len(str(n)) <= x
@@ -14,4 +15,4 @@ def meguru_bisect(ng, ok):
     return ok
 
 
-print(meguru_bisect(10**9+1,0))
+print(meguru_bisect(10**9 + 1, 0))

@@ -5,5 +5,4 @@
 (x2, y2) = input().split()
 (x2, y2) = (int(x2), int(y2))
 
-print(max(abs(x1-x2), abs(y1-y2)))
-
+print(max(abs(x1 - x2), abs(y1 - y2)))

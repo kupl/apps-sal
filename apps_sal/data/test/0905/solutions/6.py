@@ -8,4 +8,3 @@ for _ in range(n):
         r = max(r, 100 - (y or 100))
 
 print(r)
-

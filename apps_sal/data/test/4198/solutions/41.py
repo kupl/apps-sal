@@ -8,4 +8,3 @@ while bad - good > 1:
     else:
         bad = mid
 print(good)
-
