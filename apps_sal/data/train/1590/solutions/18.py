@@ -8,37 +8,37 @@ import heapq as hq
 
 
 def L():
- return list(map(int, stdin.readline().split()))
+    return list(map(int, stdin.readline().split()))
 
 
 def In():
- return list(map(int, stdin.readline().split()))
+    return list(map(int, stdin.readline().split()))
 
 
 def I():
- return int(stdin.readline())
+    return int(stdin.readline())
 
 
 P = 1000000007
 
 
 def main():
- try:
-  for _ in range(I()):
-   # code here ALL THE BEST
-   l=L()
-   l.sort()
-   if (l[0]+l[1]>=l[2]):
-    print('Yes')
-   else:
-    print('No')
+    try:
+        for _ in range(I()):
+            # code here ALL THE BEST
+            l = L()
+            l.sort()
+            if (l[0] + l[1] >= l[2]):
+                print('Yes')
+            else:
+                print('No')
 
-
- except:
-  pass
+    except:
+        pass
 
 
 def __starting_point():
- main()
+    main()
+
 
 __starting_point()

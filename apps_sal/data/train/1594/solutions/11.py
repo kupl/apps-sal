@@ -7,5 +7,5 @@ while t > 0:
         temp = input()
         a.append(temp)
 
-    print((n*n+n)//2)
-    t-=1
+    print((n * n + n) // 2)
+    t -= 1
