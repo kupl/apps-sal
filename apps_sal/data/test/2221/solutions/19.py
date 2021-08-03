@@ -6,7 +6,7 @@ def valid(num):
 
 
 def binsearch(L, R):
-    ans = -1;
+    ans = -1
     while L <= R:
         mid = (L + R) // 2
         if valid(mid):

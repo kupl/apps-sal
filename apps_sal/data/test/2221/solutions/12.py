@@ -1,4 +1,6 @@
-inp = lambda: list(map(int, input().split()))
+def inp(): return list(map(int, input().split()))
+
+
 x1, y1 = inp()
 x2, y2 = inp()
 n, = inp()

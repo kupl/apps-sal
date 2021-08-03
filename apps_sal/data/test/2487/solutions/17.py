@@ -32,7 +32,8 @@ def run():
         u, v = map(int, input().split())
         l, r = min(u, v), max(u, v)
         tmp = 0
-        if l > 1: tmp += sum_between(r - 1, r - l + 1)
+        if l > 1:
+            tmp += sum_between(r - 1, r - l + 1)
         tmp += r - l
         tmp += sum_between(N - l, 1)
         # print(tmp)

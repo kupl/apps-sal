@@ -31,9 +31,11 @@ def run():
     l = lr[::2]
     r = lr[1::2]
     for l, r in zip(l, r):
-        if l > r: l, r = r, l
+        if l > r:
+            l, r = r, l
         tmp = 0
-        if l > 1: tmp += sum_between(r - 1, r - l + 1)
+        if l > 1:
+            tmp += sum_between(r - 1, r - l + 1)
         tmp += r - l
         tmp += sum_between(N - l, 1)
         # print(tmp)

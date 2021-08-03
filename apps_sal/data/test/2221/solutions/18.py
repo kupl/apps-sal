@@ -18,7 +18,9 @@ while rite - left > 1:
     Y = y[-1] * (mid // lens) + y[mid % lens]
     X += x1
     Y += y1
-    if abs(X - x2) + abs(Y - y2) <= mid: rite = mid
-    else: left = mid
+    if abs(X - x2) + abs(Y - y2) <= mid:
+        rite = mid
+    else:
+        left = mid
 
 print([rite, -1][rite == 10 ** 18])

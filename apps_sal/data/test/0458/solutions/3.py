@@ -13,7 +13,7 @@ for i in range(100):
     if x < 0:
         continue
     if s(x) == i and 0 < x < 10**9:
-        ans.append(x);
+        ans.append(x)
 
 ans.sort()
 print(len(ans))

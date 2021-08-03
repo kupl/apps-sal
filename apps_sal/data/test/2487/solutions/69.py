@@ -16,7 +16,8 @@ sys.setrecursionlimit(10 ** 7)
 
 
 def sum_between(a, b):
-    if a > b: a, b = b, a
+    if a > b:
+        a, b = b, a
     return (b - a + 1) * (b + a) // 2
 
 
@@ -32,7 +33,8 @@ def run():
         u, v = map(int, input().split())
         l, r = min(u, v), max(u, v)
         tmp = 0
-        if l > 1: tmp += sum_between(r - 1, r - l + 1)
+        if l > 1:
+            tmp += sum_between(r - 1, r - l + 1)
         tmp += r - l
         tmp += sum_between(N - l, 1)
         # print(tmp)

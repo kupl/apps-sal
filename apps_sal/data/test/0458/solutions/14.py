@@ -19,7 +19,7 @@ for i in range(1, 82):
     if temp2 > 0 and temp2 < 1000000000 and temp1 == i:
         ans.add(temp2)
 
-print(len(ans));
+print(len(ans))
 answer = sorted(ans)
 
 if len(ans) != 0:

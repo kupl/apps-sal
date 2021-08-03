@@ -2,9 +2,11 @@ import math
 from collections import Counter
 from itertools import product
 
-ii = lambda: int(input())
-mi = lambda: map(int, input().split())
-li = lambda: list(map(int, input().split()))
+
+def ii(): return int(input())
+def mi(): return map(int, input().split())
+def li(): return list(map(int, input().split()))
+
 
 a = input()
 day = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]

@@ -4,10 +4,14 @@ n = int(input())
 s = list(input())
 p = [(0, 0)]
 for i in range(n):
-    if s[i] == 'U': p.append((p[-1][0], p[-1][1] + 1))
-    elif s[i] == 'D': p.append((p[-1][0], p[-1][1] - 1))
-    elif s[i] == 'R': p.append((p[-1][0] + 1, p[-1][1]))
-    else: p.append((p[-1][0] - 1, p[-1][1]))
+    if s[i] == 'U':
+        p.append((p[-1][0], p[-1][1] + 1))
+    elif s[i] == 'D':
+        p.append((p[-1][0], p[-1][1] - 1))
+    elif s[i] == 'R':
+        p.append((p[-1][0] + 1, p[-1][1]))
+    else:
+        p.append((p[-1][0] - 1, p[-1][1]))
 
 
 def check(m):
@@ -40,5 +44,7 @@ for i in range(n):
             a = ta
         else:
             a = min(a, ta)
-if a is None: print(-1)
-else: print(a)
+if a is None:
+    print(-1)
+else:
+    print(a)

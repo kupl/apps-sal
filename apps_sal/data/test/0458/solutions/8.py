@@ -11,7 +11,9 @@ ans = []
 x = 1
 while x < 82:
     k = b * (x**a) + c
-    if k < 10**9 and f(k) == x: ans.append(k)
+    if k < 10**9 and f(k) == x:
+        ans.append(k)
     x += 1
 print(len(ans))
-if len(ans): print(*ans)
+if len(ans):
+    print(*ans)

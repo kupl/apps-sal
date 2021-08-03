@@ -1,12 +1,12 @@
 def valid(num):
     x2 = x0 + disx[n] * (num // n) + disx[num % n]
     y2 = y0 + disy[n] * (num // n) + disy[num % n]
-    distance = abs(x2 - x1) + abs(y2 - y1);
+    distance = abs(x2 - x1) + abs(y2 - y1)
     return (distance <= num)
 
 
 def binsearch(L, R):
-    ans = -1;
+    ans = -1
     while L <= R:
         mid = (L + R) // 2
         if valid(mid):

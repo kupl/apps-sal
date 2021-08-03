@@ -1,10 +1,13 @@
 import sys
 stdin = sys.stdin
 
-ip = lambda: int(sp())
 
-lp = lambda: list(map(int, stdin.readline().split()))
-sp = lambda: stdin.readline().rstrip()
+def ip(): return int(sp())
+
+
+def lp(): return list(map(int, stdin.readline().split()))
+def sp(): return stdin.readline().rstrip()
+
 
 s = sp()
 
