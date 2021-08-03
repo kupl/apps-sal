@@ -3,10 +3,10 @@ for _ in range(int(input())):
     string = input().strip()
     n = int(input())
     lst = input().split()
-    #print(lst)
+    # print(lst)
     status = True
     for x in string:
-        #print(x)
+        # print(x)
         if x not in lst:
             status = False
             break

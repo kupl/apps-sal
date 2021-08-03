@@ -5,8 +5,8 @@ for _ in range(int(input())):
     count = 0
     for i in s:
         if i == '(':
-            count+=1
+            count += 1
         else:
-            count-=1
-        maxcount = max(maxcount,count)
-    print('('*maxcount+')'*maxcount)
+            count -= 1
+        maxcount = max(maxcount, count)
+    print('(' * maxcount + ')' * maxcount)

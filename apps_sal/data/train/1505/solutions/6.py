@@ -33,4 +33,3 @@ input_string = input().strip()
 bracket_input = input_string.replace(" ", "").replace("1", "(").replace("2", ")")
 ans = is_seq_brackets_right(bracket_input)
 print(ans[1], " ", ans[2], " ", ans[3], " ", ans[4])
-

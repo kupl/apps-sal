@@ -6,9 +6,8 @@ for _ in range(int(input())):
     for i in range(n):
         print(*l, sep='')
 
-        for j in range(i+1):
+        for j in range(i + 1):
             l[j] += 1
 
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             l[j] -= 1
-

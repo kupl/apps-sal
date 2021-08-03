@@ -7,21 +7,19 @@ pl = 0
 mpl = 0
 plstart = 0
 for i in range(N):
-    t = s[i*2]
+    t = s[i * 2]
     if t == '1':
         d += 1
-        if d > md :
+        if d > md:
             md = d
             mdpos = i
     else:
         d -= 1
     pl += 1
     if d == 0:
-        if pl> mpl:
+        if pl > mpl:
             mpl = pl
             mplstart = plstart
-        plstart = i+1
+        plstart = i + 1
         pl = 0
-print(md,mdpos+1,mpl,mplstart+1)
-
-
+print(md, mdpos + 1, mpl, mplstart + 1)

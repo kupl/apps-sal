@@ -1,6 +1,6 @@
 T = int(input())
-for j in range(0,T):
-    s= input()
+for j in range(0, T):
+    s = input()
     maxbalance = 0
     balance = 0
     for i in range(len(s)):
@@ -11,4 +11,4 @@ for j in range(0,T):
             balance -= 1
         if balance > maxbalance:
             maxbalance = balance
-    print('('*maxbalance,')'*maxbalance,sep = '')
+    print('(' * maxbalance, ')' * maxbalance, sep='')

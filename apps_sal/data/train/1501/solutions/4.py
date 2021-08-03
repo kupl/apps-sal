@@ -6,28 +6,27 @@ depth = n + 1
 edges = 2 ** (n + 1) - 2
 
 for _ in range(q):
- x = list(map(int, input().split()))
+    x = list(map(int, input().split()))
 
- if x[0] == 2:
-  print(edges % (10 ** 9 + 7))
- else:
-  t = x[1]
+    if x[0] == 2:
+        print(edges % (10 ** 9 + 7))
+    else:
+        t = x[1]
 
-  edges *= 2
+        edges *= 2
 
-  if t == 1 or t == 2:
-   top *= 2
-   bottom *= 2
+        if t == 1 or t == 2:
+            top *= 2
+            bottom *= 2
 
-   edges += depth
+            edges += depth
 
-  if t == 3:
-   depth *= 2
-   edges += top
-   top = bottom
+        if t == 3:
+            depth *= 2
+            edges += top
+            top = bottom
 
-  if t == 4:
-   depth *= 2
-   edges += bottom
-   bottom = top
-
+        if t == 4:
+            depth *= 2
+            edges += bottom
+            bottom = top
