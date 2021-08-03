@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def reorder(a, b):
     if a % 2:
         m = a // 2

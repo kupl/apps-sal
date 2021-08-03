@@ -7,4 +7,3 @@ def palindrome_chain_length(n):
         revers = word[::-1]
         run += 1
     return run
-

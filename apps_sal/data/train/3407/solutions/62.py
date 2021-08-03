@@ -4,5 +4,5 @@ def palindrome_chain_length(total):
     while total != int(reverse_total):
         total = total + int(reverse_total)
         reverse_total = str(total)[::-1]
-        counter +=1
+        counter += 1
     return counter

@@ -1,5 +1,5 @@
 def palindrome_chain_length(n):
-    digits_reversed = lambda n: int(str(n)[::-1])
+    def digits_reversed(n): return int(str(n)[::-1])
 
     steps = 0
     last_n = n

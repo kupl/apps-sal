@@ -1,4 +1,4 @@
-def even_numbers(arr,n):
+def even_numbers(arr, n):
     '''Returns the last n numbers of a list of even numbers from array arr'''
     output = []
     for num in arr:

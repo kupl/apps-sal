@@ -1,4 +1,4 @@
-def fish(shoal, size = 1, protein_earned = 0):
+def fish(shoal, size=1, protein_earned=0):
     fishes = [int(fish) for fish in shoal if fish != '0']
     grow = True
     while grow:
@@ -11,6 +11,7 @@ def fish(shoal, size = 1, protein_earned = 0):
         else:
             grow = False
     return size
+
 
 def protein_to_grow(actual_size):
     protein_to_accumulate = 0

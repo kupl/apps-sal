@@ -1,12 +1,14 @@
 from itertools import combinations_with_replacement
 from pprint import pprint
 
+
 def multiples(f):
     m = []
-    for i in range(2,8):
-        m.append(combinations_with_replacement(f,i))
+    for i in range(2, 8):
+        m.append(combinations_with_replacement(f, i))
     return m
-    
+
+
 def eq_dice(set_):
     mul = 1
     for e in set_:

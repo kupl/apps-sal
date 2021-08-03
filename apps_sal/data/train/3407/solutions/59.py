@@ -1,6 +1,7 @@
 def is_palindrome(n):
     return str(n) == str(n)[::-1]
 
+
 def palindrome_chain_length(n):
     if is_palindrome(n):
         return 0

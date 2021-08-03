@@ -1,4 +1,4 @@
-def even_numbers(arr,n):
+def even_numbers(arr, n):
     out = []
     count = 0
     for el in arr[::-1]:
@@ -6,4 +6,3 @@ def even_numbers(arr,n):
             out.append(el)
             count += 1
     return out[::-1]
-

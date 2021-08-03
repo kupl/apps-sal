@@ -1,4 +1,4 @@
-def even_numbers(arr,n):
+def even_numbers(arr, n):
     x = []
     for i in range(len(arr)):
         if arr[i] % 2 == 0:

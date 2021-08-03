@@ -15,4 +15,3 @@ def calculate(a, o, b):
     else:
         return None
     return result
-

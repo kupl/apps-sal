@@ -1,4 +1,4 @@
-def even_numbers(arr,n):
+def even_numbers(arr, n):
     new_arr = []
     even = []
 
@@ -7,9 +7,6 @@ def even_numbers(arr,n):
             new_arr.append(i)
 
     for j in range(n):
-        even.append(new_arr[-(j+1)])
+        even.append(new_arr[-(j + 1)])
     even.reverse()
     return even
-    
-
-

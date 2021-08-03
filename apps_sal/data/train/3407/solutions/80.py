@@ -1,8 +1,10 @@
 def is_palindrome(n):
     return n == reverse_n(n)
 
+
 def reverse_n(n):
     return int(str(n)[::-1])
+
 
 def palindrome_chain_length(n):
     chain_n = 0

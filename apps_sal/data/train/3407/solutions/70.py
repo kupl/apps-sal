@@ -1,4 +1,4 @@
-def palindrome_chain_length(n, step = 0):
+def palindrome_chain_length(n, step=0):
     reversed = int(str(n)[::-1])
     if n == reversed:
         return step

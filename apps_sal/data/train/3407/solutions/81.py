@@ -3,6 +3,7 @@ def IsPalindrome(n):
         return True
     return False
 
+
 def palindrome_chain_length(n):
     result = 0
     # parameter n is a positive integer

@@ -1,4 +1,6 @@
 from itertools import takewhile
+
+
 def palindrome_chain_length(n):
     def next_palindrome(m):
         while 1:

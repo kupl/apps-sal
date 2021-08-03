@@ -1,6 +1,6 @@
 def is_palindrome(n):
     return str(n) == str(n)[::-1]
-    
+
 
 def palindrome_chain_length(n):
     # parameter n is a positive integer
@@ -10,4 +10,3 @@ def palindrome_chain_length(n):
         steps += 1
         n += int(str(n)[::-1])
     return steps
-

@@ -5,5 +5,5 @@ def palindrome_chain_length(n):
         if str(n) == str(n)[::-1]:
             return c
         else:
-            n= int(n+int(str(n)[::-1]))
-            c+=1
+            n = int(n + int(str(n)[::-1]))
+            c += 1

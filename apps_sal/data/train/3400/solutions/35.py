@@ -1,8 +1,7 @@
-def even_numbers(arr,n):
-    last_n_even_numbers=list()
+def even_numbers(arr, n):
+    last_n_even_numbers = list()
     for num in arr[::-1]:
-        if not num%2 and len(last_n_even_numbers)<n:
+        if not num % 2 and len(last_n_even_numbers) < n:
             last_n_even_numbers.append(num)
-            if len(last_n_even_numbers)==n:
+            if len(last_n_even_numbers) == n:
                 return last_n_even_numbers[::-1]
-

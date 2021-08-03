@@ -1,9 +1,12 @@
 from itertools import permutations as p
 
 n_str = '123456789'
-formt = lambda n: sorted(list(map(''.join, list(filter(set, p(n_str, n))))))
+def formt(n): return sorted(list(map(''.join, list(filter(set, p(n_str, n))))))
+
+
 db = formt(1) + formt(2) + formt(3) + formt(4) + formt(5)
-hs = {1:0, 2:9, 3:81, 4:585, 5:3609}
+hs = {1: 0, 2: 9, 3: 81, 4: 585, 5: 3609}
+
 
 def next_pandigital(lp):
     if lp in db:
@@ -14,8 +17,10 @@ def next_pandigital(lp):
             break
     return db[db.index(lp):]
 
+
 def is_pandigital(lp):
     return len(set(lp)) == len(lp) and '0' not in lp
+
 
 def pow_root_pandigit(val, n, k):
     l = []
