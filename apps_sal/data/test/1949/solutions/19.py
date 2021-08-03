@@ -1,7 +1,9 @@
 #from collections import *
 #from math import *
 #from operator import *
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 n, k = list(map(int, input().split()))
 a = list(set(I()))
 a.sort()

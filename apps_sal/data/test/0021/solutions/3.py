@@ -1,5 +1,5 @@
 from sys import *
-inp = lambda: stdin.readline()
+def inp(): return stdin.readline()
 
 
 def main():

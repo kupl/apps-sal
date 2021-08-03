@@ -1,7 +1,8 @@
 from collections import defaultdict
 
 MOD = 1000000007
-iist = lambda: map(int, input().split())
+def iist(): return map(int, input().split())
+
 
 N, M = iist()
 Q = defaultdict(list)

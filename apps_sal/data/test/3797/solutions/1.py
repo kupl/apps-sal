@@ -26,8 +26,11 @@ if not ok:
 
 X = {(0, 0): 3}
 for b in range(1, N):
-    t2 = T2[b + 1]; s1 = S1[b + 1]; t1 = T1[b + 1]; s0 = S0[b + 1]
-    check = lambda r, g: t2 <= r < s1 and t1 <= g < s0
+    t2 = T2[b + 1]
+    s1 = S1[b + 1]
+    t1 = T1[b + 1]
+    s0 = S0[b + 1]
+    def check(r, g): return t2 <= r < s1 and t1 <= g < s0
 
     Z = [0] * (N + 1)
     if C[b + 1]:
@@ -46,7 +49,7 @@ for b in range(1, N):
             # r <- b+1
             Z[g] += v
             # g <- b+1
-            Z[r] += v;
+            Z[r] += v
     for z, v in enumerate(Z):
         if v:
             X[z, b] = v % MOD
