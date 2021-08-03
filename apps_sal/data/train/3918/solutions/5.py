@@ -9,6 +9,6 @@ def baby_count(x):
             a += 1
         elif c == "Y":
             y += 1
-    
-    count =  min(a, b//2, y)
+
+    count = min(a, b // 2, y)
     return count if count > 0 else 'Where\'s the baby?!'

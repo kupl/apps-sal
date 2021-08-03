@@ -1,4 +1,4 @@
-def solution(to_cur,value):
+def solution(to_cur, value):
     r = []
     for number in value:
         if to_cur == "USD":

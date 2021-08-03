@@ -4,4 +4,3 @@ def dominator(arr):
         if arr.count(e) > half_length:
             return e
     return -1
-

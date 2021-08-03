@@ -8,4 +8,3 @@ def freeway_game(distance, speed, cars):
         elif other_time > 0 and other_exit < exit:
             score -= 1
     return score
-
