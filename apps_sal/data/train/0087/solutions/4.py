@@ -1,5 +1,6 @@
 from math import gcd
 
+
 def sum_of_floor(n, p, q):
     t = gcd(p, q)
     p, q = p // t, q // t
@@ -19,6 +20,7 @@ def sum_of_floor(n, p, q):
         z = -z
     return s
 
+
 def solve():
     m, d, w = map(int, input().split())
     if d == 1:
@@ -27,6 +29,7 @@ def solve():
     u = gcd(d - 1, w)
     res = sum_of_floor(min(m, d) - 1, 1, w // u)
     print(res)
+
 
 t = int(input())
 for _ in range(t):

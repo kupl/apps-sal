@@ -17,8 +17,7 @@ def st():
 for _ in range(one()):
     x, y, a, b = list(map(int, input().split()))
     d = y - x
-    if d%(a+b)==0:
-        print(d//(a+b))
+    if d % (a + b) == 0:
+        print(d // (a + b))
     else:
         print(-1)
-

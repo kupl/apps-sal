@@ -39,4 +39,3 @@ for _ in range(q):
     n = int(stdin.readline().strip())
     a = [int(i) for i in stdin.readline().strip().split()]
     print(solve(a))
-

@@ -10,9 +10,9 @@ for _ in range(t):
     for i in range(n):
         if s[i] == '0':
             if i >= x:
-                outl[i-x] = '0'
+                outl[i - x] = '0'
             if i + x < n:
-                outl[i+x] = '0'
+                outl[i + x] = '0'
     out = ''.join(outl)
     works = True
     for i in range(n):
@@ -25,4 +25,3 @@ for _ in range(t):
         print(out)
     else:
         print(-1)
-

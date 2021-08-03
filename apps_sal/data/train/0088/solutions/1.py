@@ -9,5 +9,3 @@ for x in arr:
         continue
     else:
         print('YES')
-
-

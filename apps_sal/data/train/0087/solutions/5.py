@@ -11,4 +11,3 @@ for _ in range(int(input())):
         # sum(md - w1 * n for n in 1..md // w1)
         mdd_w1 = md // w1
         print((md * 2 - w1 - mdd_w1 * w1) * mdd_w1 // 2)
-

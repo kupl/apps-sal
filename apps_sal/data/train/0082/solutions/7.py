@@ -1,4 +1,4 @@
 for _ in range(int(input())):
-    n=int(input())
-    l=list(map(int,input().split()))
-    print(' '.join(list(map(str,l[::-1]))))
+    n = int(input())
+    l = list(map(int, input().split()))
+    print(' '.join(list(map(str, l[::-1]))))

@@ -12,4 +12,3 @@ for zz in range(zzz):
         print(int(t))
     else:
         print(-1)
-

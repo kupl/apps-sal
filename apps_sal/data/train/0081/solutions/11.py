@@ -5,7 +5,7 @@ for _ in range(int(input())):
     l = len(a)
     flag = 0
     for i in range(l):
-        if c[i]==a[i] or c[i]==b[i]:
+        if c[i] == a[i] or c[i] == b[i]:
             continue
         else:
             flag = 1
@@ -14,4 +14,3 @@ for _ in range(int(input())):
         print("NO")
     else:
         print("YES")
-
