@@ -10,8 +10,10 @@ def __starting_point():
     for i in range(n):
         s, r, p = list(map(str, Si.readline().split()))
         r, p = list(map(int, (r, p)))
-        if p in h[r]: h[r][p] += [s]
-        else: h[r][p] = [s]
+        if p in h[r]:
+            h[r][p] += [s]
+        else:
+            h[r][p] = [s]
     for da in h:
         d = sorted(list(h[da].items()), key=ig(0), reverse=True)
         # print(d)
@@ -23,7 +25,8 @@ def __starting_point():
             else:
                 ns += d[i][1][:2 - len(ns)]
             i += 1
-            if i >= len(d): break
+            if i >= len(d):
+                break
         print(' '.join(ns))
 
 

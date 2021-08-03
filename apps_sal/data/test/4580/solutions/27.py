@@ -20,7 +20,8 @@ def main():
         d[i // 400] += 1
     ans = 0
     for i in d[:-1]:
-        if i != 0: ans += 1
+        if i != 0:
+            ans += 1
     if ans == 0:
         print(f"{1} {d[-1]}")
         return

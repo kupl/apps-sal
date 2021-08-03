@@ -12,7 +12,10 @@ while t < 3201:
 
 s = 0
 for i in a:
-    if i >= 3200: s += 1
+    if i >= 3200:
+        s += 1
 
-if ans == 0: print(1, s)
-else: print(ans, ans + s)
+if ans == 0:
+    print(1, s)
+else:
+    print(ans, ans + s)

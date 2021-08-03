@@ -2,9 +2,11 @@
 import sys
 import numpy as np
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 # 桁dp、√Nまでをlower、それ以降をup_range、Nをlowerで割ったものでまとめる
 MOD = 10 ** 9 + 7
@@ -25,7 +27,8 @@ for _ in range(K):
     low[1:] += (prev_low_cum[-1] + prev_high_cum[-1])
     low[1:] -= prev_high_cum[:-1]
     high = prev_low_cum * high_range
-    low %= MOD; high %= MOD
+    low %= MOD
+    high %= MOD
 
 answer = (low[1:].sum() + high[1:].sum()) % MOD
 print((answer % MOD))

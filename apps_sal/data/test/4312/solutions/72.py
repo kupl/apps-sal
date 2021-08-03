@@ -9,5 +9,7 @@ while(N[0] > 0 and N[2] > 0):
         N[0] = N[0] - N[3]
         if(N[0] <= 0):
             break
-if(flag == 1): print("Yes")
-else: print("No")
+if(flag == 1):
+    print("Yes")
+else:
+    print("No")

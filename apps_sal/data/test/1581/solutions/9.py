@@ -1,12 +1,14 @@
 def solve():
     N, K = map(int, input().split())
 
-    U = []; V = []
+    U = []
+    V = []
     for x in range(1, int(N**.5) + 1):
         U.append(x)
         if x < N // x:
             V.append(N // x)
-    V.reverse(); U.extend(V)
+    V.reverse()
+    U.extend(V)
 
     L = len(U)
     prv = 0

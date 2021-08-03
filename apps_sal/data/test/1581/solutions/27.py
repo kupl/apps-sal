@@ -7,7 +7,8 @@ def divisor(x):
     div = [0]
     for i in range(1, int(x**0.5) + 1):
         div.append(i)
-        if x != i**2: div.append(x // i)
+        if x != i**2:
+            div.append(x // i)
     return div
 
 
