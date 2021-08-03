@@ -16,6 +16,3 @@ class Solution:
             results[offset] = prev[-1]
 
         return max(results)
-                             
-                    
-

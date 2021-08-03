@@ -15,5 +15,3 @@ class Solution:
         if dp1[0] < cursum - dp1[0]:
             return 'Bob'
         return 'Tie'
-                
-

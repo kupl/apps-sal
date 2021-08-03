@@ -13,15 +13,15 @@ class Solution:
                     count = 0
 
             return out
-        
-        if len(arr) < m*k:
+
+        if len(arr) < m * k:
             return -1
         res = -1
         bi = list(sorted(set(arr)))
         start = 0
-        end = len(bi)-1
+        end = len(bi) - 1
         while start <= end:
-            mid = (start+end)//2
+            mid = (start + end) // 2
             if count(arr, bi[mid], k) >= m:
                 res = bi[mid]
                 end = mid - 1

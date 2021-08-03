@@ -24,6 +24,3 @@ class Solution:
             return 'Bob'
         else:
             return 'Tie'
-
-            
-

@@ -12,10 +12,10 @@ class Solution:
                     count = 0
                     res += 1
             return res >= m
-            
+
         l, r = 1, max(bloomDay)
         while l < r:
-            mid = (l + r)//2
+            mid = (l + r) // 2
             if can(mid):
                 r = mid
             else:
@@ -23,4 +23,3 @@ class Solution:
         if can(l):
             return l
         return -1
-

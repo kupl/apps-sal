@@ -1,4 +1,6 @@
 from heapq import *
+
+
 class Solution:
     def shortestSubarray(self, A, K):
         heap, curS, ans = [(0, -1)], 0, float('inf')

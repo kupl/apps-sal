@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 class Solution:
     def maxSizeSlices(self, w: List[int]) -> int:
         n = len(w)
@@ -15,4 +16,3 @@ class Solution:
             results[offset] = dp1[-1][-1]
 
         return max(results)
-

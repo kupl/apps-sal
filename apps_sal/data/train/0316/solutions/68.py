@@ -3,7 +3,7 @@ class Solution:
         n = len(s)
         k = n - 1
         while k > 0:
-          if s[:k] == s[-k:]:
-            break
-          k -= 1
+            if s[:k] == s[-k:]:
+                break
+            k -= 1
         return s[:k]

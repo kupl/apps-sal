@@ -15,12 +15,12 @@ class Solution:
                     if bouquets == m:
                         return True
             return False
-        MAX = 10**9+1
+        MAX = 10**9 + 1
         left, right = 1, MAX
         while left < right:
-            mid = (left+right)//2
+            mid = (left + right) // 2
             if canCreate(mid):
                 right = mid
             else:
-                left = mid+1
+                left = mid + 1
         return left if left != MAX else -1

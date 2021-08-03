@@ -3,12 +3,12 @@ class Solution:
         def ok(m, n):
             bloomed = [d <= m for d in bloomDay]
             c = i = j = 0
-            while i < len(bloomed)-k+1:
+            while i < len(bloomed) - k + 1:
                 for _ in range(k):
                     if bloomed[j]:
                         j += 1
                     else:
-                        i = j = j+1
+                        i = j = j + 1
                         break
                 else:
                     i = j
@@ -18,13 +18,12 @@ class Solution:
             else:
                 return False
             return True
-        
-        
+
         l, r = min(bloomDay), max(bloomDay)
         while l < r:
-            m = (l+r) // 2
+            m = (l + r) // 2
             if ok(m, n):
                 r = m
             else:
-                l = m+1
+                l = m + 1
         return l if ok(l, n) else -1

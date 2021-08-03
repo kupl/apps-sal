@@ -3,6 +3,7 @@ class Solution:
         if m * k > len(bloomDay):
             return -1
         lo, hi = min(bloomDay), max(bloomDay)
+
         def validDay(bloom, day):
             cnt, adj = 0, 0
             for b in bloom:
@@ -22,4 +23,3 @@ class Solution:
             else:
                 lo = mid + 1
         return lo
-

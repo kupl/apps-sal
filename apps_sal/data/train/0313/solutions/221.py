@@ -10,7 +10,7 @@ class Solution:
         if self.check(bloomDay, m, k, l):
             return l
         return -1
-    
+
     def check(self, bloomDay, m, k, day):
         cnt, consecutive = 0, 0
         for bd in bloomDay:

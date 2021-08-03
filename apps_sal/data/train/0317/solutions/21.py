@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 class Solution:
     def numPermsDISequence(self, S: str) -> int:
         # Dynamic Programming
@@ -19,5 +20,3 @@ class Solution:
                 return sum(dp(i - 1, k) for k in range(j))
 
         return sum(dp(N, j) for j in range(N + 1)) % MOD
-
-

@@ -17,10 +17,9 @@ class Solution:
                 if count >= k:
                     total -= 1
                     count -= k
-                    if total ==-1:
+                    if total == -1:
                         break
             return total <= 0
-            
 
         while low < high:
             mid = (low + high) // 2
@@ -29,7 +28,7 @@ class Solution:
                 high = mid
             else:
                 low = mid + 1
-        
+
         if low == max(bloomDay) + 1:
             return -1
         else:

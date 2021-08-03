@@ -12,8 +12,7 @@ class Solution:
                     max_val = val
                     F[i] = val
                     S[i] = F[i + x + 1]
-        
+
         if F[0] == S[0]:
             return 'Tie'
         return 'Alice' if F[0] > S[0] else 'Bob'
-

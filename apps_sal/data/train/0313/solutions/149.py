@@ -1,6 +1,7 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         n = len(bloomDay)
+
         def get_num_boquets(wait_days):
             i = 0
             while i < n and bloomDay[i] > wait_days:
@@ -11,8 +12,8 @@ class Solution:
             while j < n:
                 while j < n and bloomDay[j] <= wait_days:
                     j += 1
-                j -= 1 # index of last available flower in the adjacent subarray
-                count += (j-i+1) // k
+                j -= 1  # index of last available flower in the adjacent subarray
+                count += (j - i + 1) // k
                 i = j + 1
                 while i < n and bloomDay[i] > wait_days:
                     i += 1
@@ -22,7 +23,7 @@ class Solution:
         start = 1
         end = max(bloomDay)
         while start < end:
-            mid = start + (end-start) // 2
+            mid = start + (end - start) // 2
             #print(mid, get_num_boquets(mid))
             if get_num_boquets(mid) >= m:
                 # wait is too long, or just right
@@ -34,4 +35,3 @@ class Solution:
             return start
         else:
             return -1
-

@@ -12,7 +12,7 @@ class Solution:
         if self.check(end, bloomDay, m, k):
             return end
         return -1
-    
+
     def check(self, days, bloomDay, m, k):
         cnt = 0
         res = 0

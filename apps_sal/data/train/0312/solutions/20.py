@@ -2,11 +2,12 @@ class Solution:
     def shortestSubarray(self, A: List[int], K: int) -> int:
         return shortest_subarray(A, K)
 
+
 def shortest_subarray(A: List[int], K: int) -> int:
     n = len(A)
     sums = [0] * (n + 1)
     for i in range(n):
-        sums[i+1] = sums[i] + A[i]
+        sums[i + 1] = sums[i] + A[i]
     result = n + 1
     q = deque()
     for i, total in enumerate(sums):

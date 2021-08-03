@@ -5,9 +5,9 @@ class Solution:
             return -1
         eV = max(bloomDay)
         sV = min(bloomDay)
-        
+
         while sV <= eV:
-            mV = (sV+eV) // 2
+            mV = (sV + eV) // 2
             i = 0
             x = 0
             c = 0
@@ -26,9 +26,5 @@ class Solution:
                 sV = mV + 1
                 continue
             eV = mV - 1
-        
-        return sV
-                
-            
-        
 
+        return sV

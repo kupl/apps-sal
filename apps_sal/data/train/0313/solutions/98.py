@@ -1,6 +1,6 @@
 class Solution:
     IMPOSSIBLE = -1
-    
+
 #     @staticmethod
 #     def canMakeBouquetsOnDay(bloom_day: List[int], m: int, k: int, day: int) -> bool:
 #         n = len(bloom_day)
@@ -16,7 +16,7 @@ class Solution:
 #                 bouquets_made += (j - i) // k
 #                 i = j
 #         return bouquets_made >= m
-    
+
 #     def minDays(self, bloom_day: List[int], m: int, k: int) -> int:
 #         n = len(bloom_day)
 #         if k * m > n:
@@ -64,4 +64,3 @@ class Solution:
             if bouquets_made >= m:
                 return bloom_day[index]
         return Solution.IMPOSSIBLE
-

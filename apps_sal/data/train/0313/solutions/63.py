@@ -20,7 +20,7 @@ class Solution:
             else:
                 left = mid + 1
         return left
-    
+
 #     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
 #         def feasible(day):
 #             adj_count = 0
@@ -34,7 +34,7 @@ class Solution:
 #                     bouquet += 1
 #                     adj_count = 0
 #             return bouquet == m
-        
+
 #         if len(bloomDay) < m * k:
 #             return -1
 #         left, right = 1, max(bloomDay)
@@ -45,4 +45,3 @@ class Solution:
 #             else:
 #                 left = mid + 1
 #         return left
-

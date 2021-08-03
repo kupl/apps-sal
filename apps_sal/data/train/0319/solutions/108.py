@@ -9,7 +9,7 @@ class Solution:
             return 'Tie'
         else:
             result = self.recursiveHelper(stoneValue, stoneValueLength, initIndex, firstSelect, mem)
-            #print(result)
+            # print(result)
             if result > 0:
                 return 'Alice'
             elif result < 0:
@@ -47,7 +47,7 @@ class Solution:
         else:  # >= 3; three choices
             # 1 select all three
             curr = stoneValue[index] + stoneValue[index + 1] + stoneValue[index + 2]
-            c1 = (curr if flag else -curr) + self.recursiveHelper(stoneValue,length, index + 3, not flag, mem)
+            c1 = (curr if flag else -curr) + self.recursiveHelper(stoneValue, length, index + 3, not flag, mem)
 
             # 2 select the first two
             curr = stoneValue[index] + stoneValue[index + 1]
@@ -59,4 +59,3 @@ class Solution:
             result = max(c1, c2, c3) if flag else min(c1, c2, c3)
             mem[(index, flag)] = result
             return result
-

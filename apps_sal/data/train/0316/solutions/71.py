@@ -17,4 +17,3 @@ class Solution:
                     lps.append(0)
                     i += 1
         return st[:lps[-1]]
-

@@ -1,20 +1,18 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        if len(bloomDay) < m*k:
+        if len(bloomDay) < m * k:
             return -1
-        
+
         l, r = min(bloomDay), max(bloomDay)
         while l < r:
-            mid = (l+r)//2
+            mid = (l + r) // 2
             temp = self.bouquets(mid, bloomDay, k, m)
             if temp:
                 r = mid
             else:
-                l = mid+1
+                l = mid + 1
         return l
-            
-            
-    
+
     def bouquets(self, day, bloomDay, k, m):
         c = 0
         contDays = 0
@@ -28,4 +26,3 @@ class Solution:
                 c += 1
                 contDays = 0
         return c >= m
-

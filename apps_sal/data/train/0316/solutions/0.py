@@ -1,6 +1,6 @@
 class Solution:
     def longestPrefix(self, strn: str) -> str:
-        max_prefs = [0]*len(strn)
+        max_prefs = [0] * len(strn)
 
         curr = 0
         for idx in range(1, len(strn)):
@@ -16,6 +16,6 @@ class Solution:
                         max_prefs[idx] = curr
                         break
                     else:
-                        curr = max_prefs[curr-1]
+                        curr = max_prefs[curr - 1]
 
         return strn[:max_prefs[-1]]

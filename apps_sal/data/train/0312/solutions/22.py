@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def shortestSubarray(self, A: List[int], K: int) -> int:
         if not len(A):

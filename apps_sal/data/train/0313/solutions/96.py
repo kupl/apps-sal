@@ -3,6 +3,7 @@ class Solution:
         # m -- qty of bouquets, k -- qty of flowers
         if len(bloomDay) < m * k:
             return - 1
+
         def feasible(days):
             bonquets, flowers = 0, 0
             for bloom in bloomDay:
@@ -12,7 +13,7 @@ class Solution:
                     bonquets += (flowers + 1) // k
                     flowers = (flowers + 1) % k
             return bonquets >= m
-        
+
         left, right = 1, max(bloomDay)
         while left < right:
             mid = left + (right - left) // 2

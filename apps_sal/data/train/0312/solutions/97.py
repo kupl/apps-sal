@@ -1,5 +1,6 @@
 import bisect
 
+
 class Solution:
     def shortestSubarray(self, A: List[int], K: int) -> int:
         cur, stack, idx, ans = 0, [0], [-1], float('inf')
@@ -13,9 +14,7 @@ class Solution:
                 ans = min(ans, i - idx[j - 1])
             stack.append(cur)
             idx.append(i)
-        
+
         if ans == float('inf'):
             return -1
         return ans
-        
-

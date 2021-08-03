@@ -1,12 +1,12 @@
 class Solution:
     def numSub(self, s: str) -> int:
         n = len(s)
-        
-        start = 0 
+
+        start = 0
         while start < n and s[start] != '1':
-            start += 1 
+            start += 1
         if start == n:
-            return 0 
+            return 0
         i = start
         count = 0
         while i < n and start < n:
@@ -17,6 +17,6 @@ class Solution:
                 continue
             start = i
             while start < n and s[start] != '1':
-                start += 1 
+                start += 1
             i = start
         return count

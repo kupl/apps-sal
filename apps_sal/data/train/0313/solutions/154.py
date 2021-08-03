@@ -1,6 +1,6 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        if m*k > len(bloomDay):
+        if m * k > len(bloomDay):
             return -1
 
         bloomDay_sort = sorted(bloomDay)
@@ -17,7 +17,7 @@ class Solution:
         bloomDay_tmp = [0 for ii in range(len(bloomDay))]
         l, r = 0, num
         while l < r:
-            mid = (l+r)//2
+            mid = (l + r) // 2
             for i in range(len(bloomDay)):
                 if bloomDay[i] <= bloomDay_dict[mid]:
                     bloomDay_tmp[i] = 1
@@ -33,13 +33,13 @@ class Solution:
                     count_nonlocal += count // k
                     count = 0
 
-            if count != 0:          ##
+            if count != 0:
                 count_nonlocal += count // k
                 count = 0
 
             if count_nonlocal >= m:
                 r = mid
             else:
-                l = mid+1
+                l = mid + 1
 
-        return bloomDay_dict[l]      # 
+        return bloomDay_dict[l]      #

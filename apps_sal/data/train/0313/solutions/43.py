@@ -3,7 +3,7 @@ class Solution:
         if len(bloomDay) // k < m:
             return -1
         low, high = min(bloomDay), max(bloomDay)
-        
+
         def valid(days):
             start = 0
             count = 0
@@ -14,15 +14,15 @@ class Solution:
                         start = i + 1
                 else:
                     start = i + 1
-            
+
             return count >= m
 
         while low < high:
             days = (low + high) // 2
-            
+
             if valid(days):
                 high = days
             else:
                 low = days + 1
-        
+
         return low

@@ -10,14 +10,14 @@ class Solution:
 
         low = minDays
         high = maxDays
-        mid = (low+high)//2
+        mid = (low + high) // 2
 
         while (low < high):
             if(self.validDays(mid, bloomDay, m, k)):
                 high = mid
             else:
-                low = mid+1
-            mid = (low+high)//2
+                low = mid + 1
+            mid = (low + high) // 2
 
         if (self.validDays(low, bloomDay, m, k)):
             return low
@@ -31,7 +31,7 @@ class Solution:
             while (idx < len(bloomDay) and bloomDay[idx] <= days):
                 flowergroupcount += 1
                 idx += 1
-            bouquets += flowergroupcount//k
+            bouquets += flowergroupcount // k
             idx += 1
         if (bouquets >= m):
             return True

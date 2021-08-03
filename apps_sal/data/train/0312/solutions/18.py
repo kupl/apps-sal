@@ -1,7 +1,6 @@
 from typing import List
 
 
-
 class Solution:
     def shortestSubarray(self, arr: List[int], K: int) -> int:
         pr_arr = [arr[i] for i in range(len(arr))]

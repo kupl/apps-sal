@@ -9,9 +9,9 @@ class Solution:
                     bonquets += (flowers + 1) // k
                     flowers = (flowers + 1) % k
             return bonquets >= m
-        left,right = min(bloomDay), max(bloomDay) + 1
+        left, right = min(bloomDay), max(bloomDay) + 1
         while left < right:
-            mid = left + (right-left)//2
+            mid = left + (right - left) // 2
             if make_boquets(mid):
                 right = mid
             else:

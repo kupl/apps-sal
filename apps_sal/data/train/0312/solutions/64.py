@@ -10,5 +10,5 @@ class Solution:
             S.append([cur, i])
             while S[-1][0] >= S[0][0] + K:
                 ans = min(ans, S[-1][1] - S.popleft()[1])
-                
+
         return ans if ans <= len(A) else -1

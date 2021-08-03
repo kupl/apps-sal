@@ -1,5 +1,5 @@
 class Solution:
-    def minDays(self,bloomDay: List[int], m: int, k: int) -> int:
+    def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         def feasible(days) -> bool:
             bonquets, flowers = 0, 0
             for bloom in bloomDay:
@@ -20,5 +20,3 @@ class Solution:
             else:
                 left = mid + 1
         return left
-    
-

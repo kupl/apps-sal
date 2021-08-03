@@ -3,7 +3,7 @@ class Solution:
         n = len(bloomDay)
         if m * k > n:
             return -1
-        
+
         def invalid(threshold):
             cur = 0
             bouquets = 0
@@ -15,7 +15,7 @@ class Solution:
                     cur = 0
             bouquets += cur // k
             return bouquets < m
-        
+
         left, right = 1, max(bloomDay)
         while left <= right:
             mid = (left + right) // 2

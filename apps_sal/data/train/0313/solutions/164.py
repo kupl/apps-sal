@@ -8,14 +8,13 @@ class Solution:
                     adjacent = 0
                 else:
                     adjacent += 1
-                
+
                 if adjacent == k:
                     bouquets += 1
                     adjacent = 0
-            
+
             return bouquets >= m
-            
-        
+
         left, right = min(bloomDay), max(bloomDay)
         while left < right:
             mid = left + (right - left) // 2
@@ -23,5 +22,5 @@ class Solution:
                 right = mid
             else:
                 left = mid + 1
-        
+
         return left if feasible(left) else -1

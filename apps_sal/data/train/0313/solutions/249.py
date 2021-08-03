@@ -1,22 +1,19 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        
-        if k*m > len(bloomDay):
+
+        if k * m > len(bloomDay):
             return -1
-        
+
         unique_bloom_days = sorted(set(bloomDay))
 
-        
-        
-        
         lo = 0
-        hi = len(unique_bloom_days)-1
-        
+        hi = len(unique_bloom_days) - 1
+
         if hi == 0:
             return unique_bloom_days[0]
-        
+
         while True:
-            curr_idx = int((lo+hi)/2)
+            curr_idx = int((lo + hi) / 2)
             if curr_idx == lo:
                 idx = curr_idx
             curr_day = unique_bloom_days[curr_idx]
@@ -31,10 +28,10 @@ class Solution:
                         curr = 0
                 else:
                     curr = 0
-            
+
             if bouquet < m:  # not enough
                 if curr_idx == lo:
-                    idx = lo+1
+                    idx = lo + 1
                     break
                 else:
                     lo = curr_idx

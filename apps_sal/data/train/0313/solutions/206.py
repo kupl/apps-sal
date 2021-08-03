@@ -21,7 +21,7 @@ class Solution:
         right = max(bloomDay)
         while left < right:
             days = left + (right - left) // 2
-            if is_possible( days ):
+            if is_possible(days):
                 right = days
             else:
                 left = days + 1

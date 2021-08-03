@@ -15,4 +15,3 @@ class Solution:
             dp2.pop()
             dp2.appendleft(new_dp2)
         return max(dp1[0][k], dp2[0][k])
-

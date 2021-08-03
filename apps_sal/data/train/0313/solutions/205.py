@@ -1,10 +1,10 @@
 class Solution:
     def minDays(self, A: List[int], m: int, k: int) -> int:
-        
-        #divide array into m parts or more, each part has at least k elements, minimize the maximum values of parts
-        if len(A) < m*k:
+
+        # divide array into m parts or more, each part has at least k elements, minimize the maximum values of parts
+        if len(A) < m * k:
             return -1
-        
+
         def canSplit(T):
             count = 0
             cur = 0
@@ -15,21 +15,19 @@ class Solution:
                 if cur > T:
                     cur = 0
                     i = 0
-                elif i==k:
+                elif i == k:
                     cur = 0
                     i = 0
                     count += 1
             return count >= m
-        
+
         l = min(A)
         r = max(A)
-        
+
         while l < r:
-            mid = l + (r-l)//2
+            mid = l + (r - l) // 2
             if canSplit(mid):
                 r = mid
             else:
                 l = mid + 1
         return l
-            
-

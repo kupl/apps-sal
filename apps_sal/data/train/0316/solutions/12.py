@@ -4,5 +4,5 @@ class Solution:
         for l in range(len(s)):
             if s[:l] == s[-l:]:
                 ans = l
-        
+
         return s[:ans]

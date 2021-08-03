@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def shortestSubarray(self, A, K):
         acc = [0]
@@ -12,4 +14,3 @@ class Solution:
                 ans = min(ans, size - monoq.popleft())
             monoq.append(size)
         return ans if ans != float('inf') else -1
-

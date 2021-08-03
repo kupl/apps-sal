@@ -13,11 +13,11 @@ class Solution:
                 else:
                     count = 0
             return False
-        
+
         start = min(bloomDay)
         end = max(bloomDay)
-        res = -1 
-    
+        res = -1
+
         while start <= end:
             center = start + (end - start) // 2
             if check(bloomDay, center, m, k):
@@ -25,6 +25,5 @@ class Solution:
                 end = center - 1
             else:
                 start = center + 1
-        
-        return res
 
+        return res

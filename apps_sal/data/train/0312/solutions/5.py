@@ -11,5 +11,5 @@ class Solution:
                 min_size = min(min_size, i - dq.popleft()[0] + 1)
             while dq and curr_sum <= dq[-1][1]:
                 dq.pop()
-            dq.append([i+1, curr_sum])
+            dq.append([i + 1, curr_sum])
         return min_size if min_size != len(A) + 1 else -1

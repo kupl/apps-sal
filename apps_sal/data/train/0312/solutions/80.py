@@ -16,11 +16,10 @@ class Solution:
             deq.append(i)
 
             while len(deq) > 0 and prefix_arr[deq[-1]] - prefix_arr[deq[0]] >= K:
-                result = min(result, deq[-1]-deq[0])
+                result = min(result, deq[-1] - deq[0])
                 deq.popleft()
 
         if result == len(A) + 1:
             return -1
 
         return result
-

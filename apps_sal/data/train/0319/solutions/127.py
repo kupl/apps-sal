@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         vals = stoneValue
@@ -18,7 +19,7 @@ class Solution:
                     p2 = p1_
             dp.pop()
             dp.appendleft((p1, p2))
-        
+
         p1, p2 = dp[0]
         if p1 > p2:
             return 'Alice'

@@ -12,23 +12,21 @@ class Solution:
                     num_adj = 0
                 if bloomDay[i] > day:
                     num_adj = 0
-                    
+
                 i += 1
-                
-            
+
             return count >= num_bouq
-                    
-        
+
         left = 1
         right = max(bloomDay)
-        
+
         while left < right:
             mid = left + (right - left) // 2
             if canMake(mid):
                 right = mid
             else:
                 left = mid + 1
-                
+
         if canMake(left):
             return left
         else:

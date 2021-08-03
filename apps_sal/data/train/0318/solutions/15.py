@@ -1,8 +1,8 @@
 class Solution:
-    
+
     def __init__(self):
         self.dp = {}
-    
+
     def solve_linear(self, slices, ind, to_choose):
         if (ind, to_choose) not in self.dp:
             N = len(slices)
@@ -12,7 +12,7 @@ class Solution:
             result_not_choose = self.solve_linear(slices, ind + 1, to_choose)
             self.dp[(ind, to_choose)] = max(result_choose + slices[ind], result_not_choose)
         return self.dp[(ind, to_choose)]
-    
+
     def maxSizeSlices(self, slices: List[int]) -> int:
         min_elem = min(slices)
         min_ind = 0
@@ -23,5 +23,4 @@ class Solution:
         arr = [0 for _ in range(N)]
         for i in range(N):
             arr[i] = slices[(min_ind + i) % N]
-        return self.solve_linear(arr, 0, int(N/3))
-
+        return self.solve_linear(arr, 0, int(N / 3))

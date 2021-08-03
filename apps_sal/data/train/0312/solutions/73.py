@@ -3,7 +3,7 @@ class Solution:
         P = [0]
         for x in A:
             P.append(P[-1] + x)
-        
+
         q = collections.deque()
         min_length_K = -1
         for j, Pj in enumerate(P):
@@ -14,5 +14,5 @@ class Solution:
                     min_length_K = j - q[0]
                 q.popleft()
             q.append(j)
-            
+
         return min_length_K

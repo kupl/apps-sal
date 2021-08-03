@@ -1,4 +1,4 @@
-# The solution looks good, 
+# The solution looks good,
 # also: https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/discuss/143726/C%2B%2BJavaPython-O(N)-Using-Deque
 class Solution:
     def shortestSubarray(self, A: List[int], K: int) -> int:
@@ -9,12 +9,10 @@ class Solution:
             prefix_sum += A[i]
             while queue and queue[-1][0] > prefix_sum:
                 queue.pop()
-                
+
             while queue and prefix_sum - queue[0][0] >= K:
                 res = min(res, i - queue[0][1])
                 queue.popleft()
-            
+
             queue.append((prefix_sum, i))
         return res if res != float('inf') else -1
-        
-

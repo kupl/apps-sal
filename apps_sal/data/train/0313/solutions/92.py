@@ -17,7 +17,8 @@ class Solution:
                     count = 0
             return False
 
-        if len(bloomDay) < m*k: return -1
+        if len(bloomDay) < m * k:
+            return -1
         left = min(bloomDay)
         right = max(bloomDay)
         while left < right:

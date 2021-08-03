@@ -18,7 +18,8 @@ class Solution:
             r = (r + pow(128, i, mod) * ord(s[~i])) % mod
 
            # we check if the prefix and suffix agrees, if yes, we find yet another longer prefix, so we record the index
-            if l == r: res = i + 1
+            if l == r:
+                res = i + 1
 
        # after we finish searching the string, output the prefix
         return s[:res]

@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def stoneGameIII(self, stones: List[int]) -> str:
         suffix_sum = [0]

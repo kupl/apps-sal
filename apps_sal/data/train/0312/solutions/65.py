@@ -9,5 +9,5 @@ class Solution:
             while d and cur <= d[-1][1]:
                 d.pop()
             d.append([i + 1, cur])
-            
+
         return res if res != float('inf') else -1

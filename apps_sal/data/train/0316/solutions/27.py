@@ -1,18 +1,17 @@
 class Solution:
     def longestPrefix(self, s: str) -> str:
-#         n = len(s)
-#         r = -1
-#         i = 0
-#         while i < (n-1):
-#             if s[0:(i+1)] == s[(n-i-1):]:
-#                 r = i
-#             i += 1
-#             if i >= (n-1):
-#                 break
+        #         n = len(s)
+        #         r = -1
+        #         i = 0
+        #         while i < (n-1):
+        #             if s[0:(i+1)] == s[(n-i-1):]:
+        #                 r = i
+        #             i += 1
+        #             if i >= (n-1):
+        #                 break
 
-        
-#         return s[0:(r+1)]
-    
+        #         return s[0:(r+1)]
+
         res, l, r, mod = 0, 0, 0, 10**9 + 7
 
         # now we start from the beginning and the end of the string
@@ -31,7 +30,8 @@ class Solution:
             r = (r + pow(128, i, mod) * ord(s[~i])) % mod
 
            # we check if the prefix and suffix agrees, if yes, we find yet another longer prefix, so we record the index
-            if l == r: res = i + 1
+            if l == r:
+                res = i + 1
 
        # after we finish searching the string, output the prefix
         return s[:res]

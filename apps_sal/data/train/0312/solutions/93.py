@@ -9,7 +9,7 @@ class Solution:
             while s_sum and s_sum[-1] >= curr_sum:
                 s_sum.pop()
                 s_ind.pop()
-            
+
             if not s_sum:
                 if curr_sum >= K:
                     res = min(res, i + 1)
@@ -19,8 +19,8 @@ class Solution:
                     res = min(res, i - s_ind[ind - 1])
                 elif curr_sum >= K:
                     res = min(res, i + 1)
-            
+
             s_sum.append(curr_sum)
             s_ind.append(i)
-        
+
         return -1 if math.isinf(res) else res

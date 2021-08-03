@@ -5,7 +5,7 @@ class Solution:
             return -1
         vals = list(set(bloomDay))
         vals.sort()
-        
+
         def invalid(threshold):
             cur = 0
             bouquets = 0
@@ -18,7 +18,7 @@ class Solution:
                 else:
                     cur = 0
             return bouquets < m
-        
+
         left, right = 0, len(vals) - 1
         while left <= right:
             mid = (left + right) // 2

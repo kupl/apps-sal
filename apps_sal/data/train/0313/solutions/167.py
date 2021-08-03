@@ -11,7 +11,7 @@ class Solution:
             else:
                 left = mid + 1
         return left
-    
+
     def validBouquets(self, bloomDay, days, m, k):
         # Count how many bouquets we can collect
         count_bouquets = 0
