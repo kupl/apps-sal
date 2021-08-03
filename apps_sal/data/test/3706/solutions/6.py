@@ -29,7 +29,8 @@ def lines():
                     may = 0
                     break
                 tbl[i][j] -= 1
-            if not may: break
+            if not may:
+                break
             rows.append(i + 1)
         # prt()
     return rows
@@ -47,7 +48,8 @@ def cols():
                     may = 0
                     break
                 tbl[j][i] -= 1
-            if not may: break
+            if not may:
+                break
             stolbs.append(i + 1)
         # prt()
     return stolbs
@@ -66,7 +68,8 @@ for i in range(n):
         if tbl[i][j] != 0:
             br = 1
             break
-    if br: break
+    if br:
+        break
 if br:
     print(-1)
 else:

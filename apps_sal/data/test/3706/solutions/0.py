@@ -33,14 +33,17 @@ for i in range(n):
         if realg[i][j] - g[i][j] != floor:
             bad = 1
 
-if bad: print("-1")
+if bad:
+    print("-1")
 else:
     # get floor done
     if n < m:
         for i in range(n):
-            for j in range(floor): ans.append("row %d" % (i + 1))
+            for j in range(floor):
+                ans.append("row %d" % (i + 1))
     else:
         for i in range(m):
-            for j in range(floor): ans.append("col %d" % (i + 1))
+            for j in range(floor):
+                ans.append("col %d" % (i + 1))
     print(len(ans))
     print("\n".join(ans))

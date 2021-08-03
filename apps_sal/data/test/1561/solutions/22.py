@@ -1,5 +1,6 @@
 y, x, k = map(int, input().split())
-m = []; ans = 0
+m = []
+ans = 0
 for i in range(y):
     m.append(list(input()))
     e = 0

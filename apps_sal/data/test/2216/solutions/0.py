@@ -20,7 +20,8 @@ def read(mode=2):
 
 
 def write(s="\n"):
-    if isinstance(s, list): s = " ".join(s)
+    if isinstance(s, list):
+        s = " ".join(s)
     s = str(s)
     print(s, end="")
 
@@ -31,9 +32,11 @@ n, m, k = read()
 cells = []
 for i in range(n):
     if not i % 2:
-        for j in range(m): cells.append((i + 1, j + 1))
+        for j in range(m):
+            cells.append((i + 1, j + 1))
     else:
-        for j in range(m - 1, -1, -1): cells.append((i + 1, j + 1))
+        for j in range(m - 1, -1, -1):
+            cells.append((i + 1, j + 1))
 
 ct = 0
 for i in range(k - 1):

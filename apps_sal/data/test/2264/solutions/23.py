@@ -10,4 +10,5 @@ for _ in range(test):
         maxB = max([maxB, mas[0]])
     if maxB > minA:
         print(maxB - minA)
-    else: print(0)
+    else:
+        print(0)

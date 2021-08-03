@@ -19,7 +19,8 @@ for x in range(n):
     tot += sum(a[x])
 for x in range(m):
     t = a[0][x] - min(a[0])
-    if t <= 0: t = 0
+    if t <= 0:
+        t = 0
     for y in range(t):
         col += [x + 1]
 t = len(row) + len(col)
@@ -29,4 +30,5 @@ if tot - m * len(row) - n * len(col) == 0:
         print(n1, x)
     for x in col:
         print(n2, x)
-else: print(-1)
+else:
+    print(-1)

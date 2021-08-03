@@ -23,5 +23,6 @@ for i in range(m):
         if z >= k:
             v += 1
 
-if k == 1: v = v / 2
+if k == 1:
+    v = v / 2
 print(int(v))

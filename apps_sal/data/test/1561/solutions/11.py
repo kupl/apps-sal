@@ -23,7 +23,8 @@ for i in range(n):
             temp = begin
             while mp[i][temp] == '.':
                 temp += 1
-                if temp == m: break
+                if temp == m:
+                    break
             length = temp - begin
             begin = temp
             ans += max(0, length - k + 1)
@@ -36,7 +37,8 @@ for i in range(m):
             temp = begin
             while mp[temp][i] == '.':
                 temp += 1
-                if temp == n: break
+                if temp == n:
+                    break
             length = temp - begin
             begin = temp
             ans += max(0, length - k + 1)
