@@ -1,4 +1,4 @@
-def solve(k): 
+def solve(k):
     k -= 1
     i, d, p, n, s = 0, 1, 0, 9, 45
     while i + s <= k:

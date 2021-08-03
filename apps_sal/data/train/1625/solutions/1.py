@@ -9,8 +9,9 @@ def pawn_move_tracker(moves):
         for i in range(1, 2 + long_move):
             r0 = r + direction * i
             if board[r0][c0][0] == 'pP'[white_turn] \
-                and board[r][c][0] == '.pP'[capture and 2 - white_turn]:
+                    and board[r][c][0] == '.pP'[capture and 2 - white_turn]:
                 board[r0][c0], board[r][c] = '.', board[r0][c0]
                 break
-        else: return "{} is invalid".format(move)
+        else:
+            return "{} is invalid".format(move)
     return board

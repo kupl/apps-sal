@@ -68,4 +68,3 @@ def generate_frames() -> str:
         else:
             frames[-1] = "%sX" % frames[-1]
     return ' '.join(frames)
-

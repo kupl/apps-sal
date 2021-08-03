@@ -1,5 +1,6 @@
 def proper_fractions(n):
-    if n == 1: return 0
+    if n == 1:
+        return 0
     res = n
     i = 2
     while i * i <= n:
@@ -11,4 +12,3 @@ def proper_fractions(n):
     if n > 1:
         res -= res / n
     return int(res)
-

@@ -1,6 +1,7 @@
 def lsorter2(l):
-    intsec = [(a,b) for (a,b) in zip(l, sorted(l)) if a!=b]
+    intsec = [(a, b) for (a, b) in zip(l, sorted(l)) if a != b]
     return list(zip(*intsec))
+
 
 def naturalSwap(l):
     x1 = lsorter2(l)
@@ -12,7 +13,7 @@ def naturalSwap(l):
 
     ci = [x for x in si if x in fi]
 
-    new_ori = [x for i,x in enumerate(ori) if i not in ci]
+    new_ori = [x for i, x in enumerate(ori) if i not in ci]
 
     swap_num1 = len(ci)
 
@@ -21,11 +22,11 @@ def naturalSwap(l):
 
     ci2 = [x for x in si2 if x in fi2]
 
-    new_ori2 = [x for i,x in enumerate(ori) if i not in ci2]
+    new_ori2 = [x for i, x in enumerate(ori) if i not in ci2]
 
     swap_num2 = len(ci2)
 
-    swap_real= min(swap_num1,swap_num2)
+    swap_real = min(swap_num1, swap_num2)
 
     to_force_swap1 = ci[:swap_real]
     to_force_swap2 = ci2[:swap_real]
@@ -34,6 +35,7 @@ def naturalSwap(l):
 
     new_list = [x for i, x in enumerate(ori) if i not in to_force_swap3]
     return (new_list, swap_real)
+
 
 def forcedSwap(l):
     x1 = lsorter2(l)
@@ -45,14 +47,13 @@ def forcedSwap(l):
     return ori
 
 
-
 def exchange_sort(l):
     swaps = 0
     dlist = l[:]
     cnt = 1
     if dlist == sorted(dlist):
         return 0
-    
+
     else:
         while cnt > 0 and len(dlist) > 0:
             cnt = 0
@@ -62,7 +63,6 @@ def exchange_sort(l):
             dlist = x1[0]
         while len(dlist) > 2:
             x2 = forcedSwap(dlist)
-            swaps+=1
+            swaps += 1
             dlist = x2
         return swaps
-
