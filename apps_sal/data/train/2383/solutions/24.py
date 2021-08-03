@@ -1,6 +1,6 @@
 for _ in range(int(input())):
-    n,m = sorted(list(map(int, input().split())))
-    if(2*n<m):
-        print(m*m)
+    n, m = sorted(list(map(int, input().split())))
+    if(2 * n < m):
+        print(m * m)
     else:
-        print((2*n)**2)
+        print((2 * n)**2)

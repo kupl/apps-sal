@@ -1,20 +1,17 @@
 import sys
 input = sys.stdin.readline
 
-t=int(input())
+t = int(input())
 for tests in range(t):
-    n=int(input())
-    
-    ANS=0
-    while n>=10:
-        back=n//10
-        buy=back*10
+    n = int(input())
 
-        ANS+=buy
-        n-=buy
-        n+=back
+    ANS = 0
+    while n >= 10:
+        back = n // 10
+        buy = back * 10
 
-    print(ANS+n)
+        ANS += buy
+        n -= buy
+        n += back
 
-    
-
+    print(ANS + n)

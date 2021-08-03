@@ -4,11 +4,11 @@ for tc in range(t):
     lst = input().split()
     ans = []
     ansl = 0
-    for i in lst :
-        if i not in ans :
+    for i in lst:
+        if i not in ans:
             ans.append(i)
-            if len(ans) >= n :
+            if len(ans) >= n:
                 break
-    for i in ans :
-        print(i, end = " ")
+    for i in ans:
+        print(i, end=" ")
     print()

@@ -1,8 +1,9 @@
 import sys
 input = sys.stdin.readline
-rInt = lambda: int(input())
-mInt = lambda: map(int, input().split())
-rLis = lambda: list(map(int, input().split()))
+def rInt(): return int(input())
+def mInt(): return map(int, input().split())
+def rLis(): return list(map(int, input().split()))
+
 
 outs = []
 
@@ -38,5 +39,4 @@ for _ in range(t):
     outs.append(best)
 
 
-print(*outs, sep = '\n')
-
+print(*outs, sep='\n')

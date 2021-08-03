@@ -7,8 +7,8 @@ def ia_to_s(a): return ' '.join([str(s) for s in a])
 def solve(a, b):
     mi = min(a, b)
     ma = max(a, b)
-    s = max(2*mi, ma)
-    return s*s
+    s = max(2 * mi, ma)
+    return s * s
 
 
 def main():
@@ -19,5 +19,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

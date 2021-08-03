@@ -6,7 +6,7 @@ lis = [-1] * 60
 for loop in range(tt):
 
     n = int(input())
-    p = list(map(int,input().split()))
+    p = list(map(int, input().split()))
 
     ans = []
 
@@ -18,4 +18,3 @@ for loop in range(tt):
             lis[i] = loop
 
     print(*ans)
-

@@ -10,6 +10,7 @@ def solve():
         p.append(i)
     print(*p)
 
+
 t = int(input())
 for _ in range(t):
     solve()

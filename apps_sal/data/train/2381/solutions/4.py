@@ -10,4 +10,3 @@ for i in range(t):
             mx = d
         cur = nxt + 1
     print(mx + 1)
-

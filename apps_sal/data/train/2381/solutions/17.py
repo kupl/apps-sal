@@ -1,3 +1,6 @@
+import sys
+
+
 def run_length_compress(string):
     string = string + "@"
     n = len(string)
@@ -19,8 +22,7 @@ def run_length_compress(string):
 
     return ans
 
-  
-import sys
+
 input = sys.stdin.readline
 
 

@@ -9,7 +9,7 @@ def main():
         for s in S:
             if s == 'L':
                 cnt += 1
-                ans = max(ans, cnt+1)
+                ans = max(ans, cnt + 1)
             else:
                 cnt = 0
         print(ans)
@@ -17,5 +17,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

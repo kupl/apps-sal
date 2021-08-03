@@ -1,7 +1,7 @@
 for t in range(int(input())):
     n = int(input())
     aa = list(map(int, input().split(' ')))
-    asort = sorted([(v, i) for i, v in enumerate(aa)]);
+    asort = sorted([(v, i) for i, v in enumerate(aa)])
 
     inds = {}
     for a, ai in asort:
@@ -32,7 +32,7 @@ for t in range(int(input())):
             else:
                 l = m + 1
         return len(binds) - l
-    
+
     ls = [None] * n
     for i, (a, ai) in enumerate(asort):
         if i == 0:
@@ -43,7 +43,7 @@ for t in range(int(input())):
             curl = ls[asort[i - 1][1]] + 1
         else:
             curl = left_eq(asort[i - 1][0], ai) + 1
-        
+
         ls[ai] = curl
     #print('before:', ls)
 
@@ -56,12 +56,11 @@ for t in range(int(input())):
 
     alter = [-10]
     values = list(inds.keys())
-    v2vi = { v: i for i, v in enumerate(values) }
+    v2vi = {v: i for i, v in enumerate(values)}
     for i, (a, ai) in enumerate(asort):
         avin = v2vi[a]
         if avin > 0:
-            alter += [left_eq(values[avin-1], ai) + 1 + right_eq(a, ai)]
+            alter += [left_eq(values[avin - 1], ai) + 1 + right_eq(a, ai)]
 
     maxSeqLen = max(max(ls), max(alter))
     print(n - maxSeqLen)
-

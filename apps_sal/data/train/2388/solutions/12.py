@@ -1,6 +1,7 @@
 from collections import deque
 import sys
 
+
 def __starting_point():
     t = int(input())
     lns = sys.stdin.readlines()
@@ -37,4 +38,6 @@ def __starting_point():
         result.append(" ".join(res))
 
     print("\n".join(result))
+
+
 __starting_point()

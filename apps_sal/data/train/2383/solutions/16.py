@@ -4,4 +4,3 @@ for i in range(int(input())):
     c1 = max(b, 2 * a)
     f = min(c, c1)
     print(f * f)
-

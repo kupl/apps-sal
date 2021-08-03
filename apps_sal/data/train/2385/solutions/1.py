@@ -10,7 +10,7 @@ for _ in range(t):
     grid = [input() for i in range(n)]
     robot_cnt = 0
     black_cnt = 0
-    
+
     graph = [-1] * (n * m)
     rev_graph = [[] for i in range(n * m)]
     for i in range(n):
@@ -65,7 +65,7 @@ for _ in range(t):
             robot_cnt += 1
             if s[i // m][i % m] == "0":
                 black_cnt += 1
-                
+
     # cycle with road
     for i in range(n * m):
         if not is_cycle[i]:
@@ -84,7 +84,7 @@ for _ in range(t):
                 period[nxt_v] = (period[v] + 1) % MOD
                 if s[nxt_v // m][nxt_v % m] == "0":
                     is_black[period[nxt_v]] = True
-                q.append(nxt_v)  
+                q.append(nxt_v)
         robot_cnt += MOD
         black_cnt += sum(is_black)
 

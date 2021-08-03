@@ -10,5 +10,5 @@ while(t):
     inds.append(n)
     ans = 0
     for i in range(1, len(inds)):
-        ans = max(ans, inds[i]-inds[i-1])
+        ans = max(ans, inds[i] - inds[i - 1])
     print(ans)

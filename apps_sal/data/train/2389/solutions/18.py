@@ -1,16 +1,20 @@
 def int_list():
-    return  [int(c) for c in input().split()]
+    return [int(c) for c in input().split()]
+
 
 def int1():
     return int(input())
 
+
 def str_list():
     return [c for c in input().split()]
+
 
 def str1():
     return input()
 
 # start
+
 
 s1 = ("RGB" * 66667)[:-1]
 s2 = ("GBR" * 66667)[:-1]
@@ -50,9 +54,9 @@ for j in range(q):
     cost3 = min3
 
     for i in range(k, n):
-        cost1 += (c1[i] - c1[i-k])
-        cost2 += (c2[i] - c2[i-k])
-        cost3 += (c3[i] - c3[i-k])
+        cost1 += (c1[i] - c1[i - k])
+        cost2 += (c2[i] - c2[i - k])
+        cost3 += (c3[i] - c3[i - k])
 
         min1 = cost1 if cost1 < min1 else min1
         min2 = cost2 if cost2 < min2 else min2
@@ -62,4 +66,3 @@ for j in range(q):
 
 for result in res:
     print(result)
-

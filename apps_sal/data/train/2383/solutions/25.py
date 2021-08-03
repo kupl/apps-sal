@@ -5,4 +5,3 @@ for t in range(T):
     maxi = max([A, B])
     res = max(2 * mini, maxi)
     print(res * res)
-

@@ -7,7 +7,7 @@ def main():
         min_ans = 10 ** 9
         pr1 = [0]
         pr2 = [0]
-        pr3 = [0]        
+        pr3 = [0]
         for i in range(n):
             count1 = 0
             count2 = 0
@@ -25,7 +25,7 @@ def main():
                 if s[i] != "B":
                     count2 += 1
                 if s[i] != "R":
-                    count3 += 1 
+                    count3 += 1
             if i % 3 == 2:
                 if s[i] != "B":
                     count1 += 1
@@ -41,8 +41,9 @@ def main():
                 count1 = pr1[j] - pr1[j - k]
                 count2 = pr2[j] - pr2[j - k]
                 count3 = pr3[j] - pr3[j - k]
-                min_ans = min(min_ans, count1, count2, count3)     
+                min_ans = min(min_ans, count1, count2, count3)
         ans.append(min_ans)
     print(*ans, sep="\n")
+
 
 main()

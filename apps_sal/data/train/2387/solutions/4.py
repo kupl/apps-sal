@@ -17,4 +17,3 @@ for _ in range(t):
     print(spent)
 
 # inf.close()
-
