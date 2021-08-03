@@ -5,7 +5,8 @@ sm = ['s', 'S']
 pm = ['p', 'P']
 cy = ['k', 'K']
 
-def fight_resolve(d, a): 
+
+def fight_resolve(d, a):
     if (d in p1 and a in p1) or (d in p2 and a in p2):
         return -1
     if a in ar:
@@ -16,4 +17,3 @@ def fight_resolve(d, a):
         return d if d in ar else a
     elif a in cy:
         return d if d in pm else a
-

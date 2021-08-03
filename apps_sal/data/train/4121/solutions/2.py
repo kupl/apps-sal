@@ -15,4 +15,3 @@ def fight_resolve(defender, attacker):
         if defender.lower() == 'p':
             res = defender
     return res
-

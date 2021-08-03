@@ -1,4 +1,4 @@
-def queue(queuers, pos, time = 0):
+def queue(queuers, pos, time=0):
     while True:
         for i in range(len(queuers)):
             if queuers[pos] == 0:

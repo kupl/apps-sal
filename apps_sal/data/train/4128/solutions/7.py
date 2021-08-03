@@ -1,5 +1,5 @@
-def bears(x,s):
-    
+def bears(x, s):
+
     result = []
     bears = []
 
@@ -10,13 +10,11 @@ def bears(x,s):
         elif s[0] == '8' and s[1] == 'B':
             s = s[2::]
             bears.append('8B')
-        else: 
+        else:
             s = s[1::]
-    
-    result.append(''.join(bears))  
-    test = len(bears)*2 >= x
-    result.append(test)
-    
-    return result
-    
 
+    result.append(''.join(bears))
+    test = len(bears) * 2 >= x
+    result.append(test)
+
+    return result
