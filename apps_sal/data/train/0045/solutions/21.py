@@ -5,7 +5,7 @@ for i in range(32):
     A.append(A[-1] * 2 + s)
 S = [0] * 33
 for i in range(32):
-    S[i+1] = S[i] + A[i]
+    S[i + 1] = S[i] + A[i]
 T = int(input())
 for _ in range(T):
     N = int(input())
@@ -13,5 +13,3 @@ for _ in range(T):
         if S[i] > N:
             print(i - 1)
             break
-
-

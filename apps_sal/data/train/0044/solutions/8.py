@@ -6,4 +6,6 @@ def main():
         for i in range(n):
             p.append(4 * n - i * 2)
         print(*p)
+
+
 main()

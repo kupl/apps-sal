@@ -50,5 +50,4 @@ for t in range(T):
         choice = 'R'
     else:
         choice = 'S'
-    print(choice*len(s))
-
+    print(choice * len(s))

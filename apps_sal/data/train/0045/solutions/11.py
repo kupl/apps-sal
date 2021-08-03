@@ -9,4 +9,3 @@ while s <= 10 ** 18:
     x *= 2
 for _ in range(t):
     print(bisect_right(a, int(input())))
-

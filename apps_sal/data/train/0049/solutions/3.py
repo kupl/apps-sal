@@ -6,6 +6,7 @@ pref = [0]
 for i in arr:
     pref.append(pref[-1] + i)
 
+
 def f(x):
     if x == 0:
         return 0
@@ -31,11 +32,12 @@ def f(x):
                 cnt += 1
                 break
     return ans + 1
-            
+
+
 for i in range(t):
     l, r = map(int, input().split())
     l -= 1
-    print(f(r) - f(l))    
+    print(f(r) - f(l))
 
 '''n = int(input())
 arr1 = list(map(int, input().split()))

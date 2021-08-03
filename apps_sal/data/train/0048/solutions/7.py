@@ -4,4 +4,3 @@ for test in range(tests):
     x, y, k = list(map(int, input().split()))
     a1 = (k * (y + 1) - 1 + x - 2) // (x - 1)
     print(a1 + k)
-

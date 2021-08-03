@@ -3,6 +3,7 @@ import math
 import collections
 import heapq
 
+
 def set_debug(debug_mode=False):
     if debug_mode:
         fin = open('input.txt', 'r')
@@ -32,5 +33,6 @@ def __starting_point():
             print('R' * len(s))
         else:
             print('S' * len(s))
+
 
 __starting_point()

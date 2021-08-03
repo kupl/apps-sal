@@ -21,4 +21,3 @@ for _ in range(int(input())):
     print(len(ops))
     if len(ops) != 0:
         print("\n".join(ops))
-

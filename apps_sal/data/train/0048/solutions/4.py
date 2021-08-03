@@ -8,4 +8,3 @@ for i in range(t):
     # print(a)
 
     print((a - 1) // (x - 1) + 1 + k)
-

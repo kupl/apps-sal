@@ -27,4 +27,3 @@ for case in range(t):
             low = mid + 1
 
     print(low)
-

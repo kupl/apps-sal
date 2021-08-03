@@ -16,4 +16,3 @@ for _ in range(int(input())):
         a, b = max(a, c), max(b, d)
 
     print(max(a, b))
-

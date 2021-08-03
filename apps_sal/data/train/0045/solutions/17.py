@@ -10,4 +10,3 @@ for _ in range(int(input())):
         #print(cur, n)
     gans.append(ans)
 print('\n'.join(map(str, gans)))
-

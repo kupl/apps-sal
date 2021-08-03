@@ -7,6 +7,7 @@ def replace(i, right_s):
             s[i + k], s[j - k] = s[j - k], s[i + k]
     return j
 
+
 t = int(input())
 operations = []
 for _ in range(t):
@@ -29,4 +30,3 @@ for i in range(t):
     print(len(operations[i]))
     for operation in operations[i]:
         print(operation[0] + 1, operation[1] + 1)
-

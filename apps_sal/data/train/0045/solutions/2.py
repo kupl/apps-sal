@@ -12,5 +12,3 @@ for test in range(tests):
         else:
             break
     print(ans)
-        
-

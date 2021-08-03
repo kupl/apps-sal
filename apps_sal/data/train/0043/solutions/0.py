@@ -21,4 +21,3 @@ for _ in range(int(input())):
             L = M
     gans.append(R)
 print(*gans, sep='\n')
-

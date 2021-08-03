@@ -1,6 +1,6 @@
 nice = [1]
 while nice[-1] <= 10**18:
-    nice.append((nice[-1]<<1)+1)
+    nice.append((nice[-1] << 1) + 1)
 for i in range(len(nice)):
     nice[i] = nice[i] * (nice[i] + 1) // 2
 
