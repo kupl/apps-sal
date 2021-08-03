@@ -14,12 +14,16 @@ while t:
     x, y = s[u]
     i = 0
     for v in p[u]:
-        if i == j: i += 1
-        if i > 3: print('NO');return
+        if i == j:
+            i += 1
+        if i > 3:
+            print('NO')
+            return
         p[v].remove(u)
         s[v] = (x + l[i] * d, y + l[i + 1] * d)
         t.append((v, d >> 1, (i + 2) % 4))
         i += 1
 
 print('YES')
-for x, y in s: print(x, y)
+for x, y in s:
+    print(x, y)

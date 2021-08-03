@@ -7,7 +7,10 @@ def dfs(v, x, y, t, l, pr):
         newy = y + nx[p[i]][1] * l
         dfs(g[v][i], newx, newy, p[i], l // 4, v)
 
-read = lambda: map(int, input().split())
+
+def read(): return map(int, input().split())
+
+
 n = int(input())
 g = [list() for i in range(n + 1)]
 for i in range(n - 1):

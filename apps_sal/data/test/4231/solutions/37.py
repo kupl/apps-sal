@@ -11,4 +11,5 @@ def main():
     h, w = Input()
     print(H * W - ((H * w + W * h) - (h * w)))
 
+
 main()

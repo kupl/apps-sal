@@ -26,4 +26,3 @@ for i in range(len(q) - 1):
 print(cnt)
 for op in op_list:
     print((op[0] + 1, op[1] + 1, op[2] + 1, op[3] + 1))
-

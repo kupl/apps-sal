@@ -1,6 +1,5 @@
-n = int(input()) 
+n = int(input())
 data = sorted(list(map(int, input().split())))
-print(data[-1], end = ' ')
-print(*data[1:-1], end = ' ')
+print(data[-1], end=' ')
+print(*data[1:-1], end=' ')
 print(data[0])
-

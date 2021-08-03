@@ -6,4 +6,3 @@ y = min(A)
 A.sort()
 A.pop(A.index(min(A)))
 print(' '.join(list(map(str, [x] + A + [y]))))
-

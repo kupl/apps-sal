@@ -1,12 +1,14 @@
-R = lambda:list(map(int,input().split()))
-n,m = R()
+def R(): return list(map(int, input().split()))
+
+
+n, m = R()
 a = R()
 b = R()
 r = 0
 for x in a:
     c = 0
     for y in b:
-        if y>=x:
+        if y >= x:
             c = 1
             b.pop(b.index(y))
             break

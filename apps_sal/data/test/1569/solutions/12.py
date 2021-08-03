@@ -1,5 +1,7 @@
 import collections
 import heapq
+
+
 def __starting_point():
     n, m = [int(x) for x in input().split()]
     G = collections.defaultdict(list)
@@ -9,6 +11,7 @@ def __starting_point():
         road.append((s, e, f))
         G[s].append((e, f))
         G[e].append((s, f))
+
     def dijkstra(s, e):
         d = [(float('inf'), float('inf')) for _ in range(n + 1)]
         pre = [-1 for _ in range(n + 1)]
@@ -16,7 +19,8 @@ def __starting_point():
         hq = [(0, 0, s)]
         while hq:
             dis, cost, p = heapq.heappop(hq)
-            if d[p] < (dis, cost): continue
+            if d[p] < (dis, cost):
+                continue
             for e, f in G[p]:
                 cost_e = cost + (1 if not f else 0)
                 dis_e = dis + 1
@@ -46,5 +50,6 @@ def __starting_point():
     print(k)
     for s, e, f in ans:
         print(s, e, f)
+
 
 __starting_point()

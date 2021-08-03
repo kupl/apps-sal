@@ -6,6 +6,7 @@ import collections
 import bisect
 import datetime
 
+
 def main():
     # sys.stdin = open('input.txt', 'r')
     # sys.stdout = open('output.txt', 'w')
@@ -19,7 +20,7 @@ def main():
         pos = bisect.bisect_left(l2, i)
 
         if pos < len(l2) and l2[pos] >= i:
-                l2 = l2[pos+1:]
+            l2 = l2[pos + 1:]
 
         else:
             count = count + 1
@@ -29,7 +30,9 @@ def main():
     # sys.stdin.close()
     # sys.stdout.close()
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

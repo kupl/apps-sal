@@ -1,5 +1,4 @@
-H,W=list(map(int, input().split()))
-h,w=list(map(int, input().split()))
+H, W = list(map(int, input().split()))
+h, w = list(map(int, input().split()))
 
-print(((H-h)*(W-w)))
-
+print(((H - h) * (W - w)))
