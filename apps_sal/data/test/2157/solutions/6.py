@@ -19,5 +19,6 @@ for i in range(n1):
     result[i] = temp
 result.sort(reverse=True)
 sum = 0
-for i in range(n1): sum += result[i] * a[i]
+for i in range(n1):
+    sum += result[i] * a[i]
 print(sum)

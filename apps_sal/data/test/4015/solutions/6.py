@@ -27,7 +27,7 @@ F = factor(z)
 if F == []:
     print(0)
     return
-if (len(set(F)) == 2 and 2 in F and 3 in F) or (len(set(F)) == 1 and (2 in F or 3 in F)):\
+if (len(set(F)) == 2 and 2 in F and 3 in F) or (len(set(F)) == 1 and (2 in F or 3 in F)):
     print(len(F))
 else:
     print(-1)

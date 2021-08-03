@@ -14,6 +14,7 @@ t.sort()
 p.sort()
 
 j = 0
-while p[j] == 0: j += 1
+while p[j] == 0:
+    j += 1
 
 print(sum(p[i] * t[i] for i in range(j, n + 1)))

@@ -18,7 +18,7 @@ class SegmentTree:
 
     def __init__(self, operator, equality, identity, data):
         if equality is None:
-            equality = lambda a, b: False
+            def equality(a, b): return False
         self.op = operator
         self.eq = equality
         self.id = identity

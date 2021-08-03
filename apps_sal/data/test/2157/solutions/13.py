@@ -8,7 +8,8 @@ occ = [0] * n
 for i in range(q):
     l, r = list(map(int, input().split()))
     occ[l - 1] += 1
-    if (r < n): occ[r] -= 1
+    if (r < n):
+        occ[r] -= 1
 
 for i in range(1, n):
     occ[i] += occ[i - 1]
