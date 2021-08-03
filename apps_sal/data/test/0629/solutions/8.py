@@ -15,7 +15,8 @@ for i in range(n):
 
 best2 = float('inf')
 for i in range(n):
-    if i == best_cross: continue
+    if i == best_cross:
+        continue
 
     tmp = sum(a1[:i]) + sum(a2[i:]) + b[i]
 

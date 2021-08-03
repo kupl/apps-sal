@@ -16,4 +16,5 @@ for i in I:
     else:
         count += 1
         four = 2
-if count == len(I): print("YES")
+if count == len(I):
+    print("YES")

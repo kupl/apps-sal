@@ -10,5 +10,6 @@ for i in n:
         if c > 2:
             s = 'NO'
             break
-    else: c = 0
+    else:
+        c = 0
 print(s)

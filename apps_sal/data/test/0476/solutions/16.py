@@ -10,7 +10,7 @@ for i in range(len(s) - 2):
         if p < i:
             p = i + 2
             s2 += '*'
-p = -1;
+p = -1
 s = s2
 s2 = ""
 s += "11"
@@ -21,7 +21,7 @@ for i in range(len(s) - 1):
         if p < i:
             p = i + 1
             s2 += '*'
-p = -1;
+p = -1
 s = s2
 s2 = ""
 

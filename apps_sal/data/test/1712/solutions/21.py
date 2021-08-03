@@ -9,6 +9,9 @@ for _ in range(n):
     a = int(input())
     op1 = fun(a, x, y) * y  # cal for Vova
     op2 = fun(a, y, x) * x  # cal for Vanya
-    if op1 == op2: print('Both')
-    elif op1 < op2: print('Vanya')
-    elif op1 > op2: print('Vova')
+    if op1 == op2:
+        print('Both')
+    elif op1 < op2:
+        print('Vanya')
+    elif op1 > op2:
+        print('Vova')

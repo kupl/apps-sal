@@ -9,7 +9,8 @@ def main():
     s = s.replace('1', '')
     if len(s) == 0:
         print('YES')
-    else: print('NO')
+    else:
+        print('NO')
 
 
 main()

@@ -1,6 +1,6 @@
 def check(s, dep):
     if len(s) == 0:
-        return True;
+        return True
     flag = False
     if s[-1:] == '1':
         flag = flag or check(s[:-1], dep + 1)

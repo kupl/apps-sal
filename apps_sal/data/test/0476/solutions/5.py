@@ -1,7 +1,7 @@
 def main():
     x = str(input())
     xix = int(x)
-    xs = list(set(list(x)));
+    xs = list(set(list(x)))
     if len(xs) == 1 and xs[0] == '1':
         print("YES")
     elif x[0] == "4":
