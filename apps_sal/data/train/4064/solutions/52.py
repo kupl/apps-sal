@@ -6,4 +6,4 @@ def count_by(x, n):
         ans.append(i)
         i += x
         count += 1
-    return ans 
+    return ans

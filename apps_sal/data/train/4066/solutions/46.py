@@ -9,4 +9,3 @@ def string_to_array(s):
             tmp_string = tmp_string + i
     array.append(tmp_string)
     return array
-

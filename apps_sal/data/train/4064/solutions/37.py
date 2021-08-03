@@ -1,1 +1,1 @@
-count_by=lambda x,n:[*range(x,x*n+x,x)]
+def count_by(x, n): return [*range(x, x * n + x, x)]

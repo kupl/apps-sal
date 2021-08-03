@@ -8,4 +8,3 @@ def count_by(x, n):
             count += 1
         i += 1
     return L
-

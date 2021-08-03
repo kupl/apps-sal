@@ -3,12 +3,12 @@ from queue import deque
 
 def ant_bridge(ants, terrain):
     terrains = '-' + terrain + '-'
-    marching_ants = deque([ant, -len(ants)+count+1] for count, ant in enumerate(ants))
+    marching_ants = deque([ant, -len(ants) + count + 1] for count, ant in enumerate(ants))
     print(marching_ants)
     bridge_ants = deque()
     # 在地形上前进
-    for pos in range(1, len(terrains)-1):
-        if '.' in terrains[pos-1:pos+2]:
+    for pos in range(1, len(terrains) - 1):
+        if '.' in terrains[pos - 1:pos + 2]:
             # 当前位置是坑，拿最前面的行进蚁填坑，其他的前移一步,并检查是否要拆掉最尾端的桥蚁
             leading_ant = marching_ants.pop()
             leading_ant[1] = pos

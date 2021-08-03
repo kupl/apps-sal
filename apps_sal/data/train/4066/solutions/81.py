@@ -1,2 +1,2 @@
 def string_to_array(s):
-    return ([''],s.split()) [s != '']
+    return ([''], s.split())[s != '']

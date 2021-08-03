@@ -4,5 +4,5 @@ def count_by(x, n):
     """
     my_list = []
     for number in range(1, n + 1):
-        my_list.append(x*number)
+        my_list.append(x * number)
     return my_list

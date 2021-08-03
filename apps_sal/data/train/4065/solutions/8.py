@@ -10,5 +10,5 @@ def get_sequence(offset, size):
             else:
                 num += 1
         num += 1
-    
+
     return ret

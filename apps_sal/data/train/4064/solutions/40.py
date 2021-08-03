@@ -5,5 +5,3 @@ def count_by(x, n):
         count_list.append(x * i)
         i += 1
     return count_list
-        
-

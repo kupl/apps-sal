@@ -5,4 +5,3 @@ def string_to_array(s):
     else:
         words = s.split()
     return words
-

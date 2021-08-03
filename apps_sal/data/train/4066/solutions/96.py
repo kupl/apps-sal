@@ -1,4 +1,4 @@
-def string_to_array(s):        
+def string_to_array(s):
     arr = []
     if s == '':
         arr = ['']

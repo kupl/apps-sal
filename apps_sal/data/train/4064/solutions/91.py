@@ -7,8 +7,3 @@ def count_by(x, n):
         numberList.append(value)
         count = count + 1
     return numberList
-        
-        
-        
-        
-
