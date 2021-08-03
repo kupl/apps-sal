@@ -2,7 +2,7 @@ import math
 import sys
 from collections import defaultdict
 #input = sys.stdin.readline
-nt = lambda: list(map(int, input().split()))
+def nt(): return list(map(int, input().split()))
 
 
 def main():

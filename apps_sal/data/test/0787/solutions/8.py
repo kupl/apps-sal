@@ -8,7 +8,8 @@ else:
     k = 0
     ans = []
     for i in range(len(s)):
-        if k == n: break
+        if k == n:
+            break
         if s[i] not in q:
             ans.append(i)
             q.add(s[i])

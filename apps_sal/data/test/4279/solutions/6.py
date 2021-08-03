@@ -2,11 +2,16 @@ q = int(input())
 
 num_cnt = [[0, 0]]
 for i in range(1, 22000):
-    if i < 10: num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + i])
-    elif i < 100: num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + 9 + (i - 9) * 2])
-    elif i < 1000: num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + 9 + 90 * 2 + (i - 99) * 3])
-    elif i < 10000: num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + 9 + 90 * 2 + 900 * 3 + (i - 999) * 4])
-    elif i < 100000: num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + 9 + 90 * 2 + 900 * 3 + 9000 * 4 + (i - 9999) * 5])
+    if i < 10:
+        num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + i])
+    elif i < 100:
+        num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + 9 + (i - 9) * 2])
+    elif i < 1000:
+        num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + 9 + 90 * 2 + (i - 99) * 3])
+    elif i < 10000:
+        num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + 9 + 90 * 2 + 900 * 3 + (i - 999) * 4])
+    elif i < 100000:
+        num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + 9 + 90 * 2 + 900 * 3 + 9000 * 4 + (i - 9999) * 5])
 
 for i in range(q):
     k = int(input())

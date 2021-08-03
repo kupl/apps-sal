@@ -11,7 +11,8 @@ def get(x):
     # print("Inside",x)
     n = x - 1
     x, y = 1, 9
-    while n > x * y: n, x, y = n - x * y, x + 1, y * 10
+    while n > x * y:
+        n, x, y = n - x * y, x + 1, y * 10
     a = str(10 ** (x - 1) + n // x)[n % x]
     print(a)
 
@@ -35,5 +36,6 @@ for i in range(q):
     gg = bisect.bisect_right(p, quer) - 1
     # print("Where",gg)
     rem = quer - p[gg]
-    if(rem == 0): rem = d[gg]
+    if(rem == 0):
+        rem = d[gg]
     get(rem)

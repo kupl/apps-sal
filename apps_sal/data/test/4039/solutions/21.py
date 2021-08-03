@@ -12,19 +12,22 @@ for _ in range(n):
         nt.append((a, b))
 
 if r2 < 0:
-    print('NO'); return
+    print('NO')
+    return
 
 pt.sort()
 nt.sort(key=lambda t: t[0] + t[1])
 
 for a, b in pt:
     if r < a:
-        print('NO'); return
+        print('NO')
+        return
     r += b
 
 for a, b in nt:
     if r2 < a + b:
-        print('NO'); return
+        print('NO')
+        return
     r2 -= b
 
 print("YES")

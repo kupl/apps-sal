@@ -19,7 +19,8 @@ for ri in range(r, -1, -1):
     for si in range(s, -1, -1):
         for pi in range(p, -1, -1):
             t = ri * si + si * pi + pi * ri
-            if t == 0: continue
+            if t == 0:
+                continue
             if ri > 0:
                 dp[ri - 1][si][pi] += dp[ri][si][pi] * ri * pi / t
             if si > 0:

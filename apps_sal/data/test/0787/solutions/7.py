@@ -1,5 +1,6 @@
 import sys
-r = lambda: list(map(int, input().split()))
+def r(): return list(map(int, input().split()))
+
 
 n = int(input())
 s = input()
@@ -11,7 +12,8 @@ else:
     k = 0
     ans = []
     for i in range(len(s)):
-        if k == n: break
+        if k == n:
+            break
         if s[i] not in q:
             ans.append(i)
             q.add(s[i])
