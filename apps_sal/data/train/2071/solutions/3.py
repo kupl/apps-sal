@@ -14,4 +14,3 @@ for v in y:
 for v in o:
     ret -= (o[v] * (o[v] - 1)) // 2
 print(ret)
-

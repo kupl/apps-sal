@@ -32,7 +32,9 @@ def main():
 
     print(res - clones_num)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

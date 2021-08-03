@@ -1,36 +1,38 @@
-I= input
+I = input
 
 n = int(I())
 
 d = {}
 
-def lca(u,v,w):
 
-  res = 0
+def lca(u, v, w):
 
-  while u != v:
+    res = 0
 
-    if u < v: u, v = v , u
+    while u != v:
 
-    d[u] = d.get(u,0) + w
+        if u < v:
+            u, v = v, u
 
-    res += d[u]
+        d[u] = d.get(u, 0) + w
 
-    u = u//2
+        res += d[u]
 
-  return res
+        u = u // 2
+
+    return res
+
 
 for i in range(n):
 
-  l = list(map(int, I().split()))
+    l = list(map(int, I().split()))
 
-  if l[0] == 1:  # To add
+    if l[0] == 1:  # To add
 
-    lca(l[1],l[2],l[3])
+        lca(l[1], l[2], l[3])
 
-  else: print(lca(l[1],l[2],0))
-
+    else:
+        print(lca(l[1], l[2], 0))
 
 
 # Made By Mostafa_Khaled
-

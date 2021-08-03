@@ -2,7 +2,8 @@
 
 import math
 
-def make_nCr_mod(max_n=2*10**5 + 100, mod=10**9 + 7):
+
+def make_nCr_mod(max_n=2 * 10**5 + 100, mod=10**9 + 7):
     fact, inv_fact = [0] * (max_n + 1), [0] * (max_n + 1)
     fact[0] = 1
     for i in range(max_n):
@@ -25,9 +26,10 @@ def make_nCr_mod(max_n=2*10**5 + 100, mod=10**9 + 7):
 
     return nCr_mod
 
+
 nCr_mod = make_nCr_mod()
 
-MODULUS = 10**9+7
+MODULUS = 10**9 + 7
 
 input()
 A = input().split(' ')
@@ -42,31 +44,31 @@ if len(A) % 2 == 1:
     next_plus = True
     for i in range(len(A) - 1):
         if next_plus:
-            new_A += [A[i] + A[i+1]]
+            new_A += [A[i] + A[i + 1]]
         else:
-            new_A += [A[i] - A[i+1]]
+            new_A += [A[i] - A[i + 1]]
         next_plus = not next_plus
     A = new_A
 
 if len(A) % 4 == 2:
     new_A = []
     for i in range(len(A) // 2):
-        new_A += [A[2*i] + A[2*i+1]]
+        new_A += [A[2 * i] + A[2 * i + 1]]
     A = new_A
 else:
     new_A = []
     for i in range(len(A) // 2):
-        new_A += [A[2*i] - A[2*i+1]]
+        new_A += [A[2 * i] - A[2 * i + 1]]
     A = new_A
 
 # binomial sum
 
-N = len(A)-1
+N = len(A) - 1
 
 ret = 0
 
-for i in range(N+1):
-    ret += A[i]*nCr_mod(N, i)
+for i in range(N + 1):
+    ret += A[i] * nCr_mod(N, i)
     ret = ret % MODULUS
 
 print(ret)

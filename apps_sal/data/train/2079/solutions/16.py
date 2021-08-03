@@ -23,4 +23,3 @@ for i in range(t):
                 v //= 2
         res.append(str(curr_res))
 print('\n'.join(res))
-

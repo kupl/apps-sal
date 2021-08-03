@@ -57,4 +57,3 @@ for i in range(n):
 print(1)
 print(v + 1)
 return
-

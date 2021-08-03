@@ -19,6 +19,7 @@ class DisjointSet:
     def __repr__(self):
         return repr([self.get_father(i) for i in range(len(self._fa))])
 
+
 def solve(n, a, b, xs):
     h = {x: i for i, x in enumerate(xs)}
     if a == b:
@@ -54,6 +55,7 @@ def solve(n, a, b, xs):
         group[i] = f - n
     return group
 
+
 n, a, b = list(map(int, input().split()))
 xs = list(map(int, input().split()))
 group = solve(n, a, b, xs)
@@ -62,4 +64,3 @@ if isinstance(group, list):
     print(' '.join(map(str, group)))
 else:
     print('NO')
-

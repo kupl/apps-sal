@@ -1,5 +1,7 @@
 from sys import*
 #
+
+
 def check(u, d, l, r):
     used = [pointsx[i][1] for i in range(l)]
     used += [pointsx[-1 - i][1] for i in range(r)]
@@ -14,6 +16,8 @@ def check(u, d, l, r):
     dx = max(2, dx)
     dy = max(2, dy)
     return dx * dy
+
+
 #
 (n, k) = list(map(int, input().split()))
 pointsx = []
@@ -29,11 +33,9 @@ for u in range(0, k + 1):
     for d in range(0, k + 1):
         for l in range(0, k + 1):
             for r in range(0, k + 1):
-                if l + r  <= k and u + d <= k:
+                if l + r <= k and u + d <= k:
                     ans = min(ans, check(u, d, l, r))
 print(ans // 4)
 
 
-
 # Made By Mostafa_Khaled
-

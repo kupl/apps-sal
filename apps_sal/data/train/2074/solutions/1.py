@@ -9,7 +9,8 @@ def solve(n, k, As):
         for h in range(1, min(i, r) + 1):
             new_dp[h] = max(dp[h], dp[h - 1]) + As[im + h] - As[im + h - 1]
         dp = new_dp
-    return As[-1] - As[0] - max(dp[r], dp[r-1])
+    return As[-1] - As[0] - max(dp[r], dp[r - 1])
+
 
 n, k = map(int, input().split())
 As = list(map(int, input().split()))

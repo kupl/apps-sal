@@ -1,4 +1,6 @@
 w = {}
+
+
 def up(a, b, d):
     while a != b:
         if a < b:
@@ -7,7 +9,8 @@ def up(a, b, d):
             w[a] = 0
         w[a] += d
         a = a // 2
-        
+
+
 def get(a, b):
     res = 0
     while a != b:
@@ -17,6 +20,7 @@ def get(a, b):
             res += w[a]
         a = a // 2
     return res
+
 
 q = int(input())
 for i in range(q):

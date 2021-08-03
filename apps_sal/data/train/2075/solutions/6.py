@@ -2,8 +2,8 @@ a, b, _c = list(map(int, input().split()))
 af = list(map(int, input().split()))
 bf = list(map(int, input().split()))
 
-af.sort(reverse = True)
-bf.sort(reverse = True)
+af.sort(reverse=True)
+bf.sort(reverse=True)
 
 aflen = len(af)
 bflen = len(bf)
@@ -30,7 +30,3 @@ else:
         print("YES")
     else:
         print("NO")
-
-
-
-

@@ -6,7 +6,6 @@ def lca(u, v):
     ub = bin(u)[2:]
     vb = bin(v)[2:]
 
-
     r = 0
     for i, (a, b) in enumerate(zip(ub, vb)):
         if a != b:
@@ -34,7 +33,7 @@ def __starting_point():
 
     cost = collections.Counter()
     for _ in range(q):
-        cmd  = list(map(int, input().split()))
+        cmd = list(map(int, input().split()))
         if cmd[0] == 1:
             v, u, w = cmd[1:]
             root = lca(v, u)
