@@ -1,6 +1,5 @@
 
 
-
 def powerset(s):
     n = len(s)
     masks = [1 << j for j in range(n)]
@@ -55,7 +54,9 @@ def main():
                 count += 1
         print(count)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()
