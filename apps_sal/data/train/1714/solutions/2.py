@@ -10,17 +10,19 @@ def is_ccw_turn(p0, p1, p2):
 Iteratively generate a hull by finding items with the maximum distance from the current hull, adding them, and repeating.
 Currently very inefficient.
 """
+
+
 def quickhull(points):
-    
+
     def dist(a, b, c):
-        A = b[1]-a[1]
-        B = a[0]-b[0]
-        C = a[1]*b[0]-a[0]*b[1]
-        return abs(A*c[0]+B*c[1]+C)
-    
+        A = b[1] - a[1]
+        B = a[0] - b[0]
+        C = a[1] * b[0] - a[0] * b[1]
+        return abs(A * c[0] + B * c[1] + C)
+
     def triangle_area(a, b, c):
         return a[0] * (b[1] - c[1]) + b[0] * (c[1] - a[1]) + c[0] * (a[1] - b[1])
-    
+
     def quickhull_recurse(a, b, targets, indent=1):
         # Remove colinear points
         targets = [p for p in targets if dist(a, b, p) != 0]
@@ -29,10 +31,10 @@ def quickhull(points):
             return []
         max_dist = max([dist(a, b, p) for p in targets])
         m = min([p for p in targets if dist(a, b, p) == max_dist])
-        l_targets = quickhull_recurse(a, m, [p for p in targets if not is_ccw_turn(m, a, p)], indent+1)
-        r_targets = quickhull_recurse(m, b, [p for p in targets if not is_ccw_turn(b, m, p)], indent+1)
+        l_targets = quickhull_recurse(a, m, [p for p in targets if not is_ccw_turn(m, a, p)], indent + 1)
+        r_targets = quickhull_recurse(m, b, [p for p in targets if not is_ccw_turn(b, m, p)], indent + 1)
         return l_targets + [m] + r_targets
-    
+
     # Grab two extreme points
     least, most = min(points), max(points)
     # Split into those points above and below
@@ -50,6 +52,8 @@ Then, reconcile all points into a single queue, ordered by angle, then distance.
 Finally, run a graham scan on this new monotone ring.
 DOESN'T CURRENTLY RUN TOO WELL.
 """
+
+
 def unsorted_merge_hull(points):
     # If the number of points is small enough, crank out a solution.
     if len(points) <= 5:
@@ -57,7 +61,7 @@ def unsorted_merge_hull(points):
     # If the number of points is high, divide and conquer.
     else:
         # Generate partial hulls
-        a, b = unsorted_merge_hull(points[:len(points)//2]), unsorted_merge_hull(points[len(points)//2:])
+        a, b = unsorted_merge_hull(points[:len(points) // 2]), unsorted_merge_hull(points[len(points) // 2:])
         # Find a point inside the first partial hull
         c = (sum([x for x, y in a[:3]]) / 3, sum([y for x, y in a[:3]]) / 3)
         # Determine the targent line points of the second partial hull to the centroid, if applicable
@@ -79,8 +83,10 @@ def unsorted_merge_hull(points):
         i_a, i_b = 0, 0
         while i_a < len(a) or i_b < len(b):
             pass
-        if i_a < len(a): q.extend(a[i_a:])
-        if i_b < len(b): q.extend(b[i_b:])
+        if i_a < len(a):
+            q.extend(a[i_a:])
+        if i_b < len(b):
+            q.extend(b[i_b:])
         # Run a graham scan on the queue
         # Return a valid hull
 
@@ -92,6 +98,8 @@ The main benefit of this is the ability to parallel process.
 So long as the final set of points is re-checked, you can still get great gains from this.
 Sift 90%, then run a better algo on the final result.
 """
+
+
 def x_laced_merge_hull(points):
     sorted_points = sorted(points)
     # Remove doubles along the x axis
@@ -148,8 +156,8 @@ def x_laced_merge_hull(points):
         # If there are over 5 points, recurse.
         else:
             # Recurse until there are two half-hulls of equal heft
-            l_min_i, l_max_i, l_h = x_laced_recurse(l_i, (l_i+r_i) // 2)
-            r_min_i, r_max_i, r_h = x_laced_recurse((l_i+r_i) // 2, r_i)
+            l_min_i, l_max_i, l_h = x_laced_recurse(l_i, (l_i + r_i) // 2)
+            r_min_i, r_max_i, r_h = x_laced_recurse((l_i + r_i) // 2, r_i)
             # Start with a line from the rightmost left point to the leftmost right point, move until can no longer
             # Move the two lines, one up, one down until they can no longer be rotated to increase their encompassings
             bot_i_l, bot_i_r = sew(l_h, r_h, l_max_i, r_min_i, 'bot')
@@ -175,10 +183,10 @@ def x_laced_merge_hull(points):
 def graham_scan_hull(points):
     # Get LTL
     m = max([n[1] for n in points])
-    o = min(points, key=lambda p:(p[0]*m+p[1]))
+    o = min(points, key=lambda p: (p[0] * m + p[1]))
     # Sort according to angle from origin
-    points = sorted(points, key=lambda p:(p[0]*m+p[1]))
-    points = sorted(points[1:], key=lambda p:math.atan2(p[0]-o[0],p[1]-o[1]))
+    points = sorted(points, key=lambda p: (p[0] * m + p[1]))
+    points = sorted(points[1:], key=lambda p: math.atan2(p[0] - o[0], p[1] - o[1]))
     # Initialize the hull with origin and item with lowest or highest angle
     h, points = [points[-1], o, points[0]], points[1:]
     # Iterate over the points
@@ -198,7 +206,7 @@ def graham_scan_hull(points):
 def double_half_hull(points):
     # Sort the points along an axis to make them monotone.
     sorted_points = sorted(points)
-    
+
     # Define a function to get half-hulls in a single direction.
     def half_hull(sorted_points):
         hull = []
@@ -209,7 +217,7 @@ def double_half_hull(points):
             hull.append(p)
         hull.pop()
         return hull
-        
+
     # Call the half-hull function twice - once to get the right side, once the left.
     return half_hull(sorted_points) + half_hull(reversed(sorted_points))
 
@@ -237,5 +245,5 @@ def hull_method(points):
     hash_checkers = []
     for hull in [res_quickhull, res_x_laced_merge_hull, res_graham_scan_hull, res_double_half_hull]:
         hash_checkers.append({tuple(p) for p in hull})
-    fail_to_matches = sum(hash_checkers[i] != hash_checkers[i+1] for i in range(len(hash_checkers)-1))
+    fail_to_matches = sum(hash_checkers[i] != hash_checkers[i + 1] for i in range(len(hash_checkers) - 1))
     return [] if fail_to_matches > 0 else res_double_half_hull

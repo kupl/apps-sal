@@ -1,4 +1,6 @@
 from textwrap import wrap
+
+
 def justify(text, width):
     lines = wrap(text, width)
 
@@ -9,7 +11,7 @@ def justify(text, width):
             return line
 
         n, r = divmod(width - sum(map(len, line)), spaces)
-        print(sum(map(len,line)))
+        print(sum(map(len, line)))
         subs = ' ' * (n + 1)
         return line.replace(' ', subs).replace(subs, subs + ' ', r)
 

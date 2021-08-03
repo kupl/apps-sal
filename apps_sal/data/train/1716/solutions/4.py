@@ -24,12 +24,10 @@ def solve24(nums):
     return "It's not possible!"
 
 
-def equal_to_24(a,b,c,d):
-    nums=[]
+def equal_to_24(a, b, c, d):
+    nums = []
     nums.append(a)
     nums.append(b)
     nums.append(c)
     nums.append(d)
     return solve24(nums)
-
-

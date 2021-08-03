@@ -5,14 +5,13 @@ def puzzle_solver(pieces, width, height):
     code_to_id = {encode(p[0], p[1][0]): id for id, p in list(id_to_piece.items())}
     for y in ys:
         for x in xs:
-            top_piece = id_to_piece[solution_grid[y-1][x]] if y > 0 else edge
-            left_piece = id_to_piece[solution_grid[y][x-1]] if x > 0 else edge
+            top_piece = id_to_piece[solution_grid[y - 1][x]] if y > 0 else edge
+            left_piece = id_to_piece[solution_grid[y][x - 1]] if x > 0 else edge
             target_code = encode(top_piece[1], left_piece[1][1])
             target_id = code_to_id[target_code]
             solution_grid[y][x] = target_id
     return [tuple([solution_grid[y][x] for x in xs]) for y in ys]
 
+
 def encode(top, left_bottom):
     return f"{top},{left_bottom}"
-        
-

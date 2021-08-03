@@ -3,6 +3,7 @@ import sys
 calls = 0
 orig_func = ''
 
+
 def profiler(frame, event, arg):
     nonlocal calls
     if event == 'call':

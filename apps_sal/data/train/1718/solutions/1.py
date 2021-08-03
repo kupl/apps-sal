@@ -14,6 +14,6 @@ def has_exit(maze):
                     position - 1,                                       # Look left
                     position + 1):                                      # Look right
             if way in unseen:                                           # If there is no wall, there is a way
-                frontier.add (way)                                      # Let's add this to our options
+                frontier.add(way)                                      # Let's add this to our options
                 unseen.remove(way)                                      # We've seen it already
     return False                                                        # We are out of options. So saaaad :(
