@@ -19,7 +19,8 @@ def topoSort(u):
     mark[u] = 1
     for j in range(len(adj[u])):
         v = adj[u][j]
-        if (mark[v] == 0): topoSort(v)
+        if (mark[v] == 0):
+            topoSort(v)
     topo.append(u)
 
 
@@ -27,7 +28,8 @@ def dfs(u):
     mark[u] = 1
     for j in range(len(adj[u])):
         v = adj[u][j]
-        if (mark[v] == 0): dfs(v)
+        if (mark[v] == 0):
+            dfs(v)
 
 
 for i in range(1, n + 1):

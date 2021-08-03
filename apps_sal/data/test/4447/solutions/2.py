@@ -8,14 +8,16 @@ for i, v in enumerate(a):
 extras = []
 for r in range(2 * m):
     r %= m
-    if len(inds[r]) == k: continue
+    if len(inds[r]) == k:
+        continue
     elif len(inds[r]) > k:
         extras.extend(inds[r][k:])
         inds[r] = inds[r][:k]
     elif len(inds[r]) < k:
         for _ in range(min(k - len(inds[r]), len(extras))):
             inds[r].append(extras.pop())
-    else: assert False
+    else:
+        assert False
 res = 0
 for r in range(m):
     for i in inds[r]:

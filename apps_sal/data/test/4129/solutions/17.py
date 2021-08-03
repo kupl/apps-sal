@@ -42,7 +42,8 @@ s -= 1
 nodes = [[] for i in range(N)]
 for _ in range(M):
     a, b = MAP()
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     nodes[a].append(b)
 
 dist = list2d(N, N, 0)
