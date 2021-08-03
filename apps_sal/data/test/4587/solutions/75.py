@@ -1,6 +1,8 @@
 def isOK(index, key, in_ls):
-    if key < in_ls[index]: return True
-    else: return False
+    if key < in_ls[index]:
+        return True
+    else:
+        return False
 
 
 def bs(in_ls, key):
@@ -8,8 +10,10 @@ def bs(in_ls, key):
     ok = len(in_ls)
     while 1 < abs(ok - ng):
         mid = (ng + ok) // 2
-        if isOK(mid, key, in_ls): ok = mid
-        else: ng = mid
+        if isOK(mid, key, in_ls):
+            ok = mid
+        else:
+            ng = mid
     return ok
 
 

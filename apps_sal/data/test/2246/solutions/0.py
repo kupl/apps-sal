@@ -20,12 +20,15 @@ while len(Q):
     p = Q.popleft()
     bfsord.append(p)
     for q in adj[p]:
-        if visit[q] != -1: continue
+        if visit[q] != -1:
+            continue
         visit[q] = visit[p] + 1
         Q.append(q)
         tree[p].append(q)
 
 for p in reversed(bfsord):
-    if not tree[p]: length[p] = D(0)
-    else: length[p] = D(1) + sum(length[q] for q in tree[p]) / len(tree[p])
+    if not tree[p]:
+        length[p] = D(0)
+    else:
+        length[p] = D(1) + sum(length[q] for q in tree[p]) / len(tree[p])
 print(length[1])

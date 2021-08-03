@@ -21,7 +21,8 @@ def dfs(u, plen, prb):
 
     nBranch = 0
     for v in g[u]:
-        if not visited[v]: nBranch += 1
+        if not visited[v]:
+            nBranch += 1
 
     if nBranch > 0:
         probability = prb * (1 / nBranch)
