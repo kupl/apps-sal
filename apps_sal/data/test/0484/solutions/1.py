@@ -28,4 +28,3 @@ for i in range(n):
         if y[i] + x[j] <= b and max(x[i], y[j]) <= a:
             ans = max(ans, s)
 print(ans)
-

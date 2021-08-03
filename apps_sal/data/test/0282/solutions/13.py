@@ -37,4 +37,3 @@ while my_frog.point < n - 1:
         break
 
 print(jump_count)
-

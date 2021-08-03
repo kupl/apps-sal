@@ -15,5 +15,4 @@ for i in range(n - 1):
     if diff > maxdiff:
         maxdiff = diff
 
-print(str(maxdiff/2.0))
-
+print(str(maxdiff / 2.0))

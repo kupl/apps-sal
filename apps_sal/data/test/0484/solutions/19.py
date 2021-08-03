@@ -1,6 +1,6 @@
 n, a, b = list(map(int, input().split()))
 cachet = [list(map(int, input().split())) for i in range(n)]
-cachet.sort(key = lambda el: el[0] * el[1])
+cachet.sort(key=lambda el: el[0] * el[1])
 cachet.reverse()
 maxim = 0
 for i in range(n - 1):
@@ -25,5 +25,3 @@ for i in range(n - 1):
                 maxim = s
             break
 print(maxim)
-   
-

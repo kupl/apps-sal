@@ -1,5 +1,4 @@
-n=int(input())
+n = int(input())
 for i in range(n):
-    x,y=list(map(int,input().split()))
-    print(y*2)
-
+    x, y = list(map(int, input().split()))
+    print(y * 2)

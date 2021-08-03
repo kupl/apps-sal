@@ -8,5 +8,4 @@ for i in range(len(a) - 1):
 
 ans = max(a[0], ans)
 ans = max(l - a[len(a) - 1], ans)
-print (ans)
-
+print(ans)

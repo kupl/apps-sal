@@ -1,14 +1,14 @@
-m,n = [int(x) for x in input().split(' ')]
+m, n = [int(x) for x in input().split(' ')]
 raw = list(input())
 p = 0
 cnt = 1
 prt = 0
-while p <m-n-1:
+while p < m - n - 1:
     for j in range(n):
         key = 0
-        if raw[p+n-j]=="1":
-            p = p+n-j
-            cnt+=1
+        if raw[p + n - j] == "1":
+            p = p + n - j
+            cnt += 1
             key = 1
             break
         else:

@@ -14,5 +14,4 @@ for i in range(1000):
         r = m
     else:
         l = m
-print(max(min(a), le - max(a), (l + r)/2))
-
+print(max(min(a), le - max(a), (l + r) / 2))

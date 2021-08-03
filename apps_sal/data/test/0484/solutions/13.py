@@ -25,4 +25,3 @@ for i in range(n - 1):
         check([x[i] + y[j], y[i] + x[j]])
 
 print(ans)
-

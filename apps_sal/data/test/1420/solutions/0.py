@@ -8,4 +8,3 @@ for i in range(1, n):
 result = max(result, a[0])
 result = max(result, l - a[-1])
 print(result)
-
