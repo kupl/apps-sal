@@ -3,7 +3,8 @@ def unitmat(n):
 
 
 def matadd(A, B):
-    h = len(A); w = len(A[0])
+    h = len(A)
+    w = len(A[0])
     C = [[A[i][j] + B[i][j] for j in range(w)] for i in range(h)]
     return C
 

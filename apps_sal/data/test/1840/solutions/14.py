@@ -6,8 +6,10 @@ def binary(A, x):
     low, hi = 0, N
     while low + 1 != hi:
         mid = low + ((hi - low) >> 1)
-        if x < A[mid]: hi = mid
-        else: low = mid
+        if x < A[mid]:
+            hi = mid
+        else:
+            low = mid
     return low
 
 

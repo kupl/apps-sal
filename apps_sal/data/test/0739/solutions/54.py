@@ -16,7 +16,8 @@ def double(C, mod):
 
 
 def Cpow(C, n, mod):
-    if n == 1: return C
+    if n == 1:
+        return C
     else:
         D = double(C, mod)
         if n % 2 == 0:
@@ -33,13 +34,16 @@ def solve():
     ne = 0
     for d in range(1, 19):
         ne = min((pow(10, d) - a - 1) // b, L - 1)
-        if ne < 0: continue
-        elif ne == nd: continue
+        if ne < 0:
+            continue
+        elif ne == nd:
+            continue
         C = [[pow(10, d, M), 0, 0], [1, 1, 0], [0, b % M, 1]]
         D = Cpow(C, ne - nd, M)
         X = (X * D[0][0] + D[1][0] * s + D[2][0]) % M
         s += D[2][1]
-        if ne == L - 1: break
+        if ne == L - 1:
+            break
         nd = ne
     print(X)
     return

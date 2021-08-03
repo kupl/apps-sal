@@ -21,5 +21,7 @@ while ans <= 2 and i < n and j < n:
         ans -= 1
         j += 1
 
-if ans > 2: print("NO")
-else: print("YES")
+if ans > 2:
+    print("NO")
+else:
+    print("YES")

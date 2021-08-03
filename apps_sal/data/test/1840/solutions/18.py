@@ -7,8 +7,9 @@ setcheckinterval(1000)
 
 # print("Case #{}: {} {}".format(i, n + m, n * m))
 
-iin = lambda: int(stdin.readline())
-lin = lambda: list(map(int, stdin.readline().split()))
+
+def iin(): return int(stdin.readline())
+def lin(): return list(map(int, stdin.readline().split()))
 
 
 s, b = lin()

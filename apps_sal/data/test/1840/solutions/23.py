@@ -25,7 +25,8 @@ def res(x):
     i = search_bases(x)
     if i < 0:
         return 0
-    else: return sumbases[i]
+    else:
+        return sumbases[i]
 
 
 print(*tuple(map(res, spaceships)))

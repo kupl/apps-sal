@@ -36,13 +36,16 @@ def calc(day, a, b, c):
         # 0=Monday
         if day == 0 or day == 3 or day == 6:
             a -= 1
-            if a < 0: return ret
+            if a < 0:
+                return ret
         elif day == 1 or day == 5:
             b -= 1
-            if b < 0: return ret
+            if b < 0:
+                return ret
         elif day == 2 or day == 4:
             c -= 1
-            if c < 0: return ret
+            if c < 0:
+                return ret
         ret += 1
         day = (day + 1) % 7
 

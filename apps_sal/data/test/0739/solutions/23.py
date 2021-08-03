@@ -14,7 +14,8 @@ def mul(X, Y):
     return Z
 
 
-x = 0; a = A
+x = 0
+a = A
 while 1:
     kd0 = max(min((10**d - A + B - 1) // B, L), 0)
     kd1 = max(min((10**(d + 1) - A + B - 1) // B, L), 0)

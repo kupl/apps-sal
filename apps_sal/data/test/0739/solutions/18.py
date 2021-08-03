@@ -5,9 +5,9 @@ def mpw(n, m):
             ret *= n
             ret %= M
         n *= n
-        n %= M;
+        n %= M
         m >>= 1
-    return ret;
+    return ret
 
 
 def pw(n, m):
@@ -17,7 +17,7 @@ def pw(n, m):
             ret *= n
         n *= n
         m >>= 1
-    return ret;
+    return ret
 
 
 def delta(i, j):
@@ -56,7 +56,7 @@ for k in range(18, 0, -1):
         MT = [[1, mpw(10, k), 0], [0, mpw(10, k), (M - B * mpw(10, k) % M) % M], [0, 0, mpw(10, k)]]
         v = [[(A + B * r) % M], [(A + B * (r - 1) % M + M) % M], [1]]
         u = mul(mtxmpw(MT, r - l), v)
-        ans += mpw(10, d) * u[0][0] % M;
-        ans %= M;
+        ans += mpw(10, d) * u[0][0] % M
+        ans %= M
         d += (r - l + 1) * k
 print(ans)

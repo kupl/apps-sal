@@ -1,14 +1,17 @@
 from bisect import bisect_right
 import sys
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
 
 s, b = map(int, input().split())
 ls = list(map(int, input().split()))
 d = {}
 for i in range(b):
     a, b = map(int, input().split())
-    try: d[a] += b
-    except: d[a] = b
+    try:
+        d[a] += b
+    except:
+        d[a] = b
 keys = list(d.keys())
 keys.sort()
 Sum = 0

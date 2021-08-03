@@ -13,10 +13,12 @@ def matrix_product(X, Y, M):
 def power(X, n, M):
     res = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
 
-    if n == 0: return res
+    if n == 0:
+        return res
 
     while n > 0:
-        if n & 1: res = matrix_product(res, X, M)
+        if n & 1:
+            res = matrix_product(res, X, M)
         X = matrix_product(X, X, M)
         n //= 2
 
@@ -28,14 +30,18 @@ L, A, B, M = list(map(int, input().split()))
 X = [0, A, 1]
 
 for d in range(1, 19):
-    if L == 0: break
+    if L == 0:
+        break
 
     l = (10**(d - 1) - A + B - 1) // B
     r = (10**d - A) // B
-    if (10**d - A) % B == 0: r -= 1
+    if (10**d - A) % B == 0:
+        r -= 1
 
-    if l < 0: l = 0
-    if r < 0: r = -1
+    if l < 0:
+        l = 0
+    if r < 0:
+        r = -1
 
     C = min(r - l + 1, L)
     L -= C

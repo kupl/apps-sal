@@ -23,8 +23,10 @@ def main():
     while i < l:
         k += 1
         j = (10**k - a + b - 1) // b
-        if j <= 0: continue
-        if j > l: j = l
+        if j <= 0:
+            continue
+        if j > l:
+            j = l
         # k桁の要素の個数がe
         e = j - i
         # i項目まで連結した整数をans[i],数列のi項目をs[i]とすると
@@ -36,7 +38,8 @@ def main():
         bb[0, 0] = pow(10, k, md)
         bb[1, 0] = bb[1, 1] = bb[2, 1] = bb[2, 2] = 1
         while e:
-            if e & 1: ans = np.dot(ans, bb) % md
+            if e & 1:
+                ans = np.dot(ans, bb) % md
             bb = np.dot(bb, bb) % md
             e >>= 1
         i = j
