@@ -8,6 +8,6 @@ def tickets(people, cost=25, bills=[100, 50, 25]):
                 c = min(change // bill, count[bill])
                 count[bill] -= c
                 change -= c * bill
-        if change: return "NO"
+        if change:
+            return "NO"
     return "YES"
-

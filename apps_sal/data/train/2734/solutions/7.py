@@ -1,6 +1,7 @@
 from itertools import combinations
 from math import hypot
 
+
 def peaceful_yard(yard, min_distance):
     cats = [
         (r, c)
@@ -9,6 +10,6 @@ def peaceful_yard(yard, min_distance):
         if x != '-'
     ]
     return all(
-        hypot(a-c, b-d) >= min_distance
+        hypot(a - c, b - d) >= min_distance
         for (a, b), (c, d) in combinations(cats, 2)
     )

@@ -1,7 +1,7 @@
 def tickets(people):
     change = 'YES'
     twentyfive, fifty, onehundred = 0, 0, 0
-    
+
     for cash in people:
         if change == 'NO':
             break
@@ -23,5 +23,5 @@ def tickets(people):
                 change = 'NO'
         else:
             change = 'NO'
-            
+
     return change

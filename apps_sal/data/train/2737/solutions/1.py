@@ -6,4 +6,3 @@ def near_flatten(xs):
         for x in xs:
             yield from f(x)
     return sorted(f(xs))
-

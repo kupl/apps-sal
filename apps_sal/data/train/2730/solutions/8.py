@@ -14,11 +14,7 @@ def tickets(people):
                 change.remove(25)
                 change.remove(25)
                 change.remove(25)
-    except: 
+    except:
         return "NO"
     else:
         return "YES"
-            
-                
-            
-

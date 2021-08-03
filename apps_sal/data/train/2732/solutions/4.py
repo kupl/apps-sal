@@ -1,7 +1,7 @@
 from collections import Counter
 
 
-sort_group = lambda c: (c.isdecimal(), c.isupper(), c.islower(), c)
+def sort_group(c): return (c.isdecimal(), c.isupper(), c.islower(), c)
 
 
 def blocks(stg):
@@ -10,4 +10,3 @@ def blocks(stg):
         groups.append("".join(sorted(list(count.keys()), key=sort_group)))
         count -= Counter(list(count.keys()))
     return "-".join(groups)
-

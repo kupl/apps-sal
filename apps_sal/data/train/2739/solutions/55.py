@@ -8,4 +8,3 @@ def cube_odd(arr):
                 x = eachvalue**3
                 accumulator = accumulator + x
     return accumulator
-

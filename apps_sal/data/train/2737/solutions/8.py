@@ -1,5 +1,6 @@
 import re
 
+
 def near_flatten(nested):
     nested = str(nested)
     flatten_regex = re.compile(r"\[+(\d+)(?:, )?(\d+)?(?:, )?(\d+)?(?:, )?(\d+)?\]+")

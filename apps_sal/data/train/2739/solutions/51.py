@@ -3,6 +3,6 @@ def cube_odd(arr):
     for i in arr:
         if not isinstance(i, int) or isinstance(i, bool):
             return None
-        elif i%2!=0:
+        elif i % 2 != 0:
             res += i**3
     return res

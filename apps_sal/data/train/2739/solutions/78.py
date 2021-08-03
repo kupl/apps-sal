@@ -11,4 +11,3 @@ def cube_odd(arr):
             new_arr.append(x)
 
     return sum(new_arr)
-
