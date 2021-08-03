@@ -1,8 +1,10 @@
 
 from collections import defaultdict
 
+
 def solve(L, n):
-    vis = [False]*n
+    vis = [False] * n
+
     def dfs(s):
         vis[s] = True
         for i in L[s]:
@@ -15,6 +17,7 @@ def solve(L, n):
             ans += 1
             dfs(i)
     return ans
+
 
 t = int(input())
 

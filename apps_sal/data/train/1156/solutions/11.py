@@ -4,4 +4,3 @@ for _ in range(int(input())):
         print("Thanks for helping Chef!")
     else:
         print("-1")
-

@@ -20,25 +20,29 @@ Code, Compile, Run and Debug online from anywhere in world.
        *****
         ***
          *"""
-import sys
-from sys import stdin,stdout
-import math
-import time
-import random
-from functools import lru_cache
-from collections import Counter
+# @lru_cache(maxsize=None) #for optimizing the execution time of callable objects/functions(placed above callable functions)
+
+
+
+
 import heapq
-#@lru_cache(maxsize=None) #for optimizing the execution time of callable objects/functions(placed above callable functions)
-def Update(X,AX,BX,CX,DX,k,n):
-    for i in range(k,n):
-        tem=(((AX*X[i-2])+(BX*X[i-1])+CX)%DX)+1
+from collections import Counter
+from functools import lru_cache
+import random
+import time
+import math
+import sys
+from sys import stdin, stdout
+def Update(X, AX, BX, CX, DX, k, n):
+    for i in range(k, n):
+        tem = (((AX * X[i - 2]) + (BX * X[i - 1]) + CX) % DX) + 1
         X.append(tem)
+
+
 def my_function():
-  print("Hello from a function")
-        
-        
-        
-        
+    print("Hello from a function")
+
+
 """def changeme( mylist ):
    "This changes a passed list into this function"
    mylist.append([1,2,3,4]);
@@ -74,61 +78,39 @@ def DFS(adj,src,n):
 def addEdge(adj,u,v):
     adj[u].append(v)
     adj[v].append(u)"""
-def a(adj,s,visited):
-    visited[s]=True
+
+
+def a(adj, s, visited):
+    visited[s] = True
     for s in adj[s]:
         if not visited[s]:
-            a(adj,s,visited)
-def b(adj,src,n):
-    visited=[False]*n
-    ans=0
+            a(adj, s, visited)
+
+
+def b(adj, src, n):
+    visited = [False] * n
+    ans = 0
     for i in range(n):
         if not visited[i]:
-            ans+=1
-            a(adj,i,visited)
+            ans += 1
+            a(adj, i, visited)
     print(ans)
 
 
-
-
-def e(adj,s,v):
+def e(adj, s, v):
     adj[s].append(v)
     adj[v].append(s)
 
+
 try:
     for _ in range(int(input())):
-        n,m=list(map(int,input().split()))
-        adj=[[] for i in range(n+1)]
+        n, m = list(map(int, input().split()))
+        adj = [[] for i in range(n + 1)]
         for i in range(m):
-            s,v=list(map(int,input().split()))
-            e(adj,s,v)
-        b(adj,0,n)
-       
-       
+            s, v = list(map(int, input().split()))
+            e(adj, s, v)
+        b(adj, 0, n)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-       
-       
-   
-       
-       
-       
-               
-        
 except EOFError as e:
     print(e)
-
