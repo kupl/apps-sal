@@ -10,7 +10,7 @@ def binarySearch(ok, ng, test):
         test(function) : テスト対象の関数
     Returns:
         ok(int) : test(x) == True を確実に満たす点で、
-        　　　　　　　　　　最終的に求まるもの。
+        　　　　　　　　　　　　　　　　　　　　最終的に求まるもの。
     Note:
         https://www.forcia.com/blog/001434.html
 
