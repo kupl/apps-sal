@@ -6,12 +6,13 @@ s = input()
 c = 0
 
 for i in s:
-	c += zcount[digits.index(i)]
+    c += zcount[digits.index(i)]
 
 k = 1
 
 for j in range(c):
-	k *= 3
-	if k >= 1000000007: k = k % 1000000007
+    k *= 3
+    if k >= 1000000007:
+        k = k % 1000000007
 
 print(k % 1000000007)

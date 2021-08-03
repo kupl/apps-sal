@@ -1,5 +1,5 @@
-#python3
-#utf-8
+# python3
+# utf-8
 
 visits_nr = int(input())
 ro_dist = int(input())
@@ -17,4 +17,3 @@ for visit in range(1, visits_nr):
     pref_end_d___min_dist[visit] = min(pref_end_o___min_dist[visit - 1] + od_dist, pref_end_r___min_dist[visit - 1] + rd_dist)
 ans = min((pref_end_d___min_dist[-1], pref_end_o___min_dist[-1], pref_end_r___min_dist[-1]))
 print(ans)
-

@@ -1,8 +1,7 @@
+import fractions
+import math
 import sys
 sys.setrecursionlimit(4100000)
-import math
-import fractions
-
 
 
 '''
@@ -29,23 +28,22 @@ for i in range(5):
 S = input()
 
 
-check = len(S)-1
+check = len(S) - 1
 
 while(check >= 0):
 
     if S[check] == "r":
-        if S[check-2] == "m":
-            remove = S[check-6: check+1]
+        if S[check - 2] == "m":
+            remove = S[check - 6: check + 1]
             if remove == "dreamer":
                 check -= 7
             else:
                 print("NO")
                 return
 
+        elif S[check - 2] == "s":
+            remove = S[check - 5: check + 1]
 
-        elif S[check-2] == "s":
-            remove = S[check-5: check+1]
-            
             if remove == "eraser":
                 check -= 6
             else:
@@ -57,8 +55,8 @@ while(check >= 0):
             return
 
     elif S[check] == "e":
-        remove = S[check-4: check+1]
-            
+        remove = S[check - 4: check + 1]
+
         if remove == "erase":
             check -= 5
         else:
@@ -66,8 +64,8 @@ while(check >= 0):
             return
 
     elif S[check] == "m":
-        remove = S[check-4: check+1]
-            
+        remove = S[check - 4: check + 1]
+
         if remove == "dream":
             check -= 5
         else:

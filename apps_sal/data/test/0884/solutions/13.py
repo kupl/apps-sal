@@ -50,21 +50,20 @@ def A(n,m):
 
 '''
 
-def solve(n,m):
+
+def solve(n, m):
     if n > m:
-        n , m = m , n
-    ans , s = 0 , 1
-    for i in range(0,n+1):
+        n, m = m, n
+    ans, s = 0, 1
+    for i in range(0, n + 1):
         ans = ans + s
-        s =s * (n - i) // (i + 1) * (m - i)
+        s = s * (n - i) // (i + 1) * (m - i)
     return ans
-        
+
 
 while True:
     try:
-        a,b,c= list(map(int ,input().split()))
-        print(solve(a,b) * solve(a,c)* solve(b,c) % mod)
+        a, b, c = list(map(int, input().split()))
+        print(solve(a, b) * solve(a, c) * solve(b, c) % mod)
     except:
         break
-
-

@@ -1,6 +1,6 @@
+from collections import Counter
 n = int(input())
 a = list(map(int, input().split()))
-from collections import Counter
 c = Counter(a)
 m = max(a)
 fail = False

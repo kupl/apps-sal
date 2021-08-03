@@ -7,7 +7,7 @@ index = 0
 while found:
     found = False
     for s in snipetts:
-        if S[index:index+len(s)] == s:
+        if S[index:index + len(s)] == s:
             index += len(s)
             found = True
             break

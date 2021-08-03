@@ -23,18 +23,17 @@ while True:
         print("YES")
         break
     elif s[-5:] == a:
-        for _ in range(5): s.pop()
+        for _ in range(5):
+            s.pop()
     elif s[-5:] == c:
-        for _ in range(5): s.pop()
+        for _ in range(5):
+            s.pop()
     elif s[-7:] == b:
-        for _ in range(7): s.pop()
+        for _ in range(7):
+            s.pop()
     elif s[-6:] == d:
-        for _ in range(6): s.pop()
+        for _ in range(6):
+            s.pop()
     else:
         print("NO")
         break
-
-
-
-
-

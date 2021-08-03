@@ -21,5 +21,6 @@ def solve(S):
             return False
     return True
 
+
 S = input()
 print("YES" if solve(S) else "NO")

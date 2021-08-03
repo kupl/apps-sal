@@ -1,7 +1,8 @@
 import copy
 
+
 def solve():
-    
+
     n, a, b, c = [int(input()) for i in range(4)]
 
     nowloc = 'ab'
@@ -10,7 +11,7 @@ def solve():
     history = ['ab']
 
     while mealed < n:
-        
+
         if nowloc == 'ab':
             if a < b:
                 nowloc = 'ac'
@@ -40,5 +41,5 @@ def solve():
 
     return totaldistance, history
 
-print(solve()[0])
 
+print(solve()[0])

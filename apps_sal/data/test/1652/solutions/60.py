@@ -17,4 +17,3 @@ while i < len(S):
         return
 
 print("YES")
-

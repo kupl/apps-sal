@@ -20,4 +20,3 @@ if odd_found:
     print("Conan")
 else:
     print("Agasa")
-

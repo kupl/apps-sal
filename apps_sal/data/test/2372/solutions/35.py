@@ -48,4 +48,5 @@ def __starting_point():
     maze = [input() for _ in range(H)]
     solve(H, W, Ch, Cw, Dh, Dw, maze)
 
+
 __starting_point()

@@ -11,7 +11,6 @@ for i in range(1, len(a)):
     cnt.append(1)
 ans = "Agasa"
 for i in cnt:
-    if i%2 == 1:
+    if i % 2 == 1:
         ans = "Conan"
 print(ans)
-

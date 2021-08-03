@@ -13,6 +13,7 @@ def dist(x1, y1, x2, y2):
 def get_y(x1, y1, x2, y2, x):
     return (((x - x1) * (y2 - y1)) / (x2 - x1)) + y1
 
+
 if debug:
     with open("input.txt", "r") as inp:
         firstLine = inp.readline()

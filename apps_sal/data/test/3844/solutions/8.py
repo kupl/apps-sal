@@ -9,4 +9,3 @@ for key in sorted(count.keys())[::-1]:
         break
 else:
     print('Agasa')
-

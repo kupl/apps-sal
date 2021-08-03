@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     s = input().strip()[::-1]
 
@@ -20,13 +21,16 @@ def main():
                 ok = True
         if not ok:
             break
-    
+
     # print(s)
     if len(s) > 0:
         print("NO")
     else:
         print("YES")
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

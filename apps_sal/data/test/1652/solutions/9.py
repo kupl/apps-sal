@@ -33,4 +33,3 @@ while S:
         print("NO")
         return
 print("YES")
-

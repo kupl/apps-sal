@@ -1,6 +1,6 @@
+import sys
 daydream = ['dream', 'dreamer', 'erase', 'eraser']
 s = input()
-import sys
 while s:
     for i in daydream:
         if s.endswith(i):

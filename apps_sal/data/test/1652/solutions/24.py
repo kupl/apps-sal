@@ -8,7 +8,6 @@ S = S.replace('#', '')
 S = S.replace('.', '')
 
 if len(S) == 0:
-  print('YES')
+    print('YES')
 else:
-  print('NO')
-
+    print('NO')

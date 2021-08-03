@@ -8,7 +8,7 @@ while i < len(s):
     tmp = ''
     while j < len(s):
         tmp += s[j]
-        #print(tmp)
+        # print(tmp)
         if len(tmp) == 8:
             print('NO')
             return

@@ -12,6 +12,3 @@ else:
     else:
         ans = ans + n * min(b, c)
     print(ans)
-    
-
-

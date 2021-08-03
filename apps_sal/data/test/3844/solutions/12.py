@@ -11,4 +11,3 @@ for card in is_odd:
         print('Conan')
         return
 print('Agasa')
-

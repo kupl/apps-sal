@@ -11,6 +11,5 @@ for i in counter.values():
         break
 
 
-
 if f:
     print("Agasa")

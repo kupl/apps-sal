@@ -11,6 +11,7 @@ def __starting_point():
         res3 = min(A, B) + C * (N - 2)
         result = min(result, res3)
     result = min(result, res1, res2)
-    print (result)
+    print(result)
+
 
 __starting_point()
