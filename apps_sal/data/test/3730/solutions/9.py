@@ -30,7 +30,7 @@ for i in range(len(a) - 1):
     end = start + a[i] - 1
 
     if end == len(arr) - 1:
-        best = max(best, a[i]);
+        best = max(best, a[i])
     else:
         if a[i + 1] == 1 and end + 1 != len(arr) - 1:
             # 3 seq joins

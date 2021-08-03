@@ -6,7 +6,8 @@ foo = [0 for _ in range(2 + n)]
 for i in range(1, m):
     p, q = x[i - 1], x[i]
 
-    if p == q: continue
+    if p == q:
+        continue
 
     r = min(p, q)
 
