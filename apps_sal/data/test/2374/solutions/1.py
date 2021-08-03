@@ -34,15 +34,18 @@ def main():
         used[v] = True
         res = x[v]
         for edge in graph[v]:
-            if used[edge[POS]]: continue
+            if used[edge[POS]]:
+                continue
             r = dfs(edge[POS])
-            if r: ans.append(edge[ID])
+            if r:
+                ans.append(edge[ID])
             res ^= r
         return res
 
     used = [False] * (N + 1)
     for i in range(N + 1):
-        if used[i]: continue
+        if used[i]:
+            continue
         if dfs(i):
             print(-1)
             return

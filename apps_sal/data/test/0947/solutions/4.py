@@ -3,10 +3,10 @@ import math as mt
 import sys
 import string
 input = sys.stdin.readline
-L = lambda: list(map(int, input().split()))
-Ls = lambda: list(input().split())
-M = lambda: list(map(int, input().split()))
-I = lambda: int(input())
+def L(): return list(map(int, input().split()))
+def Ls(): return list(input().split())
+def M(): return list(map(int, input().split()))
+def I(): return int(input())
 
 
 t = I()

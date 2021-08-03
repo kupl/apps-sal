@@ -21,10 +21,12 @@ diff = [bomb[i - 1] ^ bomb[i] for i in range(1, N)]
 vec = [[] for _ in range(N)]
 convert = {}
 for i, (l, r) in enumerate(LR):
-    if compressed[-1] < l or r < compressed[0]: continue
+    if compressed[-1] < l or r < compressed[0]:
+        continue
     l = bisect_left(compressed, l) - 1
     r = bisect_right(compressed, r) - 1
-    if r <= l: continue
+    if r <= l:
+        continue
     vec[l].append(r)
     vec[r].append(l)
     convert[(l, r)] = i
@@ -51,7 +53,8 @@ def dfs(pre, cur):
 
 
 for i in range(N - 1):
-    if visited[i]: continue
+    if visited[i]:
+        continue
     visited[i] = True
     if not dfs(-1, i):
         print(-1)
