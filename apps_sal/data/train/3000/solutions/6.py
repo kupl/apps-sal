@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 def decompose(n):
     result = Counter()
     while n % 2 == 0:
@@ -16,6 +18,7 @@ def decompose(n):
     if n > 1:
         result[n] += 1
     return result
+
 
 def mul_power(n, k):
     r = 1

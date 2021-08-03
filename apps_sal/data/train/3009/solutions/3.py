@@ -1,1 +1,1 @@
-pairs = lambda a: sum(abs(b - a) == 1 for a, b in zip(*[iter(a)]*2))
+def pairs(a): return sum(abs(b - a) == 1 for a, b in zip(*[iter(a)] * 2))

@@ -1,4 +1,4 @@
-def args_count(*args,**kwargs):
+def args_count(*args, **kwargs):
     a = 0
     for i in args:
         a += 1

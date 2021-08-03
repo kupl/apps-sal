@@ -4,7 +4,7 @@ def head_smash(arr):
 
     elif arr == [] or arr == '':
         return 'Gym is empty'
-    
+
     else:
         d = [x.replace('O', ' ') for x in arr]
         return d

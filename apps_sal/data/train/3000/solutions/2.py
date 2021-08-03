@@ -17442,26 +17442,33 @@ PRIMES = """ 2       3       5       7      11      13      17      19      23
 
   999883  999907  999917  999931  999953  999959  999961  999979  999983""".split()
 
+
 def mul_power(n, k):
     if str(n) in PRIMES:
-        return n**(k-1)
-    print((n,k))
+        return n**(k - 1)
+    print((n, k))
     factors = prime_factorize(n)
     print(factors)
     res = 1
     for i in list(factors.keys()):
-        if factors[i] % k == 0:continue
-        complete = factors[i]//k*k+k-factors[i]
+        if factors[i] % k == 0:
+            continue
+        complete = factors[i] // k * k + k - factors[i]
         res *= i ** complete
     return res
+
+
 def primes(x):
     return [int(i) for i in PRIMES if int(i) <= x]
+
+
 def prime_factorize(x):
     res = {}
-    for i in primes(x//2):
-        while(x%i==0):
-            if i in list(res.keys()):res[i]+=1
-            else:res[i]=1
-            x/=i
+    for i in primes(x // 2):
+        while(x % i == 0):
+            if i in list(res.keys()):
+                res[i] += 1
+            else:
+                res[i] = 1
+            x /= i
     return res
-
