@@ -7,7 +7,8 @@ try:
     out = []
     for i in range(len(s)):
         c = s[i]
-        if c == '(': lev += 1
+        if c == '(':
+            lev += 1
         elif c == ')':
             lev -= 1
             assert lev >= 0
@@ -20,6 +21,7 @@ try:
                 out.append(1)
             assert lev >= 0
     assert lev == 0
-    for x in out: print(x)
+    for x in out:
+        print(x)
 except AssertionError:
     print(-1)

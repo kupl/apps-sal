@@ -4,7 +4,8 @@ i0 -= 1
 
 def len(n):
     l = 1
-    if n > 1: l += 2 * len(n // 2)
+    if n > 1:
+        l += 2 * len(n // 2)
     return l
 
 
@@ -14,9 +15,11 @@ def get(n, i):
     a = 0
     if m <= i:
         a += n // 2
-        if m < i: a += n % 2
+        if m < i:
+            a += n % 2
         i -= m + 1
-    if 0 < i: a += get(n // 2, i)
+    if 0 < i:
+        a += get(n // 2, i)
     return a
 
 

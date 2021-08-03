@@ -1,5 +1,7 @@
 import sys
-read = lambda: list(map(int, sys.stdin.readline().split()))
+def read(): return list(map(int, sys.stdin.readline().split()))
+
+
 write = sys.stdout.write
 
 n, m = read()

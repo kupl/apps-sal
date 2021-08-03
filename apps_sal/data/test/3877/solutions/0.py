@@ -8,7 +8,8 @@ n, l, r = list(map(int, input().split()))
 a1 = 0
 
 layers = 1
-while layers * 2 <= n: layers *= 2
+while layers * 2 <= n:
+    layers *= 2
 
 # abacaba pattern
 for i in range(l, r + 1):

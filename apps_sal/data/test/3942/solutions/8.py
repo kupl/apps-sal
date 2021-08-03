@@ -8,13 +8,17 @@ def f(t):
     for i in t[k:]:
         b -= i
         c -= i
-        if c < 0: c = 0
-    if c > 0: return -1
+        if c < 0:
+            c = 0
+    if c > 0:
+        return -1
     for i in t[: k]:
         a -= i
-        if a < 0: return -1
+        if a < 0:
+            return -1
 
-    if b + a < 0: return -1
+    if b + a < 0:
+        return -1
     return '1\n' * n + str(b + a + 1)
 
 

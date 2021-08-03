@@ -63,8 +63,8 @@ a = readlist()
 
 mp = {}
 for i in range(n):
-    left = a[i] - d;
-    right = a[i] + d;
+    left = a[i] - d
+    right = a[i] + d
     if (i == 0):
         mp[left] = 1
     else:

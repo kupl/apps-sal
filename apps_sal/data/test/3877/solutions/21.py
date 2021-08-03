@@ -14,7 +14,7 @@ def rec(n, s, e):
     if s > e:
         return 0
     if s > r or e < l:
-        return 0;
+        return 0
     if n <= 1:
         return n
     mid = (s + e) // 2

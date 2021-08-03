@@ -24,5 +24,6 @@ for i in range(l, r + 1):
         f += 1
     d /= 2
     f -= 1
-    if (L[len(L) - f - 1] == 1): ans += 1
+    if (L[len(L) - f - 1] == 1):
+        ans += 1
 print(ans)

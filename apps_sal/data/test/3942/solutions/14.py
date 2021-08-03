@@ -1,4 +1,6 @@
-s = input(); a = 0; b = []
+s = input()
+a = 0
+b = []
 for x in s:
     if x == "(":
         a += 1
@@ -11,9 +13,10 @@ for x in s:
         if a < 0:
             print(-1)
             return
-b[-1] += a;
+b[-1] += a
 
-a = 0; i = 0
+a = 0
+i = 0
 for x in s:
     if x == "(":
         a += 1
@@ -21,7 +24,8 @@ for x in s:
         if x == ")":
             a -= 1
         else:
-            a -= b[i]; i += 1
+            a -= b[i]
+            i += 1
         if a < 0:
             print(-1)
             return

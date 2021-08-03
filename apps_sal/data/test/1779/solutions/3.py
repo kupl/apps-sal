@@ -1,10 +1,14 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 a = input()
 b = input()
-low = lambda c: chr(ord(c) + ord('a') - ord('A'))
-hig = lambda c: chr(ord(c) - ord('a') + ord('A'))
-ish = lambda c: ord('A') <= ord(c) <= ord('Z')
-f = lambda c: b[a.index(c)]
+def low(c): return chr(ord(c) + ord('a') - ord('A'))
+def hig(c): return chr(ord(c) - ord('a') + ord('A'))
+def ish(c): return ord('A') <= ord(c) <= ord('Z')
+def f(c): return b[a.index(c)]
+
+
 s = input()
 ans = [''] * len(s)
 for i in range(len(s)):
@@ -14,5 +18,6 @@ for i in range(len(s)):
         continue
     if ish(c):
         ans[i] = hig(f(low(c)))
-    else: ans[i] = f(c)
+    else:
+        ans[i] = f(c)
 print(''.join(ans))

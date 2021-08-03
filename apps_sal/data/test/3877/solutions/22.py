@@ -20,7 +20,8 @@ def toBin(n):
 
 
 def raw(n):
-    if n < 2: return [n]
+    if n < 2:
+        return [n]
     else:
         temp = raw(n // 2)
         return temp + [n % 2] + temp
