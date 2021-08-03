@@ -8,7 +8,9 @@ for _ in range(m):
         au = abs(u)
         su = 1 if u < 0 else 2
         v[au] |= su
-        if v[au] == 3: ok = 1
-    if not ok: bad = 1
+        if v[au] == 3:
+            ok = 1
+    if not ok:
+        bad = 1
 
 print("YES" if bad else "NO")

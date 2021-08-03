@@ -1,5 +1,6 @@
 s = input()
-if len(s) >= 2: s = s[-2:]
+if len(s) >= 2:
+    s = s[-2:]
 s = int(s)
 p = s % 4
 r = [1, 1, 1, 1][p]

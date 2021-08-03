@@ -8,7 +8,8 @@ for i in range(m):
 for i in t:
     rik = []
     morti = []
-    if r == "YES": break
+    if r == "YES":
+        break
     for j in i:
         if j < 0 and j not in rik:
             j = abs(j)

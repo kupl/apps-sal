@@ -1,6 +1,8 @@
 import sys
 
-rd = lambda: sys.stdin.readline().rstrip()
+
+def rd(): return sys.stdin.readline().rstrip()
+
 
 t = int(rd())
 for _ in range(t):
@@ -18,7 +20,7 @@ for _ in range(t):
 
         i += 1
 
-    p2s = lambda x, y: (x + y)**2 / (x * y)
+    def p2s(x, y): return (x + y)**2 / (x * y)
 
     for i in range(len(b) - 1):
         if p2s(res_a, res_b) > p2s(b[i], b[i + 1]):

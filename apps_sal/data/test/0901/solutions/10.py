@@ -13,7 +13,7 @@ def main():
             mp.add(i)
         if mk:
             print("YES")
-            return;
+            return
     print("NO")
 
 

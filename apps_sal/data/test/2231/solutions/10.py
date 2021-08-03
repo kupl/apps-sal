@@ -1,7 +1,9 @@
 import sys
 
-read = lambda: sys.stdin.readline().strip()
-prcs = lambda x, y: (x + y)**2 / (x * y)
+
+def read(): return sys.stdin.readline().strip()
+def prcs(x, y): return (x + y)**2 / (x * y)
+
 
 n = int(read())
 for i in range(0, n):

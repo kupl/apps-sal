@@ -1,6 +1,6 @@
-N = int(input());
+N = int(input())
 
-N %= 4;
+N %= 4
 
 if N == 1 or N == 3 or N == 2:
     print(0)
