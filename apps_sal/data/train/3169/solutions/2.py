@@ -1,5 +1,5 @@
 def count_odd_pentaFib(n):
-    if n == 0 :
+    if n == 0:
         return 0
     if n < 5:
         return 1
@@ -12,4 +12,3 @@ def count_odd_pentaFib(n):
             cnt += 1
         i += 1
     return cnt
-

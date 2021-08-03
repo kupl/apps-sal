@@ -1,4 +1,4 @@
-def compare(s1,s2):
+def compare(s1, s2):
     try:
         if not s1.isalpha():
             s1 = ''
@@ -14,4 +14,4 @@ def compare(s1,s2):
         summ += ord(i)
     for i in s2.upper():
         summ -= ord(i)
-    return summ ==0
+    return summ == 0

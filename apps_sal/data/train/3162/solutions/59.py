@@ -1,4 +1,4 @@
-def compare(s1,s2):
+def compare(s1, s2):
     if s1 == None or s2 == None:
         return True
     if s1.isalpha() == False and s2.isalpha() == False:
@@ -19,4 +19,3 @@ def compare(s1,s2):
         return True
     else:
         return False
-

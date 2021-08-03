@@ -5,10 +5,13 @@ penta_fib_table = {
     3: 2,
     4: 4
 }
+
+
 def penta_fib(n):
     if n in penta_fib_table:
         return penta_fib_table[n]
     return penta_fib(n - 1) + penta_fib(n - 2) + penta_fib(n - 3) + penta_fib(n - 4) + penta_fib(n - 5)
+
 
 def count_odd_pentaFib(n):
     odd_terms = []

@@ -1,2 +1,2 @@
-f = lambda s: isinstance(s, str) and s.isalpha() and sum(map(ord, s.upper()))
-compare = lambda a, b: f(a) == f(b)
+def f(s): return isinstance(s, str) and s.isalpha() and sum(map(ord, s.upper()))
+def compare(a, b): return f(a) == f(b)

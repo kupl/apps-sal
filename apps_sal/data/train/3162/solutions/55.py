@@ -6,4 +6,3 @@ def compare(s1: Union[str, None], s2: Union[str, None]) -> bool:
         return sum(map(ord, s.upper())) if s and all(c.isalpha() for c in s) else 0
 
     return value(s1) == value(s2)
-

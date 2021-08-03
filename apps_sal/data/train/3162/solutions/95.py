@@ -1,7 +1,7 @@
 import re
 
-def compare(s1, s2):
-    v = lambda s: "" if not s or re.search('[^a-zA-Z]', s) else s
-    c = lambda s: sum(ord(ch) for ch in s.upper())
-    return c(v(s1)) == c(v(s2))
 
+def compare(s1, s2):
+    def v(s): return "" if not s or re.search('[^a-zA-Z]', s) else s
+    def c(s): return sum(ord(ch) for ch in s.upper())
+    return c(v(s1)) == c(v(s2))

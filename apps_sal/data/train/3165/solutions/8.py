@@ -7,6 +7,7 @@ def msb(n):
 
     return 2 ** (t - 1)
 
+
 def toothpick(n):
     k = (2 * msb(n) ** 2 + 1) // 3
 
@@ -15,4 +16,4 @@ def toothpick(n):
     elif n == msb(n):
         return k
     else:
-        return k + 2*toothpick(n - msb(n)) + toothpick(n - msb(n) + 1) - 1
+        return k + 2 * toothpick(n - msb(n)) + toothpick(n - msb(n) + 1) - 1

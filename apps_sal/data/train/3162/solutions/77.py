@@ -1,4 +1,4 @@
-def compare(s1,s2):
+def compare(s1, s2):
     try:
         comp1 = s1.upper()
         comp2 = s2.upper()

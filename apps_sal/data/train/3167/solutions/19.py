@@ -1,4 +1,4 @@
-def twos_difference(lst): 
+def twos_difference(lst):
     results, memo = [], {}
     for n in lst:
         if n in memo:
