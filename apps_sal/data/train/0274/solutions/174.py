@@ -9,7 +9,7 @@ class Solution:
             while sl[-1] - sl[0] > limit:
                 sl.remove(nums[l])
                 l += 1
-            
+
             result = max(len(sl), result)
-            
+
         return result

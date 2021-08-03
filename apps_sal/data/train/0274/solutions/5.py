@@ -13,19 +13,21 @@ We do O(N) pushes and pops from the heaps and each push/pop is O(logN) so we end
 
 Here is the code:
 '''
+
+
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         minHeap, maxHeap = [], []
         left = maxLen = 0
-        
+
         for right, num in enumerate(nums):
             heappush(minHeap, (num, right))
             heappush(maxHeap, (-num, right))
-            
+
             while num - minHeap[0][0] > limit:
                 left = max(left, heappop(minHeap)[1] + 1)
             while -maxHeap[0][0] - num > limit:
                 left = max(left, heappop(maxHeap)[1] + 1)
-            
+
             maxLen = max(maxLen, right - left + 1)
         return maxLen

@@ -9,10 +9,11 @@ class Solution:
                 maxq.pop()
             minq.append(num)
             maxq.append(num)
-            
+
             if maxq[0] - minq[0] > limit:
-                if nums[i] == minq[0]: minq.popleft()
-                if nums[i] == maxq[0]: maxq.popleft()
+                if nums[i] == minq[0]:
+                    minq.popleft()
+                if nums[i] == maxq[0]:
+                    maxq.popleft()
                 i += 1
         return len(nums) - i
-

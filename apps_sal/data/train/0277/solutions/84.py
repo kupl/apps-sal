@@ -4,6 +4,6 @@ class Solution:
         res = 0
         for i in range(len(light)):
             right = max(light[i], right)
-            if right == i+1:
+            if right == i + 1:
                 res += 1
         return res

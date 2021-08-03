@@ -4,17 +4,17 @@ class Solution:
         final_ans_digits = {i: 0 for i in range(10)}
         for i in range(0, 10, 3):
             final_ans_digits[i] = digits[i]
-        
+
         # append all digits whose quant > 3
         left_numbers = list()
-        for i in [1,2,4,5,7,8]:
+        for i in [1, 2, 4, 5, 7, 8]:
             if digits[i] > 3:
-                undefined = 3 + (digits[i]  % 3)
+                undefined = 3 + (digits[i] % 3)
                 left_numbers += [i] * undefined
             else:
                 left_numbers += [i] * digits[i]
-        
-        mod = sum(left_numbers) % 3 
+
+        mod = sum(left_numbers) % 3
         # but we may need to exclude a couple of numbers
         if not mod:
             pass
@@ -40,16 +40,12 @@ class Solution:
                         digits[num2] -= 1
                 if num2 is None:
                     return ''
-        
+
         ans = ''.join(str(i) * digits[i] for i in range(9, -1, -1))
         if not ans:
             return ''
         elif ans[0] == '0':
             return '0'
-        
+
         else:
             return ans
-                
-                    
-            
-

@@ -8,7 +8,7 @@ class Solution:
                 pos, speed = que.popleft()
                 if pos == target:
                     return cost
-                #if abs(pos) >= 2 * target:
+                # if abs(pos) >= 2 * target:
                 #    continue
                 if pos < 0 or pos >= 2 * target:
                     continue
@@ -20,6 +20,7 @@ class Solution:
         return -1
 
     dp = {0: 0}
+
     def racecar_DP(self, t):
         if t in self.dp:
             return self.dp[t]

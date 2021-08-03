@@ -1,7 +1,6 @@
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
-        
-        
+
         n = len(status)
         hold = initialBoxes
         res = 0
@@ -16,7 +15,7 @@ class Solution:
                     flag = True
                     res += candies[cur]
                     for k in keys[cur]:
-                        key.add( k )
+                        key.add(k)
                     for b in containedBoxes[cur]:
                         nxt.append(b)
                 else:

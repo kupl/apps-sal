@@ -19,5 +19,5 @@ class Solution:
                 while max_deque[0] <= l:
                     max_deque.popleft()
                 l += 1
-                
+
         return ans

@@ -13,8 +13,8 @@ class Solution:
                         status[i] = 1
                 else:
                     q.append(b)
-            
+
             if not changed:
                 return res
-            
+
         return res

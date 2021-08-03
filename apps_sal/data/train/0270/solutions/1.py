@@ -6,11 +6,11 @@ class Solution:
         k -= 1
         m_vals //= 3
         vals = ['a', 'b', 'c']
-        mapping = {0:'a',1:'b',2:'c'}
+        mapping = {0: 'a', 1: 'b', 2: 'c'}
         s = mapping[k // m_vals]
         k %= m_vals
         m_vals //= 2
-        prev_map = {'a':{0:'b',1:'c'},'b':{0:'a',1:'c'},'c':{0:'a',1:'b'}}
+        prev_map = {'a': {0: 'b', 1: 'c'}, 'b': {0: 'a', 1: 'c'}, 'c': {0: 'a', 1: 'b'}}
         while m_vals:
             mapping = prev_map[s[-1]]
             s += mapping[k // m_vals]

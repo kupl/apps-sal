@@ -13,7 +13,6 @@ class Solution:
                     _position = position + speed
                     _speed = speed * 2
 
-
                 elif action == 'R':
                     _position = position
                     if speed > 0:
@@ -23,6 +22,6 @@ class Solution:
 
                 if (_position, _speed) not in visited:
                     visited.add((_position, _speed))
-                    bfs.append((_position, _speed, count+1))
+                    bfs.append((_position, _speed, count + 1))
 
         return -1

@@ -17,5 +17,5 @@ class Solution:
                     small.pop(0)
                 if large[0] < left:
                     large.pop(0)
-            res = max(res, i-left+1)
+            res = max(res, i - left + 1)
         return res

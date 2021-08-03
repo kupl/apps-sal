@@ -6,13 +6,13 @@ class Solution:
         cur_min = nums[0]
         sub_nums = collections.deque()
         for i in nums:
-            cur_max = max(i,cur_max)
-            cur_min = min(i,cur_min)
-            if cur_max - cur_min <= limit:                
+            cur_max = max(i, cur_max)
+            cur_min = min(i, cur_min)
+            if cur_max - cur_min <= limit:
                 sub_nums.append(i)
-            else:    
+            else:
                 sub_nums.append(i)
                 sub_nums.popleft()
                 cur_max = max(sub_nums)
                 cur_min = min(sub_nums)
-        return  len(sub_nums)
+        return len(sub_nums)

@@ -3,7 +3,7 @@ class Solution:
         q = deque([(0, 1)])
         visited = set([(0, 1)])
         upper = target * 2
-        
+
         step = 0
         while q:
             l = len(q)
@@ -16,7 +16,7 @@ class Solution:
                 if (new_pos, new_speed) not in visited and 0 < new_pos <= upper:
                     q.append((new_pos, new_speed))
                     visited.add((new_pos, new_speed))
-                
+
                 new_pos, new_speed = pos, -1 if speed > 0 else 1
                 if (new_pos, new_speed) not in visited and 0 < new_pos <= upper:
                     q.append((new_pos, new_speed))

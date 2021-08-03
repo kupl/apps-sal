@@ -9,7 +9,7 @@ class Solution:
             for pos, speed in tmp:
                 if pos == target:
                     return step
-                
+
                 if not (pos + speed, speed * 2) in visited:
                     queue.append((pos + speed, speed * 2))
                     visited.add((pos + speed, speed * 2))
@@ -18,5 +18,5 @@ class Solution:
                     queue.append((pos, speed))
                     visited.add((pos, speed))
             step += 1
-        
+
         return 0

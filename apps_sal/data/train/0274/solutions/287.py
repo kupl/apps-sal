@@ -1,22 +1,23 @@
 import heapq
 
+
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         if not nums:
             return 0
-        
+
         max_len = 1
         i, j = 0, 0
         min_heap = []
         max_heap = []
         max_n = min_n = nums[0]
-        
+
         while i <= j and j < len(nums):
             # print(i, j, max_len)
-                    
-            if max_n-min_n <= limit:
-                max_len = max(max_len, j-i+1)
-                j+=1
+
+            if max_n - min_n <= limit:
+                max_len = max(max_len, j - i + 1)
+                j += 1
                 if j == len(nums):
                     continue
                 if nums[j] > max_n:
@@ -28,7 +29,7 @@ class Solution:
                 else:
                     heapq.heappush(min_heap, (nums[j], j))
                     heapq.heappush(max_heap, (-nums[j], j))
-                    
+
             else:
                 if nums[i] == max_n:
                     while True:
@@ -41,8 +42,8 @@ class Solution:
                         min_n, t = heapq.heappop(min_heap)
                         if t > i:
                             break
-                    
-                i+=1
+
+                i += 1
             # print(i, j, max_len)
             # print('-------------')
         return max_len

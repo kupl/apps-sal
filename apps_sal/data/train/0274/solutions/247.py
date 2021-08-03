@@ -1,36 +1,29 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
-        
+
         maxq = collections.deque()
         minq = collections.deque()
-        
+
         start = 0
-        
+
         for i, n in enumerate(nums):
             while maxq and maxq[-1][0] < n:
                 maxq.pop()
             while minq and minq[-1][0] > n:
                 minq.pop()
-            maxq.append( [n, i] )
-            minq.append( [n, i] )
-            
-            
+            maxq.append([n, i])
+            minq.append([n, i])
+
             if maxq[0][0] - minq[0][0] > limit:
                 if maxq[0][0] == nums[start]:
                     maxq.popleft()
                 if minq[0][0] == nums[start]:
                     minq.popleft()
                 start += 1
-                   
+
         return len(nums) - start
-    
-            
-        
-        
-        
-        
-        
-        
+
+
 #         res = 0
 #         maxq = []
 #         minq = []
@@ -38,7 +31,7 @@ class Solution:
 #         for i,n in enumerate(nums): # O(n)
 #             heapq.heappush(maxq, [-n,i] )  # O(log n)
 #             heapq.heappush(minq, [n,i] )
-            
+
 #             while -maxq[0][0] - minq[0][0] > limit:
 #                 ind = min( maxq[0][1], minq[0][1] )
 #                 while maxq[0][1] <= ind:
@@ -47,16 +40,12 @@ class Solution:
 #                     heapq.heappop(minq)
 #                 j = ind+1
 #             res = max(res, i - j +1 )
-            
+
 #         return res
-                
-        
-        
-        
-        
-        
+
+
 #         res = 0
-        
+
 #         i = 0
 #         arr = [] # space O(res)
 #         for n in nums:  # O(n) time
@@ -66,12 +55,5 @@ class Solution:
 #                 arr.pop(ind-1)  # O(res)
 #                 i += 1
 #             res = max(res, len(arr))
-            
-#         return res
-                
-        
-        
-        
-        
-        
 
+#         return res

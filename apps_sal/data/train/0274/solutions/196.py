@@ -4,7 +4,7 @@ class Solution:
         maxi = nums[0]
         mini = nums[0]
         start = 0
-        temp = nums[start:start+1]
+        temp = nums[start:start + 1]
         for i in range(1, len(nums)):
             temp.append(nums[i])
             if nums[i] > maxi:
@@ -18,4 +18,3 @@ class Solution:
                 maxi = max(temp)
                 mini = min(temp)
         return max_len
-

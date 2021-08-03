@@ -1,17 +1,17 @@
 class Solution:
     def racecar(self, target: int) -> int:
         barrier = 2 * target
-        heap = [[0,0,1]]
+        heap = [[0, 0, 1]]
         seen = set()
         while heap:
             step, position, speed = heappop(heap)
-            
+
             if position == target:
                 return step - 1
-            
-            if (position,speed) in seen:
+
+            if (position, speed) in seen:
                 continue
-            seen.add((position,speed))
+            seen.add((position, speed))
 
             k = 0
             while True:
@@ -22,4 +22,3 @@ class Solution:
                 else:
                     break
                 k += 1
-

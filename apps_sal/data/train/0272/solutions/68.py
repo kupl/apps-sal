@@ -8,8 +8,7 @@ class Solution:
                 if status[j]:
                     bfs.append(j)
             for j in keys[i]:
-                if j in boxes and status[j]==0:
+                if j in boxes and status[j] == 0:
                     bfs.append(j)
                 status[j] = 1
         return sum(candies[i] for i in bfs)
-

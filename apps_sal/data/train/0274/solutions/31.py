@@ -16,8 +16,5 @@ class Solution:
                 if minq[0] == nums[i]:
                     minq.pop(0)
                 i += 1
-        
-        return len(nums) - i
-            
-        
 
+        return len(nums) - i

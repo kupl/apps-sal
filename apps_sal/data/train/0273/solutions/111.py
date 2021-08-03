@@ -7,7 +7,8 @@ class Solution:
             print(len(queue))
             newQueue = set()
             for pos, speed in queue:
-                if pos == 0: return steps
+                if pos == 0:
+                    return steps
                 been.add((pos, speed))
                 nextStatus = (abs(pos - speed), -speed * 2 if speed > pos else speed * 2)
                 if nextStatus[0] < target * 2 and nextStatus not in been:

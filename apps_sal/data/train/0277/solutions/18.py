@@ -8,5 +8,5 @@ class Solution:
             target = max(target, len(light) - n + 1)
             if right == target:
                 count += 1
-            
+
         return count

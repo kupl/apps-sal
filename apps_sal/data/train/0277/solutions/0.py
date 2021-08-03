@@ -5,8 +5,8 @@ class Solution:
         for i in range(len(light)):
             if (light[i] > right):
                 right = light[i]
-            
+
             if (i + 1 == right):
                 ans += 1
-                
+
         return ans

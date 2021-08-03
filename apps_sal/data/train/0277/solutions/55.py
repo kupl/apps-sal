@@ -15,10 +15,8 @@ class Solution:
         return c'''
         res = 0
         curr = -1
-        for p,q in enumerate(light):
-            curr = max(curr,q)
-            if curr == p+1:
+        for p, q in enumerate(light):
+            curr = max(curr, q)
+            if curr == p + 1:
                 res += 1
         return res
-            
-

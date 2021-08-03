@@ -1,7 +1,7 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         def addToDeqs(min_deq, max_deq, curr, start_i):
-                
+
             while min_deq and min_deq[-1] > curr:
                 min_deq.pop()
             min_deq.append(curr)
@@ -23,13 +23,9 @@ class Solution:
         max_deq = []
         longest_subarray = 0
         start_i = 0
-        
+
         for i, n in enumerate(nums):
             start_i = addToDeqs(min_deq, max_deq, n, start_i)
-            length_subarray = (i-start_i)+1
+            length_subarray = (i - start_i) + 1
             longest_subarray = max(longest_subarray, length_subarray)
         return longest_subarray
-
-
-
-

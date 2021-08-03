@@ -7,6 +7,7 @@ class Solution:
         l, r = 0, 0
         max_q.push(nums[0])
         min_q.push(nums[0])
+
         def in_limit():
             if max_q.is_empty() is True:
                 return True
@@ -15,7 +16,7 @@ class Solution:
         while r < len(nums):
             # print(max_q.queue, min_q.queue)
             if in_limit() is True:
-                res = max(res, r-l+1)
+                res = max(res, r - l + 1)
                 r += 1
                 if r < len(nums):
                     min_q.push(nums[r])
@@ -25,18 +26,18 @@ class Solution:
                 max_q.popfront(nums[l])
                 l += 1
         return res
-            
+
 
 class MonoQueue():
     def __init__(self, inc=True):
         self.queue = []
         self.inc = inc
-        
+
     def popfront(self, n):
         if self.queue[0] == n:
             self.queue.pop(0)
         return
-    
+
     def push(self, n):
         while self.queue:
             if self.inc is True and self.queue[-1] > n:
@@ -47,9 +48,9 @@ class MonoQueue():
                 break
         self.queue.append(n)
         return
-    
+
     def is_empty(self):
         return len(self.queue) == 0
-    
+
     def top(self):
         return self.queue[0]

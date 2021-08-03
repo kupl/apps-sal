@@ -5,5 +5,3 @@ class Solution:
             right = max(right, v)
             res += right == i + 1
         return res
-
-

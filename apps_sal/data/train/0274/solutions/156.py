@@ -23,4 +23,3 @@ class Solution:
                 i = j
 
         return maxLen
-

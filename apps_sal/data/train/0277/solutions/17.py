@@ -10,14 +10,9 @@ class Solution:
 
         return ans
 
-
     def numTimesAllBlue(self, light: List[int]) -> int:
         result, right = 0, 0
         for i, num in enumerate(light, 1):
             right = max(right, num)
             result += (right == i)
         return result
-
-
-
-

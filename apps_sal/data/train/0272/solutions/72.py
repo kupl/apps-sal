@@ -12,15 +12,14 @@ class Solution:
                     maxCandy += candies[thisbox]
                     candies[thisbox] = 0
                     for key in keys[thisbox]:
-                            keyset.add(key)
+                        keyset.add(key)
                 else:
                     unopenedBOXES.append(thisbox)
                 for x in containedBoxes[thisbox]:
                     q.append(x)
-        
-        
+
         for unopenedBOX in unopenedBOXES:
             if unopenedBOX in keyset:
                 maxCandy += candies[unopenedBOX]
-                
+
         return maxCandy

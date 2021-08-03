@@ -8,6 +8,5 @@ class Solution:
             limit = max(limit, i)
             if len(history) == limit:
                 count += 1
-        
-        
+
         return count

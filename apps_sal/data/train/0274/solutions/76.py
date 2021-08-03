@@ -19,11 +19,5 @@ class Solution:
                 if min_queue[0][1] < l:
                     min_queue.popleft()
             max_len = max(max_len, r - l)
-            
-                
-        return max_len
-            
-            
-                    
-                
 
+        return max_len

@@ -1,6 +1,6 @@
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
-        
+
         n = len(status)
         boxes = []
         unboxes = set()
@@ -21,11 +21,11 @@ class Solution:
 
                 for key in keys[box]:
                     status[key] |= 1
-            
+
             for box in boxes:
                 for adj in containedBoxes[box]:
                     unboxes.add(adj)
-            
+
             newBoxes = set()
             # print(ns, unboxes)
             for box in unboxes:

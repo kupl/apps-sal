@@ -16,14 +16,6 @@ class Solution:
                     min_deque.popleft()
                 if l > max_deque[0]:
                     max_deque.popleft()
-            ans = max(ans, r-l + 1)
+            ans = max(ans, r - l + 1)
             r += 1
         return ans
- 
-
-
-
-        
-        
-        
-

@@ -4,9 +4,11 @@ class Solution:
         encountered = set()
         while q:
             pos, spd, length = q.popleft()
-            if (pos, spd) in encountered: continue
-            else: encountered.add((pos, spd))
-            if pos == target: 
+            if (pos, spd) in encountered:
+                continue
+            else:
+                encountered.add((pos, spd))
+            if pos == target:
                 return length
             if (pos + spd, spd * 2) not in encountered:
                 if abs(pos + spd) <= 2 * target + 1:

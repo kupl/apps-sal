@@ -7,7 +7,7 @@ class Solution:
         mina = nums[0]
         while end < len(nums):
             if maxa - mina <= limit:
-                longest_size = max(longest_size, end-start)
+                longest_size = max(longest_size, end - start)
                 maxa = max(maxa, nums[end])
                 mina = min(mina, nums[end])
                 end += 1
@@ -17,14 +17,11 @@ class Solution:
                 if remove == mina:
                     while nums[start] <= mina:
                         start += 1
-                    mina = min(nums[start:end+1])
+                    mina = min(nums[start:end + 1])
                 if remove == maxa:
                     while nums[start] >= maxa:
                         start += 1
-                    maxa = max(nums[start:end+1])
-        if maxa-mina <= limit:
-                longest_size = max(longest_size, end-start)
+                    maxa = max(nums[start:end + 1])
+        if maxa - mina <= limit:
+            longest_size = max(longest_size, end - start)
         return longest_size
-                
-            
-

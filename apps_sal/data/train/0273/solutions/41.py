@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class Solution:
     def racecar(self, target: int) -> int:
         def dp(t):
@@ -14,6 +15,6 @@ class Solution:
                 cur = (1 << (n - 1)) - (1 << m)
                 ans[t] = min(ans[t], n + m + 1 + dp(t - cur))
             return ans[t]
-            
+
         ans = [0 for _ in range(target + 1)]
         return dp(target)

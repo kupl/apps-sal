@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def longestSubarray(self, nums, limit):
         res, last = 0, -1
@@ -9,12 +11,12 @@ class Solution:
             while maxQ and val >= nums[maxQ[-1]]:
                 maxQ.pop()
             maxQ.append(i)
-                
+
             while minQ and val - nums[minQ[0]] > limit:
                 last = max(last, minQ.popleft())
             while minQ and val <= nums[minQ[-1]]:
                 minQ.pop()
             minQ.append(i)
-            
+
             res = max(res, i - last)
         return res

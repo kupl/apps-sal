@@ -1,4 +1,6 @@
 from sortedcontainers import SortedList
+
+
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         # we keep two pointers and we keep track of min and max between those pointers
@@ -6,23 +8,23 @@ class Solution:
         # it can mark the beginning of a new sub array
         # however if we can make this update faster constant time and at max we need to increase i from i to j by deleting each number then also it is in worse case O(nk) instead of linear we can save sometime
         # we do not need indices and so we can use SortedList instead of SortedDict to make processing of finding min and max after changing i faster
-        minheap = [[nums[0],0]]
-        maxheap = [[-nums[0],0]]
+        minheap = [[nums[0], 0]]
+        maxheap = [[-nums[0], 0]]
         left = -1
         res = 1
-        for i,val in enumerate(nums[1:]):
-            j = i+1
-            while len(maxheap) and len(minheap) and max(val,-maxheap[0][0]) - min(val,minheap[0][0]) > limit:
-                if val == max(val,-maxheap[0][0]):
-                    v,l = heapq.heappop(minheap)
-                if minheap and val == min(val,minheap[0][0]):
-                    v,l = heapq.heappop(maxheap)
-                left = max(l,left)
-            res = max(j-left,res)
-            heapq.heappush(minheap,[val,j])
-            heapq.heappush(maxheap,[-val,j])
+        for i, val in enumerate(nums[1:]):
+            j = i + 1
+            while len(maxheap) and len(minheap) and max(val, -maxheap[0][0]) - min(val, minheap[0][0]) > limit:
+                if val == max(val, -maxheap[0][0]):
+                    v, l = heapq.heappop(minheap)
+                if minheap and val == min(val, minheap[0][0]):
+                    v, l = heapq.heappop(maxheap)
+                left = max(l, left)
+            res = max(j - left, res)
+            heapq.heappush(minheap, [val, j])
+            heapq.heappush(maxheap, [-val, j])
         return res
-        
+
         '''
         s = SortedList()
         # we keep on adding new values to the sortedList and when we get max - min greater than target then we keep on removing values from the list till the sorted list becomes valid again
@@ -123,8 +125,4 @@ class Solution:
                     Max = max(nums[i:j+1])
                     #print('c',i,j,Max,Min)
         return max_length
-        '''            
-        
-        
-        
-
+        '''

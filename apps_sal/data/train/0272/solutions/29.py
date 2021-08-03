@@ -12,4 +12,3 @@ class Solution:
                     bfs.append(j)
                 status[j] = 1
         return sum(candies[i] for i in bfs)
-

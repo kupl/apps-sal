@@ -22,4 +22,3 @@ class Solution:
                 count += 1
             flag = True
         return count
-

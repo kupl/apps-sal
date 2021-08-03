@@ -4,23 +4,24 @@ class Solution:
         states = [0] * n
         yellow_lights = set()
         all_blue_counter = 0
-        
-        for i in range(n): 
+
+        for i in range(n):
             bulb = light[i] - 1
-            
-            if bulb == 0 or states[bulb-1] == 2:
+
+            if bulb == 0 or states[bulb - 1] == 2:
                 states[bulb] = 2
-            elif states[bulb-1] != 2:
+            elif states[bulb - 1] != 2:
                 states[bulb] = 1
                 yellow_lights.add(bulb)
-            
+
             if states[bulb] == 2:
                 for j in range(bulb + 1, n):
                     if states[j] == 1:
                         yellow_lights.remove(j)
                         states[j] = 2
-                    else: break
-            
+                    else:
+                        break
+
             if len(yellow_lights) == 0:
                 all_blue_counter += 1
 

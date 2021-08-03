@@ -4,9 +4,9 @@ class Solution:
         thing = 0
         curMin = 9999999
         curMax = -9999999
-        
+
         numMap = {}
-        
+
         i = 0
         while i < len(nums):
             if nums[i] not in numMap:

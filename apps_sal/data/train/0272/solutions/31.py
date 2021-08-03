@@ -13,9 +13,11 @@ class Solution:
                 else:
                     opened = True
                     ret += candies[curr]
-                    if keys[curr]: currkeys |= set([key for key in keys[curr]])
+                    if keys[curr]:
+                        currkeys |= set([key for key in keys[curr]])
                     for b in containedBoxes[curr]:
-                        if not taken[b]: q.append(b)
-            if not opened: break
+                        if not taken[b]:
+                            q.append(b)
+            if not opened:
+                break
         return ret
-

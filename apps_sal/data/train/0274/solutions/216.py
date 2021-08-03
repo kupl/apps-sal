@@ -5,7 +5,7 @@ class Solution:
         max_heap = []
         ans = []
         max_length = 0
-        
+
         for num in nums:
             ans.append(num)
             count[num] += 1
@@ -32,6 +32,6 @@ class Solution:
                     while count[max_val] == 0:
                         heapq.heappop(max_heap)
                         max_val = abs(max_heap[0])
-            
+
             max_length = max(max_length, len(ans))
         return max_length

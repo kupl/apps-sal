@@ -5,7 +5,7 @@ class Solution:
             if limit >= 0:
                 return 1
             return 0
-        max_count = i =0
+        max_count = i = 0
         j = 1
 
         def get_min():
@@ -29,17 +29,16 @@ class Solution:
             heappush(max_list, (-nums[j], j))
             mn = get_min()
             mx = get_max()
-            diff = nums[mx]-nums[mn]
+            diff = nums[mx] - nums[mn]
             if diff > limit:
-                if j != i+1:
-                    max_count = max(max_count,j-i)
+                if j != i + 1:
+                    max_count = max(max_count, j - i)
                     i += 1
                 else:
                     j += 1
                     i += 1
             else:
-                j+=1
-        if j == l and i < j-1:
-                max_count = max(max_count,j-i)
+                j += 1
+        if j == l and i < j - 1:
+            max_count = max(max_count, j - i)
         return max_count
-

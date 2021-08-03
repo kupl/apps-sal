@@ -26,7 +26,7 @@ class Solution:
 #         # 从 0 出发，每次可以 R 或 A两个方向，选择。
 #         # 可以记录每次到达的状态，
 #         # BFS
-        
+
 #         d = deque([(0, 0, 1)])
 #         visited = collections.defaultdict(set)
 #         visited[0].add(1)
@@ -57,17 +57,16 @@ class Solution:
 #                 # use A
 #                 if 1:
 #                     if not (( speed in visited and (cost, speed * 2) in visited[pos]) or (pos + speed > target * 2) or (pos + speed <= 0)):
-                        
+
 #                         # print(\"past=\", cur,\", add=\", (pos + speed, cost, speed * 2))
 #                         d.append((pos + speed, cost, speed * 2))
 #                         visited[pos].add(speed * 2)
 #         return
-                
+
 #   # BFS 搞了半天，终于结束了。注意要剪枝。
 # # 1. 首先 visited 加入的是 pos 和 speed。
-# # 2. 第二是 位置不能超过 target * 2 。因为 如果超过了 target * 2那么要倒车，倒车从头开始，也要 走 target。这是 不合算的。 
+# # 2. 第二是 位置不能超过 target * 2 。因为 如果超过了 target * 2那么要倒车，倒车从头开始，也要 走 target。这是 不合算的。
 # # 3. 速度不能超过 2*target。  （可以不要）
 # # 4. 不要 pos <0 的位置。
 #         # pos    0 1 3 2 3
 #         # speed  1 2 -1 1
-

@@ -8,13 +8,13 @@ class Solution:
                 queue.append(i)
             else:
                 unopened.add(i)
-                
-        candiesCount  = 0
-        
+
+        candiesCount = 0
+
         while len(queue) > 0:
             top = queue.pop(0)
             candiesCount += candies[top]
-            
+
             for k in keys[top]:
                 status[k] = 1
                 if {k}.issubset(unopened):

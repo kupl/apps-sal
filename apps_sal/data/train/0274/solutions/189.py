@@ -1,5 +1,6 @@
 from heapq import heappush, heappop
 
+
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         # min_stack = []
@@ -27,8 +28,7 @@ class Solution:
         #     else:
         #         min_stack.pop()
         # return longest
-            
-            
+
         min_q = []
         max_q = []
         start_index = 0
@@ -36,7 +36,7 @@ class Solution:
         for i, number in enumerate(nums):
             heappush(min_q, (number, i))
             heappush(max_q, (-number, i))
-            while self.calc_diff(-max_q[0][0], min_q[0][0])  > limit:
+            while self.calc_diff(-max_q[0][0], min_q[0][0]) > limit:
                 # print(self.calc_diff(-max_q[0][0], min_q[0][0]) )
                 if min_q[0][1] > max_q[0][1]:
                     value, _index = heappop(max_q)
@@ -58,8 +58,6 @@ class Solution:
         # print(max_q)
         # print(min_q)
         return cur_longest_len
-    
+
     def calc_diff(self, a, b):
         return abs(a - b)
-    
-

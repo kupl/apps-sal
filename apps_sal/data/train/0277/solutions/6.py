@@ -7,4 +7,3 @@ class Solution:
             if i + 1 == m:
                 ans += 1
         return ans
-

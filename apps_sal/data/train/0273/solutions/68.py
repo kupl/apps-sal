@@ -1,6 +1,6 @@
 class Solution:
     def __init__(self):
-        self._dp = {0:0}
+        self._dp = {0: 0}
 
     def racecar(self, target):
         # 车子初始位置0，速度1
@@ -25,7 +25,7 @@ class Solution:
                 # 此时表明踩3脚油门就能到了
                 dp[t] = k
                 continue
-            
+
             # 情况1：走2 ** (k - 1)的距离
             # 然后用一个R和m个A去往回走
             # 这时候已经走了k - 1 + 1 + m + 1步（即A**(k - 1)RA**(m)R步)
@@ -33,14 +33,12 @@ class Solution:
             for m in range(k - 1):
                 # 注意：后面的k - 1 + m + 2是当前走了这么多步
                 dp[t] = min(dp[t], dp[t - 2 ** (k - 1) + 2 ** m] + k - 1 + m + 2)
-            
+
             # 情况2：直接2 ** k步
-            #（已经走了最大的k + 1步, 就是在最后min函数括号里加的那一部分，加1是指一个R）
+            # （已经走了最大的k + 1步, 就是在最后min函数括号里加的那一部分，加1是指一个R）
             # 然后再往回走
             # 走了k + 1步距离就是2 ** k - 1，这个距离已经超越了t
             # 所以还要继续走2 ** k - 1 - t步才能走到t
             if 2 ** k - 1 - t > 0:
                 dp[t] = min(dp[t], dp[2 ** k - 1 - t] + k + 1)
         return dp[target]
-        
-

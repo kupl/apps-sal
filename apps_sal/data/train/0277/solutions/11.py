@@ -13,6 +13,5 @@ class Solution:
                     left_most_off += 1
                 if left_most_off == len(light) or left_most_off > right_most_on:
                     res += 1
-        
-        return res
 
+        return res

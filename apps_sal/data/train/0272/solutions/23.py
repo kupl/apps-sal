@@ -4,7 +4,7 @@ class Solution:
         visited = [0] * n
         unopened = [0] * n
         opened = []
-        
+
         ans = 0
         for b in initialBoxes:
             if status[b] == 1:
@@ -30,13 +30,13 @@ class Solution:
                         q2.append(k)
             opened = q2
         return ans
-    
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         n = len(status)
         visited = [0] * n
         unopened = [0] * n
         opened = collections.deque()
-        
+
         ans = 0
         for b in initialBoxes:
             if status[b] == 1:
@@ -60,5 +60,3 @@ class Solution:
                     visited[k] = 1
                     opened.append(k)
         return ans
-            
-

@@ -18,4 +18,3 @@ class Solution:
                 maxi = max(temp)
                 mini = min(temp)
         return max_len
-

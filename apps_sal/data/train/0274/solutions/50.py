@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         minQue = deque()
@@ -23,6 +25,3 @@ class Solution:
                 longest = max(longest, end - start + 1)
                 end += 1
         return longest
-                
-        
-

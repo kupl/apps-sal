@@ -7,6 +7,3 @@ class Solution:
             if curr_max == idx + 1:
                 res += 1
         return res
-            
-            
-

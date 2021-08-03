@@ -4,7 +4,7 @@ class Solution:
         mnq = deque([])
         mxq = deque([])
         left = 0
-        
+
         for right, num in enumerate(nums):
             while mxq and mxq[-1] < num:
                 mxq.pop()

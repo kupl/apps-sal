@@ -5,7 +5,7 @@ class Solution:
         i = 0
         j = 0
         res = 0
-        while i<=j and j < len(nums):
+        while i <= j and j < len(nums):
             num = nums[j]
             while curr_max and curr_max[-1] < num:
                 curr_max.pop()
@@ -26,6 +26,3 @@ class Solution:
                 i += 1
             j += 1
         return res
-            
-            
-

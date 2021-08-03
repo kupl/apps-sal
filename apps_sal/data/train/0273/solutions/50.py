@@ -17,4 +17,3 @@ class Solution:
                         new_nodes.append((new_pos, new_speed))
             length += 1
             nodes = new_nodes
-

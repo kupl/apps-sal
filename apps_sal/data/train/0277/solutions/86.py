@@ -7,5 +7,5 @@ class Solution:
                 last_pos = pos
             if nums_on == last_pos:
                 res += 1
-                
+
         return res

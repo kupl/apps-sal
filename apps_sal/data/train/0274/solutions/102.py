@@ -10,13 +10,13 @@ class Solution:
                 min_deque.pop()
             while max_deque and nums[max_deque[-1]] <= nums[right]:
                 max_deque.pop()
-                
+
             min_deque.append(right)
             max_deque.append(right)
-            
+
             while nums[max_deque[0]] - nums[min_deque[0]] > limit:
                 left += 1
-                
+
                 if max_deque[0] < left:
                     max_deque.popleft()
                 if min_deque[0] < left:
@@ -24,8 +24,3 @@ class Solution:
             right += 1
             max_size = max(max_size, right - left)
         return max_size
-                    
-            
-                
-    
-

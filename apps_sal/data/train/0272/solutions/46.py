@@ -20,7 +20,7 @@ class Solution:
                     box_set.add(futureBox)
                 for futureKey in keys[box]:
                     key_set.add(futureKey)
-                
+
                 for futureBox in box_set:
                     if futureBox in key_set or status[futureBox] == 1:
                         queue.append(futureBox)
@@ -32,5 +32,5 @@ class Solution:
                 #         box_set.remove(newBox)
             else:
                 box_set.add(box)
-        
+
         return ans

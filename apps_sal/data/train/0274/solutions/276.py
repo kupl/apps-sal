@@ -2,8 +2,8 @@ class Solution:
 
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         n = len(nums)
-        max_q = deque() #3,2,1,0
-        min_q = deque() #1,2,3,4
+        max_q = deque()  # 3,2,1,0
+        min_q = deque()  # 1,2,3,4
 
         start = 0
         ans = 0
@@ -14,55 +14,21 @@ class Solution:
                 min_q.pop()
             max_q.append(nums[end])
             min_q.append(nums[end])
-            
+
             if max_q[0] - min_q[0] > limit:
                 if max_q[0] == nums[start]:
                     max_q.popleft()
-                
+
                 if min_q[0] == nums[start]:
                     min_q.popleft()
-                
+
                 start += 1
-            
-            ans = max(end-start+1, ans)
+
+            ans = max(end - start + 1, ans)
         return ans
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     def longestSubarray2(self, nums: List[int], limit: int) -> int:
-        #[10,1,2,4,7,2]
+        # [10,1,2,4,7,2]
         #queue = [4, 7, 2, 8]
         #min_queue = [2, 8]
         #max_queue = [8]
@@ -90,7 +56,7 @@ class Solution:
         return ans
 
     def longestSubarray2(self, nums: List[int], limit: int) -> int:
-        #[10,1,2,4,7,2]
+        # [10,1,2,4,7,2]
         #queue = [4, 7, 2, 8]
         #min_queue = [2, 8]
         #max_queue = [8]
@@ -117,9 +83,6 @@ class Solution:
                 start += 1
         return len(nums) - start
 
-        
-        
-
     def longestSubarray2(self, nums: List[int], limit: int) -> int:
         n = len(nums)
         min_dp = [[0 for _ in range(n)] for _ in range(n)]
@@ -128,12 +91,11 @@ class Solution:
         for i in range(n):
             min_dp[i][i] = nums[i]
             max_dp[i][i] = nums[i]
-        for k in range(2, n+1):
-            for i in range(n-k+1):
+        for k in range(2, n + 1):
+            for i in range(n - k + 1):
                 j = i + k - 1
-                min_dp[i][j] = min(min_dp[i][j-1], nums[j])
-                max_dp[i][j] = max(max_dp[i][j-1], nums[j])
+                min_dp[i][j] = min(min_dp[i][j - 1], nums[j])
+                max_dp[i][j] = max(max_dp[i][j - 1], nums[j])
                 if max_dp[i][j] - min_dp[i][j] <= limit:
                     ans = k
         return ans
-

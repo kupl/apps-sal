@@ -3,14 +3,14 @@ class Solution:
         q = collections.deque()
         for box in initialBoxes:
             q.append(box)
-        
+
         keys_found = set()
-        
+
         ans = 0
         found = True
         while q and found:
             size = len(q)
-            
+
             found = False
             for _ in range(size):
                 cur = q.popleft()
@@ -21,7 +21,7 @@ class Solution:
                     ans += candies[cur]
                     for box in containedBoxes[cur]:
                         q.append(box)
-                    
+
                     for key in keys[cur]:
                         keys_found.add(key)
         return ans

@@ -1,8 +1,8 @@
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
-        
+
         stack = deque(initialBoxes)
-        seen = set()        
+        seen = set()
         kseen = set()
         while stack:
             for _ in range(len(stack)):

@@ -1,13 +1,16 @@
 from collections import deque
+
+
 class MinQ:
     def __init__(self):
         self.Q = collections.deque([])
-    def append(self,num):
+
+    def append(self, num):
         cnt = 0
         while self.Q and self.Q[-1][0] >= num:
             cnt += self.Q.pop()[1] + 1
-        self.Q.append([num,cnt])
-        
+        self.Q.append([num, cnt])
+
     def popleft(self):
         if not self.Q:
             return None
@@ -15,19 +18,22 @@ class MinQ:
             self.Q.popleft()
         else:
             self.Q[0][1] -= 1
+
     @property
     def minv(self):
         return self.Q[0][0]
 
+
 class MaxQ:
     def __init__(self):
         self.Q = collections.deque([])
-    def append(self,num):
+
+    def append(self, num):
         cnt = 0
         while self.Q and self.Q[-1][0] <= num:
             cnt += self.Q.pop()[1] + 1
-        self.Q.append([num,cnt])
-        
+        self.Q.append([num, cnt])
+
     def popleft(self):
         if not self.Q:
             return None
@@ -35,10 +41,11 @@ class MaxQ:
             self.Q.popleft()
         else:
             self.Q[0][1] -= 1
+
     @property
     def maxv(self):
         return self.Q[0][0]
-    
+
 
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:

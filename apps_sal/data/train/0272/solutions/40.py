@@ -4,7 +4,7 @@ class Solution:
         unused_keys = set()
         candy_count = 0
         cur_box = []
-        
+
         for box in initialBoxes:
             if status[box] or box in unused_keys:
                 candy_count += candies[box]
@@ -23,7 +23,7 @@ class Solution:
 
             else:
                 locked_boxes.add(box)
-                
+
         while cur_box:
             box = cur_box.pop()
             candy_count += candies[box]

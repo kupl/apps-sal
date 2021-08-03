@@ -15,6 +15,6 @@ class Solution:
                 if nums[l] == mind[0]:
                     mind.popleft()
                 l += 1
-            res = max(r-l+1, res)
+            res = max(r - l + 1, res)
             r += 1
         return res
