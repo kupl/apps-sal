@@ -1,7 +1,9 @@
 from math import ceil, sqrt, factorial, gcd
 from collections import deque
 from sys import stdin
-input = lambda: stdin.readline().strip()
+def input(): return stdin.readline().strip()
+
+
 n, m = map(int, input().split())
 l = list(map(int, input().split()))
 l = [0] + l

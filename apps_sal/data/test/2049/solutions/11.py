@@ -34,7 +34,7 @@ for i in range(b):
     l, r = list(map(int, input().split()))
     if(l == len(z)):
         print('Yes')
-        continue;
+        continue
     if(start[l] == -1 or end[r - 1] == -1):
         print('Yes')
     else:

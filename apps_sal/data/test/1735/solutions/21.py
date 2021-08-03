@@ -7,5 +7,7 @@ for i in s:
     elif st[-1] == i:
         st.pop()
         cnt += 1
-if cnt & 1: print('Yes')
-else: print('No')
+if cnt & 1:
+    print('Yes')
+else:
+    print('No')

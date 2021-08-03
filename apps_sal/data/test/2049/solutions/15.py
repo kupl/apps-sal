@@ -16,7 +16,7 @@ sys.setrecursionlimit(100000)
 def PRINT(lst, sep=' '): print(sep.join(map(str, lst)))
 
 
-I = lambda: list(map(int, input().split(' ')))
+def I(): return list(map(int, input().split(' ')))
 
 
 def solve(lst, queries):

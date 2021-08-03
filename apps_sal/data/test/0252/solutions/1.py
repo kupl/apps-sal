@@ -49,22 +49,27 @@ def main():
     right = [n] * n
 
     p = [a[i] for i in range(n)]
-    for i in range(1, n): p[i] += p[i - 1]
+    for i in range(1, n):
+        p[i] += p[i - 1]
 
     build(p, n)
 
     st = [0]
     for i in range(1, n):
-        while st and a[st[-1]] <= a[i]: st.pop()
+        while st and a[st[-1]] <= a[i]:
+            st.pop()
 
-        if st: left[i] = st[-1]
+        if st:
+            left[i] = st[-1]
         st.append(i)
 
     st = [n - 1]
     for i in range(n - 2, -1, -1):
-        while st and a[st[-1]] < a[i]: st.pop()
+        while st and a[st[-1]] < a[i]:
+            st.pop()
 
-        if st: right[i] = st[-1]
+        if st:
+            right[i] = st[-1]
         st.append(i)
 
     #print(left, right, p)
@@ -82,7 +87,8 @@ def main():
         _, rmaxx = query(i, r, n)
         lminn, _ = query(max(0, l), i, n)
 
-        if l < 0: lminn = min(lminn, 0)
+        if l < 0:
+            lminn = min(lminn, 0)
 
         s = rmaxx - lminn
         #print(i, s, a[i], l, r)

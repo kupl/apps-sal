@@ -25,7 +25,8 @@ for i in range(n):
         h = 0
     d.append([abs(b[i]) // g, abs(a[i]) // g, h])
 d.sort()
-bk = 0; k = 1
+bk = 0
+k = 1
 for i in range(1, n):
     if d[i] == d[i - 1]:
         k += 1
