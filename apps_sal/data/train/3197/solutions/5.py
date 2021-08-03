@@ -4,7 +4,8 @@ conjugators = {
     'ir': ['o', 'es', 'e', 'imos', 'is', 'en'],
 }
 
+
 def conjugate(verb):
     root, suffix = verb[:-2], verb[-2:]
     cs = conjugators[suffix]
-    return {verb: [root+c for c in cs]}
+    return {verb: [root + c for c in cs]}

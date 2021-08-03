@@ -1,4 +1,4 @@
-def check_exam(arr1,arr2):
+def check_exam(arr1, arr2):
     i = 0
     result = 0
     while i < len(arr1):

@@ -1,4 +1,4 @@
-def check_exam(arr1,arr2):
+def check_exam(arr1, arr2):
     grade = 0
     for answer in range(len(arr1)):
         if arr1[answer] == arr2[answer]:

@@ -20,4 +20,3 @@ def triangular_range(start, stop):
         t += n + 1
 
     return result
-

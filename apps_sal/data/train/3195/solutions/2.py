@@ -1,6 +1,7 @@
 parens = dict([')(', '][', '}{'])
 opens = set(parens.values())
 
+
 def braces_status(s):
     stack = []
     for c in s:

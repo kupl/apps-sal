@@ -7,4 +7,3 @@ def triangular_range(start, stop):
         n += 1
         t = n * (n + 1) // 2
     return result
-

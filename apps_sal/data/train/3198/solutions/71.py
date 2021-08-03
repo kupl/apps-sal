@@ -1,4 +1,4 @@
-def check_exam(arr1,arr2):
+def check_exam(arr1, arr2):
     score = 0
     for i in range(len(arr1)):
         if arr2[i] == '':
@@ -8,5 +8,3 @@ def check_exam(arr1,arr2):
         else:
             score += -1
     return score if score > -1 else 0
-  
-

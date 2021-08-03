@@ -1,5 +1,5 @@
 def braces_status(s):
-    matching = {"}":"{","]":"[",")":"("}
+    matching = {"}": "{", "]": "[", ")": "("}
     stack = []
     for c in s:
         if c in "[({":

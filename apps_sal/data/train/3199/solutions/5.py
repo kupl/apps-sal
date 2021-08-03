@@ -1,8 +1,8 @@
 def greet(name):
-    if name==None:
+    if name == None:
         return None
-    if name=='':
+    if name == '':
         return None
-    n=len(name)    
-    if n>=1:
-        return "hello"+' '+name+'!'
+    n = len(name)
+    if n >= 1:
+        return "hello" + ' ' + name + '!'

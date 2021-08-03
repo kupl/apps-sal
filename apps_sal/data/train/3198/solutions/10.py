@@ -1,4 +1,4 @@
-def check_exam(arr1,arr2):
+def check_exam(arr1, arr2):
     score = 0
     for n, a in enumerate(arr2):
         if a != '':
@@ -7,4 +7,3 @@ def check_exam(arr1,arr2):
             else:
                 score -= 1
     return max(score, 0)
-

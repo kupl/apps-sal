@@ -1,4 +1,4 @@
-def check_exam(arr1,arr2):
+def check_exam(arr1, arr2):
     score = 0
     for c, s in zip(arr1, arr2):
         if s == "":

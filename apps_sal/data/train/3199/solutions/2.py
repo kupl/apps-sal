@@ -1,2 +1,3 @@
 def greet(s):
-    if s: return f"hello {s}!"
+    if s:
+        return f"hello {s}!"

@@ -1,4 +1,4 @@
-def check_exam(arr1,arr2):
+def check_exam(arr1, arr2):
     c = 0
     for i in range(len(arr1)):
         if arr1[i] == arr2[i]:

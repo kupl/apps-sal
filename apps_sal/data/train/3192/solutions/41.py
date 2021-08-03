@@ -16,4 +16,3 @@ def how_many_dalmatians(number):
     else:
         respond = DOGS[2]
     return respond
-
