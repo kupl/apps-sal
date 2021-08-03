@@ -1,7 +1,7 @@
 def set_alarm(employed, vacation):
     a = employed
     b = vacation
-    
+
     if a == True:
         if b == False:
             return True
@@ -12,9 +12,6 @@ def set_alarm(employed, vacation):
         return False
     if a and b == True:
         return False
-        
-
-
 
 
 #     if a == True:
@@ -23,4 +20,3 @@ def set_alarm(employed, vacation):
 #             return False
 #     else:
 #         return False
-

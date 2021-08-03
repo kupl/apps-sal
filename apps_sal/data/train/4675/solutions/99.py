@@ -1,1 +1,1 @@
-set_alarm=lambda employed,vacation:employed!=vacation if employed else employed
+def set_alarm(employed, vacation): return employed != vacation if employed else employed

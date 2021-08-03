@@ -1,2 +1,2 @@
 def to_freud(sentence):
-    return ' '.join(['sex' for i in range(sentence.count(' ')+1)])
+    return ' '.join(['sex' for i in range(sentence.count(' ') + 1)])

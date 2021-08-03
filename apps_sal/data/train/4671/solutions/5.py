@@ -12,7 +12,8 @@ def visit(ad_lst, i, fth=-1, path=[], visited=0):
         path = path2
         visited += v2
     return path, visited
-        
+
+
 def isTree(ad_lst):
     for v in range(0, len(ad_lst)):
         path, visited = visit(ad_lst, v, -1, [], 0)

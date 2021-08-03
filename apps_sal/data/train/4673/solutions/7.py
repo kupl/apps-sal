@@ -1,1 +1,1 @@
-convert_hash_to_array = lambda l: [[a,l[a]] for a in sorted(l)]
+def convert_hash_to_array(l): return [[a, l[a]] for a in sorted(l)]

@@ -4,4 +4,5 @@ def set_alarm(employed, vacation):
             return False
         if vacation == False:
             return False
-    else:return bool(vacation) ^ bool(employed)
+    else:
+        return bool(vacation) ^ bool(employed)

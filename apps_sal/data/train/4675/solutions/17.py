@@ -7,5 +7,6 @@ def set_alarm(employed, vacation):
         return True
     while employed == False and vacation == False:
         return False
-    
+
+
 set_alarm(True, True)

@@ -4,5 +4,3 @@ def to_freud(sentence):
         return 'sex'
     elif sentence.count(' ') >= 1:
         return 'sex' + word * sentence.count(' ')
-    
-

@@ -1,2 +1,2 @@
 def string_to_number(s):
-    return int(s) # -_-
+    return int(s)  # -_-

@@ -1,2 +1,2 @@
 def to_freud(sentence):
-  return ('sex ' * len(sentence.split()) )[:-1]
+    return ('sex ' * len(sentence.split()))[:-1]

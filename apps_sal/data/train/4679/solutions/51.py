@@ -5,7 +5,7 @@ def to_freud(sentence):
         if not b:
             b += "sex "
         else:
-            b+= "sex "
+            b += "sex "
     if b[-1] == " ":
         return b[:-1]
     else:

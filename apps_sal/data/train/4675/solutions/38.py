@@ -3,7 +3,7 @@ def set_alarm(employed, vacation):
         return True
     else:
         return False
-    
+
     """ FIRST THOUGHT
     if employed == True and vacation == False:
         return True

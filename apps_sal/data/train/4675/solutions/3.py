@@ -1,1 +1,1 @@
-set_alarm=lambda *a:a==(1,0)
+set_alarm = lambda *a: a == (1, 0)

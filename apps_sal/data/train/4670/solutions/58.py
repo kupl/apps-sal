@@ -1,1 +1,1 @@
-string_to_number = lambda a : int(a)
+def string_to_number(a): return int(a)

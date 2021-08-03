@@ -1,7 +1,6 @@
 def string_to_number(s):
     if s is None:
-       return None
+        return None
     return int(s)
-    
-    # ... your code here
 
+    # ... your code here
