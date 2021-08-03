@@ -1,4 +1,5 @@
-f = lambda: list(map(int, input().split()))
+def f(): return list(map(int, input().split()))
+
 
 n, k = f()
 
@@ -8,7 +9,8 @@ for a in f():
 
     d = 0
 
-    while a & 1 << d == 0: d += 1
+    while a & 1 << d == 0:
+        d += 1
 
     t = (a == 3 << d) ^ (d & 1)
 

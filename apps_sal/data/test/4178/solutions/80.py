@@ -1,6 +1,6 @@
 N = int(input())
 fN = list(map(int, input().split()))
-plus = True;
+plus = True
 if N != 1:
     for i in range(1, len(fN))[::-1]:
         if fN[i] < fN[i - 1]:

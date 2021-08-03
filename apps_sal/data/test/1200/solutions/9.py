@@ -4,7 +4,7 @@ def f(a, b):
             b = b % a
         else:
             a = a % b
-    return a + b;
+    return a + b
 
 
 n = int(input())

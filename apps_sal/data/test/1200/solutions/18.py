@@ -15,7 +15,7 @@ for i in range(a):
         mn = gcd(x[i] - x[i - 1], mn)
     cnt = cnt + 1
 ans = 0
-cnt = 0;
+cnt = 0
 i = 0
 for i in range(a):
     if cnt > 0:
