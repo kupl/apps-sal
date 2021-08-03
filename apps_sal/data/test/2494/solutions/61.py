@@ -24,14 +24,16 @@ def main():
     heapq.heapify(akouho)
     while not all(fixed):
         (fcost, fnode) = heapq.heappop(akouho)
-        if fnode == 0: break
+        if fnode == 0:
+            break
         fixed[fnode] = True
         for br in brdict[fnode]:
             if not fixed[br[0]]:
                 if cost[br[0]] > fcost + br[1]:
                     cost[br[0]] = fcost + br[1]
                     heapq.heappush(akouho, (cost[br[0]], br[0]))
-        if akouho == []: break
+        if akouho == []:
+            break
     print(cost[0])
 
 

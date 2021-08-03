@@ -22,7 +22,8 @@ def bruteforce(v, k):
     while True:
         accm = 0
         for i in range(len(v)):
-            if v[i] >= k: return ret
+            if v[i] >= k:
+                return ret
             accm += v[i]
             v[i] = accm
         ret += 1

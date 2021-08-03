@@ -78,10 +78,10 @@ else:
         m = []
         for i in range(n):
             m += [[kek(i, j) for j in range(n)]]
-        l = 0;
+        l = 0
         r = 10**18
         while(l + 1 < r):
-            mid = (l + r) // 2;
+            mid = (l + r) // 2
             b = matmul(a, exp(m, mid))
             if max_element(b[0]) < k:
                 l = mid

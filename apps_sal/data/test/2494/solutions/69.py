@@ -9,7 +9,8 @@ def dijkstra(adj, n, start):
     heapq.heappush(q, (0, start))
     while q:
         fc, fn = heapq.heappop(q)
-        if dj[fn] < fc: continue
+        if dj[fn] < fc:
+            continue
         for tn, lc in adj[fn]:
             if dj[tn] > dj[fn] + lc:
                 dj[tn] = dj[fn] + lc

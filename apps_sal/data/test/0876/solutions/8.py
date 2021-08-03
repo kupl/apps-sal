@@ -1,5 +1,6 @@
 s = input().split()
-n = int(s[0]); k = int(s[1])
+n = int(s[0])
+k = int(s[1])
 s = input().split()
 a = [1]
 for i in range(1, n + 1):
@@ -7,7 +8,8 @@ for i in range(1, n + 1):
 
 for i in range(1, n + 1):
     if (a[i] >= k):
-        print((0)); return
+        print((0))
+        return
 
 
 def C(nn, kk):
@@ -42,7 +44,9 @@ def holyshit(pwr):
     return False
 
 
-left = 1; right = int(1e19); ans = int(1e19)
+left = 1
+right = int(1e19)
+ans = int(1e19)
 while left <= right:
     mid = (left + right) >> 1
     # print("/" + str(left) + " " + str(mid) + " " + str(right))

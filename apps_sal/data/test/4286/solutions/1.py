@@ -21,10 +21,13 @@ def find(x):
 
 def unite(u, v):
     u, v = map(find, (u, v))
-    if u == v: return False
-    if rk[u] < rk[v]: u, v = v, u
+    if u == v:
+        return False
+    if rk[u] < rk[v]:
+        u, v = v, u
     fa[v] = u
-    if rk[u] == rk[v]: rk[u] += 1
+    if rk[u] == rk[v]:
+        rk[u] += 1
     return True
 
 
@@ -33,7 +36,8 @@ e.sort(key=lambda x: x[2])
 ans = 0
 cnt = 1
 for ee in e:
-    if cnt == n: break
+    if cnt == n:
+        break
     if unite(ee[0], ee[1]):
         ans += ee[2]
         cnt += 1

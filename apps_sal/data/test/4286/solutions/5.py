@@ -14,7 +14,7 @@ def find_set(v):
 
 
 sys.stdin = StringIO(sys.stdin.read())
-input = lambda: sys.stdin.readline().rstrip('\r\n')
+def input(): return sys.stdin.readline().rstrip('\r\n')
 
 
 n, m = list(map(int, input().split(' ')))

@@ -11,7 +11,8 @@ while q:
         if x[m2] > x[m]:
             x[m2], m = x[m], m2
             q.append(m)
-        else: break
+        else:
+            break
     if x[(n + 1) % k] == 50:
         x[(n + 1) % k] = x[n] + 1
         q.appendleft((n + 1) % k)

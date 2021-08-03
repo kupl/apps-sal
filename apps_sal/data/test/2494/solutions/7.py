@@ -17,14 +17,17 @@ def bfs01(g, start):
     q = deque([(0, start)])  # (そこまでの距離、点)
     while q and pending:
         dv, v = q.popleft()
-        if res[v] < dv: continue
+        if res[v] < dv:
+            continue
         pending -= 1
         # if v==goal: break
         for to, cost in g[v]:
             if dv + cost < res[to]:
                 res[to] = dv + cost
-                if cost: q.append((res[to], to))
-                else: q.appendleft((res[to], to))
+                if cost:
+                    q.append((res[to], to))
+                else:
+                    q.appendleft((res[to], to))
     return res
 
 ######################################################################

@@ -7,7 +7,8 @@ from heapq import heappop, heappush, heapify
 
 
 def bfs_01(v, mod):
-    q = deque(); q.append(v)
+    q = deque()
+    q.append(v)
     visited = [False] * mod
     cur = 0
     while cur == 0:

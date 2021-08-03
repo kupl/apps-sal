@@ -32,7 +32,7 @@ while lo < hi:
     md = (lo + hi) // 2
 
     if check(md):
-        hi = md;
+        hi = md
     else:
         lo = md + 1
 

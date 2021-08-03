@@ -1,5 +1,5 @@
-n, k = list(map(int, input().split()));
-a = list(map(int, input().split()));
+n, k = list(map(int, input().split()))
+a = list(map(int, input().split()))
 
 if max(a) >= k:
     print(0)
@@ -30,7 +30,9 @@ while lo < hi:
     mid = (lo + hi) // 2
     cancan = can(mid)
     # print(mid,cancan)
-    if cancan: hi = mid
-    else: lo = mid + 1
+    if cancan:
+        hi = mid
+    else:
+        lo = mid + 1
 
 print(lo)
