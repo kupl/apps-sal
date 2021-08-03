@@ -20,7 +20,7 @@ def main():
         a, b = b, c
     check = compile("and".join(
         "(l[{:n}]{:s}l[{:n}]{:s}l[{:n}])".format(i - 1, "><"[i & 1], i, "<>"[i & 1], i + 1) for i in fails),
-                   "<string>", "eval")
+        "<string>", "eval")
     for i in fails:
         a = l[i]
         for j in range(n):
@@ -36,7 +36,5 @@ def __starting_point():
     main()
 
 
-
 # Made By Mostafa_Khaled
-
 __starting_point()

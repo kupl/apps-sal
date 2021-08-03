@@ -12,7 +12,8 @@ for i in range(m):
             l += 1
     l += 1
     r += 1
-    while d[r]: r += d[r]
+    while d[r]:
+        r += d[r]
     while l < r:
         if d[l]:
             k = d[l]

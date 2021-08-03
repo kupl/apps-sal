@@ -6,15 +6,16 @@ for m, (l, r) in enumerate(t, 1):
 
     if not l:
 
-        if k: t[k - 1][1], t[m - 1][0] = m, k
+        if k:
+            t[k - 1][1], t[m - 1][0] = m, k
 
         k = m
 
-        while r: k, r = r, t[r - 1][1]
+        while r:
+            k, r = r, t[r - 1][1]
 
-for l, r in t: print(l, r)
-
+for l, r in t:
+    print(l, r)
 
 
 # Made By Mostafa_Khaled
-

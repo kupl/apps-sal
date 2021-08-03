@@ -30,4 +30,5 @@ def main():
         l[i] = a
     print(res // 2)
 
+
 main()

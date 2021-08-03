@@ -1,4 +1,6 @@
 import sys
+
+
 def calc(b0, b1, q):
     if q == 0:
         return b0 ^ b1
@@ -6,12 +8,14 @@ def calc(b0, b1, q):
         return b0 | b1
     if q == 2:
         return b0 & b1
-n, m = list(map(int,sys.stdin.readline().split()))
+
+
+n, m = list(map(int, sys.stdin.readline().split()))
 arr1 = {}
 opt = ['XOR', 'OR', 'AND']
 arr2 = []
 for j in range(n):
-    a, b = list(map(str,sys.stdin.readline().split(" := ")))
+    a, b = list(map(str, sys.stdin.readline().split(" := ")))
     b = b.split()
     if len(b) == 1:
         s = b[0]
@@ -21,11 +25,11 @@ for j in range(n):
         d = b[2]
         q = opt.index(b[1])
         arr2.append((a, c, d, q))
- 
+
 mins = ''
 maxs = ''
-d0 = {'?':0}
-d1 = {'?':1}
+d0 = {'?': 0}
+d1 = {'?': 1}
 for i in range(m):
     for a, b in list(arr1.items()):
         d0[a] = int(b[i])
@@ -51,10 +55,4 @@ for i in range(m):
         maxs += "1"
     else:
         maxs += "0"
-sys.stdout.write("{0}\n{1}".format(mins,maxs))
-
-
-
-    
-
-
+sys.stdout.write("{0}\n{1}".format(mins, maxs))

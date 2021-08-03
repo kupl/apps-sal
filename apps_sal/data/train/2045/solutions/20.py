@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#pyrival orz
+# pyrival orz
 import os
 import sys
 from io import BytesIO, IOBase
@@ -10,6 +10,7 @@ from io import BytesIO, IOBase
     n=int(input())
     a = [int(x) for x in input().split()]
 """
+
 
 class SortedList:
     def __init__(self, iterable=[], _load=200):
@@ -245,25 +246,27 @@ class SortedList:
         """Return string representation of sorted list."""
         return 'SortedList({0})'.format(list(self))
 
+
 def main():
-    n,m=map(int,input().split())
-    ans=[0]*n
-    st=SortedList([i for i in range(n)])
+    n, m = map(int, input().split())
+    ans = [0] * n
+    st = SortedList([i for i in range(n)])
     for _ in range(m):
-        l,r,x=map(int,input().split())
-        idx=st.bisect_left(l-1)
+        l, r, x = map(int, input().split())
+        idx = st.bisect_left(l - 1)
         # print(l,r,x)
-        while idx<len(st):
-            cur=st[idx]
-            if cur>=r:
+        while idx < len(st):
+            cur = st[idx]
+            if cur >= r:
                 break
             # print(cur)
-            ans[cur]=x
+            ans[cur] = x
             st.discard(cur)
-        ans[x-1]=0
-        st.add(x-1)
+        ans[x - 1] = 0
+        st.add(x - 1)
     print(*ans)
 # region fastio
+
 
 BUFSIZE = 8192
 
@@ -313,10 +316,13 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
 
 # endregion
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

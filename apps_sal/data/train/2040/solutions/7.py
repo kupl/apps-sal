@@ -8,4 +8,3 @@ for _ in range(n - 1):
     x = math.sqrt(h2n + p * p) - p
     p += x
     print(p, end=" ")
-

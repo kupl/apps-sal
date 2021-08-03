@@ -10,7 +10,7 @@ for i in range(int(input().strip())):
         start_nodes.append([left, current, right])
     else:
         nodes.append([left, current, right])
-        
+
 lists = []
 
 for node in start_nodes:
@@ -21,7 +21,7 @@ for node in start_nodes:
             if links[-1][-1] == nodes[i][1]:
                 links.append(nodes[i])
         nextlen = len(links)
-        
+
         if prevlen == nextlen:
             break
     lists.append(links)
@@ -33,10 +33,7 @@ for i in range(1, len(flattened)):
         flattened[i][0] = flattened[i - 1][1]
         flattened[i - 1][2] = flattened[i][1]
 
-sorted_union = sorted(flattened, key = lambda x: x[1])
+sorted_union = sorted(flattened, key=lambda x: x[1])
 
 for node in sorted_union:
     print(node[0], node[2])
-
-
-

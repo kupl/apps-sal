@@ -24,7 +24,6 @@ class CodeforcesTask847ASolution:
             self.cells[lists[x + 1][0] - 1][0] = lists[x][1]
         self.result = "\n".join(["{0} {1}".format(*cell) for cell in self.cells])
 
-
     def get_result(self):
         return self.result
 
@@ -34,5 +33,6 @@ def __starting_point():
     Solution.read_input()
     Solution.process_task()
     print(Solution.get_result())
+
 
 __starting_point()

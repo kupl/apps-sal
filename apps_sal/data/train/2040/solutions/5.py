@@ -10,5 +10,3 @@ for i in range(len(ret)):
         print("{:.15f}".format(ret[i]), end="")
     else:
         print(" {:.15f}".format(ret[i]), end="")
-        
-

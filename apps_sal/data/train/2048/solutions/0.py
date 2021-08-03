@@ -5,6 +5,7 @@ nums = list(map(int, sys.stdin.readline().split()))
 total = sum(nums)
 avg = int(total / n)
 
+
 def check1(nums, target, K):
     for x in nums:
         if K < 0:
@@ -13,6 +14,7 @@ def check1(nums, target, K):
             K -= target - x
     return K >= 0
 
+
 def check2(nums, target, K):
     for x in nums:
         if K < 0:
@@ -20,6 +22,7 @@ def check2(nums, target, K):
         if x > target:
             K -= x - target
     return K >= 0
+
 
 l1, r1 = min(nums), avg + 1
 while l1 + 1 < r1:

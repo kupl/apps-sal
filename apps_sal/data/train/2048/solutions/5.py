@@ -1,64 +1,57 @@
 import sys
 
 
-
 inp = sys.stdin.read().splitlines()
 
-n,k = list(map(int,inp[0].split()))
+n, k = list(map(int, inp[0].split()))
 
-lst = list(map(int,inp[1].split()))
+lst = list(map(int, inp[1].split()))
 
 lst.sort()
 
 total = sum(lst)
 
-lower = int(total/n)
+lower = int(total / n)
 
-nupper = total%n
-
+nupper = total % n
 
 
 if nupper == 0:
 
-	upper = lower;
+    upper = lower
 
 else:
 
-	upper = lower+1;
+    upper = lower + 1
 
-nlower = n - nupper;
-
-
-
-i = 0;
-
-while i<n and lst[i]<lower:
-
-	i+=1
-
-low1st = i; 
+nlower = n - nupper
 
 
+i = 0
 
-i = n-1;
+while i < n and lst[i] < lower:
 
-while i>=0 and lst[i]>upper:
+    i += 1
 
-	i-=1
-
-uplast = i;
-
+low1st = i
 
 
-lowerfill = low1st*lower - sum(lst[:low1st]) 
+i = n - 1
+
+while i >= 0 and lst[i] > upper:
+
+    i -= 1
+
+uplast = i
 
 
-
-upperfill = sum(lst[uplast+1:]) - (n-uplast-1)*upper
-
+lowerfill = low1st * lower - sum(lst[:low1st])
 
 
-totalsteps = (lowerfill+upperfill)/2
+upperfill = sum(lst[uplast + 1:]) - (n - uplast - 1) * upper
+
+
+totalsteps = (lowerfill + upperfill) / 2
 
 '''
 
@@ -78,112 +71,106 @@ print("totalsteps = %f"%totalsteps)
 
 '''
 
+
 def filllower():
 
-	kk = k
+    kk = k
 
-	cur = lst[0]
+    cur = lst[0]
 
-	i = 0
+    i = 0
 
-	while (kk>0):
+    while (kk > 0):
 
-		while (lst[i]==cur):
+        while (lst[i] == cur):
 
-			i+=1
+            i += 1
 
-			#print("i=%d,lst[i]=%d"%(i,lst[i]))
+            # print("i=%d,lst[i]=%d"%(i,lst[i]))
 
-		diff = lst[i] - lst[i-1]
+        diff = lst[i] - lst[i - 1]
 
-		kk -= i*diff
+        kk -= i * diff
 
-		#print("lower kk = %d",kk)
+        #print("lower kk = %d",kk)
 
-		if kk == 0:
+        if kk == 0:
 
-			cur = lst[i]
+            cur = lst[i]
 
-			break
+            break
 
-		elif kk<0:
+        elif kk < 0:
 
-			cur = lst[i]-int(-kk/i)-1
+            cur = lst[i] - int(-kk / i) - 1
 
-			#print("-kk/i = %d",int(-kk/i))
+            #print("-kk/i = %d",int(-kk/i))
 
-			if (-kk%i) ==0:
+            if (-kk % i) == 0:
 
-				cur += 1
+                cur += 1
 
-			break
+            break
 
-		cur = lst[i]
+        cur = lst[i]
 
-	#print("min = ",cur)
+    #print("min = ",cur)
 
-	return cur
-
+    return cur
 
 
 def fillupper():
 
-	kk = k
+    kk = k
 
-	i = n-1
+    i = n - 1
 
-	cur = lst[i]
+    cur = lst[i]
 
-	while (kk>0):
+    while (kk > 0):
 
-		while (lst[i]==cur):
+        while (lst[i] == cur):
 
-			i-=1
+            i -= 1
 
-			#print("i=%d,lst[i]=%d"%(i,lst[i]))
+            # print("i=%d,lst[i]=%d"%(i,lst[i]))
 
-		diff = lst[i+1] - lst[i]
+        diff = lst[i + 1] - lst[i]
 
-		kk -= (n-i-1)*diff
+        kk -= (n - i - 1) * diff
 
-		#print("upper kk = ",kk)
+        #print("upper kk = ",kk)
 
-		if kk == 0:
+        if kk == 0:
 
-			cur = lst[i-1]
+            cur = lst[i - 1]
 
-			break
+            break
 
-		elif kk<0:
+        elif kk < 0:
 
-			cur = lst[i]+int(-kk/(n-i-1))
+            cur = lst[i] + int(-kk / (n - i - 1))
 
-			if (-kk%(n-i-1)!=0):
+            if (-kk % (n - i - 1) != 0):
 
-				cur += 1;
+                cur += 1
 
-			break
+            break
 
-		cur = lst[i]
+        cur = lst[i]
 
-	#print("max = ",cur)
+    #print("max = ",cur)
 
-	return cur
+    return cur
 
 
+if totalsteps >= k:
 
-if totalsteps>=k:
-
-	print(fillupper()-filllower())
+    print(fillupper() - filllower())
 
 else:
 
-	print(upper-lower)
-
-
-
-
-
+    print(upper - lower)
 
 
 '''
@@ -277,6 +264,4 @@ print(lst[-1]-lst[0])
 '''
 
 
-
 # Made By Mostafa_Khaled
-
