@@ -10,4 +10,3 @@ def calculate(s):
         elif word in ('gains', 'loses'):
             op = add if word == 'gains' else sub
     return op(*nums)
-

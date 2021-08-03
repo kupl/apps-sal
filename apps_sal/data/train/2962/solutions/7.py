@@ -4,4 +4,3 @@ def divisible_by(numbers, divisor):
         if x % divisor == 0:
             rez.append(x)
     return rez
-

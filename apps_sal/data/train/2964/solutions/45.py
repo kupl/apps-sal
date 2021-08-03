@@ -1,5 +1,6 @@
 import sys
 
+
 def sum_two_smallest_numbers(numbers):
     numA = sys.maxsize
     numB = sys.maxsize

@@ -1,1 +1,1 @@
-divisible_by = lambda n, d: [e for e in n if not e % d]
+def divisible_by(n, d): return [e for e in n if not e % d]

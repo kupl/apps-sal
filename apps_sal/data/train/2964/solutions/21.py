@@ -1,5 +1,5 @@
 def sum_two_smallest_numbers(numbers):
-    #your code here
+    # your code here
     numbers.sort()
-    subNumbers=numbers[:2]
+    subNumbers = numbers[:2]
     return sum(subNumbers)

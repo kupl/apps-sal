@@ -4,4 +4,4 @@ def sum_two_smallest_numbers(numbers):
     numbers[ind] = max(numbers)
     m2 = min(numbers)
     numbers[ind] = m1
-    return m1+ m2
+    return m1 + m2

@@ -11,4 +11,3 @@ def sum_two_smallest_numbers(numbers):
             y = z
 
     return x + y
-

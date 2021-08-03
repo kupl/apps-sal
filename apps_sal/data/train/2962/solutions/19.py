@@ -4,4 +4,3 @@ def divisible_by(numbers, divisor):
         if i % divisor == 0:
             divNums.append(i)
     return divNums
-

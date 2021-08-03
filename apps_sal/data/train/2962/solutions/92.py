@@ -1,5 +1,5 @@
 def divisible_by(numbers, divisor):
-    wf = [] 
+    wf = []
     dhf = [numbers, divisor]
     for i in numbers:
         if (i / divisor) == (i // divisor):

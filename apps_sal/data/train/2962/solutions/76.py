@@ -1,7 +1,7 @@
 def divisible_by(numbers, divisor):
-    div=[]
+    div = []
     for i in numbers:
-        if i%divisor == 0:
-            h=i/divisor
+        if i % divisor == 0:
+            h = i / divisor
             div.append(i)
     return div
