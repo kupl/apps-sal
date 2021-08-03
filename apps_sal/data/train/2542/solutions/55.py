@@ -11,4 +11,3 @@ class Solution:
                 decreasing = False
                 break
         return increasing or decreasing
-

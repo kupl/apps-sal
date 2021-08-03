@@ -1,7 +1,7 @@
 class Solution:
     def isMonotonic(self, A: List[int]) -> bool:
-        
-        a1, a2 = sorted(A), sorted(A, reverse = True)
+
+        a1, a2 = sorted(A), sorted(A, reverse=True)
         if A == a1 or A == a2:
             return True
         return False

@@ -1,7 +1,7 @@
 class Solution:
     def isMonotonic(self, A: List[int]) -> bool:
         # Valid monotic number of the following characteristic
-        # Increasing 
+        # Increasing
         # Decreasing
         # None increasing or decreasing
 
@@ -14,7 +14,7 @@ class Solution:
         index = 1
 
         while index < len(A):
-            
+
             previous = index - 1
             current = index
 
@@ -22,11 +22,11 @@ class Solution:
             # So assign isIncreasing to false
             if A[previous] < A[current]:
                 isDecreasing = False
-                
+
             # if the current is smaller the number is decreasing
             # so assign isIncreasing to false
             if A[previous] > A[current]:
                 isIncreasing = False
             index += 1
-        
+
         return isIncreasing or isDecreasing

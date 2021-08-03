@@ -15,7 +15,7 @@ class Solution:
             if tempj >= A[j]:
                 tempj = A[j]
             else:
-                flagj = False 
+                flagj = False
             i += 1
             j += 1
         # return True by default.

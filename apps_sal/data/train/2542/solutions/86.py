@@ -11,7 +11,7 @@ class Solution:
                 elif d[-1][1] < di:
                     d.append((dv, di))
             decrease.append((v, idx))
-                
+
             while increase and increase[-1][0] <= v:
                 iv, ii = increase.pop()
                 if not i:

@@ -6,5 +6,4 @@ class Solution:
                 if r[i] < 0:
                     c += (len(r) - i)
                     break
-        return c                    
-
+        return c

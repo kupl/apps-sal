@@ -18,5 +18,5 @@ class Solution:
             else:
                 return False
             bef = num
-        
-        return True    
+
+        return True

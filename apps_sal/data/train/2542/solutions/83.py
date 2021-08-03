@@ -16,4 +16,3 @@ class Solution:
                 elif last_diff < 0:
                     return False
         return True
-

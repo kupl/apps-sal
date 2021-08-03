@@ -8,12 +8,12 @@ class Solution:
             if not c.isalpha():
                 read_index -= 1
                 continue
-            
+
             while not res[write_index].isalpha():
                 write_index += 1
-            
+
             res[write_index] = c
             read_index -= 1
             write_index += 1
-            
+
         return ''.join(res)
