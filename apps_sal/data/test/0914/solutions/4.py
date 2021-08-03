@@ -3,7 +3,8 @@ n = int(input())
 
 d = {}
 for c in s:
-    if c not in d: d[c] = 0
+    if c not in d:
+        d[c] = 0
     d[c] += 1
 
 dcl = list(d.values())

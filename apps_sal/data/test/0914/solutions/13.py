@@ -18,7 +18,8 @@ for i in a:
     if i not in d:
         d[i] = 1
         t += 1
-    else: d[i] += 1
+    else:
+        d[i] += 1
 ans = []
 res = ""
 for i in d:

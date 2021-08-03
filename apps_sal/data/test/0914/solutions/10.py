@@ -10,10 +10,10 @@ for c in s:
 if (n < len(cnt)):
     print(-1)
 else:
-    ansNum = 0;
+    ansNum = 0
     while(True):
         ansNum += 1
-        l = 0;
+        l = 0
         char = []
         for c, v in cnt.items():
             need = (v + ansNum - 1) // ansNum

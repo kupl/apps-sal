@@ -1,4 +1,5 @@
-mi = lambda: [int(i) for i in input().split()]
+def mi(): return [int(i) for i in input().split()]
+
 
 n = int(input())
 t = mi()
