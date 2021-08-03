@@ -5,7 +5,7 @@ def make_change(amount):
     N = 5
     P = 1
     change = {}
-    while amount > 0:    
+    while amount > 0:
         if (amount - H) >= 0:
             change["H"] = 1
             amount -= H
@@ -35,7 +35,7 @@ def make_change(amount):
             amount -= P
             while amount >= P:
                 change["P"] += 1
-                amount -= P                
-        else:       
+                amount -= P
+        else:
             return change
-    return change            
+    return change

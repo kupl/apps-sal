@@ -12,4 +12,3 @@ def expanded_form(num):
     ]
 
     return " + ".join(result)
-

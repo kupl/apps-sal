@@ -1,6 +1,7 @@
 import itertools
 from math import pi
 
+
 def iter_pi(epsilon):
     sign = 1
     value = 4

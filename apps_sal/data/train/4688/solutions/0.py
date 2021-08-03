@@ -5,4 +5,3 @@ def expanded_form(num):
     result += [str(num) + '/' + str(10 ** (i + 1)) for i, num in enumerate(fractional_part) if num != '0']
 
     return ' + '.join(result)
-

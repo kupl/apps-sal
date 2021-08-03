@@ -4,15 +4,16 @@ def decomp(n):
         if i > n:
             break
         count = 0
-        for j in range(2, n+1):
+        for j in range(2, n + 1):
             while j % i == 0:
                 count += 1
                 j = j / i
         if count > 1:
-            result.append(str(i)+'^'+str(count))
+            result.append(str(i) + '^' + str(count))
         else:
             result.append(str(i))
     return ' * '.join(result)
+
 
 def primes():
     yield 2
@@ -20,8 +21,9 @@ def primes():
     while True:
         n = next(it)
         yield n
-        it = filter(lambda x,n=n: x % n > 0, it)
-        
+        it = filter(lambda x, n=n: x % n > 0, it)
+
+
 def odd():
     n = 1
     while True:

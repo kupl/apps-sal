@@ -8,6 +8,7 @@ coins = (
     ("P", 1),
 )
 
+
 def make_change(amount):
     result = defaultdict(int)
     for coin, value in coins:
@@ -15,4 +16,3 @@ def make_change(amount):
             result[coin] += 1
             amount -= value
     return result
-
