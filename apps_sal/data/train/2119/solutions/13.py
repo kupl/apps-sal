@@ -5,6 +5,7 @@ class DSU:
         self.siz = [1] * n
         self.sht = [0] * n
         self.max = 0
+
     def find(self, n):
         nn = n
         while nn != self.par[nn]:
@@ -12,13 +13,14 @@ class DSU:
         while n != nn:
             self.par[n], n = nn, self.par[n]
         return n
+
     def union(self, a, b):
         a = self.find(a)
         b = self.find(b)
-        
+
         if a == b:
             return
-        
+
         if self.siz[a] < self.siz[b]:
             a, b = b, a
         self.par[b] = a
@@ -26,6 +28,7 @@ class DSU:
         self.arr[a] += self.arr[b]
         if self.arr[a] > self.max:
             self.max = self.arr[a]
+
     def add_node(self, n):
         self.sht[n] = 1
         if self.arr[n] > self.max:
@@ -34,7 +37,7 @@ class DSU:
             self.union(n, n + 1)
         if n != 0 and self.sht[n - 1]:
             self.union(n, n - 1)
-        
+
 
 def main():
     import sys
@@ -49,5 +52,6 @@ def main():
     for x in ans:
         print(x)
     return 0
+
 
 main()

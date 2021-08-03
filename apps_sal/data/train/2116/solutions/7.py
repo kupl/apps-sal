@@ -8,7 +8,8 @@ i = 0
 while i <= n - m:
     k = i
     for j in range(m):
-        if s[i + j] <= s[k]: k = i + j
+        if s[i + j] <= s[k]:
+            k = i + j
     t += [s[k]]
     d = max(d, s[k])
     u[k] = 0

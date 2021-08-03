@@ -41,5 +41,6 @@ def get_right_index(n, hs):
     right = [n - 1 - a for a in tmp]
     return right
 
+
 n, hs = read_data()
 solve(n, hs)

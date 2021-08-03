@@ -1,9 +1,9 @@
+import sys
 3
 
-import sys
 
 class CumTree:
-    
+
     def __init__(self, a, b):
         self.a = a
         self.b = b
@@ -12,15 +12,15 @@ class CumTree:
             return
         mid = (a + b) // 2
         self.levo = CumTree(a, mid)
-        self.desno = CumTree(mid+1, b)
-        
+        self.desno = CumTree(mid + 1, b)
+
     def manjsi(self, t):
         if self.a >= t:
             return 0
         if self.b < t:
             return self.count
         return self.levo.manjsi(t) + self.desno.manjsi(t)
-    
+
     def vstavi(self, t):
         if self.a <= t <= self.b:
             self.count += 1
@@ -28,7 +28,8 @@ class CumTree:
                 return
             self.levo.vstavi(t)
             self.desno.vstavi(t)
-        
+
+
 n = int(sys.stdin.readline())
 p = [int(x) for x in sys.stdin.readline().strip().split()]
 
@@ -41,5 +42,4 @@ while len(p) > 0:
     ct.vstavi(x)
 
 k, d = vsota // 2, vsota % 2
-print("%f" % (4*k + d))
-
+print("%f" % (4 * k + d))

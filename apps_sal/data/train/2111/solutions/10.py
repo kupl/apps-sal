@@ -44,8 +44,5 @@ def __starting_point():
     main()
 
 
-
-
 # Made By Mostafa_Khaled
-
 __starting_point()

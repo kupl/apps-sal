@@ -29,4 +29,3 @@ for i in range(26):
             print(chr(ord('a') + k) * d[k], end='')
         print(chr(ord('a') + i) * cnt)
         break
-

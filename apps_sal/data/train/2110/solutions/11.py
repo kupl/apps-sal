@@ -1,4 +1,4 @@
-N = int(1e6+100)
+N = int(1e6 + 100)
 n = int(input())
 arr = list(map(int, input().split()))
 cnt = [0] * N
@@ -10,4 +10,3 @@ for i in range(N):
     res += s % 2
     s //= 2
 print(res)
-

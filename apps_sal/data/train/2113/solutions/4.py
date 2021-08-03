@@ -1,65 +1,54 @@
 def merge_sort(a, l, r):
 
-  res = 0
+    res = 0
 
-  if l < r:
+    if l < r:
 
-    m = (l + r) // 2
+        m = (l + r) // 2
 
-    res += merge_sort(a, l, m)
+        res += merge_sort(a, l, m)
 
-    res += merge_sort(a, m + 1, r)
+        res += merge_sort(a, m + 1, r)
 
-    
+        i = l
 
-    i = l
+        j = m + 1
 
-    j = m + 1
+        b = []
 
-    b = []
+        while i <= m and j <= r:
 
-    while i <= m and j <= r:
+            if a[i] <= a[j]:
 
-      if a[i] <= a[j]:
+                b.append(a[i])
 
-        b.append(a[i])
+                i += 1
 
-        i += 1
+            else:
 
-      else:
+                b.append(a[j])
 
-        b.append(a[j])
+                j += 1
 
-        j += 1
+                res += m - i + 1
 
-        res += m - i + 1
+        while i <= m:
 
+            b.append(a[i])
 
+            i += 1
 
-    while i <= m:
+        while j <= r:
 
-      b.append(a[i])
+            b.append(a[j])
 
-      i += 1
+            j += 1
 
+        for idx, val in enumerate(b):
 
+            a[idx + l] = val
 
-    while j <= r:
-
-      b.append(a[j])
-
-      j += 1
-
-    
-
-    for idx, val in enumerate(b):
-
-      a[idx + l] = val
-
-      
-
-  return res 
-
+    return res
 
 
 input()
@@ -72,17 +61,13 @@ ans = merge_sort(a, 0, n - 1)
 
 if ans & 1 == 0:
 
-  ans *= 2
+    ans *= 2
 
 else:
 
-  ans = ans * 2 - 1
+    ans = ans * 2 - 1
 
 print(ans)
 
 
-
-
-
 # Made By Mostafa_Khaled
-
