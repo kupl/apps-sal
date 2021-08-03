@@ -6,13 +6,11 @@ class Solution:
                 smap[s].append(i)
             else:
                 smap[s] = [i]
-        
+
         res = []
         for k, v in list(smap.items()):
             for i in range(0, len(v), k):
                 # print(i, i+k)
-                res.append(v[i:i+k])
+                res.append(v[i:i + k])
                 p = i
         return res
-                
-

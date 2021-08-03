@@ -24,5 +24,3 @@ class Solution:
                     q.append([d + 1, nr, nc, ob])
                     seen.add((nr, nc, ob))
         return -1
-
-

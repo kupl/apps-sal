@@ -12,9 +12,5 @@ class Solution:
                     new_skill = key | skill
                     if new_skill not in list(dp.keys()) or len(dp[new_skill]) > len(dp[key]) + 1:
                         dp[new_skill] = dp[key] + [i]
-        
-        return dp[(1 << len(req_skills)) - 1]
-        
-            
-        
 
+        return dp[(1 << len(req_skills)) - 1]

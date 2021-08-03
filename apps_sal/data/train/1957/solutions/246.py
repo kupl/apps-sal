@@ -14,7 +14,7 @@ class Solution:
                     continue
                 if grid[x][y] == 1:
                     u += 1
-                if u > k or u >= seen[x][y] :
+                if u > k or u >= seen[x][y]:
                     continue
                 seen[x][y] = u
                 for i, j in direct:

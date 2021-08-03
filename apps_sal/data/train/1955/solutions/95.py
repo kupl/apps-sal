@@ -33,4 +33,3 @@ class Solution:
             res = res + res_cand[union_find[i]][-1]
             res_cand[union_find[i]].pop()
         return res
-

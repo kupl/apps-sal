@@ -6,6 +6,6 @@ class Solution:
             d[groupSizes[i]].append(i)
             if len(d[groupSizes[i]]) == groupSizes[i]:
                 res.append(d[groupSizes[i]])
-                d[groupSizes[i]]=[]
-        
+                d[groupSizes[i]] = []
+
         return res

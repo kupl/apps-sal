@@ -1,6 +1,6 @@
 class Solution:
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
-        
+
         from collections import defaultdict
 
         g = defaultdict(list)
@@ -10,20 +10,20 @@ class Solution:
                 g[s].append(i)
 
         memo = {}
+
         def helper(skills, group):
             if not skills:
                 return set()
-            
+
             if tuple(skills) in memo:
                 return memo[tuple(skills)]
-            
-            
+
             new_group = None
             s = list(skills)[0]
             for ind in g[s]:
                 if ind in group:
                     continue
-                    
+
                 comb = helper(skills - set(people[ind]), group | {ind}) | {ind}
                 if not new_group or len(comb) < len(new_group):
                     new_group = comb
@@ -32,4 +32,3 @@ class Solution:
             return new_group
 
         return helper(set(req_skills), set())
-

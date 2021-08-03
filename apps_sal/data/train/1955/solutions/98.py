@@ -4,7 +4,7 @@ class Solution:
         for a, b in pairs:
             g[a].append(b)
             g[b].append(a)
-        
+
         def find(i, idx):
             for k in g[i]:
                 if not visited[k]:
@@ -24,5 +24,5 @@ class Solution:
             chars = [s[j] for j in idx]
             chars.sort()
             for j, c in zip(idx, chars):
-                s[j] =  c
+                s[j] = c
         return ''.join(s)

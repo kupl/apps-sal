@@ -4,6 +4,7 @@ class Solution:
         dp = [[[float('inf')] * (k + 1) for _ in range(n)] for _ in range(m)]
         dp[0][0][k] = 0
         q = deque([(0, 0, k)])
+
         def move(i, j, k):
             for di, dj in ((-1, 0), (1, 0), (0, -1), (0, 1)):
                 ni, nj = i + di, j + dj
@@ -13,12 +14,10 @@ class Solution:
             i, j, k = q.pop()
             if i == m - 1 and j == n - 1:
                 return dp[i][j][k]
-            
+
             for ni, nj, nk in move(i, j, k):
                 if dp[i][j][k] + 1 < dp[ni][nj][nk]:
                     dp[ni][nj][nk] = dp[i][j][k] + 1
                     q.appendleft((ni, nj, nk))
-        
-        return -1
-            
 
+        return -1

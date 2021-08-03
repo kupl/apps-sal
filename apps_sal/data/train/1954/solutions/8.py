@@ -5,10 +5,10 @@ class Solution:
             for skill in people:
                 ans |= 1 << (dic[skill])
             return ans
-        
+
         dic = {v: i for i, v in enumerate(req_skills)}
-            
-        dp = {v : [] for v in range(1, 1 << len(req_skills))}
+
+        dp = {v: [] for v in range(1, 1 << len(req_skills))}
         for i, people_skill in enumerate(people):
             skill = convertToNum(people_skill)
             dp[skill] = [i]
@@ -19,9 +19,5 @@ class Solution:
                         temp = [v for v in dp[key]]
                         temp.append(i)
                         dp[new_skill] = temp
-        
-        return dp[(1 << len(req_skills)) - 1]
-        
-            
-        
 
+        return dp[(1 << len(req_skills)) - 1]

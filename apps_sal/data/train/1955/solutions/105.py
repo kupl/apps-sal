@@ -22,6 +22,6 @@ class Solution:
             subseq = [s[i] for i in newgroup]
             subseq.sort()
             for letter, index in zip(subseq, sorted(newgroup)):
-                result[index] = letter        
+                result[index] = letter
 
         return ''.join(result)

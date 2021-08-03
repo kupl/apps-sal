@@ -6,13 +6,13 @@ class Solution:
         visited = set([start])
         while queue:
             steps, (i, j, k) = queue.popleft()
-            if i == m-1 and j == n-1:
+            if i == m - 1 and j == n - 1:
                 return steps
-            for dx, dy in [(0,1), (1,0), (0,-1), (-1,0)]:
+            for dx, dy in [(0, 1), (1, 0), (0, -1), (-1, 0)]:
                 x, y = i + dx, j + dy
                 if 0 <= x < m and 0 <= y < n:
-                    state = (x, y, k-grid[x][y])
+                    state = (x, y, k - grid[x][y])
                     if state not in visited and state[2] >= 0:
-                        queue.append((steps+1, state))
+                        queue.append((steps + 1, state))
                         visited.add(state)
         return -1

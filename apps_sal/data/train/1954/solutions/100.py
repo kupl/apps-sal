@@ -1,6 +1,8 @@
 from functools import lru_cache
 from collections import defaultdict
 import math
+
+
 class Solution:
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
         mp = defaultdict(int)
@@ -20,7 +22,7 @@ class Solution:
             if i == len(people):
                 return math.inf
             return min(search(i + 1, required), 1 + search(i + 1, required ^ (required & skills[i])))
-        
+
         ans = []
         required = (1 << len(req_skills)) - 1
         for i in range(len(people)):

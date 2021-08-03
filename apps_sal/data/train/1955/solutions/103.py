@@ -7,8 +7,8 @@ class Solution:
             res.append(root)
             for node in graph[root]:
                 dfs(node, res)
-                
-        letters = [0]*len(s)
+
+        letters = [0] * len(s)
         graph = [[] for _ in range(len(s))]
         for a, b in pairs:
             graph[a].append(b)

@@ -19,7 +19,7 @@ class Solution:
         if not len(grid) or not len(grid[0]):
             return 0
         m, n = len(grid), len(grid[0])
-        
+
         if k >= m + n - 3:
             return m + n - 2
 
@@ -38,7 +38,7 @@ class Solution:
             # if k >= m + n - 3 - i - j:
             #     print(i, j, k)
             #     return step + m + n - 2 - i - j
-            
+
             for ni, nj in neighbors(i, j):
                 nk = k - grid[ni][nj]
                 state = (ni, nj, nk)
@@ -47,5 +47,3 @@ class Solution:
                     seen.add(state)
 
         return -1
-
-

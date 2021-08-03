@@ -20,7 +20,6 @@ class Solution:
             return 0
         m, n = len(grid), len(grid[0])
 
-
         def neighbors(i, j):
             for ni, nj in ((i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)):
                 if 0 <= ni < m and 0 <= nj < n:
@@ -32,7 +31,7 @@ class Solution:
         while q:
             step, (i, j, k) = q.popleft()
             # if k >= (m - i - 1) + (n - j - 1) - 1:
-                # return step + (m - i - 1) + (n - j - 1)
+            # return step + (m - i - 1) + (n - j - 1)
             if (i, j) == (m - 1, n - 1):
                 return step
             for ni, nj in neighbors(i, j):
@@ -43,5 +42,3 @@ class Solution:
                     seen.add(state)
 
         return -1
-
-

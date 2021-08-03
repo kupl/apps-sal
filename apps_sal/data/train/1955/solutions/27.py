@@ -6,7 +6,7 @@ class Solution:
             for j in adj_lst[i]:
                 if not visited[j]:
                     dfs(j)
-            
+
         n = len(s)
         adj_lst = [[] for _ in range(n)]
         for i, j in pairs:

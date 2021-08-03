@@ -5,10 +5,10 @@ class Solution:
         visited = set()
         visited.add((0, 0, k))
         dirs = [(1, 0), (0, 1), (-1, 0), (0, -1)]
-        
+
         if m == 1 and n == 1:
             return 0
-        
+
         while queue:
             row, col, remain, steps = queue.popleft()
             for x, y in dirs:
@@ -23,6 +23,5 @@ class Solution:
                         else:
                             queue.append((new_row, new_col, remain, steps + 1))
                             visited.add((new_row, new_col, remain))
-                            
-        return -1
 
+        return -1

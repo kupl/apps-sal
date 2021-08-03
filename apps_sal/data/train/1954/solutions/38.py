@@ -9,8 +9,9 @@ class Solution:
                     his_skill |= 1 << key[skill]
             for skill_set, need in list(dict(dp).items()):
                 with_him = skill_set | his_skill
-                if with_him == skill_set: continue
-                if with_him in dp and len(dp[with_him]) <= len(need) + 1: continue
+                if with_him == skill_set:
+                    continue
+                if with_him in dp and len(dp[with_him]) <= len(need) + 1:
+                    continue
                 dp[with_him] = need + tuple([i])
         return dp[(1 << len(req_skills)) - 1]
-

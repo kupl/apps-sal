@@ -24,6 +24,6 @@ class Solution:
             j = 0
             for c in sorted(chars):
                 for k in range(chars[c]):
-                    s[visited[j]] =  c
+                    s[visited[j]] = c
                     j += 1
         return ''.join(s)

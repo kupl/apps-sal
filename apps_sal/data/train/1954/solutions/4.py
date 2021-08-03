@@ -3,7 +3,7 @@ class Solution:
         skill2num = {}
         for i, skill in enumerate(req_skills):
             skill2num[skill] = i
-        
+
         p2s = [0] * len(people)
         for i, p in enumerate(people):
             skills = 0
@@ -11,12 +11,12 @@ class Solution:
                 if skill in skill2num:
                     skills += (1 << skill2num[skill])
             p2s[i] = skills
-        
+
         N = len(req_skills)
         dp = [1000000000] * (1 << N)
         dp[0] = 0
         ans = [[] for i in range(1 << N)]
-        
+
         for i in range(len(people)):
             dp2 = dp.copy()
             for skill in range(1 << N):
@@ -26,5 +26,5 @@ class Solution:
                     ans[new_skills] = list(ans[skill])
                     ans[new_skills].append(i)
             dp = dp2
-        
+
         return ans[(1 << N) - 1]

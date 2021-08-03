@@ -5,11 +5,11 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-  def insertIntoMaxTree(self, root: TreeNode, val: int) -> TreeNode:
-    if root and root.val > val:
-      root.right = self.insertIntoMaxTree(root.right, val)
-      return root
+    def insertIntoMaxTree(self, root: TreeNode, val: int) -> TreeNode:
+        if root and root.val > val:
+            root.right = self.insertIntoMaxTree(root.right, val)
+            return root
 
-    node = TreeNode(val)
-    node.left = root
-    return node
+        node = TreeNode(val)
+        node.left = root
+        return node

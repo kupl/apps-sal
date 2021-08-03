@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         class UF:
@@ -8,7 +9,8 @@ class Solution:
             def union(self, x, y): self.p[self.find(x)] = self.find(y)
 
             def find(self, x):
-                if x != self.p[x]: self.p[x] = self.find(self.p[x])
+                if x != self.p[x]:
+                    self.p[x] = self.find(self.p[x])
                 return self.p[x]
         res, cc, uf = [], defaultdict(list), UF(s)
         for x, y in pairs:

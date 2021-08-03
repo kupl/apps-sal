@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 class Solution:
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
         ids = {}
@@ -43,7 +44,3 @@ class Solution:
             return ([i] + b) if a is None else a
 
         return dp(0, skills)
-
-
-
-

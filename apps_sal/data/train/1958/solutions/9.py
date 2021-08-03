@@ -16,4 +16,3 @@ class Solution:
         for k, v in list(size_map.items()):
             ret.extend(v)
         return ret
-

@@ -1,13 +1,12 @@
 class Solution:
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         graph = defaultdict(list)
-        visited = [False]*len(s)
-        out = [None]*len(s)
+        visited = [False] * len(s)
+        out = [None] * len(s)
 
         for u, v in pairs:
             graph[u].append(v)
             graph[v].append(u)
-
 
         def dfs(i, stash):
             visited[i] = True
@@ -29,4 +28,3 @@ class Solution:
 
                 # print(out)
         return ''.join(out)
-

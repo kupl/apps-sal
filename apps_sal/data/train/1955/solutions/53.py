@@ -37,4 +37,3 @@ class Solution:
                 ans[i] = tmp[idx]
                 idx += 1
         return ''.join(ans)
-

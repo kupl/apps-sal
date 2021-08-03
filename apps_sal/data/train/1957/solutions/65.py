@@ -1,11 +1,11 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         visited = set()
-        
+
         directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
         queue = [(0, 0, 0)]
         steps = 0
-        
+
         while queue:
             new_q = []
             for x, y, r in queue:
@@ -21,9 +21,5 @@ class Solution:
                             new_q.append((xx, yy, rr))
             steps += 1
             queue = new_q
-        
-        return -1
-                            
-                        
-        
 
+        return -1

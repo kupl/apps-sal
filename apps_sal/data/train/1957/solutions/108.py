@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         if not grid or not grid[0]:
@@ -10,7 +12,7 @@ class Solution:
         q = deque([((0, 0, k), 0)])
         visited = set((0, 0, k))
         directions = ((0, 1), (0, -1), (1, 0), (-1, 0))
-        end_cell = (len(grid)-1, len(grid[0])-1)
+        end_cell = (len(grid) - 1, len(grid[0]) - 1)
 
         while q:
             (r, c, obst_rem), jumps = q.popleft()
@@ -23,13 +25,12 @@ class Solution:
                     if grid[nxt_r][nxt_c] == 0:
                         nxt_state = (nxt_r, nxt_c, obst_rem)
                     elif obst_rem > 0:
-                        nxt_state = (nxt_r, nxt_c, obst_rem-1)
+                        nxt_state = (nxt_r, nxt_c, obst_rem - 1)
                     else:
                         continue
                     if (r, c) == end_cell:
                         return jumps + 1
                     if nxt_state not in visited:
                         visited.add(nxt_state)
-                        q.append((nxt_state, jumps+1))
+                        q.append((nxt_state, jumps + 1))
         return -1
-

@@ -1,6 +1,6 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
-        
+
         if not grid or not grid[0]:
             return 0
         n = len(grid)
@@ -19,4 +19,3 @@ class Solution:
                 visited.add((x, y, grid[x][y] + d))
                 heapq.heappush(hp, (step + 1, d + grid[x][y], x, y))
         return -1
-

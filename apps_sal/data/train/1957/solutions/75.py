@@ -1,9 +1,11 @@
 from collections import deque
+
+
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
-        directions = [[0,1],[0,-1],[1,0],[-1,0]]
-        q = deque([(0,0,0,k)])
-        visited = set([(0,0,k)])
+        directions = [[0, 1], [0, -1], [1, 0], [-1, 0]]
+        q = deque([(0, 0, 0, k)])
+        visited = set([(0, 0, k)])
         if len(grid[0]) == 1 and len(grid) == 1:
             return 0
         while q:
@@ -12,18 +14,18 @@ class Solution:
                 nr = row + i
                 nc = col + j
                 d = dist + 1
-                if nr < len(grid) and nr >= 0 and nc < len(grid[0]) and nc >= 0: 
+                if nr < len(grid) and nr >= 0 and nc < len(grid[0]) and nc >= 0:
                     if (nr, nc, cur_k) not in visited and grid[nr][nc] == 0:
-                        if nr == len(grid) - 1 and col+j == len(grid[0]) - 1:
+                        if nr == len(grid) - 1 and col + j == len(grid[0]) - 1:
                             return dist + 1
-                        q.append((nr, col+j, d, cur_k))
-                        visited.add((nr, col+j, cur_k))
-                    if (nr, nc, cur_k-1) not in visited and grid[nr][nc] == 1:
+                        q.append((nr, col + j, d, cur_k))
+                        visited.add((nr, col + j, cur_k))
+                    if (nr, nc, cur_k - 1) not in visited and grid[nr][nc] == 1:
                         if cur_k > 0:
-                            if nr == len(grid) - 1 and col+j == len(grid[0]) - 1:
+                            if nr == len(grid) - 1 and col + j == len(grid[0]) - 1:
                                 return dist + 1
-                            q.append((nr, nc, d, cur_k-1))
-                            visited.add((nr, nc, cur_k-1))
+                            q.append((nr, nc, d, cur_k - 1))
+                            visited.add((nr, nc, cur_k - 1))
         return -1
 
 # from collections import deque
@@ -55,4 +57,3 @@ class Solution:
 #                         queue.append((new_row, new_col, eliminate, steps+1))
 
 #         return -1
-

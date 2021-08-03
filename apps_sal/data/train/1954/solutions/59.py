@@ -5,7 +5,7 @@ class Solution:
             for skill in people:
                 ans |= 1 << (dic[skill])
             return ans
-        
+
         dic = {v: i for i, v in enumerate(req_skills)}
         target = (1 << len(req_skills)) - 1
         dp = dict()
@@ -21,11 +21,7 @@ class Solution:
                         t.append(i)
                         if new_skill not in list(temp.keys()) or len(temp[new_skill]) > len(t):
                             temp[new_skill] = t
-                                
-            dp.update(temp)
-        
-        return dp[target]
-        
-            
-        
 
+            dp.update(temp)
+
+        return dp[target]

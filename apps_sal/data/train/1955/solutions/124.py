@@ -2,14 +2,15 @@ class UnionFind:
     def __init__(self, n):
         self.parents = [i for i in range(n)]
         self.rank = [0] * n
-        
+
     def find(self, x):
         if self.parents[x] != x:
             self.parents[x] = self.find(self.parents[x])
         return self.parents[x]
-    
+
     def union(self, x, y):
         self.parents[self.find(x)] = self.find(y)
+
 
 class Solution:
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:

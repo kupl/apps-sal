@@ -1,6 +1,7 @@
 from collections import deque
 dirs = [(0, 1), (0, -1), (-1, 0), (1, 0)]
 
+
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         m, n = len(grid), len(grid[0])
@@ -10,7 +11,7 @@ class Solution:
         while dq:
             size = len(dq)
             for i in range(size):
-                r, c, o = dq.popleft() # o: remianing eliminate obstacle [o >= 0]
+                r, c, o = dq.popleft()  # o: remianing eliminate obstacle [o >= 0]
                 if r == m - 1 and c == n - 1:
                     return step
                 for d in dirs:
@@ -27,5 +28,3 @@ class Solution:
                             visited.add((nr, nc, o - 1))
             step += 1
         return -1
-                
-

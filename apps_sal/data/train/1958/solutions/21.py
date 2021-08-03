@@ -6,15 +6,14 @@ class Solution:
         b = []
 
         tmp = next(iter(list(d.values())))
-        for k,v in list(d.items()):
+        for k, v in list(d.items()):
             if tmp == v and (len(a) < v):
-                a+=[k]
+                a += [k]
             else:
                 b.append(a)
                 a = []
-                a+= [k]
+                a += [k]
             if k == (list(d.keys())[-1]):
                 b.append(a)
             tmp = v
         return b
-

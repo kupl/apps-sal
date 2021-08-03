@@ -18,16 +18,15 @@ class Solution:
                     x, y = c + dx, r + dy
                     if x < 0 or x >= cols or y < 0 or y >= rows:
                         continue
-                    kk = p-grid[y][x]
-                    if kk <= visited[y][x]: # have visited here on a better path.
+                    kk = p - grid[y][x]
+                    if kk <= visited[y][x]:  # have visited here on a better path.
                         continue
                     # early stop if there's shortcut (-1 because goal cell != 1)
                     # But only applies when, comming from
                     to_target = rows - y + cols - x - 2  # rows-r-1 + cols-c-1
-                    if kk >= to_target-1 and visited[y][x] == -1: #to_target == prev_min-1:
+                    if kk >= to_target - 1 and visited[y][x] == -1:  # to_target == prev_min-1:
                         return steps + to_target
                     q.append((y, x, kk))
                     visited[y][x] = kk
                     min_steps = min(min_steps, to_target)
         return -1
-

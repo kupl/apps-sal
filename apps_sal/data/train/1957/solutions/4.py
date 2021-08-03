@@ -8,7 +8,8 @@ class Solution:
         while q:
             for _ in range(len(q)):
                 i, j, ck = q.popleft()
-                if i == m-1 and j == n-1: return step
+                if i == m - 1 and j == n - 1:
+                    return step
                 for d in dirs:
                     ni, nj = i + d[0], j + d[1]
                     if ni >= 0 and ni < m and nj >= 0 and nj < n and (ni, nj, ck) not in visited:

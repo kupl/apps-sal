@@ -11,7 +11,6 @@ class Solution:
                 else:
                     groups[size] += [[id]]
         flatList = []
-        for k,v in list(groups.items()):
+        for k, v in list(groups.items()):
             flatList += v
         return flatList
-

@@ -7,6 +7,5 @@ class Solution:
             last_group_idx = -groups[-1][1]
             out.append([t[0] for t in groups[last_group_idx:]])
             groups = groups[:last_group_idx]
-            
-        return out
 
+        return out

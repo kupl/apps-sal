@@ -7,7 +7,7 @@ class Solution:
         visited.add((0, 0, k))
         res, cnt, total = 0, 0, 1
         while q:
-            i,j,r = q.popleft()
+            i, j, r = q.popleft()
             cnt += 1
             if i == m - 1 and j == n - 1:
                 return res

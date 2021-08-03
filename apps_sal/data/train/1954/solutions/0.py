@@ -1,6 +1,5 @@
 class Solution:
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
-        
 
         def fulfill_skills(skills, person):
             remaining_skills = deque()
@@ -21,17 +20,15 @@ class Solution:
                 experts.append(person)
                 has_skill[skill] = experts
 
-
         # sort skills by rarity
-        rare_skills = [(len(people), skill)  for (skill, people) in list(has_skill.items())]
+        rare_skills = [(len(people), skill) for (skill, people) in list(has_skill.items())]
         rare_skills.sort()
         rare_skills = [skill for _, skill in rare_skills]
-
 
         for i in range(1, 17):
             # stack holds pairs:
             #   (skills, team)
-            stack = [ (deque(rare_skills), []) ]
+            stack = [(deque(rare_skills), [])]
             while stack:
                 skills, team = stack.pop()
                 # print(skills, team)
@@ -44,8 +41,7 @@ class Solution:
                 skill = skills[0]
                 for person in has_skill[skill]:
                     remaining_skills = fulfill_skills(skills, person)
-                    stack.append( (remaining_skills, team + [person]) )
+                    stack.append((remaining_skills, team + [person]))
             # print(f\"i {i} failed\")
 
         return -1
-

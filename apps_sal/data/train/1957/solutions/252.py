@@ -1,21 +1,22 @@
 from heapq import heappop, heappush
 
+
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         if not grid or not grid[0]:
             return -1
-        
+
         deltas = ((-1, 0), (0, 1), (0, -1), (1, 0))
         n, m = len(grid), len(grid[0])
-        
-        source, target = (0, 0), (n-1, m-1)
-        
+
+        source, target = (0, 0), (n - 1, m - 1)
+
         # All nodes which have been reached. This is the earliest to reach this node according to steps needed
         queue = deque([(0, source, 0)])
-        
+
         # Record with how many obstacles removed has the current node been seen
         seen = {source: 0}
-        
+
         while queue:
             usedK, currPos, steps = queue.popleft()
             if currPos == target:
@@ -29,11 +30,10 @@ class Solution:
                         if grid[x][y] == 0:
                             seen[(x, y)] = usedK
                             # Can enter here
-                            queue.append((usedK, (x, y), steps+1))
+                            queue.append((usedK, (x, y), steps + 1))
                         elif usedK < k:
                             # Mark one obstacle removed and continue
                             seen[(x, y)] = usedK + 1
-                            queue.append((usedK+1, (x, y), steps+1))
-        
-        return -1
+                            queue.append((usedK + 1, (x, y), steps + 1))
 
+        return -1
