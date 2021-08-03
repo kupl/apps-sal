@@ -11,5 +11,5 @@ for _ in range(t):
             count += 1
         else:
             prev = i
-    
+
     print(count)

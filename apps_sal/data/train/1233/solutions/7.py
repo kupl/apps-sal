@@ -16,4 +16,3 @@ for _ in range(int(stdin.readline())):
             if len(k) < 2:
                 m = max(m, j - i + 1)
     print(m)
-

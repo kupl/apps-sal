@@ -1,12 +1,13 @@
 import sys
 
+
 def GRIG(L):
 
     LENT = len(L)
     MINT = 1
     GOT = 0
 
-    DY = [ [{x: 0 for x in range(0, 10)}, 0, 0] ]
+    DY = [[{x: 0 for x in range(0, 10)}, 0, 0]]
 
     for i in L:
 
@@ -29,11 +30,11 @@ def GRIG(L):
 
     return MINT
 
+
 TESTCASES = int(input().strip())
 
 for i in range(0, TESTCASES):
-    
-    L = [int(x) for x in list(input().strip())]
-    
-    print(GRIG(L))
 
+    L = [int(x) for x in list(input().strip())]
+
+    print(GRIG(L))

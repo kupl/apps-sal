@@ -10,4 +10,3 @@ for _ in range(t):
             ans += 1
         prev = i
     print(ans)
-

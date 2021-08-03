@@ -1,4 +1,3 @@
 # cook your dish here
-num=int(input())
+num = int(input())
 print(25)
-

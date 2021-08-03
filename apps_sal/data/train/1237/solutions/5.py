@@ -7,7 +7,7 @@ for _ in range(int(input())):
         if b < c:
             b += 100
             a -= 1
-        
+
         b -= c
         if cur_max < [b, a]:
             ans = cur
