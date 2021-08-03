@@ -8,4 +8,3 @@ def any_arrows(arrows):
         return False
     else:
         return False
-

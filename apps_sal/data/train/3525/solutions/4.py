@@ -8,5 +8,5 @@ def flipping_game(num):
             x += 1
             m = max(x, m)
         else:
-            x = max(x-1, 0)
+            x = max(x - 1, 0)
     return num.count(1) + m

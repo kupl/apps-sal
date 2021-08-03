@@ -1,3 +1,2 @@
 def dna_to_rna(deoxyribonucleic_acid):
-    return ''.join(str([nucleic_acid_base if ord(nucleic_acid_base) is not eval("1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1") else chr(ord(nucleic_acid_base)+1) for nucleic_acid_base in deoxyribonucleic_acid]).replace('""','').replace(',','').replace('[','').replace(']','').replace("'", '').split(' '))
-
+    return ''.join(str([nucleic_acid_base if ord(nucleic_acid_base) is not eval("1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1") else chr(ord(nucleic_acid_base) + 1) for nucleic_acid_base in deoxyribonucleic_acid]).replace('""', '').replace(',', '').replace('[', '').replace(']', '').replace("'", '').split(' '))

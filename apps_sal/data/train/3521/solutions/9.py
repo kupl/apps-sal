@@ -27,5 +27,3 @@ def on_line(points):
         if point[y] != a * point[x] + b:
             return False
     return True
-    
-

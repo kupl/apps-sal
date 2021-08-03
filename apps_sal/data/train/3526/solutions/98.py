@@ -5,5 +5,6 @@ def any_arrows(arrows):
                 continue
         except KeyError:
             return True
-        else: return True
+        else:
+            return True
     return False

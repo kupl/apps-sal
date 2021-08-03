@@ -5,4 +5,6 @@ def dna_to_rna(dna):
             i = "U"
         result += i
     return result
+
+
 print(dna_to_rna("GCAT"))

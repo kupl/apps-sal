@@ -5,6 +5,6 @@ def compound_array(a, b):
     for x in range(len(min([a, b], key=len))):
         n.append(a[x])
         n.append(b[x])
-        if x == len(min([a, b], key=len))-1:
-            n+=max([a, b], key=len)[x+1:]
+        if x == len(min([a, b], key=len)) - 1:
+            n += max([a, b], key=len)[x + 1:]
     return n

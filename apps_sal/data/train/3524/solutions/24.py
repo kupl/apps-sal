@@ -6,4 +6,3 @@ def dna_to_rna(dna):
         else:
             RNA += letter
     return RNA
-

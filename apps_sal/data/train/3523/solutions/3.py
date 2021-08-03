@@ -9,10 +9,10 @@ def password(candidate):
        so the validation is easily defeated by anyone willing to monkey with our client-side script.
        Then we will add 'security questions' based on publicly available information, allowing
        anyone to sidestep authentication with a basic search.
-       
+
        Otherwise, False.
     """
-       
+
     if not len(candidate) >= 8:
         return False
     if not any(char.islower() for char in candidate):
@@ -21,4 +21,4 @@ def password(candidate):
         return False
     if not any(char.isdigit() for char in candidate):
         return False
-    return True 
+    return True

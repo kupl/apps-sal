@@ -1,4 +1,5 @@
-import re 
+import re
+
 
 def password(string):
     patterns = (r'[A-Z]', r'[a-z]', r'[0-9]', r'.{8,}')

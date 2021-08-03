@@ -1,5 +1,5 @@
 def any_arrows(arrows):
-    count=0
+    count = 0
     for i in arrows:
         try:
             if not i['damaged']:
