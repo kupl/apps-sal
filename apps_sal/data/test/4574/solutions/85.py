@@ -9,4 +9,3 @@ for i, j in list(Counter(list(map(int, input().split()))).items()):
         ans.append(i)
 ans.sort()
 print((ans[-1] * ans[-2]))
-

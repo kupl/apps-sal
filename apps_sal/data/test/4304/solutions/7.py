@@ -7,11 +7,11 @@ y = 3
 i = 3
 
 while True:
-  if y - x == diff:
-    break
-  
-  x = y
-  y = y + i
-  i = i + 1
+    if y - x == diff:
+        break
+
+    x = y
+    y = y + i
+    i = i + 1
 
 print(y - b)

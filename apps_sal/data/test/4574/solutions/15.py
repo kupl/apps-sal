@@ -9,7 +9,7 @@ for key in counter.keys():
     if counter[key] >= 4:
         four.append(key)
         tow.append(key)
-    elif counter[key]>=2:
+    elif counter[key] >= 2:
         tow.append(key)
 
 if len(four) == 0 and len(tow) <= 1:

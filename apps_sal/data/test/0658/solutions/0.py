@@ -4,7 +4,7 @@ versh = []
 for i in range(n):
     a, b = list(map(int, input().split()))
     versh.append((a, b))
-versh.sort(key=lambda x : x[1])
+versh.sort(key=lambda x: x[1])
 for i in versh:
     if i[0] / v < i[1] / u:
         break
@@ -22,4 +22,3 @@ for i in versh:
         y = i[1]
 time += (w - y) / u
 print(time)
-

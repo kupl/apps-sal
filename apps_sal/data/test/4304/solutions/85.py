@@ -1,7 +1,7 @@
-a,b = map(int,input().split())
-dif = b-a 
+a, b = map(int, input().split())
+dif = b - a
 temp = 0
 for i in range(dif):
-    temp += i 
+    temp += i
 ans = temp - a
 print(ans)

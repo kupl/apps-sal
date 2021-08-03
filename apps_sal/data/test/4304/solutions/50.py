@@ -7,4 +7,3 @@ n = b - a - 1
 x = n * (n + 1) // 2 - a
 
 print(x)
-

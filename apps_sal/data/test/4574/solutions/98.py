@@ -21,7 +21,7 @@ for a in A:
         elif atc >= 2:
             s2 = s1
             s1 = at
-        
+
         at = a
         atc = 1
 
@@ -33,4 +33,3 @@ elif atc >= 2:
     s1 = at
 
 print((s1 * s2))
-

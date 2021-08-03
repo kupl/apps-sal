@@ -24,4 +24,3 @@ N = int(input())
 arr = list(map(int, input().split()))
 res = solve()
 print(res)
-

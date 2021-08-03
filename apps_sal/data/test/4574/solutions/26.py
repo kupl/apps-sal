@@ -10,4 +10,4 @@ for a in A:
     else:
         unpair.add(a)
 pair.sort()
-print(pair.pop()*pair.pop() if len(pair) > 1 else 0)
+print(pair.pop() * pair.pop() if len(pair) > 1 else 0)

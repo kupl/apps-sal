@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 n, w, v, u = rd()
 p = []
 for i in range(n):
@@ -9,4 +11,3 @@ if all(x >= 0 for x, y, z in p) or all(x <= 0 for x, y, z in p):
     print(w / u)
 else:
     print(p[-1][1] + (w - p[-1][2]) / u)
-

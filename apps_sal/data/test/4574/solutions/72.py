@@ -1,6 +1,6 @@
 N = int(input())
 A = [int(x) for x in input().split()]
-A.sort(reverse = True)
+A.sort(reverse=True)
 
 s = []
 i = 0

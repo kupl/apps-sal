@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, w, v, u = f()
 k = 0
 d = t = w / u

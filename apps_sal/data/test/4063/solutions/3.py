@@ -9,4 +9,4 @@ d = list(map(int, input().split()))
 
 # 例d=[1,5,9,11,13,15,19,20]なら、答えは12,13の2つ
 d = sorted(d)
-print(d[N//2] - d[(N//2)-1])
+print(d[N // 2] - d[(N // 2) - 1])

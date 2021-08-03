@@ -24,4 +24,3 @@ for i in keys:
         break
 else:
     print((0))
-

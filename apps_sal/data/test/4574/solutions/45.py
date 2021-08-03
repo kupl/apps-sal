@@ -1,5 +1,5 @@
 from collections import Counter
- 
+
 input()
 d = Counter(map(int, input().split()))
 d = dict(sorted(d.items(), reverse=True))

@@ -21,4 +21,3 @@ for i in range(n):
         bought += 1
 
 print(bought)
-
