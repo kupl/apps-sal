@@ -14,6 +14,5 @@ for _ in range(T):
 
     ans = 0
     for i in range(N):
-        ans += max(a[i]-amn, b[i]-bmn)
+        ans += max(a[i] - amn, b[i] - bmn)
     print(ans)
-

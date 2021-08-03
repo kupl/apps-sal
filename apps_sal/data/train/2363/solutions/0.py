@@ -9,4 +9,3 @@ for _ in range(T):
         ans = min(ans, h2 - h1)
 
     print(ans)
-

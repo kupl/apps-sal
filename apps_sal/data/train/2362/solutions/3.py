@@ -17,5 +17,3 @@ for _ in range(q):
         print(0)
     else:
         print(1, lm, dm)
-
-

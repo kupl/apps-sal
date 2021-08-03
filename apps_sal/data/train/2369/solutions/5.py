@@ -10,7 +10,7 @@ def input(): return sys.stdin.readline()
 
 def solution():
     n = int(input())
-    candi = [[0, 0] for i in range(n+1)]
+    candi = [[0, 0] for i in range(n + 1)]
     que = []
     for i in range(n):
         taste, youwant = list(map(int, input().split()))
@@ -19,7 +19,7 @@ def solution():
         else:
             candi[taste][1] += 1
 
-    for i in range(n+1):
+    for i in range(n + 1):
         s = sum(candi[i])
         if s > 0:
             que.append((-s, -candi[i][0], -candi[i][1]))
@@ -77,5 +77,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

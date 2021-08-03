@@ -1,14 +1,18 @@
 def int_multiple():
-    return  [int(c) for c in input().split()]
+    return [int(c) for c in input().split()]
+
 
 def int_single():
     return int(input())
 
+
 def str_multiple():
     return [c for c in input().split()]
 
+
 def str_single():
     return input()
+
 
 # start
 t = int_single()
@@ -30,4 +34,3 @@ for i in range(t):
 
 for r in res:
     print(r)
-

@@ -1,45 +1,45 @@
+from collections import Counter
 import sys
 input = sys.stdin.readline
 
-q=int(input())
+q = int(input())
 
-from collections import Counter
 
 for testcases in range(q):
-    n=int(input())
-    S=input().strip()
-    T=input().strip()
+    n = int(input())
+    S = input().strip()
+    T = input().strip()
 
-    CS=Counter(S)
-    CT=Counter(T)
+    CS = Counter(S)
+    CT = Counter(T)
 
-    if CS!=CT:
+    if CS != CT:
         print("NO")
         continue
 
-    if max(CS.values())>=2:
+    if max(CS.values()) >= 2:
         print("YES")
         continue
 
-    W=[0]*26
-    SA=0
+    W = [0] * 26
+    SA = 0
 
     for s in S:
-        SA+=sum(W[ord(s)-97:])
-        W[ord(s)-97]+=1
+        SA += sum(W[ord(s) - 97:])
+        W[ord(s) - 97] += 1
 
-    #print(SA)
+    # print(SA)
 
-    W=[0]*26
-    TA=0
+    W = [0] * 26
+    TA = 0
 
     for s in T:
-        TA+=sum(W[ord(s)-97:])
-        W[ord(s)-97]+=1
+        TA += sum(W[ord(s) - 97:])
+        W[ord(s) - 97] += 1
 
-    #print(TA)
+    # print(TA)
 
-    if (SA+TA)%2==0:
+    if (SA + TA) % 2 == 0:
         print("YES")
     else:
         print("NO")

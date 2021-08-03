@@ -1,5 +1,6 @@
 import heapq
 
+
 def solve():
     n = int(input())
     cur = 1
@@ -16,6 +17,7 @@ def solve():
         if mid + 1 < r:
             heapq.heappush(q, ((mid + 1) - r, mid + 1, r))
     print(*a)
+
 
 t = int(input())
 for _ in range(t):

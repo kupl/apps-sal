@@ -12,4 +12,3 @@ for T in range(t):
         moves += max(a[g] - minA, b[g] - minB)
 
     print(moves)
-

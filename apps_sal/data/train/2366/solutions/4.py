@@ -20,4 +20,3 @@ for _ in range(t):
             bad += 1
         mi = min(mi, ai)
     print(bad)
-

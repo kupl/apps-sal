@@ -10,4 +10,3 @@ for t in range(T):
         res = min(res, diff)
 
     print(res)
-

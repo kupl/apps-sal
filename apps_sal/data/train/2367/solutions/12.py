@@ -1,88 +1,93 @@
 q = int(input())
 
-# Python 3 program to count inversions in an array 
+# Python 3 program to count inversions in an array
 
-# Function to Use Inversion Count 
-def mergeSort(arr, n): 
-	# A temp_arr is created to store 
-	# sorted array in merge function 
-	temp_arr = [0]*n 
-	return _mergeSort(arr, temp_arr, 0, n-1) 
+# Function to Use Inversion Count
 
-# This Function will use MergeSort to count inversions 
 
-def _mergeSort(arr, temp_arr, left, right): 
+def mergeSort(arr, n):
+    # A temp_arr is created to store
+    # sorted array in merge function
+    temp_arr = [0] * n
+    return _mergeSort(arr, temp_arr, 0, n - 1)
 
-	# A variable inv_count is used to store 
-	# inversion counts in each recursive call 
+# This Function will use MergeSort to count inversions
 
-	inv_count = 0
 
-	# We will make a recursive call if and only if 
-	# we have more than one elements 
+def _mergeSort(arr, temp_arr, left, right):
 
-	if left < right: 
+    # A variable inv_count is used to store
+    # inversion counts in each recursive call
 
-		# mid is calculated to divide the array into two subarrays 
-		# Floor division is must in case of python 
+    inv_count = 0
 
-		mid = (left + right)//2
+    # We will make a recursive call if and only if
+    # we have more than one elements
 
-		# It will calculate inversion counts in the left subarray 
+    if left < right:
 
-		inv_count = _mergeSort(arr, temp_arr, left, mid) 
+        # mid is calculated to divide the array into two subarrays
+        # Floor division is must in case of python
 
-		# It will calculate inversion counts in right subarray 
+        mid = (left + right) // 2
 
-		inv_count += _mergeSort(arr, temp_arr, mid + 1, right) 
+        # It will calculate inversion counts in the left subarray
 
-		# It will merge two subarrays in a sorted subarray 
+        inv_count = _mergeSort(arr, temp_arr, left, mid)
 
-		inv_count += merge(arr, temp_arr, left, mid, right) 
-	return inv_count 
+        # It will calculate inversion counts in right subarray
 
-# This function will merge two subarrays in a single sorted subarray 
-def merge(arr, temp_arr, left, mid, right): 
-	i = left	 # Starting index of left subarray 
-	j = mid + 1 # Starting index of right subarray 
-	k = left	 # Starting index of to be sorted subarray 
-	inv_count = 0
+        inv_count += _mergeSort(arr, temp_arr, mid + 1, right)
 
-	# Conditions are checked to make sure that i and j don't exceed their 
-	# subarray limits. 
+        # It will merge two subarrays in a sorted subarray
 
-	while i <= mid and j <= right: 
+        inv_count += merge(arr, temp_arr, left, mid, right)
+    return inv_count
 
-		# There will be no inversion if arr[i] <= arr[j] 
+# This function will merge two subarrays in a single sorted subarray
 
-		if arr[i] <= arr[j]: 
-			temp_arr[k] = arr[i] 
-			k += 1
-			i += 1
-		else: 
-			# Inversion will occur. 
-			temp_arr[k] = arr[j] 
-			inv_count += (mid-i + 1) 
-			k += 1
-			j += 1
 
-	# Copy the remaining elements of left subarray into temporary array 
-	while i <= mid: 
-		temp_arr[k] = arr[i] 
-		k += 1
-		i += 1
+def merge(arr, temp_arr, left, mid, right):
+    i = left	 # Starting index of left subarray
+    j = mid + 1  # Starting index of right subarray
+    k = left	 # Starting index of to be sorted subarray
+    inv_count = 0
 
-	# Copy the remaining elements of right subarray into temporary array 
-	while j <= right: 
-		temp_arr[k] = arr[j] 
-		k += 1
-		j += 1
+    # Conditions are checked to make sure that i and j don't exceed their
+    # subarray limits.
 
-	# Copy the sorted subarray into Original array 
-	for loop_var in range(left, right + 1): 
-		arr[loop_var] = temp_arr[loop_var] 
-		
-	return inv_count 
+    while i <= mid and j <= right:
+
+        # There will be no inversion if arr[i] <= arr[j]
+
+        if arr[i] <= arr[j]:
+            temp_arr[k] = arr[i]
+            k += 1
+            i += 1
+        else:
+            # Inversion will occur.
+            temp_arr[k] = arr[j]
+            inv_count += (mid - i + 1)
+            k += 1
+            j += 1
+
+    # Copy the remaining elements of left subarray into temporary array
+    while i <= mid:
+        temp_arr[k] = arr[i]
+        k += 1
+        i += 1
+
+    # Copy the remaining elements of right subarray into temporary array
+    while j <= right:
+        temp_arr[k] = arr[j]
+        k += 1
+        j += 1
+
+    # Copy the sorted subarray into Original array
+    for loop_var in range(left, right + 1):
+        arr[loop_var] = temp_arr[loop_var]
+
+    return inv_count
 
 
 for i in range(q):
@@ -94,15 +99,16 @@ for i in range(q):
         print("NO")
         continue
 
-    if len(s1) != len(set(s1)): print("YES"); continue
-    if len(s2) != len(set(s2)): print("YES"); continue
+    if len(s1) != len(set(s1)):
+        print("YES")
+        continue
+    if len(s2) != len(set(s2)):
+        print("YES")
+        continue
 
     arr = [s2.index(c) for c in s1]
-    
-    
+
     if mergeSort(arr, len(arr)) % 2 == 0:
         print("YES")
     else:
         print("NO")
-    
-

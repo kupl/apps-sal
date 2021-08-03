@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class GCandyBoxHardVersion:
     def solve(self):
@@ -20,7 +21,7 @@ class GCandyBoxHardVersion:
                 rev_d[d[x][0] + d[x][1]] += [d[x]]
 
             for x in rev_d:
-                rev_d[x].sort(key=lambda item:item[1])
+                rev_d[x].sort(key=lambda item: item[1])
 
             # print(rev_d)
 
@@ -53,8 +54,8 @@ class GCandyBoxHardVersion:
                 # rev_d[cnt - cur] += 1
             print(nb_candies, given_away)
 
+
 solver = GCandyBoxHardVersion()
 input = sys.stdin.readline
 
 solver.solve()
-

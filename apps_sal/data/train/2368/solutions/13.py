@@ -12,4 +12,3 @@ for q in range(t):
     for i in range(n):
         s += max(A[i] - ma, B[i] - mb)
     print(s)
-

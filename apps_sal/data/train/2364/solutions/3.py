@@ -13,6 +13,7 @@ for i in range(int(input())):
         a2, b2 = list(map(int, input().split()))
         g[a2 - 1].append(b2 - 1)
         g[b2 - 1].append(a2 - 1)
+
     def bfs(st):
         Q = deque(maxlen=n)
         lv = [-1] * n
@@ -43,6 +44,3 @@ for i in range(int(input())):
         # print(f'i={i}, d1={d1}, d2={d2}')
         ans = min(ans, cost[d1] * 2 + cost[d1 + d2] - cost[d1])
     print(ans)
-
-    
-

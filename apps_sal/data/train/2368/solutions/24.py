@@ -7,7 +7,6 @@ input = stdin.readline
 letters = ascii_letters[:26]
 
 
-
 for _ in range(int(input())):
     n = int(input())
     first = list(map(int, input().split()))

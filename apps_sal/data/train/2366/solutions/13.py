@@ -11,5 +11,3 @@ for i in range(tst):
             cnt += 1
         mn = min(mn, c)
     print(cnt)
-
-

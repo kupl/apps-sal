@@ -19,6 +19,3 @@ for _ in range(Q):
         print(1, minx, miny)
     else:
         print(0)
-
-
-

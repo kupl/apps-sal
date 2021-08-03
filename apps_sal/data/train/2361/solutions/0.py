@@ -3,8 +3,10 @@ from collections import deque
 import bisect
 import heapq
 
+
 def ri():
     return int(input())
+
 
 def rl():
     return list(map(int, input().split()))
@@ -14,7 +16,7 @@ def solve():
     n = ri()
     output = [0] * (n)
 
-    Q = [(-n, 0 ,n - 1)]
+    Q = [(-n, 0, n - 1)]
     for i in range(1, n + 1):
         prev = heapq.heappop(Q)
         lo, hi = prev[1], prev[2]
@@ -27,9 +29,6 @@ def solve():
     print(*output)
 
 
-
-
-
 mode = 'T'
 
 if mode == 'T':
@@ -38,4 +37,3 @@ if mode == 'T':
         solve()
 else:
     solve()
-

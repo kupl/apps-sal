@@ -15,4 +15,3 @@ for case_num in range(t):
     for i in range(n - 1):
         ans = min(ans, abs(a[i] - a[i + 1]))
     print(ans)
-

@@ -51,4 +51,5 @@ def __starting_point():
                         result.extend((a2, a1))
                 print(" ".join(map(str, reversed(result))))
 
+
 __starting_point()
