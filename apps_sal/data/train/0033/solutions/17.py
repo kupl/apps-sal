@@ -8,17 +8,13 @@ for _ in range(0,T):
         a,b=map(int,input().split())"""
 
 
-T=int(input())
-for _ in range(0,T):
-    n=int(input())
+T = int(input())
+for _ in range(0, T):
+    n = int(input())
     print(2)
 
-    num=n
-    for i in range(n-1,0,-1):
-        print(i,num)
-        if((num+i)%2==0):
-            num=(num+i)//2
-
-            
-        
-
+    num = n
+    for i in range(n - 1, 0, -1):
+        print(i, num)
+        if((num + i) % 2 == 0):
+            num = (num + i) // 2

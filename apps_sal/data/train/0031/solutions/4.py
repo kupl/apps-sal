@@ -19,4 +19,3 @@ for tc in range(int(input())):
         cur = nxt
 
     print(ans)
-

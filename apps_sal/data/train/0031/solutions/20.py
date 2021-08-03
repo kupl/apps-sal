@@ -26,5 +26,4 @@ for zz in range(int(input())):
             ans += 5
     print(ans)
 
-#aaa
-
+# aaa

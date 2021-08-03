@@ -4,4 +4,3 @@ for _ in range(int(input())):
     print(f'{n} {n-1}', flush=False)
     if n > 2:
         print('\n'.join(f'{x} {x-2}' for x in range(n, 2, -1)))
-

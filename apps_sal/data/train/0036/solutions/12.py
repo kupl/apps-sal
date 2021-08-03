@@ -10,4 +10,3 @@ tasty_worms = []
 for i in input().split(' '):
     i = int(i)
     print(pre[i - 1])
-

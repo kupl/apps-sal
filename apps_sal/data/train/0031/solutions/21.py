@@ -19,4 +19,3 @@ for _ in range(int(input())):
 
 while time.time() - t < 0.9:
     pass
-

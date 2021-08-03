@@ -1,5 +1,6 @@
 from math import *
 
+
 def check(a, b, p, s, x):
     ps = s[x]
     ans = 0
@@ -16,6 +17,7 @@ def check(a, b, p, s, x):
             ps = s[i]
     return ans <= p
 
+
 zzz = int(input())
 for zz in range(zzz):
     a, b, p = list(map(int, input().split()))
@@ -27,7 +29,7 @@ for zz in range(zzz):
     ub = len(s) + 1
     while lb + 1 < ub:
         tx = (lb + ub) // 2
-        dx = (ub -lb)//2
+        dx = (ub - lb) // 2
         if check(a, b, p, s, tx):
             ub -= dx
         else:
@@ -36,10 +38,8 @@ for zz in range(zzz):
 
     x = (lb + ub) // 2
     for i in range(4):
-        if x > 0 and check(a, b, p, s, x-1):
+        if x > 0 and check(a, b, p, s, x - 1):
             x -= 1
         elif x <= len(s) and not check(a, b, p, s, x):
             x += 1
     print(min(x + 1, len(s)))
-    
-

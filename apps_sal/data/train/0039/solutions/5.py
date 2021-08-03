@@ -13,4 +13,3 @@ for i in range(t):
             else:
                 sum += b
     print(ind + 1)
-

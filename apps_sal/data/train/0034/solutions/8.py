@@ -10,5 +10,3 @@ for i in range(t):
         for j in range(n // 2):
             arr += '1'
     print(arr)
-
-

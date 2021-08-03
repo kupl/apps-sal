@@ -20,12 +20,9 @@ def main():
             print(a, b)
             x.append(c)
 
-        
-    
 
 def __starting_point():
     main()
-
 
 
 __starting_point()

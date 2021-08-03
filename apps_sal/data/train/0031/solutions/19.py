@@ -34,4 +34,3 @@ for _ in range(t):
                 st.add((x - 1, y))
             x -= 2
     print(ans)
-

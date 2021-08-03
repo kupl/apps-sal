@@ -9,9 +9,8 @@ assert len(a) > 0 and len(q) > 0
 
 b = [0] * len(a)
 for i, ai in enumerate(a):
-	b[i] = b[i-1] + ai
+    b[i] = b[i - 1] + ai
 
 
 for qi in q:
-	print(bisect_left(b, qi) + 1)
-
+    print(bisect_left(b, qi) + 1)

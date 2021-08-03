@@ -8,4 +8,3 @@ while q:
     else:
         print("NO")
     q -= 1
-
