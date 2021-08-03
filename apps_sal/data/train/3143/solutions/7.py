@@ -1,7 +1,7 @@
 def sort_by_name(arr):
     comparing_list, before_sort_dict, resulty_list = [], {}, []
     nu_dict = {'0': '', '1': 'one', '2': 'two', '3': 'three', '4': 'four', '5': 'five', '6': 'six', '7': 'seven',
-                '8': 'eight', '9': 'nine', '10': 'ten', '11': 'eleven', '12': 'twelve', '13': 'thirteen',
+               '8': 'eight', '9': 'nine', '10': 'ten', '11': 'eleven', '12': 'twelve', '13': 'thirteen',
                '14': 'fourteen', '15': 'fifteen', '16': 'sixteen', '17': 'seventeen', '18': 'eighteen',
                '19': 'nineteen'}
     for number in map(str, arr):
@@ -11,7 +11,7 @@ def sort_by_name(arr):
                 numberly_str = '{hundreds} hundred {tens}'.format(hundreds=nu_dict[number[0]], tens=nu_dict[temp_word])
             else:
                 numberly_str = '{hundreds} hundred {tens}ty {deci}'.format(hundreds=nu_dict[number[0]],
-                                                                tens=nu_dict[number[1]], deci=nu_dict[number[2]])
+                                                                           tens=nu_dict[number[1]], deci=nu_dict[number[2]])
         elif len(number) == 2:
             if 10 <= int(number) < 20:
                 temp_word = number[0] + number[1]

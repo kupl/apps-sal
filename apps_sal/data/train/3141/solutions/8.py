@@ -1,5 +1,6 @@
 import heapq
 
+
 def comb(fruits):
     heapq.heapify(fruits)
     w = 0
@@ -8,4 +9,3 @@ def comb(fruits):
         w += x + y
         heapq.heappush(fruits, x + y)
     return w
-

@@ -8,4 +8,3 @@ def simplify(path):
             path, coords = path[:i] + path[len(coords):], coords[:i]
         coords.append((x, y))
     return path
-

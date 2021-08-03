@@ -4,4 +4,3 @@ def seven_ate9(str_):
     else:
         str_ = str_.replace('797', '77')
         return seven_ate9(str_)
-

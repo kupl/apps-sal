@@ -1,5 +1,6 @@
 from heapq import heapify, heappop, heapreplace
 
+
 def comb(fruits):
     fruits = fruits[:]
     heapify(fruits)
