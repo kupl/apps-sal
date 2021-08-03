@@ -1,7 +1,7 @@
 def get_issuer(number):
     nb_str = str(number)
     l = len(nb_str)
-    
+
     if l == 13:
         return "VISA" if nb_str[0] == "4" else "Unknown"
     if l == 15:

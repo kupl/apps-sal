@@ -1,9 +1,9 @@
 def shared_bits(a, b):
     bin_a = bin(a)[2:]
     bin_b = bin(b)[2:]
-    
+
     if len(bin_a) > len(bin_b):
-        bin_b = ('0' * (len(bin_a) - len(bin_b))) + bin_b 
+        bin_b = ('0' * (len(bin_a) - len(bin_b))) + bin_b
     if len(bin_a) < len(bin_b):
         bin_a = ('0' * (len(bin_b) - len(bin_a))) + bin_a
 
@@ -15,7 +15,7 @@ def shared_bits(a, b):
 
         if counter >= 2:
             return True
-        
+
         index += 1
-    
+
     return False

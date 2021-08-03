@@ -22,6 +22,6 @@ def get_issuer(number):
             return 'Mastercard'
         else:
             return 'Unknown'
-    
+
     else:
         return 'Unknown'

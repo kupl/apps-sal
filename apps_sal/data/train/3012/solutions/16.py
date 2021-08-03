@@ -5,8 +5,8 @@ def shared_bits(a, b):
         b = b.zfill(len(a))
     else:
         a = a.zfill(len(b))
-    
+
     a = list(a)
     b = list(b)
-    
-    return [x+y for x,y in zip(a,b)].count('11')>1
+
+    return [x + y for x, y in zip(a, b)].count('11') > 1

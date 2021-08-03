@@ -4,4 +4,3 @@ def str_count(string, letter):
         if l == letter:
             amount += 1
     return amount
-

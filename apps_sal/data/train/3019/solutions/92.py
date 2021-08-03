@@ -5,4 +5,5 @@ def str_count(strng, letter):
             count += 1
     return count
 
+
 str_count('hello', '')

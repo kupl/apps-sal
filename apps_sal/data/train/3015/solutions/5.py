@@ -3,6 +3,7 @@ from collections import namedtuple
 
 Issuer = namedtuple('Issuer', 'name, begins, length')
 
+
 def get_issuer(number):
     issuers = [
         Issuer('AMEX', [34, 37], [15]),

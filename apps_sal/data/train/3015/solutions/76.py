@@ -3,7 +3,7 @@ def get_issuer(number):
     DISCOVER_FIRST_DIGITS = ('6011')
     MASTERCARD_FIRST_DIGITS = ('51', '52', '53', '54', '55')
     VISA_FIRST_DIGITS = ('4')
-    
+
     number = str(number)
     if number.startswith(AMEX_FIRST_DIGITS) and len(number) == 15:
         return "AMEX"
@@ -15,5 +15,3 @@ def get_issuer(number):
         return "VISA"
     else:
         return 'Unknown'
-    
-

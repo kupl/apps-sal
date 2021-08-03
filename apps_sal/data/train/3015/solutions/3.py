@@ -1,7 +1,7 @@
 def get_issuer(number):
     card = str(number)
     nums = len(card)
-    
+
     if card[:2] in ("34", "37") and nums == 15:
         return "AMEX"
     elif card[:4] == "6011" and nums == 16:

@@ -4,5 +4,5 @@ def str_count(strng, letter):
     for i in strng:
         if i == letter:
             count += 1
-    
+
     return count

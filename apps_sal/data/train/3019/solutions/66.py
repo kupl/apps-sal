@@ -5,4 +5,3 @@ def str_count(strng, letter):
             val += 1
     print(val)
     return val
-

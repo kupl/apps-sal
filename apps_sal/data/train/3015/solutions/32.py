@@ -9,6 +9,5 @@ def get_issuer(number):
         return "VISA"
     else:
         return "Unknown"
-        
-    # code your solution here
 
+    # code your solution here

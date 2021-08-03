@@ -1,5 +1,5 @@
 def solution(pairs):
-    l=[]
+    l = []
     for a in pairs:
-        l.append( (str(a) + " = "+str(pairs[a])))
+        l.append((str(a) + " = " + str(pairs[a])))
     return ','.join(sorted(l))

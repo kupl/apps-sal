@@ -1,6 +1,5 @@
 def get_issuer(number):
     return 'AMEX' if (len(str(number)) == 15 and (str(number).startswith('34') or str(number).startswith('37'))) else \
-       'Discover' if (len(str(number)) == 16 and str(number).startswith('6011')) else \
-       'Mastercard' if (len(str(number)) == 16 and int(str(number)[:2:]) in range(51, 56)) else \
-       'VISA' if ((len(str(number)) == 13 or len(str(number)) == 16) and str(number).startswith('4')) else "Unknown"
-
+        'Discover' if (len(str(number)) == 16 and str(number).startswith('6011')) else \
+        'Mastercard' if (len(str(number)) == 16 and int(str(number)[:2:]) in range(51, 56)) else \
+        'VISA' if ((len(str(number)) == 13 or len(str(number)) == 16) and str(number).startswith('4')) else "Unknown"
