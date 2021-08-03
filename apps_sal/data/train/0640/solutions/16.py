@@ -1,13 +1,14 @@
 def compute_gcd(x, y):
-   while(y):
-       x, y = y, x % y
-   return x
-   
+    while(y):
+        x, y = y, x % y
+    return x
+
+
 def f_lcm(x, y):
-   lcm = (x*y)//compute_gcd(x,y)
-   return lcm
-   
-   
+    lcm = (x * y) // compute_gcd(x, y)
+    return lcm
+
+
 t = int(input().strip())
 for i in range(t):
     res = 0
@@ -19,11 +20,6 @@ for i in range(t):
     if(x == y):
         print(0)
     else:
-        res += lcm//x - 1
-        res += lcm//y - 1
+        res += lcm // x - 1
+        res += lcm // y - 1
         print(res)
-            
-            
-            
-    
-
