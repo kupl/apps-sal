@@ -22,4 +22,3 @@ for line in sol:
     for col in line:
         print(col, end=" ")
     print()
-

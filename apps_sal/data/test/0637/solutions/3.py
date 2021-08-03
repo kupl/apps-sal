@@ -14,4 +14,3 @@ if [ans[0]] * k != ans:
     print('NO')
 else:
     print('YES')
-

@@ -4,4 +4,3 @@ x = a[-1]
 y = a[-2]
 b = int(m / (k + 1))
 print(b * y + (m - b) * x)
-

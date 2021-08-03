@@ -7,7 +7,7 @@ ln = -1
 flag = 0
 for i in range(len(arr)):
     if arr[i] == arr[last]:
-       now += 1
+        now += 1
     else:
         if not (ln == -1 or ln == now):
             flag = 1

@@ -22,4 +22,3 @@ for i in a:
         curLen += 1
 
 print("YES")
-
