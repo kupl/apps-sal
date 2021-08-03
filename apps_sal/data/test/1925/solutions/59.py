@@ -3,6 +3,7 @@ import collections
 import itertools
 import copy
 
+
 def YesNo(Bool):
     if(Bool):
         print("YES")
@@ -10,15 +11,16 @@ def YesNo(Bool):
         print("NO")
     return
 
+
 def resolve():
 
-    A,B,N=list(map(int,input().split()))
- 
-    X=min(N,B-1)
+    A, B, N = list(map(int, input().split()))
 
-    ans=math.floor(A*X/B)
+    X = min(N, B - 1)
+
+    ans = math.floor(A * X / B)
 
     print(ans)
 
-resolve()
 
+resolve()

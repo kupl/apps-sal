@@ -1,4 +1,4 @@
-N, K, C = list(map(int,input().split()))
+N, K, C = list(map(int, input().split()))
 s = list(str(input()))
 
 L = []  # i+1日目に働くのはL[i]日目以降

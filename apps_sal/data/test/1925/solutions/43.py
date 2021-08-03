@@ -35,4 +35,4 @@ if N >= B:
 else:
     x = N
 
-print(int(A*x/B))
+print(int(A * x / B))

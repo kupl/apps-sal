@@ -17,24 +17,25 @@ def solve():
     while len(earliest) < K:
         if S[i] == 'o':
             earliest.append(i)
-            i += C+1
+            i += C + 1
         else:
             i += 1
     latest = []
-    i = N-1
+    i = N - 1
     while len(latest) < K:
         if S[i] == 'o':
             latest.append(i)
-            i -= C+1
+            i -= C + 1
         else:
             i -= 1
     latest.reverse()
     for i, j in zip(earliest, latest):
         if i == j:
-            print((i+1))
+            print((i + 1))
 
 
 def __starting_point():
     solve()
+
 
 __starting_point()

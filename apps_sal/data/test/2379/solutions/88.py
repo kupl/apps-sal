@@ -1,5 +1,5 @@
 def main():
-    n, k, c = list(map(int,input().split()))
+    n, k, c = list(map(int, input().split()))
     s = input()
     schedule = [w == "o" for w in s]
     left = []
@@ -20,14 +20,13 @@ def main():
 
     right.reverse()
 
-
     for i in range(k):
         if left[i] == right[i]:
             print((left[i] + 1))
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

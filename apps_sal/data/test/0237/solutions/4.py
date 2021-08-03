@@ -2,7 +2,9 @@ def summ(t):
     ans = (t) * (t + 1) // 2
     return ans
 
+
 n, m, k = map(int, input().split())
+
 
 def res(p):
     nonlocal n

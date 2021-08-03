@@ -12,7 +12,7 @@ result = 0
 
 a, b, c = 0, len(A) + 1, 0
 
-#for k in range(len(A) - len(B) + 1):
+# for k in range(len(A) - len(B) + 1):
 #    needed = 0
 #    for x in letters:
 #        needed += max([0, k * BC[x] - AC[x]])
@@ -53,4 +53,3 @@ while i < len(A):
     i += 1
 
 print(''.join(C))
-

@@ -13,9 +13,8 @@ if t2 <= t1:
     return
 
 if p <= x1 and d == 1:
-    print(min(t2 * abs(x1 - x2), t1* abs(p - x2)))
+    print(min(t2 * abs(x1 - x2), t1 * abs(p - x2)))
 elif d == 1:
-    print(min(t2 * abs(x1 - x2), t1*s + t1*(s-p) + t1 * abs(x2)))
+    print(min(t2 * abs(x1 - x2), t1 * s + t1 * (s - p) + t1 * abs(x2)))
 else:
-    print(min(t2 * abs(x1 - x2), t1*(p) + t1 * abs(x2)))
-
+    print(min(t2 * abs(x1 - x2), t1 * (p) + t1 * abs(x2)))

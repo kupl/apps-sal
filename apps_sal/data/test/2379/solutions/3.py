@@ -10,7 +10,8 @@ def main():
         if S[i] == 'o':
             L[cur] = i
             cur += 1
-            if cur == K: break
+            if cur == K:
+                break
             i += C
         i += 1
 
@@ -22,7 +23,8 @@ def main():
         if S[i] == 'o':
             R[cur] = i
             cur -= 1
-            if cur == -1: break
+            if cur == -1:
+                break
             i -= C
         i -= 1
 
@@ -32,5 +34,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,5 +1,5 @@
 def main():
-    read = lambda: list(map(int, input().split()))
+    def read(): return list(map(int, input().split()))
     n, b = read()
     from collections import deque
     Q = deque()
@@ -18,5 +18,6 @@ def main():
         if cur != -1:
             Q.append(cur)
     print(' '.join(map(str, ans)))
-main()
 
+
+main()

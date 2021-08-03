@@ -18,6 +18,7 @@ def check(n, m, k, r):
     t = u + v - r
     return t <= m
 
+
 n, m, k = list(map(int, input().split()))
 k -= 1
 m -= n
@@ -32,4 +33,3 @@ while b - a > 1:
         b = mid
 res = 1 + a
 print(res)
-

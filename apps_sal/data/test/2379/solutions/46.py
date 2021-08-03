@@ -5,7 +5,7 @@ def main():
 
     if all(s == "x" for s in S):
         return
-    
+
     left = [0] * N
     day = 0
     work_cnt = 1
@@ -15,7 +15,7 @@ def main():
             work_cnt += 1
             day += C
         day += 1
-    
+
     right = [0] * N
     day = N - 1
     work_cnt = K
@@ -25,10 +25,10 @@ def main():
             work_cnt -= 1
             day -= C
         day -= 1
-    
+
     for i in range(N):
         if left[i] == right[i] and left[i] != 0:
             print((i + 1))
 
-main()
 
+main()

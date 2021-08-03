@@ -3,7 +3,7 @@ def resolve():
     N, K, C = list(map(int, input().split()))
     S = input()
 
-    left = [0]*N
+    left = [0] * N
     i = 0
     cnt = 1
     while i < N:
@@ -13,7 +13,7 @@ def resolve():
             cnt += 1
         i += 1
 
-    right = [0]*N
+    right = [0] * N
     i = 0
     cnt = K
     T = S[::-1]
@@ -29,9 +29,11 @@ def resolve():
         if left[i] == 0:
             continue
         if left[i] == right[i]:
-            print((i+1))
+            print((i + 1))
+
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

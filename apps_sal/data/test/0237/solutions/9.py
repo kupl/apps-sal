@@ -17,11 +17,9 @@ while (right - left > 1):
         counter += rh - (mid - 1)
     else:
         last_hobbit = mid - rh - 1
-        counter += (mid - 1) * mid // 2 - (last_hobbit) * (last_hobbit + 1) // 2    
+        counter += (mid - 1) * mid // 2 - (last_hobbit) * (last_hobbit + 1) // 2
     if counter > m:
         right = mid
     else:
         left = mid
 print(left)
-    
-

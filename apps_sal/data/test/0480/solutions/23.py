@@ -13,15 +13,15 @@ tt = 0
 while 1:
     if p == s:
         d = -1
-    
+
     if p == 0:
         d = 1
-        
+
     p += d
     tt += t1
     if p == x1:
         v = True
-        
+
     if v and p == x2:
         break
 print(min(tp, tt))

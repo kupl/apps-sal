@@ -7,7 +7,7 @@ ans = []
 k = K
 for i in range(N):
     if (yasumi == 0) and (S[i] == "o") and (k > 0):
-        Bottom.append(N-i)
+        Bottom.append(N - i)
         yasumi += C
         k -= 1
     elif yasumi > 0:
@@ -24,8 +24,8 @@ for i in range(N):
         K -= 1
         if j >= len(Bottom):
             break
-        elif Bottom[j] == i+1:
-            ans.append(i+1)
+        elif Bottom[j] == i + 1:
+            ans.append(i + 1)
     elif yasumi > 0:
         yasumi -= 1
 

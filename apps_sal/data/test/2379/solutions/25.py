@@ -1,4 +1,4 @@
-n,k,c = map(int,input().split())
+n, k, c = map(int, input().split())
 s = input()
 forth = set()
 reverse = set()
@@ -9,7 +9,7 @@ for i in range(n):
         if tired == 0:
             cur += 1
             tired = c
-            forth.add(i+1)
+            forth.add(i + 1)
         else:
             if tired > 0:
                 tired -= 1
@@ -26,7 +26,7 @@ for i in range(n):
         if tired == 0:
             cur += 1
             tired = c
-            reverse.add(n-i)
+            reverse.add(n - i)
         else:
             if tired > 0:
                 tired -= 1

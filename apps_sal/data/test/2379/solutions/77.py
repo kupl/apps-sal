@@ -3,7 +3,7 @@ s = input()
 
 # num 回目に働く日は l[num-1] 日目以降
 l = []
-num = 0 # num = len(l)
+num = 0  # num = len(l)
 i = 0
 while num < k:
     if s[i] == 'o':
@@ -15,7 +15,7 @@ while num < k:
 
 # num 回目に働く日は l[num-1] 日目以前
 r = []
-num = 0 # num = len(r)
+num = 0  # num = len(r)
 i = n - 1
 while num < k:
     if s[i] == 'o':

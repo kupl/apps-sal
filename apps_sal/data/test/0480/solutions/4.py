@@ -1,5 +1,8 @@
 from collections import defaultdict
-import sys, os, math
+import sys
+import os
+import math
+
 
 def __starting_point():
     #n, m = list(map(int, input().split()))
@@ -9,9 +12,9 @@ def __starting_point():
     if t1 >= t2:
         print(abs(x2 - x1) * t2)
         return
-    
+
     if x2 > x1:
-        #+dir
+        # +dir
         if d == 1:
             if p <= x1:
                 t = t1 * (x2 - p)
@@ -28,4 +31,6 @@ def __starting_point():
         else:
             t = t1 * (s - p + s - x2)
     print(min(t, abs(x2 - x1) * t2))
+
+
 __starting_point()

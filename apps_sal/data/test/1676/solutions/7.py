@@ -23,7 +23,7 @@ for i in range(n):
         d.append(t)
 while len(d) != 0:
     if d[0][0] > now:
-        now =  d[0][0] + d[0][1]
+        now = d[0][0] + d[0][1]
     else:
         now += d[0][1]
     d.popleft()

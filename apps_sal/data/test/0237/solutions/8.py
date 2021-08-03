@@ -27,6 +27,7 @@ def solve(n, m, k):
 
     return l + 1
 
+
 if False:
     assert pillows(1, 1, 10) == 10
     assert solve(1, 10, 1) == 10
@@ -50,4 +51,3 @@ if False:
 else:
     n, m, k = list(map(int, input().split()))
     print(solve(n, m, k))
-

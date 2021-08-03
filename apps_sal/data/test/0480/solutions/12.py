@@ -1,6 +1,7 @@
-#/usr/bin/env python3
+# /usr/bin/env python3
 
 import sys
+
 
 def tram(inp):
     inp = list(map(int, inp.split()))
@@ -13,29 +14,21 @@ def tram(inp):
     d = inp[6]
 
     if d < 0:
-        x1 = s-x1
-        x2 = s-x2
+        x1 = s - x1
+        x2 = s - x2
         p = s - p
 
-    walktime = abs(x1-x2)*t2
+    walktime = abs(x1 - x2) * t2
 
     if (x2 > x1):
         if (p > x1):
-            tramtime = (s-p + s +x2) * t1
+            tramtime = (s - p + s + x2) * t1
         else:
-            tramtime = (x2 - p) *t1
-    else: 
-        tramtime = ((s-p) + s -x2) * t1
+            tramtime = (x2 - p) * t1
+    else:
+        tramtime = ((s - p) + s - x2) * t1
 
     return min(walktime, tramtime)
-
-
-    
-
-
-
-
-
 
 
 def __starting_point():

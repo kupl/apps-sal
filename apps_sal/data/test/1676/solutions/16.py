@@ -15,7 +15,7 @@ for it in range(n):
     if en - bg < b:
         q[en] = ev
         en += 1
-        
+
 while bg < en:
     time = max(time, q[bg][0])
     res[q[bg][2]] = time + q[bg][1]
@@ -24,4 +24,3 @@ while bg < en:
 
 for i in range(n):
     print(res[i], end=' ')
-

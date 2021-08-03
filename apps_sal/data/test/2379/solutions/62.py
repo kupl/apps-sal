@@ -24,6 +24,5 @@ for i in range(len(s)):
     else:
         rest1 += 1
 for i in range(len(s)):
-    if (cnt0[i] + cnt1[i] == k+1):
-        print((i+1))
-
+    if (cnt0[i] + cnt1[i] == k + 1):
+        print((i + 1))

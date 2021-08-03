@@ -25,4 +25,3 @@ for a, b in zip(A, B):
     if a == b:
         Ans.append(a)
 print(("\n".join(map(str, Ans))))
-

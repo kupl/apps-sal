@@ -21,15 +21,16 @@ elif p <= x1:
 else:
     xt0 = -(s - p) - s
 
+
 def solve(vt, xt0, vi, x1, x2):
     t1 = (x1 - xt0) / (vt - vi)
-    t2 = (x2 - vi*t1 - x1) / vt
+    t2 = (x2 - vi * t1 - x1) / vt
     t3 = (x1 - xt0) / (vt + vi)
-    t4 = (x2 + vi*t3 - x1) / vt
-    return min((x2-x1) / vi, min(t1 + t2, t3 + t4))
+    t4 = (x2 + vi * t3 - x1) / vt
+    return min((x2 - x1) / vi, min(t1 + t2, t3 + t4))
+
 
 if t2 <= t1:
     print("%.0f" % ((x2 - x1) / vi))
 else:
     print("%.0f" % solve(vt, xt0, vi, x1, x2))
-

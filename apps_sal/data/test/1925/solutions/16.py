@@ -5,5 +5,5 @@ if n >= b:
     x = b - 1
 else:
     x = n
-    
+
 print(math.floor(a * x / b))

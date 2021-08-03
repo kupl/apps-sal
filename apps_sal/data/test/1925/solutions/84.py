@@ -6,5 +6,5 @@ if n < b:
     c = math.floor(a * n / b)
     print(c)
 else:
-    c = math.floor(a * (b-1)/ b)
+    c = math.floor(a * (b - 1) / b)
     print(c)

@@ -6,6 +6,7 @@ def pillows_needed(height, width):
     else:
         return height * (height + 1) // 2 + (width - height)
 
+
 n, m, k = list(map(int, input().split()))
 
 
@@ -19,4 +20,3 @@ while a < b:
         b = c - 1
 
 print(a)
-

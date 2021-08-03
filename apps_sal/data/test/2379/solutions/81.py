@@ -7,7 +7,7 @@
 #     else:
 #         import sys
 #         print(arg, file=sys.stderr)
-        
+
 def main():
     N, K, C = map(int, input().split())
     S = dict(enumerate(str(input()), 1))
@@ -17,7 +17,7 @@ def main():
 
     l = [sl.pop()]
     r = [sr.pop()]
-    
+
     for x in range(1, K):
         while True:
             ll = sl.pop()
@@ -34,6 +34,9 @@ def main():
         if ll == rr:
             print(ll)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -1,6 +1,7 @@
 def v(ln, mx):
     return mx * (mx + 1) // 2 - (0 if ln > mx else (mx - ln) * (mx - ln + 1) // 2) + max(0, ln - mx)
 
+
 def ok(n, m, k, val):
     return val + v(k - 1, val - 1) + v(n - k, val - 1) <= m
 
