@@ -2,7 +2,8 @@ n, x = map(int, input().split())
 
 
 def func(m, y):
-    if y == 0: return 0
+    if y == 0:
+        return 0
     ret = 0
     t = 4 * pow(2, m) - 3
     if y >= t - 1:

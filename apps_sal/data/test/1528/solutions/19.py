@@ -18,7 +18,8 @@ def n_layer(l):
 SUM = 0
 while 1:
     if N == 1:
-        if X in [0, 1]: break
+        if X in [0, 1]:
+            break
         elif X >= 2:
             SUM += min(3, X - 1)
             break
@@ -38,6 +39,7 @@ while 1:
         X -= 1
         N -= 1
 
-    if X in [0, 1]: break
+    if X in [0, 1]:
+        break
 
 print(SUM)

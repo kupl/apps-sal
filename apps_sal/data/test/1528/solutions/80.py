@@ -16,7 +16,7 @@ def rec(level, K):
     elif K == L[level - 1] + 2:
         return S[level - 1] + 1
     elif K <= L[level - 1] * 2 + 2:
-        return rec(level - 1, K - L[level - 1] - 2) + S[level - 1] + 1;
+        return rec(level - 1, K - L[level - 1] - 2) + S[level - 1] + 1
     else:
         return S[level - 1] * 2 + 1
 

@@ -12,5 +12,6 @@ while n:
         x -= t
     x -= 1
     n -= 1
-if x < 0: a -= 1
+if x < 0:
+    a -= 1
 print(a)

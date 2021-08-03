@@ -18,8 +18,10 @@ for r in range(n - 1):
             A[r + 1][c] ^= 1
             A[r][c + 1] ^= 1
             A[r + 1][c + 1] ^= 1
-    if A[r][m - 1] != B[r][m - 1]: v = False
-if A[n - 1] != B[n - 1]: v = False
+    if A[r][m - 1] != B[r][m - 1]:
+        v = False
+if A[n - 1] != B[n - 1]:
+    v = False
 
 if v == True:
     print("Yes")

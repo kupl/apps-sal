@@ -3,7 +3,8 @@ def Z(): return int(input())
 
 
 def solve(n):
-    if n <= 3: return None
+    if n <= 3:
+        return None
     ans = []
     k = 1
     while n >= 8:
