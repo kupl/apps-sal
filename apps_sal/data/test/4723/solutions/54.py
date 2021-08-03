@@ -7,7 +7,8 @@
 S = list(input())
 T = list(input())
 
-ls = len(S); lt = len(T)
+ls = len(S)
+lt = len(T)
 
 for i in range(ls - lt, -1, -1):
     isok = True

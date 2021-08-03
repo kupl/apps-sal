@@ -45,7 +45,8 @@ for i in range(0, n):
 
     for j in range(i + 2, n):
 
-        if i == 0 and j == n - 1: continue
+        if i == 0 and j == n - 1:
+            continue
 
         l = i + 1
         r = j

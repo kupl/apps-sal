@@ -9,7 +9,8 @@ for i in range(n):
 ab.sort()
 cost = 0
 for t in ab:
-    if d <= 0: break
+    if d <= 0:
+        break
     if t[1] < r:
         m = min(d, r - t[1])
         cost += m * t[0]

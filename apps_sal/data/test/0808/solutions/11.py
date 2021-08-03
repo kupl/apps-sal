@@ -1,5 +1,6 @@
 s = input()
-if not '.' in s: s += '.'
+if not '.' in s:
+    s += '.'
 a, b = s.strip('0').split('.')
 if len(a) > 0:
     b = (a[1:] + b).rstrip('0')
@@ -12,5 +13,7 @@ else:
     b = b[1:]
 
 print(a, end='')
-if len(b): print('.' + b, end='')
-if le: print('E' + str(le))
+if len(b):
+    print('.' + b, end='')
+if le:
+    print('E' + str(le))

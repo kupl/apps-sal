@@ -3,7 +3,9 @@ s = input()
 if not '.' in s:
     s = s + '.'
 
-i = 0; zer = 0; step = 0
+i = 0
+zer = 0
+step = 0
 while s[i] == '0':
     zer += 1
     i += 1
@@ -16,7 +18,8 @@ i = len(s) - 1
 while s[i] == '0':
     zer += 1
     i -= 1
-if zer > 0: s = s[:-zer]
+if zer > 0:
+    s = s[:-zer]
 '''if not '.' in s:
 	step = zer
 	s = s + '.'''

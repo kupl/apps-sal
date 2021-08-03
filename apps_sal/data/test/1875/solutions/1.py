@@ -6,8 +6,10 @@ for x, i in enumerate(p, 1):
     for j in p[x:]:
         a = b = 0
         for k in p:
-            if k == i or k == j: continue
+            if k == i or k == j:
+                continue
             d = (i.real - k.real) * (j.imag - k.imag) - (i.imag - k.imag) * (j.real - k.real)
             a, b = min(d, a), max(d, b)
-        if a and b: c = max(c, b - a)
+        if a and b:
+            c = max(c, b - a)
 print(c / 2)

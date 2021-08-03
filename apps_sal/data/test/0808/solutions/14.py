@@ -1,7 +1,7 @@
 x = input()
 
-a = 0;
-b = 0;
+a = 0
+b = 0
 
 sc = x.lstrip('0')
 if '.' not in sc:
@@ -14,7 +14,7 @@ if sc[-1] == '.':
 
 if sc[0] == '0':
     sc = sc.replace('.', '')
-    i = 0;
+    i = 0
     while sc[i] == '0':
         i += 1
         b -= 1

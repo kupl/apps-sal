@@ -15,7 +15,8 @@ for it in '123456789':
 if res == 0:
     res = -1
     print('0')
-else: res = 0
+else:
+    res = 0
 while res == 0:
     res -= 1
     i = 0
@@ -33,7 +34,8 @@ while res == 0:
         while True:
             if inp[i] != '.':
                 i += 1
-            else: break
+            else:
+                break
 
         inp.reverse()
         k = 0

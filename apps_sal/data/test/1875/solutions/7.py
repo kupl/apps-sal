@@ -8,5 +8,6 @@ for x, i in enumerate(p, 1):
         for k in p:
             d = (i[0] - k[0]) * (j[1] - k[1]) - (i[1] - k[1]) * (j[0] - k[0])
             a, b = min(d, a), max(d, b)
-        if a and b: s = max(s, b - a)
+        if a and b:
+            s = max(s, b - a)
 print(s / 2)

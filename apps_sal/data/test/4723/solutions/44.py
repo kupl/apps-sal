@@ -14,7 +14,8 @@ else:
         for j in range(i, i + lt):
             s = S[j]
             # print(s,T[j-i])
-            if s == '?': continue
+            if s == '?':
+                continue
             if s == '%' or s != T[j - i]:
                 flg = 0
                 break

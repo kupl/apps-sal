@@ -10,7 +10,9 @@ for i in range(n - m, -1, -1):
         if j == m:
             print(((s[:i] + t + s[i + m:]).replace("?", "a")))
             return
-        if x[j] == "?": continue
-        elif x[j] != t[j]: break
+        if x[j] == "?":
+            continue
+        elif x[j] != t[j]:
+            break
 
 print("UNRESTORABLE")
