@@ -1,6 +1,6 @@
+import sys
 3
 
-import sys
 
 n, A = list(map(int, sys.stdin.readline().split()))
 d = list(map(int, sys.stdin.readline().split()))
@@ -14,4 +14,3 @@ for x in d:
     sys.stdout.write("%d " % (x - z))
 
 sys.stdout.write('\n')
-

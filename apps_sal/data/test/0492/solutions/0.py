@@ -9,9 +9,8 @@ ccw = bool((a + n) % 4 == b)
 cw = bool((a - n) % 4 == b)
 
 if cw and not ccw:
-	print('cw')
+    print('cw')
 elif ccw and not cw:
-	print('ccw')
+    print('ccw')
 else:
-	print('undefined')
-
+    print('undefined')

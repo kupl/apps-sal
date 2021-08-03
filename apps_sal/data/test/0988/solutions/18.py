@@ -18,13 +18,13 @@ for i in range(6):
         if (arr[i][j + 1] == '.'):
             best = max(best, price[i][j])
     for j in range(0, 2):
-        if (arr[i][j] == '.'):           
+        if (arr[i][j] == '.'):
             best = max(best, price[i][j])
-    for j in range(4, 6):     
+    for j in range(4, 6):
         if (arr[i][j + 2] == '.'):
             best = max(best, price[i][j])
 
-#print(best)
+# print(best)
 
 for i in range(6):
     for j in range(2, 4):
@@ -42,4 +42,3 @@ for i in range(6):
             arr[i] = arr[i][:j + 2] + 'P' + arr[i][j + 3:]
             print('\n'.join(arr))
             return
-

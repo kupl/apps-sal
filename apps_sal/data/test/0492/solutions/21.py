@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 from sys import stdin, stdout
 
+
 def rint():
     return list(map(int, stdin.readline().split()))
 #lines = stdin.readlines()
 
-t = {'v':0, '<':1, '^':2, '>':3}
+
+t = {'v': 0, '<': 1, '^': 2, '>': 3}
 
 a, b = list(map(str, input().split()))
 n = int(input())
@@ -15,7 +17,7 @@ if n == 0 or n == 2:
     return
 a, b = t[a], t[b]
 if b < a:
-    b +=4
+    b += 4
 
 diff = b - a
 if n == 1:
@@ -32,5 +34,3 @@ elif n == 3:
         print("cw")
     else:
         print('undefined')
-
-

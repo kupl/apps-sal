@@ -24,4 +24,3 @@ elif turns_nr % 4 == 3:
             elif lst[idx1 + 1] == pos2:
                 print('ccw')
                 return
-

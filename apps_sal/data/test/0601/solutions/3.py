@@ -2,7 +2,7 @@ for t in range(int(input())):
     p, f = list(map(int, input().split()))
     c_sw, c_ax = list(map(int, input().split()))
     w_sw, w_ax = list(map(int, input().split()))
-    
+
     if w_sw > w_ax:
         c_sw, c_ax = c_ax, c_sw
         w_sw, w_ax = w_ax, w_sw
@@ -21,4 +21,3 @@ for t in range(int(input())):
 
         ans = max(ans, n_sw_p + n_sw_f + n_ax)
     print(ans)
-

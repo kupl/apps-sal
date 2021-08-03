@@ -60,4 +60,3 @@ for i in range(len(ansL)):
     fout.write("\n")
 fin.close()
 fout.close()
-

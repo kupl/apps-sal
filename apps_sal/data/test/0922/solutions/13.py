@@ -18,14 +18,3 @@ for i in range(1, n + 1):
 ans = ans[1:]
 ans = [str(x) for x in ans]
 print(" ".join(ans))
-
-
-
-
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 def solve():
-    p, f = map(int,input().split())
-    cnts, cntw = map(int,input().split())
-    s, w = map(int,input().split())
+    p, f = map(int, input().split())
+    cnts, cntw = map(int, input().split())
+    s, w = map(int, input().split())
     if s > w:
         s, w = w, s
         cnts, cntw = cntw, cnts
@@ -20,6 +20,7 @@ def solve():
         ans += min(fn // w, cntwnow)
         mans = max(ans, mans)
     print(mans)
+
 
 for i in range(int(input())):
     solve()

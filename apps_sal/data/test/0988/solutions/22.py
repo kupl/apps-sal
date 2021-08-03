@@ -14,4 +14,3 @@ for i in range(6):
                 res = conv_map[i // 2][j]
 
 print('\n'.join(''.join(ai) for ai in a))
-

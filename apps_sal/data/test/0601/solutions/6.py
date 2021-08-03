@@ -14,4 +14,3 @@ for t in range(int(input())):
         nw2 = min((f - ns2 * s) // w, cw - nw1)
         res = max(res, ns1 + ns2 + nw1 + nw2)
     print(res)
-

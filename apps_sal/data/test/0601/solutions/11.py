@@ -9,7 +9,8 @@ while t:
         cnts, cntw = cntw, cnts
     ans = 0
     for i in range(cnts + 1):
-        if i * s > p: break
+        if i * s > p:
+            break
         t1 = p - i * s
         t2 = min(t1 // w, cntw)
         t3 = cnts - i

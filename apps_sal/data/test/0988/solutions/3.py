@@ -75,8 +75,7 @@ for i in range(6):
 for i in range(6):
     for i1 in range(8):
         if (i == pos1 and i1 == pos2):
-            print('P',end='')
+            print('P', end='')
         else:
             print(a1[i][i1], end='')
     print()
-
