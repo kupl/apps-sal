@@ -5,5 +5,5 @@ def highest_rank(a):
         d = a.count(i)
         if d > c or (d == c and i > m):
             c = d
-            m = i             
-    return m            
+            m = i
+    return m

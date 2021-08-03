@@ -3,6 +3,6 @@ def dating_range(age):
         mini = int(age - 0.1 * age)
         maxi = int(age + 0.1 * age)
     else:
-        mini = age//2+7
-        maxi = (age-7)*2
+        mini = age // 2 + 7
+        maxi = (age - 7) * 2
     return "{}-{}".format(mini, maxi)

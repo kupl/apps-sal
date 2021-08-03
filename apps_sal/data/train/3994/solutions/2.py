@@ -3,4 +3,3 @@ def nbr_of_laps(x, y):
         if x % i == 0 and y % i == 0:
             break
     return (y / i, x / i)
-

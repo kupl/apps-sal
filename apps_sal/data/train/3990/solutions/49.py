@@ -1,3 +1,3 @@
-def derive(coefficient, exponent): 
+def derive(coefficient, exponent):
     # your code her
-    return "{}x^{}".format(coefficient*exponent,exponent-1)
+    return "{}x^{}".format(coefficient * exponent, exponent - 1)

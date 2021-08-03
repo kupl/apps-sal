@@ -6,4 +6,3 @@ def dating_range(age):
         lo = 0.9 * age
         hi = 1.1 * age
     return '%d-%d' % (lo, hi)
-

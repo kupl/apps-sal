@@ -1,1 +1,1 @@
-solve=lambda s,k:sum(int(x+y)%k==0for x,y in __import__('itertools').permutations(s.split(),2))
+def solve(s, k): return sum(int(x + y) % k == 0for x, y in __import__('itertools').permutations(s.split(), 2))

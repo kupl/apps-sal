@@ -1,4 +1,4 @@
-def derive(coefficient, exponent): 
+def derive(coefficient, exponent):
     # your code here
     dv = coefficient * exponent
     ex = exponent - 1

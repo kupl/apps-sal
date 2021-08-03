@@ -1,4 +1,6 @@
 from math import ceil
+
+
 def dating_range(age):
     if age <= 14:
         return f'{age-ceil(age/10)}-{age+int(age/10)}'
