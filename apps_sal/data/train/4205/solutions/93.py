@@ -4,4 +4,3 @@ def cannons_ready(gunners):
         return("Fire!")
     if "nay" in gunners:
         return("Shiver me timbers!")
-

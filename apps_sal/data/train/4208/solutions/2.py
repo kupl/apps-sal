@@ -7,4 +7,3 @@ def ipsubnet2list(subnet: str) -> Union[List[str], None]:
         return list(map(str, ip_network(subnet).hosts()))
     except ValueError:
         return
-

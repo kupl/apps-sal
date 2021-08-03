@@ -20,7 +20,6 @@ def caffeineBuzz(n):
         return MOCHA_MISSING
 
 
-
 class TestCaffeineBuzz(unittest.TestCase):
     def test_should_return_java_when_given_n_is_divisible_by_3(self):
         n = 3
@@ -41,4 +40,3 @@ class TestCaffeineBuzz(unittest.TestCase):
         n = 1
         actual = caffeineBuzz(n)
         self.assertEqual(actual, 'mocha_missing!')
-

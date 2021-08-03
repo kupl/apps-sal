@@ -15,4 +15,3 @@ def find_missing(sequence):
     constant = sorted_dif_freq[-1][0]
 
     return sequence[dif.index(outlier)] + constant
-

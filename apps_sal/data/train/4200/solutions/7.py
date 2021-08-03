@@ -1,5 +1,6 @@
 import re
 
+
 def vowel_shift(text, n):
     if not text:
         return text

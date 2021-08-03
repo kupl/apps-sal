@@ -28,15 +28,18 @@
                  num = 1002 -> lPal = 99(!); mPal = 1001 ; hPal = 1111  =>  return 1001
 """
 
-def nextPal(sPart, ls): return int( sPart + sPart[:len(sPart)-ls%2][::-1] )
+
+def nextPal(sPart, ls): return int(sPart + sPart[:len(sPart) - ls % 2][::-1])
+
 
 def palindrome(num):
-    if type(num) != int or num <= 0: return "Not valid"
-    
+    if type(num) != int or num <= 0:
+        return "Not valid"
+
     s = str(num)
-    midPart  = s[:(len(s)+1)//2]
-    lowPart  = str(int(midPart)-1)
-    highPart = str(int(midPart)+1)
+    midPart = s[:(len(s) + 1) // 2]
+    lowPart = str(int(midPart) - 1)
+    highPart = str(int(midPart) + 1)
     lPal, mPal, hPal = nextPal(lowPart, len(s)), nextPal(midPart, len(s)), nextPal(highPart, len(s))
-    
-    return 11 if num <= 16 else -sorted( (abs(num-pal), -pal)  for pal in [lPal, mPal, hPal] )[0][1]
+
+    return 11 if num <= 16 else -sorted((abs(num - pal), -pal) for pal in [lPal, mPal, hPal])[0][1]

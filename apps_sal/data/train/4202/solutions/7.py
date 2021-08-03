@@ -1,1 +1,1 @@
-ulam_sequence=f=lambda u,v,n,l=set():v and(l.clear()or l.update({u,v}))or len(l)>=n and sorted(l)or l.add(next(y for y in range(max(l)+1,2*max(l))if sum(2*x<y and y-x in l for x in l)==1))or f(0,0,n,l)
+ulam_sequence = f = lambda u, v, n, l=set(): v and (l.clear() or l.update({u, v})) or len(l) >= n and sorted(l) or l.add(next(y for y in range(max(l) + 1, 2 * max(l))if sum(2 * x < y and y - x in l for x in l) == 1)) or f(0, 0, n, l)

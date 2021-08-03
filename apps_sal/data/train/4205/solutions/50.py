@@ -7,4 +7,3 @@ def cannons_ready(gunners):
         return "Fire!"
     else:
         return "Shiver me timbers!"
-

@@ -5,4 +5,3 @@ def sum_cubes(n):
         result += cube
     return result
     # your code here
-

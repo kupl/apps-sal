@@ -5,4 +5,3 @@ def cannons_ready(gunners):
             result = 'Shiver me timbers!'
             break
     return result
-

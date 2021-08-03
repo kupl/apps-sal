@@ -9,5 +9,3 @@ def cannons_ready(gunners):
     if count > 0:
         return 'Shiver me timbers!'
     return 'Fire!'
-    
-

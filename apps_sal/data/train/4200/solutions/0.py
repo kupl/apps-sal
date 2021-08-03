@@ -1,7 +1,8 @@
 import re
 from collections import deque
 
-def vowel_shift(text,n):
+
+def vowel_shift(text, n):
     try:
         tokens = re.split(r'([aeiouAEIOU])', text)
         if len(tokens) > 1:

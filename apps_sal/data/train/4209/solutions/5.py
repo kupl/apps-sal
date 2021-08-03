@@ -1,16 +1,16 @@
 def largest_rect(heights):
-        maxArea = 0
-        stack = [] # stack of pairs: (index, height)
-        
-        for i, h in enumerate(heights):
-            start = i
-            while stack and stack[-1][1] > h:
-                index, height = stack.pop()
-                maxArea = max(maxArea, height * (i - index))
-                start = index
-            stack.append((start, h))
-        
-        # remaining heights extended to the end of the histogram
-        for i, h in stack:
-            maxArea = max(maxArea, h * (len(heights) - i))
-        return maxArea
+    maxArea = 0
+    stack = []  # stack of pairs: (index, height)
+
+    for i, h in enumerate(heights):
+        start = i
+        while stack and stack[-1][1] > h:
+            index, height = stack.pop()
+            maxArea = max(maxArea, height * (i - index))
+            start = index
+        stack.append((start, h))
+
+    # remaining heights extended to the end of the histogram
+    for i, h in stack:
+        maxArea = max(maxArea, h * (len(heights) - i))
+    return maxArea

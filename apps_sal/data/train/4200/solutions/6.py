@@ -1,5 +1,6 @@
 from itertools import cycle, islice
 
+
 def vowel_shift(text, n):
     chrs = [c for c in text or '' if c.lower() in 'aeiou']
     if text and chrs:

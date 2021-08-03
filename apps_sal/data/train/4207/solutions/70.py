@@ -5,5 +5,5 @@ def sum_cubes(n):
         numbers.append(int(i))
 
     for num in numbers:
-        cubes.append(int(num*num*num))
+        cubes.append(int(num * num * num))
     return sum(cubes)
