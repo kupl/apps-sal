@@ -7,11 +7,10 @@ BASE = [r.split('|') for r in '''\
  #   # |     # | #     |     # |     # |     # | #   # |     # | #   # |     # |       
  #   # |     # | #     |     # |     # |     # | #   # |     # | #   # |     # |       
  #   # |     # | #     |     # |     # |     # | #   # |     # | #   # |     # |       
-  ###  |       |  ###  |  ###  |       |  ###  |  ###  |       |  ###  |  ###  |       '''.split('\n') ]
+  ###  |       |  ###  |  ###  |       |  ###  |  ###  |       |  ###  |  ###  |       '''.split('\n')]
 
 
 def segment_display(n):
-    digs = [int(d,16) for d in f'{n:A>6}']
-    return '\n'.join( f'|{ "|".join( BASE[x][d] for d in digs) }|'
-                      for x in range(len(BASE)))
-
+    digs = [int(d, 16) for d in f'{n:A>6}']
+    return '\n'.join(f'|{ "|".join( BASE[x][d] for d in digs) }|'
+                     for x in range(len(BASE)))

@@ -1,1 +1,1 @@
-duty_free = lambda p, d, h: h // (p * d / 100)
+def duty_free(p, d, h): return h // (p * d / 100)

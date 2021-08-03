@@ -1,6 +1,6 @@
 def duty_free(price, discount, holiday_cost):
     discount /= 100
-    price_with_discount = price*discount
+    price_with_discount = price * discount
     finish_price = 0
     count = 0
     while finish_price < holiday_cost:
