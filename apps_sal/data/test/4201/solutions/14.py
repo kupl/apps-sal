@@ -93,7 +93,9 @@ for i in range(0, 2 ** H):
         cnt = 0
         for h in range(0, H):
             for w in range(0, W):
-                if(c[h][w] == '#' and (1 << h & i) and (1 << w & j)): cnt += 1
-        if(cnt == K): res += 1
+                if(c[h][w] == '#' and (1 << h & i) and (1 << w & j)):
+                    cnt += 1
+        if(cnt == K):
+            res += 1
 
 print(res)

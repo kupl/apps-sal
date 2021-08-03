@@ -7,7 +7,7 @@ def C(x):
     return c
 
 
-n = input();
+n = input()
 
 ar = list(map(int, input().split()))
 bu = {}

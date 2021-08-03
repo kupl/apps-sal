@@ -1,7 +1,8 @@
 def helper(x):
     ret = 0
     while x > 0:
-        if x % 2 == 0: x //= 2
+        if x % 2 == 0:
+            x //= 2
         else:
             ret += 1
             x //= 2

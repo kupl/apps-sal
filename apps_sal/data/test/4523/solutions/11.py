@@ -1,10 +1,10 @@
 from sys import stdin, stdout
 import math
 from collections import Counter, defaultdict
-LI = lambda: list(map(int, input().split()))
-MAP = lambda: list(map(int, input().split()))
-IN = lambda: int(input())
-S = lambda: input()
+def LI(): return list(map(int, input().split()))
+def MAP(): return list(map(int, input().split()))
+def IN(): return int(input())
+def S(): return input()
 
 
 def case():

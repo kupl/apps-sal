@@ -15,7 +15,8 @@ for i in range(2**H):
         x = n % 2
         n //= 2
         idx += 1
-        if x == 0: continue
+        if x == 0:
+            continue
 
         for j in range(W):
             cc[idx][j] = '.'
@@ -29,12 +30,14 @@ for i in range(2**H):
             x = n % 2
             n //= 2
             idx += 1
-            if x == 0: continue
+            if x == 0:
+                continue
 
             for k in range(H):
                 ccc[k][idx] = '.'
 
         cnt = sum([_.count('#') for _ in ccc])
 
-        if cnt == K: ans += 1
+        if cnt == K:
+            ans += 1
 print(ans)
