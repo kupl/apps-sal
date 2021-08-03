@@ -4,6 +4,7 @@ def strip_line(line, markers):
             line = line[:line.index(m)]
     return line.rstrip()
 
-def solution(string,markers):
+
+def solution(string, markers):
     stripped = [strip_line(l, markers) for l in string.splitlines()]
     return '\n'.join(stripped)

@@ -11,4 +11,3 @@ def decompose_helper(n, end):
         d = decompose_helper(new, min(i - 1, int(new ** 0.5)))
         if d:
             return d + [i]
-

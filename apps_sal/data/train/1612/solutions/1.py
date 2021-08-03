@@ -1,16 +1,17 @@
 def primeFactors(n):
     factors = []
-    while n % 2 == 0: 
+    while n % 2 == 0:
         n /= 2
         factors.append(2)
-    for i in range(3,int(n**.5)+1,2): 
-        while n % i == 0: 
-            n /=i
+    for i in range(3, int(n**.5) + 1, 2):
+        while n % i == 0:
+            n /= i
             factors.insert(0, i)
-    if n > 2: 
+    if n > 2:
         factors.insert(0, int(n))
     return factors
-        
+
+
 def score(p):
     last, xp, s = p[0], p[0], 0
     for e in p[1:]:
@@ -20,41 +21,45 @@ def score(p):
             s += xp
             xp, last = e, e
     return (s + xp) * len(p)
-    
+
 
 def prod(lst):
     res = 1
-    for v in lst: res *= v
+    for v in lst:
+        res *= v
     return res
+
 
 def multiply_partitions(partition):
     return [prod(sub) for sub in partition]
 
+
 def partition(collection):
     if len(collection) == 1:
-        yield [ collection ]
+        yield [collection]
         return
 
     first = collection[0]
     for smaller in partition(collection[1:]):
         # insert `first` in each of the subpartition's subsets
         for n, subset in enumerate(smaller):
-            yield smaller[:n] + [[ first ] + subset]  + smaller[n+1:]
-        # put `first` in its own subset 
-        yield [ [ first ] ] + smaller
+            yield smaller[:n] + [[first] + subset] + smaller[n + 1:]
+        # put `first` in its own subset
+        yield [[first]] + smaller
 
 
-def find_spec_prod_part(n, com):    
+def find_spec_prod_part(n, com):
     factors = primeFactors(n)
-    if len(factors) == 1: return 'It is a prime number'
+    if len(factors) == 1:
+        return 'It is a prime number'
     fn = min if com == 'min' else max
     mplist = []
     best = [factors, score(factors)]
     for p in partition(factors):
         mp = multiply_partitions(p)
-        if mp in mplist or mp[0]==n:
+        if mp in mplist or mp[0] == n:
             continue
         mplist.append(mp)
         best = fn(best, [mp, score(mp)], key=lambda x: x[1])
-    
+
     return [sorted(best[0], reverse=True), best[1]]

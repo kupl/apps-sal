@@ -1,11 +1,12 @@
 from math import pi
 
+
 def converter(n, decimals=0, base=pi):
     newbase = ""
     temp = base
     highdigit = 1
-    if n<0:
-        newbase="-"
+    if n < 0:
+        newbase = "-"
         n *= -1
     while temp <= n:
         temp *= base
@@ -14,12 +15,11 @@ def converter(n, decimals=0, base=pi):
         temp = int(n / (base ** i))
         if temp > 9:
             digit = chr(55 + temp)
-        else: 
+        else:
             digit = str(temp)
         newbase += digit
         n -= temp * base ** i
         if i == 0 and decimals > 0:
-            newbase += "." 
+            newbase += "."
     return newbase
-    #your code here
-
+    # your code here

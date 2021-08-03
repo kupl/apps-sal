@@ -1,5 +1,6 @@
 import re
 
+
 def differentiate(equation, point):
     terms = re.findall(r'[-]*[0-9x^]+', equation)
     result = 0
@@ -17,7 +18,7 @@ def differentiate(equation, point):
         if power is not None:
             power = power.group(0)
             if power.isnumeric():
-                result = result + (int(power) * int(amount) * point**(int(power)-1))
+                result = result + (int(power) * int(amount) * point**(int(power) - 1))
             elif power == 'x':
                 power = 1
                 result = result + (int(amount) * power)

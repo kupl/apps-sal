@@ -1,7 +1,8 @@
 import re
 
+
 def magic_call_depth_number(pattern):
-    subroutines = {} # list them by number
+    subroutines = {}  # list them by number
     s = re.compile(r'p(\d+)((P\d+|[FLR]*\d*)+)q')
     subrout = s.search(pattern)
     while subrout:
@@ -13,10 +14,12 @@ def magic_call_depth_number(pattern):
     # Make a tree
     depths = walk_tree(tokens(pattern), [], subroutines)
     return [min(depths), max(depths)]
-    
+
+
 def tokens(pattern):
     return re.findall(r'([PFLR]\d*)', pattern)
-    
+
+
 def walk_tree(token_list, stack, subroutine_dict):
     depths = []
     stops_here = True

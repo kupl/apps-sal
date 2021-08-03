@@ -1,4 +1,4 @@
-def solution(string,markers):
+def solution(string, markers):
     lst = string.split('\n')
     for i, s in enumerate(lst):
         for m in markers:
@@ -7,4 +7,3 @@ def solution(string,markers):
         lst[i] = s.strip()
 
     return '\n'.join(lst)
-

@@ -1,7 +1,7 @@
 class Tree(object):
     value = summ = None
     left = right = None
-    
+
     def __init__(self, value):
         self.value = value
 
@@ -21,14 +21,14 @@ def build_tree(pyramid):
     for level in it:
         tree_level = []
         parent = next(prev_level)
-        
+
         for left_tree, right_tree in iter_pairs(level):
             tree_level.append(left_tree)
 
             parent.left = left_tree
             parent.right = right_tree
             parent = next(prev_level, None)
-            
+
         tree_level.append(right_tree)
         prev_level = iter(tree_level)
 
@@ -55,7 +55,7 @@ def find_max_slide(root):
 
     if root.left.summ >= root.right.summ:
         return root.value + find_max_slide(root.left)
-    
+
     if root.left.summ < root.right.summ:
         return root.value + find_max_slide(root.right)
 
