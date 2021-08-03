@@ -19,7 +19,7 @@ class Solution:
                     r = r.__next__
             return p
         head = lreverse(head)
-        q, res = [],[]
+        q, res = [], []
         while head:
             while q and head.val >= q[-1]:
                 q.pop()
@@ -29,6 +29,5 @@ class Solution:
                 res.append(q[-1])
             q.append(head.val)
             head = head.__next__
-            
-        return res[::-1] 
 
+        return res[::-1]

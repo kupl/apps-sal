@@ -12,7 +12,7 @@ class Solution:
         for companies in favoriteCompanies:
             val = 0
             for company in companies:
-                val += 2** dic_companies[company]
+                val += 2 ** dic_companies[company]
             favorite_comp.append(val)
 
         res = []
@@ -20,7 +20,8 @@ class Solution:
         for i in range(len(favorite_comp)):
             flag = True
             for j in range(len(favorite_comp)):
-                if i == j:continue
+                if i == j:
+                    continue
                 if favorite_comp[i] | favorite_comp[j] == favorite_comp[j]:
                     flag = False
                     break

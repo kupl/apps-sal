@@ -7,7 +7,6 @@ class Solution:
                 result = max(self.search(grid, i, j), result)
         return result
 
-
     def search(self, grid, x, y):
         if x < 0 or x >= len(grid) or y < 0 or y >= len(grid[0]):
             return 0
@@ -20,14 +19,14 @@ class Solution:
         grid[x][y] = 0
 
         # Search all neighbours
-        result += max(self.search(grid, x-1, y),
-                      self.search(grid, x, y-1),
-                      self.search(grid, x+1, y),
-                      self.search(grid, x, y+1))
+        result += max(self.search(grid, x - 1, y),
+                      self.search(grid, x, y - 1),
+                      self.search(grid, x + 1, y),
+                      self.search(grid, x, y + 1))
 
         # Restore original gold in this cell for another path.  This is
         # because grid is passed as reference, so one modifying it during one
         # path will affect another (even though it may not have visited yet)
         grid[x][y] = temp
-        
+
         return result

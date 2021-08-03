@@ -1,49 +1,47 @@
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
-        d={}
+        d = {}
         for e in B:
-            tmp={}
+            tmp = {}
             for c in e:
                 if c not in tmp:
-                    tmp.update({c:1})
+                    tmp.update({c: 1})
                 else:
-                    tmp[c]+=1
+                    tmp[c] += 1
             if (not d) or (not tmp):
                 d.update(tmp)
             else:
-                for k,v in list(tmp.items()):
+                for k, v in list(tmp.items()):
                     if k in d:
-                        if v>d[k]:
-                            d[k]=v
+                        if v > d[k]:
+                            d[k] = v
                     else:
-                        d.update({k:v})
-        #print(d)
-        
+                        d.update({k: v})
+        # print(d)
+
         if not d:
             return A
-        
-        ans=[]
+
+        ans = []
         for a in A:
-            tmp={}
-            f=True
+            tmp = {}
+            f = True
             for e in a:
                 if e not in tmp:
-                    tmp.update({e:1})
+                    tmp.update({e: 1})
                 else:
-                    tmp[e]+=1
-            for k,v in list(d.items()):
+                    tmp[e] += 1
+            for k, v in list(d.items()):
                 if k in tmp:
-                    if v<=tmp[k]:
+                    if v <= tmp[k]:
                         pass
                     else:
-                        f=False
+                        f = False
                         break
                 else:
-                    f=False
+                    f = False
                     break
             if f:
                 ans.append(a)
-        
-        return ans
-                    
 
+        return ans

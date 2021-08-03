@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
         d = defaultdict(int)
@@ -8,7 +9,7 @@ class Solution:
             wl.sort()
             d[''.join(wl)] += 1
         ans = []
-        
+
         for puzzle in puzzles:
             f = puzzle[0]
             pl = sorted(list(puzzle))
@@ -28,8 +29,5 @@ class Solution:
                 cs = ''.join(cand)
                 tmp += d[cs]
             ans.append(tmp)
-        
-        return ans
-        
-        
 
+        return ans

@@ -1,5 +1,6 @@
 from math import sqrt
 
+
 class Solution:
     def numPoints(self, points: List[List[int]], r: int) -> int:
 
@@ -39,7 +40,3 @@ class Solution:
                 best = max(best, curr)
 
         return best
-
-
-
-

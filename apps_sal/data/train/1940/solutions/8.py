@@ -4,7 +4,7 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    
+
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         if not head:
             return []
@@ -28,5 +28,3 @@ class Solution:
             all_res.append((0, top))
         all_res = sorted(all_res, key=lambda x: x[1])
         return [v for v, _ in all_res]
-                
-

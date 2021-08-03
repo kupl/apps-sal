@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         res = []
@@ -12,7 +14,7 @@ class Solution:
                 if res[stack[-1]] < res[i]:
                     pos = stack.pop()
                     res[pos] = res[i]
-                else: 
+                else:
                     break
             stack.append(i)
         # the positions left in stack cannot find larger elements, and assign 0
@@ -20,7 +22,3 @@ class Solution:
             pos = stack.pop()
             res[pos] = 0
         return res
-
-                    
-                    
-

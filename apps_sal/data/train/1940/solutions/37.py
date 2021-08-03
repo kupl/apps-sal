@@ -9,7 +9,7 @@ class Solution:
         stack = []
 
         while head:
-            while stack and stack[-1][0]<head.val:
+            while stack and stack[-1][0] < head.val:
                 ans[stack.pop()[1]] = head.val
             stack.append((head.val, len(ans)))
             ans.append(0)

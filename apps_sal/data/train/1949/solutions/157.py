@@ -7,7 +7,7 @@ class Solution:
                 if grid[i][j] != 0:
                     self.dfs(i, j, 0)
         return self.ret
-    
+
     def dfs(self, i, j, cur_gold):
         self.ret = max(self.ret, cur_gold)
         if (0 <= i < len(self.grid) and 0 <= j < len(self.grid[0])) and self.grid[i][j] != 0:

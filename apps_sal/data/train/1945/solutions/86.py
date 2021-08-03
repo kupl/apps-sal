@@ -4,7 +4,7 @@ class Solution:
         col = len(matrix[0])
         ht = {}
         for r in range(row):
-            need = [[],[]]
+            need = [[], []]
             for c in range(col):
                 if matrix[r][c] == 0:
                     need[0].append(c)
@@ -13,7 +13,7 @@ class Solution:
             a = str(need[0])
             b = str(need[1])
             if a in ht:
-                ht[a] +=1
+                ht[a] += 1
             else:
                 ht[a] = 1
             if b in ht:
@@ -21,7 +21,5 @@ class Solution:
             else:
                 ht[b] = 1
         val = list(ht.values())
-        ans = max(val) 
+        ans = max(val)
         return ans
-                
-

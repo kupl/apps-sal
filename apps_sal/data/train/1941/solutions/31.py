@@ -5,7 +5,7 @@ class Solution:
             for c in s:
                 res |= (1 << (ord(c) - 97))
             return res
-        
+
         counter = Counter([getNum(set(word)) for word in words if len(set(word)) < 8])
         ans = []
         dic = dict()
@@ -14,5 +14,5 @@ class Solution:
             for c in puzzle[1:]:
                 sub += [m | (1 << (ord(c) - 97)) for m in sub]
             ans.append(sum(counter[w] for w in sub))
-            
+
         return ans

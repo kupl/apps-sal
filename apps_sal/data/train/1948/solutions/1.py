@@ -13,8 +13,8 @@ class Solution:
                         order.append((angle + delta, -1))
             order.sort(key=lambda x: (x[0], -x[1]))
             val = 1
-            for _, entry in order: 
-                res = max(res, val := val+entry)
+            for _, entry in order:
+                res = max(res, val := val + entry)
             # count = 1
             # for _, entry in order:
             #     count += entry

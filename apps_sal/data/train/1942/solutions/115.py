@@ -3,8 +3,8 @@ class Solution:
         n = len(favoriteCompanies)
         res = list(range(n))
         seen = set()
-        for i in range(n-1):
-            for j in range(i+1, n):
+        for i in range(n - 1):
+            for j in range(i + 1, n):
                 if i != j:
                     first_set = set(favoriteCompanies[i])
                     second_set = set(favoriteCompanies[j])
@@ -18,4 +18,3 @@ class Solution:
                             seen.add(j)
                             res.remove(j)
         return res
-

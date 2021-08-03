@@ -8,8 +8,8 @@ class Solution:
         rem = set()
 
         for i in range(n):
-            for j in range(i+1, n):
-                if not fav[i] - fav[j]: # then i is a subset of j
+            for j in range(i + 1, n):
+                if not fav[i] - fav[j]:  # then i is a subset of j
                     rem.add(i)
                 if not fav[j] - fav[i]:
                     rem.add(j)

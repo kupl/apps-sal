@@ -1,4 +1,6 @@
 DIR = ((-1, 0), (1, 0), (0, -1), (0, 1))
+
+
 class Solution:
     def getMaximumGold(self, grid):
         res = 0
@@ -8,7 +10,7 @@ class Solution:
                 if grid[x][y] > 0:
                     res = max(res, self.dfs(grid, x, y, {(x, y)}))
         return res
-    
+
     def dfs(self, grid, x, y, visited):
         m, n = len(grid), len(grid[0])
         res = grid[x][y]

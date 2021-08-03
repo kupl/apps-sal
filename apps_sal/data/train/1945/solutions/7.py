@@ -14,4 +14,3 @@ class Solution:
             else:
                 values[s1] = 1
         return max(values.values())
-

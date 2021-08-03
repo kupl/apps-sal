@@ -7,8 +7,8 @@ class Solution:
             for j in range(l):
                 if i != j:
                     if (set(favoriteCompanies[i]) | set(favoriteCompanies[j])) == set(favoriteCompanies[j]):
-                        f=1
+                        f = 1
                         break
-            if f==0:
+            if f == 0:
                 res.append(i)
         return res

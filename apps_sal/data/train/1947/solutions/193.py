@@ -7,8 +7,7 @@ class Solution:
                 counter[ch] = max(counter[ch], cb[ch])
         ans = []
         for a in A:
-            ca = Counter(a) 
+            ca = Counter(a)
             if all(ca[ch] >= counter[ch] for ch in counter):
                 ans.append(a)
-        return ans        
-
+        return ans

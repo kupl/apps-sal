@@ -10,7 +10,7 @@ class Solution:
                 c_id += 1
         for idx, fc in enumerate(favoriteCompanies):
             fc.sort(key=lambda x: h[x])
-            
+
         N = len(favoriteCompanies)
         ret = []
         for i in range(N):
@@ -26,5 +26,4 @@ class Solution:
                     break
             else:
                 ret.append(i)
-        return ret 
-
+        return ret

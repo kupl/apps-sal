@@ -4,6 +4,7 @@ Time: O(M+N)
 Space: O(1) -> if output is not considered else O(M+N)
 '''
 
+
 class Solution:
     def intervalIntersection(self, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
         ans = []
@@ -25,4 +26,3 @@ class Solution:
                 j += 1
 
         return ans
-

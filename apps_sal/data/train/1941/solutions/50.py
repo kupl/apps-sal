@@ -26,4 +26,3 @@ class Solution:
         #             cur += cnt[w]
         #     ans.append(cur)
         # return ans
-

@@ -6,7 +6,7 @@ class Solution:
             else:
                 row[i] = 0
         return row
-       
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         # each row: maintain list of indices to flip to 1 or 0 for equality
         # then need to find greatest intersection out of all those
@@ -16,9 +16,9 @@ class Solution:
                 seen[tuple(row)] += 1
             else:
                 seen[tuple(row)] += 1
-    
+
         result = 0
         for val in seen.values():
             result = max(result, val)
-        
+
         return result

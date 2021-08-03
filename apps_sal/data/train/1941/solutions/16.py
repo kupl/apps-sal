@@ -8,4 +8,3 @@ class Solution:
                 subs += [s + c for s in subs]
             res.append(sum(count[frozenset(s)] for s in subs))
         return res
-

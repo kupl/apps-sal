@@ -30,6 +30,5 @@ class Solution:
         visited.discard((r, c))
         return res
 
-
     def in_area(self, grid, r, c):
         return 0 <= r < len(grid) and 0 <= c < len(grid[0])

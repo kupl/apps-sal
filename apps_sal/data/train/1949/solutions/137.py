@@ -6,11 +6,14 @@ Another good DFS backtracking practice
 Time(exponential, around 3^n)
 Space(Number of plots with gold)
 '''
+
+
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
-        direction = [(1,0),(-1,0), (0,1),(0,-1)]
+        direction = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         N = len(grid)
         M = len(grid[0])
+
         def dfs(src, seen, pSum):
             curI, curJ = src[0], src[1]
             if (curI, curJ) not in seen and curI >= 0 and curI < N and curJ >= 0 and curJ < M and grid[curI][curJ] != 0:
@@ -26,7 +29,5 @@ class Solution:
             for j in range(M):
                 if grid[i][j] != 0:
                     seen = set()
-                    dfs((i,j), seen, 0)
+                    dfs((i, j), seen, 0)
         return self.sol
-                
-

@@ -2,7 +2,8 @@ class Solution:
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
         count = collections.Counter()
         for w in words:
-            if len(set(w)) > 7: continue
+            if len(set(w)) > 7:
+                continue
             m = 0
             for c in w:
                 m |= 1 << (ord(c) - 97)

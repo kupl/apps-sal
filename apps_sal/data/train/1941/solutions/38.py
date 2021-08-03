@@ -3,7 +3,7 @@ class Solution:
         cc = collections.Counter()
         for w in words:
             cc[tuple(sorted(set(list(w))))] += 1
-        
+
         res = []
         for pzl in puzzles:
             possible_sets = [set([pzl[0]])]

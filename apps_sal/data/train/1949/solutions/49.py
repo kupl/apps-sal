@@ -19,11 +19,11 @@ class Solution:
         visited.add((x, y))
 
         # Search all neighbours
-        result += max(self.search(grid, x-1, y, visited),
-                      self.search(grid, x, y-1, visited),
-                      self.search(grid, x+1, y, visited),
-                      self.search(grid, x, y+1, visited))
-        
+        result += max(self.search(grid, x - 1, y, visited),
+                      self.search(grid, x, y - 1, visited),
+                      self.search(grid, x + 1, y, visited),
+                      self.search(grid, x, y + 1, visited))
+
         visited.remove((x, y))
 
         return result

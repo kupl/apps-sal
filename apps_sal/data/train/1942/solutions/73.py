@@ -3,35 +3,34 @@ class Solution:
         # s=set()
         # b=set()
         # x=s.intersection(b)
-        glb=set()
-        ct=0
+        glb = set()
+        ct = 0
         # d={}
-        ds={}
+        ds = {}
         for i in favoriteCompanies:
             for j in i:
                 if j not in glb:
-                    ct=ct+1
-                    ds[j]=ct
+                    ct = ct + 1
+                    ds[j] = ct
                     glb.add(j)
-        d=collections.defaultdict(set)
-        
+        d = collections.defaultdict(set)
+
         for i in range(len(favoriteCompanies)):
-            new=set()
+            new = set()
             for j in favoriteCompanies[i]:
                 new.add(ds[j])
-                
-            d[i]=new
-        ar=[]
+
+            d[i] = new
+        ar = []
         for i in range(len(favoriteCompanies)):
-            found=0
+            found = 0
             for j in range(len(favoriteCompanies)):
-                if i!=j:
-                    x=d[i].intersection(d[j])
-                    if x==d[i]:
-                        found=1
+                if i != j:
+                    x = d[i].intersection(d[j])
+                    if x == d[i]:
+                        found = 1
                         break
-            if found==0:
+            if found == 0:
                 ar.append(i)
-                
-        
+
         return ar

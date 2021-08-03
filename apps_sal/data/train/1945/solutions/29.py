@@ -8,19 +8,17 @@ class Solution:
             a = ''
             b = ''
             for j in range(m):
-                if matrix[i][j]==0:
-                    a+=str(j)
+                if matrix[i][j] == 0:
+                    a += str(j)
                 else:
-                    b+=str(j)
+                    b += str(j)
             #a = tuple(a)
             #b = tuple(b)
             if a not in rows:
                 rows[a] = 0
             if b not in rows:
                 rows[b] = 0
-            rows[a]+=1
-            rows[b]+=1
+            rows[a] += 1
+            rows[b] += 1
             max_value = max(max_value, rows[a], rows[b])
         return max_value
-                    
-

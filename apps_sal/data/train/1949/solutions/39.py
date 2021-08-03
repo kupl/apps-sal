@@ -14,7 +14,7 @@ class Solution:
     def get_gold(self, grid, row, col):
         if (row < 0 or row >= len(grid)
           or col < 0 or col >= len(grid[row])
-          or grid[row][col] == 0):
+                or grid[row][col] == 0):
             return 0
 
         ori = grid[row][col]
@@ -29,4 +29,3 @@ class Solution:
         grid[row][col] = ori
 
         return gold + ori
-

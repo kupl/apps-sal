@@ -15,14 +15,14 @@ def dfs(encode, cur, sub_encodes):
         sub_encodes.add(encode)
         return
     elif encode[cur] == '1':
-        sub_zero = encode[:cur] + '0' + encode[cur+1:]
-        sub_one = encode[:cur] + '1' + encode[cur+1:]
+        sub_zero = encode[:cur] + '0' + encode[cur + 1:]
+        sub_one = encode[:cur] + '1' + encode[cur + 1:]
         sub_encodes.add(sub_zero)
         sub_encodes.add(sub_one)
-        dfs(sub_zero, cur+1, sub_encodes)
-        dfs(sub_one, cur+1, sub_encodes)
+        dfs(sub_zero, cur + 1, sub_encodes)
+        dfs(sub_one, cur + 1, sub_encodes)
     else:
-        dfs(encode, cur+1, sub_encodes)
+        dfs(encode, cur + 1, sub_encodes)
 
 
 class Solution:
@@ -41,4 +41,3 @@ class Solution:
             result = sum([records[sub_encode] for sub_encode in list(sub_encodes) if sub_encode[idx_first] == '1'])
             results.append(result)
         return results
-

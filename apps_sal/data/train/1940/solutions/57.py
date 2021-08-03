@@ -12,11 +12,9 @@ class Solution:
             ptr = ptr.__next__
         result = [0] * len(arr)
         s = []
-        for i in range(len(arr)-1,-1,-1):
-            while (len(s)>0 and s[-1]<= arr[i]):
+        for i in range(len(arr) - 1, -1, -1):
+            while (len(s) > 0 and s[-1] <= arr[i]):
                 s.pop()
-            result[i] = 0 if len(s)==0 else s[-1]
+            result[i] = 0 if len(s) == 0 else s[-1]
             s.append(arr[i])
         return result
-            
-

@@ -6,6 +6,7 @@ class Solution:
         A_index = [0, 0]
         B_index = [0, 0]
         result = []
+
         def get_event(events, index):
             if index[0] >= len(events):
                 return -1
@@ -13,7 +14,7 @@ class Solution:
         while True:
             event_a = get_event(A, A_index), A_index[1]
             event_b = get_event(B, B_index), B_index[1]
-            if event_a[0] < 0 or event_b[0] < 0: 
+            if event_a[0] < 0 or event_b[0] < 0:
                 break
             event = min(event_a[0], event_b[0])
             is_already_in_progress = all(state)
@@ -36,6 +37,5 @@ class Solution:
             if is_already_in_progress:
                 result[-1][1] = event
             elif all(state):
-                result.append([event,-1])
+                result.append([event, -1])
         return result
-

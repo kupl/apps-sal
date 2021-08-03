@@ -5,8 +5,7 @@ class Solution:
         for i in range(len(A)):
             answer.append(i)
             for j in range(len(A)):
-                if i != j and len(A[i]|A[j]) == len(A[j]):
+                if i != j and len(A[i] | A[j]) == len(A[j]):
                     answer.pop()
                     break
         return answer
-

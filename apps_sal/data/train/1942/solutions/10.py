@@ -1,7 +1,7 @@
 class Solution:
     def peopleIndexes(self, com: List[List[str]]) -> List[int]:
         c = com[:]
-        com.sort(key=lambda x:-len(x))
+        com.sort(key=lambda x: -len(x))
         index = 1
         while index < len(com):
             curr = set(com[index])

@@ -21,8 +21,10 @@ class Solution:
         for vct in d:
             inv = tuple(el ^ 1 for el in vct)
 
-            if inv in d: matches = d[vct] + d[inv]
-            else:        matches = d[vct]
+            if inv in d:
+                matches = d[vct] + d[inv]
+            else:
+                matches = d[vct]
 
             res = max(res, matches)
         return res

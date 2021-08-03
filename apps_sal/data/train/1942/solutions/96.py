@@ -11,5 +11,6 @@ class Solution:
                 if not d[i] - d[j]:
                     subSet = False
                     break
-            if subSet: res.append(i)         
-        return res    
+            if subSet:
+                res.append(i)
+        return res

@@ -9,9 +9,9 @@ class Solution:
             for x, y in ((i, j + 1), (i, j - 1), (i + 1, j), (i - 1, j)):
                 temp_max = max(dfs(x, y, total), temp_max)
             grid[i][j] -= 1000
-            
+
             return temp_max
-        
+
         m = len(grid)
         n = len(grid[0])
         return max(dfs(i, j, 0) for i in range(m) for j in range(n))

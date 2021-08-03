@@ -10,11 +10,11 @@ class Solution:
         i = 0
         while head:
             ans.append(0)
-            stk.append((i,head.val))
+            stk.append((i, head.val))
             # print(i, head.val, stk)
-            while head.next and stk and head.next.val>stk[-1][1]:
-                j,_=stk.pop()
-                ans[j]=head.next.val
+            while head.next and stk and head.next.val > stk[-1][1]:
+                j, _ = stk.pop()
+                ans[j] = head.next.val
             head = head.next
-            i+=1
+            i += 1
         return ans

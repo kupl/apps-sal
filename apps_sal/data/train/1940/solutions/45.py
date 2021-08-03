@@ -22,4 +22,3 @@ class Solution:
             node = node.__next__
             i += 1
         return ans
-

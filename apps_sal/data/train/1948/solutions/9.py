@@ -1,17 +1,16 @@
 class Solution:
     def numPoints(self, points: List[List[int]], r: int) -> int:
-        
+
         def count(x0, y0):
             nonlocal ans
-            
+
             cnt = 0
             for x, y in points:
                 if (x - x0) * (x - x0) + (y - y0) * (y - y0) <= r * r + 1e-6:
                     cnt += 1
-            
+
             ans = max(ans, cnt)
-            
-        
+
         n = len(points)
         ans = 1
         for i in range(n):
@@ -33,5 +32,5 @@ class Solution:
                 count(x0, y0)
                 x0, y0 = x_mid + d * cos, y_mid + d * sin
                 count(x0, y0)
-                
+
         return ans

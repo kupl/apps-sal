@@ -5,7 +5,7 @@ class Solution:
             if row[0] == 0:
                 key = tuple(row)
             else:
-                newrow = [1-x for x in row]
+                newrow = [1 - x for x in row]
                 key = tuple(newrow)
             if key in pattern_dict:
                 pattern_dict[key] += 1

@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         ch2cnt = defaultdict(int)
@@ -18,4 +20,4 @@ class Solution:
                         tmp_dict.pop(ch)
             if len(tmp_dict) == 0:
                 res.append(a)
-        return res 
+        return res

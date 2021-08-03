@@ -5,7 +5,7 @@ class Solution:
                 return 0
             val = grid[i][j]
             grid[i][j] = 0
-            res = val + max(helper(i + 1, j), helper(i - 1, j), helper(i, j + 1), helper(i , j - 1))
+            res = val + max(helper(i + 1, j), helper(i - 1, j), helper(i, j + 1), helper(i, j - 1))
             grid[i][j] = val
             return res
         self.res = 0

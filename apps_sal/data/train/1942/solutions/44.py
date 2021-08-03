@@ -21,4 +21,3 @@ class Solution:
             result += curr
         result = [tuple(sorted(x)) for x in result]
         return sorted([val_to_key[x] for x in result])
-

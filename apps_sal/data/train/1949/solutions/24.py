@@ -1,6 +1,6 @@
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
-        dirs = [[-1,0], [1,0], [0,1],[0,-1]]
+        dirs = [[-1, 0], [1, 0], [0, 1], [0, -1]]
         m, n = len(grid), len(grid[0])
 
         def dfs(x, y, gold):
@@ -11,7 +11,7 @@ class Solution:
                 nx = dx + x
                 ny = dy + y
                 if 0 <= nx < m and 0 <= ny < n and grid[nx][ny]:
-                    dfs(nx, ny, gold+temp)
+                    dfs(nx, ny, gold + temp)
             grid[x][y] = temp
 
         self.max_gold = 0

@@ -1,11 +1,10 @@
 class Solution:
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
-        
-        
+
         htable = {}
         for i, j in enumerate(favoriteCompanies):
             htable[i] = set(j)
-        result = []    
+        result = []
         for k in htable:
             flag = True
             for j in list(htable.values()):
@@ -19,5 +18,3 @@ class Solution:
                 result.append(k)
         print(result)
         return result
-                    
-

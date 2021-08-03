@@ -20,4 +20,3 @@ class Solution:
                 ans.append(a)
 
         return ans
-

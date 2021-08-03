@@ -10,7 +10,7 @@ class Solution:
 
                 freq_cur = [0] * 26
                 for c in word:
-                    freq_cur[ord(c)-ord('a')] += 1
+                    freq_cur[ord(c) - ord('a')] += 1
 
                 for i in range(26):
                     freq_B[i] = max(freq_B[i], freq_cur[i])
@@ -19,7 +19,7 @@ class Solution:
         for word in A:
             freq_A = [0] * 26
             for c in word:
-                freq_A[ord(c)-ord('a')] += 1
+                freq_A[ord(c) - ord('a')] += 1
 
             broke_early = False
             for i in range(26):

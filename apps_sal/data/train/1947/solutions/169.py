@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         cnt = Counter()
@@ -13,4 +15,3 @@ class Solution:
             if all(wordcnt[c] >= cnt[c] for c in cnt):
                 ans.append(word)
         return ans
-

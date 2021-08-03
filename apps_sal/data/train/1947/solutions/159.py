@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         res = []
@@ -18,5 +20,3 @@ class Solution:
             if flag:
                 res.append(s)
         return res
-                  
-

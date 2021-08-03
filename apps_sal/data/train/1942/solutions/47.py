@@ -4,7 +4,7 @@ class Solution:
         for fav in range(len(favoriteCompanies)):
             for company in favoriteCompanies[fav]:
                 favorite_index[company].add(fav)
-        
+
         result = []
         for fav in range(len(favoriteCompanies)):
             subsets = set()

@@ -9,17 +9,16 @@ class Solution:
         ptr = head
         while ptr:
             st1.append(ptr.val)
-            ptr=ptr.__next__
-        
-        st2=[]
-        ans=[]
+            ptr = ptr.__next__
+
+        st2 = []
+        ans = []
         while st1:
-            while st2 and st2[-1]<=st1[-1]:
+            while st2 and st2[-1] <= st1[-1]:
                 st2.pop()
-            if len(st2)==0:
+            if len(st2) == 0:
                 ans.append(0)
             else:
                 ans.append(st2[-1])
             st2.append(st1.pop())
         return ans[::-1]
-

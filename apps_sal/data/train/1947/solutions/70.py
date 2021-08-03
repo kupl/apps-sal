@@ -6,14 +6,13 @@ class Solution:
             for c in B[i]:
                 max_cnt[ord(c) - ord('a')] += 1
             cover = [max(x, y) for x, y in zip(cover, max_cnt)]
-        
+
         res = []
         for i in range(len(A)):
             cnt = [0] * 26
             for c in A[i]:
                 cnt[ord(c) - ord('a')] += 1
-            if all([x>=y for x, y in zip(cnt, cover)]):
+            if all([x >= y for x, y in zip(cnt, cover)]):
                 res.append(A[i])
-        
-        return res
 
+        return res

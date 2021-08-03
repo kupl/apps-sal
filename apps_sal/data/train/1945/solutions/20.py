@@ -4,10 +4,10 @@ class Solution:
         max_value = 0
         n = len(matrix)
         for i in range(n):
-            if matrix[i][0]==1:
+            if matrix[i][0] == 1:
                 a = tuple(matrix[i])
             else:
-                a = tuple([1-c for c in matrix[i]])
+                a = tuple([1 - c for c in matrix[i]])
            # for j in range(m):
           #      if matrix[i]  # [j]==0:
               #      a+=str(j)
@@ -19,10 +19,8 @@ class Solution:
                 rows[a] = 0
            # if b not in rows:
          #       rows[b] = 0
-            rows[a]+=1
-         
+            rows[a] += 1
+
         # rows[b]+=1
             max_value = max(max_value, rows[a])
         return max_value
-                    
-

@@ -13,17 +13,12 @@ class Solution:
             res.append(0)
             val = curr.val
             while stack and stack[-1][0] < val:
-                v , index = stack.pop()
+                v, index = stack.pop()
                 res[index] = val
-            
-            stack.append((val,i))
-            i  = i + 1
-            curr = curr.__next__
-        del stack    
-        #print(stack)    
-        return res     
-        
-                
-                              
-        
 
+            stack.append((val, i))
+            i = i + 1
+            curr = curr.__next__
+        del stack
+        # print(stack)
+        return res

@@ -1,8 +1,10 @@
 import time
+
+
 class Solution:
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         flip = []
-        flip2=[]
+        flip2 = []
         ma = 0
         for i in matrix:
             temp = []
@@ -15,7 +17,7 @@ class Solution:
             flip.append(temp)
             flip2.append(temp2)
         for i in flip:
-            if flip.count(i) + flip2.count(i)> ma:
-                ma = flip.count(i)  + flip2.count(i)
-       
+            if flip.count(i) + flip2.count(i) > ma:
+                ma = flip.count(i) + flip2.count(i)
+
         return ma

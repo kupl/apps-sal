@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
         ans = [0] * len(puzzles)
@@ -8,8 +9,8 @@ class Solution:
             mask = 0
             for char in word:
                 mask |= 1 << (ord(char) - ord('a'))
-            wordSet[mask] = wordSet.get(mask, 0)+1
-                    
+            wordSet[mask] = wordSet.get(mask, 0) + 1
+
         for i in range(len(puzzles)):
             first = 1 << (ord(puzzles[i][0]) - ord('a'))
             bitSet = 0
@@ -21,6 +22,6 @@ class Solution:
                     ans[i] += wordSet.get(mask, 0)
                 if mask == 0:
                     break
-                
-                mask = (mask-1) & bitSet
+
+                mask = (mask - 1) & bitSet
         return ans

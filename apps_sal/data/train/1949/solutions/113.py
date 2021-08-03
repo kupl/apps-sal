@@ -1,8 +1,9 @@
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         nrow, ncol = len(grid), len(grid[0])
-        
+
         max_len = 0
+
         def dfs(trajectory, r, c):
             nonlocal max_len
             count_neighbor = 0
@@ -24,4 +25,3 @@ class Solution:
                     dfs(set([(r, c)]), r, c)
 
         return max_len
-

@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         b_hash = {}
@@ -9,7 +11,7 @@ class Solution:
                     b_hash[j] = max(i.count(j), b_hash[j])
                 else:
                     b_hash[j] = i.count(j)
-        
+
         for wrd in A:
             new_b_hash = b_hash.copy()
             for i in set(wrd):
@@ -21,12 +23,6 @@ class Solution:
                     value_flag = False
                     break
             if value_flag:
-                ans.append(wrd)                
-            
+                ans.append(wrd)
+
         return ans
-                
-                    
-            
-
-        
-

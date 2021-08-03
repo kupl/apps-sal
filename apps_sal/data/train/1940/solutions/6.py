@@ -7,7 +7,7 @@ class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         stack = []
         tail = head
-        res = [] 
+        res = []
         if not head:
             return res
         res = [None] * 10000
@@ -24,5 +24,5 @@ class Solution:
         while i < len(stack):
             _, index = stack[i]
             res[index] = 0
-            i+=1
+            i += 1
         return res[:idx]

@@ -9,11 +9,11 @@ class Solution:
         for i in range(n):
             flag = 1
             for j in range(n):
-                if i==j:
+                if i == j:
                     continue
-                if f_C[i]&f_C[j] == f_C[i]:
-                    flag=0
+                if f_C[i] & f_C[j] == f_C[i]:
+                    flag = 0
                     break
-            if flag==1:
+            if flag == 1:
                 ans.append(i)
-        return ans;
+        return ans

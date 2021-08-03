@@ -9,4 +9,3 @@ class Solution:
             if len(b_union_ctr - a_count) == 0:
                 output.append(a_element)
         return output
-

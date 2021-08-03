@@ -9,7 +9,7 @@ class Solution:
         self.dfs(cur_gold + grid[i][j], max_gold, grid, visited, i, j - 1)
         max_gold[0] = max(max_gold[0], cur_gold + grid[i][j])
         visited[i][j] = 0
-        
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         m, n = len(grid), len(grid[0])
         visited = [[0 for i in range(n)] for j in range(m)]

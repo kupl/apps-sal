@@ -9,16 +9,16 @@ class Solution:
             total += tmp
             grid[row][col] = 0
             if row < len(grid):
-                findSum(row+1, col, total)
+                findSum(row + 1, col, total)
             if row >= 0:
-                findSum(row-1, col, total)
+                findSum(row - 1, col, total)
             if col < len(grid[0]):
-                findSum(row, col+1, total)
+                findSum(row, col + 1, total)
             if col >= 0:
-                findSum(row, col-1, total)
+                findSum(row, col - 1, total)
             self.sm = max(self.sm, total)
             grid[row][col] = tmp
-        
+
         self.sm = 0
         total = 0
         for row in range(len(grid)):

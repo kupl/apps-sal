@@ -15,27 +15,22 @@ class Solution:
 
         while True:
 
-            res+=[0]
+            res += [0]
 
             #print(stack, vals, ind, res, head.val)
-            
-            while len(stack)>0 and vals[stack[-1]]<head.val:
+
+            while len(stack) > 0 and vals[stack[-1]] < head.val:
                 res[stack[-1]] = head.val
                 stack.pop()
-                
 
+            stack += [ind]
+            vals += [head.val]
 
-            stack+=[ind]
-            vals+=[head.val]
+            ind += 1
 
-            ind+=1
-
-            
             if head.__next__ is not None:
                 head = head.__next__
             else:
                 break
-            
-        
-        return res
 
+        return res

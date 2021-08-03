@@ -14,4 +14,3 @@ class Solution:
                     s.remove(i)
                     break
         return list(s)
-

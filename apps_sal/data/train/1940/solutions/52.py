@@ -10,7 +10,7 @@ class Solution:
         while node:
             vals.append(node.val)
             node = node.__next__
-        
+
         n = len(vals)
         ret = [0 for _ in range(n)]
         q = [(n - 1, vals[n - 1])]  # idx, val
@@ -26,6 +26,5 @@ class Solution:
                     heapq.heappop(q)
             else:
                 heapq.heappush(q, (i, curr))
-        
-        return ret
 
+        return ret

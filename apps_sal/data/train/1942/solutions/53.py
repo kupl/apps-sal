@@ -1,7 +1,7 @@
 class Solution:
     def peopleIndexes(self, fv: List[List[str]]) -> List[int]:
-        
-        dic = defaultdict(lambda : set())
+
+        dic = defaultdict(lambda: set())
         for i in range(len(fv)):
             for cmp in fv[i]:
                 dic[cmp].add(i)
@@ -18,4 +18,3 @@ class Solution:
                 ans.append(ind)
             ind += 1
         return sorted(ans)
-

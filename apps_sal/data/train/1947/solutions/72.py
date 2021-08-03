@@ -4,4 +4,3 @@ class Solution:
         for b in B:
             count = count | collections.Counter(b)
         return [a for a in A if Counter(a) & count == count]
-

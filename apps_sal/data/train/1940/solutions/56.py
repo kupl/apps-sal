@@ -14,4 +14,3 @@ class Solution:
             res.append(0)
             head = head.__next__
         return res
-

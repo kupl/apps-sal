@@ -2,7 +2,7 @@ class Solution:
     def intervalIntersection(self, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
         if not A or not B:
             return []
-        
+
         ans = []
         i = j = 0
         while i < len(A) and j < len(B):
@@ -18,4 +18,3 @@ class Solution:
                 i += 1
                 j += 1
         return ans
-

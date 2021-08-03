@@ -6,7 +6,7 @@ class Solution:
         b_cnt = collections.Counter()
         for b in B:
             b_cnt |= collections.Counter(b)
-            
+
         res = []
         for a in A:
             if collections.Counter(a) & b_cnt == b_cnt:

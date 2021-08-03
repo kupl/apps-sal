@@ -7,7 +7,8 @@ class Solution:
         for i in range(length):
             pattern = favoriteCompanies[i]
             for flist in favoriteCompanies:
-                if pattern < flist: break
+                if pattern < flist:
+                    break
             else:
                 res.append(i)
         return res

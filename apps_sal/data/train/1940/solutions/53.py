@@ -8,7 +8,7 @@ class Solution:
         output = []
         stack = []
         curr = head
-        
+
         while curr:
             while stack and stack[-1][1] < curr.val:
                 output[stack.pop()[0]] = curr.val
@@ -16,7 +16,3 @@ class Solution:
             output.append(0)
             curr = curr.__next__
         return output
-            
-
-            
-

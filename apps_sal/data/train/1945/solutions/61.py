@@ -10,8 +10,7 @@ class Solution:
             cache[str(vals)] += 1
             cache[str(trans)] += 1
         return max(cache.values())
-       
-    
+
     '''
     
 Counter({(0, 0, 0): 1})
@@ -27,4 +26,3 @@ Counter({(1, 1, 0): 2, (0, 0, 0): 1, (1, 1, 1): 1, (0, 0, 1): 1})
 Counter({(0, 0, 1): 2, (1, 1, 0): 2, (0, 0, 0): 1, (1, 1, 1): 1})
 =========
     '''
-

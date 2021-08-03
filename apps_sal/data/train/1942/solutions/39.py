@@ -14,9 +14,9 @@ class Solution:
                     break
             if not found:
                 company_set_per_person.append((company_set, i))
-        
+
         # print(company_set_per_person)
-        
+
         ans = []
         for i, company_list in enumerate(favorite_companies):
             company_set = set(company_list)

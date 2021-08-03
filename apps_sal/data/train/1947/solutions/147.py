@@ -19,12 +19,14 @@ def isSubset(word1, word2Hist):
         else:
             return False
     return True
-        
+
+
 def isUniversal(word, bHist):
     if isSubset(word, bHist) == False:
         return False
     return True
-    
+
+
 def createMaxHistogram(arr):
     hist = {}
     for word in arr:
@@ -35,8 +37,8 @@ def createMaxHistogram(arr):
             else:
                 hist[key] = wordHist[key]
     return hist
-    
-    
+
+
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         res = []
@@ -45,4 +47,3 @@ class Solution:
             if isUniversal(word, bHist):
                 res.append(word)
         return res
-

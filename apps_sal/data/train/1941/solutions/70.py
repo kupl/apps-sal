@@ -9,6 +9,7 @@ class Solution:
                 n >>= 1
                 cur <<= 1
             return set(res)
+
         def to_bit(w):
             res = 0
             for c in w:
@@ -18,7 +19,8 @@ class Solution:
         for w in words:
             visited = set()
             for c in w:
-                if c in visited: continue
+                if c in visited:
+                    continue
                 visited.add(c)
                 b = to_bit(w)
                 if b not in m[c]:
@@ -29,8 +31,8 @@ class Solution:
         for w in puzzles:
             s1, count = m[w[0]], 0
             for i in generate(to_bit(w)):
-                if i in s1: 
+                if i in s1:
                     count += s1[i]
             res.append(count)
-        
+
         return res

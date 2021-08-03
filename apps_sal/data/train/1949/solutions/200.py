@@ -16,6 +16,3 @@ class Solution:
                 self.grid[i][j] = 0
                 self.dfs(i + m, j + n, cur_gold + gold)
                 self.grid[i][j] = gold
-            
-        
-

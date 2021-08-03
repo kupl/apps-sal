@@ -9,16 +9,16 @@ class Solution:
                 if grid[r][c] == 0:
                     continue
                 self.dfs(grid, r, c, grid[r][c], set([(r, c)]))
-        
+
         return self.ans
-    
+
     def dfs(self, g, r, c, tot, used):
         if tot > self.ans:
             self.ans = tot
-            
-        dirs = (0,1),(1,0),(0,-1),(-1,0)
+
+        dirs = (0, 1), (1, 0), (0, -1), (-1, 0)
         R, C = len(g), len(g[0])
-        
+
         for dr, dc in dirs:
             r2, c2 = r + dr, c + dc
             if not (0 <= r2 < R and 0 <= c2 < C):
