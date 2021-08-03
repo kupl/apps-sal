@@ -1,4 +1,6 @@
 import re
+
+
 def time_correct(t):
     if t == '':
         return ''
@@ -13,6 +15,6 @@ def time_correct(t):
             min -= 60
             hr += 1
         if hr > 23:
-            hr -= hr//24*24
+            hr -= hr // 24 * 24
         return '{:02d}:{:02d}:{:02d}'.format(hr, min, sec)
     return None

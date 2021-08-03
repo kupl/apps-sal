@@ -1,5 +1,6 @@
 from math import ceil
 
+
 def mega_mind(hp, dps, shots, regen):
     if hp > dps * shots <= regen:
         return -1

@@ -1,1 +1,1 @@
-nth_even = lambda n: n - 1 << 1
+def nth_even(n): return n - 1 << 1

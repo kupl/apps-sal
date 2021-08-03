@@ -1,5 +1,7 @@
-sumin = lambda n: n * (n + 1) * (2 * n + 1) // 6
-    
-sumax = lambda n: n * (n + 1) * (4 * n - 1) // 6
-    
-sumsum = lambda n: sumin(n) + sumax(n)
+def sumin(n): return n * (n + 1) * (2 * n + 1) // 6
+
+
+def sumax(n): return n * (n + 1) * (4 * n - 1) // 6
+
+
+def sumsum(n): return sumin(n) + sumax(n)

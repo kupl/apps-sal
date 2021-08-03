@@ -6,4 +6,3 @@ def flatten_me(lst):
         else:
             result.append(item)
     return result
-

@@ -1,5 +1,5 @@
 #enum = []
-#for n in l:
+# for n in l:
 #        if n % 2 == 0:
 #            enum.append(n)
 def nth_even(n):
@@ -15,12 +15,11 @@ def nth_even(n):
 #    while j < 6500000:
 #        j += 1
 #        if j & 1 == 0:
-#            enum.append(j)        
+#            enum.append(j)
 #    while x < n:
 #        i = i + 1
 #        if i & 1 == 0:
 #            x = x + 1
 #            y = i
 #            continue
-#    return y;    
-
+#    return y;

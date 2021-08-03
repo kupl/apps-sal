@@ -1,5 +1,6 @@
 from re import match
 
+
 def time_correct(t):
     if not t:
         return t

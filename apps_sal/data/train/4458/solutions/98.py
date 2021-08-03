@@ -1,11 +1,14 @@
 import re
 
+
 def time_correct(t):
-    if not t: return t
+    if not t:
+        return t
 
     pattern = r'\d{2}:\d{2}:\d{2}'
-    
-    if not re.match(pattern, t): return None
+
+    if not re.match(pattern, t):
+        return None
 
     hours, minutes, seconds = map(int, t.split(':'))
 

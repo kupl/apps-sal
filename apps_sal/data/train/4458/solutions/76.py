@@ -1,5 +1,6 @@
 import re
 
+
 def time_correct(t):
     if t == None or t == '':
         return t
@@ -16,10 +17,5 @@ def time_correct(t):
     if hours == 24:
         hours = 0
     if hours > 24:
-        hours = hours%24
+        hours = hours % 24
     return '{:02}:{:02}:{:02}'.format(hours, minutes, seconds)
-
-
-    
-        
-

@@ -1,5 +1,6 @@
 import re
 
+
 def time_correct(s):
     try:
         assert re.match(r"^\d\d:\d\d:\d\d$", s)

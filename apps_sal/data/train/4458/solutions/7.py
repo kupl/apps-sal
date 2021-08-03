@@ -1,5 +1,6 @@
 import re
 
+
 def time_correct(t):
     if not t:
         return t
@@ -9,4 +10,3 @@ def time_correct(t):
         d_hours, minutes = divmod(minutes + d_minutes, 60)
         hours = (hours + d_hours) % 24
         return '{:02d}:{:02d}:{:02d}'.format(hours, minutes, seconds)
-

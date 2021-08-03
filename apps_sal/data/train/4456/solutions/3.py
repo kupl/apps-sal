@@ -7,4 +7,3 @@ def flatten_me(a):
         else:
             result.append(i)
     return result
-

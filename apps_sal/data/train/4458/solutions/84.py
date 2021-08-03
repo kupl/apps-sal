@@ -16,6 +16,6 @@ def time_correct(t):
                 a += 1
             if a >= 24:
                 a = a % 24
-            return '%02d:%02d:%02d' % (a,b,c)
+            return '%02d:%02d:%02d' % (a, b, c)
     except:
         return None

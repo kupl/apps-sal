@@ -1,11 +1,15 @@
 from datetime import datetime
 
+
 def time_correct(t):
-    if t == '': return ''
-    if not t: return None
+    if t == '':
+        return ''
+    if not t:
+        return None
     t = t.split(':')
-    if len(t) < 3: return None
-    
+    if len(t) < 3:
+        return None
+
     try:
         t = list(map(int, t))
     except:
@@ -18,5 +22,5 @@ def time_correct(t):
     hour = str(hour % 24 + minu // 60).zfill(2)
     minu = str(minu % 60 + seco // 60).zfill(2)
     seco = str(seco % 60).zfill(2)
-    
+
     return ':'.join([hour, minu, seco])
