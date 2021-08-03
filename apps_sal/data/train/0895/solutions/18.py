@@ -5,6 +5,7 @@ def solve(array):
         dp.append(array[i] + min(dp[i - 2], dp[i - 1]))
     return dp[N - 1]
 
+
 N = int(input())
 costs = list(map(int, input().split()))
 
@@ -14,4 +15,3 @@ elif N == 2:
     print(min(costs))
 else:
     print(min(solve(costs), solve(costs[-1::-1])))
-
