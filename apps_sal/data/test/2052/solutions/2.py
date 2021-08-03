@@ -9,6 +9,3 @@ for i in range(1, w - l):
     ans = min(ans, temp)
 
 print(ans)
-    
-    
-

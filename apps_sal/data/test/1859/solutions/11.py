@@ -12,4 +12,3 @@ for i in range(2, n + 1):
         break
 
 print(1 if n > 0 else 0)
-

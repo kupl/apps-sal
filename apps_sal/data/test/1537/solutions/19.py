@@ -98,4 +98,3 @@ for y in range(n - k + 1):
         ans = max(ans, c_p2[y][x] + r_p2[y][x])
 # print(bonus)
 print(ans + bonus)
-

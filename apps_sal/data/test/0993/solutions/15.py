@@ -9,7 +9,7 @@ A = list(map(int, input().split()))
 accr = [0] * (n + 1)
 
 for i in range(n):
-  accr[i + 1] = accr[i] + A[i]
+    accr[i + 1] = accr[i] + A[i]
 
 li = [i % m for i in accr]
 
@@ -17,8 +17,7 @@ C = Counter(li)
 
 ans = 0
 for v in list(C.values()):
-  if v > 1:
-    ans += v * (v - 1) // 2
+    if v > 1:
+        ans += v * (v - 1) // 2
 
 print(ans)
-

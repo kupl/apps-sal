@@ -5,5 +5,6 @@ for __ in range(int(input())):
     for f, nx in zip(arr, arr[1:]):
         tg = max(nx - k, 0)
         m -= tg - f
-        if m < 0: flg = False
+        if m < 0:
+            flg = False
     print('YES' if flg else 'NO')

@@ -4,23 +4,23 @@ import collections
 
 def solve_b(n, m, a):
     print(a)
-    b = [0]*(n+1)
+    b = [0] * (n + 1)
     for i in range(n):
-        b[i+1] = (a[i] + b[i]) % m
+        b[i + 1] = (a[i] + b[i]) % m
     print(c)
     print(b)
     cnt = 0
     for i in range(n):
-        for j in range(i+1, n+1):
+        for j in range(i + 1, n + 1):
             if (b[j] - b[i]) % m == 0:
                 cnt += 1
     return cnt
 
 
 def solve(n, m, a):
-    b = [0]*(n+1)
+    b = [0] * (n + 1)
     for i in range(n):
-        b[i+1] = (a[i] + b[i]) % m
+        b[i + 1] = (a[i] + b[i]) % m
     c = collections.Counter(b[1:])
     total = 0
     for k, v in list(c.items()):
@@ -28,7 +28,7 @@ def solve(n, m, a):
             v -= 1
         if v == 0:
             continue
-        total += v * (v+1)//2
+        total += v * (v + 1) // 2
     return total
 
 
@@ -67,5 +67,6 @@ class Test(unittest.TestCase):
             "1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000", m)
         expected = 25
         self.assertEqual(solve(n, m, a), expected)
+
 
 __starting_point()

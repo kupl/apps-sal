@@ -63,4 +63,3 @@ for i in range(n - k + 1):
 #         r = max(r, new_white_line_nums_col[i][j] + new_white_line_nums_row[i][j])
 
 print(r + already_white_line_nums)
-

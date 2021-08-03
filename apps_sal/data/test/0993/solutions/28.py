@@ -14,4 +14,3 @@ for s in accA:
     cntS[s] += 1
 
 print(ans)
-

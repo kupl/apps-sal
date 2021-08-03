@@ -21,4 +21,3 @@ for _ in range(int(input())):
             else:
                 m -= h2 - h1 - k
     print(ans)
-

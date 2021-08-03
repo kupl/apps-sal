@@ -5,4 +5,3 @@ for i in range(l, w - 1):
     s += a[i] - a[i - l]
     res = min(res, s)
 print(res)
-

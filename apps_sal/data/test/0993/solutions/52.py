@@ -1,7 +1,7 @@
+from itertools import accumulate
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
-from collections import defaultdict
-from itertools import accumulate
 
 
 def read():
@@ -9,12 +9,13 @@ def read():
     A = list(map(int, input().strip().split()))
     return N, M, A
 
+
 def solve(N, M, A):
     D = defaultdict(int)
-    S = [0 for i in range(N+1)]
+    S = [0 for i in range(N + 1)]
     for i in range(N):
         s = (S[i] + A[i]) % M
-        S[i+1] = s
+        S[i + 1] = s
         D[s] += 1
     ans = 0
     k = 0
@@ -29,5 +30,6 @@ def solve(N, M, A):
 def __starting_point():
     inputs = read()
     print((solve(*inputs)))
+
 
 __starting_point()

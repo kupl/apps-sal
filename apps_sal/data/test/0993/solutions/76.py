@@ -13,7 +13,7 @@ for item in tab_sum:
     cnt.setdefault(key, 0)
     cnt[key] += 1
 
-    
+
 ans = 0
 for key, val in cnt.items():
     ans += val * (val - 1) // 2

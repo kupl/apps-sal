@@ -5,9 +5,10 @@ use = [int(x) for x in input().split()]
 m = sum(use[0:l])
 s = m
 
-for i in range(1, w-l):
-    s = s - use[i-1] + use[i+l-1]
-    if s < m: m = s
+for i in range(1, w - l):
+    s = s - use[i - 1] + use[i + l - 1]
+    if s < m:
+        m = s
 
 print(m)
 
@@ -26,4 +27,3 @@ for i in range(1, w+1):
 
 print(count[-1])
 '''
-

@@ -15,4 +15,3 @@ for a in A:
     c[s] += 1
 
 print(ans)
-

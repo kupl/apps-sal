@@ -5,7 +5,7 @@ from collections import defaultdict
 def submit():
     n, m = list(map(int, input().split()))
     a = [int(e) for e in input().split()]
-    
+
     # mod mを適用
     a_mod = [e % m for e in a]
     s_mod = []
@@ -14,7 +14,7 @@ def submit():
         prev += am
         prev %= m
         s_mod.append(prev)
-    
+
     mod_cnt = defaultdict(int)
     mod_cnt[0] = 1
     ans = 0
@@ -26,4 +26,3 @@ def submit():
 
 
 submit()
-

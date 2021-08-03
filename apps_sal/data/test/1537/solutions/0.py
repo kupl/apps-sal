@@ -38,4 +38,3 @@ bv, t_var = count(n, k, t_field)
 var = list(zip(*t_var))
 
 print(bh + bv + max(h + v for (rh, rv) in zip(hor, var) for (h, v) in zip(rh, rv)))
-

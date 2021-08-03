@@ -29,28 +29,29 @@ def main():
     # inf = 2 ** 64 - 1               # (for fast JIT compile in PyPy) 1.84...e+19
     sys.setrecursionlimit(10**6)    # 1000 -> 1000000
     def input(): return sys.stdin.readline().rstrip()
-    def ii():    return int(input())
-    def mi():    return list(map(int, input().split()))
-    def mi_0():  return [int(x)-1 for x in input().split()]
-    def lmi():   return list(map(int, input().split()))
-    def lmi_0(): return list([int(x)-1 for x in input().split()])
-    def li():    return list(input())
-    
-    
+    def ii(): return int(input())
+    def mi(): return list(map(int, input().split()))
+    def mi_0(): return [int(x) - 1 for x in input().split()]
+    def lmi(): return list(map(int, input().split()))
+    def lmi_0(): return list([int(x) - 1 for x in input().split()])
+    def li(): return list(input())
+
     n, m = mi()
     L = list([int(x) % m for x in input().split()])
     # accum[i] -> (sum(L[0:i]) % m)
     # accum[j] - accum[i] (j > i) -> (sum(L[i:j]) % m)
     accum = [0] + list(accumulate(L, lambda x, y: (x + y) % m))
     # print(accum)
-    
+
     # accum[i] = accum[j] なる i < j の組み合わせの個数が答え
     ans = 0
     for _, duplicate_num in list(Counter(accum).items()):
         ans += duplicate_num * (duplicate_num - 1) // 2
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()
