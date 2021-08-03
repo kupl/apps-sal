@@ -1,14 +1,28 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time,copy,functools
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import functools
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 eps = 1.0 / 10**10
-mod = 10**9+7
-dd = [(-1,0),(0,1),(1,0),(0,-1)]
-ddn = [(-1,0),(-1,1),(0,1),(1,1),(1,0),(1,-1),(0,-1),(-1,-1)]
+mod = 10**9 + 7
+dd = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
+
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
@@ -18,15 +32,15 @@ def pf(s): return print(s, flush=True)
 
 
 def main():
-    n,m = LI()
-    s,t = LI()
+    n, m = LI()
+    s, t = LI()
     e = collections.defaultdict(list)
     for _ in range(m):
-        u,v,d = LI()
-        e[u].append((v,d))
-        e[v].append((u,d))
+        u, v, d = LI()
+        e[u].append((v, d))
+        e[v].append((u, d))
 
-    def search(s,t):
+    def search(s, t):
         d = collections.defaultdict(lambda: inf)
         dc = collections.defaultdict(int)
         d[s] = 0
@@ -42,7 +56,7 @@ def main():
 
             dc[u] %= mod
             if u == t:
-                return (d,dc)
+                return (d, dc)
 
             uc = dc[u]
 
@@ -59,10 +73,10 @@ def main():
                 elif d[uv] == vd:
                     dc[uv] += uc
 
-        return (d,dc)
+        return (d, dc)
 
-    d1,dc1 = search(s,t)
-    d2,dc2 = search(t,s)
+    d1, dc1 = search(s, t)
+    d2, dc2 = search(t, s)
     rd = d1[t]
     kk = rd / 2.0
 
@@ -74,18 +88,15 @@ def main():
             continue
         if t == kk:
             if d2[k] == t:
-                r -= pow(c,2,mod) * pow(dc2[k],2,mod) % mod
+                r -= pow(c, 2, mod) * pow(dc2[k], 2, mod) % mod
             continue
 
         for uv, ud in e[k]:
             if d2[uv] >= kk or t + ud + d2[uv] != rd:
                 continue
-            r -= pow(c,2,mod) * pow(dc2[uv],2,mod) % mod
+            r -= pow(c, 2, mod) * pow(dc2[uv], 2, mod) % mod
 
     return r % mod
 
 
-
-
 print(main())
-

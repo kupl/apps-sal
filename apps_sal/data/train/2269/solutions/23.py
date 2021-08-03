@@ -5,7 +5,7 @@ class UnionFind:
     def __init__(self, n: int) -> None:
         '木の初期化をする'
         self.p = [-1] * n
-        self.rank = [1]*n
+        self.rank = [1] * n
         self.size = [1] * n
 
     def find(self, x: int) -> int:
@@ -36,7 +36,7 @@ class UnionFind:
 
 
 n, m = list(map(int, input().split()))
-path = [[1]*n for _ in range(n)]
+path = [[1] * n for _ in range(n)]
 for j in range(n):
     path[j][j] = 0
 for i in range(m):
@@ -46,22 +46,22 @@ for i in range(m):
     path[a][b] = 0
     path[b][a] = 0
 
-uf = UnionFind(2*n)
+uf = UnionFind(2 * n)
 
 for i in range(n):
     for j in range(n):
         if path[i][j] == 1:
-            uf.unite(i, j+n)
-            uf.unite(i+n, j)
+            uf.unite(i, j + n)
+            uf.unite(i + n, j)
 
 for i in range(n):
-    if uf.same(i, i+n):
+    if uf.same(i, i + n):
         print((-1))
         return
 
 deltas: List[int] = []
 
-view = [1]*n
+view = [1] * n
 
 for i in range(n):
     if view[i] == 0:
@@ -71,23 +71,22 @@ for i in range(n):
         if uf.same(i, j):
             view[j] = 0
             delta += 1
-        elif uf.same(i, j+n):
+        elif uf.same(i, j + n):
             view[j] = 0
             delta -= 1
     delta = abs(delta)
     deltas.append(delta)
-dp = [0]*(n+10)
+dp = [0] * (n + 10)
 dp[0] = 1
 for delta in deltas:
-    dpnxt = [0]*(n+10)
-    for i in range(n+1):
-        if i+delta <= n:
-            dpnxt[i+delta] += dp[i]
-        dpnxt[abs(i-delta)] += dp[i]
+    dpnxt = [0] * (n + 10)
+    for i in range(n + 1):
+        if i + delta <= n:
+            dpnxt[i + delta] += dp[i]
+        dpnxt[abs(i - delta)] += dp[i]
     dp = dpnxt.copy()
 
-for i in range(n+1):
+for i in range(n + 1):
     if dp[i]:
-        print(((n+i)//2*((n+i-1)//2)//2 + (n-i)//2*((n-i-1)//2)//2))
+        print(((n + i) // 2 * ((n + i - 1) // 2) // 2 + (n - i) // 2 * ((n - i - 1) // 2) // 2))
         return
-

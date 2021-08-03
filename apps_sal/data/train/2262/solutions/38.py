@@ -10,15 +10,23 @@ for i in range(N):
         continue
 
     # 2つとも周回上にある
-    if x1 == 0: UP.append([i, y1])
-    elif x1 == R: DOWN.append([i, y1])
-    elif y1 == 0: LEFT.append([i, x1])
-    elif y1 == C: RIGHT.append([i, x1])
+    if x1 == 0:
+        UP.append([i, y1])
+    elif x1 == R:
+        DOWN.append([i, y1])
+    elif y1 == 0:
+        LEFT.append([i, x1])
+    elif y1 == C:
+        RIGHT.append([i, x1])
 
-    if x2 == 0: UP.append([i, y2])
-    elif x2 == R: DOWN.append([i, y2])
-    elif y2 == 0: LEFT.append([i, x2])
-    elif y2 == C: RIGHT.append([i, x2])
+    if x2 == 0:
+        UP.append([i, y2])
+    elif x2 == R:
+        DOWN.append([i, y2])
+    elif y2 == 0:
+        LEFT.append([i, x2])
+    elif y2 == C:
+        RIGHT.append([i, x2])
 
 
 # 時計回りに探索できるようにする
@@ -39,4 +47,3 @@ for n, z in Numbers:
     else:
         stack.append(n)
 print(("NO" if stack else "YES"))
-

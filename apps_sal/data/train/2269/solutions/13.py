@@ -21,17 +21,17 @@ def main():
     from sys import stdin
     input = stdin.readline
     n, m = map(int, input().split())
-    ab = [list(map(int, input().split())) for _ in [0]*m]
+    ab = [list(map(int, input().split())) for _ in [0] * m]
 
     rest = n  # 残りの辺
-    g = [set() for _ in [0]*n]
-    [g[a-1].add(b-1) for a, b in ab]
-    [g[b-1].add(a-1) for a, b in ab]
+    g = [set() for _ in [0] * n]
+    [g[a - 1].add(b - 1) for a, b in ab]
+    [g[b - 1].add(a - 1) for a, b in ab]
     s = set([i for i in range(n)])
 
     a_list, b_list = [], []
     while True:
-        if m == rest*(rest-1)//2:
+        if m == rest * (rest - 1) // 2:
             break
         a = [-1, 10**10]
         for i in s:
@@ -40,7 +40,7 @@ def main():
                 a = [i, length]
         a = a[0]
         b = [-1, 10**10]
-        for i in s-g[a]-{a}:
+        for i in s - g[a] - {a}:
             length = len(g[i])
             if length < b[1]:
                 b = [i, length]
@@ -67,10 +67,10 @@ def main():
                     g[i].remove(j)
                     g[j].remove(i)
                     m -= 1
-            if flag_a+flag_b == 0:
+            if flag_a + flag_b == 0:
                 print(-1)
                 return
-            elif flag_a*flag_b == 0:
+            elif flag_a * flag_b == 0:
                 q = {i}
                 flag = flag_a  # True→A、False→B
                 while q:
@@ -98,7 +98,7 @@ def main():
                     q = qq
             else:
                 remain.add(i)
-        for i in (a_set | b_set)-{a}-{b}:
+        for i in (a_set | b_set) - {a} - {b}:
             s.remove(i)
             rest -= 1
 
@@ -106,24 +106,24 @@ def main():
         b_list.append(len(b_set))
 
     k = len(a_list)
-    dp = [False]*(n+1)
+    dp = [False] * (n + 1)
     dp[0] = True
 
     for i in range(k):
         a, b = a_list[i], b_list[i]
-        dp2 = [False]*(n+1)
-        for j in range(n-max(a, b)+1):
-            dp2[j+a] |= dp[j]
-            dp2[j+b] |= dp[j]
+        dp2 = [False] * (n + 1)
+        for j in range(n - max(a, b) + 1):
+            dp2[j + a] |= dp[j]
+            dp2[j + b] |= dp[j]
         dp = dp2
 
     ans = 10**10
-    for j in range(rest+1):
-        for i in range(n-j+1):
+    for j in range(rest + 1):
+        for i in range(n - j + 1):
             if dp[i]:
-                p = i+j
-                q = n-p
-                ans = min(ans, p*(p-1)//2+q*(q-1)//2)
+                p = i + j
+                q = n - p
+                ans = min(ans, p * (p - 1) // 2 + q * (q - 1) // 2)
     print(ans)
 
 

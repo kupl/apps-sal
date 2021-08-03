@@ -57,4 +57,3 @@ for p, i in a:
         s.pop()
 
 print(res)
-

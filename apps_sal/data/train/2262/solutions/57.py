@@ -1,11 +1,12 @@
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
+
 
 def main():
     h, w, n = MI()
@@ -15,7 +16,8 @@ def main():
     # 原点（左上）から反時計回りに移動した距離と点の通し番号を記録
     for _ in range(n):
         i0, j0, i1, j1 = MI()
-        if (0 < i0 < h and 0 < j0 < w) or (0 < i1 < h and 0 < j1 < w): continue
+        if (0 < i0 < h and 0 < j0 < w) or (0 < i1 < h and 0 < j1 < w):
+            continue
         for i, j in [(i0, j0), (i1, j1)]:
             if j == 0 or i == h:
                 d = i + j
@@ -39,5 +41,5 @@ def main():
                 return
     print("YES")
 
-main()
 
+main()

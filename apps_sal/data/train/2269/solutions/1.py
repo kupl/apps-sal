@@ -19,10 +19,11 @@ class Graph:
     # 補グラフ
     def complement(self):
         nv = len(self.adj)
-        g  = Graph(nv, [])
+        g = Graph(nv, [])
         for u in range(nv):
             for v in range(nv):
-                if u == v: continue
+                if u == v:
+                    continue
                 g.adj[u][v] = not self.adj[u][v]
                 g.adj[v][u] = not self.adj[v][u]
         return g
@@ -42,7 +43,8 @@ class Graph:
 
     # vを含む連結成分 (節点のリスト)
     def __connectedcomp(self, v, vs):
-        if self.visited[v]: return
+        if self.visited[v]:
+            return
         self.visited[v] = True
         vs.append(v)
         for u in range(self.nvertices()):
@@ -99,7 +101,7 @@ for i in range(M):
 # 入力されたグラフの補グラフ g が2部グラフ
 g = Graph(N, edges).complement()
 ccs = g.connectedcomps()
-bs  = [cc.isbipartite() for cc in ccs]
+bs = [cc.isbipartite() for cc in ccs]
 if not all(bs):
     print(-1)
     return
@@ -114,7 +116,7 @@ for d in diffs:
         newsums.add(s + d)
     sums.update(newsums)
 
-halfdiff = sum(diffs)/2
+halfdiff = sum(diffs) / 2
 nearlyhalfdiff = min((abs(s - halfdiff), s) for s in sums)[1]
 
 # 節点数の差を最小にすると，その差はdiffになる

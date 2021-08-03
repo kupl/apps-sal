@@ -45,4 +45,3 @@ def solve(s):
 
 s = input()
 print((solve(s)))
-

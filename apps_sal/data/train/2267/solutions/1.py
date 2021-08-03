@@ -38,13 +38,14 @@ B=0 W=1とするか
 
 """
 
+from collections import deque
 import sys
 sys.setrecursionlimit(200000)
-from collections import deque
 
 MM = 0
 
-def dfs(v,p):
+
+def dfs(v, p):
     nonlocal MM
 
     if v != p and linknum[v] == 1:
@@ -53,31 +54,31 @@ def dfs(v,p):
     cl = []
     for nex in lis[v]:
         if nex != p and exist[nex]:
-            tmp = dfs(nex,v)
+            tmp = dfs(nex, v)
             cl.append(tmp)
     cl.sort()
     cl.reverse()
 
     if len(cl) == 1:
-        MM = max(MM , cl[0])
+        MM = max(MM, cl[0])
     else:
-        if (linknum[v]+c[v])%2 == 1:
-            MM = max(MM , cl[0] + cl[1] + 2)
+        if (linknum[v] + c[v]) % 2 == 1:
+            MM = max(MM, cl[0] + cl[1] + 2)
         else:
-            MM = max(MM , cl[0] + cl[1])
+            MM = max(MM, cl[0] + cl[1])
 
-    
-    if (linknum[v]+c[v]) % 2 == 1:
-        return cl[0]+ 2
+    if (linknum[v] + c[v]) % 2 == 1:
+        return cl[0] + 2
     else:
         return cl[0]
 
+
 N = int(input())
 
-lis =  [ [] for i in range(N) ]
+lis = [[] for i in range(N)]
 linknum = [0] * N
-for i in range(N-1):
-    u,v = list(map(int,input().split()))
+for i in range(N - 1):
+    u, v = list(map(int, input().split()))
     u -= 1
     v -= 1
 
@@ -106,7 +107,7 @@ while len(q) > 0:
     now = q.popleft()
     exist[now] = False
     linknum[now] = 0
-    
+
     for nex in lis[now]:
         linknum[nex] -= 1
 
@@ -138,6 +139,5 @@ for i in range(N):
             ans += linknum[i] + 1
 
 MM = 0
-pick = dfs(start,start)
+pick = dfs(start, start)
 print((ans - MM))
-

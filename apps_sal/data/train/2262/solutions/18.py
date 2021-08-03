@@ -1,5 +1,16 @@
 # coding: utf-8
-import array, bisect, collections, copy, heapq, itertools, math, random, re, string, sys, time
+import array
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import random
+import re
+import string
+import sys
+import time
 sys.setrecursionlimit(10 ** 7)
 INF = 10 ** 20
 MOD = 10 ** 9 + 7
@@ -41,7 +52,7 @@ def solve(R, C, N, num_point):
         if ((p_1[0] == 0 or p_1[0] == R) or (p_1[1] == 0 or p_1[1] == C)) and ((p_2[0] == 0 or p_2[0] == R) or (p_2[1] == 0 or p_2[1] == C)):
             point_double.append((ind + 1, change_edge_point(R, C, p_1)))
             point_double.append((ind + 1, change_edge_point(R, C, p_2)))
-    point_double.sort(key=lambda  x: x[1])
+    point_double.sort(key=lambda x: x[1])
     stack = []
     for point in point_double:
         if len(stack) == 0:
@@ -51,12 +62,12 @@ def solve(R, C, N, num_point):
             stack.pop()
         else:
             stack.append(point[0])
-    
+
     if len(stack) == 0:
         return "YES"
     else:
         return "NO"
-    
+
 
 def main():
     params = read()
@@ -65,5 +76,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

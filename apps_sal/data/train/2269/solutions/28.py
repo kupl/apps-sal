@@ -1,11 +1,11 @@
 def main():
     n, m = list(map(int, input().split()))
-    ab = [list(map(int, input().split())) for _ in [0]*m]
+    ab = [list(map(int, input().split())) for _ in [0] * m]
 
     n_hozon = n
-    g = [set() for _ in [0]*n]
-    [g[a-1].add(b-1) for a, b in ab]
-    [g[b-1].add(a-1) for a, b in ab]
+    g = [set() for _ in [0] * n]
+    [g[a - 1].add(b - 1) for a, b in ab]
+    [g[b - 1].add(a - 1) for a, b in ab]
     s = set([i for i in range(n)])
 
     # 題意：できるだけ辺が少なくなるように2つの完全グラフに分けたい
@@ -33,7 +33,7 @@ def main():
         # print(g)
         # 完全グラフかどうか
         #print(n, m, g, s)
-        if m == n*(n-1)//2:
+        if m == n * (n - 1) // 2:
             break
         a = [-1, 10**10]
         for i in s:
@@ -42,7 +42,7 @@ def main():
                 a = [i, l]
         a = a[0]
         b = [-1, 10**10]
-        for i in s-g[a]-{a}:
+        for i in s - g[a] - {a}:
             l = len(g[i])
             if l < b[1]:
                 b = [i, l]
@@ -105,7 +105,7 @@ def main():
             else:
                 remain.add(i)
             # print(g)
-        for i in (a_set | b_set)-{a}-{b}:
+        for i in (a_set | b_set) - {a} - {b}:
             s.remove(i)
             n -= 1
 
@@ -117,40 +117,39 @@ def main():
     k = len(a_list)
 
     if k == 1:
-        dp = [False]*(n+1)
+        dp = [False] * (n + 1)
         a = a_list[0]
         b = b_list[0]
         ans = 10**10
-        for i in range(m+1):
-            ans = min(ans, (a+i)*(a+i-1)//2+(n-a-i)*(n-a-i-1)//2)
+        for i in range(m + 1):
+            ans = min(ans, (a + i) * (a + i - 1) // 2 + (n - a - i) * (n - a - i - 1) // 2)
         print(ans)
         return
 
-    dp = [False]*(n+1)
+    dp = [False] * (n + 1)
     dp[0] = True
 
     for i in range(k):
         a, b = a_list[i], b_list[i]
         maxab = max(a, b)
-        dp2 = [False]*(n+1)
-        for j in range(n-maxab+1):
-            dp2[j+a] |= dp[j]
-            dp2[j+b] |= dp[j]
+        dp2 = [False] * (n + 1)
+        for j in range(n - maxab + 1):
+            dp2[j + a] |= dp[j]
+            dp2[j + b] |= dp[j]
         dp = dp2
 
-    dp2 = [False]*(n+1)
-    for j in range(m+1):
-        for i in range(n-j+1):
-            dp2[i+j] |= dp[i]
+    dp2 = [False] * (n + 1)
+    for j in range(m + 1):
+        for i in range(n - j + 1):
+            dp2[i + j] |= dp[i]
     ans = 10**10
 
-    for i in range(n+1):
+    for i in range(n + 1):
         if dp2[i] is False:
             continue
-        j = n-i
-        ans = min(ans, i*(i-1)//2+j*(j-1)//2)
+        j = n - i
+        ans = min(ans, i * (i - 1) // 2 + j * (j - 1) // 2)
     print(ans)
 
 
 main()
-

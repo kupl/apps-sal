@@ -1,14 +1,15 @@
 R, C, N = list(map(int, input().split()))
 
+
 def makexy(x1, y1):
     if y1 == 0:
         return x1
-    elif x1==R:
-        return R+y1
+    elif x1 == R:
+        return R + y1
     elif y1 == C:
-        return R*2 + C - x1
+        return R * 2 + C - x1
     else:
-        return R*2 + C*2 - y1
+        return R * 2 + C * 2 - y1
 
 
 XY = []
@@ -23,9 +24,9 @@ for _ in range(N):
         XY.append((xy1, xy2))
         XY2.append((xy1, 0))
         XY2.append((xy2, 1))
-        D.append(xy2-xy1)
+        D.append(xy2 - xy1)
 
-#print(XY)
+# print(XY)
 XY.sort()
 XY2.sort()
 D.sort()
@@ -36,7 +37,7 @@ for xy in XY2:
     if xy[1] == 0:
         Stack.append(xy)
     else:
-        D2.append(xy[0]-Stack[-1][0])
+        D2.append(xy[0] - Stack[-1][0])
         del Stack[-1]
 
 D2.sort()
@@ -45,4 +46,3 @@ if D == D2:
     print("YES")
 else:
     print("NO")
-

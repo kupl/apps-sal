@@ -33,4 +33,3 @@ for on_edge in [on_top, on_right, on_bottom, on_left]:
             stack.append(i)
 
 print(('NO' if stack else 'YES'))
-

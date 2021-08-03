@@ -24,8 +24,10 @@ heapq.heappush(pq, (0, S))
 vs = []
 while pq:
     c, vNow = heapq.heappop(pq)
-    if c > cost[vNow]: continue
-    if c > cost[T]: break
+    if c > cost[vNow]:
+        continue
+    if c > cost[T]:
+        break
     vs += [vNow]
 
     for v2, wt in adjList[vNow]:
@@ -66,4 +68,3 @@ for v, c in enumerate(cost):
                 ans = (ans - x * y) % MOD
 
 print(ans)
-

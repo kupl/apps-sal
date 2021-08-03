@@ -43,4 +43,3 @@ def solve(ppp):
 
 n, *ppp = list(map(int, sys.stdin))
 print(('Yes' if solve(ppp) else 'No'))
-

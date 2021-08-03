@@ -2,6 +2,7 @@ R, C, N = list(map(int, input().split()))
 
 points = []
 
+
 def dist(x, y):
     if x == 0:
         return R * 2 + C + (C - y)
@@ -11,6 +12,7 @@ def dist(x, y):
         return x
     if y == C:
         return R + C + (R - x)
+
 
 for i in range(N):
     x1, y1, x2, y2 = list(map(int, input().split()))
@@ -31,4 +33,3 @@ if len(l) == 0:
     print("YES")
 else:
     print("NO")
-

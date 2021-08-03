@@ -1,37 +1,39 @@
-R,C,N=list(map(int,input().split()))
-points=[list(map(int,input().split())) for i in range(N)]
-def circ(x,y):
-    if y==0:
+R, C, N = list(map(int, input().split()))
+points = [list(map(int, input().split())) for i in range(N)]
+
+
+def circ(x, y):
+    if y == 0:
         return x
-    elif x==R:
-        return y+R
-    elif y==C:
-        return R+C+R-x
-    elif x==0:
-        return R+C+R+C-y
+    elif x == R:
+        return y + R
+    elif y == C:
+        return R + C + R - x
+    elif x == 0:
+        return R + C + R + C - y
     else:
         return -1
 
-L=[]
+
+L = []
 for i in range(N):
-    x1,y1,x2,y2=points[i]
-    if circ(x1,y1)==-1 or circ(x2,y2)==-1:
+    x1, y1, x2, y2 = points[i]
+    if circ(x1, y1) == -1 or circ(x2, y2) == -1:
         continue
-    L.append((circ(x1,y1),i))
-    L.append((circ(x2,y2),i))
+    L.append((circ(x1, y1), i))
+    L.append((circ(x2, y2), i))
 #board=[[circ(x,y) for y in range(C+1)] for x in range(R+1)]
-R=[s[1] for s in sorted(L)]
-X=[]
+R = [s[1] for s in sorted(L)]
+X = []
 for i in R:
-    if len(X)==0:
+    if len(X) == 0:
         X.append(i)
     else:
-        if X[-1]==i:
+        if X[-1] == i:
             X.pop()
         else:
             X.append(i)
-if len(X)==0:
+if len(X) == 0:
     print("YES")
 else:
     print("NO")
-

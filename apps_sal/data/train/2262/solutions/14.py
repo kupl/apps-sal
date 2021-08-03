@@ -8,6 +8,7 @@ def calc_pos(x, y, R, C):
     if x == 0:
         return 2 * R + 2 * C - y
 
+
 def read_data():
     R, C, N = list(map(int, input().split()))
     pairs = []
@@ -27,6 +28,7 @@ def read_data():
     pairs.sort()
     return pairs, xys
 
+
 def is_valid(xys):
     xys.sort()
     prev_x, prev_y = xys[0]
@@ -37,11 +39,12 @@ def is_valid(xys):
         prev_y = y
     return True
 
+
 def solve(pairs, xys):
     if len(xys) == 2:
         return "YES"
     if not is_valid(xys):
-        return "NO"    
+        return "NO"
     idxs = [i for a, i in pairs]
     stack = []
     for idx in idxs:
@@ -54,6 +57,6 @@ def solve(pairs, xys):
     else:
         return "YES"
 
+
 pairs, xys = read_data()
 print((solve(pairs, xys)))
-

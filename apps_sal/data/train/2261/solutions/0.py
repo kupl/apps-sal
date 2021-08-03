@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def rollingmax(x, y, r, a):
     k = 2 * r + 1
     d = deque()
@@ -14,6 +15,7 @@ def rollingmax(x, y, r, a):
         if i >= r:
             y[i - r] = d[0][1] - abs(i - r - a)
 
+
 n, m, d = [int(x) for x in input().split()]
 a, ball, t0 = [int(x) for x in input().split()]
 f = [-abs(i - a) for i in range(1, n + 1)]
@@ -22,10 +24,8 @@ for _ in range(m - 1):
     a, b, t = [int(x) for x in input().split()]
     ball += b
     r = min(n - 1, (t - t0) * d)
-    t0 = t    
+    t0 = t
     rollingmax(f, g, r, a - 1)
     f, g = g, f
 
-print(max(f) + ball)    
-
-
+print(max(f) + ball)

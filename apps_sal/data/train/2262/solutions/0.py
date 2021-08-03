@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 def main():
     R, C, N = map(int, input().split())
     xyxy = [list(map(int, input().split())) for i in range(N)]
@@ -29,7 +30,7 @@ def main():
                 r.append((R - x2 + C * 2 + R, i))
             else:
                 r.append((x2 + C, i))
-    
+
     r = sorted(r)
     # print(r)
     stack = []
@@ -41,15 +42,15 @@ def main():
                 stack.append(r[i][1])
         else:
             stack.append(r[i][1])
-    
+
     if len(stack) > 0:
         print("NO")
     else:
         print("YES")
-            
-
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

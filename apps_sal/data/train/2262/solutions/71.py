@@ -1,8 +1,12 @@
 R, C, N = list(map(int, input().split()))
+
+
 def calc(x, y):
     if x == 0 or y == C:
         return x + y
-    return 2*R + 2*C - x - y
+    return 2 * R + 2 * C - x - y
+
+
 A = {}
 for i in range(N):
     x1, y1, x2, y2 = list(map(int, input().split()))
@@ -18,4 +22,3 @@ for i, a in sorted(A.items()):
     elif a is not None:
         st.append(a)
 print(('YES' if not st else 'NO'))
-

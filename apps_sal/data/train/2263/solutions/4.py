@@ -9,7 +9,8 @@ def main():
             an = 0
         else:
             al = False
-        if an == 0 and not al: break
+        if an == 0 and not al:
+            break
     if al:
         print((1))
         return
@@ -24,17 +25,17 @@ def main():
         else:
             print((3))
         return
-    #print(n)
-    #print(an)
-    ord0=ord("a")
+    # print(n)
+    # print(an)
+    ord0 = ord("a")
     r = sum(ord(c) - ord0 for c in s) % 3
-    if n%3==0:
-        d=pow(2,n//3-1,md)
-        if r==0:
-            an-=d*2
+    if n % 3 == 0:
+        d = pow(2, n // 3 - 1, md)
+        if r == 0:
+            an -= d * 2
         else:
-            an+=d
+            an += d
     print(((pow(3, n - 1, md) - pow(2, n - 1, md) + an) % md))
 
-main()
 
+main()

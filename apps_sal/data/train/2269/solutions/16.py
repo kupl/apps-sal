@@ -14,7 +14,7 @@ for i in range(N):
     connected[i].add(i)
 
 whole_set = set(range(N))
-unconnected = [whole_set-connected[i] for i in range(N)]
+unconnected = [whole_set - connected[i] for i in range(N)]
 assign = [-1] * N
 ass_q = []
 g = 0
@@ -45,19 +45,18 @@ while len(ass_q) > 0:
                 break
 
 
-groups = [(assign.count(g_), assign.count(g_+1)) for g_ in range(0, g, 2)]
+groups = [(assign.count(g_), assign.count(g_ + 1)) for g_ in range(0, g, 2)]
 ans = math.inf
 not_assign = assign.count(-1)
 for b in range(pow(2, len(groups))):
     taka, hashi = 0, 0
     for i in range(len(groups)):
-        taka += groups[i][(b>>i)&1]
-        hashi += groups[i][((~b)>>i)&1]
+        taka += groups[i][(b >> i) & 1]
+        hashi += groups[i][((~b) >> i) & 1]
     for _ in range(not_assign):
         if taka < hashi:
             taka += 1
         else:
             hashi += 1
-    ans = min(ans, (taka*(taka-1))//2 + (hashi*(hashi-1))//2)
+    ans = min(ans, (taka * (taka - 1)) // 2 + (hashi * (hashi - 1)) // 2)
 print(ans)
-
