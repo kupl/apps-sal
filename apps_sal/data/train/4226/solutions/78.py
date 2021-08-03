@@ -8,4 +8,3 @@ def remove_smallest(numbers):
         numbers_copy.remove(smallest_value)
         return numbers_copy
     return numbers
-

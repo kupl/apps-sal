@@ -4,10 +4,12 @@ def remove_smallest(numbers):
     if num != []:
         smol = min(num)
         i = 0
-        for i in range(0,l):
+        for i in range(0, l):
             if num[i] == smol:
                 num.pop(i)
                 break
-            else: i += 1  
+            else:
+                i += 1
         return num
-    else: return []
+    else:
+        return []

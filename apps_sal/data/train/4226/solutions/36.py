@@ -4,4 +4,3 @@ def remove_smallest(numbers):
     else:
         return [x for x in numbers if x != min(numbers)]
     raise NotImplementedError("TODO: remove_smallest")
-

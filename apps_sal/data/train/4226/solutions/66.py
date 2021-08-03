@@ -1,13 +1,10 @@
 def remove_smallest(numbers):
     count = 0
-    a= []
+    a = []
     for x in numbers:
         if x == min(numbers) and count == 0:
-            count +=1
+            count += 1
             continue
-        else :
+        else:
             a.append(x)
     return a
-        
-        
-

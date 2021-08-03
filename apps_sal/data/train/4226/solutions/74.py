@@ -8,5 +8,3 @@ def remove_smallest(numbers):
             del res[i]
             break
     return res
-        
-

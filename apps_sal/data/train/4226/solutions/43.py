@@ -5,4 +5,3 @@ def remove_smallest(numbers):
             del x[n]
             break
     return x
-

@@ -6,4 +6,3 @@ def remove_smallest(numbers):
         new_list = numbers.copy()
         new_list.remove(min)
     return new_list
-

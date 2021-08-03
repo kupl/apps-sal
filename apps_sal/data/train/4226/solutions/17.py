@@ -5,5 +5,4 @@ def remove_smallest(numbers):
     for i in numbers:
         if i == min(numbers):
             res.append(numbers.index(i))
-    return numbers[0:min(res)]+numbers[min(res)+1:]
-
+    return numbers[0:min(res)] + numbers[min(res) + 1:]

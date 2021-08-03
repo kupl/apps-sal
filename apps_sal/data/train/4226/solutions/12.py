@@ -4,4 +4,3 @@ def remove_smallest(numbers):
         if num < numbers[smallest]:
             smallest = i
     return [x for i, x in enumerate(numbers) if i != smallest]
-

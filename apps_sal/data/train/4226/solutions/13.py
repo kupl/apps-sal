@@ -7,4 +7,3 @@ def remove_smallest(numbers):
         if number[0] != min_index_v:
             result.append(number[1])
     return result
-

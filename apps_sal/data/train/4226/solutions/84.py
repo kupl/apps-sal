@@ -13,5 +13,3 @@ def remove_smallest(numbers):
             continue
         result.append(x)
     return result
-
-

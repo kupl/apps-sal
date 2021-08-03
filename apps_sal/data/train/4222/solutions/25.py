@@ -1,5 +1,5 @@
-def get_size(w,h,d):
-    #your code here
+def get_size(w, h, d):
+    # your code here
     s = []
     area = 2 * ((w * h) + (h * d) + (w * d))
     sa = w * d * h

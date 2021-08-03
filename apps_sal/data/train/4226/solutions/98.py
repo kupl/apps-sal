@@ -4,5 +4,3 @@ def remove_smallest(numbers):
     smallest = min(numbers)
     numbers.remove(smallest)
     return numbers
-    
-

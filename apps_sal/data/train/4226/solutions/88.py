@@ -1,5 +1,5 @@
 def remove_smallest(numbers):
-    if len(numbers) > 0 :
+    if len(numbers) > 0:
         newList = []
         sortedList = sorted(numbers)
         popped = sortedList.pop(0)

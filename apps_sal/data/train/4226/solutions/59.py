@@ -10,4 +10,3 @@ def remove_smallest(numbers):
         return result
     else:
         return numbers
-

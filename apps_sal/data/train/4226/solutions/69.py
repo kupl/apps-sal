@@ -5,4 +5,3 @@ def remove_smallest(numbers):
         return new_numbers
     else:
         return []
-

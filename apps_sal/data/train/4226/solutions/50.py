@@ -7,4 +7,3 @@ def remove_smallest(numbers):
         if num < smallest:
             smallest = num
     return [numbers[i] for i in range(len(numbers)) if i != (numbers.index(smallest))]
-

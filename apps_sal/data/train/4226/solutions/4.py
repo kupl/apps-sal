@@ -5,5 +5,3 @@ def remove_smallest(numbers):
         new = numbers[:]
         new.remove(min(numbers))
     return new
-        
-
