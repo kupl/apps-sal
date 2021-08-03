@@ -26,10 +26,9 @@ def to_leet_speak(str):
         'X': 'X',
         'Y': 'Y',
         'Z': '2',
-        ' ' : ' '
+        ' ': ' '
     }
     res = ""
     for i in str:
         res += tls[i]
     return res
-

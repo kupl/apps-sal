@@ -4,4 +4,3 @@ def monkey_count(n):
         i += 1
         monkey_count.append(i)
     return monkey_count
-

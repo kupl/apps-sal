@@ -6,5 +6,3 @@ def points(radius):
             if (i * i + j * j <= r2):
                 cnt += 4
     return cnt
-
-

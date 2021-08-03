@@ -3,6 +3,5 @@ def number(lines):
     for i, v in enumerate(lines, 1):
         item = "{}: {}".format(i, v)
         res.append(item)
-        
-    return res
 
+    return res

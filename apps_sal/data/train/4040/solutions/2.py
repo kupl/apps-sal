@@ -5,4 +5,3 @@ def nth_char(words):
         result += word[index]
 
     return result
-

@@ -29,7 +29,5 @@ def to_leet_speak(str):
     }
     result = ''
     for char in str:
-        result += al.get(char,' ')
+        result += al.get(char, ' ')
     return result
-
-

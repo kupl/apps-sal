@@ -4,6 +4,6 @@ def number(lines):
     else:
         count = 1
         for x in lines:
-            lines[count-1] = str(count) + ": " + x
+            lines[count - 1] = str(count) + ": " + x
             count += 1
         return lines

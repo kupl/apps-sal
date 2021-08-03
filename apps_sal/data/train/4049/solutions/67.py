@@ -3,7 +3,6 @@ def monkey_count(n):
     lst = []
     while i <= n:
         lst.append(i)
-        i +=1
+        i += 1
     return lst
-    #your code here
-
+    # your code here

@@ -7,7 +7,7 @@ def calc(gamemap):
             ca = s - ra
             for rb in range(ra, min(s + 1, nr)):
                 cb = s - rb
-                v = vs[ra*nr + rb]
+                v = vs[ra * nr + rb]
                 for da in (0, 1):
                     ra_, ca_ = ra + da, ca + (1 - da)
                     if ra_ < nr and ca_ < nc:
@@ -15,7 +15,7 @@ def calc(gamemap):
                             rb_, cb_ = rb + db, cb + (1 - db)
                             if rb_ < nr and cb_ < nc:
                                 v_ = v + gamemap[ra_][ca_] + (gamemap[rb_][cb_] if ra_ != rb_ else 0)
-                                ws[ra_*nr + rb_] = max(ws[ra_*nr + rb_], v_)
+                                ws[ra_ * nr + rb_] = max(ws[ra_ * nr + rb_], v_)
         vs, ws = ws, vs
     return vs[-1]
 
@@ -42,4 +42,3 @@ def calc(gamemap):
 #             yield Point(self.r, self.c + 1)
 #         if self.r < nr - 1:
 #             yield Point(self.r + 1, self.c)
-

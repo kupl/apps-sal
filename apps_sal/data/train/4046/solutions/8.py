@@ -1,5 +1,6 @@
 from math import ceil
 
+
 def calculate_scrap(scraps, number_of_robots):
     factor = 1
     for x in scraps:

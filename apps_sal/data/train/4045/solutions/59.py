@@ -3,6 +3,6 @@ def number(lines):
     numb = 1
     for x in lines:
         numlist.append(str(numb) + ": " + x)
-        numb+=1
+        numb += 1
 
     return numlist
