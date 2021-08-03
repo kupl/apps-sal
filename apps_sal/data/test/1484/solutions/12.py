@@ -3,7 +3,8 @@ maxn = 200002
 
 
 def pow(a, e):
-    if e <= 0: return 1
+    if e <= 0:
+        return 1
 
     ret = 1
     while e:

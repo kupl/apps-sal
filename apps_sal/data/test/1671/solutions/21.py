@@ -2,7 +2,11 @@ from math import *
 n = int(input())
 a = list(map(int, input().split(' ')))
 b = []
-x = 0; y = 0; sm = 0; k = 0; o = 0
+x = 0
+y = 0
+sm = 0
+k = 0
+o = 0
 for i in range(n):
     sm += a[i]
 k = sm // n

@@ -5,7 +5,8 @@ num = 1
 s = 0
 for i in range(N):
     s += L[i]
-    if s > X: break
+    if s > X:
+        break
     num += 1
 
 print(num)

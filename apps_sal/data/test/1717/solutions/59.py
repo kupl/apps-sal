@@ -10,9 +10,11 @@ input = sys.stdin.readline
 #from collections import defaultdict as dc
 #from functools import reduce
 #from functools import lru_cache
-ri = lambda: int(input())
-rl = lambda: list(map(int, input().split()))
-rs = lambda: input()
+def ri(): return int(input())
+def rl(): return list(map(int, input().split()))
+def rs(): return input()
+
+
 for _ in range(1):
     N = ri()
     ans = 1

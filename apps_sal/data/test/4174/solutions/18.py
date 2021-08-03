@@ -20,7 +20,8 @@ def main():
         d[i] = d[i - 1] + l[i - 1]
 
     for i in d.values():
-        if i <= x: ans += 1
+        if i <= x:
+            ans += 1
 
     print(ans)
 

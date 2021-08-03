@@ -6,7 +6,9 @@ from fractions import Fraction
 from decimal import Decimal
 from functools import reduce
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 #from sys import setrecursionlimit
 # setrecursionlimit(10**7)
 MOD = 10**9 + 7

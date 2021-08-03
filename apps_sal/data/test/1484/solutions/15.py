@@ -10,8 +10,10 @@ n, k = int(n), int(k)
 
 
 def hpow(x, y):
-    if(y == 0): return 1
-    if(y == 1): return x % mod
+    if(y == 0):
+        return 1
+    if(y == 1):
+        return x % mod
     a = hpow(x, y >> 1)
     a = (a * a) % mod
     return (a * x) % mod if y & 1 else a
@@ -33,10 +35,12 @@ def cal(l, x, y):
     if(not x and not y):
         rr = k * hpow(k - 1, l - 1) % mod
         return rr
-    if(not y): x, y = y, x
+    if(not y):
+        x, y = y, x
     if(not x):
         rr = k
-        for i in range(l - 1): rr = rr * (k - 1) % mod
+        for i in range(l - 1):
+            rr = rr * (k - 1) % mod
         return rr * revk % mod * (k - 1) % mod
 
     if(x == y):
@@ -64,8 +68,10 @@ b = [0]
 c = [0]
 
 for i in range(n):
-    if(i & 1): b.append(a[i])
-    else: c.append(a[i])
+    if(i & 1):
+        b.append(a[i])
+    else:
+        c.append(a[i])
 
 m1 = len(b) - 1
 m2 = len(c) - 1
@@ -88,7 +94,8 @@ for i in range(1, m2 + 1):
 j = -1
 for i in range(1, m1 + 1):
     if(b[i] == -1):
-        if(j < 0): j = i
+        if(j < 0):
+            j = i
         if(i >= m1 or b[i + 1] != -1):
             res = res * cal(i - j + 1, 0 if j <= 1 else b[j - 1], 0 if i >= m1 else b[i + 1]) % mod
             j = -1
@@ -96,7 +103,8 @@ for i in range(1, m1 + 1):
 j = -1
 for i in range(1, m2 + 1):
     if(c[i] == -1):
-        if(j < 0): j = i
+        if(j < 0):
+            j = i
         if(i >= m2 or c[i + 1] != -1):
             res = res * cal(i - j + 1, 0 if j <= 1 else c[j - 1], 0 if i >= m2 else c[i + 1]) % mod
             j = -1
