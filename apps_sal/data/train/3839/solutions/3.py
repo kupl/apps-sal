@@ -1,4 +1,4 @@
-#returns test score
+# returns test score
 def score_test(tests, right, omit, wrong):
     result = 0
     for score in tests:
@@ -9,4 +9,3 @@ def score_test(tests, right, omit, wrong):
         elif score == 2:
             result -= wrong
     return result
-

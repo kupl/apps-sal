@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 def find_discounted(s):
     s = list(map(int, s.split()))
     c, li = Counter(s), []

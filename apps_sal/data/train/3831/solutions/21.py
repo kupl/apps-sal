@@ -1,6 +1,5 @@
 def angle(n):
-    
-    p = (n-2)*180
-    
-    return p
 
+    p = (n - 2) * 180
+
+    return p

@@ -1,4 +1,4 @@
 def angle(n):
-    #your code here
+    # your code here
     solution = 180 * (n - 2)
     return solution

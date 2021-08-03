@@ -1,5 +1,6 @@
 def angle(n):
-    x = (n-2)*180
+    x = (n - 2) * 180
     return x
-print((angle(6)))
 
+
+print((angle(6)))

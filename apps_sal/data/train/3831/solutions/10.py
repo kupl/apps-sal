@@ -4,6 +4,5 @@ def angle(n):
     elif n == 4:
         return 360
     else:
-        x = 180*(n-2)
+        x = 180 * (n - 2)
         return x
-

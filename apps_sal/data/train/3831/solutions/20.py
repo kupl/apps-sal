@@ -1,4 +1,5 @@
 import math
 
+
 def angle(n):
-    return 180*n-360
+    return 180 * n - 360
