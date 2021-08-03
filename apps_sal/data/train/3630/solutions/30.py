@@ -4,6 +4,6 @@ def arithmetic(a, b, operator):
     elif operator.lower() == "subtract":
         return a - b
     elif operator.lower() == "multiply":
-        return a*b
+        return a * b
     else:
-        return a/b
+        return a / b

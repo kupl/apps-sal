@@ -7,5 +7,5 @@ def arithmetic(a, b, operator):
         operator = '*'
     elif operator == 'divide':
         operator = '/'
-    
-    return eval('{}{}{}'.format(a,operator,b))
+
+    return eval('{}{}{}'.format(a, operator, b))

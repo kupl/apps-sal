@@ -7,5 +7,6 @@ f = {
     "divide": op.truediv
 }
 
+
 def arithmetic(a, b, operator):
     return f[operator](a, b)

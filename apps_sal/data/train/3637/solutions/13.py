@@ -12,4 +12,4 @@ def num_primorial(n):
         if k == n:
             break
         i += 1
-    return sum 
+    return sum

@@ -1,13 +1,13 @@
 def arithmetic(a, b, operator):
-    #your code here
+    # your code here
     ans = 0
     if operator == 'add':
-        ans = a+b
+        ans = a + b
     elif operator == 'subtract':
-        ans = a-b
+        ans = a - b
     elif operator == 'multiply':
-        ans = a*b
+        ans = a * b
     elif operator == 'divide':
-        ans = a/b
-    
+        ans = a / b
+
     return ans

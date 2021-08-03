@@ -1,8 +1,7 @@
 def arithmetic(a, b, operator):
     return operations[operator](a, b)
-    
-    
-    
+
+
 operations = {
     "add": lambda a, b: a + b,
     "subtract": lambda a, b: a - b,

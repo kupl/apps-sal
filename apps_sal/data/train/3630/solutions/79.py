@@ -1,7 +1,9 @@
 import operator as o
+
+
 def arithmetic(a, b, operator):
     ops = {'add': o.add,
-          'subtract': o.sub,
+           'subtract': o.sub,
            'multiply': o.mul,
            'divide': o.truediv}
-    return ops[operator](a,b)
+    return ops[operator](a, b)

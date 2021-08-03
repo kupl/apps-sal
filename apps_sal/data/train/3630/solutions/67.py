@@ -5,4 +5,4 @@ def arithmetic(a, b, operator):
         "multiply": lambda a, b: a * b,
         "divide": lambda a, b: a / b,
     }
-    return map[operator](a,b)
+    return map[operator](a, b)

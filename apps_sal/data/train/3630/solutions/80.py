@@ -6,4 +6,4 @@ def arithmetic(a, b, op):
     elif op == "subtract":
         return a - b
     else:
-        return a/b
+        return a / b

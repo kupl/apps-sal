@@ -1,10 +1,11 @@
 def sflpf_data(val, limit):
     result = []
-    for n in range(4, limit+1):
-        factors =  prime_factors(n)
+    for n in range(4, limit + 1):
+        factors = prime_factors(n)
         if len(factors) > 1 and min(factors) + max(factors) == val:
             result.append(n)
     return result
+
 
 def prime_factors(n):
     factors = []
@@ -25,4 +26,3 @@ def prime_factors(n):
             step = 6 - step
     factors.append(n)
     return factors
-

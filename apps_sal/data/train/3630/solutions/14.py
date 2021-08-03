@@ -5,5 +5,6 @@ operators = {
     "divide": int.__truediv__,
 }
 
+
 def arithmetic(a, b, op):
     return operators[op](a, b)

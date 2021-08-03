@@ -4,5 +4,6 @@ letters = {
     'u': 200, 'x': 300, 'y': 400, 'z': 500, 'j': 600, 'v': 700, 'w': 900,
 }
 
+
 def gematria(s):
     return sum(letters.get(c, 0) for c in s.lower())
