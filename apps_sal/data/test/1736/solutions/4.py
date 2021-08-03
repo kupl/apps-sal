@@ -5,7 +5,8 @@ for i in range(2, len(t)):
 i, j, s = 0, 1, 0
 n += 2
 while j < n:
-    while j < n and t[j] <= k + t[i]: j += 1
+    while j < n and t[j] <= k + t[i]:
+        j += 1
     i += 1
     s = max(s, j - i)
 print(s)

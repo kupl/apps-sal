@@ -5,7 +5,7 @@ for a in range(0, 100):
     n = N - 10 * a
 
     if n <= 9:
-        break;
+        break
 
 if n == 2 or n == 4 or n == 5 or n == 7 or n == 9:
     print('hon')

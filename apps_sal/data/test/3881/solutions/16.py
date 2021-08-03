@@ -4,8 +4,10 @@ def __starting_point():
     depo, res = {}, []
 
     def bazinga(s):
-        if s in depo: return depo[s]
-        if s[0] not in d: depo[s] = 0
+        if s in depo:
+            return depo[s]
+        if s[0] not in d:
+            depo[s] = 0
         else:
             ans = 0
             for aa in d[s[0]]:
@@ -21,8 +23,10 @@ def __starting_point():
 
     for i in range(m):
         ai, bi = list(map(str, input().split(' ')))
-        if bi in d: d[bi] += [ai]
-        else: d[bi] = [ai]
+        if bi in d:
+            d[bi] += [ai]
+        else:
+            d[bi] = [ai]
     print(bazinga('a'))
     # print(len(set(res)))
 
