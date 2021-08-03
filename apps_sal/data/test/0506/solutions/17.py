@@ -1,4 +1,5 @@
-f = lambda: input()
+def f(): return input()
+
 
 a, b = list(map(int, f().split()))
 c = 0

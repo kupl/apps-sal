@@ -62,9 +62,11 @@ for i in range(n):
     if l[i] == 'b' or l[i] == '?':
         left = right = 0
         left = As[i] * pow(3, questions1[i], mod) % mod
-        if questions1[i]: left = (left + pow(3, questions1[i] - 1, mod) * questions1[i]) % mod
+        if questions1[i]:
+            left = (left + pow(3, questions1[i] - 1, mod) * questions1[i]) % mod
         right = Cs[i] * pow(3, questions2[i], mod) % mod
-        if questions2[i]: right = (right + pow(3, questions2[i] - 1, mod) * questions2[i]) % mod
+        if questions2[i]:
+            right = (right + pow(3, questions2[i] - 1, mod) * questions2[i]) % mod
 
         # print(l, i, left, right)
 

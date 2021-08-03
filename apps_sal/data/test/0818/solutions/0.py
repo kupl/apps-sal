@@ -31,7 +31,7 @@ class Task:
         print(self.answer)
 
 
-task = Task();
-task.getData();
-task.solve();
-task.printAnswer();
+task = Task()
+task.getData()
+task.solve()
+task.printAnswer()

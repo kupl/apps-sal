@@ -1,7 +1,10 @@
 # bismillah
 n, m = list(map(int, input().split()))
 a = list(map(int, input().split(' ')))
-o = 0; c = 0; t = []; sm = n
+o = 0
+c = 0
+t = []
+sm = n
 for i in range(m + 1):
     t.append(0)
 for i in range(n):

@@ -5,8 +5,10 @@ ct = 1
 mod = 10**9 + 7
 for i in range(n):
     if i == 0:
-        if s[i] == '?': ct *= 3
-        if s[i] == 'a' or s[i] == '?': dp[i][0] += 1
+        if s[i] == '?':
+            ct *= 3
+        if s[i] == 'a' or s[i] == '?':
+            dp[i][0] += 1
     else:
         aa, bb, cc = dp[i - 1]
         if s[i] == 'a':

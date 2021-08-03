@@ -7,8 +7,10 @@ def main(n, a, info=False):
     csw, csl, pw, pl, ans = [0], [0], [-1], [-1], []
     nw, nl = a.count(winner), a.count(looser)
     for i in range(n):
-        if a[i] == winner: pw.append(i)
-        else: pl.append(i)
+        if a[i] == winner:
+            pw.append(i)
+        else:
+            pl.append(i)
         csw.append(csw[-1] + int(a[i] == winner))
         csl.append(csl[-1] + int(a[i] == looser))
     pw += [n * 10] * n
@@ -27,8 +29,10 @@ def main(n, a, info=False):
         while i < n:
             xw = pw[csw[i] + t]
             xl = pl[csl[i] + t]
-            if xw < xl: s += 1
-            else: l += 1
+            if xw < xl:
+                s += 1
+            else:
+                l += 1
             i = min(xw, xl) + 1
             if info:
                 print(s, t, ": ", t, i, s, l, xw, xl)

@@ -14,8 +14,10 @@ class UnionFind:
 
     def merge(self, x, y):  # merge(x,y): xのいる組とyのいる組をまとめる
         x, y = self.root(x), self.root(y)
-        if x == y: return False
-        if self.size[x] < self.size[y]: x, y = y, x  # xの要素数が大きいように
+        if x == y:
+            return False
+        if self.size[x] < self.size[y]:
+            x, y = y, x  # xの要素数が大きいように
         self.size[x] += self.size[y]  # xの要素数を更新
         self.parent[y] = x  # yをxにつなぐ
         return True
@@ -34,7 +36,8 @@ def largest(U, V):
     wt = [0] * n
     while st:
         v = st.pop()
-        if v == V: break
+        if v == V:
+            break
         order.append(v)
         for c, d in g[v]:
             if c != parent[v]:

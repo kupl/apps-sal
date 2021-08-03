@@ -6,9 +6,12 @@ def find(arr, N):
     R = [0, 0, 0]
     Z = 1
     for i in arr:
-        if i == 'a': R[0] += Z
-        if i == 'b': R[1] = (R[1] + R[0]) % MOD
-        if i == 'c': R[2] = (R[2] + R[1]) % MOD
+        if i == 'a':
+            R[0] += Z
+        if i == 'b':
+            R[1] = (R[1] + R[0]) % MOD
+        if i == 'c':
+            R[2] = (R[2] + R[1]) % MOD
         if i == '?':
             a, b, c = R[:], R[:], R[:]
             a[0] = (a[0] + Z) % MOD

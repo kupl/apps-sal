@@ -19,7 +19,8 @@ def root(x):
 
 
 def unite(x, y):
-    px = root(x); py = root(y)
+    px = root(x)
+    py = root(y)
     if px == py:
         return 0
     if px < py:
