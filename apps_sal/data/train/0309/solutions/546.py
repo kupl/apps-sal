@@ -9,7 +9,7 @@ class Solution:
                 else:
                     dp[i, d] = 2
         return max(dp.values())
-        
+
         # dp = {}
         # for i, a2 in enumerate(A[1:], start=1):
         #     for j, a1 in enumerate(A[:i]):
@@ -19,4 +19,3 @@ class Solution:
         #         else:
         #             dp[i, d] = 2
         # return max(dp.values())
-

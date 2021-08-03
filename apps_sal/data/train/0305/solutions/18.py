@@ -4,6 +4,6 @@ class Solution:
         res = set()
         for i in range(n):
             for j in range(i):
-                if text[i]==text[j] and text.startswith(text[j:i], i):
-                        res.add(text[j:i])
+                if text[i] == text[j] and text.startswith(text[j:i], i):
+                    res.add(text[j:i])
         return len(res)

@@ -8,4 +8,3 @@ class Solution:
                 d[i][diff] = max(d[i].get(diff, 0), 1 + d[j].get(diff, 1))
                 longest = max(longest, d[i][diff])
         return longest
-

@@ -3,14 +3,14 @@ class Solution:
         res, n = 1, len(A)
         dp = [{} for _ in range(n)]
         for i in range(1, n):
-            for j in range(i-1, -1, -1):
+            for j in range(i - 1, -1, -1):
                 d = A[i] - A[j]
-                if d in dp[i]: continue
+                if d in dp[i]:
+                    continue
                 if d in dp[j]:
-                    dp[i][d] = dp[j][d]+1
+                    dp[i][d] = dp[j][d] + 1
                 else:
-                    dp[i][d] = 2 
+                    dp[i][d] = 2
                 res = max(res, dp[i][d])
-        # print(dp)        
+        # print(dp)
         return res
-

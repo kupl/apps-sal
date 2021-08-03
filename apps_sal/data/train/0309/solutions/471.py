@@ -9,5 +9,3 @@ class Solution:
                 dp[i][diff] = max(dp[i][diff], dp[j][diff] + 1)
                 ans = max(ans, dp[i][diff])
         return ans
-                
-

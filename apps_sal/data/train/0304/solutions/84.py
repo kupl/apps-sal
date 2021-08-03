@@ -8,7 +8,6 @@ class Solution:
         res = 0
         for A, numA in list(age_library.items()):
             for B, numB in list(age_library.items()):
-                if not (B <=0.5*A + 7 or B > A or (B > 100 and A < 100)):
-                    res += numA * numB - numA*(A == B)
+                if not (B <= 0.5 * A + 7 or B > A or (B > 100 and A < 100)):
+                    res += numA * numB - numA * (A == B)
         return res
-

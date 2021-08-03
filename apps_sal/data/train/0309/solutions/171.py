@@ -1,5 +1,6 @@
 from itertools import repeat
 
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         length = len(A)
@@ -23,7 +24,7 @@ class Solution:
                 if c > res:
                     res = c
                 toextend[nextval][diff] = c
-            b = (1<<val)
+            b = (1 << val)
             if not (onleft & b):
                 onleftl.append(val)
                 onleft = (onleft | b)

@@ -5,7 +5,7 @@ class Solution:
         for i in range(len(A)):
             dic[i] = {}
             for j in range(i):
-                key = A[i]-A[j]
+                key = A[i] - A[j]
                 if key in dic[j]:
                     dic[i][key] = dic[j][key] + 1
                 else:
@@ -14,4 +14,3 @@ class Solution:
         return res
 
 #print (Solution.longestArithSeqLength(Solution, [20,1,15,3,10,5,8]))
-

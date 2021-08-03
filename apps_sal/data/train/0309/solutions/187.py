@@ -10,4 +10,3 @@ class Solution:
                     d[i][diff] = 2
                 res = max(res, d[i][diff])
         return res
-

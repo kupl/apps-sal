@@ -5,54 +5,54 @@ class Solution:
             return arr[idx]
         # I need to get max sum after partitioning
         maxSum = 0
-        
+
         # [1,2,9,30]
         # I need to try partitioning from 1 -> K elements
         for numInPartition in range(1, k + 1):
             # I cannot choose elements if I would be choosing too many elements
             if idx + numInPartition > len(arr):
                 break
-            
+
             startOfRecursiveIndex = idx + numInPartition
             # select max value in first 'k' elements
             maxVal = max(arr[idx:startOfRecursiveIndex])
-            
+
             # generates sum for this subset
             partSum = maxVal * numInPartition
-            
+
             # I need to get the partition sum for the rest of the elements
-            
+
             rest = cache[startOfRecursiveIndex] if startOfRecursiveIndex in cache else self.getMax(arr, k, startOfRecursiveIndex, cache)
-            
+
             cache[startOfRecursiveIndex] = rest
-            
+
             maxSum = max(maxSum, partSum + rest)
         return maxSum
-            
+
     def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
         '''
         Input:
             A: int[] - Array of numbers
             K: int - Max length allowable for subarray
-            
+
         Output:
             Return largest sum after partitioning.
-        
+
         Steps:
             1. Make partition
             2. Change all elements to max value
-            
+
            v            
         [1,2,9,30], 2
-        
+
         {1,2}{9,30} => {2,2}{30,30} => 4 + 60 = 64
         {1}{2,9}{30} => {1}{9,9}{30} => 1 + 18 + 30 = 49
-        
-        
+
+
         Example:
             [1]
             {1} = 1
-            
+
             [1,2]
             {1}{2} => 1+2 = 3
             {1,2} => {2,2} => 4
@@ -61,21 +61,21 @@ class Solution:
             {1,2}{9} => {2,2} + {9} => 4 + 9 = 13
             {1}{2,9} => {1},{9,9} = 1 + 18 = 19
             {1,2,9}
-            
+
             {1}{2,9}{30} => {1}{9,9}{30} => 19 + 30 => 49
             {1,2}{9,30} => {2,2}{30,30} => 4 + 60 => 64
-            
+
                  v
             [1,2,9,30]
             {1,2,9} {30} => 30 + getMaxSum([1,2,9]) => 30 + 19 => 49
             {1,2} {9,30} => 60 + getMaxSum([1,2]) => 60 + 4 = 64
-            
+
             {1}{2,9,30}
             {1,2}{9,30}
             {1,2,9}{30}
-        
+
         All about subproblems!!
-        
+
         Approach:
             - Let's look into sliding window.
             - We can frame this problem in terms of choices.
@@ -87,18 +87,12 @@ class Solution:
                     Subset needs to be contiguous?
                 Goal:
                     Maximum sum
-                
+
             1. When placing
         Approach:
             [0,0,0,0]
             maxSum[i] = max(maxSum[i-1] + A[i] * 1, maxSum[i-2] + max(last two elements) * 2) and so on
         '''
-        
+
         cache = {}
         return self.getMax(A, K, 0, cache)
-       
-    
-    
-    
-    
-

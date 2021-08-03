@@ -55,21 +55,15 @@ class Solution:
 '''
 dp[i]: max sum for arr ending at i 
 '''
+
+
 class Solution:
     def maxSumAfterPartitioning(self, arr: List[int], K: int) -> int:
         n = len(arr)
-        dp = [0 for _ in range(n+1)]
-        for i in range(n): # i is considered the end of the partition 
+        dp = [0 for _ in range(n + 1)]
+        for i in range(n):  # i is considered the end of the partition
             currMax = 0
             for k in range(1, min(K, i + 1) + 1):
                 currMax = max(currMax, arr[i - k + 1])
-                dp[i] = max(dp[i], dp[i-k] + (currMax * k))
-        return dp[n-1]
-
-        
-        
-        
-        
-
-
-
+                dp[i] = max(dp[i], dp[i - k] + (currMax * k))
+        return dp[n - 1]

@@ -1,5 +1,6 @@
 from typing import Dict, Tuple
 
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         n: int = len(A)

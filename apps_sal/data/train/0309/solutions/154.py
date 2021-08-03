@@ -11,8 +11,8 @@ class Solution:
 
         for i in range(len(A)):
             for diff in dp[i]:
-                if dp[i][diff] > maxLength: maxLength = dp[i][diff]
+                if dp[i][diff] > maxLength:
+                    maxLength = dp[i][diff]
 
-        return maxLength        
-# O(n2) time, O(n2) space   
-
+        return maxLength
+# O(n2) time, O(n2) space

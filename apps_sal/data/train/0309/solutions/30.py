@@ -3,7 +3,7 @@ class Solution:
         length = len(A)
         onleft = set()
         onleftl = []
-        onright = [0] * 501 #[0 for _ in range(501)]
+        onright = [0] * 501  # [0 for _ in range(501)]
         toextend = [{} for _ in range(501)]
         res = 2
         for v in A:

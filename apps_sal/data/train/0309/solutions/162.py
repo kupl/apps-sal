@@ -3,7 +3,7 @@ class Solution:
         dp = []
         for i in range(len(A)):
             dp.append({})
-             
+
         # print(dp)
         res = 2
         for i in range(1, len(A)):
@@ -13,6 +13,6 @@ class Solution:
                     dp[i][diff] = dp[j][diff] + 1
                 else:
                     dp[i][diff] = 2
-                res = max(res,dp[i][diff])
-                
+                res = max(res, dp[i][diff])
+
         return res

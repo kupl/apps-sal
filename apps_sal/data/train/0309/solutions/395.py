@@ -6,4 +6,3 @@ class Solution:
                 curr_diff = A[j] - A[i]
                 dp[(j, curr_diff)] = dp.get((i, curr_diff), 1) + 1
         return max(dp.values())
-

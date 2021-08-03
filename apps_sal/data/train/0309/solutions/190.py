@@ -1,6 +1,6 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
-        #446. Arithmetic Slices II - Subsequence
+        # 446. Arithmetic Slices II - Subsequence
         '''
         https://leetcode.com/problems/longest-arithmetic-sequence/discuss/274611/JavaC++Python-DP
         dp[diff][index] + 1 equals to the length of arithmetic sequence at index with difference diff.
@@ -31,9 +31,9 @@ defaultdict(<class 'int'>, {(3, 0): 0, (3, 1): 1, (6, 0): 0, (6, 2): 1, (9, 0): 
 defaultdict(<class 'int'>, {(3, 0): 0, (3, 1): 1, (6, 0): 0, (6, 2): 1, (9, 0): 0, (9, 3): 1, (3, 2): 2})
 defaultdict(<class 'int'>, {(3, 0): 0, (3, 1): 1, (6, 0): 0, (6, 2): 1, (9, 0): 0, (9, 3): 1, (3, 2): 2, (6, 1): 0, (6, 3): 1})
 defaultdict(<class 'int'>, {(3, 0): 0, (3, 1): 1, (6, 0): 0, (6, 2): 1, (9, 0): 0, (9, 3): 1, (3, 2): 2, (6, 1): 0, (6, 3): 1, (3, 3): 3})
-      ''' 
-        #longest arithmetic subseq
-    
+      '''
+        # longest arithmetic subseq
+
         '''
         Input:
 [24,13,1,100,0,94,3,0,3]
@@ -50,9 +50,7 @@ Output:
 Expected:
 2
         '''
-      
-  
-        
+
         '''Len = len(A)
         res = 0
         for i in range(aLen):
@@ -68,9 +66,7 @@ Expected:
                     idx += 1
                 res = max(res, count)
         return res'''
-        
-       
-                
+
         '''aLen =len(A)
         res = 0 
         dp = [{} for _ in range(aLen)]
@@ -83,7 +79,7 @@ Expected:
                     dp[i][diff] = 2
                 res = max(res, dp[i][diff])
         return res '''
-        
+
         '''aLen = len(A)
         res = 0 
         dp = [{} for _ in range(aLen)]
@@ -96,28 +92,20 @@ Expected:
                     dp[i][diff] = 2 
                 res = max(res, dp[i][diff])
         return res '''
-        
+
         aLen = len(A)
-        res = 0 
+        res = 0
         dp = [{} for _ in range(aLen)]
         for i in range(aLen):
             for j in range(i):
-                diff = A[i]-A[j]
+                diff = A[i] - A[j]
                 if diff in dp[j]:
                     dp[i][diff] = dp[j][diff] + 1
                 else:
-                    dp[i][diff] = 2 
+                    dp[i][diff] = 2
                 res = max(res, dp[i][diff])
-        return res 
-                    
-            
- 
+        return res
 
-                    
-                    
- 
-
-        
         '''
         #why is this solution the fastest??????
         nums_map = {}
@@ -145,6 +133,3 @@ Expected:
                     if not found:
                         break
         return max_length'''
-                
-                
-

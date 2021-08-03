@@ -12,12 +12,10 @@ class Solution:
                     continue
                 if age_a < 100 < age_b:
                     continue
-                
+
                 answer += count_a * count_b
-                
+
                 if age_a == age_b:
                     answer -= count_a
-                    
-        return answer
-                    
 
+        return answer

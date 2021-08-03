@@ -7,12 +7,13 @@ class Solution:
             maxTarget = age
             minIdx = self.binFinder(ages, minTarget)
             maxIdx = self.binFinder(ages, maxTarget)
-            count += max(0, maxIdx - minIdx -1)
+            count += max(0, maxIdx - minIdx - 1)
         return count
+
     def binFinder(self, arr, target):
         left, right = 0, len(arr) - 1
         while left <= right:
-            mid = left + ((right - left)//2)
+            mid = left + ((right - left) // 2)
             if arr[mid] <= target:
                 left = mid + 1
             else:

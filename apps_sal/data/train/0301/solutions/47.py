@@ -1,7 +1,7 @@
 class Solution:
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
-        len_a = len(A)+1
-        len_b = len(B)+1
+        len_a = len(A) + 1
+        len_b = len(B) + 1
 
         dp = [[0 for i in range(len_b)] for i in range(len_a)]
 
@@ -12,4 +12,4 @@ class Solution:
                 else:
                     dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
 
-        return dp[len_a-1][len_b-1] 
+        return dp[len_a - 1][len_b - 1]

@@ -1,6 +1,5 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
-        
         '''
         9  4     7     2     10
           -5     4 2  -5 2   8
@@ -8,18 +7,18 @@ class Solution:
                       -7 2   6
                              1
            j      i 
-        
-        
+
+
         could sort array. 
-        
+
         could iterate through jump sizes
         could transition each elem to distance from other.  
         '''
         if len(A) < 3:
             return len(A)
-        
+
         best = 2
-        sequences = [ {} for _ in A]
+        sequences = [{} for _ in A]
         for right in range(1, len(A)):
             for left in range(right):
                 diff = A[right] - A[left]
@@ -28,12 +27,11 @@ class Solution:
                     count = sequences[left][diff] + 1
                     sequences[right][diff] = count
                     best = max(best, count)
-                else: 
+                else:
                     sequences[right][diff] = 2
-        
+
         return best
 
-        
         '''
         
         best = 2
@@ -49,5 +47,3 @@ class Solution:
                 best = max(best, thisCount)
         return best
         '''
-                        
-

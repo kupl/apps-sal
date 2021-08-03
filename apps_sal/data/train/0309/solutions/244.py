@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         # 3, 6, 9, 12
@@ -17,4 +19,3 @@ class Solution:
                 diff_map[i][diff] = 1 + diff_map[j].get(diff, 1)
                 count = max(count, diff_map[i][diff])
         return count
-

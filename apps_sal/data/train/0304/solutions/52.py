@@ -16,4 +16,3 @@ class Solution:
             # * total += max(count[min(ageMax, 120)] - count[max(ageMin - 1, 0)] - 1, 0)
 
         return total
-

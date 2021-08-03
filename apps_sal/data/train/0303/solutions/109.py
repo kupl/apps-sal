@@ -15,4 +15,3 @@ class Solution:
                 else:
                     break
         return mem[size - 1]
-

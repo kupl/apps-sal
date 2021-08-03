@@ -5,10 +5,9 @@ class Solution:
         for i in range(1, n):
             for j in range(i):
                 dif = A[i] - A[j]
-                if (j,dif) in dp:
+                if (j, dif) in dp:
                     dp[(i, dif)] = dp[(j, dif)] + 1
                 else:
                     dp[(i, dif)] = 2
-                #print(dp)
+                # print(dp)
         return max(dp.values())
-

@@ -14,21 +14,20 @@
             res += ageCnt[i]*(prefixSum[i]-prefixSum[int(i*.5+7)]-1)#)- ageCnt[i]
         return res '''
 
+
 class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
-        maxAge = 121 
-        preSum = [0]*maxAge 
-        from collections import Counter 
+        maxAge = 121
+        preSum = [0] * maxAge
+        from collections import Counter
         ageCnt = Counter(ages)
         for i in range(1, maxAge):
-            preSum[i] += preSum[i-1] + ageCnt[i]
-        res =0 
+            preSum[i] += preSum[i - 1] + ageCnt[i]
+        res = 0
         for age in range(15, maxAge):
-            res += (preSum[age]-preSum[int(.5*age+7)]-1) * ageCnt[age]
-        return res 
-            
-        
-        
+            res += (preSum[age] - preSum[int(.5 * age + 7)] - 1) * ageCnt[age]
+        return res
+
         '''
         Person A will NOT friend request person B (B != A) 
         if any of the following conditions are true:
@@ -45,9 +44,3 @@ age[B] > 100 && age[A] < 100
             for b in cnt:
                 res += request(a,b)*cnt[a]*(cnt[b]-(a==b))
         return res '''
-            
-        
-        
-        
-        
-

@@ -1,6 +1,6 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
-     
+
         f = collections.defaultdict(int)
         fff = collections.defaultdict(int)
         maxlen = 0
@@ -14,8 +14,7 @@ class Solution:
                     f[(i, diff)] = 2
                 else:
                     f[(i, diff)] = max(f[(i, diff)],  f[(j, diff)] + 1)                
-                '''                    
+                '''
                 maxlen = max(maxlen, f[(i, diff)])
 
         return maxlen
-

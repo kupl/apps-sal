@@ -8,14 +8,6 @@ class Solution:
                 if (diff, i) not in d:
                     d[(diff, i)] = 2
                 if (diff, j) in d:
-                    d[(diff, i)] = max(d[(diff,i)], d[(diff, j)] + 1)
+                    d[(diff, i)] = max(d[(diff, i)], d[(diff, j)] + 1)
                 mx = max(mx, d[(diff, i)])
         return mx
-                    
-        
-                    
-                
-        
-        
-                
-

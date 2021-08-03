@@ -1,8 +1,8 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         n = len(A)
-        
-        m = {} # expect: {step: length}
+
+        m = {}  # expect: {step: length}
         for i in range(1, n):
             e = m.pop(A[i], {})
             for step, length in e.items():
@@ -12,5 +12,5 @@ class Solution:
                 step = A[i] - A[j]
                 e1 = m.setdefault(A[i] + step, {})
                 e1[step] = max(e1.get(step, 0), 2)
-                
+
         return max(max(e.values()) for e in m.values())

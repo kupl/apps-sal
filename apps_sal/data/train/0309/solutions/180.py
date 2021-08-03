@@ -1,6 +1,7 @@
 from itertools import repeat
 from collections import Counter
 
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         length = len(A)

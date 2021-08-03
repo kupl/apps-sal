@@ -8,7 +8,7 @@ class Solution:
             dp.append({})
             for j in range(i):
                 pre = A[j]
-                dif = cur-pre
+                dif = cur - pre
                 if dif not in dp[i]:
                     dp[i][dif] = 0
                 if dif in dp[j]:
@@ -16,4 +16,4 @@ class Solution:
                 else:
                     dp[i][dif] = 1
                 maxv = max(maxv, dp[i][dif])
-        return maxv+1
+        return maxv + 1

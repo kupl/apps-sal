@@ -15,10 +15,9 @@ class Solution:
                     else:
                         previous = 0
                     possible.append(
-                        previous + max(A[index - group : index + 1]) * (group + 1)
+                        previous + max(A[index - group: index + 1]) * (group + 1)
                     )
 
             dp[index] = max(possible)
             # print(f\"{index=} {dp[index]=}\")
         return dp[-1]
-

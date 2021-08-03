@@ -10,5 +10,5 @@ class Solution:
                 d = A[i] - A[j]
                 dp[(i, d)] = dp.get((j, d), 1) + 1
                 # if dp[(i, d)] > curr:
-                    # curr = dp[(i, d)]
+                # curr = dp[(i, d)]
         return max(dp.values())

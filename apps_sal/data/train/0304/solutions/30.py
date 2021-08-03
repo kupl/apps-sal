@@ -29,5 +29,3 @@ class Solution:
             return u - l if l <= u else 0
 
         return sum(count(a) for a in ages)
-
-

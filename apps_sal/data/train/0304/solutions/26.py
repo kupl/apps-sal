@@ -1,5 +1,6 @@
 import collections
 
+
 class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
         age_count = collections.Counter(ages)

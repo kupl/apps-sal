@@ -5,14 +5,14 @@ class Solution:
         # For each position, we loop back 1 to k elements and find the maximum within each range
         # And replace them all with the maximum and try to find the maximum sum based on record[i-k+1]
         n = len(A)
-        record = [0]*(n+1)
+        record = [0] * (n + 1)
         for i in range(n):
             curMax = 0
-            for k in range(1,min(K,i+1)+1):
-                curMax = max(curMax,A[i-k+1])
-                record[i+1] = max(record[i+1],record[i-k+1]+curMax*k)
+            for k in range(1, min(K, i + 1) + 1):
+                curMax = max(curMax, A[i - k + 1])
+                record[i + 1] = max(record[i + 1], record[i - k + 1] + curMax * k)
         return record[n]
-        
+
         # N = len(A)
         # dp = [0] * (N + 1)
         # for i in range(N):
@@ -21,4 +21,3 @@ class Solution:
         #         curMax = max(curMax, A[i - k + 1])
         #         dp[i+1] = max(dp[i+1], dp[i+1 - k] + curMax * k)
         # return dp[N]
-

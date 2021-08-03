@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         A_indices = defaultdict(list)
@@ -7,7 +8,7 @@ class Solution:
             A_indices[a].append(i)
         lengths = defaultdict(lambda: 2)
         best = 2
-        
+
         for i in range(len(A) - 3, -1, -1):
             for j in range(i + 1, len(A) - 1):
                 if 2 * A[j] - A[i] in A_indices:

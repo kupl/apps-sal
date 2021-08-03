@@ -5,14 +5,18 @@ class Solution:
         for age in ages:
             count[age] += 1
             max_age = max(max_age, age)
-            
-        ans = 0
-        for ageA, countA in enumerate(count[:max_age+2]):
-            for ageB, countB in enumerate(count[:max_age+2]):
-                if ageA * 0.5 + 7 >= ageB: continue
-                if ageA < ageB: continue
-                if ageA < 100 < ageB: continue
-                ans += countA * countB
-                if ageA == ageB: ans -= countA
 
-        return ans   
+        ans = 0
+        for ageA, countA in enumerate(count[:max_age + 2]):
+            for ageB, countB in enumerate(count[:max_age + 2]):
+                if ageA * 0.5 + 7 >= ageB:
+                    continue
+                if ageA < ageB:
+                    continue
+                if ageA < 100 < ageB:
+                    continue
+                ans += countA * countB
+                if ageA == ageB:
+                    ans -= countA
+
+        return ans

@@ -5,7 +5,7 @@ class Solution:
         for i in range(len(A)):
             for j in range(i):
                 diff = A[i] - A[j]
-                j1 = (j , diff)
+                j1 = (j, diff)
                 i1 = (i, diff)
                 if dp.get(j1) != None:
                     dp[i1] = 1 + dp[j1]
@@ -15,7 +15,3 @@ class Solution:
                     ans = max(ans, dp[i1])
 
         return ans
-            
-                    
-                
-

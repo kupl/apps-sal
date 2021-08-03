@@ -9,8 +9,7 @@ class Solution:
                 else:
                     dp[i, d] = 2
         return max(dp.values())
-    
-    
+
         f = collections.defaultdict(int)
         maxlen = 0
         for i in range(len(A)):
@@ -23,8 +22,7 @@ class Solution:
                     f[(i, diff)] = 2
                 else:
                     f[(i, diff)] = max(f[(i, diff)],  f[(j, diff)] + 1)                
-                '''                    
+                '''
                 maxlen = max(maxlen, f[(i, diff)])
 
         return maxlen
-

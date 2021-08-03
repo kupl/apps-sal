@@ -7,7 +7,7 @@ class Solution:
         for i in range(1, len(A)):
             dp.append({})
             for j in range(0, i):
-                idx = A[i] -A[j]
+                idx = A[i] - A[j]
                 if idx in dp[j]:
                     dp[i][idx] = dp[j][idx] + 1
                     max_l = max(max_l, dp[i][idx])

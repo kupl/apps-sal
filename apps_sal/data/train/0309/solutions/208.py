@@ -1,6 +1,6 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
-        N = len(A) 
+        N = len(A)
         dp = [dict() for _ in range(N)]
         ret = 1
         for i in range(N):
@@ -18,8 +18,7 @@ class Solution:
         #             memo[i][diff] = max(memo[i].get(diff, 0), memo[j].get(diff, 1) + 1)
         #             ret = max(ret, memo[i][diff])
         #     return ret
-        # 
+        #
         # return max(
         #     calc(A), calc(list(reversed(A)))
         # )
-

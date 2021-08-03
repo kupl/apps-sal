@@ -7,4 +7,3 @@ class Solution:
                     )] = dp[(first_index, A[second_index] - A[first_index])] + 1
         max_length = max(dp.values())
         return max_length
-

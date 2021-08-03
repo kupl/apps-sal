@@ -9,5 +9,3 @@ class Solution:
                 curMax = max(curMax, arr[i - k + 1])
                 dp[i] = max(dp[i], dp[i - k] + curMax * k)
         return dp[N - 1]
-                
-

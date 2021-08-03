@@ -9,4 +9,3 @@ class Solution:
                 dp[i][delta] = max(dp[i][delta], dp[j][delta] + 1, 2)
                 res = max(res, dp[i][delta])
         return res
-

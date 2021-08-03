@@ -10,9 +10,9 @@ class Solution:
         for i in range(n):
             hashs[i + 1] = (hashs[i] * BASE + ord(text[i]) - 96) % MOD
             pows[i + 1] = (pows[i] * BASE) % MOD
-            
-        h = lambda i, j: (hashs[j + 1] - (hashs[i] * pows[j - i + 1]) % MOD) % MOD
-        
+
+        def h(i, j): return (hashs[j + 1] - (hashs[i] * pows[j - i + 1]) % MOD) % MOD
+
         for i in range(n):
             l = i
             r = i + 1

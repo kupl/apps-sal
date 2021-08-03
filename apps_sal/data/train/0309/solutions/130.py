@@ -6,5 +6,5 @@ class Solution:
             for j in range(i):
                 diff = A[i] - A[j]
                 dp[(i, diff)] = dp.get((j, diff), 1) + 1
-        
+
         return max(dp.values())

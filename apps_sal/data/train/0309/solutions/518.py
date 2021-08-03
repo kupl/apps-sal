@@ -9,6 +9,6 @@ class Solution:
             for j in range(i):
                 d = A[i] - A[j]
                 dp[(i, d)] = dp.get((j, d), 1) + 1
-                curr = max(curr, dp.get((i,d), 1))
+                curr = max(curr, dp.get((i, d), 1))
 
         return curr

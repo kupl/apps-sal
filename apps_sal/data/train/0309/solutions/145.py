@@ -10,5 +10,5 @@ class Solution:
                 diff = A[j] - A[i] + 500
                 dp[j][diff] = dp[i][diff] + 1
                 ans = max(ans, dp[j][diff])
-        
+
         return ans + 1

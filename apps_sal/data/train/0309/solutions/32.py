@@ -4,7 +4,7 @@ class Solution:
         m = 0
 
         n = len(A)
-        for i in range(1,n):
+        for i in range(1, n):
             for j in range(i):
                 diff = A[i] - A[j]
                 if diff not in cache[j]:

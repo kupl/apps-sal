@@ -6,12 +6,12 @@ class Solution:
             d = {}
             dp.append({})
             for j in range(i):
-                diff = A[i]-A[j]
+                diff = A[i] - A[j]
                 if(diff not in dp[i]):
                     dp[i][diff] = 0
                 if(diff not in dp[j]):
                     dp[j][diff] = 0
-                dp[i][diff] = dp[j][diff]+1
-                maximum = max(maximum,dp[i][diff])
-        
-        return maximum+1
+                dp[i][diff] = dp[j][diff] + 1
+                maximum = max(maximum, dp[i][diff])
+
+        return maximum + 1

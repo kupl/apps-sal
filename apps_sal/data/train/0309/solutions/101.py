@@ -3,7 +3,7 @@ class Solution:
         n = len(A)
         mark = [{}]
         res = 0
-        
+
         for i in range(1, n):
             mark.append({})
             for j in range(i):
@@ -16,9 +16,8 @@ class Solution:
                 else:
                     if delta not in mark[i]:
                         mark[i][delta] = 1
-                    
+
                 if mark[i][delta] > res:
                     res = mark[i][delta]
-                    
-        return res+1
 
+        return res + 1

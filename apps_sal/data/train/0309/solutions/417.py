@@ -10,4 +10,3 @@ class Solution:
                 nxt[z, d] = max(nxt[z, d], dp[y, d] + 1)
             dp.update(nxt)
         return max(dp.values())
-

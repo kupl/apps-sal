@@ -8,6 +8,6 @@ class Solution:
             if A[A_index] == B[B_index]:
                 return max(0, 1 + max_connections(A_index + 1, B_index + 1))
             else:
-                return max(0, max_connections(A_index + 1, B_index), max_connections(A_index, B_index + 1) )
-        
-        return max_connections(0, 0) 
+                return max(0, max_connections(A_index + 1, B_index), max_connections(A_index, B_index + 1))
+
+        return max_connections(0, 0)

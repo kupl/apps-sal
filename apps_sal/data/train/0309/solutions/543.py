@@ -8,4 +8,4 @@ class Solution:
                 diff = num - pval
                 mem[num, diff] = max(mem.get((num, diff), 1), 1 + mem.get((pval, diff), 1))
             prev_values.add(num)
-        return max(mem.values(), default = 0)
+        return max(mem.values(), default=0)

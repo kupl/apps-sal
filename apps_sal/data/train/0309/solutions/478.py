@@ -10,4 +10,3 @@ class Solution:
                 step = A[i] - A[j]
                 dp[(i, step)] = max(dp[(j, step)] + 1, dp[(i, step)])
         return max(dp.values())
-

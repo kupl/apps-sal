@@ -1,7 +1,8 @@
 class Solution:
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         n = len(arr)
-        if k == n: return n * max(arr)
+        if k == n:
+            return n * max(arr)
         dp = collections.deque([0] * k)
         for i in range(n - 1, -1, -1):
             m = 0
@@ -12,4 +13,3 @@ class Solution:
             dp.appendleft(result)
             dp.pop()
         return dp[0]
-

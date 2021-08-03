@@ -30,6 +30,8 @@ O(n^2)
 
 
 '''
+
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         d = collections.defaultdict(dict)
@@ -41,11 +43,6 @@ class Solution:
                     d[i][curDiff] = d[j][curDiff] + 1
                 else:
                     d[i][curDiff] = 2
-                    
+
                 sol = max(sol, d[i][curDiff])
         return sol
-        
-            
-
-            
-

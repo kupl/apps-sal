@@ -7,7 +7,7 @@ class Solution:
         return max(dp.values())
 #     def longestArithSeqLength(self, A: List[int]) -> int:
 #         m = {}
-        
+
 #         m[A[1] + A[1]-A[0]] = (2,A[1]-A[0])
 #         for i in range(2, len(A)):
 #             if A[i] in m:
@@ -20,4 +20,3 @@ class Solution:
 #                     m[A[i]+d] = (2,d)
 #         # print(m)
 #         return max([counter for counter,_ in list(m.values())])
-

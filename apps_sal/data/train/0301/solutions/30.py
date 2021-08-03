@@ -3,10 +3,10 @@ from functools import lru_cache
 
 class Solution:
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
-        
+
         len_a = len(A)
         len_b = len(B)
-        
+
         @lru_cache(None)
         def helper(i, j):
             nonlocal A, B, len_a, len_b, b_index_data
@@ -27,4 +27,3 @@ class Solution:
             l.append(i)
 
         return helper(0, 0)
-

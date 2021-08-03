@@ -5,9 +5,9 @@ class Solution:
         for i in range(1, n + 1):
             max_val = float('-inf')
             for w in range(1, K + 1):
-                if i - w < 0: break
+                if i - w < 0:
+                    break
                 max_val = max(max_val, A[i - w])
                 dp[i] = max(dp[i], dp[i - w] + max_val * w)
-            
-        return dp[-1]
 
+        return dp[-1]

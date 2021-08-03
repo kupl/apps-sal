@@ -9,6 +9,5 @@ class Solution:
                 helper(i - 1, j),
                 helper(i, j - 1)
             ])
-        
-        return helper(len(A) - 1, len(B) - 1)
 
+        return helper(len(A) - 1, len(B) - 1)

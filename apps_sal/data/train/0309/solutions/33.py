@@ -5,7 +5,7 @@ class Solution:
         for i in range(len(A)):
             for j in range(i):
                 diff = A[i] - A[j]
-                dp[i][diff] = val = dp[j].get(diff,1) + 1
+                dp[i][diff] = val = dp[j].get(diff, 1) + 1
                 if val > maxSequence:
                     maxSequence = val
         return maxSequence

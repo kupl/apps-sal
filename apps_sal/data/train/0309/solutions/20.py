@@ -1,6 +1,6 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
-        memo = [{} for _ in range(len(A))] 
+        memo = [{} for _ in range(len(A))]
         for i in range(len(A)):
             for j in range(i):
                 diff = A[i] - A[j]
