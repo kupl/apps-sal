@@ -1,7 +1,7 @@
 def sum_array(arr):
-     if arr == None or arr == [] or len(arr) < 2:
+    if arr == None or arr == [] or len(arr) < 2:
         return 0
-     else:
+    else:
         lowest = arr[0]
         for i in arr:
             if i < lowest:
@@ -14,4 +14,3 @@ def sum_array(arr):
         for i in arr:
             tot += i
         return tot - lowest - highest
-

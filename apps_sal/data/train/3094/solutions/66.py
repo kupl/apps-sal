@@ -1,5 +1,5 @@
 def sum_array(arr):
-    if arr==[] or arr == None or len(arr) == 1:
+    if arr == [] or arr == None or len(arr) == 1:
         return 0
     else:
         mini = min(arr)
@@ -12,4 +12,3 @@ def sum_array(arr):
         for x in arr:
             ttl += x
     return ttl
-

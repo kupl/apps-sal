@@ -1,2 +1,2 @@
 def omit_hashtag(message, h):
-    return message.replace(h,'',1)
+    return message.replace(h, '', 1)

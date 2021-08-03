@@ -9,4 +9,3 @@ def sum_array(arr):
             total += arr[number]
             print(total)
         return total - min(arr) - max(arr)
-

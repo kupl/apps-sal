@@ -8,4 +8,3 @@ def denumerate(enum_list):
     except (KeyError, TypeError, ValueError):
         pass
     return False
-

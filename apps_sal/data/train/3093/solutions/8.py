@@ -7,4 +7,3 @@ def insert_dash(num):
             ans += '-'
     ans += num[-1]
     return ans
-

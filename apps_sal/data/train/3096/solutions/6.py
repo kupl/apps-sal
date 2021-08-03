@@ -1,7 +1,7 @@
 def josephus(n, k):
     k -= 1
-    i = k 
-    
+    i = k
+
     result = []
     while n:
         if i < len(n):

@@ -1,9 +1,9 @@
 def sum_array(arr):
-    if arr ==None:
+    if arr == None:
         return 0
-    if len(arr)==0:
+    if len(arr) == 0:
         return 0
-    
+
     sum = 0
     arr.sort()
     w = arr[1:-1]

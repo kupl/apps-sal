@@ -3,4 +3,3 @@ def sum_array(arr):
         return 0
     else:
         return sum(x for x in arr) - min(arr) - max(arr)
-

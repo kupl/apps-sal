@@ -1,6 +1,6 @@
 def sum_array(arr):
     if arr == [] or arr == None:
-        return 0 
+        return 0
     elif len(arr) < 3:
         return 0
     arr = sorted(arr)
@@ -11,5 +11,4 @@ def sum_array(arr):
     for i in arr:
         result += i
     return result
-    #your code here
-
+    # your code here

@@ -9,4 +9,4 @@ def sum_array(arr):
         x = 0
         for x in arr:
             sum += x
-        return sum-max(arr)-min(arr)
+        return sum - max(arr) - min(arr)

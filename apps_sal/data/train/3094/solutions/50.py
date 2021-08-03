@@ -5,4 +5,4 @@ def sum_array(arr={}):
         res = sum(arr) - min(arr)
     else:
         res = sum(arr)
-    return res- max(arr)
+    return res - max(arr)

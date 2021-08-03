@@ -5,8 +5,3 @@ def sum_array(arr=[]):
         arr.remove(max(arr))
         arr.remove(min(arr))
         return sum(arr)
- 
- 
-        
-        
-

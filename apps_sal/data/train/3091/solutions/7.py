@@ -3,7 +3,4 @@ def omit_hashtag(message, hashtag):
     if index == -1:
         return message
     else:
-        return message[:index] + message[index+len(hashtag):]
-    
-
-
+        return message[:index] + message[index + len(hashtag):]

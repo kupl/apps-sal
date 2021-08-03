@@ -2,6 +2,7 @@ def is_odd(num):
     """ Returns True if number is odd and False otherwise """
     return not int(num) % 2 == 0
 
+
 def insert_dash(num):
     """ insert_dash() inserts dashes between each pair of odd numbers
         and returns it.

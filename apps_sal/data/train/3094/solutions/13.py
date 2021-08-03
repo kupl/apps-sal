@@ -6,4 +6,4 @@ def sum_array(arr):
         arr.sort(reverse=False)
         for i in arr:
             sum += i
-        return sum - int(arr[0]+arr[-1])
+        return sum - int(arr[0] + arr[-1])

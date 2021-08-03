@@ -3,7 +3,7 @@ def sum_array(arr=[0]):
         if len(arr) > -1 and len(arr) < 3:
             return 0
         else:
-            return sum(arr)- (min(arr)+max(arr))
-    
+            return sum(arr) - (min(arr) + max(arr))
+
     except:
-        return 0 
+        return 0

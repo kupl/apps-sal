@@ -19,4 +19,3 @@ def sum_array(arr):
             highest = max(b, highest)
 
     return total - lowest - highest
-
