@@ -10,12 +10,16 @@ dp = [[-1] * (m + 1) for m in range(n + 1)]
 
 
 def f(m, l):
-    if m == n: return 0
-    if dp[m][l] != -1: return dp[m][l]
+    if m == n:
+        return 0
+    if dp[m][l] != -1:
+        return dp[m][l]
     r = n - m + l - 1
     i, v = a[m]
-    if i >= l: dp[m + 1][l + 1] = f(m + 1, l + 1)
-    if i <= r: dp[m + 1][l] = f(m + 1, l)
+    if i >= l:
+        dp[m + 1][l + 1] = f(m + 1, l + 1)
+    if i <= r:
+        dp[m + 1][l] = f(m + 1, l)
     return max(dp[m + 1][l + 1] + v * (i - l), dp[m + 1][l] + v * (r - i))
 
 

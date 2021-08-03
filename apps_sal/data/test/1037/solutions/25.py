@@ -5,12 +5,14 @@ dp = [[0] * (N + 1) for i in range(N + 1)]
 
 for i in range(1, N + 1):
     k, Ak = _A[i - 1]
-    if (N - i - k) < 0: break
+    if (N - i - k) < 0:
+        break
     dp[0][i] = dp[0][i - 1] + (N - i + 1 - k) * Ak
 
 for i in range(1, N + 1):
     k, Ak = _A[i - 1]
-    if (k - i) < 0: break
+    if (k - i) < 0:
+        break
     dp[i][0] = dp[i - 1][0] + (k - i) * Ak
 
 for x in range(1, N + 1):

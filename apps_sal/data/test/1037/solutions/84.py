@@ -4,8 +4,10 @@ def main():
     for t, (c, k) in enumerate(sorted((c, k) for k, c in enumerate(a))[::-1]):
         for i in range(t + 1):
             j = t - i
-            if dp[i + 1][j] <= (s := dp[i][j] + c * abs(i - k)): dp[i + 1][j] = s
-            if dp[i][j + 1] <= (s := dp[i][j] + c * abs(n - 1 - k - j)): dp[i][j + 1] = s
+            if dp[i + 1][j] <= (s := dp[i][j] + c * abs(i - k)):
+                dp[i + 1][j] = s
+            if dp[i][j + 1] <= (s := dp[i][j] + c * abs(n - 1 - k - j)):
+                dp[i][j + 1] = s
     print((max(dp[i][~i] for i in range(n + 1))))
 
 

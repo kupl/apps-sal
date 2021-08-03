@@ -12,10 +12,12 @@ inf = int(10 ** 20)
 max_val = inf
 min_val = -inf
 
-RW = lambda: sys.stdin.readline().strip()
-RI = lambda: int(RW())
-RMI = lambda: [int(x) for x in sys.stdin.readline().strip().split()]
-RWI = lambda: [x for x in sys.stdin.readline().strip().split()]
+
+def RW(): return sys.stdin.readline().strip()
+def RI(): return int(RW())
+def RMI(): return [int(x) for x in sys.stdin.readline().strip().split()]
+def RWI(): return [x for x in sys.stdin.readline().strip().split()]
+
 
 given = input()[::-1]
 zeros = 0

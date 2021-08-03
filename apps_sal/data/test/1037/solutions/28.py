@@ -1,6 +1,6 @@
 #!python3
 
-iim = lambda: list(map(int, input().rstrip().split()))
+def iim(): return list(map(int, input().rstrip().split()))
 
 
 def resolve():
