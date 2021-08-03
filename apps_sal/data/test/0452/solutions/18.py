@@ -13,7 +13,7 @@ x, y = 1, 0
 for i in a[::-1]:
     x, y = y + i * x, x
 a, b = gcd(p, q), gcd(x, y)
-p = p // a;
+p = p // a
 q = q // a
 x = x // b
 y = y // b

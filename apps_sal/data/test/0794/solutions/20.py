@@ -3,9 +3,11 @@ import sys
 import math
 import string
 input = sys.stdin.readline
-L = lambda: list(map(int, input().split()))
-Ls = lambda: list(input().split())
-M = lambda: list(map(int, input().split()))
+def L(): return list(map(int, input().split()))
+def Ls(): return list(input().split())
+def M(): return list(map(int, input().split()))
+
+
 n = int(input())
 l = L()
 p = set(l)

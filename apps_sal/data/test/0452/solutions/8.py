@@ -15,7 +15,7 @@ def gcd(a, b):
 g = gcd(p, q)
 p, q = p // g, q // g
 
-u, v = 0, 1;
+u, v = 0, 1
 
 for i in a:
     v, u = v * i + u, v

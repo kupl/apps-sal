@@ -11,7 +11,7 @@ def gcd(x, y):
 
 p, q = list(map(int, sys.stdin.readline().split()))
 n = int(input())
-a = [0] * n;
+a = [0] * n
 b = list(map(int, sys.stdin.readline().split()))
 l = 0
 for i in b:
