@@ -1,6 +1,7 @@
 import sys
 ioRead = sys.stdin.readline
-ioWrite = lambda x: sys.stdout.write(f"{x}\n")
+def ioWrite(x): return sys.stdout.write(f"{x}\n")
+
 
 n, m, q = map(int, ioRead().split(" "))
 rows_and_columns = n + m

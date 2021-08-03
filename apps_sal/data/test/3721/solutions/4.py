@@ -29,7 +29,8 @@ class UnionFind():
     def union(self, x, y):
         leader1 = self.find(x)
         leader2 = self.find(y)
-        if leader1 == leader2: return False
+        if leader1 == leader2:
+            return False
         if self.getRank(leader1) > self.getRank(leader2):
             self.leader[leader2] = leader1
         elif self.getRank(leader1) < self.getRank(leader2):

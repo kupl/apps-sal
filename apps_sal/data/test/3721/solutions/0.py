@@ -5,17 +5,23 @@ r = [0] * (n + m)
 
 
 def par(i):
-    if p[i] == -1: return i
+    if p[i] == -1:
+        return i
     p[i] = par(p[i])
     return p[i]
 
 
 def merge(a, b):
     a, b = par(a), par(b)
-    if a == b: return 0
-    if r[a] < r[b]: p[a] = b
-    elif r[b] < r[a]: p[b] = a
-    else: p[a] = b; r[b] += 1
+    if a == b:
+        return 0
+    if r[a] < r[b]:
+        p[a] = b
+    elif r[b] < r[a]:
+        p[b] = a
+    else:
+        p[a] = b
+        r[b] += 1
     return 1
 
 
