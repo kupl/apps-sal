@@ -1,25 +1,28 @@
 m = 1000000007
-def value(a,b,c):
-    return ((a+b)*(b+c))
+
+
+def value(a, b, c):
+    return ((a + b) * (b + c))
+
 
 t = int(input())
 while(t):
-    t-=1
-    sum=0
-    p,q,r = map(int,input().split())
+    t -= 1
+    sum = 0
+    p, q, r = map(int, input().split())
     a = [int(x) for x in input().split()]
     b = [int(x) for x in input().split()]
     c = [int(x) for x in input().split()]
-    if min(a)>max(b) or max(b)<min(c):
-        sum=0
+    if min(a) > max(b) or max(b) < min(c):
+        sum = 0
     else:
         for i in b:
-            if i>=min(a) and i>=min(c):
+            if i >= min(a) and i >= min(c):
                 for j in a:
-                    if j<=i:
+                    if j <= i:
                         for k in c:
-                            if i>=k:
-                                sum = sum + value(j,i,k)
+                            if i >= k:
+                                sum = sum + value(j, i, k)
         '''for i in b:
             if i>=min(a) and i>=min(c):
                 a1 = [j for j in a if j<=i]
@@ -28,4 +31,4 @@ while(t):
                     for k in c1:
                         #if j<=i and i>=k:
                         sum = sum + value(j,i,k)'''
-    print(sum%m)                
+    print(sum % m)

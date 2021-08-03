@@ -20,7 +20,5 @@ for _ in range(t):
         while n < r and c[n] <= i:
             sum2 += c[n]
             n += 1
-        ans += (sum1+m*i)*(sum2+n*i)
-    print(ans%mod)
-
-
+        ans += (sum1 + m * i) * (sum2 + n * i)
+    print(ans % mod)

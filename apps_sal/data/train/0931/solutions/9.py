@@ -9,6 +9,7 @@ def func():
 
     return
 
+
 for _ in range(int(stdin.readline())):
     n = int(stdin.readline())
     arr = list(map(int, stdin.readline().split()))
@@ -17,4 +18,3 @@ for _ in range(int(stdin.readline())):
         if ele % 2 == 0:
             s += ele
     print(s)
-
