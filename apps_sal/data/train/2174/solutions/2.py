@@ -4,4 +4,3 @@ for i in map(int, input().split()):
     b.add(i)
     a.update(b)
 print(len(a))
-

@@ -7,7 +7,7 @@ for i in range(m):
     for j in range(2200, -1, -1):
         if a & (1 << j):
             if(buck[j][0]):
-                a  ^= buck[j][0]
+                a ^= buck[j][0]
                 br ^= buck[j][1]
             else:
                 ok = False
@@ -21,8 +21,7 @@ for i in range(m):
         for j in range(2201):
             if br & (1 << j):
                 lst.append(j)
-        print(len(lst), end = ' ')
+        print(len(lst), end=' ')
         for j in lst:
-            print(j, end = ' ')
+            print(j, end=' ')
         print('\n', end='')
-

@@ -3,7 +3,6 @@ n = int(input())
 a = list(map(int, input().split()))
 ans = 0
 for i in a:
-	if b < i < c:
-		ans += 1
+    if b < i < c:
+        ans += 1
 print(ans)
-

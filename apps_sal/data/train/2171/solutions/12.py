@@ -1,6 +1,8 @@
 from collections import defaultdict, deque, Counter, OrderedDict
 from bisect import insort, bisect_right, bisect_left
-import threading, sys
+import threading
+import sys
+
 
 def main():
     n = int(input())
@@ -16,7 +18,8 @@ def main():
     par = [[] for i in range(n)]
 
     def dfs(s, p):
-        if visited[s]: return
+        if visited[s]:
+            return
         visited[s] = 1
         par[p].append(s)
         for i in adj[s]:
@@ -47,10 +50,12 @@ def main():
     print(len(ans))
     print("\n".join(map(str, ans)))
 
+
 def __starting_point():
     sys.setrecursionlimit(400000)
     threading.stack_size(102400000)
     thread = threading.Thread(target=main)
     thread.start()
+
 
 __starting_point()

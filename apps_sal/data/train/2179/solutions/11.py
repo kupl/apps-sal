@@ -6,4 +6,3 @@ for i in x:
     if i > b and i < c:
         ans += 1
 print(ans)
-

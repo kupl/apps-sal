@@ -6,4 +6,3 @@ cnt = 0
 for x in xs:
     cnt += int(b < x and x < c)
 print(cnt)
-

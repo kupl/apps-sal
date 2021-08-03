@@ -1,5 +1,6 @@
 import sys
 
+
 def dfs(tree, root, priv_root, cur_lvl, priv_lvl, diff, pick_list):
     if not tree:
         return
@@ -10,7 +11,8 @@ def dfs(tree, root, priv_root, cur_lvl, priv_lvl, diff, pick_list):
             cur_lvl ^= 1
             pick_list.append(str(root))
         stack += [(vertex, root, priv_lvl, cur_lvl)
-                for vertex in tree[root] if vertex != priv_root]
+                  for vertex in tree[root] if vertex != priv_root]
+
 
 def main():
     n = int(input())
@@ -31,7 +33,9 @@ def main():
     if num:
         print('\n'.join(pick_list))
 
+
 def __starting_point():
     return(main())
+
 
 __starting_point()

@@ -1,4 +1,6 @@
-import sys, math,os
+import sys
+import math
+import os
 from io import BytesIO, IOBase
 #from bisect import bisect_left as bl, bisect_right as br, insort
 #from heapq import heapify, heappush, heappop
@@ -6,20 +8,23 @@ from collections import defaultdict as dd, deque, Counter
 #from itertools import permutations,combinations
 def data(): return sys.stdin.readline().strip()
 def mdata(): return list(map(int, data().split()))
-def outl(var) : sys.stdout.write(' '.join(map(str, var))+'\n')
-def out(var) : sys.stdout.write(str(var)+'\n')
+def outl(var): sys.stdout.write(' '.join(map(str, var)) + '\n')
+def out(var): sys.stdout.write(str(var) + '\n')
+
+
 sys.setrecursionlimit(100000)
 INF = float('inf')
-mod = int(1e9)+7
+mod = int(1e9) + 7
+
 
 def main():
 
-    n=int(data())
-    A=mdata()
-    s=set()
-    ans=set()
+    n = int(data())
+    A = mdata()
+    s = set()
+    ans = set()
     for i in A:
-        s=set(i|j for j in s)
+        s = set(i | j for j in s)
         s.add(i)
         ans.update(s)
     print(len(ans))
@@ -27,4 +32,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

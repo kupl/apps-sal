@@ -10,5 +10,5 @@ for each in a:
         st.add(each | i)
     s1 = st
     s2.update(s1)
-    
+
 print(len(s2))

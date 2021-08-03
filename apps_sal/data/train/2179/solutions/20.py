@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 from sys import stdin, stdout
 
+
 def rint():
     return list(map(int, stdin.readline().split()))
 #lines = stdin.readlines()
+
 
 a, b, c = rint()
 
@@ -16,4 +18,3 @@ for i in x:
         ans += 1
 
 print(ans)
-

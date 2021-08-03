@@ -2,6 +2,7 @@ from collections import defaultdict, deque, Counter, OrderedDict
 from bisect import insort, bisect_right, bisect_left
 import threading
 
+
 def main():
     n = int(input())
     adj = [[] for i in range(n + 1)]
@@ -18,7 +19,8 @@ def main():
     dq.append((0, 0))
     while len(dq) > 0:
         (s, p) = dq.pop()
-        if visited[s]: continue
+        if visited[s]:
+            continue
         visited[s] = 1
         par[p].append(s)
         for i in adj[s]:
@@ -47,10 +49,12 @@ def main():
     print(len(ans))
     print("\n".join(map(str, ans)))
 
+
 def __starting_point():
     """sys.setrecursionlimit(200000)
     threading.stack_size(10240000)"""
     thread = threading.Thread(target=main)
     thread.start()
+
 
 __starting_point()

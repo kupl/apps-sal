@@ -22,11 +22,11 @@ def main():
             right_maxes.append(max(right_maxes[-1],
                                    answer[d[i][len(d[i]) - j - 1]]))
         left_amount = 0
-        for j in range(len(d[i+1])):
-            while left_amount < len(d[i]) and d[i][left_amount] < d[i+1][j]:
+        for j in range(len(d[i + 1])):
+            while left_amount < len(d[i]) and d[i][left_amount] < d[i + 1][j]:
                 left_amount += 1
-            answer[d[i+1][j]] = max(left_maxes[left_amount],
-                                    right_maxes[len(d[i]) - left_amount] + 1)
+            answer[d[i + 1][j]] = max(left_maxes[left_amount],
+                                      right_maxes[len(d[i]) - left_amount] + 1)
     res = 0
     for ans in answer:
         res += ans
@@ -35,5 +35,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

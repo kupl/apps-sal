@@ -1,33 +1,35 @@
-from collections import defaultdict,deque,Counter,OrderedDict
+from collections import defaultdict, deque, Counter, OrderedDict
 import sys
+
 
 def main():
     n = int(input())
-    adj = [ [] for i in range(n+1)]
-    for i in range(n-1):
-        a,b = map(int,input().split())
-        a,b = a-1,b-1
+    adj = [[] for i in range(n + 1)]
+    for i in range(n - 1):
+        a, b = map(int, input().split())
+        a, b = a - 1, b - 1
         adj[a].append(b)
         adj[b].append(a)
     init = [int(i) for i in input().split()]
     goal = [int(i) for i in input().split()]
-    visited = [0]*n
+    visited = [0] * n
     par = [[] for i in range(n)]
     dq = deque()
-    dq.append((0,0))
+    dq.append((0, 0))
     while len(dq) > 0:
-        (s,p) = dq.pop()
-        if visited[s]: continue
+        (s, p) = dq.pop()
+        if visited[s]:
+            continue
         visited[s] = 1
         par[p].append(s)
         for i in adj[s]:
-            dq.append((i,s))
+            dq.append((i, s))
     par[0] = par[0][1:]
     ans = []
     dq = deque()
-    dq.append((0,0,0,0))
+    dq.append((0, 0, 0, 0))
     while len(dq) > 0:
-        (s,l,fo,fe) = dq.pop()
+        (s, l, fo, fe) = dq.pop()
         if l % 2 == 0:
             if fe % 2 == 1:
                 init[s] = 1 - init[s]
@@ -41,13 +43,14 @@ def main():
             else:
                 fe += 1
         for j in par[s]:
-            dq.append((j,l+1,fo,fe))
+            dq.append((j, l + 1, fo, fe))
 
     print(len(ans))
-    print("\n".join(map(str,ans)))
-
+    print("\n".join(map(str, ans)))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()
