@@ -1,4 +1,4 @@
-def calculator(x,y,op):
+def calculator(x, y, op):
     if op == '+' and type(x) == int and type(y) == int:
         return x + y
     if op == '-':

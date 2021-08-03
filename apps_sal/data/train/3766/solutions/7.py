@@ -12,23 +12,26 @@ def getAllPrimeFactors(n):
             number = 2
         else:
             number += 1
-    if n: results.append(int(n))
+    if n:
+        results.append(int(n))
     return results
+
 
 def getUniquePrimeFactorsWithCount(n):
     results = getAllPrimeFactors(n)
-    counted = [[],[]]
+    counted = [[], []]
     if not results == []:
-        for i in range(results[-1]+1):
-            if i in results: 
+        for i in range(results[-1] + 1):
+            if i in results:
                 counted[0].append(i)
-                counted[1].append(results.count(i))            
+                counted[1].append(results.count(i))
     return counted
+
 
 def getUniquePrimeFactorsWithProducts(n):
     counted = getUniquePrimeFactorsWithCount(n)
     products = []
-    if not counted == [[],[]]:
+    if not counted == [[], []]:
         for i in range(len(counted[0])):
             products.append(counted[0][i]**counted[1][i])
     return products

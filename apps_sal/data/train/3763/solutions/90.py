@@ -1,5 +1,7 @@
 from numbers import Number
-def calculator(x,y,op):
+
+
+def calculator(x, y, op):
     if type(x) == int and type(y) == int and op == "+":
         return x + y
     elif type(x) == int and type(y) == int and op == "-":

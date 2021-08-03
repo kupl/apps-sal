@@ -3,6 +3,7 @@ import math
 
 digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+
 def dec2FactString(nb):
     result = []
     i = itertools.count(1)
@@ -10,6 +11,7 @@ def dec2FactString(nb):
         nb, rem = divmod(nb, next(i))
         result.append(digits[rem])
     return "".join(i for i in result[::-1])
+
 
 def factString2Dec(string):
     return sum(

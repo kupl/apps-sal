@@ -7,7 +7,8 @@ ops = {
     '/': operator.truediv
 }
 
-def calculator(x,y,op):
+
+def calculator(x, y, op):
     try:
         return ops[op](int(x), int(y))
     except (ValueError, KeyError):

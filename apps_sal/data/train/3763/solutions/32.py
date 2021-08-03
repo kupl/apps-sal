@@ -1,4 +1,4 @@
-def calculator(x,y,op):
+def calculator(x, y, op):
     print(x, y, op)
     lst = ['+', '-', '*', '/']
     if op not in lst:

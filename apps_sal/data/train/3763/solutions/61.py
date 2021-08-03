@@ -1,19 +1,19 @@
-def calculator(x,y,op):
-    
+def calculator(x, y, op):
 
     if op == '+':
         try:
             return int(x) + int(y)
-        except: return "unknown value"
-    
+        except:
+            return "unknown value"
+
     elif op == '-':
         return x - y
 
     elif op == '*':
         return x * y
-    
+
     elif op == '/':
         return x / y
-    
+
     else:
         return "unknown value"

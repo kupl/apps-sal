@@ -4,7 +4,7 @@ def calculator(x, y, op):
         int(y)
     except:
         return 'unknown value'
-    
+
     return {
         '+': int(x) + int(y),
         '-': int(x) - int(y),

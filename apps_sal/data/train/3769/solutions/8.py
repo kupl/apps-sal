@@ -1,5 +1,6 @@
 import re
 
+
 def update_grid(px, py, grid):
     height = len(grid)
     width = len(grid[0])
@@ -15,9 +16,9 @@ def update_grid(px, py, grid):
         grid.insert(0, " " * width)
     if py >= height:
         grid.append(" " * width)
-    grid[py] = grid[py][:px] + "*" + grid[py][px+1:]
+    grid[py] = grid[py][:px] + "*" + grid[py][px + 1:]
     return px, py, grid
-    
+
 
 def execute(code):
     grid = ["*"]
@@ -38,4 +39,3 @@ def execute(code):
             if op == "R":
                 facing = (-facing[1], facing[0])
     return "\r\n".join(grid)
-

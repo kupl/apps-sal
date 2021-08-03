@@ -1,4 +1,4 @@
-def calculator(x,y,op):
+def calculator(x, y, op):
     if type(x) != int or type(y) != int:
         return 'unknown value'
     elif op == '+':
@@ -13,4 +13,3 @@ def calculator(x,y,op):
         return x / y
     else:
         return 'unknown value'
-

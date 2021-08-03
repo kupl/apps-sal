@@ -1,10 +1,11 @@
 import re
 
+
 def execute(code):
     if code == '':
         return '*'
     turn_right = [[1, 0], [0, -1], [-1, 0], [0, 1]]
-    turn_left =  [[-1, 0], [0, -1], [1, 0], [0, 1]]
+    turn_left = [[-1, 0], [0, -1], [1, 0], [0, 1]]
     path = re.findall('F\d+|F|L\d+|L|R\d+|R', code)
     max_size = sum([1 if j == 'F' else int(j[1:]) for j in path if 'F' in j]) * 2
     table = [[' '] * (max_size + 1) for i in range(max_size + 1)]
@@ -19,7 +20,7 @@ def execute(code):
         if 'L' in way:
             for i in range(1 if way == 'L' else int(way[1:])):
                 cur_pos = [pos for pos, coords in enumerate(turn_left) if coords == [f1, f2]][0]
-                f1, f2 = turn_left[0] if cur_pos == 3 else turn_left[cur_pos + 1]        
+                f1, f2 = turn_left[0] if cur_pos == 3 else turn_left[cur_pos + 1]
         if 'F' in way:
             for i in range(1 if way == 'F' else int(way[1:])):
                 x += 1 * f1

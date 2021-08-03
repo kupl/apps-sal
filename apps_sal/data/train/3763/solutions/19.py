@@ -1,4 +1,4 @@
-def calculator(x,y,op):
+def calculator(x, y, op):
     if y == "$":
         return("unknown value")
     if x == "a":

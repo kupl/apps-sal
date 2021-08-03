@@ -1,5 +1,5 @@
-def calculator(x,y,op,msg='unknown value'):
+def calculator(x, y, op, msg='unknown value'):
     try:
-        return eval(str(x)+op+str(y)) if op in '+-*/' else msg
+        return eval(str(x) + op + str(y)) if op in '+-*/' else msg
     except:
         return msg

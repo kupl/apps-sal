@@ -5,4 +5,3 @@ def roundRobin(jobs, slice, index):
         jobs[i] = max(0, jobs[i] - slice)
         i = (i + 1) % len(jobs)
     return cc
-
