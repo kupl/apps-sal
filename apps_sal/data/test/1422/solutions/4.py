@@ -14,7 +14,8 @@ while r:
 
     for y in p:
 
-        if y != x and y > d: r.append((y, y - d, s + 1, t + [y]))
+        if y != x and y > d:
+            r.append((y, y - d, s + 1, t + [y]))
 
 print(q)
 

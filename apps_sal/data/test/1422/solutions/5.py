@@ -4,7 +4,8 @@
 
 
 MOD = 10**9 + 7
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
 
 a = [i for i, j in enumerate(input(), 1) if j == '1']
 m = int(input())

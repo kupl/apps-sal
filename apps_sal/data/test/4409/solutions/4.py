@@ -68,7 +68,8 @@ def primeFactors(n):  # n**0.5 complex
         while n % i == 0:
             if i in factors:
                 factors[i] += 1
-            else: factors[i] = 1
+            else:
+                factors[i] = 1
             n = n // i
     if n > 2:
         factors[n] = 1
@@ -76,7 +77,8 @@ def primeFactors(n):  # n**0.5 complex
 
 
 def fibonacci_modP(n, MOD):
-    if n < 2: return 1
+    if n < 2:
+        return 1
     #print (n,MOD)
     return (cached_fn(fibonacci_modP, (n + 1) // 2, MOD) * cached_fn(fibonacci_modP, n // 2, MOD) + cached_fn(fibonacci_modP, (n - 1) // 2, MOD) * cached_fn(fibonacci_modP, (n - 2) // 2, MOD)) % MOD
 
@@ -119,7 +121,8 @@ factorial_modP = []
 
 def warm_up_fac(MOD):
     nonlocal factorial_modP, fac_warmup
-    if fac_warmup: return
+    if fac_warmup:
+        return
     factorial_modP = [1 for _ in range(fac_warmup_size + 1)]
     for i in range(2, fac_warmup_size):
         factorial_modP[i] = (factorial_modP[i - 1] * i) % MOD
@@ -228,7 +231,7 @@ def ncr(n, r):
 
 def binary_serach(i, li):
     #print("Search for ",i)
-    fn = lambda x: li[x] - x // i
+    def fn(x): return li[x] - x // i
     x = -1
     b = len(li)
     while b >= 1:
@@ -277,4 +280,5 @@ def main():
 if TestCases:
     for _ in range(get_int()):
         cProfile.run('main()') if testingMode else main()
-else: (cProfile.run('main()') if testingMode else main()) if not optimiseForReccursion else threading.Thread(target=main).start()
+else:
+    (cProfile.run('main()') if testingMode else main()) if not optimiseForReccursion else threading.Thread(target=main).start()

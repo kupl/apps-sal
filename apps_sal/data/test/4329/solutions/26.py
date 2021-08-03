@@ -24,9 +24,12 @@ def lii(): return list(map(int, sys.stdin.readline().strip().split()))
 
 
 def solve():
-    a = i(); b = i()
-    if len(a) == len(b) - 1 and a == b[:-1]: print('Yes')
-    else: print('No')
+    a = i()
+    b = i()
+    if len(a) == len(b) - 1 and a == b[:-1]:
+        print('Yes')
+    else:
+        print('No')
 
 
 solve()

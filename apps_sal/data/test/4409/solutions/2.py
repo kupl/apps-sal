@@ -10,8 +10,10 @@ n = int(input())
 a = list(map(int, input().split()))
 f = {}
 for ai in a:
-    if ai not in f: f[ai] = 1
-    else: f[ai] += 1
+    if ai not in f:
+        f[ai] = 1
+    else:
+        f[ai] += 1
 
 mx = a[0]
 for k in f:
