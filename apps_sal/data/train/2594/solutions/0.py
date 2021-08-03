@@ -1,6 +1,9 @@
 from collections import Counter, OrderedDict
-class OrderedCounter(Counter,OrderedDict):
+
+
+class OrderedCounter(Counter, OrderedDict):
     pass
+
 
 word_ar = []
 n = int(input())
@@ -9,5 +12,4 @@ for i in range(n):
 word_counter = OrderedCounter(word_ar)
 print(len(word_counter))
 for word in word_counter:
-    print(word_counter[word],end=' ')
-
+    print(word_counter[word], end=' ')
