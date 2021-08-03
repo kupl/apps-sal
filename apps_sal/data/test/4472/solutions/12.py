@@ -1,5 +1,6 @@
 from collections import Counter
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
 
 n = int(input())
 s1 = input()

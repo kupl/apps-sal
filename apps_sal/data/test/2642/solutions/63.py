@@ -2,7 +2,9 @@ import sys
 import bisect
 import collections
 import math
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(10**7)
 INF = 10**20
 MOD = 1000000007

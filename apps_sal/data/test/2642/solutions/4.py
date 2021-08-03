@@ -22,7 +22,8 @@ for _ in range(n):
 done = set()
 ans = 1
 for (a, b), v in list(d.items()):
-    if (a, b) in done: continue
+    if (a, b) in done:
+        continue
     done.add((a, b))
     done.add((-b, a))
     done.add((b, -a))

@@ -37,7 +37,8 @@ ans = 1
 used = defaultdict(int)
 
 for (i, j), v in list(d.items()):
-    if used[(i, j)]: continue
+    if used[(i, j)]:
+        continue
     used[(i, j)] = 1
     buf = 0
 

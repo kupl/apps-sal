@@ -1,11 +1,12 @@
 from sys import stdin, stdout
 from collections import *
 from math import ceil, floor, log, gcd
-st = lambda: list(stdin.readline().strip())
-li = lambda: list(map(int, stdin.readline().split()))
-mp = lambda: list(map(int, stdin.readline().split()))
-inp = lambda: int(stdin.readline())
-pr = lambda n: stdout.write(str(n) + "\n")
+def st(): return list(stdin.readline().strip())
+def li(): return list(map(int, stdin.readline().split()))
+def mp(): return list(map(int, stdin.readline().split()))
+def inp(): return int(stdin.readline())
+def pr(n): return stdout.write(str(n) + "\n")
+
 
 mod = 1000000007
 INF = float('inf')

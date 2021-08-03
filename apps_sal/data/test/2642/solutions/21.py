@@ -11,11 +11,15 @@ for i in range(n):
     g = gcd(x, y)
     x //= g
     y //= g
-    if y < 0: x, y = -x, -y
-    if y == 0 and x < 0: x, y = -x, -y
+    if y < 0:
+        x, y = -x, -y
+    if y == 0 and x < 0:
+        x, y = -x, -y
     is_rotate90 = (x <= 0)
-    if is_rotate90: x, y = y, -x
-    if not (x, y) in bad: bad[x, y] = [0, 0]
+    if is_rotate90:
+        x, y = y, -x
+    if not (x, y) in bad:
+        bad[x, y] = [0, 0]
     bad[x, y][is_rotate90] += 1
 
 ans = 1

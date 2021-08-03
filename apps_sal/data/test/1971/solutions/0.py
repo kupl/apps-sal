@@ -7,7 +7,8 @@ a = [int(_) - 1 for _ in input().split()]
 vis = [False] * n
 cycles = [[] for _ in range(n + 1)]
 for i in range(n):
-    if vis[i]: continue
+    if vis[i]:
+        continue
     cur = i
     cycle = []
     while not vis[cur]:

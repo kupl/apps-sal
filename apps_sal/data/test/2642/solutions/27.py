@@ -2,7 +2,9 @@ from collections import defaultdict
 n, *L = list(map(int, open(0).read().split()))
 mod = 10**9 + 7
 d = defaultdict(lambda: [0, 0])
-gcd = lambda x, y: x if y == 0 else gcd(y, x % y)
+def gcd(x, y): return x if y == 0 else gcd(y, x % y)
+
+
 two = [1] * (n + 1)
 for i in range(n):
     two[i + 1] = (two[i] * 2) % mod

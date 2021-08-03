@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 b = [0] * 1000000
 sp = -1
 max = 0
-f = True;
+f = True
 for i in range(n):
     sp = sp + 1
     b[sp] = a[i]

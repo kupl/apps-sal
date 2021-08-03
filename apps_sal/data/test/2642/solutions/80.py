@@ -19,7 +19,8 @@ for _ in range(n):
         zero_cnt += 1
         continue
     g = gcd(abs(a), abs(b))
-    if a == 0 or b == 0: g = max(abs(a), abs(b))
+    if a == 0 or b == 0:
+        g = max(abs(a), abs(b))
     a //= g
     b //= g
 

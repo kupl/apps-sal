@@ -6,15 +6,22 @@ L = defaultdict(lambda: [0, 0])
 zero = 0
 for _ in range(N):
     A, B = list(map(int, input().split()))
-    if A == 0: d = B
-    elif B == 0: d = A
-    else: d = gcd(A, B)
+    if A == 0:
+        d = B
+    elif B == 0:
+        d = A
+    else:
+        d = gcd(A, B)
     if d != 0:
         A, B = A // d, B // d
-        if A < 0: A, B = -A, -B
-        if B > 0: L[(A, B)][0] += 1
-        else: L[(-B, A)][1] += 1
-    else: zero += 1
+        if A < 0:
+            A, B = -A, -B
+        if B > 0:
+            L[(A, B)][0] += 1
+        else:
+            L[(-B, A)][1] += 1
+    else:
+        zero += 1
 
 res = 1
 

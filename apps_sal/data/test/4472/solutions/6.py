@@ -12,7 +12,8 @@ for i in range(n // 2):
     if a[i] == a[n - i - 1] and b[i] != b[n - i - 1] and a[i] != b[i] and a[i] != b[n - i - 1]:
         continue
     for v in d.values():
-        if v >= 2: count -= 1
+        if v >= 2:
+            count -= 1
 if n % 2 == 1 and a[n // 2] != b[n // 2]:
     count += 1
 print(count)

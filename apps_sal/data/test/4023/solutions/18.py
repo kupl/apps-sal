@@ -11,7 +11,8 @@ for i in range(1, n):
     elif st and b[i] > st[-1]:
         st.append(b[i])
     elif st:
-        print('NO'); return
+        print('NO')
+        return
     else:
         st.append(b[i])
 if len(st) == 0 or st[-1] == 0:

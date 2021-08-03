@@ -6,12 +6,13 @@ read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
 
-read_int = lambda: int(readline())
-read_ints = lambda: map(int, readline().split())
-read_ints_list = lambda: list(map(int, readline().split()))
-read_ints_grid = lambda h: list(list(map(int, readline().split())) for _ in range(h))
-read_strs_list = lambda: list(map(str, readline().rstrip().split()))
-read_strs_grid = lambda h: list(list(map(str, readline().rstrip().split())) for _ in range(h))
+
+def read_int(): return int(readline())
+def read_ints(): return map(int, readline().split())
+def read_ints_list(): return list(map(int, readline().split()))
+def read_ints_grid(h): return list(list(map(int, readline().split())) for _ in range(h))
+def read_strs_list(): return list(map(str, readline().rstrip().split()))
+def read_strs_grid(h): return list(list(map(str, readline().rstrip().split())) for _ in range(h))
 
 
 def read_allints_grid(w):

@@ -12,12 +12,16 @@ for i in range(n):
     x //= g  # ベクトルを整数の範囲で最小化し、
     y //= g  # 傾きを既約分数 (y'/x') の形にする
     # ベクトルを0≦θ＜πの範囲に変換する
-    if y < 0: x, y = -x, -y  # 第3~4象限のベクトルはπ回転
-    if y == 0 and x < 0: x, y = -x, -y  # θ=πのベクトルはθ=0へ
+    if y < 0:
+        x, y = -x, -y  # 第3~4象限のベクトルはπ回転
+    if y == 0 and x < 0:
+        x, y = -x, -y  # θ=πのベクトルはθ=0へ
     # π/2≦θ＜πは、π/2回転して同じキーにする
     is_rotate90 = (x <= 0)
-    if is_rotate90: x, y = y, -x  # π/2回転
-    if not (x, y) in bad: bad[x, y] = [0, 0]
+    if is_rotate90:
+        x, y = y, -x  # π/2回転
+    if not (x, y) in bad:
+        bad[x, y] = [0, 0]
     # π/2回転したもの、してないものは別に計数をとる
     bad[x, y][is_rotate90] += 1
 

@@ -22,10 +22,14 @@ for _ in range(N):
     gcd_ = math.gcd(A, B)
     A = A // gcd_
     B = B // gcd_
-    if A < 0 and B > 0: m[(-1, -A, B)] += 1
-    elif B < 0 and A > 0: m[(-1, A, -B)] += 1
-    elif A < 0 and B < 0: m[(1, -A, -B)] += 1
-    elif A > 0 and B > 0: m[(1, A, B)] += 1
+    if A < 0 and B > 0:
+        m[(-1, -A, B)] += 1
+    elif B < 0 and A > 0:
+        m[(-1, A, -B)] += 1
+    elif A < 0 and B < 0:
+        m[(1, -A, -B)] += 1
+    elif A > 0 and B > 0:
+        m[(1, A, B)] += 1
 
 total = 1
 for key in list(dict(m).keys()):
