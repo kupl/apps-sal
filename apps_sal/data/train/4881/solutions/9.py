@@ -10,4 +10,3 @@ def camelize(string):
     for i in s:
         lst.append(i[0].upper() + i[1:])
     return "".join(lst)
-

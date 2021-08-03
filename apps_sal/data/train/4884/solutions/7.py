@@ -17,4 +17,3 @@ def connect_the_dots(paper: str) -> str:
                 res[prev_i + x * di][prev_j + x * dj] = '*'
 
     return '\n'.join(map(''.join, res)) + "\n"
-

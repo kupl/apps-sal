@@ -18,9 +18,9 @@ def connect_the_dots(paper):
             break
 
     for i in range(1, len(coords)):
-        from_x = coords[i-1][0]
+        from_x = coords[i - 1][0]
         to_x = coords[i][0]
-        from_y = coords[i-1][1]
+        from_y = coords[i - 1][1]
         to_y = coords[i][1]
 
         step_x = 1
@@ -35,10 +35,9 @@ def connect_the_dots(paper):
         if from_y > to_y:
             step_y = -1
 
-        for _ in range(1 + max(from_x-to_x, to_x-from_x,from_y-to_y,to_y-from_y)):
+        for _ in range(1 + max(from_x - to_x, to_x - from_x, from_y - to_y, to_y - from_y)):
             paper_list[from_y + (from_x * len_line)] = '*'
             from_x += step_x
             from_y += step_y
-
 
     return "".join(paper_list)

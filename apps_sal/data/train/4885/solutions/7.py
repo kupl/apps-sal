@@ -15,6 +15,3 @@ def find_gatecrashers(people, invitations):
             combo_breakers.append(ell4)
 
     return sorted(list(combo_breakers))
-
-
-
