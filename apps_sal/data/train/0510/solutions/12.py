@@ -48,15 +48,15 @@ class SegmentTree:
         l += self.num
         r += self.num
         res = self.ide
-        while l<r:  # 右から寄りながら結果を結合していくイメージ
+        while l < r:  # 右から寄りながら結果を結合していくイメージ
             if l & 1:
-                res = self.func(res, self.tree[l-1])
-                l+=1
+                res = self.func(res, self.tree[l - 1])
+                l += 1
             if r & 1:
                 r -= 1
-                res = self.func(res, self.tree[r-1])
-            l >>=1
-            r >>=1
+                res = self.func(res, self.tree[r - 1])
+            l >>= 1
+            r >>= 1
         return res
 
 
@@ -89,4 +89,3 @@ for q in range(Q):
     else:
         l, r = int(a) - 1, int(b)
         print((bit_to_sum(st.query(l, r))))
-

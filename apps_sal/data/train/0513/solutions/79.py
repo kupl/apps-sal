@@ -1,5 +1,6 @@
 import bisect
 
+
 def dfs(graph, root, A, res, lis):
     stack = [(root,)]
     while stack:
@@ -26,6 +27,7 @@ def dfs(graph, root, A, res, lis):
                 lis[p] = state[2]
             else:
                 del lis[-1]
+
 
 n = int(input())
 A = [int(x) for x in input().split()]

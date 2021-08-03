@@ -1,9 +1,8 @@
 #!python3
 
+import numpy as np
 import sys
 sys.setrecursionlimit(10 ** 6)
-
-import numpy as np
 
 
 INF = 10 ** 10
@@ -26,7 +25,7 @@ def dfs(l, dp, pre, v):
     l[v] = max(idx, l[pre])
     bef = dp[idx]
     dp[idx] = A[v - 1]
-    
+
     for x in link[v]:
         if x != pre:
             dfs(l, dp, v, x)
@@ -45,5 +44,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

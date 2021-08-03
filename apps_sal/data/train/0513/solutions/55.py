@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
+from collections import defaultdict
+from bisect import bisect_left
 import sys
 sys.setrecursionlimit(10**8)
-from bisect import bisect_left
 INF = float("inf")
-
-
-from collections import defaultdict
 
 
 class Graph(object):
@@ -22,11 +20,11 @@ def solve(N: int, a: "List[int]", u: "List[int]", v: "List[int]"):
 
     g = Graph(N)
     for x, y in zip(u, v):
-        g.add_edge(x-1, y-1)
+        g.add_edge(x - 1, y - 1)
 
-    ans = [0]*N
+    ans = [0] * N
 
-    dp = [INF]*N
+    dp = [INF] * N
     event = []
     var = {"last": 0}
 
@@ -38,7 +36,7 @@ def solve(N: int, a: "List[int]", u: "List[int]", v: "List[int]"):
             event.append((curr, i, dp[i]))
             dp[i] = a[curr]
 
-        ans[curr] = var["last"]+1
+        ans[curr] = var["last"] + 1
 
         for child, w in g.E[curr]:
             if child == par:
@@ -49,7 +47,7 @@ def solve(N: int, a: "List[int]", u: "List[int]", v: "List[int]"):
         if c == curr:
             dp[i] = v
             if v == INF:
-                var["last"] = i-1
+                var["last"] = i - 1
             event.pop()
 
     dfs(0, -1)
@@ -77,5 +75,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

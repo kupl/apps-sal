@@ -25,4 +25,3 @@ while Q:
     else:
         DP[x] = a
 print(*L, sep='\n')
-

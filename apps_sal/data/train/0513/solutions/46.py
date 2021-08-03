@@ -8,15 +8,15 @@ def main():
     N = int(input())
     As = list(map(int, input().split()))
 
-    query = (list(map(int, readline().strip().split())) for _ in range(N-1))
+    query = (list(map(int, readline().strip().split())) for _ in range(N - 1))
 
     tree = [[] for _ in range(N)]
     for u, v in query:
-        tree[u-1].append(v-1)
-        tree[v-1].append(u-1)
+        tree[u - 1].append(v - 1)
+        tree[v - 1].append(u - 1)
 
     inf = 10 ** 18
-    dp = [inf] * (N+1)
+    dp = [inf] * (N + 1)
     ans = [0] * N
 
     def dfs(node, parent):
@@ -46,7 +46,7 @@ def binary_search(seq, v):
         if v <= seq[center]:
             right = center
         else:
-            left = center+1
+            left = center + 1
         center = (right + left) // 2
 
     return center
@@ -54,5 +54,6 @@ def binary_search(seq, v):
 
 def __starting_point():
     main()
+
 
 __starting_point()

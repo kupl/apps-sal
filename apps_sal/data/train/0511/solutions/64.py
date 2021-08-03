@@ -6,4 +6,4 @@ for i in a[1:]:
     x ^= i
 
 for i in a:
-    print(x^i, end=" ")
+    print(x ^ i, end=" ")

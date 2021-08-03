@@ -54,12 +54,14 @@ def main():
     for _ in range(Q):
         num, x, y = input().split()
         if num == '1':
-            seg.set_val(int(x)-1, 2**(ord(y) - ord('a')))
+            seg.set_val(int(x) - 1, 2**(ord(y) - ord('a')))
         else:
-            bits=seg.fold(int(x)-1, int(y))
+            bits = seg.fold(int(x) - 1, int(y))
             print(sum(map(int, list(bin(bits))[2:])))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

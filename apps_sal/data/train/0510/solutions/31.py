@@ -71,4 +71,3 @@ for _ in range(Q):
     elif q[0] == '2':
         l, r = list(map(int, q[1:]))
         print((bin(st.query(l - 1, r)).count('1')))
-

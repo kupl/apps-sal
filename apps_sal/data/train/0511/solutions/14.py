@@ -10,4 +10,3 @@ for a in a_list:
     res.append(a ^ all_xor)
 
 print((*res))
-

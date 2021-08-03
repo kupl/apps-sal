@@ -82,10 +82,9 @@ for i in range(q):
     if que[0] == '1':
         iq = int(que[1])
         cq = que[2]
-        seg.update(iq-1, 1 << (ord(cq) - 97))
+        seg.update(iq - 1, 1 << (ord(cq) - 97))
     else:
         lq = int(que[1])
         rq = int(que[2])
-        ret = seg.query(lq-1, rq)
+        ret = seg.query(lq - 1, rq)
         print((str(bin(ret)).count('1')))
-

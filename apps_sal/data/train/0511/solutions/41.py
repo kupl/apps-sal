@@ -5,6 +5,6 @@ for i in A:
     count ^= i
 for i in range(len(A)):
     A[i] ^= count
-    
-    
+
+
 print(*A)

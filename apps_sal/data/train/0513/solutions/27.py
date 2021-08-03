@@ -14,6 +14,8 @@ for u, v in zip(*[iter(UV)] * 2):
 
 dp = [INF] * N
 ans = [0] * N
+
+
 def dfs(cur, visited):
     idx = bisect_left(dp, A[cur])
     pre = dp[idx]
@@ -23,6 +25,7 @@ def dfs(cur, visited):
         if c != visited:
             dfs(c, cur)
     dp[idx] = pre
+
 
 dfs(0, -1)
 for a in ans:

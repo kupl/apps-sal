@@ -19,7 +19,8 @@ for _ in range(Q):
     if q == '1':
         i = int(y) - 1  # 文字の変更位置
 
-        if S[i] == z: continue  # 同じ文字の場合は処理終了
+        if S[i] == z:
+            continue  # 同じ文字の場合は処理終了
 
         # 削除 O(N)
         b = bisect.bisect(d[S[i]], i)  # 2分法で i の出現位置を(log N)で探す
@@ -27,7 +28,7 @@ for _ in range(Q):
 
         # 追加 O(N) かかる？
         S[i] = z
-        bisect.insort(d[z], i) 
+        bisect.insort(d[z], i)
 
     else:
         left = int(y) - 1

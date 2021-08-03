@@ -5,4 +5,3 @@ for a in A:
     all ^= a
 for a in A:
     print(all ^ a, end=" ")
-

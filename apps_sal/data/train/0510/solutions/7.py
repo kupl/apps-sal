@@ -1,14 +1,16 @@
 import sys
 from bisect import bisect_left, bisect_right, insort
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 N = ir()
 S = list('-' + sr())
 d = [[] for _ in range(26)]
-for i in range(1, N+1):
+for i in range(1, N + 1):
     s = S[i]
     o = ord(s) - ord('a')
     insort(d[o], i)
@@ -26,10 +28,10 @@ for _ in range(Q):
         insort(d[next], a)
         S[a] = b
     else:
-        a = int(a); b = int(b)
+        a = int(a)
+        b = int(b)
         ans = 0
         for alpha in range(26):
             if bisect_right(d[alpha], b) - bisect_left(d[alpha], a) >= 1:
                 ans += 1
         print(ans)
-

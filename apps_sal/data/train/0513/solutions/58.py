@@ -47,4 +47,3 @@ while stack:
     stack.append(u)
 
 print(*ans[1:], sep="\n")
-

@@ -2,14 +2,16 @@ from collections import defaultdict
 from math import log2
 import sys
 sys.setrecursionlimit(10**6)
-input=sys.stdin.readline
+input = sys.stdin.readline
 
-def f(n,q):
+
+def f(n, q):
     def dfs(i, oi=-1, dpt=0):
         depth[i] = dpt
         parent_2k[0][i] = oi
         for ki, c, d in to[i]:
-            if ki == oi: continue
+            if ki == oi:
+                continue
             dfs(ki, i, dpt + 1)
         return
 
@@ -77,7 +79,8 @@ def f(n,q):
         for qi, qc, qd, qk in qs[i]:
             ans[qi] += (sum_d - sum_c[qc] + qd * cnt_c[qc]) * qk
         for ki, c, d in to[i]:
-            if ki == oi: continue
+            if ki == oi:
+                continue
             cnt_c[c] += 1
             sum_c[c] += d
             dfs2(ki, i, sum_d + d)
@@ -89,6 +92,6 @@ def f(n,q):
     for x in ans:
         print(x)
 
-n, q = list(map(int, input().split()))
-f(n,q)
 
+n, q = list(map(int, input().split()))
+f(n, q)

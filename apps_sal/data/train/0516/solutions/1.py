@@ -1,8 +1,8 @@
 # cook your dish here
 # cook your dish here
 def sree(k, n, m):
-    sum1 = (m*(m+1))//2
-    sum2 = (m*(m-1))//2
+    sum1 = (m * (m + 1)) // 2
+    sum2 = (m * (m - 1)) // 2
     shanth = 0
     for i in range(n):
         count = 0
@@ -19,4 +19,3 @@ for _ in range(t):
     n, m = map(int, input().split())
     k = list(map(int, input().split()))
     print(sree(k, n, m))
-

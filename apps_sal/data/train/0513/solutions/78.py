@@ -4,12 +4,12 @@ def main():
 
     n = int(input())
     a = list(map(int, input().split()))
-    ab = [list(map(int, input().split())) for _ in [0]*(n-1)]
-    g = [set() for _ in [0]*n]
-    ans = [0]*n
-    [g[a-1].add(b-1) for a, b in ab]
-    [g[b-1].add(a-1) for a, b in ab]
-    visited = [False]*n
+    ab = [list(map(int, input().split())) for _ in [0] * (n - 1)]
+    g = [set() for _ in [0] * n]
+    ans = [0] * n
+    [g[a - 1].add(b - 1) for a, b in ab]
+    [g[b - 1].add(a - 1) for a, b in ab]
+    visited = [False] * n
 
     q = [0]
     lis = []

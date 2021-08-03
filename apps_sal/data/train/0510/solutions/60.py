@@ -21,7 +21,8 @@ def main():
         t, a, b = q.split()
         a = int(a) - 1
         if int(t) == 1:
-            if S[a] == b: continue
+            if S[a] == b:
+                continue
             # 二分探索で該当するインデックスを取得
             id = bisect_left(dd[S[a]], a)
             dd[S[a]].pop(id)  # 取ってくる
@@ -39,6 +40,9 @@ def main():
             ans.append(cnt)
     print(*ans, sep='\n')
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

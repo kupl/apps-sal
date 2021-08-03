@@ -3,4 +3,4 @@ A = [int(i) for i in input().split()]
 total = 0
 for a in A:
     total ^= a
-print(*[total^a for a in A])
+print(*[total ^ a for a in A])

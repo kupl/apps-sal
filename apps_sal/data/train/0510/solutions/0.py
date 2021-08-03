@@ -1,6 +1,7 @@
+from bisect import bisect_left
 n = int(input())
 s = list(input())
-s = [ord(i)-97 for i in s]
+s = [ord(i) - 97 for i in s]
 
 dic = {}
 for i in range(26):
@@ -12,7 +13,6 @@ for i in range(n):
 for i in range(26):
     dic[i].append(float('inf'))
 
-from bisect import bisect_left
 q = int(input())
 for i in range(q):
     x, y, z = input().split()

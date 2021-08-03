@@ -1,23 +1,23 @@
+from bisect import bisect_left, insort_left
 import sys
 readline = sys.stdin.readline
 
-from bisect import bisect_left, insort_left
 
 def main():
     n = int(readline())
     s = list(readline().rstrip())
     q = int(readline())
-    
+
     chk_abc = [[] for i in range(26)]
     for i, si in enumerate(s):
         ci = ord(si) - 97
         chk_abc[ci].append(i)
-        
+
     ans = []
     for _ in range(q):
         cmd, i, j = readline().rstrip().split()
         i = int(i) - 1
-        
+
         if cmd == "1":
             if s[i] == j:
                 continue
@@ -27,7 +27,7 @@ def main():
             prev.pop(bisect_left(prev, i))
             s[i] = j
             insort_left(chk_abc[c2], i)
-            
+
         else:
             j = int(j) - 1
             num = 0
@@ -42,6 +42,9 @@ def main():
 
     print(*ans, sep="\n")
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

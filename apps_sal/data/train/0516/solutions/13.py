@@ -5,8 +5,8 @@ for T in range(int(input())):
     for Z in range(2):
         L = N * (Z + 1)
         A *= Z + 1
-        for I in range(L-1):
-            for J in range(I+1, L):
+        for I in range(L - 1):
+            for J in range(I + 1, L):
                 if A[I] > A[J]:
                     C[Z] += 1
     print(C[0] + (K - 1) * (C[1] + (K - 1) * (C[1] - 2 * C[0])) // 2)

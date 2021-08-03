@@ -1,35 +1,34 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import bisect
+import math
+from pprint import pformat as pf
+from pprint import pprint as pp
 import sys
 sys.setrecursionlimit(10**7)
-from pprint import pprint as pp
-from pprint import pformat as pf
 
-import math
-import bisect
 
 class Tree:
     """
     node id starts from 1
     """
 
-    DUMMY = 0 # used as dummy_node_id and dummy_node_value
+    DUMMY = 0  # used as dummy_node_id and dummy_node_value
 
     def __init__(self, num_node, node_values):
-        self.node_values = [-1] + node_values # [0] is dummy
-        self.edges = [None] * (num_node + 1) # [0] is dummy, var[a] = set of links
+        self.node_values = [-1] + node_values  # [0] is dummy
+        self.edges = [None] * (num_node + 1)  # [0] is dummy, var[a] = set of links
         for i, _ in enumerate(self.edges):
             self.edges[i] = set()
         self.seq = [self.DUMMY] * num_node
 
         self.dp = [math.inf] * (num_node + 1)
         self.dp[0] = -1 * math.inf
-        self.ans = [0] * (num_node + 1) # [0] is dummy
-
+        self.ans = [0] * (num_node + 1)  # [0] is dummy
 
     def node_values(self, node_values):
-        self.node_values = [-1] + node_values # [0] is dummy
+        self.node_values = [-1] + node_values  # [0] is dummy
 
     def make_edge(self, a, b):
         self.edges[a].add(b)
@@ -50,6 +49,7 @@ class Tree:
         # recursive back
         self.dp[key] = old_value
 
+
 def __starting_point():
     num_node = int(input())
     node_values = list(map(int, input().split()))
@@ -60,7 +60,6 @@ def __starting_point():
     tree.dps(1)
     for a in tree.ans[1:]:
         print(a)
-
 
 
 __starting_point()

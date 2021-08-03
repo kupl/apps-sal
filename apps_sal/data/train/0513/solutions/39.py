@@ -24,6 +24,8 @@ while que:
 
 table = [float('inf')] * n
 lis = [None] * n
+
+
 def dfs(node, length=0):
     p = bisect.bisect_left(table, a[node])
     table[p], old = a[node], table[p]
@@ -33,6 +35,6 @@ def dfs(node, length=0):
     table[p] = old
     lis[node] = length
 
+
 dfs(0)
 print(*map(str, lis), sep="\n")
-

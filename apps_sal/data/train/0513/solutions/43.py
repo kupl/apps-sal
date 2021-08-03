@@ -17,8 +17,8 @@ def II(): return int(sys.stdin.readline())
 
 def FLIST(n):
     res = [1]
-    for i in range(1, n+1):
-        res.append(res[i-1]*i % DVSR)
+    for i in range(1, n + 1):
+        res.append(res[i - 1] * i % DVSR)
     return res
 
 
@@ -28,9 +28,9 @@ AS = list(LI())
 MP = {}
 
 MX = 10**10
-LIS = [10**10]*N
-RES = [1]*N
-for i in range(N-1):
+LIS = [10**10] * N
+RES = [1] * N
+for i in range(N - 1):
     a, b = LI()
     a -= 1
     b -= 1
@@ -58,4 +58,3 @@ LIS[0] = AS[0]
 dfs(0, MP, LIS, -1)
 
 print(*RES, sep='\n')
-

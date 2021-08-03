@@ -4,8 +4,7 @@ all_xor = 0
 for i in a:
     all_xor ^= i
 l = []
-for j in a :
+for j in a:
     ans = all_xor ^ j
     l.append(ans)
 print((*l))
-

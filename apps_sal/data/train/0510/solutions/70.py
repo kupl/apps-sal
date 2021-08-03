@@ -9,7 +9,7 @@ class SegmentTree(object):
         for i in range(N):
             self.data[i + self.length - 1] = sequence[i]
         # build
-        for i in range(self.length - 2, -1, -1) :
+        for i in range(self.length - 2, -1, -1):
             self.data[i] = self.function(self.data[(i << 1) + 1], self.data[(i << 1) + 2])
 
     def update(self, idx, x):
@@ -34,6 +34,7 @@ class SegmentTree(object):
             p >>= 1
             q = (q - 1) >> 1
         return self.function(res, self.data[p]) if p == q else self.function(self.function(res, self.data[p]), self.data[q])
+
 
 def popcount(x):
     x = x - ((x >> 1) & 0x5555555555555555)

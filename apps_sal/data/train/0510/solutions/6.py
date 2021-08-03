@@ -15,7 +15,7 @@ for i in range(n):
 for i in range(q):
     a, b, c = input().split()
     if a == "1":
-        b = int(b)-1
+        b = int(b) - 1
         if c == s[b]:
             continue
         index = bisect.bisect_left(pos[atoi[s[b]]], b)
@@ -23,7 +23,7 @@ for i in range(q):
         bisect.insort_left(pos[atoi[c]], b)
         s[b] = c
     else:
-        l, r = int(b)-1, int(c)
+        l, r = int(b) - 1, int(c)
         ans = 0
         for i in range(26):
             cnt = bisect.bisect_left(pos[i], r) - bisect.bisect_left(pos[i], l)

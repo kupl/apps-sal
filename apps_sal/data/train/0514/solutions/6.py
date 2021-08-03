@@ -1,7 +1,7 @@
 # cook your dish here
-x=int(input())
-y=int(input())
-if(x>y):
-    print(x-y)
+x = int(input())
+y = int(input())
+if(x > y):
+    print(x - y)
 else:
-    print(x+y)
+    print(x + y)

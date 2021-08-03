@@ -24,4 +24,3 @@ res = [tmp ^ A[i] for i in range(n)]
 res = " ".join([str(r) for r in res])
 
 print(res)
-

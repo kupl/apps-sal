@@ -1,3 +1,6 @@
+from operator import or_
+
+
 class SegmentTree():
     """A segment Tree.
 
@@ -20,18 +23,18 @@ class SegmentTree():
         In other words, this satisfies:
             func(x, e) = func(e, x) = x
     """
-    
+
     def __init__(self, iterable, func, e):
         self.func = func
         self.e = e
 
         ls = list(iterable)
         self.n = 1 << len(ls).bit_length()
-        ls.extend( [self.e] * (self.n - len(ls)) )
+        ls.extend([self.e] * (self.n - len(ls)))
 
         self.data = [self.e] * self.n + ls
-        for i in range(self.n-1, 0, -1):
-            self.data[i] = self.func(self.data[2*i], self.data[2*i+1])
+        for i in range(self.n - 1, 0, -1):
+            self.data[i] = self.func(self.data[2 * i], self.data[2 * i + 1])
 
     def replace(self, index, value):
         """replace the old value of the given index with the given new value.
@@ -50,9 +53,9 @@ class SegmentTree():
         self.data[index] = value
         index //= 2
         while index > 0:
-            self.data[index] = self.func(self.data[2*index], self.data[2*index+1])
+            self.data[index] = self.func(self.data[2 * index], self.data[2 * index + 1])
             index //= 2
-        
+
     def folded(self, l, r):
         """get the folded value of values in a segment [l, r).
 
@@ -89,11 +92,9 @@ class SegmentTree():
                 right_folded = self.func(self.data[r], right_folded)
             l //= 2
             r //= 2
-        
+
         return self.func(left_folded, right_folded)
 
-
-from operator import or_
 
 N = int(input())
 S = input()
@@ -106,9 +107,8 @@ for _ in range(Q):
     s = input()
     if s[0] == '1':
         i, c = s[2:].split()
-        segtree.replace(int(i)-1, 1 << (ord(c) - ord('a')))
+        segtree.replace(int(i) - 1, 1 << (ord(c) - ord('a')))
     else:
         l, r = list(map(int, s[2:].split()))
-        value = segtree.folded(l-1, r)
+        value = segtree.folded(l - 1, r)
         print((format(value, 'b').count('1')))
-

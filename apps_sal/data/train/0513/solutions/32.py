@@ -6,13 +6,13 @@ N = int(input())
 As = list(map(int, input().split()))
 
 adj = [[] for _ in range(N)]
-for _ in range(N-1):
+for _ in range(N - 1):
     u, v = map(int, input().split())
-    adj[u-1].append(v-1)
-    adj[v-1].append(u-1)
+    adj[u - 1].append(v - 1)
+    adj[v - 1].append(u - 1)
 
 ans = [0] * N
-LIS = [INF] * (N+1)
+LIS = [INF] * (N + 1)
 rewinder = []
 
 parent = [-1] * N
@@ -27,11 +27,11 @@ while stack:
     while rewinder and rewinder[-1][0] != parent[node]:
         _, index, prev_value = rewinder.pop()
         LIS[index] = prev_value
-    
+
     index = bisect_left(LIS, As[node])
     rewinder.append((node, index, LIS[index]))
     LIS[index] = As[node]
 
     ans[node] = bisect_left(LIS, INF)
 
-print(*ans, sep = '\n')
+print(*ans, sep='\n')

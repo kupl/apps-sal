@@ -6,14 +6,15 @@ N = int(input())
 a = list(map(int, input().split()))
 
 G = [[] for i in range(N)]
-for i in range(N-1):
-    uv = list(map(lambda x: int(x)-1, input().split()))
+for i in range(N - 1):
+    uv = list(map(lambda x: int(x) - 1, input().split()))
     G[uv[0]].append(uv[1])
     G[uv[1]].append(uv[0])
 
-dp = [10 ** 10 for _ in range(N+1)]
+dp = [10 ** 10 for _ in range(N + 1)]
 dp[0] = -1
 ans = [-1] * N
+
 
 def dfs(v, p, max_):
     i = bisect_left(dp, a[v])
@@ -30,7 +31,7 @@ def dfs(v, p, max_):
         dfs(nv, v, max_)
     dp[memo[0]] = memo[1]
 
+
 dfs(0, -1, 0)
 
 print(*ans, sep='\n')
-
