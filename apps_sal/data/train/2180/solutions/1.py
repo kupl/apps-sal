@@ -76,9 +76,8 @@ def solve():
 
     print(sol)
 
+
 solve()
 
 
-
 # Made By Mostafa_Khaled
-

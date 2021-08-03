@@ -3,22 +3,25 @@ BigNum = 10 ** 20
 n, m, a, d = list(map(int, input().split(' ')))
 ts = [0] + list(map(int, input().split(' '))) + [BigNum]
 
+
 def empsInRange(l, r):
     em1 = l // a + 1
     em2 = r // a
     return (em1, min(em2, n))
 
+
 empDoorGroup = d // a + 1
+
 
 def moveEmps(emps, last):
     em1, em2 = emps
     if em1 > em2:
         return last, 0
-    
+
     if em1 * a <= last + d:
         gr1 = (last + d - em1 * a) // a
         em1 += 1 + gr1
-    
+
     if em1 > em2:
         return last, 0
 
@@ -26,6 +29,7 @@ def moveEmps(emps, last):
     last = (em1 + empDoorGroup * (doorGroups - 1)) * a
 
     return last, doorGroups
+
 
 res = 0
 last = -BigNum
@@ -44,4 +48,3 @@ for i in range(1, len(ts)):
     #print('temp res:', res)
 
 print(res)
-

@@ -43,21 +43,13 @@ def __starting_point():
                     t[v] = (
                         (t[v][0] * t[u][1] + t[v][0] * t[u][0] * (not colors[u])) % (10**9 + 7),
                         (t[v][1] * t[u][1] + t[v][0] * t[u][1] * (not colors[v])
-                                           + t[v][1] * t[u][0] * (not colors[u])) % (10**9 + 7)
+                         + t[v][1] * t[u][0] * (not colors[u])) % (10**9 + 7)
                     )
 
-                
     dfs(0)
 
     print(t[0][1])
 
 
-
-    
-
-
-
-
 # Made By Mostafa_Khaled
-
 __starting_point()

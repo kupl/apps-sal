@@ -1,9 +1,10 @@
 import sys
 from math import sqrt
 
+
 def solve():
-    s = input() # Oleg's letters
-    t = input() # Igor's letters
+    s = input()  # Oleg's letters
+    t = input()  # Igor's letters
     n = len(s)
 
     s = sorted(s)[:(n + 1) // 2]
@@ -51,6 +52,9 @@ def solve():
 
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

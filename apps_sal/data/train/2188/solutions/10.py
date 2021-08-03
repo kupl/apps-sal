@@ -2,6 +2,7 @@ n = int(input())
 
 d = {}
 
+
 def get_mask(num):
     res = ''
     for el in num:
@@ -11,13 +12,13 @@ def get_mask(num):
             res += '0'
 
     return '0' * (18 - len(num)) + res
-    
+
 
 for _ in range(n):
     c, v = input().split(' ')
     if c == '?':
         v = '0' * (18 - len(v)) + v
-        
+
         if d.get(v) != None:
             print(d[v])
         else:

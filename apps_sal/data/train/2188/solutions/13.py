@@ -1,6 +1,8 @@
 t = int(input())
 rules = str.maketrans("0123456789", "0101010101")
-trans = lambda x : str.translate(x, rules)
+def trans(x): return str.translate(x, rules)
+
+
 cnt, res = {}, []
 for _ in range(t):
     op, n = input().split()
@@ -12,4 +14,3 @@ for _ in range(t):
     else:
         res.append(str(cnt.get(n, 0)))
 print('\n'.join(res))
-

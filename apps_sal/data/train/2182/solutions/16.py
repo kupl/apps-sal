@@ -7,13 +7,13 @@ b.sort(reverse=True)
 
 
 ai = 0
-aj = (len(a)+1)//2 - 1
+aj = (len(a) + 1) // 2 - 1
 bi = 0
-bj = len(b)//2 - 1
+bj = len(b) // 2 - 1
 
 turn = 0   # 0 -> player A
 ansi = 0
-ansj = len(name)-1
+ansj = len(name) - 1
 #print(a, b, ai, aj, bi, bj)
 for _ in range(len(name)):
     if not turn:
@@ -43,4 +43,3 @@ for _ in range(len(name)):
     turn ^= 1
 
 print(''.join(name))
-

@@ -5,11 +5,11 @@ s1 = sorted(s1)
 s2 = sorted(s2)[::-1]
 i = 0
 j = 0
-res = ["?"]*n
-rear = n-1
+res = ["?"] * n
+rear = n - 1
 front = 0
-n1 = (n+1)//2 - 1
-n2 = n//2 - 1
+n1 = (n + 1) // 2 - 1
+n2 = n // 2 - 1
 
 for k in range(n):
     if k & 1 == 0:

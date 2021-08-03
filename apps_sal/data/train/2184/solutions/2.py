@@ -18,7 +18,7 @@ for i in range(N):
 X = []
 for i in range(M):
     X.append((L[i], R[i], C[i]))
-X = sorted(X, key = lambda x: x[1])
+X = sorted(X, key=lambda x: x[1])
 
 Y = [(-1, 0, 0)]
 for i in range(M):
@@ -30,5 +30,3 @@ for i in range(M):
         m = max(m, c)
     Y.append((r, t, m))
 print(sum([y[1] - y[2] for y in Y[1:]]))
-
-

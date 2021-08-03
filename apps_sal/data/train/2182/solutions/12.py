@@ -27,4 +27,3 @@ for cur in range(n):
             rear -= 1
 
 print(''.join(str))
-
