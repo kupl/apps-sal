@@ -1,11 +1,11 @@
 # Author: Dancing Monkey | Created: 09.DEC.2018
 
 for _ in range(int(input())):
- a, k = map(int, input().split())
- l = list(map(int, input().split()))
- l.sort()
+    a, k = map(int, input().split())
+    l = list(map(int, input().split()))
+    l.sort()
 
- p = l[0] + a/2 + k
- q = l[2] - a/2 - k
+    p = l[0] + a / 2 + k
+    q = l[2] - a / 2 - k
 
- print(format(0 if p < q else a*min(a, p - q), 'f'))
+    print(format(0 if p < q else a * min(a, p - q), 'f'))
