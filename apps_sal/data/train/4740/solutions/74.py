@@ -1,5 +1,5 @@
 def row_sum_odd_numbers(n):
-    digits_counter = sum(range(n+1))
+    digits_counter = sum(range(n + 1))
     triangle_content = []
     while len(triangle_content) != digits_counter:
         for i in range(digits_counter * 2 + 1):

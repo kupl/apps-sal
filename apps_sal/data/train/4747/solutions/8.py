@@ -1,1 +1,1 @@
-repeat_str=lambda _,__:__*_
+def repeat_str(_, __): return __ * _

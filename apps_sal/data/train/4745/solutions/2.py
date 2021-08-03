@@ -1,6 +1,6 @@
 
 def group_groceries(groceries):
-    
+
     groceries = groceries.split(',')
     carne = []
     fruta = []
@@ -16,11 +16,10 @@ def group_groceries(groceries):
             vegetal.append(a[1])
         else:
             outro.append(a[1])
-    
+
     b = '''fruit:{}
 meat:{}
 other:{}
-vegetable:{}'''.format(','.join(sorted(fruta)),','.join(sorted(carne)),','.join(sorted(outro)),','.join(sorted(vegetal)))
+vegetable:{}'''.format(','.join(sorted(fruta)), ','.join(sorted(carne)), ','.join(sorted(outro)), ','.join(sorted(vegetal)))
 
     return b
-

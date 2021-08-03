@@ -1,4 +1,6 @@
 import collections
+
+
 def duplicates(arr: list):
     sumDup = 0
     arr = collections.Counter(arr)

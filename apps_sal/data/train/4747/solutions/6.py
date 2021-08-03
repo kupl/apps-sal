@@ -1,1 +1,1 @@
-repeat_str = lambda n, str: str * n
+def repeat_str(n, str): return str * n

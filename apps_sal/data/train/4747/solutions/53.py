@@ -1,5 +1,6 @@
 def repeat_str(repeat, string):
-    string=(string)*repeat
+    string = (string) * repeat
     return string
-repeat_str(4,'a')
 
+
+repeat_str(4, 'a')

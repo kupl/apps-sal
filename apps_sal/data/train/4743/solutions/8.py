@@ -2,17 +2,16 @@ def target_game(arr):
     # your code goes here
     a = 0
     b = 0
-     
-    for i in arr: 
-        
-      newA = a if (a > b) else b
-    
-      b = a + i
-      a = newA
-      
-    # return max of incl and excl 
+
+    for i in arr:
+
+        newA = a if (a > b) else b
+
+        b = a + i
+        a = newA
+
+    # return max of incl and excl
     if (a > b):
         return a
-    else: 
+    else:
         return b
-

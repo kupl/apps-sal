@@ -6,7 +6,7 @@ def row_sum_odd_numbers(n):
         kokosik += count
         count += 2
     result += kokosik
-    for guccigang in range(0, n - 1): 
+    for guccigang in range(0, n - 1):
         kokosik += 2
         result += kokosik
     return result

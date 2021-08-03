@@ -4,5 +4,5 @@ def repeat_str(repeat, string):
     while i != repeat:
         result += string
         i += 1
-    print (result)
+    print(result)
     return result

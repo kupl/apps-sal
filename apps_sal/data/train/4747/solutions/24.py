@@ -1,3 +1,3 @@
 def repeat_str(repeat, string):
-    res = string*repeat
+    res = string * repeat
     return f'{res}'
