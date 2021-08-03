@@ -2,9 +2,11 @@ import sys
 sys.setrecursionlimit(10**7)
 input = sys.stdin.readline
 
-a,b = list(map(int, input().split()))
+a, b = list(map(int, input().split()))
 
 # 0からnまでのXOR和
+
+
 def xor_sum(n):
     ans = 0
     # XORで1になる組数を求める
@@ -17,5 +19,5 @@ def xor_sum(n):
         ans ^= n
     return ans
 
-print((xor_sum(b) ^ xor_sum(a - 1)))
 
+print((xor_sum(b) ^ xor_sum(a - 1)))

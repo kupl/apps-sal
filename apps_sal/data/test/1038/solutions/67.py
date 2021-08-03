@@ -20,8 +20,8 @@ def xor_func(n):
             x = 1
     return x
 
+
 f1 = xor_func(A - 1)
 f2 = xor_func(B)
 ans = f1 ^ f2
 print(ans)
-

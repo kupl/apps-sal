@@ -8,4 +8,5 @@ def main():
     else:
         print(quo - 1)
 
+
 main()

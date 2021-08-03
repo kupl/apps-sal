@@ -11,4 +11,3 @@ for i in range(6):
 counter = math.ceil(members / min_value)
 counter += 4
 print(counter)
-

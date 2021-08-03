@@ -7,5 +7,4 @@ if n % min(a) != 0:
 if min(a) >= n:
     print((5))
 else:
-    print((int(n/min(a)) + 4))
-
+    print((int(n / min(a)) + 4))

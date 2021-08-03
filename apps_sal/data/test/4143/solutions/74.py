@@ -38,12 +38,12 @@ print(str(time_sum))
 かかる時間は変わらなさそうです。また、移動時間は 「(𝑁 ÷ 𝑋 を切り上げた値) + 4 分」 と、簡単に
 計算できるようになります。
 """
-import math
 
-people_num=int(input(''))
-num_trans=[]
+import math
+people_num = int(input(''))
+num_trans = []
 
 for i in range(5):
     num_trans.append(int(input('')))
 
-print(math.ceil(people_num/min(num_trans)+4))
+print(math.ceil(people_num / min(num_trans) + 4))

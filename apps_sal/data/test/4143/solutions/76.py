@@ -7,7 +7,6 @@ e = int(input())
 
 minp = min(a, min(b, min(c, min(d, e))))
 if n % minp == 0:
-    print((4 + n//minp))
-else :
-    print((4 + n//minp + 1))
-
+    print((4 + n // minp))
+else:
+    print((4 + n // minp + 1))

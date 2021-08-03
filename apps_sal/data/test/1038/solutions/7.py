@@ -1,26 +1,25 @@
-A,B = list(map(int,input().split()))
+A, B = list(map(int, input().split()))
 xor = []
-if B-A<=8:
+if B - A <= 8:
     ans = 0
-    for i in range(A,B+1):
-        ans^=i
+    for i in range(A, B + 1):
+        ans ^= i
 else:
     while True:
-        if A%4 == 0:
+        if A % 4 == 0:
             break
         else:
             xor.append(A)
-        A+=1
+        A += 1
 
     while True:
-        if B%4 == 3:
+        if B % 4 == 3:
             break
         else:
             xor.append(B)
-        B-=1
+        B -= 1
 
     ans = 0
     while xor:
-        ans^=xor.pop()
+        ans ^= xor.pop()
 print(ans)
-

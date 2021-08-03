@@ -6,18 +6,20 @@ from collections import deque
 
 sys.setrecursionlimit(1000000)
 MOD = 10 ** 9 + 7
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
 
-NI = lambda: int(input())
-NMI = lambda: map(int, input().split())
-NLI = lambda: list(NMI())
-SI = lambda: input()
+
+def NI(): return int(input())
+def NMI(): return map(int, input().split())
+def NLI(): return list(NMI())
+def SI(): return input()
+
 
 def main():
-    A,B = NMI()
-    
-    xA , xB = 0,0
-    
+    A, B = NMI()
+
+    xA, xB = 0, 0
+
     if A == 0 or A == 1:
         xA = 0
     else:
@@ -29,7 +31,7 @@ def main():
             xA = A
         else:
             xA = 0
-    
+
     if B == 0:
         xB = 0
     else:
@@ -41,20 +43,23 @@ def main():
             xB = 0
         else:
             xB = B
-           
+
     A_bin = format(xA, '040b')
     B_bin = format(xB, '040b')
-    
+
     ans = ['0' for _ in range(40)]
-    
-    for i in range(39,-1,-1):
-        if int(A_bin[i])+int(B_bin[i])==1:
+
+    for i in range(39, -1, -1):
+        if int(A_bin[i]) + int(B_bin[i]) == 1:
             ans[i] = '1'
-    
-    print(int("".join(ans),2))
-        
+
+    print(int("".join(ans), 2))
+
     ###################ここに処理を書く################
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -7,7 +7,7 @@ c = int(input())
 d = int(input())
 e = int(input())
 
-_min = min([a,b,c,d,e])
-_ans = math.ceil(n/_min)
+_min = min([a, b, c, d, e])
+_ans = math.ceil(n / _min)
 
-print(_ans+4)
+print(_ans + 4)

@@ -9,5 +9,5 @@ for i in range(n):
 
 if len(str(n)) % 2 == 0:
     count -= 1
-    
+
 print(count)

@@ -23,8 +23,8 @@ def ria():
     return [int(i) for i in input().split()]
 
 
-n=ria()[0]
-a=max(ria())
-n=ria()[0]
-b=max(ria())
-print(a,b)
+n = ria()[0]
+a = max(ria())
+n = ria()[0]
+b = max(ria())
+print(a, b)

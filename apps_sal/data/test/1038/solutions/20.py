@@ -29,4 +29,3 @@ a, b = LI()
 # a から b の 和 : (bまでの和) - (a - 1 までの和)
 ans = ruiseki_xor(b) ^ ruiseki_xor(a - 1)
 print(ans)
-

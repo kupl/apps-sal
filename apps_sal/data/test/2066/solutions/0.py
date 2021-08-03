@@ -1,6 +1,7 @@
 from collections import Counter
 import string
 
+
 def valid(o):
     for x, y in zip(o, o[1:]):
         if abs(ord(x) - ord(y)) == 1:
@@ -8,12 +9,14 @@ def valid(o):
 
     return True
 
+
 def create(c, o):
     res = []
     for x in o:
         for j in range(c[x]):
             res.append(x)
     return res
+
 
 T = int(input())
 for _ in range(T):
@@ -31,4 +34,3 @@ for _ in range(T):
         print(''.join(s2))
     else:
         print('No answer')
-

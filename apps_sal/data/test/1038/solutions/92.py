@@ -4,14 +4,15 @@
 import sys
 readline = sys.stdin.readline
 
-A,B = list(map(int,readline().split()))
+A, B = list(map(int, readline().split()))
+
 
 def f(x):
-  res = 0
-  while x % 4 != 3:
-    res ^= x
-    x -= 1
-  return res
+    res = 0
+    while x % 4 != 3:
+        res ^= x
+        x -= 1
+    return res
+
 
 print((f(A - 1) ^ f(B)))
-
