@@ -1,5 +1,6 @@
 input = __import__('sys').stdin.readline
-MIS = lambda: map(int, input().split())
+def MIS(): return map(int, input().split())
+
 
 n, m = MIS()
 A = input().split()

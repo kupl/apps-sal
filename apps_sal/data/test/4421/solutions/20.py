@@ -10,6 +10,7 @@ for i in a:
         an += 2
         f[k - i] -= 1
     else:
-        if i not in f: f[i] = 0
+        if i not in f:
+            f[i] = 0
         f[i] += 1
 print(an)
