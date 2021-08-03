@@ -11,7 +11,8 @@ def pfs(n):
 
 
 def pfs_dummy(n, start):
-    if n == 1: return []
+    if n == 1:
+        return []
     A = []
     for k in range(start, int(sqrt(n) + 1), 2):
         if n % k == 0:
@@ -19,7 +20,8 @@ def pfs_dummy(n, start):
                 A.append(k)
                 n //= k
             return A + pfs_dummy(n, k + 2)
-    if len(A) == 0: return [n]
+    if len(A) == 0:
+        return [n]
 
 
 def gcd(a, b):
