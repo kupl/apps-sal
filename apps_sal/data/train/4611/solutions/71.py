@@ -1,5 +1,5 @@
-def animals(head,legs):
-    restlegs = legs - 2*head
+def animals(head, legs):
+    restlegs = legs - 2 * head
     chicken = head - restlegs / 2
     cow = head - chicken
     if cow.is_integer() and cow >= 0:

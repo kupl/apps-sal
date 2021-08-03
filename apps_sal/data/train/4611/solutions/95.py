@@ -1,6 +1,7 @@
 def neg_or_float(var):
     return var < 0 or not float(var).is_integer()
 
+
 def animals(heads, legs):
     cows = 0.5 * legs - heads
     chick = heads - cows

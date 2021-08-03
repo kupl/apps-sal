@@ -1,2 +1,2 @@
 def positive_sum(arr):
-    return sum([i for i in arr if i==abs(i)])
+    return sum([i for i in arr if i == abs(i)])

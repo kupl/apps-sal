@@ -1,5 +1,6 @@
 from typing import Tuple, Union
 
+
 def animals(heads: int, legs: int) -> Union[str, Tuple[int]]:
     """ Find out how many chickens and cows are in the farm. """
     chickens, cows = heads - (legs / 2 - heads), (legs / 2 - heads)

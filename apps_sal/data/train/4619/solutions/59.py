@@ -1,1 +1,1 @@
-whoseMove=lambda l,w:['black','white'][((l[0]=='w')+1-w)%2]
+def whoseMove(l, w): return ['black', 'white'][((l[0] == 'w') + 1 - w) % 2]

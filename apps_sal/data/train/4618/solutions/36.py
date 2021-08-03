@@ -3,6 +3,5 @@ def positive_sum(arr):
     for a in arr:
         if "-" not in str(a):
             total += a
-  
-    return total
 
+    return total

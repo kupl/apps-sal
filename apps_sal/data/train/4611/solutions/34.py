@@ -6,4 +6,3 @@ def animals(heads, legs):
         return 'No solutions'
     else:
         return (chk, cow)
-

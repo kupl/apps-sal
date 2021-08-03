@@ -5,10 +5,7 @@ def whoseMove(lastPlayer, win):
     else:
         other = "black"
     if win:
-       return lastPlayer
+        return lastPlayer
     return other
- 
-        
-        
-    # Your Move...
 
+    # Your Move...

@@ -1,8 +1,11 @@
 from itertools import count
 
+
 def f():
     c = count()
-    while True: yield 2 ** next(c)
+    while True:
+        yield 2 ** next(c)
+
 
 def powers_of_two(n):
     iter = f()

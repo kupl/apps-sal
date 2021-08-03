@@ -10,4 +10,3 @@ def positive_sum(n):
             else:
                 b += n[i]
         return b
-

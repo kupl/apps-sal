@@ -10,5 +10,6 @@ def add(a, b):
     for x, y in zip(reversed(a), reversed(b)):
         r, c = p[x + y + c]
         result.append(r)
-    if c == '1': result.append(c)
+    if c == '1':
+        result.append(c)
     return ''.join(reversed(result)).lstrip('0') or '0'

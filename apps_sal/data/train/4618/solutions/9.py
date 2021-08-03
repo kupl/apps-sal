@@ -1,1 +1,1 @@
-positive_sum = lambda a: sum(e for e in a if e > 0)
+def positive_sum(a): return sum(e for e in a if e > 0)

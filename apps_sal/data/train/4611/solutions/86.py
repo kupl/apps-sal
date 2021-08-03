@@ -4,7 +4,7 @@ def animals(heads, legs):
 
     chicken = (4 * heads - legs) // 2
     cows = heads - chicken
-    
+
     if chicken >= 0 and cows >= 0 and chicken + cows == heads:
         return (chicken, cows)
     else:

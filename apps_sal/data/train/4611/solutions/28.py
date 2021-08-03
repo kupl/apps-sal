@@ -4,4 +4,3 @@ def animals(heads, legs):
     if cows < 0 or chickens < 0 or cows != int(cows) or chickens != int(chickens):
         return 'No solutions'
     return chickens, cows
-

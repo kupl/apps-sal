@@ -4,4 +4,3 @@ def scoreboard(who_ate_what):
         {'name': person.pop('name'),
          'score': sum(scores.get(k, 0) * v for k, v in list(person.items()))}
         for person in who_ate_what), key=lambda a: (-a['score'], a['name']))
-

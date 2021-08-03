@@ -5,6 +5,7 @@ SCORES = {
     'hotdogs': 2,
 }
 
+
 def scoreboard(who_ate_what):
     return sorted([
         {

@@ -1,1 +1,1 @@
-whoseMove = lambda l,w:'bwlhaictke'[(l[0]=='b')!=w::2]
+def whoseMove(l, w): return 'bwlhaictke'[(l[0] == 'b') != w::2]
