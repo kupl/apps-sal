@@ -10,18 +10,18 @@ def ncr(z, r):
 
 
 n, m, k = list(map(int, input().strip().split()))
-mod = 998244353;
+mod = 998244353
 if m == 1:
     if k == 0:
-        print(1);
+        print(1)
     else:
-        print(0);
+        print(0)
 elif n == 1:
     print(m)
 else:
     ans = m * ((m - 1)**k)
-    ans = ans % mod;
+    ans = ans % mod
     c = ncr(n - 1, k) % mod
-    ans = ans * c;
-    ans = ans % mod;
+    ans = ans * c
+    ans = ans % mod
     print(ans)

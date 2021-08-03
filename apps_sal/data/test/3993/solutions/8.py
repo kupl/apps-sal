@@ -13,7 +13,8 @@ while True:
     startK += disnum
 
     if disnum == 0:
-        if id == m: break;
+        if id == m:
+            break
         startK += int((discard[id] - startK) / k + ((discard[id] - startK) % k != 0)) * k
     else:
         step += 1

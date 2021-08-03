@@ -1,16 +1,17 @@
 import sys
 flag = True
 sys.setrecursionlimit(2000000000)
-c = []; st = [];
+c = []
+st = []
 cur_adj = []
 
 
 def topo(s):  # Traversing the array and storing the vertices
-    nonlocal c, st, flag;
+    nonlocal c, st, flag
     stack = [s]
     while(stack):
         s = stack[-1]
-        c[s] = 1;  # Being Visited
+        c[s] = 1  # Being Visited
         if(cur_adj[s] < len(adjli[s])):
             cur = adjli[s][cur_adj[s]]
             if(c[cur] == 0):
@@ -29,7 +30,8 @@ try:
     main = list(map(int, input().split(' ')))
     depen = []
     for i in range(n):
-        depen.append(list(map(int, input().split(' ')))[1:]); c.append(0)
+        depen.append(list(map(int, input().split(' ')))[1:])
+        c.append(0)
         cur_adj.append(0)
     c.append(0)
     cur_adj.append(0)

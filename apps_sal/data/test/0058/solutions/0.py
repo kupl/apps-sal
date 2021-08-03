@@ -18,8 +18,10 @@ def map_string():
 
 
 def f(n, a, b, left, cnta=4, cntb=2):
-    if(cnta == 0 and cntb == 0): return 0
-    if(cnta < 0 or cntb < 0): return 100000000000000000000
+    if(cnta == 0 and cntb == 0):
+        return 0
+    if(cnta < 0 or cntb < 0):
+        return 100000000000000000000
     if a <= left and cnta and b <= left and cntb:
         return min(f(n, a, b, left - a, cnta - 1, cntb), f(n, a, b, left - b, cnta, cntb - 1))
     if a <= left and cnta:

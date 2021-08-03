@@ -5,8 +5,10 @@ while i >= 0:
     for k in l:
         if o < k:
             o, c = n - k, c + 1
-        else: o -= k
+        else:
+            o -= k
     r = min(r, c if o == n else c + 1)
     j -= 1
-    if i == j: i, j = i - 1, 5
+    if i == j:
+        i, j = i - 1, 5
 print(r)
