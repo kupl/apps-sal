@@ -9,7 +9,8 @@ for aa in a:
             c[k] += 1
 x = 0
 for k in range(39, -1, -1):
-    if x + (1 << k) > K: continue
+    if x + (1 << k) > K:
+        continue
     if c[k] <= N - c[k]:
         x += (1 << k)
 

@@ -22,7 +22,8 @@ count = [0] * max_digit
 ans = 0
 for j in range(max_digit):
     for i in range(N):
-        if B[i][j] == '1': count[j] += 1
+        if B[i][j] == '1':
+            count[j] += 1
     if count[j] < N / 2:
         if ans + 2**(max_digit - j - 1) <= K:
             ans += 2**(max_digit - j - 1)

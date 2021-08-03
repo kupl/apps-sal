@@ -42,7 +42,8 @@ def solve():
             for kk in range(1, k + 1):
                 if kk < l:
                     tmp = lst[kk - 1]
-                    if tmp >= 0: break
+                    if tmp >= 0:
+                        break
                     sm -= tmp
                     # print(tmp)
                 else:

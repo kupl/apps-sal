@@ -5,5 +5,7 @@ M = max(L)
 m = L.index(M)
 s = sum(L[:m]) + sum(L[m + 1:])
 
-if M < s: print('Yes')
-else: print('No')
+if M < s:
+    print('Yes')
+else:
+    print('No')

@@ -12,5 +12,5 @@ for a in range(N + 1):
             if out[i] >= 0:
                 break
             sum_val -= out[i]
-        result = max(result, sum_val);
+        result = max(result, sum_val)
 print(result)

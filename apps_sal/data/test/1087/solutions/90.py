@@ -1,6 +1,9 @@
 import numpy as np
 
-st = lambda n: bin(n)[2:]
+
+def st(n): return bin(n)[2:]
+
+
 N, K = map(int, input().split())
 a = np.array([int(i) for i in input().split()])
 

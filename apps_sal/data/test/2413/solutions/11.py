@@ -4,7 +4,8 @@ for _ in range(int(input())):
     if u[:] == [0] * n:
         print(n)
         continue
-    a = -1; b = -1
+    a = -1
+    b = -1
     for i in range(n):
         if u[i] == 1:
             a = i

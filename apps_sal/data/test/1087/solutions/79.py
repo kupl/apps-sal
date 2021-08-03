@@ -14,7 +14,8 @@ def main():
     plus = [0] * msb
 
     for a in A:
-        for i, b in enumerate(format(a, '0{}b'.format(msb))[::-1][:msb]): plus[i] += int(b)
+        for i, b in enumerate(format(a, '0{}b'.format(msb))[::-1][:msb]):
+            plus[i] += int(b)
     e = 1
     for i in range(msb):
         plus[i] = e * (N - 2 * plus[i])
@@ -26,7 +27,8 @@ def main():
 
     for i in range(msb - 1):
         dp[i + 1][0] = max(dp[i + 1][0], dp[i][0] + plus[i + 1] * int(bK[i + 1]))
-        if int(bK[i + 1]) == 1: dp[i + 1][1] = max(dp[i + 1][1], dp[i][0])
+        if int(bK[i + 1]) == 1:
+            dp[i + 1][1] = max(dp[i + 1][1], dp[i][0])
         dp[i + 1][1] = max(dp[i + 1][1], dp[i][1], dp[i][1] + plus[i + 1])
     print((max(dp[msb - 1]) + sum(A)))
 

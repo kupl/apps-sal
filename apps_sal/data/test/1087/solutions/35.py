@@ -19,7 +19,8 @@ ans = 0
 now = 0  # Kを超えていないかチェックする用。
 for i in range(l):  # 桁数で回す。l-i桁から順にみていく。
     # cは0の数。dは1の数。
-    c = 0; d = 0
+    c = 0
+    d = 0
     for j in range(N):
         if AB[j][i] == "0":
             c += 1

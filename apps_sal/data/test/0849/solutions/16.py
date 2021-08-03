@@ -1,6 +1,8 @@
 import sys
 a, b, c, d = list(map(int, input().split()))
-s = 0; p = 1; i = 1
+s = 0
+p = 1
+i = 1
 while True:
     if i % 2:
         s += p * a / b

@@ -10,8 +10,10 @@ for a in range(min(N, K) + 1):
 
         idx = 0
         while idx < min(K - a - b, len(cur)):
-            if cur[idx] > 0: break
-            else: idx += 1
+            if cur[idx] > 0:
+                break
+            else:
+                idx += 1
 
         ans = max(ans, sum(cur[idx:]))
 

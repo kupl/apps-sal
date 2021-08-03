@@ -12,7 +12,8 @@ sys.setrecursionlimit(10**7)
 
 
 def dp(m, t):  # 一番左の桁（l桁目）から考える。一番右の桁は0桁目。t:kより真に小さいかどうか
-    if m < 0: return 0
+    if m < 0:
+        return 0
     ret = 0
     if t == 1:  # 以降は好きに選んでいいので、最適な数字を選ぶ。一意。
         for i in range(m + 1):

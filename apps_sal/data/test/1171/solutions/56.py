@@ -6,7 +6,8 @@ v = list(map(int, input().split()))
 ans = 0
 for l in range(k + 1):
     for r in range(k - l + 1):
-        if l + r > n: break
+        if l + r > n:
+            break
 
         d = k - l - r
         now = 0
@@ -22,8 +23,10 @@ for l in range(k + 1):
 
         s.sort()
         for i in range(d):
-            if(i >= len(s)): break
-            if s[i] > 0: break
+            if(i >= len(s)):
+                break
+            if s[i] > 0:
+                break
 
             now -= s[i]
 

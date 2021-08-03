@@ -5,11 +5,14 @@ ans = 0
 
 for aa in a:
     for k in range(40):
-        if aa & (1 << k): c[k] += 1
+        if aa & (1 << k):
+            c[k] += 1
 x = 0
 for k in range(39, -1, -1):
-    if x + (1 << k) > K: continue
-    if c[k] <= n - c[k]: x += (1 << k)
+    if x + (1 << k) > K:
+        continue
+    if c[k] <= n - c[k]:
+        x += (1 << k)
 
 for aa in a:
     ans += x ^ aa

@@ -5,7 +5,8 @@ R = min(N, K)
 ans = -float('inf')
 for left in range(R + 1):
     for right in range(R + 1):
-        if left + right > R: continue
+        if left + right > R:
+            continue
         A = V[:left] + W[:right]
         tmp = sum(A)
 

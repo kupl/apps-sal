@@ -6,7 +6,8 @@ d = format(K, 'b')
 dp = [[-1 for _ in range(2)] for _ in range(len(d) + 1)]
 dp[0][0] = 0
 for i in range(len(d))[::-1]:
-    if K == 0: break
+    if K == 0:
+        break
     index = len(d) - i - 1
     cnt = 0
     for x in L:

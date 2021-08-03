@@ -4,9 +4,11 @@ V = list(map(int, input().split()))
 ans = 0
 for l in range(N + 1):
     for r in range(N + 1):
-        if l + r > N or l + r > K: break
+        if l + r > N or l + r > K:
+            break
         arr = V[:l]
-        if r: arr += V[-r:]
+        if r:
+            arr += V[-r:]
         arr.sort()
         rem = K - l - r
         tmp = 0

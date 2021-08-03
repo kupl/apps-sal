@@ -13,7 +13,8 @@ for i in range(1, min(k, n) + 1):
         # 残りk-i回ある
         for j in range(i, min(k, 2 * i)):  # それ以上詰められない場合
             # 0より小さい場合は書き換える
-            if s[j - i] < 0: s[j - i] = 0
+            if s[j - i] < 0:
+                s[j - i] = 0
         # 取り出したやつの最大(戻す場合は0)
         ans = max(ans, sum(s))
         # 残りk-j回ある(breakの時のjはやってないので)
