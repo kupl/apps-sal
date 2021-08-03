@@ -1,37 +1,50 @@
 ''' CODED WITH LOVE BY SATYAM KUMAR '''
 
 
+import sys
 from sys import stdin, stdout
-import cProfile, math
+import cProfile
+import math
 from collections import Counter
-from bisect import bisect_left,bisect,bisect_right
+from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
-sys.setrecursionlimit(10**6) # max depth of recursion
+import sys
+import threading
+sys.setrecursionlimit(10**6)  # max depth of recursion
 threading.stack_size(2**27)  # new thread will get stack of such size
 
 printHeap = str()
 memory_constrained = False
-P = 10**9+7
-import sys
+P = 10**9 + 7
 sys.setrecursionlimit(10000000)
+
 
 class Operation:
     def __init__(self, name, function, function_on_equal, neutral_value=0):
         self.name = name
         self.f = function
         self.f_on_equal = function_on_equal
+
+
 def add_multiple(x, count):
     return x * count
+
+
 def min_multiple(x, count):
     return x
+
+
 def max_multiple(x, count):
     return x
+
+
 sum_operation = Operation("sum", sum, add_multiple, 0)
 min_operation = Operation("min", min, min_multiple, 1e9)
 max_operation = Operation("max", max, max_multiple, -1e9)
+
+
 class SegmentTree:
     def __init__(self,
                  array,
@@ -43,18 +56,25 @@ class SegmentTree:
         for op in operations:
             self.operations[op.name] = op
         self.root = SegmentTreeNode(0, len(array) - 1, self)
+
     def query(self, start, end, operation_name):
         if self.operations.get(operation_name) == None:
             raise Exception("This operation is not available")
         return self.root._query(start, end, self.operations[operation_name])
+
     def summary(self):
         return self.root.values
+
     def update(self, position, value):
         self.root._update(position, value)
+
     def update_range(self, start, end, value):
         self.root._update_range(start, end, value)
+
     def __repr__(self):
         return self.root.__repr__()
+
+
 class SegmentTreeNode:
     def __init__(self, start, end, segment_tree):
         self.range = (start, end)
@@ -71,6 +91,7 @@ class SegmentTreeNode:
         self.right = SegmentTreeNode(start + (end - start) // 2 + 1, end,
                                      segment_tree)
         self._sync()
+
     def _query(self, start, end, operation):
         if end < self.range[0] or start > self.range[1]:
             return None
@@ -86,6 +107,7 @@ class SegmentTreeNode:
         if right_res is None:
             return left_res
         return operation.f([left_res, right_res])
+
     def _update(self, position, value):
         if position < self.range[0] or position > self.range[1]:
             return
@@ -97,6 +119,7 @@ class SegmentTreeNode:
         self.left._update(position, value)
         self.right._update(position, value)
         self._sync()
+
     def _update_range(self, start, end, value):
         if end < self.range[0] or start > self.range[1]:
             return
@@ -108,6 +131,7 @@ class SegmentTreeNode:
         self.left._update_range(start, end, value)
         self.right._update_range(start, end, value)
         self._sync()
+
     def _sync(self):
         if self.range[0] == self.range[1]:
             for op in self.parent_tree.operations.values():
@@ -123,6 +147,7 @@ class SegmentTreeNode:
                     bound_length = self.range[1] - self.range[0] + 1
                     result = op.f_on_equal(self.range_value, bound_length)
                 self.values[op.name] = result
+
     def _push(self):
         if self.range_value is None:
             return
@@ -132,6 +157,7 @@ class SegmentTreeNode:
             self.left._sync()
             self.right._sync()
             self.range_value = None
+
     def __repr__(self):
         ans = "({}, {}): {}\n".format(self.range[0], self.range[1],
                                       self.values)
@@ -141,21 +167,25 @@ class SegmentTreeNode:
             ans += self.right.__repr__()
         return ans
 
+
 def display(string_to_print):
     stdout.write(str(string_to_print) + "\n")
 
-def primeFactors(n): #n**0.5 complex 
+
+def primeFactors(n):  # n**0.5 complex
     factors = dict()
-    for i in range(2,math.ceil(math.sqrt(n))+1):  
-        while n % i== 0: 
+    for i in range(2, math.ceil(math.sqrt(n)) + 1):
+        while n % i == 0:
             if i in factors:
-                factors[i]+=1
-            else: factors[i]=1
-            n = n // i 
-    if n>2:
-        factors[n]=1
+                factors[i] += 1
+            else:
+                factors[i] = 1
+            n = n // i
+    if n > 2:
+        factors[n] = 1
     return (factors)
-    
+
+
 def isprime(n):
     """Returns True if n is prime."""
     if n < 4:
@@ -173,26 +203,36 @@ def isprime(n):
         w = 6 - w
     return True
 
+
 def test_print(*args):
     if testingMode:
         print(args)
 
+
 def display_list(list1, sep=" "):
     stdout.write(sep.join(map(str, list1)) + "\n")
+
 
 def get_int():
     return int(stdin.readline().strip())
 
+
 def get_tuple():
     return map(int, stdin.readline().split())
+
 
 def get_list():
     return list(map(int, stdin.readline().split()))
 
+
 memory = dict()
+
+
 def clear_cache():
     nonlocal memory
     memory = dict()
+
+
 def cached_fn(fn, *args):
     nonlocal memory
     if args in memory:
@@ -206,32 +246,29 @@ def cached_fn(fn, *args):
 # -------------------------------------------------------------- MAIN PROGRAM
 TestCases = True
 testingMode = False
-optimiseForReccursion = False #Can not be used clubbed with TestCases
-            
+optimiseForReccursion = False  # Can not be used clubbed with TestCases
+
 
 def main():
-    l,r= get_tuple()
-    size = r-l+1
-    res=0
-    if l%2!=0:
-        res+=size//2
-        if size%2!=0:
-            res+=(-1)**r * r
+    l, r = get_tuple()
+    size = r - l + 1
+    res = 0
+    if l % 2 != 0:
+        res += size // 2
+        if size % 2 != 0:
+            res += (-1)**r * r
     else:
-        res-=size//2
-        if size%2!=0:
-            res+=(-1)**r * r
+        res -= size // 2
+        if size % 2 != 0:
+            res += (-1)**r * r
     print(res)
-
-    
-        
-            
 
 
 # --------------------------------------------------------------------- END
 
 
-if TestCases: 
-    for _ in range(get_int()): 
-        cProfile.run('main()') if testingMode else main() 
-else: (cProfile.run('main()') if testingMode else main()) if not optimiseForReccursion else threading.Thread(target=main).start()
+if TestCases:
+    for _ in range(get_int()):
+        cProfile.run('main()') if testingMode else main()
+else:
+    (cProfile.run('main()') if testingMode else main()) if not optimiseForReccursion else threading.Thread(target=main).start()

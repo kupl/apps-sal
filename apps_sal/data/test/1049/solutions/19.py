@@ -13,4 +13,3 @@ for _ in range(d):
 
 result = max([result, current])
 print(result)
-

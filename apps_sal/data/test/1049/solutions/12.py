@@ -1,4 +1,4 @@
-n,d = list(map(int,input().split()))
+n, d = list(map(int, input().split()))
 ans = 0
 temp = 0
 for i in range(d):
@@ -14,5 +14,3 @@ for i in range(d):
     if temp > ans:
         ans = temp
 print(ans)
-    
-

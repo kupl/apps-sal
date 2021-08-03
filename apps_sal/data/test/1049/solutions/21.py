@@ -15,4 +15,3 @@ if seq > max:
     max = seq
 
 print(max)
-

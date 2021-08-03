@@ -16,7 +16,7 @@ def need_one_or_zero_swap(l):
     for i, item in enumerate(l):
         if item != i + 1:
             if swap:
-                if l[item-1] == i + 1:
+                if l[item - 1] == i + 1:
                     swap -= 1
                 else:
                     return False
@@ -45,9 +45,9 @@ def try_global_swap_first():
             transp[i], transp[j] = transp[j], transp[i]
     return False
 
+
 if try_global_swap_first():
     print('YES')
 else:
     print('NO')
 # print(need_one_or_zero_swap([1, 4, 3, 2]))
-

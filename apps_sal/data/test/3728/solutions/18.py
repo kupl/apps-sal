@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, m = read()
 a = [list(read()) for i in range(n)]
 b = [a[i][:] for i in range(n)]
@@ -7,7 +9,8 @@ for i in range(n):
     c = sorted(b[i])
     d = b[i][:]
     dif = sum(c[j] != d[j] for j in range(m))
-    if dif > 2: flag = False
+    if dif > 2:
+        flag = False
 if flag:
     print('YES')
     return
@@ -21,9 +24,9 @@ for k1 in range(m):
             c = sorted(b[i])
             d = b[i][:]
             dif = sum(c[j] != d[j] for j in range(m))
-            if dif > 2: flag = False
+            if dif > 2:
+                flag = False
         if flag:
             print('YES')
             return
 print('NO')
-

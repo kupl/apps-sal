@@ -5,4 +5,3 @@ if mod > a:
     print("No")
 else:
     print("Yes")
-

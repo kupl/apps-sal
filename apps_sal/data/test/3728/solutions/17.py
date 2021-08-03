@@ -5,8 +5,10 @@ def gene(l):
             d[i + 1] = l[i]
     return d
 
+
 def paired(d):
     return tuple(sorted(zip(list(d.keys()), list(d.values()))))
+
 
 def exchange(d):
     if len(d) in (0, 2):
@@ -26,6 +28,7 @@ def exchange(d):
         else:
             assert(False)
 
+
 n, m = list(map(int, input().split()))
 ds = {((i, j), (j, i)) for i in range(1, m + 1) for j in range(i, m + 1)}
 ds.add(tuple())
@@ -43,7 +46,7 @@ for i in range(n):
     if not l[i]:
         print('NO')
         return
-#print(l)
+# print(l)
 
 s = l[0]
 for i in range(1, n):
@@ -53,4 +56,3 @@ if s:
     print('YES')
 else:
     print('NO')
-

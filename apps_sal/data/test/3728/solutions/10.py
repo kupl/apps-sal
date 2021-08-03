@@ -1,5 +1,6 @@
 n, m = list(map(int, input().split()))
 
+
 def f(a):
     nonlocal c, k
     c = []
@@ -8,8 +9,7 @@ def f(a):
         if a[i] - 1 != i:
             k += 1
             c.append(i)
-    
-            
+
 
 c = []
 bb = []
@@ -102,6 +102,3 @@ else:
                                     print('YES')
                                 else:
                                     print('NO')
-
-                              
-

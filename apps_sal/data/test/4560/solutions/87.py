@@ -20,12 +20,15 @@ def main():
     A = int(next(tokens))  # type: int
     print((solve(N, A)))
 
+
 def test():
     import doctest
     doctest.testmod()
 
+
 def __starting_point():
-    #test()
+    # test()
     main()
+
 
 __starting_point()

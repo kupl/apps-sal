@@ -1,5 +1,5 @@
 n, d = list(map(int, input().split()))
-check = "1"*n
+check = "1" * n
 ans = 0
 cur = 0
 for i in range(d):
@@ -10,4 +10,3 @@ for i in range(d):
     else:
         cur = 0
 print(ans)
-
