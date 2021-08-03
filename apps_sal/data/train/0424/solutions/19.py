@@ -50,4 +50,3 @@ class Solution:
             a.append(sublist)
 
         return a
-

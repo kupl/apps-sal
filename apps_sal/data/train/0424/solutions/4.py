@@ -8,6 +8,6 @@ class Solution:
                     for i2, row2 in enumerate(B):
                         for j2, col2 in enumerate(row2):
                             if col2:
-                                 ct[i - i2, j - j2] += 1
+                                ct[i - i2, j - j2] += 1
         # print(ct)
         return max(ct.values() or [0])

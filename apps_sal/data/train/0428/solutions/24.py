@@ -1,7 +1,7 @@
 class Solution:
     def shortestPathAllKeys(self, grid: List[str]) -> int:
         m, n = len(grid), len(grid[0])
-        
+
         q = collections.deque()
         seen = set()
         tot_keys = 0
@@ -21,7 +21,8 @@ class Solution:
                     return steps
                 for nx, ny in [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]:
                     if (0 <= nx < m and 0 <= ny < n):
-                        if grid[nx][ny] == '#': continue
+                        if grid[nx][ny] == '#':
+                            continue
                         if grid[nx][ny] in 'ABCDEF' and not (keys >> ord(grid[nx][ny]) - ord('A')) & 1:
                             continue
                         nxt = keys
@@ -31,8 +32,4 @@ class Solution:
                             seen.add((nx, ny, nxt))
                             q.append((nx, ny, nxt))
             steps += 1
-        return -1    
-                        
-                            
-        
-
+        return -1

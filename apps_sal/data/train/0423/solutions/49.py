@@ -1,5 +1,6 @@
 import collections
 
+
 class Solution:
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
         prev_seq = collections.defaultdict(int)
@@ -10,6 +11,3 @@ class Solution:
             max_seq = max(max_seq, x_seq)
             prev_seq[x] = max(prev_seq[x], x_seq)
         return max_seq
-            
-        
-

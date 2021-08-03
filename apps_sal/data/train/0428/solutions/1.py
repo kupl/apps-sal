@@ -50,11 +50,3 @@ class Solution:
             next_level.clear()
             steps += 1
         return -1
-                    
-                            
-                    
-                
-        
-                    
-        
-

@@ -3,8 +3,7 @@ class Solution:
         dp = {}
         res = 0
         for num in arr:
-            dp[num] = 1 + dp.get(num-difference,0)
+            dp[num] = 1 + dp.get(num - difference, 0)
             res = max(res, dp[num])
-            
-        return res
 
+        return res

@@ -8,16 +8,16 @@ class Solution:
                 c = s[num]
         j = i + 1
         k = 0
-        
+
         while j + k < len(s):
-            if s[i+k] == s[j+k]:
+            if s[i + k] == s[j + k]:
                 k += 1
                 continue
-            elif s[i+k] > s[j+k]:
+            elif s[i + k] > s[j + k]:
                 j += k + 1
             else:
                 i += k + 1
                 j = i + 1
             k = 0
-                
+
         return s[i:]

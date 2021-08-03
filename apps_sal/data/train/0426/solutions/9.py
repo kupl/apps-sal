@@ -1,5 +1,6 @@
 import itertools
 
+
 class Solution:
     def reorderedPowerOf2(self, N: int) -> bool:
         if N == 1:
@@ -38,4 +39,3 @@ class Solution:
             n = 10 * n + d
         n = 10 * n + ones
         return n & (n - 1) == 0
-

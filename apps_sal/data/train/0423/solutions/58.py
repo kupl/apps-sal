@@ -1,4 +1,6 @@
 import bisect
+
+
 class Solution:
     def longestSubsequence(self, arr, diff):
         ''' DP solution O(N^2)
@@ -21,4 +23,3 @@ class Solution:
                 dp[i] = 1
             ans = max(ans, dp[i])
         return ans
-

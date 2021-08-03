@@ -22,26 +22,19 @@ class Solution:
                 # lr, length 1
                 # lr, length 2 -> aa and ab -> advance to left + length + 1
                 # aaabc
-                # lr, length 3 -> aaa and aab -> 
-                
+                # lr, length 3 -> aaa and aab ->
+
                 right = left + 1
                 length = 0
-                
+
         return s[left:]
-        
-        
-        
-        
-        
-        
-        
+
         # this is slow..
 #         n = len(s)
 #         answer = \"\"
-        
+
 #         for i in range(n):
 #             # can't hurt to just go all the way to the end of the string
 #             answer = max(answer, s[i:])
 
 #         return answer
-

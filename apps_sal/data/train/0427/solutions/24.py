@@ -5,8 +5,6 @@ class Solution:
         d[0][0] = 1
         for i in range(n + 1):
             for j in range(i + 1):
-                d[i + 1][j] = (d[i + 1][j]+ d[i][j] * (n - i))
+                d[i + 1][j] = (d[i + 1][j] + d[i][j] * (n - i))
                 d[i][j + 1] = (d[i][j + 1] + d[i][j] * (i - j))
         return d[n][n - 1] % MOD
-
-

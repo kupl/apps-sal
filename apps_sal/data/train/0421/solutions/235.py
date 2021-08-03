@@ -3,20 +3,20 @@ class Solution:
         i = 0
         j = 1
         offset = 0
-        
+
         while i + offset < len(s) and j + offset < len(s):
-            if s[i+offset] == s[j+offset]:
+            if s[i + offset] == s[j + offset]:
                 offset += 1
-                
+
             else:
-                if s[i+offset] < s[j+offset]:
+                if s[i + offset] < s[j + offset]:
                     i += offset + 1
                 else:
                     j += offset + 1
-                    
+
                 if i == j:
                     j += 1
-                
+
                 offset = 0
-                
+
         return s[i:]

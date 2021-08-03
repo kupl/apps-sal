@@ -3,7 +3,7 @@ class Solution:
         split = []
         cur = [s[0], 0]
         for i in range(1, len(s)):
-            if ord(s[i]) > ord(s[i-1]):
+            if ord(s[i]) > ord(s[i - 1]):
                 split.append(cur)
                 cur = [s[i], i]
             else:

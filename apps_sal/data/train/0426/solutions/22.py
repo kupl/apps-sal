@@ -7,10 +7,10 @@ class Solution:
             s = str(twon)
             for c in s:
                 sig[int(c)] += 1
-            
+
             pow_sigs.add(tuple(sig))
             twon *= 2
-        
+
         n_sig = [0] * 10
         s = str(N)
         for c in s:

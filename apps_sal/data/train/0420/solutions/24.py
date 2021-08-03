@@ -11,4 +11,3 @@ class Solution:
             seen[mask] = min(seen[mask], i)
             max_len = max(max_len, i - seen[mask])
         return max_len
-

@@ -14,5 +14,5 @@ class Solution:
                 candidate = s[i:]
                 if max_sub < candidate:
                     max_sub = candidate
-                    
+
         return max_sub

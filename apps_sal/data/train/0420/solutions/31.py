@@ -1,6 +1,6 @@
 class Solution:
     def findTheLongestSubstring(self, s: str) -> int:
-        #aeiou
+        # aeiou
         vowels = {'a': 1, 'e': 2, 'i': 3, 'o': 4, 'u': 5}
         seen = {0: -1}
         res = cur = 0
@@ -10,4 +10,3 @@ class Solution:
                 seen.setdefault(cur, i)
             res = max(res, i - seen[cur])
         return res
-

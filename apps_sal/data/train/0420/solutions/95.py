@@ -7,9 +7,9 @@ class Solution:
         for i, c in enumerate(s):
             if c in set(vowels):
                 j = vowels.index(c)
-                last_mask, mask = mask, mask ^ (1<<j)
+                last_mask, mask = mask, mask ^ (1 << j)
                 if first[mask] == float('inf'):
-                    first[mask] = last[last_mask] + 1 
+                    first[mask] = last[last_mask] + 1
             last[mask] = i
         # print([(i, j) for i, j in zip(first, last)])
-        return max(j-i for i, j in zip(first, last) if j-i<=len(s))
+        return max(j - i for i, j in zip(first, last) if j - i <= len(s))

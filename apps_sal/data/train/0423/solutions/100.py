@@ -5,11 +5,11 @@ class Solution:
         for i in arr:
             t = 0
             try:
-                t = d[i-diff]
+                t = d[i - diff]
             except:
                 pass
             if t:
-                d[i] = 1 + d[i-diff]
+                d[i] = 1 + d[i - diff]
             else:
                 d[i] = 1
             res = max(res, d[i])

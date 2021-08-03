@@ -14,7 +14,7 @@ class Solution:
                 processed_cons = True
             if max_substring_size > s_len - i:
                 break
-            vowel_counts = {'a':0,'e':0,'i':0,'o':0,'u':0}
+            vowel_counts = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
             allEven = True
             for k, letter in enumerate(s[i:]):
                 if letter in vowel_counts:
@@ -28,4 +28,3 @@ class Solution:
                 if allEven and k + 1 > max_substring_size:
                     max_substring_size = k + 1
         return max_substring_size
-

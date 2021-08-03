@@ -9,6 +9,6 @@ class Solution:
             if state not in dic:
                 dic[state] = i
             else:
-                res = max(res, i-dic[state])
-                
+                res = max(res, i - dic[state])
+
         return res

@@ -3,9 +3,5 @@ class Solution:
         m = max(s)
         ans = ''
         for i in range(len(s)):
-            ans = max(ans,s[i:])
+            ans = max(ans, s[i:])
         return ans
-            
-                
-        
-

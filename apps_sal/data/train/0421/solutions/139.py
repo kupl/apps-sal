@@ -15,4 +15,3 @@ class Solution:
                 ans = max(ans, s[i:])
 
         return ans
-

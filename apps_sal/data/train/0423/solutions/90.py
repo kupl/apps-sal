@@ -22,5 +22,3 @@ class Solution:
         #             curr_tail = arr[j]
         #     max_len = max(max_len, curr_len)
         # return max_len
-
-

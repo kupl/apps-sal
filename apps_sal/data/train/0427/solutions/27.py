@@ -5,7 +5,7 @@ class Solution:
         for i in range(1, n + 1):
             res = res * self.choose(2 * i, 2)
         return res % int(math.pow(10, 9) + 7)
-    
+
     def choose(self, n, k):
         if 0 <= k <= n:
             ntok = 1

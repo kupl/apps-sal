@@ -9,5 +9,5 @@ class Solution:
                 cur ^= bits[char]
             seen.setdefault(cur, i)
             max_val = max(max_val, i - seen[cur])
-            
+
         return max_val

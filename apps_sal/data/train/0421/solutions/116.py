@@ -7,4 +7,3 @@ class Solution:
                 if s[i:] > sub:
                     sub = s[i:]
         return sub
-

@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def findTheLongestSubstring(self, s: str) -> int:
         res = 0
@@ -10,7 +12,6 @@ class Solution:
                 pattern ^= 1 << vowel_map[c]
             if pattern not in visited:
                 visited[pattern] = i
-            
-            res = max(res, i-visited[pattern])
-        return res
 
+            res = max(res, i - visited[pattern])
+        return res

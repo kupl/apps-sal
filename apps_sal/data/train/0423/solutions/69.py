@@ -4,5 +4,5 @@ class Solution:
         for x in arr:
             dp[x] = max(1, dp[x])
             res = max(res, dp[x])
-            dp[x+difference] = max(dp[x+difference], dp[x]+1)
+            dp[x + difference] = max(dp[x + difference], dp[x] + 1)
         return res

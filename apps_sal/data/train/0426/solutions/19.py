@@ -6,6 +6,5 @@ class Solution:
         for cand in permutations:
             if cand[0] != '0' and is_power_of_two(cand):
                 return True
-        
-        return False
 
+        return False

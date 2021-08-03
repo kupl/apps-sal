@@ -14,5 +14,3 @@ class Solution:
             if trans(N) == trans(1 << i):
                 return True
         return False
-
-

@@ -23,5 +23,3 @@ class Solution:
         for i in range(0, len(dp)):
             ans = max(ans, dp[i])
         return ans
-            
-

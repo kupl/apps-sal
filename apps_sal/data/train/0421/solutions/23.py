@@ -4,10 +4,8 @@
 #         #因为必定是后缀才满足最后一个字典序
 #         #当然也包括它本身
 #         #字典序就是下一个比它大的数或者字符串，可以有环，环首是最小的
-        
-        
-        
-        
+
+
 class Solution:
     def lastSubstring(self, s: str) -> str:
         i, indexes = 0, list(range(len(s)))
@@ -24,26 +22,15 @@ class Solution:
             i += 1
             indexes = new
         return s[indexes[0]:]
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
 #         graph = defaultdict(list)
 #         cur = 'a'
 #         for idx, val in enumerate(s):
 #             if cur < val:
 #                 cur = val
 #             graph[val].append(idx)
-        
+
 #         maxstartst = graph[cur]
 #         rt = ''
 #         nxt = ord(cur)
@@ -55,8 +42,7 @@ class Solution:
 #                     temp = bisect.bisect_right(maxstartst, item-1)
 #                     if maxstartst[temp-1] == item -1:
 #                         return s[maxstartst[temp-1]:]
-            
+
 #             nxt-=1
 
 #         return rt
-

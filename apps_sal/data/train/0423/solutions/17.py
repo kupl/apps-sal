@@ -10,7 +10,7 @@ class Solution:
                 temp = True
             elif arr[i] in list(dic.keys()):
                 temp = True
-            
+
             # for k in list(dic.keys()):
             #     if k + difference == arr[i]:
             #         # print(k, difference, arr[i])
@@ -24,4 +24,3 @@ class Solution:
                 dic[arr[i]] = [arr[i]]
             # print(arr[i], dic)
         return max(list([len(x) for x in list(dic.values())]))
-

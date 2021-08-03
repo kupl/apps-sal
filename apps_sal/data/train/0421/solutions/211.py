@@ -15,4 +15,3 @@ class Solution:
                 i = i + 1
 
         return s[max:]
-

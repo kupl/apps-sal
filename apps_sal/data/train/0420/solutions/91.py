@@ -9,11 +9,10 @@ class Solution:
             'o': 3,
             'u': 4
         }
-        seen = {0:-1}
+        seen = {0: -1}
         res = curr = 0
         for i, c in enumerate(s):
-            curr ^= 1 <<(aeiou.get(c, -1) + 1) >> 1
+            curr ^= 1 << (aeiou.get(c, -1) + 1) >> 1
             seen.setdefault(curr, i)
-            res = max(res, i-seen[curr])
+            res = max(res, i - seen[curr])
         return res
-

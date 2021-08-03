@@ -4,7 +4,7 @@ class Solution:
         d = 20000
         opt = 0
         for e in arr:
-            dp[e+d] = dp[e-difference + d] + 1
-            opt = max(opt, dp[e+d])
+            dp[e + d] = dp[e - difference + d] + 1
+            opt = max(opt, dp[e + d])
 
-        return opt         
+        return opt

@@ -1,8 +1,11 @@
 from collections import Counter
+
+
 class Solution:
     def findTheLongestSubstring(self, s: str) -> int:
         _max = 0
         vowels = 'aeiou'
+
         def counter_to_tuple(counter):
             res = []
             for v in vowels:

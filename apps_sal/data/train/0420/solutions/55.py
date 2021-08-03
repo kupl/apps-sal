@@ -9,7 +9,7 @@ class Solution:
                 # \"n would be 0 if count is even\"
                 bit_represenation_for_vowel_count ^= vowels[c]
             # \"any combination of vowels that gives odd count & have not been seen before\"
-            if bit_represenation_for_vowel_count not in d:  
+            if bit_represenation_for_vowel_count not in d:
                 # \"stores the oldest index for which a particular combination of vowels resulted into odd count\"
                 d[bit_represenation_for_vowel_count] = i
             else:

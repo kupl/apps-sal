@@ -11,4 +11,4 @@ class Solution:
                 parity_index[parity] = i
             else:
                 longest = max(longest, i - parity_index.get(parity))
-        return longest                
+        return longest

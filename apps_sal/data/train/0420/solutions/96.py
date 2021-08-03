@@ -6,8 +6,8 @@ class Solution:
         for i, c in enumerate(s):
             if c in 'aeiou':
                 mask ^= 1 << 'aeiou'.index(c)
-                
+
             dp[mask] = min(dp[mask], i)
             res = max(res, i - dp[mask])
-                
+
         return res

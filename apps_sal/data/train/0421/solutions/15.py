@@ -13,5 +13,3 @@ class Solution:
                     i += 1
                 offset = 0
         return s[min(i, j):]
-    
-

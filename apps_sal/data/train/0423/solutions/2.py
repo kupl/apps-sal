@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
         if not arr:
@@ -10,5 +12,5 @@ class Solution:
             choices = seen[prev]
             for j in choices:
                 dp[i] = max(dp[j] + 1, dp[i])
-            seen[num].append(i)        
+            seen[num].append(i)
         return max(dp)

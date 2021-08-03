@@ -1,7 +1,7 @@
 class Solution:
     def largestOverlap(self, A: List[List[int]], B: List[List[int]]) -> int:
         return max(self.largestOverlapAtoB(A, B), self.largestOverlapAtoB(B, A))
-        
+
     def largestOverlapAtoB(self, A, B):
         shift_row = 0
         shift_col = 0
@@ -11,7 +11,7 @@ class Solution:
                 shifted_A = self.shiftMatrix(A, shift_row, shift_col)
                 overlap = max(overlap, self.findOverlap(B, shifted_A))
         return overlap
-        
+
     def findOverlap(self, A, B):
         lenght = len(A[0])
         overlap = 0
@@ -20,7 +20,7 @@ class Solution:
                 if A[ii][jj] == B[ii][jj] and A[ii][jj] == 1:
                     overlap += 1
         return overlap
-    
+
     def shiftMatrix(self, M, shift_row, shift_col):
         lenght = len(M[0])
         out = []
@@ -32,10 +32,7 @@ class Solution:
                 out_row.append(0)
             for ix_c in range(shift_col, lenght):
                 out_row.append(M[ix_r - shift_row][ix_c - shift_col])
-                
-            out.append(out_row)
-        
-        return out
-                    
-                    
 
+            out.append(out_row)
+
+        return out

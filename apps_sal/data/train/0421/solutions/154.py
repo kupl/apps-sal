@@ -6,7 +6,7 @@ class Solution:
         for c in s:
             if c > max_char:
                 max_char = c
-                
+
         largest = s
         cur, prev = 0, 0
         for i in range(len(s)):
@@ -15,8 +15,8 @@ class Solution:
                 if cur and s[cur:] > largest:
                     largest = s[cur:]
                 cur = i
-                                
+
         if cur and s[cur:] > largest:
             largest = s[cur:]
-        
+
         return largest

@@ -7,6 +7,7 @@ class Solution:
             'o': 3,
             'u': 4
         }
+
         def setFlags(flags: int, ch: str) -> int:
             if ch in lu.keys():
                 mask = 1 << lu[ch]

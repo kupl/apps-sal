@@ -3,7 +3,6 @@ class Solution:
         mp = collections.defaultdict(int)
         ans = 0
         for a in arr:
-            mp[a] = (1+mp[a-difference])
-            ans = max(ans,mp[a])
+            mp[a] = (1 + mp[a - difference])
+            ans = max(ans, mp[a])
         return ans
-

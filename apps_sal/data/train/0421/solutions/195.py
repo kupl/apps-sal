@@ -20,5 +20,3 @@ class Solution:
                 j = i + 1
             k = 0
         return s[i:]
-        
-

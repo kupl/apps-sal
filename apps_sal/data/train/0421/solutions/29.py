@@ -24,7 +24,7 @@ class Solution:
                     res += c
                     break
         return res
-    
+
     # It can be seen that the last substring in lexicographical order is always a suffix of the string.
     # Start with all possible suffix strings. Each time eliminate the ones not started from the largest letter.
     # Continue until there is only one distinct letter.
@@ -43,4 +43,3 @@ class Solution:
             i += 1
             indexes = new
         return s[indexes[0]:]
-

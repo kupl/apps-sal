@@ -15,6 +15,5 @@ class Solution:
     def get_all_permutation(self, num):
         perm = {''}
         for n in str(num):
-            perm = {p[:i] + n + p[i:] for p in perm  for i in range(len(p) + 1)}
+            perm = {p[:i] + n + p[i:] for p in perm for i in range(len(p) + 1)}
         return perm
-

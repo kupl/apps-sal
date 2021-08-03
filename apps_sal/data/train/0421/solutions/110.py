@@ -8,11 +8,10 @@ class Solution:
         for i in range(len(s)):
             if(maxS == s[i]):
                 maxIndex.append(i)
-        
+
         soln = s[maxIndex[0]:]
         for index in maxIndex:
             if(soln <= s[index:]):
                 soln = s[index:]
-                  
-    
+
         return soln

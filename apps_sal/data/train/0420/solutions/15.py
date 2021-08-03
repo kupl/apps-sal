@@ -9,4 +9,4 @@ class Solution:
             if parity not in parity_index:
                 parity_index[parity] = i
             longest = max(longest, i - parity_index.get(parity))
-        return longest                
+        return longest

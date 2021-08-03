@@ -4,5 +4,3 @@ class Solution:
         for a in arr:
             states[a] = states[a - difference] + 1
         return max(states.values())
-            
-

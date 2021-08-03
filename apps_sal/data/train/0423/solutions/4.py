@@ -4,4 +4,3 @@ class Solution:
         for v in arr:
             seen[v] = seen[v - difference] + 1
         return max(seen.values())
-

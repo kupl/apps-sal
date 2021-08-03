@@ -7,4 +7,3 @@ class Solution:
             seen.setdefault(cur, i)
             res = max(res, i - seen[cur])
         return res
-

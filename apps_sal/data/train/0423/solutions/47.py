@@ -5,7 +5,6 @@ class Solution:
         cnt = collections.Counter()
         ans = 0
         for num in arr:
-            cnt[num] = cnt[num-difference] + 1
+            cnt[num] = cnt[num - difference] + 1
             ans = max(ans, cnt[num])
         return ans
-

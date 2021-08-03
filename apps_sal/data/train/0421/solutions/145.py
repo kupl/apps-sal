@@ -2,18 +2,18 @@ class Solution:
     def lastSubstring(self, s: str) -> str:
         if not s:
             return ''
-        m=s[0]
-        
-        for i in range(1,len(s)):
-            m=max(m,s[i])
-            
-        x=''
-        
+        m = s[0]
+
+        for i in range(1, len(s)):
+            m = max(m, s[i])
+
+        x = ''
+
         for i in range(len(s)):
-            if s[i]==m:
-                x=max(x,s[i:])
+            if s[i] == m:
+                x = max(x, s[i:])
         return x
-    
+
         '''
         if len(x)==1:
             return s[x[0]:]
