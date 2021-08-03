@@ -1,2 +1,2 @@
 def capitalize_word(word):
-    return ""+str(word.lower().capitalize())
+    return "" + str(word.lower().capitalize())

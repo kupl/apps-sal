@@ -1,2 +1,2 @@
 def odd_count(z):
-    return z//2
+    return z // 2

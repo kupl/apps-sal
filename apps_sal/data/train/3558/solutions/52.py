@@ -1,1 +1,1 @@
-capitalize_word = lambda n : n.title()
+def capitalize_word(n): return n.title()

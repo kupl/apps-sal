@@ -3,4 +3,3 @@ def capitalize_word(word):
     remaining = word[1:].lower()
     text = first + remaining
     return text
-

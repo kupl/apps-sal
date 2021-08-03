@@ -3,5 +3,3 @@ def odd_count(n):
         return 0
 
     return int(n / 2)
-    
-

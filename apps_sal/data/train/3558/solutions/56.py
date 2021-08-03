@@ -12,4 +12,3 @@ def capitalize_word(word):
     print(("".join(newarry)))
     answer = "".join(newarry)
     return answer
-

@@ -1,11 +1,11 @@
 def odd_count(n):
-    #Return number of positive odd numbers below N
-    #Find numbers below N -> Add +1 to count 
-    #More of a math problem
-    #Try to find a way besides checking every individual integer.
-    
+    # Return number of positive odd numbers below N
+    # Find numbers below N -> Add +1 to count
+    # More of a math problem
+    # Try to find a way besides checking every individual integer.
+
     return(n // 2)
-    
+
     """
     Look at the top of the range: if it is odd then add 1, if even leave alone.
 

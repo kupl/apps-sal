@@ -1,3 +1,3 @@
 def odd_count(n):
-    nums = n//2
+    nums = n // 2
     return nums
