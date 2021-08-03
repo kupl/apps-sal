@@ -14,6 +14,5 @@ class Solution:
                 i += 1
                 j += 1
             subArrLen += 2
-            
-        return total
 
+        return total

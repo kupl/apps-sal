@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
         d = Counter(chars)

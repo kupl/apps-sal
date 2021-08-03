@@ -17,7 +17,7 @@ class Solution:
                         break
                 if not ok_letter:
                     ok_word = False
-                    break;
+                    break
             if ok_word:
                 count += len(word)
         return count

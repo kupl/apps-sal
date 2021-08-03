@@ -5,9 +5,9 @@ class Solution:
         for idx, i in enumerate(s):
             if len(s) < 2:
                 return len(s)
-            if idx == 0: 
+            if idx == 0:
                 pass
-            elif i == s[idx -1]:
+            elif i == s[idx - 1]:
                 power += 1
                 print(f' i is {i}, power is {power}')
             else:

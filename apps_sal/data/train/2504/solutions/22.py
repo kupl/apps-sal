@@ -4,4 +4,3 @@ class Solution:
         for i, a in enumerate(arr):
             res += ((i + 1) * (n - i) + 1) // 2 * a
         return res
-

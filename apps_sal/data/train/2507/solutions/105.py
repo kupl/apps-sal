@@ -25,5 +25,5 @@ class Solution:
                 i += count
             if works:
                 tot += len(word)
-                
+
         return tot

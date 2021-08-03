@@ -7,7 +7,7 @@ class Solution:
                 freq[chars[n]] = 1
             else:
                 freq[chars[n]] += 1
-        
+
         for word in words:
             word_fq = {}
             is_match = True
@@ -19,7 +19,7 @@ class Solution:
                     word_fq[word[m]] = 1
                 else:
                     word_fq[word[m]] += 1
-            
+
             if is_match:
                 is_fit = True
                 for key in word_fq.keys():
@@ -31,5 +31,5 @@ class Solution:
                         break
                 if is_fit:
                     count += len(word)
-                
+
         return count

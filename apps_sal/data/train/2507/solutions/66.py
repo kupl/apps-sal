@@ -8,7 +8,7 @@ class Solution:
             for letter in countC.items():
                 if letter[0] in charChars and charChars[letter[0]] >= letter[1]:
                     count += 1
-                    
+
             if count == len(countC):
                 counter += len(word)
         return counter

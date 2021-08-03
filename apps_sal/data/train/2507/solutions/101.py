@@ -5,9 +5,7 @@ class Solution:
             a = i
             for j in chars:
                 if j in a:
-                    a = a[:a.index(j)] + a[a.index(j)+1:]
+                    a = a[:a.index(j)] + a[a.index(j) + 1:]
             if len(a) == 0:
                 counter += len(i)
         return counter
-                
-

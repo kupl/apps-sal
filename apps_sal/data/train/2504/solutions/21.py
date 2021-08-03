@@ -17,6 +17,6 @@ class Solution:
 
         for i in subArrs:
             for j in i:
-                ret += j 
-        
+                ret += j
+
         return ret

@@ -8,8 +8,8 @@ class Solution:
             for i in word_number:
                 print(word_number[i])
                 if word_number[i] > chars_number[i]:
-                    
+
                     break
             else:
-                ans+=len(w)
+                ans += len(w)
         return ans

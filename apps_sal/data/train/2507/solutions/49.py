@@ -7,4 +7,3 @@ class Solution:
             if all(word_counter[c] <= chars_counter[c] for c in word_counter):
                 sum += len(word)
         return sum
-

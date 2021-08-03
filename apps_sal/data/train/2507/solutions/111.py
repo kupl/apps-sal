@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
         n = 0
@@ -9,6 +11,4 @@ class Solution:
                     count += 1
             if count == len(word):
                 n += len(word)
-        return n 
-                    
-
+        return n

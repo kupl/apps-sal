@@ -4,5 +4,5 @@ class Solution:
         for idx, num in enumerate(sorted(heights)):
             if heights[idx] != num:
                 count += 1
-                
+
         return count

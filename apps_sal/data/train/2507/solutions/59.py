@@ -5,7 +5,7 @@ class Solution:
         for word in words:
             wCounter = collections.Counter(word)
             match = True
-            for k,v in wCounter.items():
+            for k, v in wCounter.items():
                 if cCounter[k] < v:
                     match = False
             if match:

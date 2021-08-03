@@ -1,10 +1,10 @@
 class Solution:
     def maxPower(self, s: str) -> int:
         c = {'power': 1}
-        for i in range(len(s)) :
-            if i == len(s)-1 :
+        for i in range(len(s)):
+            if i == len(s) - 1:
                 break
-            if ord(s[i]) == ord(s[i+1]) :
+            if ord(s[i]) == ord(s[i + 1]):
                 c['power'] += 1
 
             else:

@@ -23,6 +23,3 @@ class Solution:
             if flag:
                 res += len(word)
         return res
-                
-        
-

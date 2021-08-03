@@ -1,6 +1,6 @@
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
-        
+
         # go through each word:
         goodCount = 0
         for word in words:
@@ -13,6 +13,5 @@ class Solution:
                     letterCount += 1
                     chars_list.remove(letter)
                     if letterCount == wordLen:
-                        goodCount +=letterCount
+                        goodCount += letterCount
         return goodCount
-

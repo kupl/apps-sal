@@ -4,10 +4,10 @@ class Solution:
         count = 0
         for i in chars:
             if i in myd.keys():
-                myd[i] +=1
+                myd[i] += 1
             else:
-                myd[i]= 1
-        
+                myd[i] = 1
+
         for word in words:
             allin = True
 
@@ -17,6 +17,6 @@ class Solution:
                         allin = False
                 else:
                     allin = False
-            if allin==True:
-                count+=len(word)
+            if allin == True:
+                count += len(word)
         return count

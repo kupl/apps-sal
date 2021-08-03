@@ -6,8 +6,8 @@ class Solution:
             t = list(chars)
             for j in i:
                 if j in t:
-                    count+=1
+                    count += 1
                     t.remove(j)
             if count == len(i):
-                start+=count
+                start += count
         return start
