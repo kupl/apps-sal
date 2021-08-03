@@ -2,7 +2,7 @@ class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         res = 0
         dic = collections.defaultdict(int)
-        words.sort(key=lambda x : len(x))
+        words.sort(key=lambda x: len(x))
         for w in words:
             m = len(w)
             for i in range(m):

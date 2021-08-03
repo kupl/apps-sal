@@ -7,13 +7,12 @@ class Solution:
         print(words)
         ans = 0
         for i in range(n):
-                w = words[i]
-                # lis[w] = 1
-                for j in range(len(words[i])):
-                    s = w[0:j] + w[j+1:]
-                    lis[w] = max(lis[w], lis[s] + 1)
-                    
-                ans = max(ans, lis[w])
-        
-        
+            w = words[i]
+            # lis[w] = 1
+            for j in range(len(words[i])):
+                s = w[0:j] + w[j + 1:]
+                lis[w] = max(lis[w], lis[s] + 1)
+
+            ans = max(ans, lis[w])
+
         return ans

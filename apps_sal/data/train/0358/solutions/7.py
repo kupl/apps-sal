@@ -10,4 +10,3 @@ class Solution:
                 idx_og = index + len(source)
                 idx_res = index2 + len(target)
         return res
-

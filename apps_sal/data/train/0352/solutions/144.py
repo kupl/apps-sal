@@ -1,13 +1,13 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
-        
+
         def is_predecessor(word_short, word_long) -> bool:
-            if len(word_short)+1 != len(word_long):
+            if len(word_short) + 1 != len(word_long):
                 return False
             i_s = 0
             can_skip = True
             for i_l in range(len(word_long)):
-                if i_s > len(word_short)-1:
+                if i_s > len(word_short) - 1:
                     return True
                 c_s = word_short[i_s]
                 c_l = word_long[i_l]
@@ -21,10 +21,10 @@ class Solution:
                     else:
                         return False
             return True
-        
+
         if not words:
             return 0
-        
+
         words.sort(key=lambda x: len(x))
         # print(words)
         dp = [1] * len(words)
@@ -34,8 +34,7 @@ class Solution:
             for l in range(r):
                 if is_predecessor(words[l], words[r]):
                     # print('ok',words[l], words[r], l, dp[l])
-                    dp[r] = max(dp[r], dp[l]+1)
-                
+                    dp[r] = max(dp[r], dp[l] + 1)
+
         # print(dp)
         return max(dp)
-

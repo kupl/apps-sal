@@ -7,8 +7,7 @@ class Solution:
         while p < len(nums):
             while p < len(nums) and nums[p] + nums[-1] > target:
                 nums.pop()
-            if len(nums)-p-1 >= 0:
-                res += pow(2, len(nums)-p-1, MOD)
+            if len(nums) - p - 1 >= 0:
+                res += pow(2, len(nums) - p - 1, MOD)
             p += 1
-        return res%MOD
-
+        return res % MOD

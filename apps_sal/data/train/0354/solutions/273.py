@@ -1,6 +1,7 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        mod = 10**9+7
+        mod = 10**9 + 7
+
         def memo(f):
             dic = {}
 
@@ -16,7 +17,7 @@ class Solution:
                 return 1
             if n <= 0:
                 return 0
-            return (find(n-1) - (find(n-rollMax[l]-1) - find_answer(n-rollMax[l]-1, l)))%mod
+            return (find(n - 1) - (find(n - rollMax[l] - 1) - find_answer(n - rollMax[l] - 1, l))) % mod
 
         @memo
         def find(n):
@@ -24,6 +25,6 @@ class Solution:
                 return 1
             if n < 0:
                 return 0
-            return sum(find_answer(n, r) for r in range(6)) %mod
+            return sum(find_answer(n, r) for r in range(6)) % mod
 
         return find(n)

@@ -14,7 +14,7 @@ class Solution:
                     cnt[A[i]] -= 1
                     i += 1
                     l += 1
-                result += l    
+                result += l
                 break
         while j < n:
             if A[j] not in cnt:

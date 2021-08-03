@@ -6,21 +6,13 @@ class Solution:
         nums.sort()
         ln = len(nums)
         i = 0
-        j = ln-1
-        md = pow(10,9)+7
-        
+        j = ln - 1
+        md = pow(10, 9) + 7
+
         while i <= j:
-            if nums[i]+nums[j]<= target:
-                res = (res + pow(2, j-i, md))%md
+            if nums[i] + nums[j] <= target:
+                res = (res + pow(2, j - i, md)) % md
                 i += 1
             else:
                 j -= 1
         return res
-    
-            
-                    
-                    
-            
-            
-        
-

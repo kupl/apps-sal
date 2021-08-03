@@ -1,4 +1,6 @@
 from collections import defaultdict as dd
+
+
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         n = len(A)
@@ -20,7 +22,7 @@ class Solution:
             while j < n and A[j] in d:
                 j += 1
             if len(d) == K:
-                res += (i-i1+1)*(j-j1+1)
+                res += (i - i1 + 1) * (j - j1 + 1)
             # print(i1, i, j1, j)
             d.pop(A[i])
             i += 1

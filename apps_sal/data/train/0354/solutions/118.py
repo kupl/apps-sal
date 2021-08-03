@@ -1,9 +1,9 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         mod = 10**9 + 7
-        
+
         dp = [[0, 1] + [0] * 15 for i in range(6)]
-        
+
         for _ in range(n - 1):
             dp2 = [[0] * 17 for i in range(6)]
             for i in range(6):
@@ -15,6 +15,5 @@ class Solution:
                         else:
                             dp2[j][1] += dp[i][k] % mod
             dp = dp2
-        
-        return sum(sum(row) for row in dp) % mod
 
+        return sum(sum(row) for row in dp) % mod

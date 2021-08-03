@@ -5,4 +5,3 @@ class Solution:
             for j in range(len(A[i])):
                 dp[i & 1][j] = min([dp[(i - 1) & 1][j + k] for k in (-1, 0, 1) if 0 <= j + k < len(A[i])]) + A[i][j]
         return min(dp[(len(A) - 1) & 1])
-

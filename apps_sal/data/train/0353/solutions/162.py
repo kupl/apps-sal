@@ -12,7 +12,6 @@ class Solution:
             if right < i:
                 break
             if nums[i] + nums[right] <= target:
-                total = (total + 2 **(right - i)) % (10**9 + 7)
-             
-        return int(total) % (10**9 + 7)
+                total = (total + 2 ** (right - i)) % (10**9 + 7)
 
+        return int(total) % (10**9 + 7)

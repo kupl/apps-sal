@@ -25,10 +25,8 @@ class Solution:
                     for k in range(1, rollMax[j] + 1):  # we could extend j no more
                         if i == j:
                             if k < rollMax[i]:
-                                dp[m][i][k + 1] += dp[m-1][i][k] % mod
+                                dp[m][i][k + 1] += dp[m - 1][i][k] % mod
                         else:
-                            dp[m][i][1] += dp[m-1][j][k] % mod
+                            dp[m][i][1] += dp[m - 1][j][k] % mod
 
-
-        return sum(map(sum, dp[n-1])) % mod
-
+        return sum(map(sum, dp[n - 1])) % mod

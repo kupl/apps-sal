@@ -5,7 +5,7 @@ class Solution:
         l = 0
         r = len(nums) - 1
         res = 0
-        
+
         while l <= r:
             while l <= r and nums[l] + nums[r] > target:
                 r -= 1

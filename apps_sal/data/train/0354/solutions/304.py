@@ -9,9 +9,8 @@ class Solution:
         for i in range(2, n + 1):
             for j in range(numFaces):
                 for k in range(1, rollMax[j] + 1):
-                    if i - k < 0: 
+                    if i - k < 0:
                         break
                     dp[i][j] += dp[i - k][numFaces] - dp[i - k][j]
             dp[i][numFaces] = sum(dp[i])
         return dp[n][numFaces] % 1000000007
-

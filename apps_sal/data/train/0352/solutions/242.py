@@ -5,12 +5,12 @@ class Solution:
         def ls(word):
             res = 1
             for j in range(len(word)):
-                substr = word[:j] + word[(j+1):]
+                substr = word[:j] + word[(j + 1):]
                 if substr not in st:
                     continue
                 res = 1 + ls(substr)
             return res
-           
+
         res = 1
         for word in words:
             res = max(res, ls(word))

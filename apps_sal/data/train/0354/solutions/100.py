@@ -3,9 +3,9 @@ import functools as ft
 
 
 class Solution:
-    
+
     BASE = 10 ** 9 + 7
-    
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         state = clc.defaultdict(int)
         state[1, 0] = 1
@@ -21,4 +21,3 @@ class Solution:
                         new_state[dice, 1] = (new_state[dice, 1] + count) % self.BASE
             state = new_state
         return sum(state.values()) % self.BASE
-

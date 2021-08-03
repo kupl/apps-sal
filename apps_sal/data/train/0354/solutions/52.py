@@ -14,5 +14,3 @@ class Solution:
                             dp2[j][1] += dp[i][k] % mod
             dp = dp2
         return sum(sum(d) for d in dp) % mod
-            
-

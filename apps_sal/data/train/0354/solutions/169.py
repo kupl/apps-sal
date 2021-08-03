@@ -10,12 +10,11 @@ class Solution:
 
             res = []
             for i in range(1, 7):
-                if i - 1 ==  consec[0]:
-                    res.append(helper(n-1, (consec[0], consec[1] + 1)))
+                if i - 1 == consec[0]:
+                    res.append(helper(n - 1, (consec[0], consec[1] + 1)))
                 else:
-                    res.append(helper(n-1, (i-1, 1)))
+                    res.append(helper(n - 1, (i - 1, 1)))
             # print(n , res, sum(res), sum(res) % (10**9+7))
-            return sum(res) % (10**9+7)
-        
-        return helper(n, (0,0))
+            return sum(res) % (10**9 + 7)
 
+        return helper(n, (0, 0))

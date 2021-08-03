@@ -6,7 +6,7 @@ class Solution:
     #             return True
     #     return False
     def predecessor(self, word, candidate):
-        if len(word) != len(candidate)+1:
+        if len(word) != len(candidate) + 1:
             return False
         j = 0
         for i, c in enumerate(word):
@@ -15,7 +15,7 @@ class Solution:
             if c == candidate[j]:
                 j += 1
         return j == len(candidate)
-    
+
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=len)
         dp = [1 for _ in words]
@@ -25,5 +25,5 @@ class Solution:
                     break
                 if self.predecessor(words[i], words[j]):
                     # print(\"hi\")
-                    dp[i] = max(dp[i], dp[j]+1)
+                    dp[i] = max(dp[i], dp[j] + 1)
         return max(dp)

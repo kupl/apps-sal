@@ -7,14 +7,14 @@ class Solution:
             counter1[a], counter2[a] = counter1[a] + 1, counter2[a] + 1
             while len(counter2) == K:
                 counter2[A[fast]] -= 1
-                if not counter2[A[fast]]: del counter2[A[fast]]
+                if not counter2[A[fast]]:
+                    del counter2[A[fast]]
                 fast += 1
             while len(counter1) > K:
                 counter1[A[slow]] -= 1
-                if not counter1[A[slow]]: del counter1[A[slow]]
+                if not counter1[A[slow]]:
+                    del counter1[A[slow]]
                 slow += 1
             res += fast - slow
 
         return res
-
-

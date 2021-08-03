@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         dp = [1] * len(words)
@@ -17,5 +19,5 @@ class Solution:
                         if check == 2:
                             break
                     if check == 1:
-                        dp[i] = max(dp[i], dp[j]+1)
+                        dp[i] = max(dp[i], dp[j] + 1)
         return max(dp)

@@ -1,7 +1,7 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         N = len(words)
-        
+
         def is_predecessor(word1: str, word2: str) -> bool:
             if (len(word1) + 1 == len(word2)):
                 diffCount = 0
@@ -17,20 +17,20 @@ class Solution:
                         return False
                 return True
             return False
-        
+
         def backtracking(start: int, count: int) -> int:
             if (start in memo):
                 return memo[start]
-            
+
             sublongest = count
             for i in range(start + 1, N):
                 if (is_predecessor(words[start], words[i])):
                     sublongest = max(sublongest, backtracking(i, count + 1))
             memo[start] = sublongest
             return sublongest
-        
-        words.sort(key = lambda x: (len(x), x))
-        
+
+        words.sort(key=lambda x: (len(x), x))
+
         memo = dict()
         longest = 0
         for i in range(N):

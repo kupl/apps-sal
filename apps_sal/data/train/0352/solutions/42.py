@@ -1,7 +1,7 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         def dfs(w1, size):
-            return max([dfs(w2, size + 1) for w2 in graph[w1]], default = size)
+            return max([dfs(w2, size + 1) for w2 in graph[w1]], default=size)
         graph = collections.defaultdict(list)
         for w in words:
             graph[len(w)].append(w)

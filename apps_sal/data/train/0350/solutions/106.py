@@ -2,7 +2,7 @@ class Solution:
     def subarraysWithKDistinct(self, A, K):
         return self.atMostK(A, K) - self.atMostK(A, K - 1)
 
-    def atMostK(self, s, k):        
+    def atMostK(self, s, k):
         if not s:
             return 0
         N = len(s)
@@ -18,8 +18,8 @@ class Solution:
                 left += 1
             else:
                 right += 1
-                ret +=  right - left
+                ret += right - left
                 if right < N:
                     counter[s[right]] += 1
-            
+
         return ret

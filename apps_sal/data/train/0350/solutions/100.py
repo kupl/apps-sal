@@ -7,11 +7,11 @@ class Solution:
         ans = 0
         i = 0
         for j in range(len(A)):
-            count[A[j]] += 1 
+            count[A[j]] += 1
             while len(count) > K:
-                count[A[i]] -= 1 
+                count[A[i]] -= 1
                 if count[A[i]] == 0:
                     del count[A[i]]
-                i+= 1 
-            ans += i - j + 1 
-        return ans 
+                i += 1
+            ans += i - j + 1
+        return ans

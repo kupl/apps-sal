@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         if K == 0:
@@ -32,4 +34,3 @@ class Solution:
             r += 1
 
         return result
-

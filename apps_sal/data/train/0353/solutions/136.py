@@ -6,9 +6,9 @@ class Solution:
         for i in range(N):
             current_num = nums[i]
             low = i + 1
-            high = N-1
-            while low <= high:  
-                middle = (low + high)//2
+            high = N - 1
+            while low <= high:
+                middle = (low + high) // 2
                 if current_num + nums[middle] > target:
                     high = middle - 1
                 else:

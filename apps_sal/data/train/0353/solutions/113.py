@@ -11,5 +11,3 @@ class Solution:
                 res += 2 ** (r - l)
                 l += 1
         return res % (10 ** 9 + 7)
-            
-

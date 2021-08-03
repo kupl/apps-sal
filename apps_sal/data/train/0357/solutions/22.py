@@ -14,20 +14,16 @@ class Solution:
                     left.append(float('inf'))
                 else:
                     left.append(i - leftlast)
-            if seats[n-i-1] == 1:
+            if seats[n - i - 1] == 1:
                 right.append(0)
-                rightlast = n-i-1
+                rightlast = n - i - 1
             else:
                 if rightlast is None:
                     right.append(float('inf'))
                 else:
                     right.append(rightlast - n + i + 1)
-                
+
         res = 0
         for i in range(n):
-            res = max(res, min(right[n-i-1], left[i]))
+            res = max(res, min(right[n - i - 1], left[i]))
         return res
-                
-            
-            
-

@@ -3,13 +3,13 @@ class Solution:
         nums = sorted(nums)
         n = len(nums)
         count = 0
-        i, j = 0, n-1
+        i, j = 0, n - 1
         while i <= j:
             tot = nums[i] + nums[j]
             if tot <= target:
-                count += 2**(j-i) % int(1e9 + 7)
+                count += 2**(j - i) % int(1e9 + 7)
                 i += 1
             else:
                 j -= 1
-         
+
         return int(count % (1e9 + 7))

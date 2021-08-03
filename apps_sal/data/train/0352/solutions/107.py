@@ -15,15 +15,14 @@ class Solution:
                         return False
                     find_extra = True
         return True
-            
-    
+
     def longestStrChain_old(self, words: List[str]) -> int:
         words.sort(key=lambda x: len(x))
         longest_seq = [1] * len(words)
         for i in range(1, len(words)):
             curr_word = words[i]
             for j in range(0, i)[::-1]:
-                prev_word = words[j]   
+                prev_word = words[j]
                 if len(prev_word) == len(curr_word):
                     continue
                 if len(prev_word) + 1 < len(curr_word):
@@ -31,12 +30,12 @@ class Solution:
                 if self.checkPredecessor(prev_word, curr_word):
                     longest_seq[i] = max(longest_seq[i], longest_seq[j] + 1)
         return max(longest_seq)
-    
+
     def longestStrChain(self, words):
         words.sort(key=lambda x: len(x))
         longest_chain = {}
-        
+
         for word in words:
             longest_chain[word] = max([longest_chain.get((word[:i] + word[i + 1:]), 0) for i in range(len(word))]) + 1
-        
+
         return max(longest_chain.values())

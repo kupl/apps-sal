@@ -17,4 +17,3 @@ class Solution:
                 ans %= M
             l += 1
         return ans
-

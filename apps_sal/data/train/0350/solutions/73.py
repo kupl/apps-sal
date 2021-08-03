@@ -17,6 +17,6 @@ class Solution:
             count += r - l + 1
             r += 1
         return count
-    
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-        return self.atMostK(A, K) - self.atMostK(A,K-1)
+        return self.atMostK(A, K) - self.atMostK(A, K - 1)

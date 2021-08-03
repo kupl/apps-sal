@@ -16,7 +16,7 @@ class Solution:
                     i += 1
                     j += 1
             return mismatch <= 1
-        
+
         def recurse(word, length):
             nonlocal max_l
             max_l = max(max_l, length)
@@ -24,17 +24,14 @@ class Solution:
             if n in dic:
                 for next_word in dic[n]:
                     if edit_dist(word, next_word):
-                        recurse(next_word, length+1)
-                        
-        
+                        recurse(next_word, length + 1)
+
         dic = collections.defaultdict(list)
-        
+
         for word in words:
             dic[len(word)].append(word)
         max_l = 0
-        
+
         for word in words:
             recurse(word, 1)
         return max_l
-        
-

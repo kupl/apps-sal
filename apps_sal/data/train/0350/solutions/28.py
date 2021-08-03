@@ -1,9 +1,10 @@
 from collections import Counter
 
+
 def solve(A, K):
     count = Counter()
     front = iter(A)
-    
+
     ans = 0
     size = 0
     for k in A:
@@ -17,8 +18,8 @@ def solve(A, K):
                 del count[key]
         ans += size
     return ans
-            
-            
+
+
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-        return solve(A, K) - solve(A, K-1)
+        return solve(A, K) - solve(A, K - 1)

@@ -3,10 +3,10 @@ class Solution:
         # dp[i][j][k] means this is ith roll and we end up with number j and it has lasted k times
         dp = [[[0 for k in range(16)] for j in range(7)] for i in range(n + 1)]
         mod = pow(10, 9) + 7
-        
+
         for j in range(1, 7):
             dp[1][j][1] = 1
-        
+
         for i in range(2, n + 1):
             for j in range(1, 7):
                 for k in range(1, 16):
@@ -18,10 +18,10 @@ class Solution:
                             if jj != j:
                                 for kk in range(16):
                                     dp[i][j][k] = (dp[i][j][k] + dp[i - 1][jj][kk]) % mod
-        
+
         ans = 0
         for j in range(1, 7):
             for k in range(1, 16):
                 ans = (ans + dp[n][j][k]) % mod
-        
+
         return ans

@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def is_neighbor(self, s1, s2):
         ss = s1
@@ -26,8 +28,8 @@ class Solution:
             if string in chain_graph:
                 self.build_chains(chain_graph, string, visited, curr_path + 1)
             else:
-                print(('term:', string, curr_path+1))
-                self.path_len = max(self.path_len, curr_path+1)
+                print(('term:', string, curr_path + 1))
+                self.path_len = max(self.path_len, curr_path + 1)
 
     def longestStrChain(self, words: List[str]) -> int:
         str_chain_graph = defaultdict(set)
@@ -41,4 +43,3 @@ class Solution:
         for key in str_chain_graph:
             self.build_chains(str_chain_graph, key, set(), 1)
         return self.path_len
-

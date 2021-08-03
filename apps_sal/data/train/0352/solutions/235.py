@@ -6,9 +6,9 @@ class Solution:
         [1, 2, 0, 0, 0, 0, 0, 0]
         return max(dp)
         '''
-        
-        words.sort(key = lambda x : len(x))
-        dp  = [1] * len(words)
+
+        words.sort(key=lambda x: len(x))
+        dp = [1] * len(words)
         ans = 0
         for i in range(len(words)):
             curr = words[i]
@@ -18,9 +18,10 @@ class Solution:
                     dp[i] = max(dp[i], dp[j] + 1)
             ans = max(ans, dp[i])
         return ans
-    
+
     def isPredecessor(self, curr, prev):
-        if len(curr) - len(prev) != 1: return False
+        if len(curr) - len(prev) != 1:
+            return False
         i = j = 0
         diff = False
         while i < len(curr) and j < len(prev):
@@ -28,7 +29,8 @@ class Solution:
                 i += 1
                 j += 1
             else:
-                if diff: return False
+                if diff:
+                    return False
                 diff = True
                 i += 1
         return True

@@ -30,4 +30,3 @@ class Solution:
                         queue.append((next_word, level + 1))
 
         return max_level
-

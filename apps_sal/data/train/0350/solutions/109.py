@@ -26,9 +26,9 @@ def subarraysWithAtMostK(arr: list, k: int) -> int:
 
 def subarraysWithKDistinct(arr: list, k: int) -> int:
     # exactly k => atmost(k) - atmost(k - 1)
-    return subarraysWithAtMostK(arr, k) - subarraysWithAtMostK(arr,  k - 1)
+    return subarraysWithAtMostK(arr, k) - subarraysWithAtMostK(arr, k - 1)
+
 
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         return subarraysWithKDistinct(A, K)
-

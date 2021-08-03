@@ -1,19 +1,19 @@
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         length = len(A)
-        
+
         class counter:
             def __init__(self):
                 self.c = Counter()
-            
+
             def addValue(self, num):
                 self.c[num] += 1
-            
+
             def removeValue(self, num):
                 self.c[num] -= 1
                 if self.c[num] == 0:
                     del self.c[num]
-                
+
         def subarraysWithAtLeast(k):
             # print(\"---------\")
             start = 0
@@ -33,7 +33,7 @@ class Solution:
                 # print(A[start: i+1])
                 ret += i - start + 1
             return ret
-        
+
         # print(subarraysWithAtLeast(K))
         # print(subarraysWithAtLeast(K-1))
-        return subarraysWithAtLeast(K) - subarraysWithAtLeast(K-1)
+        return subarraysWithAtLeast(K) - subarraysWithAtLeast(K - 1)

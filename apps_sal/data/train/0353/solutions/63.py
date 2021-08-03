@@ -18,6 +18,5 @@ class Solution:
             tail_length = right_boundary - index
             result += 1 << tail_length
             result %= 10 ** 9 + 7
-        
-        return result
 
+        return result

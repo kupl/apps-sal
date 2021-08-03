@@ -24,10 +24,10 @@ class Solution:
                     if n > longest:
                         longest = n
                     for i in range(k):
-                        pre = word[:i] + word[i+1:]
-                        if pre not in seen and pre in by_length[k-1]:
-                            stk.append((pre, k-1, n+1))
+                        pre = word[:i] + word[i + 1:]
+                        if pre not in seen and pre in by_length[k - 1]:
+                            stk.append((pre, k - 1, n + 1))
                 if longest == mx:
                     return longest
 
-        return longest   
+        return longest

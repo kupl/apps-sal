@@ -4,37 +4,39 @@ class Solution:
         rToL = [0 for _ in range(len(seats))]
         for i in range(len(seats)):
             if seats[i] == 1:
-                lToR[i] = -1 
+                lToR[i] = -1
                 continue
             if i == 0:
                 if seats[i] == 0:
                     lToR[i] = 1
             else:
-                if seats[i-1] != 1:
-                    lToR[i] = lToR[i-1]+1
+                if seats[i - 1] != 1:
+                    lToR[i] = lToR[i - 1] + 1
                 else:
                     lToR[i] = 1
-        for i in range(len(seats)-1, -1, -1):
+        for i in range(len(seats) - 1, -1, -1):
             if seats[i] == 1:
-                rToL[i] = -1 
+                rToL[i] = -1
                 continue
-            if i == len(seats)-1:
+            if i == len(seats) - 1:
                 if seats[i] == 0:
                     rToL[i] = 1
             else:
-                if seats[i+1] != 1:
-                    rToL[i] = rToL[i+1]+1
+                if seats[i + 1] != 1:
+                    rToL[i] = rToL[i + 1] + 1
                 else:
                     rToL[i] = 1
         res = 1
         for i in range(len(seats)):
-            if i == 0 or i == len(seats)-1:
+            if i == 0 or i == len(seats) - 1:
                 if lToR[i] != -1 and rToL[i] != -1:
-                    res = max(res,max(lToR[i],rToL[i]))
+                    res = max(res, max(lToR[i], rToL[i]))
             else:
                 if lToR[i] != -1 and rToL[i] != -1:
-                    res = max(res,min(lToR[i],rToL[i]))
+                    res = max(res, min(lToR[i], rToL[i]))
         return res
+
+
 '''
 class Solution:
     def maxDistToClosest(self, seats: List[int]) -> int:
@@ -53,8 +55,8 @@ class Solution:
         res = max(res, len(seats)-1-que[0])
         return res
 '''
-                    
-        
+
+
 '''
 class Solution:
     def maxDistToClosest(self, seats: List[int]) -> int:
@@ -75,16 +77,3 @@ class Solution:
         res = max(res, len(seats)-1-que[0])
         return res
 '''
-        
- 
-                
-        
-        
-                
-                
-            
-                    
-       
-  
-            
-

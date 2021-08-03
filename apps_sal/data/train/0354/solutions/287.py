@@ -15,11 +15,10 @@ class Solution:
                         new_seq_num[i][1] += seq_sum[j]
                     else:
                         for k in range(2, min(n, rollMax[i]) + 1):
-                            new_seq_num[i][k] = seq_num[i][k - 1]       
+                            new_seq_num[i][k] = seq_num[i][k - 1]
             seq_num = new_seq_num
         result = 0
         for i in range(6):
             result += sum(seq_num[i])
             result = result % to_mod
         return result
-

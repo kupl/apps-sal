@@ -5,9 +5,10 @@ class Solution:
             for j in range(len(words)):
                 if len(words[i]) == len(words[j]) + 1:
                     for k in range(len(words[i])):
-                        if words[i][:k] + words[i][k+1:] == words[j]:
+                        if words[i][:k] + words[i][k + 1:] == words[j]:
                             children[words[j]].add(words[i])
         print(children)
+
         def dfs(w, count):
             visited.add(w)
             if not children[w]:
@@ -21,4 +22,3 @@ class Solution:
             if u not in visited:
                 dfs(u, 1)
         return self.res
-

@@ -9,18 +9,17 @@ class Solution:
             pows[i] = p
             p = 2 * p
             i += 1
-        
+
         # print(pows)
         # print(nums)
-        l, r = 0, n-1
+        l, r = 0, n - 1
         res = 0
         while l <= r:
             # print(l, r)
             if nums[l] + nums[r] <= target:
-                res = (res + pows[r-l]) % mod
+                res = (res + pows[r - l]) % mod
                 l += 1
             else:
                 r -= 1
-                
-        return int(res)
 
+        return int(res)

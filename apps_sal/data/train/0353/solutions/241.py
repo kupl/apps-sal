@@ -99,7 +99,7 @@ class Solution:
 
         for i in range(n):
             if nums[i] > target:
-                    break
+                break
             j = self.findLast(nums, i, n - 1, target)
             if i == j:
                 if (nums[i] + nums[j]) <= target:
@@ -107,8 +107,7 @@ class Solution:
             elif (nums[i] + nums[j - 1]) <= target:  # 防止第一个数就超过
                 count += pow_map[j - i - 1]
         return count % mod
-    
-    
+
     def numSubseq(self, A, target):
         A.sort()
         l, r = 0, len(A) - 1

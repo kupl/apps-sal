@@ -17,8 +17,7 @@ class Solution:
                         return False
                     find_extra = True
         return True
-            
-    
+
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=lambda x: len(x))
         longest_seq = [1] * len(words)

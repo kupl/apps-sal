@@ -11,5 +11,5 @@ class Solution:
                         del d[A[i]]
                     i += 1
                 ret += j - i + 1
-            return ret 
-        return atMost(A, K) - atMost(A, K-1)
+            return ret
+        return atMost(A, K) - atMost(A, K - 1)

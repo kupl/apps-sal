@@ -9,7 +9,7 @@ class Solution:
         pow2 = [1]
         for x in range(1, n + 1):
             pow2.append(pow2[-1] * 2 % MOD)
-        
+
         j = n - 1
         for i in range(n):
             while j and nums[i] + nums[j] > target:
@@ -18,15 +18,15 @@ class Solution:
                 res += pow2[j - i]
                 res %= MOD
         return res
-        
+
         # self made, two pointer, TLE, too many redundant calculations
         MODULO = 10 ** 9 + 7
         nums.sort()
-        
+
         res = 0
         l = 0
         n = len(nums)
-        
+
         while l < n and nums[l] * 2 <= target:
             r = l
             while r < n and nums[l] + nums[r] <= target:
@@ -41,7 +41,7 @@ class Solution:
                 res += (2 ** (r - l)) % MODULO
             l += 1
         return res % MODULO
-        
+
         # self made, DFE, TLE
 #         self.res = 0
 #         end_idx = bisect.bisect_left(nums, target)
@@ -62,4 +62,3 @@ class Solution:
 #             cur.append(nums[i])
 #             self.dfs(nums, i + 1, end_idx, cur, target)
 #             cur.pop()
-

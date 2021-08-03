@@ -1,23 +1,6 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         def rec(die, cons, empty):
             if empty == 0:
                 return 1
@@ -39,13 +22,13 @@ class Solution:
 # class Solution:
 #     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
 #         def f(n, num, co):
-            
+
 #             if n == 0:
 #                 return 1
-            
+
 #             if (n, num, co) in dp:
 #                 return dp[n, num, co]
-            
+
 #             ans = 0
 #             for i in range(1, 7):
 #                 if i == num and co + 1 <= rollMax[i - 1]:
@@ -57,7 +40,3 @@ class Solution:
 
 #         dp = {}
 #         return f(n, 0, 0) % (10 ** 9 + 7)
-
-
-
-

@@ -3,7 +3,7 @@ class Solution:
         all_chains = []
         for word in words:
             all_chains.extend(self.createChains(word, words))
-        return max(map(len,all_chains))
+        return max(map(len, all_chains))
 
     def createChains(self, word, words):
         result = []
@@ -16,10 +16,10 @@ class Solution:
     def helper(self, word, step, dictionary, result):
         result.append(step[:])
 
-        for i in range(len(word)-1,-1, -1):
-            substring = word[:i]+word[i+1:]
+        for i in range(len(word) - 1, -1, -1):
+            substring = word[:i] + word[i + 1:]
 
-            if substring in dictionary: 
-                step.append(substring) # choose
-                self.helper(substring, step, dictionary, result) # explore
-                step.pop() # unchoose
+            if substring in dictionary:
+                step.append(substring)  # choose
+                self.helper(substring, step, dictionary, result)  # explore
+                step.pop()  # unchoose

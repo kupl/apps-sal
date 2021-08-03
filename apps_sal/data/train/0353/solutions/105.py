@@ -12,5 +12,3 @@ class Solution:
                 ans += 2 ** (right - left)
                 left += 1
         return ans % mod
-                
-

@@ -7,12 +7,13 @@ class Window:
         self.count[x] += 1
         if self.count[x] == 1:
             self.nonzero += 1
-    
+
     def remove(self, x):
         self.count[x] -= 1
         if self.count[x] == 0:
             self.nonzero -= 1
-            
+
+
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         window1 = Window()

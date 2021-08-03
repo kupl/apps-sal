@@ -5,7 +5,7 @@ class Solution:
                 return False
             else:
                 for i in range(len(str2)):
-                    if str1 == str2[:i] + str2[i+1:]:
+                    if str1 == str2[:i] + str2[i + 1:]:
                         return True
                 return False
         l = len(words)

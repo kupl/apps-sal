@@ -1,4 +1,6 @@
 MOD = 1000000007
+
+
 class Solution:
     def numSubseq(self, nums, target):
         if not nums:
@@ -9,7 +11,7 @@ class Solution:
         res = 0
         while left <= right:
             if nums[left] + nums[right] <= target:
-                res += 2 ** (right - left) 
+                res += 2 ** (right - left)
                 res %= MOD
                 left += 1
             else:

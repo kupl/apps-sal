@@ -9,4 +9,3 @@ class Solution:
             dp[w] = max(temp)
             # print(dp)
         return max(dp.values())
-

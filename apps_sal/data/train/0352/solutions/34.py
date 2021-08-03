@@ -2,7 +2,7 @@
 # n: len(words)
 # k: length of each word
 class Solution:
-    
+
     # @param words: List[str]
     # @return int
     def longestStrChain(self, words):
@@ -10,7 +10,7 @@ class Solution:
             return 0
 
         # build word table
-        wordTable = self.buildWordTable(words) # { length: list of words }
+        wordTable = self.buildWordTable(words)  # { length: list of words }
 
         # dfs - search from shortest word to longest word
         maxLen = 0
@@ -30,7 +30,7 @@ class Solution:
     def buildWordTable(self, words):
 
         # initialize
-        wordTable = {} # { length: list of words }
+        wordTable = {}  # { length: list of words }
 
         for word in words:
             if len(word) not in wordTable:
@@ -82,4 +82,3 @@ class Solution:
                 j += 1
 
         return i == j or i == j - 1
-

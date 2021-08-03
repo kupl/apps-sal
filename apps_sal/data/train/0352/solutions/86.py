@@ -2,13 +2,13 @@ class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         auxList = [(len(item), item) for item in set(words)]
         auxList.sort()
-        
+
         auxGraph = collections.defaultdict(set)
         seen = dict()
-        
+
         for idx, (wordLen, word) in enumerate(auxList):
             seen[word] = False
-            for jdx in range(idx+1, len(auxList)):
+            for jdx in range(idx + 1, len(auxList)):
                 cWordLen, cWord = auxList[jdx]
                 if cWordLen > wordLen + 1:
                     break
@@ -16,7 +16,7 @@ class Solution:
                     pass
                 else:
                     for pivot in range(len(cWord)):
-                        if cWord[:pivot] + cWord[pivot+1:] == word:
+                        if cWord[:pivot] + cWord[pivot + 1:] == word:
                             auxGraph[word].add(cWord)
         # print(auxGraph)
         ans = 0
@@ -28,7 +28,7 @@ class Solution:
                 seen[word] = True
                 # DFS or BFS
                 auxDeque.append((1, word))
-                
+
                 while len(auxDeque) > 0:
                     cLen, cnode = auxDeque.pop()
                     ans = max(ans, cLen)
@@ -37,4 +37,3 @@ class Solution:
                             seen[eachNeighbor] = True
                             auxDeque.append((cLen + 1, eachNeighbor))
         return ans
-

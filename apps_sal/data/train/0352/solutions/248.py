@@ -4,8 +4,9 @@ class Solution:
             return 0
         dp = [1 for _ in words]
         largest = 1
-        words.sort(key=lambda s:len(s))
+        words.sort(key=lambda s: len(s))
         print(words)
+
         def predecessor(big_word, small_word):
             b = 0
             s = 0

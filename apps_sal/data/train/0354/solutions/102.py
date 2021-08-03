@@ -1,8 +1,8 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        
+
         states = {(None, 1): 1}
-        
+
         for _ in range(n):
             new_states = collections.defaultdict(int)
             for state, count in list(states.items()):
@@ -14,4 +14,3 @@ class Solution:
                         new_states[(i, 1)] += count
             states = new_states
         return sum(states.values()) % (10 ** 9 + 7)
-

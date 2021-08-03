@@ -7,7 +7,7 @@ class Solution:
             if str1_pointer == len(str1):
                 return True
         return False
-        
+
     def longestStrChain(self, words: List[str]) -> int:
         word_lengths = {}
         for i in words:
@@ -16,6 +16,7 @@ class Solution:
             else:
                 word_lengths[len(i)].append(i)
         max_length = max(list(word_lengths.keys()))
+
         @lru_cache(None)
         def dp(word):
             if len(word) not in word_lengths:

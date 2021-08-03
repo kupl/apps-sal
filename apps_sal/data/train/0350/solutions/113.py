@@ -33,4 +33,3 @@ class Solution:
                 left2 += 1
             answer += left2 - left1
         return answer
-

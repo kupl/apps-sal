@@ -9,12 +9,12 @@ class Solution:
         for i in range(len(prev_word)):
             if not skipped_char and prev_word[i] != cur_word[i]:
                 skipped_char = True
-            if skipped_char and prev_word[i] != cur_word[i+1]:
+            if skipped_char and prev_word[i] != cur_word[i + 1]:
                 return False
         return True
 
     def longestStrChain(self, words: List[str]) -> int:
-        words.sort(key = lambda word: len(word))
+        words.sort(key=lambda word: len(word))
         num_words = len(words)
         chain_lengths = [1 for _ in range(num_words)]
         max_chain_length = 0
@@ -24,5 +24,3 @@ class Solution:
                     chain_lengths[i] = chain_lengths[j] + 1
             max_chain_length = max(max_chain_length, chain_lengths[i])
         return max_chain_length
-            
-

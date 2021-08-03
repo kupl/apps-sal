@@ -1,10 +1,10 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         MOD = 10 ** 9 + 7
-        dp =collections.deque([[0] * 7 for i in range(max(rollMax))])
+        dp = collections.deque([[0] * 7 for i in range(max(rollMax))])
         dp[0] = [1] * 7
-        for i in range(1,  n + 1):
-            dp2 = [0]  * 7
+        for i in range(1, n + 1):
+            dp2 = [0] * 7
             for j in range(7):
                 for d in range(6):
                     if d == j:
@@ -25,6 +25,5 @@ class Solution:
 #                     for k in range(min(rollMax[d], i)):
 #                         cnt = (cnt + roll(d, i - k - 1)) % MOD
 #             return cnt
-        
-#         return roll(-1, n)
 
+#         return roll(-1, n)

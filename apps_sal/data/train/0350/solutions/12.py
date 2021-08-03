@@ -16,6 +16,6 @@ class Solution:
                 while obj[s[second]] > 1:
                     obj[s[second]] -= 1
                     second += 1
-                answer += second-first+1
+                answer += second - first + 1
 
         return(answer)

@@ -14,7 +14,7 @@ class Solution:
                         cnt[A[i]] -= 1
                         i += 1
                         l += 1
-                    result += l    
+                    result += l
                     # print(j ,l)
             else:
                 if A[j] in cnt:
@@ -24,7 +24,7 @@ class Solution:
                         i += 1
                         l += 1
                     # print(j, l)
-                    result += l                        
+                    result += l
                 else:
                     cnt[A[i]] -= 1
                     if cnt[A[i]] == 0:

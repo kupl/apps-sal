@@ -13,6 +13,5 @@ class Solution:
             else:
                 count += 2**(right - left)
                 left += 1
-            
-        return count % mod
 
+        return count % mod

@@ -7,37 +7,37 @@
 #         n=len(s)
 #         if n<k:
 #             return 0
-        
+
 #         if k==0:
 #             return 1
-        
+
 #         seen={}
 #         cnt=0
-        
+
 #         i=0
 #         j=0
-        
+
 #         while i<n and j<n:
 #             if s[j] not in seen:
 #                 seen[s[j]]=1
 #             else:
 #                 seen[s[j]]+=1
-            
+
 #             while len(seen)>k:
 #                 seen[s[i]]-=1
 #                 if not seen[s[i]]:
 #                     del seen[s[i]]
 #                 i+=1
-                
+
 #             seen1=seen.copy()
-#             i1=i   
+#             i1=i
 #             while len(seen1)==k:
 #                 cnt+=1
 #                 seen1[s[i1]]-=1
 #                 if not seen1[s[i1]]:
 #                     del seen1[s[i1]]
 #                 i1+=1
-                
+
 #             j+=1
 
 #         return cnt
@@ -55,6 +55,7 @@ class Window:
         self.count[x] -= 1
         if self.count[x] == 0:
             self.nonzero -= 1
+
 
 class Solution(object):
     def subarraysWithKDistinct(self, A, K):
@@ -76,13 +77,4 @@ class Solution(object):
 
             ans += left2 - left1
 
-        return ans                
-                    
-                
-                
-            
-        
-        
-        
-        
-
+        return ans

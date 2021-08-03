@@ -10,7 +10,7 @@ class Solution:
             if KNow == K:
                 ans += 1
                 temp = 0
-                while r+temp < ALen and keyCounter[A[r+temp]] > 0:
+                while r + temp < ALen and keyCounter[A[r + temp]] > 0:
                     ans += 1
                     temp += 1
                 if keyCounter[A[l]] > 0:
@@ -18,7 +18,7 @@ class Solution:
                 if keyCounter[A[l]] == 0:
                     KNow -= 1
                 l += 1
-            elif KNow < K:     
+            elif KNow < K:
                 if r == ALen:
                     return ans
                 if keyCounter[A[r]] == 0:

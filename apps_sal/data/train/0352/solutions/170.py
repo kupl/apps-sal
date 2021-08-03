@@ -3,7 +3,7 @@ class Solution:
         n = len(words)
         words.sort(key=len)
         f = [1] * n
-        
+
         def ispre(w1, w2):
             if len(w1) != len(w2) - 1:
                 return False
@@ -21,7 +21,7 @@ class Solution:
                 i += 1
                 j += 1
             return True
-        
+
         res = 1
         for i in range(1, n):
             for j in range(i):
@@ -30,4 +30,3 @@ class Solution:
                     f[i] = max(f[i], f[j] + 1)
             res = max(res, f[i])
         return res
-

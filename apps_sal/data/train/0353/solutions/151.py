@@ -7,7 +7,7 @@ class Solution:
             if nums[l] + nums[r] > target:
                 r -= 1
             else:
-                result = (result + 2 ** (r-l)) % (10**9 + 7)
+                result = (result + 2 ** (r - l)) % (10**9 + 7)
                 l += 1
-                
+
         return result

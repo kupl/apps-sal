@@ -13,5 +13,5 @@ class Solution:
                     elif roll_max[i] != 0:
                         res += die_simulator(n - 1, i, 1)
                 return res
-                
+
         return die_simulator(n, -1, 0) % (10 ** 9 + 7)

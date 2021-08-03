@@ -3,10 +3,10 @@ class Solution:
         wordsbylen = collections.defaultdict(list)
         for w in words:
             wordsbylen[len(w)].append(w)
-        
+
         # @functools.lru_cache(None)
         def get_longest_derivate(word):
-            potential = wordsbylen[len(word)+1]
+            potential = wordsbylen[len(word) + 1]
             possible = [1]
             for p in potential:
                 i, j = 0, 0
@@ -21,5 +21,5 @@ class Solution:
                 if j == len(word):
                     possible.append(1 + get_longest_derivate(p))
             return max(possible)
-        
+
         return max(map(get_longest_derivate, words))

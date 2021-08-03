@@ -2,11 +2,11 @@ class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         if len(words) <= 0:
             return 0
-        
+
         words.sort(key=len)
         numberOfWords = len(words)
         longestLens = [1] * len(words)
-        index = numberOfWords - 1    
+        index = numberOfWords - 1
         ret = 0
         while index >= 0:
             maxLen = 1
@@ -20,18 +20,14 @@ class Solution:
             if ret < maxLen:
                 ret = maxLen
             index -= 1
-        
+
         return ret
-                    
-    
-    def isPredecessor(self, word1:str, word2:str)-> bool:
+
+    def isPredecessor(self, word1: str, word2: str) -> bool:
         if len(word2) - len(word1) != 1:
             return False
         for i, ch in enumerate(word2):
-            newWord = word2[:i] + word2[i+1:]
+            newWord = word2[:i] + word2[i + 1:]
             if newWord == word1:
                 return True
         return False
-    
-        
-

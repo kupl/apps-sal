@@ -5,13 +5,13 @@ class Solution:
         print(words)
         if not words:
             return 0
-            
+
         max_chain_dp = {}
         max_len = 1
         for i in range(len(words)):
             word_len = len(words[i])
             max_chain_dp[words[i]] = 1
-            for j in range(i-1, -1, -1):
+            for j in range(i - 1, -1, -1):
                 if len(words[j]) == word_len:
                     continue
                 elif len(words[j]) + 1 == word_len:
@@ -21,8 +21,7 @@ class Solution:
                 else:
                     break
         return max_len
-                
-                
+
     def isChain(self, word1, word2):
         if len(word2) - len(word1) > 1:
             return False
@@ -41,7 +40,3 @@ class Solution:
 
         if i == len(word1) and j == len(word2):
             return True
-
-
-                
-

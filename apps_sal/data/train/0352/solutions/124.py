@@ -1,7 +1,7 @@
 # class Solution:
 #     def longestStrChain(self, words: List[str]) -> int:
-        
-        
+
+
 #         https://leetcode.com/problems/longest-string-chain/discuss/585044/C%2B%2B-Using-unordered_map-and-DP
 # DP
 
@@ -20,13 +20,12 @@
 # O(n^2*16)
 
 
-
-
-
 from collections import deque
+
 
 def getKey(item):
     return len(item)
+
 
 def isPred(word1, word2):
     word1 = list(word1)
@@ -42,29 +41,27 @@ def isPred(word1, word2):
     if (not q1) and len(q2) <= 1:
         return True
     return False
-    
+
 
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=getKey)
-        dp = [1]*len(words)
-        
+        dp = [1] * len(words)
+
         for i in range(1, len(dp)):
             for j in reversed(list(range(0, i))):
                 if len(words[j]) == len(words[i]):
                     continue
-                elif len(words[j]) + 1== len(words[i]):
+                elif len(words[j]) + 1 == len(words[i]):
                     if isPred(words[j], words[i]):
-                        dp[i] = max(dp[i], 1+ dp[j])
+                        dp[i] = max(dp[i], 1 + dp[j])
                 else:
                     break
-        
+
         return max(dp)
-        
-        
 
 
-# We can also think of thi problem as LIS problem 
+# We can also think of thi problem as LIS problem
 
 
 # 1. Sort the words according to their length
@@ -76,16 +73,11 @@ class Solution:
 # The maxm element in the dp array is the answer.
 
 
-
 # Clean implementation
 
 # https://leetcode.com/problems/longest-string-chain/discuss/376724/C%2B%2B-Simple-clean
 
 
-
-
-
 # Explaiantion:
 
 # https://leetcode.com/problems/longest-string-chain/discuss/295182/C%2B%2B-Bottom-Up-DP-solution-(with-Explanation)
-

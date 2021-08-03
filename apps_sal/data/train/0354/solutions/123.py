@@ -1,6 +1,7 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         memo = {}
+
         def die_simulator_starting_at(start: int, n: int):
             if (start, n) in memo:
                 return memo[start, n]

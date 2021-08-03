@@ -5,15 +5,15 @@ class Solution:
         queue = []
         for index, word in enumerate(words):
             mark[word] = collections.Counter(word)
-            queue.append([[word],index, len(word)])
+            queue.append([[word], index, len(word)])
         ans = 0
         while queue:
             s, index, l = queue.pop(0)
             flag = True
-            for i in range(index+1, len(words)):
-                if len(words[i]) > l+1:
+            for i in range(index + 1, len(words)):
+                if len(words[i]) > l + 1:
                     break
-                if len(words[i]) == l+1:
+                if len(words[i]) == l + 1:
                     add = True
                     sum1 = 0
                     sum2 = 0
@@ -23,11 +23,9 @@ class Solution:
                             break
                         sum1 += mark[s[-1]][key]
                         sum2 += mark[words[i]][key]
-                    if add and (sum1 == sum2 or sum2-sum1 == 1):
-                        queue.append([s+[words[i]], i, l+1])
+                    if add and (sum1 == sum2 or sum2 - sum1 == 1):
+                        queue.append([s + [words[i]], i, l + 1])
                         flag = False
             if flag:
-                ans = max(ans, len(s))       
+                ans = max(ans, len(s))
         return ans
-                        
-

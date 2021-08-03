@@ -11,7 +11,7 @@ class Solution:
                         if c + 1 <= rollMax[cur]:
                             next_dp[(cur, c + 1)] += v
             dp = next_dp
-        
+
         return sum(dp.values()) % (10 ** 9 + 7)
 #         def dfs(m, k, con):
 #             if m == 1: return 1, 1
@@ -24,6 +24,5 @@ class Solution:
 #                         res[1] = con + 1
 #                 else:
 #                     res += total
-        
-#         return sum(dfs(n, i) for i in range(6)) % (10 ** 9 + 7)
 
+#         return sum(dfs(n, i) for i in range(6)) % (10 ** 9 + 7)

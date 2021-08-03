@@ -5,7 +5,7 @@ class Solution:
         adj = {}
         for w in words:
             for i in range(len(w)):
-                s = w[0:i] + w[i+1:]
+                s = w[0:i] + w[i + 1:]
                 if s not in adj:
                     adj[s] = [w]
                 else:
@@ -13,6 +13,7 @@ class Solution:
         res = 1
         queue = []
         visited = {}
+
         def dfs(root):
             if root in visited:
                 return visited[root]
@@ -21,11 +22,10 @@ class Solution:
                 return 1
             distance = 1
             for next_ in adj[root]:
-                distance = max(distance, dfs(next_)+1)
+                distance = max(distance, dfs(next_) + 1)
             visited[root] = distance
             return distance
         for w in words:
             length = dfs(w)
             res = max(res, length)
         return res
-

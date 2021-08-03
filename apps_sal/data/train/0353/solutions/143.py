@@ -7,7 +7,7 @@ class Solution:
             if nums[i] <= target // 2:
                 left, right = i, len(nums) - 1
                 while left < right - 1:
-                    mid = (left + right) //  2
+                    mid = (left + right) // 2
                     if nums[mid] <= target - nums[i]:
                         left = mid
                     else:
@@ -17,6 +17,3 @@ class Solution:
                 elif nums[i] + nums[left] <= target:
                     result += 2**(left - i)
         return result % MOD
-                    
-                    
-

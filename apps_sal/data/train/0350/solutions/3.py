@@ -2,33 +2,34 @@ class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         # seems like you need 3 pointers, shink from either side
         ans, ctr, lb, count = 0, {}, 0, 0
-        for i, val in enumerate(A): 
-            if val not in ctr: 
+        for i, val in enumerate(A):
+            if val not in ctr:
                 ctr[val] = 0
             ctr[val] += 1
-            
-            # try to code it up first    
+
+            # try to code it up first
             while len(ctr) > K:
                 ctr[A[lb]] -= 1
-                if ctr[A[lb]] == 0: 
+                if ctr[A[lb]] == 0:
                     del ctr[A[lb]]
                 lb += 1
-    
-            if len(ctr) == K: 
+
+            if len(ctr) == K:
                 p2, count, ctr1 = lb, 0, collections.Counter()
                 while len(ctr) == K:
                     count += 1
-                    ctr[A[p2]] -=1
+                    ctr[A[p2]] -= 1
                     if ctr[A[p2]] == 0:
                         del ctr[A[p2]]
                     ctr1[A[p2]] += 1
                     p2 += 1
                 ans += count
-                for k, v in ctr1.items(): 
+                for k, v in ctr1.items():
                     # recover step, kind of lame
                     ctr[k] = ctr.get(k, 0) + v
         return ans
-                
+
+
 class Window:
     def __init__(self):
         self.count = collections.Counter()
@@ -43,6 +44,7 @@ class Window:
         self.count[x] -= 1
         if self.count[x] == 0:
             self.nonzero -= 1
+
 
 class Solution(object):
     def subarraysWithKDistinct(self, A, K):

@@ -3,11 +3,11 @@ class Solution:
         nums.sort()
         l, r = 0, len(nums) - 1
         res = 0
-        mod = (10**9+7)
+        mod = (10**9 + 7)
         while l <= r:
             if nums[l] + nums[r] > target:
                 r -= 1
             else:
                 res += 2 ** (r - l) % mod
                 l += 1
-        return res % (10**9+7)
+        return res % (10**9 + 7)

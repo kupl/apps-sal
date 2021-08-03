@@ -1,7 +1,6 @@
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-        
-        
+
         def help(k):
             res = 0
             left = 0
@@ -15,5 +14,5 @@ class Solution:
                     left += 1
                 res += i - left
             return res
-        
+
         return help(K) - help(K - 1)

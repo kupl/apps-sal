@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         '''
@@ -10,13 +11,14 @@ class Solution:
         i j
         '''
         N = len(A)
-        
+
         def atMost(k):
-            if k == 0: return 0
-            
+            if k == 0:
+                return 0
+
             ret = i = j = 0
             cnt = Counter()
-            
+
             while i < N:
                 x = A[i]
                 while j < N and (len(cnt) < k or A[j] in cnt):
@@ -24,11 +26,12 @@ class Solution:
                     j += 1
 
                 ret += j - i
-                
+
                 cnt[x] -= 1
-                if cnt[x] == 0: del cnt[x]
+                if cnt[x] == 0:
+                    del cnt[x]
                 i += 1
-            
+
             return ret
-                
-        return atMost(K) - atMost(K-1)
+
+        return atMost(K) - atMost(K - 1)

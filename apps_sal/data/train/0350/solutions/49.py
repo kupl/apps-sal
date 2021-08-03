@@ -9,14 +9,14 @@ class Window:
         self._counter = {}
         self._distinct_num = 0
 
-    def add(self,num):
+    def add(self, num):
         if num in self._counter:
             self._counter[num] += 1
         else:
             self._distinct_num += 1
             self._counter[num] = 1
 
-    def remove(self,num):
+    def remove(self, num):
         self._counter[num] -= 1
         if self._counter[num] == 0:
             self._distinct_num -= 1
@@ -25,7 +25,6 @@ class Window:
     @property
     def nums(self):
         return self._distinct_num
-
 
 
 class Solution:
@@ -54,6 +53,5 @@ class Solution:
             if w1.nums == K:
                 assert w2.nums == K - 1
 
-            result += (y-x)
+            result += (y - x)
         return result
-

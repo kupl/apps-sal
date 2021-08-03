@@ -11,9 +11,9 @@ class Solution:
             dist += 1
         print(dist, dips)
         dist = n
-        
+
         minimum = 0
-        for i in range(n-1, -1, -1):
+        for i in range(n - 1, -1, -1):
             if seats[i] == 1:
                 dist = 0
             else:
@@ -21,5 +21,5 @@ class Solution:
                     dips[i] = dist
                 if dips[i] > minimum:
                     minimum = max(minimum, dips[i])
-            dist += 1   
+            dist += 1
         return minimum

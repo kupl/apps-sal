@@ -5,22 +5,22 @@ class Solution:
         '''
         words = set(words)
         dp = {}
-        
+
         def chainEndingAt(word):
             if word not in words:
                 return 0
             # if memo
             chain_len = 1
             for i in range(len(word)):
-                pred = word[:i] + word[i+1:]
+                pred = word[:i] + word[i + 1:]
                 chain_len = max(chain_len, chainEndingAt(pred) + 1)
             return chain_len
-        
+
         ans = 0
         for word in words:
             ans = max(ans, chainEndingAt(word))
         return ans
-        
+
         '''
         DP
         dp function:
@@ -32,4 +32,3 @@ class Solution:
         #     for i in range(len(w)):
         #         dp[w] = max(dp[w], dp.get(w[:i] + w[i+1:],0) + 1)
         # return max(dp.values())
-

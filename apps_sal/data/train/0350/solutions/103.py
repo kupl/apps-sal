@@ -16,7 +16,7 @@ class Solution:
                 i += 1
             res += j - i + 1
         return res
-        
+
 #         count = collections.Counter()
 #         res = i = 0
 #         for j in range(len(A)):
@@ -28,4 +28,3 @@ class Solution:
 #                 i += 1
 #             res += j - i + 1
 #         return res
-

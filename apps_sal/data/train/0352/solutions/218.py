@@ -9,12 +9,12 @@ class Solution:
                     count[i] = count[j] + 1
         # print(count)
         return max(count)
-    
+
     def predecessor(self, word1, word2):
         if len(word2) != len(word1) + 1:
             return False
         for i in range(len(word2)):
-            subword = word2[:i] + word2[i+1:]
+            subword = word2[:i] + word2[i + 1:]
             if subword == word1:
                 return True
         return False

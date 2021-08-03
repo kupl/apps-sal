@@ -11,7 +11,7 @@ class Solution:
                 ans += self.fast_pow_mod(2, j - i, mod)
                 i += 1
         return ans % mod
-    
+
     def fast_pow_mod(self, a, b, m):
         ans = 1
         while b != 0:
@@ -20,5 +20,3 @@ class Solution:
             b >>= 1
             a = (a * a) % m
         return ans
-
-

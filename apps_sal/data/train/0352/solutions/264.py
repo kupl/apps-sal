@@ -1,7 +1,7 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         explored = set()
-        stack = [(word, 1) for word in sorted(words, key = len, reverse = True)]
+        stack = [(word, 1) for word in sorted(words, key=len, reverse=True)]
         words = set(words)
         best = 1
         while stack:
@@ -12,4 +12,3 @@ class Solution:
                     stack.append((candidate_word, chain_length + 1))
                     explored.add(candidate_word)
         return best
-
