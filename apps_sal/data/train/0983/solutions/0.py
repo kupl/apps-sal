@@ -5,15 +5,15 @@ s = sys.stdin.readline().strip()
 
 alph = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-arr = [0]*26
+arr = [0] * 26
 pref = []
 
 for i in range(len(s)):
-	for j in range(26):
-		if alph[j] == s[i]:
-			arr[j] += 1
-			break
-	pref += [arr[:]]
+    for j in range(26):
+        if alph[j] == s[i]:
+            arr[j] += 1
+            break
+    pref += [arr[:]]
 
 # for x in pref:
 # 	print(x)
@@ -21,40 +21,38 @@ for i in range(len(s)):
 q = int(sys.stdin.readline().strip())
 
 for _ in range(q):
-	r, c = sys.stdin.readline().strip().split()
+    r, c = sys.stdin.readline().strip().split()
 
-	for i in range(26):
-		if alph[i] == c:
-			ind = i
-			break
+    for i in range(26):
+        if alph[i] == c:
+            ind = i
+            break
 
-	r = int(r)
+    r = int(r)
 
-	prev = ((r-1)**2 + r-1)//2
+    prev = ((r - 1)**2 + r - 1) // 2
 
-	done = prev%len(s)
+    done = prev % len(s)
 
-	ans = 0
-	rem = (len(s) - done)%len(s)
+    ans = 0
+    rem = (len(s) - done) % len(s)
 
-	if r <= rem:
-		print(pref[done+r-1][ind] - pref[done-1][ind])
-		continue
+    if r <= rem:
+        print(pref[done + r - 1][ind] - pref[done - 1][ind])
+        continue
 
-	if rem != 0:
-		ans += pref[-1][ind] - pref[done-1][ind]
-		r -= rem
+    if rem != 0:
+        ans += pref[-1][ind] - pref[done - 1][ind]
+        r -= rem
 
-	ans += pref[-1][ind] * (r//len(s))
-	r %= len(s)
+    ans += pref[-1][ind] * (r // len(s))
+    r %= len(s)
 
-	# print("AA", ans, r)
+    # print("AA", ans, r)
 
-	if r != 0:
-		ans += pref[r-1][ind]
+    if r != 0:
+        ans += pref[r - 1][ind]
 
-	print(ans)
+    print(ans)
 
-
-	# print(rem, done, prev)
-
+    # print(rem, done, prev)
