@@ -24,4 +24,3 @@ for i in range(H):
             count += C[A[i][j]][1]
 
 print(count)
-

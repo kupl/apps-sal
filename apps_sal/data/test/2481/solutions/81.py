@@ -1,10 +1,12 @@
 import sys
 
+
 def warshall_floyd():
     for k in range(10):
         for i in range(10):
             for j in range(10):
                 C[i][j] = min(C[i][j], C[i][k] + C[k][j])
+
 
 H, W = list(map(int, input().split()))
 inf = float("inf")
@@ -18,4 +20,3 @@ for row in A:
             res += C[col][1]
 
 print(res)
-

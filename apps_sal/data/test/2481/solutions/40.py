@@ -1,6 +1,6 @@
 h, w = list(map(int, input().split()))
 c = [list(map(int, input().split())) for _ in range(10)]
-num = [0]*10
+num = [0] * 10
 for _ in range(h):
     a = list(map(int, input().split()))
     for i in a:
@@ -8,11 +8,10 @@ for _ in range(h):
             continue
         num[i] += 1
 #a = [list(map(int, input().split())) for _ in range(h)]
-#print(num)
+# print(num)
 for i in range(10):
     for j in range(10):
         for k in range(10):
-                c[j][k] = min(c[j][k], c[j][i]+c[i][k])
-#print(c)
-print((sum(num[x]*c[x][1] for x in range(10))))
-
+            c[j][k] = min(c[j][k], c[j][i] + c[i][k])
+# print(c)
+print((sum(num[x] * c[x][1] for x in range(10))))

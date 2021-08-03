@@ -19,7 +19,7 @@ if n == 12:
                 cnt -= 1
             if cnt < ans:
                 ans = cnt
-                ans1 = h1 + ':' + m1   
+                ans1 = h1 + ':' + m1
     print(ans1)
 else:
     h1, m1 = '', ''
@@ -38,5 +38,5 @@ else:
                 cnt -= 1
             if cnt < ans:
                 ans = cnt
-                ans1 = h1 + ':' + m1  
+                ans1 = h1 + ':' + m1
     print(ans1)

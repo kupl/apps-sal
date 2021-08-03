@@ -12,7 +12,7 @@ def Wall():
     for i in range(10):
         for j in range(10):
             for k in range(10):
-                wf[j][k] = min(wf[j][i]+wf[i][k], wf[j][k])
+                wf[j][k] = min(wf[j][i] + wf[i][k], wf[j][k])
     ans = 0
     for _ in range(h):
         a = list(map(int, input().split()))
@@ -22,8 +22,9 @@ def Wall():
             ans += wf[v][1]
     print(ans)
 
+
 def __starting_point():
     Wall()
-    
+
 
 __starting_point()

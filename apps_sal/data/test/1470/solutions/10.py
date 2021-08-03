@@ -9,4 +9,3 @@ if 0 < x % 11 <= 6:
 elif x % 11 > 6:
     ans += 2
 print(ans)
-

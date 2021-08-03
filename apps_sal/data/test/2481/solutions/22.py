@@ -14,7 +14,7 @@ for i in range(H):
 for i in range(10):  # 経由する頂点
     for j in range(10):  # 始点
         for k in range(10):  # 終点
-            C[j][k] = min(C[j][k], C[j][i]+C[i][k])
+            C[j][k] = min(C[j][k], C[j][i] + C[i][k])
 
 ans = 0
 for h in range(H):
@@ -24,4 +24,3 @@ for h in range(H):
 
         ans += C[A[h][w]][1]
 print(ans)
-

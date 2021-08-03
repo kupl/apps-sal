@@ -1,5 +1,6 @@
 def main():
     from sys import stdin
+
     def input():
         return stdin.readline().strip()
 
@@ -23,5 +24,6 @@ def main():
                 ans += c[j][1]
 
     print(ans)
+
 
 main()

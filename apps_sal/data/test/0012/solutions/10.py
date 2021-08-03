@@ -17,4 +17,3 @@ for left in range(n):
         assert right >= left
         nGCur -= 1
 print(result)
-

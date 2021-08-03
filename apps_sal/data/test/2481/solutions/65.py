@@ -19,6 +19,3 @@ for i in range(H):
 
 
 print((int(ans)))
-
-
-

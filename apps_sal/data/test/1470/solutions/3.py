@@ -17,4 +17,3 @@ else:
     ans += 2
 
 print(ans)
-

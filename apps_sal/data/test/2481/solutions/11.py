@@ -28,5 +28,3 @@ for k, v in list(count.items()):
         continue
     ans += v * dists[k][1]
 print(ans)
-
-

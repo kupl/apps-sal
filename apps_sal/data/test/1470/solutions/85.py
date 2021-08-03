@@ -9,4 +9,3 @@ elif x % 11 != 0:
     ans += 1
 
 print(ans)
-

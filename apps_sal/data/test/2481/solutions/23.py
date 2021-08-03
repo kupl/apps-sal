@@ -1,6 +1,6 @@
-H,W = map(int,input().split())
-C = [list(map(int,input().split())) for i in range(10)]
-A = [list(map(int,input().split())) for i in range(H)]
+H, W = map(int, input().split())
+C = [list(map(int, input().split())) for i in range(10)]
+A = [list(map(int, input().split())) for i in range(H)]
 
 for k in range(10):
     for i in range(10):
@@ -9,6 +9,7 @@ for k in range(10):
 ans = 0
 for row in A:
     for a in row:
-        if a == -1: continue
+        if a == -1:
+            continue
         ans += C[a][1]
 print(ans)

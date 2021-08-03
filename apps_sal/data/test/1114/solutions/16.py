@@ -23,4 +23,3 @@ elif ans == 1:
     print('Ambiguity')
 else:
     print('Impossible')
-

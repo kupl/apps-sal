@@ -28,6 +28,6 @@ for _ in range(h):
 
 cnt = 0
 for i in range(10):
-    cnt += cnts[i]*visited[i]
+    cnt += cnts[i] * visited[i]
 
 print(cnt)

@@ -1,10 +1,12 @@
 from heapq import heappush, heappop
+
+
 def main():
-    H, W = list(map( int, input().split()))
-    C = [ list( map( int, input().split())) for _ in range(10)]
-    A = [ list( map( int, input().split())) for _ in range(H)]
-    h = [(0,1)]
-    V = [-1]*10
+    H, W = list(map(int, input().split()))
+    C = [list(map(int, input().split())) for _ in range(10)]
+    A = [list(map(int, input().split())) for _ in range(H)]
+    h = [(0, 1)]
+    V = [-1] * 10
     while h:
         # print(h)
         m, n = heappop(h)
@@ -13,7 +15,7 @@ def main():
         V[n] = m
         for i in range(10):
             if V[i] == -1:
-                heappush(h, (m+C[i][n],i))
+                heappush(h, (m + C[i][n], i))
     # print(V)
     ans = 0
     for a in A:
@@ -21,8 +23,10 @@ def main():
             if b > -1:
                 ans += V[b]
     print(ans)
-    
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

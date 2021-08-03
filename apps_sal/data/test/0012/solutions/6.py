@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n = ii()
 s = input().strip()
@@ -36,4 +41,3 @@ else:
             continue
         ans = max(ans, e - s + e2 - s2 + extra)
 print(ans)
-

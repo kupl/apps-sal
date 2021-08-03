@@ -20,9 +20,9 @@ def best(h, n, x):
             best = si
     return best
 
+
 n = int(input())
 s = input()
 h = s[0:2]
 m = s[3:5]
 print(best(h, n, 'h'), best(m, 60, 'm'), sep=':')
-

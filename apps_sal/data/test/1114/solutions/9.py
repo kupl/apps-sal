@@ -23,7 +23,7 @@ while i < m and j < n:
             flag = 2
     else:
         j += 1
-if i < m and flag != 1 :
+if i < m and flag != 1:
     print('Impossible')
 elif flag == 2:
     print('Ambiguity')

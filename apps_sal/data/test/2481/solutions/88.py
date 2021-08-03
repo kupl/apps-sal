@@ -14,4 +14,3 @@ ans = 0
 for i in range(h):
     ans += sum([g[x][1] for x in [x for x in map(int, input().split()) if x != -1]])
 print(ans)
-

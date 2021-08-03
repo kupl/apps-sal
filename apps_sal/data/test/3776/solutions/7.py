@@ -24,4 +24,3 @@ for h in hr_range:
             best_time = '{:02d}:{:02d}'.format(h, m)
 
 print(best_time)
-

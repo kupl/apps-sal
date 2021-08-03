@@ -1,4 +1,17 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time, copy,bisect
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import bisect
 from operator import itemgetter
 from heapq import heappush, heappop
 import numpy as np
@@ -11,11 +24,12 @@ mod = 10**9 + 7
 
 stdin = sys.stdin
 
-ni = lambda: int(ns())
-nf = lambda: float(ns())
-na = lambda: list(map(int, stdin.readline().split()))
-nb = lambda: list(map(float, stdin.readline().split()))
-ns = lambda: stdin.readline().rstrip()  # ignore trailing spaces
+
+def ni(): return int(ns())
+def nf(): return float(ns())
+def na(): return list(map(int, stdin.readline().split()))
+def nb(): return list(map(float, stdin.readline().split()))
+def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
 
 
 H, W = na()
@@ -29,8 +43,6 @@ ans = 0
 for y in range(H):
     for x in range(W):
         if A[y][x] != -1:
-            #print(ans)
+            # print(ans)
             ans += d[A[y][x]][1]
 print((int(ans)))
-
-

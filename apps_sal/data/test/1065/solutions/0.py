@@ -5,12 +5,11 @@ for d in range(1, D + 1):
     top = M + 1
     while (top > bot + 1):
         mid = (bot + top) // 2
-        cur = (d - 1) * mid * k;
-        cur += mid;
+        cur = (d - 1) * mid * k
+        cur += mid
         if (cur > n):
-            top = mid;
+            top = mid
         else:
-            bot = mid;
+            bot = mid
     ans = max(ans, bot * d)
-print(ans);
-
+print(ans)

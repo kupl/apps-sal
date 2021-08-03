@@ -12,6 +12,7 @@ a = [list(map(int, input().split())) for i in range(h)]
 ans = 0
 for i in range(h):
     for j in range(w):
-        if a[i][j] == -1: continue
+        if a[i][j] == -1:
+            continue
         ans += c[a[i][j]][1]
 print(ans)

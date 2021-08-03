@@ -12,7 +12,7 @@ def main():
 
     print((
         sum(
-            c[a][1] for column in A for a in column if a >= 0 
+            c[a][1] for column in A for a in column if a >= 0
         )
     ))
 

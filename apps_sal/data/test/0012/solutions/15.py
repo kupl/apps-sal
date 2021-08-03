@@ -31,9 +31,9 @@ if freq['G'] > final:
     final += 1
 
 for i in range(len(ans) - 2):
-    if ans[i][1] == 'G' and ans[i+1][1] == 'S' and ans[i+1][0] == 1 and ans[i+2][1] == 'G':
-        if freq['G'] > ans[i][0] + ans[i+2][0]:
-            final = max(final, ans[i][0] + ans[i+2][0] + 1)
+    if ans[i][1] == 'G' and ans[i + 1][1] == 'S' and ans[i + 1][0] == 1 and ans[i + 2][1] == 'G':
+        if freq['G'] > ans[i][0] + ans[i + 2][0]:
+            final = max(final, ans[i][0] + ans[i + 2][0] + 1)
         else:
-            final = max(final, ans[i][0] + ans[i+2][0])
+            final = max(final, ans[i][0] + ans[i + 2][0])
 print(final)

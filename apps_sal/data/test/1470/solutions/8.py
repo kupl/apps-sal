@@ -7,5 +7,6 @@ def main():
     elif n % 11 <= 10 and n % 11 > 6:
         ans += 2
     print(ans)
-main()
 
+
+main()

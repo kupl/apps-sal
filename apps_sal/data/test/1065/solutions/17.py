@@ -13,4 +13,3 @@ for i in range(D):
     mm = max(m * (i + 1), mm)
 
 print(mm)
-

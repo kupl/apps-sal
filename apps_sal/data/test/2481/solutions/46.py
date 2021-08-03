@@ -33,7 +33,7 @@ C = []
 for i in range(10):
     C.append(zz())
 A = []
-num_lis = [0]*10
+num_lis = [0] * 10
 for i in range(H):
     a = zz()
     for a_ in a:
@@ -48,6 +48,5 @@ for i in range(H):
 a = floyd_warshall(C)
 ans = 0
 for i, num in enumerate(num_lis):
-    ans += a[i, 1]*num
+    ans += a[i, 1] * num
 print((int(ans)))
-

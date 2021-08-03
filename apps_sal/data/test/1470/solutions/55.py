@@ -6,4 +6,3 @@ if rem > 6:
 elif rem > 0:
     ans += 1
 print(ans)
-

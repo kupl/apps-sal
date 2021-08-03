@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def solve(n, m, f, b):
     d1 = Counter(f)
     d2 = Counter(b)
@@ -18,10 +19,11 @@ def solve(n, m, f, b):
     if flag2:
         print('Ambiguity')
         return
-    d = {k : pos for pos, k in enumerate(f, start = 1)}
+    d = {k: pos for pos, k in enumerate(f, start=1)}
     print('Possible')
     for value in b:
         print(d[value], end=' ')
+
 
 n, m = map(int, input().split())
 
@@ -29,4 +31,3 @@ f = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
 solve(n, m, f, b)
-

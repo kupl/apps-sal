@@ -9,4 +9,3 @@ for i in range(1, d + 1):
     # print(i, ans_here)
     ans = max(ans, ans_here * i)
 print(ans)
-

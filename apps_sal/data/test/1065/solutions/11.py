@@ -9,4 +9,3 @@ for i in range(1, d + 1):
         continue
     res = max(res, i * x)
 print(int(res))
-

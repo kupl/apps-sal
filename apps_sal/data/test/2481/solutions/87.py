@@ -23,5 +23,3 @@ for k, v in list(num_counter.items()):
     ans += nei_graph[k][1] * v
 
 print((int(ans)))
-
-
