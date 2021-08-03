@@ -3,16 +3,16 @@ class Solution:
         result = 0
         zero_allowed = K
         left = 0
-        
+
         for right, x in enumerate(A):
-            if x==0:
+            if x == 0:
                 zero_allowed -= 1
-            if zero_allowed>=0 and (right - left + 1) > result:
+            if zero_allowed >= 0 and (right - left + 1) > result:
                 result = right - left + 1
-            
+
             while zero_allowed < 0 and (right - left + 1) > result:
-                if A[left]==0:
+                if A[left] == 0:
                     zero_allowed += 1
                 left += 1
-        
+
         return result

@@ -6,16 +6,16 @@ class Solution:
         pows = [1] * len(S)
         invPows = [1] * len(S)
         for i in range(1, len(S)):
-            pows[i] = pows[i-1] * p % m
+            pows[i] = pows[i - 1] * p % m
             invPows[i] = pow(pows[i], -1, m)
 
         h = [0] * (len(S) + 1)
         for i in range(len(S)):
-            h[i+1] = (h[i] + (ord(S[i]) - ord('a') + 1) * pows[i]) % m
+            h[i + 1] = (h[i] + (ord(S[i]) - ord('a') + 1) * pows[i]) % m
 
         def hasDup(S, sublen):
             seen = set()
-            for i in range(len(S)- sublen + 1):
+            for i in range(len(S) - sublen + 1):
                 if (hs := (h[i + sublen] - h[i]) * invPows[i] % m) in seen:
                     return (i, sublen)
                 seen.add(hs)
@@ -30,4 +30,4 @@ class Solution:
                 ans = s
             else:
                 hi = mid
-        return S[ans[0]:ans[0]+ans[1]] if ans else ''
+        return S[ans[0]:ans[0] + ans[1]] if ans else ''

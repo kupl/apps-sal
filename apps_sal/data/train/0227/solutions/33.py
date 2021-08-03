@@ -12,5 +12,4 @@ class Solution:
                     zeroes -= 1
                 start += 1
             longest = max(longest, end - start)
-        return longest 
-
+        return longest

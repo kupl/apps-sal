@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
         A.sort()
@@ -7,9 +8,9 @@ class Solution:
         for a in A:
             if a <= 0:
                 if 2 * a in s:
-                    s[2*a] -= 1
-                    if not s[2*a]:
-                        del s[2*a]
+                    s[2 * a] -= 1
+                    if not s[2 * a]:
+                        del s[2 * a]
                 else:
                     s[a] += 1
             else:

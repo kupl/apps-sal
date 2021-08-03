@@ -1,6 +1,7 @@
 from collections import Counter
 from typing import List
 
+
 class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
         d = dict()
@@ -17,7 +18,7 @@ class Solution:
                 d[y].update([x])
             else:
                 d[y] = Counter([x])
-        
+
         if num_zeros % 2:
             return False
 

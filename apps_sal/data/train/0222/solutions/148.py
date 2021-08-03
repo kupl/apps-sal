@@ -1,7 +1,7 @@
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         N = len(A)
-        indexes = {x:i for i, x in enumerate(A)}
+        indexes = {x: i for i, x in enumerate(A)}
         longest = defaultdict(lambda: 1)
         for i in range(1, N):
             for j in range(i):
@@ -10,4 +10,3 @@ class Solution:
         # print(longest)
         longest = max(longest.values())
         return longest if longest >= 3 else 0
-

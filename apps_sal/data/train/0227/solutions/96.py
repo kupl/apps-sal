@@ -5,7 +5,7 @@ class Solution:
         max_count = K
 
         while (l < len(A) and r < len(A)):
-            
+
             while(r < len(A)):
                 if A[r] == 1:
                     r += 1
@@ -14,9 +14,9 @@ class Solution:
                     K -= 1
                 else:
                     break
-            if r - l + 1> max_count:
+            if r - l + 1 > max_count:
                 max_count = r - l
-            print(l,r,max_count)
+            print(l, r, max_count)
             if A[l] == 0:
                 K += 1
             l += 1

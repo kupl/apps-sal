@@ -3,18 +3,18 @@ class Solution:
         h = 0
         for i in range(L):
             h = (h * a + nums[i]) % modulus
-        
+
         seen = {h}
-        
+
         aL = pow(a, L, modulus)
-        
-        for start in range(1, n-L + 1):
-            h = (h * a - nums[start - 1]* aL + nums[start + L - 1]) % modulus
+
+        for start in range(1, n - L + 1):
+            h = (h * a - nums[start - 1] * aL + nums[start + L - 1]) % modulus
             if h in seen:
                 return start
             seen.add(h)
         return -1
-    
+
     def longestDupSubstring(self, S: str) -> str:
         n = len(S)
         nums = [ord(S[i]) - ord('a') for i in range(n)]
@@ -27,6 +27,5 @@ class Solution:
                 left = L + 1
             else:
                 right = L - 1
-        start = self.search(left -1, a, modulus, n, nums)
+        start = self.search(left - 1, a, modulus, n, nums)
         return S[start: start + left - 1]
-

@@ -1,6 +1,6 @@
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
-        
+
         # # straight forward N^2log(N)
         # n = len(A)
         # s = set()
@@ -21,24 +21,20 @@ class Solution:
         #             f1 = tmp
         #         res = max(res,ll)
         # return res
-        
+
         # DP N^2 time N^2 space
         n = len(A)
         d = {}
         for i in range(n):
             d[A[i]] = i
-        dp = [[0]*n for i in range(n)]
+        dp = [[0] * n for i in range(n)]
         res = 0
         for i in range(n):
-            for j in range(i+1,n):
-                tar = A[i]+A[j]
+            for j in range(i + 1, n):
+                tar = A[i] + A[j]
                 if tar in d:
                     k = d[tar]
-                    dp[j][k] = max(dp[j][k], dp[i][j]+1, 3)
+                    dp[j][k] = max(dp[j][k], dp[i][j] + 1, 3)
             res = max(res, max(dp[i]))
             # print(res,i,j,dp)
         return res
-                    
-                    
-                
-

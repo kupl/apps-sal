@@ -6,4 +6,3 @@ class Solution:
                 return False
             c[2 * x] -= c[x]
         return True
-

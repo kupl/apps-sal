@@ -12,9 +12,9 @@ class Solution:
                 if target in loc and loc[target] < j:
                     dp[j][k] = dp[loc[target]][j] + 1
                     longest = max(longest, dp[j][k])
-            
+
         return longest
-    
+
         '''dp = {}
         dp[(A[1], A[0] + A[1])] = 2
         for i in range(2, len(A)):
@@ -27,6 +27,3 @@ class Solution:
         longest = max(dp.values())
         
         return longest if longest > 2 else 0'''
-        
-        
-

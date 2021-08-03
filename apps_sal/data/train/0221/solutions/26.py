@@ -1,12 +1,12 @@
 class Solution:
     def longestDupSubstring(self, S: str) -> str:
-        
+
         mod = 2 ** 31 - 1
         base = 26
-        
+
         def get_ord(char: str):
             return ord(char) - ord('a')
-        
+
         def find_duplicate(length) -> str:
             hashes = {}
             h = 1
@@ -16,11 +16,11 @@ class Solution:
             cur = 0
             for i in range(length):
                 cur = (cur * base + get_ord(S[i])) % mod
-            
+
             hashes[cur] = [0]
 
             for i in range(1, len(S) - length + 1):
-                cur = ((cur - (get_ord(S[i-1]) * h)) * base + get_ord(S[i + length - 1])) % mod
+                cur = ((cur - (get_ord(S[i - 1]) * h)) * base + get_ord(S[i + length - 1])) % mod
                 if cur in hashes:
                     for idx in hashes[cur]:
                         if S[idx: idx + length] == S[i: i + length]:
@@ -29,8 +29,7 @@ class Solution:
                 else:
                     hashes[cur] = [i]
             return ''
-        
-        
+
         def helper(start, end):
             res = ''
             while start < end:

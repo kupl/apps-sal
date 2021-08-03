@@ -1,6 +1,6 @@
 class Solution:
     def longestOnes(self, A: List[int], K: int) -> int:
-        
+
         left = 0
         for right in range(len(A)):
             # If we included a zero in the window we reduce the value of K.
@@ -12,5 +12,5 @@ class Solution:
                 # If the left element to be thrown out is zero we increase K.
                 K += 1 - A[left]
                 left += 1
-        print(len(A),right)
+        print(len(A), right)
         return right - left + 1

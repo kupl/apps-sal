@@ -1,15 +1,12 @@
 class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
         count = collections.Counter(A)
-        for x in sorted(A, key = abs):
+        for x in sorted(A, key=abs):
             if count[x] == 0:
                 continue
-            if count[x*2] == 0:
+            if count[x * 2] == 0:
                 return False
             count[x] -= 1
-            count[2*x] -= 1
-            
-        return True
-    
-    
+            count[2 * x] -= 1
 
+        return True

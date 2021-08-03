@@ -2,7 +2,7 @@ class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         idxs = {x: i for i, x in enumerate(A)}
         longest = defaultdict(lambda: 2)
-        
+
         res = 0
         for k, val in enumerate(A):
             for j in range(k):

@@ -2,7 +2,7 @@ class Solution:
     def longestOnes(self, A: List[int], K: int) -> int:
         left = 0
         for right in range(len(A)):
-            
+
             # If we included a zero in the window we reduce the value of K.
             # Since K is the maximum zeros allowed in a window.
             K -= (1 - A[right])

@@ -7,5 +7,3 @@ class Solution:
                 K += 1 - A[i]
                 i += 1
         return j - i + 1
-            
-

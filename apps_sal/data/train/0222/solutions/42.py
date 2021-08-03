@@ -4,7 +4,7 @@ class Solution:
         max_ = 0
         dp = [[0 for i in range(n)] for j in range(n)]
         for i in range(2, n):
-            l = 0 
+            l = 0
             r = i - 1
             while l < r:
                 sum_ = A[l] + A[r]

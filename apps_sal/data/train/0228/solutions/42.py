@@ -7,8 +7,7 @@ class Solution:
         for j in range(len(s)):
             if s[j] in vowels:
                 count += 1
-            if j >= k and s[j-k] in vowels:
+            if j >= k and s[j - k] in vowels:
                 count -= 1
             maxCount = max(maxCount, count)
         return maxCount
-

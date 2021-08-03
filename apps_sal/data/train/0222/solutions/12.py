@@ -5,8 +5,9 @@ class Solution:
 
         ans = 0
         for k, c in enumerate(A):
-            for j in range(k-1, -1, -1):
-                if A[j] <= c//2: break
+            for j in range(k - 1, -1, -1):
+                if A[j] <= c // 2:
+                    break
                 i = index.get(c - A[j], None)
                 if i is not None:
                     cand = longest[A[j], c] = longest[A[i], A[j]] + 1

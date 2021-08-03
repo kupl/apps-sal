@@ -1,8 +1,9 @@
 from functools import reduce
+
+
 class Solution:
     def longestDupSubstring(self, S: str) -> str:
-        
-        
+
         A = [ord(c) - ord('a') for c in S]
         mod = 2**63 - 1
 
@@ -13,7 +14,8 @@ class Solution:
             seen = {cur}
             for i in range(L, len(S)):
                 cur = (cur * 26 + A[i] - A[i - L] * p) % mod
-                if cur in seen: return i - L + 1
+                if cur in seen:
+                    return i - L + 1
                 seen.add(cur)
         res, lo, hi = 0, 0, len(S)
         while lo < hi:
@@ -25,9 +27,9 @@ class Solution:
             else:
                 hi = mi - 1
         return S[res:res + lo]
-        
+
 #         s = [ord(num) - ord(\"a\") for num in S]
-        
+
 #         mod = 10 ** 9 + 7
 #         def check(l):
 #             cur = 0
@@ -47,10 +49,8 @@ class Solution:
 #                     else:
 #                         seen.add(cur)
 #             return 0
-                
-                
-                
-        
+
+
 #         l = 1
 #         r = len(S) - 1
 #         res = -1
@@ -58,12 +58,8 @@ class Solution:
 #             m = (l+r) // 2
 #             pos = check(m)
 #             if pos:
-#                 l = m 
+#                 l = m
 #                 res = pos
 #             else:
 #                 r = m - 1
 #         return S[res:res + l]
-            
-        
-            
-

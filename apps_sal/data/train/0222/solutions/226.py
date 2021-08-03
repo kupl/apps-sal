@@ -1,9 +1,10 @@
 from collections import defaultdict
 
+
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         # Brute Force with Set
-        # Time  complexity: O(N^2 x logM), where N is the length of A, 
+        # Time  complexity: O(N^2 x logM), where N is the length of A,
         # and M is the maximum value of A.
         # Space complexity: O(N)
         # S, ans = set(A), 0
@@ -15,7 +16,6 @@ class Solution:
         #             l += 1
         #         ans = max(ans, l)
         # return ans if ans >= 3 else 0
-
 
         # Dynamic Programming
         # Time  complexity: O(N^2)
@@ -32,4 +32,3 @@ class Solution:
                     ans = max(ans, cand)
 
         return ans if ans >= 3 else 0
-

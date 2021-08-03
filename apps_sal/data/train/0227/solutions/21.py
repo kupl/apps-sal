@@ -12,5 +12,3 @@ class Solution:
                 j += 1
             out = max(out, i - j + 1)
         return out
-            
-

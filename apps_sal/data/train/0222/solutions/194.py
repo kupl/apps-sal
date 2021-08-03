@@ -4,9 +4,9 @@ class Solution:
         d = defaultdict(lambda: 2)
         ans = 0
         for k, n in enumerate(A):
-            for j in range(k-1, 0, -1):
+            for j in range(k - 1, 0, -1):
                 m = n - A[j]
-                if m  not in indices:
+                if m not in indices:
                     continue
                 i = indices[m]
                 if i >= j:

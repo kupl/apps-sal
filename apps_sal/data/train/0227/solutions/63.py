@@ -13,7 +13,7 @@ class Solution:
                     K -= 1
                     count_1 += 1
                 elif K == 0:
-                    res = max(res,count_1)
+                    res = max(res, count_1)
                     first_0 = zero_inx.pop(0)
                     count_1 -= (first_0 - zero_before - 1)
                     zero_before = first_0

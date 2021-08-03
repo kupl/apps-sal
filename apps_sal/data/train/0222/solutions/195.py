@@ -4,7 +4,7 @@ class Solution:
         values = set(arr)
 
         for i in range(len(arr)):
-            for j in range(i-1, -1, -1):
+            for j in range(i - 1, -1, -1):
                 a = arr[i] - arr[j]
                 if a >= arr[j]:
                     break

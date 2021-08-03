@@ -14,6 +14,7 @@ def window_sums(bits, width):
             pointer = (pointer + 1) % width
             yield total
 
+
 class Solution:
     def maxVowels(self, s: str, k: int) -> int:
         bits = (ch in 'aeiou' for ch in s)

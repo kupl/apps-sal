@@ -7,7 +7,6 @@ class Solution:
 
         longest_ones = 0
 
-
         longest_yet = 0
         for i in range(len(A)):
             if A[i] == 1:
@@ -20,7 +19,6 @@ class Solution:
 
         if K >= len(zeros_indices):
             return len(A)
-
 
         # [0, 1, 4, 5, 9, 12, 13, 14]
         zero_order = -1
@@ -35,7 +33,7 @@ class Solution:
                     nxt = len(zeros_indices) - 1
                     right_cons_ones = zeros_indices[nxt] - zeros_indices[zero_order]
                     right_cons_ones += len(A) - zeros_indices[nxt]
-                if not zero_order == 0:        
-                    left_cons_ones = zeros_indices[zero_order] - zeros_indices[zero_order-1] - 1
+                if not zero_order == 0:
+                    left_cons_ones = zeros_indices[zero_order] - zeros_indices[zero_order - 1] - 1
                 longest_ones = max(longest_ones, right_cons_ones + left_cons_ones)
         return longest_ones

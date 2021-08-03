@@ -1,7 +1,10 @@
 import numpy as np
+
+
 class Solution:
     graph = {}
     count = {}
+
     def numSquarefulPerms(self, A: List[int]) -> int:
         self.graph = {}
         self.count = {}
@@ -11,7 +14,7 @@ class Solution:
             else:
                 self.count[i] = 1
             self.graph[i] = []
-            
+
         for i in self.count:
             for j in self.count:
                 r = int(np.sqrt(i + j))
@@ -20,9 +23,9 @@ class Solution:
         ans = 0
         L = len(A)
         for i in self.graph:
-            ans += self.dfs(i, L-1)
+            ans += self.dfs(i, L - 1)
         return ans
-    
+
     def dfs(self, i, L):
         self.count[i] -= 1
         ans = 1
@@ -33,5 +36,3 @@ class Solution:
                     ans += self.dfs(j, L - 1)
         self.count[i] += 1
         return ans
-    
-

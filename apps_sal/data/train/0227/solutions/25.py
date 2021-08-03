@@ -8,8 +8,7 @@ class Solution:
             while end - start + 1 - map[1] > K:
                 map[A[start]] -= 1
                 start += 1
-            res = max(res, end-start+1)
+            res = max(res, end - start + 1)
             end += 1
-            
-        return res
 
+        return res

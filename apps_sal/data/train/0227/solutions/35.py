@@ -1,6 +1,6 @@
 class Solution:
     def longestOnes(self, x: List[int], K: int) -> int:
-        
+
         buf = collections.deque()
         n = len(x)
         i = 0
@@ -24,7 +24,6 @@ class Solution:
                         start = i
             else:
                 maxlen = max(i - start, maxlen)
-                
-                
+
             i += 1
         return maxlen if n > 0 else n

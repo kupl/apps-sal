@@ -21,6 +21,5 @@ class Solution:
                     flipped.discard(left)
                     k -= 1
                 left += 1
-            
-            
+
         return longest

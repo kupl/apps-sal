@@ -2,7 +2,7 @@ class Solution:
     def maxVowels(self, s: str, k: int) -> int:
 
         def vowel_letters(ch):
-            if ch in ['a','e','i','o','u']:
+            if ch in ['a', 'e', 'i', 'o', 'u']:
                 return True
             return False
 
@@ -11,8 +11,8 @@ class Solution:
         su = sum(temp[:k])
         m = su
 
-        for i in range(k,len(temp)):
-            su += temp[i]-temp[i-k]
-            m = max([su,m])
+        for i in range(k, len(temp)):
+            su += temp[i] - temp[i - k]
+            m = max([su, m])
 
         return m

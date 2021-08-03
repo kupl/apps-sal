@@ -1,6 +1,6 @@
 class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
-        A.sort(key=lambda x: (x>0, abs(x)))
+        A.sort(key=lambda x: (x > 0, abs(x)))
         right = 1
         size = len(A)
         for i in range(size):

@@ -10,7 +10,7 @@ class Solution:
             for y in count:
                 if int((x + y) ** (0.5)) ** 2 == (x + y):
                     graph[x].append(y)
-        
+
         def dfs(x, todo):
             count[x] -= 1
             if todo == 0:
@@ -20,8 +20,8 @@ class Solution:
                 for y in graph[x]:
                     if count[y]:
                         ans += dfs(y, todo - 1)
-                        
+
             count[x] += 1
             return ans
-        
+
         return sum(dfs(x, N - 1) for x in count)

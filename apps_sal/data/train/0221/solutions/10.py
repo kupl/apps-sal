@@ -4,7 +4,7 @@ class Solution:
         #     if M == 0: return True
         #     h, t, d = (1<<(8*M-8))%q, 0, 256
         #     dic = defaultdict(list)
-        #     for i in range(M): 
+        #     for i in range(M):
         #         t = (d * t + ord(text[i]))% q
         #     dic[t].append(i-M+1)
         #     for i in range(len(text) - M):
@@ -15,32 +15,31 @@ class Solution:
         #         dic[t].append(i+1)
         #     return (False, \"\")
 
-
         def check(sz):
             seen = defaultdict(list)
-            cur, base, MOD = 0, 256, (1<<31) - 1
-            h = (1 << (sz*8)) % MOD
+            cur, base, MOD = 0, 256, (1 << 31) - 1
+            h = (1 << (sz * 8)) % MOD
             for i in range(sz):
                 cur *= base
                 cur += ord(S[i])
                 cur %= MOD
             seen[cur].append(0)
-            for i in range(sz,len(S)):
+            for i in range(sz, len(S)):
                 cur *= base
                 cur += ord(S[i])
-                cur -= ord(S[i-sz])*h 
+                cur -= ord(S[i - sz]) * h
                 cur %= MOD
                 for j in seen[cur]:
-                    if S[j:j+sz] == S[i-sz+1:i+1]:
-                        return True, S[i-sz+1:i+1]
-                seen[cur].append(i-sz+1)
+                    if S[j:j + sz] == S[i - sz + 1:i + 1]:
+                        return True, S[i - sz + 1:i + 1]
+                seen[cur].append(i - sz + 1)
             return False, ''
 
         lo, hi = 1, len(S)
         res = ''
         # MOD = (1<<31) - 1
         while lo <= hi:
-            mid = (lo+hi)//2
+            mid = (lo + hi) // 2
             flag, tmp = check(mid)
             # flag, tmp = RabinKarp(S, mid, q)
             if flag:
@@ -50,7 +49,7 @@ class Solution:
             else:
                 hi = mid - 1
         # print(lo,hi)
-        return res 
+        return res
 
 
 # class Solution:
@@ -60,7 +59,7 @@ class Solution:
 
 #         dic = defaultdict(list)
 
-#         for i in range(M): 
+#         for i in range(M):
 #             t = (d * t + ord(text[i]))% q
 
 #         dic[t].append(i-M+1)
@@ -75,7 +74,7 @@ class Solution:
 
 #     def longestDupSubstring(self, S):
 #         beg, end = 0, len(S)
-#         q = (1<<31) - 1 
+#         q = (1<<31) - 1
 #         Found = \"\"
 #         while beg + 1 < end:
 #             mid = (beg + end)//2
@@ -86,4 +85,3 @@ class Solution:
 #                 end = mid
 
 #         return Found
-

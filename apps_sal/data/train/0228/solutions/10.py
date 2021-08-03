@@ -2,11 +2,11 @@ class Solution:
     def maxVowels(self, s: str, k: int) -> int:
         truth_table = []
         for idx, char in enumerate(s):
-            if char in ['a','e','i','o','u']:
+            if char in ['a', 'e', 'i', 'o', 'u']:
                 truth_table.append(idx)
-        
+
         pre_count, pre_idx, return_count = 0, 0, 0
-        
+
         for idx, vowel_idx in enumerate(truth_table):
             if idx == 0:
                 count = 1
@@ -20,8 +20,8 @@ class Solution:
                 pre_idx = next_idx
                 next_idx += 1
             pre_count = count
-                
+
             if count > return_count:
                 return_count = count
-           
+
         return return_count

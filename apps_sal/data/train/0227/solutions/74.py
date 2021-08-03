@@ -1,6 +1,6 @@
 class Solution:
     def longestOnes(self, A: List[int], K: int) -> int:
-        l,r = 0, -1
+        l, r = 0, -1
         optim = 0
         while r < len(A):
             while r < len(A):
@@ -12,7 +12,7 @@ class Solution:
                 if K < 0:
                     break
                 else:
-                    optim = max(optim, r-l+1)
+                    optim = max(optim, r - l + 1)
             if r == len(A):
                 break
             while l < r:

@@ -12,7 +12,7 @@ class Solution:
         #             l += 1
         #         ans = max(ans, l)
         # return ans if ans >= 3 else 0
-    
+
         # 2. DP
         from collections import defaultdict
         ans = 0
@@ -20,9 +20,8 @@ class Solution:
         dp = defaultdict(lambda: 2)
         for k, z in enumerate(A):
             for j in range(k):
-                i = mapA.get(z-A[j])
+                i = mapA.get(z - A[j])
                 if i is not None and i < j:
                     temp = dp[(j, k)] = dp[(i, j)] + 1
                     ans = max(ans, temp)
         return ans if ans >= 3 else 0
-

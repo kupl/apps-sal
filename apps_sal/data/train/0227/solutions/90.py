@@ -1,6 +1,6 @@
 class Solution:
     def longestOnes(self, A: List[int], K: int) -> int:
-        
+
         max_length = 0
         start = 0
         end = 1
@@ -27,4 +27,3 @@ class Solution:
                 ones -= A[start]
                 start += 1
         return max_length
-

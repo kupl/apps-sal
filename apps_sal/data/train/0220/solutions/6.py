@@ -7,10 +7,8 @@ class Solution:
                 res = res + customers[k]
         diff = []
         for j in range(len(customers)):
-            diff.append(customers[j]*grumpy[j])
+            diff.append(customers[j] * grumpy[j])
         tem = 0
         for x in range(n - X + 1):
-            tem = max(tem, sum(diff[x:x+X]))
+            tem = max(tem, sum(diff[x:x + X]))
         return res + tem
-            
-

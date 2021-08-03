@@ -10,4 +10,3 @@ class Solution:
                 window_start += 1
             max_length = max(max_length, window_end - window_start + 1)
         return max_length
-

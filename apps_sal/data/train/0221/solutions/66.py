@@ -7,6 +7,7 @@ class Solution:
         POWS = [1] * n
         for i in range(1, n):
             POWS[i] = (POWS[i - 1] * BASE) % MOD
+
         def search(k):
             seen = set()
             h = 0
@@ -19,7 +20,7 @@ class Solution:
                     return i
                 seen.add(h)
             return -1
-        
+
         l, r = 0, n - 1
         while l <= r:
             m = (l + r) // 2

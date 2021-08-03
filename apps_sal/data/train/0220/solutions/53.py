@@ -6,8 +6,6 @@ class Solution:
             win_of_make_satisfied += g * c
             if i >= X:
                 win_of_make_satisfied -= grumpy[i - X] * customers[i - X]
-            max_make_satisfied = max(win_of_make_satisfied, max_make_satisfied)  
-            i += 1    
+            max_make_satisfied = max(win_of_make_satisfied, max_make_satisfied)
+            i += 1
         return satisfied + max_make_satisfied
-                    
-

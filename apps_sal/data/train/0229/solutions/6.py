@@ -11,7 +11,7 @@ class Solution:
                 count[num] = 1
         if zero_count % 2 != 0:
             return False
-        
+
         A.sort()
         for num in A:
             double = num * 2
@@ -22,7 +22,5 @@ class Solution:
                     count.pop(double)
                 if count[num] == 0:
                     count.pop(num)
-        
-        return count == {}
-        
 
+        return count == {}

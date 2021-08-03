@@ -4,7 +4,7 @@ class Solution:
         mem = collections.defaultdict(Counter)
         ans = 0
         for i in range(0, n):
-            for j in range(i-1, -1, -1):
+            for j in range(i - 1, -1, -1):
                 dij = A[i] - A[j]
                 djk = A[j] - dij
                 if djk in mem[A[j]]:

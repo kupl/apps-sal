@@ -1,7 +1,7 @@
 class Solution:
     def longestOnes(self, A: List[int], K: int) -> int:
         window_start, max_length, max_ones_count = 0, 0, 0
-        
+
         # Try to extend the range [window_start, window_end]
         for window_end in range(len(A)):
             if A[window_end] == 1:

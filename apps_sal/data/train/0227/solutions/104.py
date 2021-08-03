@@ -17,7 +17,7 @@ class Solution:
                     r += 1
                 else:
                     needs_buf = True
-            
+
             if needs_buf:
                 if A[l] == 0:
                     buf += 1

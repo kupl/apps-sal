@@ -8,24 +8,23 @@ class Solution:
                 if A[i] == 0:
                     K += 1
                 i += 1
-            ans = max(ans, j-i+1)
+            ans = max(ans, j - i + 1)
         return ans
-        
+
         ans = 0
         start, end = 0, 0
-        
+
         while end < len(A):
             if A[end] == 1:
-                ans = max(ans, end-start+1)
-                end+=1
+                ans = max(ans, end - start + 1)
+                end += 1
             else:
                 if K != 0:
-                    ans = max(ans, end-start+1)
-                    end+=1
+                    ans = max(ans, end - start + 1)
+                    end += 1
                     K -= 1
                 else:
                     if A[start] == 0:
-                        K+=1
-                    start+=1
+                        K += 1
+                    start += 1
         return ans
-

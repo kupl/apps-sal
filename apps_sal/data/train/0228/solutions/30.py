@@ -11,8 +11,8 @@ class Solution:
                     return k
         if tmp > max_val:
             max_val = tmp
-        for i in range(k,he):
-            if s[i-k] in 'aeiou':
+        for i in range(k, he):
+            if s[i - k] in 'aeiou':
                 tmp -= 1
             if s[i] in 'aeiou':
                 tmp += 1

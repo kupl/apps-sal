@@ -15,7 +15,6 @@ class Solution:
 
             result = max(result, e - s + 1)
 
-            e+=1
+            e += 1
 
         return result
-

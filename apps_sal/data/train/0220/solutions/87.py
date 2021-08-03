@@ -9,7 +9,7 @@ class Solution:
                 satisfaction += customers[i]
                 unsatisfied.append(0)
         max_sum = sum(unsatisfied[:X])
-        for i in range(X, len(unsatisfied)+1):
-            max_sum = max(max_sum, sum(unsatisfied[i-X:i]))
+        for i in range(X, len(unsatisfied) + 1):
+            max_sum = max(max_sum, sum(unsatisfied[i - X:i]))
         satisfaction += max_sum
         return satisfaction

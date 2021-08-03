@@ -18,6 +18,3 @@ class Solution:
                 if start > end:
                     end = start
         return res
-                
-            
-

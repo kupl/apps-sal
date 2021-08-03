@@ -1,7 +1,7 @@
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         n = len(A)
-        two_sum = {}       
+        two_sum = {}
         result = 0
         for i in range(n - 1):
             for j in range(i + 1, n):

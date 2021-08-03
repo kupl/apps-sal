@@ -26,4 +26,4 @@ class Solution:
                 pos = cur
             else:
                 r = m - 1
-        return S[pos: pos + l - 1]        
+        return S[pos: pos + l - 1]

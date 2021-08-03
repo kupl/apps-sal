@@ -7,5 +7,5 @@ class Solution:
             if K < 0:
                 K += (1 - A[left])
                 left += 1
-            
+
         return right - left + 1

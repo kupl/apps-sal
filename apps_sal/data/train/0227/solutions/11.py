@@ -7,5 +7,3 @@ class Solution:
                 K += 1 - A[left]
                 left += 1
         return right - left + 1
-            
-

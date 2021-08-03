@@ -9,6 +9,6 @@ class Solution:
                 if A[l] == 0:
                     K += 1
                 l += 1
-            ans = max(ans, r+1-l)
-                
+            ans = max(ans, r + 1 - l)
+
         return ans
