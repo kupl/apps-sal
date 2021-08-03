@@ -22,6 +22,8 @@ while t:
     for j in range(len(temp)):
         ls.append(temp[j])
     a.sort()
-    if(a == ls): print("YES")
-    else: print("NO")
+    if(a == ls):
+        print("YES")
+    else:
+        print("NO")
     t -= 1

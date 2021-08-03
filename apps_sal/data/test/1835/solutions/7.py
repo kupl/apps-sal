@@ -4,7 +4,8 @@ def sv():
     allEven = True
     for n in range(N):
         s = input()
-        if len(s) % 2: allEven = False
+        if len(s) % 2:
+            allEven = False
         tot0 += sum(1 for c in s if c == '0')
     print((N - 1) if allEven and tot0 % 2 else N)
 

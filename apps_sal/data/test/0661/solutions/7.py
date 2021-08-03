@@ -1,13 +1,16 @@
 # coding: utf-8
 import sys
 
-sr = lambda: sys.stdin.readline().rstrip()
-ir = lambda: int(sr())
-lr = lambda: list(map(int, sr().split()))
+
+def sr(): return sys.stdin.readline().rstrip()
+def ir(): return int(sr())
+def lr(): return list(map(int, sr().split()))
+
 
 M, K = lr()
 if K >= 2 ** M:
-    print((-1)); return
+    print((-1))
+    return
 if M == 1:
     if K == 0:
         print("0 0 1 1")

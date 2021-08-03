@@ -17,7 +17,8 @@ def ddl(): return collections.defaultdict(list)
 
 
 def sieve(n):
-    if n < 2: return list()
+    if n < 2:
+        return list()
     prime = [True for _ in range(n + 1)]
     p = 3
     while p * p <= n:
@@ -56,11 +57,14 @@ def divn(n, primes):
 
 
 def prime(n):
-    if n == 2: return True
-    if n % 2 == 0 or n <= 1: return False
+    if n == 2:
+        return True
+    if n % 2 == 0 or n <= 1:
+        return False
     sqr = int(math.sqrt(n)) + 1
     for d in range(3, sqr, 2):
-        if n % d == 0: return False
+        if n % d == 0:
+            return False
     return True
 
 

@@ -10,5 +10,7 @@ for T in range(t):
         while j > 0 and u[j - 1] and v[j] < v[j - 1]:
             v[j], v[j - 1] = v[j - 1], v[j]
             j -= 1
-    if v == sorted(v): print("YES")
-    else: print("NO")
+    if v == sorted(v):
+        print("YES")
+    else:
+        print("NO")

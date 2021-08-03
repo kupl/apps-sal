@@ -27,5 +27,7 @@ else:
     m = l[:]
     m.reverse()
     ans = m + [k] + l + [k]
-    if v == k: print((*ans))
-    else: print((-1))
+    if v == k:
+        print((*ans))
+    else:
+        print((-1))

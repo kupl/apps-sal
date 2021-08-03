@@ -9,7 +9,8 @@ elif M == 1 and K == 0:
 else:
     ans = [0] * num
     for i in range(2**M):
-        if i == K: continue
+        if i == K:
+            continue
         ans[i - (i > K)] = i
         ans[num - 2 - i + (i > K)] = i
     ans[num // 2 - 1] = K

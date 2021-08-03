@@ -1,1 +1,2 @@
-for i in ' ' * int(input()): print((int(input()) + 2) // 2)
+for i in ' ' * int(input()):
+    print((int(input()) + 2) // 2)

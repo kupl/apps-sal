@@ -21,7 +21,7 @@ class Solution:
         current = []
         candidates.sort()
         can = candidates[:]
-        count = 0;
+        count = 0
         num = {}
         current_num = {}
         for i in range(len(candidates)):

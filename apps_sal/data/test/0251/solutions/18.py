@@ -20,6 +20,7 @@ for i in range(len(heights) - 1):
     else:
         container = heights[i]
         ans += 1
-if container > 0: ans += 1
+if container > 0:
+    ans += 1
 
 print(ans)
