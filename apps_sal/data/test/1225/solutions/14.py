@@ -3,7 +3,8 @@ H = int(input())
 
 
 def getAns(x):
-    if x <= 1: return 1
+    if x <= 1:
+        return 1
     return 2 * getAns(x // 2) + 1
 
 

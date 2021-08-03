@@ -1,4 +1,4 @@
-inp = lambda: map(int, input().split())
+def inp(): return map(int, input().split())
 
 
 def sol():

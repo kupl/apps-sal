@@ -10,14 +10,16 @@ for idx, x in enumerate(a):
 
 if 0 not in d or len(d[0]) != 1:
     print(-1)
-    import sys; return
+    import sys
+    return
 
 res = []
 
 for x in range(1, max(d.keys()) + 1):
     if x not in d or len(d[x]) > len(d[x - 1]) * (k if x - 1 is 0 else k - 1):
         print(-1)
-        import sys; return
+        import sys
+        return
     t = d[x][:]
     p = d[x - 1][:]
     z = (0 if x - 1 is 0 else 1)

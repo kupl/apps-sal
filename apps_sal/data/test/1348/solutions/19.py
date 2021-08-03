@@ -28,7 +28,8 @@ def do_this():
             q.append((last_level[int(j / k)], cur_level[j]))
         last_level = cur_level
     print(len(q))
-    for a, b in q: print(a, b)
+    for a, b in q:
+        print(a, b)
 
 
 do_this()

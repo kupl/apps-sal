@@ -12,7 +12,8 @@ for idx, x in enumerate(d):
 
 if len(freq[0]) != 1:
     print('-1')
-    import sys; return
+    import sys
+    return
 
 solution = []
 for i in range(1, n):
@@ -22,7 +23,8 @@ for i in range(1, n):
         new_k = k
     if len(freq[i]) > len(freq[i - 1]) * new_k:
         print('-1')
-        import sys; return
+        import sys
+        return
     prev = freq[i - 1]
     idx = 0
     counter = 0
