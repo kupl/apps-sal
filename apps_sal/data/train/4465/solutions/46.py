@@ -5,4 +5,3 @@ def super_size(n):
     for i in b[::-1]:
         r += i
     return int(r)
-

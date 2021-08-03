@@ -2,6 +2,7 @@ from enum import Enum
 
 State = Enum('State', 'NONE SEEN APPENDED')
 
+
 def remember(str_):
     states = {}
     result = []
@@ -13,4 +14,3 @@ def remember(str_):
             result.append(c)
             states[c] = State.APPENDED
     return result
-

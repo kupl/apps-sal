@@ -1,2 +1,1 @@
-super_size = lambda n : int("".join(sorted([digit for digit in str(n)])[::-1]))
-
+def super_size(n): return int("".join(sorted([digit for digit in str(n)])[::-1]))

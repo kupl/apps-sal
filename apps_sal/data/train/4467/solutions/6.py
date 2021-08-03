@@ -4,5 +4,3 @@ def remember(str):
         if j in str[:i] and j not in lst:
             lst.append(j)
     return lst
-
-

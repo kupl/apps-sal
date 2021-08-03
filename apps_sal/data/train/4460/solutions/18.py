@@ -1,10 +1,10 @@
 def whatday(numb):
-    if numb not in range (1,8):
+    if numb not in range(1, 8):
         return "Wrong, please enter a number between 1 and 7"
     elif numb == 1:
         return "Sunday"
     elif numb == 2:
-        return "Monday" 
+        return "Monday"
     elif numb == 3:
         return "Tuesday"
     elif numb == 4:

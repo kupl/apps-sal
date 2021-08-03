@@ -1,4 +1,4 @@
-def print_number(number, char): 
+def print_number(number, char):
     dct = {'1': ['  **  ', ' ***  ', '* **  ', '  **  ', '  **  ', '******'],
            '2': [' **** ', '**  **', '   ** ', '  **  ', ' **   ', '******'],
            '3': [' **** ', '**  **', '   ** ', '   ** ', '**  **', ' **** '],
@@ -8,17 +8,14 @@ def print_number(number, char):
            '7': ['******', '**  **', '   ** ', '  **  ', ' **   ', ' **   '],
            '8': [' **** ', '**  **', ' **** ', ' **** ', '**  **', ' **** '],
            '9': [' **** ', '**  **', '**  **', ' **** ', '  **  ', ' **   '],
-           '0': [' **** ', '**  **', '**  **', '**  **', '**  **', ' **** '] }
+           '0': [' **** ', '**  **', '**  **', '**  **', '**  **', ' **** ']}
     s = str(number).zfill(5)
-    top = [char*40, char + ' '*38 + char]
-    bottom = [char + ' '*38 + char, char*40]
+    top = [char * 40, char + ' ' * 38 + char]
+    bottom = [char + ' ' * 38 + char, char * 40]
     middle = []
     for i in range(6):
         row = []
         for dig in s:
-            row.append(dct[dig][i].replace('*', char) + ' ')    
+            row.append(dct[dig][i].replace('*', char) + ' ')
         middle.append('{0}  {1} {0}'.format(char, ''.join(row)))
     return '\n'.join(top + middle + bottom)
-
-        
-

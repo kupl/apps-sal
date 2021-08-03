@@ -1,7 +1,7 @@
 def feast(beast, dish):
-    #if beast[0]==dish[0] and beast[-1]==dish[-1]:
+    # if beast[0]==dish[0] and beast[-1]==dish[-1]:
     #    return True
-    #else:
+    # else:
     #    return False
-    #return  beast[0]==dish[0] and beast[-1]==dish[-1]
+    # return  beast[0]==dish[0] and beast[-1]==dish[-1]
     return beast.startswith(dish[0]) and beast.endswith(dish[-1])

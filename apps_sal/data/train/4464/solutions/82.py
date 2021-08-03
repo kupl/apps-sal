@@ -1,6 +1,5 @@
 def feast(beast, dish):
-    
- 
+
     # your code here
     x = beast[0]
     y = dish[0]
@@ -10,4 +9,3 @@ def feast(beast, dish):
         return True
     else:
         return False
-

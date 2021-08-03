@@ -1,1 +1,1 @@
-adjacent_element_product=lambda array:max([a*b for a,b in zip(array[:-1],array[1:])])
+def adjacent_element_product(array): return max([a * b for a, b in zip(array[:-1], array[1:])])

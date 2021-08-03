@@ -5,4 +5,3 @@ def whatday(num):
     else:
         return 'Wrong, please enter a number between 1 and 7'
 # Put your code here
-

@@ -5,5 +5,5 @@ def adjacent_element_product(array):
     for num in array[1:]:
         res.append(start * num)
         start = num
-    
+
     return max(res)

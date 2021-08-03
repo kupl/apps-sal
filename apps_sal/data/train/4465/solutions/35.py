@@ -5,4 +5,3 @@ def super_size(n):
     for j in a:
         s += str(j)
     return int(s)
-

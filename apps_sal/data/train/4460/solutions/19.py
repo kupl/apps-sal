@@ -4,4 +4,3 @@ def whatday(num):
         return d[num]
     except KeyError:
         return "Wrong, please enter a number between 1 and 7"
-

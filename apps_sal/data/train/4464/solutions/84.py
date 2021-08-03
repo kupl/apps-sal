@@ -4,11 +4,11 @@ def feast(beast, dish):
     indexBeast = len(beast)
     indexDish = len(dish)
     beast1 = beast[0]
-    beastLast = beast[indexBeast-1]
+    beastLast = beast[indexBeast - 1]
     dish1 = dish[0]
-    dishLast = dish[indexDish-1]
-    
+    dishLast = dish[indexDish - 1]
+
     if beast1 == dish1 and beastLast == dishLast:
         return True
-    else :
+    else:
         return False

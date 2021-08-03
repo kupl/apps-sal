@@ -1,5 +1,6 @@
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
+
 def alphabet_position(text):
     if type(text) == str:
         text = text.lower()

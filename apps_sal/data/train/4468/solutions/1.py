@@ -9,4 +9,3 @@ def simplify(number):
         else:
             result.append(d + "*" + "1" + "0" * (len(num) - i))
     return "+".join(result)
-
