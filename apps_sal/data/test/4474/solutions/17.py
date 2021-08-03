@@ -32,7 +32,8 @@ for _ in range(q):
             if (s[i] == '2'):
                 cnt += 1
                 idx = min(idx, i)
-        if (cnt == 0): good = True
+        if (cnt == 0):
+            good = True
         if (not good):
             for i in range(idx + 1, len(s)):
                 s[i] = '0'

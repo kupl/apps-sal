@@ -16,12 +16,12 @@ def ternary(n):
 # print(ternary(4))
 while tc > 0:
     tc -= 1
-    n = int(input());
+    n = int(input())
     rep = ['0'] + ternary(n)
     idx = -1
     for i in range(len(rep)):
         if rep[i] == '2':
-            idx = i - 1;
+            idx = i - 1
 
             while rep[idx] != '0':
                 idx -= 1

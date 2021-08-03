@@ -21,6 +21,8 @@ for i in range(ptr - 1):
 
 
 print(ptr - 1)
-for i in b: print(i, end=" ")
+for i in b:
+    print(i, end=" ")
 print()
-for i in c: print(i, end=" ")
+for i in c:
+    print(i, end=" ")

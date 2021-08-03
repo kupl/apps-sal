@@ -8,5 +8,7 @@ for y in range(t):
     x = int(sqrt(n))
     ans = x - 1 + ceil(n / x)
     # print(ans)
-    if(ans > d): print("NO")
-    else: print("YES")
+    if(ans > d):
+        print("NO")
+    else:
+        print("YES")

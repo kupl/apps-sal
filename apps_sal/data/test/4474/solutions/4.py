@@ -10,7 +10,7 @@ def tobase3(n):
 
 
 def todec(a):
-    sum = 0;
+    sum = 0
     for i in range(len(a)):
         sum *= 3
         sum += a[i]

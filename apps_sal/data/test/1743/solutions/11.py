@@ -1,5 +1,7 @@
 n = int(input())
-R = lambda: [int(i) for i in input().split()]
+def R(): return [int(i) for i in input().split()]
+
+
 a, b, c = R(), R(), R()
 x, y = a[0], b[0]
 for i in range(1, n):
