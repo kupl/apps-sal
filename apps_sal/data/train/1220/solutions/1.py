@@ -1,7 +1,7 @@
 from itertools import combinations
 
 ps = []
-for i in range(1, 6+1):
+for i in range(1, 6 + 1):
     ps.extend(combinations(list(range(6)), i))
 
 n, q = list(map(int, input().split()))
@@ -11,7 +11,7 @@ b = list(map(int, input().split()))
 x = [[] for _ in range(6)]
 
 for i, j in zip(p, b):
-    x[j-1].append(i)
+    x[j - 1].append(i)
 
 ts = {i: sorted(sum((x[j] for j in i), []), reverse=True) for i in ps}
 
@@ -20,7 +20,6 @@ for _ in range(q):
     f = tuple([int(x) - 1 for x in input().split()])
 
     try:
-        print(ts[f][k-1])
+        print(ts[f][k - 1])
     except:
         print(-1)
-

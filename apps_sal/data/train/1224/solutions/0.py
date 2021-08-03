@@ -11,6 +11,7 @@ if len(sys.argv) > 1:
 
 sum_cache = {}
 
+
 def sum_func(x):
     if x < 10:
         return x
@@ -29,6 +30,7 @@ def sum_func(x):
 
     return r
 
+
 def test():
     for n in range(1):
         print(n, sum_func(n))
@@ -38,20 +40,22 @@ def test():
 #~ test()
 #~ sys.exit(1)
 
+
 cycle_table = [
-  # Cycle len, markers              # D_kfunc
-  [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]], # 1
-  [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]], # 2
-  [3, [1, 0, 0, 1, 0, 0, 1, 0, 0]], # 3
-  [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]], # 4
-  [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]], # 5
-  [3, [1, 0, 0, 1, 0, 0, 1, 0, 0]], # 6
-  [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]], # 7
-  [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]], # 8
-  [1, [1, 0, 0, 0, 0, 0, 0, 0, 0]], # 9
+    # Cycle len, markers              # D_kfunc
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 1
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 2
+    [3, [1, 0, 0, 1, 0, 0, 1, 0, 0]],  # 3
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 4
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 5
+    [3, [1, 0, 0, 1, 0, 0, 1, 0, 0]],  # 6
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 7
+    [9, [1, 1, 1, 1, 1, 1, 1, 1, 1]],  # 8
+    [1, [1, 0, 0, 0, 0, 0, 0, 0, 0]],  # 9
 ]
 
 NUMBER = 9
+
 
 def calc(A_1, D, L, R):
     #~ print('calc ===', A_1, D, L, R)
@@ -67,7 +71,7 @@ def calc(A_1, D, L, R):
         return n * A_L_kfunc
 
     cycle_len = cycle_table[D_kfunc - 1][0]
-    cycle_markers = list(cycle_table[D_kfunc - 1][1]) # copy
+    cycle_markers = list(cycle_table[D_kfunc - 1][1])  # copy
     #~ print('cycle_len', cycle_len)
 
     whole_part = n // cycle_len
@@ -91,6 +95,7 @@ def calc(A_1, D, L, R):
 
     return r
 
+
 def calc_dumb(A_1, D, L, R):
     #~ print('dumb ===', A_1, D, L, R)
     a = A_1 + D * (L - 1)
@@ -106,6 +111,7 @@ def calc_dumb(A_1, D, L, R):
         a += D
 
     return r
+
 
 def test1():
     a1 = 1
@@ -130,12 +136,12 @@ def test2():
 #~ test1()
 #~ sys.exit(1)
 
+
 T = int(f.readline().strip())
 
-for case_id in range(1, T+1):
+for case_id in range(1, T + 1):
     A_1, D, L, R = list(map(int, f.readline().strip().split()))
 
     r = calc(A_1, D, L, R)
 
     print(r)
-
