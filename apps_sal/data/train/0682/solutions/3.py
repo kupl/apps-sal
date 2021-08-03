@@ -1,25 +1,24 @@
 N = int(input())
-A=[0]
-A+=[int(x) for x in input().split()]
-i=0
-while i<=N and i==A[i]:
-    i+=1
-j=N
-while j>=i and j==A[j] :
-    j-=1
+A = [0]
+A += [int(x) for x in input().split()]
+i = 0
+while i <= N and i == A[i]:
+    i += 1
+j = N
+while j >= i and j == A[j]:
+    j -= 1
     #print(j,A[j],end=' | ')
-t=i
-flg=True
-for k in range(j,i-1,-1):
+t = i
+flg = True
+for k in range(j, i - 1, -1):
     #print(A[k],t,end=' | ')
-    if A[k]!=t:
-        flg=False
+    if A[k] != t:
+        flg = False
         break
-    t+=1
-if i>j:
-    flg=False
+    t += 1
+if i > j:
+    flg = False
 if flg:
-    print(i,j)
+    print(i, j)
 else:
-    print(0,0)
-
+    print(0, 0)

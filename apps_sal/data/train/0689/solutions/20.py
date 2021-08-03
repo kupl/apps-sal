@@ -9,4 +9,3 @@ for i in l:
             print("YES")
             return
 print("NO")
-

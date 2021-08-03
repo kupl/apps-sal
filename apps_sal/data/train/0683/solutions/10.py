@@ -1,3 +1,3 @@
 # cook your dish here
-n=int(input())
+n = int(input())
 print(n)

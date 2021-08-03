@@ -1,9 +1,9 @@
 # https://www.codechef.com/problems/RECTLIT
 
-def assess(sq,points):
+def assess(sq, points):
     EWct = 0
     NSct = 0
-    for a,b in points:
+    for a, b in points:
         EW = (a == 0 or a == sq)
         NS = (b == 0 or b == sq)
         if EW and NS:
@@ -21,7 +21,7 @@ def assess(sq,points):
         return 'yes'
     # 3 points, one on edge
     x = -1
-    for a,b in points:
+    for a, b in points:
         if EWct > 0:
             if a == 0 or a == sq:
                 e = b
@@ -36,20 +36,18 @@ def assess(sq,points):
                 x = a
             else:
                 y = a
-    if (e-x)*(e-y) < 0: # edge splits mids
+    if (e - x) * (e - y) < 0:  # edge splits mids
         return 'no'
     else:
         return 'yes'
 
 
 for ti in range(int(input())):
-    k,n = map(int, input().split())
+    k, n = map(int, input().split())
     if k > 3:
         for ki in range(k):
             input()
         print('yes')
     else:
         pos = [tuple(map(int, input().split())) for ki in range(k)]
-        print(assess(n-1,pos))
-
-
+        print(assess(n - 1, pos))

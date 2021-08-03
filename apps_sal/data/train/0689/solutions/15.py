@@ -2,7 +2,7 @@ n = int(input())
 a = []
 f = 0
 for i in range(n):
-    a.append(list(map(int,input().split())))
+    a.append(list(map(int, input().split())))
 for i in range(len(a)):
     for j in range(len(a)):
         if i == j:
