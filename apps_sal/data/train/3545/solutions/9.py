@@ -6,12 +6,13 @@ def well(arr):
     for c in s:
         if isinstance(c, str):
             a.append(c)
-    cpt = 0    
+    cpt = 0
     for w in a:
         if w.lower() == 'good':
             cpt += 1
-    if cpt > 2: return 'I smell a series!'
-    if 0 < cpt < 3: return 'Publish!'
+    if cpt > 2:
+        return 'I smell a series!'
+    if 0 < cpt < 3:
+        return 'Publish!'
     return 'Fail!'
 # Flez
-

@@ -1,12 +1,12 @@
 def polynomialize(roots):
-    space_sign_space = lambda c: ' + ' if 0 < c else ' - '
-    space_sign_space_num = lambda c: space_sign_space(c)  + (str(abs(c)) if abs(c) != 1 else '')
+    def space_sign_space(c): return ' + ' if 0 < c else ' - '
+    def space_sign_space_num(c): return space_sign_space(c) + (str(abs(c)) if abs(c) != 1 else '')
     max_power = len(roots)
     # Calculate coefficients
     coefs = [1, -roots[0]]
     if max_power > 1:
         for r in roots[1:]:
-            coefs = [1,] + [c[0]-r*c[1] for c in zip(coefs[1:], coefs[:-1])] + [-r*coefs[-1],]
+            coefs = [1, ] + [c[0] - r * c[1] for c in zip(coefs[1:], coefs[:-1])] + [-r * coefs[-1], ]
     # Construct equation (first line, separately as it needs no leading +)
     eq = 'x' + ('^' + str(max_power) if max_power > 1 else '')
     power = max_power

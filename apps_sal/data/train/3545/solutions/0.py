@@ -1,5 +1,6 @@
 from itertools import chain
 
+
 def well(arr):
     c = sum(isinstance(x, str) and x.lower() == 'good' for x in chain.from_iterable(arr))
     return (

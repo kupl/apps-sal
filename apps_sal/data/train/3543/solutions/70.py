@@ -10,4 +10,3 @@ def increment_string(strng):
             return s + d * "0" + str(n_)
         else:
             return s + str(n_)
-

@@ -23,5 +23,5 @@ def polynomialize(roots):
     zeros, roots2, length = roots.count(0), [r for r in roots if r], len(roots)
     parameters = [1]
     for root in roots2:
-        parameters = [1] + [parameters[i+1] - root*parameters[i] for i in range(len(parameters)-1)] + [-parameters[-1]*root]
-    return "".join([monomial(param, length-i) for i, param in enumerate(parameters) if param])[3:] + " = 0"
+        parameters = [1] + [parameters[i + 1] - root * parameters[i] for i in range(len(parameters) - 1)] + [-parameters[-1] * root]
+    return "".join([monomial(param, length - i) for i, param in enumerate(parameters) if param])[3:] + " = 0"

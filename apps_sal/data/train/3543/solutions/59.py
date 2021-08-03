@@ -1,5 +1,6 @@
 import re
 
+
 def increment_string(strng):
     if strng and strng[-1].isdigit():
         value = int(strng[-1])
@@ -12,4 +13,3 @@ def increment_string(strng):
     else:
         strng += '1'
     return strng
-

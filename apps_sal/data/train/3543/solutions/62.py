@@ -1,24 +1,23 @@
 def increment_string(strng):
     if len(strng) == 0:
         return "1"
-    
+
     if not strng[-1].isdigit():
         return strng + "1"
     elif len(strng) == 1:
         return str(int(strng) + 1)
-    
+
     # Append all non-digit characters to new string, keeping track of the index where characters end
     idx = 0
     for i, c in enumerate(strng):
         if not c.isdigit():
             idx = i
-            
+
     num_str = strng[idx + 1:]
     inc_num_str = str(int(num_str) + 1)
-    
+
     return strng[:idx + 1] + inc_num_str.zfill(len(num_str))
-            
-        
+
     """if len(strng) > 0 and strng[-1].isdigit():
         next_num = int(strng[-1]) + 1
     

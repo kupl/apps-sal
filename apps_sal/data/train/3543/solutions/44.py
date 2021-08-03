@@ -7,10 +7,9 @@ def increment_string(strng):
     righty = []
     here = ''
 
-
     for i in strng:
         print(i)
-        #all non no in righty
+        # all non no in righty
         righty.append(i)
     for i in strng[::-1]:
         if i not in string.digits:
@@ -18,7 +17,7 @@ def increment_string(strng):
         elif i in string.digits:
 
             print('this is i', i)
-            #all no in num
+            # all no in num
             here = i + nums
             nums = i + nums
 
@@ -35,8 +34,9 @@ def increment_string(strng):
     print('r', righty)
 
     hmmm = ''.join(righty)
-    print('hr', hmmm )
+    print('hr', hmmm)
     hmmm = hmmm.replace(here, nums)
-    return hmmm 
+    return hmmm
+
 
 print(increment_string('123foo001'))

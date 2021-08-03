@@ -25,5 +25,4 @@ def increment_string(strng):
         increment = str(int(digit_str[start_idx:]) + 1)
         increment_str = (len_digit_str - len(increment)) * '0' + increment
 
-    return strng[0:end_idx+1]+increment_str
-
+    return strng[0:end_idx + 1] + increment_str

@@ -6,7 +6,7 @@ def polynomialize(roots):
             new_poly.append(poly[i] - root * poly[i - 1])
         new_poly.append(poly[-1] * -root)
         poly = new_poly
-    
+
     str_poly = []
     for i, coeff in enumerate(poly):
         power = len(roots) - i
