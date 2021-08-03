@@ -12,7 +12,8 @@ def main():
         for j in range(k + 1):
             dp[i + 1, j + 1] = max(dp[i + 1, j + 1], dp[i, j])
             now = dp[i, j]
-            if (i + j) % 2 == 0: now += a[i]
+            if (i + j) % 2 == 0:
+                now += a[i]
             dp[i + 1, j] = max(dp[i + 1, j], now)
     print(dp[n, k])
 

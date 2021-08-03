@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 n = int(input())
 A = [int(i) for i in input().split()]
 inf = float("inf")

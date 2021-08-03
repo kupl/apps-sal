@@ -1,6 +1,7 @@
 import sys
 
-N = int(input()); A = list(map(int, input().split()))
+N = int(input())
+A = list(map(int, input().split()))
 
 if N == 2:
     print(max(A))

@@ -1,5 +1,6 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 n = int(input())
 A = list(map(int, input().split()))
@@ -13,7 +14,8 @@ for i in range(n):
     for j in range(k + 1):
         dp[i + 1][j + 1] = max(dp[i + 1][j + 1], dp[i][j])
         now = dp[i][j]
-        if (i + j) % 2 == 0: now += A[i]
+        if (i + j) % 2 == 0:
+            now += A[i]
         dp[i + 1][j] = max(dp[i + 1][j], now)
 
 ans = dp[n][k]
