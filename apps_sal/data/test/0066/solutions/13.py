@@ -2,7 +2,7 @@ def gcd(a, b):
     while (b):
         a %= b
         a, b = b, a
-    return a;
+    return a
 
 
 t, w, b = map(int, input().split())

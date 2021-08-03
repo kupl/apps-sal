@@ -14,7 +14,7 @@ def timer(f):
     return tmp
 
 
-n = int(input());
+n = int(input())
 array = []
 for i in range(n):
     str = input().split(' ')

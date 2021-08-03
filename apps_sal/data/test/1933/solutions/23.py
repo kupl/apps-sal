@@ -7,7 +7,8 @@ for i in range(n):
     a.append(b)
 
 b = [0] * m
-for i in range(k + 2): a.append(b)
+for i in range(k + 2):
+    a.append(b)
 
 score = 0
 repl = 0
@@ -18,7 +19,8 @@ for j in range(m):
     cur_best_repl = 0
     cur_repl = 0
 
-    for i in range(k): cur_sum += a[i][j]
+    for i in range(k):
+        cur_sum += a[i][j]
 
     for i in range(n):
         if a[i][j] == 0:

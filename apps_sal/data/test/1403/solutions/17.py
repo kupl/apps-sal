@@ -16,7 +16,7 @@ for i in range(1, n):
     if a[i - 1] == a[i]:
         flag += 1
     elif a[i] <= a[i - 1] + K:
-        ans -= flag;
+        ans -= flag
         flag = 1
     else:
         flag = 1

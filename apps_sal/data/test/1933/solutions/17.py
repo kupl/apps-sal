@@ -5,7 +5,8 @@ for i in zip(*R):
     a, b = 0, 0
     for j in range(n - k + 1):
         f, h = sum(i[j:j + k]), sum(i[:j])
-        if f > a: a, b = f, h
+        if f > a:
+            a, b = f, h
     s += a
     c += b
 print(s, c, end=' ')

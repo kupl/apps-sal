@@ -23,7 +23,8 @@ y = t // a
 v = x * y + min(x, t % a + 1) - 1
 
 w = pgcd(v, t)
-if v == 0: print("0/1")
+if v == 0:
+    print("0/1")
 else:
     print(v // w, end="")
     print("/", end="")

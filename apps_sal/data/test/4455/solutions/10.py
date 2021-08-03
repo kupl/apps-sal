@@ -1,4 +1,5 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
 
 n, k = R()
 
@@ -12,13 +13,17 @@ for i in range(1, n):
         d[h[i]] = i
 
 res = [0] * n
-for i in range(n): res[i] = d[r[i]]
+for i in range(n):
+    res[i] = d[r[i]]
 
 for i in range(k):
     a, b = R()
-    a -= 1; b -= 1
-    if r[a] > r[b]: res[a] -= 1
-    elif r[a] < r[b]: res[b] -= 1
+    a -= 1
+    b -= 1
+    if r[a] > r[b]:
+        res[a] -= 1
+    elif r[a] < r[b]:
+        res[b] -= 1
 
 res = list(map(str, res))
 print(' '.join(res))
