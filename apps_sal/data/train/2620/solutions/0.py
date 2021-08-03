@@ -13,7 +13,4 @@ for i in range(n):
     elif opt == 'appendleft':
         d.appendleft(int(cmd[1]))
 for i in d:
-    print(i,end=' ')
-
-        
-
+    print(i, end=' ')
