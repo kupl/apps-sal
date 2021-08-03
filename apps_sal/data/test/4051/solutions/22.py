@@ -6,7 +6,8 @@
 
 def check(a):
     for i in range(len(a) - 1):
-        if(abs(a[i] - a[i + 1]) >= 2): return False
+        if(abs(a[i] - a[i + 1]) >= 2):
+            return False
     return True
 
 

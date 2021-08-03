@@ -46,7 +46,8 @@ def read(callback=int, split=True):
 
 
 def write(value, end="\n"):
-    if value is None: return
+    if value is None:
+        return
     try:
         if not isinstance(value, str):
             value = " ".join(map(str, value))
@@ -78,5 +79,7 @@ else:
         result = main()
         if result is not None:
             write(result)
-if sfile is not None: sfile.close()
-if tfile is not None: tfile.close()
+if sfile is not None:
+    sfile.close()
+if tfile is not None:
+    tfile.close()

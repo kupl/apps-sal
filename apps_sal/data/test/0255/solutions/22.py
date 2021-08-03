@@ -6,7 +6,7 @@ def Fabs(a):
 
 
 def solve(listB, listG):
-    res = 0;
+    res = 0
     cntb = 0
 
     while cntb < len(listB):

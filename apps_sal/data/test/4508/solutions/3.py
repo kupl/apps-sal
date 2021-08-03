@@ -11,7 +11,8 @@ def get_new_edges(graph):
     queue = [[0, 0]]
     i = 0
     while True:
-        if i >= len(queue): break
+        if i >= len(queue):
+            break
         current, d = queue[i]
         i += 1
         visit[current] = True
@@ -31,7 +32,8 @@ def get_new_edges(graph):
 
     count = 0
     for i in range(len(far_vertex)):
-        if not far_vertex[i]: continue
+        if not far_vertex[i]:
+            continue
         vertex, depth = far_vertex[i]
         father = pi[vertex]
         count += 1

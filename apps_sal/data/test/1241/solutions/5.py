@@ -8,7 +8,8 @@ max = 0
 
 while i <= n - 1:
     while j < n:
-        if zcnt >= k and a[j] == 0: break
+        if zcnt >= k and a[j] == 0:
+            break
         j += 1
         if not a[j - 1]:
             zcnt += 1

@@ -3,7 +3,7 @@ def read_ints():
 
 
 def main():
-    n, k = read_ints();
+    n, k = read_ints()
     a = read_ints()
 
     lo = 0

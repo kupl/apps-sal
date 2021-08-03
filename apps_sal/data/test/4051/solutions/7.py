@@ -6,4 +6,5 @@ for i in range(int(ooo) - 1):
         print('NO')
         k = True
         break
-if not k: print('YES')
+if not k:
+    print('YES')

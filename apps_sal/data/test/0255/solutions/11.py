@@ -1,5 +1,6 @@
 
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
 
 n = int(input())
 m_skills = sorted(list(R()))

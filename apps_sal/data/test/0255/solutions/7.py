@@ -4,7 +4,7 @@ b = int(input())
 b = list(map(int, input().split()))
 a = sorted(a)
 b = reversed(sorted(b))
-x = [0] * 200;
+x = [0] * 200
 for t in a:
     x[t] += 1
 

@@ -1,6 +1,8 @@
 import sys
 3
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
+
 for _ in range(int(input())):
     n = int(input())
     a = [int(x) for x in input().split()]
