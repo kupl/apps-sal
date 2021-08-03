@@ -1,5 +1,6 @@
 def EXEC(n):
-    if n < 3: return n
+    if n < 3:
+        return n
     else:
         x, y = 1, 2
         for _ in range(2, n):

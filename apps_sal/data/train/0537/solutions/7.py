@@ -5,14 +5,14 @@ inputs.sort()
 data = [[inputs[0], 1]]
 total = 0
 previous = [inputs[0], 0]
-for n in range(1,N): 
-    if inputs[n] == previous[0]: 
-        total+=previous[1]
+for n in range(1, N):
+    if inputs[n] == previous[0]:
+        total += previous[1]
         data[0][1] += 1
-    else: 
+    else:
         flag = True
         for point in data:
-            if inputs[n] - point[0] >= K: 
+            if inputs[n] - point[0] >= K:
                 total += point[1]
                 previous = [inputs[n], point[1]]
                 flag = False
