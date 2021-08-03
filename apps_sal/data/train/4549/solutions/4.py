@@ -1,6 +1,6 @@
 def text(green, blue):
-    if green: 
-       return "Green wins: {0}".format(' '.join(str(x) for x in green))
+    if green:
+        return "Green wins: {0}".format(' '.join(str(x) for x in green))
     elif blue:
         return "Blue wins: {0}".format(' '.join(str(x) for x in blue))
     return 'Green and Blue died'
@@ -25,5 +25,3 @@ def lemming_battle(battlefield, green, blue):
         except IndexError:
             break
     return lemming_battle(battlefield, [x for x in green if x], [x for x in blue if x])
-        
-

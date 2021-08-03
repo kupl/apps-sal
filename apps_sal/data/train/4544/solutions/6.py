@@ -4,10 +4,11 @@ from math import ceil
 def is_prime(num):
     if num == 2:
         return True
-    for i in range(2, ceil(num**0.5)+1):
+    for i in range(2, ceil(num**0.5) + 1):
         if num % i == 0:
             return False
     return True
+
 
 def factor_sum(num):
     while not is_prime(num):

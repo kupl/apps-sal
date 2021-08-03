@@ -5,4 +5,3 @@ def SumEvenFibonacci(limit):
             result += b
         a, b = b, a + b
     return result
-

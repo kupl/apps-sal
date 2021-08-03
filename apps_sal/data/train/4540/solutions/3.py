@@ -1,5 +1,6 @@
 import random
 
+
 def prime_or_composite(q, k=100):
     q = abs(q)
     if q == 2:

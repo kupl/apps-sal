@@ -5,6 +5,5 @@ def find_children(dancing_brigade):
         if L[i] != c:
             L[i] = L[i].upper()
             c = L[i].lower()
-            
-    return ''.join(L)       
 
+    return ''.join(L)
