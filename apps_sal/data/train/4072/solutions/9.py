@@ -3,6 +3,6 @@ def permutation_position(perm):
     res = 0
     k = 0
     for el in a:
-        res+=(ord(el)-97)*26**k
-        k+=1
-    return res+1
+        res += (ord(el) - 97) * 26**k
+        k += 1
+    return res + 1

@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def first_n_smallest(arr, n):
     def f():
         xs = Counter(sorted(arr)[:n])
