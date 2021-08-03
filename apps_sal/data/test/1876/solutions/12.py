@@ -21,7 +21,8 @@ for _ in range(n - 1):
     g[x].append((y, c))
     g[y].append((x, c))
 visited = [False] * (n + 1)
-count = 0; ans = pow(n, k, MOD)
+count = 0
+ans = pow(n, k, MOD)
 q = deque()
 for i in range(1, n + 1):
     b = []

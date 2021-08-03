@@ -1,6 +1,8 @@
-rr = lambda: input().strip()
-rri = lambda: int(rr())
-rrm = lambda: list(map(int, rr().split()))
+def rr(): return input().strip()
+def rri(): return int(rr())
+def rrm(): return list(map(int, rr().split()))
+
+
 MOD = 10**9 + 7
 
 
@@ -18,7 +20,8 @@ class DSU:
 
     def union(self, x, y):
         xr, yr = self.find(x), self.find(y)
-        if xr == yr: return
+        if xr == yr:
+            return
         if self.rnk[xr] < self.rnk[yr]:
             xr, yr = yr, xr
         if self.rnk[xr] == self.rnk[yr]:
@@ -35,7 +38,8 @@ def solve(N, K, edges):
     graph = [[] for _ in range(N)]
     dsu = DSU(N)
     for u, v, w in edges:
-        u -= 1; v -= 1
+        u -= 1
+        v -= 1
         if w == 0:  # red
             dsu.union(u, v)
 

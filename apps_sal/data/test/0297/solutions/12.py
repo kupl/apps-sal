@@ -22,10 +22,10 @@ if k % 2 == 0:
     k = k // 2
     divided = True
 
-k1 = GCD(n, k);
-k2 = k // k1;
-x = n // k1;
-y = m // k2;
+k1 = GCD(n, k)
+k2 = k // k1
+x = n // k1
+y = m // k2
 if not divided:
     if 2 * x <= n:
         x *= 2

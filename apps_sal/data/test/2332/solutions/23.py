@@ -11,7 +11,8 @@ for g in range(k):
         groups[lang[index - 1]] = g + 1
     m = 10000000000
     for index in ind:
-        if cost[index - 1] < m: m = cost[index - 1]
+        if cost[index - 1] < m:
+            m = cost[index - 1]
     mincost[g + 1] = m
 
 message = input().split()

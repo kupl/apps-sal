@@ -21,7 +21,8 @@ def solve(n, m, k):
     ans = 0
 
     for i in div:
-        if i - 1 > k: continue
+        if i - 1 > k:
+            continue
         ans = max(ans, (n // i) * (m // (k - i + 2)))
 
     return ans
