@@ -1,4 +1,6 @@
 from string import ascii_lowercase
+
+
 def solve(arr):
     alphabet = list(ascii_lowercase)
     return_arr = []
@@ -9,4 +11,3 @@ def solve(arr):
                 count += 1
         return_arr.append(count)
     return return_arr
-

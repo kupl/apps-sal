@@ -1,5 +1,5 @@
 def solve(arr):
-    r=[]
+    r = []
     for w in arr:
-        r.append(sum(1 for i,c in enumerate(w.lower()) if ord(c)==ord('a')+i))
+        r.append(sum(1 for i, c in enumerate(w.lower()) if ord(c) == ord('a') + i))
     return r

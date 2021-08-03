@@ -1,5 +1,6 @@
 import string
 
+
 def solve(arr):
     corrects = []
     for word in arr:
@@ -10,4 +11,3 @@ def solve(arr):
                 correct_place = correct_place + 1
         corrects.append(correct_place)
     return corrects
-

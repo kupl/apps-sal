@@ -1,5 +1,6 @@
 import string
 
+
 def solve(arr: list):
     arr = list(map(str.lower, arr))
     same = []

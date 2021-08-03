@@ -1,5 +1,6 @@
 import string
 
+
 def solve(arr):
     alphabet_indexes = list(enumerate(string.ascii_lowercase))
     letters_count = []

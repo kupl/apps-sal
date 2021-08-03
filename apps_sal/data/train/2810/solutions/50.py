@@ -1,5 +1,6 @@
 import string
 
+
 def solve(arr):
     alphabet = string.ascii_lowercase
     result = []

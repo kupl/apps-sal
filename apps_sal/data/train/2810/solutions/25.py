@@ -8,5 +8,5 @@ def solve(arr):
             if word.lower()[i] == alphabet[i]:
                 counter += 1
         return_list.append(counter)
-        
+
     return return_list

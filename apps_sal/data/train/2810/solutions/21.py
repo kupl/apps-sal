@@ -9,5 +9,3 @@ def solve(arr):
                 count += 1
         res.append(count)
     return res
-    
-

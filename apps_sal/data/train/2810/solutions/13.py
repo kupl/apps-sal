@@ -10,7 +10,7 @@ def solve(arr):
                 num += 1
         return num
 
-    res=[]
+    res = []
     for x in range(len(arr)):
         res.append(cou(arr[x]))
     return res

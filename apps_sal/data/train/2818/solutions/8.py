@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def duplicate_encode(word):
     word = word.lower()
     charCounts = Counter(word)

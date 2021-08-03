@@ -10,4 +10,3 @@ def pairs_to_dict(pairs):
         d[pair[0]] = pair[1]
         d[pair[1]] = pair[0]
     return d
-

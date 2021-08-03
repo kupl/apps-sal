@@ -10,6 +10,5 @@ def duplicate_encode(word):
             result += ")"
         else:
             result += "("
-            
-    return result
 
+    return result

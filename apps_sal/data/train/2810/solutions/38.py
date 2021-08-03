@@ -1,4 +1,6 @@
 import string
+
+
 def solve(arr):
     k = []
     for word in arr:
@@ -6,6 +8,5 @@ def solve(arr):
         for i in range(len(word)):
             if i < 26 and word[i].lower() == string.ascii_lowercase[i]:
                 count += 1
-        k.append(count)   
+        k.append(count)
     return k
-
