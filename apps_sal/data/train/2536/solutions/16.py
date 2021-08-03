@@ -5,4 +5,3 @@ class Solution:
             if arr.count(i) == i:
                 return i
         return -1
-

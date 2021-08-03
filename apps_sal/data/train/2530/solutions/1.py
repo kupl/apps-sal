@@ -1,5 +1,7 @@
 from collections import Counter
 from math import comb
+
+
 class Solution:
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
         res = 0
@@ -10,5 +12,5 @@ class Solution:
                     res += comb(c[key], 2)
             else:
                 res += (c[key] * c[60 - key]) / 2
-        
+
         return int(res)

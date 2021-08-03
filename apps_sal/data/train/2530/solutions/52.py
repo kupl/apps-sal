@@ -7,4 +7,3 @@ class Solution:
             ans += c[60 - m]
             c[m if m else 60] += 1
         return ans
-

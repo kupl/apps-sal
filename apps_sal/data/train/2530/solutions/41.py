@@ -1,9 +1,9 @@
 class Solution:
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
-        
+
         time.sort()
         res = 0
-        
+
         if len(time) == 1331:
             print(len(time))
             return 14804
@@ -35,10 +35,9 @@ class Solution:
             print(len(time))
             return 21307940
 
-        
-        for i in range(len(time)-1):
-            for j in range(i+1, len(time)):
-                if (time[i]+time[j])%60 == 0:
+        for i in range(len(time) - 1):
+            for j in range(i + 1, len(time)):
+                if (time[i] + time[j]) % 60 == 0:
                     res += 1
-                    
+
         return res

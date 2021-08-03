@@ -5,8 +5,8 @@ class Solution:
             result += _n % 10
             _n = math.floor(_n / 10)
         return result
-    
-    def countLargestGroup(self, n: int) -> int:        
+
+    def countLargestGroup(self, n: int) -> int:
         counter = collections.defaultdict(int)
         max_value = 0
         result = 0

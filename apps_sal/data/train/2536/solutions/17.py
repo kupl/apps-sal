@@ -3,10 +3,9 @@ class Solution:
         arr.sort()
         a = []
         for i in arr:
-            if i==arr.count(i):
+            if i == arr.count(i):
                 a.append(i)
         if a:
             return (max(a))
         else:
             return -1
-

@@ -5,7 +5,7 @@ class Solution:
 
         m_60 = sorted([i % 60 for i in time if i % 60 == 0])
         count = int(len(m_60) * (len(m_60) - 1) / 2)
-        
+
         while i < j:
             if time_noZero[i] + time_noZero[j] == 60:
                 if time_noZero[i] != time_noZero[j]:
@@ -18,10 +18,10 @@ class Solution:
                         j -= 1
 
                 else:
-                    
-                    count += int(time_noZero.count(time_noZero[i]) * (time_noZero.count(time_noZero[i]) - 1) / 2) 
+
+                    count += int(time_noZero.count(time_noZero[i]) * (time_noZero.count(time_noZero[i]) - 1) / 2)
                     break
-                
+
             elif time_noZero[i] + time_noZero[j] < 60:
                 i += 1
             else:

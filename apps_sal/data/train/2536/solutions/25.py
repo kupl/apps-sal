@@ -4,7 +4,7 @@ class Solution:
         current_streak = 0
         for i in range(len(arr)):
             current_streak += 1
-            # If this is the last element in the current  streak (as the next is 
+            # If this is the last element in the current  streak (as the next is
             # different, or we're at the end of the array).
             if i == len(arr) - 1 or arr[i] != arr[i + 1]:
                 # If this is a lucky number
@@ -12,4 +12,3 @@ class Solution:
                     return arr[i]
                 current_streak = 0
         return-1
-

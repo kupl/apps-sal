@@ -9,4 +9,4 @@ class Solution:
             elif mod < 30 and 60 - mod in mod_counts:
                 pairs_count += count * mod_counts[60 - mod]
 
-        return  pairs_count        
+        return pairs_count

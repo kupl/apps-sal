@@ -7,12 +7,10 @@ class Solution:
                 a[i] = a[i] + 1
             else:
                 a[i] = 1
-        
+
         for k in a:
             if a[k] == k:
                 if k > largest:
                     largest = k
-        
-        return largest if largest else -1
-            
 
+        return largest if largest else -1

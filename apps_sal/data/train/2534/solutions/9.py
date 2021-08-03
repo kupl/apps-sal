@@ -13,6 +13,5 @@ class Solution:
                 if i == '1':
                     num2 += 1
             lis.append(num1 + num2)
-        lis.sort(reverse = True)
+        lis.sort(reverse=True)
         return lis[0]
-

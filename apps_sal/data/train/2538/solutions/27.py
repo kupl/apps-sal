@@ -5,6 +5,7 @@ def sum_of_digits(num):
         num //= 10
     return total
 
+
 class Solution:
     def countLargestGroup(self, n: int) -> int:
         groups = {}
@@ -16,5 +17,6 @@ class Solution:
             max_len = max(max_len, len(lst))
         largest = 0
         for lst in groups.values():
-            if len(lst) == max_len: largest += 1
+            if len(lst) == max_len:
+                largest += 1
         return largest

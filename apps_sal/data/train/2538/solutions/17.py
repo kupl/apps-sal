@@ -9,17 +9,17 @@ class Solution:
                 max_len = len(digits)
             for char in digits:
                 sum = sum + int(char)
-            
+
             arr = [sum, num]
-            
+
             arr = [sum, num]
-            
+
             if sum in sums:
                 sums[sum].extend([arr])
             else:
                 sums[sum] = [arr]
-        
-        sorted_sums = sorted(sums, reverse=True, key = lambda x: len(sums.get(x)))
+
+        sorted_sums = sorted(sums, reverse=True, key=lambda x: len(sums.get(x)))
         max_len = len(sums.get(sorted_sums[0]))
         count = 0
         for key in sorted_sums:
@@ -28,5 +28,5 @@ class Solution:
                 break
             else:
                 count = count + 1
-        
+
         return count
