@@ -6,5 +6,3 @@ def well(x):
         return "I smell a series!"
     else:
         return "Fail!"
-        
-

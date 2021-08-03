@@ -1,10 +1,12 @@
 from collections import defaultdict
 
+
 def key(s):
     s = s.lower().replace(' ', '')
     return min(s[i:] + s[:i] for i in range(len(s)))
 
-def group_cities(seq): 
+
+def group_cities(seq):
     result = defaultdict(list)
     for city in set(seq):
         result[key(city)].append(city)

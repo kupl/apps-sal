@@ -4,5 +4,5 @@ def well(x):
         return 'Publish!'
     if 3 <= a:
         return 'I smell a series!'
-    else: 
+    else:
         return 'Fail!'

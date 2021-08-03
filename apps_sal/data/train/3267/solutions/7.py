@@ -5,6 +5,6 @@ def well(x):
         results = "Fail!"
     elif good_count <= 2:
         results = "Publish!"
-    else :
+    else:
         results = "I smell a series!"
     return results

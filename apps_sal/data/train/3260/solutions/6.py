@@ -1,11 +1,13 @@
 from itertools import permutations
 from collections import defaultdict
 
+
 def rearranger(k, *args):
     vals, D = map(str, args), defaultdict(set)
     for p in permutations(vals):
         x = int(''.join(p))
-        if not x % k: D[x].add(p)
+        if not x % k:
+            D[x].add(p)
     try:
         mini = min(D)
         res = D[mini]

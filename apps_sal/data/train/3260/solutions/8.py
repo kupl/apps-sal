@@ -1,16 +1,19 @@
 import itertools
 
+
 def from_list_to_string(A):
     st = ''
     for x in A:
         st += str(x)
     return st
 
+
 def from_list_to_string_with_comma(A):
     st = ''
     for x in A:
         st = st + str(x) + ', '
     return st[:-2]
+
 
 def rearranger(k, *args):
     min = float("inf")

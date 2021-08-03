@@ -7,9 +7,7 @@ def well(x):
             continue
     if score > 0 and score < 3:
         return "Publish!"
-    elif score > 2: 
+    elif score > 2:
         return "I smell a series!"
     else:
         return "Fail!"
-    
-

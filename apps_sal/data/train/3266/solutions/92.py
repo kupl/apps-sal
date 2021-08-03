@@ -1,5 +1,5 @@
 def my_first_kata(a, b):
-    if (type(a) is not int) or (type(b) is not int): 
+    if (type(a) is not int) or (type(b) is not int):
         return False
     else:
         try:

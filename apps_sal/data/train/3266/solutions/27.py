@@ -1,4 +1,4 @@
-def my_first_kata(a,b):
+def my_first_kata(a, b):
     print(type(a))
     print(type(b))
     print(a)

@@ -1,5 +1,5 @@
-def my_first_kata(a,b):
+def my_first_kata(a, b):
     if isinstance(a, int) and isinstance(b, int) and a != 0 and b != 0:
-        return a % b ++ b % a
+        return a % b + + b % a
     else:
         return False

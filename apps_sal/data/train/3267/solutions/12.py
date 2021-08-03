@@ -4,4 +4,3 @@ def well(x):
     elif x.count('good') >= 1:
         return 'Publish!'
     return 'Fail!'
-

@@ -1,4 +1,4 @@
-def my_first_kata(a,b):
+def my_first_kata(a, b):
     print(a)
     print(b)
     valid_a = isinstance(a, int) and type(a) == type(0)

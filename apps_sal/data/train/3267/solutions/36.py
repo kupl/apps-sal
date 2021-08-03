@@ -8,4 +8,3 @@ def well(x):
     elif count != 0:
         return 'Publish!'
     return 'Fail!'
-

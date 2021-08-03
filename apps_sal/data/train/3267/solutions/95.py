@@ -6,4 +6,3 @@ def well(x):
             return 'Publish!'
         elif x.count:
             return 'Fail!'
-
