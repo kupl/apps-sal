@@ -10,7 +10,6 @@ def calc_tip(p, r):
     if r == 1:
         return T + 1
     elif r == 0:
-        return max(T - 1,0)
+        return max(T - 1, 0)
     else:
-        return max(T // 2 - 1,0)
-
+        return max(T // 2 - 1, 0)

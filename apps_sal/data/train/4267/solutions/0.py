@@ -14,13 +14,14 @@ CHARACTERS = {
 }
 REQUIRED_SOULS = list(
     accumulate(
-        [0, 0, 673, 690, 707, 724, 741, 758, 775, 793, 811, 829]
-        + [
+        [0, 0, 673, 690, 707, 724, 741, 758, 775, 793, 811, 829] +
+        [
             round(pow(x, 3) * 0.02 + pow(x, 2) * 3.06 + 105.6 * x - 895)
             for x in range(12, 1000)
         ]
     )
 )
+
 
 def souls(character, build):
     starting_level, stats = CHARACTERS[character]

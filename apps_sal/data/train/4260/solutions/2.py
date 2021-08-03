@@ -12,4 +12,3 @@ def mark_spot(n):
         row[-(a + 1)] = 'X\n'
         result.append(''.join(row).rstrip(' '))
     return ''.join(result)
-

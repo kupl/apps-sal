@@ -2,9 +2,10 @@ from math import gcd
 from functools import reduce
 from itertools import cycle
 
+
 def robot_walk(a):
     g = reduce(gcd, a)
-    a = [x//g for x in a]
+    a = [x // g for x in a]
     it = cycle([1j, 1, -1j, -1])
     seen = {0}
     pos = 0

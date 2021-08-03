@@ -4,8 +4,8 @@ def robot_walk(a):
     movings = []
     p = (0, 0)   # x, y
     dir = (0, 1)
-    for k in a: 
-        new_p = (p[0] + k*dir[0], p[1] + k*dir[1])
+    for k in a:
+        new_p = (p[0] + k * dir[0], p[1] + k * dir[1])
         for start, stop in movings:
             if new_p[1] == p[1] and start[0] == stop[0] \
                     and (start[1] < new_p[1] <= stop[1] or start[1] > new_p[1] >= stop[1]) \
@@ -15,7 +15,7 @@ def robot_walk(a):
                     and (start[0] < new_p[0] <= stop[0] or start[0] > new_p[0] >= stop[0]) \
                     and (new_p[1] <= start[1] < p[1] or new_p[1] >= start[1] > p[1]):
                 return True
-                
+
         movings.append((p, new_p))
         p = new_p
         dir = {(0, 1): (1, 0),
