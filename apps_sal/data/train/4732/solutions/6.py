@@ -1,4 +1,4 @@
-def absent_vowel(x): 
+def absent_vowel(x):
     VOWELS = set('aeiou')
     INDEX = {
         'a': 0,

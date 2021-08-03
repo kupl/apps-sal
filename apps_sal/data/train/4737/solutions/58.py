@@ -5,4 +5,4 @@ def fuel_price(litres, price_per_liter):
         tot_disc = 0.25
     else:
         tot_disc = disc * .05
-    return round(litres * (price_per_liter - tot_disc),2)
+    return round(litres * (price_per_liter - tot_disc), 2)

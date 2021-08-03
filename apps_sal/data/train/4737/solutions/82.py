@@ -1,7 +1,7 @@
 def fuel_price(litres, price_per_liter):
     resultat = 0
     if litres < 2:
-        resultat = litres * price_per_liter 
+        resultat = litres * price_per_liter
     elif litres < 4:
         resultat = litres * (price_per_liter - 0.05)
     elif litres < 6:
@@ -12,5 +12,5 @@ def fuel_price(litres, price_per_liter):
         resultat = litres * (price_per_liter - 0.20)
     else:
         resultat = litres * (price_per_liter - 0.25)
-    
+
     return float("{0:.2f}".format(resultat))

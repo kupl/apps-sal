@@ -4,6 +4,4 @@ def keep_order(ary, val):
     for x in range(len(ary)):
         if val <= ary[x]:
             return x
-    return x+1        
-    
-
+    return x + 1

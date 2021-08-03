@@ -1,6 +1,6 @@
 def fuel_price(l, ppl):
     if(l >= 10):
-        ppl -= .25 
+        ppl -= .25
         return round(l * ppl, 2)
     elif(l >= 8):
         ppl -= .20

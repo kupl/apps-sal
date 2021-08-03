@@ -11,5 +11,3 @@ def fuel_price(l, price):
         return l * (price - 0.20)
     else:
         return l * (price - 0.25)
-    
-
