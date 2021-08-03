@@ -7,7 +7,8 @@ def divisors(n):
         i += 1
     if i ** 2 == n:
         count += 1
-    return count  
+    return count
+
 
 def find_min_num(num):
     i = 2

@@ -1,5 +1,6 @@
 from itertools import zip_longest
 
+
 def reverse_and_combine_text(text):
     words = text.split(' ')
     while len(words) > 1:

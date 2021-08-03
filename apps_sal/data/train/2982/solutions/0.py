@@ -4,4 +4,3 @@ def pascal(p):
         to_sum = list(zip([0] + triangle[-1], triangle[-1] + [0]))
         triangle.append(list(map(sum, to_sum)))
     return triangle
-

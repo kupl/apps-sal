@@ -10,5 +10,3 @@ def solution(n, d):
     for i in range(len(list_return)):
         list_return[i] = int(list_return[i])
     return list_return
-
-

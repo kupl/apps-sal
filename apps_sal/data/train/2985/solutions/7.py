@@ -10,7 +10,7 @@ def reflections(max_x, max_y):
             slope = (1, 1) if slope == (-1, 1) else (1, -1)
         elif current[1] == 0:
             slope = (1, 1) if slope == (1, -1) else (-1, 1)
-        current = (current[0]+slope[0], current[1]+slope[1])
+        current = (current[0] + slope[0], current[1] + slope[1])
     if current in [(0, 0), (max_x, max_y)]:
         return True
     else:

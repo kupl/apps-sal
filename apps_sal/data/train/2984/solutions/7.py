@@ -10,7 +10,7 @@ def infected_zeroes(lst):
     br_poc = 0
     br_kraj = 0
 
-    while clanNiza == 1 :
+    while clanNiza == 1:
         br_out += 1
         i += 1
         clanNiza = lst[i]
@@ -19,7 +19,7 @@ def infected_zeroes(lst):
     clanNiza = lst[duzinaNiza - 1]
     br_out = 0
     j = duzinaNiza - 1
-    while clanNiza == 1 :
+    while clanNiza == 1:
         br_out += 1
         j -= 1
         clanNiza = lst[j]
@@ -28,39 +28,37 @@ def infected_zeroes(lst):
     br_in = 0
     br_sred_par = 0
     br_sred_nepar = 0
-    for k in range(i+1, j+1) :
-        if lst[k] == 1 :
+    for k in range(i + 1, j + 1):
+        if lst[k] == 1:
             br_in += 1
         else:
-            if br_in % 2 == 0 :
-                if br_sred_par <= br_in :
+            if br_in % 2 == 0:
+                if br_sred_par <= br_in:
                     br_sred_par = br_in
                     br_in = 0
             else:
-                if br_sred_nepar <= br_in :
+                if br_sred_nepar <= br_in:
                     br_sred_nepar = br_in
                     br_in = 0
 
     maxOut = 0
     maxIn = 0
-    if br_poc > br_kraj :
+    if br_poc > br_kraj:
         maxOut = br_poc
     else:
         maxOut = br_kraj
-    if br_sred_nepar > br_sred_par :
+    if br_sred_nepar > br_sred_par:
         maxIn = br_sred_nepar
     else:
         maxIn = br_sred_par
 
-    if maxIn % 2 == 0 :
-        if maxIn / 2 >= maxOut :
-            return maxIn//2
+    if maxIn % 2 == 0:
+        if maxIn / 2 >= maxOut:
+            return maxIn // 2
         else:
             return maxOut
     else:
-        if maxIn // 2 + 1 >= maxOut : 
-            return maxIn//2 + 1
+        if maxIn // 2 + 1 >= maxOut:
+            return maxIn // 2 + 1
         else:
             return maxOut
-
-

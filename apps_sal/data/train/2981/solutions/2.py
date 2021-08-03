@@ -1,4 +1,4 @@
-def solution(n,d):
+def solution(n, d):
     if d <= 0:
         return []
     else:

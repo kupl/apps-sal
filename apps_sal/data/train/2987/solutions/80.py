@@ -5,4 +5,3 @@ def is_divide_by(a, b, c):
         return False
 
   # good luck
-
