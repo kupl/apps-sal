@@ -1,17 +1,18 @@
-def gcd (a,b):
+def gcd(a, b):
     if (b == 0):
         return a
     else:
-         return gcd (b, a % b)
+        return gcd(b, a % b)
+
 
 t = int(input())
 for u in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-    ans =a[0]
+    ans = a[0]
     for i in a:
         h = gcd(ans, i)
-        if(h>ans):
+        if(h > ans):
             ans = h
         else:
             break
@@ -19,7 +20,7 @@ for u in range(t):
     ans2 = a[0]
     for i in a:
         h = gcd(ans2, i)
-        if(h>ans):
+        if(h > ans):
             ans2 = h
         else:
             break

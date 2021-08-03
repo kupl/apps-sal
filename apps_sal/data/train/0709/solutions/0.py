@@ -5,6 +5,7 @@ try:
         n = int(input())
         a = list(map(int, input().split()))
         gcd = max(a[0], a[-1])
-        
+
         print(gcd)
-except EOFError:pass
+except EOFError:
+    pass

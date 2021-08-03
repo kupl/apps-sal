@@ -5,17 +5,17 @@ for i in range(t):
     l = list(map(int, input().split()))
     e = 1
     for j in l:
-        if j%e == 0:
+        if j % e == 0:
             e = j
-        else :
+        else:
             break
     l.reverse()
     f = 1
     for s in l:
-        if s%f == 0:
+        if s % f == 0:
             f = s
         else:
             break
-    if e>f:
+    if e > f:
         f = e
     print(f)
