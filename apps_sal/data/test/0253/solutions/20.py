@@ -9,4 +9,3 @@ if cnt1 >= 1 or cnt2 >= 2 or cnt3 == 3 or (cnt4 == 2 and cnt2 == 1):
     print('YES')
 else:
     print('NO')
-

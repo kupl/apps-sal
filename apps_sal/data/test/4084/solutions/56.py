@@ -1,5 +1,6 @@
 def resolve():
-    n,a,b = map(int,input().split())
-    print(n//(a+b)*a+min(n%(a+b),a))
-    
+    n, a, b = map(int, input().split())
+    print(n // (a + b) * a + min(n % (a + b), a))
+
+
 resolve()

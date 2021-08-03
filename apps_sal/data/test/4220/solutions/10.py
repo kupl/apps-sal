@@ -24,4 +24,3 @@ else:
     res = s[:k] + "..."
 
 print(res)
-

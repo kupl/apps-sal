@@ -3,6 +3,5 @@ s = input()
 if k >= len(s):
     print(s)
 else:
-    s = s[:k]+'...'
+    s = s[:k] + '...'
     print(s)
-

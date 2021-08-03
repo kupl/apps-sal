@@ -1,4 +1,4 @@
-f=list(map(int,input().split()))
+f = list(map(int, input().split()))
 f.sort()
 a = f[0]
 b = f[1]

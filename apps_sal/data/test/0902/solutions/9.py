@@ -16,4 +16,4 @@ for i in range(1, n):
         c = 1
         if p == n:
             print(p)
-            break        
+            break

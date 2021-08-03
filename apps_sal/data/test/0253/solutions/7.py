@@ -1,4 +1,4 @@
-def ans(k1,k2,k3):
+def ans(k1, k2, k3):
     if k1 == 1:
         return("YES")
 
@@ -14,13 +14,12 @@ def ans(k1,k2,k3):
     return("NO")
 
 
-a,b,c = [int(i) for i in input().split()]
+a, b, c = [int(i) for i in input().split()]
 
-k1 = min(a,b,c)
-k3 = max(a,b,c)
-k2 = a + b+ c - k1 -k3
+k1 = min(a, b, c)
+k3 = max(a, b, c)
+k2 = a + b + c - k1 - k3
 
 # k1 <= k2 <= k3
 
-print(ans(k1,k2,k3))
-
+print(ans(k1, k2, k3))

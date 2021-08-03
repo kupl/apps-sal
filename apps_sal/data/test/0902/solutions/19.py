@@ -20,4 +20,3 @@ while curr_win_streak < max_win_streak:
         curr_win_streak += 1
     next_player_idx += 1
 print(curr_power)
-

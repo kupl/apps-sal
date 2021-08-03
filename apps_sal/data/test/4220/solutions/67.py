@@ -5,5 +5,4 @@ if len(s) <= k:
 else:
     for i in range(k):
         print(s[i], end="")
-    print("...")        
-
+    print("...")

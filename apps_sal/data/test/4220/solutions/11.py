@@ -15,5 +15,5 @@ def main():
     else:
         print(s)
 
-main()
 
+main()

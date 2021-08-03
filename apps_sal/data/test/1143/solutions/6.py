@@ -19,6 +19,4 @@ for i in range(465):
 w.write(str(max(s)))
 
 
-
 # Made By Mostafa_Khaled
-

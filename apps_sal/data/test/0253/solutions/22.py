@@ -1,6 +1,7 @@
-R=lambda:map(int,input().split())
+def R(): return map(int, input().split())
 
-a = list( R() ) 
+
+a = list(R())
 
 ans = 0
 
@@ -11,6 +12,6 @@ f = a.count(4)
 
 if o > 0 or t > 1 or th > 2 or (t == 1 and f == 2):
     print("YES")
-    
+
 else:
     print("NO")

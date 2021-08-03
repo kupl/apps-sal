@@ -1,11 +1,14 @@
 from collections import Counter
 
+
 def read_line():
     return list(map(int, input().split()))
 
 
 n = int(input())
 l = sorted(read_line())
+
+
 def ok(ans):
     nums = l[:ans]
     rest = l[ans:]
@@ -14,7 +17,7 @@ def ok(ans):
     rest = rest[-(ans + 1):]
     l2 = []
     for i in range(len(nums)):
-        if nums[i] < rest[i] and nums[i] < rest[i+1]:
+        if nums[i] < rest[i] and nums[i] < rest[i + 1]:
             l2.append(rest[i])
             l2.append(nums[i])
         else:
@@ -27,6 +30,7 @@ def ok(ans):
         l2 += [v] * k
     return l2
 
+
 def _ok(ans):
     nums = l[:ans]
     rest = l[ans:]
@@ -34,7 +38,7 @@ def _ok(ans):
         return None
     rest = rest[-(ans + 1):]
     for i in range(len(nums)):
-        if nums[i] < rest[i] and nums[i] < rest[i+1]:
+        if nums[i] < rest[i] and nums[i] < rest[i + 1]:
             pass
         else:
             return None
@@ -52,4 +56,3 @@ while lo <= hi:
 a = ok(hi)
 print(hi)
 print(" ".join(map(str, a)))
-

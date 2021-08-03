@@ -3,12 +3,12 @@ S = str(input())
 SS = str()
 i = 0
 
-if len(S) >K:
-  for i in range(K):
-    SS += S[i]
-    i += 1
+if len(S) > K:
+    for i in range(K):
+        SS += S[i]
+        i += 1
 
-  print(SS + '...')
+    print(SS + '...')
 
 else:
-  print(S)
+    print(S)

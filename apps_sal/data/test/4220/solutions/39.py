@@ -1,8 +1,7 @@
-n=int(input())
-txt=input()
+n = int(input())
+txt = input()
 # print(type(n))
-if len(txt)<=n:
-	print(txt)
+if len(txt) <= n:
+    print(txt)
 else:
-	print(("%s..."%txt[:n]))
-
+    print(("%s..." % txt[:n]))

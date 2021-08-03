@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 ans = 0
 
@@ -12,4 +12,3 @@ for i in range(N):
     ans += (sum_A * A[i])
 
 print((ans % MOD))
-

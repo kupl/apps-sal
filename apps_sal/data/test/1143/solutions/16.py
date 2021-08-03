@@ -13,7 +13,7 @@ sys.stdout = open("output.txt", "w")
 mod = pow(10, 9) + 7
 mod2 = 998244353
 def data(): return sys.stdin.readline().strip()
-def out(*var, end="\n"): sys.stdout.write(' '.join(map(str, var))+end)
+def out(*var, end="\n"): sys.stdout.write(' '.join(map(str, var)) + end)
 def l(): return list(sp())
 def sl(): return list(ssp())
 def sp(): return list(map(int, data().split()))
@@ -56,7 +56,7 @@ for i in range(n):
             temp = 28
         else:
             temp = 30
-        end.append([m-1, temp])
+        end.append([m - 1, temp])
     temp = d
     while t >= temp:
         m -= 1
@@ -72,4 +72,3 @@ for i in range(n):
 for i in range(n):
     jury_size(i)
 out(max(dp.values()))
-

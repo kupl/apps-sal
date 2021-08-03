@@ -1,6 +1,7 @@
 ks = [int(v) for v in input().split()]
 ks.sort()
 
+
 def solve(ks):
     k1, k2, k3 = ks
 
@@ -21,5 +22,5 @@ def solve(ks):
     else:
         return False
 
-print(["NO", "YES"][solve(ks)])
 
+print(["NO", "YES"][solve(ks)])

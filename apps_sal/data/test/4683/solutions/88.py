@@ -11,4 +11,3 @@ for i in range(n):
     ans += A[i] * (rr[n] - rr[i + 1]) % mod
 
 print((ans % mod))
-

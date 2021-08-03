@@ -4,8 +4,7 @@ def main():
     iteration = (N // turn)
     rest = N - iteration * turn
     restb = min(A, rest)
-    print((A*iteration+restb))
+    print((A * iteration + restb))
 
 
 main()
-

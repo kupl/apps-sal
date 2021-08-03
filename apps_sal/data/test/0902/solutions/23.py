@@ -18,4 +18,3 @@ else:
             j = 1
         else:
             j += 1
-

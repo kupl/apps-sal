@@ -2,7 +2,6 @@ k = int(input())
 s = input()
 
 if k < len(s):
-    print((s[:k]+'...'))
+    print((s[:k] + '...'))
 else:
     print(s)
-

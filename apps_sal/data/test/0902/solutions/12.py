@@ -12,5 +12,5 @@ for i in range(1, n):
         wins += 1
     if wins >= needed:
         break
-    
+
 print(winner)

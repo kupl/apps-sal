@@ -8,6 +8,7 @@ def main(n, m):
         temp = temp + 1
     return temp if temp % m == 0 else -1
 
+
 n, m = input().split(' ')
 n, m = int(n), int(m)
 

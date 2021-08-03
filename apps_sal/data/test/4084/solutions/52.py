@@ -1,8 +1,8 @@
-n,a,b = list(map(int,input().split()))
-ans= (n//(a+b))*a
-rem = n%(a+b)
-if rem<a:
-    ans+=rem
+n, a, b = list(map(int, input().split()))
+ans = (n // (a + b)) * a
+rem = n % (a + b)
+if rem < a:
+    ans += rem
 else:
-    ans+=a
+    ans += a
 print(ans)

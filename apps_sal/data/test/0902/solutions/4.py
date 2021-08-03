@@ -12,5 +12,3 @@ for i in range(1, n):
         print(curr_power)
         return
 print(curr_power)
-
-

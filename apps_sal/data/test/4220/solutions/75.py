@@ -7,4 +7,3 @@ if l > k:
     print((s[0:k] + '...'))
 else:
     print(s)
-

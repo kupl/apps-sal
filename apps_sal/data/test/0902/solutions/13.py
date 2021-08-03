@@ -1,4 +1,4 @@
-read = lambda: tuple(map(int, input().split()))
+def read(): return tuple(map(int, input().split()))
 
 
 def main():
@@ -6,6 +6,7 @@ def main():
     l = list(read())
 
     ps = {}
+
     def add(p):
         if not p in ps:
             ps[p] = 1
@@ -26,5 +27,6 @@ def main():
         if addk[0]:
             return addk[1]
     return l[0]
-print(main())
 
+
+print(main())

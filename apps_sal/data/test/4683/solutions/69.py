@@ -10,5 +10,5 @@ for i in range(N - 1):
     S %= MOD
     ans += (A[i] % MOD) * S
     ans %= MOD
-    
+
 print(ans)

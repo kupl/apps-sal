@@ -17,4 +17,3 @@ while cnt < k:
     if f == n:
         cnt = k
 print(f)
-

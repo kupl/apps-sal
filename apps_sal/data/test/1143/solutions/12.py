@@ -19,7 +19,7 @@ def main():
     n = int(test[0].strip())
 
     days = [0] * len(month2day)
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         m, d, p, t = map(int, test[i].strip().split())
         R = month2day[(m, d, 13)] - 1
         L = R - t + 1
@@ -36,4 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

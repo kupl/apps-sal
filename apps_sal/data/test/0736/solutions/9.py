@@ -1,25 +1,22 @@
 import math
 
-#input
+# input
 
-n,m=list(map(int,input().split()))
-
-
-
-#variables
-minimum=math.ceil(n/2)
-i=minimum-1
+n, m = list(map(int, input().split()))
 
 
+# variables
+minimum = math.ceil(n / 2)
+i = minimum - 1
 
-#main
+
+# main
 
 while True:
-	i+=1
-	if i%m==0:
-		print(i)
-		quit()
-	if i==n:
-		print(-1)
-		quit()
-
+    i += 1
+    if i % m == 0:
+        print(i)
+        quit()
+    if i == n:
+        print(-1)
+        quit()
