@@ -32,9 +32,11 @@ for _ in range(val()):
 
         num = int(i)
         if ind & 1:
-            if num & 1 == 0: breach = 1
+            if num & 1 == 0:
+                breach = 1
         else:
-            if num & 1: raze = 1
+            if num & 1:
+                raze = 1
 
     if n & 1:
         print(1 if raze else 2)

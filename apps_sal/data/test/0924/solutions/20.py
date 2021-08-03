@@ -1,6 +1,9 @@
 from math import gcd
 
-r = lambda: list(map(int, input().split()))
+
+def r(): return list(map(int, input().split()))
+
+
 a, b = r(), r()
 c = b[0] > a[0]
 la, ra, ta = a if c else b

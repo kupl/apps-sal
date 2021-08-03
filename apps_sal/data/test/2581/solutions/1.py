@@ -1,16 +1,22 @@
 from collections import defaultdict as dd
 from sys import stdin
 input = stdin.buffer.readline
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
 
 n, = I()
-l = []; d = dd(int); su = dd(int); s = 0; an = [1, 1, 2, 1]
+l = []
+d = dd(int)
+su = dd(int)
+s = 0
+an = [1, 1, 2, 1]
 for i in range(n):
     l.append(I())
     for j in range(n):
         d[i - j] += l[i][j]
         su[i + j] += l[i][j]
-x = 0; y = 0
+x = 0
+y = 0
 for i in range(n):
     for j in range(n):
         l[i][j] = d[i - j] + su[i + j] - l[i][j]

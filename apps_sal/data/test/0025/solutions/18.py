@@ -25,21 +25,26 @@ def ELIST(n): return [[] for i in range(n)]
 
 
 def MI(n=None, m=None):  # input matrix of integers
-    if n is None: n, m = VI()
+    if n is None:
+        n, m = VI()
     arr = LIST(n)
-    for i in range(n): arr[i] = VI()
+    for i in range(n):
+        arr[i] = VI()
     return arr
 
 
 def MS(n=None, m=None):  # input matrix of strings
-    if n is None: n, m = VI()
+    if n is None:
+        n, m = VI()
     arr = LIST(n)
-    for i in range(n): arr[i] = input()
+    for i in range(n):
+        arr[i] = input()
     return arr
 
 
 def MIT(n=None, m=None):  # input transposed matrix/array of integers
-    if n is None: n, m = VI()
+    if n is None:
+        n, m = VI()
     a = MI(n, m)
     arr = LIST(m, n)
     for i, l in enumerate(a):
@@ -57,16 +62,19 @@ def main(info=0):
         i, j = 0, 0
         for i in range(n):
             for j in range(i, n):
-                if k == 0: break
+                if k == 0:
+                    break
                 if i == j:
                     m[i][j] = "1"
                     k -= 1
                 else:
-                    if k == 1: continue
+                    if k == 1:
+                        continue
                     m[i][j] = "1"
                     m[j][i] = "1"
                     k -= 2
-            if k == 0: break
+            if k == 0:
+                break
         for l in m:
             print(" ".join(l))
 

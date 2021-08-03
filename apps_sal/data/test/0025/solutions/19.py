@@ -27,5 +27,7 @@ else:
                 matrix[i][j] = matrix[j][i] = 1
             k -= 2
 
-    if k > 0: print(-1)
-    else: print('\n'.join([' '.join(map(str, row)) for row in matrix]))
+    if k > 0:
+        print(-1)
+    else:
+        print('\n'.join([' '.join(map(str, row)) for row in matrix]))

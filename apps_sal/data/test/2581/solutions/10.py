@@ -50,8 +50,8 @@ def main():
     for i in range(n):
         for j in range(n):
             points = (
-                mainDiagonalSums[i - j] + secondaryDiagonalSums[i + j] -
-                chessboard[i][j]
+                mainDiagonalSums[i - j] + secondaryDiagonalSums[i + j]
+                - chessboard[i][j]
             )
 
             if (i + j) & 1:
@@ -114,7 +114,7 @@ class IOWrapper(IOBase):
         self.readline = lambda: self.buffer.readline().decode("ascii")
 
 
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
 def print(*args, **kwargs):

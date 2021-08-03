@@ -2,9 +2,9 @@ import sys
 import math
 n, k = map(int, input().split())
 ans = [[0 for i in range(n)] for i in range(n)]
-row = 0;
-col = 0;
-scol = 0;
+row = 0
+col = 0
+scol = 0
 while(row < n):
     col = scol
     while(col < n):

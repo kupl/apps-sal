@@ -1,6 +1,8 @@
 from math import gcd
 
-C = lambda x, y: (x + y - 1) // y
+
+def C(x, y): return (x + y - 1) // y
+
 
 l0, r0, t0 = map(int, input().split())
 l1, r1, t1 = map(int, input().split())

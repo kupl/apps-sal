@@ -62,7 +62,9 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
+
+
 ALPHA = 'abcdefghijklmnopqrstuvwxyz'
 M = 10**9 + 7
 EPS = 1e-6
@@ -80,7 +82,8 @@ def arrayS(): return [i for i in input().split()]
 
 n = Int()
 a = []
-for i in range(n): a.append(array())
+for i in range(n):
+    a.append(array())
 
 left = defaultdict(int)
 right = defaultdict(int)

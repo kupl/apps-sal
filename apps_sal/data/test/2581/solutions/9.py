@@ -2,7 +2,10 @@ from sys import stdin
 input = stdin.buffer.readline
 n = int(input())
 l = [[*map(int, input().split())] for _ in range(n)]
-d = {}; su = {}; s = 0; an = [1, 1, 2, 1]
+d = {}
+su = {}
+s = 0
+an = [1, 1, 2, 1]
 for i in range(n):
     for j in range(n):
         d[i - j] = d.get(i - j, 0) + l[i][j]

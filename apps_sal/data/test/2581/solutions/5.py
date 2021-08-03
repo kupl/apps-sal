@@ -1,7 +1,8 @@
 
 from sys import stdin
 input = stdin.buffer.readline
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
 
 mat = []
 for _ in range(int(input())):

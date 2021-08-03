@@ -4,7 +4,8 @@ l2, r2, t2 = list(map(int, input().split()))
 
 
 def gcd(a, b):
-    if a > b: a, b = b, a
+    if a > b:
+        a, b = b, a
     while a > 0:
         b = b % a
         a, b = b, a
@@ -18,7 +19,8 @@ def answer(x1, d1, x2, d2):
     if x1 > x2:
         x1, x2, d1, d2 = x2, x1, d2, d1
     d1 = d1 - (x2 - x1)
-    if d1 < 0: d1 = 0
+    if d1 < 0:
+        d1 = 0
     return min(d1, d2)
 
 

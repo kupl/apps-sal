@@ -3,10 +3,12 @@ import heapq as hq
 
 readline = sys.stdin.readline
 
-ns = lambda: readline().rstrip()
-ni = lambda: int(readline().rstrip())
-nm = lambda: map(int, readline().split())
-nl = lambda: list(map(int, readline().split()))
+
+def ns(): return readline().rstrip()
+def ni(): return int(readline().rstrip())
+def nm(): return map(int, readline().split())
+def nl(): return list(map(int, readline().split()))
+
 
 eps = 10**-7
 
@@ -15,7 +17,8 @@ def solve():
     n, k = nm()
     a = nl()
     ans = [0] * n
-    ok = 10**9; ng = -4 * 10**18
+    ok = 10**9
+    ng = -4 * 10**18
     while ok - ng > 1:
         mid = (ok + ng) // 2
         ck = 0

@@ -3,8 +3,8 @@ import sys
 from sys import stdin, stdout
 from collections import Counter, defaultdict, deque
 input = stdin.readline
-I = lambda: int(input())
-li = lambda: list(map(int, input().split()))
+def I(): return int(input())
+def li(): return list(map(int, input().split()))
 
 
 def solve():

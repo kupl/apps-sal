@@ -33,18 +33,23 @@ except:
     pass
 
 input = stdin.buffer.readline
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
 
 n, = I()
 l = []
 for i in range(n):
     l.append(I())
-d = {}; su = {}; s = 0; an = [1, 1, 2, 1]
+d = {}
+su = {}
+s = 0
+an = [1, 1, 2, 1]
 for i in range(n):
     for j in range(n):
         d[i - j] = d.get(i - j, 0) + l[i][j]
         su[i + j] = su.get(i + j, 0) + l[i][j]
-x = 0; y = 0
+x = 0
+y = 0
 for i in range(n):
     for j in range(n):
         p = d[i - j] + su[i + j] - l[i][j]
