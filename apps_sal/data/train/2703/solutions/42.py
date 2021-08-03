@@ -1,8 +1,7 @@
 def square_sum(numbers):
-    lista=[]
+    lista = []
     for valor in numbers:
-        valor1=valor*valor
+        valor1 = valor * valor
         lista.append(valor1)
-    lista=sum(lista)
+    lista = sum(lista)
     return lista
-

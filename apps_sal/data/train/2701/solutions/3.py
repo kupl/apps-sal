@@ -4,6 +4,6 @@ def get_score(arr) -> int:
     score = 0
     for lines in arr:
         level = done // 10
-        score += (level+1) * points[lines]
+        score += (level + 1) * points[lines]
         done += lines
     return score

@@ -6,4 +6,5 @@ def square_sum(numbers):
     y = sum(squared)
     return y
 
+
 square_sum([0, 3, 4, 5])

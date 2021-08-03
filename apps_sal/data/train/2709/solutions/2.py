@@ -4,4 +4,3 @@ def take_umbrella(weather, rain_chance):
     b = (weather == 'rainy')
     c = (weather == 'cloudy' and rain_chance > 0.2)
     return bool(a or b or c)
-

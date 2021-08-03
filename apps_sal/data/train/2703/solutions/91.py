@@ -3,6 +3,3 @@ def square_sum(numbers):
     for x in numbers:
         resultado += x**2
     return resultado
-        
-
-

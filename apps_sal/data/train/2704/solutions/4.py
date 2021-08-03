@@ -6,7 +6,7 @@ def almost_increasing_sequence(sequence):
             if n:
                 return False
             n = 1
-            if i > 1 and sequence[i-2] >= x:
+            if i > 1 and sequence[i - 2] >= x:
                 continue
         prev = x
     return True

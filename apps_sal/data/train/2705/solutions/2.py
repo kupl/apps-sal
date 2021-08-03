@@ -1,3 +1,2 @@
 def generate_integers(m, n):
-    return [i for i in range(m,n+1)]
-
+    return [i for i in range(m, n + 1)]

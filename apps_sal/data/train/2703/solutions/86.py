@@ -4,4 +4,3 @@ def square_sum(numbers):
         i = i ** 2
         suma += i
     return suma
-
