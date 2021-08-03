@@ -28,6 +28,4 @@ while t:
     else:
         pre += 8 * occ
         this += 40
-    print(pre-this)
-
-
+    print(pre - this)

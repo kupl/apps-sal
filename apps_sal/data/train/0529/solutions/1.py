@@ -23,11 +23,10 @@ def cuatro(): return sys.stdin.readline().strip().split()
 
 
 for _ in range(uno()):
- n = uno()
- ans, root = 0, m.floor(m.sqrt(n))
- for i in range(1, root+1):
-  ans += n//i
- ans = ans+ans-root*root
- a, b = ans//m.gcd(ans, n*n), (n*n)//m.gcd(ans, n*n)
- print(str(a)+"/"+str(b))
-
+    n = uno()
+    ans, root = 0, m.floor(m.sqrt(n))
+    for i in range(1, root + 1):
+        ans += n // i
+    ans = ans + ans - root * root
+    a, b = ans // m.gcd(ans, n * n), (n * n) // m.gcd(ans, n * n)
+    print(str(a) + "/" + str(b))

@@ -1,14 +1,13 @@
 # cook your dish here
-x=int(input())
+x = int(input())
 for i in range(x):
-    y=input()
-    y=y.lower()
-    if(y=="b"):
+    y = input()
+    y = y.lower()
+    if(y == "b"):
         print("BattleShip")
-    if(y=="c"):
+    if(y == "c"):
         print("Cruiser")
-    if(y=="d"):
+    if(y == "d"):
         print("Destroyer")
-    if(y=="f"):
+    if(y == "f"):
         print("Frigate")
-

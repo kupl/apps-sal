@@ -3,8 +3,9 @@ def solve(a, b, c):
     n = b
     while n <= c:
         n += a
-    
+
     return n - a
+
 
 ans = []
 T = int(input())

@@ -15,25 +15,20 @@ for _ in range(int(input())):
     else:
         curr2 = 8
     for i in range(len(s)):
-        if(c ==s[i]):
-            count +=1
+        if(c == s[i]):
+            count += 1
         else:
             if(c.isdigit()):
-                curr2 +=32
+                curr2 += 32
             else:
-                curr2+=8
+                curr2 += 8
             c = s[i]
-            if(count!=1):
+            if(count != 1):
                 ans = ans + str(count)
                 curr2 += 32
             ans = ans + str(s[i])
             count = 1
-    if(count!=1):
+    if(count != 1):
         ans = ans + str(count)
         curr2 += 32
     print(curr - curr2)
-
-
-
-
-
