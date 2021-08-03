@@ -5,4 +5,3 @@ def index(array, n):
         return num
     else:
         return -1
-

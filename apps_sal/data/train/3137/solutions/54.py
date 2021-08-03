@@ -1,5 +1,6 @@
 from math import floor, ceil
 
+
 def round_it(n):
     sn = str(n)
     i = sn.index('.')
@@ -7,5 +8,5 @@ def round_it(n):
         return round(n)
     elif i < len(sn) // 2:
         return ceil(n)
-    
+
     return floor(n)

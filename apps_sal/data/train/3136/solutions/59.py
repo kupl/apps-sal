@@ -11,4 +11,3 @@ def people_with_age_drink(age):
         return drinks['Young']
     if age >= 21:
         return drinks['Adults']
-

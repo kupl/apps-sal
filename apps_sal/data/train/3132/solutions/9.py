@@ -5,6 +5,6 @@ def alternate_sort(l):
 
     result = []
     while positives and negatives:
-        result.append( negatives.pop(0) )
-        result.append( positives.pop(0) )
+        result.append(negatives.pop(0))
+        result.append(positives.pop(0))
     return result + positives + negatives

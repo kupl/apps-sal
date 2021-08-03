@@ -1,5 +1,5 @@
 def people_with_age_drink(age):
-    
+
     if age in range(0, 14):
         return "drink toddy"
     elif age in range(14, 18):

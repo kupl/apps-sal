@@ -1,5 +1,6 @@
 from math import floor, ceil
 
+
 def round_it(n: float) -> int:
     """ Round the given number based on integer / fractal part. """
     _integer_len, _fractal_len = list(map(len, str(n).split(".")))

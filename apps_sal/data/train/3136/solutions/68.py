@@ -6,4 +6,3 @@ def people_with_age_drink(age):
     elif 18 <= age < 21:
         return 'drink beer'
     return 'drink whisky'
-

@@ -1,5 +1,5 @@
 def index(array, n):
-    
+
     try:
         if (n - 1) > len(array):
             return -1

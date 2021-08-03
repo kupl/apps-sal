@@ -1,8 +1,10 @@
 from math import log
 from collections import deque
-    
+
+
 def climb(n):
-    return [n//2**i for i in range(int(log(n, 2)) + 1)][::-1]
+    return [n // 2**i for i in range(int(log(n, 2)) + 1)][::-1]
+
 
 def climb(n):
     """This is much faster."""

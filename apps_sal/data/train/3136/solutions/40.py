@@ -1,4 +1,5 @@
-drink_pairs = {'kid':'toddy','teen':'coke','youngAdult':'beer','adult':'whisky'}
+drink_pairs = {'kid': 'toddy', 'teen': 'coke', 'youngAdult': 'beer', 'adult': 'whisky'}
+
 
 def people_with_age_drink(age):
     if age >= 21:

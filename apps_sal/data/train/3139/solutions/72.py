@@ -4,4 +4,3 @@ def index(array, n):
         return a
     except:
         return -1
-

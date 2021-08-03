@@ -1,5 +1,5 @@
 def people_with_age_drink(age):
-    rv =  'drink '
+    rv = 'drink '
     if age < 14:
         return rv + 'toddy'
     elif age < 18:
@@ -8,4 +8,3 @@ def people_with_age_drink(age):
         return rv + 'beer'
     else:
         return rv + 'whisky'
-

@@ -1,1 +1,1 @@
-index=lambda a,n:-(n>=len(a))or a[n]**n
+def index(a, n): return -(n >= len(a)) or a[n]**n

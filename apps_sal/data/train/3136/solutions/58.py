@@ -7,4 +7,4 @@ def people_with_age_drink(age):
     for d in drink:
         if age < d:
             return 'drink ' + drink[d]
-    return 'drink whisky'  
+    return 'drink whisky'

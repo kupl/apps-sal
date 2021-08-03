@@ -7,5 +7,6 @@ vaccinations = {
     "september": {"offer fluVaccine"}, "october": {"offer fluVaccine"}, "november": {"offer fluVaccine"},
 }
 
+
 def vaccine_list(age, status, month):
     return sorted(vaccinations[age] | vaccinations.get(status, set()) | vaccinations.get(month, set()))

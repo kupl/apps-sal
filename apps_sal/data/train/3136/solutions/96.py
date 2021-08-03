@@ -8,5 +8,5 @@ def people_with_age_drink(age):
         drink = "beer"
     else:
         drink = "whisky"
-        
+
     return "drink {}".format(drink)

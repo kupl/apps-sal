@@ -6,8 +6,7 @@ def index(array, n):
     else:
         pw = array[n]
         i = 1
-        while i !=  n:
+        while i != n:
             array[n] *= pw
             i += 1
         return(array[n])
-
