@@ -4,6 +4,6 @@ def candles(m, n):
     while candles >= 1 or leftovers >= n:
         answer += candles
         leftovers += candles
-        candles = leftovers//n
-        leftovers -= leftovers//n*n
+        candles = leftovers // n
+        leftovers -= leftovers // n * n
     return answer

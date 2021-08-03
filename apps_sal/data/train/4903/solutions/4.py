@@ -1,1 +1,1 @@
-nthterm = lambda first, n, c: first + n * c
+def nthterm(first, n, c): return first + n * c
