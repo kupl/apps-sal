@@ -1,6 +1,6 @@
 def no_space(x):
     new_string = ""
-    for letter in x: 
+    for letter in x:
         if letter == " ":
             continue
         else:

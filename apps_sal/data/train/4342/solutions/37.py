@@ -5,4 +5,3 @@ def no_space(x):
         output += i
 
     return output
-

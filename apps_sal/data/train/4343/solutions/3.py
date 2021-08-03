@@ -5,7 +5,6 @@ def max_match(sentence):
     if len(word) > 1:
         while not (word in VALID_WORDS):
             word = word[:-1]
-            if len(word) ==1:
-                break;
+            if len(word) == 1:
+                break
     return [word] + max_match(sentence.replace(word, "", 1))
-

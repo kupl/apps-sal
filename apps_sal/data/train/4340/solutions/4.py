@@ -4,6 +4,7 @@ from itertools import chain, combinations, combinations_with_replacement
 # thanks to "The capacity-C torch problem" by Roland Backhouse, Hai Truong
 # https://www.sciencedirect.com/science/article/pii/S0167642315000118
 
+
 def shortest_time(speed: [int]):
     forward_trips_num = 3       # for len(speed) == 4
     best_time = inf
@@ -20,9 +21,9 @@ def shortest_time(speed: [int]):
         for s in set(speed):
             # for every person the number of forward trips is one more than the number of return trips
             returns[s] += sum([trip.count(s) for trip in forward_trips]) - speed.count(s)
-            sum_return += returns[s]*s
+            sum_return += returns[s] * s
 
-        if best_time > sum_forward+sum_return:
+        if best_time > sum_forward + sum_return:
             best_time = sum_forward + sum_return
 #             path = list(forward_trips) + list(chain(*[[(s,)]*returns[s] for s in set(speed)]))
 #     print(path)

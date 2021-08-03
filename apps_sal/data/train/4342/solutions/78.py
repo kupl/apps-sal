@@ -5,4 +5,3 @@ def no_space(x):
         if i != " ":
             l = l + i
     return l
-

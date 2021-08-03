@@ -1,2 +1,2 @@
 import re
-no_space=lambda s:re.sub(r"\s",'',s)
+def no_space(s): return re.sub(r"\s", '', s)

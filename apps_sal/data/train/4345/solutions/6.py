@@ -13,4 +13,3 @@ def buy_or_sell(pairs, harvested_fruit):
     if fruit != harvested_fruit:
         return 'ERROR'
     return result
-

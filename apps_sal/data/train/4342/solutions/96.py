@@ -2,5 +2,4 @@ def no_space(x):
     string = x
     new = x.replace(' ', '')
     return new
-    #your code here
-
+    # your code here

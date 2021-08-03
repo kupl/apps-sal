@@ -1,5 +1,5 @@
 def hidden(num):
-    KEY = {    
+    KEY = {
         6: "a",
         1: "b",
         7: "d",
@@ -11,5 +11,5 @@ def hidden(num):
         0: "o",
         5: "t",
     }
-    
+
     return ''.join(KEY.get(int(n)) for n in str(num))

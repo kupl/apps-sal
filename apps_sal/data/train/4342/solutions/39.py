@@ -1,9 +1,8 @@
 def no_space(x):
-    kk=''
+    kk = ''
     for i in x:
-        if i==" ":
+        if i == " ":
             continue
         else:
-            kk=kk+i
+            kk = kk + i
     return kk
-

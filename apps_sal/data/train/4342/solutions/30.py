@@ -1,7 +1,5 @@
 def no_space(x):
 
-  ss = x.replace(' ','')
+    ss = x.replace(' ', '')
 
-
-  return ss
-
+    return ss
