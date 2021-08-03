@@ -19,7 +19,7 @@ class Solution:
         else:
             self.dp[i] = {j: ans}
         return ans
-    
+
     def minCost(self, n: int, cuts: List[int]) -> int:
         self.dp = {}
         return self.cal(0, n, sorted(cuts))

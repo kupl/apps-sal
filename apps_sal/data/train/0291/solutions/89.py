@@ -7,7 +7,7 @@
 #         output = 0
 #         for i in range(n-1, -1, -1):
 #             if i != n-1:
-#                 sumlist[i] += arr[i] + sumlist[i + 1] 
+#                 sumlist[i] += arr[i] + sumlist[i + 1]
 #             else:
 #                 sumlist[i] += arr[i]
 #             if sumlist[i] % 2 == 0:
@@ -46,5 +46,5 @@ class Solution:
             even += 1
             if x % 2:
                 odd, even = even, odd
-            res = (res + odd) % 1000000007             
-        return res         
+            res = (res + odd) % 1000000007
+        return res

@@ -11,4 +11,3 @@ class Solution:
                 c += odd
                 even += 1
         return c % (10**9 + 7)
-

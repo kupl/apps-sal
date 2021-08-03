@@ -10,6 +10,5 @@ class Solution:
             B.append(y)
             C.append(z)
             D.append(t)
-        
-        return max(list([max(x) - min(x) for x in [A, B, C, D]]))
 
+        return max(list([max(x) - min(x) for x in [A, B, C, D]]))

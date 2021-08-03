@@ -6,4 +6,4 @@ class Solution:
             if x % 2:
                 odd, even = even, odd
             res = (res + odd) % 1000000007
-        return res  
+        return res

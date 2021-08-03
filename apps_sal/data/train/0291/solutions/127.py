@@ -22,4 +22,3 @@ class Solution:
                 odd_cum_sums += 1
 
         return total_odd_sums % MOD
-

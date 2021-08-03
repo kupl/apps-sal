@@ -7,5 +7,5 @@ class Solution:
             cur ^= n & 1
             answer = (answer + count[1 ^ cur]) % MOD
             count[cur] += 1
-        
+
         return answer

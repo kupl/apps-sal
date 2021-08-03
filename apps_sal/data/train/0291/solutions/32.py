@@ -10,7 +10,7 @@ class Solution:
                 evens, odds = odds, evens + 1
             else:
                 evens += 1
-            
+
             acc += odds
             acc %= m
 

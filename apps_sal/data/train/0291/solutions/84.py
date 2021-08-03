@@ -15,9 +15,5 @@ class Solution:
             else:
                 res = (res + odd) % mod
                 even += 1
-                
-        return int(res)
-            
-            
-        
 
+        return int(res)

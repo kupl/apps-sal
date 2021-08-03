@@ -11,5 +11,5 @@ class Solution:
             else:
                 ans += odd
                 even += 1
-        
+
         return ans % mod

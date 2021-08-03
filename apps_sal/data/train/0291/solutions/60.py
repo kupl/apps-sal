@@ -9,4 +9,4 @@ class Solution:
             else:
                 even, odd = odd, even + 1
             ans = (ans + odd) % 1000000007
-        return ans 
+        return ans

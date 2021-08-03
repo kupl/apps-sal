@@ -1,11 +1,11 @@
 class Solution:
     memos = dict()
-    
+
     def numTilePossibilities(self, tiles: str) -> int:
         tiles = ''.join(sorted(tiles))
         uniques = self.step(tiles)
         return len(uniques) - 1
-    
+
     def step(self, tiles: str) -> set:
         if len(tiles) == 0:
             return {''}
@@ -22,4 +22,3 @@ class Solution:
                         uniques.add(new_str)
             self.memos[tiles] = uniques
         return self.memos[tiles]
-

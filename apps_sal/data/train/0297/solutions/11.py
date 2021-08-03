@@ -6,6 +6,7 @@ class Solution:
                 d[tiles[i]] += 1
             else:
                 d[tiles[i]] = 1
+
         def countnum(d):
             if (d == {}):
                 return 0
@@ -22,6 +23,3 @@ class Solution:
                     d[k] = 1
             return c
         return countnum(d)
-                
-        
-

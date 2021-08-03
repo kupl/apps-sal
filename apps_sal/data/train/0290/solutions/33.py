@@ -12,7 +12,7 @@ class Solution:
                     if min_value is None:
                         min_value = dp(i, cut) + dp(cut, j) + (j - i)
                     else:
-                        min_value = min(min_value, dp(i, cut) + dp(cut, j) + (j-i))
+                        min_value = min(min_value, dp(i, cut) + dp(cut, j) + (j - i))
 
             if min_value is None:
                 min_value = 0

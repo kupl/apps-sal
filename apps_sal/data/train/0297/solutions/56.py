@@ -14,7 +14,7 @@ class Solution:
         for node in nodes:
             self.backtrack(node, seen, node.char, paths)
         return len(paths)
-        
+
     def backtrack(self, node, seen: set, path: str, paths: set):
         if node in seen:
             return
@@ -25,7 +25,8 @@ class Solution:
             seen.add(node)
             self.backtrack(neighbor, seen, path, paths)
             seen.remove(node)
-        
+
+
 class Node:
     def __init__(self, char: str):
         self.char = char

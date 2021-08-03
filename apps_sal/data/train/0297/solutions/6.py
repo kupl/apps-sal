@@ -7,7 +7,7 @@ class Solution:
             if x not in tile_count:
                 tile_count[x] = 0
             tile_count[x] += 1
-        
+
         def walk(curr, tiles, words):
             #print(tiles, curr)
             for tile in tiles:

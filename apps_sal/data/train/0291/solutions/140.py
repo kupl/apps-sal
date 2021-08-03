@@ -10,10 +10,9 @@ class Solution:
         even[0] = 1 if arr[0] % 2 == 0 else 0
         for i in range(1, len(arr)):
             if arr[i] % 2 == 0:
-                odd[i] = odd[i-1]
-                even[i] = even[i-1] + 1
+                odd[i] = odd[i - 1]
+                even[i] = even[i - 1] + 1
             else:
-                odd[i] = even[i-1] + 1
-                even[i] = odd[i-1]
+                odd[i] = even[i - 1] + 1
+                even[i] = odd[i - 1]
         return sum(odd) % 1000000007
-

@@ -2,6 +2,7 @@ class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
         min_costs = {}
         cut_set = set(cuts)
+
         def find_min_cost(start: int, end: int):
             if (start, end) in min_costs:
                 return min_costs[(start, end)]
@@ -24,5 +25,5 @@ class Solution:
                     result = subresult
             min_costs[(start, end)] = result
             return result
-        
+
         return find_min_cost(0, n)

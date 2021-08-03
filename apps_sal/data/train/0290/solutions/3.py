@@ -1,6 +1,6 @@
 class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
-        
+
         @lru_cache(None)
         def dp(l, r):
             if any(l < c < r for c in cuts):
@@ -8,8 +8,3 @@ class Solution:
                 return ans
             return 0
         return dp(0, n)
-
-
-        
-        
-

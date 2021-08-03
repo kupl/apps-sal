@@ -4,9 +4,9 @@ class Solution:
         dic = collections.Counter()
         dic[0] += 1
         pre = ans = 0
-        for i,x in enumerate(arr):
+        for i, x in enumerate(arr):
             pre += x
             pre %= 2
-            ans = (ans + dic[pre^1]) % mod
+            ans = (ans + dic[pre ^ 1]) % mod
             dic[pre] += 1
         return ans

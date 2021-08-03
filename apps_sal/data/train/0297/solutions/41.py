@@ -5,5 +5,6 @@ class Solution:
             if collect[char]:
                 answer += self.counts(collect - collections.Counter(char))
         return answer
+
     def numTilePossibilities(self, c):
-        return self.counts(collections.Counter(c)) - 1    
+        return self.counts(collections.Counter(c)) - 1

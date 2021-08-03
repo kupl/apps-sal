@@ -1,9 +1,10 @@
 class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
         cache = dict()
+
         def recurse(start, end):
             key = (start, end)
-            if key in cache: 
+            if key in cache:
                 return cache[key]
             if start >= end:
                 return 0
@@ -14,7 +15,7 @@ class Solution:
                     first = recurse(start, cut)
                     second = recurse(cut, end)
                     minCost = min(minCost, len + first + second)
-            
+
             if minCost == float('inf'):
                 minCost = 0
             cache[key] = minCost
@@ -22,5 +23,3 @@ class Solution:
         cuts.sort()
         ans = recurse(0, n)
         return ans
-        
-

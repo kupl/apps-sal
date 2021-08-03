@@ -11,13 +11,14 @@ class Solution:
                 neighbor[cut] = [cuts[i - 1], None]
             else:
                 neighbor[cut] = [cuts[i - 1], cuts[i + 1]]
-        
+
         cache = dict()
         # left, right are exclusive
+
         def search(left: int, right: int) -> int:
             if (left, right) in cache:
                 return cache[(left, right)]
-            
+
             min_cost = None
             for cut in cuts:
                 if cut <= left or cut >= right:
@@ -25,20 +26,20 @@ class Solution:
                 leftnei, rightnei = neighbor[cut]
                 # neighbor[leftnei][1] = rightnei
                 # neighbor[rightnei][0] = leftnei
-                
+
                 cost = right - left
                 cost += search(left, cut)
                 cost += search(cut, right)
                 min_cost = cost if min_cost is None else min(min_cost, cost)
-                
+
                 # neighbor[leftnei][1] = cut
                 # neighbor[rightnei][0] = cut
-                
+
             if min_cost is None:
                 min_cost = 0
             cache[(left, right)] = min_cost
             return min_cost
-        
+
         ans = search(0, n)
         # print(cache)
         return ans

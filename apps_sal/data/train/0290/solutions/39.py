@@ -1,7 +1,7 @@
 class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
-        return self.cut(0, n, set(cuts), {}) 
-        
+        return self.cut(0, n, set(cuts), {})
+
     def cut(self, i, j, cuts, dp):
         v = float('inf')
         if (i, j) in dp:

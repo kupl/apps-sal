@@ -16,7 +16,7 @@ class Solution:
                         p2 -= 1
                     return True
             return False
-                    
+
         n = 1
         for i in range(1, len(tiles) + 1):
             n *= i

@@ -6,9 +6,9 @@ class Solution:
             if len(l) == 0:
                 res.add(s)
                 return
-            seq(s, l[1 : ])
+            seq(s, l[1:])
             for i in range(len(l)):
-                seq(s + l[i], l[ : i] + l[i + 1 : ])
+                seq(s + l[i], l[: i] + l[i + 1:])
 
         seq('', list(tiles))
 

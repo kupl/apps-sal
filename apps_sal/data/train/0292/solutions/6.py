@@ -6,5 +6,5 @@ class Solution:
             y.append(arr1[i] + arr2[i] - i)
             z.append(arr1[i] - arr2[i] + i)
             w.append(arr1[i] - arr2[i] - i)
-        
-        return max(map(lambda a: max(a) - min(a), (x,y,z,w)))
+
+        return max(map(lambda a: max(a) - min(a), (x, y, z, w)))

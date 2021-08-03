@@ -51,7 +51,7 @@ class Solution1:
         self.cuts_map[n] = n
         return self.dfs(0, n, set(), cuts)
 
-    
+
 class Solution:
     def dfs(self, start, end, path, cuts):
         if self.dp[self.cuts_map[start]][self.cuts_map[end]] != sys.maxsize:

@@ -1,8 +1,10 @@
 from functools import lru_cache
+
+
 class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
         cuts.sort()
-        
+
         @lru_cache(maxsize=None)
         def dfs(l, r):
             m = 0xffffffff
