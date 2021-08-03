@@ -5,7 +5,8 @@ d = [0] * 11
 
 
 def get(n, l, i):
-    if l < i: return (n, (d[i] * 11 * (int(n) % mod)) % mod)
+    if l < i:
+        return (n, (d[i] * 11 * (int(n) % mod)) % mod)
     t = ((int(n) % mod) * 10) % mod
     n = n[:-(2 * i - 1)] + '0' + n[-(2 * i - 1):]
     return (n, (d[i] * (t + int(n) % mod) % mod) % mod)

@@ -4,12 +4,14 @@ f = list(int(v) for v in input().split())
 
 ch = [list() for p in op]
 
-for i, p in enumerate(f): ch[p - 1].append(i + 1)  # children
+for i, p in enumerate(f):
+    ch[p - 1].append(i + 1)  # children
 
 q = [0]
 nl = 0  # number of leaves
 
-for i in range(n): q += ch[i]  # parents first
+for i in range(n):
+    q += ch[i]  # parents first
 
 x = [0] * n
 

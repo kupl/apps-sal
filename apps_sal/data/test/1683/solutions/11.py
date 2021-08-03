@@ -3,9 +3,9 @@ n = int(input())
 sum = 0
 line = input().split()
 
-freq = [];
+freq = []
 for i in range(0, 11):
-    freq.append(0);
+    freq.append(0)
 for item in line:
     freq[len(item)] += 1
 

@@ -1,8 +1,10 @@
 from collections import deque
 k = int(input())
 
-digsum = lambda x: sum(list(map(int, list(str(x)))))
-dignorm = lambda x: x / digsum(x)
+
+def digsum(x): return sum(list(map(int, list(str(x)))))
+def dignorm(x): return x / digsum(x)
+
 
 n = 1
 order = 1

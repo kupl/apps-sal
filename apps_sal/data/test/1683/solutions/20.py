@@ -53,7 +53,7 @@ for x in range(n):
 
     fact = 0
     for i in range(digs + 1, 11):
-        fact += dig_count[i];
+        fact += dig_count[i]
 
     num1, num2 = "", ""
     p = 0

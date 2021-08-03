@@ -6,7 +6,7 @@ ans = 0
 
 arr = list(map(int, input().split(" ")))
 
-counti = [0] * (11);
+counti = [0] * (11)
 
 maxi = -1
 
@@ -36,10 +36,10 @@ for i in range(n):
 
             req2 = req1 + "0"
         else:
-            posl = currl - f;
+            posl = currl - f
             req1 = ""
             for j in range(0, posl):
-                req1 += curr[j];
+                req1 += curr[j]
 
             req2 = req1
 

@@ -28,7 +28,8 @@ k = int(input())
 t = 9 if k > 9 else k
 for i in range(1, t + 1):
     print(i)
-if k <= 9: return
+if k <= 9:
+    return
 n = 19
 for _ in range(k - 9):
     print(n)

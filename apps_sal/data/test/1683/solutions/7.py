@@ -43,12 +43,14 @@ for i in arr:
     cur = 0
     for j in range(len(i) - 1, -1, -1):
         for k in range(cur + 1, 2 * cur + 2):
-            if(k == 2 * cur + 1): P[k] += int(i[j]) * (howmanyhavelengthgreater[cur + 1] + CT[cur + 1])  # >something
-            else: P[k] += int(i[j]) * (CT[cur + 1 - (2 * cur + 1 - k)])  # >something
+            if(k == 2 * cur + 1):
+                P[k] += int(i[j]) * (howmanyhavelengthgreater[cur + 1] + CT[cur + 1])  # >something
+            else:
+                P[k] += int(i[j]) * (CT[cur + 1 - (2 * cur + 1 - k)])  # >something
         cur += 1
     # print(P)
 
 
 for i in range(30):
-    ans = (ans + P[i] * pow(10, i, M)) % M;
+    ans = (ans + P[i] * pow(10, i, M)) % M
 print(ans)
