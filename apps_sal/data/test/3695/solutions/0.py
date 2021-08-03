@@ -5,7 +5,8 @@ for i in range(n):
     # to get the food in wait[i], wait __ seconds before running
     m = max(0, wait[i] - i - 1)
     M = t - i - 2
-    if m > M: continue
+    if m > M:
+        continue
     seg.append((m, -1))
     seg.append((M, 1))
 seg.sort()

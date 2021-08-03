@@ -2,7 +2,7 @@ n = int(input())
 a1 = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a = [0] + a
-d = [0] * (n + 1);
+d = [0] * (n + 1)
 mx = 0
 for i in range(1, n + 1):
     d[a[i]] = i

@@ -7,5 +7,6 @@ for i in range(N - 1):
     if(step >= 1):
         sum = sum + step
         A[i + 1] = A[i]
-    else: continue
+    else:
+        continue
 print(sum)

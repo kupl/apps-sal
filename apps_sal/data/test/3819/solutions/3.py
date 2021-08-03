@@ -2,14 +2,15 @@ n = int(input())
 a1 = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a = [0] + a
-d = [0] * (n + 1);
+d = [0] * (n + 1)
 mx = 0
 for i in range(1, n + 1):
     d[a[i]] = i
 mx = max(d[i] - i + 1 for i in range(1, n + 1))
 br = n - d[1] + 1
 b = True
-if(d[1] == 0): b = False
+if(d[1] == 0):
+    b = False
 for i in range(1, n + 1):
     if(i <= br):
         if(d[i] - d[1] == i - 1):

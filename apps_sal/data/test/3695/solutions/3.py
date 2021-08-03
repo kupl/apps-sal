@@ -2,7 +2,8 @@
 from heapq import heappush, heappop
 bowels, Time = list(map(int, input().split()))
 myLine = [-int(b) for b in input().split()]
-gulp = []; eat = 0
+gulp = []
+eat = 0
 for i in range(1, min(bowels + 1, Time)):
     while gulp and -gulp[0] >= Time - i:
         # remove the bowel with the highest time penalty

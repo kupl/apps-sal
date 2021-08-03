@@ -20,5 +20,7 @@ def main():
 
 
 while 1:
-    try: main()
-    except EOFError: break
+    try:
+        main()
+    except EOFError:
+        break
