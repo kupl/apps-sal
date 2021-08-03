@@ -10,7 +10,8 @@ def solve(ar):
                 time = l + 1
                 res.append(l)
             else:
-                if l >= time: time = l
+                if l >= time:
+                    time = l
                 res.append(time)
                 time += 1
         else:

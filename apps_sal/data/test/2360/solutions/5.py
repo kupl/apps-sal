@@ -1,4 +1,6 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 T = int(input())
 for ____ in range(T):
     n = int(input())

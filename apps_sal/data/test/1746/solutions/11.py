@@ -16,7 +16,8 @@ for i in range(1, n + 1):
         t = 0
 
         for j in range(2, n + 1):
-            if p[j - 2] == i and is_leaf(j): t += 1
+            if p[j - 2] == i and is_leaf(j):
+                t += 1
 
         if t < 3:
             print("No")
