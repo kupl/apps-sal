@@ -6,4 +6,3 @@ def capitalize(s, ind):
         except IndexError:
             break  # assumes the indexes are sorted
     return ''.join(result)
-

@@ -1,9 +1,9 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     output = ''
     for i in range(len(s)):
         if i in ind:
             if i < len(s):
                 output += s[i].upper()
         else:
-            output += s[i] 
+            output += s[i]
     return output

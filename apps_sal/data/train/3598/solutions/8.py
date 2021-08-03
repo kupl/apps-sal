@@ -17,7 +17,7 @@ def plane_seat(a):
             if let == 'D' or let == 'E' or let == 'F':
                 return ('Front-Middle')
             if let == 'G' or let == 'H' or let == 'K':
-                return ('Front-Right')   
+                return ('Front-Right')
         elif int(num2) >= 21 and int(num2) <= 40:
             if let == 'A' or let == 'B' or let == 'C':
                 return ('Middle-Left')
@@ -31,7 +31,7 @@ def plane_seat(a):
             if let == 'D' or let == 'E' or let == 'F':
                 return ('Back-Middle')
             if let == 'G' or let == 'H' or let == 'K':
-                return ('Back-Right')            
+                return ('Back-Right')
     elif len(a) == 2:
         if int(num1) >= 1 and int(num1) <= 20:
             if let == 'A' or let == 'B' or let == 'C':
@@ -39,8 +39,9 @@ def plane_seat(a):
             if let == 'D' or let == 'E' or let == 'F':
                 return ('Front-Middle')
             if let == 'G' or let == 'H' or let == 'K':
-                return ('Front-Right')   
-                 
+                return ('Front-Right')
+
+
 '''    
 1-20 - front
 21-40 - middle
@@ -50,5 +51,3 @@ A,B,C - left
 D,E,F - middle
 G,H,K - right
 '''
-
-

@@ -10,6 +10,7 @@ CLUSTERS = {
     'K': 'Right',
 }
 
+
 def plane_seat(a):
     row = int(a[:-1])
     col = a[-1:]

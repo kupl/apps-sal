@@ -5,5 +5,3 @@ def is_isogram(word):
         return len(set(word.count(c) for c in letters)) == 1
     except AttributeError:
         return False
-
-

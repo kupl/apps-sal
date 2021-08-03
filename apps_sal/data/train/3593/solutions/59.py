@@ -1,4 +1,4 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     new_list = []
     for i, letter in enumerate(s):
         if i in ind:
@@ -6,6 +6,3 @@ def capitalize(s,ind):
         else:
             new_list.append(letter)
     return ''.join(new_list)
-        
-        
-

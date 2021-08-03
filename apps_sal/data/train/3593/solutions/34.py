@@ -1,8 +1,8 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     t = ""
-    for num,x in enumerate(s):
+    for num, x in enumerate(s):
         if num in ind:
-            t+=x.upper()
+            t += x.upper()
         else:
-            t+=x
+            t += x
     return t

@@ -1,9 +1,8 @@
-def capitalize(s,arr):
-    s=list(s)    
+def capitalize(s, arr):
+    s = list(s)
     for i in arr:
         try:
-            s[i]=s[i].upper()
+            s[i] = s[i].upper()
         except IndexError:
-            continue       
+            continue
     return "".join(s)
-

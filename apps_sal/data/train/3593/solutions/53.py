@@ -1,4 +1,4 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     res = ""
     a = 0
     for i in s:

@@ -7,7 +7,6 @@ def nearest(m="g"):
         return (n + (z if m == "s" else -1)) // z * z
     return side
 
+
 smallest = nearest("s")
 greatest = nearest()
-
-

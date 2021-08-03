@@ -1,9 +1,9 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     res = ''
-    for i,v in enumerate(s):
+    for i, v in enumerate(s):
         if i in ind:
-            res+=v.upper()
+            res += v.upper()
         else:
-            res+=v.lower()
-    
+            res += v.lower()
+
     return res

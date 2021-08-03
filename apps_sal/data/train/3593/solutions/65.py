@@ -1,4 +1,4 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     s = list(s)
     last_indx = len(s) - 1
     for indx in ind:
@@ -7,5 +7,3 @@ def capitalize(s,ind):
         else:
             s[indx] = s[indx].upper()
     return ''.join(s)
-
-

@@ -1,4 +1,4 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     c = ""
     for i in range(len(s)):
         k = 0
@@ -11,4 +11,3 @@ def capitalize(s,ind):
         if k == 0:
             c += s[i]
     return c
-

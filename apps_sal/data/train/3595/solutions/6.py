@@ -1,4 +1,4 @@
-def work_on_strings(a,b):
+def work_on_strings(a, b):
 
     # New A and B
     corA = ''

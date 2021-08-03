@@ -7,4 +7,3 @@ def plane_seat(a):
         for side, seats in [('Left', 'ABC'), ('Middle', 'DEF'), ('Right', 'GHK')]
         for seat in seats
     }.get(a, 'No Seat!!')
-

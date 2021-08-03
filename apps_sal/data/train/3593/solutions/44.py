@@ -1,8 +1,8 @@
-def capitalize(x,a):
-    b=[]
+def capitalize(x, a):
+    b = []
     for i, e in enumerate(x):
         if i in a:
-            b+=e.upper()
+            b += e.upper()
         else:
-            b+=e
+            b += e
     return ''.join(b)
