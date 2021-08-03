@@ -11,4 +11,3 @@ def cows(n, lst):
 m = int(input())
 a = [int(j) for j in input().split()]
 print(cows(m, a))
-

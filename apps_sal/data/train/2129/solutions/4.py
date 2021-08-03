@@ -3,6 +3,7 @@
 def dist(a, b):
     return (b - a) % n
 
+
 n, m = list(map(int, input().split(" ")))
 
 sweets = {i: [] for i in range(n)}

@@ -1,15 +1,17 @@
 from queue import Queue
 
+
 def addEdge(s, t, flow):
     E[s].append((len(E[t]), t, flow))
-    E[t].append((len(E[s])-1, s, 0))
+    E[t].append((len(E[s]) - 1, s, 0))
+
 
 def mkLevel():
     nonlocal src, des, E, lvl
     for i in range(n):
         lvl[i] = -1
     lvl[src] = 0
-    
+
     q = Queue()
     q.put(src)
     while (not q.empty()):
@@ -23,6 +25,7 @@ def mkLevel():
                     return True
     return False
 
+
 def extend(cur, lim):
     nonlocal des, E
     if (lim == 0 or cur == des):
@@ -32,7 +35,7 @@ def extend(cur, lim):
         if (flow >= lim):
             break
         to = E[cur][j][1]
-        lim0 = min(lim-flow, E[cur][j][2])
+        lim0 = min(lim - flow, E[cur][j][2])
         if (E[cur][j][2] > 0 and lvl[to] == lvl[cur] + 1):
             newf = extend(to, lim0)
             if (newf > 0):
@@ -44,9 +47,10 @@ def extend(cur, lim):
         lvl[cur] = -1
     return flow
 
+
 def Dinic():
-#    for i in range(len(E)):
-#        print('i = {} : {}'.format(i, E[i]), flush = True)
+    #    for i in range(len(E)):
+    #        print('i = {} : {}'.format(i, E[i]), flush = True)
     flow = 0
     newf = 0
     while (mkLevel()):
@@ -55,6 +59,7 @@ def Dinic():
             flow += newf
             newf = extend(src, INF)
     return flow
+
 
 def check(mid):
     nonlocal E
@@ -66,11 +71,12 @@ def check(mid):
             addEdge(u[i], v[i], int(w[i] / mid))
     return (Dinic() >= bears)
 
-n,m,bears = list(map(int, input().split()))
+
+n, m, bears = list(map(int, input().split()))
 #print(n, m, bears, flush = True)
 INF = 0x3f3f3f3f
 src = 0
-des = n-1
+des = n - 1
 
 lo = 0.0
 hi = 0.0
@@ -79,7 +85,7 @@ u = [0 for i in range(m)]
 v = [0 for i in range(m)]
 w = [0 for i in range(m)]
 for i in range(m):
-    u[i],v[i],w[i] = list(map(int, input().split()))
+    u[i], v[i], w[i] = list(map(int, input().split()))
     #print(u[i], v[i], w[i], flush = True)
     u[i] -= 1
     v[i] -= 1
@@ -96,4 +102,3 @@ for i in range(100):
         hi = mid
 
 print('{:.10f}'.format(mid * bears))
-

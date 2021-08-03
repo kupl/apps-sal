@@ -45,4 +45,3 @@ sum = 1
 for i in range(ds.size // 2 - 1):
     sum = (sum * 2) % (10 ** 9 + 7)
 print(sum)
-

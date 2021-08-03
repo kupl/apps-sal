@@ -1,90 +1,64 @@
-n,w,h = list(map(int,input().split()))
-
+from bisect import bisect
+n, w, h = list(map(int, input().split()))
 
 
 D = []
 
 
-
 original = []
-
 
 
 for i in range(n):
 
-  g,p,t = list(map(int,input().split()))
+    g, p, t = list(map(int, input().split()))
 
+    a = p - t
 
+    p = p if g == 1 else -p
 
-  a = p-t
+    original.append(())
 
-
-
-  p = p if g == 1 else -p
-
-
-
-  original.append(())
-
-  D.append((a,p,i))
-
+    D.append((a, p, i))
 
 
 D.sort()
 
 
-
-from bisect import bisect
-
-
-
-res = [None]*n
-
+res = [None] * n
 
 
 i = 0
 
 while i < len(D):
 
-  a = D[i][0]
+    a = D[i][0]
 
-  j = bisect(D, (a+1,-n,0), lo=i)
+    j = bisect(D, (a + 1, -n, 0), lo=i)
 
-  m = bisect(D, (a,0,0), lo=i,hi=j)
+    m = bisect(D, (a, 0, 0), lo=i, hi=j)
 
+    L = D[i:j]
 
+    R = D[m:j] + D[i:m]
 
-  L = D[i:j]
+    for t in range(len(L)):
 
-  R = D[m:j]+D[i:m]
+        _, _, d = L[t]
 
+        _, p, _ = R[t]
 
+        if p > 0:
 
-  for t in range(len(L)):
+            res[d] = (p, h)
 
-    _,_,d = L[t]
+        else:
 
-    _,p,_ = R[t]
+            res[d] = (w, -p)
 
-    if p > 0:
-
-      res[d] = (p,h)
-
-    else:
-
-      res[d] = (w,-p)
+    i = j
 
 
-
-  i = j
-
-
-
-print('\n'.join(str(x)+' '+str(y) for x,y in res))
-
-
-
+print('\n'.join(str(x) + ' ' + str(y) for x, y in res))
 
 
 # Made By Mostafa_Khaled
-

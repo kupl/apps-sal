@@ -1,6 +1,6 @@
 from collections import defaultdict, deque
- 
- 
+
+
 def bfs(graph, inicio, destino, parent):
     parent.clear()
     queue = deque()
@@ -16,8 +16,8 @@ def bfs(graph, inicio, destino, parent):
                     return flow
                 queue.append((i, flow))
     return 0
- 
- 
+
+
 def maxflow(graph, inicio, destino):
     flow = 0
     parent = defaultdict(lambda: -1)
@@ -34,15 +34,15 @@ def maxflow(graph, inicio, destino):
         else:
             break
     return flow
- 
- 
+
+
 n, m, x = [int(i) for i in input().split()]
 graph = defaultdict(lambda: defaultdict(lambda: 0))
 for _ in range(m):
     t = [int(i) for i in input().split()]
     graph[t[0]][t[1]] = t[2]
- 
- 
+
+
 def check(k):
     meh = defaultdict(lambda: defaultdict(lambda: 0))
     for i in graph:
@@ -51,15 +51,15 @@ def check(k):
             meh[i][j] = ww
     flow = maxflow(meh, 1, n)
     return flow
- 
- 
+
+
 lo = 1 / x
 hi = check(1)
- 
+
 for _ in range(70):
-    mid = round((hi + lo) / 2,9)
-    if check(mid)>=x:
-        lo = round(mid,9)
+    mid = round((hi + lo) / 2, 9)
+    if check(mid) >= x:
+        lo = round(mid, 9)
     else:
         hi = mid
 print(format(lo * x, '.9f'))

@@ -1,6 +1,6 @@
 import math
 n = int(input())
-d = [0]*200200
+d = [0] * 200200
 a = [0]
 s = 0
 
@@ -16,7 +16,7 @@ for i in range(n):
     else:
         cc = len(a)
         s -= d[cc] + a.pop()
-        d[cc-1] += d[cc]
+        d[cc - 1] += d[cc]
         d[cc] = 0
     ans.append(str(s / len(a)))
 

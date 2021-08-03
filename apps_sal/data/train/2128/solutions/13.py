@@ -21,4 +21,3 @@ else:
             res.append(n0_cnt)
 
 print(sum(res))
-

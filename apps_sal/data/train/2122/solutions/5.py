@@ -1,6 +1,7 @@
 n = int(input())
 l, r = [0] * n, [0] * n
-f = lambda x, y: all(x > r[j] or y < l[j] for j in range(i))
+def f(x, y): return all(x > r[j] or y < l[j] for j in range(i))
+
 
 for i in range(n):
     x, d = map(int, input().split())

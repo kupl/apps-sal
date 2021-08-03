@@ -25,4 +25,3 @@ for _ in range(int(next(sys.stdin))):
     ans.append(str(s / len(d)))
 
 print('\n'.join(ans))
-
