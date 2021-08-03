@@ -2,7 +2,8 @@
 # same code as mmaxio
 from collections import Counter
 
-r = lambda: list(map(int, input().split()))
+
+def r(): return list(map(int, input().split()))
 
 
 def main():

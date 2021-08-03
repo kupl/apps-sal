@@ -11,7 +11,8 @@ INF = n
 
 
 def update(l, r, v):
-    L = l + N0; R = r + N0
+    L = l + N0
+    R = r + N0
     while L < R:
         if R & 1:
             R -= 1
@@ -20,7 +21,8 @@ def update(l, r, v):
         if L & 1:
             data[L - 1] = min(v, data[L - 1])
             L += 1
-        L >>= 1; R >>= 1
+        L >>= 1
+        R >>= 1
 # a_iの現在の値を取得
 
 

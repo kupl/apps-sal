@@ -1,6 +1,7 @@
 MOD = int(1e9 + 7)
 n, k = map(int, input().split())
-if k < 2: p = n - (1 - k)
+if k < 2:
+    p = n - (1 - k)
 else:
     t = 1
     a = k

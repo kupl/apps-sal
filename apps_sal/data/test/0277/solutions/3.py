@@ -1,5 +1,7 @@
 import math
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
+
+
 n, a, b = R()
 k = math.ceil(math.log(n, 2))
 i = 1

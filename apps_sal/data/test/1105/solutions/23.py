@@ -7,5 +7,6 @@ for s in range(solution):
     elif recovery[user] >= sol:
         continue
     else:
-        print('NO'); return
+        print('NO')
+        return
 print('YES')

@@ -32,18 +32,21 @@ class BalancingTree:
                         break
 
     def leftmost(self, nd):
-        if nd.left: return self.leftmost(nd.left)
+        if nd.left:
+            return self.leftmost(nd.left)
         return nd
 
     def rightmost(self, nd):
-        if nd.right: return self.rightmost(nd.right)
+        if nd.right:
+            return self.rightmost(nd.right)
         return nd
 
     def find_l(self, v):
         v += 1
         nd = self.root
         prev = 0
-        if nd.value < v: prev = nd.value
+        if nd.value < v:
+            prev = nd.value
         while True:
             if v <= nd.value:
                 if nd.left:
@@ -61,7 +64,8 @@ class BalancingTree:
         v += 1
         nd = self.root
         prev = 0
-        if nd.value > v: prev = nd.value
+        if nd.value > v:
+            prev = nd.value
         while True:
             if v < nd.value:
                 prev = nd.value
@@ -85,8 +89,10 @@ class BalancingTree:
 
     def delete(self, v, nd=None, prev=None):
         v += 1
-        if not nd: nd = self.root
-        if not prev: prev = nd
+        if not nd:
+            nd = self.root
+        if not prev:
+            prev = nd
         while v != nd.value:
             prev = nd
             if v <= nd.value:

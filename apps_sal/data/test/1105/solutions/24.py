@@ -10,5 +10,6 @@ for s in range(solution):
         continue
     else:
         # exit out of the program
-        print('NO'); return
+        print('NO')
+        return
 print('YES')

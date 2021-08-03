@@ -44,8 +44,10 @@ next1 = [-1]
 
 m1 = m2 = -1
 for i in range(n):
-    if s[i] == '1': m2 = i
-    if s[i] == '0': m1 = i
+    if s[i] == '1':
+        m2 = i
+    if s[i] == '0':
+        m1 = i
 
     next0.append(m1)
     next1.append(m2)
@@ -71,6 +73,7 @@ for x in range(1, n + 1):
                 start = next0[start + x] if next1[start + x] > next0[start + x] else next1[start + x]
                 start += 1
 
-    if not ans: flag = 1
+    if not ans:
+        flag = 1
 
     print(ans, end=' ')
