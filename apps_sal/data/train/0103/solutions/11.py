@@ -23,4 +23,3 @@ for case_num in range(t):
                     col.remove(j)
     lo = min(len(row), len(col))
     print("Ashish" if lo % 2 == 1 else "Vivek")
-

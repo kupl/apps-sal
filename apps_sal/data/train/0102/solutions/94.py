@@ -5,4 +5,3 @@ for i in range(int(input())):
         if (int(str(i) * len(n)) <= int(n)):
             counter += 1
     print(counter)
-

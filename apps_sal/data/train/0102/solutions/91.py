@@ -6,10 +6,9 @@ for t in range(int(input())):
     else:
         res = 9
         for item in arr:
-            if n > item*9:
+            if n > item * 9:
                 res += 9
             else:
                 res += n // item
                 break
     print(res)
-

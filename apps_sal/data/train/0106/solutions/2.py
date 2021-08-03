@@ -16,7 +16,7 @@ for i in range(t):
         if succeed:
             if sob[0][1] == -1:
                 pass
-            else: 
+            else:
                 success.append(sob[1])
             continue
         if sob[0][1] == -1:
@@ -34,4 +34,3 @@ for i in range(t):
         print(*alls)
     else:
         print(-1)
-

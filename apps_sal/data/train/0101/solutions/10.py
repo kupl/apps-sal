@@ -5,4 +5,3 @@ for _ in range(int(input())):
     x, y = c - r, c + r
     d = max(0, min(b, y) - max(x, a))
     print(b - a - d)
-

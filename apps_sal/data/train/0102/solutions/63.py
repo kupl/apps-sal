@@ -7,6 +7,7 @@ def rec(l, n):
             return (c, 0)
     return (c, 1)
 
+
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -18,4 +19,3 @@ for i in range(t):
         c += ans[0]
         x += 1
     print(c)
-

@@ -17,4 +17,3 @@ for _ in range(t):
     else:
         ans += max(0, b - (c + r)) + max(0, c - r - a)
     print(ans)
-

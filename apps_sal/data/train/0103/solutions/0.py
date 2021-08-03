@@ -10,4 +10,3 @@ for _ in range(t):
     res = min(rows, cols)
 
     print("Ashish" if res % 2 else "Vivek")
-

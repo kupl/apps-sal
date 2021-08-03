@@ -5,10 +5,10 @@ def check(data):
     left = set()
     for i, r in enumerate(s):
         left.add(r[1])
-        if i == len(s)-1:
+        if i == len(s) - 1:
             return '-1'
         m = max(m, r[0][1])
-        if s[i+1][0][0] > m:
+        if s[i + 1][0][0] > m:
             break
     res = ['1' if j in left else '2' for j in range(n)]
     return ' '.join(res)

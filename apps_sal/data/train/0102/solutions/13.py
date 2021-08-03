@@ -7,4 +7,3 @@ for i in range(n):
             if int(str(r) * k) <= t:
                 c += 1
     print(c)
-

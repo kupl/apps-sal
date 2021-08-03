@@ -7,4 +7,3 @@ for t in range(int(input())):
         else:
             break
     print(out)
-

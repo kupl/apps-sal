@@ -6,4 +6,3 @@ for i in range(t):
     rgb.sort()
     ans = min(sum(rgb) // 2, sum(rgb[:2]))
     print(ans)
-

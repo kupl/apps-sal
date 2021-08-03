@@ -17,4 +17,3 @@ for t in range(T):
         print("Vivek")
     else:
         print("Ashish")
-

@@ -30,5 +30,3 @@ for t in range(n):
         print(-1)
     else:
         print(' '.join(map(str, ans)))
-
-

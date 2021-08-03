@@ -32,7 +32,6 @@ def get_groups(ranges):
     return ' '.join(list(map(str, (rng[3] for rng in ranges))))
 
 
-
 def __starting_point():
     n = int(input())
     for i in range(n):
@@ -41,5 +40,6 @@ def __starting_point():
         for j in range(k):
             arr[j] = list(map(int, input().split())) + [j, -1]
         print(get_groups(arr))
+
 
 __starting_point()

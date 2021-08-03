@@ -7,9 +7,3 @@ for _ in range(int(input())):
     for v in arr:
         cnt += (k - v) // mn
     print(cnt)
-
-
-
-
-
-

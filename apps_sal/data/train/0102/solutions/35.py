@@ -11,4 +11,3 @@ while t > 0:
     print(ans)
 
     t -= 1
-

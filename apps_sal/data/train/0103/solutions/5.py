@@ -18,4 +18,3 @@ for _ in range(int(input())):
         print('Ashish')
     else:
         print('Vivek')
-

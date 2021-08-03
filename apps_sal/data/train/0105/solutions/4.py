@@ -7,6 +7,6 @@ for _ in range(t):
     a = a[1:]
     total = 0
     for b in a:
-        total += (k-b)//m
+        total += (k - b) // m
 
     print(total)

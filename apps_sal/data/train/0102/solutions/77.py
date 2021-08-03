@@ -1,7 +1,7 @@
 def main():
     best = []
     for i in range(1, 20):
-        for j in ['1','2','3','4','5','6','7','8','9']:
+        for j in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             best.append(int(j * i))
 
     m = int(input())
@@ -17,4 +17,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

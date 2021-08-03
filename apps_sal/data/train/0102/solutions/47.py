@@ -13,6 +13,3 @@ for i in range(t):
                 g *= 10
 
     print(c)
-
-
-

@@ -2,6 +2,7 @@
 L = 0
 R = 1
 
+
 def main():
     buf = input()
     T = int(buf)
@@ -26,7 +27,7 @@ def main():
             elif threshold < lr_s[j][R]:
                 threshold = lr_s[j][R]
         if threshold_final == None:
-            print(-1) # impossible
+            print(-1)  # impossible
             continue
         answer = ""
         for j in range(n[i]):
@@ -38,7 +39,9 @@ def main():
                 answer += " "
         print(answer)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

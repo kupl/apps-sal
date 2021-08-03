@@ -6,7 +6,7 @@ for _ in range(int(input())):
     for i in range(n):
         if 1 in arr[i]:
             rows += 1
-    rows = n-rows
+    rows = n - rows
 
     cols = 0
     for j in range(m):
@@ -15,10 +15,9 @@ for _ in range(int(input())):
                 cols += 1
                 break
 
-    cols = m-cols
+    cols = m - cols
 
     if min(cols, rows) % 2 == 0:
         print("Vivek")
     else:
         print("Ashish")
-

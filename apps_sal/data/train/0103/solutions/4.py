@@ -25,4 +25,3 @@ for t in range(T):
         print('Ashish')
     else:
         print('Vivek')
-

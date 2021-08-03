@@ -10,4 +10,3 @@ for i in range(n):
         if (int(s) * (i + 1) <= la):
             col += 1
     print(col)
-

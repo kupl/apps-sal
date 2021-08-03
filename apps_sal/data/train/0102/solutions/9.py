@@ -7,4 +7,3 @@ for _ in range(int(input())):
             count += 1
             i += 1
     print(count)
-

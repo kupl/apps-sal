@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 for _ in range(ii()):
     n = ii()
@@ -20,4 +25,3 @@ for _ in range(ii()):
         print(*ans)
     else:
         print(-1)
-
