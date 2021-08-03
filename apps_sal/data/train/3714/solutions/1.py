@@ -40,4 +40,3 @@ def decoder(data):
     if key != '':
         decoded.append(dictionary[int(key)])
     return ''.join(decoded)
-

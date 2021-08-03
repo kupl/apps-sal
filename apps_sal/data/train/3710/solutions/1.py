@@ -1,11 +1,11 @@
 def ulam_sequence(u0, u1, n):
     # set up variables
     seq = [u0, u1]
-    candidates = (u0+u1) * n * [0]
+    candidates = (u0 + u1) * n * [0]
     candidates[u0 + u1] = 1
     num = u1 + 1
-    
-    for _ in range(n-2):
+
+    for _ in range(n - 2):
         # find smallest candidate
         while candidates[num] != 1:
             num += 1
@@ -18,5 +18,5 @@ def ulam_sequence(u0, u1, n):
         # update sequence
         seq.append(num)
         num += 1
-    
+
     return seq

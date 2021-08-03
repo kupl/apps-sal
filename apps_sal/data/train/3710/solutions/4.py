@@ -1,6 +1,6 @@
 def ulam_sequence(u0, u1, n):
     sequence = [u0, u1]
-    good = {u0+u1}
+    good = {u0 + u1}
     bad = set()
     while len(sequence) < n:
         k = min(good)
@@ -14,4 +14,3 @@ def ulam_sequence(u0, u1, n):
                 good.add(s)
         sequence.append(k)
     return sequence
-

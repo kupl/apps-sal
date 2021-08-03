@@ -5,4 +5,4 @@ def divisors(n):
         if n % i == 0:
             numeri += 1
         i += 1
-    return numeri   
+    return numeri

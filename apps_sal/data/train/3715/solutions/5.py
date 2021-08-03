@@ -4,7 +4,8 @@ for i in range(2, 14):
     lst.append(x)
     temp = lst[:]
     for j in temp[:-1]:
-        lst.append(j+x)
+        lst.append(j + x)
+
 
 def nth_chandos_number(n):
-    return lst[n-1]
+    return lst[n - 1]

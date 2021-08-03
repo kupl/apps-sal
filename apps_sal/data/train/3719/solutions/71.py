@@ -1,3 +1,3 @@
 def starting_mark(height):
-    #Oof
+    # Oof
     return round(9.45 + (10.67 - 9.45) / (1.83 - 1.52) * (height - 1.52), 2)

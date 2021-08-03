@@ -5,5 +5,5 @@ def starting_mark(height):
     #  1.22 = 0.31*a
     # a = 3.93548
     a = 1.22 / 0.31
-    b = 9.45-1.52*a
-    return round(a*height + b,2)
+    b = 9.45 - 1.52 * a
+    return round(a * height + b, 2)

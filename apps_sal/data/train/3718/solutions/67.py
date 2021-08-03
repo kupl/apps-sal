@@ -4,5 +4,5 @@ def divisors(n):
     while x < n:
         if n % x == 0:
             y.append(x)
-        x +=1
+        x += 1
     return len(y) + 1
