@@ -6,6 +6,3 @@ def paperwork(n, m):
     else:
         result = n * m
         return result
-    
-   
-

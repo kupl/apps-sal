@@ -4,6 +4,4 @@ def paperwork(n, m):
     elif(m < 0):
         return 0
     elif(n or m > 0):
-        return n*m
-
-
+        return n * m

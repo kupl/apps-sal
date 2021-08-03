@@ -1,5 +1,6 @@
 import math
 
+
 def is_divisible(wall_length, pixel_size):
     # Your code here.
     division = (wall_length % pixel_size)

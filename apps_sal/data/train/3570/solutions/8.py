@@ -1,7 +1,7 @@
 def solve(arr):
     arr.sort()
     print(arr)
-    for x in range(1,sum(arr)+1):
+    for x in range(1, sum(arr) + 1):
         working_arr = []
         if x in arr:
             continue
@@ -11,4 +11,3 @@ def solve(arr):
                 if sum(working_arr) < x:
                     return x
     return sum(arr) + 1
-

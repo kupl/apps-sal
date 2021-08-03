@@ -1,2 +1,2 @@
 def is_divisible(wall_length, pixel_size):
-    return not wall_length/pixel_size%1
+    return not wall_length / pixel_size % 1

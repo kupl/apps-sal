@@ -1,2 +1,2 @@
 def invite_more_women(A):
-    return sum(A)>0
+    return sum(A) > 0

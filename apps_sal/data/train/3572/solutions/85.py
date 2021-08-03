@@ -9,4 +9,3 @@ def invite_more_women(arr):
     if w < m:
         return True
     return False
-

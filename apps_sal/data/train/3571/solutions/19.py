@@ -8,5 +8,4 @@
 # edge cases - decimals aren't allowed, only whole numbers, empty inputs aren't allowed
 
 def is_divisible(wall_length, pixel_size):
-       return wall_length % pixel_size == 0
-
+    return wall_length % pixel_size == 0

@@ -1,9 +1,8 @@
 def paperwork(n, m):
-    if n>0 and m>0:
+    if n > 0 and m > 0:
         b = n * m
     else:
-        b=0
+        b = 0
     return b
-    
-    # Happy Coding! ^_^
 
+    # Happy Coding! ^_^

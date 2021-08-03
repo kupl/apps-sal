@@ -1,2 +1,2 @@
 def paperwork(n, m):
-    return n*m*(min(m,n)>=0)
+    return n * m * (min(m, n) >= 0)

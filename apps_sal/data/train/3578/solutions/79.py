@@ -1,17 +1,5 @@
 def paperwork(n, m):
-    if n<0 or m<0:
+    if n < 0 or m < 0:
         return 0
-    d=n*m
+    d = n * m
     return d
-        
-       
-        
-   
- 
-   
-   
-    
-       
-   
-        
-
