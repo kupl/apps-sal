@@ -5,10 +5,10 @@ while t:
     arr = list(map(int, input().split()))
     m = 0
     for i in arr:
-        k = n/i
+        k = n / i
         if k != int(k):
             k = int(k) + 1
         if k > m:
             m = k
     print(int(m))
-    t -=  1
+    t -= 1
