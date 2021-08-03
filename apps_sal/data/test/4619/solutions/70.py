@@ -10,5 +10,9 @@ for _ in range(N):
         v = max(v, y)
     if a == 4:
         V = min(V, y)
-f = lambda x: x if x > 0 else 0
+
+
+def f(x): return x if x > 0 else 0
+
+
 print(f(U - u) * f(V - v))

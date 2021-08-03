@@ -1,5 +1,8 @@
 W, H, N = map(int, input().split())
-l = 0; r = W; u = H; d = 0
+l = 0
+r = W
+u = H
+d = 0
 
 for i in range(N):
     x, y, a = map(int, input().split())

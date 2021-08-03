@@ -56,9 +56,12 @@ kaijo_memo = []
 
 
 def kaijo(n):
-    if(len(kaijo_memo) > n): return kaijo_memo[n]
-    if(len(kaijo_memo) == 0): kaijo_memo.append(1)
-    while(len(kaijo_memo) <= n): kaijo_memo.append(kaijo_memo[-1] * len(kaijo_memo) % MOD)
+    if(len(kaijo_memo) > n):
+        return kaijo_memo[n]
+    if(len(kaijo_memo) == 0):
+        kaijo_memo.append(1)
+    while(len(kaijo_memo) <= n):
+        kaijo_memo.append(kaijo_memo[-1] * len(kaijo_memo) % MOD)
     return kaijo_memo[n]
 
 
@@ -66,15 +69,20 @@ gyaku_kaijo_memo = []
 
 
 def gyaku_kaijo(n):
-    if(len(gyaku_kaijo_memo) > n): return gyaku_kaijo_memo[n]
-    if(len(gyaku_kaijo_memo) == 0): gyaku_kaijo_memo.append(1)
-    while(len(gyaku_kaijo_memo) <= n): gyaku_kaijo_memo.append(gyaku_kaijo_memo[-1] * pow(len(gyaku_kaijo_memo), MOD - 2, MOD) % MOD)
+    if(len(gyaku_kaijo_memo) > n):
+        return gyaku_kaijo_memo[n]
+    if(len(gyaku_kaijo_memo) == 0):
+        gyaku_kaijo_memo.append(1)
+    while(len(gyaku_kaijo_memo) <= n):
+        gyaku_kaijo_memo.append(gyaku_kaijo_memo[-1] * pow(len(gyaku_kaijo_memo), MOD - 2, MOD) % MOD)
     return gyaku_kaijo_memo[n]
 
 
 def nCr(n, r):
-    if n == r: return 1
-    if n < r or r < 0: return 0
+    if n == r:
+        return 1
+    if n < r or r < 0:
+        return 0
     ret = 1
     ret = ret * kaijo(n) % MOD
     ret = ret * gyaku_kaijo(r) % MOD
@@ -94,8 +102,10 @@ def factorization(n):
                 cnt += 1
                 temp //= i
             arr.append([i, cnt])
-    if temp != 1: arr.append([temp, 1])
-    if arr == []: arr.append([n, 1])
+    if temp != 1:
+        arr.append([temp, 1])
+    if arr == []:
+        arr.append([n, 1])
     return arr
 
 #####MakeDivisors######
@@ -128,7 +138,8 @@ def make_primes(N):
 
 
 def gcd(a, b):
-    while b: a, b = b, a % b
+    while b:
+        a, b = b, a % b
     return a
 
 #####LCM#####
@@ -151,7 +162,8 @@ def count_bit(n):
 
 
 def base_10_to_n(X, n):
-    if X // n: return base_10_to_n(X // n, n) + [X % n]
+    if X // n:
+        return base_10_to_n(X // n, n) + [X % n]
     return [X % n]
 
 
@@ -161,7 +173,8 @@ def base_n_to_10(X, n):
 
 def base_10_to_n_without_0(X, n):
     X -= 1
-    if X // n: return base_10_to_n_without_0(X // n, n) + [X % n]
+    if X // n:
+        return base_10_to_n_without_0(X // n, n) + [X % n]
     return [X % n]
 
 #####IntLog#####

@@ -16,7 +16,7 @@ def phi(u):
 def binpow(u, a, mod):
     ans = 1
     if a == 0:
-        return 1;
+        return 1
     while a > 0:
         if a % 2 == 0:
             u = (u ** 2) % mod

@@ -1,5 +1,6 @@
 sc = map(int, open(0).read().split())
-ni = lambda: next(sc)
+def ni(): return next(sc)
+
 
 T = ni()
 for _ in range(T):

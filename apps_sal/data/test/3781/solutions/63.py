@@ -1,7 +1,9 @@
 import io
 import os
 #input = io.BytesIO(os.read(0,os.fstat(0).st_size)).readline
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 for _ in range(int(input())):
     n = int(input())
     a = list(R())

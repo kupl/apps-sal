@@ -54,8 +54,10 @@ def update(root, start, value):
 
 
 def query(root, start, end):
-    if root.start >= start and root.end <= end: return root.val
-    elif root.start > end or root.end < start: return 0
+    if root.start >= start and root.end <= end:
+        return root.val
+    elif root.start > end or root.end < start:
+        return 0
     else:
         temp1 = query(root.left, start, end)
         temp2 = query(root.right, start, end)
@@ -82,7 +84,8 @@ for i in range(n):
     ind1 = index[s1[i]].popleft()
     if ind1 == pointer:
         myset.add(pointer)
-        while pointer in myset: pointer += 1
+        while pointer in myset:
+            pointer += 1
     else:
         myset.add(ind1)
         ans += ind1 - pointer

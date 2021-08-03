@@ -72,7 +72,8 @@ for iii_ in range(T_):
     now = 10**10
     for i in range(N - 1, -1, -1):
         x = min(now - 1, za[i])
-        if x <= 0: break
+        if x <= 0:
+            break
         now = x
         r += x
     print(r)
