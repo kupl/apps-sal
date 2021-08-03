@@ -1,1 +1,1 @@
-array_plus_array = lambda arr1,arr2: sum(arr1+arr2)
+def array_plus_array(arr1, arr2): return sum(arr1 + arr2)

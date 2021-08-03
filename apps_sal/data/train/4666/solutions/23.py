@@ -1,4 +1,4 @@
-def array_plus_array(arr1,arr2):
+def array_plus_array(arr1, arr2):
     counter_one = 0
     counter_two = 0
     for integers in arr1:

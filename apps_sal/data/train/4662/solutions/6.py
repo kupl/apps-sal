@@ -9,6 +9,8 @@ for i in range(2, len(primes)):
         primes[i * i::i] = 0
 
 non_primes = [1, 4, 6, 8, 9, 10, 14, 16, 18]
+
+
 def gen_non_primes():
     for x in count(non_primes[-1] + 1):
         if primes[x]:
@@ -18,7 +20,8 @@ def gen_non_primes():
             continue
         non_primes.append(x)
         yield x
-        
+
+
 def solve(n):
     if n < len(non_primes):
         return non_primes[n]

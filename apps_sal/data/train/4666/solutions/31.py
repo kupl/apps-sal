@@ -1,4 +1,4 @@
-def array_plus_array(arr1,arr2):
+def array_plus_array(arr1, arr2):
     sol = 0
     for a in arr1:
         sol = sol + a

@@ -6,7 +6,7 @@ def puzzle_tiles(width, height):
                 yield ' _|' + '     _|' * width
                 yield '(_' + '   _ (_' * width
                 yield ' |' + '__( )_|' * width
-            else:        
+            else:
                 yield ' |_' + '     |_' * width
                 yield '  _)' + ' _   _)' * width
                 yield ' |' + '__( )_|' * width

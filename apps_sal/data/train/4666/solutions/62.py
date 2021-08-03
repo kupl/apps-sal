@@ -1,7 +1,6 @@
-def array_plus_array(arr1,arr2,sum=0):
+def array_plus_array(arr1, arr2, sum=0):
     for i in arr1:
-        sum+=i
+        sum += i
     for i in arr2:
-        sum+=i
+        sum += i
     return sum
-
