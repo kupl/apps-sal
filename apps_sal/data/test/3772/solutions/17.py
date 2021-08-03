@@ -4,8 +4,10 @@ from math import *
 from sys import *
 from string import *
 setrecursionlimit(10**7)
-RI = lambda: list(map(int, input().split()))
-RS = lambda: input().rstrip().split()
+def RI(): return list(map(int, input().split()))
+def RS(): return input().rstrip().split()
+
+
 #################################################
 n, m = RI()
 ans = 0

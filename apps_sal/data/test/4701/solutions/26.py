@@ -1,4 +1,5 @@
-n, k = int(input()), int(input()); a = 1
+n, k = int(input()), int(input())
+a = 1
 while a <= k:
     if n == 0:
         print(a)

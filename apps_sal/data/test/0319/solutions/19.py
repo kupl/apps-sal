@@ -8,6 +8,10 @@ l = list(d.values())
 for i in r:
     f = True
     for j in range(m):
-        if i[j] == '1' and l[j] == 1: f = False; break
-    if f: print("YES"); return
+        if i[j] == '1' and l[j] == 1:
+            f = False
+            break
+    if f:
+        print("YES")
+        return
 print("NO")

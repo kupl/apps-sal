@@ -1,7 +1,10 @@
 
 from sys import stdin, stdout
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 S = list(stdin.readline().strip())
 Q = int(input())
 n = len(S)

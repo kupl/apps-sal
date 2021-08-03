@@ -2,7 +2,8 @@ s = input()
 [a, b] = (s.split())
 a = int(a)
 b = int(b)
-if b > a: a, b = b, a
+if b > a:
+    a, b = b, a
 ans = 0
 while b != 0:
     c = a % b

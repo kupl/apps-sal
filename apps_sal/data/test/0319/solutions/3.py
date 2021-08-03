@@ -21,5 +21,7 @@ for j in range(m):
             c += 1
     if c == 1:
         f[l] = False
-if True in f: print('YES')
-else: print('NO')
+if True in f:
+    print('YES')
+else:
+    print('NO')

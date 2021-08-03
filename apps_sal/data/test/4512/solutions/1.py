@@ -58,8 +58,10 @@ def update(root, start, value):
 
 
 def query(root, start, end):
-    if root.start >= start and root.end <= end: return root.lis
-    elif root.start > end or root.end < start: return [0] * 26;
+    if root.start >= start and root.end <= end:
+        return root.lis
+    elif root.start > end or root.end < start:
+        return [0] * 26
     else:
         mid = (start + end) >> 1
         return givesum(query(root.left, start, end), query(root.right, start, end))
@@ -77,6 +79,8 @@ for _ in range(int(input())):
         temp1 = query(root, int(templist[1]) - 1, int(templist[2]) - 1)
         total = 0
         for i in temp1:
-            if i: total += 1
+            if i:
+                total += 1
         ansarun.append(total)
-for i in ansarun: print(i)
+for i in ansarun:
+    print(i)

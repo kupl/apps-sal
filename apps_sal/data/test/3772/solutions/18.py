@@ -3,9 +3,9 @@ a, b = map(int, input().split())
 
 def res(a, b):
     if a == 1:
-        return b;
+        return b
     if b == 1:
-        return a;
+        return a
     q = b // a
     b = b % a
     q += a // b
