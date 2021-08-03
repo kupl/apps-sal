@@ -54,18 +54,22 @@ def main():
         t = heappop(h)
         for p in g[t.location]:
             n_Ag = t.remaining_Ag - p.fare
-            if n_Ag < 0: continue
+            if n_Ag < 0:
+                continue
             cf = time[p.to][n_Ag]
             n_time = t.consumption_time + p.travel_time
-            if cf <= n_time: continue
+            if cf <= n_time:
+                continue
             time[p.to][n_Ag] = n_time
             heappush(h, Traveler(consumption_time=n_time, remaining_Ag=n_Ag, location=p.to))
 
         e_time = t.consumption_time + exchange[t.location].exchange_time
         e_Ag = t.remaining_Ag + exchange[t.location].Ag
-        if e_Ag > MX_AG: continue
+        if e_Ag > MX_AG:
+            continue
         cf = time[t.location][e_Ag]
-        if cf <= e_time: continue
+        if cf <= e_time:
+            continue
         time[t.location][e_Ag] = e_time
         heappush(h, Traveler(consumption_time=e_time, remaining_Ag=e_Ag, location=t.location))
 
@@ -75,5 +79,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

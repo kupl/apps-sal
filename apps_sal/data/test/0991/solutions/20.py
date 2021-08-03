@@ -60,5 +60,4 @@ for i in range(1, n + 1):
     for j in range(n * 50 + 1):
         ans[i] = min(ans[i], dp[i][j])
 
-print(*ans[2 : (n + 1)], sep="\n")
-
+print(*ans[2: (n + 1)], sep="\n")

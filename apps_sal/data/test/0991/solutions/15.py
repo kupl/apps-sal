@@ -1,5 +1,7 @@
 
 from heapq import heappush, heappop
+
+
 def resolve():
     INF = float('inf')
     maxMoney = 2502
@@ -58,5 +60,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

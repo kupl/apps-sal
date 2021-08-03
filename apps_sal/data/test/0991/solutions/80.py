@@ -5,9 +5,9 @@ INF = 10**100
 MAX = 2500
 N, M, S = list(map(int, input().split()))
 S = min(S, MAX)
-G = [[] for _ in [0]*N]
+G = [[] for _ in [0] * N]
 C = []
-for _ in [0]*M:
+for _ in [0] * M:
     u, v, a, b = list(map(int, input().split()))
     u -= 1
     v -= 1
@@ -19,17 +19,20 @@ for i in range(N):
     C.append((a, b))
 
 # dijkstra
-dp = [[INF]*MAX for _ in [0]*N]
+dp = [[INF] * MAX for _ in [0] * N]
 q = []
+
+
 def push(t, s, v):
     if s < 0:
         return
     if s >= MAX:
-        s = MAX-1
+        s = MAX - 1
     if dp[v][s] <= t:
         return
     dp[v][s] = t
     heappush(q, (t, s, v))
+
 
 push(0, S, 0)
 
@@ -39,10 +42,10 @@ while q:
         continue
 
     c, d = C[v]
-    push(t+d, s+c, v)
+    push(t + d, s + c, v)
 
     for u, a, b in G[v]:
-        push(t+b, s-a, u)
+        push(t + b, s - a, u)
 
 # output
 for d in dp[1:]:
@@ -51,4 +54,3 @@ for d in dp[1:]:
         if ans > d[s]:
             ans = d[s]
     print(ans)
-

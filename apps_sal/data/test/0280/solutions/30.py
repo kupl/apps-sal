@@ -33,4 +33,3 @@ for ws in permutations(sorted(W)):
     ans = min(ans, dp[-1])
 
 print(ans)
-

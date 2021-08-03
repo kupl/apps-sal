@@ -4,6 +4,7 @@ from bisect import bisect_left, bisect_right
 import sys
 input = sys.stdin.readline
 
+
 def solve():
     INF = 10**15
 
@@ -28,22 +29,22 @@ def solve():
 
     ans = INF
     for Camels in permutations(Ws, N):
-        accCamels = [0]+list(accumulate(Camels))
-        Lss = [[INF]*(N) for _ in range(N)]
+        accCamels = [0] + list(accumulate(Camels))
+        Lss = [[INF] * (N) for _ in range(N)]
         for i in range(N):
             if Camels[i] > minV:
                 Lss[i][i] = INF
             else:
                 Lss[i][i] = 0
-            for j in range(i+1, N):
-                wgt = accCamels[j+1] - accCamels[i]
+            for j in range(i + 1, N):
+                wgt = accCamels[j + 1] - accCamels[i]
                 iV = bisect_left(bdrVs, wgt) - 1
                 Lss[i][j] = bdrLs[iV]
 
         costs = [0] * N
         for i in range(1, N):
             cost = 0
-            for j in range(i+1):
+            for j in range(i + 1):
                 c2 = costs[j] + Lss[j][i]
                 if c2 > cost:
                     cost = c2
@@ -59,4 +60,3 @@ def solve():
 
 
 solve()
-

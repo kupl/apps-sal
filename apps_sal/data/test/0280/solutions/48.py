@@ -34,4 +34,3 @@ www = list(map(int, input().split()))
 lv = [tuple(map(int, input().split())) for _ in range(m)]
 ans = solve(n, m, www, lv)
 print(ans)
-

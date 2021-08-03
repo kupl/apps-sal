@@ -50,4 +50,3 @@ while Q:
                 heapq.heappush(Q, (new_value, *new_key))
 
 print(*ans[1:], sep="\n")
-

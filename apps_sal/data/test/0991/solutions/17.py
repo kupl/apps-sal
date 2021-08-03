@@ -8,8 +8,8 @@ def main():
     edges = [[] for _ in range(n)]
     for _ in range(m):
         from_, to, cost, time = list(map(int, input().split()))
-        edges[from_-1].append((to-1, cost, time))
-        edges[to-1].append((from_-1, cost, time))
+        edges[from_ - 1].append((to - 1, cost, time))
+        edges[to - 1].append((from_ - 1, cost, time))
 
     banks = []
     for i in range(n):
@@ -34,7 +34,7 @@ def main():
         new_coin = current_coin + coin
         if new_coin >= 2500:
             new_coin = 2499
-        push_todo(node, new_coin, current_time+time)
+        push_todo(node, new_coin, current_time + time)
 
     todo = [(0, 0, s)]  # time, node, coin
     while todo:
@@ -48,7 +48,7 @@ def main():
         charge(node, current_coin, current_time)
 
         for to, cost, time in edges[node]:
-            push_todo(to, current_coin-cost, current_time+time)
+            push_todo(to, current_coin - cost, current_time + time)
 
     for a in ans[1:]:
         print(a)
@@ -56,5 +56,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

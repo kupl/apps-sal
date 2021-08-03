@@ -5,7 +5,9 @@ w = list(map(int, input().split()))
 lv = [list(map(int, input().split()))[::-1] for i in range(m)]
 lv.sort()
 l, v = [l_ for v_, l_ in lv], [v_ for v_, l_ in lv]
-if max(w) > min(v):print(-1);return()
+if max(w) > min(v):
+    print(-1)
+    return()
 for i in range(1, m):
     l[i] = max(l[i - 1], l[i])
 l.append(0)

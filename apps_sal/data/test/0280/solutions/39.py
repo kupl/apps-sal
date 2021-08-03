@@ -17,15 +17,14 @@ if max(W) > weights[1]:
 
 ans = 10**10
 for p in permutations(list(range(N))):
-    rows = [0]*N
+    rows = [0] * N
     V = [0]
     for i in range(N):
-        V.append(V[-1]+W[p[i]])
+        V.append(V[-1] + W[p[i]])
     for i in range(N):
-        for j in range(i+1, N):
-            w = V[j+1]-V[i]
-            rows[j] = max(rows[j], rows[i]+length[bisect_left(weights, w)-1])
+        for j in range(i + 1, N):
+            w = V[j + 1] - V[i]
+            rows[j] = max(rows[j], rows[i] + length[bisect_left(weights, w) - 1])
     if ans > rows[-1]:
         ans = rows[-1]
 print(ans)
-

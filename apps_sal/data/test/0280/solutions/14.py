@@ -63,4 +63,3 @@ for v in itertools.permutations(w):
             dp[i] = max(dp[i], dp[j] + L[bisect_v - 1])
     ans = min(ans, dp[-1])
 print(ans)
-
