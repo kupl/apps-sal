@@ -27,17 +27,23 @@ if any(v > 1 for v in ctr.values()):
 dp = [False] * (N + 1)
 dp[0] = True
 for i in range(N):
-    if not dp[i]: continue
+    if not dp[i]:
+        continue
     for j in range(i + 1, N + 1):
-        if dp[j]: continue
+        if dp[j]:
+            continue
         l = j - i
         for s in range(2 * i + 1, 2 * i + l + 1):
             t = s + l
             if s in pairs:
-                if pairs[s] != t: break
-            if s in starts and t in ends: break
-            if s in ends: break
-            if t in starts: break
+                if pairs[s] != t:
+                    break
+            if s in starts and t in ends:
+                break
+            if s in ends:
+                break
+            if t in starts:
+                break
         else:
             dp[j] = True
 print('Yes' if dp[-1] else 'No')

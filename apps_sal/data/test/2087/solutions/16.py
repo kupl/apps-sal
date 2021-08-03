@@ -13,7 +13,9 @@ except FileNotFoundError:
 from math import sqrt, ceil, floor
 from collections import deque, Counter, defaultdict
 # defaultdict(int)
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
+
 sys.setrecursionlimit(11451419)
 #Decimal((str(0.5)).quantize(Decimal('0'), rounding=ROUND_HALF_UP))
 # @lru_cache(maxsize=10**10)

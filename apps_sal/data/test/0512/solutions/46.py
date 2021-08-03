@@ -27,7 +27,8 @@ S2 = set()
 used = [-1] * (N * 2)
 for i in range(N):
     a, b = MAP()
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     if a != -2 and b != -2 and a >= b or a in S or b in S:
         No()
         return

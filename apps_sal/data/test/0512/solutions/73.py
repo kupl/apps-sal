@@ -21,7 +21,8 @@ def checkAtomic(i, j):
 
 N = int(input())
 floors = [[int(x) for x in input().split()] for _ in range(N)]
-ON = 0; OFF = 1;
+ON = 0
+OFF = 1
 INF = float('inf')
 floors.sort()
 

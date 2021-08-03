@@ -15,8 +15,10 @@ for i in range(n):
 def qwe(s, j):
     l, r = 0, 0
     for i in range(len(s)):
-        if i < j and s[i] > s[j]: l += 1
-        elif i > j and s[i] > s[j]: r += 1
+        if i < j and s[i] > s[j]:
+            l += 1
+        elif i > j and s[i] > s[j]:
+            r += 1
     return l, r
 
 
@@ -30,4 +32,5 @@ if ans:
     print('YES')
     for i in range(n):
         print(n - a[i] - b[i], end=' ')
-else: print('NO')
+else:
+    print('NO')

@@ -53,7 +53,8 @@ def solve():
     dp = [False] * (2 * N + 1)
     dp[0] = True
     for i in range(0, 2 * N, 2):
-        if not dp[i]: continue
+        if not dp[i]:
+            continue
         for j in range(i + 2, 2 * N + 1, 2):
             if check(i + 1, j):
                 dp[j] = True

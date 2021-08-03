@@ -26,7 +26,8 @@ for i in range(N):
 dp = [False for i in range(2 * N + 1)]
 dp[0] = True
 for i in range(2 * N):
-    if not(dp[i]): continue
+    if not(dp[i]):
+        continue
     for j in range(i + 1, 2 * N, 2):
         w = (j - i + 1) // 2
         ok = True

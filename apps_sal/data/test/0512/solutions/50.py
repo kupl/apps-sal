@@ -15,11 +15,13 @@ for i in range(N):
     a, b = [int(x) for x in input().split()]
     if 1 <= a:
         if F[a][1] != '未':
-            (print('No')); return
+            (print('No'))
+            return
         F[a] = (i, '乗')
     if 1 <= b:
         if F[b][1] != '未':
-            print('No'); return
+            print('No')
+            return
         F[b] = (i, '降')
 
 P = [[False] * (2 * N + 1) for _ in range(2 * N + 1)]

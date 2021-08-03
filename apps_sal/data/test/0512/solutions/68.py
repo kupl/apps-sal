@@ -27,7 +27,8 @@ dp = [False] * (2 * N + 1)
 dp[0] = True
 for x in range(1, 2 * N + 1):
     for k in range(1, 2 * N + 1 - x):
-        if x + 2 * k - 1 > 2 * N: continue
+        if x + 2 * k - 1 > 2 * N:
+            continue
         ok = True
         for i in range(k):
             if E[x + i][0] != -1 and E[x + k + i][0] != -1 and E[x + i][0] != E[x + k + i][0]:

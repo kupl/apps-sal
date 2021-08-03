@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 n, m, l, r = list(map(int, input().split()))
 mod = 998244353
 if (n * m) % 2 == 1:

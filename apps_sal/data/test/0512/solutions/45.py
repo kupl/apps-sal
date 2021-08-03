@@ -43,7 +43,8 @@ for OUT in range(2, 2 * n + 1, 2):
                     elif x[1] != i + (OUT - IN + 1) // 2 or y[1] != i:
                         flg = False
                         break
-            if flg == False: continue
+            if flg == False:
+                continue
             ans[OUT // 2] = True
 if ans[-1]:
     print("Yes")

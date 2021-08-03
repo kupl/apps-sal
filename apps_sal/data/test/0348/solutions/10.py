@@ -1,7 +1,9 @@
 from bisect import bisect_left, bisect_right
 from sys import stdin, stdout, setrecursionlimit
 from collections import Counter
-input = lambda: stdin.readline().strip()
+def input(): return stdin.readline().strip()
+
+
 print = stdout.write
 
 mod = 998244353

@@ -9,7 +9,7 @@ for i in range(n):
     if fl != 1 and s[i] == m:
         fl = 1
 for i in range(n):
-    ll = 0;
+    ll = 0
     for j in range(i):
         if s[j] > s[i]:
             ll += 1

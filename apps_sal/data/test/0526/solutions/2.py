@@ -4,7 +4,8 @@ n, m = list(map(int, input().split()))
 
 def xor(A):
     x = 0
-    for a in A: x ^= a
+    for a in A:
+        x ^= a
     return x
 
 

@@ -1,11 +1,15 @@
 def check(t):
-    if x == int(x): return True
-    else: return False
+    if x == int(x):
+        return True
+    else:
+        return False
 
 
 def gcd(x, y):
-    if x % y == 0: return y
-    else: return gcd(y, x % y)
+    if x % y == 0:
+        return y
+    else:
+        return gcd(y, x % y)
 
 
 a, b, c, d = list(map(int, input().split()))

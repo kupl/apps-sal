@@ -28,7 +28,9 @@ if ans1[1] == 0 or ans1[0] / ans1[1] < 0:
 elif ans2[1] == 0 or ans2[0] / ans2[1] < 0:
     sol = ans1
 else:
-    if ans1[0] / ans1[1] < ans2[0] / ans2[1]: sol = ans1
-    else: sol = ans2
+    if ans1[0] / ans1[1] < ans2[0] / ans2[1]:
+        sol = ans1
+    else:
+        sol = ans2
 
 print('%i/%i' % sol)

@@ -7,9 +7,12 @@ def main(n, ab):
     mi = set(range(2 * n))
     for i, (a, b) in enumerate(ab):
         a, b = a - 1, b - 1
-        if a >= 0 and a not in mi: return False
-        if b >= 0 and b not in mi: return False
-        if a >= 0 and b >= 0 and a >= b: return False
+        if a >= 0 and a not in mi:
+            return False
+        if b >= 0 and b not in mi:
+            return False
+        if a >= 0 and b >= 0 and a >= b:
+            return False
         mi.discard(a)
         mi.discard(b)
         if a >= 0 and b >= 0:
@@ -23,36 +26,45 @@ def main(n, ab):
         elif b >= 0:
             f[b][0] = 0
             f[b][1] = i
-    if f[0][0] == 0: return False
-    if f[-1][0] == 1: return False
+    if f[0][0] == 0:
+        return False
+    if f[-1][0] == 1:
+        return False
     now = 0
     memo = {}
 
     # 区間[l,r]はひとつの単位区間として成り立つか。
     def chk(l, r):
-        if (l, r) in memo: return memo[(l, r)]
-        if (r - l) % 2 == 0: return False
+        if (l, r) in memo:
+            return memo[(l, r)]
+        if (r - l) % 2 == 0:
+            return False
         ret = True
         ci = (r - l) // 2
         rid = []
         for i in range(l, l + ci + 1):
-            if f[i][0] == 0: ret = False
+            if f[i][0] == 0:
+                ret = False
             rid.append(f[i][1])
         j = 0
         for i in range(l + ci + 1, r + 1):
-            if f[i][0] == 1: ret = False
-            if rid[j] != -1 and f[i][1] != -1 and rid[j] != f[i][1]: ret = False
+            if f[i][0] == 1:
+                ret = False
+            if rid[j] != -1 and f[i][1] != -1 and rid[j] != f[i][1]:
+                ret = False
             j += 1
         memo[(l, r)] = ret
         return ret
 
     # 区間[l,2*n]は複数の単位区間のみから成る区間か。lより左はすでにTrue
     def dp(l):
-        if l == 2 * n: return True
+        if l == 2 * n:
+            return True
         for ri in range(l + 1, 2 * n):
             tmp = chk(l, ri)
             if tmp:
-                if dp(ri + 1): return True
+                if dp(ri + 1):
+                    return True
         return False
 
     return dp(0)

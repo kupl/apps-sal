@@ -1,7 +1,7 @@
 from sys import stdin
 from fractions import Fraction
 
-(a, b, c, d) = map(int, input().split());
+(a, b, c, d) = map(int, input().split())
 
 cd = Fraction(c, d)
 ab = Fraction(a, b)

@@ -3,8 +3,8 @@ import sys
 
 def main():
     sys.setrecursionlimit(10**7)
-    LI = lambda: [int(x) for x in sys.stdin.readline().split()]
-    NI = lambda: int(sys.stdin.readline())
+    def LI(): return [int(x) for x in sys.stdin.readline().split()]
+    def NI(): return int(sys.stdin.readline())
 
     N = NI()
 
@@ -28,7 +28,8 @@ def main():
     dp = [[-1] * (2 * N + 1) for _ in range(2 * N + 1)]
 
     def check(i, j):
-        if dp[i][j] >= 0: return bool(dp[i][j])
+        if dp[i][j] >= 0:
+            return bool(dp[i][j])
         for k in range(i, j + 1):
             if c[k] != 0:
                 if k > (i + j) // 2:

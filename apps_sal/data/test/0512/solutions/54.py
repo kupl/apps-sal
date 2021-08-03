@@ -5,12 +5,14 @@ lis = [-1] * (2 * n)
 for i, (a, b) in enumerate(ab):
     if a != -1:
         if lis[a - 1] >= 0:
-            print("No"); return
+            print("No")
+            return
         cnt[a - 1] = 1
         lis[a - 1] = i
     if b != -1:
         if lis[b - 1] >= 0:
-            print("No"); return
+            print("No")
+            return
         cnt[b - 1] = -1
         lis[b - 1] = i
 
