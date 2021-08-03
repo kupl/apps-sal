@@ -8,6 +8,3 @@ def triple_trouble(one, two, three):
         res += three[counter]
         counter += 1
     return res
-        
-        
-

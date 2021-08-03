@@ -1,6 +1,7 @@
 from string import (ascii_lowercase as ASCII_LOW,
                     ascii_letters as ASCII_LET)
 
+
 def is_kebab_case(str_):
     for char in str_:
         if char not in (ASCII_LOW + '-'):
@@ -9,6 +10,7 @@ def is_kebab_case(str_):
         return False
     return True
 
+
 def is_camel_case(str_):
     for char in str_:
         if char not in ASCII_LET:
@@ -16,7 +18,8 @@ def is_camel_case(str_):
     if str_[0].isupper():
         return False
     return True
-    
+
+
 def is_snake_case(str_):
     for char in str_:
         if char not in (ASCII_LOW + '_'):
@@ -25,9 +28,10 @@ def is_snake_case(str_):
         return False
     return True
 
+
 def case_id(c_str):
     for func in (is_kebab_case, is_camel_case, is_snake_case):
-        if func(c_str): 
+        if func(c_str):
             return {'is_kebab_case': 'kebab',
                     'is_camel_case': 'camel',
                     'is_snake_case': 'snake'}[func.__name__]

@@ -7,4 +7,3 @@ def triple_trouble(one, two, three):
             s += i[a]
         a += 1
     return s
-

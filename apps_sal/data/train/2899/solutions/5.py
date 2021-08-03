@@ -1,1 +1,1 @@
-bin_str=lambda n:sum(a!=b for a,b in zip('0'+n,n))
+def bin_str(n): return sum(a != b for a, b in zip('0' + n, n))

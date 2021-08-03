@@ -7,6 +7,8 @@ CASES = [
     ('none', re.compile(r'')),
 ]
 
+
 def case_id(c_str):
     for case, pattern in CASES:
-        if pattern.match(c_str): return case
+        if pattern.match(c_str):
+            return case

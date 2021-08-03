@@ -1,5 +1,6 @@
 from string import ascii_lowercase as al
 
+
 def find_the_key(message, code):
     msg_key = ''.join([str(a - d) for (a, d) in zip(code, [al.index(c) + 1 for c in message])])
     key, len_msg = '', len(msg_key)

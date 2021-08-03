@@ -4,9 +4,3 @@ def triple_trouble(one, two, three):
     for item in x:
         result.append("".join(item))
     return "".join(result)
-             
-    
-    
-
-
-

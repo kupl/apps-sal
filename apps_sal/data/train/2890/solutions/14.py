@@ -6,4 +6,3 @@ def multiples(m, n):
             current = i * n
             l.append(current)
     return l
-

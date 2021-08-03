@@ -1,7 +1,7 @@
 def multiples(m, n):
-    list= []
+    list = []
     i = 1
-    while i<= m:
-        list = list + [i*n]
-        i=i+1
+    while i <= m:
+        list = list + [i * n]
+        i = i + 1
     return list

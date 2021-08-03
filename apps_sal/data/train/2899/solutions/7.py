@@ -3,6 +3,6 @@ def bin_str(s):
     x = '0'
     for i in s:
         if x != i:
-                c += 1
-                x = i
+            c += 1
+            x = i
     return c

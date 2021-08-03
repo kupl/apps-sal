@@ -1,8 +1,7 @@
 def multiples(m, n):
-    arr = [] 
+    arr = []
     start = 1
-    while m >= start: 
+    while m >= start:
         arr.append(start * n)
         start += 1
     return arr
-

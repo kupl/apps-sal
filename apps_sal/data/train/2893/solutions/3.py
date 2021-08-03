@@ -1,4 +1,6 @@
 import math
+
+
 def plant_doubling(n):
     times = 0
     while n != 0:

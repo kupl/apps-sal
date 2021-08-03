@@ -6,9 +6,6 @@ def multiples(m, n):
     while x <= m:
         temp = x * n
         final.append(temp)
-        print (final)
+        print(final)
         x = x + 1
     return final
-        
-        
-

@@ -7,4 +7,3 @@ def triple_trouble(one, two, three):
         list123.append(three[i])
         i += 1
     return ''.join(list123)
-

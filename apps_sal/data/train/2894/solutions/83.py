@@ -5,8 +5,7 @@ def triple_trouble(one, two, three):
     answ = ""
     start = 0
     for j in range(B):
-        for i in range(start,A,B):
+        for i in range(start, A, B):
             answ += s[i]
-        start+=1
+        start += 1
     return answ
-

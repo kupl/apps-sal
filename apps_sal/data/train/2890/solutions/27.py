@@ -3,6 +3,5 @@ def multiples(m, n):
     i = 1
     while (i < m):
         i += 1
-        result.append(i*n)
+        result.append(i * n)
     return result
-

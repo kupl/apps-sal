@@ -7,4 +7,3 @@ def triple_trouble(one,
         result += one[i] + two[i] + three[i]
 
     return result
-

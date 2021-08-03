@@ -3,5 +3,5 @@ def multiples(m, n):
     x = 1
     for i in range(m):
         result.append(n * x)
-        x+=1
+        x += 1
     return result
