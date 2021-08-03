@@ -1,10 +1,10 @@
 class Solution:
-     def countSegments(self, s):
-         """
-         :type s: str
-         :rtype: int
-         """
-         '''
+    def countSegments(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        '''
          counter = 0
          wasspace = 1
          for char in s:
@@ -16,4 +16,4 @@ class Solution:
                  wasspace = 0
          return counter
          '''
-         return len(s.split())
+        return len(s.split())

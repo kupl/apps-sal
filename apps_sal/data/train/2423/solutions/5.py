@@ -1,9 +1,9 @@
 class Solution:
     def minStartValue(self, nums: List[int]) -> int:
         n = len(nums)
-        
+
         startValue = 1
-        
+
         while startValue < float('inf'):
             get = True
             tmp = startValue
@@ -12,7 +12,7 @@ class Solution:
                     get = False
                     break
                 tmp = nums[i] + tmp
-            if not get: 
+            if not get:
                 startValue += 1
             else:
                 return startValue

@@ -1,15 +1,14 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
-        max_nums=[]
+        max_nums = []
 
         for num in nums:
-            if num==max(nums):
+            if num == max(nums):
 
-                max_nums.append(num-1)
+                max_nums.append(num - 1)
                 nums.remove(num)
         for num in nums:
             if num == max(nums):
                 max_nums.append(num - 1)
                 nums.remove(num)
-        return max_nums[0]*max_nums[1]
-
+        return max_nums[0] * max_nums[1]

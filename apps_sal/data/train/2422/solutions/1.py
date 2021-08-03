@@ -3,4 +3,4 @@ class Solution:
         max_1 = max(nums)
         nums.remove(max_1)
         max_2 = max(nums)
-        return (max_2-1)*(max_1-1)
+        return (max_2 - 1) * (max_1 - 1)

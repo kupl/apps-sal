@@ -3,4 +3,3 @@ class Solution:
         mx, mn = max(A), min(A)
 
         return max(mx - mn - 2 * K, 0)
-

@@ -4,9 +4,8 @@ class Solution:
         for i, num in enumerate(nums):
             j = i + 1
             while j < len(nums):
-                tempSum = (nums[i]-1)*(nums[j]-1)
+                tempSum = (nums[i] - 1) * (nums[j] - 1)
                 if sum < tempSum:
                     sum = tempSum
                 j = j + 1
         return sum
-
