@@ -3,4 +3,3 @@ def penaltyShots(shots, score):
     if shots < 5:
         return 6 - shots - delta
     return 2 - delta
-

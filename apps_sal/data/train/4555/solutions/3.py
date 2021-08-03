@@ -1,6 +1,7 @@
 from operator import mul
 from functools import reduce
 
+
 def string_color(s):
     if len(s) > 1:
         a = [ord(x) for x in s]

@@ -1,1 +1,1 @@
-find_short = lambda s: min(len(e) for e in s.split())
+def find_short(s): return min(len(e) for e in s.split())

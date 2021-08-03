@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def play_if_enough(hand, play):
     available = Counter(hand)
     available.subtract(Counter(play))

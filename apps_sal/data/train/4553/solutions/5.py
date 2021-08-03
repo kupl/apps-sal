@@ -5,4 +5,3 @@ def find_short(s):
         if len(item) < shortestLength:
             shortestLength = len(item)
     return shortestLength
-

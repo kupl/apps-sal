@@ -7,5 +7,3 @@ def row_weights(array):
         else:
             group2.append(array[i])
     return (sum(group1), sum(group2))
-    
-
