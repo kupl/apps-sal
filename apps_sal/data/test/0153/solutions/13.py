@@ -5,7 +5,8 @@ t = sorted(map(int, input().split()))
 
 res = 0
 for x in range(min(n, m // sum(t)) + 1):
-    mm = m - x * sum(t); r = x * (k + 1)
+    mm = m - x * sum(t)
+    r = x * (k + 1)
     for i, ti in enumerate(t):
         for _ in range(n - x):
             if mm >= ti:

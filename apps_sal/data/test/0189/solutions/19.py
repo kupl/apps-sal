@@ -5,8 +5,10 @@ ar = list(map(int, input().split()))
 def f(i):
     ans = 0
     for e in ar:
-        if(e == i): continue
-        else: ans += abs(e - i) - 1
+        if(e == i):
+            continue
+        else:
+            ans += abs(e - i) - 1
     return ans
 
 

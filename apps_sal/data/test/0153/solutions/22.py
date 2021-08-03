@@ -1,4 +1,6 @@
-ins = lambda: list(map(int, input().split()))
+def ins(): return list(map(int, input().split()))
+
+
 n, k, m = ins()
 c = list(ins())
 c.sort()

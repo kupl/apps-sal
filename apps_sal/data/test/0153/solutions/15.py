@@ -23,7 +23,8 @@ for i in range(n + 1):
     cur = 0
     res = (k + 1) * i
     while m1 > 0:
-        if cur >= k or a[cur] > m1: break
+        if cur >= k or a[cur] > m1:
+            break
         x = min(m1 // a[cur], cnt[cur])
         res += x
         m1 -= x * a[cur]

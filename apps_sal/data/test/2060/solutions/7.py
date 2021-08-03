@@ -8,7 +8,7 @@ for _ in range(n):
     a = 0
     while a * 7 <= x:
         if (x - a * 7) % 3 == 0:
-            found = True;
+            found = True
             break
         a += 1
     if found:
