@@ -14,7 +14,7 @@
 #             total += 5
 #         else:
 #             total -= (i-5)
-            
+
 #             if total != 0:
 #                 print("NO")
 #                 break
@@ -27,7 +27,7 @@ n = int(input())
 while n > 0:
 
     t = int(input())
-    d = {5: 0, 10:0, 15:0}
+    d = {5: 0, 10: 0, 15: 0}
 
     arr = list(map(int, input().split()))
 
@@ -56,7 +56,7 @@ while n > 0:
                 # print("NO")
                 # break
                 if d[5] >= 2:
-                    d[5]-=2
+                    d[5] -= 2
                     d[15] += 1
                 else:
                     print('NO')
@@ -66,4 +66,4 @@ while n > 0:
             break
     else:
         print("YES")
-    n-=1
+    n -= 1

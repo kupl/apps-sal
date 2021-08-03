@@ -2,7 +2,7 @@
 n = input()
 for i in range(int(n)):
     k = int(input())
-    l = list(map(int,input().split()))
+    l = list(map(int, input().split()))
     f = []
     for i in range(k):
         if i in l:
@@ -10,4 +10,3 @@ for i in range(int(n)):
         else:
             f.append(0)
     print(*f)
-
