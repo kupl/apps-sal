@@ -16,4 +16,5 @@ for x in a:
         ok = ok and ((x % 3) == 0 or (x % 5) == 0)
 if ok:
     print("APPROVED")
-else: print("DENIED")
+else:
+    print("DENIED")

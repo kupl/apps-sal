@@ -8,8 +8,10 @@ cDict = dict()
 isFine = True
 
 for a in arr:
-    if a not in cDict: cDict[a] = 1
-    else: cDict[a] += 1
+    if a not in cDict:
+        cDict[a] = 1
+    else:
+        cDict[a] += 1
 
     if cDict[a] > K:
         isFine = False

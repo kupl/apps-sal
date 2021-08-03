@@ -24,7 +24,8 @@ class BIT_RSQ():
         return self.sum(r) - self.sum(l - 1)
 
     def lowerBound(self, w):
-        if w <= 0: return 0
+        if w <= 0:
+            return 0
         x, k = 0, 2**self.n.bit_length()
         while k:
             if x + k <= self.n and self.data[x + k] < w:

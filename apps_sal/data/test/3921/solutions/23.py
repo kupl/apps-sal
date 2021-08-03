@@ -15,7 +15,7 @@ def fact(x):
             else:
                 ans.append(i)
     ans.append(x)
-    return ans;
+    return ans
 
 
 for i in range(len(z)):
