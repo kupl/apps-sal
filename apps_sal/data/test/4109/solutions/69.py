@@ -25,8 +25,10 @@ for i in range(2**n):
             flg = 1
             break
     #print(tmp, flg)
-    if sum < min and flg == 0: min = sum
+    if sum < min and flg == 0:
+        min = sum
     sum = 0
 
-if min == 10**10: min = -1
+if min == 10**10:
+    min = -1
 print(min)

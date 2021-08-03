@@ -20,7 +20,8 @@ for i in range(2**N):
                 score[j] += A[n][j]
 
     for j in range(M):
-        if score[j] >= X: hantei += 1
+        if score[j] >= X:
+            hantei += 1
     if hantei == M:
         ans = min(ans, tmp)
     if i == 2**N - 1 and hantei != M:

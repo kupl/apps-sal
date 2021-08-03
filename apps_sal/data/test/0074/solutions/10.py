@@ -1,7 +1,10 @@
 def isPrime(x):
-    if x == 1: return False
-    if x == 2: return True
-    if x % 2 == 0: return False
+    if x == 1:
+        return False
+    if x == 2:
+        return True
+    if x % 2 == 0:
+        return False
 
     i = 3
     while i * i <= x:

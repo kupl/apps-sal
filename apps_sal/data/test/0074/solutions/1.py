@@ -2,9 +2,11 @@ from sys import *
 
 
 def prime(a):
-    if a < 2: return False
+    if a < 2:
+        return False
     for j in range(2, int(a**0.5) + 1):
-        if a % j == 0: return False
+        if a % j == 0:
+            return False
     return True
 
 
@@ -24,7 +26,8 @@ if n > 5 and prime(n - 4):
 
 for j in range(lp):
     for i in range(j, lp):
-        if p[j] + p[i] + 2 > n: break
+        if p[j] + p[i] + 2 > n:
+            break
         if prime(n - p[i] - p[j]):
             print("3\n", p[j], p[i], n - p[i] - p[j])
             return

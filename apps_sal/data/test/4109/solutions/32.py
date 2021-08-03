@@ -21,6 +21,9 @@ for i in range(1, 2**(N)):
         if ability[j] < X:
             flag = 0
             break
-    if flag == 1: ans = min(ans, money)
-if ans == 10**10: print(-1)
-else: print(ans)
+    if flag == 1:
+        ans = min(ans, money)
+if ans == 10**10:
+    print(-1)
+else:
+    print(ans)

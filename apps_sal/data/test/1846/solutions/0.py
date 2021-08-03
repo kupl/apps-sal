@@ -1,7 +1,7 @@
-import sys;
+import sys
 sys.stdin = open('input.txt', 'r')
 sys.stdout = open('output.txt', 'w')
-n = int(sys.stdin.readline());
+n = int(sys.stdin.readline())
 
 a = [int(x) for x in sys.stdin.readline().split()]
 front = [0] * (len(a) + 2)

@@ -10,7 +10,8 @@ for i in range(3, math.ceil(n ** 0.5) + 1):
 
 
 def isprime(x):  # x < n
-    if x == 1: return False
+    if x == 1:
+        return False
     for p in primes:
         if x % p == 0 and x > p:
             return False

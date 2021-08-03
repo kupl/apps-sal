@@ -4,7 +4,8 @@ t = int(input())
 def prov1(a):
     pp = a[0] * a[-1]
     for i in range(len(a)):
-        if a[i] * a[-1 - i] != pp: return -1
+        if a[i] * a[-1 - i] != pp:
+            return -1
     return pp
 
 
@@ -15,7 +16,8 @@ def kkk(a):
         if a % i == 0:
             d += 2
         i += 1
-    if i * i == a: d += 1
+    if i * i == a:
+        d += 1
     return d
 
 
@@ -35,11 +37,13 @@ for i in range(t):
         print(-1)
     else:
         yy = kkk(a[0])
-        if yy > 0: print(-1)
+        if yy > 0:
+            print(-1)
         else:
             u = kkk(a[-1]) + 2
             z = koka(a[-1], a[0])
-            if z == 0: d = u * 2 - 2
+            if z == 0:
+                d = u * 2 - 2
             else:
                 d = (u // (z + 1)) * (z + 2) - 2
             if d == n:

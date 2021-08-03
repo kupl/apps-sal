@@ -1,6 +1,8 @@
 def primes2(limit):
-    if limit < 2: return []
-    if limit < 3: return [2]
+    if limit < 2:
+        return []
+    if limit < 3:
+        return [2]
     lmtbf = (limit - 3) // 2
     buf = [True] * (lmtbf + 1)
     for i in range((int(limit ** 0.5) - 3) // 2 + 1):

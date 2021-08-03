@@ -10,8 +10,10 @@ def proceed_step(remained, current_cost, n):
     nonlocal N, X
     remained_next = []
 
-    if not remained: return current_cost
-    if n == N: return float('inf')
+    if not remained:
+        return current_cost
+    if n == N:
+        return float('inf')
 
     for algorithm in remained:
         m, current_sum = algorithm[0], algorithm[1]
@@ -25,5 +27,7 @@ def proceed_step(remained, current_cost, n):
 
 remained = [[m, 0] for m in range(M)]
 total_cost = proceed_step(remained, current_cost=0, n=0)
-if total_cost == float('inf'): print(-1)
-else: print(total_cost)
+if total_cost == float('inf'):
+    print(-1)
+else:
+    print(total_cost)

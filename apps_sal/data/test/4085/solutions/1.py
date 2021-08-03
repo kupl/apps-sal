@@ -14,11 +14,14 @@ for _ in range(t):
             while g % i == 0:
                 pfs[-1][0] += 1
                 g //= i
-    if 1 < g: pfs.append([1, g])
+    if 1 < g:
+        pfs.append([1, g])
     nf = reduce(operator.mul, [u[0] + 1 for u in pfs])
     ok = nf == len(ds) + 2
     for d in ds:
         if suspect % d != 0:
             ok = False
-    if ok: print(suspect)
-    else: print(-1)
+    if ok:
+        print(suspect)
+    else:
+        print(-1)

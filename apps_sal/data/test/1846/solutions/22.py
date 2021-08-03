@@ -2,12 +2,14 @@ import sys
 sys.stdin = open('input.txt', 'r')
 sys.stdout = open('output.txt', 'w')
 MOD = 1000000007
-ii = lambda: int(input())
-si = lambda: input()
-dgl = lambda: list(map(int, input()))
-f = lambda: list(map(int, input().split()))
-il = lambda: list(map(int, input().split()))
-ls = lambda: list(input())
+def ii(): return int(input())
+def si(): return input()
+def dgl(): return list(map(int, input()))
+def f(): return list(map(int, input().split()))
+def il(): return list(map(int, input().split()))
+def ls(): return list(input())
+
+
 n = ii()
 l = il()
 lf = [0] * n

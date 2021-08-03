@@ -1,5 +1,5 @@
 from collections import Counter
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
 
 
 def primefactors(n):
@@ -19,7 +19,8 @@ for _ in range(int(input())):
     c = Counter()
     for d in dd:
         ct = Counter(primefactors(d))
-        for k in ct: c[k] = max(c[k], ct[k])
+        for k in ct:
+            c[k] = max(c[k], ct[k])
     x = 1
     for k, v in c.items():
         x *= k**v
@@ -28,5 +29,6 @@ for _ in range(int(input())):
         x *= t
         c[t] += 1
     m = 1
-    for v in c.values(): m *= v + 1
+    for v in c.values():
+        m *= v + 1
     print(x if m == len(dd) + 2 else -1)

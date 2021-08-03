@@ -18,7 +18,8 @@ def INV(a, m):
 
 
 def GCD(a, b):
-    if a == 0: return b
+    if a == 0:
+        return b
     return GCD(b % a, a)
 
 
@@ -30,8 +31,10 @@ def solve():
             return 0
         ans = [0, 0]
         ans[0] = x
-        if vy < 0: ans[1] = 0
-        else: ans[1] = m
+        if vy < 0:
+            ans[1] = 0
+        else:
+            ans[1] = m
         print(ans[0], ans[1])
         return 0
     if vy == 0:
@@ -40,14 +43,20 @@ def solve():
             return 0
         ans = [0, 0]
         ans[1] = y
-        if vx < 0: ans[0] = 0
-        else: ans[0] = n
+        if vx < 0:
+            ans[0] = 0
+        else:
+            ans[0] = n
         print(ans[0], ans[1])
         return 0
-    if vx == -1 and x == 0: vx = 1
-    if vx == 1 and x == n: vx = -1
-    if vy == -1 and y == 0: vy = 1
-    if vy == 1 and y == m: vy = -1
+    if vx == -1 and x == 0:
+        vx = 1
+    if vx == 1 and x == n:
+        vx = -1
+    if vy == -1 and y == 0:
+        vy = 1
+    if vy == 1 and y == m:
+        vy = -1
     g = GCD(n, m)
     m1 = n
     m2 = m
@@ -66,12 +75,18 @@ def solve():
     rowtouch = ((k + m - 1) // m) % 2
     coltouch = ((k + n - 1) // n) % 2
     ans = [0, 0]
-    if vx == 1: ans[0] = 0
-    else: ans[0] = n
-    if vy == 1: ans[1] = 0
-    else: ans[1] = m
-    if rowtouch == 1: ans[1] = m - ans[1]
-    if coltouch == 1: ans[0] = n - ans[0]
+    if vx == 1:
+        ans[0] = 0
+    else:
+        ans[0] = n
+    if vy == 1:
+        ans[1] = 0
+    else:
+        ans[1] = m
+    if rowtouch == 1:
+        ans[1] = m - ans[1]
+    if coltouch == 1:
+        ans[0] = n - ans[0]
     print(ans[0], ans[1])
     return 0
 

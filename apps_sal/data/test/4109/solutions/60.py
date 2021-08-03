@@ -13,14 +13,17 @@ for i in range(2**N):
         E[i] += D[j] * int(d)
 
 if min(E[-1][1:M + 1]) < X:
-    print(-1); return
+    print(-1)
+    return
 
 Max = E[-1][0] + 1
 Min = Max
 for i in range(2**N):
     if min(E[i][1:M + 1]) >= X:
-        if Min > E[i][0]: Min = E[i][0]
+        if Min > E[i][0]:
+            Min = E[i][0]
         continue
-    else: E[i][0] = Max
+    else:
+        E[i][0] = Max
 print(Min)
 return
