@@ -1,4 +1,6 @@
 def resolve():
-    n,m = map(int,input().split())
-    print('Yes' if n==m else 'No')
+    n, m = map(int, input().split())
+    print('Yes' if n == m else 'No')
+
+
 resolve()

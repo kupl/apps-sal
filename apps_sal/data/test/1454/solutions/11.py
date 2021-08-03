@@ -25,7 +25,7 @@ def __starting_point():
         else:
             for i in range(m):
                 for j in range(1, n):
-                    if matrix[j][i] <= matrix[j-1][i]:
+                    if matrix[j][i] <= matrix[j - 1][i]:
                         res = -1
             if res == -1:
                 print(-1)
@@ -35,5 +35,6 @@ def __starting_point():
                 print(res)
     else:
         print(-1)
+
 
 __starting_point()

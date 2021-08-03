@@ -9,5 +9,3 @@ if n in product_list:
     print('Yes')
 else:
     print('No')
-
-

@@ -1,7 +1,6 @@
 n, m = list(map(int, input().split()))
 
-if n==m:
+if n == m:
     print('Yes')
 else:
     print('No')
-

@@ -1,4 +1,4 @@
-n,m = input().split()
+n, m = input().split()
 if n == m:
     print('Yes')
 else:

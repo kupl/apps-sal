@@ -31,4 +31,3 @@ for y in range(N):
     row = [int(y) for y in input().split()]
     matrix.append(row)
 print(rising(matrix, N, M))
-

@@ -4,9 +4,10 @@ def step(x):
         ans = (ans * 2) % 998244353
     return ans
 
+
 n = int(input())
 arr = input().split()
-arr = list(map(lambda x: int(x),arr))
+arr = list(map(lambda x: int(x), arr))
 counter = 0
 first = {}
 last = {}

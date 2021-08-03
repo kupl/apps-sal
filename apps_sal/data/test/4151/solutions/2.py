@@ -6,12 +6,12 @@ class SegmentTree(object):
         real_size = len(a)
         self.elem_size = elem_size = 1 << math.ceil(math.log(real_size, 2))
         self.tree = tree = [default] * (elem_size * 2)
-        tree[elem_size:elem_size+real_size] = a
+        tree[elem_size:elem_size + real_size] = a
         self.default = default
         self.op = op
 
         for i in range(elem_size - 1, 0, -1):
-            tree[i] = op(tree[i << 1], tree[(i << 1)+1])
+            tree[i] = op(tree[i << 1], tree[(i << 1) + 1])
 
     def get_value(self, x: int, y: int) -> int:
         l, r = x + self.elem_size, y + self.elem_size
@@ -50,13 +50,13 @@ def __starting_point():
     last_num = 0
     ans = []
     append = ans.append
-    segtree = SegmentTree([10**6]*(N+1), 10**6, min)
+    segtree = SegmentTree([10**6] * (N + 1), 10**6, min)
     getv, setv = segtree.get_value, segtree.set_value
 
     for i, n in enumerate(a):
         if not index_dict[n]:
             continue
-        last_num = min(last_num+1, getv(i+1, N+1))
+        last_num = min(last_num + 1, getv(i + 1, N + 1))
         for j in index_dict[n]:
             setv(j, last_num)
         append(last_num)
@@ -64,6 +64,8 @@ def __starting_point():
 
     mod = 998244353
 
-    ans = pow(2, len(set(ans))-1, mod)
+    ans = pow(2, len(set(ans)) - 1, mod)
     print(ans)
+
+
 __starting_point()

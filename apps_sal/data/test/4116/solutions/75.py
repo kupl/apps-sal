@@ -8,7 +8,9 @@ def resolve():
             return
     print('No')
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

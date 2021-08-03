@@ -1,2 +1,2 @@
 a, b = input().split()
-print('Yes') if a==b else print('No')
+print('Yes') if a == b else print('No')

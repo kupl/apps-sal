@@ -1,5 +1,5 @@
 n, m = [int(i) for i in input().split()]
 if n == m:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

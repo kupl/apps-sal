@@ -4,9 +4,10 @@ def __starting_point():
 
     for i in range(1, 10):
         for j in range(1, 10):
-            if i*j == N:
+            if i * j == N:
                 ans = 'Yes'
 
     print(ans)
+
 
 __starting_point()

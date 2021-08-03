@@ -19,4 +19,3 @@ else:
         print("first") if temp > 0 else print("second")
     else:
         print("first") if a > b else print("second")
-

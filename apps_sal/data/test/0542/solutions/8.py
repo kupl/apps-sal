@@ -38,4 +38,3 @@ else:
         print('second')
     else:
         print(l)
-

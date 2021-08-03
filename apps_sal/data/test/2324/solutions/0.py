@@ -32,4 +32,3 @@ for i in range(n - 1, 0, -1):
     ans[i] += ans[i + 1]
 
 print(*ans[1:])
-

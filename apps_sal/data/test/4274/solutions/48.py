@@ -1,7 +1,7 @@
 N, M = map(int, input().split())
 
 if M == N:
-  print("Yes")
-  
+    print("Yes")
+
 else:
-  print("No")
+    print("No")

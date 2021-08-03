@@ -7,4 +7,4 @@ elif min(N, M) == 1:
 elif min(N, M) == 2:
     print(0)
 else:
-    print((N-2)*(M-2))
+    print((N - 2) * (M - 2))

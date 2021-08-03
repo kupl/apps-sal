@@ -18,4 +18,3 @@ else:
     ans = inner_num
 
 print(ans)
-

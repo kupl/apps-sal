@@ -9,8 +9,8 @@ def solve(N: int, M: int):
         print((1))
         return
 
-    if N == 1: # M > 1
-        print((M - 2)) # 両端
+    if N == 1:  # M > 1
+        print((M - 2))  # 両端
         return
 
     ans = (N - 2) * (M - 2)
@@ -30,7 +30,9 @@ def main():
     M = int(next(tokens))  # type: int
     solve(N, M)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

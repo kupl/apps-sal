@@ -9,4 +9,3 @@ elif n == 2 or m == 2:
     print((0))
 else:
     print(((n - 2) * (m - 2)))
-

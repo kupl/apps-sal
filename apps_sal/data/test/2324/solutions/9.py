@@ -80,15 +80,15 @@ def main():
 
 def bin_exp(a, x, mod):
     res = 1
-    
+
     while x > 0:
         if x & 1:
             res *= a
             res %= mod
-        a *= a 
-        a %= mod 
+        a *= a
+        a %= mod
         x >>= 1
-    
+
     return res
 
 
@@ -104,4 +104,6 @@ def get_backward_hash(backward_hash, mod_inv, n, left, right):
 
 def __starting_point():
     main()
+
+
 __starting_point()

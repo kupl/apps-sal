@@ -34,9 +34,7 @@ else:
     elif ok1 == 2:
         print('second')
     else:
-        if last == 1: print('first')
-        if last == 2: print('second')
-        
-
-        
-
+        if last == 1:
+            print('first')
+        if last == 2:
+            print('second')
