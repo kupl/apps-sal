@@ -3,4 +3,3 @@ def solution(string):
     for char in string:
         reverse.insert(0, char)
     return ''.join(reverse)
-

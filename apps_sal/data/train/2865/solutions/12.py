@@ -1,1 +1,1 @@
-solution = lambda x:x[::-1]
+def solution(x): return x[::-1]

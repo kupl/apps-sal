@@ -5,6 +5,6 @@ def solution(string):
     for y in string:
         length = length - 1
         reverse = reverse + string[length]
-        x=x+1
-    return reverse;
+        x = x + 1
+    return reverse
     pass

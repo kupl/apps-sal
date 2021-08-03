@@ -1,4 +1,6 @@
 import re
+
+
 def alan_annoying_kid(sentence):
     if "didn't" in sentence:
         s = re.search(r"didn't (.)+\.", sentence)

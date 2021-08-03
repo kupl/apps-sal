@@ -5,5 +5,5 @@ def solution(string):
         charlist.append(l)
     charlist.reverse()
     for c in charlist:
-        res=res+c
+        res = res + c
     return res

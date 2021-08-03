@@ -4,4 +4,3 @@ def distinct(seq):
         if i not in k:
             k += [i]
     return k
-

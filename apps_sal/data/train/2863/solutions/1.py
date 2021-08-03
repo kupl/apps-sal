@@ -5,4 +5,3 @@ def alan_annoying_kid(sentence):
     else:
         verb, did, it = action.split(None, 1)[0][:-2], "didn't", 'at all'
     return "I don't think you {} today, I think you {} {} {}!".format(action, did, verb, it)
-

@@ -6,4 +6,3 @@ def distinct(seq):
             unique.append(x)
             test.add(x)
     return unique
-

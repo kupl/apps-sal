@@ -3,4 +3,4 @@ def distinct(seq):
     for i in seq:
         if i not in item:
             item.append(i)
-    return item            
+    return item

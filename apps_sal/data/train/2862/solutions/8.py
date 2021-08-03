@@ -1,5 +1,6 @@
 from bisect import bisect_left
 
+
 def leaderboard_climb(arr, kara):
     result = []
     arr.append(float('inf'))

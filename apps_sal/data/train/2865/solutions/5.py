@@ -4,6 +4,5 @@ def solution(string):
     for x in string:
         x = string[letter]
         newstring = newstring + x
-        letter = letter -1 
+        letter = letter - 1
     return newstring
-

@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def prime_factors(n):
     factors = Counter()
     d = 2

@@ -1,5 +1,5 @@
 def distinct(seq):
-    ls=[]
+    ls = []
     for i in seq:
         if i in ls:
             continue

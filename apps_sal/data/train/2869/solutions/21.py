@@ -1,5 +1,5 @@
 def distinct(seq):
-    v=[]
+    v = []
     for a in seq:
         if a not in v:
             v.append(a)

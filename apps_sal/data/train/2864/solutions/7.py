@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def merge_arrays(a, b):
     c = Counter(a)
     d = Counter(b)
