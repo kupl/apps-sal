@@ -1,7 +1,6 @@
-3
-
-import os
 import sys
+import os
+3
 
 
 def main():
@@ -16,7 +15,7 @@ def solve(N, M, A):
     D = {0: 0}
     for x, s in A:
         #dprint(x, s)
-        #dprint(D)
+        # dprint(D)
         d = D.copy()
         for x0, c in d.items():
             if x - s <= x0 + 1:
@@ -34,7 +33,7 @@ def solve(N, M, A):
                     D[nx] = nc
                 else:
                     D[nx] = min(D[nx], nc)
-        #dprint(D)
+        # dprint(D)
 
     best = M * 2
     for x, c in D.items():
@@ -70,5 +69,6 @@ def dprint(*value, sep=' ', end='\n'):
 
 def __starting_point():
     main()
+
 
 __starting_point()

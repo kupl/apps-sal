@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def letterCombinations(self, digits):
         """
@@ -8,8 +9,8 @@ class Solution:
         """
         digit_to_chars = defaultdict(list)
         char_int = ord('a')
-        for i in range(2,10):
-            num_chars = 3 if i not in {7,9} else 4
+        for i in range(2, 10):
+            num_chars = 3 if i not in {7, 9} else 4
             for j in range(num_chars):
                 digit_to_chars[str(i)].append(chr(char_int))
                 char_int += 1

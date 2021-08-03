@@ -9,4 +9,3 @@ else:
     S = a - b
 
 print(S)
-

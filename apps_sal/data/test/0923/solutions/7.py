@@ -9,6 +9,3 @@ for i in range(N):
         break
 else:
     print('No')
-        
-        
-

@@ -11,11 +11,10 @@ for push in range(n):
         else:
             gears[i] -= 1
             if gears[i] == -1:
-                gears[i] = n-1
+                gears[i] = n - 1
     if gears == blah:
         print("Yes")
         good = True
         break
 if not good:
     print("No")
-

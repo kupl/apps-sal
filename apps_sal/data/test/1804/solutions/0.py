@@ -21,11 +21,10 @@ for i in range(h):
     maxxy = max(
         max(abs(minx - x), abs(maxx - x)),
         max(abs(miny - y), abs(maxy - y))
-        )
-    if  maxxy < dist:
+    )
+    if maxxy < dist:
         dist = maxxy
         res = i + 1
 
 print(dist)
 print(res)
-

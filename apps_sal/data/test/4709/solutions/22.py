@@ -7,7 +7,7 @@
 # op は、+ または - の記号である。
 
 # 標準入力から A op B を取得する
-a, op, b = list(map(str,input().split()))
+a, op, b = list(map(str, input().split()))
 
 input_a = int(a)
 input_b = int(b)
@@ -22,4 +22,3 @@ else:
     result = "Error"
 
 print(result)
-

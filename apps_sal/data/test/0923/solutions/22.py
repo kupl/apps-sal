@@ -16,9 +16,8 @@ for i in range(n):
             w.append(z[i] + n - i)
 
 for i in range(n - 1):
-    if w[i] != w[i+1]:
+    if w[i] != w[i + 1]:
         print('No')
         return
 
 print('Yes')
-

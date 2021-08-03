@@ -14,7 +14,7 @@ def upgrade_minCost(n, m, antennas):
         for i in range(L, R + 1):
             covered[i] = True
     intervals.sort()
-            
+
     d = [(m - i) for i in range(m + 1)]
     for i in range(m - 1, -1, -1):
         if covered[i + 1]:
@@ -27,6 +27,7 @@ def upgrade_minCost(n, m, antennas):
                 d[i] = min(d[i], u + d[prev])
     return d[0]
 
+
 def main():
     # inf = open('input.txt', 'r')
     # reader = (map(int, line.split()) for line in inf)
@@ -36,9 +37,12 @@ def main():
     antennas = [list(next(reader)) for _ in range(n)]
     ans = upgrade_minCost(n, m, antennas)
     print(ans)
-    
+
     # inf.close()
+
 
 def __starting_point():
     main()
+
+
 __starting_point()
