@@ -6,4 +6,3 @@ def difference_in_ages(ages):
     res3 = ages[-1]
 
     return res2, res3, res1
-

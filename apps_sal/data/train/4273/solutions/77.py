@@ -4,4 +4,3 @@ def shorten_to_date(long_date):
     short_date = " ".join(date_list)
     short_date = short_date[:-1]
     return short_date
-

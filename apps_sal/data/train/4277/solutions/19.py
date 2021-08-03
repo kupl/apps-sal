@@ -6,4 +6,3 @@ def difference_in_ages(ages):
     lista_noua.append(diferenta)
     tupled = tuple(lista_noua)
     return tupled
-

@@ -1,4 +1,6 @@
 import math
+
+
 def difference_in_ages(ages):
     young = math.inf
     old = -math.inf
@@ -7,4 +9,4 @@ def difference_in_ages(ages):
             old = age
         if (age < young):
             young = age
-    return (young, old, old-young)
+    return (young, old, old - young)

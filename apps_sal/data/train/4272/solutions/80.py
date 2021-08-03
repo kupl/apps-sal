@@ -7,4 +7,3 @@ def greet(name):
         return "Hello, Jane!"
     if name == "Jim":
         return "Hello, Jim!"
-

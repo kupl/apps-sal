@@ -5,4 +5,3 @@ def shorten_to_date(long_date):
     for eachchar in shortened:
         emptystring = emptystring + eachchar
     return emptystring
-

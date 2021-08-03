@@ -9,13 +9,15 @@ def extract_array(s):
             if(str.isdigit(letter)):
                 temp_arr.append(letter)
             else:
-                letters.append(letter+str(index))
+                letters.append(letter + str(index))
         numbers.append(''.join(temp_arr))
         index += 1
     return numbers, letters
 
+
 def sort_arr(item, sort_by):
-    return [x for _,x in sorted(zip(sort_by, item))]
+    return [x for _, x in sorted(zip(sort_by, item))]
+
 
 def do_math(s):
     nums = [int(x) for x in sort_arr(*extract_array(s))]

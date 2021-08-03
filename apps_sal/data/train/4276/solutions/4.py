@@ -9,4 +9,3 @@ def solution(n):
         rdiff = 1
     rounded = rdiff + fint
     return rounded
-

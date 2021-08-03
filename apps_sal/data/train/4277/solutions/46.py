@@ -9,4 +9,3 @@ def difference_in_ages(ages):
         if b <= x:
             b = x
     return a, b, b - a
-

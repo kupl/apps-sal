@@ -1,4 +1,6 @@
 import sys
+
+
 def difference_in_ages(ages):
     # your code here
     array = []

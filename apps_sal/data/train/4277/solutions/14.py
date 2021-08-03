@@ -6,6 +6,6 @@ def difference_in_ages(ages):
             young = x
         if x > old:
             old = x
-    difference = old-young
+    difference = old - young
     ris = (young, old, difference)
     return ris

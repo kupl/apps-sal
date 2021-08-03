@@ -3,9 +3,8 @@ def shorten_to_date(long_date):
     if year[1] == ",":
         year = year[0]
     elif year[2] == ",":
-        year = year[0]+year[1]
+        year = year[0] + year[1]
     date = jour + " " + mois + " " + year
     #date = "{} {} {}".format(jour,mois,year)
     return date
-    #your code here
-
+    # your code here

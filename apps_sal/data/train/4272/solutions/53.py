@@ -4,5 +4,6 @@ def greet(name):
     else:
         return f"Hello, {name}!".format(name=name)
 
+
 g = greet('Johnny')
 print(g)

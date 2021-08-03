@@ -1,1 +1,1 @@
-greet = lambda n: "Hello, {}!".format("my love" if n == "Johnny" else n)
+def greet(n): return "Hello, {}!".format("my love" if n == "Johnny" else n)
