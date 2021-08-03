@@ -7,5 +7,3 @@ for _ in range(T):
     for i in range(1, 9):
         b.append(a.count(i))
     print(min(b))
-    
-

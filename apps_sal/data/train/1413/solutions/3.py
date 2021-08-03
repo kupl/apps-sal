@@ -8,7 +8,8 @@ for _ in range(T):
     grid = [[False] * (m + 2) for __ in range(n + 2)]
     for i in range(n):
         s = input()
-        for j, x in enumerate(s): grid[i][j] = x == '1'
+        for j, x in enumerate(s):
+            grid[i][j] = x == '1'
     solution = [[[inf, inf, inf] for ___ in range(m)] for __ in range(n)]
     r -= 1
     c -= 1
@@ -33,7 +34,7 @@ for _ in range(T):
                 if grid[r - 2][c] and grid[r - 1][c] and solution[r - 2][c][2] > new_sol:
                     solution[r - 2][c][2] = new_sol
                     new_touched_set.add((r - 2, c, 2))
-            elif o == 1: 
+            elif o == 1:
                 if grid[r][c + 2] and solution[r][c + 2][0] > new_sol:
                     solution[r][c + 2][0] = new_sol
                     new_touched_set.add((r, c + 2, 0))
@@ -60,9 +61,8 @@ for _ in range(T):
                     solution[r - 1][c][0] = new_sol
                     new_touched_set.add((r - 1, c, 0))
         touched_set = new_touched_set
-   
+
     for i in range(n):
         for j in range(m):
             print(solution[i][j][0] if solution[i][j][0] != inf else -1, end=' ')
         print()
-

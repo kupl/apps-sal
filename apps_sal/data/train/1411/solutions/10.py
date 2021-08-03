@@ -1,4 +1,4 @@
-#lannisters don't act like fools
+# lannisters don't act like fools
 
 
 '''And who are you, the proud lord said,
@@ -17,37 +17,25 @@ Yes now the rains weep o'er his hall,
 And not a soul to hear.'''
 
 
-
-
-
-
-
-
-
-
-
-
 import math
 
 t = int(input())
 
 for _ in range(t):
- z = input().split()
- x = int(z[0])
- r = int(z[1])
- a = int(z[2])
- b = int(z[3])
- length = 2*math.pi*r
- if b>a:
-  temp = a
-  a = b
-  b = temp
- first_meet = length/(a-b)
- total_time = (x*length)/a
- if(first_meet == total_time):
-  ans = 0
- else:
-  ans = int(total_time/first_meet)
- print(ans)
-
-
+    z = input().split()
+    x = int(z[0])
+    r = int(z[1])
+    a = int(z[2])
+    b = int(z[3])
+    length = 2 * math.pi * r
+    if b > a:
+        temp = a
+        a = b
+        b = temp
+    first_meet = length / (a - b)
+    total_time = (x * length) / a
+    if(first_meet == total_time):
+        ans = 0
+    else:
+        ans = int(total_time / first_meet)
+    print(ans)

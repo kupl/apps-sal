@@ -7,5 +7,4 @@ while(t):
     for i in range(1, 9):
         count.append(notes.count(i))
     print(min(count))
-    t-= 1
-
+    t -= 1
