@@ -5,7 +5,8 @@ f_arr = []
 t_arr = []
 for a in range(0, int(n)):
     f, t = input().split()
-    f_arr.append(int(f)); t_arr.append(int(t))
+    f_arr.append(int(f))
+    t_arr.append(int(t))
 
 # subs_arr=[]
 # for l in range (0,int(n)):

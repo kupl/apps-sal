@@ -25,7 +25,7 @@ while(k > 0):
 fb_time = arrival[i]
 for k in range(j, m):
     if fb_time <= fb[k]:
-        idex = k;
+        idex = k
         print(fb[k] + tb)
         return
 print(-1)

@@ -1,6 +1,6 @@
 def solution():  # 最大的距离来自于角落附近的点
     n, m, k, s = map(int, input().split())
-    dis = lambda a, b: abs(a[0] - b[0]) + abs(a[1] - b[1])
+    def dis(a, b): return abs(a[0] - b[0]) + abs(a[1] - b[1])
     corner = [(0, 0), (0, m - 1), (n - 1, 0), (n - 1, m - 1)]
     vertex = [[(n, m), (n, -1), (-1, m), (-1, -1)] for _ in range(k + 1)]
     for i in range(n):

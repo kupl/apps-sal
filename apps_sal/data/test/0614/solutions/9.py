@@ -31,7 +31,8 @@ for x in a[2]:
 ans = 0
 # print(data_sum_odd,data_sum_even,data_sum_three)
 for k in range(a_length[2] + 1):
-    if m - 3 * k < 0: break
+    if m - 3 * k < 0:
+        break
     now1, now2 = data_sum_three[k], data_sum_three[k]
     if (m - 3 * k) % 2 == 0:
         now1 += data_sum_even[min((m - 3 * k) // 2, len(data_sum_even) - 1)]

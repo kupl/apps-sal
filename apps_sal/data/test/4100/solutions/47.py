@@ -6,5 +6,7 @@ for i in range(q):
 
 for i in range(len(points)):
     points[i] -= q
-    if points[i] > 0: print('Yes')
-    else: print('No')
+    if points[i] > 0:
+        print('Yes')
+    else:
+        print('No')

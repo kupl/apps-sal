@@ -44,6 +44,7 @@ cost3 = 0
 for i in range(len(c3)):
     cost3 += c3[i - 1]
     cap = m - 3 * i
-    if cap < 0: break
+    if cap < 0:
+        break
     ans = max(ans, cost3 + dp[cap][0])
 print(ans)

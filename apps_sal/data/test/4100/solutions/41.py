@@ -10,5 +10,7 @@ for i in range(Q):
     p[A[i] - 1] += 1
 
 for i in range(N):
-    if p[i] > 0: print('Yes')
-    else: print('No')
+    if p[i] > 0:
+        print('Yes')
+    else:
+        print('No')

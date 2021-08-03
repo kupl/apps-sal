@@ -18,6 +18,8 @@ else:
             flg = 1
             break
         j = k - i
-        if (j < 0): break
+        if (j < 0):
+            break
         result = max(result, b[x1[i] + j])
-if (flg == 0): print(result + tb)
+if (flg == 0):
+    print(result + tb)
