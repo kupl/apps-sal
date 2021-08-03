@@ -1,11 +1,13 @@
 from itertools import combinations
 from typing import Iterable, List
 
+
 def literals(f: Formula) -> List[Literal]:
     if f.is_literal():
         return [f]
     return [x for g in f.args for x in literals(g)]
-    
+
+
 def evaluate(f: Formula, i: Iterable[Literal]) -> bool:
     if f.is_literal():
         return f in i
@@ -16,6 +18,7 @@ def evaluate(f: Formula, i: Iterable[Literal]) -> bool:
         return all(args)
     if f.is_or():
         return any(args)
+
 
 def sat(f: Formula):
     lits = set(literals(f))

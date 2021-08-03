@@ -1,6 +1,7 @@
 import math as m
 import string as str
 
+
 def spider_to_fly(spider, fly):
     if (spider == fly):
         return 0
@@ -8,7 +9,7 @@ def spider_to_fly(spider, fly):
         angle = get_angle(spider[0], fly[0])
         s_dist = int(spider[1])
         f_dist = int(fly[1])
-        return m.sqrt((s_dist**2)+(f_dist**2)-2*s_dist*f_dist*m.cos(m.radians(angle)))
+        return m.sqrt((s_dist**2) + (f_dist**2) - 2 * s_dist * f_dist * m.cos(m.radians(angle)))
 
 
 def get_angle(s, f):

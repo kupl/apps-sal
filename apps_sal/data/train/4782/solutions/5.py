@@ -1,11 +1,12 @@
-from operator import mul, add,  floordiv, sub
+from operator import mul, add, floordiv, sub
 
 
 class Placeholder:
     num = -1
+
     def __init__(self, so_farr=[]):
-#         if Placeholder.num != -1:
-#             Placeholder.num = -1
+        #         if Placeholder.num != -1:
+        #             Placeholder.num = -1
         self.so_far = so_farr
 
     def __call__(self, *args):
@@ -19,8 +20,8 @@ class Placeholder:
         while len(ds) > 1:
             if i < len(ds) and isinstance(ds[i], tuple):
                 if ds[i][1] == priori:
-                    ds[i] = ds[i][0](ds[i-1], ds[i+1])
-                    del ds[i-1]
+                    ds[i] = ds[i][0](ds[i - 1], ds[i + 1])
+                    del ds[i - 1]
                     del ds[i]
                     continue
             i += 1
