@@ -1,6 +1,7 @@
 N = int(input())
 S = list(map(int, input().split()))
-L = 0; R = N - 1
+L = 0
+R = N - 1
 ans = 0
 for i in range(1, (N + 1) // 2):
     r = R

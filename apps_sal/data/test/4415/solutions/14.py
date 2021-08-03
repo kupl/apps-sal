@@ -11,7 +11,7 @@ def __starting_point():
         if elem in inc[-1:] and elem in dec[-1:]:
             inc = None
             dec = None
-            break;
+            break
 
         if elem in inc[-1:]:
             dec.append(elem)

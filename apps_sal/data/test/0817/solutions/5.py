@@ -57,7 +57,8 @@ for p, i in enumerate(s[::-1]):
             pos.append(p)
             pv.append(pvc)
     else:
-        if cur: pvc = cur[-1]
+        if cur:
+            pvc = cur[-1]
         cur.append(i)
         pos.append(p)
         pv.append(pvc)

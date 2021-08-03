@@ -3,8 +3,10 @@ from operator import *
 from math import *
 from sys import *
 setrecursionlimit(10**7)
-RI = lambda: list(map(int, input().split()))
-RS = lambda: input().rstrip().split()
+def RI(): return list(map(int, input().split()))
+def RS(): return input().rstrip().split()
+
+
 #################################################
 y, k, n = RI()
 st = k - y % k

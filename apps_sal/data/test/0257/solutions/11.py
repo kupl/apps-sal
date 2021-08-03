@@ -5,10 +5,13 @@ def intersectionCC0(x1, y1, r1, r2):
     r = x1**2 + y1**2
     t = (r + r1**2 - r2**2) / (2 * r)
     dd = r1**2 / r - t**2
-    if - (10**-8) < dd < 0: dd = 0
-    if dd < 0: return []
+    if - (10**-8) < dd < 0:
+        dd = 0
+    if dd < 0:
+        return []
     x, y = t * x1, t * y1
-    if dd == 0: return [(x, y)]
+    if dd == 0:
+        return [(x, y)]
     sq = math.sqrt(dd)
     dx, dy = y1 * sq, -x1 * sq
     return [(x + dx, y + dy), (x - dx, y - dy)]
@@ -28,7 +31,8 @@ def chk(t):
         for x, y, c in X:
             if math.sqrt((x - x0) ** 2 + (y - y0) ** 2) * c <= t + 10**-8:
                 cnt += 1
-        if cnt >= K: return 1
+        if cnt >= K:
+            return 1
     return 0
 
 

@@ -5,9 +5,11 @@ XYC = [tuple(map(int, input().split())) for i in range(N)]
 
 def circles_cross_points(x1, y1, r1, x2, y2, r2):
     d = hypot(x1 - x2, y1 - y2)
-    if r1 + r2 < d or abs(r1 - r2) >= d: return []
+    if r1 + r2 < d or abs(r1 - r2) >= d:
+        return []
     x = (r1**2 + d**2 - r2**2) / (2 * r1 * d)
-    if not -1 <= x <= 1: return []
+    if not -1 <= x <= 1:
+        return []
     a = acos(x)
     t = atan2(y2 - y1, x2 - x1)
     return [
@@ -46,5 +48,6 @@ for _ in range(100):
         ok = m
     else:
         ng = m
-    if ok - ng < 10e-7: break
+    if ok - ng < 10e-7:
+        break
 print(ok)
