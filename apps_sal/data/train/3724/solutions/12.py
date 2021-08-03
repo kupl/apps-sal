@@ -1,1 +1,1 @@
-hero = lambda _,__:__*2<=_
+def hero(_, __): return __ * 2 <= _

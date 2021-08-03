@@ -5,4 +5,3 @@ def array_change(arr):
             move += arr[i - 1] - arr[i] + 1
             arr[i] += arr[i - 1] - arr[i] + 1
     return move
-

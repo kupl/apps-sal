@@ -4,4 +4,3 @@ def hero(bullets, dragons):
         return False
     else:
         return True
-

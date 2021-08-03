@@ -7,4 +7,3 @@ def array_change(arr):
         else:
             s = i
     return m
-

@@ -1,4 +1,5 @@
 def hero(bullets, dragons):
-    return bullets >= 2*dragons
+    return bullets >= 2 * dragons
 
-print (hero(6,3)) 
+
+print(hero(6, 3))

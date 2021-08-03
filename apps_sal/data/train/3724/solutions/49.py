@@ -1,6 +1,6 @@
 def hero(bullets, dragons):
-    if bullets >= (dragons*2):
+    if bullets >= (dragons * 2):
         survival = True
-    else: 
+    else:
         survival = False
     return survival

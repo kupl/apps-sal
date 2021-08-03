@@ -8,6 +8,7 @@ def triplet(n):
                 continue
             yield (i, j, c // j)
 
+
 def pythagorean_triplet(n):
     for a, b, c in triplet(n):
         if a**2 + b**2 == c**2:

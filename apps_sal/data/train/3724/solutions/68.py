@@ -1,5 +1,5 @@
 def hero(bullets, dragons):
-    a = bullets/2
+    a = bullets / 2
     while a >= dragons:
         return True
     else:

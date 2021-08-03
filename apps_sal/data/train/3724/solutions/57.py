@@ -1,7 +1,7 @@
 def hero(bullets, dragons):
 
     def teki(dragons):
-        return 2*dragons
+        return 2 * dragons
 
     if bullets > teki(dragons):
         return True

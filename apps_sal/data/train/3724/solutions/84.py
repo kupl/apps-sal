@@ -4,7 +4,7 @@ def hero(bullets, dragons):
     devueve con True o False si esa cantidad de balas puede matar a esa cantidad de dragones.
     El numero necesario para matar un dragon son dos balas.
     '''
-    if ( bullets >= 2 * dragons ):
+    if (bullets >= 2 * dragons):
         return True
     else:
         return False

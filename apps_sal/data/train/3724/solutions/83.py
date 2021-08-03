@@ -1,1 +1,1 @@
-hero = lambda bul, drg: True if bul/drg >= 2 else False
+def hero(bul, drg): return True if bul / drg >= 2 else False

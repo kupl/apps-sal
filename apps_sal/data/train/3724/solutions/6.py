@@ -1,2 +1,1 @@
-hero = lambda b,d: 2*d<=b
-
+def hero(b, d): return 2 * d <= b
