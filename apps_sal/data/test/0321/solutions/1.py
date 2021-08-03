@@ -1,10 +1,11 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
 
 
 def prime(x):
     d = 2
     while d * d <= x:
-        if x % d == 0: return 0
+        if x % d == 0:
+            return 0
         d += 1
     return 1
 

@@ -19,6 +19,7 @@ while s:
     for b in p[a]:
         t[b] = max(t[b], t[a] + 1)
         c[b] -= 1
-        if c[b] == 0: s.append(b)
+        if c[b] == 0:
+            s.append(b)
 k = max(t) - 2 >> 2
 print('Poor Inna!' if any(c) else k if k > 0 else 'Poor Dima!')

@@ -10,5 +10,6 @@ for i in range(n):
         d = d + 8
     elif(s == "Dodecahedron"):
         d = d + 12
-    else: d = d + 20
+    else:
+        d = d + 20
 print(d)

@@ -4,8 +4,10 @@ for _ in range(T):
     LR = [tuple(map(int, input().split())) for i in range(M)]
     mn = mx = X
     for l, r in LR:
-        if l > mx: continue
-        if r < mn: continue
+        if l > mx:
+            continue
+        if r < mn:
+            continue
         mn = min(mn, l)
         mx = max(mx, r)
     print(mx - mn + 1)

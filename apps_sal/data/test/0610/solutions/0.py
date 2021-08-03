@@ -25,7 +25,7 @@ class Task:
         print(self.petyaScore, self.vasyaScore)
 
 
-task = Task();
-task.getData();
-task.solve();
-task.printAnswer();
+task = Task()
+task.getData()
+task.solve()
+task.printAnswer()

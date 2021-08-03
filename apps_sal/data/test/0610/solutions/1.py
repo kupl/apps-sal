@@ -23,8 +23,10 @@ def solve(start, r, b):
             else:
                 start.append('r')
                 r -= 1
-    if r: start.extend(['r'] * r)
-    if b: start.extend(['b'] * b)
+    if r:
+        start.extend(['r'] * r)
+    if b:
+        start.extend(['b'] * b)
     return (len([1 for f, s in zip(start[:-1], start[1:]) if f == s]), len([1 for f, s in zip(start[:-1], start[1:]) if f != s]))
 
 

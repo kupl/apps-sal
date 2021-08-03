@@ -5,7 +5,8 @@ input = sys.stdin.readline
 
 n, a, b = map(int, input().split())
 
-if a < b: a, b = b, a
+if a < b:
+    a, b = b, a
 
 if b == 0:
     # 1 01 001 0001 ... is optimal, plus a long series of 0's

@@ -5,7 +5,8 @@ input = sys.stdin.readline
 
 n, a, b = map(int, input().split())
 
-if a < b: a, b = b, a
+if a < b:
+    a, b = b, a
 
 if b == 0:
     # 1 01 001 0001 ... is optimal, plus a long series of 0's
@@ -17,15 +18,19 @@ else:
         newrow = [1]
         for j in range(1, 20005):
             newrow.append(newrow[-1] + pascal[-1][j])
-            if newrow[-1] > n: break
+            if newrow[-1] > n:
+                break
         pascal.append(newrow)
 
     def getcom(a, b):
         # return a+b choose b
         # if larger than n, return infinite
-        if len(pascal[a]) > b: return pascal[a][b]
-        if b == 0: return 1
-        if b == 1: return a
+        if len(pascal[a]) > b:
+            return pascal[a][b]
+        if b == 0:
+            return 1
+        if b == 1:
+            return a
         return 100000005
 
     # start with the null node (prefix cost 0)

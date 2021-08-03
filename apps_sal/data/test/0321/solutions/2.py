@@ -9,6 +9,7 @@ def isPrime(n):
 
 for i in ' ' * int(input()):
     a, b = map(int, input().split())
-    if a - b > 1: print('NO')
+    if a - b > 1:
+        print('NO')
     else:
         print(['NO', 'YES'][isPrime(a + b)])

@@ -3,7 +3,8 @@ import math as m
 
 
 def f(a):
-    if (a == 2): return True
+    if (a == 2):
+        return True
     for i in range(2, round(m.sqrt(a)) + 1):
         if a % i == 0:
             return False

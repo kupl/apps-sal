@@ -1,6 +1,6 @@
 from functools import reduce
 from fractions import gcd
-ll = lambda: list(map(int, input().split()))
+def ll(): return list(map(int, input().split()))
 
 
 def find_gcd(list):

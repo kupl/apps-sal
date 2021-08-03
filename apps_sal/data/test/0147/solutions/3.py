@@ -9,7 +9,8 @@ input = sys.stdin.readline
 n, a, b = list(map(int, input().split()))
 
 
-if a < b: a, b = b, a
+if a < b:
+    a, b = b, a
 
 
 if b == 0:
@@ -32,7 +33,8 @@ else:
 
             newrow.append(newrow[-1] + pascal[-1][j])
 
-            if newrow[-1] > n: break
+            if newrow[-1] > n:
+                break
 
         pascal.append(newrow)
 
@@ -42,11 +44,14 @@ else:
 
         # if larger than n, return infinite
 
-        if len(pascal[a]) > b: return pascal[a][b]
+        if len(pascal[a]) > b:
+            return pascal[a][b]
 
-        if b == 0: return 1
+        if b == 0:
+            return 1
 
-        if b == 1: return a
+        if b == 1:
+            return a
 
         return 100000005
 
