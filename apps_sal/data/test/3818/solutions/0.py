@@ -15,7 +15,8 @@ def bfs(x):
         step, i, par = q.popleft()
         dist[i] = step
         for j in graph[i]:
-            if j == par: continue
+            if j == par:
+                continue
             q.append((step + 1, j, i))
     return [step, i, dist]
 
@@ -34,9 +35,11 @@ for i in range(1, n + 1):
 ans = pow(2, n - 1, mod) * maxdist % mod
 pre = 0
 for i in range(1, maxdist + 1):
-    if i == maxdist and not maxdls[i]: continue
+    if i == maxdist and not maxdls[i]:
+        continue
     maxdls[i] += maxdls[i - 1]
-    if mindls > i: continue
+    if mindls > i:
+        continue
     ans += (pow(2, maxdls[i], mod) - pre) * i * 2
     ans %= mod
     pre = pow(2, maxdls[i], mod)

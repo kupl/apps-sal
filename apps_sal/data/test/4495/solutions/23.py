@@ -1,5 +1,5 @@
-import math;
-from decimal import *;
+import math
+from decimal import *
 
 a, b, x = map(Decimal, input().split())
 

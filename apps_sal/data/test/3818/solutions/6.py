@@ -13,7 +13,8 @@ def bfs(x):
     while q:
         step, i, par = q.popleft()
         for j in graph[i]:
-            if j == par: continue
+            if j == par:
+                continue
             q.append((step + 1, j, i))
     return [step, i]
 

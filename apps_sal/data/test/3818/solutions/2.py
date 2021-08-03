@@ -1,6 +1,7 @@
 from collections import deque
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 N = int(input())
 X = [[] for _ in range(N)]
@@ -51,7 +52,8 @@ D2 = BFS_dist(N, X, t)
 Y = [0] * (d + 1)
 ma = 0
 for i in range(N):
-    if i == s or i == t: continue
+    if i == s or i == t:
+        continue
     a, b = sorted((D1[i], D2[i]))
     ma = max(ma, a)
     Y[b] += 1
@@ -62,7 +64,9 @@ i2 = P + 1 >> 1
 s = 1
 ans = d
 for i in range(d, ma, -1):
-    if Y[i]: s = pow(i2, Y[i], P) * s % P
+    if Y[i]:
+        s = pow(i2, Y[i], P) * s % P
     ans -= s
-    if ans < 0: ans += P
+    if ans < 0:
+        ans += P
 print(ans * pow(2, N, P) % P)

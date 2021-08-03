@@ -15,7 +15,8 @@ def vinput(rep=1, ty=int, cvt=list):
 
 
 def gcd(a: int, b: int):
-    while b: a, b = b, a % b
+    while b:
+        a, b = b, a % b
     return a
 
 

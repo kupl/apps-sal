@@ -2,7 +2,10 @@ import math
 from bisect import bisect_right
 from itertools import accumulate
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 n, p = R()
 devs = []
 for i in range(n):
