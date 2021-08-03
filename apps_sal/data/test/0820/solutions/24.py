@@ -9,7 +9,7 @@ for i in range(n):
 a.sort()
 
 for i in reversed(a):
-    if m> 0:
+    if m > 0:
         m -= i
         counter += 1
 

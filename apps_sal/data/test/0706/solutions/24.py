@@ -8,5 +8,5 @@ def g(a, b, n, x, mod=10 ** 9 + 7):
     inv = pow(a - 1 + mod, mod - 2, mod)
     return (z * x + b * (z - 1 + mod) * inv) % mod
 
-print(g(*[int(x) for x in input().split()]))
 
+print(g(*[int(x) for x in input().split()]))

@@ -7,5 +7,5 @@ elif X + K * D <= 0:
 else:
     n = int(abs(X - K * D) / (2 * D))
     ans = min(abs(X - K * D + n * 2 * D), abs(X - K * D + (n + 1) * 2 * D))
-    
+
 print(ans)

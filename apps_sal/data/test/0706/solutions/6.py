@@ -5,6 +5,7 @@ def poll(a, k):
         return poll(a * a % 1000000007, k // 2) * a % 1000000007
     return poll(a * a % 1000000007, k // 2)
 
+
 a, b, n, x = [int(i) for i in input().split()]
 if a != 1:
     r = poll(a, n)

@@ -24,4 +24,3 @@ if (k - tmp) % 2 == 1:
     res = abs(res - d)
 
 print(res)
-

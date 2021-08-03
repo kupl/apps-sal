@@ -1,5 +1,6 @@
 def main(n, x, v):
     eps = 1e-7
+
     def f(p):
         nonlocal n, x, v
         t = 0.0
@@ -17,5 +18,5 @@ def main(n, x, v):
             low = mid
     return f(low)
 
-print(main(int(input()), list(map(int, input().split(' '))), list(map(int, input().split(' ')))))
 
+print(main(int(input()), list(map(int, input().split(' '))), list(map(int, input().split(' ')))))

@@ -12,4 +12,3 @@ else:
         print((abs(x - d * a)))
     else:
         print((abs(x - d * b)))
-

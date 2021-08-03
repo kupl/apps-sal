@@ -1,17 +1,20 @@
 import math
 import collections
-ii = lambda : int(input())
-mi = lambda : map(int,input().split())
-li = lambda : list(map(int,input().split()))
+def ii(): return int(input())
 
-x,k,d = mi()
+
+def mi(): return map(int, input().split())
+def li(): return list(map(int, input().split()))
+
+
+x, k, d = mi()
 x = abs(x)
 
-count = min(k,x//d)
+count = min(k, x // d)
 k -= count
-x -= d*count
+x -= d * count
 
 if k % 2 == 0:
     print(x)
 else:
-    print(d-x)
+    print(d - x)

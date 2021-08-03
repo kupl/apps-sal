@@ -7,4 +7,3 @@ else:
     ans = x + B * n
 ans %= mod
 print(ans)
-

@@ -5,6 +5,7 @@ def pow2(c, d):
         return c
     return (pow2(c, d // 2) ** 2 * c ** (d % 2)) % INF
 
+
 INF = 10 ** 9 + 7
 a, b, n, x = list(map(int, input().split()))
 if a != 1:
@@ -12,4 +13,3 @@ if a != 1:
 else:
     SGP = b * n
 print((SGP + pow2(a, n) * x) % INF)
-

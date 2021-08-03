@@ -3,7 +3,7 @@ pos = list(map(int, input().split()))
 v = list(map(int, input().split()))
 t0 = 0
 t1 = max(1, (max(pos) - min(pos)) / 2)
-while t1-t0>1e-7:
+while t1 - t0 > 1e-7:
     tmid = (t0 + t1) / 2
     inter = [pos[0] - v[0] * tmid, pos[0] + v[0] * tmid]
     va = 1
@@ -22,8 +22,6 @@ while t1-t0>1e-7:
     else:
         va = 0
         t1 = tmid
-    if va: t0 = tmid
+    if va:
+        t0 = tmid
 print(tmid)
-
-
-

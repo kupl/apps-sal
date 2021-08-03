@@ -10,4 +10,3 @@ for size in flashed:
     if sumSize >= m:
         break
 print(counter)
-

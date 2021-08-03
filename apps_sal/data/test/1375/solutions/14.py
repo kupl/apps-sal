@@ -13,4 +13,3 @@ if s % 3 == 0:
         if s == p1:
             c += 1
 print(ret)
-

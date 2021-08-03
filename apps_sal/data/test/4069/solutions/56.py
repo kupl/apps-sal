@@ -19,6 +19,3 @@ else:
         ans = mod - sign(mod) * D
 
 print((abs(ans)))
-
-
-

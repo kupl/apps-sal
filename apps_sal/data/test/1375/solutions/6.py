@@ -1,6 +1,7 @@
 from array import array
 from bisect import bisect_right as bisect
 
+
 def solve(nums):
     nums = array('l', nums)
 
@@ -39,5 +40,6 @@ def __starting_point():
     nums = list(map(int, input().split()))
     answer = solve(nums)
     print(answer)
+
 
 __starting_point()
