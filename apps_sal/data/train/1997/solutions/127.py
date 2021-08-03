@@ -11,6 +11,5 @@ class Solution:
                 if c <= a and b <= d:
                     removed += 1
                     break
-        
-        return len(intervals) - removed
 
+        return len(intervals) - removed

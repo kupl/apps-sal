@@ -3,15 +3,15 @@ class Solution:
         n = len(locations)
         if abs(locations[start] - locations[finish]) > fuel:
             return 0
-        
+
         distances = [[0] * n for i in range(n)]
         for i in range(n):
             for j in range(i, n):
                 distances[i][j] = abs(locations[i] - locations[j])
                 distances[j][i] = distances[i][j]
-        
+
         mod = 1000000007
-        
+
         dp = [[0] * n for i in range(fuel + 1)]
         dp[0][finish] = 1
         for f in range(1, fuel + 1):

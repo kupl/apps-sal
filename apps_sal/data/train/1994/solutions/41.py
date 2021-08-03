@@ -10,7 +10,7 @@ class Solution:
         allCom = []
         com = []
         while head:
-            
+
             while head and head.val in G:
                 com.append(head.val)
                 G.remove(head.val)
@@ -24,4 +24,3 @@ class Solution:
             else:
                 break
         return len(allCom)
-

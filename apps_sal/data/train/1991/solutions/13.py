@@ -14,11 +14,8 @@ class Solution:
                     break
                 res += dfs(j, f - df)
             return res
-            
-            
+
         s_loc, e_loc = locations[start], locations[finish]
         locations.sort()
         s_idx, e_idx = locations.index(s_loc), locations.index(e_loc)
         return dfs(s_idx, fuel) % (10 ** 9 + 7)
-        
-

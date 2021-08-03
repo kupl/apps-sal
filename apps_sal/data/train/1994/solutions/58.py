@@ -7,7 +7,7 @@ class Solution:
     def numComponents(self, head: ListNode, G: List[int]) -> int:
         window = False
         connected = 0
-        node = head 
+        node = head
         while node:
             if node.val in G:
                 window = True
@@ -17,7 +17,5 @@ class Solution:
                     window = False
             node = node.__next__
         if window:
-            connected +=1
+            connected += 1
         return connected
-                    
-

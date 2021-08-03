@@ -7,9 +7,9 @@ class Solution:
     def removeZeroSumSublists(self, head: ListNode) -> ListNode:
         dummy = ListNode(0)
         dummy.next = head
-        prefixSum = 0 
+        prefixSum = 0
         cur = head
-        dic = {0:dummy}
+        dic = {0: dummy}
         while cur:
             prefixSum += cur.val
             dic[prefixSum] = cur

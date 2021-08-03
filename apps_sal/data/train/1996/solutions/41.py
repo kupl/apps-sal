@@ -9,8 +9,10 @@ class Solution:
         # instantiate empty lists of nodes to point, outdegrees
         for i in range(len(graph)):
             out_degrees[i] = len(graph[i])
-            if out_degrees[i] == 0: queue.append(i)
-            for j in graph[i]: node_lsts[j].append(i)
+            if out_degrees[i] == 0:
+                queue.append(i)
+            for j in graph[i]:
+                node_lsts[j].append(i)
         # loop through deleting stuff from queue
         for term_node in queue:
             for n in node_lsts[term_node]:

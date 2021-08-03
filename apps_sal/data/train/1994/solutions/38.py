@@ -7,7 +7,7 @@ class Solution:
     def numComponents(self, head: ListNode, G: List[int]) -> int:
         if not head or not G:
             return 0
-        
+
         ht = {}
         for component in G:
             ht[component] = True
@@ -18,9 +18,9 @@ class Solution:
         prev = head
         while(head.next):
             head = head.next
-            if head.val in ht and prev.val in ht :
+            if head.val in ht and prev.val in ht:
                 continue
             elif head.val in ht:
                 total += 1
-            prev = head 
+            prev = head
         return total

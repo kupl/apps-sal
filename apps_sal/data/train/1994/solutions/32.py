@@ -19,4 +19,3 @@ class Solution:
                 check = False
             head = head.__next__
         return c
-

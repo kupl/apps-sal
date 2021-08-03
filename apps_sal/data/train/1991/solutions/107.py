@@ -1,7 +1,7 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         MOD = 10**9 + 7
-        
+
         @functools.lru_cache(maxsize=None)
         def dp(city: int, tank: int) -> int:
             nonlocal finish
@@ -13,5 +13,5 @@ class Solution:
                     answer += dp(i, tank - abs(locations[city] - locations[i]))
                     answer %= MOD
             return answer
-        
+
         return dp(start, fuel)

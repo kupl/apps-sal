@@ -12,5 +12,3 @@ class Solution:
                         valid[j] = False
                         tot -= 1
         return tot
-                        
-

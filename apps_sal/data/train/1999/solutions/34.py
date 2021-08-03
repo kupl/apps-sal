@@ -15,7 +15,7 @@ class Solution:
             num = num - 1
         assert num == 0
         return dummy.next
-    
+
     def findSumZero(self, head: ListNode) -> int:
         assert head != None
         n = 1
@@ -24,11 +24,11 @@ class Solution:
         while node != None:
             s = s + node.val
             if s == 0:
-                return n 
+                return n
             node = node.next
             n = n + 1
         return 0
-        
+
     def removeZeroSumSublists(self, head: ListNode) -> ListNode:
         dummy = ListNode(0, head)
         prev = dummy

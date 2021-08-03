@@ -12,14 +12,13 @@ class Solution:
         d = {}
         d[0] = dummy
         i = 1
-        
-        
+
         while curr:
             prefix_sum.append(prefix_sum[-1] + curr.val)
             d[i] = curr
             i += 1
             curr = curr.__next__
-        
+
         i = 0
         while i < len(prefix_sum):
             j = len(prefix_sum) - 1
@@ -28,6 +27,5 @@ class Solution:
                     d[i].next = d[j].__next__
                     i = j + 1
                 j -= 1
-        
-        return dummy.__next__
 
+        return dummy.__next__

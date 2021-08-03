@@ -10,7 +10,7 @@ class Solution:
         else:
             start_prev.next = stop
             return head
-    
+
     def detect_zero(self, head):
         prev = None
         stop = head
@@ -27,11 +27,10 @@ class Solution:
                 continue
             return True, start_prev, stop.__next__
         return False, None, None
-    
+
     def removeZeroSumSublists(self, head: ListNode) -> ListNode:
         while True:
             found, start_prev, stop = self.detect_zero(head)
             if not found:
                 return head
             head = self.remove_range(head, start_prev, stop)
-

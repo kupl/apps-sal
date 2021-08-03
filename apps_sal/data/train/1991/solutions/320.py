@@ -1,6 +1,7 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         MOD = 10 ** 9 + 7
+
         def dp(i, f, memo):
             if i == finish and f == 0:
                 return 1

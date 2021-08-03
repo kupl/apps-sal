@@ -1,6 +1,7 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         from functools import lru_cache
+
         @lru_cache(None)
         def dfs(cur, end, fuel):
             # print(cur, end, fuel)

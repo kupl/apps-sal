@@ -13,7 +13,7 @@ class Solution:
         #         maxp += d[2]
         #     if maxp > capacity: return False
         # return True
-    
+
         passenger = 0
         onboard = defaultdict(int)
         offboard = defaultdict(int)
@@ -21,8 +21,11 @@ class Solution:
             onboard[t[1]] += t[0]
             offboard[t[2]] += t[0]
         for d in range(10001):
-            
-            if d in onboard: passenger += onboard[d]
-            if d in offboard: passenger -= offboard[d]
-            if passenger > capacity: return False
+
+            if d in onboard:
+                passenger += onboard[d]
+            if d in offboard:
+                passenger -= offboard[d]
+            if passenger > capacity:
+                return False
         return True

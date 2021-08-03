@@ -9,13 +9,13 @@ class Solution:
             ways += 1
         for i in range(len(self.locations)):
             if i != curr_loc:
-                ways += self.solve(i, fuel - abs(self.locations[i]-self.locations[curr_loc]))
-        self.dp[curr_loc, fuel] = ways %  self.modz
+                ways += self.solve(i, fuel - abs(self.locations[i] - self.locations[curr_loc]))
+        self.dp[curr_loc, fuel] = ways % self.modz
         return ways
-            
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         self.locations = locations
         self.dp = {}
-        self.modz = pow(10,9) + 7
+        self.modz = pow(10, 9) + 7
         self.finish = finish
-        return self.solve(start, fuel) %  self.modz
+        return self.solve(start, fuel) % self.modz

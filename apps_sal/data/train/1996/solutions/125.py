@@ -3,14 +3,15 @@ class Solution(object):
         N = len(graph)
         T = set([n for n in range(N) if not graph[n]])
         V = set()
-        def dfs(node,visited):
+
+        def dfs(node, visited):
             if node in T:
                 return True
             if node in V or node in visited:
                 return False
             visited.append(node)
             for n in graph[node]:
-                if not dfs(n,visited):
+                if not dfs(n, visited):
                     V.add(node)
                     V.add(n)
                     return False
@@ -18,5 +19,5 @@ class Solution(object):
                     T.add(n)
             T.add(node)
             return True
-        res = [n for n in range(N) if dfs(n,[])]
+        res = [n for n in range(N) if dfs(n, [])]
         return res

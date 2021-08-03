@@ -12,24 +12,24 @@ class Solution:
                     tsum += arr[j]
                     if tsum == 0:
                         return True, [i, j]
-            
-            return False, [len(arr), len(arr)-1]
-        
+
+            return False, [len(arr), len(arr) - 1]
+
         arr = []
         current = head
         while current is not None:
             arr.append(current.val)
             current = current.__next__
-        
+
         ret = removeZeros(arr)
         flag = ret[0]
         while flag:
             start = ret[1][0]
             end = ret[1][1]
-            arr = arr[:start] + arr[end+1:]
+            arr = arr[:start] + arr[end + 1:]
             ret = removeZeros(arr)
             flag = ret[0]
-        
+
         head = None
         current = head
         for n in arr:
@@ -39,8 +39,5 @@ class Solution:
             else:
                 current.next = ListNode(n)
                 current = current.__next__
-            
-        return head
-        
-        
 
+        return head

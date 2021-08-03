@@ -4,7 +4,7 @@ from functools import lru_cache
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         MOD = 10 ** 9 + 7
-        
+
         @lru_cache(None)
         def DP(cur, fuel):
             if fuel < 0:
@@ -16,4 +16,3 @@ class Solution:
             )) % MOD
 
         return DP(start, fuel)
-

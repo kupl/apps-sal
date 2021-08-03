@@ -8,9 +8,9 @@ class Solution:
             c = int(city == finish)
             for i in range(N):
                 if i != city:
-                    cost = abs(locations[i]-locations[city])
+                    cost = abs(locations[i] - locations[city])
                     if cost <= fuel:
-                        c = (c + dfs(i, fuel-cost)) % mod
+                        c = (c + dfs(i, fuel - cost)) % mod
             return c
 
         return dfs(start, fuel)

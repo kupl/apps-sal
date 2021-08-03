@@ -5,6 +5,7 @@ class Solution:
         locations.sort()
         start, finish = locations.index(start), locations.index(finish)
         n = len(locations)
+
         @lru_cache(None)
         def dp(i, f):
             res = 0
@@ -24,6 +25,6 @@ class Solution:
                     res = (res + dp(i + j, f - ff)) % MOD
                 else:
                     break
-            return res   
-        
+            return res
+
         return dp(start, fuel)

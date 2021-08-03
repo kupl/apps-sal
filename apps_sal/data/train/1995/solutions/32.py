@@ -5,4 +5,3 @@ class Solution:
             for i in range(start_location, end_location):
                 occupied[i] += num_passengers
         return max(occupied) <= capacity
-

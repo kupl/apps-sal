@@ -3,7 +3,7 @@ class Solution:
         # to see start with the node, whether there is a cycle
         v = [0 for _ in range(len(graph))]
         ans = []
-        
+
         def dfs(cur):
             if v[cur] == 1:
                 return True
@@ -15,14 +15,11 @@ class Solution:
                     return True
             v[cur] = 2
             return False
-        
+
         for i in range(len(graph)):
             if dfs(i):
                 continue
             else:
                 ans.append(i)
-        
-        return ans        
-    
-        
 
+        return ans

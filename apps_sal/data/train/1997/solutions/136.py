@@ -5,11 +5,14 @@ class Tree:
         self.right = right
 
     def __lt__(self, other):
-        if self.val[0] < other.val[0]: return True
+        if self.val[0] < other.val[0]:
+            return True
 
-        elif self.val[0] > other.val[0]: return False
+        elif self.val[0] > other.val[0]:
+            return False
 
-        else: return self.val[1] > other.val[1]
+        else:
+            return self.val[1] > other.val[1]
 
     #def __le__(self, other): return self < other or self.val == other.val
 
@@ -20,6 +23,7 @@ class Tree:
     #def __eq__(self, other): return self <= other and self >= other
 
     #def __neq__(self, other): return not self == other
+
 
 class Solution:
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
@@ -46,20 +50,25 @@ class Solution:
         buff = [tree]
         count, last = 0, None
         while buff:
-            while buff[-1].left: buff.append(buff[-1].left)
+            while buff[-1].left:
+                buff.append(buff[-1].left)
             while buff and not buff[-1].right:
                 this = buff.pop(-1)
-                if count == 0: count, last = 1, this.val[1]
+                if count == 0:
+                    count, last = 1, this.val[1]
 
                 else:
-                    if this.val[1] > last: count, last = count + 1, this.val[1]
+                    if this.val[1] > last:
+                        count, last = count + 1, this.val[1]
 
             if buff:
                 this = buff.pop(-1)
-                if count == 0: count, last = 1, this.val[1]
+                if count == 0:
+                    count, last = 1, this.val[1]
 
                 else:
-                    if this.val[1] > last: count, last = count + 1, this.val[1]
+                    if this.val[1] > last:
+                        count, last = count + 1, this.val[1]
 
                 buff.append(this.right)
 

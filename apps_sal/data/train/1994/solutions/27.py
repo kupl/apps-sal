@@ -11,7 +11,7 @@ class Solution:
         while current:
             if current.val in Gset:
                 if current.next and current.next.val not in Gset or current.next is None:
-                # if current.next and current.next.val not in Gset:
+                    # if current.next and current.next.val not in Gset:
                     ans += 1
             current = current.next
         return ans

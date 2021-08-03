@@ -2,6 +2,7 @@ class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         dp = [[-1] * 201 for _ in range(101)]
         MOD = 1000000007
+
         def helper(pos, left):
             if left < 0:
                 return 0
@@ -15,5 +16,3 @@ class Solution:
             dp[pos][left] = ans
             return ans
         return helper(start, fuel)
-        
-

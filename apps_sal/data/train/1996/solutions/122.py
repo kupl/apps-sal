@@ -1,7 +1,8 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
-        w,g,b = 0,1,2
+        w, g, b = 0, 1, 2
         color = collections.defaultdict(int)
+
         def dfs(node):
             if color[node] != w:
                 return color[node] == b

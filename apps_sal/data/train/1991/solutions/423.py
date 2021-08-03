@@ -2,7 +2,7 @@ class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         l = len(locations)
         dp = [[['x' for _ in range(l)] for _ in range(l)] for _ in range(fuel + 1)]
-        
+
         def find_way(s, f, fu):
             if fu < 0:
                 return 0
@@ -14,5 +14,5 @@ class Solution:
                     r += find_way(i, f, fu - abs(locations[s] - locations[i]))
             dp[fu][s][f] = r
             return r
-            
+
         return find_way(start, finish, fuel) % (10 ** 9 + 7)

@@ -12,8 +12,7 @@ class Solution:
 
             dp[cur][fuel] = ans
             return ans
-        
-        n = len(locations)
-        dp = [[-1] * (fuel + 1) for _ in range(n) ]
-        return help(locations, start, finish, dp, fuel)
 
+        n = len(locations)
+        dp = [[-1] * (fuel + 1) for _ in range(n)]
+        return help(locations, start, finish, dp, fuel)

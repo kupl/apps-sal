@@ -4,25 +4,25 @@ class Solution:
         for i in range(len(intervals)):
             covered = False
             for j in range(len(intervals)):
-                if i == j: continue
-            
+                if i == j:
+                    continue
+
                 if self.covered(intervals[i], intervals[j]):
                     covered = True
                     break
-                
-            
+
             if not covered:
                 result += 1
-        
+
         return result
-                
-        
+
     # Interval [a,b) is covered by interval [c,d) if and only if c <= a and b <= d
+
     def covered(self, i1, i2):
         c = i2[0]
         d = i2[1]
-        
+
         a = i1[0]
         b = i1[1]
-        
+
         return c <= a and b <= d

@@ -10,12 +10,12 @@ class Solution:
                 return
             if head.val in G:
                 G[head.val] = i
-            dfs(head.next, i+1)
+            dfs(head.next, i + 1)
         G = collections.Counter(G)
         ans = 1
         dfs(head, 0)
         sortedValues = sorted(G.values())
         for i in range(1, len(sortedValues)):
-            if sortedValues[i] != sortedValues[i-1]+1:
+            if sortedValues[i] != sortedValues[i - 1] + 1:
                 ans += 1
         return ans

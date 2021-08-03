@@ -27,4 +27,3 @@ class Solution:
             return res
 
         return bfs(start, fuel, 1) % (10 ** 9 + 7)
-

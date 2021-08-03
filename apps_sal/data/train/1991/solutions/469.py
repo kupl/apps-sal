@@ -6,7 +6,7 @@ class Solution:
 
         for f in range(201):
             dp[f][finish] = 1
-        
+
         for ff in range(1, fuel + 1):
             for node in range(n):
                 res = 0
@@ -18,4 +18,3 @@ class Solution:
                         res = (res + dp[ff - need][i]) % mod
                 dp[ff][node] = (res + dp[ff][node]) % mod
         return dp[fuel][start]
-

@@ -1,15 +1,16 @@
 def checkCovered(a, b):
     if a[0] < b[0] or a[1] > b[1]:
         return False
-    
+
     return True
+
 
 class Solution:
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         covered = [0] * len(intervals)
         for i in range(len(intervals) - 1):
             a = intervals[i]
-            for j in range(i+1, len(intervals)):
+            for j in range(i + 1, len(intervals)):
                 b = intervals[j]
 
                 if covered[i] == 0:

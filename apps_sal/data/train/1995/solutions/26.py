@@ -1,8 +1,8 @@
 class Solution:
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
-        trips.sort(key = lambda x: x[1])
+        trips.sort(key=lambda x: x[1])
         length = len(trips)
-        
+
         count = 0
         queue = []
         for trip in trips:
@@ -11,7 +11,7 @@ class Solution:
                 count -= queue[0][0]
                 queue = queue[1:]
             queue.append(trip)
-            queue.sort(key = lambda x: x[2])
+            queue.sort(key=lambda x: x[2])
             count += num_passengers
             if count > capacity:
                 return False

@@ -12,5 +12,5 @@ class Solution:
                     if delta <= f:
                         ans += dfs(j, f - delta)
             return ans
-        
+
         return dfs(start, fuel) % (10**9 + 7)

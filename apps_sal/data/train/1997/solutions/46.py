@@ -13,4 +13,3 @@ class Solution:
             if ele != ['', '']:
                 interval.append(ele)
         return len(interval)
-

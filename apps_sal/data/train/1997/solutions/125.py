@@ -11,13 +11,14 @@ class Solution:
                 if c <= a and b <= d:
                     removed += 1
                     break
-        
+
         return len(intervals) - removed
+
 
 class Solution1:
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         intervals = sorted(intervals)
-        
+
         l, r = intervals[0]
         for i in range(1, len(intervals)):
             start, end = intervals[i]
@@ -25,5 +26,5 @@ class Solution1:
             if end <= r:  # first interval covers second!
                 r = end
             else:
-                
+
                 pass

@@ -6,8 +6,10 @@ class Solution:
 
         def solve(current, fuel):
             # 4. if there is no fuel left
-            if fuel < 0: return 0
-            if dp[current][fuel] != -1: return dp[current][fuel]
+            if fuel < 0:
+                return 0
+            if dp[current][fuel] != -1:
+                return dp[current][fuel]
             # 3. if current city is finish, add 1 to the ans and keep going further
             ans = 1 if current == finish else 0
             for next in range(n):

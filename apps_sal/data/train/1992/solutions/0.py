@@ -10,4 +10,3 @@ class CombinationIterator:
 
     def hasNext(self) -> bool:
         return self.nextComb is not None
-

@@ -11,7 +11,7 @@ class Solution:
         while temp != None:
             n += 1
             temp = temp.next
-        a = [0]*n
+        a = [0] * n
         i = 0
         ans = 0
         while head and i < n:
@@ -23,6 +23,6 @@ class Solution:
             if a[i] == 1:
                 if i == 0:
                     ans += 1
-                elif a[i-1] == 0:
+                elif a[i - 1] == 0:
                     ans += 1
         return ans

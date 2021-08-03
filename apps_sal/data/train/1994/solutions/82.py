@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution:
     def numComponents(self, head: ListNode, G: List[int]) -> int:
-        
+
         count = 0
         while(head):
             if(head.val in G):

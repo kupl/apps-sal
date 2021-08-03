@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         res = []
@@ -8,7 +10,7 @@ class Solution:
             if self.dfs(graph, i, visited):
                 res.append(i)
         return res
-    
+
     def dfs(self, graph, node, visited):
         if visited[node] == 1:
             return False

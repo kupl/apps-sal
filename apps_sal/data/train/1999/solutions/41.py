@@ -16,7 +16,7 @@ class Solution:
             flag = False
             while i < size:
                 node = head
-                k=0
+                k = 0
                 prev = head
                 while k < i:
                     prev = node
@@ -37,9 +37,8 @@ class Solution:
                         flag = True
                         break
                     node = node.__next__
-                    
+
             if not flag:
                 break
-        
-        return head
 
+        return head

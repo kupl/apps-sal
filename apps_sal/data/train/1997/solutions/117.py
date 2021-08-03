@@ -5,7 +5,7 @@ class Solution:
             return 1
         count = len_interval
         for i in range(len_interval):
-            part_intervals = intervals[:i]+intervals[i+1:]
+            part_intervals = intervals[:i] + intervals[i + 1:]
             for interval in part_intervals:
                 if self.isOverlapping(intervals[i], interval):
                     count -= 1

@@ -25,4 +25,3 @@ class Solution:
             total += dp[finish][fuel]
             total %= MOD
         return total
-

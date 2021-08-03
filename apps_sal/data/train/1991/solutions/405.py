@@ -1,9 +1,11 @@
 from queue import Queue
 
+
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        
+
         memo = {}
+
         def countMemo(currLocation, currFuel):
             if memo.get((currLocation, currFuel)) is not None:
                 return memo.get((currLocation, currFuel))
@@ -16,7 +18,7 @@ class Solution:
                         result += countMemo(l, currFuel - abs(currLocation - l))
                 memo[(currLocation, currFuel)] = result
                 return result
-        
+
         r = countMemo(locations[start], fuel) % ((10 ** 9) + 7)
-        #(memo)
+        # (memo)
         return r

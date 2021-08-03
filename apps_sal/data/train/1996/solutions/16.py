@@ -4,12 +4,12 @@ class Solution:
         adj = {}
         for i in range(n):
             adj[i] = set(graph[i])
-        
-        safe = set() 
+
+        safe = set()
         for i in range(n):
             if not adj[i]:
                 safe.add(i)
-        
+
         prev_size = len(safe)
         while True:
             for i in range(n):
@@ -24,7 +24,7 @@ class Solution:
                 break
             else:
                 prev_size = len(safe)
-              
+
         out = []
         for i in range(n):
             if i in safe:

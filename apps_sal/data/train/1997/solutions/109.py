@@ -10,14 +10,14 @@ class Solution:
         else:
             front = intervals[0]
             back = self.checkInterval(intervals[1:])
-            if not back: return front
-            print(('f,b',front, back))
+            if not back:
+                return front
+            print(('f,b', front, back))
             s, e = front[0], front[1]
             irrelevant = list([interval for interval in back if interval[0] <= s and e <= interval[1]])
-            if len(irrelevant): 
-                print(('irrel',back))
+            if len(irrelevant):
+                print(('irrel', back))
                 return back
             filtered = list([interval for interval in back if not (s <= interval[0] and interval[1] <= e)])
-            print(('continue',front, filtered))
+            print(('continue', front, filtered))
             return [front] + filtered
-

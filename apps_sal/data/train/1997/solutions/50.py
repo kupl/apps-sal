@@ -4,7 +4,7 @@ class Solution:
         discard = set()
         for i in range(L):
             x, y = intervals[i]
-            for j in range(i+1, L):
+            for j in range(i + 1, L):
                 a, b = intervals[j]
                 if a <= x and b >= y:
                     discard.add((x, y))

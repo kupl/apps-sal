@@ -15,5 +15,3 @@ class Solution:
                     covered.append(i)
                     break
         return len(intervals) - len(covered)
-            
-

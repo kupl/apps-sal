@@ -7,17 +7,14 @@ class Solution:
         n = len(intervals)
         for i in range(n):
             covered = False
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 if self.cover(intervals[j], intervals[i]):
                     covered = True
                     break
             if not covered:
                 counter += 1
         return counter
-                
-            
-        
+
     def cover(self, interval1, interval2):
         # return whether interval1 cover interval2
-        return interval1[0] <= interval2[0] and interval1[1] >= interval2[1] 
-
+        return interval1[0] <= interval2[0] and interval1[1] >= interval2[1]

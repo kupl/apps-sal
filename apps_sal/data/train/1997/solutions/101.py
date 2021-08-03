@@ -53,9 +53,9 @@ class Solution:
                     if this['value'][1] > last:
                         count, last = count + 1, this['value'][1]
 
-                #ret.append(buff.pop(-1))
+                # ret.append(buff.pop(-1))
             if buff:
-                #ret.append(buff.pop(-1))
+                # ret.append(buff.pop(-1))
                 this = buff.pop(-1)
                 if count == 0:
                     count, last = 1, this['value'][1]

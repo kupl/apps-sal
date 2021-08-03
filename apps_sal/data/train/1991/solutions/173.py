@@ -21,7 +21,7 @@ def count_all_possible_routes(locations, start, finish, fuel):
         dp_store[curr_loc][rem_fuel] = ans
         return ans
 
-    return count_all_possible_routes_recur(start, fuel) % ((10 ** 9 ) + 7)
+    return count_all_possible_routes_recur(start, fuel) % ((10 ** 9) + 7)
 
 
 class Solution:

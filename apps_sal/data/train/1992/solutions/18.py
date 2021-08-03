@@ -1,5 +1,6 @@
 import itertools
 
+
 class CombinationIterator:
 
     def __init__(self, characters: str, combinationLength: int):
@@ -20,4 +21,3 @@ class CombinationIterator:
 # obj = CombinationIterator(characters, combinationLength)
 # param_1 = obj.next()
 # param_2 = obj.hasNext()
-

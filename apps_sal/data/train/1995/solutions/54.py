@@ -5,4 +5,3 @@ class Solution:
             for loc in range(trip[1], trip[2]):
                 dp[loc] -= trip[0]
         return not (min(dp) < 0)
-

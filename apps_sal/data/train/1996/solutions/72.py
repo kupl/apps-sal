@@ -19,4 +19,3 @@ class Solution:
                 if indegree[nei] == 0:
                     q.append(nei)
         return [i for i in range(len(res)) if res[i] == True]
-

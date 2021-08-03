@@ -16,7 +16,7 @@ class Solution:
             else:
                 if curr_node.val in G:
                     value_in = True
-                
+
             curr_node = curr_node.next
         if value_in:
             no = no + 1

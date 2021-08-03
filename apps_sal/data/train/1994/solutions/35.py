@@ -9,7 +9,7 @@ class Solution:
             return 0
         if len(G) == 0:
             return 0
-        
+
         resNum = 0
         pre = None
         GG = set(G)
@@ -21,5 +21,5 @@ class Solution:
 
             pre = head.val
             head = head.next
-            
+
         return resNum

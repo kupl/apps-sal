@@ -11,7 +11,7 @@ class Solution:
                 in_cnt[end] += 1
                 if end in ready:
                     ready.remove(end)
-        
+
         while len(ready) > 0:
             rm = ready.pop()
             ans.append(rm)
@@ -20,6 +20,3 @@ class Solution:
                 if in_cnt[nei] == 0:
                     ready.add(nei)
         return sorted(ans)
-
-        
-

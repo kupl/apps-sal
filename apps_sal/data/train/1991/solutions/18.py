@@ -1,9 +1,11 @@
 from functools import lru_cache
 
+
 class Solution:
     def countRoutes(self, loc: List[int], start: int, finish: int, fuel: int) -> int:
         l = len(loc)
         MAX = 10**9 + 7
+
         @lru_cache(None)
         def inner(curr, lf):
             #print(curr, lf)
@@ -15,7 +17,7 @@ class Solution:
             for i in range(l):
                 if i == curr:
                     continue
-                ans += inner(i, lf-abs(loc[i]-loc[curr]))
+                ans += inner(i, lf - abs(loc[i] - loc[curr]))
             return ans % MAX
-        
+
         return inner(start, fuel)

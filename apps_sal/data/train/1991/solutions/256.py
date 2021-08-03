@@ -2,6 +2,7 @@ class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         MOD = 10 ** 9 + 7
         DP = {}
+
         def f(i, fuel):
             # Returns number of paths to finish starting from `i` and `fuel`
             if fuel < 0:

@@ -16,4 +16,3 @@ class Solution:
                 isConnected = False
             head = head.__next__
         return num
-

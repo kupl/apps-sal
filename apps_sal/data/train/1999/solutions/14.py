@@ -23,6 +23,3 @@ class Solution:
                 prev = temp
             temp = start.__next__
         return dummy.__next__
-            
-                    
-

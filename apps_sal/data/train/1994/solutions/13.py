@@ -4,10 +4,13 @@ from collections import defaultdict
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
+
 class UF:
     def __init__(self):
         self.p = {}
         self.r = defaultdict(lambda: 1)
+
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -18,23 +21,24 @@ class UF:
         else:
             self.p[x] = y
             self.r[y] += 1
-    
+
     def find(self, x):
         if self.p.get(x, x) != x:
-            self.p[x] = self.find(self.p.get(x,x))
+            self.p[x] = self.find(self.p.get(x, x))
         return self.p.get(x, x)
+
 
 class Solution:
     def numComponents(self, head: ListNode, G: List[int]) -> int:
         uf = UF()
         # uf.union(head.val, head.next.val)
-        # return 0 
+        # return 0
         gSet = set(G)
         prev = head.val
         head = head.next
         # print(\"AB\")
         while head != None:
-        # for i in range(1):
+            # for i in range(1):
             # print
             curr = head.val
             if curr in gSet and prev in gSet:
@@ -42,7 +46,7 @@ class Solution:
                 # return 1
             head = head.next
             prev = curr
-        # return 0  
+        # return 0
         resSet = set()
         # print(G[1])
         # print(uf.p)

@@ -1,6 +1,7 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         MOD = 10 ** 9 + 7
+
         @lru_cache(None)
         def dp(city, fuel):
             ans = 0
@@ -14,6 +15,5 @@ class Solution:
                     ans += dp(i, fuel - cost)
                     ans %= MOD
             return ans % MOD
-        
-        return dp(start, fuel)
 
+        return dp(start, fuel)

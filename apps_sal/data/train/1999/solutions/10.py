@@ -10,6 +10,7 @@ class Solution:
         m = {0: (dummy, 0)}
         cur_sum = cur = 0
         A = []
+
         def check(i, A):
             return all(not(s < i <= e)for s, e in A)
         while head:

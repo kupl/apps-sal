@@ -1,10 +1,14 @@
+from functools import lru_cache
+
+
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         return foo(locations, start, finish, fuel)
 
-from functools import lru_cache
+
 def foo(cities, start, end, f):
     n = len(cities)
+
     @lru_cache(maxsize=None)
     def bar(i, f):
         rv = 0

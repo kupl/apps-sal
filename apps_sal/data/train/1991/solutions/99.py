@@ -7,7 +7,8 @@ class Solution:
             if dp[p][f] < 0:
                 dp[p][f] = 0
                 for q in range(N):
-                    if q == p: continue
+                    if q == p:
+                        continue
                     left = f - abs(locations[p] - locations[q])
                     if left < abs(locations[finish] - locations[q]):
                         continue

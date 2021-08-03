@@ -12,4 +12,3 @@ class Solution:
                     output += recurse(locations, i, finish, fuel - abs(locations[i] - locations[start]))
             return output
         return recurse(tuple(locations), start, finish, fuel) % (10**9 + 7)
-

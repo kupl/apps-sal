@@ -1,6 +1,7 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         memo = {}
+
         def helper(fuell, curr):
             if (fuell, curr) in memo:
                 return memo[(fuell, curr)]

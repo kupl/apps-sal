@@ -11,4 +11,3 @@ class Solution:
                         if cur >= 0:
                             save[j][cur] = (save[j][cur] + save[i][f]) % mod
         return sum(save[finish]) % mod
-

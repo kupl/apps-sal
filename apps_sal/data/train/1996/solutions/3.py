@@ -1,8 +1,10 @@
 from collections import defaultdict
+
+
 class Solution:
     def eventualSafeNodes(self, graph):
         state = defaultdict(lambda: 'unknown')
-        
+
         def dfs(node):
             if state[node] != 'unknown':
                 return state[node] == 'safe'

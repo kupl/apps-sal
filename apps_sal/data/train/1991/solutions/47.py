@@ -5,31 +5,29 @@ class Solution:
         # iterate from biggest locations, starting fuel, reducing
         # location by 1 each time, then reducing fuel
         # if you encounter a 0 in dp, ignore it
-        # But otherwise, calculate the locations you can move to 
+        # But otherwise, calculate the locations you can move to
         # -- ignoring moving back to that same location --
         # and in each of those locations, with the reduced fuel amount,
         # add in the value that was in the dp grid that got you there.
         # After doing all of that, add up the values of dp grid
         # for each point in the column for location finish.
-        
+
         dp = [[0 for j in range(len(locations))] for i in range(fuel + 1)]
         dp[fuel][start] = 1
-        
+
         for i in range(fuel, -1, -1):
-            for j in range(len(locations)-1, -1, -1):
+            for j in range(len(locations) - 1, -1, -1):
                 if dp[i][j] == 0:
                     continue
                 for st in range(len(locations)):
                     if st != j:
                         if i >= abs(locations[st] - locations[j]):
-                            dp[i-abs(locations[st]-locations[j])][st] += dp[i][j]
+                            dp[i - abs(locations[st] - locations[j])][st] += dp[i][j]
         total = 0
-        for i in range(fuel+1):
+        for i in range(fuel + 1):
             total += dp[i][finish]
         return total % (10**9 + 7)
-        
-        
-        
+
         '''for i in range(fuel+1):
             dp[i][finish] = 1
         for i in range(1, fuel + 1): # i is amount of fuel
@@ -54,9 +52,7 @@ class Solution:
                     dp[i][j] = total
         print(dp)
         return dp[fuel][start]'''
-        
-                
-        
+
         '''from functools import lru_cache
         
         @lru_cache
@@ -85,5 +81,3 @@ class Solution:
         
         res = dfs(start, fuel)
         return res % (10**9 + 7)'''
-        
-

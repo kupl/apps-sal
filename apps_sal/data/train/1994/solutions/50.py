@@ -17,6 +17,3 @@ class Solution:
                     con = False
             head = head.__next__
         return count
-                
-            
-

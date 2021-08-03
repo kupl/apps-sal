@@ -1,11 +1,10 @@
 class Solution:
-    
+
     def covered(self, interval_1, interval_2):
         return interval_2[0] <= interval_1[0] and interval_2[1] >= interval_1[1]
-    
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
-        
-        
+
         i = 0
         while (i < len(intervals)):
             j = 0
@@ -22,8 +21,5 @@ class Solution:
                     j += 1
                     continue
             i += 1
-        
-        
-            
-        return len(intervals)
 
+        return len(intervals)

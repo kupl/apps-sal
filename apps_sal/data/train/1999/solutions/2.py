@@ -18,5 +18,3 @@ class Solution:
             node.next = cur.__next__
             cur = cur.__next__
         return dummy.__next__
-                
-

@@ -4,9 +4,9 @@ class Solution:
         for i in range(len(graph)):
             visited = set()
             self.dfs(graph, i, visited, res)
-        
+
         return sorted(list(res))
-    
+
     # dfs is to check if there's a cycle starting from this point
     def dfs(self, graph, i, visited, res):
         visited.add(i)
@@ -20,6 +20,3 @@ class Solution:
         visited.remove(i)
         res.add(i)
         return True
-
-            
-

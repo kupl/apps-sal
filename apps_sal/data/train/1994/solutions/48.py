@@ -6,7 +6,7 @@
 class Solution:
     def numComponents(self, head: ListNode, G: List[int]) -> int:
         #s = set(G)
-        
+
         prevIn = False
         while head:
             if head.val in G:
@@ -16,8 +16,7 @@ class Solution:
                     prevIn = True
             else:
                 prevIn = False
-            
-            head = head.__next__
-        
-        return len(G)
 
+            head = head.__next__
+
+        return len(G)

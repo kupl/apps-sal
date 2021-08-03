@@ -5,7 +5,7 @@ class Solution:
             a1, b1 = intervals[i]
             for j in range(i + 1, len(intervals)):
                 a2, b2 = intervals[j]
-                #print('Interals: [{},{}) vs [{},{})'.format(
+                # print('Interals: [{},{}) vs [{},{})'.format(
                 #     a1, b1, a2, b2))
                 if a2 <= a1 and b1 <= b2:
                     #print('covered: {} by {}'.format(i, j))

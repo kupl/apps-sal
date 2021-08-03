@@ -5,5 +5,5 @@ class Solution:
             if f < 0:
                 return 0
             return (1 if i == fin else 0) + sum(0 if i == j else dfs(j, f - abs(l[j] - l[i])) for j in range(len(l)))
-                                                 
+
         return dfs(start, fuel) % 1000000007

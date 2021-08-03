@@ -22,10 +22,9 @@ class Solution:
                 else:
                     is_safe[node] = SAFE
                     return
-        
+
         for node in range(len(graph)):
             if is_safe[node] == None:
                 explore(node)
         # print(is_safe)
         return [node for node in range(len(graph)) if is_safe[node] == SAFE]
-

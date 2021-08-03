@@ -1,6 +1,7 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         memo = {}
+
         def dfs(start, finish, fuel):
             if fuel < 0:
                 return 0
@@ -8,7 +9,7 @@ class Solution:
                 return memo[(start, finish, fuel)]
 
             routes = (1 if start == finish else 0)
-            for i, location  in enumerate(locations):
+            for i, location in enumerate(locations):
                 if i == start:
                     continue
 
@@ -16,6 +17,5 @@ class Solution:
 
             memo[(start, finish, fuel)] = routes
             return routes
-        
-        return dfs(start, finish, fuel) % (10**9 + 7)
 
+        return dfs(start, finish, fuel) % (10**9 + 7)

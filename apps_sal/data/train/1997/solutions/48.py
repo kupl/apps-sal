@@ -2,7 +2,7 @@ class Solution:
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         n = len(intervals)
         removed = [False] * n
-        intervals = sorted(intervals, key= lambda interval: (interval[0], -interval[1]))
+        intervals = sorted(intervals, key=lambda interval: (interval[0], -interval[1]))
         # print(intervals)
         for i in range(len(intervals)):
             start, end = intervals[i]
@@ -13,5 +13,5 @@ class Solution:
                     removed[j] = True
                     n -= 1
                 j += 1
-                
+
         return n

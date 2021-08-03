@@ -19,5 +19,3 @@ class Solution:
         if start != None:
             cnt += 1
         return cnt
-                
-

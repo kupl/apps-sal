@@ -3,10 +3,10 @@ class Solution:
         p_list = list()
         for p, s, e in trips:
             if len(p_list) < e:
-                p_list += [0]*(e - len(p_list))
+                p_list += [0] * (e - len(p_list))
             for i in range(s, e):
                 p_list[i] += p
                 if p_list[i] > capacity:
                     return False
-        
+
         return True

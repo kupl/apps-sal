@@ -1,8 +1,9 @@
-#dfs, with status: UNKNOWN, VISITING, VISITED
+# dfs, with status: UNKNOWN, VISITING, VISITED
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         UNKNOWN, VISITING, VISITED = 0, 1, 2
         status = [UNKNOWN] * len(graph)
+
         def dfs(node):
             if status[node] == UNKNOWN:
                 status[node] = VISITING

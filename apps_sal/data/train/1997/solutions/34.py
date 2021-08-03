@@ -1,5 +1,5 @@
 class Solution:
-    
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         intervals.sort()
         results = []
@@ -10,7 +10,6 @@ class Solution:
                 if len(results) == 0 or i[0] != results[-1][0]:
                     results.append(i)
                 else:
-                    results[-1] = i         
+                    results[-1] = i
             print(results)
         return len(results)
-
