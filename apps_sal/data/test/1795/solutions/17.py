@@ -1,4 +1,5 @@
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
+
 
 n = int(input())
 f = list(R())

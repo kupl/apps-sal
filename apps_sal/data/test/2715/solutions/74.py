@@ -17,7 +17,8 @@ b = (k - 1) // 50 + 50
 r = k % 50
 l = 50 - r
 a = b - r - 1
-if r == 0: a = b
+if r == 0:
+    a = b
 print(50)
 res = [-1] * 50
 for i in range(50):

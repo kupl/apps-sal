@@ -9,8 +9,10 @@ def main():
     m = K % N
     for i in range(m):
         for j in range(N):
-            if i == j: ans[j] += N
-            else: ans[j] -= 1
+            if i == j:
+                ans[j] += N
+            else:
+                ans[j] -= 1
     print(N)
     print(*ans)
 

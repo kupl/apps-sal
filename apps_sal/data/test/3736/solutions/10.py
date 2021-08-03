@@ -1,4 +1,4 @@
-x = input();
+x = input()
 is_mirror = "YES"
 bad_list = ["B", "C", "D", "E", "F", "G", "J", "K", "L", "N", "P", "Q", "R", "S", "Z"]
 for letter in x:

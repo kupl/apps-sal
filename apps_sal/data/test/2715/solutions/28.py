@@ -7,7 +7,8 @@ a = [49 + A] * N
 for i in range(B):
     a[i] -= N
     for j in range(N):
-        if j == i: continue
+        if j == i:
+            continue
         a[j] += 1
 
 print(N)

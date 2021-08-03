@@ -3,12 +3,13 @@ import heapq as hq
 import itertools
 import math
 import collections
-ma = lambda: map(int, input().split())
-lma = lambda: list(map(int, input().split()))
-tma = lambda: tuple(map(int, input().split()))
-ni = lambda: int(input())
-yn = lambda fl: print("Yes") if fl else print("No")
-ips = lambda: input().split()
+def ma(): return map(int, input().split())
+def lma(): return list(map(int, input().split()))
+def tma(): return tuple(map(int, input().split()))
+def ni(): return int(input())
+def yn(fl): return print("Yes") if fl else print("No")
+def ips(): return input().split()
+
 
 k = ni()
 n = 50

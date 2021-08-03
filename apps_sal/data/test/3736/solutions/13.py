@@ -9,5 +9,7 @@ while i <= k and _b:
         k -= 1
     else:
         _b = False
-if _b: print('YES')
-else: print('NO')
+if _b:
+    print('YES')
+else:
+    print('NO')

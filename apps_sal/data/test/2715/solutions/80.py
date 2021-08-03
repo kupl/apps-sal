@@ -13,7 +13,9 @@ mod = 10**9 + 7
 inf = float("inf")
 # すべてのkeyが用意されてる defaultdict(int)で初期化
 # 順序を保ったdict
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
+
 sys.setrecursionlimit(11451419)
 #メモ化再帰defの冒頭に毎回 @lru_cache(maxsize=10**10)
 # 引数にlistはだめ
@@ -21,9 +23,11 @@ sys.setrecursionlimit(11451419)
 # ソート、"a"+"b"、再帰ならPython3の方がいい
 #######ここから天ぷら########
 k = int(input())
-print(50); n = 50
+print(50)
+n = 50
 if k == 0:
-    print(" ".join(["0"] * 50)); return
+    print(" ".join(["0"] * 50))
+    return
 
 a = k // n
 b = k % n
