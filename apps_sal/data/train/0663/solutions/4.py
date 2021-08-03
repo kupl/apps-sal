@@ -18,17 +18,18 @@ def least_rotation(S: str) -> int:
             f[j - k] = i + 1
     return k
 
-t=int(input())
+
+t = int(input())
 for _ in range(t):
-    l,s=input().split()
-    if(l=='1'):
-        k=least_rotation(s)
-        ans=""
-        n=len(s)
-        s+=s
-        for i in range(k,k+n):
-            ans+=s[i]
+    l, s = input().split()
+    if(l == '1'):
+        k = least_rotation(s)
+        ans = ""
+        n = len(s)
+        s += s
+        for i in range(k, k + n):
+            ans += s[i]
         print(ans)
     else:
-        s=sorted(s)
+        s = sorted(s)
         print(''.join(s))

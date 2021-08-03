@@ -6,20 +6,6 @@ for _ in range(t):
     cutOff = []
     x = d
     buses = list(map(int, input().split()))
-    for i in range(len(buses)-1,-1,-1):
-        x = x - x%buses[i]
+    for i in range(len(buses) - 1, -1, -1):
+        x = x - x % buses[i]
     print(x)
-
-
-
-
-
-
-
-
-
-
-
-            
-
-
