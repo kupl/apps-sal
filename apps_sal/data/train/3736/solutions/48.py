@@ -5,6 +5,7 @@ def minimum(arr):
             minv = arr[i]
     return minv
 
+
 def maximum(arr):
     maxv = -10e7
     for i in range(len(arr)):

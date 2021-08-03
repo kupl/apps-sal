@@ -10,9 +10,6 @@ def capitalize(s):
             s2 = s2 + to_add.capitalize()
             s1 = s1 + to_add
 
-    return [s1,s2]
+    return [s1, s2]
 
-    return [s1,s2]
-                    
-    
-
+    return [s1, s2]

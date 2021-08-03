@@ -18,4 +18,3 @@ def roll(desc, verbose=False):
     if verbose:
         return {'dice': nums, 'modifier': modifier}
     return sum(nums) + modifier
-

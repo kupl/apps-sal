@@ -5,8 +5,9 @@ def minimum(arr):
             low = i
     return low
 
+
 def maximum(arr):
-    high= arr[0]
+    high = arr[0]
     for i in arr:
         if i > high:
             high = i

@@ -7,7 +7,8 @@ def minimum(arr):
         elif i < min:
             min = i
     return min
-        
+
+
 def maximum(arr):
     max = None
     for i in arr:

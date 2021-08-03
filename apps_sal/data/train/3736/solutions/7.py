@@ -3,12 +3,12 @@ def maximum(arr):
     for i in arr:
         if i > maximum:
             maximum = i
-    return maximum 
-        
+    return maximum
+
 
 def minimum(arr):
     minimum = arr[0]
     for i in arr:
         if i < minimum:
             minimum = i
-    return minimum 
+    return minimum

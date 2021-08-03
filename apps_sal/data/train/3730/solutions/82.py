@@ -9,5 +9,3 @@ def capitalize(s):
     arr.append(result)
     arr.append(result.swapcase())
     return arr
-    
-

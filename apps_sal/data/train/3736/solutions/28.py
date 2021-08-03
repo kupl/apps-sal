@@ -1,4 +1,4 @@
-def minimum(arr:[]):
+def minimum(arr: []):
     result = arr[0]
     for i in arr:
         if i < result:
@@ -7,11 +7,10 @@ def minimum(arr:[]):
     return result
 
 
-def maximum(arr:[]):
-    result=arr[0]
+def maximum(arr: []):
+    result = arr[0]
     for i in arr:
-        if i>result:
+        if i > result:
             result = i
-        
-    return result    
 
+    return result

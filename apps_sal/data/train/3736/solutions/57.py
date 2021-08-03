@@ -5,6 +5,7 @@ def maximum(numbers):
             max_val = numbers[i]
     return max_val
 
+
 def minimum(numbers):
     min_val = numbers[0]
     for i in range(len(numbers)):

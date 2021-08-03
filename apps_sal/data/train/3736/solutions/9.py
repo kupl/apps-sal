@@ -5,6 +5,7 @@ def minimum(arr):
             Min = e
     return Min
 
+
 def maximum(arr):
     Max = arr[0]
     for e in arr:

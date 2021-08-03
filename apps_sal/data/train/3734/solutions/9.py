@@ -1,6 +1,7 @@
 import re
 from random import randint
 
+
 def roll(desc, verbose=False):
     if not isinstance(desc, str):
         return False

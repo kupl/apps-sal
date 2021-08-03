@@ -1,6 +1,6 @@
 def capitalize(s):
     d = str(s)
-   
+
     w = ''
     f = ''
     g = []
@@ -18,8 +18,4 @@ def capitalize(s):
     g.append(w)
     g.append(f)
 
-
-
-
     return g
-
