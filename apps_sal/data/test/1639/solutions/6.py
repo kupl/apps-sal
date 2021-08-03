@@ -33,9 +33,9 @@ a = get_arr()
 f = [1 for i in range(n)]
 for i in range(n):
     if(i == 0):
-        continue;
+        continue
     if(a[i] >= a[i - 1]):
-        f[i] += f[i - 1];
+        f[i] += f[i - 1]
 
 print(max(f))
 

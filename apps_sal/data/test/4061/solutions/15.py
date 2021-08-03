@@ -13,7 +13,8 @@ acc = 0
 for i in range(n):
     acc_t = t[i]
 
-    while acc_t != s[acc]: acc += 1
+    while acc_t != s[acc]:
+        acc += 1
     low[i] = acc
     acc += 1
 
@@ -22,7 +23,8 @@ acc = len(s) - 1
 for i in range(len(t)):
     acc_t = t[n - i - 1]
 
-    while acc_t != s[acc]: acc -= 1
+    while acc_t != s[acc]:
+        acc -= 1
     high[n - i - 1] = acc
     acc -= 1
 

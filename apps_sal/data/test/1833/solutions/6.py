@@ -4,7 +4,7 @@ import math
 
 def nextDiv(a):
     ret = []
-    i = 1;
+    i = 1
     while (i * i <= a):
         if (a % i == 0):
             ret.append(i)

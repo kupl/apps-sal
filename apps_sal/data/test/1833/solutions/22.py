@@ -16,7 +16,7 @@ mod = 10**9 + 7
 # # l = list(map(int,input().split()))
 # from itertools import permutations
 # input = lambda: sys.stdin.readline().rstrip()
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
 
 
 n = int(input())

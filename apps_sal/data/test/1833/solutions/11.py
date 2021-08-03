@@ -16,7 +16,8 @@ def main(n, s, mod):
     counts = [list(range(ls)), [1 for i in range(ls)]]
     S = ls
     for d in range(2, ls + 1):
-        if not L[d]: break
+        if not L[d]:
+            break
         lcounts = len(counts[0])
         sumcounts = [0]
         for i in range(1, lcounts + 1):

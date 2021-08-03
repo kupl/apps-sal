@@ -23,8 +23,10 @@ def li3(): return [int(i) for i in input().rstrip('\n')]
 @lru_cache(None)
 def fact(n):
     ans = 1
-    if n == 0: return 1
-    for i in range(1, n + 1): ans *= i
+    if n == 0:
+        return 1
+    for i in range(1, n + 1):
+        ans *= i
     return ans
 
 

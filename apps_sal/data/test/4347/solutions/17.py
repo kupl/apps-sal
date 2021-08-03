@@ -10,6 +10,7 @@ def inpl(): return list(map(int, sys.stdin.readline().split()))
 
 
 n = inp()
-n //= 2; n -= 1
+n //= 2
+n -= 1
 
 print(math.factorial(2 * n + 1) // (n + 1))
