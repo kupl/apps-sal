@@ -11,6 +11,7 @@ ans = 0
 for i in list(s.keys()):
     k = s[i]
     u.append(k)
-    a = k // 2; b = k - a
+    a = k // 2
+    b = k - a
     ans += (a - 1) * a // 2 + (b - 1) * b // 2
 print(ans)

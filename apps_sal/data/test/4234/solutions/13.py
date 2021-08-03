@@ -1,5 +1,7 @@
 # codeforces1165C_live
-gi = lambda: list(map(int, input().strip().split()))
+def gi(): return list(map(int, input().strip().split()))
+
+
 n, = gi()
 s = list(input())
 st = []

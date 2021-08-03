@@ -2,7 +2,7 @@ def bf(n, m, a):
     k = 0
     for c in range(1, n + 1):
         if abs(c - a) < abs(c - m):
-            k += 1;
+            k += 1
     return k
 
 

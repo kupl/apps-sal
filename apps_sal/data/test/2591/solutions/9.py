@@ -7,7 +7,9 @@ for _ in range(t):
     b = [0] * n
     j = 0
     while j < n:
-        if j % 2 == 0: b[j] = a[j // 2]
-        else: b[j] = a[n - 1 - j // 2]
+        if j % 2 == 0:
+            b[j] = a[j // 2]
+        else:
+            b[j] = a[n - 1 - j // 2]
         j += 1
     print(*b[::-1])

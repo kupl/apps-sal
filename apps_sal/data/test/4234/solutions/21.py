@@ -3,7 +3,8 @@ s = input()
 o = 0
 rem = set()
 for i, c in enumerate(s):
-    if (i ^ o) & 1: continue
+    if (i ^ o) & 1:
+        continue
     if i == n - 1:
         rem.add(i)
         break

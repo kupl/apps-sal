@@ -7,7 +7,9 @@ for _ in range(int(input())):
 
 c = 0
 
-f = lambda n: n * (n - 1) // 2
+
+def f(n): return n * (n - 1) // 2
+
 
 for k in names:
     c += f(names[k] // 2) + f(-(-names[k] // 2))
