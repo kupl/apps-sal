@@ -1,1 +1,1 @@
-nth_smallest = lambda r,i: sorted(r)[i-1]
+def nth_smallest(r, i): return sorted(r)[i - 1]

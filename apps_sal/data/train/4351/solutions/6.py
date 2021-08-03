@@ -10,4 +10,3 @@ def find_middle(string):
         return int(n[ceil(size / 2 - 1):size // 2 + 1])
     except TypeError:
         return -1
-

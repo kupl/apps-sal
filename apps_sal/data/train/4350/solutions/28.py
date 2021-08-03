@@ -5,5 +5,4 @@ def pre_fizz(n):
         number += 1
         ar.append(number)
     return ar
-    #your code here
-
+    # your code here

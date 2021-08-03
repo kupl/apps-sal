@@ -1,5 +1,5 @@
 def pre_fizz(n):
-    a=[]
+    a = []
     for i in range(n):
-        a+=[i+1]
+        a += [i + 1]
     return a

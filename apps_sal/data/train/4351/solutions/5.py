@@ -5,7 +5,6 @@ def find_middle(string):
             if i.isdigit():
                 lst.append(i)
         x = str(eval('*'.join(lst)))
-        return int(str(x)[len(x)//2]) if len(x) % 2 == 1 else int(str(x)[len(x)//2-1]+str(x)[len(x)//2])
+        return int(str(x)[len(x) // 2]) if len(x) % 2 == 1 else int(str(x)[len(x) // 2 - 1] + str(x)[len(x) // 2])
     except:
         return -1
-

@@ -5,6 +5,3 @@ def nth_smallest(arr, pos):
         arr.remove(min(arr))
         i -= 1
     return result
-        
-        
-

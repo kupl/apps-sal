@@ -35,4 +35,5 @@ def nth_smallest(arr, pos):
 def __starting_point():
     print((nth_smallest([15, 20, 7, 10, 4, 3], 3)))
 
+
 __starting_point()

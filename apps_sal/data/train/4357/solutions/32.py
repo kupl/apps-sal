@@ -1,3 +1,4 @@
 from heapq import nsmallest
 
-nth_smallest = lambda lst, n: nsmallest(n, lst)[-1]
+
+def nth_smallest(lst, n): return nsmallest(n, lst)[-1]
