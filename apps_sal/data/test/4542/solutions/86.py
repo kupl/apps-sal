@@ -1,5 +1,6 @@
 S = list(input())
-c = 0; m = ''
+c = 0
+m = ''
 for i in S:
     if i != m:
         m = i

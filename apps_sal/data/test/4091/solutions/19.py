@@ -14,5 +14,5 @@ for e in L:
             print(cursor, end=" ")
             cursor = 0
         else:
-            pass;
+            pass
 print(cursor)

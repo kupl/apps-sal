@@ -1,4 +1,6 @@
-ll = lambda: list(map(int, input().split()))
+def ll(): return list(map(int, input().split()))
+
+
 testcases = 1
 testcases = int(input())
 for testcase in range(testcases):

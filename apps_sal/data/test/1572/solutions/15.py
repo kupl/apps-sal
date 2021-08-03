@@ -14,7 +14,7 @@ for i in b:
     else:
         if now > max:
             max = now
-        now = 0;
+        now = 0
 if now > max:
     max = now
 print(min(n, max + 2))
