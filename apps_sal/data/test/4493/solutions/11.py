@@ -7,7 +7,10 @@ for i in range(3):
     for j in range(3):
         if i == j:
             s += c[i][j] * 2
-        else: s -= c[i][j]
+        else:
+            s -= c[i][j]
 
-if s == 0: print("Yes")
-else: print("No")
+if s == 0:
+    print("Yes")
+else:
+    print("No")

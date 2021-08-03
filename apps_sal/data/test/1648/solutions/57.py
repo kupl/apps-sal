@@ -44,7 +44,8 @@ class ModTools:
     def nCr(self, n, r):
         """ 組み合わせ """
 
-        if n < r: return 0
+        if n < r:
+            return 0
         r = min(r, n - r)
         numerator = self.fact[n]
         denominator = self.inv[r] * self.inv[n - r] % self.MOD

@@ -1,12 +1,13 @@
 from math import ceil
 import sys
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
 
 
 def mismatch(s1, s2):
     cnt = 0
     for i in range(len(s1)):
-        if s1[i] != s2[i]: cnt += 1
+        if s1[i] != s2[i]:
+            cnt += 1
     return cnt
 
 

@@ -34,20 +34,23 @@ for m in range(q):
         for j in range(k):
             if l[i + j] != k1[j]:
                 tec += 1
-        if tec < minn: minn = tec
+        if tec < minn:
+            minn = tec
     for i in range(n - k + 1):
         tec = 0
         for j in range(k):
             if l[i + j] != k2[j]:
                 tec += 1
-        if tec < minn: minn = tec
+        if tec < minn:
+            minn = tec
     for i in range(n - k + 1):
         tec = 0
         for j in range(k):
             if l[i + j] != k3[j]:
                 tec += 1
                 #print(l[i+j], k3[j])
-        if tec < minn: minn = tec
+        if tec < minn:
+            minn = tec
     b.append(minn)
 for i in range(q):
     print(b[i])

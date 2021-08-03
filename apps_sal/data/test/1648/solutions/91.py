@@ -6,7 +6,8 @@ def nCr(n, r, DIV):
         r = n - r
     if r == 0:
         return 1
-    f = lambda x, y: x * y % DIV
+
+    def f(x, y): return x * y % DIV
     X = reduce(f, range(n - r + 1, n + 1))
     Y = reduce(f, range(1, r + 1))
     return X * pow(Y, DIV - 2, DIV) % DIV

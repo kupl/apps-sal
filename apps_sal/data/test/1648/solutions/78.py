@@ -60,7 +60,8 @@ def solve():
         return ans
 
     def coef(n, k):
-        if k > n: return 0
+        if k > n:
+            return 0
         return (fact(n) * pow((fact(k) * fact(n - k)) % MOD, MOD - 2, MOD)) % MOD
 
     for i in range(1, blue + 1):

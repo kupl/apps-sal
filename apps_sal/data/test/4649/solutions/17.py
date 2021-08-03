@@ -6,8 +6,10 @@ input = sys.stdin.readline
 #resource.setrlimit(resource.RLIMIT_STACK, [0x10000000, resource.RLIM_INFINITY])
 # sys.setrecursionlimit(0x100000)
 # Write your code here
-RI = lambda: [int(x) for x in sys.stdin.readline().strip().split()]
-rw = lambda: input().strip().split()
+def RI(): return [int(x) for x in sys.stdin.readline().strip().split()]
+def rw(): return input().strip().split()
+
+
 #from collections import defaultdict as df
 #import heapq
 # heapq.heapify(li) heappush(li,4) heappop(li)

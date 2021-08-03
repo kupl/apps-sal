@@ -1,8 +1,10 @@
 def comb(n, k, p):
     """power_funcを用いて(nCk) mod p を求める"""
     from math import factorial
-    if n < 0 or k < 0 or n < k: return 0
-    if n == 0 or k == 0: return 1
+    if n < 0 or k < 0 or n < k:
+        return 0
+    if n == 0 or k == 0:
+        return 1
     a = factorial(n) % p
     b = factorial(k) % p
     c = factorial(n - k) % p
@@ -11,7 +13,8 @@ def comb(n, k, p):
 
 def power_func(a, b, p):
     """a^b mod p を求める"""
-    if b == 0: return 1
+    if b == 0:
+        return 1
     if b % 2 == 0:
         d = power_func(a, b // 2, p)
         return d * d % p

@@ -12,7 +12,8 @@ def givestringsk(k):
 def countdifferences(a, b):
     cnt = 0
     for i in range(len(a)):
-        if a[i] != b[i]: cnt += 1
+        if a[i] != b[i]:
+            cnt += 1
     return cnt
 
 

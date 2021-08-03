@@ -14,7 +14,8 @@ h = list(graph[1])
 heapq.heapify(h)
 while len(hist) < n:
     next_node = heapq.heappop(h)
-    if next_node in seen: continue
+    if next_node in seen:
+        continue
     seen.add(next_node)
     hist.append(next_node)
     for node in graph[next_node]:
