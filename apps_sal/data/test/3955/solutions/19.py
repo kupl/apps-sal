@@ -7,7 +7,8 @@ class IoTool:  # a tool for input redirection
     def _reader_dbg():
         with open('./input.txt', 'r') as f:
             lines = f.readlines()
-        for l in lines: yield l.strip()
+        for l in lines:
+            yield l.strip()
 
     def _reader_oj():
         return iter(sys.stdin.read().split('\n'))
@@ -22,7 +23,8 @@ def main():
     n, k, x = list(map(int, input().split()))
     a = list(map(int, input().split()))
     mul = 1
-    for i in range(k): mul *= x
+    for i in range(k):
+        mul *= x
     if n == 1:
         print(a[0] * mul)
         return
@@ -30,8 +32,10 @@ def main():
     pre[0] = a[0]
     tail[n - 1] = a[n - 1]
 
-    for i in range(1, n): pre[i] = pre[i - 1] | a[i]
-    for i in range(n - 2, -1, -1): tail[i] = tail[i + 1] | a[i]
+    for i in range(1, n):
+        pre[i] = pre[i - 1] | a[i]
+    for i in range(n - 2, -1, -1):
+        tail[i] = tail[i + 1] | a[i]
     answer = max((pre[0] * mul) | tail[1], pre[n - 2] | (tail[n - 1] * mul))
     for i in range(1, n - 1):
         answer = max(answer, (a[i] * mul) | pre[i - 1] | tail[i + 1])

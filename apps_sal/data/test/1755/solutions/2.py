@@ -26,8 +26,10 @@ def give(i, j, mi, ma):
     for k in range(i, j + 1):
         if mi <= l[k] <= ma:
             ind = br(l1, l[k])
-            if ind == len(l1): l1.append(l[k])
-            else: l1[ind] = l[k]
+            if ind == len(l1):
+                l1.append(l[k])
+            else:
+                l1[ind] = l[k]
     # print(j - i + 1, len(l1))
     return j - i - len(l1) + 1
 
@@ -38,14 +40,16 @@ l = [0] + li()
 
 if k:
     b = li()
-else: b = []
+else:
+    b = []
 
 for i in range(1, k):
     if l[b[i]] - l[b[i - 1]] < b[i] - b[i - 1] or l[b[i]] < l[b[i - 1]]:
         print(-1)
         return
 
-for i in range(n + 1): l[i] -= i
+for i in range(n + 1):
+    l[i] -= i
 
 if k:
     ans = give(1, b[0] - 1, -float('inf'), l[b[0]])

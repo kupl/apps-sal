@@ -15,8 +15,10 @@ bc = [c[0] - b[0], c[1] - b[1]]
 ba = [a[0] - b[0], a[1] - b[1]]
 ac = [c[0] - a[0], c[1] - a[1]]
 
-sum2 = lambda a, b: tuple([a[0] + b[0], a[1] + b[1]])
-inv = lambda a: [-a[0], -a[1]]
+
+def sum2(a, b): return tuple([a[0] + b[0], a[1] + b[1]])
+def inv(a): return [-a[0], -a[1]]
+
 
 res = set()
 res.add(sum2(a, bc))

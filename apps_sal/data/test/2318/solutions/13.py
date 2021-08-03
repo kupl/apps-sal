@@ -1,5 +1,6 @@
 import sys
-read = lambda: sys.stdin.readline().strip()
+def read(): return sys.stdin.readline().strip()
+
 
 for t in range(int(input())):
     a, b = read(), read()

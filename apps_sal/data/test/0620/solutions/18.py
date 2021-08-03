@@ -56,7 +56,9 @@ class Vector:
         return other.proj_to(self)
 
 
-t = lambda: tuple(map(int, input().split()))
+def t(): return tuple(map(int, input().split()))
+
+
 p1, p2, p3 = t(), t(), t()
 p = [p1, p2, p3]
 ans = set()

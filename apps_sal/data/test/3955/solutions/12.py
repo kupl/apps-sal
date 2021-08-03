@@ -11,5 +11,5 @@ for i in range(0, n):
 now = x**k
 Res = 0
 for i in range(0, n):
-    Res = max(Prfx[i] | (Arr[i] * now) | Sffx[i + 1], Res);
+    Res = max(Prfx[i] | (Arr[i] * now) | Sffx[i + 1], Res)
 print(Res)
