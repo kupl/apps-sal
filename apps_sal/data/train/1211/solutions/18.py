@@ -5,7 +5,6 @@ try:
         N = input()
         for i in range(len(N)):
             N = N.replace('abc', '')
-        print(N)         
+        print(N)
 except:
     pass
-

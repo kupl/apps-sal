@@ -4,4 +4,3 @@ for _ in range(int(input())):
     x = n // 2
 
     print(pow(m, (x * (x + 1)), MOD))
-

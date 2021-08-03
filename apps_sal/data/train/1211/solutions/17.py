@@ -6,4 +6,3 @@ for t in range(int(input())):
         str1 = new
         new = str1.replace('abc', '')
     print(str1)
-

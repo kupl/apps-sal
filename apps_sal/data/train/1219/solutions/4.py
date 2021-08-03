@@ -27,6 +27,10 @@
 ░░░░░░▀██████▀░░░░░░
 ░░░░░░░░░░░░░░░░░░░░
 """
+
+# sys.stdin = open('input.txt', 'r')
+# sys.stdout = open('output.txt', 'w')
+
 import sys
 import math
 import collections
@@ -34,10 +38,6 @@ import operator as op
 from collections import deque
 from math import gcd, inf, sqrt, pi, cos, sin, ceil, log2, floor, log
 from bisect import bisect_right, bisect_left, bisect
-
-# sys.stdin = open('input.txt', 'r')
-# sys.stdout = open('output.txt', 'w')
-
 from functools import reduce
 from sys import stdin, stdout, setrecursionlimit
 setrecursionlimit(2**20)
@@ -67,6 +67,7 @@ def prime_factors(n):
 def isPowerOfTwo(x):
     return (x and (not(x & (x - 1))))
 
+
 MOD = 1000000007  # 10^9 + 7
 PMOD = 998244353
 N = 10**18 + 1
@@ -85,4 +86,3 @@ for _ in range(T):
     # c = list(map(int, stdin.readline().rstrip().split()))
     p = (n * (n + 1)) // 2 - (ceil(n / 2))**2
     print(pow(m, p, MOD))
-
