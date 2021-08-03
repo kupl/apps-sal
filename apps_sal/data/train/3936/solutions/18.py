@@ -31,7 +31,7 @@ def tetranacci(array,
 def tribonacci(array,
                index):
 
-    return array[index - 1] + array[index - 2] + array[index - 3]  
+    return array[index - 1] + array[index - 2] + array[index - 3]
 
 
 MAP = {"fib": fibonacci,
@@ -62,8 +62,8 @@ def zozonacci(pattern,
               length):
 
     result = []
-    if (not (len(pattern) and
-             length)):
+    if (not (len(pattern)
+             and length)):
 
         return result
 
@@ -83,4 +83,3 @@ def zozonacci(pattern,
                 break
 
     return result
-

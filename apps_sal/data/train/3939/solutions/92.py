@@ -9,4 +9,4 @@ def rps(p1, p2):
         'rockrock': 'Draw!',
         'scissorsscissors': 'Draw!',
         'paperpaper': 'Draw!'
-    }.get(p1+p2)
+    }.get(p1 + p2)

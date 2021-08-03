@@ -9,7 +9,8 @@ def rps(p1, p2):
         return "Player 1 won!"
     else:
         return "Player 2 won!"
-    
+
+
 """    if p1 == p2:
         return "Draw!"
     elif p1[0].lower == "s" and p2[0].lower == "p":
@@ -20,8 +21,8 @@ def rps(p1, p2):
         return "Player 1 won!"
     else:
         return "Player 2 won!"
-"""    
+"""
 r1 = "rock"
 r2 = "scissors"
 
-print(rps(r1,r2))
+print(rps(r1, r2))

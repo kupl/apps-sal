@@ -1,4 +1,4 @@
-def hydrate(drink_string): 
+def hydrate(drink_string):
     glasses = 0
     for word in drink_string.split():
         if word.isdigit():

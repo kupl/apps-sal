@@ -1,5 +1,5 @@
 def rps(p1, p2):
-    if p1==p2:
+    if p1 == p2:
         return "Draw!"
     elif "scissors" in p1:
         if "rock" in p2:

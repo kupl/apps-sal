@@ -7,9 +7,10 @@ def wins(hand1, hand2):
         return '1'
     else:
         return '2'
-    
+
+
 def rps(p1, p2):
-    if p1==p2:
+    if p1 == p2:
         return 'Draw!'
     else:
-        return 'Player ' + wins(p1,p2) + ' won!'
+        return 'Player ' + wins(p1, p2) + ' won!'

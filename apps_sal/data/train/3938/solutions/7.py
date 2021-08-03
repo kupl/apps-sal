@@ -6,5 +6,3 @@ def sorted_brands(history):
         else:
             d[i['brand']] = 1
     return sorted(list(d.keys()), key=lambda x: d[x], reverse=True)
-        
-

@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def build_or_buy(hand):
     res = []
     bank = Counter(hand)

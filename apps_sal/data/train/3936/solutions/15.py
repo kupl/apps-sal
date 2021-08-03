@@ -8,8 +8,7 @@ def zozonacci(pattern, n):
     if not pattern or n == 0:
         return []
     res = bind[pattern[0]][0]
-    q, r = divmod(n-len(res), len(pattern))
+    q, r = divmod(n - len(res), len(pattern))
     for v in (q * pattern + pattern[:r]):
         res.append(bind[v][1](res))
     return res[:n]
-

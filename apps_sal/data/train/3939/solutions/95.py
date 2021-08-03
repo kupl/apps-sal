@@ -2,14 +2,14 @@ DRAW = 'Draw!'
 P1_WIN = 'Player 1 won!'
 P2_WIN = 'Player 2 won!'
 gamestate = {
-    'rock': {'rock': DRAW, 'paper': P2_WIN,'scissors': P1_WIN,},
-    'paper': {'rock': P1_WIN, 'paper': DRAW,'scissors': P2_WIN,},
-    'scissors':{'rock': P2_WIN, 'paper': P1_WIN,'scissors': DRAW,}
+    'rock': {'rock': DRAW, 'paper': P2_WIN, 'scissors': P1_WIN, },
+    'paper': {'rock': P1_WIN, 'paper': DRAW, 'scissors': P2_WIN, },
+    'scissors': {'rock': P2_WIN, 'paper': P1_WIN, 'scissors': DRAW, }
 }
 
-def rps(p1, p2):    
-    return gamestate[p1][p2]
 
+def rps(p1, p2):
+    return gamestate[p1][p2]
 
 
 def rps2(p1, p2):
