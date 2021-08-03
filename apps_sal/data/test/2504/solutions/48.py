@@ -2,8 +2,9 @@ from scipy.sparse.csgraph import floyd_warshall
 from scipy.sparse import csr_matrix
 import numpy as np
 import sys
-input = lambda: sys.stdin.readline().rstrip()
-inpl = lambda: list(map(int, input().split()))
+def input(): return sys.stdin.readline().rstrip()
+def inpl(): return list(map(int, input().split()))
+
 
 N, M, L = inpl()
 graph = [[0] * N for _ in range(N)]

@@ -1,7 +1,8 @@
 from bisect import bisect_left as lb, bisect_right as ub
-ii = lambda: int(input())
-mi = lambda: list(map(int, input().split()))
-li = lambda: list(mi())
+def ii(): return int(input())
+def mi(): return list(map(int, input().split()))
+def li(): return list(mi())
+
 
 n, k, A, B = mi()
 a = li()

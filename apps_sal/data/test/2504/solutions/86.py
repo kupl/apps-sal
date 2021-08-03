@@ -2,7 +2,10 @@ import numpy as np
 from scipy.sparse.csgraph import shortest_path, floyd_warshall, dijkstra, bellman_ford, johnson
 from scipy.sparse import csr_matrix
 
-f = lambda: map(int, input().split())
+
+def f(): return map(int, input().split())
+
+
 N, M, L = f()
 G = [[0] * N for _ in [0] * N]
 for _ in [0] * M:

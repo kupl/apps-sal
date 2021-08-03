@@ -8,10 +8,14 @@ def main():
     x = y = 0
     res = 0
     for i in s:
-        if i == 'U': x += 1
-        elif i == 'D': x -= 1
-        elif i == 'L': y += 1
-        else: y -= 1
+        if i == 'U':
+            x += 1
+        elif i == 'D':
+            x -= 1
+        elif i == 'L':
+            y += 1
+        else:
+            y -= 1
         res += d[(x, y)]
         d[(x, y)] += 1
 

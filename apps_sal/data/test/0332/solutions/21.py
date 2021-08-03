@@ -17,7 +17,8 @@ def diagonalOrder(a, b):
         for j in range(count):
             aux_a.append(a[min(n, line) - j - 1][start_col + j])
             aux_b.append(b[min(n, line) - j - 1][start_col + j])
-        if(sorted(aux_a) != sorted(aux_b)): return("NO")
+        if(sorted(aux_a) != sorted(aux_b)):
+            return("NO")
     return("YES")
 
 

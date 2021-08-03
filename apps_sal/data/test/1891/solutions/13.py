@@ -11,8 +11,10 @@ def mp():
 
 def sol(i, j):
     works = bisect(a, j) - bisect_left(a, i)
-    if works == 0: return A
-    if i == j: return B * works
+    if works == 0:
+        return A
+    if i == j:
+        return B * works
     m = (i + j) >> 1
     return min(B * (j - i + 1) * works, sol(i, m) + sol(m + 1, j))
 

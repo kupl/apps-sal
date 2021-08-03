@@ -4,11 +4,17 @@ from scipy.sparse import csr_matrix
 INF = 10**12
 N, M, L = map(int, input().split())
 
-A = []; B = []; C = []
+A = []
+B = []
+C = []
 for i in range(M):
     a, b, c = map(int, input().split())
-    A.append(a - 1); B.append(b - 1); C.append(c)
-A = np.array(A); B = np.array(B); C = np.array(C)
+    A.append(a - 1)
+    B.append(b - 1)
+    C.append(c)
+A = np.array(A)
+B = np.array(B)
+C = np.array(C)
 
 graph = csr_matrix((C, (A, B)), (N, N))
 d = floyd_warshall(graph, directed=False)

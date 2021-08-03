@@ -4,7 +4,8 @@ assert len(l) == n
 
 l.sort()
 
-if l[-1] == 1: print("%11.10f" % 1)
+if l[-1] == 1:
+    print("%11.10f" % 1)
 else:
     sig = 0
     prod = 1
