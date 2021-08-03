@@ -8,4 +8,3 @@ def stringy(size):
         st += "0"
         size -= 1
     return st
-

@@ -3,6 +3,7 @@ from itertools import accumulate
 from operator import add
 from string import ascii_lowercase
 
+
 def solve(s, n):
     counter = Counter(s)
     cum_count = [0] + list(accumulate((counter[c] for c in ascii_lowercase), add))
@@ -12,4 +13,3 @@ def solve(s, n):
         if cum_count[ord(c) - 97] > n:
             result.append(c)
     return "".join(result)
-

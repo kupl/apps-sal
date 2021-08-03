@@ -1,12 +1,11 @@
 def stringy(size):
     # Good Luck!
-    s=''
-    for i in range(0,size):
-        if(i%2==0):
-            j="1"
-            s=s+j
+    s = ''
+    for i in range(0, size):
+        if(i % 2 == 0):
+            j = "1"
+            s = s + j
         else:
-            j="0"
-            s=s+j
+            j = "0"
+            s = s + j
     return s
-

@@ -1,10 +1,9 @@
 def leo(oscar):
-    if oscar==88:
+    if oscar == 88:
         return "Leo finally won the oscar! Leo is happy"
-    elif oscar==86:
+    elif oscar == 86:
         return "Not even for Wolf of wallstreet?!"
-    elif (oscar!=86 or oscar!=88) and oscar<88:
+    elif (oscar != 86 or oscar != 88) and oscar < 88:
         return "When will you give Leo an Oscar?"
     else:
-        return  "Leo got one already!"
-
+        return "Leo got one already!"

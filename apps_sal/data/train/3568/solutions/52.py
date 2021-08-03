@@ -4,8 +4,8 @@ def bumps(road):
     for i in range(len(a)):
         if a[i] == "n":
             ncount += 1
-            
+
     if ncount > 15:
         return "Car Dead"
-    else:    
+    else:
         return "Woohoo!"

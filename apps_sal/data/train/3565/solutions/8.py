@@ -1,4 +1,4 @@
-def solve(s, k): 
+def solve(s, k):
     for c in "abcdefghijklmnopqrstuvwxyz":
         n = s.count(c)
         s = s.replace(c, "", k)

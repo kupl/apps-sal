@@ -1,7 +1,7 @@
 def stringy(size):
-    arr=[]
+    arr = []
     for i in range(size):
-        if i%2==0:
+        if i % 2 == 0:
             arr.append('1')
         else:
             arr.append('0')

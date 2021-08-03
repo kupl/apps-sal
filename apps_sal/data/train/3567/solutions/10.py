@@ -7,4 +7,3 @@ def leo(oscar):
         return "When will you give Leo an Oscar?"
     else:
         return "Leo got one already!"
-

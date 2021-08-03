@@ -4,7 +4,6 @@ def leo(oscar):
     elif oscar == 86:
         return "Not even for Wolf of wallstreet?!"
     elif oscar == 87 or oscar < 86:
-        return  "When will you give Leo an Oscar?"
+        return "When will you give Leo an Oscar?"
     else:
         return "Leo got one already!"
-

@@ -10,4 +10,3 @@ def count_inversion(nums):
             if a > b:
                 result += 1
     return result
-

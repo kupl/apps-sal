@@ -3,6 +3,8 @@ def bumps(road):
     for x in road:
         if x is "n":
             count = count + 1
-    if count > 15: x = "Car Dead"
-    else: x = "Woohoo!"
+    if count > 15:
+        x = "Car Dead"
+    else:
+        x = "Woohoo!"
     return x

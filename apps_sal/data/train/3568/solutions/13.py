@@ -5,4 +5,5 @@ def bumps(road):
             bumps += 1
     if bumps <= 15:
         return "Woohoo!"
-    else: return "Car Dead"
+    else:
+        return "Car Dead"

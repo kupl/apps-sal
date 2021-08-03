@@ -1,5 +1,5 @@
 def stringy(size):
-    counter = 0 
+    counter = 0
     res = ""
     while counter < size:
         if counter % 2 == 0:

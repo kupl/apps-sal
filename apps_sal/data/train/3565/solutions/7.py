@@ -1,4 +1,4 @@
-def solve(st,k):
+def solve(st, k):
     if k >= len(st):
         return ""
     chars = sorted(st)
