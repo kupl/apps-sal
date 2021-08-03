@@ -6,8 +6,10 @@ n = int(stdin.readline())
 ans = 0
 eps = 0.0000001
 
+
 def ge0(a):
     return (a >= 0 or abs(a) <= eps)
+
 
 for i in range(n):
     x, y, r2 = [int(i) for i in stdin.readline().split()]
@@ -16,5 +18,3 @@ for i in range(n):
         ans += 1
 
 print(ans)
-    
-

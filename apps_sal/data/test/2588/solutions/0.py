@@ -2,7 +2,7 @@ for _ in range(int(input())):
     n, a, b = map(int, input().split())
     s = input().strip()
     ans = (n + 1) * b + n * a
-    
+
     if '1' in s:
         ans += 2 * a
         s = s[s.find('1'):s.rfind('1') + 1]
@@ -19,7 +19,7 @@ for _ in range(int(input())):
             if t[i]:
                 ans += b * (j - i)
             else:
-                ans += min(b * (j - i), 2 * a) 
+                ans += min(b * (j - i), 2 * a)
             i = j
-    
+
     print(ans)

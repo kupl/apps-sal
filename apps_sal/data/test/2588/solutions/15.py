@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n,pipeCost,pillarCost = map(int,input().split())
+    n, pipeCost, pillarCost = map(int, input().split())
     road = input()
     cost = 0
 
@@ -19,47 +19,47 @@ for _ in range(t):
 
     # If only a single sequence of 1's
     if len(freq) == 3:
-        cost += pillarCost*freq[0]
-        cost += pillarCost*2*(freq[1]+1)
-        cost += pillarCost*freq[2]
-        cost += pipeCost*(sum(freq)+2)
+        cost += pillarCost * freq[0]
+        cost += pillarCost * 2 * (freq[1] + 1)
+        cost += pillarCost * freq[2]
+        cost += pipeCost * (sum(freq) + 2)
 
     elif len(freq) == 1:
-        cost += pillarCost*(freq[0]+1)
-        cost += pipeCost*(freq[0])
+        cost += pillarCost * (freq[0] + 1)
+        cost += pipeCost * (freq[0])
 
     else:
         # represents ground level
         level = True
         switch = 0
 
-        cost += pipeCost*(sum(freq))
+        cost += pipeCost * (sum(freq))
         for i in range(len(freq)):
             # zero at 0,2,4...
-            if i%2 == 0:
+            if i % 2 == 0:
                 if level:
-                    if i==0 or i==len(freq)-1:
-                        cost += pillarCost*freq[i]
+                    if i == 0 or i == len(freq) - 1:
+                        cost += pillarCost * freq[i]
                     else:
-                        cost += pillarCost*(freq[i]-1)
+                        cost += pillarCost * (freq[i] - 1)
                 else:
-                    if i == len(freq)-1:
+                    if i == len(freq) - 1:
                         level = True
-                        cost += pillarCost*freq[i]
+                        cost += pillarCost * freq[i]
                     else:
-                        if (freq[i]-1)*pillarCost > 2*pipeCost:
+                        if (freq[i] - 1) * pillarCost > 2 * pipeCost:
                             level = True
-                            cost += pillarCost*(freq[i]-1)
+                            cost += pillarCost * (freq[i] - 1)
                         else:
-                            cost += pillarCost*2*(freq[i]-1)
+                            cost += pillarCost * 2 * (freq[i] - 1)
             else:
                 if level:
                     level = False
                     switch += 1
-                    cost += pillarCost*2*(freq[i]+1)
+                    cost += pillarCost * 2 * (freq[i] + 1)
                 else:
-                    cost += pillarCost*2*(freq[i]+1)
-        
-        cost += 2*switch*pipeCost
-    
+                    cost += pillarCost * 2 * (freq[i] + 1)
+
+        cost += 2 * switch * pipeCost
+
     print(cost)

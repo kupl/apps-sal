@@ -1,4 +1,4 @@
-m = 10** 6 + 3
+m = 10 ** 6 + 3
 
 n, k = list(map(int, input().split()))
 p = 1
@@ -16,7 +16,7 @@ while tmp:
     tmp //= 2
 b = pow(2, (k - 1) * n - gcd, m)
 a = 1
-mem = [-1]*100
+mem = [-1] * 100
 for i in range(1, k):
     cnt = 0
     while i % 2 == 0:
@@ -28,4 +28,3 @@ for i in range(1, k):
     if a == 0:
         break
 print((b - a + m) % m, b)
-

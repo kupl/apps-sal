@@ -35,11 +35,12 @@ class TestClass(unittest.TestCase):
 
 def resolve():
     a, b = list(map(int, input().split()))
-    print(((a+b+1)//2))
+    print(((a + b + 1) // 2))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

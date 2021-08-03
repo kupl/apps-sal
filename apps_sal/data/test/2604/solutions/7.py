@@ -13,4 +13,3 @@ for i in range(0, n):
     rs += 1 if (r - d <= D - data[i][2] and r >= D + data[i][2]) else 0
 
 print(rs)
-

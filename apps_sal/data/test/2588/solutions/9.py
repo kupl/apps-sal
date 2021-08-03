@@ -1,4 +1,4 @@
-#E71_C
+# E71_C
 
 T = int(input())
 
@@ -43,10 +43,9 @@ for i in range(0, T):
     cost = pls * (b * 2) + (n + 1 - pls) * (b)
     cost += (n + len(seg)) * a
     if len(seg) > 2:
-        for j in range(1, len(seg) - 1,2):
+        for j in range(1, len(seg) - 1, 2):
             plc = (seg[j + 1] - seg[j]) * b
             pipc = 2 * a
             if plc < pipc:
                 cost -= (pipc - plc)
     print(cost)
-

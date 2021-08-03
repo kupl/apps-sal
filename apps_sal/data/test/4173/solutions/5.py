@@ -8,4 +8,3 @@ for _ in range(q):
             print(a + n // 2 * b)
         else:
             print(n // 2 * b)
-

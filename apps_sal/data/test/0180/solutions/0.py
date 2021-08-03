@@ -35,5 +35,3 @@ else:
         else:
             ans += i
     print(ans)
-
-

@@ -22,5 +22,3 @@ for i in range(t):
             else:
                 ans += min((arr[i] + 1) * a + b * (arr[i] - 1), 2 * b * (arr[i] - 1) + a * (arr[i] - 1))
         print(ans)
-                    
-
