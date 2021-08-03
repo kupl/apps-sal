@@ -9,7 +9,8 @@ for c in range(26):
         for r in range(l + 1, N + 1):
             x += S[r - 1] != c
             res[c][x] = max(res[c][x], r - l)
-    for i in range(N): res[c][i + 1] = max(res[c][i + 1], res[c][i])
+    for i in range(N):
+        res[c][i + 1] = max(res[c][i + 1], res[c][i])
 for _ in range(int(input())):
     x, s = input().split()
     x = int(x)

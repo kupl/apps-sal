@@ -5,8 +5,10 @@ pfs = [[0 for _ in range(n + 1)]for _ in range(26)]
 for i in range(n):
     ch = ord(s[i]) - ord('a')
     for j in range(26):
-        if j == ch: pfs[j][i + 1] = pfs[j][i] + 1
-        else: pfs[j][i + 1] = pfs[j][i]
+        if j == ch:
+            pfs[j][i + 1] = pfs[j][i] + 1
+        else:
+            pfs[j][i + 1] = pfs[j][i]
 # print(pfs)
 dp = [[0 for _ in range(n + 1)]for _ in range(26)]
 for c in range(26):

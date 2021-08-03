@@ -6,7 +6,8 @@ e = [[i + 1, i - 1] if i < n else [i - 1] for i in range(0, n + 1)]
 e[0] = []
 a[1] = 0
 for i, x in enumerate(map(int, input().split())):
-    if i + 1 != x: e[i + 1] += [x]
+    if i + 1 != x:
+        e[i + 1] += [x]
 q = [(0, 1)]
 while q:
     l, cur = q.pop(0)

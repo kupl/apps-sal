@@ -2,7 +2,10 @@ from itertools import accumulate, product
 
 import math
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 n, k = R()
 arr, acc = list(accumulate(R())), dict()
 acc[0] = 1

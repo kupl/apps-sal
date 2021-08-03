@@ -30,7 +30,7 @@ n = int(input())
 
 for i in range(0, n):
     t = input()
-    s.append(t);
+    s.append(t)
 
 s = sorted(s, key=cmp_to_key(cmp))
 

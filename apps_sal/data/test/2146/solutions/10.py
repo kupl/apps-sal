@@ -9,7 +9,8 @@ def solve():
     ans = [-1] * n
     while len(queue) > 0:
         cur = queue.popleft()
-        if cur[0] < 0 or cur[0] >= n or ans[cur[0]] != -1: continue
+        if cur[0] < 0 or cur[0] >= n or ans[cur[0]] != -1:
+            continue
         ans[cur[0]] = cur[1]
         queue.append((cur[0] - 1, cur[1] + 1))
         queue.append((cur[0] + 1, cur[1] + 1))
@@ -17,5 +18,6 @@ def solve():
     print(" ".join(map(str, ans)))
 
 
-if sys.hexversion == 50659824: sys.stdin = open("input.txt")
+if sys.hexversion == 50659824:
+    sys.stdin = open("input.txt")
 solve()

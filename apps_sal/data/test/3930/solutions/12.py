@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, k = f()
 t = {k ** i for i in range(48) if k ** i <= n * 1e9}
 s = y = 0

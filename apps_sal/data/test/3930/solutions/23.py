@@ -14,13 +14,15 @@ if abs(k) == 1:
     ans = 0
     for i in psum:
         e[i] -= 1
-        if 1 + i in e: ans += e[1 + i]
+        if 1 + i in e:
+            ans += e[1 + i]
 
     if k == -1:
         e = d.copy()
         for i in psum:
             e[i] -= 1
-            if i - 1 in e: ans += e[i - 1]
+            if i - 1 in e:
+                ans += e[i - 1]
 
     print(ans)
 
@@ -34,7 +36,8 @@ else:
 
         for i in psum:
             e[i] -= 1
-            if w + i in e: ans += e[w + i]
+            if w + i in e:
+                ans += e[w + i]
 
         p += 1
         w = pow(k, p)
