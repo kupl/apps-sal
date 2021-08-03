@@ -11,12 +11,12 @@ for i in range(sz):
         c = i
         break
     temp.append(l[i])
-    
+
 if(c == 0):
     print(l[1:])
     return
-else:    
+else:
     for i in range(c + 1, sz):
         temp.append(l[i])
-    
+
 print("".join(temp))

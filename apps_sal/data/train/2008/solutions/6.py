@@ -23,4 +23,3 @@ for i in range(1, n + 2):
         cur = 0
 print(ans)
 print(*b[1:-1])
-

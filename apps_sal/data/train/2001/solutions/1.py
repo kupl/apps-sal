@@ -18,8 +18,3 @@ if n == -1:
 else:
     print(n)
     print(*arr)
-
-
-
-
-

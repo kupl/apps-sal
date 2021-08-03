@@ -1,5 +1,6 @@
 from math import ceil
 
+
 def __starting_point():
     n = int(input())
     arr = list(map(int, input().split()))
@@ -43,5 +44,6 @@ def __starting_point():
             ss = None
 
     print(*arr)
+
 
 __starting_point()

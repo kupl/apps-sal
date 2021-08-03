@@ -1,6 +1,8 @@
 import sys
 from itertools import *
 from math import *
+
+
 def solve():
     n, m = list(map(int, input().split()))
     h = list(map(int, input().split()))
@@ -17,7 +19,7 @@ def solve():
             if curpos - leftget > avg:
                 works = False
                 break
-            getbacktime = max(0, 2*(curpos - leftget))
+            getbacktime = max(0, 2 * (curpos - leftget))
             alsotoright = max(0, avg - getbacktime)
             leftime = max(0, curpos - leftget)
             remtime = max(0, (avg - leftime) // 2)
@@ -32,8 +34,6 @@ def solve():
         else:
             ss = avg + 1
     print(ss)
- 
- 
+
 
 solve()
-

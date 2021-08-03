@@ -6,18 +6,17 @@ for x, y, z in zip(a, a[1:], a[2:]):
         c += 1
     else:
         if c & 1:
-            b.extend([y]*(c+1))
-        else:    
-            b.extend([1-y]*(c//2) + [y]*(c//2+1))
-        r = max(r, (c+1)//2)
+            b.extend([y] * (c + 1))
+        else:
+            b.extend([1 - y] * (c // 2) + [y] * (c // 2 + 1))
+        r = max(r, (c + 1) // 2)
         c = 0
-y = a[-1]            
+y = a[-1]
 if c & 1:
-    b.extend([y]*(c+1))
-else:    
-    b.extend([1-y]*(c//2) + [y]*(c//2+1))
-r = max(r, (c+1)//2)
+    b.extend([y] * (c + 1))
+else:
+    b.extend([1 - y] * (c // 2) + [y] * (c // 2 + 1))
+r = max(r, (c + 1) // 2)
 
 print(r)
 print(*b)
-

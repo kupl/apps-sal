@@ -3,6 +3,7 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
+
 n = int(input())
 A = list(map(int, input().split()))
 
@@ -14,5 +15,3 @@ if num % 2 == 0:
     print("Bob")
 else:
     print("Alice")
-
-

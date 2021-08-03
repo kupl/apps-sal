@@ -33,4 +33,4 @@ print(slon)
 '''
 s = input()
 temp = s.find('0')
-print(s[1:]) if temp == -1 else print(s[0:temp] + s[temp+1:])
+print(s[1:]) if temp == -1 else print(s[0:temp] + s[temp + 1:])
