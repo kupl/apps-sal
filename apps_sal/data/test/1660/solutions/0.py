@@ -10,5 +10,6 @@ for j in range(2, len(f), 3):
 
 s = [0] * (n + 1)
 for q in d:
-    for y, k in [(y, s[x]) for y, x in q]: s[y] = max(s[y], k + 1)
+    for y, k in [(y, s[x]) for y, x in q]:
+        s[y] = max(s[y], k + 1)
 print(max(s))

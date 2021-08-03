@@ -3,7 +3,7 @@ x, y, l, r = list(map(int, input().split()))
 xx = []
 yy = []
 p = 1
-xx.append(l - 1);
+xx.append(l - 1)
 while p <= r:
     q = 1
     while p + q <= r:

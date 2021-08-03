@@ -1,7 +1,8 @@
-r = lambda: input()
-ri = lambda: int(r())
-rr = lambda: map(int, r().split())
-rl = lambda: list(rr())
+def r(): return input()
+def ri(): return int(r())
+def rr(): return map(int, r().split())
+def rl(): return list(rr())
+
 
 a1, b1 = rr()
 a2, b2 = rr()

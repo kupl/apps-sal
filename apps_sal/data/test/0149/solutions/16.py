@@ -26,7 +26,7 @@ for i in range(1, len(unl)):
         diff.append(d)
 
 
-diff.sort();
+diff.sort()
 
 if (len(diff) == 0):
     print(0)

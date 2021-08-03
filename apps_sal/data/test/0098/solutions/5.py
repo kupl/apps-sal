@@ -1,4 +1,5 @@
-r = lambda: map(int, input().split())
+def r(): return map(int, input().split())
+
 
 a1, b1 = r()
 a2, b2 = r()

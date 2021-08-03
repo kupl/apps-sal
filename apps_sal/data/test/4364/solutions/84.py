@@ -10,4 +10,5 @@ elif (a > 12 or a == 0) and 0 < b <= 12:
     print('YYMM')
 elif a <= 12 and b <= 12:
     print('AMBIGUOUS')
-else: print('NA')
+else:
+    print('NA')

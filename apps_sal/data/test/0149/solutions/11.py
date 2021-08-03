@@ -2,10 +2,12 @@ x, y, l, r = list(map(int, input().split()))
 lx = []
 ly = []
 for i in range(65):
-    if x**i > r: break
+    if x**i > r:
+        break
     lx.append(x**i)
 for i in range(65):
-    if y**i > r: break
+    if y**i > r:
+        break
     ly.append(y**i)
 
 ans = set()

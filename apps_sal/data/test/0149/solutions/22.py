@@ -26,7 +26,7 @@ x = get_number()
 y = get_number()
 l = get_number()
 r = get_number()
-n1 = 1;
+n1 = 1
 a = list()
 a.append(l - 1)
 for i in range(0, 300):

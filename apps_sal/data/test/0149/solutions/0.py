@@ -5,10 +5,12 @@ b.add(l - 1)
 b.add(r + 1)
 for i in range(100):
     xx = x**i
-    if xx > r: break
+    if xx > r:
+        break
     for j in range(100):
         rr = xx + (y**j)
-        if rr > r: break
+        if rr > r:
+            break
         if rr >= l:
             b.add(rr)
 b = sorted(list(b))
