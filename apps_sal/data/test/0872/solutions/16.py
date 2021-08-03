@@ -5,5 +5,7 @@ found = False
 for x in a:
     if x % 2 != md:
         found = True
-if found: a.sort()
-for x in a: print(str(x) + ' ', end='')
+if found:
+    a.sort()
+for x in a:
+    print(str(x) + ' ', end='')

@@ -8,7 +8,9 @@ f = [1] * n
 for i in range(2, n):
     f[i] = (i * f[i - 1]) % d
 
-c = lambda a, b: 0 if a > b else (f[b] * pow(f[a] * f[b - a], d - 2, d)) % d
+
+def c(a, b): return 0 if a > b else (f[b] * pow(f[a] * f[b - a], d - 2, d)) % d
+
 
 if k:
     u = [0] * (n + 1)

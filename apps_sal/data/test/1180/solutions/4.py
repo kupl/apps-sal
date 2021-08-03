@@ -2,8 +2,13 @@ n, k = list(map(int, input().split()))
 t = list(map(int, input()))
 p, d = 1, 10 ** 9 + 7
 s, f = 0, [1] * n
-for i in range(2, n): f[i] = (i * f[i - 1]) % d
-c = lambda a, b: 0 if a > b else (f[b] * pow(f[a] * f[b - a], d - 2, d)) % d
+for i in range(2, n):
+    f[i] = (i * f[i - 1]) % d
+
+
+def c(a, b): return 0 if a > b else (f[b] * pow(f[a] * f[b - a], d - 2, d)) % d
+
+
 if k:
     u = [0] * (n + 1)
     p = [1] * (n + 1)
@@ -14,5 +19,6 @@ if k:
         v = u[n - 2 - i] + p[n - 1 - i] * c(k, i)
         s = (s + t[i] * v) % d
 else:
-    for i in t: s = (s * 10 + i) % d
+    for i in t:
+        s = (s * 10 + i) % d
 print(s)
