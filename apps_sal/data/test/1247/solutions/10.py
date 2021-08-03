@@ -10,4 +10,3 @@ if k == 0 or k == 1 or k % 2 != 0:
     print("First")
 else:
     print("Second")
-

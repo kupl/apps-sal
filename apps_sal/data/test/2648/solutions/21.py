@@ -12,4 +12,5 @@ def abc053_d():
         ans -= 1
     print(ans)
 
+
 abc053_d()

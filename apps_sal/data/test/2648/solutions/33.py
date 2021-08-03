@@ -9,4 +9,4 @@ for i in a:
     else:
         d[i] = 1
         m += 1
-print(m - 1) if (n-m) % 2 else print(m)
+print(m - 1) if (n - m) % 2 else print(m)

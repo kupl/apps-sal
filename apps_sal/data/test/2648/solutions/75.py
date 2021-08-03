@@ -1,5 +1,5 @@
 from collections import Counter
-N  = int(input())
+N = int(input())
 A = list(map(int, input().split()))
 C = Counter(A)
 c = 0

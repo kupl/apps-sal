@@ -7,7 +7,7 @@ def divisors(n):
     for i in range(1, nn):
         if n % i == 0:
             out.append(i)
-            out.append(n//i)
+            out.append(n // i)
 
     if nn ** 2 == n:
         out.append(nn)
@@ -17,7 +17,7 @@ def divisors(n):
 
 
 n = int(input())
-a = len(divisors(n-1)[1:])
+a = len(divisors(n - 1)[1:])
 
 d = divisors(n)
 for dd in d[1:]:
@@ -28,4 +28,3 @@ for dd in d[1:]:
         a += 1
 
 print(a)
-

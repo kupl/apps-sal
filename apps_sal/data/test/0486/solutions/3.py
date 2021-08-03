@@ -4,7 +4,7 @@ def pd(d):
     for c in d:
         ans *= int(c)
     return ans
-        
+
 
 S = input()
 D = int(S)
@@ -16,8 +16,7 @@ else:
     cur = 0
     while 10 ** cur < D:
         ans = max(ans, pd(D - (D % 10 ** cur) - 1))
-        
-        cur += 1 
-        
-print(ans)
 
+        cur += 1
+
+print(ans)

@@ -1,6 +1,7 @@
+from collections import Counter
 import sys
 readline = sys.stdin.readline
-from collections import Counter
+
 
 def main():
     N = int(readline())
@@ -16,7 +17,7 @@ def main():
                 c[key] = 1
         elif val == 2:
             cnt += 1
-    
+
     if cnt % 2 == 0:
         print(len(c))
     else:
@@ -25,4 +26,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

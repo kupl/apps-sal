@@ -5,7 +5,8 @@
 # ARR = [1, 2, 1, 3, 7]
 
 N = int(input())
-ARR = list(map(int,input().split()))
+ARR = list(map(int, input().split()))
+
 
 def calculate(n, arr):
     dict = {}
@@ -25,4 +26,3 @@ def calculate(n, arr):
 
 
 calculate(N, ARR)
-

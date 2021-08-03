@@ -1,6 +1,6 @@
 from collections import defaultdict
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 d = defaultdict(int)
 for x in A:
     d[x] += 1

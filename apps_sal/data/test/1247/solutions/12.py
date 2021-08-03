@@ -3,6 +3,7 @@ import sys
 MIN = -1000000000
 MAX = -MIN
 
+
 def odds_evens(string):
     f = {}
     for letter in string:
@@ -19,6 +20,7 @@ def odds_evens(string):
 
     return (n_odds, n_evens)
 
+
 string = sys.stdin.readline().strip()
 n_odds, n_evens = odds_evens(string)
 
@@ -28,5 +30,3 @@ elif n_odds % 2 == 0:
     print("Second")
 else:
     print("First")
-    
-

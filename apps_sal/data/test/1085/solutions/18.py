@@ -1,17 +1,30 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,copy,functools
-import time,random
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import copy
+import functools
+import time
+import random
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 eps = 1.0 / 10**10
-mod = 10**9+7
+mod = 10**9 + 7
 mod2 = 998244353
-dd = [(-1,0),(0,1),(1,0),(0,-1)]
-ddn = [(-1,0),(-1,1),(0,1),(1,1),(1,0),(1,-1),(0,-1),(-1,-1)]
+dd = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
+
 
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(): return [list(map(int, l.split())) for l in sys.stdin.readlines()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
@@ -35,7 +48,7 @@ class Prime():
             if not a[i]:
                 continue
             t.append(i)
-            for j in range(i*i,m,i):
+            for j in range(i * i, m, i):
                 a[j] = False
         self.ds_memo = {}
         self.ds_memo[1] = set([1])
@@ -85,19 +98,19 @@ def main():
         t = [d[j] for j in range(l) if 2**j & i]
         m = min(map(lambda x: x[1], t))
         ok = True
-        for k,v in t:
+        for k, v in t:
             if v % m > 0:
                 ok = False
                 break
         if not ok:
             continue
-        for j in range(1,m+1):
+        for j in range(1, m + 1):
             if m % j > 0:
                 continue
             mk = m // j
             u = 1
-            for k,v in t:
-                u *= k**((v//m)*mk)
+            for k, v in t:
+                u *= k**((v // m) * mk)
             nn = n
             while nn % u == 0:
                 nn //= u
@@ -105,17 +118,14 @@ def main():
                 r += 1
             # print("u",u,j,nn,r)
 
-    d = pr.division(n-1)
+    d = pr.division(n - 1)
     # print("d",d)
     k = 1
-    for _,v in d:
+    for _, v in d:
         k *= v + 1
     r += k - 1
 
     return r
 
+
 print(main())
-
-
-
-

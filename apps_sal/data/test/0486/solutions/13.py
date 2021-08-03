@@ -16,11 +16,9 @@ for i in range(len(n)):
         cur = cur[:i] + str(int(cur[i]) - 1) + "9" * (len(n) - i - 1)
     cnt = 1
 
-
     for j in cur:
         cnt *= int(j)
     if cnt > mx:
         mx = cnt
 
 print(mx)
-

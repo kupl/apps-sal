@@ -3,6 +3,7 @@ def check(n, i):
         n //= i
     return n % i == 1
 
+
 def main():
     N = int(input())
     i = 2
@@ -23,5 +24,5 @@ def main():
     r.add(N)
     return len(r)
 
-print((main()))
 
+print((main()))

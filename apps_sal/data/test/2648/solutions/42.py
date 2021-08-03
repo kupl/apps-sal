@@ -1,6 +1,7 @@
 N = int(input())
-A = set() 
+A = set()
 cnt = 0
+
 
 def count(n, Set):
     if not n in Set:
@@ -8,6 +9,8 @@ def count(n, Set):
         return 0
     else:
         return 1
+
+
 for x in input().split():
     cnt += count(x, A)
 if not cnt & 1:
@@ -15,6 +18,3 @@ if not cnt & 1:
 else:
     ans = N - cnt - 1
 print(ans)
-    
-
-

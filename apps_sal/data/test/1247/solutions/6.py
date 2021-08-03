@@ -1,15 +1,20 @@
 import collections
 
+
 def palindromic(f, l):
     if l % 2 == 0:
         return len(odds(f)) == 0
     else:
         return len(odds(f)) == 1
 
+
 def odds(f):
-    return [k for (k,v) in list(f.items()) if v % 2 == 1]
+    return [k for (k, v) in list(f.items()) if v % 2 == 1]
+
+
 def evens(f):
-    return [k for (k,v) in list(f.items()) if v % 2 == 0 and v > 0]
+    return [k for (k, v) in list(f.items()) if v % 2 == 0 and v > 0]
+
 
 s = input()
 f = collections.defaultdict(int)
@@ -31,4 +36,3 @@ while not palindromic(f, l):
     l -= 1
 
 print("First" if (len(s) - l) % 2 == 0 else "Second")
-

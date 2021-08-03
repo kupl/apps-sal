@@ -1,7 +1,7 @@
+from collections import Counter
 N = int(input())
 A = list(sorted(map(int, input().split()), reverse=True))
 
-from collections import Counter
 cnt_a = Counter(A)
 
 X = [0] * 3
@@ -14,6 +14,3 @@ if X[2] % 2 == 0:
     print((X[1] + X[2]))
 else:
     print((X[1] - 1 + X[2]))
-
-
-

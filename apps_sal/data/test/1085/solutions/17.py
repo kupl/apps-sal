@@ -1,6 +1,5 @@
 
 
-
 N = int(input())
 
 """
@@ -19,7 +18,6 @@ N = int(input())
 """
 
 
-
 def solve(n):
     i = 1
     ret = set()
@@ -32,7 +30,7 @@ def solve(n):
     return ret
 
 
-div_N_sub_1 = solve(N-1)
+div_N_sub_1 = solve(N - 1)
 div_N = solve(N)
 
 ans = len(div_N_sub_1) - 1

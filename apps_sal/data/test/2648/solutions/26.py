@@ -9,4 +9,3 @@ div = (diff - 1) // 2
 
 ans = n - 2 * (div + 1)
 print(ans)
-

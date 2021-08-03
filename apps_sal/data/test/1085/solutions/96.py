@@ -16,7 +16,7 @@ def resolve():
                     divisors.append(n // i)
 
         return divisors
-    
+
     N = int(input())
 
     div_1 = make_divisors(N)
@@ -43,5 +43,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

@@ -1,13 +1,16 @@
 n = int(input())
 
+
 def get_p(n):
-    if n == 0: return 0
+    if n == 0:
+        return 0
     p = 1
     while n > 0:
         p *= n % 10
         n //= 10
 
     return p
+
 
 mx = get_p(n)
 d = 10
@@ -20,4 +23,3 @@ while d <= n:
     d *= 10
 
 print(mx)
-

@@ -25,6 +25,7 @@ def f(x):
         ans.add(x // i)
     return ans
 
+
 ans = set()
 for K in f(N) | f(N - 1):
     if K == 1:
@@ -36,4 +37,3 @@ for K in f(N) | f(N - 1):
         ans.add(K)
 
 print((len(ans)))
-

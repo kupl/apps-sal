@@ -10,4 +10,5 @@ def __starting_point():
     else:
         print("First")
 
+
 __starting_point()

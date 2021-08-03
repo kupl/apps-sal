@@ -1,4 +1,7 @@
 
+import random
+
+
 def solve1(n):
     # n = k ^ a
     res = []
@@ -7,6 +10,7 @@ def solve1(n):
         if u ** i == n:
             res.append(u)
     return set(res)
+
 
 def solve2(n):
     # n = a * k + 1
@@ -21,6 +25,7 @@ def solve2(n):
         i += 1
     return res ^ set([1])
 
+
 def solve3(n):
     i = 2
     res = set()
@@ -34,6 +39,7 @@ def solve3(n):
         i += 1
     return res
 
+
 def brute_force(n):
     res = []
     for i in range(2, n + 1):
@@ -46,6 +52,7 @@ def brute_force(n):
     # print res
     return len(res)
 
+
 def solve(n):
     s1 = solve1(n)
     s2 = solve2(n)
@@ -53,16 +60,15 @@ def solve(n):
     # print sorted(s1 | s2 | s3)
     return len(s1 | s2 | s3)
 
+
 assert solve(6) == 3
 assert solve(3141) == 13
 assert solve(314159265358) == 9
 
 assert solve(10 ** 12)
 
-import random
 for i in range(2, 100):
     assert brute_force(i) == solve(i)
 
 n = int(input())
 print(solve(n))
-

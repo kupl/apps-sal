@@ -1,49 +1,43 @@
-from sys import stdin,stdout
-from collections import defaultdict,Counter,deque
-from bisect import bisect,bisect_left
+from sys import stdin, stdout
+from collections import defaultdict, Counter, deque
+from bisect import bisect, bisect_left
 import math
-from itertools import permutations 
+from itertools import permutations
 import queue
 
 
+def sumOfDigits(x):
 
-
-def sumOfDigits(x) :  
-      
     prod = 1
-    while (x) : 
-        prod *= (x % 10)  
-        x //= 10;  
-      
-    return prod 
-# Returns the maximum number 
-# with maximum sum of digits. 
-def findMax(x) : 
-      
-    
+    while (x):
+        prod *= (x % 10)
+        x //= 10
+
+    return prod
+# Returns the maximum number
+# with maximum sum of digits.
+
+
+def findMax(x):
+
     b = 1
-    ans = x 
-      
-    
-    while (x!=0) : 
-        
-        cur = (x - 1) * b + (b - 1) 
-          
-        
+    ans = x
+
+    while (x != 0):
+
+        cur = (x - 1) * b + (b - 1)
+
         if (sumOfDigits(cur) > sumOfDigits(ans) or
-        (sumOfDigits(cur) == sumOfDigits(ans) and
-            cur > ans)) : 
-                ans = cur 
-  
-        # reduces the number 
-        # to one unit less 
-        x =x // 10
+            (sumOfDigits(cur) == sumOfDigits(ans) and
+                cur > ans)):
+            ans = cur
+
+        # reduces the number
+        # to one unit less
+        x = x // 10
         b = b * 10
-      
-      
-    return ans 
 
-
+    return ans
 
 
 #stdin = open('input.txt','r')
@@ -53,6 +47,5 @@ n = int(I())
 ans = findMax(n)
 prod = 1
 for i in str(ans):
-	prod*=(int(i))
+    prod *= (int(i))
 print(prod)
-
