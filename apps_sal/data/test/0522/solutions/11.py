@@ -18,7 +18,9 @@ def vec_mul(A, x, m):
 
 def calc_tribonacci(M, n, m, start):
     X = []
-    X.append(M[0].copy()); X.append(M[1].copy()); X.append(M[2].copy())
+    X.append(M[0].copy())
+    X.append(M[1].copy())
+    X.append(M[2].copy())
     R = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
     while n > 0:
         if n % 2 == 1:

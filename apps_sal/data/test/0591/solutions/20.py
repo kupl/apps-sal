@@ -1,6 +1,8 @@
 F = open('input.txt', 'r')
 
-I = lambda: list(map(int, F.readline().split()))
+
+def I(): return list(map(int, F.readline().split()))
+
 
 n, k = I()
 

@@ -12,8 +12,10 @@ def mat_mul(a, b):
 
 
 def mat_pow(a, n):
-    if n == 1: return a
-    if n % 2 == 1: return mat_mul(mat_pow(a, n - 1), a)
+    if n == 1:
+        return a
+    if n % 2 == 1:
+        return mat_mul(mat_pow(a, n - 1), a)
     t = mat_pow(a, n // 2)
     return mat_mul(t, t)
 

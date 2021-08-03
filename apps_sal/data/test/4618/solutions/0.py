@@ -1,12 +1,14 @@
 import sys
 stdin = sys.stdin
 
-ip = lambda: int(sp())
-fp = lambda: float(sp())
-lp = lambda: list(map(int, stdin.readline().split()))
-sp = lambda: stdin.readline().rstrip()
-yp = lambda: print('Yes')
-np = lambda: print('No')
+
+def ip(): return int(sp())
+def fp(): return float(sp())
+def lp(): return list(map(int, stdin.readline().split()))
+def sp(): return stdin.readline().rstrip()
+def yp(): return print('Yes')
+def np(): return print('No')
+
 
 s = list(sp())
 k = ip()

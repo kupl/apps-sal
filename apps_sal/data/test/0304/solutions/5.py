@@ -35,8 +35,10 @@ for i in range(a[0] != 1, a[0]):
                                         cnt = s
                                         for i in range(10):
                                             for j in range(t[i]):
-                                                if i == 0: w *= cnt - 1
-                                                else: w *= cnt
+                                                if i == 0:
+                                                    w *= cnt - 1
+                                                else:
+                                                    w *= cnt
                                                 cnt -= 1
                                         for i in range(10):
                                             for j in range(1, t[i] + 1):

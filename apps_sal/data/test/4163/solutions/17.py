@@ -1,4 +1,5 @@
-n = int(input()); a = 0;
+n = int(input())
+a = 0
 for i in range(0, n):
     x, y = map(int, input().split())
     if x == y:

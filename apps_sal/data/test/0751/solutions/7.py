@@ -9,5 +9,6 @@ for i in a:
         result += 1
     else:
         cur += i
-if cur > 0: result += 1
+if cur > 0:
+    result += 1
 print(result)

@@ -9,7 +9,8 @@ topK = sorted(s)[:min(K, len(s))]
 
 indices = []
 for i in range(len(s)):
-    if s[i] in topK: indices.append(i)
+    if s[i] in topK:
+        indices.append(i)
 
 selected = []
 for j in range(len(indices)):

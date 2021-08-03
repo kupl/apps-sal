@@ -16,7 +16,7 @@ def power(val, p, mod):
             ans = mul(ans, val, mod)
         val = mul(val, val, mod)
         p >>= 1
-    return ans;
+    return ans
 
 
 n, f1, f2, f3, x = list(map(int, input().split()))

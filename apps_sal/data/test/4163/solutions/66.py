@@ -6,7 +6,7 @@ for i in range(N):
     if (d1 == d2):
         current_doublet_count += 1
         if (current_doublet_count >= 3):
-            break;
+            break
     else:
         current_doublet_count = 0
 

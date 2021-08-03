@@ -6,7 +6,8 @@ for i in S:
     freq[u] += 1
 
 fac = [1]
-for i in range(1, 20): fac.append(i * fac[-1])
+for i in range(1, 20):
+    fac.append(i * fac[-1])
 
 """
 M={}
@@ -44,7 +45,8 @@ total = 0
 for x in it.product(*(list(range(0 if i == 0 else 1, i + 1)) for i in freq)):
     Q = "".join(str(i) * x[i] for i in range(10))
     s = sum(x) - 1
-    if s < 0: continue
+    if s < 0:
+        continue
     g = 0
     for d in range(1, 10):
         n = fac[s]

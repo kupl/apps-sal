@@ -16,7 +16,8 @@ def multiply(M, N):
 def power(mat, n):
     res = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
     while n:
-        if n & 1: res = multiply(res, mat)
+        if n & 1:
+            res = multiply(res, mat)
         mat = multiply(mat, mat)
         n //= 2
     return res

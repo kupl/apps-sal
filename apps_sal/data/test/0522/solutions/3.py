@@ -2,7 +2,7 @@ MOD = int(1e9 + 7)
 
 
 def matMOD(A):
-    f = lambda x: x % (MOD - 1)
+    def f(x): return x % (MOD - 1)
     ret = [list(map(f, i)) for i in A]
     return ret
 

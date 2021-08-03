@@ -1,14 +1,14 @@
-a = list(map(int, input()));
-cnts = [0] * 10;
+a = list(map(int, input()))
+cnts = [0] * 10
 for aa in a:
     cnts[aa] += 1
 
 mem = {}
 
-mem[(1, 0, 0, 0, 0, 0, 0, 0, 0, 0)] = 0;
+mem[(1, 0, 0, 0, 0, 0, 0, 0, 0, 0)] = 0
 
 for i in range(1, 10):
-    mem[(0,) * (i) + (1,) + (0,) * (10 - i - 1)] = 1;
+    mem[(0,) * (i) + (1,) + (0,) * (10 - i - 1)] = 1
 
 
 def get(a):
@@ -19,9 +19,9 @@ def get(a):
         tot = 0
         for i in range(0, 10):
             if (a[i] != 0):
-                aa[i] -= 1;
-                tot += get(aa);
-                aa[i] += 1;
+                aa[i] -= 1
+                tot += get(aa)
+                aa[i] += 1
         mem[tuple(a)] = tot
         return tot
 
