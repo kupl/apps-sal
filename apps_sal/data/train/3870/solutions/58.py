@@ -7,7 +7,7 @@ def solve(s):
         if i == 0:
             res.append('')
         else:
-            res.append(rev_s[n:n+i])
+            res.append(rev_s[n:n + i])
         n += i
 
     return ' '.join(res)

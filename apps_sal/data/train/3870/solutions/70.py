@@ -1,9 +1,9 @@
 def solve(s):
-    m = s.replace(' ','')
+    m = s.replace(' ', '')
     r = ''
     i = -1
     for c in s:
-        if c!=' ':
+        if c != ' ':
             r += m[i]
             i -= 1
         else:

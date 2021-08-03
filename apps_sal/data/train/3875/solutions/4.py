@@ -1,10 +1,10 @@
 def draw(waves):
     wave = []
-    while sum(waves)!=0:
+    while sum(waves) != 0:
         black = max(waves)
         cur = ''
         for i in range(len(waves)):
-            if waves[i]<black:
+            if waves[i] < black:
                 cur += '□'
             else:
                 cur += '■'

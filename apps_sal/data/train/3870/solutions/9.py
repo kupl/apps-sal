@@ -9,9 +9,9 @@ def solve(s):
     iw = 0
     while iw != len(s):
         if s[iw] == ' ':
-            iw+=1
+            iw += 1
         else:
             s[iw] = tempr[it]
-            it+=1
-            iw+=1
+            it += 1
+            iw += 1
     return ''.join(s)

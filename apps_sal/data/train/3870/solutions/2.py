@@ -4,5 +4,3 @@ def solve(s):
         if item == ' ':
             rev.insert(index, item)
     return ''.join(rev)
-    
-

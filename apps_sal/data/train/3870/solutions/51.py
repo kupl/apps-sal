@@ -1,7 +1,7 @@
 def solve(s):
     spc_idx = []
     rs = ''
-    for i,c in enumerate(s):
+    for i, c in enumerate(s):
         if c == ' ':
             spc_idx.append(i)
         else:

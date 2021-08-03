@@ -6,4 +6,3 @@ def find(n):
             x += z
 
     return x
-

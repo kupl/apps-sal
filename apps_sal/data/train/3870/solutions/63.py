@@ -9,5 +9,5 @@ def solve(s):
         else:
             spaces.append(cnt)
     for pos in spaces:
-        res.insert(pos-1, ' ')
+        res.insert(pos - 1, ' ')
     return ''.join(res)

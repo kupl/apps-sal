@@ -9,6 +9,5 @@ def solve(s):
         elif c == " ":
             space.append(count)
     for num in space:
-        res = res[:num-1] + " " + res[num-1:]
+        res = res[:num - 1] + " " + res[num - 1:]
     return res
-

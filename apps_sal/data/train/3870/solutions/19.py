@@ -4,4 +4,3 @@ def solve(s):
         if s[i] == ' ':
             reversed.insert(i, ' ')
     return ''.join(reversed)
-

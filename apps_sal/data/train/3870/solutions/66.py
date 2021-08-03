@@ -8,5 +8,5 @@ def solve(s):
 
     for ind in indexes:
         res = res[:ind] + ' ' + res[ind:]
-        
+
     return res

@@ -4,7 +4,7 @@ def solve(s):
         pos.append('')
         if s[i] == ' ':
             pos[i] = ' '
-    j = len(s)-1
+    j = len(s) - 1
     i = 0
     while i < len(s):
         if pos[i] == ' ':

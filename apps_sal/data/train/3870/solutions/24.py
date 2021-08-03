@@ -13,4 +13,3 @@ def solve(s):
     for i in range(len(indexes)):
         t.insert(indexes[i], " ")
     return "".join(t)
-

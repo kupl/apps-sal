@@ -6,8 +6,8 @@ def solve(s):
             count += 1
         else:
             spaces.append(count)
-            count += 1       
-    
+            count += 1
+
     a = s.replace(" ", '')
     b = list(a)
     c = b[::-1]
