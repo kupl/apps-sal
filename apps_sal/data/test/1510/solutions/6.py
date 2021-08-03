@@ -4,5 +4,6 @@ a.sort()
 b.sort(reverse=True)
 s = 0
 for i in range(min(n, m)):
-    if b[i] > a[i]: s += b[i] - a[i]
+    if b[i] > a[i]:
+        s += b[i] - a[i]
 print(s)

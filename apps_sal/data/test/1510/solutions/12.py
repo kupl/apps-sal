@@ -21,19 +21,24 @@ def solve():
         amin = 0
         while amin < amax:
             avg = (amin + amax + 1) // 2
-            if a[avg] > b[i]: amax = avg - 1
-            else: amin = avg
+            if a[avg] > b[i]:
+                amax = avg - 1
+            else:
+                amin = avg
         res = min(res, bcost[i] + acost[amin] + (amin + 1) * (b[i] - a[amin]))
     for i in range(n):
         bmax = m - 1
         bmin = 0
         while bmin < bmax:
             avg = (bmax + bmin) // 2
-            if b[avg] < a[i]: bmin = avg + 1
-            else: bmax = avg
+            if b[avg] < a[i]:
+                bmin = avg + 1
+            else:
+                bmax = avg
         res = min(res, bcost[bmin] + acost[i] + (m - bmin) * (b[bmin] - a[i]))
     return max(res, 0)
 
 
-if sys.hexversion == 50594544: sys.stdin = open("test.txt")
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 print(solve())

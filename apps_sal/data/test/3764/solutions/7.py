@@ -1,4 +1,6 @@
-f = lambda: [int(x) for x in input().split()]
+def f(): return [int(x) for x in input().split()]
+
+
 n, k, x = f()
 L = f()
 
