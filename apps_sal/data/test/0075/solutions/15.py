@@ -1,5 +1,15 @@
-t = input; p = print; r = range; s = sum; n, m = map(int, t().split()); a = [t() for i in r(n)]; g = [[a[j][i] for j in r(n)] for i in r(m)]; x, y = [a[i].count("*") for i in r(n)], [g[i].count("*") for i in r(m)]; c = (s(x) + s(y)) // 2
+t = input
+p = print
+r = range
+s = sum
+n, m = map(int, t().split())
+a = [t() for i in r(n)]
+g = [[a[j][i] for j in r(n)] for i in r(m)]
+x, y = [a[i].count("*") for i in r(n)], [g[i].count("*") for i in r(m)]
+c = (s(x) + s(y)) // 2
 for i in r(n):
     for j in r(m):
-        if x[i] + y[j] - (a[i][j] == "*") == c: p("YES\n", i + 1, " ", j + 1, sep=""); return
+        if x[i] + y[j] - (a[i][j] == "*") == c:
+            p("YES\n", i + 1, " ", j + 1, sep="")
+            return
 p("NO")

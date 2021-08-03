@@ -6,8 +6,10 @@ for i in range(n):
     if pre != 0:
         ans += 1
         a[i] -= (k - pre)
-        if a[i] < 0: a[i] = 0
+        if a[i] < 0:
+            a[i] = 0
     ans += a[i] // k
     pre = a[i] - a[i] // k * k
-if pre != 0: ans += 1
+if pre != 0:
+    ans += 1
 print(ans)

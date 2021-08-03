@@ -9,5 +9,6 @@ for i, e in enumerate(l):
     else:
         res += (e + c) // k
         c = (e + c) % k
-if c > 0: res += 1
+if c > 0:
+    res += 1
 print(res)

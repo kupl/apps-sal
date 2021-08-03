@@ -2,7 +2,7 @@ def next(a):
     k = len(a) - 2
 
     while a[k] > a[k + 1]:
-        k -= 1;
+        k -= 1
 
     t = k + 1
 

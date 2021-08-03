@@ -17,7 +17,8 @@ def fun(mas, h):
             res += a[mas[3]][mas[2]]
         mas.pop(0)
 
-    if (res > ans): ans = res
+    if (res > ans):
+        ans = res
 
 
 a = [[0] * 5] * 5

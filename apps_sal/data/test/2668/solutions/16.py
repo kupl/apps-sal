@@ -9,4 +9,5 @@ try:
     else:
         print("Unlucky Chef")
 
-except: pass
+except:
+    pass

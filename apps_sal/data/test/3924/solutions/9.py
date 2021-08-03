@@ -8,7 +8,8 @@ for i in range(n):
         s += lst[i]
         ans += (s // k)
         s = s % k
-        if s > 0: x = 1
+        if s > 0:
+            x = 1
     elif x == 1:
         if (s + lst[i] < k):
             ans += 1
@@ -18,8 +19,10 @@ for i in range(n):
             s += lst[i]
             ans += s // k
             s = s % k
-            if s > 0: x = 1
-            else: x = 0
+            if s > 0:
+                x = 1
+            else:
+                x = 0
     # print(s,ans)
 
 
