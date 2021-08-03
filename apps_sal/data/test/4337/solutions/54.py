@@ -2,6 +2,6 @@ input()
 s = input().split()
 
 if 'Y' in s:
-   print('Four')
+    print('Four')
 else:
-   print('Three')
+    print('Three')

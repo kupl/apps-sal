@@ -1,7 +1,7 @@
 def main():
-    n  = int(input())
+    n = int(input())
     s = list(input().split())
-    hina = ['P','W','G','Y']
+    hina = ['P', 'W', 'G', 'Y']
     hina_type = 0
     for i in hina:
         if i in s:
@@ -12,8 +12,8 @@ def main():
         print('Four')
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -18,16 +18,16 @@ else:
                 point[i][j] = c[p[j]]
             continue
         for j in range(n):
-            posi[i][j] = posi[i-1][posi[i-1][j]]
-            point[i][j] = point[i-1][j] + point[i-1][posi[i-1][j]]
+            posi[i][j] = posi[i - 1][posi[i - 1][j]]
+            point[i][j] = point[i - 1][j] + point[i - 1][posi[i - 1][j]]
     for i in range(pow_num):
         if i == 0:
             for j in range(n):
                 point_max[i][j] = point[i][j]
             continue
         for j in range(n):
-            point_max[i][j] = max(point_max[i-1][j], \
-                point[i-1][j] + point_max[i-1][posi[i-1][j]])
+            point_max[i][j] = max(point_max[i - 1][j],
+                                  point[i - 1][j] + point_max[i - 1][posi[i - 1][j]])
 
     power_count = list()
     for i in range(pow_num):

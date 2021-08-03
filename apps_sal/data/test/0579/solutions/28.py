@@ -40,4 +40,3 @@ ppp = [p - 1 for p in ppp]
 ccc = list(map(int, input().split()))
 
 print((solve(n, k, ppp, ccc)))
-

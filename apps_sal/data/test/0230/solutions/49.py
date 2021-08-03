@@ -17,4 +17,3 @@ for i, e in enumerate(s, 1):
     ans = max(ans, dp.max())
 
 print(ans)
-

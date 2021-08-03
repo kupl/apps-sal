@@ -1,3 +1,4 @@
+from collections import defaultdict
 from random import randint
 
 
@@ -52,7 +53,6 @@ class RollingHash:
         return hasha == hashs
 
 
-from collections import defaultdict
 # d = defaultdict(int)で0で初期化
 # d = defaultdict(lambda: 100)で100で初期化
 n, s = int(input()), input()
@@ -78,4 +78,3 @@ while l + 1 < r:
     else:
         r = mid
 print(l)
-

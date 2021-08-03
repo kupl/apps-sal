@@ -8,4 +8,3 @@ for _ in range(int(input())):
         print(max(max(non0s), n - min(non0s) - 1))
     else:
         print(-1)
-

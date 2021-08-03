@@ -1,4 +1,4 @@
-import collections 
+import collections
 n = int(input())
 li = list(input().split())
 c = collections.Counter(li)

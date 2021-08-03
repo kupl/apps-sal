@@ -94,4 +94,3 @@ for start in range(N):
             for start2 in range(cyclelen))
         ans = max([ans, v1, v2])
 print(ans)
-

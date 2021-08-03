@@ -6,4 +6,3 @@ if len(color_set) == 3:
     print('Three')
 else:
     print('Four')
-

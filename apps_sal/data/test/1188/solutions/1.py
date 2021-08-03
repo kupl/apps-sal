@@ -2,6 +2,7 @@ from collections import Counter
 n = int(input())
 a = list(map(int, input().split()))
 
+
 def get(cnt):
     c = Counter(a)
     last = []
@@ -18,6 +19,7 @@ def get(cnt):
             i += 1
     return len(last) if i == len(rem) else 0
 
+
 mx = get(None)
 lo, hi = 0, mx
 while lo < hi:
@@ -30,4 +32,3 @@ if mx:
     print(*list(range(lo, mx + 1)))
 else:
     print(-1)
-

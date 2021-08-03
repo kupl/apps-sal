@@ -10,4 +10,3 @@ if s.count('Y') > 0:
     result = 'Four'
 
 print(result)
-

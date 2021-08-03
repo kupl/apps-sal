@@ -8,8 +8,8 @@ def resolve():
         flg = False
         memo = set()
         for i in range(N - 2 * mid + 1):
-            memo.add(hash(S[i : i + mid]))
-            if hash(S[i + mid : i + 2 * mid]) in memo:
+            memo.add(hash(S[i: i + mid]))
+            if hash(S[i + mid: i + 2 * mid]) in memo:
                 flg = True
                 break
         if flg:
@@ -20,4 +20,3 @@ def resolve():
 
 
 resolve()
-

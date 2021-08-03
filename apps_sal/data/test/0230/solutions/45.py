@@ -13,10 +13,10 @@ def solve(N, S):
     while high - low > 1:
         mid = (high + low) >> 1
         is_match = False
-        m = N-mid+1
+        m = N - mid + 1
         d = defaultdict(list)
         for i in range(0, m):
-            d[S[i:i+mid]].append(i)
+            d[S[i:i + mid]].append(i)
         for v in d.values():
             if v[-1] - v[0] >= mid:
                 is_match = True
@@ -33,4 +33,6 @@ def __starting_point():
     outputs = solve(*inputs)
     if outputs is not None:
         print("%s" % str(outputs))
+
+
 __starting_point()

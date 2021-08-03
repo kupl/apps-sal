@@ -1,5 +1,5 @@
 N = str(input())
-S = map(str,input().split())
+S = map(str, input().split())
 
 color = list(S)
 factor = set(color)

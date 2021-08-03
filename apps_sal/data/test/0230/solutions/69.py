@@ -6,10 +6,10 @@ def is_ok(arg, S):
     # 条件を満たすかどうか？問題ごとに定義
     dic = {}
     ans = False
-    for i in range(len(S)-arg+1):
-        c = S[i:i+arg]
+    for i in range(len(S) - arg + 1):
+        c = S[i:i + arg]
         if c in dic:
-            if i-dic[c] >= arg:
+            if i - dic[c] >= arg:
                 ans = True
                 break
         else:
@@ -36,10 +36,11 @@ def meguru_bisect(ng, ok, S):
 def main():
     N = int(input())
     S = input()
-    print((meguru_bisect((N//2)+1, -1, S)))
+    print((meguru_bisect((N // 2) + 1, -1, S)))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

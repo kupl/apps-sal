@@ -10,4 +10,3 @@ if quantity == 3:
     print('Three')
 else:
     print('Four')
-

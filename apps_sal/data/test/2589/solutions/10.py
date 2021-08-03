@@ -6,10 +6,9 @@ for _ in range(int(input())):
         continue
     printed = False
     for i in range(n):
-        if a[i] % x != 0 or a[-i-1] % x != 0:
-            print(n-i-1)
+        if a[i] % x != 0 or a[-i - 1] % x != 0:
+            print(n - i - 1)
             printed = True
             break
     if not printed:
         print(-1)
-

@@ -18,61 +18,61 @@ s = input()[:-1]
 # print(s)
 
 lb = 0
-ub = n//2 + 1
+ub = n // 2 + 1
 
 
 def check(len):
-    for l1 in range(n-len):
-        for l2 in range(l1+len, n-len+1):
-            if s[l1:l1+len] == s[l2:l2+len]:
+    for l1 in range(n - len):
+        for l2 in range(l1 + len, n - len + 1):
+            if s[l1:l1 + len] == s[l2:l2 + len]:
                 return True
     return False
 
 
-mod = 10**9+7
+mod = 10**9 + 7
 base = 1234
-power = [1]*(n+1)
-for i in range(1, n+1):
-    power[i] = power[i-1]*base%mod
+power = [1] * (n + 1)
+for i in range(1, n + 1):
+    power[i] = power[i - 1] * base % mod
 
 
 def check2(m):
     res = 0
     for i in range(m):
-        res+=s[i]*power[m-i-1]
-        res%=mod
+        res += s[i] * power[m - i - 1]
+        res %= mod
 
     dic = {res: 0}
     # defaultdictが早い
     # dic = defaultdict(int)
     # dic[res] = 0
 
-    for i in range(n-m):
-        res = ((res-s[i]*power[m-1])*base
-                             +s[i+m])%mod
+    for i in range(n - m):
+        res = ((res - s[i] * power[m - 1]) * base +
+               s[i + m]) % mod
         if res in dic.keys():
             index = dic[res]
-            if index +m<=i+1:
+            if index + m <= i + 1:
                 return True
         else:
-            dic[res] = i+1
+            dic[res] = i + 1
     return False
 
 
 def check3(m):
     dic = {}
-    for i in range(n-m+1):
-        s_ = s[i:i+m]
+    for i in range(n - m + 1):
+        s_ = s[i:i + m]
         if s_ in dic.keys():
-            if dic[s_]+m<=i:
+            if dic[s_] + m <= i:
                 return True
         else:
             dic[s_] = i
     return False
 
 
-while ub > lb+1:
-    x = (lb + ub)//2
+while ub > lb + 1:
+    x = (lb + ub) // 2
     if check3(x):
         lb = x
     else:

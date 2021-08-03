@@ -1,7 +1,8 @@
-import sys, math
+import sys
+import math
+
 
 def calcweight_tree(N_vertices, edges, times, inf):
-
     """
     edges: [start, dest, cost] -> [cost, start, end]
     """
@@ -21,7 +22,7 @@ def calcweight_tree(N_vertices, edges, times, inf):
             while(True):
                 dest = edges[left][1]
                 cost = edges[dest][0]
-                if(passed[dest]==False):
+                if(passed[dest] == False):
                     #passed[left] = True
                     passed[dest] = True
                     cost_sum += cost
@@ -34,9 +35,9 @@ def calcweight_tree(N_vertices, edges, times, inf):
                     increase_period = cost_sum
                     break
             # 2 period項準備
-            remainder = times%period
+            remainder = times % period
             cost_minus = [0]
-            for j in range(period-1):
+            for j in range(period - 1):
                 cost_minus.append(costs[j])
             if(increase_period <= 0):
                 """
@@ -72,47 +73,37 @@ def calcweight_tree(N_vertices, edges, times, inf):
                 for j in range(period):
                     costs_last.append(costs[j])
                 for j in range(period):
-                    costs_last.append(costs_last[j]+increase_period)
+                    costs_last.append(costs_last[j] + increase_period)
                 maxvalue = -inf
                 #print(costs_last, cost_minus)
                 for j in range(period):
-                    maxvalue_candidate = max(costs_last[j:j+period])
-                    if(maxvalue_candidate-cost_minus[j] > maxvalue):
-                        maxvalue = maxvalue_candidate-cost_minus[j]
+                    maxvalue_candidate = max(costs_last[j:j + period])
+                    if(maxvalue_candidate - cost_minus[j] > maxvalue):
+                        maxvalue = maxvalue_candidate - cost_minus[j]
 
                 travel_max = max(maxvalue, travel_max)
             else:
                 costs_last = []
                 # a_0は0なので。そしてこれは最大値を考えるときには数えないので
                 remainder2 = remainder % period
-                times_period = times//period-1
+                times_period = times // period - 1
                 add_n = times_period * increase_period
                 #print(costs, increase_period, remainder2, times_period, add_n)
                 for j in range(remainder2, period):
-                    costs_last.append(costs[j]+add_n)
+                    costs_last.append(costs[j] + add_n)
                 for j in range(0, remainder2):
-                    costs_last.append(costs[j]+add_n+increase_period)
+                    costs_last.append(costs[j] + add_n + increase_period)
                 for j in range(period):
-                    costs_last.append(costs_last[j]+increase_period)
+                    costs_last.append(costs_last[j] + increase_period)
                 maxvalue = -inf
                 #print(costs_last, cost_minus)
                 for j in range(period):
-                    maxvalue_candidate = max(costs_last[j:j+period])
-                    if(maxvalue_candidate-cost_minus[j] > maxvalue):
-                        maxvalue = maxvalue_candidate-cost_minus[j]
+                    maxvalue_candidate = max(costs_last[j:j + period])
+                    if(maxvalue_candidate - cost_minus[j] > maxvalue):
+                        maxvalue = maxvalue_candidate - cost_minus[j]
                 travel_max = max(maxvalue, travel_max)
 
-
-
-
-
-
     return travel_max
-
-
-
-
-
 
 
 def __starting_point():
@@ -128,24 +119,23 @@ def __starting_point():
     for i in range(N):
         edges[i].append([ CList[i]*(-1), PList[i] ])
     """
-    N, K= list(map(int, input().strip().split() ))
-    PList = list( map(int, input().strip().split() ) )
-    CList = list( map(int, input().strip().split() ) )
+    N, K = list(map(int, input().strip().split()))
+    PList = list(map(int, input().strip().split()))
+    CList = list(map(int, input().strip().split()))
     inf = 10**10
-
 
     N_vertices = N
 
     edges3 = []
     costs = []
     for i in range(N):
-        edges3.append([ CList[i], PList[i]-1 ])
+        edges3.append([CList[i], PList[i] - 1])
 
     weight = calcweight_tree(N_vertices, edges3, K, inf)
 
     #weight= calcweight_bellman_ford(N_vertices, 0, edges3, K+2, cost, inf)
 
+    print(weight)
 
-    print( weight)
 
 __starting_point()

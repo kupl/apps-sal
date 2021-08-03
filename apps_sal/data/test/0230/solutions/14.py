@@ -46,4 +46,3 @@ while left <= right:
 
 
 print(right)
-

@@ -1,6 +1,6 @@
-N=int(input())
-S=list(map(str,input().split()))
+N = int(input())
+S = list(map(str, input().split()))
 if 'Y' in S:
-  print('Four')
+    print('Four')
 else:
-  print('Three')
+    print('Three')

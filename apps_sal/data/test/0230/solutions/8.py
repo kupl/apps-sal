@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class RollingHash(object):
     def __init__(self, S: str, MOD: int = 10 ** 9 + 7, BASE: int = 10 ** 5 + 7):
         self.S = S
@@ -9,7 +10,7 @@ class RollingHash(object):
         self.S_arr = [ord(x) for x in S]
 
         self.POWER = [1] * (N + 1)
-        self.HASH  = [0] * (N + 1)
+        self.HASH = [0] * (N + 1)
         p, h = 1, 0
         for i in range(N):
             self.POWER[i + 1] = p = (p * BASE) % MOD
@@ -19,6 +20,7 @@ class RollingHash(object):
         # get hash for S[l:r]
         _hash = (self.HASH[r] - self.HASH[l] * self.POWER[r - l]) % self.MOD
         return _hash
+
 
 def main():
     N = int(input())
@@ -35,19 +37,18 @@ def main():
         hash_to_left = defaultdict(list)
         L = mid
         for i in range(N - L + 1):
-            _hash = (h[i+L] - h[i] * p[L]) % MOD
+            _hash = (h[i + L] - h[i] * p[L]) % MOD
             # hashが衝突しても文字列が完全に一致するか分からないので、
             # 衝突した場合は文字列が完全に一致するか調べ、かつ
             # 文字列同士がSの中で重なるような範囲にない場合はOKとする
             for j in hash_to_left[_hash]:
-                if j+L <= i and S[i:i+L] == S[j:j+L]:
+                if j + L <= i and S[i:i + L] == S[j:j + L]:
                     ok = True
                     break
             if ok:
                 break
             hash_to_left[_hash].append(i)
 
-    
         if ok:
             left = mid
         else:
@@ -77,6 +78,9 @@ def main():
     # ans = binary_search(0, N // 2 + 1, isOK, search_max=True)
     # print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

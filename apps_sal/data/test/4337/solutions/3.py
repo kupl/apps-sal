@@ -4,4 +4,3 @@ if len(offering_color) == 3:
     print("Three")
 else:
     print("Four")
-
