@@ -16,5 +16,3 @@ def solve(arr):
                 valid_remaining = remaining.copy()
                 valid_remaining.remove(valid)
                 stack.append((valid_current, valid_remaining))
-                
-

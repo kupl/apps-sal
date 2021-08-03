@@ -3,7 +3,7 @@ def button_sequences(r, b):
     res = ''
     for i in range(len(r)):
         ri, bi = int(r[i]), int(b[i])
-        if not r_on|b_on:
+        if not r_on | b_on:
             if ri:
                 res += 'R'
                 r_on = True
