@@ -14,5 +14,5 @@ while t:
 
         k = i + 2
         print()
-        
+
     t -= 1

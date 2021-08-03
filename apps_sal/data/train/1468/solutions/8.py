@@ -1,6 +1,6 @@
 # cook your dish here
-test_case=int(input())
+test_case = int(input())
 for _ in range(test_case):
-    str=input()
-    i=int(str,16)
+    str = input()
+    i = int(str, 16)
     print(i)

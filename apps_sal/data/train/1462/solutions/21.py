@@ -2,8 +2,8 @@
 t = int(input())
 for i in range(t):
     s = input()
-    s=s.lower()
-    s=s.split()
+    s = s.lower()
+    s = s.split()
     if "berhampore" in s and "serampore" in s:
         print("Both")
     elif "berhampore" in s:
@@ -12,4 +12,3 @@ for i in range(t):
         print("GCETTS")
     else:
         print("Others")
-

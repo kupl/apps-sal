@@ -3,6 +3,7 @@ Problem Statement: https://www.codechef.com/COMT2020/problems/BHPORSRP
 Author: striker
 """
 
+
 def main():
     for _ in range(int(input().strip())):
         college_name = input().strip().lower()
@@ -15,6 +16,9 @@ def main():
         else:
             print("Others")
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

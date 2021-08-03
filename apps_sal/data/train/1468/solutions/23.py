@@ -1,7 +1,7 @@
 # cook your dish here
 try:
     t = int(input())
-    while t>0:
+    while t > 0:
         hexdec = input()
         if hexdec == 'x':
             return

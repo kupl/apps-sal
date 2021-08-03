@@ -9,7 +9,7 @@ for _ in range(int(input())):
 
     p = set()
 
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         for j in range(n, 0, -1):
             x = Fraction(i, j)
 
@@ -21,4 +21,3 @@ for _ in range(int(input())):
     x = sorted(p)[-2]
 
     print(x.numerator, x.denominator)
-
