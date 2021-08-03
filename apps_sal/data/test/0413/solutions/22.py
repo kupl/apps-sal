@@ -17,7 +17,8 @@ while n < m:
     res += 1
     if m % 2 == 0:
         m //= 2
-    else: m += 1
+    else:
+        m += 1
 
 res += (n - m)
 

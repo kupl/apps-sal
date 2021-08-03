@@ -1,6 +1,8 @@
 #import sys
 # sys.setrecursionlimit(20000)
-f = lambda: input()
+def f(): return input()
+
+
 n, m = list(map(int, f().split()))
 
 dp = [99999] * 10001
@@ -9,7 +11,7 @@ dp[n] = 0
 
 def click():
     for i in range(0, n + 1):
-        dp[i] = n - i;
+        dp[i] = n - i
         if i * 2 <= 10000:
             if dp[i * 2] > dp[i] + 1:
                 dp[i * 2] = dp[i] + 1

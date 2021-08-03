@@ -33,7 +33,8 @@ def main(n, d, s, info=0):
     edges = []
     curr = []
     for i in range(n):
-        if d[i] == 1: curr.append(i)
+        if d[i] == 1:
+            curr.append(i)
     while len(curr):
         i = curr.pop()
         if d[i] == 1:

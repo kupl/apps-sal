@@ -3,10 +3,12 @@ import itertools
 import fractions
 stdin = sys.stdin
 
-ns = lambda: stdin.readline().rstrip()
-ni = lambda: int(stdin.readline().rstrip())
-nm = lambda: list(map(int, stdin.readline().split()))
-nl = lambda: list(map(int, stdin.readline().split()))
+
+def ns(): return stdin.readline().rstrip()
+def ni(): return int(stdin.readline().rstrip())
+def nm(): return list(map(int, stdin.readline().split()))
+def nl(): return list(map(int, stdin.readline().split()))
+
 
 N = int(input())
 C = nl()

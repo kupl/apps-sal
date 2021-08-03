@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n = int(input())
 degs, xors = [0] * (2 ** 16 + 1), [0] * (2 ** 16 + 1)
 edges = []

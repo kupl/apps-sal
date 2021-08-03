@@ -2,7 +2,10 @@
 
 __author__ = 'artyom'
 
-read = lambda: map(int, input().split())
+
+def read(): return map(int, input().split())
+
+
 n = int(input())
 graph = [set() for _ in range(n)]
 degrees = []

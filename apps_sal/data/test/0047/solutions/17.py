@@ -9,7 +9,9 @@ def find(A, x):
     return maxi
 
 
-inp = lambda cast=int: list(map(cast, input().split()))
+def inp(cast=int): return list(map(cast, input().split()))
+
+
 n, x = inp()
 A = [0] + inp()
 print(find(A, x))

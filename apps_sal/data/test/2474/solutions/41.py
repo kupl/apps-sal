@@ -27,8 +27,9 @@ cost.sort()
 ans = 0
 for i in range(1, n + 1):
     cur = mul(pow[i - 1], mul(int(cost[i - 1]), pow[n - i]))
-    if i < n: cur = add(cur, pow[i - 1] * pow[n - i - 1] % mod * int(cost[i - 1])
-                        % mod * (n - i) % mod)
+    if i < n:
+        cur = add(cur, pow[i - 1] * pow[n - i - 1] % mod * int(cost[i - 1])
+                  % mod * (n - i) % mod)
     ans = add(ans, cur)
 print((mul(ans, pow[n])))
 ''' test

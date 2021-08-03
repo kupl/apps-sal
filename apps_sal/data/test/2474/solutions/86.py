@@ -1,5 +1,6 @@
 def power(n, r, mod=10**9 + 7):
-    if r == 0: return 1
+    if r == 0:
+        return 1
     if r % 2 == 0:
         return power(n * n % mod, r // 2, mod) % mod
     if r % 2 == 1:
