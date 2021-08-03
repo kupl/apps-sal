@@ -8,5 +8,3 @@ def combine(*args):
             if len(args[j]) > i:
                 res.append(args[j][i])
     return res
-        
-

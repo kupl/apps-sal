@@ -4,4 +4,3 @@ def combine(*args):
     for loop in range(l):
         result.extend(array[loop] for array in args if len(array) > loop)
     return result
-

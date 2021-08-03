@@ -1,7 +1,8 @@
 # Convert chess notation to zero indexed tuple (x, y)
-int_pos = lambda s: (ord(s[0]) - ord("a"), int(s[1]) - 1)
+def int_pos(s): return (ord(s[0]) - ord("a"), int(s[1]) - 1)
 # Convert zero indexed tuple (x, y) to chess notation
-note_pos = lambda t: "{}{}".format(chr(t[0] + ord("a")), t[1] + 1)
+def note_pos(t): return "{}{}".format(chr(t[0] + ord("a")), t[1] + 1)
+
 
 def bishop_extend(pos, move):
     """
@@ -16,6 +17,7 @@ def bishop_extend(pos, move):
         y += dy
         yield (x, y)
 
+
 def bishop_attack(pos):
     """
     Given a position, return a dict of all possible 
@@ -27,6 +29,7 @@ def bishop_attack(pos):
         for attack_pos in bishop_extend(pos, (dx, dy)):
             result[attack_pos] = (dx, dy)
     return result
+
 
 def bishop_diagonal(bishop1, bishop2):
     """
@@ -43,4 +46,3 @@ def bishop_diagonal(bishop1, bishop2):
         # Same for b2
         bishop2 = note_pos(list(bishop_extend(b2, b2d))[-1])
     return sorted([bishop1, bishop2])
-

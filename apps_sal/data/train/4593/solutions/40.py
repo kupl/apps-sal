@@ -1,7 +1,7 @@
 def merge_arrays(arr1, arr2):
     arr1 = sorted(arr1)
     arr2 = sorted(arr2)
-    i,j = 0,0
+    i, j = 0, 0
     result = []
     while True:
         if i == len(arr1):

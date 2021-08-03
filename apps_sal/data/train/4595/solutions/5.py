@@ -1,6 +1,6 @@
 def bishop_diagonal(bishop1, bishop2):
-    coords = lambda p: ('abcdefgh'.index(p[0]), int(p[1]) - 1)
-    pos = lambda i, j: 'abcdefgh'[i] + str(j + 1)
+    def coords(p): return ('abcdefgh'.index(p[0]), int(p[1]) - 1)
+    def pos(i, j): return 'abcdefgh'[i] + str(j + 1)
     x, y = coords(bishop1)
     u, v = coords(bishop2)
     if x + y == u + v:

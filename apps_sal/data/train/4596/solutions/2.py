@@ -1,6 +1,7 @@
 from collections import Counter
 import math
 
+
 def perms(element):
     stringElement = str(element)
     tally = Counter(stringElement)

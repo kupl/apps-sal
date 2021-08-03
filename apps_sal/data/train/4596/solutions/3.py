@@ -3,6 +3,7 @@ from math import factorial as fact
 from functools import reduce
 from operator import mul
 
+
 def perms(element):
     s = str(element)
     c = Counter(s)
