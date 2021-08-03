@@ -9,9 +9,9 @@ for i in range(14):
     k2 = a[i] % 14
     b[i] = 0
     for j in range(14):
-        b[j] += k;
+        b[j] += k
     for j in range(i + 1, i + k2 + 1):
-        b[j % 14] += 1;
+        b[j % 14] += 1
     for j in range(14):
         if b[j] % 2 == 0:
             cnt += b[j]

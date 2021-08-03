@@ -1,6 +1,6 @@
-import fileinput;
+import fileinput
 
-str = input();
+str = input()
 sstr = str.split(' ')
 a, b, w, x, c = int(sstr[0]), int(sstr[1]), int(sstr[2]), int(sstr[3]), int(sstr[4])
 

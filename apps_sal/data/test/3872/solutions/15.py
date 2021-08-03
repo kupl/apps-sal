@@ -11,7 +11,8 @@ def rasch(a, b):
         return True
     else:
 
-        if mas.get(s): return True if mas[s] == 2 else False
+        if mas.get(s):
+            return True if mas[s] == 2 else False
         if len(a) % 2 == 0:
             a1 = a[0:len(a) // 2]
             a2 = a[len(a) // 2:]
@@ -20,7 +21,8 @@ def rasch(a, b):
             res = (rasch(a1, b1) and rasch(a2, b2)) or (rasch(a1, b2) and rasch(a2, b1))
             mas[s] = (2 if res else 1)
             return res
-        else: return False
+        else:
+            return False
 
 
 print("YES") if rasch(a, b) else print("NO")

@@ -14,7 +14,9 @@ for _ in range(2 * n):
     ndp = [[0 for _ in range(m + 1)] for _ in range(n + 1)]
     for i in range(n + 1):
         for j in range(m + 1):
-            if i > 0: ndp[i - 1][z[j][0]] = (ndp[i - 1][z[j][0]] + dp[i][j]) % MOD
-            if i < n: ndp[i + 1][z[j][1]] = (ndp[i + 1][z[j][1]] + dp[i][j]) % MOD
+            if i > 0:
+                ndp[i - 1][z[j][0]] = (ndp[i - 1][z[j][0]] + dp[i][j]) % MOD
+            if i < n:
+                ndp[i + 1][z[j][1]] = (ndp[i + 1][z[j][1]] + dp[i][j]) % MOD
     dp = ndp
 print(dp[0][m])

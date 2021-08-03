@@ -10,10 +10,13 @@ for i in range(n):
     dp[i][k - r[i]] = abs(s - i)
 for j in range(k, -1, -1):
     for i in range(n):
-        if dp[i][j] >= INF: continue
+        if dp[i][j] >= INF:
+            continue
         for f in range(n):
-            if r[f] <= r[i]: continue
-            if c[f] == c[i]: continue
+            if r[f] <= r[i]:
+                continue
+            if c[f] == c[i]:
+                continue
             new_val = max(0, j - r[f])
             dp[f][new_val] = min(dp[f][new_val], dp[i][j] + abs(i - f))
 ans = INF
