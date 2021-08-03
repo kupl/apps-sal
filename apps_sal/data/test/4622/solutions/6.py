@@ -7,4 +7,5 @@ for i in range(N - 1):
 
 if 0 in l:
     print('NO')
-else: print('YES')
+else:
+    print('YES')
