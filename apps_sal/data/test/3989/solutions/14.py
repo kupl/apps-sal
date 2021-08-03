@@ -57,7 +57,7 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
 def binary(n):
@@ -86,31 +86,33 @@ def isPrime(n):
             if (n % i == 0):
                 return (False)
         return (True)
-s=input()
-f=[0]*10
-mod=[1869,8961,6981,6198,1698,9861,1896]
+
+
+s = input()
+f = [0] * 10
+mod = [1869, 8961, 6981, 6198, 1698, 9861, 1896]
 for i in s:
-    f[int(i)]+=1
-a=""
-cm=0
+    f[int(i)] += 1
+a = ""
+cm = 0
 for i in s:
-    if(i!="0"):
-        n=int(i)
-        if(n==1 or n==6 or n==8 or n==9):
-            if(f[n]>1):
-                cm=(cm*10+n)%7
-                f[n]-=1
-                print(i,end="")
+    if(i != "0"):
+        n = int(i)
+        if(n == 1 or n == 6 or n == 8 or n == 9):
+            if(f[n] > 1):
+                cm = (cm * 10 + n) % 7
+                f[n] -= 1
+                print(i, end="")
         else:
-            cm=(cm*10+n)%7
-            f[n]-=1
-            print(i,end="")
-#print(a,cm)
-for i in range(0,4):
-    cm=(cm*10)%7
-if(cm==0):
-    print(str(mod[cm]),end="")
-    print('0'*f[0])
+            cm = (cm * 10 + n) % 7
+            f[n] -= 1
+            print(i, end="")
+# print(a,cm)
+for i in range(0, 4):
+    cm = (cm * 10) % 7
+if(cm == 0):
+    print(str(mod[cm]), end="")
+    print('0' * f[0])
 else:
-    print(str(mod[7-cm]), end="")
+    print(str(mod[7 - cm]), end="")
     print('0' * f[0])

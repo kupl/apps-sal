@@ -16,4 +16,3 @@ for x in b:
     else:
         m2 += 1
 print(min(k1, m2) + min(k2, m1))
-

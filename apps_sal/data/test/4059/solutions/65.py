@@ -7,4 +7,3 @@ for i in range(1, N):
     count += math.ceil(N / i) - 1
 
 print(count)
-

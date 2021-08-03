@@ -16,4 +16,3 @@ for i in range(m):
     else:
         a2 += 1
 print(min(u1, a2) + min(u2, a1))
-

@@ -13,4 +13,3 @@ for i in b:
     else:
         D += 1
 print(min(A, D) + min(B, C))
-

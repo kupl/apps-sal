@@ -1,8 +1,8 @@
-n,m = list(map(int,input().split()))
-a = list(map(int,input().split()))
-b = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 
-a_odd, a_even, b_odd, b_even = 0,0,0,0
+a_odd, a_even, b_odd, b_even = 0, 0, 0, 0
 
 for i in a:
     if i % 2 == 0:
@@ -17,4 +17,3 @@ for i in b:
         b_odd += 1
 
 print(min(a_odd, b_even) + min(a_even, b_odd))
-
