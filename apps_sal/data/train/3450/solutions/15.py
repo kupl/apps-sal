@@ -4,4 +4,3 @@ def array(string):
         return None
     else:
         return ' '.join(list1[1:-1])
-

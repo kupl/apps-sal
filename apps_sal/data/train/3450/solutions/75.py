@@ -2,11 +2,11 @@ def array(string):
     splitted = []
     if string == '':
         return None
-    else: 
+    else:
         splitted = string.split(",")
         if len(splitted) < 3:
             return None
-        else: 
+        else:
             splitted = splitted[1:]
             splitted = splitted[:-1]
             result = ''

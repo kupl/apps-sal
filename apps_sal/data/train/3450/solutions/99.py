@@ -1,5 +1,6 @@
 import re
 
+
 def array(string):
     arr = re.split(',\s*', string)
     if len(arr) < 3:

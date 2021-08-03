@@ -8,5 +8,3 @@ def final_grade(exam, projects):
     elif exam > 50 and projects > 1:
         grade = 75
     return grade
-  
-

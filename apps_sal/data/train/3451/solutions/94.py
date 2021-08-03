@@ -1,4 +1,4 @@
-def k_color_code(a,b):
+def k_color_code(a, b):
     i = 0
     j = 0
     if(a.lower() == 'r'):
@@ -12,8 +12,9 @@ def k_color_code(a,b):
     if(b.lower() == 'b'):
         j = 0.1
     if(b.lower() == 'g'):
-        j = 0.01    
+        j = 0.01
     return i + j
+
 
 def k_color(k_code):
 
@@ -34,22 +35,22 @@ def k_color(k_code):
     else:
         return 'n'
 
+
 def new_row(row):
     s = row
     ps = ""
     x = s
-    for i in range(0,len(x)):
+    for i in range(0, len(x)):
         if i + 1 != len(x):
-            ps += k_color(k_color_code(x[i],x[i+1]))
+            ps += k_color(k_color_code(x[i], x[i + 1]))
         else:
             break
     x = ps
     return x
+
 
 def triangle(row):
     s = row
     while(len(s) != 1):
         s = new_row(s)
     return s.upper()
-
-

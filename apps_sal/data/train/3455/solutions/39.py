@@ -6,4 +6,3 @@ def disarium_number(n):
     if sm == n:
         return "Disarium !!"
     return "Not !!"
-

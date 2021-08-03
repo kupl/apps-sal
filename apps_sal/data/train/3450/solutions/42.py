@@ -4,4 +4,3 @@ def array(string):
         return None
 
     return " ".join(stripped_string_array)
-
