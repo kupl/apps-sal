@@ -1,6 +1,6 @@
 for __ in range(int(input())):
     a = list(map(int, input().split()))
-     
+
     a.sort()
     if a[0] == 0 or a[1] == 0 or a[2] == 0:
         print("NO")

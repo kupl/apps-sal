@@ -4,9 +4,9 @@ try:
         k = int(input())
         for i in range(k):
             # for j in range(k):
-            if (i==0 or i==k-1):
-                print("*"*(i+1))
+            if (i == 0 or i == k - 1):
+                print("*" * (i + 1))
             else:
-                print("*"+(" "*(i-1))+"*")
+                print("*" + (" " * (i - 1)) + "*")
 except EOFError:
     pass

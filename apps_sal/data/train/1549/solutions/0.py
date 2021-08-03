@@ -1,29 +1,26 @@
 # cook your dish here
 import copy
 for _ in range(int(input())):
-    k=int(input())
-    c=[]
-    d=[]
-    start=0
+    k = int(input())
+    c = []
+    d = []
+    start = 0
 
     while True:
-        c=[]
+        c = []
         for i in range(start):
             c.append(" ")
-        for i in range(start,k+1):
+        for i in range(start, k + 1):
             c.append(str(i))
-        start+=1
+        start += 1
         d.append(c)
 
-        if start>k:
+        if start > k:
             break
 
-    e=copy.copy(d[1:])
+    e = copy.copy(d[1:])
     d.reverse()
-    d=d+e
-    ##print(d)
+    d = d + e
+    # print(d)
     for i in range(len(d)):
         print(''.join(d[i]))
-
-
-
