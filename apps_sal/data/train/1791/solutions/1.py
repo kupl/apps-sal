@@ -6,6 +6,7 @@ def first_position(maze):
             if maze[i][j] in "><^v":
                 return (i, j)
 
+
 def walking(maze, passed, path, x, y, move):
     lin, col = len(maze), len(maze[0])
     if x < 0 or x >= lin or y < 0 or y >= col:
@@ -13,28 +14,28 @@ def walking(maze, passed, path, x, y, move):
     if maze[x][y] == '#' or passed[x][y]:
         return False
     passed[x][y] = True
-    
+
     if move == '>':
-        r = walking(maze, passed, path, x+1, y, 'v')
-        l = walking(maze, passed, path, x-1, y, '^')
-        f = walking(maze, passed, path, x, y+1, '>')
-        b = walking(maze, passed, path, x, y-1, '<')
+        r = walking(maze, passed, path, x + 1, y, 'v')
+        l = walking(maze, passed, path, x - 1, y, '^')
+        f = walking(maze, passed, path, x, y + 1, '>')
+        b = walking(maze, passed, path, x, y - 1, '<')
     elif move == '<':
-        r = walking(maze, passed, path, x-1, y, '^')
-        l = walking(maze, passed, path, x+1, y, 'v')
-        f = walking(maze, passed, path, x, y-1, '<')
-        b = walking(maze, passed, path, x, y+1, '>')
+        r = walking(maze, passed, path, x - 1, y, '^')
+        l = walking(maze, passed, path, x + 1, y, 'v')
+        f = walking(maze, passed, path, x, y - 1, '<')
+        b = walking(maze, passed, path, x, y + 1, '>')
     elif move == '^':
-        r = walking(maze, passed, path, x, y+1, '>')
-        l = walking(maze, passed, path, x, y-1, '<')
-        b = walking(maze, passed, path, x+1, y, 'v')
-        f = walking(maze, passed, path, x-1, y, '^')
+        r = walking(maze, passed, path, x, y + 1, '>')
+        l = walking(maze, passed, path, x, y - 1, '<')
+        b = walking(maze, passed, path, x + 1, y, 'v')
+        f = walking(maze, passed, path, x - 1, y, '^')
     elif move == 'v':
-        r = walking(maze, passed, path, x, y-1, '<')
-        l = walking(maze, passed, path, x, y+1, '>')
-        b = walking(maze, passed, path, x-1, y, '^')
-        f = walking(maze, passed, path, x+1, y, 'v')
-    
+        r = walking(maze, passed, path, x, y - 1, '<')
+        l = walking(maze, passed, path, x, y + 1, '>')
+        b = walking(maze, passed, path, x - 1, y, '^')
+        f = walking(maze, passed, path, x + 1, y, 'v')
+
     if f:
         path += ["F"]
     elif b:
@@ -43,8 +44,9 @@ def walking(maze, passed, path, x, y, move):
         path += ["F", "R"]
     elif l:
         path += ["F", "L"]
-    
+
     return f or b or r or l
+
 
 def escape(maze):
     path = []

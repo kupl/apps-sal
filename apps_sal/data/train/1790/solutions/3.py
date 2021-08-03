@@ -19,7 +19,7 @@ class Graph():
                 column += 1
             step += 1
         return dictionary
-        
+
     # from dictionary to adjacency matrix
     def graph_2_mat(self, dictionary):
         matrix = []
@@ -31,8 +31,8 @@ class Graph():
             matrix.append(row)
             step += 1
         return matrix
-    
-    # from dictionary to adjacency list    
+
+    # from dictionary to adjacency list
     def graph_2_list(self, dictionary):
         list = []
         step = 0
@@ -41,15 +41,15 @@ class Graph():
             list.append(vertex)
             step += 1
         return list
-        
+
     # from adjacency list to dictionary
     def list_2_graph(self, list):
         dictionary = {}
         for vertex in list:
             dictionary[vertex[0]] = vertex[1]
         return dictionary
-        
-    # from adjacency matrix to adjacency list    
+
+    # from adjacency matrix to adjacency list
     def mat_2_list(self, matrix):
         list = []
         step = 0
@@ -63,7 +63,7 @@ class Graph():
             list.append(vertex)
             step += 1
         return list
-    
+
     # from adjacency list to adjacency matrix
     def list_2_mat(self, list):
         matrix = []
@@ -77,10 +77,10 @@ class Graph():
                     matrix.append(row)
                     step += 1
         return matrix
-        
+
     # find all path from node start_vertex to node end_vertex
     def find_all_paths(self, dictionary, start, end):
-        def dfs(dictionary, start, end, path = []):
+        def dfs(dictionary, start, end, path=[]):
             path = path + [start]
             if start == end:
                 return [path]
@@ -94,6 +94,4 @@ class Graph():
                         paths.append(newpath)
             return paths
         paths = dfs(dictionary, start, end)
-        return sorted(sorted(["-".join(path) for path in paths], key = str), key = len)
-        
-
+        return sorted(sorted(["-".join(path) for path in paths], key=str), key=len)

@@ -8,7 +8,9 @@ cards = [
 chars = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 chars_len = len(chars)
 facs = [1]
-for x in range(1, 53, 1): facs.append(facs[-1] * x)
+for x in range(1, 53, 1):
+    facs.append(facs[-1] * x)
+
 
 class PlayingCards:
     # Takes a String containing a message, and returns an array of Strings representing
@@ -17,11 +19,14 @@ class PlayingCards:
         mlen = len(message)
         rem = 0
         for i in range(mlen):
-            if message[i] not in chars: return None
+            if message[i] not in chars:
+                return None
             rem = rem + chars_len ** (mlen - i - 1) * chars.index(message[i])
-        if rem >= facs[-1]: return None
+        if rem >= facs[-1]:
+            return None
         for i in range(1, 53):
-            if rem < facs[i]: break
+            if rem < facs[i]:
+                break
         remaining_cards = cards[53 - i - 1:]
         output_cards = cards[:53 - i - 1]
         for j in range(i - 1, -1, -1):
@@ -33,16 +38,19 @@ class PlayingCards:
     # Takes an array of Strings representing a deck of playing cards, and returns
     # the message that is hidden inside, or None if the deck is invalid.
     def decode(self, deck):
-        if len(deck) != 52: return None
+        if len(deck) != 52:
+            return None
         remaining_cards = cards.copy()
         rem = 0
         for i in range(len(deck)):
-            if deck[i] not in remaining_cards: return None
+            if deck[i] not in remaining_cards:
+                return None
             idx = remaining_cards.index(deck[i])
             rem = rem + facs[51 - i] * idx
             remaining_cards.pop(idx)
         output_message = []
-        if rem == 0 : return ''
+        if rem == 0:
+            return ''
         while rem > 0:
             output_message.insert(0, chars[rem % chars_len])
             rem = rem // chars_len

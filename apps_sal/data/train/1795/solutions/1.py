@@ -1,9 +1,11 @@
 def nQueen(n):
-    if n == 1: return [0]
-    if n <= 3: return []
+    if n == 1:
+        return [0]
+    if n <= 3:
+        return []
 
-    evens = [i for i in range(2, n+1, 2)]
-    odds = [i for i in range(1, n+1, 2)]
+    evens = [i for i in range(2, n + 1, 2)]
+    odds = [i for i in range(1, n + 1, 2)]
 
     if n % 6 == 3:
         evens.remove(2)
@@ -17,4 +19,4 @@ def nQueen(n):
         odds.remove(5)
         odds.append(5)
 
-    return [a-1 for a in evens + odds]
+    return [a - 1 for a in evens + odds]

@@ -1,7 +1,8 @@
 import ast
 
-def to_postfix (infix):
-    class PostFixVisitor(ast.NodeVisitor): 
+
+def to_postfix(infix):
+    class PostFixVisitor(ast.NodeVisitor):
         def visit_BinOp(self, node):
             self.visit(node.left)
             self.visit(node.right)
@@ -9,7 +10,7 @@ def to_postfix (infix):
 
         def visit_Num(self, node):
             postfix.append(str(node.n))
-            
+
         def visit_Add(self, node):
             postfix.append('+')
 
@@ -29,4 +30,3 @@ def to_postfix (infix):
     p = ast.parse(infix.replace('^', '**'))
     PostFixVisitor().visit(p)
     return ''.join(postfix)
-

@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Graph():
 
     def __init__(self, vertices_num):
@@ -8,7 +10,8 @@ class Graph():
         d = {f'A{i}': [] for i in range(self.v)}
         for i, j in enumerate(adjm):
             for k, l in enumerate(j):
-                if l : d[f'A{i}'].append((f'A{k}', l))
+                if l:
+                    d[f'A{i}'].append((f'A{k}', l))
         return d
 
     def graph_2_mat(self, graph):

@@ -52,19 +52,23 @@ def three_by_n_with_hole(n):
 """
 
 # naive algorithm
-def mat_mul(A,B):
+
+
+def mat_mul(A, B):
     n = len(A)
     # the top left entry is A[0][0]*B[0][0] + A[0][1]*B[1][0] + ...
-    return [[sum(A[i][k]*B[k][j]%12345787 for k in range(n))%12345787 for j in range(n)] for i in range(n)]
+    return [[sum(A[i][k] * B[k][j] % 12345787 for k in range(n)) % 12345787 for j in range(n)] for i in range(n)]
 
 # exponentiation by squaring
-def mat_pow(A,k):
+
+
+def mat_pow(A, k):
     n = len(A)
-    res = [[0+(i==j) for j in range(n)] for i in range(n)] # A^0
+    res = [[0 + (i == j) for j in range(n)] for i in range(n)]  # A^0
     while k:
-        if k%2 == 1:
-            res = mat_mul(res,A)
-        A = mat_mul(A,A)
+        if k % 2 == 1:
+            res = mat_mul(res, A)
+        A = mat_mul(A, A)
         k //= 2
     return res
 
@@ -94,15 +98,18 @@ def mat_pow(A,k):
 # C[2k]   =  A[2(k-1)+1]    B[2(k-1)] +  C[2(k-1)] +  D[2(k-1)+1]
 # D[2k+1] = 8A[2(k-1)+1] + 4B[2(k-1)] + 2C[2(k-1)] + 3D[2(k-1)+1]
 
+
 def three_by_n_without_hole(n):
-    res = mat_pow([[3,1],[2,1]],n//2)
+    res = mat_pow([[3, 1], [2, 1]], n // 2)
     return res[0][0]
 
+
 def three_by_n_with_hole(n):
-    res = mat_pow([[3,1,0,0],[2,1,0,0],[1,1,1,1],[8,4,2,3]],n//2)
-    return (res[3][0] + res[3][1] + 2*res[3][3])%12345787
+    res = mat_pow([[3, 1, 0, 0], [2, 1, 0, 0], [1, 1, 1, 1], [8, 4, 2, 3]], n // 2)
+    return (res[3][0] + res[3][1] + 2 * res[3][3]) % 12345787
+
 
 def three_by_n(n):
-    if n%2 == 1:
+    if n % 2 == 1:
         return three_by_n_with_hole(n)
     return three_by_n_without_hole(n)

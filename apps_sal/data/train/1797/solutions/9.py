@@ -5,5 +5,6 @@ for i in range(35):
             nums.add(2**i * 3**j * 5**k)
 nums = [None] + sorted(nums)
 
+
 def hamming(n):
     return nums[n]

@@ -2,6 +2,7 @@ import itertools as it
 import math
 import string
 
+
 class PlayingCards:
 
     def __init__(self):
@@ -14,7 +15,7 @@ class PlayingCards:
         for letter in clear_string:
             output = output * alphabet_size + self.alphabet.index(letter)
         return output
-    
+
     # Takes a String containing a message, and returns an array of Strings representing
     # a deck of playing cards ordered to hide the message, or None if the message is invalid.
     def encode(self, message):
@@ -23,7 +24,7 @@ class PlayingCards:
                 return None
         remaining_cards = list(self.cards)
         n = self.message_to_cypher_value(message)
-        if n > math.factorial(52)-1:
+        if n > math.factorial(52) - 1:
             return None
         output = []
         while remaining_cards:
@@ -33,7 +34,6 @@ class PlayingCards:
             n -= current_index * permutations_per_card
         return output
 
-    
     def deck_to_cypher_value(self, deck):
         remaining_cards = list(self.cards)
         output = 0
@@ -43,7 +43,7 @@ class PlayingCards:
             output += current_index * permutations_per_card
             remaining_cards.pop(current_index)
         return output
-    
+
     # Takes an array of Strings representing a deck of playing cards, and returns
     # the message that is hidden inside, or None if the deck is invalid.
     def decode(self, deck):
@@ -60,6 +60,5 @@ class PlayingCards:
         output = []
         while n > 0:
             output.append(n % alphabet_size)
-            n = (n - output[-1])//alphabet_size
+            n = (n - output[-1]) // alphabet_size
         return ''.join([self.alphabet[x] for x in output[::-1]])
-
