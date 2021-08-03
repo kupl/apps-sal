@@ -4,7 +4,8 @@ pts = [[x0, y0]]
 for i in range(100):
     nx, ny = [pts[-1][0] * A + B, pts[-1][1] * C + D]
     pts.append([nx, ny])
-    if max(nx, ny) > 10000000000000000 * 10000000000000000: break
+    if max(nx, ny) > 10000000000000000 * 10000000000000000:
+        break
 
 
 x, y, t = list(map(int, input().split()))

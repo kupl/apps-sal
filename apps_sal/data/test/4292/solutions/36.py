@@ -24,7 +24,9 @@ def lii(): return list(map(int, sys.stdin.readline().strip().split()))
 
 
 def solve():
-    n, k = mii(); b = 0; a = sorted(lii())
+    n, k = mii()
+    b = 0
+    a = sorted(lii())
     for i in range(k):
         b += a[i]
     print(b)
