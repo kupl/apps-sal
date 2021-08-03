@@ -1,11 +1,11 @@
 def main():
     s = input()
     n = int(input())
-    
+
     M = 1000000007
-    a = {str(s):[10, s] for s in range(10)}
+    a = {str(s): [10, s] for s in range(10)}
     d = [['_', s]] + [input().split('->') for _ in range(n)]
-    
+
     for di, ti in reversed(d):
         _p = 1
         _v = 0
@@ -16,7 +16,7 @@ def main():
 
     print(a['_'][1])
 
-    
+
 def __starting_point():
     main()
 

@@ -1,5 +1,6 @@
 MOD = 1000000007
 
+
 def main():
     s = input()
     n = len(s)
@@ -26,4 +27,3 @@ def main():
 
 
 main()
-

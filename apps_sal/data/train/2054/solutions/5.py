@@ -26,7 +26,7 @@ def main():
     n = int(input())
     for _ in range(n):
         graph.append([])
-    for i in range(n-1):
+    for i in range(n - 1):
         u, v = [int(x) - 1 for x in input().split()]
         graph[u].append(v)
         graph[v].append(u)
@@ -49,5 +49,5 @@ def main():
     print("YES")
     print(1)
 
-main()
 
+main()

@@ -16,5 +16,3 @@ else:
             m2 = c
 #print(m1, m2)
     print(sum(b) * m + sum(g) - x * (m - 1) - m2)
-
-

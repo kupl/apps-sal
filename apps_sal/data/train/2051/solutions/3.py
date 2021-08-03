@@ -7,7 +7,7 @@ cost = 0
 q = []
 for i in range(k):
     heappush(q, (-c[i], i))
-for i in range(k,n):
+for i in range(k, n):
     heappush(q, (-c[i], i))
     v, j = heappop(q)
     li[j] = i + 1

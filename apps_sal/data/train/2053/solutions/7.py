@@ -3,6 +3,7 @@ mx1 = 0
 mx2 = 0
 sum = 0
 
+
 def parsare(s, lista):
     number = ""
     for l in s:
@@ -12,6 +13,7 @@ def parsare(s, lista):
             lista.append(int(number))
             number = ""
     lista.append(int(number))
+
 
 row1 = []
 row2 = []
@@ -52,4 +54,3 @@ elif ok:
     print(sum + mx1 - mx2)
 else:
     print(-1)
-

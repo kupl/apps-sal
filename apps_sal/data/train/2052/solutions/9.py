@@ -10,8 +10,13 @@ def solve():
         b[col] += 1
     res = 0
     for i in range(1, n - 1):
-        if a[i] == 0: res+=1
-        if b[i] == 0: res+=1
-        if a[i] == 0 and b[i] == 0 and i == n - i - 1: res-=1
+        if a[i] == 0:
+            res += 1
+        if b[i] == 0:
+            res += 1
+        if a[i] == 0 and b[i] == 0 and i == n - i - 1:
+            res -= 1
     print(res)
+
+
 solve()

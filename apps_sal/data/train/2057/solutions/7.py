@@ -16,4 +16,3 @@ for s in S1:
     num = (num * 2) % 1000000007
 
 print(r)
-

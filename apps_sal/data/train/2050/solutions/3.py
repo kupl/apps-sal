@@ -26,8 +26,10 @@ class Trie:
             lose = lose or not l
         return win, lose
 
+
 def answer(flag):
     print("First" if flag else "Second")
+
 
 T = Trie()
 n, k = list(map(int, input().split()))
@@ -41,8 +43,7 @@ elif not win:
     answer(win)
 elif lose:
     answer(win)
-elif k&1:
+elif k & 1:
     answer(win)
 else:
     answer(not win)
-
