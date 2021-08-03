@@ -1,4 +1,4 @@
-#Coded By Ujjwal Bharti
+# Coded By Ujjwal Bharti
 tulu = int(input())
 for _ in range(tulu):
     n = int(input())
@@ -7,8 +7,8 @@ for _ in range(tulu):
     counter = 0
     frequency = 1
     for i in string:
-        if i == "0" and flag==False:
-            flag=True
+        if i == "0" and flag == False:
+            flag = True
             continue
         if flag and i == "0":
             frequency += 1
@@ -17,11 +17,11 @@ for _ in range(tulu):
     flag = False
     frequency = 1
     for i in string:
-        if i == "1" and flag==False:
-            flag=True
+        if i == "1" and flag == False:
+            flag = True
             continue
-        #print(frequency)
-        if flag and i=="1":
+        # print(frequency)
+        if flag and i == "1":
             frequency += 1
         if flag and i == "0":
             counter += frequency

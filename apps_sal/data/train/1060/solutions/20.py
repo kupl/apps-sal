@@ -28,77 +28,86 @@ sys.settrace
 inf_p = float('inf')
 inf_n = float('-inf')
 
-dsu=[]
+dsu = []
+
 
 def find(n):
-    if n==dsu[n]:
+    if n == dsu[n]:
         return n
-    tmp=find(dsu[n])
-    dsu[n]=tmp
+    tmp = find(dsu[n])
+    dsu[n] = tmp
     return tmp
 
-def union(a,b):
-    a=find(a)
-    b=find(b)
-    if a!=b:
-        dsu[b]=a
 
-adj=[]
-vis=[]
-wt=[]
-MAXE=0
-MAXO=0
-ans=0
+def union(a, b):
+    a = find(a)
+    b = find(b)
+    if a != b:
+        dsu[b] = a
+
+
+adj = []
+vis = []
+wt = []
+MAXE = 0
+MAXO = 0
+ans = 0
+
 
 def even_parity(n):
-    return (bin(n)[2:].count('1')%2)==0
+    return (bin(n)[2:].count('1') % 2) == 0
+
+
 def odd_parity(n):
     return not even_parity(n)
 
-def dfse(curr_node,p):
-    nonlocal MAXE, MAXO,vis,ans
+
+def dfse(curr_node, p):
+    nonlocal MAXE, MAXO, vis, ans
 
     for node in adj[curr_node]:
-        if vis[node]==0 :
-            if even_parity(wt[node-1]):
-                dfs(node,num)
-        
-def dfso(curr_node,p):
-    nonlocal MAXE, MAXO,vis,ans
-    
+        if vis[node] == 0:
+            if even_parity(wt[node - 1]):
+                dfs(node, num)
+
+
+def dfso(curr_node, p):
+    nonlocal MAXE, MAXO, vis, ans
+
     for node in adj[curr_node]:
-        if vis[node]==0 :
-            if odd_parity(wt[node-1]):
-                dfs(node,num)
+        if vis[node] == 0:
+            if odd_parity(wt[node - 1]):
+                dfs(node, num)
+
 
 def main():
-    n=inp()
-    s=input().strip()
-    if len(s)==0:
-        s=input().strip
-    ones=[0]* (n+1)
-    zeros=[0]* (n+1)
-    one =0 
-    zero=0
+    n = inp()
+    s = input().strip()
+    if len(s) == 0:
+        s = input().strip
+    ones = [0] * (n + 1)
+    zeros = [0] * (n + 1)
+    one = 0
+    zero = 0
     for i in range(len(s)):
-        ones[i]=one
-        zeros[i]=zero
-        if s[i]=='1':
-            one+=1
+        ones[i] = one
+        zeros[i] = zero
+        if s[i] == '1':
+            one += 1
         else:
-            zero+=1 
-    tot=0
+            zero += 1
+    tot = 0
     # print(ones,zeros)
-    for i in range(n-1,0,-1):
-        if s[i]=='1':
-            tot+=zeros[i]
+    for i in range(n - 1, 0, -1):
+        if s[i] == '1':
+            tot += zeros[i]
         else:
-            tot+=ones[i]
+            tot += ones[i]
         # print(i)
     print(tot)
+
 
 # main()
 for i in range(inp()):
     main()
 # cook your dish here
-

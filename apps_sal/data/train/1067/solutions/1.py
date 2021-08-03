@@ -54,8 +54,8 @@ def fib(n: int) -> int:
 
     return mat[0][0]
 
+
 for _ in range(int(input())):
     n = int(input())
 
     print(fib(n) % MOD)
-

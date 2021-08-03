@@ -5,8 +5,12 @@ def read_i_l(l=False):
         return list(m)
     else:
         return m
+
+
 def i():
     return int(input().strip())
+
+
 T = i()
 L = []
 """for current in range(T):
@@ -23,12 +27,11 @@ L += L[-2::-1]"""
 if T >= 1:
     L = ["1"]
 
-for i in range(2,T+1):
-    nL = [str(i)+(2*i-2)*(" "+str(i))]
+for i in range(2, T + 1):
+    nL = [str(i) + (2 * i - 2) * (" " + str(i))]
     for l in L:
-        nL.append(str(i)+" "+l+" "+str(i))
-    nL.append(str(i)+(2*i-2)*(" "+str(i)))
+        nL.append(str(i) + " " + l + " " + str(i))
+    nL.append(str(i) + (2 * i - 2) * (" " + str(i)))
     L = nL
 for l in L:
     print(l)
-

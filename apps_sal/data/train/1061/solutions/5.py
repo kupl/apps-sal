@@ -1,11 +1,12 @@
 # cook your dish here
 def value(a, b, c):
     if(c == '&'):
-        return a&b
+        return a & b
     elif(c == '^'):
-        return a^b
+        return a ^ b
     elif(c == '|'):
-        return a|b
+        return a | b
+
 
 def break_rules(n, operator):
     if(len(n) == 1):
@@ -14,7 +15,7 @@ def break_rules(n, operator):
         return [value(n[0], n[1], operator[0])]
     else:
         cont_ans = []
-        for i in range(1,len(n)):
+        for i in range(1, len(n)):
             l1 = n[:i]
             l2 = n[i:]
             o1 = operator[:i - 1]
@@ -26,8 +27,9 @@ def break_rules(n, operator):
                     cont_ans.append(value(k, j, operator[i - 1]))
     return cont_ans
 
+
 t = int(input())
-while t > 0 :
+while t > 0:
     operator = []
     num = []
     exp = input()
@@ -42,5 +44,5 @@ while t > 0 :
         if(i == len(exp) - 1):
             num.append(int(temp))
     t -= 1
-    
+
     print(max(break_rules(num, operator)))
