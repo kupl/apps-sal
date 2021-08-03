@@ -3,4 +3,3 @@ def reverse_fizzbuzz(s):
     lst = s.split(" ")
     start = next((int(item) - i for i, item in enumerate(lst) if item.isdecimal()), no_int.get(s))
     return list(range(start, start + len(lst)))
-

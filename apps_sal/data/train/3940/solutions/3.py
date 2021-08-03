@@ -1,1 +1,1 @@
-find_children = lambda x, s: sorted(set(x) & set(s))
+def find_children(x, s): return sorted(set(x) & set(s))

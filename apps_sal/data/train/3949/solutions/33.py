@@ -1,4 +1,6 @@
 import math
+
+
 def calculate_tip(amount, rating):
     ratings = ["terrible", "poor", "good", "great", "excellent"]
     index = ratings.index(rating.lower()) if rating.lower() in ratings else -1

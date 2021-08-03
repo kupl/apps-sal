@@ -1,5 +1,6 @@
 import math
 
+
 def calculate_tip(amount, rating):
     factor = 0
     rating = rating.lower()

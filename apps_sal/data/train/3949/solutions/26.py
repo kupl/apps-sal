@@ -1,6 +1,7 @@
 from math import ceil
 from typing import Union
 
+
 def calculate_tip(amount: int, rating: str) -> Union[int, str]:
     """ Calculates how much you need to tip based on the total amount of the bill and the service. """
     tips = {

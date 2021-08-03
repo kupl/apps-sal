@@ -1,5 +1,6 @@
 import math
 
+
 def calculate_tip(amount, rating):
     rating = rating.lower()
     tip = {
@@ -11,5 +12,5 @@ def calculate_tip(amount, rating):
     }.get(rating)
     if (tip == None):
         return "Rating not recognised"
-    
+
     return int(math.ceil(amount * tip))

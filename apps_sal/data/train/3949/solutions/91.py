@@ -1,4 +1,6 @@
 import math
+
+
 def calculate_tip(amount, rating):
     amount = math.ceil(amount)
     if rating.title() == 'Terrible':

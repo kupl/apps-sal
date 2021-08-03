@@ -1,5 +1,5 @@
 def sum_triangular_numbers(n):
-    #your code here
+    # your code here
     if n > 0:
         z = 1
         x = []

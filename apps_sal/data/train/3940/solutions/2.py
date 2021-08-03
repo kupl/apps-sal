@@ -1,1 +1,1 @@
-find_children=lambda s,c:sorted(e for e in c if e in s)
+def find_children(s, c): return sorted(e for e in c if e in s)

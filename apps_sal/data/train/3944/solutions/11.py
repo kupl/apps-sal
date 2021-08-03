@@ -1,2 +1,2 @@
 from itertools import accumulate
-sum_triangular_numbers = lambda _:sum(accumulate(range(0,_+1)))
+def sum_triangular_numbers(_): return sum(accumulate(range(0, _ + 1)))

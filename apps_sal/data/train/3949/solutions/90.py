@@ -1,8 +1,10 @@
 import math
+
+
 def calculate_tip(amount, rating):
     rating = rating.lower()
     if rating == "poor":
-        return math.ceil(amount*0.05)
+        return math.ceil(amount * 0.05)
     elif rating == "good":
         return math.ceil(amount * 0.1)
     elif rating == "great":
