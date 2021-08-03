@@ -1,9 +1,9 @@
 for _ in range(int(input())):
- N, K = map(int, input().rstrip().split())
- L1 = [i for i in range(N-K, N+1)]
- L2 = [i for i in range(1, N-K)]
- print(*L1, *L2)
- 
+    N, K = map(int, input().rstrip().split())
+    L1 = [i for i in range(N - K, N + 1)]
+    L2 = [i for i in range(1, N - K)]
+    print(*L1, *L2)
+
 
 '''
 N=5, K=2 => N-K+1 = 4    (1,2,3)
