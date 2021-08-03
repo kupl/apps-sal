@@ -1,5 +1,7 @@
 
-cin = lambda: list(map(int, input().split()))
+def cin(): return list(map(int, input().split()))
+
+
 n = int(input())
 st = input()
 a = list(cin())
@@ -17,7 +19,8 @@ for i in range(1, n):
     for j in range(i, -1, -1):
         ind = ord(st[j]) - ord('a')
         c = min(c, a[ind])
-        if c < i - j + 1: break
+        if c < i - j + 1:
+            break
         dp[i] += dp[j - 1]
         mn[i] = min(mn[i], mn[j - 1] + 1)
         mx = max(mx, i - j + 1)

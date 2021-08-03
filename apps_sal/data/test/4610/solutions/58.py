@@ -8,8 +8,10 @@ A = list(map(int, input().split()))
 dic = {}
 for i in range(N):
     a = A[i]
-    if a not in dic: dic[a] = 1
-    else: dic[a] += 1
+    if a not in dic:
+        dic[a] = 1
+    else:
+        dic[a] += 1
 
 # dicを昇順にソート
 dic = sorted(dic.items(), key=lambda x: x[1])

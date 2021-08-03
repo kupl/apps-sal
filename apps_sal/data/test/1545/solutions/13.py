@@ -38,7 +38,8 @@ for i in range(2, n + 1):
     longest = max(longest, k)
     tmp = min(tmp, a[o(i - 1)])
     #print(tmp, i, ii)
-    if i == n: break
+    if i == n:
+        break
     if tmp == ii:
         ii = 0
         tmp = float("inf")
@@ -49,7 +50,8 @@ for i in range(2, n + 1):
         ii = 1
         maxNb += 1
         tmp = a[o(i - 1)]
-        if i == n - 1: maxNb += 1
+        if i == n - 1:
+            maxNb += 1
         #print(s[:i - 1])
 
     elif i == n - 1:

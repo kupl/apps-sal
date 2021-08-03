@@ -6,6 +6,7 @@ for i in range(N):
 m.sort(reverse=True)
 ans = 0
 for i in range(K, N):
-    if (m[i] == 0): break
+    if (m[i] == 0):
+        break
     ans += m[i]
 print(ans)

@@ -3,8 +3,8 @@ import math
 from collections import defaultdict
 from itertools import combinations
 from itertools import permutations
-input = lambda: sys.stdin.readline().rstrip()
-read = lambda: map(int, input().split())
+def input(): return sys.stdin.readline().rstrip()
+def read(): return map(int, input().split())
 
 
 def write(*args, sep="\n"):

@@ -20,6 +20,7 @@ for a in A:
 
 ANS = 0
 for i in range(N):
-    if DP[i] != float("inf"): ANS = i
+    if DP[i] != float("inf"):
+        ANS = i
 
 print(N - (ANS + 1))

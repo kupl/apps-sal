@@ -20,7 +20,7 @@ for c in s[1:]:
     arr.insert(0, [total, l[c]])
     ma = max(ma, len(arr))
     total += tmp
-    total %= 10 ** 9 + 7;
+    total %= 10 ** 9 + 7
 print(total)
 print(ma)
 print(mi)

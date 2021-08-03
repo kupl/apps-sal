@@ -14,7 +14,9 @@ def solve():
     s = input()
 
     alphabet = {chr(ord('a') + i): num for i, num in enumerate(map(lambda x: int(x), input().split()))}
-    dp = [0 for _ in range(n)]; minlen = 2 << 20; maxlen = 0
+    dp = [0 for _ in range(n)]
+    minlen = 2 << 20
+    maxlen = 0
     minsplitnum = [2 << 20 for _ in range(n)]
 
     def check(newstr, start, end):

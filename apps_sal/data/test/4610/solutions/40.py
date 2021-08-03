@@ -8,7 +8,8 @@ l = len(cnt)
 t = l - k
 ans = 0
 for i in sorted(cnt.values()):
-    if t <= 0: break
+    if t <= 0:
+        break
     t -= 1
     ans += i
 print(ans)

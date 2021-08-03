@@ -5,7 +5,7 @@ inf = 1000000000000007
 
 def solve():
     a1, b1, c1 = [int(i) for i in stdin.readline().split()]
-    k = a1 + b1 + c1;
+    k = a1 + b1 + c1
     a = [0 for i in range(k + 1)]
     for i in stdin.readline().split():
         a[int(i)] = 0
