@@ -1,7 +1,7 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         dp = {}
-        
+
         def lcs(left, right):
             nonlocal text1
             nonlocal text2

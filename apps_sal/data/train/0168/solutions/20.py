@@ -10,4 +10,4 @@ class Solution:
         for v in d.values():
             if v % 2 == 1:
                 odds += 1
-        return odds <= k and k <= len(s) 
+        return odds <= k and k <= len(s)

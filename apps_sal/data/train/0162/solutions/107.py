@@ -1,5 +1,6 @@
 from functools import wraps
 
+
 class Solution:
     def longestCommonSubsequence(self, text1, text2):
 
@@ -22,10 +23,8 @@ class Solution:
                 return 0
 
             if text1[x] == text2[y]:
-                return 1 + compute(x+1, y+1)
+                return 1 + compute(x + 1, y + 1)
 
-            return max([compute(x+1, y), compute(x, y+1)])
+            return max([compute(x + 1, y), compute(x, y + 1)])
 
         return compute(0, 0)
-
-

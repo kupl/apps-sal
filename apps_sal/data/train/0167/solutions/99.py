@@ -2,9 +2,12 @@ class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
 
         memo = dict()
+
         def dp(K, N):
-            if K == 1: return N
-            if N == 0: return 0
+            if K == 1:
+                return N
+            if N == 0:
+                return 0
             if (K, N) in memo:
                 return memo[(K, N)]
 
@@ -13,8 +16,8 @@ class Solution:
             lo, hi = 1, N
             while lo <= hi:
                 mid = (lo + hi) // 2
-                broken = dp(K - 1, mid - 1) # 碎
-                not_broken = dp(K, N - mid) # 没碎
+                broken = dp(K - 1, mid - 1)  # 碎
+                not_broken = dp(K, N - mid)  # 没碎
                 # res = min(max(碎，没碎) + 1)
                 if broken > not_broken:
                     hi = mid - 1
@@ -27,4 +30,3 @@ class Solution:
             return res
 
         return dp(K, N)
-

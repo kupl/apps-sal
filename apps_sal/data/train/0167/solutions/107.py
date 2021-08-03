@@ -31,7 +31,3 @@ class Solution:
 
         cache[(K, N)] = res
         return res
-
-        
-
-

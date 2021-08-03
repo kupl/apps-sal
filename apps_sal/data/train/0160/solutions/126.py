@@ -11,11 +11,11 @@ class Solution:
         n = len(piles)
         if n == 1:
             return True
-        
-        dp = piles[:]  # Base row        
+
+        dp = piles[:]  # Base row
         for l in range(1, n):
-            for i in range(n-l-1, -1, -1):
-                j = i+l
-                dp[j] = max(piles[i] - dp[j], piles[j] - dp[j-1])
-                
+            for i in range(n - l - 1, -1, -1):
+                j = i + l
+                dp[j] = max(piles[i] - dp[j], piles[j] - dp[j - 1])
+
         return dp[-1] > 0

@@ -9,26 +9,22 @@ class Solution:
                 left = self.recursiveLCS(t1[1:], t2)
                 right = self.recursiveLCS(t1, t2[1:])
                 return max(left, right)
-        
+
     def recursiveLongestCommonSubsequence(self, text1: str, text2: str) -> int:
         return self.recursiveLCS(text1, text2)
-    
 
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         # maybe do checks here but can probably get passed it
-        DP = [[0]*(len(text2)+1) for i in range(len(text1)+1)]
+        DP = [[0] * (len(text2) + 1) for i in range(len(text1) + 1)]
         # MAYBE DO BASE CASES TO PRACTICE
-        for i in range(1, len(text1)+1):
-            for j in range(1, len(text2)+1):
-                if text1[i-1] == text2[j-1]:
-                    DP[i][j] = 1 + DP[i-1][j-1]
+        for i in range(1, len(text1) + 1):
+            for j in range(1, len(text2) + 1):
+                if text1[i - 1] == text2[j - 1]:
+                    DP[i][j] = 1 + DP[i - 1][j - 1]
                 else:
-                    left = DP[i-1][j]
-                    right = DP[i][j-1]
+                    left = DP[i - 1][j]
+                    right = DP[i][j - 1]
                     DP[i][j] = max(left, right)
         for row in DP:
             print(row)
         return DP[len(text1)][len(text2)]
-        
-        
-

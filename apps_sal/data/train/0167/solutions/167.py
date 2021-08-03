@@ -1,6 +1,7 @@
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
         dp = {}
+
         def helper(K, N):
             if N <= 2:
                 return N
@@ -16,7 +17,7 @@ class Solution:
                     die = helper(K - 1, mid - 1)
                     # if egg survives, try egg drop for higher floors
                     live = helper(K, N - mid)
-                    
+
                     if die < live:
                         l = mid
                     elif die > live:
@@ -25,5 +26,5 @@ class Solution:
                         l = r = mid
                 dp[(K, N)] = 1 + min([max(helper(K - 1, l - 1), helper(K, N - l)), max(helper(K - 1, r - 1), helper(K, N - r))])
             return dp[(K, N)]
-        
+
         return helper(K, N)

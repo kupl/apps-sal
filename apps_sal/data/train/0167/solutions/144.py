@@ -5,8 +5,4 @@ class Solution:
             for k in range(1, K + 1):
                 dp[m][k] = dp[m - 1][k - 1] + 1 + dp[m - 1][k]
             if dp[m][K] >= N:
-                return m 
-        
-                
-                
-
+                return m

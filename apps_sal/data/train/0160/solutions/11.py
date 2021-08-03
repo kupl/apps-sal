@@ -1,9 +1,11 @@
 import functools
 
+
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
         n: int = len(piles)
-        @functools.lru_cache(maxsize = None)
+
+        @functools.lru_cache(maxsize=None)
         def dp(i: int, j: int) -> int:
             if i > j:
                 return 0

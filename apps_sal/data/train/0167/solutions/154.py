@@ -1,5 +1,6 @@
 t = [[-1 for i in range(10001)] for j in range(101)]
 
+
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
         if N == 0 or N == 1:

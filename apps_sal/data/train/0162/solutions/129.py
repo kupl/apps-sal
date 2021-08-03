@@ -12,16 +12,7 @@ class Solution:
     #             else:
     #                 matrix[i][j] = max(matrix[i-1][j], matrix[i][j-1])
     #     return matrix[len(text1)][len(text2)]
-    
-    
-    
-    
-    
-    
 
-    
-    
-    
     def _longest_common_subsequence(self, s1, s2, cache):
         p = (len(s1), len(s2))
         if p in cache:

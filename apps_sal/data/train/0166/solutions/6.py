@@ -14,7 +14,3 @@ class Solution:
             b >>= 1
             c >>= 1
         return flips
-                    
-                    
-                
-

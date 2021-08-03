@@ -3,11 +3,12 @@ class Solution:
         def f(x):
             ans = 0
             r = 1
-            for i in range(1, K+1):
-                r *= (x-i+1)/i
+            for i in range(1, K + 1):
+                r *= (x - i + 1) / i
                 #r //= i
                 ans += r
-                if ans >= N: break
+                if ans >= N:
+                    break
             return ans
 
         low, high = 1, N
@@ -18,4 +19,3 @@ class Solution:
             else:
                 high = middle
         return low
-

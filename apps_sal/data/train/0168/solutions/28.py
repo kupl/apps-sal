@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def canConstruct(self, s: str, k: int) -> bool:
         if len(s) < k:
@@ -9,5 +11,3 @@ class Solution:
             if counter[key] % 2 == 1:
                 count += 1
         return count <= k
-        
-

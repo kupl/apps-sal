@@ -1,6 +1,7 @@
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
         dp = {}
+
         def num_moves(n, k):
             if (n, k) not in dp:
                 if n == 0:
@@ -34,4 +35,3 @@ class Solution:
                 dp[(n, k)] = ans
             return dp[(n, k)]
         return num_moves(N, K)
-

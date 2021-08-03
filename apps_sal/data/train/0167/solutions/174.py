@@ -2,7 +2,7 @@ class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
         INF = N + 1
         cache = {}
-        
+
         def eggDropHelper(k, n):
             if (k, n) in cache:
                 return cache[(k, n)]
@@ -29,5 +29,5 @@ class Solution:
             optAns = min(currAns, optAns)
             cache[(k, n)] = optAns
             return cache[(k, n)]
-            
+
         return eggDropHelper(K, N)

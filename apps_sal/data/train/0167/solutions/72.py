@@ -22,4 +22,3 @@ class Solution:
                 next_num_moves[n] = nk_moves
             num_moves = next_num_moves
         return num_moves[N]
-

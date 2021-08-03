@@ -1,7 +1,8 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        memo = [[-1] * (len(text2)+1) for _ in range(len(text1)+1)]
+        memo = [[-1] * (len(text2) + 1) for _ in range(len(text1) + 1)]
         return self.helper(text1, text2, 0, 0, memo)
+
     def helper(self, s1, s2, i, j, memo):
         if memo[i][j] != -1:
             return memo[i][j]
@@ -9,12 +10,12 @@ class Solution:
             return 0
         ans = 0
         if s1[i] == s2[j]:
-            ans = 1 + self.helper(s1, s2, i+1, j+1, memo)
+            ans = 1 + self.helper(s1, s2, i + 1, j + 1, memo)
         else:
-            ans = max(self.helper(s1, s2, i+1, j, memo), self.helper(s1, s2, i, j+1, memo))
+            ans = max(self.helper(s1, s2, i + 1, j, memo), self.helper(s1, s2, i, j + 1, memo))
         memo[i][j] = ans
         return ans
-        
+
 #     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
 #         m, n = len(text1), len(text2)
 #         dp = [[0] * (n+1) for _ in range(m+1)]
@@ -24,6 +25,5 @@ class Solution:
 #                     dp[i][j] = 1 + dp[i-1][j-1]
 #                 else:
 #                     dp[i][j] = max(dp[i-1][j], dp[i][j-1])
-                
-#         return dp[-1][-1]
 
+#         return dp[-1][-1]

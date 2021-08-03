@@ -1,6 +1,7 @@
 class Solution:
     def superEggDrop(self, K, N):
         dp = dict()
+
         def recursive(k, n):
             if k == 1:
                 return n

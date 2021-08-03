@@ -11,4 +11,3 @@ class Solution:
             if max_floors[t] >= N:
                 return t
         return N
-

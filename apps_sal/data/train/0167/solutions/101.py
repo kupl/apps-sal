@@ -4,6 +4,7 @@
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
         memo = {}
+
         def dp(k: int, n: int):
             # base case
             if n == 0:
@@ -30,7 +31,3 @@ class Solution:
             memo[(k, n)] = res
             return res
         return dp(K, N)
-
-
-
-

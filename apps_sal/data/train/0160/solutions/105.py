@@ -8,5 +8,5 @@ class Solution:
             ans.append(max(piles[0], piles[-1]))
             piles.remove(max(piles[0], piles[-1]))
             print(ans)
-        if ans[-2]>=ans[-1]:
+        if ans[-2] >= ans[-1]:
             return True

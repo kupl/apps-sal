@@ -6,12 +6,12 @@ class Solution:
         each palindrome can consume at most one char with odd                 frequency. thus k must >= |odd|.
         ans = k <= len(s) and k >= odd
         '''
-        if k>len(s):
+        if k > len(s):
             return False
-        freq=collections.defaultdict(int)
+        freq = collections.defaultdict(int)
         for c in s:
-            freq[c]+=1
-        odd=0
+            freq[c] += 1
+        odd = 0
         for c in freq:
-            odd+=freq[c]&1
-        return odd<=k
+            odd += freq[c] & 1
+        return odd <= k

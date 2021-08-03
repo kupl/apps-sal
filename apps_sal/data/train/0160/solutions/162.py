@@ -1,7 +1,7 @@
 
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
-        
+
         m = len(piles)
         dp = [[0 for _ in range(m)] for _ in range(m)]
 
@@ -14,7 +14,6 @@ class Solution:
                 if end >= m:
                     break
 
-                dp[start][end] = max(piles[start] - dp[start+1][end], piles[end] - dp[start][end-1])
-        
-        return dp[0][m - 1] > 0
+                dp[start][end] = max(piles[start] - dp[start + 1][end], piles[end] - dp[start][end - 1])
 
+        return dp[0][m - 1] > 0

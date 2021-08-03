@@ -13,4 +13,3 @@ class Solution:
                     lengths[row][col] = max(lengths[row - 1][col], lengths[row][col - 1])
 
         return lengths[-1][-1]
-
