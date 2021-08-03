@@ -1,8 +1,8 @@
 def condi_helper(message, init_key, shift, mode):
     key = sorted(set(init_key), key=init_key.index)
     key += sorted(set('abcdefghijklmnopqrstuvwxyz') - set(init_key))
-    
-    result=[]
+
+    result = []
     for char in message:
         if char in key:
             idx = key.index(char)
@@ -14,8 +14,9 @@ def condi_helper(message, init_key, shift, mode):
                 shift = new + 1
         else:
             result.append(char)
-    
+
     return ''.join(result)
 
-encode = lambda msg, key, sh: condi_helper(msg, key, sh, 1)
-decode = lambda msg, key, sh: condi_helper(msg, key, sh, -1)
+
+def encode(msg, key, sh): return condi_helper(msg, key, sh, 1)
+def decode(msg, key, sh): return condi_helper(msg, key, sh, -1)

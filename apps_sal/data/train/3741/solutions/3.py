@@ -1,4 +1,4 @@
-def vector_affinity( a, b ):
+def vector_affinity(a, b):
     sizeA = len(a)
     sizeB = len(b)
 
@@ -9,17 +9,16 @@ def vector_affinity( a, b ):
         den = sizeA
         numIter = sizeB
     else:
-        den =  sizeB
+        den = sizeB
         numIter = sizeA
 
-    numMatch=0
+    numMatch = 0
 
     for i in range(numIter):
-        if a[i]==b[i]:
-            numMatch+=1
+        if a[i] == b[i]:
+            numMatch += 1
 
-    affinity = numMatch/den
+    affinity = numMatch / den
 
     return affinity
-#----end function
-
+# ----end function

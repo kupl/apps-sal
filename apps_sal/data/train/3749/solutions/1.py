@@ -6,4 +6,3 @@ def expanded_form(n):
         if quo:
             result.append(str(quo * current))
     return ' + '.join(result)
-

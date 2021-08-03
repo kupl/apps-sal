@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def modes(data):
     c = Counter(data)
     m = max(c.values())

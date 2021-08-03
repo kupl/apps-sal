@@ -1,5 +1,6 @@
 from operator import itemgetter
 
+
 def sort_time(arr):
     L = sorted(arr, key=itemgetter(0))
     result = [L.pop(0)]

@@ -1,5 +1,6 @@
 from string import ascii_lowercase as AL
 
+
 def encode(s, key, n):
     a = "".join(dict.fromkeys(key + AL))
     d = {x: i for i, x in enumerate(a, 1)}
@@ -11,8 +12,9 @@ def encode(s, key, n):
         else:
             r.append(x)
     return "".join(r)
-    
-def decode(s, key, n): 
+
+
+def decode(s, key, n):
     a = "".join(dict.fromkeys(key + AL))
     d = {x: i for i, x in enumerate(a, 1)}
     r = []

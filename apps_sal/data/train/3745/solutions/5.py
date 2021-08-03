@@ -1,5 +1,6 @@
 import string
 
+
 def xcode(message, key, initShift, is_encode):
     seen, ret, shift = set(), "", initShift
     alphabet = [c for c in key.lower() + string.ascii_lowercase if c.isalpha() and not (c in seen or seen.add(c))]
@@ -11,8 +12,10 @@ def xcode(message, key, initShift, is_encode):
         ret += letter
     return ret
 
+
 def encode(message, key, initShift):
     return xcode(message, key, initShift, True)
+
 
 def decode(message, key, initShift):
     return xcode(message, key, initShift, False)
