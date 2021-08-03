@@ -1,1 +1,1 @@
-hex_to_dec = lambda s: eval("0x" + s)
+def hex_to_dec(s): return eval("0x" + s)

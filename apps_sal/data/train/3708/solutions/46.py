@@ -17,5 +17,5 @@ def hex_to_dec(s):
         'E': 14,
         'F': 15
     }
-    
-    return sum([d[x.upper()]*16**index for (index,x) in enumerate(s[::-1])])
+
+    return sum([d[x.upper()] * 16**index for (index, x) in enumerate(s[::-1])])

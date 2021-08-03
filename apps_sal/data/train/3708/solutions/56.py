@@ -1,4 +1,4 @@
-def hex_to_dec(n): 
+def hex_to_dec(n):
     a = n
-    res = int(a, 16) 
+    res = int(a, 16)
     return res

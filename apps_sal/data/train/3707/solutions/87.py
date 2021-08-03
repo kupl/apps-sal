@@ -1,2 +1,2 @@
 def sorter(textbooks):
-    return sorted(textbooks, key=lambda w:w.casefold())
+    return sorted(textbooks, key=lambda w: w.casefold())

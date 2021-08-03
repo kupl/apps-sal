@@ -1,5 +1,5 @@
 def hex_to_dec(s):
-    hexn = {'A':10, 'B':11, 'C':12, 'D':13, 'E':14, 'F':15}
+    hexn = {'A': 10, 'B': 11, 'C': 12, 'D': 13, 'E': 14, 'F': 15}
     sum = 0
     n = 0
     for i in s[::-1]:
@@ -7,5 +7,5 @@ def hex_to_dec(s):
             sum += hexn[i.upper()] * 16**n
         else:
             sum += int(i) * 16**n
-        n+=1
+        n += 1
     return sum

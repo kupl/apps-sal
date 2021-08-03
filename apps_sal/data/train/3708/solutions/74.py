@@ -6,4 +6,4 @@ def hex_to_dec(s):
     for i in hex_list:
         if i in hex_dict:
             hex_list = [j.replace(i, str(hex_dict[i])) for j in hex_list]
-    return sum([int(a)*(16**int(b)) for a,b in zip(hex_list, pot_list)])
+    return sum([int(a) * (16**int(b)) for a, b in zip(hex_list, pot_list)])

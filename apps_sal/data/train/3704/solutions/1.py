@@ -1,6 +1,8 @@
 import re
+
+
 def solve_for_x(equation):
-    left,right = equation.split("=")
+    left, right = equation.split("=")
     answer = False
     TrialAndErrorRipMs = -1000
     while answer == False:
@@ -9,4 +11,3 @@ def solve_for_x(equation):
         if eval(FinalLeft) == eval(FinalRight):
             return TrialAndErrorRipMs
         TrialAndErrorRipMs += 1
-

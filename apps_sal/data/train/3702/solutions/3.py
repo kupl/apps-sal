@@ -5,4 +5,4 @@ def olympic_ring(string):
         (3, "Silver!"),
         (2, "Bronze!"),
         (0, "Not even a medal!"),
-        ) if score >= min_score)
+    ) if score >= min_score)

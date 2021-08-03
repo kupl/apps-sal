@@ -12,5 +12,3 @@ def order(pizzas, salads, appetizers):
     else:
         time_2 = (salads * 3) + (appetizers * 5)
         return time_2
-    
-

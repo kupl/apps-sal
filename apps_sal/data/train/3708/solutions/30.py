@@ -21,10 +21,3 @@ def hex_to_dec(s):
     for i in arr:
         res += i
     return res
-            
-            
-            
-            
-        
-        
-

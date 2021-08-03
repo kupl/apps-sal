@@ -3,6 +3,6 @@ def sorter(textbooks):
     out = []
     for sb in sortbooks:
         for tb in textbooks:
-            if sb==tb.lower():
+            if sb == tb.lower():
                 out.append(tb)
     return out

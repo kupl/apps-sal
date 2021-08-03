@@ -1,7 +1,7 @@
 def hex_to_dec(s):
     index = []
     for n in range(len(s)):
-      index.append(s[n:n+1])
+        index.append(s[n:n + 1])
     i_len = len(index)
     index = [10 if x == 'a' else x for x in index]
     index = [11 if x == 'b' else x for x in index]
@@ -12,7 +12,9 @@ def hex_to_dec(s):
     o = len(index)
     sum_dec = 0
     for i in range(i_len):
-      sum_dec += int(index[i])*16**(o-1)
-      o -= 1
+        sum_dec += int(index[i]) * 16**(o - 1)
+        o -= 1
     return sum_dec
+
+
 hex_to_dec("a1b2")

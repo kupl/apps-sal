@@ -1,1 +1,1 @@
-simple_multiplication = lambda n: (8 + n % 2) * n
+def simple_multiplication(n): return (8 + n % 2) * n

@@ -1,4 +1,4 @@
-def simple_multiplication(number) :
+def simple_multiplication(number):
     print(number)
     if number % 2 == 0:
         simple_multiplication = number * 8

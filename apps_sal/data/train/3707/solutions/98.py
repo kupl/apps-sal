@@ -1,1 +1,1 @@
-sorter = lambda textbooks: sorted(textbooks, key = lambda t: t.lower())
+def sorter(textbooks): return sorted(textbooks, key=lambda t: t.lower())
