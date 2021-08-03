@@ -12,4 +12,3 @@ def sum_arrays(arrays, shift):
         index += shift - n
 
     return result
-

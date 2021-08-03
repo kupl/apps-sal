@@ -8,10 +8,10 @@ def mutations(alice, bob, matchWord, first):
     firstRound = -1
     i = 0
 
-    if matchWord in aliceWords: #removes the word from both Alice's and Bob's memory, as they are not allowed to be used again                 
-        del aliceWords[aliceWords.index(matchWord)]    
+    if matchWord in aliceWords:  # removes the word from both Alice's and Bob's memory, as they are not allowed to be used again
+        del aliceWords[aliceWords.index(matchWord)]
     if matchWord in bobWords:
-        del bobWords[bobWords.index(matchWord)]      
+        del bobWords[bobWords.index(matchWord)]
     while (aliceFoundAWord and bobFoundAWord and matchingWordFound) or (firstRound < 1):
         firstRound += 1
         i = 0
@@ -22,7 +22,7 @@ def mutations(alice, bob, matchWord, first):
             for word in aliceWords:
                 for letter in word:
                     if word.find(letter) != word.rfind(letter):
-                        break                    
+                        break
                     if letter != matchWord[i]:
                         numOfIncorrectLetters += 1
                     i += 1
@@ -32,12 +32,12 @@ def mutations(alice, bob, matchWord, first):
                         del aliceWords[aliceWords.index(word)]
                         matchWord = word
                         if matchWord in bobWords:
-                            del bobWords[bobWords.index(word)]                        
+                            del bobWords[bobWords.index(word)]
                         break
                 i = 0
                 numOfIncorrectLetters = 0
                 if (aliceFoundAWord):
-                    break        
+                    break
         else:
             bobFoundAWord = False
             for word in bobWords:
@@ -58,7 +58,7 @@ def mutations(alice, bob, matchWord, first):
                 i = 0
                 numOfIncorrectLetters = 0
                 if (bobFoundAWord):
-                    break  
+                    break
         first = not (first)
     if (aliceFoundAWord):
         winner = 0

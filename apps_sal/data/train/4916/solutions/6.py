@@ -1,5 +1,6 @@
 import gmpy2
 
+
 def get_primes(how_many, group_size):
     n = 2
     count = 0
@@ -10,7 +11,3 @@ def get_primes(how_many, group_size):
             n = gmpy2.next_prime(n)
             count += 1
         yield tuple(res)
-            
-        
-
-

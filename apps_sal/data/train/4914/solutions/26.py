@@ -27,5 +27,5 @@ def position(alphabet):
         'y': 25,
         'z': 26
     }
-    
+
     return f'Position of alphabet: {dict.get(alphabet)}'

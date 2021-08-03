@@ -7,4 +7,4 @@ def validBraces(string):
         else:
             if len(stack) == 0 or braces[stack.pop()] != character:
                 return False
-    return len(stack) == 0  
+    return len(stack) == 0

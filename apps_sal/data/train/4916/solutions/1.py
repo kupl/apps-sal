@@ -2,6 +2,8 @@
 primes = [2, 3, 5, 7, 11]
 
 # Generate prime numbers in sequence
+
+
 def gen_primes():
     yield from primes
     candidate = primes[-1]
@@ -18,6 +20,7 @@ def gen_primes():
                 yield candidate
                 break
 
+
 def get_primes(how_many, group_size=2):
     result = []
     for i, p in enumerate(gen_primes(), start=1):
@@ -31,4 +34,3 @@ def get_primes(how_many, group_size=2):
         while len(result) < group_size:
             result.append(None)
         yield tuple(result)
-
