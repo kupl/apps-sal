@@ -13,5 +13,6 @@ for i in range(n):
         c[j], c[j - 1] = c[j - 1], c[j]
         j -= 1
 res = ''
-for i in c: res += str(i + 1) + ' '
+for i in c:
+    res += str(i + 1) + ' '
 print(res)

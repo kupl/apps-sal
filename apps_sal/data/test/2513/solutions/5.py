@@ -5,24 +5,33 @@ S = input()
 def f(SW, ox, prev):
     if SW == 'S':
         if ox == 'o':
-            if prev == 'S': return 'S'
-            else: return 'W'
+            if prev == 'S':
+                return 'S'
+            else:
+                return 'W'
         else:
-            if prev == 'S': return 'W'
-            else: return 'S'
+            if prev == 'S':
+                return 'W'
+            else:
+                return 'S'
     else:
         if ox == 'o':
-            if prev == 'S': return 'W'
-            else: return 'S'
+            if prev == 'S':
+                return 'W'
+            else:
+                return 'S'
         else:
-            if prev == 'S': return 'S'
-            else: return 'W'
+            if prev == 'S':
+                return 'S'
+            else:
+                return 'W'
 
 
 combination = [('S', 'S'), ('S', 'W'), ('W', 'S'), ('W', 'W')]
 ok = 0
 for j in range(4):
-    if ok == 1: break
+    if ok == 1:
+        break
     ans = []
     for i in range(N):
         if i == 0:
@@ -36,7 +45,8 @@ for j in range(4):
                 ok = 1
                 ans.append(next_)
                 break
-            else: break
+            else:
+                break
         ans.append(next_)
         next_ = f(next_, S[i], ans[-2])
 

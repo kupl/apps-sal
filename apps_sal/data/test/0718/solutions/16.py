@@ -4,15 +4,15 @@ def f(x):
     return False
 
 
-a = int(input());
+a = int(input())
 
-c = 1;
-a += 1;
+c = 1
+a += 1
 
 a = str(a)
 
 while not f(a):
-    a = str(int(a) + 1);
-    c += 1;
+    a = str(int(a) + 1)
+    c += 1
 
 print(c)

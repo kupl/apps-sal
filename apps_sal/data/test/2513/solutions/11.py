@@ -10,12 +10,18 @@ for s1, s2 in product('SW', repeat=2):
         else:
             temp += ''.join(set('SW') - set(temp[-2]))
     for i in [N - 1, 0]:
-        if S[i] == 'o' and temp[i] == 'S' and temp[(i - 1) % N] == temp[(i + 1) % N]: continue
-        elif S[i] == 'o' and temp[i] == 'W' and temp[(i - 1) % N] != temp[(i + 1) % N]: continue
-        elif S[i] == 'x' and temp[i] == 'S' and temp[(i - 1) % N] != temp[(i + 1) % N]: continue
-        elif S[i] == 'x' and temp[i] == 'W' and temp[(i - 1) % N] == temp[(i + 1) % N]: continue
-        else: break
+        if S[i] == 'o' and temp[i] == 'S' and temp[(i - 1) % N] == temp[(i + 1) % N]:
+            continue
+        elif S[i] == 'o' and temp[i] == 'W' and temp[(i - 1) % N] != temp[(i + 1) % N]:
+            continue
+        elif S[i] == 'x' and temp[i] == 'S' and temp[(i - 1) % N] != temp[(i + 1) % N]:
+            continue
+        elif S[i] == 'x' and temp[i] == 'W' and temp[(i - 1) % N] == temp[(i + 1) % N]:
+            continue
+        else:
+            break
     else:
-        print(temp); break
+        print(temp)
+        break
 else:
     print(-1)

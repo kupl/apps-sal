@@ -3,8 +3,9 @@ from math import log2, floor, ceil, sqrt
 # import bisect
 # from collections import deque
 
-Ri = lambda: [int(x) for x in sys.stdin.readline().split()]
-ri = lambda: sys.stdin.readline().strip()
+
+def Ri(): return [int(x) for x in sys.stdin.readline().split()]
+def ri(): return sys.stdin.readline().strip()
 
 
 def input(): return sys.stdin.readline().strip()

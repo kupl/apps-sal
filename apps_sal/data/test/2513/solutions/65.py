@@ -10,12 +10,16 @@ for s in ['SS', 'SW', 'WS', 'WW']:
             if ss[i] == 'S':
                 ss += ss[i - 1]
             else:
-                if ss[i - 1] == 'W': ss += 'S'
-                else: ss += 'W'
+                if ss[i - 1] == 'W':
+                    ss += 'S'
+                else:
+                    ss += 'W'
         else:
             if ss[i] == 'S':
-                if ss[i - 1] == 'W': ss += 'S'
-                else: ss += 'W'
+                if ss[i - 1] == 'W':
+                    ss += 'S'
+                else:
+                    ss += 'W'
             else:
                 ss += ss[i - 1]
     if ss[N] == ss[0]:

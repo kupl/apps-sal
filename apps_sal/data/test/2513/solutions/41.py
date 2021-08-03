@@ -1,8 +1,10 @@
 N = int(input())
 S = list(input().rstrip())
 for i in range(N):
-    if S[i] == 'o': S[i] = True
-    else: S[i] = False
+    if S[i] == 'o':
+        S[i] = True
+    else:
+        S[i] = False
 S.append(S[0])
 A = [True] * (N + 2)
 for a in [[True, True], [True, False], [False, True], [False, False]]:
@@ -14,8 +16,10 @@ for a in [[True, True], [True, False], [False, True], [False, False]]:
             A[j + 1] = A[j - 1]
     if A[0] == A[-2] and A[1] == A[-1]:
         for k in range(N):
-            if A[k]: A[k] = 'S'
-            else: A[k] = 'W'
+            if A[k]:
+                A[k] = 'S'
+            else:
+                A[k] = 'W'
         print("".join(A[:N]))
         return
 print(-1)

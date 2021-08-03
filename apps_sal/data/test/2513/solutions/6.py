@@ -4,8 +4,10 @@ def get_next(sw_prev2, sw_prev1, ox_prev1):
     rev_sw = {"S": "W", "W": "S"}
 
     sw = sw_prev2
-    if sw_prev1 == "W": ox_prev1 = rev_ox[ox_prev1]
-    if ox_prev1 == "x": sw = rev_sw[sw]
+    if sw_prev1 == "W":
+        ox_prev1 = rev_ox[ox_prev1]
+    if ox_prev1 == "x":
+        sw = rev_sw[sw]
 
     return sw
 

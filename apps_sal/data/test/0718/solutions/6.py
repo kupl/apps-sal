@@ -4,10 +4,12 @@ ans = 0
 
 def check(k):
     nonlocal n
-    if k == n: return False
+    if k == n:
+        return False
     k = str(k)
     for i in k:
-        if i == '8': return True
+        if i == '8':
+            return True
     return False
 
 

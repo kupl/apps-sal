@@ -14,10 +14,13 @@ for s in S:
             t.append(t[l - 2] ^ 1)
 
 ans = '-1'
-wrap = lambda x: '{' + str(x) + '}'
+def wrap(x): return '{' + str(x) + '}'
+
+
 for t in T:
     if t[0] == t[N] and t[1] == t[N + 1]:
-        t.pop(); t.popleft()
+        t.pop()
+        t.popleft()
         ans = ''.join(wrap(i) for i in t).format('S', 'W')
         break
 print(ans)

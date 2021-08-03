@@ -9,15 +9,23 @@ def abc055_d():
         res[0] = ini0
         for i in range(1, n + 1):
             if ss[i] == 'o':
-                if res[i] == 'S' and res[i - 1] == 'S': res[i + 1] = 'S'
-                if res[i] == 'S' and res[i - 1] == 'W': res[i + 1] = 'W'
-                if res[i] == 'W' and res[i - 1] == 'S': res[i + 1] = 'W'
-                if res[i] == 'W' and res[i - 1] == 'W': res[i + 1] = 'S'
+                if res[i] == 'S' and res[i - 1] == 'S':
+                    res[i + 1] = 'S'
+                if res[i] == 'S' and res[i - 1] == 'W':
+                    res[i + 1] = 'W'
+                if res[i] == 'W' and res[i - 1] == 'S':
+                    res[i + 1] = 'W'
+                if res[i] == 'W' and res[i - 1] == 'W':
+                    res[i + 1] = 'S'
             else:
-                if res[i] == 'S' and res[i - 1] == 'S': res[i + 1] = 'W'
-                if res[i] == 'S' and res[i - 1] == 'W': res[i + 1] = 'S'
-                if res[i] == 'W' and res[i - 1] == 'S': res[i + 1] = 'S'
-                if res[i] == 'W' and res[i - 1] == 'W': res[i + 1] = 'W'
+                if res[i] == 'S' and res[i - 1] == 'S':
+                    res[i + 1] = 'W'
+                if res[i] == 'S' and res[i - 1] == 'W':
+                    res[i + 1] = 'S'
+                if res[i] == 'W' and res[i - 1] == 'S':
+                    res[i + 1] = 'S'
+                if res[i] == 'W' and res[i - 1] == 'W':
+                    res[i + 1] = 'W'
         return res
 
     ans = '-1'

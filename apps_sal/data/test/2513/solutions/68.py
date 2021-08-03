@@ -54,15 +54,19 @@ for i in range(4):
             if ans[N - 1] == "S":
                 if s == "o":
                     if ans[N - 2] == ans[0]:
-                        print(("".join(ans))); return
+                        print(("".join(ans)))
+                        return
                 else:
                     if ans[N - 2] != ans[0]:
-                        print(("".join(ans))); return
+                        print(("".join(ans)))
+                        return
             else:
                 if s == "x":
                     if ans[N - 2] == ans[0]:
-                        print(("".join(ans))); return
+                        print(("".join(ans)))
+                        return
                 else:
                     if ans[N - 2] != ans[0]:
-                        print(("".join(ans))); return
+                        print(("".join(ans)))
+                        return
 print((-1))
