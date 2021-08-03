@@ -84,5 +84,5 @@ answer = sum(intPoints(*L) for L in lines)
 tri = [x * (x + 1) // 2 for x in range(n + 1)]
 for z in count:
     k = bisect_right(tri, count[z])
-    answer -= k - 1;
+    answer -= k - 1
 print(answer)

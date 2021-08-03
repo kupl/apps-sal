@@ -40,7 +40,8 @@ def CF1036E():
             area = cross(vecx[0], vecx[1], vecy[0], vecy[1])
 
             # Not interested in overlapping parallel lines
-            if area == 0: continue
+            if area == 0:
+                continue
 
             # Computation of the exact point
             # This has been referenced from : https://stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect
@@ -51,8 +52,10 @@ def CF1036E():
 
             # Verify the points are good.
             # If the points are integers and lie of the lines they are valid.
-            if not (x % 1 == 0 and y % 1 == 0): continue
-            if not (online(lines[i], x, y) and online(lines[j], x, y)): continue
+            if not (x % 1 == 0 and y % 1 == 0):
+                continue
+            if not (online(lines[i], x, y) and online(lines[j], x, y)):
+                continue
 
             d.add((x, y))
 

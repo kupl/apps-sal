@@ -2,10 +2,15 @@ import sys
 import math
 # input=sys.stdin.readline
 # sys.setrecursionlimit(1000000)
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 ma = int(10000000000000000)
 n, m = map(int, input().split())
-a = [ma] * (515); a1 = [ma] * (515); fr = [0] * (515); pos = [0] * (515)
+a = [ma] * (515)
+a1 = [ma] * (515)
+fr = [0] * (515)
+pos = [0] * (515)
 for i in range(n):
     b = I()
     x = int(0)

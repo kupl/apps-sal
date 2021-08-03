@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 n, t = rd()
 a, b = rd(), rd()
 x = [[t - b[i], a[i]] for i in range(n)]

@@ -1,5 +1,7 @@
-n = int(input()); v = []
-t = 0; s = ""
+n = int(input())
+v = []
+t = 0
+s = ""
 while (n != 0):
     s += str(n % 2)
     n //= 2

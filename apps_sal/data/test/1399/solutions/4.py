@@ -1,5 +1,5 @@
 from math import gcd
-n = int(input());
+n = int(input())
 pts = []
 ans = 0
 for i in range(0, n):
@@ -26,18 +26,18 @@ for i in range(n):
                 if(num2 % den2 == 0):
                     if((num1 // den1 - A2) * (num1 // den1 - A1) <= 0 and (num2 // den2 - B2) * (num2 // den2 - B1) <= 0 and (num1 // den1 - a2) * (num1 // den1 - a1) <= 0 and (num2 // den2 - b2) * (num2 // den2 - b1) <= 0):
                         if((num1 // den1, num2 // den2) not in m):
-                            m[(num1 // den1, num2 // den2)] = set();
-                        m[(num1 // den1, num2 // den2)].add(i);
-                        m[(num1 // den1, num2 // den2)].add(j);
+                            m[(num1 // den1, num2 // den2)] = set()
+                        m[(num1 // den1, num2 // den2)].add(i)
+                        m[(num1 // den1, num2 // den2)].add(j)
             else:
-                num2 = b2 * (a2 - a1) + (num1 // den1 - a2) * (b2 - b1);
-                den2 = (a2 - a1);
+                num2 = b2 * (a2 - a1) + (num1 // den1 - a2) * (b2 - b1)
+                den2 = (a2 - a1)
                 if(num2 % den2 == 0):
                     if((num1 // den1 - A2) * (num1 // den1 - A1) <= 0 and (num2 // den2 - B2) * (num2 // den2 - B1) <= 0 and (num1 // den1 - a2) * (num1 // den1 - a1) <= 0 and (num2 // den2 - b2) * (num2 // den2 - b1) <= 0):
                         if((num1 // den1, num2 // den2) not in m):
-                            m[(num1 // den1, num2 // den2)] = set();
-                        m[(num1 // den1, num2 // den2)].add(i);
-                        m[(num1 // den1, num2 // den2)].add(j);
+                            m[(num1 // den1, num2 // den2)] = set()
+                        m[(num1 // den1, num2 // den2)].add(i)
+                        m[(num1 // den1, num2 // den2)].add(j)
 sum = 0
 for i in list(m.values()):
     sum += (len(i) - 1)

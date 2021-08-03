@@ -13,7 +13,8 @@ while k:
     elif k % 5 == 0:
         a5 += 1
         k = k / 5
-    else: break
+    else:
+        break
 
 while l:
     if l % 2 == 0:
@@ -25,7 +26,8 @@ while l:
     elif l % 5 == 0:
         b5 += 1
         l = l / 5
-    else: break
+    else:
+        break
 if k != l:
     print(-1)
 else:

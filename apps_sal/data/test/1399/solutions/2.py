@@ -48,7 +48,7 @@ def crosspoint(L1, L2):
     delta = (B - A) * S1
     if S2 == 0 or delta.x % S2 != 0 or delta.y % S2 != 0:
         return None
-    delta = delta / S2;
+    delta = delta / S2
     P = A + delta
     if not P.onSegment(A, B) or not P.onSegment(C, D):
         return None
@@ -69,5 +69,5 @@ answer = sum(intPoints(*L) for L in lines)
 tri = [x * (x + 1) // 2 for x in range(n + 1)]
 for z in count:
     k = bisect_right(tri, count[z])
-    answer -= k - 1;
+    answer -= k - 1
 print(answer)

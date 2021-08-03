@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n, temp = R()
 a = list(R())
 t = list(R())
@@ -12,15 +14,18 @@ pa = sum([v[i][1] for i in range(n) if v[i][0] > 0])
 na = sum([v[i][1] for i in range(n) if v[i][0] < 0])
 
 if pos == 0 or neg == 0:
-    print(r); return;
+    print(r)
+    return
 
 for i in range(n):
     if v[i][0] >= 0:
-        stn = i - 1; break;
+        stn = i - 1
+        break
 
 for i in range(n):
     if v[i][0] > 0:
-        stp = i; break;
+        stp = i
+        break
 
 if neg < pos:
     r += na

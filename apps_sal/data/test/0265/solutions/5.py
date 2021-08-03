@@ -5,7 +5,10 @@ input = sys.stdin.readline
 #I=lambda : list(map(int,input().split()))
 ma = int(10000000000000000)
 n, m = map(int, input().split())
-a = [ma] * (515); a1 = [ma] * (515); fr = [0] * (515); pos = [0] * (515)
+a = [ma] * (515)
+a1 = [ma] * (515)
+fr = [0] * (515)
+pos = [0] * (515)
 for i in range(n):
     b = list(map(int, input().split()))
     x = int(0)

@@ -20,7 +20,8 @@ res = 0
 
 
 def gcd(a, b):
-    if b == 0: return a
+    if b == 0:
+        return a
     return gcd(b, a % b)
 
 
@@ -78,7 +79,8 @@ for i in range(N):
             continue
         #dprint(ax + k1 * dax, ay+k1 * day)
         cross.append(k1)
-    if not cross: continue
+    if not cross:
+        continue
     cross.sort()
 
     d = 1

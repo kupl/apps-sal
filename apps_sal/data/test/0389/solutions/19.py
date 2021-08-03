@@ -29,4 +29,5 @@ while b % 5 == 0:
 tot = max(a2 - min(a2, b2), b2 - min(a2, b2)) + max(a3 - min(a3, b3), b3 - min(a3, b3)) + max(a5 - min(a5, b5), b5 - min(a5, b5))
 if a == b:
     print(tot)
-else: print(-1)
+else:
+    print(-1)

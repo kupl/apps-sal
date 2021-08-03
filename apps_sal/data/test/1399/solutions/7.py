@@ -49,7 +49,8 @@ def CF1036E():
             area = cross(line1p[0], line1p[1], line2p[0], line2p[1])
 
             # Parallel line has no intersection
-            if area == 0: continue
+            if area == 0:
+                continue
 
             lineA = cross(px, py, qx, qy)
             lineB = cross(rx, ry, sx, sy)
@@ -57,8 +58,10 @@ def CF1036E():
             y = cross(lineA, lineB, line2p[0], line2p[1]) / area
 
             # Verify the points are good
-            if not (x % 1 == 0 and y % 1 == 0): continue
-            if not (online(lines[i], x, y) and online(lines[j], x, y)): continue
+            if not (x % 1 == 0 and y % 1 == 0):
+                continue
+            if not (online(lines[i], x, y) and online(lines[j], x, y)):
+                continue
 
             d.add((x, y))
 

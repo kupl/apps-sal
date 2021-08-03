@@ -56,15 +56,18 @@ def CF1036E():
             rs = cross(rx, ry, sx, sy)
             # qpr = cross(qx - px, qy - py, rx, ry)
 
-            if rs == 0: continue
+            if rs == 0:
+                continue
 
             # qpr = cross(qx - px, qy - py, rx, ry)
             # qps = cross(qx - px, qy - py, sx, sy)
             # t = qps / rs
             # u = qpr / rs
             x, y = line_intersection(lines[i], lines[j])
-            if not (x % 1 == 0 and y % 1 == 0): continue
-            if not (online(lines[i], x, y) and online(lines[j], x, y)): continue
+            if not (x % 1 == 0 and y % 1 == 0):
+                continue
+            if not (online(lines[i], x, y) and online(lines[j], x, y)):
+                continue
             d.add((x, y))
 
         count = count - len(d)

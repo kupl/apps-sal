@@ -12,11 +12,14 @@ d.insert(0, 0)
 ans = 1 << 100
 for it in range(m + 1):
     mana = s - b[it]
-    if mana < 0: continue
+    if mana < 0:
+        continue
     lo, hi = 0, k
     while lo != hi:
         mid = (lo + hi + 1) // 2
-        if d[mid] <= mana: lo = mid
-        else: hi = mid - 1
+        if d[mid] <= mana:
+            lo = mid
+        else:
+            hi = mid - 1
     ans = min(ans, (n - c[lo]) * a[it])
 stdout.write(str(ans) + '\n')

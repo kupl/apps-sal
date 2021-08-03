@@ -8,11 +8,14 @@ b_cost = list(map(int, input().split()))
 
 def binary_search(manapoints):
     nonlocal k, b_cost
-    l = 0; r = k - 1; pos = -1
+    l = 0
+    r = k - 1
+    pos = -1
     while (l <= r):
         mid = int((l + r) / 2)
         if (b_cost[mid] <= manapoints):
-            l = mid + 1; pos = mid;
+            l = mid + 1
+            pos = mid
         else:
             r = mid - 1
     return pos
@@ -20,11 +23,15 @@ def binary_search(manapoints):
 
 res = n * x
 pos = binary_search(s)
-if (pos >= 0): res = min(res, (n - b_num[pos]) * x);
+if (pos >= 0):
+    res = min(res, (n - b_num[pos]) * x)
 for i in range(m):
-    if (a_cost[i] > s): continue;
+    if (a_cost[i] > s):
+        continue
     rest = s - a_cost[i]
     pos = binary_search(rest)
-    if (pos >= 0): res = min(res, (n - b_num[pos]) * a_time[i])
-    else: res = min(res, n * a_time[i])
+    if (pos >= 0):
+        res = min(res, (n - b_num[pos]) * a_time[i])
+    else:
+        res = min(res, n * a_time[i])
 print(res)

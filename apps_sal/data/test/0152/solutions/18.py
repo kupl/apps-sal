@@ -13,8 +13,10 @@ ans = x * n
 ind = 0
 
 for ai, bi in ab:
-    while ind < k + 1 and d[ind] <= (s - bi): ind += 1
-    if ind == 0: continue
+    while ind < k + 1 and d[ind] <= (s - bi):
+        ind += 1
+    if ind == 0:
+        continue
     tmp = (n - c[ind - 1]) * ai
     ans = min(ans, tmp)
 

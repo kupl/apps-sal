@@ -6,7 +6,8 @@ def pFactors(n):
     """Finds the prime factors of 'n'"""
     from math import sqrt
     pFact, limit, check, num = [], int(sqrt(n)) + 1, 2, n
-    if n == 1: return []
+    if n == 1:
+        return []
     for check in range(2, limit):
         while num % check == 0:
             pFact.append(check)

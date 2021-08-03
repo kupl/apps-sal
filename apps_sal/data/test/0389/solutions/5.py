@@ -5,7 +5,8 @@ n, m = map(int, input().split())
 divs = [2, 3, 5]
 ar = [0] * 6
 br = [0] * 6
-tn = n; tm = m
+tn = n
+tm = m
 for i in divs:
     while tn % i == 0 and tn > 0:
         ar[i] += 1
