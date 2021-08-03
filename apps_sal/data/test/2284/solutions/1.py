@@ -14,11 +14,22 @@ class Edge(object):
 class MCFP(list):
     def add(G, x, y, cap, cost):
         n = max(x, y) + 1
-        while len(G) < n: G.append([])
-        e = Edge(); G[x].append(e)
-        w = Edge(); G[y].append(w)
-        e.x = x; e.y = y; e.cap = cap; e.cost = cost; w.inv = e
-        w.x = y; w.y = x; w.cap = 0; w.cost = -cost; e.inv = w
+        while len(G) < n:
+            G.append([])
+        e = Edge()
+        G[x].append(e)
+        w = Edge()
+        G[y].append(w)
+        e.x = x
+        e.y = y
+        e.cap = cap
+        e.cost = cost
+        w.inv = e
+        w.x = y
+        w.y = x
+        w.cap = 0
+        w.cost = -cost
+        e.inv = w
 
     def solve(G, src, tgt, flowStop=float('inf'), inf=float('inf')):
         flowVal = flowCost = 0
@@ -29,35 +40,49 @@ class MCFP(list):
         G.dist = d = [inf] * n
         G.SPFA(src)
         while p[tgt] != None and flowVal < flowStop:
-            b = []; x = tgt
-            while x != src: b.append(p[x]); x = p[x].x
+            b = []
+            x = tgt
+            while x != src:
+                b.append(p[x])
+                x = p[x].x
             z = min(e.cap for e in b)
-            for e in b: e.cap -= z; e.inv.cap += z
+            for e in b:
+                e.cap -= z
+                e.inv.cap += z
             flowVal += z
             flowCost += z * (d[tgt] - h[src] + h[tgt])
             for i in range(n):
-                if p[i] != None: h[i] += d[i]; d[i] = inf
+                if p[i] != None:
+                    h[i] += d[i]
+                    d[i] = inf
             p[tgt] = None
             G.SPFA(src)
         return flowVal, flowCost
 
     def SPFA(G, src):
-        inQ = G.inQ; prev = G.prev
-        d = G.dist; h = G.phi
+        inQ = G.inQ
+        prev = G.prev
+        d = G.dist
+        h = G.phi
         d[src] = 0
         Q = deque([src])
         while Q:
             x = Q.popleft()
             inQ[x] = 0
             for e in G[x]:
-                if e.cap <= 0: continue
-                y = e.y; dy = d[x] + h[x] + e.cost - h[y]
+                if e.cap <= 0:
+                    continue
+                y = e.y
+                dy = d[x] + h[x] + e.cost - h[y]
                 if dy < d[y]:
-                    d[y] = dy; prev[y] = e
+                    d[y] = dy
+                    prev[y] = e
                     if inQ[y] == 0:
                         inQ[y] = 1
-                        if not Q or dy > d[Q[0]]: Q.append(y)
-                        else: Q.appendleft(y)
+                        if not Q or dy > d[Q[0]]:
+                            Q.append(y)
+                        else:
+                            Q.appendleft(y)
         return
 
 
@@ -87,9 +112,12 @@ def main():
 
 def test(n, k):
     R = random.Random(0)
-    yield n; yield k
-    for i in range(n): yield R.randint(1, 10**9)
-    for i in range(n): yield R.randint(1, 10**9)
+    yield n
+    yield k
+    for i in range(n):
+        yield R.randint(1, 10**9)
+    for i in range(n):
+        yield R.randint(1, 10**9)
 
 #ints=test(1000, 800)
 

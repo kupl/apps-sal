@@ -2,8 +2,10 @@ s = input()
 c0 = c1 = 0
 d0 = []
 for c in s:
-    if c == '0': c0 += 1
-    elif c == '1': c1 += 1
+    if c == '0':
+        c0 += 1
+    elif c == '1':
+        c1 += 1
     else:
         d0.append(c0)
         c0 = 0

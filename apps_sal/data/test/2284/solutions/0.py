@@ -18,10 +18,17 @@ class MCFP(list):
     def add(G, x, y, cap, cost):
         G.extend(([] for i in range(max(0, max(x, y) + 1 - len(G)))))
         e = Edge()
-        e.x = x; e.y = y; e.cap = cap; e.cost = cost
+        e.x = x
+        e.y = y
+        e.cap = cap
+        e.cost = cost
         z = Edge()
-        z.x = y; z.y = x; z.cap = 0; z.cost = -cost
-        e.inv = z; z.inv = e
+        z.x = y
+        z.y = x
+        z.cap = 0
+        z.cost = -cost
+        e.inv = z
+        z.inv = e
         G[x].append(e)
         G[y].append(z)
 
@@ -35,10 +42,13 @@ class MCFP(list):
                 break
             p = list(G.backward(tgt, src, prev))
             z = min(e.cap for e in p)
-            for e in p: e.cap -= z; e.inv.cap += z
+            for e in p:
+                e.cap -= z
+                e.inv.cap += z
             flowVal += z
             flowCost += z * (dist[tgt] - phi[src] + phi[tgt])
-            if flowVal == flowStop: break
+            if flowVal == flowStop:
+                break
             for i in range(n):
                 if prev[i] != None:
                     phi[i] += dist[i]
@@ -47,7 +57,10 @@ class MCFP(list):
         return flowVal, flowCost
 
     def backward(G, x, src, prev):
-        while x != src: e = prev[x]; yield e; x = e.x
+        while x != src:
+            e = prev[x]
+            yield e
+            x = e.x
 
     def shortest_(G, src, phi, prev, dist, tgt):
         prev[tgt] = None
@@ -57,9 +70,11 @@ class MCFP(list):
         while Q:
             k += 1
             d, x = heappop(Q)
-            if dist[x] != d: continue
+            if dist[x] != d:
+                continue
             for e in G[x]:
-                if e.cap <= 0: continue
+                if e.cap <= 0:
+                    continue
                 dy = dist[x] + phi[x] + e.cost - phi[e.y]
                 if dy < dist[e.y]:
                     dist[e.y] = dy
@@ -79,7 +94,8 @@ class MCFP(list):
             inQ[x] = 0
             sumQ -= dist[x]
             for e in G[x]:
-                if e.cap <= 0: continue
+                if e.cap <= 0:
+                    continue
                 dy = dist[x] + phi[x] + e.cost - phi[e.y]
                 if dy < dist[e.y]:
                     dist[e.y] = dy
@@ -87,10 +103,13 @@ class MCFP(list):
                     if inQ[e.y] == 0:
                         inQ[e.y] = 1
                         sumQ += dy
-                        if Q and dy > dist[Q[0]]: Q.append(e.y)
-                        else: Q.appendleft(e.y)
+                        if Q and dy > dist[Q[0]]:
+                            Q.append(e.y)
+                        else:
+                            Q.appendleft(e.y)
                         avg = sumQ / len(Q)
-                        while dist[Q[0]] > avg: Q.append(Q.popleft())
+                        while dist[Q[0]] > avg:
+                            Q.append(Q.popleft())
         return
 
     def shortest_(G, src, phi, prev, dist, tgt):
@@ -102,9 +121,11 @@ class MCFP(list):
         while H:
             k += 1
             d, x = heappop(H)
-            if dist[x] != d: continue
+            if dist[x] != d:
+                continue
             for e in G[x]:
-                if e.cap <= 0: continue
+                if e.cap <= 0:
+                    continue
                 dy = dist[x] + phi[x] + e.cost - phi[e.y]
                 if dy < dist[e.y]:
                     dist[e.y] = dy
@@ -140,9 +161,12 @@ def main():
 
 def test(n, k):
     R = random.Random(0)
-    yield n; yield k
-    for i in range(n): yield R.randint(1, 10**9)
-    for i in range(n): yield R.randint(1, 10**9)
+    yield n
+    yield k
+    for i in range(n):
+        yield R.randint(1, 10**9)
+    for i in range(n):
+        yield R.randint(1, 10**9)
 
 #ints=test(1000, 800)
 

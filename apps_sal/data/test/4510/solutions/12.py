@@ -5,7 +5,8 @@ a = list(map(int, input().split()))
 d = {}
 s = []
 for i in a:
-    if i in d: continue
+    if i in d:
+        continue
     if len(s) < sc:
         s.append(i)
         d[i] = 1
