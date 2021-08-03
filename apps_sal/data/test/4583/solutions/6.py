@@ -11,8 +11,10 @@ def solve(i, tmp, ans):
         else:
             return False
 
-    if solve(i + 1, tmp + int(s[i + 1]), ans + "+" + s[i + 1]): return True
-    if solve(i + 1, tmp - int(s[i + 1]), ans + "-" + s[i + 1]): return True
+    if solve(i + 1, tmp + int(s[i + 1]), ans + "+" + s[i + 1]):
+        return True
+    if solve(i + 1, tmp - int(s[i + 1]), ans + "-" + s[i + 1]):
+        return True
 
 
 if solve(0, int(s[0]), ans1):

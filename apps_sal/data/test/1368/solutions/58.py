@@ -6,8 +6,10 @@ v = list(map(int, input().split()))
 
 factorial = [1 for i in range(N + 1)]
 for i in range(1, N + 1):
-    if i == 1: factorial[i] = 1
-    else: factorial[i] = factorial[i - 1] * i
+    if i == 1:
+        factorial[i] = 1
+    else:
+        factorial[i] = factorial[i - 1] * i
 
 
 def comb(n, k):
@@ -20,7 +22,8 @@ if len(set(v[:A])) == 1:
     print(v[0])
     ans = 0
     for i in range(A, B + 1):
-        if i > 1 and v[i - 1] != v[i - 2]: break
+        if i > 1 and v[i - 1] != v[i - 2]:
+            break
         ans += comb(Counter(v)[v[0]], i)
     print(int(ans))
     return

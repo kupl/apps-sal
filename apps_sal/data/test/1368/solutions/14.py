@@ -13,8 +13,10 @@ for i in range(2, MAX + 2):
 
 
 def comb(n, r):
-    if n < r: return 0
-    if n < 0 or r < 0: return 0
+    if n < r:
+        return 0
+    if n < 0 or r < 0:
+        return 0
     return fac[n] * (finv[r] * finv[n - r] % MOD) % MOD
 
 

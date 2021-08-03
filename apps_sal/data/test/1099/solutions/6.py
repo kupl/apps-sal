@@ -1,6 +1,8 @@
 import collections as cc
 import sys
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 n, = I()
 g = cc.defaultdict(list)
 for i in range(n - 1):

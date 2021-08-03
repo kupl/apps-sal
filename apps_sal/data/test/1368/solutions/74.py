@@ -11,7 +11,8 @@ if l[0] == l[a - 1]:
         return fact[x] // (fact[y] * fact[x - y]) if x >= y >= 0 else 0
     x = co(l)[l[0]]
     print(l[0])
-    print(sum(comb(x, i)for i in range(a, b + 1))); return
+    print(sum(comb(x, i)for i in range(a, b + 1)))
+    return
 ave = de(str(sum(l[:a]))) / a
 print(ave)
 

@@ -1,5 +1,6 @@
 def gcd(a, b):
-    if b == 0: return a
+    if b == 0:
+        return a
     return gcd(b, a % b)
 
 
@@ -21,5 +22,6 @@ for i in ' ' * (int(input())):
         M.append(ct)
         MM.append(pt)
         check[pt] = True
-    for j in MM: print(L[j], end=' ')
+    for j in MM:
+        print(L[j], end=' ')
     print()

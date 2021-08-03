@@ -5,12 +5,12 @@ import heapq
 from collections import defaultdict, Counter, deque
 from itertools import groupby, accumulate
 # sys.setrecursionlimit(200000000)
-int1 = lambda x: int(x) - 1
+def int1(x): return int(x) - 1
 #input = iter(sys.stdin.buffer.read().decode().splitlines()).__next__
-ilele = lambda: map(int, input().split())
-alele = lambda: list(map(int, input().split()))
-ilelec = lambda: map(int1, input().split())
-alelec = lambda: list(map(int1, input().split()))
+def ilele(): return map(int, input().split())
+def alele(): return list(map(int, input().split()))
+def ilelec(): return map(int1, input().split())
+def alelec(): return list(map(int1, input().split()))
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
 #MOD = 1000000000 + 7

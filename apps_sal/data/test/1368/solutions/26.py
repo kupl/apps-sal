@@ -2,8 +2,10 @@ from collections import defaultdict
 
 
 def comb(n, r):
-    if n < r: return 0
-    if n < 0 or r < 0: return 0
+    if n < r:
+        return 0
+    if n < 0 or r < 0:
+        return 0
     res = 1
     for i in range(r):
         res *= n

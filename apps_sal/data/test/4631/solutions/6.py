@@ -11,7 +11,8 @@ import timeit
 
 
 def sieve(n):
-    if n < 2: return list()
+    if n < 2:
+        return list()
     prime = [True for _ in range(n + 1)]
     p = 3
     while p * p <= n:
@@ -53,7 +54,8 @@ def flin(d, x, default=-1):
     left = right = -1
     for i in range(len(d)):
         if d[i] == x:
-            if left == -1: left = i
+            if left == -1:
+                left = i
             right = i
     if left == -1:
         return (default, default)

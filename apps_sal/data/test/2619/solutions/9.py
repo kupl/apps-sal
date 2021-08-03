@@ -1,6 +1,8 @@
 from sys import stdin
 input = stdin.readline
-add_mod = lambda a, b: (a % c + b % c) % c
+def add_mod(a, b): return (a % c + b % c) % c
+
+
 N = 101
 
 n, q, c = list(map(int, input().split()))

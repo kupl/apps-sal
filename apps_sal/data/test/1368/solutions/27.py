@@ -25,7 +25,8 @@ def main():
 
     count = 0
     for k in range(A, B + 1):
-        if (k > A) and (v[k - 1] != max_average): break
+        if (k > A) and (v[k - 1] != max_average):
+            break
         count += choose(contained[-1], contained[k])
 
     print(max_average)

@@ -3,7 +3,9 @@ import itertools as it
 import math as mt
 import bisect as bi
 import collections as cc
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 for tc in range(int(input())):
     n, x = I()
     a = I()

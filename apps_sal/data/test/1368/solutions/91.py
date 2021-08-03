@@ -24,4 +24,5 @@ if (ct == A):
     for i in range(A, min(ctall + 1, B + 1)):
         answer += combinations_count(ctall, i)
     print(answer)
-else: print((combinations_count(ctall, ct)))
+else:
+    print((combinations_count(ctall, ct)))

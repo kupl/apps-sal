@@ -6,9 +6,11 @@ def kumiawase(S, op, i=0, x=0):
         else:
             return False
 
-    if kumiawase(S, op + '+' + S[i], i + 1, x + int(S[i])): return True
+    if kumiawase(S, op + '+' + S[i], i + 1, x + int(S[i])):
+        return True
 
-    if kumiawase(S, op + '-' + S[i], i + 1, x - int(S[i])): return True
+    if kumiawase(S, op + '-' + S[i], i + 1, x - int(S[i])):
+        return True
 
 
 S = input()

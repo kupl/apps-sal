@@ -2,7 +2,8 @@ from collections import Counter
 
 
 def comb(n, r):
-    if n < r: return 0
+    if n < r:
+        return 0
     comb = 1
     r = min(r, n - r)
     for i in range(r):

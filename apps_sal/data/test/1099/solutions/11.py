@@ -1,8 +1,8 @@
 import sys
 
 sys.setrecursionlimit(10 ** 5)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def II(): return int(sys.stdin.readline())
 def MI(): return map(int, sys.stdin.readline().split())
 def MI1(): return map(int1, sys.stdin.readline().split())
@@ -27,11 +27,13 @@ while stack:
         first[u] = False
         stack.append((u, pu))
         for v in to[u]:
-            if v == pu: continue
+            if v == pu:
+                continue
             stack.append((v, u))
     else:
         for v in to[u]:
-            if v == pu: continue
+            if v == pu:
+                continue
             ch[u] += 1 + dp[v]
             dp[u] += ch[v]
 # print(dp)
@@ -41,7 +43,8 @@ stack = [(0, -1)]
 while stack:
     u, pu = stack.pop()
     for v in to[u]:
-        if v == pu: continue
+        if v == pu:
+            continue
         dpvu = dp[u] - ch[v]
         chvu = ch[u] - dp[v] - 1
         dp[v] += chvu

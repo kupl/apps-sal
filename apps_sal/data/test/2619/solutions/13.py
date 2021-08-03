@@ -12,7 +12,8 @@ g = [[[0] * 11 for i in range(101)] for i in range(101)]
 g[1][1] = d[(1, 1)]
 for i in range(1, 101):
     for j in range(1, 101):
-        if i == 1 and j == 1: continue
+        if i == 1 and j == 1:
+            continue
         for k in range(11):
             if i == 1:
                 g[i][j][k] = g[i][j - 1][k] + d[(i, j)][k]
