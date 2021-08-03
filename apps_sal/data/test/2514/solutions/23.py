@@ -1,5 +1,7 @@
 import collections
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 N = input()
 *A, = f()
 c = collections.Counter(A)

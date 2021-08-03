@@ -1,4 +1,6 @@
-inp = lambda: list(map(int, input().split()))
+def inp(): return list(map(int, input().split()))
+
+
 n, m = inp()
 lines = [set([i]) for i in range(n + 1)]
 for i in range(m):

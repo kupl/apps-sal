@@ -3,7 +3,8 @@ n, m = [int(x) for x in input().split()]
 l = []
 for i in range(m):
     x, y = [int(x) for x in input().split()]
-    if x > y: x, y = y, x
+    if x > y:
+        x, y = y, x
     l.append((x, y))
 l.sort(key=lambda x: x[0])
 

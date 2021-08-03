@@ -20,7 +20,8 @@ dx, dy = [-1, 1, 0, 0], [0, 0, 1, -1]
 
 def dfs(start):
     stack = [start]
-    ct_vertex = 1; ct_edges = 0
+    ct_vertex = 1
+    ct_edges = 0
     while stack:
         x = stack.pop()
         visited[x] = True
@@ -49,7 +50,8 @@ for i in range(m):
     graph[x].append(y)
     graph[y].append(x)
 
-visited = [False] * (n + 1); flag = 0
+visited = [False] * (n + 1)
+flag = 0
 for i in range(1, n + 1):
     if not visited[i]:
         if not dfs(i):

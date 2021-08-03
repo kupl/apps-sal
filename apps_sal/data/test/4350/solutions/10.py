@@ -1,5 +1,6 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 h, w = map(int, input().split())
 s = [list("." * (w + 2))] + [list("." + input() + ".") for _ in range(h)] + [list("." * (w + 2))]
@@ -38,4 +39,5 @@ for i in range(h + 1):
                 return
 
 print(len(ans))
-for i in ans: print(*i)
+for i in ans:
+    print(*i)

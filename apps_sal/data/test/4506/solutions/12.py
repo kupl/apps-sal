@@ -14,5 +14,6 @@ ans = 0
 mod = 998244353
 for i in range(1, 1 + n):
     ans += (a[i] * b[n + 1 - i]) % mod
-    if ans >= mod: ans -= mod
+    if ans >= mod:
+        ans -= mod
 print(ans)

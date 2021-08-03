@@ -3,7 +3,8 @@ N = int(input())
 A = list(map(int, input().split()))
 A = sorted(A)
 Q = int(input())
-B = [0] * Q; C = [0] * Q
+B = [0] * Q
+C = [0] * Q
 for i in range(Q):
     B[i], C[i] = map(int, input().split())
 

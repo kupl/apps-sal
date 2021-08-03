@@ -10,6 +10,7 @@ for x, y in d.items():
         if all([d[u] == y for u in y]):
             visited.update(y)
         else:
-            print('NO'); return
+            print('NO')
+            return
             break
 print('YES')

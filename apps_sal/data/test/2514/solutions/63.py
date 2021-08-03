@@ -5,10 +5,13 @@ s = [0] * (10**5 + 5)
 
 sum = 0
 for ai in a:
-    s[ai] += 1; sum += ai;
+    s[ai] += 1
+    sum += ai
 
 for i in range(q):
     b, c = map(int, input().split())
-    cnt = s[b]; s[b] = 0; s[c] += cnt;
+    cnt = s[b]
+    s[b] = 0
+    s[c] += cnt
     sum += (c - b) * cnt
     print(sum)

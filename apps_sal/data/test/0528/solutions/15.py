@@ -9,5 +9,7 @@ for i in range(n):
     if not v[i]:
         for j in s[i]:
             v[j] = 1
-            if s[j] != s[i]: print('NO'); return
+            if s[j] != s[i]:
+                print('NO')
+                return
 print('YES')

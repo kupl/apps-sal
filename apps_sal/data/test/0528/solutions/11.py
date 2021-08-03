@@ -1,5 +1,7 @@
 from sys import *
-f = lambda: map(int, stdin.readline().split())
+def f(): return map(int, stdin.readline().split())
+
+
 n, m = f()
 g = [[x] for x in range(n + 1)]
 p = [0] * (n + 1)
@@ -13,5 +15,6 @@ for y, t in enumerate(g):
         if any(len(g[x]) != len(t) or any(p[y] for y in g[x]) for x in t):
             k = 'NO'
             break
-        for x in t: p[x] = 1
+        for x in t:
+            p[x] = 1
 print(k)
