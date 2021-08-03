@@ -14,6 +14,7 @@ legacy = {
 legacy_pattern = re.compile('|'.join(legacy))
 complaint_pattern = re.compile('slow|expensive|manual|down|hostage|security')
 
+
 def roast_legacy(workloads):
     w = workloads.replace('-', '').lower()
     complaints = sum(1 for _ in complaint_pattern.finditer(w))

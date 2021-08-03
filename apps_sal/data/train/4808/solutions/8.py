@@ -1,1 +1,1 @@
-equalize=lambda A:['%+d'%(i-A[0]) for i in A]
+def equalize(A): return ['%+d' % (i - A[0]) for i in A]

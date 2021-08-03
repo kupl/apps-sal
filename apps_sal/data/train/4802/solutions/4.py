@@ -1,9 +1,10 @@
 from collections import Counter
 import re
 
+
 class Checkout(object):
     def __init__(self, offers={}):
-        self.purchased = Counter() 
+        self.purchased = Counter()
         self.offers = {'for': {}, 'get': {}, 'off': {}}
         for k, v in offers.items():
             if 'for' in v:
@@ -15,7 +16,7 @@ class Checkout(object):
             if 'off' in v:
                 r = re.findall(r'\d+\.\d+|\d+', v)
                 self.offers['off'][k] = (float(r[0]), int(r[1]))
-    
+
     @property
     def total(self):
         ans = 0.0

@@ -1,9 +1,9 @@
 def hotpo(n):
-    l=0
-    while n !=1:
-        if n%2:
-            n = 3*n+1
+    l = 0
+    while n != 1:
+        if n % 2:
+            n = 3 * n + 1
         else:
-            n = n//2
-        l+=1
+            n = n // 2
+        l += 1
     return l

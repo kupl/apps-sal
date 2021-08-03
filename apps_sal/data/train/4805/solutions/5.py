@@ -1,5 +1,5 @@
 def check(seq, elem):
-    #pass
+    # pass
     if elem in seq:
         return True
     return False

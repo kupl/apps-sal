@@ -1,7 +1,7 @@
 # A blank slate
 class Checkout:
     items = {
-        "onion": 0.99, 
+        "onion": 0.99,
         "leek": 2.99,
         "apple": 0.4,
         "orange": 0.75,
@@ -11,14 +11,14 @@ class Checkout:
         "carrot": 0.25,
         "celery": 1.2,
     }
-    
+
     def __init__(self, deals=None):
         self.scanned = []
         self.deals = deals or {}
-        
+
     def scan(self, item, count=1):
-        self.scanned.extend([item]*count)
-    
+        self.scanned.extend([item] * count)
+
     @property
     def total(self):
         total = 0

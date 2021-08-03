@@ -10,4 +10,3 @@ def hotpo(n):
             num = 3 * num + 1
         count += 1
     return count
-

@@ -1,4 +1,6 @@
 count = 0
+
+
 def hotpo(n):
     nonlocal count
     if n == 1:
@@ -12,4 +14,3 @@ def hotpo(n):
         else:
             count += 1
             return hotpo(3 * n + 1)
-

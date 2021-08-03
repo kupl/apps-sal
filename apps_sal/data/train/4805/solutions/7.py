@@ -1,1 +1,1 @@
-check = lambda seq, elem: elem in seq
+def check(seq, elem): return elem in seq

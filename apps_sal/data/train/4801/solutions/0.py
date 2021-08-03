@@ -1,3 +1,4 @@
+import re
 complaints = ["slow!", "expensive!", "manual!", "down!", "hostage!", "security!"]
 
 legacy = {
@@ -12,7 +13,7 @@ legacy = {
     "oldschoolit": 50
 }
 
-import re
+
 def roast_legacy(workloads):
     complaining = sum(1 for _ in re.finditer('|'.join(complaints), workloads.lower()))
     roasting = sum(legacy[m.group()] for m in re.finditer('|'.join(legacy), workloads.lower()))

@@ -3,4 +3,3 @@ def check(a, x):
         return True
     elif x not in a:
         return False
-

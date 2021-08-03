@@ -1,8 +1,9 @@
 def check(seq, elem):
-    result=False
+    result = False
     for n in seq:
-        if n==elem:
-            result=True
+        if n == elem:
+            result = True
             break
-        else: continue
+        else:
+            continue
     return result

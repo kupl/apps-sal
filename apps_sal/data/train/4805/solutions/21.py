@@ -4,5 +4,5 @@ def check(seq, elem):
             pass
         else:
             return True
-        if i == len(seq)-1:
+        if i == len(seq) - 1:
             return False

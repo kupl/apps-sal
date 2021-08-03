@@ -1,12 +1,12 @@
 class Checkout(object):
-    def __init__(self, sale_codes = {}):
+    def __init__(self, sale_codes={}):
         self.total = 0
         self.scanned_items = {}
         self.sale_codes = sale_codes
-    
+
     def update_total(self):
         tot = 0
-        
+
         for item, count in list(self.scanned_items.items()):
             if item in self.sale_codes:
                 if self.sale_codes[item].startswith("buy"):
@@ -24,15 +24,13 @@ class Checkout(object):
                         tot += -price_off
             else:
                 tot += get_price(item) * count
-        
+
         self.total = tot
-                
-    def scan(self, item, quantity = 1):
+
+    def scan(self, item, quantity=1):
         if item not in self.scanned_items:
             self.scanned_items[item] = quantity
         else:
             self.scanned_items[item] += quantity
-            
-        self.update_total()
-        
 
+        self.update_total()

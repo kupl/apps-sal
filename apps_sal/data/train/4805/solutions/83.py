@@ -5,5 +5,5 @@ def check(seq, elem):
             status = True
         else:
             pass
-        
+
     return status
