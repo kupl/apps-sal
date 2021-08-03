@@ -12,10 +12,9 @@ if right != -1:
 if left == -1 or right == -1:
     print(-1)
     return
-right = len(s)-right-1
+right = len(s) - right - 1
 if left >= right:
     print(-1)
     return
 
 print(4 + s[left:right].count("|"))
-

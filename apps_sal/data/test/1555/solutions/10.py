@@ -13,18 +13,22 @@ class Solution2:
 
 
 def gcd(a, b):
-    if not b: return a
-    return gcd(b, a%b)
+    if not b:
+        return a
+    return gcd(b, a % b)
+
+
 def lcm(a, b):
-    return b*a//gcd(b,a)
+    return b * a // gcd(b, a)
 
 
 class Solution:
 
     def solve(self, grid):
-        def union(i,j):
+        def union(i, j):
             leader_i, leader_j = find(i), find(j)
             sets[leader_j] = sets[i] = sets[j] = leader_i
+
         def find(i):
             while i != sets[i]:
                 i = sets[i]
@@ -33,34 +37,36 @@ class Solution:
         sets = list(range(N))
         for i in range(len(grid)):
             for j in range(len(grid[0])):
-                if grid[i][j] == '=': union(i,j+len(grid))
+                if grid[i][j] == '=':
+                    union(i, j + len(grid))
 
         graph = collections.defaultdict(set)
         inc = collections.defaultdict(set)
         for i in range(len(grid)):
             for j in range(len(grid[0])):
-                leader_i, leader_j = find(i), find(j+len(grid))
+                leader_i, leader_j = find(i), find(j + len(grid))
                 if grid[i][j] == '>':
-                    if leader_i == leader_j: 
+                    if leader_i == leader_j:
                         print("No")
                         return
                     graph[leader_j].add(leader_i)
                     inc[leader_i].add(leader_j)
                 elif grid[i][j] == '<':
-                    if leader_i == leader_j: 
+                    if leader_i == leader_j:
                         print("No")
                         return
                     graph[leader_i].add(leader_j)
                     inc[leader_j].add(leader_i)
 
-        self.levels = [0]*N
+        self.levels = [0] * N
+
         def dfs(node, level):
-            self.levels[node] = max(self.levels[node],level)
+            self.levels[node] = max(self.levels[node], level)
             if not inc[node]:
                 seen.add(node)
                 for next_node in graph[node]:
                     inc[next_node].discard(node)
-                    dfs(next_node,self.levels[node]+1)
+                    dfs(next_node, self.levels[node] + 1)
 
         seen = set()
         for i in range(N):
@@ -96,7 +102,7 @@ for test_case in range(1):
 
     out = sol.solve(a)
     #print(' '.join([str(o) for o in out]))
-    #print(str(out))
+    # print(str(out))
 
     # out2 = sol2.solve(s)
 
@@ -105,7 +111,6 @@ for test_case in range(1):
 #     rand = [random.randrange(60) for _ in range(10)]
 #     out1 = sol.solve(rand)
 #     out2 = sol2.solve(rand)
-#     if out1 != out2: 
+#     if out1 != out2:
 #         print(rand, out1, out2)
 #         break
-

@@ -9,7 +9,10 @@ def COMinit(n, MOD):
         fact_inv.append((fact_inv[-1] * inv[i]) % MOD)
     return fact, fact_inv
 
-MOD = 10**9+7
+
+MOD = 10**9 + 7
+
+
 def resolve():
     def dfs1(r_topo, par):
         for idx in reversed(r_topo):
@@ -17,11 +20,10 @@ def resolve():
                 if to == par[idx]:
                     continue
 
-
     N = int(input())
     G = [[] for _ in range(N)]
-    for _ in range(N-1):
-        a, b = map(lambda x:int(x)-1, input().split())
+    for _ in range(N - 1):
+        a, b = map(lambda x: int(x) - 1, input().split())
         G[a].append(b)
         G[b].append(a)
 
@@ -40,13 +42,13 @@ def resolve():
             node.append(to)
 
     # 葉のサイズを格納
-    size = [1]*N
+    size = [1] * N
     for e in reversed(topo):
         if e == 0:
             break
         size[P[e]] += size[e]
 
-    dp1 = [1]*N
+    dp1 = [1] * N
     for e in reversed(topo):
         dp1[e] = dp1[e] * fact[size[e] - 1] % MOD
         if e == 0:
@@ -66,7 +68,9 @@ def resolve():
 
     print(*dp2, sep="\n")
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

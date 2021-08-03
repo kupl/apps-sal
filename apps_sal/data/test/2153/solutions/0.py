@@ -39,15 +39,15 @@ def main():
     N = int(input())
     A = list(map(int, input().split()))
 
-    adj = [[] for _ in range(N+1)]
+    adj = [[] for _ in range(N + 1)]
 
     AA = sorted(list(set(A)))
-    a2i = {a:i for i, a in enumerate(AA)}
+    a2i = {a: i for i, a in enumerate(AA)}
 
     AI = [[] for _ in range(len(AA))]
     for i, a in enumerate(A):
         ii = a2i[a]
-        AI[ii].append(i+1)
+        AI[ii].append(i + 1)
     bit_high = Bit(N)
     for i_list in AI:
         for i in i_list:
@@ -75,9 +75,9 @@ def main():
             if ir <= N:
                 adj[i].append(ir)
 
-    dp = [inf] * (N+1)
+    dp = [inf] * (N + 1)
     dp[1] = 0
-    for i in range(1, N+1):
+    for i in range(1, N + 1):
         for j in adj[i]:
             dp[j] = min(dp[j], dp[i] + 1)
     print(dp[N])
@@ -85,5 +85,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

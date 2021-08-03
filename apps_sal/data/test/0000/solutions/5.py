@@ -31,5 +31,3 @@ try:
     print(len(s) - t_d)
 except:
     print(-1)
-        
-

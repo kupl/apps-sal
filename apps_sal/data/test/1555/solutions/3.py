@@ -15,6 +15,7 @@ def prov(mass, now):
             break
     return check
 
+
 def prog(mass, n, m):
     prov = True
     for i in range(1, m):
@@ -42,7 +43,8 @@ def prog(mass, n, m):
             now += mass_new[i - 1]
             arr[mass[i][-1]] = now
         return arr
-    
+
+
 n, m = map(int, input().split())
 if n + m <= 6:
     now = []
@@ -84,7 +86,7 @@ else:
         mass1[i].append(i)
     mass.sort()
     mass1.sort()
-    
+
     arr = prog(mass, n, m)
     arr1 = prog(mass1, m, n)
     if arr == False or arr1 == False:
@@ -92,4 +94,4 @@ else:
     else:
         print('Yes')
         print(*arr1)
-        print(*arr)    
+        print(*arr)

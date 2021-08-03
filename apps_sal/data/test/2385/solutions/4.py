@@ -24,10 +24,10 @@ def nCr(n, r):
 n = int(input())
 edges = [[] for _ in range(n)]
 
-for _ in range(n-1):
+for _ in range(n - 1):
     a, b = list(map(int, input().split()))
-    edges[a-1].append(b-1)
-    edges[b-1].append(a-1)
+    edges[a - 1].append(b - 1)
+    edges[b - 1].append(a - 1)
 
 root_to_leaf = []
 parents = [0] * n
@@ -66,4 +66,3 @@ for node in root_to_leaf:
 
 for ans in answers:
     print(ans)
-

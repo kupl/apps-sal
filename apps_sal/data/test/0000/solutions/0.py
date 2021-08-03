@@ -11,7 +11,7 @@ for i in range(n):
             break
 bind = -1
 f = False
-for i in range(n-1,-1,-1):
+for i in range(n - 1, -1, -1):
     if s[i] == ']':
         f = True
     elif s[i] == ':':
@@ -25,8 +25,7 @@ elif ind >= bind:
     print(-1)
 else:
     ans = 4
-    for i in range(ind+1,bind):
+    for i in range(ind + 1, bind):
         if s[i] == '|':
             ans += 1
     print(ans)
-

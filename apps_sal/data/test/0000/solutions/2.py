@@ -4,7 +4,7 @@ if '[' in s:
     if ']' in s:
         s = s[:s.rfind(']')]
         if s.count(':') >= 2:
-            s = s[s.find(':') + 1 : s.rfind(':')]
+            s = s[s.find(':') + 1: s.rfind(':')]
             print(s.count('|') + 4)
 
         else:

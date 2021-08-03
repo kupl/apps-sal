@@ -1,12 +1,19 @@
 n, m = (int(t) for t in input().split(' '))
+
+
 def direction(c):
-    if c == '=': return 0
-    if c == '>': return 1
+    if c == '=':
+        return 0
+    if c == '>':
+        return 1
     return -1
+
 
 mx = [[direction(c) for c in input()] for _ in range(n)]
 
 index = 0
+
+
 class DSet(object):
     def __init__(self, value):
         nonlocal index
@@ -18,6 +25,7 @@ class DSet(object):
 
     def __len__(self):
         return len(self.values)
+
     def update(self, other_dset):
         self.values.update(other_dset.values)
 
@@ -30,7 +38,9 @@ class DSet(object):
     def remove_edge_from(self, i):
         self.edges_from.remove(i)
 
-dsu = [DSet(i) for i in range(n+m)]
+
+dsu = [DSet(i) for i in range(n + m)]
+
 
 def union(v1, v2):
     if len(dsu[v1]) > len(dsu[v2]):
@@ -42,6 +52,7 @@ def union(v1, v2):
 
     dsu[v1] = dsu[v2] = d
 
+
 for i in range(n):
     for j in range(m):
         if not mx[i][j]:
@@ -51,17 +62,17 @@ for i in range(n):
     for j in range(m):
         if mx[i][j] > 0:
             dsu[i].add_edge_from(dsu[n + j].index)
-            dsu[n+j].add_edge_to(dsu[i].index)
+            dsu[n + j].add_edge_to(dsu[i].index)
         elif mx[i][j] < 0:
             dsu[n + j].add_edge_from(dsu[i].index)
-            dsu[i].add_edge_to(dsu[n+j].index)
+            dsu[i].add_edge_to(dsu[n + j].index)
 
-weights = [1] * (n+m)
-dsu_by_index = { d.index: d for d in dsu }
+weights = [1] * (n + m)
+dsu_by_index = {d.index: d for d in dsu}
 
 while True:
     try:
-        v = next(d for d in range(n+m) if not len(dsu[d].edges_from) and len(dsu[d].edges_to))
+        v = next(d for d in range(n + m) if not len(dsu[d].edges_from) and len(dsu[d].edges_to))
     except:
         break
 
@@ -81,4 +92,3 @@ if ok:
     print(*weights[n:])
 else:
     print('No')
-

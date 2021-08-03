@@ -43,4 +43,3 @@ for i in range(n):
     if u[i][0] <= u[i][2] and u[i][1] <= u[i][3]:
         print(u[i][0], u[i][1])
         break
-

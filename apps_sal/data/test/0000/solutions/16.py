@@ -1,5 +1,6 @@
 MOD = 10**9 + 7
-I = lambda:list(map(int,input().split()))
+def I(): return list(map(int, input().split()))
+
 
 s = input()
 res = 0
@@ -10,7 +11,7 @@ for i in range(n):
     if s[i] == '[':
         st = i
         break
-for i in range(n-1, -1, -1):
+for i in range(n - 1, -1, -1):
     if s[i] == ']':
         e = i
         break

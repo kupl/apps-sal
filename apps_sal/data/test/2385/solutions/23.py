@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 class Factorial:
     def __init__(self, n, mod):
         self.f = [1]
@@ -11,12 +12,16 @@ class Factorial:
         for j in range(n, 0, -1):
             self.i.append(self.i[-1] * j % mod)
         self.i.reverse()
+
     def factorial(self, j):
         return self.f[j]
+
     def ifactorial(self, j):
         return self.i[j]
+
     def comb(self, n, k):
         return self.f[n] * self.i[n - k] % self.mod * self.i[k] % self.mod if n >= k else 0
+
 
 MOD = 10 ** 9 + 7
 
@@ -68,7 +73,7 @@ for i in DAG[::]:
     for j in G[i]:
         if parent[i] == j:
             continue
-        size2[j] = size2[i] + size1[i] - size1[j]  
+        size2[j] = size2[i] + size1[i] - size1[j]
 
 for i in DAG[1::]:
     x = 1
@@ -91,4 +96,3 @@ fact = F.factorial(N - 1)
 for x in range(1, N + 1):
     ans = fact * dp1[x] * F.ifactorial(size1[x] - 1) * dp2[x] * F.ifactorial(size2[x] - 1)
     print((ans % MOD))
-

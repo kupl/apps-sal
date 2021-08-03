@@ -1,17 +1,20 @@
 import sys
 
+
 def solve():
-    input = lambda: sys.stdin.readline().rstrip()
+    def input(): return sys.stdin.readline().rstrip()
     sys.setrecursionlimit(10 ** 7)
     mod = 10 ** 9 + 7
 
     def comb(n, r):
-        if r > n: return 0
+        if r > n:
+            return 0
         return fac[n] * inv[r] * inv[n - r] % mod
 
     def dfs(v, Pa=-1):
         for u in to[v]:
-            if u == Pa: continue
+            if u == Pa:
+                continue
             dfs(u, v)
             size[v] += size[u]
             dp[v] *= dp[u] % mod
@@ -22,7 +25,8 @@ def solve():
     def bfs(v, Pa=-1, P_val=1, P_sz=0):
         ans[v] = P_val * dp[v] * comb(n - 1, P_sz) % mod
         for u in to[v]:
-            if u == Pa: continue
+            if u == Pa:
+                continue
             val = ans[v] * INV(dp[u] * comb(n - 1, size[u])) % mod
             bfs(u, v, val, n - size[u])
 
@@ -38,7 +42,8 @@ def solve():
 
     for i in range(2, n + 1):
         fac[i] = fac[i - 1] * i % mod
-    INV = lambda x: pow(x, mod - 2, mod)
+
+    def INV(x): return pow(x, mod - 2, mod)
     inv[n] = INV(fac[n])
     for i in range(n - 1, 1, -1):
         inv[i] = inv[i + 1] * (i + 1) % mod
@@ -51,6 +56,9 @@ def solve():
     bfs(0)
     print(*ans, sep='\n')
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()
