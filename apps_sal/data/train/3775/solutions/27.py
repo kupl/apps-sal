@@ -4,4 +4,3 @@ def digits(n):
         n //= 10
         count += 1
     return count
-

@@ -7,4 +7,3 @@ def segment_cover(A, L):
             segments += 1
             segment_end = point + L
     return segments
-

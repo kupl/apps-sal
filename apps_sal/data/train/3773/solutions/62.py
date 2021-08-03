@@ -9,4 +9,3 @@ def isValid(formula: list) -> bool:
         if 7 in formula or 8 in formula or set([7, 8]).issubset(formula):
             return True
     return False
-

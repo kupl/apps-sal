@@ -4,4 +4,3 @@ def find_smallest_int(a):
         if a[i] < M:
             M = a[i]
     return M
-

@@ -9,5 +9,5 @@ def isValid(formula):
         return False
     if 5 in formula or 6 in formula:
         if 5 not in formula or 6 not in formula:
-            return False 
+            return False
     return True

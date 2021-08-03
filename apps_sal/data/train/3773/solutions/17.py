@@ -1,7 +1,7 @@
 def isValid(f):
-    invalid = ((1,2), (3, 4))
+    invalid = ((1, 2), (3, 4))
 
-    if 1 in f and 2 in f :
+    if 1 in f and 2 in f:
         return False
     if 3 in f and 4 in f:
         return False

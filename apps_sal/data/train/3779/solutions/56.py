@@ -9,12 +9,6 @@ def past(h, m, s):
         m = 60000 * m
     if s == 0:
         pass
-    else: 
+    else:
         s = 1000 * s
-    return (h+m+s)
-    
-
-            
-    
-
-
+    return (h + m + s)

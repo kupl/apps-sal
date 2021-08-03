@@ -4,4 +4,3 @@ def past(h, m, s):
     segundo = s * 1000
     suma = hora + minuto + segundo
     return suma
-

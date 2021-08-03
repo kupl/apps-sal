@@ -6,4 +6,3 @@ def find_smallest_int(arr):
         else:
             num = num
     return num
-

@@ -10,5 +10,3 @@ def isValid(formula):
     if not 7 in formula and 8 not in formula:
         return False
     return True
-        
-

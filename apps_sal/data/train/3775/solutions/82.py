@@ -5,4 +5,3 @@ def digits(n):
     return length
 
 # your code here
-

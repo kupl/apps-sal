@@ -4,4 +4,3 @@ def digits(n):
     num = str(n)
     awnser = len(num)
     return awnser
-

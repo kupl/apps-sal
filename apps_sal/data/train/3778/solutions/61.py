@@ -3,4 +3,4 @@ def find_smallest_int(arr):
     for x in arr:
         if x < res:
             res = x
-    return res    
+    return res

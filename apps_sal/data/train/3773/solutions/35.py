@@ -8,4 +8,3 @@ def isValid(formula):
     if 3 in formula and 4 in formula:
         return False
     return True
-

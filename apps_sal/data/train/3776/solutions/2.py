@@ -5,7 +5,5 @@ def segment_cover(A, L):
         nb_segments += 1
         first_elt = A.pop(0)
         while A and A[0] <= first_elt + L:
-            A.pop(0) 
+            A.pop(0)
     return nb_segments
-    
-

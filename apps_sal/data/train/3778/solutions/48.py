@@ -5,5 +5,5 @@ def find_smallest_int(arr):
         if el < minor:
             minor = el
             print(minor)
-        
+
     return minor

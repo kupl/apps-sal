@@ -1,4 +1,5 @@
-from math import log10,ceil
+from math import log10, ceil
+
 
 def digits(n):
-    return ceil(log10(n+1))
+    return ceil(log10(n + 1))

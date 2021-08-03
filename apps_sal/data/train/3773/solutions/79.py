@@ -9,4 +9,3 @@ def isValid(formula):
         return True
     else:
         return False
-

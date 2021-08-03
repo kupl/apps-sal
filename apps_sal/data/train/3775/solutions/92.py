@@ -4,8 +4,6 @@ def digits(n):
     for element in b:
         if element == ',' or element == '.':
             b.remove(element)
-        else: 
+        else:
             pass
     return len(b)
-
-

@@ -1,5 +1,3 @@
 def digits(n):
-  str(n)
-  return len(str(n))
-    
-
+    str(n)
+    return len(str(n))

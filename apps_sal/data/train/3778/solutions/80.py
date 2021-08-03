@@ -1,10 +1,10 @@
 def find_smallest_int(arr):
     smallest = None
     for number in arr:
-        if smallest is None: 
+        if smallest is None:
             smallest = number
         elif number < smallest:
             smallest = number
-        else: 
+        else:
             continue
     return smallest

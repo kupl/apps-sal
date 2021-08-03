@@ -10,4 +10,4 @@ def isValid(formula):
     if 6 in formula and 5 not in formula:
         return False
     if 7 in formula or 8 in formula:
-        return True#
+        return True
