@@ -11,8 +11,8 @@ for i in range(n):
 
     for k in range(4):
         # smaller 1 -> 全部OK
-        dp[i + 1][1][k + 1] += dp[i][1][k] * 9;
-        dp[i + 1][1][k] += dp[i][1][k];
+        dp[i + 1][1][k + 1] += dp[i][1][k] * 9
+        dp[i + 1][1][k] += dp[i][1][k]
 
         # smaller 0,next smaller 1 -> nowより小さいのを全部
         # 次の桁からsmallerであるためにはN＜ni であることが必要で

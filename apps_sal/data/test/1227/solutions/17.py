@@ -4,7 +4,8 @@ K = int(input())
 
 
 def calk1(n):
-    if n == 0: return 0
+    if n == 0:
+        return 0
     m = int(math.log10(n))
     num = m * 9
     num += n // (10**m)
@@ -27,8 +28,12 @@ def calk3(n):
     return num
 
 
-if n < 10 ** (K - 1): print((0))
+if n < 10 ** (K - 1):
+    print((0))
 else:
-    if K == 1: print((calk1(n)))
-    elif K == 2: print((calk2(n)))
-    else: print((calk3(n)))
+    if K == 1:
+        print((calk1(n)))
+    elif K == 2:
+        print((calk2(n)))
+    else:
+        print((calk3(n)))

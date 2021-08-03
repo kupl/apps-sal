@@ -8,7 +8,7 @@ if len(N) < K:
 keta = []
 for k in range(len(N)):
     keta.append(int(N[-k - 1]))
-ans = [1, keta[0], 0, 0];
+ans = [1, keta[0], 0, 0]
 
 
 def combination(N, K):

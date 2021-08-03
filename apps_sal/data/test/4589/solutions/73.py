@@ -11,14 +11,22 @@ for i in range(h):
         # print(sl[i][j])
         if sl[i][j] == '#':
             ans[row][col] = '#'
-            if ans[row - 1][col] != '#': ans[row - 1][col] += 1
-            if ans[row + 1][col] != '#': ans[row + 1][col] += 1
-            if ans[row][col - 1] != '#': ans[row][col - 1] += 1
-            if ans[row][col + 1] != '#': ans[row][col + 1] += 1
-            if ans[row - 1][col - 1] != '#': ans[row - 1][col - 1] += 1
-            if ans[row - 1][col + 1] != '#': ans[row - 1][col + 1] += 1
-            if ans[row + 1][col - 1] != '#': ans[row + 1][col - 1] += 1
-            if ans[row + 1][col + 1] != '#': ans[row + 1][col + 1] += 1
+            if ans[row - 1][col] != '#':
+                ans[row - 1][col] += 1
+            if ans[row + 1][col] != '#':
+                ans[row + 1][col] += 1
+            if ans[row][col - 1] != '#':
+                ans[row][col - 1] += 1
+            if ans[row][col + 1] != '#':
+                ans[row][col + 1] += 1
+            if ans[row - 1][col - 1] != '#':
+                ans[row - 1][col - 1] += 1
+            if ans[row - 1][col + 1] != '#':
+                ans[row - 1][col + 1] += 1
+            if ans[row + 1][col - 1] != '#':
+                ans[row + 1][col - 1] += 1
+            if ans[row + 1][col + 1] != '#':
+                ans[row + 1][col + 1] += 1
 
 
 for i in range(h + 2):

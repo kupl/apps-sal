@@ -10,10 +10,12 @@ for d, Nd in enumerate(strN):
     for isLtN in range(2):
         for numNot0 in range(K + 1):
             for x in range(10):
-                if not isLtN and x > Nd: continue
+                if not isLtN and x > Nd:
+                    continue
                 isLtN2 = isLtN or x < Nd
                 numNot02 = numNot0 + (x != 0)
-                if numNot02 > K: continue
+                if numNot02 > K:
+                    continue
                 dp[d + 1][isLtN2][numNot02] += dp[d][isLtN][numNot0]
 
 ans = dp[-1][0][K] + dp[-1][1][K]

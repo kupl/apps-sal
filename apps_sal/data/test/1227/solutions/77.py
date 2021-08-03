@@ -7,7 +7,9 @@ import itertools
 import math
 import string
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(10**7)
 INF = float('inf')
 def I(): return int(input())

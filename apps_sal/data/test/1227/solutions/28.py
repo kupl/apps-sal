@@ -5,7 +5,7 @@ if len(N) < K:
     print(0)
     return
 
-ans = [1, int(N[-1]), 0, 0];
+ans = [1, int(N[-1]), 0, 0]
 nine = [1, 9, 81, 729]
 
 

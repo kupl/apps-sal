@@ -24,7 +24,8 @@ for i in range(1, n + 1):
 ans = facs[n]
 
 # Check both sort
-pa = 0; pb = 0
+pa = 0
+pb = 0
 both_cnt = 1
 same = 1
 for a, b in s:
@@ -37,7 +38,8 @@ for a, b in s:
         both_cnt *= facs[same]
         both_cnt %= MOD
         same = 1
-    pa = a; pb = b
+    pa = a
+    pb = b
 
 # Check upper sort
 acnt = Counter(a_s)

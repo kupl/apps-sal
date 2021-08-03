@@ -17,7 +17,8 @@ def run():
             for k in range(lim + 1):
                 for l in range(4):
                     nl = l + int(k > 0)
-                    if nl >= 4: continue
+                    if nl >= 4:
+                        continue
                     dp[i + 1][k < lim or j == 1][nl] += dp[i][j][l]
 
         # print(dp)

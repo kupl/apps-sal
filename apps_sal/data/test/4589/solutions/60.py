@@ -10,7 +10,7 @@ def solve():
 
             if S[i][k] != "#":
 
-                c = 0;  # counter
+                c = 0  # counter
 
                 if i > 0 and k > 0 and S[i - 1][k - 1] == "#":  # upper left
                     c += 1

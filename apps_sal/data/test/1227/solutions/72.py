@@ -4,11 +4,15 @@ l = len(n)
 
 
 def f(dig, under, num):
-    if num > l - dig: return 0
-    if num == 0: return 1
+    if num > l - dig:
+        return 0
+    if num == 0:
+        return 1
     if dig == l - 1:
-        if under: return int(n[dig])
-        else: return 9
+        if under:
+            return int(n[dig])
+        else:
+            return 9
     if under:
         if n[dig] == '0':
             res = f(dig + 1, True, num)

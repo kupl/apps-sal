@@ -1,6 +1,7 @@
 import sys
 import numpy as np
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 N = list(map(int, input()))
 K = int(input())

@@ -11,13 +11,19 @@ for i in range(n):
             nd = int(s[i])
 
             for d in range(10):
-                ni = i + 1; nj = j; nk = k
+                ni = i + 1
+                nj = j
+                nk = k
 
-                if d != 0: nj += 1
-                if nj > K: continue
+                if d != 0:
+                    nj += 1
+                if nj > K:
+                    continue
                 if k == 0:
-                    if d > nd: continue
-                    if d < nd: nk = 1
+                    if d > nd:
+                        continue
+                    if d < nd:
+                        nk = 1
                 dp[ni][nj][nk] += dp[i][j][k]
                 # print(d,k)
                 # print(i,j,k,dp[i][j][k])

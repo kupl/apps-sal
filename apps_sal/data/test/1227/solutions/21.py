@@ -12,11 +12,15 @@ for i in range(nSize):
                 ni = i + 1
                 nj = j
                 nk = k
-                if l != 0: nj += 1
-                if nj > K: continue
+                if l != 0:
+                    nj += 1
+                if nj > K:
+                    continue
                 if k == 0:
-                    if l > int(N[i]): continue
-                    if l < int(N[i]): nk = 1
+                    if l > int(N[i]):
+                        continue
+                    if l < int(N[i]):
+                        nk = 1
                 dp[ni][nj][nk] += dp[i][j][k]
 
 print(dp[nSize][K][0] + dp[nSize][K][1])

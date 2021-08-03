@@ -11,7 +11,8 @@ for h in range(H):
         ary = [-1, 0, 1]
         for i in ary:
             for j in ary:
-                if h + i < 0 or h + i >= H or w + j < 0 or w + j >= W: continue
+                if h + i < 0 or h + i >= H or w + j < 0 or w + j >= W:
+                    continue
                 if S[h + i][w + j] == '#':
                     count += 1
         new_s += str(count)

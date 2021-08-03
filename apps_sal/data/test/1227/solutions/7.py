@@ -14,7 +14,9 @@ def solve(sN):
             for k in range(2):
                 nd = int(sN[i])  # sNの今の桁をnd。これから決める桁数字をdとする
                 for d in range(10):
-                    ni = i + 1; nj = j; nk = k
+                    ni = i + 1
+                    nj = j
+                    nk = k
                     if d != 0:  # dが0でないならnjを１つ足す
                         nj += 1
                     if nj > K:  # 使える0以外の数字の個数を超えていたらだめ
