@@ -6,6 +6,5 @@ def zeros(n):
             break
         result += n // (5 ** power)
         power += 1
-    
-    return result
 
+    return result

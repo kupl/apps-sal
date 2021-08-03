@@ -6,6 +6,3 @@ def zeros(n):
         final += n // 5**x
     print(final)
     return final
-
-    
-

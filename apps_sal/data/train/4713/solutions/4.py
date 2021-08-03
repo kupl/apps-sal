@@ -2,7 +2,7 @@ def late_clock(digits):
     result = ''
     minute = '_'
     lessSix = 0
-    digits = sorted(digits, reverse = True)
+    digits = sorted(digits, reverse=True)
     for d in digits:
         if d < 6:
             lessSix += 1
@@ -20,7 +20,7 @@ def late_clock(digits):
             break
     for d in digits:
         if d < 6:
-            minute= str(d)
+            minute = str(d)
             digits.remove(d)
             break
     result += minute + str(digits.pop())

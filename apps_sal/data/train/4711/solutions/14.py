@@ -6,4 +6,3 @@ def zeros(n):
         i *= 5
 
     return int(result)
-

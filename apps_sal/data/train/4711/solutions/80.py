@@ -1,4 +1,6 @@
 import math
+
+
 def zeros(n):
     '''factorial = 1
     count = 0
@@ -17,13 +19,10 @@ def zeros(n):
                 count += 1
             elif fact % 10 != 0:
                 check = False'''
-    
-    i=5
-    while (n/i>=1): 
-        count += int(n/i) 
-        i *= 5
-  
-    return int(count) 
-        
-    
 
+    i = 5
+    while (n / i >= 1):
+        count += int(n / i)
+        i *= 5
+
+    return int(count)

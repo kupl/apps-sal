@@ -6,4 +6,3 @@ def pattern(n):
         line += line[::-1][1:]
         lines.append(line)
     return '\n'.join(lines + lines[::-1][1:])
-

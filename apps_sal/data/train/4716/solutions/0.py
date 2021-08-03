@@ -5,4 +5,3 @@ def distribution_of(golds):
         total[turn % 2] += g.pop(-(g[0] < g[-1]))
         turn += 1
     return total
-

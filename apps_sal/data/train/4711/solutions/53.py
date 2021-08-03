@@ -1,5 +1,6 @@
 import math
 
+
 def zeros(n):
     if n <= 0:
         return 0
@@ -8,4 +9,3 @@ def zeros(n):
     for k in range(1, k_max):
         sum += math.floor(n / 5 ** k)
     return sum
-

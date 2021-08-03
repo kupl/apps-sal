@@ -1,8 +1,8 @@
 def distribution_of(g):
     golds = g.copy()
     print(golds)
-    a=0
-    b=0
+    a = 0
+    b = 0
     while golds:
         if golds[0] >= golds[-1]:
             a += golds.pop(0)
