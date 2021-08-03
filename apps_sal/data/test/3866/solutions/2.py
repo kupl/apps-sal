@@ -4,4 +4,5 @@ if n & 1:
     print(t)
     print(t[2:] + ' 0')
     print(' '.join(map(str, list(range(1, n, 2)) + list(range(0, n, 2)))))
-else: print(-1)
+else:
+    print(-1)

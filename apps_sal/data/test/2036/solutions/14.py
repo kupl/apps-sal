@@ -3,7 +3,8 @@ import sys
 input = sys.stdin.readline
 
 n, m, x, y = map(int, input().split())
-x -= 1; y -= 1
+x -= 1
+y -= 1
 ans = []
 for _ in range(n):
     for j in range(m):

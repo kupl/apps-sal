@@ -17,7 +17,8 @@ def solve(n):
         a = (a + p * (i - 1) * (n - i + 1) - p) % M
         p = p * i % M
     a = (p * (p - n + 2) - 2 * a) % M
-    if a & 1: a += M
+    if a & 1:
+        a += M
     return a // 2
 
 

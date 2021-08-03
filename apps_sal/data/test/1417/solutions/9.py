@@ -21,7 +21,8 @@ def g(n):
         a = (a + p * (j - 1) * (n - j + 1) - p) % M
         p = p * j % M
     a = (p * (p - n + 2) - a - a) % M
-    if a & 1: a += M
+    if a & 1:
+        a += M
     return a // 2
 
 
