@@ -5,7 +5,7 @@ x = 0
 z = "ABCDEFGHIJ"
 L = {}
 for item in z:
-    L[item] = False;
+    L[item] = False
 n = len(s)
 for i in range(n):
     if(s[i] in "ABCDEFGHIJ" and i == 0):

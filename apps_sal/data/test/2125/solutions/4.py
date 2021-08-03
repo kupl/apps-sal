@@ -29,7 +29,8 @@ def main():
             if e == prev:
                 cnt += 1
             else:
-                if prev: lst.append((prev, cnt))
+                if prev:
+                    lst.append((prev, cnt))
                 prev = e
                 cnt = 1
         lst.append((e, cnt))

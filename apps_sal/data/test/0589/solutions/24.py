@@ -1,7 +1,7 @@
 s = input()
 abc = [0] * 26
-cnt1 = 0;
-ans = 1;
+cnt1 = 0
+ans = 1
 for i in range(len(s)):
     if s[i] == '?':
         if i == 0:

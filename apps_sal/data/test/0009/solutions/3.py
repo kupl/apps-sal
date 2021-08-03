@@ -12,8 +12,10 @@ x1, y1, x2, y2 = [], [], [], []
 T = []
 for _ in range(d):
     u, v, w, x = map(int, input().split())
-    if u > w: u, w = w, u
-    if v > x: v, x = x, v
+    if u > w:
+        u, w = w, u
+    if v > x:
+        v, x = x, v
     x1.append(u)
     y1.append(v)
     x2.append(-w)  # the other direction pog?

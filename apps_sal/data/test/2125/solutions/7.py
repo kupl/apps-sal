@@ -1,5 +1,5 @@
 import sys
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
 
 
 def f(A, r, c, l):

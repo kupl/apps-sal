@@ -8,10 +8,14 @@ def run(w, m):
         return
     mm = m
     for i in range(100):
-        if m % w == 0: m //= w
-        elif m % w == 1: m = (m - 1) // w
-        elif m % w == w - 1: m = (m + 1) // w
-        else: break
+        if m % w == 0:
+            m //= w
+        elif m % w == 1:
+            m = (m - 1) // w
+        elif m % w == w - 1:
+            m = (m + 1) // w
+        else:
+            break
         if m == 0:
             Y()
             return

@@ -11,7 +11,7 @@ else:
     for I in range(1, N):
         A[I] = A[I - 1] * W
         if A[I] > 10000000001000000000:
-            N = I;
+            N = I
             break
     # print(N)
     S = set()

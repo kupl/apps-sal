@@ -19,6 +19,6 @@ for t in range(len(x)):
     if t == 0 and f:
         r *= 9
     else:
-        r *= 10 - t;
+        r *= 10 - t
 
 print(r)
