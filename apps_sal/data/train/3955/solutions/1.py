@@ -1,6 +1,6 @@
 def bracket_pairs(string):
     res, open = {}, []
-    for i,c in enumerate(string):
+    for i, c in enumerate(string):
         if c == '(':
             open.append(i)
         if c == ')':

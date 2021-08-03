@@ -1,1 +1,2 @@
-from math import log; half_life=lambda i,r,t: t/log(i/r,2)
+from math import log
+def half_life(i, r, t): return t / log(i / r, 2)

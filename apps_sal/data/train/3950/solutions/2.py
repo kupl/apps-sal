@@ -9,6 +9,7 @@ base2 = {3: (111, 22, 3),
 
 memo = {100: 0}
 
+
 def find_int_inrange(a, b):
     for n in range(max(memo) + 1, b + 1):
         base = 3 if n < 1000 else 4 if n < 10000 else 5

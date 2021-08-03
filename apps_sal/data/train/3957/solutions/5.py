@@ -1,4 +1,4 @@
-def uniq_c(seq): 
+def uniq_c(seq):
     if not seq:
         return []
     res = []
@@ -11,6 +11,5 @@ def uniq_c(seq):
             res.append((cur, counter))
             cur = c
             counter = 1
-    res.append((cur, counter))        
+    res.append((cur, counter))
     return res
-

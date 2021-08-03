@@ -1,20 +1,23 @@
 import itertools
 import numpy as np
 
+
 def sum_1(n):
-    ketas   = list(map(int, str(n)))
-    pattern = [itertools.combinations(ketas, i+1) for i in range(len(ketas))]
+    ketas = list(map(int, str(n)))
+    pattern = [itertools.combinations(ketas, i + 1) for i in range(len(ketas))]
     pattern = list(itertools.chain.from_iterable(pattern))
-    pattern = [''.join(map(str,i)) for i in pattern]
+    pattern = [''.join(map(str, i)) for i in pattern]
     sum = np.sum([int(i) for i in pattern])
     return sum
 
+
 def sum_2(n):
-    ketas   = list(map(int, str(n)))
+    ketas = list(map(int, str(n)))
     i_s = itertools.combinations(list(range(len(ketas) + 1)), 2)
     pattern_i = [ketas[i:j] for i, j in i_s]
-    sum = np.sum([int(''.join(map(str,i))) for i in pattern_i])
+    sum = np.sum([int(''.join(map(str, i))) for i in pattern_i])
     return sum
+
 
 def common_divisors(a, b):
     while b:
@@ -33,11 +36,12 @@ def common_divisors(a, b):
         e += 2
     return d - 1
 
+
 def find_int_inrange(a, b):
     # your code here
     maxlen = 0
     result = []
-    for i in range(a,b):
+    for i in range(a, b):
         divisors = common_divisors(sum_1(i), sum_2(i))
         if divisors > maxlen:
             maxlen = divisors
@@ -45,4 +49,3 @@ def find_int_inrange(a, b):
         elif divisors == maxlen:
             result.append(i)
     return result
-

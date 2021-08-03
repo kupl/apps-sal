@@ -5,4 +5,3 @@ def sort_string(s):
         if sym.lower() not in alphabet:
             rule12.insert(i, sym)
     return "".join(rule12)
-

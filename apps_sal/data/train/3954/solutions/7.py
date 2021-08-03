@@ -1,1 +1,1 @@
-press_button=lambda n:n*(n*n+5)/6
+def press_button(n): return n * (n * n + 5) / 6

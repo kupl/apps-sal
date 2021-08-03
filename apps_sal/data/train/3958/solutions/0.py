@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def custom_fib(signature, indexes, n):
     fib = deque(signature)
     for _ in range(n):
