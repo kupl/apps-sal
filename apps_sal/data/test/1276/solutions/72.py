@@ -9,7 +9,8 @@ def solve():
     ret = 0
     RGB_ = {'R': 0, 'G': 0, 'B': 0}
     counter = Counter(S)
-    for k, v in counter.items(): RGB_[k] += v
+    for k, v in counter.items():
+        RGB_[k] += v
     ret = reduce(mul, RGB_.values())
 
     # print(ret)

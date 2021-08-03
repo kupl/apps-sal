@@ -1,6 +1,7 @@
 import sys
 from collections import defaultdict
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 b = int(input())
 g = int(input())

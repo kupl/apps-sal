@@ -22,7 +22,7 @@ else:
                 temp = s[0:i] + s[las] + s[i + 1:n - 1] + s[i]
                 print(temp)
                 flag = 1
-                break;
+                break
 
     if not flag:
         temp = s[0:p] + s[las] + s[p + 1:n - 1] + s[p]

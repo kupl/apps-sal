@@ -1,7 +1,7 @@
 from math import *
 n = int(input())
-c = 0;
-nc = 0;
+c = 0
+nc = 0
 k = input().split(" ")
 for i in range(n):
     if (int(k[i]) % 2 == 0):

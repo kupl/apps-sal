@@ -26,18 +26,24 @@ def main():
     cnt = [0] * 3
     ans = 1
     for i in s:
-        if i == 'R': cnt[0] += 1
-        elif i == 'G': cnt[1] += 1
-        else: cnt[2] += 1
+        if i == 'R':
+            cnt[0] += 1
+        elif i == 'G':
+            cnt[1] += 1
+        else:
+            cnt[2] += 1
     for i in cnt:
         ans *= i
     for i in range(n):
         for j in range(i + 1, n):
             k = j + (j - i)
             if k < n:
-                if s[i] == s[j]: continue
-                if s[j] == s[k]: continue
-                if s[k] == s[i]: continue
+                if s[i] == s[j]:
+                    continue
+                if s[j] == s[k]:
+                    continue
+                if s[k] == s[i]:
+                    continue
                 ans -= 1
     print(ans)
 

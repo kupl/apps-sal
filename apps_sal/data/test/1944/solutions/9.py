@@ -3,7 +3,7 @@ n = int(input())
 m = list()
 for i in range(n):
     m.append(list(int(x) for x in input().split()))
-m.sort();
+m.sort()
 
 k = 0
 for i in range(n - 1):

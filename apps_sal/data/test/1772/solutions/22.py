@@ -3,10 +3,10 @@ cnt = 0
 n = int(input())
 i = 0
 x = input()
-x = x + '                     ';
+x = x + '                     '
 while (cnt < n):
     if(x[i] is ' '):
-        i += 1;
+        i += 1
         continue
     else:
         a = int(x[i])
