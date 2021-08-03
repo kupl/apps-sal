@@ -1,5 +1,7 @@
 import sys
-toInt = lambda x: int(''.join(map(str, x[-1::-1])))
+def toInt(x): return int(''.join(map(str, x[-1::-1])))
+
+
 # sys.stdin=open('note.txt')
 pre = 0
 ans = [0] * 1000

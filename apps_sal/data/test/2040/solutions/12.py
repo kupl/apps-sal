@@ -1,5 +1,5 @@
 def min_number(sum_digits):
-    res = 0;
+    res = 0
     base = 1
     while sum_digits > 9:
         res += 9 * base

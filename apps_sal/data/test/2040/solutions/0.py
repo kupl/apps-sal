@@ -10,7 +10,8 @@ Language: Python 3.4.2
 
 def printing(num):
     arr = num[:]
-    while len(arr) > 1 and arr[-1] == 0: arr.pop()
+    while len(arr) > 1 and arr[-1] == 0:
+        arr.pop()
     print("".join(map(str, reversed(arr))))
 
 
@@ -37,7 +38,8 @@ def main():
                 last[k] += 1
         p = 0
         while sum(last) < b:
-            while last[p] == 9: p += 1
+            while last[p] == 9:
+                p += 1
             last[p] += 1
         printing(last)
 
@@ -50,14 +52,19 @@ def read(mode=2):
     # 1: List of strings
     # 2: List of integers
     inputs = input().strip()
-    if mode == 0: return inputs
-    if mode == 1: return inputs.split()
-    if mode == 2: return list(map(int, inputs.split()))
+    if mode == 0:
+        return inputs
+    if mode == 1:
+        return inputs.split()
+    if mode == 2:
+        return list(map(int, inputs.split()))
 
 
 def write(s="\n"):
-    if s is None: s = ""
-    if isinstance(s, list): s = " ".join(map(str, s))
+    if s is None:
+        s = ""
+    if isinstance(s, list):
+        s = " ".join(map(str, s))
     s = str(s)
     print(s, end="")
 

@@ -6,7 +6,8 @@ def main():
     n = int(input())
     g, d = 0, set()
     for i in map(int, input().split()):
-        if g == 0: g = i
+        if g == 0:
+            g = i
         else:
             g = gcd(g, i)
         d.add(i)

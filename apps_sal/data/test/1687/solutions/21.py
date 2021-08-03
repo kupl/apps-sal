@@ -8,5 +8,7 @@ for x in arr:
 flag = False
 for x in arr:
     flag |= (x == ans)
-if(flag): print(ans)
-else: print(-1)
+if(flag):
+    print(ans)
+else:
+    print(-1)

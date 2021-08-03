@@ -13,7 +13,8 @@ def solve(N, A):
                 aru[s[j + 1] - s[i]] = True
     ans = 0
     for i in range(N):
-        if aru[A[i]]: ans += 1
+        if aru[A[i]]:
+            ans += 1
     return ans
 
 

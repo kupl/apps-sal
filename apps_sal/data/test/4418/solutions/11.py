@@ -10,8 +10,10 @@ for a in map(int, input().split()):
     else:
         if c[prev[a]]:
             c[prev[a]] -= 1
-            if a != num[-1]: c[a] += 1
-        else: n += 1  # waste
+            if a != num[-1]:
+                c[a] += 1
+        else:
+            n += 1  # waste
     #print('after', a, c)
 
 # print(c)

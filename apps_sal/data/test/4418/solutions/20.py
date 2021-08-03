@@ -20,8 +20,12 @@ n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 arr = refine(arr)
 mydict = dict()
-mydict[4] = 0; mydict[8] = 0; mydict[15] = 0; mydict[16] = 0;
-mydict[23] = 0; mydict[42] = 0
+mydict[4] = 0
+mydict[8] = 0
+mydict[15] = 0
+mydict[16] = 0
+mydict[23] = 0
+mydict[42] = 0
 
 for i in range(len(arr)):
     if arr[i] == 4:
