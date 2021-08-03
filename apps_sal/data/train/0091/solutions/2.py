@@ -29,4 +29,3 @@ for z in range(t):
         print(*ret)
     else:
         print(-1)
-

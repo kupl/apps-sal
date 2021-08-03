@@ -6,6 +6,7 @@
 import sys
 import heapq
 
+
 def main():
     t = int(input())
     for _ in range(t):
@@ -20,25 +21,27 @@ def main():
         rPoint = n - 1
         while s[rPoint] == "1":
             rPoint -= 1
-        
+
         if lPoint > rPoint:
             print(s)
             continue
-        
+
         if lPoint != n - 1:
             ans = s[:lPoint]
         else:
             ans = ""
-        
+
         ans += "0"
 
         if rPoint != n - 1:
             ans += s[rPoint + 1:]
         print(ans)
-        
 
     return
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

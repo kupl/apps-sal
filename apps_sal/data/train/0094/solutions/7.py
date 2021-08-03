@@ -6,9 +6,9 @@ def solve():
     a = list(map(int, input().split()))
     white = defaultdict(int)
     black = defaultdict(int)
-    ans = [0]*n
+    ans = [0] * n
     for i, x in enumerate(a):
-        if white[T-x] > black[T-x]:
+        if white[T - x] > black[T - x]:
             black[x] += 1
             ans[i] = 1
         else:

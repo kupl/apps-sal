@@ -20,5 +20,3 @@ for case in range(t):
             print(0, end=' ')
 
     print()
-
-

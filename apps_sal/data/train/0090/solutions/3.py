@@ -15,5 +15,4 @@ for i in range(t):
     for i in range(n):
         if out[i] == 10**6:
             out[i] = s.pop()
-    print(' '.join(map(str,out)))
-
+    print(' '.join(map(str, out)))

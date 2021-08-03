@@ -10,7 +10,7 @@ for _ in range(t):
     n, m = input()
     a = list(input())
     b = list(input())
-    d = {el:i for i, el in enumerate(a)}
+    d = {el: i for i, el in enumerate(a)}
     maxPos = d[b[0]]
     ans = 2 * maxPos + 1
     Nremoved = 1
@@ -23,8 +23,6 @@ for _ in range(t):
             maxPos = pos
         Nremoved += 1
     print(ans)
-        
-    
-    
-# inf.close()
 
+
+# inf.close()

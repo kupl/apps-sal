@@ -19,4 +19,3 @@ for t in range(T):
             pen_in_c[T - el] += 1
 
     print(' '.join(map(str, answer)))
-

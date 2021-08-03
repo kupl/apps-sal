@@ -11,7 +11,7 @@ for j in range(m):
     for k in range(1, n):
         if a[k] == a[k - 1]:
             while used[t] == 1:
-                t += 1                    
+                t += 1
             if t < a[k - 1]:
                 b.append(t)
                 used[t] = 1
@@ -29,5 +29,3 @@ for j in range(m):
         print(*b)
     else:
         print(-1)
-            
-

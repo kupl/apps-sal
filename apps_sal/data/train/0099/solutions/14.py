@@ -18,4 +18,3 @@ for _ in range(int(input())):
             print(s[:i] + '0' + s[j + 1:])
         else:
             print(s)
-

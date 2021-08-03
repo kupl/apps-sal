@@ -24,6 +24,3 @@ for i in range(t):
         print(ans)
     else:
         print(*ans)
-    
-    
-

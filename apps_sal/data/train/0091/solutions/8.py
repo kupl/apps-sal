@@ -1,8 +1,8 @@
 t = int(input())
 for tt in range(t):
     n = int(input())
-    ent = list(map(int,input().split()))
-    used = [0]*(n+1)
+    ent = list(map(int, input().split()))
+    used = [0] * (n + 1)
     mnex = 1
     mx = 0
     ans = []
@@ -20,9 +20,9 @@ for tt in range(t):
             while used[mnex] == 1:
                 mnex += 1
             if mnex <= mx:
-                used[mnex]=1
+                used[mnex] = 1
                 ans.append(mnex)
-                mnex+=1
+                mnex += 1
             else:
                 ansex = False
                 break
@@ -30,10 +30,3 @@ for tt in range(t):
         print(*ans)
     else:
         print(-1)
-                
-
-
-
-
-
-

@@ -7,8 +7,8 @@ def solve():
         return
     print(y + (u - y) * 2 // 3)
 
+
 t = int(input())
 
 for _ in range(t):
     solve()
-

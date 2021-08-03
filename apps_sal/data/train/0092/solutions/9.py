@@ -8,7 +8,7 @@ for i in range(a):
             y = 1
         else:
             pass
-    if  y == 1:
+    if y == 1:
         print('YES')
     else:
         print("NO")

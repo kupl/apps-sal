@@ -8,7 +8,3 @@ for qq in range(q):
             break
     else:
         print('NO')
-    
-
-
-

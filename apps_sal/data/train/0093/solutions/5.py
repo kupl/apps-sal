@@ -1,9 +1,9 @@
 T = int(input())
 for _ in range(T):
     N, M = map(int, input().split())
-    A = [int(a)-1 for a in input().split()]
-    B = [int(a)-1 for a in input().split()]
-    
+    A = [int(a) - 1 for a in input().split()]
+    B = [int(a) - 1 for a in input().split()]
+
     X = [0] * N
     for i, a in enumerate(A):
         X[a] = i

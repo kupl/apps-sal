@@ -18,4 +18,3 @@ for _ in range(t):
         suf = l[-1][0] * l[-1][1]
         l = l[:-1]
     print(res + '0' + suf)
-

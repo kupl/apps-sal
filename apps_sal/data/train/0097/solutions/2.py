@@ -6,7 +6,7 @@ def main():
 
         sf = [len(w) - 1 for _ in range(len(w))]
         for i in range(len(w) - 2, -1, -1):
-            if w[i] < w[sf[i+1]]:
+            if w[i] < w[sf[i + 1]]:
                 sf[i] = i
             else:
                 sf[i] = sf[i + 1]
@@ -24,4 +24,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

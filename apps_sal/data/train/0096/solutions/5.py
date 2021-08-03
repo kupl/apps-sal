@@ -49,7 +49,3 @@ for _ in range(t):
     if tot_easy * a + tot_hard * b <= T:
         score = n
     print(score)
-
-
-
-

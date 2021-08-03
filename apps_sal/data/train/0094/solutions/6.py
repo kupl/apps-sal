@@ -11,7 +11,3 @@ for _ in range(int(input())):
             arr[i] = flip
             flip = 1 - flip
     print(*arr)
-
-
-
-

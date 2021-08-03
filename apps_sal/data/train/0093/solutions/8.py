@@ -3,8 +3,8 @@ t = 1
 vis = [0] * 300000
 for i in range(q):
     n, m = [int(x) for x in input().split()]
-    a = [ int(x) for x in input().split()]
-    b =  [int(x) for x in input().split()]
+    a = [int(x) for x in input().split()]
+    b = [int(x) for x in input().split()]
     arr = 0
     i = 0
     k = 0
@@ -23,5 +23,3 @@ for i in range(q):
             k += 1
     print(arr)
     t += 1
-        
-

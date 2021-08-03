@@ -11,5 +11,3 @@ for i in range(n):
             break
     if h:
         print('NO')
-
-

@@ -1,5 +1,6 @@
 import math
 
+
 def better(a, b):
     for i in range(min(len(a), len(b))):
         if ord(a[i]) < ord(b[i]):
@@ -7,6 +8,7 @@ def better(a, b):
         elif ord(a[i]) > ord(b[i]):
             return False
     return len(a) < len(b)
+
 
 def optimize(a):
     occ = [0] * 26
@@ -28,8 +30,9 @@ def optimize(a):
                 p2 = i
 
     if p1 >= 0 and p2 >= 0:
-        return a[:p1] + a[p2] + a[p1+1:p2] + a[p1] + a[p2+1:]
+        return a[:p1] + a[p2] + a[p1 + 1:p2] + a[p1] + a[p2 + 1:]
     return a
+
 
 def main():
     t = int(input())
@@ -44,7 +47,9 @@ def main():
         else:
             print('---')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

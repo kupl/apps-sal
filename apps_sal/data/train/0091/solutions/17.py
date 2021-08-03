@@ -18,7 +18,7 @@ for _ in range(int(input())):
         else:
             while used[lst]:
                 lst += 1
-            #print(lst)
+            # print(lst)
             if a[i] < lst:
                 print(-1)
                 ok = False

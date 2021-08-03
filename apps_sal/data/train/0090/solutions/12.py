@@ -1,10 +1,10 @@
 t = int(input())
 for _ in range(t):
     n = int(input())
-    a = list(map(int,input().split()))
-    l = list(map(int,input().split()))
+    a = list(map(int, input().split()))
+    l = list(map(int, input().split()))
     b = []
-    if sum(l) < n: # exist non-blocked
+    if sum(l) < n:  # exist non-blocked
         for i in range(n):
             if l[i] == 0:
                 b.append(a[i])
@@ -12,12 +12,12 @@ for _ in range(t):
         j = 0
         for i in range(n):
             if l[i] == 0:
-                print(b[j], end =' ')
+                print(b[j], end=' ')
                 j += 1
             else:
-                print(a[i], end =' ')
+                print(a[i], end=' ')
         print()
     else:
         for i in range(n):
-            print(a[i],end=' ')
+            print(a[i], end=' ')
         print()
