@@ -6,4 +6,3 @@ def generate_diagonal(n, l):
     for i in range(l)[1:]:
         diagonal.append(diagonal[-1] * (n + i) / i)
     return diagonal
-

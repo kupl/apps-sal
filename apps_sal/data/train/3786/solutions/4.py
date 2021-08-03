@@ -6,17 +6,21 @@ RULES = [
     ['ou u', 'an un', r'ing\b ink', r'\bsm schm'],
 ]
 
+
 def siegfried(week, txt):
     import re
-    
+
     def keep_case(repl):
         def wrapper(m):
             ref = re.match(r'\\(\d)', repl)
             strng = m.group(int(ref.group(1))) if ref else repl
             g = m.group(0)
-            if g.islower(): return strng.lower()
-            if g.isupper(): return strng.upper()
-            if g.istitle(): return strng.title()
+            if g.islower():
+                return strng.lower()
+            if g.isupper():
+                return strng.upper()
+            if g.istitle():
+                return strng.title()
             return strng
         return wrapper
 

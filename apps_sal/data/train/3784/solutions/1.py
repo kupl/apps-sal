@@ -1,6 +1,7 @@
 def as_str(xs):
     return ''.join(map(chr, xs[:2] + xs[-2:]))
 
+
 def sort_transform(arr):
     return '-'.join([
         as_str(arr),

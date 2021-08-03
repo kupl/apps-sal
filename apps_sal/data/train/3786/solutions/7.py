@@ -7,15 +7,15 @@ def siegfried(week, txt):
     for counter in range(0, week):
 
         txt = weeks_have_passed[counter](txt)
-    
+
     return txt
+
 
 def week_one(txt):
 
     letter_list = list(txt)
 
     copy_reverse_letter_list = letter_list.copy()
-
 
     last_letter = ''
 
@@ -58,7 +58,7 @@ def week_two(txt):
 
         lowercase_letter = letter.lower()
 
-        next_letter = copy_letter_list[counter+1]
+        next_letter = copy_letter_list[counter + 1]
         lowcase_next_letter = next_letter.lower()
 
         if lowercase_letter == 'p' and lowcase_next_letter == 'h':
@@ -103,7 +103,7 @@ def week_three(txt):
 
         if lowercase_letter == last_letter and lowercase_letter.isalpha():
 
-            del letter_list[position+1]
+            del letter_list[position + 1]
 
             position += 1
 
@@ -114,7 +114,6 @@ def week_three(txt):
     final_txt = ''.join(letter_list)
 
     return final_txt
-
 
 
 def week_four(txt):
@@ -144,7 +143,7 @@ def week_four(txt):
             possible_last_letters = {'h', 'r'}
 
             if last_letter in possible_last_letters:
-                letter_list[counter: counter+2] = dict_to_know[lowercase_letter]
+                letter_list[counter: counter + 2] = dict_to_know[lowercase_letter]
                 counter += 1
 
             else:
@@ -173,7 +172,7 @@ def week_five(txt):
         if lowercase_letter == 'o' and last_letter == 'u':
             lowercase_or_uppercase = {'o': 'u', 'O': 'U'}
 
-            letter_list[counter: counter+2] = lowercase_or_uppercase[letter]
+            letter_list[counter: counter + 2] = lowercase_or_uppercase[letter]
 
             counter += 1
 
@@ -199,7 +198,6 @@ def week_five(txt):
         second_txt = second_txt.replace(word, new_word)
 
     re_to_find_sm = r'\b[sS][mM][a-zA-Z]*'
-
 
     all_words_starting_with_sm = re.findall(re_to_find_sm, second_txt)
 

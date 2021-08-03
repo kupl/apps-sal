@@ -1,12 +1,14 @@
 from math import sqrt
 
-def partitions(n, floor = 2):
+
+def partitions(n, floor=2):
     parts = [[n]]
     for i in range(floor, int(sqrt(n)) + 1):
         if n % i == 0:
             for part in partitions(n // i, i):
-                parts.append([i] + part) 
+                parts.append([i] + part)
     return parts
+
 
 def prod_int_partII(n, s):
     lists = []

@@ -14,20 +14,25 @@ def isqrt(num):
         bit >>= 2
     return res
 
+
 def sqrt(n):
     # return n ** .5                                 ## Nope
     # return __import__('math').sqrt(n)              ## Not enough precision...
     # return __import__('decimal').Decimal(n).sqrt() ## That one works great!
-    return isqrt(n) ## The very best, you don't need those nasty floating point numbers
+    return isqrt(n)  # The very best, you don't need those nasty floating point numbers
+
 
 def s_num(n):
     return sqrt(n) ** 2 == n
 
+
 def g_p_num(n):
     return s_num(24 * n + 1)
+
 
 def p_num(n):
     return g_p_num(n) and sqrt(24 * n + 1) % 6 == 5
 
+
 def s_p_num(n):
-    return s_num(n) and p_num(n) 
+    return s_num(n) and p_num(n)
