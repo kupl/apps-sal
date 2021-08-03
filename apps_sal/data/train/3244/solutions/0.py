@@ -5,5 +5,3 @@ def cheapest_quote(n):
         result += n // q * c
         n = n % q
     return round(result, 2)
-        
-
