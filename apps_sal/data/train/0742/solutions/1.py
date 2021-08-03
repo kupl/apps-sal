@@ -40,11 +40,15 @@ def solve():
             return
     print(1)
 
+
 def main():
     t = int(input().strip())
     for _ in range(t):
         solve()
 
+
 def __starting_point():
     main()
+
+
 __starting_point()
