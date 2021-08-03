@@ -7,7 +7,7 @@ Q = int(input())
 
 for item in range(Q):
     K = int(input())
-    
+
     total = 0
     for i in range(len(arr)):
         hasK = False
@@ -22,5 +22,5 @@ for item in range(Q):
                 if hasK:
                     total += 1
                 j += 1
-                    
+
     print(total)

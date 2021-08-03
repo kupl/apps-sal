@@ -7,4 +7,3 @@ for ch in s:
     if ch.isalpha():
         ans += "." + ch
 print(ans)
-

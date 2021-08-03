@@ -37,4 +37,3 @@ while q:
             ans += count
 
     print(ans)
-

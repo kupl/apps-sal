@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     s = sys.stdin.readline
     t = int(s())
@@ -17,7 +18,7 @@ def main():
                 namecounter[letter] += 1
             else:
                 namecounter[letter] = 1
-    
+
         for letter in crush:
             if letter in crushcounter:
                 crushcounter[letter] += 1
@@ -32,7 +33,7 @@ def main():
                         already.append(letter)
                         continue
                     else:
-                        counter += abs(namecounter[letter]-crushcounter[letter])
+                        counter += abs(namecounter[letter] - crushcounter[letter])
             else:
                 counter += 1
             already.append(letter)
@@ -41,10 +42,13 @@ def main():
                 counter += 1
         values = {1: 'FRIENDS', 2: 'LOVE', 3: 'ADORE', 4: 'MARRIAGE', 5: 'ENEMIES', 6: 'SISTER'}
         result = 0
-        for i in range(1, 6+1):
-                result = (result+counter)%i
-        print(values[result+1])
-        
+        for i in range(1, 6 + 1):
+            result = (result + counter) % i
+        print(values[result + 1])
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

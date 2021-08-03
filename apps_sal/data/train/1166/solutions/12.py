@@ -9,8 +9,7 @@ while q:
     k = int(input())
     ans = 0
     for i in range(n):
-        for j in range(i + 1, n+1):
+        for j in range(i + 1, n + 1):
             if min(a[i:j]) == k:
                 ans += 1
     print(ans)
-

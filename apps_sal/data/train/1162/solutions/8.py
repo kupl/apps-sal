@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 try:
     import psyco
@@ -15,8 +15,9 @@ def main(n):
         if not (n % 7):
             sol = n
         n -= 4
-    
+
     return sol
+
 
 def __starting_point():
     T = int(input())
@@ -24,5 +25,6 @@ def __starting_point():
     for test in range(T):
         N = list(map(int, input().split()))[0]
         print(main(N))
+
 
 __starting_point()

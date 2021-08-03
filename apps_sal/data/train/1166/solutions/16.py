@@ -17,6 +17,5 @@ for query in range(int(input())):
     for subarr in subarrays:
         if min(subarr) == num:
             total += 1
-    
+
     print(total)
-    
