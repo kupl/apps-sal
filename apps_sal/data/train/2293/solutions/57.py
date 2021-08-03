@@ -28,4 +28,3 @@ for i in range(1, M):
     max_list[i] = max_idx
     ans[i] = max(ans_cand)
     print((ans[i]))
-

@@ -27,4 +27,3 @@ ans = 0
 for k in range(1, k_max):
     ans = max(ans, dp[k][0] + dp[k][1])
     print(ans)
-

@@ -1,11 +1,11 @@
 N = int(input())
-X = [0]*N
-Y = [0]*N
+X = [0] * N
+Y = [0] * N
 for i in range(N):
     x, y = list(map(int, input().split()))
     X[i], Y[i] = sorted([x, y])
 
-ans = (max(X)-min(X)) * (max(Y)-min(Y))
+ans = (max(X) - min(X)) * (max(Y) - min(Y))
 
 
 L = []
@@ -15,7 +15,7 @@ for i, y in enumerate(Y):
     L.append((y, i))
 L.sort()
 
-checker = [0]*N
+checker = [0] * N
 cnt = 0
 mi = float("inf")
 j = 0
@@ -25,7 +25,7 @@ for xy, n in L:
         checker[n] = 1
     else:
         checker[n] = 2
-    if cnt!=N:
+    if cnt != N:
         continue
     else:
         while True:
@@ -35,7 +35,6 @@ for xy, n in L:
                 j += 1
             else:
                 break
-        mi = min(mi, xy-xy2)
+        mi = min(mi, xy - xy2)
 
-print((min(ans, mi*(max(Y)-min(X)))))
-
+print((min(ans, mi * (max(Y) - min(X)))))

@@ -17,5 +17,3 @@ for v in vs:
     if v == max_v:
         res += 1
 print(res)
-
-

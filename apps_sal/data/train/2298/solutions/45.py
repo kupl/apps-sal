@@ -11,4 +11,3 @@ for i in range(1, N):
         L.append(i)
     minv = min(minv, A[i])
 print((len(L)))
-

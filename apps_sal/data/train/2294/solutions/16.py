@@ -5,6 +5,7 @@ def input_str(row):
         res.append(input().split())
     return res
 
+
 N = int(input())
 balls = input_str(N)
 balls = sorted([sorted([int(x), int(y)]) for x, y in balls], key=lambda x: x[0])
@@ -23,10 +24,9 @@ mina = xmax
 for i in range(N)[:-1]:
     mina = min(balls[i][1], mina)
     xmax = max(balls[i][1], xmax)
-    xmin = min(balls[i+1][0], mina)
+    xmin = min(balls[i + 1][0], mina)
     diff = min(diff, xmax - xmin)
 
 res2 = maxdiff * diff
 
 print(min(res1, res2))
-

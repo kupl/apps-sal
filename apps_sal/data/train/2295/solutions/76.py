@@ -15,7 +15,7 @@ def solve(N: int, A: "List[int]", B: "List[int]"):
     if ma == INF:
         print((0))
     else:
-        print((sum(A)-mb))
+        print((sum(A) - mb))
 
     return
 
@@ -38,5 +38,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

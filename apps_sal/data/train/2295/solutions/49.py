@@ -12,5 +12,4 @@ for _ in range(n):
 if flag:
     print((0))
 else:
-    print((aa-(mi if mi != 10**10 else 0)))
-
+    print((aa - (mi if mi != 10**10 else 0)))

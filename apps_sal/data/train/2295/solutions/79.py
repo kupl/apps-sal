@@ -9,11 +9,12 @@ b = []
 res = 0
 
 for i in range(n):
-    aa,bb = map(int,input().split())
+    aa, bb = map(int, input().split())
     a.append(aa)
     b.append(bb)
 
-def f(a,b):
+
+def f(a, b):
     c = []
     d = []
     judge = True
@@ -23,8 +24,8 @@ def f(a,b):
         if a[i] != b[i]:
             judge = False
     if judge:
-        return cnt,c,d
-    
+        return cnt, c, d
+
     for i in range(len(a)):
         if a[i] <= b[i]:
             cnt += b[i]
@@ -32,7 +33,7 @@ def f(a,b):
             c.append(a[i])
             d.append(b[i])
     if len(c) == 1 or max(d) == 0:
-        return cnt,[],[]
+        return cnt, [], []
     else:
         mi = min(d)
         flag = True
@@ -43,14 +44,15 @@ def f(a,b):
                 flag = False
             else:
                 if pl_flag and d[i] > 0:
-                    c[i] = d[i]-1
+                    c[i] = d[i] - 1
                     pl_flag = False
                 else:
                     c[i] = d[i]
-        return cnt,c,d
+        return cnt, c, d
+
 
 while True:
-    plus,a,b = f(a,b)
+    plus, a, b = f(a, b)
     res += plus
     if a == []:
         print(res)

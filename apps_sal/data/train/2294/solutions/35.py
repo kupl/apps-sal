@@ -1,6 +1,6 @@
 def main():
     n = int(input())
-    xy = [list(map(int, input().split())) for _ in [0]*n]
+    xy = [list(map(int, input().split())) for _ in [0] * n]
     for i in range(n):
         x, y = xy[i]
         if x > y:
@@ -15,7 +15,7 @@ def main():
     min_y = min(y_list)
 
     # 左右に分ける解
-    ans = (max_x-min_x)*(max_y-min_y)
+    ans = (max_x - min_x) * (max_y - min_y)
     if y_list[0] == max_y:
         print(ans)
         return
@@ -25,20 +25,19 @@ def main():
         if max_y == y_list[i]:
             break
     min_small = min(y_list[0], x_list[i])
-    max_small = max(y_list[0], x_list[n-1])
+    max_small = max(y_list[0], x_list[n - 1])
 
     x_list.pop(i)
     y_list.pop(i)
 
-    for i in range(1, n-1):
-        width2 = max_small-min(min_small, x_list[i])
-        ans = min(ans, width*width2)
+    for i in range(1, n - 1):
+        width2 = max_small - min(min_small, x_list[i])
+        ans = min(ans, width * width2)
         max_small = max(max_small, y_list[i])
         min_small = min(min_small, y_list[i])
-    width2 = max_small-min_small
-    ans = min(ans, width*width2)
+    width2 = max_small - min_small
+    ans = min(ans, width * width2)
     print(ans)
 
 
 main()
-

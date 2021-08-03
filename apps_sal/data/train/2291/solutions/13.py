@@ -5,10 +5,10 @@ def solve():
     N = int(input())
     D = [int(input()) for i in range(N)]
     if sum(D) % 2 > 0:
-        print ('-1')
+        print('-1')
         return
-    Di = sorted([(di, i) for i, di in enumerate(D)], key = lambda x : x[0], reverse = True)
-    d_to_i = {dd:i for dd, i in Di}
+    Di = sorted([(di, i) for i, di in enumerate(D)], key=lambda x: x[0], reverse=True)
+    d_to_i = {dd: i for dd, i in Di}
     # child = [[] for i in range(N)]
     ans = []
     n_child = [1] * N
@@ -25,20 +25,22 @@ def solve():
             if n_child[node_par] == N:
                 break
         else:
-            print ('-1')
+            print('-1')
             return
     # check if Di satisfied or not
     d_min, i_min = Di[-1]
     if d_child[i_min] != d_min:
-        print ('-1')
+        print('-1')
         return
     # for i in range(N):
     #     for j in child[i]:
     #         print str(i + 1) + ' ' + str(j + 1)
-    for i,j in ans:
+    for i, j in ans:
         print((str(i) + ' ' + str(j)))
+
 
 def __starting_point():
     solve()
+
 
 __starting_point()

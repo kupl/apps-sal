@@ -11,4 +11,3 @@ ans = sum(A)
 
 ans -= min([b for a, b in AB if b < a])
 print(ans)
-

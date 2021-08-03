@@ -2,11 +2,11 @@ N, T = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
 low = [A[0]]
-high = [A[N-1]]
+high = [A[N - 1]]
 for i in range(1, N):
-    low.append(min(A[i], low[i-1]))
-for i in reversed(list(range(N-1))):
-    high.append(max(A[i], high[N-2-i]))
+    low.append(min(A[i], low[i - 1]))
+for i in reversed(list(range(N - 1))):
+    high.append(max(A[i], high[N - 2 - i]))
 
 high.reverse()
 max_gap = max([high[i] - low[i] for i in range(N)])
@@ -24,4 +24,3 @@ for i in range(N):
                 num += 1
 
 print(num)
-

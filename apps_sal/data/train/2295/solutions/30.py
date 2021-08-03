@@ -15,4 +15,4 @@ for i in range(N):
 if k == 10**15:
     print(0)
 else:
-    print(s-k)
+    print(s - k)

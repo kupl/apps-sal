@@ -16,4 +16,3 @@ for a, b in zip(A, B):
     if a > b:
         dis = min(dis, b)
 print((ans - dis))
-

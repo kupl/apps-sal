@@ -11,7 +11,7 @@ ma = A[-1]
 mas = 1
 resma = 0
 rescc = 0
-for i in range(N-2, -1 ,-1):
+for i in range(N - 2, -1, -1):
     if A[i] > ma:
         ma = A[i]
         mas = 1

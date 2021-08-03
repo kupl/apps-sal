@@ -1,6 +1,7 @@
 n = int(input())
 f = [[a, 1] for a in map(int, input().split())]
-dot = lambda p, q : sorted(p + q)[-2:]
+def dot(p, q): return sorted(p + q)[-2:]
+
 
 for d in range(n):
     for U in range(1 << n):

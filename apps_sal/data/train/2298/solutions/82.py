@@ -8,8 +8,7 @@ for i in reversed(list(range(N))):
     if towns[i] >= p:
         p = towns[i]
     else:
-        r.append(p-towns[i])
+        r.append(p - towns[i])
 
 res = r.count(max(r))
 print(res)
-

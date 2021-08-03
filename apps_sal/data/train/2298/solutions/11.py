@@ -7,6 +7,7 @@ input_lines = input()
 items = input_lines.split()
 As = [int(x) for x in items]
 
+
 def my_func(N, T, As):
     buys = T // 2
     counts = 0
@@ -23,5 +24,6 @@ def my_func(N, T, As):
                 val_earn = diff
                 counts = 1
     print(counts)
+
 
 my_func(N, T, As)

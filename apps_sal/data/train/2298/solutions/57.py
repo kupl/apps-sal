@@ -12,4 +12,3 @@ for i, A in enumerate(As[1:]):
 
 cnts = Counter(profits)
 print((cnts[max(cnts.keys())]))
-

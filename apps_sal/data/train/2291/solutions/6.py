@@ -3,6 +3,7 @@ import sys
 
 sys.setrecursionlimit(101010)
 
+
 def dfs(v, adj_list, depth, visited):
     visited[v] = True
     x = depth
@@ -62,7 +63,6 @@ def solve(n, d):
         print(('{} {}'.format(u, v)))
 
 
-
 def main():
     n = input()
     n = int(n)
@@ -71,7 +71,6 @@ def main():
         di = input()
         di = int(di)
         d.append((di, i))
-
 
     solve(n, d)
 

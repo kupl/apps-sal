@@ -19,5 +19,5 @@ def main():
             num_ma += 1
     print(num_ma)
 
-main()
 
+main()

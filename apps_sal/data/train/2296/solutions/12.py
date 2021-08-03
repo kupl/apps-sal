@@ -1,10 +1,14 @@
 # Binary Indexed Tree (Fenwick Tree)
+import copy
+
+
 class BIT():
     """一点加算、区間取得クエリをそれぞれO(logN)で答える
     add: i番目にvalを加える
     get_sum: 区間[l, r)の和を求める
     i, l, rは0-indexed
     """
+
     def __init__(self, n):
         self.n = n
         self.bit = [0] * (n + 1)
@@ -27,8 +31,6 @@ class BIT():
         """区間[l, r)の和を求める"""
         return self._sum(r) - self._sum(l)
 
-
-import copy
 
 s = input()
 n = len(s)
@@ -53,18 +55,18 @@ memo2 = copy.deepcopy(memo)
 ans_cnt = 0
 word = ""
 for i in range(n):
-    if memo2[s[i]]*2 > memo[s[i]] + 1:
+    if memo2[s[i]] * 2 > memo[s[i]] + 1:
         memo2[s[i]] -= 1
         ans_cnt += i - len(left)
         left.append(s[i])
-    elif memo2[s[i]]*2 == memo[s[i]] + 1:
+    elif memo2[s[i]] * 2 == memo[s[i]] + 1:
         word = s[i]
         memo2[s[i]] -= 1
         right.append(s[i])
     else:
         memo2[s[i]] -= 1
         right.append(s[i])
- 
+
 if word != "":
     for i in range(len(right)):
         if right[i] == word:

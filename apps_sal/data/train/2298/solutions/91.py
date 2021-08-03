@@ -17,4 +17,3 @@ for i in range(1, N):
             cd = d
             cnt = 1
 print(cnt)
-

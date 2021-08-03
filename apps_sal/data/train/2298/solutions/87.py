@@ -16,4 +16,3 @@ for a in A[1:]:
         d = r - l
 
 print(ans)
-

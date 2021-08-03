@@ -8,4 +8,3 @@ for _ in range(N):
         minB = min(minB, y)
 
 print((max(0, S - minB)))
-

@@ -12,4 +12,3 @@ for i in range(n - 2, -1, -1):
         cnt += 1
     m = max(m, a[i])
 print(cnt)
-

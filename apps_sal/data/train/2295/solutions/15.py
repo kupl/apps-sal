@@ -14,12 +14,13 @@ def main():
     if (A == B).all():
         print((0))
         return
-    
+
     ans = A.sum() - B[A > B].min()
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

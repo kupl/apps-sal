@@ -8,9 +8,11 @@ def S(): return input()
 def IIR(n): return [II() for i in range(n)]
 def LIR(n): return [LI() for i in range(n)]
 def SR(n): return [S() for i in range(n)]
+
+
 mod = 1000000007
 
-#A
+# A
 """
 a,b = LS()
 c = int(a+b)
@@ -21,7 +23,7 @@ for i in range(1,1000):
 print("No")
 """
 
-#B
+# B
 """
 a,b = LI()
 if a*b <= 0:
@@ -36,7 +38,7 @@ else:
         print("Positive")
 """
 
-#C
+# C
 """
 n = II()
 s = SR(n)
@@ -56,7 +58,7 @@ for i in range(5):
 print(ans)
 """
 
-#D
+# D
 """
 n = II()
 d = LIR(n)
@@ -82,7 +84,7 @@ for i in p:
         an = max(an, ans[a])
     print(an)
 """
-#E
+# E
 
 """
 s = list(S())
@@ -96,7 +98,7 @@ for i in range(1,len(s)):
 print(ans)
 """
 
-#F
+# F
 """
 n = II()
 x,y = LI()
@@ -114,7 +116,7 @@ for _ in range(n-1):
         y = b*i
 print(x+y)
 """
-#G
+# G
 """
 s = list(S())
 p = 0
@@ -127,13 +129,13 @@ for i in s:
 ans = (g-p)//2
 print(ans)
 """
-#H
-n,t = LI()
+# H
+n, t = LI()
 a = LI()
 b = []
 for i in range(n):
-    b.append([i,a[i]])
-b.sort(key = lambda x:x[1])
+    b.append([i, a[i]])
+b.sort(key=lambda x: x[1])
 b = b[::-1]
 m = []
 if n == 1:
@@ -146,33 +148,32 @@ for j in range(n):
         i += 1
 ans = 0
 ma = 0
-for i in range(n-1):
-    ma = max(ma,m[i]-a[i])
-for i in range(n-1):
-    if m[i]-a[i] == ma:
+for i in range(n - 1):
+    ma = max(ma, m[i] - a[i])
+for i in range(n - 1):
+    if m[i] - a[i] == ma:
         ans += 1
 print(ans)
-#I
+# I
 
-#J
+# J
 
-#K
+# K
 
-#L
+# L
 
-#M
+# M
 
-#N
+# N
 
-#O
+# O
 
-#P
+# P
 
-#Q
+# Q
 
-#R
+# R
 
-#S
+# S
 
-#T
-
+# T

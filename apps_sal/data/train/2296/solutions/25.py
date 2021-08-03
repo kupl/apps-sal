@@ -2,6 +2,7 @@ from collections import deque
 import sys
 input = sys.stdin.readline
 
+
 class FenwickTree:
     def __init__(self, size):
         self.data = [0] * (size + 1)
@@ -81,6 +82,7 @@ class FenwickTree2D:
                 j -= j & -j
             i -= i & -i
         return ret
+
 
 S = list(map(lambda c: ord(c) - ord('a'), input().rstrip()))
 N = len(S)

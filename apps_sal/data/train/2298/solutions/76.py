@@ -1,4 +1,15 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
 
 sys.setrecursionlimit(10**7)
 inf = 10**10
@@ -6,8 +17,8 @@ mod = 10**9 + 7
 
 
 def f():
-    n,t = list(map(int,input().split()))
-    a = list(map(int,input().split()))
+    n, t = list(map(int, input().split()))
+    a = list(map(int, input().split()))
     m = 0
     mc = inf
     r = 0
@@ -23,5 +34,5 @@ def f():
             r += 1
     return r
 
-print((f()))
 
+print((f()))

@@ -7,4 +7,3 @@ for i in range(n):
     if a > b:
         t = min(t, b)
 print((max(0, ans - t)))
-

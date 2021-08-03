@@ -9,15 +9,15 @@
 N, T = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
-diff = [0]*N
+diff = [0] * N
 
 mini = A[0]
 for i in range(1, N):
-	now = A[i]
-	if now <= mini:
-		mini = now
-	else:
-		diff[i] = now - mini
+    now = A[i]
+    if now <= mini:
+        mini = now
+    else:
+        diff[i] = now - mini
 
 sa = max(diff)
 
@@ -26,20 +26,19 @@ mini = A[0]
 l = 1
 r = 0
 for i in range(1, N):
-	now = A[i]
-	if mini == now:
-		l += 1
-	elif now < mini:
-		if r > 0:
-			ans += min(l, r)
-			r = 0
-		mini = now
-		l = 1
-	else: # now > mini
-		if now - mini == sa:
-			r += 1
+    now = A[i]
+    if mini == now:
+        l += 1
+    elif now < mini:
+        if r > 0:
+            ans += min(l, r)
+            r = 0
+        mini = now
+        l = 1
+    else:  # now > mini
+        if now - mini == sa:
+            r += 1
 
 if r > 0:
-	ans += min(l, r)
+    ans += min(l, r)
 print(ans)
-

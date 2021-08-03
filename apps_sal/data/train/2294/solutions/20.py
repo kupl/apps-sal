@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 N = int(input())
 X = []
 mih, mah, mil, mal = 10 ** 9, 0, 10 ** 9, 0
@@ -20,7 +22,7 @@ for x, y in X:
         continue
     Y.append((x, y))
 
-Y = sorted(Y, key = lambda a: a[0])
+Y = sorted(Y, key=lambda a: a[0])
 Z = [(0, mal)]
 may = 0
 for x, y in Y:
@@ -30,5 +32,5 @@ for x, y in Y:
 
 Z.append((mih, 10 ** 9))
 for i in range(len(Z) - 1):
-    ans = min(ans, (Z[i][1] - Z[i+1][0]) * (mah - mil))
+    ans = min(ans, (Z[i][1] - Z[i + 1][0]) * (mah - mil))
 print(ans)

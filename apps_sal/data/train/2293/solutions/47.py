@@ -16,7 +16,7 @@ def main():
                 if t7 > t3:
                     t3, t4 = t7, t8
         d[i] = [(t1, t2), (t3, t4)]
-        ans = max(ans, t1+t3)
+        ans = max(ans, t1 + t3)
         print(ans)
 
 

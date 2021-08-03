@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 def inpl(): return map(int, input().split())
+
+
 N, T = inpl()
 A = tuple(inpl())
 m = A[0]

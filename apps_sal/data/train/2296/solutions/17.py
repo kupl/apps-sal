@@ -68,4 +68,3 @@ def solve(s):
 
 
 print((solve(input())))
-

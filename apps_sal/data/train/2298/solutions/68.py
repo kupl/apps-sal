@@ -16,4 +16,3 @@ for i, v in enumerate(a[1:], 1):
 maxv = max(value)
 # print(maxv)
 print((value.count(maxv)))
-
