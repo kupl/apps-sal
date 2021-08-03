@@ -3,4 +3,3 @@ def double_char(s):
     for x in range(len(s)):
         hold += (s[x] * 2)
     return hold
-

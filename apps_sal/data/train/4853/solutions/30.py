@@ -4,4 +4,3 @@ def double_char(s):
         z += (s[i])
         z += (s[i])
     return z
-

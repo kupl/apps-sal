@@ -3,5 +3,5 @@ def double_char(s):
     result = ""
     for i in range(n):
         result += s[i] * 2
-    
+
     return result

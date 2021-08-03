@@ -11,4 +11,3 @@ def hor_mirror(strng: str) -> str:
 
 def oper(fct: Callable[[str], str], s) -> str:
     return fct(s)
-

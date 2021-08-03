@@ -3,5 +3,3 @@ def double_char(s):
     for c in s:
         new_string = new_string + c + c
     return new_string
-        
-

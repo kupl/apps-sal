@@ -1,4 +1,4 @@
-def solution(molar_mass1, molar_mass2, given_mass1, given_mass2, volume, temp) :
+def solution(molar_mass1, molar_mass2, given_mass1, given_mass2, volume, temp):
     # your code goes here
-    n = (given_mass1/molar_mass1) + (given_mass2/molar_mass2)
-    return n * 0.082 * (temp +273.15) /(volume)
+    n = (given_mass1 / molar_mass1) + (given_mass2 / molar_mass2)
+    return n * 0.082 * (temp + 273.15) / (volume)

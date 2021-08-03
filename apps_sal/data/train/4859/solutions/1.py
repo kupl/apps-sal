@@ -2,10 +2,11 @@ from collections import Counter
 from math import factorial
 import operator
 
+
 def ssc_forperm(xs):
     n = len(xs)
     p = factorial(n) // reduce(operator.mul,
-        map(factorial, Counter(xs).itervalues()))
+                               map(factorial, Counter(xs).itervalues()))
     sxs = sorted(xs)
     return [
         {"total perm": p},

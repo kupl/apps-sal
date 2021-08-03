@@ -1,1 +1,1 @@
-adjust=lambda b,n:n+-n%b
+def adjust(b, n): return n + -n % b

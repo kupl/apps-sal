@@ -3,7 +3,7 @@ def vert_mirror(strng):
     vert_m = ''
 
     for word in a:
-        vert_m +=word[::-1] +"\n"
+        vert_m += word[::-1] + "\n"
 
     return vert_m.strip("\n")
 
