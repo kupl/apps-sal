@@ -3,9 +3,11 @@ def f(n):
     t = [1, 0] * (n // 2 + 1)
     t[0], t[1], t[2] = 1, 1, 0
     for i in range(3, m):
-        if t[i] == 0: t[i * i:: 2 * i] = [1] * ((n - i * i) // (2 * i) + 1)
+        if t[i] == 0:
+            t[i * i:: 2 * i] = [1] * ((n - i * i) // (2 * i) + 1)
     for i in range(n - 1, -1, -1):
-        if t[i]: t[i] = t[i + 1] + 1
+        if t[i]:
+            t[i] = t[i + 1] + 1
     return t
 
 

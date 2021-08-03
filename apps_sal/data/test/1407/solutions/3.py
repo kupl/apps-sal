@@ -23,7 +23,8 @@ sieve()
 
 dst = 0
 for i in range(maxn, 0, -1):
-    if isprime[i]: dst = 0
+    if isprime[i]:
+        dst = 0
     d[i] = min(d[i], dst)
     dst += 1
 

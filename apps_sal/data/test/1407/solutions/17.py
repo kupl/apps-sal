@@ -40,5 +40,6 @@ for j in range(m):
     curr = 0
     for i in range(n):
         curr += req[i][j]
-    if curr < mini: mini = curr
+    if curr < mini:
+        mini = curr
 print(mini)

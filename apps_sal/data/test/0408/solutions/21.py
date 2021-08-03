@@ -10,5 +10,6 @@ while cnt < total and n > 0 and m > 0:
         n -= 2
         m -= 1
 
-if n < 0 or m < 0: cnt -= 1
+if n < 0 or m < 0:
+    cnt -= 1
 print(cnt)

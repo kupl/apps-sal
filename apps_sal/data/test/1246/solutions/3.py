@@ -25,7 +25,8 @@ for i in range(n):
     # removeMin
     if not heap:
         ops.append("insert 1")
-    else: heappop(heap)
+    else:
+        heappop(heap)
     ops.append(ln)
 print(len(ops))
 print("\n".join(ops))

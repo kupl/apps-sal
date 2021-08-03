@@ -1,5 +1,6 @@
 n, m, k = list(map(int, input().split()))
-if k < n: print(k + 1, 1)
+if k < n:
+    print(k + 1, 1)
 else:
     k -= n
     m -= 1

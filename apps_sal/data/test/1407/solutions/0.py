@@ -11,7 +11,8 @@ dst = maxn
 d = [dst for i in range(maxn)]
 
 for i in reversed(list(range(maxn))):
-    if ar[i]: dst = 0
+    if ar[i]:
+        dst = 0
     d[i] = min(d[i], dst)
     dst += 1
 

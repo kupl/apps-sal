@@ -4,7 +4,8 @@ q, ans, k = [], [], 0
 for i in range(n):
     ss = input()
     if ss != "removeMin":
-        s, mm = ss.split(); m = int(mm)
+        s, mm = ss.split()
+        m = int(mm)
         if s == 'insert':
             k += 1
             heappush(q, m)

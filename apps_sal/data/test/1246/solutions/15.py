@@ -12,7 +12,8 @@ def main():
     all = sys.stdin.readlines()
     for ss in all:
         if ss != "removeMin\n":
-            a, bb = ss.split(); b = int(bb)
+            a, bb = ss.split()
+            b = int(bb)
 
             if a == "insert":
                 heappush(heap, b)

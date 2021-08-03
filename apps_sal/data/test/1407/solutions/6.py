@@ -17,7 +17,9 @@ def sieve(r):
 
 
 primes = list(sieve(1000003))
-II = lambda: list(map(int, input().split()))
+def II(): return list(map(int, input().split()))
+
+
 n, m = II()
 grid = [[primes[bisect_left(primes, x)] - x for x in II()] for _ in range(n)]
 print(min(min(sum(row) for row in grid), min(sum(col) for col in zip(*grid))))

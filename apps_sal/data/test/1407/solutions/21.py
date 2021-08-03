@@ -5,7 +5,8 @@ N = int(1e5 + 4)
 is_prime = [0] * N
 is_prime[0] = is_prime[1] = 1
 for i in range(2, N):
-    if is_prime[i] == 1: continue
+    if is_prime[i] == 1:
+        continue
     for j in range(i * 2, N, i):
         is_prime[j] = 1
 is_prime[-1] = N - 1

@@ -21,11 +21,13 @@ limit = 110000
 primes = [0, 0] + [1] * limit
 for i in range(2, limit):
     if primes[i]:
-        for j in range(i * i, limit, i): primes[j] = 0
+        for j in range(i * i, limit, i):
+            primes[j] = 0
 
 u = limit
 for i in reversed(range(limit)):
-    if primes[i]: u = i
+    if primes[i]:
+        u = i
     primes[i] = u - i
 
 n, m = [int(x) for x in input().split()]

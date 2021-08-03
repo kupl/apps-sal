@@ -10,7 +10,8 @@ def main():
     for i in range(n):
         ss = input()
         if ss != "removeMin":
-            a, bb = ss.split(); b = int(bb)
+            a, bb = ss.split()
+            b = int(bb)
 
             if a == "insert":
                 hsize += 1

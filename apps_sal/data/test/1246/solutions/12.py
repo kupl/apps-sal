@@ -10,7 +10,8 @@ def insert(heap, val):
     while idx > 0:
         p = (idx - 1) >> 1
 
-        if heap[p] <= heap[idx]: break
+        if heap[p] <= heap[idx]:
+            break
 
         heap[p], heap[idx] = heap[idx], heap[p]
 
@@ -24,12 +25,14 @@ def removeMin(heap):
 
     L = len(heap)
 
-    if L == 0: return
+    if L == 0:
+        return
     heap[0] = last
     idx = 0
     while True:
         l = (idx << 1) + 1
-        if l >= L: return
+        if l >= L:
+            return
 
         r = l + 1
         best = r if r < L and heap[r] < heap[l] else l

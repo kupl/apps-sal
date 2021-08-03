@@ -36,7 +36,7 @@ def generate_primes(n):
     for i in range(3, n + 1, 2):
         if isPrime[i]:
             res.append(i)
-    return res;
+    return res
 
 
 def main():

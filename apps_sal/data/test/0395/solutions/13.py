@@ -1,5 +1,6 @@
 n = list(map(int, input().split()))
-s = 0; b = False
+s = 0
+b = False
 for i in range(6):
     s += n[i]
 for i in range(6):

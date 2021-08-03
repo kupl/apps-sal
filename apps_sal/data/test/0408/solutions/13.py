@@ -1,6 +1,7 @@
 import sys
 # sys.stdin = open('in.txt')
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
+
 
 n, m = R()
 if 2 * n <= m:

@@ -2,7 +2,7 @@ from itertools import permutations as perms
 
 
 def main():
-    read = lambda: tuple(map(int, input().split()))
+    def read(): return tuple(map(int, input().split()))
     l = read()
     for p in perms(l):
         # print(*p)
