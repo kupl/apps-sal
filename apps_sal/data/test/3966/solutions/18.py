@@ -9,4 +9,5 @@ if n != 1:
         sum += i * l[i - 2]
     sum += n * l[n - 1]
     print(sum)
-else: print(l[0])
+else:
+    print(l[0])

@@ -8,7 +8,8 @@ for i in range(q):
     tv = v
     cnt, len = 0, 0
     while tv > 0:
-        if tv & 1: cnt += 1
+        if tv & 1:
+            cnt += 1
         len += 1
         tv //= 2
     if cnt != len:

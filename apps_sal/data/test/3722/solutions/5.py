@@ -14,7 +14,9 @@ def inv_mod(a, p=10**9 + 7):
 
 
 MOD = 10**9 + 7
-inpl = lambda: list(map(int, input().split()))
+def inpl(): return list(map(int, input().split()))
+
+
 N = int(input())
 a = ord(input()) - ord('A')
 b = ord(input()) - ord('A')

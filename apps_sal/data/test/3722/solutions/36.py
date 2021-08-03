@@ -19,14 +19,19 @@ def dp():
     return (nA + nB) % mod
 
 
-if N <= 3: ans(1)
+if N <= 3:
+    ans(1)
 
-if cAA == 'A' and cBB == 'B': ans(1)
+if cAA == 'A' and cBB == 'B':
+    ans(1)
 
 if cAA == cBB:
-    if cAA == cAB: ans(1)
-    if cAB == cBA: ans(dp())
+    if cAA == cAB:
+        ans(1)
+    if cAB == cBA:
+        ans(dp())
     ans(pow(2, N - 3, mod))
 
-if cAB == cBA: ans(dp())
+if cAB == cBA:
+    ans(dp())
 ans(pow(2, N - 3, mod))

@@ -1,5 +1,6 @@
 def main(n, caa, cab, cba, cbb):
-    if n < 4: return 1
+    if n < 4:
+        return 1
     ary = [caa, cab, cba, cbb]
     t = 'AB'
     mod = 10**9 + 7

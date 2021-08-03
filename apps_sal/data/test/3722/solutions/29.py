@@ -1,6 +1,8 @@
 import sys
 sys.setrecursionlimit(2 * 10**5 + 1)
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
+
 n = int(input())
 a = input()
 b = input()

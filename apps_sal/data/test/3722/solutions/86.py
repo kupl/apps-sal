@@ -8,7 +8,9 @@ fainv[-1] = pow(fa[-1], P - 2, P)
 for i in range(nn)[::-1]:
     fainv[i] = fainv[i + 1] * (i + 1) % P
 
-C = lambda a, b: fa[a] * fainv[b] % P * fainv[a - b] % P if 0 <= b <= a else 0
+
+def C(a, b): return fa[a] * fainv[b] % P * fainv[a - b] % P if 0 <= b <= a else 0
+
 
 N = int(input())
 if N < 4:

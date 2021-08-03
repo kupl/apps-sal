@@ -23,7 +23,8 @@ if (ab == "A" and ba == "A") or (ab == "B" and ba == "B"):
     dp[0] = 1
     for i in range(n - 1):
         for j in range(2, n + 1):
-            if j + i > n: break
+            if j + i > n:
+                break
             dp[i + j] += dp[i]
             dp[i + j] %= mod
     print((dp[n]))
@@ -37,7 +38,8 @@ if True:
     dp[0] = 1
     for i in range(n - 1):
         for j in range(2, n + 1):
-            if j + i > n: break
+            if j + i > n:
+                break
             dp[i + j] += dp[i] * (j - 1)
             dp[i + j] %= mod
     ans = 0

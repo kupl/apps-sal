@@ -34,8 +34,10 @@ r = (ans[2], ans[3], ans[4], ans[5])
 if r == (1, 1, 1, 1):
     print((1))
 elif r == (1, 1, 2, 4):
-    if N == 2: print((1))
-    else: print((pow(2, N - 3, MOD)))
+    if N == 2:
+        print((1))
+    else:
+        print((pow(2, N - 3, MOD)))
 elif r == (1, 1, 2, 3):
     x, y = 0, 1
     for i in range(N - 2):

@@ -13,7 +13,8 @@ def calc(n):
 
 
 def calc2(n):
-    if n == 1: return 2
+    if n == 1:
+        return 2
 
     dp = [[0] * 4 for _ in range(n)]
     dp[1][0] = 1  # aa
@@ -30,8 +31,10 @@ def calc2(n):
 
 
 def rev(s):
-    if s == 'A': return 'B'
-    else: return 'A'
+    if s == 'A':
+        return 'B'
+    else:
+        return 'A'
 
 
 # print(calc2(3))

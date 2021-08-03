@@ -13,7 +13,8 @@ P = 10 ** 9 + 7
 
 
 def calc(aa, ab, ba, bb):
-    if N <= 3: return 1
+    if N <= 3:
+        return 1
     ss = aa + ab + ba + bb
     if aa == "A" and bb == "B":
         return 1

@@ -20,7 +20,8 @@ if ab == "A":
         else:
             table = [0] * (N + 1)
             table[2] = 1
-            for i in range(1, N - 1): table[i + 2] = table[i + 1] + table[i]
+            for i in range(1, N - 1):
+                table[i + 2] = table[i + 1] + table[i]
             print(table[N] % mod)
             return
 if ab == "B":
@@ -34,6 +35,7 @@ if ab == "B":
         else:
             table = [0] * (N + 1)
             table[2] = 1
-            for i in range(1, N - 1): table[i + 2] = table[i + 1] + table[i]
+            for i in range(1, N - 1):
+                table[i + 2] = table[i + 1] + table[i]
             print(table[N] % mod)
             return

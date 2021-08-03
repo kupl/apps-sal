@@ -11,8 +11,10 @@ class comb():
             self.Fi.append(self.Fi[-1] * self.I[i] % mod)
 
     def com(self, n, k):
-        if n < k: return 0
-        if n < 0 or k < 0: return 0
+        if n < k:
+            return 0
+        if n < 0 or k < 0:
+            return 0
         return self.F[n] * (self.Fi[k] * self.Fi[n - k] % self.MOD) % self.MOD
 
 
@@ -32,7 +34,8 @@ if cab == cba:
     ans = 0
     for n in range((N - 2) // 2 + 1):
         m = N - 2 - n
-        if m < n: continue
+        if m < n:
+            continue
         ans = (ans + com.com(m, n)) % MOD
     print(ans)
     return

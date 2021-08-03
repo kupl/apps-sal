@@ -2,8 +2,8 @@ from functools import lru_cache
 import sys
 
 sys.setrecursionlimit(10**6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def II(): return int(sys.stdin.readline())
 def MI(): return map(int, sys.stdin.readline().split())
 def MI1(): return map(int1, sys.stdin.readline().split())
@@ -21,12 +21,14 @@ md = 10**9 + 7
 
 @lru_cache(maxsize=None)
 def f(a):
-    if a == 1 or a == 0: return 1
+    if a == 1 or a == 0:
+        return 1
     return (f(a - 1) + f(a - 2)) % md
 
 
 def solve():
-    if n < 4: return 1
+    if n < 4:
+        return 1
     if ab == "A":
         if aa == "A":
             return 1
