@@ -3,19 +3,19 @@ def solution(string, ending):
     s = list(string)
     el = len(e)
     sl = len(s)
-    if el == 0 :
+    if el == 0:
         return True
-    elif el > sl :
+    elif el > sl:
         return False
-    else :
+    else:
         i = sl - el
         j = 0
         ans = True
-        while i < sl :
-            if e[j] != s[i] :
+        while i < sl:
+            if e[j] != s[i]:
                 ans = False
                 break
-            i = i+1
-            j= j+1
+            i = i + 1
+            j = j + 1
         return ans
     pass

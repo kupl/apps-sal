@@ -1,4 +1,6 @@
 import math
+
+
 def temps(v0, slope, d_tot):
     time = 0
     gamma = 0

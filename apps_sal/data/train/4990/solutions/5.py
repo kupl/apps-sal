@@ -1,3 +1,3 @@
 def solution(string, ending):
     # your code here...
-    return ending == string[len(string)-len(ending):]
+    return ending == string[len(string) - len(ending):]

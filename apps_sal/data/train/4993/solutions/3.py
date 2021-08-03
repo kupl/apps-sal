@@ -31,7 +31,7 @@ def temps(v0, slope, d_tot):
         if abs(gamma) <= 0.00001:
             gamma = 0.0
 
-        v += (gamma*DELTA_T)
+        v += (gamma * DELTA_T)
         d += (v * DELTA_T / 60.0)
 
     return round(t)

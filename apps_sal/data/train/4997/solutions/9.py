@@ -8,11 +8,13 @@ def f(n):
                 r += j
     return r
 
+
 s = set()
 for i in range(528, 10000):
     j = int(str(i)[::-1])
     if i != j and f(i) == f(j):
         s |= {i, j}
+
 
 def equal_sigma1(n):
     return sum(x for x in s if x <= n)

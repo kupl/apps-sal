@@ -1,4 +1,6 @@
 from math import atan, sin
+
+
 def temps(v, slope, d_tot):
     answer = 0
     travelled = 0

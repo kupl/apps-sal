@@ -6,4 +6,3 @@ def bingo(card, numbers):
     diagonals = [set(d[(-1)**p * i] for i, d in enumerate(grid, p)) for p in (0, 1)]
     rows = lines + columns + diagonals
     return any(row.issubset(draw) for row in rows)
-

@@ -3,7 +3,7 @@ def solution(string, ending):
         return False
     if ending == '':
         return True
-    if string[-1].lower() == ending[-1].lower() :
+    if string[-1].lower() == ending[-1].lower():
         return True
     else:
         return False

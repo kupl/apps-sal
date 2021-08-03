@@ -1,1 +1,1 @@
-solution = lambda string, ending: string.endswith(ending)
+def solution(string, ending): return string.endswith(ending)

@@ -1,5 +1,6 @@
 import math
 
+
 def temps(v0, slope, d_tot):
     GRAVITY_ACC = 9.81 * 60.0 * 3.6
     DRAG = 60.0 * 0.3 / 3.6  # air drag

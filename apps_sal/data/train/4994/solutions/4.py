@@ -1,7 +1,7 @@
 def word_problem(
-    rules: List[Tuple[str, str]], 
-    from_str: str, 
-    to_str: str, 
+    rules: List[Tuple[str, str]],
+    from_str: str,
+    to_str: str,
     applications: int
 ) -> bool:
 
@@ -19,6 +19,5 @@ def word_problem(
                         applications - 1
                     )
                     i = from_str.find(f, i + 1)
-    
-    return any(recurse(from_str, applications))
 
+    return any(recurse(from_str, applications))
