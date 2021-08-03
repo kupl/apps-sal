@@ -7,7 +7,8 @@ p, q = [], ['1'] * n
 for i in d[10: 100]:
     if i:
         if len(i) == 1:
-            if x: y.append(i[0])
+            if x:
+                y.append(i[0])
             x = not x
         else:
             y.append(i[0])

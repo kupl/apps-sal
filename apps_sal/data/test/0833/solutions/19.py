@@ -1,6 +1,6 @@
 def main():
 
-    R = lambda: map(int, input().split())
+    def R(): return map(int, input().split())
     n, v = R()
     mlist = [0] * 3003
     for i in range(n):

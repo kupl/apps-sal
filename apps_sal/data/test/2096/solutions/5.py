@@ -11,7 +11,7 @@ for i in R:
     if len(c[i]) == 1:
         z[heap] += 1
         d[c[i][0]] = heap
-        heap = 3 - heap;
+        heap = 3 - heap
 for i in R:
     if len(c[i]) > 1:
         z[1] += 1

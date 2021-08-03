@@ -44,7 +44,8 @@ cnt2 = 0
 # print(mx)
 
 for i, x in enumerate(a):
-    if answ[i] == '1': continue
+    if answ[i] == '1':
+        continue
     if x in b:
         if d[x] == 0:
             answ[i] = '2'

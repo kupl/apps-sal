@@ -13,7 +13,8 @@ day, t_harvested, tot, curr = 0, 0, 0, []
 def remove_old():
     while fruits != [] and fruits[0][0] < day - 1:
         t = fruits.pop(0)
-        if DEBUG: print("Rotten {} on day {}".format(t, day))
+        if DEBUG:
+            print("Rotten {} on day {}".format(t, day))
     while curr != [] and curr[0][0] < day - 1:
         curr.pop(0)
         #print("Rotten/harvested {} on day {}".format(t, day))
@@ -23,7 +24,8 @@ def add_current():
     for f in fruits:
         if day - 1 <= f[0] <= day:
             curr.append(f)
-            if DEBUG: print("New fruit {} on day {}".format(f, day))
+            if DEBUG:
+                print("New fruit {} on day {}".format(f, day))
 
 
 def harvest_todays():
@@ -33,7 +35,8 @@ def harvest_todays():
     while curr != []:
         t = curr.pop(0)
         harvest = min(t[1], v - t_harvested)
-        if DEBUG: print("Harvested {} of {} on day {}".format(harvest, t, day))
+        if DEBUG:
+            print("Harvested {} of {} on day {}".format(harvest, t, day))
         t_harvested += harvest
         t[1] -= harvest
         tot += harvest

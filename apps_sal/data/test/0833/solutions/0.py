@@ -20,7 +20,8 @@ def read(mode=2):
 
 
 def write(s="\n"):
-    if isinstance(s, list): s = " ".join(s)
+    if isinstance(s, list):
+        s = " ".join(s)
     s = str(s)
     print(s, end="")
 
@@ -45,6 +46,7 @@ for day in range(1, 3002):
             a.pop(0)
         else:
             break
-    while a and a[0][0] == day - 1: a.pop(0)
+    while a and a[0][0] == day - 1:
+        a.pop(0)
     res += n
 print(res)
