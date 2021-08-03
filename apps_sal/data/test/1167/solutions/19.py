@@ -6,4 +6,5 @@ for _ in range(int(input())):
     b = math.ceil(b / d)
     if a + b <= k:
         print(a, b)
-    else: print(-1)
+    else:
+        print(-1)

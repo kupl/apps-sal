@@ -1,6 +1,7 @@
 from sys import stdin
 _data = iter(stdin.read().split('\n'))
-input = lambda: next(_data)
+def input(): return next(_data)
+
 
 n = int(input())
 ref, front = {}, {}

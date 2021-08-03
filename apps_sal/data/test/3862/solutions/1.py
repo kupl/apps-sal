@@ -31,7 +31,7 @@ def bfs(s):
     while frontier:
 
         if mark[s]:
-            break;
+            break
 
         next_frontier = []
         for u in frontier:

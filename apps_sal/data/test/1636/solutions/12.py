@@ -1,6 +1,7 @@
 from collections import deque
 n = int(input())
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
+
 
 p = []
 w = {}

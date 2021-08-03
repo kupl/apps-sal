@@ -1,6 +1,7 @@
 from math import *
 import sys
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
 
 t = int(input())
 for i in range(t):
