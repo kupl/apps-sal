@@ -4,7 +4,7 @@ def christmas_tree(height):
     result = []
     for i in range(height // 3):
         w = 1 + 2 * i
-        result.append("*" * w)        
+        result.append("*" * w)
         result.append("*" * (w + 2))
         result.append("*" * (w + 4))
     result.append("###")

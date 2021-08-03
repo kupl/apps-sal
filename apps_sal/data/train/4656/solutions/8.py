@@ -22,14 +22,14 @@ def center_of(chars):
     # get the list of character positions
     pos = []
     for i in range(n):
-        pos.append(2*i*(i+1) % len(chars))
+        pos.append(2 * i * (i + 1) % len(chars))
     # get the characters in the center
     for num in pos:
         center += chars[num]
     # test if there's are repeat in the center
-    for i in range(len(center)//2):
-        test = center[:i+1]
-        if center == test * (len(center)//len(test)):
+    for i in range(len(center) // 2):
+        test = center[:i + 1]
+        if center == test * (len(center) // len(test)):
             center = test
-            break  
+            break
     return center

@@ -2,9 +2,10 @@ import re
 
 nums = '1234567890'
 
+
 def validPhoneNumber(pn):
     if len(pn) != len("(123) 456-7890"):
-        return False  
+        return False
     elif pn[0] != '(':
         return False
     elif pn[1] not in nums or pn[2] not in nums or pn[3] not in nums:

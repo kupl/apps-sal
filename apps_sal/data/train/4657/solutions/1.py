@@ -1,7 +1,9 @@
 from itertools import permutations
 
+
 def sort_by_perfsq(lst):
     return sorted(lst, key=perfsq)
+
 
 def perfsq(n):
     perm = {int("".join(p)) for p in permutations(str(n))}

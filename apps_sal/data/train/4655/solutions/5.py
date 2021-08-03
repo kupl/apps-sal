@@ -1,1 +1,1 @@
-sort_me = lambda arr: sorted(arr, key=lambda x: str(x)[-1])
+def sort_me(arr): return sorted(arr, key=lambda x: str(x)[-1])

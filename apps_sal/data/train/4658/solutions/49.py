@@ -4,4 +4,3 @@ def max_product(lst, n_largest_elements):
     for i in a:
         prod = prod * i
     return prod
-
