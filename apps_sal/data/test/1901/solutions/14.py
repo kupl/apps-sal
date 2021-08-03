@@ -18,7 +18,7 @@ def main():
     flag = [0] * n
 
     def dfs(u, k):
-        flag[u] = k;
+        flag[u] = k
         for v in edge[u]:
             if(flag[v] == 0):
                 dfs(v, k)

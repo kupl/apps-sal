@@ -1,12 +1,13 @@
 import math
 #import random
 #import time
-r = lambda: int(input())
-ra = lambda: [*list(map(int, input().split()))]
+def r(): return int(input())
+def ra(): return [*list(map(int, input().split()))]
 
 
 def s(a):
-    if a <= 1: return False
+    if a <= 1:
+        return False
     else:
         for i in range(2, int(math.sqrt(a)) + 1):
             if a % i == 0:

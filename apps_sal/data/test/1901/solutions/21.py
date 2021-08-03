@@ -8,7 +8,8 @@ def dfs(graph, start):
     return visited, min([prices[v] for v in visited])
 
 
-n, m = list(map(int, input().split())); ans = 0
+n, m = list(map(int, input().split()))
+ans = 0
 prices = [None] + list(map(int, input().split()))
 friendship = {x: set() for x in range(1, n + 1)}
 

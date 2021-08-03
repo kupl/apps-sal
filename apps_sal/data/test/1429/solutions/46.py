@@ -52,7 +52,10 @@ N, S = input().split()
 N = int(N)
 ans = 0
 for i in range(N):
-    a = 0; t = 0; c = 0; g = 0;
+    a = 0
+    t = 0
+    c = 0
+    g = 0
     for j in range(i, N):
         if S[j] == 'A':
             a += 1

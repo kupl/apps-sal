@@ -1,5 +1,5 @@
 import math
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
 
 
 def codeforce1149A():
