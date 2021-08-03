@@ -7,6 +7,5 @@ def points(games):
             total_pts += 1
         elif x > y:
             total_pts += 3
-    
-    return total_pts
 
+    return total_pts

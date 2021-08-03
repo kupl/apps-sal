@@ -7,4 +7,3 @@ def am_I_afraid(day, num):
             "Saturday": num == 56,
             "Sunday": abs(num) == 666
             }[day]
-

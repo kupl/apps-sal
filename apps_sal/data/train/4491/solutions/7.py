@@ -1,4 +1,4 @@
-def solve(a,b):
+def solve(a, b):
     string = ""
     for i in a:
         if i not in b:
@@ -7,4 +7,3 @@ def solve(a,b):
         if i not in a:
             string = string + i
     return string
-

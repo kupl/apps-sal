@@ -1,5 +1,6 @@
 from typing import List
 
+
 def points(games: List[str]) -> int:
     """ Counts the points of the team in the championship. """
     points = 0
@@ -8,5 +9,5 @@ def points(games: List[str]) -> int:
         if scored_goals > lost_goals:
             points += 3
         elif scored_goals == lost_goals:
-            points +=1
+            points += 1
     return points

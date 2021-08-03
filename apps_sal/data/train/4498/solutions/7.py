@@ -1,6 +1,8 @@
-import lzma, base64
+import lzma
+import base64
 
-solution = lambda r: lzma.decompress(base64.b64decode("""\
+
+def solution(r): return lzma.decompress(base64.b64decode("""\
                                  /Td6WFo
                                  AAATm1r
                                  RGAgAhA

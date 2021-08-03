@@ -18,8 +18,8 @@ def positive_to_negative(binary):
 
     index = len(binary) - 1
     while index >= 0:
-        if index != len(binary) -1:
-            binary[index] += fill[index] + steps[index+1]
+        if index != len(binary) - 1:
+            binary[index] += fill[index] + steps[index + 1]
         else:
             binary[index] += fill[index]
 

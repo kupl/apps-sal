@@ -7,4 +7,3 @@ def solve(left, right):
         if char not in left:
             result += char
     return result
-
