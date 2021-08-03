@@ -7,4 +7,3 @@ def split_and_add(numbers, n):
         if len(numbers) == 1:
             return numbers
     return numbers
-

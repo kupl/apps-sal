@@ -5,5 +5,5 @@ def fold_to(distance):
     idx = 0
     while thickness < distance:
         thickness *= 2
-        idx +=1 
+        idx += 1
     return idx

@@ -1,5 +1,6 @@
 from itertools import zip_longest
 
+
 def split_and_add(numbers, n):
     while len(numbers) > 1 and n:
         n -= 1

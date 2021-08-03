@@ -1,2 +1,2 @@
 def split_by_value(k, elements):
-    return sorted(elements, key=lambda a: a>=k)
+    return sorted(elements, key=lambda a: a >= k)

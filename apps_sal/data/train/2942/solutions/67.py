@@ -6,6 +6,6 @@ def fold_to(distance):
             x += x
             count += 1
         return count
-    elif distance<0:
+    elif distance < 0:
         return None
     return 0

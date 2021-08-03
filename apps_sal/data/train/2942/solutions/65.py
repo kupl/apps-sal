@@ -1,4 +1,4 @@
-def fold_to(distance):   
+def fold_to(distance):
     thick = 0.0001
 
     if distance < 0:

@@ -4,6 +4,7 @@ def fold_to(distance):
         count = 0
         while thicc < distance:
             thicc = thicc * 2
-            count += 1 
+            count += 1
         return count
-    else: return None 
+    else:
+        return None

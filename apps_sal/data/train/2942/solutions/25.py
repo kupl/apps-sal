@@ -4,6 +4,6 @@ def fold_to(distance):
     if distance < 0:
         return None
     while paperThickness < distance:
-        paperThickness *=2
-        folds+=1
+        paperThickness *= 2
+        folds += 1
     return folds

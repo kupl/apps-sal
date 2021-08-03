@@ -5,6 +5,6 @@ def fold_to(distance):
     l = 0.0001
     while l < distance:
         l *= 2
-        res += 1 
-        
+        res += 1
+
     return res
