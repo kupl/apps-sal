@@ -1,1 +1,1 @@
-xor=lambda a,b: a!=b
+def xor(a, b): return a != b

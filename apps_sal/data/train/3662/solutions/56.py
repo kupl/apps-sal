@@ -1,1 +1,1 @@
-xor = lambda a, b:False if a and b else True if a or b else False
+def xor(a, b): return False if a and b else True if a or b else False

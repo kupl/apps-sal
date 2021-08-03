@@ -1,1 +1,1 @@
-xor = lambda a,b: a+b == 1
+def xor(a, b): return a + b == 1

@@ -1,2 +1,2 @@
-def xor(a,b):
-    return abs(a-b)
+def xor(a, b):
+    return abs(a - b)

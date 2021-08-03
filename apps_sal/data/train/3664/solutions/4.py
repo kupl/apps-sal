@@ -1,1 +1,1 @@
-cat_mouse=lambda s:['Caught!','Escaped!'][s.count('.')>3]
+def cat_mouse(s): return ['Caught!', 'Escaped!'][s.count('.') > 3]

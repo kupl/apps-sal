@@ -1,4 +1,4 @@
-def xor(a,b):
+def xor(a, b):
     '''Function evaluates 2 expressions and returns true if only one of them is true'''
     if a is True and b is True:
         return False

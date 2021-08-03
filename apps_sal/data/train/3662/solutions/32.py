@@ -1,2 +1,2 @@
-def xor(a,b):
-    return a or b if (a,b) != (True,True) else False
+def xor(a, b):
+    return a or b if (a, b) != (True, True) else False

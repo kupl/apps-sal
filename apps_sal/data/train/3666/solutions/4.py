@@ -1,1 +1,1 @@
-whitespace = lambda x: not x.strip()
+def whitespace(x): return not x.strip()
