@@ -9,7 +9,7 @@ for nt in range(t):
         a[i] = input()
         if a[i] in d:
             tc += [i]
-        d.add(a[i]);
+        d.add(a[i])
     for i in tc:
         for j in range(10):
             if a[i][:3] + str(j) not in d:

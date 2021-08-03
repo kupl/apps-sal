@@ -25,6 +25,7 @@ for _ in range(t):
                         out.append(nw)
                         done = True
                         break
-                if done: break
+                if done:
+                    break
     print(res)
     print('\n'.join(out))

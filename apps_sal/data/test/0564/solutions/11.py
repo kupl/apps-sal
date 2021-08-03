@@ -10,4 +10,5 @@ arr.sort()
 
 if sum(arr[:-1]) <= s:
     print("YES")
-else: print("NO")
+else:
+    print("NO")

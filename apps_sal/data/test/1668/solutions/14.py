@@ -14,7 +14,8 @@ for y in range(t):
     for i in range(n):
         key = 0
         for j in range(n):
-            if(j == i): continue
+            if(j == i):
+                continue
             if(a[i] == a[j]):
                 key = 1
                 break
