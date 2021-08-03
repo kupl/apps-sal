@@ -1,6 +1,7 @@
 from collections import deque
 n, u, v = map(int, input().split())
-u -= 1; v -= 1
+u -= 1
+v -= 1
 ki = [[] for _ in range(n)]
 for i in range(n - 1):
     a, b = map(int, input().split())

@@ -6,7 +6,7 @@ a = set()
 n = int(stdin.readline())
 
 n2 = sqrt(n)
-t = 2;
+t = 2
 while t <= n2 and n > 1:
     if n % t == 0:
         n //= t

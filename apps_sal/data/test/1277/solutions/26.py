@@ -19,12 +19,15 @@ def dfs(i):
 
 
 inf = 10**9
-dis = [inf] * n; dis[u - 1] = 0; visited = [0] * n
+dis = [inf] * n
+dis[u - 1] = 0
+visited = [0] * n
 dfs(u - 1)
 dis2 = []
 dis_dash = copy(dis)
 dis2.append(dis_dash)
-dis[v - 1] = 0; visited = [0] * n
+dis[v - 1] = 0
+visited = [0] * n
 dfs(v - 1)
 dis2.append(dis)
 cnt = 0

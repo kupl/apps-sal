@@ -29,7 +29,8 @@ def depth(v, p, d):
         depth(nv, v, d + 1)
 
 
-N, u, v = map(int, input().split()); u, v = u - 1, v - 1
+N, u, v = map(int, input().split())
+u, v = u - 1, v - 1
 if u == v:
     print(0)
     return

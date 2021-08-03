@@ -1,7 +1,7 @@
 N = int(input())
 l = [int(input()) - 1 for _ in range(0, N)]
 
-i = 0;
+i = 0
 flg = False
 
 for n in range(0, N):

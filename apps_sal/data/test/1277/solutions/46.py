@@ -14,7 +14,8 @@ prev = [-1] * N
 
 def dfs(v, p=-1):
     for to in es[v]:
-        if to == p: continue
+        if to == p:
+            continue
         prev[to] = v
         dfs(to, v)
 
@@ -32,8 +33,10 @@ reach[U] = 1
 
 def dfs2(v, p=-1):
     for to in es[v]:
-        if to == p: continue
-        if to in ban: continue
+        if to == p:
+            continue
+        if to in ban:
+            continue
         reach[to] = 1
         dfs2(to, v)
 
@@ -47,7 +50,8 @@ ans = 0
 def dfs3(v, p=-1):
     nonlocal ans
     for to in es[v]:
-        if to == p: continue
+        if to == p:
+            continue
         depth[to] = depth[v] + 1
         if reach[to]:
             ans = max(ans, depth[v])

@@ -1,5 +1,7 @@
 import collections
-ma = lambda: list(map(int, input().split()))
+def ma(): return list(map(int, input().split()))
+
+
 n, u, v = ma()
 u, v = u - 1, v - 1
 tree = [[] for i in range(n)]

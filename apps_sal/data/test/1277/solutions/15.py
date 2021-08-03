@@ -2,11 +2,13 @@ import sys
 sys.setrecursionlimit(200000)
 
 N, s, t = map(int, input().split())
-s -= 1; t -= 1
+s -= 1
+t -= 1
 to = [[] for _ in range(N)]
 for i in range(N - 1):
     a, b = map(int, input().split())
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     to[a].append(b)
     to[b].append(a)
 

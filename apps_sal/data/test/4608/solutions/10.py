@@ -10,4 +10,4 @@ while True:
         break
     if ans > N:
         print((-1))
-        break;
+        break

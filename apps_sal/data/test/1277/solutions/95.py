@@ -1,5 +1,6 @@
 from collections import deque
-nii = lambda: map(int, input().split())
+def nii(): return map(int, input().split())
+
 
 n, u, v = nii()
 u -= 1

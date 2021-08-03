@@ -4,7 +4,7 @@ if a * d - b * c == 0:
     print(0)
 else:
     curpos = a * d - b * c >= 0
-    small = 0;
+    small = 0
     large = 1e18
     for iteration in range(200):
         avg = (small + large) / 2

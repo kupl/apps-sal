@@ -4,7 +4,8 @@ def ans(books):
     i = None
     j = None
     for k in range(len(books)):
-        if books[k] == 0: continue
+        if books[k] == 0:
+            continue
         j = k
         if i is None:
             i = k

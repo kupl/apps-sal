@@ -15,7 +15,8 @@ dist1[V] = 0
 
 def dfs1(v, p=-1):
     for to in es[v]:
-        if to == p: continue
+        if to == p:
+            continue
         dist1[to] = dist1[v] + 1
         dfs1(to, v)
 
@@ -30,8 +31,10 @@ dist2[U] = 0
 
 def dfs2(v, p=-1):
     for to in es[v]:
-        if to == p: continue
-        if (D + 1) // 2 > dist1[to]: continue
+        if to == p:
+            continue
+        if (D + 1) // 2 > dist1[to]:
+            continue
         dist2[to] = dist2[v] + 1
         dfs2(to, v)
 
@@ -40,6 +43,7 @@ dfs2(U)
 
 ans = 0
 for a, b in zip(dist1, dist2):
-    if b == N: continue
+    if b == N:
+        continue
     ans = max(ans, a - 1)
 print(ans)

@@ -5,14 +5,15 @@ read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
 
-in_n = lambda: int(readline())
-in_nn = lambda: list(map(int, readline().split()))
-in_s = lambda: readline().rstrip().decode('utf-8')
-in_nl = lambda: list(map(int, readline().split()))
-in_nl2 = lambda H: [in_nl() for _ in range(H)]
-in_map = lambda: [s == ord('.') for s in readline() if s != ord('\n')]
-in_map2 = lambda H: [in_map() for _ in range(H)]
-in_all = lambda: list(map(int, read().split()))
+
+def in_n(): return int(readline())
+def in_nn(): return list(map(int, readline().split()))
+def in_s(): return readline().rstrip().decode('utf-8')
+def in_nl(): return list(map(int, readline().split()))
+def in_nl2(H): return [in_nl() for _ in range(H)]
+def in_map(): return [s == ord('.') for s in readline() if s != ord('\n')]
+def in_map2(H): return [in_map() for _ in range(H)]
+def in_all(): return list(map(int, read().split()))
 
 
 def bfs(N, v0, edge):

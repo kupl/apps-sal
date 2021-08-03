@@ -20,7 +20,8 @@ distA[v] = 0
 
 def dfs(now, dist):
     for nxt in G[now]:
-        if dist[nxt] != -1: continue
+        if dist[nxt] != -1:
+            continue
         dist[nxt] = dist[now] + 1
         dfs(nxt, dist)
 

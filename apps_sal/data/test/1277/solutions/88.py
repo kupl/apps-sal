@@ -1,6 +1,7 @@
 N, u, v = (int(i) for i in input().split())
 adj = []
-for i in range(N + 1): adj.append([])
+for i in range(N + 1):
+    adj.append([])
 for i in range(N - 1):
     a, b = list(map(int, input().split()))
     adj[a] += [b]

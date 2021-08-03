@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, st, sa = f()
 g = [set() for _ in range(n)]
 for _ in range(n - 1):
@@ -8,11 +10,16 @@ for _ in range(n - 1):
 
 
 def bfs(s):
-    l = [-1] * n; l[s] = 0; q = [s]
+    l = [-1] * n
+    l[s] = 0
+    q = [s]
     while q:
-        v = q.pop(); d = l[v] + 1
+        v = q.pop()
+        d = l[v] + 1
         for c in g[v]:
-            if l[c] < 0: l[c] = d; q += [c]
+            if l[c] < 0:
+                l[c] = d
+                q += [c]
     return l
 
 

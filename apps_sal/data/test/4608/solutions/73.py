@@ -1,4 +1,5 @@
-LI = lambda: list(map(int, input().split()))
+def LI(): return list(map(int, input().split()))
+
 
 N = int(input())
 A = [int(input()) for _ in range(N)]

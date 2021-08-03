@@ -1,6 +1,8 @@
 import sys
 sys.setrecursionlimit(10**9)
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, st, sa = f()
 st -= 1
 sa -= 1
@@ -14,7 +16,8 @@ for _ in range(n - 1):
 def dfs(v, p=-1, d=0):
     l[v] = d
     for c in g[v]:
-        if c == p: continue
+        if c == p:
+            continue
         dfs(c, v, d + 1)
 
 
@@ -29,5 +32,6 @@ lt = dist(st)
 la = dist(sa)
 m = 0
 for i in range(n):
-    if lt[i] < la[i]: m = max(m, la[i])
+    if lt[i] < la[i]:
+        m = max(m, la[i])
 print(m - 1)

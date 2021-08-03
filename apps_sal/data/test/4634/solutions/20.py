@@ -27,11 +27,13 @@ for _ in range(inp()):
     for i in range(st, la + 1):
         x = a[i]
         if ch:
-            if x: continue
+            if x:
+                continue
             ch = False
             res += 1
         else:
-            if x: ch = True
+            if x:
+                ch = True
             else:
                 res += 1
     print(res)

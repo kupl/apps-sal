@@ -1,6 +1,8 @@
 import sys
 sys.setrecursionlimit(10**9)
-f = lambda: map(int, sys.stdin.readline().split())
+def f(): return map(int, sys.stdin.readline().split())
+
+
 n, st, sa = f()
 g = [set() for _ in range(n)]
 for _ in range(n - 1):
@@ -12,7 +14,8 @@ for _ in range(n - 1):
 def dfs(l, v, p=-1, d=0):
     l[v] = d
     for c in g[v]:
-        if c != p: dfs(l, c, v, d + 1)
+        if c != p:
+            dfs(l, c, v, d + 1)
 
 
 lt = [0] * n

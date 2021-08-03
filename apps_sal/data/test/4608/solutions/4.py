@@ -9,7 +9,7 @@ flag = 1
 while pos != 1:
     if visit[pos] != 0:
         flag = 0
-        break;
+        break
     else:
         visit[pos] = 1
         pos = Buttons[pos] - 1
