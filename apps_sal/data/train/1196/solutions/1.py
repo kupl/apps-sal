@@ -8,23 +8,23 @@ for T in range(int(input())):
         v[i] = a[i].copy()
     for i in range(n):
         for j in range(1, m):
-            a[i][j] += a[i][j-1]
-    #print(a)
+            a[i][j] += a[i][j - 1]
+    # print(a)
     for i in range(m):
         for j in range(1, n):
-            v[j][i] += v[j-1][i]
-    #print(v)
+            v[j][i] += v[j - 1][i]
+    # print(v)
     maxx = 0
     for i in range(n):
-        for j in range(k-1, m):
-            if j == k-1:
+        for j in range(k - 1, m):
+            if j == k - 1:
                 maxx = max(maxx, a[i][j])
             else:
-                maxx= max(maxx, a[i][j]-a[i][j-k])
+                maxx = max(maxx, a[i][j] - a[i][j - k])
     for i in range(m):
-        for j in range(k-1, n):
-            if j == k-1:
+        for j in range(k - 1, n):
+            if j == k - 1:
                 maxx = max(maxx, v[j][i])
             else:
-                maxx= max(maxx, v[j][i]-v[j-k][i])
+                maxx = max(maxx, v[j][i] - v[j - k][i])
     print(maxx)

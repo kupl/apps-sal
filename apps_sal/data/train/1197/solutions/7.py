@@ -5,13 +5,14 @@ try:
     def get_list(): return list(map(int, stdin.readline().strip().split()))
     def get_string(): return stdin.readline().strip()
     def get_singleInt(): return int(stdin.readline())
+
     def main():
-        testCases=get_singleInt()
-        a=reqNumbers()
+        testCases = get_singleInt()
+        a = reqNumbers()
         for i in range(testCases):
-            limit=get_singleInt()
+            limit = get_singleInt()
             for i in range(limit):
-                print(a[i],end=" ")
+                print(a[i], end=" ")
             print()
             print(sum(a[:limit]))
 
@@ -56,7 +57,6 @@ try:
         main()
 except Exception:
     pass
-
 
 
 __starting_point()
