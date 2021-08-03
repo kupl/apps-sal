@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         max_occur = 0
@@ -21,4 +23,3 @@ class Solution:
         #         if len(collections.Counter(word))<=maxLetters:
         #             counts[word]=1
         # return max(counts.values()) if len(counts)!=0 else 0
-

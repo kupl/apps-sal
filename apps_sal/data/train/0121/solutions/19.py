@@ -8,4 +8,4 @@ for _ in range(t):
 
     a = sorted(a)
 
-    print(a[len(a)//2] - a[len(a)//2-1])
+    print(a[len(a) // 2] - a[len(a) // 2 - 1])

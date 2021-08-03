@@ -14,5 +14,3 @@ class Solution:
             # print(g, p)
             # print(dp)
         return sum([count for (g, p), count in list(dp.items()) if p == 0]) % ((10 ** 9) + 7)
-                    
-

@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         dic = collections.defaultdict(int)
@@ -8,4 +10,3 @@ class Solution:
         if not dic:
             return 0
         return max(dic.values())
-

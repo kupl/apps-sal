@@ -19,4 +19,3 @@ class Solution:
             min_sum = min(min_sum, current_min_sum)
 
         return total_points - min_sum
-

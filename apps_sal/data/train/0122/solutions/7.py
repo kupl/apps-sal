@@ -12,7 +12,7 @@ class Solution:
 
         for x in range(k):
             # print(x)
-            y = x+n
+            y = x + n
             all += cardPoints[y]
             window -= cardPoints[x]
             window += cardPoints[y]
@@ -21,4 +21,3 @@ class Solution:
         return all - min
         # print(all)
         # print(all-min)
-

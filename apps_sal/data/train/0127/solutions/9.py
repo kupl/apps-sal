@@ -1,4 +1,4 @@
-class Solution:    
+class Solution:
     def profitableSchemes(self, G, P, group, profit):
         dp = [[0] * (G + 1) for i in range(P + 1)]
         dp[0][0] = 1
@@ -14,7 +14,7 @@ class Solution:
 
     def profitableSchemes(self, G, P, group, profit):
         dp = [[0] * (G + 1) for i in range(P + 1)]
-        #dp[0] = [1] * (G + 1) #<-----
+        # dp[0] = [1] * (G + 1) #<-----
         dp[0][0] = 1
         for p_gained, g_needed in zip(profit, group):
             for p in range(P, -1, -1):

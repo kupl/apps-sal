@@ -20,4 +20,3 @@ class Solution:
             cur = cur2
         # Sum all schemes with profit P and group size 0 <= g <= G.
         return sum(cur[-1]) % MOD
-

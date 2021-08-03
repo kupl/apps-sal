@@ -1,4 +1,6 @@
 from collections import defaultdict, Counter
+
+
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         def hasUnique(s):
@@ -6,7 +8,7 @@ class Solution:
             if(len(dic) <= maxLetters):
                 return True
             return False
-        
+
         def checkSubStrings(s):
             dic = defaultdict(int)
             maximum = 0
@@ -15,8 +17,8 @@ class Solution:
                 strr = s[i:end]
                 if(hasUnique(strr)):
                     dic[strr] += 1
-                    maximum = max(maximum,  dic[strr])
-                        
+                    maximum = max(maximum, dic[strr])
+
             return maximum
-                    
+
         return(checkSubStrings(s))

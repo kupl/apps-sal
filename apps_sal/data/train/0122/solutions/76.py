@@ -5,7 +5,7 @@ class Solution:
         max_ = 0
         for ind, score in enumerate(points):
             if ind >= k:
-                curr -= points[ind-k]
+                curr -= points[ind - k]
             curr += score
             max_ = max(max_, curr)
         return max_

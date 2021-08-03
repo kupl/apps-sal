@@ -19,7 +19,6 @@ class Solution:
 
         # return sum(cur[-1]) % MOD
 
-
         MOD = 10**9 + 7
         dp = [[0] * (G + 1) for _ in range(P + 1)]
         dp[0][0] = 1
@@ -29,4 +28,3 @@ class Solution:
                     dp[min(P, i + p)][g + j] += dp[i][j]
 
         return sum(dp[P]) % MOD
-

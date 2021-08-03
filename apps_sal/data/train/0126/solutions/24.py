@@ -4,19 +4,19 @@ class Solution:
         end = minSize
         counts = {}
         res = 0
-        
-        while start <= len(s)-minSize:
+
+        while start <= len(s) - minSize:
             item = s[start:end]
             counts[item] = counts.get(item, 0) + 1
-            
+
             start += 1
             end += 1
-            
+
         for i in counts:
             if self.countUnique(i) <= maxLetters:
                 res = max(res, counts[i])
-                  
+
         return res
-        
+
     def countUnique(self, s):
         return len(set(s))

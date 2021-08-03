@@ -8,7 +8,7 @@ class Solution:
         ll = len(_s)
         for i in range(min_size, max_size + 1):
             for j in range(ll - i + 1):
-                ss = _s[j:j+i]
+                ss = _s[j:j + i]
                 if max_letters >= min_size or len(set(ss)) <= max_letters:
                     if ss not in all_substrings:
                         all_substrings[ss] = 1

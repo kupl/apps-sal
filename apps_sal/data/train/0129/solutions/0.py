@@ -9,5 +9,3 @@ class Solution:
                 curmaxsight = sight
             curmaxsight -= 1
         return curmaxpair
-            
-

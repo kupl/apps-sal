@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 class Solution:
     def numMusicPlaylists(self, N: int, L: int, K: int) -> int:
         # Dynamic Programming
@@ -15,5 +16,3 @@ class Solution:
             return ans % (10**9 + 7)
 
         return dp(L, N)
-
-

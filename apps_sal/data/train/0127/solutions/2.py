@@ -41,4 +41,3 @@ class Solution:
     #     b=self.numsubsetslessthan(g, schemes[:-1])
     #     dump1[(g, len(schemes))]=(a+b)%mod
     #     return dump1[(g, len(schemes))]
-

@@ -7,6 +7,6 @@ class Solution:
         n = len(cardPoints)
         res, cur = sum(cardPoints[:k]), sum(cardPoints[:k])
         for i in range(k):
-            cur += cardPoints[n-i-1]-cardPoints[k-1-i]
+            cur += cardPoints[n - i - 1] - cardPoints[k - 1 - i]
             res = max(res, cur)
         return res

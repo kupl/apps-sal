@@ -7,9 +7,6 @@ class Solution:
             win += cardPoints[i]
             if i >= 0:
                 win -= cardPoints[i - k]
-            #print(i, i-k, ans, win, cardPoints[i] )    
-            ans = max(win, ans)    
+            #print(i, i-k, ans, win, cardPoints[i] )
+            ans = max(win, ans)
         return ans
-        
-            
-

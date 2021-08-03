@@ -6,7 +6,7 @@ class Solution:
             length = 0
             for j in range(minSize - 1):
                 length += 1
-                c = s[i+j]
+                c = s[i + j]
                 if c in count:
                     count[c] += 1
                 else:
@@ -18,7 +18,7 @@ class Solution:
                 else:
                     count[c] = 1
                 if len(count) <= maxLetters:
-                    substring = s[i: i+length+1]
+                    substring = s[i: i + length + 1]
                     if substring in sol:
                         sol[substring] += 1
                     else:

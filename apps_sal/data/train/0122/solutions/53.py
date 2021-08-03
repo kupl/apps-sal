@@ -1,12 +1,12 @@
 class Solution:
     def maxScore(self, cardPoints: List[int], k: int) -> int:
         size = len(cardPoints)
-        maxRightSum = sum(cardPoints[size-k:])
+        maxRightSum = sum(cardPoints[size - k:])
         ans = maxRightSum
         currSum = maxRightSum
         # sum with left
         for i in range(k):
-            currSum = currSum - cardPoints[size-k+i] + cardPoints[i]
+            currSum = currSum - cardPoints[size - k + i] + cardPoints[i]
             ans = max(ans, currSum)
         return ans
     # def maxScore(self, cardPoints: List[int], k: int) -> int:
@@ -22,4 +22,3 @@ class Solution:
     #         if windowStart - windowEnd + 1 == size:
     #             ans = min(ans, currSum)
     #     return sum(cardPoints) - ans
-

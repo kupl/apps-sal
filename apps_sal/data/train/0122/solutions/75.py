@@ -1,5 +1,5 @@
 class Solution:
-    def maxScore(self, cardPoints: List[int], k: int) -> int:  
+    def maxScore(self, cardPoints: List[int], k: int) -> int:
         sub_len = len(cardPoints) - k
         localSum = 0
         localSum = sum(cardPoints[0: sub_len])
@@ -8,4 +8,4 @@ class Solution:
             localSum += cardPoints[i]
             localSum -= cardPoints[i - sub_len]
             localMin = min(localSum, localMin)
-        return  sum(cardPoints) - localMin
+        return sum(cardPoints) - localMin

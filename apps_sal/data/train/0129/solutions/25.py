@@ -5,9 +5,8 @@ class Solution:
         i = 0
         for j in range(1, len(A)):
             s1 = A[i] + A[j] + i - j
-            s2 = A[j] + A[j-1] + j - 1 - j
+            s2 = A[j] + A[j - 1] + j - 1 - j
             if s2 > s1:
                 i = j - 1
-            best = max(best, s1, s2) 
+            best = max(best, s1, s2)
         return best
-

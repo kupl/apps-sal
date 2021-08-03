@@ -1,7 +1,7 @@
 class Solution:
     def profitableSchemes(self, G: int, P: int, group: List[int], profit: List[int]) -> int:
         MOD = 10 ** 9 + 7
-        
+
         @lru_cache(None)
         def dp(i, g, p):
             if g < 0:
@@ -11,6 +11,6 @@ class Solution:
             a = dp(i + 1, max(g - group[i], -1), max(0, p - profit[i]))
             b = dp(i + 1, g, p)
             return (a + b) % MOD
-        
+
         n = len(group)
         return dp(0, G, P)

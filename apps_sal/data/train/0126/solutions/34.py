@@ -14,13 +14,12 @@ class Solution:
                     break
             if len(letterSet) > maxLetters:
                 continue
-            for j in range(i+minSize-1, i+maxSize+1):
+            for j in range(i + minSize - 1, i + maxSize + 1):
                 if j >= len(s):
                     break
                 letterSet.add(s[j])
                 if len(letterSet) > maxLetters:
                     break
-                seenSubstrs[s[i:j+1]] += 1
-                maxCount = max(seenSubstrs[s[i:j+1]], maxCount)
+                seenSubstrs[s[i:j + 1]] += 1
+                maxCount = max(seenSubstrs[s[i:j + 1]], maxCount)
         return maxCount
-

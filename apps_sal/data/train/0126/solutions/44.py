@@ -19,10 +19,9 @@ class Solution:
             for j in range(r + 1 - maxSize, r + 1 - minSize + 1):
                 if j < l:
                     continue
-                substrings[s[j : r + 1]] += 1
-                res = max(res, substrings[s[j : r + 1]])
-            #print(substrings)
+                substrings[s[j: r + 1]] += 1
+                res = max(res, substrings[s[j: r + 1]])
+            # print(substrings)
         return res
-        
-        #l r
 
+        # l r

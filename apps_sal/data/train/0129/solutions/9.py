@@ -15,4 +15,3 @@ class Solution:
 #         maxOverallGain = max(maxOverallGain, a[i] + i + maxEndRight);
 #     }
 #     return maxOverallGain;
-

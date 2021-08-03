@@ -1,6 +1,6 @@
 class Solution:
     def maxScore(self, cardPoints: List[int], k: int) -> int:
-        right_index = len(cardPoints)-k
+        right_index = len(cardPoints) - k
         curr_max = sum(cardPoints[right_index:])
         curr_sum = curr_max
         for left_index in range(0, k):
@@ -10,4 +10,3 @@ class Solution:
             if curr_sum > curr_max:
                 curr_max = curr_sum
         return curr_max
-

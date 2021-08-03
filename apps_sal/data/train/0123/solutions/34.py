@@ -1,6 +1,7 @@
 class Solution:
     import math
     from functools import lru_cache
+
     def numMusicPlaylists(self, N: int, L: int, K: int) -> int:
         MOD = 1000000007
 

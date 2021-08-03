@@ -19,4 +19,3 @@ class Solution:
                 strMap[curr] += 1
             r += 1
         return max(strMap.values()) if strMap else 0
-

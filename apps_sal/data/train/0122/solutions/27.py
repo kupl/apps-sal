@@ -9,8 +9,8 @@ class Solution:
             s += cardPoints[i]
         res = min(s, res)
         for i in range(window, len(cardPoints)):
-            print(cardPoints[i],s,i)
-            s -= cardPoints[i-window]
+            print(cardPoints[i], s, i)
+            s -= cardPoints[i - window]
             s += cardPoints[i]
             res = min(s, res)
         return sum(cardPoints) - res

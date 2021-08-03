@@ -4,7 +4,7 @@ class Solution:
         minSum = float('inf')
         cur = 0
         left = 0
-        
+
         for i, v in enumerate(cardPoints):
             cur += v
             if i - left + 1 > size:
@@ -12,8 +12,5 @@ class Solution:
                 left += 1
             if i - left + 1 == size:
                 minSum = min(minSum, cur)
-                
-        return sum(cardPoints) - minSum
-        
-            
 
+        return sum(cardPoints) - minSum

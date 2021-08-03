@@ -3,13 +3,10 @@ class Solution:
         n = len(s)
         d = {}
         for i in range(n):
-            for j in range(minSize, maxSize+1):
-                if i+j> n:
+            for j in range(minSize, maxSize + 1):
+                if i + j > n:
                     break
-                if len(set(s[i:i+j])) <= maxLetters:
-                    d[ s[i:i+j] ] = d.get(s[i:i+j],0) +1
+                if len(set(s[i:i + j])) <= maxLetters:
+                    d[s[i:i + j]] = d.get(s[i:i + j], 0) + 1
         # print(d)
         return max(list(d.values()), default=0)
-                       
-                       
-

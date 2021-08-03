@@ -22,19 +22,14 @@ class Solution:
                 end += 1
             # print(lMax, gMax, minSize)
             if lMax > gMax:
-                gMax = lMax   
+                gMax = lMax
             minSize += 1
-            
+
         return gMax
-                        
-                
-                
+
     def checkUnique(self, string, maxLetters):
         sett = set(string)
         if len(sett) > maxLetters:
             return False
         else:
             return True
-                
-                
-

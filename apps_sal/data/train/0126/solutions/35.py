@@ -11,7 +11,7 @@ class Solution:
                     d[s[k]] = 1
 
             if len(d) <= maxLetters:
-                phrase = s[i:i+minSize]
+                phrase = s[i:i + minSize]
                 if phrase in sub:
                     sub[phrase] += 1
                 else:
@@ -22,7 +22,7 @@ class Solution:
             for j in range(i + minSize, i + maxSize):
                 if j < len(s):
                     if len(d) <= maxLetters:
-                        phrase = s[i:j+1]
+                        phrase = s[i:j + 1]
                         if phrase in sub:
                             sub[phrase] += 1
                         else:

@@ -2,10 +2,11 @@ class Solution:
     def maxScore(self, cardPoints: List[int], k: int) -> int:
         n = len(cardPoints)
         total = sum(cardPoints)
-        if n == k or n < k : return total 
+        if n == k or n < k:
+            return total
         remove = n - k
         ans = 0
-        
+
         '''memo = [0]*(n+1)
         memo[0] = 0
         
@@ -19,10 +20,9 @@ class Solution:
         start = 0
         for right in range(n):
             curr += cardPoints[right]
-            if right-start+1 == remove:
-                ans = max(ans, total-curr)
+            if right - start + 1 == remove:
+                ans = max(ans, total - curr)
                 curr -= cardPoints[start]
-                start +=1
-            
-            
+                start += 1
+
         return ans

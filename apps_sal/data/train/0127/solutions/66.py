@@ -18,4 +18,3 @@ class Solution:
             cur = cur2
 
         return sum(cur[-1]) % MOD
-

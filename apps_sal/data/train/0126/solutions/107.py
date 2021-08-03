@@ -1,5 +1,7 @@
 from collections import defaultdict
 from collections import Counter
+
+
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         dic = defaultdict(int)
@@ -7,7 +9,7 @@ class Solution:
             for j in range(minSize, maxSize + 1):
                 if i + j > len(s):
                     break
-                cur_str = s[i:i+j]
+                cur_str = s[i:i + j]
                 unique_letters = set(cur_str)
                 if len(unique_letters) > maxLetters:
                     continue

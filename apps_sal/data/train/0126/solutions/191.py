@@ -1,13 +1,14 @@
 from collections import Counter
 from collections import defaultdict
 
+
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         # init first window
         counts = defaultdict(int)
         substrs = defaultdict(int)
         start = 0
-        # expand window until we can't any more 
+        # expand window until we can't any more
         for end in range(len(s)):
             counts[s[end]] += 1
             if end - start + 1 > minSize:
@@ -15,13 +16,12 @@ class Solution:
                 if counts[s[start]] == 0:
                     del counts[s[start]]
                 start += 1
-            print (counts)
+            print(counts)
             if end - start + 1 == minSize and len(counts) <= maxLetters:
-                substrs[s[start:end+1]] += 1
-        print (substrs)
+                substrs[s[start:end + 1]] += 1
+        print(substrs)
         if not substrs:
             return 0
         return max(substrs.values())
-        
-        # decrement window until we meet the requirement
 
+        # decrement window until we meet the requirement
