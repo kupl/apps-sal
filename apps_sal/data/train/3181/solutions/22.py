@@ -1,1 +1,1 @@
-check_alive=lambda n:n>0
+def check_alive(n): return n > 0

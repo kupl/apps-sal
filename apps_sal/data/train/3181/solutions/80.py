@@ -3,5 +3,6 @@ def check_alive(hp):
         return False
     else:
         return True
-    
-test=check_alive(1)
+
+
+test = check_alive(1)

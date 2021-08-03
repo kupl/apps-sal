@@ -4,4 +4,5 @@ def check_alive(health):
     else:
         return True
 
+
 print(check_alive(-7))

@@ -1,5 +1,6 @@
 def trotter(n):
-    if n == 0: return "INSOMNIA"
+    if n == 0:
+        return "INSOMNIA"
     seen, current = set(str(n)), n
     while len(seen) < 10:
         current += n

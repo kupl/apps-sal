@@ -1,2 +1,2 @@
 trans = str.maketrans("ao", "ou")
-convert = lambda st: st.translate(trans)
+def convert(st): return st.translate(trans)
