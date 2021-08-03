@@ -4,4 +4,3 @@ def list_to_array(lst):
         res.append(lst.value)
         lst = lst.__next__
     return res
-

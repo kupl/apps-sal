@@ -1,6 +1,7 @@
 from functools import reduce
 primes = [2, 3, 5, 7, 11, 13, 17]
 
+
 def gen_primes():
     for p in primes:
         yield p
@@ -19,6 +20,7 @@ def gen_primes():
                 yield next_prime
                 break
 
+
 def gen_prime_factor_multiplicities(n):
     for p in gen_primes():
         count = 0
@@ -29,6 +31,7 @@ def gen_prime_factor_multiplicities(n):
             yield (p, count)
         if n == 1:
             break
+
 
 def min_special_mult(arr):
     bad = []
@@ -50,5 +53,3 @@ def min_special_mult(arr):
             maxes[p] = max(maxes.get(p, m), m)
     factors = [p ** m for p, m in maxes.items()]
     return reduce(lambda a, b: a * b, factors)
-    
-

@@ -1,5 +1,6 @@
 from fractions import gcd
 
+
 def min_special_mult(arr):
     def is_int(n):
         try:
@@ -14,6 +15,6 @@ def min_special_mult(arr):
         if len(freaks) > 1:
             return "There are {} invalid entries: {}".format(len(freaks), freaks)
         return "There is 1 invalid entry: {}".format(freaks[0])
-    
+
     arr = [abs(x) for x in arr]
     return reduce(lambda x, y: x * y // gcd(x, y), arr)

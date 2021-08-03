@@ -4,4 +4,4 @@ from scipy.misc import comb
 
 
 def transform(A, x):
-    return reduce(xor, map(lambda n: comb(n+1,x+1,exact=True),A))
+    return reduce(xor, map(lambda n: comb(n + 1, x + 1, exact=True), A))

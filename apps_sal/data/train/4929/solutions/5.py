@@ -7,10 +7,8 @@ def get_diagonale_code(grid: str) -> str:
         word += lines[row][col]
         if row == 0:
             down = True
-        if row+1 == len(lines):
+        if row + 1 == len(lines):
             down = False
-        row = row+1 if down else row-1
+        row = row + 1 if down else row - 1
         col += 1
     return word
-        
-

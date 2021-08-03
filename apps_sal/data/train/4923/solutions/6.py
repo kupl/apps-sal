@@ -5,5 +5,6 @@ def count_feelings(s, arr):
         for j in i:
             if (j not in s) or (i.count(j) > s.count(j)):
                 r = False
-        if r: c+=1
+        if r:
+            c += 1
     return str(c) + ' feelings.' if c != 1 else str(c) + ' feeling.'

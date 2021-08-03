@@ -1,2 +1,2 @@
 def only_one(*args):
-    return args.count(True)==1
+    return args.count(True) == 1

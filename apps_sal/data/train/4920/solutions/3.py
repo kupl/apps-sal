@@ -1,7 +1,9 @@
 from fractions import gcd
 
+
 def lcm(a, b):
     return a * b // gcd(a, b)
+
 
 def min_special_mult(arr):
     valid, invalid = [], []

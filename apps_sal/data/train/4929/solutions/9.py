@@ -4,7 +4,7 @@ def generator(strings: list):
             yield q
         for q in strings[-2: 0: -1]:
             yield q
-        
+
 
 def get_diagonale_code(grid: str) -> str:
     strings = [q.replace(' ', '') for q in grid.split('\n')]

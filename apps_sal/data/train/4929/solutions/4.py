@@ -4,6 +4,7 @@ def get_diagonale_code(s):
     while i < len(m) and j < len(m[i]):
         out.append(m[i][j])
         j += 2
-        if i in (0, len(m) - 1): d = -d
+        if i in (0, len(m) - 1):
+            d = -d
         i += d
     return ''.join(out)
