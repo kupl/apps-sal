@@ -14,7 +14,8 @@ def main():
 
     for i in range(H):
         for j in range(W):
-            if c[i][j] == '@': continue
+            if c[i][j] == '@':
+                continue
             for k in range(4):
                 y = i + dy[k]
                 x = j + dx[k]

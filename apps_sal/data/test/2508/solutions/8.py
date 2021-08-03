@@ -1,6 +1,8 @@
 from heapq import heapify, heappush as hpush, heappop as hpop
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 H, W, K = map(int, input().split())
 x1, y1, x2, y2 = map(int, input().split())
 X = [1] * (W + 2)
@@ -27,7 +29,8 @@ def dijkstra():
         if i < HW:
             for j in (i + 1, i - 1):
                 nd = d + 1
-                if X[j]: continue
+                if X[j]:
+                    continue
                 if D[j] < 0 or D[j] > nd:
                     if done[j] == 0:
                         hpush(h, (nd, j))
@@ -35,7 +38,8 @@ def dijkstra():
         else:
             for j in (i + W, i - W):
                 nd = d + 1
-                if X[j]: continue
+                if X[j]:
+                    continue
                 if D[j] < 0 or D[j] > nd:
                     if done[j] == 0:
                         hpush(h, (nd, j))
@@ -43,7 +47,8 @@ def dijkstra():
 
         j = i + HW if i < HW else i - HW
         nd = (d + K - 1) // K * K
-        if X[j]: continue
+        if X[j]:
+            continue
         if D[j] < 0 or D[j] > nd:
             if done[j] == 0:
                 hpush(h, (nd, j))

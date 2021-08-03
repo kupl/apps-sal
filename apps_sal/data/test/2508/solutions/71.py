@@ -11,7 +11,8 @@ def main():
             for z in range(k):
                 i, j = s // w + y * ~z, s % w + x * ~z
                 t = i * w + j
-                if not h > i > -1 < j < w or '.' < m[i][j] or d[t] <= d[s]: break
+                if not h > i > -1 < j < w or '.' < m[i][j] or d[t] <= d[s]:
+                    break
                 if d[t] == I:
                     q += t,
                     d[t] = d[s] + 1

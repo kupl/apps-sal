@@ -4,7 +4,10 @@ try:
     fin = open('in')
 except:
     fin = sys.stdin
-input = lambda: fin.readline().strip()
+
+
+def input(): return fin.readline().strip()
+
 
 n = int(input())
 a = list(map(int, input()))
@@ -28,6 +31,9 @@ for i in range(2 * n):
         r[0][0] -= 1
         t[j] += [0, 0][j]
 x, y = t
-if x > y: print("First")
-elif x < y: print("Second")
-else: print("Draw")
+if x > y:
+    print("First")
+elif x < y:
+    print("Second")
+else:
+    print("Draw")

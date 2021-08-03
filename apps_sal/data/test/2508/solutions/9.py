@@ -17,14 +17,19 @@ while que:
     #p= heapq.heappop(que)[1]
     #x,y= p[0],p[1]
     x, y = que.popleft()
-    if (x == x2) & (y == y2): print(dp[x2][y2]); return
+    if (x == x2) & (y == y2):
+        print(dp[x2][y2])
+        return
     for i in range(4):
         for j in range(1, k + 1):
             nx = x + dx[i] * j
             ny = y + dy[i] * j
-            if not ((0 <= nx < h) & (0 <= ny < w)): break
-            if c[nx][ny] == '@': break
-            if 0 <= dp[nx][ny] <= dp[x][y]: break
+            if not ((0 <= nx < h) & (0 <= ny < w)):
+                break
+            if c[nx][ny] == '@':
+                break
+            if 0 <= dp[nx][ny] <= dp[x][y]:
+                break
             if dp[nx][ny] == -1:
                 #heapq.heappush(que, (dp[nx][ny], [nx,ny]))
                 que.append((nx, ny))

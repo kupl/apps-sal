@@ -10,9 +10,12 @@ cnt1 = 0
 cnt2 = 0
 for i in range(n * 2):
     if a[i] == '0':
-        if b[i] == '0': cnt0 += 1
-        else: cnt1 += 1
-    elif b[i] == '0': cnt2 += 1
+        if b[i] == '0':
+            cnt0 += 1
+        else:
+            cnt1 += 1
+    elif b[i] == '0':
+        cnt2 += 1
 
 cnt = [cnt0, cnt1, cnt2, 2 * n - cnt0 - cnt1 - cnt2]
 
@@ -40,6 +43,9 @@ while left > 0:
     left -= jump + 1
 
 
-if dif > 0: print("First")
-elif dif < 0: print("Second")
-else: print("Draw")
+if dif > 0:
+    print("First")
+elif dif < 0:
+    print("Second")
+else:
+    print("Draw")

@@ -2,7 +2,7 @@ def main():
     # IMPORT MODULE
     from collections import deque
     import sys
-    input = lambda: sys.stdin.readline().rstrip()
+    def input(): return sys.stdin.readline().rstrip()
 
     # sys.setrecursionlimit(100000)
 
@@ -37,7 +37,8 @@ def main():
         x, y = que.popleft()
 
         if x == x2 and y == y2:
-            print(ans[x][y]); return
+            print(ans[x][y])
+            return
 
         for dx, dy in direction:
             for i in range(1, k + 1):

@@ -1,6 +1,8 @@
-ii = lambda: int(input())
-kk = lambda: map(int, input().split())
-ll = lambda: list(kk())
+def ii(): return int(input())
+def kk(): return map(int, input().split())
+def ll(): return list(kk())
+
+
 n, a1, a2 = ii(), input(), input()
 locs = [0] * 4
 for i in range(2 * n):

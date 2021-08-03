@@ -8,7 +8,12 @@ q = [a]
 for s in q:
     for y, x in (1, 0), (-1, 0), (0, 1), (0, -1):
         for z in range(k):
-            i, j = s // w + y * ~z, s % w + x * ~z; t = i * w + j; p = d[s] + 1
-            if'.' != m[i][j] or d[t] < p: break
-            if d[t] > p: q += t, ; d[t] = p
+            i, j = s // w + y * ~z, s % w + x * ~z
+            t = i * w + j
+            p = d[s] + 1
+            if'.' != m[i][j] or d[t] < p:
+                break
+            if d[t] > p:
+                q += t,
+                d[t] = p
 print(d[~w + f * w + g] % I - 1)

@@ -10,7 +10,8 @@ for i in range(1, k + 1):
     if p + i <= n:
         ls.append(str(p + i))
 start = p - k
-if start < 1: start = 1
+if start < 1:
+    start = 1
 for i, x in enumerate(range(start, p)):
     ls.insert(i, str(x))
 

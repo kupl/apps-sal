@@ -8,8 +8,10 @@ def main():
         s = input()
         bb = [-1]
         for j in s:
-            if j == ".": bb.append(0)
-            else: bb.append(-1)
+            if j == ".":
+                bb.append(0)
+            else:
+                bb.append(-1)
         bb.append(-1)
         b.append(bb)
     b.append([-1] * (w + 2))
@@ -18,22 +20,31 @@ def main():
     for ss in d:
         x, y = ss
         if x == tx and y == ty:
-            print(b[x][y]); return
+            print(b[x][y])
+            return
         for i in range(1, k + 1):
-            if b[x + i][y] <= b[x][y] and b[x + i][y] != 0: break
-            if b[x + i][y] == 0: d.append((x + i, y))
+            if b[x + i][y] <= b[x][y] and b[x + i][y] != 0:
+                break
+            if b[x + i][y] == 0:
+                d.append((x + i, y))
             b[x + i][y] = b[x][y] + 1
         for i in range(1, k + 1):
-            if b[x - i][y] <= b[x][y] and b[x - i][y] != 0: break
-            if b[x - i][y] == 0: d.append((x - i, y))
+            if b[x - i][y] <= b[x][y] and b[x - i][y] != 0:
+                break
+            if b[x - i][y] == 0:
+                d.append((x - i, y))
             b[x - i][y] = b[x][y] + 1
         for j in range(1, k + 1):
-            if b[x][y + j] <= b[x][y] and b[x][y + j] != 0: break
-            if b[x][y + j] == 0: d.append((x, y + j))
+            if b[x][y + j] <= b[x][y] and b[x][y + j] != 0:
+                break
+            if b[x][y + j] == 0:
+                d.append((x, y + j))
             b[x][y + j] = b[x][y] + 1
         for j in range(1, k + 1):
-            if b[x][y - j] <= b[x][y] and b[x][y - j] != 0: break
-            if b[x][y - j] == 0: d.append((x, y - j))
+            if b[x][y - j] <= b[x][y] and b[x][y - j] != 0:
+                break
+            if b[x][y - j] == 0:
+                d.append((x, y - j))
             b[x][y - j] = b[x][y] + 1
     print(-1)
 

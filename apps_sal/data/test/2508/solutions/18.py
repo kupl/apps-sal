@@ -20,8 +20,10 @@ def main():
                 for _ in range(k):
                     nx += dx[i]
                     ny += dy[i]
-                    if nx < 0 or nx >= h or ny < 0 or ny >= w: break
-                    if field[nx][ny] == '@' or dist[nx][ny] <= dist[x][y]: break
+                    if nx < 0 or nx >= h or ny < 0 or ny >= w:
+                        break
+                    if field[nx][ny] == '@' or dist[nx][ny] <= dist[x][y]:
+                        break
                     if dist[nx][ny] > dist[x][y] + 1:
                         dist[nx][ny] = dist[x][y] + 1
                         que.append((nx, ny))

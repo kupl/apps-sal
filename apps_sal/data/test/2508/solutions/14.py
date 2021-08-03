@@ -20,11 +20,16 @@ def solve():
         for dx, dy in dxy:
             for i in range(1, K + 1):
                 nx, ny = x + dx * i, y + dy * i
-                if not 0 <= nx < W: break
-                if not 0 <= ny < H: break
-                if C[ny][nx] == '@': break
-                if dists[ny][nx] <= dists[y][x]: break
-                if dists[ny][nx] <= dists[y][x] + 1: continue
+                if not 0 <= nx < W:
+                    break
+                if not 0 <= ny < H:
+                    break
+                if C[ny][nx] == '@':
+                    break
+                if dists[ny][nx] <= dists[y][x]:
+                    break
+                if dists[ny][nx] <= dists[y][x] + 1:
+                    continue
                 dists[ny][nx] = dists[y][x] + 1
                 q.append((ny, nx))
     print(-1)

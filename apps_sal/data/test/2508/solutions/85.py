@@ -6,7 +6,10 @@ readlines = sys.stdin.readlines
 
 H, W, K = map(int, readline().split())
 x1, y1, x2, y2 = map(int, readline().split())
-x1 -= 1; y1 -= 1; x2 -= 1; y2 -= 1
+x1 -= 1
+y1 -= 1
+x2 -= 1
+y2 -= 1
 C = read().split()
 
 dist = [[-1] * W for i in range(H)]
@@ -19,9 +22,11 @@ while d:
         print(dist[x][y])
         return
     for dx, dy in dxy:
-        xx = x; yy = y
+        xx = x
+        yy = y
         for i in range(K):
-            xx += dx; yy += dy
+            xx += dx
+            yy += dy
             if 0 <= xx < H and 0 <= yy < W and C[xx][yy] != '@':
                 if 0 <= dist[xx][yy] <= dist[x][y]:
                     break

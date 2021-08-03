@@ -7,6 +7,6 @@ for i in range(p - k, p):
 print('(' + str(p) + ')', end=' ')
 for i in range(p + 1, p + k + 1):
     if(i <= n):
-        print(i, end=' ');
+        print(i, end=' ')
 if p + k < n:
     print('>>', end=' ')
