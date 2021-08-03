@@ -10,4 +10,3 @@ def isDigit(string):
     else:
 
         return True
-

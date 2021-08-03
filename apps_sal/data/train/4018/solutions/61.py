@@ -1,8 +1,6 @@
 def isDigit(string):
-    #11ELF
+    # 11ELF
     try:
-        return True if float(string)+1 else False
+        return True if float(string) + 1 else False
     except:
         return False
-
-

@@ -7,4 +7,3 @@ def isDigit(string):
             return type(int(string.strip())) == int
     except:
         return False
-

@@ -1,1 +1,1 @@
-max_multiple = lambda divisor, bound: bound - (bound % divisor)
+def max_multiple(divisor, bound): return bound - (bound % divisor)

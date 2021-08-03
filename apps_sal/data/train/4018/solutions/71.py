@@ -6,4 +6,3 @@ def isDigit(string):
         return True
     except ValueError:
         return False
-

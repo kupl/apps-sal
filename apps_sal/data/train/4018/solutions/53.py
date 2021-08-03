@@ -9,7 +9,8 @@ def isDigit(string):
         return True
     except:
         return False
-        
+
+
 """
     try:
         test = int(string)

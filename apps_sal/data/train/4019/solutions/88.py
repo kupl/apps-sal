@@ -5,4 +5,4 @@ def max_multiple(d, b):
         d /= i
         i += 1
         d *= i
-    return d-start
+    return d - start

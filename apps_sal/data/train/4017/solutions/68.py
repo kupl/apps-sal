@@ -1,28 +1,32 @@
-def add(a,b):
+def add(a, b):
     return a + b
-    
-def multiply( a, b ):
-    return a * b;
-    
-def divide( a, b ):
+
+
+def multiply(a, b):
+    return a * b
+
+
+def divide(a, b):
     ans = ""
     try:
         ans = a / b
     except ZeroDivisionError:
-        print( "division by zero" )
+        print("division by zero")
     else:
         return ans
-        
-def mod( a, b ):
+
+
+def mod(a, b):
     return a % b
-    
-def subt( a, b):
+
+
+def subt(a, b):
     return a - b
-    
-def exponent( a, b):
-  return a**b
-    
+
+
+def exponent(a, b):
+    return a**b
+
 # Make more functions. Refer to the description for function names.
 # The code will NOT WORK IF YOU USE names other than the ones
 # from the description
-

@@ -1,5 +1,6 @@
 import unicodedata
 
+
 def isDigit(string):
     try:
         float(string)

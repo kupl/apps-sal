@@ -7,4 +7,3 @@ def isDigit(number):
         except:
             return False
     return True
-

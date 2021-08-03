@@ -1,5 +1,6 @@
 import re
 
+
 def get_free_urinals(urinals):
     if '11' in urinals:
         return -1

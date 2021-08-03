@@ -4,5 +4,3 @@ def max_multiple(divisor, bound):
     for n in nums:
         if n % divisor == 0:
             return n
-    
-

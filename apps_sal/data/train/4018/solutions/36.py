@@ -7,4 +7,3 @@ def isDigit(string):
         if string == '-' or string == '.':
             return True
         return False
-

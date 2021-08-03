@@ -1,5 +1,5 @@
 def isDigit(string):
-    #11ELF
+    # 11ELF
     try:
         int(string)
         return True

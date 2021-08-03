@@ -1,2 +1,2 @@
-def max_multiple(d, b): 
+def max_multiple(d, b):
     return b // d * d

@@ -5,4 +5,3 @@ def isDigit(s):
         return False
     else:
         return True
-

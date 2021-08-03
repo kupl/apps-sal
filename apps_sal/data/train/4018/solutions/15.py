@@ -5,6 +5,8 @@ def isDigit(string):
         return False
     else:
         return True
+
+
 """
     l = list(string)
     if l.count('.') != 1 and l.count != 0:
@@ -15,4 +17,3 @@ def isDigit(string):
                 return False
             return False
 """
-

@@ -1,4 +1,6 @@
 import re
+
+
 def isDigit(string):
     try:
         float(string)
@@ -11,4 +13,3 @@ def isDigit(string):
     except ValueError:
         pass
     return False
-
