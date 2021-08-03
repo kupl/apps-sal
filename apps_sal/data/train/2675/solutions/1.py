@@ -8,7 +8,7 @@ def bad_apples(apples):
         elif max(package) == 0:
             # Both apples are rotten
             continue
-        else: # Only one good apple
+        else:  # Only one good apple
             # Filter for other packs with one good apple
             singles = filter(lambda x: min(x) == 0 and max(x) > 0, apples)
             try:

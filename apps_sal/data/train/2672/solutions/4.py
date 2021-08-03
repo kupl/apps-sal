@@ -1,13 +1,12 @@
 def color_probability(color, texture):
     # Your code goes here.
-    if texture == 'bumpy': 
+    if texture == 'bumpy':
         if color == 'red':
-            prob = 4/7 
-        elif color == 'yellow': 
-            prob = 2/7 
-        else: 
-            prob = 1/7 
+            prob = 4 / 7
+        elif color == 'yellow':
+            prob = 2 / 7
+        else:
+            prob = 1 / 7
     else:
-        prob = 1/3
-    return str(prob)[:4]  
-
+        prob = 1 / 3
+    return str(prob)[:4]

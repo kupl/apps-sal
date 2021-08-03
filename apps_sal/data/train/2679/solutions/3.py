@@ -1,5 +1,6 @@
 from string import ascii_lowercase as a_low
 
+
 def hamster_me(code, message):
     table = {}
     code = sorted(code)

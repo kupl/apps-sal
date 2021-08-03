@@ -4,4 +4,3 @@ def passer_rating(att, yds, comp, td, ints):
     C = max(min(2.375, (td / att) * 20), 0)
     D = max(min(2.375, 2.375 - ((ints / att) * 25)), 0)
     return round(((A + B + C + D) / 6) * 100, 1)
-

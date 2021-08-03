@@ -6,6 +6,5 @@ def two_sort(array):
             final += word[i] + '***'
         else:
             final += word[i]
-    
-    return final
 
+    return final

@@ -5,4 +5,3 @@ def two_sort(array):
     first = first.replace('', ' ')
     firstsplit = first.split()
     return '***'.join(firstsplit)
-

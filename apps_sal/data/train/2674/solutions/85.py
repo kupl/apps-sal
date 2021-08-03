@@ -11,9 +11,3 @@ def two_sort(array):
             res += lst[i]
 
     return res
-
-
-
-
-
-

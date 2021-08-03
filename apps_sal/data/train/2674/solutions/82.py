@@ -5,4 +5,3 @@ def two_sort(array):
     for i in first:
         new_list.append(i)
     return '***'.join(new_list)
-
