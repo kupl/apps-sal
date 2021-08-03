@@ -1,5 +1,5 @@
 x, y = map(int, input().split())
-b = (y/2 - x)
+b = (y / 2 - x)
 a = x - b
 if y % 2 != 0:
     print('No')

@@ -12,8 +12,7 @@ if left > right:
 else:
     for i in range(k - 1):
         print("LEFT")
-    for j in range(n -1):
+    for j in range(n - 1):
         print("PRINT " + s[j])
         print("RIGHT")
     print("PRINT " + s[n - 1])
-

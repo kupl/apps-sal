@@ -19,4 +19,3 @@ else:
     for x in range(k - 2, -1, -1):
         print('LEFT')
         print('PRINT', slogan[x])
-

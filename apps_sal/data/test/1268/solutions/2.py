@@ -1,4 +1,6 @@
-import math, functools as ft, itertools as it
+import math
+import functools as ft
+import itertools as it
 
 n = int(input())
 a = list(map(int, input().split()))

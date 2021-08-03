@@ -1,3 +1,3 @@
-x, y, z= map(int ,input().split())
+x, y, z = map(int, input().split())
 
-print(z,x,y,sep=' ')
+print(z, x, y, sep=' ')

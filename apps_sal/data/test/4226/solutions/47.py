@@ -10,4 +10,3 @@ for i in range(X + 1):
         print("Yes")
         return
 print("No")
-

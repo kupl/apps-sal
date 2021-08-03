@@ -6,14 +6,17 @@ sys.setrecursionlimit(10000)
 
 n, m = list(map(int, input().split(' ')))
 
+
 def neighbors(i, j):
-    return [(i+1, j), (i-1, j), (i, j+1), (i, j-1)]
+    return [(i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)]
+
 
 def valid(i, j):
     nonlocal n, m
     if i < 0 or i >= n or j < 0 or j >= m:
         return False
     return True
+
 
 def dfs(f, i, j):
     color = f[i][j]
@@ -34,6 +37,7 @@ def dfs(f, i, j):
 
     return False
 
+
 f = []
 for i in range(n):
     f.append(list(input().strip()))
@@ -47,4 +51,3 @@ for i in range(n):
                 return
 
 print("No")
-

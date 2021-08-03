@@ -6,4 +6,3 @@ A = sum(a)
 B = sum(sorted(b)[-2:])
 
 print(('NO', 'YES')[A <= B])
-

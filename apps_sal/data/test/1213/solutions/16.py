@@ -21,4 +21,3 @@ else:
     for i in range(k - 1, 0, -1):
         print("LEFT")
         print("PRINT", s[i - 1])
-

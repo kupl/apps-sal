@@ -7,4 +7,3 @@ if sum(a) <= x + max(b):
     print('YES')
 else:
     print('NO')
-

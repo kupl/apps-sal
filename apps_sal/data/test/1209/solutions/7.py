@@ -1,4 +1,4 @@
-import  math
+import math
 n = int(input())
 
 a = []
@@ -23,6 +23,5 @@ for i, e in enumerate(a):
     elif s == 0:
         print(e)
     else:
-        print(e+1)
+        print(e + 1)
         s += 1
-

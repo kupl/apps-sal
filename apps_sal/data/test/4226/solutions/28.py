@@ -6,4 +6,3 @@ for x in range(X + 1):
         break
 else:
     print("No")
-

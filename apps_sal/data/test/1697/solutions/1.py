@@ -12,10 +12,12 @@ ans = 0
 used = [[False] * m for i in range(n)]
 B = ''.join(A)
 B = list(set(B))
+
+
 def dfs(i, j, b, c):
     nonlocal ans
     used[i][j] = True
-    
+
     if A[i - 1][j] == b and c != 3:
         if used[i - 1][j]:
             ans = 1
@@ -39,6 +41,7 @@ def dfs(i, j, b, c):
             ans = 1
         else:
             dfs(i, j - 1, b, 4)
+
 
 for i in range(len(B)):
     used = [[False] * m for i in range(n)]

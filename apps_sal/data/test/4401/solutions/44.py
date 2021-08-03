@@ -10,4 +10,3 @@ X, Y = ex(X, Y)
 X, Z = ex(X, Z)
 
 print(f"{X} {Y} {Z}")
-

@@ -21,4 +21,3 @@ else:
         print("PRINT", line[i])
         print(add)
     print("PRINT", line[0])
-

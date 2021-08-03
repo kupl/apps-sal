@@ -1,17 +1,18 @@
-#-------------Program--------------
-#----Kuzlyaev-Nikita-Codeforces----
-#-------------Round615-------------
-#----------------------------------
+# -------------Program--------------
+# ----Kuzlyaev-Nikita-Codeforces----
+# -------------Round615-------------
+# ----------------------------------
 
-t=int(input())
+t = int(input())
 for i in range(t):
-    a,b,c,n=map(int,input().split())
-    a=[a,b,c];a.sort()
-    k=a[2]-a[1]+a[2]-a[0]
-    if n<k:
+    a, b, c, n = map(int, input().split())
+    a = [a, b, c]
+    a.sort()
+    k = a[2] - a[1] + a[2] - a[0]
+    if n < k:
         print('NO')
     else:
-        if (n-k)%3!=0:
+        if (n - k) % 3 != 0:
             print('NO')
         else:
             print('YES')
