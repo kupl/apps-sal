@@ -24,5 +24,3 @@ class Solution:
             if rem * boardingCost > runningCost:
                 res += 1
             return res if res > 0 else -1
-        
-

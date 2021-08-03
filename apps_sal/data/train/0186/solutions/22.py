@@ -3,38 +3,40 @@ from typing import List
 import numpy
 import functools
 
+
 class Solution:
 
-  def largestNumber(self, cost: List[int], target: int) -> str:
+    def largestNumber(self, cost: List[int], target: int) -> str:
 
-    cache = {}
-    def solve(remaining):
-      if not remaining:
-        return ''
-      if remaining in cache:
-        return cache[remaining]
+        cache = {}
 
-      maxium = '0'
-      for i in range(len(cost)):
-        if cost[i] > remaining:
-          continue
-        result = solve(remaining - cost[i])
-        if result == '0':
-          continue
+        def solve(remaining):
+            if not remaining:
+                return ''
+            if remaining in cache:
+                return cache[remaining]
 
-        maxium = larger(maxium, str(i+1) + result)
-        pass
-      cache[remaining] = maxium
-      return maxium
-      pass
+            maxium = '0'
+            for i in range(len(cost)):
+                if cost[i] > remaining:
+                    continue
+                result = solve(remaining - cost[i])
+                if result == '0':
+                    continue
 
-    def larger(a, b):
-      if len(a) > len(b):
-        return a
+                maxium = larger(maxium, str(i + 1) + result)
+                pass
+            cache[remaining] = maxium
+            return maxium
+            pass
 
-      if len(a) < len(b):
-        return b
+        def larger(a, b):
+            if len(a) > len(b):
+                return a
 
-      return max(a, b)
+            if len(a) < len(b):
+                return b
 
-    return solve(target)
+            return max(a, b)
+
+        return solve(target)

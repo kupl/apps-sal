@@ -5,7 +5,7 @@ class Solution:
         if not stations:
             return -1
         import heapq
-        queue = [-f for i,f in stations if i <= startFuel]
+        queue = [-f for i, f in stations if i <= startFuel]
         heapq.heapify(queue)
         fuel = startFuel
         start = max([i for i in range(len(stations)) if stations[i][0] <= startFuel] + [-1]) + 1

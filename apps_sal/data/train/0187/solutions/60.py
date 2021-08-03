@@ -1,6 +1,6 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        if runningCost >= 4* boardingCost:
+        if runningCost >= 4 * boardingCost:
             return -1
         rotations = -1
         maxProfit = 0

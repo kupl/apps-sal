@@ -5,31 +5,31 @@ class Solution:
         ans = 0
         revenue = 0
         cost = 0
-        
+
         for c in range(len(customers)):
-            waiting+=customers[c]
-            cost+=runningCost
-            
-            toBeBoarded=min(waiting,4)
-            waiting-=toBeBoarded
-            
-            revenue += toBeBoarded*boardingCost 
-            profit = revenue-cost
-            
-            if profit>maxProfit:
+            waiting += customers[c]
+            cost += runningCost
+
+            toBeBoarded = min(waiting, 4)
+            waiting -= toBeBoarded
+
+            revenue += toBeBoarded * boardingCost
+            profit = revenue - cost
+
+            if profit > maxProfit:
                 maxProfit, ans = profit, c
-                
-        while(waiting!=0):
-            c+=1
-            cost+=runningCost
-            
-            toBeBoarded=min(waiting,4)
-            waiting-=toBeBoarded
-            
-            revenue += toBeBoarded*boardingCost 
-            profit = revenue-cost
-            
-            if profit>maxProfit:
+
+        while(waiting != 0):
+            c += 1
+            cost += runningCost
+
+            toBeBoarded = min(waiting, 4)
+            waiting -= toBeBoarded
+
+            revenue += toBeBoarded * boardingCost
+            profit = revenue - cost
+
+            if profit > maxProfit:
                 maxProfit, ans = profit, c
-                
-        return ans+1 if maxProfit>0 else -1
+
+        return ans + 1 if maxProfit > 0 else -1

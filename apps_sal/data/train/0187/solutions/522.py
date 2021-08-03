@@ -15,4 +15,4 @@ class Solution:
                 maxProfit = profit
                 maxpc = counter
             i += 1
-        return -1 if maxProfit < 0 else maxpc 
+        return -1 if maxProfit < 0 else maxpc

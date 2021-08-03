@@ -12,7 +12,7 @@ class Solution:
             if profit > best:
                 best = profit
                 ans = rotations
-        
+
         while waiting > 0:
             rotations += 1
             boarded += min(waiting, 4)
@@ -21,8 +21,7 @@ class Solution:
             if profit > best:
                 best = profit
                 ans = rotations
-        
+
         if best > 0:
             return ans
         return -1
-

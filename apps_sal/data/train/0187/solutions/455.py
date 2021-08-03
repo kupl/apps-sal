@@ -40,5 +40,5 @@ class Solution:
             if profit[i] > maxprofit:
                 res = i + 1
                 maxprofit = profit[i]
-                
+
         return res

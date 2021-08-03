@@ -5,7 +5,7 @@ class Solution:
         rotation = 0
         maxProfit = 0
         maxRotation = -1
-        
+
         for n in customers:
             wait += n
             if wait > 4:
@@ -19,7 +19,7 @@ class Solution:
             if profit > maxProfit:
                 maxProfit = profit
                 maxRotation = rotation
-        
+
         while wait > 0:
             if wait > 4:
                 board += 4
@@ -33,5 +33,5 @@ class Solution:
                 maxProfit = profit
                 maxRotation = rotation
             #print(board, wait, rotation, profit)
-        
+
         return maxRotation

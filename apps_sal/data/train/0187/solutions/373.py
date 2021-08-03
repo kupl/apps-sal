@@ -5,21 +5,20 @@ class Solution:
         oc = 0
         d = 0
         for i, c in enumerate(customers):
-            d = i+1
+            d = i + 1
             rc += c
-            oc = min(4,rc) + oc
-            rc = max( rc -4, 0)
-            cp = oc * boardingCost - (i+1) * runningCost
+            oc = min(4, rc) + oc
+            rc = max(rc - 4, 0)
+            cp = oc * boardingCost - (i + 1) * runningCost
             if cp > p:
                 p = cp
-                r = i+1
+                r = i + 1
         while rc > 0:
             d += 1
-            oc = min(4,rc) + oc
-            rc = max( rc -4, 0)
+            oc = min(4, rc) + oc
+            rc = max(rc - 4, 0)
             cp = oc * boardingCost - (d) * runningCost
             if cp > p:
                 p = cp
                 r = d
         return r
-

@@ -18,17 +18,17 @@ class Solution:
             if maxProf < prof:
                 maxProf = prof
                 maxRt = rt
-            
-        if maxProf > 0 :
+
+        if maxProf > 0:
             return maxRt
         else:
-            return -1 
-        
+            return -1
+
 #         pro = 0
-#         curpro = 0 
+#         curpro = 0
 #         wait = 0
 #         on = 0
-#         j = 0 
+#         j = 0
 #         for i, n in enumerate(customers):
 #             if n >= 4:
 #                 wait += n - 4
@@ -42,7 +42,7 @@ class Solution:
 #             elif pro < curpro:
 #                 pro = max(pro, curpro)
 #                 ans = j
-    
+
 #         while wait > 0:
 #             if wait >= 4:
 #                 wait -= 4
@@ -59,7 +59,5 @@ class Solution:
 #                     print(on, wait, pro, curpro, j)
 #                 ans = j
 #                 pro = max(pro, curpro)
-        
+
 #         return ans
-
-

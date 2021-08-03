@@ -16,12 +16,8 @@ class Solution:
             else:
                 total += rest
                 rest = 0
-            if boardingCost*total - (i+1)*runningCost > profit:
+            if boardingCost * total - (i + 1) * runningCost > profit:
                 res = i + 1
-                profit = boardingCost*total - (i+1)*runningCost
+                profit = boardingCost * total - (i + 1) * runningCost
             i += 1
         return res if profit > 0 else -1
-            
-                
-        
-

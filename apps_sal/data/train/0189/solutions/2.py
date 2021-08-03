@@ -7,10 +7,10 @@ class Solution:
             for j in range(len(plist)):
                 pref[i][plist[j]] = j
         print(pref)
-            
+
         unhappy = set()
         for i in range(len(pairs)):
-            for j in range(len(pairs)):                
+            for j in range(len(pairs)):
                 if i == j:
                     continue
                 for x in pairs[i]:
@@ -19,7 +19,5 @@ class Solution:
                         v = pairs[j][1] if u == pairs[j][0] else pairs[j][0]
                         if (pref[x][y] > pref[x][u] and pref[u][v] > pref[u][x]):
                             unhappy.add(x)
-
-
 
         return len(unhappy)

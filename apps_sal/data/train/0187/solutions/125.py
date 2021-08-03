@@ -1,13 +1,11 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        
-        
-        
-        # my solution ... 
+
+        # my solution ...
         #  time: O(n)
         # space: O(1)
-        
-        curr_profit, curr_rotate =  0, 0
+
+        curr_profit, curr_rotate = 0, 0
         best_profit, best_rotate = -1, 0
         queue_count = 0
         for customer in customers:
@@ -26,6 +24,3 @@ class Solution:
             if curr_profit > best_profit:
                 best_profit, best_rotate = curr_profit, curr_rotate
         return best_rotate if best_profit > 0 else -1
-        
-        
-

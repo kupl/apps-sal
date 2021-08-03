@@ -19,5 +19,5 @@ class Solution:
             if max_profit < profit:
                 max_profit = profit
                 res = count
-                
+
         return res if max_profit >= 0 else -1

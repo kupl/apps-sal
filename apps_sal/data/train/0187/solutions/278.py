@@ -10,13 +10,12 @@ class Solution:
                 waiting += customers[rnd]
             ride = min(4, waiting)
             income += ride * boardingCost
-            waiting -= ride 
-            cost += runningCost 
+            waiting -= ride
+            cost += runningCost
             profit.append(income - cost)
             rnd += 1
-                
+
         if max(profit) > 0:
             return profit.index(max(profit)) + 1
-        
-        return -1 
 
+        return -1

@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def maxRepOpt1(self, text: str) -> int:
         if len(text) == 1:
@@ -12,10 +13,10 @@ class Solution:
         for i in range(1, len(text)):
             if text[i] == text[i - 1]:
                 pre.append(pre[-1] + 1)
-            else :
+            else:
                 pre.append(1)
             ans = max(pre[i], ans)
-                
+
         for i in range(len(text) - 2, -1, -1):
             if text[i] == text[i + 1]:
                 nex.append(nex[-1] + 1)
@@ -23,7 +24,7 @@ class Solution:
                 nex.append(1)
             ans = max(nex[len(text) - i - 1], ans)
         nex.reverse()
-        
+
         # Now try some swaps.
         for i in range(len(text)):
             # We will try to swap out i.
@@ -44,7 +45,3 @@ class Solution:
                     # Can we still make it better?
                     ans = max(ans, l)
         return ans
-            
-        
-            
-

@@ -12,5 +12,3 @@ class Solution:
                 this_accu_max.append(max(this_accu_max[-1], last_max[j], accu_max[j + 1]))
             accu_max = this_accu_max
         return accu_max[-1]
-
-

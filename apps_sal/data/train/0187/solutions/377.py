@@ -2,7 +2,7 @@ class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         capacity = [0] * 4
         waiting = 0
-        max_profit = [0,0]
+        max_profit = [0, 0]
         rot = 0
         j = 0
         i = 0

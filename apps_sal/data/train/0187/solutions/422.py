@@ -7,12 +7,12 @@ class Solution:
         while i < len(customers):
             curr = customers[i] + prev
             if curr <= 4:
-                profit += curr*boardingCost - runningCost
+                profit += curr * boardingCost - runningCost
                 profits.append(profit)
                 prev = 0
             else:
                 prev = curr - 4
-                profit += 4*boardingCost - runningCost
+                profit += 4 * boardingCost - runningCost
                 profits.append(profit)
             i += 1
             if i == len(customers) and prev != 0:
@@ -26,6 +26,4 @@ class Solution:
             if profits[i] > m:
                 m = profits[i]
                 ind = i
-        return ind+1
-        
-
+        return ind + 1

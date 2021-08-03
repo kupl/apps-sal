@@ -6,4 +6,3 @@ class Solution:
                 if c <= t:
                     dp[t] = max(dp[t], dp[t - c] * 10 + (i + 1))
         return str(max(dp[-1], 0))
-

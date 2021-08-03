@@ -9,11 +9,11 @@ class Solution:
             if i < len(customers):
                 available += customers[i]
             boarding = min(available, 4)
-            cur_profit += boarding*boardingCost - runningCost*min(boarding,1)
+            cur_profit += boarding * boardingCost - runningCost * min(boarding, 1)
             if cur_profit > max_profit:
                 max_profit = cur_profit
                 max_iter = i
             available -= boarding
             i += 1
-        
-        return (max_iter+1) if max_profit != 0 else -1
+
+        return (max_iter + 1) if max_profit != 0 else -1

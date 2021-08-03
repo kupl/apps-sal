@@ -5,25 +5,22 @@ class Solution:
         for customer in customers:
             remainder_customers += customer
             getting_on = min(remainder_customers, 4)
-            cur_profit += getting_on * boardingCost - runningCost 
+            cur_profit += getting_on * boardingCost - runningCost
             remainder_customers -= getting_on
-            steps += 1 
-            
+            steps += 1
+
             if cur_profit > max_profit:
                 max_profit = cur_profit
                 res = steps
-                
+
         while remainder_customers > 0:
             getting_on = min(remainder_customers, 4)
-            cur_profit += getting_on * boardingCost - runningCost 
+            cur_profit += getting_on * boardingCost - runningCost
             remainder_customers -= getting_on
-            steps += 1 
-            
+            steps += 1
+
             if cur_profit > max_profit:
                 max_profit = cur_profit
                 res = steps
-    
-       
-        return -1 if max_profit < 0 else res
-                
 
+        return -1 if max_profit < 0 else res

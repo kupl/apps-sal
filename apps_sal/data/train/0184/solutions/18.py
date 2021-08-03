@@ -4,12 +4,12 @@ class Solution:
             if idx >= len(positions):
                 return step + swap
             if positions[idx] - 1 == cur:
-                return get_possible(idx+1, positions[idx], step + 1, swap)
+                return get_possible(idx + 1, positions[idx], step + 1, swap)
             elif not swap:
                 return step
             else:
                 return max(
-                    step+1,
+                    step + 1,
                     get_possible(idx, cur + 1, step + 1, False),
                     get_possible(idx, positions[idx] - 1, 1, False),
                     get_possible(idx + 1, positions[idx], 1, True),

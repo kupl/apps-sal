@@ -12,7 +12,7 @@ class Solution:
                 if res[0] < cur:
                     res = (cur, index)
                 index += 1
-                    
+
             waiting += c
             prev = index
             while waiting >= 4:
@@ -22,7 +22,7 @@ class Solution:
                 if res[0] < cur:
                     res = (cur, index)
                 index += 1
-            
+
         if waiting:
             boarding += waiting
             cur = boardingCost * boarding - index * runningCost

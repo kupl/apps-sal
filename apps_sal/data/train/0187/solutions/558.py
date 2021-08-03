@@ -28,6 +28,5 @@ class Solution:
         if cur_profit > maxp:
             maxp = cur_profit
             maxn = cur_round
-    
-        return maxn
 
+        return maxn

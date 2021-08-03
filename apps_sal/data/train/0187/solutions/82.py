@@ -7,8 +7,8 @@ class Solution:
         rotation = 0
         maxsum = 0
         maxrot = -1
-        while total > 0 or i < l :
-            if i < l :
+        while total > 0 or i < l:
+            if i < l:
                 total += customers[i]
                 i += 1
             if total > 4:
@@ -18,10 +18,9 @@ class Solution:
                 board += total
                 total = 0
             rotation += 1
-            temp = board*boardingCost - rotation*runningCost
+            temp = board * boardingCost - rotation * runningCost
             if temp > maxsum:
                 maxrot = rotation
                 maxsum = temp
 
         return maxrot
-

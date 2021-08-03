@@ -18,12 +18,12 @@ class Solution:
                 customers_waiting -= 4
 
             currentOperations += 1
-            currentProfits += (customers_boarding*boardingCost - runningCost)
+            currentProfits += (customers_boarding * boardingCost - runningCost)
 
             if currentProfits > maxProfits:
                 maxProfits = currentProfits
                 minOperations = currentOperations
-        
+
         while customers_waiting != 0:
             if customers_waiting <= 4:
                 customers_boarding = customers_waiting
@@ -33,11 +33,10 @@ class Solution:
                 customers_waiting -= 4
 
             currentOperations += 1
-            currentProfits += (customers_boarding*boardingCost - runningCost)
+            currentProfits += (customers_boarding * boardingCost - runningCost)
 
             if currentProfits > maxProfits:
                 maxProfits = currentProfits
                 minOperations = currentOperations
 
         return minOperations
-

@@ -7,32 +7,30 @@ class Solution:
         nc = 0
         for i in range(len(customers)):
             nc += customers[i]
-            canadd = min(4,nc)
+            canadd = min(4, nc)
             nc -= canadd
-            current += canadd*boardingCost
+            current += canadd * boardingCost
             current -= runningCost
-            currentindex+=1
+            currentindex += 1
             # print(current)
-            
+
             if current > best:
                 best = current
                 bestindex = currentindex
-                
+
         while nc > 0:
-            canadd = min(4,nc)
+            canadd = min(4, nc)
             nc -= canadd
-            current += canadd*boardingCost
+            current += canadd * boardingCost
             current -= runningCost
-            currentindex+=1
+            currentindex += 1
             # print(current)
-            
+
             if current > best:
                 best = current
                 bestindex = currentindex
-                
+
         if best == 0:
             bestindex = -1
-                
-        return bestindex
-            
 
+        return bestindex

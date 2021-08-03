@@ -8,18 +8,18 @@ class Solution:
             waiting += customers[i]
             board = min(waiting, 4)
             waiting -= board
-            cost += board*boardingCost
+            cost += board * boardingCost
             cost -= runningCost
             rotations += 1
-            profits.append((rotations,cost))
+            profits.append((rotations, cost))
         while waiting > 0:
             board = min(waiting, 4)
             waiting -= board
             rotations += 1
-            cost += boardingCost*board
+            cost += boardingCost * board
             cost -= runningCost
-            profits.append((rotations,cost))
-        #print(profits)
+            profits.append((rotations, cost))
+        # print(profits)
         r = None
         ans = 0
         for p in profits:

@@ -14,14 +14,13 @@ class Solution:
                 profit += 4 * boardingCost - runningCost
                 wating -= 4
             t_r += 1
-            if profit > max_profit: 
+            if profit > max_profit:
                 idx = t_r
                 max_profit = profit
         if wating > 0:
             if 4 * boardingCost > runningCost:
-                idx += wating//4
-        wating = wating%4
+                idx += wating // 4
+        wating = wating % 4
         if wating * boardingCost > runningCost:
             idx += 1
         return idx
-

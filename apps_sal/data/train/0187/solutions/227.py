@@ -9,7 +9,7 @@ def wheel(cust, ticket, cost):
         if i < l:
             n_waiting += cust[i]
             i += 1
-        seated = min (n_waiting, 4)
+        seated = min(n_waiting, 4)
         if i == l and seated == 0:
             break
         n_waiting -= seated
@@ -26,4 +26,3 @@ def wheel(cust, ticket, cost):
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         return wheel(customers, boardingCost, runningCost)
-

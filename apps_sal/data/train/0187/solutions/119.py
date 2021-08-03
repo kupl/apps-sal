@@ -10,20 +10,19 @@ class Solution:
             waiting_customers += customer
             to_board = min(waiting_customers, 4)
             waiting_customers -= to_board
-            cur_profit += (-runningCost + to_board*boardingCost)
+            cur_profit += (-runningCost + to_board * boardingCost)
             if cur_profit > max_profit:
                 max_profit = cur_profit
                 ans = turn
-           
-            
+
         # if there is remaining customer
         while waiting_customers > 0:
             turn += 1
             to_board = min(waiting_customers, 4)
             waiting_customers -= to_board
-            cur_profit += (-runningCost + to_board*boardingCost)
+            cur_profit += (-runningCost + to_board * boardingCost)
             if cur_profit > max_profit:
                 max_profit = cur_profit
                 ans = turn
-            
+
         return ans if max_profit >= 0 else -1

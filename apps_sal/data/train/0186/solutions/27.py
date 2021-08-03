@@ -12,6 +12,7 @@ class Solution:
             dp.append(result)
         return str(dp[-1])'''
         cache = {}
+
         def helper(remaining):
             if remaining == 0:
                 return ''
@@ -24,7 +25,7 @@ class Solution:
                 result = helper(remaining - cost[i])
                 if result == '0':
                     continue
-                maximum = larger(maximum, str(i+1) + result)
+                maximum = larger(maximum, str(i + 1) + result)
             cache[remaining] = maximum
             return maximum
 

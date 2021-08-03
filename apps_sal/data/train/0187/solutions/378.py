@@ -22,5 +22,3 @@ class Solution:
                 res = i
                 max_profit = profit
         return res if res > 0 else -1
-                
-

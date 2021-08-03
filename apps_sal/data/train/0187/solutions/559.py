@@ -17,7 +17,7 @@ class Solution:
                 total_customers += left
                 left = 0
                 ran += 1
-            
+
             curr_profit = total_customers * boardingCost - ran * runningCost
             if curr_profit > max_profit:
                 max_profit = curr_profit

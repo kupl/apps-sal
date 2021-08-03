@@ -1,7 +1,7 @@
 class Solution:
     def largestNumber(self, cost: List[int], target: int) -> str:
         return self.helper(cost, target, {})
-        
+
     def helper(self, cost, target, visited):
         if target == 0:
             return ''

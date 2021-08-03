@@ -8,7 +8,7 @@ class Solution:
         for c in customers:
             rounds += 1
             curCustomers += c
-            if curCustomers>=4:
+            if curCustomers >= 4:
                 curProfit += 4 * boardingCost - runningCost
                 curCustomers -= 4
             else:
@@ -19,7 +19,7 @@ class Solution:
                 ans = rounds
         while curCustomers > 0:
             rounds += 1
-            if curCustomers>=4:
+            if curCustomers >= 4:
                 curProfit += 4 * boardingCost - runningCost
                 curCustomers -= 4
             else:
@@ -29,4 +29,3 @@ class Solution:
                 maxProfit = curProfit
                 ans = rounds
         return ans
-

@@ -15,4 +15,3 @@ class Solution:
             ans.append(profit)
         ret = max(ans)
         return -1 if ret <= 0 else ans.index(ret)
-

@@ -13,5 +13,5 @@ class Solution:
             if profit > highest:
                 highest_time = time
             highest = max(profit, highest)
-            
+
         return -1 if highest <= 0 else highest_time

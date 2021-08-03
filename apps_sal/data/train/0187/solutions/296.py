@@ -7,7 +7,7 @@ class Solution:
         ans = 0
         cp = 0
         curVal = False
-        for i in range(1,n):
+        for i in range(1, n):
             if total > 3:
                 cp += 4 * boardingCost - runningCost
                 total -= 4
@@ -21,12 +21,12 @@ class Solution:
         # print(cp, ans, total)
         if total > 3:
             if not curVal:
-                cp += (total//4) * (4 * boardingCost - runningCost)
+                cp += (total // 4) * (4 * boardingCost - runningCost)
                 if cp > 0:
                     curVal = True
             if curVal:
-                ans += total//4
-                total = total%4
+                ans += total // 4
+                total = total % 4
             else:
                 return -1
         # print(cp, ans, total)
@@ -37,4 +37,3 @@ class Solution:
                     return -1
             ans += 1
         return ans
-

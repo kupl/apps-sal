@@ -7,7 +7,7 @@ class Solution:
         rot = 0
         res = 0
         ind = -1
-        
+
         while waiting > 0 or i < n:
             if i < n:
                 waiting += customers[i]
@@ -19,5 +19,5 @@ class Solution:
                 res = prof
                 ind = i + 1
             i += 1
-        
+
         return ind

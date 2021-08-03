@@ -18,6 +18,5 @@ class Solution:
             curr_profit += boardingCost * num_boarded - runningCost
             if curr_profit > max_profit:
                 max_profit = curr_profit
-                max_profit_ops = curr_op     
+                max_profit_ops = curr_op
         return max_profit_ops if max_profit > 0 else - 1
-

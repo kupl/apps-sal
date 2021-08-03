@@ -10,10 +10,9 @@ class Solution:
             num = min(waiting + customers[i], 4) if i < len(customers) else min(waiting, 4)
             profit += num * boardingCost - runningCost
             r += 1
-            waiting = max(waiting + customers[i]-4, 0) if i < len(customers) else max(waiting - 4, 0)
+            waiting = max(waiting + customers[i] - 4, 0) if i < len(customers) else max(waiting - 4, 0)
             i += 1
             if profit > temp:
                 temp = profit
                 ans = r
         return ans
-

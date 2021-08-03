@@ -43,4 +43,3 @@ class Solution:
                 ans = current
 
         return ans
-

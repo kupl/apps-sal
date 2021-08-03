@@ -8,10 +8,10 @@ class Solution:
         for c in customers:
             wait += c
             if wait <= 4:
-                profit += (wait*boardingCost-runningCost)
+                profit += (wait * boardingCost - runningCost)
                 wait = 0
             else:
-                profit += (4*boardingCost-runningCost)
+                profit += (4 * boardingCost - runningCost)
                 wait -= 4
             curr += 1
             if profit > max_profit:
@@ -19,10 +19,10 @@ class Solution:
                 ans = curr
         while wait > 0:
             if wait <= 4:
-                profit += (wait*boardingCost-runningCost)
+                profit += (wait * boardingCost - runningCost)
                 wait = 0
             else:
-                profit += (4*boardingCost-runningCost)
+                profit += (4 * boardingCost - runningCost)
                 wait -= 4
             curr += 1
             if profit > max_profit:

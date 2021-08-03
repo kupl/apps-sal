@@ -21,4 +21,3 @@ class Solution:
         res += count
         profit += board * boardingCost - res * runningCost
         return res if profit >= 0 else -1
-

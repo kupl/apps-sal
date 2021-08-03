@@ -22,9 +22,7 @@ class Solution:
             if best[0] < cur_revenue:
                 best = cur_revenue, rotations
         return best[1]
-            
-            
-                
+
         # cur = boarded = rotations = 0
         # best = (0, 1)
         # for customer in customers:
@@ -42,4 +40,3 @@ class Solution:
         # #     best = max(best, ((boarded + cur) * boardingCost - (rotations + 1) * runningCost, -(rotations+1)))
         # # print(cur, best)
         # return -best[1]
-

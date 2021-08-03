@@ -11,10 +11,10 @@ class Solution:
             lst.append((curr, count))
         res = 0
         for i in range(len(lst)):
-            if 0 < i < len(lst)-1:
-                if lst[i-1][0] == lst[i+1][0] and lst[i][1] == 1:
-                    curlen = lst[i-1][1]+lst[i+1][1]
-                    if lookup[lst[i-1][0]] > curlen:
+            if 0 < i < len(lst) - 1:
+                if lst[i - 1][0] == lst[i + 1][0] and lst[i][1] == 1:
+                    curlen = lst[i - 1][1] + lst[i + 1][1]
+                    if lookup[lst[i - 1][0]] > curlen:
                         curlen += 1
                     res = max(res, curlen)
                     continue

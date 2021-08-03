@@ -12,4 +12,3 @@ class Solution:
                 max_profit, max_t = profit, t + 1
             t += 1
         return max_t
-

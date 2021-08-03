@@ -7,11 +7,10 @@ class Solution:
             if i < n:
                 wait += customers[i]
             board = min(4, wait)
-            earn += board* boardingCost - runningCost
+            earn += board * boardingCost - runningCost
             if earn > max_earn:
                 res = i + 1
                 max_earn = earn
             wait -= board
             i += 1
         return res
-

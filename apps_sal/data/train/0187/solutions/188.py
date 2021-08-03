@@ -11,7 +11,7 @@ class Solution:
             if i < len(customers):
                 count_ppl += customers[i]
                 i += 1
-            count_bd = min(4, count_ppl) # boarding people by greedy. 
+            count_bd = min(4, count_ppl)  # boarding people by greedy.
             count_ppl -= count_bd
             prof = prof + count_bd * boardingCost - runningCost
             run += 1
@@ -19,4 +19,3 @@ class Solution:
                 maxProf = prof
                 maxRun = run
         return maxRun if maxProf > 0 else -1
-

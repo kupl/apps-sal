@@ -14,7 +14,7 @@ class Solution:
         if max_profit == -1:
             return -1
         a = (queue * boardingCost) - runningCost * math.ceil(queue / 4)
-        b = (4 * boardingCost - runningCost)*(queue // 4)
+        b = (4 * boardingCost - runningCost) * (queue // 4)
         print((a, b, queue))
         if b > 0 and b >= a:
             return ans + queue // 4
@@ -22,4 +22,3 @@ class Solution:
             return ans + math.ceil(queue / 4)
         else:
             return ans
-

@@ -1,7 +1,7 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         # keep track of maximum profit
-        # 
+        #
         q_len = current_profit = 0
         max_profit = ans = -1
         for rotation, new_people in enumerate(customers):
@@ -11,7 +11,7 @@ class Solution:
                 max_profit = current_profit
                 ans = rotation + 1
             q_len = max(0, q_len - 4)
-            
+
         rotation = len(customers)
         while q_len > 0:
             current_profit += boardingCost * min(4, q_len) - runningCost
@@ -20,7 +20,5 @@ class Solution:
                 ans = rotation + 1
             q_len = max(0, q_len - 4)
             rotation += 1
-            
-        return ans
-            
 
+        return ans

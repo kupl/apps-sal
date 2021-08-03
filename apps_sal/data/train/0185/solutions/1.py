@@ -1,7 +1,7 @@
 class Solution:
     def hasAllCodes(self, s: str, k: int) -> bool:
         if len(s) < 2 ** k + k - 1:
-            return False # Cannot be a string, as this is the de brujin length
+            return False  # Cannot be a string, as this is the de brujin length
         target = 2 ** k
         seen = set()
         cur_len = 0
@@ -13,4 +13,3 @@ class Solution:
                 if cur_len == target:
                     return True
         return len(seen) == target
-

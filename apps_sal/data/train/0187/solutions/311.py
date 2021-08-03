@@ -9,10 +9,10 @@ class Solution:
                 profit += 4 * bc
             else:
                 profit += wait * bc
-            wait = max(0, wait-4)
+            wait = max(0, wait - 4)
             profit -= rc
             t += 1
             if profit > max_p:
                 ans = t
                 max_p = profit
-        return ans if max_p>0 else -1
+        return ans if max_p > 0 else -1

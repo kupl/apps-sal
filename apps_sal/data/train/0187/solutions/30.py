@@ -18,10 +18,10 @@ class Solution:
             if (max_total < total):
                 max_total = total
                 max_count = count
- 
+
         while(wait > 0):
             count += 1
-            if wait>4:
+            if wait > 4:
                 onboard = 4
                 wait = wait - 4
             else:
@@ -32,6 +32,6 @@ class Solution:
                 max_total = total
                 max_count = count
 
-        if (max_total > 0): return max_count
+        if (max_total > 0):
+            return max_count
         return -1
-

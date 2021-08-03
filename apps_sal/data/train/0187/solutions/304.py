@@ -19,12 +19,11 @@ class Solution:
             current_rotates += 1
             current_profit = current_boarded * boardingCost - current_rotates * runningCost
             # print(current_profit, current_rotates)
-            
+
             if current_profit > max_profit:
                 max_profit = current_profit
                 best_turns = current_rotates
 
             current_index += 1
-        
-        return best_turns
 
+        return best_turns

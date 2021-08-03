@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         customers = deque(customers)
@@ -10,11 +11,11 @@ class Solution:
             in_line += c
             board = min(in_line, 4)
             in_line -= board
-            profit += board * boardingCost 
+            profit += board * boardingCost
             rot += 1
             profit -= runningCost
             if profit > max_profit:
                 max_profit = profit
                 best_rot = rot
-         
+
         return best_rot if max_profit > 0 else -1

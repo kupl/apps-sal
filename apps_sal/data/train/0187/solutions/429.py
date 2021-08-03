@@ -9,18 +9,18 @@ class Solution:
             if waiting > 0:
                 board = min(4, waiting)
                 waiting -= board
-                cost += board*boardingCost
+                cost += board * boardingCost
             cost -= runningCost
             rotations += 1
-            profits.append((rotations,cost))
+            profits.append((rotations, cost))
         while waiting:
             board = min(4, waiting)
-            cost += board*boardingCost
+            cost += board * boardingCost
             waiting -= board
             cost -= runningCost
             rotations += 1
-            profits.append((rotations,cost))
-        #print(profits)
+            profits.append((rotations, cost))
+        # print(profits)
         p_ans = float('-inf')
         r_ans = None
         for p in profits:
@@ -28,6 +28,3 @@ class Solution:
                 p_ans = p[1]
                 r_ans = p[0]
         return r_ans if p_ans > 0 else -1
-
-                
-

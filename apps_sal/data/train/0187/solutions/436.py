@@ -1,7 +1,5 @@
 
 
-
-
 # Example 2:
 
 # Input: customers = [10,9,6], boardingCost = 6, runningCost = 4
@@ -43,11 +41,14 @@
 # oh, we ran out of customers, duh
 
 class Solution:
-    def minOperationsMaxProfit(self, A: List[int], profit: int, loss: int, wait = 0, total = 0, best = 0, bestIndex = -1) -> int:
+    def minOperationsMaxProfit(self, A: List[int], profit: int, loss: int, wait=0, total=0, best=0, bestIndex=-1) -> int:
         i = 1
+
         def rotate():
             nonlocal i, wait, total, best, bestIndex
-            take = min(wait, 4); total += take; wait -= take
+            take = min(wait, 4)
+            total += take
+            wait -= take
             cand = total * profit - i * loss
             if best < cand:
                 best = cand
@@ -59,5 +60,3 @@ class Solution:
         while wait:
             rotate()
         return bestIndex
-            
-

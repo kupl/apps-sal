@@ -7,25 +7,25 @@ class Solution:
         rounds = 1
         members = 0
         final_rounds = 0
-        
+
         for c in customers:
             waiting += c
-            
+
             new = min(4, waiting)
             members += new
             waiting -= new
-            
+
             cur = boardingCost * members - runningCost * rounds
             if cur > profit:
                 profit = cur
                 final_rounds = rounds
             rounds += 1
-        
+
         while waiting:
             new = min(4, waiting)
             members += new
             waiting -= new
-            
+
             cur = boardingCost * members - runningCost * rounds
             if cur > profit:
                 profit = cur

@@ -5,7 +5,7 @@ class Solution:
         u = 0
         profit = 0
         rotation = 0
-        
+
         for c in customers:
             rotation += 1
             if c > 4:
@@ -14,7 +14,7 @@ class Solution:
             else:
                 if q > 0:
                     diff = 4 - c
-                    if q >= diff:   
+                    if q >= diff:
                         u += c + diff
                         q -= diff
                     else:
@@ -22,11 +22,11 @@ class Solution:
                         q = 0
                 else:
                     u += c
-            
+
             if profit < u * boardingCost - rotation * runningCost:
                 profit = u * boardingCost - rotation * runningCost
                 res = rotation
-        
+
         while q > 0:
             rotation += 1
             if q > 4:
@@ -38,8 +38,6 @@ class Solution:
             if profit < u * boardingCost - rotation * runningCost:
                 profit = u * boardingCost - rotation * runningCost
                 res = rotation
-            
+
         print(profit)
         return res if profit > 0 else -1
-                
-

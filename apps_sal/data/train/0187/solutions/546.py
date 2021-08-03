@@ -7,10 +7,10 @@ class Solution:
         max_turns = -1
         # print(sum(customers))
         for i, c in enumerate(customers):
-            t, rem = divmod(c+rem, 4)
+            t, rem = divmod(c + rem, 4)
             turns += t
             boarded += t * 4
-            if turns <= i: 
+            if turns <= i:
                 turns += 1
                 boarded += rem
                 rem = 0

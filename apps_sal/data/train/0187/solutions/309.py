@@ -7,9 +7,9 @@ class Solution:
         cost = 0
         rotations = 0
         for i in range(len(customers)):
-            if income-cost > bestProfit:
+            if income - cost > bestProfit:
                 bestRotation = rotations
-                bestProfit = income-cost
+                bestProfit = income - cost
             waiting += customers[i]
             newCustomers = min(waiting, 4)
             waiting -= newCustomers
@@ -17,17 +17,17 @@ class Solution:
             cost += runningCost
             rotations += 1
         while waiting > 0:
-            if income-cost > bestProfit:
+            if income - cost > bestProfit:
                 bestRotation = rotations
-                bestProfit = income-cost
+                bestProfit = income - cost
             newCustomers = min(waiting, 4)
             waiting -= newCustomers
             income += newCustomers * boardingCost
             cost += runningCost
             rotations += 1
-        if income-cost > bestProfit:
+        if income - cost > bestProfit:
             bestRotation = rotations
-            bestProfit = income-cost
+            bestProfit = income - cost
         if bestProfit == 0:
             return -1
         else:

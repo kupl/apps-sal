@@ -10,7 +10,7 @@ class Solution:
             n += i
             x = min(4, n)
             num += x
-            cost = (num*boardingCost) - (shift*runningCost)
+            cost = (num * boardingCost) - (shift * runningCost)
             n -= min(4, n)
             if cost not in arr:
                 arr[cost] = shift
@@ -18,7 +18,7 @@ class Solution:
         while n > 0:
             x = min(4, n)
             num += x
-            cost = (num*boardingCost) - (shift*runningCost)
+            cost = (num * boardingCost) - (shift * runningCost)
             n -= min(4, n)
             if cost not in arr:
                 arr[cost] = shift

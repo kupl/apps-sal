@@ -13,4 +13,3 @@ class Solution:
             waiting -= board
             i += 1
         return result if result < 0 else result + 1
-

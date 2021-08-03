@@ -9,7 +9,7 @@ class Solution:
             if number > 4:
                 res += number - 4
                 current += 4
-            elif number == 4: 
+            elif number == 4:
                 current += number
             else:
                 if res + number > 4:
@@ -18,14 +18,14 @@ class Solution:
                 else:
                     current += res + number
                     res = 0
-            profit = boardingCost * current - rotate*runningCost
+            profit = boardingCost * current - rotate * runningCost
             # print(\"the profit is: \" + str(profit))
             rotate += 1
             if ans < profit:
                 ans = profit
                 rotate_times = rotate
         # print(\"the res is: \" + str(res))
-            
+
         while res > 0:
             if res > 4:
                 current += 4
@@ -33,11 +33,10 @@ class Solution:
             else:
                 current += res
                 res = 0
-            profit = boardingCost * current - rotate*runningCost
+            profit = boardingCost * current - rotate * runningCost
             # print(\"the profit is: \" + str(profit))
             rotate += 1
             if ans < profit:
                 ans = profit
                 rotate_times = rotate
-        return rotate_times -1  if rotate_times - 1 > 0 else -1
-
+        return rotate_times - 1 if rotate_times - 1 > 0 else -1

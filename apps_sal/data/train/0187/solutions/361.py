@@ -6,8 +6,8 @@ class Solution:
         waiting = 0
         boarded = 0
         c = 0
-        while waiting > 0 or c<len(customers):
-            if c<len(customers):
+        while waiting > 0 or c < len(customers):
+            if c < len(customers):
                 waiting += customers[c]
             if waiting > 4:
                 boarded += 4
@@ -16,7 +16,7 @@ class Solution:
                 boarded += waiting
                 waiting = 0
             rots += 1
-            profit = boarded*boardingCost - rots*runningCost
+            profit = boarded * boardingCost - rots * runningCost
             if profit > max_profit:
                 max_profit = profit
                 best_rots = rots

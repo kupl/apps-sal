@@ -10,10 +10,10 @@ class Solution:
             else:
                 customers[i] = remain + v
                 remain = 0
-        profits = [0] * len(customers) 
+        profits = [0] * len(customers)
         profits[0] = customers[0] * boardingCost - runningCost
         for i in range(1, len(customers)):
-            profits[i] = profits[i-1] + customers[i] * boardingCost - runningCost
+            profits[i] = profits[i - 1] + customers[i] * boardingCost - runningCost
         while remain > 0:
             if remain >= 4:
                 profits.append(profits[-1] + 4 * boardingCost - runningCost)
@@ -22,4 +22,3 @@ class Solution:
                 profits.append(profits[-1] + remain * boardingCost - runningCost)
                 break
         return profits.index(max(profits)) + 1
-

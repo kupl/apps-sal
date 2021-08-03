@@ -15,8 +15,7 @@ class Solution:
             profits -= runningCost
             if profits > bestProfits:
                 bestProfits = profits
-                bestRotations = rotation+1
+                bestRotations = rotation + 1
             # print(rotation, waiting, bording, profits, bestProfits)
-        
-        return bestRotations
 
+        return bestRotations

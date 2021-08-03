@@ -9,7 +9,7 @@ class Solution:
             r += b * boardingCost - runningCost
             s -= b
             if r > maxr:
-                maxr, maxn = r, i+1
+                maxr, maxn = r, i + 1
         r += 4 * (s // 4) * boardingCost - (s // 4) * runningCost
         if r > maxr:
             maxr, maxn = r, len(customers) + (s // 4)

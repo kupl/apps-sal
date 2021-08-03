@@ -9,12 +9,12 @@ class Solution:
             wait += c
             board = min(4, wait)
             wait -= board
-            if i == len(customers)-1 and wait > 0:
+            if i == len(customers) - 1 and wait > 0:
                 customers += [wait]
                 wait = 0
             profit += boardingCost * board - runningCost
             if profit > max_profit:
                 max_profit = profit
                 iteration = i
-                
+
         return iteration + 1 if max_profit > 0 else -1

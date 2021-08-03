@@ -5,7 +5,7 @@ class Solution:
             for s, v in enumerate(up):
                 scores[(u, v)] = s
         return scores
-    
+
     def unhappy_friends(self, scores, a, b):
         ret = set()
         for ai, aa in enumerate(a):
@@ -16,7 +16,7 @@ class Solution:
                     ret.add(aa)
                     ret.add(bb)
         return ret
-    
+
     def unhappyFriends(self, n: int, preferences: List[List[int]], pairs: List[List[int]]) -> int:
         scores = self.preferences_to_scores(preferences)
         ret = set()
@@ -25,4 +25,3 @@ class Solution:
                 b = pairs[j]
                 ret |= self.unhappy_friends(scores, a, b)
         return len(ret)
-

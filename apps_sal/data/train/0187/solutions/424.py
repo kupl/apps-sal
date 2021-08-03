@@ -20,11 +20,10 @@ class Solution:
 
         max_profit = 0
         optimal_rotation = 0
-        for idx,profit in enumerate(curr_profit):
+        for idx, profit in enumerate(curr_profit):
             if(profit > max_profit):
                 max_profit = profit
                 optimal_rotation = idx + 1
         if(max_profit <= 0):
             return -1
         return optimal_rotation
-

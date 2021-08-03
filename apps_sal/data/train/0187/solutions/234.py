@@ -5,19 +5,19 @@ class Solution:
         m = 0
         mi = -1
         ind = 0
-        for i,cc in enumerate(c):
-            cnt+=cc
-            p+=min(4,cnt)*b-r
+        for i, cc in enumerate(c):
+            cnt += cc
+            p += min(4, cnt) * b - r
             if p > m:
-                mi = i+1
+                mi = i + 1
                 m = p
-            cnt = max(cnt-4, 0)
+            cnt = max(cnt - 4, 0)
             ind = i
         while cnt:
-            ind+=1
-            p+=min(4,cnt)*b-r
+            ind += 1
+            p += min(4, cnt) * b - r
             if p > m:
-                mi = ind+1
+                mi = ind + 1
                 m = p
-            cnt = max(cnt-4, 0)
+            cnt = max(cnt - 4, 0)
         return mi

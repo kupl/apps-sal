@@ -13,7 +13,7 @@ class Solution:
                 rotations = i
             cust -= min(cust, 4)
             waiting = cust
-        
+
         if waiting > 0:
             profit += (waiting // 4) * (4 * boardingCost - runningCost)
             if profit > max_profit:
@@ -24,5 +24,5 @@ class Solution:
             if profit > max_profit:
                 max_profit = profit
                 rotations += 1
-            
-        return rotations+1 if max_profit >= 0 else -1
+
+        return rotations + 1 if max_profit >= 0 else -1

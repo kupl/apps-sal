@@ -16,7 +16,7 @@ class Solution:
             if money > ans:
                 j = i
                 ans = money
-        
+
         while people:
             i += 1
             x = min(people, 4)
@@ -26,5 +26,5 @@ class Solution:
             if money > ans:
                 j = i
                 ans = money
-        
+
         return j if ans > 0 else -1

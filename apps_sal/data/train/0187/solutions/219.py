@@ -51,4 +51,3 @@ class Solution:
             return -1
         # print(min_rotation)
         return min_rotation
-

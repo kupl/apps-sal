@@ -8,7 +8,8 @@ class Solution:
         taken = 0
         while i < n or num_waiting:
             curr = num_waiting
-            if i < n: curr += customers[i]
+            if i < n:
+                curr += customers[i]
             if curr > 4:
                 taken += 4
                 num_waiting = curr - 4
@@ -23,6 +24,3 @@ class Solution:
                 ans = i + 1
             i += 1
         return ans
-                
-                
-

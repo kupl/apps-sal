@@ -15,6 +15,5 @@ class Solution:
             if p > profit:
                 profit = p
                 ans = rotates
-        
-        return ans if profit > 0 else -1
 
+        return ans if profit > 0 else -1

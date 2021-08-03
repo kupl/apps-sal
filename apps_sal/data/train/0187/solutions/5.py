@@ -18,12 +18,11 @@ class Solution:
             if waitings >= 4:
                 profit += (4 * boardingCost - runningCost)
                 waitings -= 4
-                count += 1 
+                count += 1
             else:
                 if waitings * boardingCost > runningCost:
                     profit += (waitings * boardingCost - runningCost)
                     count += 1
                 break
-                      
-        return count if profit >=0 else -1
 
+        return count if profit >= 0 else -1

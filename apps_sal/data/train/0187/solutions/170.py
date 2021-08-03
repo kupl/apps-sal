@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         cur = best = wheel_turns = 0
@@ -11,9 +12,9 @@ class Solution:
             # Add new waiting customers, put passengers on ride, remove passengers from waiting.
             if wheel_turns < len(customers):
                 waiting += customers[wheel_turns]
-            
+
             wheel_turns += 1
-            
+
             passengers = min(waiting, capacity)
             waiting -= passengers
 
@@ -22,11 +23,9 @@ class Solution:
 
             if cur > best:
                 best_idx = wheel_turns
-                best = cur  
-            
+                best = cur
+
         if best_idx is None:
             best_idx = -1
 
         return best_idx
-
-
