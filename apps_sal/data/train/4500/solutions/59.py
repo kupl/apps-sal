@@ -8,4 +8,3 @@ def define_suit(card):
     if card[-1] == 'S':
         return 'spades'
     return ''
-

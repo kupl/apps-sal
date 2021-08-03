@@ -7,6 +7,5 @@ def define_suit(card):
     }
     if card[-1] not in suits:
         pass
-    
-    
+
     return suits[card[-1]]

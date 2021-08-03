@@ -1,4 +1,6 @@
 import re
+
+
 def define_suit(card):
     if re.search(r'C', card):
         return "clubs"

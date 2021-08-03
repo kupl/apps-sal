@@ -7,6 +7,7 @@ def is_valid_bar(bar, meter):
         total += 1.0 / n
     return total == meter
 
+
 def validate_rhythm(meter, score):
     n, d = meter
     if d & (d - 1):
@@ -15,7 +16,7 @@ def validate_rhythm(meter, score):
     meter = float(n) / d
     if all(is_valid_bar(bar, meter) for bar in bars[1:-1]):
         if all(is_valid_bar(bar, meter) for bar in (bars[0], bars[-1])):
-                return "Valid rhythm"
+            return "Valid rhythm"
         if len(bars) > 1 and is_valid_bar(bars[0] + bars[-1], meter):
-                return "Valid rhythm with anacrusis"
+            return "Valid rhythm with anacrusis"
     return "Invalid rhythm"

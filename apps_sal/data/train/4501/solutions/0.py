@@ -1,7 +1,9 @@
 import re
 
+
 def inside_out(s):
     return re.sub(r'\S+', lambda m: inside_out_word(m.group()), s)
+
 
 def inside_out_word(s):
     i, j = len(s) // 2, (len(s) + 1) // 2

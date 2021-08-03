@@ -1,11 +1,11 @@
 def define_suit(card):
-  
+
     suite = card[-1]
     if card[-1] == 'S':
-      return 'spades'
+        return 'spades'
     elif card[-1] == 'D':
-      return 'diamonds'
+        return 'diamonds'
     elif card[-1] == 'H':
-      return 'hearts'
+        return 'hearts'
     else:
-      return 'clubs'
+        return 'clubs'

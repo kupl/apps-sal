@@ -3,7 +3,8 @@ def swap(word):
     if len(word) % 2 == 0:
         return word[:m][::-1] + word[m:][::-1]
     else:
-        return word[:m][::-1] + word[m] + word[m+1:][::-1]
-        
+        return word[:m][::-1] + word[m] + word[m + 1:][::-1]
+
+
 def inside_out(st):
     return ' '.join(map(swap, st.split()))
