@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, k, p = read()
 a = list(read())
 b = list(read())
@@ -8,6 +10,7 @@ b.sort()
 
 def cal(a, b):
     return abs(a - b) + abs(b - p)
+
 
 mi = 1e15
 for _ in range(k - n + 1):
@@ -19,4 +22,3 @@ for _ in range(k - n + 1):
     if ma < mi:
         mi = ma
 print(mi)
-

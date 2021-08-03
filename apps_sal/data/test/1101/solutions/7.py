@@ -3,11 +3,11 @@ a = input()
 
 k += 1
 # size of n+1
-f = [0] * (n+1)
+f = [0] * (n + 1)
 
 f[1] = int(a[0] == '0')
-for i in range(2, n+1):
-    f[i] = f[i-1] + int(a[i-1] == '0')
+for i in range(2, n + 1):
+    f[i] = f[i - 1] + int(a[i - 1] == '0')
 
 # print(f)
 
@@ -15,9 +15,9 @@ for i in range(2, n+1):
 def check(dis):
     for i in range(n):
         if a[i] == '0':
-            left = max(i-dis, 0)
-            right = min(i+dis, n-1)
-            total = f[right+1] - f[left]
+            left = max(i - dis, 0)
+            right = min(i + dis, n - 1)
+            total = f[right + 1] - f[left]
             # print(total)
             if total >= k:
                 return True
@@ -41,4 +41,3 @@ print(l)
 # binary search the ANSWER!!
 # choose an answer and check if it works
 # array [i] keeps track of how many zeros are before it
-

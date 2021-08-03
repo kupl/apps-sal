@@ -3,7 +3,6 @@ T = sorted(S)
 U = set(T)
 U = sorted(U)
 if T == U:
-  print('yes')
+    print('yes')
 else:
-  print('no')
-
+    print('no')

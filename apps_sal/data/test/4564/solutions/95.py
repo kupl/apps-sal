@@ -6,4 +6,3 @@ for i in s:
         break
 else:
     print('yes')
-

@@ -17,10 +17,10 @@ k += 1
 for _ in range(k):
     r = next_free(r)
 i = l
-dis = max(i-l, r-i)
+dis = max(i - l, r - i)
 next_i = next_free(i)
 while True:
-    cur_dis = max(i-l, r-i)
+    cur_dis = max(i - l, r - i)
     next_dis = max(next_i - l, r - next_i)
 
     if cur_dis <= next_dis:
@@ -37,11 +37,11 @@ while True:
     l = next_free(l)
     if i < l:
         i = l
-    prev_dis = max(i-l, r-i)
+    prev_dis = max(i - l, r - i)
     dis = min(dis, prev_dis)
     m = next_free(i)
     while m <= r:
-        cur_dis = max(m-l, r-m)
+        cur_dis = max(m - l, r - m)
         if cur_dis >= prev_dis:
             break
         prev_dis = cur_dis
@@ -55,4 +55,3 @@ print(dis)
 # binary search the ANSWER!!
 # choose an answer and check if it works
 # array [i] keeps track of how many zeros are before it
-

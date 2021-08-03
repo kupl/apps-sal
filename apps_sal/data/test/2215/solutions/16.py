@@ -7,7 +7,7 @@ for i in range(m):
     r.append(r_i)
 s = ''
 for i in range(n):
-    if i % 2==0:
+    if i % 2 == 0:
         s += '0'
     else:
         s += '1'

@@ -5,7 +5,7 @@ a.sort()
 b.sort()
 
 res = 2147483647
-for i in range(k-n+1):
+for i in range(k - n + 1):
     m = 0
     for j in range(n):
         k = j + i
@@ -13,4 +13,3 @@ for i in range(k-n+1):
         m = max(m, dis)
     res = min(res, m)
 print(res)
-

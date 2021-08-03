@@ -12,4 +12,3 @@ for s in S:
         break
 
 print(ans)
-

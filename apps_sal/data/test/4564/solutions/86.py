@@ -1,7 +1,6 @@
 l = list(input())
 s = set(l)
 if len(s) == len(l):
-	print("yes")
+    print("yes")
 else:
-	print("no")
-
+    print("no")
