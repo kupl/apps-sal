@@ -23,7 +23,7 @@ def problem(in1, in2, in3):
 def __starting_point():
     in1 = input()
     in2 = input()
-    in3 = input();
+    in3 = input()
 
     result = problem(in1, in2, in3)
 

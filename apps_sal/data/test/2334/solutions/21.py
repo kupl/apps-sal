@@ -7,7 +7,8 @@ x, f = list(map(int, stdin.readline().split(' ')))
 flag1 = True
 for i in range(len(coins)):
     if coins[i] > x:
-        coins = coins[i:]; flag1 = False
+        coins = coins[i:]
+        flag1 = False
         break
 
 if flag1:

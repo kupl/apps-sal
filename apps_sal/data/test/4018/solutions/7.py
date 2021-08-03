@@ -25,6 +25,7 @@ for l in range(n, -1, -1):
         k = 0
         break
 
-if k > 0: ans = -1
+if k > 0:
+    ans = -1
 
 print(ans)

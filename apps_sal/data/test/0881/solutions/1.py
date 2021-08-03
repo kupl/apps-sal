@@ -1,8 +1,10 @@
-from functools import lru_cache; memo = lru_cache(None)
-from sys import setrecursionlimit as srl; srl(10**5)
-rr = lambda: input().rstrip()
-rri = lambda: int(rr())
-rrm = lambda: list(map(int, rr().split()))
+from sys import setrecursionlimit as srl
+from functools import lru_cache
+memo = lru_cache(None)
+srl(10**5)
+def rr(): return input().rstrip()
+def rri(): return int(rr())
+def rrm(): return list(map(int, rr().split()))
 
 
 def solve(N, A):

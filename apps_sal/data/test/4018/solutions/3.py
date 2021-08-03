@@ -15,8 +15,8 @@ num_subsequences_so_far = [0] * len_string
 last_num_subsequences_so_far = [0] * len_string
 num_subsequences_for_this_letter_so_far = [0] * 26
 
-last_num_subsequences_so_far[len_string - 1] = 1;
-num_subsequences_for_this_letter_so_far[val_of_letter(string[-1])] = 1;
+last_num_subsequences_so_far[len_string - 1] = 1
+num_subsequences_for_this_letter_so_far[val_of_letter(string[-1])] = 1
 
 for i in range(len_string - 2, -1, -1):
     last_num_subsequences_so_far[i] = \
@@ -27,7 +27,8 @@ for i in range(len_string - 2, -1, -1):
 num_subsequences.append(last_num_subsequences_so_far[0])
 
 for length in range(2, len_string + 1):
-    for i in range(26): num_subsequences_for_this_letter_so_far[i] = 0
+    for i in range(26):
+        num_subsequences_for_this_letter_so_far[i] = 0
 
     num_subsequences_so_far[len_string - 1] = 0
     for i in range(len_string - 2, -1, -1):
@@ -56,5 +57,7 @@ for i in range(len_string, -1, -1):
     cost += cur_size * (len_string - i)
     size += cur_size
 
-if size >= desired_size: sys.stdout.write(str(cost) + "\n")
-else: sys.stdout.write("-1\n")
+if size >= desired_size:
+    sys.stdout.write(str(cost) + "\n")
+else:
+    sys.stdout.write("-1\n")

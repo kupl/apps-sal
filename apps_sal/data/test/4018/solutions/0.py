@@ -1,6 +1,7 @@
 def sol(a, k):
     n = len(a)
-    if(k == 0): return 1
+    if(k == 0):
+        return 1
     if(k == 1):
         v = set()
         for x in a:
@@ -17,7 +18,8 @@ def sol(a, k):
     v2[n - 1] = 1
     v3[a[n - 1] - 1] = 1
     for i in range(n - 2, -1, -1):
-        if(i < 0): break
+        if(i < 0):
+            break
         v2[i] = v2[i + 1]
         if(v3[a[i] - 1] == 0):
             v2[i] += 1

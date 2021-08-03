@@ -12,7 +12,7 @@ def f(x):
 
 
 for i in range(n):
-    x = L[i];
+    x = L[i]
     while (f(x) != -1):
         L[X[x]] = -1
         out -= 1
