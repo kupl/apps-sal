@@ -6,4 +6,3 @@ def is_int_array(arr):
             if type(i) is str or i % 1 != 0:
                 return False
     return True
-

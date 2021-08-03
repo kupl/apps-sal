@@ -21,6 +21,7 @@ def adfgx_encrypt(plaintext, square):
                         the_encrypt += crypt[the_list.index(inlist)] + crypt[inlist.index(char)]
         return the_encrypt
 
+
 def adfgx_decrypt(ciphertext, square):
     crypt = [i for i in "ADFGX"]
     cnt = 0

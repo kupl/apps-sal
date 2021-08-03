@@ -1,5 +1,6 @@
 from string import ascii_lowercase as alphabet
 
+
 def same_encryption(s1, s2):
     sum_s1 = len(s1[1:-1])
     sum_s2 = len(s2[1:-1])
