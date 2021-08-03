@@ -5,7 +5,7 @@ for x in S:
     if (len(x) == n):
         for a, b in zip(x, s):
             if b != '.' and a != b:
-                break;
+                break
         else:
-            print(x);
-            break;
+            print(x)
+            break

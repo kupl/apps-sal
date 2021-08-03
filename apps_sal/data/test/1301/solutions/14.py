@@ -5,10 +5,13 @@ vrs = ["vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceo
 
 
 def match(a, b):
-    if len(a) != len(b): return False
+    if len(a) != len(b):
+        return False
     for (ac, bc) in zip(a, b):
-        if ac == '.' or bc == '.': continue
-        elif ac != bc: return False
+        if ac == '.' or bc == '.':
+            continue
+        elif ac != bc:
+            return False
     return True
 
 

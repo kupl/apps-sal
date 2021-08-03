@@ -10,10 +10,10 @@ while i < n:
         continue
     if(str[i] == 'e' or str[i] == 'o' or str[i] == 'i' or str[i] == 'y' or str[i] == 'u' or str[i] == 'a'):
         sys.stdout.write(str[i])
-        ch = str[i];
+        ch = str[i]
         while(str[i] == ch):
-            i += 1;
-        i -= 1;
+            i += 1
+        i -= 1
     else:
         sys.stdout.write(str[i])
     i += 1

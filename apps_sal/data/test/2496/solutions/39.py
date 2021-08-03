@@ -28,6 +28,7 @@ if reduce(gcd, A) == 1:
     #   print('setwise coprime')
     if all(sum(d[i - 1::i]) <= 1 for i in l):
         print('pairwise coprime')
-    else: print('setwise coprime')
+    else:
+        print('setwise coprime')
 else:
     print('not coprime')

@@ -11,7 +11,8 @@ class Sieve:  # 区間[2,n]の値の素因数分解 O(nloglogn+logn)
         self.f[0] = self.f[1] = -1
         self.f_lis = [0] * (n + 1)
         for i in range(2, n + 1):  # 素数リスト作成
-            if self.f[i]: continue
+            if self.f[i]:
+                continue
             self.primes.append(i)
             self.f[i] = i
             for j in range(i * i, n + 1, i):
@@ -24,7 +25,8 @@ class Sieve:  # 区間[2,n]の値の素因数分解 O(nloglogn+logn)
                 p = self.f[x]
                 x //= p
                 if x % p > 0:
-                    if self.f_lis[p] > 0: return False
+                    if self.f_lis[p] > 0:
+                        return False
                     self.f_lis[p] += 1
         return True
 

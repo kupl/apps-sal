@@ -1,7 +1,7 @@
 import re
 
 t = int(input())
-pat = input();
+pat = input()
 pat = '^' + pat + '$'
 if re.match(pat, "vaporeon", re.M | re.I):
     print("vaporeon")

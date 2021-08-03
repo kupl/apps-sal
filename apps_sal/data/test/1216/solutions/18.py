@@ -7,4 +7,4 @@ s = re.sub(r"[e]{3,}", "e", s)
 s = re.sub(r"[u]+", "u", s)
 s = re.sub(r"[y]+", "y", s)
 s = re.sub(r"[i]+", "i", s)
-print(s);
+print(s)

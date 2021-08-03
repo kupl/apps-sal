@@ -3,12 +3,15 @@ from math import gcd
 
 
 def sieve(L, R):
-    if L < 2: L = 2
+    if L < 2:
+        L = 2
     flag = [0] * (2 * R)
     for i in range(2, int(R**.5) + 5):
-        if flag[i] == 1: continue
+        if flag[i] == 1:
+            continue
         for j in range(i * 2, R + i, i):
-            if flag[j] == 1: continue
+            if flag[j] == 1:
+                continue
             if j % i == 0:
                 flag[j] = 1
 

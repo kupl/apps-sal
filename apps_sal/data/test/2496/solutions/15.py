@@ -14,7 +14,9 @@ def osa_k(sieve, MAXN):
         p += 1
 
 
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 n = int(input())
 A = list(map(int, input().split()))
 nowgcd = A[0]
