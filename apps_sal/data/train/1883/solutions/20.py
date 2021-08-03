@@ -9,7 +9,7 @@ class Solution:
             paths = dfs(r + 1, c, n - 1) + dfs(r - 1, c, n - 1) + dfs(r, c + 1, n - 1) + dfs(r, c - 1, n - 1)
             grid[r][c] = 0
             return paths
-        
+
         R = len(grid)
         C = len(grid[0])
         n = 1
@@ -20,6 +20,5 @@ class Solution:
                     n += 1
                 elif grid[r][c] == 1:
                     sr, sc = r, c
-        
-        return dfs(sr, sc, n)
 
+        return dfs(sr, sc, n)

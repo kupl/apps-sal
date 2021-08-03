@@ -14,7 +14,7 @@ class Solution:
         while N > 0:
             if not is_fast_forwarded:
                 if state_bitmap in seen:
-                    # the length of the cycle is seen[state_key] - N 
+                    # the length of the cycle is seen[state_key] - N
                     N %= seen[state_bitmap] - N
                     is_fast_forwarded = True
                 else:
@@ -32,7 +32,6 @@ class Solution:
             state_bitmap = state_bitmap >> 1
 
         return reversed(ret)
-
 
     def nextDay(self, state_bitmap: int):
         state_bitmap = ~ (state_bitmap << 1) ^ (state_bitmap >> 1)

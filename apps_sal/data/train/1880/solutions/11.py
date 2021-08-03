@@ -16,7 +16,7 @@
 
 class Solution:
     def prisonAfterNDays(self, cells, N):
-        
+
         seen = {}
         while N:
             seen.setdefault(str(cells), N)
