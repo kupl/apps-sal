@@ -2,7 +2,8 @@ d, k, a, b, t = [int(x) for x in input().split()]
 N = d // k
 p = d % k
 
-if (N == 0): T = d * a
+if (N == 0):
+    T = d * a
 if (N == 1):
     if (p * b < t + p * a):
         T = p * b + k * a

@@ -18,8 +18,10 @@ def solvefast():
         while r - l > 2:
             m1 = (l + r) >> 1
             m2 = m1 + 1
-            if get(m2) > get(m1): r = m2
-            else: l = m1
+            if get(m2) > get(m1):
+                r = m2
+            else:
+                l = m1
         mn = 10 ** 20
         for i in range(max(l - 13, 0), min(l + 13, cnt + 3)):
             mn = min(mn, get(i))

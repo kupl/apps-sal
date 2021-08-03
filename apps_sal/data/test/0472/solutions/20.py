@@ -9,7 +9,9 @@ def digit_sum(num):
     return res
 
 
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n = int(input())
 res = math.inf
 for s in range(1, 91):

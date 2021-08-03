@@ -6,13 +6,17 @@ def val(x): return x * x + s(x) * x
 
 
 def solve(n):
-    l = 1; r = int(n ** 0.5) + 1
+    l = 1
+    r = int(n ** 0.5) + 1
     while l <= r:
         mid = (l + r) // 2
         print(l, mid, r, val(mid))
-        if val(mid) == n: return mid
-        elif mid ** 2 < n: l = mid + 1
-        elif mid ** 2 > n: r = mid - 1
+        if val(mid) == n:
+            return mid
+        elif mid ** 2 < n:
+            l = mid + 1
+        elif mid ** 2 > n:
+            r = mid - 1
     return -1
 
 

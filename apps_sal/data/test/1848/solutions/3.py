@@ -13,7 +13,8 @@ while True:
     last_a = None
     for i in range(len(A)):
         a, usable = A[i]
-        if not usable: continue
+        if not usable:
+            continue
         if last_a is None:
             last_a = a
             A[i] = (a, False)
@@ -25,6 +26,7 @@ while True:
             uses_left -= 1
             last_a = a
             continue
-    if uses_left == 0: break
+    if uses_left == 0:
+        break
 
 print(happiness)

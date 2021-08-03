@@ -3,8 +3,8 @@ if (d <= k):
     print(a * d)
     return
 fir = a * k + t - k * b
-sec = d * b - k * b + a * k;
-maxc = d // k - 1;
+sec = d * b - k * b + a * k
+maxc = d // k - 1
 for x in range(maxc - 10, maxc + 10):
     if (k * (x + 1) <= d):
         maxc = x

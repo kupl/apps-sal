@@ -14,7 +14,7 @@ def f(x):
 def sqr(x):
     l, r = 0, 10 ** 10
     while r > l + 1:
-        m = (l + r) // 2;
+        m = (l + r) // 2
         if m * m <= x:
             l = m
         else:

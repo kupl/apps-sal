@@ -43,8 +43,10 @@ for t in a:
     z = set()
     for p in b:
         if t != p:
-            if t[0] in p: z.add(t[0])
-            if t[1] in p: z.add(t[1])
+            if t[0] in p:
+                z.add(t[0])
+            if t[1] in p:
+                z.add(t[1])
     if len(z) > 1:
         print(-1)
         return
@@ -54,8 +56,10 @@ for t in b:
     z = set()
     for p in a:
         if t != p:
-            if t[0] in p: z.add(t[0])
-            if t[1] in p: z.add(t[1])
+            if t[0] in p:
+                z.add(t[0])
+            if t[1] in p:
+                z.add(t[1])
     if len(z) > 1:
         print(-1)
         return

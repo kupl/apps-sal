@@ -9,5 +9,7 @@ while (x >= y) and (x > 0):
     if (x * x + s * x - n) == 0:
         print(x)
         break
-    else: x = x - 1
-if (not (x * x + s * x - n) == 0): print('-1')
+    else:
+        x = x - 1
+if (not (x * x + s * x - n) == 0):
+    print('-1')

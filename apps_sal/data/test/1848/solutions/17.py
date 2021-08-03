@@ -3,7 +3,8 @@
 n = int(input())
 a = sorted([int(x) for x in input().split()])
 c = dict()
-for x in a: c[x] = c[x] + 1 if x in c else 1
+for x in a:
+    c[x] = c[x] + 1 if x in c else 1
 uniq = sorted(c.keys())
 C = 0
 while n > 0:

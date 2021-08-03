@@ -28,7 +28,8 @@ res = set()
 for x in p1:
     for y in p2:
         z = x & y
-        if len(z) == 2 or len(z) == 0: continue
+        if len(z) == 2 or len(z) == 0:
+            continue
         res = res | z
 if len(res) == 1:
     print(res.pop())
@@ -38,7 +39,8 @@ for x in p1:
     nz = set()
     for y in p2:
         z = x & y
-        if len(z) == 2 or len(z) == 0: continue
+        if len(z) == 2 or len(z) == 0:
+            continue
         nz = nz | z
     if len(nz) == 2:
         print(-1)
@@ -48,7 +50,8 @@ for x in p2:
     nz = set()
     for y in p1:
         z = x & y
-        if len(z) == 2 or len(z) == 0: continue
+        if len(z) == 2 or len(z) == 0:
+            continue
         nz = nz | z
     if len(nz) == 2:
         print(-1)

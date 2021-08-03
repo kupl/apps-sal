@@ -11,7 +11,8 @@ pts2 = readpts()
 
 
 def psb(a, b):
-    if a == b: return False
+    if a == b:
+        return False
     return any(i in b for i in a)
 
 
@@ -29,8 +30,10 @@ def ipsv(pts1, pts2):
         for p2 in pts2:
             if psb(p1, p2):
                 gsb.add(sb(p1, p2))
-        if len(gsb) > 1: return False
-        if len(gsb) == 1: ans = True
+        if len(gsb) > 1:
+            return False
+        if len(gsb) == 1:
+            ans = True
     return ans
 
 
@@ -40,9 +43,12 @@ def sv():
         for p2 in pts2:
             if psb(p1, p2):
                 gsb.add(sb(p1, p2))
-    if len(gsb) == 0: return -1
-    if len(gsb) == 1: return list(gsb)[0]
-    if ipsv(pts1, pts2) and ipsv(pts2, pts1): return 0
+    if len(gsb) == 0:
+        return -1
+    if len(gsb) == 1:
+        return list(gsb)[0]
+    if ipsv(pts1, pts2) and ipsv(pts2, pts1):
+        return 0
     return -1
 
 

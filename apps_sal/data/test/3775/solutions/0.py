@@ -16,11 +16,15 @@ for i in range(n):
     for j in range(m):
         a = sorted(p1[i * 2:i * 2 + 2])
         b = sorted(p2[j * 2:j * 2 + 2])
-        if a == b: continue
+        if a == b:
+            continue
         got = -1
-        if a[0] in b: got = a[0]
-        if a[1] in b: got = a[1]
-        if got == -1: continue
+        if a[0] in b:
+            got = a[0]
+        if a[1] in b:
+            got = a[1]
+        if got == -1:
+            continue
         weird[got] = 1
         possible1[a[0] * 11 + a[1]].add(got)
         possible2[b[0] * 11 + b[1]].add(got)
