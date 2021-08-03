@@ -1,10 +1,11 @@
 import sys
 sys.setrecursionlimit(250000)
 
-def main():
-    a,b,c = list(map(int, input().split()))
 
-    if a == b + c :
+def main():
+    a, b, c = list(map(int, input().split()))
+
+    if a == b + c:
         print("Yes")
     elif b == a + c:
         print("Yes")
@@ -12,8 +13,9 @@ def main():
         print("Yes")
     else:
         print("No")
-main()
 
+
+main()
 
 
 #
@@ -27,40 +29,40 @@ main()
 
 
 # if b > c * 2 :
-    #     b_price = c
-    #
-    # input_array_list = []
-    #
-    # while True:
-    #     input_array = input().split()
-    #     if input_array[0] == "0" and input_array[1] == "0":
-    #         break
-    #     else:
-    #         input_array_list.append(input_array)
-    #
-    # for item in input_array_list:
-    #     n = int(item[0])
-    #     k_sum = int(item[1])
-    #
-    #     count = 0
-    #     for i in range(1,n + 1- 2):
-    #         for j in range(i+1, n + 1 - 1):
-    #             for k in range (j+1, n+ 1):
-    #                 if i + j + k == k_sum :
-    #                     count = count + 1
-    #     print(count)
+#     b_price = c
+#
+# input_array_list = []
+#
+# while True:
+#     input_array = input().split()
+#     if input_array[0] == "0" and input_array[1] == "0":
+#         break
+#     else:
+#         input_array_list.append(input_array)
+#
+# for item in input_array_list:
+#     n = int(item[0])
+#     k_sum = int(item[1])
+#
+#     count = 0
+#     for i in range(1,n + 1- 2):
+#         for j in range(i+1, n + 1 - 1):
+#             for k in range (j+1, n+ 1):
+#                 if i + j + k == k_sum :
+#                     count = count + 1
+#     print(count)
 
-    #
-    # for item in input_array_list:
-    #     if item[1] == "+":
-    #         print(str(int(item[0])+int(item[2])))
-    #     elif item[1] =="-":
-    #         print(str(int(item[0])-int(item[2])))
-    #     elif item[1] == "/":
-    #         print(str(int(item[0])//int(item[2])))
-    #     elif item[1] == "*":
-    #         print(str(int(item[0])*int(item[2])))
-    #
+#
+# for item in input_array_list:
+#     if item[1] == "+":
+#         print(str(int(item[0])+int(item[2])))
+#     elif item[1] =="-":
+#         print(str(int(item[0])-int(item[2])))
+#     elif item[1] == "/":
+#         print(str(int(item[0])//int(item[2])))
+#     elif item[1] == "*":
+#         print(str(int(item[0])*int(item[2])))
+#
 
 # import sympy as sp
 
@@ -89,10 +91,9 @@ main()
 #     else:
 #         print("{} {}".format(pair_int[1], pair_int[0]))
 
-#for i in range(10000):
+# for i in range(10000):
 #    print("Hello World")
 #a = input().split()
 #a_int = [int(s) for s in a]
 #a_sorted = sorted(a_int)
 #print(' '.join(map(str, a_sorted)))
-

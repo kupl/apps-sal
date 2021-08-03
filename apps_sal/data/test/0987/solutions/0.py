@@ -57,4 +57,3 @@ for i in range(N):
     cnt[k] += 1
 
 print(' '.join(map(str, ans)))
-

@@ -5,4 +5,3 @@ cnt = 0
 for i in l:
     cnt += (i[1] - i[0] + 1)
 print(cnt)
-

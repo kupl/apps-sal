@@ -13,7 +13,7 @@ else:
             print(1)
             flg = True
             break
-    
+
     if not flg:
         if S[0] == '2':
             if K.bit_length() - 1 >= 5000000000000000:

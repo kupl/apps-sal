@@ -6,5 +6,5 @@ for i in range(K):
 else:
     while S[i] != "1":
         i += 1
-        
+
 print(S[i])

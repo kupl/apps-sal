@@ -8,4 +8,3 @@ ans = 0
 for i in range(N):
     ans += r[i] - (l[i] - 1)
 print(ans)
-

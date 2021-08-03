@@ -1,4 +1,3 @@
-a,b,c = sorted(map(int, input().split()))
+a, b, c = sorted(map(int, input().split()))
 
-print(("Yes" if a+b == c else "No"))
-
+print(("Yes" if a + b == c else "No"))

@@ -9,12 +9,13 @@ def funk():
         j = mass[i + k]
         if (j - q) < minn:
             minn, x = (j - q), (j + q) // 2
-    m.append(x)    
+    m.append(x)
+
 
 t = int(input())
 m = []
 for i in range(t):
     funk()
-    
+
 for i in m:
     print(i)

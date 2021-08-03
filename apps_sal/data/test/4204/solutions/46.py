@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 lines = [s.rstrip("\n") for s in sys.stdin.readlines()]
 s = lines.pop(0)
 k, = [int(num) for num in lines.pop(0).split(" ")]
@@ -12,4 +13,3 @@ for n in s:
     else:
         break
 print(n)
-

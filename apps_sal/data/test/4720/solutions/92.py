@@ -12,4 +12,3 @@ for i in range(10 ** 5):
     if seat[i] == 1:
         res += 1
 print(res)
-

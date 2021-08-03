@@ -5,4 +5,3 @@ for i in range(n):
     ans += b - a + 1
 
 print(ans)
-

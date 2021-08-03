@@ -8,10 +8,10 @@ def Input():
 
 def main():
     n = int(input())
-    data =[Input() for _ in range(n)]
+    data = [Input() for _ in range(n)]
     ans = 0
     for start, end in data:
-        for _ in range(start, end+1):
+        for _ in range(start, end + 1):
             ans += 1
     print(ans)
 

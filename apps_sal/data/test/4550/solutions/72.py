@@ -5,4 +5,3 @@ if ma == rem:
     print('Yes')
 else:
     print('No')
-

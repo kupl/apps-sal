@@ -9,4 +9,3 @@ for i, c in enumerate(s):
     if i + 1 == k:
         print((1))
         break
-

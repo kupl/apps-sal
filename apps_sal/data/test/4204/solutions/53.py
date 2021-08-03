@@ -3,8 +3,8 @@ K = int(input())
 
 idx = min(K, len(S))
 for s in S[:idx]:
-    if s != "1": 
-      print(s)
-      break
+    if s != "1":
+        print(s)
+        break
 else:
-  print(1)
+    print(1)

@@ -1,5 +1,5 @@
-T = int(input())
 import sys
+T = int(input())
 res = []
 
 for t in range(T):
@@ -13,7 +13,7 @@ for t in range(T):
     for i in range(N - K):
         tmp = abs(a_list[i + K] - a_list[i])
         if ans > tmp:
-            ans =tmp
+            ans = tmp
             ans_i = i
     res.append((a_list[ans_i + K] + a_list[ans_i]) // 2)
 

@@ -11,4 +11,4 @@ for i in S:
 if cnt_one >= K:
     print(1)
 else:
-    print(S[cnt_one+1-1])
+    print(S[cnt_one + 1 - 1])

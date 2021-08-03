@@ -1,8 +1,9 @@
-IS = lambda: int(input())
-IA = lambda: [int(x) for x in input().split()]
-IM = lambda N: [IA() for _ in range(N)]
+def IS(): return int(input())
+def IA(): return [int(x) for x in input().split()]
+def IM(N): return [IA() for _ in range(N)]
+
 
 ans = 0
-for l,r in IM(IS()):
+for l, r in IM(IS()):
     ans += r - l + 1
 print(ans)

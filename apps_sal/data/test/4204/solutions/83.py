@@ -6,12 +6,12 @@ if k == 1 or len(s) == 1:
 else:
     ans = None
     for i, j in enumerate(list(s)):
-        if i < k-1:
+        if i < k - 1:
             if j != '1':
                 ans = j
                 break
-        elif i == k-1:
-            ans = j           
+        elif i == k - 1:
+            ans = j
             break
         else:
             continue

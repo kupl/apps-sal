@@ -5,4 +5,3 @@ for _ in range(N):
     res += r - l + 1
 
 print(res)
-

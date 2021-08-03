@@ -5,7 +5,7 @@ if k == 1:
     print(int(s[0]))
 elif s[0] == "1":
     cnt = 0
-    while  cnt < len(s) and s[cnt] == "1" :
+    while cnt < len(s) and s[cnt] == "1":
         cnt += 1
     if cnt >= k:
         print(1)
