@@ -10,7 +10,6 @@ class Solution:
                     elif grid[next_i][next_j] == 1:
                         if (next_i, next_j) not in visited:
                             dfs(next_i, next_j, outliners)
-                                       
 
         m, n = len(grid), len(grid[0])
         visited = set()
@@ -22,7 +21,7 @@ class Solution:
                         dfs(i, j, outliners_1)
                     else:
                         dfs(i, j, outliners_2)
-        
+
         min_dist = m + n
         for (i, j) in outliners_1:
             for (p, q) in outliners_2:

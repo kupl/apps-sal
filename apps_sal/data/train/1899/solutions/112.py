@@ -10,7 +10,7 @@ class Solution:
             self.dfs(A, ii, jj)
 
     def shortestBridge(self, A: List[List[int]]) -> int:
-    #def shortestBridge(self, A) -> int:
+        # def shortestBridge(self, A) -> int:
         self.offset = [[-1, 0], [1, 0], [0, -1], [0, 1]]
         self.m, self.n = len(A), len(A[0])
         self.que = []
@@ -27,17 +27,14 @@ class Solution:
         while len(self.que) > 0:
             qlen = len(self.que)
             for k in range(qlen):
-                i,j=self.que.pop(0)
+                i, j = self.que.pop(0)
                 for i0, j0 in self.offset:
                     ii, jj = i + i0, j + j0
-                    if 0 <= ii<self.m and 0<=jj<self.n:
+                    if 0 <= ii < self.m and 0 <= jj < self.n:
                         if A[ii][jj] == 0:
-                            A[ii][jj]=3
+                            A[ii][jj] = 3
                             self.que.append([ii, jj])
                         elif A[ii][jj] == 1:
-                            return rt#break
-            rt +=1
+                            return rt  # break
+            rt += 1
         return rt
-
-
-

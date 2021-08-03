@@ -37,7 +37,7 @@ class Solution:
                             return n
                         elif A[yy][xx] == 0:
                             A[yy][xx] = 2
-                            frontier.append((xx, yy, n+1))
+                            frontier.append((xx, yy, n + 1))
             bfs = frontier
-        
+
         return -1

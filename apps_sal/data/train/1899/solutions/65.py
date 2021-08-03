@@ -7,12 +7,12 @@ class Solution:
         j0 = None
         for i in range(M):
             for j in range(N):
-                if A[i][j]==1:
+                if A[i][j] == 1:
                     i0, j0 = i, j
                     break
             if i0 is not None:
                 break
-                
+
         q.append((i0, j0))
         A[i0][j0] = 2
         vis = set()
@@ -21,12 +21,12 @@ class Solution:
         while q:
             i, j = q.popleft()
             for di, dj in dirs_lst:
-                ni = i+di
-                nj = j+dj
-                if ni<0 or ni>M-1 or nj<0 or nj>N-1:
+                ni = i + di
+                nj = j + dj
+                if ni < 0 or ni > M - 1 or nj < 0 or nj > N - 1:
                     boarder.add((i, j))
                     continue
-                if A[ni][nj]==0:
+                if A[ni][nj] == 0:
                     boarder.add((i, j))
                     continue
                 if (ni, nj) in vis:
@@ -34,9 +34,9 @@ class Solution:
                 A[ni][nj] = 2
                 vis.add((ni, nj))
                 q.append((ni, nj))
-            
+
         # print (boarder)
-            
+
         vis.clear()
         for i, j in boarder:
             q.append((i, j, 0))
@@ -45,20 +45,15 @@ class Solution:
         while q:
             i, j, nsteps = q.popleft()
             for di, dj in dirs_lst:
-                ni = i+di
-                nj = j+dj
-                if ni<0 or ni>M-1 or nj<0 or nj>N-1:
+                ni = i + di
+                nj = j + dj
+                if ni < 0 or ni > M - 1 or nj < 0 or nj > N - 1:
                     continue
                 if (ni, nj) in vis:
                     continue
-                if A[ni][nj]==1:
+                if A[ni][nj] == 1:
                     res = min(res, nsteps)
                     continue
                 vis.add((ni, nj))
-                q.append((ni, nj, nsteps+1))
+                q.append((ni, nj, nsteps + 1))
         return res
-            
-                
-        
-            
-

@@ -3,7 +3,7 @@ class Solution(object):
         R, C = len(A), len(A[0])
 
         def neighbors(r, c):
-            for nr, nc in ((r-1,c),(r,c-1),(r+1,c),(r,c+1)):
+            for nr, nc in ((r - 1, c), (r, c - 1), (r + 1, c), (r, c + 1)):
                 if 0 <= nr < R and 0 <= nc < C:
                     yield nr, nc
 
@@ -27,13 +27,14 @@ class Solution(object):
             return components
 
         source, target = get_components()
-        #print source, target
+        # print source, target
         queue = collections.deque([(node, 0) for node in source])
         done = set(source)
         while queue:
             node, d = queue.popleft()
-            if node in target: return d-1
+            if node in target:
+                return d - 1
             for nei in neighbors(*node):
                 if nei not in done:
-                    queue.append((nei, d+1))
+                    queue.append((nei, d + 1))
                     done.add(nei)

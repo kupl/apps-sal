@@ -4,10 +4,12 @@ class Solution:
         m = len(A)
         n = len(A[0])
         vis = [[False for _ in range(n)] for _ in range(m)]
-        def check(x,y):
-            return x>=0 and x<m and y>=0 and y<n
+
+        def check(x, y):
+            return x >= 0 and x < m and y >= 0 and y < n
         dx = [0, -1, 0, 1]
         dy = [1, 0, -1, 0]
+
         def dfs(p_x, p_y, i):
             vis[p_x][p_y] = True
             i.append((p_x, p_y))
@@ -16,7 +18,7 @@ class Solution:
                 if check(c_x, c_y) and not vis[c_x][c_y]:
                     if A[c_x][c_y]:
                         dfs(c_x, c_y, i)
-        
+
         conn = 0
         for i in range(m):
             for j in range(n):
@@ -29,7 +31,7 @@ class Solution:
                         conn += 1
                         break
                     conn += 1
-        
+
         q = deque()
         d = [[float('inf') for _ in range(n)] for _ in range(m)]
         for v in i1:
@@ -47,7 +49,7 @@ class Solution:
                         q.append((c_x, c_y))
                         if A[c_x][c_y]:
                             ans = min(ans, d[c_x][c_y] - 1)
-        
+
         # for v in i2:
         #     ans = min(ans, d[v[0]][v[1]])
-        return ans 
+        return ans

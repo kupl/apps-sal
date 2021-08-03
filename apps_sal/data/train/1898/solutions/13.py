@@ -7,6 +7,7 @@
 class Solution:
     def delNodes(self, root: TreeNode, to_delete: List[int]) -> List[TreeNode]:
         new_roots = []
+
         def delete_nodes(node, parent_deleted):
             if not node:
                 return False
@@ -22,6 +23,6 @@ class Solution:
             if right:
                 node.right = None
             return delete
-        
+
         delete_nodes(root, True)
         return new_roots

@@ -1,6 +1,7 @@
 class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
         u = {(i, j): (i, j) for i in range(len(A)) for j in range(len(A[0])) if A[i][j]}
+
         def head(p):
             if u[p] == p:
                 return p
@@ -16,9 +17,9 @@ class Solution:
                 if not v:
                     continue
 
-                if i and A[i-1][j]:
+                if i and A[i - 1][j]:
                     union((i - 1, j), (i, j))
-                if j and A[i][j-1]:
+                if j and A[i][j - 1]:
                     union((i, j - 1), (i, j))
 
         grps = {p1: set() for p1, p2 in list(u.items()) if p1 == p2}
@@ -46,5 +47,3 @@ class Solution:
             layer = new_layer
 
         return  # invalid, must be able to find s
-
-

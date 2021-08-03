@@ -4,9 +4,9 @@ class Solution:
         cols = len(A[0])
 
         def getNeighbors(i, j):
-              for x, y in ((i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)):
-                    if x >= 0 and x < rows and y >= 0 and y < cols:
-                          yield x, y
+            for x, y in ((i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)):
+                if x >= 0 and x < rows and y >= 0 and y < cols:
+                    yield x, y
 
         def findComponents():
             visited = set()
@@ -16,15 +16,15 @@ class Solution:
                 visited.add((i, j))
                 connectedNodes[connectedCompNumber].append((i, j))
                 for x, y in getNeighbors(i, j):
-                      if (x, y) not in visited and A[x][y]:
-                            findConnnectedComponent(x, y)
+                    if (x, y) not in visited and A[x][y]:
+                        findConnnectedComponent(x, y)
 
             connectedCompNumber = -1
             for i in range(rows):
                 for j in range(cols):
-                      if (i, j) not in visited and A[i][j] == 1:
-                            connectedCompNumber += 1
-                            findConnnectedComponent(i, j)
+                    if (i, j) not in visited and A[i][j] == 1:
+                        connectedCompNumber += 1
+                        findConnnectedComponent(i, j)
             return connectedNodes
 
         def findDistance() -> int:
@@ -40,10 +40,10 @@ class Solution:
             while queue:
                 node, dist = queue.pop()
                 if node in target:
-                      return dist - 1
+                    return dist - 1
                 for n in getNeighbors(*node):
-                      if n not in done:
-                            queue.appendleft((n, dist + 1))
-                            done.add(n)
+                    if n not in done:
+                        queue.appendleft((n, dist + 1))
+                        done.add(n)
 
         return findDistance()

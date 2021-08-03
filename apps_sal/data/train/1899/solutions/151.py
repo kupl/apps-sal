@@ -1,6 +1,9 @@
 import heapq
+
+
 class Solution:
     directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+
     def shortestBridge(self, mat: List[List[int]]) -> int:
         row = None
         col = None
@@ -17,7 +20,7 @@ class Solution:
                     break
         target_dest = 1
         return Solution.minimum_expand(mat, row, col, target_dest)
-    
+
     @staticmethod
     def mark_next(mat, row, col, val, target_dest):
         for i in range(len(Solution.directions)):
@@ -30,11 +33,11 @@ class Solution:
             if not mat[new_row][new_col]:
                 mat[new_row][new_col] = val + 1
         return False
-    
+
     @staticmethod
     def minimum_expand(mat, row, col, target_dest):
         st_val = mat[row][col]
-        for val in range(st_val, len(mat)*len(mat[0])):
+        for val in range(st_val, len(mat) * len(mat[0])):
             for row in range(len(mat)):
                 for col in range(len(mat[row])):
                     is_reached = False
@@ -43,8 +46,7 @@ class Solution:
                     if is_reached:
                         return val - st_val
         return -1
-            
-    
+
     @staticmethod
     def paint_one_island(mat, row, col, val):
         if row < 0 or row >= len(mat) or col < 0 or col >= len(mat[0]):

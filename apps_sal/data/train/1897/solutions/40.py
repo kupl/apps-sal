@@ -10,7 +10,6 @@ class Solution:
             if l == 0:
                 ans.append(prefix[r])
             else:
-                ans.append(prefix[l-1] ^ prefix[r])
-        
-        return ans
+                ans.append(prefix[l - 1] ^ prefix[r])
 
+        return ans

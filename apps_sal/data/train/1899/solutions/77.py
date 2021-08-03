@@ -1,7 +1,7 @@
 class Solution:
-    
+
     DIRS = [[1, 0], [-1, 0], [0, 1], [0, -1]]
-    
+
     def shortestBridge(self, A: List[List[int]]) -> int:
         if not A:
             return 0
@@ -29,18 +29,13 @@ class Solution:
                         return bridge
             bridge += 1
         return bridge
-             
-    
+
     def dfs(self, A, i, j, m, n, queue):
         if i < 0 or i >= m or j < 0 or j >= n or A[i][j] != 1:
             return
         A[i][j] = 2
         queue.append((i, j))
-        self.dfs(A, i+1, j, m, n, queue)
-        self.dfs(A, i-1, j, m, n, queue)
-        self.dfs(A, i, j+1, m, n, queue)
-        self.dfs(A, i, j-1, m, n, queue)
-        
-        
-        
-
+        self.dfs(A, i + 1, j, m, n, queue)
+        self.dfs(A, i - 1, j, m, n, queue)
+        self.dfs(A, i, j + 1, m, n, queue)
+        self.dfs(A, i, j - 1, m, n, queue)

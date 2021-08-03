@@ -6,7 +6,7 @@ class Solution:
         def expand(island, other):
             new = set()
             for r, c in island:
-                for nr, nc in (r+1, c), (r, c+1), (r-1, c), (r, c - 1):
+                for nr, nc in (r + 1, c), (r, c + 1), (r - 1, c), (r, c - 1):
                     if R > nr >= 0 <= nc < C:
                         if (nr, nc) in other:
                             return True
@@ -14,11 +14,11 @@ class Solution:
                             mat[nr][nc] = 2
                             new.add((nr, nc))
             island.update(new)
-                            
+
         def findIsland(r, c, island):
             island.add((r, c))
             mat[r][c] = 2
-            for nr, nc in (r+1, c), (r, c+1), (r-1, c), (r, c - 1):
+            for nr, nc in (r + 1, c), (r, c + 1), (r - 1, c), (r, c - 1):
                 if R > nr >= 0 <= nc < C and mat[nr][nc] == 1:
                     findIsland(nr, nc, island)
 

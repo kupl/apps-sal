@@ -1,9 +1,11 @@
+from copy import deepcopy
 WATER = 0
 LAND = 1
 ISLAND = 2
 BRIDGE = 3
 DIR = ((-1, 0), (1, 0), (0, -1), (0, 1))
-from copy import deepcopy
+
+
 class Solution:
     def shortestBridge(self, A):
         x0, y0 = self.findFirstLand(A)
@@ -12,14 +14,14 @@ class Solution:
         self.bfs(A, q, visited, LAND)
         q = deque(visited)
         return self.bfs(A, q, visited, WATER, LAND) - 1
-        
+
     def findFirstLand(self, A):
         m, n = len(A), len(A[0])
         for x in range(m):
             for y in range(n):
                 if A[x][y] == LAND:
                     return x, y
-    
+
     def bfs(self, A, q, visited, target, des=-1):
         m, n = len(A), len(A[0])
         step = 0

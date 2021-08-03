@@ -5,7 +5,7 @@ class Solution:
         r = len(A)
         c = len(A[0])
         result = float('inf')
-        seen = [[False]*c for _ in range(r)]
+        seen = [[False] * c for _ in range(r)]
         found = False
         for i in range(r):
             if found:
@@ -16,21 +16,21 @@ class Solution:
                     q = self.neighbors(i, j, A, seen, r, c)
                     found = True
                     break
-                    
+
         # explore all points near to these elements in the q and keep the min distance
         # if I see any 1
         while q:
             x, y, dis = q.pop(0)
             for d1, d2 in ((-1, 0), (0, -1), (1, 0), (0, 1)):
-                n_x, n_y = d1+x, d2+y
-                if 0 <=n_x<r and 0 <=n_y<c and not seen[n_x][n_y]:
+                n_x, n_y = d1 + x, d2 + y
+                if 0 <= n_x < r and 0 <= n_y < c and not seen[n_x][n_y]:
                     if A[n_x][n_y] == 1:
                         result = min(result, dis)
-                    q.append((n_x, n_y, dis+1))
+                    q.append((n_x, n_y, dis + 1))
                     seen[n_x][n_y] = True
-            
+
         return result
-    
+
     def neighbors(self, i, j, A, seen, r, c):
         q = [(i, j)]
         seen[i][j] = True
@@ -40,8 +40,8 @@ class Solution:
             # distance is zero for all these 1
             ls.append((x, y, 0))
             for d1, d2 in ((-1, 0), (0, -1), (1, 0), (0, 1)):
-                n_x, n_y = d1+x, d2+y
-                if 0 <=n_x<r and 0 <=n_y<c and A[n_x][n_y]==1 and not seen[n_x][n_y]:
+                n_x, n_y = d1 + x, d2 + y
+                if 0 <= n_x < r and 0 <= n_y < c and A[n_x][n_y] == 1 and not seen[n_x][n_y]:
                     q.append((n_x, n_y))
                     seen[n_x][n_y] = True
         return ls

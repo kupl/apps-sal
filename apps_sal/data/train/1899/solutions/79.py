@@ -46,5 +46,3 @@ class Solution:
                 if 0 <= X < len(A[0]) and 0 <= Y < len(A) and (X, Y) not in visited:
                     q.put((X, Y, depth + 1))
                     visited.add((X, Y))
-
-

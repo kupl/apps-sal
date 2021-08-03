@@ -1,7 +1,6 @@
 class Solution:
     def shortestBridge(self, A):
-        
-        
+
         # This function is used to find the first index equal to one
         # Will be the first island's root node
         def first():
@@ -9,7 +8,7 @@ class Solution:
                 for j in range(n):
                     if A[i][j]:
                         return i, j
-        
+
         # Depth first search (recursive)
         def dfs(i, j):
             # Mark all seen elements with -1 so we don't look at them again
@@ -42,5 +41,3 @@ class Solution:
                             new.append((x, y))
             step += 1
             bfs = new
-        
-

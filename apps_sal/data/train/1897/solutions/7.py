@@ -9,4 +9,3 @@ class Solution:
             else:
                 result.append(arr[y] ^ arr[x - 1])
         return result
-

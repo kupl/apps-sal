@@ -3,9 +3,11 @@
 # For one of the islands, run bfs from all its nodes to find the other island
 # return shortest of such bfs'
 from math import sqrt
+
+
 class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
-        
+
         def get_islands(A):
             island_one = set()
             for i in range(len(A)):
@@ -15,8 +17,7 @@ class Solution:
                             island_one = make_island(A, i, j, set())
                         else:
                             return island_one, make_island(A, i, j, set())
-                    
-        
+
         def make_island(A, i, j, visited):
             visited.add((i, j))
             up = A[i][j + 1] if j < len(A[0]) - 1 else 0
@@ -32,10 +33,10 @@ class Solution:
             if right and (i + 1, j) not in visited:
                 make_island(A, i + 1, j, visited)
             return visited
-        
+
         def find_shortest_bridge(A, i, j, start_island, global_dist_map):
             queue = [(i, j)]
-            dist_map = { (i, j) : 0 }
+            dist_map = {(i, j): 0}
             while queue:
                 i, j = queue.pop(0)
                 neighbors = []
@@ -55,47 +56,46 @@ class Solution:
                         queue.append(neighbor)
                         global_dist_map[neighbor] = dist_map[neighbor] = dist_map[(i, j)] + 1
             return False
-                
+
         def find_shortest_pair(island1, island2):
-            min_distance = len(A)*len(A[0])
+            min_distance = len(A) * len(A[0])
             shortest_coords = None
             for coords1 in island1:
                 for coords2 in island2:
-                    distance_between = sqrt( (coords2[0] - coords1[0]) ** 2 + (coords2[1] - coords1[1]) ** 2 )
+                    distance_between = sqrt((coords2[0] - coords1[0]) ** 2 + (coords2[1] - coords1[1]) ** 2)
                     if distance_between < min_distance:
                         min_distance = distance_between
                         shortest_coords = coords1, coords2
             return shortest_coords
-        
+
         first_island, second_island = get_islands(A)
-        
+
         min_island = first_island if len(first_island) < len(second_island) else second_island
-        
-        shortest_bridge = len(A)*len(A[0])
-        
+
+        shortest_bridge = len(A) * len(A[0])
+
         global_dist_map = {}
-        
+
         for island in min_island:
             i, j = island
             shortest_bridge_here = find_shortest_bridge(A, i, j, min_island, global_dist_map)
             if shortest_bridge_here:
                 shortest_bridge = min(shortest_bridge, shortest_bridge_here)
-        
+
         return shortest_bridge - 1
-        
+
 #         first_coords, second_coords = find_shortest_pair(first_island, second_island)
-        
+
 #         i, j = first_coords
-        
+
 #         return find_shortest_bridge(A, i, j, first_island) - 1
 
 #         shortest_bridge = len(A)*len(A[0])
-        
+
 #         for island in first_island:
 #             i, j = island
 #             shortest_bridge_here = find_shortest_bridge(A, i, j, first_island)
 #             if shortest_bridge_here:
 #                 shortest_bridge = min(shortest_bridge, shortest_bridge_here)
-        
-#         return shortest_bridge - 1
 
+#         return shortest_bridge - 1
