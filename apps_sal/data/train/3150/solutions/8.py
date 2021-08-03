@@ -1,4 +1,4 @@
-def binary_cleaner(seq): 
+def binary_cleaner(seq):
     less_than_1 = []
     index_list = []
     for i, x in enumerate(seq):

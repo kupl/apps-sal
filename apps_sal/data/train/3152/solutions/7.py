@@ -1,4 +1,6 @@
 from itertools import cycle
+
+
 def interpreter(tape, array):
     output = ""
     for c in cycle(tape):

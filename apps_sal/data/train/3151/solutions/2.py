@@ -1,2 +1,2 @@
 def totalAmountVisible(top, sides):
-    return sides * (sides + 1 ) / 2 + top - sides - 1
+    return sides * (sides + 1) / 2 + top - sides - 1

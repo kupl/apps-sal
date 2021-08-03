@@ -1,5 +1,6 @@
 from typing import Union
 
+
 def playerRankUp(pts: int) -> Union[int, str]:
     """
     Check if the player has achieved at least 100 points in his class.

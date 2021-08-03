@@ -4,5 +4,4 @@ def number(bus_stops):
     for i in bus_stops:
         x += i[0]
         y += i[1]
-    return x - y 
-
+    return x - y

@@ -1,6 +1,6 @@
 def playerRankUp(pts):
-     #your code here
-    a = (pts - 100)//100
+    # your code here
+    a = (pts - 100) // 100
     if a < 0:
         return False
     else:

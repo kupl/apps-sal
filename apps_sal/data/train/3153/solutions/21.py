@@ -1,8 +1,6 @@
-def playerRankUp(pts, lvl= "E4"):
+def playerRankUp(pts, lvl="E4"):
     if pts < 100:
         return False
-    else :
+    else:
         lvl = "E5"
         return "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up."
-    
-
