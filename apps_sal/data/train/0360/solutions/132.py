@@ -14,7 +14,7 @@ class Solution:
             # print(f\"After exiting second loop: sum_ = {sum_}, j = {j}\")
             days += 1
             # print(f\"Increased days to {days}\")
-            
+
             if i == len(weights) - 1:
                 break
             i += j - 1
@@ -22,12 +22,11 @@ class Solution:
             if days > D:
                 return False
         return days <= D
-            
-    
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         low = max(weights)
         high = len(weights) * low
-        
+
         while low < high:
             mid = (low + high) // 2
             if self.canBeFerried(weights, D, mid):
@@ -35,4 +34,3 @@ class Solution:
             else:
                 low = mid + 1
         return low
-

@@ -10,7 +10,7 @@ class Solution:
             else:
                 left = mid + 1
         return left
-    
+
     def possible(self, weights, D, mid):
         cnt = 0
         tmp = 0
@@ -25,5 +25,3 @@ class Solution:
         if tmp != 0:
             cnt += 1
         return cnt <= D
-            
-

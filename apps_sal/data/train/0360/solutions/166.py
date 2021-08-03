@@ -1,10 +1,10 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        
+
         def canShip(capacity: int) -> bool:
             nonlocal D
             count = 1
-            curcap = 0 
+            curcap = 0
             for w in weights:
                 if curcap + w <= capacity:
                     curcap += w
@@ -12,8 +12,7 @@ class Solution:
                     count += 1
                     curcap = w
             return count <= D
-            
-        
+
         max_weight = max(weights)
         lo = sum(weights) // D
         hi = max_weight * (len(weights)) // D + 1
@@ -24,5 +23,3 @@ class Solution:
             else:
                 hi = mid
         return lo
-                
-

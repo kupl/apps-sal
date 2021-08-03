@@ -2,9 +2,10 @@ class Solution:
     def tilingRectangle(self, n: int, m: int) -> int:
         if n > m:
             n, m = m, n
-        
+
         res = [m * n]
         dp = {}
+
         def dfs(cnt, hs):
             # print(hs)
             if cnt > res[0]:
@@ -15,8 +16,8 @@ class Solution:
             dp[key] = cnt
             if all(h == n for h in hs):
                 res[0] = min(res[0], cnt)
-                return 
-            
+                return
+
             min_h = min(hs)
             min_i = hs.index(min_h)
             r = m
@@ -28,4 +29,3 @@ class Solution:
                 dfs(cnt + 1, hs[:min_i] + [side + min_h] * side + hs[min_i + side:])
         dfs(0, [0] * m)
         return res[0]
-

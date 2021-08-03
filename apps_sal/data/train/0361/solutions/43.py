@@ -1,16 +1,16 @@
 class Solution:
     res = float('inf')
-    
+
     def tilingRectangle(self, n: int, m: int) -> int:
         s = {}
-        
+
         def dfs(n, m, h, cnt):
             if cnt > self.res:
                 return
             is_full = True
             pos = -1
             minh = float('inf')
-            for i in range(1, n+1):
+            for i in range(1, n + 1):
                 if h[i] < m:
                     is_full = False
                 if h[i] < minh:
@@ -19,7 +19,7 @@ class Solution:
             if is_full:
                 self.res = min(cnt, self.res)
                 return
-            
+
             key = 0
             base = m + 1
             for i in range(1, n + 1):
@@ -28,7 +28,7 @@ class Solution:
             if key in s and s[key] <= cnt:
                 return
             s[key] = cnt
-            
+
             end = pos
             while (
                 end < n
@@ -39,14 +39,14 @@ class Solution:
             for j in range(end, pos - 1, -1):
                 curh = j - pos + 1
                 nex = h[:]
-                for k in range(pos, j+1):
+                for k in range(pos, j + 1):
                     nex[k] += curh
                 dfs(n, m, nex, cnt + 1)
-        
-        if n == m: return 1
+
+        if n == m:
+            return 1
         if n > m:
             n, m = m, n
-        
+
         dfs(n, m, [0] * (n + 1), 0)
         return self.res
-

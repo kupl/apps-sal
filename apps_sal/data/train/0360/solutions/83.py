@@ -9,16 +9,17 @@ class Solution:
             if index == len(weights):
                 return True
         return False
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        l = 0 
+        l = 0
         r = sum(weights)
         while l < r - 1:
-            m = l + (r-l)//2
+            m = l + (r - l) // 2
             if self.canFinish(weights, D, m):
                 r = m
             else:
                 l = m + 1
-        
+
         if self.canFinish(weights, D, l):
             return l
         return r

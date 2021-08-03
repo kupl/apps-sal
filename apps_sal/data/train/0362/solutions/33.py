@@ -1,8 +1,8 @@
 class Solution:
     def numberWays(self, hats: List[List[int]]) -> int:
-                # O(40 * 2 ^ 10 * 10)
+        # O(40 * 2 ^ 10 * 10)
         total = 1 << len(hats)
-        
+
         satisfy, bound = [0] * 41, 0
         for i, likes in enumerate(hats):
             for hat in likes:
@@ -27,5 +27,3 @@ class Solution:
             DP = new_DP
 
         return DP[total - 1]
-            
-

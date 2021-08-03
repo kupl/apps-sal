@@ -9,16 +9,15 @@ def isOK(cap, weights, D):
             total += weights[i]
     return cnt <= D
 
+
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         left, right = max(weights), max(weights) * len(weights) // D
-        
-        
-        while left <= right:
-            mid = (right+left) //2
-            if isOK(mid, weights, D):
-                right = mid -1
-            else:
-                left = mid +1
-        return left 
 
+        while left <= right:
+            mid = (right + left) // 2
+            if isOK(mid, weights, D):
+                right = mid - 1
+            else:
+                left = mid + 1
+        return left

@@ -8,4 +8,4 @@ class Solution:
             if cur_sum >= 0:
                 ans += cur_sum
 
-        return ans; 
+        return ans

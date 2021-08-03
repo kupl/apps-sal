@@ -1,6 +1,6 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        
+
         def days_required(t):
             running_sum = 0
             days = 0
@@ -9,21 +9,17 @@ class Solution:
                 if running_sum > t:
                     days += 1
                     running_sum = weights[i]
-                    
+
             return days
-        
-        
+
         n = len(weights)
         lo, hi = max(weights), sum(weights)
         while(lo <= hi):
-            capacity = (lo+hi)//2
-            
-            if days_required(capacity) < D:
-                hi = capacity -1
-            else:
-                lo = capacity +1
-                
-                
-        return lo
-            
+            capacity = (lo + hi) // 2
 
+            if days_required(capacity) < D:
+                hi = capacity - 1
+            else:
+                lo = capacity + 1
+
+        return lo

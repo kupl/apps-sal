@@ -11,10 +11,10 @@ class Solution:
                 if days > D:
                     return False
             return True
-    
+
         left, right = max(weights), sum(weights)
         while left < right:
-            mid = left + (right - left)//2
+            mid = left + (right - left) // 2
             if feasible(mid):
                 right = mid
             else:

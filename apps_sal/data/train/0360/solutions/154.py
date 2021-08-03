@@ -1,6 +1,6 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], limit: int) -> int:
-        
+
         def count_days(cap: int) -> int:
             cur_weight = 0
             days = 1

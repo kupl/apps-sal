@@ -5,27 +5,26 @@ class Solution:
             d = 1
             s = 0
             for w in weights:
-                if s+w<=cap:
-                    s+=w
+                if s + w <= cap:
+                    s += w
                 else:
-                    d+=1
-                    s=w
-                if d>D:
+                    d += 1
+                    s = w
+                if d > D:
                     return False
             return True
 
-
         M = max(weights)
-        if D==len(weights):
+        if D == len(weights):
             return M
-        
-        lo, hi = M-1, sum(weights)
-        
-        while hi-lo>1:
-            h = (hi+lo)//2
+
+        lo, hi = M - 1, sum(weights)
+
+        while hi - lo > 1:
+            h = (hi + lo) // 2
             if canship(h):
-                hi=h
+                hi = h
             else:
-                lo=h
-        
+                lo = h
+
         return hi

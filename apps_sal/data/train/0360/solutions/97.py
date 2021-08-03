@@ -10,9 +10,9 @@ class Solution:
                 r = mid - 1
             else:
                 l = mid + 1
-                
+
         return best
-    
+
     def works(self, cap, weights, d):
         if cap < max(weights):
             return False
@@ -25,8 +25,7 @@ class Solution:
                     break
                 cur_cap += weights[idx]
                 idx += 1
-            
-            total_days += 1
-        
-        return total_days <= d
 
+            total_days += 1
+
+        return total_days <= d

@@ -17,7 +17,7 @@ class Solution:
         right = left * len(weights) // D
         while left < right:
             mid = left + (right - left) // 2
-            if check_capacity( mid ):
+            if check_capacity(mid):
                 right = mid
             else:
                 left = mid + 1

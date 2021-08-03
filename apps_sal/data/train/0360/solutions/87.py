@@ -11,7 +11,7 @@ class Solution:
                 cum = 0
         cnt += 1
         return cnt <= D
-        
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         l, r = max(weights), sum(weights)
         while l < r:

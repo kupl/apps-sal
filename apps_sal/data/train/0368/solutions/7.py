@@ -4,7 +4,7 @@ class Solution:
         s = 0
         counter = 1
         for i in satisfaction:
-            s += i*counter
+            s += i * counter
             counter += 1
         check = s
         longest = s
@@ -12,7 +12,7 @@ class Solution:
             s = 0
             counter = 1
             for i in satisfaction:
-                s += i*counter
+                s += i * counter
                 counter += 1
             if s < check:
                 return check
@@ -22,5 +22,3 @@ class Solution:
             if len(satisfaction) == 0:
                 return longest
             satisfaction = satisfaction[1:]
-            
-

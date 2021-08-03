@@ -8,11 +8,8 @@ class Solution:
         ans = 0
         for i in range(2, n + 1):
             for j in range(i, n + 1):
-                dp[i][j] = dp[i - 1][j - 1]+satisfaction[ j -1] * i
-                
-                ans = max(ans, dp[i][j])
-        
-        return ans
-                
-        
+                dp[i][j] = dp[i - 1][j - 1] + satisfaction[j - 1] * i
 
+                ans = max(ans, dp[i][j])
+
+        return ans

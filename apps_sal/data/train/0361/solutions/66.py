@@ -6,7 +6,7 @@ class Solution:
         self.res = float('inf')
         self.dfs(board, 0)
         return self.res
-    
+
     def dfs(self, board, count):
         if count >= self.res:
             return
@@ -19,7 +19,7 @@ class Solution:
             self.assign(board, i, j, k, 1)
             self.dfs(board, count + 1)
             self.assign(board, i, j, k, 0)
-       
+
     def assign(self, board, i, j, length, val):
         for row in range(i, i + length):
             for col in range(j, j + length):
@@ -27,7 +27,7 @@ class Solution:
 
     def find_max_length(self, board, i, j):
         max_length = 1
-        while i + max_length -1 < self.m and j + max_length - 1 < self.n:
+        while i + max_length - 1 < self.m and j + max_length - 1 < self.n:
             for row in range(i, i + max_length):
                 if board[row][j + max_length - 1] != 0:
                     return max_length - 1
@@ -36,11 +36,10 @@ class Solution:
                     return max_length - 1
             max_length += 1
         return max_length - 1
-        
+
     def find_next(self, board):
         for i in range(self.m):
             for j in range(self.n):
                 if board[i][j] == 0:
                     return i, j
         return -1, -1
-

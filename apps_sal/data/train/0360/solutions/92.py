@@ -11,10 +11,9 @@ class Solution:
                     load = 0
                     days += 1
             return days + 1 <= D
-        
-        #print(condition(15))
-        
-        
+
+        # print(condition(15))
+
         left, right = max(weights), sum(weights)
         while left < right:
             mid = left + (right - left) // 2
@@ -22,8 +21,5 @@ class Solution:
                 right = mid
             else:
                 left = mid + 1
-        
-        return left
-    
-        
 
+        return left

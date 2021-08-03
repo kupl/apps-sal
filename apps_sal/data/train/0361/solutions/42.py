@@ -1,9 +1,9 @@
 class Solution:
     def tilingRectangle(self, n: int, m: int) -> int:
-        
+
         h = [0] * m
         self.ans = m * n
-        
+
         def dfs(h: List[int], cur: int) -> None:
             min_h = min(h)
             if min_h == n:
@@ -17,11 +17,11 @@ class Solution:
                 j += 1
             fill_width = j - idx
             fill_height = n - min_h
-            
-            for fill in range(min(fill_width, fill_height), 0, -1):             
+
+            for fill in range(min(fill_width, fill_height), 0, -1):
                 for k in range(idx, idx + fill):
                     h[k] += fill
-                dfs(h, cur + 1)                
+                dfs(h, cur + 1)
                 for k in range(idx, idx + fill):
                     h[k] -= fill
 

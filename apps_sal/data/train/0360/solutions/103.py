@@ -8,7 +8,7 @@ class Solution:
             else:
                 start = mid
         return start if self._can_ship(weights, start, D) else end
-    
+
     def _can_ship(self, weights, capacity, D):
         days_needed = 0
         i = 0

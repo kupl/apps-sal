@@ -28,8 +28,8 @@
 #             return res%const
 #         mask_p = \"1\"*len(hats)
 #         return s(mask_p, maxx, len(hats))%const
-    
-    
+
+
 # class Solution:
 #     def numberWays(self, hats: List[List[int]]) -> int:
 #         const = 10**9+7
@@ -61,7 +61,7 @@
 #             cache[mask_p][h] = res
 #             return cache[mask_p][h]
 #         return s(mask_p, len(hats), maxx, len(used_h), [[None]*(maxx+1) for i in range(mask_p+1)])%const
-    
+
 class Solution:
     def numberWays(self, hats: List[List[int]]) -> int:
         h2p = defaultdict(list)
@@ -69,19 +69,20 @@ class Solution:
             for h in hat:
                 h2p[h].append(i)
         n = len(hats)
- 
+
         # bottom up
         dp, ndp = defaultdict(int), defaultdict(int)
 
         for hat in range(0, 41):
-            for mask in range(1<<n):
-                if mask == 0: ndp[mask] = 1
+            for mask in range(1 << n):
+                if mask == 0:
+                    ndp[mask] = 1
                 else:
                     ndp[mask] = dp[mask]
                     for p in h2p[hat]:
-                        if mask & (1<<p):
-                            ndp[mask] += dp[mask ^ (1<<p)]
-                            ndp[mask] %= 10**9+7
+                        if mask & (1 << p):
+                            ndp[mask] += dp[mask ^ (1 << p)]
+                            ndp[mask] %= 10**9 + 7
             dp, ndp = ndp, defaultdict(int)
 
-        return dp[(1<<n)-1]
+        return dp[(1 << n) - 1]

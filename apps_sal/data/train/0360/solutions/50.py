@@ -8,8 +8,8 @@ class Solution:
                     need += 1
                     cur = 0
                 cur += w
-            if need > D: left = mid + 1
-            else: right = mid
+            if need > D:
+                left = mid + 1
+            else:
+                right = mid
         return int(left)
-            
-

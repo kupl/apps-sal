@@ -1,11 +1,11 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        
+
         SUM = sum(weights)
         MAX = max(weights)
         h = SUM
         l = max(MAX, SUM // D) - 1
-        
+
         def canDo(arr, D, num):
             j = 0
             for i in range(D):
@@ -19,7 +19,7 @@ class Solution:
                 elif total == 0:
                     return False
             return j == len(arr)
-        
+
         while h > l + 1:
             m = (l + h) // 2
             if canDo(weights, D, m):

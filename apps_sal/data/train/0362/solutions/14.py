@@ -1,4 +1,6 @@
 from functools import lru_cache
+
+
 class Solution:
     def numberWays(self, ppl_to_hats: List[List[int]]) -> int:
         # 10 ppl, 40 hats.
@@ -9,8 +11,8 @@ class Solution:
                 hats_to_ppl[hid].append(pid)
         num_ppl = len(ppl_to_hats)
         all_ppl_mask = (1 << num_ppl) - 1
-        MOD = 10**9+7
-        
+        MOD = 10**9 + 7
+
         @lru_cache(None)
         def helper(ppl_assigned_bitmask, next_hid):
             if ppl_assigned_bitmask == all_ppl_mask:
@@ -24,8 +26,8 @@ class Solution:
                     # this person can wear.
                     ways += helper(pid_mask | ppl_assigned_bitmask, next_hid + 1)
                     ways %= MOD
-                    
+
             return ways
-        
+
         ret = helper(0, 1)
         return ret % MOD

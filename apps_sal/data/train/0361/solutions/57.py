@@ -1,16 +1,16 @@
 class Solution:
     def tilingRectangle(self, m: int, n: int) -> int:
-        ans = m*n
+        ans = m * n
 
-        def helper(h = [0]*n, res = 0):
-            
+        def helper(h=[0] * n, res=0):
+
             nonlocal ans
             #print(h, res, ans)
             if all(x == m for x in h):
                 ans = min(ans, res)
                 return
             if res >= ans:
-                return 
+                return
             temp = min(h)
             ind = h.index(temp)
             r = ind + 1

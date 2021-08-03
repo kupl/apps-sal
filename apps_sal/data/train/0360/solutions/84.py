@@ -2,9 +2,9 @@ class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         total = sum(weights)
         # attention: lb also bound by max element, or it can't fit in
-        #if total % D == 0:
+        # if total % D == 0:
         #    lb = total // D
-        #else:
+        # else:
         #    lb = total // D + 1
         #lb = max(max(weights), lb)
         lb = max(weights)
@@ -16,7 +16,7 @@ class Solution:
             else:
                 lb = mid + 1
         return lb
-        
+
     def checkIfCanShipWithinDDays(self, weights: List[int], D: int, capacity: int) -> bool:
         b, count, total = 0, 0, 0
         while b < len(weights):

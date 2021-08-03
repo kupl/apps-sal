@@ -3,7 +3,7 @@ class Solution:
         sums = [0] * (len(weights) + 1)
         for i in range(len(weights)):
             sums[i + 1] = weights[i] + sums[i]
-        
+
         def backtracking(i, cap, d):
             if i == len(sums):
                 return True
@@ -15,9 +15,9 @@ class Solution:
                     break
                 j += 1
             return backtracking(j, cap, d - 1)
-        
+
         l, h = max(weights), sum(weights)
-        
+
         while l <= h:
             m = (l + h) // 2
             if backtracking(1, m, D):

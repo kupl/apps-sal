@@ -1,6 +1,6 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        
+
         def good(cap):
             i, tmp, ans = 0, 0, 1
             while i < len(a):
@@ -11,7 +11,7 @@ class Solution:
                     tmp = a[i]
                 i += 1
             return ans <= D
-        
+
         a = weights
         lo, hi = max(a), sum(a)
         while lo < hi:
@@ -21,4 +21,3 @@ class Solution:
             else:
                 lo = mid + 1
         return lo
-

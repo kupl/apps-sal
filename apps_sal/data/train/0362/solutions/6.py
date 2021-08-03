@@ -2,12 +2,12 @@ class Solution:
     def numberWays(self, hats: List[List[int]]) -> int:
         h2p = defaultdict(list)
         n = len(hats)
-        mod = 10**9+7
-        
+        mod = 10**9 + 7
+
         for p, hat_list in enumerate(hats):
             for h in hat_list:
                 h2p[h].append(p)
-        
+
         '''
         def dp(h, mask):
             if (h, mask) in memo:
@@ -39,19 +39,17 @@ class Solution:
         return dp(0, 0) % mod
         '''
         m = 1 << n
-        
+
         dp = [[0] * m for _ in range(41)]
-        
+
         dp[0][0] = 1
-        
+
         for h in range(1, 41):
             for mask in range(m):
-                dp[h][mask] = dp[h-1][mask]
-                
+                dp[h][mask] = dp[h - 1][mask]
+
                 for p in h2p[h]:
                     if mask & (1 << p) != 0:
-                        dp[h][mask] += dp[h-1][mask ^ (1 << p)]
-    
-        return dp[40][m-1] % mod
-                    
+                        dp[h][mask] += dp[h - 1][mask ^ (1 << p)]
 
+        return dp[40][m - 1] % mod

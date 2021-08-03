@@ -3,7 +3,7 @@ class Solution:
         left = max(weights)
         right = sum(weights)
         while left < right:
-            mid = (left + right)//2
+            mid = (left + right) // 2
             current = 0
             need = 1
             for w in weights:
@@ -11,10 +11,9 @@ class Solution:
                     need += 1
                     current = 0
                 current += w
-                
+
             if need > D:
                 left = mid + 1
             else:
                 right = mid
         return left
-

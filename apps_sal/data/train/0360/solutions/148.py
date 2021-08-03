@@ -9,15 +9,14 @@ class Solution:
                     days += 1
                     acc_w = w
             return days
-            
+
         lo = max(weights)
         hi = lo * len(weights) // D
         while lo < hi:
-            med = lo + (hi-lo)//2
+            med = lo + (hi - lo) // 2
             days = calDays(weights, med)
             if days <= D:
                 hi = med
             else:
-                lo = med+1
+                lo = med + 1
         return hi
-

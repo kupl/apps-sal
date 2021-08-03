@@ -63,7 +63,7 @@ class Solution:
                     count += 1
                 count += dfs_dp(row + 1, path | (1 << hat))
             dp[(row, path)] = count % LIMIT
-            return count % LIMIT 
+            return count % LIMIT
 
         # 与其person映射hat, 不如hat映射person
         # 复杂度 O(2^10 * 40).
@@ -75,7 +75,6 @@ class Solution:
         hats_list = list(hat_map.keys())
         hats_n = len(hats_list)
         final = pow(2, n) - 1
-
 
         def dfs_dp1(hat_index, path):
             if hat_index >= hats_n:
@@ -90,7 +89,6 @@ class Solution:
                     continue
                 count += dfs_dp1(hat_index + 1, path | (1 << person))
             count += dfs_dp1(hat_index + 1, path)
-            dp[(hat_index, path)] = count % LIMIT 
-            return count % LIMIT 
+            dp[(hat_index, path)] = count % LIMIT
+            return count % LIMIT
         return dfs_dp1(0, 0)
-

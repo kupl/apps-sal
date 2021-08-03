@@ -10,5 +10,6 @@ class Solution:
                 cur += w
             if need > D:
                 left = mid + 1
-            else: right = mid
+            else:
+                right = mid
         return left

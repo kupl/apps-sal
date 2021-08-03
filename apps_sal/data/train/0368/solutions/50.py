@@ -10,6 +10,5 @@ class Solution:
             max_satisfaction = max(max_satisfaction, satis)
             if sum_ < 0:
                 break
-                
-        return max_satisfaction
 
+        return max_satisfaction

@@ -1,9 +1,9 @@
 class Solution:
-    
+
     def can_ship(self, weights, D, max_weight):
 
         #print(weights, D)
-        
+
         i = 0
         s = 0
 
@@ -24,23 +24,23 @@ class Solution:
         return self.can_ship(weights[i-1:], D-1, max_weight)
         '''
 
-        while i<len(weights) and D>0:
+        while i < len(weights) and D > 0:
 
             s = 0
-            
-            while i<len(weights) and s<=max_weight:
-                s+=weights[i]
-                
-                if s>max_weight:
+
+            while i < len(weights) and s <= max_weight:
+                s += weights[i]
+
+                if s > max_weight:
                     break
 
-                i+=1
+                i += 1
 
-            D-=1
+            D -= 1
 
-            #print(\"test \", i, D, weights)
+            # print(\"test \", i, D, weights)
 
-        if D==0 and i<len(weights):
+        if D == 0 and i < len(weights):
             return False
 
         return True
@@ -50,23 +50,21 @@ class Solution:
         left = min(weights)
         right = sum(weights)
 
-        while left<right:
+        while left < right:
 
-            mid = int((left+right)/2)
-        
+            mid = int((left + right) / 2)
+
             if self.can_ship(weights, D, mid):
                 right = mid
             else:
                 left = mid
 
-            #print(\"mid = \", mid, left, right)
-            
-            if right==left+1:
+            # print(\"mid = \", mid, left, right)
+
+            if right == left + 1:
                 if self.can_ship(weights, D, left):
                     return left
                 else:
                     return right
 
-
         return mid
-

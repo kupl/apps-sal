@@ -1,7 +1,7 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        maxCap = sum(weights) # 8
-        minCap = max(weights) # 3
+        maxCap = sum(weights)  # 8
+        minCap = max(weights)  # 3
         ans = maxCap
 
         # binary search
@@ -9,7 +9,7 @@ class Solution:
         hi = maxCap
 
         while lo <= hi:
-            mi = lo + (hi - lo) // 2 # mid = left + (right - left) // 2
+            mi = lo + (hi - lo) // 2  # mid = left + (right - left) // 2
             # test if cap works
             daysLeft = D
             dailyCap = mi
@@ -32,4 +32,3 @@ class Solution:
             else:
                 lo = mi + 1
         return ans
-

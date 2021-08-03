@@ -8,19 +8,16 @@ class Solution:
                     return False
                 curr += w
                 if curr > k:
-                    d +=1
+                    d += 1
                     curr = w
             return d <= D
-        
-        l,r = 0,10**18
+
+        l, r = 0, 10**18
         while l < r:
-            m = (l+r)//2
+            m = (l + r) // 2
             # print(l,r,m,canDo(m))
             if canDo(m):
                 r = m
             else:
-                l = m+1
+                l = m + 1
         return l
-                
-                
-

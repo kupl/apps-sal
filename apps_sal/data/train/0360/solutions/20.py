@@ -14,7 +14,7 @@ class Solution:
         l = max(weights)
         r = sum(weights)
         while l < r:
-            m = l + (r-l)//2
+            m = l + (r - l) // 2
             if helper(m):
                 r = m
             else:

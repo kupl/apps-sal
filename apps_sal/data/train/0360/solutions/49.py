@@ -11,7 +11,7 @@ class Solution:
             else:
                 left = mid + 1
         return left
-    
+
     def checkValidPartition(self, weights, capacity, D):
         count = 1
         cur_sum = 0

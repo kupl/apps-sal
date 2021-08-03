@@ -16,12 +16,12 @@ class Solution:
                 left = idx - 0 + 1
                 right = n - 1 - idx + 1
                 if i:
-                    left = idx - idxes[i-1]
+                    left = idx - idxes[i - 1]
                 if i < len(idxes) - 1:
-                    right = idxes[i+1] - idx
+                    right = idxes[i + 1] - idx
                 total += left * right
             return total
-        
+
         chars = set(s)
         ans = 0
         for c in chars:

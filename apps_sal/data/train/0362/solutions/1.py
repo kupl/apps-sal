@@ -9,7 +9,7 @@ class Solution:
             for e in h:
                 rev[e].append(i)
         for i in range(40):
-            r = rev[i+1]
+            r = rev[i + 1]
             nx = d.copy()
             for j in d:
                 for k in r:

@@ -2,6 +2,7 @@ class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         hlim = sum(weights)
         llim = max(weights)
+
         def isValid(cap, days):
             temp = 0
             x = 0
@@ -15,10 +16,10 @@ class Solution:
             return days >= 1
         ans = -1
         while llim <= hlim:
-            mid = (llim+hlim)//2
+            mid = (llim + hlim) // 2
             if isValid(mid, D):
                 ans = mid
-                hlim = mid-1
+                hlim = mid - 1
             else:
-                llim = mid+1
+                llim = mid + 1
         return ans

@@ -1,15 +1,15 @@
 class Solution:
     def tilingRectangle(self, m: int, n: int) -> int:
-        self.ans = m*n
+        self.ans = m * n
 
         def helper(h, res):
-            
+
             #print(h, res, ans)
             if all(x == m for x in h):
                 self.ans = min(self.ans, res)
                 return
             if res >= self.ans:
-                return 
+                return
             temp = min(h)
             ind = h.index(temp)
             r = ind + 1
@@ -20,5 +20,5 @@ class Solution:
                 for j in range(ind, ind + i):
                     new_h[j] += i
                 helper(new_h, res + 1)
-        helper([0]*n, 0)
+        helper([0] * n, 0)
         return self.ans

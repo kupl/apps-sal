@@ -18,7 +18,7 @@ class Solution:
                     cur += weights[ix]
                 ix += 1
             return ix == len(weights) and day <= D
-        
+
         left, right = max(weights), sum(weights)
         while left < right:
             mid = left + (right - left) // 2

@@ -1,7 +1,8 @@
 class Solution:
     def tilingRectangle(self, n: int, m: int) -> int:
-        self.best = m * n    
+        self.best = m * n
         height = [0] * m
+
         def dfs(moves):
             if all(h == n for h in height):
                 self.best = min(self.best, moves)
@@ -12,7 +13,7 @@ class Solution:
             for i in range(min(m - idx, n - height[idx]), 0, -1):
                 for j in range(i):
                     height[idx + j] += i
-                dfs(moves + 1) 
+                dfs(moves + 1)
                 for j in range(i):
                     height[idx + j] -= i
         dfs(0)

@@ -1,6 +1,7 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         left = max(weights)
+
         def possible(c):
             ship = 1
             cargo = 0
@@ -10,15 +11,15 @@ class Solution:
                 if (cargo + weights[i]) > c:
                     ship += 1
                     cargo = weights[i]
-                else: 
+                else:
                     cargo += weights[i]
             return ship <= D
-        
+
         right = sum(weights)
 
         while left <= right:
-        
-            mid = floor((left + right)/2)
+
+            mid = floor((left + right) / 2)
             if possible(mid):
                 if left == mid:
                     break

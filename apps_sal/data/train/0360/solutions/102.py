@@ -1,6 +1,6 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        
+
         def days_taken(capacity, arr):
             days = 0
             i = 0
@@ -13,23 +13,17 @@ class Solution:
                     j += 1
                 i = j
             return days
-        
+
         low = max(weights)
         high = sum(weights)
-        
-        
-        
+
         while low < high:
             mid = (low + high) // 2
             days_by_mid = days_taken(mid, weights)
-            
+
             if days_by_mid <= D:
                 high = mid
             else:
                 low = mid + 1
-        
-        return low
-        
-        
-        
 
+        return low

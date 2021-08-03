@@ -14,13 +14,13 @@ class Solution:
                 else:
                     totalWeight += weight
             return days + 1
-        left = max(weights)        
+        left = max(weights)
         right = sum(weights) + 1
         while left < right:
             mid = left + (right - left) // 2
             time = timeConsumption(mid)
-            if time > D: left = mid + 1
-            else: right = mid
+            if time > D:
+                left = mid + 1
+            else:
+                right = mid
         return left
-
-

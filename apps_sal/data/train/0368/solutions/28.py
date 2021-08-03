@@ -5,12 +5,10 @@ class Solution:
         while len(sat) > 0:
             value = 0
             for i, v in enumerate(sat):
-                value += v*(i+1)
+                value += v * (i + 1)
             out.append(value)
             print(sat)
-            if sat[0]>0:
+            if sat[0] > 0:
                 break
             sat = sat[1:]
         return max(out)
-            
-

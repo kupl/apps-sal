@@ -17,12 +17,11 @@ class Solution:
             return True
 
         while l < r:
-            mid = l + (r - l)//2
+            mid = l + (r - l) // 2
             if canFitInD(mid):
                 r = mid
             else:
-                l = mid+1
+                l = mid + 1
 
         return l
 # leetcode submit region end(Prohibit modification and deletion)
-

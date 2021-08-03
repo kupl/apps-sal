@@ -14,18 +14,19 @@ def possible(weights, cap, D):
     print(c, cap)
     return c <= D
 
+
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         hi, lo = sum(weights), max(weights)
-        mid = (hi + lo)//2
+        mid = (hi + lo) // 2
         while lo <= hi:
             print(lo, hi, mid)
             p = possible(weights, mid, D)
-            if p and not possible(weights, mid-1, D):
+            if p and not possible(weights, mid - 1, D):
                 return mid
             elif not p:
-                lo = mid +1
+                lo = mid + 1
             else:
                 hi = mid
-            mid = (hi+lo) // 2
+            mid = (hi + lo) // 2
         return -1

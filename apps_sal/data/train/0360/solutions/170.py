@@ -21,10 +21,10 @@ class Solution:
     #             i = 0
     #             cap = curCap
     #     return curCap
-    
+
     def shipWithinDays(self, weights, D):
         l, r = max(weights), sum(weights)
-                            
+
         while l < r:
             m, days, curWeight = (l + r) // 2, 1, 0
             for weight in weights:
@@ -35,10 +35,10 @@ class Solution:
                     l = m + 1
                     break
                 curWeight += weight
-            else: 
+            else:
                 r = m
         return l
-    
+
         # def shipWithinDays(self, weights, D):
     #     left, right = max(weights), sum(weights)
     #     while left < right:
@@ -51,4 +51,3 @@ class Solution:
     #         if need > D: left = mid + 1
     #         else: right = mid
     #     return left
-
