@@ -6,7 +6,7 @@ class Solution:
         count = -float('inf')
         last = A[0]
         max_len = 0
-        for i in range(1,len(A)):
+        for i in range(1, len(A)):
             if A[i] > last and increasing:
                 count += 1
             elif A[i] > last and not increasing:
@@ -25,11 +25,7 @@ class Solution:
                 count = -float('inf')
                 increasing = False
             last = A[i]
-        
+
         if max_len < 3:
             return 0
         return max_len
-                
-
-
-
