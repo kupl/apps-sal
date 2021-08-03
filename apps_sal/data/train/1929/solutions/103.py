@@ -5,7 +5,7 @@ class StreamChecker:
         self.stream = deque([])
 
         for word in set(words):
-            node = self.trie       
+            node = self.trie
             for ch in word[::-1]:
                 if not ch in node:
                     node[ch] = {}
@@ -27,4 +27,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

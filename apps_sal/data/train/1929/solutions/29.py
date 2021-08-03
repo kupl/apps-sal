@@ -4,6 +4,7 @@ class TrieNode:
         self.value = value
         self.leaf = leaf
 
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -17,7 +18,7 @@ class StreamChecker:
                     node.children[c] = c_node
                 node = node.children[c]
             node.leaf = True
-        
+
     def query(self, letter: str) -> bool:
         result = False
         revised_pointers = []
@@ -34,4 +35,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

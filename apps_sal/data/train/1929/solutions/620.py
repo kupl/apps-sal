@@ -2,11 +2,12 @@ class TrieNode:
     def __init__(self):
         self.children = collections.defaultdict(TrieNode)
         self.isWord = False
-        
+
+
 class Trie:
     def __init__(self):
         self.root = TrieNode()
-        
+
     def insert(self, word):
         p = self.root
         for w in word[::-1]:
@@ -25,6 +26,7 @@ class Trie:
                 return True
         return False
 
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -36,10 +38,8 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.letters += letter
         return self.trie.search(self.letters)
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

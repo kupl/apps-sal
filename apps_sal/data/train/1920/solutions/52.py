@@ -2,15 +2,14 @@ class TimeMap(object):
 
     def __init__(self):
         self.map = collections.defaultdict(list)
-        
 
     def set(self, key, value, timestamp):
         self.map[key].append((timestamp, value))
-        
 
     def get(self, key, timestamp):
         values = self.map[key]
-        if not values: return ''
+        if not values:
+            return ''
         left, right = 0, len(values) - 1
         while left < right:
             mid = (left + right + 1) // 2
@@ -26,4 +25,3 @@ class TimeMap(object):
 # obj = TimeMap()
 # obj.set(key,value,timestamp)
 # param_2 = obj.get(key,timestamp)
-

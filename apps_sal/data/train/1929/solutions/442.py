@@ -2,7 +2,7 @@ class StreamChecker:
     def __init__(self, words: List[str]):
         self.trie = {}
         for word in words:
-            node = self.trie # reset for each word
+            node = self.trie  # reset for each word
             for ch in reversed(word):
                 node.setdefault(ch, {})
                 node = node[ch]

@@ -14,7 +14,7 @@ class DinnerPlates:
         self.dic[self.l].append(val)
         self.cnt += 1
         self.r = max(self.l, self.r)
-        
+
     def pop(self) -> int:
         if not self.cnt:
             return -1
@@ -37,4 +37,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

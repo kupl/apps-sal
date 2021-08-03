@@ -14,8 +14,7 @@ class StreamChecker:
                 curr = curr[ch]
             curr['.'] = True
         return trie
-            
-        
+
     def query(self, letter: str) -> bool:
         self.l.append(self.trie)
         new_list = []
@@ -26,11 +25,8 @@ class StreamChecker:
                 is_word |= '.' in trie[letter]
         self.l = new_list
         return is_word
-                
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -2,7 +2,8 @@ class TrieNode:
     def __init__(self):
         self.children = {}
         self.endNode = False
-         
+
+
 class Trie:
     def __init__(self):
         self.root = TrieNode()
@@ -12,6 +13,7 @@ class Trie:
         for symbol in word:
             root = root.children.setdefault(symbol, TrieNode())
         root.endNode = True
+
 
 class StreamChecker:
 
@@ -29,7 +31,7 @@ class StreamChecker:
                 cur = cur.children[c]
                 if cur.endNode:
                     return True
-            else: 
+            else:
                 break
         return False
 
@@ -37,4 +39,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

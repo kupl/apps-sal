@@ -4,7 +4,7 @@ class Solution:
         if self._dfs(root) == 0:
             self._res += 1
         return self._res
-    
+
     # 0表示这个点没有被cover
     # 1表示这个点被cover了，但是没有camera
     # 2表示这个点有camera
@@ -13,10 +13,10 @@ class Solution:
         # 但是没有camera
         if not node:
             return 1
-        
+
         left = self._dfs(node.left)
         right = self._dfs(node.right)
-        
+
         # 如果左节点或者右节点中有cover不住的
         # 需要在node上加camera了
         if left == 0 or right == 0:

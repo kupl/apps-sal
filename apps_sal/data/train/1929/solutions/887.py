@@ -15,18 +15,16 @@ class StreamChecker:
         n = len(self.word)
         nodes = self.wordict
         while n:
-            if self.word[n-1] in nodes:
-                if 0 in nodes[self.word[n-1]]:
+            if self.word[n - 1] in nodes:
+                if 0 in nodes[self.word[n - 1]]:
                     return True
                 else:
-                    nodes = nodes[self.word[n-1]]
+                    nodes = nodes[self.word[n - 1]]
                     n -= 1
             else:
                 return False
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

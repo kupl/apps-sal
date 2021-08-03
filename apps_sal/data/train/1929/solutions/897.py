@@ -1,7 +1,8 @@
 class Trie:
     def __init__(self):
         self.children = defaultdict(lambda: False)
-    def insert(self,word):
+
+    def insert(self, word):
         if word == '':
             self.children['@'] = True
         else:
@@ -12,7 +13,8 @@ class Trie:
                 newChild = Trie()
                 newChild.insert(word[1:])
                 self.children[word[0]] = newChild
-                
+
+
 class StreamChecker:
     def __init__(self, words: List[str]):
         self.root = Trie()
@@ -41,4 +43,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

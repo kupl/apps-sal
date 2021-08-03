@@ -3,6 +3,7 @@ class Node:
         self.children = {}
         self.isWord = False
 
+
 class Trie:
 
     def __init__(self):
@@ -27,7 +28,6 @@ class Trie:
         return cur.isWord
 
 
-
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -35,16 +35,12 @@ class StreamChecker:
         for word in words:
             self.T.add(word[::-1])
         self.arr = []
-        
 
     def query(self, letter: str) -> bool:
         self.arr.append(letter)
         return self.T.check(self.arr[::-1])
 
-        
-
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

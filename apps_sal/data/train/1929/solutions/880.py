@@ -11,7 +11,6 @@ class StreamChecker:
             cur[-1] = True
         self.char_stream = []
         self.to_check = []
-                
 
     def query(self, letter: str) -> bool:
         temp = []
@@ -33,4 +32,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

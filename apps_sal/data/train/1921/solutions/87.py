@@ -4,8 +4,9 @@ class DinnerPlates:
         self.cap = capacity
         self.stacks = []
         self.heap = []
+
     def push(self, val: int) -> None:
-        if self.heap and self.heap[0]>=len(self.stacks):
+        if self.heap and self.heap[0] >= len(self.stacks):
             self.heap = []
         if self.heap:
             if len(self.stacks[self.heap[0]]) < self.cap:
@@ -15,7 +16,7 @@ class DinnerPlates:
         else:
             self.stacks.append([val])
             if self.cap != 1:
-                heapq.heappush(self.heap, len(self.stacks)-1)
+                heapq.heappush(self.heap, len(self.stacks) - 1)
 
     def pop(self) -> int:
         if not self.stacks:
@@ -23,7 +24,7 @@ class DinnerPlates:
         while self.stacks and not self.stacks[-1]:
             self.stacks.pop()
         if self.stacks and len(self.stacks[-1]) == self.cap:
-            heapq.heappush(self.heap, len(self.stacks)-1)
+            heapq.heappush(self.heap, len(self.stacks) - 1)
         return self.stacks[-1].pop() if self.stacks else -1
 
     def popAtStack(self, index: int) -> int:
@@ -39,4 +40,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

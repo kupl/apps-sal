@@ -1,5 +1,7 @@
 from collections import deque as dq
 import bisect as bs
+
+
 class DinnerPlates:
 
     def __init__(self, capacity: int):
@@ -16,7 +18,7 @@ class DinnerPlates:
         else:
             self.cur.append([val])
             if len(self.cur[-1]) < self.cap:
-                self.nFull.append(len(self.cur)-1)
+                self.nFull.append(len(self.cur) - 1)
 
     def pop(self) -> int:
         # print(\"pop\", self.cur, self.nFull)
@@ -32,9 +34,8 @@ class DinnerPlates:
             self.cur.pop()
             self.nFull.pop()
         return tmp
-        
 
-    def popAtStack(self, index: int) -> int:   
+    def popAtStack(self, index: int) -> int:
         # print(\"popAt\", index, self.cur, self.nFull)
         if index >= len(self.cur):
             return -1
@@ -61,4 +62,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

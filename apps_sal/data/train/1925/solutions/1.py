@@ -20,5 +20,5 @@ class Solution:
                 break
         root.left = self.bstFromPreorder(preorder[1:ind])
         root.right = self.bstFromPreorder(preorder[ind:])
-        
+
         return root

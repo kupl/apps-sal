@@ -2,7 +2,7 @@ class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.suffixTree = {}
-        
+
         for word in set(words):
             node = self.suffixTree
             for ch in word[::-1]:
@@ -13,9 +13,9 @@ class StreamChecker:
             # print(word,self.suffixTree)
         self.queries = []
         # print(self.suffixTree)
-            
+
         # print(self.letters)
-        return 
+        return
 
     def query(self, letter: str) -> bool:
         self.queries.append(letter)
@@ -32,14 +32,11 @@ class StreamChecker:
                 return False
             else:
                 node = node[ch]
-            
+
         # print(letter,''.join(self.queries),node,'$' in node)
         return '$' in node
-        
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -1,10 +1,11 @@
 import collections
 
+
 class Trie:
     def __init__(self):
-        self.children = [None]*26
+        self.children = [None] * 26
         self.isEnd = False
-        
+
     def add_word(self, word):
         curr = self
         for c in word:
@@ -12,14 +13,17 @@ class Trie:
                 curr.children[ord(c) - ord('a')] = Trie()
             curr = curr.children[ord(c) - ord('a')]
         curr.isEnd = True
-        
+
     def search(self, word):
         curr = self
         for c in word:
-            if curr.children[ord(c) - ord('a')] == None: return False
+            if curr.children[ord(c) - ord('a')] == None:
+                return False
             curr = curr.children[ord(c) - ord('a')]
-            if curr.isEnd: return True
+            if curr.isEnd:
+                return True
         return False
+
 
 class StreamChecker:
 
@@ -37,4 +41,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -9,7 +9,6 @@ class StreamChecker:
                 lastC = lastC[c]
             lastC['*'] = True
         self.words = []
-        
 
     def query(self, letter: str) -> bool:
         newWords = []
@@ -25,4 +24,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

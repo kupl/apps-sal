@@ -3,9 +3,10 @@ class TreeNode:
     def __init__(self, val=0):
         self.val = 0
         self.children = [None] * 26
-        
+
+
 class StreamChecker:
-    
+
     def __init__(self, words: List[str]):
         self.root = TreeNode(0)
         for word in words:
@@ -21,7 +22,7 @@ class StreamChecker:
                     current = temp
             current.val = 1
         self.query_str = ''
-        
+
     def query(self, letter: str) -> bool:
         self.query_str = letter + self.query_str
         return self.search()
@@ -37,9 +38,8 @@ class StreamChecker:
                     return True
                 else:
                     current = temp
-            
-        
+
+
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

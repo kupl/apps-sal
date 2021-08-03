@@ -3,9 +3,10 @@ def findDivisors(n):
     i = 1
     while i <= sqrt(n):
         if n % i == 0:
-            res.append([i, n//i])
+            res.append([i, n // i])
         i = i + 1
     return res
+
 
 class Solution:
     def closestDivisors(self, num: int) -> List[int]:

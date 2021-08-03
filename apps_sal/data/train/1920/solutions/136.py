@@ -2,11 +2,9 @@ class TimeMap:
 
     def __init__(self):
         self.M = collections.defaultdict(list)
-        
 
     def set(self, key: str, value: str, timestamp: int) -> None:
         self.M[key].append((timestamp, value))
-        
 
     def get(self, key: str, timestamp: int) -> str:
         A = self.M[key]
@@ -31,4 +29,3 @@ class TimeMap:
 # obj = TimeMap()
 # obj.set(key,value,timestamp)
 # param_2 = obj.get(key,timestamp)
-

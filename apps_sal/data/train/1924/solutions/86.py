@@ -15,7 +15,7 @@ class Solution:
                     if(city == j[1]):
                         continue
                     else:
-                        if(abs(j[0]-int(time)) <= 60):
+                        if(abs(j[0] - int(time)) <= 60):
                             invalidTransactions.add(i)
-                            invalidTransactions.add(name+','+str(j[0])+','+j[2]+','+j[1])
+                            invalidTransactions.add(name + ',' + str(j[0]) + ',' + j[2] + ',' + j[1])
         return list(invalidTransactions)

@@ -4,6 +4,7 @@ import heapq
 StackAndFlags = collections.namedtuple('StackAndFlags', [
     'stack', 'on_push_heap', 'on_pop_heap'])
 
+
 class DinnerPlates:
 
     def __init__(self, capacity: int):
@@ -11,7 +12,7 @@ class DinnerPlates:
         self._stacks = []
         self._next_push_heap = []
         self._next_pop_heap = []
-        
+
     def _push_to_top(self, val):
         i = self._next_push_heap[0]
         assert self._stacks[i].on_push_heap
@@ -59,4 +60,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

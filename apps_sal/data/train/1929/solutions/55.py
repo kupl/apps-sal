@@ -1,17 +1,18 @@
 def to_index(c):
     return ord(c) - ord('a')
 
+
 class Node:
-    def __init__(self, val = None):
+    def __init__(self, val=None):
         self.val = val
         self.end = False
         self.childs = [None] * (ord('z') - ord('a') + 1)
+
 
 class Trie:
 
     def __init__(self):
         self.root = Node()
-        
 
     def insert(self, word: str) -> None:
         ptr = self.root
@@ -31,7 +32,6 @@ class Trie:
                 return False
             ptr = ptr.childs[i]
         return ptr.end == True
-        
 
     def startsWith(self, prefix: str) -> bool:
         ptr = self.root
@@ -40,7 +40,8 @@ class Trie:
             if ptr.childs[i] is None:
                 return False
             ptr = ptr.childs[i]
-        return True     
+        return True
+
 
 class StreamChecker:
 
@@ -67,10 +68,12 @@ class StreamChecker:
         for node in self.d:
             if node.childs[i] is not None:
                 new_d.add(node.childs[i])
-                if node.childs[i].end: r = True
+                if node.childs[i].end:
+                    r = True
         if self.t.root.childs[i] is not None:
             new_d.add(self.t.root.childs[i])
-            if self.t.root.childs[i].end: r = True
+            if self.t.root.childs[i].end:
+                r = True
         self.d = tuple(new_d)
         self.store[tuple(self.k)] = (self.d, r)
         return r
@@ -79,4 +82,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

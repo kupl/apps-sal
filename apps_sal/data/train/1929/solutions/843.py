@@ -3,24 +3,26 @@ class StreamChecker:
     def __init__(self, words: List[str]):
         _compress = {}
         _decompress = {}
+
         def compress(s):
             if s not in _compress:
                 i = len(_compress)
                 _compress[s] = i
-                _decompress[i] = s                
+                _decompress[i] = s
             return _compress[s]
+
         def decompress(i):
             return _decompress[i]
         compress('')
-        
+
         words = set(words)
-        graph = defaultdict(lambda: defaultdict(int)) # pref1 -> ch -> pref2 where pref2 is longest word that is a suffix of pref1
+        graph = defaultdict(lambda: defaultdict(int))  # pref1 -> ch -> pref2 where pref2 is longest word that is a suffix of pref1
         prefs = set()
         for word in words:
             for i in range(len(word) + 1):
                 pref = word[:i]
                 prefs.add(pref)
-        
+
         for pref in prefs:
             for i in range(26):
                 ch = chr(ord('a') + i)
@@ -28,7 +30,7 @@ class StreamChecker:
                     pref2 = pref[j:] + ch
                     if pref2 in prefs and len(pref2) > len(decompress(graph[compress(pref)][ch])):
                         graph[compress(pref)][ch] = compress(pref2)
-                
+
         prefWithWordSuffix = set()
         for pref in prefs:
             for i in range(len(word) + 1):
@@ -42,12 +44,12 @@ class StreamChecker:
         # self.decompress = decompress
 
     def query(self, letter: str) -> bool:
-        
+
         self.state = self.graph[self.state][letter]
-        
-        
+
         return self.state in self.prefWithWordSuffix
-        
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -55,11 +57,12 @@ class StreamChecker:
         for word in words:
             node = self.trie
             for c in word:
-                if c not in node:                    
+                if c not in node:
                     node[c] = {}
                 node = node[c]
             node['$'] = word
         self.states = [self.trie]
+
     def query(self, letter: str) -> bool:
         nextStates = [self.trie]
         for state in self.states:
@@ -73,4 +76,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

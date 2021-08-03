@@ -8,7 +8,7 @@ class DinnerPlates:
     def push(self, val: int) -> None:
         while self.q and (self.q[0] >= len(self.s) or len(self.s[self.q[0]]) == self.c):
             heapq.heappop(self.q)
-        
+
         # print(self.q, self.s)
         if self.q:
             idx = self.q[0]
@@ -16,7 +16,7 @@ class DinnerPlates:
             if len(self.s[idx]) == self.c:
                 heapq.heappop(self.q)
         else:
-            idx = len(self.s)-1
+            idx = len(self.s) - 1
             if not self.s or len(self.s[-1]) == self.c:
                 idx += 1
                 self.s.append([])
@@ -40,4 +40,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

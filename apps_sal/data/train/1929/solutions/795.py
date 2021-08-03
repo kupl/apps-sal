@@ -18,9 +18,8 @@ class StreamChecker:
             if letter in tries:
                 new_pool.append(tries[letter])
         self.pool = new_pool
-        return  any('END' in tries for tries in self.pool)
+        return any('END' in tries for tries in self.pool)
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

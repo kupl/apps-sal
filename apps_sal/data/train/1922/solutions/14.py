@@ -9,9 +9,10 @@ class Solution:
         # 1 means monitored, 2 means camera
         if root.left is None and root.right is None:
             return 1
-        
+
         self.ans = 0
         # with dp?
+
         def dfs(t, pre=None):
             if t is None:
                 return 0
@@ -20,23 +21,19 @@ class Solution:
             # so that when we go up in the recursion there are new leaves
             dfs(t.left, t)
             dfs(t.right, t)
-            
+
             if (not t.left or t.left.val < 0) and (not t.right or t.right.val < 0) and t.val == 0:
                 if pre and pre.val != -2:
                     pre.val = -2
                     self.ans += 1
                     if pre.pre:
-                        pre.pre.val = -1 # val of -1 means cut
+                        pre.pre.val = -1  # val of -1 means cut
                 if not pre and t.val == 0:
                     self.ans += 1
                     t.val = -1
-                
+
         dfs(root)
         print(root)
         return self.ans
-                
-                
-        # min num of camera left
-            
-            
 
+        # min num of camera left

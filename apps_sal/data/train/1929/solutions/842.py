@@ -3,6 +3,7 @@ class TrieNode:
         self.children = collections.defaultdict(TrieNode)
         self.isWord = False
 
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -13,7 +14,7 @@ class StreamChecker:
                 p = p.children[c]
             p.isWord = True
         self.pos = [self.head]
-        
+
     def query(self, letter: str) -> bool:
         tmp = [self.head]
         is_word = False
@@ -30,4 +31,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

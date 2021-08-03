@@ -2,18 +2,18 @@ class Node:
     def __init__(self):
         self.m = {}
         self.end = False
-    
+
     def get(self, c):
         return self.m.get(c)
-    
+
     def put(self, c, node):
         self.m[c] = node
-        
+
 
 class Trie:
     def __init__(self):
         self.root = Node()
-    
+
     def insert(self, word):
         node = self.root
         for c in word[::-1]:
@@ -21,8 +21,8 @@ class Trie:
                 node.put(c, Node())
             node = node.get(c)
         node.end = True
-    
-        
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -42,10 +42,8 @@ class StreamChecker:
                 return False
             node = node.get(c)
         return node.end
-            
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

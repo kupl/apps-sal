@@ -3,7 +3,8 @@ class Node:
         self.children = [None for _ in range(26)]
         self.char = char
         self.parent = parent
-        
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -12,7 +13,7 @@ class StreamChecker:
         self.buffer = deque()
         self.max_size = max([len(word) for word in words])
         self.add(words)
-    
+
     def add(self, words):
         for word in words:
             curr = self.root
@@ -45,4 +46,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

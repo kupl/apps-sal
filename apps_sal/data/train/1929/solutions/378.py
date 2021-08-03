@@ -1,10 +1,13 @@
 from collections import defaultdict
+
+
 def tree():
     return defaultdict(tree)
 
+
 class StreamChecker:
     def __init__(self, words: List[str]):
-        # we store the words in an inverse trie (nexted dictionary) because when we get a new query we would know the last character to match and from that if we move upwards we will know whether we reach the top or not if we do we found our word else we return False  
+        # we store the words in an inverse trie (nexted dictionary) because when we get a new query we would know the last character to match and from that if we move upwards we will know whether we reach the top or not if we do we found our word else we return False
         # to achieve this we need to construct an inverse trie and thus we won't have multiple choices to match we would only have a single choice for each character
         self.trie = defaultdict(tree)
         for word in words:
@@ -13,9 +16,9 @@ class StreamChecker:
                 node = node[char]
             node['*'] = 1
         self.current_list = []
-        
+
 #         self.print_nested(self.trie)
-        
+
 #     def print_nested(self, d, indent=0):
 #         for k, v in d.items():
 #             print ('{}{!r}:'.format(indent * '  ', k))
@@ -29,7 +32,7 @@ class StreamChecker:
         # we first travel down the trie
         match_found = True
         end_found = False
-        self.current_list.insert(0,letter)
+        self.current_list.insert(0, letter)
         i = 0
         node = self.trie
         while i < len(self.current_list):
@@ -41,14 +44,14 @@ class StreamChecker:
             else:
                 match_found = False
                 break
-            i += 1      
+            i += 1
         if '*' in list(node.keys()):
             end_found = True
         # if (not match_found):
         #     self.current_list = [letter]
         return end_found
-    
-    # for the following approach only `6 out of 17 test cases pass and so when we are travelling the stack the time limit exceeds this is because with the stack approach we are searching the words from the begining to the end and we do not know how many characters to match 
+
+    # for the following approach only `6 out of 17 test cases pass and so when we are travelling the stack the time limit exceeds this is because with the stack approach we are searching the words from the begining to the end and we do not know how many characters to match
     '''
     def __init__(self, words: List[str]):
         # we store the words in a trie (nested defaultdictionary)
@@ -98,4 +101,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

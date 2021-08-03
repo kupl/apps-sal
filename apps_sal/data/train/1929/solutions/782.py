@@ -1,5 +1,6 @@
 import collections
 
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -13,7 +14,7 @@ class StreamChecker:
                     ptr[c] = {}
                 ptr = ptr[c]
             ptr['#'] = w
-            
+
     def _find_word(self, k: int) -> bool:
         ptr = self.trie
         for c in list(self.stream)[-k:]:
@@ -30,15 +31,14 @@ class StreamChecker:
         for i, ptr in enumerate(self.prefixes):
             # print(f'  {ptr}')
             if letter in ptr:
-                ptr = ptr[letter]               
+                ptr = ptr[letter]
                 valid_prefixes.append(ptr)
                 if '#' in ptr:
                     found = True
         self.prefixes = valid_prefixes
-        return found        
+        return found
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

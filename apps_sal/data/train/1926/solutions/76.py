@@ -28,4 +28,3 @@ print((s.closestDivisors(8)))
 print((s.closestDivisors(123)))
 print((s.closestDivisors(999)))
 print((s.closestDivisors(170967091)))
-

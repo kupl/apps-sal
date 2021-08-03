@@ -22,4 +22,3 @@ class Solution:
             return [c, d]
         else:
             return [a, b]
-

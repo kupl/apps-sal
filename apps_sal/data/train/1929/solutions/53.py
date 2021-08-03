@@ -22,4 +22,3 @@ class StreamChecker:
                 new_nodes.append(node)
         self.nodes = new_nodes
         return temp
-

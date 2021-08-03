@@ -3,20 +3,22 @@ class Trie:
         self.next_letters = dict()
         self.letter = letter
         self.is_end_word = False
+
     def add_word(self, word, idx):
         if idx == -1:
             self.is_end_word = True
             return
         if word[idx] not in self.next_letters:
             self.next_letters[word[idx]] = Trie(word[idx])
-        self.next_letters[word[idx]].add_word(word, idx-1)
+        self.next_letters[word[idx]].add_word(word, idx - 1)
+
 
 class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.trie = Trie('')
         for w in words:
-            self.trie.add_word(w, len(w)-1)
+            self.trie.add_word(w, len(w) - 1)
         self.history = list()
 
     def query(self, letter: str) -> bool:
@@ -35,4 +37,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

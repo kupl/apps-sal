@@ -8,7 +8,7 @@ class StreamChecker:
             for ch in word[::-1]:
                 node = node.setdefault(ch, {})
             node['end'] = True
-    
+
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
         node = self.trie
@@ -24,4 +24,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -31,9 +31,8 @@ class StreamChecker:
                 return False
 
             point = point[t]
- 
+
         if '#' in point:
             return True
         else:
             return False
-

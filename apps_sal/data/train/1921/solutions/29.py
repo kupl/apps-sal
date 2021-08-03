@@ -15,7 +15,7 @@ class DinnerPlates:
     def pop(self) -> int:
         while self.data and not self.data[-1]:
             self.data.pop()
-        
+
         if self.data:
             if len(self.data) <= self.i:
                 self.i -= 1
@@ -35,4 +35,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

@@ -14,16 +14,9 @@ class Solution:
         for i in range(len(transactions)):
             if(amount[i] > 1000):
                 ret.add(transactions[i])
-            for j in range(i+1, len(transactions)):
+            for j in range(i + 1, len(transactions)):
                 if(name[i] == name[j] and abs(time[i] - time[j]) <= 60 and city[i] != city[j]):
                     ret.add(transactions[i])
                     ret.add(transactions[j])
-                    
-                      
-            
+
         return ret
-
-        
-            
-            
-

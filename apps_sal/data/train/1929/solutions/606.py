@@ -7,20 +7,22 @@ class StreamChecker:
         for w in words:
             p = self.trie
             for c in w[::-1]:
-                if c not in p: p[c] = {}
+                if c not in p:
+                    p[c] = {}
                 p = p[c]
             p['#'] = ''
 
     def query(self, letter: str) -> bool:
-        self.history+=letter
+        self.history += letter
         p = self.trie
         for c in self.history[::-1]:
-            if c not in p: return False
+            if c not in p:
+                return False
             p = p[c]
-            if '#' in p: return True
+            if '#' in p:
+                return True
         return False
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

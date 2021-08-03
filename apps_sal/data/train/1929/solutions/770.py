@@ -1,6 +1,6 @@
 class StreamChecker:
 
-    def __init__(self, words: List[str]):     
+    def __init__(self, words: List[str]):
         self.waitlist = []
         self.trie = dict()
         for word in words:
@@ -23,10 +23,10 @@ class StreamChecker:
         for item in self.waitlist:
             if letter in item:
                 waitlist.append(item[letter])
-                
+
         self.waitlist = waitlist
         return any('#' in item for item in self.waitlist)
-    
+
 #         self.words = defaultdict(str)
 #         self.querying = defaultdict(list)
 #         for word in words:
@@ -35,7 +35,7 @@ class StreamChecker:
 #             else:
 #                 self.words[word[0]] = \"\"
 #         print(self.words)
-            
+
 #     def query(self, letter: str) -> bool:
 #         #need a new flag
 #         self.querying[letter] += self.words[letter]
@@ -51,12 +51,10 @@ class StreamChecker:
 #                 elif len(seq)>1:
 #                     self.querying[seq[0]] += seq[1:]
 #             self.querying[letter] = bucket
-            
+
 #         return False
-        
-        
+
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

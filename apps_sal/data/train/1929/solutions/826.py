@@ -20,10 +20,8 @@ class StreamChecker:
 
         self.wait_list = new_wait
         return any('#' in wait for wait in self.wait_list)
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

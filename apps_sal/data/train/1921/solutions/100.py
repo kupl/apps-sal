@@ -1,14 +1,16 @@
 import heapq
+
+
 class DinnerPlates:
 
     def __init__(self, capacity: int):
-        
+
         self.q = []
         self.c = capacity
         self.h = []
 
     def push(self, val: int) -> None:
-        #print(\"Before Push: q:{}, h:{}\".format(self.q, self.h))
+        # print(\"Before Push: q:{}, h:{}\".format(self.q, self.h))
         if self.h:
             index = heapq.heappop(self.h)
             if index > len(self.q) - 1:
@@ -27,27 +29,27 @@ class DinnerPlates:
                 self.q[-1] += [val]
             else:
                 self.q.append([val])
-        #print(\"after Push: q:{}, h:{}\".format(self.q, self.h))
-                
+        # print(\"after Push: q:{}, h:{}\".format(self.q, self.h))
+
     def pop(self) -> int:
-        #print(\"POP q:{}\".format(self.q))
+        # print(\"POP q:{}\".format(self.q))
         while self.q:
             if self.q[-1]:
                 item = self.q[-1].pop()
                 if not self.q:
                     self.q.pop()
-                #print(\"POP return q:{}, item:{}\".format(self.q, item))
+                # print(\"POP return q:{}, item:{}\".format(self.q, item))
                 return item
             else:
                 self.q.pop()
         return -1
 
     def popAtStack(self, index: int) -> int:
-        
-        #print(\"Index POP: index:{}, q:{}\".format(index, self.q))
+
+        # print(\"Index POP: index:{}, q:{}\".format(index, self.q))
         if index > len(self.q) - 1:
             return -1
-        
+
         if self.q[index]:
             item = self.q[index].pop()
             heapq.heappush(self.h, index)
@@ -60,4 +62,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

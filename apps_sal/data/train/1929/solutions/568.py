@@ -1,14 +1,15 @@
 class TrieNode:
-    
+
     def __init__(self):
         self.children = {}
         self.is_end = False
 
+
 class Trie:
-    
+
     def __init__(self):
         self.root = TrieNode()
-    
+
     def add(self, word):
         curr = self.root
         for ch in word:
@@ -18,6 +19,7 @@ class Trie:
             curr = curr.children[ch]
         curr.is_end = True
 
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -25,7 +27,6 @@ class StreamChecker:
         self.trie = Trie()
         for ch in words:
             self.trie.add(reversed(ch))
-        
 
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
@@ -38,10 +39,8 @@ class StreamChecker:
                 if curr.is_end:
                     return True
         return False
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -30,7 +30,7 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.stream.insert(0, letter)
-        
+
         p = self.trie.root
         for ch in self.stream:
             if p.children[ord(ch) - ord('a')]:

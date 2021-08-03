@@ -4,11 +4,12 @@ class TrieNode:
     def __init__(self) -> None:
         self.children = {}
         self.isWord = False
-    
+
+
 class Trie:
     def __init__(self) -> None:
         self.root = TrieNode()
-    
+
     def insert(self, word: str) -> None:
         current = self.root
         for letter in word:
@@ -16,6 +17,7 @@ class Trie:
                 current.children[letter] = TrieNode()
             current = current.children[letter]
         current.isWord = True
+
 
 class StreamChecker:
     def __init__(self, words: List[str]):
@@ -41,4 +43,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

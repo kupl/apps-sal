@@ -15,7 +15,6 @@ class StreamChecker:
                 d[c]['0'] = 1
             self.queue = []
 
-
     def query(self, letter: str) -> bool:
         self.queue.append(letter)
         d = self.d
@@ -32,4 +31,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

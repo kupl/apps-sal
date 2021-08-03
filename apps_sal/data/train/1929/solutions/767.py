@@ -14,7 +14,7 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         trie, curs = self.trie, self.curs
-        
+
         curs = [cur[letter] for cur in curs if letter in cur]
         if letter in trie:
             curs.append(trie[letter])
@@ -25,4 +25,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

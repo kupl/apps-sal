@@ -6,12 +6,12 @@ class StreamTrie:
         self.mass = 0
         # START WITH EMPTY STRING?
         # self.add('') ??
-        if mychar=='ROOT':
+        if mychar == 'ROOT':
             self.max_len = 0
-        #self.
-    
-    #def checkChar(self, nxtChr):
-            
+        # self.
+
+    # def checkChar(self, nxtChr):
+
     def add(self, word, top_level=True):
         if len(word) == 0:
             self.children['END'] = True
@@ -20,15 +20,15 @@ class StreamTrie:
             c = word[0]
             if not c in self.children:
                 self.children[c] = StreamTrie(c)
-            self.children[c].add(word[1:],top_level=False)
+            self.children[c].add(word[1:], top_level=False)
 
         if top_level:
-            self.max_len = max(self.max_len,len(word))
+            self.max_len = max(self.max_len, len(word))
 
     def get_max_len(self):
         return self.max_len
 
-    def matches(self,word):
+    def matches(self, word):
         if len(word) == 0 and 'END' in self.children:
             return True
         if len(word) > 0 and word[0] in self.children:
@@ -39,30 +39,30 @@ class StreamTrie:
         match_list = []
         first = query_string[0]
         if first in self.children:
-            self.children[first]._match_all(query_string,0,match_list)
+            self.children[first]._match_all(query_string, 0, match_list)
         return match_list
 
-    def _match_all(self,query_string,cur_ind,match_set):
-        #if len(match_set) > 0
+    def _match_all(self, query_string, cur_ind, match_set):
+        # if len(match_set) > 0
         if 'END' in self.children:
-            match_set.append(query_string[:(cur_ind+1)])
-        #if query_string[ind] == self.char:
-        if cur_ind+1 < len(query_string):
-            nxt = query_string[cur_ind+1]
+            match_set.append(query_string[:(cur_ind + 1)])
+        # if query_string[ind] == self.char:
+        if cur_ind + 1 < len(query_string):
+            nxt = query_string[cur_ind + 1]
             if nxt in self.children:
-                self.children[nxt]._match_all(query_string,cur_ind+1,match_set)
+                self.children[nxt]._match_all(query_string, cur_ind + 1, match_set)
         # return
 
     def any_match_from_beginning(self, query_string):
-        #print(query_string)
-        return self.children[query_string[0]]._match_any(query_string,0) if query_string[0] in self.children else False
-    
-    def _match_any(self,query_string,cur_ind):
-        #if len(match_set) > 0
+        # print(query_string)
+        return self.children[query_string[0]]._match_any(query_string, 0) if query_string[0] in self.children else False
+
+    def _match_any(self, query_string, cur_ind):
+        # if len(match_set) > 0
         if 'END' in self.children:
             return True
-        if cur_ind+1 < len(query_string) and query_string[cur_ind+1] in self.children:
-            return self.children[query_string[cur_ind+1]]._match_any(query_string,cur_ind+1)
+        if cur_ind + 1 < len(query_string) and query_string[cur_ind + 1] in self.children:
+            return self.children[query_string[cur_ind + 1]]._match_any(query_string, cur_ind + 1)
         else:
             return False
 
@@ -103,12 +103,10 @@ class StreamChecker:
         self.stream.appendleft(letter)
         if len(self.stream) > self.longest:
             self.stream.pop()
-        #print(self.stream)
+        # print(self.stream)
         return self.trie.any_match_from_beginning(''.join(self.stream))
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

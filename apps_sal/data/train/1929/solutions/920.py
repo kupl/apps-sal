@@ -2,7 +2,7 @@ class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.waitlist = []
-        T = lambda: collections.defaultdict(T)
+        def T(): return collections.defaultdict(T)
         self.trie = T()
         for word in words:
             temp_dict = self.trie
@@ -24,4 +24,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

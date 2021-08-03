@@ -3,6 +3,7 @@ class TrieNode:
         self.children = {}
         self.leaf = False
 
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -34,11 +35,8 @@ class StreamChecker:
             new_leads.append(self.trie.children[letter])
         self.leads = new_leads
         return result
-                
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

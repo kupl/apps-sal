@@ -3,7 +3,6 @@ class StreamChecker:
     def __init__(self, words: List[str]):
         trie = {}
 
-        
         for w in words:
             node = trie
             for c in w:
@@ -13,9 +12,9 @@ class StreamChecker:
                     node['fail'] = trie
                 else:
                     node = node[c]
-                
+
             node['end'] = True
-        
+
         que = [trie[x] for x in trie]
         for node in que:
             for x in node:
@@ -40,10 +39,8 @@ class StreamChecker:
             node = node[x]
         self.node = node
         return 'end' in node
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -1,10 +1,10 @@
 class Trie:
-    
+
     def __init__(self):
         self.dict = {}
         self.leaf = False
-        
-    def addWord(self,word):
+
+    def addWord(self, word):
         newTrie = Trie()
         if word[0] in self.dict:
             newTrie = self.dict[word[0]]
@@ -15,6 +15,7 @@ class Trie:
         else:
             newTrie.addWord(word[1:])
 
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -22,11 +23,11 @@ class StreamChecker:
         self.queryStr = ''
         for word in words:
             self.trie.addWord(word[::-1])
-        
+
     def query(self, letter: str) -> bool:
         self.queryStr += letter
         curTrie = self.trie
-        #print(letter)
+        # print(letter)
         for ch in self.queryStr[::-1]:
             if ch in curTrie.dict:
                 curTrie = curTrie.dict[ch]
@@ -39,4 +40,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -1,7 +1,7 @@
 class StreamChecker:
-    
+
     def __init__(self, words: List[str]):
-        
+
         self.queries = []
         trie = {}
         for word in words:
@@ -12,13 +12,12 @@ class StreamChecker:
                     here[word[i]] = {}
                 here = here[word[i]]
             here['is_word'] = True
-            
-        self.trie = trie    
-                
+
+        self.trie = trie
 
     def query(self, letter: str) -> bool:
         self.queries.append(letter)
-        
+
         here = self.trie
         for i in range(1, len(self.queries) + 1):
             if self.queries[-i] not in list(here.keys()):
@@ -26,9 +25,7 @@ class StreamChecker:
             here = here[self.queries[-i]]
             if 'is_word' in list(here.keys()):
                 return True
-        
-        
-            
+
         # for i in range(1, min(len(self.queries), self.max_len) + 1):
         #     if i in self.vocab.keys():
         #         word = \"\".join(self.queries[-i:])
@@ -40,4 +37,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

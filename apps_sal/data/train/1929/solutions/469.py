@@ -2,12 +2,12 @@ class Trie:
     def __init__(self, words: List[str]):
         self.trie = lambda: collections.defaultdict(self.trie)
         self.root = self.trie()
-        
+
         for w in words:
             self.add(w[::-1])
-    
+
     def add(self, s: str):
-        curr = self.root  
+        curr = self.root
         for c in s:
             curr = curr[c]
         curr['#']
@@ -16,30 +16,30 @@ class Trie:
         curr = self.root
         for i in range(len(s) - 1, -1, -1):
             val = s[i]
-            
-            if '#' in curr: 
+
+            if '#' in curr:
                 return True
-            elif val in curr: 
+            elif val in curr:
                 curr = curr[val]
             else:
                 return False
-            
+
         return '#' in curr
 
-#just use a trie bro
+# just use a trie bro
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.queries = []
         self.trie = Trie(words)
-        
+
     def query(self, letter: str) -> bool:
         self.queries.append(letter)
         return self.trie.find(self.queries)
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -4,10 +4,11 @@ class Node:
         self.nxts = {}
         self.end = False
 
+
 class Trie:
     def __init__(self):
         self.root = Node('')
-    
+
     def _add(self, node, word):
         if word == '':
             node.end = True
@@ -18,7 +19,7 @@ class Trie:
 
     def add(self, word):
         self._add(self.root, word)
-        
+
     def _search(self, node, word):
         if node.end is True:
             return True
@@ -48,4 +49,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -1,17 +1,16 @@
 class StreamChecker:
 
     def __init__(self, words: List[str]):
-        self.words=set(words)
-        self.maxx = len(max(self.words,key=len))
+        self.words = set(words)
+        self.maxx = len(max(self.words, key=len))
         self.tails = set()
         for word in self.words:
             self.tails.add(word[-1])
         self.qs = ''
-    
 
     def query(self, letter: str) -> bool:
-        self.qs +=letter
-        if len(self.qs)>self.maxx:
+        self.qs += letter
+        if len(self.qs) > self.maxx:
             self.qs = self.qs[1:]
         if letter not in self.tails:
             return False
@@ -23,4 +22,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

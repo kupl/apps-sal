@@ -11,7 +11,6 @@ class StreamChecker:
                 cur = cur[c]
             cur['.'] = {}
 
-
     def query(self, letter: str) -> bool:
         if letter in self.trie:
             self.flag.append(self.trie)
@@ -29,4 +28,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

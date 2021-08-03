@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def bstFromPreorder(self, preorder: List[int]) -> TreeNode:
-        # 
+        #
         # minHeap | O(NlogN) | ----- 40 ms (50.65%) / 14.3 MB (5.13%)
         # ------------------------------------------------------------------------------------------------
         if not preorder:
@@ -24,5 +24,5 @@ class Solution:
                 tmp.right = node
             elif not tmp and parents:
                 parents[0][1].left = node
-            heapq.heappush(parents, (num, node))   
+            heapq.heappush(parents, (num, node))
         return root

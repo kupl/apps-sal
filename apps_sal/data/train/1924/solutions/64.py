@@ -13,11 +13,11 @@ class Solution:
             transactionDict[name] = transactionVal
         for i in transactionDict.keys():
             for v in transactionDict[i]:
-                #test if transaction over 1000
+                # test if transaction over 1000
                 if int(v[1]) > 1000:
                     if '{},{},{},{}'.format(i, v[0], v[1], v[2]) not in invalid:
                         invalid.append('{},{},{},{}'.format(i, v[0], v[1], v[2]))
-                #test if any other transaction time within 60 in a different city
+                # test if any other transaction time within 60 in a different city
                 for listd in transactionDict[i]:
                     if listd != v:
                         if abs(int(v[0]) - int(listd[0])) <= 60 and v[2] != listd[2]:

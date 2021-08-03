@@ -44,7 +44,6 @@ class Trie:
         current_dict[Trie._end] = Trie._end
 
 
-
 class StreamChecker:
 
     def __init__(self, words):
@@ -52,5 +51,3 @@ class StreamChecker:
 
     def query(self, letter):
         return(self.Trie.next(letter))
-
-

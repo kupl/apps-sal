@@ -1,8 +1,8 @@
 class Trie():
     def __init__(self):
-        self.children = [None]*26
+        self.children = [None] * 26
         self.endOfWord = False
-        
+
     def insert(self, s):
         curr = self
         for c in s:
@@ -10,7 +10,7 @@ class Trie():
                 curr.children[ord(c) - ord('a')] = Trie()
             curr = curr.children[ord(c) - ord('a')]
         curr.endOfWord = True
-        
+
     def search(self, s):
         curr = self
         for c in s:
@@ -20,7 +20,8 @@ class Trie():
             if curr.endOfWord == True:
                 return True
         return False
-    
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -32,8 +33,7 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
         return self.t.search(self.stream)
-    
+
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

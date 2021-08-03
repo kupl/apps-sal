@@ -10,10 +10,8 @@ class StreamChecker:
                     cur[char] = {}
                 cur = cur[char]
             cur['*'] = True
-        
-                
 
-    def query(self, letter: str) -> bool: 
+    def query(self, letter: str) -> bool:
         self.nodes.append(self.root)
         newNodes = []
         ans = False
@@ -25,11 +23,8 @@ class StreamChecker:
                 newNodes.append(node)
         self.nodes = newNodes
         return ans
-                
-                
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

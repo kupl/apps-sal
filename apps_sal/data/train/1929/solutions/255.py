@@ -1,8 +1,11 @@
 from collections import deque
+
+
 class TrieNode:
     def __init__(self):
         self.children = {}
         self.isEndWord = False
+
 
 class Trie:
     def __init__(self):
@@ -33,10 +36,8 @@ class StreamChecker:
             else:
                 break
         return False
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

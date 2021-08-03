@@ -1,5 +1,6 @@
 import heapq
 
+
 class DinnerPlates:
 
     def __init__(self, capacity: int):
@@ -7,7 +8,7 @@ class DinnerPlates:
         self.stks = []
         self.queue = []
         self.idx2cnt = [0 for _ in range(100000 + 5)]
-        
+
     def _leftmost_idx(self):
         ret = len(self.stks)
         while len(self.queue) > 0:
@@ -18,13 +19,13 @@ class DinnerPlates:
             else:
                 heapq.heappop(self.queue)
         return ret
-    
+
     def _rightmost_idx(self):
         idx = len(self.stks) - 1
         while idx >= 0 and self.idx2cnt[idx] == 0:
             idx -= 1
         return idx
-    
+
     def _pop(self, idx):
         if self.idx2cnt[idx] == 0:
             return -1
@@ -58,4 +59,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

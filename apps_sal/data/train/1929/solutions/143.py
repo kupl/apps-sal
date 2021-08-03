@@ -13,22 +13,23 @@ Approach 2:
 
 from collections import defaultdict
 
+
 class TrieNode:
-    
+
     def __init__(self):
         self.links = dict()
         self.is_word = False
-    
-    
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.trie_root = build_trie(words)
         self.queries = []
-        
+
     def query(self, letter: str) -> bool:
         self.queries.append(letter)
-        
+
         index = -1
         node = self.trie_root
         while node.links:
@@ -42,14 +43,15 @@ class StreamChecker:
             if node.is_word:
                 return True
         return False
-            
+
+
 def build_trie(words):
     root = TrieNode()
     for word in words:
         insert(root, word)
     return root
 
-        
+
 def insert(root, word):
     node = root
     for char in reversed(word):

@@ -9,7 +9,6 @@ class StreamChecker:
         for i in range(1, self.num_end + 1):
             self.ends[i] = set(x[-i:] for x in self.words if len(x) >= i)
         # print(self.ends)
-        
 
     def query(self, letter: str) -> bool:
         self.q += letter
@@ -26,10 +25,8 @@ class StreamChecker:
                 # print(self.q[~i:])
                 return True
         return False
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

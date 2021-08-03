@@ -5,11 +5,11 @@ class StreamChecker:
         for word in words:
             last_letter = word[-1]
             if last_letter not in self.dictionary:
-                self.dictionary[last_letter] = [word]            
+                self.dictionary[last_letter] = [word]
             else:
                 self.dictionary[last_letter].append(word)
-        self.queries =''
-            
+        self.queries = ''
+
     def query(self, letter: str) -> bool:
         self.queries += letter
         if letter not in self.dictionary:
@@ -25,4 +25,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

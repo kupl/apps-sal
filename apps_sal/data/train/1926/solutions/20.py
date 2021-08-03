@@ -1,6 +1,6 @@
 class Solution:
     def divizor(self, num):
-        for i in range( int(math.sqrt(num)), 0, -1):
+        for i in range(int(math.sqrt(num)), 0, -1):
             n1 = num / i
             if n1.is_integer():
                 return [int(n1), int(num / n1)]
@@ -17,4 +17,3 @@ class Solution:
                 diff = abs_diff
                 r = d
         return r
-

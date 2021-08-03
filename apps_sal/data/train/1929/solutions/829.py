@@ -10,7 +10,6 @@ class StreamChecker:
                 node = node[char]
             node['end'] = True
 
-
     def query(self, letter: str) -> bool:
         self.nodes.append(self.trie)
         res = False
@@ -21,5 +20,5 @@ class StreamChecker:
                 if 'end' in node:
                     res = True
                 new_nodes.append(node)
-        self.nodes = new_nodes     
+        self.nodes = new_nodes
         return res

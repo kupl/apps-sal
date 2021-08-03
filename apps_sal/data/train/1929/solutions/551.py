@@ -1,30 +1,33 @@
 class TrieNode:
     def __init__(self):
-        self.endOfWord=False
-        self.children={}
+        self.endOfWord = False
+        self.children = {}
+
+
 class StreamChecker:
     def __init__(self, words: List[str]):
-        self.trie=TrieNode()
-        self.stream=collections.deque()
+        self.trie = TrieNode()
+        self.stream = collections.deque()
         for word in words:
-            node=self.trie
+            node = self.trie
             for c in word[::-1]:
                 if not c in node.children:
-                    childNode=TrieNode()
-                    node.children[c]=childNode
-                node=node.children[c]
-            node.endOfWord=True
-       
+                    childNode = TrieNode()
+                    node.children[c] = childNode
+                node = node.children[c]
+            node.endOfWord = True
+
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
-        node=self.trie
+        node = self.trie
         for c in self.stream:
             if not c in node.children:
                 return False
-            node=node.children[c]
+            node = node.children[c]
             if node.endOfWord:
                 return True
         return node.endOfWord
+
 
 '''
 class StreamChecker:
@@ -55,5 +58,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-
-

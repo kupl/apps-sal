@@ -7,7 +7,6 @@ class DinnerPlates:
         self.capacity = capacity
         self.leftmostset = set([0])
         self.rightmostset = set()
-        
 
     def push(self, val: int) -> None:
         # print(\"leftmost:\", self.leftmost)
@@ -41,7 +40,7 @@ class DinnerPlates:
             self.leftmostset.add(idx)
         # print(self.stack)
         return val
-        
+
     def popAtStack(self, index: int) -> int:
         if index >= len(self.stack) or len(self.stack[index]) == 0:
             return -1
@@ -54,8 +53,6 @@ class DinnerPlates:
             self.leftmostset.add(index)
         # print(self.stack)
         return val
-        
-        
 
 
 # Your DinnerPlates object will be instantiated and called as such:
@@ -63,4 +60,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

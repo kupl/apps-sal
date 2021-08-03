@@ -2,7 +2,7 @@ class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.trie = {}
-        for word in words :
+        for word in words:
             cur = self.trie
             for chrs in word:
                 if chrs not in cur:
@@ -28,4 +28,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

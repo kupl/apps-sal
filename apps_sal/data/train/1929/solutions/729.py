@@ -18,12 +18,8 @@ class StreamChecker:
         if letter in self.trie:
             self.l.append(self.trie[letter])
         return any(['$' in i for i in self.l])
-        
-                
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

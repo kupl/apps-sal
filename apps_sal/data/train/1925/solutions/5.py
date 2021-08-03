@@ -11,8 +11,6 @@ class Solution:
         inorder = sorted(preorder)
         root = TreeNode(preorder[0])
         leftLen = inorder.index(root.val)
-        root.left = self.bstFromPreorder(preorder[1: 1+leftLen])
-        root.right = self.bstFromPreorder(preorder[1+leftLen:])
+        root.left = self.bstFromPreorder(preorder[1: 1 + leftLen])
+        root.right = self.bstFromPreorder(preorder[1 + leftLen:])
         return root
-        
-

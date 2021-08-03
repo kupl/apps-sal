@@ -24,7 +24,7 @@ class StreamChecker:
         self.trie = Trie()
         for word in words:
             self.trie.add(reversed(word))
-        self.max_len = max(words,key=lambda x:len(x))    
+        self.max_len = max(words, key=lambda x: len(x))
         self.buf = []
 
     def query(self, letter):

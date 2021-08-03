@@ -1,4 +1,6 @@
 import heapq
+
+
 class DinnerPlates:
 
     def __init__(self, capacity: int):
@@ -20,7 +22,6 @@ class DinnerPlates:
             if self.capacity > 1:
                 heapq.heappush(self.vacancy, pos)
         self.maxidx = max(self.maxidx, pos)
-
 
     def pop(self) -> int:
         rangemax = self.maxidx
@@ -49,4 +50,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-
