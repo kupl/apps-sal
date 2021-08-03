@@ -4,7 +4,8 @@ num = input()
 smallest = 1000000
 points = []
 for i, c in enumerate(num):
-    if i == 0: continue
+    if i == 0:
+        continue
     if (c != '0'):
         if max(i, l - i) < smallest:
             smallest = max(i, l - i)

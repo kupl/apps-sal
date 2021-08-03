@@ -44,9 +44,13 @@ def is_in_diag(field):
 
 field = [input() for _ in range(10)]
 
-if is_in_row(field): return
-if is_in_col(field): return
-if is_in_diag(field): return
-if is_in_diag(list([x[::-1] for x in field])): return
+if is_in_row(field):
+    return
+if is_in_col(field):
+    return
+if is_in_diag(field):
+    return
+if is_in_diag(list([x[::-1] for x in field])):
+    return
 
 print('NO')

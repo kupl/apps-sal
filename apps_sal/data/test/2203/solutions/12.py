@@ -9,5 +9,7 @@ l = 0
 d = sorted(d)
 for (a, x), (b, _) in zip(d, d[1:]):
     s += x
-    if a != b and s == 0: q = a; l += b - a
+    if a != b and s == 0:
+        q = a
+        l += b - a
 print(("Game cheated!", q, "Data not sufficient!")[min(l, 2)])

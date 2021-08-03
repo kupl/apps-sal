@@ -24,7 +24,7 @@ for i in range(0, n):
             tmp = count[j] * j
             if(tmp >= diff):
                 k += (diff + j - 1) // j
-                break;
+                break
             k += count[j]
             diff -= tmp
     print(k, end=" ")

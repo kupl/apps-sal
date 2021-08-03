@@ -7,16 +7,16 @@ Phone: 01760446942
 Email: khairul.basar93@gmail.com
 """
 
-n = int(input());
-arr = list(map(int, input().split()));
-arr = sorted(arr);
+n = int(input())
+arr = list(map(int, input().split()))
+arr = sorted(arr)
 
-minimum = int(10000000000);
+minimum = int(10000000000)
 for i in range(n - 1):
     if(arr[i + 1] - arr[i] < minimum):
-        minimum = arr[i + 1] - arr[i];
-count = 0;
+        minimum = arr[i + 1] - arr[i]
+count = 0
 for i in range(n - 1):
     if(arr[i + 1] - arr[i] == minimum):
-        count += 1;
-print(minimum, count);
+        count += 1
+print(minimum, count)

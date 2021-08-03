@@ -1,4 +1,4 @@
-corr = lambda i, j: 0 <= i < 10 and 0 <= j < 10
+def corr(i, j): return 0 <= i < 10 and 0 <= j < 10
 
 
 def can(b):
@@ -24,7 +24,8 @@ def solve():
             if b[i][j] == '.':
                 temp = b[i][j]
                 b[i][j] = 'X'
-                if can(b): return 1
+                if can(b):
+                    return 1
                 b[i][j] = temp
     return 0
 

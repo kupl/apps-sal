@@ -10,7 +10,7 @@ for i in range(int(l / 2 + 1), l):
     n1 = int(s[:i])
     n2 = int(s[i:])
 
-    mi = min(mi, n1 + n2);
+    mi = min(mi, n1 + n2)
     c += 1
     if(c >= 2):
         break
@@ -22,7 +22,7 @@ for i in range(int(l / 2), 0, -1):
     n1 = int(s[:i])
     n2 = int(s[i:])
 
-    mi = min(mi, n1 + n2);
+    mi = min(mi, n1 + n2)
     break
     c += 1
     if(c >= 2):

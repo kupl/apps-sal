@@ -6,24 +6,36 @@ def win():
         for j in range(10):
             ok = True
             for k in range(5):
-                if j + k > 9: ok = False
-                elif s[i][j + k] != 'X': ok = False
-            if ok: return True
+                if j + k > 9:
+                    ok = False
+                elif s[i][j + k] != 'X':
+                    ok = False
+            if ok:
+                return True
             ok = True
             for k in range(5):
-                if i + k > 9: ok = False
-                elif s[i + k][j] != 'X': ok = False
-            if ok: return True
+                if i + k > 9:
+                    ok = False
+                elif s[i + k][j] != 'X':
+                    ok = False
+            if ok:
+                return True
             ok = True
             for k in range(5):
-                if j + k > 9 or i + k > 9: ok = False
-                elif s[i + k][j + k] != 'X': ok = False
-            if ok: return True
+                if j + k > 9 or i + k > 9:
+                    ok = False
+                elif s[i + k][j + k] != 'X':
+                    ok = False
+            if ok:
+                return True
             ok = True
             for k in range(5):
-                if i - k < 0 or j + k > 9: ok = False
-                elif s[i - k][j + k] != 'X': ok = False
-            if ok: return True
+                if i - k < 0 or j + k > 9:
+                    ok = False
+                elif s[i - k][j + k] != 'X':
+                    ok = False
+            if ok:
+                return True
     return False
 
 

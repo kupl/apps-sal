@@ -1,5 +1,6 @@
 def bin_search(A, val):
-    l = 0; flag = 0
+    l = 0
+    flag = 0
     r = len(arr) - 1
     while l < r:
         #print(l, r)

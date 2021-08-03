@@ -6,8 +6,10 @@ for i in range(N):
     curr = 2 * A[i]
     while x < y:
         sums = A[x] + A[y]
-        if sums < curr: x += 1
-        elif sums > curr: y -= 1
+        if sums < curr:
+            x += 1
+        elif sums > curr:
+            y -= 1
         else:
             rets += 1
             break

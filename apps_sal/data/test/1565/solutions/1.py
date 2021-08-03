@@ -4,7 +4,9 @@ import math
 def f(R):
     if R == 0:
         return 0
-    F = 0; S = 0; cur = 1
+    F = 0
+    S = 0
+    cur = 1
     for i in range(150):
         t = min(cur, R - F - S)
         #print(str(i)+' '+str(F)+' '+str(S)+' '+str(t))

@@ -4,7 +4,8 @@ n = input()
 ind = []
 
 for i in range(1, l):
-    if n[i] == '0': continue
+    if n[i] == '0':
+        continue
     ind.append((abs(i - (l / 2)), i))
 
 ind.sort()

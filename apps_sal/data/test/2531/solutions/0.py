@@ -1,9 +1,11 @@
 l = []
 for _ in range(int(input())):
     l.append(int(input()))
-avg = 0; l.sort()
+avg = 0
+l.sort()
 for i in range(0, len(l)):
-    j = 0; n = len(l) - 1
+    j = 0
+    n = len(l) - 1
     while j < n:
         s = l[j] + l[n]
         if s > 2 * l[i]:
@@ -11,5 +13,6 @@ for i in range(0, len(l)):
         elif s < 2 * l[i]:
             j += 1
         else:
-            avg += 1; break
+            avg += 1
+            break
 print(avg)

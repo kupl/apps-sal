@@ -14,7 +14,8 @@ def avv(l, s, n):
 l = []
 for _ in range(int(input())):
     l.append(int(input()))
-avg = 0; l.sort()
+avg = 0
+l.sort()
 for i in range(len(l)):
     if avv(l, 2 * l[i], len(l) - 1):
         avg += 1

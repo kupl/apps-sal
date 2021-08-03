@@ -17,7 +17,7 @@ def cal(pos):
 
 mid_L = (n + 1) // 2
 mid_R = n // 2
-sum = -1;
+sum = -1
 while(k[mid_L] == k[mid_R] == '0'):
     mid_L -= 1
     mid_R += 1

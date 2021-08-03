@@ -1,7 +1,7 @@
 n = int(input())
 a = input()
 l = (n - 1) // 2
-r = n // 2;
+r = n // 2
 while(a[l] == '0' and a[r] == '0'):
     l -= 1
     r += 1
