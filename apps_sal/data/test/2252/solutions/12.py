@@ -1,5 +1,5 @@
 def main():
-    R = lambda: map(int, input().split())
+    def R(): return map(int, input().split())
     n, m = R()
     p = [0] + list(R())
     for _ in range(m):

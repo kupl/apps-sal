@@ -1,6 +1,6 @@
 def main():
     import sys
-    input = lambda: sys.stdin.readline().rstrip("\r\n")
+    def input(): return sys.stdin.readline().rstrip("\r\n")
     mod = 10**9 + 7
 
     ans = []

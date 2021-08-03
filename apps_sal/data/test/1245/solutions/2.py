@@ -7,7 +7,8 @@ try:
         while d < l:
             d += len(ans[-1])
             a += ans.pop()
-        if d > r: raise IndexError
+        if d > r:
+            raise IndexError
         a += ")"
         ans.append(a)
 except IndexError:

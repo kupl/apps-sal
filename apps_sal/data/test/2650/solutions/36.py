@@ -26,7 +26,8 @@ def printl(li): _ = print(*li, sep="\n") if li else None
 
 def argsort(s, return_sorted=False):
     inds = sorted(range(len(s)), key=lambda k: s[k])
-    if return_sorted: return inds, [s[i] for i in inds]
+    if return_sorted:
+        return inds, [s[i] for i in inds]
     return inds
 
 

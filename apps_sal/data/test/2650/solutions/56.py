@@ -18,7 +18,8 @@ for i in range(N):
     ST[i + 1] = (A, B)
 
 for i in range(2 * 10**5 + 1):
-    if kid_Add[i]: heapq.heappush(max_Add, -1 * kid_Add[i][0])
+    if kid_Add[i]:
+        heapq.heappush(max_Add, -1 * kid_Add[i][0])
 
 
 def deleteHeap(x, y):
@@ -41,10 +42,12 @@ for j in range(Q):
 
     if Ne_S > -1 * s:
         heapq.heappush(max_Add, s)
-        if Ne_S != 0: heapq.heappush(max_Del, -1 * Ne_S)
+        if Ne_S != 0:
+            heapq.heappush(max_Del, -1 * Ne_S)
     if Ol_S == -1 * s:
         heapq.heappush(max_Del, s)
-        if kid_Add[t]: heapq.heappush(max_Add, -1 * kid_Add[t][0])
+        if kid_Add[t]:
+            heapq.heappush(max_Add, -1 * kid_Add[t][0])
 
     deleteHeap(max_Add, max_Del)
     print(max_Add[0])

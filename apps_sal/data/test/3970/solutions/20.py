@@ -3,7 +3,9 @@
 # from functools import *
 # from collections import Set
 
-I = lambda: list(map(int, input().split()))
+def I(): return list(map(int, input().split()))
+
+
 n, k = I()
 a = sorted(I())
 b = set(a)

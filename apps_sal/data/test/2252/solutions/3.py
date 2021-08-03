@@ -23,8 +23,10 @@ def main():
             if p[j] < val:
                 smaller += 1
 
-        if smaller == x - l: stdout.write('Yes' + '\n')
-        else: stdout.write('No' + '\n')
+        if smaller == x - l:
+            stdout.write('Yes' + '\n')
+        else:
+            stdout.write('No' + '\n')
 
 
 def __starting_point():

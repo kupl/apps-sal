@@ -68,10 +68,12 @@ for q in range(Q):
 
     if len(entop[old_en]) > 0:
         entop_old0 = entop[old_en][0]
-    else: entop_old0 = 0
+    else:
+        entop_old0 = 0
     if len(entop[new_en]) > 0:
         entop_new0 = entop[new_en][0]
-    else: entop_new0 = 0
+    else:
+        entop_new0 = 0
 
     updateEn(new_en)
     updateEn(old_en)
@@ -97,17 +99,23 @@ for q in range(Q):
 
     if len(entop[old_en]) > 0:
         entop_old1 = entop[old_en][0]
-    else: entop_old1 = 0
+    else:
+        entop_old1 = 0
     if entop_old0 != entop_old1:  # changed?
-        if entop_old0 != 0: heapq.heappush(rmvAllList, -entop_old0)
-        if entop_old1 != 0: heapq.heappush(addAllList, -entop_old1)
+        if entop_old0 != 0:
+            heapq.heappush(rmvAllList, -entop_old0)
+        if entop_old1 != 0:
+            heapq.heappush(addAllList, -entop_old1)
 
     if len(entop[new_en]) > 0:
         entop_new1 = entop[new_en][0]
-    else: entop_new1 = 0
+    else:
+        entop_new1 = 0
     if entop_new0 != entop_new1:  # changed?
-        if entop_new0 != 0: heapq.heappush(rmvAllList, -entop_new0)
-        if entop_new1 != 0: heapq.heappush(addAllList, -entop_new1)
+        if entop_new0 != 0:
+            heapq.heappush(rmvAllList, -entop_new0)
+        if entop_new1 != 0:
+            heapq.heappush(addAllList, -entop_new1)
 
     # is it smaller than top of alltop?
     while len(addAllList) > 0:

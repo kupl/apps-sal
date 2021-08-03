@@ -1,11 +1,16 @@
 import heapq
 N, Q = list(map(int, input().split()))
-A = [0 for i in range(N)]; B = [0 for i in range(N)]
-C = [0 for i in range(Q)]; D = [0 for i in range(Q)]
+A = [0 for i in range(N)]
+B = [0 for i in range(N)]
+C = [0 for i in range(Q)]
+D = [0 for i in range(Q)]
 for i in range(N):
-    A[i], B[i] = list(map(int, input().split())); B[i] -= 1
+    A[i], B[i] = list(map(int, input().split()))
+    B[i] -= 1
 for i in range(Q):
-    C[i], D[i] = list(map(int, input().split())); C[i] -= 1; D[i] -= 1
+    C[i], D[i] = list(map(int, input().split()))
+    C[i] -= 1
+    D[i] -= 1
 #print([(A[i],B[i]) for i in range(N)])
 #print([(C[i],D[i]) for i in range(Q)])
 nowbelongs = [B[i] for i in range(N)]

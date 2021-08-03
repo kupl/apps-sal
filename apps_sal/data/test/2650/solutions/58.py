@@ -22,7 +22,8 @@ def binary_search(arr, operator='max'):
     dep = 0
     while True:
         _arr = dic[dep]
-        if len(_arr) == 1: break
+        if len(_arr) == 1:
+            break
         dic[dep + 1] = []
         for i in range(0, len(_arr), 2):
             if i == len(_arr) - 1:

@@ -1,4 +1,5 @@
-arri = lambda: [int(s) for s in input().split()]
+def arri(): return [int(s) for s in input().split()]
+
 
 n, m = arri()
 p = arri()

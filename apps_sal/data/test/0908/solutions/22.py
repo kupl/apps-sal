@@ -26,7 +26,7 @@ def main():
                 else:
                     nxt_hi_c = hi_c + memo[-1][HI_C]
             else:
-                return -1;
+                return -1
             if lo >= memo[-1][LO_S]:
                 nxt_lo = lo
                 if lo < memo[-1][HI_S] or memo[-1][LO_C] <= memo[-1][HI_C]:

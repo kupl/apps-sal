@@ -1,9 +1,10 @@
 from heapq import heappop, heappush
 
-encode_kindy = lambda x, y: -((x << 18) + y)
-decode_kindy = lambda x: (-x >> 18, -x & ((1 << 18) - 1))
-encode_smarts = lambda x, y, z: ((x << 36) + (y << 18) + z)
-decode_smarts_rate = lambda x: x >> 36
+
+def encode_kindy(x, y): return -((x << 18) + y)
+def decode_kindy(x): return (-x >> 18, -x & ((1 << 18) - 1))
+def encode_smarts(x, y, z): return ((x << 36) + (y << 18) + z)
+def decode_smarts_rate(x): return x >> 36
 
 
 class DeletableHeapq:

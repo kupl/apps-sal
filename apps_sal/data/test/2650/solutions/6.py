@@ -2,10 +2,12 @@ import sys
 import heapq as hq
 readline = sys.stdin.readline
 
-ns = lambda: readline().rstrip()
-ni = lambda: int(readline().rstrip())
-nm = lambda: list(map(int, readline().split()))
-nl = lambda: list(map(int, readline().split()))
+
+def ns(): return readline().rstrip()
+def ni(): return int(readline().rstrip())
+def nm(): return list(map(int, readline().split()))
+def nl(): return list(map(int, readline().split()))
+
 
 n, q = nm()
 m = 2 * 10**5 + 5

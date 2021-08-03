@@ -7,5 +7,7 @@ for _ in range(m):
     x -= 1
     t = p[x]
     a = sum(map(lambda s: s < t, p[l:r + 1]))
-    if a == x - l: print("Yes")
-    else: print("No")
+    if a == x - l:
+        print("Yes")
+    else:
+        print("No")
