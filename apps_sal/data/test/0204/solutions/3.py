@@ -8,4 +8,3 @@ x //= k
 y //= k
 
 print(min(a // x, b // y))
-

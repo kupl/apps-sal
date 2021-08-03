@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 N, Q = list(map(int, input().split()))
@@ -16,5 +16,3 @@ for i in range(1, N):
 
 for l, r in lr:
     print((s[r - 1] - s[l - 1]))
-    
-

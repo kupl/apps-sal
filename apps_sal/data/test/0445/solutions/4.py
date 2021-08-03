@@ -1,14 +1,15 @@
 def primes_upto(limit):
-    is_prime = [False] * 2 + [True] * (limit - 1) # remove odd numbers
-    for n in range(int(limit**0.5 + 1.5)): # stop at ``sqrt(limit)``
+    is_prime = [False] * 2 + [True] * (limit - 1)  # remove odd numbers
+    for n in range(int(limit**0.5 + 1.5)):  # stop at ``sqrt(limit)``
         if is_prime[n]:
-            for i in range(n*n, limit+1, n):
+            for i in range(n * n, limit + 1, n):
                 is_prime[i] = False
     return [i for i, prime in enumerate(is_prime) if prime]
 
-check = set(primes_upto(2*10**6 + 500))
+
+check = set(primes_upto(2 * 10**6 + 500))
 n = int(input())
-arr = list(map(int,input().split()))
+arr = list(map(int, input().split()))
 one_present = False
 cnt_ones = 0
 for i in arr:
@@ -16,7 +17,7 @@ for i in arr:
         one_present = True
         cnt_ones += 1
 
-num1,num2,prime = 0,0,0
+num1, num2, prime = 0, 0, 0
 for i in range(n):
     for j in range(n):
         if one_present:
@@ -49,12 +50,12 @@ if one_present:
             if num1 == 0:
                 print(cnt_ones)
                 for i in range(cnt_ones):
-                    print(1, end= ' ')
+                    print(1, end=' ')
             else:
                 print(cnt_ones + 1)
                 for i in range(cnt_ones):
                     print(1, end=' ')
-                print(num1, end= ' ')
+                print(num1, end=' ')
         else:
             print(cnt_ones + 2)
             for i in range(cnt_ones):
@@ -68,7 +69,7 @@ if one_present:
                 print(1)
             else:
                 print(2)
-                print('1 '+str(num1))
+                print('1 ' + str(num1))
         else:
             print(2)
             print(str(num1) + ' ' + str(num2))
@@ -83,5 +84,3 @@ else:
     else:
         print(2)
         print(str(num1) + ' ' + str(num2))
-
-

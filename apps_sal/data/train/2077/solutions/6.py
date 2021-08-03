@@ -4,10 +4,12 @@ def find(u):
         par[u] = find(par[u])
     return par[u]
 
+
 def union(u, v):
     u = find(u)
     v = find(v)
     par[u] = v
+
 
 n, a, b = map(int, input().split())
 p = list(map(int, input().split()))

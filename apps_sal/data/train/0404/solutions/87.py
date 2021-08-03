@@ -2,7 +2,7 @@ class Solution:
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
         l_A = len(A)
 
-        memo = { (l_A, 0) : 0 }
+        memo = {(l_A, 0): 0}
 
         def dfs(idx, rem):
 
@@ -24,7 +24,7 @@ class Solution:
                 avg = sum_so_far / (i - idx + 1)
                 best = max(best, avg + dfs(i + 1, rem - 1))
 
-            memo[ (idx, rem) ] = best
+            memo[(idx, rem)] = best
             return best
 
         return dfs(0, K)

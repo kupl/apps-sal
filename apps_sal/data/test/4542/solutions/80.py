@@ -6,4 +6,3 @@ for i in range(1, len(s)):
         ans += 1
     prev = s[i]
 print(ans)
-

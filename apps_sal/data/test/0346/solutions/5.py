@@ -21,4 +21,3 @@ for m in ms:
         points += points
 
 print(points)
-

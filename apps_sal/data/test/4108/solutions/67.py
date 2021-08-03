@@ -1,9 +1,9 @@
 import sys
- 
+
 input = sys.stdin.readline
 S = input().strip()
 T = input().strip()
- 
+
 # S -> T
 index_s = {}
 # T -> S
@@ -22,5 +22,5 @@ for i in range(len(S)):
             return
     else:
         index_s[S[i]] = T[i]
- 
+
 print("Yes")

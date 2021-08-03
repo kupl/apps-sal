@@ -25,4 +25,3 @@ else:
     data.append('1')
 data = ' '.join(data).split()
 print(len(data), ' '.join(data))
-

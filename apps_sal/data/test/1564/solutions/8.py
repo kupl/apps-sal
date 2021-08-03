@@ -18,9 +18,9 @@ if (a_b % 2 == b_a % 2):
     ans += 2 * (a_b % 2)
     print(ans)
     for i in range(1, len(ab), 2):
-        print(ab[i - 1] + 1, ab[i] +1)
+        print(ab[i - 1] + 1, ab[i] + 1)
     for i in range(1, len(ba), 2):
-        print(ba[i - 1] + 1, ba[i] +1)
+        print(ba[i - 1] + 1, ba[i] + 1)
     if a_b % 2 != 0:
         print(ab[-1] + 1, ab[-1] + 1)
         print(ab[-1] + 1, ba[-1] + 1)

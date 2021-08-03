@@ -10,8 +10,8 @@ class Solution:
         if taps[0][0] != 0:
             return -1
         stack = [[taps[0][0], abs(taps[0][1])]]
-        
-        #print(taps)
+
+        # print(taps)
 
         for t in taps[1:]:
             if stack[-1][1] == n:
@@ -23,11 +23,10 @@ class Solution:
                 return - 1
             if len(stack) == 1:
                 stack.append([l, r])
-            else:    
+            else:
                 if l <= stack[-2][1]:
                     stack.pop()
                 stack.append([l, r])
 
-        #print(stack)
+        # print(stack)
         return len(stack)
-

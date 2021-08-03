@@ -7,6 +7,6 @@ def f(n):
             k += 1
             n //= i
         if k != 0:
-            res *= k * i**(k-1)
+            res *= k * i**(k - 1)
         i += 1
     return res

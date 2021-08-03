@@ -6,7 +6,6 @@ S = S.replace("dreamer", "")
 S = S.replace("dream", "")
 
 if S == "":
-	print("YES")
+    print("YES")
 else:
-	print("NO")
-
+    print("NO")

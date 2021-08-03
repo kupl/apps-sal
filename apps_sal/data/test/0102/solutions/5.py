@@ -19,4 +19,3 @@ elif n % 10:
     print('%s-%s' % (p[int(n / 10)], l[n % 10]))
 else:
     print(p[int(n / 10)])
-

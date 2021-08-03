@@ -1,5 +1,6 @@
-import sys, math
-n,m = list(map(int, input().split()))
+import sys
+import math
+n, m = list(map(int, input().split()))
 ctr = 1
 z = list(map(int, input().split()))
 for i in range(1, n):
@@ -8,5 +9,3 @@ for i in range(1, n):
     else:
         ctr = 1
 print(ctr)
-    
-

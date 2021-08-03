@@ -9,8 +9,5 @@ def find_missing_number(sq):
         arr.sort()
         for i in range(0, len(arr)):
             if arr[i] != i + 1:
-                return i + 1 
+                return i + 1
         return 0
-    
-    
-

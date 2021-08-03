@@ -26,4 +26,3 @@ for i in range(1, 2 ** N):
     chmax(i, As[i])
     ans = max(ans, (dp[0][i] + dp[1][i]) >> 20)
     print(ans)
-

@@ -46,4 +46,3 @@ while hq:
         heapq.heappush(hq, (dp_next_value, to, remain_silver))
 
 print(*[min(d) for d in dp[1:]], sep="\n")
-

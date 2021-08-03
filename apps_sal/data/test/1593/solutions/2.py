@@ -18,5 +18,3 @@ else:
 
     x, y, _ = cities[i - 1]
     print(math.sqrt(x ** 2 + y ** 2))
-
-

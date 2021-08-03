@@ -22,4 +22,3 @@ if z == 0:
 
 else:
     print("Yes")
-

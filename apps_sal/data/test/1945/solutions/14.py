@@ -12,4 +12,3 @@ for q in range(int(input())):
 print(len(queries))
 for elem in queries:
     print(elem[0], elem[-1])
-

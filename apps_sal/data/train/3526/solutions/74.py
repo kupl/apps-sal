@@ -5,6 +5,6 @@ def any_arrows(arrows):
         for i in arrows:
             if not 'damaged' in i:
                 return True
-            elif i['damaged']==False:
+            elif i['damaged'] == False:
                 return True
         return False

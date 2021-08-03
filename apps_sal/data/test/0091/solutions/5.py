@@ -18,4 +18,3 @@ for case_num in range(t):
             ok = False
             break
     print("YES" if ok else "NO")
-

@@ -9,6 +9,5 @@ def vowel_indices(word):
             sum = sum + 1
         else:
             sum = sum + 1
-            
-    return l
 
+    return l

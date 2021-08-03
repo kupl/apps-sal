@@ -9,7 +9,7 @@ for i in range(m):
 S = [0] * (k + 1)
 for i in range(k):
     S[i] = cost[i] + S[i - 1]
-    cost[i] += cost[i - 1]    
+    cost[i] += cost[i - 1]
     for j in range(i + 1):
         S[i] = min(S[i], S[j - 1] + cost[i] - cost[j - 1 + discount[i - j]])
 print(S[k - 1])

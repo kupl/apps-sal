@@ -1,4 +1,4 @@
-n , k = map(int, input().split())
+n, k = map(int, input().split())
 res = 0
 while k % 2 == 0:
     k /= 2

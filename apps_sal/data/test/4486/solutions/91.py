@@ -8,4 +8,3 @@ for i in S:
     count += 1
 
 print(str_odd)
-

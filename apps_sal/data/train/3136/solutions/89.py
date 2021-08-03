@@ -7,6 +7,3 @@ def people_with_age_drink(age):
         return 'drink coke'
     if age < 14:
         return 'drink toddy'
-
-    
-

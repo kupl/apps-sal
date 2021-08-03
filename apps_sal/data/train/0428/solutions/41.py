@@ -35,7 +35,7 @@ class Solution:
                         continue
                 elif grid[next_x][next_y].islower():
                     next_keys = curr_keys | (1 << (ord(grid[next_x][next_y]) - ord('a')))
-                else: # the next location is @ or .
+                else:  # the next location is @ or .
                     next_keys = curr_keys
 
                 if (next_keys, next_x, next_y) in visited:

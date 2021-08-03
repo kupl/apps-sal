@@ -1,6 +1,6 @@
 n = int(input())
-cards = list(map(int,input().split()))
-cards = sorted(cards,reverse=True)
+cards = list(map(int, input().split()))
+cards = sorted(cards, reverse=True)
 alice = bob = 0
 for i in cards[::2]:
     alice += i

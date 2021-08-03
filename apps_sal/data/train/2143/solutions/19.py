@@ -57,4 +57,3 @@ for i in range(len(diamond)):
     if diamond[r][1] <= p and r > i:
         res3 = max(res3, diamond[i][0] + prefd[r])
 print(max(res1, res2, res3))
-

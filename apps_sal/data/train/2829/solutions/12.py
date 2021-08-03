@@ -1,5 +1,6 @@
 from typing import List
 
+
 def array_madness(a: List[int], b: List[int]) -> bool:
     """
     Return `true` if the sum of the squares of each element in `a` 

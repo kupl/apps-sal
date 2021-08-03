@@ -1,8 +1,11 @@
-import sys, math
+import sys
+import math
 from heapq import heappush, heappop
 
 readline = sys.stdin.readline
-mr = lambda:map(int,readline().split())
+def mr(): return map(int, readline().split())
+
+
 n, k = mr()
 tmp = list(mr())
 a = int(readline())
@@ -13,7 +16,7 @@ buyIndexes = []
 energy = 0
 ans = 0
 for i in range(n):
-    heappush(buyIndexes,cost[i])
+    heappush(buyIndexes, cost[i])
     if energy < tmp[i]:
         ordered = []
         while energy < tmp[i]:

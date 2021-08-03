@@ -26,4 +26,3 @@ while a_list:
     length_sequence += 1
 print(length_sequence)
 print("".join(operations))
-

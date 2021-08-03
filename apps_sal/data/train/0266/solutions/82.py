@@ -15,12 +15,10 @@ class Solution:
 
         for i in range(len(left)):
             left[i] = getLength(string, left_unique, i)
-            right[len(right)-1-i] = getLength(reversed_string, right_unique, i)
+            right[len(right) - 1 - i] = getLength(reversed_string, right_unique, i)
 
         good_splits = 0
-        for i in range(len(left)-1):
-            if right[i+1] == left[i]:
+        for i in range(len(left) - 1):
+            if right[i + 1] == left[i]:
                 good_splits += 1
         return good_splits
-
-

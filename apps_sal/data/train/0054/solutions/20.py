@@ -5,7 +5,10 @@ for _ in range(int(input())):
     x = 0
     ans = 'NO'
     for k in num:
-        if k > 2048: continue
-        else: x += k
-        if x == 2048: ans = 'YES'
+        if k > 2048:
+            continue
+        else:
+            x += k
+        if x == 2048:
+            ans = 'YES'
     print(ans)

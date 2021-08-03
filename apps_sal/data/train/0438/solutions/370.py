@@ -13,7 +13,7 @@ class Solution:
             right[a] = a
             if a - 1 > 0 and v[a - 1]:
                 mp[right[a] - left[a] + 1] -= 1
-                mp[right[a-1] - left[a-1] + 1] -= 1
+                mp[right[a - 1] - left[a - 1] + 1] -= 1
                 ll = left[a - 1]
                 rr = right[a]
                 left[ll] = left[rr] = ll
@@ -21,15 +21,13 @@ class Solution:
                 mp[rr - ll + 1] += 1
             if a + 1 <= n and v[a + 1]:
                 mp[right[a] - left[a] + 1] -= 1
-                mp[right[a+1] - left[a+1] + 1] -= 1
+                mp[right[a + 1] - left[a + 1] + 1] -= 1
                 ll = left[a]
-                rr = right[a+1]
+                rr = right[a + 1]
                 left[ll] = left[rr] = ll
                 right[rr] = right[ll] = rr
                 mp[rr - ll + 1] += 1
-                
+
             if mp[m] != 0:
                 res = i + 1
         return res
-            
-

@@ -1,5 +1,6 @@
 import re
 
+
 def get_issuer(number):
     num = str(number)
     if bool(re.match(r'^3[4|7]\d{13}$', num)):

@@ -23,6 +23,7 @@ def prime_factorize(n):
         primes.append([n, 1])
     return primes
 
+
 N = int(input())
 prime_list = prime_factorize(N)
 ans = 0

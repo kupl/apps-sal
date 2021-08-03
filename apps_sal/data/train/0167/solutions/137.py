@@ -4,4 +4,5 @@ class Solution:
         for m in range(1, N + 1):
             for k in range(1, K + 1):
                 memo[m][k] = memo[m - 1][k - 1] + 1 + memo[m - 1][k]
-                if memo[m][k] >= N: return m 
+                if memo[m][k] >= N:
+                    return m

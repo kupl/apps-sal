@@ -68,9 +68,6 @@
 # print('d =', d)
 
 
-
-
-
 # import time
 # import requests
 #
@@ -135,4 +132,3 @@ while start + k - 1 < len(s):
     start += 1
 
 print('NO')
-

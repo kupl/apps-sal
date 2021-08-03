@@ -1,11 +1,13 @@
-def reader(contest):    
+def reader(contest):
     inp = input
     if not contest:
         fin = open("in", "r")
-        inp = lambda: fin.readline()[:-1]
-    read = lambda: tuple(map(int, inp().split()))
+        def inp(): return fin.readline()[:-1]
+
+    def read(): return tuple(map(int, inp().split()))
     return inp, read
-    
+
+
 inp, read = reader(True)
 
 n = read()[0]
@@ -22,4 +24,3 @@ for i in range(1, n, 2):
 l1ld2 = len(l1) // 2
 print(len(l1) + len(l2))
 print(*(l1[:l1ld2] + l2 + l1[l1ld2:]))
-

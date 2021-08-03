@@ -43,4 +43,3 @@ for v in range(n):
         if dt[u] + ds[v] + 1 >= short and ds[u] + dt[v] + 1 >= short and u != v and v not in graph[u]:
             count += 1
 print(count)
-

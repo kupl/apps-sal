@@ -1,12 +1,13 @@
 import sys
 readline = sys.stdin.readline
 
+
 class WeightedUnionFind:
     def __init__(self, n):
-        self.parents = [i for i in range(n+1)]
-        self.rank = [0] * (n+1)
+        self.parents = [i for i in range(n + 1)]
+        self.rank = [0] * (n + 1)
         # 根への距離を管理
-        self.weight = [0] * (n+1)
+        self.weight = [0] * (n + 1)
 
     # 検索
     def find(self, x):
@@ -43,8 +44,9 @@ class WeightedUnionFind:
     def diff(self, x, y):
         return self.weight[x] - self.weight[y]
 
+
 def main():
-    N, M = map(int, readline().rstrip().split())    
+    N, M = map(int, readline().rstrip().split())
     uf = WeightedUnionFind(N)
 
     for _ in range(M):
@@ -57,9 +59,12 @@ def main():
                 return
 
         uf.union(l, r, d)
-    
+
     print('Yes')
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

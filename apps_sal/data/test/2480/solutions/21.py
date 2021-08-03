@@ -1,5 +1,5 @@
 def main():
-    N, K = list(map(int,input().split()))
+    N, K = list(map(int, input().split()))
     A = list(map(int, input().split()))
     s = 0
     d = {}
@@ -8,8 +8,8 @@ def main():
     l = [0] * (N + 1)
     for i, v in enumerate(A, start=1):
         if i - K >= 0:
-           x = l[i - K]
-           d[x].remove(i-K)
+            x = l[i - K]
+            d[x].remove(i - K)
         s += v % K
         s %= K
         t = (s - i) % K
@@ -20,5 +20,6 @@ def main():
         else:
             d[t] = {i}
     return r
-print((main()))
 
+
+print((main()))

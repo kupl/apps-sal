@@ -4,23 +4,23 @@ class Solution:
         for u, v, w in edges:
             graph[u].append((v, w))
             graph[v].append((u, w))
-        
+
         def dijkstra(initial_node):
             dist = [float('inf')] * n
             dist[initial_node] = 0
-            
+
             pq = [(initial_node, 0)]
             while pq:
                 node, d = heappop(pq)
-                
+
                 for adjnode, weight in graph[node]:
                     if dist[adjnode] > dist[node] + weight:
                         dist[adjnode] = dist[node] + weight
                         pq.append((adjnode, dist[node]))
             return dist
-        
-        city_num = 0 # ans city number
-        cc = n + 1 # cities connected
+
+        city_num = 0  # ans city number
+        cc = n + 1  # cities connected
         for node in range(n):
             dist = dijkstra(node)
             print(dist)
@@ -35,4 +35,3 @@ class Solution:
                 city_num = node
 
         return city_num
-

@@ -1,7 +1,7 @@
 import sys
 
 T = int(sys.stdin.readline().strip())
-for t in range (0, T):
+for t in range(0, T):
     n = int(sys.stdin.readline().strip())
     p = list(map(int, sys.stdin.readline().strip().split()))
     ans = [p[0]]
@@ -15,7 +15,3 @@ for t in range (0, T):
                 ans.append(p[i])
     print(len(ans))
     print(" ".join(list(map(str, ans))))
-
-    
-    
-

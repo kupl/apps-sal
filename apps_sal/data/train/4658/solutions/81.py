@@ -4,4 +4,3 @@ def max_product(arr, n):
     for i in range(n):
         prod *= arr[i]
     return prod
-

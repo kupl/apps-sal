@@ -7,7 +7,6 @@ k = integers[1]
 
 for i in range(n):
     if(n - i - 2 != -1):
-        print((str(0) + ' ')*i + str(k) + ' ' + (str(0) + ' ')*(n - i - 2) + str(0))
+        print((str(0) + ' ') * i + str(k) + ' ' + (str(0) + ' ') * (n - i - 2) + str(0))
     else:
-        print((str(0) + ' ')*i + str(k))
-
+        print((str(0) + ' ') * i + str(k))

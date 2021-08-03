@@ -7,4 +7,3 @@ def interpreter(tape, array):
         while next(tape) == "1":
             array[i] = "10"[int(array[i])]
     return "".join(array)
-

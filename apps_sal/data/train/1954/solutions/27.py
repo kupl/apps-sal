@@ -1,8 +1,9 @@
 class Solution:
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
-        
+
         res = [''] * 17
         n = len(req_skills)
+
         def dfs(idx, has, path):
             nonlocal res
             if idx == n:
@@ -21,9 +22,7 @@ class Solution:
                             has |= union
         dfs(0, set(), [])
         return res
-                        
-        
-        
+
         # n = len(req_skills)
         # key = {v: i for i, v in enumerate(req_skills)}
         # dp = {0: []}
@@ -38,4 +37,3 @@ class Solution:
         #         if with_him not in dp or len(dp[with_him]) > len(need) + 1:
         #             dp[with_him] = need + [i]
         # return dp[(1 << n) - 1]
-

@@ -17,4 +17,3 @@ for j in [len(d[i]) for i in s]:
     ret *= j
 
 print(ret)
-

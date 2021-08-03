@@ -8,5 +8,4 @@ if abs(a - c) == 0:
 elif abs(b - d) == 0:
     print(2 * abs(a - c) + 6)
 else:
-    print(2 * abs(a - c) + 2 * abs(b-d) + 4)
-
+    print(2 * abs(a - c) + 2 * abs(b - d) + 4)

@@ -8,7 +8,7 @@ for i in range(n):
         m = d[s]
 c = []
 for i in d:
-    if d[i]==m:
+    if d[i] == m:
         c.append(i)
 c.sort()
 for x in c:

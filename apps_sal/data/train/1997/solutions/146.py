@@ -14,4 +14,3 @@ class Solution:
             else:
                 non_covered_intervals.append(intervals[i])
         return len(non_covered_intervals)
-

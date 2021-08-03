@@ -10,4 +10,5 @@ def __starting_point():
         a_s = [int(ch) for ch in input().split(' ')]
         print(solve(n, a_s))
 
+
 __starting_point()

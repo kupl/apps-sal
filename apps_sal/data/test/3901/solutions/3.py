@@ -21,4 +21,3 @@ else:
         ones = 1
         res = makeone + n - ones
         print(res)
-

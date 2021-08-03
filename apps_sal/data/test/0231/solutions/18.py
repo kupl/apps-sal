@@ -10,4 +10,3 @@ def run(n, a):
 
 data = [int(x) for x in input().split(' ')]
 run(n=data[0], a=data[1])
-

@@ -7,6 +7,7 @@ def _sat_and(models1, models2):
                 models.append(candidate)
     return models
 
+
 def _sat_not(f: Formula):
     if f.is_literal():
         return [(set(), {f})]
@@ -19,7 +20,7 @@ def _sat_not(f: Formula):
         for arg in f.args:
             models = _sat_and(models, _sat_not(arg))
         return models
-    
+
 
 def _sat(f: Formula):
     if f.is_literal():
@@ -33,8 +34,7 @@ def _sat(f: Formula):
         for arg in f.args:
             models = _sat_and(models, _sat(arg))
         return models
-    
-        
+
 
 def sat(f: Formula):
     options = _sat(f)

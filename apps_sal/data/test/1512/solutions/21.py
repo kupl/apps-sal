@@ -24,7 +24,7 @@ for i in range(n):
     else:
         if (max2 == -1 or max2 < a[i]):
             max1pos = pos[max1]
-            gainWhenRemoved [max1pos] = gainWhenRemoved [max1pos] + 1
+            gainWhenRemoved[max1pos] = gainWhenRemoved[max1pos] + 1
 
     if (a[i] > max1):
         max2 = max1
@@ -36,9 +36,9 @@ for i in range(n):
 numRecord = sum(record)
 
 sol = -1
-index = 0;
+index = 0
 for i in range(n):
-    tmp = numRecord - record [i] + gainWhenRemoved [i]
+    tmp = numRecord - record[i] + gainWhenRemoved[i]
     if (sol < tmp) or (sol == tmp and a[index] > a[i]):
         sol = tmp
         index = i

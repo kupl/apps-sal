@@ -1,12 +1,13 @@
 from collections import defaultdict
 from bisect import bisect_left, bisect_right
 
+
 class MajorityChecker:
 
     def __init__(self, arr: List[int]):
         self.arr = arr
         self.el_to_idx = defaultdict(list)
-        
+
         for i, val in enumerate(arr):
             self.el_to_idx[val].append(i)
 
@@ -26,4 +27,3 @@ class MajorityChecker:
 # Your MajorityChecker object will be instantiated and called as such:
 # obj = MajorityChecker(arr)
 # param_1 = obj.query(left,right,threshold)
-

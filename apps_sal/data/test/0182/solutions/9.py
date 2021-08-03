@@ -8,4 +8,3 @@ for i in range(3):
     else:
         makeable += (have[i] - goal[i]) // 2
 print('Yes' if makeable >= deficit else 'No')
-

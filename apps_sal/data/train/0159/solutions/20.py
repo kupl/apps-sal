@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def constrainedSubsetSum(self, A: List[int], k: int) -> int:
         d = deque()

@@ -9,15 +9,15 @@
 # (2) HPの減算。多数の要素に対してAを引く必要があり、最悪O(N^2)
 # →一定範囲に-Aするのは時間がかかるけど、最初に-Aして最後に+Aすれば2要素を変えるだけで済むね（imos法）
 
+import collections
 n, d, a = list(map(int, input().split()))
 enemies = [list(map(int, input().split())) for _ in range(n)]
 
-enemies.sort(key= lambda a: a[0])  # 座標を基準にソート
+enemies.sort(key=lambda a: a[0])  # 座標を基準にソート
 
 d *= 2
 total_damage = 0
 
-import collections
 q = collections.deque()
 
 ans = 0
@@ -28,13 +28,13 @@ for i in range(n):
     while (len(q) and q[0][0] < x):
         total_damage -= q[0][1]
         q.popleft()
-    
+
     hp -= total_damage
     if hp > 0:
-        times = (hp+a-1) // a
+        times = (hp + a - 1) // a
         total_damage += a * times
         ans += times
 
-        q.append((x+d, a*times))
+        q.append((x + d, a * times))
 
 print(ans)

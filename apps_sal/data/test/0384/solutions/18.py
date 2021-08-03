@@ -13,4 +13,3 @@ if k > 0:
 
 print(len(sl))
 print(" ".join(sl))
-

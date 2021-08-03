@@ -9,7 +9,7 @@ def main(X, N, P):
         if abs(X - i) < min_dis:
             ans = i
             min_dis = abs(X - i)
-            #print(ans)
+            # print(ans)
 
     return ans
 
@@ -19,5 +19,6 @@ def __starting_point():
     P = list(map(int, input().split()))
     ans = main(X, N, P)
     print(ans)
+
 
 __starting_point()

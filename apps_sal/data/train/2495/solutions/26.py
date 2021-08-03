@@ -7,4 +7,3 @@ class Solution:
                 target.remove(i)
         else:
             return 1
-

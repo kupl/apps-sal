@@ -6,4 +6,3 @@ for i in reversed(list(range(n))):
         val, k = a[j - i]
         opt[i][j] = max(val * abs(k - i) + opt[i + 1][j], val * abs(k - j) + opt[i][j - 1])
 print((opt[0][n - 1]))
-

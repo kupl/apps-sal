@@ -19,7 +19,8 @@ class Trie:
         if cur.get('*'):
             return True
         return False
-    
+
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -30,7 +31,6 @@ class StreamChecker:
             self.max_len = max(self.max_len, len(word))
             self.trie.insert(word)
         self.query_store = deque(maxlen=self.max_len)
-        
 
     def query(self, letter: str) -> bool:
         self.query_store.appendleft(letter)
@@ -43,10 +43,8 @@ class StreamChecker:
             if cur.get('*'):
                 return True
         return False
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

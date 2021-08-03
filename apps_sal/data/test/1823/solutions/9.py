@@ -10,4 +10,3 @@ for i in range(1, len(t) - 1):
 p[t[0]] += 1
 p[t[-1]] += 1
 print(p.index(max(p)))
-

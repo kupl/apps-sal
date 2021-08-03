@@ -1,1 +1,1 @@
-solve=lambda s,g:s%g and-1or(g,s-g)
+def solve(s, g): return s % g and -1 or (g, s - g)

@@ -37,5 +37,3 @@ for i in range(w):
         field[x][i] = 0
 
 print(pow(2, unset, 10 ** 9 + 7))
-
-

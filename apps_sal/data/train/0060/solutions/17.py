@@ -10,4 +10,3 @@ t = read_int()
 for case_num in range(t):
     a, b = read_ints()
     print(a ^ b)
-

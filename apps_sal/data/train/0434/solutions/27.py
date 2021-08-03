@@ -8,19 +8,19 @@ class Solution:
             else:
                 total += n
             left.append(total)
-        
+
         right = []
         total = 0
-        for i in range(len(nums)-1, -1, -1):
+        for i in range(len(nums) - 1, -1, -1):
             if nums[i] == 0:
                 total = 0
             else:
                 total += nums[i]
             right.append(total)
         right = right[::-1]
-        
+
         curMax = 0
         for i in range(len(nums) - 2):
-            curMax = max(left[i]+right[i+2], curMax)
-            
+            curMax = max(left[i] + right[i + 2], curMax)
+
         return curMax

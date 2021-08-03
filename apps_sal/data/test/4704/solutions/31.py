@@ -38,18 +38,19 @@ def resolve():
     T = []
     T.append(A[0])
     for i in range(1, N):
-        T.append(T[i-1]+A[i])
+        T.append(T[i - 1] + A[i])
 
     if N == 2:
-        ans = abs(A[0]-A[1])
+        ans = abs(A[0] - A[1])
     else:
-        for i in range(1, N-1):
-            ans = min(ans, abs(S-2*T[i]))
+        for i in range(1, N - 1):
+            ans = min(ans, abs(S - 2 * T[i]))
     print(ans)
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

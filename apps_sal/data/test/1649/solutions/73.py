@@ -8,19 +8,22 @@ from collections import defaultdict, deque, Counter
 from functools import lru_cache
 sys.setrecursionlimit(10**8)
 
-ii = lambda: int(input())
-mi = lambda: map(int, input().split())
-li = lambda: list(map(int, input().split()))
+
+def ii(): return int(input())
+def mi(): return map(int, input().split())
+def li(): return list(map(int, input().split()))
+
 
 ls = li()
 total = sum(ls)
-for x in product([0,1], repeat=4):
-    if x == (0,0,0,0):
+for x in product([0, 1], repeat=4):
+    if x == (0, 0, 0, 0):
         continue
     cur = 0
     for i, y in enumerate(x):
-        if y == 1: cur += ls[i]
-    if 2*cur == total:
+        if y == 1:
+            cur += ls[i]
+    if 2 * cur == total:
         print('Yes')
         return
 print('No')

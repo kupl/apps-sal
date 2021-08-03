@@ -33,5 +33,3 @@ else:
                 print(i + 1, j + 1)
 
                 break
-
-

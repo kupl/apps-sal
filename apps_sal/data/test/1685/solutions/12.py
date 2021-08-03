@@ -5,6 +5,7 @@ def powersOfTwo():
         powers[i] = powers[i - 1] * 2
     return powers
 
+
 def log2(num):
     ans = 0
     while num > 1:
@@ -12,12 +13,14 @@ def log2(num):
         ans += 1
     return ans
 
+
 def getlevel(num):
     count = 0
     while num % 2 == 0:
         num //= 2
         count += 1
     return count
+
 
 def solve():
     n, q = list(map(int, input().rstrip().split()))
@@ -54,7 +57,9 @@ def solve():
                 raise ValueError
         print(num)
 
+
 def __starting_point():
     solve()
+
 
 __starting_point()

@@ -7,17 +7,16 @@ class Solution:
         '''
         pref = [0] * (len(nums) + 1)
         for i in range(len(nums)):
-            pref[i+1] = pref[i] + nums[i]
-        
+            pref[i + 1] = pref[i] + nums[i]
+
         d = {}
         ans = 0
-        #print(pref)
+        # print(pref)
         for i in range(len(pref)):
             #print(pref[i], d)
             if pref[i] - target in d:
                 ans += 1
-                #print(ans)
+                # print(ans)
                 d.clear()
             d[pref[i]] = i
         return ans
-

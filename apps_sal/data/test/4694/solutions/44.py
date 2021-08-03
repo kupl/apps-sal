@@ -1,12 +1,12 @@
 N = int(input())
-S = map(int,input().split())
+S = map(int, input().split())
 
 Number = list(S)
 Number.sort(reverse=True)
 total_distance = []
 # print(Number)
 
-for i in range(1,N):
+for i in range(1, N):
     distance = Number[0] - Number[1]
     total_distance.append(distance)
     del Number[0]

@@ -4,13 +4,6 @@ class Solution:
         res = 0
         for j in words:
             tmp = Counter(j) & Counter(chars)
-            if tmp==Counter(j):
-                res+= len(j)
+            if tmp == Counter(j):
+                res += len(j)
         return(res)
-            
-            
-            
-           
-
-    
-

@@ -11,8 +11,7 @@ class Solution:
                 ans = max(ans, j * max_num + dfs(i - 1, 1, A[i]))
                 opt[(i, j, max_num)] = ans
             return opt[(i, j, max_num)]
-        
+
         n = len(A)
         opt = dict()
         return dfs(n - 1, 0)
-

@@ -18,4 +18,3 @@ for c in s:
     if not inp and cur > maxp:
         maxp = cur
 print(maxp, w)
-

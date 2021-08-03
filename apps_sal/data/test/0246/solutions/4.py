@@ -5,6 +5,7 @@ def f(n):
         n //= 10
     return rtn
 
+
 n, s = list(map(int, input().split()))
 l = 0
 r = 10**18 + 1
@@ -17,4 +18,3 @@ while 1 < r - l:
         l = m
 
 print(max(n - r + 1, 0))
-

@@ -2,7 +2,7 @@ from collections import defaultdict
 n = int(input())
 
 d = defaultdict(int)
-for i in range(1, n+1):
+for i in range(1, n + 1):
     s = str(i)
     f = int(s[0])
     b = int(s[-1])

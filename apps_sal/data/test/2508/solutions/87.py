@@ -109,4 +109,3 @@ for row in field_tmp:
 field.extend([0] * w2)
 field = np.array(field, dtype=np.int8)
 print((solve(h2, w2, k, field, x1, y1, x2, y2)))
-

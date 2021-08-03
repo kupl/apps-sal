@@ -6,7 +6,7 @@ able = []
 remain = []
 for i in range(n):
     able.append([gramHas[i] // gramNeed[i], gramHas[i] % gramNeed[i], gramNeed[i]])
-able.sort(key = lambda x: x[0])
+able.sort(key=lambda x: x[0])
 ans = able[0][0]
 for i in range(n):
     able[i][0] -= ans
@@ -20,13 +20,11 @@ while magic > 0:
                 able[i][0] += 1
                 able[i][1] = 0
             break
-    if min(able, key = lambda x: x[0])[0] != 0:
+    if min(able, key=lambda x: x[0])[0] != 0:
         ans += 1
         for i in range(n):
             able[i][0] -= 1
 print(ans)
-
-
 
 
 """
@@ -47,4 +45,3 @@ lack  =  1 3  1  4
 
 ans = 2
 """
-

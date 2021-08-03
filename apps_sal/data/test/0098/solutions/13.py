@@ -1,16 +1,19 @@
-r = lambda: input()
-ri = lambda: int(r())
-rr = lambda: map(int, r().split())
-rl = lambda: list(rr())
+def r(): return input()
+def ri(): return int(r())
+def rr(): return map(int, r().split())
+def rl(): return list(rr())
+
 
 a1, b1 = rr()
 a2, b2 = rr()
 a3, b3 = rr()
 
+
 def f(x, y):
     fa = x <= a1 and y <= b1
     fb = x <= b1 and y <= a1
     return fa or fb
+
 
 f1 = f(max(b2, b3), a2 + a3)
 f2 = f(max(a2, a3), b2 + b3)

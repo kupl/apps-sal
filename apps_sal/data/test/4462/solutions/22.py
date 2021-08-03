@@ -1,5 +1,5 @@
 N = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 cnt2 = 0
 cnt4 = 0
@@ -18,4 +18,4 @@ elif cnt4 >= cntodd:
     ans = 'Yes'
 else:
     ans = 'No'
-print(ans)    
+print(ans)

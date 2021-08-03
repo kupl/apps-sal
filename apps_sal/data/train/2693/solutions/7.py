@@ -4,4 +4,5 @@ def remove_nth_element(lst, n):
     del lst_copy[n]
     return lst_copy
 
-remove_nth_element=lambda a,n:a[:n]+a[n+1:]
+
+def remove_nth_element(a, n): return a[:n] + a[n + 1:]

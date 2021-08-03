@@ -3,13 +3,14 @@ class Solution:
         n = len(nums)
         result = 0
         m = 0
+
         def bitcount(a):
             cnt = 0
             while a:
                 cnt += 1
                 a &= a - 1
             return cnt
-        
+
         for num in nums:
             result += bitcount(num)
             m = max(m, num)
@@ -20,5 +21,3 @@ class Solution:
                 break
             m >>= 1
         return result
-        
-

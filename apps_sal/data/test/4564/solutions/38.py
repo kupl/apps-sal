@@ -7,4 +7,3 @@ for i in s:
     else:
         l.append(i)
 print('yes')
-

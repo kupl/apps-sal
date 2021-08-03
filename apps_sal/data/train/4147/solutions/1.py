@@ -3,7 +3,7 @@ def play_pass(s, n):
     change = ''
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
-    for i,char in list(enumerate(slower)):
+    for i, char in list(enumerate(slower)):
         if char in alphabet:
             ind = (alphabet.index(char) + n)
             if ind >= 26:

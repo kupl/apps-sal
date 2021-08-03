@@ -29,9 +29,9 @@ def f(n):
         res += dp[len(n) - 1][j][0] + dp[len(n) - 1][j][1]
     return res
 
+
 t = int(input())
 while t:
     t -= 1
     l, r = list(map(int, input().split()))
     print(f(str(r)) - f(str(l - 1)))
-

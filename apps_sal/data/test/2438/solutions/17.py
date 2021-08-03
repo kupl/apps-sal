@@ -2,6 +2,7 @@
 
 import sys
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -14,6 +15,8 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 MOD = 10 ** 9 + 7
@@ -21,21 +24,21 @@ MOD = 10 ** 9 + 7
 N = INT()
 S = input()
 
-total = (N+1)*N // 2
+total = (N + 1) * N // 2
 ans = total - N
 
 L = []
 cnt = 1
 for i in range(1, N):
-    if S[i-1] == S[i]:
+    if S[i - 1] == S[i]:
         cnt += 1
     else:
         L.append(cnt)
         cnt = 1
 R = []
 cnt = 1
-for i in range(N-2, -1, -1):
-    if S[i+1] == S[i]:
+for i in range(N - 2, -1, -1):
+    if S[i + 1] == S[i]:
         cnt += 1
     else:
         R.append(cnt)
@@ -43,4 +46,3 @@ for i in range(N-2, -1, -1):
 
 ans -= sum(L) + sum(R) - len(L)
 print(ans)
-

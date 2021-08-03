@@ -20,4 +20,3 @@ class RomanNumerals(object):
         pairs = [sum(g) for _, g in groupby(FROM_ROMAN[a] for a in roman)]
         return sum(a + b if a > b else b - a for a, b in
                    zip_longest(pairs[::2], pairs[1::2], fillvalue=0))
-

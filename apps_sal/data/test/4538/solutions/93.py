@@ -8,11 +8,15 @@ def b174(n, d, xylist):
 
     return count
 
+
 def main():
     n, d = map(int, input().split())
     xylist = [list(map(int, input().split())) for _ in range(n)]
     print(b174(n, d, xylist))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

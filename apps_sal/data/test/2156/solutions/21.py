@@ -1,18 +1,24 @@
 from sys import stdin, stdout
 
+
 def rsingle_int():
     return int(stdin.readline().rstrip())
 
+
 def rmult_int():
-    return [ int(x) for x in stdin.readline().rstrip().split() ]
+    return [int(x) for x in stdin.readline().rstrip().split()]
+
 
 def r_str():
     return stdin.readline().rstrip()
-    
+
+
 def rsingle_char():
     return stdin.read(1)
 
+
 data = {}
+
 
 def foo(s, s_len, l, r):
    # print("{}:{}".format(l,r))
@@ -25,7 +31,7 @@ def foo(s, s_len, l, r):
         return data[l][r]
     else:
         res = None
-        
+
         cookies = 0
         if diff == 1:
             left = s[l]
@@ -38,7 +44,7 @@ def foo(s, s_len, l, r):
         rem = int((left + right) % 10)
         data[l][r] = (cookies, rem)
         return (cookies, rem)
-            
+
 
 def main():
     s_len = rsingle_int()
@@ -49,5 +55,5 @@ def main():
         cookies, rem = foo(s, s_len, l - 1, r - 1)
         print(cookies)
 
- 
+
 main()

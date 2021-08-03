@@ -46,19 +46,19 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 uf = UnionFind(n)
 q = []
 for i in range(m):
-    a,b = map(int,input().split())
-    q.append([a-1,b-1])
-ans = n*(n-1)//2
+    a, b = map(int, input().split())
+    q.append([a - 1, b - 1])
+ans = n * (n - 1) // 2
 l = []
-for i in range(m-1,-1,-1):
-    a,b = q[i]
+for i in range(m - 1, -1, -1):
+    a, b = q[i]
     l.append(ans)
-    if not uf.same(a,b):
-        ans -= uf.size(a)*uf.size(b)
-    uf.union(a,b)
+    if not uf.same(a, b):
+        ans -= uf.size(a) * uf.size(b)
+    uf.union(a, b)
 for i in l[::-1]:
     print(i)

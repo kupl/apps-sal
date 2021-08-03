@@ -19,9 +19,10 @@ md = 10**9 + 7
 
 ans = 0
 
-#print(l)
+# print(l)
 
 d = {}
+
 
 def inverse(a, n):
     if a in d:
@@ -32,28 +33,28 @@ def inverse(a, n):
     r1 = a
     while r1 > 0:
         q = r // r1
-        tmp = t- q*t1
+        tmp = t - q * t1
         t = t1
         t1 = tmp
 
-        tmp = r - q*r1
+        tmp = r - q * r1
         r = r1
         r1 = tmp
 
     if t < 0:
         t += n
-    t = (t+n) % n
+    t = (t + n) % n
     d[a] = t
     return t
 
 
 mul = 1
 for i in l:
-    mul *= i+1
+    mul *= i + 1
     mul %= md
 
 for i in range(len(l)):
-    mul = (mul * inverse(l[i]+1, md) ) % md
+    mul = (mul * inverse(l[i] + 1, md)) % md
     m = mul * l[i]
     m %= md
 
@@ -61,8 +62,3 @@ for i in range(len(l)):
     ans %= md
 
 print(ans)
-
-
-    
-
-

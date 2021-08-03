@@ -27,4 +27,3 @@ if res == -1:
     print((-1))
 else:
     print(('\n'.join('{} {}'.format(*l) for l in res)))
-

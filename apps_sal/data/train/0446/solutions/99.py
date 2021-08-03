@@ -5,9 +5,9 @@ class Solution:
         for key, count in list(counter.items()):
             buckets[count].append(key)
         for count in range(len(arr) + 1):
-            if k == 0: break
+            if k == 0:
+                break
             while buckets[count] and k >= count:
                 del counter[buckets[count].pop()]
                 k -= count
         return len(counter)
-

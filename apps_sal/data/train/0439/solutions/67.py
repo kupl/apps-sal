@@ -1,10 +1,10 @@
 class Solution:
     def maxTurbulenceSize(self, A: List[int]) -> int:
-        
+
         n = len(A)
         if n == 1:
             return 1
-        
+
         dp = [[1, 1] for i in range(n)]
         ans = 1
 
@@ -16,4 +16,3 @@ class Solution:
             ans = max(ans, dp[i][0], dp[i][1])
 
         return ans
-

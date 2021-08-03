@@ -10,8 +10,6 @@ else:
     else:
         w = (v - u) // 2
         if (w | u) == (w + u):
-            print("2\n" + str(w|u) + ' ' + str(w))
+            print("2\n" + str(w | u) + ' ' + str(w))
         else:
             print("3\n" + str(u) + ' ' + str(w) + ' ' + str(w))
-
-

@@ -8,7 +8,7 @@ started = False
 
 q_mark = 0
 op = 0
-cl= 0
+cl = 0
 ended = False
 
 for c in s:
@@ -51,4 +51,3 @@ for i in range(len(s)):
             s[i] = '('
             open_count -= 1
 print(''.join(s))
-

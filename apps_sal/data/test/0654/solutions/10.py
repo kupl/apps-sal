@@ -5,7 +5,7 @@ f, c, i = 1, 1, 1
 while i < 1100:
     cat[i] = f
     i += 1
-    c = c * (8*i - 12) // i
+    c = c * (8 * i - 12) // i
     f = c - f
 cat = cat[1:-1]
 sm = 0

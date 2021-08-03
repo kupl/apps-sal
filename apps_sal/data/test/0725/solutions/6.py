@@ -9,6 +9,3 @@ for i in range(n):
             return
 
 print("#Black&White")
-
-
-

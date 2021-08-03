@@ -10,8 +10,8 @@ for _ in range(t):
     mx = [0] * (n + 1)
     for p, s in b:
         mx[s] = max(mx[s], p)
-    for i in range(n-1, -1, -1):
-        mx[i] = max(mx[i], mx[i+1])
+    for i in range(n - 1, -1, -1):
+        mx[i] = max(mx[i], mx[i + 1])
 
     # print(a)
     # print(b)
@@ -49,4 +49,3 @@ for _ in range(t):
         #     ans += 1
         #     # print(a, temp)
         print(ans)
-

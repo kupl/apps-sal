@@ -1,6 +1,6 @@
 def sieve(n):
     n += 1
-    
+
     prime = [True] * n
     for i in range(2, n):
         if i * i > n:
@@ -13,8 +13,9 @@ def sieve(n):
     for i in range(2, n):
         if prime[i]:
             res.append(i)
-    
+
     return res
+
 
 n = int(input())
 a = list(map(int, input().split()))
@@ -35,10 +36,10 @@ for i in range(1, len(primes)):
     cnt[2] -= take_two
     cnt[1] -= take_one
 
-    ans.extend([2] * take_two)    
+    ans.extend([2] * take_two)
     ans.extend([1] * take_one)
 
-ans.extend([2] * cnt[2])    
+ans.extend([2] * cnt[2])
 ans.extend([1] * cnt[1])
 
 for x in ans:

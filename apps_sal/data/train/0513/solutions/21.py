@@ -3,9 +3,9 @@ from collections import defaultdict as dd
 N = int(input())
 As = list(map(int, input().split()))
 Es = dd(dict)
-for _ in range(N-1):
+for _ in range(N - 1):
     f, t = list(map(int, input().split()))
-    Es[f-1][t-1] = Es[t-1][f-1] = 1
+    Es[f - 1][t - 1] = Es[t - 1][f - 1] = 1
 
 INF = float('inf')
 RET = 0
@@ -35,5 +35,3 @@ while stack:
                 stack.append((PROC, to, x))
 for ans in anss:
     print(ans)
-
-

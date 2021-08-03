@@ -2,7 +2,7 @@ class Solution:
     def countServers(self, grid: List[List[int]]) -> int:
         row_count = [0 for i in range(len(grid))]
         col_count = [0 for i in range(len(grid[0]))]
-        
+
         result = 0
         for round in range(1, 3):
             for row in range(len(grid)):

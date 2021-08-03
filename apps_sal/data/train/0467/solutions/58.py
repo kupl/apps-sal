@@ -4,9 +4,9 @@ class Solution:
         for num in nums:
             if num > 1:
                 summ += self.divisors(num)
-        
+
         return summ
-    
+
     def divisors(self, num):
         visited_factors = set()
         visited_factors.add(1)
@@ -24,7 +24,7 @@ class Solution:
                     visited_factors.add(secondHalf)
                     factors += 1
                     summ += secondHalf
-        
+
         # print(\"factors \", factors)
         if factors == 4:
             return summ

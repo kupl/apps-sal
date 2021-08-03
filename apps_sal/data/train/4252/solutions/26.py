@@ -1,4 +1,4 @@
-def merge_arrays(first, second): 
+def merge_arrays(first, second):
     unique = []
     for f in first:
         if f not in unique:

@@ -1,1 +1,1 @@
-largest=lambda n,a:a.sort()or a[-n:]
+def largest(n, a): return a.sort() or a[-n:]

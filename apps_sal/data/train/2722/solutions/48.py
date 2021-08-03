@@ -3,5 +3,3 @@ def remove_url_anchor(url):
     if anchor_pos > 0:
         return url[:anchor_pos]
     return url
-    
-

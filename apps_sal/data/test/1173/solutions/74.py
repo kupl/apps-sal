@@ -1,11 +1,11 @@
 from collections import deque
 
 N = int(input())
-A = [deque([ a-1 for a in map(int, input().split())]) for _ in range (N)]
+A = [deque([a - 1 for a in map(int, input().split())]) for _ in range(N)]
 cnt = 0
-cur = [-1 for _ in range(N+1)]
-day = [0 for _ in range(N+1)]
-que = deque( range(N) )
+cur = [-1 for _ in range(N + 1)]
+day = [0 for _ in range(N + 1)]
+que = deque(range(N))
 
 while que:
     x = que.popleft()
@@ -20,5 +20,5 @@ while que:
     else:
         cur[x] = y
 
-flag = ( cnt == N*(N-1)/2 )
-print( max(day) if flag else -1 )
+flag = (cnt == N * (N - 1) / 2)
+print(max(day) if flag else -1)

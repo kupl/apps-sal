@@ -3,7 +3,7 @@ for i in range(a):
     d = []
     b = int(input())
     for j in range(b):
-        d.append(list(map(int,input().split())))
+        d.append(list(map(int, input().split())))
     mix = -100000
     miy = mix
     maxx = 100000
@@ -38,4 +38,3 @@ for i in range(a):
             maxx = min(maxx, x)
     if f:
         print(1, mix, miy)
-

@@ -12,7 +12,7 @@ class Solution:
                 queue.append((i, 1))  # enqueue
             if T in routes[i]:  # possible ending route number
                 targets.add(i)
-            for j in range(i+1, len(routes)):
+            for j in range(i + 1, len(routes)):
                 if routes[j] & routes[i]:  # set intersection to check if route_i and route_j are connected
                     graph[i].add(j)
                     graph[j].add(i)
@@ -24,4 +24,4 @@ class Solution:
                 if nxt not in visited:
                     visited.add(nxt)
                     queue.append((nxt, depth + 1))
-        return -1            
+        return -1

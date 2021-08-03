@@ -20,4 +20,3 @@ res = 0
 res = f"{z} {x} {y}"
 
 print(res)
-

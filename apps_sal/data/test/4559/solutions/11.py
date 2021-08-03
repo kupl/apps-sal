@@ -16,8 +16,8 @@ def main():
     print(sumA)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

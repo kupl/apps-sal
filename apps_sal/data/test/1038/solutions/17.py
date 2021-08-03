@@ -10,13 +10,13 @@ def main():
         output = [0] * 40
 
         for k in range(40):
-            output[k] = (2**k)*((x+1)//(2**(k+1)))
-            output[k] += max(0, (x+1) - ((2**(k+1))*((x+1)//(2**(k+1))) + (2**k)))
+            output[k] = (2**k) * ((x + 1) // (2**(k + 1)))
+            output[k] += max(0, (x + 1) - ((2**(k + 1)) * ((x + 1) // (2**(k + 1))) + (2**k)))
 
         return output
 
     xor_B = xor_1_to_x(B)
-    xor_A_m1 = xor_1_to_x(A-1)
+    xor_A_m1 = xor_1_to_x(A - 1)
     xor_AtoB = [None] * 40
     for k in range(40):
         xor_AtoB[k] = xor_B[k] - xor_A_m1[k]
@@ -30,4 +30,3 @@ def main():
 
 
 print((main()))
-

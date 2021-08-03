@@ -6,7 +6,7 @@ for item in s:
 
 n = len(s)
 for i in range(n):
-    a[i] = a[i]%3
+    a[i] = a[i] % 3
 
 
 one = 0
@@ -14,27 +14,27 @@ two = 0
 ans = 0
 
 for i in range(n):
-    if a[i]==1:
-        one+=1
-    elif a[i]==2:
-        two+=1
+    if a[i] == 1:
+        one += 1
+    elif a[i] == 2:
+        two += 1
     else:
         one = 0
         two = 0
-        ans+=1
+        ans += 1
         continue
-    
+
     if one and two:
-        ans+=1
+        ans += 1
         one = 0
         two = 0
-    elif one==3 and two==0:
-        ans+=1
+    elif one == 3 and two == 0:
+        ans += 1
         one = 0
         two = 0
-    elif two==3 and one==0:
-        ans+=1
+    elif two == 3 and one == 0:
+        ans += 1
         one = 0
         two = 0
-        
+
 print(ans)

@@ -44,12 +44,11 @@ def solve():
         if t_q == '1':
             i_q = int(in_1)
             c_q = in_2
-            tree.update(i_q-1, c_q)
+            tree.update(i_q - 1, c_q)
         elif t_q == '2':
             l_q = int(in_1)
             r_q = int(in_2)
-            print((bin(tree.get(l_q-1, r_q)).count('1')))
+            print((bin(tree.get(l_q - 1, r_q)).count('1')))
 
 
 solve()
-

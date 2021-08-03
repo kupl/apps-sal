@@ -22,7 +22,9 @@ def main():
         a[i][2] = a[i][0] if a[i][0] < a[i][1] else a[i][1]
     print(sum(a[i][2] for i in range(n)))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

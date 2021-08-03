@@ -1,5 +1,6 @@
 r = int(input())
 
+
 def factorise(n):
     # n is an odd number and we've ruled out 1 already
     factors = []
@@ -14,9 +15,10 @@ def factorise(n):
         guess += 2
     return sorted(factors)
 
+
 if r % 2 == 1:
     x = 1
-    y = (r - 3)//2
+    y = (r - 3) // 2
     if y > 0:
         print(x, y)
     else:
@@ -32,4 +34,3 @@ else:
             return
     else:'''
     print("NO")
-

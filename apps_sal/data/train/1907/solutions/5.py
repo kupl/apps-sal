@@ -11,5 +11,5 @@ class Solution:
             return None
         if cloned.val == target.val:
             return cloned
-        
+
         return self.getTargetCopy(original, cloned.left, target) or self.getTargetCopy(original, cloned.right, target)

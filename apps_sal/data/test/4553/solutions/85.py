@@ -13,4 +13,3 @@ if cnt == 1:
         return
 
 print('No')
-

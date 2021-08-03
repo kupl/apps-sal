@@ -3,9 +3,8 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
 
-        if len(bloomDay) < m*k:
+        if len(bloomDay) < m * k:
             return -1
-
 
         def isPossible(l):
             i = 0
@@ -26,14 +25,11 @@ class Solution:
 
             return False
 
-
         low, high = min(bloomDay), max(bloomDay)
         while low < high:
-            mid = low + (high-low)//2
+            mid = low + (high - low) // 2
             if isPossible(mid):
                 high = mid
             else:
-                low = mid+1
+                low = mid + 1
         return low
-
-

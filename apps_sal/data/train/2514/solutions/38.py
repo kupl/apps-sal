@@ -3,7 +3,7 @@ class Solution:
         ans = 0
         for i in arr1:
             for j in arr2:
-                if abs(i-j) <= d:
+                if abs(i - j) <= d:
                     break
             else:
                 ans += 1

@@ -1,4 +1,4 @@
-def arr(n=None): # None for if no arguments passed
+def arr(n=None):  # None for if no arguments passed
     # [ the numbers 0 to N-1 ]
     a = []
     if n is None:

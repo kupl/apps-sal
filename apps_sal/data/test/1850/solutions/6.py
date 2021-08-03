@@ -22,4 +22,3 @@ for pos, racer_points in enumerate(remaining_racers_points):
 remaining_racers_points.append(selected_racer_points)
 remaining_racers_points.sort()
 print(num_racers + 1 - bisect_right(remaining_racers_points, selected_racer_points))
-

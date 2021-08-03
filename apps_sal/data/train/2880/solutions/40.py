@@ -6,4 +6,3 @@ def seven(m):
         m = int(strm[:-1]) - lastdigit
         steps += 1
     return (m, steps)
-

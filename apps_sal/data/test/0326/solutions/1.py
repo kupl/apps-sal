@@ -12,12 +12,15 @@ for _ in range(N):
     else:
         D[s] = int(c)
 
+
 def check_kaibun(s):
     n = len(s)
-    return all(s[i] == s[-i-1] for i in range(n//2))
+    return all(s[i] == s[-i - 1] for i in range(n // 2))
+
 
 def calc_cost(use):
     return sum(D[s] * n for (s, n) in list(use.items()))
+
 
 def find_candidate(cost, use, s, is_left):
     if check_kaibun(s):
@@ -56,6 +59,7 @@ def find_candidate(cost, use, s, is_left):
 
     return min(cost, INF)
 
+
 def solve():
     ans = INF
     for s in list(D.keys()):
@@ -64,7 +68,9 @@ def solve():
         ans = find_candidate(ans, use, s, True)
     return ans if ans < INF else -1
 
+
 def __starting_point():
     print((solve()))
+
 
 __starting_point()

@@ -17,4 +17,3 @@ for s in S:
     dp_ab %= MOD
     dp_abc %= MOD
 print(dp_abc)
-

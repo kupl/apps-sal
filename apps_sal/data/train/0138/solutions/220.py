@@ -10,7 +10,7 @@ class Solution:
             if len(neg) == 1:
                 return max(neg[0], len(arr) - neg[-1] - 1)
             return max(neg[-1], len(arr) - neg[0] - 1)
-    
+
         currArr = []
         ans = 0
         for num in nums:

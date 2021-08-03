@@ -1,6 +1,6 @@
 n = int(input())
 numb = input()
-num = [0]*10
+num = [0] * 10
 for i in numb:
     num[int(i)] = 1
 ans = 0
@@ -16,4 +16,3 @@ if ans == 4:
     print("YES")
 else:
     print("NO")
-

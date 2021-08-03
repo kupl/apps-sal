@@ -11,13 +11,13 @@ for i in range():
     a.append(A)   
     b.append(B)'''
 
-n=int(input())
-a=list(map(int,input().split()))
-x=0
+n = int(input())
+a = list(map(int, input().split()))
+x = 0
 for item in a:
-    x^=item
-ans=[]
+    x ^= item
+ans = []
 for item in a:
-    ans.append(x^item)
-ans=map(str,ans)
+    ans.append(x ^ item)
+ans = map(str, ans)
 print(" ".join(ans))

@@ -10,4 +10,3 @@ while True:
             a[i] /= 2
     ans += 1
 print(ans)
-

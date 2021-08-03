@@ -1,15 +1,15 @@
 import collections as co
 
-n,m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 
 ansDic = dict()
-edgeLis = [[] for i in range(n+1)]
-for i in range(1,n+1):
+edgeLis = [[] for i in range(n + 1)]
+for i in range(1, n + 1):
     ansDic[i] = 0
-for i in range(1,m+1):
-    edge = list(map(int,input().split()))
-    edgeLis[edge[0]].append([edge[1],edge[2]])
-    edgeLis[edge[1]].append([edge[0],edge[2]])
+for i in range(1, m + 1):
+    edge = list(map(int, input().split()))
+    edgeLis[edge[0]].append([edge[1], edge[2]])
+    edgeLis[edge[1]].append([edge[0], edge[2]])
 
 q = co.deque()
 q.append(1)
@@ -29,6 +29,6 @@ while len(q) > 0:
             else:
                 ansDic[l1] = k
 
-#print(ansDic)
-for i in range(1,n+1):
+# print(ansDic)
+for i in range(1, n + 1):
     print(ansDic[i])

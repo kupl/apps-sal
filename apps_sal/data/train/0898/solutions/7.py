@@ -1,19 +1,19 @@
 for i in range(int(input())):
-    m,n = list(map(int,input().split()))
-    if n<9:
-        print(0,0)
+    m, n = list(map(int, input().split()))
+    if n < 9:
+        print(0, 0)
         continue
     k = len(str(n))
-    if n==int(str(9)*k):
+    if n == int(str(9) * k):
         ans = k
     else:
-        ans = k-1
-    print(m*ans,m)
+        ans = k - 1
+    print(m * ans, m)
     #     res = min(m,n)
     #     res1 = res
     #     k+=1
     # else:
-    #     res1 = 
+    #     res1 =
 
     # n = n//10
     # j = 1
@@ -27,4 +27,3 @@ for i in range(int(input())):
     #     n = n//10
     # ans = ans+res
     # print(ans)
-

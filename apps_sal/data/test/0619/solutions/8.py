@@ -8,4 +8,3 @@ if ost_s + ost_m >= cost:
     print(cnt + 1, min(cost - ost_s, cost - ost_m))
 else:
     print(cnt, 0)
-

@@ -1,4 +1,6 @@
 from bisect import bisect_left, bisect_right, insort_right
+
+
 class SquareSkipList:
     # SkipList の層数を 2 にした感じの何か
     # std::multiset の代用になる
@@ -28,7 +30,7 @@ class SquareSkipList:
                 else:
                     l0.append(v)
             layer0.append(l0)
-            self.layer0 = dict(zip([inf]+layer1, layer0))
+            self.layer0 = dict(zip([inf] + layer1, layer0))
             layer1.append(inf)
 
     def _rand_depth(self):  # 32bit xorshift
@@ -43,7 +45,7 @@ class SquareSkipList:
         layer1, layer0 = self.layer1, self.layer0
         if self._rand_depth():
             idx1 = bisect_right(layer1, x)
-            val1 = layer1[idx1-1]
+            val1 = layer1[idx1 - 1]
             layer1.insert(idx1, x)
             layer0_idx1 = layer0[val1]
             idx0 = bisect_right(layer0_idx1, x)
@@ -51,7 +53,7 @@ class SquareSkipList:
             del layer0_idx1[idx0:]
         else:
             idx1 = bisect_right(layer1, x)
-            val1 = layer1[idx1-1]
+            val1 = layer1[idx1 - 1]
             insort_right(layer0[val1], x)
 
     def remove(self, x):  # 要素の削除  # O(sqrt(n))
@@ -63,7 +65,7 @@ class SquareSkipList:
         idx0 = bisect_left(layer0_idx1, x)
         if idx0 == len(layer0_idx1):
             del layer1[idx1]
-            layer0[idx1] += layer0.pop(idx1+1)
+            layer0[idx1] += layer0.pop(idx1 + 1)
         else:
             del layer0_idx1[idx0]
 
@@ -80,7 +82,7 @@ class SquareSkipList:
     def search_higher(self, x):  # x を超える最小の値を返す  O(log(n))
         layer1, layer0 = self.layer1, self.layer0
         idx1 = bisect_right(layer1, x)
-        val1 = layer1[idx1-1]
+        val1 = layer1[idx1 - 1]
         layer0_idx1 = layer0[val1]
         idx0 = bisect_right(layer0_idx1, x)
         if idx0 == len(layer0_idx1):
@@ -90,12 +92,12 @@ class SquareSkipList:
     def search_lower(self, x):  # x 未満の最大の値を返す  O(log(n))
         layer1, layer0 = self.layer1, self.layer0
         idx1 = bisect_left(layer1, x)
-        val1 = layer1[idx1-1]
+        val1 = layer1[idx1 - 1]
         layer0_idx1 = layer0[val1]
         idx0 = bisect_left(layer0_idx1, x)
         if idx0 == 0:  # layer0_idx1 が空の場合とすべて x 以上の場合
-            return layer1[idx1-1]
-        return layer0_idx1[idx0-1]
+            return layer1[idx1 - 1]
+        return layer0_idx1[idx0 - 1]
 
     def pop(self, idx):
         raise NotImplementedError
@@ -108,12 +110,12 @@ class SquareSkipList:
             s += len(l0) + 1
             if s >= idx:
                 break
-        if s==idx:
-            layer0[i] += layer0[i+1]
-            del layer0[i+1]
+        if s == idx:
+            layer0[i] += layer0[i + 1]
+            del layer0[i + 1]
             return layer1.pop(i)
         else:
-            return layer0[i].pop(idx-s)
+            return layer0[i].pop(idx - s)
 
     def print(self):
         print(self.layer1)
@@ -146,4 +148,3 @@ def main():
 
 
 main()
-

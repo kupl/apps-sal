@@ -15,4 +15,3 @@ if len(b) >= len(a) - 1:
         print('NO')
 else:
     print('NO')
-

@@ -9,6 +9,6 @@ for q in A:
     if q != M:
         for d in range(2, int(q**0.5) + 1):
             if q % d == 0:
-                ahaha = max(ahaha, -(-M-q+M*d+q//d))
+                ahaha = max(ahaha, -(-M - q + M * d + q // d))
                 ahaha = max(ahaha, -(-M - q + M * (q // d) + q // (q // d)))
 print(su - ahaha)

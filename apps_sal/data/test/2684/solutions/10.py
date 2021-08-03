@@ -3,6 +3,8 @@ def palin(s):
         return 'YES'
     else:
         return 'NO'
+
+
 try:
     N = int(input())
     S = input()
@@ -21,5 +23,3 @@ try:
     print(b)
 except:
     pass
-
-

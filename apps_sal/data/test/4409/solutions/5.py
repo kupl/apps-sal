@@ -33,4 +33,3 @@ for i in range(index + 1, n):
 print(len(answer))
 for a, b, c in answer:
     print(a, b + 1, c + 1)
-

@@ -14,4 +14,3 @@ x2 = (-b + d ** 0.5) / 2 / a
 
 print(max([x1, x2]))
 print(min([x1, x2]))
-

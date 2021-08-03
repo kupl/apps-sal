@@ -13,7 +13,7 @@ for case in range(t):
 
     for x in a:
         max_dist[x] = max(max_dist[x], n - last_occ[x])
-        
+
     inverted = [float('inf') for _ in range(n)]
 
     for x in a:
@@ -30,5 +30,3 @@ for case in range(t):
             print(best + 1, end=' ')
 
     print()
-            
-

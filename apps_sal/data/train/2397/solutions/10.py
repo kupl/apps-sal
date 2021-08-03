@@ -4,7 +4,7 @@ def main():
         l = []
         for i in range(n):
             l.append((int(input(), 2)))
-            
+
         l.sort()
         median = (2 ** m - n - 1) // 2
         # print(l)
@@ -15,12 +15,12 @@ def main():
             # print(median)
         while median in l:
             median += 1
-        
+
         ans = bin(median)[2:]
         temp = ''
         for i in range(len(ans), m):
             temp += '0'
         print(temp + ans)
-                            
-        
+
+
 main()

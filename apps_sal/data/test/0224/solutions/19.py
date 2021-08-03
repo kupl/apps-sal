@@ -1,5 +1,5 @@
 s = input()
-t = ['A', 'E', 'I', 'O', 'U' , 'Y']
+t = ['A', 'E', 'I', 'O', 'U', 'Y']
 cur = -1
 n = len(s)
 m = 0

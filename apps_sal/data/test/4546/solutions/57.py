@@ -2,7 +2,7 @@
 # 柱の先端が同一直線上に並んでいる時、つまり b − a = c − b を満たしているとき、 この柱の並び方を美しいと呼びます。
 # 柱の並び方が美しいかどうかを判定してください。
 
-a,b,c = map(int,input().split())
+a, b, c = map(int, input().split())
 
 if b - a == c - b:
     print('YES')

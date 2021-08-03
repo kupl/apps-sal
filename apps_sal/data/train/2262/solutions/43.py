@@ -7,11 +7,11 @@ for i in range(N):
         if y == 0:
             zs.append((x, i))
         elif x == R:
-            zs.append((R+y, i))
+            zs.append((R + y, i))
         elif y == C:
-            zs.append((2*R+C-x, i))
+            zs.append((2 * R + C - x, i))
         elif x == 0:
-            zs.append((2*R+2*C-y, i))
+            zs.append((2 * R + 2 * C - y, i))
     if len(zs) == 2:
         pts += zs
 
@@ -31,4 +31,3 @@ if not stack:
     print('YES')
 else:
     print('NO')
-

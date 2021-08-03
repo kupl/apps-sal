@@ -1,6 +1,6 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        
+
         def possible(days):
             bonquets = flowers = 0
             for bloom in bloomDay:
@@ -10,7 +10,7 @@ class Solution:
                     bonquets += (flowers + 1) // k
                     flowers = (flowers + 1) % k
             return bonquets >= m
-        
+
         if len(bloomDay) < m * k:
             return -1
 

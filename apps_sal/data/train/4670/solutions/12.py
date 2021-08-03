@@ -5,5 +5,3 @@ def string_to_number(s):
         negative = True
     if s.isdigit():
         return -int(s) if negative == True else int(s)
-            
-

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from sys import stdin
-entrada=0
+entrada = 0
 
-sumatotal=0
+sumatotal = 0
 
 
 for line in stdin:
@@ -13,16 +13,14 @@ for line in stdin:
 a = int(linea1[0].split()[0])
 b = int(linea1[0].split()[1])
 
-arreglo=[]
+arreglo = []
 
 for x in input().split():
-	arreglo.append(int(x))
+    arreglo.append(int(x))
 
 
+arreglo.sort()
+sumatotal = sum(arreglo[:b])
 
-
-arreglo.sort();
-sumatotal=sum(arreglo[:b])
-   
 
 print(sumatotal)

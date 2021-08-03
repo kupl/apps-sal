@@ -1,7 +1,7 @@
 N = input()
 Nums = list(map(int, input().split()))
 
-result = 0;
+result = 0
 
 for i in Nums:
     for ii in Nums:

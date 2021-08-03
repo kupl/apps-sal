@@ -6,4 +6,3 @@ def nickname_generator(name):
         return name[:4]
     else:
         return name[:3]
-

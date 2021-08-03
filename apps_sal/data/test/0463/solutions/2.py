@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def solve(a, x):
     occ = dict()
     for k in a:
@@ -23,6 +24,7 @@ def solve(a, x):
 
     return 2 if two else -1
 
+
 def main():
     n, x = map(int, input().split())
 
@@ -30,6 +32,9 @@ def main():
 
     print(solve(a, x))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

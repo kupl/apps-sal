@@ -17,10 +17,10 @@ class Solution:
         dic = {}
         res = 0
         zero = -1
-        for i,num in enumerate(dp):
+        for i, num in enumerate(dp):
             if num > 0:
                 if 1 not in dic:
-                    res = max(res,i  - zero)
+                    res = max(res, i - zero)
                     dic[1] = i
                 else:
                     res = max(res, i - dic[1] + 1, i - zero)
@@ -31,5 +31,5 @@ class Solution:
                 if -1 not in dic:
                     dic[-1] = i
                 else:
-                    res = max(res, i  - dic[-1])
+                    res = max(res, i - dic[-1])
         return res

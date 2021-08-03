@@ -1,5 +1,7 @@
 # cook your dish here
-n=int(input())
-m=int(input())
-if n>m:print(n-m)
-else:print(n+m)
+n = int(input())
+m = int(input())
+if n > m:
+    print(n - m)
+else:
+    print(n + m)

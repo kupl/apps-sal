@@ -13,6 +13,6 @@ if(count1 == 0):
     print(-1)
 else:
     if(count2 % count1 == 0):
-        print(1 + count2//count1)
+        print(1 + count2 // count1)
     else:
-        print(ceil(count2/count1))
+        print(ceil(count2 / count1))

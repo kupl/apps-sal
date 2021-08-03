@@ -19,4 +19,3 @@ while right < N:
         right += 1
         t += A[right]
 print(cnt)
-

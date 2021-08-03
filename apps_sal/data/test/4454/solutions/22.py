@@ -8,4 +8,3 @@ for i in range(int(input())):
         print(x // len(ar))
     else:
         print(ceil(x / len(ar)))
-

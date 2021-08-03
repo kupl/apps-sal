@@ -23,4 +23,6 @@ def main():
             w = 0
         i -= 1
     print(*res1)
+
+
 main()

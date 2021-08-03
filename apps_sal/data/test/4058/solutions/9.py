@@ -1,7 +1,7 @@
 def main():
     n, r = list(map(int, input().split()))
     arr = [True if c == '1' else False for c in input().split()]
-    #print(arr)
+    # print(arr)
 
     last_heated = 0
     tot = 0
@@ -32,5 +32,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

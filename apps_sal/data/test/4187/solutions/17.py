@@ -1,6 +1,7 @@
 def mp():
     return map(int, input().split())
 
+
 n = int(input())
 a = list(mp())
 a = a[:] + a[:]
@@ -13,4 +14,4 @@ for i in range(2 * n):
     else:
         cnt += 1
 ans = max(ans, cnt)
-print(ans)            
+print(ans)

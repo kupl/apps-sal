@@ -12,7 +12,7 @@ for l in range(N):
         r += 1
 
     cnt += r - l
-    
+
     total -= A[l]
     xor ^= A[l]
 print(cnt)

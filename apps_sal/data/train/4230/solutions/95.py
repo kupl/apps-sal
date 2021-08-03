@@ -1,7 +1,7 @@
 def reverse_letter(string):
-    lt='qwertyuiopalskjdhfgzxcvbnm'
-    s=''
+    lt = 'qwertyuiopalskjdhfgzxcvbnm'
+    s = ''
     for i in string:
         if i in lt:
-            s=s+i
+            s = s + i
     return s[::-1]

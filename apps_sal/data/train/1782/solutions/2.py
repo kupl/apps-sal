@@ -2,6 +2,7 @@ from re import compile as reCompile
 
 PATTERN = reCompile(r'(?P<integer>\d+)|(?P<boolean>true|false)|(?P<string>".*")|(?P<operator>[+*/%()=-])|(?P<keyword>if|else|for|while|return|func|break)|(?P<whitespace>\s+)|(?P<identifier>[a-zA-Z_$][a-zA-Z0-9_$]*)')
 
+
 class Simplexer:
     def __init__(self, s):
         self.s = s
@@ -25,4 +26,3 @@ class Simplexer:
     @classmethod
     def simplex(cls, s):
         return cls(s)
-

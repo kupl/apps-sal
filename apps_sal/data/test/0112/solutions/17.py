@@ -18,7 +18,7 @@ while (i < 1000):
             continue
         if (len(s) == 2 and (
             (s[0] in a[0] and s[1] in a[1]) or
-            (s[0] in a[1] and s[1] in a[0]))):
+                (s[0] in a[1] and s[1] in a[0]))):
             i += 1
             continue
     if (n == 3):
@@ -31,7 +31,7 @@ while (i < 1000):
             (s[0] in a[1] and s[1] in a[0]) or
             (s[0] in a[1] and s[1] in a[2]) or
             (s[0] in a[2] and s[1] in a[0]) or
-            (s[0] in a[2] and s[1] in a[1]))):
+                (s[0] in a[2] and s[1] in a[1]))):
             i += 1
             continue
         if (len(s) == 3 and (
@@ -41,9 +41,8 @@ while (i < 1000):
             (s[0] in a[1] and s[1] in a[2] and s[2] in a[0]) or
             (s[0] in a[2] and s[1] in a[0] and s[2] in a[1]) or
             (s[0] in a[2] and s[1] in a[1] and s[2] in a[0])
-            )):
+        )):
             i += 1
             continue
-    print(i-1)
+    print(i - 1)
     break
-

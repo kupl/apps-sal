@@ -7,8 +7,7 @@ def has_exit(maze):
                 if min(p, len(vector) - p) < w or -~p % w < 2:   # Kate clone at edge?
                     return True                                  # exit found!
                 for direction in (-w, 1, w, -1):                 # otherwise look at adjacent cells
-                    if  vector[p + direction] == " ":            # to see if clone can pass through them
-                        vector[p + direction]  = "k"             # clone Kate where there is a passage
+                    if vector[p + direction] == " ":            # to see if clone can pass through them
+                        vector[p + direction] = "k"             # clone Kate where there is a passage
                 vector[p] = "+"                                  # mark cell as visited
     return False                                                 # There is no exit :(
-

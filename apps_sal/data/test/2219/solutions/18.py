@@ -7,6 +7,6 @@ for i in range(t):
         res += n % k
         n -= n % k
         if n > 0:
-            n = n//k
+            n = n // k
             res += 1
     print(res)

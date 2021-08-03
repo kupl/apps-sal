@@ -5,4 +5,3 @@ def sum_array(arr):
     arr.pop(0)
     arr.pop(-1)
     return sum(arr)
-

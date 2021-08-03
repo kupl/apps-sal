@@ -4,4 +4,3 @@ for i in range(int(input())):
     cur = min(cur, p)
     ans += a * cur
 print(ans)
-

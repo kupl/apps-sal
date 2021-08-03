@@ -1,15 +1,15 @@
-#JMD
-#Nagendra Jha-4096
+# JMD
+# Nagendra Jha-4096
 
- 
+
 import sys
 import math
 
 #import fractions
 #import numpy
- 
+
 ###File Operations###
-fileoperation=0
+fileoperation = 0
 if(fileoperation):
     orig_stdout = sys.stdout
     orig_stdin = sys.stdin
@@ -19,36 +19,37 @@ if(fileoperation):
     sys.stdout = outputfile
 
 ###Defines...###
-mod=1000000007
- 
+mod = 1000000007
+
 ###FUF's...###
+
+
 def nospace(l):
-    ans=''.join(str(i) for i in l)
+    ans = ''.join(str(i) for i in l)
     return ans
- 
- 
- 
+
+
 ##### Main ####
-t=1
+t = 1
 for tt in range(t):
-    n=int(input())
-    a=list(map(int,sys.stdin.readline().split(' ')))
+    n = int(input())
+    a = list(map(int, sys.stdin.readline().split(' ')))
     #n,k,s= map(int, sys.stdin.readline().split(' '))
-    
-    ans=1
-    i=0
-    while(i<n-1):
-        count=1
-        while(2*a[i]>=a[i+1]):
-            count+=1
-            i+=1
-            if(i==n-1):
+
+    ans = 1
+    i = 0
+    while(i < n - 1):
+        count = 1
+        while(2 * a[i] >= a[i + 1]):
+            count += 1
+            i += 1
+            if(i == n - 1):
                 break
-        ans=max(ans,count)
-        i+=1
+        ans = max(ans, count)
+        i += 1
     print(ans)
-    
-    
+
+
 #####File Operations#####
 if(fileoperation):
     sys.stdout = orig_stdout

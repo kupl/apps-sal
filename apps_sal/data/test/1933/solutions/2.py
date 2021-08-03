@@ -24,7 +24,7 @@ score = 0
 for c in range(m):
     count, sr = 0, 0
     for r in range(n):
-        tc = sum([a[x][c] for x in range(r, min(r+k, n))])
+        tc = sum([a[x][c] for x in range(r, min(r + k, n))])
         if tc > count:
             count = tc
             sr = r
@@ -32,6 +32,3 @@ for c in range(m):
     removed += sum([a[r][c] for r in range(sr)])
 
 print(score, removed)
-
-
-

@@ -37,4 +37,3 @@ if f:
     print(' '.join(list(map(str, ans))))
 else:
     print(-1)
-

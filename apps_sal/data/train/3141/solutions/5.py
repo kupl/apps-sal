@@ -1,5 +1,6 @@
 from bisect import insort
 
+
 def comb(fruits):
     fruits = sorted(fruits)
     total_cost = 0

@@ -13,21 +13,19 @@ else:
             if f1 > 0:
                 r.append("(")
                 f1 -= 1
-            else:    
+            else:
                 r.append(")")
                 f2 -= 1
         else:
             r.append(v)
-    cnt = 0        
+    cnt = 0
     for i, v in enumerate(r):
         if v == "(":
             cnt += 1
-        else:    
+        else:
             cnt -= 1
-        if i < n-1 and cnt <= 0:
+        if i < n - 1 and cnt <= 0:
             print(":(")
             break
     else:
         print("".join(r))
-
-

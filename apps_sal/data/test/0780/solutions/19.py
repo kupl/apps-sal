@@ -3,7 +3,8 @@ from sys import setrecursionlimit as SRL
 
 SRL(10 ** 7)
 rd = stdin.readline
-rrd = lambda: list(map(int, rd().strip().split()))
+def rrd(): return list(map(int, rd().strip().split()))
+
 
 s = str(rd().strip())
 
@@ -17,11 +18,11 @@ for i in range(10):
     for j in range(10):
         for u in range(11):
             for v in range(11):
-                k = (i*u + j*v) % 10
-                ddp[i][j][k] = min(ddp[i][j][k], max(0,u+v-1))
-                if k == 0 and (u!=0 or v!=0):
+                k = (i * u + j * v) % 10
+                ddp[i][j][k] = min(ddp[i][j][k], max(0, u + v - 1))
+                if k == 0 and (u != 0 or v != 0):
                     if u == 0 and v == 0:
-                        print(u,v)
+                        print(u, v)
                     ddp[i][j][10] = min(ddp[i][j][10], max(0, u + v - 1))
 
 
@@ -44,6 +45,3 @@ for i in range(10):
             ans[i][j] += tt[k] * ddp[i][j][k]
         asi = asi + str(ans[i][j]) + ' '
     print(asi)
-
-
-

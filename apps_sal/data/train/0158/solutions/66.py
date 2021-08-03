@@ -3,14 +3,14 @@ class Solution:
 
         def dist(a, b):
             # count number of differing characters
-            return sum( (1 if c!=d else 0 for (c,d) in zip(a,b) ) )
+            return sum((1 if c != d else 0 for (c, d) in zip(a, b)))
 
         def estimate_remaining(string):
             # count number of wrong letters
             # assume a perfect scenario:
             #    each swap corrects two letters
             count = dist(string, A)
-            return count/2 if count % 2 == 0 else count//2 + 1
+            return count / 2 if count % 2 == 0 else count // 2 + 1
 
         def find_wrong_letters(working):
             # given a working string, return two dicts that track work to be done:
@@ -34,18 +34,18 @@ class Solution:
             # assert i != j
             if i > j:
                 i, j = j, i
-            return s[:i] + s[j] + s[i+1:j] + s[i] + s[j+1:]
+            return s[:i] + s[j] + s[i + 1:j] + s[i] + s[j + 1:]
 
         def extend(working):
             wrongs, needs = find_wrong_letters(working)
             for letter, wrong_set in list(wrongs.items()):
-                return ( swap(working, i, j) for i in wrong_set for j in needs[letter] )
+                return (swap(working, i, j) for i in wrong_set for j in needs[letter])
 
         # BFS
         # q is a heap that holds triples:
         #   (estimate, swap_count_so_far, the_working_string)
         # q = deque()
-        q = [ (0, 0, B) ]
+        q = [(0, 0, B)]
         seen = dict()
         best = len(A)
         while q:
@@ -53,13 +53,11 @@ class Solution:
             if estimate >= best or -k >= best:
                 return best
             if working == A:
-                best = min( best, -k)
+                best = min(best, -k)
                 continue
             for extension in extend(working):
-                if extension not in seen or seen[extension] > -k+1:
-                    seen[extension] = k+1
-                    new_estimate = estimate_remaining(extension) -k + 1
-                    heapq.heappush( q, (new_estimate, k-1, extension) )
+                if extension not in seen or seen[extension] > -k + 1:
+                    seen[extension] = k + 1
+                    new_estimate = estimate_remaining(extension) - k + 1
+                    heapq.heappush(q, (new_estimate, k - 1, extension))
         return best
-
-

@@ -11,7 +11,7 @@ class Solution:
         for k in range(n):
             for i in range(n):
                 for j in range(n):
-                    dis[i][j] = min(dis[i][j], dis[i][k]+dis[k][j])
+                    dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j])
         # res = {sum(d <= distanceThreshold for d in dis[i]): i for i in range(n)}
         res = {}
         for i in range(n):

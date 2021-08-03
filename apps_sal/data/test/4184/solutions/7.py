@@ -7,5 +7,3 @@ for w in W:
     acc += w
     ans = min(abs(acc - total + acc), ans)
 print(ans)
-
-

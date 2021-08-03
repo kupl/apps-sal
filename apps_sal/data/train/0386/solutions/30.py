@@ -6,8 +6,8 @@ class Solution:
         dp = [[0] * 5 for i in range(n + 1)]
         for i in range(5):
             dp[1][i] = 1
-        for i in range(2, n+1):
+        for i in range(2, n + 1):
             for j in range(5):
                 after = start_table[j]
-                dp[i][j] = sum(dp[i-1][v] for v in after)
+                dp[i][j] = sum(dp[i - 1][v] for v in after)
         return sum(dp[-1]) % (10**9 + 7)

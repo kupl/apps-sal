@@ -9,4 +9,3 @@ REPLS = (
 
 def gym_slang(s, _=None):
     return reduce(lambda a, kv: a.replace(*kv), REPLS, s)
-

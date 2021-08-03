@@ -4,7 +4,7 @@ cl = input().split(' ')
 cl = [int(color) for color in cl]
 
 for bias in range(0, n):
-    for l in range(n-bias):
+    for l in range(n - bias):
         r = l + bias
         loc = float('+inf')
         if bias == 0:
@@ -16,10 +16,9 @@ for bias in range(0, n):
                 dp[l][r] = 2
         else:
             if cl[l] == cl[r]:
-                loc = dp[l+1][r-1]
+                loc = dp[l + 1][r - 1]
             for k in range(l, r):
-                loc = min(loc, dp[l][k]+dp[k+1][r])
+                loc = min(loc, dp[l][k] + dp[k + 1][r])
             dp[l][r] = loc
 
-print(dp[0][n-1])
-
+print(dp[0][n - 1])

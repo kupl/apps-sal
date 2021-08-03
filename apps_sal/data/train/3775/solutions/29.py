@@ -1,4 +1,4 @@
 def digits(n):
-    x=str(n)
-    n=len(x)
+    x = str(n)
+    n = len(x)
     return int(n)

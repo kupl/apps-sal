@@ -11,12 +11,12 @@ class Solution:
         while i <= j < n:
             heapq.heappush(min_heap, (nums[j], j))
             heapq.heappush(max_heap, (-nums[j], j))
-            while i <= j < n and -max_heap[0][0]-min_heap[0][0] > limit:
+            while i <= j < n and -max_heap[0][0] - min_heap[0][0] > limit:
                 i += 1
                 while min_heap and min_heap[0][1] < i:
                     heapq.heappop(min_heap)
                 while max_heap and max_heap[0][1] < i:
                     heapq.heappop(max_heap)
-            ans = max(ans, j-i+1)
+            ans = max(ans, j - i + 1)
             j += 1
         return ans

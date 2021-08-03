@@ -17,9 +17,8 @@ while(S != ""):
             break
     if not(f):
         break
-        
+
 if (f):
     print("YES")
 else:
     print("NO")
-

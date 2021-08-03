@@ -1,6 +1,6 @@
 def draw(waves):
     # your code
-    #■□
+    # ■□
     result = ""
     height = max(waves)
     weight = len(waves)
@@ -10,7 +10,7 @@ def draw(waves):
                 result += "■"
             else:
                 result += "□"
-        if(i != height-1):
+        if(i != height - 1):
             result += "\n"
-    
-    return result 
+
+    return result

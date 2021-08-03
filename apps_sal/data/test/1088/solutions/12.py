@@ -1,10 +1,10 @@
 class dsu():
     """Data structures and algorithms for disjoint set union problems.
-    
+
     Given an undirected graph, it processes the following queries in O(alpha(n)) time (amortized).
 
     >   Edge addition
-    
+
     >   Deciding whether given two vertices are in the same connected component
 
     Each connected component internally has a representative vertex.
@@ -12,14 +12,12 @@ class dsu():
     When two connected components are merged by edge addition, one of the two representatives of these connected components becomes the representative of the new connected component.
     """
 
-
     __slots__ = ["_n", "parent_or_size"]
-
 
     def __init__(self, n):
         """
         It creates an undirected graph with n vertices and 0 edges.
-        
+
         Constraints
         -----------
 
@@ -32,21 +30,20 @@ class dsu():
         """
         self._n = n
         self.parent_or_size = [-1] * n
-    
-    
+
     def merge(self, a, b):
         """
         It adds an edge (a, b).
 
         If the vertices a and b were in the same connected component, it returns the representative of this connected component. Otherwise, it returns the representative of the new connected component.
-       
+
         Constraints
         -----------
 
         >   0 <= a < n 
 
         >   0 <= b < n
-        
+
         Complexity
         ----------
 
@@ -63,7 +60,6 @@ class dsu():
                 x, y = y, x
             self.parent_or_size[x] += self.parent_or_size[y]
             self.parent_or_size[y] = x
-
 
     def same(self, a, b):
         """
@@ -84,7 +80,6 @@ class dsu():
         # assert 0 <= a < self._n
         # assert 0 <= b < self._n
         return self.leader(a) == self.leader(b)
-
 
     def leader(self, a):
         """
@@ -109,7 +104,6 @@ class dsu():
             self.parent_or_size[child] = a
         return a
 
-    
     def size(self, a):
         """
         It returns the size of the connected component that contains the vertex aa.
@@ -118,7 +112,7 @@ class dsu():
         -----------
 
         >   0 <= a < n
-        
+
         Complexity
         ----------
 
@@ -126,7 +120,6 @@ class dsu():
         """
         # assert 0 <= a < self._n
         return -self.parent_or_size[self.leader(a)]
-
 
     def groups(self):
         """
@@ -145,7 +138,6 @@ class dsu():
         return [g for g in result if g]
 
 
-
 MOD = 998244353
 table_len = 110
 
@@ -155,11 +147,12 @@ for i in range(2, table_len):
 
 finv = [0] * table_len
 finv[-1] = pow(fac[-1], MOD - 2, MOD)
-for i in range(table_len-1, 0, -1):
-    finv[i-1] = finv[i] * i % MOD
+for i in range(table_len - 1, 0, -1):
+    finv[i - 1] = finv[i] * i % MOD
 
 N, K = list(map(int, input().split()))
 As = [list(map(int, input().split())) for _ in range(N)]
+
 
 def solve_row(mat):
     uf = dsu(N)
@@ -177,7 +170,6 @@ def solve_row(mat):
         ret %= MOD
     return ret
 
+
 tAs = list(map(list, list(zip(*As))))
 print((solve_row(As) * solve_row(tAs) % MOD))
-
-

@@ -8,6 +8,7 @@ def minimum(arr):
             arr.pop(1)
     return min
 
+
 def maximum(arr):
     max = arr[0]
     while len(arr) > 1:
@@ -17,4 +18,3 @@ def maximum(arr):
         else:
             arr.pop(1)
     return max
-

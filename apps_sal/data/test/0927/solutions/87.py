@@ -20,8 +20,8 @@ def main():
     print((dp[-1]))
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

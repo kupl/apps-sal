@@ -3,7 +3,7 @@ codeforces.com/problemset/problem/859/C
 author: latesum
 '''
 n = int(input())
-v = list(map(int,input().split()))
+v = list(map(int, input().split()))
 v.reverse()
 ans = [0, 0]
 for i in range(n):
@@ -14,4 +14,3 @@ for i in range(n):
     else:
         ans[1] += v[i]
 print(ans[1], ans[0])
-

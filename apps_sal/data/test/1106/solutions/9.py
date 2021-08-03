@@ -31,4 +31,6 @@ def __starting_point():
     n = int(input())
     data = [0] + list(map(int, input().split()))
     print(count_needed_lights(data, 0)[0])
+
+
 __starting_point()

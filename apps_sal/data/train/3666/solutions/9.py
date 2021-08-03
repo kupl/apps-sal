@@ -1,1 +1,1 @@
-whitespace = lambda s: not s or s.isspace()    
+def whitespace(s): return not s or s.isspace()

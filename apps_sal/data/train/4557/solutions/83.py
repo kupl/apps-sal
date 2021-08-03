@@ -6,4 +6,3 @@ def row_weights(array):
         else:
             second += el
     return (second, first)
-

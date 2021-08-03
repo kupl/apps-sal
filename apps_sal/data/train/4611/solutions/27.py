@@ -17,5 +17,3 @@ def animals(heads, legs):
                 return (chicken, cow)
             else:
                 return "No solutions"
-        
-

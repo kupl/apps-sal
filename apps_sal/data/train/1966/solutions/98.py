@@ -1,11 +1,13 @@
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
-        ar = [[0]*len(mat[0]) for _ in range(len(mat))]
+        ar = [[0] * len(mat[0]) for _ in range(len(mat))]
         for i in range(len(mat)):
             c = 0
             for j in range(len(mat[0])):
-                if mat[i][j]: c += 1
-                else: c = 0
+                if mat[i][j]:
+                    c += 1
+                else:
+                    c = 0
                 ar[i][j] = c
         for r in mat:
             print(r)
@@ -21,7 +23,7 @@ class Solution:
                     x = min(x, ar[k][j])
                     ans += x
         return ans
-        
+
         # out = mat[0][0]
         # mat[0][0] = [mat[0][0]]*3 # [row,col,diag]
         # for i in range(1, len(mat)):
@@ -55,4 +57,3 @@ class Solution:
         # for r in mat:
         #     print(r)
         # return out
-

@@ -19,4 +19,3 @@ for i in range(N):
             ans = j + 1
 
     print(ans)
-

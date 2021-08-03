@@ -21,18 +21,20 @@ n = (N-(k**2-k)/2)/k
 n>0且n為整數則符合
 
 '''
+
+
 class Solution:
     def consecutiveNumbersSum(self, N: int) -> int:
         res = 0
-        
+
         for k in range(1, 10**9):
-            t = (k**2-k)/2
-            s = (N-t)/k
+            t = (k**2 - k) / 2
+            s = (N - t) / k
 
             if s <= 0:
                 break
-            
+
             if s.is_integer():
                 res += 1
-        
+
         return res

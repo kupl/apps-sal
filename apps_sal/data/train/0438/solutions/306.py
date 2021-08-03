@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         ans = -1
@@ -17,8 +18,7 @@ class Solution:
             if val == m:
                 ans = i + 1
             if (backLib[index - 1] == m or forLib[index + 1] == m) and memo[m] == 0:
-                ans = i  
+                ans = i
             forLib[index - backLib[index - 1]] = val
             backLib[index + forLib[index + 1]] = val
         return ans
-

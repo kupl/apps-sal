@@ -1,5 +1,6 @@
 import sys
 
+
 def factorize(n):
     if n == 2:
         return [2]
@@ -23,4 +24,3 @@ for a in a_list:
     count_2 += len(factorize(a))
 
 print(count_2)
-

@@ -6,11 +6,11 @@ line = []
 sweeping = []
 
 
-for i in range( n ):
+for i in range(n):
     try:
-        line.append([ num[ a[i] ], i ])
+        line.append([num[a[i]], i])
     except:
-        num[ a[i] ] = i
+        num[a[i]] = i
 
 line.sort()
 if len(line) > 0:
@@ -29,19 +29,19 @@ if len(sweeping) == 0:
     n -= 1
     ans = 1
     for i in range(n):
-        ans*=2
-        ans%=998244353
+        ans *= 2
+        ans %= 998244353
 
 else:
     ans = 1
     for i in range(sweeping[0][0]):
-        ans*=2
-    for i in range(1, len(sweeping) ):
-        for j in range( sweeping[i][0] - sweeping[i-1][1] ):
-            ans*=2
-            ans%=998244353
-    for i in range( n - sweeping[-1][1] - 1):
-        ans*=2
-        ans%=998244353
+        ans *= 2
+    for i in range(1, len(sweeping)):
+        for j in range(sweeping[i][0] - sweeping[i - 1][1]):
+            ans *= 2
+            ans %= 998244353
+    for i in range(n - sweeping[-1][1] - 1):
+        ans *= 2
+        ans %= 998244353
 
-print (ans)
+print(ans)

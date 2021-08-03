@@ -7,5 +7,5 @@ class Solution:
                     c += 1
             if c == x:
                 return x
-            
+
         return -1

@@ -2,7 +2,7 @@ class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         # print('start')
         import sortedcontainers
-        
+
         sl = sortedcontainers.SortedList()
         start, end = 0, 0
         best = 0

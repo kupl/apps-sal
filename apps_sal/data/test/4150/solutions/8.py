@@ -86,4 +86,3 @@ while taken < n:
 
 
 print(''.join('1' if i in coaches[0] else '2' for i in range(n)))
-

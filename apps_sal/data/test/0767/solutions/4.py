@@ -2,7 +2,7 @@ _, z = list(map(int, input().split()))
 p = list(map(int, input().split()))
 p.sort()
 pos = -1
-for i in range(len(p)//2, len(p)):
+for i in range(len(p) // 2, len(p)):
     if p[i] >= p[0] + z:
         pos = i
         break
@@ -26,4 +26,3 @@ else:
         else:
             r += 1
     print(ctr)
-

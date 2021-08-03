@@ -3,4 +3,3 @@ if '' in a:
     print(0)
 else:
     print(len(a))
-

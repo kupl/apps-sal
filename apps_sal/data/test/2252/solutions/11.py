@@ -20,4 +20,5 @@ def __starting_point():
         l, r, x = list(map(int, input().split()))
         print(case(p, l, r, x))
 
+
 __starting_point()

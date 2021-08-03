@@ -1,5 +1,6 @@
 from datetime import date
 
+
 def solve(a, b):
     r = []
     for y in range(a, b + 1):

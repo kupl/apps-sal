@@ -9,6 +9,6 @@ for i in range(60):
     for j in a:
         if digit & j:
             cnt += 1
-    ans += digit*cnt*(n - cnt)%mod
+    ans += digit * cnt * (n - cnt) % mod
 
-print(ans%mod)
+print(ans % mod)

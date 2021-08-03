@@ -41,8 +41,7 @@ for i in nm:
             nmfin[i].append(cur[j])
 print(len(nmfin))
 for i in nmfin:
-    print(i,len(nmfin[i]), end=' ')
+    print(i, len(nmfin[i]), end=' ')
     for j in nmfin[i]:
-        print(j,end=' ')
+        print(j, end=' ')
     print()
-

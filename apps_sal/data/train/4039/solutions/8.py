@@ -1,7 +1,7 @@
 def fouriest(i):
     highscore = 0
     winner = 5
-    for base in range(5, i-3, 1):
+    for base in range(5, i - 3, 1):
         fours = 0
         n = i
         while n > 0:
@@ -11,7 +11,7 @@ def fouriest(i):
         if fours > highscore:
             highscore = fours
             winner = base
-        elif 4*base**(highscore) > i:
+        elif 4 * base**(highscore) > i:
             break
     n = i
     result = ""

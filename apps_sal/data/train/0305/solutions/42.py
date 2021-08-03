@@ -8,11 +8,11 @@ class Solution:
                     count += 1
             for j in range(n - 2 * size + 1):
                 if count == size:
-                    res.add(text[j : j + 2 * size])
+                    res.add(text[j: j + 2 * size])
                 if text[j] == text[j + size]:
                     count -= 1
                 if j + 2 * size < n and text[j + size] == text[j + 2 * size]:
                     count += 1
             size += 1
-        
+
         return len(res)

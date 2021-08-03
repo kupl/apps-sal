@@ -1,6 +1,6 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        if n==0:
+        if n == 0:
             return 0
         dic = {0: (4, 6),
                1: (8, 6),
@@ -12,13 +12,13 @@ class Solution:
                7: (2, 6),
                8: (1, 3),
                9: (2, 4)}
-        dp = [1]*10
-        for _ in range(n-1):
-            new = [0]*10
+        dp = [1] * 10
+        for _ in range(n - 1):
+            new = [0] * 10
             for i in range(10):
                 for nei in dic[i]:
                     new[i] += dp[nei]
-                    new[i] %= (10**9+7)
+                    new[i] %= (10**9 + 7)
             dp = new
-        
-        return sum(dp)%(10**9+7)
+
+        return sum(dp) % (10**9 + 7)

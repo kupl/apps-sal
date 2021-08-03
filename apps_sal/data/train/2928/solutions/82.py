@@ -33,8 +33,8 @@ def alphabet_war(fight):
         return FIGHT_AGAIN
     else:
         return LEFT_SIDE_WINS if sum(left) > sum(right) else RIGHT_SIDE_WINS
-    
-    
+
+
 class TestAlphabetWar(unittest.TestCase):
     def test_alphabet_war_on_right_side_wins(self):
         fight = 'z'
@@ -50,4 +50,3 @@ class TestAlphabetWar(unittest.TestCase):
         fight = 'zdqmwpbs'
         actual = alphabet_war(fight)
         self.assertEqual(actual, FIGHT_AGAIN)
-

@@ -9,5 +9,5 @@ class Solution:
         res = 0
         for func in funcs:
             temp = [func(*pt) for pt in points]
-            res = max(res, max(temp)-min(temp))
+            res = max(res, max(temp) - min(temp))
         return res

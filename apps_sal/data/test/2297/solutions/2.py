@@ -6,7 +6,7 @@ def main():
     n = int(input())
     for i in range(n):
         a, b = list(map(int, input().split()))
-        print(calc(b) - calc(a - 1))    
+        print(calc(b) - calc(a - 1))
+
 
 main()
-

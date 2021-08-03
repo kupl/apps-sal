@@ -11,9 +11,9 @@ for idx_A, a in enumerate(A):
     while idx_B < N and B[idx_B] < a:
         idx_B += 1
     if ma < idx_A - idx_B:
-        ma = idx_A-idx_B
+        ma = idx_A - idx_B
 
-Ans = (B+B)[N-ma-1:2*N-ma-1]
+Ans = (B + B)[N - ma - 1:2 * N - ma - 1]
 
 for a, b in zip(A, Ans):
     if a == b:
@@ -21,4 +21,3 @@ for a, b in zip(A, Ans):
         return
 print("Yes")
 print((*Ans))
-

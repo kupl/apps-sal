@@ -1,15 +1,15 @@
-n,k = (int(x) for x in input().split())
-r,s,p = (int(x) for x in input().split())
+n, k = (int(x) for x in input().split())
+r, s, p = (int(x) for x in input().split())
 t = input()
 a = []
 ans = 0
 
-for i in range(0,n):
+for i in range(0, n):
     a.append(t[i])
 
-for j in range(0,n):
+for j in range(0, n):
     if j - k >= 0 and a[j - k] == a[j]:
-           a[j] = "o"
+        a[j] = "o"
     p
     if a[j] == "r":
         ans = ans + p

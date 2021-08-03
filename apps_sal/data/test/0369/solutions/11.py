@@ -11,7 +11,7 @@ ans = []
 
 while True:
     valid = False
-    next_min_idx = max(idx-m, 0)
+    next_min_idx = max(idx - m, 0)
     for candi in reversed(list(range(next_min_idx, idx))):
         if masu[candi] == '0':
             destination = candi
@@ -28,4 +28,3 @@ while True:
 
 str_list = list(map(str, ans))
 print((' '.join(reversed(str_list))))
-

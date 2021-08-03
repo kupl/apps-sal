@@ -27,19 +27,19 @@ class Factorial():
         ''' nCr % mod '''
         if r > n:
             return 0
-        t = self.fact_inv(n-r)*self.fact_inv(r) % self.mod
-        return self(n)*t % self.mod
+        t = self.fact_inv(n - r) * self.fact_inv(r) % self.mod
+        return self(n) * t % self.mod
 
     def comb_with_repetition(self, n, r):
         ''' nHr % mod '''
-        t = self.fact_inv(n-1)*self.fact_inv(r) % self.mod
-        return self(n+r-1)*t % self.mod
+        t = self.fact_inv(n - 1) * self.fact_inv(r) % self.mod
+        return self(n + r - 1) * t % self.mod
 
     def perm(self, n, r):
         ''' nPr % mod '''
         if r > n:
             return 0
-        return self(n)*self.fact_inv(n-r) % self.mod
+        return self(n) * self.fact_inv(n - r) % self.mod
 
     @staticmethod
     def xgcd(a, b):
@@ -62,29 +62,28 @@ class Factorial():
     def _make(self, n):
         if n >= self.mod:
             n = self.mod
-        if self._size < n+1:
-            for i in range(self._size, n+1):
-                self._factorial.append(self._factorial[i-1]*i % self.mod)
-            self._size = n+1
+        if self._size < n + 1:
+            for i in range(self._size, n + 1):
+                self._factorial.append(self._factorial[i - 1] * i % self.mod)
+            self._size = n + 1
 
     def _make_inv(self, n):
         if n >= self.mod:
             n = self.mod
         self._make(n)
-        if self._size_inv < n+1:
-            for i in range(self._size_inv, n+1):
+        if self._size_inv < n + 1:
+            for i in range(self._size_inv, n + 1):
                 self._factorial_inv.append(self.modinv(self._factorial[i]))
-            self._size_inv = n+1
+            self._size_inv = n + 1
 
 
 n, m, k = list(map(int, input().split()))
 mod = 998244353
 comb = Factorial(mod).comb
 s = 0
-for i in range(k+1, n):
-    t = comb(n-1, i)*m % mod
-    t = t*pow(m-1, n-1-i, mod) % mod
-    s = (s+t) % mod
-ans = (pow(m, n, mod)-s) % mod
+for i in range(k + 1, n):
+    t = comb(n - 1, i) * m % mod
+    t = t * pow(m - 1, n - 1 - i, mod) % mod
+    s = (s + t) % mod
+ans = (pow(m, n, mod) - s) % mod
 print(ans)
-

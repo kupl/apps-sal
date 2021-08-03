@@ -8,4 +8,3 @@ else:
     dy = s.count('U') - s.count('D')
     dx = s.count('R') - s.count('L')
     print((abs(dx) + abs(dy)) // 2)
-

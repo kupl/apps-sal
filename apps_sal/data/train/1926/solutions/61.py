@@ -1,7 +1,7 @@
 class Solution:
     def closestDivisors(self, num: int) -> List[int]:
-        r = int(math.sqrt(num+2))
-        d, ans = inf, [1, num+1]
+        r = int(math.sqrt(num + 2))
+        d, ans = inf, [1, num + 1]
         for x in range(r, 1, -1):
             for y in [num + 1, num + 2]:
                 if y % x == 0:
@@ -10,4 +10,3 @@ class Solution:
                         d = diff
                         ans = [x, y // x]
         return ans
-

@@ -32,4 +32,3 @@ class Solution:
             dp = dp2
 
         return sum(map(sum, dp)) % mod
-

@@ -7,12 +7,12 @@ class Solution:
                 return dp[x]
 
             dp[x] = 1
-            for y in range(x-1, x-d-1, -1):
+            for y in range(x - 1, x - d - 1, -1):
                 if y < 0 or arr[y] >= arr[x]:
                     break
                 dp[x] = max(dp[x], 1 + dp_memo(y))
 
-            for y in range(x+1, x+d+1, +1):
+            for y in range(x + 1, x + d + 1, +1):
                 if y >= len(arr) or arr[y] >= arr[x]:
                     break
                 dp[x] = max(dp[x], 1 + dp_memo(y))

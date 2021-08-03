@@ -90,5 +90,3 @@ else:
     nowx += x_pm * (k - temp)
     app(nowx, nowy)
     ok()
-
-

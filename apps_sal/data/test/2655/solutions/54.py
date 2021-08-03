@@ -4,7 +4,6 @@ a.sort()
 
 ans = 0
 for i in range(1, n):
-    ans += a[n - i//2 - 1]
+    ans += a[n - i // 2 - 1]
 
 print(ans)
-

@@ -20,4 +20,3 @@ for a0 in range(101):
         print("Yes")
         return
 print("No")
-

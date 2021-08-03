@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         res = l = 0

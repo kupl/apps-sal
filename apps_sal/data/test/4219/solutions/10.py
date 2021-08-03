@@ -7,7 +7,7 @@ for k in range(N):
         x -= 1
         shougen[k].append((x, y))
 ans = 0
-bit = 2**N-1
+bit = 2**N - 1
 while bit:
     person = [-1 for _ in range(N)]
     b = bit
@@ -30,5 +30,3 @@ while bit:
         ans = max(ans, sum(person))
     bit -= 1
 print(ans)
-
-

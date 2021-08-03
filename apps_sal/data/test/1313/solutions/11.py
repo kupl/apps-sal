@@ -4,4 +4,3 @@ if m >= n:
     print("Second")
 else:
     print("First")
-

@@ -1,9 +1,9 @@
 x = int(input())
-MAX = 10**5+10
+MAX = 10**5 + 10
 res = [0 for i in range(MAX)]
 ans = 0
 
-for i in range(2,MAX):
+for i in range(2, MAX):
     j = i
     if(res[i] != 0):
         continue
@@ -11,8 +11,8 @@ for i in range(2,MAX):
         if(res[j] == 0):
             res[j] = i
         j += i
-        
-for i in range(x,MAX) :
+
+for i in range(x, MAX):
     if(res[i] == i):
         ans = i
         break

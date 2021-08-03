@@ -1,7 +1,7 @@
 from collections import deque
 N, M = map(int, input().split())
 
-h = [[]*N for _ in range(N)]
+h = [[] * N for _ in range(N)]
 AB = []
 
 for _ in range(M):
@@ -18,8 +18,8 @@ for i in range(M):
     a, b = AB[i]
     h[a].remove(b)
     h[b].remove(a)
-    
-    fl = [False]*N
+
+    fl = [False] * N
 
     q = deque([0])
     while q:
@@ -29,7 +29,7 @@ for i in range(M):
         fl[t] = True
         for tt in h[t]:
             q.append(tt)
-    
+
     if not all(fl):
         ans += 1
 

@@ -1,5 +1,6 @@
 from sys import stdin as cin
 
+
 def main():
     n, m = list(map(int, cin.readline().split()))
     a = list(map(int, cin.readline().split()))
@@ -21,5 +22,5 @@ def main():
         o = min(n - y + x, o)
     print(o)
 
-main()
 
+main()

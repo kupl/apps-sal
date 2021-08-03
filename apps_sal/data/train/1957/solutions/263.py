@@ -15,5 +15,3 @@ class Solution:
                 if 0 <= nx < len(grid) and 0 <= ny < len(grid[0]) and eliminated + grid[nx][ny] <= k:
                     queue.append((nx, ny, eliminated + grid[nx][ny], count + 1))
         return -1
-            
-

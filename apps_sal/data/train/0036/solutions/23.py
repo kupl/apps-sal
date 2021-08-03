@@ -10,4 +10,3 @@ stdin.readline()
 
 for y in map(int, stdin.readline().split()):
     print(bisect_left(l, y) + 1)
-

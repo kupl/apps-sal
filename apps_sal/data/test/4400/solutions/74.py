@@ -1,7 +1,7 @@
 S = input()
 if S == 'SSS':
     print(0)
-elif S=='RRR':
+elif S == 'RRR':
     print(3)
 elif S == 'RRS':
     print(2)

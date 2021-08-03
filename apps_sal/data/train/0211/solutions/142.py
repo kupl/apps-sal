@@ -12,9 +12,8 @@ class Solution:
                 else:
                     now += S[j + 1]
             word.append(now)
-            
-            
+
             if len(word) == len(set(word)):
                 ans = max(ans, len(word))
-        
+
         return ans

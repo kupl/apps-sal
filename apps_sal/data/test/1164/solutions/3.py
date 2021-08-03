@@ -34,5 +34,3 @@ for i in range(len(ans)):
         nans += '.'
     nans += ans[len(ans) - 1 - i]
 print(nans[::-1] + ans2)
-
-

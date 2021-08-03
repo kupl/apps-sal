@@ -26,7 +26,3 @@ while True:
     pos[1] -= side_len
 
 print(turns)
-
-
-
-

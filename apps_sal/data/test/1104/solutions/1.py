@@ -11,7 +11,7 @@ for i in range(4):
         break
     flag = True
     res = [i]
-    for k in range(0, n-1):
+    for k in range(0, n - 1):
         if not flag:
             break
         for j in range(4):
@@ -26,4 +26,3 @@ if flag:
     print(*res)
 else:
     print("NO")
-

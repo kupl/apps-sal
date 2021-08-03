@@ -13,4 +13,3 @@ for x in L:
 
 print(len(res))
 print(" ".join(map(str, res)))
-

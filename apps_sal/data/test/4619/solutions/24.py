@@ -1,4 +1,4 @@
-w,h,n = map(int,input().split())
+w, h, n = map(int, input().split())
 data = list(input().split() for i in range(n))
 x_1 = 0
 x_2 = w

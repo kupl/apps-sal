@@ -1,8 +1,10 @@
 n, m, cnt = int(input()), 148, 0
 ans = [['N'] * m for i in range(m)]
 
+
 def edge(i, j):
     ans[i][j] = ans[j][i] = 'Y'
+
 
 def node(*adj):
     nonlocal cnt
@@ -12,12 +14,13 @@ def node(*adj):
         edge(i, j)
     return i
 
+
 start, end, choice = node(), node(), node()
-if n&1:
+if n & 1:
     edge(choice, end)
 for i in range(1, 30):
     end, choice = node(node(end), node(end)), node(node(choice))
-    if n&(1<<i):
+    if n & (1 << i):
         edge(choice, end)
 edge(start, choice)
 
@@ -26,7 +29,4 @@ for line in ans:
     print(''.join(line))
 
 
-
-
 # Made By Mostafa_Khaled
-

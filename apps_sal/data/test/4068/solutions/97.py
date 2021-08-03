@@ -6,7 +6,7 @@ def main():
 
     fib = [1 for _ in range(100002)]
     for i in range(2, 100002):
-        fib[i] = fib[i-1] + fib[i-2]
+        fib[i] = fib[i - 1] + fib[i - 2]
 
     for _ in range(M):
 
@@ -25,7 +25,6 @@ def main():
         ans *= fib[(N - pos)]
 
     print((ans % 1_000_000_007))
-
 
 
 def __starting_point():

@@ -12,6 +12,5 @@ class Solution:
                         new[j] = max(new[j], v + 1)
                     new[k] = max(new[k], v)
             dp = new
-        
-        return len(A[0]) - max(dp.values())
 
+        return len(A[0]) - max(dp.values())

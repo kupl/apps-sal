@@ -1,5 +1,6 @@
 from itertools import count
 
+
 def four_piles(apples, y):
     for x in count(2 * y, y):
         plus = x + y

@@ -2,6 +2,7 @@
 template_chars_region = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,:;-?! '()$%&"
 template_chars_region += '"'
 
+
 def decrypt(encrypted_text):
     result = ''
     if(not encrypted_text or 0 == len(encrypted_text)):
@@ -12,8 +13,8 @@ def decrypt(encrypted_text):
     for index, single_char in enumerate(''.join(encrypted_text[1:])):
         previous_template_index = template_chars_region.index(first_original_char)
         difference_template_index = template_chars_region.index(single_char)
-        
-        result += template_chars_region[(previous_template_index - difference_template_index + template_length)%template_length]
+
+        result += template_chars_region[(previous_template_index - difference_template_index + template_length) % template_length]
         first_original_char = result[-1]
     result_copy = ''
     for index, single_char in enumerate(result):
@@ -46,7 +47,6 @@ def encrypt(text):
             continue
         previous_template_index = template_chars_region.index(text_copy[index - 1])
         current_template_index = template_chars_region.index(text_copy[index])
-        result += template_chars_region[(previous_template_index - current_template_index + template_length)%template_length]
+        result += template_chars_region[(previous_template_index - current_template_index + template_length) % template_length]
     result = template_chars_region[template_length - template_chars_region.index(text[0]) - 1] + result
     return result
-

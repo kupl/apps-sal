@@ -2,6 +2,7 @@ class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         res, mod, cache = 0, 10 ** 9 + 7, {}
         # cache[(i, fuel)]: how many ways to start from city i with initial fuel to go to city end
+
         def dfs(s, fuel):
             if fuel <= 0:
                 return 0
@@ -14,6 +15,8 @@ class Solution:
                             cache[(s, fuel)] += 1
             return cache[(s, fuel)] % mod
         return dfs(start, fuel) + (0 if start != finish else 1)
+
+
 '''
 [2,1,5]
 0

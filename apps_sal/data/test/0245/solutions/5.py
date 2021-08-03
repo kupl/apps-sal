@@ -12,7 +12,7 @@ yl = sorted(list(y))
 if (xl[-1] - xl[0] != yl[-1] - yl[0]):
     print('NO')
     return
-z = [[0 for i in range(len(xl)-1)] for j in range(len(yl)-1)]
+z = [[0 for i in range(len(xl) - 1)] for j in range(len(yl) - 1)]
 for d in p:
     for i in range(xl.index(d[0]), xl.index(d[2])):
         for j in range(yl.index(d[1]), yl.index(d[3])):
@@ -22,4 +22,3 @@ for d in z:
         print('NO')
         return
 print('YES')
-

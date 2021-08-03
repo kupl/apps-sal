@@ -10,7 +10,7 @@ def __starting_point():
 
     prev_level = []
     for level_id in range(1, T + 1):
-        level = sorted(data[T - level_id] + prev_level, reverse=True) 
+        level = sorted(data[T - level_id] + prev_level, reverse=True)
         if T - level_id <= 10:
             max_size = 2 ** (T - level_id)
             level = level[:max_size]
@@ -21,5 +21,6 @@ def __starting_point():
             for i in range(0, len(level), 2)
         ]
     print(prev_level[0])
+
 
 __starting_point()

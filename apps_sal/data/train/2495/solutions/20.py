@@ -5,4 +5,3 @@ class Solution:
                 return False
             arr[arr.index(i)] = None
         return True
-

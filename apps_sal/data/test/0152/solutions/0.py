@@ -24,4 +24,3 @@ for uk1 in range(len(mass1) - 1, -1, -1):
     uk2 -= 1
     minans = min(minans, (n - maxw) * mass1[uk1][1])
 print(minans)
-

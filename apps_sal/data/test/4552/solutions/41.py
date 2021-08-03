@@ -11,8 +11,7 @@ ret = -10 ** 18
 itr = product([0, 1], repeat=10)
 itr.__next__()
 for bit in itr:
-    cand = sum((P[i][sum((f*b for f, b in zip(F[i], bit)))] for i in range(N)))
+    cand = sum((P[i][sum((f * b for f, b in zip(F[i], bit)))] for i in range(N)))
     ret = max(ret, cand)
 
 print(ret)
-

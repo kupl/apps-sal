@@ -7,4 +7,3 @@ b = min(r - l, a)
 
 total = (l + b) * 2 + (a - b) // 2 * 2
 print(total)
-

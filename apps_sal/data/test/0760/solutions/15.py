@@ -3,7 +3,8 @@ def tandem(n, a, i):
         if a[k] != a[k + n] and a[k + n] != '??':
             return 0
     return 1
- 
+
+
 s = list(input().strip())
 k = int(input())
 s += ['??' for i in range(k)]

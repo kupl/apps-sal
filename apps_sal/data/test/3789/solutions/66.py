@@ -1,9 +1,11 @@
 from collections import deque
 
 # グラフに辺を追加する
+
+
 def addEdge(adjL, vFr, vTo, cap):
     adjL[vFr].append([vTo, cap, len(adjL[vTo])])
-    adjL[vTo].append([vFr, 0, len(adjL[vFr]) - 1]) # 逆辺
+    adjL[vTo].append([vFr, 0, len(adjL[vFr]) - 1])  # 逆辺
 
 
 # Dinic法（最大フローを求める）
@@ -22,8 +24,8 @@ def Dinic(adjL, vSt, vEn):
                     dist[v2] = dist[vNow] + 1
                     Q.append(v2)
 
-
     # 残余グラフの始点から終点までの経路（増加パス）を、DFSで探索する
+
     def DFS(vNow, vEn, fNow):
         if vNow == vEn:
             # 終点に到達したら、フローの増加量を返す
@@ -45,7 +47,6 @@ def Dinic(adjL, vSt, vEn):
 
         # 現在の頂点からの探索先がない場合、ゼロを返す
         return 0
-
 
     numV = len(adjL)
     MaximumFlow = 0
@@ -87,4 +88,3 @@ for i in range(1, N + 1):
 # Dinic法（最大フローを求める）
 mf = Dinic(adjList, 0, N + 1)
 print((sum([A for A in As if A > 0]) - mf))
-

@@ -3,8 +3,8 @@ class Solution:
         count = 0
         for i in range(len(rating)):
             for j in range(len(rating)):
-                #Never need to check last 2
-                #check for 3rd value
+                # Never need to check last 2
+                # check for 3rd value
                 if j <= i:
                     continue
                 if rating[i] > rating[j]:
@@ -15,7 +15,5 @@ class Solution:
                     for k in rating[j:]:
                         if rating[j] < k:
                             count += 1
-                           
-        return count
-                        
 
+        return count

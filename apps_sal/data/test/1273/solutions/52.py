@@ -28,4 +28,3 @@ while stack:
 print((max(ans)))
 for i in e:
     print((ans[i]))
-

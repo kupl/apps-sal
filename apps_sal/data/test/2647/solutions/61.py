@@ -2,16 +2,16 @@ from collections import deque
 
 inf = 10**10
 
-h,w = map(int,input().split())
+h, w = map(int, input().split())
 field = [input() for _ in range(h)]
 
 length = [[inf for j in range(w)]for i in range(h)]
 visited = [[0 for j in range(w)]for i in range(h)]
 
-move = [[-1,0],[1,0],[0,-1],[0,1]]
+move = [[-1, 0], [1, 0], [0, -1], [0, 1]]
 
 que = deque([])
-que.append([0,0])
+que.append([0, 0])
 length[0][0] = 0
 visited[0][0] = 1
 
@@ -21,10 +21,10 @@ for i in range(h):
     white += field[i].count(".")
 
 while que:
-    y,x = que.popleft()
+    y, x = que.popleft()
 
-    for i,j in move:
-        ny,nx = y+i,x+j
+    for i, j in move:
+        ny, nx = y + i, x + j
 
         if ny < 0 or ny >= h or nx < 0 or nx >= w:
             continue
@@ -32,12 +32,12 @@ while que:
             continue
         elif visited[ny][nx] == 1:
             continue
-        
+
         visited[ny][nx] = 1
-        que.append([ny,nx])
+        que.append([ny, nx])
         length[ny][nx] = length[y][x] + 1
 
-if length[h-1][w-1] == inf:
+if length[h - 1][w - 1] == inf:
     print(-1)
 else:
-    print(white-(length[h-1][w-1]+1))
+    print(white - (length[h - 1][w - 1] + 1))

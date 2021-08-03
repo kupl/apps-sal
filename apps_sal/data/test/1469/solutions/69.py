@@ -19,4 +19,3 @@ for i in reversed(list(range(X.bit_length()))):
 print((N, len(ans)))
 for a, b, d in ans:
     print((a + 1, b + 1, d))
-

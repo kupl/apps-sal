@@ -5,20 +5,19 @@ asum = [0]
 bsum = [0]
 
 for i in range(len(aa)):
-    asum.append(asum[i]+aa[i])
+    asum.append(asum[i] + aa[i])
 for i in range(len(bb)):
-    bsum.append(bsum[i]+bb[i])
+    bsum.append(bsum[i] + bb[i])
 
-j = len(bsum)-1
+j = len(bsum) - 1
 ans = 0
 for i in range(len(asum)):
     while j >= 0:
         if k >= asum[i] + bsum[j]:
-            ans = max(ans, i+j)
+            ans = max(ans, i + j)
             break
         else:
             j -= 1
 
 
 print(ans)
-

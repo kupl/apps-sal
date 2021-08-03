@@ -1,7 +1,9 @@
 import sys
- 
-RI = lambda : [int(x) for x in sys.stdin.readline().split()]
-ri = lambda : sys.stdin.readline().strip()
+
+
+def RI(): return [int(x) for x in sys.stdin.readline().split()]
+def ri(): return sys.stdin.readline().strip()
+
 
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
@@ -15,17 +17,16 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
- 
-for i in range(int(ri())):
-    a,b = RI()
 
-    temp = a%b
+for i in range(int(ri())):
+    a, b = RI()
+
+    temp = a % b
     if temp == 0:
         print(0)
     else:
-        print(b-temp)
-
-
-
+        print(b - temp)

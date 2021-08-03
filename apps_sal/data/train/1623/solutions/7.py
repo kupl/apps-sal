@@ -4,6 +4,7 @@ from functools import wraps
 
 def memoize(f):
     memo = {}
+
     @wraps(f)
     def wrapper(*args):
         try:
@@ -41,4 +42,3 @@ def B(m):
 
 def bernoulli_number(m):
     return B(m)
-

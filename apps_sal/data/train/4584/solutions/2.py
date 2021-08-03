@@ -5,5 +5,3 @@ def invert(lst):
         inv.append(lst[i] * -1)
         i += 1
     return inv
-
-

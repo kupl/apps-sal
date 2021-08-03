@@ -21,5 +21,5 @@ for i in range(m):
         if len(L) >= K:
             LL += sorted(L)[:len(L) - K + 1]
     if len(LL) >= Q:
-        ans = min(ans, sorted(LL)[Q-1] - l)
+        ans = min(ans, sorted(LL)[Q - 1] - l)
 print(ans)

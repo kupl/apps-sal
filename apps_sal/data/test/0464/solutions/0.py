@@ -1,8 +1,8 @@
-h,w = map(int,input().split())
+h, w = map(int, input().split())
 s = [list(input()) for i in range(h)]
 hh = -1
 tmp = -1
-for k,i in enumerate(s):
+for k, i in enumerate(s):
     a = i.count('*')
     if tmp < a:
         tmp = a
@@ -11,7 +11,7 @@ for k,i in enumerate(s):
 t = [list(i) for i in list(zip(*s))]
 ww = -1
 tmp = -1
-for k,i in enumerate(t):
+for k, i in enumerate(t):
     a = i.count('*')
     if tmp < a:
         tmp = a
@@ -25,7 +25,7 @@ if hh in (0, h - 1) or ww in (0, w - 1):
     print('NO')
     return
 
-if '.' in (s[hh-1][ww], s[hh+1][ww], s[hh][ww-1], s[hh][ww+1]):
+if '.' in (s[hh - 1][ww], s[hh + 1][ww], s[hh][ww - 1], s[hh][ww + 1]):
     print('NO')
     return
 

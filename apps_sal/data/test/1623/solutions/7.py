@@ -12,4 +12,3 @@ for i in range(r):
     max_sum += 2 ** i
 
 print(min_sum, max_sum)
-

@@ -18,7 +18,7 @@ def main():
     S = []
     for _ in range(n):
         S.append(list(map(int, input().split())))
-    S.sort(key=lambda x:x[1])
+    S.sort(key=lambda x: x[1])
     current_time = 0
     for s in S:
         current_time += s[0]
@@ -32,5 +32,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

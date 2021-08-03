@@ -6,6 +6,7 @@ arr = []
 for i in range(n):
     arr.append(list(map(int, input().split())))
 
+
 def solve(arr):
     # print(arr)
     for row in arr:
@@ -17,12 +18,14 @@ def solve(arr):
                     return False
     return True
 
+
 def permute(arr, i, j):
     arr_ = deepcopy(arr)
     for k in range(n):
         arr_[k][i], arr_[k][j] = arr_[k][j], arr_[k][i]
     # print(arr_)
     return arr_
+
 
 def main():
     if solve(arr):
@@ -48,5 +51,6 @@ def main():
 
     print("NO")
     return
+
 
 main()

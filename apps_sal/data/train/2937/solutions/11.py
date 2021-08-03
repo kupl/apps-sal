@@ -1,4 +1,4 @@
-def between(a,b):
+def between(a, b):
     sequence = []
     while a <= b:
         sequence.append(a)

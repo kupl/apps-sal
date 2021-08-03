@@ -26,4 +26,3 @@ while len(ls) > 1:
         else:
             newls.append(ls[i])
     ls = newls
-

@@ -41,4 +41,3 @@ if cnt == np.count_nonzero(R_max) * np.count_nonzero(C_max):
     print((int(ans - 1)))
 else:
     print((int(ans)))
-

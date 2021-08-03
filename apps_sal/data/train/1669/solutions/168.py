@@ -1,9 +1,10 @@
 class Solution:
     import heapq
+
     def isNStraightHand(self, hand, W):
         heapq.heapify(hand)
         while len(hand) > 0:
-            put_back =  []
+            put_back = []
             count = 0
             prev = hand[0] - 1
             while count < W:

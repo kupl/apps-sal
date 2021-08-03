@@ -1,4 +1,4 @@
-def array_madness(a,b):
+def array_madness(a, b):
     suma = 0
     for i in a:
         suma = suma + i**2

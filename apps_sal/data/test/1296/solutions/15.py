@@ -1,6 +1,7 @@
 def calc(cnt):
     return sum(sorted(num + cnt * ind for ind, num in enumerate(price, 1))[:cnt])
 
+
 n, money = list(map(int, input().split()))
 price = [int(num) for num in input().split()]
 
@@ -14,4 +15,3 @@ while cant - can > 1:
         cant = mid
 
 print(can, calc(can))
-

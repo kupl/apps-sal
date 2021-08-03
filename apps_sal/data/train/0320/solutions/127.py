@@ -10,7 +10,5 @@ class Solution:
                 break
             nums = [int(x / 2) for x in nums]
             steps += 1
-                    
-        return steps
-            
 
+        return steps

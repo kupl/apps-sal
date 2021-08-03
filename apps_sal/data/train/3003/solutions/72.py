@@ -6,4 +6,3 @@ def args_count(*args, **kwargs):
     for i in kwargs:
         num2 = num2 + 1
     return num + num2
-

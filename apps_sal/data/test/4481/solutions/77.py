@@ -6,7 +6,7 @@ for i in range(n):
         a.update({s: 0})
     else:
         temp = a[s] + 1
-        a.update({s:temp})
+        a.update({s: temp})
 max_val = max(list(a.values()))
 b = []
 for key in a:

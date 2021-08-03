@@ -1,5 +1,6 @@
 from itertools import groupby
 
+
 def split_odd_and_even(n):
     return [int("".join(g))
-        for i, g in groupby(str(n), key=lambda x: int(x) % 2)]
+            for i, g in groupby(str(n), key=lambda x: int(x) % 2)]

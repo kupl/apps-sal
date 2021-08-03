@@ -10,4 +10,3 @@ for i in range(int(n / 4 + 1)):
 
 if(flag == False):
     print("No")
-

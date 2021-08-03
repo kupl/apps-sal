@@ -31,4 +31,3 @@ for i in range(1, m):
         ar.append(w[i] - b + j)
 
 fout.write(str(ans))
-

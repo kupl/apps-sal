@@ -6,7 +6,7 @@ powers_of_2 = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16
 
 num_dict = {}
 for i in range(n):
-	num_dict[num[i]] = num[i]
+    num_dict[num[i]] = num[i]
 
 flag_two = False
 flag_three = False
@@ -15,34 +15,33 @@ twos = []
 threes = []
 
 for i in range(n):
-	curr = num[i]
-	for power in powers_of_2:
-		if(num_dict.get(curr + power) is not None):
-			flag_two = True
-			twos = []
-			twos.append(curr)
-			twos.append(curr + power)
+    curr = num[i]
+    for power in powers_of_2:
+        if(num_dict.get(curr + power) is not None):
+            flag_two = True
+            twos = []
+            twos.append(curr)
+            twos.append(curr + power)
 
-			if(num_dict.get(curr + 2*power) is not None):
-				flag_three = True
-				threes = []
-				threes.append(curr)
-				threes.append(curr + power)
-				threes.append(curr + 2*power)
-				break
+            if(num_dict.get(curr + 2 * power) is not None):
+                flag_three = True
+                threes = []
+                threes.append(curr)
+                threes.append(curr + power)
+                threes.append(curr + 2 * power)
+                break
 
-	if(flag_three):
-		break
+    if(flag_three):
+        break
 
 if(flag_three):
-	print("3")
-	print(" ".join(map(str, threes)))
+    print("3")
+    print(" ".join(map(str, threes)))
 
 elif(flag_two):
-	print("2")
-	print(" ".join(map(str, twos)))
+    print("2")
+    print(" ".join(map(str, twos)))
 
 else:
-	print("1")
-	print(num[0])
-
+    print("1")
+    print(num[0])

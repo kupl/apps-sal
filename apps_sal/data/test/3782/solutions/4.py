@@ -1,10 +1,12 @@
+from heapq import heappop, heappush, heapify
+from itertools import groupby
 import sys
 INF = 1 << 60
-MOD = 10**9 + 7 # 998244353
+MOD = 10**9 + 7  # 998244353
 sys.setrecursionlimit(2147483647)
-input = lambda:sys.stdin.readline().rstrip()
-from itertools import groupby
-from heapq import heappop, heappush, heapify
+def input(): return sys.stdin.readline().rstrip()
+
+
 def resolve():
     n, k, q = map(int, input().split())
     A = list(map(int, input().split()))
@@ -12,7 +14,7 @@ def resolve():
     ans = INF
     for m in sorted(A):
         C = []
-        for key, it in groupby(A, key = lambda a : a >= m):
+        for key, it in groupby(A, key=lambda a: a >= m):
             if key is False:
                 continue
             D = list(it)
@@ -31,4 +33,6 @@ def resolve():
         ans = min(ans, M - m)
 
     print(ans)
+
+
 resolve()

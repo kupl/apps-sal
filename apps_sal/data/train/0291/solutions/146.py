@@ -1,14 +1,14 @@
 class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
-        odd, even = 0,0
+        odd, even = 0, 0
         arr = [i % 2 for i in arr]
-        
+
         if arr[0] != 0:
             odd += 1
         else:
             even += 1
-                    
-        for i in range(1,len(arr)):         
+
+        for i in range(1, len(arr)):
             arr[i] = arr[i - 1] + arr[i]
             if arr[i] % 2 == 0:
                 even += 1
@@ -21,7 +21,7 @@ class Solution:
                 ans += odd
                 even -= 1
             elif i % 2 == 1:
-                ans += (even+1)
+                ans += (even + 1)
                 odd -= 1
             else:
                 break

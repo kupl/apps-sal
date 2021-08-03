@@ -3,9 +3,9 @@ class Solution:
         s = set([stamp])
         for i in range(len(stamp)):
             for j in range(len(stamp), i, -1):
-                s.add('*'  * i + stamp[i:j] + '*' * (len(stamp) - j))
+                s.add('*' * i + stamp[i:j] + '*' * (len(stamp) - j))
         print(s)
-        
+
         turns = 0
         numStars = 0
         ans = []
@@ -26,10 +26,9 @@ class Solution:
             if not replaced and numStars != len(target):
                 return []
             turns += 1
-            
+
         if turns <= 10 * len(target):
             ans.reverse()
             return ans
         else:
             return []
-

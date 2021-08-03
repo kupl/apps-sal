@@ -7,7 +7,7 @@ class Solution:
                 deque.pop()
             if A[i] > 0:
                 deque.append(A[i])
-            if i >= k and deque and deque[0] == A[i-k]:
+            if i >= k and deque and deque[0] == A[i - k]:
                 deque.popleft()
-        
+
         return max(A)

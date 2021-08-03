@@ -7,12 +7,14 @@ def rounding(n):
         n = intPart
     for i in range(6):
         up = n + i
-        down = n - i 
-        if up%5 == 0:
+        down = n - i
+        if up % 5 == 0:
             return up
-        elif down%5==0:
+        elif down % 5 == 0:
             return down
+
+
 def round_to_five(numbers):
-    #your code here
+    # your code here
     numbers = [rounding(n) for n in numbers]
     return numbers

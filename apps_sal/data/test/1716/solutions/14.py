@@ -7,7 +7,7 @@ a = [[0] * n for i in range(n)]
 for l, r in lr:
     a[l - 1][r - 1] += 1
 
-cnt = [[0]*n for i in range(n)]
+cnt = [[0] * n for i in range(n)]
 for y in range(n):
     v = 0
     for x in range(y, -1, -1):
@@ -16,4 +16,4 @@ for y in range(n):
 
 for _ in range(q):
     p, q = map(int, input().split())
-    print(cnt[p-1][q-1])
+    print(cnt[p - 1][q - 1])

@@ -13,13 +13,12 @@ for i in range(-1, L):
         d = np.count_nonzero((a >> j) & 1)
         if i < j:
             if (k >> j) & 1:
-                val += (n-d) * 2**j
+                val += (n - d) * 2**j
             else:
                 val += d * 2**j
         elif i == j:
             val += d * 2**j
         else:
-            val += max(d, n-d) * 2**j
+            val += max(d, n - d) * 2**j
     res = max(res, val)
 print(res)
-

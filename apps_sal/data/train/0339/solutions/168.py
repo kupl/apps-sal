@@ -1,9 +1,10 @@
 from collections import defaultdict
 
+
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         self.res = 0
-        
+
         def count(a1, a2):
             for e1 in [e * e for e in a1]:
                 m = defaultdict(int)
@@ -14,5 +15,5 @@ class Solution:
 
         count(nums1, nums2)
         count(nums2, nums1)
-        
+
         return self.res

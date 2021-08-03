@@ -3,9 +3,9 @@ a = list(map(int, input().split()))
 a.sort(reverse=True)
 
 # l[i] = (a[j] >= i を満たすjの個数)
-l = [n for i in range(a[0]+1)]
-for i in range(2, n+1):
-    for j in range(a[-i], a[-i+1], -1):
+l = [n for i in range(a[0] + 1)]
+for i in range(2, n + 1):
+    for j in range(a[-i], a[-i + 1], -1):
         l[j] = n - i + 1
 
 # 二分探索

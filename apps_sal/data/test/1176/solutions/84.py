@@ -8,4 +8,4 @@ A = [abs(a) for a in A]
 if cnt % 2 == 0:
     print(sum(A))
 else:
-    print(sum(A)-2*min(A))
+    print(sum(A) - 2 * min(A))

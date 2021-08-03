@@ -27,5 +27,3 @@ for x in hp:
             return
 else:
     print((hm + wm - 1))
-
-

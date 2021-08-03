@@ -14,5 +14,5 @@ for i in range(n):
     elif a[i] & x in c:
         ans = min(ans, 2)
     o.add(a[i])
-    c.add(a[i]&x)
+    c.add(a[i] & x)
 print(-1 if ans == 100 else ans)

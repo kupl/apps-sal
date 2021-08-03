@@ -11,16 +11,15 @@ class Solution:
                     dict[sub] = 1
 
                 right += 1
-            
+
             left += 1
             right = left + minSize
-        
+
         retValue = 0
         for k, v in list(dict.items()):
             retValue = max(retValue, v)
-        
-        return retValue
-    
-    def isUniqueAmount(self, s: str, maxLetters: int) -> bool:
-        return len(set(s)) <= maxLetters 
 
+        return retValue
+
+    def isUniqueAmount(self, s: str, maxLetters: int) -> bool:
+        return len(set(s)) <= maxLetters

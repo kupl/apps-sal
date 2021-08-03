@@ -6,4 +6,3 @@ else:
     result = "No"
 
 print(result)
-

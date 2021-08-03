@@ -6,6 +6,7 @@ def sum_distance(a, b):
     x *= pow(b, 2)
     return x % mod
 
+
 def comb(n, r):
     x, y = 1, 1
     for i in range(n, n - r, -1):
@@ -14,6 +15,7 @@ def comb(n, r):
         x %= mod
         y %= mod
     return pow(y, mod - 2, mod) * x % mod
+
 
 n, m, k = map(int, input().split())
 mod = pow(10, 9) + 7

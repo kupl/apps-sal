@@ -1,6 +1,6 @@
+from collections import defaultdict
 n, k = list(map(int, input().split()))
 
-from collections import defaultdict
 
 nums = list(map(int, input().split()))
 
@@ -24,4 +24,3 @@ for name in candidates:
     m = min(m, sum(sorted(aa[name])[:k]))
 
 print(m)
-

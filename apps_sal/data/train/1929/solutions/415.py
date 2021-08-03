@@ -12,6 +12,7 @@ class Trie:
             self.child[word[i]].end = True
         self.child[word[i]].add(word, i + 1)
 
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):

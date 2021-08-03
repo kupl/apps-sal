@@ -13,5 +13,5 @@ class Solution:
                     d[a] = 1
                 if a - difference in d:
                     d[a] = max(d[a], d[a - difference] + 1)
-            
+
         return max(d.values())

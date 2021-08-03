@@ -13,4 +13,4 @@ for num, cnt in Counter(A).items():
 sum_select = sum(select_num)
 
 for a in A:
-    print(sum_select - select_num[a] + (count[a]-1)*(count[a]-2)//2)
+    print(sum_select - select_num[a] + (count[a] - 1) * (count[a] - 2) // 2)

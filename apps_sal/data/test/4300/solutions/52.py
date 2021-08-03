@@ -6,7 +6,7 @@ N = int(input())
 D = list(map(int, input().split()))
 
 # たこ焼きの全組み合わせを作成する
-tako_cmb = np.array(list(itr.combinations(D,2)))
+tako_cmb = np.array(list(itr.combinations(D, 2)))
 
 # (x,y)
 # (x,y)
@@ -19,7 +19,7 @@ xy = tako_cmb.T
 # (y,y,y)
 
 # xとyの積の総和を求める
-result = np.sum(xy[0]*xy[1])
+result = np.sum(xy[0] * xy[1])
 
 # 結果を出力する
 print(result)

@@ -1,6 +1,6 @@
-s1,s2,s3 = map(int, input())
+s1, s2, s3 = map(int, input())
 
-number_list = [s1,s2,s3]
+number_list = [s1, s2, s3]
 
 counter = 0
 

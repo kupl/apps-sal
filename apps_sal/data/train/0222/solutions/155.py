@@ -3,10 +3,10 @@ class Solution:
         st = set(A)
         lenth = 0
         dq = collections.deque()
-        
-        for j in range(1, len(A) -1):
+
+        for j in range(1, len(A) - 1):
             for i in range(j):
-                if A[i]+A[j] in st:
+                if A[i] + A[j] in st:
                     lenth = 3
                     dq.append([3, A[j], A[i] + A[j]])
 
@@ -35,4 +35,3 @@ class Solution:
 #                 # if res >= n - j: break
 #             # if res >= n - i: return res
 #         return res
-

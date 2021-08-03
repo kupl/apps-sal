@@ -7,5 +7,5 @@ def is_narcissistic(*arg):
             if not n:
                 return False
         except:
-            return False 
+            return False
     return True

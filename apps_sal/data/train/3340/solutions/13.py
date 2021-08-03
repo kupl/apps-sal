@@ -14,12 +14,12 @@ def sharkovsky(a, b):
         return True
     elif(power_a == power_b):
         return True if odd_number_a < odd_number_b else False
-    
+
+
 def solve(a):
     power_of_two = 0
     num = a
     while num % 2 == 0:
         power_of_two += 1
-        num = num / 2 # This is an int because of while loop
+        num = num / 2  # This is an int because of while loop
     return power_of_two, a / (2 ** power_of_two)
-

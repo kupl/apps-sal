@@ -11,10 +11,8 @@ def merge_arrays(arr1, arr2):
     for i in range(len(arr)):
         m = min(arr[i:])
         index = arr.index(m)
-        
+
         temp = arr[i]
         arr[i] = m
         arr[index] = temp
     return arr
-            
-

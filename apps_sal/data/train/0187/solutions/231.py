@@ -20,4 +20,4 @@ class Solution:
             if maxp < prof:
                 maxp = prof
                 maxr = rots
-        return maxr if maxp > 0 else -1    
+        return maxr if maxp > 0 else -1

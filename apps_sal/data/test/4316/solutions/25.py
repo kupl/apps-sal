@@ -10,4 +10,3 @@ if len(list(S.values())) == 2:
         print('Yes')
         return
 print('No')
-

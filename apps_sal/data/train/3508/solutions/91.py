@@ -1,5 +1,7 @@
 from math import trunc
-def halving_sum(n): 
+
+
+def halving_sum(n):
     result = divided = n
     divisor = 1
     while divided > 1:

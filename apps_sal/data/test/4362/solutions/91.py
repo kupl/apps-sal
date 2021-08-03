@@ -1,6 +1,6 @@
-alpha=input()
-if(alpha.isupper()==True):
-  ans='A'
+alpha = input()
+if(alpha.isupper() == True):
+    ans = 'A'
 else:
-  ans='a'
+    ans = 'a'
 print(ans)

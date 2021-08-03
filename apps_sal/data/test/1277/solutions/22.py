@@ -1,3 +1,4 @@
+import heapq
 N, u, v = map(int, input().split())
 AB = [list(map(int, input().split())) for _ in range(N - 1)]
 
@@ -6,7 +7,6 @@ for i, (Ai, Bi) in enumerate(AB):
     graph[Ai - 1].append(Bi - 1)
     graph[Bi - 1].append(Ai - 1)
 
-import heapq
 MY_INF = 10 ** 18
 
 q = [(0, u - 1)]
@@ -33,7 +33,7 @@ while len(q) > 0:
 
 # print("#", d_u)
 # print("#", d_v)
-            
+
 ans = 0
 for i in range(N):
     if d_u[i] < d_v[i] and ans < d_v[i] - 1:

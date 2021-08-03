@@ -1,16 +1,23 @@
-import bisect, collections, copy, heapq, itertools, math, string
+from collections import deque, defaultdict, Counter
+import bisect
+import math
+from itertools import permutations
+from functools import reduce
+import heapq
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import string
 import sys
 def I(): return int(sys.stdin.readline().rstrip())
 def MI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 def S(): return sys.stdin.readline().rstrip()
 def LS(): return list(sys.stdin.readline().rstrip().split())
-from collections import deque, defaultdict, Counter
-import heapq
-from functools import reduce
-from itertools import permutations
-import math
-import bisect
+
 
 def main():
     T = I()
@@ -32,7 +39,10 @@ def main():
                 print('Second')
             else:
                 print('First')
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

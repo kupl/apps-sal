@@ -2,7 +2,7 @@ class Solution:
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         from collections import defaultdict, deque
         maps = defaultdict(deque)
-        
+
         res = set()
         for name, time in sorted(zip(keyName, keyTime)):
             h = int(time[:2])
@@ -15,6 +15,5 @@ class Solution:
             queue.append([h, m])
 
             if len(queue) >= 3:
-                    res.add(name)
+                res.add(name)
         return sorted(res)
-

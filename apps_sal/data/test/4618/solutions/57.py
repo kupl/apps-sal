@@ -9,4 +9,3 @@ for length in range(1, K + 1):
 substrings = sorted(substrings)
 
 print((substrings[K - 1]))
-

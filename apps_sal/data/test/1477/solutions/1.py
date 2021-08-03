@@ -1,7 +1,7 @@
 n, m = [int(x) for x in input().split()]
-tps = {i:int(t) for i, t in enumerate(input().split())}
-deps = {i:0 for i in range(n)}
-parents = {i:[] for i in range(n)}
+tps = {i: int(t) for i, t in enumerate(input().split())}
+deps = {i: 0 for i in range(n)}
+parents = {i: [] for i in range(n)}
 leafs = {i for i in range(n)}
 for i in range(m):
     x, y = [int(x) for x in input().split()]
@@ -10,11 +10,11 @@ for i in range(m):
     if x in leafs:
         leafs.remove(x)
 
-deep = {i:tps[i] for i in range(n)}
+deep = {i: tps[i] for i in range(n)}
 res = 0
 while len(leafs) > 0:
     leaf = leafs.pop()
-    if len(parents[leaf])==0:
+    if len(parents[leaf]) == 0:
         res = max(res, deep[leaf])
         continue
 ##    print(leaf, leafs)
@@ -24,12 +24,11 @@ while len(leafs) > 0:
             l += 1
         if deep[parent] < l:
             deep[parent] = l
-            
+
         deps[parent] -= 1
         if deps[parent] == 0:
             leafs.add(parent)
 ##        print(leaf, parent, l, deps[parent], leafs, deep)
-    
-    
-print(res)
 
+
+print(res)

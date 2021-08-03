@@ -1,6 +1,6 @@
-a,b,k = map(int,input().split())
-if 2*k > b - a:
-    for i in range(a,b + 1):
+a, b, k = map(int, input().split())
+if 2 * k > b - a:
+    for i in range(a, b + 1):
         print(i)
 else:
     for i in range(k):

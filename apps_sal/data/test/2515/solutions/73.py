@@ -32,4 +32,3 @@ for i in range(3, 10**5 + 1, 2):
 
 for i in range(q):
     print((dpsum[r[i]] - dpsum[l[i] - 2]))
-

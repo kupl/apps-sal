@@ -14,4 +14,3 @@ for i in range(n):
         ans = i + 1
         beauty = new_beauty
 print(ans)
-

@@ -1,6 +1,7 @@
-N,K = list(map(int,input().split()))
+N, K = list(map(int, input().split()))
 
-D = list(map(int,input().split()))
+D = list(map(int, input().split()))
+
 
 def ok(x):
     while x:
@@ -9,8 +10,8 @@ def ok(x):
         x //= 10
     return True
 
-for i in range(N,100000):
+
+for i in range(N, 100000):
     if ok(i):
         print(i)
         return
-

@@ -1,6 +1,6 @@
 a, b = map(int, input().split())
 ans = 0
-for i in range(a,b+1):
+for i in range(a, b + 1):
     num = 0
     j = i
     while j > 0:

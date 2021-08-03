@@ -15,4 +15,3 @@ for i in range(n + 1):
         mi -= l[j] * x
     ans = max(ans, cnt)
 print(ans)
-

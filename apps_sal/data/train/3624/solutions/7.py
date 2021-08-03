@@ -7,18 +7,17 @@ def distribution_of_candy(candies):
         if cnt > 0:
             candies = candies_upd
         candies_upd = []
-        for i in range(len(candies)):           
+        for i in range(len(candies)):
             new = candies[i]
-            if candies[i]%2 != 0:
-                new +=1
-            new-=(new/2)
+            if candies[i] % 2 != 0:
+                new += 1
+            new -= (new / 2)
             if i == 0:
-                new+=(round(candies[-1]/2 +0.1))
+                new += (round(candies[-1] / 2 + 0.1))
             else:
-                new +=(round(candies[i-1]/2 +0.1))
+                new += (round(candies[i - 1] / 2 + 0.1))
             candies_upd.append(new)
-        
-        cnt +=1
-        
-    return [cnt-1, candies[0]]
 
+        cnt += 1
+
+    return [cnt - 1, candies[0]]

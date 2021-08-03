@@ -1,10 +1,12 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
 
 def is_vaid(ps, ss, t):
     l, r = 0, max(ps)
     for p, s in zip(ps, ss):
         l, r = max(l, p - s * t), min(r, p + s * t)
     return l < r
+
 
 n = int(input())
 ps, ss = list(R()), list(R())

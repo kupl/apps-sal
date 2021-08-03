@@ -6,7 +6,7 @@ class Solution:
                 count[code] += 1
             else:
                 count[code] = 1
-        count = {k: v for k, v in sorted(count.items(), key=lambda item: item[1],reverse=True)}
+        count = {k: v for k, v in sorted(count.items(), key=lambda item: item[1], reverse=True)}
 
         it = iter(count.keys())
         cur = next(it)

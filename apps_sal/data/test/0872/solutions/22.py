@@ -6,4 +6,3 @@ if all([num % 2 for num in nums]) or all([not (num % 2) for num in nums]):
 else:
     nums.sort()
     print(' '.join(map(str, nums)))
-

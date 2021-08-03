@@ -2,16 +2,26 @@ import sys
 import math
 import heapq
 
+
 def input():
     return sys.stdin.readline().strip()
+
+
 def iinput():
     return int(input())
+
+
 def tinput():
     return input().split()
+
+
 def rinput():
     return list(map(int, tinput()))
+
+
 def rlinput():
     return list(rinput())
+
 
 def main():
     n, w, q, res = iinput(), set(), [], 0
@@ -29,7 +39,7 @@ def main():
                 heapq.heappush(q, -i)
 
     print(res)
-    
+
+
 for i in range(iinput()):
     main()
-

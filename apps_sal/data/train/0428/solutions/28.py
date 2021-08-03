@@ -22,7 +22,7 @@ class Solution:
                     return step
                 # print(x, y, keys, locks)
                 for i in range(4):
-                    xx, yy = x + d[i], y + d[i+1]
+                    xx, yy = x + d[i], y + d[i + 1]
                     if 0 <= xx < m and 0 <= yy < n and (xx, yy, keys) not in seen:
                         seen.add((xx, yy, keys))
                         if ord('a') <= ord(grid[xx][yy]) <= ord('f'):
@@ -36,5 +36,5 @@ class Solution:
                         elif grid[xx][yy] == '.' or grid[xx][yy] == '@':
                             bfs.append((xx, yy, keys))
             step += 1
-            
+
         return -1

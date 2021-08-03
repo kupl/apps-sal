@@ -5,4 +5,3 @@ while cur < X:
     cur = cur * 101 // 100
     cnt += 1
 print(cnt)
-

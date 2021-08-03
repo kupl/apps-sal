@@ -8,8 +8,8 @@ for i in range(int(input())):
 res, pos = int(1e10), 0
 for i in range(int(input())):
     x, y = list(map(int, input().split()))
-    ans = max(max(x + y - a, x - y - b), max( - x + y - c, - x - y - d))
+    ans = max(max(x + y - a, x - y - b), max(- x + y - c, - x - y - d))
     if ans < res:
         pos = i + 1
         res = ans
-print(res, pos, sep = '\n')
+print(res, pos, sep='\n')

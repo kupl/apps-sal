@@ -5,7 +5,7 @@ class Solution:
         for i in arr1:
             is_valid = True
             for j in arr2:
-                if abs(i-j)<=d:
+                if abs(i - j) <= d:
                     is_valid = False
                     break
             if is_valid:

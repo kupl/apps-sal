@@ -1,1 +1,1 @@
-capitalize_word = lambda s: s.capitalize()
+def capitalize_word(s): return s.capitalize()

@@ -10,7 +10,5 @@ if two >= one:
 else:
     result += two
     one = one - two
-    result += int(one/3)
+    result += int(one / 3)
 print(result)
-
-

@@ -34,4 +34,3 @@ for i in range(1, len(s)):
 for _ in range(len(s) - len(ans)):
     ans.append('0')
 print(''.join(ans))
-

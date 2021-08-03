@@ -27,4 +27,3 @@ for _ in range(int(input())):
             ans[i] = 1
 
     print(*ans)
-

@@ -1,6 +1,9 @@
-from sys import stdin,stderr
+from sys import stdin, stderr
+
+
 def rl():
     return [int(w) for w in stdin.readline().split()]
+
 
 n, end_day = rl()
 d = rl()
@@ -31,4 +34,3 @@ if end_month < n:
             max_hugs = hugs
 
 print(max_hugs)
-

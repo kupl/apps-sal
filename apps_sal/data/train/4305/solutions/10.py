@@ -1,5 +1,7 @@
 import operator
-from functools import reduce 
+from functools import reduce
+
+
 def order_weight(strng):
     ans = []
     d = {}
@@ -12,7 +14,7 @@ def order_weight(strng):
             d[sum_weight].append(weight)
         else:
             d[sum_weight] = [weight]
-    li = sorted(list(d.items()), key = lambda el: el[0])
+    li = sorted(list(d.items()), key=lambda el: el[0])
     for pair in li:
         if len(pair[1]) > 1:
             for mean in sorted(pair[1]):
@@ -20,4 +22,3 @@ def order_weight(strng):
         else:
             ans.append(str(pair[1][0]))
     return ' '.join(ans)
-

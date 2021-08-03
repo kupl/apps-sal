@@ -3,13 +3,13 @@ def resolve():
     S = input()
 
     def shorten(s):
-        if len(s)%2==1:
-            s = s*2
+        if len(s) % 2 == 1:
+            s = s * 2
         ans = ""
         for i in range(0, len(s), 2):
-            if s[i] == s[i+1]:
+            if s[i] == s[i + 1]:
                 ans = ans + s[i]
-            elif (s[i], s[i+1]) == ("P", "R") or (s[i], s[i+1]) == ("R", "P"):
+            elif (s[i], s[i + 1]) == ("P", "R") or (s[i], s[i + 1]) == ("R", "P"):
                 ans = ans + "P"
             elif (s[i], s[i + 1]) == ("P", "S") or (s[i], s[i + 1]) == ("S", "P"):
                 ans = ans + "S"
@@ -22,4 +22,6 @@ def resolve():
         ct += 1
 
     print(S[0])
+
+
 resolve()

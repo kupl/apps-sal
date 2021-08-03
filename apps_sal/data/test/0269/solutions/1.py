@@ -19,5 +19,3 @@ for i in range(a, n, 4):
     if (s[i] != 'G'):
         ans[3] += 1
 print(*ans)
-            
-

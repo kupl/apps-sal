@@ -1,8 +1,9 @@
-def convert_to_celsius (temperature):
+def convert_to_celsius(temperature):
     pass
-    
-def weather_info (celsius):
-    celsius = (celsius - 32) * (5/9)
+
+
+def weather_info(celsius):
+    celsius = (celsius - 32) * (5 / 9)
     if (celsius < 0):
         return f"{celsius} is freezing temperature"
     else:

@@ -1,5 +1,7 @@
 from collections import defaultdict
 from heapq import heappush, heappop, heapify
+
+
 def main():
     N = int(input())
     SC = []
@@ -29,14 +31,14 @@ def main():
                         dist_u = dist_v + c
                         if dist_u < dist[("", vr_)]:
                             dist[("", vr_)] = dist_u
-                            heappush(q, (dist_v+c, "", vr_))
+                            heappush(q, (dist_v + c, "", vr_))
                 else:
                     if s.startswith(vr):
                         vl_ = s[len(vr):]
                         dist_u = dist_v + c
                         if dist_u < dist[(vl_, "")]:
                             dist[(vl_, "")] = dist_u
-                            heappush(q, (dist_v+c, vl_, ""))
+                            heappush(q, (dist_v + c, vl_, ""))
         else:
             for s, c in SCrev:
                 if len(s) <= len(vl):
@@ -45,15 +47,15 @@ def main():
                         dist_u = dist_v + c
                         if dist_u < dist[(vl_, "")]:
                             dist[(vl_, "")] = dist_u
-                            heappush(q, (dist_v+c, vl_, ""))
+                            heappush(q, (dist_v + c, vl_, ""))
                 else:
                     if s.startswith(vl):
                         vr_ = s[len(vl):]
                         dist_u = dist_v + c
                         if dist_u < dist[("", vr_)]:
                             dist[("", vr_)] = dist_u
-                            heappush(q, (dist_v+c, "", vr_))
+                            heappush(q, (dist_v + c, "", vr_))
     print((-1))
 
-main()
 
+main()

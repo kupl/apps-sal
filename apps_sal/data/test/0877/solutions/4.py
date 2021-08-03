@@ -6,8 +6,8 @@ for i in range(m):
     s = S[i]
     a = max(s)
     b = min(s)
-    D1[a-1] += 1
-    D2[b-1] += 1
+    D1[a - 1] += 1
+    D2[b - 1] += 1
 ok = 1
 a1 = -1
 a2 = -1
@@ -25,10 +25,10 @@ if ok:
     G = []
     b = a1
     if b == -1:
-        b = n+1
+        b = n + 1
     for i in range(n):
         if D1[i] == 0 and D2[i] == 0:
-            #print(i,a1,a2)
+            # print(i,a1,a2)
             if i >= a2 and i <= b:
                 r += 1
     if a1 == -1:
@@ -38,4 +38,3 @@ if ok:
     print(r)
 else:
     print(0)
-

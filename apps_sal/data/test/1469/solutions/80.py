@@ -11,21 +11,21 @@ for i in range(20):
     c = 0
     if c == 0 and str(bin_str)[i] == '1':
         c = 1
-        n = 20-i
+        n = 20 - i
         k = i
-        break;
+        break
 for j in range(1, n):
-    in_list(ans_list, [j, j+1, 0], p)
+    in_list(ans_list, [j, j + 1, 0], p)
     p += 1
-    in_list(ans_list, [j, j+1, 2**(n-1-j)], p)
+    in_list(ans_list, [j, j + 1, 2**(n - 1 - j)], p)
     p += 1
-c = 2**(n-1)
+c = 2**(n - 1)
 
-for m in range(k+1, 20):
+for m in range(k + 1, 20):
     if str(bin_str[m]) == '1':
-        in_list(ans_list, [1, n+m-20+1, c], p)
+        in_list(ans_list, [1, n + m - 20 + 1, c], p)
         p += 1
-        c += 2 ** (19-m)
+        c += 2 ** (19 - m)
 
 print(n, p)
 for q in range(p):

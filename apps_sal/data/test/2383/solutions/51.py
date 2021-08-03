@@ -1,5 +1,5 @@
 N = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 if not(1 in a):
     print(-1)
@@ -12,4 +12,4 @@ for i in a:
         l.append(i)
         min_num += 1
 
-print(N-len(l))
+print(N - len(l))

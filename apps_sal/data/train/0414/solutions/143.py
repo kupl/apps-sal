@@ -9,7 +9,6 @@ class Solution:
                 current_num = arr[i]
                 count = 1
             if count == k:
-                    break
+                break
 
         return current_num
-

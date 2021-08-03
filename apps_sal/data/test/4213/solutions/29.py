@@ -5,6 +5,3 @@ num_list = list(a)
 answer = (max(num_list) - min(num_list))
 
 print(answer)
-
-
-

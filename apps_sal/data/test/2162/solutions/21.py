@@ -35,4 +35,6 @@ def __starting_point():
     dp = [0, 0, 0]
 
     print(solve(arr))
+
+
 __starting_point()

@@ -17,7 +17,7 @@ sumC = [0 for i in range(N)]
 
 sumC[0] = sum(C[0:l])
 for i in range(1, N):
-    sumC[i] = sumC[i-1] + C[i+l-1] - C[i-1]
+    sumC[i] = sumC[i - 1] + C[i + l - 1] - C[i - 1]
 
 for i in range(N):
     if sumC[i] > max_number:
@@ -42,4 +42,3 @@ for j in max_list:
     ans_list.append(A[0])
 
 print(min(ans_list))
-

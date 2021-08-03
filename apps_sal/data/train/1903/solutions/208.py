@@ -1,34 +1,35 @@
 class DSU:
-    def __init__(self,n):
+    def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.rank = [1 for i in range(n)]
         self.count = n
-    
-    def find(self,x):
-        if x!=self.parent[x]:
-            self.parent[x]=self.find(self.parent[x])
+
+    def find(self, x):
+        if x != self.parent[x]:
+            self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
-    
-    def union(self,x,y):
+
+    def union(self, x, y):
         px = self.find(x)
         py = self.find(y)
-        if px==py:
+        if px == py:
             return False
-        self.count-=1
-        if self.rank[x]>self.rank[y]:
-            self.parent[py]=px
-            self.rank[px]+=self.rank[py]
+        self.count -= 1
+        if self.rank[x] > self.rank[y]:
+            self.parent[py] = px
+            self.rank[px] += self.rank[py]
         else:
-            self.parent[px]=py
-            self.rank[py]+=self.rank[px]
+            self.parent[px] = py
+            self.rank[py] += self.rank[px]
         return True
-                
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         edges = []
         for i in range(n):
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 edges.append((dist, i, j))
         # print(edges)
@@ -36,8 +37,8 @@ class Solution:
         res = 0
         ds = DSU(n)
         for cost, u, v in edges:
-            if ds.count==1:
+            if ds.count == 1:
                 break
-            if ds.union(u,v):
+            if ds.union(u, v):
                 res += cost
         return res

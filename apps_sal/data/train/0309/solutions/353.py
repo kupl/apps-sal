@@ -5,18 +5,16 @@ class Solution:
         ans = 0
         for i in range(1, len(A)):
             for j in range(i):
-                dif = A[i]-A[j]
+                dif = A[i] - A[j]
                 if not arr.get(dif):
                     arr[dif] = [1 for i in range(len(A))]
                 arr[dif][i] = arr[dif][j] + 1
                 ans = max(ans, arr[dif][i])
-        
+
         # for x in arr:
         #     print(x, arr[x])
-        
+
         return ans
-
-
 
 
 # TLE
@@ -33,6 +31,3 @@ class Solution:
 #         # for x in arr:
 #         #     print(x, arr[x])
 #         return ans
-        
-                        
-

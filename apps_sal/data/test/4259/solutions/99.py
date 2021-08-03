@@ -10,4 +10,3 @@ if n == 1:
     print("OK")
 else:
     print("NG")
-

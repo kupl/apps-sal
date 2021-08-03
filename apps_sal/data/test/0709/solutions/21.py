@@ -7,5 +7,3 @@ while n > 0:
     n -= 2 ** q
     col += 1
 print(col)
-        
-

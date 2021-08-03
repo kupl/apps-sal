@@ -9,13 +9,12 @@ class Solution:
                 return minAmounts[amount]
             minAmount = math.inf
             for coin in coins:
-                minAmount = min(minAmount, helper(amount-coin, minAmounts)+1)
+                minAmount = min(minAmount, helper(amount - coin, minAmounts) + 1)
             minAmounts[amount] = minAmount
             return minAmount
-        
+
         minAmounts = dict()
         x = helper(amount, minAmounts)
         if x == math.inf:
             return -1
         return x
-

@@ -5,6 +5,7 @@ def f(n):
             return 1
     return 0
 
+
 t = int(input())
 answers = list()
 for _ in range(t):

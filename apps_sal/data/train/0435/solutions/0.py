@@ -2,7 +2,7 @@
 # In c++ and java, a % K + K takes care of the cases where a < 0.
 # Python
 
-class Solution: 
+class Solution:
     def subarraysDivByK(self, A, K):
         res = 0
         prefix = 0
@@ -12,7 +12,7 @@ class Solution:
             res += count[prefix]
             count[prefix] += 1
         return res
-    
+
 # If a subarray is divisible by K, it has to be a multiple of K
 
 # a-b=n*k, a = running total, b = any previous subarray sum, same as original prefix sum problems.
@@ -32,4 +32,3 @@ class Solution:
 # where b = running total, a = any previous subarray sum
 
 # So we just have to see if running total mod k is equal to any previous running total mod k
-

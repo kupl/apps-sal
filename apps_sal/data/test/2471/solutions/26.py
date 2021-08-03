@@ -11,20 +11,20 @@ def solve(H: int, W: int, N: int, a: "List[int]", b: "List[int]"):
     counter = Counter()
     for aa, bb in zip(a, b):
         for x, y in zip(XX, YY):
-            if aa+x < 1:
+            if aa + x < 1:
                 continue
-            elif aa+x+2 > H:
+            elif aa + x + 2 > H:
                 continue
-            elif bb+y < 1:
+            elif bb + y < 1:
                 continue
-            elif bb+y+2 > W:
+            elif bb + y + 2 > W:
                 continue
-            counter[(aa+x, bb+y)] += 1
-    ans = [0]*10
+            counter[(aa + x, bb + y)] += 1
+    ans = [0] * 10
     for key, val in counter.items():
         ans[val] += 1
 
-    ans[0] = (H-2)*(W-2) - sum(ans)
+    ans[0] = (H - 2) * (W - 2) - sum(ans)
     print(*ans, sep="\n")
     return
 
@@ -49,5 +49,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

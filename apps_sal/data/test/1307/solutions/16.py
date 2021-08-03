@@ -1,5 +1,5 @@
 n = int(input())
-if (n&1):
-  print('Ehab')
+if (n & 1):
+    print('Ehab')
 else:
-  print('Mahmoud')
+    print('Mahmoud')

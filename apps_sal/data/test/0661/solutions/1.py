@@ -19,5 +19,6 @@ def main():
             r.append(i)
     r.append(K)
     print((' '.join(str(i) for i in r)))
-main()
 
+
+main()

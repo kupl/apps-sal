@@ -2,7 +2,7 @@ class Solution:
     def minOperations(self, nums: List[int]) -> int:
         adds = []
         muls = []
-        
+
         for idx, num in enumerate(nums):
             adds.append(0)
             muls.append(0)
@@ -13,5 +13,5 @@ class Solution:
                 else:
                     muls[idx] += 1
                     num /= 2
-        
+
         return sum(adds) + max(muls)

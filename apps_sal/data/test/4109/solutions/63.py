@@ -1,6 +1,6 @@
-n,m,x = list(map(int,input().split()))
+n, m, x = list(map(int, input().split()))
 
-array = [list(map(int,input().split())) for _ in range(n)]
+array = [list(map(int, input().split())) for _ in range(n)]
 
 # print(array)
 # print(n)
@@ -15,7 +15,7 @@ for i in range(2**n):
 
             price += array[k][0]
             for j in range(m):
-                skill[j] += array[k][j+1]
+                skill[j] += array[k][j + 1]
     for l in range(m):
         if skill[l] < x:
             break
@@ -28,7 +28,3 @@ if ans == 10**8:
     print((-1))
 else:
     print(ans)
-
-
-
-

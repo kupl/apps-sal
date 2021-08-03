@@ -22,6 +22,5 @@ class Solution:
                     types = set()
                     maxStreak = max(streak, maxStreak)
                     streak = 0
-                    
-        return max(streak, maxStreak)
 
+        return max(streak, maxStreak)

@@ -30,6 +30,5 @@ if k == 1:
 
 if k == n:
     mvs = n - 1
-    
-print(mvs + rcks + mny)
 
+print(mvs + rcks + mny)

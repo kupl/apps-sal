@@ -6,7 +6,6 @@ class Solution:
         for n in nums:
             pre += n & 1
             prefix[pre] += 1
-            ans += prefix[pre-k]
-        
-        return ans
+            ans += prefix[pre - k]
 
+        return ans

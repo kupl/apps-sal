@@ -8,18 +8,18 @@ r = -1
 for l in range(n):
     stop = True
     if cur < k:
-        while r < n-1:
+        while r < n - 1:
             r += 1
             cur += a[r]
             if cur >= k:
-                cnt += n-r
+                cnt += n - r
                 stop = False
                 break
 
     elif cur > k:
         stop = False
         if r == l:
-            cnt += n-r
+            cnt += n - r
         else:
             while r > l:
                 cur -= a[r]
@@ -27,11 +27,11 @@ for l in range(n):
                 if cur <= k:
                     r += 1
                     cur += a[r]
-                    cnt += n-r
+                    cnt += n - r
                     break
 
     else:
-        cnt += n-r
+        cnt += n - r
         stop = False
 
     cur -= a[l]

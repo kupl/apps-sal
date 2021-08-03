@@ -4,7 +4,7 @@ class Solution:
         stack = []
         updated_s = []
         for ch in s:
-            if ch not in {'(',')'}:
+            if ch not in {'(', ')'}:
                 updated_s.append(ch)
             elif ch == '(':
                 stack.append(len(updated_s))
@@ -16,5 +16,5 @@ class Solution:
 
         if stack:
             for i in stack[::-1]:
-                updated_s = updated_s[:i] + updated_s[i+1:]
+                updated_s = updated_s[:i] + updated_s[i + 1:]
         return ''.join(updated_s)

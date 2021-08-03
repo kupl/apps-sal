@@ -12,4 +12,3 @@ while s != []:
         d += s.pop(len(s) - 1)
         prev = -1
 print(d[::-1])
-

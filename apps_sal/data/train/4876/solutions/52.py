@@ -7,8 +7,3 @@ def hello(name=''):
         word = word and ls[i].isalpha()
     if word == True:
         return 'Hello, ' + name[0].upper() + name[1:].lower() + '!'
-
-
-
-
-

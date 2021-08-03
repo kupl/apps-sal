@@ -1,20 +1,20 @@
-h,w = map(int, input().split())
+h, w = map(int, input().split())
 ab = list(input() for _ in range(h))
 
-res =[]
+res = []
 
 for i in range(h):
-    if ab[i].count(".") ==w:
+    if ab[i].count(".") == w:
         pass
     else:
         res.append(ab[i])
 
 l = len(res)
 
-ress=[]
+ress = []
 for j in range(w):
     b = list(map(lambda x: x[j], res))
-    if b.count(".") ==l:
+    if b.count(".") == l:
         pass
     else:
         ress.append(b)

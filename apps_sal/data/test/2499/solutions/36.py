@@ -25,7 +25,7 @@ for bit in range(61):
                 found_in_bit = True
                 rank += 1
             else:
-                a[i] ^= a[rank-1]
+                a[i] ^= a[rank - 1]
         else:
             continue
 

@@ -30,4 +30,3 @@ for t in range(T):
         print(ret)
     else:
         print("-")
-

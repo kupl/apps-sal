@@ -15,5 +15,3 @@ def sum_pow_dig_seq(start, n, k):
     else:
         # What if we didn`t get the loop?
         return [len(seq), [], 0, seq[-1]]
-    
-

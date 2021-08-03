@@ -1,6 +1,6 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
-        words.sort(key = len)
+        words.sort(key=len)
         dp = [1 for i in range(len(words))]
         for r in range(1, len(words)):
             for l in range(r):
@@ -16,9 +16,3 @@ class Solution:
                     if missingLetters == 1:
                         dp[r] = max(dp[r], dp[l] + 1)
         return max(dp)
-                
-                
-                
-            
-        
-

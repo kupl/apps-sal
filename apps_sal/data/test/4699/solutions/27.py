@@ -13,6 +13,5 @@ while flag:
         break
     else:
         flag = True
-            
-print(n)
 
+print(n)

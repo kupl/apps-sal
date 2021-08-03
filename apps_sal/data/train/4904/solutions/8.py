@@ -4,4 +4,3 @@ def unpack(nested):
     if type(nested) is dict:
         return [flat for key, value in list(nested.items()) for flat in unpack(key) + unpack(value)]
     return [nested]
-

@@ -1,12 +1,12 @@
-#28 B - Two Anagrams
+# 28 B - Two Anagrams
 s = list(input())
 t = list(input())
 
-s = sorted(s,reverse = False)
-t = sorted(t,reverse = True)
+s = sorted(s, reverse=False)
+t = sorted(t, reverse=True)
 
 result = 'No'
-rang = min(len(s),len(t))
+rang = min(len(s), len(t))
 for i in range(rang):
     if ord(s[i]) < ord(t[i]):
         result = 'Yes'

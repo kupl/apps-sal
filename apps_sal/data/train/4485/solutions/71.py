@@ -1,5 +1,5 @@
 def HQ9(code):
-    result = None 
+    result = None
     if code == 'H':
         result = 'Hello World!'
     elif code == 'Q':

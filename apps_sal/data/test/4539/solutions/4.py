@@ -8,6 +8,6 @@ def main():
         print('Yes')
     else:
         print('No')
-    
-main()
 
+
+main()

@@ -27,5 +27,3 @@ for i in range(3 * M):
     ans = min(ans, s + d2[i])
 
 print(ans)
-
-

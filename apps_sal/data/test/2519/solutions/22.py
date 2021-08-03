@@ -8,4 +8,3 @@ for p0, p1 in zip(P, P[K:]):
     s.append(a)
 
 print(((max(s) + K) / 2))
-

@@ -6,13 +6,15 @@ import bisect
 
 sys.setrecursionlimit(10**7)
 
+
 def _S(): return sys.stdin.readline().rstrip()
 def I(): return int(_S())
 def LS(): return list(_S().split())
-def LI(): return list(map(int,LS()))
+def LI(): return list(map(int, LS()))
+
 
 if os.getenv("LOCAL"):
-    inputFile = basename_without_ext = os.path.splitext(os.path.basename(__file__))[0]+'.txt'
+    inputFile = basename_without_ext = os.path.splitext(os.path.basename(__file__))[0] + '.txt'
     sys.stdin = open(inputFile, "r")
 INF = float("inf")
 
@@ -24,7 +26,7 @@ r = []
 g = []
 b = []
 
-for i,s in enumerate(S):
+for i, s in enumerate(S):
     if s == 'R':
         r.append(i)
     if s == 'G':
@@ -44,16 +46,16 @@ for i,s in enumerate(S):
 #             if not tmp[1]-tmp[0]==tmp[2]-tmp[1]:
 #                 ans += 1
 
-ans = len(r)*len(g)*len(b)
+ans = len(r) * len(g) * len(b)
 
 for i in range(N):
-    for j in range(i,N):
-        k = j + (j-i)
-        if k > N-1:
+    for j in range(i, N):
+        k = j + (j - i)
+        if k > N - 1:
             break
-        if S[i]==S[j]:
+        if S[i] == S[j]:
             continue
-        if S[i]==S[k] or S[j]==S[k]:
+        if S[i] == S[k] or S[j] == S[k]:
             continue
         ans -= 1
 
@@ -79,4 +81,3 @@ print(ans)
 
 # GB系: (2,4), (4,5)
 # RB系: (1,3),
-

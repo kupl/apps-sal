@@ -6,11 +6,11 @@ flag = False
 while n:
     a, b = map(int, input().split())
 
-    if a==b:
+    if a == b:
         k += 1
     else:
         k = 0
-    
+
     if k == 3:
         flag = True
         break

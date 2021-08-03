@@ -1,5 +1,6 @@
 import itertools
 
+
 def sum_groups(arr):
     prev_len = 1
     while prev_len != len(arr):
@@ -10,4 +11,3 @@ def sum_groups(arr):
             )
         ]
     return len(arr)
-

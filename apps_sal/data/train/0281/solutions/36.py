@@ -9,4 +9,3 @@ class Solution:
                 return False
             cnt[diff] += 1
         return True
-

@@ -14,7 +14,7 @@ class Solution:
                     if DFS(new_row, new_col):
                         connect_boundary = True
                 return connect_boundary
-        
+
         nrow, ncol = len(grid), len(grid[0])
         cnt = 0
         for row in range(nrow):
@@ -22,5 +22,5 @@ class Solution:
                 if grid[row][col] == 0:
                     if not DFS(row, col):
                         cnt += 1
-        
+
         return cnt

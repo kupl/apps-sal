@@ -61,8 +61,8 @@ def mt(f):
 def slv(N, Q, STX, D):
     E = []
     for i, (s, t, x) in enumerate(STX):
-        E.append((s-x, 1, x, i))
-        E.append((t-x, -1, x, i))
+        E.append((s - x, 1, x, i))
+        E.append((t - x, -1, x, i))
     E.sort(reverse=True)
 
     q = []
@@ -95,5 +95,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -15,4 +15,3 @@ class Solution:
                 tot -= mx
             i += 1
         return tot
-

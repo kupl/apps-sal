@@ -6,4 +6,4 @@ for i in range(n):
 time = []
 for j in range(n):
     time += [people[j] * 15 + sum(goods[j]) * 5]
-print(min(time))    
+print(min(time))

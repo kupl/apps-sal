@@ -2,7 +2,7 @@ class Solution:
     def maxCoins(self, piles: List[int]) -> int:
         piles.sort()
         piles = deque(piles)
-        
+
         me = 0
         while piles:
             alice = piles.pop()
@@ -10,6 +10,5 @@ class Solution:
                 me += piles.pop()
             if piles:
                 bob = piles.popleft()
-        
-        return me
 
+        return me

@@ -12,11 +12,10 @@ setrecursionlimit(15000)
 n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 for i in range(n):
-	arr[i] = abs(arr[i])
+    arr[i] = abs(arr[i])
 arr.sort()
 count = 0
 for i in range(n):
-	index = bisect_right(arr, arr[i] * 2)
-	count += index - i - 1
-print(count) 
-
+    index = bisect_right(arr, arr[i] * 2)
+    count += index - i - 1
+print(count)

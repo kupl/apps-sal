@@ -1,5 +1,5 @@
-n, h = list(map(int,input().split()))
-ai = list(map(int,input().split()))
+n, h = list(map(int, input().split()))
+ai = list(map(int, input().split()))
 ans = 0
 for i in range(n):
     if ai[i] > h:
@@ -7,4 +7,3 @@ for i in range(n):
     else:
         ans += 1
 print(ans)
-

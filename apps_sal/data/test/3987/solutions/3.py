@@ -11,5 +11,3 @@ for val in a:
         d[1] = max(d[1] + 1, d[0] + 1)
         d[3] = max(d[3] + 1, d[2] + 1)
 print(max(d))
-        
-

@@ -10,4 +10,3 @@ for i in range(N - 1):
         ans += t[i + 1] - t[i]
 ans += T
 print(ans)
-

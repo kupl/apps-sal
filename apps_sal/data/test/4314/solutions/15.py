@@ -17,4 +17,3 @@ for a in A:
         if i in c:
             print(a[i], end='')
     print()
-

@@ -33,4 +33,3 @@ for i in range(n):
             mx = max(mx, i)
 
 print(mx + 1)
-

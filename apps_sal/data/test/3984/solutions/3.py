@@ -6,4 +6,3 @@ for x in s:
     else:
         print('Mike')
     mi = min(x, mi)
-

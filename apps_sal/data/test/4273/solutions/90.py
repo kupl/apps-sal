@@ -1,7 +1,7 @@
 import itertools
 n = int(input())
-num = [0]*5
-name = ['M','A','R','C','H']
+num = [0] * 5
+name = ['M', 'A', 'R', 'C', 'H']
 for _ in range(n):
     s = str(input())
     for i in range(5):
@@ -14,6 +14,6 @@ if 2 <= c:
     print(0)
 else:
     d = 0
-    for h,j,l in itertools.combinations(num,3):
-        d += (h*j*l)
+    for h, j, l in itertools.combinations(num, 3):
+        d += (h * j * l)
     print(d)

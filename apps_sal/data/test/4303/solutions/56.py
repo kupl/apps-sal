@@ -11,4 +11,3 @@ for i in range(N - K + 1):
     else:
         ans = min(ans, right - left + min(abs(left), right))
 print(ans)
-

@@ -14,4 +14,3 @@ for _ in range(q):
     n = rint()
     a = rints()
     print((sum(a) + n - 1) // n)
-

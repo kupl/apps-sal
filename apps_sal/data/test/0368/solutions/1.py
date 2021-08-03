@@ -1,6 +1,8 @@
 A = [''] * 8
 b = 0
 w = 0
+
+
 def count(v):
     nonlocal w, b
     if v == 'Q':
@@ -23,6 +25,8 @@ def count(v):
         b += 3
     elif v == 'p':
         b += 1
+
+
 for i in range(8):
     A[i] = input()
     for j in range(8):
@@ -33,4 +37,3 @@ elif b == w:
     print("Draw")
 else:
     print("White")
-

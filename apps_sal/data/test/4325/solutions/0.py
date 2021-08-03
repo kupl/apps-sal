@@ -7,4 +7,3 @@ while n > 0:
     n -= x
 
 print(ans)
-

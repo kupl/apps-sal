@@ -10,4 +10,3 @@ for _ in range(int(input())):
                 break
             ans += 1
         print(ans)
-

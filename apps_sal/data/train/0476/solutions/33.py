@@ -6,7 +6,7 @@ class Solution:
         l.sort(reverse=True)
         x = l[0]
         res = 1
-        
+
         for y in l[1:]:
             t = (target - y[0]) / y[1]
             if t > (target - x[0]) / x[1]:

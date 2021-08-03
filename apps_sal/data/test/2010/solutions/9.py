@@ -23,4 +23,3 @@ for i in range(M):
     elif opcode == 3:
         opcode, q = op
         print(A[q - 1] + globalIncreaser)
-

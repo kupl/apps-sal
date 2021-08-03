@@ -2,6 +2,7 @@ s = input()
 k = int(input())
 ans = 0
 
+
 def get_max_tandem_repeat(s, n):
     while n > 0:
         for i in range(len(s) - 2):
@@ -10,11 +11,12 @@ def get_max_tandem_repeat(s, n):
                 break
             flag = True
             for j in range(i, i + n):
-                if s[j] != s[j+n] and s[j+n] != '_':
+                if s[j] != s[j + n] and s[j + n] != '_':
                     flag = False
                     break
             if flag:
                 return n * 2
+
 
 if k >= len(s):
     ans = (k + len(s)) // 2 * 2
@@ -24,4 +26,3 @@ else:
     ans = get_max_tandem_repeat(s, n)
 
 print(ans)
-

@@ -4,7 +4,6 @@ import os
 from collections import Counter, defaultdict, deque
 
 
-
 def solve(N, M, edges, topics):
     g = [[] for i in range(N)]
     for u, v in edges:
@@ -37,5 +36,6 @@ def __starting_point():
     topics = [int(x) - 1 for x in input().split()]  # 0 indexed
     ans = solve(N, M, edges, topics)
     print(ans)
+
 
 __starting_point()

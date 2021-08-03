@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 n, k = readln()
 h = readln()
@@ -12,4 +14,3 @@ for _ in range(k, n):
         ans = s
         j = _ - k + 2
 print(j)
-

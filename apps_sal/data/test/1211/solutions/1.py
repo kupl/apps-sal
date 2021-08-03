@@ -7,4 +7,3 @@ for i in range(k):
         num = n // a[i]
         kor = i + 1
 print(kor, num)
-

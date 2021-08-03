@@ -6,7 +6,7 @@ class UnionFindSet:
         # self is a distinct group
         for i in range(n):
             self.parants[i] = i
-        
+
     def find(self, x):
         if x != self.parants[x]:
             self.parants[x] = self.find(self.parants[x])
@@ -16,8 +16,9 @@ class UnionFindSet:
         px, py = self.find(x), self.find(y)
 
         # already in same group, no need to merge again
-        if px == py: return False
-        
+        if px == py:
+            return False
+
         if self.rank[px] < self.rank[py]:
             self.parants[px] = py
         elif self.rank[px] > self.rank[py]:
@@ -25,6 +26,7 @@ class UnionFindSet:
         else:
             self.parants[py] = px
             self.rank[py] += 1
+
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
@@ -35,13 +37,10 @@ class Solution:
                 if x % i == 0:
                     s.union(x, i)
                     s.union(x, x // i)
-        
+
         hash = defaultdict(int)
-        
+
         for x in A:
-            hash[s.find(x)] += 1 
+            hash[s.find(x)] += 1
 
         return max(hash.values())
-        
-        
-

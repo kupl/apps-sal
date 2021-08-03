@@ -1,4 +1,5 @@
-import string, copy
+import string
+import copy
 
 
 def solution(s):
@@ -58,12 +59,13 @@ def output(s):
 
 
 def main():
-   args = parser()
-   result = solution(args)
-   output(result)
+    args = parser()
+    result = solution(args)
+    output(result)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,16 +1,16 @@
 N = int(input())
-blue = [input() for _ in range(N)] 
+blue = [input() for _ in range(N)]
 M = int(input())
-red = [input() for _ in range(M)] 
+red = [input() for _ in range(M)]
 
-set_blue = set(blue)  
+set_blue = set(blue)
 scores = []
 for s in set_blue:
-  score = blue.count(s) - red.count(s)
-  scores.append(score)
-  
+    score = blue.count(s) - red.count(s)
+    scores.append(score)
+
 ms = max(scores)
-if ms>=0:
-  print(ms)
+if ms >= 0:
+    print(ms)
 else:
-  print(0)
+    print(0)

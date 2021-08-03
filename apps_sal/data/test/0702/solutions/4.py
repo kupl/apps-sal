@@ -28,4 +28,3 @@ for i in range(n):
             v = False
 
 print("YES" if v else "NO")
-

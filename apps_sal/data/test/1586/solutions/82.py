@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#import
+# import
 #import math
 #import numpy as np
 N = int(input())
@@ -11,6 +11,5 @@ else:
     ans = 0
     for i in range(50):
         ans += N // (10 * 5 ** i)
-    
-    print(ans)
 
+    print(ans)

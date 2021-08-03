@@ -7,7 +7,7 @@ S2 = input()
 l = []
 res = 1
 while res < N:
-    if S1[res-1] == S1[res]:
+    if S1[res - 1] == S1[res]:
         l.append(2)
         res += 2
     else:
@@ -23,11 +23,11 @@ else:
     ans = 6
 
 for i in range(1, n):
-    if l[i] == 1 and l[i-1] == 1:
+    if l[i] == 1 and l[i - 1] == 1:
         ans = ans * 2 % MOD
-    elif l[i] == 2 and l[i-1] == 1:
+    elif l[i] == 2 and l[i - 1] == 1:
         ans = ans * 2 % MOD
-    elif l[i] == 2 and l[i-1] == 2:
+    elif l[i] == 2 and l[i - 1] == 2:
         ans = ans * 3 % MOD
 
 print(ans)

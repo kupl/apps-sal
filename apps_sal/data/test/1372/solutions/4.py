@@ -13,4 +13,3 @@ H, N, *AB = list(map(int, open(0).read().split()))
 A = np.array(AB[::2], dtype=np.int64)
 B = np.array(AB[1::2], dtype=np.int64)
 print((solve(H, A, B)))
-

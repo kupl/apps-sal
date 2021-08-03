@@ -36,4 +36,3 @@ for seq in sequences:
         min_count = count
 
 print(min_count)
-

@@ -5,7 +5,7 @@ class Solution:
         heapq.heapify(heap)
         count = 0
         range_sum = 0
-        
+
         while heap:
             num, index = heapq.heappop(heap)
             count += 1
@@ -13,9 +13,7 @@ class Solution:
                 range_sum += num
             if count == right:
                 break
-            if index < n-1:
-                heapq.heappush(heap, (num+nums[index+1], index+1))
-        
-        return range_sum % (10**9+7)
-        
+            if index < n - 1:
+                heapq.heappush(heap, (num + nums[index + 1], index + 1))
 
+        return range_sum % (10**9 + 7)

@@ -1,11 +1,15 @@
 def prov(la, lb, lc, ld):
-    if la/lb >= 2 and la/lc >= 2 and la/ld >= 2:
+    if la / lb >= 2 and la / lc >= 2 and la / ld >= 2:
         return True
     return False
+
+
 def prov1(la, lb, lc, ld):
-    if  lb/la >= 2 and lc/la >= 2 and ld/la >= 2:
+    if lb / la >= 2 and lc / la >= 2 and ld / la >= 2:
         return True
     return False
+
+
 a = list(input())
 b = list(input())
 c = list(input())

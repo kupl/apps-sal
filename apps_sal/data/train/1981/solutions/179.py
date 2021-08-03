@@ -1,23 +1,23 @@
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
-        if nums==[] or requests==[]:
+        if nums == [] or requests == []:
             return 0
-        l=len(nums)
-        freqs = [0]*(l+1)
+        l = len(nums)
+        freqs = [0] * (l + 1)
         for request in requests:
             start, end = request
-            freqs[start]+=1
-            freqs[end+1]-=1
+            freqs[start] += 1
+            freqs[end + 1] -= 1
         # print(freqs)
-        for i in range(1,l+1):
-            freqs[i]+=freqs[i-1]
+        for i in range(1, l + 1):
+            freqs[i] += freqs[i - 1]
         nums = sorted(nums)
         freqs = sorted(freqs[:-1])
         # print(freqs)
         # print(nums)
         ans = 0
         for i in range(l):
-            if freqs[i]==0:
+            if freqs[i] == 0:
                 continue
-            ans +=(freqs[i]*nums[i])
-        return ans%((10**9)+7)
+            ans += (freqs[i] * nums[i])
+        return ans % ((10**9) + 7)

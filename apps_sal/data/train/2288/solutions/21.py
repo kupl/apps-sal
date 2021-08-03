@@ -26,8 +26,8 @@ from collections import deque
 X = int(input())
 K = int(input())
 
-r = list(map(int,input().split()))
-#番兵
+r = list(map(int, input().split()))
+# 番兵
 r.append(float("inf"))
 r.append(0)
 
@@ -35,56 +35,52 @@ ta = deque([])
 Q = int(input())
 
 for i in range(Q):
-    t,a = list(map(int,input().split()))
-    ta.append([t,a])
+    t, a = list(map(int, input().split()))
+    ta.append([t, a])
 
-ZA = 0 #初期がa=0の時のシミュ結果
-XA = X #初期がXの時
-D  = 0 #差分計算
-Zmax = 0 #aがZmax以下ならZAと等しくなる
-Xmin = X #aがXmin以上ならXAと等しくなる
+ZA = 0  # 初期がa=0の時のシミュ結果
+XA = X  # 初期がXの時
+D = 0  # 差分計算
+Zmax = 0  # aがZmax以下ならZAと等しくなる
+Xmin = X  # aがXmin以上ならXAと等しくなる
 
-for i in range(K+1):
+for i in range(K + 1):
 
-    time = r[i] - r[i-1]
+    time = r[i] - r[i - 1]
 
-    #クエリの処理(r[i]以下に関して)
-    if i % 2 == 0: #Aが減っていく
-        
+    # クエリの処理(r[i]以下に関して)
+    if i % 2 == 0:  # Aが減っていく
+
         while len(ta) > 0 and ta[0][0] <= r[i]:
-            t,a = ta.popleft()
-            td = t - r[i-1]
+            t, a = ta.popleft()
+            td = t - r[i - 1]
 
             if a <= Zmax:
-                print((max( 0 , ZA-td )))
+                print((max(0, ZA - td)))
             elif a >= Xmin:
-                print((max (0 , XA-td )))
+                print((max(0, XA - td)))
             else:
-                print((max (0 , a+D-td)))
+                print((max(0, a + D - td)))
 
         D -= time
-        Zmax = max(Zmax,-1*D)
-        ZA = max(0,ZA-time)
-        XA = max(0,XA-time)
+        Zmax = max(Zmax, -1 * D)
+        ZA = max(0, ZA - time)
+        XA = max(0, XA - time)
 
-    else: #Aが増えていく
-        
+    else:  # Aが増えていく
+
         while len(ta) > 0 and ta[0][0] <= r[i]:
-            t,a = ta.popleft()
-            td = t - r[i-1]
+            t, a = ta.popleft()
+            td = t - r[i - 1]
 
             if a <= Zmax:
-                print((min( X , ZA+td )))
+                print((min(X, ZA + td)))
             elif a >= Xmin:
-                print((min (X , XA+td )))
+                print((min(X, XA + td)))
             else:
-                print((min (X , a+D+td)))
+                print((min(X, a + D + td)))
 
         D += time
-        Xmin = min(Xmin,X-D)
-        ZA = min(X,ZA+time)
-        XA = min(X,XA+time)
-
-
-    
-
+        Xmin = min(Xmin, X - D)
+        ZA = min(X, ZA + time)
+        XA = min(X, XA + time)

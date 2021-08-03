@@ -5,7 +5,7 @@ for i in range(n):
     l = []
     for i in a:
         l.append(int(i))
-    a,b=l[0],l[1]
+    a, b = l[0], l[1]
     if a < b:
         li.append("<")
     elif a > b:

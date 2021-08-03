@@ -1,12 +1,12 @@
 def checkCorners(row_size, col_size, r, c):
-    
-    if (0 <= r-1 < row_size and 0 <= c < col_size) and (0 <= r-1 < row_size and 0 <= c-1 < col_size) and (0 <= r < row_size and 0 <= c-1 < col_size):
+
+    if (0 <= r - 1 < row_size and 0 <= c < col_size) and (0 <= r - 1 < row_size and 0 <= c - 1 < col_size) and (0 <= r < row_size and 0 <= c - 1 < col_size):
         return True
     return False
-    
+
 
 class Solution:
-    
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         dp = matrix[:]
         r_size = len(matrix)
@@ -21,5 +21,3 @@ class Solution:
                 acc += dp[row][col]
 
         return acc
-                        
-

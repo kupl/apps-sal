@@ -19,4 +19,4 @@ while i < N:
     else:
         x *= 3
     prev = nxt
-print(x % (10**9+7))
+print(x % (10**9 + 7))

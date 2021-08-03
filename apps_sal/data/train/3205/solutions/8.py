@@ -1,1 +1,1 @@
-is_divisible = lambda n,x,y: not (n%x or n%y)
+def is_divisible(n, x, y): return not (n % x or n % y)

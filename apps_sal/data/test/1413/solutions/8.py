@@ -12,9 +12,8 @@ def ria():
 
 n = ria()[0]
 st = input()
-rs=0
+rs = 0
 for i in range(n):
-    if int(st[i])%2==0:
-        rs+=i+1
+    if int(st[i]) % 2 == 0:
+        rs += i + 1
 print(rs)
-

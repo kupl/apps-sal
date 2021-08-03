@@ -10,7 +10,7 @@ class Puzzlebox(object):
     answer = "Ha, not quite that easy.\n"
 
     hint = "How do you normally unlock things?\n"
-        
+
     hint_two = "The lock attribute is a method. Have you called it with anything yet?\n"
 
     def lock(self, *args):
@@ -26,9 +26,9 @@ class Puzzlebox(object):
     def __repr__(self):
         return "The built-in dir() function is useful. Continue adding print statements till you know the answer.\n"
 
+
 def answer(puzzlebox):
     return 42
-    
+
+
 print((answer(puzzlebox)))
-
-

@@ -1,5 +1,5 @@
 n = int(input())
-a =  list(map(int, input().split()))
+a = list(map(int, input().split()))
 s = sum(a)
 l = s // n
 if s % n == 0:
@@ -12,4 +12,4 @@ for x in a:
         k1 += l - x
     elif x > r:
         k2 += x - r
-print(max(k1,k2))
+print(max(k1, k2))

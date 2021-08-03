@@ -1,4 +1,6 @@
 from functools import reduce
+
+
 def count_find_num(primesL, limit):
     base_num = reduce((lambda a, b: a * b), primesL, 1)
     if base_num > limit:

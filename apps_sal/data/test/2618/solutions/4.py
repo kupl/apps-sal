@@ -31,4 +31,3 @@ for i in range(q):
             else:
                 left = middle
         print(right)
-

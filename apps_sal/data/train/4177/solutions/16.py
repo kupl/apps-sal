@@ -5,4 +5,4 @@ def men_from_boys(arr):
             even.append(num)
         else:
             odd.append(num)
-    return sorted(even) + sorted(odd, reverse = True)
+    return sorted(even) + sorted(odd, reverse=True)

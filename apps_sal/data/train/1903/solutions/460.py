@@ -15,4 +15,3 @@ class Solution:
                 heapq.heappush(heap_new, (min(cost_old, abs(points[e][0] - points[e_pop][0]) + abs(points[e][1] - points[e_pop][1])), e))
             heap = heap_new
         return ret
-

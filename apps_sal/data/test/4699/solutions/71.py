@@ -10,4 +10,3 @@ while True:
     else:
         print(n)
         break
-

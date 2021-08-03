@@ -1,5 +1,5 @@
 from sys import stdout
-from random import randint 
+from random import randint
 from math import *
 import re
 
@@ -16,4 +16,3 @@ for a in range(1, (n + 1) // 2):
         mxb = b
 
 print(mxa, mxb)
-

@@ -15,7 +15,8 @@ for i in range(1, m + 1):
     while len(que) != 0 and que[0][1] <= i:
         tmp = que.popleft()
         heapq.heappush(h, tmp)
-    if len(h) == 0: continue
+    if len(h) == 0:
+        continue
     tmp = heapq.heappop(h)
     ans -= tmp[0]
 print(ans)

@@ -1,1 +1,1 @@
-largest = lambda n,x: sorted(x)[-n:]
+def largest(n, x): return sorted(x)[-n:]

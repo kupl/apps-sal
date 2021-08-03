@@ -10,7 +10,7 @@ class Solution:
                         return True
                     previous = i
             return False
-            
+
         position.sort()
         min_distance = 1
         max_distance = (position[-1] - position[0]) // (m - 1)

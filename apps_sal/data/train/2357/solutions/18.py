@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     input = sys.stdin.readline
     N, M = map(int, input().split())
@@ -8,7 +9,7 @@ def solve():
         print(0)
         return 0
     mod = 7 + 10 ** 9
-    
+
     Ans = 1
     sumA = sum(A)
     for i in range(sumA + N):
@@ -19,10 +20,13 @@ def solve():
         fact *= i
         fact %= mod
     Ans *= pow(fact, mod - 2, mod)
-    print(Ans % mod)    
-    
+    print(Ans % mod)
+
     return 0
+
 
 def __starting_point():
     solve()
+
+
 __starting_point()

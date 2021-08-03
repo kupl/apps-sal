@@ -13,4 +13,3 @@ for line in sys.stdin:
     s.add(prev)
 
 print(len(s))
-

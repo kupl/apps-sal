@@ -15,4 +15,3 @@ for i in range(n):
         if at == 0 and cg == 0:
             ans += 1
 print(ans)
-

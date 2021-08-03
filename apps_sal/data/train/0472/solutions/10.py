@@ -4,13 +4,13 @@ class Solution:
         if arr[start] == 0:
             return True
         currNodes = [start]
-        
+
         while len(visited) < len(arr):
             temp = []
             for i in currNodes:
                 visited += [i]
-                candidate1 = i+arr[i]
-                candidate2 = i-arr[i]
+                candidate1 = i + arr[i]
+                candidate2 = i - arr[i]
                 if candidate1 < len(arr) and candidate1 not in visited:
                     if arr[candidate1] == 0:
                         return True
@@ -23,5 +23,3 @@ class Solution:
                 break
             currNodes = temp
         return False
-                    
-

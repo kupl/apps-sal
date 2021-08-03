@@ -3,7 +3,7 @@ import math
 
 class Point:
 
-    def __init__(self, x , y):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
 
@@ -43,4 +43,3 @@ x_positions = list(map(int, input().split()))
 for x_position in x_positions:
     curling.add(x_position)
 print(" ".join(curling.results))
-

@@ -5,7 +5,7 @@ class Solution:
             for pile in piles:
                 t += (pile - 1) // val
             return t
-        
+
         s = sum(piles)
         l, r = math.ceil(s / H), min(max(piles), math.ceil(s / (H - len(piles) + 1)))
         while l <= r:

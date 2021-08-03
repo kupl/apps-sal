@@ -3,4 +3,4 @@ def is_lucky(ticket):
         y = int(ticket)
     except ValueError:
         return False
-    return sum([int(x) for x in ticket[0:3]]) == sum([int(x) for x in ticket[3:]]) 
+    return sum([int(x) for x in ticket[0:3]]) == sum([int(x) for x in ticket[3:]])

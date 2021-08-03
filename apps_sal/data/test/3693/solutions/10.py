@@ -13,8 +13,10 @@ for i in [1, 3, 5, 7]:
     ymax = max(ymax, p1[i])
     ymin = min(ymin, p1[i])
 
+
 def Inside(x, y):
     return x <= xmax and x >= xmin and y <= ymax and y >= ymin
+
 
 ok = False
 

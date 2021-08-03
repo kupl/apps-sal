@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 def main():
     S = input()
     A = [0] * ((n := len(S)) + 1)
@@ -12,7 +14,9 @@ def main():
         ans += v * (v - 1) // 2
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -34,4 +34,3 @@ if thing:
         print(r)
 else:
     print(-1)
-

@@ -1,9 +1,11 @@
 import collections
+
+
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         m, n = len(grid), len(grid[0])
         move = [(0, 1), (1, 0), (0, -1), (-1, 0)]
-        
+
         queue = collections.deque([(0, 0, k)])
         seen = set([(0, 0, k)])
         level = 0
@@ -12,7 +14,7 @@ class Solution:
             size = len(queue)
             for _ in range(size):
                 x, y, remain = queue.popleft()
-                if x == m-1 and y == n-1:
+                if x == m - 1 and y == n - 1:
                     return level
                 for dx, dy in move:
                     newX, newY = x + dx, y + dy
@@ -23,13 +25,8 @@ class Solution:
                                 seen.add((newX, newY, remain))
                         else:
                             if remain > 0:
-                                if (newX, newY, remain-1) not in seen:
-                                    queue.append((newX, newY, remain-1))
+                                if (newX, newY, remain - 1) not in seen:
+                                    queue.append((newX, newY, remain - 1))
                                     seen.add((newX, newY, remain - 1))
             level += 1
         return -1
-                    
-        
-        
-        
-

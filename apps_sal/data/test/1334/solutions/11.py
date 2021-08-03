@@ -17,4 +17,3 @@ else:
         if el != ma:
             print(s[:k - i - 1] + S[S.index(el) + 1] + mi * i)
             break
-

@@ -17,15 +17,15 @@ class Solution:
                 if counter[tree[left]] == 0:
                     basket.remove(tree[left])
                 left += 1
-            ans = max(ans, right-left+1)
+            ans = max(ans, right - left + 1)
         return ans
-        
+
         # # Recursive
         # memo = {}
         # def collect(index, basket=[]):
         #     if index == len(tree):
         #         return 0
-        #     # if (index, set(basket)) 
+        #     # if (index, set(basket))
         #     take = 0
         #     if len(basket) < 2 or (tree[index] in basket):
         #         take = collect(index+1, basket+[tree[index]]) + 1
@@ -33,5 +33,4 @@ class Solution:
         #     if len(basket) < 2:
         #         skip = collect(index+1, basket)
         #     return max(take, skip)
-        # return collect(0)                        
-
+        # return collect(0)

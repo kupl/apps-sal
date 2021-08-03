@@ -1,19 +1,21 @@
 from collections import Counter
+
+
 class Solution:
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) % W != 0:
             return False
-        
+
         parts = len(hand) / W
-        
+
         cnt = Counter(hand)
         cnt = sorted(cnt.items())
-        #print(cnt)
+        # print(cnt)
         heapq.heapify(cnt)
-        #print(cnt)
+        # print(cnt)
 
         while cnt:
-            #print(cnt)
+            # print(cnt)
             hand = []
             while len(hand) != W:
                 if not cnt:
@@ -26,7 +28,7 @@ class Solution:
                         return False
                 hand.append((card, count))
 
-            #print(hand)
+            # print(hand)
             for (card, count) in hand:
                 count -= 1
                 if count:

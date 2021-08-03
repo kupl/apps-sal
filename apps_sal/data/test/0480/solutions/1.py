@@ -7,7 +7,7 @@ if (x2 > x1):
     p = s - p
     x1 = s - x1
     x2 = s - x2
-    
+
 if (d == -1):
     if (p < x1):
         ans = min(ans, (p + s + s - x2) * t1)

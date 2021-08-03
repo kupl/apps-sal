@@ -14,7 +14,7 @@ class Solution:
                     hi = mid
                 else:
                     lo = mid + 1
-                    
+
             leftLen = bit - intervals[lo - 1] - 1
             rightLen = intervals[lo] - bit - 1
             if leftLen == m or rightLen == m:
@@ -22,4 +22,3 @@ class Solution:
             if intervals[lo] - intervals[lo - 1] - 1 > m:
                 intervals.insert(lo, bit)
         return -1
-

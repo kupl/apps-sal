@@ -29,4 +29,3 @@ for i in range(n):
     sets.append(list(map(int, input().strip().split())))
 
 print(solve(sets))
-

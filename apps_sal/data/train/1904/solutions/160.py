@@ -1,19 +1,18 @@
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
-        self.countK(points, 0, len(points)-1, K)
+        self.countK(points, 0, len(points) - 1, K)
         return points[:K]
 
-    
     def countK(self, points, l, r, k):
         if l < r:
             p = self.createPartition(points, l, r, k)
             if p == k:
                 return
             elif p < k:
-                self.countK(points, p+1, r, k)
+                self.countK(points, p + 1, r, k)
             else:
-                self.countK(points, l, p-1, k)
-    
+                self.countK(points, l, p - 1, k)
+
     def createPartition(self, points, l, r, k):
         pivot = points[r]
         count = l
@@ -23,4 +22,3 @@ class Solution:
                 count += 1
         points[count], points[r] = points[r], points[count]
         return count
-

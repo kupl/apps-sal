@@ -1,6 +1,7 @@
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         memo = {}
+
         def dfs(n):
             if n == 0:
                 return False

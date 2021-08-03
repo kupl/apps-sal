@@ -56,7 +56,7 @@ def hash(s):
             x += '0'
         else:
             x += '1'
-    
+
     return x
 
 
@@ -68,6 +68,7 @@ def neighbor(s):
 def isneighbor(a, b):
     return sum([0 if a[i] == b[i] else 1 for i in range(len(a))]) == 1
 
+
 m = collections.defaultdict(list)
 for i in range(N):
     s = input()
@@ -78,11 +79,9 @@ odd = 0
 for k, v in list(m.items()):
     lv = len(v)
     even += lv * (lv - 1) // 2
-    
+
     for b in neighbor(k):
         if b in m:
             odd += lv * len(m[b])
 
 print(even + odd // 2)
-
-

@@ -5,7 +5,7 @@ while(t):
     a = list(map(int, input().split()))
     if(len(set(a)) == 1):
         print(1)
-        print("1 "*n)
+        print("1 " * n)
     elif(n % 2 == 0):
         print(2)
         print("1 2 " * (n // 2))
@@ -14,7 +14,7 @@ while(t):
         en = 1
         colour = 2
         for i in range(1, n):
-            if(en and a[i] == a[i-1]):
+            if(en and a[i] == a[i - 1]):
                 colour = 3 - colour
                 en = 0
             ans.append(colour)

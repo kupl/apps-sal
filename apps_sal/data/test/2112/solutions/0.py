@@ -64,4 +64,3 @@ x, k, y = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 print(solve(x, k, y, a, b))
-

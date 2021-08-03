@@ -1,8 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
 
-dp = [0]*(n + 1)
-f,l = {}, {}
+dp = [0] * (n + 1)
+f, l = {}, {}
 for i in range(len(a)):
     x = a[i]
     if x not in f:
@@ -17,7 +17,7 @@ for i in range(1, len(a) + 1):
     curxor = 0
     b = i
     while j > 0:
-        x = a[j-1]
+        x = a[j - 1]
         if l[x] > i - 1:
             break
         if x not in nums:
@@ -25,7 +25,7 @@ for i in range(1, len(a) + 1):
             curxor ^= x
         b = min(b, f[x] + 1)
         if b == j:
-            mx = max(mx, dp[j-1] + curxor)
+            mx = max(mx, dp[j - 1] + curxor)
         j -= 1
-    dp[i] = max(dp[i-1], mx)
+    dp[i] = max(dp[i - 1], mx)
 print(dp[len(a)])

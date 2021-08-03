@@ -3,6 +3,7 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
+
 n = int(input())
 a = list(map(int, input().split()))
 ans = a[0]

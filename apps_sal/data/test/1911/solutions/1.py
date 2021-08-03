@@ -6,4 +6,3 @@ for i in range(n - 1):
     diff[i] = arr[i + 1] - arr[i]
 diff.sort(reverse=True)
 print(p - sum(diff[:k - 1]))
-

@@ -1,5 +1,6 @@
 import fractions
 
+
 def solve(a, b):
     c = fractions.gcd(a, b)
     while c > 1:

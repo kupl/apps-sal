@@ -24,4 +24,3 @@ for i in range(1, 6):
     ans += abs(q[i] - (e[i] // 2))
 
 print(ans // 2)
-

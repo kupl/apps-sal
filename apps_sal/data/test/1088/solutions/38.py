@@ -1,5 +1,7 @@
 from collections import defaultdict
 import math
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -50,30 +52,34 @@ class UnionFind():
     def __str__(self):
         return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
 
+
 N, K = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(N)]
 
-c_pattern = list() # swapable なcの組み合わせ数
-r_pattern = list() # swapable なrの組み合わせ数
+c_pattern = list()  # swapable なcの組み合わせ数
+r_pattern = list()  # swapable なrの組み合わせ数
 
 for c1 in range(N):
-    for c2 in range(c1+1, N):
+    for c2 in range(c1 + 1, N):
         ok = True
         for i in range(N):
             if a[i][c1] + a[i][c2] > K:
                 ok = False
                 break
-        if ok: c_pattern.append([c1, c2])
+        if ok:
+            c_pattern.append([c1, c2])
 
 
 for r1 in range(N):
-    for r2 in range(r1+1, N):
+    for r2 in range(r1 + 1, N):
         ok = True
         for i in range(N):
             if a[r1][i] + a[r2][i] > K:
                 ok = False
                 break
-        if ok: r_pattern.append([r1, r2])
+        if ok:
+            r_pattern.append([r1, r2])
+
 
 def total_pattern(pattern_list):
     uf = UnionFind(N)
@@ -83,7 +89,8 @@ def total_pattern(pattern_list):
     # print(uf.roots())
     for r in uf.roots():
         ans *= math.factorial(uf.size(r))
-    
+
     return ans
 
-print(total_pattern(c_pattern)*total_pattern(r_pattern)%998244353)
+
+print(total_pattern(c_pattern) * total_pattern(r_pattern) % 998244353)

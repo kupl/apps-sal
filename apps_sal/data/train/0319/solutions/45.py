@@ -6,14 +6,14 @@ class Solution:
         if first == second:
             return 'Tie'
         return 'Bob'
-    
+
     def memo_search(self, pos, stoneValue, memo):
         if pos in memo:
             return memo[pos]
-        
+
         if pos == len(stoneValue):
             return 0, 0
-        
+
         ans = -sys.maxsize
         value = 0
         for i in range(3):
@@ -25,4 +25,3 @@ class Solution:
                     ans = first + value
         memo[pos] = ans, total - ans
         return ans, total - ans
-

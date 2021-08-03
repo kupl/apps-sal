@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, k = f()
 a, b, c, d = f()
 s = list(set(range(1, n + 1)).difference({a, b, c, d}))

@@ -65,4 +65,3 @@ print((s.getProbability([1, 1])))  # 1.0
 print((s.getProbability([2, 1, 1])))  # 0.666666666
 print((s.getProbability([1, 2, 1, 2])))  # 0.6
 print((s.getProbability([6, 6, 6, 6, 6, 6])))  # 0.90327
-

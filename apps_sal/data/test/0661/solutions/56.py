@@ -17,10 +17,10 @@ else:
         for num in range(a + 1):
             if num == k:
                 continue
-            print(num, end = " ")
-        print(k, end = " ")
+            print(num, end=" ")
+        print(k, end=" ")
         for num in range(a, -1, -1):
             if num == k:
                 continue
-            print(num, end = " ")
+            print(num, end=" ")
         print(k)

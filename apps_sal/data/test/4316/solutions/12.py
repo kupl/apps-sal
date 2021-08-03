@@ -14,4 +14,3 @@ if len(list(L.keys())) != 2:
     ans = "No"
 
 print(ans)
-

@@ -1,4 +1,4 @@
-n,l = map(int,input().split())
+n, l = map(int, input().split())
 ans = ''
 k = []
 for i in range(n):
@@ -6,5 +6,5 @@ for i in range(n):
     k.append(s)
 k.sort()
 for i in k:
-    ans +=i
+    ans += i
 print(ans)

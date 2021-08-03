@@ -20,5 +20,6 @@ while Q:
         Q.append(q)
 for i in l:
     if i != n - 1:
-        print(-1);return()
+        print(-1)
+        return()
 print(max(d))

@@ -11,7 +11,7 @@ def summation(num):
 
 
 def __starting_point():
-    assert summation (4)
-    
+    assert summation(4)
+
 
 __starting_point()

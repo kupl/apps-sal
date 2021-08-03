@@ -8,8 +8,10 @@ for i in range(n):
     k = d // 2
     u[i] = v[i] = k
     if d & 1:
-        if t[i] & 1: v[i] += 1
-        else: u[i] += 1
+        if t[i] & 1:
+            v[i] += 1
+        else:
+            u[i] += 1
     i += 1
 a = sum(u[i] for i in range(0, n, 2))
 b = sum(v[i] for i in range(0, n, 2))

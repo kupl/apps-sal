@@ -3,6 +3,7 @@ from collections import deque
 N = int(input())
 S = input()
 
+
 def exists(length):
     que = deque()
     V = set()
@@ -15,6 +16,7 @@ def exists(length):
         que.append(T)
     return False
 
+
 ok = 0
 ng = N
 while ng - ok > 1:
@@ -26,5 +28,3 @@ while ng - ok > 1:
         ng = mid
 
 print(ok)
-
-

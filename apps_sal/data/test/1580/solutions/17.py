@@ -1,15 +1,21 @@
-N, M = map(int,input().split())
-par = [i for i in range(N+1)]
-size = [1 for _ in range(N+1)]
+N, M = map(int, input().split())
+par = [i for i in range(N + 1)]
+size = [1 for _ in range(N + 1)]
+
+
 def find(x):
     if par[x] == x:
         return x
     else:
-        par[x] = find(par[x]) #経路圧縮
+        par[x] = find(par[x])  # 経路圧縮
         return par[x]
-def same(x,y):
+
+
+def same(x, y):
     return find(x) == find(y)
-def unite(x,y):
+
+
+def unite(x, y):
     x = find(x)
     y = find(y)
     if x == y:
@@ -17,11 +23,13 @@ def unite(x,y):
     par[x] = y
     size[y] = size[x] + size[y]
     size[x] = 0
+
+
 for i in range(M):
-    x, y,  z= map(int,input().split())
-    unite(x,y)
-Ans =0
+    x, y, z = map(int, input().split())
+    unite(x, y)
+Ans = 0
 for j in size[1:]:
     if j != 0:
-        Ans +=1
+        Ans += 1
 print(Ans)

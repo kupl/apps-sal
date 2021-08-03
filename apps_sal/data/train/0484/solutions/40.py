@@ -1,18 +1,20 @@
 class Solution:
     def primePalindrome(self, N: int) -> int:
         def isPrime(n):
-            if n<=1: return False
+            if n <= 1:
+                return False
             else:
-                return all(n%d for d in range(2,int(n**0.5)+1))
+                return all(n % d for d in range(2, int(n**0.5) + 1))
+
         def reverse(n):
             ans = 0
             while n:
-                ans = 10*ans+n%10
-                n = n//10
+                ans = 10 * ans + n % 10
+                n = n // 10
             return ans
         while True:
-            if N==reverse(N) and isPrime(N):
+            if N == reverse(N) and isPrime(N):
                 return N
             N += 1
-            if 10**7<N<10**8:
+            if 10**7 < N < 10**8:
                 N = 10**8

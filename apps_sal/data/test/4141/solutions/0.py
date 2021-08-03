@@ -12,4 +12,3 @@ if flag:
     print('APPROVED')
 else:
     print('DENIED')
-

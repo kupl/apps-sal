@@ -19,13 +19,13 @@ class Solution:
             if (bi, bj) == (ti, tj):
                 return dist
             for dx, dy in [(0, 1), (0, -1), (-1, 0), (1, 0)]:
-                si_new, sj_new = bi+dx, bj+dy
-                bi_new, bj_new = bi-dx, bj-dy
+                si_new, sj_new = bi + dx, bj + dy
+                bi_new, bj_new = bi - dx, bj - dy
                 if (bi_new, bj_new, bi, bj) not in seen and self.canMoveTo(grid, bi, bj, si, sj, si_new, sj_new) and 0 <= bi_new < m and 0 <= bj_new < n and grid[bi_new][bj_new] == '.':
-                    q.append((bi_new, bj_new, bi, bj, dist+1))
+                    q.append((bi_new, bj_new, bi, bj, dist + 1))
                     seen.add((bi_new, bj_new, bi, bj))
         return -1
-    
+
     def canMoveTo(self, grid, bi, bj, si, sj, si_new, sj_new):
         m, n = len(grid), len(grid[0])
         q = [(si, sj)]
@@ -35,7 +35,7 @@ class Solution:
             if si == si_new and sj == sj_new:
                 return True
             for dx, dy in [(0, 1), (0, -1), (-1, 0), (1, 0)]:
-                i, j = si+dx, sj+dy
+                i, j = si + dx, sj + dy
                 if (i, j) not in visited and 0 <= i < m and 0 <= j < n and (i, j) != (bi, bj) and grid[i][j] != '#':
                     q.append((i, j))
                     visited.add((i, j))
@@ -62,4 +62,4 @@ class Solution:
                 validSet.add((i, j))
                 self.canMoveTo(grid, bi, bj, i, j, validSet)
         return validSet
-    '''    
+    '''

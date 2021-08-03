@@ -12,7 +12,7 @@ class Solution:
         primes_set = set(primes)
         p_par = {p: p for p in primes}
         p_cnt = {p: 0 for p in primes}
-        
+
         def find_par(ind):
             path = []
             while p_par[ind] != ind:
@@ -23,7 +23,7 @@ class Solution:
                 p_cnt[ind] += p_cnt[mid]
                 p_cnt[mid] = 0
             return ind
-        
+
         def union(p1, p2):
             par1 = find_par(p1)
             par2 = find_par(p2)
@@ -32,7 +32,7 @@ class Solution:
                 p_cnt[par1] += p_cnt[par2]
                 p_cnt[par2] = 0
             return
-        
+
         for num in nums:
             if num == 1:
                 continue
@@ -46,9 +46,9 @@ class Solution:
                         num //= p
             if num in primes_set:
                 factors.append(num)
-                
+
             for other_p in factors[1:]:
                 union(factors[0], other_p)
             p_cnt[find_par(factors[0])] += 1
-                                
+
         return max(p_cnt.values())

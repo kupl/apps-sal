@@ -11,7 +11,7 @@ for i in w:
 ans = 0
 z = 0
 for i in range(m):
-    n_s = s[i]+z
+    n_s = s[i] + z
     z = n_s // 2
     ans += n_s % 2
 

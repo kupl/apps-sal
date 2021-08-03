@@ -14,4 +14,3 @@ m = z | t
 res = k ^ m
 
 print(res)
-

@@ -1,1 +1,1 @@
-repeat_str = lambda repeat, string: ''.join([string]*repeat)
+def repeat_str(repeat, string): return ''.join([string] * repeat)

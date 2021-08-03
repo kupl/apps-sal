@@ -1,5 +1,6 @@
 import operator
 
+
 def eval_object(v):
     return {
         '+': operator.add,

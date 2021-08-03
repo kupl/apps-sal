@@ -48,6 +48,7 @@ def check(a, b):
             return True
     return False
 
+
 m = []
 for i in range(10):
     m.append(input())

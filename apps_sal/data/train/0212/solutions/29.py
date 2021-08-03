@@ -9,4 +9,3 @@ class Solution:
                 if a % k == 0 and a // k in O:
                     O[a] += v * O[a // k]
         return sum(O.values()) % 1000000007
-

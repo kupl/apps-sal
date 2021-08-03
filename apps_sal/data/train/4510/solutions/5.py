@@ -9,4 +9,3 @@ def to_underscore(string):
                 new.append("_")
             new.append(s)
     return "".join(new).lower()
-

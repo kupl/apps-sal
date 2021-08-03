@@ -13,4 +13,3 @@ for i in range(0, (10 ** 5)):
     M[i] = L[i - 1] + L[i] + L[i + 1]
 
 print((max(M)))
-

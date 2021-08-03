@@ -15,5 +15,5 @@ def main():
         ind += 1
     print('YES')
 
-main()
 
+main()

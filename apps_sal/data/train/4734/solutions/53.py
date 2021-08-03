@@ -1,8 +1,8 @@
 def bonus_time(salary, bonus):
-    #your code here
-    if(bonus==True):
-        s=str(salary*10)
-        return "$"+s
+    # your code here
+    if(bonus == True):
+        s = str(salary * 10)
+        return "$" + s
     else:
-        salary=str(salary)
-        return "$"+salary
+        salary = str(salary)
+        return "$" + salary

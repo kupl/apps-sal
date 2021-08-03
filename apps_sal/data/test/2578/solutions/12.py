@@ -1,4 +1,5 @@
-import sys; input = sys.stdin.readline
+import sys
+input = sys.stdin.readline
 
 
 class Node:
@@ -56,5 +57,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

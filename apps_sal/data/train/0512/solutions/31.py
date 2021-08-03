@@ -21,7 +21,8 @@ def AST(exp: bool, msg: str = ""): assert exp, msg
 
 
 def TAST(exp: bool, msg=""):
-    if exp is False: print("TAssertionError:", msg)
+    if exp is False:
+        print("TAssertionError:", msg)
     while exp is False:
         pass
 
@@ -191,7 +192,7 @@ def main():
     es = [[] for _ in range(N)]
     for i in range(N - 1):
         a, b, col, dist = ILI()
-        a -= 1;
+        a -= 1
         b -= 1
         es[a].append((b, dist, col))
         es[b].append((a, dist, col))
@@ -202,7 +203,7 @@ def main():
     qs = [[] for _ in range(N)]
     for i in range(Q):
         cx, dy, a, b = ILI()
-        a -= 1;
+        a -= 1
         b -= 1
         # ans[i] = gr.dist(a, b)
         c = gr.lca(a, b)
@@ -213,7 +214,6 @@ def main():
 
     cnt = [0] * N
     sum_ = [0] * N
-
 
     def dfs(v: int, p: int = -1) -> None:
         for (col, qid, coeff, dist) in qs[v]:
@@ -232,10 +232,9 @@ def main():
             cnt[col] -= 1
             sum_[col] -= co
 
-
     sk = []
-    tr = [{} for _ in range(N+1)]
-    vis = [False] * (N+1)
+    tr = [{} for _ in range(N + 1)]
+    vis = [False] * (N + 1)
 
     def dfs2(v: int, p: int = -1) -> None:
         for (col, qid, coeff, dist) in qs[v]:
@@ -293,5 +292,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

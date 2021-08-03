@@ -1,6 +1,7 @@
 n = int(input())
 S = input()
 
+
 def solve(s, counts):
     openCount = 0
     closeCount = 0
@@ -16,7 +17,7 @@ def solve(s, counts):
             return posCount
         else:
             counts.append([openCount, closeCount])
-    if abs(openCount-closeCount) == 2:
+    if abs(openCount - closeCount) == 2:
         if openCount > closeCount:
             s = s[::-1]
             s = ['(' if c == ')' else ')' for c in s]
@@ -41,4 +42,5 @@ def solve(s, counts):
     else:
         return posCount
 
-print(solve(S,[]))
+
+print(solve(S, []))

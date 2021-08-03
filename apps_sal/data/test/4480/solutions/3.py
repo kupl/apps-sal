@@ -7,7 +7,7 @@ class Solution:
         c = 0
         for i in A:
             s += i
-            if s == int(sum/3):
+            if s == int(sum / 3):
                 s = 0
                 c += 1
         return c >= 3

@@ -6,4 +6,3 @@ while i <= n - i + 1:
         a[i - 1], a[-i] = a[-i], a[i - 1]
     i += 1
 print(*a)
-

@@ -12,7 +12,7 @@ class Solution:
                 if grid[i][j] == 'T':
                     t = (i, j)
         queue = [(b[0], b[1], s[0], s[1], 0)]
-        dic = {(b[0], b[1], s[0], s[1]):0}
+        dic = {(b[0], b[1], s[0], s[1]): 0}
         res = float('inf')
         while queue:
             bx, by, sx, sy, step = queue.pop(0)
@@ -31,7 +31,7 @@ class Solution:
                     nby = by + dy[i]
                     if (nbx, nby, nsx, nsy) in dic and dic[(nbx, nby, nsx, nsy)] <= step + 1:
                         continue
-                    dic[(nbx, nby, nsx, nsy)] = step+1
+                    dic[(nbx, nby, nsx, nsy)] = step + 1
                     queue.append((nbx, nby, nsx, nsy, step + 1))
                 else:
                     if (bx, by, nsx, nsy) in dic and dic[(bx, by, nsx, nsy)] <= step:

@@ -8,4 +8,3 @@ def to_integer(strng):
         return int(strng, 0 if match(REGEX, strng).group('base') else 10)
     except (AttributeError, KeyError, ValueError):
         pass
-

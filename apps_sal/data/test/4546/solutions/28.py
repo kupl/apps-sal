@@ -1,6 +1,6 @@
 def iroha():
     a, b, c = list(map(int, input().split()))
-    
+
     one = b - a
     two = c - b
 
@@ -8,7 +8,6 @@ def iroha():
         print("YES")
     else:
         print("NO")
-
 
 
 def __starting_point():

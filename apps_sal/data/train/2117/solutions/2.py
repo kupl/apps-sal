@@ -5,8 +5,9 @@ N = int(N)
 A = input().split(' ')
 A = list(map(int, A))
 
+
 def get_L(A):
-    L_candidates = [] # increasing list of indices with A smaller than anything considered so far
+    L_candidates = []  # increasing list of indices with A smaller than anything considered so far
     L = A[:]
 
     for i in range(len(A)):
@@ -19,6 +20,7 @@ def get_L(A):
         L_candidates.append(i)
     return L
 
+
 L = get_L(A)
 R = [N - x - 1 for x in get_L(A[::-1])][::-1]
 
@@ -27,11 +29,11 @@ for i in range(N):
     p = R[i] - L[i] - 1
     strengths[p] = max(strengths[p], A[i])
 
-strengths = strengths[1:N+1]
+strengths = strengths[1:N + 1]
 
 strengths = strengths[::-1]
 for i in range(1, N):
-    strengths[i] = max(strengths[i], strengths[i-1])
+    strengths[i] = max(strengths[i], strengths[i - 1])
 strengths = strengths[::-1]
 
 print(' '.join(map(str, strengths)))

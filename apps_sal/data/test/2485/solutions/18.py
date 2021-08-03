@@ -44,5 +44,4 @@ for i in si:
             continue
         print(ans)
         return
-print((ans-1))
-
+print((ans - 1))

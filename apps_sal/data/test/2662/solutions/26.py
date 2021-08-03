@@ -1,7 +1,9 @@
 import sys
 import bisect
 
-input = lambda: sys.stdin.readline().rstrip()
+
+def input(): return sys.stdin.readline().rstrip()
+
 
 N = int(input())
 A = [int(input()) for _ in range(N)]
@@ -24,5 +26,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

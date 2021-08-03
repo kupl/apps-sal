@@ -6,7 +6,7 @@ class Solution:
         res = 0
         for n in nums:
             curr += n
-            if curr-target in seen:
+            if curr - target in seen:
                 res += 1
                 curr = 0
                 seen = set([0])

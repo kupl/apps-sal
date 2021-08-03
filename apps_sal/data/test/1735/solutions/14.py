@@ -1,22 +1,20 @@
-S=list(input())
-
 from collections import deque
-QUE=deque()
+S = list(input())
+
+QUE = deque()
 QUE.append("START")
 QUE.append("!")
-ANS=0
+ANS = 0
 
 for s in S:
     QUE.append(s)
 
-    while QUE[-1]==QUE[-2]:
+    while QUE[-1] == QUE[-2]:
         QUE.pop()
         QUE.pop()
-        ANS+=1
+        ANS += 1
 
-if ANS%2==0:
+if ANS % 2 == 0:
     print("No")
 else:
     print("Yes")
-    
-

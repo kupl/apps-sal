@@ -31,4 +31,3 @@ elif ans == 1:
     print('Shiro')
 else:
     print('Katie')
-

@@ -7,4 +7,3 @@ while a > 0:
     a = c // b
     c %= b
 print(ans)
-

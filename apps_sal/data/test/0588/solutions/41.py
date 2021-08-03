@@ -32,4 +32,3 @@ for i in range(N):
         y = acc[j][1] - acc[i][1]
         ans = max(ans, x**2 + y**2)
 print((ans**0.5))
-

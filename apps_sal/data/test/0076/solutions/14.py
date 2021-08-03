@@ -9,9 +9,10 @@ def main():
     remove = (n % m) * b
     add = (m - n % m) * a
     print(min(add, remove))
-    
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

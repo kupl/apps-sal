@@ -9,4 +9,3 @@ def stringify(node):
     else:
         r = n
     return r
-

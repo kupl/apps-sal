@@ -24,6 +24,3 @@ for i in range(n):
 if l > r:
     cnt += n - l - 1
 print(cnt)
-            
-        
-

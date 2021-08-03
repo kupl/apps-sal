@@ -29,4 +29,3 @@ class Solution:
             idx += 1
 
         return eval(' '.join(expr))
-

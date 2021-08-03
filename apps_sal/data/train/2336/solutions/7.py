@@ -12,18 +12,13 @@ for index in range(n):
         visited.add(index)
         length = 0
         value = nums[index]
-        while (value != index + 1):            
-           visited.add(value - 1)
-           value = nums[value - 1]
-           length += 1
+        while (value != index + 1):
+            visited.add(value - 1)
+            value = nums[value - 1]
+            length += 1
         swaps += length
 
 if ((3 * n - swaps) % 2):
     print("Um_nik")
 else:
     print("Petr")
-
-
-
-
-

@@ -29,11 +29,11 @@ def compile_result(mult_a, mult_b, coefs_a, coefs_b):
     multiplier = -1 if mult_a < 0 else 1
 
     A = mult_a * multiplier
-    A = A if A != 1 else ''   
-    
+    A = A if A != 1 else ''
+
     B = abs(mult_b) if abs(mult_b) != 1 else ''
     B_sign = '-' if multiplier * mult_b > 0 else '+'
-    
+
     C = multiplier * (mult_a * coefs_a[1] - mult_b * coefs_b[1])
 
     return f'{A}x {B_sign} {B}y = {C}'
@@ -46,5 +46,3 @@ def para_to_rect(equation_a, equation_b):
     mult_a = int(parameter_lcm / coefs_a[0])
     mult_b = int(parameter_lcm / coefs_b[0])
     return compile_result(mult_a, mult_b, coefs_a, coefs_b)
-    
-

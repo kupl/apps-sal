@@ -4,6 +4,7 @@ from collections import Counter
 sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
 
+
 def main():
     n = int(input())
     aa = list(map(int, input().split()))
@@ -29,5 +30,5 @@ def main():
                 ans -= 1
         print(ans)
 
-main()
 
+main()

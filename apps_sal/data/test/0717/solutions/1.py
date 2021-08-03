@@ -12,4 +12,3 @@ for i in data:
     c1 = (c // i[1] + (c % i[1] > 0))
     cur = i[0] + i[1] * c1
 print(cur)
-

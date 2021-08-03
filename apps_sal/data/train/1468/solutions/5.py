@@ -1,5 +1,5 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for _ in range(t):
-    n=input()
-    print(int(n,16))
+    n = input()
+    print(int(n, 16))

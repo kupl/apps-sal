@@ -1,3 +1,4 @@
+import sys
 from typing import NamedTuple, Optional, List, cast
 
 
@@ -143,13 +144,12 @@ class MFGraph:
         return visited
 
 
-import sys
 input = sys.stdin.readline
 n = int(input())
 A = tuple(map(int, input().split()))
-G = MFGraph(n+2)
+G = MFGraph(n + 2)
 s = 0
-t = n+1
+t = n + 1
 INF = 10**18
 ans = 0
 for i, a in enumerate(A, 1):
@@ -158,7 +158,7 @@ for i, a in enumerate(A, 1):
     if a > 0:
         G.add_edge(i, t, a)
         ans += a
-    for j in range(2*i, n+1, i):
+    for j in range(2 * i, n + 1, i):
         G.add_edge(i, j, INF)
 ans -= G.flow(s, t)
 print(ans)

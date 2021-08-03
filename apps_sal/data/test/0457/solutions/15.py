@@ -5,7 +5,7 @@ primes = []
 
 for i in range(2, 100000):
     if x % i == 0:
-        primes.append(i);
+        primes.append(i)
         while x % i == 0:
             x = x // i
 
@@ -24,7 +24,7 @@ for p in primes:
     result_list.append((result, p))
 
 
-def power (a, b):
+def power(a, b):
     nonlocal MOD
     if b == 0:
         return 1
@@ -42,12 +42,8 @@ def power (a, b):
 
 result = 1
 for r, p in result_list:
-    result *= power (p, r)
+    result *= power(p, r)
     result %= MOD
 
 
-print (result)
-
-
-
-
+print(result)

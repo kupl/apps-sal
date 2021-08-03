@@ -29,4 +29,3 @@ n, k = list(map(int, str.split(input())))
 ns = tuple(map(int, str.split(input())))
 inv = tuple(map(count_inversions, rotate_times(ns, k)))
 print(sum(inv) / len(inv))
-

@@ -1,6 +1,7 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], bc: int, rc: int) -> int:
-        if 4*bc <= rc: return -1
+        if 4 * bc <= rc:
+            return -1
         ans = -1
         p = 0
         pre = 0
@@ -13,10 +14,10 @@ class Solution:
                     slot += customers[i]
                     i += 1
                 else:
-                    customers[i] -= (4-slot)
+                    customers[i] -= (4 - slot)
                     slot = 4
             pre += slot
-            v = pre * bc - r*rc
+            v = pre * bc - r * rc
             if p < v:
                 ans = r
                 p = v

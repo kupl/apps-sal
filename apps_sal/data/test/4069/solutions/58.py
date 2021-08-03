@@ -10,4 +10,3 @@ if K % 2 == 0:
     print(X)
 else:
     print((abs(X - D)))
-

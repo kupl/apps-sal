@@ -1,1 +1,1 @@
-elevator=lambda l,r,c:["right","left"][abs(l-c)<abs(r-c)]
+def elevator(l, r, c): return ["right", "left"][abs(l - c) < abs(r - c)]

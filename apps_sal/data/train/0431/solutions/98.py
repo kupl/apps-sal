@@ -2,23 +2,23 @@
 #     def sumSubarrayMins(self, A: List[int]) -> int:
 #         MOD = 10**9+7
 #         N = len(A)
-        
+
 #         stack = []
 #         left, right = [None]*N, [None]*N
-        
+
 #         for i in range(N):
 #             while stack and A[i]<=A[stack[-1]]:
 #                 stack.pop()
 #             left[i] = stack[-1] if stack else -1
 #             stack.append(i)
-            
+
 #         stack = []
 #         for k in range(N-1,-1,-1):
 #             while stack and A[k]<A[stack[-1]]:
 #                 stack.pop()
 #             right[k] = stack[-1] if stack else N
 #             stack.append(k)
-        
+
 #         return sum((i-left[i])*(right[i]-i)*A[i] for i in range(N)) % MOD
 
 class Solution(object):

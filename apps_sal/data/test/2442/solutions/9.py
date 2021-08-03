@@ -9,5 +9,4 @@ for t in range(int(input())):
             a2 = i
         if l.count(i) < 1:
             a1 = i
-    print(a1+a2)
-
+    print(a1 + a2)

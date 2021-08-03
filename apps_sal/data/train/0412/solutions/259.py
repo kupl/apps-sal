@@ -10,4 +10,3 @@ class Solution:
                         dp[i + 1][sm + ff] += dp[i][sm]
                         dp[i + 1][sm + ff] %= mod
         return dp[d][target]
-

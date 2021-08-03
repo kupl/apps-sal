@@ -22,4 +22,3 @@ expressions = [
 ]
 
 print(expressions[abs(variants[-1][1]) - 1])
-

@@ -65,7 +65,7 @@ class Fug:
         self.gaps = []
         prevli = self.list[0]
         for i in range(self.gn):
-            li = self.list[i+1]
+            li = self.list[i + 1]
             min = li[0] - prevli[1]
             max = li[1] - prevli[0]
             self.gaps.append((min, max, i))
@@ -75,7 +75,7 @@ class Fug:
         self.gsrt = sorted(self.gaps)
 
         self.gmin = [n[0] for n in self.gsrt]
-        self.result = [None]*self.gn
+        self.result = [None] * self.gn
         self.heap = []
 
     def iterate(self):
@@ -180,10 +180,10 @@ class unitTests(unittest.TestCase):
 
         size = 20000
         test = str(size) + " " + str(size) + "\n"
-        x = size*1000
+        x = size * 1000
         for i in range(size):
             x += 2
-            test += str(x) + " " + str(x+1) + "\n"
+            test += str(x) + " " + str(x + 1) + "\n"
         for i in range(size):
             test += str(2) + " "
         self.assertEqual(calculate(test)[0], "Y")
@@ -208,6 +208,7 @@ class unitTests(unittest.TestCase):
         self.assertEqual(d.gmin, [1, 2, 2])
         self.assertEqual(d.heap, [(5, 2, 2), (7, 2, 0)])
 
+
 def __starting_point():
 
     # Avoiding recursion limitaions
@@ -218,5 +219,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(calculate() + "\n")
+
 
 __starting_point()

@@ -1,3 +1,5 @@
-n=int(input());s=input()
-a=s.count('A');b=s.count('I')
-print([a,[1,0][b!=1]][b!=0])
+n = int(input())
+s = input()
+a = s.count('A')
+b = s.count('I')
+print([a, [1, 0][b != 1]][b != 0])

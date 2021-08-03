@@ -1,1 +1,1 @@
-print("A%sC"%'BR'[input()<"AR"])
+print("A%sC" % 'BR'[input() < "AR"])

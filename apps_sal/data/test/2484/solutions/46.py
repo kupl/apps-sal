@@ -15,4 +15,3 @@ for left in range(N):
         _sum -= a_l[left]
 
 print(ans)
-

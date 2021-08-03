@@ -1,4 +1,5 @@
-R = lambda: list(map(int, input().split()))
+def R(): return list(map(int, input().split()))
+
 
 n, m = R()
 a = list(R())
@@ -11,5 +12,4 @@ for b in R():
     while s < b:
         s += a[f]
         f += 1
-    print(f, b - s + a[f-1])
-
+    print(f, b - s + a[f - 1])

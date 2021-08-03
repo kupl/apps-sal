@@ -23,5 +23,3 @@ else:
         print(-1)
     else:
         print(*p)
-
-

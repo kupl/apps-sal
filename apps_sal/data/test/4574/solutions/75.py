@@ -27,10 +27,11 @@ def main():
     elif len(a_cnt) == 1:
         print((0))
     else:
-        print((a_cnt[0][0]*a_cnt[1][0]))
+        print((a_cnt[0][0] * a_cnt[1][0]))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

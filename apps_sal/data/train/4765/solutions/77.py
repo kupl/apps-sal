@@ -6,4 +6,5 @@ class Hero(object):
         self.position = '00'
         self.damage = 5
 
+
 myHero = Hero()

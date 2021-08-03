@@ -1,5 +1,6 @@
 geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
 
+
 def goose_filter(birds):
     oplst = []
     for bird in birds:

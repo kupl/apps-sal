@@ -5,6 +5,7 @@ from itertools import chain
 n = int(input())
 ss = [input() for i in range(n)]
 
+
 def parse(s):
     "バランスしていない閉じ括弧数, 開き括弧数"
     cl, op = 0, 0
@@ -17,8 +18,9 @@ def parse(s):
             cl += 1
     return (cl, op)
 
-inc   = []  # 開き括弧が多い
-dec   = []  # 閉じ括弧が多い
+
+inc = []  # 開き括弧が多い
+dec = []  # 閉じ括弧が多い
 close = []  # 閉じ括弧のみ
 for s in ss:
     cl, op = parse(s)
@@ -37,4 +39,3 @@ for cl, op in chain(inc, dec, close):
         return
     peak += op - cl
 print(('Yes' if peak == 0 else 'No'))
-

@@ -1,8 +1,8 @@
 class Solution:
     def shortestAlternatingPaths(
-        self, 
-        n: int, 
-        red_edges: List[List[int]], 
+        self,
+        n: int,
+        red_edges: List[List[int]],
         blue_edges: List[List[int]],
     ) -> List[int]:
         red_adj = [[] for i in range(n)]
@@ -24,10 +24,10 @@ class Solution:
             else:
                 result.append(start_blue)
         return result
-        
+
     def shortestPath(
         self,
-        red_adj: List[List[int]], 
+        red_adj: List[List[int]],
         blue_adj: List[List[int]],
         startRed: bool,
         X: int,

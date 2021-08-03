@@ -1,19 +1,17 @@
 
 
+n, l, r = map(int, input().split())
 
+mx = 1 << (r)
+mx -= 1
 
-n,l,r=map(int,input().split())
+mx += (1 << (r - 1)) * (n - r)
 
-mx=1<<(r)
-mx-=1
+mn = 0
 
-mx+=(1<<(r-1))*(n-r)
+mn = 1 << (l)
+mn -= 1
 
-mn=0
+mn += n - l
 
-mn=1<<(l)
-mn-=1
-
-mn+=n-l
-
-print(mn,mx)
+print(mn, mx)

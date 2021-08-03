@@ -63,4 +63,3 @@ for i in range(m):
     t.append(ti)
 
 print(solve_good(n, m, d, a, b, t))
-

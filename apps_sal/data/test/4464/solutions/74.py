@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-A,B,C = map(int, input().split())
+A, B, C = map(int, input().split())
 
 mod = []
-for i in range(max(B,C)):
+for i in range(max(B, C)):
     res = A * i % B
     if res == C:
         ans = "YES"

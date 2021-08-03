@@ -10,21 +10,30 @@
 
 """
 
-#Constant
+# Constant
+
+
 def read_list():
     return [int(i) for i in input().split()]
+
+
 def new_list(n):
     return [0 for i in range(n)]
+
+
 def new_matrix(n, m=0):
     return [[0 for i in range(m)] for i in range(n)]
-mod=1000000007
+
+
+mod = 1000000007
 
 
 def binPow(a, q, mod):
     a %= mod
     if q == 0:
         return 1
-    return ((q%2 == 1 and a or 1) * binPow(a*a, q//2, mod)) % mod
+    return ((q % 2 == 1 and a or 1) * binPow(a * a, q // 2, mod)) % mod
+
 
 n = int(input())
 
@@ -43,9 +52,8 @@ d, answ = 1, 1
 for p in a:
     c = a[p]
 
-    fp = binPow(p, (c + 1)*c//2, mod)
-    answ = binPow(answ, (c+1), mod) * binPow(fp, d, mod) % mod
-    d = d * (c+1) % (mod-1) 
+    fp = binPow(p, (c + 1) * c // 2, mod)
+    answ = binPow(answ, (c + 1), mod) * binPow(fp, d, mod) % mod
+    d = d * (c + 1) % (mod - 1)
 
 print(answ)
-

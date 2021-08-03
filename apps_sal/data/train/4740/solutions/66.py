@@ -6,4 +6,4 @@ def row_sum_odd_numbers(n):
         while len(triangle[row]) < row + 1:
             triangle[row].append(odd)
             odd += 2
-    return (sum(triangle[n-1]))
+    return (sum(triangle[n - 1]))

@@ -26,13 +26,14 @@ class UnionFind:
             self.siz[y] += self.siz[x]
             if self.rank[x] == self.rank[y]:
                 self.rank[y] += 1
-    
+
     def same(self, x, y):
         return self.find(x) == self.find(y)
 
     def size(self, x):
         return self.siz[self.find(x)]
-    
+
+
 n, m = map(int, input().split())
 uf = UnionFind(n)
 for i in range(m):

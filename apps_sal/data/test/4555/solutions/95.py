@@ -5,8 +5,7 @@ for i in range(k):
         break
     print((a + i))
 
-start = max(a+k, b-k+1)
+start = max(a + k, b - k + 1)
 
-for i in range(start, b+1):
+for i in range(start, b + 1):
     print(i)
-

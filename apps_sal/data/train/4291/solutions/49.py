@@ -1,5 +1,3 @@
 def century(year):
     import math
-    return math.ceil(year/100.)
-    
-
+    return math.ceil(year / 100.)

@@ -4,8 +4,8 @@ for i in range(5):
 k = int(input())
 isOK = True
 for i in range(5):
-    for j in range(i+1,5):
-        if abs(a[i]-a[j])>k:
+    for j in range(i + 1, 5):
+        if abs(a[i] - a[j]) > k:
             isOK = False
             break
 if isOK:

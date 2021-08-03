@@ -1,18 +1,14 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for i in range(t):
-    s=input()
-    a="aeiou"
-    cnt=0
+    s = input()
+    a = "aeiou"
+    cnt = 0
     for i in range(len(s)):
-        x=s[i]
-        arr=[]
+        x = s[i]
+        arr = []
         for j in range(5):
-            z=abs(ord(x)-ord(a[j]))
+            z = abs(ord(x) - ord(a[j]))
             arr.append(z)
-        cnt+=min(arr)
+        cnt += min(arr)
     print(cnt)
-            
-            
-            
-

@@ -1,12 +1,12 @@
 class DisjSet:
-    def __init__(self, n ):
+    def __init__(self, n):
         self.disj_set = [-1] * n
-        
+
     def find(self, x):
         while self.disj_set[x] >= 0:
             x = self.disj_set[x]
         return x
-    
+
     def union(self, x, y):
         i = self.find(x)
         j = self.find(y)
@@ -18,9 +18,10 @@ class DisjSet:
         else:
             self.disj_set[j] += self.disj_set[i]
             self.disj_set[i] = j
-    
+
     def maxset(self):
         return -min(self.disj_set)
+
 
 def gen_primes(n):
     candidates = [1] * n
@@ -29,7 +30,10 @@ def gen_primes(n):
             for j in range(i ** 2, n, i):
                 candidates[j] = 0
     return [i for i in range(2, n) if candidates[i]]
+
+
 primes = gen_primes(320)
+
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:

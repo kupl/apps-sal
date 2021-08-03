@@ -1,1 +1,1 @@
-every = lambda s, n=1, f=0: s[f::n]
+def every(s, n=1, f=0): return s[f::n]

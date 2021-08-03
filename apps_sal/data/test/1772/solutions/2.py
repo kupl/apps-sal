@@ -13,6 +13,6 @@ c -= d
 if c <= 0:
     print(d)
 else:
-    f=c//3
-    d+=f
+    f = c // 3
+    d += f
     print(d)

@@ -11,15 +11,13 @@ def main():
     dp = np.zeros(3001, dtype=np.int64)
     dp[0] = 1
     for AA in A:
-        dp = dp*2+np.concatenate([np.zeros(AA, dtype=np.int64), dp[:3001-AA]])
+        dp = dp * 2 + np.concatenate([np.zeros(AA, dtype=np.int64), dp[:3001 - AA]])
         dp %= mod
     print((dp[s]))
 
 
-
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

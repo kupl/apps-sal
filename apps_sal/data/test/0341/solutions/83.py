@@ -9,10 +9,9 @@ for i in range(N):
     if i < K:
         score.append(s[T[i]])
         continue
-    if T[i] == T[i-K] and score[i-K] != 0:
+    if T[i] == T[i - K] and score[i - K] != 0:
         score.append(0)
     else:
         score.append(s[T[i]])
 
 print((sum(score)))
-

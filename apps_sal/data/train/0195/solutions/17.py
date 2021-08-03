@@ -4,13 +4,15 @@ class Solution:
         res = 0
         for i in A:
             for j in A:
-                tmp = i&j
+                tmp = i & j
                 dic[tmp] += 1
         for i in A:
             for j in dic:
-                if i&j == 0:
+                if i & j == 0:
                     res += dic[j]
         return res
+
+
 '''
 class Solution:
     def countTriplets(self, A: List[int]) -> int:

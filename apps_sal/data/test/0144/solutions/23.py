@@ -10,7 +10,6 @@ def test(x):
     return s == 0
 
 
-
 n = int(input())
 oarr = list(map(int, list(input())))
 arr = []
@@ -30,4 +29,3 @@ else:
         print("YES")
     else:
         print("NO")
-

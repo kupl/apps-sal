@@ -12,5 +12,5 @@ class Solution:
                 ans = max(ans, i - d[t])
             else:
                 d[t] = i
-        
+
         return ans

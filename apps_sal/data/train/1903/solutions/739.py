@@ -1,4 +1,6 @@
 import heapq
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         def helper(a, b):

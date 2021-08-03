@@ -5,7 +5,7 @@ class Solution:
             ans = 0
             for val in arr:
                 if tot % val == 0 and tot / val in mp:
-                    ans += mp[tot/val]
+                    ans += mp[tot / val]
                 mp[val] = mp.get(val, 0) + 1
             return ans
         ans = 0

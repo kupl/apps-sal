@@ -1,11 +1,10 @@
 t = int(input())
 ans = [[] for i in range(t)]
 for i in range(t):
-    
-    s = input()    
+
+    s = input()
     for a in range(1, 13):
-        
-        
+
         if 12 % a != 0:
             continue
         b = 12 // a
@@ -14,7 +13,7 @@ for i in range(t):
             for k in range(a):
                 c[h].append(s[k * b + h])
         if a == 3:
-            a = 3        
+            a = 3
         T = True
         for h in range(b):
             if T:
@@ -27,10 +26,9 @@ for i in range(t):
                     T = False
                     break
 for i in range(t):
-    print(len(ans[i]), end = ' ')
+    print(len(ans[i]), end=' ')
     for z in ans[i]:
-        print(z[0], end = '')
-        print('x', end= '')
-        print(z[1], end = ' ')
+        print(z[0], end='')
+        print('x', end='')
+        print(z[1], end=' ')
     print()
-

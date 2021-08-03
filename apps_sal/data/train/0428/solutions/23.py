@@ -12,17 +12,17 @@ class Solution:
                     x, y = i, j
                 elif ch in keys:
                     idx = keys.find(ch)
-                    target |= (1<<idx)
-                
+                    target |= (1 << idx)
+
         visited = set()
-        visited.add((x,y,0))
+        visited.add((x, y, 0))
         q = deque()
-        q.append((x,y,0,0))
+        q.append((x, y, 0, 0))
         while q:
             x, y, state, move = q.popleft()
             if state == target:
                 return move
-            for dx, dy in [[-1,0],[1,0],[0,-1],[0,1]]:
+            for dx, dy in [[-1, 0], [1, 0], [0, -1], [0, 1]]:
                 dx += x
                 dy += y
                 tmp = state
@@ -31,18 +31,16 @@ class Solution:
                 ch = grid[dx][dy]
                 if ch == '#':
                     continue
-                
+
                 if ch in locks:
                     idx = locks.find(ch)
                     # print(dx,dy,ch,idx)
-                    if state & (1<<idx) == 0:
+                    if state & (1 << idx) == 0:
                         continue
                 if ch in keys:
                     idx = keys.find(ch)
-                    tmp |= (1<<idx)
-                if (dx,dy,tmp) not in visited:
-                    visited.add((dx,dy,tmp))
-                    q.append((dx,dy,tmp,move+1))
+                    tmp |= (1 << idx)
+                if (dx, dy, tmp) not in visited:
+                    visited.add((dx, dy, tmp))
+                    q.append((dx, dy, tmp, move + 1))
         return -1
-
-

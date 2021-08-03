@@ -4,7 +4,7 @@ K = int(readline())
 
 S = 'codeforces'
 
-arr = [1]*10
+arr = [1] * 10
 
 for _ in range(1000):
     res = 1
@@ -13,11 +13,10 @@ for _ in range(1000):
     if res >= K:
         break
     arr[arr.index(min(arr))] += 1
-    
-    
+
 
 ans = ''
 for i in range(10):
-    ans = ans + S[i]*arr[i]
+    ans = ans + S[i] * arr[i]
 
 print(ans)

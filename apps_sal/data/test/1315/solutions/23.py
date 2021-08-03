@@ -16,4 +16,3 @@ if is_happy:
     print(' '.join([str(line[i] - i) for i in range(n)]))
 else:
     print(':(')
-

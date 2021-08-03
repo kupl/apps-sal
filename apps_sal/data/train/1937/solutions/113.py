@@ -4,12 +4,13 @@ class Person:
         self.parent = parent
         self.alive = True
         self.children = []
-    
+
     def add_kid(self, kid):
         self.children.append(kid)
-    
+
     def kill(self):
         self.alive = False
+
 
 class ThroneInheritance:
     def __init__(self, kingName: str):
@@ -36,7 +37,6 @@ class ThroneInheritance:
             if person.children:
                 stack.extend(person.children[::-1])
         return ans
-        
 
 
 # Your ThroneInheritance object will be instantiated and called as such:
@@ -44,4 +44,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

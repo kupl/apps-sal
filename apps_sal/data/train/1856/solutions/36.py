@@ -35,4 +35,3 @@ class Solution:
                                 visited.add(next)
             moves += 1
         return -1
-

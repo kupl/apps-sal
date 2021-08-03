@@ -11,6 +11,6 @@ def controller(events):
         state = state + (-1, 1)[direction] * movement
         if state in (0, 5):
             direction = not state
-            movement  = False
+            movement = False
         output += str(state)
     return output

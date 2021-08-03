@@ -1,2 +1,2 @@
-S=input().rstrip()
-print(S.count("+")-S.count("-"))
+S = input().rstrip()
+print(S.count("+") - S.count("-"))

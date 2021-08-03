@@ -8,17 +8,16 @@ for _ in range(int(input())):
 
     res = ''
     for i in range(n):
-        dx, dy = packs[i+1][0] - packs[i][0], packs[i+1][1] - packs[i][1]
+        dx, dy = packs[i + 1][0] - packs[i][0], packs[i + 1][1] - packs[i][1]
         if dy < 0:
             res = 'NO'
             break
-        
+
         res += 'R' * dx + 'U' * dy
 
-    #print(packs)
+    # print(packs)
     if res != 'NO':
         print('YES')
         print(res)
     else:
         print(res)
-

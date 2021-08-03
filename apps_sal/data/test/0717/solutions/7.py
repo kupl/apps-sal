@@ -18,4 +18,3 @@ for i in a[1:]:
         t = s + l * n
 
 print(t)
-

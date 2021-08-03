@@ -2,7 +2,9 @@
 def sigma1(n):
     return n * (n + 1) // 2
 
+
 n = int(input())
+
 
 def do():
     l = 0
@@ -15,6 +17,7 @@ def do():
             h = mid - 1  # 買えないのでそれ以下の数をトライ
     return (h if (sigma1(h) <= (n + 1)) else l)
 
+
 x = do()
-#print(x)
+# print(x)
 print(1 + (n - do()))

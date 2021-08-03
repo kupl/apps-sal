@@ -3,9 +3,9 @@ def alternateCase(s):
     for c in s:
         if c.isupper():
             output += c.lower()
-        else: 
+        else:
             if c.islower():
-                output+= c.upper()
+                output += c.upper()
             else:
                 output += c
 

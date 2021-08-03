@@ -10,5 +10,5 @@ def convert_to_mixed_numeral(parm):
         mixed_numeral = str(a // b)
     if parts[0] < 0:
         mixed_numeral = "-{}".format(mixed_numeral)
-    
+
     return mixed_numeral  # mixed_numeral is a string

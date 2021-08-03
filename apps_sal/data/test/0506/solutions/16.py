@@ -8,12 +8,12 @@ def main():
 
     while 1:
         if a > b:
-            ans += a//b
+            ans += a // b
             if a % b == 0:
                 break
             a = a % b
         else:
-            ans += b//a
+            ans += b // a
             if b % a == 0:
                 break
             b = b % a
@@ -24,5 +24,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

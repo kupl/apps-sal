@@ -5,4 +5,3 @@ def halving_sum(n):
         divide = divide // 2
         sum += divide
     return sum
-

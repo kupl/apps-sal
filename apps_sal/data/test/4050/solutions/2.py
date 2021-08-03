@@ -1,9 +1,9 @@
 # alpha = "abcdefghijklmnopqrstuvwxyz"
-# prime = 998244353 
+# prime = 998244353
+from collections import defaultdict
 INF = 100_000_000
 # from heapq import heappush, heappop
-from collections import defaultdict
-t = 1#int(input())
+t = 1  # int(input())
 # from math import sqrt
 
 
@@ -15,18 +15,18 @@ for test in range(t):
     # l = input()
     # r = input()
     a = (list((list(map(int, input().split())))))
-    pre = [0 for i in range(n+1)]
+    pre = [0 for i in range(n + 1)]
 
     for i in range(n):
-        pre[i+1] = pre[i]+a[i]
-    
+        pre[i + 1] = pre[i] + a[i]
+
     Sum = defaultdict(list)
 
     for i in range(n):
         for j in range(i, n):
-            tmp = pre[j+1]-pre[i]
+            tmp = pre[j + 1] - pre[i]
             # print(i,j,tmp)
-            Sum[tmp].append((i,j))
+            Sum[tmp].append((i, j))
 
     maxVal = 0
     maxSum = -1
@@ -34,11 +34,11 @@ for test in range(t):
         val.sort()
         tmp = 1
         cur = val[0][1]
-        for i in range(1,len(val)):
-            if val[i][0]>cur:
-                tmp+=1
+        for i in range(1, len(val)):
+            if val[i][0] > cur:
+                tmp += 1
                 cur = val[i][1]
-            elif val[i][1]<=cur:
+            elif val[i][1] <= cur:
                 cur = val[i][1]
         if maxVal < tmp:
             maxVal = tmp
@@ -50,17 +50,13 @@ for test in range(t):
     ans = []
     ans.append(val[0])
     cur = val[0][1]
-    for i in range(1,len(val)):
-        if val[i][0]>cur:
+    for i in range(1, len(val)):
+        if val[i][0] > cur:
             ans.append(val[i])
             cur = val[i][1]
-        elif val[i][1]<=cur:
+        elif val[i][1] <= cur:
             ans.pop()
             ans.append(val[i])
             cur = val[i][1]
     for i in ans:
-        print(i[0]+1, i[1]+1)
-
-
-
-
+        print(i[0] + 1, i[1] + 1)

@@ -8,7 +8,9 @@ def main():
     print('1')
     return
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

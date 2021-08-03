@@ -6,4 +6,4 @@ for i in range(n):
         a.pop()
         a[len(a) - 1] += 1
 for i in a:
-    print(i, end = ' ')
+    print(i, end=' ')

@@ -1,4 +1,4 @@
-#581_B
+# 581_B
 
 ln = [int(i) for i in input().split(" ")]
 n = ln[0]
@@ -23,4 +23,3 @@ t -= 1
 mx += (2 ** t) * (n - r)
 
 print(ms, mx)
-

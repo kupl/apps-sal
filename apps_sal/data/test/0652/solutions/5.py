@@ -4,6 +4,7 @@ from collections import Counter
 def read_ints():
     return [int(x) for x in input().split()]
 
+
 def main():
     n, = read_ints()
     points = []
@@ -14,7 +15,7 @@ def main():
     c = Counter()
     for i in range(0, n):
         for j in range(i + 1, n):
-            x1, y1 = points[i];
+            x1, y1 = points[i]
             x2, y2 = points[j]
             c[(x1 + x2, y1 + y2)] += 1
     res = 0

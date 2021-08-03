@@ -1,11 +1,13 @@
 import sys
 import os
 
+
 def test(food, n, day):
     p = 0
     for i in food:
         p += i // day
     return p >= n
+
 
 def solve(package, n):
     food = dict()
@@ -34,6 +36,9 @@ def main():
     package = list(map(int, input().split()))
     print(solve(package, n))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

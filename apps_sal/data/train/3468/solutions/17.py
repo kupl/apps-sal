@@ -4,19 +4,20 @@
 #    If any stack has a count greater than 0, than it's False
 def scramble(s1, s2):
     stacks = {}
-    
+
     for char in s2:
         # Checking if stacks already has a key:value pair with the key char
         if char in stacks:
             stacks[char] += 1
         else:
             stacks[char] = 1
-    
+
     for char in s1:
         if char in stacks:
             stacks[char] -= 1
-  
+
     return max(stacks.values()) <= 0
+
 
 '''
 # Turn strings into lists, remove the appropriate element, and keep track of it to compare at the end

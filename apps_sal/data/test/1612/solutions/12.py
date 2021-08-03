@@ -3,7 +3,7 @@ cards = []
 res = []
 for i in range(k):
     str = input()
-    it = set(map(int,str.split(" ")[1:]))
+    it = set(map(int, str.split(" ")[1:]))
     cards.append(it)
 s = []
 for i in cards:
@@ -13,4 +13,4 @@ for i in cards:
         print('NO')
     else:
         print('YES')
-    s=[]
+    s = []

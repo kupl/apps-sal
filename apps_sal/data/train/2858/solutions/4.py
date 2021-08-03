@@ -3,4 +3,3 @@ def combs(comb1, comb2):
 
 
 # very ugly one-liner, I wouldn't do this for real. But I find the clean way is overkill.
-

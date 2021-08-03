@@ -8,6 +8,6 @@ try:
         N_lt = sorted(N_lt)
         lt.append(N_lt.index(K))
     for i in lt:
-        print(i+1)
+        print(i + 1)
 except:
     pass

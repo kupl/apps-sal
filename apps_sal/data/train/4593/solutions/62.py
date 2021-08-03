@@ -4,5 +4,5 @@ def merge_arrays(arr1, arr2):
     for c in ar:
         if c not in arr:
             arr.append(c)
-    arr.sort()  
+    arr.sort()
     return arr

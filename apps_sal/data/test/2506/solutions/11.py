@@ -1,6 +1,7 @@
 def main():
     N, M = list(map(int, input().split()))
     A = sorted(list(map(int, input().split())), reverse=True)
+
     def helper(x):
         p = len(A) - 1
         t = 0
@@ -26,5 +27,5 @@ def main():
         t += a * (p + 1) + k
     print(t)
 
-main()
 
+main()

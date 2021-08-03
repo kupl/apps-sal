@@ -11,6 +11,6 @@ for num in map(int, input().split()):
             lowest_odd = num
 
 if odd % 2 == 1:
-    print(s-lowest_odd)
+    print(s - lowest_odd)
 else:
     print(s)

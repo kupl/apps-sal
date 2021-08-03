@@ -9,4 +9,3 @@ elif a < d:
     print('Danik')
 else:
     print('Friendship')
-

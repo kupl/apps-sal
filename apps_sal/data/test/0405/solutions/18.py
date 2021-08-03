@@ -11,11 +11,10 @@ if first == '<':
         else:
             break
 if last == '>':
-    for i in range(len(s)-1, -1, -1):
+    for i in range(len(s) - 1, -1, -1):
         if s[i] == last:
             answ += 1
         else:
             break
 
 print(answ)
-

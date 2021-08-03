@@ -15,4 +15,3 @@ def change_count(ch):
             total += 0.01
 
     return "${:.2f}".format(total)
-

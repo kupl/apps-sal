@@ -8,9 +8,9 @@ colors = {
     (1, 1, 1): 'white',
 }
 
+
 def hex_color(codes):
     codes = codes or '0 0 0'
     items = [int(c) for c in codes.split()]
     m = max(items)
     return colors[tuple(i == m for i in items)] if m else 'black'
-

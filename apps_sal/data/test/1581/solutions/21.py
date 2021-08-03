@@ -20,4 +20,3 @@ for i in range(k - 1):
     dp2[1:] = (dp1acc_b + dp1acc_f * coe)[1:] % MOD
 ans = (dp1.sum() + dp2[1]) % MOD
 print(ans)
-

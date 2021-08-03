@@ -8,4 +8,5 @@ def __starting_point():
         l += 1
     print(l)
 
+
 __starting_point()

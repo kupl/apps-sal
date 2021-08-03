@@ -11,4 +11,3 @@ if(n % 2 == 0):
     print(" ".join(result))
 else:
     print(-1)
-

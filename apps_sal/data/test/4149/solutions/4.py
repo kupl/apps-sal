@@ -1,4 +1,4 @@
-# @author 
+# @author
 
 import sys
 
@@ -11,7 +11,8 @@ class DRecoverIt:
 
     def sieve(self, prime):
         for i in range(2, int(len(prime) ** .5) + 1):
-            if not prime[i]: continue
+            if not prime[i]:
+                continue
             m = 2
             while m * i < len(prime):
                 prime[m * i] = False
@@ -32,7 +33,7 @@ class DRecoverIt:
         n = int(input())
         b = [int(item) for item in input().split()]
         b.sort(reverse=True)
-        cnt = {x : 0 for x in b}
+        cnt = {x: 0 for x in b}
         for x in b:
             cnt[x] += 1
 
@@ -67,9 +68,7 @@ class DRecoverIt:
         print(*res)
 
 
-
 solver = DRecoverIt()
 input = sys.stdin.readline
 
 solver.solve()
-

@@ -4,4 +4,3 @@ def sum_cubes(n):
         i **= 3
         g += i
     return g
-

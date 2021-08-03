@@ -8,7 +8,7 @@ class Graph():
     def __init__(self):
         self.adjacency_dict = {}
         self.weight = []
-    
+
     def add_vertex(self, v):
         self.adjacency_dict[v] = []
         self.weight.append([])
@@ -28,6 +28,7 @@ class Graph():
     def print_graph(self):
         print((self.adjacency_dict))
 
+
 n = int(input())
 
 res = []
@@ -36,9 +37,9 @@ for i in range(n):
     res.append(-1)
     g.add_vertex(i)
 
-for i in range(n-1):
+for i in range(n - 1):
     u, v, w = list(map(int, input().strip().split()))
-    g.add_edge(u-1, v-1, w % 2)
+    g.add_edge(u - 1, v - 1, w % 2)
 
 q = []
 res[0] = 0
@@ -54,4 +55,3 @@ while(len(q) > 0):
 
 for i in range(n):
     print((res[i]))
-

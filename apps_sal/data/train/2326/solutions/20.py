@@ -12,7 +12,8 @@ from operator import add, mul, sub
 
 sys.setrecursionlimit(100000)
 input = sys.stdin.readline
-INF = 2**62-1
+INF = 2**62 - 1
+
 
 def read_int():
     return int(input())
@@ -58,11 +59,11 @@ def mt(f):
 
 @mt
 def slv(N, A):
-    ai = [(0, -1)] + [(a, i+1) for i, a in enumerate(A)]
+    ai = [(0, -1)] + [(a, i + 1) for i, a in enumerate(A)]
     ai.sort()
     A = [a for a, i in ai]
     I = [i for a, i in ai]
-    ans = [0] * (N+1)
+    ans = [0] * (N + 1)
 
     i = N
     same = 0
@@ -75,7 +76,7 @@ def slv(N, A):
                 break
             heapq.heappush(q, A[j])
         d = A[i] - A[j]
-        ans[I[i]] = d * (same+1)
+        ans[I[i]] = d * (same + 1)
         same += 1
         while q and q[0] >= A[j]:
             b = heapq.heappop(q)
@@ -85,6 +86,7 @@ def slv(N, A):
     for r in ans[1:]:
         print(r)
 
+
 def main():
     N = read_int()
     A = read_int_n()
@@ -93,5 +95,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

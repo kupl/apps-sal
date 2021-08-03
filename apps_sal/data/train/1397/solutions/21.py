@@ -1,7 +1,8 @@
 # cook your dish here
 import bisect
 
-def solve(arr,n,ans):
+
+def solve(arr, n, ans):
     indices = {}
     dist_vals = []
     for i in range(n):
@@ -17,7 +18,7 @@ def solve(arr,n,ans):
     i = 0
     while i < len(dist_vals):
         x = dist_vals[i]
-        index = bisect.bisect(indices[x],index)
+        index = bisect.bisect(indices[x], index)
         if index == len(indices[x]):
             m += 1
             index = -1
@@ -27,17 +28,17 @@ def solve(arr,n,ans):
 
     ans.append(m)
 
+
 def main():
     t = int(input())
     ans = []
     for i in range(t):
         n = int(input())
-        arr = list(map(int,input().split()))
-        solve(arr,n,ans)
+        arr = list(map(int, input().split()))
+        solve(arr, n, ans)
 
     for i in ans:
         print(i)
 
 
 main()
-

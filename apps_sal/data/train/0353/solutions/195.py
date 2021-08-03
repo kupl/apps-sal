@@ -10,7 +10,6 @@ class Solution:
             if nums[le] + nums[ri] > target:
                 ri -= 1
             else:
-                ans = (ans + 2**(ri-le)) % MOD
+                ans = (ans + 2**(ri - le)) % MOD
                 le += 1
         return ans
-

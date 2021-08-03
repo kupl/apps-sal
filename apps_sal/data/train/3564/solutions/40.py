@@ -6,4 +6,3 @@ def stringy(size):
         else:
             temp += "1"
     return temp
-

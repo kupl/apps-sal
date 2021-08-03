@@ -19,4 +19,4 @@ class Solution:
                     if t == 0:
                         return []
             return r
-        return f([], 0)       
+        return f([], 0)

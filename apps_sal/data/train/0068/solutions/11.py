@@ -47,6 +47,3 @@ for case in range(t):
     #print("size is", size)
     ops += (size + 1) // 2
     print(ops)
-        
-        
-

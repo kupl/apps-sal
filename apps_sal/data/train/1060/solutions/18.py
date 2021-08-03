@@ -9,11 +9,12 @@
 # 			for j in range(i+1, n):
 # 				if(st[j] == '1'):
 # 					res += 1
-# 	return res 
+# 	return res
 # for _ in range(int(input())):
 # 	N = int(input());binstr = input()
 # 	#for any N, number of contigious subarrays will be sum of all i in range(1,N + 1)
 # 	print(countSubStr(list(binstr),N),end="") #TLE (obviously, since it's O(N**2))
 for _ in range(int(input())):
-	N = int(input());binstr = input()
-	print(binstr.count('1')*binstr.count('0'))
+    N = int(input())
+    binstr = input()
+    print(binstr.count('1') * binstr.count('0'))

@@ -1,10 +1,10 @@
 from heapq import *
 
-n , m = list(map( int , input().split() ))
+n, m = list(map(int, input().split()))
 graph = {}
 
 for _ in range(m):
-    a , b = list(map( int , input().split() ))
+    a, b = list(map(int, input().split()))
     graph.setdefault(a, set()).add(b)
     graph.setdefault(b, set()).add(a)
 
@@ -22,5 +22,3 @@ while heap:
         heappush(heap, neighbour)
 
 print(*ans)
-
-

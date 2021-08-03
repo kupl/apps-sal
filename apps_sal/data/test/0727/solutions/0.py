@@ -1,5 +1,7 @@
 from sys import stdin
 from heapq import heappop, heappush, heapify
+
+
 def main():
     n = int(stdin.readline())
     a = stdin.readline().split()
@@ -15,19 +17,19 @@ def main():
             c += 1
         else:
             l[p] = p - 1
-            k[p] = k[i-1] = c
+            k[p] = k[i - 1] = c
             pa[p] = i - 1
-            pa[i-1] = p
-            r[i-1] = i
+            pa[i - 1] = p
+            r[i - 1] = i
             q.append((-c, p))
             p = i
             c = 1
     q.append((-c, p))
     l[p] = p - 1
-    k[p] = k[n-1] = c
+    k[p] = k[n - 1] = c
     pa[p] = n - 1
-    pa[n-1] = p
-    r[n-1] = n
+    pa[n - 1] = p
+    r[n - 1] = n
     heapify(q)
     ans = 0
     while len(q):
@@ -50,5 +52,7 @@ def main():
                 r[ls] = rs
             if rs < n:
                 l[rs] = ls
-    print (ans)
+    print(ans)
+
+
 main()

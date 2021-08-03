@@ -9,7 +9,7 @@ challengers = []
 for i in range(n):
     if a[i] != minimum and a[i - 1] == minimum:
         challengers.append(i)
-        
+
 while challengers:
     cnt = 0
     num = challengers.pop()
@@ -20,7 +20,7 @@ while challengers:
     if cnt > maximum:
         maximum = cnt
         ind = num
-    
+
 
 ans = minimum * n
 while a[ind] != minimum:

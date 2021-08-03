@@ -6,29 +6,29 @@ def solve():
 
     ans = 2**31
     ansi, ansj = None, None
-    for i in range(0, 2*n-1, 2):
-        for j in range(i+1, 2*n, 2):
+    for i in range(0, 2 * n - 1, 2):
+        for j in range(i + 1, 2 * n, 2):
             # pick i and j
             #print("Looking", i, j)
             s = 0
-            for k in range(0, i-1, 2):
+            for k in range(0, i - 1, 2):
                 #print(k, k+1)
-                s += w[k+1] - w[k]
-            for k in range(i+1, j-1, 2):
+                s += w[k + 1] - w[k]
+            for k in range(i + 1, j - 1, 2):
                 #print(k, k+1)
-                s += w[k+1] - w[k]
-            for k in range(j+1, 2*n-1, 2):
+                s += w[k + 1] - w[k]
+            for k in range(j + 1, 2 * n - 1, 2):
                 #print(k, k+1)
-                s += w[k+1] - w[k]
+                s += w[k + 1] - w[k]
 
             if s < ans:
                 ans = s
                 ansi = i
                 ansj = j
-                
+
     #print(ansi, ansj)
 
     return ans
 
-print(solve())
 
+print(solve())

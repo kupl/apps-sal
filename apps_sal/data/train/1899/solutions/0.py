@@ -24,7 +24,7 @@ class Solution:
                     break
             if found:
                 break
-                
+
         queue = deque(boundary)
         steps = 0
         while queue:

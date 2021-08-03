@@ -19,13 +19,13 @@ for _ in range(int(input())):
         if s[ind] == "0":
             size = 0
             while ind <= ind2 and s[ind] == "0":
-                ind+=1
+                ind += 1
                 size += 1
             ans += min((size - 1) * b + size * a + 2 * a, size * a + 2 * b * (size - 1))
         else:
             size = 0
             while ind <= ind2 and s[ind] == "1":
-                ind+=1
+                ind += 1
                 size += 1
             ans += (size + 1) * b * 2 + size * a
     ans += pref * b + pref * a + a

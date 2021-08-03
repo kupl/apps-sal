@@ -21,4 +21,3 @@ for _ in range(K):
     push(i + 1, j, k)
     push(i, j + 1, k)
     push(i, j, k + 1)
-

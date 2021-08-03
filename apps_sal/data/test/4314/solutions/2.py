@@ -21,5 +21,3 @@ for i in range(len(a)):
     for j in d:
         ans[i] += a[i][j]
     print((ans[i]))
-
-

@@ -9,7 +9,5 @@ class Solution:
         for i in range(1, 26):
             if counter[i] > (k - i) // 26 + 1:
                 return False
-        
-        return True
-            
 
+        return True

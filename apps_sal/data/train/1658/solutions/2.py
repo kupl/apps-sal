@@ -8,4 +8,4 @@ def expand(x, digit, i=0, s=0):
     s = s + Fraction(Fraction(x).limit_denominator(digit) ** i, factorial(i))
     if len(str(s.numerator)) >= digit:
         return [s.numerator, s.denominator]
-    return expand(x ,digit, i=i+1, s=s)
+    return expand(x, digit, i=i + 1, s=s)

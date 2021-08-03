@@ -7,4 +7,3 @@ for i in range(n):
     if V[i] > C[i]:
         Ans += V[i] - C[i]
 print(Ans)
-

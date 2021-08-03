@@ -12,4 +12,3 @@ if n == 1:
     print('Final!')
 else:
     print(ans)
-

@@ -1,8 +1,8 @@
+from collections import deque
 import sys
 input = sys.stdin.readline
 
 
-from collections import deque
 N, Q = list(map(int, input().split()))
 que = deque([int(a) for a in input().split()])
 ma = max(que)
@@ -10,10 +10,10 @@ ma = max(que)
 X = []
 k = -1
 c = 0
-while c <= k+N+5:
+while c <= k + N + 5:
     a = deque.popleft(que)
     b = deque.popleft(que)
-    
+
     X.append((a, b))
     c += 1
     if a > b:
@@ -28,7 +28,5 @@ for _ in range(Q):
     if i <= k:
         print(*X[i])
     else:
-        i = (i-k)%(N-1)+k
+        i = (i - k) % (N - 1) + k
         print(*X[i])
-
-

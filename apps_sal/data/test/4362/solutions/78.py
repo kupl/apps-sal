@@ -1,6 +1,6 @@
 s = input()
 
 if s.lower() == s:
-  print("a")
+    print("a")
 else:
-  print("A")
+    print("A")

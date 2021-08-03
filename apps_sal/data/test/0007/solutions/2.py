@@ -1,4 +1,4 @@
-n,m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 if m >= n:
     print(n)
 else:
@@ -8,12 +8,11 @@ else:
     high = 10**12
     n -= m
     while low <= high:
-        mid  = (low+high)//2
+        mid = (low + high) // 2
         # print(mid,(mid*(mid+1))//2)
-        if (mid*(mid+1))//2 >= n:
+        if (mid * (mid + 1)) // 2 >= n:
             pos = mid
-            high = mid-1
+            high = mid - 1
         else:
-            low = mid+1
-    print(ans+pos)
-
+            low = mid + 1
+    print(ans + pos)

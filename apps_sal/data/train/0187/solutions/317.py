@@ -6,7 +6,7 @@ class Solution:
         k = 0
         max_profit = 0
         max_k = 0
-        #print('-------')
+        # print('-------')
         while queue:
             num_people = queue.popleft()
             i = 1
@@ -20,9 +20,8 @@ class Solution:
             k += i
             profit += num_people * boardingCost * i
             profit -= runningCost * i
-            #print(profit)
+            # print(profit)
             if max_profit < profit:
                 max_k = k
                 max_profit = profit
         return max_k if max_profit > 0 else -1
-

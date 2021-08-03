@@ -10,4 +10,3 @@ while i < len(t) and j < len(s):
         i += 1
     j += 1
 print(i == len(t) and 'yes' or 'no')
-

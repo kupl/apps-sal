@@ -10,5 +10,5 @@ while h > 0:
     else:
         w += h
     h -= 1
-    
-print(w)    
+
+print(w)

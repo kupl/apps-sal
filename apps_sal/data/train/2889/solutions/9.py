@@ -6,4 +6,3 @@ def count_ways(n, k):
         else:
             steps[i] = sum(steps[i - j] for j in range(1, k + 1))
     return steps[-1]
-

@@ -1,8 +1,9 @@
 N, A, R, M = list(map(int, input().split()))
 if M > A + R:
     M = A + R
-    
+
 h = list(map(int, input().split()))
+
 
 def calc(final):
     adds = 0
@@ -17,7 +18,8 @@ def calc(final):
     moves = min(adds, removes)
     return M * moves + A * (adds - moves) + R * (removes - moves)
 
-lo = -1 #Higher than next
+
+lo = -1  # Higher than next
 hi = 10 ** 9 + 1
 
 while hi - lo > 1:
@@ -29,4 +31,3 @@ while hi - lo > 1:
         hi = test
 
 print(calc(hi))
-

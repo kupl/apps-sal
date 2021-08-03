@@ -1,11 +1,15 @@
 t, w, b = map(int, input().split())
 
+
 def gcd(a, b):
-    if b == 0: return a
+    if b == 0:
+        return a
     return gcd(b, a % b)
+
 
 def lcm(a, b):
     return a // gcd(a, b) * b
+
 
 add = min(w, b) - 1
 l = lcm(w, b)
@@ -23,4 +27,3 @@ if g != 0:
 print(ans, end='')
 print('/', end='')
 print(t)
-

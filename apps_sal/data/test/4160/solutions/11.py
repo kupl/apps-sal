@@ -1,4 +1,4 @@
-  
+
 def atc_165b(X: int) -> int:
     savings = 100
     years = 0
@@ -12,4 +12,3 @@ def atc_165b(X: int) -> int:
 
 X = int(input())
 print((atc_165b(X)))
-

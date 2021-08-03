@@ -6,15 +6,17 @@ y = [y0]
 
 while x[-1] < 1e20:
     x.append(x[-1] * ax + bx)
-    
+
 while y[-1] < 1e20:
     y.append(y[-1] * ay + by)
 
 
 n = min(len(x), len(y))
 
+
 def dist(x0, y0, x1, y1):
-    return abs(x0-x1) + abs(y0-y1)
+    return abs(x0 - x1) + abs(y0 - y1)
+
 
 ans = 0
 for i in range(n):
@@ -24,5 +26,3 @@ for i in range(n):
             ans = max(ans, j - i + 1)
 
 print(ans)
-    
-

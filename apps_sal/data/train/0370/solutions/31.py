@@ -55,4 +55,3 @@ class Solution:
             group_count[group_id] += 1
 
         return max(group_count.values())
-

@@ -5,14 +5,14 @@ tt = int(stdin.readline())
 for loop in range(tt):
 
     n = int(stdin.readline())
-    a = list(map(int,stdin.readline().split()))
+    a = list(map(int, stdin.readline().split()))
 
-    lis = [ [1] ]
+    lis = [[1]]
 
     now = []
     tmp = 0
 
-    for i in range(1,n):
+    for i in range(1, n):
         if len(now) == 0:
             now.append(a[i])
             tmp = 1
@@ -31,4 +31,4 @@ for loop in range(tt):
         lis.append(now)
 
     #print (lis)
-    print (len(lis)-1)
+    print(len(lis) - 1)

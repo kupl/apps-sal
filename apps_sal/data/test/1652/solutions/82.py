@@ -4,6 +4,7 @@ def II(): return int(input())
 def MII(): return list(map(int, input().split()))
 def LII(): return list(map(int, input().split()))
 
+
 def main():
     S = input()
     S = S[::-1]
@@ -20,7 +21,6 @@ def main():
             break
         f = True
 
-
     if len(S) == 0:
         print('YES')
     else:
@@ -29,5 +29,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

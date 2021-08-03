@@ -13,7 +13,7 @@ class Solution:
             for k in temp:
                 if k not in require or require[k] < temp[k]:
                     require[k] = temp[k]
-        
+
         for a in A:
             toAdd = True
             temp.clear()
@@ -28,6 +28,5 @@ class Solution:
                     break
             if toAdd:
                 universal.append(a)
-            
-        
+
         return universal

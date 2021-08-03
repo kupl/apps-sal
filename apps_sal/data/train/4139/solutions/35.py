@@ -5,4 +5,4 @@ def rental_car_cost(d):
         x = 20
     else:
         x = 50
-    return d*40-x
+    return d * 40 - x

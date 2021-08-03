@@ -39,4 +39,3 @@ def dfs(v, p):
 
 
 print((MOD - dfs(0, -1)[0]))
-

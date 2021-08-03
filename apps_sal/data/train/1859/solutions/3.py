@@ -15,7 +15,7 @@ class Solution:
                 row = ind[0]
                 col = ind[1]
                 add = True
-                if row + size < len(matrix) and col + size < len(matrix[0]) :
+                if row + size < len(matrix) and col + size < len(matrix[0]):
                     for r in range(row, row + size + 1):
                         if not matrix[r][col + size]:
                             add = False

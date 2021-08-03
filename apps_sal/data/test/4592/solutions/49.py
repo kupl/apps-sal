@@ -1,5 +1,8 @@
-import sys;input = lambda : sys.stdin.readline()
 import collections
+import sys
+def input(): return sys.stdin.readline()
+
+
 N = int(input())
 d = collections.Counter()
 if N == 1:

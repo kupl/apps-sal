@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def repeatedNTimes(self, A: List[int]) -> int:
         counter = Counter(A)

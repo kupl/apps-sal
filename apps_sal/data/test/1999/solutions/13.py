@@ -21,4 +21,3 @@ for n in nums:
 
 print(len(newnums))
 print(' '.join(map(str, newnums)))
-

@@ -1,5 +1,5 @@
-S=input()
-s=S.count("o")
+S = input()
+s = S.count("o")
 
-t=700+100*s
+t = 700 + 100 * s
 print(t)

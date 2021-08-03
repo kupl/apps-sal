@@ -18,4 +18,3 @@ class Solution:
                 # If less than 3 positions was blocked, the total cnt should -1.
                 result -= 1
         return result
-

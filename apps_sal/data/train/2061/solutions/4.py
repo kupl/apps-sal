@@ -4,4 +4,3 @@ for i in range(t):
     x = -max({a, c, e}) + a + c + e
     y = -max({b, d, f}) + b + d + f
     print((max(abs(x), abs(y)) + (x == y and x and x != 1)))
-

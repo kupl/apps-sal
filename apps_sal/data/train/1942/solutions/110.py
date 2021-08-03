@@ -7,7 +7,7 @@ class Solution:
         for i, person in enumerate(favoriteCompanies):
             for company in person:
                 favorites[company].append(i)
-        
+
         for i, person in enumerate(favoriteCompanies):
             possible_supersets = set(range(len(favoriteCompanies)))
             possible_supersets.remove(i)

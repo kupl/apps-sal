@@ -3,4 +3,3 @@ s = (a + b) % n
 if s == 0:
     s = n
 print(s)
-

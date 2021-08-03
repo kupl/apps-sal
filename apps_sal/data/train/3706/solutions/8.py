@@ -1,1 +1,2 @@
-from math import ceil; layers=lambda n: ceil(n**0.5)//2+1
+from math import ceil
+def layers(n): return ceil(n**0.5) // 2 + 1

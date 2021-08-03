@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, a, b = read()
 s = ' ' + input()
 if s[a] == s[b]:
@@ -6,4 +8,3 @@ if s[a] == s[b]:
     return
 else:
     print(1)
-

@@ -1,7 +1,7 @@
-x,y = list(map(int,input().split()))
+x, y = list(map(int, input().split()))
 
-s = [1,3,5,7,8,10,12]
-s1 = [4,6,9,11]
+s = [1, 3, 5, 7, 8, 10, 12]
+s1 = [4, 6, 9, 11]
 s2 = [2]
 
 if x in s:
@@ -18,4 +18,3 @@ elif x in s2:
         return
 
 print('No')
-

@@ -1,4 +1,4 @@
-l1,r1,l2,r2,k = list(map(int, input().split()))
+l1, r1, l2, r2, k = list(map(int, input().split()))
 
 if r1 < l2:
     print(0)
@@ -11,4 +11,3 @@ else:
         print(r - l + 1)
     else:
         print(r - l + 1 - 1)
-

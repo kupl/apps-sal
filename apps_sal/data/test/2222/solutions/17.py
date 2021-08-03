@@ -1,10 +1,10 @@
 n = int(input())
-oper = list(map(int, input().split())) # 0 - min, 1 - max
+oper = list(map(int, input().split()))  # 0 - min, 1 - max
 prev = [int(i) - 1 for i in input().split()]
 
 graph = [[] for i in range(n)]
 for i in range(n - 1):
-    graph[prev[i]].append(i + 1) 
+    graph[prev[i]].append(i + 1)
 
 leafs = sum([len(graph[i]) == 0 for i in range(n)])
 

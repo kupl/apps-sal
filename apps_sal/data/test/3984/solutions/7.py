@@ -6,4 +6,3 @@ for elem in s:
     else:
         print('Mike')
         mn = ord(elem)
-

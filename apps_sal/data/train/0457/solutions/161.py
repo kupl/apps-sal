@@ -9,7 +9,7 @@ class Solution:
                 else:
                     best = None
                     for c in coins:
-                        res = change_memo(coins, amount-c, memo)
+                        res = change_memo(coins, amount - c, memo)
                         if res == -1:
                             continue
                         if (best is None) or (res < best):
@@ -19,9 +19,9 @@ class Solution:
                     else:
                         best += 1
                 memo[amount] = best
-                
+
             return memo[amount]
-        
+
         memo = {}
         change_memo(coins, amount, memo)
         return memo[amount]

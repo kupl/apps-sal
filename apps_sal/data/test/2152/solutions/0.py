@@ -9,4 +9,3 @@ for i in range(0, n):
     sol += a * bestP
 
 print(sol)
-

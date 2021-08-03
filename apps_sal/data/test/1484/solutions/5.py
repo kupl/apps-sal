@@ -23,9 +23,9 @@ def solve1(a, l, r, k, mod):
     for i in range(1, (r - l)):
         dp0[i] = dp0[i - 1] * (k - 2) + dp1[i - 1] * (k - 1)
         dp1[i] = dp0[i - 1]
-        
-        dp0[i]%=mod
-        dp1[i]%=mod
+
+        dp0[i] %= mod
+        dp1[i] %= mod
 
     return dp0[-1]
 
@@ -65,4 +65,3 @@ o = src[1::2]
 mod = 998244353
 
 print(solve(e, k, mod) * solve(o, k, mod) % mod)
-

@@ -18,6 +18,6 @@ ans_list_max = sorted(ans_list, reverse=True)
 
 ans = 0
 #print(p_list_X, q_list_Y, ans_list_max)
-for i in range(X+Y):
+for i in range(X + Y):
     ans += ans_list_max[i]
 print(ans)

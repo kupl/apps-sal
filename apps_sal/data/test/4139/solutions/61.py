@@ -14,7 +14,8 @@ def perm(n, r):
 def resultSur97(x):
     return x % (10 ** 9 + 7)
 
-def dfs(s,n):
+
+def dfs(s, n):
     if int(s) > n:
         return 0
     if all(s.count(c) > 0 for c in "753"):
@@ -22,8 +23,9 @@ def dfs(s,n):
     else:
         ret = 0
     for c in '753':
-        ret += dfs(s+c, n)
+        ret += dfs(s + c, n)
     return ret
+
 
 def __starting_point():
     # ------ 入力 ------#
@@ -32,13 +34,12 @@ def __starting_point():
 
     # ------ 処理 ------#
 
-
-
     # ------ 出力 ------#
     print(("{}".format(dfs("0", a))))
     # if flg == 0:
     #     print("YES")
     # else:
     #     print("NO")
+
 
 __starting_point()

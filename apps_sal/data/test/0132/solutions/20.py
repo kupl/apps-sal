@@ -13,5 +13,3 @@ for k in range(n):
     m.append(m[0])
     m = m[1:]
 print(min(res))
-        
-

@@ -28,5 +28,5 @@ for i in range(n):
     else:
         h[i] = max_h
 
-for w, h in zip(w,h):
-    print(w*h, end=' ')
+for w, h in zip(w, h):
+    print(w * h, end=' ')

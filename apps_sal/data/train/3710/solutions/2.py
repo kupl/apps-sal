@@ -5,18 +5,20 @@ from heapq import heappop, heappush
 def ulam_sequence(u0, u1, n):
     q, seen, lst = [u1], defaultdict(int), [u0]
     seen[u1] = 1
-    
+
     while len(lst) < n:
-    
+
         while 1:                                 # Extract next Ulam number
             last = heappop(q)
-            if seen[last] == 1: break
-        
+            if seen[last] == 1:
+                break
+
         for v in lst:                            # Generate all possible new Ulam numbers, using the last found
-            x = v+last
-            if x not in seen: heappush(q,x)      # candidate found
+            x = v + last
+            if x not in seen:
+                heappush(q, x)      # candidate found
             seen[x] += 1
-            
+
         lst.append(last)
-        
+
     return lst

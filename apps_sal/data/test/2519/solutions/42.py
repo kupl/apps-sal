@@ -10,6 +10,6 @@ maxSum = s
 j = 0
 
 for i in range(K, N):
-    s = s + p[i] - p[i-K]
+    s = s + p[i] - p[i - K]
     maxSum = max(maxSum, s)
 print(maxSum)

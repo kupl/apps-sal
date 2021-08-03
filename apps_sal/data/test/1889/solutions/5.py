@@ -28,4 +28,3 @@ for z in range(q):
     table[i - 1][j - 1] = 1 - table[i - 1][j - 1]
     maximums[i - 1] = retest(i - 1)
     print(max(maximums))
-

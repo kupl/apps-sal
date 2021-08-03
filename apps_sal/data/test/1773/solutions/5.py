@@ -7,6 +7,7 @@ def read_data():
     xa.sort()
     return n, xa
 
+
 def solve(n, xa):
     count = 0
     for x, a in xa:
@@ -18,12 +19,12 @@ def solve(n, xa):
     xa_plus = xa[count:]
     xa_minus.reverse()
     if len(xa_plus) > len(xa_minus):
-        return sum(a for x, a in xa_plus[:len(xa_minus)+1]) + sum(a for x, a in xa_minus)
+        return sum(a for x, a in xa_plus[:len(xa_minus) + 1]) + sum(a for x, a in xa_minus)
     elif len(xa_plus) < len(xa_minus):
-        return sum(a for x, a in xa_minus[:len(xa_plus)+1]) + sum(a for x, a in xa_plus)
+        return sum(a for x, a in xa_minus[:len(xa_plus) + 1]) + sum(a for x, a in xa_plus)
     else:
         return sum(a for x, a in xa)
 
+
 n, xa = read_data()
 print(solve(n, xa))
-

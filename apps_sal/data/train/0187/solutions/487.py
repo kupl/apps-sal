@@ -7,8 +7,8 @@ class Solution:
         t = 0
         while i < len(customers) - 1 or customers[-1] > 0:
             cb = min(customers[i], 4)
-            if i != len(customers) - 1:                
-                customers[i+1] += customers[i] - cb             
+            if i != len(customers) - 1:
+                customers[i + 1] += customers[i] - cb
                 i += 1
             else:
                 customers[i] -= cb
@@ -18,4 +18,3 @@ class Solution:
                 max_p = p
                 it = t
         return it
-

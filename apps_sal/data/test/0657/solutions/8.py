@@ -5,4 +5,3 @@ c = 2 * x + y
 d = y + 3 * z
 
 print(max(c - a, 0) + max(d - b, 0))
-

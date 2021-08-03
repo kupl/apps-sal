@@ -9,4 +9,3 @@ string.sort()
 i = Counter(string)
 
 print((len(i)))
-

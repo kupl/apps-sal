@@ -7,4 +7,6 @@ def __starting_point():
             print('YES')
             return
     print('NO')
+
+
 __starting_point()

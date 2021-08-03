@@ -67,7 +67,7 @@ class CodeforcesTask696ASolution:
                 update_fees(fees, self.events[x][1], self.events[x][2], self.events[x][3])
             else:
                 print(fee_on_path(fees, self.events[x][1], self.events[x][2]))
-                #print(fees)
+                # print(fees)
 
     def get_result(self):
         return self.result
@@ -78,5 +78,6 @@ def __starting_point():
     Solution.read_input()
     Solution.process_task()
     print(Solution.get_result())
+
 
 __starting_point()

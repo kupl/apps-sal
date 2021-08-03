@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-INF = 10**18+5
+INF = 10**18 + 5
 input = sys.stdin.readline
 sys.setrecursionlimit(10**6)
 
@@ -15,14 +15,14 @@ def main():
 
     l = -INF
     r = INF
-    while(l+1 < r):
-        x = (l+r)//2
+    while(l + 1 < r):
+        x = (l + r) // 2
 
-        total = (n-np.searchsorted(a, -(-x // an), side='left')).sum()
+        total = (n - np.searchsorted(a, -(-x // an), side='left')).sum()
         if x >= 0:
             total += zc
         total += np.searchsorted(a, x // ap, side='right').sum()
-        total -= a[a*a <= x].size
+        total -= a[a * a <= x].size
         total //= 2
         if total < k:
             l = x
@@ -33,4 +33,3 @@ def main():
 
 
 main()
-

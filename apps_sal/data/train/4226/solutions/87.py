@@ -7,4 +7,3 @@ def remove_smallest(numbers):
         return new
     except:
         return []
-

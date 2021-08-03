@@ -3,4 +3,3 @@ def sum_of_minimums(numbers):
     for value in range(len(numbers)):
         total += min(numbers[value])
     return total
-

@@ -1,12 +1,12 @@
 # coding: utf-8
 # Your code here!
 
-[n,r] = input().split()
+[n, r] = input().split()
 n = int(n)
 r = int(r)
 
 if n >= 10:
     print(r)
 else:
-    ans = r + 100*(10-n)
+    ans = r + 100 * (10 - n)
     print(ans)

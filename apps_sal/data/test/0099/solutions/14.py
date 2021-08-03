@@ -23,4 +23,3 @@ else:
             cnt += 1
         b *= q
     print(cnt)
-

@@ -1,6 +1,7 @@
 class Solution:
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
-        if len(arr) == 1: return arr
+        if len(arr) == 1:
+            return arr
         arr.sort()
         med_loc = (len(arr) - 1) // 2
         median = arr[med_loc]
@@ -16,5 +17,5 @@ class Solution:
                 ans.append(arr[-1])
                 arr.pop()
             count += 1
-        
+
         return ans

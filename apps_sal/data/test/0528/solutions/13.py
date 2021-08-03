@@ -6,10 +6,11 @@ for x in range(m):
     d.setdefault(a, {a}).add(b)
     d.setdefault(b, {b}).add(a)
 for x, y in d.items():
-       if x not in visited:
-              if all([d[u]==y for u in y]):
-                     visited.update(y)
-              else:
-                     print('NO');return
-                     break
+    if x not in visited:
+        if all([d[u] == y for u in y]):
+            visited.update(y)
+        else:
+            print('NO')
+            return
+            break
 print('YES')

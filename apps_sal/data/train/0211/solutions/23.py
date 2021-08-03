@@ -3,7 +3,8 @@ class Solution:
         exist = collections.defaultdict(int)
         self.result = 0
         n = len(s)
-        def dfs(index:int) -> None:
+
+        def dfs(index: int) -> None:
             # print(exist, index)
             if (index == n):
                 self.result = max(self.result, len(exist))
@@ -16,5 +17,5 @@ class Solution:
                 if (exist[st] == 0):
                     del exist[st]
         dfs(0)
-        
+
         return self.result

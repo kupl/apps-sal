@@ -1,16 +1,18 @@
 def newR(str, charx):
     indx = str.index(charx)
-    return str[indx-1]
-    
+    return str[indx - 1]
+
+
 def newL(str, charx):
     indx = str.index(charx)
-    return str[indx+1]
-    
+    return str[indx + 1]
+
+
 one = 'qwertyuiop'
 two = 'asdfghjkl;'
 three = 'zxcvbnm,./'
 a = input()
-if a == 'R':    
+if a == 'R':
     finalstr = ''
     string = input()
     for i in string:

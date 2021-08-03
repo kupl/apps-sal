@@ -11,4 +11,3 @@ while s.count("ogo") > 0:
             j += 2
         s = s[:i] + "***" + s[j:]
 print(s)
-

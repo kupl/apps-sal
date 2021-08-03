@@ -7,4 +7,3 @@ for _ in range(n):
         key.append(s)
         ans += 1
 print(ans)
-

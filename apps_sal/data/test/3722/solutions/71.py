@@ -1,10 +1,12 @@
 mod = 10**9 + 7
 
+
 def tr(c):
     if c == 'A':
         return 'B'
     else:
         return 'A'
+
 
 n = int(input())
 if n <= 3:
@@ -30,4 +32,3 @@ ans, prev = 2, 1
 for i in range(4, n):
     ans, prev = (ans + prev) % mod, ans
 print(ans)
-

@@ -9,7 +9,6 @@ for el in data:
     if el != 0:
         if not el in d:
             d.add(el)
-            ans+=1
+            ans += 1
 
 print(ans)
-

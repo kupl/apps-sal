@@ -2,7 +2,7 @@ n = int(input())
 arr = []
 for i in range(n):
     s = input()
-    arr.append((len(s),s))
+    arr.append((len(s), s))
 arr.sort()
 fl = True
 for i in range(n - 1):

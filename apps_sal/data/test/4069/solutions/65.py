@@ -8,4 +8,3 @@ else:
     else:
         ans = abs(x % d - d)
 print(ans)
-

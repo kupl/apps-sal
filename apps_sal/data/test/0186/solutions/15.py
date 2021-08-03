@@ -18,4 +18,3 @@ while x:
         elif b % 6 == 0 and b == a:
             a += 2
 print(max(a, b))
-

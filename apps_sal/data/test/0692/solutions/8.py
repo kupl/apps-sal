@@ -5,8 +5,10 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
+
 def lcm(a, b):
     return a * b // gcd(a, b)
+
 
 n = int(input())
 m = list(map(int, input().split()))
@@ -26,5 +28,4 @@ for day in range(cap):
     if works:
         ans += 1
 
-print(ans/cap)
-
+print(ans / cap)

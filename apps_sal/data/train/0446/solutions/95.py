@@ -7,4 +7,3 @@ class Solution:
         while k > 0:
             k -= heappop(heap)[0]
         return len(heap) + (k < 0)
-

@@ -35,5 +35,4 @@ for _ in range(int(input())):
     if numberOnes % 2 == 0 and numberZeroes % 2 == 0:
         print(n)
     else:
-        print(n-1)
-
+        print(n - 1)

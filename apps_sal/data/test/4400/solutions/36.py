@@ -1,5 +1,5 @@
 S = input()
-if S.count('R') ==2:
+if S.count('R') == 2:
     if S == 'RSR':
         print(1)
     else:

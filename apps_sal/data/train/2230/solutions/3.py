@@ -6,9 +6,9 @@ m = int(input())
 c = list(map(int, input().split()))
 
 t = [[p[i], a[i], b[i], 1] for i in range(n)]
-t = sorted(t, key = lambda x: x[0])
+t = sorted(t, key=lambda x: x[0])
 
-p = [0,0,0,0]
+p = [0, 0, 0, 0]
 ans = []
 for i in range(m):
     clr = c[i]

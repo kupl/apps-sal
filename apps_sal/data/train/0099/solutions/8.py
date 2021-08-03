@@ -11,15 +11,12 @@ for _ in range(t):
             st = i
             break
 
-    for i in range(n-1, -1, -1):
+    for i in range(n - 1, -1, -1):
         if s[i] == '0':
             end = i
             break
 
     if st < end:
-        print(s[:st]+'0'+s[end+1:])
+        print(s[:st] + '0' + s[end + 1:])
     else:
         print(s)
-
-
-

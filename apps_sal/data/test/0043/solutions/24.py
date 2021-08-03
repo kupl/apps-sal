@@ -52,4 +52,3 @@ for i in range(n):
 
 
 print("{} {}".format(a + 1, b + 1))
-

@@ -22,6 +22,7 @@ def main():
         grid[2][2] = 0
 
     for i in range(3):
-        print(' '.join(list(map(str,grid[i]))))
-main()
+        print(' '.join(list(map(str, grid[i]))))
 
+
+main()

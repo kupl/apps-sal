@@ -10,4 +10,3 @@ def splitSentence(s):
     result.append(sum)
 
     return result
-

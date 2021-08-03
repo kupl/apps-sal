@@ -6,4 +6,3 @@ a = int(input())
 m = m + 60 * h + a
 m %= 1440
 print('%02d:%02d' % (m // 60, m % 60))
-

@@ -1,9 +1,9 @@
-def xor(a,b):
-    
+def xor(a, b):
+
     if a == True and b == False:
-        return True 
+        return True
     elif a == False and b == False:
-        return False 
+        return False
     elif a == False and b == True:
         return True
     elif a == True and b == True:

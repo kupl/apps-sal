@@ -5,6 +5,5 @@ for _ in range(2):
     if A >= B:
         A -= 1
     else:
-        B -=1
+        B -= 1
 print(ans)
-

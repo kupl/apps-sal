@@ -1,19 +1,19 @@
 
 for _ in range(int(input())):
-    a,b,c,d=list(map(int,input().split()))
-    
-    if a>b:
-        e=a-b
+    a, b, c, d = list(map(int, input().split()))
+
+    if a > b:
+        e = a - b
     else:
-        e=b-a
-        
-    if c>d:
-        f=c-d
+        e = b - a
+
+    if c > d:
+        f = c - d
     else:
-        f=d-c
+        f = d - c
 
     if f != 0:
-        if e%f == 0:
+        if e % f == 0:
             print("YES")
         else:
             print("NO")
@@ -22,4 +22,3 @@ for _ in range(int(input())):
             print("YES")
         else:
             print("NO")
-

@@ -1,8 +1,8 @@
 n = input()
- 
+
 l = [int(i) for i in n]
- 
+
 if int(n) % sum(l) == 0:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

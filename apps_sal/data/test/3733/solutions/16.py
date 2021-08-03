@@ -18,4 +18,6 @@ def __starting_point():
     nn, II = list(map(int, input().split()))
     aa = list(map(int, input().split()))
     print(mp3(nn, II, aa))
+
+
 __starting_point()

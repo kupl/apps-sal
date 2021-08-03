@@ -1,9 +1,11 @@
 from collections import Counter
+
+
 class Solution:
     def numSplits(self, s: str) -> int:
         l, r = {}, Counter(s)
         ans = 0
-        for i in range(len(s)-1):
+        for i in range(len(s) - 1):
             # Add s[i] to l
             if s[i] in l:
                 l[s[i]] += 1
@@ -18,4 +20,3 @@ class Solution:
                 #print(i, l, r)
                 ans += 1
         return ans
-

@@ -6,7 +6,7 @@ matrix = [array('i', list(map(int, input().split()))) for _ in range(n)]
 aa = tuple([int(x) - 1 for x in input().split()])
 ans = [''] * n
 
-for i in range(n-1, -1, -1):
+for i in range(n - 1, -1, -1):
     x = aa[i]
 
     for a in range(n):
@@ -25,4 +25,3 @@ for i in range(n-1, -1, -1):
     ans[i] = str(10**9 * overflow + val)
 
 print(' '.join(ans))
-

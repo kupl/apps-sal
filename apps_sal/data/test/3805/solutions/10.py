@@ -1,6 +1,6 @@
 import sys
 import math
- 
+
 st = input()
 mystack = [st[0]]
 

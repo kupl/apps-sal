@@ -18,4 +18,3 @@ else:
         else:
             ans += data[i]
     print(ans)
-

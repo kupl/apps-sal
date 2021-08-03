@@ -3,7 +3,7 @@ class Solution:
         i = 0
         if k > len(arr):
             return max(arr)
-        t = k    
+        t = k
         p1, p2 = arr[0], arr[1]
         while t:
             # print(arr, p1,p2,t)
@@ -17,6 +17,5 @@ class Solution:
                 arr.append(p1)
                 p1 = arr[0]
                 p2 = arr[1]
-                t = k-1
+                t = k - 1
         return p1
-

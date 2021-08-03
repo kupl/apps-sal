@@ -3,4 +3,4 @@ def reverse_factorial(num):
     while f < num:
         c += 1
         f *= c
-    return 'None' if f > num else "%d!" %c
+    return 'None' if f > num else "%d!" % c

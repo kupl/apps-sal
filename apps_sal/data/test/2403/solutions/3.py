@@ -1,13 +1,13 @@
 n = int(input())
 
 a = list(map(int, input().split()))
-b = list(int(x)-1 for x in input().split())
+b = list(int(x) - 1 for x in input().split())
 
 indeg = [0] * n
 for x in b:
     if x >= 0:
         indeg[x] += 1
-#print(*indeg)
+# print(*indeg)
 q = [i for i in range(n) if indeg[i] == 0]
 ans = 0
 res = []
@@ -18,7 +18,7 @@ while q:
     if a[top] < 0:
         end.append(top)
     else:
-        res.append(top)    
+        res.append(top)
         ans += a[top]
         if b[top] >= 0:
             a[b[top]] += a[top]
@@ -34,6 +34,5 @@ for i in end[::-1]:
         a[b[i]] += a[i]
     res.append(i)
 
-print(ans)        
-print(*[x+1 for x in res])
-
+print(ans)
+print(*[x + 1 for x in res])

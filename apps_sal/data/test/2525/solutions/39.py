@@ -32,9 +32,8 @@ for i in range(Q):
             else:
                 S.appendleft(C)
 
-                
+
 if reverse == False:
     print((''.join(S)))
 else:
     print((''.join(reversed(S))))
-

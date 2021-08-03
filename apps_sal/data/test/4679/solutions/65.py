@@ -27,4 +27,3 @@ while True:
         else:
             print('C')
             return
-

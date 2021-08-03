@@ -11,4 +11,3 @@ for i in range(a, x + 1):
 print(ans)
 if ans:
     print(result)
-

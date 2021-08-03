@@ -1,1 +1,1 @@
-round_to_next5=lambda n:n+-n%5
+def round_to_next5(n): return n + -n % 5

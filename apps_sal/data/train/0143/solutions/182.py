@@ -2,7 +2,7 @@ class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         t1 = t2 = -1
         t1s = -1
-        ans = 0;
+        ans = 0
         for i in range(0, len(tree)):
             t = tree[i]
             if t != t1 and t != t2:

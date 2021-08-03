@@ -1,5 +1,6 @@
 class Solution:
     wdMap = {}
+
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
         res = []
         self.wdMap = self.hashwords(words)
@@ -10,14 +11,13 @@ class Solution:
 
     def checkValidWord(self, puzzle, i, id):
         if i == len(puzzle):
-            return self.wdMap.get(id , 0)
+            return self.wdMap.get(id, 0)
         indx = ord(puzzle[i]) - ord('a')
-        nextid = id | (1<<indx)
+        nextid = id | (1 << indx)
         if i == 0:
             return self.checkValidWord(puzzle, i + 1, nextid)
         else:
-            return self.checkValidWord(puzzle, i + 1, id) + self.checkValidWord(puzzle, i+1, nextid)
-
+            return self.checkValidWord(puzzle, i + 1, id) + self.checkValidWord(puzzle, i + 1, nextid)
 
     def hashwords(self, words):
         wdMap = {}
@@ -28,4 +28,3 @@ class Solution:
                 letter_id = letter_id | (1 << indx)
             wdMap[letter_id] = wdMap.get(letter_id, 0) + 1
         return wdMap
-

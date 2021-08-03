@@ -8,7 +8,7 @@ for a, b in AB:
     L = [a, b]
     m = min(L)
     l = max(L)
-    if (a+b)%3 == 0 and l <= m*2:
+    if (a + b) % 3 == 0 and l <= m * 2:
         print("YES")
     else:
         print("NO")

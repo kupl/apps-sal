@@ -2,7 +2,7 @@
 #from collections import deque
 
 def main():
-    n,h = map(int,input().split())
+    n, h = map(int, input().split())
     w = 0
     for i in input().split():
         if int(i) > h:
@@ -14,4 +14,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

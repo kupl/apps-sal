@@ -12,7 +12,7 @@ for _ in range(N):
     if a < 0 or a == 0 and b < 0:
         a, b = -a, -b
     if g > 0:
-        a, b = a//g, b//g
+        a, b = a // g, b // g
     idx = 0
     if b <= 0:
         idx = 1
@@ -24,9 +24,9 @@ for key, val in key2count.items():
     if key == (0, 0):
         continue
     plus, minus = val
-    ans *= (pow(2, plus, kMod) + pow(2, minus, kMod)-1)
+    ans *= (pow(2, plus, kMod) + pow(2, minus, kMod) - 1)
     ans %= kMod
 
 ans += sum(key2count[(0, 0)])
 
-print((ans + kMod-1) % kMod)
+print((ans + kMod - 1) % kMod)

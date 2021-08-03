@@ -21,38 +21,37 @@ class UnionFind:
 
     def size(self, x):
         return self.sz[self.find(x)]
-    
+
+
 class Solution:
-    
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
-        if n<=1:
+        if n <= 1:
             return 0
         distances = []
         db = dict()
         for i in range(n):
-            x1,y1 = points[i]
-            for j in range(i+1,n):
-                x2,y2 = points[j]
-                dis = (abs(x1-x2)+abs(y1-y2))
-                distances.append( dis )
+            x1, y1 = points[i]
+            for j in range(i + 1, n):
+                x2, y2 = points[j]
+                dis = (abs(x1 - x2) + abs(y1 - y2))
+                distances.append(dis)
 
                 if dis not in db:
                     db[dis] = []
-                db[dis].append((i,j))
-                
-        
+                db[dis].append((i, j))
+
         heapq.heapify(distances)
         nodes = UnionFind(n)
         ret = []
-        
+
         cost = 0
         while distances:
             # print(type(distances))
             # print(nodes)
             dis = heapq.heappop(distances)
-            p1,p2 = db[dis].pop()
-            if nodes.union(p1,p2):
-                cost+=dis
+            p1, p2 = db[dis].pop()
+            if nodes.union(p1, p2):
+                cost += dis
         return cost
-

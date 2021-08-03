@@ -50,7 +50,7 @@ class Igor:
         self.result = []
         w = 32
         n, m, k = [int(x) for x in uinput().split()]
-        d0, d1, d2, d3 = -m, 2*m, -m-1, 2
+        d0, d1, d2, d3 = -m, 2 * m, -m - 1, 2
         a = []
         rc = []
         rr = []
@@ -59,14 +59,14 @@ class Igor:
         for _ in range(n):
             row = [(0 if v == '.' else 3) for v in uinput()]
             a += row
-            rc += [sum(row[i*w:i*w+w]) for i in range(mw)]
+            rc += [sum(row[i * w:i * w + w]) for i in range(mw)]
         for i in range(nw):
-            j = i*mw*w
-            rr += [sum([rc[j+u*mw+v] for u in range(w)]) for v in range(mw)]
+            j = i * mw * w
+            rr += [sum([rc[j + u * mw + v] for u in range(w)]) for v in range(mw)]
         to_visit = deque()
         for _ in range(k):
-            x0, y0 = [int(x)-1 for x in uinput().split()]
-            i0 = x0*m+y0
+            x0, y0 = [int(x) - 1 for x in uinput().split()]
+            i0 = x0 * m + y0
             step = 0
             if a[i0] > 3:
                 self.result.append(a[i0])
@@ -142,7 +142,7 @@ class unitTests(unittest.TestCase):
 
         # Random inputs
         test = str(nmax) + " " + str(nmax) + "\n"
-        numnums = [str(i) + " " + str(i+1) for i in range(nmax)]
+        numnums = [str(i) + " " + str(i + 1) for i in range(nmax)]
         test += "\n".join(numnums) + "\n"
         nums = [random.randint(1, 10000) for i in range(nmax)]
         test += " ".join(map(str, nums)) + "\n"
@@ -153,9 +153,10 @@ class unitTests(unittest.TestCase):
         calc = timeit.default_timer()
         d.calculate()
         stop = timeit.default_timer()
-        print(("\nTimelimit Test: " +
-              "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
-              format(stop-start, calc-start, stop-calc)))
+        print(("\nTimelimit Test: "
+              + "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
+               format(stop - start, calc - start, stop - calc)))
+
 
 def __starting_point():
 
@@ -167,5 +168,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(Igor().calculate())
+
 
 __starting_point()

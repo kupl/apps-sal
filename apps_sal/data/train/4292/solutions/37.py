@@ -8,4 +8,3 @@ def string_clean(s):
         if i in numset:
             s = s.replace(i, '')
     return s
-

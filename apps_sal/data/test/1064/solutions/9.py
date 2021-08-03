@@ -15,16 +15,16 @@ for x in block:
 
 for i in range(1, n):
     if prev[i] == -1:
-        prev[i] = prev[i-1]
+        prev[i] = prev[i - 1]
 
 inf = ans = 10**18
 
-for i in range(1, k+1):
+for i in range(1, k + 1):
     s = 0
     cost = 0
     while True:
         cost += a[i]
-        t = s+i
+        t = s + i
 
         if t >= n:
             break
@@ -36,4 +36,3 @@ for i in range(1, k+1):
     ans = min(ans, cost)
 
 print(ans if ans < inf else -1)
-

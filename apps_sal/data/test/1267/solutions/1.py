@@ -4,4 +4,3 @@ t = 0
 if 0 in a:
     t = 1
 print(len(a) - t)
-

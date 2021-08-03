@@ -18,4 +18,3 @@ if good:
     print(deletes)
 elif zeroes >= 1:
     print(len(str(n)) - 1)
-

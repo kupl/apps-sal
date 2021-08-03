@@ -7,4 +7,3 @@ y = (N // 15) * 200
 
 payment = x - y
 print(payment)
-

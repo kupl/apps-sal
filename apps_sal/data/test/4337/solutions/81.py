@@ -1,9 +1,9 @@
-N=int(input())
-l=list(map(str,input().split()))
+N = int(input())
+l = list(map(str, input().split()))
 
-ln=len(set(l))
+ln = len(set(l))
 
-if ln==3:
-  print('Three')
+if ln == 3:
+    print('Three')
 else:
-  print('Four')
+    print('Four')

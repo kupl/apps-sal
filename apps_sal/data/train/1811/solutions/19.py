@@ -9,7 +9,7 @@ class StockSpanner:
         self.i += 1
         while self.stack and self.stack[-1][1] <= price:
             self.stack.pop()
-        
+
         result = None
         if not self.stack:
             result = self.i
@@ -22,4 +22,3 @@ class StockSpanner:
 # Your StockSpanner object will be instantiated and called as such:
 # obj = StockSpanner()
 # param_1 = obj.next(price)
-

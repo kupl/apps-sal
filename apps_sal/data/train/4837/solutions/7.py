@@ -2,6 +2,7 @@ def parse(crontab):
     crontab = crontab.replace('FEB', '2').replace('JUL', '7').replace('SUN', '0').replace('THU', '4').split()
     output = [[], [], [], [], []]
     valid = {0: [0, 59], 1: [0, 23], 2: [1, 31], 3: [1, 12], 4: [0, 6]}
+
     def parser(s):
         nums = '1234567890'
         out = []
@@ -46,4 +47,3 @@ def parse(crontab):
         output[i].sort()
         output[i] = ' '.join([str(x) for x in output[i]])
     return 'minute         ' + output[0] + '\nhour           ' + output[1] + '\nday of month   ' + output[2] + '\nmonth          ' + output[3] + '\nday of week    ' + output[4]
-

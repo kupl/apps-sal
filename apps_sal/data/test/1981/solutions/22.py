@@ -15,24 +15,27 @@ q.append((1, 0, 0))
 res = 0
 
 while len(q) > 0:
-    
+
     ij = q.popleft()
     i = ij[0]
     j = ij[1]
     maxi = ij[2]
     checked[i] = 1
-    if l[i]: j += 1
-    else: j = 0
-    if maxi < j: maxi = j
+    if l[i]:
+        j += 1
+    else:
+        j = 0
+    if maxi < j:
+        maxi = j
     islist = 1
     for elem in graph[i]:
-        #print(elem)
-        if not checked[elem]: 
-            
+        # print(elem)
+        if not checked[elem]:
+
             q.append((elem, j, maxi))
             islist = 0
     if islist:
-        
+
         if maxi <= m:
             res += 1
-print(res)    
+print(res)

@@ -5,7 +5,7 @@ for _ in range(t):
     As = list(map(int, input().split()))
     As.sort()
     left = 0
-    right = n-1
+    right = n - 1
     res = []
     while left <= right:
         if left == right:
@@ -16,4 +16,3 @@ for _ in range(t):
         right -= 1
         left += 1
     print(" ".join(map(str, res[::-1])))
-

@@ -12,11 +12,11 @@ class CustomStack:
         if len(self.s) == 0:
             return -1
         return self.s.pop()
-        
 
     def increment(self, k: int, val: int) -> None:
         for i in range(0, k):
-            if i >= len(self.s): break
+            if i >= len(self.s):
+                break
             self.s[i] += val
         # print(self.s)
 
@@ -26,4 +26,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

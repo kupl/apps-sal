@@ -13,4 +13,3 @@ for old, new in logs:
 print(cnt)
 for i in range(len(now)):
     print(origin[i], now[i])
-

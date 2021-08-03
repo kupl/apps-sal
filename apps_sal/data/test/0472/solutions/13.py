@@ -4,7 +4,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#349B
+# 349B
 '''
 def main():
 	from sys import stdin,stdout
@@ -40,7 +40,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#234B Input and Output
+# 234B Input and Output
 '''
 def main():
 	from sys import stdin,stdout
@@ -68,7 +68,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#151B
+# 151B
 '''
 def main():
 	from sys import stdin,stdout
@@ -132,7 +132,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#SQUADRUN Q2
+# SQUADRUN Q2
 '''
 def LCMgen(a):
 	import math
@@ -158,7 +158,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#143B
+# 143B
 '''
 def main():
     from sys import stdin,stdout
@@ -201,7 +201,7 @@ def __starting_point():
     main()
 
 '''
-#A
+# A
 '''
 def main():
     from sys import stdin,stdout
@@ -219,7 +219,7 @@ def main():
 def __starting_point():
     main()
 '''
-#B
+# B
 '''
 def main():
     from sys import stdin,stdout
@@ -231,7 +231,7 @@ def main():
 def __starting_point():
     main()
 '''
-#233B
+# 233B
 '''
 def main():
     from sys import stdin,stdout
@@ -283,7 +283,7 @@ def main():
 def __starting_point():
     main()
 '''
-#RECTANGL
+# RECTANGL
 '''
 def main():
     from sys import stdin,stdout
@@ -301,7 +301,7 @@ def main():
 def __starting_point():
     main()
 '''
-#MAXSC
+# MAXSC
 '''
 def main():
     from sys import stdin,stdout
@@ -329,29 +329,34 @@ def main():
 def __starting_point():
     main()
 '''
-#233B ********************
+# 233B ********************
+
+
 def main():
     def rev(x):
         tsum = 0
         while x:
-            tsum += x%10
-            x//=10
+            tsum += x % 10
+            x //= 10
         return tsum
-    from sys import stdin,stdout
-    from math import sqrt,ceil
+    from sys import stdin, stdout
+    from math import sqrt, ceil
     n = int(stdin.readline())
     for i in range(91):
-        r = i*i+(n<<2)
+        r = i * i + (n << 2)
         x = ceil(sqrt(r))
-##        print(i,x)
-        if x*x == r:
-            num = (x-i)/2
+# print(i,x)
+        if x * x == r:
+            num = (x - i) / 2
             if num == int(num):
-                if rev(num)==i:
+                if rev(num) == i:
                     stdout.write(str(int(num)))
                     return
     stdout.write('-1')
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

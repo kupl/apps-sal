@@ -11,4 +11,3 @@ for i in range(n):
         print("REBEL")
     else:
         print("OBEY")
-

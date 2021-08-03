@@ -5,5 +5,3 @@ def find_digit(num: int, nth: int) -> int:
         return int(str(abs(num))[-nth])
     except IndexError:
         return 0
-
-

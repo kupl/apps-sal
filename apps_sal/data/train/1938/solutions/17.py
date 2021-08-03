@@ -3,8 +3,10 @@ class Solution:
         N = len(rectangles)
         Xvals, Yvals = set(), set()
         for x1, y1, x2, y2 in rectangles:
-            Xvals.add(x1); Xvals.add(x2)
-            Yvals.add(y1); Yvals.add(y2)
+            Xvals.add(x1)
+            Xvals.add(x2)
+            Yvals.add(y1)
+            Yvals.add(y2)
 
         imapx = sorted(Xvals)
         imapy = sorted(Yvals)
@@ -21,5 +23,5 @@ class Solution:
         for x, row in enumerate(grid):
             for y, val in enumerate(row):
                 if val:
-                    ans += (imapx[x+1] - imapx[x]) * (imapy[y+1] - imapy[y])
+                    ans += (imapx[x + 1] - imapx[x]) * (imapy[y + 1] - imapy[y])
         return ans % (10**9 + 7)

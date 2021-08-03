@@ -1,4 +1,6 @@
 import numpy as np
+
+
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         # likely easiest to go backwards
@@ -14,6 +16,3 @@ class Solution:
                 arr = arr / 2
                 ops += 1
         return ops
-                
-        
-

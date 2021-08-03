@@ -2,8 +2,8 @@ N, K = list(map(int, input().split()))
 V = list(map(int, input().split()))
 
 max_value = -10**9
-for kL in range(0, K+1):
-    for kR in range(0, K+1):
+for kL in range(0, K + 1):
+    for kR in range(0, K + 1):
         if kL + kR > min(N, K):
             continue
         vL = V[:kL]
@@ -23,4 +23,3 @@ for kL in range(0, K+1):
         if value > max_value:
             max_value = value
 print(max_value)
-

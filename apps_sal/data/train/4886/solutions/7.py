@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def find_dups_miss(arr):
     cnt = Counter(arr)
     dup = sorted(x for x in cnt if cnt[x] >= 2)

@@ -8,6 +8,7 @@ for _ in range(N - 1):
     edges[fr].append(to)
     edges[to].append(fr)
 
+
 def calc(s):
     minDist = [10**18] * N
     minDist[s] = 0
@@ -22,6 +23,7 @@ def calc(s):
 
     return minDist
 
+
 minDistS = calc(S)
 minDistT = calc(T)
 
@@ -30,4 +32,3 @@ for s, t in zip(minDistS, minDistT):
     if s <= t:
         ans = max(ans, t - 1)
 print(ans)
-

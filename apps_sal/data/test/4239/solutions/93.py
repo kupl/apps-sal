@@ -14,13 +14,14 @@ def solve(n):
         now_9 = 9
         while now_9 * 9 <= n:
             now_9 *= 9
-        
+
         ans = float('inf')
         for i in range(n // now_6 + 1):
-            cnt = i + (n - now_6*i) // now_9 + solve((n - now_6*i) % now_9)
+            cnt = i + (n - now_6 * i) // now_9 + solve((n - now_6 * i) % now_9)
             if cnt < ans:
                 ans = cnt
-        
+
         return ans
+
 
 print(solve(int(input())))

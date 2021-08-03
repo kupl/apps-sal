@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
         graph = defaultdict(set)
@@ -12,8 +13,7 @@ class Solution:
         self.getRootDis(0, None, dis, cnt, graph)
         self.updateNei(0, None, dis, cnt, graph, N)
         return dis
-        
-        
+
     def getRootDis(self, curr, parent, dis, cnt, graph):
         rdis, rcnt = 0, 1
         for nei in graph[curr]:
@@ -23,7 +23,7 @@ class Solution:
             rdis += dis[nei] + cnt[nei]
             rcnt += cnt[nei]
         dis[curr], cnt[curr] = rdis, rcnt
-        
+
     def updateNei(self, curr, parent, dis, cnt, graph, N):
         for nei in graph[curr]:
             if nei == parent:

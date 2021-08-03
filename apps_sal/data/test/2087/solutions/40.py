@@ -1,4 +1,4 @@
-A, B, C = map(int,input().split())
+A, B, C = map(int, input().split())
 M = 998244353
 
 x = (1 + A) * A // 2

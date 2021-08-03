@@ -7,11 +7,14 @@ import re
 import numpy as np
 from functools import reduce
 
-rr = lambda: sys.stdin.readline().rstrip()
-rs = lambda: sys.stdin.readline().split()
-ri = lambda: int(sys.stdin.readline())
-rm = lambda: list(map(int, sys.stdin.readline().split()))
-rl = lambda: list(map(int, sys.stdin.readline().split()))
+
+def rr(): return sys.stdin.readline().rstrip()
+def rs(): return sys.stdin.readline().split()
+def ri(): return int(sys.stdin.readline())
+def rm(): return list(map(int, sys.stdin.readline().split()))
+def rl(): return list(map(int, sys.stdin.readline().split()))
+
+
 inf = float('inf')
 mod = 10**9 + 7
 
@@ -23,15 +26,3 @@ for _ in range(m):
     p, x = rm()
     p -= 1
     print((sum_ - t[p] + x))
-
-
-
-
-
-
-
-
-
-
-
-

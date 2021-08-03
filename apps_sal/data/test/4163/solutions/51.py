@@ -12,7 +12,7 @@ result = "No"
 for i in range(num):
     if d[i][0] == d[i][1]:
         zorome_count += 1
-        if i-temp == 1 and zorome_count >= 3:
+        if i - temp == 1 and zorome_count >= 3:
             result = "Yes"
             break
         temp = i
@@ -20,4 +20,3 @@ for i in range(num):
         zorome_count = 0
 
 print(result)
-

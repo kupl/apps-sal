@@ -6,7 +6,7 @@ l = []
 result = 0
 for i in range(m):
     l.append(list(str(input())))
-#print(l)
+# print(l)
 index = []
 have = []
 for i in range(n):
@@ -15,8 +15,8 @@ for i in range(n):
     else:
         have.append(s[i])
 have = set(have)
-#print(index)
-#print(have)
+# print(index)
+# print(have)
 t = [1 for i in range(m)]
 c = len(index)
 for i in range(m):
@@ -35,7 +35,7 @@ new = []
 for i in range(m):
     if t[i] == 1:
         new.append(l[i])
-#print(new)
+# print(new)
 
 alph = list(string.ascii_lowercase)
 for i in have:

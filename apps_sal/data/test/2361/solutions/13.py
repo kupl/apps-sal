@@ -3,5 +3,4 @@ for _ in range(int(input())):
     cardsPerPlayer = n // k
     x = min(cardsPerPlayer, m)
     m -= x
-    print(x - (m+k-2) // (k-1))
-
+    print(x - (m + k - 2) // (k - 1))

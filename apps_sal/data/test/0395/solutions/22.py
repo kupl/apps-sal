@@ -8,4 +8,3 @@ for i in range(6):
                 ans = "YES"
                 break
 print(ans)
-

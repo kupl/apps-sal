@@ -3,4 +3,4 @@ l = []
 for c, a in enumerate(a):
     l += [c + 1] * a
 for p in range(h):
-    print(*l[p*w:-~p*w][::[1, -1][p%2]])
+    print(*l[p * w:-~p * w][::[1, -1][p % 2]])

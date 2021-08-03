@@ -1,18 +1,17 @@
 class Solution:
     def catMouseGame(self, g: List[List[int]]) -> int:
-        
+
         # status: current_mouse_position, current_cat_position, move_next(0 : mouse, 1 : cat)
-        
+
         for i in range(len(g)):
             g[i] = set(g[i])
-        
+
         out_degree = {}
         for mouse in range(len(g)):
             for cat in range(1, len(g)):
                 out_degree[(mouse, cat, 0)] = len(g[mouse])
                 out_degree[(mouse, cat, 1)] = len(g[cat]) - (0 in g[cat])
-        
-        
+
         visit = set()
         status_result = deque()
         for cat in range(1, len(g)):
@@ -20,13 +19,13 @@ class Solution:
             status_result.append([0, cat, 0, 1])
             visit.add((0, cat, 1))
             visit.add((0, cat, 0))
-            
+
         for mouse in range(1, len(g)):
             status_result.append([mouse, mouse, 0, 2])
             status_result.append([mouse, mouse, 1, 2])
             visit.add((mouse, mouse, 0))
             visit.add((mouse, mouse, 1))
-        
+
         idx = 0
         while len(status_result):
             idx += 1
@@ -59,6 +58,3 @@ class Solution:
                                 status_result.append([mouse, p, 1, 1])
                                 visit.add((mouse, p, 1))
         return 0
-                    
-                    
-

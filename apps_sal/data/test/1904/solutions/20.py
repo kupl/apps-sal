@@ -15,10 +15,10 @@
 #     i+=1
 # print(s)
 
-#I/p
+# I/p
 # 4
 # 1 3 3 7
-#O/p
+# O/p
 # 2
 # n=int(input())
 # data=list(map(int,input().split()))
@@ -34,7 +34,7 @@
 # else: print(a)
 
 
-#Find Divisible
+# Find Divisible
 # n=int(input())
 # while n>0:
 #     a,b=map(int,input().split())
@@ -49,7 +49,7 @@
 
 n = int(input())
 s = input()
-a =list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 hard = {'h': 1, 'a': 2, 'r': 3, 'd': 4}
 

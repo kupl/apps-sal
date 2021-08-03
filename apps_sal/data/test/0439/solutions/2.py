@@ -5,4 +5,3 @@ if N > 50:
     print(M)
 else:
     print(M % (2**N))
-

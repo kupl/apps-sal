@@ -1,41 +1,40 @@
 class Solution:
     def divide(self, num, divisor):
-        return -((-num)//divisor)
-    
+        return -((-num) // divisor)
+
     def getQuotient(self, nums, divisor):
         output = 0
         for num in nums:
-            output += ceil(num/divisor)
+            output += ceil(num / divisor)
         return output
-    
+
     def getResult(self, results, divisor, nums):
-        #if divisor in results:
+        # if divisor in results:
         #    return results[divisor]
-        #else:
+        # else:
         #    results[divisor] = self.getQuotient(nums, divisor)
         #    return results[divisor]
         return self.getQuotient(nums, divisor)
+
     def helper(self, results, nums, i, j, threshold):
         if i == j:
             return i
-        
-        mid = (i+j)//2
+
+        mid = (i + j) // 2
         if mid == 1:
             return mid
-        elif self.getResult(results, mid, nums) <= threshold and self.getResult(results, mid-1, nums) > threshold:
+        elif self.getResult(results, mid, nums) <= threshold and self.getResult(results, mid - 1, nums) > threshold:
             return mid
         elif self.getResult(results, mid, nums) <= threshold:
-            return self.helper(results, nums, i, mid-1, threshold)
+            return self.helper(results, nums, i, mid - 1, threshold)
         else:
-            return self.helper(results, nums, mid+1, j, threshold)
-    
+            return self.helper(results, nums, mid + 1, j, threshold)
 
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        
-        maxDivisor = ceil(2*sum(nums)/threshold)
-        #print(maxDivisor)
+
+        maxDivisor = ceil(2 * sum(nums) / threshold)
+        # print(maxDivisor)
         #maxDivisor = 1000000
         results = dict()
-        
-        return self.helper(results, nums, 1, maxDivisor, threshold)
 
+        return self.helper(results, nums, 1, maxDivisor, threshold)

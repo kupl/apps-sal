@@ -1,1 +1,1 @@
-print(15-sum(map(int,input().split())))
+print(15 - sum(map(int, input().split())))

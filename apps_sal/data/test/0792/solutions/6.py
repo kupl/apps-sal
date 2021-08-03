@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, d = f()
 h = s = k = 0
 for q in f():
@@ -8,5 +10,6 @@ for q in f():
         break
     if q == 0:
         h = max(0, h)
-        if s < 0: s, k = d, k + 1
+        if s < 0:
+            s, k = d, k + 1
 print(k)

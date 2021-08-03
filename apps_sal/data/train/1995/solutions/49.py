@@ -6,7 +6,7 @@ class Solution:
                 pool[idx] += num
                 if pool[idx] > capacity:
                     return False
-        pool = [0]*1000
+        pool = [0] * 1000
         for trip in trips:
             num, start, end = trip
             is_false = add_list(pool, start, end, num)

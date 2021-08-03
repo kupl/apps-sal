@@ -25,4 +25,4 @@ while k > 0 and i < len(ar):
     i += 1
 
 
-print(''.join(map(str,ar)))
+print(''.join(map(str, ar)))

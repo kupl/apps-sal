@@ -4,7 +4,7 @@ n = int(input().strip())
 inside = False
 for _ in range(n):
     line = input()
-    
+
     for el in line.split(' '):
         if el == "{":
             inside = True

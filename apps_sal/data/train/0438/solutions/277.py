@@ -14,25 +14,26 @@ class Solution:
                 output = step
         return output
 
+
 class UF:
-    
+
     def __init__(self):
         self.parents = {}
         self.sizes = {}
         self.size_counts = collections.Counter()
-        
+
     def add(self, n):
         self.parents[n] = n
         self.sizes[n] = 1
         self.size_counts[1] += 1
-    
+
     def find(self, n):
         p = self.parents
         while p[n] != n:
             p[n] = p[p[n]]
             n = p[n]
         return n
-    
+
     def join(self, a, b):
         a = self.find(a)
         b = self.find(b)
@@ -44,7 +45,7 @@ class UF:
         sc[s[a]] -= 1
         sc[s[b]] -= 1
         sc[s[a] + s[b]] += 1
-        
+
         p = self.parents
         if s[a] < s[b]:
             p[a] = b
@@ -52,4 +53,3 @@ class UF:
         else:
             p[b] = a
             s[a] += s[b]
-

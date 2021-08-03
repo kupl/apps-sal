@@ -15,4 +15,3 @@ class Solution:
                     result = max(result, dp[i][j])
 
         return result
-

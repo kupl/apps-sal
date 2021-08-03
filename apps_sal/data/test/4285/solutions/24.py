@@ -3,12 +3,12 @@ def main():
 
     n = int(input())
     s = input()
-    
+
     a, b, ans = 0, 0, 0
     cnt = 1
     for i in range(n):
         if s[i] == "?":
-            ans = (ans*3 + b) % 1000_000_007
+            ans = (ans * 3 + b) % 1000_000_007
             b = (b * 3 + a) % 1000_000_007
             a = (a * 3 + cnt) % 1000_000_007
             cnt = (cnt * 3) % 1000_000_007
@@ -22,7 +22,8 @@ def main():
 
 #input = sys.stdin.readline
 
-#sys.setrecursionlimit(2097152)
-tn = 1 #int(input())
+
+# sys.setrecursionlimit(2097152)
+tn = 1  # int(input())
 for _ in range(tn):
     main()

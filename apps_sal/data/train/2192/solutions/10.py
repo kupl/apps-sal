@@ -2,6 +2,7 @@ import sys
 
 MAX_X = 1000 * 1000 + 10
 
+
 def main():
     n = int(sys.stdin.readline())
 
@@ -14,7 +15,7 @@ def main():
 
     for i in range(1, MAX_X):
         cnt[i] += cnt[i - 1] + (arr[i] != 0)
-    
+
     for i in range(1, MAX_X):
         dp[i] = dp[max(0, i - arr[i] - 1)] + cnt[i - 1] - cnt[max(0, i - arr[i] - 1)]
 
@@ -27,5 +28,5 @@ def main():
 
     sys.stdout.write(str(answer))
 
-main()
 
+main()

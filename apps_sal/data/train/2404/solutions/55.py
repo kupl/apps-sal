@@ -15,4 +15,3 @@ class Solution:
             k -= 1
 
         return expected_value - 1
-

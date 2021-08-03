@@ -13,4 +13,3 @@ for i in range(n):
             x = d
             y = j
     print((y + 1))
-

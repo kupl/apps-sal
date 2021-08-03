@@ -9,4 +9,3 @@ for _ in range(int(input())):
         cnt1, cnt2 = a[i] - a1, b[i] - b1
         ans += max(cnt1, cnt2)
     print(ans)
-

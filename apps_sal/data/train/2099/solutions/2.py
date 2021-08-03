@@ -1,6 +1,7 @@
 def printList(a):
     print(" ".join(map(str, a)))
 
+
 def solve():
     n, k = list(map(int, input().split()))
     if k == 1:
@@ -22,5 +23,5 @@ def solve():
     ans += list(range(k + 2, n + 1))
     printList(ans)
 
-solve()
 
+solve()

@@ -6,6 +6,6 @@ for i in range(len(e)):
     s += e[i]
 if len(o) == len(e):
     print(s)
-else :
+else:
     s += o[-1]
     print(s)

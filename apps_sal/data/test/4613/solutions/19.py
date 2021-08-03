@@ -5,7 +5,9 @@ graph = [[] for _ in range(N)]
 for _ in range(M):
     a, b = [int(x) - 1 for x in input().split()]
     edge.append((a, b))
-    graph[a].append(b); graph[b].append(a)
+    graph[a].append(b)
+    graph[b].append(a)
+
 
 def dfs(now):
     searched[now] = True
@@ -16,6 +18,7 @@ def dfs(now):
             continue
         dfs(next)
 
+
 ans = M
 for i in range(M):
     a, b = edge[i]
@@ -25,4 +28,3 @@ for i in range(M):
         ans -= 1
 
 print(ans)
-

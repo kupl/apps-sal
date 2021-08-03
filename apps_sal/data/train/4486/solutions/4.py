@@ -1,1 +1,1 @@
-repeat_it = lambda s, m: s*m if isinstance(s, str) else "Not a string"
+def repeat_it(s, m): return s * m if isinstance(s, str) else "Not a string"

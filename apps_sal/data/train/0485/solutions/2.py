@@ -6,14 +6,14 @@ class Solution:
             # find the correct current bit based on prior flips
             while flip_pos < len(flip_inds) and i - K + 1 > flip_inds[flip_pos]:
                 flip_pos += 1
-                
+
             cur_bit = A[i] ^ ((len(flip_inds) - flip_pos) % 2 != 0)
-            
+
             if i > len(A) - K:
                 if cur_bit == 0:
                     return -1
             else:
                 if not cur_bit:
                     flip_inds.append(i)
-                
+
         return len(flip_inds)

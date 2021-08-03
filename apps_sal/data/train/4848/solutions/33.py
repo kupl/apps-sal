@@ -1,1 +1,1 @@
-char_freq=lambda m:{i:list(m).count(i) for i in set(m)}
+def char_freq(m): return {i: list(m).count(i) for i in set(m)}

@@ -7,6 +7,7 @@ dict = {"([pP]ro)bably": r"\1lly",
         "([gG]o)ing to": r"\1nna",
         "([cC]omb)ination": r"\1o"}
 
+
 def gym_slang(phrase):
     for k, v in dict.items():
         phrase = sub(k, v, phrase)

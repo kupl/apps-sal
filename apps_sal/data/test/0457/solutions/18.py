@@ -1,5 +1,6 @@
 MOD = int(1e9 + 7)
 
+
 def log_power(base, exp):
     if exp == 0:
         return 1
@@ -48,5 +49,6 @@ def solve(num, limit):
 def __starting_point():
     num, limit = list(map(int, input().split()))
     print(solve(num, limit))
+
 
 __starting_point()

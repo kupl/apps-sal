@@ -23,4 +23,3 @@ if x in memoX[1 - len(sXs) % 2] and y in memoY[len(sYs) % 2]:
     print('Yes')
 else:
     print('No')
-

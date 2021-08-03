@@ -38,6 +38,6 @@ def __starting_point():
         for i in a:
             print(i, end=" ")
         print()
-    
-    
+
+
 __starting_point()

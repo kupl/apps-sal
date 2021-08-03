@@ -1,7 +1,8 @@
-Q = int(input())
-qs = [tuple(map(int,input().split())) for i in range(Q)]
-
 import heapq
+Q = int(input())
+qs = [tuple(map(int, input().split())) for i in range(Q)]
+
+
 class Heapq:
     def __init__(self, arr, desc=False):
         if desc:
@@ -19,7 +20,8 @@ class Heapq:
     def top(self):
         return self.hq[0] * self.sign
 
-lq = Heapq([],True)
+
+lq = Heapq([], True)
 rq = Heapq([])
 ans = 0
 
@@ -27,13 +29,13 @@ for q in qs:
     if q[0] == 2:
         print(lq.top(), ans)
         continue
-    _,a,b = q
+    _, a, b = q
     ans += b
     lq.push(a)
     rq.push(a)
     if lq.top() > rq.top():
         l = lq.pop()
         r = rq.pop()
-        ans += abs(l-r)
+        ans += abs(l - r)
         lq.push(r)
         rq.push(l)

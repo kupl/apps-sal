@@ -1,7 +1,7 @@
 class Solution:
     def _lcm(self, a, b):
         return a * b // math.gcd(a, b)
-    
+
     def _nth_magical_number_slow(self, n: int, a: int, b: int) -> int:
         if n == 0:
             return 0
@@ -23,7 +23,7 @@ class Solution:
                 count += 1
 
             return min(i, j)
-    
+
     def nthMagicalNumber(self, n: int, a_orig: int, b_orig: int) -> int:
         a, b = min(a_orig, b_orig), max(a_orig, b_orig)
         if a == b:
@@ -32,4 +32,3 @@ class Solution:
             lcm = self._lcm(a, b)
             k = lcm // a + lcm // b - 1
             return ((n // k) * lcm + self._nth_magical_number_slow(n % k, a, b)) % 1000000007
-

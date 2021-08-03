@@ -12,6 +12,8 @@ for _ in range(N - 1):
     edges[b].append(a)
 
 dist = [0] * N
+
+
 def dfs(v, d=0, p=-1):
     nonlocal dist
     dist[v] = d
@@ -20,11 +22,13 @@ def dfs(v, d=0, p=-1):
             continue
         dfs(u, d + 1, v)
 
+
 def calc_dist(s):
     nonlocal dist
     dist = [0] * N
     dfs(s)
     return dist
+
 
 distS = calc_dist(u)
 distT = calc_dist(v)

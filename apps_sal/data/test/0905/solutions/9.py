@@ -11,6 +11,6 @@ if smin == 100:
     for i in range(n):
         if (x[i] <= s) and (y[i] == 0):
             smin = 0
-    print(smin) 
+    print(smin)
 else:
     print(100 - smin)

@@ -1,4 +1,6 @@
 import math
+
+
 def movie(card, ticket, perc):
     priceA = 0
     priceB = card
@@ -8,4 +10,3 @@ def movie(card, ticket, perc):
         priceB += ticket * perc**visits
         priceA += ticket
     return visits
-

@@ -18,4 +18,3 @@ for z in range(test):
         print('YES')
     else:
         print('NO')
-

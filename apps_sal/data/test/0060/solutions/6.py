@@ -13,4 +13,3 @@ a = ['f', 'e', 'd', 'a', 'b', 'c']
 t += a.index(seat)
 
 print(t)
-

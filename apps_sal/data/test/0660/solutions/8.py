@@ -16,4 +16,3 @@ else:
         while k > n:
             k //= 2
     print(ansa, ansb)
-

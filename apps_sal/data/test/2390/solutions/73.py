@@ -27,4 +27,3 @@ for i, (x, v) in enumerate(XV[::-1], start=1):
     ans = max(ans, S - (C - x) * 2 + L[N - i])
 
 print(ans)
-

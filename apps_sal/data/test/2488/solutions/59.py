@@ -4,19 +4,19 @@ import collections
 
 
 class RAQ():
-    
+
     def __init__(self, size):
         """初期化"""
         self.size = size
         self.sub = [0 for i in range(size + 1)]
         self.r = 0
         self.v = 0
-    
+
     @classmethod
     def from_array(cls, a):
         st = cls(len(a))
         for i, x in enumerate(a):
-            st.add(i, i+1, x)
+            st.add(i, i + 1, x)
         return st
 
     def add(self, a, b, value):
@@ -77,5 +77,6 @@ def solve(N, D, A, XH):
 def __starting_point():
     inputs = read()
     print(("%s" % solve(*inputs)))
+
 
 __starting_point()

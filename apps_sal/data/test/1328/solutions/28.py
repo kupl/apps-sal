@@ -2,9 +2,11 @@ n, ma, mb = [int(i) for i in input().split()]
 lst = [[int(i) for i in input().split()] for _ in range(n)]
 lst.sort(key=lambda x: x[2])
 dic = {}
-def push(k,v):
+
+
+def push(k, v):
     if k in dic:
-        dic[k] = min(dic[k],v)
+        dic[k] = min(dic[k], v)
     else:
         dic[k] = v
 

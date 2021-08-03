@@ -5,16 +5,15 @@ for _t in range(int(input())):
     my_x = 0
     my_l = 3 - ls[0]
     for x, l_ in zip(xs, ls):
-     # print(my_x, my_l)
-     if l_ == my_l:
-      if x <= my_x:
-       # crash
-       print(x)
-       break
-      my_l = 3 - my_l
-      my_x = max(x + 1, my_x + d)
-     else:
-      my_x = max(x + 1, my_x)
+        # print(my_x, my_l)
+        if l_ == my_l:
+            if x <= my_x:
+                # crash
+                print(x)
+                break
+            my_l = 3 - my_l
+            my_x = max(x + 1, my_x + d)
+        else:
+            my_x = max(x + 1, my_x)
     else:
-     print(k)
-
+        print(k)

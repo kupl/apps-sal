@@ -1,9 +1,8 @@
-h,w=list(map(int,input().split()))
+h, w = list(map(int, input().split()))
 top = "#"
-top *=(w + 2)
+top *= (w + 2)
 print(top)
 for i in range(h):
-  tmp = input()
-  print(("#"+tmp+"#"))
+    tmp = input()
+    print(("#" + tmp + "#"))
 print(top)
-

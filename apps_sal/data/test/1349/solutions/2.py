@@ -12,4 +12,3 @@ for _ in range(t):
             best = min([best, abs(x - i)])
         result = max([result, best])
     print(result + 1)
-

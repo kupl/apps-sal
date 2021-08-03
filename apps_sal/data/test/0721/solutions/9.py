@@ -6,4 +6,3 @@ if m >= n:
     print(sum(ai) - (m - n) * d)
 else:
     print(sum(sorted(ai)[:m]))
-

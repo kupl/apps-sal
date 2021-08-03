@@ -15,4 +15,3 @@ class Solution:
         n = len(A)
         opt = [[-1] * (K + 1) for _ in range(n)]
         return dfs(n - 1, 0)
-

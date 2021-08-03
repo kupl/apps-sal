@@ -9,9 +9,9 @@ class Solution:
                     num -= 1
                 else:
                     num //= 2
-                    mult +=1
+                    mult += 1
             return plus, mult
-    
+
         plus = 0
         mult = 0
         for num in nums:
@@ -19,7 +19,3 @@ class Solution:
             plus += plus_
             mult = max(mult, mult_)
         return plus + mult
-                
-           
-            
-

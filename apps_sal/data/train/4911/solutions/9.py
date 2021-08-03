@@ -7,4 +7,4 @@ def sum_arrays(arrays, shift):
     for i in range(len(l[0])):
         tmp = sum([ii[i] for ii in l])
         res.append(tmp)
-    return res    
+    return res

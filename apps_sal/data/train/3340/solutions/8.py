@@ -1,4 +1,6 @@
 import numpy as np
+
+
 def sharkovsky(a, b):
     l = []
     for i in range(0, int(np.log2(max(a, b))) + 3):

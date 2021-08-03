@@ -7,5 +7,5 @@ for i in A_l:
         B += 0
         M = i
     else:
-        B += M-i
+        B += M - i
 print(B)

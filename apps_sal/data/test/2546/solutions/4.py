@@ -5,19 +5,19 @@ t = int(input())
 for _ in range(t):
     n, s = list(map(int, input().split()))
     human = []
-    x = n//2 + 1
+    x = n // 2 + 1
     for _ in range(n):
         human.append(list(map(int, input().split())))
 
-    human.sort(reverse = True)
+    human.sort(reverse=True)
     remain = s
     for i in range(n):
         remain -= human[i][0]
 
-    right = 10**9+1
+    right = 10**9 + 1
     left = 0
     while right - left > 1:
-        mid = left + (right-left)//2
+        mid = left + (right - left) // 2
         count = 0
         money = remain
         for i in range(n):
@@ -37,4 +37,3 @@ for _ in range(t):
         else:
             right = mid
     print(left)
-

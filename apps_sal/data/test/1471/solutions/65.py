@@ -6,9 +6,9 @@ graph = [[] for i in range(N)]
 
 for i in range(1, N):
     u, v, w = list(map(int, input().split()))
-    graph[u-1].append(v-1)
-    graph[v-1].append(u-1)
-    dist[(u-1, v-1)] = w
+    graph[u - 1].append(v - 1)
+    graph[v - 1].append(u - 1)
+    dist[(u - 1, v - 1)] = w
 
 
 q = deque()
@@ -32,4 +32,3 @@ while q:
 
 for i in range(N):
     print((color[i] % 2))
-

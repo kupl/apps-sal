@@ -4,13 +4,14 @@ def gcd(x, y):
         x, y = y, x % y
     return x
 
+
 def lcm(x, y):
-    return (x*y)//(gcd(x,y))
+    return (x * y) // (gcd(x, y))
 
 
-abc="abcdefghijklmnopqrstuvwxyz"
+abc = "abcdefghijklmnopqrstuvwxyz"
 
-pi=3.141592653589793238
+pi = 3.141592653589793238
 
 t = int(input())
 for _ in range(t):

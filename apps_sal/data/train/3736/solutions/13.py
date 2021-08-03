@@ -4,7 +4,7 @@ def minimum(arr):
         if m > i:
             m = i
     return m
-        
+
 
 def maximum(arr):
     t = arr[0]

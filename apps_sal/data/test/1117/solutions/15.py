@@ -12,7 +12,7 @@ for i in range(1, n):
     elif q[i - 1] < p[i][0] and q[i - 1] >= p[i][1]:
         q.append(p[i][1])
     elif q[i - 1] >= p[i][0] and q[i - 1] >= p[i][1]:
-        q.append(max(p[i][1],p[i][0]))
+        q.append(max(p[i][1], p[i][0]))
     else:
         flag = False
         break

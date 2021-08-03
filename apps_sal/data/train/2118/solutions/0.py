@@ -11,4 +11,3 @@ if s != 0:
     print('NO')
 else:
     print('YES')
-

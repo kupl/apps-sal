@@ -17,9 +17,11 @@ for q in v:
     elif j < len(a) and q >= a[j]:
         s -= a[j]
         j += 1
-if i + j - len(a) - len(d): s = 0
+if i + j - len(a) - len(d):
+    s = 0
 for q in v:
-    if k < len(a) and q >= a[k]: k += 1
+    if k < len(a) and q >= a[k]:
+        k += 1
 
 x = y = 0
 v.reverse()

@@ -39,4 +39,4 @@ if f[0] == s[0]:
     else:
         s = (0, 0)
 
-print(n-f[1]-s[1])
+print(n - f[1] - s[1])

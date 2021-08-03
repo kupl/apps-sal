@@ -23,4 +23,3 @@ for i, (x1, y1) in enumerate(xys):
     excludes %= MOD
 
 print(((pow(2, n, MOD) - excludes - (n * (n - 1) // 2) - n - 1) % MOD))
-

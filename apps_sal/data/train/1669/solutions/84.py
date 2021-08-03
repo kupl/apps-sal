@@ -8,11 +8,11 @@ class Solution:
             k = min(c)
             v = c[k]
             del c[k]
-            for i in range(1,W):
-                if c[k+i] < v:
+            for i in range(1, W):
+                if c[k + i] < v:
                     return False
                 else:
-                    c[k+i] -= v
-                    if c[k+i] == 0:
-                        del c[k+i]
+                    c[k + i] -= v
+                    if c[k + i] == 0:
+                        del c[k + i]
         return True

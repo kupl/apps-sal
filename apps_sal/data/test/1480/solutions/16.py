@@ -1,7 +1,7 @@
 n, k = map(int, input().split())
 a = map(int, input().split())
 
-cs = list(range(1, n+1))
+cs = list(range(1, n + 1))
 l = 0
 res = ""
 len = n

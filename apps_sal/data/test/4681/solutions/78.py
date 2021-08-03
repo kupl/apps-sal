@@ -43,11 +43,12 @@ def L(n):
     elif n == 1:
         return 1
     else:
-        return L(n-1) + L(n-2)
+        return L(n - 1) + L(n - 2)
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

@@ -8,4 +8,3 @@ def combos(n):
                     yield result
 
     return list(partition(n, [1]))
-

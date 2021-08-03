@@ -17,5 +17,5 @@ def main():
         i += 1
     return i
 
-print(main())
 
+print(main())

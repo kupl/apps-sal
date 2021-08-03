@@ -13,7 +13,7 @@ class Solution:
                 i = 0
                 while i < n and s[i] == B[i]:
                     i += 1
-                for j in range(i+1, n):
+                for j in range(i + 1, n):
                     if s[j] == B[j] or s[j] != B[i]:
                         continue
                     tmp = self.swap(s, i, j)

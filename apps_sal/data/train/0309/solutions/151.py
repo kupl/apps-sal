@@ -10,8 +10,7 @@ class Solution:
                     diffs[i][diff] = diffs[j][diff] + 1
                 else:
                     diffs[i][diff] = 2
-                
+
                 max_len = max(max_len, diffs[i][diff])
-        
-        
+
         return max_len

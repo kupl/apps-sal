@@ -8,7 +8,7 @@ try:
             if int(n[i]) == 1:
                 n[i] = '0'
             else:
-                n[i] = int(n[i])-2
+                n[i] = int(n[i]) - 2
         for i in n:
             print(i, end='')
         print('\n')

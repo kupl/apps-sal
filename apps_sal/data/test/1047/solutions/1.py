@@ -10,4 +10,3 @@ while any(n):
     ans.append(cur)
 print(len(ans))
 print(*ans)
-

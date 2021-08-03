@@ -27,11 +27,11 @@ def main():
     s = read()
     out = 0
     for i in range(x):
-        if i != y and s[-1-i] == '1':
+        if i != y and s[-1 - i] == '1':
             out += 1
-        elif i == y and s[-1-i] == '0':
+        elif i == y and s[-1 - i] == '0':
             out += 1
     write(out)
 
-main()
 
+main()

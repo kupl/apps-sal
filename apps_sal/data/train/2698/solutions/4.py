@@ -1,4 +1,4 @@
-def sum_arrays(array1,array2):
+def sum_arrays(array1, array2):
     arr = []
     if array1 == [0] and array2 == [0]:
         return arr
@@ -17,7 +17,7 @@ def sum_arrays(array1,array2):
     i = 0
     while i < len(res):
         if res[i] == '-':
-            temp = res[i] + res[i+1]
+            temp = res[i] + res[i + 1]
             arr.append(int(temp))
             i += 2
         else:

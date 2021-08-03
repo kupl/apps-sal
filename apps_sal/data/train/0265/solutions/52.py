@@ -12,4 +12,3 @@ class Solution:
             else:
                 seen.add(cur)
         return tot
-

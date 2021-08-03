@@ -1,14 +1,14 @@
-t=int(input())
+t = int(input())
 while t:
-    s=input()
-    ans=0
-    temp=0
+    s = input()
+    ans = 0
+    temp = 0
     for i in range(len(s)):
-        if(s[i]=='L'):
-            temp+=1
+        if(s[i] == 'L'):
+            temp += 1
         else:
-            ans=max(ans,temp+1)
-            temp=0
-    ans=max(ans,temp+1)  
+            ans = max(ans, temp + 1)
+            temp = 0
+    ans = max(ans, temp + 1)
     print(ans)
-    t-=1
+    t -= 1

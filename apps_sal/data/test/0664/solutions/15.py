@@ -1,5 +1,6 @@
 import sys
 
+
 def minindex(alist):
     index = -1
     min = 1000000
@@ -8,14 +9,15 @@ def minindex(alist):
             index = idx
             min = num
     return index
-            
+
+
 def isSorted(array):
     min = 0
     for num in array:
         if num < min:
             return False
         min = num
-    return True 
+    return True
 
 
 nums = int(sys.stdin.readline())
@@ -28,7 +30,7 @@ min = numbers[index]
 
 moves = 0
 if index == 0:
-    for num in range(nums-1, -1, -1):
+    for num in range(nums - 1, -1, -1):
         if num == 0:
             moves = 0
             break
@@ -37,7 +39,7 @@ if index == 0:
         else:
             break
 
-    newnumbers = numbers[index:nums-moves]
+    newnumbers = numbers[index:nums - moves]
     if isSorted(newnumbers):
         print(moves)
     else:

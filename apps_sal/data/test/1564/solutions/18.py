@@ -2,13 +2,15 @@
 
 from sys import stdin, stdout
 import heapq
-import cProfile, math
+import cProfile
+import math
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect, bisect_right
 import itertools
 from copy import deepcopy
 from fractions import Fraction
-import sys, threading
+import sys
+import threading
 import operator as op
 from functools import reduce
 import sys
@@ -80,7 +82,8 @@ def all_factors(n):
 
 
 def fibonacci_modP(n, MOD):
-    if n < 2: return 1
+    if n < 2:
+        return 1
     return (cached_fn(fibonacci_modP, (n + 1) // 2, MOD) * cached_fn(fibonacci_modP, n // 2, MOD) + cached_fn(
         fibonacci_modP, (n - 1) // 2, MOD) * cached_fn(fibonacci_modP, (n - 2) // 2, MOD)) % MOD
 
@@ -134,7 +137,8 @@ factorial_modP = []
 
 def warm_up_fac(MOD):
     nonlocal factorial_modP, fac_warm_up
-    if fac_warm_up: return
+    if fac_warm_up:
+        return
     factorial_modP = [1 for _ in range(fac_warm_up_size + 1)]
     for i in range(2, fac_warm_up_size):
         factorial_modP[i] = (factorial_modP[i - 1] * i) % MOD
@@ -151,7 +155,7 @@ def nCr(n, r, MOD):
         warm_up_fac(MOD)
         fac_warm_up = True
     return (factorial_modP[n] * (
-                (pow(factorial_modP[r], MOD - 2, MOD) * pow(factorial_modP[n - r], MOD - 2, MOD)) % MOD)) % MOD
+        (pow(factorial_modP[r], MOD - 2, MOD) * pow(factorial_modP[n - r], MOD - 2, MOD)) % MOD)) % MOD
 
 
 def test_print(*args):
@@ -212,7 +216,7 @@ def ncr(n, r):
 
 
 def binary_search(i, li):
-    fn = lambda x: li[x] - x // i
+    def fn(x): return li[x] - x // i
     x = -1
     b = len(li)
     while b >= 1:
@@ -237,27 +241,27 @@ def main():
     type1, type2 = [], []
     res = []
     for i in range(n):
-        if s[i]!=t[i]:
-            if s[i]>t[i]:
+        if s[i] != t[i]:
+            if s[i] > t[i]:
                 type1.append(i)
             else:
                 type2.append(i)
-    if len(type1)%2 != len(type2)%2:
+    if len(type1) % 2 != len(type2) % 2:
         print(-1)
     else:
-        k = (len(type1))//2
+        k = (len(type1)) // 2
         #print(k, type1)
         for i in range(k):
-            res.append([type1[2*i]+1, type1[2*i + 1]+1])
-        k = (len(type2))//2
+            res.append([type1[2 * i] + 1, type1[2 * i + 1] + 1])
+        k = (len(type2)) // 2
         #print(k, type2)
         for i in range(k):
-            res.append([type2[2*i]+1, type2[2*i + 1]+1])
-        if len(type1)%2!=0:
+            res.append([type2[2 * i] + 1, type2[2 * i + 1] + 1])
+        if len(type1) % 2 != 0:
             i = type1[-1]
             j = type2[-1]
-            res.append([i+1,i+1])
-            res.append([i+1,j+1])
+            res.append([i + 1, i + 1])
+            res.append([i + 1, j + 1])
         print(len(res))
         for li in res:
             display_list(li)

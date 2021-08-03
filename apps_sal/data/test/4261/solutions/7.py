@@ -4,5 +4,3 @@ if c <= a - b:
     print((0))
 else:
     print((c - (a - b)))
-
-

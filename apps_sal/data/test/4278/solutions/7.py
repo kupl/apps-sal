@@ -7,5 +7,5 @@ for i in range(n):
 m = Counter(m)
 ans = 0
 for j in m.values():
-    ans += j * (j-1) / 2
+    ans += j * (j - 1) / 2
 print(int(ans))

@@ -1,5 +1,5 @@
-n, k = list(map(int,input().split()))
-d = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
+d = list(map(int, input().split()))
 
 while n < 10**5:
     x = str(n)
@@ -7,4 +7,3 @@ while n < 10**5:
         print(n)
         return
     n += 1
-

@@ -10,4 +10,4 @@ class Solution:
                     if i - k >= 0:
                         val += dp[i - k][j - 1]
                 dp[i][j] = val
-        return dp[target][d]%(10**9 + 7)
+        return dp[target][d] % (10**9 + 7)

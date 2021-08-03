@@ -1,4 +1,4 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     polish = 'ąćęłńóśźż'
     english = 'acelnoszz'
     for i in range(9):

@@ -13,4 +13,3 @@ class Solution:
                 d[e] = 1
 
         return d[max(d, key=lambda k: d[k])]
-

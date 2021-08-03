@@ -12,4 +12,3 @@ for i in range(m):
     heappush(A, x)
 
 print((-1 * sum(A)))
-

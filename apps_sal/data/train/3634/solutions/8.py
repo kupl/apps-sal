@@ -13,12 +13,9 @@ def reverse_it(data):
         return floater
     else:
         return data
-        
+
+
 reverse_it("Hello")
 reverse_it(12345)
 reverse_it(1231.123213)
-reverse_it([1,2,3,4])
-
-
-
-
+reverse_it([1, 2, 3, 4])

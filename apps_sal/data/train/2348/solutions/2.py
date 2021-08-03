@@ -14,7 +14,7 @@ def solve():
     lsb = [[-1] * ln for _ in range(n)]
     for i in range(n - 1):
         lsf[i][0] = bisect.bisect_right(x, x[i] + l) - 1
-        lsb[-i-1][0] = bisect.bisect_left(x, x[-i-1] - l)
+        lsb[-i - 1][0] = bisect.bisect_left(x, x[-i - 1] - l)
     for j in range(1, ln):
         for i in range(n):
             if lsf[i][j - 1] != -1:
@@ -44,5 +44,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

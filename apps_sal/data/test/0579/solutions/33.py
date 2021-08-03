@@ -1,5 +1,5 @@
 from collections import deque
-it = lambda: list(map(int, input().strip().split()))
+def it(): return list(map(int, input().strip().split()))
 
 
 def maximise(L, R, cycle):
@@ -56,7 +56,7 @@ def solve():
                 if curr == first:
                     break
             cycles.append(cycle)
-    
+
     # print(cycles)
     ans = float('-inf')
     for cycle in cycles:
@@ -67,4 +67,6 @@ def solve():
 def __starting_point():
     ans = solve()
     print(ans)
+
+
 __starting_point()

@@ -1,6 +1,7 @@
 def s(x):
     return sum(int(i) for i in str(x))
 
+
 n = input()
 l, n = 9 * len(n), int(n)
 ans, m = -1, int(n ** 0.5)

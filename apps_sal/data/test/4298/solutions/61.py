@@ -1,9 +1,8 @@
-n,d = list(map(int,input().split(" ")))
-d = d*2 + 1
+n, d = list(map(int, input().split(" ")))
+d = d * 2 + 1
 answer = 0
-while n >0:
-  n-=d
-  answer += 1
-  
-print(answer)
+while n > 0:
+    n -= d
+    answer += 1
 
+print(answer)

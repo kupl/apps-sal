@@ -7,10 +7,10 @@ adj = [[] for _ in range(n)]
 rev = [[] for _ in range(n)]
 
 for u, v in (list(map(int, input().split())) for _ in range(m)):
-    adj[u-1].append(v-1)
-    rev[v-1].append(u-1)
+    adj[u - 1].append(v - 1)
+    rev[v - 1].append(u - 1)
 
-group = [-1]*n
+group = [-1] * n
 g = 0
 group[s] = g
 stack = [s]
@@ -40,4 +40,3 @@ for i in range(n):
             stack.append(dest)
 
 print(len(set(group)) - 1)
-

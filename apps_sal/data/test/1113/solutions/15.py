@@ -3,7 +3,7 @@ num = list(map(int, input().split()))
 fl = True
 used = [False] * 110000
 for i in range(n):
-    if num[i] == 0: 
+    if num[i] == 0:
         used[0] = True
         continue
     if num[i] > i or not used[num[i] - 1]:

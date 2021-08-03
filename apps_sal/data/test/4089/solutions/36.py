@@ -9,10 +9,12 @@ from copy import deepcopy
 import numpy as np
 import scipy as sp
 
+
 def base_n(n, base):
     if (n - 1) // base:
         return base_n((n - 1) // base, base) + [(n - 1) % base + 1]
     return [(n - 1) % base + 1]
+
 
 INF = inf
 MOD = 1000000007
@@ -25,4 +27,3 @@ res = 0
 res = "".join([chr(i + 96) for i in base_n(n, 26)])
 
 print(res)
-

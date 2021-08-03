@@ -17,4 +17,3 @@ for i in range(q):
                 break
             d += 1
         print(ans)
-

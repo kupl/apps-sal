@@ -14,4 +14,3 @@ while h2 > 0:
 
 print(len(res))
 print('\n'.join(res))
-

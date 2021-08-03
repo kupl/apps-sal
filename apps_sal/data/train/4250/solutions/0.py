@@ -7,4 +7,3 @@ def sha256_cracker(hash, chars):
         current = ''.join(p)
         if sha256(current.encode('utf-8')).hexdigest() == hash:
             return current
-

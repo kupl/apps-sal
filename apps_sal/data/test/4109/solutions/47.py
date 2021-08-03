@@ -14,4 +14,3 @@ for i in range(2 ** (n + 1)):
     if all(s >= x for s in skill):
         ans = min(ans, money)
 print((ans if ans != 10 ** 9 else - 1))
-

@@ -1,7 +1,9 @@
 from math import factorial
 
+
 def count(n, k):
     return factorial(n) // (factorial(k) * factorial(n - k))
+
 
 n, m = map(int, input().split())
 table = []

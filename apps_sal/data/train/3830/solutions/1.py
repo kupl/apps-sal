@@ -1,12 +1,14 @@
 from collections import Counter
 
+
 def factors(n):
-    step = lambda x: 1 + 4*x - (x - x%2)
+    def step(x): return 1 + 4 * x - (x - x % 2)
     d, q, qmax = 1, 2 + n % 2, int(n ** .5)
     while q <= qmax and n % q:
         q = step(d)
         d += 1
-    return q <= qmax and [q] + factors(n//q) or [n]
+    return q <= qmax and [q] + factors(n // q) or [n]
+
 
 def chain_arith_deriv(start, k):
     n, chain = start, []

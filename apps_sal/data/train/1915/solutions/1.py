@@ -15,59 +15,57 @@ devide conquer
 
 
 '''
+
+
 class Solution:
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         ans = []
         offset = 0
-        while target!='':
+        while target != '':
             x = target.find(stamp)
-            if x==-1:
+            if x == -1:
                 return []
-            ans.append(x+offset)
-            
-            can_stamp,indices = self.moveLeft(stamp,target[:x],offset)
+            ans.append(x + offset)
+
+            can_stamp, indices = self.moveLeft(stamp, target[:x], offset)
             if not can_stamp:
                 return []
             ans.extend(indices)
-            
-            offset,target,indices = self.moveRight(stamp,target[x+len(stamp):],
-                                                offset+x+len(stamp))
+
+            offset, target, indices = self.moveRight(stamp, target[x + len(stamp):],
+                                                     offset + x + len(stamp))
             ans.extend(indices)
-            
+
         return ans[::-1]
-        
-        
-    
-    def moveLeft(self,stamp,s,offset):
+
+    def moveLeft(self, stamp, s, offset):
         ans = []
         while s:
-            for ind in range(1,len(stamp)):
+            for ind in range(1, len(stamp)):
                 additional = 0
-                if ind>len(s):
+                if ind > len(s):
                     if offset == 0:
                         continue
-                        
+
                     additional = ind - len(s)
-                    
-                if stamp[additional:ind]==s[-ind:]:
-                    ans.append(offset+len(s)-ind)
-                    s=s[:-ind]
+
+                if stamp[additional:ind] == s[-ind:]:
+                    ans.append(offset + len(s) - ind)
+                    s = s[:-ind]
                     break
             else:
-                return False,[]
-        return True,ans
-        
-    
-    def moveRight(self,stamp,s,offset):
+                return False, []
+        return True, ans
+
+    def moveRight(self, stamp, s, offset):
         ans = []
         while s:
-            for ind in range(1,len(stamp)):
-                if stamp[-ind:]==s[:ind]:
-                    ans.append(offset+ind-len(stamp))
-                    offset+=ind
-                    s=s[ind:]
+            for ind in range(1, len(stamp)):
+                if stamp[-ind:] == s[:ind]:
+                    ans.append(offset + ind - len(stamp))
+                    offset += ind
+                    s = s[ind:]
                     break
             else:
-                return offset,s,ans
-        return offset,s,ans
-
+                return offset, s, ans
+        return offset, s, ans

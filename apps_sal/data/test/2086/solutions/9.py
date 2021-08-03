@@ -21,4 +21,3 @@ for i in range(1, n):
         best_i = i
 
 print(best_i + 1)
-

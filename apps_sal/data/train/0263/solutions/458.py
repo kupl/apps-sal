@@ -23,5 +23,5 @@ class Solution:
                         if 0 <= nr < R and 0 <= nc < C:
                             dp2[nr][nc] += val
             dp = dp2
-            
+
         return sum(map(sum, dp)) % (pow(10, 9) + 7)

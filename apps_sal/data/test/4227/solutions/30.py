@@ -19,5 +19,3 @@ for path in permutations(list(range(1, N))):
     else:
         ans += 1
 print(ans)
-
-

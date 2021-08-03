@@ -11,7 +11,7 @@ else:
 
 for j in range(M):
     s, c = map(int, input().split())
-    lst = [i for i in lst if i[s-1] == str(c)]
+    lst = [i for i in lst if i[s - 1] == str(c)]
 
 if len(lst) == 0:
     print(-1)

@@ -13,11 +13,10 @@ class Solution:
                 if n < 0:
                     p = -p
                 if p > 0:
-                    m = max(m, i-k)
+                    m = max(m, i - k)
                 elif p < 0:
                     if j is None:
                         j = i
                     else:
-                        m = max(m, i-j)
+                        m = max(m, i - j)
         return m
-

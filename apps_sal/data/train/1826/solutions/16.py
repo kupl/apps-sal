@@ -10,4 +10,3 @@ class Solution:
                     l, r = max(j - K, 0), min(j + K, n - 1)
                     ans[i][j] += acc[k][r + 1] - acc[k][l]
         return ans
-

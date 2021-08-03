@@ -8,4 +8,3 @@ if bool_a or bool_b or bool_ab:
     print('Possible ')
 else:
     print('Impossible ')
-

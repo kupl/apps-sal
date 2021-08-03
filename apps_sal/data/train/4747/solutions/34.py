@@ -3,4 +3,3 @@ def repeat_str(repeat, string):
     for i in range(repeat):
         s.append(string)
     return ''.join(s)
-

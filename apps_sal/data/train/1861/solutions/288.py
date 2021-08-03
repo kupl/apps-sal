@@ -12,8 +12,7 @@ class Solution:
                 area = abs(x2 - x1) * abs(y2 - y1)
                 if area < min_area:
                     if (x1, y2) in s_points and (x2, y1) in s_points:
-                            min_area = area
+                        min_area = area
         if min_area is 999999999999999999:
             return 0
         return min_area
-

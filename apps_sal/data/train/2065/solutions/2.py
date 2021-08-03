@@ -13,4 +13,3 @@ for i in range(k):
     else:
         ans += m - 1
 print(ans + n - pref)
-

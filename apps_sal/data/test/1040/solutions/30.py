@@ -1,11 +1,11 @@
-n=int(input())
-S=input()
+n = int(input())
+S = input()
 
-ans=""
+ans = ""
 for s in S:
-    ans+=s
-    
+    ans += s
+
     if ans[-3:] == "fox":
-        ans=ans[0:-3]
-        
+        ans = ans[0:-3]
+
 print(len(ans))

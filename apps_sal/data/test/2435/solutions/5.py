@@ -8,4 +8,3 @@ for t in range(te):
             l = min(l, tl)
             r = max(r, tr)
     print(r - l + 1)
-

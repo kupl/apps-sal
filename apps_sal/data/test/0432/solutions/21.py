@@ -1,11 +1,13 @@
 # 1027D
 import collections
+
+
 def do():
     n = int(input())
     costs = [int(c) for c in input().split(" ")]
-    next = [int(c)-1 for c in input().split(" ")]
+    next = [int(c) - 1 for c in input().split(" ")]
     ind = [0] * n
-    for i,c in enumerate(next):
+    for i, c in enumerate(next):
         if i != c:
             ind[c] += 1
     seen = [0] * n
@@ -45,5 +47,5 @@ def do():
             res += dfs(i)
     return res
 
-print(do())
 
+print(do())

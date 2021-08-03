@@ -21,4 +21,3 @@ for den in range(1, 367):
     maxi = max(maxi, parov)
 
 print(maxi * 2)
-

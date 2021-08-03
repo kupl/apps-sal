@@ -7,4 +7,3 @@ for s in range(10):
     for e in range(10):
         ret += d[s][e] * d[e][s]
 print(ret)
-

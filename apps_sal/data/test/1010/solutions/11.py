@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from itertools import dropwhile
 
+
 def main():
     n = int(input())
     lst = [bool(int(x)) for x in input().split()]
@@ -23,7 +24,9 @@ def main():
 
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

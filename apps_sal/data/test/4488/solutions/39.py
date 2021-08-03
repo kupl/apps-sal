@@ -5,4 +5,3 @@ elif a < b:
     print("LESS")
 else:
     print("EQUAL")
-

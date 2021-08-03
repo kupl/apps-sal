@@ -5,7 +5,7 @@ L = []
 c = 0
 ans = 0
 for i in range(n):
-    if c-1 >= 0:
+    if c - 1 >= 0:
         if s[i] == 'g':
             ans += 1
             c -= 1

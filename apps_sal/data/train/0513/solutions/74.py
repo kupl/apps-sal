@@ -1,5 +1,7 @@
 # 木によってLISを作り、dfsで抜けるときにLISをその前の状態まで復元する
 
+from collections import defaultdict
+from bisect import bisect_left, bisect_right
 import sys
 sys.setrecursionlimit(1 << 25)
 read = sys.stdin.readline
@@ -23,8 +25,6 @@ def read_a_int():
     return int(read())
 
 
-from bisect import bisect_left, bisect_right
-from collections import defaultdict
 N = read_a_int()
 A = read_ints()
 tree = defaultdict(lambda: [])
@@ -65,4 +65,3 @@ def dfs(now, p):  # 現在のノード、親
 
 dfs(0, -1)
 print(*ans, sep='\n')
-

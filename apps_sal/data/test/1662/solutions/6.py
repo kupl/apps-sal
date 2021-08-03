@@ -11,9 +11,9 @@ while a < len(cards):
         stair.append(cards[a])
         cards.pop(a)
     else:
-        a+= 1
+        a += 1
 tmpmax = stair[-1]
-cards.sort(reverse = True)
+cards.sort(reverse=True)
 a = 0
 while a < len(cards):
     if cards[a] < tmpmax:
@@ -21,13 +21,12 @@ while a < len(cards):
         stair_rev.append(cards[a])
         cards.pop(a)
     else:
-        a+= 1
-            
+        a += 1
+
 stair += stair_rev
 print(len(stair))
 s = ''
 for d in stair[0:-1]:
-    s += str(d)+' '
+    s += str(d) + ' '
 s += str(stair[-1])
 print(s)
-

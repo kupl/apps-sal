@@ -4,6 +4,7 @@ def isDigit(s):
     k = s.isnumeric() or is_number(s)
     return k
 
+
 def is_number(s):
     try:
         float(s)

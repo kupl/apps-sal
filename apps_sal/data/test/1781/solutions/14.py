@@ -1,8 +1,9 @@
 def is_letter(char):
     return (
-        ord('a') <= ord(char) <= ord('z') or
-        ord('A') <= ord(char) <= ord('Z')
+        ord('a') <= ord(char) <= ord('z')
+        or ord('A') <= ord(char) <= ord('Z')
     )
+
 
 n, kk = map(int, input().split())
 placement = [
@@ -10,7 +11,7 @@ placement = [
 ]
 
 
-kc = 0 
+kc = 0
 
 for row in placement:
     for i in range(len(row)):
@@ -26,11 +27,11 @@ for row in placement:
                 kc += 1
             if (i < len(row) - 1 and is_letter(str(row[i + 1]))):
                 kc += 1
- 
+
 for i in range(3):
     for j in range(len(placement)):
         if (kk == 0):
-            # print(f'broken here {i}, {j}') 
+            # print(f'broken here {i}, {j}')
             break
         for k in range(len(placement[j])):
             if placement[j][k] == i:
@@ -38,7 +39,7 @@ for i in range(3):
                 kc += i
                 kk -= 1
                 if (kk == 0):
-                    # print("broken")                    
+                    # print("broken")
                     break
 
 kkk = 0

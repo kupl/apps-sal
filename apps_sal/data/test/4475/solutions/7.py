@@ -8,42 +8,36 @@ for _ in range(0,T):
         a,b=map(int,input().split())"""
 
 
-T=int(input())
-for _ in range(0,T):
-    a,b,x,y,n=list(map(int,input().split()))
+T = int(input())
+for _ in range(0, T):
+    a, b, x, y, n = list(map(int, input().split()))
 
-    A=a
-    B=b
-    N=n
+    A = a
+    B = b
+    N = n
 
-    d1 = (a-x)
-    d2 = (b-y)
+    d1 = (a - x)
+    d2 = (b - y)
 
-    t1=min(d1,n)
-    a-=t1
-    n-=t1
-    t2=min(d2,n)
-    b-=t2
-    n-=t2
-    #print(a,b)
-    ans=(a*b)
+    t1 = min(d1, n)
+    a -= t1
+    n -= t1
+    t2 = min(d2, n)
+    b -= t2
+    n -= t2
+    # print(a,b)
+    ans = (a * b)
 
-    d1 = (A-x)
-    d2 = (B-y)
+    d1 = (A - x)
+    d2 = (B - y)
 
-    t2=min(d2,N)
-    B-=t2
-    N-=t2
-    t1=min(d1,N)
-    A-=t1
-    N-=t1
+    t2 = min(d2, N)
+    B -= t2
+    N -= t2
+    t1 = min(d1, N)
+    A -= t1
+    N -= t1
 
-    
-    #print(A,B)
-    ans=min(ans,A*B)
+    # print(A,B)
+    ans = min(ans, A * B)
     print(ans)
-
-
-    
-    
-

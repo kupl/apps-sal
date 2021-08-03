@@ -10,4 +10,3 @@ elif y > x:
     print("Chris")
 else:
     print("Friendship is magic!^^")
-

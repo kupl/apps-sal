@@ -1,7 +1,7 @@
 3
 
 szs = ['S', 'M', 'L', 'XL', 'XXL', 'XXXL']
-d = {'S':0, 'M':1, 'L':2, 'XL':3, 'XXL':4, 'XXXL':5}
+d = {'S': 0, 'M': 1, 'L': 2, 'XL': 3, 'XXL': 4, 'XXXL': 5}
 neigh = [[] for i in range(5)]
 
 of = list(map(int, input().split()))
@@ -36,4 +36,3 @@ if sum([len(neigh[i]) for i in range(5)]) != 0:
 else:
     print("YES")
     print("\n".join(ans))
-

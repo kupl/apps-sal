@@ -16,4 +16,4 @@ else:
 
 n = ria()[0]
 print(n)
-print('1 '*n)
+print('1 ' * n)

@@ -9,7 +9,7 @@ while low + 1 < high:
     m = 0
     for x in a:
         m += (x - 1) // mid
-    
+
     if m <= k:
         high = mid
     else:

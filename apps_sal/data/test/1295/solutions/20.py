@@ -7,7 +7,7 @@ ans = -1
 
 if m == 1:
     for i in x:
-        if abs(i-y[0]) > ans:
+        if abs(i - y[0]) > ans:
             ans = abs(i - y[0])
 else:
     c = 0
@@ -17,11 +17,11 @@ else:
         #print("city %d" %(c))
         if (y[p] <= x[c]) and (y[q] >= x[c]):
             #print("city in between tower %d and %d" %(p, q))
-            ans = max(ans, min((y[q]-x[c]), (x[c]-y[p])))
+            ans = max(ans, min((y[q] - x[c]), (x[c] - y[p])))
             c += 1
         elif y[q] < x[c]:
             #print("tower q %d lower than city" %q)
-            if q != m-1:
+            if q != m - 1:
                 #print("increase tower")
                 p += 1
                 q += 1
@@ -35,4 +35,3 @@ else:
             c += 1
 
 print(ans)
-

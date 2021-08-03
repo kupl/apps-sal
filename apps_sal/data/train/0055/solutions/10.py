@@ -5,4 +5,3 @@ for _ in range(int(input())):
     '''A = list(map(int, input().split()))
     Ans = 0
     for i in range(len(A)):'''
-

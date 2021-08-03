@@ -6,7 +6,7 @@ x = int(input())
 
 ans = 0
 while True:
-    if ((1+ans)*ans)//2 >= x:
+    if ((1 + ans) * ans) // 2 >= x:
         print(ans)
         return
-    ans+=1
+    ans += 1

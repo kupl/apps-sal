@@ -10,8 +10,11 @@ def main():
         else:
             zero += 1
 
-    print(abs(one-zero))
+    print(abs(one - zero))
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

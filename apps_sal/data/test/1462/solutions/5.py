@@ -16,4 +16,3 @@ ans = 0
 for i in b:
     ans += i * i
 print(ans)
-

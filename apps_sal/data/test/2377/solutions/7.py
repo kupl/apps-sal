@@ -13,16 +13,16 @@ life = h
 count = 0
 for a, b in katana:
     if b <= a_max:
-        #aで殴り続ける方が早い(投げない)
+        # aで殴り続ける方が早い(投げない)
         break
-    else: #bの最大値はaの最大値より大きい
-        life -=b
-        
+    else:  # bの最大値はaの最大値より大きい
+        life -= b
+
     count += 1
     if life <= 0:
         break
 
 if life > 0:
-    count += math.ceil(life/a_max)
+    count += math.ceil(life / a_max)
 
 print(count)

@@ -34,12 +34,11 @@ else:
     t = []
     for i in range(n):
         if colour[i]:
-            t.append(i+1)
+            t.append(i + 1)
         else:
-            f.append(i+1)
+            f.append(i + 1)
     print(len(f))
     print(" ".join(map(str, f)))
 
     print(len(t))
     print(" ".join(map(str, t)))
-

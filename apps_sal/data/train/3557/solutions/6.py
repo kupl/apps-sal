@@ -1,2 +1,2 @@
 def odd_count(n):
-    return int(n>>1)
+    return int(n >> 1)

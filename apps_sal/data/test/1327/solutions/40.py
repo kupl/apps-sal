@@ -1,8 +1,8 @@
-N,M = map(int,input().split())
+N, M = map(int, input().split())
 num_list = []
 for i in range(N):
-    num_list.append(list(map(int,input().split())))
-#print(N,M,num_list)
+    num_list.append(list(map(int, input().split())))
+# print(N,M,num_list)
 
 '''
 [x,y,z]としてx+y+z,x-y+z,x+y-z,x-y-z,-x+y+z,-x-y+z,-x+y-z,-x-y-zの8パターン
@@ -46,14 +46,14 @@ xyz7 = 0
 xyz8 = 0
 
 for i in range(M):
-    xyz1 += list_xyz1[N-i-1]
-    xyz2 += list_xyz2[N-i-1]
-    xyz3 += list_xyz3[N-i-1]
-    xyz4 += list_xyz4[N-i-1]
-    xyz5 += list_xyz5[N-i-1]
-    xyz6 += list_xyz6[N-i-1]
-    xyz7 += list_xyz7[N-i-1]
-    xyz8 += list_xyz8[N-i-1]
+    xyz1 += list_xyz1[N - i - 1]
+    xyz2 += list_xyz2[N - i - 1]
+    xyz3 += list_xyz3[N - i - 1]
+    xyz4 += list_xyz4[N - i - 1]
+    xyz5 += list_xyz5[N - i - 1]
+    xyz6 += list_xyz6[N - i - 1]
+    xyz7 += list_xyz7[N - i - 1]
+    xyz8 += list_xyz8[N - i - 1]
 
-#print(list_xyz1)
-print(max(xyz1,xyz2,xyz3,xyz4,xyz5,xyz6,xyz7,xyz8))
+# print(list_xyz1)
+print(max(xyz1, xyz2, xyz3, xyz4, xyz5, xyz6, xyz7, xyz8))

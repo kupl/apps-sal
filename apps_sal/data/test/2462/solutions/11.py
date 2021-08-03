@@ -9,4 +9,3 @@ for _ in range(int(input())):
             print(f'6 10 15 {n - 31}')
         else:
             print(f'6 10 14 {n - 30}')
-

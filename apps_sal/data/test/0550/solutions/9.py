@@ -2,6 +2,7 @@ s = input()
 n = int(input())
 f = True
 
+
 def is_sim(s1, s2):
     if len(s1) != len(s2):
         return False
@@ -11,7 +12,8 @@ def is_sim(s1, s2):
         else:
             return False
     return True
-            
+
+
 for i in range(n):
     t = input()
     if is_sim(s, t):

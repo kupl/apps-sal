@@ -12,4 +12,3 @@ for row in a:
         return
 
 print("NO")
-

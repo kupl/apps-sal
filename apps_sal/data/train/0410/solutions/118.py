@@ -1,23 +1,22 @@
 class Solution:
-    #calc=[]
-    def findPower(self,ele):
-        self.calc=[]
-        ctr=0
-        while ele!=1:
-            if ele%2==0:
-                ele=ele//2
+    # calc=[]
+    def findPower(self, ele):
+        self.calc = []
+        ctr = 0
+        while ele != 1:
+            if ele % 2 == 0:
+                ele = ele // 2
             else:
-                ele=3*ele+1
+                ele = 3 * ele + 1
             self.calc.append(ele)
-            ctr +=1
+            ctr += 1
         return ctr
-            
-            
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
-        powmat=[]
-        for i in range(lo,hi+1):
-            ct=self.findPower(i)
-            powmat.append([ct,i])
+        powmat = []
+        for i in range(lo, hi + 1):
+            ct = self.findPower(i)
+            powmat.append([ct, i])
         powmat.sort()
         print(powmat)
-        return powmat[k-1][1]
+        return powmat[k - 1][1]

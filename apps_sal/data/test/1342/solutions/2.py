@@ -2,10 +2,11 @@
 # with the two types of coins that have value of coin and coin + 1
 def pay(coin, amount):
     if amount // coin < amount % coin:
-        return -1;
+        return -1
     if amount < coin * (coin + 1):
         return amount // coin
-    return (amount - 1) // (coin + 1) + 1;
+    return (amount - 1) // (coin + 1) + 1
+
 
 def pay_all(coin):
     sum = 0
@@ -15,6 +16,7 @@ def pay_all(coin):
             return -1
         sum += p
     return sum
+
 
 n = int(input())
 a = list(map(int, input().split()))

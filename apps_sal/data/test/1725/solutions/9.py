@@ -9,12 +9,14 @@ def solve(d, l):
         res += abs(num - l[median]) // d
     return res
 
+
 def __starting_point():
-    f = lambda: list(map(int, input().split()))
+    def f(): return list(map(int, input().split()))
     n, m, d = f()
     l = []
     for i in range(n):
         l += f()
     print(solve(d, l))
+
 
 __starting_point()

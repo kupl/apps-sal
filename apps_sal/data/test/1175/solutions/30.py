@@ -2,9 +2,10 @@ L, R = map(int, input().split())
 MOD = 10 ** 9 + 7
 l = '{:060b}'.format(L)[::-1]
 r = '{:060b}'.format(R)[::-1]
- 
+
 memo = [[[[-1 for l in range(2)] for k in range(2)] for j in range(2)] for i in range(60)]
- 
+
+
 def f(pos, flagX, flagY, flagZ):
     if pos == -1:
         return 1
@@ -23,6 +24,7 @@ def f(pos, flagX, flagY, flagZ):
     ret %= MOD
     memo[pos][flagX][flagY][flagZ] = ret
     return ret
- 
+
+
 ans = f(59, 0, 0, 0)
 print(ans)

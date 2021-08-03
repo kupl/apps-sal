@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     s = input()
     t = input()
@@ -39,6 +40,9 @@ def solve():
 
     print(''.join(ans))
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

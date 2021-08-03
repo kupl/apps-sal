@@ -6,7 +6,7 @@ class Solution:
         for word in wordlist:
             if word.lower() not in d1:
                 d1[word.lower()] = word
-                
+
         for word in wordlist:
             word1 = word.lower()
             newWords = ['']
@@ -22,7 +22,7 @@ class Solution:
             for newWord in newWords2:
                 if newWord not in d2:
                     d2[newWord] = word
-                        
+
         ans = []
         for q in queries:
             ql = q.lower()

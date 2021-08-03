@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 # 解説を読んで解いた
 
@@ -7,11 +7,11 @@ A = list(map(int,input().split()))
 
 sm = [0]
 for i in range(N):
-  sm.append(sm[i]+A[i])
+    sm.append(sm[i] + A[i])
 
 # 累積和を使った解答
 ans = 0
 for j in range(N):
-  ans += A[j]*(sm[N]-sm[j+1])
-  
-print(ans % (10**9+7))
+    ans += A[j] * (sm[N] - sm[j + 1])
+
+print(ans % (10**9 + 7))

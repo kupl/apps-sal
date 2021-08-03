@@ -9,7 +9,6 @@ def sum_mul(n, m):
         return 0
     res = 0
     j = n
-    for i in range(n, m , j):
+    for i in range(n, m, j):
         res += i
     return res
-

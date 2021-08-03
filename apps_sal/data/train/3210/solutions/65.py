@@ -1,7 +1,7 @@
 def get_strings(city):
     city_list = list(city.lower())
     empty = []
-    abet = [chr(i) for i in range(ord('a'), ord('z')+1)]
+    abet = [chr(i) for i in range(ord('a'), ord('z') + 1)]
     res = ''
     for i in range(0, len(city_list)):
         c = 0
@@ -14,6 +14,7 @@ def get_strings(city):
             else:
                 continue
         if letter in abet:
-            res += letter+':'+c*'*'+','               
-        else: continue
-    return res[0:len(res)-1]
+            res += letter + ':' + c * '*' + ','
+        else:
+            continue
+    return res[0:len(res) - 1]

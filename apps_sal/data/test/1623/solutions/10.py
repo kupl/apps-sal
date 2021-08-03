@@ -1,5 +1,5 @@
 # l <= ai <= r
-n,l,r = list(map(int,input().split()))
+n, l, r = list(map(int, input().split()))
 
 # mn
 forced = 2**l - 1
@@ -10,7 +10,6 @@ if r > n:
     r = n
 
 forced = 2**r - 1
-mx = forced + 2**(r-1) * (n - r)
+mx = forced + 2**(r - 1) * (n - r)
 
-print(mn,mx)
-
+print(mn, mx)

@@ -5,9 +5,9 @@
 #         self.left = left
 #         self.right = right
 class FindElements:
-    
+
     def recover(self, node):
-        if not node: 
+        if not node:
             return
         self.memo |= 1 << node.val
         if node.left:
@@ -22,14 +22,11 @@ class FindElements:
         self.root.val = 0
         self.memo = 0
         self.recover(self.root)
-        
+
     def find(self, target: int) -> bool:
         return self.memo & (1 << target) != 0
-        
-        
 
 
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
-

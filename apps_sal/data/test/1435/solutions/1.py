@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return list(map(int, input().split()))
+
 
 ans = 1
 l = 1
@@ -16,4 +18,3 @@ for i in range(len(a)):
         l = 1
     p = c
 print(ans)
-

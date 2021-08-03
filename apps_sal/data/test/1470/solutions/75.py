@@ -7,4 +7,3 @@ if 0 < m < 7:
 elif 6 < m:
     cnt += 2
 print(cnt)
-

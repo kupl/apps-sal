@@ -1,6 +1,6 @@
 def reverse_words(text):
     ls = []
-    
+
     for i in text.split():
         ls.append(i[::-1])
 

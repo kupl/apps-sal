@@ -9,4 +9,3 @@ if mod > a:
 
 ans = div * a + mod
 print(ans)
-

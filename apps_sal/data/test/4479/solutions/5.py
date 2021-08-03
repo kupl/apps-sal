@@ -7,8 +7,8 @@ class Solution:
             p += 1
             K -= 1
             if K == 0:
-                 return sum(A)
+                return sum(A)
         if K % 2 == 0:
             return sum(A)
         else:
-            return sum(A) - 2 * min(A[p], A[p-1])
+            return sum(A) - 2 * min(A[p], A[p - 1])

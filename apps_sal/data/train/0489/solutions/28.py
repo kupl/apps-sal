@@ -7,32 +7,30 @@ class Solution:
         #             result = max(result,j-i)
         # return result
         # Brute Force, Time Limit Exceeded
-        
+
         # two pointer
-#         rMax = [0]*len(A)
-#         rMax[-1] = A[-1]
-#         for i in range(len(A)-1)[::-1]:
-#             rMax[i] = max(rMax[i+1],A[i])        
-#         L=R=0
-#         result=0
-        
-#         while R<len(A):
-#             while L<R and A[L]>rMax[R]:
-#                 L+=1
-#             result = max(result,R-L)
-#             R+=1
-#         return result
+        #         rMax = [0]*len(A)
+        #         rMax[-1] = A[-1]
+        #         for i in range(len(A)-1)[::-1]:
+        #             rMax[i] = max(rMax[i+1],A[i])
+        #         L=R=0
+        #         result=0
 
-        Aindex = [(a,i) for i,a in enumerate(A)]
-        Aindex.sort(key=lambda x:(x[0],x[1]))
-        mn=len(A)
-        ans=0
-        for a,i in Aindex:
-            ans=max(ans,i-mn)
-            mn=min(mn,i)
+        #         while R<len(A):
+        #             while L<R and A[L]>rMax[R]:
+        #                 L+=1
+        #             result = max(result,R-L)
+        #             R+=1
+        #         return result
+
+        Aindex = [(a, i) for i, a in enumerate(A)]
+        Aindex.sort(key=lambda x: (x[0], x[1]))
+        mn = len(A)
+        ans = 0
+        for a, i in Aindex:
+            ans = max(ans, i - mn)
+            mn = min(mn, i)
         return ans
-        
-
 
         # stack = []
         # res = 0
@@ -45,7 +43,7 @@ class Solution:
         #         print(stack,[A[i], i],bisect.bisect(stack, [A[i], i]),j)
         #         res = max(res, j - i)
         # return res
-    
+
         # s = []
         # res = 0
         # for i, a in enumerate(A):
@@ -56,4 +54,3 @@ class Solution:
         #     while s and A[s[-1]] <= A[j]:
         #         res = max(res, j - s.pop())
         # return res
-

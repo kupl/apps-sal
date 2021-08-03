@@ -19,13 +19,14 @@ class Solution:
         '''
         # Bottom up: Time O(Klog(N)) Space O(K)
         dp, ndp = {}, {}
-        for m in range(1, N+1):
-            for k in range(1, K+1):
-                if m == 1: ndp[k] = 1
-                elif k == 1: ndp[k] = m
+        for m in range(1, N + 1):
+            for k in range(1, K + 1):
+                if m == 1:
+                    ndp[k] = 1
+                elif k == 1:
+                    ndp[k] = m
                 else:
-                    ndp[k] = dp[k-1] + dp[k] + 1
+                    ndp[k] = dp[k - 1] + dp[k] + 1
                 if ndp[k] >= N:
                     return m
             dp, ndp = ndp, {}
-

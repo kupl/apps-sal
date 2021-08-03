@@ -18,4 +18,5 @@ def __starting_point():
         result += min(prices)
     print(result)
 
+
 __starting_point()

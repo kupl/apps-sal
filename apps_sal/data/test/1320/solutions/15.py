@@ -9,9 +9,6 @@ for i in range(n):
     col = 0
     for t in range(n):
         if p[t][i] == 'C':
-             col += 1
+            col += 1
     ans += col * (col - 1)
 print(ans // 2)
-
-        
-

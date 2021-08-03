@@ -3,4 +3,3 @@ def decrypt(s):
         if (a * 10**len(s) + int(s)) % 11 == 0:
             return str((a * 10**len(s) + int(s)) // 11)
     return "impossible"
-

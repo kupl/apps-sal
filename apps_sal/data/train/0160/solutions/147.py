@@ -7,8 +7,8 @@ class Solution:
         for i in range(n):
             dp[i][i] = piles[i]
         for left in range(n):
-            for diff in range(1, n-left):
+            for diff in range(1, n - left):
                 right = left + diff
-                dp[left][right] = max(piles[left] - dp[left+1][right], piles[right] - dp[left][right])
-        
+                dp[left][right] = max(piles[left] - dp[left + 1][right], piles[right] - dp[left][right])
+
         return dp[0][-1] > 0

@@ -22,8 +22,6 @@ def main():
     for i in range(1, n + 1):
         neis[i].append(None)
 
-
-
     start_point = 1
     q = deque()
     q.append(start_point)
@@ -52,5 +50,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

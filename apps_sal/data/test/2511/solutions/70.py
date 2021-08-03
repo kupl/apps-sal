@@ -1,6 +1,8 @@
-mod = 10 ** 9 + 7
 import sys
+mod = 10 ** 9 + 7
 sys.setrecursionlimit(10 ** 7)
+
+
 def dfs(u):
     cnt = 0
     res = 1
@@ -14,6 +16,8 @@ def dfs(u):
         res *= k - i - 2
         res %= mod
     return res
+
+
 n, k = map(int, input().split())
 edges = [[] for i in range(n)]
 for i in range(n - 1):

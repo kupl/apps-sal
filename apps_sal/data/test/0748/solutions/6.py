@@ -25,10 +25,6 @@ h.append(v)
 if sum(h) * 3 < n:
     print(-1)
 else:
-    print('1 2 4 \n' * h[0], end = '')
-    print('1 3 6 \n' * h[1], end = '')
-    print('1 2 6 \n' * h[2], end = '')
-    
-
-    
-    
+    print('1 2 4 \n' * h[0], end='')
+    print('1 3 6 \n' * h[1], end='')
+    print('1 2 6 \n' * h[2], end='')

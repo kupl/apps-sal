@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def cleanup(paren: str) -> str:
     stack = list()
 
@@ -12,7 +13,8 @@ def cleanup(paren: str) -> str:
             stack.append(char)
 
     return ''.join(stack)
-    
+
+
 def main():
     prob_len = int(input())
 
@@ -37,6 +39,9 @@ def main():
 
     print(answer)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

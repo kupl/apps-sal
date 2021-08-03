@@ -9,6 +9,7 @@ def lb(k, a):
             l = m + 1
     return l
 
+
 def ub(k, a):
     n = len(a)
     l, u = -1, n - 1
@@ -20,6 +21,7 @@ def ub(k, a):
             u = m - 1
     return l
 
+
 N = int(input())
 A = sorted([int(x) for x in input().split()])
 B = sorted([int(x) for x in input().split()])
@@ -29,6 +31,6 @@ res = 0
 for i in range(N):
     j = ub(B[i], A)
     k = lb(B[i], C)
-    res += (j + 1)*(N - k)
+    res += (j + 1) * (N - k)
 
 print(res)

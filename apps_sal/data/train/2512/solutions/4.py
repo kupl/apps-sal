@@ -2,7 +2,7 @@ class Solution:
     def numUniqueEmails(self, emails: List[str]) -> int:
         dic = set([])
         for email in emails:
-            new_email=''
+            new_email = ''
             flag = 0
             for i in range(len(email)):
                 if email[i] == '.':

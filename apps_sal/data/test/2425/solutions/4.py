@@ -1,6 +1,7 @@
-ii = lambda: int(input())
-mi = lambda: list(map(int, input().split()))
-li = lambda: list(mi())
+def ii(): return int(input())
+def mi(): return list(map(int, input().split()))
+def li(): return list(mi())
+
 
 d = {
     1: 0,
@@ -37,4 +38,3 @@ for _ in range(ii()):
     else:
         ans = 2 ** (n.bit_length()) - 1
     print(ans)
-

@@ -5,10 +5,10 @@
 #     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
 #         groups = {}
 #         group_counter = 0
-        
+
 #         contains_malware = []
 #         malware_set = set(initial)
-        
+
 #         visited = set()
 #         for i in range(len(graph)):
 #             group_counter += 1
@@ -27,8 +27,8 @@
 #                     for candidate_node, flag in enumerate(graph[node]):
 #                         if flag == 1 and candidate_node not in visited:
 #                             queue.append(candidate_node)
-                            
-                            
+
+
 #         if len(initial) == len(graph):
 #             individuals = []
 #             for node, i in contains_malware:
@@ -40,8 +40,10 @@
 #             contains_malware = [(-groups[i], node) for node, i in contains_malware]
 #             heapq.heapify(contains_malware)
 #             return contains_malware[0][1]
-                        
+
 import collections
+
+
 class Solution(object):
     def minMalwareSpread(self, graph, initial):
         # 1. Color each component.
@@ -83,5 +85,4 @@ class Solution(object):
                 elif size[c] == size[colors[ans]] and x < ans:
                     ans = x
 
-        return ans if ans < float('inf') else min(initial)  
-
+        return ans if ans < float('inf') else min(initial)

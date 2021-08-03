@@ -4,4 +4,3 @@ def find_key(encryption_key):
         if product % p1 == 0:
             p2 = product // p1
             return (p1 - 1) * (p2 - 1)
-

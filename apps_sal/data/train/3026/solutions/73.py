@@ -5,4 +5,3 @@ def min_value(digits):
     for digit in digits:
         value += str(digit)
     return int(value)
-

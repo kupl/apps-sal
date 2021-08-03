@@ -4,27 +4,29 @@ lines, line_index = stdin.readlines(), -1
 
 
 def get_line():
-  nonlocal lines, line_index
+    nonlocal lines, line_index
 
-  line_index += 1
-  return lines[line_index]
+    line_index += 1
+    return lines[line_index]
+
 
 def main():
-  string = get_line().strip()
+    string = get_line().strip()
 
-  stack = []
+    stack = []
 
-  for c in string:
+    for c in string:
+        if not stack:
+            stack.append(c)
+        elif stack[-1] == c:
+            stack.pop()
+        else:
+            stack.append(c)
+
     if not stack:
-      stack.append(c)
-    elif stack[-1] == c:
-      stack.pop()
+        print('Yes')
     else:
-      stack.append(c)
+        print('No')
 
-  if not stack:
-    print('Yes')
-  else:
-    print('No')
 
 main()

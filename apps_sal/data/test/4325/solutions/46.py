@@ -1,3 +1,3 @@
-goal,vol,time = map(int,input().split())
+goal, vol, time = map(int, input().split())
 
-print(-(-goal//vol) * time)
+print(-(-goal // vol) * time)

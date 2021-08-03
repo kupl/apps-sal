@@ -18,17 +18,17 @@ class Solution:
 
             # add right
             if s[right] not in window_letter:
-                window_letter[s[right]] = 1        
+                window_letter[s[right]] = 1
             else:
                 window_letter[s[right]] += 1
-            
+
             # check left
             while (len(window_letter) > maxLetters
-                or right - left + 1 > maxSize
-            ):
+                   or right - left + 1 > maxSize
+                   ):
                 window_letter[s[left]] -= 1
                 if window_letter[s[left]] == 0:
-                    del window_letter[s[left]]    
+                    del window_letter[s[left]]
                 left += 1
         right += 1
         for i in range(left, right, 1):
@@ -39,6 +39,3 @@ class Solution:
             valid_str_freq[valid_str] += 1
             res = max(res, valid_str_freq[valid_str])
         return res
-                        
-                
-

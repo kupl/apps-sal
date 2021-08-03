@@ -1,6 +1,7 @@
 from itertools import count, filterfalse
 from typing import List
 
+
 def remove_smallest(numbers: List[int]) -> List[int]:
     """
     Remove the smallest value from the array of the integers. Obey the following rules:

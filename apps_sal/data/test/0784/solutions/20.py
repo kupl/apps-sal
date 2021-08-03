@@ -1,8 +1,10 @@
 def actionA(i):
     return i // 2
 
+
 def actionB(i):
     return (i - 1) // 10
+
 
 def getAction(i):
     if not (i % 2):
@@ -12,8 +14,10 @@ def getAction(i):
     else:
         return None
 
+
 def fail():
     print('NO')
+
 
 def m():
     i, j = (int(a) for a in input().split(' '))
@@ -30,6 +34,7 @@ def m():
             break
     l.reverse()
     print('YES', len(l), ' '.join(str(i) for i in l), sep='\n')  # success!
+
 
 def __starting_point():
     m()

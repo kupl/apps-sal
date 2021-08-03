@@ -1,16 +1,22 @@
 from sys import stdin, stdout
+
+
 def rsingle_int():
     return int(stdin.readline().rstrip())
- 
+
+
 def rmult_int():
-    return [ int(x) for x in stdin.readline().rstrip().split() ]
- 
+    return [int(x) for x in stdin.readline().rstrip().split()]
+
+
 def r_str():
     return stdin.readline().rstrip()
-    
+
+
 def rsingle_char():
     return stdin.read(1)
- 
+
+
 def main():
     s, b = rmult_int()
     a = rmult_int()
@@ -34,7 +40,7 @@ def main():
 
     ds.sort()
     ds_len = len(ds)
-    
+
     acc = 0
     d_i = 0
     for el in a:
@@ -42,11 +48,11 @@ def main():
             acc += d_g[ds[d_i]]
             d_i += 1
         a_g[el] = acc
-    
+
     out = []
     for el in a_order:
         out.append(int(a_g[el]))
     print(*out)
 
- 
+
 main()

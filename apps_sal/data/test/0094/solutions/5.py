@@ -4,6 +4,7 @@ dpp = [[0] * 100 for i in range(100)]
 used = [[0] * 100 for i in range(100)]
 inf = (1 << 300)
 
+
 def dp(pos, i):
     if pos >= k:
         return '0'
@@ -35,12 +36,9 @@ def dp(pos, i):
         temp = s[ctr] + temp
     dpp[pos][i] = best
     return best
-    
+
 
 n = int(input())
 s = input()[::-1]
 k = len(s)
 print(int(dp(0, 0)))
-
-
-

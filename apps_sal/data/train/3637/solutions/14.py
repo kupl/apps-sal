@@ -1,10 +1,11 @@
 def is_prime(a):
     if a < 4:
         return True
-    for i in range(2,int(a/2)+1):
-        if a%i == 0:
+    for i in range(2, int(a / 2) + 1):
+        if a % i == 0:
             return False
     return True
+
 
 def num_primorial(n):
     result = 1

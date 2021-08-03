@@ -5,7 +5,7 @@ class Solution:
             for i, val in enumerate(row):
                 res[i] = 1 - row[i]
             return res
-                
+
         d = {}
         for row in matrix:
             rev_row = reverse_row(row)

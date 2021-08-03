@@ -1,4 +1,4 @@
-def check_shiritori(n:int, w:list)->bool:
+def check_shiritori(n: int, w: list) -> bool:
     if len(set(w)) < n:
         return False
     for i in range(n - 1):
@@ -21,5 +21,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

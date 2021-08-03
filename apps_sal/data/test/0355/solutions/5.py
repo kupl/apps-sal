@@ -25,4 +25,3 @@ if minb <= minch:
     print('A')
 else:
     print('B')
-

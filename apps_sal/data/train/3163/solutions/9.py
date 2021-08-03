@@ -6,7 +6,6 @@ def triangular_sum(t):
         n += 1
     for n1 in triangles:
         for n2 in triangles:
-            if n1 != n2 and n1*n1 + n2*n2 == t:
+            if n1 != n2 and n1 * n1 + n2 * n2 == t:
                 return True
     return False
-

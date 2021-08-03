@@ -41,4 +41,6 @@ def __starting_point():
     dp = [0, 0, 0]
 
     print(solve(a, b, c))
+
+
 __starting_point()

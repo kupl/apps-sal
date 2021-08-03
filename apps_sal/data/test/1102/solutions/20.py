@@ -15,4 +15,3 @@ for dis in range(0, 100):
     elif t[l] == 1 and t[r] == 1:
         ans += 2 if l != r else 1
 print(ans)
-

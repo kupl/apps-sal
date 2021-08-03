@@ -2,6 +2,7 @@ import math
 
 MIN_INF, MAX_INF = float('-inf'), float('inf')
 
+
 def get_len(n, R, alpha, beta):
     maxx, maxy = MIN_INF, MIN_INF
     minx, miny = MAX_INF, MAX_INF
@@ -16,6 +17,7 @@ def get_len(n, R, alpha, beta):
         miny = min(y, miny)
     d = min(d, max(abs(maxx - minx), abs(maxy - miny)))
     return d
+
 
 def main():
     T = int(input())
@@ -45,5 +47,6 @@ def main():
         #         b, vb = d, vd
         #     else:
         #         a, va = c, vc
+
 
 main()

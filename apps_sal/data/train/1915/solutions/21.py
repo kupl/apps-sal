@@ -6,7 +6,7 @@ class Solution:
 
         def check_and_mark(s: list, i: int) -> tuple:
             # return True if update, next_read_pos
-            if s[i:i+m] == ['?'] * m:
+            if s[i:i + m] == ['?'] * m:
                 return False, i + 1
             i0 = i
             j = 0
@@ -18,7 +18,7 @@ class Solution:
                 return True, i
             else:
                 return False, (n if i == n else i0 + 1)
-        
+
         final = ['?'] * n
         ans = []
         target = list(target)

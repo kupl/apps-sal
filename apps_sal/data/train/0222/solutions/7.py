@@ -12,4 +12,3 @@ class Solution(object):
                     ans = max(ans, cand)
 
         return ans if ans >= 3 else 0
-

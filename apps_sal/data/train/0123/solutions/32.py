@@ -12,20 +12,20 @@ class Solution:
                 2. add an existing song
             else:
                 1. add a new song
-         ''' 
+         '''
         @lru_cache(None)
         def dp(unique, total, r):
             if total == L:
                 return 1
             if unique <= K:
-                return r * dp(unique+1, total+1, r-1)
+                return r * dp(unique + 1, total + 1, r - 1)
             else:
                 ans = 0
-                if r < L-total:
+                if r < L - total:
                     # add an existing song
-                    ans += (unique-K) * dp(unique, total+1, r)
+                    ans += (unique - K) * dp(unique, total + 1, r)
                 # add a new song
-                ans += r * dp(unique+1, total+1, r-1)
+                ans += r * dp(unique + 1, total + 1, r - 1)
                 return ans
 
-        return dp(0, 0, N) % (10**9+7)
+        return dp(0, 0, N) % (10**9 + 7)

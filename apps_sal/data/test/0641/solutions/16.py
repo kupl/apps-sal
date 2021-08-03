@@ -15,5 +15,3 @@ while True:
     d = d + datetime.timedelta(days=1)
 
 print(ans)
-
-

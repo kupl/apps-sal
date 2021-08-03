@@ -1,5 +1,5 @@
 def winner(deck_Steve, deck_Josh):
-    deck = ['2','3','4','5','6','7','8','9','T','J','Q','K','A']
+    deck = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']
     Steve = 0
     Josh = 0
     for i in range(len(deck_Steve)):
@@ -15,4 +15,3 @@ def winner(deck_Steve, deck_Josh):
         return "Josh wins " + str(Josh) + " to " + str(Steve)
     else:
         return "Tie"
-

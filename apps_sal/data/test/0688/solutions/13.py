@@ -24,9 +24,9 @@ def solution():
             intermidiate = "6"
         if intermidiate in book_of_repeats:
             book_of_repeats[intermidiate] += 1
-    result = len(cubs)//len(number)
+    result = len(cubs) // len(number)
     for i in book:
-        intermidiate = book_of_repeats[i]//book[i]
+        intermidiate = book_of_repeats[i] // book[i]
         if intermidiate < result:
             result = intermidiate
     print(result)
@@ -59,4 +59,3 @@ def join0(array):
 
 solution()
 # input-output by console
-

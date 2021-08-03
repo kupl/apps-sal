@@ -7,21 +7,30 @@ import sys
 # input = sys.stdin.readline
 
 ############ ---- Input Functions ---- ############
+
+
 def inp():
     return(int(input()))
+
+
 def inlt():
-    return(list(map(int,input().split())))
+    return(list(map(int, input().split())))
+
+
 def insr():
     s = input()
     return(list(s[:len(s) - 1]))
+
+
 def invr():
-    return(list(map(int,input().split())))
+    return(list(map(int, input().split())))
+
 
 test_cases = int(input())
 for _ in range(test_cases):
     sides = int(input())
     sides *= 2
-    apothem = 1 / (2 * math.tan((180 / sides) * (math.pi/180)))   
+    apothem = 1 / (2 * math.tan((180 / sides) * (math.pi / 180)))
     print(2 * apothem)
 # for _ in range(test_cases):
 #     size = int(input())
@@ -40,4 +49,3 @@ for _ in range(test_cases):
 #         i += 2 ** index
 #         index += 1
 #     print(index)
-

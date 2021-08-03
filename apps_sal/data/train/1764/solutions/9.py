@@ -8,7 +8,7 @@ def highest_floor(eggs, drops):
         eggs = drops
     if eggs <= 1:
         return drops if eggs == 1 else 0
-    return highest_floor(eggs-1, drops-1) + 1 + highest_floor(eggs, drops-1)
+    return highest_floor(eggs - 1, drops - 1) + 1 + highest_floor(eggs, drops - 1)
 
 
 def solve(emulator):
@@ -18,13 +18,12 @@ def solve(emulator):
 
     lower_bound, n = 0, 0
     while drops > 0:
-        n = lower_bound + highest_floor(eggs-1, drops-1) + 1
+        n = lower_bound + highest_floor(eggs - 1, drops - 1) + 1
         drops -= 1
-        if emulator.drop(n): # it broke for floor n
+        if emulator.drop(n):  # it broke for floor n
             eggs -= 1
             if eggs == 0 or drops == 0:
                 return n
         else:
             lower_bound = n
     return n + 1
-

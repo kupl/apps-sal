@@ -22,13 +22,13 @@ while d:
     h = x[0]
     w = x[1]
     for i in move:
-        a = h+i[0]
-        b = w+i[1]
+        a = h + i[0]
+        b = w + i[1]
         if not(0 <= a < H) or not(0 <= b < W) or looked[a][b] != 0 or MAP[a][b] == "#":
             continue
         d.append([a, b])
-        looked[a][b] = looked[h][w]+1
-if looked[H-1][W-1] == 0:
+        looked[a][b] = looked[h][w] + 1
+if looked[H - 1][W - 1] == 0:
     print((-1))
     return
 
@@ -38,5 +38,4 @@ for i in range(H):
         if MAP[i][j] == ".":
             white += 1
 
-print((white-looked[H-1][W-1]))
-
+print((white - looked[H - 1][W - 1]))

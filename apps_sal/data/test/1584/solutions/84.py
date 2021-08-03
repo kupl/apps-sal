@@ -16,4 +16,3 @@ for i in range(N):
         ans += max(0, idx - (j + 1))
 
 print(ans)
-

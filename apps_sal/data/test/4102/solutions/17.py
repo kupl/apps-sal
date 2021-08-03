@@ -15,7 +15,6 @@ R = [
 ]
 
 s = input()
-for a,b in R:
-    s = s.replace(a,b)
-print("Yes" if s==s[::-1] else "No")
-
+for a, b in R:
+    s = s.replace(a, b)
+print("Yes" if s == s[::-1] else "No")

@@ -29,4 +29,3 @@ for i in range(n):
                 print(c[j][0], end=" ")
 
     print()
-

@@ -57,4 +57,3 @@ for i in range(N):
     if s == 0:
         dirs.append("R")
     print(("".join(dirs[::-1])))
-

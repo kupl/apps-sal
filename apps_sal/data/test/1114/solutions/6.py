@@ -7,8 +7,8 @@ b = [int(i) for i in input().split(" ")]
 for i in fuck:
     god[i] += 1
 ans = []
-f = dict( zip(fuck, range(1, n+1)) )
-s = set( fuck )
+f = dict(zip(fuck, range(1, n + 1)))
+s = set(fuck)
 answ = "Possible"
 for i in b:
     if not i in s:
@@ -23,4 +23,3 @@ print(answ)
 if answ == "Possible":
     for i in ans:
         print(i, end=' ')
-

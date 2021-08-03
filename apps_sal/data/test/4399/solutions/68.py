@@ -4,7 +4,10 @@ def main():
         print('No')
     else:
         print('Yes')
-        
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

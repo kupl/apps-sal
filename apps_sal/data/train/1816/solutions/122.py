@@ -21,4 +21,3 @@ class Solution:
                     lo += 1
                     hi += 1
         return sorted(frequent)
-

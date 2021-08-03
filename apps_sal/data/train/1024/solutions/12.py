@@ -14,31 +14,28 @@ while t > 0:
     k = int(k)
     r = int(r)
     list1 = []
-    sum1 = s  + sum1
+    sum1 = s + sum1
     ans = k
     while n > 0:
         list1.append(ans)
-        #print(ans)
-        ans = ans*r
-        n-=1
+        # print(ans)
+        ans = ans * r
+        n -= 1
     m = sum(list1)
     list2.append(m)
     z = s - m
-    list4.append(z)        
-    t-=1
+    list4.append(z)
+    t -= 1
 x = sum(list2)
 
 for i in list4:
     if i > 0:
-        print('POSSIBLE',i)
+        print('POSSIBLE', i)
     else:
-        print('IMPOSSIBLE',-i)
-              
+        print('IMPOSSIBLE', -i)
+
 
 if x > sum1:
     print('IMPOSSIBLE')
 else:
     print('POSSIBLE')
-
-   
-

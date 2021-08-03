@@ -1,6 +1,7 @@
 from sys import stdin
 for i in range(int(stdin.readline())):
     c, m, x = list(map(int, stdin.readline().split()))
+
     def ok(nteam):
         return c >= nteam and m >= nteam and x + c + m >= 3 * nteam
     l = 0
@@ -12,4 +13,3 @@ for i in range(int(stdin.readline())):
         else:
             r = mid
     print(l)
-

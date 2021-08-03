@@ -5,4 +5,6 @@ def __starting_point():
     small_triangle2 = edges[2] ** 2
     small_triangle3 = edges[4] ** 2
     print(big_triangle - small_triangle1 - small_triangle2 - small_triangle3)
+
+
 __starting_point()

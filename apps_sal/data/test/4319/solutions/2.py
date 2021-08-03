@@ -9,4 +9,3 @@ for i in range(len(stairs)):
 lenst.append(stairs[-1])
 print(count)
 print(*lenst)
-

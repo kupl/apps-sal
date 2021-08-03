@@ -7,4 +7,3 @@ for _ in range(n):
     works = works or (start >= 2400 and end > start)
 
 print("YES" if works else "NO")
-

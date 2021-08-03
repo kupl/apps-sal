@@ -9,6 +9,7 @@ def pos(mid, position, m):
                 return True
     return False
 
+
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()

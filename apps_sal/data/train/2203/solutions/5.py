@@ -1,5 +1,6 @@
 3
 
+
 def remove(A, i, n):
     for j in range(n):
         A[i][j] = 0
@@ -23,7 +24,6 @@ for i in range(n - 1):
         if f and g:
             t = j
 
-
     ans[t] = i + 1
     remove(A, t, n)
 
@@ -33,5 +33,3 @@ for i in range(n):
         ans[i] = n
 
 print(" ".join(map(str, ans)))
-                
-

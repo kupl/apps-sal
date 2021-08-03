@@ -1,4 +1,6 @@
 import re
+
+
 def travel(r, zipcode):
     r = r.split(',')
     filtered = [*filter(lambda x: re.search(f"{zipcode}$", x), r)]
@@ -8,4 +10,4 @@ def travel(r, zipcode):
         nums.append(num)
         streets.append(street.rstrip(' ' + zipcode))
     return filtered != [] and zipcode and \
-           f"{zipcode}:{','.join(streets)}/{','.join(nums)}" or f"{zipcode}:/"
+        f"{zipcode}:{','.join(streets)}/{','.join(nums)}" or f"{zipcode}:/"

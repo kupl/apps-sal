@@ -1,19 +1,11 @@
-t=int(input())
+t = int(input())
 for _ in range(t):
-    n=int(input())
+    n = int(input())
     for i in range(n):
-        if i==n-1:
-            print('*'*(i+1))
+        if i == n - 1:
+            print('*' * (i + 1))
         else:
-            if i==0:
+            if i == 0:
                 print('*')
             else:
-                print('*'+" "*(i+1-2)+'*')
-    
-    
-    
-        
-    
-                
-    
-
+                print('*' + " " * (i + 1 - 2) + '*')

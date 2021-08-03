@@ -1,6 +1,7 @@
 # coding: utf-8
 from math import sqrt
 
+
 def main():
     N, D = list(map(int, input().split()))
     ans = 0
@@ -14,7 +15,9 @@ def main():
 
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

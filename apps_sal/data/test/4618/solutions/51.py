@@ -10,7 +10,9 @@ def main():
     ans = sorted(list(set(ans)))
     print((ans[k - 1]))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

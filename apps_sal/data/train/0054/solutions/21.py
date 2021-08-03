@@ -1,5 +1,6 @@
 Q = int(input())
 
+
 def solve():
     N = int(input())
     S = list(map(int, input().split()))
@@ -10,17 +11,16 @@ def solve():
             return True
 
         if S[0] == S[1]:
-            S = [2*S[0]] + S[2:]
+            S = [2 * S[0]] + S[2:]
         else:
             S = S[1:]
         S = sorted(S)
-        
+
     return 2048 in S
-    
+
 
 for _ in range(Q):
     if solve():
         print("YES")
     else:
         print("NO")
-

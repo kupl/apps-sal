@@ -3,17 +3,17 @@ input = stdin.readline
 
 
 def num(s):
-    ans1 = [0]*n
+    ans1 = [0] * n
     for q in range(n):
         ans1[q] = s[q] == 'a'
     sum1 = 0
     for q in range(n):
-        w = sum1*(s[q] == 'b')
+        w = sum1 * (s[q] == 'b')
         sum1 += ans1[q]
         ans1[q] = w
     sum1 = 0
     for q in range(n):
-        w = sum1*(s[q] == 'c')
+        w = sum1 * (s[q] == 'c')
         sum1 += ans1[q]
         ans1[q] = w
     sum1 = 0
@@ -25,9 +25,9 @@ def num(s):
 def main():
     s = list(input())
     k = 0
-    ans, ans1, deg = [0]*n, [0]*n, [1]
+    ans, ans1, deg = [0] * n, [0] * n, [1]
     for q in range(n):
-        deg.append(deg[-1]*3 % C)
+        deg.append(deg[-1] * 3 % C)
         k += s[q] == '?'
     if k == 0:
         print(num(s))
@@ -58,7 +58,7 @@ def main():
             t = q1.count('?')
             ans1 = [0] * n
             for q in range(n):
-                ans1[q] = (s[q] == q1[0])*deg[k-t]
+                ans1[q] = (s[q] == q1[0]) * deg[k - t]
             sum1 = 0
             for q in range(n):
                 w = sum1 * (s[q] == q1[1])
@@ -77,6 +77,5 @@ def main():
 
 
 n = int(input())
-C = 10**9+7
+C = 10**9 + 7
 main()
-

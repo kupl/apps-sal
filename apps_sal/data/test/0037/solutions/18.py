@@ -10,4 +10,3 @@ if key == 0:
     print('No')
 else:
     print('Yes')
-

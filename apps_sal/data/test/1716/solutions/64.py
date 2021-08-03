@@ -16,4 +16,3 @@ left = queries[0::2] - 1
 right = queries[1::2]
 
 print(('\n'.join((dp[right, right] + dp[left, left] - dp[left, right] - dp[right, left]).astype(str))))
-

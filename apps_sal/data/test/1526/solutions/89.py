@@ -5,4 +5,3 @@ if total_diff % 2 == 0:
     print((total_diff // 2))
 else:
     print((total_diff // 2 + 2))
-

@@ -15,5 +15,3 @@ for t in range(max(c)):
                 was = True
             c[i] -= 1
 print(ans)
-            
-

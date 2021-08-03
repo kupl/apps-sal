@@ -1,21 +1,21 @@
 import math
-b=input()
-c=[]
+b = input()
+c = []
 for i in range(len(b)):
-	c.append(b[i])
+    c.append(b[i])
 #a = list(map(int,input().split()))
 #b = list(map(int,input().split()))
-#s=int(input())
+# s=int(input())
 
-f=input()
-t=[]
+f = input()
+t = []
 for i in range(len(f)):
-	t.append(f[i])
-d=[]
+    t.append(f[i])
+d = []
 for i in range(len(c)):
-	d.append(c[-(i+1)])
-	
-if d==t:
-	print("YES")
+    d.append(c[-(i + 1)])
+
+if d == t:
+    print("YES")
 else:
-	print("NO")
+    print("NO")

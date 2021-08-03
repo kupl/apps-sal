@@ -9,4 +9,3 @@ for i in range(n):
 res = 1 / res
 
 print(res)
-

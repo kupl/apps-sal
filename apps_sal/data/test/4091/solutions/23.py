@@ -15,12 +15,11 @@ f = 1
 for i in range(n):
     if(a[0] in q):
         w.append(s)
-        f+=s
+        f += s
         s = 0
         q.remove(a[0])
     a.remove(a[0])
-    s+=1
-w[-1] += n-f+1
+    s += 1
+w[-1] += n - f + 1
 for i in range(m):
-    print(w[i], end = " ")
-
+    print(w[i], end=" ")

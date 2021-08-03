@@ -12,7 +12,7 @@ for c in range(1, n):
             tmp_ans = MINUS_INF
         if a % c == 0 and a // c <= k:
             tmp_ans = MINUS_INF
-        tmp_ans += s[n-1-k*c] + s[k*c]
-        ans = max(ans, tmp_ans)    
-        k += 1    
+        tmp_ans += s[n - 1 - k * c] + s[k * c]
+        ans = max(ans, tmp_ans)
+        k += 1
 print(ans)

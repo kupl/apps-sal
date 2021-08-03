@@ -1,5 +1,6 @@
 import collections
 
+
 class UnionFind:
     """Weighted quick-union with path compression.
     The original Java implementation is introduced at
@@ -29,7 +30,7 @@ class UnionFind:
 
     def find(self, p, q):
         return self._root(p) == self._root(q)
-    
+
     def union(self, p, q):
         i = self._root(p)
         j = self._root(q)
@@ -42,25 +43,26 @@ class UnionFind:
             self._id[j] = i
             self._sz[i] += self._sz[j]
 
+
 n, k = map(int, input().split())
 
 uf = UnionFind(n)
 
-for i in range(n-1):
+for i in range(n - 1):
     u, v, x = map(int, input().split())
     u -= 1
     v -= 1
-    if x==0:
+    if x == 0:
         uf.union(u, v)
 
 d = collections.defaultdict(int)
 for i in range(n):
     d[uf._root(i)] += 1
 
-total = pow(n, k, 10**9+7)
+total = pow(n, k, 10**9 + 7)
 for size in d.values():
-    total -= pow(size, k, 10**9+7)
+    total -= pow(size, k, 10**9 + 7)
 
-total %= 10**9+7
+total %= 10**9 + 7
 
 print(total)

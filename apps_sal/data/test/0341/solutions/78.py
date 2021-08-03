@@ -5,10 +5,10 @@ Created on Tue Sep  8 22:36:36 2020
 @author: liang
 """
 
-N, K = list(map(int,input().split()))
-R, S, P = list(map(int,input().split()))
+N, K = list(map(int, input().split()))
+R, S, P = list(map(int, input().split()))
 T = input()
-hand = {"r":P, "s":R, "p":S}
+hand = {"r": P, "s": R, "p": S}
 ans = 0
 for i in range(K):
     s = str()
@@ -16,7 +16,7 @@ for i in range(K):
     while tmp < N:
         s += T[tmp]
         tmp += K
-    #print(s)
+    # print(s)
     count = 1
     prev = str()
     for j in range(len(s)):
@@ -24,7 +24,7 @@ for i in range(K):
             count += 1
         else:
             count = 1
-        if count%2 == 0:
+        if count % 2 == 0:
             continue
         prev = s[j]
         """
@@ -37,4 +37,3 @@ for i in range(K):
         """
         ans += hand[s[j]]
 print(ans)
-

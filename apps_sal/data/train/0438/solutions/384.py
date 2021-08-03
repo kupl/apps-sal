@@ -2,11 +2,13 @@ class UnionSet:
     def __init__(self, n):
         self.par = list(range(n))
         self.ed = list(range(n))
+
     def find(self, i):
         if self.par[i] != i:
             par = self.find(self.par[i])
             self.par[i] = par
         return self.par[i]
+
     def merge(self, i, j):
         par1 = self.find(i)
         par2 = self.find(j)
@@ -14,8 +16,10 @@ class UnionSet:
         ed2 = self.ed[par2]
         self.par[max(par1, par2)] = min(par1, par2)
         self.ed[par1] = self.ed[par2] = max(ed1, ed2)
+
     def get_ed(self, i):
         return self.ed[i]
+
 
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:

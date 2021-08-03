@@ -4,4 +4,3 @@ def palindrome_chain_length(n):
         count += 1
         n += int(str(n)[::-1])
     return count
-

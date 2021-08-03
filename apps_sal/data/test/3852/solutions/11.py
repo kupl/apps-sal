@@ -21,34 +21,36 @@ abs(最大値) < abs(最小値)なら全部に最小値を加える。
 こうすることで、数列を正の値か負の値どちらかにそろえることができる。
 """
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 MAX = max(A)
 MIN = min(A)
-MAXidx = A.index(MAX)+1
-MINidx = A.index(MIN)+1
+MAXidx = A.index(MAX) + 1
+MINidx = A.index(MIN) + 1
+
 
 def positiveOpe():
-    for i in range(1,N):
-        print((i,i+1))
+    for i in range(1, N):
+        print((i, i + 1))
+
 
 def negativeOpe():
-    for i in range(N,1,-1):
-        print((i,i-1))
+    for i in range(N, 1, -1):
+        print((i, i - 1))
+
 
 if MIN >= 0:
-    print((N-1))
+    print((N - 1))
     positiveOpe()
 elif MAX <= 0:
-    print((N-1))
+    print((N - 1))
     negativeOpe()
 elif abs(MAX) >= abs(MIN):
-    print((N-1+N))
-    for i in range(1,N+1):
-        print((MAXidx,i))
+    print((N - 1 + N))
+    for i in range(1, N + 1):
+        print((MAXidx, i))
     positiveOpe()
 else:
-    print((N-1+N))
-    for i in range(1,N+1):
-        print((MINidx,i))
+    print((N - 1 + N))
+    for i in range(1, N + 1):
+        print((MINidx, i))
     negativeOpe()
-

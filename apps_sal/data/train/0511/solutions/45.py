@@ -1,13 +1,13 @@
-N=int(input())
-a=list(map(int,input().split()))
+N = int(input())
+a = list(map(int, input().split()))
 
-cnt=0
+cnt = 0
 for i in range(N):
-    cnt=cnt^a[i]
+    cnt = cnt ^ a[i]
 
-B=[]*N
+B = [] * N
 for i in range(N):
-    ans=cnt^a[i]
+    ans = cnt ^ a[i]
     B.append(str(ans))
 
 print(' '.join(B))

@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 a, b = read()
 Q = [a]
 prev = dict()
@@ -24,4 +26,3 @@ while cur != a:
 ans.append(a)
 print(len(ans))
 print(*ans[::-1])
-

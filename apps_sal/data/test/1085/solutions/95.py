@@ -1,7 +1,9 @@
 import numpy as np
 
+
 def divisors(N):
     return sorted(sum((list({n, N // n}) for n in range(1, int(N ** 0.5) + 1) if not N % n), []))
+
 
 def prime_factorize_dict(n):
     d = dict()
@@ -18,6 +20,7 @@ def prime_factorize_dict(n):
     if n != 1:
         d[n] = d.get(n, 0) + 1
     return d
+
 
 N = int(input())
 count = 0

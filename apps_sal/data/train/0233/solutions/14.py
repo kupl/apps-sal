@@ -1,9 +1,9 @@
 class Solution:
     def regionsBySlashes(self, grid: List[str]) -> int:
-        self.N = len(grid)#n行
+        self.N = len(grid)  # n行
         print((self.N))
-        pre = list(range(self.N*self.N*4))#所有元素自己是自己的父节点[0,1,2,3,4,5,6,...]
-        self.count = self.N*self.N*4 #总共的区域数量
+        pre = list(range(self.N * self.N * 4))  # 所有元素自己是自己的父节点[0,1,2,3,4,5,6,...]
+        self.count = self.N * self.N * 4  # 总共的区域数量
         for r in range(self.N):
             line = grid[r]
             for c in range(self.N):
@@ -18,13 +18,14 @@ class Solution:
                 if w != '\\\\':
                     self.union(pre, self.g(r, c, 0), self.g(r, c, 3))
                     self.union(pre, self.g(r, c, 1), self.g(r, c, 2))
-        return self.count   
-        
-    def find(self,pre,x):
+        return self.count
+
+    def find(self, pre, x):
         if x == pre[x]:
             return x
-            
-        return self.find(pre,pre[x])
+
+        return self.find(pre, pre[x])
+
     def union(self, pre, a, b):
         pa = self.find(pre, a)
         pb = self.find(pre, b)
@@ -32,7 +33,6 @@ class Solution:
             return
         pre[pa] = pb
         self.count -= 1
-    
+
     def g(self, r, c, i):
         return (r * self.N + c) * 4 + i
-

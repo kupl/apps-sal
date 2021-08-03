@@ -1,1 +1,1 @@
-cake_slice = lambda n: sum(range(n + 1)) + 1
+def cake_slice(n): return sum(range(n + 1)) + 1

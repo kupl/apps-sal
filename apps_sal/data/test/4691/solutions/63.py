@@ -13,7 +13,7 @@ INF = inf
 MOD = 1000000007
 
 n = int(input())
-S = [input() for j in range(n)] # nは行数
+S = [input() for j in range(n)]  # nは行数
 
 tmp = 0
 res = 0
@@ -25,4 +25,3 @@ TLE x {tmp["TLE"]}
 RE x {tmp["RE"]}"""
 
 print(res)
-

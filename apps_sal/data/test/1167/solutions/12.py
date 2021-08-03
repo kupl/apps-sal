@@ -18,6 +18,8 @@ def pow(x, y, mod):
         y = y >> 1
         x = (x * x) % mod
     return r
+
+
 def sieve(n):
     prime = [True for i in range(n + 1)]
     p = 2
@@ -29,6 +31,8 @@ def sieve(n):
     prime[0] = prime[1] = False
     r = [p for p in range(n + 1) if prime[p]]
     return r
+
+
 def divs(n, start=1):
     r = []
     for i in range(start, int(math.sqrt(n) + 1)):
@@ -38,6 +42,8 @@ def divs(n, start=1):
             else:
                 r.extend([i, n // i])
     return r
+
+
 def cdiv(n, k): return n // k + (n % k != 0)
 def ii(): return int(input())
 def mi(): return map(int, input().split())
@@ -46,11 +52,10 @@ def lcm(a, b): return abs(a * b) // math.gcd(a, b)
 def prr(a, sep=' '): print(sep.join(map(str, a)))
 def dd(): return collections.defaultdict(int)
 
+
 t = ii()
 for _ in range(t):
-    a,b,c,d,k = mi()
+    a, b, c, d, k = mi()
     t = cdiv(a, c)
     r = cdiv(b, d)
     print(t, r) if t + r <= k else print(-1)
-
-

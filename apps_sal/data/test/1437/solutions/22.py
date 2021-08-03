@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def __starting_point():
     #n, m = list(map(int, input().split()))
     s = input()
@@ -13,4 +14,6 @@ def __starting_point():
         ans = ans * d[ch] % (10 ** 9 + 7)
 
     print(ans)
+
+
 __starting_point()

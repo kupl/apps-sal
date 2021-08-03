@@ -14,6 +14,3 @@ result = 0
 for i in k:
     result += d - i
 print(result)
-
-    
-

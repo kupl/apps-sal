@@ -1,8 +1,9 @@
 import math
 
 
-def Len (w):
+def Len(w):
     return w[0] * w[0] + w[1] * w[1]
+
 
 n, x, y = input().split(' ')
 n = int(n)
@@ -26,8 +27,8 @@ for i in range(0, n):
     q = [arr[(i + 1) % n][0] - x, arr[(i + 1) % n][1] - y]
     d = q[0] * r[1] - q[1] * r[0]
     d *= d
-    s = d/Len(st)
-    if Len (q) - s < Len (st) and Len(r) - s < Len(st):
+    s = d / Len(st)
+    if Len(q) - s < Len(st) and Len(r) - s < Len(st):
         r1 = min(r1, s)
         r2 = max(r2, s)
 
@@ -36,4 +37,4 @@ for i in arr:
     r1 = min(r1, s)
     r2 = max(r2, s)
 
-print ((r2 - r1) * math.pi)
+print((r2 - r1) * math.pi)

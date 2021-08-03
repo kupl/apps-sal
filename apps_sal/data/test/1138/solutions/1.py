@@ -29,7 +29,4 @@ else:
                 R -= 1
             else:
                 L -= 1
-    print(r+abs(U-D)//2+abs(R-L)//2)
-    
-
-
+    print(r + abs(U - D) // 2 + abs(R - L) // 2)

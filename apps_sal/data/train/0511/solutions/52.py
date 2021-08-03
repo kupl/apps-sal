@@ -19,7 +19,7 @@ def solve():
     # 答え
     anss = []
     for i in range(N):
-        anss.append(str(S^As[i]))
+        anss.append(str(S ^ As[i]))
 
     ans = " ".join(anss)
     print(ans)
@@ -27,5 +27,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

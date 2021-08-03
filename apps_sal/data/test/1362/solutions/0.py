@@ -7,7 +7,7 @@ ans = 0
 curb = 0
 curd = 1
 for i in range(0, n):
-    #print(curb)
+    # print(curb)
     tday, tplus = input().split()
     tday = int(tday)
     tplus = int(tplus)
@@ -25,7 +25,7 @@ for i in range(0, n):
     else:
         curb -= p * (tday - curd)
     curd = tday
-    #print(curb)
+    # print(curb)
     curb += tplus
 
 tday = m + 1

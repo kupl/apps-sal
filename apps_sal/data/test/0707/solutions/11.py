@@ -16,4 +16,3 @@ for p in input().split():
     break
 else:
     print("NO")
-

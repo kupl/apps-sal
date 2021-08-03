@@ -1,8 +1,10 @@
 from collections import defaultdict
+
+
 class Solution:
     def eventualSafeNodes(self, graph):
         state = defaultdict(int)
-        
+
         def dfs(node):
             if state[node]:
                 return state[node] == 2

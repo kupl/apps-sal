@@ -13,15 +13,15 @@ arr = list(map(int, stdin.readline().split()))
 myq = deque([])
 myset = set()
 for i in range(n):
-	if arr[i] in myset:
-		pass
-	else:
-		if len(myq) == k:
-			el = myq[-1]
-			myset.remove(el)
-			myq.pop()
-		myq.appendleft(arr[i])
-		myset.add(arr[i])
+    if arr[i] in myset:
+        pass
+    else:
+        if len(myq) == k:
+            el = myq[-1]
+            myset.remove(el)
+            myq.pop()
+        myq.appendleft(arr[i])
+        myset.add(arr[i])
 
 print(len(myq))
 

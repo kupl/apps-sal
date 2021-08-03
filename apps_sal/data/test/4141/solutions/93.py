@@ -1,7 +1,7 @@
 
 flag = True
 n = int(input())
-l = list(map(int,input().split()))
+l = list(map(int, input().split()))
 
 for _ in range(n):
     for num in l:

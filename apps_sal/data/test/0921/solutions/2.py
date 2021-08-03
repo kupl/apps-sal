@@ -15,4 +15,3 @@ else:
         ans[i] += d
         w -= d
     print(' '.join(map(str, ans)))
-

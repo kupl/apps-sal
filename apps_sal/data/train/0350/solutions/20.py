@@ -1,6 +1,6 @@
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-        
+
         def atMost(K):
             N = len(A)
             ct = collections.Counter()
@@ -13,10 +13,10 @@ class Solution:
                 else:
                     while len(ct) > K:
                         ct[A[i]] -= 1
-                        if ct[A[i]] == 0: del ct[A[i]]
+                        if ct[A[i]] == 0:
+                            del ct[A[i]]
                         i += 1
                     ans += j - i + 1
             return ans
-        
-        return atMost(K) - atMost(K-1)
 
+        return atMost(K) - atMost(K - 1)

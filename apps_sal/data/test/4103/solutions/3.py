@@ -1,11 +1,10 @@
 
 
-
 def main():
     dest, battmax, accumax = list(map(int, input().split()))
     batt = battmax
     accum = accumax
-    
+
     light = list([bool(int(x)) for x in input().split()])
     path = 0
     for i in range(len(light)):
@@ -26,9 +25,10 @@ def main():
             batt -= 1
             path += 1
     print(path)
-        
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

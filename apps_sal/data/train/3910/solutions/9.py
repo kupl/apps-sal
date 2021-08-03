@@ -12,4 +12,3 @@ def insertions(rem, nums, ops=''):
     return list(chain(insertions(rem - nums[0], nums[1:], ops + '+'),
                       insertions(rem - nums[0], [-nums[1]] + nums[2:], ops + '-'),
                       insertions(rem, [int(f'{nums[0]}{nums[1]}')] + nums[2:], ops + '|')))
-

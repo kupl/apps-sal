@@ -1,7 +1,7 @@
 # cook your dish here
 # cook your dish here
 MOD = 10 ** 9 + 7
- 
+
 for t in range(int(input())):
     N, M, K = map(int, input().split())
     A = list(map(int, input().split()))
@@ -15,7 +15,7 @@ for t in range(int(input())):
         else:
             D[L] += 1
             D[R] -= 1
-    
+
     impossibru = mx = mn = 0
     ans = 1
     for i in range(N):
@@ -42,5 +42,5 @@ for t in range(int(input())):
                 break
             mn = mx = A[i]
     ans = ans * (mx - mn + 1) % MOD
-    
-    print(0 if impossibru else ans) 
+
+    print(0 if impossibru else ans)

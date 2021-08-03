@@ -1,4 +1,4 @@
 x, t = map(int, input().split())
 
 
-print(max(x-t,0))
+print(max(x - t, 0))

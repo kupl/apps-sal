@@ -1,4 +1,4 @@
-N, A, B =list(map(int,input().split()))
+N, A, B = list(map(int, input().split()))
 
 al = []
 for i in range(1, N + 1):
@@ -11,4 +11,3 @@ for i in range(1, N + 1):
         al.append(i)
 
 print((sum(al)))
-

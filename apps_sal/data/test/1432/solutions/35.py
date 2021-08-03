@@ -16,4 +16,3 @@ for i in range(1, N):
     A.append(t)
 
 print((*ans))
-

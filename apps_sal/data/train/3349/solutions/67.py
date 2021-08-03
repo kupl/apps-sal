@@ -10,4 +10,3 @@ def find_missing_number(sequence):
         if set(range(1, max_num + 1)) != set(nums)
         else 0
     )
-

@@ -9,4 +9,3 @@ if (b - a) % 7 in (0, 2, 3):
     print('YES')
 else:
     print('NO')
-

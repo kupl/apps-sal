@@ -40,6 +40,7 @@ class UnionFind:
     def groupcount(self):
         return len(set(self.roots()))
 
+
 N, M, K = map(int, input().split())
 
 notfriend = [set() for _ in range(N)]

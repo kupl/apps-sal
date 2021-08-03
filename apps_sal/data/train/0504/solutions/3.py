@@ -18,4 +18,3 @@ class Solution:
                 res.append(s[i])
             i += d
         return ''.join(res)
-

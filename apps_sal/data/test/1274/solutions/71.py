@@ -1,16 +1,16 @@
 import heapq
 n, m = list(map(int, input().split()))
-byte = [[] for _ in range(m+2)]
+byte = [[] for _ in range(m + 2)]
 
 for _ in range(n):
     a, b = list(map(int, input().split()))
-    if a > m+1:
+    if a > m + 1:
         continue
     byte[a].append(b)
 search = []
 day = 1
 ans = 0
-while day-1 != m:
+while day - 1 != m:
     for b in byte[day]:
         heapq.heappush(search, -b)
     if not search:
@@ -21,7 +21,3 @@ while day-1 != m:
     day += 1
 
 print(ans)
-
-
-
-

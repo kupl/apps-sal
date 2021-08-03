@@ -3,12 +3,12 @@ class DSU:
         self.n = n
         self.parent = [x for x in range(n)]
         self.rank = [0 for x in range(n)]
-        
+
     def find(self, x):
         if self.parent[x] != x:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
-    
+
     def union(self, s, t):
         sp, tp = self.find(s), self.find(t)
         if sp == tp:
@@ -21,6 +21,7 @@ class DSU:
             self.parent[sp] = tp
             self.rank[tp] += 1
         return True
+
 
 class Solution:
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
@@ -42,4 +43,3 @@ class Solution:
                 if not net.union(idx, rightChild[idx]):
                     return False
         return len(edges) == n - 1
-

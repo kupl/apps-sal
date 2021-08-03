@@ -1,5 +1,6 @@
 import sys
-input =  lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
+
 
 n, k = map(int, input().split())
 a = list(map(int, input().split()))
@@ -7,8 +8,8 @@ a = list(map(int, input().split()))
 
 def factors(n, k):
     i = 2
-    sq = int(n**0.5)+1
-    di={}
+    sq = int(n**0.5) + 1
+    di = {}
     while n != 1:
         if n % i == 0:
             cur = 0
@@ -18,10 +19,12 @@ def factors(n, k):
             if cur % k != 0:
                 di[i] = cur % k
         i += 1
-        if i > sq:break
+        if i > sq:
+            break
     if n != 1:
         di[n] = 1
     return "|".join("%d:%d" % (i, di[i]) for i in di)
+
 
 ft = {}
 di = {}
@@ -47,4 +50,4 @@ for i in a:
             if ftt2 in di:
                 ans += di[ftt2]
 
-print(ans//2)
+print(ans // 2)

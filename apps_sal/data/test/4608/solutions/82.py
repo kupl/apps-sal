@@ -1,6 +1,6 @@
 N = int(input())
 L = []
-light = [0]*(N)
+light = [0] * (N)
 light[0] = 1
 cnt, now = 0, 0
 
@@ -15,4 +15,3 @@ for i in range(N):
         return
 
 print((-1))
-

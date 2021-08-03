@@ -12,6 +12,7 @@ def ans1(n, k, s):
     ans.append("PRINT " + s[0])
     return ans
 
+
 def ans2(n, k, s):
     ans = []
     for i in range(k - 1, 0, -1):
@@ -25,6 +26,7 @@ def ans2(n, k, s):
         ans.append("RIGHT")
     ans.append("PRINT " + s[n - 1])
     return ans
+
 
 def main():
     n, k = map(int, input().split())
@@ -48,4 +50,6 @@ def main():
         else:
             for line in a2:
                 print(line)
+
+
 main()

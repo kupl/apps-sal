@@ -15,5 +15,3 @@ if max(S.values()) > 0:
     print((max(S.values())))
 else:
     print((0))
-
-

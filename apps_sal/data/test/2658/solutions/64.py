@@ -3,7 +3,7 @@ A = list(map(int, input().split()))
 
 dic = {}
 for i, v in enumerate(A):
-    dic[i+1] = v
+    dic[i + 1] = v
 
 town = 1
 s = set()

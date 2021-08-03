@@ -20,7 +20,7 @@ class Solution:
         dp = [1 for _ in range(10)]
         dp_next = [0 for _ in range(10)]
 
-        for _ in range(n-1):
+        for _ in range(n - 1):
             for j in range(10):
                 dp_next[j] = 0
                 for digit in possible_next_digits[j]:
@@ -32,4 +32,3 @@ class Solution:
         for num in dp:
             total += num
         return total % (10**9 + 7)
-

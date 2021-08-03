@@ -6,4 +6,3 @@ else:
         print("D")
     else:
         print("H")
-

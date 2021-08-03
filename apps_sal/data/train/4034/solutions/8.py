@@ -1,5 +1,6 @@
 import math
 
+
 def sillycase(silly):
     if len(silly) % 2 == 0:
         even_half = len(silly) // 2

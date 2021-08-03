@@ -8,4 +8,3 @@ for i in range(h, -1, -1):
     if i == d2:
         w = max(0, w - u2)
 print(w)
-

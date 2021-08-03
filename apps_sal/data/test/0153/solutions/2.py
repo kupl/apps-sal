@@ -15,5 +15,3 @@ for i in range(n + 1):
         cur += x
     ans = max(ans, cur)
 print(ans)
-    
-

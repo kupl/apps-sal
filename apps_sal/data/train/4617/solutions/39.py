@@ -5,4 +5,3 @@ def powers_of_two(n):
         a.append(b)
         b = b * 2
     return a
-

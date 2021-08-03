@@ -17,11 +17,16 @@ from sys import stdin
 mod = 10 ** 9 + 7
 sys.setrecursionlimit(10 ** 9)
 
+
 def inp(): return stdin.readline().rstrip()
 def lmi(): return list(map(int, stdin.readline().split()))
+
+
 def narray(*shape, init: Any = 0):
-    if shape: return [narray(*shape[1:], init=init) for _ in range(shape[0])]
-    if callable(init): return init()
+    if shape:
+        return [narray(*shape[1:], init=init) for _ in range(shape[0])]
+    if callable(init):
+        return init()
     return init
 
 
@@ -65,8 +70,8 @@ def main():
         print((''.join('#' if c else '.' for c in line)))
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

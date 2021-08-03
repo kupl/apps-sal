@@ -5,4 +5,3 @@ if c - (a - b) >= 0:
 
 else:
     print('0')
-

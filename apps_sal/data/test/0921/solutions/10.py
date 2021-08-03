@@ -18,7 +18,7 @@ for i, a in enumerate(A):
     B.append((a, i))
 B.sort()
 
-#print(B)
+# print(B)
 for b in B:
     cup = b[0]
     i = b[1]
@@ -30,7 +30,7 @@ for b in B:
 if w < 0:
     print(-1)
 else:
-    for i in range(n-1, -1, -1):
+    for i in range(n - 1, -1, -1):
         cup, idx = B[i]
         if cup > pours[idx]:
             re_pour_amount = min(w, cup - pours[idx])

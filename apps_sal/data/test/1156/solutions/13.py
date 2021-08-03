@@ -12,4 +12,3 @@ for i, el in enumerate(b[4:], 4):
         r = min(r, min(a[i - 4: i + 1]) - 1)
 
 print(l, r)
-

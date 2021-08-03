@@ -128,6 +128,3 @@ class Solution:
                     que.append((nei, depth + 1))
 
         return -1
-
-
-

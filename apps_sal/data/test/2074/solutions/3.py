@@ -4,9 +4,8 @@
 import time
 
 
-
 (n, m) = (int(i) for i in input().split())
-ans    = 0
+ans = 0
 
 for i in range(n):
     b = min([int(j) for j in input().split()])
@@ -18,4 +17,3 @@ start = time.time()
 print(ans)
 finish = time.time()
 #print(finish - start)
-

@@ -1,7 +1,7 @@
 def row_weights(array):
     team1 = 0
     team2 = 0
-    for x in range(0,len(array)):
+    for x in range(0, len(array)):
         if x % 2 == 0:
             team1 = team1 + array[x]
         else:

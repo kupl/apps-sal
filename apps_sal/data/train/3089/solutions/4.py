@@ -11,13 +11,13 @@ def dashatize(num):
 
     # Если, входное число отрицательное - убрать минус.
     num = str(num).replace('-', '')
-    
+
     # Перебор элементов и проверка его на [Чётность] и [Нечётность].
     for i in str(num):
         if int(i) % 2 == 0:
             array.append(i)
         else:
-            array.append('-'+ i +'-')
+            array.append('-' + i + '-')
 
     # Соединяем в строку.
     string = ''.join(array)

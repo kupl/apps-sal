@@ -5,13 +5,13 @@ class Solution:
         minsum = sys.maxsize
         MAX = 0
         maxsum = -sys.maxsize
-        
+
         for num in A:
             SUM += num
-            maxsum = max(maxsum, SUM-MIN)
-            MIN = min(MIN,SUM)
-            minsum = min(minsum, SUM-MAX)
-            MAX = max(MAX,SUM)
+            maxsum = max(maxsum, SUM - MIN)
+            MIN = min(MIN, SUM)
+            minsum = min(minsum, SUM - MAX)
+            MAX = max(MAX, SUM)
         if minsum == SUM:
             return maxsum
-        return max(maxsum, SUM-minsum)
+        return max(maxsum, SUM - minsum)

@@ -8,5 +8,3 @@ for s in sl:
     cnt = max(cnt, sl.count(s) - tl.count(s))
 
 print(cnt)
-
-

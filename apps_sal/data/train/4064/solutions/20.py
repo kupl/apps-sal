@@ -5,4 +5,3 @@ def count_by(x, n):
         res.append(x)
         x += x1
     return res
-

@@ -1,5 +1,5 @@
 def seven(m):
-    n=0
+    n = 0
     i = 0
     while (m > 99):
         n = m % 10

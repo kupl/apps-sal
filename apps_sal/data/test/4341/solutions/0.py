@@ -1,5 +1,9 @@
+from collections import defaultdict
+
+
 def connected_components(neighbors):
     seen = set()
+
     def component(node):
         nodes = set([node])
         while nodes:
@@ -10,11 +14,12 @@ def connected_components(neighbors):
     for node in neighbors:
         if node not in seen:
             yield component(node)
-from collections import defaultdict
+
+
 graph = defaultdict(set)
-n,m = map(int,input().split())
+n, m = map(int, input().split())
 for _ in range(m):
-    u,v = map(int,input().split())
+    u, v = map(int, input().split())
     graph[u].add(v)
     graph[v].add(u)
 
@@ -26,11 +31,13 @@ for component in connected_components(graph):
     current = nodes[0]
     while len(seen) < size:
         choice = list(graph[current])
-        if len(choice) != 2:break
+        if len(choice) != 2:
+            break
         seen.add(current)
         possible = [c for c in choice if c not in seen]
-        if not possible: break
+        if not possible:
+            break
         current = possible[0]
     if len(seen) == size:
-        total+=1
-print (total)
+        total += 1
+print(total)

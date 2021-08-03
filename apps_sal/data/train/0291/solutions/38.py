@@ -2,7 +2,7 @@ class Solution:
     def numOfSubarrays(self, coll: List[int]) -> int:
         n = len(coll)
         m = 10**9 + 7
-        dp = [(0, 0) for _ in range(n+1)]
+        dp = [(0, 0) for _ in range(n + 1)]
 
         for i, x in enumerate(coll):
             if x & 1:

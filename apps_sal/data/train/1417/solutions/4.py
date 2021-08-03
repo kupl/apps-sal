@@ -6,5 +6,5 @@ for case in range(T):
     time = []
     for i in range(1, 9):
         time.append(a.count(i))
-        
+
     print(min(time))

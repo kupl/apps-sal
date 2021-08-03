@@ -11,14 +11,15 @@
 #                     backtrack(tot - coin, count + 1)
 #         backtrack(amount, 0)
 #         return -1 if min_coins == float('inf') else min_coins
-    
-    
+
+
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         memo = {}
-        def backtrack(tot):            
+
+        def backtrack(tot):
             if tot == 0:
-                return 0   
+                return 0
             if tot not in memo:
                 min_coins = float('inf')
                 for coin in coins:
@@ -29,4 +30,3 @@ class Solution:
             return memo[tot]
         out = backtrack(amount)
         return -1 if out == float('inf') else out
-

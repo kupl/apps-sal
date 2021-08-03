@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 from sys import stdin, stdout
 
+
 def rint():
     return list(map(int, stdin.readline().split()))
 #lines = stdin.readlines()
+
 
 n = int(input())
 
 x = set(rint())
 x_list = list(x)
 x_list.sort()
-#print(x)
-#print(x_list)
+# print(x)
+# print(x_list)
 max_len = 1
 for i in range(len(x_list)):
     start = x_list[i]
@@ -22,7 +24,7 @@ for i in range(len(x_list)):
             break
         if next in x:
             candidate.append(next)
-            next = start + 2**(j+1)
+            next = start + 2**(j + 1)
             if next in x:
                 candidate.append(next)
                 print(3)
@@ -38,8 +40,3 @@ if max_len == 2:
 else:
     print(1)
     print(x_list[0])
-
-
-
-
-

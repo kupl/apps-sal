@@ -5,4 +5,3 @@ def str_count(strng, letter):
             if j == i:
                 arr.append(j)
     return len(arr)
-

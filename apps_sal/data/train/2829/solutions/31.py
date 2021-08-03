@@ -1,4 +1,4 @@
-def array_madness(a,b):
+def array_madness(a, b):
     # Ready, get, set, GO!!!
     suma = 0
     sumb = 0

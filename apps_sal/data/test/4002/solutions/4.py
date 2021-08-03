@@ -4,16 +4,21 @@ def read_generator():
         for t in tokens:
             yield t
 
+
 reader = read_generator()
+
 
 def readword():
     return next(reader)
 
+
 def readint():
     return int(next(reader))
 
+
 def readfloat():
     return float(next(reader))
+
 
 def readline():
     return input()
@@ -50,6 +55,7 @@ def solve(n, m, t, a):
 
     return res[0]
 
+
 tests = 1
 
 for t in range(tests):
@@ -63,4 +69,3 @@ for t in range(tests):
             r.append(readint())
         a.append(r)
     print(solve(n, m, k, a))
-

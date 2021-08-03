@@ -12,7 +12,7 @@ def xxx(val, op):
             p, m = k0, k1
         elif val[k1] == 0:
             p, m = k1, k0
-        elif i < len(op) - 1 and k1 in op[i+1]:
+        elif i < len(op) - 1 and k1 in op[i + 1]:
             p, m = k1, k0
         else:
             p, m = k0, k1
@@ -33,4 +33,3 @@ else:
     print("Yes")
     for t in target:
         print(t)
-

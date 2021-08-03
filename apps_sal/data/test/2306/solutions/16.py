@@ -1,13 +1,12 @@
 
 N = int(input())
 
-t = list(map(int,input().split()))
-v = list(map(int,input().split()))
+t = list(map(int, input().split()))
+v = list(map(int, input().split()))
 
 alltime = sum(t)
 maxslis = []
 rmaxslis = []
-
 
 
 spd = 0
@@ -51,14 +50,14 @@ for i in range(alltime * 2 + 1):
 
         ans += spd * 0.5 + 0.125
         spd += 0.5
-        #if spd != maxslis[i]:
-            #dtflag = True
+        # if spd != maxslis[i]:
+        #dtflag = True
 
     elif spd == maxslis[i]:
 
-        #if dtflag and rmaxslis[i] != maxslis[i]:
-            #ans += 0.25
-            #print (i+1)
+        # if dtflag and rmaxslis[i] != maxslis[i]:
+        #ans += 0.25
+        #print (i+1)
         ans += spd * 0.5
         dtflag = False
 
@@ -67,5 +66,4 @@ for i in range(alltime * 2 + 1):
         spd -= 0.5
         dtflag = False
 
-print (ans)
-
+print(ans)

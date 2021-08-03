@@ -26,4 +26,3 @@ if ir != 0:
     return
 else:
     print(ir2)
-

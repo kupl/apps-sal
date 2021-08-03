@@ -30,7 +30,6 @@ for word in words[1:]:
 
         same_i += 1
 
-
     for match in reversed(i_matches):
         if ''.join(word[:match + 1]) == ''.join(current[-1 - match:]):
             biggest_match = match
@@ -43,7 +42,3 @@ for word in words[1:]:
 
 
 print(*current, sep='')
-
-
-
-

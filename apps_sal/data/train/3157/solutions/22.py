@@ -5,4 +5,3 @@ def number(bus_stops):
         getin += x
         getout += y
     return getin - getout
-

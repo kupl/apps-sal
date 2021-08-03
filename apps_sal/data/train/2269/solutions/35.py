@@ -20,6 +20,7 @@ def is_bipartite(graph, s):
                 return False
     return True
 
+
 def color_bipartite(graph, s):
     """二部グラフを彩色する"""
     n = len(graph)
@@ -51,7 +52,7 @@ for a in range(n):
         if b in graph[a] or a == b:
             continue
         comp_graph[a].append(b)
-        
+
 
 cnt0 = []
 cnt1 = []

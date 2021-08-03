@@ -3,7 +3,6 @@ import numpy as np
 
 def solve():
 
-
     N, T = list(map(int, input().split()))
 
     A = []
@@ -32,5 +31,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

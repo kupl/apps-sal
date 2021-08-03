@@ -8,6 +8,6 @@ while True:
             isP = False
             break
     if isP:
-        print (x)
+        print(x)
         break
     x += 1

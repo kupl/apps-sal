@@ -18,4 +18,3 @@ while i * i <= b:
 if b > 1:
     result *= 2
 print(result)
-

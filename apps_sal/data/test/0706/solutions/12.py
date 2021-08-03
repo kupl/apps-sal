@@ -8,16 +8,15 @@ import time
 
 start = time.time()
 
-md  = 1000000007
+md = 1000000007
 
-if A!=1 :
-    an  = pow(A, n, md*(A-1))
-    bn  = B*(an-1)//(A-1)
-    ans = (an*x+bn)%md
+if A != 1:
+    an = pow(A, n, md * (A - 1))
+    bn = B * (an - 1) // (A - 1)
+    ans = (an * x + bn) % md
 else:
-    ans = (x+B*n)%md
+    ans = (x + B * n) % md
 print(ans)
 
 finish = time.time()
 #print(finish - start)
-

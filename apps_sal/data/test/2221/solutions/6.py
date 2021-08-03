@@ -35,4 +35,3 @@ while st <= en:
     else:
         st = mid + 1
 print(ans)
-

@@ -16,11 +16,9 @@ class Solution:
                         del freq[A[left]]
 
                     left += 1
-                    
+
                 subarray_count += right - left + 1
-            
+
             return subarray_count
-                
-        return getAtMost(K) - getAtMost(K-1)
 
-
+        return getAtMost(K) - getAtMost(K - 1)

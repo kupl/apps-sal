@@ -33,4 +33,3 @@ else:
                     cheapest = min(cheapest, l)
 
     print(cheapest or -1)
-

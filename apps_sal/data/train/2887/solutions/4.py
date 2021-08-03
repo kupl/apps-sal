@@ -1,6 +1,7 @@
 import random
 import base64
 
+
 def adFly_decoder(sc):
     code1 = ""
     code2 = ""

@@ -1,6 +1,5 @@
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
-        
 
         def helper(k):
             i, j, count, res, = 0, 0, 0, 0
@@ -14,7 +13,5 @@ class Solution:
                     i += 1
                 res += j - i
             return res
-        
+
         return helper(k) - helper(k - 1)
-
-

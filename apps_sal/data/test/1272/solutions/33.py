@@ -7,10 +7,10 @@ class UnionFind():
         # root[x]<0ならそのノードが根かつその値が木の要素数
         # rootノードでその木の要素数を記録する
         # root[x]>=0の場合は、特に直接的な意味を持たない気がする。計算に寄与するので意味はあるのだろうが。
-        self.root = [-1]*(n+1)
+        self.root = [-1] * (n + 1)
         # 木をくっつける時にアンバランスにならないように調整する
         # 無結合の時はRank=0,結合して1つ木が深くなると根がRank+=1
-        self.rnk = [0]*(n+1)
+        self.rnk = [0] * (n + 1)
 
     # ノードxのrootノードを見つける
     #
@@ -52,27 +52,28 @@ class UnionFind():
 
     # ノードxが属する木のサイズを返す
     def Count(self, x):
-        ret= -self.root[self.Find_Root(x)]
-        #print(ret)
+        ret = -self.root[self.Find_Root(x)]
+        # print(ret)
         return ret
-    
-############################################################################    
-N,M = map(int,input().split())
-A=[0]*M
-B=[0]*M
-for i in range(M):
-    A[i],B[i] = map(int,input().split())
 
-conv=N*(N-1)//2
-UN=UnionFind(N)
-ans=[conv]
-for j in range(M-1,0,-1):
-    if UN.isSameGroup(A[j],B[j]):
+
+############################################################################
+N, M = map(int, input().split())
+A = [0] * M
+B = [0] * M
+for i in range(M):
+    A[i], B[i] = map(int, input().split())
+
+conv = N * (N - 1) // 2
+UN = UnionFind(N)
+ans = [conv]
+for j in range(M - 1, 0, -1):
+    if UN.isSameGroup(A[j], B[j]):
         pass
     else:
-        conv -= UN.Count(A[j])*UN.Count(B[j])
+        conv -= UN.Count(A[j]) * UN.Count(B[j])
     ans.append(conv)
-    UN.Unite(A[j],B[j])
-    
+    UN.Unite(A[j], B[j])
+
 for p in ans[::-1]:
     print(p)

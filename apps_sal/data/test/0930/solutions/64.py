@@ -29,7 +29,7 @@ def main():
     k = min(n, k)
 
     ans = 0
-    for m in range(k+1):
+    for m in range(k + 1):
         empty = cmb(n, m)
         member = cmb(n - 1, n - m - 1)
         ans += (empty * member) % MOD
@@ -39,4 +39,3 @@ def main():
 
 
 main()
-

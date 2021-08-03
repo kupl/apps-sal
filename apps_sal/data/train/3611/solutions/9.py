@@ -5,5 +5,5 @@ def ranking(people):
         if pnt != d['points']:
             pnt = d['points']
             pos = c
-        res.append(dict({'position':pos}, **d))
+        res.append(dict({'position': pos}, **d))
     return res

@@ -6,6 +6,6 @@ if sum(s) % 10 != 0:
 else:
     for i in range(n):
         if s[i] % 10 != 0:
-            print(sum(s)-s[i])
+            print(sum(s) - s[i])
             return
     print(0)

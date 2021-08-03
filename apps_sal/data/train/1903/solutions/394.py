@@ -3,24 +3,24 @@ class Solution:
         l = len(points)
         if l < 2:
             return 0
-        
+
         comps = [i for i in range(l)]
-        
+
         def comp(v):
             return v if comps[v] == v else comp(comps[v])
-        
+
         def join_comp(comp1, comp2):
             for i in range(l):
                 if comps[i] == comp1:
                     comps[i] = comp2
-        
+
         edges = []
         for i in range(l):
-            for j in range(i+1, l):
+            for j in range(i + 1, l):
                 edges.append((abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1]), i, j))
-        
+
         edges.sort()
-        
+
         out = 0
         edge_count = l - 1
         for edge in edges:
@@ -33,5 +33,3 @@ class Solution:
                 if not edge_count:
                     break
         return out
-                
-

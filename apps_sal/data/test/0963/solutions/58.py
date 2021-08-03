@@ -1,39 +1,56 @@
-import sys,collections as cl,bisect as bs
+import sys
+import collections as cl
+import bisect as bs
 sys.setrecursionlimit(100000)
 input = sys.stdin.readline
-mod = 10**9+7
+mod = 10**9 + 7
 Max = sys.maxsize
-def l(): #intのlist
-    return list(map(int,input().split()))
-def m(): #複数文字
-    return list(map(int,input().split()))
-def onem(): #Nとかの取得
+
+
+def l():  # intのlist
+    return list(map(int, input().split()))
+
+
+def m():  # 複数文字
+    return list(map(int, input().split()))
+
+
+def onem():  # Nとかの取得
     return int(input())
-def s(x): #圧縮
+
+
+def s(x):  # 圧縮
     a = []
     if len(x) == 0:
         return []
     aa = x[0]
     su = 1
-    for i in range(len(x)-1):
-        if aa != x[i+1]:
-            a.append([aa,su])
-            aa = x[i+1]
+    for i in range(len(x) - 1):
+        if aa != x[i + 1]:
+            a.append([aa, su])
+            aa = x[i + 1]
             su = 1
         else:
             su += 1
-    a.append([aa,su])
+    a.append([aa, su])
     return a
-def jo(x): #listをスペースごとに分ける
-    return " ".join(map(str,x))
-def max2(x): #他のときもどうように作成可能
-    return max(list(map(max,x)))
-def In(x,a): #aがリスト(sorted)
-    k = bs.bisect_left(a,x)
-    if k != len(a) and a[k] ==  x:
+
+
+def jo(x):  # listをスペースごとに分ける
+    return " ".join(map(str, x))
+
+
+def max2(x):  # 他のときもどうように作成可能
+    return max(list(map(max, x)))
+
+
+def In(x, a):  # aがリスト(sorted)
+    k = bs.bisect_left(a, x)
+    if k != len(a) and a[k] == x:
         return True
     else:
         return False
+
 
 def pow_k(x, n):
     ans = 1
@@ -43,6 +60,7 @@ def pow_k(x, n):
         x *= x
         n >>= 1
     return ans
+
 
 """
 def nibu(x,n,r):
@@ -59,36 +77,28 @@ def nibu(x,n,r):
         ll = mid+1
 """
 
-n,k = m()
+n, k = m()
 mod = 998244353
-ans = [0 for i in range(n+1)]
+ans = [0 for i in range(n + 1)]
 
 data = []
 for i in range(k):
     data.append(l())
 
-for i in range(0,n):
+for i in range(0, n):
     if i == 0:
         ans[i] = 1
     else:
-        ans[i] += ans[i-1]
+        ans[i] += ans[i - 1]
         ans[i] %= mod
         for j in range(k):
-            l,r = data[j]
+            l, r = data[j]
             r += 1
             if l + i <= n:
-                ans[i+l] += ans[i]
-                ans[i+l] %= mod
+                ans[i + l] += ans[i]
+                ans[i + l] %= mod
             if r + i <= n:
-                ans[i+r] -= ans[i]
-                ans[i+r] %= mod
+                ans[i + r] -= ans[i]
+                ans[i + r] %= mod
 
 print((ans[-1]))
-
-
-
-
-
-
-
-

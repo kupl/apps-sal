@@ -1,6 +1,7 @@
 import math
 from collections import deque
 
+
 class Alien:
     def __init__(self, health, trail_length):
         self.health = health
@@ -42,8 +43,8 @@ class Turret:
         self.current_shots = self.max_shots
 
     def calc_dist(self, target):
-        return math.sqrt(math.pow(target[0] - self.loc[0], 2) +
-                         math.pow(target[1] - self.loc[1], 2))
+        return math.sqrt(math.pow(target[0] - self.loc[0], 2)
+                         + math.pow(target[1] - self.loc[1], 2))
 
     def shoot_nearest_alien(self, aliens):
         self.nothing_in_range = True
@@ -170,7 +171,8 @@ def game_logic(turret_data, turret_locs, alien_data, trail):
                     turrets_done = False
     return final_health
 
-def tower_defense(grid,turrets,aliens):
+
+def tower_defense(grid, turrets, aliens):
     trail, turret_locs = gen_path(grid)
     total_health = game_logic(turrets, turret_locs, aliens, trail)
     return total_health

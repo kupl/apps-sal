@@ -1,7 +1,7 @@
 def cookie(x):
-    if isinstance(x,str):
+    if isinstance(x, str):
         name = 'Zach'
-    elif not isinstance(x,(float,int)) or x in [True,False]:
+    elif not isinstance(x, (float, int)) or x in [True, False]:
         name = 'the dog'
     else:
         name = 'Monica'

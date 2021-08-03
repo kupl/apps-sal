@@ -24,7 +24,7 @@ for ai, bi in z1:
     idx = bisect.bisect_right(d, rest)
     if idx == 0:
         continue
-    current = ai * (n - z2[idx-1][0])
+    current = ai * (n - z2[idx - 1][0])
     if current < result:
         result = current
 

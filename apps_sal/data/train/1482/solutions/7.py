@@ -1,4 +1,4 @@
 # cook your dish here
 for _ in range(int(input())):
- n=int(input())
- print(1,10**(n//2))
+    n = int(input())
+    print(1, 10**(n // 2))

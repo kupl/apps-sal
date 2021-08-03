@@ -6,6 +6,8 @@ total = 0
 count = 0
 turns = -1
 direction = 1
+
+
 def traverse(nums, direction, total, count):
     """direction - 0: left to right, 1: right to left"""
     if direction == 0:
@@ -22,9 +24,10 @@ def traverse(nums, direction, total, count):
                 total += 1
                 nums[i] = -1
     return total, count
+
+
 while count < n:
     turns += 1
     direction = 1 - direction
     total, count = traverse(nums, direction, total, count)
 print(turns)
-

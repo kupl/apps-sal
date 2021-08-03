@@ -7,4 +7,3 @@ class Solution:
             if total == ((k + 1) * (k + 2)) // 2:
                 count += 1
         return count
-

@@ -18,6 +18,4 @@ else:
         else:
             if mx < col2 - col1 - 1:
                 mx = col2 - col1 - 1
-    print((mx // 60) // 10, (mx // 60) % 10, ':', (mx % 60) // 10, (mx % 60) % 10, sep = '')
- 
-
+    print((mx // 60) // 10, (mx // 60) % 10, ':', (mx % 60) // 10, (mx % 60) % 10, sep='')

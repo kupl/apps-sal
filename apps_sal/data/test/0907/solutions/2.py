@@ -4,6 +4,7 @@ def main():
             if not((a == x or a == y) or (b == x or b == y)):
                 return [a, b]
         return [-1, -1]
+
     def check1(x, y):
         for a, b in mas:
             if not((a == x or a == y) or (b == x or b == y)):
@@ -23,4 +24,6 @@ def main():
             print('YES')
         else:
             print('NO')
+
+
 main()

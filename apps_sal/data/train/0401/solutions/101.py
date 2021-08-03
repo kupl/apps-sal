@@ -7,12 +7,11 @@ class Solution:
                     return 0
                 else:
                     return -float('inf')
-            
-            
+
             new_remainder = (nums[index] + remainder) % 3
             choose = dfs(index + 1, new_remainder) + nums[index]
             no_choose = dfs(index + 1, remainder)
-            
+
             return max(choose, no_choose)
-        
-        return dfs(0,0)
+
+        return dfs(0, 0)

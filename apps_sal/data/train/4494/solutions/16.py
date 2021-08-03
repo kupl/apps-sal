@@ -3,8 +3,8 @@ def points(games):
     for game in games:
         x = int(game[0])
         y = int(game[2])
-        if x>y:
+        if x > y:
             points += 3
-        elif x==y:
+        elif x == y:
             points += 1
     return points

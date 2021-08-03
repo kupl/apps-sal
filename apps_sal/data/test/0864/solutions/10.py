@@ -10,6 +10,7 @@ for i in a:
 
 c = sorted(list(c.values()))
 
+
 def check(p):
     d = c[:]
     for _ in range(n):
@@ -20,10 +21,10 @@ def check(p):
         d[-1] -= p
     return True
 
+
 for k in range(m, -1, -1):
     if check(k):
         print(k)
         break
 else:
     print(0)
-

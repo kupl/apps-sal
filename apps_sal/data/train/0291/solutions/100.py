@@ -1,25 +1,25 @@
 class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
-        
+
         N = len(arr)
-        if(N==0):
+        if(N == 0):
             return 0
-        elif(N==1):
-            return abs(arr[0])%2
+        elif(N == 1):
+            return abs(arr[0]) % 2
         s = 0
         tot = 0
         ct_odd = 0
         ct_even = 0
         for i in range(N):
             s += arr[i]
-            if(s%2==1):
-                tot += 1+ct_even
+            if(s % 2 == 1):
+                tot += 1 + ct_even
                 ct_odd += 1
             else:
                 tot += ct_odd
                 ct_even += 1
-        return tot%(10**9+7)
-        
+        return tot % (10**9 + 7)
+
         '''l1 = 0
         l2 = 0
         if(arr[0]%2):
@@ -42,4 +42,3 @@ class Solution:
             l1 = l3
             tot += l1
         return tot%(10**9+7)'''
-

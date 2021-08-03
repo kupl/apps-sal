@@ -10,11 +10,11 @@ min_, max_ = max_, min_
 
 
 if(min_ != int(min_)):
-    min_ +=1
+    min_ += 1
 min_ = int(min_)
 
 if (max_ != int(max_)):
-    max_+=1
+    max_ += 1
 max_ = int(max_)
 
 #print(min_, max_)
@@ -23,7 +23,7 @@ s = set()
 for i in range(max(1, min_), max_):
     b = n // i
     if (n % i) != 0:
-        b+=1
+        b += 1
     s.add(b)
 if len(s) == 1:
     print(b)

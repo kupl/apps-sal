@@ -7,6 +7,8 @@ def aux(x):
             x /= i
         i += 1
     return s
+
+
 def factor_sum(num):
     l = None
     while l != num:

@@ -1,6 +1,7 @@
 import heapq
 import itertools
 
+
 def dijkstra(s):
     inf = pow(10, 10)
     dist = [inf] * (n + 1)
@@ -19,6 +20,7 @@ def dijkstra(s):
                 dist[g[0]] = dist[u] + g[1]
                 heapq.heappush(p, (dist[g[0]], g[0]))
     return dist
+
 
 n, m, r = map(int, input().split())
 t = list(map(int, input().split()))

@@ -5,9 +5,9 @@ n, s = map(int, stdin.readline().split())
 l = 0
 r = n + 1
 while r - l > 1:
-    f = lambda x: sum(map(int, list(str(x))))
+    def f(x): return sum(map(int, list(str(x))))
     m = (r + l) // 2
-    
+
     if m - f(m) >= s:
         r = m
     else:

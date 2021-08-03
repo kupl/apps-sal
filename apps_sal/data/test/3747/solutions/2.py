@@ -5,8 +5,7 @@ ans = min(ans, s.count("l"))
 ans = min(ans, s.count("b"))
 ans = min(ans, s.count("a") // 2)
 ans = min(ans, s.count("s"))
-#a
-#u
+# a
+# u
 ans = min(ans, s.count("r"))
 print(ans)
-

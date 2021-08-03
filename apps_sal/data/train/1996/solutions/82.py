@@ -3,7 +3,7 @@ class Solution:
         new_g = {i: [] for i in range(len(graph))}
         for i, n in enumerate(graph):
             new_g[i].append(n)
-        
+
         def dfs(n):
             if status[n] == -1:
                 return False

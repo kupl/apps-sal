@@ -32,5 +32,3 @@ class Solution:
                     q.append([d + 1, nr, nc, new_ob])
                     seen.add((nr, nc, new_ob))
         return -1
-
-

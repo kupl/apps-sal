@@ -1,8 +1,10 @@
 def sigma(n):
     return n * (n + 1) // 2
 
+
 def banans(p, q):
     return (p + 1) * sigma(q) + (q + 1) * sigma(p)
+
 
 m, b = [int(x) for x in input().split()]
 

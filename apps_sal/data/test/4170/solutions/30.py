@@ -1,6 +1,6 @@
 N = int(input())
 H_ls = list(map(int, input().split(' ')))
-tmp,val, rst = 0, 0, 0
+tmp, val, rst = 0, 0, 0
 for i in H_ls:
     if tmp >= i:
         val += 1

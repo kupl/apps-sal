@@ -2,9 +2,9 @@
 
 height, width = map(int, input().split())
 
-for i in range(width+2):
+for i in range(width + 2):
     print("#", end='')
-    
+
 print("")
 
 for j in range(height):
@@ -14,5 +14,5 @@ for j in range(height):
     print("#")
 
 
-for l in range(width+2):
+for l in range(width + 2):
     print("#", end='')

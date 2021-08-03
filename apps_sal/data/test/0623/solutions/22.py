@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 a1, a2 = read()
 if a1 <= 1 and a2 <= 1:
     ans = 0
@@ -19,4 +21,3 @@ else:
         ans += 1
 
 print(ans)
-

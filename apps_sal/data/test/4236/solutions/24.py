@@ -14,4 +14,3 @@ for point in range(1, m + 1):
 
 print(count_not_used)
 print(res)
-

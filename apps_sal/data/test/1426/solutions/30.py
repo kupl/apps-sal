@@ -2,6 +2,7 @@
 import sys
 from collections import deque
 
+
 def solve(N: int, M: int, G, S: int, T: int):
     S -= 1
     T -= 1
@@ -32,7 +33,7 @@ def main():
     M = int(next(tokens))  # type: int
     G = tuple(set() for _ in range(N * 3))
     for _ in range(M):
-        u, v = int(next(tokens)) - 1, int(next(tokens))-1
+        u, v = int(next(tokens)) - 1, int(next(tokens)) - 1
         G[u].add(v + N)
         G[u + N].add(v + 2 * N)
         G[u + 2 * N].add(v)
@@ -41,7 +42,9 @@ def main():
     T = int(next(tokens))  # type: int
     solve(N, M, G, S, T)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

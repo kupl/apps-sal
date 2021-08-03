@@ -12,4 +12,3 @@ class Solution:
                 res += 1
             head = head.__next__
         return res
-

@@ -3,4 +3,4 @@ A = int(input())
 B = int(input())
 
 X = X - A
-print(X - (X // B)*B)
+print(X - (X // B) * B)

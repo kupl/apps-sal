@@ -21,6 +21,7 @@ def get_colors(x1, y1, x2, y2):
         black = w * h - white
     return white, black
 
+
 def get_intersection(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2):
     if ax1 > bx2:
         return None, None, None, None
@@ -31,6 +32,7 @@ def get_intersection(ax1, ay1, ax2, ay2, bx1, by1, bx2, by2):
     if by1 > ay2:
         return None, None, None, None
     return max(ax1, bx1), max(ay1, by1), min(ax2, bx2), min(ay2, by2)
+
 
 t = int(input())
 for i in range(t):

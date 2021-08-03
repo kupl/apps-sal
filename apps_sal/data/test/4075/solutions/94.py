@@ -9,7 +9,7 @@ for i in range(2**n):
         on = 0
         a = False
         for l in ks[j]:
-            if a and (i>>(l-1)) & 1:
+            if a and (i >> (l - 1)) & 1:
                 on += 1
             a = True
         if on % 2 != p[j]:

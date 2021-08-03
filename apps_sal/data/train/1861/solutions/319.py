@@ -6,12 +6,13 @@ class Solution:
             point_set.add((x, y))
             x_map[x].add((x, y))
             y_map[y].add((x, y))
-        
+
         min_rec = math.inf
-        def dfs(points:list):
+
+        def dfs(points: list):
             nonlocal x_map, y_map, point_set, min_rec
             if len(points) not in (1, 2, 3):
-                return 
+                return
             if len(points) == 1:
                 x, y = points[0]
                 for point in x_map[x]:
@@ -37,4 +38,3 @@ class Solution:
             return min_rec
         else:
             return 0
-

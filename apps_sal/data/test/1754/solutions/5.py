@@ -6,7 +6,7 @@ ans = 0
 d = dict()
 for i in range(n + 1):
     d[i] = []
-    
+
 for i in range(n):
     d[sch[i]].append((power[i], i + 1))
 

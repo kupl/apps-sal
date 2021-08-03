@@ -1,8 +1,6 @@
 x1, y1 = list(map(int, input().split()))
 x2, y2 = list(map(int, input().split()))
 
-dx = max(2, abs(x1-x2) + 1)
-dy = max(2, abs(y1-y2) + 1)
-print(dx*2 + dy*2)
-    
-
+dx = max(2, abs(x1 - x2) + 1)
+dy = max(2, abs(y1 - y2) + 1)
+print(dx * 2 + dy * 2)

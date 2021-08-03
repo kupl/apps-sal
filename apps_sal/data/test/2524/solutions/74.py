@@ -9,10 +9,13 @@ def main():
         for a in A:
             if (a >> d) & 1:
                 x += 1
-        ans += x * (n-x) * 2**d
+        ans += x * (n - x) * 2**d
         ans %= mod
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

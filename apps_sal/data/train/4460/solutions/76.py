@@ -17,4 +17,3 @@ def whatday(num):
         return "Wrong, please enter a number between 1 and 7"
     elif num == 0:
         return "Wrong, please enter a number between 1 and 7"
-

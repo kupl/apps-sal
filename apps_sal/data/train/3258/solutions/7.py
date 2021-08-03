@@ -4,6 +4,7 @@ empty = [''] * 6
 separator = ['-'] * 6
 bar = ['|'] * 6
 
+
 def transpose(amount, tab):
 
     # "And if you listen very hard
@@ -18,7 +19,7 @@ def transpose(amount, tab):
         for i in range(len(tab[0])):
             column = get_column(tab, i)
             chunk = merge(chunk, column)
-    
+
             if chunk == separator or chunk == bar:
                 result = merge(result, chunk)
                 chunk = empty
@@ -31,17 +32,21 @@ def transpose(amount, tab):
     except OutOfFretsException as oof:
         return str(oof)
 
+
 def get_column(tab, column_idx):
     return [tab[string][column_idx] for string in range(0, 6)]
 
+
 def merge(left, right):
     return [left[i] + right[i] for i in range(0, 6)]
+
 
 def recalculate(amount, chunk):
     recalculated = [shift(string, amount) for string in chunk]
     max_length = max([len(s) for s in recalculated])
     padded = [string.ljust(max_length, '-') for string in recalculated]
     return shrink(padded)
+
 
 def shrink(chunk):
     new_chunk = empty
@@ -56,6 +61,7 @@ def shrink(chunk):
 
     return new_chunk
 
+
 def shift(string, amount):
     tokens = re.findall(r'[^\d]*[0-9]+[^\d]*', string)
     if len(tokens) > 0:
@@ -68,6 +74,7 @@ def shift(string, amount):
             return "".join(replaced)
     else:
         return string
+
 
 class OutOfFretsException(Exception):
     def __init__(self):

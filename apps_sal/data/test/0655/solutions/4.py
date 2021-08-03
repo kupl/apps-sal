@@ -1,5 +1,5 @@
 def solve(x, y, n):
-    return "White" if (x-1 + y-1) <= (n-x + n-y) else "Black"
+    return "White" if (x - 1 + y - 1) <= (n - x + n - y) else "Black"
 
 
 def main():
@@ -9,4 +9,3 @@ def main():
 
 
 main()
-

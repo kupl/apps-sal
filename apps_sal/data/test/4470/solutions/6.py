@@ -1,4 +1,4 @@
-# @author 
+# @author
 
 import sys
 
@@ -25,10 +25,7 @@ class ADivideIt:
                 print(cnt)
 
 
-
-
 solver = ADivideIt()
 input = sys.stdin.readline
 
 solver.solve()
-

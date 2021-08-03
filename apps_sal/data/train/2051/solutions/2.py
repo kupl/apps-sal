@@ -7,12 +7,11 @@ res, s = [0] * n, 0
 for i in range(k, n):
     heappush(q, (-a[i], i))
     x, j = heappop(q)
-    s -= x * (i-j)
-    res[j] = i+1
-for i in range(n, n+k):
+    s -= x * (i - j)
+    res[j] = i + 1
+for i in range(n, n + k):
     x, j = heappop(q)
-    s -= x * (i-j)
-    res[j] = i+1
+    s -= x * (i - j)
+    res[j] = i + 1
 print(s)
 print(*res)
-

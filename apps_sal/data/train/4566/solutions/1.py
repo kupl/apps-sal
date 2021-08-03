@@ -1,4 +1,4 @@
-def counting_valleys(s): 
+def counting_valleys(s):
     last_level = level = 0
     c = 0
     for m in s:

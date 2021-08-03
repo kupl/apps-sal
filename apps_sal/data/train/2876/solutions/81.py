@@ -1,5 +1,5 @@
-def check(a, x): 
+def check(a, x):
     if a.count(x) == 0:
         return False
-    else: 
+    else:
         return True

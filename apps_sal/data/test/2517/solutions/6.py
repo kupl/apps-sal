@@ -30,10 +30,9 @@ d = floyd_warshall(d)
 ans = INF
 for p in itertools.permutations(r):
     dist = 0
-    for i in range(R-1):
-        dist += d[p[i]-1][p[i+1]-1]
+    for i in range(R - 1):
+        dist += d[p[i] - 1][p[i + 1] - 1]
 
     ans = min(ans, dist)
 
 print((int(ans)))
-

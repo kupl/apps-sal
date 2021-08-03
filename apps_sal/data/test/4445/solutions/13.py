@@ -12,13 +12,13 @@ for i in map(int, input().split()):
         evens.append(i)
     else:
         odds.append(i)
-    
-evens.sort(reverse = True)
-odds.sort(reverse = True)
+
+evens.sort(reverse=True)
+odds.sort(reverse=True)
 
 if len(evens) > len(odds):
-    print(sum(evens[len(odds)+1:]))
+    print(sum(evens[len(odds) + 1:]))
 elif len(odds) > len(evens):
-    print(sum(odds[len(evens)+1:]))
+    print(sum(odds[len(evens) + 1:]))
 else:
     print(0)

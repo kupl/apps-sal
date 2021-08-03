@@ -17,4 +17,3 @@ y = 0
 for el in a:
     y += (mx - el) // z
 print(y, z)
-

@@ -11,7 +11,6 @@ x.sort()
 y.sort()
 
 if (x[1] != ax) and (y[1] != ay):
-        print('YES')
+    print('YES')
 else:
-        print('NO')
-
+    print('NO')

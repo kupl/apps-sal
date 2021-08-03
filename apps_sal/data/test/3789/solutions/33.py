@@ -55,4 +55,3 @@ while True:
             r[p[i + 1]][p[i]] = min_flow
 
 print((gain - max_flow))
-

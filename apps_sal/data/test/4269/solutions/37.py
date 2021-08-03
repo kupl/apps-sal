@@ -7,4 +7,3 @@ for s in S:
         return
     res = s
 print('Good')
-

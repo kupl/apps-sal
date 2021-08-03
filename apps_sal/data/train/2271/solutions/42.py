@@ -35,4 +35,3 @@ for j in range(1, N + 1):
     if u.check(p[j - 1], j):
         ans += 1
 print(ans)
-

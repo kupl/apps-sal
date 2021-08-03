@@ -11,4 +11,3 @@ for i in range(1, len(arr)):
         kek = 0
 max_ = max(max_, kek - 1)
 print(max_)
-

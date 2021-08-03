@@ -1,4 +1,7 @@
-import sys, math
+import sys
+import math
+
+
 def bfs(a):
     Q = [a]
     ctr = 0
@@ -19,6 +22,7 @@ def bfs(a):
         if h[1] + 1 < m and z[h[0]][h[1] + 1] == '.' and not used[h[0]][h[1] + 1]:
             Q.append([h[0], h[1] + 1])
             used[h[0]][h[1] + 1] = 1
+
 
 def bfs1(a, b):
     Q = [a]
@@ -43,7 +47,8 @@ def bfs1(a, b):
             if z[i][j] == b:
                 ctr += 1
     return ctr
-        
+
+
 n, m, k = map(int, input().split())
 z = [list(input()) for i in range(n)]
 for i in range(n):
@@ -79,11 +84,4 @@ for i in range(n):
             z[i][j] = '.'
 print(ans)
 for i in range(n):
-    print(*z[i], sep = '')
-    
-            
-            
-
-
-
-
+    print(*z[i], sep='')

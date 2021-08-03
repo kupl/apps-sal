@@ -3,13 +3,16 @@ from io import BytesIO, StringIO
 #input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
 
 DEBUG = False
-debug_print = print if DEBUG else lambda *x,**y: None
+debug_print = print if DEBUG else lambda *x, **y: None
+
 
 def input_as_list():
     return list(map(int, input().split()))
 
+
 def array_of(f, *dim):
     return [array_of(f, *dim[1:]) for _ in range(dim[0])] if dim else f()
+
 
 def main():
     from collections import defaultdict
@@ -27,7 +30,6 @@ def main():
                 last_vowel = c
 
         return count, last_vowel
-
 
     alls = []
     pool = defaultdict(dict)
@@ -67,5 +69,6 @@ def main():
 
     print(len(out))
     print('\n'.join(out))
+
 
 main()

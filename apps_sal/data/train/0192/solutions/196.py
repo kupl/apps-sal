@@ -3,7 +3,7 @@ class Solution:
         piles.sort()
         out = 0
         count = 0
-        hi = len(piles)-1
+        hi = len(piles) - 1
         lo = 0
         while count < len(piles):
             if count % 3 == 0:

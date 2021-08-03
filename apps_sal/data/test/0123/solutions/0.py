@@ -19,4 +19,3 @@ if res != list(sorted(res)):
     print("Yes")
 else:
     print("No")
-

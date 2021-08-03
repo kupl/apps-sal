@@ -7,7 +7,7 @@
 n = int(input())
 nums = list(map(int, input().split()))
 
-max_len = n+5  # 適宜変更する
+max_len = n + 5  # 適宜変更する
 mod = 10**9 + 7
 
 # 二項係数の左側の数字の最大値を max_len　とする。nとかだと他の変数と被りそうなので。
@@ -18,12 +18,12 @@ modinv_table[0] = None  # 万が一使っていたときにできるだけ早期
 factori_table = [1] * (max_len + 1)
 factori_inv_table = [1] * (max_len + 1)
 for i in range(1, max_len + 1):
-    factori_table[i] = factori_table[i-1] * (i) % mod
+    factori_table[i] = factori_table[i - 1] * (i) % mod
 
 modinv_table[1] = 1
 for i in range(2, max_len + 1):
     modinv_table[i] = (-modinv_table[mod % i] * (mod // i)) % mod
-    factori_inv_table[i] = factori_inv_table[i-1] * modinv_table[i] % mod
+    factori_inv_table[i] = factori_inv_table[i - 1] * modinv_table[i] % mod
 
 
 def binomial_coefficients(n, k):
@@ -34,10 +34,11 @@ def binomial_coefficients(n, k):
     '''
     if not 0 <= k <= n:
         return None
-    return (factori_table[n] * factori_inv_table[k] * factori_inv_table[n-k]) % mod
+    return (factori_table[n] * factori_inv_table[k] * factori_inv_table[n - k]) % mod
+
 
 # 重複要素を探索
-appearance = [-1] * (n+1)
+appearance = [-1] * (n + 1)
 for idx, num in enumerate(nums):
     if appearance[num] == -1:
         appearance[num] = idx
@@ -45,11 +46,10 @@ for idx, num in enumerate(nums):
         dup = [appearance[num], idx]
         break
 
-j = n+1 - (dup[1] - dup[0] + 1)
+j = n + 1 - (dup[1] - dup[0] + 1)
 
-for k in range(1, n+1+1):
-    if k-1 > j:
-        print((binomial_coefficients(n+1, k)))
+for k in range(1, n + 1 + 1):
+    if k - 1 > j:
+        print((binomial_coefficients(n + 1, k)))
     else:
-        print(((binomial_coefficients(n+1, k) - binomial_coefficients(j, k-1)) % mod))
-
+        print(((binomial_coefficients(n + 1, k) - binomial_coefficients(j, k - 1)) % mod))

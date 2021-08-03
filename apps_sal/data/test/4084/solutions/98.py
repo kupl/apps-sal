@@ -5,12 +5,15 @@ def main():
     quo = N // (A + B)
     rem = N % (A + B)
 
-    if (rem > A): rem = A
+    if (rem > A):
+        rem = A
     ans = quo * A + rem
 
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -3,10 +3,10 @@ class Solution:
         jd = jobDifficulty
         inf = 1e9
         l = len(jd)
-        
+
         if l < d:
             return -1
-        
+
         @functools.lru_cache(None)
         def dfs(i, d):
             if d == 1:
@@ -17,9 +17,9 @@ class Solution:
                 maxd = max(maxd, jd[j])
                 mind = min(mind, maxd + dfs(j + 1, d - 1))
             return mind
-        
+
         return dfs(0, d)
-    
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         jd = jobDifficulty
         inf = 1e9
@@ -27,11 +27,11 @@ class Solution:
         if l < d:
             return -1
         opt = [[0] * (l - d_) + [inf] * (d_) for d_ in range(d)]
-        
-        #for r in opt:
+
+        # for r in opt:
         #    print(r)
-        #print()
-        
+        # print()
+
         for i in range(d):
             for j in range(l - i):
                 if i == 0:
@@ -43,9 +43,8 @@ class Solution:
                     maxc = max(maxc, jd[k])
                     mino = min(mino, maxc + opt[i - 1][k + 1])
                 opt[i][j] = mino
-        
-        #for r in opt:
-        #    print(r)
-        
-        return opt[d - 1][0]
 
+        # for r in opt:
+        #    print(r)
+
+        return opt[d - 1][0]

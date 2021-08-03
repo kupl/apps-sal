@@ -16,4 +16,3 @@ class Solution:
                         left = mid + 1
                 res = max(res, j - l[left])
         return res
-

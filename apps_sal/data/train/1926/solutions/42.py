@@ -14,4 +14,4 @@ class Solution:
         r2 = sorted(n2.items(), key=lambda x: x[1])
         if r1[0][1] < r2[0][1]:
             return list(r1[0][0])
-        return list(r2[0][0])     
+        return list(r2[0][0])

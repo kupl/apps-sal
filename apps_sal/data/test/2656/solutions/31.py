@@ -17,6 +17,5 @@ def main():
         s = (s * (N + i) * inv[i + 1]) % mod
     return r
 
-        
-print((main()))
 
+print((main()))

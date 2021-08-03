@@ -26,5 +26,3 @@ class Solution:
             left += 1
 
         return result % (10**9 + 7)
-        
-

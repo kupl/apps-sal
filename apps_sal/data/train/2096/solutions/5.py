@@ -15,4 +15,4 @@ for i in range(n):
 
 print(len(b))
 for i in b:
-    print(len(i),*i)
+    print(len(i), *i)

@@ -1,4 +1,2 @@
 def tongues(code):
-    return code.translate(str.maketrans('BKXZNHDCWGPVJQTSRLMFbkxznhdcwgpvjqtsrlmfAIYEOUaiyeou','PVJQTSRLMFBKXZNHDCWGpvjqtsrlmfbkxznhdcwgEOUAIYeouaiy'))
-    
-
+    return code.translate(str.maketrans('BKXZNHDCWGPVJQTSRLMFbkxznhdcwgpvjqtsrlmfAIYEOUaiyeou', 'PVJQTSRLMFBKXZNHDCWGpvjqtsrlmfbkxznhdcwgEOUAIYeouaiy'))

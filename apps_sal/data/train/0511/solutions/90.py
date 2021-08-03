@@ -10,4 +10,3 @@ for a in A:
     result.append(a ^ xor_base)
 
 print((*result))
-

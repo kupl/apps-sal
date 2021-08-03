@@ -10,6 +10,6 @@ for i in range(n):
     B[i] -= d
     d = min(A[i + 1], B[i])
     cnt += d
-    A[i+1] -=d
+    A[i + 1] -= d
 
 print(cnt)

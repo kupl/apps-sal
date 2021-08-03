@@ -6,7 +6,7 @@
 #         self.right = None
 
 class Solution:
-    
+
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
         if original == target:
             return cloned
@@ -15,9 +15,8 @@ class Solution:
         else:
             left = self.getTargetCopy(original.left, cloned.left, target)
             right = self.getTargetCopy(original.right, cloned.right, target)
-            
+
             if left != None:
                 return left
             else:
                 return right
-

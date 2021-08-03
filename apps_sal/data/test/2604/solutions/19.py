@@ -14,4 +14,3 @@ for _ in range(sausages):
         count += 1
 
 print(count)
-

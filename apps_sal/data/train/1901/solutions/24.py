@@ -1,18 +1,20 @@
 from collections import defaultdict, Counter
+
+
 class Solution:
     def find(self, j):
         if self.d[j] == j:
             return j
-        
+
         self.d[j] = self.find(self.d[j])
         return self.d[j]
-    
+
     def union(self, ij1, ij2):
         i1 = self.find(ij1)
         i2 = self.find(ij2)
         if i1 == i2:
             return
-        
+
         if self.rank[i2] > self.rank[i1]:
             self.d[i1] = i2
             # self.rank[i2] = self.rank[i1] + 1
@@ -20,7 +22,7 @@ class Solution:
             if self.rank[i1] >= self.rank[i2]:
                 self.d[i2] = i1
             self.rank[i1] += 1
-    
+
     def largestIsland(self, grid: List[List[int]]) -> int:
         self.rank, self.d = {}, {}
         self.z = []
@@ -32,7 +34,7 @@ class Solution:
                     self.rank[(r, c)] = 0
                 if col == 0:
                     self.z.append((r, c))
-                    
+
         for a, b in list(self.d.keys()):
             search = [(a + 1, b), (a - 1, b), (a, b + 1), (a, b - 1)]
             for c, d in search:
@@ -42,7 +44,7 @@ class Solution:
             self.find(key)
         cc = Counter(list(self.d.values()))
         print(('cc ', cc))
-        
+
         print(('d ', self.d))
         print(('rank', self.rank))
         if cc:
@@ -57,6 +59,5 @@ class Solution:
             print(('total ', total))
             s = sum(total.values())
             self.res = max(self.res, s + 1)
-            
-        return self.res
 
+        return self.res

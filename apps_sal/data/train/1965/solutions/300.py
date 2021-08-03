@@ -27,18 +27,18 @@ class Solution:
                 result += 1
             else:
                 s2 += 1
-        return result if s1 == s2 == n-1 else -1
+        return result if s1 == s2 == n - 1 else -1
 
-    
+
 class UnionFind:
     def __init__(self, n):
-        self.parent = [i for i in range(n+1)]
-    
+        self.parent = [i for i in range(n + 1)]
+
     def find(self, i):
         if self.parent[i] != i:
             self.parent[i] = self.find(self.parent[i])
         return self.parent[i]
-    
+
     def union(self, i, j):
         pi, pj = self.find(i), self.find(j)
         if pi == pj:

@@ -11,7 +11,5 @@ class Solution:
                         break
             if len(divisor) == 4:
                 res += sum(divisor)
-                
-        return res
-                    
 
+        return res

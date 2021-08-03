@@ -5,13 +5,13 @@ class Solution:
             if el not in h:
                 h[el] = 0
             h[el] += 1
-        
+
         tmp = []
         for key in list(h.keys()):
             tmp.append(h[key])
-        
+
         tmp.sort()
-        
+
         count = 0
         size = 0
         for i in range(len(tmp) - 1, -1, -1):
@@ -19,7 +19,5 @@ class Solution:
             count += 1
             if size >= math.ceil(len(arr) / 2):
                 break
-            
-        
-        return count
 
+        return count

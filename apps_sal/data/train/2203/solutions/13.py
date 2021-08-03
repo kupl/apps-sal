@@ -9,8 +9,3 @@ pos = [0] * n
 for i in range(n):
     pos[p[i][-1]] = i + 1
 print(*pos)
-
-    
-    
-        
-

@@ -1,6 +1,6 @@
 import sys
-n, k = [ int(x) for x in input().split() ]
-arr = list( map( int, input().split()) )
+n, k = [int(x) for x in input().split()]
+arr = list(map(int, input().split()))
 
 cnt_2 = 2 * n
 cnt_4 = n
@@ -43,4 +43,3 @@ while(i < k):
     i = i + 1
 
 print("YES")
-

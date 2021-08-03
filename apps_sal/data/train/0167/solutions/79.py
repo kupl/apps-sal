@@ -1,9 +1,12 @@
 class Solution(object):
     def superEggDrop(self, K, N):
         memo = {}
+
         def dp(K, N):
-            if K == 1: return N
-            if N == 0: return 0
+            if K == 1:
+                return N
+            if N == 0:
+                return 0
             if (K, N) in memo:
                 return memo[(K, N)]
             res = float('INF')
@@ -18,7 +21,7 @@ class Solution(object):
                 else:
                     lo = mid + 1
                     res = min(res, not_broken + 1)
-            
+
             memo[(K, N)] = res
             return res
 

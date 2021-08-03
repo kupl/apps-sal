@@ -1,4 +1,6 @@
 from collections import deque
+
+
 def main():
     s = list(input())
     q = int(input())
@@ -25,6 +27,9 @@ def main():
         que.reverse()
     print("".join(que))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

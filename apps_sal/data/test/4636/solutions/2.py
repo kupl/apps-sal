@@ -23,4 +23,3 @@ for t in range(int(input())):
         prev = curr
         moves += bool(curr)
     print(moves, a, b)
-

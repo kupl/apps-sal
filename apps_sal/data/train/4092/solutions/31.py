@@ -1,3 +1,3 @@
-def main (verb, noun):
-    x = (verb+noun)
+def main(verb, noun):
+    x = (verb + noun)
     return str(x)

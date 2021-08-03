@@ -1,4 +1,17 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time, copy,bisect
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import bisect
 from operator import itemgetter
 #from heapq import heappush, heappop
 #import numpy as np
@@ -11,26 +24,29 @@ mod = 10**9 + 7
 
 stdin = sys.stdin
 
-ni = lambda: int(ns())
-nf = lambda: float(ns())
-na = lambda: list(map(int, stdin.readline().split()))
-nb = lambda: list(map(float, stdin.readline().split()))
-ns = lambda: stdin.readline().rstrip()  # ignore trailing spaces
+
+def ni(): return int(ns())
+def nf(): return float(ns())
+def na(): return list(map(int, stdin.readline().split()))
+def nb(): return list(map(float, stdin.readline().split()))
+def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+
 
 def is_prime(n):
     if n == 1:
         return False
-    for i in range(2,int(n**0.5)+1):
+    for i in range(2, int(n**0.5) + 1):
         if n % i == 0:
             return False
     return True
 
+
 a = [0] * (10 ** 5 + 5)
-for i in range(1, 10**5+1):
-    a[i] = a[i-1]
-    if is_prime(i) and is_prime((i+1) // 2):
+for i in range(1, 10**5 + 1):
+    a[i] = a[i - 1]
+    if is_prime(i) and is_prime((i + 1) // 2):
         a[i] += 1
 Q = ni()
 for i in range(Q):
     l, r = na()
-    print(a[r] - a[l-1])
+    print(a[r] - a[l - 1])

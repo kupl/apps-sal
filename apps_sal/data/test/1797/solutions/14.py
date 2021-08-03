@@ -23,4 +23,3 @@ if len(sizes) > 1:
     sizes.pop()
 
 print(sum([x**2 for x in sizes]))
-

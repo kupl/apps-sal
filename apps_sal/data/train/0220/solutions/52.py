@@ -6,10 +6,10 @@ class Solution:
         left = []
         for i in range(len(A)):
             c, g = A[i], G[i]
-            s += (1-g)*c
-            ws += g*c
-            if i>=X:
-                ws -= A[i-X] * G[i-X]
+            s += (1 - g) * c
+            ws += g * c
+            if i >= X:
+                ws -= A[i - X] * G[i - X]
             res = max(res, ws)
             # print(i,j,s,res)
-        return res+s
+        return res + s

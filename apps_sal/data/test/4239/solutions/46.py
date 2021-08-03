@@ -19,10 +19,10 @@ while n_n < N:
 # print(9**n_c)
 
 ans = float("inf")
-for i in range(s_max+1):
+for i in range(s_max + 1):
     # print("#####", i, "#####")
-    j = (N - 6*i) // 9
-    o = N - 6*i - 9*j
+    j = (N - 6 * i) // 9
+    o = N - 6 * i - 9 * j
     if o < 0:
         continue
     tmp_ans = o + i + j
@@ -31,17 +31,17 @@ for i in range(s_max+1):
     tmp = 6 ** s_c
     while 0 < tmp:
         r = i // tmp
-        i -= r*tmp
+        i -= r * tmp
         # print("i", i)
-        tmp_ans += r - r*tmp
+        tmp_ans += r - r * tmp
         tmp //= 6
 
     tmp = 9 ** n_c
     while 0 < tmp:
         r = j // tmp
-        j -= r*tmp
+        j -= r * tmp
         # print("j", j)
-        tmp_ans += r - r*tmp
+        tmp_ans += r - r * tmp
         tmp //= 9
 
     # print(tmp_ans)

@@ -1,6 +1,6 @@
 
 def modify(string, index):
-    
+
     if string[index] == '0':
         key = 0
     else:
@@ -17,4 +17,3 @@ minx = 'zzzzzzzzz'
 for i in range(x):
     minx = min(minx, modify(y, i))
 print(minx)
-

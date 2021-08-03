@@ -1,4 +1,6 @@
 import re
+
+
 def spin_solve(sentence):
     ans = sentence.split()
     for idx, val in enumerate(ans):
@@ -8,5 +10,5 @@ def spin_solve(sentence):
         elif len(t) == 2 or val.endswith(','):
             ans[idx] = val.upper()
         elif len(t) == 1:
-            ans[idx] = '0'             
+            ans[idx] = '0'
     return ' '.join(ans)

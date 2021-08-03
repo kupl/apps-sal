@@ -19,4 +19,3 @@ if flag:
     print((" ".join(map(str, ans[::-1]))))
 else:
     print((-1))
-

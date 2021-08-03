@@ -18,6 +18,3 @@ class Solution:
                 end -= 1
             curr_opt = min(curr_opt, end - start + 1)
         return curr_opt
-            
-        
-

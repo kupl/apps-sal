@@ -14,7 +14,7 @@ class Solution:
                 return -1
             else:
                 return 1
-    
+
     def isAlienSorted(self, words: List[str], order: str) -> bool:
         n: int = len(words)
         if n == 0 or n == 1:

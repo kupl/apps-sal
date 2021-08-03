@@ -10,7 +10,7 @@ class Solution:
                 return []
             if not lake:
                 if not closest:
-                    res.append(1) 
+                    res.append(1)
                     continue
                 nxt = heapq.heappop(closest)
                 res.append(rains[nxt])

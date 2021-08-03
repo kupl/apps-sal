@@ -7,9 +7,9 @@ class Solution:
         for i in range(n):
             for j in range(n):
                 if i != j:
-                    graph[i].append((abs(points[j][0]-points[i][0])+abs(points[j][1]-points[i][1]), j))
+                    graph[i].append((abs(points[j][0] - points[i][0]) + abs(points[j][1] - points[i][1]), j))
 
-        heap = [(0,0)]
+        heap = [(0, 0)]
         res = 0
         visited = set()
         while heap:
@@ -24,8 +24,3 @@ class Solution:
                     heapq.heappush(heap, (cost, nei))
 
         return res
-
-    
-    
-    
-

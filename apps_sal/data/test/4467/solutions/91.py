@@ -12,7 +12,7 @@ for i in range(n):
     '''
 red.sort(key=lambda x: (x[0], x[1]), reverse=True)
 blue.sort(key=lambda x: x[1])
-flg_r = [0]*n
+flg_r = [0] * n
 cnt = 0
 
 for i in range(n):
@@ -25,5 +25,3 @@ for i in range(n):
             break
 
 print(cnt)
-
-

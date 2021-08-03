@@ -1,5 +1,6 @@
 import decimal
 
+
 def weight(n, w):
     I0 = decimal.Decimal(0.14849853757254047)
     OFFSET = decimal.Decimal(7.389056098930639)

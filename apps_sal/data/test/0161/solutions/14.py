@@ -11,4 +11,3 @@ while x != 2 ** x.bit_length() - 1:
     t += 1
 print(t)
 print(*ans)
-

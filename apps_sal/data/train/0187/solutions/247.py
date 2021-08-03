@@ -18,13 +18,11 @@ class Solution:
                 wait = 0
             num_rotations += 1
             temp = served * boardingCost - num_rotations * runningCost
-            profit = max(profit,temp)
+            profit = max(profit, temp)
             if profit == temp:
                 min_rotations = min_rotations if prev_profit == profit else num_rotations
                 prev_profit = profit
-                
+
         if profit < 0:
             return -1
         return min_rotations
-        
-

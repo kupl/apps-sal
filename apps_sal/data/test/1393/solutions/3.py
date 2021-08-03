@@ -5,6 +5,7 @@ def foo():
         d[key] = d.get(key, 0) + 1
     return d
 
+
 def f(s):
     d = {}
     for key in list(s.keys()):
@@ -15,6 +16,7 @@ def f(s):
             d[key] = d.get(key, 0) + s[key]
     return d
 
+
 s = foo()
 t = foo()
 yr = 0
@@ -24,7 +26,7 @@ for key in list(s.keys()):
     yr += element
     s[key] -= element
     if t.get(key):
-        t[key] -= element 
+        t[key] -= element
 
 s = f(s)
 t = f(t)
@@ -34,7 +36,6 @@ for key in list(s.keys()):
     op += element
     s[key] -= element
     if t.get(key):
-        t[key] -= element 
+        t[key] -= element
 
 print(yr, op)
-

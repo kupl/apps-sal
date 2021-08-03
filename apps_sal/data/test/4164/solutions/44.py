@@ -1,3 +1,3 @@
 r = int(input())
 
-print(r*r)
+print(r * r)

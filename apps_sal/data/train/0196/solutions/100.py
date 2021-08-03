@@ -18,7 +18,7 @@ class Solution:
 
         running_sum = A[0]
         best = dp[0] + pre[0]
-        
+
         for i in range(1, len(A)):
             dp[i] = max(dp[i - 1] + A[i], A[i])
 

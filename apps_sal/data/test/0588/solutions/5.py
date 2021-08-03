@@ -27,11 +27,11 @@ def main():
             tmpy += txy[(i + j) % N][2]
             ans = max(ans, math.sqrt(tmpx ** 2 + tmpy ** 2))
 
-
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

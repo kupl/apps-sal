@@ -5,9 +5,9 @@ def solve():
         if p % i == 0:
             if i * (s - i) == p or (p // i) * (s - p // i) == p:
                 print("Yes")
-                return 
+                return
 
     print("No")
 
-solve()
 
+solve()

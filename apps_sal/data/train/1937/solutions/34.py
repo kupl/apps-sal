@@ -5,12 +5,13 @@ class Person:
         self.alive = True
         self.parent = None
 
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
         self.king = Person(kingName)
         self.people = {kingName: self.king}
-        
+
     def successor(self, x, current_order):
         stack = [x]
         while len(stack) > 0:
@@ -35,7 +36,6 @@ class ThroneInheritance:
         result = []
         self.successor(self.king, result)
         return [i.name for i in result]
-        
 
 
 # Your ThroneInheritance object will be instantiated and called as such:
@@ -43,4 +43,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

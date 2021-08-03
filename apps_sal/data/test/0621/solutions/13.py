@@ -12,7 +12,7 @@ for a in arr:
         counter_negative += 1
 
     if counter_negative == 3:
-        res.append(current-1)
+        res.append(current - 1)
         current = 1
         counter_negative = 1
 res.append(current)
@@ -20,4 +20,3 @@ res.append(current)
 print(len(res))
 for r in res:
     print(r, end=' ')
-

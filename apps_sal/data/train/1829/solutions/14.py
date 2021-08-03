@@ -9,29 +9,21 @@ class Solution:
         sumNode = []
         self.goodNode(root, -234627, sumNode)
         return len(sumNode)
-    
+
     def goodNode(self, root, maxSoFar, sumNode):
         if root is None:
             return
-        
-        #print(\"MaxSoFar\", maxSoFar)
-        #print(\"Root val\", root.val)
+
+        # print(\"MaxSoFar\", maxSoFar)
+        # print(\"Root val\", root.val)
         print((root.val))
-        
+
         if root.val >= maxSoFar:
-            #print(\"Added\", root.val)
+            # print(\"Added\", root.val)
             sumNode.append(root.val)
-            #print(sumNode)
-        
+            # print(sumNode)
+
         maxSoFarNow = max(maxSoFar, root.val)
-        
+
         self.goodNode(root.left, maxSoFarNow, sumNode)
         self.goodNode(root.right, maxSoFarNow, sumNode)
-        
-        
-        
-        
-        
-
-        
-

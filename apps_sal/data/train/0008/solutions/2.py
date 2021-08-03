@@ -20,10 +20,9 @@ t = int(input())
 for _ in range(t):
     n, k = map(int, input().split())
     s = input()[:-1]
-    
+
     s = compress(s)
 
-    
     w_groups = 0
     w_cnt = 0
     l_cnt = 0
@@ -40,7 +39,7 @@ for _ in range(t):
     if w_cnt == 0:
         print(max(min(k, l_cnt) * 2 - 1, 0))
         continue
-        
+
     ans = w_cnt * 2 - w_groups
     ans += min(k, l_cnt) * 2
 

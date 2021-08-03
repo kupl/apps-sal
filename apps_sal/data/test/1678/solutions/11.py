@@ -8,7 +8,6 @@ def update(index, delta=1):
         index += lowbit(index)
 
 
-
 def query(index):
     res = 0
     while index > 0:
@@ -35,13 +34,13 @@ size = len(summ)
 d = {}
 for i in range(size):
     d[summ[i]] = i + 1
-#print(summ)
-#print(d)
+# print(summ)
+# print(d)
 tree = [0] * (size + 1)
 update(d[0])
 
 res = 0
-for i in range(1, n+1):
+for i in range(1, n + 1):
     v = summ_raw[i]
     index = d[v - t]
     cur = (query(size) - query(index))
@@ -49,7 +48,6 @@ for i in range(1, n+1):
     res += cur
     update(d[v])
 print(res)
-
 
 
 '''
@@ -135,4 +133,3 @@ Output
 
 3
 '''
-

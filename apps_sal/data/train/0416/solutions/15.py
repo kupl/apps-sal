@@ -1,14 +1,15 @@
 class Solution:
     def catMouseGame(self, graph: List[List[int]]) -> int:
-        # For n nodes, the possible longest path in the graph is n. If the cat can win, 
-        # its distance to the mouse should decrease, after decease n times if still doesn't 
+        # For n nodes, the possible longest path in the graph is n. If the cat can win,
+        # its distance to the mouse should decrease, after decease n times if still doesn't
         # catch the mouse, and mouse haven't reach node 0 yet, means this is a draw
-        
-        # it takes at most n for mouse to get to 0. At 2*n time, it means mouse take a 
-        # detour of at least n steps. It means that there should be at least a loop(size n) 
+
+        # it takes at most n for mouse to get to 0. At 2*n time, it means mouse take a
+        # detour of at least n steps. It means that there should be at least a loop(size n)
         # or multiple loops of (size < n).
-        
+
         n = len(graph)
+
         @lru_cache(None)
         def move(cat, mouse, t):
             if t == 2 * n:
@@ -37,9 +38,8 @@ class Solution:
                         best_result = 0
             return best_result
         return move(2, 1, 0)
-        
-        
-        
+
+
 #         n = len(graph)
 #         cache = [[[-1] * (2 * n) for _ in range(n)] for _ in range(n)]
 #         def move(cat, mouse, t):
@@ -74,4 +74,3 @@ class Solution:
 #                 cache[cat][mouse][t] = best_result
 #             return cache[cat][mouse][t]
 #         return move(2, 1, 0)
-

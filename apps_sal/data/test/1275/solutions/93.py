@@ -7,4 +7,3 @@ def f(n, x):
 
 n, k = list(map(int, input().split()))
 print((sum(f(n, x) * f(n, x + k) for x in range(2, 2 * n - k + 1))))
-

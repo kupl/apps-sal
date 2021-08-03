@@ -21,5 +21,3 @@ for i in range(n):
 print(m)
 print(" ".join([str(x) for x in g]))
 print(" ".join([str(x) for x in h]))
-
-

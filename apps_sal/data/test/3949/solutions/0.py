@@ -5,8 +5,10 @@ H, W = map(int, readline().split())
 G = [[1 if s == '#' else 0 for s in readline().strip()] for _ in range(H)]
 
 DIREC = [(0, 1), (1, 0), (-1, 0), (0, -1)]
+
+
 def calc():
-    zh = 0      
+    zh = 0
     for i in range(H):
         cnt = 0
         for j in range(W):
@@ -42,7 +44,7 @@ def calc():
                 cnt = 2
         if cnt == 0:
             zw = 1
-    if zw^zh:
+    if zw ^ zh:
         return -1
     ans = 0
     used = set()
@@ -51,22 +53,24 @@ def calc():
         for j in range(W):
             if G[i][j] == 0:
                 continue
-            if (i*geta + j) in used:
+            if (i * geta + j) in used:
                 continue
             ans += 1
-            stack = [i*geta + j]
+            stack = [i * geta + j]
             while stack:
                 nh, nw = divmod(stack.pop(), geta)
                 for dh, dw in DIREC:
-                    fh, fw = nh+dh, nw+dw
+                    fh, fw = nh + dh, nw + dw
                     if not 0 <= fh < H or not 0 <= fw < W:
                         continue
                     if not G[fh][fw]:
                         continue
-                    vf = fh*geta + fw
+                    vf = fh * geta + fw
                     if vf in used:
                         continue
                     stack.append(vf)
                     used.add(vf)
     return ans
+
+
 print(calc())

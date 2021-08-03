@@ -1,7 +1,7 @@
 def main():
     s = input()
-    ans = [0]*len(s)
-    pos = [-1]*len(s)
+    ans = [0] * len(s)
+    pos = [-1] * len(s)
     x = None
     for i in range(len(s)):
         if s[i] == "L":
@@ -24,12 +24,15 @@ def main():
             ans[pos[i]] += 1
         else:
             if s[i] == "L":
-                ans[pos[i]-1] += 1
+                ans[pos[i] - 1] += 1
             else:
-                ans[pos[i]+1] += 1
+                ans[pos[i] + 1] += 1
     for v in ans:
         print(v, end=" ")
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

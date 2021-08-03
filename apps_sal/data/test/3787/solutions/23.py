@@ -49,4 +49,3 @@ ans = []
 for g in groups:
     ans += g[::-1]
 print((*ans))
-

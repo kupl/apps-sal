@@ -6,8 +6,7 @@ assert len(a) == n
 m = int(input())
 
 if n <= m:
-    print(sum(a) - d * (m-n))
+    print(sum(a) - d * (m - n))
 else:
     a.sort()
     print(sum(a[:m]))
-

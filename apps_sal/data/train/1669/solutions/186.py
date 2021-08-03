@@ -8,10 +8,8 @@ class Solution:
                 num = m + i
                 if num in counter:
                     counter[num] -= 1
-                    if counter[num] == 0: del counter[num]
+                    if counter[num] == 0:
+                        del counter[num]
                 else:
                     return False
         return True
-                    
-                
-

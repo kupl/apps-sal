@@ -6,4 +6,3 @@ class Solution:
             res += c[-t % 60]
             c[t % 60] += 1
         return res
-

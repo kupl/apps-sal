@@ -13,4 +13,3 @@ if mx == INF:
     print((0))
 else:
     print((sm - mx))
-

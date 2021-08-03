@@ -4,4 +4,3 @@ if L == R:
     print(L)
 else:
     print(2)
-

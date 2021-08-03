@@ -1,4 +1,6 @@
 import math
+
+
 def ex_euler(n):
     h = 1.0 / n
     xk = 0
@@ -8,7 +10,7 @@ def ex_euler(n):
     Z = [1.0]
 
     for i in range(n):
-        
+
         yk += (2 - math.exp(-4 * xk) - 2 * yk) * h
         Y.append(yk)
 
@@ -20,4 +22,4 @@ def ex_euler(n):
     for i in range(len(Y)):
         sm += abs(Y[i] - Z[i]) / Z[i]
 
-    return int(sm/(n+1)*1000000) / 1000000.0
+    return int(sm / (n + 1) * 1000000) / 1000000.0

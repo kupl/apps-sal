@@ -7,11 +7,11 @@ maxim = 0
 results = []
 
 for i in range(1, n):
-    results.append(abs(a[i-1] - a[i]))
+    results.append(abs(a[i - 1] - a[i]))
 
 
-for i in range(0,n-1):
-    if i%2 == 1:
+for i in range(0, n - 1):
+    if i % 2 == 1:
         condition = -results[i]
     else:
         condition = results[i]
@@ -28,5 +28,4 @@ for i in range(0,n-1):
     if aux < 0:
         aux = 0
 
-print (maxim)
-
+print(maxim)

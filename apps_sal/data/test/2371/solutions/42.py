@@ -11,7 +11,7 @@ dp = [[None] * 2 for _ in range(n)]
 for i in range(n - 1, -1, -1):
     for c, ini, f, t in zip(coef, initial, func, turn):
         dp[i][t] = c * INF
-        opo_card = a[i-1] if i else ini
+        opo_card = a[i - 1] if i else ini
         dp[i][t] = f(dp[i][t], abs(a[-1] - opo_card))
         opo_t = (t + 1) % 2
         for j in range(i + 1, n):
@@ -19,4 +19,3 @@ for i in range(n - 1, -1, -1):
 
 ans = dp[0][0]
 print(ans)
-

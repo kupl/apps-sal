@@ -8,7 +8,7 @@ def Input():
 
 def main():
     data = sorted(Input(), reverse=True)
-    print(int(str(data[0])+str(data[1])) + data[2])
+    print(int(str(data[0]) + str(data[1])) + data[2])
 
 
 main()

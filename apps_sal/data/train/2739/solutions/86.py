@@ -7,4 +7,3 @@ def cube_odd(arr):
         else:
             return None
     return sum
-

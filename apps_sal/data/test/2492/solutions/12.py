@@ -1,14 +1,15 @@
+import numpy as np
 import sys
 input = sys.stdin.readline
-import numpy as np
+
 
 def main():
-    N, K = map(int,input().split())
+    N, K = map(int, input().split())
     A = np.sort(np.array(list(map(int, input().split())), np.int64))
     z = A[A == 0]
     p = A[A > 0]
     n = A[A < 0]
-    
+
     def count_func(x):
         cnt = 0
         if x >= 0:
@@ -18,7 +19,7 @@ def main():
         cnt -= np.count_nonzero(A * A <= x)
         assert cnt % 2 == 0
         return cnt // 2
-    
+
     l = -10 ** 18
     r = 10 ** 18
     while l + 1 < r:
@@ -27,9 +28,12 @@ def main():
             r = x
         else:
             l = x
-    
+
     print(r)
-    
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

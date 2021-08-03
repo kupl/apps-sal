@@ -23,4 +23,3 @@ for i in range(len(p) - 1, len(t), -1):
     fsum[i] = (fsum[i + 1] + f[i]) % MOD
     fsum2[i] = (fsum2[i + 1] + fsum[i]) % MOD
 print(fsum[len(t) + 1])
-

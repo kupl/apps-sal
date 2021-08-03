@@ -1,6 +1,6 @@
 class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
-        
+
         @lru_cache(None)
         def min_cost(left_end=0, right_end=n):
             if any(left_end < cut < right_end for cut in cuts):
@@ -12,5 +12,5 @@ class Solution:
                 )
                 return nxt_costs + cost
             return 0
-        
+
         return min_cost()

@@ -1,7 +1,7 @@
 N = int(input())
 S = input()
 
-ans = 0 
+ans = 0
 tmp = 0
 for i in range(N):
     if S[i] == "A":
@@ -15,4 +15,3 @@ for i in range(N):
         tmp = 0
 
 print(ans)
-

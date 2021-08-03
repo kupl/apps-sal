@@ -14,4 +14,3 @@ for i in range(n):
         temp[t[j] - 1] += 1
         res[idx - 1] += 1
 print(*res)
-

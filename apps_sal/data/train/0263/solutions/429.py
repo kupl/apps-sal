@@ -1,6 +1,7 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        if n == 1: return 10
+        if n == 1:
+            return 10
         self.mod = 1e9 + 7
         self.cache = {}
         self.knight_steps = {
@@ -17,15 +18,15 @@ class Solution:
         }
         count = 0
         for i in range(10):
-            count += self.recursive_calc(i, n - 1) 
+            count += self.recursive_calc(i, n - 1)
             count = count % self.mod
-            
+
         # print(self.cache)
         return int(count % self.mod)
-        
-    
+
     def recursive_calc(self, current_number, steps):
-        if steps == 0: return 1
+        if steps == 0:
+            return 1
         if (current_number, steps) in self.cache:
             return self.cache[(current_number, steps)]
         total = 0

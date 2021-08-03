@@ -10,10 +10,12 @@ def solve():
     cnt = 0
     while M > 0:
         M -= sizes[cnt]
-        cnt +=1
+        cnt += 1
     print(cnt)
+
 
 def __starting_point():
     solve()
+
 
 __starting_point()

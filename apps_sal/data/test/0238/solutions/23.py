@@ -13,4 +13,3 @@ for i in range(n):
 
 print(best)
 # print(dp)
-

@@ -1,15 +1,15 @@
-n,m=map(int,input().split())
+n, m = map(int, input().split())
 
-l=[]
+l = []
 for i in range(n):
-  p=list(map(int,input().split()))
-  for j in range(1,p[0]+1):
-    l.append(p[j])
+    p = list(map(int, input().split()))
+    for j in range(1, p[0] + 1):
+        l.append(p[j])
 
-cnt=0
+cnt = 0
 
 for k in l:
-  if l.count(k)==n:
-    cnt+=1
+    if l.count(k) == n:
+        cnt += 1
 
-print(cnt//n)
+print(cnt // n)

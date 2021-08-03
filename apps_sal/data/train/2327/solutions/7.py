@@ -1,5 +1,7 @@
 import sys
 input = sys.stdin.readline
+
+
 class BIT():
     def __init__(self, number):
         self.n = number
@@ -20,21 +22,21 @@ class BIT():
     def suma(self, i, j):  # i,i+1,..j sum
         return self.search(j) - self.search(i - 1)
 
-N,M=list(map(int,input().split()))
-L=[[] for i in range(M+1)]
-bit=BIT(M+1)
-for i in range(N):
-    l,r=list(map(int,input().split()))
-    L[r-l+1].append((l,r))
-ans=N
-for i in range(1,M+1):
-    num=0
-    for l,r in L[i]:
-        ans-=1
-        bit.add(l,1)
-        bit.add(r+1,-1)
-    num+=ans
-    for j in range(i,M+1,i):
-        num+=bit.search(j)
-    print(num)
 
+N, M = list(map(int, input().split()))
+L = [[] for i in range(M + 1)]
+bit = BIT(M + 1)
+for i in range(N):
+    l, r = list(map(int, input().split()))
+    L[r - l + 1].append((l, r))
+ans = N
+for i in range(1, M + 1):
+    num = 0
+    for l, r in L[i]:
+        ans -= 1
+        bit.add(l, 1)
+        bit.add(r + 1, -1)
+    num += ans
+    for j in range(i, M + 1, i):
+        num += bit.search(j)
+    print(num)

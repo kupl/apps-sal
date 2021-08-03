@@ -11,4 +11,3 @@ elif a in lis2 and b in lis2:
     print('Yes')
 else:
     print('No')
-

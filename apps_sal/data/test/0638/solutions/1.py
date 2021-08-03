@@ -14,4 +14,3 @@ for i in range(n):
         j += 1
     a.append(i - j)
 print(*a)
-

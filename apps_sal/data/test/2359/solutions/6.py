@@ -15,4 +15,3 @@ for _ in range(T):
             print(l * 2 + 1)
         else:
             print(r * 2 + 1)
-

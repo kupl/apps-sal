@@ -4,8 +4,7 @@ def minimum(arr):
         if i < min:
             min = i
     return min
-            
-        
+
 
 def maximum(arr):
     max = -1000000000

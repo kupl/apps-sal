@@ -18,5 +18,3 @@ def play_pass(s, n):
 
     # Step 5
     return caseText[::-1]
-
-

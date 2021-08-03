@@ -14,5 +14,4 @@ for s in a:
         y += 1
 x += (x // k) * 5
 y += (y // k) * 5
-print(x + 1,  y + 1)
-
+print(x + 1, y + 1)

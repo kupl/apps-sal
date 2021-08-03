@@ -28,5 +28,3 @@ while k > 0:
     results.sort()
 
 print(results[0][0])
-
-

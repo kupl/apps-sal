@@ -17,4 +17,3 @@ else:
     for j in range(m - 1):
         print(b[j], end=' ')
     print(x)
-

@@ -3,21 +3,22 @@ class Item:
         self.value = value
         self.index = index
 
+
 class Stack:
     def __init__(self):
         self._stack = []
         self._top_index = 0
-    
+
     def top(self):
         if self._top_index <= 0:
             return None
         return self._stack[self._top_index - 1]
-    
+
     def pop(self):
         item = self._stack.pop()
         self._top_index -= 1
         return item
-    
+
     def push(self, item):
         self._stack.append(item)
         self._top_index += 1
@@ -33,10 +34,11 @@ class Stack:
         self.index += 1
         return value
 
+
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
         stack = Stack()
-        
+
         for index, c in enumerate(s):
             if c == '(':
                 item = Item('(', index)
@@ -54,5 +56,5 @@ class Solution:
             result += s[prev_index:item.index]
             prev_index = item.index + 1
         result += s[prev_index:]
-        
+
         return result

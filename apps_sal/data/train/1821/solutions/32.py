@@ -12,4 +12,4 @@ class Solution:
         return (nums
                 if len(nums) < 2
                 else self._merge(self.sortArray(nums[:pivot]),
-                                self.sortArray(nums[pivot:])))
+                                 self.sortArray(nums[pivot:])))

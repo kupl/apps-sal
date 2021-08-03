@@ -18,7 +18,7 @@ for j in range(w):
         if c[j] < h:
             if a[c[j]][j] == 1:
                 print(0)
-                break              
+                break
             a[c[j]][j] = -1
         continue
     break

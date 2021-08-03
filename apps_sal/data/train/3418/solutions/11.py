@@ -1,1 +1,1 @@
-reverse_list = lambda L: L[::-1]
+def reverse_list(L): return L[::-1]

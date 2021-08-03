@@ -1,14 +1,21 @@
+from collections import deque
+
+
 def ii():
     return int(input())
+
+
 def mi():
     return map(int, input().split())
+
+
 def li():
     return list(mi())
+
 
 n, k = mi()
 a = li()
 
-from collections import deque
 q = deque(a)
 
 c = q.popleft()

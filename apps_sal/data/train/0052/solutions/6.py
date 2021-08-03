@@ -5,6 +5,5 @@ for i in range(n):
 sp.sort()
 s = 0
 for i in range(n):
-    s = (s + sp[i] * sp[-i-1]) % 10007
+    s = (s + sp[i] * sp[-i - 1]) % 10007
 print(s)
-

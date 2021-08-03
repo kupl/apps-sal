@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-import collections, itertools, functools, math
+import collections
+import itertools
+import functools
+import math
+
 
 def solve():
     n = int(input())
@@ -14,7 +18,7 @@ def solve():
         r += v * (v - 1)
     for k, v in cntp.most_common():
         r -= v * (v - 1)
-    return r//2
+    return r // 2
 
 
 def __starting_point():

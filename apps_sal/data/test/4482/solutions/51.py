@@ -9,7 +9,7 @@ if len(set(A)) != 1:
     for i in range(-100, 101):
         tc = 0
         for a in A:
-            tc += (a-i)**2
+            tc += (a - i)**2
         if cost > tc:
             cost = tc
 else:

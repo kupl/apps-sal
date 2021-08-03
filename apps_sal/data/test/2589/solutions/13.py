@@ -15,6 +15,7 @@ def solve():
         return
     print(max(n - l - 1, r))
 
+
 t = int(input())
 for _ in range(t):
     solve()

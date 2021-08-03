@@ -28,4 +28,3 @@ for n in range(N - 1):
         ans[right] = now
 
 print((len(ans)))
-

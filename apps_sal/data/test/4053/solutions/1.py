@@ -2,7 +2,7 @@ n = int(input())
 a = []
 fe = -1
 se = -1
-for i in range(2*n - 2):
+for i in range(2 * n - 2):
     s = input()
     if len(s) == n - 1:
         if fe == -1:
@@ -16,7 +16,7 @@ b = [''] * len(a)
 pr = [False] * n
 su = [False] * n
 for i in range(len(a)):
-    #pr
+    # pr
     flp = False
     ss = a[i]
     if not pr[len(ss) - 1]:
@@ -38,7 +38,7 @@ if not fl:
     pr = [False] * n
     su = [False] * n
     for i in range(len(a)):
-        #pr
+        # pr
         flp = False
         ss = a[i]
         if not pr[len(ss) - 1]:
@@ -53,7 +53,4 @@ if not fl:
                     su[-len(ss)] = True
                     flp = True
 for i in b:
-    print(i, end = '')
-                
-            
-
+    print(i, end='')

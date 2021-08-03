@@ -14,7 +14,7 @@ class Solution:
                 types[tree[right]] = 1
             numFruits += 1
             right += 1
-            
+
             while len(types) > 2:
                 if types[tree[left]] == 1:
                     del(types[tree[left]])
@@ -23,14 +23,5 @@ class Solution:
                 left += 1
                 numFruits -= 1
             maxNumFruits = max(maxNumFruits, numFruits)
-            
-            
+
         return maxNumFruits
-                    
-                
-            
-
-            
-                
-                
-

@@ -23,4 +23,3 @@ while stack:
             result[child] = label
 
 print(*result, sep='\n')
-

@@ -12,7 +12,7 @@ for i in range(n):
 
 def left(i, my_list):
     return my_list[i] == '.' and \
-           ((i - 1) < 0 or
+        ((i - 1) < 0 or
             my_list[i - 1] == '.' or
             my_list[i - 1] == 'P' or
             my_list[i - 1] == '-' or
@@ -21,7 +21,7 @@ def left(i, my_list):
 
 def right(i, my_list):
     return my_list[i] == '.' and \
-           ((i + 1) >= len(my_list) or
+        ((i + 1) >= len(my_list) or
             my_list[i + 1] == '.' or
             my_list[i + 1] == 'P' or
             my_list[i + 1] == '-' or
@@ -102,4 +102,3 @@ for i in range(n):
 print(neighbours)
 for i in range(n):
     print(my_list[i])
-

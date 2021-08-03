@@ -7,5 +7,5 @@ for _ in range(N):
     if a[on] == 2:
         print(cnt)
         return
-    on = a[on]-1
+    on = a[on] - 1
 print(-1)

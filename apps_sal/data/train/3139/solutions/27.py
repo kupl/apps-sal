@@ -3,4 +3,6 @@ def index(array, n):
         return array[n]**n
     except:
         return -1
-print(index([1,2,3,4],2))
+
+
+print(index([1, 2, 3, 4], 2))

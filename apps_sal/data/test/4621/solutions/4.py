@@ -5,7 +5,9 @@ def main():
         print(C)
         print(C)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

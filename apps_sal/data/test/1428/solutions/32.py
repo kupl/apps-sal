@@ -13,7 +13,7 @@ dict_c = [defaultdict(int) for _ in range(3)]
 for i in range(N):
     c = list(int(x) for x in input().split())
     for j in range(N):
-        dict_c[(i+j)%3][c[j]-1] += 1
+        dict_c[(i + j) % 3][c[j] - 1] += 1
 
 # ここからは全探索。
 # 0, 1, 2の各配列に対して、全ての色を試す(C**3)

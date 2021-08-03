@@ -12,7 +12,6 @@ class Solution:
                     break
                 if rem == 0 and q in treeCount:
                     tmp = pCount * treeCount[q]
-                    count += tmp if p == q else 2*tmp
+                    count += tmp if p == q else 2 * tmp
             treeCount[num] = count
         return sum(treeCount.values()) % (1000_000_000 + 7)
-

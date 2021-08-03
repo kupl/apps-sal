@@ -14,4 +14,3 @@ elif s[-1] != '>':
         print(len(s))
 else:
     print(s.index('>') + len(s) - s.rindex('<') - 1)
-

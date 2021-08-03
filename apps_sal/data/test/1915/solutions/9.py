@@ -3,5 +3,6 @@ def a(i, j):
         return 1
     return a(i - 1, j) + a(i, j - 1)
 
+
 n = int(input())
 print(a(n, n))

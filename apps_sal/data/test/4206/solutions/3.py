@@ -10,10 +10,13 @@ def main():
         elif l - ind >= 2 and ((lst[ind] + lst[ind + 1]) % 3 == 0 or lst[ind + 1] % 3 == 0):
             ret += 1
             ind += 2
-        elif l - ind >= 3  and ((lst[ind] + lst[ind + 1] + lst[ind + 2]) % 3 == 0 or(lst[ind + 1] + lst[ind + 2]) % 3 == 0 or lst[ind + 2] % 3 == 0):
+        elif l - ind >= 3 and ((lst[ind] + lst[ind + 1] + lst[ind + 2]) % 3 == 0 or (lst[ind + 1] + lst[ind + 2]) % 3 == 0 or lst[ind + 2] % 3 == 0):
             ret += 1
             ind += 3
-        else: break
+        else:
+            break
     print(ret)
     return 0
+
+
 main()

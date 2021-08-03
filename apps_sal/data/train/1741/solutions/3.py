@@ -3,6 +3,7 @@ MSK = 1 << 5
 ANS = [1]
 FLAG = False
 
+
 def trans(T, x):
     y = [0 for i in range(MSK)]
     for i in range(MSK):
@@ -11,6 +12,7 @@ def trans(T, x):
     for i in range(MSK):
         y[i] %= MOD
     return y
+
 
 def prework(MAXN=10010):
     nonlocal FLAG
@@ -36,6 +38,7 @@ def prework(MAXN=10010):
         x = trans(T, x)
         if i % 2 == 1:
             ANS.append(x[0])
+
 
 def five_by_2n(n):
     prework()

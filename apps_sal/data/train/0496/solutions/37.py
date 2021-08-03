@@ -12,5 +12,5 @@ class Solution:
                 if not counts[num + 1]:
                     counts[num + 1] = 0
                 counts[num + 1] += count - 1
-        
+
         return increments

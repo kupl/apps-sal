@@ -14,4 +14,5 @@ def __starting_point():
     X = int(input())
     print((solve(X)))
 
+
 __starting_point()

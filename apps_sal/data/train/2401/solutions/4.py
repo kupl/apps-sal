@@ -1,18 +1,15 @@
 class Solution:
-     def wordPattern(self, pattern, str):
-         """
-         :type pattern: str
-         :type str: str
-         :rtype: bool
-         """
-         
-         
-         strlst = str.split()
-         return [ pattern.find(i) for i in pattern ] == [ strlst.index(i) for i in strlst ]
-     
-     
-         
-         """
+    def wordPattern(self, pattern, str):
+        """
+        :type pattern: str
+        :type str: str
+        :rtype: bool
+        """
+
+        strlst = str.split()
+        return [pattern.find(i) for i in pattern] == [strlst.index(i) for i in strlst]
+
+        """
          my first solution...beat 93%
          
          strlst = str.split()

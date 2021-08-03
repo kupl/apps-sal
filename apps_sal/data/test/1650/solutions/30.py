@@ -19,4 +19,3 @@ for i, check in enumerate(l[1:]):
     dp[i][0] %= mod
     dp[i][1] %= mod
 print((sum(dp[-1]) % mod))
-

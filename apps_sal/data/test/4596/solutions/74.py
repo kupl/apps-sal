@@ -10,4 +10,3 @@ for ele in arr:
         cnt += 1
     cnt_arr.append(cnt)
 print((min(cnt_arr)))
-

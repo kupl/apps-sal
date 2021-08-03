@@ -8,7 +8,7 @@ for _ in range(n):
 search = []
 day = 1
 ans = 0
-while day-1 != m:
+while day - 1 != m:
     for b in byte[day]:
         heapq.heappush(search, -b)
     if not search:
@@ -19,7 +19,3 @@ while day-1 != m:
     day += 1
 
 print(ans)
-
-
-
-

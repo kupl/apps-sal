@@ -4,6 +4,6 @@ maxA = max(lsA)
 Akazu = lsA.count(maxA)
 for i in range(N):
     if lsA[i] == maxA and Akazu == 1:
-        print(max(lsA[:i]+lsA[i+1:]))
+        print(max(lsA[:i] + lsA[i + 1:]))
     else:
         print(maxA)

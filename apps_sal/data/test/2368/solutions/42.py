@@ -1,11 +1,11 @@
 from collections import deque
-n,m = map(int, input().split())
+n, m = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
 G = [[] for _ in range(n)]
 for i in range(m):
-    i,j = map(int, input().split())
+    i, j = map(int, input().split())
     i -= 1
     j -= 1
     G[i].append(j)

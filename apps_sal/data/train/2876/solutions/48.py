@@ -1,4 +1,4 @@
-def check(a, x): 
+def check(a, x):
     try:
         if a.count(a.index(x)) >= 0:
             return True

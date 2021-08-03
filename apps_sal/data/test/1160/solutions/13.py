@@ -50,7 +50,8 @@ for i in range(6):
     tsh[i] -= next
     new[i][0] = next + need[i][0]
     if tsh[i] < 0:
-        print("NO"); quit()
+        print("NO")
+        quit()
     can = min(tsh[i], need[i][1])
     next = need[i][1] - can
     new[i][1] = next

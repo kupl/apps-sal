@@ -4,9 +4,9 @@ class Solution:
         ma = []
         i = 0
         for i in range(len(A) - L + 1):
-            la.append(sum(A[i:i+L]))
+            la.append(sum(A[i:i + L]))
         for i in range(len(A) - M + 1):
-            ma.append(sum(A[i:i+M]))
+            ma.append(sum(A[i:i + M]))
         print((la, ma))
         maxi = 0
         for i in range(len(la)):
@@ -19,9 +19,6 @@ class Solution:
                         continue
                 if j == i:
                     continue
-                maxi = max(maxi, la[i]+ma[j])
-                        
-        return maxi
-            
-        
+                maxi = max(maxi, la[i] + ma[j])
 
+        return maxi

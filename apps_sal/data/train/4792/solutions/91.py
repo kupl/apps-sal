@@ -5,5 +5,5 @@ def parse_float(value):
     except:
         return None
 
-parse_float("1")
 
+parse_float("1")

@@ -6,6 +6,6 @@ def on_line(points):
         return True
     for i in points[1:-1]:
         x3, y3 = i
-        if (x1 - x3)*(y2 - y3) != (x2 - x3)*(y1 - y3):
+        if (x1 - x3) * (y2 - y3) != (x2 - x3) * (y1 - y3):
             return False
     return True

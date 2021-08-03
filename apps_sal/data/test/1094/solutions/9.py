@@ -8,10 +8,10 @@ def unique(lst):
         result.append(x)
     return result
 
-a=int(input())
-c=[]
+
+a = int(input())
+c = []
 for i in range(a):
-    c+=[input()]
+    c += [input()]
 
-print(*unique(reversed(c)),sep='\n')
-
+print(*unique(reversed(c)), sep='\n')

@@ -28,4 +28,3 @@ if bingo[0][0] == 1 and bingo[1][1] == 1 and bingo[2][2] == 1:
 if bingo[0][2] == 1 and bingo[1][1] == 1 and bingo[2][0] == 1:
     ans = "Yes"
 print(ans)
-

@@ -9,4 +9,3 @@ def travel(r: str, zipcode: str) -> str:
                 addresses.append(a)
 
     return f"{zipcode}:{','.join(addresses)}/{','.join(numbers)}"
-

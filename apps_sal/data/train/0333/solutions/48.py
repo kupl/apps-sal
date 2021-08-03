@@ -1,6 +1,7 @@
 from collections import deque
 from collections import defaultdict
 
+
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
         mapping = defaultdict(set)
@@ -30,4 +31,3 @@ class Solution:
                     visited.add(ni)
                 mapping[arr[ci]].remove(ni)
         return -1
-

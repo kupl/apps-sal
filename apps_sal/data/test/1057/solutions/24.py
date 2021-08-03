@@ -1,7 +1,7 @@
 # alpha = "abcdefghijklmnopqrstuvwxyz"
-prime = 998244353
-t = 1#int(input())
 from heapq import heappop, heappush
+prime = 998244353
+t = 1  # int(input())
 for test in range(t):
     n = int(input())
     # n,m = (map(int, input().split()))
@@ -23,8 +23,8 @@ for test in range(t):
     tmp = 0
     cur = s[0]
     for i in s:
-        if i==cur:
-            tmp+=1
+        if i == cur:
+            tmp += 1
         else:
             grp.append(cur)
             cnt.append(tmp)
@@ -32,21 +32,20 @@ for test in range(t):
             tmp = 1
     grp.append(cur)
     cnt.append(tmp)
-    if len(grp)==1:
-        print(((n*(n+1))//2)%prime)
+    if len(grp) == 1:
+        print(((n * (n + 1)) // 2) % prime)
     else:
-        if grp[0]==grp[-1]:
-            ans = ((cnt[0]+1)*(cnt[-1]+1))%prime
+        if grp[0] == grp[-1]:
+            ans = ((cnt[0] + 1) * (cnt[-1] + 1)) % prime
             # print("here", ans)
             # if cnt[0]+cnt[-1]==n-1:
             #     ans-=1
             #     ans = ans%prime
             print(ans)
         else:
-            ans = cnt[0]+1+cnt[-1]
-            ans = ans%prime
+            ans = cnt[0] + 1 + cnt[-1]
+            ans = ans % prime
             # if cnt[0]+cnt[-1]==n-1:
             #     ans-=1
             #     ans = ans%prime
             print(ans)
-

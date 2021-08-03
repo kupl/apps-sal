@@ -8,4 +8,3 @@ for dif in range(1, 101):
             has = True
 
 print('yes' if has else 'no')
-

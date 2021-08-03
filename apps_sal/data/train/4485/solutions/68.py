@@ -3,7 +3,7 @@ def HQ9(code):
         return 'Hello World!'
     elif code == "Q":
         return 'Q'
-    elif code == '9' :
+    elif code == '9':
         result = ""
         for i in range(99, 2, -1):
             iStr = str(i)
@@ -15,5 +15,5 @@ def HQ9(code):
         result += "Take one down and pass it around, no more bottles of beer on the wall.\n"
         result += "No more bottles of beer on the wall, no more bottles of beer.\n"
         result += "Go to the store and buy some more, 99 bottles of beer on the wall."
-        
+
         return result

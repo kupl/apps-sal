@@ -1,10 +1,12 @@
 from functools import reduce
+
+
 class Solution:
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
-        
+
         # Trie
         ans = [0] * len(puzzles)
-        T = lambda: collections.defaultdict(T)
+        def T(): return collections.defaultdict(T)
         trie = T()
         for w in words:
             cur = reduce(dict.__getitem__, sorted(set(w)), trie)
@@ -12,7 +14,7 @@ class Solution:
                 cur['#'] = 1
             else:
                 cur['#'] += 1
-                
+
         def dfs(cur, i, head):
             p = puzzles[i]
             if '#' in cur and head:
@@ -24,14 +26,12 @@ class Solution:
                     else:
                         dfs(cur[c], i, False)
             return
-        
+
         for i in range(len(puzzles)):
             dfs(trie, i, False)
-            
+
         return ans
-        
-        
-        
+
         # # Using build-in combinations
         # cnt = Counter(frozenset(w) for w in words if len(set(w)) <= 7)
         # ans = []
@@ -42,8 +42,7 @@ class Solution:
         #             cur += cnt[frozenset((p[0],) + i)]
         #     ans.append(cur)
         # return ans
-                    
-        
+
         # # bit-mask & bfs-based combinations
         # ans = []
         # cnt = Counter()
@@ -61,4 +60,3 @@ class Solution:
         #         bfs += [m | 1 << ord(c) - ord('a') for m in bfs]
         #     ans.append(sum(cnt[m] for m in bfs))
         # return ans
-

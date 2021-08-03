@@ -2,7 +2,7 @@ class Solution:
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         if not intervals:
             return 0
-        
+
         count = 0
         for i, [left, right] in enumerate(intervals):
             flag = True
@@ -12,6 +12,5 @@ class Solution:
                     continue
             if flag:
                 count += 1
-                
-        
+
         return count

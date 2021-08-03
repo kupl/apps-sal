@@ -45,17 +45,17 @@ class Park:
         self.nums = list(map(int, uinput().split()))
 
         # Reading multiple lines of pairs
-        pairs = (" ".join(uinput() for i in range(self.n-1))).split()
-        self.numa = [int(pairs[i]) for i in range(0, 2*(self.n-1), 2)]
-        self.numb = [int(pairs[i]) for i in range(1, 2*(self.n-1), 2)]
+        pairs = (" ".join(uinput() for i in range(self.n - 1))).split()
+        self.numa = [int(pairs[i]) for i in range(0, 2 * (self.n - 1), 2)]
+        self.numb = [int(pairs[i]) for i in range(1, 2 * (self.n - 1), 2)]
 
         # Building the tree
         self.nodes = []
         for i in range(self.n):
             self.nodes.append(Node(i, self.nums[i]))
 
-        for i in range(self.n-1):
-            self.nodes[self.numa[i]-1].add_edge(self.nodes[self.numb[i]-1])
+        for i in range(self.n - 1):
+            self.nodes[self.numa[i] - 1].add_edge(self.nodes[self.numb[i] - 1])
 
     def calculate(self):
         """ Main calcualtion function of the class """
@@ -141,7 +141,7 @@ class unitTests(unittest.TestCase):
 
         # Random inputs
         test = str(nmax) + " " + str(nmax) + "\n"
-        numnums = [str(i) + " " + str(i+1) for i in range(nmax)]
+        numnums = [str(i) + " " + str(i + 1) for i in range(nmax)]
         test += "\n".join(numnums) + "\n"
         nums = [random.randint(1, 10000) for i in range(nmax)]
         test += " ".join(map(str, nums)) + "\n"
@@ -152,9 +152,10 @@ class unitTests(unittest.TestCase):
         calc = timeit.default_timer()
         d.calculate()
         stop = timeit.default_timer()
-        print(("\nTimelimit Test: " +
-              "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
-              format(stop-start, calc-start, stop-calc)))
+        print(("\nTimelimit Test: "
+              + "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
+               format(stop - start, calc - start, stop - calc)))
+
 
 def __starting_point():
 
@@ -166,5 +167,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(Park().calculate())
+
 
 __starting_point()

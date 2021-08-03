@@ -1,7 +1,7 @@
 def remove_url_anchor(url):
-    c=""
+    c = ""
     for ch in url:
-        if ch== "#":
+        if ch == "#":
             break
-        c+=ch
+        c += ch
     return c

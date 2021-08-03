@@ -42,4 +42,3 @@ def solve(n, x, d):
 
 n, x, d = list(map(int, input().split()))
 print((solve(n, x, d)))
-

@@ -4,9 +4,10 @@ def factorial(n):
     else:
         return n * factorial(n - 1)
 
+
 def strong_num(number):
-    result=0
-    numLst=[int(x) for x in str(number)]
+    result = 0
+    numLst = [int(x) for x in str(number)]
     for i in range(len(numLst)):
-        result+=factorial(numLst[i])
-    return "STRONG!!!!" if result==number else "Not Strong !!"
+        result += factorial(numLst[i])
+    return "STRONG!!!!" if result == number else "Not Strong !!"

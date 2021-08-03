@@ -1,5 +1,5 @@
-w, h, n = map(int,input().split())
-L = [list(map(int,input().split())) for i in range(n)]
+w, h, n = map(int, input().split())
+L = [list(map(int, input().split())) for i in range(n)]
 x1 = 0
 x2 = w
 y1 = 0
@@ -13,8 +13,8 @@ for i in range(n):
         y1 = max(L[i][1], y1)
     if L[i][2] == 4:
         y2 = min(L[i][1], y2)
-        
+
 ans = 0
-if x2>=x1 and y2>=y1:
-    ans = (x2-x1)*(y2-y1)
+if x2 >= x1 and y2 >= y1:
+    ans = (x2 - x1) * (y2 - y1)
 print(ans)

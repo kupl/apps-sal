@@ -17,28 +17,32 @@ s=1817181712114 なら
 P=2,5がコーナー
 """
 from collections import Counter
-def make_modlist(Len,mod):
-    modlist=[0]*Len
-    modlist[0]=1
-    for i in range(1,Len):
-        modlist[i]=10*modlist[i-1]%mod
+
+
+def make_modlist(Len, mod):
+    modlist = [0] * Len
+    modlist[0] = 1
+    for i in range(1, Len):
+        modlist[i] = 10 * modlist[i - 1] % mod
     return modlist
-n,p=map(int,input().split())
-a=list(map(int,input()))
-ans=0
+
+
+n, p = map(int, input().split())
+a = list(map(int, input()))
+ans = 0
 a.reverse()
-if p==2 or p==5:
+if p == 2 or p == 5:
     for i in range(n):
-        if a[i]%p==0:
-            ans+=n-i
+        if a[i] % p == 0:
+            ans += n - i
 else:
-    d=make_modlist(n,p)
-    b=[0]*(n+1)
+    d = make_modlist(n, p)
+    b = [0] * (n + 1)
     for i in range(n):
-        b[i+1]=a[i]*d[i]%p
-    for i in range(1,n+1):
-        b[i]+=b[i-1]
-        b[i]%=p
+        b[i + 1] = a[i] * d[i] % p
+    for i in range(1, n + 1):
+        b[i] += b[i - 1]
+        b[i] %= p
     for i in Counter(b).values():
-        ans+=i*(i-1)//2
+        ans += i * (i - 1) // 2
 print(ans)

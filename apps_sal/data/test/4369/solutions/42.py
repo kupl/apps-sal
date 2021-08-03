@@ -1,3 +1,3 @@
 import math
 n = int(input())
-print(int(math.ceil(n/2)))
+print(int(math.ceil(n / 2)))

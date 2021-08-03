@@ -24,4 +24,3 @@ if f:
     print(-1)
 else:
     print(count)
-

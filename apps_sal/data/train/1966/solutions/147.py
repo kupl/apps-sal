@@ -1,6 +1,7 @@
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
-        if not mat: return 0
+        if not mat:
+            return 0
         m, n = len(mat), len(mat[0])
         ans = 0
         colCount = [0] * n
@@ -20,4 +21,3 @@ class Solution:
                     rowCount = 0
             colCount = colCount1
         return ans
-

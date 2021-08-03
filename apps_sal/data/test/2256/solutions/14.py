@@ -1,13 +1,11 @@
 import sys
 input = sys.stdin.readline
 
-t=int(input())
+t = int(input())
 
 for testcases in range(t):
-    n,x,a,b=list(map(int,input().split()))
+    n, x, a, b = list(map(int, input().split()))
 
-    ANS=abs(b-a)
+    ANS = abs(b - a)
 
-    print(min(n-1,ANS+x))
-    
-
+    print(min(n - 1, ANS + x))

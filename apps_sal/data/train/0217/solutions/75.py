@@ -3,8 +3,6 @@ class Solution:
         curr = {0}
         ans = set()
         for a in A:
-            curr = {x|a for x in curr } | {a}
+            curr = {x | a for x in curr} | {a}
             ans |= curr
         return len(ans)
-    
-

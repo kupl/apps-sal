@@ -7,5 +7,3 @@ for n in range(1, int(p ** 0.5) + 1):
             break
 else:
     print('No')
-
-

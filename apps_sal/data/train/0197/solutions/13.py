@@ -7,8 +7,8 @@ class Solution:
             if not cnt['a'] >= cnt['b'] >= cnt['c']:
                 return False
             if c == 'c':
-                if len(stack)>=2:
-                    if stack[-1]=='b' and stack[-2]=='a':
+                if len(stack) >= 2:
+                    if stack[-1] == 'b' and stack[-2] == 'a':
                         stack.pop()
                         stack.pop()
                     else:
@@ -16,4 +16,3 @@ class Solution:
             else:
                 stack.append(c)
         return not stack
-

@@ -1,6 +1,6 @@
 class Solution:
     def movesToStamp(self, stamp, target):
-        ns = len(stamp)        
+        ns = len(stamp)
         stamp_patterns = []
         # we need to collect all possible stamp patters, like
         # 'abcde'

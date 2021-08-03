@@ -22,4 +22,3 @@ def addmod(a, b):
 l = reduce(lcm, la) % MOD
 answer = reduce(addmod, (l * inv(a) for a in la), 0)
 print(answer)
-

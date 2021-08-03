@@ -15,10 +15,9 @@ for i in range(n):
 
 d = sorted(list(d.items()), key=lambda x: x[0])
 
-tmp = 0 
+tmp = 0
 for i in range(len(d)):
     tmp += d[i][1]
     if tmp >= k:
         print((d[i][0]))
         return
-

@@ -13,4 +13,3 @@ for i in range(n):
         ans += s[now - i]
         now -= i
 print(ans)
-

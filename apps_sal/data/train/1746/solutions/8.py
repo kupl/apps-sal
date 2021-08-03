@@ -1,17 +1,18 @@
 only_show_wrong()
 
+
 def rpg(field, actions):
     newfield = [[val for val in row] for row in field]
-    playerpos = [0,0,0] # [x,y,dir]
+    playerpos = [0, 0, 0]  # [x,y,dir]
     playerstats = [3, 1, 1, 0]  # Health, attack, defense, enemies killed
     playerbag = []
     myactions = actions
 
-    ## Board stuff    
+    # Board stuff
     demonlord_hp = [10]
     merchants = []  # [[posx,posy,coinsgiven][posx,posy,coinsgiven]] this list holds a 'reference' to all merchants
 
-    ## Finding player position
+    # Finding player position
     for row in newfield:
         for val in row:
             if val == '^':
@@ -32,9 +33,9 @@ def rpg(field, actions):
                 playerpos[2] = 3
             elif val == 'M':
                 merchants.append([row.index(val), newfield.index(row), 3])
-    ## Taking the actions
+    # Taking the actions
     for action in myactions:
-        ## Save players last known position for damage calculation
+        # Save players last known position for damage calculation
         lastplayerpos = playerpos[:]
         legalmove = True
         if(action == 'F'):
@@ -42,33 +43,33 @@ def rpg(field, actions):
         elif(action == '^'):
             playerpos[2] = 0
             newfield[playerpos[1]][playerpos[0]] = getplayerstring(playerpos)
-        elif (action =='>'):
+        elif (action == '>'):
             playerpos[2] = 1
             newfield[playerpos[1]][playerpos[0]] = getplayerstring(playerpos)
-        elif (action =='v'):
+        elif (action == 'v'):
             playerpos[2] = 2
             newfield[playerpos[1]][playerpos[0]] = getplayerstring(playerpos)
-        elif (action =='<'):
+        elif (action == '<'):
             playerpos[2] = 3
             newfield[playerpos[1]][playerpos[0]] = getplayerstring(playerpos)
-        elif (action =='A'):
+        elif (action == 'A'):
             legalmove = attack(newfield, playerpos, playerstats, demonlord_hp)
             if(legalmove == 'win'):
                 print('we won!')
                 break
-        elif (action =='C'):
+        elif (action == 'C'):
             legalmove = coin(newfield, playerpos, playerbag, merchants)
-        elif (action =='K'):
+        elif (action == 'K'):
             legalmove = key(newfield, playerpos, playerbag)
-        elif (action =='H'):
+        elif (action == 'H'):
             legalmove = health(playerbag, playerstats)
 
         if(legalmove == False):
             print("Encountered invalid!")
             print("last action: " + action)
             return None
-        
-        ##Check for enemy damage and shit
+
+        # Check for enemy damage and shit
         enemies = getajanba(newfield, lastplayerpos)
         if(len(enemies) > 0):
             print("Printing enemies!")
@@ -80,17 +81,18 @@ def rpg(field, actions):
             playerstats[0] -= damagetodeal
             if(playerstats[0] <= 0):
                 return None
-    
-    ## Actions finished, give back output
+
+    # Actions finished, give back output
     sortedbag = playerbag if len(playerbag) <= 1 else sorted(playerbag)
     return (newfield, playerstats[0], playerstats[1], playerstats[2], sortedbag)
-    
+
+
 def forward(field, playerpos, bag, playerstats):
-    #find where the in front of the player is
-    ## check_movement returns [obj, posx, posy]
+    # find where the in front of the player is
+    # check_movement returns [obj, posx, posy]
     infront = check_front(field, playerpos)
-    
-    if(infront == False):    ## if oob
+
+    if(infront == False):  # if oob
         return False
 
     obj = infront[0]
@@ -98,7 +100,7 @@ def forward(field, playerpos, bag, playerstats):
     posy = infront[2]
     if(obj == '#' or obj == 'M' or obj == '-' or obj == '|' or obj == 'E' or obj == 'D'):
         return False
-    elif(obj == 'C' or obj == 'K' or obj == 'H'):   ## Time to check for objects(inventory)
+    elif(obj == 'C' or obj == 'K' or obj == 'H'):  # Time to check for objects(inventory)
         bag.append(obj)
         print("obtained: " + obj + "   bag is now: ")
         print(bag)
@@ -109,12 +111,13 @@ def forward(field, playerpos, bag, playerstats):
     elif(obj == 'X'):
         playerstats[1] += 1
         field[posy][posx] = ' '
-    ## Update player pos
+    # Update player pos
     field[playerpos[1]][playerpos[0]] = ' '
     field[posy][posx] = getplayerstring(playerpos)
     playerpos[0] = posx
     playerpos[1] = posy
     return True
+
 
 def attack(field, playerpos, playerstats, demonlord):
     infront = check_front(field, playerpos)
@@ -136,15 +139,16 @@ def attack(field, playerpos, playerstats, demonlord):
         if demonlord[0] <= 0:
             field[posy][posx] = ' '
             return 'win'
-    else: 
+    else:
         return False
 
+
 def coin(field, playerpos, playerbag, merchants):
-    ## Do we have coins?
+    # Do we have coins?
     if 'C' not in playerbag:
         return False
 
-    ## Is a merchant in front of us
+    # Is a merchant in front of us
     infront = check_front(field, playerpos)
     if(infront == False):
         return False
@@ -154,7 +158,7 @@ def coin(field, playerpos, playerbag, merchants):
     if obj != 'M':
         print('No merchant in front!')
         return False
-    ## Find specific merchant in array
+    # Find specific merchant in array
     for merchant in merchants:
         if merchant[0] == posx and merchant[1] == posy:
             playerbag.remove('C')
@@ -166,12 +170,13 @@ def coin(field, playerpos, playerbag, merchants):
             break
     return True
 
+
 def key(field, playerpos, playerbag):
-    ## Do we have keys
+    # Do we have keys
     if 'K' not in playerbag:
         return False
-    
-    ## Is a door in front of us    
+
+    # Is a door in front of us
     infront = check_front(field, playerpos)
     if(infront == False):
         return False
@@ -184,6 +189,7 @@ def key(field, playerpos, playerbag):
     playerbag.remove('K')
     return True
 
+
 def health(playerbag, playerstats):
     if playerstats[0] >= 3:
         return False
@@ -193,8 +199,9 @@ def health(playerbag, playerstats):
     playerbag.remove('H')
     return True
 
+
 def check_front(field, playerpos):
-    #checking direction of movement and get square
+    # checking direction of movement and get square
     posx = playerpos[0]
     posy = playerpos[1]
     posdir = playerpos[2]
@@ -210,13 +217,14 @@ def check_front(field, playerpos):
     elif(posdir == 3):
         posx -= 1
         posy -= 0
-    
-    #Check for OOB
+
+    # Check for OOB
     if (posx < 0 or posx >= len(field[0])) or (posy < 0 or posy >= len(field)):
         return False
-    #Check for Objects
+    # Check for Objects
     obj = field[posy][posx]
     return [obj, posx, posy]
+
 
 def getplayerstring(playerpos):
     if(playerpos[2] == 0):
@@ -227,17 +235,18 @@ def getplayerstring(playerpos):
         return 'v'
     elif(playerpos[2] == 3):
         return '<'
-    
+
+
 def getajanba(field, playerpos):
     enemylist = []
-    tocheck = [[playerpos[0]+1, playerpos[1]],[playerpos[0]-1, playerpos[1]],[playerpos[0], playerpos[1]+1],[playerpos[0], playerpos[1]-1]]
+    tocheck = [[playerpos[0] + 1, playerpos[1]], [playerpos[0] - 1, playerpos[1]], [playerpos[0], playerpos[1] + 1], [playerpos[0], playerpos[1] - 1]]
     for check in tocheck:
         posx = check[0]
         posy = check[1]
         if (posx < 0 or posx >= len(field[0])) or (posy < 0 or posy >= len(field)):
             continue
-        
+
         obj = field[posy][posx]
         if obj == 'E' or obj == 'D':
-            enemylist.append(obj) 
+            enemylist.append(obj)
     return enemylist

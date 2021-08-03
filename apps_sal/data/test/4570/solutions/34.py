@@ -34,11 +34,12 @@ class TestClass(unittest.TestCase):
 
 def resolve():
     N, A, B = list(map(int, input().split()))
-    print((min(N*A, B)))
+    print((min(N * A, B)))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

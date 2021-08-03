@@ -8,4 +8,3 @@ for i in range(n):
         if s > 0:
             max_time = max(max_time, j - i + 1)
 print(max_time)
-

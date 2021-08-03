@@ -9,4 +9,3 @@ for _ in range(t):
         print(c[0] + c[2] + (c[1] - c[2]) // 3)
     else:
         print(c[0] + c[1] + (c[2] - c[1]) // 3)
-

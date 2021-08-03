@@ -2,7 +2,7 @@ def main():
     n = int(input())
     a = list(map(int, input().split()))
     a.sort(reverse=True)
-    visited = [False]*(2**n)
+    visited = [False] * (2**n)
     visited[0] = 0
     now = [a[0]]
     for i in range(n):

@@ -1,7 +1,11 @@
-import math, sys, itertools
+import math
+import sys
+import itertools
+
 
 def mp():
     return list(map(int, input().split()))
+
 
 def main():
     n, s = mp()
@@ -12,7 +16,7 @@ def main():
         return
     ans = (sum(a) - s) // n
     print(min(ans, min(a)))
-        
+
 
 deb = 0
 if deb:
@@ -20,5 +24,5 @@ if deb:
     input = file.readline
 else:
     input = sys.stdin.readline
-    
+
 main()

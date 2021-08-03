@@ -1,8 +1,8 @@
 def string_expansion(s):
-    m,n = '',1
+    m, n = '', 1
     for j in s:
         if j.isdigit():
             n = int(j)
         else:
-            m += j*n
+            m += j * n
     return m

@@ -29,7 +29,7 @@ for i in range(n):
 
     for j in range(n):
         if j in c and c[j] > 1:
-            b[i] = j 
+            b[i] = j
 
 i1 = -1
 m = 0
@@ -42,7 +42,7 @@ for i in range(n):
             m = l
             i1 = i
 
-b[i1] = n-1
+b[i1] = n - 1
 
 for i in range(n):
     if b[i] == 0 and i != i1:
@@ -51,4 +51,3 @@ for i in range(n):
 for e in b:
     print(e, end=" ")
 print()
-

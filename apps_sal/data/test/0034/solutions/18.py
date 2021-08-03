@@ -1,6 +1,5 @@
-n, a, b = list(map(int,input().split()))
+n, a, b = list(map(int, input().split()))
 z = []
 for i in range(1, n):
-	z += [min(a // i, b // (n - i))]
+    z += [min(a // i, b // (n - i))]
 print(max(z))
-

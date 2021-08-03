@@ -9,6 +9,5 @@ class Solution:
                     if array_of_sets[i].issubset(array_of_sets[j]):
                         res.remove(i)
                         break
-                        
-        return res
 
+        return res

@@ -1,4 +1,4 @@
-def add_binary(a,b):
+def add_binary(a, b):
     binaryNum = ""
     q = 0
     mod = 0
@@ -8,4 +8,3 @@ def add_binary(a,b):
         cSum //= 2
         binaryNum += str(mod)
     return binaryNum[::-1]
-

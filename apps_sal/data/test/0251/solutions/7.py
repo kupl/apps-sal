@@ -3,7 +3,7 @@ def main():
     n, k = [int(x) for x in input().split(" ")]
     h = list([int(x) for x in input().split(" ")])
     # f[i] i slice to?
-    num = [0 for i in range(max(h)+5)]
+    num = [0 for i in range(max(h) + 5)]
 
     for i in h:
         num[i] += 1
@@ -26,7 +26,7 @@ def main():
             break
         now_cost += num[now]
         now -= 1
-        num[now] += num[now+1]
+        num[now] += num[now + 1]
     if now_cost != 0:
         # print("cut")
         ans += 1
@@ -35,5 +35,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

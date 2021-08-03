@@ -7,8 +7,8 @@ from collections import Counter
 t = int(input())
 
 for _ in range(t):
-#     n, = next(reader)
-#     a = list(next(reader))
+    #     n, = next(reader)
+    #     a = list(next(reader))
     n = int(input())
     a = [int(x) for x in input().split()]
     prev = Counter()
@@ -18,6 +18,5 @@ for _ in range(t):
             mn = min(mn, i - prev[el] + 1)
         prev[el] = i
     print(mn if mn < n + 1 else -1)
-    
-# inf.close()
 
+# inf.close()

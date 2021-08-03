@@ -52,4 +52,3 @@ for i in a_sorted:
 for i in a:
     index = a_sorted.index(i)
     print(g[index], end=' ')
-

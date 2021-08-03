@@ -1,4 +1,6 @@
 from bisect import bisect_left, bisect_right, insort_right
+
+
 class SquareSkipList:
     def __init__(self, values=None, sorted_=False, square=1000, seed=42):
         # values: 初期値のリスト
@@ -43,7 +45,7 @@ class SquareSkipList:
             layer1.insert(idx1, x)
             layer0_idx1 = layer0[idx1]
             idx0 = bisect_right(layer0_idx1, x)
-            layer0.insert(idx1+1, layer0_idx1[idx0:])  # layer0 は dict で管理した方が良いかもしれない
+            layer0.insert(idx1 + 1, layer0_idx1[idx0:])  # layer0 は dict で管理した方が良いかもしれない
             del layer0_idx1[idx0:]
         else:
             idx1 = bisect_right(layer1, x)
@@ -54,8 +56,8 @@ class SquareSkipList:
         idx1 = bisect_left(layer1, x)
         if layer1[idx1] == x:
             del layer1[idx1]
-            layer0[idx1] += layer0[idx1+1]
-            del layer0[idx1+1]
+            layer0[idx1] += layer0[idx1 + 1]
+            del layer0[idx1 + 1]
         else:
             layer0_idx1 = layer0[idx1]
             del layer0_idx1[bisect_left(layer0_idx1, x)]
@@ -99,14 +101,14 @@ class SquareSkipList:
             if layer0_idx1:
                 idx0 = bisect_left(layer0_idx1, x)
                 if idx0 != 0:
-                    return layer0_idx1[idx0-1]
-            return layer1[idx1-1]  # layer0_idx1 が空の場合とすべて x 以上の場合
+                    return layer0_idx1[idx0 - 1]
+            return layer1[idx1 - 1]  # layer0_idx1 が空の場合とすべて x 以上の場合
         else:
             idx0 = bisect_left(layer0_idx1, x)
             if idx0 == 0:  # layer0_idx1 が空の場合とすべて res で埋まっている場合
-                return layer1[idx1-1]
+                return layer1[idx1 - 1]
             else:
-                return layer0_idx1[idx0-1]
+                return layer0_idx1[idx0 - 1]
 
     def pop(self, idx):
         # 小さい方から idx 番目の要素を削除してその要素を返す（0-indexed）
@@ -117,43 +119,44 @@ class SquareSkipList:
             s += len(l0) + 1
             if s >= idx:
                 break
-        if s==idx:
-            layer0[i] += layer0[i+1]
-            del layer0[i+1]
+        if s == idx:
+            layer0[i] += layer0[i + 1]
+            del layer0[i + 1]
             return layer1.pop(i)
         else:
-            return layer0[i].pop(idx-s)
+            return layer0[i].pop(idx - s)
+
 
 N = int(input())
-P = list(map(int,input().split()))
+P = list(map(int, input().split()))
 
-D = {P[i]:i+1 for i in range(N)}
+D = {P[i]: i + 1 for i in range(N)}
 ans = 0
 
 L = SquareSkipList()
 L.add(D[N])
 
-for i in range(1,N)[::-1]:
+for i in range(1, N)[::-1]:
     l = L.search_lower(D[i])
     h = L.search_higher(D[i])
     if l == float('inf'):
         hh = L.search_higher(h)
         if hh == float('inf'):
-            hh = N+1
-        ans += (D[i]*(hh-h))*i
+            hh = N + 1
+        ans += (D[i] * (hh - h)) * i
     elif h == float('inf'):
         ll = L.search_lower(l)
         if ll == float('inf'):
             ll = 0
-        ans += ((N+1-D[i])*(l-ll))*i
+        ans += ((N + 1 - D[i]) * (l - ll)) * i
     else:
         hh = L.search_higher(h)
         if hh == float('inf'):
-            hh = N+1
+            hh = N + 1
         ll = L.search_lower(l)
         if ll == float('inf'):
             ll = 0
-        ans += ((h-D[i])*(l-ll)+(D[i]-l)*(hh-h))*i
+        ans += ((h - D[i]) * (l - ll) + (D[i] - l) * (hh - h)) * i
     L.add(D[i])
-    
+
 print(ans)

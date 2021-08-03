@@ -20,4 +20,3 @@ v.sort()
 for i in range(n // 2 - len(b)):
     ans += v[i]
 print(ans)
-

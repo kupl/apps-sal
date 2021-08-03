@@ -1,5 +1,5 @@
 a, b = input().split()
-ab = int(a+b)
+ab = int(a + b)
 
 for j in range(ab):
     if j ** 2 <= ab:

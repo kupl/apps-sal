@@ -1,8 +1,8 @@
+import collections
 n = int(input())
-s = [""]*n
+s = [""] * n
 for i in range(n):
     s[i] = input()
-import collections
 s = collections.Counter(s)
 m = int(input())
 for j in range(m):

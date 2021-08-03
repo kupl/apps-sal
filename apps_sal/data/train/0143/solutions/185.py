@@ -11,11 +11,10 @@ class Solution:
                 my_map[tree[i]] += 1
                 i += 1
             max_len = max(max_len, i - j)
-            while len(my_map) == 2: 
+            while len(my_map) == 2:
                 my_map[tree[j]] -= 1
                 if my_map[tree[j]] == 0:
                     del my_map[tree[j]]
                 j += 1
-            
-        return max_len
 
+        return max_len

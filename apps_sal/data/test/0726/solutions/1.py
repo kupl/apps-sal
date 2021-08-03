@@ -13,4 +13,3 @@ for x in cands:
     ans += mn_dist == d
 
 print(ans)
-

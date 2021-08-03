@@ -1,5 +1,5 @@
 n = int(input())
 f = n // 2
 if n % 2 == 1:
-	f -= n
+    f -= n
 print(f)

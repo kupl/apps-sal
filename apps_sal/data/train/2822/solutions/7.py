@@ -1,47 +1,47 @@
 def name_that_number(x):
     ones = {
-            0 : "zero",
-            1 : "one",
-            2 : "two",
-            3 : "three",
-            4 : "four",
-            5 : "five",
-            6 : "six",
-            7 : "seven",
-            8 : "eight",
-            9 : "nine"
-            }
-    
+        0: "zero",
+        1: "one",
+        2: "two",
+        3: "three",
+        4: "four",
+        5: "five",
+        6: "six",
+        7: "seven",
+        8: "eight",
+        9: "nine"
+    }
+
     teens = {
-            11 : "eleven",
-            12 : "twelve",
-            13 : "thirteen",
-            14 : "fourteen",
-            15 : "fifteen",
-            16 : "sixteen",
-            17 : "seventeen",
-            18 : "eighteen",
-            19 : "nineteen"
-            }
-    
+        11: "eleven",
+        12: "twelve",
+        13: "thirteen",
+        14: "fourteen",
+        15: "fifteen",
+        16: "sixteen",
+        17: "seventeen",
+        18: "eighteen",
+        19: "nineteen"
+    }
+
     tens = {
-            10 : "ten",
-            20 : "twenty",
-            30 : "thirty",
-            40 : "forty",
-            50 : "fifty",
-            60 : "sixty",
-            70 : "seventy",
-            80 : "eighty",
-            90 : "ninety"
-            }
-    
+        10: "ten",
+        20: "twenty",
+        30: "thirty",
+        40: "forty",
+        50: "fifty",
+        60: "sixty",
+        70: "seventy",
+        80: "eighty",
+        90: "ninety"
+    }
+
     if x in ones:
         return ones[x]
     elif x in teens:
         return teens[x]
     else:
-        out = tens[10 * (x//10)]
+        out = tens[10 * (x // 10)]
         if x % 10 != 0:
             out += " " + ones[x % 10]
         return out

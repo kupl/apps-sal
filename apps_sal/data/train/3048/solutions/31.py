@@ -1,13 +1,10 @@
 def alternateCase(s):
-    c=""
+    c = ""
     for i in s:
         if i.isupper():
-            c+=i.lower()
+            c += i.lower()
         elif i.islower():
-            c+=i.upper()
+            c += i.upper()
         else:
-            c+=" "
+            c += " "
     return c
-        
-            
-

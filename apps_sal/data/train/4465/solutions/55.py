@@ -3,6 +3,6 @@ def super_size(n):
     s = ''
     for i in str(n):
         l.append(int(i))
-    for i in sorted(l,reverse=True):
+    for i in sorted(l, reverse=True):
         s += str(i)
     return int(s)

@@ -5,9 +5,9 @@ class Solution:
             m, n = n, m
         if m == n:
             return 1
-        
-        
+
         res = [m * n + 1]
+
         def dfs(ys, cnt):
             # print(ys)
             key = tuple(ys)
@@ -20,7 +20,7 @@ class Solution:
                 return
             if any(i > m for i in ys):
                 return
-            
+
             ymin = min(ys)
             idx = ys.index(ymin)
             ymax = 0
@@ -33,6 +33,6 @@ class Solution:
             # try
             for i in range(ymax, 0, -1):
                 dfs(ys[:idx] + [ys[idx] + i] * i + ys[idx + i:], cnt + 1)
-        
+
         dfs([0] * n, 0)
         return res[0]

@@ -16,7 +16,3 @@ class Solution:
         if min_len == len(nums):
             return -1
         return min_len
-            
-                
-            
-

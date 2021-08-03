@@ -17,4 +17,3 @@ def array_madness(a,
         return True
 
     return False
-

@@ -35,16 +35,16 @@ def solve(W, H, N, A):
     xlist = Node(0)
     h = xlist
     xnodes = {0: h}
-    maxw = max([xs[i+1] - xs[i] for i in range(len(xs)-1)] or [0])
-    maxh = max([ys[i+1] - ys[i] for i in range(len(ys)-1)] or [0])
+    maxw = max([xs[i + 1] - xs[i] for i in range(len(xs) - 1)] or [0])
+    maxh = max([ys[i + 1] - ys[i] for i in range(len(ys) - 1)] or [0])
     for v in xs[1:]:
         n = Node(v)
         xnodes[v] = n
         h.right = n
         n.left = h
         h = n
-        
-    ylist =  Node(0)
+
+    ylist = Node(0)
     h = ylist
     ynodes = {0: h}
     for v in ys[1:]:
@@ -53,7 +53,7 @@ def solve(W, H, N, A):
         h.right = n
         n.left = h
         h = n
-    
+
     ans = []
     maxarea = maxh * maxw
     for t, v in reversed(A):
@@ -69,23 +69,23 @@ def solve(W, H, N, A):
         node.left.right = node.right
         node.right.left = node.left
         maxarea = maxh * maxw
-    
+
     return ans[::-1]
-    
-    
+
+
 def solve2(W, H, N, A):
     ws = [(-W, 0, W)]
     hs = [(-H, 0, H)]
     iw, ih = set(), set()
     ans = []
-    
+
     xs, ys = [0, W], [0, H]
     for t, v in A:
         if t == 0:
             bisect.insort_left(xs, v)
             i = bisect.bisect_left(xs, v)
-            l, m, r = xs[i-1], xs[i], xs[i+1]
-            iw.add((l-r, l, r))
+            l, m, r = xs[i - 1], xs[i], xs[i + 1]
+            iw.add((l - r, l, r))
             heapq.heappush(ws, (l - m, l, m))
             heapq.heappush(ws, (m - r, m, r))
             while ws[0] in iw:
@@ -93,19 +93,19 @@ def solve2(W, H, N, A):
         else:
             bisect.insort(ys, v)
             i = bisect.bisect_left(ys, v)
-            l, m, r = ys[i-1], ys[i], ys[i+1]
-            ih.add((l-r, l, r))
+            l, m, r = ys[i - 1], ys[i], ys[i + 1]
+            ih.add((l - r, l, r))
             heapq.heappush(hs, (l - m, l, m))
             heapq.heappush(hs, (m - r, m, r))
             while hs[0] in ih:
                 heapq.heappop(hs)
         w, h = ws[0], hs[0]
         ans.append(w[0] * h[0])
-        
+
     return ans
 
 
-W, H, N = map(int,input().split())
+W, H, N = map(int, input().split())
 A = []
 for i in range(N):
     a, b = input().split()

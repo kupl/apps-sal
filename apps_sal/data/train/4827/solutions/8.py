@@ -6,10 +6,8 @@ def stats_disc_distr(distrib):
         return "It's not a valid distribution"
     if not all(x % 1 == 0 for x, p in distrib):
         return "All the variable values should be integers"
-    
-    
+
     mean = sum(x * p for x, p in distrib)
     var = sum((x - mean) ** 2 * p for x, p in distrib)
     std_dev = var ** 0.5
     return [mean, var, std_dev]
-

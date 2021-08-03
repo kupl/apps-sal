@@ -1,16 +1,15 @@
-s=input()
+s = input()
 if 'SU' in s:
-  print('7')
+    print('7')
 if 'MO' in s:
-  print('6')
+    print('6')
 if 'TU' in s:
-  print('5')
+    print('5')
 if 'WE' in s:
-  print('4')
+    print('4')
 if 'TH' in s:
-  print('3')
+    print('3')
 if 'FR' in s:
-  print('2')
+    print('2')
 if 'SA' in s:
-  print('1')
-
+    print('1')

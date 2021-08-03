@@ -5,18 +5,17 @@ balls = []
 for t in thing:
     balls += [int(t)]
 
-if n<=k:
+if n <= k:
     m = max(balls)
 else:
-    squeeze = n-k
+    squeeze = n - k
 
-    m=0
+    m = 0
 
-    for i in range (squeeze):
-        current = balls[i] + balls[2*squeeze-1-i]
+    for i in range(squeeze):
+        current = balls[i] + balls[2 * squeeze - 1 - i]
         m = max(current, m)
 
-    m = max(balls[n-1], m)
+    m = max(balls[n - 1], m)
 
-print (m)
-
+print(m)

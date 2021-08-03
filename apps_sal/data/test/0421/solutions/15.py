@@ -9,7 +9,7 @@ for num in range(n):
     r = int(r)
     data.append((l, r))
 
-data = sorted(data, key = lambda s : s[1])
+data = sorted(data, key=lambda s: s[1])
 
 num = 1
 
@@ -23,4 +23,3 @@ for item in data:
         num += 1
 
 print(num)
-

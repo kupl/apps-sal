@@ -27,7 +27,7 @@ if max1 > max2:
             pr += v[minus[i][1]] * minus[i][0]
         i += 1
     for i in range(len(plus)):
-        ans += v[plus[i][1]]    
+        ans += v[plus[i][1]]
 else:
     plus.sort()
     i = 0

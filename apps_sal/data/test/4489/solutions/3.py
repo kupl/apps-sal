@@ -11,6 +11,6 @@ for i in set(s):
     minus.append(t.count(i))
 
 for j in range(len(plus)):
-    total.append(plus[j]-minus[j])
-    
-print(max(0,max(total)))
+    total.append(plus[j] - minus[j])
+
+print(max(0, max(total)))

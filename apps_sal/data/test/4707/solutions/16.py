@@ -7,5 +7,5 @@ if S[1] == '1':
     count += 1
 if S[2] == '1':
     count += 1
-    
+
 print(count)

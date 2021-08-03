@@ -1,4 +1,4 @@
-def is_even(number): 
+def is_even(number):
     if isinstance(number, float):
         even = False
     else:

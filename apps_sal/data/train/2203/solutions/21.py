@@ -4,8 +4,8 @@
 import time
 
 
-n   = int(input())
-a   = []
+n = int(input())
+a = []
 
 for i in range(n):
     a.append(max([int(i) for i in input().split()]))
@@ -13,7 +13,7 @@ for i in range(n):
 start = time.time()
 
 for i in range(n):
-    if a[i] == n-1:
+    if a[i] == n - 1:
         a[i] += 1
         break
 
@@ -23,4 +23,3 @@ print()
 
 finish = time.time()
 #print(finish - start)
-

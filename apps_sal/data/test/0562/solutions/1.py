@@ -5,7 +5,7 @@ shows = []
 for _ in range(int(input())):
     l, r = map(int, input().split())
     shows.append((l, r))
-shows.sort(key = lambda x: x[0])
+shows.sort(key=lambda x: x[0])
 for l, r in shows:
     if tv1 < l:
         tv1 = r

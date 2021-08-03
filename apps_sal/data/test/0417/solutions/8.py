@@ -1,4 +1,5 @@
-LI = lambda: list(map(int, input().split()))
+def LI(): return list(map(int, input().split()))
+
 
 N, X, D = LI()
 
@@ -15,7 +16,7 @@ def main():
             ans = N + 1
         print(ans)
         return
-    
+
     d = {}
     for i in range(N + 1):
         a = i * X + sumeq(i - 1) * D
@@ -25,7 +26,7 @@ def main():
             d[a % D].append((v, b))
         else:
             d[a % D] = [(v, b)]
-    
+
     ans = 0
     for w in list(d.values()):
         w.sort()
@@ -44,5 +45,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

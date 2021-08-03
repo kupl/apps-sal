@@ -3,12 +3,12 @@ for _ in range(int(input())):
     arr = list(map(int, input().split()))
     arr.sort(reverse=True)
     if arr[0] >= 0:
-        arr[0] = arr[0]+ k
+        arr[0] = arr[0] + k
     elif arr[0] < 0:
         arr[0] -= k
-    if arr[len(arr)-1] >= 0:
-        arr[len(arr)-1] -= k
-    elif arr[len(arr)-1] < 0:
-        arr[len(arr)-1] -= k
+    if arr[len(arr) - 1] >= 0:
+        arr[len(arr) - 1] -= k
+    elif arr[len(arr) - 1] < 0:
+        arr[len(arr) - 1] -= k
    # print(arr)
-    print(abs(arr[0] - arr[len(arr)-1]))
+    print(abs(arr[0] - arr[len(arr) - 1]))

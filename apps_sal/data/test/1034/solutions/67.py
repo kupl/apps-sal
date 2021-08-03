@@ -1,12 +1,13 @@
 # O(klog(k))解法 多分...
 import sys
-from heapq import heappush,heapify,heappop
+from heapq import heappush, heapify, heappop
 input = sys.stdin.readline
+
 
 def make_kth(A, B, k):
     n, m = len(A), len(B)
     q = [(-A[0] - B[0], 0, 0)]
-    r=[]
+    r = []
     for _ in range(min(k, n * m)):
         v, s, t = heappop(q)
         r.append(-v)
@@ -15,6 +16,7 @@ def make_kth(A, B, k):
         if t == 0 and s + 1 < n:
             heappush(q, (-A[s + 1] - B[0], s + 1, 0))
     return r
+
 
 def main():
     _, _, _, k = map(int, input().split())
@@ -29,5 +31,6 @@ def main():
     r = make_kth(a, b, k)
     r = make_kth(c, r, k)
     print(*r, sep="\n")
+
 
 main()

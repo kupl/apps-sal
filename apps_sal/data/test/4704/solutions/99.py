@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 S = sum(A)
 
@@ -8,9 +8,9 @@ arigm = S
 
 ans = 1e20
 
-for i in range(N-1):
-  snk += A[i]
-  arigm -= A[i]
-  #print(snk,arigm)
-  ans = min(abs(snk-arigm),ans)
+for i in range(N - 1):
+    snk += A[i]
+    arigm -= A[i]
+    # print(snk,arigm)
+    ans = min(abs(snk - arigm), ans)
 print(ans)

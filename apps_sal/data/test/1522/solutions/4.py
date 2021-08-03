@@ -14,4 +14,3 @@ for i in range(len(s)):
         else:
             k[s[i].lower()] -= 1
 print(ans)
-

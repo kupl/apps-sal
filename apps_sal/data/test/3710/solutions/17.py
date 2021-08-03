@@ -7,4 +7,4 @@ lcm = 1
 for u in v:
     lcm = lcm * u // gcd(u, lcm)
     lcm = gcd(lcm, k)
-print (["No", "Yes"][lcm == k])
+print(["No", "Yes"][lcm == k])

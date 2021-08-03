@@ -16,7 +16,7 @@ def format_factor(n, times):
 
 def prime_factors(number):
     factors = OrderedIntDict()
-    for n in range(2, int(sqrt(number))+1):
+    for n in range(2, int(sqrt(number)) + 1):
         while number % n == 0:
             number //= n
             factors[n] += 1
@@ -26,6 +26,6 @@ def prime_factors(number):
         format_factor(n, times)
         for n, times in factors.items()
     )
-    
+
 
 primeFactors = prime_factors

@@ -2,18 +2,21 @@ import os
 from io import BytesIO, StringIO
 #input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
 
+
 def input_as_list():
     return list(map(int, input().split()))
 
+
 def array_of(f, *dim):
     return [array_of(f, *dim[1:]) for _ in range(dim[0])] if dim else f()
+
 
 def main():
     n, x = input_as_list()
     a = input_as_list()
 
-    fo = array_of(lambda:-1, x+1)
-    lo = array_of(lambda:-1, x+1)
+    fo = array_of(lambda: -1, x + 1)
+    lo = array_of(lambda: -1, x + 1)
 
     ans = 0
 
@@ -23,7 +26,7 @@ def main():
         lo[e] = i
 
     lastidx = -1
-    for i in range(1, x+1):
+    for i in range(1, x + 1):
         if fo[i] != -1:
             if lastidx < fo[i]:
                 lastidx = lo[i]
@@ -32,8 +35,7 @@ def main():
                 break
     L = i
 
-
-    firstidx = n+1
+    firstidx = n + 1
     for i in range(x, 0, -1):
         if fo[i] != -1:
             if lo[i] < firstidx:
@@ -46,7 +48,7 @@ def main():
     ans += min(x - R + 2, x)
 
     c = n
-    for i in range(x, R-1, -1):
+    for i in range(x, R - 1, -1):
         if fo[i] == -1:
             fo[i] = c
         else:
@@ -64,5 +66,6 @@ def main():
             r += 1
     #print(L, R, ans)
     print(ans)
+
 
 main()

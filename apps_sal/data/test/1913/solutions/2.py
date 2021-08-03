@@ -5,7 +5,7 @@ for a in input().split():
     u = 0
     for e in a:
         u += int(e)
-    if u > 1:        
+    if u > 1:
         r = a
     elif u == 0:
         l = -1
@@ -15,6 +15,4 @@ for a in input().split():
 if l < 0:
     print(0)
 else:
-    print(r,'0' * l,sep = '')
-    
-
+    print(r, '0' * l, sep='')

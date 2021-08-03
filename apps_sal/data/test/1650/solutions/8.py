@@ -15,4 +15,3 @@ for i in range(N):
         total = (total + pow2[one_count] * pow3[N - i - 1]) % MOD
         one_count += 1
 print(((total + pow2[one_count] * pow3[N - i - 1]) % MOD))
-

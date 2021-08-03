@@ -4,6 +4,7 @@ def gen_id():
         yield i
         i += 1
 
+
 def dithering(width, height):
     """yields coordinates in the given pixmap"""
     result = []
@@ -18,6 +19,7 @@ def dithering(width, height):
     recursion(result, 1, max_step, start, pix_map)
     for i in result:
         yield i
+
 
 def recursion(result, step, max_step, start, pix_map):
     if step * 2 <= max_step:
@@ -38,5 +40,6 @@ def recursion(result, step, max_step, start, pix_map):
     if len(pix_map) > start[0] + step and len(pix_map[start[0]]) > start[1] and pix_map[start[0] + step][start[1]] == 0:
         pix_map[start[0] + step][start[1]] = num_gen.__next__()
         result.append((start[1], start[0] + step))
+
 
 num_gen = gen_id()

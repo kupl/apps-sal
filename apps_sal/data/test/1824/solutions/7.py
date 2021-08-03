@@ -1,7 +1,9 @@
 import functools
 
+
 def intput():
     return [int(x) for x in input().split(" ")]
+
 
 def parse():
     _ = input()
@@ -10,6 +12,7 @@ def parse():
     third = intput()
 
     return first, second, third
+
 
 def main(f, s, t):
     def xor_fold(ls):
@@ -24,4 +27,3 @@ def main(f, s, t):
 
 
 main(*parse())
-

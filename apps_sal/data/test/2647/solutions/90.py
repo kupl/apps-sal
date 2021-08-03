@@ -45,4 +45,3 @@ if dist[-1][-1] == -1:
 white = sum([i.count('.') for i in s])
 ans = white - (dist[-1][-1] + 1)
 print(ans)
-

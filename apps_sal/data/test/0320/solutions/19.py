@@ -3,7 +3,7 @@ s1 = 0
 s2 = 0
 b = False
 for i in range(n):
-    x, y= map(int, input().split())
+    x, y = map(int, input().split())
     if x % 2 != y % 2:
         b = True
     s1 += x % 2

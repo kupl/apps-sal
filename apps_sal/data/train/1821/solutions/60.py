@@ -2,7 +2,7 @@ class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         self.mergeSort(nums)
         return nums
-    
+
     def mergeSort(self, nums: List[int]) -> None:
         if len(nums) > 1:
             mid = len(nums) // 2
@@ -10,8 +10,7 @@ class Solution:
 
             self.mergeSort(L)
             self.mergeSort(R)
-            
-            
+
             i = j = k = 0
             while i < len(L) and j < len(R):
                 if L[i] < R[j]:
@@ -21,7 +20,7 @@ class Solution:
                     nums[k] = R[j]
                     j += 1
                 k += 1
-            
+
             while i < len(L):
                 nums[k] = L[i]
                 i += 1
@@ -31,4 +30,3 @@ class Solution:
                 nums[k] = R[j]
                 j += 1
                 k += 1
-

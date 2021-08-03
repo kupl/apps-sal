@@ -38,4 +38,3 @@ for i in range(min(len(lc[26]), len(rc[26]))):
 print(len(ans))
 for i in ans:
     print(i[0] + 1, i[1] + 1)
-

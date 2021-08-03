@@ -1,12 +1,14 @@
 from heapq import *
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         if len(points) <= 1:
             return 0
         edge_list = []
         for idx1, [x1, y1] in enumerate(points):
-            for idx2, [x2, y2] in enumerate(points[idx1+1:], idx1+1):
-                heappush(edge_list, [abs(x1-x2)+abs(y1-y2), idx1, idx2])
+            for idx2, [x2, y2] in enumerate(points[idx1 + 1:], idx1 + 1):
+                heappush(edge_list, [abs(x1 - x2) + abs(y1 - y2), idx1, idx2])
 
         cost, p1, p2 = heappop(edge_list)
         add_point = {p1, p2}
@@ -29,4 +31,3 @@ class Solution:
                 heappush(edge_list, heappop(temp_list))
 
         return ret
-

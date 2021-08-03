@@ -9,5 +9,5 @@ class Solution:
             b[3] = a[2] + a[4]
             b[4] = a[0]
             a = b.copy()
-        
+
         return sum(b) % (10**9 + 7)

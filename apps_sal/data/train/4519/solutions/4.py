@@ -1,1 +1,1 @@
-max_number=lambda n: int("".join(sorted(str(n),reverse=True)))
+def max_number(n): return int("".join(sorted(str(n), reverse=True)))

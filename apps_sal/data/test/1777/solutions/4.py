@@ -1,9 +1,15 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
+
 MAX = 6 * 10 ** 5
 
 n = ii()
@@ -31,4 +37,3 @@ for p in range(1, MAX):
 c3 = sum(x >= 0 for x in pos[0])
 ans += c3 // 2
 print(ans)
-

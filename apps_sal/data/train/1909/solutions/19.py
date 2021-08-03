@@ -7,8 +7,8 @@ class Solution:
         for i in range(rows):
             for j in range(cols):
                 if grid[i][j] == 1:
-                    hor = 1 if j == 0 else table[i][j-1][0] + 1
-                    ver = 1 if i == 0 else table[i-1][j][1] + 1
+                    hor = 1 if j == 0 else table[i][j - 1][0] + 1
+                    ver = 1 if i == 0 else table[i - 1][j][1] + 1
 
                     table[i][j] = (hor, ver)
 

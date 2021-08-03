@@ -12,4 +12,3 @@ for _ in range(m):
             ans = l
 
 print(ans)
-

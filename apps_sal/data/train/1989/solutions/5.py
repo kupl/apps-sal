@@ -7,7 +7,7 @@ class Solution:
             bitmap ^= 1 << int(digit)
 
             best = max(best, i - memo.get(bitmap, i))
-            
+
             for j in range(10):
                 key = bitmap ^ (1 << j)
                 best = max(best, i - memo.get(key, i))

@@ -41,4 +41,3 @@ for _ in range(M):
     x, y = [int(x) - 1 for x in input().split()]
     ds.union(x, y)
 print((sum(ds.same(P[i], i) for i in range(N))))
-

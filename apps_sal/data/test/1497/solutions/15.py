@@ -10,11 +10,13 @@
 
 """
 
+
 def check(c):
     for char in c:
         if char == '0':
             return False
-    return True    
+    return True
+
 
 n = int(input())
 
@@ -33,5 +35,4 @@ for i in range(n):
     for j in range(i, n):
         if s[i] == s[j]:
             eq[i] += 1
-print(max(clean, max(eq)))            
-
+print(max(clean, max(eq)))

@@ -3,20 +3,22 @@ from collections import deque
 
 readline = sys.stdin.readline
 readall = sys.stdin.read
-ns = lambda: readline().rstrip()
-ni = lambda: int(readline().rstrip())
-nm = lambda: list(map(int, readline().split()))
-nl = lambda: list(map(int, readline().split()))
+def ns(): return readline().rstrip()
+def ni(): return int(readline().rstrip())
+def nm(): return list(map(int, readline().split()))
+def nl(): return list(map(int, readline().split()))
 
 
 def solve():
     h, w, k = nm()
     sy, sx, gy, gx = nm()
     d = [(0, 1), (1, 0), (-1, 0), (0, -1)]
-    sx -= 1; sy -= 1
-    gx -= 1; gy -= 1
+    sx -= 1
+    sy -= 1
+    gx -= 1
+    gy -= 1
     C = [ns() for _ in range(h)]
-    G = [[10**7]*w for _ in range(h)]
+    G = [[10**7] * w for _ in range(h)]
     G[sy][sx] = 0
     q = deque([(sy, sx)])
     while q:
@@ -25,7 +27,8 @@ def solve():
             dy, dx = d[i]
             ny, nx = y, x
             for _ in range(k):
-                ny += dy; nx += dx
+                ny += dy
+                nx += dx
                 if ny < 0 or h <= ny or nx < 0 or w <= nx:
                     break
                 if C[ny][nx] == '@' or G[ny][nx] <= G[y][x]:
@@ -39,5 +42,5 @@ def solve():
     print((-1))
     return
 
-solve()
 
+solve()

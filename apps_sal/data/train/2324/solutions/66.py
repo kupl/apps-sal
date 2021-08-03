@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def bfs(start):
     queue = deque([start])
     visited = []
@@ -15,6 +16,7 @@ def bfs(start):
                 queue.appendleft(v)
 
     return
+
 
 n = int(input())
 d = [[] for _ in range(n)]

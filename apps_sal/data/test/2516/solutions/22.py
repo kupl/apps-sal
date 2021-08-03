@@ -1,6 +1,7 @@
 #!python3
 
-LI = lambda: list(map(int, input().split()))
+def LI(): return list(map(int, input().split()))
+
 
 # input
 N, P = LI()
@@ -51,5 +52,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

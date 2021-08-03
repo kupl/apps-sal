@@ -6,4 +6,3 @@ for i in range(1, abs(b - a) // 2 + 1):
 if abs(a - b) % 2 != 0:
     ans += abs(b - a) // 2 + 1
 print(ans)
-

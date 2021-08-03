@@ -17,6 +17,6 @@ def artificial_rain(garden):
             res += 1
             last = garden.pop(0)
         m = max(res, m)
-        res = k+1
+        res = k + 1
     m = max(res, m)
     return m

@@ -17,11 +17,16 @@ from sys import stdin
 mod = 10 ** 9 + 7
 sys.setrecursionlimit(10 ** 9)
 
+
 def inp(): return stdin.readline().rstrip()
 def lmi(): return list(map(int, stdin.readline().split()))
+
+
 def narray(*shape, init: Any = 0):
-    if shape: return [narray(*shape[1:], init=init) for _ in range(shape[0])]
-    if callable(init): return init()
+    if shape:
+        return [narray(*shape[1:], init=init) for _ in range(shape[0])]
+    if callable(init):
+        return init()
     return init
 
 
@@ -40,24 +45,24 @@ def comb(N, k):
         n += 1
     return val
 
+
 def cmb(x, y):
     if x < y:
         return 0
     bunsi = 1
     bunbo = 1
-    for i in range(1, y+1):
-        bunsi = (bunsi*(x+1-i)) % mod
-        bunbo = (bunbo*i) % mod
-    res = bunsi*pow(bunbo,mod-2,mod) % mod
+    for i in range(1, y + 1):
+        bunsi = (bunsi * (x + 1 - i)) % mod
+        bunbo = (bunbo * i) % mod
+    res = bunsi * pow(bunbo, mod - 2, mod) % mod
     return res
+
 
 def main():
     N, M = lmi()
     A = lmi()
     ans = cmb((M + N) % mod, (N + sum(A)) % mod) % mod
     print(ans)
-
-
 
 
 def __starting_point():

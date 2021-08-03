@@ -1,8 +1,8 @@
 def decode_resistor_colors(bands):
     bands_lst = bands.split(" ")
     VALUES = {"black": 0, "brown": 1, "red": 2, "orange": 3, "yellow": 4,
-              "green": 5, "blue":6, "violet":7, "gray": 8, "white": 9,
-              "gold": 5, "silver":10}   
+              "green": 5, "blue": 6, "violet": 7, "gray": 8, "white": 9,
+              "gold": 5, "silver": 10}
     first = VALUES[bands_lst[0]]
     second = VALUES[bands_lst[1]]
     num = str(first) + str(second)
@@ -20,4 +20,3 @@ def decode_resistor_colors(bands):
         ohms = ohms / 1000000
         unit = "M ohms"
     return "{:g}{}, {}%".format(ohms, unit, tolerance)
-

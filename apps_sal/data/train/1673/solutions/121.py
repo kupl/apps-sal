@@ -1,7 +1,7 @@
 class Solution:
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         # always fall to the smallest or second smallest (if smallest is the same )
-        
+
         m, n = len(arr), len(arr[0])
         i = 1
         while i < m:
@@ -17,5 +17,3 @@ class Solution:
                     arr[i][j] += a[min1]
             i += 1
         return min(arr[-1])
-        
-

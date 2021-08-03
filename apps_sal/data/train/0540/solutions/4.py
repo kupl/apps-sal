@@ -10,4 +10,4 @@ for i in range(t):
     if j != m:
         print(-1)
     else:
-        print(n-A.count(m))
+        print(n - A.count(m))

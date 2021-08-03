@@ -15,7 +15,7 @@ while i < len(l) - 1:
         else:
             i += 1
 
-#print(a)
+# print(a)
 if len(a) % 2 != 0:
     a.append(0)
 
@@ -24,24 +24,3 @@ while i < len(a):
     s += a[i] * a[i + 1]
     i += 2
 print(s)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

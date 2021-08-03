@@ -4,7 +4,7 @@ for i in range(t):
     s = str(input())
     l = len(s)
     for j in range(l - 4):
-        if s[j:j+5] == 'twone':
+        if s[j:j + 5] == 'twone':
             re.append(j + 2)
         elif s[j:j + 3] == 'two':
             re.append(j + 1)
@@ -23,4 +23,3 @@ for i in range(t):
     for d in range(le):
         print(re[d] + 1, end=' ')
     print()
-

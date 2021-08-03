@@ -4,7 +4,8 @@ def C(frm, what):
         ans *= frm - i
         ans = ans // (i + 1)
     return ans
- 
+
+
 n = int(input())
 ans = C(n, 5) * C(n, 5) * 120
-print (ans)
+print(ans)

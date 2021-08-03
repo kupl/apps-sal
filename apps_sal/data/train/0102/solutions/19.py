@@ -9,4 +9,3 @@ for i in range(n):
             answer += 1
             k = k * 10 + i
     print(answer)
-

@@ -3,10 +3,10 @@ loc = 0
 for i in range(n):
     dist, direct = input().split()
     dist = int(dist)
-    if (loc == 0 and direct != 'South' or
-        loc == 20000 and direct != 'North'):
-           print("NO")
-           break
+    if (loc == 0 and direct != 'South'
+            or loc == 20000 and direct != 'North'):
+        print("NO")
+        break
     if direct == 'South':
         loc += dist
     elif direct == 'North':
@@ -16,4 +16,3 @@ for i in range(n):
         break
 else:
     print("YES" if loc == 0 else "NO")
-

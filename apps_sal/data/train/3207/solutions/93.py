@@ -5,5 +5,3 @@ def reverseWords(str):
         final_str += word
         final_str += ' '
     return final_str.strip()
-        
-

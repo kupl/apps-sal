@@ -1,13 +1,12 @@
-n=int(input())
-a=list(map(int,input().split()))
+n = int(input())
+a = list(map(int, input().split()))
 
-if n%2==0:
-    S=a[-1::-2]+a[::2]
+if n % 2 == 0:
+    S = a[-1::-2] + a[::2]
     for x in S:
-        print(x,end=' ')
+        print(x, end=' ')
 else:
-    S=a[-1::-2]+a[1::2]
+    S = a[-1::-2] + a[1::2]
     for x in S:
-        print(x,end=' ')
+        print(x, end=' ')
 print()
-

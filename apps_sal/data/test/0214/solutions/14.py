@@ -49,6 +49,4 @@ for i in range(1, n + 1):
         B[i][3] = max([B[i - 1][j] for j in range(3)]) + 1
 
 
-
 print(max([B[n][j] for j in range(4)]))
-

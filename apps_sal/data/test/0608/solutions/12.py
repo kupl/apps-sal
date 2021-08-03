@@ -11,4 +11,3 @@ for i in a:
     else:
         d = 0
 print(cnt)
-

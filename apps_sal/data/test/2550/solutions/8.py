@@ -21,7 +21,7 @@ def lin(): return list(map(int, input().split()))
 def main():
     T = iin()
     while T:
-        T-=1
+        T -= 1
         n, m = lin()
         a = lin()
         ans = sum(a)

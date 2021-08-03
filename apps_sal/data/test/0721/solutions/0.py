@@ -1,14 +1,13 @@
-n,d=list(map(int,input().split()))
+n, d = list(map(int, input().split()))
 
-A=list(map(int,input().split()))
+A = list(map(int, input().split()))
 
-m=int(input())
+m = int(input())
 
 A.sort()
 
-if(m<=n):
+if(m <= n):
     print(sum(A[:m]))
 
 else:
-    print(sum(A)-(d*(m-n)))
-
+    print(sum(A) - (d * (m - n)))

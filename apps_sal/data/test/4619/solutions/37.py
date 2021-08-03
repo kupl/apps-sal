@@ -15,4 +15,3 @@ for i in range(n):
         sy[1] = min(sy[1], y)
 
 print((max(0, max(0, (sx[1] - sx[0])) * max(0, (sy[1] - sy[0])))))
-

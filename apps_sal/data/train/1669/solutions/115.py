@@ -18,10 +18,8 @@ class Solution:
                 num = first + i
                 if num in indices:
                     indices[num].pop()
-                    if len(indices[num]) == 0: del indices[num]
+                    if len(indices[num]) == 0:
+                        del indices[num]
                 else:
                     return False
         return True
-                    
-                
-

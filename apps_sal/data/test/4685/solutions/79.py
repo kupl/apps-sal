@@ -1,8 +1,7 @@
-A=list(map(int,input().split()))
+A = list(map(int, input().split()))
 
-K=int(input())
+K = int(input())
 
 A.sort(reverse=True)
 
-print((A[0]*2**K+A[1]+A[2]))
-
+print((A[0] * 2**K + A[1] + A[2]))

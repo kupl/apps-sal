@@ -4,4 +4,3 @@ def combat(health, damage):
         return 0
     else:
         return health
-

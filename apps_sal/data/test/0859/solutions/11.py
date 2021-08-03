@@ -26,9 +26,11 @@ def main():
     for i in range(len(poz) - int(lent), len(poz)):
         if poz[i] == poz_real:
             count_sovp += 1
-    print(float(count_sovp/lent))
+    print(float(count_sovp / lent))
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

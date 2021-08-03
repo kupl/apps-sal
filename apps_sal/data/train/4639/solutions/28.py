@@ -5,4 +5,3 @@ def power_of_two(n):
         return False
     else:
         return True
-

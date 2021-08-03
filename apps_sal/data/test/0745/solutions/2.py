@@ -24,4 +24,3 @@ else:
         else:
             ans += t
     print(2 * ans * comb(n, k) % MOD)
-

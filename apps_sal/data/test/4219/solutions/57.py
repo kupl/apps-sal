@@ -1,6 +1,6 @@
 N = int(input())
 
-W = [[-1]*N for _ in range(N)]
+W = [[-1] * N for _ in range(N)]
 for i in range(N):
     A = int(input())
     for j in range(A):
@@ -15,7 +15,7 @@ for b in range(2**N):
     for i in range(N):
         if (b >> i) & 1:
             d[i] = 1
-    
+
     ok = True
     for i in range(N):
         if d[i] == 1:
@@ -23,7 +23,7 @@ for b in range(2**N):
                 if W[i][j] == -1:
                     continue
                 if W[i][j] != d[j]:
-                    ok =False
+                    ok = False
 
     if ok == True:
         M = max(M, sum(d))

@@ -35,7 +35,7 @@ p = False
 ans = 0
 for i in range(n):
     fnt = f[i]
-    #print(fnt)
+    # print(fnt)
     if fnt[2] == 1:
         if t >= fnt[1]:
             s = t - fnt[1]

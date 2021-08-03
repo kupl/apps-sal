@@ -1,1 +1,1 @@
-tower_of_hanoi=lambda r: (1<<r)-1
+def tower_of_hanoi(r): return (1 << r) - 1

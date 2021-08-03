@@ -1,8 +1,8 @@
+from collections import Counter
 N = int(input())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
-from collections import Counter
 
 cA = Counter(A)
 cB = Counter(B)
@@ -37,10 +37,10 @@ if f == 1:
 else:
     print("Yes")
     t = 0
-    for i in range(N+1):
+    for i in range(N + 1):
         if tpA[i] >= 0 and tpB[i] >= 0:
             t = max(t, tpA[i] - tpB[i])
     for i in range(N):
-        ans[i+t-N] = B[i]
+        ans[i + t - N] = B[i]
     #print(tpA, tpB, t)
     print(" ".join([str(_) for _ in ans]))

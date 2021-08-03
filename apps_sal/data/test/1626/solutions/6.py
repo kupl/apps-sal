@@ -6,8 +6,6 @@ def get_multypler(k, a, b):
     return res - minus
 
 
-
-
 n, k = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))

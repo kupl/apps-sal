@@ -1,6 +1,7 @@
 from collections import deque
 import heapq
 
+
 class DinnerPlates:
     def __init__(self, capacity: int):
         self.capacity = capacity
@@ -49,4 +50,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

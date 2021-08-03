@@ -8,4 +8,3 @@ while x > 0:
     y += t[x % 16]
     x //= 16
 print(y)
-

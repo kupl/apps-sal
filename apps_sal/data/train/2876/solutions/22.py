@@ -21,4 +21,3 @@ def check(a,
     return check_helper(a,
                         x,
                         0)
-

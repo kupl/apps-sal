@@ -19,7 +19,7 @@ for i in range(n):
     max_b = max(max_b, b_sum)
 
 b_sum = b_sum_copy
-for i in range(n-1,-1,-1):
+for i in range(n - 1, -1, -1):
     if S[i] == 'A':
         b_sum += P[i]
     else:

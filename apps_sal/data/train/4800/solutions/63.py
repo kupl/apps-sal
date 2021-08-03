@@ -5,7 +5,6 @@ def hotpo(n):
         if r is 0:
             n = d
         else:
-            n = 3*n+1
+            n = 3 * n + 1
         c += 1
     return c
-

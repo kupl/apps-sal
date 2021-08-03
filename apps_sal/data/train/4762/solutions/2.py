@@ -1,4 +1,5 @@
-TOTAL =  '{} monitoring objections, {} automation, {} deployment pipeline, {} cloud, and {} microservices.'
+TOTAL = '{} monitoring objections, {} automation, {} deployment pipeline, {} cloud, and {} microservices.'
+
 
 def nkotb_vs_homie(r):
     result = []

@@ -23,5 +23,5 @@ def solve():
 
     return
 
-solve()
 
+solve()

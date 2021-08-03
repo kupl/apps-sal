@@ -1,2 +1,2 @@
-def mouth_size(animal): 
-  return ["small", "wide"][animal.lower()!="alligator"]
+def mouth_size(animal):
+    return ["small", "wide"][animal.lower() != "alligator"]

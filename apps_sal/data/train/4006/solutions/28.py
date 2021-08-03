@@ -6,7 +6,7 @@ def basic_op(operator, value1, value2):
     elif operator == "-":
         output = a - b
     elif operator == "*":
-        output = a*b
+        output = a * b
     else:
-        output = a/b
+        output = a / b
     return output

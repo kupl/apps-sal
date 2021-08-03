@@ -1,7 +1,6 @@
 def find_slope(points):
-    a,b,c,d = points
+    a, b, c, d = points
     if a == c:
         return "undefined"
     else:
-        return str((d-b)//(c-a))
-
+        return str((d - b) // (c - a))

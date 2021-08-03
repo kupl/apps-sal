@@ -8,4 +8,3 @@ if min(p) == 0:
     print('NO')
 else:
     print('YES')
-

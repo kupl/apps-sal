@@ -190,6 +190,7 @@ class LinearEquationSystem:
         else:
             return None
 
+
 def solve(*eqs):
     print(eqs)
     values_list = list()
@@ -212,4 +213,3 @@ def solve(*eqs):
                 coefficient_matrix[i].append(Fraction(0, 1))
     system = LinearEquationSystem(m=coefficient_matrix, x=variables[1::], b=b)
     return system.solve()
-

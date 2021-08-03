@@ -1,16 +1,17 @@
-def C2( x ):
+def C2(x):
     if x <= 1:
         return 0
-    return x*(x-1)//2
+    return x * (x - 1) // 2
+
 
 def __starting_point():
 
-    n = int( input() )
+    n = int(input())
     cake = []
     for i in range(n):
-        cake.append( [c for c in input()] )
+        cake.append([c for c in input()])
 
-    #for line in cake:
+    # for line in cake:
     #    print(line)
 
     res = 0
@@ -30,4 +31,6 @@ def __starting_point():
         res += C2(num)
 
     print(res)
+
+
 __starting_point()

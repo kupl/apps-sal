@@ -14,4 +14,3 @@ else:
         x, y = y, x + y
         c += 1
     print(c)
-

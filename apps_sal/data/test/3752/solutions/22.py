@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 k, d, t = R()
 p = (k // d + (1 if k % d else 0)) * d
 kp = k / t

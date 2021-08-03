@@ -12,4 +12,3 @@ for i in range(n):
 print(len(d))
 for i in d:
     print(i, d[i])
-

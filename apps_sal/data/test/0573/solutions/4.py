@@ -6,6 +6,5 @@ n = k.count('2')
 if m <= n:
     total = m
 else:
-    total = n + (m-n)//3
+    total = n + (m - n) // 3
 print(total)
-

@@ -36,4 +36,3 @@ else:
     for j in range(n, next_pop - 1, -1):
         my_list.append(j)
     print_list(my_list)
-

@@ -18,4 +18,3 @@ for i in range(num + 1):
             res = max(res, sum(s))
             l -= 1
 print(res)
-

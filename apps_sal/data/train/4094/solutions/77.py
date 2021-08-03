@@ -9,5 +9,3 @@ def count_positives_sum_negatives(arr):
         else:
             positive_num += 1
     return [positive_num, sum_of_negative]
-            
-

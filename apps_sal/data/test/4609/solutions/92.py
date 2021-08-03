@@ -7,6 +7,5 @@ for _ in range(N):
         paper.discard(a)
     else:
         paper.add(a)
-    
-print((len(paper)))
 
+print((len(paper)))

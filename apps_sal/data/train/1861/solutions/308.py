@@ -30,6 +30,8 @@ Submissions
 NOTE: Clarify: rectangle formed by ALL these points (convex hull)
             v. rectangle formed by ANY four distinct points
 '''
+
+
 class Solution:
     def minAreaRectangularHull(self, points: List[List[int]]) -> int:
         area = 0
@@ -41,9 +43,8 @@ class Solution:
                 miny = min(miny, y)
                 maxx = max(maxx, x)
                 maxy = max(maxy, y)
-            area = (maxx - minx)*(maxy - miny)
+            area = (maxx - minx) * (maxy - miny)
         return area
-                
 
     def minAreaRect(self, points):
         S = set(map(tuple, points))

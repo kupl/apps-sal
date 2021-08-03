@@ -23,4 +23,3 @@ for x in reversed(q):
             s[x] += i
             dp[x] += dp[y] + (k2 - i if i > k else i)
 print(dp[0])
-

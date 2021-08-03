@@ -15,4 +15,3 @@ print(n - len(pow2[maxset]))
 for i in range(n):
     if Set[i] != maxset:
         print(dists[i], end=" ")
-

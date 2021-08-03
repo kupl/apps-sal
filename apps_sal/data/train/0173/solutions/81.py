@@ -6,10 +6,9 @@ class Solution:
         bucket = [0] * k
         for a in arr:
             bucket[(k + a % k) % k] += 1
-        if bucket[0] % 2:            
+        if bucket[0] % 2:
             return False
         for i in range(1, k):
             if bucket[i] != bucket[k - i]:
                 return False
-        return True                
-
+        return True

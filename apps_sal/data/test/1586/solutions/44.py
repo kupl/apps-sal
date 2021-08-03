@@ -6,14 +6,14 @@ if n % 2 == 0:
     c = []
 
     while y <= n:
-        c.append(n//y)
+        c.append(n // y)
         if len(c) > 1:
             c[-2] -= c[-1]
         y *= 5
 
     cnt = 0
     for i in range(len(c)):
-        cnt += c[i]*(i+1)
+        cnt += c[i] * (i + 1)
 
     print(cnt)
 else:

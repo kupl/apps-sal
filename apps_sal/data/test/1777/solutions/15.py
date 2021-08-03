@@ -17,4 +17,3 @@ for _ in range(int(input())):
     elif q == 0:
         c2[p] += 1
 print(sum((min(c1[k], c2[k]) for k in list(c1.keys()))) + c1[0] // 2)
-

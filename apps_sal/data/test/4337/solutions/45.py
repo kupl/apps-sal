@@ -18,4 +18,3 @@ if count == 4:
     answer = 'Four'
 
 print(answer)
-

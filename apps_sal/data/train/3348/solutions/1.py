@@ -6,4 +6,3 @@ def outed(meet, boss):
         return 'Nice Work Champ!'
     else:
         return 'Get Out Now!'
-

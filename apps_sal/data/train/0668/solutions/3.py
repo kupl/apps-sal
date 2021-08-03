@@ -9,6 +9,7 @@ def maxSumSubarray(B):          # O(N)
             currSum = 0
     return maxSum
 
+
 def formB(A, K):
     B = [0 for _ in range(len(A) * K)]
     for i in range(len(A)):     # O(NK)
@@ -18,12 +19,11 @@ def formB(A, K):
             B[ti + len(A)] = A[i]
             ti += len(A)
             j += 1
-    
+
     # print(B)
     return maxSumSubarray(B)
-    
-    
-    
+
+
 try:
     T = int(input())
 except Exception as e:

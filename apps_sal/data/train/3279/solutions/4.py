@@ -1,7 +1,9 @@
 import re
 
+
 def sursurungal(stg):
     return re.sub(r"(\d+) (\w+)", sur_grp, stg)
+
 
 def sur_grp(m):
     n, w = (int(c) if c.isdigit() else c for c in m.groups())

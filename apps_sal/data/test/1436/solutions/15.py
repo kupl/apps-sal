@@ -14,4 +14,3 @@ for i in map(int, stdin.readline().split()):
     else:
         acc = acc + i
 print(cnt)
-

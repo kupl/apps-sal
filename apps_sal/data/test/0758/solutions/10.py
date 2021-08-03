@@ -5,4 +5,3 @@ for i in range(len(s)):
     if s[i] == 'B':
         res += 2**i
 print(res)
-

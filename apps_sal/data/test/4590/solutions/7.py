@@ -1,37 +1,41 @@
 def binary_search(arr, num):
-  left = 0
-  right = len(arr)-1
-  while right-left > 0:
-    mid = (left+right) // 2
-    if arr[mid] > num:
-      right = mid
+    left = 0
+    right = len(arr) - 1
+    while right - left > 0:
+        mid = (left + right) // 2
+        if arr[mid] > num:
+            right = mid
+        else:
+            left = mid + 1
+    if arr[left] > num:
+        return left
     else:
-      left = mid + 1
-  if arr[left] > num:
-    return left
-  else:
-    return len(arr)
+        return len(arr)
+
 
 def main():
-  n, m, k = map(int , input().split())
-  a_books = list(map(int , input().split()))
-  b_books = list(map(int , input().split()))
-  a_cum_sum = [0] * (n+1)
-  b_cum_sum = [0] * (m+1)
+    n, m, k = map(int, input().split())
+    a_books = list(map(int, input().split()))
+    b_books = list(map(int, input().split()))
+    a_cum_sum = [0] * (n + 1)
+    b_cum_sum = [0] * (m + 1)
 
-  for i in range(n):
-    a_cum_sum[i+1] = a_cum_sum[i] + a_books[i]
-  for i in range(m):
-    b_cum_sum[i+1] = b_cum_sum[i] + b_books[i]
-  ans = 0
-  for i in range(n+1):
-    if a_cum_sum[i] > k:
-      break
-    rest = k - a_cum_sum[i]
-    index = binary_search(b_cum_sum, rest)
-    ans = max(ans, i+index-1)
-  print(ans)
+    for i in range(n):
+        a_cum_sum[i + 1] = a_cum_sum[i] + a_books[i]
+    for i in range(m):
+        b_cum_sum[i + 1] = b_cum_sum[i] + b_books[i]
+    ans = 0
+    for i in range(n + 1):
+        if a_cum_sum[i] > k:
+            break
+        rest = k - a_cum_sum[i]
+        index = binary_search(b_cum_sum, rest)
+        ans = max(ans, i + index - 1)
+    print(ans)
+
 
 def __starting_point():
-  main()
+    main()
+
+
 __starting_point()

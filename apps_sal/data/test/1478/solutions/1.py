@@ -18,8 +18,3 @@ for i in range(n):
         stack.pop()
 sys.stdout.write("{}\n".format(len(levels)) + '\n'.join([' '.join(x) for x in levels]) + '\n')
 sys.stdout.flush()
-
-
-
-
-

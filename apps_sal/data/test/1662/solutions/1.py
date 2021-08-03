@@ -21,6 +21,6 @@ while i > 0:
         res.append(i)
         quant[i] -= 1
     i -= 1
-    
+
 print(len(res))
 print(*res)

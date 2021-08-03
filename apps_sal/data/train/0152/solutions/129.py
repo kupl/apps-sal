@@ -3,7 +3,7 @@ class Solution:
         A.sort()
         n = len(A)
         l, r = 1, A[-1] - A[0]
-        
+
         def get_m(d):
             res = 1
             i = 1
@@ -14,7 +14,7 @@ class Solution:
                     prev = A[i]
                 i += 1
             return res
-        
+
         while l < r:
             mid = r - (r - l) // 2
             if get_m(mid) < m:
@@ -22,4 +22,3 @@ class Solution:
             else:
                 l = mid
         return l
-

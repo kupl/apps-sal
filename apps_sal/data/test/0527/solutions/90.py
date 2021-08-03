@@ -29,8 +29,11 @@ def main():
             prev = index_list[tt][0]
             ans += lens
 
-    print(ans+prev+1)
+    print(ans + prev + 1)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

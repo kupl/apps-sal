@@ -15,7 +15,6 @@ else:
 
     a_n, b_n = a, b
 
-
     for i in range(a, int(math.ceil(math.sqrt(min_sq))) + 1):
         n_b = int(math.ceil(min_sq / i))
 
@@ -27,8 +26,7 @@ else:
             max_sq = new_sq
             a_n = i
             b_n = n_b
-    
+
     if swap:
         a_n, b_n = b_n, a_n
     print('{}\n{} {}'.format(max_sq, a_n, b_n))
-

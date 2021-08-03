@@ -3,4 +3,4 @@ def withdraw(n):
     twenties = int(n / 20) - 2 if fifties else int(n / 20)
     hundreds = int(20 * twenties / 100)
     twenties = twenties - hundreds * 5
-    return [hundreds, fifties, twenties]   
+    return [hundreds, fifties, twenties]

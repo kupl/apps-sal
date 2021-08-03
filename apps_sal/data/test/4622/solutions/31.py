@@ -12,5 +12,5 @@ for i in range(len(L)):
     if L[i] > 1:
         print('NO')
         return
-        
+
 print('YES')

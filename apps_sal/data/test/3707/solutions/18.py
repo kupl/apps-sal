@@ -13,6 +13,7 @@ def sing(n, t, k):
 
     return last
 
+
 def getdouble(n, t, k, d):
     have = 0
     q = [t, d + t]
@@ -28,6 +29,7 @@ def getdouble(n, t, k, d):
 
     return last
 
+
 def main():
     n, t, k, d = list(map(int, input().split()))
     single = (n + k - 1) // k
@@ -37,5 +39,5 @@ def main():
 
     print('YES' if double < single else 'NO')
 
-main()
 
+main()

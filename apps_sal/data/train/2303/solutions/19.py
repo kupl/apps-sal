@@ -42,7 +42,7 @@ class UnionFind:
 UF = UnionFind(M)
 for i in range(M):
     p, q, c = list(map(int, input().split()))
-    p, q = p-1, q-1
+    p, q = p - 1, q - 1
     Edges.append((p, q))
 
     if (p, c) in D:
@@ -69,7 +69,7 @@ for firm, node in list(Firm_Node.items()):
 
 
 def dijkstra(x):
-    d = {x: 0, N-1: 10**9}
+    d = {x: 0, N - 1: 10**9}
     visited = {x}
 
     # d, u
@@ -83,12 +83,11 @@ def dijkstra(x):
             d.setdefault(node, float('inf'))
             if (node not in visited) and d[node] > d[u] + 1:
                 d[node] = d[u] + 1
-                if d[N-1] < 10**9:
+                if d[N - 1] < 10**9:
                     return d
-                queue.appendleft([d[u]+1, node])
+                queue.appendleft([d[u] + 1, node])
     return d
 
 
 dist = dijkstra(0)
-print((dist[N-1] // 2 if dist[N-1] < 2*M else -1))
-
+print((dist[N - 1] // 2 if dist[N - 1] < 2 * M else -1))

@@ -1,5 +1,6 @@
 import math
 
+
 def calc_web_length(current_loc, swing_point):
     x = swing_point[0] - current_loc[0]
     y = swing_point[1] - current_loc[1]
@@ -7,6 +8,7 @@ def calc_web_length(current_loc, swing_point):
     web_length = math.sqrt(pow(x, 2) + pow(y, 2))
     bottom_height = swing_point[1] - web_length
     return x_travel, web_length, bottom_height
+
 
 def spidey_swings(ar):
     buildings = ar
@@ -88,4 +90,3 @@ def spidey_swings(ar):
             swing_list.append(best_building[0])
 
     return swing_list
-

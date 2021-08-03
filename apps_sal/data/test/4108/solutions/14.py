@@ -22,4 +22,3 @@ if ss == ts:
     print("Yes")
 else:
     print("No")
-

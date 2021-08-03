@@ -1,13 +1,11 @@
 __author__ = 'Gleb'
 
 
-
 from time import time
 
 from collections import defaultdict
 
 from bisect import bisect_left, bisect_right
-
 
 
 n, m = int(input()) + 1, 1000000007
@@ -38,13 +36,15 @@ while r:
 
         q[j].remove(i)
 
-        if not q[j]: r.add(j)
+        if not q[j]:
+            r.add(j)
 
     for j in q[i]:
 
         p[j].remove(i)
 
-        if not p[j]: r.add(j)
+        if not p[j]:
+            r.add(j)
 
 r = set(i for i in range(1, n) if p[i] and q[i])
 
@@ -60,15 +60,18 @@ while r:
 
         i = h.pop()
 
-        if not i in r: continue
+        if not i in r:
+            continue
 
         r.remove(i)
 
         h += p[i]
 
-        if w[i] == d: k += 1
+        if w[i] == d:
+            k += 1
 
-        elif w[i] < d: d, k = w[i], 1
+        elif w[i] < d:
+            d, k = w[i], 1
 
     s += d
 
@@ -77,6 +80,4 @@ while r:
 print(s, t)
 
 
-
 # Made By Mostafa_Khaled
-

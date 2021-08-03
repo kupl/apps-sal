@@ -1,4 +1,6 @@
-x,a = map(int, input().split())
+x, a = map(int, input().split())
 
-if a <= x: print(10)
-else: print(0)
+if a <= x:
+    print(10)
+else:
+    print(0)

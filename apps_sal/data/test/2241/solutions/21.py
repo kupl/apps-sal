@@ -1,7 +1,7 @@
 import math
 n = int(input())
-aList = list(map(int,input().split()))
-bList = list(map(int,input().split()))
+aList = list(map(int, input().split()))
+bList = list(map(int, input().split()))
 joy = 0
 for i in range(n):
     if bList[i] == 1:

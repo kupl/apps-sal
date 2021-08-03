@@ -6,7 +6,5 @@ x -= a
 while(1):
     x -= b
     if x - b < 0:
-      print(x)
-      break
-
-
+        print(x)
+        break

@@ -11,13 +11,14 @@ def bfs(x, g):
                 dist[to] = dist[v] + 1
                 q.append(to)
     return (q[-1], dist[q[-1]])
- 
+
+
 n, m = map(int, input().split())
 g = [[] for _ in range(n)]
- 
+
 for _ in range(m):
     a, b = map(lambda x: int(x) - 1, input().split())
     g[a].append(b)
     g[b].append(a)
- 
+
 print(bfs(bfs(0, g)[0], g)[1])

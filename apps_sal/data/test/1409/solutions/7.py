@@ -5,4 +5,3 @@ for peo in yi:
     if peo <= 5 - k:
         num_peo += 1
 print(num_peo // 3)
-

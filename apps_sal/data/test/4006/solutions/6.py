@@ -14,4 +14,3 @@ while 1:
         s.add(x)
         ans += 1
 print(len(s))
-

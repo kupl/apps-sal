@@ -1,4 +1,4 @@
-def solution(n,q=[]):
+def solution(n, q=[]):
     if n == None:
         return q
     o = []

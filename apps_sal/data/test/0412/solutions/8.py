@@ -12,5 +12,5 @@ for i in range(n):
     if j > r:
         r = j
         c = 1
-        
+
 print(step[r], c)

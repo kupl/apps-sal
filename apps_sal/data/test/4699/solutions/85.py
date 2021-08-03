@@ -5,4 +5,3 @@ for i in range(N, 100_000):
         continue
     print(i)
     break
-

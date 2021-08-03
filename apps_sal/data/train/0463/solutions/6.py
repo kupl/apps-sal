@@ -25,4 +25,3 @@ class Solution:
                     if large[1] < nums[i]:
                         large = (i, nums[i])
         return sum([abs(nums[i] - nums[i + 1]) for i in range(n - 1)]) + max(2 * (large[1] - small[1]), 0, ans)
-

@@ -17,7 +17,7 @@ class Solution:
         # calc distance to right neighbor
         right_neighbor = float('inf')
         answer = 0
-        for seat in range(n-1,-1,-1):
+        for seat in range(n - 1, -1, -1):
             if seats[seat] == 1:
                 right_neighbor = seat
             distance[seat] = min(distance[seat], right_neighbor - seat)
@@ -25,4 +25,3 @@ class Solution:
             #     answer = seat
         print(distance)
         return max(distance)
-

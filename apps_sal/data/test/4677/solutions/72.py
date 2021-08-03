@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-s=input()
-ans=[]
+s = input()
+ans = []
 for i in s:
-    if i=='0' or i=='1':
+    if i == '0' or i == '1':
         ans.append(i)
     else:
         if len(ans):

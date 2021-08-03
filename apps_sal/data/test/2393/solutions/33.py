@@ -18,4 +18,3 @@ for i in range(t):
         j += 1
     print(cnt)
     print(*a)
-

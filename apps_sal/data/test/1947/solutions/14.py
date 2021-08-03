@@ -24,4 +24,3 @@ for mi in range(m):
                     k += 1
                 elif p - 1 != 0 and p != len(h) and h[p - 2] > l and h[p] > l:
                     k -= 1
-

@@ -6,4 +6,3 @@ for _ in range(t):
         print("Thanks for helping Chef!")
     else:
         print('-1')
-

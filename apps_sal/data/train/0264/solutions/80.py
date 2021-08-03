@@ -8,7 +8,7 @@ class Solution:
             if self.noDupes(currString):
                 if currString not in self.compatible:
                     self.compatible[currString] = []
-                for j in range(i+1, len(arr)):
+                for j in range(i + 1, len(arr)):
                     if self.noDupes(arr[j]) and self.uniqueChars(currString, arr[j]):
                         self.compatible[currString].append(arr[j])
         for key in self.compatible:
@@ -18,13 +18,13 @@ class Solution:
                 length = self.findLength(key, key, 0)
             maxLen = max(maxLen, length)
         return maxLen
-    
+
     def uniqueChars(self, s1, s2):
         for c in s2:
             if c in s1:
                 return False
         return True
-    
+
     def noDupes(self, string):
         counts = {}
         for c in string:
@@ -37,5 +37,5 @@ class Solution:
         for string in self.compatible[currString]:
             if self.uniqueChars(totalString, string):
                 maxLen = max(maxLen, self.findLength(string, totalString + string, len(totalString) + len(string)))
-        
+
         return maxLen

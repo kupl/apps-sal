@@ -1,5 +1,5 @@
 def check_alive(health):
     if health > 0:
-        return True 
+        return True
     if health <= 0:
         return False

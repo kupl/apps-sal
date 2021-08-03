@@ -5,7 +5,7 @@ class Solution:
         mini = sum(cardPoints[:left])
         cur = mini
         for i in range(left, n):
-            cur = cur - cardPoints[i-left] + cardPoints[i]
+            cur = cur - cardPoints[i - left] + cardPoints[i]
             mini = min(mini, cur)
-        
+
         return sum(cardPoints) - mini

@@ -8,7 +8,7 @@ solutions = []
 for i in map(int, input().split()):
     count[i] += 1
 
-for i in range(n//3):
+for i in range(n // 3):
     if count[1] > 0:
         if count[2] > 0:
             if count[4] > 0:

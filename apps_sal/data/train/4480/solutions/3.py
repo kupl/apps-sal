@@ -4,6 +4,7 @@ COMMANDS = {
     's': lambda x: x * x,
 }
 
+
 def parse(data):
     result, x = [], 0
     for c in data:

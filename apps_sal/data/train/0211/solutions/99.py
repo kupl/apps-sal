@@ -19,5 +19,3 @@ class Solution:
             if valid and len(lis) > max:
                 max = len(lis)
         return max
-                
-

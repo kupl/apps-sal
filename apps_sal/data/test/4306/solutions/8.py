@@ -7,4 +7,3 @@ for i in range(a, b):
 for j in range(c, d):
     t[j] += 1
 print((t.count(2)))
-

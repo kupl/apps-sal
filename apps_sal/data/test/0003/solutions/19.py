@@ -38,4 +38,3 @@ for i in range(q):
         ar[j] += 1
 
 print(ans)
-

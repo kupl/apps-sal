@@ -24,21 +24,23 @@ def SR(n): return [S() for i in range(n)]
 def LSR(n): return [LS() for i in range(n)]
 def SRL(n): return [list(S()) for i in range(n)]
 def MSRL(n): return [[int(j) for j in list(S())] for i in range(n)]
+
+
 mod = 1000000007
 
-#aかbのどちらかは無限に増やせる
-n=I()
-c1=S()
-c2=S()
-c3=S()
-c4=S()
+# aかbのどちらかは無限に増やせる
+n = I()
+c1 = S()
+c2 = S()
+c3 = S()
+c4 = S()
 
-if n<=3:
+if n <= 3:
     print((1))
     return
 
-if c2=="A":
-    if c1=="A":
+if c2 == "A":
+    if c1 == "A":
         print((1))
     else:
         dp = [[0] * 2 for _ in range(n - 3)]
@@ -47,12 +49,12 @@ if c2=="A":
         for i in range(1, n - 3):
             dp[i][0] = sum(dp[i - 1]) % mod
             dp[i][1] = dp[i - 1][0]
-        if c3=="A":
+        if c3 == "A":
             print((sum(dp[-1]) % mod))
         else:
-            print((pow(2,n-3,mod)))
+            print((pow(2, n - 3, mod)))
 else:
-    if c4=="B":
+    if c4 == "B":
         print((1))
     else:
         dp = [[0] * 2 for _ in range(n - 3)]
@@ -61,13 +63,7 @@ else:
         for i in range(1, n - 3):
             dp[i][0] = sum(dp[i - 1]) % mod
             dp[i][1] = dp[i - 1][0]
-        if c3=="B":
+        if c3 == "B":
             print((sum(dp[-1]) % mod))
         else:
-            print((pow(2,n -3,mod)))
-
-
-
-
-
-
+            print((pow(2, n - 3, mod)))

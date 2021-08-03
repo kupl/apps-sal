@@ -19,4 +19,3 @@ for i in range(n):
     ans += pos_a * (n - pos_c)
     # print(b, pos_a, pos_c)
 print(ans)
-

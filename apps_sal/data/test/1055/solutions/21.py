@@ -7,7 +7,7 @@ else:
         if i > n:
             continue
         for k in range(0, n, i):
-            if sorted(arr[k:k+i]) == arr[k:k+i]:
+            if sorted(arr[k:k + i]) == arr[k:k + i]:
                 print(i)
                 return
     print(1)

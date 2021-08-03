@@ -1,17 +1,17 @@
 class Solution:
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
         n1, n2 = len(str1), len(str2)
+
         def lcs():
             dp = [[''] * (n2 + 1) for _ in range(n1 + 1)]
             for i in range(1, n1 + 1):
                 for j in range(1, n2 + 1):
-                    if str1[i-1] == str2[j-1]:
-                        dp[i][j] = dp[i-1][j-1] + str1[i-1]
+                    if str1[i - 1] == str2[j - 1]:
+                        dp[i][j] = dp[i - 1][j - 1] + str1[i - 1]
                     else:
-                        dp[i][j] = max(dp[i-1][j], dp[i][j-1], key=len)
+                        dp[i][j] = max(dp[i - 1][j], dp[i][j - 1], key=len)
             return dp[-1][-1]
-            
-            
+
         i = j = 0
         res = ''
         for ch in lcs():
@@ -25,4 +25,3 @@ class Solution:
             i += 1
             j += 1
         return res + str1[i:] + str2[j:]
-

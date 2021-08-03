@@ -1,5 +1,6 @@
 import heapq
 
+
 class BalancingTree:
     def __init__(self):
         self.p = []
@@ -22,8 +23,8 @@ n, q = list(map(int, input().split()))
 events = []
 for _ in range(n):
     s, t, x = list(map(int, input().split()))
-    events.append((s-x, 1, x))
-    events.append((t-x, 0, x))
+    events.append((s - x, 1, x))
+    events.append((t - x, 0, x))
 for _ in range(q):
     d = int(input())
     events.append((d, 2, 0))
@@ -37,4 +38,3 @@ for _, i, k in events:
         bt.erase(k)
     else:
         print((bt.minimum()))
-

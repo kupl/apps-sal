@@ -9,4 +9,3 @@ if not cnt[-1]:
     cnt.pop()
 print(len(cnt))
 print(*cnt)
-

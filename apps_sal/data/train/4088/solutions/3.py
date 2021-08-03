@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def tetris(arr):
     fields = Counter()
     clear = 0

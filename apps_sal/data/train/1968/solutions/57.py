@@ -1,6 +1,6 @@
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
-        # 
+        #
         class TrieNode:
             def __init__(self):
                 self.children = defaultdict(TrieNode)
@@ -13,7 +13,7 @@ class Solution:
                 trie = trie.children[c]
             trie.index = i
         res = []
-        
+
         # bfs
         q = [root]
         while q:
@@ -23,7 +23,7 @@ class Solution:
             # 文件名可能包含多个字符
             # [\"/a/b/c\",\"/a/b/ca\",\"/a/b/d\"]
             for c in node.children.keys():
-                if node.index < 0 or c!='/':
+                if node.index < 0 or c != '/':
                     q.append(node.children[c])
-                
+
         return res

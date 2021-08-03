@@ -21,4 +21,3 @@ else:
         print("NO")
 if f == 0:
     print("NO")
-

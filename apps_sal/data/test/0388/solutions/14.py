@@ -1,21 +1,21 @@
 def solve(n, k, a):
     t = 0
-    ans = ["" for i in range(n)] 
-    
+    ans = ["" for i in range(n)]
+
     i = 0
     while ((i < len(a)) and (a[i] == 'NO')):
         ans[i] = names[0]
         i += 1
-    
+
     if (i == len(a)):
         for j in range(i, i + k - 1):
             ans[j] = ans[0]
         return(ans)
-    
+
     for j in range(i, i + k):
         ans[j] = names[t]
         t += 1
-    
+
     while (i < len(a)):
         if (a[i] == 'NO'):
             ans[i + k - 1] = ans[i]
@@ -24,14 +24,12 @@ def solve(n, k, a):
             t += 1
         i += 1
 
-    return ans 
-
-
+    return ans
 
 
 names = []
-for i in range(ord('A'), ord('Z')+ 1):
-    for j in range(ord('a'), ord('z')+ 1):
+for i in range(ord('A'), ord('Z') + 1):
+    for j in range(ord('a'), ord('z') + 1):
         names.append(chr(i) + chr(j))
 '''
 import random
@@ -55,10 +53,8 @@ for i in range(100000):
                 print(a)
                 print(ans)
                 exit
-'''     
+'''
 n, k = list(map(int, input().strip().split()))
 is_ok = input().strip().split()
 ans = solve(n, k, is_ok)
 print(*ans)
-
-

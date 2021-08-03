@@ -13,4 +13,3 @@ for _ in range(int(input())):
             print(0)
         else:
             print(max(a) - min(b))
-

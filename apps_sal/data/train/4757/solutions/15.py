@@ -5,7 +5,7 @@ import sys
 buff_readline = sys.stdin.readline
 readline = sys.stdin.readline
 
-INF = 2**62-1
+INF = 2**62 - 1
 
 
 def read_int():
@@ -18,7 +18,7 @@ def read_int_n():
 
 # @mt
 def slv(N, M, A, B):
-    if N * A != M*B:
+    if N * A != M * B:
         print('NO')
         return
 
@@ -26,11 +26,10 @@ def slv(N, M, A, B):
     mat = [[0] * M for _ in range(N)]
     for i in range(N):
         for j in range(A):
-            mat[i][(i*A+j)%M] = 1
+            mat[i][(i * A + j) % M] = 1
 
     for r in mat:
         print(''.join(map(str, r)))
-
 
 
 def main():
@@ -42,5 +41,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

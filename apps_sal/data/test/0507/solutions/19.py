@@ -14,9 +14,10 @@ for idx in range(size):
         a_remain.append(a[idx])
         b_remain.append(b[idx])
 
-for elem in range(1, size+1):
+for elem in range(1, size + 1):
     if elem not in right:
         cand.append(elem)
+
 
 def diff(seq_a, seq_b):
     if (seq_a[0] == seq_b[0] and seq_a[1] != seq_b[1]) or \
@@ -24,6 +25,7 @@ def diff(seq_a, seq_b):
         return True
     else:
         return False
+
 
 def replace(original, pattern):
     pos = 0
@@ -33,6 +35,7 @@ def replace(original, pattern):
             pos += 1
     return [str(elem) for elem in original]
 
+
 if len(cand) == 1:
     print(' '.join(replace(right, cand)))
 elif diff(cand, a_remain) and diff(cand, b_remain):
@@ -40,4 +43,3 @@ elif diff(cand, a_remain) and diff(cand, b_remain):
 else:
     cand.reverse()
     print(' '.join(replace(right, cand)))
-

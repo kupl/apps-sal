@@ -7,5 +7,6 @@ CLICHES = {
     "rapper": "Cristal",
 }
 
+
 def get_drink_by_profession(param):
     return CLICHES.get(param.lower(), "Beer")

@@ -4,16 +4,16 @@ m = int(line[1])
 data = []
 for i in range(n):
     data.append(input())
-    
+
 x = [1 for i in range(n)]
 delete = 0
 for i in range(m):
     dum = [1 for j in range(n)]
     status = 1
-    for j in range(1,n):
-        if data[j][i] > data[j-1][i]:
+    for j in range(1, n):
+        if data[j][i] > data[j - 1][i]:
             dum[j] = 0
-        elif data[j][i] == data[j-1][i]:
+        elif data[j][i] == data[j - 1][i]:
             dum[j] = 1
         else:
             if x[j] == 1:
@@ -25,4 +25,3 @@ for i in range(m):
             if dum[j] == 0:
                 x[j] = 0
 print(delete)
-

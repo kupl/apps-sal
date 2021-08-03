@@ -13,4 +13,3 @@ for i in range(m - n + 1):
 
 print(len(ans))
 print(' '.join(map(str, ans)))
-

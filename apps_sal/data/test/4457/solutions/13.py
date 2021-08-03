@@ -13,4 +13,3 @@ for i in range(n):
     res.append(str(b[i][1] + 1))
 print(s)
 print(' '.join(res))
-

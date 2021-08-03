@@ -40,4 +40,3 @@ for i in A:
         ttt -= 1
         t += 1
 print(ans)
-

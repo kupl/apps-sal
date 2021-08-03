@@ -1,6 +1,6 @@
 n, m = list(map(int, input().strip().split()))
 
-remains = n*n
+remains = n * n
 deleted_rows = set()
 deleted_cols = set()
 answer = []
@@ -14,7 +14,7 @@ for _ in range(m):
         elif row_deleted:
             remains -= (n - len(deleted_rows))
         else:  # not x_in and not y_in
-            remains -= (2*n - len(deleted_cols) - len(deleted_rows) - 1)
+            remains -= (2 * n - len(deleted_cols) - len(deleted_rows) - 1)
 
     deleted_cols.add(c)
     deleted_rows.add(r)
@@ -22,4 +22,3 @@ for _ in range(m):
     answer.append(str(remains))
 
 print(' '.join(answer))
-

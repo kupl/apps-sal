@@ -10,4 +10,3 @@ for i in range(n):
     m = min(m, k)
     ans[m] += (i + 1) * (v - nv)
 print(*ans[1:], sep='\n')
-

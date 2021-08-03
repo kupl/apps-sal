@@ -4,10 +4,9 @@ def get_drink_by_profession(param):
                   'Programmer': 'Hipster Craft Beer',
                   'Bike Gang Member': 'Moonshine',
                   'Politician': 'Your tax dollars',
-                  'Rapper': 'Cristal',}
+                  'Rapper': 'Cristal', }
     param = param.title()
     try:
         return (drink_list)[param]
     except:
         return 'Beer'
-

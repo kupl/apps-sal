@@ -2,7 +2,7 @@ def main():
     N = int(input())
     T = input()
     if T == "1":
-        print((10**10*2))
+        print((10**10 * 2))
         return
     elif T == "0" or T == "11":
         print((10**10))
@@ -21,5 +21,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

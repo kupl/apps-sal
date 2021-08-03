@@ -12,8 +12,8 @@ class Solution:
                 else:
                     i += 1
             res += ''.join(curr)
-            
-            j = len(s)-1
+
+            j = len(s) - 1
             curr = []
             while j >= 0:
                 if s[j] not in curr:

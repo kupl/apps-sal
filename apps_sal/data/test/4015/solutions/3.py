@@ -14,4 +14,3 @@ else:
         print(-1)
     else:
         print(ans)
-

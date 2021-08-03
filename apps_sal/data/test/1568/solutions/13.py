@@ -8,5 +8,5 @@ else:
         if i == n[4]:
             ans += n[1]
         else:
-            ans += n[1] + (n[4]-i) * (n[3] - n[2])
+            ans += n[1] + (n[4] - i) * (n[3] - n[2])
     print(ans)

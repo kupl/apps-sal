@@ -1,7 +1,7 @@
 import sys
 n, k = [int(i) for i in sys.stdin.readline().split()]
 gwl = []
-for i in range(n+1):
+for i in range(n + 1):
     gwl.append([])
 data = []
 for kk in range(k):
@@ -12,7 +12,7 @@ for kk in range(k):
 
 one = set()
 two = set(range(k))
-sn = [1] * (n+1)
+sn = [1] * (n + 1)
 doub = [1] * k
 ans = 0
 
@@ -60,4 +60,3 @@ while True:
     else:
         break
 print(k - ans)
-

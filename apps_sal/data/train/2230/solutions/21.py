@@ -24,4 +24,3 @@ for ci in c:
         i += 1
     p[ci] = i
 print(' '.join(r))
-

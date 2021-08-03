@@ -4,9 +4,8 @@ for _ in range(int(input())):
     fine = 0
     for i, v in enumerate(statement):
         if v == 0:
-            fine = (n-i)*100    
+            fine = (n - i) * 100
             break
-                
-    total = fine + 1000*statement.count(0)
+
+    total = fine + 1000 * statement.count(0)
     print(total)
-            

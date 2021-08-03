@@ -4,4 +4,3 @@ for t in range(q):
     a = ((y + 1) * k - 1 + x - 1 - 1) // (x - 1)
     b = k
     print(a + b)
-

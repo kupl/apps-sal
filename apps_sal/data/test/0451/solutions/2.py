@@ -10,7 +10,7 @@ for i in range(n):
     elif (b[i] == 'O'):
         o.append(a[i])
     else:
-        w.append(a[i]);
+        w.append(a[i])
 r.sort()
 o.sort()
 w.sort()

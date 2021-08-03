@@ -10,4 +10,3 @@ def denumerate(enum_list):
         return string
     except:
         return False
-

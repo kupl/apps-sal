@@ -90,7 +90,7 @@ def play_OX_3D(moves):
     idx = -1
     players = [{'name': 'O', 'moves': []}, {'name': 'X', 'moves': []}]
     for i, mov in enumerate(moves):
-        idx = (idx+1) % 2
+        idx = (idx + 1) % 2
         player = players[idx]
         player['moves'].append(list(mov))
         if is_won(player['moves']):

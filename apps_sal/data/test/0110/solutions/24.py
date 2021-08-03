@@ -11,6 +11,6 @@ if b < 0:
     for i in range(n):
         if abs(a[i_max]) < abs(a[i]):
             i_max = i
-    a[i_max] =  -a[i_max] - 1
+    a[i_max] = -a[i_max] - 1
 
 print(" ".join(map(str, a)))

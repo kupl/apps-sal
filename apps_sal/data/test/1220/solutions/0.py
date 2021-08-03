@@ -1,17 +1,17 @@
-n,m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 ae = [[] for _ in range(n)]
 for _ in range(m):
-    a,b = list(map(int,input().split()))
-    ae[a-1].append(b-1)
-    ae[b-1].append(a-1)
+    a, b = list(map(int, input().split()))
+    ae[a - 1].append(b - 1)
+    ae[b - 1].append(a - 1)
 mn = -1
 nbr = n
 for i in range(n):
-    if len(ae[i])<nbr:
+    if len(ae[i]) < nbr:
         mn = i
         nbr = len(ae[i])
 keep = ae[mn]
-ok = n-len(keep)
+ok = n - len(keep)
 while True:
     toDel = -1
     for i in keep:
@@ -19,8 +19,9 @@ while True:
         for j in ae[i]:
             if j in keep:
                 aeo -= 1
-                if aeo<ok: break
-        if aeo<ok:
+                if aeo < ok:
+                    break
+        if aeo < ok:
             toDel = i
             break
     if toDel == -1:
@@ -31,8 +32,10 @@ while True:
 out = [ok]
 d = {}
 
-if len(keep) == 1: out.append(1)
-elif len(keep) == 0: out = out
+if len(keep) == 1:
+    out.append(1)
+elif len(keep) == 0:
+    out = out
 else:
     keep.sort()
     for i in range(len(keep)):
@@ -41,18 +44,21 @@ else:
     edg = [[] for _ in range(len(keep))]
     for i in range(len(keep)):
         for j in range(len(keep)):
-            if i == j: continue
+            if i == j:
+                continue
             edg[i].append(j)
             edg[j].append(i)
 
     for i in keep:
-        for j in ae[i]: 
+        for j in ae[i]:
             if j in keep:
-                if d[j] in edg[d[i]]: edg[d[i]].remove(d[j])
-                if d[i] in edg[d[j]]: edg[d[j]].remove(d[i])
-    used = [False]*len(keep)
+                if d[j] in edg[d[i]]:
+                    edg[d[i]].remove(d[j])
+                if d[i] in edg[d[j]]:
+                    edg[d[j]].remove(d[i])
+    used = [False] * len(keep)
     uss = 0
-    while uss<len(keep):
+    while uss < len(keep):
         fi = -1
         for i in range(len(keep)):
             if not used[i]:
@@ -74,5 +80,4 @@ else:
 
 out.sort()
 print(len(out))
-print(' '.join(map(str,out)))
-
+print(' '.join(map(str, out)))

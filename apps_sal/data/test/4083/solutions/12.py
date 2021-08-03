@@ -9,14 +9,14 @@ a = [int(i) for i in input().split()]
 
 d = dd(list)
 for x in a:
-	i = 0
-	while(x):
-		d[x].append(i)
-		x //= 2
-		i += 1
+    i = 0
+    while(x):
+        d[x].append(i)
+        x //= 2
+        i += 1
 ans = 999999999999
 for i in d:
-	if len(d[i]) >= k:
-		d[i].sort()
-		ans = min(ans, sum(d[i][0:k]))
+    if len(d[i]) >= k:
+        d[i].sort()
+        ans = min(ans, sum(d[i][0:k]))
 print(ans)

@@ -7,7 +7,7 @@ k1 = int(input())
 k2 = int(input())
 n = int(input())
 
-if k1 <= k2 :
+if k1 <= k2:
     if k1 == k2:
         if a1 < a2:
             a1, a2 = a2, a1
@@ -21,4 +21,3 @@ else:
 
 minn = max(n - (k1 - 1) * a1 - (k2 - 1) * a2, 0)
 print(minn, maxx)
-

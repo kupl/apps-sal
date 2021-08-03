@@ -1,6 +1,7 @@
 s = input()
 k = int(input())
 
+
 def solve(s, k):
     if len(s) % k > 0:
         print("NO")
@@ -12,5 +13,6 @@ def solve(s, k):
                 print("NO")
                 return
     print("YES")
+
 
 solve(s, k)

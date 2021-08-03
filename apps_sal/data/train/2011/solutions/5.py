@@ -6,7 +6,7 @@ import math
 
 n = int(input())
 ans = []
-for i in range(min(n,100)):
+for i in range(min(n, 100)):
     p = n - i
     s = p
     while p > 0:
@@ -14,10 +14,8 @@ for i in range(min(n,100)):
         p = p // 10
     #print(s,' ',p)
     if s == n:
-        ans.append( n - i );
+        ans.append(n - i)
 print(len(ans))
 ans.sort()
 for x in ans:
     print(x)
-
-

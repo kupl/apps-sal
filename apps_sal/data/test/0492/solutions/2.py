@@ -1,5 +1,5 @@
 l = input().split()
-n=int(input())
+n = int(input())
 
 l2 = []
 
@@ -15,12 +15,11 @@ for c in l:
 
 diff = l2[1] - l2[0]
 
-cw = (diff-n)%4 == 0
-ccw = (diff+n)%4 == 0
+cw = (diff - n) % 4 == 0
+ccw = (diff + n) % 4 == 0
 if cw and ccw:
     print('undefined')
 elif cw:
     print('cw')
 else:
     print('ccw')
-

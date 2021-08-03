@@ -67,7 +67,7 @@ class Scales:
 
     def calc_maxwp(self):
         """ Max weight power """
-        for p in range(self.N+1):
+        for p in range(self.N + 1):
             if self.w ** p > self.m:
                 return p
 
@@ -89,7 +89,7 @@ class Scales:
 
     def step(self):
         """ Step to the next iteration """
-        mid = (self.it_max + self.it_min)//2
+        mid = (self.it_max + self.it_min) // 2
 
         if mid in (self.it_max, self.it_min):
             return 0
@@ -204,9 +204,11 @@ class unitTests(unittest.TestCase):
         # Sample test 1
         self.assertEqual(calculate(["2 92600"]), "YES")
 
+
 def __starting_point():
     if sys.argv[-1] == "-ut":
         unittest.main(argv=[" "])
     main()
+
 
 __starting_point()

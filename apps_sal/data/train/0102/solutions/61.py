@@ -7,7 +7,3 @@ for i in range(n):
     if int(a) < s:
         k -= 1
     print(k)
-    
-        
-    
-

@@ -8,13 +8,13 @@ def floor(num: int):
     i = 0
     while 2**i - 1 <= num:
         i += 1
-    return num - 2**(i-1) + 1
+    return num - 2**(i - 1) + 1
 
 
 def complete_binary_tree(a: list) -> list:
     a = a.copy()
     breadth_fst: list = []
-    
+
     for i in range(floor(len(a))):
         breadth_fst.append(a.pop(i))
 
@@ -25,4 +25,3 @@ def complete_binary_tree(a: list) -> list:
             idx -= 1
 
     return breadth_fst
-

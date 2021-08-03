@@ -8,20 +8,19 @@ def sum_square(num):
 
 def happy_numbers(n):
     happy = []
-    for val in range(1,n+1):
+    for val in range(1, n + 1):
         val_list = []
         wag = 100
-        val2 =  val
+        val2 = val
         for iii in range(wag):
             sum_sqr = sum_square(val2)
             if sum_sqr == 1:
                 happy.append(val)  # happy
                 break
-            elif sum_sqr in val_list: # infinate loop
+            elif sum_sqr in val_list:  # infinate loop
                 break
             else:
                 val_list.append(sum_sqr)
                 val2 = sum_sqr
 
     return happy
-

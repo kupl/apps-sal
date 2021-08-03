@@ -15,7 +15,7 @@ else:
         if s[i] == '*':
             pos = i
             break
-    if s[0 : pos] == t[0 : pos] and s[pos + 1:] == t[m - (n - pos) + 1:]:
+    if s[0: pos] == t[0: pos] and s[pos + 1:] == t[m - (n - pos) + 1:]:
         print('YES')
     else:
         print('NO')

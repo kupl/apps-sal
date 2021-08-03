@@ -10,4 +10,3 @@ else:
     # ここでnは0
     res += m // 4
     print(res)
-

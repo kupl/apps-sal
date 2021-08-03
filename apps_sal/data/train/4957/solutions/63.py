@@ -5,5 +5,5 @@ class Dog(object):
     def bark(self):
         return 'Woof'
 
-snoopy, scoobydoo = Dog("Beagle"), Dog("Great Dane")
 
+snoopy, scoobydoo = Dog("Beagle"), Dog("Great Dane")

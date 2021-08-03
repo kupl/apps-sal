@@ -20,4 +20,3 @@ for i in range(0, n):
 if k % 2 == 1:
     answer -= m * 2
 print(answer)
-

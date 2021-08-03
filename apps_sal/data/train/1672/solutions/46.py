@@ -7,4 +7,3 @@ for i in a:
         print("f({}) = MAGNA NIMIS!".format(i))
     else:
         print("f({}) = {:.2f}".format(i, p))
-

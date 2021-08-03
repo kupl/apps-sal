@@ -15,7 +15,7 @@ N = int(input())
 # A = list(map(int, input().split()))
 # A = list(map(lambda x: int(x)*(-1), input().split()))
 # B = list(map(int, input().split()))
-csf = [list(map(int,input().split())) for _ in range(N-1)]
+csf = [list(map(int, input().split())) for _ in range(N - 1)]
 # S = input()
 
 # B_C = sorted(B_C, reverse=True, key=lambda x:x[1])

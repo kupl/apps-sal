@@ -1,5 +1,5 @@
 def original_number(s):
-    dic = {i:0 for i in range(10)}
+    dic = {i: 0 for i in range(10)}
     dic[0] = s.count('Z')
     dic[2] = s.count('W')
     dic[4] = s.count('U')
@@ -12,5 +12,5 @@ def original_number(s):
     dic[9] = s.count('I') - dic[5] - dic[6] - dic[8]
     result = ''
     for i in range(10):
-      result += str(i)*dic[i]
+        result += str(i) * dic[i]
     return result

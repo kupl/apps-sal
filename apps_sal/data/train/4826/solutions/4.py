@@ -2,6 +2,7 @@ import re
 
 p = re.compile(r"[a-z][{0}][{0}]0[{0}][{0}]0[{0}][{0}][a-z]".format(re.escape("|};&#[]/><()*")))
 
+
 def count_robots(a):
     n = m = 0
     for x in map(str.lower, a):

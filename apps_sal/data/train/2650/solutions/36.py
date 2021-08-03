@@ -8,7 +8,9 @@ def main():
     ans = ''.join(S)
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

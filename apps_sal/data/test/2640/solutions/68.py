@@ -18,4 +18,3 @@ for i in range(1, W):
     right[:, -i - 1] = (right[:, -i] + 1) * right[:, -i - 1]
 
 print((np.max(up + down + left + right) - 3))
-

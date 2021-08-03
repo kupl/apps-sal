@@ -9,9 +9,8 @@ class Solution:
                 miny = min(miny, y)
                 maxx = max(maxx, x)
                 maxy = max(maxy, y)
-            area = (maxx - minx)*(maxy - miny)
+            area = (maxx - minx) * (maxy - miny)
         return area
-                
 
     def minAreaRect(self, points):
         S = set(map(tuple, points))

@@ -9,4 +9,3 @@ try:
         print(a + d + min(b, a + d))
 except EOFError:
     pass
-

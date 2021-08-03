@@ -5,7 +5,7 @@ pr = {}
 
 for i in range(n):
     t = list(map(int, input().split()))[1:]
-    pr[i+1]=min(t)
+    pr[i + 1] = min(t)
 
 pr = OrderedDict(sorted(pr.items(), key=lambda x: x[1]))
 
@@ -23,4 +23,3 @@ print(k)
 rr.sort()
 
 print(*rr, sep=' ')
-

@@ -1,3 +1,3 @@
-a,b  = map(int, input().split())
+a, b = map(int, input().split())
 
-print(2**(a ^ b).bit_length() -1)
+print(2**(a ^ b).bit_length() - 1)

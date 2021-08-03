@@ -4,4 +4,3 @@ def alan_annoying_kid(stg):
     made = what.replace("didn't ", "").split()[0]
     filler = (what, "did", made, "it") if "didn't" in what else (what, "didn't", made[:-2], "at all")
     return response(*filler)
-

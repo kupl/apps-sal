@@ -10,7 +10,7 @@ if np.any(A != A2):
     print(-1)
 else:
     d = 0
-    A += np.diag([2*10**9] * N)
+    A += np.diag([2 * 10**9] * N)
     for i in range(N):
         for j in range(i + 1, N):
             if np.min(A[i] + A[j]) != A[i, j]:

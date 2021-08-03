@@ -1,17 +1,18 @@
 import sys
 input = sys.stdin.readline
 
+
 class BinaryTrie:
     class Node:
         def __init__(self, bit: bool = False):
-            self.bit = bit # Stores the current bit (False if 0, True if 1)
+            self.bit = bit  # Stores the current bit (False if 0, True if 1)
             self.children = []
-            self.count = 0 # stores number of keys finishing at this bit
-            self.counter = 1 # stores number of keys with this bit as prefix
+            self.count = 0  # stores number of keys finishing at this bit
+            self.counter = 1  # stores number of keys with this bit as prefix
 
     def __init__(self, size):
         self.root = BinaryTrie.Node()
-        self.size = size # Maximum size of each key
+        self.size = size  # Maximum size of each key
 
     def convert(self, key):
         """Converts key from string/integer to a list of boolean values!"""
@@ -69,7 +70,8 @@ class BinaryTrie:
 
     def query(self, prefix, root=None):
         """Search for a prefix in the trie! Returns the node if found, otherwise 0."""
-        if not root: root = self.root
+        if not root:
+            root = self.root
         node = root
         if not root.children:
             return 0
@@ -100,7 +102,7 @@ for _ in range(int(input())):
         node = tr.root
         cnt = 32
         y = bin(int(b))[2:]
-        x = [False if i == "0" else True for i in "0"*(32-len(y)) + y]
+        x = [False if i == "0" else True for i in "0" * (32 - len(y)) + y]
         for i in x:
             cnt -= 1
             next = tr.query([not i], node)

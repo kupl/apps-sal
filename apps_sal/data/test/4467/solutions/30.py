@@ -92,8 +92,8 @@ def resolve():
         a, b = ab
         ok = len(CD)
         ng = -1
-        while abs(ok-ng) > 1:
-            mid = (ok+ng)//2
+        while abs(ok - ng) > 1:
+            mid = (ok + ng) // 2
 
             if CD[mid][0] >= a:
                 ok = mid
@@ -107,8 +107,8 @@ def resolve():
         NCD.sort(key=lambda x: x[1])
         ok = len(NCD)
         ng = -1
-        while abs(ok-ng) > 1:
-            mid = (ok+ng)//2
+        while abs(ok - ng) > 1:
+            mid = (ok + ng) // 2
 
             if NCD[mid][1] >= b:
                 ok = mid
@@ -127,5 +127,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

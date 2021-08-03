@@ -4,7 +4,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#349B
+# 349B
 '''
 def main():
 	from sys import stdin,stdout
@@ -40,7 +40,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#234B Input and Output
+# 234B Input and Output
 '''
 def main():
 	from sys import stdin,stdout
@@ -68,7 +68,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#151B
+# 151B
 '''
 def main():
 	from sys import stdin,stdout
@@ -132,7 +132,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#SQUADRUN Q2
+# SQUADRUN Q2
 '''
 def LCMgen(a):
 	import math
@@ -158,7 +158,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#143B
+# 143B
 '''
 def main():
     from sys import stdin,stdout
@@ -201,7 +201,7 @@ def __starting_point():
     main()
 
 '''
-#A
+# A
 '''
 def main():
     from sys import stdin,stdout
@@ -219,7 +219,7 @@ def main():
 def __starting_point():
     main()
 '''
-#B
+# B
 '''
 def main():
     from sys import stdin,stdout
@@ -231,7 +231,7 @@ def main():
 def __starting_point():
     main()
 '''
-#233B
+# 233B
 '''
 def main():
     from sys import stdin,stdout
@@ -283,7 +283,7 @@ def main():
 def __starting_point():
     main()
 '''
-#RECTANGL
+# RECTANGL
 '''
 def main():
     from sys import stdin,stdout
@@ -301,7 +301,7 @@ def main():
 def __starting_point():
     main()
 '''
-#MAXSC
+# MAXSC
 '''
 def main():
     from sys import stdin,stdout
@@ -329,7 +329,7 @@ def main():
 def __starting_point():
     main()
 '''
-#233B ********************
+# 233B ********************
 '''
 def main():
     def rev(x):
@@ -355,7 +355,7 @@ def main():
 def __starting_point():
     main()
 '''
-#228B
+# 228B
 '''
 def main():
     from sys import stdin,stdout
@@ -388,7 +388,7 @@ def __starting_point():
     main()
 '''
 
-#260B
+# 260B
 '''
 def main():
     import re , collections, datetime
@@ -420,7 +420,7 @@ def __starting_point():
     main()
 '''
 
-#214B
+# 214B
 '''
 def main():
     from sys import stdin,stdout
@@ -458,27 +458,32 @@ def main():
 def __starting_point():
     main()
 '''
-#281 B
+# 281 B
+
+
 def main():
-    from sys import stdin,stdout
+    from sys import stdin, stdout
     from math import ceil, floor
-    x,y,n = list(map(int,stdin.readline().split()))
+    x, y, n = list(map(int, stdin.readline().split()))
     ans = []
 
-    n = min(n,y)
-    ratio=x/y
+    n = min(n, y)
+    ratio = x / y
     while n:
         a = floor(ratio * n)
         b = ceil(ratio * n)
-        if abs(a/n-ratio) <= abs(b/n-ratio):
-            ans.append((round(abs(a/n-ratio),15),n,a))
+        if abs(a / n - ratio) <= abs(b / n - ratio):
+            ans.append((round(abs(a / n - ratio), 15), n, a))
         else:
-            ans.append((round(abs(b/n-ratio),15),n,b))
-        n-=1
+            ans.append((round(abs(b / n - ratio), 15), n, b))
+        n -= 1
     ans.sort()
-##    print(ans)
-    stdout.write(str(ans[0][2])+'/'+str(ans[0][1]))
+# print(ans)
+    stdout.write(str(ans[0][2]) + '/' + str(ans[0][1]))
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

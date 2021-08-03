@@ -19,7 +19,7 @@ for index in range(char):
 
 for word in new:
     now = set()
-    
+
     for i in indices:
         now.add(word[i])
 
@@ -29,10 +29,9 @@ for word in new:
             is_ = False
     if not is_:
         continue
-        
+
     if len(now.intersection(used)) == 0:
         can_be_said = can_be_said.intersection(now)
 
 can_be_said = can_be_said - used
 print(len(can_be_said))
-

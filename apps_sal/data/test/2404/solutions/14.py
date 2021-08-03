@@ -9,7 +9,9 @@ def main():
             print(str(i) + str(n // i))
             return
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

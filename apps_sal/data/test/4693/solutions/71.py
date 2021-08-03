@@ -1,10 +1,11 @@
-LI = lambda: list(map(int, input().split()))
+def LI(): return list(map(int, input().split()))
+
 
 A, B = LI()
 
 
 def main():
-    ans = A + B;
+    ans = A + B
     if ans >= 10:
         ans = "error"
     print(ans)
@@ -12,5 +13,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

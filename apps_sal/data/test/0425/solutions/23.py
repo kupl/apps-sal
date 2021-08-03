@@ -16,4 +16,3 @@ while n >= 1:
     n = x - (i * y)
 else:
     print(-1)
-

@@ -13,4 +13,3 @@ for i in range(n):
         if len(group) < 4:
             groups[i] = (4 - len(group)) * '0' + group
     print(':'.join(groups))
-

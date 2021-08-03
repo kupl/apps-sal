@@ -6,12 +6,11 @@ class Solution:
             avg = total / k
             if avg >= threshold:
                 result += 1
-            
+
             if i < len(arr):
-                left = arr[i-k]
+                left = arr[i - k]
                 right = arr[i]
                 total -= left
                 total += right
-        
-        return result
 
+        return result

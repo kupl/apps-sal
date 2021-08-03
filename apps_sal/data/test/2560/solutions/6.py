@@ -1,14 +1,14 @@
 # from dust i have come, dust i will be
 
-t=int(input())
+t = int(input())
 
-while t>0:
-    t-=1
-    n,l,r=map(int,input().split())
+while t > 0:
+    t -= 1
+    n, l, r = map(int, input().split())
 
-    k=n//l
+    k = n // l
 
-    if r*k>=n:
+    if r * k >= n:
         print('Yes')
     else:
         print('No')

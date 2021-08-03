@@ -1,3 +1,3 @@
-def mouth_size(animal): 
-    mouth = {'alligator':'small'}
+def mouth_size(animal):
+    mouth = {'alligator': 'small'}
     return mouth.get(animal.lower(), 'wide')

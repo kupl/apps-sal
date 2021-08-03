@@ -10,7 +10,7 @@ for i in range(0, n):
         if 2 * j - i < l:
             break
         if s[i] == s[j] == s[j + j - i]:
-             ans += ((2 * j - i) - l + 1) * (n - i)
-             l = (2 * j - i + 1)	
+            ans += ((2 * j - i) - l + 1) * (n - i)
+            l = (2 * j - i + 1)
 
 print(ans)

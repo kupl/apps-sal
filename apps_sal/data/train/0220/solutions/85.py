@@ -7,6 +7,6 @@ class Solution:
             if grumpy[i] == 1:
                 grumpy[i] = customers[i]
                 sums -= grumpy[i]
-        for i in range(len(grumpy) - X+1):
-            maxs = max(sum(grumpy[i: i+X]), maxs)
+        for i in range(len(grumpy) - X + 1):
+            maxs = max(sum(grumpy[i: i + X]), maxs)
         return sums + maxs

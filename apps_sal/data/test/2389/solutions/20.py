@@ -28,7 +28,7 @@ def solve(writer):
             return False
 
         elif v1 == v2 == 1:
-            if i == N-1:
+            if i == N - 1:
                 writer.append(t1)
                 return True
 
@@ -79,5 +79,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

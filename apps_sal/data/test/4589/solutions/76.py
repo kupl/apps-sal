@@ -19,4 +19,3 @@ for i in range(h):
         field[i][j] = str(num)
 for out in field:
     print(("".join(out)))
-

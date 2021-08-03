@@ -6,7 +6,7 @@ class Solution:
             # for i in range(n, n - m, -1):
             #     c *= i
             return math.factorial(n) / math.factorial(m) / math.factorial(n - m)
-        
+
         # @lru_cache(None)
         def choose(i, k, d1, d2, cnt):
             if k == 0 and i <= n:
@@ -22,10 +22,8 @@ class Solution:
                 total += t
                 equal += e
             return total, equal
-        
+
         n = len(balls)
         k = sum(balls)
         t, e = choose(0, k // 2, 0, 0, 1)
         return e / t
-            
-

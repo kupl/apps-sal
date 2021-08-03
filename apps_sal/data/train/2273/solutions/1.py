@@ -10,7 +10,7 @@ for i in range(t):
     taken = [False] * n
     for i in range(n):
         taken[(i + l[i]) % n] = True
-    
+
     for i in range(n):
         if not taken[i]:
             out.append('NO')
@@ -18,4 +18,3 @@ for i in range(t):
     else:
         out.append('YES')
 print('\n'.join(out))
-

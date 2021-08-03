@@ -9,7 +9,6 @@ class Solution:
                 ed += 1
             else:
                 st = ed
-                ed = st+1
+                ed = st + 1
                 cnt = 1
         return arr[st]
-

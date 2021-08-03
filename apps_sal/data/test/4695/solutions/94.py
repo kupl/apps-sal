@@ -13,4 +13,3 @@ for dir in dirs:
         return
 else:
     print('No')
-

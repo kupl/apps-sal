@@ -13,7 +13,7 @@ class Solution:
             if i + distance >= n:
                 return counter + 1
             maxIndex = i
-            for j in range(i+1, i + distance + 1):
+            for j in range(i + 1, i + distance + 1):
                 if j + ranges[j] >= maxIndex + ranges[maxIndex]:
                     maxIndex = j
                 j += 1
@@ -21,5 +21,3 @@ class Solution:
             i = maxIndex
             counter += 1
         return -1
-
-

@@ -10,8 +10,3 @@ def parse_float(string):
             return y
         except ValueError:
             return None
-        
-
-            
-
-

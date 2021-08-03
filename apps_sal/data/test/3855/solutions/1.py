@@ -6,4 +6,3 @@ while n:
     r += 1
 
 print(r)
-

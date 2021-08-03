@@ -11,7 +11,7 @@ class Solution:
         m = arr[(len(arr) - 1) // 2]
 
         d = {}
-        for i in range(len(arr)-1, -1, -1):
+        for i in range(len(arr) - 1, -1, -1):
             tmp = abs(arr[i] - m)
             d.setdefault(tmp, [])
             d[tmp].append(arr[i])
@@ -31,12 +31,12 @@ class Solution:
 
         arr.sort()
         la = len(arr)
-        m = arr[(la-1) // 2]
-        i, j, res = 0, la-1, []
+        m = arr[(la - 1) // 2]
+        i, j, res = 0, la - 1, []
 
         while len(res) < k:
-            rt = abs(arr[j]-m)
-            lt = abs(arr[i]-m)
+            rt = abs(arr[j] - m)
+            lt = abs(arr[i] - m)
 
             if rt == lt or rt > lt:
                 res.append(arr[j])

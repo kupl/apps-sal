@@ -68,14 +68,9 @@ def to_strings(seq, heights):
     return screen.strings()
 
 
-
-
-
 n = int(input())
 seq = input()
 heights = to_heights(seq)
 strings = to_strings(seq, heights)
 for string in strings:
     print(string)
-
-

@@ -1,6 +1,7 @@
 from collections import deque
 import heapq
 
+
 def main():
     from sys import stdin
     lines = deque(line.strip() for line in stdin.readlines())
@@ -56,8 +57,10 @@ def main():
     if ispositive and (not heap2 or heap2[0] > count):
         changes2 += 1
     print(min(changes, changes2))
-        
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -20,4 +20,3 @@ else:
     result = 0  # tの方が大きい場合は残り 0[g]
 
 print(result)
-

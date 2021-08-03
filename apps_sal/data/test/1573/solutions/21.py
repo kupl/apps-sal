@@ -27,8 +27,6 @@ for i in range(1, n):
             max_s = max(max_s, cur_s)
             cur_s = cur_s - rec_s + persons[i][1]
             good_persons = good_persons[j:] + [persons[i]]
-            
 
 
 print(max(cur_s, max_s))
-

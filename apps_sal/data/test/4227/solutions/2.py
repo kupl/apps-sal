@@ -20,4 +20,3 @@ for j in range(L):
         i = k
     ans2 += ans1
 print(ans2)
-

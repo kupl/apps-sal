@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def rearranger(k, *args):
     perms = permutations(map(str, args), len(args))
     divisible_by_k = filter(lambda x: int(''.join(x)) % k == 0, perms)

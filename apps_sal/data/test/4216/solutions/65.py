@@ -14,4 +14,3 @@ for i in range(len(L)):
         ans = min(ans, len(str(L[i][1])))
 
 print(ans)
-

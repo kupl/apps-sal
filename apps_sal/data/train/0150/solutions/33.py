@@ -12,5 +12,4 @@ class Solution:
                 gmax = max(gmax, lmax)
                 r += 1
 
-        return bound+1
-
+        return bound + 1

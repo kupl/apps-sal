@@ -5,4 +5,3 @@ def index(array, n):
         print((-1))
     else:
         return(array[n]**n)
-

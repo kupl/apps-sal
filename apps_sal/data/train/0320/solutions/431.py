@@ -9,6 +9,7 @@ def ops(x):
         d, i = ops(x - 1)
         return (d, i + 1)
 
+
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
         increments = 0
@@ -23,5 +24,3 @@ class Solution:
                 max_doubles = doubs
 
         return increments + max_doubles
-
-

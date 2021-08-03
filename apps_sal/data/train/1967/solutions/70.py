@@ -1,16 +1,18 @@
 class Solution:
     def splitIntoFibonacci(self, S: str) -> List[int]:
-        if len(S) < 3: return []
+        if len(S) < 3:
+            return []
         for i in range(1, len(S) - 2):
             first = S[:i]
             for j in range(i, len(S) - 1):
                 j += 1
                 second = S[i:j]
                 split = self.dfs(first, second, S[j:], [first, second])
-                if split: return split
-                
+                if split:
+                    return split
+
         return []
-    
+
     def notvalid(self, s):
         if int(s) != 0 and s[0] == 0:
             return True
@@ -18,10 +20,10 @@ class Solution:
             return True
         return False
 
-    
     def dfs(self, s1, s2, rem, seq):
         s3 = str(int(s1) + int(s2))
-        if self.notvalid(s3): return []
+        if self.notvalid(s3):
+            return []
         l = len(s3)
         if rem[:l] == s3:
             seq.append(s3)
@@ -30,4 +32,3 @@ class Solution:
             else:
                 return seq
         return []
-

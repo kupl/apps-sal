@@ -6,10 +6,8 @@ A = int(rStr.split(' ')[1])
 
 count = 0
 
-while (0 < H) :
+while (0 < H):
     H = H - A
     count = count + 1
 
 print(count)
-
-

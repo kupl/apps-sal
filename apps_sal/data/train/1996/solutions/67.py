@@ -19,4 +19,3 @@ class Solution:
                 if indegree[nei] == 0:
                     q.append(nei)
         return sorted(res)
-

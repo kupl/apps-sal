@@ -3,9 +3,8 @@ def LI():
 
 
 A, B, C = LI()
-if A+B >= C:
+if A + B >= C:
     ans = "Yes"
 else:
     ans = "No"
 print(ans)
-

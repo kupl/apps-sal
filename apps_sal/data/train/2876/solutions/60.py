@@ -1,4 +1,4 @@
-def check(a, x): 
+def check(a, x):
     # your code here
     pass
     ''.join(str(a))

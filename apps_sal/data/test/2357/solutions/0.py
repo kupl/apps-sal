@@ -9,4 +9,3 @@ for _ in range(int(input())):
     if ans > n:
         ans = -1
     print(ans)
-

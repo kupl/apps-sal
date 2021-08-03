@@ -4,7 +4,7 @@
 # 1つだけ異なる整数の値を出力する
 
 
-A,B,C = list(map(int,input().split()))
+A, B, C = list(map(int, input().split()))
 
 if A == B:
     print(C)
@@ -12,4 +12,3 @@ elif A == C:
     print(B)
 elif B == C:
     print(A)
-

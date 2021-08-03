@@ -1,3 +1,2 @@
-N,S,T = list(map(int,input().split()))
-print((-(-N//S) *T))
-
+N, S, T = list(map(int, input().split()))
+print((-(-N // S) * T))

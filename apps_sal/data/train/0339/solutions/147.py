@@ -12,6 +12,6 @@ class Solution:
                         ans -= 1
         ans = ans // 2
         return ans
-        
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         return self.calculate(nums1, nums2) + self.calculate(nums2, nums1)

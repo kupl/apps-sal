@@ -1,5 +1,6 @@
 from re import match
 
+
 def get_issuer(number):
     s = str(number)
     return\

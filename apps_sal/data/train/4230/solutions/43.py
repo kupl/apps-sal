@@ -3,5 +3,3 @@ def reverse_letter(string):
     a = new
     a.reverse()
     return ''.join(list(a))
-
-

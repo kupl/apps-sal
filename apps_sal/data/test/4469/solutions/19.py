@@ -21,4 +21,3 @@ for _ in range(n):
         if i > e:
             i -= n
         print(min(e - i, i - s))
-

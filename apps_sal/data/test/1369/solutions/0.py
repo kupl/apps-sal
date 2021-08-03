@@ -4,12 +4,15 @@ n = int(input())
 xy = [list(map(float, input().split())) for _ in range(n)]
 
 ret = 100000000
+
+
 def update(px, py):
     nonlocal ret
     r = 0
     for p in range(n):
         r = max(r, math.hypot(px - xy[p][0], py - xy[p][1]))
     ret = min(ret, r)
+
 
 for i in range(n):
     x1 = xy[i][0]
@@ -29,4 +32,3 @@ for i in range(n):
                 update(px, py)
 
 print(ret)
-

@@ -6,7 +6,7 @@ r = 0
 while k < m + 1:
     num += 1
     n = num
-    while n > 1 :
+    while n > 1:
         if n % 5 == 0:
             r += 1
             n //= 5
@@ -19,5 +19,4 @@ if (mem - m != 0):
     print(0)
 else:
     print(5)
-    print(' '.join(map(str, list(range(num-5, num)))))
-
+    print(' '.join(map(str, list(range(num - 5, num)))))

@@ -105,7 +105,7 @@ class CS:
                         self.cs[i0][i1] += self.cs[i0 - 1][i1]
                     else:
                         self.cs[i0][i1] += self.cs[i0 - 1][i1] + self.cs[i0][i1 - 1] - \
-                                           self.cs[i0 - 1][i1 - 1]
+                            self.cs[i0 - 1][i1 - 1]
 
     def sum(self, start_0, start_1, end_0, end_1):
         if start_0 == 0:
@@ -298,24 +298,24 @@ for i in range(n):
         skip = False
         continue
     if s[0][i] == s[1][i]:
-        if na[i-1] == 0:
+        if na[i - 1] == 0:
             ans *= 3
             ans %= 1000000007
-        elif na[i-1] == 1:
+        elif na[i - 1] == 1:
             ans *= 2
             ans %= 1000000007
         na[i] = 1
     else:
-        if na[i-1] == 0:
+        if na[i - 1] == 0:
             ans *= 6
             ans %= 1000000007
-        elif na[i-1] == 1:
+        elif na[i - 1] == 1:
             ans *= 2
             ans %= 1000000007
-        elif na[i-1] == 2:
+        elif na[i - 1] == 2:
             ans *= 3
             ans %= 1000000007
         na[i] = 2
-        na[i+1] = 2
+        na[i + 1] = 2
         skip = True
 print(ans)

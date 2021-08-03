@@ -1,7 +1,7 @@
-def calculator(x,y,op):
+def calculator(x, y, op):
     try:
         if op in '+-/*':
-            return eval(str(x)+op+str(y))
+            return eval(str(x) + op + str(y))
         else:
             return 'unknown value'
     except:

@@ -10,4 +10,3 @@ def bracket_pairs(strng):
             except IndexError:
                 return False
     return matching_indexes if not open_indexes else False
-

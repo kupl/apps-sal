@@ -1,6 +1,6 @@
 a = input()
-a = a.replace("/","")
+a = a.replace("/", "")
 if int(a) <= 20190430:
-  print("Heisei")
+    print("Heisei")
 else:
-  print("TBD")
+    print("TBD")

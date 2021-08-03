@@ -10,6 +10,7 @@ def LS(): return sys.stdin.readline().split()
 def II(): return int(sys.stdin.readline())
 def SI(): return input()
 
+
 def main():
     N = II()
     xp9, xm9, xf9, yp9, ym9, yf9 = [-INF] * 6
@@ -56,5 +57,6 @@ def main():
         ans = min(ans, tmp)
 
     return ans
+
 
 print(main())

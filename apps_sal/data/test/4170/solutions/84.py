@@ -1,7 +1,7 @@
 N = int(input())
 H = list(map(int, input().split()))
 
-moves = [H[i+1] - H[i] for i in range(0, len(H)-1)]
+moves = [H[i + 1] - H[i] for i in range(0, len(H) - 1)]
 
 max_move = 0
 
@@ -16,5 +16,3 @@ for i, m in enumerate(moves):
 max_move = max(max_move, count)
 
 print(max_move)
-
-

@@ -5,7 +5,7 @@ class Solution:
         self.ans[0] = 10
         board = [[1] * 3 for _ in range(4)]
         board[3][0] = board[3][2] = 0
-        pre_dict = {(i, j) : self.prevMove(i, j) for i in range(4) for j in range(3)}
+        pre_dict = {(i, j): self.prevMove(i, j) for i in range(4) for j in range(3)}
         for n in range(1, n):
             new_board = copy.deepcopy(board)
             for i in range(4):
@@ -16,7 +16,7 @@ class Solution:
                     new_board[i][j] = cur_move
             board = new_board
         return sum([board[i][j] for i in range(4) for j in range(3)]) % (10 ** 9 + 7)
-        
+
     def prevMove(self, i, j):
         if (i, j) == (3, 0) or (i, j) == (3, 2):
             return []
@@ -27,4 +27,3 @@ class Solution:
             if 0 <= x < 4 and 0 <= y < 3 and (x, y) != (3, 0) and (x, y) != (3, 2):
                 res.append((x, y))
         return res
-

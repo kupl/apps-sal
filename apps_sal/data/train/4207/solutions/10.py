@@ -3,6 +3,6 @@ def sum_cubes(n):
     f = n
     v = 0
     while s != f + 1:
-       v += s **3
-       s += 1
+        v += s ** 3
+        s += 1
     return v

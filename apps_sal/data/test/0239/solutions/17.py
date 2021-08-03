@@ -12,7 +12,6 @@ else:
         [(0, 0), (n, m), (n, 0), (0, m)],
         [(1, 0), (n, m), (0, 0), (n - 1, m)]
     ]
-    t = lambda x: sum((hypot(x[i][0] - x[i - 1][0], x[i][1] - x[i - 1][1])) for i in range(1, 4))
+    def t(x): return sum((hypot(x[i][0] - x[i - 1][0], x[i][1] - x[i - 1][1])) for i in range(1, 4))
     for el in max(p, key=t):
         print(*(el if not f else reversed(el)))
-

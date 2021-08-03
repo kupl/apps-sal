@@ -4,7 +4,7 @@ class Solution:
         visited = [0] * n
         unopened = [0] * n
         opened = []
-        
+
         ans = 0
         for b in initialBoxes:
             if status[b] == 1:
@@ -30,5 +30,3 @@ class Solution:
                         q2.append(k)
             opened = q2
         return ans
-            
-

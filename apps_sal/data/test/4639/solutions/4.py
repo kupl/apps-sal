@@ -6,8 +6,6 @@ for tc in range(int(input())):
         tot += tl
         tl += 1
     res = ['a' for _ in range(size)]
-    res[-tl-1] = 'b'
-    res[-(pos-tot)] = 'b'
+    res[-tl - 1] = 'b'
+    res[-(pos - tot)] = 'b'
     print(''.join(res))
-    
-

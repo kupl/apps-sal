@@ -3,6 +3,7 @@ p = list(map(int, input().split()))
 
 p.sort()
 
+
 def main():
 
     if len(p) == 0:
@@ -19,20 +20,20 @@ def main():
         right_found = (X + i) not in p
 
         if left_found and right_found:
-            print((X-i))
+            print((X - i))
             keep = False
         elif left_found:
-            print((X-i))
+            print((X - i))
             keep = False
         elif right_found:
-            print((X+i))
+            print((X + i))
             keep = False
-
 
         i += 1
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -27,4 +27,3 @@ if ok:
     print('YES')
 if not ok:
     print('NO')
-

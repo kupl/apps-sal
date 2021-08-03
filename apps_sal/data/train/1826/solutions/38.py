@@ -3,8 +3,8 @@ class Solution:
         def calc_surround(r, c):
             nonlocal mat, K
             total = 0
-            for i in range(r-K, r+K+1):
-                for j in range(c-K, c+K+1):
+            for i in range(r - K, r + K + 1):
+                for j in range(c - K, c + K + 1):
                     if 0 <= i < len(mat) and 0 <= j < len(mat[0]):
                         total += mat[i][j]
             return total
@@ -12,17 +12,17 @@ class Solution:
         def calc_left_column(r, c):
             nonlocal mat, K
             total = 0
-            for i in range(r-K, r+K+1):
+            for i in range(r - K, r + K + 1):
                 if 0 <= i < len(mat) and 0 <= c - K - 1 < len(mat[0]):
-                    total += mat[i][c-K-1]
+                    total += mat[i][c - K - 1]
             return total
 
         def calc_right_column(r, c):
             nonlocal mat, K
             total = 0
-            for i in range(r-K, r+K+1):
+            for i in range(r - K, r + K + 1):
                 if 0 <= i < len(mat) and 0 <= c + K < len(mat[0]):
-                    total += mat[i][c+K]
+                    total += mat[i][c + K]
             return total
 
         grid = [[0] * len(mat[0]) for _ in range(len(mat))]

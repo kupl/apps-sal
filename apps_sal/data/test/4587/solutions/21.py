@@ -5,7 +5,7 @@ N = int(input())
 A = sorted(list(map(int, input().split())))
 B = sorted(list(map(int, input().split())))
 C = sorted(list(map(int, input().split())))
-B_ = [0]*N
+B_ = [0] * N
 ans = 0
 start = 0
 for i, b in enumerate(B):
@@ -18,6 +18,5 @@ for c in C:
     i = bisect_left(B, c, start)
     start = i
     if i != 0:
-        ans += B_[i-1]
+        ans += B_[i - 1]
 print(ans)
-

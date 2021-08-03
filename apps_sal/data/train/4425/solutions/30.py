@@ -1,3 +1,3 @@
 def mango(q, price):
 
-    return price*(q-q//3)
+    return price * (q - q // 3)

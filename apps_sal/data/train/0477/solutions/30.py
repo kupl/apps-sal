@@ -3,7 +3,7 @@ class Solution:
 
         d = dict()
         d[0] = [0]
-        for i in range(1, n+1):
-            d[i] = d[i-1] + [1] + [1-x for x in d[i-1]][::-1]
+        for i in range(1, n + 1):
+            d[i] = d[i - 1] + [1] + [1 - x for x in d[i - 1]][::-1]
 
-        return str(d[n][k-1])
+        return str(d[n][k - 1])

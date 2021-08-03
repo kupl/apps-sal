@@ -13,4 +13,3 @@ for _ in range(t):
     print(*a)
 
 # inf.close()
-

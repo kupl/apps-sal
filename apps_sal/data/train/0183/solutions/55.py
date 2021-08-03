@@ -9,7 +9,10 @@ class Solution:
         for i in range(a):
             for j in range(b):
                 dp[i][j] = nums1[i] * nums2[j]
-                if i: dp[i][j] = max(dp[i][j], dp[i-1][j])
-                if j: dp[i][j] = max(dp[i][j], dp[i][j-1])
-                if i and j: dp[i][j] = max(dp[i][j], nums1[i] * nums2[j] + dp[i-1][j-1])
-        return dp[a-1][b-1]
+                if i:
+                    dp[i][j] = max(dp[i][j], dp[i - 1][j])
+                if j:
+                    dp[i][j] = max(dp[i][j], dp[i][j - 1])
+                if i and j:
+                    dp[i][j] = max(dp[i][j], nums1[i] * nums2[j] + dp[i - 1][j - 1])
+        return dp[a - 1][b - 1]

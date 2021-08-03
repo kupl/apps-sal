@@ -1,4 +1,5 @@
-read_line = lambda: [int(i) for i in input().split()]
+def read_line(): return [int(i) for i in input().split()]
+
 
 n, m, k = read_line()
 a = [read_line() for i in range(n)]
@@ -12,6 +13,7 @@ for y in a:
         x = 2 * x + b
     xs.append(x)
 
+
 def work(y):
     tot = 0
     for x in xs:
@@ -19,7 +21,7 @@ def work(y):
         tot += min(c, m - c)
     return tot
 
-ans = min(list(map(work, xs if m > k else list(range(1<<m)))))
+
+ans = min(list(map(work, xs if m > k else list(range(1 << m)))))
 
 print(ans if ans <= k else -1)
-

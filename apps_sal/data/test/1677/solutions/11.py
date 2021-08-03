@@ -1,5 +1,5 @@
-def function(n , array):
-    grid = [ {} for i in range(n)]
+def function(n, array):
+    grid = [{} for i in range(n)]
 
     if(n <= 2):
         print(n)
@@ -24,6 +24,7 @@ def function(n , array):
 
     print(global_max + 1)
 
+
 n = int(input())
-array = [ int(x) for x in input().split() ]
+array = [int(x) for x in input().split()]
 function(n, array)

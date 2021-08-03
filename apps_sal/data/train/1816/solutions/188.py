@@ -1,15 +1,17 @@
 from collections import Counter
+
+
 class Solution:
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         def _convertTime(x):
             h = int(x[0:2])
             m = int(x[3:5])
-            t = h*60 + m
+            t = h * 60 + m
             return t
         keyTime = [_convertTime(el) for el in keyTime]
         keys = list(zip(keyTime, keyName))
         keys = sorted(keys)
-        
+
         # Break keys up into individual names
         people = {}
         for key in keys:
@@ -23,14 +25,11 @@ class Solution:
             for key in keys:
                 time = key[0]
                 q.append(time)
-                while q[0]+60 < q[-1]:
+                while q[0] + 60 < q[-1]:
                     q.pop(0)
                 if len(q) >= 3:
                     ans.append(key[1])
                     break
         return sorted(ans)
-                    
-            
-            # Remove people from q
-            
 
+        # Remove people from q

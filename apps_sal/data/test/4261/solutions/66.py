@@ -1,7 +1,7 @@
-A,B,C= map(int, input().split())
+A, B, C = map(int, input().split())
 
-space1 = A-B
+space1 = A - B
 if space1 > C:
     print(0)
 else:
-    print(C-space1)
+    print(C - space1)

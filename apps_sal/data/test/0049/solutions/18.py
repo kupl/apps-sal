@@ -18,7 +18,6 @@ number = last + k
 
 
 if r == 0:
-    print(str(number - 1)[n-1])
+    print(str(number - 1)[n - 1])
 else:
     print(str(number)[r - 1])
-

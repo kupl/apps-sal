@@ -5,9 +5,9 @@ class UnionFind():
         self.n = n
         # root[x]<0ならそのノードが根かつその値が木の要素数
         # rootノードでその木の要素数を記録する
-        self.root = [-1]*(n+1)
+        self.root = [-1] * (n + 1)
         # 木をくっつける時にアンバランスにならないように調整する
-        self.rnk = [0]*(n+1)
+        self.rnk = [0] * (n + 1)
 
     # ノードxのrootノードを見つける
     def Find_Root(self, x):
@@ -18,13 +18,14 @@ class UnionFind():
             self.root[x] = self.Find_Root(self.root[x])
             return self.root[x]
     # 木の併合、入力は併合したい各ノード
+
     def Unite(self, x, y):
         # 入力ノードのrootノードを見つける
         x = self.Find_Root(x)
         y = self.Find_Root(y)
         # すでに同じ木に属していた場合
         if(x == y):
-            return 
+            return
         # 違う木に属していた場合rnkを見てくっつける方を決める
         elif(self.rnk[x] > self.rnk[y]):
             self.root[x] += self.root[y]
@@ -37,6 +38,7 @@ class UnionFind():
             if(self.rnk[x] == self.rnk[y]):
                 self.rnk[y] += 1
     # xとyが同じグループに属するか判断
+
     def isSameGroup(self, x, y):
         return self.Find_Root(x) == self.Find_Root(y)
 
@@ -44,11 +46,12 @@ class UnionFind():
     def Count(self, x):
         return -self.root[self.Find_Root(x)]
 
+
 N, M = list(map(int, input().split()))
 bridges = [list(map(int, input().split())) for _ in range(M)]
 bridges = bridges[::-1]
 uf = UnionFind(N)
-ans = N * (N-1) // 2
+ans = N * (N - 1) // 2
 res = []
 for b in bridges:
     res.append(ans)
@@ -61,5 +64,3 @@ for b in bridges:
 
 for a in res[::-1]:
     print(a)
-    
-

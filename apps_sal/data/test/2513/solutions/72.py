@@ -75,29 +75,29 @@ for i in range(4):
                 flg = False
             else:
                 ans[2] = 'W'
-    for i in range(2,n-2):
+    for i in range(2, n - 2):
         if ans[i] == 'S':
             if s[i] == 'o':
-                if ans[i-1] == 'S':
-                    ans[i+1] = 'S'
+                if ans[i - 1] == 'S':
+                    ans[i + 1] = 'S'
                 else:
-                    ans[i+1] = 'W'
+                    ans[i + 1] = 'W'
             else:
-                if ans[i-1] == 'S':
-                    ans[i+1] = 'W'
+                if ans[i - 1] == 'S':
+                    ans[i + 1] = 'W'
                 else:
-                    ans[i+1] = 'S'
+                    ans[i + 1] = 'S'
         else:
             if s[i] == 'o':
-                if ans[i-1] == 'S':
-                    ans[i+1] = 'W'
+                if ans[i - 1] == 'S':
+                    ans[i + 1] = 'W'
                 else:
-                    ans[i+1] = 'S'
+                    ans[i + 1] = 'S'
             else:
-                if ans[i-1] == 'S':
-                    ans[i+1] = 'S'
+                if ans[i - 1] == 'S':
+                    ans[i + 1] = 'S'
                 else:
-                    ans[i+1] = 'W'
+                    ans[i + 1] = 'W'
     if ans[-2] == 'S':
         if s[-2] == 'o':
             if ans[-3] != ans[-1]:

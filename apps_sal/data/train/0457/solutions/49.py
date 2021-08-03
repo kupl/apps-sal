@@ -1,7 +1,7 @@
 class Solution:
     def coinChange(self, coins: [int], amount: int) -> int:
         summary = 0
-        result = [float('inf')]*(amount+1)
+        result = [float('inf')] * (amount + 1)
         result[0] = 0
         while summary <= amount:
             if result[summary] != -1:
@@ -10,4 +10,3 @@ class Solution:
                         result[summary + i] = result[summary] + 1
             summary += 1
         return -1 if result[amount] == float('inf') else result[amount]
-

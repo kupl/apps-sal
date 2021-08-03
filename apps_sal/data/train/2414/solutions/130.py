@@ -7,7 +7,7 @@ class Solution:
         jk = defaultdict(set)
         ik = defaultdict(set)
         for i in range(len(arr)):
-            for j in range(i+1, len(arr)):
+            for j in range(i + 1, len(arr)):
                 if abs(arr[i] - arr[j]) <= a:
                     ij[i].add(j)
                 if abs(arr[i] - arr[j]) <= b:
@@ -20,6 +20,5 @@ class Solution:
                 for k in jk[j]:
                     if k in ik[i]:
                         ans += 1
-                        
-        return ans
 
+        return ans

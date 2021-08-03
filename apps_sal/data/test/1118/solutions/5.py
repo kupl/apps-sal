@@ -4,6 +4,7 @@ def fill():
     for i in range(n + 2):
         dp[i] = [0] * (n + 2)
 
+
 def compress(v):
     nonlocal n
     nonlocal c
@@ -12,7 +13,8 @@ def compress(v):
         if v[i] != v[i - 1]:
             c.append(v[i])
     n = len(c)
-            
+
+
 n = int(input())
 v = [int(i) for i in input().split()]
 c = []

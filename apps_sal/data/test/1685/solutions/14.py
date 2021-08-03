@@ -3,6 +3,7 @@ from math import *
 n, q = list(map(int, input().split()))
 depth = int(log2(n + 1))
 
+
 def get_layer(u):
     for layer in range(depth):
         if u % (2 ** (layer + 1)) == 2 ** layer:
@@ -31,4 +32,3 @@ for x in range(q):
             layer -= 1
             u = (2 ** (layer + 1)) * k + 2 ** layer
     print(u)
-

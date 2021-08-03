@@ -29,20 +29,19 @@ def main():
     # inf = 2 ** 64 - 1               # (for fast JIT compile in PyPy) 1.84...e+19
     sys.setrecursionlimit(10**6)    # 1000 -> 1000000
     def input(): return sys.stdin.readline().rstrip()
-    def ii():    return int(input())
-    def mi():    return list(map(int, input().split()))
-    def mi_0():  return [int(x)-1 for x in input().split()]
-    def lmi():   return list(map(int, input().split()))
-    def lmi_0(): return list([int(x)-1 for x in input().split()])
-    def li():    return list(input())
-    
-        
+    def ii(): return int(input())
+    def mi(): return list(map(int, input().split()))
+    def mi_0(): return [int(x) - 1 for x in input().split()]
+    def lmi(): return list(map(int, input().split()))
+    def lmi_0(): return list([int(x) - 1 for x in input().split()])
+    def li(): return list(input())
+
     class Eratos:
         def __init__(self, num):
             assert(num >= 1)
             self.table_max = num
             # self.table[i] は i が素数かどうかを示す (bool)
-            self.table = [False if i == 0 or i == 1 else True for i in range(num+1)]
+            self.table = [False if i == 0 or i == 1 else True for i in range(num + 1)]
             for i in range(2, int(math.sqrt(num)) + 1):
                 if self.table[i]:
                     for j in range(i ** 2, num + 1, i):    # i**2 からスタートすることで定数倍高速化できる
@@ -52,7 +51,7 @@ def main():
             for i in range(3, self.table_max + 1, 2):
                 if self.table[i]:
                     self.prime_numbers.append(i)
-        
+
         def is_prime(self, num):
             """
             >>> e = Eratos(100)
@@ -63,7 +62,7 @@ def main():
             if num > self.table_max:
                 raise ValueError('Eratos.is_prime(): exceed table_max({}). got {}'.format(self.table_max, num))
             return self.table[num]
-        
+
         def prime_factorize(self, num):
             """
             >>> e = Eratos(10000)
@@ -92,7 +91,6 @@ def main():
             if num != 1:
                 factorized_dict[num] = 1
             return factorized_dict
-    
 
     n, m = mi()
     eratos = Eratos(max(int(math.sqrt(m)), n))
@@ -101,11 +99,11 @@ def main():
 
     FACT = [1] * (n + int(math.log2(m)) + 1)
     for i in range(2, n + int(math.log2(m)) + 1):
-        FACT[i] = (FACT[i-1] * i) % mod
-    
+        FACT[i] = (FACT[i - 1] * i) % mod
+
     def comb(n, r, m):
         numerator = FACT[n]
-        denominator = pow(FACT[n-r] * FACT[r], m - 2, m)
+        denominator = pow(FACT[n - r] * FACT[r], m - 2, m)
         return (numerator * denominator) % m
 
     ans = 1
@@ -116,5 +114,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

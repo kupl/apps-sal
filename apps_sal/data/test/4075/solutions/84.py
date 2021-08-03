@@ -23,7 +23,7 @@ for ptnum, spt in enumerate(pattern):
     for lightnum in range(m):
         count = 0
         for s in switch[lightnum]:
-            if spt[s-1] == 1:
+            if spt[s - 1] == 1:
                 count += 1
         if count % 2 != pl[lightnum]:
             islit = False
@@ -31,4 +31,3 @@ for ptnum, spt in enumerate(pattern):
     if islit:
         ans += 1
 print(ans)
-

@@ -62,4 +62,3 @@ else:
     print((' '.join(map(str, D))))
     for i in range(N):
         print((move_uv(point[i][0], point[i][1])))
-

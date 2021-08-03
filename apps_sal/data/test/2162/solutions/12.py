@@ -4,13 +4,13 @@ def main():
     arr = [0 for _ in range(n)]
     a = list(map(int, input().split()))
     for i in a:
-        arr[i-1] = 1
+        arr[i - 1] = 1
     a = list(map(int, input().split()))
     for i in a:
-        arr[i-1] = 2
+        arr[i - 1] = 2
     a = list(map(int, input().split()))
     for i in a:
-        arr[i-1] = 3
+        arr[i - 1] = 3
     dp = [0, 0, 0]
     for i in arr:
         if i == 1:
@@ -26,6 +26,9 @@ def main():
             dp[1] += 1
     print(min(dp))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

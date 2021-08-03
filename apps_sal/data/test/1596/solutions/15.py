@@ -19,10 +19,5 @@ for i in range(1, len(s)):
     else:
         L[i + 1] = L[i]
 if s[0] == 'm' or s[0] == 'w':
-        L[len(s)] = 0
+    L[len(s)] = 0
 print(L[len(s)])
-    
-    
-    
-        
-

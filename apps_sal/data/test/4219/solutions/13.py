@@ -19,10 +19,10 @@ for _ in range(N):
 
 ans = 0
 for i in range(2**N):
-    for j,a_list in enumerate(xy_list):
-        if (i>>j)&1 == 1:
-            for k,(x,y) in enumerate(a_list):
-                if (i>>(x-1))&1 != y:
+    for j, a_list in enumerate(xy_list):
+        if (i >> j) & 1 == 1:
+            for k, (x, y) in enumerate(a_list):
+                if (i >> (x - 1)) & 1 != y:
                     break
             else:
                 continue
@@ -33,8 +33,3 @@ print(ans)
 
 
 # In[ ]:
-
-
-
-
-

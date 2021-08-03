@@ -1,10 +1,9 @@
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
-        
-        
+
         dict = {}
         for i in range(len(s)):
-            for j in range(i+minSize, i+maxSize+1):
+            for j in range(i + minSize, i + maxSize + 1):
                 # check if substr already in dict
                 if j <= len(s):
                     substr = s[i:j]
@@ -16,12 +15,11 @@ class Solution:
 
         # count max value of dict
         max_count = 0
-        for k,v in list(dict.items()):
+        for k, v in list(dict.items()):
             max_count = max(max_count, v)
 
         return max_count
-        
-        
+
         # brute force - TLE
 #         max_count = 0
 
@@ -54,4 +52,3 @@ class Solution:
 #                 count_times += 1
 
 #         return count_times
-

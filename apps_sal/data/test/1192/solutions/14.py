@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 import bisect
 
+
 def memo(f):
     def _f(*args):
         try:
@@ -11,13 +12,15 @@ def memo(f):
     cache = {}
     return _f
 
+
 def count_inversions(nums):
     invs = 0
     for i, lnum in enumerate(nums):
-        for rnum in nums[i+1:]:
+        for rnum in nums[i + 1:]:
             if lnum > rnum:
                 invs += 1
     return invs
+
 
 def search(depth, nums):
     if depth >= max_depth:
@@ -32,8 +35,8 @@ def search(depth, nums):
                 nums[i:j] = nums[i:j][::-1]
         return invs, total
 
+
 length, max_depth = list(map(int, input().split()))
 nums = list(map(int, input().split()))
 invs, total = search(0, nums)
 print(invs / total)
-

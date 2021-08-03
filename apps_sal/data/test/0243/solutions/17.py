@@ -29,7 +29,6 @@ def main():
         if height[a] == height[b]:
             height[a] += 1
 
-
     def mst():
         ret = []
         for edge in edges:
@@ -41,7 +40,6 @@ def main():
                 ret.append(edge)
         return ret
 
-
     def dfs(u, par):
         for v, w in adj[u]:
             if v != par:
@@ -49,7 +47,7 @@ def main():
                 dfs(v, u)
 
     def bfs(u):
-        visit = [False] * (n+1)
+        visit = [False] * (n + 1)
         from collections import deque
 
         dq = deque()
@@ -63,7 +61,6 @@ def main():
                     dq.append(v)
                     visit[v] = True
 
-
     n, m, k = map(int, input().split())
     a = list(map(int, input().split()))
     # n = 50000
@@ -72,9 +69,9 @@ def main():
     # a = [i for i in range(1, n+1)]
     # import random
 
-    par = [0] * (n+1)
-    height = [1] * (n+1)
-    for i in range(1, n+1):
+    par = [0] * (n + 1)
+    height = [1] * (n + 1)
+    for i in range(1, n + 1):
         par[i] = i
         height[i] = 1
     edges = []
@@ -87,13 +84,13 @@ def main():
         edges.append(edge)
     edges.sort(key=lambda x: x[2])
     edges = mst()
-    adj = [list() for i in range(n+1)]
+    adj = [list() for i in range(n + 1)]
     for edge in edges:
         u, v, w = edge
         adj[u].append((v, w))
         adj[v].append((u, w))
 
-    dist = [0] * (n+1)
+    dist = [0] * (n + 1)
     # dfs(a[0], -1)
     bfs(a[0])
     ans = 0

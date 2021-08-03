@@ -15,4 +15,3 @@ class Solution:
                 res = i + 1
             i += 1
         return res
-

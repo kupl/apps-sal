@@ -1,5 +1,6 @@
 3
 
+
 def modulo_power(modulo, power, base):
     if power == 0:
         return 1
@@ -9,9 +10,10 @@ def modulo_power(modulo, power, base):
     remainder = power % 2
     power -= remainder
 
-    half = modulo_power(modulo, power/2, base)
+    half = modulo_power(modulo, power / 2, base)
 
     return (half * half * modulo_power(modulo, remainder, base)) % modulo
+
 
 data = [int(token) for token in input().split()]
 num_questions, num_correct, doubler = data
@@ -28,8 +30,6 @@ num_doublings = head // doubler
 remainder = head - num_doublings * doubler
 modulo = 10**9 + 9
 result = ((2 * doubler * (modulo_power(modulo, num_doublings, 2) - 1)) +
-            remainder + tail) % modulo
+          remainder + tail) % modulo
 
 print(result)
-
-

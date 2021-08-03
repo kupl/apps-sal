@@ -19,5 +19,3 @@ if (a > 0) and (b > 0) and ((a == c) or (b == c)) and (ba == 0) and (cb == 0) an
     print('YES')
 else:
     print('NO')
-    
-

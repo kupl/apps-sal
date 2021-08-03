@@ -1,18 +1,18 @@
-n, m  = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 
 po = []
 ps = []
 diffs = []
 
 for i in range(n):
-    a, b =  list(map(int, input().split()))
+    a, b = list(map(int, input().split()))
     po.append(a)
     ps.append(b)
-    diffs.append(a-b)
-tlen  = sum(po)
+    diffs.append(a - b)
+tlen = sum(po)
 tslen = sum(ps)
 
-diffs.sort(reverse = True)
+diffs.sort(reverse=True)
 
 if sum(po) <= m:
     print(0)
@@ -26,10 +26,6 @@ cnt = 0
 for d in diffs:
     cnt += 1
     r -= d
-    if r<=m:
+    if r <= m:
         print(cnt)
         return
-
-
-
-

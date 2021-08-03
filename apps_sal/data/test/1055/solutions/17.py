@@ -7,6 +7,7 @@ def f(A):
         else:
             return max(f(A[:len(A) // 2]), f(A[len(A) // 2:]))
 
+
 n = int(input())
 A = list(map(int, input().split()))
 print(f(A))

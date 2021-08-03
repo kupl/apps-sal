@@ -3,16 +3,16 @@ class Solution:
         def s(i, j, cache):
             if i < 0 or j < 0:
                 return 0
-            p = (i,j)
+            p = (i, j)
             if p not in cache:
                 if text1[i] == text2[j]:
-                    cache[p] = 1 + s(i-1, j-1, cache)
+                    cache[p] = 1 + s(i - 1, j - 1, cache)
                 else:
-                    cache[p] = max(s(i, j-1, cache), s(i-1, j, cache))
+                    cache[p] = max(s(i, j - 1, cache), s(i - 1, j, cache))
             return cache[p]
         cache = {}
         # cache = {(-1, i): 0 for i in range(len(text2))}
         # for i in range(len(text1)):
         #     cache[(i, -1)] = 0
         # cache[(-1, -1)] = 0
-        return s(len(text1)-1, len(text2)-1, cache)
+        return s(len(text1) - 1, len(text2) - 1, cache)

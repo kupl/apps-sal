@@ -5,7 +5,7 @@ for i in range(k):
     a['00'] = []
     a['11'] = []
     a['01'] = []
-    a['10'] = []    
+    a['10'] = []
     n = int(input())
     s = []
     for i in range(n):
@@ -50,4 +50,3 @@ for i in range(k):
         else:
             print(len(ans))
             print(*ans)
-

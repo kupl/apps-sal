@@ -22,10 +22,13 @@ def LS(): return list(S())
 def SR(n): return [S() for _ in range(n)]
 def SsR(n): return [Ss() for _ in range(n)]
 def LSR(n): return [LS() for _ in range(n)]
+
+
 sys.setrecursionlimit(10**6)
-MOD = 10**9+7
+MOD = 10**9 + 7
 INF = 10**18
 # ----------------------------------------------------------- #
+
 
 class BinaryIndexedTree:
     def __init__(self, n):
@@ -53,13 +56,14 @@ class BinaryIndexedTree:
     print(bit.sum(6) - bit.sum(3))  # a4～a6の合計を返す
     """
 
+
 s = S()
 n = len(s)
 s_index = defaultdict(list)
 for i, x in enumerate(s):
     s_index[x].append(i)
 
-T = [0]*n  # sでi番目の文字は、最終的な回文でT[i]番目の文字となる
+T = [0] * n  # sでi番目の文字は、最終的な回文でT[i]番目の文字となる
 flag = False  # 奇数個の文字が前にあったかフラグ(奇数個の文字が2つ以上あってはならない)
 AC = []  # 最終的な回文での前半Aと後半Cのペア
 for x, index_list in s_index.items():
@@ -70,11 +74,11 @@ for x, index_list in s_index.items():
             return
         else:
             flag = True
-            mid = index_list[count//2]
-            T[mid] = n//2  # 回文の中心(B)
-    for i in range(count//2):
+            mid = index_list[count // 2]
+            T[mid] = n // 2  # 回文の中心(B)
+    for i in range(count // 2):
         a = index_list[i]
-        c = index_list[-i-1]
+        c = index_list[-i - 1]
         AC.append((a, c))
 
 AC.sort(key=itemgetter(0))  # 前半(a)の順番でソート

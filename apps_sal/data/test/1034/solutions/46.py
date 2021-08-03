@@ -21,14 +21,14 @@ def submit():
     q = []
     for _ in range(k - 1):
         prev, (i, j, k) = ans[-1]
-        
+
         if i < x - 1:
             new_triple = (i + 1, j, k)
             if new_triple not in check:
                 check.add(new_triple)
                 s, _ = get(*new_triple)
                 heapq.heappush(q, (-s, new_triple))
-        
+
         if j < y - 1:
             new_triple = (i, j + 1, k)
             if new_triple not in check:
@@ -49,6 +49,6 @@ def submit():
 
     for s, _ in ans:
         print(s)
-        
+
 
 submit()

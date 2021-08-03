@@ -56,4 +56,3 @@ for d in reversed(list(range(60))):
 
 ans += reduce(xor, A) * 2
 print(ans)
-

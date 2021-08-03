@@ -7,4 +7,4 @@ N = int(input())
 # N人を3で除法した数値を出力する
 # 除法の解の小数点以下を切り捨て
 
-print(int( N / 3 ))
+print(int(N / 3))

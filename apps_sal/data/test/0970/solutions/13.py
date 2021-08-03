@@ -3,6 +3,8 @@ def feven(pieces, n):
     for i in range(len(pieces)):
         res += abs(pieces[i] - 2 * (1 + i))
     return res
+
+
 def fodd(pieces, n):
     res = 0
     for i in range(len(pieces)):

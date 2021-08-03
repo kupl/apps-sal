@@ -8,10 +8,12 @@ S = set(range(N))
 
 to = [[] for _ in range(N)]
 for _ in range(M):
-    a, b = [int(x)-1 for x in input().split()]
+    a, b = [int(x) - 1 for x in input().split()]
     to[a].append(b)
 
 visit = [0] * N
+
+
 def DFS(p, n):
     if visit[p] != 0:
         return visit[p]
@@ -24,8 +26,9 @@ def DFS(p, n):
         visit[p] = -1
         return -1
 
+
 for i in range(N):
-    r = DFS(i,0)
+    r = DFS(i, 0)
     if r > 0:
         for j in range(N):
             if visit[j] < r:
@@ -44,7 +47,7 @@ for i in range(N):
                                     S.discard(l)
         print(len(S))
         for j in list(S):
-            print(j+1)
+            print(j + 1)
         break
-    if i == N-1:
+    if i == N - 1:
         print(-1)

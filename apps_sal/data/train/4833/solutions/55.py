@@ -4,4 +4,3 @@ def replace_exclamation(s):
         if x in vstr:
             s = s.replace(x, "!")
     return s
-

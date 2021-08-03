@@ -8,5 +8,5 @@ class Solution:
                 d = A[j] - A[i]
                 dp[j, d] = dp.get((i, d), 1) + 1
                 ans = max(ans, dp[j, d])
-        
+
         return ans

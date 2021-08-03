@@ -7,9 +7,8 @@ class Solution:
         for j in range(n):
             zeros += A[j] == 0
             if zeros <= K:
-                res = max(res, j-i+1)
+                res = max(res, j - i + 1)
             if zeros > K:
                 zeros -= A[i] == 0
                 i += 1
         return res
-

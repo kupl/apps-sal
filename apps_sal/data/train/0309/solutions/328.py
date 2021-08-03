@@ -12,5 +12,4 @@ class Solution:
                 else:
                     dp[i_key] = 2
                 mx = max(mx, dp[i_key])
-        return mx#max(dp.values())
-
+        return mx  # max(dp.values())

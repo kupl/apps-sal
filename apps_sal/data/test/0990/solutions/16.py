@@ -62,4 +62,3 @@ n_edges = popcnt(S)
 x = 1 << (N - 1 - n_edges)
 answer = np.sum(x * sgn)
 print(answer)
-

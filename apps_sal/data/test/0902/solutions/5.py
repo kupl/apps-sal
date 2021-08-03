@@ -19,5 +19,3 @@ while cnt < k:
     c2 = q[0]
     q = q[1:]
 print(c1)
-    
-

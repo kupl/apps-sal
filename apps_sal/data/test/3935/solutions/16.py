@@ -9,6 +9,7 @@ for i in temp:
 cmp = f.index(max(f))
 ans = []
 for i in range(n):
-    if temp[i] != cmp: ans.append(l[i])
+    if temp[i] != cmp:
+        ans.append(l[i])
 print(len(ans))
 print(*ans)

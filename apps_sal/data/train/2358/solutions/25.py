@@ -1,7 +1,8 @@
 from heapq import heappop, heappush, heapify
 from collections import deque
 
-class Graph():  #non-directed
+
+class Graph():  # non-directed
     def __init__(self, n, edge, indexed=1):
         self.n = n
         self.edge = edge
@@ -37,10 +38,12 @@ class Graph():  #non-directed
             return dist, path[::-1]
         return dist
 
+
 def dist(p, q):
     px, py = p
     qx, qy = q
     return ((px - qx)**2 + (py - qy)**2)**0.5
+
 
 xs, ys, xt, yt = map(int, input().split())
 s = (xs, ys)

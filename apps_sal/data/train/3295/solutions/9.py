@@ -1,6 +1,6 @@
-def split_in_parts(s, part_length): 
+def split_in_parts(s, part_length):
     r = []
-    for x in range(0,len(s),part_length):
-        r += [s[x:x+part_length]]
+    for x in range(0, len(s), part_length):
+        r += [s[x:x + part_length]]
 
-    return  " ".join(r)
+    return " ".join(r)

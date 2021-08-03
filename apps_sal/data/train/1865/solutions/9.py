@@ -23,7 +23,7 @@ class Solution:
                 if p == dest:
                     return True
                 i, j = p[0], p[1]
-                nextPos = [(i-1, j), (i+1, j), (i, j-1), (i, j+1)]
+                nextPos = [(i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)]
                 for nextI, nextJ in nextPos:
                     if isValid((nextI, nextJ)) and (nextI, nextJ) not in seen and (nextI, nextJ) != box:
                         seen.add((nextI, nextJ))
@@ -35,14 +35,13 @@ class Solution:
             b, p, pushes = q.popleft()
             if b == target:
                 return pushes
-            nextBArr = [(b[0]-1, b[1]), (b[0]+1, b[1]),
-                        (b[0], b[1]+1), (b[0], b[1]-1)]
-            pushPosArr = [(b[0]+1, b[1]), (b[0]-1, b[1]),
-                          (b[0], b[1]-1), (b[0], b[1]+1)]
+            nextBArr = [(b[0] - 1, b[1]), (b[0] + 1, b[1]),
+                        (b[0], b[1] + 1), (b[0], b[1] - 1)]
+            pushPosArr = [(b[0] + 1, b[1]), (b[0] - 1, b[1]),
+                          (b[0], b[1] - 1), (b[0], b[1] + 1)]
             for nextB, pushPos in zip(nextBArr, pushPosArr):
-                if isValid(nextB) and nextB+b not in seen:
+                if isValid(nextB) and nextB + b not in seen:
                     if isValid(pushPos) and personCanMove(p, pushPos, b):
                         q.append((nextB, b, pushes + 1))
                         seen.add(nextB + b)
         return -1
-

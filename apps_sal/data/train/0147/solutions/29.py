@@ -10,5 +10,5 @@ class Solution:
             if len(h) > k:
                 speedSum -= h[0]
                 heapq.heappop(h)
-            res = max(res, speedSum*e)
-        return res%(10**9 + 7)
+            res = max(res, speedSum * e)
+        return res % (10**9 + 7)

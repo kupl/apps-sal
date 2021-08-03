@@ -1,10 +1,10 @@
 def max_number(n):
-    #your code here
+    # your code here
     output = []
 
     for num in str(n):
         output.append(num)
 
-    output = ''.join(sorted(output, reverse = True))
-    
+    output = ''.join(sorted(output, reverse=True))
+
     return int(output)

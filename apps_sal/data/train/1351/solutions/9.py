@@ -1,6 +1,6 @@
 for _ in range(int(input())):
     n = int(input())
-    l = list(map(int,input().split()))
+    l = list(map(int, input().split()))
     m = list(set(l))
     m.sort()
     k = []
@@ -9,4 +9,4 @@ for _ in range(int(input())):
             k.append(i)
         else:
             k.append(0)
-    print(*k)        
+    print(*k)

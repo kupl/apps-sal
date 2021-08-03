@@ -9,8 +9,7 @@ def fib_gen():
 
 
 def productFib(p):
-    i = dropwhile(lambda x: x[0]*x[1]<p, fib_gen())
+    i = dropwhile(lambda x: x[0] * x[1] < p, fib_gen())
     a, b = next(i)
-    
-    return [a, b, a*b==p]
 
+    return [a, b, a * b == p]

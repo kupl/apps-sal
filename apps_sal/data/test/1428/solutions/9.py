@@ -19,4 +19,3 @@ for color in permutations(list(range(c)), 3):
             tmp += sum(d[k][color[i]] * cnt[k] for k in cnt)
         ans = min(ans, tmp)
 print(ans)
-

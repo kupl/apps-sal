@@ -32,7 +32,7 @@ def main():
         if delta > 0:
             incs.append((bottom, delta))
         else:
-            decs.append((bottom-delta, -delta))
+            decs.append((bottom - delta, -delta))
 
     inc_tot = compute(incs)
     dec_tot = compute(decs)
@@ -44,5 +44,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

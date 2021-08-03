@@ -1,6 +1,9 @@
 from collections import defaultdict as dd
+
+
 def ri():
     return int(input())
+
 
 def rl():
     return list(map(int, input().split()))
@@ -16,7 +19,7 @@ def solve():
         else:
             peaks.append(0)
 
-    best = sum(peaks[:k-2])
+    best = sum(peaks[:k - 2])
     curr = best
     best_l = 0
     for i in range(1, n - (k - 1)):
@@ -28,8 +31,6 @@ def solve():
     return best + 1, best_l + 1
 
 
-
 t = ri()
 for i in range(t):
     print(*solve())
-

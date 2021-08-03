@@ -146,4 +146,3 @@ for a in A:
         t.delete(n._value)
     t.insert(a)
 print((len(t)))
-

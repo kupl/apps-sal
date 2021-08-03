@@ -21,5 +21,5 @@ r_roaches_odd = r_roaches_total - r_roaches_even
 
 if b_roaches_odd >= b_roaches_even and r_roaches_even >= r_roaches_odd:
     print(max(b_roaches_even, r_roaches_odd))
-else: 
+else:
     print(max(b_roaches_odd, r_roaches_even))

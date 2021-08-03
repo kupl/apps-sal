@@ -1,11 +1,13 @@
 3
 
+
 def time1(n, t, k):
     return ((n + k - 1) // k) * t
 
 
 def num2(T, t, k, d):
     return (T // t) * k + max(0, (T - d) // t) * k
+
 
 def time2(n, t, k, d):
     l, r = 0, 10 ** 18
@@ -17,10 +19,9 @@ def time2(n, t, k, d):
             r = mid
     return r
 
+
 n, t, k, d = list(map(int, input().split()))
 if time1(n, t, k) <= time2(n, t, k, d):
     print("NO")
 else:
     print("YES")
-    
-

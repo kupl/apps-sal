@@ -7,4 +7,3 @@ def remove_smallest(numbers):
         else:
             None
     return numbersCopy
-

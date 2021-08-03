@@ -11,4 +11,3 @@ class Solution:
             cache[str(trans)] += 1
 
         return max(cache.values())
-

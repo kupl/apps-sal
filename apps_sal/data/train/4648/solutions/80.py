@@ -5,5 +5,5 @@ def automorphic(n):
         d *= 10
         i /= 10
     if n == (n * n) % d:
-            return "Automorphic"
+        return "Automorphic"
     return "Not!!"

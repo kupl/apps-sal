@@ -21,4 +21,3 @@ if(min_x > max_x) and (min_y > max_y):
     print(((min_x - max_x) * (min_y - max_y)))
 else:
     print((0))
-

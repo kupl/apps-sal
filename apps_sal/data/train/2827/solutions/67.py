@@ -11,5 +11,6 @@ numdict = {
     9: 'Nine'
 }
 
+
 def switch_it_up(number):
     return numdict[number]

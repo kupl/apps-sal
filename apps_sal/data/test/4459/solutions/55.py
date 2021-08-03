@@ -21,12 +21,15 @@ def main():
     a = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
     print((solve(N, a)))
 
+
 def test():
     import doctest
     doctest.testmod()
 
+
 def __starting_point():
-    #test()
+    # test()
     main()
+
 
 __starting_point()

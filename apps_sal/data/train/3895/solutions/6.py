@@ -1,5 +1,7 @@
 def xx(s):
-    return s[1:]+s[0]
+    return s[1:] + s[0]
+
+
 def shifted_diff(a, b):
     if a == b:
         return 0

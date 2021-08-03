@@ -1,8 +1,9 @@
-import functools 
+import functools
 import re
-gym_slang = lambda phrase: \
-    functools.reduce \
-    (
+
+
+def gym_slang(phrase): return \
+    functools.reduce(
         lambda s, u: re.sub(*u, s),
         (
             ('(?<=[Pp])(robably)', 'rolly'),
@@ -13,4 +14,4 @@ gym_slang = lambda phrase: \
             ('(?<=[Cc])ombination', 'ombo')
         ),
         phrase
-    )
+)

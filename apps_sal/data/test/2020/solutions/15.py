@@ -8,5 +8,5 @@ def main():
         c.add(x)
     return min(len(r), len(c))
 
-print(main())
 
+print(main())

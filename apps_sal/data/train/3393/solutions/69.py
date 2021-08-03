@@ -1,5 +1,6 @@
 def factors(n):
-    return set([f for i in range(1, int(n**0.5)+1) if n % i == 0 for f in [i, n//i]])
+    return set([f for i in range(1, int(n**0.5) + 1) if n % i == 0 for f in [i, n // i]])
+
 
 def list_squared(m, n):
     ans = []

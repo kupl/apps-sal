@@ -1,38 +1,35 @@
-n=int(input())
+n = int(input())
 
-l=[]
+l = []
 
 for i in range(n):
 
-	l+=[input()]
+    l += [input()]
 
-s="+".join(l)	
+s = "+".join(l)
 
-q="abcdefghijklmnopqrstuvwxyz"
-
+q = "abcdefghijklmnopqrstuvwxyz"
 
 
 for i in q:
 
-	if i not in s:
+    if i not in s:
 
-		print(i)
+        print(i)
 
-		break
+        break
 
-else:		
+else:
 
-	for i in q:
+    for i in q:
 
-		for j in q:
+        for j in q:
 
-			if i+j not in s:
+            if i + j not in s:
 
-				print(i+j)
+                print(i + j)
 
-				return
-
+                return
 
 
 # Made By Mostafa_Khaled
-

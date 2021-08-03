@@ -14,7 +14,7 @@ if (n > b):
     loopcounter = 1
     #sikii = math.ceil((n-b) / (a-1))
     sikii = b
-    yoyuu = n - a -b+1
+    yoyuu = n - a - b + 1
     while (counter < n):
         if (yoyuu >= sikii):
             ans += list(range(counter + sikii, counter, -1))
@@ -28,4 +28,3 @@ if (n > b):
         counter = len(ans)
 
 print((' '.join(map(str, ans))))
-

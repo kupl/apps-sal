@@ -8,6 +8,7 @@ def spreadsheet(s):
     else:
         return convert_to_rc(s)
 
+
 def convert_to_rc(s: str) -> str:
     ind = re.search(r"\d", s).span()[0]
     letters = s[:ind]
@@ -20,10 +21,11 @@ def convert_to_rc(s: str) -> str:
             cols += (string.ascii_uppercase.find(letters[i]) + 1)
     return f"R{nums}C{cols}"
 
+
 def convert_to_ss(s: str) -> str:
     ind = s.find("C")
     rows = s[1:ind]
-    cols = int(s[ind+1:])
+    cols = int(s[ind + 1:])
     res_col = ""
     while cols > 0:
         cols, rem = cols // 26, cols % 26

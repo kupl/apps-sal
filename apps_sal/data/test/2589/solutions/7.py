@@ -1,7 +1,10 @@
 from collections import *
-from sys import stdin,stderr
+from sys import stdin, stderr
+
+
 def rl():
     return [int(w) for w in stdin.readline().split()]
+
 
 t, = rl()
 for _ in range(t):
@@ -15,4 +18,3 @@ for _ in range(t):
             print(max(n - 1 - min(good_i), max(good_i)))
         else:
             print(-1)
-

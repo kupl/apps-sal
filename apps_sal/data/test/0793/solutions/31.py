@@ -1,23 +1,30 @@
 import sys
 from math import ceil
 
+
 def input():
     return sys.stdin.readline().strip()
+
 
 def iinput():
     return int(input())
 
+
 def finput():
     return float(input())
+
 
 def tinput():
     return input().split()
 
+
 def rinput():
     return map(int, tinput())
 
+
 def rlinput():
     return list(rinput())
+
 
 def nok(a, b):
     m = a * b
@@ -26,7 +33,7 @@ def nok(a, b):
             a %= b
         else:
             b %= a
-    return m // (a + b)    
+    return m // (a + b)
 
 
 def main():
@@ -45,7 +52,6 @@ def main():
         d[-1] = (k + d[-1]) % mod
         a = d[:]
     print(int(a[-1]))
-    
-    
-    
+
+
 main()

@@ -3,6 +3,7 @@ class TrieNode:
         self.children = {}
         self.eow = eow
 
+
 class Trie:
     def __init__(self):
         self.root = TrieNode(False)
@@ -16,6 +17,7 @@ class Trie:
             cur = cur.children[ch]
 
         cur.eow = True
+
 
 class StreamChecker:
     def __init__(self, words: List[str]):

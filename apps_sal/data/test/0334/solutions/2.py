@@ -6,4 +6,3 @@ for i in range(1000):
         print(d + c * i)
         return
 print(-1)
-

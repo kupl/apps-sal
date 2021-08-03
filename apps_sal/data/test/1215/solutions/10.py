@@ -4,4 +4,6 @@ def __starting_point():
         print(0)
     else:
         print(2 ** (n // 2))
+
+
 __starting_point()

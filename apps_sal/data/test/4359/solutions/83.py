@@ -22,4 +22,3 @@ for i in a:
     ans += t
 
 print(ans)
-

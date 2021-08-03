@@ -23,4 +23,3 @@ for i in range(n - 1):
 
 answer += 1
 print(answer)
-

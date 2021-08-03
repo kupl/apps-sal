@@ -7,4 +7,4 @@ def find(rats):
            is one.
     Reconstruct the label of the poisonned bottle by computing the base-10 representation:
     """
-    return sum(map(lambda x: pow(2,x), rats))
+    return sum(map(lambda x: pow(2, x), rats))

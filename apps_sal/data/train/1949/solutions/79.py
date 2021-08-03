@@ -1,4 +1,6 @@
 DIRECTIONS = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+
+
 class Solution:
     def dfs(self, grid, i, j, memo):
         if memo[i][j]:
@@ -12,7 +14,7 @@ class Solution:
                 gold = max(gold, self.dfs(grid, x, y, memo))
         memo[i][j] = False
         return gold + grid[i][j]
-                
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         if not grid or len(grid) == 0 or len(grid[0]) == 0:
             return 0

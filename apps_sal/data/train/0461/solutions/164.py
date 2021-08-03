@@ -12,9 +12,9 @@ class Solution:
                 index, time = q.pop()
                 res = max(res, time)
                 for v in d[index]:
-                    new_q.append((v, time+informTime[v]))
+                    new_q.append((v, time + informTime[v]))
             q = new_q[:]
-            
+
             if not q:
                 break
         return res

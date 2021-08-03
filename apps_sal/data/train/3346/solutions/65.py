@@ -7,6 +7,7 @@ def gap(g, m, n):
                 return [a, b]
     return None
 
+
 def is_prime(n):
     if n <= 3:
         return n > 1

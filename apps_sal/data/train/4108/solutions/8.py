@@ -1,4 +1,4 @@
-def sum_even_numbers(seq): 
+def sum_even_numbers(seq):
     sum = 0
     for i in range(len(seq)):
         if seq[i] % 2 == 0:

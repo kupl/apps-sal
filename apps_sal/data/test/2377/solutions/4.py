@@ -13,7 +13,7 @@ for _ in range(N):
     blist.append(b)
 blist.sort()
 ans = 0
-for i in range(N-1, -1, -1):
+for i in range(N - 1, -1, -1):
     if blist[i] <= amax:
         break
     ans += 1
@@ -22,9 +22,8 @@ for i in range(N-1, -1, -1):
         break
 if H > 0:
     if H % amax == 0:
-        ans += H//amax
+        ans += H // amax
     else:
-        ans += H//amax+1
+        ans += H // amax + 1
 
 print(ans)
-

@@ -2,9 +2,9 @@ t = int(input())
 
 for _ in range(t):
 
-	n = int(input())
+    n = int(input())
 
-	'''
+    '''
 	a = [0] * n
 
 	for i in range(n):
@@ -20,17 +20,16 @@ for _ in range(t):
 
 	'''
 
-	i = 2
-	count = 1
-	while 1:
+    i = 2
+    count = 1
+    while 1:
 
-		if i*i > n:
-			break
+        if i * i > n:
+            break
 
-		if i % 3 != 0:
-			count += 1
-			
-		i += 1
+        if i % 3 != 0:
+            count += 1
 
-	print(count)
+        i += 1
 
+    print(count)

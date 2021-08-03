@@ -14,8 +14,8 @@ class Solution:
             #     max_div -= 1  # forbid three
             cur_div = 2
             hit_div = None
-            while cur_div*cur_div <= n:
-                if n % cur_div==0:
+            while cur_div * cur_div <= n:
+                if n % cur_div == 0:
                     if hit_div is None:
                         hit_div = cur_div
                     else:
@@ -23,13 +23,12 @@ class Solution:
                         break
                 cur_div += 1
             # get result
-            if hit_div is not None and hit_div!=(n//hit_div):  # hit it!!
-                res = 1 + n + hit_div + (n//hit_div)
+            if hit_div is not None and hit_div != (n // hit_div):  # hit it!!
+                res = 1 + n + hit_div + (n // hit_div)
                 ret_count[n] = 1
             else:
                 res = None
             ret_sum[n] = res
         # --
-        ret = sum(ret_sum[k]*c for k,c in list(ret_count.items()))
+        ret = sum(ret_sum[k] * c for k, c in list(ret_count.items()))
         return ret
-

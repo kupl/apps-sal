@@ -1,10 +1,10 @@
-N=int(input())
-A=int(input())
+N = int(input())
+A = int(input())
 
-Amari=N%500
+Amari = N % 500
 
-if A>=Amari:
+if A >= Amari:
     print('Yes')
 
-elif A<Amari:
+elif A < Amari:
     print('No')

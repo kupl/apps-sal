@@ -1,5 +1,5 @@
 def nba_extrap(ppg, mpg):
-    return round(48*ppg/mpg, 1)
+    return round(48 * ppg / mpg, 1)
 
 
 '''An NBA game runs 48 minutes (Four 12 minute quarters).

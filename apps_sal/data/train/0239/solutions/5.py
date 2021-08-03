@@ -3,7 +3,7 @@ class Solution:
         label2values = defaultdict(list)
         for value, label in zip(values, labels):
             label2values[label].append(value)
-            
+
         all_top_nums = []
         for values in list(label2values.values()):
             if use_limit >= len(values):
@@ -11,11 +11,11 @@ class Solution:
             else:
                 top_nums = self.quick_select(use_limit, values)
             all_top_nums.extend(top_nums)
-            
+
         if num_wanted >= len(all_top_nums):
             return sum(all_top_nums)
         return sum(self.quick_select(num_wanted, all_top_nums))
-    
+
     def quick_select(self, use_limit, nums):
         low = 0
         high = len(nums) - 1
@@ -29,7 +29,7 @@ class Solution:
             else:
                 high = pivot - 1
         return nums
-        
+
     def partition(self, nums, low, high):
         pivot = random.randint(low, high)
         self._swap(nums, pivot, high)
@@ -40,10 +40,10 @@ class Solution:
                 pivot += 1
         self._swap(nums, pivot, high)
         return pivot
-    
+
     def _swap(self, nums, i, j):
         nums[i], nums[j] = nums[j], nums[i]
-        
+
 # Follow-up 1
 # Do beter than O(nlogn).
 
@@ -59,4 +59,3 @@ class Solution:
 # Merge the largest m elements from each label into an array
 # Use QuickSelect again on the resulting array to get the largest k elements.
 # *each step can be done in O(N).
-

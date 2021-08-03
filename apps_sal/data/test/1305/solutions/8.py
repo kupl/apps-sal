@@ -1,4 +1,4 @@
-n= int(input())
+n = int(input())
 arr = list(map(int, input().split()))
 
 n25 = 0
@@ -19,4 +19,3 @@ for i in range(n):
     if(n25 < 0 or n50 < 0):
         poss = False
 print('NO' if not poss else 'YES')
-

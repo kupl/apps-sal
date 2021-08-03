@@ -27,5 +27,5 @@ while cnt < n:
     tot += last[0] * last[1]
     cnt += last[1]
 
-tot -= (cnt-n)*last[0]
+tot -= (cnt - n) * last[0]
 print(tot)

@@ -10,7 +10,7 @@ def main():
     A = list(map(int, input().split()))
 
     # 多項式
-    polynomial = np.zeros(S+1, int)
+    polynomial = np.zeros(S + 1, int)
     ans = 0
     for i in A:
         polynomial[0] += 1
@@ -19,5 +19,6 @@ def main():
         ans += polynomial[S]
 
     print(ans % mod)
+
 
 main()

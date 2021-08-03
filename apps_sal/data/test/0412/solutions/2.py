@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n = int(input())
 a = list(read())
 ans = -1
@@ -14,5 +16,3 @@ for i in range(n):
     elif r == ans:
         cnt += 1
 print(2 ** ans, cnt)
-               
-

@@ -2,7 +2,7 @@ def find_middle(string):
     # Если в String подаётся None, возвращаем -1
     if string is None:
         return -1
-    # Если в String подаётся число, возвращаем -1  
+    # Если в String подаётся число, возвращаем -1
     if type(string) is int:
         return -1
 
@@ -35,10 +35,10 @@ def find_middle(string):
         if len(spisok) >= 2:
             spisok[:1].replace("0", "")
         test = int(len(spisok) / 2)
-        answer = spisok[test-1:test+1]
+        answer = spisok[test - 1:test + 1]
     else:
         test = int(len(spisok) / 2)
-        answer = spisok[test:test+1]
+        answer = spisok[test:test + 1]
 
     answer = "".join(answer)
     return int(answer)

@@ -1,6 +1,7 @@
 
 url = "https://atcoder.jp//contests/abc111/tasks/abc111_b"
 
+
 def main():
     s = input()
     for n in range(int(s), 1000):
@@ -10,8 +11,8 @@ def main():
             return
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -20,4 +20,3 @@ for i in range(K + 1):
                 put_out_cnt -= 1
             ans = max(ans, sum(tmp))
 print(ans)
-

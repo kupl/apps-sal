@@ -5,7 +5,7 @@ input = sys.stdin.readline
 n, m, k = list(map(int, input().split()))
 x = list(map(int, input().split()))
 
-uf = [-1 for _ in range(n+1)]
+uf = [-1 for _ in range(n + 1)]
 
 
 def find(p, uf):
@@ -51,4 +51,3 @@ for w, u, v in edges:
 
 res = [ans] * k
 print(' '.join(map(str, res)))
-

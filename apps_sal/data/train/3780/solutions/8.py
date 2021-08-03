@@ -10,6 +10,6 @@ def example_sort(arr, example_arr):
     for n in example_arr:
         num_count = number_count.get(n, 0)
         for i in range(num_count):
-            sorted_arr.append(n) # Push array count number of times in number_count
+            sorted_arr.append(n)  # Push array count number of times in number_count
 
     return sorted_arr

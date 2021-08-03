@@ -4,7 +4,7 @@ Slen = len(string)
 m = int(input())
 inline = input().split()
 a = []
-for i in range (m):
+for i in range(m):
     a.append(int(inline[i]))
 a.append(Slen // 2 + 1)
 a.sort()
@@ -16,5 +16,4 @@ for i in range(len(a) - 1):
             string[j - 1], string[Slen - j - 1 + 1] = string[Slen - j - 1 + 1], string[j - 1]
     flag = 1 - flag
 for i in range(Slen):
-    print (string[i], sep = '', end = '')
-        
+    print(string[i], sep='', end='')

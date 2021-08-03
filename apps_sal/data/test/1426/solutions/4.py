@@ -1,10 +1,10 @@
+from collections import deque
 import sys
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
 sys.setrecursionlimit(10 ** 7)
 
-from collections import deque
 
 n, m = list(map(int, readline().split()))
 graph = [[] for _ in range(n * 3)]
@@ -32,4 +32,3 @@ while q:
             return
         q.append(next)
 print((-1))
-

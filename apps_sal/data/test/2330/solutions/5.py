@@ -18,4 +18,3 @@ for _ in range(int(input())):
         print(n, 1)
         for i in range(m - n):
             print(x, y)
-

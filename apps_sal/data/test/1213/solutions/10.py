@@ -23,4 +23,4 @@ else:
     for i in range(n - 1):
         print("PRINT", s[i])
         print("RIGHT")
-    print("PRINT", s[-1])    
+    print("PRINT", s[-1])

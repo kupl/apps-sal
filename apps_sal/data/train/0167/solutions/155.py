@@ -2,6 +2,7 @@ class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
         dict_soln = {}
         return self.dp(K, N, dict_soln)
+
     def dp(self, k, n, dict_soln):
         if n == 0:
             return 0
@@ -39,8 +40,3 @@ class Solution:
             else:
                 dict_soln[(k, n)] = tmp1 + 1
                 return dict_soln[(k, n)]
-            
-    
-        
-        
-

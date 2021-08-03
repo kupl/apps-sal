@@ -2,16 +2,19 @@
 
 c_mod = 1000000007
 
+
 def InverseMod(b: int, m: int):
     b %= m
-    if b == 0 or b == 1: return b
+    if b == 0 or b == 1:
+        return b
 
     a = m
     qs = []
     while True:
         q = a // b
         r = a % b
-        if (r == 0): break
+        if (r == 0):
+            break
         a = b
         b = r
         qs.append(q)
@@ -21,12 +24,13 @@ def InverseMod(b: int, m: int):
     for i in range(len(qs) - 2, -1, -1):
         t = qA
         qA = qB
-        qB = qB*(-qs[i]) + t
-    
+        qB = qB * (-qs[i]) + t
+
     qB %= m
-    if qB < 0: 
+    if qB < 0:
         qB = m + qB
     return qB
+
 
 def save_mul(a, b):
     return (a * b) % c_mod
@@ -35,7 +39,7 @@ def save_mul(a, b):
 class Fraction:
     def __init__(self, a: int, b: int, dBase: int, dPow: int):
         self.a, self.b, self.dBase, self.dPow = a, b, dBase, dPow
-    
+
     def __add__(self, other):
         f = Fraction(self.a, self.b, self.dBase, self.dPow)
         if f.dPow > other.dPow:
@@ -50,7 +54,7 @@ class Fraction:
             f.a += other.a
             f.a %= c_mod
         return f
-    
+
     def __mul__(self, other):
         f = Fraction(self.a, self.b, self.dBase, self.dPow)
         f.a *= other.a
@@ -59,10 +63,9 @@ class Fraction:
         f.a %= c_mod
         f.b %= c_mod
         return f
-    
+
     def __str__(self):
         return "{0}/{1}".format(self.a, self.b)
-
 
 
 def main():
@@ -104,14 +107,14 @@ def main():
             k.b = save_mul(k.b, m)
             k.dPow += 1
             continue
-        
+
         if u > d:
             r = r + k
 
-        if u != d: break
-    
+        if u != d:
+            break
+
     print(save_mul(r.a, InverseMod(r.b, c_mod)))
 
 
 main()
-

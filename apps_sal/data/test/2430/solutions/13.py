@@ -9,7 +9,5 @@ for i in range(n):
     v = int(sys.stdin.readline())
     res += int(math.fabs(c - v))
     c = v
-    
-print(res + n + (n - 1))
-        
 
+print(res + n + (n - 1))

@@ -8,10 +8,9 @@ for t in range(T):
     if Counter(a) != Counter(b):
         print('No')
         continue
-    mid = n//2 + n % 2
-    aa = Counter(tuple(sorted([a[i],a[n-i-1]])) for i in range(mid))
-    bb = Counter(tuple(sorted([b[i],b[n-i -1]])) for i in range(mid))
-
+    mid = n // 2 + n % 2
+    aa = Counter(tuple(sorted([a[i], a[n - i - 1]])) for i in range(mid))
+    bb = Counter(tuple(sorted([b[i], b[n - i - 1]])) for i in range(mid))
 
     # print(aa)
     # print(bb)
@@ -19,5 +18,3 @@ for t in range(T):
         print('No')
         continue
     print('Yes')
-
-

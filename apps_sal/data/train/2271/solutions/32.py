@@ -30,13 +30,15 @@ class UnionFind():
     def same(self, x, y):
         return self.root(x) == self.root(y)
 
+
 N, M = list(map(int, input().split()))
 P = list([int(x) - 1 for x in input().split()])
 X = UnionFind(N)
 Y = UnionFind(N)
 for _ in range(M):
     x, y = list(map(int, input().split()))
-    x -= 1; y -= 1
+    x -= 1
+    y -= 1
     X.union(x, y)
     Y.union(P[x], P[y])
 
@@ -48,4 +50,3 @@ for r in roots:
     ans += len(A & B)
 
 print(ans)
-

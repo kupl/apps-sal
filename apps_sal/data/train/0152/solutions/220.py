@@ -12,7 +12,7 @@ class Solution:
             else:
                 r = mid - 1
         return r
-        
+
     def count(self, poss: list, dist: int) -> int:
         res = 1
         last = poss[0]

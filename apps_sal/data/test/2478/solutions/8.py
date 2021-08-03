@@ -10,9 +10,8 @@ for i in range(len(s)):
     if cnt < 0:
         L = min(L, cnt)
 
-ans = '('*abs(L) + s
+ans = '(' * abs(L) + s
 R = ans.count('(') - ans.count(')')
-ans += ')'*R
+ans += ')' * R
 
 print(ans)
-

@@ -3,13 +3,13 @@ class Solution:
         count = collections.Counter(hand)
         while count:
             m = min(count)
-            for k in range(m, m+W):
+            for k in range(m, m + W):
                 v = count[k]
-                if not v: return False    # if v is zero 
+                if not v:
+                    return False    # if v is zero
                 if v == 1:
                     del count[k]
                 else:
                     count[k] = v - 1
 
         return True
-

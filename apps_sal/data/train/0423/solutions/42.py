@@ -9,5 +9,5 @@ class Solution:
             else:
                 dp[arr[i]] = 1
             ans = max(ans, dp[arr[i]])
-            
+
         return ans

@@ -17,7 +17,6 @@ elif p == 5:
     print(total)
 
 
-
 else:
     power = 1
     for i in range(len(s) - 1, -1, -1):  # handling of 0's as n and rem

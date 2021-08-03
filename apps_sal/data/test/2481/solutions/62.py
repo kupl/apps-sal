@@ -1,6 +1,8 @@
+from collections import Counter
 import sys
 read = sys.stdin.read
-from collections import Counter
+
+
 def main():
     def warshall_floyd(d):
         for k in range(n):
@@ -25,7 +27,10 @@ def main():
     for i0 in range(10):
         ans += aa[i0] * d[i0][1]
     print(ans)
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

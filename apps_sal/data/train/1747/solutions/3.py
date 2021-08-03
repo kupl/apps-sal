@@ -1,6 +1,6 @@
 def crosstable(players, results):
     count = len(players)
-    pts = [sum(res[:i] + res[i+1:]) for res, i in zip(results, range(count))]
+    pts = [sum(res[:i] + res[i + 1:]) for res, i in zip(results, range(count))]
     sb = [res[i] * pts[i] for res in results for i in range(count) if res[i] is not None]
     sb = [sum(sb[i * (count - 1): i * (count - 1) + count - 1]) for i in range(count)]
 
@@ -17,8 +17,8 @@ def crosstable(players, results):
     template_score_header = f"{{: ^{l_pts}}}  {{: ^{l_sb}}}"
     template_one_score = f"{{: >{l_one_score}}}"
     header = template_rank.format('#') + \
-             template.format('Player', " ".join([template_one_score.format(i) for i in range(1, count+1)])) + \
-             template_score_header.format("Pts", "SB").rstrip() + "\n"
+        template.format('Player', " ".join([template_one_score.format(i) for i in range(1, count + 1)])) + \
+        template_score_header.format("Pts", "SB").rstrip() + "\n"
     delimiter = "=" * row_len + '\n'
     result = header + delimiter
     score = []
@@ -30,12 +30,12 @@ def crosstable(players, results):
     duplicate: bool = False
     start = 0
     for i in range(0, count):
-        if not duplicate and i != count-1 and sort_pts[i + 1]['pts'] == sort_pts[i]['pts']:
+        if not duplicate and i != count - 1 and sort_pts[i + 1]['pts'] == sort_pts[i]['pts']:
             duplicate = True
             start = i
-        elif duplicate and (i == count-1 or sort_pts[i + 1]['pts'] != sort_pts[i]['pts']):
-            sort_pts[start:i+1] = sort_by_sb(list(sorted(sort_pts[start:i+1], key=lambda el: el['sb'], reverse=True)),
-                                             rank=start+1)
+        elif duplicate and (i == count - 1 or sort_pts[i + 1]['pts'] != sort_pts[i]['pts']):
+            sort_pts[start:i + 1] = sort_by_sb(list(sorted(sort_pts[start:i + 1], key=lambda el: el['sb'], reverse=True)),
+                                               rank=start + 1)
             duplicate = False
             continue
         elif not duplicate:
@@ -53,12 +53,12 @@ def crosstable(players, results):
 def sort_by_sb(arr: list, rank: int):
     duplicate, start = False, 0
     for i in range(len(arr)):
-        if not duplicate and i != len(arr)-1 and arr[i]['sb'] == arr[i + 1]['sb']:
+        if not duplicate and i != len(arr) - 1 and arr[i]['sb'] == arr[i + 1]['sb']:
             arr[i]['rank'] = " "
             duplicate = True
             start = i
             rank_duplicate = rank
-        elif duplicate and (i == len(arr)-1 or arr[i]['sb'] != arr[i+1]['sb']):
+        elif duplicate and (i == len(arr) - 1 or arr[i]['sb'] != arr[i + 1]['sb']):
             arr[start:i + 1] = list(sorted(arr[start:i + 1], key=lambda el: el['name'].split(' ')[1]))
             for el in arr[start:i + 1]:
                 el['rank'] = " "

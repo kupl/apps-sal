@@ -6,4 +6,3 @@ for k in range(20, 0, -1):
     if n % div == 0:
         print(div)
         break
-

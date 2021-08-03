@@ -1,4 +1,6 @@
 from bisect import bisect_left, bisect_right, insort_right
+
+
 class CubeSkipList:
     # SkipList の層数を 3 にした感じの何か
     # std::multiset の代用になる
@@ -26,9 +28,9 @@ class CubeSkipList:
             l0 = []
             for v in values:
                 r = rand_depth()
-                if r==0:
+                if r == 0:
                     l0.append(v)
-                elif r==1:
+                elif r == 1:
                     la0.append(l0)
                     l0 = []
                     l1.append(v)
@@ -60,11 +62,11 @@ class CubeSkipList:
     def add(self, x):  # 要素の追加  # O(cbrt(n))
         layer2, layer1, layer0 = self.layer2, self.layer1, self.layer0
         r = self.rand_depth()
-        if r==0:
+        if r == 0:
             idx2 = bisect_right(layer2, x)
             idx1 = bisect_right(layer1[idx2], x)
             insort_right(layer0[idx2][idx1], x)
-        elif r==1:
+        elif r == 1:
             idx2 = bisect_right(layer2, x)
             l1 = layer1[idx2]
             idx1 = bisect_right(l1, x)
@@ -73,7 +75,7 @@ class CubeSkipList:
             l0 = la0[idx1]
             idx0 = bisect_right(l0, x)
 
-            la0.insert(idx1+1, l0[idx0:])
+            la0.insert(idx1 + 1, l0[idx0:])
             del l0[idx0:]
         else:
             idx2 = bisect_right(layer2, x)
@@ -84,11 +86,11 @@ class CubeSkipList:
             l0 = la0[idx1]
             idx0 = bisect_right(l0, x)
 
-            la0.insert(idx1+1, l0[idx0:])
+            la0.insert(idx1 + 1, l0[idx0:])
             del l0[idx0:]
-            layer0.insert(idx2+1, la0[idx1+1:])
-            del la0[idx1+1:]
-            layer1.insert(idx2+1, l1[idx1:])
+            layer0.insert(idx2 + 1, la0[idx1 + 1:])
+            del la0[idx1 + 1:]
+            layer1.insert(idx2 + 1, l1[idx1:])
             del l1[idx1:]
 
     def remove(self, x):  # 要素の削除  # O(cbrt(n))
@@ -97,8 +99,8 @@ class CubeSkipList:
         idx1 = bisect_left(layer1, x)
         if layer1[idx1] == x:
             del layer1[idx1]
-            layer0[idx1] += layer0[idx1+1]
-            del layer0[idx1+1]
+            layer0[idx1] += layer0[idx1 + 1]
+            del layer0[idx1 + 1]
         else:
             layer0_idx1 = layer0[idx1]
             del layer0_idx1[bisect_left(layer0_idx1, x)]
@@ -128,8 +130,8 @@ class CubeSkipList:
         la0 = layer0[idx2]
         l0 = la0[idx1]
         idx0 = bisect_right(l0, x)
-        if idx0==len(l0):
-            if idx1==len(l1):
+        if idx0 == len(l0):
+            if idx1 == len(l1):
                 return layer2[idx2]
             return l1[idx1]
         return l0[idx0]
@@ -142,11 +144,11 @@ class CubeSkipList:
         la0 = layer0[idx2]
         l0 = la0[idx1]
         idx0 = bisect_left(l0, x)
-        if idx0==0:
-            if idx1==0:
-                return layer2[idx2-1]
-            return l1[idx1-1]
-        return l0[idx0-1]
+        if idx0 == 0:
+            if idx1 == 0:
+                return layer2[idx2 - 1]
+            return l1[idx1 - 1]
+        return l0[idx0 - 1]
 
     def pop(self, idx):
         # 小さい方から idx 番目の要素を削除してその要素を返す（0-indexed）
@@ -159,12 +161,12 @@ class CubeSkipList:
             s += len(l0) + 1
             if s >= idx:
                 break
-        if s==idx:
-            layer0[i] += layer0[i+1]
-            del layer0[i+1]
+        if s == idx:
+            layer0[i] += layer0[i + 1]
+            del layer0[i + 1]
             return layer1.pop(i)
         else:
-            return layer0[i].pop(idx-s)
+            return layer0[i].pop(idx - s)
 
     def print(self):
         print(self.layer2)
@@ -198,4 +200,3 @@ def main():
 
 
 main()
-

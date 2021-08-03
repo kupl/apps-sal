@@ -59,4 +59,3 @@ k, n = list(map(int, input().split()))
 ans = solve(k, n)
 print(('\n'.join(map(str, ans))))
 print(('\n'.join(map(str, ans[-2::-1]))))
-

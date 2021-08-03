@@ -10,5 +10,3 @@ for i in v:
     else:
         ans += a
 print(ans)
-
-

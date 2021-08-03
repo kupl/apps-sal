@@ -3,4 +3,3 @@ def reverse(lst):
     for item in lst:
         result.insert(0, item)
     return result
-

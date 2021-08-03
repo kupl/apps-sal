@@ -4,4 +4,3 @@ def possible(numbers):
 
 for i in range(0, int(input())):
     print('Yes' if possible(input().split(' ')) else 'No')
-

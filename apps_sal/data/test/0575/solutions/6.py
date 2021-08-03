@@ -9,4 +9,3 @@ if bx < ax < cx or bx > ax > cx or by < ay < cy or cy < ay < by:
     print('NO')
 else:
     print('YES')
-

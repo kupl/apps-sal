@@ -22,4 +22,3 @@ for i, val in enumerate(n_acc):
 
 
 print(ans)
-

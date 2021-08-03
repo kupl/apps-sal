@@ -6,5 +6,5 @@ for i in range(len(S)):
     if int(S[i]) > 1 and i < K:
         ans = int(S[i])
         break
-        
+
 print(ans)

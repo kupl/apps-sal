@@ -6,7 +6,7 @@ def sharkovsky(a, b):
     j = 0
     while b % 2 == 0:
         b //= 2
-        j += 1;
+        j += 1
     if a == 1 and b == 1:
         return i > j
     elif a == 1:
@@ -17,4 +17,3 @@ def sharkovsky(a, b):
         return a < b
     else:
         return i < j
-

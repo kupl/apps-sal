@@ -1,4 +1,4 @@
-B = [0] *  (10 ** 5 + 2)
+B = [0] * (10 ** 5 + 2)
 S = [0] * (10 ** 5 + 2)
 a, b = list(map(int, input().split()))
 for i in range(a):
@@ -14,7 +14,7 @@ for i in range(10 ** 5 + 2):
         count += 1
         ans.append(('S', i, S[i]))
         if count == b:
-            break    
+            break
 for i in range(len(ans) - 1, -1, -1):
     print(ans[i][0], ans[i][1], ans[i][2])
 count = 0
@@ -24,4 +24,3 @@ for i in range(10 ** 5 + 1, -1, -1):
         print('B', i, B[i])
         if count == b:
             break
-

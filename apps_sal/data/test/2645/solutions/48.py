@@ -6,4 +6,3 @@ for c in s:
         ans -= 1
 ans += N // 2
 print(ans)
-

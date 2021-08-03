@@ -10,5 +10,5 @@ class Solution:
                 curSum = 0
                 sumsSet.clear()
             sumsSet.add(curSum)
-            
+
         return result

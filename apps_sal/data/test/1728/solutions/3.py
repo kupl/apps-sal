@@ -21,4 +21,3 @@ while stack:
         stack.append((child, c))
 
 print(ans)
-

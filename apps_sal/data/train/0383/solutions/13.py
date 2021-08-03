@@ -4,7 +4,8 @@ class Solution:
         visited = [False] * n
         for i in initial:
             visited[i] = True
-        conn = [set() for i in range(n)]            
+        conn = [set() for i in range(n)]
+
         def bfs(node):
             q = collections.deque([node])
             v = visited[:]
@@ -25,4 +26,3 @@ class Solution:
             return min(initial)
         s = sorted(list(cnt.items()), key=lambda k: (k[1], -k[0]))
         return s[-1][0]
-

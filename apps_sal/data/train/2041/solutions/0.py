@@ -28,8 +28,8 @@ def main():
             f = fails1 if j & 1 else fails0
             f.append(j)
             l[i], l[j] = l[j], a
-            if (all(l[b - 1] > l[b] < l[b + 1] for b in fails0) and
-                    all(l[b - 1] < l[b] > l[b + 1] for b in fails1)):
+            if (all(l[b - 1] > l[b] < l[b + 1] for b in fails0)
+                    and all(l[b - 1] < l[b] > l[b + 1] for b in fails1)):
                 res += 1 if j in fails else 2
             l[j] = l[i]
             del f[-1]
@@ -39,5 +39,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

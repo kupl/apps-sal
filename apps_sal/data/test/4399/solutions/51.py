@@ -1,6 +1,7 @@
 def readinput():
-    s=input()
+    s = input()
     return s
+
 
 def main(s):
     if s == 'AAA' or s == 'BBB':
@@ -8,9 +9,11 @@ def main(s):
     else:
         return 'Yes'
 
+
 def __starting_point():
-    s=readinput()
-    ans=main(s)
+    s = readinput()
+    ans = main(s)
     print(ans)
+
 
 __starting_point()

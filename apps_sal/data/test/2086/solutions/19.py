@@ -20,10 +20,11 @@ def main():
             sum = cur_sum
 
     ans += 1
-    print(ans)        
+    print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -7,8 +7,10 @@ class Solution:
         for i in range(m):
             for j in range(n):
                 if A[i][j]:
-                    if i: top[i][j] = top[i - 1][j] + 1
-                    if j: left[i][j] = left[i][j - 1] + 1
+                    if i:
+                        top[i][j] = top[i - 1][j] + 1
+                    if j:
+                        left[i][j] = left[i][j - 1] + 1
         for r in range(min(m, n), 0, -1):
             for i in range(m - r + 1):
                 for j in range(n - r + 1):
@@ -16,8 +18,8 @@ class Solution:
                            [j + r - 1], left[i + r - 1][j + r - 1]) == r:
                         return r * r
                     elif min(top[i + r - 1][j], top[i + r - 1][j + r - 1], left[i]
-                               [j + r - 1], left[i + r - 1][j + r - 1]) > r:
-                        print(i,j,r,min(top[i + r - 1][j], top[i + r - 1][j + r - 1], left[i]
-                               [j + r - 1], left[i + r - 1][j + r - 1]),m,n)
+                             [j + r - 1], left[i + r - 1][j + r - 1]) > r:
+                        print(i, j, r, min(top[i + r - 1][j], top[i + r - 1][j + r - 1], left[i]
+                                           [j + r - 1], left[i + r - 1][j + r - 1]), m, n)
                         return r * r
         return 0

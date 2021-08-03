@@ -1,1 +1,1 @@
-print(list(input().split()).index("0") + 1)  
+print(list(input().split()).index("0") + 1)

@@ -1,1 +1,1 @@
-century=lambda y:0-y//-100
+def century(y): return 0 - y // -100

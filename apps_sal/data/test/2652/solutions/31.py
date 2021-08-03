@@ -1,45 +1,46 @@
+from heapq import heappop, heappush, heapify
 import sys
 sys.setrecursionlimit(10**6)
-from heapq import heappop, heappush,heapify
 
-icase=0
-if icase==0:
-    n=int(input())
-    xy=[[0]*2 for i in range(n)]
-    x=[0]*n
-    y=[0]*n
+icase = 0
+if icase == 0:
+    n = int(input())
+    xy = [[0] * 2 for i in range(n)]
+    x = [0] * n
+    y = [0] * n
     for i in range(n):
-#        xy[i]=list(map(int,input().split()))
-        x[i],y[i]=list(map(int,input().split()))
-elif icase==1:    
-    n=3
+        #        xy[i]=list(map(int,input().split()))
+        x[i], y[i] = list(map(int, input().split()))
+elif icase == 1:
+    n = 3
 #    xy=[[1, 5], [3, 9], [7, 8]]
-    x=[1, 3, 7]
-    y=[5, 9, 8]
-elif icase==2:    
-    n=6
+    x = [1, 3, 7]
+    y = [5, 9, 8]
+elif icase == 2:
+    n = 6
 #    xy=[[8, 3], [4, 9], [12, 19], [18, 1], [13, 5], [7, 6]]
-    x=[8, 4, 12,18,13,7]
-    y=[3, 9, 19, 1, 5, 6]
+    x = [8, 4, 12, 18, 13, 7]
+    y = [3, 9, 19, 1, 5, 6]
 
-xi=[[0]*2 for i in range(n)]
-yi=[[0]*2 for i in range(n)]
+xi = [[0] * 2 for i in range(n)]
+yi = [[0] * 2 for i in range(n)]
 for i in range(n):
-    xi[i]=[x[i],i]
-    yi[i]=[y[i],i]
-    
+    xi[i] = [x[i], i]
+    yi[i] = [y[i], i]
+
 xi.sort()
-x=xi
-y=yi.sort()
-y=yi
+x = xi
+y = yi.sort()
+y = yi
 
 pair_lst = [i for i in range(n)]
-que=[]
-for i in range(n-1):
-    wi=x[i+1][0]-x[i][0]
-    heappush(que,(wi,x[i][1],x[i+1][1]))
-    wi=y[i+1][0]-y[i][0]
-    heappush(que,(wi,y[i][1],y[i+1][1]))
+que = []
+for i in range(n - 1):
+    wi = x[i + 1][0] - x[i][0]
+    heappush(que, (wi, x[i][1], x[i + 1][1]))
+    wi = y[i + 1][0] - y[i][0]
+    heappush(que, (wi, y[i][1], y[i + 1][1]))
+
 
 def find(x):
     if x == pair_lst[x]:
@@ -49,7 +50,8 @@ def find(x):
         pair_lst[x] = tmp
         return tmp
 
-icnt=0
+
+icnt = 0
 length_sum = 0
 while que:
     w, s, t = heappop(que)
@@ -59,8 +61,7 @@ while que:
     if root_s != root_t:
         pair_lst[root_s] = root_t
         length_sum += w
-        icnt+=1
+        icnt += 1
 #        print(icnt)
 
-print(length_sum)   
-
+print(length_sum)

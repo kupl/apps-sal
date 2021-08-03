@@ -1,5 +1,5 @@
 def factorize(n):
-    result = { }
+    result = {}
     i = 2
     while i * i <= n:
         d, m = divmod(n, i)
@@ -14,9 +14,9 @@ def factorize(n):
     result[n] = 1
     return result
 
+
 n = int(input())
 result = 1
 for k, v in list(factorize(n).items()):
     result *= k
 print(result)
-

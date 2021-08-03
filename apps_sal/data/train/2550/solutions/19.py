@@ -14,7 +14,7 @@ class Solution:
             elif bill == 20:
                 if ten > 0 and five > 0:
                     ten -= 1
-                    five -= 1 
+                    five -= 1
                 elif five > 2:
                     five -= 3
                 else:

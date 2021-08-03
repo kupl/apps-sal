@@ -3,9 +3,9 @@ for _ in range(int(input())):
     n = int(input())
     w = list(sorted(map(int, input().split())))
     ma = 0
-    for s in range(2,2*n+1):
+    for s in range(2, 2 * n + 1):
         l = 0
-        r = n-1
+        r = n - 1
         cnt = 0
         while l < r:
             cs = w[l] + w[r]
@@ -20,5 +20,3 @@ for _ in range(int(input())):
         ma = max(cnt, ma)
 
     print(ma)
-
-

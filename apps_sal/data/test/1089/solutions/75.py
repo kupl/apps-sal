@@ -48,4 +48,6 @@ def __starting_point():
         ans %= mod
 
     print(ans)
+
+
 __starting_point()

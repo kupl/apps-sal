@@ -41,4 +41,3 @@ for d in range(1, M + 1):
     for i in range(d, M + 1, d):
         ans += BIT.sum(i)
     print(ans)
-

@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def snail(array):
     m = []
     array = np.array(array)

@@ -20,7 +20,7 @@ class BIT:
     def get_sum(self, l, r):
         """区間[l, r)の和を求める"""
         return self._sum(r) - self._sum(l)
- 
+
 
 def swap_time(array0, array1):
     n = len(array0)
@@ -33,15 +33,14 @@ def swap_time(array0, array1):
     for val in array1:
         ind = memo[val].pop()
         res.append(ind)
-    
+
     bit = BIT(n)
     ans = 0
     for i in range(n):
         bit.add(res[i], 1)
         ans += bit.get_sum(res[i] + 1, n)
     return ans
-  
-  
+
 
 ALPH = "abcdefghijklmnopqrstuvwxyz"
 s = input()

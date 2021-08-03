@@ -9,4 +9,3 @@ for e in antennas[:0:-1]:
         break
 else:
     print('Yay!')
-

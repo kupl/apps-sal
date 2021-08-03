@@ -1,5 +1,5 @@
 n = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 if not 1 in A:
     print((-1))
     return
@@ -11,4 +11,3 @@ for a in A:
     else:
         cnt += 1
 print(cnt)
-

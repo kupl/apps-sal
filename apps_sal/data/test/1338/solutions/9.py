@@ -23,4 +23,4 @@ while i <= c:
     s += 1
     i += 1
 for i in arr:
-    print(i, end = ' ')
+    print(i, end=' ')

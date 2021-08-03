@@ -9,10 +9,10 @@ class Solution:
             return x
 
         def union(x, y):
-            p[find(x)] = p[find(y)]      
+            p[find(x)] = p[find(y)]
 
-        for a in A:     
-            for k in range(2, int(math.sqrt(a) + 1)):        
+        for a in A:
+            for k in range(2, int(math.sqrt(a) + 1)):
                 if a % k == 0:
                     union(a, k)
                     union(a, a // k)

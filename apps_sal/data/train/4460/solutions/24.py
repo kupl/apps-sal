@@ -7,4 +7,3 @@ def whatday(num):
             return x
 #         if 0 >= num > 7:
 #             return "Wrong, please enter a number between 1 and 7"
-

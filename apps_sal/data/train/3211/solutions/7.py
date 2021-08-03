@@ -1,1 +1,1 @@
-divide = lambda w: w>3 and not w%2
+def divide(w): return w > 3 and not w % 2

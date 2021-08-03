@@ -1,6 +1,5 @@
-S=input()
-if(S>='a'):
-  print('a')
+S = input()
+if(S >= 'a'):
+    print('a')
 else:
-  print('A')
-
+    print('A')

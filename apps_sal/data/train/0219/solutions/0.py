@@ -11,6 +11,3 @@ class Solution:
                 if count - 1 in seen:
                     ans = max(ans, i - seen[count - 1])
         return ans
-
-        
-

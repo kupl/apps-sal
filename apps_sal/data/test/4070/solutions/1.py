@@ -11,5 +11,3 @@ while n:
     s += a[n % 16]
     n //= 16
 print(s)
-
-

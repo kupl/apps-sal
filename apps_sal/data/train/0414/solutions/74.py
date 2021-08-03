@@ -1,15 +1,15 @@
 class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
-        
+
         check = {}
-        
+
         num_0 = arr[0]
         num_1 = arr[1]
         num_wins = 0
-        
+
         if len(arr) == 2:
             return max(arr[0], arr[1])
-        
+
         while num_wins < k and num_1 not in list(check.keys()):
             if num_0 > num_1:
                 arr.remove(num_1)
@@ -24,6 +24,5 @@ class Solution:
                 num_0 = arr[0]
                 num_1 = arr[1]
                 num_wins = 1
-            
-        return num_0
 
+        return num_0

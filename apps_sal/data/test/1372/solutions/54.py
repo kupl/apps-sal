@@ -20,4 +20,3 @@ for i in range(1, len(dp)):
     dp[i] = np.amin(dp[np.maximum(i - a_list, 0)] + b_list)
 
 print((int(min(dp[H:]))))
-

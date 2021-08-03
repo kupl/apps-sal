@@ -2,7 +2,9 @@
 from collections import deque
 import sys
 
+
 def MI(): return list(map(int, sys.stdin.readline().split()))
+
 
 class water:
     def __init__(self, t, v):
@@ -19,9 +21,10 @@ class water:
         return self
 
     def __iadd__(self, other):
-        self.v+=other.v
-        self.tv+=other.tv
+        self.v += other.v
+        self.tv += other.tv
         return self
+
 
 def main():
     n, l = MI()
@@ -31,7 +34,7 @@ def main():
     dam.append(water(t, v))
     # stvはtvの合計（vがlのときのvt）
     stv = t * v
-    for _ in range(n-1):
+    for _ in range(n - 1):
         t, v = MI()
         # 朝に水をもらう
         dam.appendleft(water(t, v))
@@ -50,9 +53,9 @@ def main():
         # その日の水温を出力
         print((stv / l))
         # グラフの左側が凹んでいたらベクトルを合成して凸に直す
-        while len(dam)>1 and dam[0] <= dam[1]:
+        while len(dam) > 1 and dam[0] <= dam[1]:
             w = dam.popleft()
             dam[0] += w
 
-main()
 
+main()

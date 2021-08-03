@@ -60,8 +60,7 @@ cnt = (X + Y) // 3
 diff = abs(X - Y)
 
 
-
-def comb(n, m, mod = 10 ** 9 + 7):
+def comb(n, m, mod=10 ** 9 + 7):
     numerator = 1
     denominator = 1
     for i in range(1, m + 1):
@@ -69,5 +68,6 @@ def comb(n, m, mod = 10 ** 9 + 7):
         denominator = denominator * i % mod
     d_inv = pow(denominator, mod - 2, mod)
     return numerator * d_inv % mod
+
 
 print(comb(cnt, (2 * Y - X) // 3) % (10 ** 9 + 7))

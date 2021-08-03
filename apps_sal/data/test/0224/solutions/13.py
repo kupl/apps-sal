@@ -10,4 +10,3 @@ ans = -1
 for i in range(1, len(a)):
     ans = max(ans, a[i] - a[i - 1])
 print(ans)
-

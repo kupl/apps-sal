@@ -24,4 +24,3 @@ for i in range(4 * n + 1):
 for el in s:
     if ((lx < el[0] < mx) and (ly < el[1] < my)) or el[0] < lx or el[0] > mx or el[1] < ly or el[1] > my:
         print(*el)
-

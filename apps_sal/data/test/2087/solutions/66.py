@@ -7,11 +7,11 @@ MOD = 998244353
 # def solve(A: int, B: int, C: int) -> int:
 def solve(A, B, C):
     tmp = 1
-    tmp *= A*(A+1)//2
+    tmp *= A * (A + 1) // 2
     tmp %= MOD
-    tmp *= B*(B+1)//2
+    tmp *= B * (B + 1) // 2
     tmp %= MOD
-    tmp *= C*(C+1)//2
+    tmp *= C * (C + 1) // 2
     tmp %= MOD
     return tmp
 
@@ -25,5 +25,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

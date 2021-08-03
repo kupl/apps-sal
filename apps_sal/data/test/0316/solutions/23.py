@@ -1,4 +1,4 @@
-a= int(input())
+a = int(input())
 ans = 1
 k = 4
 for i in range(a - 1):

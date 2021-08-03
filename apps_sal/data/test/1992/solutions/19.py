@@ -15,5 +15,3 @@ for v in b:
     ra[u], ra[v] = ra[v], ra[u]
     a[i], a[j] = a[j], a[i]
 print(ans)
-
-

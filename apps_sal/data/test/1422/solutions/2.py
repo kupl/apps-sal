@@ -18,8 +18,6 @@ while state:
 
     for wt in weights:
         if wt != w and wt > b:
-            state.append((wt, wt-b, k+1, l+[wt]))
+            state.append((wt, wt - b, k + 1, l + [wt]))
 
 print(res)
-
-

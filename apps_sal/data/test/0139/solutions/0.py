@@ -1,14 +1,14 @@
-n,m = map(int, input().split())
+n, m = map(int, input().split())
 g = [[] for i in range(n)]
 for _ in range(m):
-    u,v = map(int, input().split())
-    g[u-1].append(v-1)
+    u, v = map(int, input().split())
+    g[u - 1].append(v - 1)
 
 st = []
 vis = [0 for _ in range(n)]
 nxt = [0 for _ in range(n)]
 es = set()
-cycle=False
+cycle = False
 for i in range(n):
     if cycle:
         break
@@ -26,7 +26,7 @@ for i in range(n):
                 st.append(u)
             else:
                 ns = set()
-                fr = len(st)-1
+                fr = len(st) - 1
                 to = u
                 while 1:
                     ns.add((st[fr], to))
@@ -38,7 +38,7 @@ for i in range(n):
                     to = st[fr]
                     fr -= 1
                 es = ns
-                cycle =True
+                cycle = True
                 break
         else:
             vis[v] = 2

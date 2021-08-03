@@ -15,4 +15,3 @@ while i < j:
     else:
         i += 1
 print(ans)
-

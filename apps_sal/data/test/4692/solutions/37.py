@@ -4,5 +4,4 @@ sys.setrecursionlimit(10**6)
 
 m = int(input())
 
-print((24-m+24))
-
+print((24 - m + 24))

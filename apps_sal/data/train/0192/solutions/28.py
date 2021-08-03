@@ -5,7 +5,7 @@ class Solution:
         print(piles)
         score = 0
         if len(piles) % 3 == 0:
-            tmp = piles[int(len(piles)/3):]
+            tmp = piles[int(len(piles) / 3):]
             nums = [tmp[i] for i in range(0, len(tmp), 2)]
             print(sum(nums))
             return sum(nums)

@@ -3,7 +3,7 @@ class Solution:
         locLen = len(locations)
         MOD = 10**9 + 7
         dp = {}
-        
+
         def helper(i, f):
             if (i, f) in dp:
                 return dp[(i, f)]
@@ -15,7 +15,7 @@ class Solution:
                     subAns += (1 + helper(i1, f - abs(locations[i1] - locations[i])))
                 else:
                     subAns += helper(i1, f - abs(locations[i1] - locations[i]))
-            dp[(i, f)] = subAns%MOD
+            dp[(i, f)] = subAns % MOD
             return dp[(i, f)]
-        
+
         return helper(start, fuel) + (1 if start == finish else 0)

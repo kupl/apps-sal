@@ -5,5 +5,5 @@ class Solution:
             num = format(num, 'b')
             x += num.count('1')
             y = max(y, len(num) - 1)
-        
+
         return x + y

@@ -15,5 +15,6 @@ def solve(x, y):
         return '>'
     return '<'
 
+
 x, y = list(map(int, input().split()))
 print(solve(x, y))

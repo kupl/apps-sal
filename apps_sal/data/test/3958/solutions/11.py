@@ -14,13 +14,12 @@ for i in range(len(s)):
         if p >= len(res):
             print(-1)
             return
-        res[p].append(j)  
+        res[p].append(j)
 
 if p != -1:
     print(-1)
-    return    
+    return
 
 print(len(res))
 for x in res:
     print(len(x), *x)
-

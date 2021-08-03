@@ -1,4 +1,4 @@
-#python3
+# python3
 # utf-8
 
 n = int(input())
@@ -21,4 +21,3 @@ while k > 3:
     k -= 4
 print(n_sum)
 print(len(first_group), *first_group)
-

@@ -19,6 +19,5 @@ for w in t:
     else:
         prev = l[0]
         loop += 1
-ans = loop*len(s) + prev
+ans = loop * len(s) + prev
 print(ans)
-

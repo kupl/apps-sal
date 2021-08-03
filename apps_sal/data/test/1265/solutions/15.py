@@ -16,4 +16,3 @@ if (s1.count("1") != 0) and (s2.count("1") != 0):
     print("YES")
 else:
     print("NO")
-

@@ -16,4 +16,3 @@ for i in range(n + 1):
         counter = 0
 
 print(res)
-

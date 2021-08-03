@@ -1,5 +1,6 @@
 import math
 
+
 def digit_sum(n):
     num = [0]
     for i in range(1, n):
@@ -29,6 +30,7 @@ def binary_search(target, array, lower, upper):
 
     return hit
 
+
 n = 31463
 num, total = digit_sum(n)
 
@@ -41,4 +43,3 @@ for t in range(int(input().strip())):
     index = rest - num[index_in_num - 1]
 
     print(str(index_in_num)[index - 1])
-

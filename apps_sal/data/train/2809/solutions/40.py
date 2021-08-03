@@ -3,6 +3,5 @@ def digitize(n):
     res = str(n)
     for i in res:
         r.append(int(i))
-        
-    return r[::-1]
 
+    return r[::-1]

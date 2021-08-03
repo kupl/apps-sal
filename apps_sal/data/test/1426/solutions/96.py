@@ -29,4 +29,3 @@ for _ in range(M):
     g[3 * a + 2].append(3 * b)
 S, T = [3 * (int(x) - 1) for x in input().split()]
 print((bfs()))
-

@@ -7,4 +7,3 @@ for x in range(k + 1):
             ans += 1
 
 print(ans)
-

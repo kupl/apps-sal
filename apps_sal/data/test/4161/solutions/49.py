@@ -1,13 +1,15 @@
 K = int(input())
 
+
 def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
 
+
 result = 0
 
-for a in range(1, K+1):
+for a in range(1, K + 1):
     result += a
     #print('{} add'.format(a))
     b = a + 1
@@ -19,6 +21,6 @@ for a in range(1, K+1):
         while c <= K:
             result += 6 * gcd(l, c)
             #print('{} and {} and {} add'.format(a, b, c))
-            c+= 1
+            c += 1
         b += 1
 print(result)

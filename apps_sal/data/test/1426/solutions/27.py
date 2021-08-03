@@ -30,4 +30,3 @@ def bfs(s):
 dist = bfs(s - 1)
 ans = dist[t - 1]
 print((ans // 3))
-

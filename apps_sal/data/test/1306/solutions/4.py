@@ -1,7 +1,7 @@
 mod = 10 ** 9 + 7
 n, h = map(int, input().split())
 a = list(map(int, input().split()))
-dp = [[0 for j in range(h + 1)] for i in range (n + 1)]
+dp = [[0 for j in range(h + 1)] for i in range(n + 1)]
 dp[0][0] = 1
 
 for i in range(1, n + 1):

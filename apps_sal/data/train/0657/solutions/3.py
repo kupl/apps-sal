@@ -1,27 +1,28 @@
-R,C=map(int,input().split())
-A=[]
+R, C = map(int, input().split())
+A = []
 for i in range(R):
-    p=list(map(int,input().split()))
+    p = list(map(int, input().split()))
     A.append(p)
 m, n = len(A), len(A[0])
 for i in range(m):
-    if A[i][0] == 0: 
-        for j in range(n): A[i][j] ^= 1 
-        
-for j in range(n): 
-    cnt=0
+    if A[i][0] == 0:
+        for j in range(n):
+            A[i][j] ^= 1
+
+for j in range(n):
+    cnt = 0
     for i in range(m):
-        if(A[i][j]==1):
-            cnt+=1
-    if(cnt<(m-cnt)):
+        if(A[i][j] == 1):
+            cnt += 1
+    if(cnt < (m - cnt)):
         for i in range(m):
-            A[i][j]^=1
+            A[i][j] ^= 1
 
 #print(sum(int("".join(map(str, A[i])), 2) for i in range(m)))
-res=0
+res = 0
 for i in range(m):
-    ans=""
+    ans = ""
     for j in range(n):
-        ans+=str(A[i][j])
-    res+=int(ans,2)
+        ans += str(A[i][j])
+    res += int(ans, 2)
 print(res)

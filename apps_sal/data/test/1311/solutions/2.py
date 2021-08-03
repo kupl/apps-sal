@@ -14,4 +14,3 @@ for u in l:
         a += 1
         r = u[0]
 print(a)
-

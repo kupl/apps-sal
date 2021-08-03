@@ -41,4 +41,4 @@ class Solution:
             return l
 
         # result between left and right can be converted to [0, right] - [0, left-1] (result below right - result below left-1)
-        return (sum_k_sums(right) - sum_k_sums(left - 1))%1000000007
+        return (sum_k_sums(right) - sum_k_sums(left - 1)) % 1000000007

@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n, m = map(int, input().split())
     res = 0
@@ -11,10 +12,13 @@ def solve():
         for col in range(m - 1, -1, -1):
             if tab[row][col] != 0:
                 diff = tab[row][col]
-                res+=1
+                res += 1
                 for i in range(row + 1):
                     for j in range(col + 1):
                         tab[i][j] -= diff
     return res
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 print(solve())

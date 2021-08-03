@@ -16,7 +16,7 @@ for i in range(n):
 for k in range(1, log_size):
     for i in range(n):
         double[k][i] = double[k - 1][double[k - 1][i]]
-        
+
 for a, b in query:
     a -= 1
     b -= 1

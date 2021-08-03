@@ -9,4 +9,3 @@ for i, a in enumerate(A[:-1]):
     ans = max(ans, score)
 
 print(ans)
-

@@ -26,7 +26,7 @@ class UnionFind():
 
 uf = UnionFind(N)
 fri = []
-rst = [0]*N
+rst = [0] * N
 
 for m in range(M):
     A, B = list(map(int, input().split()))
@@ -37,7 +37,7 @@ for m in range(M):
 
 for i in range(N):
     ind = uf.find(i)
-    rst[i] = uf.size[ind]-1
+    rst[i] = uf.size[ind] - 1
 
 for f in fri:
     A, B = f
@@ -54,4 +54,3 @@ for k in range(K):
         rst[D] -= 1
 
 print((" ".join(map(str, rst))))
-

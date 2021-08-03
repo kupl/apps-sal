@@ -14,4 +14,3 @@ for _ in range(int(input())):
             mn = pref[i]
             res += i + 1
     print(res + len(s))
-

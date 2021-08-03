@@ -1,4 +1,4 @@
-def binary_cleaner(seq): 
+def binary_cleaner(seq):
     b = []
     x = []
     for i in range(len(seq)):

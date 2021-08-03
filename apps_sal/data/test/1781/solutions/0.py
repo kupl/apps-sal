@@ -45,4 +45,3 @@ for i in range(n):
 print(result)
 for i in range(n):
     print("".join(plain[i]))
-

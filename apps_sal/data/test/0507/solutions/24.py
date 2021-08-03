@@ -21,4 +21,3 @@ else:
         a2 = [elem for elem in a]
         a2[not_equals[1]] = b[not_equals[1]]
         print(*a2)
-

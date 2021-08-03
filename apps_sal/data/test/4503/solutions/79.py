@@ -1,7 +1,7 @@
 H, N = map(int, input().split())
 for Ai in list(map(int, input().split())):
-  H -= Ai
+    H -= Ai
 if H > 0:
-  print('No')
+    print('No')
 else:
-  print('Yes')
+    print('Yes')

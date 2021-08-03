@@ -4,5 +4,5 @@ def next_item(xs, item):
         if i == item:
             try:
                 return next(iterXS)
-            except: 
+            except:
                 return None

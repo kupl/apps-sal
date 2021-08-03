@@ -1,3 +1,4 @@
+import sys
 from typing import NamedTuple, Optional, List, cast
 
 
@@ -143,26 +144,25 @@ class MFGraph:
         return visited
 
 
-import sys
 input = sys.stdin.readline
 
 h, w = map(int, input().split())
 A = tuple(input().rstrip() for _ in range(h))
-G = MFGraph(h+w+2)
-s = h+w
-t = s+1
+G = MFGraph(h + w + 2)
+s = h + w
+t = s + 1
 big = 10**9
 for i in range(h):
     for j in range(w):
         if A[i][j] == "S":
             G.add_edge(s, i, big)
-            G.add_edge(s, h+j, big)
+            G.add_edge(s, h + j, big)
         if A[i][j] == "T":
             G.add_edge(i, t, big)
-            G.add_edge(h+j, t, big)
+            G.add_edge(h + j, t, big)
         if A[i][j] == "o":
-            G.add_edge(i, h+j, 1)
-            G.add_edge(h+j, i, 1)
+            G.add_edge(i, h + j, 1)
+            G.add_edge(h + j, i, 1)
 ans = G.flow(s, t)
 if ans >= big:
     ans = -1

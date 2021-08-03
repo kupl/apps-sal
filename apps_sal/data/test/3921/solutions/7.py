@@ -12,7 +12,8 @@ for i in range(2, n):
 
         t[i] = [i]
 
-        for j in range(2 * i, n, i): t[j].append(i)
+        for j in range(2 * i, n, i):
+            t[j].append(i)
 
 input()
 
@@ -22,11 +23,10 @@ for i in a:
 
     x = max(p[j] for j in t[i]) + 1
 
-    for j in t[i]: p[j] = x
+    for j in t[i]:
+        p[j] = x
 
 print(max(p))
 
 
-
 # Made By Mostafa_Khaled
-

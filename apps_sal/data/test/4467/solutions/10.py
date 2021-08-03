@@ -38,4 +38,3 @@ for v in range(2 * N):
             ans += 1
 
 print(ans)
-

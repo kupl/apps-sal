@@ -1,5 +1,5 @@
 N = map(int, input().split())
-point = list(map(int,input().split()))
+point = list(map(int, input().split()))
 
 max = 0
 min = 1000

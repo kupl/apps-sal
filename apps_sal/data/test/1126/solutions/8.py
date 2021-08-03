@@ -2,7 +2,7 @@ N, X, M = list(map(int, input().split()))
 
 A = [X]
 item = set()
-for i in range(N-1):
+for i in range(N - 1):
     next = (A[i] ** 2) % M
     if next in item:
         loop_start = A.index(next)
@@ -15,4 +15,3 @@ for i in range(N-1):
     A.append(next)
     item.add(next)
 print((sum(A)))
-

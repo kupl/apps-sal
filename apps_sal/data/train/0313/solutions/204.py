@@ -12,7 +12,7 @@ class Solution:
         if self.is_ok(bloomDay, r, m, k):
             return r
         return -1
-    
+
     def is_ok(self, bloomDay, target, m, k):
         flowers = 0
         for remain in bloomDay:
@@ -23,6 +23,5 @@ class Solution:
                     flowers = 0
             else:
                 flowers = 0
-        
-        return m <= 0
 
+        return m <= 0

@@ -29,4 +29,3 @@ else:
         else:
             res += i
     print(res)
-

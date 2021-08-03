@@ -22,7 +22,7 @@ class Solution:
                 res=max(res,right-i)
             if right-i==0:
                 res=max(res,i-left)
-                    
+
         return(res)'''
         people = (i for i, seat in enumerate(seats) if seat)
         prev, future = None, next(people)
@@ -40,4 +40,3 @@ class Solution:
                 ans = max(ans, min(left, right))
 
         return ans
-

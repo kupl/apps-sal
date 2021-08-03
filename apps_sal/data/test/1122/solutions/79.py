@@ -31,4 +31,3 @@ while tmp_r > 0:
 res = "\n".join([" ".join([str(i) for i in j]) for j in res])
 
 print(res)
-

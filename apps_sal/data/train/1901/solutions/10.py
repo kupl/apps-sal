@@ -13,7 +13,7 @@ class UF:
             self.parent[a] = self.find(self.parent[a])
             self.parent[a] = self.parent[self.parent[a]]
         return self.parent[a]
-    
+
     def union(self, a, b):
         pa, pb = self.find(a), self.find(b)
         if pa != pb:

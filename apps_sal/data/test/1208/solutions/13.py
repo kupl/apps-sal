@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-n       = int(input())
-now     = 0
-max     = 0
+n = int(input())
+now = 0
+max = 0
 readers = []
 
 for i in range(n):
-    (flag, N)  = (i for i in input().split())
+    (flag, N) = (i for i in input().split())
     if flag == '+':
         now += 1
         if now > max:
@@ -23,5 +23,3 @@ for i in range(n):
         readers.append(N)
 
 print(max)
-
-

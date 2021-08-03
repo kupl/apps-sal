@@ -1,6 +1,6 @@
-def check(a, x): 
+def check(a, x):
     try:
-       a.index(x)
+        a.index(x)
     except ValueError:
-       return False
+        return False
     return True

@@ -8,4 +8,3 @@ for i, x in enumerate(a, start=1):
         print(i)
         return
 print(-1)
-

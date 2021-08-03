@@ -6,6 +6,7 @@ V = zeros((R + 1, C + 1), int64)
 for r, c, v in zip(*[iter(RCV)] * 3):
     V[r][c] = v
 
+
 @njit
 def main():
     dp = zeros((R + 1, C + 1, 4), int64)
@@ -26,5 +27,6 @@ def main():
                 )
 
     print(dp[R][C][3])
+
 
 main()

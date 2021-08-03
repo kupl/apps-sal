@@ -1,9 +1,10 @@
 from collections import defaultdict
 import heapq
 
+
 class Solution:
     def isPossibleDivide(self, nums: List[int], kk: int) -> bool:
-        if len(nums)%kk != 0:
+        if len(nums) % kk != 0:
             return False
         d = defaultdict(int)
         nums.sort()
@@ -16,7 +17,7 @@ class Solution:
             d[first] -= 1
             if d[first] == 0:
                 del d[first]
-            for i in range(first+1,first+kk):
+            for i in range(first + 1, first + kk):
                 if i not in d or d[i] <= 0:
                     return False
                 d[i] -= 1
@@ -24,11 +25,10 @@ class Solution:
                     del d[i]
                     heapq.heappop(keys)
             if d[first] > 0:
-                heapq.heappush(keys,first)
+                heapq.heappush(keys, first)
         return True
-                
-                
-        # c = 0 
+
+        # c = 0
         # for k in range(0,len(d),kk):
         #     if d[k] <= 0:
         #         return False
@@ -39,6 +39,3 @@ class Solution:
         #     if c == kk:
         #         c = 0
         # return True
-                
-        
-

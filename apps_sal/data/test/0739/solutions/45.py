@@ -37,4 +37,3 @@ for d in range(first_d, 19):
         break
 
 print((state[0][0]))
-

@@ -19,4 +19,3 @@ for _ in range(n):
     time = t
     pos = [x, y]
 print("Yes")
-

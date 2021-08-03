@@ -13,7 +13,7 @@ def get_solution(n, k, input_list):
     for start in range(n):
         while stop < n:
             value = input_list[stop]
-            length = stop-start+1
+            length = stop - start + 1
 
             if value == 0:
                 zeros += 1
@@ -27,7 +27,7 @@ def get_solution(n, k, input_list):
             else:
                 if array.length < length:
                     # print("this one is better")
-                    array = Array(length, start, stop+1)
+                    array = Array(length, start, stop + 1)
                 stop += 1
 
         if input_list[start] == 0:
@@ -62,5 +62,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

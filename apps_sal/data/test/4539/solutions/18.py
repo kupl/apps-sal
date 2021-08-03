@@ -1,3 +1,3 @@
-#ABC080B
+# ABC080B
 n = input()
-print("Yes" if int(n) %sum(map(int,n)) == 0 else "No")
+print("Yes" if int(n) % sum(map(int, n)) == 0 else "No")

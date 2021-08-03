@@ -33,7 +33,9 @@ def main():
                   teams_num - 1 - teams_per_color.get(away_color, 0))
         print("{} {}".format(result[0], result[1]))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -3,7 +3,7 @@ def char_freq(message):
     dict = {}
     for i in message:
         arr.append(i)
-    for i in arr:    
+    for i in arr:
         arr.count(i)
         dict[i] = arr.count(i)
     return dict

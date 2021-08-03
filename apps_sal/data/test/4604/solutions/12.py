@@ -17,4 +17,3 @@ else:
             res = res * 2 % mod
     else:
         print(res)
-

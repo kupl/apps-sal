@@ -7,4 +7,3 @@ for v in a:
     if score[v] > sup:
         sup, winner = score[v], v
 print(winner)
-

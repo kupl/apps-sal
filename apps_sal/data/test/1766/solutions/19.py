@@ -3,13 +3,13 @@ cards = input()
 cards = [int(i) for i in cards.split()]
 
 begin = 0
-end = num-1
+end = num - 1
 
 sereja = 0
 dima = 0
 turn = 0
 
-for i in range(0,num):
+for i in range(0, num):
     if turn == 0:
         if cards[begin] > cards[end]:
             sereja += cards[begin]
@@ -29,4 +29,3 @@ for i in range(0,num):
         turn = 0
 
 print(sereja, dima)
-

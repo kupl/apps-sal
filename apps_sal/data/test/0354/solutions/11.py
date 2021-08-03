@@ -7,7 +7,7 @@ ans = True
 if (len(a) == len(b)):
 
     for i in range(len(a)):
-        x= a[i]
+        x = a[i]
         y = b[i]
 
         q = x in v
@@ -22,4 +22,3 @@ if (len(a) == len(b)):
         print('No')
 else:
     print('No')
-

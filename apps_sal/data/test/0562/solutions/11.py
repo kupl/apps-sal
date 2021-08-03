@@ -3,7 +3,7 @@ n = int(input())
 A = []
 for i in range(n):
     A.append([int(i) for i in input().split()])
-A = sorted(A, key = itemgetter(0))
+A = sorted(A, key=itemgetter(0))
 first_tv = []
 second_tv = []
 first_end = -1

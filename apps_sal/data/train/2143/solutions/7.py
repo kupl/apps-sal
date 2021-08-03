@@ -32,7 +32,7 @@ for i in range(len(fc)):
         if p1 + p2 <= c:
             mx = b1 + b2
             break
-        
+
 for i in range(len(fd)):
     b1, p1 = fd[i]
     if 2 * b1 <= mx:
@@ -46,5 +46,3 @@ for i in range(len(fd)):
             break
 
 print(mx)
-
-

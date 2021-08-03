@@ -3,6 +3,7 @@ import time
 
 DIV_VALUE = 10**9 + 7
 
+
 def calcModOfPow(a, n, p):
     btm = a
     ans = 1
@@ -11,11 +12,12 @@ def calcModOfPow(a, n, p):
         if n & 1:
             ans = (ans * btm) % p
             # print('ans: {}'.format(ans))
-        n = n>>1
+        n = n >> 1
         btm = (btm**2) % p
         # print(n)
 
     return ans
+
 
 def calcModOfInv(a, p):
     b = p
@@ -27,12 +29,13 @@ def calcModOfInv(a, p):
         [a, b] = [b, a]
         x -= div * y
         [x, y] = [y, x]
-    
+
     x %= p
     if x < 0:
         x += p
 
     return x
+
 
 class FirstHalf:
     def __init__(self, H, W, A, B):
@@ -58,6 +61,7 @@ class FirstHalf:
         # self.numOfCases %= DIV_VALUE
         return self.numOfCases
         # return self.numOfCases % DIV_VALUE
+
 
 class SecondHalf:
     def __init__(self, H, W, A, B):
@@ -101,9 +105,10 @@ class SecondHalf:
         return self.numOfCases
         # return self.numOfCases % DIV_VALUE
 
+
 def __starting_point():
     [H, W, A, B] = [int(ipt) for ipt in input().split()]
-    
+
     start = time.time()
     fstHlf = FirstHalf(H, W, A, B)
     sndHlf = SecondHalf(H, W, A, B)
@@ -122,9 +127,10 @@ def __starting_point():
     print(totalCases)
 
     #print('{} {} {} {}'.format(H, W, A, B))
-    #print(DIV_VALUE)
+    # print(DIV_VALUE)
 
     # for i in range(12):
     #     print('inv: {}'.format(calcModOfInv(i+1, 13)))
+
 
 __starting_point()

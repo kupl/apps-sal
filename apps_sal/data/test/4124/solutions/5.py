@@ -12,4 +12,3 @@ while True:
     common += 1
 
 print(len(a) - common + len(b) - common)
-

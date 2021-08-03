@@ -14,7 +14,7 @@ while any(h != 0 for h in H):
                 tmp += list([y - m for y in X])
                 ans += m
                 X = list()
-            tmp+=[0,]
+            tmp += [0, ]
     if X:
         m = min(X)
         tmp += list([y - m for y in X])
@@ -22,4 +22,3 @@ while any(h != 0 for h in H):
         X = list()
     H = deepcopy(tmp)
 print(ans)
-

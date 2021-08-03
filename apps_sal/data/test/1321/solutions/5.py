@@ -12,7 +12,6 @@ for i in range(n):
 wh.sort()
 for i in range(n):
     if not_sorted[i][1] == max_h:
-        print((all_w-not_sorted[i][0])*wh[-2][0], end=" ")
+        print((all_w - not_sorted[i][0]) * wh[-2][0], end=" ")
     else:
-        print((all_w-not_sorted[i][0])*max_h, end=" ")
-
+        print((all_w - not_sorted[i][0]) * max_h, end=" ")

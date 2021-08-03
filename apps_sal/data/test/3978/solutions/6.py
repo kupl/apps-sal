@@ -8,4 +8,3 @@ for q in a:
     else:
         s.append(q)
 print(len(s))
-

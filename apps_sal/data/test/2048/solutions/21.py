@@ -30,8 +30,8 @@ c = nia()
 # log(f"c = {c}")
 
 # log(f"small = {small}")
-l1 = [CMAX]*n
-l2 = [CMAX]*n
+l1 = [CMAX] * n
+l2 = [CMAX] * n
 
 for j in range(1, n):
     for i in range(j):
@@ -52,4 +52,3 @@ if (res < CMAX):
     print(res)
 else:
     print(-1)
-

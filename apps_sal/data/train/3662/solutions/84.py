@@ -1,2 +1,2 @@
-def xor(a,b):
-    return (a+b < 2) and (a+b > 0)
+def xor(a, b):
+    return (a + b < 2) and (a + b > 0)

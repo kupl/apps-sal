@@ -13,4 +13,3 @@ for i in range(n):
     pre = a[i]
 
 print(('Yes' if ok else 'No'))
-

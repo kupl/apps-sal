@@ -7,7 +7,5 @@ def get_strings(city):
             result[i] = "*"
     test = []
     for k, v in list(result.items()):
-        test.append((k+':'+v))
+        test.append((k + ':' + v))
     return ",".join(test)
-    
-

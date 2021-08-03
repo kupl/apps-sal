@@ -10,4 +10,3 @@ for _ in range(t):
             c += 1
             x = int(str(x) + str(i))
     print(c)
-

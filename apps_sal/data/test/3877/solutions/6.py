@@ -10,6 +10,7 @@ length = 1
 for i in range(op):
     length = 2 * length + 1
 
+
 def get_ans(n, l, r, curl, curr):
     if l == curl and r == curr:
         return n
@@ -23,6 +24,6 @@ def get_ans(n, l, r, curl, curr):
     if l <= mid and r >= mid:
         ans += n % 2
     return ans
+
+
 print(get_ans(n, l, r, 0, length - 1))
-
-

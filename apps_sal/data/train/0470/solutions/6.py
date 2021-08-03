@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def threeSumMulti(self, A: List[int], target: int) -> int:
         MOD = 10 ** 9 + 7
@@ -7,7 +9,7 @@ class Solution:
         counts = Counter(A)
         keys = sorted(counts.keys())
         n, res = len(keys), 0
-        
+
         for i, a in enumerate(keys):
             T = target - a
             j, k = i, n - 1
@@ -19,7 +21,7 @@ class Solution:
                     k -= 1
                 else:
                     if i < j < k:
-                        res += counts[a] * counts[b] * counts[c] 
+                        res += counts[a] * counts[b] * counts[c]
                     elif i == j < k:
                         res += counts[a] * (counts[a] - 1) // 2 * counts[c]
                     elif i < j == k:

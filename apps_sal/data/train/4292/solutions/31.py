@@ -5,5 +5,5 @@ def string_clean(s):
             new += ""
         else:
             new += char
-    
+
     return new

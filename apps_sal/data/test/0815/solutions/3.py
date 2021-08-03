@@ -12,4 +12,3 @@ for w1 in range(v1, 2 * v1 + 1):
 
 if not f:
     print(-1)
-

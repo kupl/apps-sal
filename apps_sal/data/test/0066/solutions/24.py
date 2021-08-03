@@ -7,4 +7,3 @@ c = t // l
 ans = c * w + (min((t + 1) - l * c, w)) - 1
 g = gcd(ans, t)
 print('{}/{}'.format(ans // g, t // g))
-

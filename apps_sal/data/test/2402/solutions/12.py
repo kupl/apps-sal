@@ -5,7 +5,7 @@ def main():
     for _ in range(int(input())):
         N, x, y = list(map(int, input().split()))
 
-        worst = min(x+y-1, N)
+        worst = min(x + y - 1, N)
         if x + y + 1 - N <= 1:
             best = 1
         else:
@@ -15,5 +15,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

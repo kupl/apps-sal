@@ -1,5 +1,5 @@
-S,T = input().split()
-A,B = map(int,input().split())
+S, T = input().split()
+A, B = map(int, input().split())
 U = input()
 
 if U == S:
@@ -7,4 +7,4 @@ if U == S:
 else:
     B -= 1
 
-print(A,B)
+print(A, B)

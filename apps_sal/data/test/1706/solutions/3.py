@@ -3,5 +3,4 @@ S = input()
 print(3)
 print('L 2')
 print('R 2')
-print('R', len(S)-1 + 1 + len(S)-1)
-
+print('R', len(S) - 1 + 1 + len(S) - 1)

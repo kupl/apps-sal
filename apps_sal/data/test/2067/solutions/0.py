@@ -36,7 +36,7 @@ def merge(segs):
             return ans[0]
         else:
             ans[-1] = (pre[0], s[1])
-    
+
     return ans[0]
 
 

@@ -37,9 +37,8 @@ for i in range(m):
     u.union(a - 1, b - 1)
 for i in range(k):
     c, d = list(map(int, input().split()))
-    if u.issame(c-1,d-1):
+    if u.issame(c - 1, d - 1):
         dire[c - 1].append(d - 1)
         dire[d - 1].append(c - 1)
 
 print((*[u.size(i) - len(dire[i]) - 1 for i in range(n)]))
-

@@ -6,4 +6,3 @@ for i in range(1, N + 1):
             continue
         ans = max(i ** j, ans)
 print(ans)
-

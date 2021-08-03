@@ -12,6 +12,3 @@ for c, g in itertools.groupby(s):
     resdict[c] += count // k
 
 print(max(resdict.values()))
-
-
-

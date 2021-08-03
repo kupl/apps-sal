@@ -1,5 +1,5 @@
-s,t=input().split()
+s, t = input().split()
 
-r=t+s
+r = t + s
 
 print(r)

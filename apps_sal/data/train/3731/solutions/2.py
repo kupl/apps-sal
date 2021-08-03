@@ -9,6 +9,8 @@
 import math
 
 # code standard graphs (dirty-duct-copy networkx behavior)
+
+
 class nx(dict):
     @staticmethod
     def empty_graph(nodes):
@@ -16,19 +18,19 @@ class nx(dict):
 
     @staticmethod
     def squares_graph(n=23):
-        square_candidates = [(x+1)**2 for x in range(1, math.floor(math.sqrt(2*n-1)))]
-        G = nx.empty_graph(list(range(1, n+1)))
+        square_candidates = [(x + 1)**2 for x in range(1, math.floor(math.sqrt(2 * n - 1)))]
+        G = nx.empty_graph(list(range(1, n + 1)))
 
         for s in square_candidates:
-            true_indexes = [x for x in range(1, 1+math.floor((s-1) / 2)) if s-x <= n]
+            true_indexes = [x for x in range(1, 1 + math.floor((s - 1) / 2)) if s - x <= n]
             for k in true_indexes:
-                G.add_edge(k, s-k)
+                G.add_edge(k, s - k)
 
         return G
 
     @staticmethod
     def Graph(G):
-    # here we will implement the by-copy
+        # here we will implement the by-copy
         return nx(G.copy())
 
     def __init__(self, nodes, edges=None):
@@ -36,7 +38,7 @@ class nx(dict):
             if isinstance(nodes, dict):
                 # by-copy => this one should not really be used for our problem, but it is simpler at the beginning to be able to concentrate
                 # on the central matter
-                dict.__init__(self, {n: e.copy() for n,e in list(nodes.items())})
+                dict.__init__(self, {n: e.copy() for n, e in list(nodes.items())})
             else:
                 dict.__init__(self, {n: set() for n in nodes})
         else:
@@ -110,7 +112,7 @@ def dfs_travel(G=23, visit_ordered=None, N=None, display=False, verbose=False):
 
         degrees = G.degree
         max_degree = max([y for x, y in degrees])
-        for d in range(2, max_degree+1):
+        for d in range(2, max_degree + 1):
             for n in [nd for nd, deg in degrees if deg == d]:
                 sol = dfs_travel(G, [n], verbose=verbose)
                 if sol != False:  # don't want the unsafe "if sol" with list
@@ -128,7 +130,7 @@ def dfs_travel(G=23, visit_ordered=None, N=None, display=False, verbose=False):
     G2 = nx.Graph(G)  # copy the graph... will need to improve if >100 graphs are needed !
 
     last_idx = visit_ordered[-1]
-    for current_idx in G2[last_idx]: #.keys():
+    for current_idx in G2[last_idx]:  # .keys():
         if verbose:
             print((last_idx, current_idx))
         visit_ordered.append(current_idx)
@@ -146,4 +148,3 @@ def dfs_travel(G=23, visit_ordered=None, N=None, display=False, verbose=False):
         print(visit_ordered)
         print((len(visit_ordered) - N))
     return False
-

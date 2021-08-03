@@ -19,8 +19,7 @@ for i in range(n):
         if(x > 0):
             print("NO")
             return
-            
+
         d[k] = [x, {x}]
 
 print("YES")
-

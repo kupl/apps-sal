@@ -3,10 +3,10 @@ class Solution:
         n = len(arr)
         if n == 1:
             return arr[0][0]
-        
+
         MAX_V = int(1e9)
         min_v = [0] * n
-        
+
         for i in range(n):
             row = arr[i]
             new_min_v = [MAX_V] * n

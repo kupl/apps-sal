@@ -8,24 +8,27 @@ for idx1 in range(K + L):
     pqrs.append([temp0, temp1])
 """
 
+
 def makeTree(a):
     aT = list(range(N + 1))
     for p, q in a:
-        rootp     = getRoot(aT, p)
-        rootq     = getRoot(aT, q)
-        thisRoot  = max(rootp, rootq, q)
-        aT[p]     = thisRoot
-        aT[q]     = thisRoot
+        rootp = getRoot(aT, p)
+        rootq = getRoot(aT, q)
+        thisRoot = max(rootp, rootq, q)
+        aT[p] = thisRoot
+        aT[q] = thisRoot
         aT[rootp] = thisRoot
         aT[rootq] = thisRoot
     return aT
 
-def getRoot(a,i):
+
+def getRoot(a, i):
     if a[i] == i:
         return i
     else:
         a[i] = getRoot(a, a[i])
         return a[i]
+
 
 N, K, L = list(map(int, input().split()))
 pqrs = []
@@ -47,4 +50,3 @@ for idx1 in range(1, N + 1):
         dRet[Comb] = 1
 
 print((" ".join([str(dRet[_]) for _ in aRet])))
-

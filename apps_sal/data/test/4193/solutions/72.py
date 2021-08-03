@@ -2,9 +2,11 @@
 # https://atcoder.jp/contests/abc157/tasks/abc157_b
 import numpy as np
 
+
 def check(A, b):
     A = np.where(A == b, -1, A)
     return A
+
 
 def bingo(A):
     for a in A:
@@ -18,7 +20,6 @@ def bingo(A):
     if A[0][2] == A[1][1] == A[2][0] == -1:
         return True
     return False
-
 
 
 A = []
@@ -39,4 +40,3 @@ if bingo(A):
     print("Yes")
 else:
     print("No")
-

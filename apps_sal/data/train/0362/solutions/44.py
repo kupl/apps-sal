@@ -1,4 +1,6 @@
 import functools as ft
+
+
 class Solution:
     # def numberWays(self, hats: List[List[int]]) -> int:
     #     cache = {}
@@ -20,12 +22,13 @@ class Solution:
     #     allowed = [True]*40
     #     return f(allowed, 0)
     def numberWays(self, hats: List[List[int]]) -> int:
-        const = 10**9+7
+        const = 10**9 + 7
         cache = {}
-        matr = [[False]*10 for i in range(40)]
+        matr = [[False] * 10 for i in range(40)]
         for j in range(len(hats)):
             for i in hats[j]:
-                matr[i-1][j] = True
+                matr[i - 1][j] = True
+
         def s(mask_p, h, n):
             if n == 0:
                 return 1
@@ -34,13 +37,13 @@ class Solution:
             c = tuple(mask_p + [h])
             if c in cache:
                 return cache[c]
-            res = s(mask_p, h-1, n)
+            res = s(mask_p, h - 1, n)
             for p in range(len(matr[h])):
                 if mask_p[p] and matr[h][p]:
                     mask_p[p] = False
-                    res += s(mask_p, h-1, n-1)
+                    res += s(mask_p, h - 1, n - 1)
                     mask_p[p] = True
             cache[c] = res
             return res
-        mask_p = [True]*len(hats) + [False]*(10-len(hats))
-        return s(mask_p, 39, len(hats))%const
+        mask_p = [True] * len(hats) + [False] * (10 - len(hats))
+        return s(mask_p, 39, len(hats)) % const

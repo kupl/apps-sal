@@ -42,4 +42,3 @@ for i in range(n):
             now = 1
 
 print((min(ans, ansans)))
-

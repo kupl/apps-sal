@@ -8,7 +8,7 @@ else:
 
     r = [str(n * k)]
 
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
 
         for j in range(k):
             r.append(str(i) + ' ' + str((i + j) % n + 1))

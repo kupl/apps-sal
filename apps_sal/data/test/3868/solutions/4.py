@@ -1,88 +1,88 @@
-R=lambda :list(map(int,input().split()))
+def R(): return list(map(int, input().split()))
 
-n,m,k=R()
 
-F,T=[],[]
+n, m, k = R()
 
-ans=int(1e12)
+F, T = [], []
+
+ans = int(1e12)
 
 for i in range(m):
 
-    d,f,t,c=R()
+    d, f, t, c = R()
 
-    if f:F.append((d,f,c))
+    if f:
+        F.append((d, f, c))
 
-    else:T.append((-d,t,c))
+    else:
+        T.append((-d, t, c))
 
-for p in [F,T]:
+for p in [F, T]:
 
-    cost=[ans]*(n+1)
+    cost = [ans] * (n + 1)
 
-    s=n*ans
+    s = n * ans
 
-    q=[]
+    q = []
 
     p.sort()
 
-    for d,t,c in p:
+    for d, t, c in p:
 
-        #print(p)
+        # print(p)
 
-        if c<cost[t]:
+        if c < cost[t]:
 
-            #print(c,cost[t])
+            # print(c,cost[t])
 
-            s+=c-cost[t]
+            s += c - cost[t]
 
-            #print(s)
+            # print(s)
 
-            cost[t]=c
+            cost[t] = c
 
-            if s<ans:
+            if s < ans:
 
-                q.append((s,d))
+                q.append((s, d))
 
     p.clear()
 
-    #print(q)
+    # print(q)
 
-    p+=q
+    p += q
 
-    #print(p)
+    # print(p)
 
-s,t=ans,(0,0)
+s, t = ans, (0, 0)
 
-#print(F,T)
+# print(F,T)
 
 for f in F:
 
-    while  f:
+    while f:
 
-        if f[1]+t[1]+k<0:s=min(s,f[0]+t[0])
+        if f[1] + t[1] + k < 0:
+            s = min(s, f[0] + t[0])
 
         elif T:
 
-            #print(T)
+            # print(T)
 
-            t=T.pop()
+            t = T.pop()
 
-            #print(T)
+            # print(T)
 
            # print(t)
 
             continue
 
-        #print(f)
+        # print(f)
 
-        f=0
+        f = 0
 
-        #print(f)
+        # print(f)
 
-print(s if s<ans else -1)
-
-
-
+print(s if s < ans else -1)
 
 
 # Made By Mostafa_Khaled
-

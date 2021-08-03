@@ -1,8 +1,9 @@
-N,M=map(int,input().split())
+N, M = map(int, input().split())
 List = []
-for i in range (M):
-  List.append(list(map(int, input().split())))
+for i in range(M):
+    List.append(list(map(int, input().split())))
 List.sort()
+
 
 class UnionFind():
     def __init__(self, n):
@@ -51,7 +52,8 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 uf = UnionFind(N)
 for i in range(M):
-  uf.union(List[i][0]-1, List[i][1]-1)
+    uf.union(List[i][0] - 1, List[i][1] - 1)
 print(uf.group_count())

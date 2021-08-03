@@ -8,4 +8,3 @@ for i in range(len(a)):
     else:
         kol0 += 1
 print(abs(kol1 - kol0))
-

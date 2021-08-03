@@ -14,7 +14,7 @@ while 1:
         elif row[r] > last:
             ans += 'R'
             last = row[r]
-            r  -= 1
+            r -= 1
         else:
             break
     else:
@@ -31,4 +31,3 @@ while 1:
 
 print(len(ans))
 print(ans)
-

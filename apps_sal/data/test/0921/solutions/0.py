@@ -17,5 +17,3 @@ else:
     for c in range(1, len(Water)):
         s += " " + str(Water[c])
     print(s)
-        
-

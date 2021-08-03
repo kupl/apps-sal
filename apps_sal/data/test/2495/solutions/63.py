@@ -49,4 +49,5 @@ def eval(s, ans, plus_flag, A):
 def __starting_point():
     main()
 
+
 __starting_point()

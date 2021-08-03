@@ -7,7 +7,7 @@ heapq.heapify(A)
 
 while True:
     temp = heapq.heappop(A)
-    A = [a%temp for a in A if a % temp != 0] + [temp]
+    A = [a % temp for a in A if a % temp != 0] + [temp]
     if len(A) == 1:
         break
 

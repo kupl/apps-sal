@@ -1,4 +1,4 @@
-  
+
 def atc_089b(input_value: str) -> str:
     N = input_value[0]
     Si = input_value[1]

@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -49,15 +50,16 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
-        
-N,M = map(int,input().split())
-P = list(map(int,input().split()))
+
+
+N, M = map(int, input().split())
+P = list(map(int, input().split()))
 uf = UnionFind(N)
 for i in range(M):
-    x,y = map(int,input().split())
-    uf.union(x-1,y-1)
+    x, y = map(int, input().split())
+    uf.union(x - 1, y - 1)
 ans = 0
 for i in range(N):
-    if uf.same(i,P[i]-1):
+    if uf.same(i, P[i] - 1):
         ans += 1
 print(ans)

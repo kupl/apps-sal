@@ -20,4 +20,3 @@ for pi in p:
     pr = npr
     inv *= (1 - pi)
 print(pr)
-

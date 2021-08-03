@@ -7,7 +7,7 @@ Manzoku = sum(liB)
 
 for i in range(N):
     if i < N - 1:
-        if liA[i+1] - liA[i] == 1:
+        if liA[i + 1] - liA[i] == 1:
             Manzoku += liC[liA[i] - 1]
 
 print((Manzoku))

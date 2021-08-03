@@ -13,4 +13,3 @@ for j in range(k, n + 1):
         s = max(s, (ps[i + j] - ps[i]) / j)
 
 print(s)
-

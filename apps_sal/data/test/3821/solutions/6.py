@@ -13,4 +13,3 @@ for p in ps:
     else:
         break
 print('{:.9}'.format(a * b))
-

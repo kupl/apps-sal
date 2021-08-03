@@ -8,7 +8,7 @@ MOD = 1000000007
 
 def inv(a, b):
     if(a > 1):
-        return b-inv(b % a, a)*b//a
+        return b - inv(b % a, a) * b // a
     else:
         return 1
 
@@ -46,5 +46,6 @@ def __starting_point():
 # 　／￣|　　 |　|　|
 # 　| (￣ヽ＿_ヽ_)__)
 # 　＼二つ
+
 
 __starting_point()

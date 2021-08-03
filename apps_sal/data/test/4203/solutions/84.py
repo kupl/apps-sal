@@ -2,6 +2,7 @@ def readinput():
     s = input()
     return s
 
+
 def main(s):
     if s[0] != 'A':
         return 'WA'
@@ -19,9 +20,11 @@ def main(s):
     else:
         return 'AC'
 
+
 def __starting_point():
-    s=readinput()
-    ans=main(s)
+    s = readinput()
+    ans = main(s)
     print(ans)
+
 
 __starting_point()

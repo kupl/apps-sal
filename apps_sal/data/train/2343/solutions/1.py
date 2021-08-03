@@ -7,10 +7,10 @@ def main():
         LV = d.bit_length()
         ans = 0
         for lv in range(1, LV):
-            new = ((ans+1) * (1<<(lv-1)))%mod
+            new = ((ans + 1) * (1 << (lv - 1))) % mod
             ans += new
             ans %= mod
-        n = d - (1 << (LV-1)) + 1
+        n = d - (1 << (LV - 1)) + 1
         new = ((ans + 1) * n) % mod
         ans += new
         ans %= mod
@@ -19,5 +19,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

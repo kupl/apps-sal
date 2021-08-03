@@ -1,9 +1,13 @@
 n = int(input())
 a = [[0 for j in range(n)] for i in range(n)]
 z = 1
+
+
 def prt(a, n):
     for i in range(n):
         print(*a[i])
+
+
 if n == 3:
     a = [[7, 1, 9], [8, 6, 5], [3, 2, 4]]
     prt(a, n)
@@ -51,7 +55,7 @@ elif n % 2 == 0:
         z += 1
         if j % 2 == 1:
             a[n - 3][j], a[n - 1][j] = a[n - 1][j], a[n - 3][j]
-        
+
 if n >= 4:
     m = n ** 2
     a[n - 3][n - 4] = m - 6
@@ -67,4 +71,3 @@ if n >= 4:
     a[n - 1][n - 2] = m - 3
     a[n - 1][n - 1] = m - 1
     prt(a, n)
-

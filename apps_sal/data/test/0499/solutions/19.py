@@ -28,75 +28,78 @@ import io
 import sys
 import time
 import random
-#~ start = time.clock()
-#~ test ='''5
-#~ BBBBB'''
-#~ test = '''2
-#~ RB'''
-#~ test = '''3
-#~ GRG'''
-#~ test = '''3
-#~ RGB'''
-#~ test = '''5
-#~ RGBBB'''
-#~ test = '''2
-#~ RG'''
-#~ test = '''3
-#~ RRG'''
-#~ test = '''3
-#~ BBG'''
+# ~ start = time.clock()
+# ~ test ='''5
+# ~ BBBBB'''
+# ~ test = '''2
+# ~ RB'''
+# ~ test = '''3
+# ~ GRG'''
+# ~ test = '''3
+# ~ RGB'''
+# ~ test = '''5
+# ~ RGBBB'''
+# ~ test = '''2
+# ~ RG'''
+# ~ test = '''3
+# ~ RRG'''
+# ~ test = '''3
+# ~ BBG'''
 
-#~ sys.stdin = io.StringIO(test)
+# ~ sys.stdin = io.StringIO(test)
 
 n = int(input())
 cols = 'RGB'
-counts = {'R':0,'G':0,'B':0}
+counts = {'R': 0, 'G': 0, 'B': 0}
 for c in input():
-   counts[c] += 1
+    counts[c] += 1
 
 # single color
 # 2 colors -> c1, c2
 # 3 colors
 
+
 def gettwocolors(counts):
-   if counts['R']==0:
-      return "GB"
-   if counts['G']==0:
-      return "RB"
-   if counts['B']==0:
-      return "RG"
-      
+    if counts['R'] == 0:
+        return "GB"
+    if counts['G'] == 0:
+        return "RB"
+    if counts['B'] == 0:
+        return "RG"
+
+
 def printcols(cols):
-   print(sortedcols(cols))
+    print(sortedcols(cols))
+
 
 def sortedcols(cols):
-   return "".join(sorted(list(cols)))
-   
-complement = { 
-   sortedcols("RG"):"B",
-   sortedcols("RB"):"G",
-   sortedcols("GB"):"R" 
-}   
+    return "".join(sorted(list(cols)))
 
-if counts['R']>0 and counts['G']>0 and counts['B']>0:
-   printcols("RGB")
+
+complement = {
+    sortedcols("RG"): "B",
+    sortedcols("RB"): "G",
+    sortedcols("GB"): "R"
+}
+
+if counts['R'] > 0 and counts['G'] > 0 and counts['B'] > 0:
+    printcols("RGB")
 else:
-   c1,c2 = gettwocolors(counts)
-   if counts[c1]==0:
-      printcols(c2)
-   elif counts[c2]==0:
-      printcols(c1)
-   else:
-      # really two colors
-      if counts[c1]>=2 and counts[c2]>=2:
-         printcols("RGB")
-      elif counts[c1]>=2:
-         printcols( c2+complement[sortedcols(c1+c2)] )
-      elif counts[c2]>=2:
-         printcols( c1+complement[sortedcols(c1+c2)] )
-      else:
-         printcols( complement[sortedcols(c1+c2)] )
-         
-#~ dur = time.clock()-start
-#~ print("Time:",dur)
+    c1, c2 = gettwocolors(counts)
+    if counts[c1] == 0:
+        printcols(c2)
+    elif counts[c2] == 0:
+        printcols(c1)
+    else:
+        # really two colors
+        if counts[c1] >= 2 and counts[c2] >= 2:
+            printcols("RGB")
+        elif counts[c1] >= 2:
+            printcols(c2 + complement[sortedcols(c1 + c2)])
+        elif counts[c2] >= 2:
+            printcols(c1 + complement[sortedcols(c1 + c2)])
+        else:
+            printcols(complement[sortedcols(c1 + c2)])
 
+# ~ dur = time.clock()-start
+#~ print("Time:",dur)

@@ -1,26 +1,31 @@
-import sys, math, os.path
+import sys
+import math
+import os.path
 
 FILE_INPUT = "e.in"
 DEBUG = os.path.isfile(FILE_INPUT)
-if DEBUG: 
-    sys.stdin = open(FILE_INPUT)    
+if DEBUG:
+    sys.stdin = open(FILE_INPUT)
+
 
 def ni():
     return list(map(int, input().split()))
 
-def nia(): 
-    return list(map(int,input().split()))
+
+def nia():
+    return list(map(int, input().split()))
+
 
 def log(x):
     if (DEBUG):
         print(x)
 
 
-n,m = ni()
+n, m = ni()
 a = [{i} for i in range(n)]
 for _ in range(m):
-    x,y = ni()
-    x,y = x-1, y-1
+    x, y = ni()
+    x, y = x - 1, y - 1
     a[x].add(y)
     a[y].add(x)
     # print(i)
@@ -51,6 +56,4 @@ while willVisit:
 
 q.sort()
 print(len(q))
-print(" ".join(map(str,q)))
-
-
+print(" ".join(map(str, q)))

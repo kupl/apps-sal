@@ -5,7 +5,7 @@ for request in range(t):
     box, flag = [], True
     initial.append(result[0])
     for d in range(1, result[0]):
-                box.append(d)
+        box.append(d)
     for i in range(1, n):
         if result[i - 1] < result[i]:
             initial.append(result[i])

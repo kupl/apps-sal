@@ -7,4 +7,3 @@ while now > 0:
         now += 1
     day += 1
 print(day - 1)
-

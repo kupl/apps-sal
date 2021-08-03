@@ -25,4 +25,3 @@ while r < n - 1:
             p += 1
         ans += 1
 print(ans)
-

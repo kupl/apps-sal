@@ -5,4 +5,3 @@ for i in range(n):
     s = input()
     res += m[s]
 print(res)
-

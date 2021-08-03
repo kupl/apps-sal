@@ -9,7 +9,7 @@ MAX = 10 ** 6
 
 fact = [1] * (2 * MAX + 10)
 for i in range(1, 2 * MAX + 10):
-    fact[i] = (fact[i-1] * i) % mod
+    fact[i] = (fact[i - 1] * i) % mod
 
 inv = [1] * (MAX + 10)
 for i in range(2, MAX + 10):
@@ -17,9 +17,8 @@ for i in range(2, MAX + 10):
 
 fact_inv = [1] * (MAX + 10)
 for i in range(1, MAX + 10):
-    fact_inv[i] = fact_inv[i-1] * inv[i] % mod
+    fact_inv[i] = fact_inv[i - 1] * inv[i] % mod
 
 ans = g(r2, c2) - g(r2, c1 - 1) - g(r1 - 1, c2) + g(r1 - 1, c1 - 1)
 ans %= mod
 print(ans)
-

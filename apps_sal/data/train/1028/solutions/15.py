@@ -6,7 +6,7 @@ for i in range(int(input())):
         digit = t % 10
         sum += digit ** len(str(n))
         t //= 10
-    if(n==sum):
+    if(n == sum):
         print("FEELS GOOD")
     else:
         print("FEELS BAD")

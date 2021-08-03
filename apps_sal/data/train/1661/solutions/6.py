@@ -10,7 +10,7 @@ def execute(code):
         if coordinate[1] > ymax:
             ymax = coordinate[1]
     grid = []
-    for something in range(ymax+1):
+    for something in range(ymax + 1):
         grid.append((xmax + 1) * [' '])
     for visited in path:
         grid[visited[1]][visited[0]] = '*'
@@ -18,8 +18,10 @@ def execute(code):
     for row in grid:
         for elem in row:
             finalstring += elem
-        finalstring += "\r\n"    
+        finalstring += "\r\n"
     return finalstring[:-2]
+
+
 def removeBrackets(rscommand):
     # check for brackets
     if rscommand.find('(') == -1:
@@ -37,9 +39,9 @@ def removeBrackets(rscommand):
         indeks += 1
     leftpart = rscommand[:openbracketindex]
     rightpart = rscommand[closingbracketindex + 1:]
-    middlepart = rscommand[openbracketindex+1:closingbracketindex]
-    
-    #find number in rightpart
+    middlepart = rscommand[openbracketindex + 1:closingbracketindex]
+
+    # find number in rightpart
     factor = ""
     indeks = 0
     if len(rightpart) > 0:
@@ -47,24 +49,28 @@ def removeBrackets(rscommand):
             factor += rightpart[indeks]
             indeks += 1
             if indeks == len(rightpart):
-                break    
-    
+                break
+
     if indeks > 0:
-        newcommand = leftpart + int(factor)* middlepart + rightpart[indeks:]
+        newcommand = leftpart + int(factor) * middlepart + rightpart[indeks:]
     else:
         newcommand = leftpart + middlepart + rightpart
     return removeBrackets(newcommand)
+
+
 def createPath(command):
-    state = [0,0,"E"]
-    path = [[0,0]]
+    state = [0, 0, "E"]
+    path = [[0, 0]]
     for x in command:
         if x == 'L' or x == 'R':
-            state = makeTurn(state,x)
+            state = makeTurn(state, x)
         else:
             state = moveForward(state)
-            path.append([state[0],state[1]])
-    
+            path.append([state[0], state[1]])
+
     return path
+
+
 def translatePath(path):
     minx = 0
     miny = 0
@@ -73,42 +79,48 @@ def translatePath(path):
             minx = c[0]
         if c[1] < miny:
             miny = c[1]
-    #translate path
+    # translate path
     for c in path:
         c[0] = c[0] - minx
         c[1] = c[1] - miny
-    return path 
+    return path
+
+
 def moveForward(state):
-    #state[0] = x coordinate
-    #state[1] = y coordinate
-    #state[2] = direction N, S, E or W
+    # state[0] = x coordinate
+    # state[1] = y coordinate
+    # state[2] = direction N, S, E or W
     if state[2] == "N":
-        return [state[0],state[1]-1,state[2]]
+        return [state[0], state[1] - 1, state[2]]
     if state[2] == "S":
-        return [state[0],state[1]+1,state[2]]
+        return [state[0], state[1] + 1, state[2]]
     if state[2] == "W":
-        return [state[0]-1,state[1],state[2]]
+        return [state[0] - 1, state[1], state[2]]
     # remaing direction is east_asian_width
-    return [state[0]+1,state[1],state[2]]
-def makeTurn(state,leftorright):
+    return [state[0] + 1, state[1], state[2]]
+
+
+def makeTurn(state, leftorright):
     if leftorright == "L":
-        if state[2] == "N" :
-            return [state[0],state[1], "W"]
-        if state[2] == "W" :
-            return [state[0],state[1], "S"]
-        if state[2] == "S" :
-            return [state[0],state[1], "E"]
-        if state[2] == "E" :
-            return [state[0],state[1], "N"]
+        if state[2] == "N":
+            return [state[0], state[1], "W"]
+        if state[2] == "W":
+            return [state[0], state[1], "S"]
+        if state[2] == "S":
+            return [state[0], state[1], "E"]
+        if state[2] == "E":
+            return [state[0], state[1], "N"]
     if leftorright == "R":
-        if state[2] == "N" :
-            return [state[0],state[1], "E"]
-        if state[2] == "W" :
-            return [state[0],state[1], "N"]
-        if state[2] == "S" :
-            return [state[0],state[1], "W"]
-        if state[2] == "E" :
-            return [state[0],state[1], "S"]
+        if state[2] == "N":
+            return [state[0], state[1], "E"]
+        if state[2] == "W":
+            return [state[0], state[1], "N"]
+        if state[2] == "S":
+            return [state[0], state[1], "W"]
+        if state[2] == "E":
+            return [state[0], state[1], "S"]
+
+
 def transformCode(code):
     newcode = ""
     indeks = 0
@@ -119,8 +131,8 @@ def transformCode(code):
             if indeks == len(code):
                 break
         if indeks == len(code):
-                break
-        #found a digit
+            break
+        # found a digit
         factor = ""
         while code[indeks].isdigit():
             factor += code[indeks]

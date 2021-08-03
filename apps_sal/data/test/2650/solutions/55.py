@@ -1,6 +1,6 @@
 from heapq import heappop, heappush
 
-MAX = 2*10**5
+MAX = 2 * 10**5
 n, q = list(map(int, input().split()))
 ab = []
 k_in = [[] for _ in range(MAX)]
@@ -18,7 +18,7 @@ for i in range(MAX):
         heappush(k_max_in, -k[0])
 
 for _ in range(q):
-    c, d = [int(x)-1 for x in input().split()]
+    c, d = [int(x) - 1 for x in input().split()]
     idx = ab[c][1]
     heappush(k_max_out, -k_in[idx][0])
     if k_in[d]:
@@ -38,4 +38,3 @@ for _ in range(q):
     ab[c][1] = d
 
     print((k_max_in[0]))
-

@@ -5,4 +5,3 @@ for _ in range(t):
     l = [int(x) for x in input().split()]
     vals = [(x + i) % n for i, x in enumerate(l)]
     print("YES" if len(set(vals)) == n else "NO")
-

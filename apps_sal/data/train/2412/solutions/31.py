@@ -13,6 +13,5 @@ class Solution:
             if len(next_l) == len(cur):
                 return ''.join(next_l)
             cur = next_l
-        
-        return ''
 
+        return ''

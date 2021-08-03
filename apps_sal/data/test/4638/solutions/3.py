@@ -11,4 +11,3 @@ for i in range(1, n):
     ans.append(tw)
     hemin = min(hemin, ans[i] - sb[i])
 print(*ans)
-

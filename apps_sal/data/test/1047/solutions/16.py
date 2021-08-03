@@ -1,4 +1,4 @@
-l = list(map(int,list(input())))
+l = list(map(int, list(input())))
 print(max(l))
 ans = []
 while l.count(0) != len(l):
@@ -9,4 +9,3 @@ while l.count(0) != len(l):
             k[i] = '1'
     ans.append(str(int(''.join(k))))
 print(' '.join(ans))
-

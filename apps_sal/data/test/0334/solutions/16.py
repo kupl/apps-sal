@@ -19,4 +19,3 @@ while tm() - stm < 0.9:
     cur += 1
 else:
     print(-1)
-

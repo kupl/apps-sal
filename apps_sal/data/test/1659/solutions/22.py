@@ -14,8 +14,8 @@ def main():
     print(cur, frustr)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

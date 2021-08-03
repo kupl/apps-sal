@@ -1,11 +1,11 @@
 n = int(input())
 ls = list(map(int, input().split()))
 
-nogive = set(list(range(1,n+1)))
-noget = set(list(range(1,n+1)))
-for i,e in enumerate(ls):
+nogive = set(list(range(1, n + 1)))
+noget = set(list(range(1, n + 1)))
+for i, e in enumerate(ls):
     if e != 0:
-        nogive.remove(i+1)
+        nogive.remove(i + 1)
         noget.remove(e)
 
 prio = nogive.intersection(noget)
@@ -26,11 +26,7 @@ while len(nogive):
             getter2 = noget.pop()
             noget.add(getter)
             getter = getter2
-    ls[giver-1] = getter
+    ls[giver - 1] = getter
 
 for e in ls:
     print(e, end=' ')
-
-
-    
-

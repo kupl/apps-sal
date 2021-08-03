@@ -1,6 +1,7 @@
 n = int(input())
 points = sorted(tuple(map(int, input().split())))
 
+
 def calc(points, start, stop, step):
     n = len(points)
     ans = [None] * n
@@ -10,6 +11,7 @@ def calc(points, start, stop, step):
         ans[i] = ans[i - step] + abs(points[i] - points[i - step]) * cnt
         cnt += 1
     return ans
+
 
 calc1 = calc(points, 0, n, 1)
 calc2 = calc(points, n - 1, -1, -1)

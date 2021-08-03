@@ -11,11 +11,10 @@ def solve(n, a):
     return ans
 
 
-
-
 def __starting_point():
     n = int(input())
     a = [int(p) - 1 for p in input().split()]
     print(solve(n, a))
+
 
 __starting_point()

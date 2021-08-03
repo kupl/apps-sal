@@ -1,9 +1,9 @@
-def merge_arrays(first, second): 
+def merge_arrays(first, second):
     # your code here
     first.sort()
     second.sort()
-    third=first+second
-    ls=[]
+    third = first + second
+    ls = []
     for i in third:
         if i in ls:
             continue

@@ -4,6 +4,7 @@ personal_suffixes = {
     "ir": ["o", "es", "e", "imos", "is", "en"],
 }
 
+
 def conjugate(verb):
     base, group = verb[:-2], verb[-2:]
     suffixes = personal_suffixes[group]

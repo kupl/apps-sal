@@ -5,11 +5,11 @@ left = 1
 right = N
 
 for i in range(M):
-    a,b = list(map(int, input().split()))
-    left = max(left,a)
+    a, b = list(map(int, input().split()))
+    left = max(left, a)
     right = min(right, b)
 
-print((max(0,right-left+1)))
+print((max(0, right - left + 1)))
 
 # imos = [0] * (N + 2)
 # for i in range(M):
@@ -24,4 +24,3 @@ print((max(0,right-left+1)))
 #     ans += (im == M)
 #
 # print(ans)
-

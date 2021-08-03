@@ -6,4 +6,3 @@ for x in X:
         print((Xs[N // 2 - 1]))
     else:
         print((Xs[N // 2]))
-

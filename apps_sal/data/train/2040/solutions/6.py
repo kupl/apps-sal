@@ -6,4 +6,3 @@ for i in range(N - 1):
     ans.append("{:.20f}".format(now - prev))
     now = prev
 print(*ans)
-

@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
@@ -24,20 +25,18 @@ class Solution:
                     route_connections[r_id].add(sequence_to_route_id_dict[s])
                     route_connections[sequence_to_route_id_dict[s]].add(r_id)
                 sequence_to_route_id_dict[s] = r_id
-        
+
         # print(route_connections)
         # print(start_routes)
         # print(end_routes)
-        
-        current_route_buscount = [(s,1) for s in start_routes]
+
+        current_route_buscount = [(s, 1) for s in start_routes]
         for r_id, buscount in current_route_buscount:
             # print(current_route_buscount)
             # print(dict(route_to_minbuscount))
             for connection in route_connections[r_id]:
-                if route_to_minbuscount[connection] > buscount+1:
-                    route_to_minbuscount[connection] = buscount+1
-                    current_route_buscount.append((connection,buscount+1))
+                if route_to_minbuscount[connection] > buscount + 1:
+                    route_to_minbuscount[connection] = buscount + 1
+                    current_route_buscount.append((connection, buscount + 1))
         result = min(route_to_minbuscount[x] for x in end_routes)
         return -1 if result == max_int else result
-
-

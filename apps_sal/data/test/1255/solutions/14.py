@@ -13,4 +13,3 @@ for i in range(n):
     last = inp
 
 print(r)
-

@@ -15,4 +15,3 @@ for _ in range(T):
                 break
         else:
             print((D[1]))
-

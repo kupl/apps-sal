@@ -17,20 +17,19 @@ class Solution:
                     Mod = i * 1.0
         total = Num // 2
         if Num % 2 == 0:
-            for i in range(Min,Max+1):
+            for i in range(Min, Max + 1):
                 total = total - count[i]
                 if total == 0:
-                    Med = (2*i+1)/2
+                    Med = (2 * i + 1) / 2
                     break
                 if total < 0:
                     Med = i
                     break
         else:
-            for i in range(Min,Max+1):
+            for i in range(Min, Max + 1):
                 total = total - count[i]
-                if total <= 0 :
+                if total <= 0:
                     Med = (i)
                     break
-                
-        return [float(Min), float(Max), Mean, Med, Mod]
 
+        return [float(Min), float(Max), Mean, Med, Mod]

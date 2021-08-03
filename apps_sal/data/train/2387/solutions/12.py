@@ -7,4 +7,3 @@ for _ in range(t):
         ans += v
         n = n - v + v // 10
     print(ans + n)
-

@@ -23,5 +23,3 @@ for i in range(len(data1)):
     ans += data1[i] * data2[i]
 
 print((''.join(sorted(ans))))
-
-

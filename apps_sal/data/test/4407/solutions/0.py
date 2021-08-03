@@ -11,12 +11,12 @@ for value, count in Counter(a).items():
 
 for bj in b:
     ans = 0
-    
+
     for i in reversed(range(32)):
         count = min(bj >> i, counts[i])
         ans += count
         bj -= count << i
-    
+
     if bj != 0:
         print(-1)
     else:

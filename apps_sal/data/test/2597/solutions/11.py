@@ -8,4 +8,3 @@ for _ in range(q):
         if (i + 1) > max_square and desks[i] >= (i + 1):
             max_square = i + 1
     print(max_square)
-

@@ -13,7 +13,7 @@ class Solution:
                         if m == 0:
                             return True
             return False
-            
+
         if m * k > len(bloomDay):
             return -1
         left, right = min(bloomDay), max(bloomDay)

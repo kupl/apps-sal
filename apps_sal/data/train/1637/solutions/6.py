@@ -9,6 +9,8 @@ def encode(s):
     for a in acc:
         r.append(a[-1])
     return("".join(r), acc.index(s))
+
+
 def decode(s, n):
     if not s:
         return ""
@@ -19,4 +21,3 @@ def decode(s, n):
             u.append(s[i] + res[i])
         res = sorted(u)
     return res[n]
-

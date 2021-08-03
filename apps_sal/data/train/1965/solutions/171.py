@@ -53,11 +53,10 @@ class Solution:
                 v = shared_node_to_cluster[v]
                 bob_adj[u].add(v)
                 bob_adj[v].add(u)
-        
+
         bob_num_clusters, _, bob_edges_used = dfs_and_cluster(shared_num_clusters, bob_adj)
 
         if alice_num_clusters > 1 or bob_num_clusters > 1:
             return -1
 
         return len(edges) - shared_edges_used - alice_edges_used - bob_edges_used
-

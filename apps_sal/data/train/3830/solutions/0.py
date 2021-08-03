@@ -3,7 +3,7 @@ def chain_arith_deriv(n, k):
         return "{} is a prime number".format(n)
     chain = [n]
     while k > 1:
-        k, n = k-1, arith_deriv(n)
+        k, n = k - 1, arith_deriv(n)
         chain.append(n)
     return chain
 

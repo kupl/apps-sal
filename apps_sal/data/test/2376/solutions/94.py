@@ -13,4 +13,3 @@ for w, v in wv:
 
 ans = max(dp.values())
 print(ans)
-

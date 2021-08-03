@@ -5,4 +5,3 @@ for i in range(t):
     if k % 2 == 1:
         ans += a
     print(ans)
-

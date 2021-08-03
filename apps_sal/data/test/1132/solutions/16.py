@@ -5,12 +5,12 @@ def main():
     occ = [0] * n
     for i in range(m):
         a, b = list(map(int, input().split()))
-        occ[a-1] += 1
-        occ[b-1] += 1
+        occ[a - 1] += 1
+        occ[b - 1] += 1
 
     cnt = [0] * 3
     for v in occ:
-        cnt[min(2, v-1)] += 1
+        cnt[min(2, v - 1)] += 1
 
     if cnt == [2, n - 2, 0]:
         res = types[0]
@@ -22,9 +22,10 @@ def main():
         res = types[3]
 
     print(res, 'topology')
-        
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

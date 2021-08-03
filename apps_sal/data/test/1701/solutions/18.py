@@ -10,4 +10,3 @@ for _ in range(m):
     assert ip[-1] == ';'
     ip = ip[:-1]
     print('%s %s; #%s' % (cmd, ip, ip2name[ip]))
-

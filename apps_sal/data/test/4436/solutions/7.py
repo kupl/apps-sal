@@ -14,6 +14,8 @@ def main():
                 b += 1
         a += 1
     print("NO")
+
+
 p = int(input())
 for i in range(p):
-        main()
+    main()

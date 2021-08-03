@@ -9,4 +9,3 @@ n -= min(n, k)
 ans += n * y
 
 print(ans)
-

@@ -36,30 +36,29 @@ S = [int(S[i]) for i in range(N)]
 MOD = 2019
 
 a = 1
-for i in range(N): 
-  S[i] *= a
-  S[i] %= MOD
-  a *= 10 
-  a %= MOD
-  
+for i in range(N):
+    S[i] *= a
+    S[i] %= MOD
+    a *= 10
+    a %= MOD
+
 #B, L, R, C = part_count(S)
 #print(B[0] + L[0] + R[0] + C[0])
-T = [0 for _ in range(N+1)]
-for i in range(1,N+1):
-  T[i] += S[i-1] + T[i-1]
-  T[i] %= MOD
+T = [0 for _ in range(N + 1)]
+for i in range(1, N + 1):
+    T[i] += S[i - 1] + T[i - 1]
+    T[i] %= MOD
 
-#print(T)
+# print(T)
 
-C = [0 for i in range(MOD)]  
-for i in range(N+1):
-  C[T[i]] += 1
+C = [0 for i in range(MOD)]
+for i in range(N + 1):
+    C[T[i]] += 1
 
-#print(C)
+# print(C)
 
 ans = 0
 for i in range(MOD):
-  ans += C[i]*(C[i]-1)//2
-  
-print(ans)
+    ans += C[i] * (C[i] - 1) // 2
 
+print(ans)

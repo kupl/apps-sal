@@ -31,4 +31,3 @@ for i in range(n):
         break
 if not f:
     print('NO')
-

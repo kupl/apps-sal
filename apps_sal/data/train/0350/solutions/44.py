@@ -1,6 +1,6 @@
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-        
+
         def atMostK(kk):
             counter = collections.Counter()
             res = ii = 0
@@ -16,4 +16,3 @@ class Solution:
                 res += jj - ii + 1
             return res
         return atMostK(K) - atMostK(K - 1)
-

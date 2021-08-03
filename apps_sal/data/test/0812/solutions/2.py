@@ -42,4 +42,3 @@ for i in range(n - 2):
 else:
     print(t[1] + 1)
     return
-

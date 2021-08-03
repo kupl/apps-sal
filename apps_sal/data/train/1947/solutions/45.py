@@ -14,5 +14,4 @@ class Solution:
                 cnt1[ord(c) - 97] += 1
             if all(j <= cnt1[i] for i, j in enumerate(cnt)):
                 result.append(a)
-        return result        
-
+        return result

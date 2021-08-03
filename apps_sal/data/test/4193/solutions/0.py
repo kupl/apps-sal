@@ -1,4 +1,4 @@
-a = list(list(map(int,input().split())) for _ in range(3))
+a = list(list(map(int, input().split())) for _ in range(3))
 n = int(input())
 b = list(int(input()) for _ in range(n))
 
@@ -12,4 +12,4 @@ for i in range(3):
         print("Yes")
         break
 else:
-     print("No")
+    print("No")

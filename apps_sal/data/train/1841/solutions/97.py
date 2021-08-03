@@ -10,4 +10,4 @@ class Solution:
             else:
                 i += 1
             k -= 1
-        return arr[:i] + arr[j+1:]
+        return arr[:i] + arr[j + 1:]

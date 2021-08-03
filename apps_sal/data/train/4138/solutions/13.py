@@ -6,5 +6,3 @@ def count_correct_characters(correct, guess):
         if list(correct)[n] == list(guess)[n]:
             num += 1
     return num
-
-

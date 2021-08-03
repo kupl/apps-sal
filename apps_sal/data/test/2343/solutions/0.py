@@ -1,5 +1,6 @@
 t = int(input())
 
+
 def get_max(n):
     ans = 0
     while n:
@@ -8,6 +9,7 @@ def get_max(n):
         if ans > 10**19:
             break
     return ans
+
 
 for _ in range(t):
     n, k = list(map(int, input().split()))
@@ -28,7 +30,7 @@ for _ in range(t):
         l = 1
         cnt = 3
         while siz:
-            if l <= k < l+cnt:
+            if l <= k < l + cnt:
                 print("YES {}".format(siz))
                 break
             l = l + cnt
@@ -39,4 +41,3 @@ for _ in range(t):
                 print("YES 0")
             else:
                 print("NO")
-

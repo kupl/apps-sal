@@ -1,15 +1,16 @@
+from collections import deque
 import sys
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
-from collections import deque
+
 
 def shorten_cycle(G, route):
     # ループだとすでに分かってるルートに対して、
     # ショートカットが存在する場合はショートカットを行い、
     # ルートを短くする
 
-    _next = {k: v for k, v in zip(route, route[1:]+route[:1])}
+    _next = {k: v for k, v in zip(route, route[1:] + route[:1])}
     v = route[0]
     while True:
         # もしvからroute内の、次の点ではない点nにいける場合
@@ -33,8 +34,9 @@ def shorten_cycle(G, route):
             v = _next[v]
             if v == route[0]:
                 break
-    
+
     return route
+
 
 def find_cycle(G, s):
     dq = deque()
@@ -44,7 +46,7 @@ def find_cycle(G, s):
     dist[s] = 0
     parent = [-1] * N
 
-    ans_last = None # sからループを探して見つかった時の、ループの最後の頂点番号
+    ans_last = None  # sからループを探して見つかった時の、ループの最後の頂点番号
     dq.append(s)
     # BFSでループを見つける
     while dq and ans_last is None:
@@ -71,14 +73,15 @@ def find_cycle(G, s):
             g = parent[g]
             route.append(g)
         return list(reversed(route))
-    
+
     # 見つからなかった場合はNoneを返す
     return None
+
 
 def main():
     N, M, *A = map(int, read().split())
 
-    G = [[] for i in range(N+1)]
+    G = [[] for i in range(N + 1)]
     for a, b in zip(A[::2], A[1::2]):
         G[a].append(b)
 
@@ -102,23 +105,26 @@ def main():
     # V' = {1, 2, 4, 5} とすれば、
     # E' = {(1->2), (2->4), (4->5), (5->1)}
     # となり、すべての頂点の入次数が 1、出次数が 1 となる
-    
+
     # つまり、ショートカットできない最短のループを1つでも見つければよい
-    
+
     min_route = None
-    for s in range(1, N+1):
+    for s in range(1, N + 1):
         # 各頂点を開始点にしてループを探す
         route = find_cycle(G, s)
         # ループが見つかった場合、そこからショートカットできる経路を探して終了
         if route:
             min_route = shorten_cycle(G, route)
             break
-    
+
     if min_route:
         print(len(min_route), *min_route, sep='\n')
     else:
         print(-1)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

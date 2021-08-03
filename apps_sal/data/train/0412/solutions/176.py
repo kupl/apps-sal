@@ -8,6 +8,3 @@ class Solution:
                     if j - val >= 0:
                         dp[i][j] = (dp[i][j] + dp[i - 1][j - val]) % (10 ** 9 + 7)
         return dp[-1][-1] % (10 ** 9 + 7)
-        
-        
-

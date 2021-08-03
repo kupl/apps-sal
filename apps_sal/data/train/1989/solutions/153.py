@@ -7,8 +7,8 @@ class Solution:
             cur ^= (1 << int(char))
             seen.setdefault(cur, i)
             max_val = max(max_val, i - seen[cur])
-            
+
             for a in range(10):
                 max_val = max(max_val, i - seen.get(cur ^ 1 << a, i))
-                
+
         return max_val

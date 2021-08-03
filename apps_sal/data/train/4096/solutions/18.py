@@ -8,4 +8,3 @@ def valid_parentheses(string):
         if i < 0:
             return False
     return i == 0
-

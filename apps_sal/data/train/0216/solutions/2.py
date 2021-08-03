@@ -1,6 +1,6 @@
 class Solution:
     def minNumberOfFrogs(self, croakOfFrogs: str) -> int:
-        croaks = {'c':[], 'r':[], 'o':[], 'a':[]}
+        croaks = {'c': [], 'r': [], 'o': [], 'a': []}
         maxfrogs = 0
         i_croak = 0
         nfrogs = 0
@@ -33,11 +33,9 @@ class Solution:
                     return -1
             else:
                 return -1
-        
+
         for sound in croaks:
             if croaks[sound] != []:
                 return -1
-        
-        return maxfrogs
-                
 
+        return maxfrogs

@@ -2,7 +2,7 @@ class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
         n = len(points)
         nx, ny = len(set(x for x, _ in points)), len(set(y for _, y in points))
-        
+
         if nx == n or ny == n:
             return 0
         p = collections.defaultdict(list)
@@ -12,14 +12,14 @@ class Solution:
         else:
             for x, y in points:
                 p[y].append(x)
-        
+
         res = float('inf')
         dic_last = {}
         for x1, x2 in itertools.combinations(p, 2):
             if (len(p[x1]) < 2 or len(p[x2]) < 2):
                 continue
-            for y1, y2 in itertools.combinations( sorted(set(p[x1]) & set(p[x2])), 2 ):
-                res = min(res, abs(x1-x2) * (y2 - y1))
+            for y1, y2 in itertools.combinations(sorted(set(p[x1]) & set(p[x2])), 2):
+                res = min(res, abs(x1 - x2) * (y2 - y1))
         # for x in sorted(p):
         #     # print(x)
         #     p[x].sort()
@@ -30,12 +30,12 @@ class Solution:
         #             #     print(x, dic_last[y1, y2],  y1, y2)
         #         dic_last[y1, y2] = x
         return res if res < float('inf') else 0
-        
+
         # n = len(points)
         # nx, ny = len(set(x for x, y in points)), len(set(y for x, y in points))
         # if nx == n or ny == n:
         #     return 0
-        
+
         # p = collections.defaultdict(list)
         # if nx > ny:
         #     for x, y in points:
@@ -53,12 +53,12 @@ class Solution:
         #         dic[y1, y2] = x
         # return res if res < float('inf') else 0
 #         dic_x = {}
-        
+
 #         n = len(points)
 #         nx, ny = len( set(x for x, y in points) ), len( set(y for x, y in points) )
 #         if nx == n or ny == n:
 #             return 0
-        
+
 #         p = collections.defaultdict(list)
 #         if nx > ny:
 #             for x, y in points:
@@ -69,7 +69,7 @@ class Solution:
 #         res = float('inf')
 #         for x in sorted(p):
 #             p[x].sort()
-            
+
 #             for y1, y2 in itertools.combinations(p[x], 2):
 #                 # y1, y2 = p[x][i], p[x][j]
 #                 if (y1, y2) in dic_x:
@@ -77,7 +77,7 @@ class Solution:
 #                 dic_x[y1, y2] = x
 #         return res if res < float('inf') else 0
 #         seen = set()
-        
+
 #         res = float('inf')
 #         for x1, y1 in points:
 #             for x2, y2 in seen:
@@ -88,4 +88,3 @@ class Solution:
 #                     # res = min(res, )
 #             seen.add((x1, y1))
 #         return res if res < float('inf') else 0
-

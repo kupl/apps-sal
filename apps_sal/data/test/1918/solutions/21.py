@@ -3,6 +3,7 @@ import math
 # sys.stdin = open('input.txt')
 # sys.stdout = open('output.txt', 'w')
 
+
 def main():
     n = int(input())
     p = list(map(int, input().split()))
@@ -37,5 +38,6 @@ def main():
             t2 += prefb[i - 1]
         maxa = max([maxa, t1, t2])
     print(maxa)
+
 
 main()

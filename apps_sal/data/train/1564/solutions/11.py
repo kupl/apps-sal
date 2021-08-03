@@ -6,10 +6,8 @@ def extract(s):
             codes[cc] = True
     return len(codes)
 
+
 t = int(input())
 
 for i in range(t):
     print(extract(input()))
-    
-
-

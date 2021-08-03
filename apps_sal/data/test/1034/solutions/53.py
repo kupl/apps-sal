@@ -1,6 +1,6 @@
+from itertools import product
 import sys
 input = sys.stdin.readline
-from itertools import product
 
 
 def read():
@@ -13,7 +13,7 @@ def read():
 
 def solve(X, Y, Z, K, A, B, C, INF=10000000001):
     # 美味しさの上位K=3000件を出力する
-    AB = [a+b for a, b in product(A, B)]
+    AB = [a + b for a, b in product(A, B)]
     AB.sort(reverse=True)
     AB = AB[:K]
     C.sort(reverse=True)
@@ -42,5 +42,6 @@ def solve(X, Y, Z, K, A, B, C, INF=10000000001):
 def __starting_point():
     inputs = read()
     solve(*inputs)
+
 
 __starting_point()

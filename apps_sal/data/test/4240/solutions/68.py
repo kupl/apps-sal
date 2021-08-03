@@ -11,5 +11,3 @@ for i in range(len(s)):
         break
 
 print(ans)
-
-

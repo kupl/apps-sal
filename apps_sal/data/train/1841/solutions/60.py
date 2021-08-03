@@ -4,8 +4,9 @@ class Solution:
         arr = sorted(arr)
         mid_id = (cnt - 1) // 2
         mid = arr[mid_id]
-        if k == cnt: return arr
-        
+        if k == cnt:
+            return arr
+
         curr = 0
         res = []
         left, right = 0, cnt - 1
@@ -17,6 +18,5 @@ class Solution:
                 res.append(arr[left])
                 left += 1
             curr += 1
-        
-        return res
 
+        return res

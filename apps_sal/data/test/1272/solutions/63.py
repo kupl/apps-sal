@@ -1,7 +1,7 @@
 class UnionFind():
     def __init__(self, n):
         self.n = n
-        self.parents = [-1] * (n+1)
+        self.parents = [-1] * (n + 1)
 
     def find(self, x):
         if self.parents[x] < 0:
@@ -45,7 +45,7 @@ class UnionFind():
 
 N, M = map(int, input().split())
 Union = UnionFind(N)
-bad_value = N*(N-1)//2
+bad_value = N * (N - 1) // 2
 bridge = []
 for i in range(M):
     a, b = map(int, input().split())
@@ -61,9 +61,9 @@ for a, b in bridge:
         X = Union.size(a)
         Y = Union.size(b)
         Union.union(a, b)
-        bad_value -= X*Y
+        bad_value -= X * Y
         ans.append(bad_value)
         continue
 ans.reverse()
-for i in range(1, M+1):
+for i in range(1, M + 1):
     print(ans[i])

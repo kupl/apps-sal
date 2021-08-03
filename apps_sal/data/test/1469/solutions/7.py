@@ -10,6 +10,7 @@ def get_node(num):
         now_num *= 2
     return count
 
+
 def get_ans_data(node_num):
     ans_data = []
     for i in range(1, node_num):
@@ -19,6 +20,7 @@ def get_ans_data(node_num):
         ans_data.append(data2)
     return ans_data
 
+
 def main():
     num = int(input())
 
@@ -27,7 +29,6 @@ def main():
 
     now_path = 2 ** (node_num - 1)
     now_num = node_num - 1
-
 
     for i in range(now_num, 0, -1):
         now_data = 2 ** (i - 1)
@@ -42,5 +43,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,6 +1,7 @@
 def check_month(month):
     return 1 <= int(month) <= 12
 
+
 S = input()
 
 ls = S[:2]

@@ -10,5 +10,4 @@ for _ in range(int(input())):
     if aa != bb:
         print(-1)
     else:
-        print(ceil(abs(sca - scb)/3) )
-
+        print(ceil(abs(sca - scb) / 3))

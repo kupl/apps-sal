@@ -10,4 +10,3 @@ for q in range(0, t):
             print(n // k - (m - (n // k)) // (k - 1))
         else:
             print(n // k - (m - (n // k)) // (k - 1) - 1)
-

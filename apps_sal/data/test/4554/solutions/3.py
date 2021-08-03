@@ -12,4 +12,3 @@ elif a_r < b_l:
     print((abs(a_r - b_l)))
 else:
     print((0))
-

@@ -5,11 +5,12 @@ class BrowserHistory:
         self.curr = 0
 
     def visit(self, url: str) -> None:
-        self.pages = self.pages[:self.curr+1]
+        self.pages = self.pages[:self.curr + 1]
         self.pages.append(url)
-        self.curr = len(self.pages)-1
-            
+        self.curr = len(self.pages) - 1
+
         print((self.pages))
+
     def back(self, steps: int) -> str:
         if self.curr - steps < 0:
             self.curr = 0
@@ -20,7 +21,7 @@ class BrowserHistory:
 
     def forward(self, steps: int) -> str:
         if self.curr + steps >= len(self.pages):
-            self.curr = len(self.pages)-1
+            self.curr = len(self.pages) - 1
             return self.pages[-1]
         else:
             self.curr = self.curr + steps
@@ -32,4 +33,3 @@ class BrowserHistory:
 # obj.visit(url)
 # param_2 = obj.back(steps)
 # param_3 = obj.forward(steps)
-

@@ -16,4 +16,3 @@ ans = float('inf')
 for i in range(1, 401 // max(Ma, Mb)):
     ans = min(ans, d[(Ma * i, Mb * i)])
 print((ans if ans != float('inf') else -1))
-

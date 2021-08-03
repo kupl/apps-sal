@@ -9,4 +9,3 @@ def array_leaders(numbers: List[int]) -> List[int]:
             leaders.append(n)
 
     return leaders
-

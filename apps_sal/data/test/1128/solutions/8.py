@@ -7,4 +7,3 @@ while a[n] == False:
     n = (n + n) % m
 
 print("Yes") if a[0] else print("No")
-

@@ -1,7 +1,9 @@
 def time_correct(t):
     try:
-        if t == None: return t
-        if t == "": return t
+        if t == None:
+            return t
+        if t == "":
+            return t
         if len(t) == 8:
             if t.count(":") > 0:
                 t = t.split(":")

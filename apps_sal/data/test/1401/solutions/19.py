@@ -1,40 +1,37 @@
-nn=int(input())
+nn = int(input())
 
-a=[0]+list(map(int,input().split()))
+a = [0] + list(map(int, input().split()))
 
-E=[[] for _ in range(nn+1)]
+E = [[] for _ in range(nn + 1)]
 
-for i in range(nn-1):
+for i in range(nn - 1):
 
-    p,c=list(map(int,input().split()))
+    p, c = list(map(int, input().split()))
 
-    E[i+2]+=[(p,c)]
+    E[i + 2] += [(p, c)]
 
-    E[p]+=[(i+2,c)]
+    E[p] += [(i + 2, c)]
 
 
+ans = 0
 
-ans=0
-
-ch=[(1,0,0)]
+ch = [(1, 0, 0)]
 
 while ch:
 
-    nom,pre,l=ch.pop()
+    nom, pre, l = ch.pop()
 
-    if l>a[nom]: continue
+    if l > a[nom]:
+        continue
 
-    ans+=1
+    ans += 1
 
-    for x,c in E[nom]:
+    for x, c in E[nom]:
 
-        if x!=pre: ch+=[(x,nom,max(l+c,c))]
+        if x != pre:
+            ch += [(x, nom, max(l + c, c))]
 
-print(nn-ans)
-
-
-
+print(nn - ans)
 
 
 # Made By Mostafa_Khaled
-

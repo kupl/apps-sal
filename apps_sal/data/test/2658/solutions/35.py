@@ -29,4 +29,3 @@ if flag:
             if K % num == first_visit[i] % num:
                 print((i + 1))
                 break
-

@@ -4,8 +4,8 @@ def main():
 def __starting_point():
     main()
 '''
-#372
-#1
+# 372
+# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -21,7 +21,7 @@ def main():
 def __starting_point():
     main()
 '''
-#2
+# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -65,30 +65,34 @@ def main():
 def __starting_point():
     main()
 '''
-#373
-#1
+# 373
+# 1
+
+
 def main():
-    from sys import stdin,stdout
-    n=int(stdin.readline())
-    tup=tuple(map(int,stdin.readline().split()))
-    if n==1:
-        if tup[0]==0:
+    from sys import stdin, stdout
+    n = int(stdin.readline())
+    tup = tuple(map(int, stdin.readline().split()))
+    if n == 1:
+        if tup[0] == 0:
             stdout.write('UP')
-        elif tup[0]==15:
+        elif tup[0] == 15:
             stdout.write('DOWN')
         else:
             stdout.write('-1')
     else:
-        if tup[-1]-tup[-2]>0:
-            if tup[-1]==15:
+        if tup[-1] - tup[-2] > 0:
+            if tup[-1] == 15:
                 stdout.write('DOWN')
             else:
                 stdout.write('UP')
         else:
-            if tup[-1]==0:
+            if tup[-1] == 0:
                 stdout.write('UP')
             else:
                 stdout.write('DOWN')
+
+
 def __starting_point():
     main()
 

@@ -40,4 +40,3 @@ for i in range(M):
     if len([-p for p in ds.parents if p < 0]) > 1:
         ans += 1
 print(ans)
-

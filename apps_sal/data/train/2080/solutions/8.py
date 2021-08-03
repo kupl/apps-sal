@@ -12,7 +12,7 @@ result = 0
 bought = 0
 counter = 0
 while bought < target:
-    if  target - bought < basket_size:
+    if target - bought < basket_size:
         result += sum(item_values[counter:])
         bought += target + 1
     else:
@@ -21,4 +21,3 @@ while bought < target:
         counter += 2 + basket_size
 
 print(result)
-

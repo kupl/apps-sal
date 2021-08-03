@@ -1,1 +1,1 @@
-print(input().replace(' ','').find('0')+1)
+print(input().replace(' ', '').find('0') + 1)

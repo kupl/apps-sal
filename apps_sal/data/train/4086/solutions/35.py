@@ -5,5 +5,3 @@ def first_non_consecutive(arr):
             return x
         else:
             expected = x + 1
-            
-

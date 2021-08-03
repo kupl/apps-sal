@@ -1,2 +1,2 @@
 import numpy as np
-min_dot=lambda a,b: np.dot(sorted(a), sorted(b, reverse = True))
+def min_dot(a, b): return np.dot(sorted(a), sorted(b, reverse=True))

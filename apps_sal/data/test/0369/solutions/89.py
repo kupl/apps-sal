@@ -1,8 +1,9 @@
-ii = lambda : int(input())
-mi = lambda : list(map(int,input().split()))
-li = lambda : list(map(int,input().split()))
+def ii(): return int(input())
+def mi(): return list(map(int, input().split()))
+def li(): return list(map(int, input().split()))
 
-n,m = mi()
+
+n, m = mi()
 s = input()
 
 s = s[::-1]
@@ -15,7 +16,7 @@ while ima != n:
         tmp = m - i
         if ima + tmp > n:
             continue
-        elif s[ima+tmp] ==str(1):
+        elif s[ima + tmp] == str(1):
             continue
         else:
             ima += tmp
@@ -24,8 +25,6 @@ while ima != n:
             break
     if flag == False:
         print((-1))
-        return  
+        return
 
 print((*ans[::-1]))
-
-

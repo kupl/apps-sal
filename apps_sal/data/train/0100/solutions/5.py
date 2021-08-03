@@ -1,14 +1,11 @@
 import sys
 input = sys.stdin.readline
 
-t=int(input())
+t = int(input())
 for testcases in range(t):
-    r,g,b=sorted(map(int,input().split()))
+    r, g, b = sorted(map(int, input().split()))
 
-    if b>r+g:
-        print(r+g)
+    if b > r + g:
+        print(r + g)
     else:
-        print((r+g+b)//2)
-
-    
-
+        print((r + g + b) // 2)

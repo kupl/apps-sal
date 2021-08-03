@@ -13,5 +13,3 @@ class Solution:
             return ans
         seen = set()
         return helper(s, 0, seen)
-                    
-

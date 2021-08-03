@@ -1,4 +1,6 @@
 import math
+
+
 def graceful_tipping(rest_bill):
     res = rest_bill * 1.15
     if res < 10:
@@ -7,4 +9,3 @@ def graceful_tipping(rest_bill):
     if res % tmp > 0:
         res += (tmp - res % tmp)
     return res
-

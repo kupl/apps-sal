@@ -1,5 +1,6 @@
 from sortedcontainers import SortedList
 
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         sl = SortedList()
@@ -10,7 +11,7 @@ class Solution:
         while s >= 1:
             s -= 1
             if len(sl) == 0:
-                if n-arr[s] == m or arr[s] - 1 == m:
+                if n - arr[s] == m or arr[s] - 1 == m:
                     return s
             else:
                 idx = sl.bisect_left(arr[s])
@@ -18,10 +19,10 @@ class Solution:
                     if arr[s] - 1 == m or sl[idx] - arr[s] - 1 == m:
                         return s
                 elif idx == len(sl):
-                    if n - arr[s] == m or arr[s] - sl[idx-1] - 1 == m:
+                    if n - arr[s] == m or arr[s] - sl[idx - 1] - 1 == m:
                         return s
                 else:
-                    if arr[s] - sl[idx-1] - 1 == m or sl[idx] - arr[s] - 1 == m:
+                    if arr[s] - sl[idx - 1] - 1 == m or sl[idx] - arr[s] - 1 == m:
                         return s
             sl.add(arr[s])
         return -1

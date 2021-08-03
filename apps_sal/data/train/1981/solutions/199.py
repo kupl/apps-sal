@@ -13,4 +13,3 @@ class Solution:
         for k in range(len_nums):
             max_sum += nums[k] * frequencies[k]
         return max_sum % (10**9 + 7)
-

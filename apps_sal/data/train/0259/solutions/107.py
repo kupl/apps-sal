@@ -1,5 +1,6 @@
 from math import ceil
 
+
 def eval(nums, i, thold):
     s1 = 0
     for num in nums:
@@ -7,6 +8,7 @@ def eval(nums, i, thold):
     if s1 <= thold:
         return True
     return False
+
 
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
@@ -18,4 +20,3 @@ class Solution:
             else:
                 lo = mid + 1
         return lo
-

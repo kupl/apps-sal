@@ -11,4 +11,3 @@ if c == 2 or c == 0:
 
 else:
     print('NO')
-

@@ -1,22 +1,28 @@
 def sqrt(n):
     return n**.5
 
+
 def pfs(n):
     A = []
     while n % 2 == 0:
         A += [2]
         n //= 2
     return A + pfs_dummy(n, 3)
+
+
 def pfs_dummy(n, start):
-    if n == 1: return []
+    if n == 1:
+        return []
     A = []
-    for k in range(start, int(sqrt(n)+1), 2):
+    for k in range(start, int(sqrt(n) + 1), 2):
         if n % k == 0:
             while n % k == 0:
                 A.append(k)
                 n //= k
-            return A + pfs_dummy(n, k+2)
-    if len(A) == 0: return [n]
+            return A + pfs_dummy(n, k + 2)
+    if len(A) == 0:
+        return [n]
+
 
 def gcd(a, b):
     if a > b:
@@ -43,7 +49,7 @@ while y > 0:
     if x == 1:
         ans += y
         y = 0
-        
+
     else:
         maxcand = -1
         for p in set(arr):
@@ -58,4 +64,3 @@ while y > 0:
             arr.remove(pf)
 
 print(ans)
-

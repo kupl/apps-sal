@@ -18,10 +18,10 @@ class Solution:
                     children.add(right)
                 if indegree[right] > 1:
                     return False
-                
+
         if len(roots) != 1:
             return False
-        
+
         while roots:
             new_root = next(iter(roots))
             roots.remove(new_root)
@@ -31,6 +31,5 @@ class Solution:
             if rightChild[new_root] != -1:
                 children.remove(rightChild[new_root])
                 roots.add(rightChild[new_root])
-        
-        return not children
 
+        return not children

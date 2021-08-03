@@ -5,9 +5,9 @@ while len(v) != ps:
     nv = {i for i in v}
     for a in v:
         if a + 3 <= 100:
-            nv.add(a+3)
+            nv.add(a + 3)
         if a + 7 <= 100:
-            nv.add(a+7)
+            nv.add(a + 7)
     ps = len(v)
     v = nv
 for i in range(n):

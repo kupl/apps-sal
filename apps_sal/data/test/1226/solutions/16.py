@@ -33,4 +33,3 @@ ca = xa * mod_pow(ya, MOD - 2) % MOD
 cb = xb * mod_pow(yb, MOD - 2) % MOD
 ans = (ans + MOD * 2 - ca - cb) % MOD
 print(ans)
-

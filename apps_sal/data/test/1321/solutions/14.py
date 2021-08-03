@@ -1,4 +1,4 @@
-n = int(input()) #кол друзей
+n = int(input())  # кол друзей
 maxW = 0
 widthes = []
 heigthes = []
@@ -13,7 +13,7 @@ for i in range(n):
     if i == indexMaxH:
         el = heigthes.pop(i)
         maxH2 = max(heigthes)
-        heigthes.insert(i,el)
-        print((maxW - widthes[i]) * maxH2,end = " ")
+        heigthes.insert(i, el)
+        print((maxW - widthes[i]) * maxH2, end=" ")
     else:
-        print((maxW - widthes[i]) * maxH,end = " ")
+        print((maxW - widthes[i]) * maxH, end=" ")

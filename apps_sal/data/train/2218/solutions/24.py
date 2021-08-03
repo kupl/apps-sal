@@ -8,8 +8,8 @@ queries = [tuple(map(int, input().split())) for _ in range(q)][::-1]
 res, curr = [-1] * n, 0
 for q in queries:
     if q[0] == 1:
-        if res[q[1]-1] == -1:
-            res[q[1]-1] = max(q[2], curr)
+        if res[q[1] - 1] == -1:
+            res[q[1] - 1] = max(q[2], curr)
     else:
         curr = max(curr, q[1])
 for i in range(n):
@@ -17,5 +17,3 @@ for i in range(n):
         res[i] = max(curr, arr[i])
 res = [str(q) for q in res]
 print(' '.join(res))
-
-

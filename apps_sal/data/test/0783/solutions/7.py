@@ -9,4 +9,3 @@ for i, x in enumerate(reversed(h)):
     ch = max(ch, x)
 
 print(str.join(" ", list(map(str, reversed(hm)))))
-

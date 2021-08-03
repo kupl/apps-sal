@@ -1,8 +1,8 @@
 def contamination(text, char):
-    if text=='' or char=='':
+    if text == '' or char == '':
         return ''
     else:
-        ans=''
+        ans = ''
         for i in text:
-            ans=ans+char
+            ans = ans + char
         return ans

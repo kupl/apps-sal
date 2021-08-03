@@ -13,4 +13,3 @@ for j in ans:
         print("No")
     else:
         print("Yes")
-

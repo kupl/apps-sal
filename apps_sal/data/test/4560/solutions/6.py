@@ -1,2 +1,2 @@
-a,b=int(input()),int(input())
-print("Yes") if a%500<=b else print("No")
+a, b = int(input()), int(input())
+print("Yes") if a % 500 <= b else print("No")

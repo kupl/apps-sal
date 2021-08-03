@@ -5,6 +5,7 @@ class StreamChecker:
         for w in words:
             self.trie.insert(w[::-1])
         self.history = ''
+
     def query(self, letter: str) -> bool:
         self.history += letter
         return self.trie.search(self.history[::-1])
@@ -18,12 +19,12 @@ class Node():
     def __init__(self):
         self.children = {}
         self.exist = 0
-    
-    
+
+
 class Trie():
     def __init__(self):
         self.root = Node()
-    
+
     def insert(self, w):
         curr_node = self.root
         for c in w:
@@ -31,7 +32,7 @@ class Trie():
                 curr_node.children[c] = Node()
             curr_node = curr_node.children[c]
         curr_node.exist = 1
-    
+
     def search(self, w):
         curr_node = self.root
         for c in w:

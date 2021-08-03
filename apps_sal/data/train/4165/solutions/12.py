@@ -1,5 +1,5 @@
 def uni_total(string):
-    c=0
+    c = 0
     for x in string:
-        c=c+ord(x)
+        c = c + ord(x)
     return c

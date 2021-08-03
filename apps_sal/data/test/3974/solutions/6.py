@@ -1,6 +1,7 @@
 def puts(s):
     print(s, end='')
 
+
 s = input()
 a = mi = ma = 0
 

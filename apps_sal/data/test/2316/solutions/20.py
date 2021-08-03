@@ -1,11 +1,14 @@
 import sys
 import math
 
+
 def ii():
     return sys.stdin.readline().strip()
 
+
 def idata():
     return [int(x) for x in ii().split()]
+
 
 def binary_search(array, x):
     left, right = -1, len(array)
@@ -16,6 +19,7 @@ def binary_search(array, x):
         elif array[middle] < x:
             left = middle
     return right
+
 
 def c_mod(n1, k1, mod1):
     if mod1 != 0:
@@ -30,6 +34,7 @@ def c_mod(n1, k1, mod1):
         den = den * (i + 1)
     return num // den
 
+
 def v_sistemu(x, k):
     x = int(x)
     z = ''
@@ -38,12 +43,14 @@ def v_sistemu(x, k):
         x //= k
     return z[::-1]
 
+
 def iz_sistemi(x, k):
     x = str(x)[::-1]
     ans = 0
     for i in range(len(x)):
         ans += int(x[i]) * pow(k, i)
     return ans
+
 
 def solve_of_problem():
     x, n, m = idata()
@@ -59,6 +66,6 @@ def solve_of_problem():
         print('NO')
     return
 
+
 for ______ in range(int(ii())):
     solve_of_problem()
-

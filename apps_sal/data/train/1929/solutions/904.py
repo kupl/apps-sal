@@ -16,10 +16,8 @@ class StreamChecker:
         # if letter in self.trie:
         #     self.prefixes.append(self.trie[letter])
         return any('end' in node for node in self.prefixes)
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

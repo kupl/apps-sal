@@ -28,5 +28,4 @@ nums = {0: 89, 1: 271, 2: 325, 3: 328, 4: 890, 5: 1025, 6: 1055, 7: 1081, 8: 112
 
 
 def sq_cub_rev_prime(n):
-    return nums[n-1]
-
+    return nums[n - 1]

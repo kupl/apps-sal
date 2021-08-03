@@ -12,4 +12,3 @@ for _ in range(n):
     print('YES' if abs(k[0][0] - k[1][0]) % 4 == 0 and abs(k[0][1] - k[1][1]) % 4 == 0 else 'NO')
     if _ < n - 1:
         input()
-

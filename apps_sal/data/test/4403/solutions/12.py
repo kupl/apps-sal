@@ -1,2 +1,2 @@
-a=input().count('+')
-print(2*a-4)
+a = input().count('+')
+print(2 * a - 4)

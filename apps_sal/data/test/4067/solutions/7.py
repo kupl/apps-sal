@@ -1,6 +1,6 @@
 n = int(input())
 s = list(input())
-d = {i:0 for i in '012'}
+d = {i: 0 for i in '012'}
 for i in s:
     d[i] += 1
 eq = n // 3
@@ -36,6 +36,4 @@ while d['1'] < eq and i < n:
             d['1'] += 1
             s[i] = '1'
     i += 1
-print(*s, sep = '')
-
-
+print(*s, sep='')

@@ -5,7 +5,7 @@ def pro():
     y = [False for i in range(n)]
     y1 = n
     for i in range(m):
-        k,l = map(int, input().split())
+        k, l = map(int, input().split())
         if not x[k - 1]:
             x[k - 1] = True
             x1 -= 1
@@ -13,4 +13,6 @@ def pro():
             y[l - 1] = True
             y1 -= 1
         print(x1 * y1, end=' ')
+
+
 pro()

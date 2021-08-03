@@ -13,6 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; If not, see <http://www.gnu.org/licenses/>.
 
+
 def main():
     n = int(input())
     ans = False
@@ -23,6 +24,6 @@ def main():
         if new > old and old >= 2400:
             ans = True
     print("YES" if ans else "NO")
-        
-main()
 
+
+main()

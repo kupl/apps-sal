@@ -18,6 +18,4 @@ def solution():
     print(sum(d1.values()))
 
 
-
 solution()
-

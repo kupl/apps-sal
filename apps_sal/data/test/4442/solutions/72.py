@@ -7,5 +7,5 @@ if ab > ba:
     answer = ba
 else:
     answer = ab
-    
+
 print(answer)

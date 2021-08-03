@@ -2,7 +2,7 @@
 #       ||        //  \\        ||     ||   // ||
 #       ||       //====\\       ||     ||  //  ||
 #       ||      //      \\      ||     || //   ||
-#   ========== //        \\  ========  ||//====|| 
+#   ========== //        \\  ========  ||//====||
 #  code
 
 def solve():
@@ -15,13 +15,15 @@ def solve():
         print('NO')
 
 
-
 def main():
     t = 1
     t = int(input())
     for _ in range(t):
         solve()
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

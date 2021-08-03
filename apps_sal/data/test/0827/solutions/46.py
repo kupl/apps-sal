@@ -23,10 +23,10 @@ else:
         num_in_ref = 1
         if n % 3 == 0:
             flag_over = 1
-    if ref[1 : n + 1] == t:
+    if ref[1: n + 1] == t:
         num_in_ref = 1
-    if ref[2 : n + 2] == t:
+    if ref[2: n + 2] == t:
         num_in_ref = 1
         if n % 3 == 2:
             flag_over = -1
-    print(num_in_ref * (10 ** 10 - n//3) + flag_over)
+    print(num_in_ref * (10 ** 10 - n // 3) + flag_over)

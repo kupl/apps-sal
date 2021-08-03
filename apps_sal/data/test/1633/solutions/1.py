@@ -17,5 +17,5 @@ for ind in range(k):
             if field[i + ii][j] and field[i][j + jj] and field[i + ii][j + jj]:
                 print(ind + 1)
                 return
-                
+
 print(0)

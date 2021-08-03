@@ -10,4 +10,3 @@ res = res + int((mid_n - min_n) / 2)
 if (mid_n - min_n) & 1:
     res = res + 2
 print(res)
-

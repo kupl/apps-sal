@@ -3,12 +3,11 @@ el = [x.upper() for x in el]
 
 a = input()
 dp = [True] + [False for x in a]
-for i in range(1,len(a)+1):
-    dp[i] = dp[i-1] and (a[i-1] in el)
-    dp[i] = dp[i] or (i>=2 and dp[i-2] and (a[i-2:i] in el))
+for i in range(1, len(a) + 1):
+    dp[i] = dp[i - 1] and (a[i - 1] in el)
+    dp[i] = dp[i] or (i >= 2 and dp[i - 2] and (a[i - 2:i] in el))
 
 if dp[-1]:
     print("YES")
 else:
     print("NO")
-

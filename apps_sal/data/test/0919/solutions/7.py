@@ -11,11 +11,11 @@ while i < 26:
         ans += 1
         anss += i + 1
         i += 1
-    
+
     i += 1
     if (ans == k):
         break
-    
+
 if ans < k:
     print(-1)
 else:

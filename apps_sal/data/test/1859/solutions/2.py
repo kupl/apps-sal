@@ -8,4 +8,3 @@ for x in range(2, int(n**0.5 + 1)):
         print(1 + (n - x) // 2)
         return
 print(1)
-

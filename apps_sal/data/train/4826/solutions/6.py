@@ -1,5 +1,6 @@
 import re
 
+
 def count_robots(a):
     d = {"automatik": 0, "mechanik": 0}
     r = re.compile(r"[a-z](?:[|};&#\[\]\/><()*]{2}0){2}[|};&#\[\]\/><()*]{2}[a-z]")

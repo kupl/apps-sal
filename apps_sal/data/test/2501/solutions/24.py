@@ -24,9 +24,10 @@ def resolve():
         idx_2 = bisect_right(A_j, a)
         res += idx_2 - idx_1
     print(res)
-    
+
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

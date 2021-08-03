@@ -8,4 +8,3 @@ for i in range(n - 1):
     if A[i + 1] - A[i] > b:
         b = A[i + 1] - A[i]
 print(max(a, b / 2, c))
-

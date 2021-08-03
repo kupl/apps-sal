@@ -2,6 +2,7 @@ class UnionFind():
     '''
     cited from https://note.nkmk.me/python-union-find/
     '''
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -36,13 +37,12 @@ class UnionFind():
     def group_count(self):
         return len(self.roots())
 
+
 N, M = list(map(int, input().split()))
 
 u = UnionFind(N)
 for i in range(M):
     x, y, z = list(map(int, input().split()))
-    u.union(x-1,y-1)
-    
+    u.union(x - 1, y - 1)
+
 print((u.group_count()))
-
-

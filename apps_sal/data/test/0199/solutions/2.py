@@ -8,11 +8,11 @@ values = list(map(int, stdin.readline().split()))
 l, r = -1, min(values) + 1
 while r - l > 1:
     m = (l + r) >> 1
-    
+
     cnt = 0
     for v in values:
         cnt += v - m
-    
+
     if cnt >= s:
         l = m
     else:

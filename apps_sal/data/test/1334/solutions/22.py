@@ -1,7 +1,7 @@
 def solve():
     n, k = list(map(int, input().split()))
     S = input()
-    L = list(set(list(map(ord,S))))
+    L = list(set(list(map(ord, S))))
     L.sort()
 
     I = {}
@@ -14,7 +14,7 @@ def solve():
     res = ""
     if k > n:
         res += S
-        res += chr(first)*(k-n)
+        res += chr(first) * (k - n)
         print(res)
         return
     else:
@@ -23,14 +23,13 @@ def solve():
                 remained = L[I[ord(S[i])] + 1]
                 res += S[:i]
                 res += chr(remained)
-                res += chr(first) * (k-i-1)
+                res += chr(first) * (k - i - 1)
                 print(res)
                 return
 
 
 def __starting_point():
     solve()
-
 
 
 __starting_point()

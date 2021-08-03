@@ -13,4 +13,3 @@ for i in range(len(our)):
     if (i + 1) not in cap and (i + 1) % n + 1 not in cap:
         res += our[i] * our[(i + 1) % n]
 print(res)
-

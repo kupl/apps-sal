@@ -12,4 +12,3 @@ if m > 0:
     if m % n != 0:
         k += 1
 print(k, a1)
-

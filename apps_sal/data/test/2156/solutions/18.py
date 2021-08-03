@@ -7,6 +7,6 @@ for i in range(n):
     t += a[i]
     suma.append(t)
 for i in range(q):
-    l,r = map(int, input().split(" "))
-    temp = suma[r]-suma[l-1]
-    print(temp//10)
+    l, r = map(int, input().split(" "))
+    temp = suma[r] - suma[l - 1]
+    print(temp // 10)

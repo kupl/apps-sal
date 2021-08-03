@@ -17,6 +17,7 @@ z   y   x
 可见，仍是异或。计算前缀即可
 '''
 
+
 class Solution:
     def xorQueries(self, arr: List[int], queries: List[List[int]]) -> List[int]:
         n = len(arr)
@@ -31,4 +32,3 @@ class Solution:
             else:
                 ret.append(prefix_xor[start - 1] ^ prefix_xor[end])
         return ret
-

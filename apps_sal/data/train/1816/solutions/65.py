@@ -3,10 +3,10 @@ class Solution:
         m = collections.defaultdict(set)
         for n, t in zip(keyName, keyTime):
             m[n].add(t)
-            
+
         ans = []
         # print(m)
-        
+
         for name in m:
             added = False
             times = m[name]
@@ -14,17 +14,17 @@ class Solution:
             for t in times:
                 h, minute = map(int, t.split(':'))
                 m2[h].add(minute)
-                
+
             # print(name, m2)
             for h, f in m2.items():
                 if len(f) >= 3:
                     ans.append(name)
                     added = True
                     break
-                
+
             if added:  # name is already added
                 continue
-                
+
             to_minutes = []
             for t in times:
                 h, minute = map(int, t.split(':'))
@@ -45,6 +45,5 @@ class Solution:
                     i += 1
                     # size -= 1
                 j = max(j, i)
-            
-        
+
         return sorted(ans)

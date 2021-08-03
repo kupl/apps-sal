@@ -19,4 +19,3 @@ for pi, p in enumerate(ps):
 
 
 print(' '.join(map(str, ans)))
-

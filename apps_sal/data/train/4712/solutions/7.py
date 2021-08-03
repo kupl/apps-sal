@@ -6,10 +6,10 @@ def lucasnum(n):
     elif n > 1:
         a, b = 2, 1
         for i in range(n):
-            a, b = b, a+b
+            a, b = b, a + b
         return a
     else:
         a, b = -1, -2
         for i in range(abs(n)):
-            a, b = b, a-b
-        return b*-1
+            a, b = b, a - b
+        return b * -1

@@ -6,5 +6,5 @@ for good_int in good_ints:
     if good_int in N:
         answer = 'Yes'
         break
-        
+
 print(answer if answer else 'No')

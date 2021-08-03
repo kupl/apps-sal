@@ -22,4 +22,3 @@ class Solution:
                                 second_index:]
                         combination_set.add(new_tile_combination)
         return combination_set
-

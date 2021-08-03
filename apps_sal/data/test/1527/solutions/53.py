@@ -3,6 +3,7 @@ S = []
 for i in range(H):
     S.append(input())
 
+
 def bfs(start):
     already = {}
     queue = []
@@ -18,15 +19,16 @@ def bfs(start):
             new_y = y + move[0]
             new_x = x + move[1]
             if new_y >= 0 \
-            and new_y < H \
-            and new_x >= 0 \
-            and new_x < W \
-            and S[new_y][new_x] == '.' \
-            and (new_y, new_x) not in already:
+                    and new_y < H \
+                    and new_x >= 0 \
+                    and new_x < W \
+                    and S[new_y][new_x] == '.' \
+                    and (new_y, new_x) not in already:
                 already[(new_y, new_x)] = True
-                queue.append((new_y, new_x, depth+1))
+                queue.append((new_y, new_x, depth + 1))
         counter += 1
     return max_depth
+
 
 answer = 0
 for i in range(H):

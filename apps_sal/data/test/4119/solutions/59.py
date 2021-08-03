@@ -1,4 +1,4 @@
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 x = list(map(int, input().split()))
 x.sort()
 
@@ -9,7 +9,7 @@ elif n == 1:
     print(total)
 else:
     gap = []
-    for i,j in zip(x, x[1:]):
-        gap.append(j-i)
+    for i, j in zip(x, x[1:]):
+        gap.append(j - i)
     gap.sort(reverse=True)
-    print(total - sum(gap[:n-1]))
+    print(total - sum(gap[:n - 1]))

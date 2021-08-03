@@ -6,7 +6,10 @@ from heapq import heappop, heappush
 from itertools import accumulate
 from sys import stdout
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 np, nk, z = R()
 ps = sorted(R())
 ks = sorted(R())

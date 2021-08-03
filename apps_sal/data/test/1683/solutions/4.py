@@ -39,4 +39,3 @@ a = list(map(int, input().split()))
 
 r = solve(n, a)
 print(r)
-

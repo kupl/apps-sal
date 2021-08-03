@@ -14,6 +14,7 @@ for i in range(1, 10):
     if str(i) in t:
         p.append(str(i))
         break
-if k == len(p) and t: p.append(t.pop())
+if k == len(p) and t:
+    p.append(t.pop())
 print(len(p))
 print(' '.join(p))

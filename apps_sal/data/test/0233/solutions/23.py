@@ -8,7 +8,7 @@ for i in range(n):
         m += 1
     elif a < b:
         c += 1
-        
+
 if m > c:
     print("Mishka")
 elif m < c:

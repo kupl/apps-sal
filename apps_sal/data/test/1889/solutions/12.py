@@ -21,7 +21,7 @@ for i in range(n):
     data.append(temp)
 
 for i in range(q):
-    y,x = [int(c)-1 for c in input().split()]
+    y, x = [int(c) - 1 for c in input().split()]
     data[y][x] = 0 if data[y][x] else 1
     mx = 0
     curEyes = 0
@@ -46,4 +46,3 @@ for i in range(q):
     else:
         print(globalMax)
     saveCount[y] = mx
-

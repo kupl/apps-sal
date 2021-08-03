@@ -13,7 +13,7 @@ class Solution:
             if letters[s[i]] == 0:
                 unique += 1
             letters[s[i]] += 1
-            
+
             while j < i and unique > maxLetters:
                 letters[s[j]] -= 1
                 if letters[s[j]] == 0:
@@ -24,9 +24,9 @@ class Solution:
             letters_tmp = letters.copy()
             while unique_tmp <= maxLetters and (minSize <= (i - j_tmp + 1)):
                 if (i - j_tmp + 1) > maxSize:
-                    j_tmp+=1
+                    j_tmp += 1
                     continue
-                counter[s[j_tmp:i+1]] += 1
+                counter[s[j_tmp:i + 1]] += 1
                 #print(f'{s[j_tmp:i+1]} {counter} {i} {j_tmp}')
                 letters_tmp[s[j_tmp]] -= 1
                 if letters_tmp[s[j_tmp]] == 0:
@@ -36,5 +36,5 @@ class Solution:
             i += 1
         if len(counter.values()) == 0:
             return 0
-        
+
         return max(counter.values())

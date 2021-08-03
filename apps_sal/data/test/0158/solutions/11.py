@@ -8,5 +8,3 @@ if players[n] > players[n - 1]:
     print("YES")
 else:
     print("NO")
-
-

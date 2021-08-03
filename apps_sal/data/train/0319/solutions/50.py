@@ -7,7 +7,7 @@ class Solution:
         dp = {}
         kA = 'Alice'
         kB = 'Bob'
-        for index in range(length-1, -1, -1):
+        for index in range(length - 1, -1, -1):
             minus = length - index
             rA = rB = 0
             if minus >= 3:  # normal case >=3; three choices
@@ -47,8 +47,8 @@ class Solution:
             dp[(index, kA)] = rA
             dp[(index, kB)] = rB
 
-        #print(stoneValue)
-        #print(dp)
+        # print(stoneValue)
+        # print(dp)
         result = dp.get((0, kA))
         if result > 0:
             return 'Alice'

@@ -4,8 +4,10 @@ d = [int(x) for x in input().split()]
 
 dd = d + d
 
+
 def b2(k):
-    return k*(k+1)//2
+    return k * (k + 1) // 2
+
 
 # end_pt points to the month of which we want to end on the final day.
 end_pt = 0
@@ -56,4 +58,3 @@ while end_pt + 1 < len(dd):
     best = max(best, cur_hugs)
 
 print(best)
-

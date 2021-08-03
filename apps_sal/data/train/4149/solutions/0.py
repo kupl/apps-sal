@@ -1,6 +1,7 @@
 trans = "abcdefghijklmnopqrstuvwxyz" * 2
 trans += trans.upper() + "0123456789" * 2
 
+
 def ROT135(input):
     output = []
     for c in input:

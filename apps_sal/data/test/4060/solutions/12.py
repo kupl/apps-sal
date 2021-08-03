@@ -1,6 +1,7 @@
 n = int(input())
 s = input()
 
+
 def sol(n, S):
     L = [0]
     for s in S:
@@ -13,10 +14,10 @@ def sol(n, S):
     if L[-1] == 2:
         if min(L) < 0:
             return 0
-        for j in range(n-1, -1, -1):
+        for j in range(n - 1, -1, -1):
             if L[j] < 2:
                 break
-        for k in range(j+1, n, 1):
+        for k in range(j + 1, n, 1):
             if S[k] == '(':
                 ANS += 1
     elif L[-1] == -2:
@@ -31,5 +32,6 @@ def sol(n, S):
     else:
         ANS = 0
     return ANS
+
 
 print(sol(n, s))

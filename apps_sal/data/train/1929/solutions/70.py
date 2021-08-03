@@ -9,15 +9,14 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.consideration = [node.words[letter] for node in self.consideration + [self.trie] if letter in node.words]
         return any(node.is_word for node in self.consideration)
-        
-            
+
 
 class Trie:
     def __init__(self):
         self.is_word = False
         self.prefix = ''
         self.words = {}
-    
+
     def add(self, word):
         if not word:
             self.is_word = True
@@ -31,8 +30,6 @@ class Trie:
             self.words[word[0]].add(word[1:])
 
 
-
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

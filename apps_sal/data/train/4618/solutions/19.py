@@ -8,4 +8,3 @@ def positive_sum(arr):
         else:
             res += i
     return res
-

@@ -5,7 +5,7 @@ class Solution:
         last = n - 1
         while i >= 0:
             if s[i] > s[last]:
-                last = i 
+                last = i
                 i -= 1
                 continue
             if s[i] < s[last]:
@@ -32,4 +32,3 @@ class Solution:
                     break
                 j += 1
         return s[last:]
-

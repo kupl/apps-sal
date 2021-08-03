@@ -1,1 +1,1 @@
-stringy=lambda n:('10'*n)[:n]
+def stringy(n): return ('10' * n)[:n]

@@ -1,5 +1,5 @@
-LVL = 18
 from collections import defaultdict
+LVL = 18
 
 
 def pattern_repr(x):
@@ -35,10 +35,10 @@ class CodeforcesTask713ASolution:
             for query in self.queries:
                 if query[0] in "+-":
                     pattern = pattern_repr(query[1])
-                    #print(pattern)
+                    # print(pattern)
                     current = root
                     while pattern:
-                        #print(current.node_id)
+                        # print(current.node_id)
                         if pattern[0]:
                             # going right
                             if current.right:
@@ -61,7 +61,7 @@ class CodeforcesTask713ASolution:
                 else:
                     pattern = [int(x) for x in "0" * (LVL - len(query[1])) + query[1]]
                     current = root
-                    #print(pattern)
+                    # print(pattern)
                     while pattern:
                         if pattern[0]:
                             # going right
@@ -101,5 +101,6 @@ def __starting_point():
     Solution.read_input()
     Solution.process_task()
     print(Solution.get_result())
+
 
 __starting_point()

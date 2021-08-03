@@ -1,19 +1,22 @@
 from collections import defaultdict
+
+
 def main():
     n, k = map(int, input().split(" "))
     a = list(map(int, input().split(" ")))
     s = []
-    ord = [-1]*(n+1)
+    ord = [-1] * (n + 1)
     u = 1
     while ord[u] == -1:
         ord[u] = len(s)
         s.append(u)
-        u = a[u-1]
+        u = a[u - 1]
     l = len(s) - ord[u]
     if k < ord[u]:
         print(s[k])
     else:
-        print(s[(k-ord[u])%l+ord[u]])
+        print(s[(k - ord[u]) % l + ord[u]])
+
 
 '''
 def main():
@@ -45,6 +48,10 @@ def main():
         y = (k-cc) % loop_len
         print(s[y+cc]+1)
 '''
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

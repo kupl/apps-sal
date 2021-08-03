@@ -18,17 +18,17 @@ for ch in input().split():
         ok = 1
     if not ok:
         sol += ch
-pl, mn = [n]*a, [1]*b
-s = n*a-b
+pl, mn = [n] * a, [1] * b
+s = n * a - b
 i, j = 0, 0
 while s > n and (i < a or j < b):
     if i < a:
-        amt = min(s-n, n-1)
+        amt = min(s - n, n - 1)
         pl[i] -= amt
         s -= amt
         i += 1
     else:
-        amt = min(s-n, n-1)
+        amt = min(s - n, n - 1)
         mn[j] += amt
         s -= amt
         j += 1
@@ -38,11 +38,11 @@ else:
     print("Possible")
     for ch in sol:
         if ch != 'P' and ch != 'M':
-            print(ch, end = ' ')
+            print(ch, end=' ')
         elif ch == 'P':
-            print(pl[-1], end = ' ')
+            print(pl[-1], end=' ')
             pl.pop()
         else:
-            print(mn[-1], end = ' ')
+            print(mn[-1], end=' ')
             mn.pop()
     print(n)

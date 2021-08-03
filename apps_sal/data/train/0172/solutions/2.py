@@ -8,4 +8,3 @@ class Solution:
                 if rep_num[0] != '0':
                     replaces.append(int(rep_num))
         return max(replaces) - min(replaces)
-

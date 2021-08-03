@@ -8,15 +8,18 @@ ans = []
 for i in range(0, 26):
     pr[i] = i
 
+
 def find_set(v):
     if pr[v] == v:
         return v
     pr[v] = find_set(pr[v])
     return pr[v]
 
+
 def union_set(x, y):
     pr[x] = y
     ans.append((x, y))
+
 
 for i in range(len(a)):
     pa = find_set(ord(a[i]) - 97)

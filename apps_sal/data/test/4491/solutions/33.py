@@ -2,8 +2,8 @@
 
 N = int(input())
 
-upper = list(map(int,input().split()))
-down = list(map(int,input().split()))
+upper = list(map(int, input().split()))
+down = list(map(int, input().split()))
 
 scores = []
 for i in range(N):

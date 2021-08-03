@@ -14,4 +14,3 @@ def increment_string(strng):
     lenght = len(numbers)
     numbers = int(numbers) + 1 if numbers else 1
     return strng + '0' * (lenght - len(str(numbers))) + str(numbers)
-

@@ -7,10 +7,12 @@ def binsearch(good, bad, fn):
             bad = m
     return good
 
+
 def main():
     N, A, B = list(map(int, input().split()))
     H = [int(input()) for _ in range(N)]
     c = A - B
+
     def helper(x):
         r = 0
         for h in H:
@@ -19,5 +21,5 @@ def main():
 
     return binsearch(10**9, 0, helper)
 
-print((main()))
 
+print((main()))

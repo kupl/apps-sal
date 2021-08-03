@@ -24,7 +24,7 @@ class FindElements:
     def find(self, target: int) -> bool:
         target += 1
         s = target
-        l = 0;
+        l = 0
         while target > 0:
             target = target >> 1
             l += 1
@@ -43,11 +43,8 @@ class FindElements:
                 else:
                     return False
         return node and node.val == s - 1
-                     
-        
 
 
 # Your FindElements object will be instantiated and called as such:
 # obj = FindElements(root)
 # param_1 = obj.find(target)
-

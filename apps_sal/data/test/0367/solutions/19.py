@@ -10,24 +10,25 @@ def solve(s):
     num_odd = 0
     odds = []
     for k, v in list(cnt.items()):
-        if v%2:
+        if v % 2:
             num_odd += 1
             odds.append(k)
     odds.sort()
-    for i in range(num_odd//2):
+    for i in range(num_odd // 2):
         cnt[odds[i]] += 1
-        cnt[odds[-i-1]] -= 1
-    if len(s)%2 == 0:
+        cnt[odds[-i - 1]] -= 1
+    if len(s) % 2 == 0:
         return create_palin(cnt)
     else:
         return create_palin_odd(cnt)
 
+
 def create_palin(cnt):
     total = sum(v for k, v in list(cnt.items()))
-    p = [None]*total
+    p = [None] * total
 
     lo = 0
-    hi = total-1
+    hi = total - 1
     for k, v in sorted(cnt.items()):
         while v > 0:
             p[lo] = k
@@ -37,20 +38,21 @@ def create_palin(cnt):
             v -= 2
     return str.join('', p)
 
+
 def create_palin_odd(cnt):
     total = sum(v for k, v in list(cnt.items()))
-    odd = [k for k, v in list(cnt.items()) if v%2 == 1][0]
+    odd = [k for k, v in list(cnt.items()) if v % 2 == 1][0]
     p = []
     for k, v in sorted(cnt.items()):
-        how = v//2
-        p += [k]*(v//2)
+        how = v // 2
+        p += [k] * (v // 2)
     p = p + [odd] + list(reversed(p))
     return str.join('', p)
-
 
 
 def __starting_point():
     s = input()
     print(solve(s))
+
 
 __starting_point()

@@ -30,4 +30,3 @@ else:
                 if h <= 0:
                     print(repeat * n + i + 1 + n)
                     break
-

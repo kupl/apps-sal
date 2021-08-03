@@ -10,4 +10,3 @@ res.append(nums[n - 1])
 
 print(len(res))
 print(' '.join(list(map(str, res))))
-

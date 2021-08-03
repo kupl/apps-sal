@@ -10,17 +10,14 @@ class Solution:
             for c in t:
                 dic[c] = max(dic[c], t[c])
         res = []
-        
+
         def comp(i):
             for c in dic:
                 if arr1[i][c] < dic[c]:
                     return False
             return True
-        
+
         for i in range(len(A)):
             if comp(i):
                 res.append(A[i])
         return res
-                
-            
-

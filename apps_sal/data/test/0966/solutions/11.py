@@ -7,4 +7,3 @@ while True:
         break
     ans += 1
 print(ans)
-

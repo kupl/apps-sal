@@ -4,15 +4,17 @@
 """
 import sys
 
-def bitadd(a,w,bit): #aにwを加える(1-origin)
- 
+
+def bitadd(a, w, bit):  # aにwを加える(1-origin)
+
     x = a
-    while x <= (len(bit)-1):
+    while x <= (len(bit) - 1):
         bit[x] += w
         x += x & (-1 * x)
- 
-def bitsum(a,bit): #ind 1～aまでの和を求める
- 
+
+
+def bitsum(a, bit):  # ind 1～aまでの和を求める
+
     ret = 0
     x = a
     while x > 0:
@@ -25,7 +27,7 @@ S = input()
 
 dic = {}
 
-for i,s in enumerate(S):
+for i, s in enumerate(S):
 
     if s not in dic:
 
@@ -40,8 +42,8 @@ for i in dic:
 
     for j in range(len(dic[i]) // 2):
 
-        pair[dic[i][j]] = dic[i][-1-j]
-        pair[dic[i][-1-j]] = -1
+        pair[dic[i][j]] = dic[i][-1 - j]
+        pair[dic[i][-1 - j]] = -1
 
 numnone = 0
 for i in pair:
@@ -53,26 +55,25 @@ if numnone > 1:
     return
 
 nmax = 0
-for i,num in enumerate(pair):
+for i, num in enumerate(pair):
 
     if num == None:
-        lis[i] = len(S)//2
+        lis[i] = len(S) // 2
 
     if num != None and num >= 0:
-        
+
         lis[i] = nmax
-        lis[num] = len(S)-1-nmax
+        lis[num] = len(S) - 1 - nmax
         nmax += 1
 
-BIT = [0] * (len(S)+1)
+BIT = [0] * (len(S) + 1)
 ans = 0
 lis.reverse()
 
-for i,num in enumerate(lis):
+for i, num in enumerate(lis):
 
     num += 1
-    ans += bitsum(num,BIT)
-    bitadd(num,1,BIT)
+    ans += bitsum(num, BIT)
+    bitadd(num, 1, BIT)
 
-print (ans)
-
+print(ans)

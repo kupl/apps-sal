@@ -16,18 +16,18 @@ for i in range(N):
 # 全部正なので左から累積和
 ans = []
 if m == 0:
-    for i in range(N-1):
-        ans.append((i+1, i+2))
+    for i in range(N - 1):
+        ans.append((i + 1, i + 2))
     print(len(ans))
-    for x,y in ans:
-        print(x,y)
+    for x, y in ans:
+        print(x, y)
 # 全部負なので左から累積和
 elif p == 0:
-    for i in range(N-1, 0, -1):
-        ans.append((i+1, i))
+    for i in range(N - 1, 0, -1):
+        ans.append((i + 1, i))
     print(len(ans))
-    for x,y in ans:
-        print(x,y)
+    for x, y in ans:
+        print(x, y)
 else:
     # 絶対値の大きい方で実施
     big = -1 * float("inf")
@@ -44,23 +44,23 @@ else:
             small_idx = i
 
     # 全体を正にしてから左から累積和
-    if abs(big) >= abs(small): 
+    if abs(big) >= abs(small):
         for i in range(N):
             if A[i] < 0:
-                ans.append((big_idx+1, i+1))
+                ans.append((big_idx + 1, i + 1))
 
-        for i in range(N-1):
-            ans.append((i+1, i+2))
+        for i in range(N - 1):
+            ans.append((i + 1, i + 2))
         print(len(ans))
-        for x,y in ans:
-            print(x,y)
+        for x, y in ans:
+            print(x, y)
     # 全体を負にしてから右から累積和
     else:
         for i in range(N):
             if A[i] > 0:
-                ans.append((small_idx+1, i+1))
-        for i in range(N-1, 0, -1):
-            ans.append((i+1, i))
+                ans.append((small_idx + 1, i + 1))
+        for i in range(N - 1, 0, -1):
+            ans.append((i + 1, i))
         print(len(ans))
-        for x,y in ans:
-            print(x,y)
+        for x, y in ans:
+            print(x, y)

@@ -45,14 +45,15 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 n, m = map(int, input().split())
 XYZ = [list(map(int, input().split())) for _ in range(m)]
 
 uf = uf = UnionFind(n)
 
 for x, y, z in XYZ:
-  x -= 1
-  y -= 1
-  uf.union(x, y)
-  
+    x -= 1
+    y -= 1
+    uf.union(x, y)
+
 print(uf.group_count())

@@ -11,4 +11,3 @@ for i in range(n):
         ans = "NO"
         break
 print(ans)
-

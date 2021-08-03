@@ -4,9 +4,9 @@ l = []
 p = 0
 
 chk = True
-while p<N:
-    for i in range(1, min(M, N-p)+1)[::-1]:
-        if S[p+i]=="0":
+while p < N:
+    for i in range(1, min(M, N - p) + 1)[::-1]:
+        if S[p + i] == "0":
             break
     else:
         print(-1)

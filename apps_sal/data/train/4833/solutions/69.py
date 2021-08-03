@@ -4,7 +4,7 @@ def replace_exclamation(s):
     for i in s:
         if i.lower() not in ls:
             new += i
-        else: 
+        else:
             new += '!'
-            
+
     return new

@@ -15,6 +15,7 @@ def lte(n, a, d):
                 hi = mid
         return lo + 1
 
+
 def score(n, m, a, b, d):
     ca = lte(n, a, d)
     cb = lte(m, b, d)
@@ -43,7 +44,7 @@ def main():
     mega = set(a + b)
 
     for d in mega:
-        if d <= 0: 
+        if d <= 0:
             continue
 
         a_score, b_score = score(n, m, a, b, d)
@@ -56,5 +57,5 @@ def main():
 
     print(out)
 
-main()
 
+main()

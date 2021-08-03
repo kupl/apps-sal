@@ -10,7 +10,7 @@ class Solution:
         #         if arr[i]-arr[j] == difference:
         #             dp[i] = max(dp[i], 1+dp[j])
         # return max(dp)
-        
+
         # stores the cur results of longest sequence
         dp = {}
         ans = 1
@@ -18,8 +18,8 @@ class Solution:
             count = 1
             # update count for current if
             # condition is met
-            if arr[i]-difference in dp:
-                count += dp[arr[i]-difference]
+            if arr[i] - difference in dp:
+                count += dp[arr[i] - difference]
             # store cur results
             dp[arr[i]] = count
             ans = max(ans, count)

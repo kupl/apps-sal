@@ -27,4 +27,3 @@ else:
             else:
                 b = B[1]
     print((n - a[1] - b[1]))
-

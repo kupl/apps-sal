@@ -1,12 +1,13 @@
 import sys
 input = sys.stdin.readline
 
+
 def solve():
     H, W = map(int, input().split())
     G = [[ord(s) - 46 for s in input().strip()] for _ in range(H)]
     Gy = list(map(list, zip(*G)))
     k = 0
-    St = [None]*77
+    St = [None] * 77
     for h, G1 in enumerate(G, 1):
         k = max(k, max(G1))
         for w, g in enumerate(G1, 1):
@@ -34,11 +35,11 @@ def solve():
             A.append(A[-1])
             continue
         if type(St[j]) == tuple:
-            A.append(St[j]*2)
+            A.append(St[j] * 2)
             continue
         x = St[j]
         if x > 0:
-            Gh = G[x-1]
+            Gh = G[x - 1]
             p = None
             e = None
             for ig, g in enumerate(Gh):
@@ -53,9 +54,9 @@ def solve():
             for ig in range(p, e + 1):
                 if Gh[ig] < j:
                     return False
-            A.append((x, p+1, x, e+1))
+            A.append((x, p + 1, x, e + 1))
         else:
-            Gw = Gy[-x-1]
+            Gw = Gy[-x - 1]
             p = None
             e = None
             for ig, g in enumerate(Gw):
@@ -70,10 +71,11 @@ def solve():
             for ig in range(p, e + 1):
                 if Gw[ig] < j:
                     return False
-            A.append((p+1, -x, e+1, -x))
-    
+            A.append((p + 1, -x, e + 1, -x))
+
     return A[::-1]
-    
+
+
 def __starting_point():
     T = int(input())
     for _ in range(T):
@@ -85,4 +87,6 @@ def __starting_point():
         print(len(ans))
         for a in ans:
             print(*a)
+
+
 __starting_point()

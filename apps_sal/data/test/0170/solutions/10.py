@@ -14,13 +14,12 @@ while s1 and s2:
     else:
         s2.append(a)
         s2.append(b)
-    if t>1000:
+    if t > 1000:
         break
-if t>1000:
+if t > 1000:
     print(-1)
 else:
     if s1:
         print(t, 1)
     else:
         print(t, 2)
-

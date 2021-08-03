@@ -23,7 +23,7 @@ for _ in range(T):
         while curr * curr <= size:
             if size % curr == 0:
                 factors.append(curr)
-                factors.append(size//curr)
+                factors.append(size // curr)
             curr += 1
 
         for f in factors:
@@ -38,5 +38,3 @@ for _ in range(T):
                     break
 
     print(SMALL)
-        
-

@@ -11,12 +11,12 @@ def main():
     nums = sorted(read_nums())
     cum_nums = [nums[0]]
     for i in range(1, len(nums)):
-        cum_nums.append(nums[i] + cum_nums[i-1])
+        cum_nums.append(nums[i] + cum_nums[i - 1])
 
     total_sum = cum_nums[-1]
 
     results = []
-    for del_index in range(min(m+1, n)):
+    for del_index in range(min(m + 1, n)):
         right_sum = (total_sum - cum_nums[del_index - 1]) if del_index > 0 else total_sum
         elem_left = n - del_index
         to_add = min(m - del_index, k * elem_left)
@@ -27,5 +27,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

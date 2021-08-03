@@ -6,7 +6,7 @@ def abc070_d():
 
     n = next(inp)
     adjlist = [[] for _ in range(n)]
-    for _ in range(n-1):
+    for _ in range(n - 1):
         a = next(inp) - 1
         b = next(inp) - 1
         c = next(inp)
@@ -18,10 +18,11 @@ def abc070_d():
 
     dist = [-1] * n
 
-    def dfs(x:int, d:int):
+    def dfs(x: int, d: int):
         dist[x] = d
         for nx, nd in adjlist[x]:
-            if dist[nx] != -1: continue
+            if dist[nx] != -1:
+                continue
             dfs(nx, d + nd)
 
     dfs(k, 0)
@@ -32,6 +33,9 @@ def abc070_d():
         ans = dist[x] + dist[y]
         print(ans)
 
+
 def __starting_point():
     abc070_d()
+
+
 __starting_point()

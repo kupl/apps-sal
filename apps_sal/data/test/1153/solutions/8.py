@@ -1,13 +1,13 @@
-n,m = list(map(int,input().split()))
-xi = list(map(int,input().split()))
-yi = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
+xi = list(map(int, input().split()))
+yi = list(map(int, input().split()))
 i = 0
 j = 0
 ans = 0
 x = xi[0]
 y = yi[0]
 while n > i and m > j:
-    if x==y:
+    if x == y:
         ans += 1
         i += 1
         j += 1
@@ -26,4 +26,3 @@ while n > i and m > j:
             break
         x += xi[i]
 print(ans)
-

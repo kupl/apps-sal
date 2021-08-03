@@ -1,8 +1,10 @@
 from regex import findall, match
-from random import randint # This is useless here seeing the test cases but let's do it well
+from random import randint  # This is useless here seeing the test cases but let's do it well
+
 
 def roll(desc, verbose=False):
-    if not (isinstance(desc, str) and match(r"^(?: *(\d*d\d+|[+-]\d+))+$", desc)): return False
+    if not (isinstance(desc, str) and match(r"^(?: *(\d*d\d+|[+-]\d+))+$", desc)):
+        return False
     dices, modifiers = [], 0
     for x in findall(r"(?: *(\d*d\d+|[+-]\d+))", desc):
         if 'd' in x:
@@ -10,4 +12,4 @@ def roll(desc, verbose=False):
             dices.extend(randint(1, b) for _ in range(a))
         else:
             modifiers += int(x)
-    return {"dice":dices, "modifier":modifiers} if verbose else sum(dices) + modifiers
+    return {"dice": dices, "modifier": modifiers} if verbose else sum(dices) + modifiers

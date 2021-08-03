@@ -9,4 +9,3 @@ if first:
     print("First")
 else:
     print("Second")
-

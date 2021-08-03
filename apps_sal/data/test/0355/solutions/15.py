@@ -10,12 +10,12 @@ import time
 #   = [i for i in input().split()]
 
 #() = (int(i) for i in input().split())
-a = [[ 0 for j in range(8) ] for i in range(8) ]
+a = [[0 for j in range(8)] for i in range(8)]
 
 for i in range(8):
-    b   = input()
+    b = input()
     for j in range(8):
-        a[j][i]=b[j]
+        a[j][i] = b[j]
 
 start = time.time()
 
@@ -38,10 +38,10 @@ for i in range(8):
 for i in range(8):
     flag = True
     for j in range(8):
-        if a[i][7-j] == 'W':
+        if a[i][7 - j] == 'W':
             flag = False
             break
-        if a[i][7-j] == 'B':
+        if a[i][7 - j] == 'B':
             break
     if flag == False:
         continue
@@ -53,7 +53,6 @@ if mW <= mB:
     print('A')
 else:
     print('B')
-#print(ans)
+# print(ans)
 finish = time.time()
 #print(finish - start)
-

@@ -1,11 +1,10 @@
-n=int(input())
+n = int(input())
 
-L=list(map(int,input().split()))
-Taken=[False]*n
+L = list(map(int, input().split()))
+Taken = [False] * n
 for item in L:
-    Taken[item-1]=True
+    Taken[item - 1] = True
 for i in range(n):
     if(not Taken[i]):
-        print(i+1)
+        print(i + 1)
         break
-

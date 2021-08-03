@@ -17,4 +17,3 @@ while i:
         else:
             b -= i
     i += 1
-

@@ -14,4 +14,3 @@ for i in product([True, False], repeat=10):
         t += P[j][sum(1 & F[j][k] for k in range(10) if i[k])]
     result = max(result, t)
 print(result)
-

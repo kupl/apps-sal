@@ -14,4 +14,3 @@ for i in a:
         ans += 1
 
 print(ans)
-

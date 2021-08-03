@@ -4,16 +4,16 @@ class Solution:
             if x != parent[x]:
                 parent[x] = find(parent[x])
             return parent[x]
-        
+
         def union(x, y):
             x, y = find(x), find(y)
             if x == y:
                 return 0
             parent[x] = y
             return 1
-        
+
         res, e1, e2 = 0, 0, 0
-        parent = [x for x in range(N+1)]
+        parent = [x for x in range(N + 1)]
         # Alice and Bob
         for t, x, y in edges:
             if t == 3:
@@ -23,7 +23,7 @@ class Solution:
                 else:
                     res += 1
         parent_ = parent[:]
-        
+
         # only Alice
         for t, x, y in edges:
             if t == 1:
@@ -31,7 +31,7 @@ class Solution:
                     e1 += 1
                 else:
                     res += 1
-                    
+
         # only Bob
         parent = parent_
         for t, x, y in edges:
@@ -41,4 +41,4 @@ class Solution:
                 else:
                     res += 1
 
-        return res if (e1 == N-1 and e2 == N-1) else -1
+        return res if (e1 == N - 1 and e2 == N - 1) else -1

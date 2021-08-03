@@ -9,7 +9,7 @@ dd = defaultdict(list)
 N, K = list(map(int, readline().split()))
 for i in range(N):
     t, d = list(map(int, readline().split()))
-    heapq.heappush(dd[t], d*-1)
+    heapq.heappush(dd[t], d * -1)
 
 dd = list(dd.values())
 dd.sort()
@@ -28,12 +28,11 @@ for i in range(min(K, len(dd))):
         heapq.heappush(var, tmp)
         len_var += 1
         sum_var += tmp
-    while len_var > K-(i+1) and len_var > 0:
+    while len_var > K - (i + 1) and len_var > 0:
         del_var = heapq.heappop(var)
         len_var -= 1
         sum_var -= del_var
-    if len_var == K-(i+1):
-        ans = max(ans , fix+sum_var + (i+1)**2)
+    if len_var == K - (i + 1):
+        ans = max(ans, fix + sum_var + (i + 1)**2)
 
 print(ans)
-

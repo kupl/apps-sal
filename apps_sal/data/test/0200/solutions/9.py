@@ -1,4 +1,4 @@
-'__author__'=='deepak Singh Mehta) '
+'__author__' == 'deepak Singh Mehta) '
 
 h1, h2 = list(map(int, input().split()))
 a, b = list(map(int, input().split()))
@@ -22,4 +22,3 @@ else:
                 print(day)
                 break
             h1 -= b * 12
-

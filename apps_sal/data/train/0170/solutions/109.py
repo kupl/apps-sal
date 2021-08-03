@@ -8,7 +8,8 @@ class Solution:
         last = [0] * (len(d) + 1)
         prev = -1
         for i, x in enumerate(a):
-            if x < prev: break
+            if x < prev:
+                break
             last[x] = i + 1
             prev = x
 
@@ -19,7 +20,8 @@ class Solution:
         ans = last[-1]
         prev = 1e100
         for i, x in enumerate(a[::-1]):
-            if prev < x: break
+            if prev < x:
+                break
             ans = max(ans, i + 1 + last[x])
             prev = x
         return n - ans

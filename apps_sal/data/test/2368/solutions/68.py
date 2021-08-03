@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -58,7 +59,7 @@ B = list(map(int, input().split()))
 uf = UnionFind(N)
 for _ in range(M):
     a, b = map(int, input().split())
-    uf.union(a-1, b-1)
+    uf.union(a - 1, b - 1)
 
 members = uf.all_group_members().values()
 for r in members:
@@ -67,7 +68,7 @@ for r in members:
     for m in r:
         sm += A[m]
         sm_ += B[m]
-    if sm!= sm_:
+    if sm != sm_:
         print("No")
         return
 

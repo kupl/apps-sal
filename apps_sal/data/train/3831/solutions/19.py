@@ -1,3 +1,3 @@
 def angle(n):
-    intang = 180*(n-2)
+    intang = 180 * (n - 2)
     return intang

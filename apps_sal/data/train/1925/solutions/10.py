@@ -16,9 +16,8 @@ class Solution:
                 if preorder[idx] > preorder[0]:
                     break
                 idx += 1
-            root.left  = construct(preorder[1:idx])
+            root.left = construct(preorder[1:idx])
             root.right = construct(preorder[idx:])
             return root
         root = construct(preorder)
         return root
-

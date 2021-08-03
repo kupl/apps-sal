@@ -1,5 +1,5 @@
 def cookie(x):
-    #Good Luck
+    # Good Luck
     if x == True or x == False:
         return "Who ate the last cookie? It was the dog!"
     if isinstance(x, int) or isinstance(x, float):

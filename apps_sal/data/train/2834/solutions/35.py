@@ -1,11 +1,9 @@
 def symmetric_point(p, q):
- 
-    difference = []
 
+    difference = []
 
     zip_object = zip(p, q)
     for p, q in zip_object:
-        difference.append(2*q-p)
-   
-    
+        difference.append(2 * q - p)
+
     return(difference)

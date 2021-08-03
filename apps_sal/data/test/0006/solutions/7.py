@@ -17,4 +17,3 @@ for _ in range(t):
     else:
         x -= b
         print((x + a - 1) // a + 1)
-

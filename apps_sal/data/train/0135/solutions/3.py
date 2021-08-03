@@ -1,7 +1,7 @@
 class Solution:
-    
+
     def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:
-        
+
         j = 0
         stack = []
         for x in pushed:
@@ -10,5 +10,5 @@ class Solution:
                 print(j, stack)
                 stack.pop()
                 j += 1
-        
+
         return j == len(popped)

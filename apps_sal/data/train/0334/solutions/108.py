@@ -4,7 +4,7 @@ class Solution:
         i = 1
         temp = cost[0]
         while i < len(cost):
-            if s[i-1] == s[i]:
+            if s[i - 1] == s[i]:
                 res += min(temp, cost[i])
                 temp = max(temp, cost[i])
             else:

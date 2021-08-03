@@ -8,4 +8,3 @@ class Solution:
                     ans += A[i - 1] - A[i] + 1
                     A[i] = A[i - 1] + 1
         return ans
-

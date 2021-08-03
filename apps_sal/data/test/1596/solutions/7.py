@@ -10,25 +10,23 @@ for i in stdin.readline().strip():
 
     if i not in 'nu':
         dp = {
-                'norm': (dp['norm'] + dp['last_n'] + dp['last_u']) % rem,
-                'last_n': 0,
-                'last_u': 0
+            'norm': (dp['norm'] + dp['last_n'] + dp['last_u']) % rem,
+            'last_n': 0,
+            'last_u': 0
         }
         continue
 
     if i == 'u':
         dp = {
-                'norm': (dp['last_u']) % rem,
-                'last_u': (dp['last_u'] + dp['norm'] + dp['last_n']) % rem,
-                'last_n': 0
+            'norm': (dp['last_u']) % rem,
+            'last_u': (dp['last_u'] + dp['norm'] + dp['last_n']) % rem,
+            'last_n': 0
         }
 
     if i == 'n':
         dp = {
-                'norm': (dp['last_n']) % rem,
-                'last_n': (dp['last_n'] + dp['norm'] + dp['last_u']) % rem,
-                'last_u': 0
+            'norm': (dp['last_n']) % rem,
+            'last_n': (dp['last_n'] + dp['norm'] + dp['last_u']) % rem,
+            'last_u': 0
         }
 print((dp['norm'] + dp['last_u'] + dp['last_n']) % rem)
-
-

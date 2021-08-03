@@ -3,6 +3,7 @@ from collections import defaultdict
 
 MAX_CHARS = 256
 
+
 def solve(strr):
     n = len(strr)
 
@@ -36,8 +37,8 @@ def solve(strr):
 
     return str(strr[start_index: start_index + min_len])
 
+
 for _ in range(int(input())):
     x = solve(input().strip())
 
     print(''.join(str(ord(c) - ord('a') + 1) for c in x))
-

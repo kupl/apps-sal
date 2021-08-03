@@ -25,11 +25,9 @@ for i in range(1, len(dp)):
                     dp[i][j][k] = dp[i - 1][j - 1][l] + cost[i][k]'''
 
 
-
 n, m = [int(x) for x in input().split()]
 plant = [int(input().split()[0]) for x in range(n)]
 dp = [1 for x in range(n)]
-
 
 
 for i in range(len(plant)):
@@ -37,75 +35,11 @@ for i in range(len(plant)):
         if plant[j] > plant[i]:
             continue
         dp[i] = max(dp[i], dp[j] + 1)
-#print(dp)
+# print(dp)
 print(n - max(dp))
-
-
-
 
 
 '''for i in range(1, n):
     for k in range(plant[i], 0, -1):
         dp[plant[i]] = max(dp[plant[i]], 1 + dp[k])
 print(n - max(dp) - 1)'''
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,8 +1,9 @@
 n = int(input())
 
+
 def f(x, a):
     if x == 2:
-        return [(a, a+1)]
+        return [(a, a + 1)]
     else:
         s = []
         for i in range(x // 2):

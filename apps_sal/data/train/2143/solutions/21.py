@@ -2,9 +2,10 @@ import operator
 import itertools
 import bisect
 
+
 def maxl(l, m, mx):
     l.sort(key=operator.itemgetter(1))
-    
+
     m1, m2 = 0, 0
     pp = None
     for b, p in l:
@@ -21,8 +22,8 @@ def maxl(l, m, mx):
             elif b > m2:
                 m2 = b
     if m1 and m2 and m1 + m2 > mx:
-         mx = m1 + m2
-         
+        mx = m1 + m2
+
     lp = [p for(b, p) in l]
     lb = list(itertools.accumulate((b for (b, p) in l), max))
     for i, ((b, p), mb) in enumerate(zip(l, lb)):
@@ -34,7 +35,7 @@ def maxl(l, m, mx):
                 mx = x
     return mx
 
-   
+
 fc = []
 fd = []
 
@@ -55,4 +56,3 @@ mx = maxl(fc, c, mx)
 mx = maxl(fd, d, mx)
 
 print(mx)
-

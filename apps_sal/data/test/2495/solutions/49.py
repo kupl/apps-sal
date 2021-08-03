@@ -6,7 +6,7 @@ if A[0] > 0:
     ans1 = 0
 else:
     A_sum = 1
-    ans1 = 1-A[0]
+    ans1 = 1 - A[0]
 for i in range(1, N):
     if A_sum < 0:
         A_sum += A[i]
@@ -25,7 +25,7 @@ if A[0] < 0:
     ans2 = 0
 else:
     A_sum = -1
-    ans2 = A[0]-(-1)
+    ans2 = A[0] - (-1)
 for i in range(1, N):
     if A_sum < 0:
         A_sum += A[i]
@@ -39,6 +39,4 @@ for i in range(1, N):
             A_sum = -1
 
 
-
 print((min(ans1, ans2)))
-

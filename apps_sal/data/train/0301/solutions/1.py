@@ -22,6 +22,3 @@ class Solution:
                             break
                     # print(dp)
         return max(dp)
-        
-                    
-

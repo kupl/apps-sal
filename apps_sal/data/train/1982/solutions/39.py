@@ -21,4 +21,3 @@ class Solution:
                         if colored[neighbor] == colored[node]:  # conflict color
                             return False
         return True
-

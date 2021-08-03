@@ -5,7 +5,7 @@ INF = 10 ** 6
 d = [INF for _ in range(k)]
 
 d[1] = 1
-temp = [[1,1]]
+temp = [[1, 1]]
 while 1:
     next = []
     for p, c in temp:

@@ -9,10 +9,13 @@ def main():
     r = list(map(int, input().split()))
     p.sort(reverse=True)
     q.sort(reverse=True)
-    r = p[:x]+q[:y]+r
+    r = p[:x] + q[:y] + r
     r.sort(reverse=True)
-    print(sum(r[:x+y]))
+    print(sum(r[:x + y]))
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

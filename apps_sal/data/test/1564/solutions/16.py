@@ -12,7 +12,7 @@ for i in range(n):
         else:
             ba.append(i)
 
-if ((len(ab)+len(ba)) % 2 > 0):
+if ((len(ab) + len(ba)) % 2 > 0):
     print(-1)
     return
 

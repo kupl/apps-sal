@@ -15,4 +15,3 @@ class Solution:
             maxAB = max(maxAB, currA, currB)  # 更新最优值
 
         return maxAB
-

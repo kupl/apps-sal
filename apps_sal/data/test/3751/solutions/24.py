@@ -11,4 +11,3 @@ for x in s:
     else:
         possible = False
 print('YES' if possible else 'NO')
-

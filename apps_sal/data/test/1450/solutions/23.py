@@ -4,7 +4,6 @@ s = s.replace('1', '')
 
 i = s.find('2')
 if i == -1:
-    print(s + '1'*t)
+    print(s + '1' * t)
 else:
-    print(s[:i] + '1'*t + s[i:])
-
+    print(s[:i] + '1' * t + s[i:])

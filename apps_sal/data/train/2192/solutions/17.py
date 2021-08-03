@@ -5,7 +5,10 @@ from itertools import accumulate
 
 import math
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 n = int(input())
 a, dp = sorted([tuple(R()) for _ in range(n)]), [0] * n
 for i, (loc, dis) in enumerate(a):

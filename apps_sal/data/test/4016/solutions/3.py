@@ -9,9 +9,8 @@ for i in range(1, len(s)):
     if s[p[i]] == s[i]:
         p[i] += 1
 
-print(s, end = '')
+print(s, end='')
 for i in range(1, k):
     for j in range(p[-1], len(s)):
         print(s[j], end='')
 print()
-

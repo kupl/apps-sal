@@ -23,6 +23,8 @@ def s_row(N): return [s_input for _ in range(N)]
 def s_row_str(N): return [s_list() for _ in range(N)]
 def s_row_list(N): return [list(s_input()) for _ in range(N)]
 def lcm(a, b): return a * b // gcd(a, b)
+
+
 sys.setrecursionlimit(10 ** 8)
 INF = float('inf')
 MOD = 10 ** 9 + 7
@@ -31,18 +33,21 @@ str_list = []
 
 
 def main():
-	N = i_input()
-	A = i_list()
+    N = i_input()
+    A = i_list()
 
-	list.sort(A)
-	sum = 0
-	for i in range(1,N):
-		sum += A[N-1 - floor(i/2)]
+    list.sort(A)
+    sum = 0
+    for i in range(1, N):
+        sum += A[N - 1 - floor(i / 2)]
 
-	print(sum)
+    print(sum)
 
-	return
+    return
+
 
 def __starting_point():
-	main()
+    main()
+
+
 __starting_point()

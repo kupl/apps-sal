@@ -7,7 +7,7 @@ for i in range(n):
     if not cur_c:
         continue
     count += 1
-    for j in range(i+1,n):
-        if a[j]%cur_c == 0:
+    for j in range(i + 1, n):
+        if a[j] % cur_c == 0:
             a[j] = 0
 print(count)

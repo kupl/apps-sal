@@ -1,7 +1,7 @@
 t = map(int, input().strip())
 s = map(int, input().strip())
 
-digits1 = [0] * 10 # makes a list of size 10 filled with zeros.
+digits1 = [0] * 10  # makes a list of size 10 filled with zeros.
 digits2 = [0] * 10
 
 for i in t:
@@ -16,4 +16,4 @@ digits2[2] += digits2[5]
 digits2[6] += digits2[9]
 digits2[5] = digits2[9] = 0
 
-print(min(map(lambda x : digits2[x] // digits1[x] if digits1[x] != 0 else 999999, range(10))))
+print(min(map(lambda x: digits2[x] // digits1[x] if digits1[x] != 0 else 999999, range(10))))

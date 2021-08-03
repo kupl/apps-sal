@@ -30,5 +30,3 @@ class Solution:
                 pos2 -= 1
         ans.reverse()
         return ''.join(ans)
-
-

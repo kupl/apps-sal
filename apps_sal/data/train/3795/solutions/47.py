@@ -13,4 +13,3 @@ class TestCombat(unittest.TestCase):
 
     def test_combat_with_given_health_is_greater_than_damage(self):
         self.assertEqual(combat(health=100, damage=5), 95)
-

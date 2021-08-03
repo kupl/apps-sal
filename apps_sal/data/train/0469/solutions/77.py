@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         q = deque()
@@ -15,7 +17,7 @@ class Solution:
             root = i
             break
         q.append(root)
-        while len(q)>0:
+        while len(q) > 0:
             element = q.popleft()
             visited[element] = 1
             left = leftChild[element]
@@ -34,4 +36,3 @@ class Solution:
             if i == 0:
                 return False
         return True
-

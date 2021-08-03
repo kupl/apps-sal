@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         def in_c(a: int, b: int):
@@ -8,7 +10,7 @@ class Solution:
             return True
 
         N = len(words)
-        words = sorted(words, key=lambda i:len(i))
+        words = sorted(words, key=lambda i: len(i))
         word_c = [Counter(ii) for ii in words]
         dp = [1] * N
         for ii in range(N):
@@ -18,4 +20,3 @@ class Solution:
         print(words)
         print(dp)
         return max(dp)
-

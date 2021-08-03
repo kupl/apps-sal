@@ -7,12 +7,12 @@ def solve(p, s):
     for i, e in enumerate(p):
         if e not in children:
             children[e] = []
-        children[e].append(i+2)
-        parents[i+2] = e
+        children[e].append(i + 2)
+        parents[i + 2] = e
 
     sums = {}
     for i, e in enumerate(s):
-        sums[i+1] = e if e != -1 else None
+        sums[i + 1] = e if e != -1 else None
 
     queue = deque([1])
 
@@ -43,13 +43,11 @@ def solve(p, s):
     return result
 
 
-
-
-
-
 def __starting_point():
     n = int(input())
     p = map(int, input().split())
     s = map(int, input().split())
     print(solve(p, s))
+
+
 __starting_point()

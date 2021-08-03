@@ -8,5 +8,3 @@ for i in range(5):
     res = min(res, a[i] // b[i])
 
 print(res)
-
-

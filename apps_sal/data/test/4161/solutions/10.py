@@ -4,13 +4,16 @@ from collections import defaultdict as D, Counter as CNT
 from functools import reduce as R
 import heapq as HQ
 
+
 class Heap:
-  def __init__(self, data, reverse=False):
-    self.reverse = -1 if reverse else 1
-    self.data = [self.reverse * d for d in data]
-    HQ.heapify(self.data)
-  def push(self, x): return HQ.heappush(self.data, self.reverse * x)
-  def pop(self): return self.reverse * HQ.heappop(self.data) 
+    def __init__(self, data, reverse=False):
+        self.reverse = -1 if reverse else 1
+        self.data = [self.reverse * d for d in data]
+        HQ.heapify(self.data)
+
+    def push(self, x): return HQ.heappush(self.data, self.reverse * x)
+    def pop(self): return self.reverse * HQ.heappop(self.data)
+
 
 ALP = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 alp = 'abcdefghijklmnopqrstuvwxyz'
@@ -23,14 +26,13 @@ def I(): return _I(S())
 def _Is(ss): return list(ss) if isinstance(ss, tuple) else [ss]
 def Is(): return _Is(I())
 
+
 n = I()
 
 ans = 0
-for i in range(1, n+1):
-    for j in range(1, n+1):
-        for k in range(1, n+1):
-           ans += G(i, G(j, k))
+for i in range(1, n + 1):
+    for j in range(1, n + 1):
+        for k in range(1, n + 1):
+            ans += G(i, G(j, k))
 
 print(ans)
-            
-

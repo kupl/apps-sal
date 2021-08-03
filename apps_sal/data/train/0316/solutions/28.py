@@ -3,9 +3,9 @@ class Solution:
         n = len(s)
         i = 0
         maxi = ''
-        while i<n:
+        while i < n:
             print()
-            if s[:i] == s[n-i:]: 
+            if s[:i] == s[n - i:]:
                 maxi = max(maxi, s[:i])
             i += 1
         print('maxi', maxi)

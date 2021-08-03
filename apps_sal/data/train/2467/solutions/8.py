@@ -4,4 +4,3 @@ class Solution:
             if sum(1 for a in nums if a >= i) == i:
                 return i
         return -1
-

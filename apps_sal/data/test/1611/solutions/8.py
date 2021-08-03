@@ -7,7 +7,3 @@ M = max(v)
 v.remove(M)
 
 print(M - sum(v) + 1)
-
-
-
-

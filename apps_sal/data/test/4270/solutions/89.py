@@ -8,4 +8,3 @@ for _ in range(n - 1):
     arr.append(new_v)
 
 print((arr[0]))
-

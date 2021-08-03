@@ -12,35 +12,11 @@ for j in range(m):
         if a[i][j] == '*':
             b.append(i)
 
-c.append(max(b) - min(b)+1)
+c.append(max(b) - min(b) + 1)
 b = []
 for i in range(n):
     for j in range(m):
         if a[i][j] == '*':
             b.append(j)
-d.append(max(b) - min(b)+1)
-print(max(max(c),max(d)))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
+d.append(max(b) - min(b) + 1)
+print(max(max(c), max(d)))

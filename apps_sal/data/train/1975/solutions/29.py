@@ -3,7 +3,6 @@ class CustomStack:
     def __init__(self, maxSize: int):
         self.stack = []
         self.maxSize = maxSize
-        
 
     def push(self, x: int) -> None:
         if len(self.stack) < self.maxSize:
@@ -11,7 +10,6 @@ class CustomStack:
         else:
             # do nothing
             pass
-        
 
     def pop(self) -> int:
         if self.stack:
@@ -25,7 +23,6 @@ class CustomStack:
                 self.stack[i] += val
             except:
                 pass
-        
 
 
 # Your CustomStack object will be instantiated and called as such:
@@ -33,4 +30,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

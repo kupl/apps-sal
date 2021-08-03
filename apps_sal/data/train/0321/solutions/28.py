@@ -14,9 +14,8 @@ class Solution:
                 s2_counter += 1
             else:
                 s2_counter += 1
-        print((s1_counter , s2_counter))        
-        if s1_counter == len(s1) or   s2_counter == len(s1):
+        print((s1_counter, s2_counter))
+        if s1_counter == len(s1) or s2_counter == len(s1):
             return True
         else:
             return False
-

@@ -9,4 +9,3 @@ class Solution:
             return 'Alice'
         else:
             return 'Bob'
-

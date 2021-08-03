@@ -16,4 +16,3 @@ class Solution:
             ans = max(ans, j - i)
 
         return ans
-

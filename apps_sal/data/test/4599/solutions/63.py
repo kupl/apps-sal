@@ -15,7 +15,7 @@ def main():
             alice += a[i]
         else:
             bob += a[i]
-    
+
     print(alice - bob)
 
 

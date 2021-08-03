@@ -13,9 +13,12 @@ def main():
                 ans -= 3
                 for i in range(3):
                     stack.pop()
-        
-    return print(ans) 
+
+    return print(ans)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -18,4 +18,3 @@ for _ in range(q):
             servers[sn] = t + d - 1
 
         print(sum([x + 1 for x in free]))
-

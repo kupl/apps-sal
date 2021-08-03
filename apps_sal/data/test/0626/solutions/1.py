@@ -15,4 +15,3 @@ while k != n:
                 a[i] = 10000
     ans += 1
 print(ans - 1)
-

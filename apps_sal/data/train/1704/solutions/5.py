@@ -213,7 +213,6 @@ class FourOfAKind(HandValue):
             return 'Loss'
         return 'Tie'
 
-
     @staticmethod
     def is_valid(poker_hand):
         counter_self_values = Counter(poker_hand.card_values)
@@ -239,7 +238,6 @@ class Straight(HandValue):
 class Flush(HandValue):
     def compare(self, other):
         return HighCard.compare(self, other)
-
 
     @staticmethod
     def is_valid(poker_hand):

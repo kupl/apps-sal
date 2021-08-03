@@ -41,4 +41,3 @@ class Solution:
                 res += d
 
         return res
-

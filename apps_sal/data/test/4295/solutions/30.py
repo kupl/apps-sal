@@ -1,4 +1,4 @@
-x,y = map(int,input().split())
+x, y = map(int, input().split())
 
 z = x % y
 p = y - z

@@ -3,7 +3,7 @@ class Solution:
         dp = {
             0: []
         }
-        
+
         skill_to_index = {skill: i for i, skill in enumerate(req_skills)}
         for i, skills in enumerate(people):
             mask = 0
@@ -14,4 +14,4 @@ class Solution:
                 new_filled_req = filled_req | mask
                 if (new_filled_req not in dp) or (len(dp[new_filled_req]) > len(dp[filled_req]) + 1):
                     dp[new_filled_req] = dp[filled_req] + [i]
-        return dp[(1 << len(req_skills))-1]
+        return dp[(1 << len(req_skills)) - 1]

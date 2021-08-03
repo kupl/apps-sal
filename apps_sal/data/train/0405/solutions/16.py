@@ -1,18 +1,17 @@
 class Solution:
     def new21Game(self, N: int, K: int, W: int) -> float:
-#         probs = [0] * (n + 1)
-#         probs[0] = 1
-        
-#         prob = 1 / w
-        
-            
-#         for i in range(k):
-#             for j in range(1, w + 1):
-#                 if i + j <= n:
-#                     probs[i + j] += probs[i] * prob
-        
-#         return sum(probs[k : n + 1])
-        
+        #         probs = [0] * (n + 1)
+        #         probs[0] = 1
+
+        #         prob = 1 / w
+
+        #         for i in range(k):
+        #             for j in range(1, w + 1):
+        #                 if i + j <= n:
+        #                     probs[i + j] += probs[i] * prob
+
+        #         return sum(probs[k : n + 1])
+
         dp = [0.0] * (N + W + 1)
         # dp[x] = the answer when Alice has x points
         for k in range(K, N + 1):

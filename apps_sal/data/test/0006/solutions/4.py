@@ -9,15 +9,15 @@ for _ in range(t):
 
     for i in range(n):
         d, h = map(int, input().split())
-        a = max(a, d-h)
+        a = max(a, d - h)
         b = max(b, d)
-    if (x<=b):
+    if (x <= b):
         ans.append(1)
         continue
-    elif (a<=0):
+    elif (a <= 0):
         ans.append(-1)
     else:
-        x = x-b
-        ans.append(ceil(x/a)+1)
+        x = x - b
+        ans.append(ceil(x / a) + 1)
 for el in ans:
     print(el)

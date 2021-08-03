@@ -1,6 +1,6 @@
 k = int(input())
 n = 7
-n = n%k
+n = n % k
 j = 0
 i = 1
 if k % 2 == 0 or k % 5 == 0:
@@ -11,7 +11,7 @@ if n == 0:
     return
 while n != 0:
     j = n
-    n = (n*10 + 7) % k 
+    n = (n * 10 + 7) % k
     if j == n:
         print(-1)
         return

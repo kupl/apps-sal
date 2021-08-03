@@ -1,5 +1,6 @@
 from math import ceil
 
+
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
@@ -14,7 +15,7 @@ class Solution:
             else:
                 hi = mid - 1
         return curAns
-                
+
     def canFitAllBalls(self, dist, m, position):
         prev = None
         for pos in position:

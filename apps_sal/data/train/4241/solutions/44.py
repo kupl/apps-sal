@@ -1,13 +1,7 @@
 def sequence_sum(b, e, s):
-    #your code here
+    # your code here
     sum = 0
     while b <= e:
         sum += b
-        b += s 
+        b += s
     return sum
-            
-            
-
-        
-
-

@@ -7,4 +7,3 @@ def reverse_alternate(string):
         else:
             res.append(arr[arr.index(i)])
     return " ".join(res)
-

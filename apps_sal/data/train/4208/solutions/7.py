@@ -1,9 +1,9 @@
 def ipsubnet2list(subnet):
     import ipaddress
-    ls=[]
+    ls = []
     try:
         for i in ipaddress.IPv4Network(subnet):
             ls.append(str(i))
-    except :
+    except:
         return None
-    return ls[1:-1] if len(ls)>2 else ls
+    return ls[1:-1] if len(ls) > 2 else ls

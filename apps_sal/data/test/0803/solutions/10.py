@@ -17,7 +17,7 @@ if n // 2 - c > n // 2 - k:
             otv += s[i]
         i += 1
     for j in range(i, n):
-        otv += s[j]     
+        otv += s[j]
 elif n // 2 - c < n // 2 - k:
     while i < n and k != n // 2:
         if s[i] == "x":
@@ -27,10 +27,8 @@ elif n // 2 - c < n // 2 - k:
             otv += s[i]
         i += 1
     for j in range(i, n):
-        otv += s[j]   
+        otv += s[j]
 else:
     for j in range(n):
         otv += s[j]
 print(''.join(otv))
-
-

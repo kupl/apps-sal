@@ -24,4 +24,3 @@ elif correct_time[0] * 2 >= wrong_time[0]:
     print(-1)
 else:
     print(max(correct_time[-1], correct_time[0] * 2))
-

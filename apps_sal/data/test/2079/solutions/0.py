@@ -1,4 +1,6 @@
 from collections import deque
+
+
 def main():
     n = int(input())
     a = list(map(int, input().split()))
@@ -21,4 +23,6 @@ def main():
             count2 += 1
     for i in range(2 * n):
         print(ans[i], end=' ')
+
+
 main()

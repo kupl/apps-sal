@@ -6,14 +6,20 @@ for len in range(N):
     for i in range(4):
         for j in range(4):
             for k in range(4):
-                if dp[len][i][j][k] == 0: continue
+                if dp[len][i][j][k] == 0:
+                    continue
 
                 for l in range(4):
-                    if l == 2 and i == 1 and j == 0: continue
-                    if l == 2 and i == 0 and j == 1: continue
-                    if l == 1 and i == 2 and j == 0: continue
-                    if l == 2 and i == 1 and k == 0: continue
-                    if l == 2 and j == 1 and k == 0: continue
+                    if l == 2 and i == 1 and j == 0:
+                        continue
+                    if l == 2 and i == 0 and j == 1:
+                        continue
+                    if l == 1 and i == 2 and j == 0:
+                        continue
+                    if l == 2 and i == 1 and k == 0:
+                        continue
+                    if l == 2 and j == 1 and k == 0:
+                        continue
                     dp[len + 1][l][i][j] += dp[len][i][j][k]
                     dp[len + 1][l][i][j] %= MOD
 ans = 0

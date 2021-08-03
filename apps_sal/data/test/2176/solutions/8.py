@@ -48,18 +48,18 @@ for i in memo2:
 ans += tmp
 ans %= MOD
 
-p = sorted(p, key = itemgetter(1))
-p = sorted(p, key = itemgetter(0))
-for i in range(n-1):
-    if p[i][1] > p[i+1][1]:
+p = sorted(p, key=itemgetter(1))
+p = sorted(p, key=itemgetter(0))
+for i in range(n - 1):
+    if p[i][1] > p[i + 1][1]:
         ans = comb.fact[n] - ans
         ans %= MOD
         print(ans)
         return
 cnt = 1
 tmp = 1
-for i in range(n-1):
-    if p[i][0] == p[i+1][0] and p[i][1] == p[i+1][1]:
+for i in range(n - 1):
+    if p[i][0] == p[i + 1][0] and p[i][1] == p[i + 1][1]:
         cnt += 1
     else:
         tmp *= comb.fact[cnt]

@@ -12,4 +12,5 @@ def __starting_point():
     length = list(map(int, input().split()))
     print((generate_polygon(length)))
 
+
 __starting_point()

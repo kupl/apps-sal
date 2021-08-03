@@ -3,7 +3,7 @@
 test = input()
 for i in range(int(test)):
     N = int(input())
-    arr = list(map(int,input().split()))
+    arr = list(map(int, input().split()))
     ans = []
     for i in range(N):
         if i in arr:
@@ -11,5 +11,3 @@ for i in range(int(test)):
         else:
             ans.append(0)
     print(*ans)
-            
-

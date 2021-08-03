@@ -2,7 +2,7 @@ class Solution:
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         sorted_trips = sorted(trips, key=lambda x: x[1])
         print(sorted_trips)
-        
+
         cur_capacity = 0
         left = 0
         location = [0 for i in range(1000 + 1)]

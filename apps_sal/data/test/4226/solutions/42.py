@@ -23,4 +23,3 @@ for i in range(x + 1):
         res = "Yes"
 
 print(res)
-

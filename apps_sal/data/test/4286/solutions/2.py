@@ -11,15 +11,19 @@ def main():
     r = [0] * n
 
     def find(x):
-        if p[x] != x: p[x] = find(p[x])
+        if p[x] != x:
+            p[x] = find(p[x])
         return p[x]
 
     def check_n_unite(x, y):
         x, y = find(x), find(y)
-        if x == y: return 0
-        if r[x] < r[y]: x, y = y, x
+        if x == y:
+            return 0
+        if r[x] < r[y]:
+            x, y = y, x
         p[y] = x
-        if r[x] == r[y]: r[x] += 1
+        if r[x] == r[y]:
+            r[x] += 1
         return 1
 
     ans = 0
@@ -27,5 +31,6 @@ def main():
         if check_n_unite(u, v):
             ans += w
     print(ans)
+
 
 main()

@@ -5,7 +5,7 @@ class Solution:
             hr2, min2 = time2.split(':')
             timeDiff = (int(hr2) - int(hr1)) * 60 + int(min2) - int(min1)
             return timeDiff
-        
+
         res = set()
         rec = collections.defaultdict(list)
         N = len(keyName)
@@ -21,11 +21,3 @@ class Solution:
                         res.add(key)
                         break
         return sorted(list(res))
-                        
-            
-
-            
-                    
-                    
-                    
-

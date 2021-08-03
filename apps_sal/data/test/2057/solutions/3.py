@@ -15,4 +15,3 @@ for i in range(n):
         ans += 1
         d[i + 1] = ans
 print(ans)
-

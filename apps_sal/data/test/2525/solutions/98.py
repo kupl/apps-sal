@@ -12,10 +12,10 @@ for i in range(Q):
             if forward == 1:
                 f += query[i][2]
             else:
-                b += query[i][2] 
+                b += query[i][2]
         else:
             if forward == 1:
-                b += query[i][2] 
+                b += query[i][2]
             else:
                 f += query[i][2]
 S = ''.join(list(reversed(f))) + S + b
@@ -25,4 +25,3 @@ if forward == -1:
 else:
     ans = S
 print(ans)
-

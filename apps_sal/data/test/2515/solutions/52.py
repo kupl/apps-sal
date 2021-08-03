@@ -24,4 +24,3 @@ for _ in range(Q):
     A.append(C[r] - C[l - 1])
 for a in A:
     print(a)
-

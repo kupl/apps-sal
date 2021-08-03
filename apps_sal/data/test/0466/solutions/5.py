@@ -6,9 +6,8 @@ s = max(n * m - k, 0)
 res = 0
 while s:
     if c > min(s, n) * d:
-        res += min(s,n) * d
+        res += min(s, n) * d
     else:
         res += c
-    s -= min(s,n)
+    s -= min(s, n)
 print(res)
-

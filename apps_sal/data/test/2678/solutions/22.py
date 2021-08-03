@@ -12,8 +12,7 @@ while i < n:
             x = lr[i][1]
 
         i += 1
-        
+
     c += 1
 
 print(c)
-

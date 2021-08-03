@@ -29,4 +29,3 @@ for _ in range(q):
     buf.append((score + min(0, diff[0]) + 1) // 2)
 
 print('\n'.join(map(str, buf)))
-

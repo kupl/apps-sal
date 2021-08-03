@@ -34,4 +34,3 @@ while low <= high:
         low = mid + 1
 
 print(res)
-

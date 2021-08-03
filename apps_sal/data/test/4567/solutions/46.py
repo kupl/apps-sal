@@ -12,9 +12,8 @@ if str(x)[-1] != '0':
 
 ans = x
 for i in range(N):
-    ans = max(x-s[i], ans-s[i])
+    ans = max(x - s[i], ans - s[i])
     if str(ans)[-1] != '0':
         print(ans)
         return
 print((0))
-

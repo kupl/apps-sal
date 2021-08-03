@@ -9,7 +9,7 @@ class Solution:
             num += 1
         if num * num == n:
             return True
-            
+
         for i in range(1, n + 1):
             if dp[i]:
                 continue
@@ -20,7 +20,3 @@ class Solution:
                     break
                 j += 1
         return dp[n]
-                
-        
-        
-

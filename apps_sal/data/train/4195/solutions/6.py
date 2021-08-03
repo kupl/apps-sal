@@ -3,15 +3,14 @@ def merge(line):
     for e in lst:
         if not fr:
             fr = e
-        elif fr==e:
-            mrg.append(fr+e)
+        elif fr == e:
+            mrg.append(fr + e)
             fr = 0
         else:
             mrg.append(fr)
             fr = e
-                
-    mrg.append(fr)
-    while len(mrg)<l:
-        mrg.append(0) 
-    return mrg
 
+    mrg.append(fr)
+    while len(mrg) < l:
+        mrg.append(0)
+    return mrg

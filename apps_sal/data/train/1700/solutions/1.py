@@ -14,7 +14,8 @@ class DynamicConnectivity:
 
     def union(self, p, q):
         rp, rq = self.find(p), self.find(q)
-        if rp == rq: return
+        if rp == rq:
+            return
         self.parents[rp] = rq
 
     def connected(self, p, q):

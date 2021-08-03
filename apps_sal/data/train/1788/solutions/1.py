@@ -1,6 +1,7 @@
 from itertools import zip_longest
 import random
 
+
 def choose_move(game_state):
     def is_nim_sum_zero(nums):
         """
@@ -8,13 +9,13 @@ def choose_move(game_state):
         First all the numbers are converted to binary, then 
         added following the rule that "if the binary column 
         has an even number of 1s, put a 0; else put a 1."
-        
+
           1 1 0
         1 1 1 0
         1 1 0 1
         -------
         0 1 0 1
-        
+
         If it sums to 0, we win!
         """
         to_add = []
@@ -27,12 +28,12 @@ def choose_move(game_state):
 
         sum = 0
 
-        for col in cols: 
-            if col.count('1')%2 != 0:
+        for col in cols:
+            if col.count('1') % 2 != 0:
                 return False
 
         return True
-    
+
     non_empty_piles = [i for i in range(len(game_state)) if game_state[i] != 0]
 
     if is_nim_sum_zero(game_state):
@@ -41,7 +42,7 @@ def choose_move(game_state):
         # Return a random move.
         pile = random.choice(non_empty_piles)
         quant = random.choice(list(range(1, game_state[pile])) + 1)
-        
+
     else:
         # Otherwise, let's systematically try EVERY MOVE until we get a zero
         # nim-sum!
@@ -49,9 +50,9 @@ def choose_move(game_state):
         pile_ind = 0
         pile = non_empty_piles[pile_ind]
         quant = 1
-        
+
         next_ply[pile] = next_ply[pile] - quant
-        
+
         while not is_nim_sum_zero(next_ply):
             next_ply = list(game_state)
             if quant < next_ply[pile]:
@@ -60,8 +61,7 @@ def choose_move(game_state):
                 pile_ind += 1
                 pile = non_empty_piles[pile_ind]
                 quant = 1
-                
-            next_ply[pile] = next_ply[pile] - quant
-            
-    return (pile, quant)
 
+            next_ply[pile] = next_ply[pile] - quant
+
+    return (pile, quant)

@@ -9,6 +9,8 @@ for i in range(n):
 ans = 0
 visited = [0] * (200000)
 cntx, cnty = 0, 0
+
+
 def dfs(u):
     nonlocal cntx, cnty
     visited[u] = 1
@@ -19,6 +21,8 @@ def dfs(u):
     for i in edges[u]:
         if visited[i] == 0:
             dfs(i)
+
+
 ans = -1 * n
 for i in range(100000):
     if visited[i] == 0:

@@ -1,4 +1,4 @@
-n,b,a = map(int, input().split())
+n, b, a = map(int, input().split())
 
 s = list(map(int, input().split()))
 
@@ -8,31 +8,31 @@ i = 0
 
 while (cb or ca) and i < len(s):
 
-	if s[i] == 1:
+    if s[i] == 1:
 
-		if ca < a:
-			if cb:
+        if ca < a:
+            if cb:
 
-				cb -= 1
+                cb -= 1
 
-				ca += 1
+                ca += 1
 
-			else:
-				ca -= 1
-		else:
+            else:
+                ca -= 1
+        else:
 
-			ca -= 1
+            ca -= 1
 
-	else:
+    else:
 
-		if ca:
+        if ca:
 
-			ca -= 1
+            ca -= 1
 
-		else:
+        else:
 
-			cb -= 1
+            cb -= 1
 
-	i += 1
+    i += 1
 
 print(i)

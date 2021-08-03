@@ -5,4 +5,3 @@ for q in range(t):
         print(-1)
     else:
         print(*s, sep='')
-

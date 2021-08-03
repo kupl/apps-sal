@@ -30,4 +30,3 @@ class Solution:
                 i += 1
             days += 1
         return days
-

@@ -35,4 +35,3 @@ else:
             current_stop = max(current_stop, stop)
 
 print(ans)
-

@@ -1,9 +1,9 @@
-from heapq import heappop,heappush
+from heapq import heappop, heappush
 
-n,k,q = map(int,input().split())
-a = list(map(int,input().split()))
+n, k, q = map(int, input().split())
+a = list(map(int, input().split()))
 
-if(q==1):
+if(q == 1):
     print(0)
     return()
 
@@ -12,9 +12,9 @@ rem = [0] * n
 while(True):
     nums = [[]]
     i = 0
-    while(i<n):
-        if(rem[i]==0):
-            heappush(nums[-1],a[i])
+    while(i < n):
+        if(rem[i] == 0):
+            heappush(nums[-1], a[i])
         else:
             if(nums[-1]):
                 nums.append([])
@@ -23,7 +23,7 @@ while(True):
     mins = []
     for hq in nums:
         while(len(hq) >= k):
-            mins.append( heappop(hq) )
+            mins.append(heappop(hq))
 
     if(len(mins) < q):
         print(ans)
@@ -31,8 +31,8 @@ while(True):
 
     mins.sort()
     y = mins[0]
-    x = mins[q-1]
-    ans = min(ans, x-y)
-    for i,ai in enumerate(a):
-        if(ai==y):
+    x = mins[q - 1]
+    ans = min(ans, x - y)
+    for i, ai in enumerate(a):
+        if(ai == y):
             rem[i] = 1

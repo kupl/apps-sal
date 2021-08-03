@@ -4,8 +4,8 @@ def two_sort(array):
 
     res = str(a[0]).strip()
     tmp = ""
-    
+
     for i in range(len(res)):
-        tmp += res[i] + "***"*(i < len(res) - 1)
-    
+        tmp += res[i] + "***" * (i < len(res) - 1)
+
     return tmp

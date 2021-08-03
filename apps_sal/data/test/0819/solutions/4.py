@@ -10,7 +10,3 @@ else:
             print(max(a[0], min(a[1:])))
         else:
             print(max(a[-1], min(a[:-1])))
-
-
-
-

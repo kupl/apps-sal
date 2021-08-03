@@ -22,4 +22,3 @@ while s.count('+') != 0 and s.count('-') != 0:
                 flag = 0
                 s[i] = 0
 print(max(ans + s.count('+'), ans + s.count('-')))
-

@@ -19,5 +19,5 @@ def main():
 
     print(dp3[0])
 
-main()
 
+main()

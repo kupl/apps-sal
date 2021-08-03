@@ -16,4 +16,3 @@ for x in product([0, 1], repeat=N):
     if all(is_on):
         ans += 1
 print(ans)
-

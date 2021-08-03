@@ -11,6 +11,6 @@ class Solution:
         while cur:
             if (cur.val in Gset and getattr(cur.next, 'val', None) not in Gset):
                 ans += 1
-            cur = cur.next 
-        
+            cur = cur.next
+
         return ans

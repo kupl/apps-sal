@@ -1,4 +1,4 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     dict = {
         'ą': 'a',
         'ć': 'c',
@@ -8,9 +8,9 @@ def correct_polish_letters(st):
         'ó': 'o',
         'ś': 's',
         'ź': 'z',
-        'ż': 'z' 
+        'ż': 'z'
     }
     for key in dict.keys():
         st = st.replace(key, str(dict[key]))
-            
+
     return st

@@ -7,5 +7,5 @@ for i in range(len(s)):
         ans += 1
     else:
         ans -= 1
-        
-print(ans//2)
+
+print(ans // 2)

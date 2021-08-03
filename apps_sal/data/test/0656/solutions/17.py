@@ -3,7 +3,7 @@ val = [0] + list(map(int, input().split()))
 n = len(val)
 pls = []
 
-cur, i, sm  = 0, 0, 0
+cur, i, sm = 0, 0, 0
 while i < n:
     if val[i] >= 0:
         cur += 1

@@ -13,4 +13,3 @@ class Solution:
             wallet += piles[end]
             end -= 1
         return wallet
-

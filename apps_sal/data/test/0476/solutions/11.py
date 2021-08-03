@@ -11,4 +11,3 @@ for c in input().strip():
         ans = False
 
 print("YES" if ans else "NO")
-

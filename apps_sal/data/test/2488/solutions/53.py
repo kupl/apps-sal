@@ -36,4 +36,3 @@ for x, h in XH:
         dq.append((dmg, x + D * 2))
 
 print(ans)
-

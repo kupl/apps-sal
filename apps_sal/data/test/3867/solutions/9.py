@@ -5,10 +5,10 @@ graph = []
 for i in range(n):
     graph.append([])
 
-for i in range(n-1):
+for i in range(n - 1):
     (x, y) = [int(s) for s in input().split(" ")]
-    graph[x-1].append(y-1)
-    graph[y-1].append(x-1)
+    graph[x - 1].append(y - 1)
+    graph[y - 1].append(x - 1)
 
 seq = [int(s) - 1 for s in input().split(" ")]
 visited = [False] * n
@@ -19,9 +19,8 @@ for i, item in enumerate(seq):
     positions[item] = i
 
 
-
 for item in graph:
-    item.sort(key = (lambda x : positions[x]))
+    item.sort(key=(lambda x: positions[x]))
 
 
 # def func(i):
@@ -57,10 +56,3 @@ if output_seq == seq:
     print("Yes")
 else:
     print("No")
-
-
-
-
-
-
-

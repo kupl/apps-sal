@@ -11,7 +11,7 @@ class Solution:
             elif cur - 1 in seen:
                 ans = max(ans, i - seen[cur - 1])
         return ans
-        
+
         # hours = [1 if h > 8 else 0 for h in hours]
         # acc = [0] + list(accumulate(hours))
         # i, j = 0, len(hours) - 1
@@ -20,5 +20,3 @@ class Solution:
         # while i <= j:
         #     if cur > (j - i + 1) // 2:
         #         return j - i + 1
-            
-

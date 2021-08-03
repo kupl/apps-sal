@@ -1,18 +1,33 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time,copy,functools
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import functools
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 eps = 1.0 / 10**15
-mod = 10**9+7
+mod = 10**9 + 7
+
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x)-1 for x in sys.stdin.readline().split()]
+def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def LS(): return sys.stdin.readline().split()
 def I(): return int(sys.stdin.readline())
 def F(): return float(sys.stdin.readline())
 def S(): return input()
 def pf(s): return print(s, flush=True)
+
 
 class E:
     def __init__(self, dst, cap, rev):
@@ -25,6 +40,7 @@ class E:
 
     def __str__(self):
         return "({}, {}, {})".format(self.dst, self.cap, self.rev)
+
 
 class Dinic:
     def __init__(self, n):
@@ -83,27 +99,28 @@ class Dinic:
 
         return flow
 
+
 def main():
-    h,w = LI()
+    h, w = LI()
     a = [S() for _ in range(h)]
-    dn = Dinic(h+w+2)
-    s = h+w
-    t = s+1
+    dn = Dinic(h + w + 2)
+    s = h + w
+    t = s + 1
     for i in range(h):
         for j in range(w):
             c = a[i][j]
             if c == '.':
                 continue
             if c == 'o':
-                dn.add_undirected_edge(i, h+j, 1)
+                dn.add_undirected_edge(i, h + j, 1)
             elif c == 'S':
                 dn.add_edge(s, i, inf)
-                dn.add_edge(s, h+j, inf)
+                dn.add_edge(s, h + j, inf)
                 for ii in range(h):
                     a
             elif c == 'T':
                 dn.add_edge(i, t, inf)
-                dn.add_edge(h+j, t, inf)
+                dn.add_edge(h + j, t, inf)
 
     r = dn.run(s, t)
     if r >= inf:
@@ -111,8 +128,4 @@ def main():
     return r
 
 
-
-
 print(main())
-
-

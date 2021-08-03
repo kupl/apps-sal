@@ -1,4 +1,4 @@
-#577_B
+# 577_B
 
 n = int(input())
 
@@ -17,4 +17,3 @@ else:
         print("YES")
     else:
         print("NO")
-

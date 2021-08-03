@@ -5,4 +5,3 @@ if S == "ABC":
 
 else:
     print("ABC")
-

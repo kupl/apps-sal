@@ -11,10 +11,10 @@ class Solution:
         for word in sorted(words):
             res = max(res, self.dfs(word, visited, d))
         return res
-        
+
     def checkPredecessor(self, word1, word2):
         return any(word1 == word2[:i] + word2[i + 1:] for i in range(len(word2)))
-    
+
     def dfs(self, word, visited, d):
         if word in visited:
             return visited[word]

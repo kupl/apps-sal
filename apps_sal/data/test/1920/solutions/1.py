@@ -18,5 +18,4 @@ for day in range(1, 367):
             else:
                 f[day] += 1
     ans = max(ans, min(m[day], f[day]))
-print(2*ans)
-
+print(2 * ans)

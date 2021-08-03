@@ -1,4 +1,6 @@
 import math
+
+
 def sum_fib(n):
     fib_arr = []
     a, b = 0, 1

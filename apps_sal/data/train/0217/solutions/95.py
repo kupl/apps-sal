@@ -7,9 +7,8 @@ class Solution:
             curr.add(num)
             result.update(curr)
         return len(result)
-        
-        
-        
+
+
 #         result = set()
 #         prev = set([0])
 #         for num in A:
@@ -19,4 +18,3 @@ class Solution:
 #             result |= curr
 #             prev = curr
 #         return len(result)
-

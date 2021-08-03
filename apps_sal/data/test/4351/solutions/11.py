@@ -1,6 +1,5 @@
 a = input()
 if a[0] == a[2]:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
-
+    print('No')

@@ -18,4 +18,3 @@ for b, c in BC:
     k -= v
 
 print(ans)
-

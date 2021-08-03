@@ -2,10 +2,15 @@ import sys
 from collections import Counter
 input = sys.stdin.readline
 sys.setrecursionlimit(100000)
+
+
 def getN():
     return int(input())
+
+
 def getList():
     return list(map(int, input().split()))
+
 
 def solve():
     n = getN()
@@ -29,6 +34,7 @@ def solve():
     else:
         print(n)
 
+
 def main():
     t = getN()
     for times in range(t):
@@ -37,4 +43,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

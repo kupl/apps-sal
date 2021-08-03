@@ -6,4 +6,3 @@ if n > 1:
     ans = max(ans, abs(a[-2] - a[-1]))
 
 print(ans)
-

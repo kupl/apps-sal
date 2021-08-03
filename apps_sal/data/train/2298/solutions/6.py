@@ -19,6 +19,3 @@ res_max = max(res)
 max_num_list = [y for y in res if y == res_max]
 
 print((len(max_num_list)))
-
-
-

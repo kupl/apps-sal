@@ -5,5 +5,5 @@ A = list(set(A))
 
 if len(A) == n:
     print('YES')
-else :
+else:
     print('NO')

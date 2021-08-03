@@ -12,10 +12,7 @@ for i in range(len(s)):
             er[ord(s[i])] = 1
     else:
         if ord(s[i]) + 32 in ers and er[ord(s[i]) + 32] >= 1:
-            er[ord(s[i]) + 32] -=  1
+            er[ord(s[i]) + 32] -= 1
         else:
             cnt += 1
 print(cnt)
-        
-        
-

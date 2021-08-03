@@ -94,13 +94,14 @@ def main():
             A += 1
             C += 1
     D = max(A, B, C)
-    ans += (D-A)//2
-    ans += (D-B)//2
-    ans += (D-C)//2
+    ans += (D - A) // 2
+    ans += (D - B) // 2
+    ans += (D - C) // 2
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

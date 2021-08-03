@@ -5,14 +5,14 @@ class Solution:
         for i in range(m):
             for j in range(n):
                 if s1[i] == s2[j]:
-                    dp[i][j] = dp[i-1][j-1] + s1[i] if i > 0 and j > 0 else s1[i]
+                    dp[i][j] = dp[i - 1][j - 1] + s1[i] if i > 0 and j > 0 else s1[i]
                 else:
                     if i > 0 and j > 0:
-                        dp[i][j] = max(dp[i-1][j], dp[i][j-1], key=len)
+                        dp[i][j] = max(dp[i - 1][j], dp[i][j - 1], key=len)
                     elif i > 0:
-                        dp[i][j] = dp[i-1][j]
+                        dp[i][j] = dp[i - 1][j]
                     elif j > 0:
-                        dp[i][j] = dp[i][j-1]
+                        dp[i][j] = dp[i][j - 1]
         res, i, j = '', 0, 0
         for ch in dp[-1][-1]:
             while s1[i] != ch:

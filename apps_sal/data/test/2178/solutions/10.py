@@ -8,6 +8,5 @@ for i in range(n):
 
 cur_moved = -1
 for i in range(n):
-    print(max(a_per[b[i] - 1] - cur_moved, 0), end = " ")
+    print(max(a_per[b[i] - 1] - cur_moved, 0), end=" ")
     cur_moved = max(cur_moved, a_per[b[i] - 1])
-

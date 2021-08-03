@@ -10,4 +10,3 @@ for v in map(int, input().split()):
         cnt[v] += 1
     ans = max(ans, cnt[v] - cnt[c])
 print(ans + cnt[c])
-

@@ -8,4 +8,3 @@ for k in range(m):
     t = k * m
     ans.extend(list(range(s, t, -1)))
 print(*ans)
-

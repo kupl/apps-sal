@@ -1,1 +1,1 @@
-say_hello = lambda n:"Hello, {}".format(n)
+def say_hello(n): return "Hello, {}".format(n)

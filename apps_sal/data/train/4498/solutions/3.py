@@ -14,6 +14,7 @@ SYMBOLS = (
     ('I', 1),
 )
 
+
 def solution(input):
     if not input:
         return 0

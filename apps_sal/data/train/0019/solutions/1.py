@@ -24,4 +24,3 @@ for q in range(Q):
         ans = min(ans, len(nums))
 
     print(ans)
-

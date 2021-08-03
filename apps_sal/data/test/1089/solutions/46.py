@@ -25,4 +25,3 @@ for dw in range(1, W):
     ans %= MOD
 
 print(ans)
-

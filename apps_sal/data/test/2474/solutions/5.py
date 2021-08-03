@@ -1,11 +1,11 @@
 N = int(input())
 C = list(map(int, input().split()))
-C.sort(reverse =  True)
+C.sort(reverse=True)
 
 MOD = 10 ** 9 + 7
 
 if N == 1:
-    print (2 * C[0] % MOD)
+    print(2 * C[0] % MOD)
     return
 
 start = pow(2, N - 1, MOD)
@@ -20,4 +20,4 @@ for c in C:
 ans *= pow(2, N, MOD)
 ans %= MOD
 
-print (ans)
+print(ans)

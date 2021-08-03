@@ -26,7 +26,6 @@ else:
 if len(b) == 0:
     print('NO')
 else:
-    print('YES', len(b), sep = '\n')
+    print('YES', len(b), sep='\n')
     for i in b:
         print(*i)
-

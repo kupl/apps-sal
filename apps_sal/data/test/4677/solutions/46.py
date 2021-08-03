@@ -13,8 +13,6 @@ for i in range(len(S)):
         ans.append(S[i])
 
 for i in range(len(ans)):
-    print(ans[i] , end = "")
+    print(ans[i], end="")
 
 print()
-
-

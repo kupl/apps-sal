@@ -7,8 +7,8 @@ for _ in range(t):
     n = int(input())
     a = [int(item) for item in input().split()]
     ok = False
-    for i in range(n-2):
-        for j in range(i+2, n):
+    for i in range(n - 2):
+        for j in range(i + 2, n):
             if a[i] == a[j]:
                 ok = True
     if ok:

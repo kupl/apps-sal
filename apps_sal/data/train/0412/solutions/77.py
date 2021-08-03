@@ -1,7 +1,7 @@
 class Solution:
     def __init__(self):
         self.memo = {}
-        
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         res = 0
         if (d, target) in self.memo:

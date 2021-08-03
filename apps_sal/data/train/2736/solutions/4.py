@@ -1,4 +1,6 @@
 from itertools import permutations, groupby
+
+
 def largest_arrangement(a):
     a = sorted(a, key=lambda x: str(x)[0])[::-1]
     t = ''

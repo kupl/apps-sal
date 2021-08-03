@@ -32,4 +32,3 @@ while True:
             heapq.heappush(queue, nei)
 
 print(' '.join(map(str, ans)))
-

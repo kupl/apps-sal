@@ -10,8 +10,10 @@ for i in range(n):
     (a, b, c) = input().split(" ")
     lineslist.append((int(a), int(b), int(c)))
 
+
 def greaterThanLine(x, y, a, b, c):
-    return a*x + b*y + c > 0
+    return a * x + b * y + c > 0
+
 
 count = 0
 for line in lineslist:
@@ -20,4 +22,3 @@ for line in lineslist:
         count += 1
 
 print(count)
-

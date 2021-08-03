@@ -10,6 +10,7 @@ def testcase():
 
     return
 
+
 t = int(input())
 for _ in range(t):
     testcase()

@@ -8,7 +8,7 @@ class Solution:
                 if x % i == 0:
                     return False
             return True
-        
+
         def makePal(n):
             l = len(n)
             hn = n[:l // 2]
@@ -16,13 +16,13 @@ class Solution:
 
             if l % 2 != 0:
                 s += n[l // 2]
-            
+
             return s + ''.join(reversed(hn))
-                
+
         def nextPal(n):
             ni = int(n) + 10 ** (len(n) // 2)
             return makePal(str(ni))
-            
+
         beg = str(N)
         n = makePal(beg)
         if n < beg:

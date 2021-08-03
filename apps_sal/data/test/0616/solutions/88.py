@@ -19,4 +19,3 @@ for i in range(m):
 ans = -1 if dp[(1 << n) - 1] == INF else dp[(1 << n) - 1]
 
 print(ans)
-

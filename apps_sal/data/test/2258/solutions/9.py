@@ -1,26 +1,32 @@
 import sys
 
+
 def minp():
-	return sys.stdin.readline().strip()
+    return sys.stdin.readline().strip()
+
 
 def mint():
-	return int(minp())
+    return int(minp())
+
 
 def mints():
-	return list(map(int, minp().split()))
+    return list(map(int, minp().split()))
 
 
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 inv = []
-for i in range(1,n):
-	for j in range(i):
-		if a[i] < a[j]:inv.append((i,-a[j],-j))
+for i in range(1, n):
+    for j in range(i):
+        if a[i] < a[j]:
+            inv.append((i, -a[j], -j))
 inv.sort(reverse=True)
 r = list(range(len(inv)))
 if r is not None:
-	print(len(r))
-	for z in r:v, _, u = inv[z];u = -u;print(u+1,v+1)
+    print(len(r))
+    for z in r:
+        v, _, u = inv[z]
+        u = -u
+        print(u + 1, v + 1)
 else:
-	print("wut")
-
+    print("wut")

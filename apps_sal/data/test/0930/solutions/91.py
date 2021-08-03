@@ -10,7 +10,7 @@ class Combination:
         self.inv[1] = 1
 
         for i in range(2, max_num):
-            self.fac[i] = self.fac[i-1] * i % mod
+            self.fac[i] = self.fac[i - 1] * i % mod
             self.inv[i] = mod - self.inv[mod % i] * (mod // i) % mod
             self.finv[i] = self.finv[i - 1] * self.inv[i] % mod
 
@@ -30,12 +30,11 @@ ret = 1
 
 min_val = min(n, k)
 
-for i in range(1, min_val+1):
+for i in range(1, min_val + 1):
     if i != n:
-        ret += com.calc(n, i) * com.calc(n-1, i)
+        ret += com.calc(n, i) * com.calc(n - 1, i)
         ret %= 10 ** 9 + 7
     else:
         ret += 0
 
 print(ret)
-

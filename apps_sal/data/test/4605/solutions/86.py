@@ -6,6 +6,7 @@ def calc_sum(num):
         ans += target
     return ans
 
+
 def main():
 
     n, a, b = map(int, input().split())
@@ -16,6 +17,9 @@ def main():
             ans += i
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

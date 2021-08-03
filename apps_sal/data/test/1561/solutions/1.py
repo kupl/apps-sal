@@ -25,4 +25,3 @@ if k == 1:
     print(ans // 2)
 else:
     print(ans)
-

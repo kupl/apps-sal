@@ -1,8 +1,9 @@
-n , m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 bridge = []
 for i in range(m):
-    a , b = list(map(int, input().split()))
-    bridge.append((a,b))
+    a, b = list(map(int, input().split()))
+    bridge.append((a, b))
+
 
 class UnionFind():
     def __init__(self, n):
@@ -51,19 +52,19 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 uf = UnionFind(n)
-ans1 = n*(n-1)//2
+ans1 = n * (n - 1) // 2
 ans = []
 for i in range(m):
     ans.append(ans1)
-    a1,b1=bridge[m-1-i]
-    a1-=1
-    b1-=1
-    if not uf.same(a1,b1):
-        ans1 -= uf.size(a1)*uf.size(b1)
-    uf.union(a1,b1)
+    a1, b1 = bridge[m - 1 - i]
+    a1 -= 1
+    b1 -= 1
+    if not uf.same(a1, b1):
+        ans1 -= uf.size(a1) * uf.size(b1)
+    uf.union(a1, b1)
 
 ans.reverse()
 for i in ans:
     print(i)
-

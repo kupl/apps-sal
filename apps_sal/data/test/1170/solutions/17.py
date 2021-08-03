@@ -28,17 +28,18 @@ def main():
                     if b <= 0:
                         continue
                     n = a
-                    m = n//b
+                    m = n // b
 
-                    if n//m != b or n < 1 or m < 1 :
+                    if n // m != b or n < 1 or m < 1:
                         continue
 
-                    print('%d %d' % (n,m))
+                    print('%d %d' % (n, m))
                     gotem = True
                     break
 
         if not gotem:
             print(-1)
+
 
 def __starting_point():
     main()

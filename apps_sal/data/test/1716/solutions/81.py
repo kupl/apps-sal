@@ -13,4 +13,3 @@ for i in range(1, N + 1):
 
 for pi, qi in queries:
     print((accum[qi][qi] - accum[pi - 1][qi]))
-

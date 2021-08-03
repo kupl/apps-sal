@@ -8,10 +8,10 @@ for _ in range(int(input())):
 
     k = 0
     for i in range(n):
-        if s[k%2][i] in ('1', '2'):
+        if s[k % 2][i] in ('1', '2'):
             continue
 
-        if s[(k+ 1) % 2][i] not in ('3','4','5','6'):
+        if s[(k + 1) % 2][i] not in ('3', '4', '5', '6'):
             print("NO")
             break
 
@@ -21,4 +21,3 @@ for _ in range(int(input())):
             print("YES")
         else:
             print("NO")
-

@@ -3,7 +3,7 @@ class Solution:
         r = len(A)
         c = len(A[0])
         path = [(1, 0), (-1, 0), (0, 1), (0, -1)]
-        idx = []        
+        idx = []
         for i in range(r):
             for j in range(c):
                 if A[i][j] == 1:

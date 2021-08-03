@@ -8,7 +8,7 @@ class Solution:
         if n <= 4:
             return 0
         while i >= 0 and j >= 0:
-            ans = min(ans,abs(nums[i] - nums[j]))
+            ans = min(ans, abs(nums[i] - nums[j]))
             i -= 1
             j -= 1
         return ans

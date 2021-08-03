@@ -21,4 +21,3 @@ for ai in a:
     ans.append(False)
 
 print(''.join('01'[v] for v in ans))
-

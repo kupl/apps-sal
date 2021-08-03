@@ -9,7 +9,7 @@ class Solution:
                     stops[stop] = [[i], False]
                 else:
                     stops[stop][0].append(i)
-                    
+
         next_stops = deque([S])
         visited = [False for i in range(len(routes))]
         remaining = 1
@@ -30,5 +30,5 @@ class Solution:
             if remaining == 0:
                 remaining = len(next_stops)
                 buses += 1
-                
+
         return -1

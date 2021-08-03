@@ -18,4 +18,3 @@ while lo <= hi:
     step = 1 - step
 
 print(X * X + Y * Y)
-

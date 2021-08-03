@@ -10,7 +10,7 @@ for _ in range(int(input())):
             cnt = 1
             c = c1
         else:
-            cnt+=1
+            cnt += 1
     if cnt % 2 == 1:
         ans.add(c)
     print(''.join(sorted(ans)))

@@ -58,4 +58,5 @@ def amari_matrix(n, amari_list):
 def __starting_point():
     main()
 
+
 __starting_point()

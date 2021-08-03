@@ -11,7 +11,7 @@ while G[x] == -1:
     G[x] = t
     t += 1
     total += x
-    x = (x*x) % m
+    x = (x * x) % m
 
 cycle = t - G[x]
 s = 0
@@ -20,9 +20,11 @@ for i in range(cycle):
 
 ans = 0
 if n < t:
-    for i in range(n): ans += A[i]
+    for i in range(n):
+        ans += A[i]
 else:
     n -= t
     ans = total + s * (n // cycle)
-    for i in range(n % cycle): ans += A[G[x] + i]
+    for i in range(n % cycle):
+        ans += A[G[x] + i]
 print(ans)

@@ -11,4 +11,3 @@ def quicksum(packet):
         except KeyError:
             return 0
     return result
-

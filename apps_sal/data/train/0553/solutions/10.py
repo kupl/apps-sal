@@ -1,38 +1,38 @@
 T = int(input())
 for tc in range(T):
     p, q, r = map(int, input().split())
-    a ,b, c = map(int, input().split())
+    a, b, c = map(int, input().split())
     p_diff = a - p
     q_diff = b - q
     r_diff = c - r
     flag = 0
-    
+
     # GCD of Three Numbers
-    def gcd(a,b):
+    def gcd(a, b):
         if b == 0:
             return a
         else:
-            return gcd(b, a%b)
+            return gcd(b, a % b)
 
-    g_c_d = gcd(a,gcd(b,c))
-    
+    g_c_d = gcd(a, gcd(b, c))
+
     def factors(x):
         # We will store all factors in `result`
         result = []
         i = 2
         # This will loop from 1 to int(sqrt(x))
-        while i*i <= x:
+        while i * i <= x:
             # Check if i divides x without leaving a remainder
             if x % i == 0:
                 result.append(i)
                 # Handle the case explained in the 4th
-                if x//i != i: # In Python, // operator performs integer/floored division
-                    result.append(x//i)
+                if x // i != i:  # In Python, // operator performs integer/floored division
+                    result.append(x // i)
             i += 1
         # Return the list of factors of x
         return result
     listi = factors(g_c_d)
-    
+
     try:
         p_rem = a / p
     except:
@@ -45,7 +45,7 @@ for tc in range(T):
         r_rem = c / r
     except:
         r_rem = 1
-    
+
     if a == p and b == q and c == r:
         print("0")
         flag = 1
@@ -163,7 +163,7 @@ for tc in range(T):
     elif p_diff - r_diff == q_diff:
         print("2")
         continue
-    
+
     elif p_diff == q_diff:
         print("2")
         flag = 1
@@ -224,16 +224,16 @@ for tc in range(T):
                 flag = 1
                 continue
         try:
-            if (b/ r_rem) - q == a - p:
+            if (b / r_rem) - q == a - p:
                 print("2")
                 flag = 1
                 continue
         except:
-            if (b/ 1) - q == a - p:
+            if (b / 1) - q == a - p:
                 print("2")
                 flag = 1
                 continue
-        try:    
+        try:
             if (a / r_rem) - p == b - q:
                 print("2")
                 flag = 1
@@ -283,73 +283,73 @@ for tc in range(T):
                 print("2")
                 flag = 1
                 continue
-            
+
     if flag == 0:
         try:
-            if (b - (c-r)) / q == p_rem:
+            if (b - (c - r)) / q == p_rem:
                 print("2")
                 flag = 1
                 continue
         except:
             x = 1
-            if (b - (c-r)) / x == p_rem:
+            if (b - (c - r)) / x == p_rem:
                 print("2")
                 flag = 1
                 continue
         try:
-            if (b - (a-p)) / q == r_rem:
+            if (b - (a - p)) / q == r_rem:
                 print("2")
                 flag = 1
                 continue
         except:
             x = 1
-            if (b - (a-p)) / x == r_rem:
+            if (b - (a - p)) / x == r_rem:
                 print("2")
                 flag = 1
                 continue
-            
+
         try:
-            if (a - (b-q)) / p == r_rem:
+            if (a - (b - q)) / p == r_rem:
                 print("2")
                 flag = 1
                 continue
         except:
             x = 1
-            if (a - (b-q)) / x == r_rem:
-                print("2")
-                flag = 1
-                continue
-        try:
-            if (a - (c-r)) / p == q_rem:
-                print("2")
-                flag = 1
-                continue
-            
-        except:
-            x = 1
-            if (a - (c-r)) / x == q_rem:
+            if (a - (b - q)) / x == r_rem:
                 print("2")
                 flag = 1
                 continue
         try:
-            if (c - (b-q)) / r == p_rem:
+            if (a - (c - r)) / p == q_rem:
                 print("2")
                 flag = 1
                 continue
+
         except:
             x = 1
-            if (c - (b-q)) / x == p_rem:
+            if (a - (c - r)) / x == q_rem:
                 print("2")
                 flag = 1
                 continue
         try:
-            if (c - (a-p)) / r == q_rem:
+            if (c - (b - q)) / r == p_rem:
                 print("2")
                 flag = 1
                 continue
         except:
             x = 1
-            if (c - (a-p)) / x == q_rem:
+            if (c - (b - q)) / x == p_rem:
+                print("2")
+                flag = 1
+                continue
+        try:
+            if (c - (a - p)) / r == q_rem:
+                print("2")
+                flag = 1
+                continue
+        except:
+            x = 1
+            if (c - (a - p)) / x == q_rem:
                 print("2")
                 flag = 1
                 continue
@@ -419,10 +419,10 @@ for tc in range(T):
                 print("2")
                 flag = 1
                 continue
-    
+
     if flag == 0:
         try:
-            if b / (q + (c-r)) == a / (p +(c-r)):
+            if b / (q + (c - r)) == a / (p + (c - r)):
                 print("2")
                 flag = 1
                 continue
@@ -433,9 +433,9 @@ for tc in range(T):
                 print("2")
                 flag = 1
                 continue
-            
+
         try:
-            if c / (r + (b-q)) == a / (p +(b-q)):
+            if c / (r + (b - q)) == a / (p + (b - q)):
                 print("2")
                 flag = 1
                 continue
@@ -446,9 +446,9 @@ for tc in range(T):
                 print("2")
                 flag = 1
                 continue
-            
+
         try:
-            if b / (q + (a-p)) == c / (r +(a-p)):
+            if b / (q + (a - p)) == c / (r + (a - p)):
                 print("2")
                 flag = 1
                 continue
@@ -459,13 +459,12 @@ for tc in range(T):
                 print("2")
                 flag = 1
                 continue
-            
-    
+
     if flag == 0:
-        if(p-q != 0):
-            rem = (a-b)/(p-q)
-            diff = a - (p*rem)
-            if(rem%1 == 0 and diff%1 == 0 and (r*rem+diff)==c):
+        if(p - q != 0):
+            rem = (a - b) / (p - q)
+            diff = a - (p * rem)
+            if(rem % 1 == 0 and diff % 1 == 0 and (r * rem + diff) == c):
                 print("2")
                 flag = 1
     if flag == 0:

@@ -105,7 +105,7 @@ class CS:
                         self.cs[i0][i1] += self.cs[i0 - 1][i1]
                     else:
                         self.cs[i0][i1] += self.cs[i0 - 1][i1] + self.cs[i0][i1 - 1] - \
-                                           self.cs[i0 - 1][i1 - 1]
+                            self.cs[i0 - 1][i1 - 1]
 
     def sum(self, start_0, start_1, end_0, end_1):
         if start_0 == 0:
@@ -294,7 +294,7 @@ elif "010" in t:
 elif t == "0":
     print(10**10)
 elif t == "1":
-    print(10**10*2)
+    print(10**10 * 2)
 else:
     if t[-2:] == "11":
         t = t + "0"

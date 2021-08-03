@@ -15,4 +15,3 @@ if num2 - (num1 + num0) >= -1:
 
 else:
     print("No")
-

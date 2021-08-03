@@ -25,4 +25,3 @@ for i in range(n):
     if kek and lol[0] - 1 == 0:
         max_ = max(max_, i + 1)
 print(max_)
-

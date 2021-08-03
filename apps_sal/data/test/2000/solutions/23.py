@@ -7,8 +7,8 @@ for num in a:
 m = max(counts)
 pows = [2]
 while pows[-1] < m:
-    pows.append(2*pows[-1])
-pows.append(2*pows[-1])
+    pows.append(2 * pows[-1])
+pows.append(2 * pows[-1])
 
 total = 0
 for a in counts:

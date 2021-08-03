@@ -1,9 +1,9 @@
 class Solution:
     def countTriplets(self, A: List[int]) -> int:
-        
+
         # ans = 0
         n = len(A)
-        
+
         @lru_cache(None)
         def dfs(i, pre):
             if i == 4 and not pre:
@@ -15,6 +15,5 @@ class Solution:
                 elif i < 3:
                     ans += dfs(i + 1, pre & a if i > 1 else a)
             return ans
-        
-        
+
         return dfs(1, None)

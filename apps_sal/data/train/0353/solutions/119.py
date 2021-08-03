@@ -9,4 +9,3 @@ class Solution:
             ans += 2 ** (hi - lo)
             lo += 1
         return ans % (10**9 + 7)
-

@@ -12,10 +12,11 @@ for _ in range(H):
 
 # スタートとゴール
 si, sj = 0, 0
-gi, gj = H-1, W-1
+gi, gj = H - 1, W - 1
 
 # 4近傍ベクトル↓→↑←
-didj = [(1,0), (0,1), (-1, 0), (0, -1)]
+didj = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+
 
 def bfs(H, W, blocker="X"):
     # queが空になったら探索終了
@@ -30,14 +31,15 @@ def bfs(H, W, blocker="X"):
                 que.append((ni, nj))
     return
 
-INF = H*W*10
+
+INF = H * W * 10
 d = [[INF for x in range(W)] for x in range(H)]
 d[si][sj] = 0
 
 # 最短経路探索開始
 que = deque()
 que.append((si, sj))
-bfs(H,W, blocker="#")
+bfs(H, W, blocker="#")
 
 # たどり着くとこができなかった場合
 if d[gi][gj] == INF:
@@ -50,5 +52,5 @@ else:
         for l in h:
             if l == "#":
                 blc += 1
-    score = H*W - blc - d[gi][gj] - 1 # 全マス数 - 壁の数 - 最短経路分 - スタートマスの分
+    score = H * W - blc - d[gi][gj] - 1  # 全マス数 - 壁の数 - 最短経路分 - スタートマスの分
     print(score)

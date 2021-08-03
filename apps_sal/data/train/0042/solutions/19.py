@@ -32,6 +32,6 @@ for kkk in range(n):
 
     s = 0
     for i in range(len(uk)):
-         if ((uk[i] != i) or st[i] == '1'):
-             s += run(st, uk[i], i)
+        if ((uk[i] != i) or st[i] == '1'):
+            s += run(st, uk[i], i)
     print(s)

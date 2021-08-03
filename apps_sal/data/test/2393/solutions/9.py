@@ -32,5 +32,3 @@ for i in range(n):
     for an in ans:
         print(an + 1, end=' ')
     print()
-
-

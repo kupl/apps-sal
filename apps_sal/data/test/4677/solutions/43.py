@@ -1,6 +1,6 @@
 s = input()
 
-out =''
+out = ''
 for x in s:
     if x != 'B':
         out += x

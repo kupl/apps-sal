@@ -64,4 +64,3 @@ def factors3(f, start=3):
             FS[f] = {f}
 
     return FS[f]
-

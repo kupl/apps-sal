@@ -14,11 +14,11 @@ elif T == "11" or T == "10":
 elif T == "01":
     print(10 ** 10 - 1)
     return
-    
+
 if T[0] == "0":
     T = "11" + T
 elif T[0] == "1" and T[1] == "0":
-    T = "1" + T 
+    T = "1" + T
 
 for i in range(len(T)):
     if i % 3 == 2 and T[i] != "0":
@@ -28,7 +28,7 @@ for i in range(len(T)):
         print(0)
         return
 
-T_amnt = len(T)    
+T_amnt = len(T)
 T_sho = T_amnt // 3
 T_amari = T_amnt % 3
 

@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n = int(input())
 dp = [0] * 5
 for x in R():

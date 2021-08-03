@@ -11,4 +11,3 @@ class Solution:
                         ans += 1
             stack.extend(new)
         return ans
-

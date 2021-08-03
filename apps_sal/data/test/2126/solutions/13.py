@@ -8,4 +8,3 @@ for i in range(n):
             H[i][j] = min(A[j], B[i])
 for s in H:
     print(*s)
-

@@ -12,4 +12,3 @@ for c in input():
 
 ans = max(ans, len(set(l)))
 print(ans)
-

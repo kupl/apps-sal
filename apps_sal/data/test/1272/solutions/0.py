@@ -61,4 +61,3 @@ while Edge:
     UF.union(a, b)
 
 print(*ans[::-1], sep='\n')
-

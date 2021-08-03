@@ -33,20 +33,20 @@ def onums(l, sp=" "):
 
 
 def solve(n, aii):
-    dp = [[0 for _ in range(n+1)] for _ in range(n+1)]
+    dp = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
 
-    for x in range(n+1):
-        for y in range(n+1-x):
+    for x in range(n + 1):
+        for y in range(n + 1 - x):
             if x == y == 0:
                 continue
-            ai, i = aii[n-x-y]
-            dp[x][y] = max(dp[x-1][y] + ai * (i-x+1) if x > 0 else 0,
-                           dp[x][y-1] + ai * (n-y-i) if y > 0 else 0)
+            ai, i = aii[n - x - y]
+            dp[x][y] = max(dp[x - 1][y] + ai * (i - x + 1) if x > 0 else 0,
+                           dp[x][y - 1] + ai * (n - y - i) if y > 0 else 0)
 
     res = 0
-    for x in range(n+1):
-        if dp[x][n-x] > res:
-            res = dp[x][n-x]
+    for x in range(n + 1):
+        if dp[x][n - x] > res:
+            res = dp[x][n - x]
     return res
 
 
@@ -55,5 +55,6 @@ def __starting_point():
     a = inums()
     aii = sorted((a[i], i)for i in range(n))
     print((solve(n, aii)))
+
 
 __starting_point()

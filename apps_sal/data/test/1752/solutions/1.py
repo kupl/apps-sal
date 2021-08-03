@@ -11,4 +11,3 @@ if len(ansewr_right) + len(answer_left) < n:
     answer_left.append(a[-1])
 
 print(*answer_left, *ansewr_right[::-1])
-

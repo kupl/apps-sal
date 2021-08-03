@@ -1,4 +1,4 @@
-n,m,k = [int(x) for x in input().split()]
+n, m, k = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 a = a[::-1]
 boxes = 0
@@ -14,5 +14,3 @@ for i in range(n):
     ans += 1
     # print(ans,boxes,loc)
 print(ans)
-
-

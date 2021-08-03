@@ -7,7 +7,7 @@ y = x + 1
 ans = res = 0
 
 for i, j in zip(arr, range(n)):
-	ans += abs(i - (x ** j))
-	res += abs(i - (y ** j))
+    ans += abs(i - (x ** j))
+    res += abs(i - (y ** j))
 
 print(min(ans, res))

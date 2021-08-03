@@ -5,7 +5,7 @@ def solve(arr):
         count = 0
         for i in range(len(word)):
             try:
-                if word[i].lower()==alpha[i]:
+                if word[i].lower() == alpha[i]:
                     count += 1
             except IndexError:
                 count = count

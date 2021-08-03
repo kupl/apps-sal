@@ -28,21 +28,22 @@
 #             return res%const
 #         mask_p = \"1\"*len(hats)
 #         return s(mask_p, maxx, len(hats))%const
-    
-    
+
+
 class Solution:
     def numberWays(self, hats: List[List[int]]) -> int:
-        const = 10**9+7
+        const = 10**9 + 7
         matr = [0 for i in range(40)]
         maxx = -1
         used_h = set()
         for j in range(len(hats)):
             for i in hats[j]:
-                matr[i-1] += 2**(j)
-                maxx = max(i-1, maxx)
-                used_h.add(i-1)
-        matr = matr[:maxx+1]
-        mask_p = 2**len(hats)-1
+                matr[i - 1] += 2**(j)
+                maxx = max(i - 1, maxx)
+                used_h.add(i - 1)
+        matr = matr[:maxx + 1]
+        mask_p = 2**len(hats) - 1
+
         def s(mask_p, n, h, c_h, cache):
             if n > c_h:
                 return 0
@@ -57,14 +58,14 @@ class Solution:
                 i = 0
                 while b > 0:
                     if b & 1:
-                        res += s(mask_p ^ (1 << i), n-1, h-1, c_h, cache)
+                        res += s(mask_p ^ (1 << i), n - 1, h - 1, c_h, cache)
                     b = b >> 1
                     i += 1
                 # b = bin(mask_p & matr[h])
                 # for p in range(2, len(b)):
                 #     if b[p] == \"1\":
                 #         res += s(mask_p ^ (1 << (len(b)-p-1)), n-1, h-1, c_h, cache)
-            res += s(mask_p, n, h-1, c_h, cache)
+            res += s(mask_p, n, h - 1, c_h, cache)
             cache[mask_p][h] = res
             return cache[mask_p][h]
-        return s(mask_p, len(hats), maxx, len(used_h), [[None]*(maxx+1) for i in range(mask_p+1)])%const
+        return s(mask_p, len(hats), maxx, len(used_h), [[None] * (maxx + 1) for i in range(mask_p + 1)]) % const

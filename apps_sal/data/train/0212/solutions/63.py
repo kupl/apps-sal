@@ -13,6 +13,3 @@ class Solution:
             processed[a] = counter
             res = (res + counter) % mod
         return res
-            
-            
-

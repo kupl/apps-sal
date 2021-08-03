@@ -21,4 +21,3 @@ CARDS = (Card("AMEX", (34, 37), (15,)),
 def get_issuer(number: int):
     n = str(number)
     return next((c.name for c in CARDS if c.is_valid(n)), "Unknown")
-

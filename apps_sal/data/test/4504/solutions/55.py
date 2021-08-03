@@ -22,4 +22,3 @@ while (count < num):
 
     tar_index -= 1
     count += 1
-

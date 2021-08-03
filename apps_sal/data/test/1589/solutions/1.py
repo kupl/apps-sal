@@ -6,4 +6,3 @@ for i in range(n):
         if a[t * 2] == 1 or a[t * 2 + 1] == 1:
             ans += 1
 print(ans)
-

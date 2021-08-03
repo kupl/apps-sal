@@ -7,5 +7,3 @@ for i in s:
         continue
     ans += i
 print(ans)
-    
-

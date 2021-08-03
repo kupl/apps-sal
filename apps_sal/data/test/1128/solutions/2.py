@@ -13,4 +13,3 @@ while a not in mem:
         a = (a + a % m) % m
 
 print("No")
-

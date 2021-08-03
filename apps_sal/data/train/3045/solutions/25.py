@@ -10,4 +10,3 @@ def elevator(left, right, call):
         return 'left'
     elif abs(right - call) == abs(left - call):
         return 'right'
-

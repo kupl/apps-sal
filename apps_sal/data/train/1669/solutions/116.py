@@ -5,7 +5,7 @@ class Solution:
         _map = defaultdict(list)
         for i in range(len(hand)):
             _map[hand[i]] += [i]
-            
+
         while _map:
             hand = [k for k, _ in list(_map.items())]
             top = min(hand)
@@ -24,4 +24,3 @@ class Solution:
             if i < W:
                 return False
         return True
-

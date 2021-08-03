@@ -17,4 +17,3 @@ for i in range(1, n + 1):
         mn = min(mn, c[x])
     ans += mn
 print(ans)
-

@@ -1,5 +1,6 @@
 n, k = map(int, input().split())
-if n < 3 * k: print(-1)
+if n < 3 * k:
+    print(-1)
 else:
     d = n // k - 1
     t = list(str(i) + ' ' for i in range(1, k + 1))

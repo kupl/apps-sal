@@ -11,6 +11,7 @@ def memo(f):
     cache = {}
     return _f
 
+
 def count_inversions(lo, hi):
     if hi - lo <= 1:
         return 0, nums[lo:hi]
@@ -44,6 +45,7 @@ def count_inversions(lo, hi):
 #                 invs += 1
 #     return invs, 0
 
+
 @memo
 def search(depth, nums):
     if depth >= max_depth:
@@ -59,11 +61,10 @@ def search(depth, nums):
                 nums[i:j] = nums[i:j][::-1]
         return invs, total
 
+
 MAX = 1e9
 
 length, max_depth = list(map(int, input().split()))
 nums = list(map(int, input().split()))
 invs, total = search(0, nums)
 print(invs / total)
-
-

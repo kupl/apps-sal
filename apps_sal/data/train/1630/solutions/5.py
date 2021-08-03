@@ -1,4 +1,6 @@
 import math
+
+
 def survivor(zombies):
     size = len(zombies)
     if size == 0:
@@ -15,7 +17,6 @@ def survivor(zombies):
     maxSize = (zombies[0] * zombies[1]) - zombies[0] - zombies[1]
     posible = [False for _ in range(maxSize + 1)]
     posible[0] = True
-
 
     for zombie in zombies:
         if zombie <= maxSize:

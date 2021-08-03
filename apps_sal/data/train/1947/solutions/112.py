@@ -16,5 +16,3 @@ class Solution(object):
             if all(x >= y for x, y in zip(count(a), bmax)):
                 ans.append(a)
         return ans
-        
-

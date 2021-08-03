@@ -32,8 +32,8 @@ def acos_sqrt(x, sgn):
     y = 1 - x
     if y < 0.01:
         pp('y < 0.01')
-        numers = [1,  1,   3,   5,   35]
-        denoms = [1,  6,  40, 112, 1152]
+        numers = [1, 1, 3, 5, 35]
+        denoms = [1, 6, 40, 112, 1152]
         ans = fractions.Fraction('0')
         for i, (n, d) in enumerate(zip(numers, denoms)):
             ans += y**i * n / d
@@ -52,16 +52,16 @@ def solve(r1, r2, d_squared):
 
     d = math.sqrt(d_squared)
     if d >= r1 + r2:  # circles are far apart
-        return 0.0     
+        return 0.0
     if r2 >= d + r1:  # whole circle is contained in the other
         return math.pi * r1 ** 2
 
     r1f, r2f, dsq = map(fractions.Fraction, [r1, r2, d_squared])
     r1sq, r2sq = map(lambda i: i * i, [r1f, r2f])
     numer1 = r1sq + dsq - r2sq
-    cos_theta1_sq = numer1*numer1 / (4 * r1sq * dsq)
+    cos_theta1_sq = numer1 * numer1 / (4 * r1sq * dsq)
     numer2 = r2sq + dsq - r1sq
-    cos_theta2_sq = numer2*numer2 / (4 * r2sq * dsq)
+    cos_theta2_sq = numer2 * numer2 / (4 * r2sq * dsq)
     theta1 = acos_sqrt(cos_theta1_sq, math.copysign(1, numer1))
     theta2 = acos_sqrt(cos_theta2_sq, math.copysign(1, numer2))
     result = r1 * r1 * f(theta1) + r2 * r2 * f(theta2)
@@ -84,12 +84,13 @@ def pp(*args, **kwargs):
 def main():
     x1, y1, r1 = map(int, input().split())
     x2, y2, r2 = map(int, input().split())
-    d_squared = (x1-x2)**2 + (y1-y2)**2
+    d_squared = (x1 - x2)**2 + (y1 - y2)**2
     result = solve(r1, r2, d_squared)
     print("%.17f" % result)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

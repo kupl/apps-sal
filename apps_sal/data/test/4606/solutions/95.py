@@ -1,2 +1,1 @@
-print(("ABC"+input()))
-
+print(("ABC" + input()))

@@ -7,7 +7,7 @@ B.sort()
 C.sort()
 
 A_cnt = [1] * N
-A_sum = [i+1 for i in range(N)]
+A_sum = [i + 1 for i in range(N)]
 A_sum.append(0)
 B_cnt = [0] * N
 B_sum = [0] * N
@@ -28,7 +28,7 @@ for i in range(N):
 
 B_sum[0] = B_cnt[0]
 for i in range(1, N):
-    B_sum[i] = B_sum[i-1] + B_cnt[i]
+    B_sum[i] = B_sum[i - 1] + B_cnt[i]
 B_sum.append(0)
 
 for i in range(N):
@@ -45,7 +45,7 @@ for i in range(N):
 
 C_sum[0] = C_cnt[0]
 for i in range(1, N):
-    C_sum[i] = C_sum[i-1] + C_cnt[i]
+    C_sum[i] = C_sum[i - 1] + C_cnt[i]
 
 print((C_sum[-1]))
 
@@ -58,4 +58,3 @@ print((C_sum[-1]))
 # print(A_sum)
 # print(B_sum)
 # print(C_sum)
-

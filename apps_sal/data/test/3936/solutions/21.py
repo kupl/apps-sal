@@ -1,20 +1,20 @@
-n=int(input())
-s1=list(input())
-s2=list(input())
-ans=0
-if s1[0]==s2[0]:
-    ans=3
+n = int(input())
+s1 = list(input())
+s2 = list(input())
+ans = 0
+if s1[0] == s2[0]:
+    ans = 3
 else:
-    ans=6
-for i in range(n-1):
-    if s1[i]==s2[i]:
-        ans*=2
+    ans = 6
+for i in range(n - 1):
+    if s1[i] == s2[i]:
+        ans *= 2
     else:
-        if s1[i]==s1[i+1]:
+        if s1[i] == s1[i + 1]:
             continue
         else:
-            if s1[i+1]!=s2[i+1]:
-                ans*=3
+            if s1[i + 1] != s2[i + 1]:
+                ans *= 3
             else:
-                ans*=1
-print(ans%1000000007)
+                ans *= 1
+print(ans % 1000000007)

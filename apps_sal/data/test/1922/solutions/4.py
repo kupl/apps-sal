@@ -9,4 +9,3 @@ elif N == 2:
 else:
     res = max(1, N - 2) * max(1, M - 2)
 print(res)
-

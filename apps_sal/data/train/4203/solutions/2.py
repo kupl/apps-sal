@@ -6,5 +6,5 @@ def caffeineBuzz(n):
         return "JavaScript"
     elif n % 3 == 0:
         return "Java"
-    
+
     return "mocha_missing!"

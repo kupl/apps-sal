@@ -11,4 +11,3 @@ for q in range(len(a)):
         stack.append('0')
         ans.append('0')
 print(''.join(ans))
-

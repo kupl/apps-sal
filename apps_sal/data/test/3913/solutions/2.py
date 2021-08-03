@@ -43,7 +43,7 @@ isAny = False
 
 for i in range(M):
     t = input()
-    isAny=True
+    isAny = True
     bad = False
     hidBit = 0
 
@@ -52,7 +52,6 @@ for i in range(M):
             if hid[n] != t[n]:
                 bad = True
             continue
-
 
         hidBit |= mpk[j]
     if hidBit & revealed != 0 or bad:

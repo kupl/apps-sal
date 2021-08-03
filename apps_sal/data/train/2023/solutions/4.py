@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 n = ii()
 m = int(n ** 0.5)
@@ -16,7 +21,8 @@ for i in range(10 ** 7):
         a[c] = s
         s -= 1
         c += 1
-        if c >= n: break
-    if c >= n: break
+        if c >= n:
+            break
+    if c >= n:
+        break
 print(*a)
-

@@ -6,4 +6,3 @@ def remove_smallest(numbers=[]):
         a.append(i)
     a.remove(min(a))
     return a
-

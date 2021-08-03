@@ -5,7 +5,7 @@ moriarty = [int(i) for i in list(input())]
 pairs = []
 for i in range(n):
     for j in range(n):
-        pairs.append((moriarty[j]-sherlock[i], i, j))
+        pairs.append((moriarty[j] - sherlock[i], i, j))
 
 pairs = sorted(pairs)
 
@@ -39,4 +39,3 @@ for pair in pairs:
 
 print(n - avoided)
 print(flicked)
-

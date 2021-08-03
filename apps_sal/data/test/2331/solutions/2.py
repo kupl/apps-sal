@@ -1,8 +1,8 @@
-from math import  gcd
+from math import gcd
 
-t=int(input())
+t = int(input())
 for i in range(t):
-    a, b=map(int, input().split())
+    a, b = map(int, input().split())
     if gcd(a, b) == 1:
         print('Finite')
     else:

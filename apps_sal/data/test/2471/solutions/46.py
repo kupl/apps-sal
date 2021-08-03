@@ -11,5 +11,5 @@ def main():
     for j in range(1, 10):
         print((D.count(j)))
 
-main()
 
+main()

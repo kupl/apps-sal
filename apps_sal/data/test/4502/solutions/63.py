@@ -17,8 +17,8 @@ for i in range(n):
         res.append(A[i])
     else:
         res.appendleft(A[i])
-        
+
 if n % 2 == 1:
-    print(" ".join(map(str,reversed(res))))
+    print(" ".join(map(str, reversed(res))))
 else:
-    print(" ".join(map(str,res)))
+    print(" ".join(map(str, res)))

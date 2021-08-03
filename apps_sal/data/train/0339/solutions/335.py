@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         nums1_products = productCounts(nums1)
@@ -16,12 +17,14 @@ class Solution:
 
         return result
 
+
 def productCounts(arr):
     result = Counter()
     for i in range(len(arr)):
         for j in range(i + 1, len(arr)):
             result.update((arr[i] * arr[j],))
     return result
+
 
 def squareCounts(arr):
     result = Counter()

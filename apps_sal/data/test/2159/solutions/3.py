@@ -6,7 +6,7 @@ for i in range(n):
     b = 0
     for a in t[i:]:
         s[a] += 1
-        if s[a] > s[b] or a < b and s[a] == s[b]: b = a
+        if s[a] > s[b] or a < b and s[a] == s[b]:
+            b = a
         k[b] += 1
 print(*k)
-

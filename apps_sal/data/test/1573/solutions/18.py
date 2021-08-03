@@ -11,7 +11,7 @@ for m, s in friends:
     ss.append(s)
     mm.append(m)
     ff += s
-    while mm[0]+d <= mm[-1]:
+    while mm[0] + d <= mm[-1]:
         ff -= ss.popleft()
         mm.popleft()
     ans = max(ans, ff)

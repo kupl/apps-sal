@@ -27,4 +27,3 @@ for i in range(1, 10):
     result += i * weight[i - 1]
 # print(cl, zero, weight)
 print(result)
-

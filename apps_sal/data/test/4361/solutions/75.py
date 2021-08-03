@@ -2,9 +2,11 @@ import math
 import collections
 from itertools import product
 
-ii = lambda : int(input())
-mi = lambda : map(int,input().split())
-li = lambda : list(map(int,input().split()))
+
+def ii(): return int(input())
+def mi(): return map(int, input().split())
+def li(): return list(map(int, input().split()))
+
 
 n, k = mi()
 h = [ii() for i in range(n)]
@@ -14,5 +16,5 @@ for i in range(n):
     last = i + k - 1
     if last >= n:
         break
-    ans = min(ans, h[last]-h[i])
+    ans = min(ans, h[last] - h[i])
 print(ans)

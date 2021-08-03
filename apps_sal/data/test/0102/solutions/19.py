@@ -13,5 +13,3 @@ elif number % 10 == 0:
     print(dec[number // 10])
 else:
     print(dec[number // 10] + "-" + units[number % 10])
-
-

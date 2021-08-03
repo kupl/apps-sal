@@ -8,6 +8,6 @@ def odd_or_even(arr):
         return 'odd'
     elif sum == 0:
         return [0]
-odd_or_even([0, 1, 2])   
-        
 
+
+odd_or_even([0, 1, 2])

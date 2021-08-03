@@ -1,12 +1,13 @@
 MOD = int(1e9 + 7)
 
+
 class Solution:
     def get_count(self, counts, i):
         if i < 0 or i >= len(counts):
             return 0
         else:
             return counts[i]
-        
+
     def numWays(self, steps: int, arrLen: int) -> int:
         counts = [1]
         for si in range(1, steps + 1):

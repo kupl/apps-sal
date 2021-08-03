@@ -3,6 +3,7 @@ def main():
     A = list(map(int, input().split()))
     return solve(N, S, A)
 
+
 def solve(N, S, A):
     mod = 998244353
     dp = [0] * (S + 1)
@@ -15,5 +16,5 @@ def solve(N, S, A):
             dp[i] = (dp[i] + dp[i - a] * div2) % mod
     return dp[S]
 
-print((main()))
 
+print((main()))

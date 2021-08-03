@@ -13,4 +13,3 @@ for i in range(w):
 for i in range(h):
     if res := ''.join([x for x in a[i] if x != 'x']):
         print(res)
-

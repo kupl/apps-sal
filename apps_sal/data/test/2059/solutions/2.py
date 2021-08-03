@@ -6,4 +6,6 @@ def main():
         x = i if i > n - i - 1 else n - i - 1
         ans = min(ans, arr[i] // x)
     print(ans)
+
+
 main()

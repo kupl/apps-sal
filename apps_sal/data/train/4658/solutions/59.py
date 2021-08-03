@@ -3,4 +3,3 @@ def max_product(lst, n):
     for number in sorted(lst)[-n:]:
         result *= number
     return result
-

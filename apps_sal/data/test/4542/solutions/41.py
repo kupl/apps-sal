@@ -2,7 +2,7 @@ import sys
 
 input = sys.stdin.readline
 S = input()
-S = S.replace('\n' , '')
+S = S.replace('\n', '')
 tmp = ""
 division_count = 0
 for s in S:

@@ -3,7 +3,6 @@ n = int(input())
 m = 2 * n + 1
 
 
-
 pos = set([(0, 0)])
 
 for i in range(n):
@@ -25,10 +24,7 @@ for i in range(n):
     pos = next_pos
 
 
-
 print(min(t for t, w in pos if t >= w))
 
 
-
 # Made By Mostafa_Khaled
-

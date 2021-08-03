@@ -1,6 +1,6 @@
 def factor(n):
     out = []
-    
+
     power = 0
     while n & 1 == 0:
         power += 1
@@ -11,7 +11,7 @@ def factor(n):
         power = 0
 
     test = 3
-    while pow(test,2) <= n:
+    while pow(test, 2) <= n:
         while n % test == 0:
             power += 1
             n //= test
@@ -26,7 +26,7 @@ def factor(n):
     return out
 
 
-x, n = list(map(int,input().split()))
+x, n = list(map(int, input().split()))
 
 M = 10 ** 9 + 7
 
@@ -38,8 +38,7 @@ for p in f:
     while nCopy:
         nCopy //= p
         newPower += nCopy
-    out *= pow(p,newPower,M)
+    out *= pow(p, newPower, M)
     out %= M
 
 print(out)
-

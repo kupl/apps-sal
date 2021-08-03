@@ -6,4 +6,4 @@ temp = []
 for i in H:
     temp.append(abs(A - (T - i * 0.006)))
 min_ind = temp.index(min(temp))
-print(min_ind+1)
+print(min_ind + 1)

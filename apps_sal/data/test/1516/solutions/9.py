@@ -10,4 +10,3 @@ for i in li:
         t *= 100
     ans %= mod
 print(ans)
-

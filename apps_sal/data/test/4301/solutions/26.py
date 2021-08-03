@@ -1,9 +1,9 @@
+from collections import Counter
 n = int(input())
 list_a = []
 for i in range(n):
     list_a.append(int(input()))
 
-from collections import Counter
 
 counter = dict(Counter(list_a))
 sorted_counter = sorted(counter, reverse=True)

@@ -2,6 +2,7 @@ def key(pic):
     parts = pic.split('.')
     return parts[0], int(parts[1][3:])
 
+
 def sort_photos(pics):
     pics.sort(key=key)
     pics = pics[-5:]

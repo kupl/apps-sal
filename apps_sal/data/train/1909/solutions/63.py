@@ -6,8 +6,10 @@ class Solution:
         for i in range(m):
             for j in range(n):
                 if grid[i][j]:
-                    if i: top[i][j] = top[i - 1][j] + 1
-                    if j: left[i][j] = left[i][j - 1] + 1
+                    if i:
+                        top[i][j] = top[i - 1][j] + 1
+                    if j:
+                        left[i][j] = left[i][j - 1] + 1
         for r in range(min(m, n), 0, -1):
             for i in range(m - r + 1):
                 for j in range(n - r + 1):

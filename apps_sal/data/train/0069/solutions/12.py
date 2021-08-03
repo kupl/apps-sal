@@ -21,10 +21,7 @@ for t in range(T):
         last = c
     # print(not_mines)
     for m in not_mines:
-        if m*b < a:
-            price = price - a + m*b
-        
-                
-                
+        if m * b < a:
+            price = price - a + m * b
 
     print(price)

@@ -3,7 +3,7 @@ class Solution:
         subs = collections.defaultdict(set)
         for sub, mag in enumerate(manager):
             subs[mag].add(sub)
-        
+
         heap, time = [(informTime[headID], headID)], 0
         while heap:
             time = heap[0][0]
@@ -12,6 +12,3 @@ class Solution:
                 for sub in subs[mag]:
                     heapq.heappush(heap, (time + informTime[sub], sub))
         return time
-        
-            
-

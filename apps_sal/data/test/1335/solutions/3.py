@@ -23,7 +23,7 @@ def main():
         ds[i] = round(100 * m / n)
         j = 0
         while q and j < free:
-            #print(q)
+            # print(q)
             si = q.popleft()
             ts[i + an[si]] += 1
             #print(si, i, an[si])
@@ -34,7 +34,7 @@ def main():
             break
 
     res = 0
-    #print(ts[:200])
+    # print(ts[:200])
     #print(' '.join(map(str, enumerate(ds[:200]))))
     #print(ds[74], ds[75])
     for i in range(n):
@@ -49,4 +49,3 @@ def main():
 
 
 main()
-

@@ -17,4 +17,3 @@ for case_num in range(t):
             ans = [x - l * d + i * d for i in range(n)]
             print(' '.join(map(str, ans)))
             break
-

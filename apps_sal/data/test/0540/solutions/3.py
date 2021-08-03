@@ -35,17 +35,18 @@ def is_side_by_side(r1, c1, r2, c2):
 
 def count_surrounding_intact_ices(maze, r, c):
     count = 0
-    for rr, cc in [(r+1, c), (r-1, c), (r, c+1), (r, c-1)]:
+    for rr, cc in [(r + 1, c), (r - 1, c), (r, c + 1), (r, c - 1)]:
         if maze[rr][cc]:
             count += 1
     return count
+
 
 def solve_wfs(n, m, maze, r1, c1, r2, c2):
     frontier = [(r1, c1)]
     while frontier:
         new_frontier = []
         for r, c in frontier:
-            for nr, nc in [(r+1, c), (r-1, c), (r, c+1), (r, c-1)]:
+            for nr, nc in [(r + 1, c), (r - 1, c), (r, c + 1), (r, c - 1)]:
                 if nr == r2 and nc == c2:
                     return True
                 if not maze[nr][nc]:
@@ -55,10 +56,13 @@ def solve_wfs(n, m, maze, r1, c1, r2, c2):
         frontier = new_frontier
     return False
 
+
 def __starting_point():
     n, m, maze, r1, c1, r2, c2 = read_data()
     if solve(n, m, maze, r1, c1, r2, c2):
         print('YES')
     else:
         print('NO')
+
+
 __starting_point()

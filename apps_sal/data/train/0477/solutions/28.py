@@ -1,7 +1,7 @@
 class Solution:
     def findKthBit(self, n: int, k: int) -> str:
         s = ['0']
-        for i in range(n-1):
+        for i in range(n - 1):
             temp1 = s.copy()
             for i in range(len(temp1)):
                 if temp1[i] == '0':
@@ -12,4 +12,4 @@ class Solution:
             temp = s + ['1'] + temp1
             s = temp
         # print(s)
-        return s[k-1]
+        return s[k - 1]

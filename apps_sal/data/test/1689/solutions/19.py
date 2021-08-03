@@ -1,7 +1,7 @@
 inp = int(input())
 res = []
 flag = 0
-for i in range (inp):
+for i in range(inp):
     stroke = input()
     stroke = stroke.split('|')
     if (stroke[0] == 'OO') & (flag == 0):
@@ -17,5 +17,3 @@ if flag == 1:
         print(i)
 else:
     print('NO')
-
-

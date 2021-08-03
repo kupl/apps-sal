@@ -5,10 +5,10 @@ def ok(x):
             return False
     return True
 
+
 a = int(input())
 b = input()
 if ok(b):
     print("YES")
 else:
     print("NO")
-

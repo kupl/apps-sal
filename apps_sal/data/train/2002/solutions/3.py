@@ -12,13 +12,12 @@ for i in range(l):
     instances[s_i[i]].append(i)
 
 
-
 #sum_probability += len * probability
 #probability = sum_probabilty
 
 sum_probability = 0
 
-for c in range(0,26):
+for c in range(0, 26):
     if not instances[c]:
         continue
     if len(instances[c]) == 0:
@@ -26,10 +25,10 @@ for c in range(0,26):
         continue
     max_probability = 0
     for guess in range(1, l):
-        num_seen = [0]*26
+        num_seen = [0] * 26
         probability = 0
         for index in instances[c]:
-            num_seen[s_i[(index+guess)%l]] += 1
+            num_seen[s_i[(index + guess) % l]] += 1
         for x in num_seen:
             if x == 1:
                 probability += 1
@@ -37,7 +36,4 @@ for c in range(0,26):
     sum_probability += max_probability
 
 
-
-
-
-print(sum_probability/l)
+print(sum_probability / l)

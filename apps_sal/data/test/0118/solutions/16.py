@@ -1,5 +1,6 @@
 3
 
+
 def main():
     t, s, x = list(map(int, input().split()))
 
@@ -14,4 +15,3 @@ def main():
 
 
 main()
-

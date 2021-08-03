@@ -11,4 +11,3 @@ def fuel_price(litres, price):
         return litres * (price - .20)
     else:
         return litres * (price - .25)
-

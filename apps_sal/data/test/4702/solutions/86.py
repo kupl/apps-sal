@@ -2,5 +2,5 @@ x = int(input())
 
 if x == 0:
     print("1")
-else :
+else:
     print("0")

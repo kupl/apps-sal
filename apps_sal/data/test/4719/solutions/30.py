@@ -14,4 +14,3 @@ for i in range(26):
     c = chr(i + ord('a'))
     print(c * a[i], end='')
 print()
-

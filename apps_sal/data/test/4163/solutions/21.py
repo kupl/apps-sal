@@ -5,17 +5,15 @@ count = 0
 flag = False
 
 for (x, y) in D:
-  if x == y:
-    count += 1
-  else:
-    count = 0
-  
-  if count == 3:
-    print("Yes")
-    flag = True
-    break
+    if x == y:
+        count += 1
+    else:
+        count = 0
+
+    if count == 3:
+        print("Yes")
+        flag = True
+        break
 
 if not flag:
-  print("No")
-
-
+    print("No")

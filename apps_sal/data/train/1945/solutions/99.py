@@ -15,7 +15,7 @@ class Solution:
             result += f'{i}{l}'
             result2 += f'{(i + 1) % 2}{l}'
             return result, result2
-        
+
         m, n = len(matrix), len(matrix[0])
         g = {}
         for i in range(m):
@@ -27,4 +27,4 @@ class Solution:
                     g[b] += 1
                 else:
                     g[a] = g.get(a, 0) + 1
-        return max(g.values())        
+        return max(g.values())

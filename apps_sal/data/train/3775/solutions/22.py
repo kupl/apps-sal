@@ -1,6 +1,6 @@
 def digits(n):
-    r=str(n)
+    r = str(n)
     y = list(r)
-    x=len(y)
+    x = len(y)
     return(x)
     pass

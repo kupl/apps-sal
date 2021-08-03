@@ -26,4 +26,3 @@ for row in range(n):
             max_col = col
 
 print(max_row + 1, max_col + 1)
-

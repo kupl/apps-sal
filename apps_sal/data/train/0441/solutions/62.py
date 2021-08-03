@@ -15,7 +15,7 @@ class Solution:
             elif total + cur + 1 < num:
                 queue.append((cur + 1, total + cur + 1))
         return count
-    
+
     # N = (x + 0) + (x + 2) + ... + (x + k - 1)
     # N = x * k + (k - 1) * k / 2 -> N - (k - 1) * k / 2 = x * k.
     # So as long as N - (k - 1) * k / 2 is x times of k, there is a solution.
@@ -28,4 +28,3 @@ class Solution:
                 count += 1
             k += 1
         return count
-

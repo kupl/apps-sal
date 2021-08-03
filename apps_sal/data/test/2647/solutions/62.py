@@ -7,7 +7,7 @@ for _ in range(H):
 
 white = sum([board[h].count('.') for h in range(H)])
 
-dist = {(x, y):white + 1 for x in range(W) for y in range(H)}
+dist = {(x, y): white + 1 for x in range(W) for y in range(H)}
 q = deque([(0, 0)])
 dist[(0, 0)] = 1
 while q:

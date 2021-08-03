@@ -8,20 +8,23 @@ from collections import defaultdict, deque, Counter
 from functools import lru_cache
 sys.setrecursionlimit(10**8)
 
-ii = lambda: int(input())
-mi = lambda: list(map(int, input().split()))
-li = lambda: list(map(int, input().split()))
+
+def ii(): return int(input())
+def mi(): return list(map(int, input().split()))
+def li(): return list(map(int, input().split()))
+
 
 N, M = mi()
 a = li()
 b = li()
+
 
 class UnionFind:
     def __init__(self, n):
         # 負  : 根であることを示す。絶対値はランクを示す
         # 非負: 根でないことを示す。値は親を示す
         self.table = [-1] * n
- 
+
     def _root(self, x):
         stack = []
         tbl = self.table
@@ -34,10 +37,10 @@ class UnionFind:
 
     def count(self, x):
         return -self.table[self._root(x)]
- 
+
     def find(self, x, y):
         return self._root(x) == self._root(y)
- 
+
     def union(self, x, y):
         r1 = self._root(x)
         r2 = self._root(y)
@@ -53,11 +56,12 @@ class UnionFind:
             self.table[r1] = r2
             self.table[r2] += d1
 
+
 ins = UnionFind(N)
 
 for i in range(M):
     c, d = mi()
-    ins.union(c-1, d-1)
+    ins.union(c - 1, d - 1)
 
 d = defaultdict(set)
 for i in range(N):
@@ -65,7 +69,7 @@ for i in range(N):
     d[r].add(i)
 
 for i, x in list(d.items()):
-    num1, num2 = 0,0
+    num1, num2 = 0, 0
     for y in x:
         num1 += a[y]
         num2 += b[y]
@@ -73,4 +77,3 @@ for i, x in list(d.items()):
         print('No')
         return
 print('Yes')
-

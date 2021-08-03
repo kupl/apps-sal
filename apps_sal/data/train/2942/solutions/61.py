@@ -8,4 +8,3 @@ def fold_to(distance):
         distance /= 2
         counter += 1
     return counter
-

@@ -24,4 +24,3 @@ else:
 
     print(len(swaps))
     print(str.join("\n", swaps))
-

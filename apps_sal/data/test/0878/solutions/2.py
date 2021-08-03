@@ -6,10 +6,10 @@ A = list(map(int, input().split()))
 ans = 0
 
 for i in range(1, len(A)):
-    if A[i] == A[i-1]:
+    if A[i] == A[i - 1]:
         ans = inf
         break
-    if (A[i] == 2 and A[i-1] == 3) or (A[i] == 3 and A[i-1] == 2):
+    if (A[i] == 2 and A[i - 1] == 3) or (A[i] == 3 and A[i - 1] == 2):
         ans = inf
         break
 if ans == inf:
@@ -17,12 +17,12 @@ if ans == inf:
 else:
 
     for i in range(1, len(A)):
-        if A[i] == 1 and A[i-1] == 3:
+        if A[i] == 1 and A[i - 1] == 3:
             ans += 4
-        elif A[i] == 1 and A[i-1] == 2:        
+        elif A[i] == 1 and A[i - 1] == 2:
             ans += 3
         elif A[i] == 2:
-            if i < 2 or A[i-2] != 3:
+            if i < 2 or A[i - 2] != 3:
                 ans += 3
             else:
                 ans += 2

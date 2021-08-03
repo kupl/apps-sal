@@ -1,9 +1,9 @@
 S = input()
 lst = ["dreamer", "dream", "eraser", "erase"]
-lst = [ "".join(list(reversed(k))) for k in lst]
+lst = ["".join(list(reversed(k))) for k in lst]
 S = "".join(list(reversed(S)))
 
-i  = 0
+i = 0
 while i < len(S):
     found = False
     for k in lst:
@@ -19,4 +19,3 @@ while i < len(S):
         print("NO")
         return
 print("YES")
-

@@ -3,10 +3,12 @@ class Point:
         self.x = x
         self.y = y
 
+
 def f(a, b, p):
     dx = a.x - p.x
     dy = a.y - p.y
     return Point(b.x + dx, b.y + dy)
+
 
 l = []
 for _ in range(3):
@@ -20,4 +22,3 @@ answ.append(f(l[1], l[2], l[0]))
 print(len(answ))
 for i in answ:
     print(i.x, i.y)
-

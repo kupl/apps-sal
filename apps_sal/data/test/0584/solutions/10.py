@@ -36,5 +36,3 @@ for i in range(length):
         cur += 1
 
 print(l, c)
-
-

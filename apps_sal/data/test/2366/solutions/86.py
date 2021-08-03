@@ -14,7 +14,9 @@ def main():
     for i in range(N):
         print((ans - c[A[i]] + 1))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

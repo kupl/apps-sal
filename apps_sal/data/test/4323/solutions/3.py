@@ -20,5 +20,5 @@ def go():
 
     return i
 
-print(go())
 
+print(go())

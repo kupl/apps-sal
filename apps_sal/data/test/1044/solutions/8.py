@@ -11,4 +11,3 @@ for i in range(a):
             d = c[d]
         else:
             print(d)
-

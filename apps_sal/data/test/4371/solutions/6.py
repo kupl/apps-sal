@@ -26,4 +26,3 @@ for i in range(1, len(s) - 1):
 # リストに入れたものの最小値
 answer = min(abs_list)
 print(answer)
-

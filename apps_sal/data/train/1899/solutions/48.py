@@ -3,8 +3,7 @@ class Solution:
         options = [[-1, 0], [1, 0], [0, 1], [0, -1]]
         flip_req = float('inf')
         isl_one_coords = set()
-        
-        
+
         def get_all(i, j):
             nonlocal flip_req, isl_one_coords, options
             for opt in options:
@@ -13,8 +12,7 @@ class Solution:
                     if A[new_coord[0]][new_coord[1]] and not new_coord in isl_one_coords:
                         isl_one_coords.add(new_coord)
                         get_all(new_coord[0], new_coord[1])
-            
-        
+
         def bfs():
             nonlocal flip_req, isl_one_coords, options
             dist = 0
@@ -33,13 +31,10 @@ class Solution:
                 dist += 1
                 level, next_level = next_level, set()
                 print((level, next_level, isl_one_coords))
-                
 
-            
         for i in range(len(A)):
             for j in range(len(A[0])):
-                if A[i][j]: 
+                if A[i][j]:
                     isl_one_coords.add((i, j))
                     get_all(i, j)
                     return bfs()
-

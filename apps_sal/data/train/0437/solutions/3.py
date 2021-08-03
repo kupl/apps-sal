@@ -3,20 +3,20 @@ class Solution:
         fullSize = 0
         for idx, char in enumerate(S):
             if char.isdigit():
-                fullSize *=int(char)
+                fullSize *= int(char)
             else:
-                fullSize+=1
+                fullSize += 1
             if fullSize > K:
                 break
         endIdx = idx
 
-        for idx in range(endIdx,-1,-1):
+        for idx in range(endIdx, -1, -1):
             if S[idx].isdigit():
                 fullSize /= int(S[idx])
                 if K > fullSize:
-                    K%=fullSize
+                    K %= fullSize
             else:
-                if K==0 or K == fullSize:
+                if K == 0 or K == fullSize:
                     return S[idx]
                 else:
-                    fullSize -=1
+                    fullSize -= 1

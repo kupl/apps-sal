@@ -1,16 +1,20 @@
 import math
+
+
 def comb(n, r):
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
+
+
 N = int(input())
 Comlist = []
 Ans = dict()
 Answer = 0
-for i in range(1,10):
-    for j in range(1,10):
-        M = i*10 + j
+for i in range(1, 10):
+    for j in range(1, 10):
+        M = i * 10 + j
         Comlist.append(str(M))
         Ans[str(M)] = 0
-for k in range(1,N+1):
+for k in range(1, N + 1):
     strk = str(k)
     if k < 10:
         Tar = strk + strk

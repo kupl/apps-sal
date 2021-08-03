@@ -14,4 +14,3 @@ else:
         result += (l - 1) + (l - 2)
         l -= 2
     print(result)
-

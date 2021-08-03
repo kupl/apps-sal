@@ -7,13 +7,13 @@ def solve(tc):
     cmp = 9
     ndigit = 1
 
-    while k>(cmp*ndigit):
-        k -= cmp*ndigit
+    while k > (cmp * ndigit):
+        k -= cmp * ndigit
         cmp *= 10
         ndigit += 1
-    
-    num = (10**(ndigit-1)) + ((k-1) // ndigit)
-    pos = (k-1) % ndigit
+
+    num = (10**(ndigit - 1)) + ((k - 1) // ndigit)
+    pos = (k - 1) % ndigit
 
     print(str(num)[pos])
     pass

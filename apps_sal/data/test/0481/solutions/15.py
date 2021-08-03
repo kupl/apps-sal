@@ -10,4 +10,3 @@ else:
         v = X / (x + 1)
         fin += v.is_integer() and v <= n
     print(fin)
-

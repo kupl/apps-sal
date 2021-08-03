@@ -15,13 +15,13 @@ while True:
     if b >= a - f and i + 1 == k:
         fuel_count += 1
         break
-    elif fuel < 2*(a - f):
+    elif fuel < 2 * (a - f):
         fuel = b
         fuel_count += 1
-        if fuel < 2*(a - f):
+        if fuel < 2 * (a - f):
             print(-1)
             return
-    fuel -= 2*(a - f)
+    fuel -= 2 * (a - f)
     i += 1
     if i == k:
         break
@@ -30,16 +30,14 @@ while True:
     if b >= f and i + 1 == k:
         fuel_count += 1
         break
-    elif fuel < 2*f:
+    elif fuel < 2 * f:
         fuel = b
         fuel_count += 1
-        if fuel < 2*f:
+        if fuel < 2 * f:
             print(-1)
             return
-    fuel -= 2*f
+    fuel -= 2 * f
     i += 1
     if i == k:
         break
 print(fuel_count)
-
-

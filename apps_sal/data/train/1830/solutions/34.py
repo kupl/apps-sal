@@ -3,8 +3,8 @@ class Solution:
         d = {}
         dry = []
         res = []
-        for day,rain in enumerate(rains):
-            if rain !=0:
+        for day, rain in enumerate(rains):
+            if rain != 0:
                 if rain in d:
                     p = d[rain]
                     flag = -1

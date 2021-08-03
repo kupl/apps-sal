@@ -8,4 +8,3 @@ for i in range(n):
     else:
         res &= s
 print(*res)
-

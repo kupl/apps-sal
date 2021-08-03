@@ -10,4 +10,3 @@ while i < K:
         break
     i += 1
 print(ans)
-

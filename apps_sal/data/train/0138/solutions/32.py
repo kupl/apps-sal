@@ -14,7 +14,5 @@ class Solution:
                 neg = pos + 1
                 pos = oldneg + 1 if oldneg > 0 else 0
             maxl = max(maxl, pos)
-        
-        return maxl
-                
 
+        return maxl

@@ -13,5 +13,3 @@ class Solution:
                     idx += 1
                 idx += 1
         return len(stack) == 0
-            
-

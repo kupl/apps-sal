@@ -1,7 +1,9 @@
 import itertools
 
+
 def minl(l):
     return l[-1] if len(l) > 0 else 10**9 + 1
+
 
 input()
 p = list(map(int, input().split()))
@@ -17,7 +19,7 @@ for pi, ai, bi in zip(p, a, b):
 for row in d:
     for l in row:
         l.sort(reverse=True)
-    
+
 r = []
 for ci in c:
     ci -= 1
@@ -28,4 +30,3 @@ for ci in c:
     l = d[i][j]
     r.append(l.pop() if len(l) > 0 else -1)
 print(*r, sep=' ')
-

@@ -1,5 +1,6 @@
 from itertools import takewhile
 
+
 def f(s):
     t = []
     u = []
@@ -22,5 +23,5 @@ def f(s):
     u += reversed(t)
     return ''.join(u)
 
-print(f(input()))
 
+print(f(input()))

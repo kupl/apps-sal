@@ -1,20 +1,18 @@
 input()
 
-a=list(map(int,input().split()))
+a = list(map(int, input().split()))
 
-cnt=0
+cnt = 0
 
 while a:
 
- i=a.index(a.pop(0))
+    i = a.index(a.pop(0))
 
- cnt+=i
+    cnt += i
 
- a.pop(i)
+    a.pop(i)
 
 print(cnt)
 
 
-
 # Made By Mostafa_Khaled
-

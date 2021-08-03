@@ -5,4 +5,3 @@ while x <= t + 0.5:
     sum += b
     x += a
 print(sum)
-

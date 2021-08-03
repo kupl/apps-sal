@@ -1,6 +1,5 @@
-3.7
-
 import sys
+3.7
 
 
 n, k = [int(x) for x in input().split()]
@@ -8,8 +7,10 @@ a = [int(x) for x in input().split()]
 
 cur = 0
 
+
 def is_submask(n, mask):
     return (n & mask) == mask
+
 
 def f(mask):
     s = [[False for j in range(n)] for i in range(n)]
@@ -23,8 +24,9 @@ def f(mask):
     for k1 in range(1, k):
         for r in range(n):
             for l in range(1, r + 1):
-                    dp[k1][r] |= dp[k1 - 1][l - 1] & s[l][r]
+                dp[k1][r] |= dp[k1 - 1][l - 1] & s[l][r]
     return dp[k - 1][n - 1]
+
 
 cur = 0
 for i in range(56, -1, -1):

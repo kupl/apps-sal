@@ -20,4 +20,3 @@ class SubrectangleQueries:
 # obj = SubrectangleQueries(rectangle)
 # obj.updateSubrectangle(row1,col1,row2,col2,newValue)
 # param_2 = obj.getValue(row,col)
-

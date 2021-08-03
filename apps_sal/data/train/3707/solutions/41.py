@@ -1,2 +1,2 @@
 def sorter(textbooks):
-    return sorted(set(textbooks),key=str.casefold)
+    return sorted(set(textbooks), key=str.casefold)

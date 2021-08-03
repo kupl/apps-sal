@@ -9,9 +9,9 @@ for _ in range(n):
     names[name[0]] += 1
 
 cnt = 0
-for k,v in names.items():
-    prvi = v//2
+for k, v in names.items():
+    prvi = v // 2
     drugi = v - prvi
-    cnt += (prvi*(prvi - 1))//2
-    cnt += (drugi*(drugi - 1))//2
+    cnt += (prvi * (prvi - 1)) // 2
+    cnt += (drugi * (drugi - 1)) // 2
 print(cnt)

@@ -11,7 +11,5 @@ class Datamining:
         self.alpha = ybar - self.beta * xbar
         predict = [self.alpha + self.beta * s[0] for s in train_set]
 
-
-
     def predict(self, x):
         return self.alpha + self.beta * x

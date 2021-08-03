@@ -14,8 +14,7 @@ for j in range(len(word)):
         if len(curr_s) > 2:
             print(word[i:j], end=' ')
             curr_s = [word[j]]
-            i = j      
+            i = j
     else:
         curr_s = []
 print(word[i:])
-

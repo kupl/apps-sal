@@ -13,8 +13,3 @@ class Solution:
             for char in selection:
                 total.remove(char)
         return ''.join(output)
-        
-        
-        
-        
-

@@ -1,7 +1,7 @@
 def solution(a, b):
     alen = len(a)
     blen = len(b)
-    c=[]
+    c = []
     if alen < blen:
         c.append(a)
         c.append(b)
@@ -12,4 +12,3 @@ def solution(a, b):
         c.append(b)
     c = "".join(c)
     return c
-

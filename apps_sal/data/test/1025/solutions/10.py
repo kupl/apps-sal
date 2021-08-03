@@ -2,15 +2,15 @@ def main():
     import sys
     from collections import defaultdict
     from fractions import gcd
-    
+
     precalc_gcd = [[gcd(i, j) for j in range(201)] for i in range(201)]
-    
+
     tokens = [int(i) for i in sys.stdin.read().split()]
     tokens.reverse()
-    
+
     n = tokens.pop()
     points = [(tokens.pop(), tokens.pop()) for i in range(n)]
-    
+
     result = 0
     for i in range(n):
         x0, y0 = points[i]
@@ -28,10 +28,8 @@ def main():
             angles[x * 1000 + y] += 1
         for j in list(angles.keys()):
             result += angles[j] * (n - i - 1 - angles[j])
-    
-    print(result // 2)
-        
-        
-    
-main()
 
+    print(result // 2)
+
+
+main()

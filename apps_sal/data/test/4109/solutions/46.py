@@ -1,9 +1,9 @@
 import numpy as np
-N,M,X = map(int,input().split())
+N, M, X = map(int, input().split())
 C = []
 A = []
 for _ in range(N):
-    l = list(map(int,input().split()))
+    l = list(map(int, input().split()))
     C.append(l[0])
     A.append(np.array(l[1:]))
 ans = 10**100

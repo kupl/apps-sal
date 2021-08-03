@@ -5,7 +5,7 @@ input = sys.stdin.readline
 
 def main():
     N = int(input())
-    A = [deque([int(x)-1 for x in input().split()]) for _ in range(N)]
+    A = [deque([int(x) - 1 for x in input().split()]) for _ in range(N)]
     ans = 0
     used_prev = set(range(N))
     while any(A):
@@ -33,5 +33,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

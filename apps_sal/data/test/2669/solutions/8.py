@@ -6,7 +6,7 @@ output = [0]
 
 pos = end[0]
 
-for i in range(1,len(start)):
+for i in range(1, len(start)):
 
     if start[i] >= pos:
         output.append(i)

@@ -1,4 +1,4 @@
-a, b = map(int,input().split())
+a, b = map(int, input().split())
 list = []
 if a > b:
     for i in range(a):

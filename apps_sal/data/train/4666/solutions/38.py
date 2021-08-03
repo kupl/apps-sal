@@ -1,4 +1,4 @@
-def array_plus_array(arr1,arr2):
+def array_plus_array(arr1, arr2):
     z = 0
     y = 0
     for k in arr1:

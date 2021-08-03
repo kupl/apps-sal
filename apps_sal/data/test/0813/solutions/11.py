@@ -1,5 +1,7 @@
-R = lambda: list(map(int, input().split()))
-G = lambda: map(int, input().split())
+def R(): return list(map(int, input().split()))
+def G(): return map(int, input().split())
+
+
 n, a, b = G()
 A = R()
 B = R()
@@ -10,4 +12,4 @@ for i in range(1, n + 1):
     if result[i] == -1:
         result[i] = 2
 for i in range(1, n + 1):
-    print(result[i], end = ' ')
+    print(result[i], end=' ')

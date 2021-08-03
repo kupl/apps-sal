@@ -9,6 +9,7 @@ POLSKA_STRONG = {
     'ź': 'z',
     'ż': 'z'
 }
+
+
 def correct_polish_letters(st):
     return ''.join(POLSKA_STRONG.get(i, i) for i in st)
-

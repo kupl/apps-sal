@@ -8,5 +8,5 @@ class Solution:
                 distance = 0
             else:
                 distance = distance + 1
-        
+
         return True

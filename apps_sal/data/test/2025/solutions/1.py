@@ -13,11 +13,11 @@ for i in range(q):
         if n >= 9:
             ans.append(n // 4 - 1)
         else:
-            ans.append(-1)    
+            ans.append(-1)
     else:
         if n >= 15:
             ans.append(n // 4 - 1)
         else:
-            ans.append(-1)   
+            ans.append(-1)
 for i in ans:
     print(i)

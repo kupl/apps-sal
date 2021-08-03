@@ -1,6 +1,7 @@
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        if S == T: return 0
+        if S == T:
+            return 0
         dic_stops = collections.defaultdict(set)
         for i, stops in enumerate(routes):
             for s in stops:
@@ -15,13 +16,8 @@ class Solution:
                     visited_buses.add(bus)
                     for s in routes[bus]:
                         if s not in visited_stops:
-                            if s == T: return cnt
+                            if s == T:
+                                return cnt
                             visited_stops.add(s)
                             queue.append((s, cnt + 1))
         return -1
-                    
-        
-                            
-                
-                
-

@@ -2,26 +2,25 @@ import sys
 
 
 def main():
-    n,k = map(int,sys.stdin.readline().split())
-    
+    n, k = map(int, sys.stdin.readline().split())
+
     a = list(map(int, sys.stdin.readline().split()))
     b = list(map(int, sys.stdin.readline().split()))
     b.sort(reverse=True)
-    j = 0 
+    j = 0
     for i in range(n):
-        if a[i] ==0:
+        if a[i] == 0:
             a[i] = b[j]
-            j+=1
+            j += 1
 
     p = a[0]
-    for i in range(1,n):
+    for i in range(1, n):
         if a[i] <= p:
             print("Yes")
-            return 
+            return
         p = a[i]
-    
+
     print("No")
-       
 
 
 main()

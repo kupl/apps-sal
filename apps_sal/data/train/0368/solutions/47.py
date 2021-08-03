@@ -10,6 +10,3 @@ class Solution:
                     coef += satisfaction[i + k - 1] * k
             ans = max(ans, coef)
         return ans
-                
-        
-

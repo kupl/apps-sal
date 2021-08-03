@@ -1,4 +1,3 @@
-a, b, c = list(map(int,input().split()))
+a, b, c = list(map(int, input().split()))
 
-print(min(min(a+b+c,2*(a+b)), min(2*(a+c),2*(b+c))))
-
+print(min(min(a + b + c, 2 * (a + b)), min(2 * (a + c), 2 * (b + c))))

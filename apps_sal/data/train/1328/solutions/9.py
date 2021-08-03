@@ -6,10 +6,9 @@ for _ in range(T):
 
     count = 0
     for i in N:
-        if(i!='4' and i!='7'):
+        if(i != '4' and i != '7'):
             count += 1
     ans.append(count)
 
 for i in ans:
     print(i)
-

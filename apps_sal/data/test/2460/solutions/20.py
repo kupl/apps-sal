@@ -33,5 +33,4 @@ for i in range(n + m):
         answer[right[i]] += 1
 for i in answer:
     if i:
-        print(i - 1, end = " ")
-
+        print(i - 1, end=" ")

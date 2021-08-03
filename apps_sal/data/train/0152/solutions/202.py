@@ -1,7 +1,7 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
-        
+
         def helper(d):
             cnt = 1
             cur = position[0]
@@ -10,7 +10,7 @@ class Solution:
                     cur = position[i]
                     cnt += 1
             return cnt
-        
+
         l, r = 0, position[-1] - position[0]
         res = -float('inf')
         while l <= r:
@@ -26,4 +26,4 @@ class Solution:
                 l = mid + 1
             else:
                 r = mid - 1
-        return max(res, l-1)
+        return max(res, l - 1)

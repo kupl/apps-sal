@@ -10,4 +10,3 @@ while n > 0:
     ans.append(chr(x + y))
     n //= 26
 print(("".join(ans[::-1])))
-

@@ -7,7 +7,7 @@ class Solution:
                 if nums[i] % 2 == 1:
                     nums[i] -= 1
                     odds += 1
-                
+
                 if nums[i] == 0:
                     zeros += 1
                 else:

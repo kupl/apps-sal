@@ -1,4 +1,6 @@
 import math
+
+
 def get_average(marks):
     x = 0
     y = 0

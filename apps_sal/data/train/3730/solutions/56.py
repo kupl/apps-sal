@@ -1,7 +1,7 @@
 def capitalize(s):
     str1 = ''
     str2 = ''
-    for i,c in enumerate(s):
+    for i, c in enumerate(s):
         if not i % 2:
             str1 += c.upper()
             str2 += c.lower()

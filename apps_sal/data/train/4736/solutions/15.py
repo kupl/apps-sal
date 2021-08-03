@@ -9,4 +9,3 @@ def how_many_bees(hive):
         s = s1 + " " + s2
         return s.count("bee") + s.count("eeb")
     return 0
-

@@ -10,7 +10,7 @@ for i in range(n):
     for s in range(1 << n):
         if (s >> i) & 1:
             lst = dp[s] + dp[s - (1 << i)]
-            lst.sort(reverse = True)
+            lst.sort(reverse=True)
             dp[s] = lst[:2].copy()
 
 for a, b in dp[1:]:

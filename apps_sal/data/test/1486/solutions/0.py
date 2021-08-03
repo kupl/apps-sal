@@ -7,5 +7,3 @@ for i in range(n):
         print(a[i] - a[i - 1], a[i] - a[0])
     else:
         print(min(a[i + 1] - a[i], a[i] - a[i - 1]), max(a[-1] - a[i], a[i] - a[0]))
-        
-

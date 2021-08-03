@@ -8,24 +8,24 @@ left = A[:N]
 left_total = [(sum(left))]
 heapq.heapify(left)
 
-for i in range(N, 2*N):
+for i in range(N, 2 * N):
     l = heapq.heappop(left)
     # 入れ替える場合
     if l < A[i]:
-        heapq.heappush(left,A[i])
+        heapq.heappush(left, A[i])
         left_total.append(left_total[-1] - l + A[i])
     # Aのある要素よりleftの最小要素の方が大きいので入れ替えない
     else:
-        heapq.heappush(left,l)
+        heapq.heappush(left, l)
         left_total.append(left_total[-1])
-        
 
-#rightもN要素から始めるが、leftとの対応のために最後にtotalをひっくり返すのを忘れない
+
+# rightもN要素から始めるが、leftとの対応のために最後にtotalをひっくり返すのを忘れない
 right = [-i for i in A[2 * N:]]
 right_total = [sum(right)]
 heapq.heapify(right)
 
-for i in reversed(range(N, 2*N)):
+for i in reversed(range(N, 2 * N)):
     r = heapq.heappop(right)
     if r < -A[i]:
         heapq.heappush(right, -A[i])

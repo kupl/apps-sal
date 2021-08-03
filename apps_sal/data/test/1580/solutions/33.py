@@ -3,7 +3,7 @@ N, M, *X = list(map(int, open(0).read().split()))
 
 class UnionFind:
     def __init__(self, n=0):
-        self.d = [-1]*n
+        self.d = [-1] * n
         self.u = n
 
     def root(self, x):
@@ -34,7 +34,6 @@ class UnionFind:
 
 
 u = UnionFind(N)
-for x, y, z in zip(*[iter(X)]*3):
-    u.unite(x-1, y-1)
+for x, y, z in zip(*[iter(X)] * 3):
+    u.unite(x - 1, y - 1)
 print((u.num_union()))
-

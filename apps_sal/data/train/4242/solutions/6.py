@@ -1,1 +1,1 @@
-direction_in_grid=lambda n,m:"LRUD"[min(n,m)%2+2*(m<n)]
+def direction_in_grid(n, m): return "LRUD"[min(n, m) % 2 + 2 * (m < n)]

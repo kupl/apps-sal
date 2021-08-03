@@ -1,2 +1,2 @@
-def small_enough(lst, limit): 
+def small_enough(lst, limit):
     return max(lst) <= limit

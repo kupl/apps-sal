@@ -8,7 +8,7 @@ def list_squared(m, n):
             for i in range(1, int(sqrt(n) + 1)):
                 if n % i == 0:
                     yield i
-                    if i*i != n:
+                    if i * i != n:
                         yield n / i
 
         return sum(i ** 2 for i in divisors(n))
@@ -22,4 +22,3 @@ def list_squared(m, n):
             if is_square(divisor_sum):
                 yield [i, divisor_sum]
     return [subarray for subarray in gen_subarrays(m, n)]
-

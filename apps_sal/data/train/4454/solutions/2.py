@@ -13,12 +13,13 @@ buttons = [
     '#'
 ]
 
+
 def getPresses(c):
     for button in buttons:
         if c in button:
             return button.index(c) + 1
     return 0
 
+
 def presses(phrase):
     return sum(getPresses(c) for c in phrase.lower())
-

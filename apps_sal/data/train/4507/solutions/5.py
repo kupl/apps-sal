@@ -4,4 +4,3 @@ def endless_string(stg, i, l):
     i = min(i, i + l) % ls + (l < 0)
     j = i + abs(l)
     return stg[i:j]
-

@@ -2,7 +2,7 @@ class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         N = len(locations)
         MOD = 10 ** 9 + 7
-        
+
         @functools.lru_cache(None)
         def dfs(u, k):
             ans = 0
@@ -18,5 +18,5 @@ class Solution:
                     continue
                 ans += dfs(v, k - cost)
             return ans % MOD
-        
+
         return dfs(start, fuel) % MOD

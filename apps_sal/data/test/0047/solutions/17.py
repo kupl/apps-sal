@@ -8,7 +8,10 @@ def find(A, x):
         maxi = max([maxi, c1, c2, c3])
     return maxi
 
-inp = lambda cast=int: list(map(cast, input().split()))
+
+def inp(cast=int): return list(map(cast, input().split()))
+
+
 n, x = inp()
 A = [0] + inp()
 print(find(A, x))

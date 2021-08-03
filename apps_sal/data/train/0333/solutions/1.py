@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def minJumps(self, arr: list) -> int:
         if len(arr) == 1:
@@ -10,11 +11,11 @@ class Solution:
                 graph[n].append(i)
             else:
                 graph[n] = [i]
-        
+
         curs = [0]
-        other = [len(arr)-1]
+        other = [len(arr) - 1]
         visited = {0}
-        visited2 = {len(arr)-1}
+        visited2 = {len(arr) - 1}
         step = 0
         while curs:
             is_curs = len(curs) <= len(other)
@@ -31,7 +32,7 @@ class Solution:
                         visited.add(child)
                         nex.append(child)
 
-                for child in [node-1, node+1]:
+                for child in [node - 1, node + 1]:
                     if child in visited2:
                         return step + 1
                     if 0 <= child < len(arr) and child not in visited:
@@ -40,8 +41,3 @@ class Solution:
             curs = nex
             step += 1
         return -1
-                    
-                    
-            
-            
-

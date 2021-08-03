@@ -17,6 +17,3 @@ for i, p in enumerate(permutations(list(range(1, N + 1))), 1):
     if a and b:
         print((abs(a - b)))
         return
-
-
-

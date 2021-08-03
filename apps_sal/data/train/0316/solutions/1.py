@@ -9,7 +9,7 @@ class Solution:
                 lps[i] = j
             else:
                 while j > 0:
-                    j = lps[j-1]
+                    j = lps[j - 1]
                     if s[j] == s[i]:
                         j += 1
                         break

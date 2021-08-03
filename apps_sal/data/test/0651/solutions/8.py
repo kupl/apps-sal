@@ -30,4 +30,3 @@ for p in itertools.permutations(list(range(4))):
             break
 
 print(cnt)
-

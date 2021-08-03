@@ -1,9 +1,11 @@
 import collections
+
+
 class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
         invalid = []
         mapNameToTrans = collections.defaultdict(list)
-        
+
         for t in transactions:
             name, time, amount, city = t.split(',')
             did_add = False
@@ -21,4 +23,3 @@ class Solution:
                         invalid.append(past[0])
             mapNameToTrans[name].append([t, did_add])
         return invalid
-

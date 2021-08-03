@@ -39,6 +39,7 @@ for x in a:
     g[u].append(v)
     g[v].append(u)
 
+
 def bfs(s):
     d = [-1] * len(pid)
     d[s] = 0
@@ -55,10 +56,10 @@ def bfs(s):
                     q2.append((v, u))
         q = q2
 
+
 ans = n + 1
 for i in range(len(pid)):
     if i > 0 and pr[i - 1] ** 2 >= MAX:
         break
     ans = min(ans, bfs(i) or ans)
 print(ans if ans <= n else -1)
-

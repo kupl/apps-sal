@@ -10,7 +10,7 @@ class Solution:
                 end = heappop(ends)
                 weights[weight] += (end - prev) + 1
                 prev = end + 1
-                
+
             if not ends:
                 prev = l
                 ends = [r]
@@ -19,13 +19,13 @@ class Solution:
                 weights[weight] += (l - prev)
                 prev = l
                 heappush(ends, r)
-                
+
         while ends:
             weight = len(ends)
             end = heappop(ends)
             weights[weight] += (end - prev) + 1
-            prev = end + 1  
-        
+            prev = end + 1
+
         total = 0
         nums.sort(reverse=True)
         l = 0
@@ -34,6 +34,3 @@ class Solution:
             total += (sum(nums[l: l + length]) * weight) % MOD
             l = l + length
         return total % MOD
-            
-                
-

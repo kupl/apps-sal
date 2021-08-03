@@ -77,4 +77,3 @@ for i in range(n):
             print(a[j][1], b[i][1])
             used_a[j] = 1
             used_b[i] = 1
-

@@ -20,12 +20,10 @@ while i <= n:
 
         if i == n:
             break
-            
+
         l = [X[i]]
         p = s[i]
         c = 1
-    
-    
+
     i += 1
 print(ans)
-

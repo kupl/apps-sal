@@ -22,4 +22,3 @@ for c in list(d.keys()):
         answ = min(answ, e[c] // d[c])
 
 print(answ)
-

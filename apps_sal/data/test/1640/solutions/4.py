@@ -19,4 +19,3 @@ for i in range(len(array)):
         t -= d[array[i] - 1]
 
 print(t)
-

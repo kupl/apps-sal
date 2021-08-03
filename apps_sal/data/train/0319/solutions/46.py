@@ -1,33 +1,31 @@
 class Solution:
     def stoneGameIII(self, stoneValue):
-      def dfs(start):
-        if start >= len(stoneValue):
-          return 0
-        
-        if dp[start] != None:
-          return dp[start]
+        def dfs(start):
+            if start >= len(stoneValue):
+                return 0
 
-        i = start
-        curSum = 0
-        maxValue = -float('inf')
+            if dp[start] != None:
+                return dp[start]
 
-        while i < len(stoneValue) and i < start + 3:
-          curSum += stoneValue[i]
-          maxValue = max(maxValue, curSum - dfs(i + 1))
-          i += 1
+            i = start
+            curSum = 0
+            maxValue = -float('inf')
 
-        dp[start] = maxValue
+            while i < len(stoneValue) and i < start + 3:
+                curSum += stoneValue[i]
+                maxValue = max(maxValue, curSum - dfs(i + 1))
+                i += 1
 
-        return dp[start]  
+            dp[start] = maxValue
 
-      dp = [None] * len(stoneValue)
+            return dp[start]
 
-      res = dfs(0)
+        dp = [None] * len(stoneValue)
 
-    
-      if res > 0:
-        return 'Alice'
-      elif res < 0:
-        return 'Bob'
-      return 'Tie'  
+        res = dfs(0)
 
+        if res > 0:
+            return 'Alice'
+        elif res < 0:
+            return 'Bob'
+        return 'Tie'

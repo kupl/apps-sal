@@ -5,7 +5,7 @@ for i in range(n):
     points[i] = tuple(int(x) for x in input().split())
 
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         x1, y1 = points[i]
         x2, y2 = points[j]
         u, v = x2 - x1, y2 - y1
@@ -18,5 +18,3 @@ for i in range(n):
 
 S = sum(D[i] * (D[i] - 1) // 2 for i in D)
 print(S // 2)
-                
-

@@ -1,6 +1,6 @@
 def invert(lst):
-    b=[ ]
+    b = []
     for i in lst:
-        b+=[-i]   
+        b += [-i]
     return b
     pass

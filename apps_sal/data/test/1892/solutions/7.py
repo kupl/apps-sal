@@ -16,4 +16,3 @@ for _ in range(N):
         for i in range(1, index + 1):
             dp[i] = (dp[i - 1] + dp[i]) % L
 print(dp[index])
-

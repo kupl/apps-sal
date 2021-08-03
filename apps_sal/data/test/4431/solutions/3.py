@@ -19,5 +19,5 @@ if sum != 0:
 
 ans = 0
 for i in range(len(lenArr)):
-    ans += (lenArr[i] * (lenArr[i]+1)) // 2
+    ans += (lenArr[i] * (lenArr[i] + 1)) // 2
 print(ans)

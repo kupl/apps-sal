@@ -3,6 +3,7 @@ class StreamChecker:
     '''based on trie
        the core idea TLE is to create the trie with words in reverse order. also create a buffer that is used durring the query
     '''
+
     def __init__(self, words: List[str]):
         self.s = ''
         self.dic = defaultdict(set)

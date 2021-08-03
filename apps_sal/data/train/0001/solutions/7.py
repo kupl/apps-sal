@@ -13,5 +13,4 @@ for _ in range(q):
             else:
                 print(k)
         else:
-            print((k - 1));
-
+            print((k - 1))

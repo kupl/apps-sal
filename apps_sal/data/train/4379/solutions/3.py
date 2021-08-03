@@ -1,2 +1,2 @@
-def combine_names(a,b):
-    return '%s %s' %(a,b)
+def combine_names(a, b):
+    return '%s %s' % (a, b)

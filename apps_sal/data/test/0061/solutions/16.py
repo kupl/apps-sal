@@ -15,4 +15,3 @@ else:
         print('>')
     else:
         print('<')
-

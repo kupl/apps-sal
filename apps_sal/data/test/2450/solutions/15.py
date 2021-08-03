@@ -8,9 +8,8 @@ for t in range(T):
         for el in row:
             if el:
                 l = len(el)
-                b2 = l//2
-                answer += min(2*x*b2, y*b2)
+                b2 = l // 2
+                answer += min(2 * x * b2, y * b2)
                 if l % 2:
                     answer += x
     print(answer)
-

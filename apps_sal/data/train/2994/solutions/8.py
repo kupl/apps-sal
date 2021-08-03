@@ -9,4 +9,3 @@ def find_digit(num, nth):
         nth -= 1
 
     return num % 10
-

@@ -6,8 +6,8 @@ m, t, r = map(int, input().split())
 if r > t:
     print(-1)
     return
-    
-candles = []    
+
+candles = []
 gh = list(map(int, input().split()))
 
 for i in range(m):
@@ -16,8 +16,8 @@ for i in range(m):
     for c in candles:
         if g - c <= t:
             now_on += 1
-    
+
     for k in range(r - now_on):
         candles.append(g - 1 - k)
-        
+
 print(len(candles))

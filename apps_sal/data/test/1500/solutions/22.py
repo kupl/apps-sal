@@ -3,11 +3,13 @@ a = list(map(int, input().split()))
 i = a[0]
 home = a[-1]
 
+
 def closest_point(i):
     while i not in a:
         i -= 1
     else:
         return i
+
 
 def count_bikes(i, k, a):
     ans = 0
@@ -21,5 +23,5 @@ def count_bikes(i, k, a):
         ans += 1
     return ans
 
-print(count_bikes(i, k, a))
 
+print(count_bikes(i, k, a))

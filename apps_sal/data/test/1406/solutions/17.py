@@ -6,12 +6,12 @@ d = int(b[2])
 if n > k**d:
     print(-1)
     return
-table = [[1]*d]
+table = [[1] * d]
 for i in range(n - 1):
     v = list(table[-1])
-    j = len(v)-1
-    while v[j]==k:
-        v[j]=1
+    j = len(v) - 1
+    while v[j] == k:
+        v[j] = 1
         j = j - 1
     v[j] = v[j] + 1
     table.append(v)
@@ -25,4 +25,3 @@ for m in range(0, d):
         answer[s] = str(current_value)
     current_power *= k
     print(" ".join(answer))
-

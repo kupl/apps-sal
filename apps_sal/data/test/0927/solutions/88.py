@@ -26,4 +26,3 @@ while N > 0:
 ans.sort(reverse=True)
 
 print((''.join(map(str, ans))))
-

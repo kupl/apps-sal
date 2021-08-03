@@ -3,14 +3,13 @@ from itertools import combinations
 try:
     for _ in range(int(input())):
         def gcd(a, b):
-            if a == 0 or b == 0: 
+            if a == 0 or b == 0:
                 return 0
-            if a == b: 
+            if a == b:
                 return a
             if a > b:
                 return gcd(a - b, b)
             return gcd(a, b - a)
-
 
         def areNocoprime(arr):
             if gcd(arr[0], arr[1]) == 1:
@@ -18,14 +17,12 @@ try:
             else:
                 return False
 
-
         def iscoprime(arr):
             arr2 = list(combinations(arr, 2))
             arr3 = [areNocoprime(i) for i in arr2]
             if False in arr3:
                 return False
             return True
-
 
         def isarraycoprime(arr, n):
             arr2 = []
@@ -35,7 +32,7 @@ try:
                 return arr2
             else:
                 return arr
-            
+
         sum = 0
         n = int(input())
         pages = [i for i in range(1, n + 1)]

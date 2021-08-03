@@ -20,9 +20,9 @@ def issub(u, v):
         return False
     if u == v:
         return True
-    
+
     b = 1
-    for i in range(v.bit_length()+1):
+    for i in range(v.bit_length() + 1):
         if v & b < u & b:
             return False
         b <<= 1
@@ -33,18 +33,18 @@ def solve(N, A, B):
     vi = collections.defaultdict(list)
     for i, v in enumerate(A):
         vi[v].append(i)
-        
+
     wc = collections.Counter(A)
     group = {k for k, v in wc.items() if v > 1}
     others = {u for u in wc.keys() if u not in group and any(issub(u, v) for v in group)}
     group |= others
-    
+
     ans = 0
     for u in group:
         ans += sum([B[i] for i in vi[u]])
-    
+
     return ans
-    
+
 
 # def test():
 #     N = 7000

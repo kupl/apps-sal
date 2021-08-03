@@ -23,13 +23,11 @@ else:
         num_in_ref += 1
         if n % 3 == 0:
             flag_over = 1
-    elif ref[1 : n + 1] == t:
+    elif ref[1: n + 1] == t:
         num_in_ref += 1
-    elif ref[2 : n + 2] == t:
+    elif ref[2: n + 2] == t:
         num_in_ref += 1
         if n % 3 == 2:
             flag_over = -1
     # print(ref[: n + 1], t)
     print((num_in_ref * (10 ** 10 - repeat_num + 2) + flag_over))
-
-

@@ -16,7 +16,7 @@ for i, y in enumerate(a):
         if x < y:
             if l - k + 1 >= 0:
                 li.sort()
-                cnd += li[:l-k+1]
+                cnd += li[:l - k + 1]
             li = []
             l = 0
         else:
@@ -25,8 +25,7 @@ for i, y in enumerate(a):
 
     if len(cnd) >= q - 1:
         cnd.sort()
-        sub = cnd[q-2] - y
+        sub = cnd[q - 2] - y
         ans = min(ans, sub)
 
 print(ans)
-

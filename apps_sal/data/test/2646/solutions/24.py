@@ -10,8 +10,8 @@ N, M = map(int, input().split())
 cave = [[] for i in range(N)]
 for i in range(M):
     a, b = map(int, input().split())
-    cave[a-1].append(b-1)
-    cave[b-1].append(a-1)
+    cave[a - 1].append(b - 1)
+    cave[b - 1].append(a - 1)
 
 
 # show_2d_array(cave)
@@ -33,7 +33,6 @@ def bfs(tree, p):
                 depth[v] = depth[q] + 1
                 queue.append(v)
                 seen[v] = True
-
 
     return depth
 
@@ -82,6 +81,4 @@ for i in range(1, N):
 
 print(ans)
 if ans == "Yes":
-    [print(s+1) for s in sign[1:]]
-
-
+    [print(s + 1) for s in sign[1:]]

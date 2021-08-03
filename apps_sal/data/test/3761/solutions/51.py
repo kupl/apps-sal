@@ -67,6 +67,3 @@ if y not in curr:
     print("No")
 else:
     print("Yes")
-
-
-

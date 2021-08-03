@@ -4,5 +4,5 @@ def friend(x):
         if len(i) == 4:
             y.append(i)
         else:
-            pass 
+            pass
     return y

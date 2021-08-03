@@ -1,5 +1,5 @@
 S = str(input())
 if S[0] == S[1] == S[2]:
-  print('No')
+    print('No')
 else:
-  print('Yes')
+    print('Yes')

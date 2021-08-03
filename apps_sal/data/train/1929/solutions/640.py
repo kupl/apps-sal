@@ -46,7 +46,6 @@ class Trie:
                     else:
                         failover = failover.fail
 
-        
 
 class StreamChecker:
 
@@ -58,31 +57,26 @@ class StreamChecker:
         self.trie.built_failover()
         self.curr = self.trie.root
 
-        
-
     def query(self, letter: str) -> bool:
         result = False
         while True:
             if letter in self.curr.children:
-                
+
                 self.curr = self.curr.children[letter]
-                
+
                 if self.curr.isEND:
                     result = True
-                if self.curr.fail !=None and self.curr.fail.isEND:
+                if self.curr.fail != None and self.curr.fail.isEND:
                     result = True
                 break
             elif self.curr.fail == None:
                 self.curr = self.trie.root
                 break
             else:
-                self.curr= self.curr.fail
+                self.curr = self.curr.fail
         return result
-
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -17,4 +17,3 @@ for k in range(q):
         print(*d[x])
     else:
         print(*d[c + 1 + ((x - c - 1) % (n - 1))])
-

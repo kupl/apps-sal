@@ -2,6 +2,7 @@
 from math import sqrt
 from itertools import permutations
 
+
 def main():
     N = int(input())
     ans = 0.0
@@ -16,7 +17,9 @@ def main():
 
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

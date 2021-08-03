@@ -2,7 +2,7 @@ class Solution:
     def racecar(self, target: int) -> int:
         q = collections.deque([(0, 1, 0)])
         visited = set()
-        visited.add((0,1))
+        visited.add((0, 1))
 
         while q:
             size = len(q)

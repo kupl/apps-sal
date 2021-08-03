@@ -10,8 +10,12 @@ from math import gcd
 # sys.setrecursionlimit(10**5)#thsis is must
 # mod = 10**9+7; md = 998244353
 # m = 2**32
-input = lambda: sys.stdin.readline().strip()
-inp = lambda: list(map(int,sys.stdin.readline().strip().split()))
+def input(): return sys.stdin.readline().strip()
+
+
+def inp(): return list(map(int, sys.stdin.readline().strip().split()))
+
+
 # def C(n,r,mod):
 #   if r>n:
 #       return 0
@@ -29,14 +33,14 @@ inp = lambda: list(map(int,sys.stdin.readline().strip().split()))
 #                 if pfc[j]==j:
 #                     pfc[j] = i
 #     return
-#______________________________________________________
+# ______________________________________________________
 for _ in range(int(input())):
     n = int(input())
-    ans = 0 
-    for i in range(1,n+1):
-        d = i*i
-        if d>n:
+    ans = 0
+    for i in range(1, n + 1):
+        d = i * i
+        if d > n:
             break
-        if d%3!=0:
-            ans+=1
+        if d % 3 != 0:
+            ans += 1
     print(ans)

@@ -1,8 +1,8 @@
 MAX_N = 5001
 
-a = [0] * MAX_N;
-raz = [0] * (MAX_N + 10);
-s = [0] * (MAX_N + 10);
+a = [0] * MAX_N
+raz = [0] * (MAX_N + 10)
+s = [0] * (MAX_N + 10)
 
 n = int(input())
 
@@ -15,9 +15,9 @@ for i in range(n):
 
 
 for i in range(1, MAX_N + 1):
-     s[i] = s[i - 1] + raz[i]
-     
-ans = 0;
+    s[i] = s[i - 1] + raz[i]
+
+ans = 0
 
 for i in range(1, MAX_N):
     if raz[i] == 0:

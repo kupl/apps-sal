@@ -26,4 +26,3 @@ else:
         ans %= MOD
 
 print(ans)
-

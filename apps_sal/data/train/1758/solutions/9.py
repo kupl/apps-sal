@@ -1,2 +1,2 @@
 from itertools import permutations as pm
-permutations=lambda s: map(''.join, set(pm(s)))
+def permutations(s): return map(''.join, set(pm(s)))

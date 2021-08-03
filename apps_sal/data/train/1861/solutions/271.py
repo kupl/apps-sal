@@ -7,7 +7,7 @@ class Solution:
         for x1, y1 in points:
             for x2, y2 in visited:
                 if (x1, y2) in visited and (x2, y1) in visited:
-                    area = abs(x1-x2)*abs(y1-y2)
+                    area = abs(x1 - x2) * abs(y1 - y2)
                     if area and area <= res:
                         res = area
             visited.add((x1, y1))

@@ -8,8 +8,8 @@ for _ in range(int(input())):
         for t in range(n, 0, -2):
             k.append(t)
         l = []
-        for t in range(n-3, 0, -2):
+        for t in range(n - 3, 0, -2):
             l.append(t)
-        l.insert(1, n-1)
+        l.insert(1, n - 1)
         l.reverse()
         print(*l, *k)

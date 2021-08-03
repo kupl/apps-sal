@@ -10,7 +10,7 @@ def hex_to_dec(s):
             dec += 1 * 16 ** count
             count += 1
         elif i == '2':
-            dec+= 2 * 16 ** count
+            dec += 2 * 16 ** count
             count += 1
         elif i == '3':
             dec += 3 * 16 ** count
@@ -19,16 +19,16 @@ def hex_to_dec(s):
             dec += 4 * 16 ** count
             count += 1
         elif i == '5':
-            dec+= 5 * 16 ** count
+            dec += 5 * 16 ** count
             count += 1
         elif i == '6':
             dec += 6 * 16 ** count
             count += 1
         elif i == '7':
-            dec+= 7 * 16 ** count
-            count += 1    
+            dec += 7 * 16 ** count
+            count += 1
         elif i == '8':
-            dec+= 8 * 16 ** count
+            dec += 8 * 16 ** count
             count += 1
         elif i == '9':
             dec += 9 * 16 ** count

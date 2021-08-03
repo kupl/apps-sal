@@ -11,4 +11,4 @@ else:
     lst.append(X)
     lst2 = sorted(lst)
     n = lst2.index(X)
-    print(lst2[n-1])
+    print(lst2[n - 1])

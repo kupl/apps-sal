@@ -5,6 +5,6 @@ while len(ids) > 1:
     index = ids[0]
     del ids[0]
     if arr[index - 1] - m > 0:
-        arr[index - 1] -= m;
+        arr[index - 1] -= m
         ids.append(index)
 print(ids[0])

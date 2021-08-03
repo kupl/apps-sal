@@ -17,4 +17,3 @@ for qq in range(t):
             mp = p
             ii = i
     print(mp + 1, ii)
-

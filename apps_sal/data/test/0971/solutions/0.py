@@ -1,5 +1,5 @@
 # You lost the game.
-n,b,d = list(map(int, input().split()))
+n, b, d = list(map(int, input().split()))
 L = list(map(int, input().split()))
 r = 0
 c = 0
@@ -10,4 +10,3 @@ for i in range(n):
             r += 1
             c = 0
 print(r)
-

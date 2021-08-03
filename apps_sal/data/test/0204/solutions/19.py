@@ -12,13 +12,11 @@ print(ans)
 
 
 import math
-a,b,x,y=list(map(int,input().split()))
-g=math.gcd(x,y)
-x=x//g
-y=y//g
-a1=a//x
-a2=b//y
-ans=min(a1,a2)
+a, b, x, y = list(map(int, input().split()))
+g = math.gcd(x, y)
+x = x // g
+y = y // g
+a1 = a // x
+a2 = b // y
+ans = min(a1, a2)
 print(ans)
-    
-

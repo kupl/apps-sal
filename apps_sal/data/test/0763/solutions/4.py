@@ -7,4 +7,3 @@ for i in range(0, n):
         d += 2 * a[j] * (abs(i - j) + j + i)
     ans = min(ans, d)
 print(ans)
-

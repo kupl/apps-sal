@@ -6,7 +6,8 @@ while t:
     s = 1
     while 1:
         tmp = n // s + bool(n % s) - 1 + (s - 1)
-        if tmp > ans: break
+        if tmp > ans:
+            break
         ans = tmp
         s -= -1
     print(ans)

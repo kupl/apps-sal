@@ -1,5 +1,6 @@
 from math import comb
 
+
 class Solution:
     def threeSumMulti(self, a: List[int], target: int) -> int:
         counts = Counter(a)
@@ -16,4 +17,3 @@ class Solution:
                 elif i < j < k:
                     ans += counts[i] * counts[j] * counts[k]
         return ans % (10**9 + 7)
-

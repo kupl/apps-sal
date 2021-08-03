@@ -2,29 +2,36 @@
 ##
 ##
 import sys
+
+
 def line():
     return sys.stdin.readline()
+
 
 def numbers():
     return list(map(int, line().split()))
 
+
 def number():
     return int(line())
 
+
 adjlist = {}
 n, k = 0, 0
-mark = [False]*2010
-edges = [False]*1010
+mark = [False] * 2010
+edges = [False] * 1010
 
 # bfs for "ssph"
+
+
 def bfs(s):
-    
+
     i = 0
     frontier = [s]
     while frontier:
 
         if mark[s]:
-            break;
+            break
 
         next_frontier = []
         for u in frontier:
@@ -47,6 +54,7 @@ def bfs(s):
     else:
         return -1
 
+
 # main program
 [n, k] = numbers()
 concentrations = numbers()
@@ -60,4 +68,3 @@ ans = bfs(1000)
 print(ans)
 
 # 1496438704903
-

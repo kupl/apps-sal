@@ -16,4 +16,3 @@ class Solution:
             if state not in mem:
                 mem[state] = i
         return res
-

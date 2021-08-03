@@ -46,4 +46,3 @@ for x in cnt:
         ans += 1
 
 print(ans)
-

@@ -11,5 +11,3 @@ for f, t in sorted(list(pa.items()), reverse=True):
 else:
     time += now
 print(time)
-    
-

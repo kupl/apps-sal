@@ -2,7 +2,7 @@
 def is_anagram(test, original):
     test_word_freq = {}
     original_word_freq = {}
-    
+
     test = test.lower()
     original = original.lower()
 
@@ -12,7 +12,7 @@ def is_anagram(test, original):
                 test_word_freq[letter] = 1
             else:
                 test_word_freq[letter] += 1
-                
+
         for idx, lett in enumerate(original):
             if lett not in original_word_freq:
                 original_word_freq[lett] = 1
@@ -28,6 +28,3 @@ def is_anagram(test, original):
         return True
     else:
         return False
-    
-   
-

@@ -6,7 +6,7 @@ clos = []
 val = 0
 for c in range(cs):
     brac = input()
-    
+
     s = []
     for b in brac:
         if len(s) == 0 or b == '(':
@@ -16,14 +16,14 @@ for c in range(cs):
                 s.pop()
             else:
                 s.append(')')
-                
+
     if len(s) != 0:
         if s[0] == s[-1] == '(':
             open.append(len(s))
         if s[0] == s[-1] == ')':
             clos.append(len(s))
     else:
-        val += 1 
+        val += 1
 
 close = dict()
 
@@ -39,6 +39,4 @@ for op in open:
         close[op] -= 1
         if close[op] == 0:
             del close[op]
-print(ans)            
-            
-
+print(ans)

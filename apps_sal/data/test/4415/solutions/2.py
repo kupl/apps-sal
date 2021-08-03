@@ -12,7 +12,7 @@ for i in a:
         return
 inc = list(inc)
 dec = list(dec)
-inc.sort(reverse = True)
+inc.sort(reverse=True)
 dec.sort()
 print("YES")
 print(len(dec))

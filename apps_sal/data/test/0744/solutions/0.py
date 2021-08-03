@@ -10,4 +10,3 @@ if sf > si:
     print('YES')
 else:
     print('NO')
-

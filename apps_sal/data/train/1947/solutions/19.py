@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         def aggregate_b(B):
@@ -21,8 +23,5 @@ class Solution:
                         del letter_count[letter]
             if not letter_count:
                 result.append(word)
-                
+
         return result
-
-
-

@@ -22,4 +22,3 @@ for _ in range(t):
             break
     else:
         print('YES')
-

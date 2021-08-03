@@ -27,30 +27,26 @@ O(N^2) for nested loop.
 
         
 '''
+
+
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         res = 0
-        if len(A)<=2:
+        if len(A) <= 2:
             return 0
         find = set(A)
-        for i in range(len(A)-1):
-            for j in range(i+1,len(A)):
+        for i in range(len(A) - 1):
+            for j in range(i + 1, len(A)):
                 currLen = 2
                 a = A[i]
                 b = A[j]
-                while (a+b) in find: 
-                    currLen+=1
-                    holdb = b   #you're not moving along i and j, but the actual values themselves. Because you already have the values you need in the set.
-                    b = a+b
+                while (a + b) in find:
+                    currLen += 1
+                    holdb = b  # you're not moving along i and j, but the actual values themselves. Because you already have the values you need in the set.
+                    b = a + b
                     a = holdb
-                    res = max(currLen,res)
-        if res>2:
+                    res = max(currLen, res)
+        if res > 2:
             return res
         else:
             return 0
-                        
-                    
-                    
-                    
-                
-

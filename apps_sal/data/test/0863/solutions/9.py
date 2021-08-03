@@ -1,8 +1,7 @@
+from math import ceil
+from sys import stdin
 3
 # -*- config:utf-8 -*-
-
-from sys import stdin
-from math import ceil
 
 
 def getdata():
@@ -115,5 +114,6 @@ def run():
 
 def __starting_point():
     run()
+
 
 __starting_point()

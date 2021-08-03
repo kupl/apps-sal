@@ -19,4 +19,3 @@ class Solution:
         if len(cand) == 0:
             return ans
         return ans + s[cand[0]:]
-

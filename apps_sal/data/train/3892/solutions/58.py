@@ -1,6 +1,8 @@
-ans='FFFFFFDCBA'
+ans = 'FFFFFFDCBA'
+
+
 def grader(score):
-    s = int(round(score/0.1))
+    s = int(round(score / 0.1))
     try:
         return ans[s]
     except:

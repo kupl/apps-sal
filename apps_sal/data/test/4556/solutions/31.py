@@ -1,1 +1,1 @@
-print("A"+input()[8]+"C")
+print("A" + input()[8] + "C")

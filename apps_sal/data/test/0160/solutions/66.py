@@ -2,6 +2,7 @@ N, K = list(map(int, input().split()))
 A = list(map(int, input().split()))
 S = sum(A)
 
+
 def canMake(n):
     B = [a % n for a in A]
     B.sort()
@@ -14,6 +15,7 @@ def canMake(n):
         if left == n * (N - i) - right:
             return left <= K
     return False
+
 
 ans = 1
 for i in range(1, int(S**0.5) + 100):
@@ -28,4 +30,3 @@ for i in range(1, int(S**0.5) + 100):
         break
 
 print(ans)
-

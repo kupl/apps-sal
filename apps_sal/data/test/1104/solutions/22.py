@@ -2,7 +2,7 @@ n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
-for i in range(n-1):
+for i in range(n - 1):
     if a[i] == 3:
         a[i] = '11'
     elif a[i] == 2:
@@ -12,7 +12,7 @@ for i in range(n-1):
     elif a[i] == 0:
         a[i] = '00'
 
-for i in range(n-1):
+for i in range(n - 1):
     if b[i] == 3:
         b[i] = '11'
     elif b[i] == 2:
@@ -53,7 +53,7 @@ for ti in ['00', '01', '10', '11']:
         break
     elif (Checker(t[0], a[0][0], b[0][0]) is not None) and (Checker(t[1], a[0][1], b[0][1]) is not None):
         s.append(t)
-        for i in range(n-1):
+        for i in range(n - 1):
             c = Checker(t[0], a[i][0], b[i][0])
             e = Checker(t[1], a[i][1], b[i][1])
             if (c is not None) and (e is not None):
@@ -78,4 +78,3 @@ if flag and s:
             print(0, end=' ')
 else:
     print('NO')
-

@@ -16,5 +16,3 @@ class SubrectangleQueries:
 
     def getValue(self, row: int, col: int) -> int:
         return self.rectangle[row][col]
-    
-

@@ -20,4 +20,3 @@ for i in t:
             ans += 2
 
 print(ans)
-

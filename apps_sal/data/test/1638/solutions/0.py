@@ -10,11 +10,11 @@ def main():
         ans = [0] * N
         ans[mid] = A[mid]
         prev = A[mid]
-        for j in range(mid-1, -1, -1):
+        for j in range(mid - 1, -1, -1):
             ans[j] = min(prev, A[j])
             prev = ans[j]
         prev = A[mid]
-        for j in range(mid+1, N):
+        for j in range(mid + 1, N):
             ans[j] = min(prev, A[j])
             prev = ans[j]
         if sum(ans) > S:
@@ -25,5 +25,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

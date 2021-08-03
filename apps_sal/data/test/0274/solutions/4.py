@@ -28,15 +28,17 @@ columns = []
 
 m = 2 * max_height + 1
 
+
 def draw_bar(pos, height):
     while len(columns) <= pos:
         columns.append([' ' for _ in range(m)])
     upper_plus = max_height - height
     lower_plus = m - upper_plus - 1
-    
+
     columns[pos][upper_plus] = columns[pos][lower_plus] = '+'
     for i in range(upper_plus + 1, lower_plus):
         columns[pos][i] = '|'
+
 
 def draw_lines(pos, height):
     while len(columns) <= pos:
@@ -47,14 +49,15 @@ def draw_lines(pos, height):
 
     columns[pos][upper_minus] = columns[pos][lower_minus] = '-'
 
+
 pos, h = 0, max_height
 for i, c in enumerate(s):
     if i > 0:
-        if c == ']' and s[i-1] == '[':
+        if c == ']' and s[i - 1] == '[':
             pos += 3
-        if c == '[' and s[i-1] == '[':
+        if c == '[' and s[i - 1] == '[':
             h -= 1
-        elif c == ']' and s[i-1] == ']':
+        elif c == ']' and s[i - 1] == ']':
             h += 1
 
     draw_bar(pos, h)
@@ -68,4 +71,3 @@ for i, c in enumerate(s):
 for i in range(m):
     line = ''.join(column[i] for column in columns).rstrip()
     print(line)
-

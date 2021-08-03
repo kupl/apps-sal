@@ -31,6 +31,7 @@ else:
     print(ans)'''
 from collections import defaultdict as dd
 
+
 def main():
     n = int(input())
     a = [int(x) for x in input().split()]
@@ -39,8 +40,8 @@ def main():
     for i in a:
         d[i] += 1
 
-    cnt=0
-    ans=10**9
+    cnt = 0
+    ans = 10**9
     for i in d:
         if d[i] >= 2:
             cnt += 1
@@ -54,14 +55,13 @@ def main():
             for j in range(i, n):
                 d2[a[j]] += 1
 
-                if d2[a[j]] == d[a[j]] - 1 and d[a[j]]  >= 2:
+                if d2[a[j]] == d[a[j]] - 1 and d[a[j]] >= 2:
                     ct += 1
 
                 if ct == cnt:
                     ans = min(ans, abs(j - i + 1))
-                    
+
         print(ans)
 
 
 main()
-

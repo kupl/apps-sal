@@ -1,8 +1,11 @@
 import sys
 from fractions import gcd
 import math
+
+
 def lcm(x, y):
     return x * y // gcd(x, y)
+
 
 def seive(lim):
     for x in range(2, lim + 1):
@@ -15,7 +18,9 @@ def seive(lim):
                     cnt += 1
                     yy //= x
                 factors[y].append((x, cnt))
-factors =[]
+
+
+factors = []
 for i in range(10**5 + 2):
     factors.append([])
 seive(10**5 + 1)
@@ -36,10 +41,3 @@ while (curLvl <= n):
     nxtLvl += 1
 
 sys.stdout.write(ans)
-
-
-
-
-
-
-

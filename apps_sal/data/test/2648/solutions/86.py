@@ -36,4 +36,3 @@ if count % 2 == 0:
     print((len(fix_d)))
 else:
     print((len(fix_d) - 1))
-

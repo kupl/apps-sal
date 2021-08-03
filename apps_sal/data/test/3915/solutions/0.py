@@ -1,6 +1,8 @@
 def primes2(limit):
-    if limit < 2: return []
-    if limit < 3: return [2]
+    if limit < 2:
+        return []
+    if limit < 3:
+        return [2]
     lmtbf = (limit - 3) // 2
     buf = [True] * (lmtbf + 1)
     for i in range((int(limit ** 0.5) - 3) // 2 + 1):
@@ -10,7 +12,9 @@ def primes2(limit):
             buf[s::p] = [False] * ((lmtbf - s) // p + 1)
     return [2] + [i + i + 3 for i, v in enumerate(buf) if v]
 
-ps = primes2(12*10**6)
+
+ps = primes2(12 * 10**6)
+
 
 def rub2(n):
     lst_odd = []
@@ -24,7 +28,8 @@ def rub2(n):
     lst.sort()
     return lst
 
-rs = rub2(12*10**2)
+
+rs = rub2(12 * 10**2)
 
 p, q = map(int, input().split())
 idxp = len(ps) - 1
@@ -43,4 +48,4 @@ while q * (idxp + 1) > p * (idxr + 1):
     prev_ri = ri
     pi = ps[idxp]
     ri = rs[idxr]
-print(max(prev_pi-1, prev_ri-1))
+print(max(prev_pi - 1, prev_ri - 1))

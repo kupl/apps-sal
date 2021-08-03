@@ -22,7 +22,7 @@ if f == b:
         print(-1)
         return
 
-    if f+1 == n:
+    if f + 1 == n:
         print(1)
         return
     else:
@@ -39,11 +39,11 @@ ns = 0
 for i in range(f, b):
     if w[i] >= 0:
         ps += 1
-        if w[i+1] < 0:
+        if w[i + 1] < 0:
             inv.append(ps)
     elif w[i] < 0:
         ns += 1
-        if w[i+1] >= 0:
+        if w[i + 1] >= 0:
             ps = 0
 ns += 1
 spare = k - ns
@@ -53,7 +53,7 @@ if spare < 0:
     return
 
 if not inv:
-    if w[n-1] < 0:
+    if w[n - 1] < 0:
         print(1)
         return
     else:
@@ -88,5 +88,3 @@ if remainder >= (n - (b + 1)):
     ch -= 1
 
 print(ch)
-
-

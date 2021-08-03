@@ -13,11 +13,10 @@ class Solution:
                 if position[i] - prev >= mid:
                     count += 1
                     prev = position[i]
-                    
+
             if count >= m:
                 res = max(res, mid)
                 lo = mid + 1
             else:
                 hi = mid - 1
         return res
-

@@ -11,7 +11,7 @@ class Solution:
         # count.sort()
         events.sort()
         # print(events)
-        
+
         prev = -1
         result = 0
         index = 0
@@ -28,6 +28,6 @@ class Solution:
                     count[i] = count[i - 1]
         count.pop()
         count.sort()
-        
+
         # print(count)
         return sum([count[i] * nums[i] for i in range(n)]) % LARGE

@@ -11,4 +11,3 @@ for k, v in res[::-1]:
         print("f(%d) = %.2f" % (k, v))
     else:
         print("f(%d) = MAGNA NIMIS!" % k)
-

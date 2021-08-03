@@ -19,7 +19,7 @@ while i < len(string):
         while j < len(string) and string[j] != None:
             j += 1
         diff = j - i
-        cnt += (diff*(diff+1))//2
+        cnt += (diff * (diff + 1)) // 2
         i = j
 
 print(cnt)

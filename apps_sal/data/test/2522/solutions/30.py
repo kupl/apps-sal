@@ -24,4 +24,3 @@ while same_range:
     i += 1
 print("Yes")
 print((" ".join(map(str, B))))
-

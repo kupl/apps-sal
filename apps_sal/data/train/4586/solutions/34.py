@@ -4,7 +4,7 @@ def tv_remote(word):
 
     for c in word:
         i = keys.index(c)
-        res += abs(i%8-last%8) + abs(i//8-last//8)
+        res += abs(i % 8 - last % 8) + abs(i // 8 - last // 8)
         last = i
 
     return res

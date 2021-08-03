@@ -10,6 +10,7 @@ for i, c in enumerate(s):
 
 visited = set()
 
+
 def dfs(i):
     if i in visited:
         return False
@@ -18,7 +19,7 @@ def dfs(i):
     if not (0 <= i < len(s)) or s[i] == '#':
         return False
     visited.add(i)
-    return dfs(i-k) or dfs(i+k)
+    return dfs(i - k) or dfs(i + k)
+
 
 print('YES' if dfs(start) else 'NO')
-

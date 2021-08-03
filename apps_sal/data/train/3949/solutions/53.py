@@ -1,5 +1,6 @@
 from math import ceil
 
+
 def calculate_tip(amount, rating):
     per = {
         "terrible": 0,
@@ -8,6 +9,5 @@ def calculate_tip(amount, rating):
         "great": 0.15,
         "excellent": 0.2
     }.get(rating.lower(), None)
-    
-    return ceil(amount * per) if per != None else 'Rating not recognised'
 
+    return ceil(amount * per) if per != None else 'Rating not recognised'

@@ -1,1 +1,1 @@
-print(1<<len(f'{int(input()):b}')-1)
+print(1 << len(f'{int(input()):b}') - 1)

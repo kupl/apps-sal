@@ -1,3 +1,3 @@
 def make_upper_case(s):
-    i  = s.upper()
+    i = s.upper()
     return i

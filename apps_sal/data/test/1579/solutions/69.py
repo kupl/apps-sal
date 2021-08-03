@@ -2,19 +2,22 @@ import sys
 from collections import defaultdict, deque
 readline = sys.stdin.readline
 N = int(readline())
-P = defaultdict(list); Q = defaultdict(list)
+P = defaultdict(list)
+Q = defaultdict(list)
 for i in range(N):
     x, y = map(int, readline().split())
     P[x].append(y)
     Q[y].append(x)
-X = set(); Y = set()
+X = set()
+Y = set()
 
 res = 0
 que = deque()
 for x in P:
     que.append((0, x))
     X.add(x)
-    cx = 1; cy = 0
+    cx = 1
+    cy = 0
     while que:
         t, v = que.popleft()
         if t:

@@ -15,7 +15,7 @@ class Solution:
             else:
                 left = mid + 1
         return left
-        
+
     def CalcTime(self, piles, K, H):
         h = 0
         for p in piles:
@@ -26,4 +26,3 @@ class Solution:
             if h > H:
                 return False
         return h <= H
-

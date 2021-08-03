@@ -23,4 +23,3 @@ if yes:
 
     print(len(C))
     print(*sorted(list(C), reverse=True))
-

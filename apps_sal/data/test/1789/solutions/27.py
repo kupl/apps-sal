@@ -9,6 +9,6 @@ ans = 0
 if 2 * x <= y:
     ans = diff * x
 else:
-    ans= x + (diff // 2) * y
+    ans = x + (diff // 2) * y
 
 print(ans)

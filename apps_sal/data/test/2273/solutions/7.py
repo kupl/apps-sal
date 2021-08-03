@@ -1,18 +1,19 @@
+from collections import deque
 import sys
 input = sys.stdin.readline
-from collections import deque
 n, m = [int(item) for item in input().split()]
 ab = []
 edges = [[] for _ in range(n)]
 
 for i in range(m):
     a, b = [int(item) for item in input().split()]
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     edges[a].append(b)
     edges[b].append(a)
     ab.append((a, b))
 
-    
+
 groupA = [1] * n
 for a, b in ab:
     if a == 0:
@@ -56,7 +57,7 @@ sumA = sum(groupA)
 sumB = sum(groupB)
 sumC = sum(groupC)
 e_abc = [0, n - sumA, n - sumB, n - sumC]
-edge_num = sumA * sumB + sumB * sumC + sumC * sumA 
+edge_num = sumA * sumB + sumB * sumC + sumC * sumA
 if edge_num != m:
     print(-1)
     return

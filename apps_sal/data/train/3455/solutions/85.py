@@ -4,8 +4,8 @@ def disarium_number(num):
     true = 0
 
     for i in it:
-         true += int(i) ** count
-         count += 1
+        true += int(i) ** count
+        count += 1
     if true == num:
         return "Disarium !!"
     else:

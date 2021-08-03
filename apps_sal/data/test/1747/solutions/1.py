@@ -32,4 +32,3 @@ for i in range(length):
 
 
 print(start + 1, end + 1)
-

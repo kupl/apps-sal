@@ -17,5 +17,3 @@ for testcase in range(int(stdin.readline())):
         if not has_ans:
             break
     print('YES' if has_ans else 'NO')
-
-

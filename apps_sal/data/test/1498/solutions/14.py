@@ -27,5 +27,3 @@ for i in range(q):
     else:
         print(-1)
         pre = t
-
-

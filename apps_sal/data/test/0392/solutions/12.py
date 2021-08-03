@@ -15,5 +15,5 @@ def Factor(n):
             Ans *= n
     return Ans
 
-print(Factor(int(input())))
 
+print(Factor(int(input())))

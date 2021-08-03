@@ -11,6 +11,9 @@ def resolve():
         mp[y] = mp.get(y, 0) + 1
     print(ans)
 
+
 def __starting_point():
     resolve()
+
+
 __starting_point()

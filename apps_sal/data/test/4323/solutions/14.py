@@ -13,10 +13,9 @@ if sumb > m:
     print(-1)
 else:
     i = 0
-    s.sort(reverse = True)
+    s.sort(reverse=True)
     while sumschat < suma - m:
         sumschat = sumschat + s[i]
         i = i + 1
         k = k + 1
     print(k)
-

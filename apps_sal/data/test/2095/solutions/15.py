@@ -16,4 +16,3 @@ print(len(cars))
 if cars:
 
     print(str.join(" ", list(map(str, cars))))
-

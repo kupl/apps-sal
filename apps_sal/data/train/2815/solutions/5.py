@@ -5,4 +5,3 @@ def compress(sentence):
         if x not in sl:
             sl.append(x)
     return ''.join(str(sl.index(x)) for x in s)
-

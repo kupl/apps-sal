@@ -1,4 +1,4 @@
 import math
-n=int(input())
+n = int(input())
 
-print(int(math.log(n,2))+1)
+print(int(math.log(n, 2)) + 1)

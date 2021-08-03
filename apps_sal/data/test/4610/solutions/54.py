@@ -12,5 +12,3 @@ while idx < len(CA) - k:
     ans += val
     idx += 1
 print(ans)
-
-

@@ -1,5 +1,6 @@
 abc = "abcdefghijklmnopqrstuvwxyz"
 
+
 def keyword_cipher(s, keyword, key=""):
     for c in keyword + abc:
         if c not in key:

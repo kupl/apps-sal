@@ -3,4 +3,3 @@ def smash(words):
     for w in words:
         ans = ans + " " + w
     return ans.strip()
-

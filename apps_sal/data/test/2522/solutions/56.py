@@ -12,6 +12,8 @@ def MS(): return input().split()
 def LS(): return list(input())
 def LLS(rows_number): return [LS() for _ in range(rows_number)]
 def printlist(lst, k=' '): print((k.join(list(map(str, lst)))))
+
+
 INF = float('inf')
 # from math import ceil, floor, log2
 # from collections import deque, defaultdict
@@ -19,6 +21,7 @@ INF = float('inf')
 # from heapq import heapify, heappop, heappush
 # import numpy as np    # cumsum
 # from bisect import bisect_left, bisect_right
+
 
 def solve():
     N = II()
@@ -35,7 +38,8 @@ def solve():
         for i in range(j, N):
             b = B[i]
             j = i + 1
-            if i == idx: continue
+            if i == idx:
+                continue
             if b != x and x != A[i]:
                 B[i], B[idx] = B[idx], B[i]
                 break

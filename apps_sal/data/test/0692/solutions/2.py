@@ -3,6 +3,7 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
+
 n = int(input())
 
 M = list(map(int, input().split()))
@@ -20,4 +21,3 @@ for d in range(G):
             break
 
 print(count / G)
-

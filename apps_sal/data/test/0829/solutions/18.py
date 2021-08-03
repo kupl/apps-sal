@@ -9,5 +9,4 @@ if ones != zeros:
     print(s)
 else:
     print(2)
-    print(s[0],s[1:])
-
+    print(s[0], s[1:])

@@ -3,7 +3,7 @@ import typing as t
 
 
 class Solution:
-    
+
     def preorder(self, node: int, parent: t.Optional[int] = None) -> None:
         total_count = 0
         for child in self.graph[node]:
@@ -14,7 +14,7 @@ class Solution:
             total_count += count
         self.subtree_count[node] = total_count + 1
         return total_count + 1
-    
+
     def postorder(self, node: int, parent: t.Optional[int] = None) -> None:
         if parent is not None:
             self.distance[node] += self.distance[parent] - self.distance[node] - 2 * self.subtree_count[node] + self.n
@@ -22,7 +22,7 @@ class Solution:
             if child == parent:
                 continue
             self.postorder(child, node)
-    
+
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
         self.n = N
         self.distance = [0] * N

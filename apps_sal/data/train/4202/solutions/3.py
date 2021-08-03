@@ -1,6 +1,7 @@
 from collections import Counter
 from itertools import combinations
 
+
 def ulam_sequence(u0, u1, n):
     seq = [u0, u1]
     for i in range(n - 2):

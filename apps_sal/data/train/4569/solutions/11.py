@@ -6,5 +6,3 @@ def next_item(xs, item):
         if i == item:
             trap = True
     return None
-        
-

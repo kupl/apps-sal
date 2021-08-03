@@ -6,6 +6,8 @@ def f(x):
         return -1
     else:
         return 0
+
+
 n = int(input())
 a = [i for i in input().split()]
 count = 0
@@ -22,4 +24,3 @@ if res == '0':
     print(res)
 else:
     print(res + '0' * count)
-

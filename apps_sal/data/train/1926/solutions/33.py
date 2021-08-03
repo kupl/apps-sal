@@ -3,6 +3,6 @@ class Solution:
         for i in range(int((num + 2)**0.5), 0, -1):
             if (num + 1) % i == 0:
                 return [i, int((num + 1) / i)]
-            
+
             if (num + 2) % i == 0:
                 return [i, int((num + 2) / i)]

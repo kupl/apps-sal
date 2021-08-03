@@ -18,4 +18,3 @@ for i in range(q):
         print(k)
     else:
         print(k - 1)
-

@@ -19,4 +19,3 @@ if end_maisu < 0:
     end_maisu = 0
 # print(end_maisu - 1)
 print((n - ans - end_maisu))
-

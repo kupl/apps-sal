@@ -7,7 +7,7 @@ for _ in range(n):
         ans += x
     else:
         x = float(x)
-        tmp = x*380000
+        tmp = x * 380000
         ans += tmp
 
 print(ans)

@@ -2,7 +2,9 @@ from random import randrange
 from heapq import heapify, heappush, heappop
 from time import time
 K = 60
-rand = lambda: randrange(1 << K)
+def rand(): return randrange(1 << K)
+
+
 sTime = time()
 N = int(input())
 S, IS, C = [], [], []
@@ -23,7 +25,8 @@ while H:
     if time() - sTime > 1.7:
         break
     d, s, c = D[r]
-    if s in done[d]: continue
+    if s in done[d]:
+        continue
     done[d].add(s)
     if d == 0:
         for ss, cc in zip(S, C):

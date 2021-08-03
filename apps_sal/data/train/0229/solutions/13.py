@@ -8,21 +8,21 @@ class Solution:
         for i in range(len(val)):
             if val[i] < 0:
                 if val[i] % 2 == 0:
-                    if val[i]/2 in val and C[val[i]/2] >= C[val[i]]:
-                        C[val[i] / 2] = C[val[i]/2] - C[val[i]]
+                    if val[i] / 2 in val and C[val[i] / 2] >= C[val[i]]:
+                        C[val[i] / 2] = C[val[i] / 2] - C[val[i]]
                         C[val[i]] = 0
                     else:
                         result = False
                         # break
             else:
-                if val[i] * 2 in val and C[val[i]*2] >= C[val[i]]:
-                    C[val[i] * 2] = C[val[i]*2] - C[val[i]]
+                if val[i] * 2 in val and C[val[i] * 2] >= C[val[i]]:
+                    C[val[i] * 2] = C[val[i] * 2] - C[val[i]]
                     C[val[i]] = 0
                 else:
                     result = False
                     # Break
         nums = list(C.values())
-        if nums == [0]*len(nums):
+        if nums == [0] * len(nums):
             result = True
         else:
             result = False

@@ -1,20 +1,21 @@
+import sys
 n, m = [int(x) for x in input().split()]
 
 field = [""] * n
 labels = [[0]] * n
 
-import sys
 sys.setrecursionlimit(10000)
 
 for i in range(n):
     field[i] = input().strip()
     labels[i] = [0] * m
 
+
 def is_valid(i, j):
     return 0 <= i < n and 0 <= j < m
 
 
-def dfs(i, j, p, k, cc = 0):
+def dfs(i, j, p, k, cc=0):
     if labels[i][j] == k:
         return True
     labels[i][j] = k
@@ -27,6 +28,7 @@ def dfs(i, j, p, k, cc = 0):
                 res = res or dfs(i + d[0], j + d[1], [i, j], k, cc + 1)
 
     return res
+
 
 ok = False
 k = 1

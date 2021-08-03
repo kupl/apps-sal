@@ -1,10 +1,12 @@
 import math
 
+
 def calc_base(k):
     base = k
     for i in range(1, k):
         base += 9 * i * (10 ** (i - 1))
     return base
+
 
 def global_length(k):
     base = calc_base(k)
@@ -13,14 +15,17 @@ def global_length(k):
         return d * base + k * (d - 1) * (d // 2)
     return d * base + k * (d - 1) // 2 * d
 
+
 def global_offset(k):
     offset = 0
     for i in range(1, k + 1):
         offset += global_length(i)
     return offset
 
+
 def local_offset(k, l, base):
     return l * base + (k * l * (l - 1)) // 2
+
 
 def bs_long(n):
     l, r = -1, 10
@@ -35,6 +40,7 @@ def bs_long(n):
         return r
     return l
 
+
 def bs_short(pos, base, k):
     l, r = -1, 10 ** k - 10 ** (k - 1)
     while r - l > 1:
@@ -46,6 +52,7 @@ def bs_short(pos, base, k):
             l = m
     return l
 
+
 def digit_offset(number):
     k = int(math.log10(number))
     res = 0
@@ -54,6 +61,7 @@ def digit_offset(number):
     res *= 9
     res += (number - 10 ** k + 1) * (k + 1)
     return res - k
+
 
 def bs_digit(k, x, base, n):
     l, r = 0, 10 ** k + x + 1
@@ -69,6 +77,7 @@ def bs_digit(k, x, base, n):
     s = str(num)
     return s[n]
 
+
 def solve(n):
     k = bs_long(n)
     n -= global_offset(k)
@@ -77,11 +86,13 @@ def solve(n):
     n -= local_offset(k + 1, d, base)
     return bs_digit(k + 1, d, base, n)
 
+
 def main():
     q = int(input())
     for _ in range(q):
         n = int(input())
         a = solve(n)
         print(a)
+
 
 main()

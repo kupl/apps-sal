@@ -6,5 +6,5 @@ x.remove(b)
 c = x[0]
 a = str(a)
 b = str(b)
-ab = int(a+b)
-print(ab+c)
+ab = int(a + b)
+print(ab + c)

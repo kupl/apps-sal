@@ -5,4 +5,3 @@ r = sorted(list(map(int, input().split())))[::-1]
 
 u = sorted(p[:x] + q[:y] + r)[::-1]
 print((sum(u[:x + y])))
-

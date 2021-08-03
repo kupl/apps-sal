@@ -1,9 +1,11 @@
 N = int(input())
 a = list(map(int, input().split()))
 
+
 def sort_reverse(n):
     n.sort(reverse=True)
     return n
+
 
 N_Even = list(range(0, N, 2))
 N_Odd = list(range(1, N, 2))

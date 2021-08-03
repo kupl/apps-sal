@@ -9,7 +9,6 @@ while i < n:
     i += 1
 ans = abs(float(sum)) // x
 if (abs(float(sum)) / x) > ans:
-    print(int(ans+1))
+    print(int(ans + 1))
 else:
     print(int(ans))
-

@@ -5,11 +5,10 @@ def christmas_tree(height):
     w = (sz - len(l1)) // 2
     for i in range(n):
         r += ' ' * w + l1 + k
-        r += ' ' * (w-1) + l2 + k        
-        r += ' ' * (w-2) + l3 + k
+        r += ' ' * (w - 1) + l2 + k
+        r += ' ' * (w - 2) + l3 + k
         w -= 1
         l1 += '**'
         l2 += '**'
         l3 += '**'
-    return r + ' ' * ((sz - 3) // 2) + '###' if height>2 else ''
-
+    return r + ' ' * ((sz - 3) // 2) + '###' if height > 2 else ''

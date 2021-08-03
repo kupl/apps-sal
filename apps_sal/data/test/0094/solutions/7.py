@@ -20,4 +20,3 @@ while end > 0:
     end = begin
 
 print(result)
-

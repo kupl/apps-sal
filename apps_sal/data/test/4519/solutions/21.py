@@ -25,4 +25,5 @@ def __starting_point():
         n, k = [int(r) for r in input().split(' ')]
         print(solve(k, input()))
 
+
 __starting_point()

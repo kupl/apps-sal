@@ -1,5 +1,6 @@
 from math import *
 
+
 def bsearch(d, n):
     low = 0
     high = n
@@ -12,6 +13,7 @@ def bsearch(d, n):
             return True
     return False
 
+
 def __starting_point():
     for _ in range(int(input())):
         n, d = list(map(int, input().split()))
@@ -19,4 +21,6 @@ def __starting_point():
             print("YES")
         else:
             print("NO")
+
+
 __starting_point()

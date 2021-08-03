@@ -1,5 +1,6 @@
 from math import pi
 
+
 def iter_pi(epsilon):
     pi_4 = 0
     k = 0

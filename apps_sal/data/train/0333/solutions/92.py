@@ -3,7 +3,7 @@ class Solution:
         map = collections.defaultdict(list)
         for i, a in enumerate(arr):
             map[a].append(i)
-        
+
         visited, visiting = {-1}, {0}
         for steps in itertools.count():
             visited |= visiting

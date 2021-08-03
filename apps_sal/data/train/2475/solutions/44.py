@@ -7,10 +7,10 @@ class Solution:
             temp = []
             for j in range(len(A)):
                 temp.append(A[j][i])
-            
+
             # print(temp)
             # print(sorted(temp))
             if temp != sorted(temp):
                 count += 1
-                
+
         return count

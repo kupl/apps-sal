@@ -1,2 +1,2 @@
 def digits(n):
-    return len('%s'%n)
+    return len('%s' % n)

@@ -4,7 +4,7 @@ s = input()
 r = s.count('R')
 g = s.count('G')
 b = s.count('B')
-ans = r*g*b
+ans = r * g * b
 
 for i in range(n):
     for d in range(n):
@@ -16,4 +16,3 @@ for i in range(n):
             ans -= 1
 
 print(ans)
-

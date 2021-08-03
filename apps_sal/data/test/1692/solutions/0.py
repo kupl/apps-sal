@@ -9,4 +9,3 @@ for x in s:
         ans += 1
 
 print(ans)
-

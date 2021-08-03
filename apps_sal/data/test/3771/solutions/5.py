@@ -1,6 +1,7 @@
 # maximum flow
 from collections import defaultdict
 
+
 def ford_fulkerson(graph, start, end):
     """ 
     graph: [dict<int,int>]
@@ -45,6 +46,7 @@ def ford_fulkerson(graph, start, end):
         flush(start, path, margin(path))
 
     return sum(cap for _, cap in graph[start].items()) - sum(cap for _, cap in network[start].items())
+
 
 h, w = map(int, input().split())
 A = [input() for _ in range(h)]

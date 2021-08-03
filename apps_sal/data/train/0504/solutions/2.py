@@ -17,7 +17,7 @@ class Solution:
                 res.append(s[i])
             i += d
         return ''.join(res)
-    
+
     # O(n^2)
     def reverseParentheses1(self, s: str) -> str:
         stack = []
@@ -33,4 +33,3 @@ class Solution:
                 stack.append(c)
         # e.g. \"a(bcdefghijkl(mno)p)q\"
         return ''.join(stack)
-

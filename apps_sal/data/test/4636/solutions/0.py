@@ -46,7 +46,7 @@ def rlinput():
 
 def factors(n):
     return set(reduce(list.__add__,
-                      ([i, n//i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
+                      ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
 
 
 # ----------------------------------------------------
@@ -57,14 +57,14 @@ for _ in range(iinput()):
     a = rlinput()
     moves = 0
     i = 0
-    j = n-1
+    j = n - 1
     prev = 0
     ans1 = 0
     ans2 = 0
     while i <= j:
         temp = 0
         f = False
-        while i<=j and i < n and temp <= prev:
+        while i <= j and i < n and temp <= prev:
             temp += a[i]
             f = True
             i += 1
@@ -82,5 +82,4 @@ for _ in range(iinput()):
         if f:
             moves += 1
         prev = temp
-    print(moves,ans1,ans2)
-
+    print(moves, ans1, ans2)

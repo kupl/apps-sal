@@ -1,4 +1,4 @@
-#570_C
+# 570_C
 
 import math
 
@@ -19,5 +19,3 @@ for i in range(0, cases):
             print(min(t, int(turns) - 1))
         else:
             print(min(t, math.floor(turns)))
-        
-

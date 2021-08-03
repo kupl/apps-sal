@@ -4,8 +4,6 @@ for i in range(n):
     matrix.append([int(p) for p in input().split()])
 
 
-
-
 def best(col):
     results = {
 
@@ -13,7 +11,7 @@ def best(col):
     for row in range(n):
         if matrix[row][col] == 1:
             results[row] = 1
-            for r2 in range(row + 1, min(row+k, n)):
+            for r2 in range(row + 1, min(row + k, n)):
                 if matrix[r2][col] == 1:
                     results[row] += 1
     # print(results)
@@ -31,6 +29,7 @@ def best(col):
         if row < idx:
             replacements += 1
     return best_result['res'], replacements
+
 
 result = 0
 replacements = 0

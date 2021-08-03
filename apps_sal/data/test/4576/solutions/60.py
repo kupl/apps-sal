@@ -16,4 +16,5 @@ def __starting_point():
     X = int(input())
     solve(A, B, C, X)
 
+
 __starting_point()

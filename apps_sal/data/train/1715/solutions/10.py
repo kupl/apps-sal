@@ -5,7 +5,8 @@ def iterate_over_lines(text, width):
         yield text[i: j]
         i = j + 1
     yield text[i:]
-    
+
+
 def justify_line(line, width):
     words = line.split()
     if len(words) < 2:
@@ -16,8 +17,8 @@ def justify_line(line, width):
     parts = [part for t in zip(words, gaps) for part in t]
     return ''.join(parts)
 
+
 def justify(text, width):
     lines = list(iterate_over_lines(text, width))
     lines = [justify_line(s, width) for s in lines[: -1]] + [lines[-1]]
     return '\n'.join(lines)
-

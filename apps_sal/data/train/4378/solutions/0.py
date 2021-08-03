@@ -5,4 +5,3 @@ def find_spaceship(astromap):
         if x != -1:
             return [x, len(lines) - 1 - y]
     return 'Spaceship lost forever.'
-

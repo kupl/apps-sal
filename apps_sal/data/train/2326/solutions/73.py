@@ -13,7 +13,7 @@ li = li[::-1]
 a.sort()
 acc = [0] * (n + 1)
 for i in range(n - 1, -1, -1):
-    acc[i] = acc[i+1] + a[i]
+    acc[i] = acc[i + 1] + a[i]
 
 ans = [0] * n
 sub = 0
@@ -29,4 +29,3 @@ for i in range(1, n):
         i_prev = i
 
 print(*ans, sep="\n")
-

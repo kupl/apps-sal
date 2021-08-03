@@ -1,4 +1,4 @@
-#UnionFind木とそれを利用したクラスカル法
+# UnionFind木とそれを利用したクラスカル法
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -19,7 +19,7 @@ class UnionFind():
             return
 
         if self.parents[x] > self.parents[y]:
-                x, y = y, x
+            x, y = y, x
 
         self.parents[x] += self.parents[y]
         self.parents[y] = x
@@ -27,7 +27,7 @@ class UnionFind():
     def same(self, x, y):
         return self.find(x) == self.find(y)
 
-    def nums(self,x):
+    def nums(self, x):
         return abs(self.parents[self.find(x)])
 
     def roots(self):
@@ -42,24 +42,24 @@ class UnionFind():
 
 
 N = int(input())
-A = [list(map(int, input().split()))+[i] for i in range(N)]
+A = [list(map(int, input().split())) + [i] for i in range(N)]
 edge = []
 A.sort()
-for i in range(N-1):
-    w = A[i+1][0]-A[i][0]
-    edge.append((w,A[i][2],A[i+1][2]))
-A.sort(key=lambda x:x[1])
-for i in range(N-1):
-    w = A[i+1][1]-A[i][1]
-    edge.append((w,A[i][2],A[i+1][2]))
+for i in range(N - 1):
+    w = A[i + 1][0] - A[i][0]
+    edge.append((w, A[i][2], A[i + 1][2]))
+A.sort(key=lambda x: x[1])
+for i in range(N - 1):
+    w = A[i + 1][1] - A[i][1]
+    edge.append((w, A[i][2], A[i + 1][2]))
 
 edge.sort()
 
 uf = UnionFind(N)
 ans = 0
 for i in range(len(edge)):
-    u,x,y = edge[i]
-    if not uf.same(x,y):
-        uf.union(x,y)
+    u, x, y = edge[i]
+    if not uf.same(x, y):
+        uf.union(x, y)
         ans += u
 print(ans)

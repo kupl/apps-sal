@@ -1,12 +1,13 @@
 def mat(s, p):
     i = (s // 50) % 475
     for _ in range(25):
-        i = (i*96 + 42) % 475
+        i = (i * 96 + 42) % 475
         if i + 26 == p:
             return True
     return False
 
-p,x,y = map(int, input().split())
+
+p, x, y = map(int, input().split())
 s = x
 while s >= y:
     s -= 50

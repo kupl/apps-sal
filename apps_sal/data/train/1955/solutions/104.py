@@ -11,7 +11,7 @@ class Solution:
             return s
 
         graph = {}
-        for u,v in pairs:
+        for u, v in pairs:
             if u in graph:
                 graph[u].append(v)
             else:
@@ -30,10 +30,10 @@ class Solution:
 
         dd = {}
         result = [c for c in s]
-        for i,key in enumerate(visited_set):
+        for i, key in enumerate(visited_set):
             if key != 0:
                 if key in dd:
-                    dd[key].append(s[i]);
+                    dd[key].append(s[i])
                 else:
                     dd[key] = [s[i]]
         for key in dd:

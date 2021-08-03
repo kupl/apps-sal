@@ -5,9 +5,9 @@ class Solution:
             if s[right] > s[left]:
                 left = right
             elif s[right] == s[left]:
-                if s[left: right] < s[right: right + right-left]:
+                if s[left: right] < s[right: right + right - left]:
                     left = right
-                    
+
             right += 1
-        
-        return s[left: right+1]
+
+        return s[left: right + 1]

@@ -1,15 +1,25 @@
-import bisect, collections, copy, heapq, itertools, math, string, sys
-input = lambda: sys.stdin.readline().rstrip() 
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import string
+import sys
+def input(): return sys.stdin.readline().rstrip()
+
+
 sys.setrecursionlimit(10**7)
 INF = float('inf')
-MOD = 10**9+7
+MOD = 10**9 + 7
 def I(): return int(input())
 def F(): return float(input())
 def SS(): return input()
 def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x)-1 for x in input().split()]
+def LI_(): return [int(x) - 1 for x in input().split()]
 def LF(): return [float(x) for x in input().split()]
 def LSS(): return input().split()
+
 
 class UnionFind():
     def __init__(self, n):
@@ -40,6 +50,7 @@ class UnionFind():
         self.par[y] = x
         return True
 
+
 def resolve():
     N, M = LI()
     a = LI()
@@ -60,7 +71,9 @@ def resolve():
     else:
         print('No')
 
+
 def __starting_point():
     resolve()
+
 
 __starting_point()

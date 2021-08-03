@@ -1,6 +1,6 @@
 n = int(input())
 k = int(input())
-i=1
+i = 1
 for _ in range(n):
-    i = i+min(i,k)
+    i = i + min(i, k)
 print(i)

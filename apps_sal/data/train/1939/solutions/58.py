@@ -3,14 +3,14 @@ class Solution:
         capLookup = {}
         vowelLookup = {}
         res = []
-        
+
         for word in wordlist:
             if word.lower() not in capLookup:
                 capLookup[word.lower()] = word
             starword = ''.join('*' if l in 'aeiou' else l for l in word.lower())
             if starword not in vowelLookup:
                 vowelLookup[starword] = word
-        
+
         for query in queries:
             if query in wordlist:
                 res.append(query)
@@ -25,4 +25,3 @@ class Solution:
             else:
                 res.append('')
         return res
-

@@ -8,4 +8,3 @@ def return_residue(a, b, c):
 a, b, c = list(map(int, input().split()))
 
 print((return_residue(a, b, c)))
-

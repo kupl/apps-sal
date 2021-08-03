@@ -15,6 +15,5 @@ for _ in range(t):
     elif uzi[0] <= uzi[1]:
         ans = -1
     else:
-        ans = 1 + (x-shot_gun[0]+uzi[0]-uzi[1]-1) // (uzi[0]-uzi[1])
-    print (ans)
-
+        ans = 1 + (x - shot_gun[0] + uzi[0] - uzi[1] - 1) // (uzi[0] - uzi[1])
+    print(ans)

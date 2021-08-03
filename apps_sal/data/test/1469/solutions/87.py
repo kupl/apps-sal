@@ -22,4 +22,3 @@ for i in range(0, N - 1):
 print((N, M))
 for e in E:
     print((e[0][0], e[0][1], e[1]))
-

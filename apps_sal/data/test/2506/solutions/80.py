@@ -42,4 +42,3 @@ for e in a:
 ans -= (cnt_sum - m) * l
 
 print(ans)
-

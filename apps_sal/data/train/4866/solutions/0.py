@@ -18,4 +18,3 @@ def split_all_even_numbers(numbers, split_type):
             elif split_type == 3:
                 result.extend([1] * a)
     return result
-

@@ -19,7 +19,7 @@ q = [0]
 to_remove = []
 
 while q:
-    v = q.pop();
+    v = q.pop()
     for u, dist in G[v]:
         if not seen[u]:
             seen[u] = True

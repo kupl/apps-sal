@@ -5,7 +5,7 @@ class Solution:
         curWait = 0
         maxProfit = 0
         minRo = 0
-        ##8
+        # 8
         for i, customer in enumerate(customers):
             while rotation < i:
                 rotation += 1
@@ -15,7 +15,7 @@ class Solution:
                 if curProfit > maxProfit:
                     maxProfit = curProfit
                     minRo = rotation
-                
+
             numCust += customer
             curWait += customer
             rots = curWait // 4
@@ -25,15 +25,11 @@ class Solution:
             if curProfit > maxProfit:
                 maxProfit = curProfit
                 minRo = rotation
-                
-        if curWait > 0:    
+
+        if curWait > 0:
             rotation += 1
             curProfit = numCust * boardingCost - rotation * runningCost
             if curProfit > maxProfit:
                 maxProfit = curProfit
                 minRo = rotation
         return minRo if maxProfit > 0 else -1
-    
-                    
-            
-

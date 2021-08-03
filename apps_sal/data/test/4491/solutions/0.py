@@ -12,7 +12,8 @@ def main():
     a_2 = Input()
     ans = 0
     for i in range(n):
-        ans = max(ans, sum(a_1[:i+1])+sum(a_2[i:n]))
+        ans = max(ans, sum(a_1[:i + 1]) + sum(a_2[i:n]))
     print(ans)
+
 
 main()

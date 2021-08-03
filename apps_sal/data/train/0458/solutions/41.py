@@ -8,9 +8,9 @@ class Solution:
             total += x
             target = (total - diff) % p
             if total % p == diff:
-                ans = min(ans, i+1)
+                ans = min(ans, i + 1)
             if target in cmods:
-                ans = min(ans, i-cmods[target])
+                ans = min(ans, i - cmods[target])
             cmods[total % p] = i
         if total % p == 0:
             return 0

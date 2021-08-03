@@ -13,4 +13,3 @@ def elevator(left, right, call):
         return("left")
     else:
         return("right")
-

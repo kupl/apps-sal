@@ -55,4 +55,3 @@ while i <= j:
             i += 1
 print(len(ans))
 print(ans)
-

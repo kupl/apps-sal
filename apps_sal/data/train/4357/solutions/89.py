@@ -7,10 +7,10 @@ def sel_sort(array):
                 m = j
             j = j + 1
         array[i], array[m] = array[m], array[i]
-        
+
+
 def nth_smallest(arr, pos):
     if pos <= 0 or arr == []:
         return 'error'
     sel_sort(arr)
-    return arr[pos-1]
-
+    return arr[pos - 1]

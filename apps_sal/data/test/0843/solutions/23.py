@@ -13,9 +13,10 @@ def main():
         visited.add(i)
 
     print('FINITE')
-        
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

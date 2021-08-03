@@ -1,73 +1,77 @@
-def binarySearchCount(arr, n, key): 
-  
+def binarySearchCount(arr, n, key):
+
     left = 0
     right = n - 1
-  
+
     count = 0
-  
-    while (left <= right):  
-        mid = int((right + left) / 2) 
-  
-        # Check if middle element is 
-        # less than or equal to key 
-        if (arr[mid] < key):  
-  
-            # At least (mid + 1) elements are there 
-            # whose values are less than 
-            # or equal to key 
+
+    while (left <= right):
+        mid = int((right + left) / 2)
+
+        # Check if middle element is
+        # less than or equal to key
+        if (arr[mid] < key):
+
+            # At least (mid + 1) elements are there
+            # whose values are less than
+            # or equal to key
             count = mid + 1
             left = mid + 1
-          
-        # If key is smaller, ignore right half 
-        else: 
+
+        # If key is smaller, ignore right half
+        else:
             right = mid - 1
-      
-    return count 
-def countGreater(arr, n, k): 
+
+    return count
+
+
+def countGreater(arr, n, k):
     l = 0
     r = n - 1
-  
-    # Stores the index of the left most element 
-    # from the array which is greater than k 
-    leftGreater = n 
-  
-    # Finds number of elements greater than k 
-    while (l <= r): 
-        m = int(l + (r - l) / 2) 
-  
-        # If mid element is greater than 
-        # k update leftGreater and r 
-        if (arr[m] > k): 
-            leftGreater = m 
+
+    # Stores the index of the left most element
+    # from the array which is greater than k
+    leftGreater = n
+
+    # Finds number of elements greater than k
+    while (l <= r):
+        m = int(l + (r - l) / 2)
+
+        # If mid element is greater than
+        # k update leftGreater and r
+        if (arr[m] > k):
+            leftGreater = m
             r = m - 1
-  
-        # If mid element is less than 
-        # or equal to k update l 
-        else: 
+
+        # If mid element is less than
+        # or equal to k update l
+        else:
             l = m + 1
-  
-    # Return the count of elements  
-    # greater than k 
-    return (n - leftGreater) 
+
+    # Return the count of elements
+    # greater than k
+    return (n - leftGreater)
+
+
 class SegmentTree:
-    def __init__(self, data, default=0, func=lambda a,b:a+b):
+    def __init__(self, data, default=0, func=lambda a, b: a + b):
         """initialize the segment tree with data"""
         self._default = default
         self._func = func
         self._len = len(data)
         self._size = _size = 1 << (self._len - 1).bit_length()
- 
+
         self.data = [default] * (2 * _size)
         self.data[_size:_size + self._len] = data
         for i in reversed(range(_size)):
             self.data[i] = func(self.data[i + i], self.data[i + i + 1])
- 
+
     def __delitem__(self, idx):
         self[idx] = self._default
- 
+
     def __getitem__(self, idx):
         return self.data[idx + self._size]
- 
+
     def __setitem__(self, idx, value):
         idx += self._size
         self.data[idx] = value
@@ -75,17 +79,17 @@ class SegmentTree:
         while idx:
             self.data[idx] = self._func(self.data[2 * idx], self.data[2 * idx + 1])
             idx >>= 1
- 
+
     def __len__(self):
         return self._len
- 
+
     def query(self, start, stop):
         if start == stop:
             return self.__getitem__(start)
         stop += 1
         start += self._size
         stop += self._size
- 
+
         res = self._default
         while start < stop:
             if start & 1:
@@ -97,29 +101,31 @@ class SegmentTree:
             start >>= 1
             stop >>= 1
         return res
- 
+
     def __repr__(self):
         return "SegmentTree({0})".format(self.data)
-m,n=map(int,input().split())
-b=list(map(int,input().split()))
-a=list(map(int,input().split()))
-#a=[100]*10
+
+
+m, n = map(int, input().split())
+b = list(map(int, input().split()))
+a = list(map(int, input().split()))
+# a=[100]*10
 a.sort()
 b.sort()
-tot=9999999999999999999999999999999
-s=SegmentTree(a)
-#print(s.query(n,n-1))
-s1=SegmentTree(b)
+tot = 9999999999999999999999999999999
+s = SegmentTree(a)
+# print(s.query(n,n-1))
+s1 = SegmentTree(b)
 for i in range(n):
-    c=binarySearchCount(b,m,a[i])
-    #print(a[i],c)
-    ans=c*a[i]-s1.query(0,c-1)-(n-1-i)*a[i]+s.query(i+1,n-1)
-    #print(ans)
-    tot=min(ans,tot)    
+    c = binarySearchCount(b, m, a[i])
+    # print(a[i],c)
+    ans = c * a[i] - s1.query(0, c - 1) - (n - 1 - i) * a[i] + s.query(i + 1, n - 1)
+    # print(ans)
+    tot = min(ans, tot)
 for i in range(m):
-    c=countGreater(a,n,b[i])
+    c = countGreater(a, n, b[i])
    # print(b[i],c)
-    ans=-(c)*b[i]+s.query(n-c,n-1)-s1.query(0,i-1)+(i)*b[i]
+    ans = -(c) * b[i] + s.query(n - c, n - 1) - s1.query(0, i - 1) + (i) * b[i]
    # print(ans)
-    tot=min(ans,tot)
+    tot = min(ans, tot)
 print(tot)

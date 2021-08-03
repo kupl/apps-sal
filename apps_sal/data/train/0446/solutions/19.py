@@ -15,4 +15,3 @@ class Solution:
             for _ in range(i[0]):
                 res.append(i[1])
         return len(set(res[k:]))
-

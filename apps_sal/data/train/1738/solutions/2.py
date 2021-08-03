@@ -20,8 +20,8 @@ def distance(point_1, point_2):
     '''Returnse the distance between 2 points in space'''
     x_1, y_1, z_1 = tuple(point_1)
     x_2, y_2, z_2 = tuple(point_2)
-    
-    return sqrt( (x_2 - x_1) ** 2 + (y_2-y_1) ** 2 + (z_2 - z_1) ** 2)
+
+    return sqrt((x_2 - x_1) ** 2 + (y_2 - y_1) ** 2 + (z_2 - z_1) ** 2)
 
 
 def area(p1, p2, p3):
@@ -30,9 +30,9 @@ def area(p1, p2, p3):
     a = distance(p1, p2)
     b = distance(p1, p3)
     c = distance(p2, p3)
-    
-    s = (a + b + c)/2
-    
+
+    s = (a + b + c) / 2
+
     return sqrt(s * (s - a) * (s - b) * (s - c))
 
 
@@ -68,4 +68,3 @@ def biggest_triang_int(point_list, center, radius):
     tri_vert = format_output(tri_vert)
 
     return [num_tri, max_area, tri_vert]
-

@@ -8,7 +8,7 @@ t_s = 0
 for i in range(3):
     l = list(map(int, input().split()))
     s = sum(l)
-    
+
     if i == 0:
         p_s = s
         f_s = s

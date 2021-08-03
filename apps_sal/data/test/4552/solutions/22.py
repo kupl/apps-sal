@@ -16,4 +16,3 @@ for i in range(1, 1 << 10):
         score += prices[j][count]
     ans = max(ans, score)
 print(ans)
-

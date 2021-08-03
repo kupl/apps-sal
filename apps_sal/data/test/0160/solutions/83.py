@@ -41,4 +41,3 @@ for div in div_list:
             ans = div
 
 print(ans)
-

@@ -1,4 +1,6 @@
 import itertools
+
+
 def main():
     grid = [list(map(int, input().split())) for i in range(3)]
     all = sum(sum(grid, []))
@@ -15,5 +17,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

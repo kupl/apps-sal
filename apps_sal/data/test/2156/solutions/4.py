@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class CCandies:
     def solve(self):
@@ -14,8 +15,8 @@ class CCandies:
             li, ri = [int(_) for _ in input().split()]
             print((pre[ri] - pre[li - 1]) // 10)
 
+
 solver = CCandies()
 input = sys.stdin.readline
 
 solver.solve()
-

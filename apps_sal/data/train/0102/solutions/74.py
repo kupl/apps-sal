@@ -10,5 +10,3 @@ for iter in range(a):
         if int(str(iter) * len(b)) <= int(b):
             counter += 1
     print(ans + counter)
-
-

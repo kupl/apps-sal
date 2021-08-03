@@ -26,7 +26,7 @@ for x in range(t):
     for y in anteater:
         for z in antU:
             if(y[1] == z[1] and z[0] > y[0] and z[2] <= y[0]):
-                z[2] = y[0] + 1     
+                z[2] = y[0] + 1
         for z in antD:
             if(y[1] == z[1] and z[0] < y[0] and z[2] >= y[0]):
                 z[2] = y[0] - 1

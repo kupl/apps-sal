@@ -3,7 +3,6 @@
 n, x = (int(x) for x in input().split())
 
 
-
 cs = []
 
 for i in range(n):
@@ -13,7 +12,6 @@ for i in range(n):
     if cs[-1][0] > 0:
 
         cs[-1][0] = 1
-
 
 
 def try_eat(t0):
@@ -40,23 +38,16 @@ def try_eat(t0):
 
             break
 
-
-
         used.add(i0)
 
         h0 += cs[i0][2]
 
         t0 = 1 - t0
 
-
-
     return len(used)
-
 
 
 print(max(try_eat(0), try_eat(1)))
 
 
-
 # Made By Mostafa_Khaled
-

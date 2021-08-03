@@ -12,7 +12,7 @@ for i in range(n):
             if m[a[i]][1] == 0:
                 m.pop(a[i])
         else:
-            z = n-a[i]-1
+            z = n - a[i] - 1
             b[i] = nextnum
             if z:
                 m[a[i]] = [nextnum, z]
@@ -23,4 +23,3 @@ if m:
 else:
     print("Possible")
     print(*b)
-

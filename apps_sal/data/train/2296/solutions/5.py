@@ -1,8 +1,9 @@
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
+
 
 class BitSum:
     def __init__(self, n):
@@ -23,6 +24,7 @@ class BitSum:
             i -= i & -i
         return res
 
+
 def InversionNumber(lst):
     bit = BitSum(max(lst))
     res = 0
@@ -30,6 +32,7 @@ def InversionNumber(lst):
         res += i - bit.sum(a)
         bit.update(a, 1)
     return res
+
 
 def main():
     s = input()
@@ -70,5 +73,5 @@ def main():
     # print(to_sort_idx)
     print(InversionNumber(to_sort_idx))
 
-main()
 
+main()

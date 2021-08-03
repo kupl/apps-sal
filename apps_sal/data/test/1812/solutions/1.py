@@ -12,11 +12,11 @@ def dlog(x, n):
             val = val * phiVal % bigMod
             ans += phi
         phi *= 5
-        phiVal = (phiVal *
-                  phiVal % bigMod *
-                  phiVal % bigMod *
-                  phiVal % bigMod *
-                  phiVal % bigMod)
+        phiVal = (phiVal
+                  * phiVal % bigMod
+                  * phiVal % bigMod
+                  * phiVal % bigMod
+                  * phiVal % bigMod)
         mod = nextMod
     return ans
 
@@ -39,9 +39,11 @@ def main():
             print(n + m + dlog(x % mod, n + m))
             return
 
+
 def __starting_point():
     cnt = int(input())
     for i in range(cnt):
         main()
+
 
 __starting_point()

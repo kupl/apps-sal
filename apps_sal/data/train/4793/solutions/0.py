@@ -1,2 +1,2 @@
 def to_currency(price):
-  return '{:,}'.format(price)
+    return '{:,}'.format(price)

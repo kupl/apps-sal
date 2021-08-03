@@ -12,8 +12,8 @@ d = ([1] if p == 0 else []) + [2 ** i for i in range(39)]
 print((len(d)))
 print((*d))
 
-dx = [1,0,-1,0]
-dy = [0,1,0,-1]
+dx = [1, 0, -1, 0]
+dy = [0, 1, 0, -1]
 ch = 'LDRU'
 
 for i in range(n):
@@ -33,4 +33,3 @@ for i in range(n):
         ans.append(nc)
         now = now // 2 if now > 1 else 1
     print((''.join(reversed(ans))))
-

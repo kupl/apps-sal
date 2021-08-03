@@ -6,8 +6,8 @@ aim = n * m
 p = sum(A)
 
 if aim - p < 0:
-  print(0)
+    print(0)
 elif aim - p > k:
-  print(-1)
+    print(-1)
 elif aim - p <= k:
-  print(aim-p)
+    print(aim - p)

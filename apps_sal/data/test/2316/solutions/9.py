@@ -2,7 +2,7 @@ t = int(input())
 for _ in range(t):
     x, n, m = map(int, input().split())
     for i in range(n):
-        if (x//2 + 10) >= x:
+        if (x // 2 + 10) >= x:
             break
         x //= 2
         x += 10

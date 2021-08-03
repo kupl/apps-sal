@@ -16,7 +16,7 @@ k = int(next(s))
 count = 0
 deleted = 0
 for i in range(0, len(n)):
-    if (n[-i-1] == "0"):
+    if (n[-i - 1] == "0"):
         count += 1
         if count == k:
             break
@@ -30,4 +30,3 @@ if (count < k):
         print(len(n))
 else:
     print(deleted)
-

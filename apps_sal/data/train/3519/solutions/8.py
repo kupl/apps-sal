@@ -1,1 +1,1 @@
-duplicate_elements=lambda a,b:bool(set(a)&set(b))
+def duplicate_elements(a, b): return bool(set(a) & set(b))

@@ -10,6 +10,7 @@ def good(n, k, p, a, b, x):
             j += 1
     return c == n
 
+
 n, k, p = [int(x) for x in input().split(' ')]
 a = [int(x) for x in input().split(' ')]
 b = [int(x) for x in input().split(' ')]
@@ -26,4 +27,3 @@ while r - l > 1:
     else:
         l = m
 print(r)
-

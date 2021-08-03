@@ -10,4 +10,3 @@ for values, counts in list(A.items()):
     elif(values < counts):
         res += counts - values
 print(res)
-

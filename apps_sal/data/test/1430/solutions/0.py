@@ -3,8 +3,8 @@
 # import bisect
 # from collections import deque
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(N, K, S):
     S = [int(s) for s in S]
@@ -56,5 +56,6 @@ def __starting_point():
     # from random import randint
     # from func import random_str
     # solve()
+
 
 __starting_point()

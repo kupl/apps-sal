@@ -3,7 +3,8 @@ class Solution:
         R, C = len(mat), len(mat[0])
         for r in range(R):
             for c in range(1, C):
-                if mat[r][c]: mat[r][c] = mat[r][c-1] + 1
+                if mat[r][c]:
+                    mat[r][c] = mat[r][c - 1] + 1
         ans = 0
         for r in range(R):
             for c in range(C):
@@ -13,8 +14,5 @@ class Solution:
                     while row < R:
                         minWidth = min(minWidth, mat[row][c])
                         ans += minWidth
-                        row += 1 
+                        row += 1
         return ans
-
-
-

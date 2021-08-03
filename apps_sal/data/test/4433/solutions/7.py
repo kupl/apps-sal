@@ -32,10 +32,7 @@ def bfs(x):
             k += 1
 
 
-
 used[stv] = 1
 while k - u > 0:
     bfs(ocher[u])
     u += 1
-
-

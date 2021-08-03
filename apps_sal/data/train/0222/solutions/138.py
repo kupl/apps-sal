@@ -5,7 +5,7 @@ class Solution:
         for i in range(n - 1):
             for j in range(i + 1, n):
                 two_sum[(A[i], A[j])] = 2
-        
+
         result = 0
         for i in range(n - 1):
             for j in range(i + 1, n):

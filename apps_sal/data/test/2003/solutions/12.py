@@ -1,6 +1,6 @@
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
-from collections import defaultdict
 
 
 class Trie:
@@ -8,10 +8,12 @@ class Trie:
         self.cnt = 0
         self.next = [None] * 2
 
+
 trie = Trie()
 
+
 def add(x):
-    mask = 1<<32
+    mask = 1 << 32
     cur = trie
     while mask:
         if mask & x:
@@ -25,8 +27,9 @@ def add(x):
         cur.cnt += 1
         mask >>= 1
 
+
 def remove(x):
-    mask = 1<<32
+    mask = 1 << 32
     cur = trie
     while mask:
         if mask & x:
@@ -36,8 +39,9 @@ def remove(x):
         cur.cnt -= 1
         mask >>= 1
 
+
 def query(x):
-    mask = 1<<32
+    mask = 1 << 32
     cur = trie
     ret = 0
     while mask:
@@ -55,6 +59,7 @@ def query(x):
                 cur = cur.next[0]
         mask >>= 1
     return ret
+
 
 add(0)
 q = int(input())

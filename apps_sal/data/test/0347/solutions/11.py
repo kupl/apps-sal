@@ -10,4 +10,3 @@ for x, m, w in zip(point, minutes, wrong):
 answer += hack[0] * 100 - hack[1] * 50
 
 print(int(answer))
-

@@ -18,4 +18,3 @@ for n_ in range(n):
 print(len(b_a))
 for k in b_a:
     print(k + " " + b_a[k])
-

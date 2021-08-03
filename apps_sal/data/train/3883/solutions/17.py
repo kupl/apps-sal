@@ -8,8 +8,8 @@ def solve(s):
     elif abs(difference) == 1:
         if difference == 1:
             s += vowels.pop(0)
-        else: 
-            s += consonants.pop(0)    
+        else:
+            s += consonants.pop(0)
     if s == "" or s[0] not in "aeiou":
         s += ''.join(''.join(pair) for pair in zip(vowels, consonants))
     else:

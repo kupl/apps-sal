@@ -13,12 +13,12 @@ for i in range(len(a)):
     if a[i] != -1 and a[i] > up[-1]:
         up.append(a[i])
         a[i] = -1
-    
-down = sorted([x for x in a if x != -1], reverse = True)
+
+down = sorted([x for x in a if x != -1], reverse=True)
 
 valid = True
 for i in range(1, len(down)):
-    if down[i] == down[i-1]:
+    if down[i] == down[i - 1]:
         valid = False
         break
 
@@ -30,4 +30,3 @@ if valid:
     print(' '.join([str(x) for x in down]))
 else:
     print('NO')
-

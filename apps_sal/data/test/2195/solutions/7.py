@@ -1,19 +1,20 @@
-LI = lambda: list(map(int,input().split()))
-MI = lambda: map(int,input().split())
-yes = lambda: print("Yes")
-no = lambda: print("No")
-I = lambda: list(input())
-J = lambda x: "".join(x)
-II = lambda: int(input())
-SI = lambda: input()
-#---khan17---template
+def LI(): return list(map(int, input().split()))
+def MI(): return map(int, input().split())
+def yes(): return print("Yes")
+def no(): return print("No")
+def I(): return list(input())
+def J(x): return "".join(x)
+def II(): return int(input())
+def SI(): return input()
+
+
+# ---khan17---template
 t = II()
 for i in range(t):
-	x,y = MI()
-	a,b = MI()
-	if b>2*a:
-		print((x+y)*a)
-	else:
-		c = abs(x-y)*a+min(x,y)*b
-		print(c)
-
+    x, y = MI()
+    a, b = MI()
+    if b > 2 * a:
+        print((x + y) * a)
+    else:
+        c = abs(x - y) * a + min(x, y) * b
+        print(c)

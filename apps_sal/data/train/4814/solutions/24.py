@@ -1,7 +1,7 @@
 def is_palindrome(s):
-    s=s.lower()
-    a=s[::-1]
-    if a == s :
+    s = s.lower()
+    a = s[::-1]
+    if a == s:
         return True
-    if a !=s :
+    if a != s:
         return False

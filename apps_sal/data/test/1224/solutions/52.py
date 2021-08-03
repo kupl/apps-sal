@@ -1,7 +1,8 @@
-N=int(input())
+N = int(input())
 
-for b in range(1,30):
-  for a in range(1,40):
-    if 3**a+5**b==N:
-      print(a,b);return
+for b in range(1, 30):
+    for a in range(1, 40):
+        if 3**a + 5**b == N:
+            print(a, b)
+            return
 print(-1)

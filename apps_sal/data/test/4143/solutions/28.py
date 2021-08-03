@@ -1,5 +1,5 @@
 N, A, B, C, D, E = [int(input()) for _ in range(6)]
- 
+
 # 1 => 2: A
 # 2 => 3: B
 # 3 => 4: C

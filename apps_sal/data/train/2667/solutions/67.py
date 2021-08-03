@@ -1,3 +1,3 @@
 def zero_fuel(dis, mpg, fu):
-    #Happy Coding! ;)
+    # Happy Coding! ;)
     return dis / mpg <= fu

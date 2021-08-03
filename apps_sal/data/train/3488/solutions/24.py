@@ -1,4 +1,6 @@
 import operator
+
+
 def eval_object(v):
     ops = {
         '+': operator.add,

@@ -9,8 +9,9 @@ for i in range(n):
     cnt = 0
     for ch in ss[i]:
         if ch in 'aeuioy':
-            cnt+=1
+            cnt += 1
     ok &= cnt == a[i]
 if ok:
     print('YES')
-else: print('NO')
+else:
+    print('NO')

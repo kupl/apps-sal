@@ -15,5 +15,4 @@ for i, x in enumerate(lst):
     if rem <= 0:
         break
 
-print(i+1)
-
+print(i + 1)

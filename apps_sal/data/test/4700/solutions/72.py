@@ -20,4 +20,3 @@ no_set = set(no_list)
 ans = len(h_set - no_set)
 
 print(ans)
-

@@ -4,4 +4,3 @@ j = -1
 for i in range(n):
     print(k[i], k[j])
     j -= 1
-

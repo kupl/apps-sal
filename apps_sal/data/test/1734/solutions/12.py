@@ -8,14 +8,14 @@ for i in range(n):
     r = {}
     g = []
     for j in range(0, 9):
-        for l in range(j+1, 10):
+        for l in range(j + 1, 10):
             t = num[i][j:l]
             g.append(t)
             if t in r:
                 continue
             r[t] = 1
             if t in d:
-                d[t] = d[t]+1
+                d[t] = d[t] + 1
             else:
                 d[t] = 1
     g.sort(key=len)

@@ -15,4 +15,3 @@ while True:
     s = 1 - s
 
 print(["Vladik", "Valera"][s])
-

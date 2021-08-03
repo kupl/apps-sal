@@ -1,31 +1,28 @@
 class Solution:
-     def findNthDigit(self, n):
-         """
-         :type n: int
-         :rtype: int
-         """
-         
-    #    my fourth solution.........
-         if n <= 0:
-             return
-         
-         i = 0
-         nbase = 0
-         thres = 1*9
-         if n <= thres:
-             return n
-         
-         while 1:
-             i += 1
-             nbase += 9*10**(i-1)
-             thres += (i+1)*9*10**i
-             if n <= thres:
-                 return int(str((n+i-(thres-(i+1)*9*10**i))//(i+1) + nbase)[(n+i-(thres-(i+1)*9*10**i))%(i+1)])
-                            
-                            
-                            
-                            
-         """
+    def findNthDigit(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+
+   #    my fourth solution.........
+        if n <= 0:
+            return
+
+        i = 0
+        nbase = 0
+        thres = 1 * 9
+        if n <= thres:
+            return n
+
+        while 1:
+            i += 1
+            nbase += 9 * 10**(i - 1)
+            thres += (i + 1) * 9 * 10**i
+            if n <= thres:
+                return int(str((n + i - (thres - (i + 1) * 9 * 10**i)) // (i + 1) + nbase)[(n + i - (thres - (i + 1) * 9 * 10**i)) % (i + 1)])
+
+        """
     #    my third solution....beat 93%....
          if n <= 0:
              return
@@ -75,11 +72,8 @@ class Solution:
          if n <= thres:
              return int(str((n+8-(thres-9*9*10**8))//9 + nbase)[(n+8-(thres-9*9*10**8))%9])
          """
-                            
-                            
-         
-         
-         """
+
+        """
     #    my second solution........beat 96%....
          if n <= 0:
              return
@@ -111,13 +105,8 @@ class Solution:
          if n <= 1*9+2*90+3*900+4*9000+5*90000+6*900000+7*9000000+8*90000000+9*900000000:
              return int(str((n+8 - 1*9-2*90-3*900-4*9000-5*90000-6*900000-7*9000000-8*90000000)//9 + 99999999)[(n+8 - 1*9-2*90-3*900-4*9000-5*90000-6*900000-7*9000000-8*90000000)%9])
          """
-         
-         
- 
-         
-         
-         
-         """
+
+        """
     #    my first solution...........beat 93%.....
          if n <= 0:
              return
@@ -149,4 +138,3 @@ class Solution:
          if n <= 1*9+2*90+3*900+4*9000+5*90000+6*900000+7*9000000+8*90000000+9*900000000:
              return int(str((n+8 - 1*9-2*90-3*900-4*9000-5*90000-6*900000-7*9000000-8*90000000)//9 + 99999999)[n%9-1])
          """
-

@@ -4,7 +4,7 @@ from collections import deque
 def tree_by_levels(node):
     if not node:
         return []
-    res, queue = [], deque([node,])
+    res, queue = [], deque([node, ])
     while queue:
         n = queue.popleft()
         res.append(n.value)

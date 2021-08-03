@@ -9,4 +9,3 @@ if [i for x, i in l1] == [i for x, i in l2]:
     print('NO')
 else:
     print('YES')
-

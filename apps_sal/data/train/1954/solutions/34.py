@@ -8,8 +8,9 @@ class Solution:
         for i, skill in enumerate(skills):
             for prev_state, team in dp.copy().items():
                 new_state = prev_state | skill
-                if new_state == prev_state: continue
+                if new_state == prev_state:
+                    continue
                 if new_state not in dp or len(team) + 1 < len(dp[new_state]):
                     dp[new_state] = team + [i]
-        
-        return dp[final_state] 
+
+        return dp[final_state]

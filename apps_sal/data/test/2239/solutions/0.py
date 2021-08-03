@@ -1,7 +1,10 @@
-import math, sys
+import math
+import sys
+
 
 def mp():
     return list(map(int, input().split()))
+
 
 def main():
     n = int(input())
@@ -9,10 +12,11 @@ def main():
         x = int(input())
         print(x // 2)
 
+
 deb = 0
 if deb:
     file = open('input.txt', 'w')
 else:
     input = sys.stdin.readline
-    
+
 main()

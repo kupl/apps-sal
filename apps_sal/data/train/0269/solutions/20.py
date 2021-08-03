@@ -4,11 +4,10 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] == 1:
                 locs[i] = True
-        
-        key= list(locs.keys())
-        for i in range(len(key)-1):
-            if key[i+1] - key[i] - 1 < k:
-                return False
-        
-        return True
 
+        key = list(locs.keys())
+        for i in range(len(key) - 1):
+            if key[i + 1] - key[i] - 1 < k:
+                return False
+
+        return True

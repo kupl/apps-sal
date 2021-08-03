@@ -6,4 +6,3 @@ for i in range(n - 1, -1, -1):
     maxi = max(min(a[i], maxi - 1), 0)
     ans += maxi
 print(ans)
-

@@ -1,4 +1,6 @@
 import numpy
+
+
 class CustomStack:
 
     def __init__(self, maxSize: int):
@@ -6,11 +8,11 @@ class CustomStack:
         self.vals = []
 
     def push(self, x: int) -> None:
-        if len(self.vals)<self.sz:
+        if len(self.vals) < self.sz:
             self.vals.append(x)
 
     def pop(self) -> int:
-        if len(self.vals)>0:
+        if len(self.vals) > 0:
             return self.vals.pop()
         return -1
 
@@ -25,4 +27,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

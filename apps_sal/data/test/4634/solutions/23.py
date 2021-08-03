@@ -8,12 +8,12 @@ for _ in range(int(input())):
     for i in r:
         if i == 1:
             if not is_s:
-                is_s=True
+                is_s = True
                 last_z = 0
             else:
                 last_z = 0
         else:
             if is_s:
-                last_z+=1
-                tot+=1
-    print(tot-last_z)
+                last_z += 1
+                tot += 1
+    print(tot - last_z)

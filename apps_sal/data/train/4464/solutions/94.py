@@ -7,6 +7,6 @@ def feast(beast, dish):
         if b == d:
             return True
         else:
-            return False    
+            return False
     elif a != c:
         return False

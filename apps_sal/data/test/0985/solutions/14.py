@@ -9,10 +9,9 @@ for i in range(n):
 s = 0
 for e in d:
     if e >= 2:
-        s += e * (e-1)
+        s += e * (e - 1)
 for e in D:
     if e >= 2:
-        s += e * (e-1)
+        s += e * (e - 1)
 s >>= 1
 print(s)
-

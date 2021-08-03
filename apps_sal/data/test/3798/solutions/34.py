@@ -37,4 +37,3 @@ def solve():
 
 
 print((solve()))
-

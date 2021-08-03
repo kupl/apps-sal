@@ -5,4 +5,3 @@ for i in range(len(S) - 1):
         b.append(len(S) - (i + 1) if i < len(S) // 2 else i + 1)
 
 print((min(b) if len(b) != 0 else len(S)))
-

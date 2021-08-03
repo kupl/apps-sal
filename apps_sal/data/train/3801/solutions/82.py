@@ -27,9 +27,9 @@ def words_to_marks(s):
         'y': 25,
         'z': 26,
     }
-    
+
     sum_length = 0
     for char in s:
         sum_length += alphabet[char]
-    
+
     return sum_length

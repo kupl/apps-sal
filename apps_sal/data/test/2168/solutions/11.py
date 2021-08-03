@@ -16,4 +16,3 @@ for i, val in enumerate(r):
         m = m + (max_ - max(val)) * len(val)
 
 print(m)
-

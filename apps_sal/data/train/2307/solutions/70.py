@@ -10,4 +10,3 @@ for x in X[1:]:
         ans += b
     p = x
 print(ans)
-

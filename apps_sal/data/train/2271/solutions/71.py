@@ -45,8 +45,9 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 N, M = list(map(int, input().split()))
-uf = UnionFind(N+1)
+uf = UnionFind(N + 1)
 p_list = list(map(int, input().split()))
 
 for i in range(M):
@@ -55,7 +56,6 @@ for i in range(M):
 
 ans = 0
 for i in range(N):
-    if uf.find(p_list[i]) == uf.find(i+1):
+    if uf.find(p_list[i]) == uf.find(i + 1):
         ans += 1
 print(ans)
-

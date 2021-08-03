@@ -8,4 +8,3 @@ if len(data1) == len(data2):
     print('yes')
 else:
     print('no')
-

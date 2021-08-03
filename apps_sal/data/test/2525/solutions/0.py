@@ -19,6 +19,6 @@ for i in range(Q):
             else:
                 fs += query[2]
 if hanten % 2 == 0:
-    print(fs[::-1]+S+bs)
+    print(fs[::-1] + S + bs)
 else:
-    print(bs[::-1]+S[::-1]+fs)
+    print(bs[::-1] + S[::-1] + fs)

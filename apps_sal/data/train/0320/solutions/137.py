@@ -4,9 +4,9 @@ class Solution:
         _max = 0
         for i in nums:
             bit = 0
-            while i>0:
-                res += i&1
+            while i > 0:
+                res += i & 1
                 i >>= 1
                 bit += 1
-            _max = max(bit,_max)
-        return res+_max-1
+            _max = max(bit, _max)
+        return res + _max - 1

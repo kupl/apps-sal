@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 Q = int(input())
 
 cnt_dict = {}
@@ -15,7 +15,7 @@ for item in A:
     cnt_dict[item] += 1
 
 for _ in range(Q):
-    X,Y = list(map(int,input().split()))
+    X, Y = list(map(int, input().split()))
 
     if X not in cnt_dict:
         cnt_dict[X] = 0
@@ -28,11 +28,7 @@ for _ in range(Q):
     cnt_dict[Y] += cnt_dict[X]
     cnt_dict[X] = 0
 
-
     print(s)
-
-
-
 
 
 '''
@@ -59,4 +55,3 @@ for i in range(Q):
     print(ans)
 
     '''
-

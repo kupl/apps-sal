@@ -22,4 +22,3 @@ for i in reversed(list(range(n))):
 # print(f)
 # print(d)
 print(leaves - d[0] + 1)
-

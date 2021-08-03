@@ -29,4 +29,3 @@ for v in list(C.values()):
     ans += v * (v - 1) // 2
 
 print(ans)
-

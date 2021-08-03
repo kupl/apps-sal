@@ -11,4 +11,3 @@ for _ in range(m):
     if y > d[b]:
         d[b] = y
 print(sum(d.values()))
-

@@ -7,7 +7,7 @@ def can_remove(a, n):
     for i in range(n, len(a)):
         nums[a[i]] += 1
 
-    if all([x<=1 for x in  list(nums.values())]):
+    if all([x <= 1 for x in list(nums.values())]):
         return True
 
     for remove_num in range(n, len(a)):
@@ -17,7 +17,6 @@ def can_remove(a, n):
             return True
 
     return False
-
 
 
 n = int(input())
@@ -34,7 +33,3 @@ while possible - impossible > 1:
         impossible = m
 
 print(possible)
-
-
-
-

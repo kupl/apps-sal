@@ -8,6 +8,6 @@ for s in S:
         cnt1 += 1
     if s != idx2:
         cnt2 += 1
-    idx1, idx2 = abs(idx1-1), abs(idx2-1)
+    idx1, idx2 = abs(idx1 - 1), abs(idx2 - 1)
 
 print(min(cnt1, cnt2))

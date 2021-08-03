@@ -16,8 +16,7 @@ else:
             ans += (n % k) * a
             n = (n // k) * k
             continue
-        
-        
+
         if (n - (n // k)) * a <= b:
             ans += (n - 1) * a
             n = 1

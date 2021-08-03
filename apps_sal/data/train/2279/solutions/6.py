@@ -3,13 +3,17 @@ import sys
 from io import BytesIO, IOBase
 # region fastio
 BUFSIZE = 8192
+
+
 class FastIO(IOBase):
     newlines = 0
+
     def __init__(self, file):
         self._fd = file.fileno()
         self.buffer = BytesIO()
         self.writable = "x" in file.mode or "r" not in file.mode
         self.write = self.buffer.write if self.writable else None
+
     def read(self):
         while True:
             b = os.read(self._fd, max(os.fstat(self._fd).st_size, BUFSIZE))
@@ -19,6 +23,7 @@ class FastIO(IOBase):
             self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
         self.newlines = 0
         return self.buffer.read()
+
     def readline(self):
         while self.newlines == 0:
             b = os.read(self._fd, max(os.fstat(self._fd).st_size, BUFSIZE))
@@ -27,10 +32,13 @@ class FastIO(IOBase):
             self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
         self.newlines -= 1
         return self.buffer.readline()
+
     def flush(self):
         if self.writable:
             os.write(self._fd, self.buffer.getvalue())
             self.buffer.truncate(0), self.buffer.seek(0)
+
+
 class IOWrapper(IOBase):
     def __init__(self, file):
         self.buffer = FastIO(file)
@@ -39,38 +47,42 @@ class IOWrapper(IOBase):
         self.write = lambda s: self.buffer.write(s.encode("ascii"))
         self.read = lambda: self.buffer.read().decode("ascii")
         self.readline = lambda: self.buffer.readline().decode("ascii")
+
+
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
 
-MAXPRIME=10**6
-isPrime=[0 for _ in range(MAXPRIME+1)]
-isPrime[0]=-1;isPrime[1]=-1 #0 and 1 are not prime numbers
-for i in range(2,MAXPRIME//2+1):
-    if isPrime[i]==0: #i is prime
-        for multiple in range(i*i,MAXPRIME+1,i):
-            if isPrime[multiple]==0:
-                isPrime[multiple]=i         
-primeNumberSet=set()
+
+MAXPRIME = 10**6
+isPrime = [0 for _ in range(MAXPRIME + 1)]
+isPrime[0] = -1
+isPrime[1] = -1  # 0 and 1 are not prime numbers
+for i in range(2, MAXPRIME // 2 + 1):
+    if isPrime[i] == 0:  # i is prime
+        for multiple in range(i * i, MAXPRIME + 1, i):
+            if isPrime[multiple] == 0:
+                isPrime[multiple] = i
+primeNumberSet = set()
 for i in range(len(isPrime)):
-    if isPrime[i]==0:
+    if isPrime[i] == 0:
         primeNumberSet.add(i)
-primes=sorted(list(primeNumberSet))
+primes = sorted(list(primeNumberSet))
 
-lookupTable=[None for _ in range(MAXPRIME+1)]
+lookupTable = [None for _ in range(MAXPRIME + 1)]
 
-pIdx=-1
-pSqRtIdx=-1
-for i in range(1,MAXPRIME+1):
-    while pIdx+1<len(primes) and primes[pIdx+1]<=i:
-        pIdx+=1
-    while pSqRtIdx+1<len(primes) and (primes[pSqRtIdx+1])**2<=i:
-        pSqRtIdx+=1
-    total=(pIdx+1)-(pSqRtIdx+1)+1 #1 is always lonely
-    lookupTable[i]=total
+pIdx = -1
+pSqRtIdx = -1
+for i in range(1, MAXPRIME + 1):
+    while pIdx + 1 < len(primes) and primes[pIdx + 1] <= i:
+        pIdx += 1
+    while pSqRtIdx + 1 < len(primes) and (primes[pSqRtIdx + 1])**2 <= i:
+        pSqRtIdx += 1
+    total = (pIdx + 1) - (pSqRtIdx + 1) + 1  # 1 is always lonely
+    lookupTable[i] = total
 
-#print(lookupTable[:30])
+# print(lookupTable[:30])
 
-#a number is lonely if its gcd with all other numbers is 1. i.e. it is prime and its square > n. also, 1 is always lonely
-t=int(input())
-n=[int(x) for x in input().split()]
+# a number is lonely if its gcd with all other numbers is 1. i.e. it is prime and its square > n. also, 1 is always lonely
+t = int(input())
+n = [int(x) for x in input().split()]
 print('\n'.join([str(lookupTable[nn]) for nn in n]))

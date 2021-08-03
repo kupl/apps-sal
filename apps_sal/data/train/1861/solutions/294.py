@@ -11,5 +11,3 @@ class Solution:
                 if (p2[0] != p1[0]) and (p2[1] != p1[1]) and ((p1[0], p2[1]) in s) and ((p2[0], p1[1]) in s):
                     ans = min(ans, (abs(p2[0] - p1[0]) * abs(p2[1] - p1[1])))
         return ans if ans < float('inf') else 0
-                
-

@@ -1,11 +1,12 @@
 from bisect import bisect_left
 
+
 class Solution:
     def avoidFlood(self, rains: List[int]) -> List[int]:
         flooded = {}
         dry_days = []
         out = [-1 for _ in range(len(rains))]
-        
+
         for i in range(len(rains)):
             day = rains[i]
             if day > 0:

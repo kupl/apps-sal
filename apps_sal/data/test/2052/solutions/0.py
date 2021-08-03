@@ -4,7 +4,7 @@ arr = [int(i) for i in input().split(' ')]
 
 cummulative = [0 for i in range(len(arr) + 1)]
 for i in range(len(arr)):
-    cummulative[i+1] = cummulative[i] + arr[i]
+    cummulative[i + 1] = cummulative[i] + arr[i]
 
 min_cut = 1000000009
 
@@ -14,4 +14,3 @@ for i in range(w - l):
         min_cut = cut
 
 print(min_cut)
-

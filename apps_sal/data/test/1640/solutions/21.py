@@ -15,4 +15,3 @@ for i in range(n):
     num = i + 1 - cnt[a[i]] - cnt[a[i] - 1] - cnt[a[i] + 1]
     an += num * a[i] - (s - a[i] * cnt[a[i]] - (a[i] + 1) * cnt[a[i] + 1] - (a[i] - 1) * cnt[a[i] - 1])
 print(an)
-

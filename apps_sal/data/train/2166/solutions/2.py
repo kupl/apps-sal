@@ -1,8 +1,10 @@
 
 RESULT = ['Lose', 'Loop', 'Win']
 
+
 class Player(object):
     """docstring for Player"""
+
     def __init__(self):
         super(Player, self).__init__()
         self.a = list(map(int, input().split()))[1:]
@@ -16,6 +18,7 @@ class Player(object):
 
     def print_result(self):
         print(*[RESULT[min(x, 1)] for x in self.f[1:]])
+
 
 n = int(input())
 a, b = Player(), Player()

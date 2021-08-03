@@ -11,4 +11,3 @@ if time > d:
     print(-1)
 else:
     print(result + (d - time) // 5)
-

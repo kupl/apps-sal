@@ -16,4 +16,3 @@ for i in range(k):
         num += min(d[i], d[k - i])
 
 print(num * 2)
-

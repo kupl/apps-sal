@@ -41,4 +41,5 @@ def main():
     white = solve(n, qr)
     print((n - 2) ** 2 - white)
 
+
 main()

@@ -12,10 +12,10 @@ def bfs(start):
         for di, dj in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
             ni, nj = i + di, j + dj
             if (
-                0 <= ni < H
-                and 0 <= nj < W
-                and field[ni][nj] != "#"
-                and (ni, nj) not in visited
+                0 <= ni < H and
+                0 <= nj < W and
+                field[ni][nj] != "#" and
+                (ni, nj) not in visited
             ):
                 q.append(path + [(ni, nj)])
                 visited.add((ni, nj))
@@ -33,4 +33,3 @@ for i in range(H):
         if field[i][j] == "." and (i, j) not in shortest_path:
             ans += 1
 print(ans)
-

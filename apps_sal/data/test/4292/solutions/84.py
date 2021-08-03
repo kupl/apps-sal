@@ -1,5 +1,5 @@
-a,b = map(int,input().split())
-s = list(map(int,input().split()))
+a, b = map(int, input().split())
+s = list(map(int, input().split()))
 w = []
 
 for i in range(b):

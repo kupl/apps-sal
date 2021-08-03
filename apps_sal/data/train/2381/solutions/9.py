@@ -14,7 +14,6 @@ for loop in range(t):
             now = 0
         else:
             now += 1
-            ans = max(ans,now)
+            ans = max(ans, now)
 
     print(ans + 1)
-

@@ -32,7 +32,7 @@ def main():
         print(area)
 
 
-#@njit
+# @njit
 def cal_area(A, B, C, D, E, F, X, Y):
     x = np.searchsorted(X, 0, 'right') - 1
     y = np.searchsorted(Y, 0, 'right') - 1
@@ -72,14 +72,14 @@ def cal_area(A, B, C, D, E, F, X, Y):
 
     LenX -= 1
     LenY -= 1
-    
+
     while queue:
         x, y = queue.pop()
 
         if x == 0 or x == LenX or y == 0 or y == LenY:
             area = 0
             break
-        
+
         area += DX[x] * DY[y]
 
         if not LineX[x][y] and not visit[x - 1][y]:
@@ -99,7 +99,8 @@ def cal_area(A, B, C, D, E, F, X, Y):
 
 
 def __starting_point():
-	main()
+    main()
+
 
 return
 

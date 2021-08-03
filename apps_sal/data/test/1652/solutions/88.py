@@ -11,4 +11,3 @@ while t > 0:
         break
 else:
     print("YES")
-

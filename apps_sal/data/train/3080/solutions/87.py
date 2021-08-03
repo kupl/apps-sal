@@ -1,5 +1,5 @@
 def who_is_paying(name):
-    #your code here
+    # your code here
     if name == '':
         return ['']
     elif name == 'I':
@@ -8,5 +8,4 @@ def who_is_paying(name):
         if name == name[0:2]:
             return [name]
         else:
-            return [name,name[0:2]]
-
+            return [name, name[0:2]]

@@ -3,4 +3,4 @@ def isDigit(string):
         float(string.strip())
         return 1
     except:
-        return 0    
+        return 0

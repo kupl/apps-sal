@@ -20,17 +20,12 @@ for i in range(10**6, 1, -1):
 for i in m2:
     if m[i] != 0:
         m1.append(i)
-m1.sort(reverse = True)
+m1.sort(reverse=True)
 
 cnt = 0
 for i in range(len(m1)):
-    cnt += (m[m1[i]]//4)*(m1[i]**2)
+    cnt += (m[m1[i]] // 4) * (m1[i]**2)
     if m[m1[i]] % 4 == 2 and i != len(m1) - 1:
         m[m1[i + 1]] -= 2
-        cnt += m1[i + 1]*m1[i]
+        cnt += m1[i + 1] * m1[i]
 print(cnt)
-        
-        
-    
-        
-

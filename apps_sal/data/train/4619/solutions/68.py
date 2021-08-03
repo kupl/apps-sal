@@ -3,8 +3,6 @@ def whoseMove(lastPlayer, win):
         return lastPlayer
     if win == False:
         if lastPlayer == 'black':
-            return "white" 
+            return "white"
         else:
             return "black"
-    
-

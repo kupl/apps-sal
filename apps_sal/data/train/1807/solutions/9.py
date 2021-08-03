@@ -8,7 +8,7 @@ class Solution:
                 if self.gcd(i, j) == 1:
                     res.append(str(i) + '/' + str(j))
         return res
-            
+
     def gcd(self, a, b):
         while b:
             a, b = b, a % b

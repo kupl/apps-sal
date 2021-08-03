@@ -7,22 +7,19 @@ class Solution:
                 if total > W:
                     count += 1
                     total = w
-                    if count > D: return False
-            
+                    if count > D:
+                        return False
+
             return True
-        
+
         left, right = max(weights), sum(weights)
-        
+
         while left < right:
             mid = left + (right - left) // 2
-            
+
             if check(mid):
                 right = mid
             else:
                 left = mid + 1
-        
-        return left
-        
-                
-        
 
+        return left

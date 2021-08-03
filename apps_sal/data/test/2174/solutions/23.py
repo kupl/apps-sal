@@ -5,5 +5,5 @@ for i in range(n):
 a.sort()
 answ = 0
 for i in range(n):
-    answ += abs(a[i]-i-1)
+    answ += abs(a[i] - i - 1)
 print(answ)

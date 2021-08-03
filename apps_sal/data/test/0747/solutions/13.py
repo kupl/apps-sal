@@ -7,6 +7,7 @@ for i in range(n):
     if cs[-1][0] > 0:
         cs[-1][0] = 1
 
+
 def try_eat(t0):
     h0 = x
     used = set()
@@ -25,5 +26,6 @@ def try_eat(t0):
         t0 = 1 - t0
 
     return len(used)
+
 
 print(max(try_eat(0), try_eat(1)))

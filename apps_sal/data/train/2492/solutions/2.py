@@ -10,4 +10,3 @@ class Solution:
             else:
                 stack.append(line)
         return len(stack)
-

@@ -4,4 +4,3 @@ def reverse_letter(string):
         if n.isalpha():
             str = n + str
     return str
-

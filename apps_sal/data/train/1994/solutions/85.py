@@ -15,4 +15,3 @@ class Solution:
             else:
                 temp = temp.__next__
         return count
-

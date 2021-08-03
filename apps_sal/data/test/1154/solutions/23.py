@@ -14,4 +14,4 @@ while i < n:
     h1 %= k
 if (h1 != 0):
     ans += 1
-print(ans)   
+print(ans)

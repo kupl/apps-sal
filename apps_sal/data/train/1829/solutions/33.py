@@ -7,7 +7,7 @@
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
         queue = collections.deque()
-        queue.append([root,-float('inf')])
+        queue.append([root, -float('inf')])
         count = 0
         while queue:
             node, pVal = queue.popleft()
@@ -23,5 +23,3 @@ class Solution:
                 if node.right:
                     queue.append([node.right, pVal])
         return count
-            
-

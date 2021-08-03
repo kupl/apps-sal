@@ -13,10 +13,10 @@ a = [int(x) for x in input().split(" ")]
 
 a.sort()
 
-i = a.count(a[0]) 
+i = a.count(a[0])
 left = i
 res = n - left
-while i < len(a) :
+while i < len(a):
     count = count_sort(a, i)
     i += count
     left -= count
@@ -24,6 +24,5 @@ while i < len(a) :
         res += left
         left = 0
     left += count
-    
-print(res)
 
+print(res)

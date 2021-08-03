@@ -2,6 +2,7 @@ import sys
 import math
 import bisect
 
+
 def query_value(A, a, r, m, target):
     n = len(A)
     more_val = 0
@@ -22,6 +23,7 @@ def query_value(A, a, r, m, target):
     print('target: %d, val: %d' % (target, min(val1, val2)))
     '''
     return min(val1, val2)
+
 
 def main():
     n, a, r, m = list(map(int, input().split()))
@@ -44,7 +46,9 @@ def main():
         B.append(val)
     print(min(B))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -53,9 +53,9 @@ def main():
             print(n)
             print(*s)
 
+
 try:
     while True:
         main()
 except EOFError:
     pass
-

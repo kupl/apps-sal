@@ -6,13 +6,11 @@ class Solution:
         number = 0
         while(left <= right):
             if (left == right):
-                number +=1
+                number += 1
                 break
             if people[left] + people[right] <= limit:
-                
-                    left= left+1
-            right= right-1
-            number +=1
-        return number 
-                
 
+                left = left + 1
+            right = right - 1
+            number += 1
+        return number

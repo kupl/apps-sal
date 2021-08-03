@@ -22,7 +22,6 @@ for j in range(1, 3 * K):
     board[:, j] += board[:, j - 1]
 for j in range(1, 3 * K):
     board[j, :] += board[j - 1, :]
-ans = np.max(board[K:3 * K, K:3 * K] + board[:2 * K, :2 * K] -
-             board[:2 * K, K:3 * K] - board[K:3 * K, :2 * K])
+ans = np.max(board[K:3 * K, K:3 * K] + board[:2 * K, :2 * K]
+             - board[:2 * K, K:3 * K] - board[K:3 * K, :2 * K])
 print(ans)
-

@@ -8,7 +8,5 @@ def dup(arry):
                 string_new += char
             prev = char
         array_new.append(string_new)
-        
-    return array_new
-        
 
+    return array_new

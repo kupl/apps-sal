@@ -9,4 +9,3 @@ for i in range(len(s)):
     else:
         stk.append(i)
 print(''.join(res))
-

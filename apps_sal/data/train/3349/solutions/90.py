@@ -1,5 +1,5 @@
 def find_missing_number(sequence):
-    if sequence=='':
+    if sequence == '':
         return 0
     tmp = []
     for i in sequence.split(' '):
@@ -10,9 +10,9 @@ def find_missing_number(sequence):
     t = 0
     print(tmp)
     for i in sorted(tmp):
-        if t+1 == i:
-            t+=1
+        if t + 1 == i:
+            t += 1
             continue
         else:
-            return t+1
+            return t + 1
     return 0

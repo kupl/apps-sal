@@ -1,6 +1,7 @@
-# @author 
+# @author
 
 import sys
+
 
 class CVusTheCossackAndStrings:
     def solve(self):
@@ -22,12 +23,11 @@ class CVusTheCossackAndStrings:
                     oa -= 1
                 if abs(oa - ob) % 2 == 0:
                     ans += 1
-                    
 
         print(ans)
+
 
 solver = CVusTheCossackAndStrings()
 input = sys.stdin.readline
 
 solver.solve()
-

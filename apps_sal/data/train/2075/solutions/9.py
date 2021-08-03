@@ -16,6 +16,3 @@ else:
             ans = 'YES'
 
 print(ans)
-
-
-

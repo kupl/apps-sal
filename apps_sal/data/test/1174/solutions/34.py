@@ -1,7 +1,7 @@
 import heapq
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
-a = list(map(lambda x: x*(-1), a))
+a = list(map(lambda x: x * (-1), a))
 heapq.heapify(a)
 
 for i in range(m):
@@ -11,5 +11,5 @@ for i in range(m):
 
 ans = 0
 for aa in a:
-    ans += aa//(-1)
+    ans += aa // (-1)
 print(int(ans))

@@ -4,7 +4,7 @@ class ThroneInheritance:
         self.result = defaultdict(list)
         self.king = kingName
         self.dead = set()
-    
+
     def successor(self, x):
         if x not in self.dead:
             self.order.append(x)
@@ -12,14 +12,12 @@ class ThroneInheritance:
             self.successor(i)
 
     def birth(self, parentName: str, childName: str) -> None:
-        
-        self.result[parentName].append(childName)
 
+        self.result[parentName].append(childName)
 
     def death(self, name: str) -> None:
 
         self.dead.add(name)
-        
 
     def getInheritanceOrder(self) -> List[str]:
         self.order = []
@@ -33,4 +31,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

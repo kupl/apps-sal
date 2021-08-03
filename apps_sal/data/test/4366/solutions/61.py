@@ -8,4 +8,3 @@ if result >= 24:
     result -= 24
 
 print(result)
-

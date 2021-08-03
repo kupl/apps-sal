@@ -3,6 +3,6 @@ def dna_to_rna(dna):
     for i in dna:
         if i == "T":
             total += "U"
-        else: 
+        else:
             total += i
     return total

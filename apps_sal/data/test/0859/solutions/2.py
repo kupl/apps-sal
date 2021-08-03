@@ -30,10 +30,6 @@ else:
     den = 0
     for c in itertools.product([1, -1], repeat=s2_q):
         if sum(c) == diff_pos:
-           num += 1 
+            num += 1
         den += 1
     print("{0:.10f}".format(float(num) / den))
-
-
-
-

@@ -7,4 +7,3 @@ for i in range(n):
     else:
         x -= 1
 print(x)
-

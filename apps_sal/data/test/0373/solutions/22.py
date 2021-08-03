@@ -1,11 +1,12 @@
 def mi():
-	return list(map(int, input().split()))
+    return list(map(int, input().split()))
+
+
 '''
 8
 '''
 n = int(input())
-if n<=2:
-	print (n)
+if n <= 2:
+    print(n)
 else:
-	print(1)
-
+    print(1)

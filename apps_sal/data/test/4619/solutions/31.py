@@ -34,10 +34,11 @@ def main():
             square[1][0] >= square[1][1]:
         print((0))
         return
-    print(((square[0][1]-square[0][0])*(square[1][1]-square[1][0])))
+    print(((square[0][1] - square[0][0]) * (square[1][1] - square[1][0])))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

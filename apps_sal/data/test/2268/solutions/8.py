@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-n, m = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 S = input()
-char = {chr(i) : chr(i) for i in range(ord('a'), ord('z')+1 )}
+char = {chr(i): chr(i) for i in range(ord('a'), ord('z') + 1)}
 keys = list(char.keys())
 
 for i in range(m):
@@ -18,4 +18,3 @@ ans = []
 for c in list(S):
     ans.append(char[c])
 print(''.join(ans))
-

@@ -29,13 +29,12 @@ print(ans - ans1)
 ans = 0
 f = [True] * n
 for i in range(2 * n - 1):
-	if f[a[i]]:
-		j = i + 1
-		while a[j] != a[i]:
-			if f[a[j]]:
-				ans += 1
-			j += 1
-		f[a[i]] = False
+    if f[a[i]]:
+        j = i + 1
+        while a[j] != a[i]:
+            if f[a[j]]:
+                ans += 1
+            j += 1
+        f[a[i]] = False
 
 print(ans)
-

@@ -1,9 +1,9 @@
+from itertools import islice, cycle
 import sys
 from math import tan, pi
 
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
-from itertools import islice, cycle
 
 
 def go():
@@ -12,7 +12,7 @@ def go():
     # a = list(map(int, input().split()))
     # s = input()
 
-    return  1/(tan(pi/(2*n)))
+    return 1 / (tan(pi / (2 * n)))
 
 
 # x,s = map(int,input().split())
@@ -24,4 +24,3 @@ for _ in range(t):
     ans.append(str(go()))
 #
 print('\n'.join(ans))
-

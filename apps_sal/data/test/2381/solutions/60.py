@@ -30,7 +30,7 @@ if len(minus) == N:
 minus.sort(reverse=True)
 plus.sort()
 
-if  K % 2:
+if K % 2:
     ans *= plus.pop()
 
 B = []
@@ -51,4 +51,3 @@ for i in range(K // 2):
     ans = ans * B.pop() % MOD
 
 print(ans)
-

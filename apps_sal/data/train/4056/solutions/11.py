@@ -5,4 +5,3 @@ def leaderboard_sort(leaderboard, changes):
         del leaderboard[pos]
         leaderboard.insert(pos - int(offset), name)
     return leaderboard
-

@@ -82,4 +82,3 @@ for i, el in enumerate(k):
             ans.append(n + 1 - ind)
 
 print('\n'.join(map(str, ans)))
-

@@ -8,4 +8,3 @@ for i in range(1, len(s)):
 ans = min(n - 1, score + 2 * k)
 
 print(ans)
-

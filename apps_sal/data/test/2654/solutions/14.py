@@ -1,13 +1,13 @@
 from statistics import median
- 
+
 X = []
 X1 = []
-N=int(input())
+N = int(input())
 for i in range(N):
     a, b = map(int, input().split())
     X.append(a)
     X1.append(b)
- 
+
 m1 = median(X)
 m2 = median(X1)
 if len(X) % 2:

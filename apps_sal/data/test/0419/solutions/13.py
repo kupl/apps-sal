@@ -15,4 +15,3 @@ while cur < num:
     cnt += 1
 
 print(cnt)
-

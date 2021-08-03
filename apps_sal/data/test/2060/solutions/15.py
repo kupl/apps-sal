@@ -7,8 +7,8 @@ def test():
             return
     print('NO')
 
+
 n = int(input())
 
 for _ in range(n):
     test()
-

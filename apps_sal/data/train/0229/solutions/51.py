@@ -9,5 +9,5 @@ class Solution:
             if count[x] > count[2 * x]:
                 return False
             count[x], count[2 * x] = 0, count[2 * x] - count[x]
-        
+
         return True

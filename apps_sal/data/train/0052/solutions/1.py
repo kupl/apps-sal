@@ -6,5 +6,5 @@ for i in range(n):
 A.sort()
 answer = 0
 for i in range(n):
-    answer  = (answer + A[i] * A[n - i - 1]) % 10007
+    answer = (answer + A[i] * A[n - i - 1]) % 10007
 print(answer)

@@ -1,5 +1,7 @@
 n = int(input())
 disjointSet = [-1] * n
+
+
 def root(x, level=200):
     dp = []
     while disjointSet[x] >= 0:
@@ -9,11 +11,13 @@ def root(x, level=200):
         disjointSet[i] = x
     return x
 
+
 def join(x, y):
     r1, r2 = root(x), root(y)
     if r1 == r2:
         return
     disjointSet[r2] = r1
+
 
 points = []
 vertPoints = {}
@@ -29,7 +33,7 @@ for i in range(n):
         join(i, horizPoints[b])
     else:
         horizPoints[b] = i
-        
+
 sets = {}
 for i in range(n):
     r = root(i)
@@ -41,8 +45,8 @@ for i in range(n):
 ans = 1
 for i in sets:
     s = sets[i]
-    horiz = [x for x,y in s]
-    vert = [y for x,y in s]
+    horiz = [x for x, y in s]
+    vert = [y for x, y in s]
     tmp = len(set(horiz)) + len(set(vert))
     if tmp <= len(s):
         ans *= 2 ** tmp

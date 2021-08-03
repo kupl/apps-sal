@@ -1,7 +1,7 @@
 s = input().strip()
 t = input().strip()
 #print(s, t)
-count_s = [0] * 100 #32 + 25
+count_s = [0] * 100  # 32 + 25
 count_t = [0] * 100
 ans1, ans2 = [0, 0]
 for i in range(len(t)):
@@ -9,7 +9,7 @@ for i in range(len(t)):
 for i in range(len(s)):
     count_s[ord(s[i]) - ord('A')] += 1
 for i in range(58):
-    Min= min(count_s[i], count_t[i])
+    Min = min(count_s[i], count_t[i])
     count_s[i] -= Min
     count_t[i] -= Min
     ans1 += Min

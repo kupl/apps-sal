@@ -6,12 +6,14 @@ fives = 0
 
 ans = []
 
+
 def p_in_num(p, num):
     coun = 0
     while num % p == 0:
         num //= p
         coun += 1
     return coun
+
 
 for i in count(2):
     twos += p_in_num(2, i)
@@ -25,5 +27,3 @@ for i in count(2):
 print(len(ans))
 if len(ans) != 0:
     print(*ans)
-
-

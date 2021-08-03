@@ -11,10 +11,10 @@ class Solution:
                 temp = 1
             elif e in currentTwo:
                 if e == deq[-1][0]:
-                    deq[-1] = (e, deq[-1][1]+1)
+                    deq[-1] = (e, deq[-1][1] + 1)
                     temp += 1
                 else:
-                    deq.append((e,1))
+                    deq.append((e, 1))
                     temp += 1
             else:
                 previousOne = deq[-1][0]
@@ -27,5 +27,3 @@ class Solution:
             result = max(result, temp)
 
         return result
-        
-

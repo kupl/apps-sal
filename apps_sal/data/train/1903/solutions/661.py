@@ -25,10 +25,10 @@ class Solution:
         # return answer
         dist_list = []
         for i in range(len(points)):
-            for j in range(i+1, len(points)):
+            for j in range(i + 1, len(points)):
                 dist_list.append([hamin(points[i], points[j]), i, j])
-        dist_list = sorted(dist_list, key=lambda x:(x[0]))
-        #print(dist_list)
+        dist_list = sorted(dist_list, key=lambda x: (x[0]))
+        # print(dist_list)
         group_set = set()
         group_set.add(0)
         answer = 0

@@ -6,7 +6,6 @@ def greet(name):
     if name == "Jane":
         return "Hello, Jane!"
     if name == "Jim":
-        return "Hello, Jim!" 
+        return "Hello, Jim!"
     else:
         return "Hello, " + name + " !"
-

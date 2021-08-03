@@ -12,11 +12,11 @@ for i in range(ran):
             mask += '0'
         else:
             mask += '1'
-        m = m//2
-    while len(mask)<n:
+        m = m // 2
+    while len(mask) < n:
         mask += '0'
     s = 0
-    easy = 10**9+100
+    easy = 10**9 + 100
     hard = 0
     for j in range(len(mask)):
         if mask[j] == '1':
@@ -25,7 +25,7 @@ for i in range(ran):
             if a[j] <= easy:
                 easy = a[j]
             s += a[j]
-    if s <= r and s >= l and hard-easy >= x:
+    if s <= r and s >= l and hard - easy >= x:
         answer += 1
 
 print(answer)

@@ -7,4 +7,3 @@ for _ in range(t):
         answer.append(-arr[i + 1])
         answer.append(arr[i])
     print(*answer)
-

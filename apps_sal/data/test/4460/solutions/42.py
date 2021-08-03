@@ -1,4 +1,4 @@
-l = list(map(int,input().split()))
-for i in range(0,5) :
-    if l[i] == 0 :
-        print(i+1)
+l = list(map(int, input().split()))
+for i in range(0, 5):
+    if l[i] == 0:
+        print(i + 1)

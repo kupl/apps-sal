@@ -10,4 +10,3 @@ for _ in range(n):
     ans += dd[tmp]
     dd[tmp] += 1
 print(ans)
-

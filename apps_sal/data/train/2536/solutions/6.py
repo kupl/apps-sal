@@ -5,4 +5,3 @@ class Solution:
             if num == keys:
                 lucky.append(num)
         return max(lucky)
-

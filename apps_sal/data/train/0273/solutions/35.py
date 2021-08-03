@@ -2,7 +2,7 @@ class Solution:
     def racecar(self, target: int) -> int:
         q = deque([(0, 1)])
         visited = set([(0, 1)])
-        
+
         step = 0
         while q:
             l = len(q)
@@ -15,7 +15,7 @@ class Solution:
                 if (new_pos, new_speed) not in visited:
                     q.append((new_pos, new_speed))
                     visited.add((new_pos, new_speed))
-                
+
                 new_pos, new_speed = pos, -1 if speed > 0 else 1
                 if (new_pos, new_speed) not in visited:
                     q.append((new_pos, new_speed))

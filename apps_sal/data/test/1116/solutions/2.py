@@ -8,4 +8,3 @@ for _ in range(t):
     a = gcd(r, b)
     x = (b - a - 1) // r + 1
     print("REBEL" if x >= k else "OBEY")
-

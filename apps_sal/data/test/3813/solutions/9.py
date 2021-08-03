@@ -8,7 +8,7 @@ def solve(*args: str) -> str:
     X = list(map(int, args[2].split()))
     T = [[] for _ in range(n)]
     for i, p in enumerate(P):
-        T[p-1].append(i+1)
+        T[p - 1].append(i + 1)
 
     seq = []
     stack = [0]
@@ -19,17 +19,17 @@ def solve(*args: str) -> str:
             stack.append(c)
 
     ret = 'POSSIBLE'
-    inf = 2**32-1
-    Y = [0]*n
+    inf = 2**32 - 1
+    Y = [0] * n
     for i in seq[::-1]:
-        prev = np.full(X[i]+1, inf, np.int64)
+        prev = np.full(X[i] + 1, inf, np.int64)
         prev[0] = 0
         for c in T[i]:
-            cur = np.full(X[i]+1, inf, np.int64)
+            cur = np.full(X[i] + 1, inf, np.int64)
             x, y = X[c], Y[c]
             cur = np.minimum(
-                np.concatenate((cur[:x], y+prev[:-x if 0 < x else len(prev)])),
-                np.concatenate((cur[:y], x+prev[:-y if 0 < y else len(prev)]))
+                np.concatenate((cur[:x], y + prev[:-x if 0 < x else len(prev)])),
+                np.concatenate((cur[:y], x + prev[:-y if 0 < y else len(prev)]))
             )
             prev = np.copy(cur)
 
@@ -45,5 +45,6 @@ def solve(*args: str) -> str:
 
 def __starting_point():
     print((solve(*(open(0).read().splitlines()))))
+
 
 __starting_point()

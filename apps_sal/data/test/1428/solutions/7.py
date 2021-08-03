@@ -15,4 +15,3 @@ for t in permutations(list(range(C)), 3):
             dis += D[k][t[i]] * v
     ans = min(dis, ans)
 print(ans)
-

@@ -6,4 +6,3 @@ def cube_odd(arr):
         if i % 2 != 0:
             cube.append(i**3)
     return sum(cube)
-

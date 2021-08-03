@@ -1,12 +1,14 @@
 N = int(input())
 a = list(map(int, input().split()))
 
+
 def gcd(n, m):
     if m == 0:
         return n
     elif m > n:
         return gcd(m, n)
     return gcd(m, n % m)
+
 
 if N == 1:
     print(a[0])

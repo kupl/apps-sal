@@ -1,52 +1,43 @@
 a, b, w, x, c = list(map(int, input().split()))
 
 
-
 def result(a, b, w, x, c, s):
 
-	na = a - (s * x - b) / w
+    na = a - (s * x - b) / w
 
-	nc = c - s
+    nc = c - s
 
-	return (na, nc)
-
+    return (na, nc)
 
 
 def solve(a, b, w, x, c):
 
-	left = 0
+    left = 0
 
-	right = 10e15
+    right = 10e15
 
-	if (c <= a):
+    if (c <= a):
 
-		return 0
+        return 0
 
+    while (left < right):
 
+        half = (left + right) // 2
 
-	while (left < right):
+        ret = result(a, b, w, x, c, half)
 
-		half = (left+right) // 2
+        if (ret[1] <= ret[0]):
 
-		ret = result(a, b, w, x, c, half)
+            right = half
 
-		if (ret[1] <= ret[0]):
+        else:
 
-			right = half
+            left = half + 1
 
-		else:
-
-			left = half + 1
-
-
-
-	return left
-
+    return left
 
 
 print(int(solve(a, b, w, x, c)))
 
 
-
 # Made By Mostafa_Khaled
-

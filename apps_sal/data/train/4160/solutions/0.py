@@ -1,4 +1,4 @@
-def get_percentage(sent, limit = 1000):
+def get_percentage(sent, limit=1000):
     if not sent:
         return "No e-mails sent"
     elif sent >= limit:

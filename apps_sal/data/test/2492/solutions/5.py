@@ -13,6 +13,8 @@ A_neg = A[A < 0]
 A_zero = A[A == 0]
 
 # 積がc以下となる組み合わせの数を求める
+
+
 def n_comb_lt(c):
     n_comb = 0
     # A[i] > 0であるA[i]について
@@ -31,6 +33,7 @@ def n_comb_lt(c):
     n_comb //= 2
 
     return n_comb
+
 
 ok = -10 ** 18 - 1
 ng = 10 ** 18 + 1

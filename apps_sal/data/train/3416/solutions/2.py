@@ -1,6 +1,7 @@
 def total_kilometers(cons, petrol):
     return round(petrol * 100.0 / cons, 2)
 
+
 def check_distance(distance, cons, petrol):
     if total_kilometers(cons, petrol) < distance:
         return 'You will need to refuel'

@@ -9,4 +9,3 @@ class Solution:
             end -= 2
             start += 1
         return count
-

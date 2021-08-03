@@ -1,3 +1,4 @@
+from math import gcd
 mod = 1000000007
 n = int(input())
 
@@ -7,7 +8,6 @@ ab0x = 0
 p = []
 m = []
 
-from math import gcd
 for _ in range(n):
     i, j = map(int, input().split())
     if i == 0:
@@ -44,12 +44,12 @@ while mi < len(m) and pi < len(p):
     if m[mi] == p[pi]:
         mi += 1
         mnum = 1
-        while mi < len(m) and m[mi] == m[mi-1]:
+        while mi < len(m) and m[mi] == m[mi - 1]:
             mi += 1
             mnum += 1
         pi += 1
         pnum = 1
-        while pi < len(p) and p[pi] == p[pi-1]:
+        while pi < len(p) and p[pi] == p[pi - 1]:
             pi += 1
             pnum += 1
         ans *= pow(2, mnum, mod) + pow(2, pnum, mod) - 1
@@ -63,7 +63,7 @@ while mi < len(m) and pi < len(p):
             mnum += 1
         ans *= pow(2, mnum, mod)
         ans %= mod
-    
+
     else:
         pi += 1
         pnum = 1

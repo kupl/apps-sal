@@ -4,7 +4,6 @@ def cookie(x):
         'int': 'Monica',
         'float': 'Monica'
     }
-        
-    return 'Who ate the last cookie? It was {0}!'.format(
-            types.get(type(x).__name__, 'the dog'))
 
+    return 'Who ate the last cookie? It was {0}!'.format(
+        types.get(type(x).__name__, 'the dog'))

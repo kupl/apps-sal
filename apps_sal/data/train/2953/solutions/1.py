@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def numericals(s):
     d, lst = defaultdict(int), []
     for c in s:

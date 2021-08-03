@@ -1,2 +1,1 @@
-string_to_array = lambda s : s.split() if bool(s) else ['']
-
+def string_to_array(s): return s.split() if bool(s) else ['']

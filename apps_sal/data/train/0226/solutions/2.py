@@ -12,7 +12,7 @@ class Solution:
                     sq = (cur[-1] + n) ** .5
                     if float(int(sq)) == sq:
                         add = cur + (n,)
-                        remain = remaining[:i] + remaining[i+1:]
+                        remain = remaining[:i] + remaining[i + 1:]
                         if (add, remain) not in visited:
                             q.append((add, remain))
                             visited.add((add, remain))
@@ -20,6 +20,6 @@ class Solution:
 
         q = deque()
         for i, num in enumerate(A):
-            q.append(((num, ), tuple(A[:i] + A[i+1:])))
+            q.append(((num, ), tuple(A[:i] + A[i + 1:])))
 
         return get_valid()

@@ -15,5 +15,4 @@ class Solution:
                 lookup[0].append(i)
             else:
                 lookup[(k - (num % k))].append(i)
-        return len(ans) == len(arr)//2
-
+        return len(ans) == len(arr) // 2

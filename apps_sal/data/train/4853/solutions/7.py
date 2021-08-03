@@ -1,1 +1,1 @@
-double_char = lambda s: ''.join(a*2 for a in s)
+def double_char(s): return ''.join(a * 2 for a in s)

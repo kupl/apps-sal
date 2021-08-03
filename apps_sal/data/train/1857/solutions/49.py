@@ -1,9 +1,11 @@
 import collections
+
+
 class Solution:
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
         # lst = [[] for i in range(n)]
         lst = collections.defaultdict(list)
-        
+
         for r, c in reservedSeats:
             lst[r].append(c)
             # lst[r-1].append(c)
@@ -27,4 +29,3 @@ class Solution:
                 ret += 1
         return ret
         # print(lst)
-

@@ -15,4 +15,3 @@ for i in range(1, n + 10):
     if now == 2:
         print(i)
         break
-

@@ -1,12 +1,11 @@
-3
-
 import sys
+3
 
 
 def solve(s, k):
     l = len(s)
-    for i in range(l-1, -1, -1):
-        prev = s[max(i-2, 0):i]
+    for i in range(l - 1, -1, -1):
+        prev = s[max(i - 2, 0):i]
         z = s[i] + 1
         while z in prev:
             z += 1
@@ -15,7 +14,7 @@ def solve(s, k):
         # Gotcha!
         ret = s[:i] + [z]
         while len(ret) < l:
-            prev = ret[max(len(ret)-2, 0):len(ret)]
+            prev = ret[max(len(ret) - 2, 0):len(ret)]
             z = 0
             while z in prev:
                 z += 1
@@ -32,5 +31,6 @@ def __starting_point():
         print('NO')
     else:
         print(''.join(chr(ord('a') + x) for x in ans))
+
 
 __starting_point()

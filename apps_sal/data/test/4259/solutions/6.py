@@ -1,15 +1,16 @@
-K=int(input())
-A,B=list(map(int,input().split()))
+K = int(input())
+A, B = list(map(int, input().split()))
 
-def ans165(K,A,B):
-    ans_count=0
-    for i in range(A,B+1):
-        if i%K==0:
-            ans_count+=1
-    if ans_count>0:
+
+def ans165(K, A, B):
+    ans_count = 0
+    for i in range(A, B + 1):
+        if i % K == 0:
+            ans_count += 1
+    if ans_count > 0:
         return "OK"
     else:
-        return  "NG"
+        return "NG"
 
-print((ans165(K,A,B)))
 
+print((ans165(K, A, B)))

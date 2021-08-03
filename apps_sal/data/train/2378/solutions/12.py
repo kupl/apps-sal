@@ -1,5 +1,6 @@
 from math import *
-import os, sys
+import os
+import sys
 from io import BytesIO
 
 #input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
@@ -13,12 +14,12 @@ for i in range(int(input())):
     for c in s:
         d[c] += 1
     if d["U"] == 0 or d["D"] == 0:
-        d["U"] = 0 
+        d["U"] = 0
         d["D"] = 0
     if d["R"] == 0 or d["L"] == 0:
-        d["R"] = 0 
+        d["R"] = 0
         d["L"] = 0
-    
+
     if d["R"] == 0 or d["L"] == 0:
         if d["U"] != 0 and d["D"] != 0:
             print(2)
@@ -40,4 +41,3 @@ for i in range(int(input())):
         y = min(d["L"], d["R"])
         print(2 * x + 2 * y)
         print("U" * x + "L" * y + "D" * x + "R" * y)
-

@@ -2,7 +2,7 @@ class Solution:
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
         if not arr:
             return 0
-        
+
         max_len = 0
         dp = [0] * len(arr)
         prev_max_len = {}

@@ -1,5 +1,7 @@
 from math import ceil
 from itertools import chain, repeat
+
+
 def matrixfy(st):
     s = ceil(len(st) ** 0.5)
     c = chain(st, repeat('.'))

@@ -13,4 +13,4 @@ if c == 0:
 if d < 0:
     d = 0
 
-print(c,d)
+print(c, d)

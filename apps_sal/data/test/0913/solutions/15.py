@@ -25,4 +25,3 @@ else:
         print(score + 1)
 
 # inf.close()
-

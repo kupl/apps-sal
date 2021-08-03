@@ -1,5 +1,5 @@
 N = int(input())
-lsA = map(int,input().split())
+lsA = map(int, input().split())
 mainasu = 0
 minabs = 10**10
 ls2 = []
@@ -9,8 +9,8 @@ for i in lsA:
         ls2.append(-i)
     else:
         ls2.append(i)
-    minabs = min(minabs,abs(i))
-if mainasu%2 == 0:
+    minabs = min(minabs, abs(i))
+if mainasu % 2 == 0:
     print(sum(ls2))
 else:
-    print(sum(ls2)-2*minabs)
+    print(sum(ls2) - 2 * minabs)

@@ -12,7 +12,3 @@ class Solution:
                 idx += 1
             ans += p
         return ans
-        
-    
-    
-

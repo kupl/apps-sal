@@ -3,4 +3,3 @@ def zero_fuel(d, mpg, fl):
         return True
     else:
         return False
-

@@ -3,7 +3,8 @@ class Solution:
         ans = 0
         maxt = 0
         for i in nums:
-            if i == 0: continue
+            if i == 0:
+                continue
             t = 0
             while i > 0:
                 if i & 1:

@@ -11,4 +11,3 @@ for i in range(n):
     else:
         r += 1
 print(r)
-

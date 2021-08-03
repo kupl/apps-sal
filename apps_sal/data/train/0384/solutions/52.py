@@ -5,7 +5,7 @@ class Solution:
         MOD = 10 ** 9 + 7
         powerSum = 2**0
         counter = 2
-   
+
         currSum = A[0]
         for i in range(1, len(A)):
             total += (powerSum * A[i]) - currSum
@@ -16,5 +16,5 @@ class Solution:
             total %= MOD
             powerSum %= MOD
             currSum %= MOD
-           
+
         return total % MOD

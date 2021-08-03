@@ -1,5 +1,9 @@
-import sys,math,collections,itertools
+import sys
+import math
+import collections
+import itertools
 input = sys.stdin.readline
+
 
 class UnionFind():
     def __init__(self, n):
@@ -48,15 +52,15 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-N,M = list(map(int,input().split()))
+
+N, M = list(map(int, input().split()))
 uf = UnionFind(N)
 for _ in range(M):
-    A,B = list(map(int,input().split()))
-    A -=1
-    B -=1
-    uf.union(A,B)
+    A, B = list(map(int, input().split()))
+    A -= 1
+    B -= 1
+    uf.union(A, B)
 ans = 0
 for i in range(N):
-    ans = max(ans,uf.size(i))
+    ans = max(ans, uf.size(i))
 print(ans)
-

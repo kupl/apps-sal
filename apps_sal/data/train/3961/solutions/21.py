@@ -1,2 +1,1 @@
-say_hello=lambda k:f'Hello, {k}'
-
+def say_hello(k): return f'Hello, {k}'

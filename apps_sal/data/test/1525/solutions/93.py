@@ -21,12 +21,13 @@ def f(i):
                 elif s[j] == 1:
                     x[j][j + 1] += 1
                 else:
-                    x[j][j] += 1 
+                    x[j][j] += 1
         return
     s[i] = 1
     f(i + 1)
     s[i] = 0
     f(i + 1)
+
 
 h, w, k = map(int, input().split())
 mod = pow(10, 9) + 7

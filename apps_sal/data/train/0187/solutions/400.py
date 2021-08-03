@@ -14,9 +14,8 @@ class Solution:
             if runningProfit > maxProfit:
                 maxProfit = runningProfit
                 idx = i
-            
+
             prevWaiting = max(prevWaiting + val - 4, 0)
             i += 1
-        
-        return idx if idx == -1 else idx + 1
 
+        return idx if idx == -1 else idx + 1

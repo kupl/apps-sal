@@ -3,26 +3,27 @@ def main():
     sys.setrecursionlimit(10**9)
     input = sys.stdin.readline
 
-    ## comb
+    # comb
     mod = 1000000007
 
     def make_fact(n):
-        fact = [1]*(n+1)
-        ifact = [1]*(n+1)
-        for i in range(1, n+1):
-            fact[i] = fact[i-1]*i % mod
-        ifact[n] = pow(fact[n], mod-2, mod)
+        fact = [1] * (n + 1)
+        ifact = [1] * (n + 1)
+        for i in range(1, n + 1):
+            fact[i] = fact[i - 1] * i % mod
+        ifact[n] = pow(fact[n], mod - 2, mod)
         for i in range(n, 0, -1):
-            ifact[i-1] = ifact[i]*i % mod
+            ifact[i - 1] = ifact[i] * i % mod
         return fact, ifact
     fact, ifact = make_fact(2000002)
 
     def comb(n, k):
-        if k < 0 or k > n: return 0
-        return fact[n]*ifact[k]*ifact[n-k] % mod
+        if k < 0 or k > n:
+            return 0
+        return fact[n] * ifact[k] * ifact[n - k] % mod
 
     N = int(input())
-    AB = [tuple(map(int, input().split())) for _ in range(N-1)]
+    AB = [tuple(map(int, input().split())) for _ in range(N - 1)]
     graph = [[] for _ in range(N + 1)]
     for a, b in AB:
         graph[a].append(b)
@@ -71,9 +72,8 @@ def main():
 
     for xd, xu, sd, su in zip(dp_d[1:], dp_u[1:], size_d[1:], size_u[1:]):
         su += 1
-        x = xd * xu * comb(sd+su, su) % mod
+        x = xd * xu * comb(sd + su, su) % mod
         print(x)
 
+
 main()
-
-

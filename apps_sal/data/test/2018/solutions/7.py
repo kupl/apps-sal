@@ -19,4 +19,3 @@ for i in range(0, q):
         print('YES')
     else:
         print('NO')
-

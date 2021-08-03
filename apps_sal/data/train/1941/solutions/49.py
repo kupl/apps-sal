@@ -9,9 +9,7 @@ class Solution:
         #             cur += cnt[frozenset((p[0],) + i)]
         #     ans.append(cur)
         # return ans
-                    
-        
-        
+
         ans = []
         cnt = Counter()
         for w in words:
@@ -28,4 +26,3 @@ class Solution:
                 bfs += [m | 1 << ord(c) - ord('a') for m in bfs]
             ans.append(sum(cnt[m] for m in bfs))
         return ans
-

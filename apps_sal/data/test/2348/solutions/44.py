@@ -1,2 +1,2 @@
-a = int(input(),16)
-print(a%2)
+a = int(input(), 16)
+print(a % 2)

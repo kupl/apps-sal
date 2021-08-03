@@ -1,12 +1,12 @@
 class Solution:
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         n = len(A)
-        
+
         arr = [A[0]]
         for i in range(1, n):
             arr.append(arr[-1] + A[i])
         arr = arr + [0]
-        
+
         _max = 0
         for i in range(n - L + 1):
             for j in range(n - M + 1):

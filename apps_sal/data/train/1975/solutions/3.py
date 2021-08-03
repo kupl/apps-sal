@@ -1,22 +1,22 @@
 class CustomStack:
 
-#     def __init__(self, maxSize: int):
-#         self.st = []
-#         self.m = maxSize
-        
-#     def push(self, x: int) -> None:
-#         if len(self.st) < self.m:
-#             self.st.append(x)
+    #     def __init__(self, maxSize: int):
+    #         self.st = []
+    #         self.m = maxSize
 
-#     def pop(self) -> int:
-#         if len(self.st):
-#             return self.st.pop()
-#         return -1
-        
-#     def increment(self, k: int, val: int) -> None:
-#         j = min(k,len(self.st))
-#         for i in range(j):
-#             self.st[i] += val
+    #     def push(self, x: int) -> None:
+    #         if len(self.st) < self.m:
+    #             self.st.append(x)
+
+    #     def pop(self) -> int:
+    #         if len(self.st):
+    #             return self.st.pop()
+    #         return -1
+
+    #     def increment(self, k: int, val: int) -> None:
+    #         j = min(k,len(self.st))
+    #         for i in range(j):
+    #             self.st[i] += val
 
     def __init__(self, maxSize):
         self.n = maxSize
@@ -29,7 +29,8 @@ class CustomStack:
             self.inc.append(0)
 
     def pop(self):
-        if not self.inc: return -1
+        if not self.inc:
+            return -1
         if len(self.inc) > 1:
             self.inc[-2] += self.inc[-1]
         return self.stack.pop() + self.inc.pop()
@@ -44,4 +45,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

@@ -11,9 +11,9 @@ class Solution:
                 if good:
                     return [str(a)] + out, True
             return [], False
-                
+
         for i in range(len(S) - 2):
-            a = int(S[:i+1])
+            a = int(S[:i + 1])
             if S[0] == '0' and a != 0:
                 break
             for j in range(i + 1, len(S) - 1):
@@ -24,6 +24,3 @@ class Solution:
                 if out:
                     return out
         return []
-                
-                
-

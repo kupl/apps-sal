@@ -1,18 +1,20 @@
 from functools import lru_cache
+
+
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         s, f = locations[start], locations[finish]
         locations.sort()
         # print(locations)
-        
+
         maps = {}
         for i, loc in enumerate(locations):
             maps[loc] = i
-        
+
         @lru_cache(maxsize=None)
         def helper(l, r, fuel):
             if l == r:  # goal to goal
-                count = 1  #  reach
+                count = 1  # reach
                 for loc in locations:
                     if loc != l and abs(loc - l) + abs(loc - r) <= fuel:
                         n1 = 1
@@ -32,7 +34,5 @@ class Solution:
                 # print(count)
                 # print(l, r, fuel, count)
                 return count
-            
-        return helper(s, f, fuel) % (10 ** 9 + 7)
-                    
 
+        return helper(s, f, fuel) % (10 ** 9 + 7)

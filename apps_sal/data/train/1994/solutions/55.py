@@ -15,5 +15,4 @@ class Solution:
                 cnt = 0
             head = head.__next__
 
-        return ans+cnt
-
+        return ans + cnt

@@ -7,4 +7,4 @@ class Solution:
         for i in range(len(arr)):
             if arr[i]==arr[i+step]: return arr[i]
         '''
-        return max(set(arr), key = arr.count)
+        return max(set(arr), key=arr.count)

@@ -25,4 +25,3 @@ for i in list3:
     if i in list4:
         print(list3.index(i) + 1, list4.index(i) + 1)
         quit()
-

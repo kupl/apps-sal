@@ -36,4 +36,5 @@ def __starting_point():
 
     print(f)
 
+
 __starting_point()

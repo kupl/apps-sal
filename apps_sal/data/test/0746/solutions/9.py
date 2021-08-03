@@ -1,6 +1,7 @@
 def dist(a, b, x, y):
     return ((a - x)**2 + (b - y)**2)**.5
 
+
 a, b = list(map(int, input().split()))
 n = int(input())
 m = None
@@ -11,4 +12,3 @@ for i in range(n):
         m = t
 
 print(m)
-

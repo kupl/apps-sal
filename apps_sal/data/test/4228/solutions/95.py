@@ -9,4 +9,3 @@ if A[0] < 0:
         print((sum(A)))
 else:
     print((sum(A) - min(A)))
-

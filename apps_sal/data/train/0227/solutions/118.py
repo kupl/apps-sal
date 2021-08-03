@@ -13,7 +13,6 @@ class Solution:
                         j += 1
                     j += 1
                     count0 -= 1
-                    
+
         res = max(res, i - j + 1)
         return res
-

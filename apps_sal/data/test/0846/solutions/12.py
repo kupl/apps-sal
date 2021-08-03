@@ -5,11 +5,10 @@ ans = [0] * n
 for i in c:
     if closed[0]:
         break
-    for j in range(i-1, n):
+    for j in range(i - 1, n):
         if not closed[j]:
             closed[j] = True
             ans[j] = i
         else:
             continue
 print(' '.join(str(i) for i in ans))
-

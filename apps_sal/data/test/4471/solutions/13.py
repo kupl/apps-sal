@@ -8,7 +8,7 @@ def main():
         flg = A[0] & 1
         ok = 1
         for a in A:
-            if a&1 != flg:
+            if a & 1 != flg:
                 ok = 0
         if ok:
             print('YES')
@@ -18,5 +18,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

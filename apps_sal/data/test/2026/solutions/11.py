@@ -16,4 +16,3 @@ while i < len(s):
     i += 1
 
 print(res)
-

@@ -12,7 +12,7 @@ def Bellmanford(n, edges, r):  # rは始点
                 d[v] = d[u] + c
                 if i == n - 1 and v == n - 1:
                     return "inf"
-    return -d[n-1]
+    return -d[n - 1]
 
 
 N, M = map(int, sys.stdin.readline().split())

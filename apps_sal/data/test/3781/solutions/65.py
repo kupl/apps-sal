@@ -16,4 +16,3 @@ for _ in range(T):
             print('Second')
         else:
             print('First')
-

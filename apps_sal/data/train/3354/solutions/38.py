@@ -1,1 +1,1 @@
-boolean_to_string=lambda b:f'{b}'
+def boolean_to_string(b): return f'{b}'

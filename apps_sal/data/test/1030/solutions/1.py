@@ -15,4 +15,3 @@ if s[-1] != ')' and int(s.split(' ')[-1]) < n:
     s += ' >>'
 
 print(s)
-

@@ -5,8 +5,9 @@ def check(a, b, c, x, y, z):
     ok &= z == max(b, c)
     return ok
 
+
 def solve():
-    x,y,z = map(int,input().split())
+    x, y, z = map(int, input().split())
     l = [x, y, z, 1, 10 ** 9]
     for a in l:
         for b in l:
@@ -16,6 +17,7 @@ def solve():
                     print(a, b, c)
                     return
     print('NO')
+
 
 t = int(input())
 for _ in range(t):

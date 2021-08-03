@@ -8,5 +8,5 @@ def sequence_sum(begin_number, end_number, step):
             sum += gap
             gap += step
             print(gap)
-        print ("sum" , sum)
-        return sum        
+        print("sum", sum)
+        return sum

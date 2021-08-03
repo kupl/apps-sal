@@ -30,17 +30,13 @@ while n>0:
 print(score)
 '''
 
-final=0
-n= int(input())
-list1=[]
+final = 0
+n = int(input())
+list1 = []
 
 for i in range(n):
     list1.append(int(input()))
 list1.sort()
 for i in range(n):
-    final += list1[i] * list1[n-i-1]
-print(final%10007)
-
-
-    
-
+    final += list1[i] * list1[n - i - 1]
+print(final % 10007)

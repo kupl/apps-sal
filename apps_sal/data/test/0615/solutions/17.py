@@ -8,7 +8,7 @@ for ai in a:
 
 ans = float('inf')
 
-for i in range(2, n-1):
+for i in range(2, n - 1):
     bc = cum[i]
     de = cum[-1] - cum[i]
     bc_mid = bc / 2
@@ -20,14 +20,14 @@ for i in range(2, n-1):
     # print(i_bc)
     # print(i_de)
 
-    for cum_b in (cum[i_bc-1], cum[i_bc]):
-        for cum_d in (cum[i_de-1], cum[i_de]):
+    for cum_b in (cum[i_bc - 1], cum[i_bc]):
+        for cum_d in (cum[i_de - 1], cum[i_de]):
             b = cum_b
             c = bc - b
             d = cum_d - bc
             e = de - d
             bcde = [b, c, d, e]
             bcde.sort()
-            ans = min(ans, bcde[-1]-bcde[0])
+            ans = min(ans, bcde[-1] - bcde[0])
 
 print(ans)

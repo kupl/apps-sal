@@ -1,5 +1,5 @@
 def solve(s):
-    numbers="0123456789"
+    numbers = "0123456789"
     num = []
     str = ""
     for i in s:

@@ -2,7 +2,8 @@
 
 from collections import defaultdict
 
-d = defaultdict(lambda:1e2)
+d = defaultdict(lambda: 1e2)
+
 
 def parts(n, li):
     if not n:
@@ -15,11 +16,14 @@ def parts(n, li):
         li.append(n[:i])
         parts(n[i:], li)
         li.pop()
-        
+
+
 parts('123456789', [])
 
+
 def operator_insertor(n):
-    return d[n] if d[n]<9 else None
+    return d[n] if d[n] < 9 else None
+
 
 operator_insertor(1234656)
 operator_insertor(1234550)

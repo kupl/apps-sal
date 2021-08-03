@@ -1,5 +1,6 @@
 from itertools import accumulate
 
+
 def primes(n):
     is_prime = [True] * (n + 1)
     is_prime[0] = False
@@ -23,4 +24,4 @@ like_numbers = list(accumulate(like_numbers))
 Q = int(input())
 for _ in range(Q):
     l, r = map(int, input().split())
-    print(like_numbers[r] - like_numbers[l-1])
+    print(like_numbers[r] - like_numbers[l - 1])

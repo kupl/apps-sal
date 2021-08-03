@@ -1,7 +1,10 @@
+import sys
+
+
 def f(a):
     return -a[1]
 
-import sys
+
 fin = sys.stdin
 n = int(input())
 arr = list(map(int, fin.readline().split()))

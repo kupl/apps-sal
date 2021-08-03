@@ -15,5 +15,3 @@ for i in range(1, n + 1):
         dp[i] = min(dp[i], dp[max(0, idx - k - 1)] + idx)
 
 print(dp[n])
-
-

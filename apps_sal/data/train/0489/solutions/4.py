@@ -6,5 +6,5 @@ class Solution:
         mini = len(A)
         for idx in idxs:
             mini = min(mini, idx)
-            ramp = max(ramp, idx-mini)
+            ramp = max(ramp, idx - mini)
         return ramp

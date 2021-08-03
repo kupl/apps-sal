@@ -4,4 +4,5 @@ def arc104_a():
     y = (a - b) // 2
     print(f"{x} {y}")
 
+
 arc104_a()

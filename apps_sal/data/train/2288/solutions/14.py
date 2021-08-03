@@ -24,7 +24,7 @@ for i in range(K):
     m_ = m
     R_ = R
     L_ = L
-    lag = r_list[i+1] - r_list[i]
+    lag = r_list[i + 1] - r_list[i]
     # update
     if i % 2 == 0:
         if M_ - lag < 0:
@@ -53,7 +53,7 @@ for i in range(K):
             m = m_ + lag
             L = L_
     MmRL_list.append([M, m, R, L])
-        
+
 
 # print(MmRL_list)
 for q in range(Q):
@@ -73,4 +73,3 @@ for q in range(Q):
     else:
         res = min(a_ + t_, X)
     print(res)
-

@@ -9,7 +9,7 @@ s = input().strip()
 found = False
 for i in range(len(s) - 1):
     if s[i] > s[i + 1]:
-        s = s[0:i] + s[i+1:]
+        s = s[0:i] + s[i + 1:]
         found = True
         break
 

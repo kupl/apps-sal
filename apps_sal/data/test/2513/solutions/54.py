@@ -9,13 +9,15 @@ def solve(n, S):
             ans.append('S' if f2 == 0 else 'W')
             t = ((f1 ^ f2) << 1) | f2
 
-        if (i == t) :
+        if (i == t):
             x = ans[:-1]
             x.insert(0, ans[-1])
             return "".join(x)
     return "-1"
 
+
 def __starting_point():
     print((solve(int(input()), input())))
+
 
 __starting_point()

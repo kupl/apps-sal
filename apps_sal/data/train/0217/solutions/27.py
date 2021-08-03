@@ -4,7 +4,7 @@ class Solution(object):
         cur = {0}
         for x in A:
             cur = {x | y for y in cur} | {x}
-            ans|=cur
-            #print(cur)
-            #print(\"ans\",ans)
+            ans |= cur
+            # print(cur)
+            # print(\"ans\",ans)
         return len(ans)

@@ -18,4 +18,3 @@ for i in range(t):
     print(x1 + x2 - x3, y1 + y2 - y3)
     print(x2 + x3 - x1, y2 + y3 - y1)
     print(x3 + x1 - x2, y3 + y1 - y2)
-

@@ -6,12 +6,11 @@ list2 = copy.copy(list1)
 list3 = set(list1)
 
 
+x = len(list2)
+y = len(list3)
 
-x=len(list2)
-y=len(list3)
 
-
-if x==y:
+if x == y:
     print('YES')
 else:
     print('NO')

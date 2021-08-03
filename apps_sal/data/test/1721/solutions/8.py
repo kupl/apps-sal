@@ -17,7 +17,7 @@ def rsq(v, l, r, a, b):
         return tree[v]
     m = (l + r) // 2
     return rsq(2 * v + 1, l, m, a, b) + \
-           rsq(2 * v + 2, m, r, a, b)
+        rsq(2 * v + 2, m, r, a, b)
 
 
 def update(v, l, r, i, x):
@@ -57,4 +57,3 @@ for i in range(n - 1, -1, -1):
     update(0, 0, sz, L, 1)
     ss[a[i]].pop()
 print(ans)
-

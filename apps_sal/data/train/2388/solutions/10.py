@@ -15,6 +15,7 @@ def jiashen(new_tree):
     k = False if k else True
     return js
 
+
 t = int(input())
 zong = []
 for _ in range(t):
@@ -26,16 +27,16 @@ for _ in range(t):
     fil[0] = 0
     for i in range(m):
         a, b = map(int, input().split())
-        gra[a-1].append(b-1)
-        gra[b-1].append(a-1)
+        gra[a - 1].append(b - 1)
+        gra[b - 1].append(a - 1)
     new_tree = [0]
     k = True
     g = 1
     while (g < n):
         new_tree = jiashen(new_tree)
     le = len(d1)
-    if (le <= n//2):
-        zong.append(str(le)+'\n'+' '.join([str(x+1) for x in d1]))
+    if (le <= n // 2):
+        zong.append(str(le) + '\n' + ' '.join([str(x + 1) for x in d1]))
     else:
-        zong.append(str(n-le)+'\n'+' '.join([str(x+1) for x in d2]))
+        zong.append(str(n - le) + '\n' + ' '.join([str(x + 1) for x in d2]))
 print('\n'.join(zong))

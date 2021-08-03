@@ -14,4 +14,3 @@ for _ in range(int(input())):
         else:
             b -= f
             print(f * c + min(b, p) * h)
-

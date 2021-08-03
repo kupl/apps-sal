@@ -8,12 +8,11 @@
 '''
 import math
 for i in range(int(input())):
-  a= list(map(int,input().split()))
-  a.sort()
-  a[1]=a[1]-a[0]
-  a[2]=a[2]-2*a[0]
-  if(a[2]-a[1]<=1):
-   print('Yes')
-  else:
-   print('No')
-
+    a = list(map(int, input().split()))
+    a.sort()
+    a[1] = a[1] - a[0]
+    a[2] = a[2] - 2 * a[0]
+    if(a[2] - a[1] <= 1):
+        print('Yes')
+    else:
+        print('No')

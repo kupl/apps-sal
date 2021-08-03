@@ -5,5 +5,6 @@ def atc_073a(N: int) -> str:
     except ValueError:
         return "No"
 
+
 N = int(input())
 print(atc_073a(N))

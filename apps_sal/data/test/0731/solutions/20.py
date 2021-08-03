@@ -8,4 +8,3 @@ while c:
     d += 1
     c = min(10 ** d - m, w // (k * d))
 print(v)
-

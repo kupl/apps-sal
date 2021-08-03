@@ -4,6 +4,7 @@ a = [int(x) for x in sys.stdin.readline().split()]
 
 eps = 1e-12
 
+
 def f(x):
     mx = a[0] - x
     tsmx = 0.0
@@ -17,6 +18,7 @@ def f(x):
 
     return abs(mx), abs(mn)
 
+
 l = min(a)
 r = max(a)
 f1, f2 = f(l)
@@ -29,4 +31,4 @@ for i in range(0, 90):
         r = m
 
 A, B = f(l)
-print(min(A,B))
+print(min(A, B))

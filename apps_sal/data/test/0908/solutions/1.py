@@ -6,7 +6,7 @@ c = list(map(int, line[1].split()))
 no = (0, '')
 yes = (0, '')
 for i in range(n):
-    s = line[i+2].rstrip('\r\n')
+    s = line[i + 2].rstrip('\r\n')
     sr = s[::-1]
     nn, ny, yn, yy = 1e16, 1e16, 1e16, 1e16
     if s >= no[1]:
@@ -25,4 +25,3 @@ if ans > 1e15:
     print(-1)
 else:
     print(ans)
-

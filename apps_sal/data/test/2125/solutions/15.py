@@ -38,4 +38,3 @@ for j in range(m):
                         d[(c3, clr1, clr2, clr3, k - 2 * c3 - 1, k - 1)] = [1, j]
         b += 1
 print(flags)
-

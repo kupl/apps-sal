@@ -11,7 +11,7 @@ class Solution:
             elif not alt or row[j] < alt:
                 alt = row[j]
         return best, k, alt
-    
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         n = len(arr)
         M = [[None for j in range(n)] for i in range(n)]
@@ -27,5 +27,5 @@ class Solution:
                 else:
                     M[i][j] = arr[i][j] + alt
             best, k, alt = self.scan(M[i], n)
-        
+
         return best

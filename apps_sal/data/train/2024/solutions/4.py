@@ -8,7 +8,6 @@ for x in read.split():
 
     p.append((float)(x))
 
-    
 
 v = 0.0
 
@@ -23,8 +22,4 @@ for u in p:
 print(v)
 
 
-
-
-
 # Made By Mostafa_Khaled
-

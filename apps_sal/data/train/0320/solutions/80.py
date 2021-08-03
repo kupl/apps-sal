@@ -1,12 +1,12 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        
+
         def all_zeros(nums):
             for num in nums:
                 if num != 0:
                     return False
             return True
-        
+
         def to_all_evens(nums):
             cnt = 0
             for i in range(len(nums)):
@@ -14,7 +14,7 @@ class Solution:
                     cnt += 1
                     nums[i] -= 1
             return cnt
-            
+
         op_cnt = 0
         while not all_zeros(nums):
             op_cnt += to_all_evens(nums)

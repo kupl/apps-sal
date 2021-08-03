@@ -1,8 +1,9 @@
 from collections import defaultdict
 
+
 def isValid(n, m, freq, found):
-    f = (n - 1)//m
-    if f != (n - 1)/m:
+    f = (n - 1) // m
+    if f != (n - 1) / m:
         return 0
     flag = 0
     for i in found:
@@ -18,9 +19,10 @@ def isValid(n, m, freq, found):
         return 0
     return 1
 
+
 def isValid2(n, m, freq, found):
-    f = (n - 1)//(m - 1)
-    if f != (n - 1)/(m - 1):
+    f = (n - 1) // (m - 1)
+    if f != (n - 1) / (m - 1):
         return 0
     flag = 0
     for i in found:
@@ -36,13 +38,14 @@ def isValid2(n, m, freq, found):
         return 0
     return 1
 
+
 n = int(input())
 freq = {}
 freq = defaultdict(lambda: 0, freq)
 a = list(map(int, input().split()))
 m = len(set(a))
 found = []
-#calculation of freq
+# calculation of freq
 for i in a:
     freq[i] += 1
     found.append(i)

@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class UnionFind:
     def __init__(self, size):
         self.data = [-1] * size
@@ -40,4 +41,3 @@ Y = Counter(uf.find(i) for i in range(MAX, MAX * 2))
 res = sum(X[i] * Y[i] for i in range(MAX * 2))
 
 print((res - N))
-

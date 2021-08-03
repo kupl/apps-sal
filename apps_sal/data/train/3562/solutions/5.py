@@ -22,6 +22,7 @@ def merge(a, left_index, mid, right_index, aux):
             inversions += mid - i + 1
     return inversions
 
+
 def count(a, left_index, right_index, aux):
     if right_index <= left_index:
         return 0
@@ -29,6 +30,7 @@ def count(a, left_index, right_index, aux):
     left_inversions = count(a, left_index, mid, aux)
     right_inversions = count(a, mid + 1, right_index, aux)
     return left_inversions + right_inversions + merge(a, left_index, mid, right_index, aux)
+
 
 def count_inversion(sequence):
     if len(sequence) < 2:

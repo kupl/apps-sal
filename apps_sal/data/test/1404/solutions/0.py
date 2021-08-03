@@ -1,6 +1,7 @@
 MOD = 998244353.0
 float_prec = 1801439850948198.4
-float_mod = lambda x: x if -float_prec < x < float_prec else x % MOD
+def float_mod(x): return x if -float_prec < x < float_prec else x % MOD
+
 
 n = int(input())
 a = [int(i) for i in input().split()]
@@ -21,4 +22,3 @@ for i in range(n):
     f0, f1 = nf0, nf1
 
 print(int(f1[200] % MOD))
-

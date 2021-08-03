@@ -4,8 +4,10 @@ Created on 2016-4-9
 @author: chronocorax
 '''
 
+
 def line():
     return [int(c) for c in input().split()]
+
 
 n = line()[0]
 cap = line()
@@ -28,12 +30,13 @@ for _ in range(m):
             cap[p] = 0
             marker.append(p)
             p = nxt[p]
-        if p < n: cap[p] -= x
+        if p < n:
+            cap[p] -= x
         for i in marker:
             nxt[i] = p
     else:
         k = tup[1]
         result.append(cap0[k - 1] - cap[k - 1])
-    
+
 for res in result:
     print(res)

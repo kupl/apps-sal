@@ -5,4 +5,3 @@ def calculate_1RM(w, r):
     mcg = 100 * w / (101.3 - 2.67123 * r)
     lomb = w * r ** .1
     return round(max((epley, mcg, lomb)))
-

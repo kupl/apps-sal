@@ -8,4 +8,4 @@ def get_issuer(number):
         return 'Mastercard'
     elif num[0] == '4' and str(len(num)) in ('13', '16'):
         return 'VISA'
-    return 'Unknown'   
+    return 'Unknown'

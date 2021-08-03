@@ -9,13 +9,13 @@ class Solution:
             states[0][i][1] = -1
             states[i][i][0] = 1
             states[i][i][1] = 1
-        
+
         # cnt = 0
         get_updated = False
         for _ in range(2 * n):
-            
+
             get_updated = False
-            
+
             for mouse in range(1, n):
                 for cat in range(1, n):
                     for turn in range(2):
@@ -26,10 +26,10 @@ class Solution:
                                 for node in adj:
                                     res = min(res, states[node][cat][1])
                                     # cnt += 1
-                                
+
                                 if states[mouse][cat][turn] != res:
                                     get_updated = True
-                                    
+
                                 states[mouse][cat][turn] = res
                             else:
                                 adj = graph[cat]
@@ -38,17 +38,17 @@ class Solution:
                                     if node != 0:
                                         res = max(res, states[mouse][node][0])
                                         # cnt += 1
-                                    
+
                                 if states[mouse][cat][turn] != res:
                                     get_updated = True
-                                    
+
                                     states[mouse][cat][turn] = res
             if not get_updated:
                 break
-        
+
         # print(states[3][3][0])
         # print(cnt)
-        
+
         res = states[1][2][0]
         # res = self.play(1, 2, 0, graph, states)
         if res < 0:
@@ -56,4 +56,3 @@ class Solution:
         if res > 0:
             return 2
         return 0
-

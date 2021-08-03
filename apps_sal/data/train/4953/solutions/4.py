@@ -14,6 +14,6 @@ class Pong:
             if self.scores[1 - self.turn] == self.max_score:
                 return f'Player {2 - self.turn} has won the game!'
             else:
-                return f'Player {self.turn + 1} has missed the ball!'    
+                return f'Player {self.turn + 1} has missed the ball!'
         finally:
             self.turn = (self.turn + 1) % 2

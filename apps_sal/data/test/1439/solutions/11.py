@@ -15,6 +15,7 @@ import collections
 import math
 import sys
 
+
 def solve(xs, m):
     modulos = set()
     for x in xs:
@@ -25,6 +26,7 @@ def solve(xs, m):
     else:
         return False
 
+
 def tf_to_yn(tf):
     return 'YES' if tf else 'NO'
 
@@ -34,7 +36,7 @@ def print_stderr(*args, **kwargs):
 
 
 def main():
-    [n, m] = [int(i) for i in input().strip().split()]    
+    [n, m] = [int(i) for i in input().strip().split()]
     xs = [int(i) for i in input().strip().split()]
     assert len(xs) == n
 
@@ -44,5 +46,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

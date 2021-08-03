@@ -1,6 +1,6 @@
 r, g, b = input().split()
 
-ans = int(r) * 100 + int(g) *10 + int(b)
+ans = int(r) * 100 + int(g) * 10 + int(b)
 
 if ans % 4 == 0:
     print("YES")

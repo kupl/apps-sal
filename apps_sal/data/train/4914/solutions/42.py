@@ -1,5 +1,5 @@
 def position(alphabet):
     alphabet.lower()
-    al='abcdefghijklmnopqrstuvwxyz'
+    al = 'abcdefghijklmnopqrstuvwxyz'
     ind = al.index(alphabet)
-    return "Position of alphabet: {}".format(ind+1)
+    return "Position of alphabet: {}".format(ind + 1)

@@ -1,7 +1,7 @@
-N,T = list(map(int,input().split()))
+N, T = list(map(int, input().split()))
 cost = "TLE"
 for i in range(N):
-    c,t = list(map(int,input().split()))
+    c, t = list(map(int, input().split()))
     if t <= T:
         if cost == "TLE":
             cost = c
@@ -10,4 +10,3 @@ for i in range(N):
                 cost = c
 
 print(cost)
-

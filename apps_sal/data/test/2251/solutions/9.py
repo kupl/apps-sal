@@ -5,6 +5,7 @@ def DFS(start, color):
         if not isUsed[i[0]] and i[1] == color:
             DFS(i[0], color)
 
+
 n, m = tuple(map(int, input().split()))
 
 graph = [[] for i in range(n)]
@@ -25,4 +26,3 @@ for i in range(q):
             answers[i] += 1
 
 print("\n".join(map(str, answers)))
-

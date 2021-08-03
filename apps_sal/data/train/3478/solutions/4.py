@@ -1,5 +1,6 @@
 from itertools import zip_longest
 
+
 def battle(player1, player2):
     result = {"player1": [], "player2": []}
     for creature1, creature2 in zip_longest(player1, player2, fillvalue=[0, 0]):

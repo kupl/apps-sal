@@ -29,4 +29,3 @@ if p[1] > 0:
 
 ans = max([p[i] - i + 1 + n for i in range(1, n + 1)])
 print(ans)
-

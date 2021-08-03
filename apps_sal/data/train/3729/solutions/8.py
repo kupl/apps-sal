@@ -1,4 +1,4 @@
-def count_zeros_n_double_fact(n): 
+def count_zeros_n_double_fact(n):
     fact = 1
     while n > 2:
         fact *= n

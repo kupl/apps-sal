@@ -3,6 +3,7 @@ from sys import stdin, stdout
 
 maxNum = 200000
 
+
 def retrieveFlow(theMap):
     countNodes = len(theMap)
     parent = [-1] * countNodes
@@ -22,6 +23,7 @@ def retrieveFlow(theMap):
             temp = par
     return ans
 
+
 def bfs(theMap, parent):
     queue = deque([])
     queue.append(0)
@@ -39,6 +41,7 @@ def bfs(theMap, parent):
                 if i == countNodes - 1:
                     return True
     return beenThere[countNodes - 1]
+
 
 def soldierTraveling():
     n, m = [int(_) for _ in stdin.readline().rstrip().split()]
@@ -81,6 +84,6 @@ def soldierTraveling():
         stdout.write(' '.join(str(_) for _ in i))
         stdout.write('\n')
 
+
 soldierTraveling()
 stdout.close()
-

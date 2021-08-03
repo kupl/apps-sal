@@ -21,4 +21,3 @@ for r in range(N + 1):
         C[L] -= 1
 
 print(cnt)
-

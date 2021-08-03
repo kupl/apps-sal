@@ -12,4 +12,3 @@ while x <= y:
     cnt += 1
 
 print(cnt)
-

@@ -1,5 +1,6 @@
 import heapq
 
+
 class Solution:
     '''def longestSubarray(self, nums: List[int], limit: int) -> int:
         # TC is O(N^2)
@@ -25,13 +26,13 @@ class Solution:
         minheap = []
         start = 0
         maxlen = 0
-        
+
         for end, item in enumerate(nums):
             heapq.heappush(minheap, (item, end))
             heapq.heappush(maxheap, (-item, end))
             #print(minheap, maxheap)
-            while maxheap and minheap and -maxheap[0][0]-minheap[0][0]>limit:
-                #print()
+            while maxheap and minheap and -maxheap[0][0] - minheap[0][0] > limit:
+                # print()
                 #print('heap', minheap, maxheap)
                 # find the minimum index of max or min
                 start = min(maxheap[0][1], minheap[0][1]) + 1
@@ -41,11 +42,6 @@ class Solution:
                 while minheap[0][1] < start:
                     heapq.heappop(minheap)
                 #print('heap', minheap, maxheap)
-            maxlen = max(maxlen, end-start+1)
+            maxlen = max(maxlen, end - start + 1)
 
         return maxlen
-
-
-        
-    
-

@@ -1,6 +1,6 @@
+import sys
 def readln(): return tuple(map(int, input().split()))
 
-import sys
 
 s = input()
 k, = readln()

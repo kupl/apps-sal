@@ -1,2 +1,1 @@
-no_space = lambda p:p.replace(" ", "") 
-
+def no_space(p): return p.replace(" ", "")

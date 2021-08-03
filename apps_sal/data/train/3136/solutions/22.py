@@ -1,4 +1,6 @@
 from bisect import bisect
+
+
 def people_with_age_drink(age):
     r = {
         0: "drink toddy",

@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 n = int(input())
 z = list(map(int, input().split()))
 if n == 1:

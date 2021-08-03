@@ -7,9 +7,7 @@ class Solution:
         for i, v in enumerate(A):
             if v % 2 == 1:
                 odds += 1
-                A_next[i] = v-1
+                A_next[i] = v - 1
         if odds > 0:
             return odds + self.minOperations(A_next)
-        return 1 + self.minOperations([v//2 for v in A])
-        
-
+        return 1 + self.minOperations([v // 2 for v in A])

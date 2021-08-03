@@ -10,4 +10,3 @@ for i in range(k):
         a += 1
         x += x1
     print(a)
-

@@ -1,6 +1,7 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
-from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees#, log2
+from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees  # , log2
 from itertools import accumulate, permutations, combinations, combinations_with_replacement, product, groupby
 from operator import itemgetter, mul
 from copy import deepcopy
@@ -14,6 +15,8 @@ def INT(): return int(input())
 def MAP(): return map(int, input().split())
 def LIST(): return list(map(int, input().split()))
 def ZIP(n): return zip(*(MAP() for _ in range(n)))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10**9 + 7
@@ -25,26 +28,26 @@ A = [LIST() for _ in range(H)]
 dic = defaultdict(tuple)
 
 for y in range(H):
-	for x in range(W):
-		dic[A[y][x]] = (y+1, x+1)
+    for x in range(W):
+        dic[A[y][x]] = (y + 1, x + 1)
 
 power = [[] for _ in range(D)]
-for i in range(1, H*W+1):
-	if i <= D:
-		power[i%D].append(0)
-	else:
-		idx = i%D
-		tmp = abs(dic[i][0]-dic[i-D][0]) + abs(dic[i][1]-dic[i-D][1])
-		power[i%D].append(tmp)
+for i in range(1, H * W + 1):
+    if i <= D:
+        power[i % D].append(0)
+    else:
+        idx = i % D
+        tmp = abs(dic[i][0] - dic[i - D][0]) + abs(dic[i][1] - dic[i - D][1])
+        power[i % D].append(tmp)
 
-#print(power)
+# print(power)
 power_acc = []
 for x in power:
-	power_acc.append(list(accumulate(x)))
+    power_acc.append(list(accumulate(x)))
 power_acc[0].insert(0, 0)
-#print(power_acc)
+# print(power_acc)
 
 Q = INT()
 for _ in range(Q):
-	L, R = MAP()
-	print(power_acc[R%D][R//D] - power_acc[L%D][L//D])
+    L, R = MAP()
+    print(power_acc[R % D][R // D] - power_acc[L % D][L // D])

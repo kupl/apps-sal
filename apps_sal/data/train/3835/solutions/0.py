@@ -12,4 +12,3 @@ def find_discounted(prices: str) -> str:
         del all_prices[bisect_left(all_prices, d * 4 // 3)]
 
     return ' '.join(map(str, discounts))
-

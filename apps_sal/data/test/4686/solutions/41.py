@@ -13,4 +13,3 @@ else:
     ans = "Yes"
 
 print(ans)
-

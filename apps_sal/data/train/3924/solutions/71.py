@@ -5,4 +5,3 @@ def reverse_words(text):
         x[i] = x[i][::-1]
     y = medzera.join(x)
     return y
-

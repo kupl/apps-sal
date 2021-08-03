@@ -1,9 +1,9 @@
 # cook your dish here
 for _ in range(int(input())):
-    a,b=map(int,input().split(' '))
-    if(a>b):
+    a, b = map(int, input().split(' '))
+    if(a > b):
         print('>')
-    elif(a<b):
+    elif(a < b):
         print('<')
-    elif(a==b):
+    elif(a == b):
         print('=')

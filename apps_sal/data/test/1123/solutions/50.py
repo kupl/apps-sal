@@ -1,10 +1,11 @@
 import sys
 
 sys.setrecursionlimit(10 ** 8)
-ni = lambda: int(sys.stdin.readline())
-nm = lambda: list(map(int, sys.stdin.readline().split()))
-nl = lambda: list(nm())
-ns = lambda: sys.stdin.readline().rstrip()
+def ni(): return int(sys.stdin.readline())
+def nm(): return list(map(int, sys.stdin.readline().split()))
+def nl(): return list(nm())
+def ns(): return sys.stdin.readline().rstrip()
+
 
 MOD = 10 ** 9 + 7
 N, K = nm()
@@ -30,4 +31,3 @@ def solve():
 
 
 print((solve()))
-

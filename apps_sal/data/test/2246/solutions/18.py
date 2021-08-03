@@ -3,17 +3,22 @@ from collections import deque
 from sys import stdin
 lines = deque(line.strip() for line in stdin.readlines())
 
+
 def nextline():
     return lines.popleft()
+
 
 def types(cast):
     return tuple(int(x) for x in nextline().split())
 
+
 def ints():
     return types(int)
 
+
 def strs():
     return nextline().split()
+
 
 def main():
     # lines will now contain all of the input's lines in a list
@@ -38,8 +43,8 @@ def main():
     print(expected)
 
 
-
 def __starting_point():
     main()
+
 
 __starting_point()

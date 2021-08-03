@@ -22,4 +22,3 @@ while p < len(A) or fill != 0:
     result += time
 
 print(result)
-

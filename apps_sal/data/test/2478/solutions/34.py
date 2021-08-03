@@ -18,5 +18,3 @@ for _ in range(add_left):
 print(S, end='')
 for _ in range(left):
     print(')', end='')
-
-

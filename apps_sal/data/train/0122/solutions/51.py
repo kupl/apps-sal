@@ -12,18 +12,17 @@ class Solution:
         pre = list(accumulate(arr))
         total = pre[-1]
         # print(f'{pre=}')
-        
+
         if k == n:
             return total
-        
-        w = n-k
-        result = 0 
+
+        w = n - k
+        result = 0
         # print(f'{w=}')
-        
-        for i in range(w-1, n):
+
+        for i in range(w - 1, n):
             # print(f'{i=}')
-            sub_sum = total - (pre[i] - pre[i-w+1] + arr[i-w+1])
+            sub_sum = total - (pre[i] - pre[i - w + 1] + arr[i - w + 1])
             result = max(result, sub_sum)
-            
-            
+
         return result

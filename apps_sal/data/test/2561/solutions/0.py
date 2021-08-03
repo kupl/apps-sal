@@ -22,4 +22,3 @@ else:
 n = ria()[0]
 for i in range(n):
     print(2 ** str(bin(int(input()))).count('1'))
-

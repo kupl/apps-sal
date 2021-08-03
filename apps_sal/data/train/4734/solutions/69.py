@@ -1,1 +1,1 @@
-bonus_time = lambda s, b: f"${s*10 if b else s}"
+def bonus_time(s, b): return f"${s*10 if b else s}"

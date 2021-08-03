@@ -15,7 +15,7 @@ class Solution:
                     prevStart = -1
         if prevStart != -1:
             candidates.append([prevStart, len(nums) - 1])
-        
+
         res = [0]
         for i in range(len(candidates)):
             if i == len(candidates) - 1:

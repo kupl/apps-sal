@@ -6,6 +6,6 @@ for i in range(n):
     a = list(map(int, input().split()))
     for j in range(m):
         ac += a[j] * b[j]
-    if ac+c > 0:
+    if ac + c > 0:
         cnt += 1
 print(cnt)

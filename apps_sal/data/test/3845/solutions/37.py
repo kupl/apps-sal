@@ -12,11 +12,10 @@ for i in range(a):
 pos = 0
 for j in range(b):
     x = pos % 90
-    y = 45 +  (pos // 90) * 2
+    y = 45 + (pos // 90) * 2
     ans[y][x] = "#"
     pos += 2
-    
+
 print((80, 90))
 for row in ans:
     print(("".join(row)))
-

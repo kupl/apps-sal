@@ -1,7 +1,7 @@
-K=int(input())
-S= input()
+K = int(input())
+S = input()
 
-if len(S)<=K:
+if len(S) <= K:
     print(S)
 else:
-    print(S[:K]+'...')
+    print(S[:K] + '...')

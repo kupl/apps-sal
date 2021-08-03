@@ -12,13 +12,13 @@ MOD = 10 ** 9 + 7
 
 def cumprod(arr, MOD):
     L = len(arr)
-    Lsq = int(L**.5+1)
+    Lsq = int(L**.5 + 1)
     arr = np.resize(arr, Lsq**2).reshape(Lsq, Lsq)
     for n in range(1, Lsq):
-        arr[:, n] *= arr[:, n-1]
+        arr[:, n] *= arr[:, n - 1]
         arr[:, n] %= MOD
     for n in range(1, Lsq):
-        arr[n] *= arr[n-1, -1]
+        arr[n] *= arr[n - 1, -1]
         arr[n] %= MOD
     return arr.ravel()[:L]
 
@@ -28,7 +28,7 @@ def make_fact(U, MOD):
     x[0] = 1
     fact = cumprod(x, MOD)
     x = np.arange(U, 0, -1, dtype=np.int64)
-    x[0] = pow(int(fact[-1]), MOD-2, MOD)
+    x[0] = pow(int(fact[-1]), MOD - 2, MOD)
     fact_inv = cumprod(x, MOD)[::-1]
     return fact, fact_inv
 
@@ -54,8 +54,7 @@ for dy in range(1, M):
     ans += dy * pat * N * N
     ans %= MOD
 
-ans *= mod_comb_k(N * M - 2, K-2, MOD)
+ans *= mod_comb_k(N * M - 2, K - 2, MOD)
 ans %= MOD
 
 print(ans)
-

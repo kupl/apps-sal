@@ -13,7 +13,7 @@ for made in range(n + 1):
     currenttime = m - made * alltime
     available = []
     for item in nums:
-        available.extend([item]*(n - made))
+        available.extend([item] * (n - made))
     available = sorted(available)
     for item in available:
         if(currenttime < item):
@@ -23,4 +23,3 @@ for made in range(n + 1):
     result = max(result, currentres)
 
 print(result)
-

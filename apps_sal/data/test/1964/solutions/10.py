@@ -8,7 +8,7 @@ itms = list(map(int, input().split()))
 
 for i in range(k[0]):
     minScnds += itms[i] * 5
-  
+
 for i in range(1, qNumbers):
     scnds = k[i] * 15
     itms = list(map(int, input().split()))
@@ -16,4 +16,4 @@ for i in range(1, qNumbers):
         scnds += itms[j] * 5
     minScnds = min(scnds, minScnds)
 
-print (minScnds)
+print(minScnds)

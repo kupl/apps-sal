@@ -10,4 +10,4 @@ for _ in range(n):
     while s < c or (s + c) % 2 != 0:
         s += i
         i += 1
-    print (i - 1)
+    print(i - 1)

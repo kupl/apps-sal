@@ -4,8 +4,8 @@ class Solution:
         res = list(range(n))
         seen = set()
         array_of_sets = [set(company) for company in favoriteCompanies]
-        for i in range(n-1):
-            for j in range(i+1, n):
+        for i in range(n - 1):
+            for j in range(i + 1, n):
                 if i != j:
                     remind = array_of_sets[i] & array_of_sets[j]
                     if remind == array_of_sets[i]:
@@ -17,4 +17,3 @@ class Solution:
                             seen.add(j)
                             res.remove(j)
         return res
-

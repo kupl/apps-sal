@@ -9,5 +9,4 @@ for i in range(n):
         l[-1] += 1
 
 for i in l:
-    print(i, end = ' ')
-
+    print(i, end=' ')

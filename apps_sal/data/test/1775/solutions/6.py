@@ -4,8 +4,11 @@ from sys import stdin
 from collections import defaultdict
 setrecursionlimit(1000000007)
 _data = iter(stdin.read().split('\n'))
+
+
 def input():
     return next(_data)
+
 
 n, m, k = [int(x) for x in input().split()]
 a = tuple(tuple(-int(x) for x in input().split()) for i in range(n))
@@ -28,7 +31,7 @@ for i in range(n):
             while heap[0] in remd:
                 top = heappop(heap)
                 if remd[top] == 1:
-                   del remd[top]
+                    del remd[top]
                 else:
                     remd[top] -= 1
             t[j] = heap[0]

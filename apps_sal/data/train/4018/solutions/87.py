@@ -10,5 +10,3 @@ def isDigit(string):
     except ValueError:
         is_float = False
     return is_int or is_float
-
-

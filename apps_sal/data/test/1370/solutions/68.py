@@ -26,7 +26,6 @@ for h in range(1 << (H - 1)):
 
     now = [0 for _ in range(g)]
 
-
     def add(j):
         for i in range(g):
             now[i] += c[i][j]
@@ -36,7 +35,6 @@ for h in range(1 << (H - 1)):
                 return False
 
         return True
-
 
     for j in range(W):
         if not add(j):
@@ -51,4 +49,3 @@ for h in range(1 << (H - 1)):
     ans = min(ans, num)
 
 print(ans)
-

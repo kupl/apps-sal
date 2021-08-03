@@ -21,4 +21,3 @@ class Solution:
             d[arr[i]] = []
 
         return 0
-

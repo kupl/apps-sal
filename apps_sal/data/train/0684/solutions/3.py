@@ -1,6 +1,7 @@
 def is_prime(n):
     return all(n % i for i in range(2, int(n ** 0.5) + 1)) and n >= 2
 
+
 for _ in range(int(input())):
     n = int(input())
 
@@ -12,7 +13,7 @@ for _ in range(int(input())):
         print('Me')
         continue
 
-    if not (n & (n-1)):
+    if not (n & (n - 1)):
         print('Grinch')
         continue
 
@@ -21,4 +22,3 @@ for _ in range(int(input())):
         continue
 
     print('Me')
-

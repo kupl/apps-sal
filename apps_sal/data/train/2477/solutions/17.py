@@ -7,7 +7,7 @@ class Solution:
             de = {}
             do = {}
             for i in range(n):
-                if i%2:
+                if i % 2:
                     if s[i] in de:
                         de[s[i]] += 1
                     else:
@@ -19,7 +19,7 @@ class Solution:
                         do[s[i]] = 1
             odds.append(do)
             evens.append(de)
-        
+
         total = []
         i = 0
         while i < len(odds):

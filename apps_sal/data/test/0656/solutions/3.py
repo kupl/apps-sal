@@ -2,6 +2,7 @@
 def ri():
     return list(map(int, input().split()))
 
+
 n, k = ri()
 
 t = list(ri())
@@ -17,11 +18,11 @@ for i in range(n):
         continue
     if t[i] < 0:
         mc += 1
-        if t[i-1] >= 0:
+        if t[i - 1] >= 0:
             tt.append(-1)
         continue
     else:
-        if t[i-1] >= 0:
+        if t[i - 1] >= 0:
             tt[-1] = tt[-1] + 1
         else:
             tt.append(1)
@@ -50,7 +51,7 @@ for i in tt:
 k -= mc
 ttt.sort()
 for i in ttt:
-    if k -i >= 0:
+    if k - i >= 0:
         k -= i
         maxs -= 2
     else:
@@ -67,7 +68,7 @@ k2 -= mc
 check = 0
 ttt2.sort()
 for i in ttt2:
-    if k2 -i >= 0:
+    if k2 - i >= 0:
         k2 -= i
         maxs2 -= 2
         if i == tt2[-1] and check == 0:
@@ -77,4 +78,3 @@ for i in ttt2:
         break
 
 print(min(maxs, maxs2))
-

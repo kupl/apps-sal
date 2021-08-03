@@ -1,4 +1,6 @@
 MOD = 1000000007
+
+
 class Solution:
     def dieSimulator(self, n, rollMax):
         r = max(rollMax)

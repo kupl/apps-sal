@@ -23,17 +23,17 @@ def _read_ints():
 def find_max_power_can_make(heroes_powers):
     heroes_powers = tuple(heroes_powers)
     assert heroes_powers
-    
+
     abs_powers_sum = sum(map(abs, heroes_powers))
-    
+
     if len(heroes_powers) <= 9:
         return _compute_using_brute_force(heroes_powers)
-    
+
     zeros_n = heroes_powers.count(0)
     if zeros_n >= 2:
         return abs_powers_sum
     assert zeros_n <= 1
-    
+
     n = len(heroes_powers)
     if n % 3 == 1 % 3:
         can_invert_mod_3 = 0
@@ -42,20 +42,20 @@ def find_max_power_can_make(heroes_powers):
     else:
         assert n % 3 == 3 % 3
         can_invert_mod_3 = 1
-    
+
     result = -_inf
-    
+
     for is_zero_positive in (False, True):
-        
+
         if zeros_n == 0 or is_zero_positive:
             signs = [1 if x >= 0 else -1 for x in heroes_powers]
         else:
             signs = [1 if x > 0 else -1 for x in heroes_powers]
-        
+
         negative_n = signs.count(-1)
         have_pair_of_same = any(signs[i] == signs[i + 1] for i in range(len(signs) - 1))
         is_trivial = not (not have_pair_of_same and negative_n % 3 == can_invert_mod_3)
-        
+
         if is_trivial:
             if negative_n % 3 == can_invert_mod_3:
                 result = max(result, abs_powers_sum)
@@ -76,7 +76,7 @@ def find_max_power_can_make(heroes_powers):
                 key=lambda x: (x < 0 if is_zero_positive else x <= 0, x)
             )
             result = max(result, abs_powers_sum - 2 * abs(min_pos) - 2 * abs(max_neg))
-        
+
         if negative_to_inverse_1 >= 0:
             negative_to_remain_n = negative_n - negative_to_inverse_1
             assert negative_to_remain_n > 0
@@ -86,7 +86,7 @@ def find_max_power_can_make(heroes_powers):
                     negative_to_remain_n, negative_powers, key=abs
                 )
                 result = max(result, abs_powers_sum - 2 * abs(sum(negative_to_remain)))
-        
+
         if negative_to_inverse_2 <= n:
             positive_to_inverse_n = negative_to_inverse_2 - negative_n
             assert positive_to_inverse_n > 0
@@ -96,7 +96,7 @@ def find_max_power_can_make(heroes_powers):
                     positive_to_inverse_n, positive_powers, key=abs
                 )
                 result = max(result, abs_powers_sum - 2 * sum(positive_to_inverse))
-    
+
     return result
 
 
@@ -105,12 +105,13 @@ def _compute_using_brute_force(seq):
     if n == 1:
         return seq[0]
     return max(
-        _compute_using_brute_force(seq[:i] + (-(seq[i] + seq[i+1]),) + seq[i+2:])
+        _compute_using_brute_force(seq[:i] + (-(seq[i] + seq[i + 1]),) + seq[i + 2:])
         for i in range(n - 1)
     )
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

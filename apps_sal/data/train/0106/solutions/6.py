@@ -7,10 +7,10 @@ for c in range(int(input())):
         l, r = map(int, input().split())
         segments.append([[l, r], counter])
         counter += 1
-    
+
     segments.sort()
     ans = [-1] * N
-    
+
     rightBound = segments[0][0][1]
     valid = -1
     for i in range(1, len(segments)):
@@ -19,7 +19,7 @@ for c in range(int(input())):
             break
         else:
             rightBound = max(rightBound, segments[i][0][1])
-    
+
     if valid == -1:
         print(-1)
     else:
@@ -27,9 +27,9 @@ for c in range(int(input())):
             ans[segments[i][1]] = 1
         for i in range(valid, len(segments)):
             ans[segments[i][1]] = 2
-    
+
         for a in ans:
-            print(a, end= ' ') 
+            print(a, end=' ')
     print()
 '''
 3
@@ -44,4 +44,4 @@ for c in range(int(input())):
 3 3
 4 4
 5 5
-'''    
+'''

@@ -13,4 +13,3 @@ while remaining_dist > 0:
     remaining_dist -= 1
 
 print(cost)
-

@@ -44,4 +44,3 @@ if m % 3 == 0:
         return
 
 print('NO')
-

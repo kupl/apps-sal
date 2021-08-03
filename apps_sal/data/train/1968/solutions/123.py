@@ -7,7 +7,8 @@ class Solution:
             tmp = []
             for d in path.split('/')[1:]:
                 tmp.append(d)
-                if '/'.join(tmp) in seen: break
+                if '/'.join(tmp) in seen:
+                    break
             else:
                 seen.add('/'.join(tmp))
                 res.append(path)

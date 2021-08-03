@@ -16,7 +16,9 @@ def main():
             break
     print(' '.join(str(-x) for x in xx))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

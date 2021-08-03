@@ -1,6 +1,6 @@
 class Solution:
     def numberWays(self, hats: List[List[int]]) -> int:
-        mod = 10**9+7
+        mod = 10**9 + 7
         k = len(hats)
         persons = defaultdict(list)
         for i, hs in enumerate(hats):
@@ -14,7 +14,7 @@ class Solution:
             for mask in dic:
                 for p in ps:
                     if (mask >> p) & 1 == 0:
-                        nex[mask | (1 << p)] = (nex[mask | (1 << p)]+dic[mask])%mod
+                        nex[mask | (1 << p)] = (nex[mask | (1 << p)] + dic[mask]) % mod
             dic = nex
 
-        return dic[(1 << k) - 1]   
+        return dic[(1 << k) - 1]

@@ -1,4 +1,4 @@
-#15:35
+# 15:35
 
 n = int(input())
 circ = []
@@ -16,7 +16,7 @@ circ.append(l[0][1])
 
 for i in range(0, n - 1):
     p = l[circ[i]]
-    
+
     if circ[i + 1] not in p:
         circ[i], circ[i + 1] = circ[i + 1], circ[i]
 
@@ -29,5 +29,4 @@ for i in range(0, n - 1):
         circ.append(p[0])
 
 for i in range(n):
-    print(circ[i] + 1, end = ' ')
-
+    print(circ[i] + 1, end=' ')

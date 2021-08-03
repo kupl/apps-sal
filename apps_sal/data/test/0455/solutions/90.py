@@ -6,7 +6,7 @@ for x, y in XY:
     if (x + y) % 2 != parity:
         print("-1")
         return
-    maxXY = max(x+y, maxXY)
+    maxXY = max(x + y, maxXY)
 arm = [1, 1, ]
 if parity == 1:
     arm[1] = 2
@@ -42,5 +42,3 @@ for x, y in XY:
                 nowY += l
                 ansR += "D"
     print((ansR[::-1]))
-
-

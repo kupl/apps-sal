@@ -8,7 +8,8 @@ class Solution:
                     return False
             return True
             '''
-            return x > 1 and all(x%d for d in range(2,int(x**.5)+1))
+            return x > 1 and all(x % d for d in range(2, int(x**.5) + 1))
+
         def isPalindrome(x):
             x = str(x)
             if len(x) == 1:
@@ -32,4 +33,3 @@ class Solution:
             if 10**7 < i < 10**8:
                 i = 10**8
         return -1
-

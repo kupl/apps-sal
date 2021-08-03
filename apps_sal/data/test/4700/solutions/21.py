@@ -18,4 +18,3 @@ for i in range(M):
 
 print((sum(good)))
 return
-

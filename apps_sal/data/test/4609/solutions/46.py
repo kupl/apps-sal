@@ -13,7 +13,5 @@ for i in range(int(d)):
         pass
     else:
         ans += 1
-        
-print(ans)
-    
 
+print(ans)

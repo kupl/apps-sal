@@ -1,3 +1,3 @@
-a,b,c = map(str,input().split())
+a, b, c = map(str, input().split())
 
-print('A'+b[0]+'C')
+print('A' + b[0] + 'C')

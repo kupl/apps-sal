@@ -4,6 +4,7 @@ class T:
         self.left = left
         self.right = right
 
+
 def is_bst(node):
     def traverse(n):
         return [] if not n else traverse(n.left) + [n.value] + traverse(n.right)

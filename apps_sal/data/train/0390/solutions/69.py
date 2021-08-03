@@ -1,4 +1,6 @@
 from functools import lru_cache
+
+
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
 
@@ -14,5 +16,5 @@ class Solution:
                 if not dp(k - i * i):
                     return True
             return False
-        
+
         return dp(n)

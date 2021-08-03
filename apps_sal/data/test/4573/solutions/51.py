@@ -8,4 +8,3 @@ for i in range(N):
         print(med2)
     else:
         print(med1)
-

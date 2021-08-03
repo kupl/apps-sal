@@ -1,5 +1,6 @@
 from math import sqrt
 
+
 class Graph:
     def __init__(self, connections):
         self.n = len(connections)
@@ -34,6 +35,7 @@ class Graph:
 
         return False
 
+
 def square_sums_row(n):
     connections = []
     temp = []
@@ -46,4 +48,3 @@ def square_sums_row(n):
 
     g = Graph(connections)
     return g.hamilton()
-

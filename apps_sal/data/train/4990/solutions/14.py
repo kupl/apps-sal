@@ -3,5 +3,7 @@ def solution(string, ending):
         return True
     else:
         return False
-print(solution('abc','bc'))
-print(solution('abc','d'))
+
+
+print(solution('abc', 'bc'))
+print(solution('abc', 'd'))

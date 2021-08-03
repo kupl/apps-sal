@@ -11,7 +11,7 @@ class Solution:
                 return [], maxDiff
             lArr, maxDiff = util(root.left, maxDiff)
             rArr, maxDiff = util(root.right, maxDiff)
-            
+
             for node in lArr:
                 if abs(root.val - node.val) > maxDiff:
                     maxDiff = abs(root.val - node.val)

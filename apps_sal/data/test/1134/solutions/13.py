@@ -4,10 +4,12 @@ from collections import deque
 data = sys.stdin.read().split()
 data_ptr = 0
 
+
 def data_next():
     nonlocal data_ptr, data
     data_ptr += 1
     return data[data_ptr - 1]
+
 
 N = int(data_next())
 tot_lines = 0
@@ -24,4 +26,3 @@ for i in range(N):
         ans += tot_lines - n - 1
         st.append(i)
 print(ans)
-

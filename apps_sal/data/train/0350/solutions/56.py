@@ -1,12 +1,12 @@
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-        
+
         d, t = defaultdict(int), defaultdict(int)
-        
+
         a, b = K, K
         left, right = 0, 0
         res = 0
-        
+
         for i, ele in enumerate(A):
             a -= (1 if d[ele] == 0 else 0)
             b -= (1 if t[ele] == 0 else 0)
@@ -21,5 +21,5 @@ class Solution:
                 t[A[right]] -= 1
                 right += 1
             res += right - left
-        
+
         return res

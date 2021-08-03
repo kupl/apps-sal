@@ -3,8 +3,8 @@ class Solution:
         people.sort()
         n = len(people)
         i = 0
-        j = n-1
-        
+        j = n - 1
+
         boats = 0
         while i <= j:
             if people[i] + people[j] <= limit:
@@ -12,7 +12,7 @@ class Solution:
             j -= 1
             # else:
             #     j -= 1
-            
+
             boats += 1
-            
+
         return boats

@@ -9,4 +9,3 @@ for i in range(len(arr)):
             arr[i] = 9 - arr[i]
     flag = True
 print(''.join(list(map(str, arr))))
-

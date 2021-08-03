@@ -10,4 +10,3 @@ for i in range(len(s)):
         if s[i].lower() == s[i] and s[i] not in a[-1]:
             a[-1].add(s[i])
 print(max([len(x) for x in a]))
-

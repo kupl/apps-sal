@@ -6,4 +6,3 @@ for i in range(n):
     else:
         found += (seq[seq[i]] == i)
 print(counter + 2 * (found > 0) + (counter < n and not found))
-

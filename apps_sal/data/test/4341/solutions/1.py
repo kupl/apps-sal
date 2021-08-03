@@ -11,6 +11,8 @@ for _ in range(m):
     G[v].append(u)
 
 C = [0] * (n + 1)
+
+
 def dfs(v, cc):
     ok = True
     q = [v]
@@ -40,4 +42,3 @@ for v in range(1, n + 1):
 print(cycles)
 
 # print(C)
-

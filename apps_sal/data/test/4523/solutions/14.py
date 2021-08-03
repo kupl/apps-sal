@@ -9,13 +9,12 @@ def solve(tc):
     seq = sorted(seq)
 
     base = seq[0]
-    for i in range(1,n):
-        if seq[i]-base>1:
+    for i in range(1, n):
+        if seq[i] - base > 1:
             print("NO")
             return
         base = seq[i]
     print("YES")
-
 
 
 tcs = 1
@@ -24,4 +23,3 @@ tc = 1
 while tc <= tcs:
     solve(tc)
     tc += 1
-

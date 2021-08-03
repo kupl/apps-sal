@@ -1,5 +1,5 @@
 import sys
- 
+
 t = int(input())
 for _ in range(t):
     n = int(sys.stdin.readline())
@@ -16,15 +16,13 @@ for _ in range(t):
             yMin = max(yi, yMin)
         if yPlus == 0:
             yMax = min(yi, yMax)
-    if xMin<=xMax and yMin <= yMax:
+    if xMin <= xMax and yMin <= yMax:
         print(1, xMin, yMin)
     else:
         print(0)
- 
- 
- 
-## (x−1, y)
+
+
+# (x−1, y)
 ## (x, y+1)
 ## (x+1, y)
-## (x, y−1)
-
+# (x, y−1)

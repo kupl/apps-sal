@@ -8,4 +8,3 @@ for i in range(N):
     else:
         b[1], b[2] = b[2], b[1]
 print(b[x])
-

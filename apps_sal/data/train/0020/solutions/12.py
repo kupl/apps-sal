@@ -27,5 +27,5 @@ for N, M, TLR in Query:
         small = max(small, l)
 
         pret = t
-    
+
     print("YES" if ok else "NO")

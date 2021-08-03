@@ -19,24 +19,36 @@ for i in range(n):
 print(res * 2000)
 '''
 N = int(lines[0].strip())
-for i in range(1, 1+N):
+for i in range(1, 1 + N):
     (n, k, d1, d2) = map(int, lines[i].strip().split(" "))
-    if n % 3 != 0: print("no"); continue
+    if n % 3 != 0:
+        print("no")
+        continue
 
     def solve(da, db):
         tmp = k - da - db
-        if tmp % 3 != 0: return True
+        if tmp % 3 != 0:
+            return True
         b = tmp // 3
         a = b + da
         c = b + db
-        if min(a,b,c) < 0: return True
-        if n//3 >= max(a,b,c): return False
-        else: return True
-        
+        if min(a, b, c) < 0:
+            return True
+        if n // 3 >= max(a, b, c):
+            return False
+        else:
+            return True
+
     cannot = True
-    if cannot: cannot = solve(d1, d2)
-    if cannot: cannot = solve(d1, -d2)
-    if cannot: cannot = solve(-d1, d2)
-    if cannot: cannot = solve(-d1, -d2)
-    if cannot: print("no")
-    else: print("yes")
+    if cannot:
+        cannot = solve(d1, d2)
+    if cannot:
+        cannot = solve(d1, -d2)
+    if cannot:
+        cannot = solve(-d1, d2)
+    if cannot:
+        cannot = solve(-d1, -d2)
+    if cannot:
+        print("no")
+    else:
+        print("yes")

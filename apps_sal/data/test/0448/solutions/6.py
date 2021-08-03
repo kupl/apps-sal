@@ -14,4 +14,3 @@ for x in range(n):
         high = y
         ans = x + 1
 print(ans)
-

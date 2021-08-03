@@ -8,9 +8,10 @@ class Solution:
             for skill in p:
                 if skill in key:
                     his_skill |= 1 << key[skill]
-            for k in range(len(dp)-1, -1, -1):
+            for k in range(len(dp) - 1, -1, -1):
                 with_him = k | his_skill
-                if with_him == k or dp[k] is None: continue
+                if with_him == k or dp[k] is None:
+                    continue
                 if not dp[with_him] or len(dp[k]) + 1 < len(dp[with_him]):
                     dp[with_him] = dp[k] + [i]
         return dp[(1 << n) - 1]

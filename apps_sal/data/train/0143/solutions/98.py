@@ -19,5 +19,5 @@ class Solution:
                 if fruit_frequency[left_fruit] == 0:
                     del fruit_frequency[left_fruit]
                 window_start += 1  # shrink the window
-            max_length = max(max_length, window_end-window_start + 1)
-        return max_length    
+            max_length = max(max_length, window_end - window_start + 1)
+        return max_length

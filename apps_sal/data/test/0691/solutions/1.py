@@ -12,11 +12,10 @@ if(n == 1):
 if (n == 2):
     print(x, 0)
     quit()
-for i in range(n-3):
-    print(i+1, end = " ")
-    ans = (ans ^ (i+1))
+for i in range(n - 3):
+    print(i + 1, end=" ")
+    ans = (ans ^ (i + 1))
 if (ans == x):
-    print(b, a, a+b)
+    print(b, a, a + b)
 else:
-    print(0, a, a^ans^x)
-
+    print(0, a, a ^ ans ^ x)

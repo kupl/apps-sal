@@ -17,10 +17,10 @@ if one_abon_price < ord_price:  # abonement is better
     abons = all_drives // abon_drives
     ords = all_drives % abon_drives
 
-    if abon_price < ords*ord_price:
+    if abon_price < ords * ord_price:
         abons += 1
         ords = 0
 
-    print(abons*abon_price + ords*ord_price)
+    print(abons * abon_price + ords * ord_price)
 else:
-    print(all_drives*ord_price)
+    print(all_drives * ord_price)

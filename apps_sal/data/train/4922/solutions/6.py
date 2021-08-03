@@ -1,6 +1,6 @@
 def list_to_array(lst):
-    list=[]
+    list = []
     while lst:
         list.append(lst.value)
-        lst=lst.next
+        lst = lst.next
     return list

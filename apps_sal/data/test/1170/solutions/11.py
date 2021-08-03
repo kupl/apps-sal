@@ -24,4 +24,3 @@ for _ in range(t):
         sq += 1
     else:
         print(-1)
-

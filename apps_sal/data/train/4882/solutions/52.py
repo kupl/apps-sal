@@ -7,4 +7,3 @@ def round_to_next5(n):
         return a
     else:
         return b
-

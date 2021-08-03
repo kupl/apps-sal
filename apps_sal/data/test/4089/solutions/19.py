@@ -13,8 +13,7 @@ while n > 26:
     else:
         n = n // 26
 
-num += p[n%26]
+num += p[n % 26]
 
 new_num = num[::-1]
 print(new_num)
-

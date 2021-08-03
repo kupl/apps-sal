@@ -1,4 +1,4 @@
-a, b, c, d = (int (i) for i in input().split())
+a, b, c, d = (int(i) for i in input().split())
 
 if abs(a - c) <= d:
     print("Yes")

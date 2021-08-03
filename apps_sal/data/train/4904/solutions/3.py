@@ -9,5 +9,6 @@ def iter_unpack(x):
     else:
         yield x
 
+
 def unpack(x):
     return list(iter_unpack(x))

@@ -17,4 +17,5 @@ def abc062_c():
             ans = min(diff, ans)
     print(ans)
 
+
 abc062_c()

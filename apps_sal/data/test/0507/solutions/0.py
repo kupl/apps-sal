@@ -1,13 +1,13 @@
 n = int(input())
-a = list(map(int,input().split()))
-b = list(map(int,input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 cnt = 0
 for i in range(n):
     if a[i] != b[i]:
-        cnt += 1 
-        
+        cnt += 1
+
 if cnt == 1:
-    done = list(range(1,n+1))
+    done = list(range(1, n + 1))
     x = 0
     for i in range(n):
         if a[i] == b[i]:
@@ -28,8 +28,8 @@ if cnt == 1:
     arr = a[::]
     arr[x] = done[0]
     for i in arr:
-        print(i,end = ' ')
-        
+        print(i, end=' ')
+
 else:
     arr = a[::]
     x = -1
@@ -48,5 +48,4 @@ else:
     if len(set(br)) == n:
         arr = br[::]
     for i in arr:
-        print(i,end = ' ')           
-        
+        print(i, end=' ')

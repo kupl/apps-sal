@@ -7,5 +7,4 @@ while (1):
     if s % 4 == 0:
         print(temp)
         break
-    n+=1
-
+    n += 1

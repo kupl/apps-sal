@@ -30,4 +30,3 @@ calc(lst[::-1])
 
 
 print('{:.15f}'.format(ans))
-

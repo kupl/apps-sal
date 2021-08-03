@@ -10,4 +10,3 @@ class Solution:
             values[s1] = values.get(s1, 0) + 1
             values[s2] = values.get(s2, 0) + 1
         return max(values.values())
-

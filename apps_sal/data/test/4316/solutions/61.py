@@ -11,7 +11,7 @@ elif S[0] == S[2]:
 elif S[0] == S[3]:
     if S[1] == S[2] and S[0] != S[1]:
         c = 0
-        
+
 
 if c:
     print('No')

@@ -1,6 +1,7 @@
 def mp():
     return map(int, input().split())
 
+
 n, m, r = mp()
 s = list(mp())
 b = list(mp())

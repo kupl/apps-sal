@@ -1,5 +1,5 @@
-S, W = map(int,input().split())
+S, W = map(int, input().split())
 if S > W:
-  print('safe')
+    print('safe')
 else:
-  print('unsafe')
+    print('unsafe')

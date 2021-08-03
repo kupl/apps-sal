@@ -1,6 +1,7 @@
 import sys
 sys.setrecursionlimit(10**6)
 
+
 def dfs(x, al):
     nonlocal cntx, cnty
     if (al, x) in used:
@@ -14,6 +15,7 @@ def dfs(x, al):
         dfs(xy, 1 - al)
     return
 
+
 n = int(input())
 to = [{}, {}]
 for _ in range(n):
@@ -25,10 +27,10 @@ for _ in range(n):
 used = set()
 ans = 0
 for x in list(to[0].keys()):
-    if (0, x) in used: continue
+    if (0, x) in used:
+        continue
     cntx = 0
     cnty = 0
     dfs(x, 0)
     ans += cntx * cnty
 print((ans - n))
-

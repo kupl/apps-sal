@@ -9,11 +9,10 @@ class Solution:
         # i-j+k == n
         n = len(cardPoints)
         for i, point in enumerate(cardPoints):
-            if i-j+k > n-1:
+            if i - j + k > n - 1:
                 cur -= cardPoints[j]
                 j += 1
             cur += point
-            if i-j+k == n-1:
-                maxPoint = max(maxPoint, s-cur)
+            if i - j + k == n - 1:
+                maxPoint = max(maxPoint, s - cur)
         return maxPoint
-

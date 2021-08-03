@@ -48,8 +48,7 @@ if n != 0:
 
     for bcnt in list(myDict.values()):
         black_cnt[bcnt] += 1
-        black_cnt[0]    -= 1
+        black_cnt[0] -= 1
 
 for item in black_cnt:
     print(item)
-

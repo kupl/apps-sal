@@ -11,7 +11,7 @@ class Solution:
             for mouse in range(n):
                 degree[mouse, cat, 1] = len(graph[mouse])
                 degree[mouse, cat, 2] = len(graph[cat]) - cat_neighbour_has_zero
-                
+
         queue = deque()
         for cat in range(n):
             for turn in [MOUSE_TURN, CAT_TURN]:
@@ -20,7 +20,7 @@ class Solution:
                 if cat > 0:
                     outcome[cat, cat, turn] = CAT_WIN
                     queue.append((cat, cat, turn, CAT_WIN))
-                    
+
         def previous(mouse, cat, turn):
             if turn == MOUSE_TURN:
                 for prev_cat in graph[cat]:
@@ -29,7 +29,7 @@ class Solution:
             else:
                 for prev_mouse in graph[mouse]:
                     yield prev_mouse, cat, 3 - turn
-         
+
         target = (1, 2, 1)
         while queue:
             mouse, cat, turn, final_outcome = queue.popleft()
@@ -48,18 +48,16 @@ class Solution:
                             outcome[prev_mouse, prev_cat, prev_turn] = 3 - prev_turn
                             queue.append((prev_mouse, prev_cat, prev_turn, 3 - prev_turn))
         return outcome[1, 2, 1]
-        
-        
-        
-        
-#         # For n nodes, the possible longest path in the graph is n. If the cat can win, 
-#         # its distance to the mouse should decrease, after decease n times if still doesn't 
+
+
+#         # For n nodes, the possible longest path in the graph is n. If the cat can win,
+#         # its distance to the mouse should decrease, after decease n times if still doesn't
 #         # catch the mouse, and mouse haven't reach node 0 yet, means this is a draw
-        
-#         # it takes at most n for mouse to get to 0. At 2*n time, it means mouse take a 
-#         # detour of at least n steps. It means that there should be at least a loop(size n) 
+
+#         # it takes at most n for mouse to get to 0. At 2*n time, it means mouse take a
+#         # detour of at least n steps. It means that there should be at least a loop(size n)
 #         # or multiple loops of (size < n).
-        
+
 #         n = len(graph)
 #         @lru_cache(None)
 #         def move(cat, mouse, t):
@@ -90,10 +88,8 @@ class Solution:
 #                         best_result = 0
 #             return best_result
 #         return move(2, 1, 0)
-        
-        
-        
-        
+
+
 #         n = len(graph)
 #         cache = [[[-1] * (2 * n) for _ in range(n)] for _ in range(n)]
 #         def move(cat, mouse, t):
@@ -128,4 +124,3 @@ class Solution:
 #                 cache[cat][mouse][t] = best_result
 #             return cache[cat][mouse][t]
 #         return move(2, 1, 0)
-

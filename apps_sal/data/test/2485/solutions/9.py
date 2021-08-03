@@ -21,4 +21,3 @@ for y, x in yx:
     if ch[y] == ay and cw[x] == ax:
         can -= 1
 print((ay + ax - (can == 0)))
-

@@ -11,7 +11,7 @@ class Solution:
 
         max_p = 0
         parr = list()
-        for d,p in dp_items:
+        for d, p in dp_items:
             if p > max_p:
                 max_p = dp_dict[d]
             parr.append(max_p)
@@ -20,14 +20,18 @@ class Solution:
 
         def get_nearest(w, arr):
             l = len(arr)
-            if w < arr[0]: return None
-            if w > arr[-1]: return l-1
+            if w < arr[0]:
+                return None
+            if w > arr[-1]:
+                return l - 1
 
             def binary_search(w, i, j):
                 if i >= l or j >= l or w < arr[i] or w > arr[j]:
                     return None
-                if w == arr[i]: return i
-                if w == arr[j]: return j
+                if w == arr[i]:
+                    return i
+                if w == arr[j]:
+                    return j
                 k = (i + j) // 2
                 if arr[k] <= w < arr[k + 1]:
                     return k
@@ -41,4 +45,3 @@ class Solution:
             if floor_idx is not None:
                 ret += parr[floor_idx]
         return ret
-

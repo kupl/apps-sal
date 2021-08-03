@@ -9,6 +9,6 @@ for i in range(n):
     a = w[-1]
     l.append(w)
 x = 'No'
-if ans == n-1 and len(set(l)) == n:
+if ans == n - 1 and len(set(l)) == n:
     x = 'Yes'
 print(x)

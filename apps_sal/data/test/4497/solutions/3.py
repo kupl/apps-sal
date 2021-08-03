@@ -5,4 +5,3 @@ while True:
         break
     res *= 2
 print((res // 2))
-

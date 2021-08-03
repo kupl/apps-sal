@@ -17,5 +17,3 @@ for i in range(m):
         if arr[i] == 1:
             ans += W[i]
 print(ans)
-            
-

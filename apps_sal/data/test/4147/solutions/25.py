@@ -10,14 +10,13 @@ for subset in product(list(range(4)), repeat=n):
     for i, s in enumerate(subset):
         if not s:
             continue
-        ABC[s-1].append(L[i])
+        ABC[s - 1].append(L[i])
     if any(not X for X in ABC):
         continue
     for x, X in zip((a, b, c), ABC):
-        cost += (len(X)-1)*10
-        cost += abs(x-sum(X))
+        cost += (len(X) - 1) * 10
+        cost += abs(x - sum(X))
     if cost < ans:
         ans = cost
 
 print(ans)
-

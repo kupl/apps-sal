@@ -6,4 +6,3 @@ for i in range(n):
     if v[i] > c[i]:
         res += v[i] - c[i]
 print(res)
-

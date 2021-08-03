@@ -3,4 +3,3 @@ if l != r:
     print(2)
 else:
     print(r)
-

@@ -1,4 +1,6 @@
-f = lambda t: t | k if s == '|' else t & k if s == '&' else t ^ k
+def f(t): return t | k if s == '|' else t & k if s == '&' else t ^ k
+
+
 a, b = 1023, 0
 for i in range(int(input())):
     s, k = input().split()

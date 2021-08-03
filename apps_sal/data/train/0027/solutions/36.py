@@ -21,5 +21,5 @@ for i in range(n):
                 answer += 1
             else:
                 break
-    
+
     print(answer)

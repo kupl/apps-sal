@@ -13,7 +13,7 @@ class Solution:
                     break
             # greater than
             if arr[index_one] > arr[index_two]:
-                wins += 1 
+                wins += 1
                 if wins == k:
                     return arr[index_one]
                 index_two += 1
@@ -23,6 +23,4 @@ class Solution:
             index_two = index_one - 1
             wins = 0
 
-        return max(arr)  
-
-
+        return max(arr)

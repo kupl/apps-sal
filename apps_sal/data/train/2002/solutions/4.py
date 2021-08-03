@@ -12,22 +12,20 @@ ans = 0
 for k, l in list(sett.items()):
     tmp = 0
     for j in range(n - 1):
-        
+
         seen, sett1 = set(), set()
-        
+
         for i in range(len(l)):
-            
+
             if l[i][j] in sett1:
                 sett1.remove(l[i][j])
-            elif l[i][j] not in seen: 
+            elif l[i][j] not in seen:
                 sett1.add(l[i][j])
                 seen.add(l[i][j])
-                
+
         tmp = max(tmp, len(sett1))
     tmp /= n
     ans += tmp
 
 # precisao 10^6
 print('{:.7}'.format(ans))
-
-

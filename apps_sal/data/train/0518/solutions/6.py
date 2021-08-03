@@ -1,7 +1,6 @@
 # cook your dish here
 import sys
-T=int(input())
+T = int(input())
 for t in range(T):
-    N=int(input())
-    print(int(N/2)+1)
-
+    N = int(input())
+    print(int(N / 2) + 1)

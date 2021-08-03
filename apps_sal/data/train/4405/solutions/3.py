@@ -1,3 +1,3 @@
 def is_palindrome(string):
-    string=str(string)
-    return string==string[::-1]
+    string = str(string)
+    return string == string[::-1]

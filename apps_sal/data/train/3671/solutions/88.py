@@ -4,4 +4,5 @@ def problem(a):
     else:
         return 'Error'
 
+
 print(problem(1.2))

@@ -1,6 +1,7 @@
 from collections import *
-import sys 
+import sys
 sys.setrecursionlimit(10 ** 9)
+
 
 def solve():
     def dfs(u, f):
@@ -13,15 +14,15 @@ def solve():
 
     n, m = list(map(int, input().split()))
     edges = []
-    for  _ in range(m):
+    for _ in range(m):
         edges.append(list(map(int, input().split())))
-    edges.sort(key = lambda item: item[2])
-    G = defaultdict(list)#记录每个点可能在哪个分组里面
-    G1 = defaultdict(list) #记录每个分组里面的点
+    edges.sort(key=lambda item: item[2])
+    G = defaultdict(list)  # 记录每个点可能在哪个分组里面
+    G1 = defaultdict(list)  # 记录每个分组里面的点
     en = 0
     cnt = 0
     while en < len(edges):
-        st = en 
+        st = en
         g = defaultdict(list)
         used = set()
         while en < len(edges) and edges[en][2] == edges[st][2]:
@@ -34,7 +35,7 @@ def solve():
                 used.add(k)
                 dfs(k, cnt)
                 cnt += 1
-    
+
     usedG = set()
     usedP = set()
     deq = deque()
@@ -47,7 +48,7 @@ def solve():
             f = deq.popleft()
             if f == n:
                 print(step)
-                return 
+                return
             for g in G[f]:
                 if g not in usedG:
                     usedG.add(g)
@@ -56,9 +57,8 @@ def solve():
                             usedP.add(p)
                             deq.append(p)
         step += 1
-    
+
     print((-1))
 
+
 solve()
-
-

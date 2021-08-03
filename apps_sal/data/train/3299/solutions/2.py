@@ -1,5 +1,6 @@
 from collections import deque, defaultdict
 
+
 def calc(cards):
     memo = defaultdict(int)
     ans = 0

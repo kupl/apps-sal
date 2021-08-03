@@ -1,13 +1,15 @@
 import math
 import collections
 
+
 def func(a, k):
     if a % k != 0:
         mod = 1
     else:
         mod = 0
     return math.floor(a / k) * k + mod * k
- 
+
+
 n, m, k = input().split()
 list = input().split()
 k = int(k)
@@ -49,6 +51,6 @@ for i in range(len(list)):
                 c += 1
                 check = 'true'
                 used = 1
-    
- 
+
+
 print(answer if check is 'false' else answer + 1)

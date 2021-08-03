@@ -19,4 +19,3 @@ else:
             ((h2 - h1) - day * 20 + night * 12) / ((day - night) * 12)
         )) + 1
     ))
-

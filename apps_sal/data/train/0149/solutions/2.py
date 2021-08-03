@@ -12,6 +12,6 @@ class Solution:
                 char = s[i]
 
             if count == k:
-                return self.removeDuplicates(s[:i-k+1] + s[i+1:], k)
-            
+                return self.removeDuplicates(s[:i - k + 1] + s[i + 1:], k)
+
         return s

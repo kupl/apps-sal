@@ -36,11 +36,10 @@ for i in range(m):
     Bcount.append(count)
 
 flag = 1
-for i in range(n+m):
+for i in range(n + m):
     if (Acount[i] - Bcount[i]) % 2 == 1:
         flag = 0
 if flag == 1:
     print("Yes")
 else:
     print("No")
-

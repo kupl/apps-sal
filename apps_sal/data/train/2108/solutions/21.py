@@ -9,4 +9,3 @@ for killed, next in names:
     sel.remove(killed)
     sel.add(next)
 print(" ".join(sel))
-

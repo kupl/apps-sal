@@ -7,10 +7,10 @@ class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         if not head:
             return []
-        
+
         stack = []
         res = []
-        
+
         idx = 0
         while head:
             while stack and stack[-1][1] < head.val:
@@ -20,5 +20,5 @@ class Solution:
             res.append(0)
             idx += 1
             head = head.next
-        
+
         return res

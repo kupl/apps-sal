@@ -5,28 +5,28 @@ class Solution:
         parent = [x for x in range(N)]
         size = [1 for _ in range(N)]
         used = [False for _ in range(N)]
-        
+
         def ufind(a):
             if a == parent[a]:
                 return a
             parent[a] = ufind(parent[a])
             return parent[a]
-        
+
         def uunion(a, b):
             sa = ufind(a)
             sb = ufind(b)
-            
+
             if sa != sb:
                 parent[sa] = parent[sb]
                 size[sb] += size[sa]
-                
+
         def usize(a):
             return size[ufind(a)]
-        
+
         counts = [0] * (N + 1)
         latest = -1
         print('arr', arr)
-        
+
         for index, x in enumerate(arr):
             left = 0
             if x - 1 >= 0 and used[x - 1]:
@@ -50,5 +50,5 @@ class Solution:
                 uunion(x, x + 1)
             if counts[m] > 0:
                 latest = max(latest, index + 1)
-                
+
         return latest

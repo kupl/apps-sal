@@ -1,4 +1,4 @@
-n, q = list(map(int,input().split()))
+n, q = list(map(int, input().split()))
 par = n // 2 + 1
 par = len(list(bin(par)[2:]))
 for i in range(q):
@@ -31,5 +31,4 @@ for i in range(q):
             num[now] = 1
     for i in range(par):
         num[i] = str(num[i])
-    print(int("".join(num),2))
-
+    print(int("".join(num), 2))

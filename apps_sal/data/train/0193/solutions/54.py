@@ -4,9 +4,8 @@ class Solution:
         counter = collections.Counter(arr)
         cur = 0
         ans = 0
-        for num in sorted(list(counter.values()) ,reverse = True):
+        for num in sorted(list(counter.values()), reverse=True):
             cur += num
             ans += 1
-            if cur >= n//2:
+            if cur >= n // 2:
                 return ans
-

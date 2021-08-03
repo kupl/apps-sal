@@ -8,8 +8,9 @@ visited = [False for _ in range(n)]
 ans = 0
 for _ in range(m):
     k, v = list(map(int, input().split(' ')))
-    roads[k-1].append(v-1)
-    roads[v-1].append(k-1)
+    roads[k - 1].append(v - 1)
+    roads[v - 1].append(k - 1)
+
 
 def search(i):
     if visited[i]:
@@ -22,6 +23,7 @@ def search(i):
             return True
     return False
 
+
 for i in range(n):
     if visited[i]:
         continue
@@ -29,4 +31,3 @@ for i in range(n):
         ans += 1
 
 print(ans)
-

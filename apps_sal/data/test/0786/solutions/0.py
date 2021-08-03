@@ -5,7 +5,8 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-################################################### SOLUTION
+# SOLUTION
+
 
 def main():
     n, = read()
@@ -26,18 +27,21 @@ def main():
         return
     print(mx)
 
-#################################################### HELPERS
+# HELPERS
+
 
 def read(callback=int):
     return list(map(callback, input().strip().split()))
 
+
 def write(value, end="\n"):
-    if value is None: return
+    if value is None:
+        return
     try:
         value = " ".join(map(str, value))
     except:
         pass
     print(value, end=end)
 
-write(main())
 
+write(main())

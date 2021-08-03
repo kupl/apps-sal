@@ -15,4 +15,3 @@ d_i, d_j = max_i - min_i, max_j - min_j
 side = max(d_i + 1, d_j + 1)
 
 print(1) if count_B == 0 else print(side ** 2 - count_B) if side <= min(n, m) else print(-1)
-

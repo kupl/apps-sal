@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, radians
 from itertools import accumulate, permutations, combinations, product
@@ -14,13 +15,14 @@ def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
 def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float("inf")
 mod = 10 ** 9 + 7
 
 X, Y = MAP()
-if abs(X-Y) <= 1:
-	print("Brown")
+if abs(X - Y) <= 1:
+    print("Brown")
 else:
-	print("Alice")
-
+    print("Alice")

@@ -11,7 +11,7 @@ class Solution:
             else:
                 arr[i] -= i
         return arr
-        
+
     def maxAbsValExpr(self, arr1: List[int], arr2: List[int]) -> int:
         if not len(arr1):
             return 0

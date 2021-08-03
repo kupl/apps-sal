@@ -4,8 +4,9 @@ def seq(s):
         if i != 'X':
             ans += i
     while ans[0] != 'A':
-        ans = ans[1:] + ans[0]    
+        ans = ans[1:] + ans[0]
     return ans
+
 
 first = input() + input()[::-1]
 second = input() + input()[::-1]

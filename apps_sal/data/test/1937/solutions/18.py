@@ -1,5 +1,5 @@
 n = int(input())
-b = list(map(int,input().split()))
+b = list(map(int, input().split()))
 a1 = []
 a2 = []
 cur = 0
@@ -11,4 +11,3 @@ for i in range(len(b)):
     a2 += [b[i] - cur]
     last = b[i] - cur
 print(*(a1 + a2[::-1]))
-

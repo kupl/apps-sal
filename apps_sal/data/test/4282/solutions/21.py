@@ -1,4 +1,4 @@
-def read(type = 1):
+def read(type=1):
     if type:
         file = open("input.dat", "r")
         n = int(file.readline())
@@ -20,9 +20,9 @@ def solve():
     while len(sol) < n - 1:
         last = sol[-1] - 1
         used[last] = 1
-        if a[last][0] in a[a[last][1]-1]:
+        if a[last][0] in a[a[last][1] - 1]:
             sol.append(a[last][1])
-            used[a[last][1]-1] = 1
+            used[a[last][1] - 1] = 1
             sol.append(a[last][0])
         else:
             sol.append(a[last][0])
@@ -32,7 +32,7 @@ def solve():
     if len(sol) != n:
         for i in range(n):
             if used[i] == 0:
-                sol.append(i+1)
+                sol.append(i + 1)
     return sol
 
 

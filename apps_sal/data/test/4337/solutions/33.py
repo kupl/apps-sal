@@ -8,4 +8,6 @@ def __starting_point():
     n = int(input())
     pack = list(map(str, input().split()))
     print(decision(pack))
+
+
 __starting_point()

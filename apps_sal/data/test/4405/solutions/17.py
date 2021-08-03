@@ -6,11 +6,11 @@ def calc(am, con):
                 ans += am
             return ans
         if i == 0:
-            am //=2
+            am //= 2
             continue
         if con[i] >= am:
             ans += am
-            am //=2
+            am //= 2
         else:
             return ans
     return ans
@@ -31,4 +31,6 @@ def main():
     for i in range(1, l[0] + 1):
         ans[i] = calc(i, l)
     print(max(ans))
+
+
 main()

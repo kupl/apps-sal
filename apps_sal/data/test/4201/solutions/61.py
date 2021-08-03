@@ -1,4 +1,4 @@
-h,w,K =  map(int,input().split())
+h, w, K = map(int, input().split())
 masu = [input() for _ in range(h)]
 ans = 0
 for i in range(2**h):

@@ -5,7 +5,6 @@ class StreamChecker:
         self.dic = collections.defaultdict(set)
         for w in words:
             self.dic[w[-1]].add(w)
-                
 
     def query(self, letter: str) -> bool:
         self.s += letter

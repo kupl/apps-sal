@@ -7,7 +7,9 @@ for _ in range(l + m - 1):
     a += d
     t.append(t[-1] + v)
 
+
 def langtons_ant(n):
-    if n < l: return t[n]
+    if n < l:
+        return t[n]
     q, r = divmod(n - l, m)
     return 12 * q + t[l + r]

@@ -5,8 +5,8 @@ N, M = map(int, input().split())
 edge = [[] for i in range(N)]
 for i in range(M):
     x, y, _ = map(int, input().split())
-    edge[x-1].append(y-1)
-    edge[y-1].append(x-1)
+    edge[x - 1].append(y - 1)
+    edge[y - 1].append(x - 1)
 
 visited = [False] * N
 

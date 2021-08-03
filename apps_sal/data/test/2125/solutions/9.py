@@ -1,7 +1,7 @@
-a, b = list(map(int,input().split()))
+a, b = list(map(int, input().split()))
 c = [[0] * (b) for i in range(a)]
 d = [input() for i in range(a)]
-for j in range (b):
+for j in range(b):
     n = []
     pred = d[0][j]
     cnt = 1
@@ -15,7 +15,7 @@ for j in range (b):
     n.append((cnt, pred))
     uk = 0
     for i in range(2, len(n)):
-        if n[i - 2][0]>= n[i - 1][0] and n[i - 1][0] <= n[i][0]:
+        if n[i - 2][0] >= n[i - 1][0] and n[i - 1][0] <= n[i][0]:
             c[uk + n[i - 2][0] - n[i - 1][0]][j] = [n[i - 2][1], n[i - 1][1], n[i][1], n[i - 1][0]]
         uk += n[i - 2][0]
 summ = 0
@@ -43,4 +43,3 @@ for i in range(a):
             cnt = 0
     summ += cnt * (cnt + 1) // 2
 print(summ)
-

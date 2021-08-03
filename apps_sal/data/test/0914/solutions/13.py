@@ -8,7 +8,7 @@ def check(mid):
         ans.append((c, tmp))
         res += tmp
     return res <= n, ans
-        
+
 
 a = input()
 n = int(input())
@@ -18,7 +18,8 @@ for i in a:
     if i not in d:
         d[i] = 1
         t += 1
-    else: d[i] += 1
+    else:
+        d[i] += 1
 ans = []
 res = ""
 for i in d:
@@ -26,12 +27,12 @@ for i in d:
     res = i
 if n >= len(a):
     print(1)
-    print(a, end = '')
+    print(a, end='')
     n -= len(a)
     for u in range(n):
-        print(res, end ='')
+        print(res, end='')
 else:
-    d = (sorted(d.items(), key = lambda d:(d[1], d[0])))
+    d = (sorted(d.items(), key=lambda d: (d[1], d[0])))
     l = 1
     r = len(a)
     res = []
@@ -53,13 +54,8 @@ else:
         print(count_res)
         for c, sl in res:
             for j in range(sl):
-                print(c, end = '')
+                print(c, end='')
                 ttt += 1
         n -= ttt
         for i in range(n):
-            print(a[0], end = '')
-
- 
-    
-
-
+            print(a[0], end='')

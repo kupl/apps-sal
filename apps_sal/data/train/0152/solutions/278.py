@@ -10,24 +10,24 @@ class Solution:
                     # put it here
                     pos = position[i]
                     count += 1
-                    
+
                     if count == k:
                         return True
-                    
+
             return False
-        
+
         n = len(position)
         position.sort()
         res = 0
-        
-        l, r = 0, position[n-1] - position[0] + 1
+
+        l, r = 0, position[n - 1] - position[0] + 1
         while l < r:
-            mid = (l+r) >> 1
+            mid = (l + r) >> 1
             if isValid(mid, m):
                 res = max(res, mid)
                 l = mid + 1
-                
+
             else:
                 r = mid
-                
+
         return res

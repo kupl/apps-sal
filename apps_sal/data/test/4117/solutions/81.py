@@ -12,4 +12,3 @@ for i in range(N - 2):
             if ma < sum(temp - {ma}):
                 count += 1
 print(count)
-

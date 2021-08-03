@@ -4,5 +4,5 @@ def round_to_next5(n):
         return n
     if n == 0:
         return 0
-    
-    return ((n//5)+ 1) * 5
+
+    return ((n // 5) + 1) * 5

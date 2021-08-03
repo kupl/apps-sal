@@ -1,2 +1,2 @@
 def area_largest_square(r):
-   return r*r*2
+    return r * r * 2

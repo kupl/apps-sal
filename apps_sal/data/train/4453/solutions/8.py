@@ -9,4 +9,3 @@ def shortest_steps_to_num(num):
             num -= 1
         steps += 1
     return steps
-

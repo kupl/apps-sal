@@ -10,18 +10,17 @@ class Solution:
             Any subset of the right part gives a valid subsequence 
             in the original array. And There are 2^(j - i) ones.
         '''
-        n=len(nums)
+        n = len(nums)
         nums.sort()
-        p=[1]*(n+1)
-        for i in range(1,n+1):
-            p[i]=(p[i-1]<<1)%(10**9+7)
-        res=0
-        j=n-1
-        for i in range(j+1):
-            while i<=j and nums[i]+nums[j]>target:
-                j-=1
-            if i>j:
+        p = [1] * (n + 1)
+        for i in range(1, n + 1):
+            p[i] = (p[i - 1] << 1) % (10**9 + 7)
+        res = 0
+        j = n - 1
+        for i in range(j + 1):
+            while i <= j and nums[i] + nums[j] > target:
+                j -= 1
+            if i > j:
                 continue
-            res=(res+p[j-i])%(10**9+7)
+            res = (res + p[j - i]) % (10**9 + 7)
         return res
-

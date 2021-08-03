@@ -9,13 +9,12 @@ if s[0] != '1':
     block.insert(0, 0)
 
 m = len(block)
-left, right = 0, 2*k
-res = val = sum(block[left:right-1])
+left, right = 0, 2 * k
+res = val = sum(block[left:right - 1])
 while right <= m:
-    val += block[right-1] if right == m else block[right-1] + block[right]
+    val += block[right - 1] if right == m else block[right - 1] + block[right]
     res = max(res, val)
-    val -= block[left] + block[left+1]
+    val -= block[left] + block[left + 1]
     left += 2
     right += 2
 print(res)
-

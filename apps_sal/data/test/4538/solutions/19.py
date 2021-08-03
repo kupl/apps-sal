@@ -11,5 +11,5 @@ for i in range(N):
 for i in range(N):
     if (X_list[i] ** 2) + (Y_list[i] ** 2) <= D ** 2:
         count += 1
-        
+
 print(count)

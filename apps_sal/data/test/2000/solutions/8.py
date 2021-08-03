@@ -28,28 +28,26 @@ d = {}
 
 for i in input().split():
     if int(i) in d:
-        d[int(i)]+=1
+        d[int(i)] += 1
     else:
         d[int(i)] = 1
-        
-#print(d)
+
+# print(d)
 L = []
 
-for i in range(1,33):
+for i in range(1, 33):
     L.append(2**i)
-    
+
 ans = 0
 
 for i in d:
     for j in L:
-        if j-i in d:
-            if j-i!= i:
-                #print(d[j-i],d[i])
-                ans+=d[j-i]*d[i]
+        if j - i in d:
+            if j - i != i:
+                # print(d[j-i],d[i])
+                ans += d[j - i] * d[i]
             else:
-                #print(d[i]-1,d[i])
-                ans+=(d[i]-1)*(d[i])
-#print(ans)
-print(ans//2)
-
-
+                # print(d[i]-1,d[i])
+                ans += (d[i] - 1) * (d[i])
+# print(ans)
+print(ans // 2)

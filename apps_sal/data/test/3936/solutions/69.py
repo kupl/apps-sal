@@ -29,7 +29,7 @@ while s_index < N:
             result = (result * 2) % MOD
             s_index += 2
             prev_verticalp = False
-    
+
     else:
         if s1[s_index] == s2[s_index]:
             s_index += 1
@@ -40,5 +40,3 @@ while s_index < N:
             prev_verticalp = False
 
 print(result)
-
-

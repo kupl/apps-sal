@@ -10,5 +10,4 @@ for i in range(len(s)):
         else:
             L += 1
 
-print(('('*L + s + ')'*R))
-
+print(('(' * L + s + ')' * R))

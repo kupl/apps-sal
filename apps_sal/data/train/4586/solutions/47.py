@@ -15,6 +15,7 @@ for i in keyboard_list:
     keyboard_dictionary[i] = [row, col]
     n += 1
 
+
 def tv_remote(word):
     word_list = list(word)
     count = 0

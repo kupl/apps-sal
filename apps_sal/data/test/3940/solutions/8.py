@@ -12,4 +12,3 @@ a = (list(range(0, le)) * ((n + le - 1) // le))[:n]
 res = " ".join(map(str, a))
 print(le)
 print(res)
-

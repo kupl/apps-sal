@@ -9,7 +9,8 @@ else:
     for q in b:
         t.append(q)
         a[q] -= 1
-        if a[q] < 0: break
+        if a[q] < 0:
+            break
     else:
         print(''.join(t))
         return
@@ -18,7 +19,8 @@ else:
         d = t.pop()
         a[d] += 1
         for q, k in a.items():
-            if k > 0 and s < q < d: s = q
+            if k > 0 and s < q < d:
+                s = q
     a[s] -= 1
     t.append(s)
     for q in '9876543210':

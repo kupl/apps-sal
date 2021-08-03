@@ -10,8 +10,7 @@ for i in list(w):
 
 ans = 'Yes'
 for _, v in list(d.items()):
-    if v%2 != 0:
+    if v % 2 != 0:
         ans = 'No'
         break
 print(ans)
-

@@ -2,6 +2,7 @@
 def ri():
     return list(map(int, input().split()))
 
+
 a, b, c = ri()
 
 m = int(input())
@@ -58,4 +59,3 @@ for i in range(c):
         break
 
 print(count, totcost)
-

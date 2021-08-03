@@ -12,5 +12,5 @@ class Solution:
             if target in pos:
                 ans = min(ans, i - pos[target])
             pos[total] = i
-            
+
         return ans if ans < len(nums) else -1

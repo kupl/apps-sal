@@ -16,4 +16,3 @@ for i in range(2, n + 1):
             print("YES")
             return
 print("NO")
-

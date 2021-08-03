@@ -5,7 +5,3 @@ class Solution:
             right = max(right, a)
             result += right == i
         return result
-        
-        
-        
-

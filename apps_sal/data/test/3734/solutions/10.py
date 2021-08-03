@@ -8,4 +8,3 @@ for i in range(11):
         good = True
 
 print('YES' if good else 'NO')
-

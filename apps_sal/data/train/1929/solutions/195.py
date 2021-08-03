@@ -2,6 +2,7 @@ class TreeNode:
     def __init__(self):
         self.children = {}
         self.value = None
+
     def insert(self, string):
         root = self
         for char in string:
@@ -9,6 +10,7 @@ class TreeNode:
                 root.children[char] = TreeNode()
             root = root.children[char]
         root.value = string
+
     def find(self, string):
         root = self
         for char in string:
@@ -17,13 +19,15 @@ class TreeNode:
             else:
                 return None
         return root.value
-                 
+
+
 class StreamChecker:
     def __init__(self, words):
         self.root = TreeNode()
         self.characters = deque()
         for word in words:
             self.root.insert(word[::-1])
+
     def query(self, letter: str) -> bool:
         self.characters.appendleft(letter)
         node = self.root
@@ -34,5 +38,3 @@ class StreamChecker:
                     return True
             else:
                 return False
-
-

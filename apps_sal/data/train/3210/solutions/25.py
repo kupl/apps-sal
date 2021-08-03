@@ -5,6 +5,5 @@ def get_strings(stra):
         if i == ' ':
             continue
         dc[i] = '*' * string.count(i)
-    
-    return ','.join([k + ':' + v for k, v in list(dc.items())])
 
+    return ','.join([k + ':' + v for k, v in list(dc.items())])

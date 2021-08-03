@@ -12,11 +12,11 @@ for i in range(M):
         while lr[i][0] - 1 < j:
             lst.append(lst[-1][:])
             j -= 1
-    lst[-1].append(lr[i][-1]-1)
+    lst[-1].append(lr[i][-1] - 1)
 lst[-1].sort()
 lst.reverse()
 
 for i in range(Q):
     p, q = map(int, input().split())
-    m = bisect_right(lst[p-1], q-1)
+    m = bisect_right(lst[p - 1], q - 1)
     print(m)

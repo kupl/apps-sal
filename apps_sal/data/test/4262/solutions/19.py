@@ -1,7 +1,9 @@
+from itertools import permutations
 import sys
 read = sys.stdin.read
 #readlines = sys.stdin.readlines
-from itertools import permutations
+
+
 def main():
     n = int(input())
     p = "".join(input().split())
@@ -16,7 +18,9 @@ def main():
     ans = abs(p_pos - q_pos)
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

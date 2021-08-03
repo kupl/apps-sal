@@ -14,9 +14,8 @@ class Solution:
             else:
                 result.append(right[p2])
                 p2 += 1
-        
+
         result.extend(left[p1:])
         result.extend(right[p2:])
-        
-        return result
 
+        return result

@@ -5,22 +5,22 @@ def input(): return sys.stdin.readline().rstrip()
 
 def main():
     n, q = map(int, input().split())
-    syozoku = [0]*(n+1)
-    rate = [0]*(n+1)
-    enrate = [0]*(2*10**5+1)
+    syozoku = [0] * (n + 1)
+    rate = [0] * (n + 1)
+    enrate = [0] * (2 * 10**5 + 1)
     saikyourate = HeapDict()
-    for i in range(1, 2*10**5+1):
+    for i in range(1, 2 * 10**5 + 1):
         enrate[i] = HeapDict()
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         a, b = map(int, input().split())
         syozoku[i] = b
         rate[i] = a
         enrate[b].insert(-a)
-    for i in range(1, 2*10**5+1):
+    for i in range(1, 2 * 10**5 + 1):
         if len(enrate[i].h) != 0:
             saikyourate.insert(-(enrate[i].get_min()))
     for _ in range(q):
-        c,d=map(int, input().split()) #移動 syozoku[c]→d
+        c, d = map(int, input().split())  # 移動 syozoku[c]→d
         saikyourate.erase(-(enrate[syozoku[c]].get_min()))
         enrate[syozoku[c]].erase(-rate[c])
         if len(enrate[syozoku[c]].h) != 0:
@@ -29,11 +29,8 @@ def main():
             saikyourate.erase(-(enrate[d].get_min()))
         enrate[d].insert(-rate[c])
         saikyourate.insert(-(enrate[d].get_min()))
-        syozoku[c]=d
+        syozoku[c] = d
         print(saikyourate.get_min())
-
-
-        
 
 
 class HeapDict:  # 実装https://tsubo.hatenablog.jp/entry/2020/06/15/124657
@@ -73,4 +70,6 @@ class HeapDict:  # 実装https://tsubo.hatenablog.jp/entry/2020/06/15/124657
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -12,7 +12,7 @@ for x in range(len(a)):
         break
     elif int(a[x]) % 2 == 0:
         lastnum = x
-        
+
 if not(reach):
     if lastnum == -1:
         print(-1)
@@ -22,4 +22,3 @@ if not(reach):
         b[-1] = a[x]
         b[x] = a[-1]
         print(''.join(b))
-

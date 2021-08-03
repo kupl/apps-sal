@@ -3,6 +3,5 @@ def enough(cap, on, wait):
     still_wait = wait - cap_lef
     if still_wait > 0:
         return still_wait
-    else:    
+    else:
         return 0
-

@@ -16,9 +16,8 @@ for i in range(n):
                 last = '1'
             else:
                 if i < n - 1:
-                    if days[i+1] == '1':
+                    if days[i + 1] == '1':
                         last = '2'
-                    elif days[i+1] == '2':
+                    elif days[i + 1] == '2':
                         last = '1'
 print(counter)
-

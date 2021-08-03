@@ -1,4 +1,4 @@
-n, l ,a = map(int, input().split())
+n, l, a = map(int, input().split())
 T = 0
 k = 0
 for i in range(n):

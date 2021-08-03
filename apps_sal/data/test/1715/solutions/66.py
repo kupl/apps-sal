@@ -2,7 +2,7 @@
 
 import bisect
 
-A,B,Q = map(int, input().split())
+A, B, Q = map(int, input().split())
 *S, = [int(input()) for _ in range(A)]
 *T, = [int(input()) for _ in range(B)]
 *X, = [int(input()) for _ in range(Q)]
@@ -18,7 +18,7 @@ for x in X:
         se = S[-1]
     # 現在地から見て西側で最も近い神社
     try:
-        sw = S[sx-1]
+        sw = S[sx - 1]
     except:
         # 西側に存在しない場合は、神社群の中での最西
         sw = S[0]
@@ -32,7 +32,7 @@ for x in X:
         te = T[-1]
     # 現在地から見て西側で最も近いお寺
     try:
-        tw = T[tx-1]
+        tw = T[tx - 1]
     except:
         # 西側に存在しない場合は、お寺群の中での最西
         tw = T[0]
@@ -49,8 +49,8 @@ for x in X:
     routes = []
     for s in [se, sw]:
         for t in [te, tw]:
-            routes.append(abs(s - x)+abs(t - s))
-            routes.append(abs(t - x)+abs(s - t))
+            routes.append(abs(s - x) + abs(t - s))
+            routes.append(abs(t - x) + abs(s - t))
 
     # 最小距離を選ぶ
     print(min(routes))

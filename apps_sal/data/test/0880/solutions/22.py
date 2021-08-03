@@ -21,4 +21,3 @@ for i in range(1, n + 1):
     k *= (n - i)
     k %= M
 print(ans)
-

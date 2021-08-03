@@ -36,12 +36,12 @@ def __starting_point():
         a, b = mi()
         if a > b:
             cntb += 1
-            listb.append((a,b,i+1))
+            listb.append((a, b, i + 1))
         else:
             cnta += 1
-            lista.append((a,b,i+1))
+            lista.append((a, b, i + 1))
     if cnta >= cntb:
-        lista.sort(key=lambda x: x[0],reverse=True)
+        lista.sort(key=lambda x: x[0], reverse=True)
         print(len(lista))
         for i in lista:
             print(i[2], end=" ")
@@ -52,4 +52,6 @@ def __starting_point():
         for i in listb:
             print(i[2], end=" ")
         print()
+
+
 __starting_point()

@@ -12,5 +12,4 @@ class Solution:
                 count += 1
             res.append([count, var])
         res.sort()
-        return res[k-1][1]
-
+        return res[k - 1][1]

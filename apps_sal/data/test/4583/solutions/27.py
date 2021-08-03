@@ -1,4 +1,4 @@
-a, b ,c, d = input()
+a, b, c, d = input()
 S = '+-'
 for i in S:
     for j in S:

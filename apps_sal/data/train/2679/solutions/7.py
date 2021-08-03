@@ -1,5 +1,6 @@
 from string import ascii_lowercase
 
+
 def hamster_me(code, message):
     table, code_letters = {}, set(code)
     current_index, current_letter = 0, ''

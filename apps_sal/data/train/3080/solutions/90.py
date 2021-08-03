@@ -3,7 +3,7 @@ def who_is_paying(name):
         list = []
         for char in name:
             list.append(char)
-            
+
         a = ''
         a += list[0]
         a += list[1]
@@ -15,4 +15,3 @@ def who_is_paying(name):
         list = []
         list.append(name)
         return list
-

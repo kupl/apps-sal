@@ -5,10 +5,10 @@ class Solution:
         l, r = 0, len(nums) - 1
         while l <= r:
             if nums[l] + nums[r] <= target:
-                subsequences += 1<<(r-l)
+                subsequences += 1 << (r - l)
                 l += 1
             else:
-                subsequences += 1 if 2*nums[r] <= target else 0
+                subsequences += 1 if 2 * nums[r] <= target else 0
                 r -= 1
             subsequences %= 1000000007
         return subsequences

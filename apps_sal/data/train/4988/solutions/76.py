@@ -1,1 +1,1 @@
-square = lambda n: pow(n, 2)
+def square(n): return pow(n, 2)

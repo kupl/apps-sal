@@ -12,4 +12,3 @@ if k % 2 == 0:
     c += counts[k // 2] // 2
 
 print(2 * c)
-

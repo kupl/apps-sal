@@ -16,6 +16,5 @@ for i in range(len(s)):
     while len(resultRest) > 0 and resultRest[-1] <= s[mini[i]]:
         resultBase += resultRest[-1]
         resultRest = resultRest[:-1]
-    
-print(resultBase + resultRest[::-1])
 
+print(resultBase + resultRest[::-1])

@@ -8,4 +8,3 @@ elif spinner[(spinner.index(s) + n) % 4] == f:
     print('cw')
 else:
     print('ccw')
-

@@ -1,18 +1,18 @@
 from sys import *
 
-t=int(stdin.readline())
+t = int(stdin.readline())
 for i in range(t):
-    n,k,d1,d2=(int(z) for z in stdin.readline().split())
-    vars=((2*d1+d2,2*d2+d1),(2*max(d1,d2)-min(d1,d2),d1+d2))
-    y=False
+    n, k, d1, d2 = (int(z) for z in stdin.readline().split())
+    vars = ((2 * d1 + d2, 2 * d2 + d1), (2 * max(d1, d2) - min(d1, d2), d1 + d2))
+    y = False
     for i in vars:
-        if i[0]<=k and i[0]%3==k%3 and n-k-i[1]>=0 and (n-i[1]-k)%3==0:
+        if i[0] <= k and i[0] % 3 == k % 3 and n - k - i[1] >= 0 and (n - i[1] - k) % 3 == 0:
             print("yes")
-            y=True
+            y = True
             break
-        if i[1]<=k and i[1]%3==k%3 and n-k-i[0]>=0 and (n-i[0]-k)%3==0:
+        if i[1] <= k and i[1] % 3 == k % 3 and n - k - i[0] >= 0 and (n - i[0] - k) % 3 == 0:
             print("yes")
-            y=True
-            break        
+            y = True
+            break
     if not y:
         print("no")

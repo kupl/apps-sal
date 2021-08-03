@@ -17,5 +17,3 @@ for i in range(1, n + 1):
 
 for i in range(1, m + 1):
     print(('{:06}{:06}'.format(id_perf_map[i], id_num_map[i])))
-
-

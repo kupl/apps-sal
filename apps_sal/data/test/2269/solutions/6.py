@@ -27,4 +27,3 @@ for case_num in range(t):
         cnt[s[l]] -= 1
         l += 1
     print(ans if ans <= len(s) else 0)
-

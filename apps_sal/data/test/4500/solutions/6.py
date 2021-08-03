@@ -40,7 +40,7 @@ class TestClass(unittest.TestCase):
 def resolve():
     A, B, C = list(map(int, input().split()))
 
-    if A+B >= C:
+    if A + B >= C:
         print("Yes")
     else:
         print("No")
@@ -49,5 +49,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

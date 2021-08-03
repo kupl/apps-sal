@@ -10,4 +10,3 @@ for l in L:
     cnt += 1
 
 print(cnt)
-

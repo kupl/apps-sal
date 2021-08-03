@@ -9,7 +9,7 @@ def main():
         if arr[i] == '?':
             if left:
                 arr[i] = '('
-                left -=  1
+                left -= 1
             else:
                 arr[i] = ')'
     if arr[0] == ')' or arr[-1] == '(':
@@ -30,4 +30,6 @@ def main():
         return 0
     print("".join(arr))
     return 0
+
+
 main()

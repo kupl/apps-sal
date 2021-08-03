@@ -10,4 +10,3 @@ for i in a_:
         break
 else:
     print('APPROVED')
-

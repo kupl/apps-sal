@@ -2,12 +2,12 @@ class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         if len(barcodes) < 2:
             return barcodes
-        
+
         sorted_codes = sorted(barcodes)
-        halfway = len(barcodes)//2
-        ans =  [0] * (halfway * 2)
+        halfway = len(barcodes) // 2
+        ans = [0] * (halfway * 2)
         ans[::2], ans[1::2] = sorted_codes[-halfway:], sorted_codes[:halfway]
-            
+
         if len(barcodes) % 2 == 1:
             prev = None
             mid = sorted_codes[halfway]
@@ -19,4 +19,3 @@ class Solution:
                     break
                 prev = ans[i]
         return ans
-

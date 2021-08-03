@@ -22,7 +22,7 @@ for j in range(m):
         if a[i][j] >= a[i + 1][j] and a[i + 1][j] != 0:
             k = 1
 
-for i in range( n - 1, 0, -1):
+for i in range(n - 1, 0, -1):
     for j in range(m - 1, 0, -1):
         if a[i][j] == 0:
             a[i][j] = min(a[i + 1][j] - 1, a[i][j + 1] - 1)
@@ -35,7 +35,7 @@ for j in range(m):
     for i in range(n - 1):
         if a[i][j] >= a[i + 1][j] and a[i + 1][j] != 0:
             k = 1
-            
+
 ans = 0
 for i in range(n):
     ans += sum(a[i])
@@ -43,6 +43,3 @@ if k == 1:
     print(-1)
 else:
     print(ans)
-            
-            
-

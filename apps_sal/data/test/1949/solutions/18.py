@@ -8,8 +8,8 @@ def __starting_point():
             print(0)
         else:
             rem = arr[-1]
-            print(arr[-1]-count)
-            count += (arr[-1]-count)
+            print(arr[-1] - count)
+            count += (arr[-1] - count)
             check = arr[-1]
 
             while n > 0 and check == arr[-1]:
@@ -17,5 +17,6 @@ def __starting_point():
                 n -= 1
             '''if n > 0:
                 arr[-1] -= check'''
+
 
 __starting_point()

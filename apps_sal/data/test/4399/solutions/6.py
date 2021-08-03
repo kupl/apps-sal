@@ -1,6 +1,5 @@
 S = input()
 if S == "AAA" or S == "BBB":
-  print("No")
+    print("No")
 else:
-  print("Yes")
-
+    print("Yes")

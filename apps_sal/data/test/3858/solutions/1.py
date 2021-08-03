@@ -23,4 +23,3 @@ for i in range(n):
         v = len(inline)
         ret = (ret + mod - pow2[v] + 1 + v + v * (v - 1) // 2) % mod
 print((int(ret)))
-

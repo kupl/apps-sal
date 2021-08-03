@@ -8,11 +8,11 @@ def main():
     N, K = map(int, input().split())
     V = list(map(int, input().split()))
     res = 0
-    for pull in range(K+1):
+    for pull in range(K + 1):
         push = K - pull
         if push < 0 or push > N:
             continue
-        for left_push in range(push+1):
+        for left_push in range(push + 1):
             tmp_que = deque(V)
             tmp_heap = []
             heapq.heapify(tmp_heap)
@@ -26,9 +26,8 @@ def main():
             for i in range(min(push, pull)):
                 x = heapq.heappop(tmp_heap)
                 if x >= 0:
-                    heapq.heappush(tmp_heap,x)
+                    heapq.heappush(tmp_heap, x)
                     break
-
 
             res = max(res, sum(tmp_heap))
     print(res)
@@ -37,4 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

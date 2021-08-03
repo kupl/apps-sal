@@ -24,4 +24,3 @@ ans = 0
 for v in list(primes.values()):
     ans += bisect_right(num, v)
 print(ans)
-

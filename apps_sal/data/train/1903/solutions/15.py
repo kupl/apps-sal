@@ -1,11 +1,11 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         costMap = [0] * len(points)
-        
+
         minHeap = []
         heappush(minHeap, (0, points[0], 0))
         visited = set()
-        
+
         while minHeap:
             cost, [currentX, currentY], currentIndex = heappop(minHeap)
             if (currentX, currentY) in visited:
@@ -21,6 +21,6 @@ class Solution:
             else:
                 costMap[currentIndex] = cost
 
-            visited.add((currentX, currentY) )
-        
+            visited.add((currentX, currentY))
+
         return sum(costMap)

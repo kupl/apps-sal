@@ -1,5 +1,6 @@
 from functools import reduce
 
+
 def get_scores(a, b):
     if a == b:
         return (0, 0)
@@ -8,11 +9,14 @@ def get_scores(a, b):
     else:
         return (0, 1)
 
+
 def add(t1, t2):
     return tuple(map(sum, list(zip(t1, t2))))
 
+
 def mul(t, x):
     return t[0] * x, t[1] * x
+
 
 k, a, b = list(map(int, input().split(' ')))
 
@@ -65,4 +69,3 @@ if end is not None:
         result = add(result, step_results[start + i])
 
 print(result[0], result[1])
-

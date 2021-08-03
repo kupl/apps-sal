@@ -1,8 +1,9 @@
-a, b, c = map(int,input().split())
+a, b, c = map(int, input().split())
 A = []
-for i in range(1,b+1):
-    mod = a*i % b
-    if mod in A:break
+for i in range(1, b + 1):
+    mod = a * i % b
+    if mod in A:
+        break
     A.append(mod)
 
 A.sort()

@@ -21,7 +21,7 @@ def rerooting(n, edges, identity, merge, add_node):
             if p != u:
                 stack.append(u)
                 parents[u] = v
-    subtree_res = [[0]*len(Gv) for Gv in G]
+    subtree_res = [[0] * len(Gv) for Gv in G]
     # 下から登る
     for v in order[:0:-1]:
         p = parents[v]
@@ -54,15 +54,15 @@ def rerooting(n, edges, identity, merge, add_node):
 
 
 class Combination:
-    def __init__(self, n_max, mod=10**9+7):
+    def __init__(self, n_max, mod=10**9 + 7):
         # O(n_max + log(mod))
         self.mod = mod
         f = 1
         self.fac = fac = [f]
-        for i in range(1, n_max+1):
+        for i in range(1, n_max + 1):
             f = f * i % mod
             fac.append(f)
-        f = pow(f, mod-2, mod)
+        f = pow(f, mod - 2, mod)
         self.facinv = facinv = [f]
         for i in range(n_max, 0, -1):
             f = f * i % mod
@@ -70,18 +70,19 @@ class Combination:
         facinv.reverse()
 
     def __call__(self, n, r):  # self.C と同じ
-        return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n-r] % self.mod
+        return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
+
 
 def main():
     N = int(input())
-    AB = [list([int(x)-1 for x in input().split()]) for _ in range(N-1)]
+    AB = [list([int(x) - 1 for x in input().split()]) for _ in range(N - 1)]
     mod = 10**9 + 7
     comb = Combination(202020)
     identity = (1, 0)
-    merge = lambda a, b: (a[0] * b[0] % mod * comb(a[1]+b[1], a[1]) % mod, a[1] + b[1])
-    add_node = lambda value, idx: (value[0], value[1]+1)
+    def merge(a, b): return (a[0] * b[0] % mod * comb(a[1] + b[1], a[1]) % mod, a[1] + b[1])
+    def add_node(value, idx): return (value[0], value[1] + 1)
     Ans = rerooting(N, AB, identity, merge, add_node)
     print(("\n".join(str(ans) for ans, _ in Ans)))
 
-main()
 
+main()

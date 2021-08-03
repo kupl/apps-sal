@@ -1,4 +1,5 @@
-LI = lambda: list(map(int, input().split()))
+def LI(): return list(map(int, input().split()))
+
 
 N, M = LI()
 S, C = [None] * M, [None] * M
@@ -14,7 +15,7 @@ def main():
         elif l[s - 1] != c:
             print((-1))
             return
-    
+
     if N > 1 and l[0] == 0:
         print((-1))
         return
@@ -23,12 +24,13 @@ def main():
     for i in range(1, N):
         if l[i] is None:
             l[i] = 0
-    
+
     ans = "".join(list(map(str, l)))
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

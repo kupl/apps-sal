@@ -4,7 +4,7 @@ class Solution:
         for i in range(len(routes)):
             for stop in routes[i]:
                 stop_bus[stop].add(i)
-            
+
         if S not in list(stop_bus.keys()) or T not in list(stop_bus.keys()):
             return -1
         if S == T:
@@ -26,4 +26,3 @@ class Solution:
                                 seen.add(cur_bus)
                                 q.append(bus)
         return -1
-

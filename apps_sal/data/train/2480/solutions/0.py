@@ -5,12 +5,12 @@ class Solution:
         b = 0
         for i in position:
             if i not in d:
-                d[i]=1
+                d[i] = 1
             else:
-                d[i]+=1
+                d[i] += 1
         for i in d:
-            if i%2==0:
-                a +=d[i]
+            if i % 2 == 0:
+                a += d[i]
             else:
-                b+=d[i]
-        return min(a,b)
+                b += d[i]
+        return min(a, b)

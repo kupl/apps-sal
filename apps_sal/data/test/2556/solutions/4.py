@@ -6,4 +6,3 @@ for i in range(n):
     ost = s % c
 
     print((standart + 1) ** 2 * ost + standart ** 2 * (c - ost))
-

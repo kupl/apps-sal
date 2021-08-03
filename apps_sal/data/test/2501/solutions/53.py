@@ -4,7 +4,9 @@
 #from numba import njit
 from collections import Counter
 
-#@njit
+# @njit
+
+
 def main():
     N = int(input())
     A = list(map(int, input().split()))
@@ -20,5 +22,6 @@ def main():
         count += c[i]
 
     print(count)
-main()
 
+
+main()

@@ -1,4 +1,6 @@
-b=[]
+b = []
+
+
 def check(x):
     if '.' in x:
         return False
@@ -12,13 +14,15 @@ def check(x):
         if i not in '1234567890':
             return False
     return True
+
+
 s = input()
-k=''
+k = ''
 for i in s:
     if i == ';':
-        k+=','
+        k += ','
     else:
-        k+=i
+        k += i
 
 kk = k.split(',')
 a = []
@@ -36,5 +40,4 @@ else:
 if b == []:
     print("-")
 else:
-    print('"' + ','.join(b)+'"')
-
+    print('"' + ','.join(b) + '"')

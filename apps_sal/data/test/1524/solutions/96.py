@@ -21,4 +21,3 @@ for i in range(n - 1, -1, -1):
         b = 0
 a[0] += b
 print((*a))
-

@@ -33,11 +33,12 @@ def main():
         if f >= 0:
             ls.append([m, f])
         else:
-            rs.append([m-f, -f])
+            rs.append([m - f, -f])
     return tot == 0 and check(ls) and check(rs)
 
 
 def __starting_point():
     print(("Yes" if main() else "No"))
+
 
 __starting_point()

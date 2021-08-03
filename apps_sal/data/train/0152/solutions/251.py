@@ -12,17 +12,17 @@ class Solution:
                     placed += 1
                     if placed == m:
                         return True
-                i += 1 
+                i += 1
             return False
-        
+
         position.sort()
-        
+
         left, right = 1, max(position)
-                
+
         while left < right:
             mid = right - (right - left) // 2
             if feasible(mid, position):
-                left = mid 
+                left = mid
             else:
                 right = mid - 1
         return left

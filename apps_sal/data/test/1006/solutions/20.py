@@ -2,6 +2,7 @@ def fits(x, y):
     nonlocal n
     return x >= 0 and x < n and y >= 0 and y < n
 
+
 def paint(x, y):
     nonlocal a
     a[x][y] = '.'
@@ -9,6 +10,7 @@ def paint(x, y):
     a[x + 1][y] = '.'
     a[x][y - 1] = '.'
     a[x][y + 1] = '.'
+
 
 def check(x, y):
     nonlocal a
@@ -22,6 +24,7 @@ def check(x, y):
         cnt += 1
     if (cnt == 5):
         paint(x, y)
+
 
 n = int(input())
 a = []
@@ -40,4 +43,3 @@ if (cnt == 0):
     print('YES')
 else:
     print('NO')
-

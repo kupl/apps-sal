@@ -3,7 +3,7 @@ class Solution:
         s = 0
         sub = arr[0:k]
         subSum = sum(sub)
-        avg = subSum/k
+        avg = subSum / k
         if avg >= threshold:
             s += 1
         i = k
@@ -17,4 +17,3 @@ class Solution:
             if avg >= threshold:
                 s += 1
         return s
-

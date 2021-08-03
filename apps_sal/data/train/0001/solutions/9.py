@@ -29,7 +29,3 @@ for _ in range(q):
                 print(k - 2)
         else:
             print(k - 1)
-
-
-
-

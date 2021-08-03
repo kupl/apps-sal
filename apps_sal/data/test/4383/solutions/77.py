@@ -1,6 +1,5 @@
 c = input()
 if c in "753":
-  print("YES")
+    print("YES")
 else:
-  print("NO")
-
+    print("NO")

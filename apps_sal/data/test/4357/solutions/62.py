@@ -1,5 +1,5 @@
 abc = list(map(int, input().split()))
 abc = sorted(abc, reverse=True)
-ab = str(abc[0])+str(abc[1])
+ab = str(abc[0]) + str(abc[1])
 c = int(abc[2])
-print(int(ab)+int(c))
+print(int(ab) + int(c))

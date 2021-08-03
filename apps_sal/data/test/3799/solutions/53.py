@@ -12,4 +12,3 @@ if move == 1:
     print('First')
 else:
     print('Second')
-

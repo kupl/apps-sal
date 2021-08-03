@@ -3,6 +3,7 @@ class Node:
         self.i = i
         self.adj = []
 
+
 def draw_hedgehog(n, nodes):
     tail_length = [1] * n
     best_beauty = len(nodes[0].adj)
@@ -23,6 +24,7 @@ def draw_hedgehog(n, nodes):
 
     return best_beauty
 
+
 def __starting_point():
     n, m = input().split()
     n, m = int(n), int(m)
@@ -35,5 +37,6 @@ def __starting_point():
 
     result = draw_hedgehog(n, nodes)
     print(result)
+
 
 __starting_point()

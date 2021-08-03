@@ -52,4 +52,3 @@ for _ in range(t):
                 total += 1
 
     print(total)
-

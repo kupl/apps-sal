@@ -2,7 +2,7 @@ import math
 n = int(input())
 a = list(map(int, input().split()))
 l = 0
-r = len(a)-1
+r = len(a) - 1
 ans = []
 last = -math.inf
 while True:

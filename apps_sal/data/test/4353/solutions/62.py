@@ -1,4 +1,3 @@
-S=input()
-S=S.replace(',',' ')
+S = input()
+S = S.replace(',', ' ')
 print(S)
-

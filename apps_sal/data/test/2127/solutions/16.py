@@ -13,6 +13,6 @@ for i in range(tc):
         y = max(y, min(a, b))
     else:
         if max(a, b) >= x and min(a, b) >= y:
-        	print('YES')
+            print('YES')
         else:
-        	print('NO')
+            print('NO')

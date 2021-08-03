@@ -15,4 +15,3 @@ def increment_string(strng):
     else:
         strng = strng + '1'
     return strng
-

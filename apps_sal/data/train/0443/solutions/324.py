@@ -10,5 +10,4 @@ class Solution:
                         continue
                     if rating[i] > rating[j] > rating[k] or rating[i] < rating[j] < rating[k]:
                         output += 1
-        return output                
-
+        return output

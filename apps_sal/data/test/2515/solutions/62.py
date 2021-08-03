@@ -23,4 +23,3 @@ for i in range(100005):
 for _ in range(q):
     l, r = list(map(int, input().split()))
     print((s[r] - s[l - 1]))
-

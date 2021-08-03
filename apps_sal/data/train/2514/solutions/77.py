@@ -4,9 +4,8 @@ class Solution:
         for a in arr1:
             temp = True
             for b in arr2:
-                if(abs(a-b) <= d):
+                if(abs(a - b) <= d):
                     temp = False
             if(temp):
                 res += 1
         return res
-

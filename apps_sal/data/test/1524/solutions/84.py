@@ -7,7 +7,7 @@ S += "$"
 
 s = 0
 for i in range(n):
-    if S[i] != S[i+1]:
+    if S[i] != S[i + 1]:
         l = i - s + 1
         if S[i] == "R":
             ans[i + 1] += l // 2
@@ -18,4 +18,3 @@ for i in range(n):
         s = i + 1
 
 print((" ".join(map(str, ans))))
-

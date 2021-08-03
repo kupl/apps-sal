@@ -7,4 +7,3 @@ for data in range(len(ls)):
     if ls[data] != lt[data]:
         result += 1
 print(result)
-

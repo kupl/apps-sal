@@ -18,10 +18,10 @@ class Solution:
                 if matched and matched_cs:
                     done = done | set(matched_cs)
                     ans.append(ti - len(stamp))
-                    return True                        
+                    return True
             return False
-            
-        ans, done = [], set()
-        while one_sweep(): pass
-        return ans[::-1] if len(done) == len(target) else []
 
+        ans, done = [], set()
+        while one_sweep():
+            pass
+        return ans[::-1] if len(done) == len(target) else []

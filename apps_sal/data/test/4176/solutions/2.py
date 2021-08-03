@@ -7,4 +7,3 @@ def lcm(a, b):
 
 a, b = list(map(int, input().split()))
 print((lcm(a, b)))
-

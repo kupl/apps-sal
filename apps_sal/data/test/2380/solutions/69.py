@@ -10,7 +10,7 @@ for i in range(M):
 
 allVals = A + changes
 
-allVals.sort(key = lambda x:x[0], reverse = True)
+allVals.sort(key=lambda x: x[0], reverse=True)
 # print(allVals)
 
 i = 0
@@ -26,6 +26,4 @@ while True:
         break
 
 
-
 print(res)
-

@@ -10,7 +10,7 @@ m[a - 1][b - 1] = 1
 
 for i in range(len(s)):
     if s[i] == 'D':
-        a = min (a + 1, x)
+        a = min(a + 1, x)
         m[a - 1][b - 1] += 1
         if m[a - 1][b - 1] == 1:
             k += 1
@@ -19,7 +19,7 @@ for i in range(len(s)):
             ans += '0 '
 
     elif s[i] == 'U':
-        a = max (a - 1, 1)
+        a = max(a - 1, 1)
         m[a - 1][b - 1] += 1
         if m[a - 1][b - 1] == 1:
             k += 1
@@ -28,7 +28,7 @@ for i in range(len(s)):
             ans += '0 '
 
     elif s[i] == 'R':
-        b = min (b + 1, y)
+        b = min(b + 1, y)
         m[a - 1][b - 1] += 1
         if m[a - 1][b - 1] == 1:
             k += 1
@@ -37,7 +37,7 @@ for i in range(len(s)):
             ans += '0 '
 
     else:
-        b = max (b - 1, 1)
+        b = max(b - 1, 1)
         m[a - 1][b - 1] += 1
         if m[a - 1][b - 1] == 1:
             k += 1
@@ -52,6 +52,3 @@ ans = ans[:-1]
 ans += str(x * y - k)
 
 print(ans)
-        
-    
-

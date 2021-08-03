@@ -15,5 +15,3 @@ for _ in range(t):
     elif command[0] == "end":
         st.pop(-1)
 print(x)
-    
-

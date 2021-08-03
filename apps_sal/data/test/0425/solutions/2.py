@@ -10,4 +10,3 @@ while n2 > 0:
     ans += 1
 else:
     print(-1)
-

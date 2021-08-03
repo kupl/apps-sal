@@ -6,6 +6,6 @@ class Solution:
         for i, v in enumerate(target):
             if v in arr:
                 boolean = True & boolean
-            else: 
+            else:
                 boolean = False & boolean
         return boolean

@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         if not nums or len(nums) == 0:

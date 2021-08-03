@@ -4,7 +4,7 @@ class Solution:
         skip = []
         for i, c in enumerate(s):
             if c in '()':
-                if c=='(':
+                if c == '(':
                     stack.append(i)
                 else:
                     if stack:

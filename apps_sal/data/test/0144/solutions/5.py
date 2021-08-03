@@ -21,4 +21,3 @@ for i in range(1, sum(arr)):
             print("YES")
             return
 print("NO")
-

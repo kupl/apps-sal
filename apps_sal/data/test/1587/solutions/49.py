@@ -25,4 +25,3 @@ while(left_cur < right_cur and left_cur < n - 1 and right_cur > 0):
     right_cur -= 1
 
 print(ans)
-

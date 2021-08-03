@@ -3,14 +3,17 @@ def vert_mirror(strng):
     for i in range(len(segments)):
         segments[i] = segments[i][::-1]
     return segments
-    
+
     # your code
+
+
 def hor_mirror(strng):
     segments = strng.split('\n')
     s = segments[::-1]
     return s
     # your code
+
+
 def oper(fct, s):
     return '\n'.join(fct(s))
     # your code
-

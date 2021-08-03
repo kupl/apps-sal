@@ -1,13 +1,13 @@
 def sharkovsky(a, b):
     if a == b:
         return False
-    if a <3:
+    if a < 3:
         return False
-    if b<3:
+    if b < 3:
         return True
-    print(a,b)
-    higher = max(a,b)
-    lower = min(a,b)
+    print(a, b)
+    higher = max(a, b)
+    lower = min(a, b)
     number = 3
     while number <= higher:
         if number == a:
@@ -47,15 +47,15 @@ def sharkovsky(a, b):
         exponential = exponential + 1
         number = (2**exponential) * counter
     exponential = 1
-    number = (2**exponential) 
+    number = (2**exponential)
     while number >= lower:
         if number == a:
             return True
         if number == b:
             return False
         exponential = exponential - 1
-        number = (2**exponential) 
-    number = higher 
+        number = (2**exponential)
+    number = higher
     while number >= lower:
         if number == a:
             return True

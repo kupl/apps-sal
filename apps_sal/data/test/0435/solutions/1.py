@@ -1,4 +1,4 @@
-n, k = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
 s = input()
 
 longest = 0
@@ -32,4 +32,3 @@ while True:
         break
 
 print(longest)
-

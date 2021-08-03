@@ -5,7 +5,7 @@ class Solution:
     def tallestBillboard(self, rods: List[int]) -> int:
         diff_to_longer_len = defaultdict(int)
         diff_to_longer_len[0] = 0
-        
+
         for new_L in rods:
             tmp = defaultdict(int)
             for delta_L, L in list(diff_to_longer_len.items()):
@@ -26,4 +26,3 @@ class Solution:
                 )
 
         return diff_to_longer_len[0]
-

@@ -27,4 +27,3 @@ ans = solve()
 print((len(ans)))
 for e in ans:
     print((*e))
-

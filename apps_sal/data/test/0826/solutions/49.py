@@ -1,5 +1,5 @@
 from decimal import Decimal
-n=int(input())
+n = int(input())
 
 
 # i=0
@@ -12,6 +12,6 @@ n=int(input())
 #         break
 
 
-i = int((-1 + Decimal(1+8*(n+1)).sqrt())/2 )
+i = int((-1 + Decimal(1 + 8 * (n + 1)).sqrt()) / 2)
 
-print(n-i+1)        
+print(n - i + 1)

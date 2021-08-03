@@ -9,5 +9,5 @@ for t in range(int(input())):
     j = n - 1
     while j >= 0 and a[j] != 1:
         j -= 1
-        z -= 1    
+        z -= 1
     print(z)

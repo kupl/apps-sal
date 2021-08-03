@@ -12,4 +12,3 @@ for i in range(K + 1):
             tmp.sort()
             ans = max(ans, sum(tmp) - sum([t for t in tmp if t < 0][: i - j]))
 print(ans)
-

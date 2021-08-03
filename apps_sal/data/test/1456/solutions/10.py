@@ -37,4 +37,3 @@ else:
     print('YES')
     for line in r:
         print(''.join(line))
-

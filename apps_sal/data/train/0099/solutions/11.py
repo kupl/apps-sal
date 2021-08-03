@@ -14,5 +14,4 @@ for _ in range(int(input())):
     if zero < one or one == -1 or zero == -1:
         print(s)
     else:
-        print((one+1) * "0" + (n-zero-1) * "1")
-
+        print((one + 1) * "0" + (n - zero - 1) * "1")

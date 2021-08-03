@@ -8,4 +8,3 @@ for i in range(1, len(s)):
     else:
         tmp1 = tmp2
 print('Good')
-

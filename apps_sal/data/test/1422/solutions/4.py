@@ -6,7 +6,7 @@ while r:
 
     x, d, s, t = r.pop()
 
-    if s == m: 
+    if s == m:
 
         q = 'YES\n' + ' '.join(map(str, t))
 
@@ -14,13 +14,10 @@ while r:
 
     for y in p:
 
-        if y != x and y > d: r.append((y, y - d, s + 1, t + [y]))
+        if y != x and y > d:
+            r.append((y, y - d, s + 1, t + [y]))
 
 print(q)
 
 
-
-
-
 # Made By Mostafa_Khaled
-

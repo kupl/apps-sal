@@ -4,7 +4,7 @@ class Solution:
         res = 0
         maxn = max(nums)
         # minn = min(nums)
-        for i in range(maxn+1):
+        for i in range(maxn + 1):
             res = 0
             for y in nums:
                 if y >= i:
@@ -12,4 +12,3 @@ class Solution:
             if res == i:
                 return i
         return -1
-

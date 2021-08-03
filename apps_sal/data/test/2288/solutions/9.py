@@ -4,4 +4,3 @@ for _ in range(int(input())):
     bb = set(map(int, input().split()))
     ans = len(bb) > 1 or aa == sorted(aa)
     print('Yes' if ans else 'No')
-

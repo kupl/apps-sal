@@ -8,4 +8,3 @@ while cnt < n:
 
     cnt += i
     i += 1
-

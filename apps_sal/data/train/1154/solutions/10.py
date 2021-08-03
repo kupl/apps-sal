@@ -11,4 +11,3 @@ for num in imposter:
     else:
         names[num] -= 1
 print(ans)
-

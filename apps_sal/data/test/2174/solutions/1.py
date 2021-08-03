@@ -2,5 +2,4 @@ n = int(input())
 s = list(map(int, input().split()))
 s.sort()
 ans = sum([abs((i + 1) - s[i]) for i in range(n)])
-print (ans)
-
+print(ans)

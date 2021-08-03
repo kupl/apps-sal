@@ -22,7 +22,7 @@ def interpreter(code, tape):
             if li[p] != '0':
                 c = right[str(c)]
         elif code[c] == '*':
-            li[p] = str(abs(int(li[p])-1))
+            li[p] = str(abs(int(li[p]) - 1))
         elif code[c] == '>':
             p += 1
         elif code[c] == '<':

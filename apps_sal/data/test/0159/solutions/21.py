@@ -1,12 +1,11 @@
 
 
-
 def gcd(x, y):
     if y == 0:
         return x
     return gcd(y, x % y)
-    
-    
+
+
 n = int(input())
 
 a = list(map(int, input().split()))
@@ -25,18 +24,7 @@ for i in range(n):
 print(len(ans) - n)
 
 for i in range(len(ans) - 1):
-    print(ans[i], end = ' ')
+    print(ans[i], end=' ')
 
 
 print(ans[len(ans) - 1])
-
-
-
-
-    
-    
-
-
-
-
-

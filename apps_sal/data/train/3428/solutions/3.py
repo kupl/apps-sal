@@ -14,5 +14,5 @@ def scanner(qrcode):
     bstring = "".join(map(str, it))
     offset = 12
     length = int(bstring[4:offset], 2)
-    bstring = bstring[offset : offset + length * 8]
+    bstring = bstring[offset: offset + length * 8]
     return "".join(chr(int("".join(xs), 2)) for xs in zip(*[iter(bstring)] * 8))

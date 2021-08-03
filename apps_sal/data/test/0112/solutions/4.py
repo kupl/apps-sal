@@ -32,25 +32,20 @@ def dfs(A, index, p):
 
     ans = set()
     for v in A[index]:
-        ans |= dfs(A, index+1, p+[v])
-    ans |= dfs(A, index+1, p)
+        ans |= dfs(A, index + 1, p + [v])
+    ans |= dfs(A, index + 1, p)
 
     return ans
+
 
 allNums = set()
 for a in itertools.permutations(A, len(A)):
     allNums |= dfs(a, 0, [])
 
 ans = 0
-for i in range(1, max(allNums)+1):
+for i in range(1, max(allNums) + 1):
     if i not in allNums:
         break
     ans = i
 
 print(ans)
-
-
-
-
-
-

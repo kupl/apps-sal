@@ -15,4 +15,3 @@ for y in x:
         res = max(res, cur)
 
 print(res)
-

@@ -1,4 +1,4 @@
-N, K = map(int,input().split())
+N, K = map(int, input().split())
 
 obs = 0
 cur = 0
@@ -11,7 +11,7 @@ for s in S:
     else:
         cur += 1
         obs = max(cur, obs)
-        
+
 if K <= obs:
     print("NO")
 else:

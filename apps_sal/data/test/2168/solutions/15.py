@@ -10,4 +10,3 @@ CompS.sort(reverse=True)
 for i in range(1, len(CompS)):
     S += (CompS[0][0] - CompS[i][0]) * CompS[i][1]
 print(S)
-

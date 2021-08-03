@@ -1,5 +1,5 @@
 def isDigit(string):
-    s = string.replace('-',' ').strip()
+    s = string.replace('-', ' ').strip()
     try:
         s = eval(s)
         return 1

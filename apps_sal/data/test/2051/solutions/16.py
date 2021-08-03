@@ -11,7 +11,7 @@ vis = [0] * n
 ans = 0
 
 for i in range(n):
-    if vis[i] == 1: 
+    if vis[i] == 1:
         continue
 
     arr, cur = [i], 0
@@ -30,9 +30,4 @@ for i in range(n):
 
     ans += len(arr) - max(d.values())
 
-print(ans)    
-
-    
-    
-
-
+print(ans)

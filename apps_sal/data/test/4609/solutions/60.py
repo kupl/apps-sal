@@ -16,13 +16,13 @@ A += [-1]
 ans = 0
 count = 1
 for i in range(N):
-    #print(count)
-    if A[i] == A[i+1]:
-        #print("A")
+    # print(count)
+    if A[i] == A[i + 1]:
+        # print("A")
         count += 1
     else:
-        #print("B")
-        if count%2 == 1:
+        # print("B")
+        if count % 2 == 1:
             ans += 1
         count = 1
 print(ans)

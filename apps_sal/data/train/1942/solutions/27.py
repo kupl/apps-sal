@@ -18,5 +18,5 @@ class Solution:
                 if counter[i][j] == len(fc[i]):
                     ans.add(i)
                     break
-               
+
         return sorted(set(range(n)) - ans)

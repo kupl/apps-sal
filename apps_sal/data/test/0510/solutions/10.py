@@ -9,4 +9,3 @@ if t[1] - t[0] <= d:
     ans += d - t[1] + t[0]
 print(ans)
 # a = [int(i) for i in input().split()]
-

@@ -1,1 +1,1 @@
-to_alternating_case=lambda s:s.swapcase()
+def to_alternating_case(s): return s.swapcase()

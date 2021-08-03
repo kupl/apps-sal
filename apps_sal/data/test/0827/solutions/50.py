@@ -9,7 +9,7 @@ if t == "1":
 
 
 for i in range(3):
-    if t == s[i : i + n]:
+    if t == s[i: i + n]:
         print(1 + (3 * 10 ** 10 - (i + n)) // 3)
         return
 

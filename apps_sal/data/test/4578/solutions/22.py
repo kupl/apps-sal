@@ -9,4 +9,3 @@ for i in range(n):
 
 res += x // min_m
 print(res)
-

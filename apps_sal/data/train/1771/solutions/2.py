@@ -1,5 +1,6 @@
 def closure_gen(*s):
-    if not s: return
+    if not s:
+        return
     if s[0] == 1:
         yield 1
         s = s[1:]

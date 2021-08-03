@@ -4,9 +4,8 @@ if len(s) % k:
     return
 
 l = int(len(s) / k)
-for p in (s[i*l:(i+1)*l] for i in range(k)):
+for p in (s[i * l:(i + 1) * l] for i in range(k)):
     if p != p[::-1]:
         print("NO")
         return
 print("YES")
-

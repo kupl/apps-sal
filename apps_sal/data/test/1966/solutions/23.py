@@ -24,9 +24,12 @@ def read_board(n, numb):
         input()
     return board
 
+
 boards = [read_board(n, i) for i in range(4)]
 # a = [[1, 0, 1], [0, 0, 0], [0, 0, 1]]
 # print(boards)
+
+
 def _calc_line(l, start=1):
     cur = start
     errors = 0
@@ -35,6 +38,7 @@ def _calc_line(l, start=1):
         cur = not cur
     return errors
 
+
 def _calc_board(b, start=1):
     errors = 0
     cur = start
@@ -42,6 +46,7 @@ def _calc_board(b, start=1):
         errors += _calc_line(line, cur)
         cur = not cur
     return errors
+
 
 checks = [
     (0, 0, 1, 1),
@@ -52,6 +57,7 @@ checks = [
     (1, 1, 0, 0)
 ]
 
+
 def check_all(boards):
     for check in checks:
         errs = 0
@@ -59,6 +65,5 @@ def check_all(boards):
             errs += _calc_board(board, start)
         yield errs
 
+
 print(min(check_all(boards)))
-
-

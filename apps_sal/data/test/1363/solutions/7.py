@@ -3,6 +3,7 @@ import math
 import random
 import time
 
+
 def func_cnk(keepers, defenders, attackers, flag):
     if flag == 'kpr':
         kpr = 1
@@ -17,6 +18,7 @@ def func_cnk(keepers, defenders, attackers, flag):
         defs = math.factorial(defenders) // math.factorial(2) // math.factorial(defenders - 2)
         atts = math.factorial(attackers - 1) // math.factorial(2) // math.factorial(attackers - 3)
     return kpr * int(defs) * int(atts)
+
 
 g, d, f = list(map(int, input().split()))
 x = list(map(int, input().split()))

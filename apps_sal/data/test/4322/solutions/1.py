@@ -20,7 +20,7 @@ import sys
 
 def solve(n, a):
     max_a = max(a)
-    counter = [0 for i in range(max_a+1)]
+    counter = [0 for i in range(max_a + 1)]
     for ai in a:
         counter[ai] += 1
     best_group = []
@@ -58,6 +58,7 @@ def solve(n, a):
         seq += [i] * (counter[i] - 1)
     return (best_total, seq)
 
+
 def main(argv=None):
     n = int(input())
     a = list(map(int, input().split()))
@@ -65,6 +66,7 @@ def main(argv=None):
     print(total)
     print(' '.join(map(str, seq)))
     return 0
+
 
 def __starting_point():
     STATUS = main()

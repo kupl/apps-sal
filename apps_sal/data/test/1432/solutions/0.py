@@ -10,8 +10,8 @@ for i in range(1, n, 2):
 l.append(ans)
 
 for i in range(n - 1):
-    ans = (a[i] - ans//2)*2
+    ans = (a[i] - ans // 2) * 2
     l.append(ans)
 
 for i in l:
-    print(i, end = " ")
+    print(i, end=" ")

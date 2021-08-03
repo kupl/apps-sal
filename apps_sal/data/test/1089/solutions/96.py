@@ -3,6 +3,7 @@
 def LI():
     return list(map(int, input().split()))
 
+
 # input
 N, M, K = LI()
 
@@ -17,7 +18,7 @@ def comb_init():
     inv[1] = 1
     for i in range(2, MAX):
         fac[i] = fac[i - 1] * i % MOD
-        inv[i] = -inv[MOD%i] * int(MOD / i) % MOD
+        inv[i] = -inv[MOD % i] * int(MOD / i) % MOD
         finv[i] = finv[i - 1] * inv[i] % MOD
 
 
@@ -50,5 +51,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

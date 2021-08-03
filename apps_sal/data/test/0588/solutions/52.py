@@ -27,4 +27,3 @@ for i in range(Nu + 1):
         ans = max(ans, (Ax[j] - Ax[i]) ** 2 + (Ay[j] - Ay[i]) ** 2)
 
 print((sqrt(ans)))
-

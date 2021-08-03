@@ -13,4 +13,3 @@ for case_num in range(t):
     if ans > n:
         ans -= x
     print(ans)
-

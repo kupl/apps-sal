@@ -1,6 +1,6 @@
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
-from collections import defaultdict
 
 """
 (駅、会社)を頂点にグラフを持つ。頂点数O(M)。
@@ -10,18 +10,18 @@ from collections import defaultdict
 
 L = 32
 mask = (1 << L) - 1
-N,M = map(int,input().split())
+N, M = map(int, input().split())
 graph = defaultdict(list)
 for _ in range(M):
-    p,q,c = map(int,input().split())
+    p, q, c = map(int, input().split())
     p <<= L
     q <<= L
-    graph[p].append(p+c)
-    graph[p+c].append(p)
-    graph[q].append(q+c)
-    graph[q+c].append(q)
-    graph[p+c].append(q+c)
-    graph[q+c].append(p+c)
+    graph[p].append(p + c)
+    graph[p + c].append(p)
+    graph[q].append(q + c)
+    graph[q + c].append(q)
+    graph[p + c].append(q + c)
+    graph[q + c].append(p + c)
 
 INF = 10 ** 9
 dist = defaultdict(lambda: INF)
@@ -29,7 +29,7 @@ dist = defaultdict(lambda: INF)
 start = 1 << L
 goal = N << L
 
-q = [start] # 0 が会社に属していない状態
+q = [start]  # 0 が会社に属していない状態
 dist[start] = 0
 d = 0
 q0 = []

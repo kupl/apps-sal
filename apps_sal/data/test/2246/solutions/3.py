@@ -7,7 +7,7 @@ def f():
 
     road = {}
     visited = {}
-    for i in range(n-1):
+    for i in range(n - 1):
         u, v = input().split()
         if u in road:
             road[u].append(v)
@@ -53,5 +53,5 @@ def f():
 
     print(val)
 
-f()
 
+f()

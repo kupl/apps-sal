@@ -59,40 +59,39 @@ def get_matrix_open_text(open_text, length_blocks=2):
 
         matrix_open_text.append(tmp_list)
         tmp_list = list()
-        
+
     return matrix_open_text
 
 
 def smart_mul_matrix(matrix_1, matrix_2):
     result_matrix = list()
-    
+
     for i in range(len(matrix_1)):
         tmp_sum = 0
-        
+
         for j in range(len(matrix_2)):
             tmp_sum += (matrix_1[i][j] * matrix_2[j])
         result_matrix.append(tmp_sum % 26)
-        
+
     return result_matrix
+
 
 def encrypt(open_text, key):
     cipher_text = ''
     length_alphabet = len(ALPHABET)
     matrix_cipher_text = list()
-    
+
     pattern_only_letters = re.compile(r'[^a-zA-Z]*')
     prepared_key_text = pattern_only_letters.sub('', key).upper()
     matrix_key = get_matrix_key(prepared_key_text)
-    
+
     matrix_open_text = get_matrix_open_text(open_text)
-    
+
     for current_list_open_text in matrix_open_text:
         matrix_multiplication = smart_mul_matrix(matrix_key, current_list_open_text)
         matrix_cipher_text.append(matrix_multiplication)
-        
+
     for list_cipher_text in matrix_cipher_text:
         for number_cipher_text in list_cipher_text:
             cipher_text += REVERSE_ALPHABET[number_cipher_text]
     return cipher_text
-
-

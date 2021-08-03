@@ -8,4 +8,3 @@ if c[1][0] - b1 == c[1][1] - b2 == c[1][2] - b3 and c[2][0] - b1 == c[2][1] - b2
     print('Yes')
 else:
     print('No')
-

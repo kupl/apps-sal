@@ -12,4 +12,3 @@ for i in range(t):
         j += 1
     print(len(ans))
     print(*ans)
-

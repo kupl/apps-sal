@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, m = f()
 t = list(f())
 d = {i: j for j, i in enumerate(sorted(set(t)))}

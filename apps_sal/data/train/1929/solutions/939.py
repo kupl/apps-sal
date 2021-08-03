@@ -1,6 +1,7 @@
 def _trie():
     return collections.defaultdict(_trie)
 
+
 class StreamChecker:
 
     def __init__(self, words: List[str]):
@@ -13,10 +14,11 @@ class StreamChecker:
                 trie = trie[c]
             trie['END']
         self.activePtr = []
+
     def query(self, letter: str) -> bool:
         matched = False
         if letter in self.trie:
-            self.activePtr.append(self.trie)    
+            self.activePtr.append(self.trie)
         for i, trie in enumerate(self.activePtr):
             if letter in trie:
                 trie = trie[letter]
@@ -24,12 +26,11 @@ class StreamChecker:
                     matched = True
                     #self.activePtr[i] = None
                 self.activePtr[i] = trie
-            else :
+            else:
                 self.activePtr[i] = None
-        self.activePtr = [t for t in self.activePtr if t is not None]        
+        self.activePtr = [t for t in self.activePtr if t is not None]
         return matched
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

@@ -8,7 +8,7 @@ def is_sorted(a, l, r):
 def solve(a, l, r):
     if is_sorted(a, l, r):
         return r - l
-    return max(solve(a, l, (r + l) // 2), solve(a, (r + l)//2, r))
+    return max(solve(a, l, (r + l) // 2), solve(a, (r + l) // 2, r))
 
 
 def main() -> None:
@@ -19,5 +19,6 @@ def main() -> None:
 
 def __starting_point():
     main()
+
 
 __starting_point()

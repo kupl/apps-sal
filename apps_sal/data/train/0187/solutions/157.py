@@ -6,7 +6,7 @@ class Solution:
         curProfit = 0
         maxProfit = 0
         maxProfitTurns = 0
-        
+
         curTurn = 0
         for nCust in customers:
             curTurn += 1
@@ -19,8 +19,7 @@ class Solution:
             if curProfit > maxProfit:
                 maxProfit = curProfit
                 maxProfitTurns = curTurn
-        
-        
+
         fullLoads = waitingCustomers >> 2
         remLoad = waitingCustomers & 0b11
         curProfit += ((fullLoads * boardingCost) << 2) - runningCost * fullLoads
@@ -34,11 +33,10 @@ class Solution:
             if curProfit > maxProfit:
                 maxProfit = curProfit
                 maxProfitTurns = curTurn
-        
-        
+
         if curProfit > maxProfit:
             return curTurn
-        
+
         if maxProfit == 0:
             return -1
         else:

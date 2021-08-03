@@ -1,9 +1,9 @@
-n,s = map(int,input().split())
+n, s = map(int, input().split())
 c = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = map(int,input().split())
-    c[a-1].append(b)
-    c[b-1].append(a)
+    a, b = map(int, input().split())
+    c[a - 1].append(b)
+    c[b - 1].append(a)
 d = set()
 k = 0
 for i in range(n):
@@ -14,4 +14,4 @@ for i in range(n):
 if n == 2:
     print(s)
 else:
-    print(round(s * 2 / k,7))
+    print(round(s * 2 / k, 7))

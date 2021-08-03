@@ -7,5 +7,3 @@ for i in range(r):
 
 for number in total:
     print(number)
-    
-

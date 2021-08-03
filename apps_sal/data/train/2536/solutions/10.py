@@ -58,4 +58,3 @@ class Solution:
             return max(list_lukcy_nums)
 
         return -1
-

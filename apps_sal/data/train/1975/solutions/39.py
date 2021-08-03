@@ -3,14 +3,12 @@ class CustomStack:
     def __init__(self, maxSize: int):
         self.size = maxSize
         self.stk = []
-        
 
     def push(self, x: int) -> None:
         if len(self.stk) == self.size:
-            return 
+            return
         else:
             self.stk.append(x)
-        
 
     def pop(self) -> int:
         if len(self.stk) == 0:
@@ -23,10 +21,8 @@ class CustomStack:
             for i in range(len(self.stk)):
                 self.stk[i] += val
         else:
-            for i in range(0,k):
+            for i in range(0, k):
                 self.stk[i] += val
-                
-        
 
 
 # Your CustomStack object will be instantiated and called as such:
@@ -34,4 +30,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

@@ -6,16 +6,16 @@ class Solution:
         :rtype: int
         '''
         njobs = len(jobDifficulty)
-        if njobs < d: return -1
+        if njobs < d:
+            return -1
 
         dp = [[float('inf')] * njobs for _ in range(d)]
         # base case - complete first j jobs using 1 day
         for j in range(njobs):
-            dp[0][j] = max(jobDifficulty[:j+1])
+            dp[0][j] = max(jobDifficulty[:j + 1])
 
         for i in range(1, d):
             for j in range(i, njobs):
-                for k in range(i, j+1):
-                    dp[i][j] = min(dp[i][j], dp[i-1][k-1] + max(jobDifficulty[k:j+1]))
-        return dp[d-1][njobs-1]
-
+                for k in range(i, j + 1):
+                    dp[i][j] = min(dp[i][j], dp[i - 1][k - 1] + max(jobDifficulty[k:j + 1]))
+        return dp[d - 1][njobs - 1]

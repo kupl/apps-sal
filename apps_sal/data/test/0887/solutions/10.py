@@ -15,4 +15,3 @@ if (a == 1 and c0 == 0 and c1 == 1) or (a > 1 and c0 == 1):
     print("YES")
 else:
     print("NO")
-

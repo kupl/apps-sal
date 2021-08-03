@@ -1,6 +1,9 @@
 import networkx as nx
 
-int1 = lambda x: int(x) - 1
+
+def int1(x): return int(x) - 1
+
+
 MOD = 10 ** 9 + 7
 
 N, K = list(map(int, input().split()))
@@ -18,4 +21,3 @@ for parent, child in nx.dfs_edges(G, 0):
         ans = (ans * (K - i - 2)) % MOD
 
 print(ans)
-

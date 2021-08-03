@@ -15,4 +15,3 @@ for i, grade in enumerate(grades):
         res += 10 - grade
 else:
     print(len(grades))
-

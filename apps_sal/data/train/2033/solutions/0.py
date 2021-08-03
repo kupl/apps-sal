@@ -18,4 +18,3 @@ else:
     print('ambiguous')
     print(*w)
     print(*q)
-

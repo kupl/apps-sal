@@ -52,4 +52,6 @@ def __starting_point():
         setJury(juries, m, d, t, months, p)
 
     print(juriesNumber)
+
+
 __starting_point()

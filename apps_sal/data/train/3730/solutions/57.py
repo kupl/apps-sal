@@ -14,4 +14,3 @@ def capitalize(s):
     lst.append(even)
     lst.append(odd)
     return lst
-

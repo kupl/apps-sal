@@ -1,20 +1,24 @@
 from math import sqrt
+
+
 def deli(x):
     cd = 0
     while x % 2 == 0:
         cd += 1
         x //= 2
     ncd = 0
-    for i in range(3, int(sqrt(x)) +1):
+    for i in range(3, int(sqrt(x)) + 1):
         while x % i == 0:
-            x//=i
+            x //= i
             ncd += 1
     if x != 1:
         ncd += 1
-    return cd,ncd
+    return cd, ncd
+
+
 def solvetest():
     n = int(input())
-    c,nc = deli(n)
+    c, nc = deli(n)
     if n == 1:
         print("FastestFinger")
         return
@@ -33,5 +37,7 @@ def solvetest():
         print("FastestFinger")
     else:
         print("Ashishgup")
+
+
 for i in range(int(input())):
     solvetest()

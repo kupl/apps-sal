@@ -3,7 +3,7 @@ class Solution:
         n = len(nums)
         ans = 0
         m = 0
-        
+
         def get(val):
             ret = 0
             give = 0
@@ -12,15 +12,16 @@ class Solution:
                     val -= 1
                     ret += 1
                 else:
-                    val = val//2
+                    val = val // 2
                     give += 1
-                
+
             return ret, give
-    
+
         for i in range(n):
-            if(nums[i] == 0): continue
+            if(nums[i] == 0):
+                continue
             val, mult = get(nums[i])
-            m = max(m,mult)
+            m = max(m, mult)
             ans += val
         ans += m
         return ans

@@ -10,4 +10,3 @@ for i in range(N):
         t += A2[k]
     ans = max(t, ans)
 print(ans)
-

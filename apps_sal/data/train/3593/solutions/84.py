@@ -1,5 +1,5 @@
-def capitalize(s,ind):
-    newstring=[]
+def capitalize(s, ind):
+    newstring = []
     for numero in range(len(s)):
         if numero not in ind:
             newstring.append(s[numero])

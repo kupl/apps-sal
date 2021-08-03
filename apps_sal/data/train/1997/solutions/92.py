@@ -1,5 +1,5 @@
 class Solution:
-    
+
     def checkIntvl(self, a: List[int], b: List[int]) -> bool:
         return b[0] <= a[0] and b[1] >= a[1]
 

@@ -1,4 +1,4 @@
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 K = int(input())
 
 for i in range(K):

@@ -6,7 +6,7 @@ cd = []
 for i in range(n):
     cd.append(list(map(int, input().split())))
 cd.sort()
-ab.sort(key = lambda x: x[1], reverse = True)
+ab.sort(key=lambda x: x[1], reverse=True)
 flag_ab = [False for i in range(n)]
 count = 0
 for i in range(n):

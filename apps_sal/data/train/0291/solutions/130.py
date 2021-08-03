@@ -6,9 +6,8 @@ class Solution:
         res = 0
         mod = 10 ** 9 + 7
         for x in arr:
-            s ^= x%2
-            res += c[1-s]
+            s ^= x % 2
+            res += c[1 - s]
             res %= mod
             c[s] += 1
         return res
-

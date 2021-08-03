@@ -13,15 +13,15 @@ for ch in s:
     else:
         cnt = 0
 
-for i in range(1,n+1):
+for i in range(1, n + 1):
     if(i + k - 2 < n):
-        subs = s[i:i+k]
+        subs = s[i:i + k]
         # print(subs)
         flag = True
         for ch in subs:
             if(not ch in "N?"):
                 flag = False
-        if((s[i-1] in "Y?" and s[i+k] in "Y?") and flag):
+        if((s[i - 1] in "Y?" and s[i + k] in "Y?") and flag):
             res = "YES"
             # print(s[i-1], subs, s[i+k])
 if can:

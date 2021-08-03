@@ -1,9 +1,10 @@
 from collections import defaultdict
 
+
 def main():
     n = int(input())
     a = list(map(int, input().split(' ')))
-    
+
     m = defaultdict(list)
     for i in range(n):
         m[a[i]].append(i)
@@ -17,7 +18,7 @@ def main():
             diff = None
             good = True
             for i in range(1, len(v)):
-                d = v[i] - v[i-1]
+                d = v[i] - v[i - 1]
                 if diff == None:
                     diff = d
                 else:
@@ -31,5 +32,5 @@ def main():
     for r in ret:
         print(r[0], r[1])
 
-main()
 
+main()

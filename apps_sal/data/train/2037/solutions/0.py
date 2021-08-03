@@ -39,7 +39,7 @@ class State(namedtuple('State', 'payload time floor')):
 def time_to_get_free(payload, floor):
     if payload:
         lo, up = min(payload), max(payload)
-        return abs(lo-up) + min(abs(floor-lo), abs(floor-up))
+        return abs(lo - up) + min(abs(floor - lo), abs(floor - up))
     else:
         return 0
 
@@ -69,4 +69,3 @@ def main():
 
 
 print(main())
-

@@ -21,6 +21,3 @@ for i in range(M):
         else:
             dp[i + 1][0] = max(dp[i + 1][0], dp[i][0] + c0)
 print((max(dp[M][0], dp[M][1])))
-
-
-

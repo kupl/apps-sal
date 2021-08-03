@@ -8,4 +8,3 @@ class Solution:
             result += piles[i]
             i -= 2
         return result
-

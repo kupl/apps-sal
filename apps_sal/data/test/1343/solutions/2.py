@@ -27,4 +27,3 @@ for s in storages:
             best = min(best, ne[1])
 
 print(-1 if best == float('inf') else best)
-

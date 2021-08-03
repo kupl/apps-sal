@@ -4,7 +4,9 @@ Created on Oct 15, 2015
 @author: Ismael
 '''
 from collections import Counter
-n=int(input())
+n = int(input())
+
+
 def prime_factors(n):
     i = 2
     factors = []
@@ -18,10 +20,12 @@ def prime_factors(n):
         factors.append(n)
     return factors
 
+
 def product(l):
     p = 1
     for i in l:
         p *= i
     return p
+
 
 print(product(Counter(prime_factors(n)).keys()))

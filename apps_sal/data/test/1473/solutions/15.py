@@ -20,6 +20,4 @@ for i in range(n):
     ans[i] = z
     z, s = nxt[s], nxta[z]
 for i in ans:
-    print(i, end = ' ')
-    
-
+    print(i, end=' ')

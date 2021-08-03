@@ -12,4 +12,3 @@ def get_grade(s1, s2, s3):
         return 'D'
     elif 0 <= score <= 100:
         return "F"
-

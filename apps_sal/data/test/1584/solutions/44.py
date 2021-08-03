@@ -12,4 +12,3 @@ for i in range(N):
             ans += x
 
 print(ans)
-

@@ -1,7 +1,7 @@
 class Solution:
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
-        return self.atMost(A, S) - self.atMost(A, S-1)
-        
+        return self.atMost(A, S) - self.atMost(A, S - 1)
+
     def atMost(self, A, S):
         res = 0
         i = 0
@@ -12,5 +12,5 @@ class Solution:
                 print(pre_sum, i)
                 pre_sum -= A[i]
                 i += 1
-            res += j-i+1
+            res += j - i + 1
         return res

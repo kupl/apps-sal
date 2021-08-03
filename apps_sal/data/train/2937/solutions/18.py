@@ -1,5 +1,5 @@
-def between(a,b):
+def between(a, b):
     result = []
-    for i in range(a,b+1):
+    for i in range(a, b + 1):
         result.append(i)
     return result

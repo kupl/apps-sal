@@ -36,8 +36,9 @@ def z_advanced(s):
                 rt = i - 1
     return Z
 
+
 def kmptab(s):
-    tab = [0]*len(s)
+    tab = [0] * len(s)
     i = 1
     j = 0
     while i < len(s):
@@ -47,10 +48,11 @@ def kmptab(s):
             j += 1
         else:
             if j != 0:
-                j = tab[j-1]
+                j = tab[j - 1]
             else:
                 i += 1
     return tab
+
 
 def __starting_point():
     s = input()
@@ -59,7 +61,7 @@ def __starting_point():
     i = len(s)
     while i != 0:
         my_set.add(i)
-        i = tab[i-1]
+        i = tab[i - 1]
     V = []
     dict = {}
     for i in my_set:
@@ -69,13 +71,13 @@ def __starting_point():
 
     v = []
     V.sort()
-    my_tab = [0]*(len(s)+1)
+    my_tab = [0] * (len(s) + 1)
     # print(Z)
     for i in Z:
         my_tab[i] += 1
     somme = 0
     # print(my_tab)
-    for i in range(len(my_tab)-1, -1, -1):
+    for i in range(len(my_tab) - 1, -1, -1):
 
         my_tab[i] += somme
         somme = my_tab[i]
@@ -87,5 +89,6 @@ def __starting_point():
     print(len(v))
     for i in v:
         print(str(i[1]) + " " + str(i[0]))
+
 
 __starting_point()

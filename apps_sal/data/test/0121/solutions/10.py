@@ -17,6 +17,7 @@ def check(A):
                                     return True
     return False
 
+
 A = [0] * 4
 for i in range(4):
     A[i] = list(input())
@@ -30,4 +31,3 @@ for i in range(4):
                 return
             A[i][j] = '.'
 print('NO')
-

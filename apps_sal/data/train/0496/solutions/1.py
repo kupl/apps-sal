@@ -18,4 +18,3 @@ class Solution:
             result += tail_num - A[i]
 
         return result
-

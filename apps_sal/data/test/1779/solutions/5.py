@@ -10,4 +10,3 @@ for x in s:
     else:
         res += x
 print(res)
-

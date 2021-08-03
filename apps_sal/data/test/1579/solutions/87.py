@@ -19,13 +19,12 @@ def dsFind(ds, x):
 def dsUnion(ds, x, y):
     xRoot = dsFind(ds, x)
     yRoot = dsFind(ds, y)
-    
+
     if xRoot != yRoot:
         ds[yRoot] = xRoot
         return True
 
     return False
-
 
 
 N = int(input())
@@ -42,14 +41,14 @@ for _ in range(N):
 
     if not (Y in Q):
         dsMakeSet(Q, ('y', y))
-    
+
     dsUnion(Q, X, Y)
 
 R = {}
 
 for q in Q:
     root = dsFind(Q, q)
-    
+
     if not(root in R):
         R[root] = [0, 0]
 
@@ -61,10 +60,6 @@ for q in Q:
 
 s = 0
 for r in list(R.values()):
-    s += r[0]*r[1]
+    s += r[0] * r[1]
 
 print((s - N))
-
-    
-
-

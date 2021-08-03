@@ -8,6 +8,7 @@ def spin_words(sentence):
         else:
             output.append(word)
     return delimiter.join(output)
-    
+
+
 def reverse(string):
     return string[::-1]

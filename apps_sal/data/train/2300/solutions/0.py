@@ -7,17 +7,17 @@ readline = sys.stdin.readline
 n, = list(map(int, readline().split()))
 p = [-1] + [*list(map(int, readline().split()))]
 
-MOD = 10**9+7
-child = [[] for i in range(n+1)]
-tot = [None for i in range(n+1)]
-one = [None for i in range(n+1)]
-dep = [0]*(n+1)
-p2 = [1]*(n+1)
+MOD = 10**9 + 7
+child = [[] for i in range(n + 1)]
+tot = [None for i in range(n + 1)]
+one = [None for i in range(n + 1)]
+dep = [0] * (n + 1)
+p2 = [1] * (n + 1)
 for i in range(n):
-    p2[i+1] = p2[i]*2%MOD
+    p2[i + 1] = p2[i] * 2 % MOD
 
-for v in range(n,-1,-1):
-    if dep[v]==0:
+for v in range(n, -1, -1):
+    if dep[v] == 0:
         tot[v] = []
         one[v] = []
     else:
@@ -28,29 +28,28 @@ for v in range(n,-1,-1):
         #zero_sum = [0]*(dep[v])
         child[v].pop()
         if child[v]:
-            zero = [p2[tot[v][j]]-one[v][j] for j in range(-len(one[child[v][-1]]),0)]
+            zero = [p2[tot[v][j]] - one[v][j] for j in range(-len(one[child[v][-1]]), 0)]
         for c in child[v]:
-            for j in range(-len(one[c]),0):
-                z = p2[tot[c][j]]-one[c][j]
-                one[v][j] = (one[v][j]*z+zero[j]*one[c][j])%MOD
-                zero[j] = zero[j]*z%MOD
+            for j in range(-len(one[c]), 0):
+                z = p2[tot[c][j]] - one[c][j]
+                one[v][j] = (one[v][j] * z + zero[j] * one[c][j]) % MOD
+                zero[j] = zero[j] * z % MOD
                 tot[v][j] += tot[c][j]
 
     tot[v].append(1)
     one[v].append(1)
 
     child[p[v]].append(v)
-    dep[p[v]] = max(dep[p[v]],dep[v]+1)        
+    dep[p[v]] = max(dep[p[v]], dep[v] + 1)
 
-    #print(v,tot[v],one[v])
-        
-#print("tot",tot[0])
-#print("one",one[0])
+    # print(v,tot[v],one[v])
+
+# print("tot",tot[0])
+# print("one",one[0])
 
 ans = 0
-for i,j in zip(tot[0],one[0]):
-    ans += pow(2,n+1-i,MOD)*j%MOD
+for i, j in zip(tot[0], one[0]):
+    ans += pow(2, n + 1 - i, MOD) * j % MOD
 
-print((ans%MOD))
-#print(sum(tot[0]))
-
+print((ans % MOD))
+# print(sum(tot[0]))

@@ -10,4 +10,3 @@ def next_prime(n):
     while not is_prime(i):
         i += 1
     return i
-

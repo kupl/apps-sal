@@ -11,7 +11,7 @@ def pairwise(arr, n):
         else:
             j -= 1
     pairs.sort()
-    
+
     # Identify the lowest possible index for each element in pairs
     indices = []
     i, last = 0, None
@@ -20,5 +20,5 @@ def pairwise(arr, n):
         i = (indices[-1] + 1) if x == last else 0
         indices.append(arr.index(x, i))
         last = x
-    
+
     return sum(indices)

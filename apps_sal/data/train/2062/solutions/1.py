@@ -1,5 +1,6 @@
 MOD = 10 ** 9 + 7
 
+
 def power(x, n, MOD):
     ans = 1
     while n:
@@ -9,11 +10,13 @@ def power(x, n, MOD):
         n //= 2
     return ans
 
+
 def getFacts(n, MOD):
     facts = [1] + [0] * n
     for x in range(1, n + 1):
         facts[x] = (facts[x - 1] * x) % MOD
     return facts
+
 
 def getInvFacts(n, factN, MOD):
     invFacts = [0] * (n + 1)
@@ -21,6 +24,7 @@ def getInvFacts(n, factN, MOD):
     for x in reversed(list(range(n))):
         invFacts[x] = (invFacts[x + 1] * (x + 1)) % MOD
     return invFacts
+
 
 def getInvss(B, D, facts, MOD):
     invss = [[0] * (D + 1) for _ in range(B + 1)]
@@ -51,4 +55,3 @@ for i in range(A, B + 1):
             dp[i][j] %= MOD
 
 print((dp[B][N]))
-

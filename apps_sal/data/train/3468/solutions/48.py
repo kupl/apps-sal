@@ -1,6 +1,7 @@
 import string
 alphabet = {key: idx for idx, key in enumerate(string.ascii_lowercase)}
 
+
 def scramble(s1, s2):
     used_words1 = [0] * 26
     used_words2 = [0] * 26
@@ -12,5 +13,3 @@ def scramble(s1, s2):
         if used_words2[i] > used_words1[i]:
             return False
     return True
-        
-

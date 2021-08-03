@@ -8,4 +8,3 @@ while k > 0:
     k -= i
 
 print(xs[h - 1])
-

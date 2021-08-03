@@ -8,6 +8,3 @@ class Solution:
             elif dist / vel > stack[-1]:
                 stack.append(dist / vel)
         return len(stack)
-        
-        
-

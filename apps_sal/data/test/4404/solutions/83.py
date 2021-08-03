@@ -1,3 +1,3 @@
-s=input()
-s=int(s.replace("/",""))
-print(["Heisei","TBD"][s>20190430])
+s = input()
+s = int(s.replace("/", ""))
+print(["Heisei", "TBD"][s > 20190430])

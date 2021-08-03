@@ -5,5 +5,5 @@ while n != 0:
     n -= 1
     if (day % m == 0):
         n += 1
-    
+
 print(day)

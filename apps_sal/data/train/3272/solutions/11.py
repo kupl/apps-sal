@@ -1,1 +1,1 @@
-find_average = lambda nums: 0 if not nums else sum(nums) / (len(nums) + .0)
+def find_average(nums): return 0 if not nums else sum(nums) / (len(nums) + .0)

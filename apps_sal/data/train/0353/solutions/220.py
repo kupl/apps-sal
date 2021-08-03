@@ -6,23 +6,20 @@ class Solution:
 
         if nums[-1] <= (target // 2):
             return (pow(2, len(nums), mod) - 1)
-        
+
         end = len(nums) - 1
         while end >= 0 and nums[0] + nums[end] > target:
             end -= 1
 
-        print (end)
+        print(end)
         for start in range(len(nums)):
             while (start <= end) and (nums[start] + nums[end]) > target:
                 end -= 1
-            
+
             if start > end:
                 break
             print((start, end))
-            cnt += pow(2, (end-start), mod)
+            cnt += pow(2, (end - start), mod)
             cnt %= mod
-        
-        
-        return cnt
-        
 
+        return cnt

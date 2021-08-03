@@ -6,4 +6,3 @@ def decode(message):
         else:
             output += letter
     return output
-

@@ -8,9 +8,8 @@ class Solution:
         indexes = tuple([getattr(el, 'span')()[0] for el in matches])
 
         for i in range(1, len(indexes)):
-            diff = indexes[i] - indexes[i-1]
+            diff = indexes[i] - indexes[i - 1]
             if diff <= k:
                 return False
 
         return True
-

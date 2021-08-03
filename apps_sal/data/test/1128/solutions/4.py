@@ -7,4 +7,3 @@ while True:
         break
     s.add(a)
     a *= 2
-

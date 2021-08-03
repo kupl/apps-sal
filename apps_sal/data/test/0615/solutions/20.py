@@ -22,4 +22,3 @@ for i in range(2, n - 1):
         r2 = r4
     ans = min(ans, max(l1, l2, r1, r2) - min(l1, l2, r1, r2))
 print(ans)
-

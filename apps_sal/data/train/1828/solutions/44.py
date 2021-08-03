@@ -8,7 +8,7 @@ class Solution:
                 maxFreqCode = code
         i, n = 0, len(barcodes)
         ans = [0] * n
-        for code in range(10001):    
+        for code in range(10001):
             if code == 0:
                 code = maxFreqCode
             for _ in range(freq[code]):
@@ -16,5 +16,5 @@ class Solution:
                     i = 1
                 ans[i] = code
                 i += 2
-            freq[code] = 0    
+            freq[code] = 0
         return ans

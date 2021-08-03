@@ -4,6 +4,8 @@ def add(i, b):
         return "-" + str(b)
     else:
         return "+" + str(b)
+
+
 def main():
     S = input()
     a, b, c, d = int(S[0]), int(S[1]), int(S[2]), int(S[3])
@@ -19,4 +21,6 @@ def main():
                     ans += "=7"
                     print(ans)
                     return
+
+
 main()

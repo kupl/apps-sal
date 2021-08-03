@@ -21,4 +21,3 @@ for _ in range(q):
             else:
                 p.appendleft(c)
 print((''.join(p) if a == 1 else ''.join(p)[::-1]))
-

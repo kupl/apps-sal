@@ -7,9 +7,9 @@ def solve(*args: str) -> str:
     A = np.array(tuple(map(int, args[1].split())))
 
     l, r = 0, np.max(A)
-    while l+1 < r:
-        m = (l+r)//2
-        if k < np.sum(np.ceil(A/m)-1):
+    while l + 1 < r:
+        m = (l + r) // 2
+        if k < np.sum(np.ceil(A / m) - 1):
             l = m
         else:
             r = m
@@ -19,5 +19,6 @@ def solve(*args: str) -> str:
 
 def __starting_point():
     print((solve(*(open(0).read().splitlines()))))
+
 
 __starting_point()

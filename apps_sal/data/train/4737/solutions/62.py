@@ -17,8 +17,3 @@ def fuel_price(litres, price_per_liter):
     else:
         discounted = price_per_liter - 0.25
         return round(discounted * litres, 2)
-    
-        
-        
-    
-

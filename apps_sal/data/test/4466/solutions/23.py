@@ -8,5 +8,4 @@ else:
         sum += y + z
         ans += 1
 
-
     print(ans - 1)

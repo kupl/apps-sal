@@ -64,5 +64,3 @@ for c, a, b in Branch:
         N -= 1
 
 print(ans)
-
-

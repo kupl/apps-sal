@@ -1,11 +1,13 @@
 from collections import namedtuple
-from itertools   import permutations
+from itertools import permutations
 
 Rect = namedtuple("Rect", "h w c")
+
 
 def rotations(r):
     yield r
     yield Rect(r[1], r[0], r[2])
+
 
 def main():
     a, b, c, d, e, f = map(int, input().split())
@@ -42,5 +44,5 @@ def main():
                         return
     print(-1)
 
-main()
 
+main()

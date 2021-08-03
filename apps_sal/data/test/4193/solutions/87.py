@@ -26,4 +26,3 @@ if bingo[2][0] and bingo[1][1] and bingo[0][2]:
     return
 
 print('No')
-

@@ -3,7 +3,7 @@ n, d, h = map(int, input().split())
 if n == 2 and d == h == 1:
     print(1, 2)
     return
-        
+
 if d == h == 1:
     print(-1)
     return

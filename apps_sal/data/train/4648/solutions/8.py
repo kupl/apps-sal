@@ -1,1 +1,1 @@
-automorphic = lambda n:["Not!!","Automorphic"][str(n**2).endswith(str(n))]
+def automorphic(n): return ["Not!!", "Automorphic"][str(n**2).endswith(str(n))]

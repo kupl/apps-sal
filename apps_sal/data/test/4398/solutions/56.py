@@ -9,4 +9,3 @@ for i in range(0, N):
 
 # リスト内をくっつけて出力
 print((''.join(new_str)))
-

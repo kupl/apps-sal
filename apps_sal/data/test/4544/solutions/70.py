@@ -7,5 +7,3 @@ Ans = A.copy()
 Ans[1:] += A[:-1]
 Ans[:-1] += A[1:]
 print((max(Ans)))
-
-

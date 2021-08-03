@@ -1,4 +1,17 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time, copy,bisect
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import bisect
 #from operator import itemgetter
 #from heapq import heappush, heappop
 #import numpy as np
@@ -13,11 +26,13 @@ mod = 10**9 + 7
 
 stdin = sys.stdin
 
-ni = lambda: int(ns())
-nf = lambda: float(ns())
-na = lambda: list(map(int, stdin.readline().split()))
-nb = lambda: list(map(float, stdin.readline().split()))
-ns = lambda: stdin.readline().rstrip()  # ignore trailing spaces
+
+def ni(): return int(ns())
+def nf(): return float(ns())
+def na(): return list(map(int, stdin.readline().split()))
+def nb(): return list(map(float, stdin.readline().split()))
+def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+
 
 X, Y, A, B, C = na()
 p = na()
@@ -28,8 +43,8 @@ q.append(inf)
 p.sort(reverse=True)
 q.sort(reverse=True)
 r.sort(reverse=True)
-s1 = sum(p[1:X+1])
-s2 = sum(q[1:Y+1])
+s1 = sum(p[1:X + 1])
+s2 = sum(q[1:Y + 1])
 p_idx = X
 q_idx = Y
 ans = s1 + s2

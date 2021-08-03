@@ -1,5 +1,5 @@
-n,m=input().split()
-if n==m:
-    print (n)
+n, m = input().split()
+if n == m:
+    print(n)
 else:
-    print (1)
+    print(1)

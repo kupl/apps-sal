@@ -24,4 +24,3 @@ for i in range(n):
         res += 1
 
 print(res)
-

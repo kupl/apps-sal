@@ -1,8 +1,8 @@
 import operator as o
 
-add =      o.add
+add = o.add
 multiply = o.mul
-divide =   o.truediv
-mod =      o.mod
+divide = o.truediv
+mod = o.mod
 exponent = o.pow
-subt =     o.sub
+subt = o.sub

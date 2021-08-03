@@ -3,7 +3,7 @@ s = [0] * 4
 r = [0] * 4
 p = [0] * 4
 for i in range(4):
-    l[i], s[i], r[i], p[i] = map(int ,input().split())
+    l[i], s[i], r[i], p[i] = map(int, input().split())
 error = 0
 for i in range(4):
     if (l[i] + s[i] + r[i] > 0) and (p[i] == 1):

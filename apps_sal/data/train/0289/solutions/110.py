@@ -1,4 +1,6 @@
 from typing import List
+
+
 class Solution:
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         prefix_sums = [0]
@@ -10,10 +12,10 @@ class Solution:
         best = 0
         left = 0
         memo = dict()
-        while left+L <= len(A) and left+L < len(prefix_sums):
-            limits = ((0, left), (left+L, len(prefix_sums)))
+        while left + L <= len(A) and left + L < len(prefix_sums):
+            limits = ((0, left), (left + L, len(prefix_sums)))
             best_m = self.get_max_subarray(prefix_sums, M, limits, memo)
-            subarray_sum = best_m[0] + prefix_sums[left+L]-prefix_sums[left]
+            subarray_sum = best_m[0] + prefix_sums[left + L] - prefix_sums[left]
             # if subarray_sum > best:
             #     print(f'{A[best_m[1]:best_m[2]]}={best_m[0]}')
             #     print(f'{A[left:left+L]}={subarray_sum-best_m[0]}')
@@ -25,16 +27,15 @@ class Solution:
         # stores highest sum as tuple of (sum, left, right (exclusive))
         if (length, limits) in memo:
             return memo[(length, limits)]
-        high_score = (0,0,0)
+        high_score = (0, 0, 0)
         for limit in limits:
             left = limit[0]
             # test subarrays of length within limit[0] and limit[1] (excluding limit[1])
             while left + length <= limit[1] and left + length < len(sums):
-                subarray_sum = sums[left+length] - sums[left]
+                subarray_sum = sums[left + length] - sums[left]
                 # print(f'{left}:{left+length}={subarray_sum}')
-                high_score = max(high_score, (subarray_sum, left, left+length))
+                high_score = max(high_score, (subarray_sum, left, left + length))
                 # print(f'high: {high_score}')
-                left+=1
+                left += 1
         memo[(length, limits)] = high_score
         return high_score
-

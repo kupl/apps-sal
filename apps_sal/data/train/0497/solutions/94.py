@@ -8,7 +8,7 @@ class Solution:
         DP = {points[0]: 0}
         res = 0
         for i in range(1, len(points)):
-            DP[points[i]] = DP[points[i-1]]
+            DP[points[i]] = DP[points[i - 1]]
             for start, profit in dic[points[i]]:
                 DP[points[i]] = max(DP[points[i]], DP[start] + profit)
             res = max(res, DP[points[i]])

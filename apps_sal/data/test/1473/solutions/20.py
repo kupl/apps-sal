@@ -19,7 +19,8 @@ for i in s:
         l ^= i
     else:
         r ^= i
-if l not in m: l = r
+if l not in m:
+    l = r
 a, b = 0, l
 ans = str(b)
 for i in range(1, n, 2):

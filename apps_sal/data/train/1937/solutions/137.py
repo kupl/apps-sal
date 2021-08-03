@@ -3,6 +3,7 @@ class King:
         self.name = name
         self.children = dict()
 
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -17,7 +18,6 @@ class ThroneInheritance:
         childNode = King(childName)
         parentNode.children[childName] = childNode
         tree[childName] = childNode
-        
 
     def death(self, name: str) -> None:
         self.dead.add(name)
@@ -25,14 +25,14 @@ class ThroneInheritance:
     def getInheritanceOrder(self) -> List[str]:
         tree = self.inheritTree
         res = []
-        
+
         def inorder(king, res):
             if king not in self.dead:
                 res.append(king)
             child = tree[king]
             for c in child.children:
                 inorder(c, res)
-        
+
         king = self.king
         inorder(king.name, res)
         return res
@@ -43,4 +43,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

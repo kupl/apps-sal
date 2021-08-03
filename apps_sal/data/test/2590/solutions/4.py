@@ -6,8 +6,7 @@ for tc in range(int(input())):
     i = 0
     while i != n:
         sm += ls[i]
-        if sm < w * (i+1):
+        if sm < w * (i + 1):
             break
         i += 1
     print(i)
-

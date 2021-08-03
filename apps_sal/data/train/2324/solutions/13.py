@@ -43,15 +43,15 @@ input = sys.stdin.readline
 
 N = int(input())
 adj = [[] for _ in range(N)]
-for _ in range(N-1):
+for _ in range(N - 1):
     a, b = list(map(int, input().split()))
-    adj[a-1].append(b-1)
-    adj[b-1].append(a-1)
+    adj[a - 1].append(b - 1)
+    adj[b - 1].append(a - 1)
 
 Un = UnionFind(N)
-S = [N-1]
+S = [N - 1]
 F = [0]
-S_or = N-1
+S_or = N - 1
 F_or = 0
 
 
@@ -86,10 +86,9 @@ while S or F:
         turn = 1
 
 cntF = Un.get_table().count(0)
-cntS = Un.get_table().count(N-1)
+cntS = Un.get_table().count(N - 1)
 if cntF > cntS:
     ans = "Fennec"
 else:
     ans = "Snuke"
 print(ans)
-

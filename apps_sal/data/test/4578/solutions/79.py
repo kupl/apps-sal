@@ -1,9 +1,8 @@
-N,X=list(map(int,input().split()))
+N, X = list(map(int, input().split()))
 
-m=[]
+m = []
 
 for i in range(N):
     m.append(int(input()))
 
-print(((X-sum(m))//min(m)+N))
-
+print(((X - sum(m)) // min(m) + N))

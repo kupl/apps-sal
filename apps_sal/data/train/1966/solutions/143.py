@@ -13,7 +13,7 @@ class Solution:
                 stack.append(i)
 
             return sum(sums)
-        
+
         n_rows = len(mat)
         n_cols = len(mat[0])
         h = [0] * n_cols
@@ -25,5 +25,5 @@ class Solution:
                 else:
                     h[i] = 0
             res += pom(h)
-        
+
         return res

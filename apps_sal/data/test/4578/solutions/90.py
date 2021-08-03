@@ -1,7 +1,7 @@
 N, X = map(int, input().split())
 donut_list = []
 for i in range(N):
-  donut_list.append(int(input()))
+    donut_list.append(int(input()))
 
 donut_sum = sum(donut_list)
 X_remaining = X - donut_sum

@@ -8,4 +8,3 @@ def bracket_buster(strng):
         return REGEX.findall(strng)
     except TypeError:
         return 'Take a seat on the bench.'
-

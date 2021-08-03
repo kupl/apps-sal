@@ -2,6 +2,7 @@ from sys import stdin as fin, setrecursionlimit as srl
 # fin = open("hcc2016d1.in", "r")
 debug = False
 
+
 def process():
     r, c = list(map(int, fin.readline().split()))
     emp = [True] * c
@@ -16,6 +17,8 @@ def process():
             cnt += 1
         prev = emp[i]
     print(cnt)
+
+
 # fin.readline()
 # process()
 if not debug:
@@ -24,4 +27,3 @@ else:
     while fin.readline().strip() == '':
         process()
         print("----------------------------")
-

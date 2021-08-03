@@ -26,4 +26,3 @@ for _ in range(q):
     kouho3 = min(x - left_s, right_t - x) * 2 + max(x - left_s, right_t - x)
     kouho4 = min(x - left_t, right_s - x) * 2 + max(x - left_t, right_s - x)
     print((min(kouho1, kouho2, kouho3, kouho4)))
-

@@ -10,4 +10,3 @@ for i in range(q):
                 f = 0
     if f:
         print("NO")
-

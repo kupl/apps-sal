@@ -1,7 +1,8 @@
 
 
-
 from heapq import *
+
+
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
 
@@ -27,13 +28,12 @@ class Solution:
 
             return len(visited)
 
-        graph = defaultdict(list)        
+        graph = defaultdict(list)
         for from_, to, distance in edges:
             graph[from_].append((to, distance))
             graph[to].append((from_, distance))
 
-        neighbours = [find_n_neighbours(i) for i in range(n) ]
+        neighbours = [find_n_neighbours(i) for i in range(n)]
         min_count = min(neighbours)
         sel_cities = [i for i in range(n) if neighbours[i] == min_count]
         return sel_cities[-1]
-

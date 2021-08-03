@@ -8,4 +8,3 @@ h1, h2 = list(map(int, input().split()))
 s += 100 * h1
 s -= 50 * h2
 print(int(s))
-

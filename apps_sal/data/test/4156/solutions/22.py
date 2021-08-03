@@ -12,4 +12,3 @@ if mn > mx:
     print(0)
 else:
     print(mx - mn + 1)
-

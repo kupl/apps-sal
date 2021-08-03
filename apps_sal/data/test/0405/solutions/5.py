@@ -15,4 +15,3 @@ for ch in s[::-1]:
         break
 
 print(result)
-

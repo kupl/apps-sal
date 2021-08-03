@@ -4,9 +4,9 @@ S = []
 count = 0
 
 while count < N:
-	str = input()
-	S.append(str)
-	count += 1
+    str = input()
+    S.append(str)
+    count += 1
 
 S_ord = sorted(S)
 print(''.join(S_ord))

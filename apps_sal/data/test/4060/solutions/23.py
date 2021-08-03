@@ -25,7 +25,7 @@ for i in range(n):
 
 currBal = 0
 currCan = True
-for i in range(n-1, -1,- 1):
+for i in range(n - 1, -1, - 1):
     if s[i] == ')':
         suffBal[i] = currBal + 1
     else:
@@ -42,10 +42,10 @@ for i in range(n-1, -1,- 1):
 ans = 0
 for i in range(n):
     if s[i] == '(':
-        if prefCan[i-1] and suffCan[i+1] and prefBal[i-1] - 1 - suffBal[i+1] == 0:
+        if prefCan[i - 1] and suffCan[i + 1] and prefBal[i - 1] - 1 - suffBal[i + 1] == 0:
             ans += 1
     if s[i] == ')':
-        if prefCan[i-1] and suffCan[i+1] and prefBal[i-1] + 1 - suffBal[i+1] == 0:
+        if prefCan[i - 1] and suffCan[i + 1] and prefBal[i - 1] + 1 - suffBal[i + 1] == 0:
             ans += 1
 
 print(ans)

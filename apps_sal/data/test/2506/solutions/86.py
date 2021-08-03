@@ -10,15 +10,15 @@ def get_count(tot):
     '''
     ret = 0
     for i in range(N):
-        cnt = bisect_left(A, tot-A[i])
+        cnt = bisect_left(A, tot - A[i])
         ret += N - cnt
     return ret
 
 
 # 右からの累積和
 Asum = A[:]
-for i in range(N-2, -1, -1):
-    Asum[i] += Asum[i+1]
+for i in range(N - 2, -1, -1):
+    Asum[i] += Asum[i + 1]
 
 
 def get_sum(tot):
@@ -27,9 +27,9 @@ def get_sum(tot):
     '''
     ret = 0
     for i in range(N):
-        idx = bisect_left(A, tot-A[i])
+        idx = bisect_left(A, tot - A[i])
         cnt = N - idx
-        ret += A[i]*cnt
+        ret += A[i] * cnt
         # print(idx)
         if idx == N:
             continue
@@ -42,7 +42,7 @@ def get_sum(tot):
 ok = 0
 ng = 10**12
 while ok + 1 != ng:
-    md = (ok + ng)//2
+    md = (ok + ng) // 2
     if M <= get_count(md):
         ok = md
     else:
@@ -51,7 +51,6 @@ while ok + 1 != ng:
 # print(get_sum(ok+1))
 # print(M - get_count(ok+1))
 # print(Asum)
-ans = get_sum(ok+1) + (M - get_count(ok+1))*ok
+ans = get_sum(ok + 1) + (M - get_count(ok + 1)) * ok
 
 print(ans)
-

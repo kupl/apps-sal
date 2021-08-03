@@ -10,7 +10,8 @@ def main():
         k -= ab[i][1]
         i += 1
     else:
-        print(ab[i-1][0])
+        print(ab[i - 1][0])
 
-if __name__ ==  "__main__":
+
+if __name__ == "__main__":
     main()

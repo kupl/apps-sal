@@ -16,8 +16,9 @@ def rop():
             o = i ** 2
             while o < q:
                 a[o] = 0
-                o +=  i ** 2
+                o += i ** 2
     return a
+
 
 d = int(input())
 a = rop()
@@ -25,6 +26,7 @@ a = rop()
 
 def pro(x):
     return pow(x, 10 ** 9 + 5, 10 ** 9 + 7)
+
 
 f = 1
 for i in range(2, q):

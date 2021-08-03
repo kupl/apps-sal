@@ -2,7 +2,7 @@ from itertools import product, takewhile
 
 
 def main():
-    words = ["eraser", "erase",  "dreamer", "dream"]
+    words = ["eraser", "erase", "dreamer", "dream"]
     S = input()[::-1]
     for word in words:
         S = S.replace(word[::-1], '')
@@ -15,5 +15,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

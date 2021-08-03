@@ -4,5 +4,5 @@ for i in range(t):
     print(len(n) - n.count('0'))
     for j in range(len(n)):
         if n[j] != '0':
-            print(n[j], '0' * (len(n) - j - 1),end=' ', sep='')
+            print(n[j], '0' * (len(n) - j - 1), end=' ', sep='')
     print()

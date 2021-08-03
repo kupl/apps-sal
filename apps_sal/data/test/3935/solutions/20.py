@@ -34,4 +34,3 @@ source()
 n, erased = f(list(map(int, source().split(" "))))
 print(n)
 print(" ".join(map(str, erased)))
-

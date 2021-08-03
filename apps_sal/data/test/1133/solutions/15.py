@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 from collections import defaultdict
-from itertools   import combinations
+from itertools import combinations
+
 
 def main():
     n = int(input())
@@ -31,9 +32,9 @@ def main():
         result = max(result, d[(a, b)])
     print(result)
 
+
 try:
     while True:
         main()
 except EOFError:
     pass
-

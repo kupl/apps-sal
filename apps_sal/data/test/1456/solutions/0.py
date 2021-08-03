@@ -36,5 +36,3 @@ for i in range(1, 2 * n):
         else:
             print('.', end='')
     print('')
-
-

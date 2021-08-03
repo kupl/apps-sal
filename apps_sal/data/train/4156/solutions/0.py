@@ -1,2 +1,2 @@
-def findSquares(x,y):
-    return sum( (x-i) * (y-i) for i in range(y) )
+def findSquares(x, y):
+    return sum((x - i) * (y - i) for i in range(y))

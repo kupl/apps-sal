@@ -55,4 +55,3 @@ for a, b in items:
     union_find.merge(a, b)
 ans = union_find.group[union_find.find(1)]
 print(*ans)
-

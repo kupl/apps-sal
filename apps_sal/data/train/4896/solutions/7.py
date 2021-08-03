@@ -2,11 +2,13 @@ def build_trie(*words):
     trie = {}
     for word in words:
         trie = insert(trie, build_branch(word) if word else {})
-    return trie        
+    return trie
+
 
 def build_branch(word, i=0):
     if i < len(word):
-        return {word[:i+1]: build_branch(word, i+1)}
+        return {word[:i + 1]: build_branch(word, i + 1)}
+
 
 def insert(trie, branch):
     if branch and trie:
@@ -16,4 +18,3 @@ def insert(trie, branch):
         else:
             trie[k] = v
     return trie or branch
-

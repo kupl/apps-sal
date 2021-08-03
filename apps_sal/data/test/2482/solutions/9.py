@@ -1,76 +1,79 @@
-def main():  
-  #Union Find
+def main():
+    # Union Find
 
-  #xの根を求める
-  def find(x):
-      if par[x] < 0:
-          return x
-      else:
-          par[x] = find(par[x])
-          return par[x]
-  #xとyの属する集合の併合
-  def unite(x,y):
-      x = find(x)
-      y = find(y)
+    # xの根を求める
+    def find(x):
+        if par[x] < 0:
+            return x
+        else:
+            par[x] = find(par[x])
+            return par[x]
+    # xとyの属する集合の併合
 
-      if x == y:
-          return False
-      else:
-          #sizeの大きいほうがx
-          if par[x] > par[y]:
-              x,y = y,x
-          par[x] += par[y]
-          par[y] = x
-          return True
+    def unite(x, y):
+        x = find(x)
+        y = find(y)
 
-  def find2(x):
-    if pa[x] < 0:
-        return x
-    else:
-        pa[x] = find2(pa[x])
-        return pa[x]
+        if x == y:
+            return False
+        else:
+            # sizeの大きいほうがx
+            if par[x] > par[y]:
+                x, y = y, x
+            par[x] += par[y]
+            par[y] = x
+            return True
 
-  import sys
-  input = sys.stdin.readline
+    def find2(x):
+        if pa[x] < 0:
+            return x
+        else:
+            pa[x] = find2(pa[x])
+            return pa[x]
 
-  n,k,l = [int(i) for i in input().split()]
-  par = [-1]*n
-  pa = [-1]*n
-  ans = [0]*n
+    import sys
+    input = sys.stdin.readline
 
-  for i in range(k):
-    p,q = [int(i) for i in input().split()]
-    unite(p-1,q-1)
+    n, k, l = [int(i) for i in input().split()]
+    par = [-1] * n
+    pa = [-1] * n
+    ans = [0] * n
 
-  def unite2(x,y):
-      x = find2(x)
-      y = find2(y)
-      if x == y:
-          return False
-      else:
-          if pa[x] > pa[y]:
-              x,y = y,x
-          pa[x] += pa[y]
-          pa[y] = x
-          return True
+    for i in range(k):
+        p, q = [int(i) for i in input().split()]
+        unite(p - 1, q - 1)
 
-  for i in range(l):
-    r,s = [int(i) for i in input().split()]
-    unite2(r-1,s-1)
+    def unite2(x, y):
+        x = find2(x)
+        y = find2(y)
+        if x == y:
+            return False
+        else:
+            if pa[x] > pa[y]:
+                x, y = y, x
+            pa[x] += pa[y]
+            pa[y] = x
+            return True
 
-  dic = {}
-  chk = []
-  for i in range(n):
-      p1 = find(i)
-      p2 = find2(i)
-      chk.append((p1,p2))
-      if (p1,p2) in dic:
-          dic[(p1,p2)] += 1
-      else: 
-          dic[(p1,p2)] = 1
-  print((' '.join([str(dic[chk[i]]) for i in range(n)])))
-  
+    for i in range(l):
+        r, s = [int(i) for i in input().split()]
+        unite2(r - 1, s - 1)
+
+    dic = {}
+    chk = []
+    for i in range(n):
+        p1 = find(i)
+        p2 = find2(i)
+        chk.append((p1, p2))
+        if (p1, p2) in dic:
+            dic[(p1, p2)] += 1
+        else:
+            dic[(p1, p2)] = 1
+    print((' '.join([str(dic[chk[i]]) for i in range(n)])))
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

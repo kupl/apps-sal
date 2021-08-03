@@ -21,5 +21,5 @@ for i in range(len(S)):
             pass
         else:
             print('No')
-            return    
+            return
 print('Yes')

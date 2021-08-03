@@ -8,4 +8,4 @@ class Solution:
                 a.append(prev)
         a.sort()
         # print(a)
-        return sum(a[left-1:right]) % (10**9 +7)
+        return sum(a[left - 1:right]) % (10**9 + 7)

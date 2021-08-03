@@ -1,5 +1,6 @@
 from collections import deque, defaultdict
 
+
 def BFS(graph, source, visited, colours):
     # Generator which yields all vertices connected to source (includes source)
     colour_counts = defaultdict(int)
@@ -26,11 +27,13 @@ def BFS(graph, source, visited, colours):
 
     return total, max_count
 
+
 def get_totals_and_maxcounts(adjacency_list, n, colours):
     visited = [False] * n
     for i in range(n):
         if not visited[i]:
             yield BFS(adjacency_list, i, visited, colours)
+
 
 def __starting_point():
     n, m, k = list(map(int, input().split()))
@@ -41,11 +44,11 @@ def __starting_point():
         adjacency_list[l].append(r)
         adjacency_list[r].append(l)
 
-
     changes = 0
     for total, max_count in get_totals_and_maxcounts(adjacency_list, n, colours):
         changes += total - max_count
 
     print(changes)
+
 
 __starting_point()

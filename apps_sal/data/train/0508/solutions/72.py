@@ -9,8 +9,8 @@ heapq.heapify(heap)
 Set = set([])
 for i in range(N):
     s, t, x = map(int, input().split())
-    que.append((s-x, 0, i))  # append
-    que.append((t-x, 1, i))  # remove
+    que.append((s - x, 0, i))  # append
+    que.append((t - x, 1, i))  # remove
     D[i] = x
 
 for i in range(Q):

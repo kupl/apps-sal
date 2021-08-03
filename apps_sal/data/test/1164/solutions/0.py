@@ -31,4 +31,3 @@ ans.reverse()
 if ansb != 0:
     ans.append("%02d" % ansb)
 print(".".join(ans))
-

@@ -1,1 +1,1 @@
-print('abcdefghijklmnopqrstuvwxyz'['abcdefghijklmnopqrstuvwxyz'.find(input())+1])
+print('abcdefghijklmnopqrstuvwxyz'['abcdefghijklmnopqrstuvwxyz'.find(input()) + 1])

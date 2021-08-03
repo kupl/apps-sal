@@ -12,4 +12,3 @@ if ans > 40:
     print("inf")
 else:
     print(ans)
-

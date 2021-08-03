@@ -1,2 +1,2 @@
-def add_binary(a,b):
-    return str(bin(a+b)).split('b')[1]
+def add_binary(a, b):
+    return str(bin(a + b)).split('b')[1]

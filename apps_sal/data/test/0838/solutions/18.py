@@ -19,5 +19,5 @@ for i in row:
 for i in col:
     res += (2 ** i[0]) + (2 ** i[1]) - 2
 
-res -= n *m
+res -= n * m
 print(res)

@@ -1,19 +1,19 @@
 def HonestOrUnkind2():
     n = int(input())
-    lang = [[-1]*n for _ in range(n)]
+    lang = [[-1] * n for _ in range(n)]
     ans = 0
-    
+
     for i in range(n):
         a = int(input())
         for _ in range(a):
             x, y = list(map(int, input().split()))
-            lang[i][x-1] = y
+            lang[i][x - 1] = y
 
     # 2分全探索
     for i in range(2**n):
         status = [0 for _ in range(n)]
         for j in range(n):
-            if (i>>j)&1:
+            if (i >> j) & 1:
                 status[j] = 1
         ans0 = True
         for j in range(n):
@@ -26,10 +26,10 @@ def HonestOrUnkind2():
         if ans0:
             ans = max(ans, status.count(1))
     print(ans)
-                    
-                
+
+
 def __starting_point():
     HonestOrUnkind2()
-    
+
 
 __starting_point()

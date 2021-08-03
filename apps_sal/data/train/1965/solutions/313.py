@@ -1,20 +1,22 @@
 from copy import deepcopy
 
+
 class DSU:
     def __init__(self, n):
-        self.dsu = [i for i in range(n+1)]
-        
+        self.dsu = [i for i in range(n + 1)]
+
     def find(self, x):
         if x == self.dsu[x]:
             return x
         self.dsu[x] = self.find(self.dsu[x])
         return self.dsu[x]
-    
+
     def union(self, x, y):
         xr = self.find(x)
         yr = self.find(y)
         self.dsu[yr] = xr
         return
+
 
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
@@ -51,8 +53,7 @@ class Solution:
             dsu2.union(x, y)
             counter2 += 1
         # print(dsu2.dsu)
-        if counter1 + counter3 != n-1 or counter2 + counter3 != n-1:
+        if counter1 + counter3 != n - 1 or counter2 + counter3 != n - 1:
             return -1
         else:
-            return len(edges) + counter3 - 2*n +2
-
+            return len(edges) + counter3 - 2 * n + 2

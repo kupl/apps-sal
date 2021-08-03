@@ -7,9 +7,9 @@ def main():
         return
 
     final_ans = n + 1
-    for start, change_start in [(a[0], False), (a[0]-1, True), (a[0] + 1, True)]:
-        for end, change_end in [(a[-1], False), (a[-1]-1, True), (a[-1]+1, True)]:
-            d, r = divmod(end - start, n-1)
+    for start, change_start in [(a[0], False), (a[0] - 1, True), (a[0] + 1, True)]:
+        for end, change_end in [(a[-1], False), (a[-1] - 1, True), (a[-1] + 1, True)]:
+            d, r = divmod(end - start, n - 1)
             if r == 0:
                 b = start
                 ans = 0
@@ -19,7 +19,7 @@ def main():
                     ans += 1
 
                 impossible = False
-                for i in range(1, n-1):
+                for i in range(1, n - 1):
                     if impossible:
                         break
                     if a[i] - b == d:
@@ -41,4 +41,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

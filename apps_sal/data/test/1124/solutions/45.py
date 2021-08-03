@@ -1,7 +1,8 @@
 def gcd(a, b):
     while b != 0:
-        a, b = b, a%b
+        a, b = b, a % b
     return a
+
 
 n = int(input())
 a = list(set([int(i) for i in input().split()]))

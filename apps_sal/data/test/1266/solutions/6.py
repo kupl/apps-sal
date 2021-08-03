@@ -36,7 +36,7 @@ for i in range(n):
         elif x0 > x > West:
             fWest = f
             West = x
-            
+
     if x + y == x0 + y0:
         if y0 < y < NW:
             fNW = f
@@ -51,7 +51,7 @@ for i in range(n):
         elif y0 > y > SW:
             fSW = f
             SW = y
-ans  = False
+ans = False
 if fSW == 'Q' or fSE == 'Q' or fNW == 'Q' or fNE == 'Q':
     ans = True
 if fNord == 'Q' or fSouth == 'Q' or fWest == 'Q' or fEast == 'Q':
@@ -61,6 +61,6 @@ if fSW == 'B' or fSE == 'B' or fNW == 'B' or fNE == 'B':
 if fNord == 'R' or fSouth == 'R' or fWest == 'R' or fEast == 'R':
     ans = True
 
-#print(fSW, fSE, fNW, fNE) 
+#print(fSW, fSE, fNW, fNE)
 #print(fNord, fSouth, fWest, fEast)
 print('YES' if ans else 'NO')

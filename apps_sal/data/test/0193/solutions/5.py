@@ -40,4 +40,3 @@ for k in range(1 << 4):
             answer = min(answer, le)
 
 print(answer)
-

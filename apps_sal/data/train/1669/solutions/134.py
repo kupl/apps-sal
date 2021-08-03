@@ -10,7 +10,7 @@ class Solution:
                 count[n] = 1
             else:
                 count[n] += 1
-                
+
         total = sum(count.values())
         for n in sorted(hand):
             if total == 0:
@@ -25,4 +25,3 @@ class Solution:
                 else:
                     return False
         return True
-

@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return list(map(int, input().split()))
+
+
 def li():
     return list(mi())
+
 
 w, h = mi()
 u1, d1 = mi()
@@ -17,4 +22,3 @@ for i in range(h, -1, -1):
         c -= u2
     c = max(0, c)
 print(c)
-

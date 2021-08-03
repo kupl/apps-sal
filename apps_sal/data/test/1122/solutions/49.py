@@ -14,4 +14,3 @@ else:
             offset = 1
         used[d] = True
         print((n - i, i + offset + 1))
-

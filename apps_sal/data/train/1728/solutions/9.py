@@ -5,6 +5,7 @@ KEYS_DIR_REV = {"Right": 6, "Left": 4, "Down": 2, "Up": 8}
 MOVE = [(1, 0), (-1, 0), (0, -1), (0, 1)]
 firstTime = False
 
+
 class PlayerMovement:
 
     def __init__(self, x, y):
@@ -46,4 +47,3 @@ class PlayerMovement:
                     break
             if check == 0:
                 self.direction = savedDirection
-

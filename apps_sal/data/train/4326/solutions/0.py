@@ -1,4 +1,4 @@
-def london_city_hacker(journey): 
+def london_city_hacker(journey):
     # your code here
     tube = 2.40
     bus = 1.50
@@ -11,8 +11,7 @@ def london_city_hacker(journey):
         else:
             if count == 0:
                 total_cost += bus
-                count +=1
+                count += 1
             else:
                 count = 0
     return '£{:.2f}'.format(total_cost)
-

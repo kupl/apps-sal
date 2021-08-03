@@ -31,4 +31,3 @@ try:
 
 except nx.NetworkXError:
     print((0))
-

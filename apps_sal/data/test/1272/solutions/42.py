@@ -40,6 +40,7 @@ class UnionFind:
     def groupcount(self):
         return len(set(self.roots()))
 
+
 N, M = map(int, input().split())
 
 # init union find

@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 n, = readln()
 ans = []
@@ -25,4 +27,3 @@ for x, y in sorted([readln() for _ in range(n)], key=lambda x: abs(x[0]) + abs(x
     ans.append('3')
 print(len(ans))
 print('\n'.join(ans))
-

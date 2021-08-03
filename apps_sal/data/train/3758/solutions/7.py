@@ -3,6 +3,7 @@ def mesh(a, b):
         if a.endswith(b[:i]):
             return b[:i]
 
+
 def word_mesh(arr):
     try:
         return ''.join(mesh(a, b) for a, b in zip(arr, arr[1:]))

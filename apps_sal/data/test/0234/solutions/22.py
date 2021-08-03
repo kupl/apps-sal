@@ -19,9 +19,9 @@ for i in range(para[0]):
 for i in range(len(big)):
     for j in range(len(big[0])):
         if big[i][j] > 50:
-            for ii in [i-1, i, i+1]:
-                for jj in [j-1, j, j+1]:
-                    if ii>=0 and ii<len(big) and jj>=0 and jj<len(big[0]):
+            for ii in [i - 1, i, i + 1]:
+                for jj in [j - 1, j, j + 1]:
+                    if ii >= 0 and ii < len(big) and jj >= 0 and jj < len(big[0]):
                         big[ii][jj] -= 1
 
 result = True
@@ -40,6 +40,3 @@ if result:
     print("YES")
 else:
     print("NO")
-
-
-

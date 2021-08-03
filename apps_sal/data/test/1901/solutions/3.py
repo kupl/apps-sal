@@ -3,9 +3,9 @@ def bfs(i):
 
     q = [i]
     qi = 0
-    
+
     v[i] = 1
-  
+
     best = p[i]
 
     while qi < len(q):
@@ -20,10 +20,11 @@ def bfs(i):
 
     return best
 
+
 n, m = [int(i) for i in input().split(" ")]
 
 p = [int(i) for i in input().split(" ")]
-v = [0]*n
+v = [0] * n
 f = {}
 
 for a in range(n):
@@ -31,8 +32,8 @@ for a in range(n):
 
 for a in range(m):
     x, y = [int(i) for i in input().split(" ")]
-    f[x-1].append(y-1)
-    f[y-1].append(x-1)
+    f[x - 1].append(y - 1)
+    f[y - 1].append(x - 1)
 
 cost = 0
 for i in range(n):
@@ -40,6 +41,3 @@ for i in range(n):
         cost += bfs(i)
 
 print(cost)
-
-
-

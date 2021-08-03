@@ -12,15 +12,17 @@ class Solution:
 
         
 
-'''    
+'''
+
+
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         # dp[i][j] first j coins with sum of i
         # dp[i][j] = min(dp[j-coins[k][k]]+1) for k in coins
         n = len(coins)
         dp = [0] + [float('inf')] * amount
-        for j in range(1, amount+1):
+        for j in range(1, amount + 1):
             for c in coins:
                 if j >= c:
-                    dp[j] = min(dp[j], dp[j-c]+1)
+                    dp[j] = min(dp[j], dp[j - c] + 1)
         return dp[-1] if dp[-1] < float('inf') else -1

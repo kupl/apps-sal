@@ -10,6 +10,8 @@ numerals = {
     "8": "八",
     "9": "九",
 }
+
+
 def to_chinese_numeral(n):
     tempdivide = 10000
     allweishu = []
@@ -28,20 +30,20 @@ def to_chinese_numeral(n):
     n = int(n)
     # print(allxiaoshu)
     while(tempdivide != 0.1):
-        weishu = str(int(n//tempdivide))
+        weishu = str(int(n // tempdivide))
         n = n % tempdivide
         allweishu.append(numerals[weishu])
-        tempdivide = tempdivide/10
+        tempdivide = tempdivide / 10
     start = 0
-    nums = ["万","千",'百','十','']
+    nums = ["万", "千", '百', '十', '']
     allstrs = allweishu[0]
     for weishu in range(len(allweishu[1:])):
-        if(start == 1 and allweishu[weishu+1] == "零" and nums[weishu] != "" and allstrs[-1] != "零"):
+        if(start == 1 and allweishu[weishu + 1] == "零" and nums[weishu] != "" and allstrs[-1] != "零"):
             allstrs += "零"
-        elif(allweishu[weishu+1] != "零"):
+        elif(allweishu[weishu + 1] != "零"):
 
             start = 1
-            if(nums[weishu] == "十" and allweishu[weishu+1] == "一"):
+            if(nums[weishu] == "十" and allweishu[weishu + 1] == "一"):
                 if((allstrs == "" or allstrs == "负")):
                     allstrs += "十"
                 elif(allweishu[-1] == "零"):
@@ -52,15 +54,15 @@ def to_chinese_numeral(n):
                     allstrs += "一十"
 
             else:
-                allstrs += allweishu[weishu+1]
+                allstrs += allweishu[weishu + 1]
                 allstrs += nums[weishu]
-        elif(allweishu[weishu+1] == "零" and nums[weishu] == ""):
+        elif(allweishu[weishu + 1] == "零" and nums[weishu] == ""):
             continue
 
     # print(allweishu)
     # print(allstrs)
 
-    if(len(allstrs) > 1 and allstrs[-1] == "零" ):
+    if(len(allstrs) > 1 and allstrs[-1] == "零"):
         allstrs = allstrs[:-1]
     if(allstrs == "负" or allstrs == ""):
         allstrs += "零"
@@ -75,4 +77,3 @@ def to_chinese_numeral(n):
         return allstrs[:-1]
     # print(allstrs)
     return allstrs
-

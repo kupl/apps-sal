@@ -3,5 +3,5 @@ class Solution:
         for i in range(K):
             variable = min(A)
             A.remove(variable)
-            A.append(variable*-1)
+            A.append(variable * -1)
         return sum(A)

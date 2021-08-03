@@ -6,7 +6,7 @@ sum = 0
 for i in input().split():
     sum += int(i)
 
-if sum + n-1 != x:
+if sum + n - 1 != x:
     print("NO")
 else:
     print("YES")

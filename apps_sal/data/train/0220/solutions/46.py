@@ -4,8 +4,8 @@ class Solution:
         curr_tricked = 0
         tricked = 0
         for ind, num in enumerate(customers):
-            if ind >= X and grumpy[ind-X] == 1:
-                curr_tricked -= customers[ind-X]
+            if ind >= X and grumpy[ind - X] == 1:
+                curr_tricked -= customers[ind - X]
             if grumpy[ind] == 1:
                 curr_tricked += customers[ind]
             tricked = max(tricked, curr_tricked)

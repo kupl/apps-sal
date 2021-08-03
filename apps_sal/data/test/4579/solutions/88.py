@@ -1,6 +1,6 @@
-n=int(input())
-s=set()
+n = int(input())
+s = set()
 for i in range(n):
-  s.add(input())
+    s.add(input())
 
 print(len(s))

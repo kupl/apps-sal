@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 n, k, m = rd()
 a = input().split()
 b = list(rd())
@@ -9,4 +11,3 @@ for _ in range(k):
     for i in x:
         d[a[i - 1]] = m
 print(sum([d[x] for x in input().split()]))
-

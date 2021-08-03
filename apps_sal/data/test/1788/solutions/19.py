@@ -1,6 +1,8 @@
 def resolve():
-#====input code===
-    a,b = map(int, input().split())
-    print((a+b)//2, (a-b)//2)
-#================
+    # ====input code===
+    a, b = map(int, input().split())
+    print((a + b) // 2, (a - b) // 2)
+
+
+# ================
 resolve()

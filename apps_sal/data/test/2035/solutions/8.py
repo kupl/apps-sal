@@ -26,5 +26,3 @@ elif mx == cd:
     print(str(sx) + " " + str(sy - 1))
 elif mx == cu:
     print(str(sx) + " " + str(sy + 1))
- 
-

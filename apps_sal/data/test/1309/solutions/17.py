@@ -12,8 +12,8 @@ for i in range(0, l - 1):
         diff = []
         s = 0
 
-        for h in range(0,size,2):
-            s = s + arr[h+1]-arr[h]
+        for h in range(0, size, 2):
+            s = s + arr[h + 1] - arr[h]
 
         if s < m:
             m = s

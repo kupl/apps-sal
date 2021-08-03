@@ -3,17 +3,20 @@ n, m, k, q = list(map(int, input().split()))
 x = sorted(list(map(int, input().split())) for _ in range(k))
 y = sorted(map(int, input().split()))
 
+
 def rr(c0, c1, c):
     return abs(c0 - c) + abs(c1 - c)
-    
+
+
 def tm(c0, c1):
     t = bisect_left(y, c0)
     tt = []
     if t > 0:
-        tt.append(rr(c0, c1, y[t-1]))
+        tt.append(rr(c0, c1, y[t - 1]))
     if t < q:
         tt.append(rr(c0, c1, y[t]))
     return min(tt)
+
 
 z = []
 for r, c in x:
@@ -34,4 +37,3 @@ for r1, c11, c12 in z:
         v1, v2 = d + c12 - c02, d + c11 - c01
     r0, c01, c02 = r1, c11, c12
 print(min(v1, v2))
-

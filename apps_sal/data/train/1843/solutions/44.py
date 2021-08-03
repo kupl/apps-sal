@@ -8,27 +8,24 @@ class TweetCounts:
 
     def getTweetCountsPerFrequency(self, freq: str, tweetName: str, startTime: int, endTime: int) -> List[int]:
         lst = self.memo[tweetName]
-        lst = [t-startTime for t in lst if t>=startTime and t<=endTime]
+        lst = [t - startTime for t in lst if t >= startTime and t <= endTime]
         if freq == 'minute':
             freq = 60
-        elif freq== 'hour':
-            freq = 60*60
+        elif freq == 'hour':
+            freq = 60 * 60
         elif freq == 'day':
-            freq = 24*60*60
-        length, remainder = divmod(endTime-startTime+1, freq)
-        if remainder>0:
+            freq = 24 * 60 * 60
+        length, remainder = divmod(endTime - startTime + 1, freq)
+        if remainder > 0:
             length += 1
         res = [0 for _ in range(length)]
         # print (t_max, freq)
         for t in lst:
-            res[t//freq] += 1
+            res[t // freq] += 1
         return res
-        
-        
 
 
 # Your TweetCounts object will be instantiated and called as such:
 # obj = TweetCounts()
 # obj.recordTweet(tweetName,time)
 # param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)
-

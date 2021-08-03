@@ -25,4 +25,3 @@ if not t:
     print('Impossible')
 else:
     print('Possible')
-

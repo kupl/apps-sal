@@ -4,6 +4,7 @@ def dfs(u):
         if visited[i] == 0:
             dfs(i)
 
+
 for _ in range(int(input())):
     N, M = map(int, input().split())
     graph = [[] for i in range(N)]

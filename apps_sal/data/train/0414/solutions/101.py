@@ -4,7 +4,7 @@ class Solution:
             return max(arr)
         numWin = 0
         while numWin < k:
-            if arr[0] < arr[1] :
+            if arr[0] < arr[1]:
                 numWin = 1
                 arr.append(arr.pop(0))
             else:

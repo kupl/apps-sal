@@ -16,4 +16,3 @@ if pattern.match(s):
     print('YES')
 else:
     print('NO')
-

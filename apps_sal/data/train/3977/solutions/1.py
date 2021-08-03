@@ -1,6 +1,7 @@
 import math
 import random
 
+
 def cluster(points, n):
     def distance(c1, c2):
         s = 0
@@ -12,7 +13,7 @@ def cluster(points, n):
     def closest(cs):
         min_dist, i1, i2 = float('inf'), -1, -1
         for i in range(len(cs)):
-            for j in range(i+1, len(cs)):
+            for j in range(i + 1, len(cs)):
                 dist = distance(cs[i], cs[j])
                 if dist < min_dist:
                     min_dist = dist

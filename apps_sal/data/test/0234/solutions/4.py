@@ -30,5 +30,6 @@ def go():
                 if value != get_neighbour_bombs(i, j):
                     return 'NO'
     return 'YES'
-print(go())
 
+
+print(go())

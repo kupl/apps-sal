@@ -13,10 +13,10 @@ for i in range(t):
             s[a[j]] = 1
     mm = m = len(s)
     for j in range(d, n):
-        if a[j-d] in s:
-            s[a[j-d]] -= 1
-            if s[a[j-d]] == 0:
-                del s[a[j-d]]
+        if a[j - d] in s:
+            s[a[j - d]] -= 1
+            if s[a[j - d]] == 0:
+                del s[a[j - d]]
                 m -= 1
         else:
             s[a[j]] = 1
@@ -29,7 +29,3 @@ for i in range(t):
         if m < mm:
             mm = m
     print(mm)
-
-
-
-

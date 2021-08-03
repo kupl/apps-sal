@@ -1,6 +1,6 @@
-a,b = input().split()
+a, b = input().split()
 
 if (a == 'H' and b == 'H') or (a == 'D' and b == 'D'):
-  print('H')
+    print('H')
 else:
-  print('D')
+    print('D')

@@ -1,13 +1,15 @@
 from operator import itemgetter
 N = int(input())
 
+
 def checkNonnegative(brankets):
     curup = 0
-    for (minup , up) in sorted(brankets , key= itemgetter(0) , reverse = True):
+    for (minup, up) in sorted(brankets, key=itemgetter(0), reverse=True):
         if curup + minup < 0:
             return False
         curup += up
     return True
+
 
 def canArrangeBranket(brankets):
     totup = 0
@@ -21,15 +23,16 @@ def canArrangeBranket(brankets):
                 up += 1
             else:
                 up -= 1
-                minup = min(minup , up)
+                minup = min(minup, up)
         totup += up
         if up >= 0:
-            left_brankets.append((minup , up))
+            left_brankets.append((minup, up))
         else:
-            right_brankets.append((minup - up , - up))
+            right_brankets.append((minup - up, - up))
     if totup != 0:
         return False
     return checkNonnegative(left_brankets) and checkNonnegative(right_brankets)
+
 
 branketList = []
 for i in range(N):
@@ -40,4 +43,3 @@ if canArrangeBranket(branketList):
     print("Yes")
 else:
     print("No")
-

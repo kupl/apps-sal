@@ -6,5 +6,3 @@ def two_sort(array):
         final_arr.append(x)
     word = ''.join(final_arr)
     return word.strip("***")
-
-

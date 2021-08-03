@@ -1,5 +1,6 @@
 def find_missing_number(s):
-    if len(s) < 1: return 0
+    if len(s) < 1:
+        return 0
     try:
         s = sorted(int(x) for x in s.split())
     except:

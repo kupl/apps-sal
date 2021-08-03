@@ -42,5 +42,3 @@ class Solution:
         A_set = set(A)
         results = {}
         return sum([Solution.numFactoredTrees(a, results, A_set) for a in A]) % (10 ** 9 + 7)
-
-

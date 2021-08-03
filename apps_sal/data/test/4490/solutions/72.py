@@ -9,4 +9,3 @@ elif b == 'C':
 
 elif b == ('G'):
     print('C')
-

@@ -4,7 +4,7 @@ for i in range(4):
     for j in range(n):
         t = input()
         for k in range(n):
-            if int(t[k]) == (j+k)%2:
+            if int(t[k]) == (j + k) % 2:
                 N[i] += 1
     if i != 3:
         s = input()
@@ -23,4 +23,3 @@ for i in range(1, 6):
     if L[i] < mn:
         mn = L[i]
 print(mn)
-

@@ -7,4 +7,3 @@ class Solution:
                 p = A[i] + A[i + 1] + A[i + 2]
                 break
         return p
-

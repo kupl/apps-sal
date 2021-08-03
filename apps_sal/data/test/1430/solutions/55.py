@@ -1,5 +1,7 @@
 
 from itertools import accumulate
+
+
 def resolve():
     N, K = map(int, input().split())
     S = input()
@@ -47,5 +49,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

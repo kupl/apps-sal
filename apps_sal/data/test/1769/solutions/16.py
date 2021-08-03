@@ -10,4 +10,3 @@ def mountain(a, b):
 A = int(input())
 B = int(input())
 print(*mountain(A, B))
-

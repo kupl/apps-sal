@@ -10,4 +10,3 @@ for _ in range(m):
     x, y = list(map(int, input().split()))
     z = s[y] - s[x - 1]
     print(z // 10)
-

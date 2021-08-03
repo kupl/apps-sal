@@ -5,7 +5,7 @@ class Solution:
             name = keyName[idx]
             time = keyTime[idx]
             keytime_table.setdefault(name, []).append(time)
-        
+
         ans = []
         for name in list(keytime_table.keys()):
             time_list = keytime_table[name]
@@ -33,4 +33,3 @@ class Solution:
                     l_minutes = int(hour) * 60 + int(minute)
         ans.sort()
         return ans
-

@@ -1,2 +1,2 @@
 def position(a):
-    return "Position of alphabet: "+str(list("abcdefghijklmnopqrstuvwxyz").index(a)+1)
+    return "Position of alphabet: " + str(list("abcdefghijklmnopqrstuvwxyz").index(a) + 1)

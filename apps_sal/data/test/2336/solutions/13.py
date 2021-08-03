@@ -14,15 +14,15 @@ class N:
     def __str__(self):
         return ' il = ' + str(self.il) + ' ir = ' + str(self.ir) + ' val = ' + str(self.val)
 
-    def get_amount(self,left,right,func):
-        if self.il==left and self.ir==right:
+    def get_amount(self, left, right, func):
+        if self.il == left and self.ir == right:
             return self.val
-        elif self.l.il<=left and self.l.ir>=right:
-            return self.l.get_amount(left,right,func)
-        elif self.r.il<=left and self.r.ir>=right:
-            return self.r.get_amount(left,right,func)
+        elif self.l.il <= left and self.l.ir >= right:
+            return self.l.get_amount(left, right, func)
+        elif self.r.il <= left and self.r.ir >= right:
+            return self.r.get_amount(left, right, func)
         else:
-            return func(self.l.get_amount(left,self.l.ir,func),self.r.get_amount(self.r.il,right,func))
+            return func(self.l.get_amount(left, self.l.ir, func), self.r.get_amount(self.r.il, right, func))
 
 
 class ST:
@@ -91,9 +91,8 @@ class ST:
         answ = self.__func(answ, right.val)
         return answ
 
-    def req(self,l,r):
-        return self.r.get_amount(l,r,self.__func)
-
+    def req(self, l, r):
+        return self.r.get_amount(l, r, self.__func)
 
 
 '''
@@ -134,7 +133,7 @@ for i in range(recipes):
         adds.append(l)
     else:
         gradus[l] -= 1
-        gradus[r+1] += 1
+        gradus[r + 1] += 1
 counter = 0
 
 for i in range(0, len(gradus)):
@@ -155,4 +154,3 @@ for i in range(questions):
 
 
 print('\n'.join(res))
-

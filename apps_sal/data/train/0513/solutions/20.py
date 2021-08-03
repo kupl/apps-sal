@@ -49,4 +49,3 @@ for now in order:
     ans[now] = len(L) - 1
 
 print(*ans[1:], sep='\n')
-

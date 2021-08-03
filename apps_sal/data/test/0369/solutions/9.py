@@ -14,12 +14,11 @@ for i in range(1, n):
 pos = n
 ans = ""
 while pos != 0:
-    for i in range(1, m+1)[::-1]:
-        if pos-i < 0:
+    for i in range(1, m + 1)[::-1]:
+        if pos - i < 0:
             continue
-        if s[pos-i] != "1":
+        if s[pos - i] != "1":
             ans = str(i) + " " + ans
             pos -= i
             break
 print(ans)
-

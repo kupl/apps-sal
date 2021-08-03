@@ -13,4 +13,3 @@ for _ in range(int(input())):
     ar.sort()
     ar.reverse()
     print(sum(ar[::2]))
-

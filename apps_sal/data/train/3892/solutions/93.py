@@ -1,5 +1,5 @@
 def grader(score):
-    if 0.6 > score  or score > 1:
+    if 0.6 > score or score > 1:
         return "F"
     if score >= 0.9:
         return "A"

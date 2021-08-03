@@ -17,8 +17,7 @@ for i in range(n):
 
 best = 0
 for i in range(n):
-    o1 = pref_even[i] + (pref_odd[-1] - pref_odd[i+1])
-    o2 = pref_odd[i] + (pref_even[-1] - pref_even[i+1])
-    best = max(best,max(o1,o2)+l[i])
+    o1 = pref_even[i] + (pref_odd[-1] - pref_odd[i + 1])
+    o2 = pref_odd[i] + (pref_even[-1] - pref_even[i + 1])
+    best = max(best, max(o1, o2) + l[i])
 print(best)
-

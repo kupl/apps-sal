@@ -3,14 +3,14 @@ k = int(input())
 l = []
 for i in range(17):
     ten = 10**i
-    for j in range(1,1000):
+    for j in range(1, 1000):
         a = ten
         b = j
-        n = a*b-1
+        n = a * b - 1
         if n == 0:
             continue
-        s = sum(map(int,str(n)))
-        l.append([n/s,n])
+        s = sum(map(int, str(n)))
+        l.append([n / s, n])
 l.sort()
 now = 0
 count = 0

@@ -9,7 +9,7 @@ class Solution:
                 queue.append(box)
             else:
                 closedBoxes.add(box)
-        
+
         res = 0
         while queue:
             cur = queue.pop(0)

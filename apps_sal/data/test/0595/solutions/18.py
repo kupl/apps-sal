@@ -9,6 +9,7 @@ def is_v(year):
     else:
         return False
 
+
 v = is_v(y)
 
 while True:
@@ -24,4 +25,3 @@ while True:
     if d == 1 and is_v(y) == v:
         print(y)
         break
-

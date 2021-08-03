@@ -7,8 +7,8 @@ def multiple_of_index(arr):
         n = i
         m = a1[i]
         if n == 0:
-                continue
+            continue
         elif m % n == 0:
             n_arr.append(m)
-            
+
     return n_arr

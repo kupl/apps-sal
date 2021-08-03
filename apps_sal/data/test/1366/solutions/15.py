@@ -1,10 +1,10 @@
 n = int(input())
 e = 0
 a = []
-b = [ [] for i in range(1001) ]
+b = [[] for i in range(1001)]
 for i in range(n):
-    s,t = map(int,input().split())
-    a.append([i,s])
+    s, t = map(int, input().split())
+    a.append([i, s])
     b[t].append(i)
 for i in range(len(a)):
     c1 = 0

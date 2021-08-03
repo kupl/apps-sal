@@ -8,12 +8,12 @@ class Solution:
         G = defaultdict(list)
         for i in range(n):
             for j in range(n):
-                if i!=j:
-                    xi,yi = points[i]
-                    xj,yj = points[j]
-                    cost = abs(xi-xj) + abs(yi-yj)
-                    G[i].append( (cost, j) )
-                    G[j].append( (cost, i) )
+                if i != j:
+                    xi, yi = points[i]
+                    xj, yj = points[j]
+                    cost = abs(xi - xj) + abs(yi - yj)
+                    G[i].append((cost, j))
+                    G[j].append((cost, i))
 
         total = 0
         while q and len(visited) < n:
@@ -25,4 +25,3 @@ class Solution:
                     heappush(q, (cost2, v2))
 
         return total
-

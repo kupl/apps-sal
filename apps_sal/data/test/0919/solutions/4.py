@@ -22,11 +22,15 @@ def solve(stages, k):
 
     return -1 if current < k else weight
 
+
 def main():
     n, k = map(int, input().split())
     stages = input()
     print(solve(stages, k))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

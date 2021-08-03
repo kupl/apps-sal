@@ -13,4 +13,3 @@ class Solution:
                 if with_him not in dp or len(dp[with_him]) > len(need) + 1:
                     dp[with_him] = need + [i]
         return dp[(1 << n) - 1]
-

@@ -20,4 +20,3 @@ def solve(s):
 
 
 print((solve('\n'.join([input(), input()]))))
-

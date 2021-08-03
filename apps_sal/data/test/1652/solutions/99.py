@@ -1,15 +1,15 @@
-s=input()
-s=s.replace('eraser','#')
-s=s.replace('erase','#')
-s=s.replace('dreamer','#')
-s=s.replace('dream','#')
-f=1
+s = input()
+s = s.replace('eraser', '#')
+s = s.replace('erase', '#')
+s = s.replace('dreamer', '#')
+s = s.replace('dream', '#')
+f = 1
 for it in s:
-    if it !='#':
-        f=0
+    if it != '#':
+        f = 0
         break
 
-if f==1:
+if f == 1:
     print("YES")
-else :
+else:
     print("NO")

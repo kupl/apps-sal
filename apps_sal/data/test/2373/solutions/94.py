@@ -8,9 +8,8 @@ for i in range(n):
     if increased:
         increased = False
 
-    elif p[i] == i+1:
+    elif p[i] == i + 1:
         cnt += 1
         increased = True
 
 print(cnt)
-

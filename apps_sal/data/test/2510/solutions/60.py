@@ -45,18 +45,18 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-    
+
 N, M = map(int, input().split())
 
 A = [0 for _ in range(M)]
 B = [0 for _ in range(M)]
 
 for i in range(M):
-    A[i], B[i] = map(int,input().split())
+    A[i], B[i] = map(int, input().split())
 
 uf = UnionFind(N)
 for i in range(M):
-    uf.union(A[i]-1, B[i]-1)
+    uf.union(A[i] - 1, B[i] - 1)
 
 ans = 0
 for i in range(uf.group_count()):

@@ -17,6 +17,7 @@ created by shhuan at 2017/10/22 18:15
 N = int(input())
 S = input()
 
+
 def split(s, wc, pl, n):
 
     ans = []
@@ -44,12 +45,12 @@ def split(s, wc, pl, n):
             u = list([w for w, c in list(wc.items()) if c > 0])[0]
         wc[u] -= 1
 
-        need = pl-1
+        need = pl - 1
         while need > 0:
             pneed = need
             for w, c in [(w, c) for w, c in list(wc.items())]:
                 if c > need:
-                    t += str(w) * (need//2)
+                    t += str(w) * (need // 2)
                     wc[w] -= need
                     need = 0
                     break
@@ -57,7 +58,7 @@ def split(s, wc, pl, n):
                     c //= 2
                     t += str(w) * c
                     wc[w] -= c * 2
-                    need -= c*2
+                    need -= c * 2
             if need == pneed:
                 return []
         t = t + u + t[::-1]
@@ -68,17 +69,14 @@ def split(s, wc, pl, n):
     return ans
 
 
-
-
 S = "".join(sorted(list(S)))
 WC = collections.Counter(S)
 
-for parts in range(1, N+1):
+for parts in range(1, N + 1):
     if N % parts == 0:
         wc = {k: v for k, v in list(WC.items())}
-        ans = split(S, wc, N//parts, parts)
+        ans = split(S, wc, N // parts, parts)
         if ans:
             print(parts)
             print(" ".join(ans))
             return
-

@@ -16,9 +16,9 @@ class Solution:
         # return count
         A.sort()
         ans = 0
-        for i in range(1,len(A)):
-            if A[i-1] >= A[i]:
-                ans += A[i-1] - A[i] + 1
-                A[i] += A[i-1] - A[i] + 1
-                
+        for i in range(1, len(A)):
+            if A[i - 1] >= A[i]:
+                ans += A[i - 1] - A[i] + 1
+                A[i] += A[i - 1] - A[i] + 1
+
         return ans

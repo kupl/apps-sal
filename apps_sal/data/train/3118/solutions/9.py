@@ -1,2 +1,2 @@
 def is_lucky(n):
-    return not n or not n%9
+    return not n or not n % 9

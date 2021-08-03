@@ -6,4 +6,3 @@ elif k > 2:
     print(max(a))
 else:
     print(max(a[0], a[-1]))
-

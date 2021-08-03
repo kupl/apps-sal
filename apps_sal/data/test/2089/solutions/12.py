@@ -16,8 +16,8 @@ def bfs(v):
                 dist[graph[x][i]] = dist[x] + 1
                 q.append(graph[x][i])
     return dist
-  
-        
+
+
 n, m, s, t = map(int, input().split())
 s -= 1
 t -= 1

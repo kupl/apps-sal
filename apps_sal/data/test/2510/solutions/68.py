@@ -1,7 +1,9 @@
 import statistics
-N,M=list(map(int,input().split()))
-A=[0]*M;B=[0]*M
-par=[-1]*N
+N, M = list(map(int, input().split()))
+A = [0] * M
+B = [0] * M
+par = [-1] * N
+
 
 def find(x):
     if par[x] < 0:
@@ -14,7 +16,9 @@ def find(x):
         for elt in tank:
             par[elt] = x
         return x
-def unite(x,y):
+
+
+def unite(x, y):
     x = find(x)
     y = find(y)
     if x == y:
@@ -24,9 +28,9 @@ def unite(x,y):
         par[y] = x
         return True
 
+
 for i in range(M):
-  A[i],B[i]=sorted(map(int,input().split()))
-  unite(A[i]-1,B[i]-1)
+    A[i], B[i] = sorted(map(int, input().split()))
+    unite(A[i] - 1, B[i] - 1)
 
-print((min(par)*-1))
-
+print((min(par) * -1))

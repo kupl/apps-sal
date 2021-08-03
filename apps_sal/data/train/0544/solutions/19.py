@@ -3,22 +3,26 @@ import math
 
 
 class Test:
- N=0
- S=[]
- def __init__(self):
-  tmp=input().split()
-  self.N=int(tmp[0])
-  self.S=[int(i) for i in input()]
+    N = 0
+    S = []
+
+    def __init__(self):
+        tmp = input().split()
+        self.N = int(tmp[0])
+        self.S = [int(i) for i in input()]
+
 
 class Input:
- T=0
- test=[]
- def __init__(self):
-  self.T=int(input())
-  for i in range(0,self.T):
-   self.test.append(Test())
+    T = 0
+    test = []
 
-letter=[]
+    def __init__(self):
+        self.T = int(input())
+        for i in range(0, self.T):
+            self.test.append(Test())
+
+
+letter = []
 letter.append([])
 letter.append([])
 letter[0].append([])
@@ -50,19 +54,22 @@ letter[1][1][0].append("m")
 letter[1][1][0].append("n")
 letter[1][1][1].append("o")
 letter[1][1][1].append("p")
+
+
 def getletter(i, j, k, l):
- return letter[i][j][k][l]
+    return letter[i][j][k][l]
 
-def test_case(t:Test):
- sum=0
- i=0
- string=""
- while i + 3 < len(t.S):
-  string+=getletter(t.S[i], t.S[i+1], t.S[i+2],t.S[i+3])
-  i+=4
- print(string)
 
-inp=Input()
+def test_case(t: Test):
+    sum = 0
+    i = 0
+    string = ""
+    while i + 3 < len(t.S):
+        string += getletter(t.S[i], t.S[i + 1], t.S[i + 2], t.S[i + 3])
+        i += 4
+    print(string)
+
+
+inp = Input()
 for test in inp.test:
- test_case(test)
-
+    test_case(test)

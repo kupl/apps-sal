@@ -1,5 +1,6 @@
 from math import ceil
 
+
 def enum_divisor(n):
     res = []
     for i in range(1, int(n ** 0.5) + 1):
@@ -9,6 +10,7 @@ def enum_divisor(n):
         if i * i != n:
             res.append(n // i)
     return res
+
 
 ans = 0
 n = int(input())

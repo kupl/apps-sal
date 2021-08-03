@@ -11,11 +11,12 @@ def bfs(val):
     while(not q.empty()):
         x = q.get()
 
-        for i in range(1, n+1):
+        for i in range(1, n + 1):
             if connect[x][i] == val and dis[i] == -1:
-                dis[i] = dis[x]+1
+                dis[i] = dis[x] + 1
                 q.put(i)
     return dis[n]
+
 
 temp = input().split()
 n = int(temp[0])
@@ -29,5 +30,4 @@ for i in range(m):
     v = int(temp[1])
     connect[u][v] = connect[v][u] = 1
 
-print(bfs(1-connect[1][n]))
-
+print(bfs(1 - connect[1][n]))

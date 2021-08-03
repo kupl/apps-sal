@@ -2,7 +2,7 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         n = len(position)
         position.sort()
-        
+
         # Counts number of balls that can be placed into baskets if minimum distance is d
         # Find maximum d where count(d) == m
         def count(d):
@@ -12,14 +12,14 @@ class Solution:
                     ans += 1
                     curr = position[i]
             return ans
-        
+
         l, r = 0, position[-1] - position[0]
-        
+
         while l < r:
             mid = r - (r - l) // 2
             if count(mid) >= m:
                 l = mid
             else:
                 r = mid - 1
-                
+
         return l

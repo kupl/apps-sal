@@ -4,6 +4,6 @@ lst = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
 
 ans = ''
 for i in range(len(s)):
-  ans += lst[(lst.index(s[i]) + n) % 26]
-  
+    ans += lst[(lst.index(s[i]) + n) % 26]
+
 print(ans)

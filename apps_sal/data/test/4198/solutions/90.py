@@ -1,7 +1,9 @@
 A, B, X = map(int, input().split())
 
+
 def d(n):
     return len(str(n))
+
 
 N = 10 ** 9 + 1
 up = N

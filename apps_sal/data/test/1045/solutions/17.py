@@ -8,4 +8,3 @@ while used <= n:
     h += 1
     s += h + 1
 print(h - 1)
-

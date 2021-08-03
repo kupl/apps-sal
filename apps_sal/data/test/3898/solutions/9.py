@@ -20,4 +20,3 @@ for j in range(n):
         break
     i += 1
 print("YES" if bl else "NO")
-

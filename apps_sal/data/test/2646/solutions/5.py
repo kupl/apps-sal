@@ -3,7 +3,7 @@ from collections import defaultdict, deque
 N, M = list(map(int, input().split()))
 edges = defaultdict(list)
 for _ in range(M):
-    a, b = [int(x)-1 for x in input().split()]
+    a, b = [int(x) - 1 for x in input().split()]
     edges[a].append(b)
     edges[b].append(a)
 
@@ -25,5 +25,3 @@ while q:
 print('Yes')
 for i in range(1, N):
     print((go_to[i]))
-
-

@@ -14,10 +14,10 @@ def get_jewelries(box, left_pop, right_pop):
 
 candidates = []
 pop_max = min(k, n)
-for pop_count in range(pop_max+1):
+for pop_count in range(pop_max + 1):
     residue = k - pop_count
 
-    for left_pop in range(pop_count+1):
+    for left_pop in range(pop_count + 1):
         right_pop = pop_count - left_pop
         jewelries = get_jewelries(V, left_pop, right_pop)
         jewelries.sort(reverse=True)
@@ -32,4 +32,3 @@ for pop_count in range(pop_max+1):
         candidates.append(value)
 
 print((max(candidates)))
-

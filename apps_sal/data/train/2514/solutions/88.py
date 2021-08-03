@@ -4,11 +4,10 @@ class Solution:
         for i in arr1:
             curr = 0
             for j in arr2:
-                if abs(i-j) <= d:
+                if abs(i - j) <= d:
                     curr += 1
-            
+
             if curr == 0:
                 count += 1
-        
-        return count
 
+        return count

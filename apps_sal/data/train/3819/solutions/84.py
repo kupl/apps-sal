@@ -4,4 +4,3 @@ def smash(words):
         ans += x
         ans += ' '
     return ans[:-1]
-

@@ -4,4 +4,4 @@ def get_percentage(sent, limit=1000):
     elif sent >= limit:
         return 'Daily limit is reached'
     else:
-        return str(int(float(sent)/float(limit)*100)) + '%'
+        return str(int(float(sent) / float(limit) * 100)) + '%'

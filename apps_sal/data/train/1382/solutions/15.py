@@ -2,42 +2,39 @@
 
 n = int(input())
 
-l = list(map(int,input().split()))
+l = list(map(int, input().split()))
 
 x = int(input())
 
 count = 0
 k = []
 for i in range(n):
- if l[i] <0:
-  count+=1
-  k.append(l[i])
+    if l[i] < 0:
+        count += 1
+        k.append(l[i])
 
 y = count
 k.sort()
 
 
-z = y-x
+z = y - x
 k.reverse()
 sum = 0
 h = 0
 
 for i in range(len(k)):
-  k[i]+=h
-  if y > x:
+    k[i] += h
+    if y > x:
 
+        sum += abs(k[i] * x)
+        h += abs(k[i])
+    else:
+        sum += abs(k[i] * y)
+        h += abs(k[i])
 
-   sum+=abs(k[i]*x)
-   h+=abs(k[i])
-  else:
-   sum+=abs(k[i]*y)
-   h+=abs(k[i])
+    y -= 1
 
-  y-=1
-
- # k[-1]+=h
- # if k[-1]<0:
- #     sum+=abs(k[-1])*y
+    # k[-1]+=h
+    # if k[-1]<0:
+    #     sum+=abs(k[-1])*y
 print(sum)
-
-

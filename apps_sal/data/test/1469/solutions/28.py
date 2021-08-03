@@ -29,4 +29,3 @@ print(("{} {}".format(r, len(E))))
 
 for e in E:
     print(("{} {} {}".format(e[0], e[1], e[2])))
-

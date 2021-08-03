@@ -7,4 +7,3 @@ for i in a:
     else:
         w += 1
 print(w)
-

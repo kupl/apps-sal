@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
-    n,m = [int(i) for i in input().split()]
-    v,h = 0,0
+    n, m = [int(i) for i in input().split()]
+    v, h = 0, 0
     grid = []
     for _ in range(n):
         line = [int(i) for i in input().split()]
@@ -12,7 +12,7 @@ for _ in range(t):
         if 1 not in [j[i] for j in grid]:
             v += 1
     M = min(h, v)
-    if M&1:
+    if M & 1:
         print("Ashish")
     else:
         print("Vivek")

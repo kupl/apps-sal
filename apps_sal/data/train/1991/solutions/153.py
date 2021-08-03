@@ -26,4 +26,3 @@ class Solution:
             return ways
 
         return dp(start, fuel)
-

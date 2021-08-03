@@ -6,5 +6,5 @@ while tc:
     lst = list(map(int, input().split()))
     t = 0
     for x in lst:
-        t = t^x
+        t = t ^ x
     print(t)

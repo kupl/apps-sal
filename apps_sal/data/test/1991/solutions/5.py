@@ -22,4 +22,3 @@ for test in range(tests):
         print(0)
     else:
         print(ans)
-

@@ -1,4 +1,4 @@
-def check (xs, k, t):
+def check(xs, k, t):
     l = 1
     tmp = 0
     for x in xs:
@@ -13,22 +13,21 @@ def check (xs, k, t):
     else:
         return True
 
+
 k = int(input())
 xs = list([len(list(x)) + 1 for x in input().replace('-', ' ').split()])
 xs[-1] -= 1
 
 up = sum(xs)
 down = 1
-ans = (up+down)//2
+ans = (up + down) // 2
 ##print(" up: " + str(up) + " down: " + str(down) + " ans: " + str(ans) )
 while down + 1 < up:
     ans = (down + up) // 2
-    if check (xs, k, ans):
+    if check(xs, k, ans):
         up = ans
     else:
         down = ans
 
 print(up)
 ##print(" up: " + str(up) + " down: " + str(down) + " ans: " + str(ans) )
-
-

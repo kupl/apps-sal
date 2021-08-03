@@ -26,7 +26,7 @@ def equal(t, q):
 
 
 def expand(i):
-    ans = equal(total[i], q[(i+1)%2])
+    ans = equal(total[i], q[(i + 1) % 2])
     if ans:
         print(
             str(ans[2] + q[i][0][2]) + "\n" + str(q[i][0][0]) + " " + str(q[i][0][1]) + "\n" + str(ans[0]) + " " + str(

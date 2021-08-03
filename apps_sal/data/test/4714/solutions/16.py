@@ -1,8 +1,8 @@
-A, B = map(int,input().split())
+A, B = map(int, input().split())
 
 Numbers = []
 
-for i in range(A,B+1):
+for i in range(A, B + 1):
     number = str(A)
     # print(number)
     if number[0] == number[4] and number[1] == number[3]:

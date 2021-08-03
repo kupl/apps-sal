@@ -1,5 +1,5 @@
 s = int(input())
-visited = [False]*(10**6+1)
+visited = [False] * (10**6 + 1)
 
 visited[s] = True
 cnt = 1
@@ -9,7 +9,7 @@ while True:
         s = s * 3 + 1
     else:
         s //= 2
-    
+
     cnt += 1
 
     if visited[s]:

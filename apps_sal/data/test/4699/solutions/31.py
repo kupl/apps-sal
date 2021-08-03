@@ -19,4 +19,5 @@ def __starting_point():
     a = np.fromstring(read(), dtype=np.int64, sep=' ')
     main(n, k, a)
 
+
 __starting_point()

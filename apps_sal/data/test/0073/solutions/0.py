@@ -1,4 +1,6 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 c, v0, v1, a, l = read()
 cur = 0
 cnt = 0

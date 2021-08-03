@@ -9,7 +9,5 @@ class Solution:
                 k += nums[i] & 1
                 i += 1
                 count += 1
-            ret += count 
+            ret += count
         return ret
-            
-

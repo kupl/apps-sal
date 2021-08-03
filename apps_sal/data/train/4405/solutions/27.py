@@ -6,11 +6,11 @@ def is_palindrome(string):
     a = len(string)
     b = a % 2
     nr = -1
-    
+
     if b != 0:
-        return False 
+        return False
     else:
-        a = a/2
+        a = a / 2
         a = int(a)
         for x in range(a):
             if string[x] == string[nr]:
@@ -18,4 +18,3 @@ def is_palindrome(string):
             else:
                 return False
         return True
-

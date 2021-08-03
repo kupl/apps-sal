@@ -1,5 +1,6 @@
 import re
 
+
 def to_integer(string):
     valid = re.search(r"\A([+-])?(0[bxo])?([0-9a-fA-F]+)\Z", string)
     if not valid:
@@ -10,4 +11,3 @@ def to_integer(string):
         return int(string, base)
     except:
         return None
-

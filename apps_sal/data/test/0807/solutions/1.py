@@ -5,4 +5,3 @@ for i in range(n - 1):
     if arr[i] - arr[i + 1] - c > r:
         r = arr[i] - arr[i + 1] - c
 print(r)
-

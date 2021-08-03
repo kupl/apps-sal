@@ -6,6 +6,8 @@ g2 = [1, 1]
 re = [0, 1]
 for i in range(2, SIZE + 1):
     g1.append((g1[-1] * i) % MOD)
+
+
 def fact(n):
     return g1[n]
 
@@ -16,6 +18,7 @@ class UnionFind:
         self.root = [i for i in range(n + 1)]
         self.size = [1] * (n + 1)
         self.nn = n
+
     def find(self, x):
         y = self.root[x]
         if x == y:
@@ -24,6 +27,7 @@ class UnionFind:
             z = self.find(y)
             self.root[x] = z
             return z
+
     def union(self, x, y):
         rx = self.find(x)
         ry = self.find(y)
@@ -39,6 +43,7 @@ class UnionFind:
                 self.root[rx] = ry
                 self.size[ry] = sx + sy
         return sx * sy
+
     def size_list(self, n):
         ret = []
         cnt = [0] * (n + 1)
@@ -48,12 +53,14 @@ class UnionFind:
                 cnt[self.find(i)] = 1
                 ret.append(self.size[self.find(i)])
         return ret
+
     def check(self):
         print([self.find(i) for i in range(1, self.nn + 1)])
 
+
 N, K = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(N)]
-#print(A)
+# print(A)
 
 
 def f(A):
@@ -69,20 +76,21 @@ def f(A):
                     break
             if flag:
                 edge.append([i + 1, j + 1])
-    #print(edge)
-    
+    # print(edge)
+
     for a, b in edge:
         uf.union(a, b)
-    #print("check")
-    #uf.check()
-    
+    # print("check")
+    # uf.check()
+
     ret = 1
     sl = uf.size_list(N)
-    #print(sl)
+    # print(sl)
     for n in sl:
         ret = (ret * fact(n)) % MOD
-    
+
     return ret
+
 
 uf = UnionFind(N)
 answer = f(A) % MOD
@@ -93,7 +101,7 @@ for i in range(N):
     for j in range(N):
         tmp[j].append(A[i][j])
 A = tmp
-#print(A)
+# print(A)
 
 uf = UnionFind(N)
 answer = (answer * f(A)) % MOD

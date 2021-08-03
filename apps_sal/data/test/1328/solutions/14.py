@@ -22,4 +22,3 @@ for a in range(1, cmax):
 if result == INF:
     result = -1
 print(result)
-

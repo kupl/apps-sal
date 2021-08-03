@@ -14,4 +14,3 @@ for i in range(n - 2):
                     cnt += 1
 
 print(cnt)
-

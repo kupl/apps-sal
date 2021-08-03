@@ -11,7 +11,7 @@ for _ in range(int(input())):
                 m -= 1
             else:
                 break
-        for i in range(n-1, -1, -1):
+        for i in range(n - 1, -1, -1):
             if li[i] == 0:
                 m -= 1
             else:

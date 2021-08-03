@@ -1,5 +1,7 @@
 
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 n = int(input())
 a = [0] + list(read())
 g = [list() for i in range(n + 1)]

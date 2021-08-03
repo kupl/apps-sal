@@ -8,6 +8,7 @@ def a(l):
             even += 1
     return (odd, even)
 
+
 T = int(input())
 for _ in range(T):
     n = int(input())
@@ -15,9 +16,8 @@ for _ in range(T):
     odds = l[::2]
     evens = l[1::2]
     if n % 2 == 1:
-        x,y = a(odds)
+        x, y = a(odds)
         print(1 if x > 0 else 2)
     else:
-        x,y = a(evens)
+        x, y = a(evens)
         print(2 if y > 0 else 1)
-

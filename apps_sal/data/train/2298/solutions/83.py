@@ -9,4 +9,3 @@ for ai in a:
     buy = min(buy, ai)
     gain[ai - buy] += 1
 print((gain[max(gain)]))
-

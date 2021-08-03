@@ -18,15 +18,14 @@ while H > 0:
             ans += 1
             i += 1
         else:
-            ans += H//amax
-            if H%amax != 0:
+            ans += H // amax
+            if H % amax != 0:
                 ans += 1
             break
     else:
-        ans += H//amax
+        ans += H // amax
         if H % amax != 0:
             ans += 1
         break
 
 print(ans)
-

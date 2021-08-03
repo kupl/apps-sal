@@ -6,9 +6,8 @@ x = list(map(int, input().split()))
 
 s = 0
 for i in range(N):
-    if x[i] < K/2:
-        s += 2*x[i]
+    if x[i] < K / 2:
+        s += 2 * x[i]
     else:
-        s += 2*(K-x[i])
+        s += 2 * (K - x[i])
 print(s)
-

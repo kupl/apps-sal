@@ -1,8 +1,8 @@
-N=int(input())
-S=input()
+N = int(input())
+S = input()
 
-ans=S[0]
+ans = S[0]
 for s in S:
-  if ans[-1]!=s:
-    ans+=s
+    if ans[-1] != s:
+        ans += s
 print(len(ans))

@@ -20,4 +20,3 @@ class Solution:
             if not cycle(i):
                 ret.append(i)
         return ret
-

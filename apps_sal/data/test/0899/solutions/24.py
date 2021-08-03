@@ -1,5 +1,6 @@
 import heapq
 
+
 def dijkstra(s):
     inf = 1145141919810
     dist = [inf] * v
@@ -18,6 +19,7 @@ def dijkstra(s):
                 dist[g[0]] = dist[u] + g[1]
                 heapq.heappush(p, (dist[g[0]], g[0]))
     return dist
+
 
 n, m = map(int, input().split())
 v = n

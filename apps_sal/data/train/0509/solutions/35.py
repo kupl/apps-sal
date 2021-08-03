@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def bfs():
     q = deque()
     q.append(1)
@@ -14,6 +15,7 @@ def bfs():
                     ans[j] = 1 if ans[i] >= 2 else 2
                 q.append(j)
     return
+
 
 n, m = map(int, input().split())
 G = [[] for _ in range(n + 1)]

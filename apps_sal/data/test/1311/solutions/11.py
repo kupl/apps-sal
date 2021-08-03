@@ -1,5 +1,6 @@
-from sys import stdin,setrecursionlimit
+from sys import stdin, setrecursionlimit
 import threading
+
 
 def main():
     n = int(stdin.readline())
@@ -8,22 +9,23 @@ def main():
 
     for i in range(n):
         x, w = [int(x) for x in stdin.readline().split()]
-        line.append((x-w,x+w))
+        line.append((x - w, x + w))
 
     line.sort()
 
     def best(ind, line):
         r = line[ind][1]
-        nxt = ind+1
+        nxt = ind + 1
         while nxt < len(line):
             nL, nR = line[nxt]
             if nL >= r:
-                return best(nxt, line)+1
+                return best(nxt, line) + 1
             elif nR < r:
-                return best(nxt,line)
+                return best(nxt, line)
             nxt += 1
         return 1
-    print(best(0,line))
+    print(best(0, line))
+
 
 def __starting_point():
     setrecursionlimit(10**6)
@@ -31,6 +33,6 @@ def __starting_point():
     t = threading.Thread(target=main)
     t.start()
     t.join()
-        
+
 
 __starting_point()

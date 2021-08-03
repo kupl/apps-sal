@@ -13,4 +13,3 @@ for i in range(n):
 
 su -= ma
 print('YES' if su <= s else 'NO')
-

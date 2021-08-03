@@ -1,4 +1,4 @@
-def final_attack_value(x,monster_list):
+def final_attack_value(x, monster_list):
     for i in monster_list:
         if x >= i:
             x += i
@@ -6,6 +6,6 @@ def final_attack_value(x,monster_list):
             a = x
             b = i
             while b:
-                a, b = b, a%b
+                a, b = b, a % b
             x += a
     return x

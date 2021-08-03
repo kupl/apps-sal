@@ -16,18 +16,18 @@ for j in range(N):
             if(y1 == 0):
                 lis.append([x1, i])
             elif(x1 == R):
-                lis.append([R+y1, i])
+                lis.append([R + y1, i])
             elif(y1 == C):
-                lis.append([2*R+C-x1, i])
+                lis.append([2 * R + C - x1, i])
             elif(x1 == 0):
-                lis.append([2*R+2*C-y1, i])
+                lis.append([2 * R + 2 * C - y1, i])
             x1 = x2
             y1 = y2
 lis.sort()
 stack = []
-exist = [False for _ in range(2*i)]
+exist = [False for _ in range(2 * i)]
 ans = True
-for k in range(2*i):
+for k in range(2 * i):
     if(exist[lis[k][1]]):
         if(lis[k][1] != stack.pop()):
             ans = False
@@ -40,4 +40,3 @@ if(ans):
     print("YES")
 else:
     print("NO")
-

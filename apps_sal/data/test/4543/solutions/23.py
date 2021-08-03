@@ -6,6 +6,6 @@ s = int(s)
 r = math.sqrt(s)
 fr = r - int(r)
 if fr == 0:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
+    print('No')

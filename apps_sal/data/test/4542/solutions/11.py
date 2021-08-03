@@ -11,8 +11,10 @@ def main():
             ans += 1
             t = s
     print(ans)
-        
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

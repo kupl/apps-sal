@@ -1,6 +1,10 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 M = 1000000007
-inv = lambda x: (M - M // x) * inv(M % x) % M if x - 1 else 1
+def inv(x): return (M - M // x) * inv(M % x) % M if x - 1 else 1
+
+
 n, m = rd()
 a = list(rd())
 b = list(rd())
@@ -22,4 +26,3 @@ for i in range(n):
             p = (p + r) % M
         break
 print(p * inv(q) % M)
-

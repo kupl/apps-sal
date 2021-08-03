@@ -4,5 +4,5 @@ class Solution:
         for n in nums:
             while n:
                 gcd, n = n, gcd % n
-                
+
         return gcd == 1

@@ -9,5 +9,5 @@ class Solution:
         for a in A:
             a_chars = Counter(a)
             if all(a_chars[c] >= b_chars[c] for c in b_chars):
-                output.append(a)    
+                output.append(a)
         return output

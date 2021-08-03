@@ -1,6 +1,6 @@
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
-        
+
         d = collections.defaultdict(int)
         for b in B:
             b = collections.Counter(b)
@@ -16,4 +16,3 @@ class Solution:
             else:
                 uni.append(a)
         return uni
-

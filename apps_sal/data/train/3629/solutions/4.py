@@ -1,1 +1,1 @@
-array_mash = lambda a,b: list(sum(zip(a,b),()))
+def array_mash(a, b): return list(sum(zip(a, b), ()))

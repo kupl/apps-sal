@@ -12,4 +12,3 @@ for i in range(n):
     if tmp_min < min_s:
         min_s = tmp_min
 print("".join(map(str, min_s)))
-

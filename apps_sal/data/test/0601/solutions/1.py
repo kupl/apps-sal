@@ -11,9 +11,11 @@ def solve():
             break
         j = min((p - s * i) // w, cntw)
         u = min(cnts - i, f // s)
-        v = min(cntw - j, (f - s * u)  // w)
+        v = min(cntw - j, (f - s * u) // w)
         ans = max(ans, i + j + u + v)
     print(ans)
+
+
 t = int(input())
 for _ in range(t):
     solve()

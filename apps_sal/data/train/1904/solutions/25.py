@@ -1,5 +1,6 @@
 from queue import PriorityQueue
 
+
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         kPq = PriorityQueue()
@@ -15,5 +16,3 @@ class Solution:
             item = kPq.get()
             r.append(item[1])
         return r
-
-

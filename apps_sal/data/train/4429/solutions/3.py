@@ -4,8 +4,9 @@ def longest_palindrome(s):
 
     res = 0
     for x in k:
-        if x%2==0:res += x
-        else:res += (x-1)
-    
-    return res+1 if any(x%2==1 for x in k) else res
+        if x % 2 == 0:
+            res += x
+        else:
+            res += (x - 1)
 
+    return res + 1 if any(x % 2 == 1 for x in k) else res

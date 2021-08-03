@@ -6,7 +6,7 @@ for _ in range(t):
         print(s)
 
     else:
-        mod = 10**9+7
+        mod = 10**9 + 7
         l = len(s)
         curr = 0
         for i in s:
@@ -22,11 +22,11 @@ for _ in range(t):
             p1 *= 10
             p1 %= mod
 
-        for i in range(l-1):
+        for i in range(l - 1):
             p2 *= 10
             p2 %= mod
 
-        for i in range(l-1):
+        for i in range(l - 1):
             curr -= (p2 * int(s[i])) % mod
             curr *= 10
             curr += int(s[i])
@@ -37,4 +37,3 @@ for _ in range(t):
             ans %= mod
 
         print(ans)
-

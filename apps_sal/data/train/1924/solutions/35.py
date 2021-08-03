@@ -4,12 +4,12 @@ class dsu:
         self.rank = [0 for x in range(n)]
         self.valid = [True for x in range(n)]
         self.n = n
-        
+
     def find(self, x):
         if self.parent[x] != x:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
-    
+
     def union(self, s, t):
         sp, tp = self.find(s), self.find(t)
         if sp == tp:
@@ -21,11 +21,10 @@ class dsu:
         else:
             self.parent[tp] = sp
             self.rank[sp] += 1
-            
+
     def cluster(self):
         for x in range(self.n):
             self.find(x)
-
 
 
 class Solution:
@@ -48,4 +47,3 @@ class Solution:
             if net.parent[i] != i or net.rank[i] != 0:
                 net.valid[i] = False
         return [transactions[i] for i in range(arrlen) if not net.valid[i]]
-

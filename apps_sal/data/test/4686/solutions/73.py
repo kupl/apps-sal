@@ -12,4 +12,3 @@ if not f:
     print("No")
 else:
     print("Yes")
-

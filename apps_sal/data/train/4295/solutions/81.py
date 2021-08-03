@@ -3,12 +3,12 @@ def balanced_num(number):
     length = len(string)
     left = None
     right = None
-    if length %2 == 0:
-        left = string[:int(length/2) -1]
-        right = string[int(length/2) +1:]
+    if length % 2 == 0:
+        left = string[:int(length / 2) - 1]
+        right = string[int(length / 2) + 1:]
     else:
-        left = string[:int(length/2)]
-        right = string[int(length/2) +1:]
+        left = string[:int(length / 2)]
+        right = string[int(length / 2) + 1:]
     sum_left = 0
     for i in left:
         sum_left = int(i) + sum_left
@@ -19,4 +19,3 @@ def balanced_num(number):
         return "Balanced"
     else:
         return "Not Balanced"
-

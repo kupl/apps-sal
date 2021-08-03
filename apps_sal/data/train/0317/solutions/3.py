@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 class Solution:
     def numPermsDISequence(self, S):
         MOD = 10**9 + 7
@@ -12,9 +13,9 @@ class Solution:
                 return 0
             if i == 0:
                 return 1
-            elif S[i-1] == 'D':
+            elif S[i - 1] == 'D':
                 return (dp(i - 1, j) + dp(i, j + 1)) % MOD
             else:
-                return (dp(i-1, j - 1) + dp(i, j - 1)) % MOD
+                return (dp(i - 1, j - 1) + dp(i, j - 1)) % MOD
 
-        return sum(dp(N, j) for j in range(N+1)) % MOD
+        return sum(dp(N, j) for j in range(N + 1)) % MOD

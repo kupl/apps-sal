@@ -15,16 +15,16 @@ for num in A:
     if 1 <= num <= n:
         if not seen[num - 1]:
             seen[num - 1] = True
-            print(num, end = " ")
+            print(num, end=" ")
         else:
             while nums[i]:
                 i += 1
             nums[i] = True
             i += 1
-            print(i, end = " ")
+            print(i, end=" ")
     else:
         while nums[i]:
             i += 1
         nums[i] = True
         i += 1
-        print(i, end = " ")
+        print(i, end=" ")

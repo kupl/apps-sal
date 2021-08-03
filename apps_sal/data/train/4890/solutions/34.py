@@ -1,9 +1,11 @@
 import math
+
+
 def find_difference(a, b):
     def prod(arr):
-        proc =1
+        proc = 1
         for i in arr:
-            proc *=i
+            proc *= i
         return proc
-        
+
     return abs(prod(a) - prod(b))

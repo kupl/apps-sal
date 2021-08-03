@@ -9,6 +9,7 @@ class BIT():
     get_val: i番目の値を求める
     i, l, rは0-indexed
     """
+
     def __init__(self, n):
         self.n = n
         self.bit = [0] * (n + 1)
@@ -36,15 +37,17 @@ class BIT():
 r, c, n = map(int, input().split())
 info = [list(map(int, input().split())) for i in range(n)]
 
+
 def solve(x1, y1):
     if y1 == 0:
         return x1
     if x1 == r:
         return r + y1
     if y1 == c:
-        return r + c + (r-x1)
+        return r + c + (r - x1)
     if x1 == 0:
-        return r + c + r + (c-y1)
+        return r + c + r + (c - y1)
+
 
 def compress(array):
     set_ = set([])
@@ -52,13 +55,14 @@ def compress(array):
         a, b = array[i]
         set_.add(a)
         set_.add(b)
-    memo = {value : index for index, value in enumerate(sorted(list(set_)))}
+    memo = {value: index for index, value in enumerate(sorted(list(set_)))}
     max_ = 0
     for i in range(len(array)):
         array[i][0] = memo[array[i][0]]
         array[i][1] = memo[array[i][1]]
         max_ = max(max_, *array[i])
     return max_, array
+
 
 query = []
 for i in range(n):
@@ -70,7 +74,7 @@ for i in range(n):
         query.append([pos1, pos2 + 1])
 
 m, query = compress(query)
-bit = BIT(m)  
+bit = BIT(m)
 for i in range(len(query)):
     begin, end = query[i]
     if bit.get_val(begin) != bit.get_val(end - 1):

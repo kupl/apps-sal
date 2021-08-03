@@ -1,7 +1,7 @@
 class Solution:
     def minDeletionSize(self, A: List[str]) -> int:
         D = set()
-        
+
         while True:
             changes = False
             last_str = ''
@@ -19,9 +19,9 @@ class Solution:
                     for i in range(len(this_str)):
                         if this_str[i] < last_str[i]:
                             D.add(this_idx[i])
-                            this_idx = this_idx[:i] + this_idx[i+1:]
-                            this_str = this_str[:i] + this_str[i+1:]
-                            last_str = last_str[:i] + last_str[i+1:]
+                            this_idx = this_idx[:i] + this_idx[i + 1:]
+                            this_str = this_str[:i] + this_str[i + 1:]
+                            last_str = last_str[:i] + last_str[i + 1:]
                             changes = True
                             break
                 last_str = this_str

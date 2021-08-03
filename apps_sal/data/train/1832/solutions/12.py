@@ -27,8 +27,7 @@ class Solution:
                 if mm <= M and mm < visited[v]:
                     visited[v] = mm
                     heapq.heappush(q, (mm, v))
-        
+
         for (u, v), (l1, l2) in list(edges2.items()):
             result += min(l1 + l2, g[u][v])
         return result
-

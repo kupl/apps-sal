@@ -12,4 +12,4 @@ for i in range(N):
     else:
         number += 0
 
-print('Yes' if number >= M else 'No' )
+print('Yes' if number >= M else 'No')

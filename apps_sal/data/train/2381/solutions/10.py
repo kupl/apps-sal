@@ -17,4 +17,3 @@ for _ in range(one()):
             cur = ind + 1
 
     print(mx)
-

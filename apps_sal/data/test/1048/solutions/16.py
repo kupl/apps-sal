@@ -21,4 +21,3 @@ except KeyError:
     pass
 
 print(n - sum(list(d.values())))
-

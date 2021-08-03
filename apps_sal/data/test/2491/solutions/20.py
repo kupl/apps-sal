@@ -9,6 +9,7 @@ for _ in range(M):
     edges.append((fr, to, -cost))
     E[to].append(fr)
 
+
 def canGo():
     st = [N - 1]
     visited = [False] * N
@@ -20,6 +21,7 @@ def canGo():
             visited[to] = True
             st.append(to)
     return visited
+
 
 V = canGo()
 

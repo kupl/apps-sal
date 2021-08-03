@@ -1,27 +1,29 @@
 class Solution:
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
         graph = [[] for _ in range(N)]
-        remain = [[0]*N for _ in range(N)]
+        remain = [[0] * N for _ in range(N)]
         for edge in edges:
             i, j, t = edge
             graph[i].append((j, t))
             graph[j].append((i, t))
-            remain[i][j] = remain[j][i] = t   #用于记录i,j之间的edge上还剩多少未遍历的sub点
-        pq = [(0,0)]
-        seen = set() #利用了djikstra算法可以时我们对每个节点至遍历一次即可，故用seen记录
+            remain[i][j] = remain[j][i] = t  # 用于记录i,j之间的edge上还剩多少未遍历的sub点
+        pq = [(0, 0)]
+        seen = set()  # 利用了djikstra算法可以时我们对每个节点至遍历一次即可，故用seen记录
         res = 0
-    #djikstra
+    # djikstra
         while pq:
             dist, node = heapq.heappop(pq)
-            if node in seen: continue
+            if node in seen:
+                continue
             res += 1
             seen.add(node)
             for nei, d in graph[node]:
-                valid = min(M-dist, remain[node][nei])
+                valid = min(M - dist, remain[node][nei])
                 res += valid
                 remain[node][nei] = remain[nei][node] = remain[nei][node] - valid
                 cost_to_nei = dist + d + 1
-                if cost_to_nei <= M and nei not in seen: heapq.heappush(pq, (cost_to_nei, nei))
+                if cost_to_nei <= M and nei not in seen:
+                    heapq.heappush(pq, (cost_to_nei, nei))
         return res
 
 # class Solution(object):
@@ -63,4 +65,3 @@ class Solution:
 #             ans += min(w, used.get((u, v), 0) + used.get((v, u), 0))
 
 #         return ans
-

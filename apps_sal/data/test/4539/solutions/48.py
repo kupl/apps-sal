@@ -3,17 +3,17 @@ def main():
     X = N
     sum = 0
     while True:
-        amari = N%10
+        amari = N % 10
         sum += amari
-        #print(amari,sum)
+        # print(amari,sum)
         N //= 10
         if N == 0:
             break
 
-    if X%sum == 0:
+    if X % sum == 0:
         return 'Yes'
     else:
         return 'No'
 
-print((main()))
 
+print((main()))

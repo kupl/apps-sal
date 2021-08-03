@@ -17,6 +17,6 @@ class Solution:
                         cur_len += len(stamp) - i - j
                         idx = target.find(cur_stamp)
             all_len += cur_len
-        
-        #print(all_len)
+
+        # print(all_len)
         return res[::-1] if all_len == len(target) else []

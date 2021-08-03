@@ -3,7 +3,7 @@ def pattern(n):
     if n < 1:
         return ""
     else:
-        for num in range(1, n+1):
+        for num in range(1, n + 1):
             row = ''
             for x in range(0, num):
                 row += str(num)
@@ -13,4 +13,3 @@ def pattern(n):
             else:
                 pass
     return result
-

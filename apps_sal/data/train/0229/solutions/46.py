@@ -9,6 +9,5 @@ class Solution:
             if b < a:
                 return False
             cnt[2 * k] -= a
-            
-        return True
 
+        return True

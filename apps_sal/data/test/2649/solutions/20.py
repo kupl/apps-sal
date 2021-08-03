@@ -6,4 +6,3 @@ for i in range(n):
     a[i] = x + y
     b[i] = x - y
 print((max(max(a) - min(a), max(b) - min(b))))
-

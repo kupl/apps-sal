@@ -10,6 +10,7 @@ def b_s(a, key):
             left = m
     return right
 
+
 n = int(input())
 cost = sorted(list(map(int, input().split())))
 q = int(input())

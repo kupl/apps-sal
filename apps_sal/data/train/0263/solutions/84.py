@@ -2,7 +2,7 @@ class Solution:
     def knightDialer(self, n: int) -> int:
         prev = [0] * 10
         dp = [1] * 10
-        
+
         m = {
             0: [4, 6],
             1: [6, 8],
@@ -15,6 +15,7 @@ class Solution:
             8: [1, 3],
             9: [2, 4]
         }
+
         def parents(x):
             return m[x]
 
@@ -23,6 +24,5 @@ class Solution:
                 for prevX in parents(x):
                     dp[x] += prev[prevX]
             prev, dp = dp, [0] * 10
-            
 
         return sum(prev) % (10 ** 9 + 7)

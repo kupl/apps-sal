@@ -10,4 +10,3 @@ for i in range(k):
             t2 += 1
     ans += min(t1, t2)
 print(ans)
-

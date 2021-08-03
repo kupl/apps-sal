@@ -4,5 +4,3 @@ def divisible_by(numbers, divisor):
         if n % divisor == 0:
             factors.append(n)
     return factors
-            
-

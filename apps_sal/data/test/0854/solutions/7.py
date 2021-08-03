@@ -6,8 +6,8 @@ ans = 0
 c = 0
 left = n
 while suma != 0:
-    ans += (t//suma)*left
-    t = t%suma
+    ans += (t // suma) * left
+    t = t % suma
     while suma > t:
         if c in a:
             if t < a[c]:
@@ -17,5 +17,5 @@ while suma != 0:
             else:
                 t -= a[c]
                 ans += 1
-        c = (c+1)%n
+        c = (c + 1) % n
 print(ans)

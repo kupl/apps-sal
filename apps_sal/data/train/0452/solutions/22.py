@@ -5,6 +5,7 @@ class Solution:
             return -1
 
         self.memo = {}
+
         def check(left_days, i):
             ky = (left_days, i)
             if ky in self.memo:
@@ -16,13 +17,11 @@ class Solution:
             while i < m:
                 diff = max(diff, jobDifficulty[i])
                 if left_days > 0:
-                    mn = min(mn, diff + check(left_days - 1, i+1))
+                    mn = min(mn, diff + check(left_days - 1, i + 1))
                 else:
                     mn = diff
                 i += 1
             self.memo[ky] = mn
             return mn
 
-        return check(d-1,0)
-        
-
+        return check(d - 1, 0)

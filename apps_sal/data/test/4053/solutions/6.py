@@ -4,15 +4,17 @@ d = []
 for i in range(2 * n - 2):
     b = input()
     a.append(b)
-    if len(b) == n-1:
+    if len(b) == n - 1:
         d.append(b)
 s1 = d[0] + d[1][-1]
 s2 = d[1] + d[0][-1]
 
+
 def ans(s):
     l = ['' for _ in range(2 * n - 2)]
     for i in range(2 * n - 2):
-        if l[i] != '': continue
+        if l[i] != '':
+            continue
         m1 = i
         m2 = -1
         for j in range(i + 1, 2 * n - 2):
@@ -29,9 +31,9 @@ def ans(s):
         return None
     return ''.join(l)
 
+
 s = ans(s1)
 if s:
     print(s)
 else:
     print(ans(s2))
-

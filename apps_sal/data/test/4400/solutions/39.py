@@ -1,4 +1,4 @@
-weather=input()
+weather = input()
 if "RRR" in weather:
     print(3)
 elif "RR" in weather:

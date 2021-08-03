@@ -1,1 +1,1 @@
-greet = lambda n,o: "Hello {}".format(["guest","boss"][n==o])
+def greet(n, o): return "Hello {}".format(["guest", "boss"][n == o])

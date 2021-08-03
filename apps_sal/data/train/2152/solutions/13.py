@@ -24,6 +24,6 @@ for i in factors:
         total += j
         moves += min(total % i, i - (total % i))
     ans = min(ans, moves)
-if len(factors) == 0: ans = -1
+if len(factors) == 0:
+    ans = -1
 print(ans)
-

@@ -6,4 +6,3 @@ def remove_duplicate_words(s):
             seen.add(word)
             words.append(word)
     return " ".join(words)
-

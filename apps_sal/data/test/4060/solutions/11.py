@@ -6,17 +6,17 @@ last1 = -1
 curs = 0
 err = False
 for i in range(len(line)):
-    if line[i]=='(':
-        curs+=1
+    if line[i] == '(':
+        curs += 1
     else:
-        curs-=1
+        curs -= 1
     if curs == 0:
-        last0=i
+        last0 = i
     if curs == 1:
-        last1=i
+        last1 = i
     if curs < 0:
         if wasm == -1:
-            wasm=i
+            wasm = i
         if curs < -2:
             err = True
             break
@@ -26,9 +26,9 @@ elif wasm == -1:
     if curs != 2:
         print(0)
     else:
-        print(int((len(line)-max(last0,last1))/2))
+        print(int((len(line) - max(last0, last1)) / 2))
 else:
     if curs != -2:
         print(0)
     else:
-        print(int(wasm/2) + 1)
+        print(int(wasm / 2) + 1)

@@ -21,5 +21,3 @@ for i in range(len(a)):
         res[i] = a[i]
 print(ans)
 print(*res)
-    
-

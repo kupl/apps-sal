@@ -8,8 +8,8 @@ lst = [[0] * c for _ in range(3)]
 
 for i in range(n):
     for j in range(n):
-        lst[(i + j) % 3][c_lst[i][j]-1] += 1
-        
+        lst[(i + j) % 3][c_lst[i][j] - 1] += 1
+
 cnt = []
 
 for i in range(c):
@@ -19,9 +19,9 @@ for i in range(c):
         for k in range(c):
             cal += lst[j][k] * d_lst[k][i]
         temp.append(cal)
-    cnt.append(temp) 
+    cnt.append(temp)
 
- 
+
 temp = []
 for l in permutations(list(range(c)), 3):
     temp.append(cnt[l[0]][0] + cnt[l[1]][1] + cnt[l[2]][2])

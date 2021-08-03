@@ -3,4 +3,3 @@ def my_parse_int(string):
         return int(string)
     except:
         return "NaN"
-

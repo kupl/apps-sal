@@ -24,4 +24,3 @@ for i in range(n):
         rating += 1
 
 print(rating)
-

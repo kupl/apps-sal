@@ -1,9 +1,10 @@
-def gcd(x, y): 
-  
-   while(y): 
-       x, y = y, x % y 
-  
-   return x 
+def gcd(x, y):
+
+    while(y):
+        x, y = y, x % y
+
+    return x
+
 
 n, k = list(map(int, input().split()))
 l = list(map(int, input().split()))
@@ -18,4 +19,3 @@ if k == lcm:
     print('Yes')
 else:
     print('No')
-

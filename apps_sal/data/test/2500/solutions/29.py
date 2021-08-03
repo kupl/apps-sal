@@ -1,7 +1,7 @@
 N = int(input())
 s = bin(N)[2:]
 n = len(s)
-dp = [[0] * 4 for i in range(len(s)+1)]
+dp = [[0] * 4 for i in range(len(s) + 1)]
 dp[0][0] = 1
 MOD = int(1e9) + 7
 for i in range(n):
@@ -10,7 +10,6 @@ for i in range(n):
         for k in range(3):
             nj = min(((j << 1) + b - k, 3))
             if 0 <= nj:
-                dp[i+1][nj] += dp[i][j]
-                dp[i+1][nj] %= MOD
+                dp[i + 1][nj] += dp[i][j]
+                dp[i + 1][nj] %= MOD
 print((sum(dp[n]) % MOD))
-

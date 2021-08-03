@@ -17,4 +17,3 @@ for i in range(1, l[-1] + 1):
         cur >>= 1
     ans = max(ans, temp_ans)
 print(ans)
-

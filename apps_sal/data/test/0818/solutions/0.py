@@ -2,13 +2,14 @@ import re
 import itertools
 from collections import Counter
 
+
 class Task:
     n = 0
     answer = ""
-	
+
     def getData(self):
         self.n = int(input())
-	
+
     def solve(self):
         n = self.n
         if n < 3:
@@ -29,8 +30,8 @@ class Task:
     def printAnswer(self):
         print(self.answer)
 
-task = Task();
-task.getData();
-task.solve();
-task.printAnswer();
 
+task = Task()
+task.getData()
+task.solve()
+task.printAnswer()

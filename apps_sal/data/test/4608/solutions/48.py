@@ -10,11 +10,10 @@ for i in range(n):
 al.insert(0, 0)
 ans = -1
 push = 1
-for i in range(1, n+2):
+for i in range(1, n + 2):
     light = al[push]
     push = light
     if light == 2:
         ans = i
         break
 print(ans)
-

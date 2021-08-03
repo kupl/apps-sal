@@ -1,5 +1,6 @@
 import re
 
+
 def clock_degree(s):
     if not re.match(r'([0-1][0-9]|[2][0-3]):[0-5][0-9]', s):
         return "Check your time !"

@@ -4,10 +4,10 @@ c = int(input())
 d = int(input())
 e = int(input())
 k = int(input())
-nums = [a,b,c,d,e]
+nums = [a, b, c, d, e]
 for i in nums:
-  for j in nums:
-    if abs(i-j) > k:
-      print(":(")
-      return
+    for j in nums:
+        if abs(i - j) > k:
+            print(":(")
+            return
 print("Yay!")

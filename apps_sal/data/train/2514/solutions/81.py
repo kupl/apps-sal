@@ -4,8 +4,7 @@ class Solution:
         for i in arr1:
             a = 1
             for j in arr2:
-                if abs(i-j)<=d:
+                if abs(i - j) <= d:
                     a = 0
             result += a
         return result
-

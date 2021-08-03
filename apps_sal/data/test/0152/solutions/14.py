@@ -1,5 +1,5 @@
 import bisect
-(n,m,k), (x,s), a, b, c, d = (list(map(int, input().split())) for _ in range(6))
+(n, m, k), (x, s), a, b, c, d = (list(map(int, input().split())) for _ in range(6))
 a, b = list(a) + [x], list(b) + [0]
 c, d = list(map(list, (c, d)))
 
@@ -13,4 +13,3 @@ for i in range(m + 1):
         else:
             ans = min(ans, n * a[i])
 print(ans)
-

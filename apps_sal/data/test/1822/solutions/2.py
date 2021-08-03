@@ -67,4 +67,5 @@ def __starting_point():
         if value:
             print(position + x_order)
 
+
 __starting_point()

@@ -50,12 +50,3 @@ if ok:
     if not ok:
         u.sort()
         print(''.join(u))
-        
-
-
-
-
-
-
-                
-

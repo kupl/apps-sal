@@ -8,7 +8,7 @@ cache = {
 def collatz(y):
     if y in cache:
         return cache[y]
-    
+
     x = y
     steps = 1
     while x > 1:
@@ -16,7 +16,7 @@ def collatz(y):
             x = 3 * x + 1
         else:
             x //= 2
-            
+
         if x in cache:
             ans = cache[x] + steps
             break
@@ -33,7 +33,7 @@ class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
         powers = [(collatz(x), x) for x in range(lo, hi + 1)]
         heapify(powers)
-        
+
         for _ in range(k):
             x = heappop(powers)
 

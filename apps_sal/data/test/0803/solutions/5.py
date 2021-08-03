@@ -8,26 +8,22 @@ for i in range(n):
 cntX = n - cntx
 
 
-
 if cntx > n // 2:
     c = cntx - n // 2
     print(c)
     for i in range(n):
         if s[i] == 'x' and c > 0:
-            print('X', end =  '')
+            print('X', end='')
             c -= 1
         else:
-            print(s[i], end = '')
+            print(s[i], end='')
 
 else:
     c = cntX - n // 2
     print(c)
     for i in range(n):
         if s[i] == 'X' and c > 0:
-            print('x', end =  '')
+            print('x', end='')
             c -= 1
         else:
-            print(s[i], end = '')
-            
-            
-    
+            print(s[i], end='')

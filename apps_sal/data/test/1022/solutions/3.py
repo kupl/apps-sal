@@ -22,4 +22,3 @@ for i in range(n):
         return
 print("YES")
 print(' '.join(map(str, res)))
-

@@ -11,4 +11,3 @@ for rpt in range(int(input())):
         while layout[right] == '0':
             right -= 1
         print(2 * max(n - left, right + 1))
-

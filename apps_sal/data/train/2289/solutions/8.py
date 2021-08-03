@@ -5,12 +5,12 @@ S = [ord(s) - ord('a') for s in input().rstrip()]
 
 INF = 10 ** 9
 N = len(S)
-dp = [None] * (N+1)
+dp = [None] * (N + 1)
 # そこから始めたとき、次にxが現れる位置、および、次にxをとった場合に長さLのものが全て作れる
 dp[N] = [[INF] * 26, [0] * 26, 0]
 
-for n in range(N-1,-1,-1):
-    prev = dp[n+1]
+for n in range(N - 1, -1, -1):
+    prev = dp[n + 1]
     cur = [prev[0].copy(), prev[1].copy(), prev[2]]
     s = S[n]
     cur[0][s] = n

@@ -8,4 +8,4 @@ def sum_array(arr):
     else:
         arr.remove(max(arr))
         arr.remove(min(arr))
-        return sum(arr)        
+        return sum(arr)

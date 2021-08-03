@@ -11,18 +11,19 @@ def prime_factors(n):
             if n % i != 0:
                 factors.add(i)
             break
-            
+
     return factors
-    
-n,m = map(int, input().split())
+
+
+n, m = map(int, input().split())
 if n > 1:
     fs = prime_factors(n)
-    ans = 2**n-2
+    ans = 2**n - 2
     for v in fs:
         # print(ans, v)
         ans -= 2**v - 2
         # print(ans)
     # print(fs)
-    print(ans%m)
+    print(ans % m)
 else:
     print(1)

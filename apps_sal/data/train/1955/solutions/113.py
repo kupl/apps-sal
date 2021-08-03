@@ -13,7 +13,7 @@ class Solution:
             return s
 
         graph = defaultdict(list)
-        for u,v in pairs:
+        for u, v in pairs:
             graph[u].append(v)
             graph[v].append(u)
 

@@ -8,6 +8,6 @@ class Solution:
                 if (x1, y2) in seen and (x2, y1) in seen:
                     area = abs(x1 - x2) * abs(y1 - y2)
                     res = min(res, area)
-                    
+
             seen.add((x1, y1))
         return res if res != float('inf') else 0

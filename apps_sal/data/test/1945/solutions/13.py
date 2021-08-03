@@ -14,4 +14,3 @@ for i in range(n):
 print(len(d))
 for x in d:
     print(x[0], x[1])
-

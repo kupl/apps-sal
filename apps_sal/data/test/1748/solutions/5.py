@@ -13,8 +13,5 @@ for snow, temp in zip(v, t):
         answer += q[0] - melted
         heapq.heappop(q)
     answer += temp * len(q)
-    print(answer, end = ' ')
+    print(answer, end=' ')
     melted += temp
-    
-    
-    

@@ -1,10 +1,14 @@
 gl = ["a", "e", "i", "o", "u"]
+
+
 def mist(a, b, c):
     if a in gl or b in gl or c in gl:
         return False
     if a == b and b == c:
         return False
     return True
+
+
 s = input()
 n = len(s)
 if n == 1:
@@ -26,4 +30,3 @@ else:
         else:
             print(now, end='')
             last1, last2 = last2, now
-            

@@ -6,4 +6,3 @@ for i in range(26):
         break
 else:
     print("None")
-

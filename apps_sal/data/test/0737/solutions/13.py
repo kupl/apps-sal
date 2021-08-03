@@ -6,4 +6,3 @@ if x * y != n:
     print(2 * (x + y) + 2)
 else:
     print(2 * (x + y))
-

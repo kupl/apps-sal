@@ -15,7 +15,7 @@ for i in range(l):
     else:
         m.append(0)
         if a[i] < 0:
-            d.append(int(a[i]-1))
+            d.append(int(a[i] - 1))
         else:
             d.append(int(a[i]))
 s = sum(d)

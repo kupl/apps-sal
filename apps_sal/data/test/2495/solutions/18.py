@@ -1,6 +1,7 @@
 N = int(input())
 A = list(map(int, input().split()))
 
+
 def sequence(plus_start):
     cost = 0
     cum = 0
@@ -27,6 +28,5 @@ def sequence(plus_start):
         cost += abs(diff)
     return cost
 
+
 print((min(sequence(True), sequence(False))))
-
-

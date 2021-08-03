@@ -16,4 +16,3 @@ while i < n:
     res += t
     i = j
 print(res)
-

@@ -1,11 +1,13 @@
 def resolve():
-#====input code===
-    s,p = map(int, input().split())
+    # ====input code===
+    s, p = map(int, input().split())
     for i in range(1000002):
-        if (s - i)*i == p:
+        if (s - i) * i == p:
             print("Yes")
             return
     else:
         print("No")
-#================
+
+
+# ================
 resolve()

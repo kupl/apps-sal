@@ -1,17 +1,18 @@
-class Transaction:  
+class Transaction:
     def __init__(self, name, time, amount, city):
         self.name = name
         self.time = int(time)
         self.amount = int(amount)
         self.city = city
-        
+
     def __str__(self):
         return f'{self.name},{self.time},{self.amount},{self.city}'
+
 
 class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
         transactions = [Transaction(*t.split(',')) for t in transactions]
-        transactions.sort(key = lambda x: x.time)
+        transactions.sort(key=lambda x: x.time)
         nameMap = collections.defaultdict(list)
         for i, t in enumerate(transactions):
             nameMap[t.name].append(i)
@@ -24,9 +25,9 @@ class Solution:
                 if t.amount > 1000:
                     invalid.append(str(t))
                     continue
-                while left < len(idxLst) and transactions[idxLst[left]].time < t.time-60:
+                while left < len(idxLst) and transactions[idxLst[left]].time < t.time - 60:
                     left += 1
-                while right < len(idxLst) and transactions[idxLst[right]].time <= t.time+60:
+                while right < len(idxLst) and transactions[idxLst[right]].time <= t.time + 60:
                     right += 1
                 for i in range(left, right):
                     if t.city != transactions[idxLst[i]].city:

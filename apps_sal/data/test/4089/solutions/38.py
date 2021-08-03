@@ -6,9 +6,9 @@ for i in range(1, 13):
     if n <= 26**i:
         n -= 1
         for j in range(i):
-            ans += chr(ord('a') + n%26)
+            ans += chr(ord('a') + n % 26)
             n //= 26
-        break;
+        break
     else:
         n -= 26**i
 

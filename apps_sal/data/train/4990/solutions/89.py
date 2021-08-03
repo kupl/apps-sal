@@ -4,4 +4,3 @@ def solution(string, ending):
     if ending == string[-len_1:] or ending == "":
         return True
     return False
-

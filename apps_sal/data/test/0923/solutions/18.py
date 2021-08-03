@@ -12,4 +12,3 @@ for i, v in enumerate(a):
     a[i] = v
 
 print('Yes' if a == z else 'No')
-

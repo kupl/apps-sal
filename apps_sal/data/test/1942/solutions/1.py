@@ -1,7 +1,7 @@
 t = int(input())
 for case_num in range(t):
     n, l, r = list(map(int, input().split(' ')))
-    if l == n * (n-1) + 1:
+    if l == n * (n - 1) + 1:
         print(1)
         continue
     total = 0
@@ -27,4 +27,3 @@ for case_num in range(t):
         if total >= l:
             ans.append(now)
     print(' '.join(map(str, ans)))
-

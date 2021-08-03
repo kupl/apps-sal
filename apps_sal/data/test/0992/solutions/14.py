@@ -14,5 +14,3 @@ for a in A:
     f %= mod
 
 print((f[S]))
-
-

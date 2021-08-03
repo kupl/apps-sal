@@ -11,6 +11,4 @@ class Solution:
             if len(number) == 10:
                 return '***-***-' + number[-4:]
             else:
-                return '+' + '*'*(len(number)-10) + '-***-***-' + number[-4:]
-            
-
+                return '+' + '*' * (len(number) - 10) + '-***-***-' + number[-4:]

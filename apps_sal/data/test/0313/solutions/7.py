@@ -8,4 +8,3 @@ for i in input().split():
             ans += 1
     pprev, prev = prev, i
 print(ans)
-

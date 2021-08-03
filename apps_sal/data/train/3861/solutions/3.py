@@ -16,7 +16,7 @@ def translated(s):
     string = []
     for i in s:
         if i[0] == "FIRE":
-            string.append("You "+ "and you " * (i[1] - 1) + "are fired!")
+            string.append("You " + "and you " * (i[1] - 1) + "are fired!")
         elif i[0] == "FURY":
             string.append("I am " + "really " * (i[1] - 1) + "furious.")
     return string

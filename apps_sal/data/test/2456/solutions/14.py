@@ -15,4 +15,3 @@ for case_num in range(t):
     if r == n:
         ans += 1
     print(ans)
-

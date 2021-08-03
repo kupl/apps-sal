@@ -1,6 +1,7 @@
 def inp():
     return map(int, input().split())
 
+
 n, k = inp()
 a = list(inp())
 ans = 0

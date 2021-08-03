@@ -7,4 +7,3 @@ class Solution:
                 if output > maxRes:
                     maxRes = output
         return maxRes
-

@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 7)
- 
+
 N = int(input())
 
 A = [None] * N
@@ -13,16 +13,16 @@ for i in range(N):
 
 
 def f(candi):
-    
+
     played = []
-    
+
     # 次に試合する可能性のある選手を順次チェック
     for n in candi:
         target = A[n][-1]
         if A[target][-1] == n:
             played.append(n)
-        
-    new_candi = set()    
+
+    new_candi = set()
     for n in played:
         # 試合ずみの組み合わせを削除
         A[n].pop()
@@ -31,13 +31,13 @@ def f(candi):
         # 次の対戦相手を試合の候補に追加
         if A[n][-1] != -1:
             new_candi.add(A[n][-1])
-            
+
     return len(played), new_candi
 
 
 answer = 0
 # 最悪の試合数（二倍された値）
-rest = N*(N-1)
+rest = N * (N - 1)
 # 試合する人の候補
 play_candi = set(range(N))
 
@@ -48,10 +48,9 @@ while True:
     if x == 0:
         answer = -1
         break
-        
-    rest -= x
-    if rest ==0:
-        break
-        
-print(answer)
 
+    rest -= x
+    if rest == 0:
+        break
+
+print(answer)

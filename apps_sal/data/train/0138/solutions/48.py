@@ -14,8 +14,8 @@ class Solution:
             elif nums[i] < 0:
                 if negatives > 0:
                     tmp = positives
-                    positives = negatives + 1 
-                    negatives = tmp + 1 
+                    positives = negatives + 1
+                    negatives = tmp + 1
 
                 else:
                     negatives = positives + 1
@@ -28,4 +28,3 @@ class Solution:
             output = max(output, positives)
 
         return output
-

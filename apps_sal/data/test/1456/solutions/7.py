@@ -3,6 +3,7 @@ from sys import stdin
 from math import ceil
 import sys
 
+
 def __starting_point():
     n = int(input())
     table = list()
@@ -29,7 +30,7 @@ def __starting_point():
             piece = 0
             for a in range(n):
                 for b in range(n):
-                    if table[a][b] == 'o' and newT[n + i -a][n + j - b] == 1:
+                    if table[a][b] == 'o' and newT[n + i - a][n + j - b] == 1:
                         piece = 1
                         break
                 if piece == 1:
@@ -38,16 +39,15 @@ def __starting_point():
                 print("NO")
                 return
     print("YES")
-    for i in range( 1, 2 * n):
-        for j in range( 1, 2 * n):
+    for i in range(1, 2 * n):
+        for j in range(1, 2 * n):
             if i == n and j == n:
-                print('o', end = '')
+                print('o', end='')
             elif newT[i][j] == 1:
-                print('x', end = '')
+                print('x', end='')
             else:
-                print('.', end = '')
+                print('.', end='')
         print('')
-
 
 
 __starting_point()

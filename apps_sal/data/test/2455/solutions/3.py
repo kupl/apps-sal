@@ -17,8 +17,7 @@ for i in range(t):
         if 'X' * a in List:
             cnt += 1
             ans.append((a, b))
-    print(cnt, end = ' ')
+    print(cnt, end=' ')
     for pair in sorted(ans):
-        print('x'.join(map(str, pair)), end = ' ')
+        print('x'.join(map(str, pair)), end=' ')
     print()
-

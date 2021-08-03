@@ -20,4 +20,3 @@ for i in range(len(ev)):
         b += 1
     mb = max(mb, b)
 print(['NO', 'YES'][int(mb > k)])
-

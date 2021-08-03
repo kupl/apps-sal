@@ -9,5 +9,5 @@ def go():
             x += 1
     return x
 
-print(go())
 
+print(go())

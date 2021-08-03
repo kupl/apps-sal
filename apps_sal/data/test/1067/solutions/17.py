@@ -22,4 +22,3 @@ if nega % 2 == 1:
 
 ans += zero
 print(ans)
-

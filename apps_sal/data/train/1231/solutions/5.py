@@ -1,17 +1,21 @@
 import sys
- 
+
+
 def main():
- s = sys.stdin.readline
- t = int(s())
- for t in range(t):
-  n = int(s())
-  comp = str(2**n)
-  #print comp
-  sum = 0
-  for i in comp:
-   sum+=int(i)
-  print(sum)
- 
+    s = sys.stdin.readline
+    t = int(s())
+    for t in range(t):
+        n = int(s())
+        comp = str(2**n)
+        # print comp
+        sum = 0
+        for i in comp:
+            sum += int(i)
+        print(sum)
+
+
 def __starting_point():
- main()
+    main()
+
+
 __starting_point()

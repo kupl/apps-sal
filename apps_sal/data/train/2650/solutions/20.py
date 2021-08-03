@@ -6,13 +6,13 @@ L = int(nl[1])
 lst = []
 
 for i in range(N):
-   lst.append(input())
+    lst.append(input())
 
 lst.sort()
 
 ans = ''
 
 for s in lst:
-   ans += s
+    ans += s
 
 print(ans)

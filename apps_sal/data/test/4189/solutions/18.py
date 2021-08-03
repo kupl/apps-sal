@@ -10,9 +10,8 @@ for i in range(n):
 t = 0
 while True:
     t += 1
-    black = (t*t)//2
-    white = (t*t+1)//2
+    black = (t * t) // 2
+    white = (t * t + 1) // 2
     if (p <= black and q <= white) or (p <= white and q <= black):
         print(t)
         break
-

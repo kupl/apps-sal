@@ -1,2 +1,2 @@
-s,t = input().split()
-print(t,s,sep="")
+s, t = input().split()
+print(t, s, sep="")

@@ -15,13 +15,13 @@ class Solution:
             else:
                 edges_added += int(ds_alice.union(u - 1, v - 1))
         return len(edges) - edges_added if ds_alice.isConnected() and ds_bob.isConnected() else -1
-        
-        
+
+
 class DisjointSets:
     def __init__(self, n: int) -> None:
         self.parent = [x for x in range(n)]
         self.set_size = n
-        
+
     def union(self, x: int, y: int) -> bool:
         x = self.find(x)
         y = self.find(y)
@@ -30,11 +30,11 @@ class DisjointSets:
             self.set_size -= 1
             return True
         return False
-    
+
     def find(self, x: int) -> int:
         if x != self.parent[x]:
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
-    
+
     def isConnected(self) -> bool:
         return self.set_size == 1

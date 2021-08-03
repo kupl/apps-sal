@@ -23,4 +23,3 @@ class Solution:
             memo[i] = 1 + max_
             ans = max(memo[i], ans)
         return ans
-

@@ -1,2 +1,2 @@
-A=int(input())
-print(A+A*A+A*A*A)
+A = int(input())
+print(A + A * A + A * A * A)

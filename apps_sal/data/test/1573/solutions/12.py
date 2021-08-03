@@ -14,9 +14,9 @@ while True:
         summ += res[right][1]
         right += 1
         if right == n + 1:
-            break        
-    if right == n + 1:
             break
+    if right == n + 1:
+        break
     rsumm = max(summ, rsumm)
     summ -= res[left][1]
     left += 1

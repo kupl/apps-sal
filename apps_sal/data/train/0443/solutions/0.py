@@ -50,4 +50,3 @@ class Solution:
             num_teams += (i - lesser_before[i]) * lesser_after[i]
 
         return num_teams
-

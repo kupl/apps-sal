@@ -18,4 +18,3 @@ else:
         cnt[now] = cnt.get(now, 0) + 1
 
 print(res)
-

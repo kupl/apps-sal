@@ -1,4 +1,4 @@
-def solve(arr): 
+def solve(arr):
     # functional style
     def unique_recursive(src_arr, trg_arr):
         if len(src_arr) == 0:

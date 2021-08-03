@@ -24,4 +24,3 @@ while(1):
             return
         now = C[:1]
         C = C[1:]
-

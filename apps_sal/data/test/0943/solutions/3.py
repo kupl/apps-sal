@@ -13,4 +13,3 @@ if len(p) % 2 != 0:
 for t in range(len(p)):
     sum += p[t]
 print(sum)
-

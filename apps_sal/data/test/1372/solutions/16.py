@@ -15,4 +15,3 @@ for i in range(1, max_hp + 1):
     # dp[i] = min(dp[i - A[j]] + B[j] for j in range(n))
     dp[i] = min(dp[i - a] + b for a, b in AB)
 print((min(dp[h:])))
-

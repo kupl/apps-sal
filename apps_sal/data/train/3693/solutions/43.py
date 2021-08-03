@@ -4,4 +4,3 @@ def make_negative(number):
         return(result)
     else:
         return(number)
-

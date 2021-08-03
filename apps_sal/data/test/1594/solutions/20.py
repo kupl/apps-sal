@@ -7,6 +7,5 @@ i, p = 0, 0
 v = [int(x) for x in input().split()]
 for j in v:
     while (p < j):
-        p, i = p+arr[i], i+1
+        p, i = p + arr[i], i + 1
     print(i)
-

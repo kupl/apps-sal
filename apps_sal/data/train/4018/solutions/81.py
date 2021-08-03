@@ -3,4 +3,3 @@ def isDigit(s):
         return False
     a = s.replace('-', '').replace('.', '')
     return a.isdigit()
-

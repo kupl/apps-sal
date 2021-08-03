@@ -21,4 +21,3 @@ for _ in range(int(input())):
             q.append(c)
 ans = list(q)
 print("".join(ans[::-1])) if is_flipped else print("".join(ans))
-

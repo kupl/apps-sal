@@ -42,7 +42,7 @@ def resolve():
     C = [0] * 9
     for a in A:
         for i in range(8):
-            if 400*i <= a <= 400*i+399:
+            if 400 * i <= a <= 400 * i + 399:
                 C[i] = 1
                 break
         else:
@@ -54,5 +54,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

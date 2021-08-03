@@ -2,7 +2,8 @@ import sys
 from collections import deque
 
 input = sys.stdin.buffer.readline
-int1 = lambda x: int(x) - 1
+def int1(x): return int(x) - 1
+
 
 N, M = list(map(int, input().split()))
 G = [[] for _ in range(3 * N)]
@@ -30,4 +31,3 @@ while d:
             d.append(x)
             distance[x] = dist_v + 1
 print((-1))
-

@@ -15,5 +15,5 @@ class Solution:
                     minSteps += 1
             else:
                 minSteps += 1
-                
+
         return minSteps

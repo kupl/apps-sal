@@ -1,3 +1,1 @@
-print(('HD'[len(set(input()))%2]))
-
-
+print(('HD'[len(set(input())) % 2]))

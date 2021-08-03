@@ -10,15 +10,19 @@
 100 100
 '''
 import math
+
+
 def solve():
-	a,b = map(int,input().split())
-	m1 = max(a,b)
-	m2 = min(a,b)
-	m = max(m1,2*m2)
-	print(m*m) 
-	return
+    a, b = map(int, input().split())
+    m1 = max(a, b)
+    m2 = min(a, b)
+    m = max(m1, 2 * m2)
+    print(m * m)
+    return
+
+
 t = 1
 t = int(input())
-while t>0:
-	t-=1
-	solve()
+while t > 0:
+    t -= 1
+    solve()

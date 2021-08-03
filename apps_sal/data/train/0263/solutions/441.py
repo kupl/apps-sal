@@ -1,4 +1,6 @@
 MOD = 10**9 + 7
+
+
 class Solution:
     def knightDialer(self, n: int) -> int:
         @lru_cache(None)
@@ -17,10 +19,10 @@ class Solution:
                 res += dfs(ni, nj, k + 1)
                 res %= MOD
             return res
-    
+
         ans = 0
         for i, j in product(range(4), range(3)):
             if (i, j) in [(3, 0), (3, 2)]:
-                    continue
+                continue
             ans += dfs(i, j, 0)
         return ans % MOD

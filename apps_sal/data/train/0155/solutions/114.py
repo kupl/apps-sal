@@ -5,8 +5,7 @@ class Solution:
         for i in range(len(arr)):
             self.dfs(arr, i, d)
         return self.result
-        
-    
+
     def dfs(self, arr, index, d):
         if index in self.memo:
             return self.memo[index]

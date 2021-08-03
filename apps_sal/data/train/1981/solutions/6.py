@@ -1,7 +1,7 @@
 class Solution:
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         N = len(nums)
-        requests.sort(reverse = True)
+        requests.sort(reverse=True)
         counts = []
         ends = []
         curr = 0
@@ -14,9 +14,8 @@ class Solution:
             while ends and ends[0] == i:
                 heapq.heappop(ends)
                 curr -= 1
-                
+
         res = 0
         for v, c in zip(sorted(counts), sorted(nums)):
             res += v * c
-        return res % (10**9+7)
-
+        return res % (10**9 + 7)

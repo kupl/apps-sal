@@ -10,7 +10,7 @@ S = set()
 for el in best:
     S.add(el)
 M = set()
-#print(arr)
+# print(arr)
 for i in range(len(arr)):
     max_ = -100000
     pup = -1
@@ -19,9 +19,9 @@ for i in range(len(arr)):
             max_ = arr[i][j][1]
             pup = arr[i][j][0]
     M.add(pup + 1)
-#print(M)
-#print(S)
+# print(M)
+# print(S)
 for el in M:
     if el in S:
         S.remove(el)
-print(len(S))        
+print(len(S))

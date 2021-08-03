@@ -12,7 +12,7 @@ class Solution:
             new_queue = []
             for a, p_a in queue:
                 for b, p_b in graph[a]:
-                    p = p_a*p_b
+                    p = p_a * p_b
                     if b not in prob or p > prob[b]:
                         prob[b] = p
                         new_queue.append((b, p))

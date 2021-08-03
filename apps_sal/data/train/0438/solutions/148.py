@@ -1,5 +1,5 @@
 
-    
+
 class Solution:
     def findLatestStep(self, arr, m):
         n = len(arr)

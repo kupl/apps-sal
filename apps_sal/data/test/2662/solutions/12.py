@@ -10,8 +10,7 @@ for e in a:
     if i == 0:
         dq.appendleft(e)
     else:
-        dq[i-1] = e
+        dq[i - 1] = e
 
 ans = len(dq)
 print(ans)
-

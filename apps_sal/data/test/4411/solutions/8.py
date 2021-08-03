@@ -4,13 +4,13 @@ N, K = [int(x) for x in input().split()]
 L2RI = [[] for i in range(200000)]
 for i in range(N):
     l, r = [int(x) for x in input().split()]
-    L2RI[l-1].append([-(r-1), i+1])
+    L2RI[l - 1].append([-(r - 1), i + 1])
 
 ans = []
 que = []
 heapq.heapify(que)
 
-hist = [0]*200000
+hist = [0] * 200000
 exited = 0
 
 for l in range(200000):

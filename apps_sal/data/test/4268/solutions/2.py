@@ -1,7 +1,7 @@
 import math
 import itertools
 N, D = map(int, input().split())
-X = [0]*N
+X = [0] * N
 for i in range(N):
     X[i] = list(map(int, input().split()))
 

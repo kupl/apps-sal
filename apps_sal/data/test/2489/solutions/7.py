@@ -1,8 +1,8 @@
 n = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 A.sort()
 # print(A)
-multiple = [0]*(A[-1]+1)
+multiple = [0] * (A[-1] + 1)
 for i in range(n):
     now = A[i]
     while(now <= A[-1]):

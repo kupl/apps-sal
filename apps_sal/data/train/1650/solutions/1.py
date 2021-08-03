@@ -3,10 +3,11 @@ def find_all(s, d):
     if not xs:
         return []
     else:
-        reduce_int = lambda xs: int(''.join(map(str, xs)))
+        def reduce_int(xs): return int(''.join(map(str, xs)))
         min = reduce_int(xs[0])
-        max = reduce_int(xs[-1])    
+        max = reduce_int(xs[-1])
         return [len(xs), min, max]
+
 
 def digs(d, start=1):
     """

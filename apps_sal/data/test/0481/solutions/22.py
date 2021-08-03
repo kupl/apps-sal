@@ -9,4 +9,6 @@ def __starting_point():
         if num % i == 0 and num / i <= s:
             count += 1
     print(count)
+
+
 __starting_point()

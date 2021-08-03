@@ -14,6 +14,7 @@ def f(n, k, l, r):
         else:
             return False
 
+
 n, k = list(map(int, input().split(' ')))
 a = list(map(int, input().split(' ')))
 
@@ -21,4 +22,3 @@ l = list([i & 1 for i in a]).count(1)
 r = n - l
 
 print('Stannis' if f(n, k, l, r) else 'Daenerys')
-

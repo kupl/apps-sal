@@ -17,7 +17,7 @@ for i in range(b):
     if j == s:
         break
     count += bases[i][1]
-    if i == b-1:
+    if i == b - 1:
         if j < s and a[j][0] >= bases[i][0]:
             r = j
             for j in range(r, s):

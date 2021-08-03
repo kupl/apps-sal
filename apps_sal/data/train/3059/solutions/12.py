@@ -10,4 +10,4 @@ def rain_amount(mm):
         s += b
         return s
     else:
-         return "Your plant has had more than enough water for today!"
+        return "Your plant has had more than enough water for today!"

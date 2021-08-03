@@ -1,7 +1,8 @@
 
-def log(*args): 
-    #print(*args)
+def log(*args):
+    # print(*args)
     pass
+
 
 N = int(input())
 L = [int(n) for n in input().split()]
@@ -24,15 +25,14 @@ while changed:
 
     for i in range(N):
         num = L[i]
-        for n in range(num-1, -1, -1):
+        for n in range(num - 1, -1, -1):
             if n in blah:
                 log('pos', i, 'subtracting', n, 'from', L[i])
                 L[i] = num - n
                 changed = True
                 break
-    
+
     log(sum(L))
 
 log('fin')
 print(sum(L))
-

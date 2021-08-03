@@ -2,6 +2,7 @@ import collections
 
 n = int(input())
 
+
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -18,7 +19,8 @@ def prime_factorize(n):
         a.append(n)
     return a
 
-if n == 1: # 1
+
+if n == 1:  # 1
     print((0))
     return
 
@@ -36,4 +38,3 @@ for i in counts:
             break
 
 print(ans)
-

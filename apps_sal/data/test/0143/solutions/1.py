@@ -7,6 +7,3 @@ for i in range(n):
         A[i] = mex
         mex += 1
 print(mex)
-
-
-

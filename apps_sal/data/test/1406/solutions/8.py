@@ -8,4 +8,3 @@ else:
         p = k ** i
         arr = [j // p % k + 1 for j in range(n)]
         print(' '.join(map(str, arr)))
-

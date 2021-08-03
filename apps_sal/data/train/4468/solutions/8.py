@@ -11,4 +11,3 @@ def simplify(n):
 
 #    s = str(n)
 #    return  "+".join(f"{d}{f'*{10**(-i)}' if i else ''}" for i, d in enumerate(s, -len(s)+1) if int(d))
-

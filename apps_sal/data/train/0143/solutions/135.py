@@ -2,12 +2,12 @@ class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         # 包含两个元素的（因为题目说是两个篮子）的最长子序列，采苹果不能后退也不能跳过，所以就是连续子串,采的苹果个数就指的是子串长度
         # 跟之前的题目一模一样
-        
+
         k = 2
         n = len(tree)
         if n < k:
             return n
-        
+
         i = 0
         lookup = {}
         ans = 0
@@ -20,14 +20,10 @@ class Solution:
         for j in range(n):
             lookup[tree[j]] = j
             if len(lookup) <= k:
-                ans = max(ans, j-i+1)
+                ans = max(ans, j - i + 1)
             else:
                 i_min = min(lookup.values())
                 del lookup[tree[i_min]]
                 i = i_min + 1
-                
-        return ans
-                
-            
-            
 
+        return ans

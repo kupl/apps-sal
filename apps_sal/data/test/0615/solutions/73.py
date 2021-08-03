@@ -41,4 +41,3 @@ for cut in range(2, N - 2 + 1):
     # print(cands)
     ans = min(ans, max(cands) - min(cands))
 print(ans)
-

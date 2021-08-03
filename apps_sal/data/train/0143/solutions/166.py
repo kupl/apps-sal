@@ -12,5 +12,5 @@ class Solution:
                     baskets.append([x, i])
                 else:
                     baskets[1][1] = i
-                
+
         return max(res, len(tree) - 1 - idx)

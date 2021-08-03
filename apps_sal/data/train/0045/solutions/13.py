@@ -1,7 +1,9 @@
 T = int(input())
 
+
 def need(n):
-    return (n*(n+1))//2
+    return (n * (n + 1)) // 2
+
 
 for t in range(T):
     x = int(input())
@@ -10,7 +12,7 @@ for t in range(T):
     while True:
         if x < need(nxt):
             break
-        ans+=1
+        ans += 1
         x -= need(nxt)
-        nxt = nxt*2+1
+        nxt = nxt * 2 + 1
     print(ans)

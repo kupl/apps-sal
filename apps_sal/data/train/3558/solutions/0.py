@@ -3,4 +3,3 @@ def capitalize_word(word):
 
     # .capitilize() for the first word in the string
     # .title() for each word in the string
-

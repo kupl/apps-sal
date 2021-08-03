@@ -8,9 +8,9 @@ count = 0
 judgment = 0
 
 while count <= len(s):
-    count +=1
+    count += 1
     item = s.pop()
-    s.insert(0,item)
+    s.insert(0, item)
     if s == t:
         judgment += 1
 

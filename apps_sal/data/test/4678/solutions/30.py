@@ -10,4 +10,3 @@ for i in range(N):
     ans += bi - A[i]
 
 print(ans)
-

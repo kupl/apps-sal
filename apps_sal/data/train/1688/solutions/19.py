@@ -1,4 +1,4 @@
 # cook your dish here
 for _ in range(int(input())):
     n = int(input())
-    print(input().replace(" ",""))
+    print(input().replace(" ", ""))

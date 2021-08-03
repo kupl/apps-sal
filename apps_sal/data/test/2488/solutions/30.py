@@ -12,9 +12,9 @@ for i, (x, h) in enumerate(xh):
         dam_sum -= dam
     h -= dam_sum
     if h <= 0:
-        continue 
-    c = -(-h//a)
+        continue
+    c = -(-h // a)
     ans += c
-    dam_sum += c*a
-    q.append((x+d*2, c*a))
+    dam_sum += c * a
+    q.append((x + d * 2, c * a))
 print(ans)

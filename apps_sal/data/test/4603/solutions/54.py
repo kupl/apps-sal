@@ -30,4 +30,3 @@ d = int(input())
 travel_costs = [a + c, a + d, b + c, b + d]
 
 print((min(travel_costs)))
-

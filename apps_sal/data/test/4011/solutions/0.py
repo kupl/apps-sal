@@ -15,4 +15,5 @@ def main():
     print("".join(str(x) for x in a))
     return 0
 
+
 main()

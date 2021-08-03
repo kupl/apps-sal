@@ -1,18 +1,19 @@
 import re
 
-n=int(input())
-arr=[]; ans=[]
+n = int(input())
+arr = []
+ans = []
 
 for i in range(n):
-    temp=input().lower().split()
+    temp = input().lower().split()
     for j in temp:
-        valids=re.sub(r"[^a-z]+", '', j)
+        valids = re.sub(r"[^a-z]+", '', j)
         arr.append(valids)
 
-#while('')
+# while('')
 while('' in arr):
     arr.remove('')
-    
+
 '''for j in range(len(temp)):
         if(temp[j]=='.' or temp[j]==';' or temp[j]=='\'' or temp[j]==':'):
             del(temp[j])
@@ -21,14 +22,13 @@ while('' in arr):
         
     for j in range(len(temp)):
         arr.append(temp[j])'''
-ans=arr
+ans = arr
 '''for i in arr:
     valids = re.sub(r"[^a-z]+", '', i)
     ans.append(valids)
     print(ans)'''
-        
-ans=list(set(list(ans)))
+
+ans = list(set(list(ans)))
 ans.sort()
 print(len(ans))
 print(*ans, sep='\n')
-    

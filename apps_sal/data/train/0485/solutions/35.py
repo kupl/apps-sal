@@ -1,15 +1,13 @@
 class Solution:
     def minKBitFlips(self, A: List[int], K: int) -> int:
-        
+
         n = len(A)
         ff = [0 for i in range(n)]
-        
-        
-        
+
         cur = 0
         f = 0
         for i in range(n):
-            
+
             cur += ff[i]
             xo = cur % 2
             if xo ^ A[i] == 0:

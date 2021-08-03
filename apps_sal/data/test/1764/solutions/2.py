@@ -40,4 +40,3 @@ for t in itertools.chain(list(range(1, 1 + win_cnt // 2)), [win_cnt]):
 print(len(result))
 for (x, y) in sorted(result):
     print(x, y)
-

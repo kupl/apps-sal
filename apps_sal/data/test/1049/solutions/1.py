@@ -9,4 +9,3 @@ for v in c:
     else:
         x = 0
 print(r)
-

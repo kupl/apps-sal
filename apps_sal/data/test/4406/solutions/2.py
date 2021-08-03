@@ -14,6 +14,6 @@ for i in li:
     else:
         s.remove(l.pop())
         s.add(i)
-        l.appendleft(i)       
+        l.appendleft(i)
 print(len(l))
 print(*list(l))

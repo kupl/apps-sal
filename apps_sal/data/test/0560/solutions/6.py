@@ -1,4 +1,4 @@
-n,m =[int(x) for x in input().split()]
+n, m = [int(x) for x in input().split()]
 a = []
 ans = 0
 for i in range(n):
@@ -22,5 +22,5 @@ for i in range(m):
 for i in range(n):
     for j in range(m):
         if a[i][j] == 'T':
-            ans +=1 
+            ans += 1
 print(ans)

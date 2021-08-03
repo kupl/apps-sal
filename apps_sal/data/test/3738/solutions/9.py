@@ -1,5 +1,5 @@
-3
 import sys
+3
 
 MAPPING = {
     'U': (0, 1),
@@ -59,5 +59,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

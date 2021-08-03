@@ -6,6 +6,3 @@ for i in range(1, n):
     ans += a[i] - a[i - 1] - 1
 
 print(ans)
-
-
-

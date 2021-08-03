@@ -4,4 +4,3 @@ def total(arr):
         for j in range(1, i):
             a[j - 1] += a[j]
     return a[0]
-

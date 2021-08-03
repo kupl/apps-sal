@@ -9,4 +9,3 @@ for i in range(n):
         total += 1
 
 print(total)
-

@@ -8,4 +8,3 @@ for i in range(t):
     if '<' in s:
         b = n - 1 - s.rindex('<')
     print(min(a, b))
-

@@ -1,7 +1,7 @@
 class Solution:
     def rectangleArea(self, rectangles: List[List[int]]) -> int:
         xs = sorted({x for x1, _, x2, _ in rectangles for x in [x1, x2]})
-        index = {v : i for i, v in enumerate(xs)}
+        index = {v: i for i, v in enumerate(xs)}
         cnt = [0] * len(index)
         events = []
         for x1, y1, x2, y2 in rectangles:

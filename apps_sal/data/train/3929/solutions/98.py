@@ -4,5 +4,5 @@ def reverse(a):
     li.reverse()
     for i in li:
         if i != '':
-            lista.append(i)  
+            lista.append(i)
     return " ".join(lista)

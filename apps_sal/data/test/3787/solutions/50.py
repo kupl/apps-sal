@@ -12,8 +12,8 @@ def f(a, b):
                 N // a
             )
             for j in range(1, a + 1)
-        ] +
-        [
+        ]
+        + [
             j
             for j in range(
                 b - N // a if N % a > b - N // a else
@@ -21,8 +21,8 @@ def f(a, b):
                 N - (N // a) * a + 1 if N % a > b - N // a else
                 N - (N // a - 1) * a + 1
             )
-        ] +
-        [
+        ]
+        + [
             j
             for j in reversed(
                 list(range(
@@ -51,4 +51,3 @@ ans = (
 )
 
 print(ans)
-

@@ -22,7 +22,7 @@ while temp:
     val = s
     i = 0
     count = 0
-    while count < c-1:
+    while count < c - 1:
         if legs[i][0] < l:
             count += 1
             val -= legs[i][1]
@@ -30,8 +30,7 @@ while temp:
         if i == n:
             break
     # print(l, c, e, val+f)
-    if val+f < mn:
-        mn = val+f
+    if val + f < mn:
+        mn = val + f
     f += e
 print(mn)
-

@@ -10,7 +10,7 @@ class StreamChecker:
                 cur_node.setdefault(char, {})
                 cur_node = cur_node[char]
             cur_node[self.word_end] = True
-        
+
     def query(self, letter: str) -> bool:
         self.stream.insert(0, letter)
         cur_node = self.root
@@ -22,12 +22,8 @@ class StreamChecker:
                 if self.word_end in cur_node:
                     return True
         return False
-            
-            
-        
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

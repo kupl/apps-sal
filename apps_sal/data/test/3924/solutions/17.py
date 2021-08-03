@@ -2,7 +2,7 @@ n, k = map(int, input().split())
 a = list(map(int, input().split()))
 ans = 0
 for i in range(0, len(a) - 1):
-    
+
     ans += a[i] // k
     ans += int((a[i] % k) != 0)
     a[i + 1] += a[i] % k

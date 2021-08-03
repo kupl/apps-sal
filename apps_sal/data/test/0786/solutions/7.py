@@ -18,4 +18,3 @@ elif maxr > 10000000000:
     print("Infinity")
 else:
     print(maxr)
-

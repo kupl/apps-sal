@@ -1,5 +1,6 @@
 import math
 
+
 def coordinates(degrees, radius):
     theta = math.radians(degrees)
     x = math.cos(theta) * radius

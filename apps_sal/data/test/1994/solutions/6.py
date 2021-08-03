@@ -1,9 +1,9 @@
 s = str(input())
 
-lps = [0]*100005
-dp = [0]*100005
-ada = [0]*100005
-tunda = [0]*100005
+lps = [0] * 100005
+dp = [0] * 100005
+ada = [0] * 100005
+tunda = [0] * 100005
 
 n = len(s)
 
@@ -20,13 +20,14 @@ while(i < n):
         lps[i] = 0
         i += 1
     else:
-        j = lps[j-1]
+        j = lps[j - 1]
 
 
-for i in range(n-1,-1,-1):
+for i in range(n - 1, -1, -1):
     tunda[i] += 1
     dp[lps[i]] += tunda[i]
-    if (lps[i]):tunda[lps[i]-1] += tunda[i]
+    if (lps[i]):
+        tunda[lps[i] - 1] += tunda[i]
 
 j = n
 
@@ -38,9 +39,10 @@ for i in range(n):
 vector = []
 
 while(1):
-    vector.append((j,1+dp[j]))
-    j = lps[j-1]
-    if (j == 0): break
+    vector.append((j, 1 + dp[j]))
+    j = lps[j - 1]
+    if (j == 0):
+        break
 
 
 vector.reverse()
@@ -48,4 +50,3 @@ vector.reverse()
 print(len(vector))
 for i in vector:
     print(i[0], i[1])
-

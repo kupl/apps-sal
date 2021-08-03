@@ -22,5 +22,5 @@ for i in range(n):
         SUM2 = sum2[i]
         SUM1, SUM2 = SUM1 + sum2[-1] - a[i] - SUM2, SUM2 + sum1[-1] - SUM1
         if SUM1 == SUM2:
-            ans += 1       
+            ans += 1
 print(ans)

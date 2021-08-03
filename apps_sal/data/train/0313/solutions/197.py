@@ -1,6 +1,7 @@
 
 from typing import List
 
+
 def binarysearch(start, end, condition):
     l, r = start, end
     while l < r:
@@ -14,7 +15,7 @@ def binarysearch(start, end, condition):
 
 class Solution:
     def minDays(self, bloomDay, m: int, k: int) -> int:
-        if m*k > len(bloomDay):
+        if m * k > len(bloomDay):
             return -1
 
         def canMakeBouquet():
@@ -39,6 +40,3 @@ class Solution:
             return condition
 
         return binarysearch(0, max(bloomDay), canMakeBouquet())
-
-
-

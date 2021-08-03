@@ -3,6 +3,7 @@ strs = []
 for i in range(n):
     strs.append(input())
 
+
 def check(s):
     h = 0
     min_h = max_h = 0
@@ -23,6 +24,7 @@ def check(s):
     else:
         return None
 
+
 def count_pairs(strs):
     by_height = {}
     for s in strs:
@@ -39,5 +41,5 @@ def count_pairs(strs):
     pairs_count += by_height.get(0, 0) // 2
     return pairs_count
 
-print(count_pairs(strs))
 
+print(count_pairs(strs))

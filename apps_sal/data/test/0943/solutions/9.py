@@ -9,7 +9,7 @@ for i in lst:
     else:
         s += i
         cnt += 1
-        
+
 if cnt % 2 == 0:
     print(s)
 else:
@@ -17,5 +17,4 @@ else:
         if lst[i] % 2 == 1:
             s -= lst[i]
             break
-    print(s)    
-
+    print(s)

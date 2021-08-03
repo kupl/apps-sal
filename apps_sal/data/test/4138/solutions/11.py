@@ -7,9 +7,10 @@ def init(maxn):
         Single[i] = pre + lens * i
     for i in range(1, maxn):
         lens = 10 ** i - 10 ** (i - 1)
-        pre = Single[i-1]
+        pre = Single[i - 1]
         Sum[i] = (pre + i + pre + lens * i) * lens // 2 + Sum[i - 1]
     return Sum, Single
+
 
 def getAns(n, Sum, Single, maxn):
     ans = 0
@@ -26,7 +27,7 @@ def getAns(n, Sum, Single, maxn):
             index = m
             minn = min(minn, n - cnt)
             L = m + 1
-        else :
+        else:
             R = m - 1
     #print(index, minn)
     n = minn
@@ -34,7 +35,7 @@ def getAns(n, Sum, Single, maxn):
     index = 0
     while L <= R:
         m = (L + R) // 2
-        digit = len(str(m)) 
+        digit = len(str(m))
         lens = m - 10 ** (digit - 1) + 1
         pre = Single[digit - 1]
         cnt = pre + lens * digit
@@ -42,9 +43,10 @@ def getAns(n, Sum, Single, maxn):
             index = m
             minn = min(minn, n - cnt)
             L = m + 1
-        else :
+        else:
             R = m - 1
     return str(index + 1)[minn - 1]
+
 
 def test():
     ans = 0
@@ -64,8 +66,9 @@ def main():
         n = int(input())
         print(getAns(n, Sum, Single, maxn))
 
-    
 
 def __starting_point():
     main()
+
+
 __starting_point()

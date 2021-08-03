@@ -3,7 +3,7 @@ A = list(map(int, input().split()))
 A = [0] + A
 Sam = []
 Dif = []
-D2= [0]*200000
+D2 = [0] * 200000
 
 for i in range(len(A)):
     Sam.append(i + A[i])

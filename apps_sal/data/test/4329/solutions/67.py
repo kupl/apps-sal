@@ -1,6 +1,6 @@
 s = input()
 t = input()
-if t == s + t[-1] :
+if t == s + t[-1]:
     print('Yes')
-else :
+else:
     print('No')

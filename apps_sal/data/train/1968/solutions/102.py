@@ -2,18 +2,19 @@ class Node:
     def __init__(self, v):
         self.v = v
         self.children = {}
-    
+
     def __repr__(self):
         return f'Node({self.v} {self.children.keys()})'
+
 
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         trie = Node('')
         for f in folder:
             self.add_to_trie(trie, f)
-        
+
         return ['/' + '/'.join(i) for i in self.dfs(trie)]
-    
+
     def dfs(self, cur):
         if not cur.children:
             return [[]]
@@ -22,7 +23,7 @@ class Solution:
             for sub_res in self.dfs(child_node):
                 res.append([child] + sub_res)
         return res
-        
+
     def add_to_trie(self, trie, f):
         if not f:
             return
@@ -42,7 +43,7 @@ class Solution:
                 cur.children = {}
         else:
             self.add_subs_to_trie(trie, 0, sub_folders)
-        
+
     def add_subs_to_trie(self, trie, ix, sub_folders):
         cur = trie
         for i in range(ix, len(sub_folders)):

@@ -1,2 +1,2 @@
 def angle(n):
-    return (n+~1)*180
+    return (n + ~1) * 180

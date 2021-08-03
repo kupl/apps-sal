@@ -1,5 +1,6 @@
 import fractions
 
+
 class Solution:
     def nthMagicalNumber(self, N: int, A: int, B: int) -> int:
         self.normalize(A, B)
@@ -7,14 +8,14 @@ class Solution:
         mod = 10 ** 9 + 7
         div, rem = N // self.num_before_lcm, N % self.num_before_lcm
         return (div * self.lcm + multiples_before_lcm[rem]) % mod
-        
+
     def normalize(self, A, B):
         self.gcd = fractions.gcd(A, B)
         self.lcm = A * B // self.gcd
         self.normA = A // self.gcd
         self.normB = B // self.gcd
         self.num_before_lcm = self.normA + self.normB - 1
-    
+
     def get_multiples_before_lcm(self, A, B):
         nextAmult = A
         nextBmult = B

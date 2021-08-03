@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def uniqueOccurrences(self, arr: List[int]) -> bool:
         occurences = defaultdict(int)

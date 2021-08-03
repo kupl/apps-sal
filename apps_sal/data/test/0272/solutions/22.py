@@ -28,4 +28,3 @@ if f:
         print(*i)
 else:
     print(-1)
-

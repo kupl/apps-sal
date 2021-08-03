@@ -7,11 +7,13 @@ def solve(a, t1, t2):
         l2 = 1439
     if (l2 < l1):
         return 0
-    return (l2-l1) // a + 1 - (l2 == t2)
-    
+    return (l2 - l1) // a + 1 - (l2 == t2)
+
+
 def trans(h, m):
     return 60 * h + m
-    
+
+
 data1 = [int(x) for x in input().split()]
 data2 = [int(x) for x in input().split()]
 data3 = input()

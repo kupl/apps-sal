@@ -8,7 +8,7 @@ def Input():
 
 def check(i, j, s):
     bomb = 0
-    for x, y in [(i+1, j), (i-1, j), (i, j+1), (i, j-1), (i-1, j-1), (i-1, j+1), (i+1, j-1), (i+1, j+1)]:
+    for x, y in [(i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1), (i - 1, j - 1), (i - 1, j + 1), (i + 1, j - 1), (i + 1, j + 1)]:
         if s[x][y] == "#":
             bomb += 1
     return str(bomb)

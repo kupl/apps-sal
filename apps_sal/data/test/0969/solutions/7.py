@@ -4,7 +4,8 @@ s, p = '', []
 for q in t:
     d = s
     s += q
-    if s in a or s in b: continue
+    if s in a or s in b:
+        continue
     if d in a:
         k = a.find(d)
         p += [(k + 1, k + len(d))]
@@ -16,4 +17,5 @@ for q in t:
         return
     s = q
 print(len(p))
-for i, j in p: print(i, j)
+for i, j in p:
+    print(i, j)

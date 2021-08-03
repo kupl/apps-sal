@@ -14,4 +14,3 @@ for _ in range(n):
             sad += 1
 
 print(x, sad)
-

@@ -13,4 +13,3 @@ for i in range(n):
         mi = min(t // gcd(t, L), mi)
         ma = max(t // gcd(t, L), ma)
 print(mi, ma)
-

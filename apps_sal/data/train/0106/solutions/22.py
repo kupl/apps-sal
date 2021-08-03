@@ -36,4 +36,3 @@ for test in range(t):
         print(' '.join(ans))
     else:
         print(-1)
-

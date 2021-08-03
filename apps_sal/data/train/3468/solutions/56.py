@@ -1,5 +1,5 @@
 def scramble(s1, s2):
-    #for ltr in s2:
+    # for ltr in s2:
     #    if s2.count(ltr) > s1.count(ltr):
     #        return False
     s1ct = {}

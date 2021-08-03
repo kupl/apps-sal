@@ -6,8 +6,8 @@ for _ in range(T):
     N = int(input())
     ar = input().split()
     m = int(ar[0])
-    
-    if int(ar[N-1]) > m:
-        m = int(ar[N-1])
-        
+
+    if int(ar[N - 1]) > m:
+        m = int(ar[N - 1])
+
     print(m)

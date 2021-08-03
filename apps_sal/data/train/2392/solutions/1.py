@@ -11,5 +11,3 @@ for _ in range(tst):
     for i in range(1, b % 10 + 1):
         sum += (a * i) % 10
     print(sum)
-
-

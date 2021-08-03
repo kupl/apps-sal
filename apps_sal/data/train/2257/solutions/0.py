@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 T = int(input())
 for _ in range(T):
     N = int(input())
@@ -14,12 +16,11 @@ for _ in range(T):
     else:
         ans = 0
         for i in range(20):
-            for j in range(i+1, 20):
+            for j in range(i + 1, 20):
                 if X[i][j]:
                     ans += 1
-                    for jj in range(j+1, 20):
+                    for jj in range(j + 1, 20):
                         if X[i][jj]:
                             X[j][jj] = 1
                     break
         print(ans)
-

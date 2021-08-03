@@ -19,11 +19,8 @@ b.sort()
 for i in range(k - n + 1):
     temp_max = -999999999
     for j in range(n):
-        temp_max =  max(abs(b[i + j] - a[j]) + abs(b[i + j] - p), temp_max)
-        
+        temp_max = max(abs(b[i + j] - a[j]) + abs(b[i + j] - p), temp_max)
+
     rezultat = min(temp_max, rezultat)
-    
+
 print(rezultat)
-
-
-

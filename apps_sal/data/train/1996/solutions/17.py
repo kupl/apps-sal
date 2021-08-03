@@ -4,7 +4,7 @@ class Solution:
         for i in range(len(graph)):
             if len(graph[i]) == 0:
                 nodes.add(i)
-        
+
         stop = False
         while not stop:
             tmp = set()
@@ -21,7 +21,5 @@ class Solution:
                 stop = True
             nodes = nodes.union(tmp)
             # print(nodes)
-            
-        return sorted(nodes)
-            
 
+        return sorted(nodes)

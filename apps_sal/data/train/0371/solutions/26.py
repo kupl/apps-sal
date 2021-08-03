@@ -1,50 +1,46 @@
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        
-        
+
         if S == T:
             return 0
-        
+
         graph = collections.defaultdict(list)
-        
-        #capture the bus routes
+
+        # capture the bus routes
         for index, route in enumerate(routes):
             for stop in route:
-                
+
                 graph[stop].append(index)
-                
-        print(graph)        
+
+        print(graph)
         queue = graph[S]
         visited = set()
         steps = 0
-        
+
         while queue:
             temp = []
-            #check each bus of the soure node
+            # check each bus of the soure node
             for bus in queue:
                 if bus in visited:
                     continue
-                else:    
+                else:
                     visited.add(bus)
-                    #check the  stops of each bus
+                    # check the  stops of each bus
                     for stops in routes[bus]:
                         if stops == T:
                             return steps + 1
-                         #check the bus of each stops
+                         # check the bus of each stops
                         for buses in graph[stops]:
                             if buses not in visited:
-                                #each and every level fill it with new buses
-                               temp.append(buses)
-                        
-            queue = temp            
+                                # each and every level fill it with new buses
+                                temp.append(buses)
+
+            queue = temp
             steps += 1
-            
-            
-        return -1 
-        
-   
-        
-        
+
+        return -1
+
+
 #         if S==T:
 #             return 0
 #         graph=collections.defaultdict(list)
@@ -66,7 +62,7 @@ class Solution:
 #                     for bus2 in graph[stop]:
 #                         if bus2 not in visited:
 #                             tmp.append(bus2)
-                            
+
 #             que=tmp
 #             steps+=1
 #         return -1
@@ -93,4 +89,3 @@ class Solution:
 #                     seen.add(nei)
 #                     queue.append((nei, depth+1))
 #         return -1
-

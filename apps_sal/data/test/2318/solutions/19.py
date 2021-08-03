@@ -3,11 +3,11 @@ import sys
 
 input = sys.stdin.readline
 n = int(input())
-word = [input() for i in range(2*n)]
+word = [input() for i in range(2 * n)]
 
 for i in range(n):
-    word0 = word[i*2]
-    word1 = word[i*2 + 1]
+    word0 = word[i * 2]
+    word1 = word[i * 2 + 1]
     li0 = [[word0[0], 1]]
     li1 = [[word1[0], 1]]
     for i in range(1, len(word0)):
@@ -29,6 +29,3 @@ for i in range(n):
             break
     else:
         print("YES")
-          
-
-

@@ -1,3 +1,3 @@
 from math import ceil
-a,b=map(int,input().split())
-print(ceil(a/(b*2+1)))
+a, b = map(int, input().split())
+print(ceil(a / (b * 2 + 1)))

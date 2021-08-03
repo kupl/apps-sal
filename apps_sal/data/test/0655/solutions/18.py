@@ -5,6 +5,6 @@ dy = n - y + 1
 cnt1 = min(x, y) + x - min(x, y) + y - min(x, y)
 cnt2 = min(dx, dy) + dx - min(dx, dy) + dy - min(dx, dy)
 if cnt1 <= cnt2:
-	print('White')
+    print('White')
 else:
-	print('Black')
+    print('Black')

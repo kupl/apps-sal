@@ -12,4 +12,3 @@ while A > 0 and C > 0:
             break
         else:
             continue
-

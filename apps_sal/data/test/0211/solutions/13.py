@@ -1,4 +1,6 @@
 MOD = 1000000009
+
+
 def p2(e):
     if e == 0:
         return 1
@@ -6,6 +8,7 @@ def p2(e):
         return 2 * p2(e - 1) % MOD
     else:
         return p2(e // 2) ** 2 % MOD
+
 
 n, m, k = map(int, input().split())
 x = (m - min(n - m, m // (k - 1)) * (k - 1)) // k

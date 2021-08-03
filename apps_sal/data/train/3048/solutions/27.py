@@ -6,4 +6,3 @@ def alternateCase(st):
         else:
             string += letters.upper()
     return string
-

@@ -14,4 +14,4 @@ for word in words:
     ans -= t.count(word)
     if ans > max_val:
         max_val = ans
-print(max_val) 
+print(max_val)

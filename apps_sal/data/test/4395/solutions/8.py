@@ -14,4 +14,3 @@ for pattern in itertools.permutations("RGB", 3):
 print(best_count)
 full, tail = divmod(n, 3)
 print("".join(best_pattern * full + best_pattern[:tail]))
-

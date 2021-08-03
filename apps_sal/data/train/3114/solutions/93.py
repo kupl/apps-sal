@@ -1,17 +1,17 @@
 def leap(year):
     solu = True
     if year >= 1000:
-        if year%4==0:
-            solu= True
-            if year%100 == 0:
-                if year%400==0:
+        if year % 4 == 0:
+            solu = True
+            if year % 100 == 0:
+                if year % 400 == 0:
                     solu = True
                 else:
                     solu = False
         else:
             solu = False
-    elif year >=100:
-        if year%4==0:
+    elif year >= 100:
+        if year % 4 == 0:
             if year % 100 == 0:
                 if year % 400 == 0:
                     solu = True
@@ -20,12 +20,13 @@ def leap(year):
         else:
             solu = False
     else:
-        if year%4==0:
+        if year % 4 == 0:
             solu = True
         else:
             solu = False
 
     return solu
+
 
 def year_days(year):
     temp = year

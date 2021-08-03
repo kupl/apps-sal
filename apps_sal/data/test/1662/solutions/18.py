@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.3
 # -*- coding: utf-8 -*-
 
-def sereja_and_stairs ():
+def sereja_and_stairs():
 
     m = input()
     b = input()
@@ -17,7 +17,7 @@ def sereja_and_stairs ():
 
     up_stairs = []
     down_stairs = []
-    for card in range(1, max_card+1):
+    for card in range(1, max_card + 1):
         if nr_cards[card] > 0:
             nr_cards[card] -= 1
             down_stairs.append(card)
@@ -27,14 +27,16 @@ def sereja_and_stairs ():
     stairs = up_stairs + down_stairs
 
     nr_stairs = len(stairs)
-    stairs = ' '.join(map(str,stairs))
+    stairs = ' '.join(map(str, stairs))
     print(('{nr:d}\n{stairs:s}'
           .format(nr=nr_stairs, stairs=stairs)
-          ))
+           ))
 
     return
 
+
 def __starting_point():
     sereja_and_stairs()
+
 
 __starting_point()

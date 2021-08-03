@@ -19,4 +19,3 @@ for i in range(n):
     days = min(days, best)
 
 print(days)
-

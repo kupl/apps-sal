@@ -1,8 +1,8 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        # After having implemented minOperations_dumb_solution(), we realize that 
+        # After having implemented minOperations_dumb_solution(), we realize that
         # the number of op 1 we'll need to do is just the number of times we need
-        # to divide the max even number we ever encounter to get it down to zero. 
+        # to divide the max even number we ever encounter to get it down to zero.
         # Because, a division would reduce everyone by 2 and when the smaller even
         # numbers we see gets down to zero, it will no longer be affected. We only care
         # about dividing the biggest even number down to zero.
@@ -22,10 +22,7 @@ class Solution:
             max_nb_op_1 = max(max_nb_op_1, nb_op_1)
         cost += max_nb_op_1
         return cost
-        
-                
-                    
-        
+
     def minOperations_dumb_solution(self, nums: List[int]) -> int:
 
         # Key insight is if nums[i] is odd, there's no way we could have arrived at nums[i]
@@ -39,13 +36,13 @@ class Solution:
             for i in range(len(nums)):
                 if nums[i] == 0:
                     continue
-                
+
                 all_zeros = False
                 if nums[i] % 2 != 0:
                     cost += nums[i] % 2
                     nums[i] = nums[i] - (nums[i] % 2)
                     all_evens = False
-            
+
             if all_zeros:
                 break
             while all_evens:
@@ -54,7 +51,5 @@ class Solution:
                     if nums[i] % 2 != 0:
                         all_evens = False
                 cost += 1
-                
-        return cost
-                    
 
+        return cost

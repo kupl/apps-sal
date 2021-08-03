@@ -1,8 +1,8 @@
 class Solution:
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
-        medVal = sorted(arr)[(len(arr)-1)//2]
-        return sorted(arr, key = lambda x: [abs(x - medVal), x], reverse = True)[:k]
-        
+        medVal = sorted(arr)[(len(arr) - 1) // 2]
+        return sorted(arr, key=lambda x: [abs(x - medVal), x], reverse=True)[:k]
+
         '''
         sList = sorted(arr)
         medianIndex = (len(arr)-1) // 2

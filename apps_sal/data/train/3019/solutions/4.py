@@ -5,15 +5,13 @@
 
 
 def str_count(strng, letter):
-# start counting from 0
+    # start counting from 0
     count = 0
 # loop over every element in string
     for e in strng:
-# if element is equal to letter in second argument
+        # if element is equal to letter in second argument
         if e == letter:
-# add element to the count
+            # add element to the count
             count += 1
 # return count of letter in string
     return count
-
-

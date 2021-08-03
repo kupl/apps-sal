@@ -3,7 +3,7 @@ cur = v0
 rem = c
 tmp = 0
 res = 0
-while rem > 0 :
+while rem > 0:
     res += 1
     rem = rem - (cur - tmp)
     cur = min(cur + a, v1)

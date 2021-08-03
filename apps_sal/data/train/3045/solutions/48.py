@@ -1,4 +1,1 @@
-elevator = lambda left, right, call: "left" if abs(right-call) > abs(left-call) else "right"
- 
-    
-
+def elevator(left, right, call): return "left" if abs(right - call) > abs(left - call) else "right"

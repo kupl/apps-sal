@@ -6,4 +6,4 @@ def isTree(matrix):
         children = {y for y in matrix[stack.pop()] if y in vertices}
         vertices.difference_update(children)
         stack.extend(children)
-    return not vertices and sum(map(len,matrix)) == 2 * len(matrix) - 2
+    return not vertices and sum(map(len, matrix)) == 2 * len(matrix) - 2

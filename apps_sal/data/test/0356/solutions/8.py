@@ -22,8 +22,7 @@ while (i < n and j < m):
     else:
         sumB -= arrB[j]
         i += 1
-if (j == m and i == n): 
+if (j == m and i == n):
     print(result)
 else:
     print("-1")
-

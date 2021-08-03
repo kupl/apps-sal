@@ -7,4 +7,3 @@ for i in range(K, 0, -1):
         A[i] -= A[i * j]
         A[i] %= mod
 print((sum(i * a for i, a in enumerate(A)) % mod))
-

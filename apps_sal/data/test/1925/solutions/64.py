@@ -14,4 +14,3 @@ def main(A, B, N):
 
 A, B, N = list(map(int, input().split()))
 print((main(A, B, N)))
-

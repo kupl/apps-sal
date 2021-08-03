@@ -36,7 +36,7 @@ class Solver:
         ans = cnt_lst[0]
 
         for start_cand in range(cnt_lst[0], 0, -1):
-            if start_cand % 2 == 0 :
+            if start_cand % 2 == 0:
                 ans2 = 0
                 nxt = start_cand
                 for cnt in cnt_lst:
@@ -64,4 +64,3 @@ def main():
 
 
 main()
-

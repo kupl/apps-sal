@@ -3,12 +3,14 @@ def GCD(m, n):
         m, n = n, m % n
     return m
 
+
 def gcd_all(a):
     n = len(a)
     gcd = a[0]
     for i in range(1, n):
         gcd = GCD(gcd, a[i])
     return gcd
+
 
 def f(a):
     mx = 10**6
@@ -39,7 +41,7 @@ def f(a):
     else:
         return 'not coprime'
 
+
 n = int(input())
 a = list(map(int, input().split()))
 print((f(a)))
-

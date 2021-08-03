@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         queue = deque()

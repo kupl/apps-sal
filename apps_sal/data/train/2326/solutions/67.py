@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = [[a[i], i] for i in range(n)]
-b.sort(reverse = True)
+b.sort(reverse=True)
 d = {}
 dcnt = {}
 for i in range(n):
@@ -15,7 +15,7 @@ k = 0
 for i, j in d.items():
     b[k][0], b[k][1] = i, j
     k += 1
-b.sort(reverse = True)
+b.sort(reverse=True)
 ans = [0] * n
 j = b[0][1]
 cnt = 0

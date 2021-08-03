@@ -12,7 +12,8 @@ while i < N:
         s += A[i]
         i += 1
     else:
-        if j < 0: break
+        if j < 0:
+            break
         s -= B[j]
         j -= 1
 if s <= K:

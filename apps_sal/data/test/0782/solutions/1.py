@@ -14,4 +14,3 @@ if reduce(gcd, a) == a[0]:
     print(' '.join(map(str, ans)))
 else:
     print(-1)
-

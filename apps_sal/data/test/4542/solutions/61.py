@@ -38,16 +38,17 @@ def resolve():
 
     i = 1
     while i < len(S):
-        if S[i] == S[i-1]:
+        if S[i] == S[i - 1]:
             del S[i]
         else:
             i += 1
 
-    print((len(S)-1))
+    print((len(S) - 1))
 
 
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

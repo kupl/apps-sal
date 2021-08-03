@@ -1,11 +1,15 @@
 __author__ = 'Admin'
+
+
 def f(n):
     return max(n[0], n[1])
+
+
 t = True
 x1, y1, x2, y2, x3, y3 = map(int, input().split())
 m = [x1, y1, x2, y2, x3, y3]
 m1 = [[x1, y1, 'A'], [x2, y2, 'B'], [x3, y3, 'C']]
-m1.sort(key = f)
+m1.sort(key=f)
 maxi = max(m1[-1][0], m1[-1][1])
 mini = min(m1[-1][0], m1[-1][1])
 maxj = max(m1[-2][1], m1[-2][0])
@@ -59,6 +63,6 @@ else:
 if t == True:
     print(maxi)
     for i in range(maxi):
-        print(*matr[i], sep = '')
+        print(*matr[i], sep='')
 else:
     print(-1)

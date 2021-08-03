@@ -25,4 +25,4 @@ for i in range(H):
 
 for row in result:
     # 出力形式に合わせて出力
-    print(*row, sep = '')
+    print(*row, sep='')

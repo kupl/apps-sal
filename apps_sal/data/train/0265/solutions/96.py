@@ -1,6 +1,6 @@
 class Solution:
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
-        walk = {0:-1}
+        walk = {0: -1}
         prefixSum = 0
         delimiter = -1
         res = 0

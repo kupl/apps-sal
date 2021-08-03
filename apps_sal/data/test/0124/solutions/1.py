@@ -1,5 +1,5 @@
-x, y, z= map(int, input().split())
-a, b, c = map(int,input().split())
+x, y, z = map(int, input().split())
+a, b, c = map(int, input().split())
 if a >= x:
     a -= x
     s = a + b

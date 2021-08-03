@@ -11,4 +11,3 @@ for c in cnt:
     v = min(v, cnt[c])
 
 print(v * k)
-

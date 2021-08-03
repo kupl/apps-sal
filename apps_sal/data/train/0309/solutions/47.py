@@ -1,11 +1,12 @@
 from collections import defaultdict
 
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         # mapping: idx -> (mapping: arithmetic_step -> longest_arithmetic_subsequence_with_this_step_ending_at_idx
         d = defaultdict(lambda: defaultdict(lambda: 1))
-        
-        for i,a in enumerate(A):
+
+        for i, a in enumerate(A):
             # LAS: A[i]
             d[i][0] = 1
             for j in range(i):

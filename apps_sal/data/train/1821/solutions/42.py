@@ -4,7 +4,7 @@ class Solution:
         nums_before = 0
         for k, v in sorted(counts.items(), key=lambda x: x[0]):
             nums_before += v
-            counts[k] = nums_before-1
+            counts[k] = nums_before - 1
         out = [0 for _ in range(len(nums))]
         for i in range(len(nums)):
             out[counts[nums[i]]] = nums[i]

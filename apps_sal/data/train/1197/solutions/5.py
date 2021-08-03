@@ -1,6 +1,7 @@
 from itertools import count, islice, chain
 import time
- 
+
+
 def mian_chowla():
     mc = [1]
     yield mc[-1]
@@ -18,21 +19,25 @@ def mian_chowla():
             newsums.clear()
             mc.append(trial)
             yield trial
- 
+
+
 def pretty(s, f):
-    arr=[]
+    arr = []
     for n in (islice(mian_chowla(), s, f)):
         arr.append(int(n))
     return arr
- 
+
+
 def __starting_point():
-    lst=pretty(0, 80)
+    lst = pretty(0, 80)
     for _ in range(int(input())):
-        n=int(input())
-        sum=0
+        n = int(input())
+        sum = 0
         for i in range(n):
-            print(lst[i],end=" ")
-            sum+=lst[i]
+            print(lst[i], end=" ")
+            sum += lst[i]
         print()
         print(sum)
+
+
 __starting_point()

@@ -8,5 +8,5 @@ for i in range(len(s)):
             m = i + 1 - p
         p = i + 1
 if len(s) + 1 - p > m:
-    m = len(s)  + 1 - p
+    m = len(s) + 1 - p
 print(m)

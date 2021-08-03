@@ -4,6 +4,6 @@ def sort_array(value):
     for i in value:
         l.append(i)
     l.sort()
-    for n in l: 
+    for n in l:
         st += n
     return st

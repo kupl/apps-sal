@@ -31,4 +31,3 @@ else:
                 x[j - 1] = max(x[j - 1], x[i] + dv[li[j] - li[i]])
         ans = min(ans, x[-1])
     print(ans)
-

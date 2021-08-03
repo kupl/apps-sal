@@ -2,21 +2,21 @@ class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         sd = collections.deque()
         ld = collections.deque()
-        
+
         def smallpush(d, i):
             while d and d[-1][0] > nums[i]:
                 d.pop()
             d.append((nums[i], i))
-            
+
         def largepush(d, i):
             while d and d[-1][0] < nums[i]:
                 d.pop()
             d.append((nums[i], i))
-            
+
         def popleft(d, j):
             while d and d[0][1] < j:
                 d.popleft()
-                
+
         n = len(nums)
         ans = -math.inf
         start = 0

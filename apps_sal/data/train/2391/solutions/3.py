@@ -1,18 +1,18 @@
 t = int(input())
 for _ in range(t):
     n = int(input())
-    l = list([int(x)- 1 for x in input().split()])
+    l = list([int(x) - 1 for x in input().split()])
     out = []
 
     ll = [(l[i], i) for i in range(n)]
     ll.sort()
 
-    swap = (-1,-1)
+    swap = (-1, -1)
     for i in range(n - 1):
         if ll[i][0] == ll[i + 1][0]:
-            swap = (ll[i][1],ll[i+1][1])
+            swap = (ll[i][1], ll[i + 1][1])
 
-    newl = [0]*n
+    newl = [0] * n
     for i in range(n):
         newl[ll[i][1]] = i
 
@@ -24,20 +24,20 @@ for _ in range(t):
             if l[i] > l[j]:
                 swapN += 1
 
-    #print(l)
+    # print(l)
     if swapN & 1:
-        l[swap[0]],l[swap[1]] = l[swap[1]],l[swap[0]]
-    #print(l)
+        l[swap[0]], l[swap[1]] = l[swap[1]], l[swap[0]]
+    # print(l)
 
     def shift(i):
         out.append(i + 1)
-        l[i],l[i+1],l[i+2] = l[i+2],l[i],l[i+1]
+        l[i], l[i + 1], l[i + 2] = l[i + 2], l[i], l[i + 1]
 
     works = True
     done = False
 
     while not done:
-    
+
         for i in range(n):
             if l[i] != i:
                 break
@@ -63,12 +63,10 @@ for _ in range(t):
                 works = False
                 break
 
-    #print(l)
+    # print(l)
     if works:
         print(len(out))
-        print(' '.join(map(str,out)))
+        print(' '.join(map(str, out)))
     else:
         print(-1)
-    #print('---')
-        
-
+    # print('---')

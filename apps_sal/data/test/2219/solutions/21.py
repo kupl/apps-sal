@@ -4,9 +4,9 @@ for i in range(t):
     count = 0
     while n != 0:
         if n % k == 0:
-            n//=k
+            n //= k
             count += 1
         else:
-            count += n%k
-            n -= n%k
+            count += n % k
+            n -= n % k
     print(count)

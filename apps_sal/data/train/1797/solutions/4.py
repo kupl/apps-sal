@@ -7,6 +7,7 @@ class _CacheEntry(object):
         self.idx = idx
         self.seq = seq
 
+
 _FACTORS_CACHE = {}
 
 
@@ -32,7 +33,7 @@ def factorizable(n, factors, sort_factors=True):
                     return True
                 elif f <= n:  # A possible factor
                     if n % f == 0:  # n is divisible by f. Let's check if n/f is in turn factorizable by factors
-                        sub.append(n/f)
+                        sub.append(n / f)
                 else:  # This, and, consequently, all subsequent factors are too large for n to be divisible by them
                     break
         # We are still here, so we still don't know if n is fully divisible by factors.
@@ -84,7 +85,7 @@ def factored(n, factors, caching=True):
     if caching and factors in _FACTORS_CACHE:
         e = _FACTORS_CACHE[factors]  # Should be optimal
         if n <= len(e.seq):  # The requested number is cached already
-            return e.seq[n-1]
+            return e.seq[n - 1]
         cached = True
 
     fn = len(factors)

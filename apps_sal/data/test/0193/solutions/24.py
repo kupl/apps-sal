@@ -4,6 +4,5 @@ z = a * d - b * c
 if z == 0:
     print(0)
     return
-t = max(abs(a + b + c + d), abs(a - b - c + d), abs(a - b + c - d), abs(a + b - c- d))
+t = max(abs(a + b + c + d), abs(a - b - c + d), abs(a - b + c - d), abs(a + b - c - d))
 print(abs(z / t))
-

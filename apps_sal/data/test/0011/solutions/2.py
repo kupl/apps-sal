@@ -3,6 +3,7 @@ def gcd(a, b):
         a, b = b % a, a
     return b
 
+
 n, a, b, p, q = map(int, input().split())
 ox = n // (a * b // gcd(a, b))
 ax = n // a - ox

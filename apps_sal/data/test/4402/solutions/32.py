@@ -1,12 +1,12 @@
-a,b=map(int, input().split())
+a, b = map(int, input().split())
 
-if a<=5:
-    ans=0
+if a <= 5:
+    ans = 0
 
-elif 6<=a<=12:
-    ans=b//2
-    
+elif 6 <= a <= 12:
+    ans = b // 2
+
 else:
-    ans=b
-    
+    ans = b
+
 print(ans)

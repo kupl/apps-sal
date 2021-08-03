@@ -33,5 +33,4 @@ for i in range(m):
 if k == 1:
     ans //= 2
 
-print (ans)
-
+print(ans)

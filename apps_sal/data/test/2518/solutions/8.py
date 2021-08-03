@@ -25,10 +25,11 @@ def main():
             l = m
         m = (l + r) // 2
 
-    print((m+1))
+    print((m + 1))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

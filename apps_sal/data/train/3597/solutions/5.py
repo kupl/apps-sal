@@ -1,1 +1,1 @@
-say_hello = lambda n, c, s: 'Hello, {}! Welcome to {}, {}!'.format(' '.join(n), c, s)
+def say_hello(n, c, s): return 'Hello, {}! Welcome to {}, {}!'.format(' '.join(n), c, s)

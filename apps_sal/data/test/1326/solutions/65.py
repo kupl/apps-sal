@@ -22,4 +22,3 @@ for i in range(1, n + 1):
     res += tmp * (tmp + 1) * i // 2
 
 print(res)
-

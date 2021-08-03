@@ -11,4 +11,3 @@ for _ in range(int(input())):
     a2, b1 = a2 - min(a2, b1), b1 - min(a2, b1)
     gans.append(ans)
 print('\n'.join(map(str, gans)))
-

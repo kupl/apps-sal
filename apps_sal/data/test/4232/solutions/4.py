@@ -19,12 +19,10 @@ if k == 0:
     else:
         print(q[0][0] - 1)
         return
-    
+
 for i in range(len(d)):
     l += q[i][1]
     if l == k:
         print(q[i][0])
         return
 print(-1)
-
-

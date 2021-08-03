@@ -1,6 +1,7 @@
 def calc(c1, c2):
-    x = abs(ord(c1)-ord(c2))
-    return min(x, 26-x)
+    x = abs(ord(c1) - ord(c2))
+    return min(x, 26 - x)
+
 
 a, b = list(map(int, input().split(' ')))
 strx = input()
@@ -24,7 +25,7 @@ if a % 2 == 0:
         if dist[i] != 0:
             rightpt = (a // 2 - 1) - i
             break
-        
+
     sumlr = rightpt - leftpt + min(abs(leftpt - indx), abs(rightpt - indx))
     print(sum(dist) + sumlr)
 
@@ -49,4 +50,3 @@ else:
             break
     sumlr = rightpt - leftpt + min(abs(leftpt - indx), abs(rightpt - indx))
     print(sum(dist) + sumlr)
-

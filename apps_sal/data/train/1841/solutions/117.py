@@ -1,7 +1,7 @@
 class Solution:
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
-        median = arr[(len(arr)-1)//2]
+        median = arr[(len(arr) - 1) // 2]
         list = []
         i = 0
         j = len(arr) - 1
@@ -14,5 +14,3 @@ class Solution:
                 j -= 1
             k -= 1
         return list
-    
-

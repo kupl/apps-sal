@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) % W:
@@ -21,4 +23,4 @@ class Solution:
                     del cnt[i]
             if not cnt:
                 return True
-        return False # never happen
+        return False  # never happen

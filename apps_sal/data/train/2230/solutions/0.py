@@ -13,7 +13,7 @@ s = sorted(s)
 m = int(input())
 c = [int(i) for i in input().split()]
 
-idx = [0]*4
+idx = [0] * 4
 
 ans = []
 
@@ -25,9 +25,8 @@ for i in range(m):
             s[idx[ci]][2] = 0
             ans.append(s[idx[ci]][0])
             break
-        idx[ci]+=1
+        idx[ci] += 1
     if idx[ci] == n:
         ans.append(-1)
 
 print(*ans)
-

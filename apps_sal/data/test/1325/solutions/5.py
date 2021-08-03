@@ -1,6 +1,8 @@
 def dc(c, d):
     x, y = ord(c) - ord('a'), ord(d) - ord('a')
     return min(abs(x - y), 26 - max(x, y) + min(x, y))
+
+
 def ds(s1, s2):
     r = 0
     a, b = 10 ** 5, -1
@@ -11,6 +13,8 @@ def ds(s1, s2):
             a = min(a, i)
             b = max(b, i)
     return a, b, r
+
+
 n, p = list(map(int, input().split()))
 s = input()
 p -= 1
@@ -26,4 +30,3 @@ if r == 0:
     print(0)
 else:
     print(min(d1, d2) + r)
-

@@ -13,5 +13,3 @@ def multiply(n):
         return (5 ** a4) * n
     elif n > 0:
         return (5 ** c) * n
-    
-

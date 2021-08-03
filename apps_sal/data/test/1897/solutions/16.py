@@ -5,4 +5,3 @@ for k in range(len(t), 0, -1):
     s -= t[k - 1] + t[-k]
     d += s
 print(m)
-

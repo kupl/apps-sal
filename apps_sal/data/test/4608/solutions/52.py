@@ -11,7 +11,7 @@ while True:
     ans += 1
     if a[pos] == 2:
         break
-    #print(pos,a[pos]-1)
+    # print(pos,a[pos]-1)
     pos = a[pos] - 1
 
     if flag[pos] > 0:

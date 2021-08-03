@@ -6,6 +6,7 @@ def find_factor(p, n):
         power *= p
     return result
 
+
 def zeros(n):
     """Find the number of trailing zeroes in n!."""
     return min(find_factor(p, n) for p in (2, 5))

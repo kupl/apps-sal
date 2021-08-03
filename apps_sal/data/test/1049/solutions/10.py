@@ -13,4 +13,3 @@ for i in range(d):
         current_stroke = 0
 
 print(max_stroke)
-

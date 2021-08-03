@@ -3,6 +3,6 @@ def century(year):
         return 1
     else:
         if year % 100 == 0:
-            return year/100
+            return year / 100
         else:
-            return int(year/100 +1)
+            return int(year / 100 + 1)

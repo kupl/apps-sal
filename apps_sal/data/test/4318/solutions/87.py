@@ -7,4 +7,3 @@ for i in range(1, len(h)):
         res += 1
         h_max = h[i]
 print(res)
-

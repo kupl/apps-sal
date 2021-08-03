@@ -1,5 +1,5 @@
-#def mainでローカル変数を扱えば早くなるらしい
-#インデントミスしまくりました
+# def mainでローカル変数を扱えば早くなるらしい
+# インデントミスしまくりました
 
 def main():
     l = list(input().split())
@@ -17,13 +17,14 @@ def main():
                 cg_num += 1
             elif j == "C":
                 cg_num -= 1
-            
+
             if at_num == 0 and cg_num == 0:
                 count += 1
     print(count)
-        
-        
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

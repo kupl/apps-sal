@@ -2,25 +2,27 @@ class Solution:
     def shortestPathAllKeys(self, grid: List[str]) -> int:
         def contains(k, v):
             return (k // v) % 2 == 1
-            
+
         adjs = [[-1, 0], [0, 1], [0, -1], [1, 0]]
         keys = ['a', 'b', 'c', 'd', 'e', 'f']
         locks = [c.upper() for c in keys]
         key_to_val = {k: 2**i for i, k in enumerate(keys)}
         lock_to_val = {k: 2**i for i, k in enumerate(locks)}
         N, M = len(grid), len(grid[0])
-        visited = [[[-1]*64 for _ in range(M)] for _ in range(N)]
-        
+        visited = [[[-1] * 64 for _ in range(M)] for _ in range(N)]
+
         queue = deque()
         target = 0
         for i in range(N):
             for j in range(M):
-                if grid[i][j] == '@': 
+                if grid[i][j] == '@':
                     queue.append([i, j, 0])
                     visited[i][j][0] = 0
-                if grid[i][j] in keys: target += key_to_val[grid[i][j]]
-        if target == 0: return 0
-        
+                if grid[i][j] in keys:
+                    target += key_to_val[grid[i][j]]
+        if target == 0:
+            return 0
+
         while len(queue) > 0:
             i, j, k = queue.popleft()
             for di, dj in adjs:
@@ -32,7 +34,8 @@ class Solution:
                     elif grid[ii][jj] in keys:
                         if not contains(k, key_to_val[grid[ii][jj]]):
                             kk = k + key_to_val[grid[ii][jj]]
-                            if kk == target: return visited[i][j][k] + 1
+                            if kk == target:
+                                return visited[i][j][k] + 1
                         else:
                             kk = k
                         if visited[ii][jj][kk] < 0:
@@ -42,5 +45,3 @@ class Solution:
                         visited[ii][jj][k] = visited[i][j][k] + 1
                         queue.append((ii, jj, k))
         return -1
-                            
-

@@ -1,6 +1,6 @@
 import sys
 readline = sys.stdin.readline
 
-D,T,S = map(int,readline().split())
+D, T, S = map(int, readline().split())
 
-print(("No","Yes")[S * T >= D])
+print(("No", "Yes")[S * T >= D])

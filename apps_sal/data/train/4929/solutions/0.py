@@ -5,6 +5,8 @@ def get_diagonale_code(grid):
         if 0 <= j < len(grid[i]):
             word += grid[i][j]
             i, j = i + d, j + 1
-        else: i += d
-        if i == 0 or i == len(grid) - 1: d = -d
+        else:
+            i += d
+        if i == 0 or i == len(grid) - 1:
+            d = -d
     return word

@@ -9,4 +9,3 @@ if h < l:
     print(0)
 else:
     print(n * (h - l + 1))
-

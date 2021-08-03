@@ -24,4 +24,3 @@ else:
     print(len(ans))
     for elem in ans:
         print(*elem)
-

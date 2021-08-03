@@ -32,16 +32,15 @@ N = z()
 A = zz()
 c = collections.Counter(A)
 ans = 0
-for x in range(max(A)+1):
+for x in range(max(A) + 1):
     tmp = c[x]
     try:
-        tmp += c[x-1]
+        tmp += c[x - 1]
     except:
         pass
     try:
-        tmp += c[x+1]
+        tmp += c[x + 1]
     except:
         pass
     ans = max(tmp, ans)
 print(ans)
-

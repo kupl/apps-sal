@@ -8,6 +8,6 @@ if n == 1:
 else:
     ans = tl[0]
     for i in range(1, n):
-        ans = ans//math.gcd(ans, tl[i])*tl[i]
+        ans = ans // math.gcd(ans, tl[i]) * tl[i]
 
     print(ans)

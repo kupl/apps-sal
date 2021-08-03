@@ -12,4 +12,3 @@ for i in range((len(s) - len(t)) + 1):
     ans_list.append(check_count)
 
 print((min(ans_list)))
-

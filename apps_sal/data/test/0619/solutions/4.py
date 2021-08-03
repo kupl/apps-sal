@@ -11,4 +11,3 @@ if m1 + m2 >= c:
     n += 1
 
 print(n, add)
-

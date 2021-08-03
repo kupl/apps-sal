@@ -6,9 +6,9 @@ available_keys = {}
 needed_keys = 0
 
 k = 0
-for _ in range(n-1):
+for _ in range(n - 1):
     key = data[k]
-    lock = data[k+1].lower()
+    lock = data[k + 1].lower()
 
     k += 2
 

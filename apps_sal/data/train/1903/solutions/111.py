@@ -21,7 +21,6 @@ class Solution:
                     if not visited[to_next]:
                         heapq.heappush(edges, (cost_next, to, to_next))
         return total
-                
-                
+
     def getDist(self, x1, y1, x2, y2):
         return abs(x1 - x2) + abs(y1 - y2)

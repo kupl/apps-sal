@@ -10,4 +10,3 @@ for x in lst:
         i = max(i, x)
 
 print(k // i)
-

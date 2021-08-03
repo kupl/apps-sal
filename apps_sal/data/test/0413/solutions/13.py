@@ -1,9 +1,10 @@
 m, n = [int(i) for i in input().split()]
 
+
 def d(begin, end):
    #print(begin, end)
     if begin == end:
-       return 0
+        return 0
 
     if begin == end + 1:
         return 1
@@ -19,26 +20,5 @@ def d(begin, end):
 
     return d(begin, end + 1) + 1
 
+
 print(d(m, n))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

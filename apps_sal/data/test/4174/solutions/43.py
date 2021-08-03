@@ -10,4 +10,3 @@ for _ in num_list:
     i += 1
 
 print(i)
-

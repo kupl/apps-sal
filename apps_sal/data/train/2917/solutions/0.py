@@ -3,5 +3,4 @@ def distinct_digit_year(year):
     while len(set(str(year))) != 4:
         year += 1
     return year
-  #coding and coding..
-
+  # coding and coding..

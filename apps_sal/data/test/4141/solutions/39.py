@@ -4,7 +4,7 @@
 # 上の規約に従うとき、書類に N 個の整数 A 1 , A 2 , … , A N が書かれた入国者を承認するならば APPROVED を、しないならば DENIED を出力してください。
 
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 for x in A:
     if x % 2 == 0:
@@ -13,4 +13,3 @@ for x in A:
             break
 else:
     print('APPROVED')
-

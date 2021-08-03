@@ -20,4 +20,3 @@ for i in range(len(sequence) - 1, -1, -1):
 
 for i in l_list:
     print(d[i])
-

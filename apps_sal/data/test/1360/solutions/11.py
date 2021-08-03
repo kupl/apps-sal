@@ -10,4 +10,3 @@ for i in range(n):
     else:
         ans = a[i][1]
 print(ans)
-

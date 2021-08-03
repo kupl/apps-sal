@@ -1,6 +1,6 @@
-(N,M) = map(int,input().split(' '))
+(N, M) = map(int, input().split(' '))
 S = []
-for i in range(N+M):
+for i in range(N + M):
     x = int(input())
     if x != -1:
         S.append(x)

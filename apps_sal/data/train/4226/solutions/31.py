@@ -6,4 +6,3 @@ def remove_smallest(numbers):
         return b
     else:
         return []
-

@@ -2,7 +2,7 @@ import copy
 
 
 def prepare(n, MOD):
- 
+
     # 1! - n! の計算
     f = 1
     factorials = [1]  # 0!の分
@@ -19,17 +19,19 @@ def prepare(n, MOD):
         inv *= m
         inv %= MOD
         invs[m - 1] = inv
-     
+
     return factorials, invs
 
+
 def func(r, c):
-    return f[r+1+c+1] * i[r+1] % MOD * i[c+1] % MOD
-
-MOD = 10**9+7
-f, i = prepare(2*10**6 + 2, MOD)
+    return f[r + 1 + c + 1] * i[r + 1] % MOD * i[c + 1] % MOD
 
 
-r1, c1, r2, c2 = map(int,input().split())
+MOD = 10**9 + 7
+f, i = prepare(2 * 10**6 + 2, MOD)
 
-combi = func(r2, c2) - func(r2, c1-1) - func(r1-1, c2) + func(r1-1, c1-1)
-print(combi % MOD)   
+
+r1, c1, r2, c2 = map(int, input().split())
+
+combi = func(r2, c2) - func(r2, c1 - 1) - func(r1 - 1, c2) + func(r1 - 1, c1 - 1)
+print(combi % MOD)

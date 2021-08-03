@@ -1,6 +1,6 @@
 def solve():
     num_nodes = int(input())
-    parents = [0] + [int(x)-1 for x in input().split()]
+    parents = [0] + [int(x) - 1 for x in input().split()]
     S = [int(x) for x in input().split()]
 
     children = [[] for _ in parents]
@@ -21,6 +21,5 @@ def solve():
 
     print(sum(A))
 
-solve()
-    
 
+solve()

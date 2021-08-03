@@ -14,4 +14,3 @@ for i in range(t):
         print((n - 1 - x) // d + 1 + (n - 1 - y) // d)
     else:
         print(-1)
-

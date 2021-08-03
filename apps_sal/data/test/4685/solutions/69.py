@@ -5,4 +5,6 @@ def resolve():
     for i in range(k):
         a[2] = a[2] * 2
     print(sum(a))
+
+
 resolve()

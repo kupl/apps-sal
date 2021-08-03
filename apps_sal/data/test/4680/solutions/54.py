@@ -1,1 +1,1 @@
-print(['YES','NO'][sum(list(map(int,input().split()))) != 17])
+print(['YES', 'NO'][sum(list(map(int, input().split()))) != 17])

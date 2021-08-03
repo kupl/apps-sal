@@ -19,6 +19,5 @@ def array_equalization(a, k):
                     if lst[j] != m:
                         lst[j] = m
         arr.append(counter)
-        
-        
+
     return min(arr)

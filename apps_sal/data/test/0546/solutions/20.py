@@ -1,10 +1,11 @@
 alp = set(input())
 pt = input()
-lp= pt.split('*')[0]
+lp = pt.split('*')[0]
 rp = ''
 if len(pt.split('*')) > 1:
     rp = pt.split('*')[1]
 n = int(input())
+
 
 def check(p, qp):
     for i in range(len(p)):
@@ -14,13 +15,15 @@ def check(p, qp):
             return False
     return True
 
+
 def checks(qp):
     for i in range(len(qp)):
         if qp[i] not in alp:
             continue
-        else: 
+        else:
             return False
     return True
+
 
 for i in range(n):
     q = input()

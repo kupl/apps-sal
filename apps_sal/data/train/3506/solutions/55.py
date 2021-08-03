@@ -4,7 +4,7 @@ def vowel_indices(word):
     lst = []
     for letter in word:
         if letter in vowel:
-            
+
             lst.append(count)
         count += 1
     return lst

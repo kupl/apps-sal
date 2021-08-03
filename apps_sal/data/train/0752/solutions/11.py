@@ -1,17 +1,15 @@
-n,q=list(map(int,input().split()))
-x={}
+n, q = list(map(int, input().split()))
+x = {}
 for j in range(n):
- a,b=list(map(str,input().split()))
- x[a]=b
+    a, b = list(map(str, input().split()))
+    x[a] = b
 for i in range(q):
- h=input().strip()
- if("." in h):
-  c=h.split(".")[-1]
-  if(c in x):
-   print(x[c])
-  else:
-   print("unknown")
- else:
-  print("unknown")
- 
-
+    h = input().strip()
+    if("." in h):
+        c = h.split(".")[-1]
+        if(c in x):
+            print(x[c])
+        else:
+            print("unknown")
+    else:
+        print("unknown")

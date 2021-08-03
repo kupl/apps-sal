@@ -1,7 +1,7 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         max_prof = -math.inf
-        idx = -1 # rotation idx for max_prof
+        idx = -1  # rotation idx for max_prof
         sofar = 0
         profit_sofar = 0
         i = 0

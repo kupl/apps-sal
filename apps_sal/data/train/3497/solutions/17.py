@@ -1,5 +1,6 @@
 from math import sqrt
 
+
 def isPP(n):
     limit = int(sqrt(n))
     for m in range(2, limit + 1):

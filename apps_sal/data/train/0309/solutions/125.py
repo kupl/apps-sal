@@ -31,20 +31,14 @@ dp[(i, diff)]: length of longest arith seq ending at i with difference diff
 '''
 from functools import lru_cache
 
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         n = len(A)
         dp = {}
-        
+
         for i in range(n):
             for j in range(i + 1, n):
                 d = A[j] - A[i]
                 dp[(j, d)] = dp.get((i, d), 1) + 1
         return max(dp.values())
-           
-                
-                
-                
-                
-                
-

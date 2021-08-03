@@ -1,10 +1,14 @@
 def getN():
     return int(input())
+
+
 def getList():
     return list(map(int, input().split()))
 
-n,m = getList()
+
+n, m = getList()
 nums = getList()
+
 
 def solve(nums, m, i):
     tgt = nums[i]
@@ -16,6 +20,7 @@ def solve(nums, m, i):
             return i - idx
 
     return 0
+
 
 answers = []
 

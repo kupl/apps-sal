@@ -12,4 +12,3 @@ for i in range(n):
     else:
         m.add(summ)
 print(ans)
-

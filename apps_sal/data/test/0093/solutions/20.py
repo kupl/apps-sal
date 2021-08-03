@@ -14,4 +14,3 @@ elif (e[1] + e[2] + e[0]) == b:
     print("YES")
 else:
     print("NO")
-

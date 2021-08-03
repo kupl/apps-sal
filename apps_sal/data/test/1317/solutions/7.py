@@ -7,9 +7,8 @@ for x in range(min(m, n + 1)):
 #    print(x, z)
     cnt[x * x % m] += z
 cnt[0] -= 1
-#print(cnt)
+# print(cnt)
 res = 0
-for i  in range(m):
+for i in range(m):
     res += cnt[i] * cnt[(m - i) % m]
 print(res)
-

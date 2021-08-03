@@ -42,4 +42,3 @@ for sym in range(26):
             good = False
 almost = [have[i] * i for i in abc]
 print(''.join(almost))
-

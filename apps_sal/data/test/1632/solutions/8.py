@@ -1,6 +1,9 @@
 from itertools import accumulate
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 n = int(input())
 arr = sorted(R())
 ones = [0] * 5005

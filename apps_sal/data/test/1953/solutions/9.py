@@ -9,4 +9,3 @@ for n in ns:
         happy += 1
 
 print(happy)
-

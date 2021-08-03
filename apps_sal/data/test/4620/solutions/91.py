@@ -17,4 +17,3 @@ for i in range(N):
         t += c
 
     print(t)
-

@@ -8,4 +8,3 @@ for i in range(1, n):
     expectation %= 998244353
     difficulty %= 998244353
 print(expectation)
-

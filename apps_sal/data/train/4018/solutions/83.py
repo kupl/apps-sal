@@ -1,5 +1,5 @@
 def isDigit(s):
-    try: 
+    try:
         float(s)
         return True
     except Exception:

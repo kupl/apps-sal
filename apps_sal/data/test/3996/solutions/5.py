@@ -4,14 +4,16 @@ n = list(map(int, input().split()))
 for i in range(k):
     n[i] = bin(n[i])
     n[i] = n[i][2:]
-    
+
 magic = 1000000007
+
 
 def par(s):
     if s[-1] == '0':
         return True
     else:
         return False
+
 
 def mod_pow(x, s, p):
     ans = 1
@@ -21,6 +23,7 @@ def mod_pow(x, s, p):
         else:
             ans = (ans * ans) % p
     return ans
+
 
 def div_in_field(a, b, p):
     b_op = pow(b, p - 2, p)
@@ -42,4 +45,3 @@ else:
     numerator = div_in_field(-1 + denominator, 3, magic)
 ans = str(numerator) + '/' + str(denominator)
 print(ans)
-

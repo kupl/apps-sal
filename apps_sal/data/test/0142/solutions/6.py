@@ -38,9 +38,9 @@ def main():
 
     print(result)
 
+
 try:
     while True:
         main()
 except EOFError:
     pass
-

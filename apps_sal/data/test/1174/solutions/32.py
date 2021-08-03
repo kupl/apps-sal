@@ -10,7 +10,7 @@ import heapq
 # S = input()
 # n, *a = map(int, open(0))
 N, M = list(map(int, input().split()))
-A = list([int(x)*(-1) for x in input().split()])
+A = list([int(x) * (-1) for x in input().split()])
 # B = list(map(int, input().split()))
 # tree = [[] for _ in range(N + 1)]
 # B_C = [list(map(int,input().split())) for _ in range(M)]
@@ -53,6 +53,5 @@ for i in range(M):
     max_num = heapq.heappop(A) * (-1)
     heapq.heappush(A, (-1) * (max_num // 2))
 
-A = [x*(-1) for x in A]
+A = [x * (-1) for x in A]
 print((sum(A)))
-

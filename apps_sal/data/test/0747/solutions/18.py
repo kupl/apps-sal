@@ -4,24 +4,31 @@ import inspect
 from sys import argv, exit
 from copy import copy
 
+
 def rstr():
     return input()
+
 
 def rint():
     return int(input())
 
+
 def rints(splitchar=' '):
     return [int(i) for i in input().split(splitchar)]
+
 
 def varnames(obj, namespace=globals()):
     return [name for name in namespace if namespace[name] is obj]
 
+
 def pvar(var, override=False):
     prnt(varnames(var), var)
+
 
 def prnt(*args, override=False):
     if '-v' in argv or override:
         print(*args)
+
 
 class Candy():
     def __init__(self, stuff):
@@ -35,20 +42,21 @@ class Candy():
     def __repr__(self):
         return str(self)
 
+
 def main(h, candies, last_type):
     eaten = []
     neaten = 0
 
     edible = sorted([c for c in candies if c.height <= h and c.type != last_type], key=lambda c: c.mass)
-    prnt('h',h)
-    prnt('last_type',last_type)
-    prnt('edible',edible)
+    prnt('h', h)
+    prnt('last_type', last_type)
+    prnt('edible', edible)
 
     while True:
         if edible:
             candy = edible.pop(-1)
             candies.remove(candy)
-            prnt('eaten',candy)
+            prnt('eaten', candy)
             eaten.append(candy)
             neaten += 1
             last_type = not last_type
@@ -58,6 +66,7 @@ def main(h, candies, last_type):
         edible = sorted([c for c in candies if c.height <= h and c.type != last_type], key=lambda c: c.mass)
         prnt(edible)
     return neaten
+
 
 def __starting_point():
     (n, h) = rints()
@@ -72,5 +81,6 @@ def __starting_point():
     pvar(two)
 
     print(max(one, two))
+
 
 __starting_point()

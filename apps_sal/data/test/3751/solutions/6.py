@@ -13,5 +13,3 @@ for fs in range(26):
 
 
 print('YES' if is_correct else 'NO')
-
-

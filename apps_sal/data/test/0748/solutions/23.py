@@ -16,14 +16,14 @@ else:
     print(-1)
 if flag:
     for i in range(k[0]):
-        print(1, end= ' ')
+        print(1, end=' ')
         if k[2] > 0:
-            print(3, end= ' ')
+            print(3, end=' ')
             print(6)
             k[5] -= 1
             k[2] -= 1
         else:
-            print(2, end= ' ')
+            print(2, end=' ')
             if k[5] > 0:
                 print(6)
                 k[5] -= 1

@@ -27,6 +27,7 @@ def modify(up, down=0):
         ans = '0.' + ans
     return ans
 
+
 s = input().strip()
 numb = []
 cur = ''
@@ -54,4 +55,3 @@ for i in numb:
 ans_up += ans_down // 100
 ans_down %= 100
 print(modify(ans_up, ans_down))
-

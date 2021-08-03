@@ -16,4 +16,4 @@ for i in range(n - 1):
     minY = min(minY, y)
     maxY = max(maxY, y)
 
-print(max(maxX- minX, maxY - minY)** 2)
+print(max(maxX - minX, maxY - minY) ** 2)

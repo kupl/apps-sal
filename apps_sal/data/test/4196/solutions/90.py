@@ -23,4 +23,3 @@ for i in range(N):
     M = max(M, gcd(L[i], R[i + 1]))
 
 print(M)
-

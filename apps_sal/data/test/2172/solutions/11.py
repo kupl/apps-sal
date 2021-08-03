@@ -4,15 +4,15 @@ dictionary_len = first_line[1]
 
 dict = {}
 for i in range(dictionary_len):
-	line = list( input().split(' '))
-	dict[line[0]] = line[1]
+    line = list(input().split(' '))
+    dict[line[0]] = line[1]
 
-speech = list( input().split(' '))
+speech = list(input().split(' '))
 #print( dict )
 #print (speech)
 
 for i in range(len(speech)):
-	w = speech[i]
-	if len(dict[w]) < len(w):
-		speech[i] = dict[w]
+    w = speech[i]
+    if len(dict[w]) < len(w):
+        speech[i] = dict[w]
 print(' '.join(speech))

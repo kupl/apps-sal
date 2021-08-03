@@ -42,7 +42,7 @@ def ab(a, b):
         v = q.popleft()
         for nxt_v in tree[v]:
             if visited[v] + 1 < visited[nxt_v]:
-                visited[nxt_v] =  visited[v] + 1
+                visited[nxt_v] = visited[v] + 1
                 q.append(nxt_v)
     return visited[b]
 
@@ -51,20 +51,20 @@ t = int(input())
 for _ in range(t):
     n, a, b, da, db = map(int, input().split())
     edges = [list(map(int, input().split())) for i in range(n - 1)]
-    
+
     a -= 1
     b -= 1
     if da * 2 >= db:
         print("Alice")
         continue
-        
+
     tree = [[] for i in range(n)]
     for u, v in edges:
         u -= 1
         v -= 1
         tree[u].append(v)
         tree[v].append(u)
-    
+
     distance = ab(a, b)
     if distance <= da:
         print("Alice")

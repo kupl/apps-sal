@@ -14,4 +14,3 @@ if (n + 1) % z == 0 and ok:
     print('Yes')
 else:
     print('No')
-

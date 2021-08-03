@@ -21,8 +21,6 @@ class UnionFind:
         return self.find(self.parent[i])
 
 
-
-
 class Solution:
     def minCostConnectPoints(self, points) -> int:
         n = len(points)
@@ -42,5 +40,3 @@ class Solution:
                 uf.union(u, v)
                 res += cost
         return res
-
-

@@ -16,4 +16,3 @@ while i != n - 1:
     res += 1
 else:
     print(res)
-

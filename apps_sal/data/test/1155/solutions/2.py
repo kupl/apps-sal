@@ -1,4 +1,6 @@
-r = lambda: map(int, input().split())
+def r(): return map(int, input().split())
+
+
 n, m = r()
 s = 10E10
 

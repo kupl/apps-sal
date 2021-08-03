@@ -36,9 +36,9 @@ for k in range(len(res)):
         if j > m and j < i:
             i = j
     m = i
-    print(i, end = ': ')
-    print(len(res[i]), end = ' ')
+    print(i, end=': ')
+    print(len(res[i]), end=' ')
     res[i].sort()
     for j in res[i]:
-        print(j, end = ' ')
+        print(j, end=' ')
     print()

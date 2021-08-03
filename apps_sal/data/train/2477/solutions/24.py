@@ -13,10 +13,5 @@ class Solution:
             even.sort()
             odd.sort()
             counter[(str(even), str(odd))] = counter.get((str(even), str(odd)), 0) + 1
-        
-        return len(counter)
-            
-            
-            
-            
 
+        return len(counter)

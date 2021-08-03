@@ -18,5 +18,4 @@ for i in range(n):
     if count > count_max:
         count_max = count
         ans = i
-print(ans + 1) 
-
+print(ans + 1)

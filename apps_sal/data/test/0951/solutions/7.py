@@ -11,4 +11,3 @@ while k > s:
     idx += 1
 
 print(res)
-

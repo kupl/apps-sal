@@ -1,8 +1,9 @@
 class Solution:
     def minDays(self, bloomDay, m, k):
-        
-        if m * k > len(bloomDay): return -1
-            
+
+        if m * k > len(bloomDay):
+            return -1
+
         def canBloom(cand):
             bloomed = 0
             bouquet = 0
@@ -14,7 +15,7 @@ class Solution:
                     if bouquet == k:
                         bloomed += 1
                         bouquet = 0
-            return bloomed>=m
+            return bloomed >= m
 
         l, r = min(bloomDay), max(bloomDay)
         while l < r:

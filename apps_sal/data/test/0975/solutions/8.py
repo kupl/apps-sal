@@ -43,4 +43,3 @@ while i >= 0:
         i -= 1
 print(self_knocks)
 print(op_knocks)
-

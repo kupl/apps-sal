@@ -13,6 +13,5 @@ class Solution:
             if first < float('inf') and (prefix[i + 1] + target) in d:
                 second = d[(prefix[i + 1] + target)] - i
                 ans = min(ans, first + second)
-        
-        return -1 if ans == float('inf') else ans
 
+        return -1 if ans == float('inf') else ans

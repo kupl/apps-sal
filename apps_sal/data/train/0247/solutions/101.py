@@ -1,7 +1,7 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         n = len(arr)
-        
+
 #         def aux(arr):
 #             h = {0:0}
 #             preSum = 0
@@ -14,18 +14,17 @@ class Solution:
 #                 if i > 1:
 #                     left[i-1] = min(left[i-2], left[i-1])
 #             return left
-        
-        
+
+
 #         left = aux(arr)
 #         arr.reverse()
 #         right = aux(arr)
-        
+
 #         ans = n+1
 #         for i in range(n):
 #             ans = min(ans, left[i] + right[n-1-(i+1)])
 #         return ans if ans < n+1 else -1
-        
-        
+
         # h = {0:-1}
         # preSum = [0 for i in range(n)]
         # for i in range(n):
@@ -42,22 +41,20 @@ class Solution:
         #         right = h[preSum[i]+target]-i
         #         ans = min(ans, left[i]+right)
         # return ans if ans < n+1 else -1
-                
-            
-        h = {0:-1}
+
+        h = {0: -1}
         preSum = 0
         for i in range(n):
             preSum = preSum + arr[i] if i > 0 else arr[0]
             h[preSum] = i
-        ans = n+1
-        left = n+1
+        ans = n + 1
+        left = n + 1
         preSum = 0
         for i in range(n):
             preSum += arr[i]
-            if preSum-target in h:
-                left = min(left, i-h[preSum-target])
-            if left < n+1 and preSum+target in h:
-                right = h[preSum+target]-i
-                ans = min(ans, left+right)
-        return ans if ans < n+1 else -1
-
+            if preSum - target in h:
+                left = min(left, i - h[preSum - target])
+            if left < n + 1 and preSum + target in h:
+                right = h[preSum + target] - i
+                ans = min(ans, left + right)
+        return ans if ans < n + 1 else -1

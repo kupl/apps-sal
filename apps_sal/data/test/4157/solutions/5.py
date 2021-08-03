@@ -29,6 +29,7 @@ def solve(n, xs):
             break
     return zs
 
+
 def main():
     n = int(input())
     xs = [int(x) for x in input().split()]
@@ -37,5 +38,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

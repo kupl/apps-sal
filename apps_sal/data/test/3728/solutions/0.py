@@ -1,7 +1,7 @@
 import sys
 
-n, m = list(map(int,input().split()))
-g = [list(map(int,input().split())) for _ in range(n)]
+n, m = list(map(int, input().split()))
+g = [list(map(int, input().split())) for _ in range(n)]
 for c1 in range(m):
     for c2 in range(c1, m):
         ok = True
@@ -21,4 +21,3 @@ for c1 in range(m):
             print('YES')
             return
 print('NO')
-

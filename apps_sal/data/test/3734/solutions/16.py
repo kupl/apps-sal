@@ -8,9 +8,8 @@ d['saturday'] = 5
 d['sunday'] = 6
 s1 = input()
 s2 = input()
-x =  (d[s2] - d[s1] + 7) % 7
+x = (d[s2] - d[s1] + 7) % 7
 if x == 0 or x == 2 or x == 3:
     print('YES')
 else:
     print('NO')
-

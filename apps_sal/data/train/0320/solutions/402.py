@@ -15,4 +15,3 @@ class Solution:
             totalIncs += incs
             maxDups = max(maxDups, dups)
         return int(maxDups + totalIncs)
-

@@ -38,4 +38,3 @@ for i in range(n):
 da -= min(ar, ab)
 db -= min(br, bb)
 print(min(da, db))
-

@@ -11,4 +11,3 @@ for i in range(n):
             yi = max(yi, ans[j] + sqrt(4 * r**2 - (x[j] - x[i])**2))
     ans.append(yi)
 print(' '.join(map(str, ans)))
-

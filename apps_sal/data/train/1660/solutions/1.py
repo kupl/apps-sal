@@ -1,4 +1,6 @@
 import re
+
+
 def simplify(poly):
     terms = {}
     for sign, coef, vars in re.findall(r'([\-+]?)(\d*)([a-z]*)', poly):
@@ -10,6 +12,7 @@ def simplify(poly):
     terms = sorted(list(terms.items()), key=lambda v_c: (len(v_c[0]), v_c[0]))
     return ''.join(map(format_term, terms)).strip('+')
 
+
 def format_term(xxx_todo_changeme):
     (vars, coef) = xxx_todo_changeme
     if coef == 0:
@@ -19,4 +22,3 @@ def format_term(xxx_todo_changeme):
     if coef == -1:
         return '-' + vars
     return '%+i%s' % (coef, vars)
-

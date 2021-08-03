@@ -8,4 +8,3 @@ for i in range(k):
             a.append(ai[j])
 
 print((n - len(a)))
-

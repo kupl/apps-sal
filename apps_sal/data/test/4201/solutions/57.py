@@ -1,16 +1,16 @@
 from itertools import product
 
-H,W,K = list(map(int,input().split()))
+H, W, K = list(map(int, input().split()))
 C = []
 for _ in range(H):
     c = list(input())
     C.append(c)
 
 # print(C)
-ans = 0 
+ans = 0
 
 for row_bit in product(list(range(2)), repeat=H):
-    # print(row_bit) 
+    # print(row_bit)
     # print(row_bit[0])
     # print(row_bit[1])
     for col_bit in product(list(range(2)), repeat=W):
@@ -23,4 +23,3 @@ for row_bit in product(list(range(2)), repeat=H):
         if cnt == K:
             ans += 1
 print(ans)
-

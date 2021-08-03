@@ -2,11 +2,11 @@ class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
         @lru_cache
         def getPower(x):
-            if x==1:
+            if x == 1:
                 return 0
-            if x%2==0:
-                return 1+getPower(x//2)
-            return 1+getPower(3*x+1)
-        X = [(getPower(x),x) for x in range(lo,hi+1)]
+            if x % 2 == 0:
+                return 1 + getPower(x // 2)
+            return 1 + getPower(3 * x + 1)
+        X = [(getPower(x), x) for x in range(lo, hi + 1)]
         X.sort()
-        return X[k-1][1]
+        return X[k - 1][1]

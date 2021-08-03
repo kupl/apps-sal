@@ -10,5 +10,3 @@ for i in l:
         else:
             last = 2 if last == 1 else 1
             print(last)
-    
-

@@ -8,7 +8,6 @@ if len(s) > 26:
     quit()
 
 for let in 'abcdefghijklmnopqrstuvwxyz':
-    ans+=max(0, s.count(let)-1)
+    ans += max(0, s.count(let) - 1)
 
 print(ans)
-

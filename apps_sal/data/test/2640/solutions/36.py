@@ -11,18 +11,18 @@ rights = np.zeros((h, w), dtype=int)
 lefts = np.zeros((h, w), dtype=int)
 
 for i in range(1, h):
-    ups[i, :] = (ups[i-1]+1)*s[i-1]
+    ups[i, :] = (ups[i - 1] + 1) * s[i - 1]
 
-for i in reversed(list(range(h-1))):
-    downs[i, :] = (downs[i+1]+1)*s[i+1]
+for i in reversed(list(range(h - 1))):
+    downs[i, :] = (downs[i + 1] + 1) * s[i + 1]
 
 for i in range(1, w):
-    rights[:, i] = (rights[:, i-1]+1)*s[:, i-1]
+    rights[:, i] = (rights[:, i - 1] + 1) * s[:, i - 1]
 
-for i in reversed(list(range(w-1))):
-    lefts[:, i] = (lefts[:, i+1]+1)*s[:, i+1]
+for i in reversed(list(range(w - 1))):
+    lefts[:, i] = (lefts[:, i + 1] + 1) * s[:, i + 1]
 
-ans = (((ups+downs+lefts+rights)*s).max()+1)
+ans = (((ups + downs + lefts + rights) * s).max() + 1)
 print(ans)
 
 
@@ -92,4 +92,3 @@ print(ans)
 #             ans_tmp = data_h[i][index_h]+data_w[j][index_w]-1
 #             ans = max(ans, ans_tmp)
 # print(ans)
-

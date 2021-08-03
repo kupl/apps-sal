@@ -16,4 +16,3 @@ for xi, yi in v:
 
 if not ans:
     print(-1)
-

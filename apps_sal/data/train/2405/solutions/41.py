@@ -33,4 +33,3 @@ class Solution:
                         i += 1
                 ans = max(ans, pos[0] ** 2 + pos[1] ** 2)
         return ans
-

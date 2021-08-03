@@ -44,21 +44,22 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
-    
-n,m,k=map(int,input().split())
-uf=UnionFind(n)
-edge=[[] for _ in range(n)]
-brock=[[] for _ in range(n)]
-ans=[]
+
+
+n, m, k = map(int, input().split())
+uf = UnionFind(n)
+edge = [[] for _ in range(n)]
+brock = [[] for _ in range(n)]
+ans = []
 for _ in range(m):
-    a,b=map(int,input().split())
-    edge[a-1].append(b-1)
-    edge[b-1].append(a-1)
-    uf.union(a-1,b-1)
+    a, b = map(int, input().split())
+    edge[a - 1].append(b - 1)
+    edge[b - 1].append(a - 1)
+    uf.union(a - 1, b - 1)
 for _ in range(k):
-    c,d=map(int,input().split())
-    brock[c-1].append(d-1)
-    brock[d-1].append(c-1)
+    c, d = map(int, input().split())
+    brock[c - 1].append(d - 1)
+    brock[d - 1].append(c - 1)
 for i in range(n):
-    ans.append(uf.size(i)-len(edge[i])-sum([uf.same(i,j) for j in brock[i]])-1)
+    ans.append(uf.size(i) - len(edge[i]) - sum([uf.same(i, j) for j in brock[i]]) - 1)
 print(*ans)

@@ -14,4 +14,3 @@ if mod % K == 0:
     print(cnt)
 else:
     print((-1))
-

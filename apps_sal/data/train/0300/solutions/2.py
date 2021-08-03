@@ -1,4 +1,6 @@
 from functools import lru_cache
+
+
 class Solution:
     def leastOpsExpressTarget(self, x: int, target: int) -> int:
         @lru_cache(None)
@@ -18,5 +20,5 @@ class Solution:
             if y2 <= 2 * t - y1:
                 total = min(total, k2 + search(y2 - t))
             return total
-        
+
         return search(target)

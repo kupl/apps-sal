@@ -10,6 +10,6 @@ def atc_079a(input_value: str) -> str:
                 return "Yes"
     return "No"
 
+
 input_value = input()
 print((atc_079a(input_value)))
-

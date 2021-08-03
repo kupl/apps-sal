@@ -6,12 +6,12 @@
 t = int(input())
 for _ in range(t):
     n = int(input())
-    a = list(map(int,input().split()))
+    a = list(map(int, input().split()))
     operation = []
     while True:
         isNonDecreasing = True
-        for i in range(n-1):
-            if a[i] > a[i+1]:
+        for i in range(n - 1):
+            if a[i] > a[i + 1]:
                 isNonDecreasing = False
                 break
         if isNonDecreasing:
@@ -30,9 +30,8 @@ for _ in range(t):
             operation.append(str(i + 1))
             a[i] = n
         else:
-            operation.append(str(MEX+1))
+            operation.append(str(MEX + 1))
             a[MEX] = MEX
     print(len(operation))
     if len(operation) != 0:
         print(' '.join(operation))
-

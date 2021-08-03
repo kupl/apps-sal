@@ -14,4 +14,3 @@ for j in range(n, 0, -1):
 
 print(desired_sum - 2 * s)
 print(str(len(res_list)), " ".join(map(str, res_list)))
-

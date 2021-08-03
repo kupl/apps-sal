@@ -8,15 +8,18 @@ def li(): return list(mi())
 
 def main():
     a, b = mi()
+
     def sxor(x):
-        ret = ((x+1)//2)%2
-        if x%2 == 0:
+        ret = ((x + 1) // 2) % 2
+        if x % 2 == 0:
             ret ^= x
         return ret
-    ans = sxor(b)^sxor(a-1)
+    ans = sxor(b) ^ sxor(a - 1)
     print(ans)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

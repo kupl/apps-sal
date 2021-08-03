@@ -16,4 +16,3 @@ class Solution:
         for i in range(n):
             ans += less_l[i] * bigger_r[i] + less_r[i] * bigger_l[i]
         return ans
-

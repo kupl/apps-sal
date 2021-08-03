@@ -11,12 +11,12 @@ if len(e) > 1:
     return
 else:
     if len(p) % 2 == 0:
-        med = p[(len(p)//2) - 1]
+        med = p[(len(p) // 2) - 1]
         for i in p:
             ans += abs(i - med)
         print(ans // d)
     else:
-        med = p[(len(p)//2)]
+        med = p[(len(p) // 2)]
         for i in p:
             ans += abs(i - med)
         print(ans // d)

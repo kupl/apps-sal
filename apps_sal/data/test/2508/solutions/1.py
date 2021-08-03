@@ -45,4 +45,3 @@ M = [[-1] * W for i in range(H)]
 bfs(xs, ys, 0)
 
 print((M[xg][yg]))
-

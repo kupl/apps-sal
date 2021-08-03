@@ -11,7 +11,7 @@ l = []
 
 for i in range(N):
 
-    A,B = list(map(int,input().split()))
+    A, B = list(map(int, input().split()))
 
     ans += A
 
@@ -24,5 +24,3 @@ if len(l) == 0:
 else:
     l.sort()
     print((ans - l[0]))
-    
-

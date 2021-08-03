@@ -1,7 +1,7 @@
+from bisect import bisect_right as br
 import sys
 input = sys.stdin.readline
-from bisect import bisect_right as br
-P = 10**9+7
+P = 10**9 + 7
 N = int(input())
 X = []
 maxinn = 0
@@ -21,7 +21,7 @@ for out, inn in X:
         OUT.append(out)
         VOL.append(VOL[-1])
         CNT.append(CNT[-1])
-    
+
     if VOL[-1] < vol:
         VOL[-1] = vol
         CNT[-1] = CNT[i]
@@ -29,6 +29,5 @@ for out, inn in X:
         CNT[-1] += CNT[i]
         CNT[-1] %= P
 
-mi = min([OUT[i]-VOL[i] for i in range(len(CNT)) if OUT[i] > maxinn])
-print(sum([CNT[i] for i in range(len(CNT)) if OUT[i] > maxinn and OUT[i]-VOL[i] == mi])%P)
-
+mi = min([OUT[i] - VOL[i] for i in range(len(CNT)) if OUT[i] > maxinn])
+print(sum([CNT[i] for i in range(len(CNT)) if OUT[i] > maxinn and OUT[i] - VOL[i] == mi]) % P)

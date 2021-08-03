@@ -1,9 +1,12 @@
 import math
 f = math.factorial
+
+
 def C(n, k):
     if k > n:
         return 1
     return f(n) // f(k) // f(n - k)
+
 
 n = int(input())
 
@@ -24,4 +27,3 @@ if n > 4:
     ans2 += C(n, 5)
 
 print(ans1 * ans2)
-

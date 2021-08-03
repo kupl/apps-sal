@@ -1,10 +1,10 @@
 class Solution:
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
 
-        if len(hand) % W!=0:
+        if len(hand) % W != 0:
             return False
 
-        if len(hand)==0:
+        if len(hand) == 0:
             return True
 
         hand = sorted(hand)
@@ -21,22 +21,18 @@ class Solution:
         print(hand_dict)
         '''
 
-        
-    
         seed = hand[0]
 
-        for i in range(1,W):
+        for i in range(1, W):
 
             #print(seed, seed+i)
-            
-            if seed+i not in hand:
+
+            if seed + i not in hand:
                 return False
 
-        for i in range(0,W):
-            hand.remove(seed+i)
-            
-        #print(hand)
+        for i in range(0, W):
+            hand.remove(seed + i)
+
+        # print(hand)
 
         return self.isNStraightHand(hand, W)
-
-

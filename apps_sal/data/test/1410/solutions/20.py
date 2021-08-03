@@ -3,6 +3,7 @@
 import sys
 from itertools import permutations
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -15,6 +16,8 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 MOD = 10 ** 9 + 7
@@ -24,7 +27,7 @@ C1 = LIST()
 C2 = LIST()
 C3 = LIST()
 nodes = [[] for i in range(N)]
-for i in range(N-1):
+for i in range(N - 1):
     a, b = MAP()
     a -= 1
     b -= 1
@@ -64,7 +67,7 @@ p = []
 for perm in permutations(list(range(3))):
     sm = 0
     for i in range(N):
-        sm += Cs[perm[i%3]][i]
+        sm += Cs[perm[i % 3]][i]
     if mn > sm:
         mn = min(mn, sm)
         p = perm
@@ -73,10 +76,10 @@ ans = [0] * N
 stack = [(start, -1, 0)]
 while stack:
     u, prev, cnt = stack.pop()
-    ans[u] = p[cnt%3] + 1
+    ans[u] = p[cnt % 3] + 1
     for v in nodes[u]:
         if v != prev:
-            stack.append((v, u, cnt+1))
+            stack.append((v, u, cnt + 1))
 
 # def rec2(u, prev, cnt):
 #     ans[u] = p[cnt%3] + 1
@@ -87,4 +90,3 @@ while stack:
 
 print(mn)
 print(*ans)
-

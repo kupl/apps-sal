@@ -25,4 +25,3 @@ s = [0]
 dfs(s.copy())
 
 print(ans)
-

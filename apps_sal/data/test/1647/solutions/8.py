@@ -1,6 +1,6 @@
 n = int(input())
 first, second = input(), input()
-letters = {i:i for i in [chr(i) for i in range(ord('a'), ord('z')+1)]}
+letters = {i: i for i in [chr(i) for i in range(ord('a'), ord('z') + 1)]}
 # print(letters)
 # res = []
 
@@ -21,4 +21,3 @@ for k, v in list(letters.items()):
 print(len(result))
 for r in result:
     print(f'{r[0]} {r[1]}')
-

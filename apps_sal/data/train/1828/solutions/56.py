@@ -19,13 +19,14 @@ class Solution:
             arranged.insert(i, everything_else.pop(0))
             i += 2
         # Add everything else
+
         def can_add_at(i, b):
             if i == 0:
                 return arranged[i] != b
             elif i == len(arranged):
                 return arranged[-1] != b
             else:
-                return arranged[i] != b and arranged[i-1] != b
+                return arranged[i] != b and arranged[i - 1] != b
         i = 0
         while len(everything_else) != 0:
             if can_add_at(i, everything_else[0]):

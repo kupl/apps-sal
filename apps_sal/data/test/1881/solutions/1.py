@@ -10,9 +10,8 @@ for p in ps:
         j = p - k + 1
         while j < 0 or (mapping[j] != -1 and mapping[j] + k <= p):
             j += 1
-        for i in range(j, p+1):
+        for i in range(j, p + 1):
             mapping[i] = j
-    
+
     res.append(mapping[p])
 print(" ".join(map(str, res)))
-

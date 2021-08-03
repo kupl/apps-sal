@@ -34,8 +34,7 @@ def main():
     for row in A:
         maxx = max(maxx, max(row))
         minn = min(minn, min(row))
-    print(maxx, minn, A[x - 1][y - 1])        
-    
-    
-main()
+    print(maxx, minn, A[x - 1][y - 1])
 
+
+main()

@@ -13,5 +13,5 @@ class Solution:
                         or (rating[i] < rating[j] < rating[k])
                     ):
                         teamsCount += 1
-        
+
         return teamsCount

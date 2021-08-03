@@ -7,6 +7,4 @@ def write(x):
 
 
 inp = stdin.readline().strip("\n")
-write(int(inp[-1])%2)
-
-
+write(int(inp[-1]) % 2)

@@ -5,8 +5,8 @@ E = list(map(int, input().split()))
 
 lastS = S[0]
 lastE = E[0] + c
-print('0 ',end='')
-print(min(lastS, lastE), end= ' ')
+print('0 ', end='')
+print(min(lastS, lastE), end=' ')
 
 for i in range(1, n - 1):
     curS = min(lastS + S[i], lastE + S[i])

@@ -9,4 +9,3 @@ for _ in range(2):
         ans += b
         b -= 1
 print(ans)
-

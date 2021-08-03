@@ -1,5 +1,5 @@
 S = input()
- 
+
 N = len(S)
 ans = 0
 
@@ -14,9 +14,10 @@ s.count('A') # 4
 '''
 
 for i in range(N):
-  for j in range(i, N):
-    # 'ACGT'.count(c) == 1 -> 文字cがA,C,G,Tのいずれかであるとき:True / otherwise: False
-    # all() -> 引数に指定したListの要素がすべてTrue => True / otherwise: False
-    if all(['ACGT'.count(c) == 1 for c in S[i:j+1]]): ans = max(ans, j-i+1)
-      
+    for j in range(i, N):
+        # 'ACGT'.count(c) == 1 -> 文字cがA,C,G,Tのいずれかであるとき:True / otherwise: False
+        # all() -> 引数に指定したListの要素がすべてTrue => True / otherwise: False
+        if all(['ACGT'.count(c) == 1 for c in S[i:j + 1]]):
+            ans = max(ans, j - i + 1)
+
 print(ans)

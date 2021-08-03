@@ -13,4 +13,3 @@ for key in edges:
         return
 
 print('YES')
-

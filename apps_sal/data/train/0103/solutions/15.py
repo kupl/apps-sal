@@ -19,7 +19,7 @@ for _ in range(t):
             s += matrix[j][i]
         if s == 0:
             cols += 1
-    
+
     mini = min(cols, rows)
 
     if mini % 2 == 1:

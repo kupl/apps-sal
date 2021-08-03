@@ -1,5 +1,6 @@
+from collections import deque
 n, m = list(map(int, input().split()))
-info = [list(map(int, input().split())) for i in range(m)] 
+info = [list(map(int, input().split())) for i in range(m)]
 
 # 重要な事実としてNの最大値×D_iの最大値はちょうど10^4*10^5 = 10^9 = 座標の幅。
 # 「位置関係は全て正しく置けるが、0〜10^9に収まらないのでダメ」という可能性は考慮しなくて良い。
@@ -7,7 +8,6 @@ info = [list(map(int, input().split())) for i in range(m)]
 # 迷ったら幅優先で書こう。
 # なおエッジを1本ずつ（入力された順に）処理するのはマズい。100個の点からなる塊が2つあって、最後にそれが2つの線で結ばれた場合、無矛盾かどうかどうやって判別するか?
 
-from collections import deque
 
 nei = [[] for _ in range(n)]
 for edge in info:
@@ -43,4 +43,3 @@ for i in range(n):
                     return
 
 print('Yes')
-

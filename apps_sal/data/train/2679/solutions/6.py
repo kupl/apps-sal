@@ -1,6 +1,6 @@
 def hamster_me(code, message):
     alpha = 'abcdefghijklmnopqrstuvwxyz'
-    output=''
+    output = ''
     for char in message:
         try:
             codeLetter = max([c for c in sorted(code) if c <= char])
@@ -14,4 +14,3 @@ def hamster_me(code, message):
             appendNo = str(charIndex + len(alpha) - codeIndex + 1)
         output += codeLetter + appendNo
     return output
-

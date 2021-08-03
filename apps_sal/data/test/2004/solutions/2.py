@@ -22,4 +22,3 @@ for i in range(e):
 
 print(len(kk))
 print(' '.join(map(str, kk)))
-

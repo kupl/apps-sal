@@ -11,4 +11,3 @@ if Scou == Tcou:
     print('Yes')
 else:
     print('No')
-

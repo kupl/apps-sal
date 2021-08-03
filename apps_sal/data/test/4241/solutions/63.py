@@ -10,4 +10,3 @@ for i in range(len(s) - len(t) + 1):
             cnt += 1
     ans = min(ans, cnt)
 print(ans)
-

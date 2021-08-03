@@ -4,4 +4,3 @@ def product(numbers):
         for i in numbers:
             r *= i
         return r
-

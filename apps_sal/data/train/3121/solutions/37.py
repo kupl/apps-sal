@@ -5,4 +5,3 @@ def solve(arr):
             return n
         elif n > 0 and -n not in arr:
             return n
-

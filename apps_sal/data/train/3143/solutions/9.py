@@ -1,4 +1,6 @@
 from enum import Enum
+
+
 class Numbers(Enum):
     zero = 0
     one = 1
@@ -32,6 +34,7 @@ class Numbers(Enum):
 
 def number_to_name(number):
     return Numbers(number).name if number < 20 else Numbers(number).name if number < 100 and not number % 10 else (f"{Numbers(number // 10 * 10).name}-{Numbers(number % 10).name}" if number < 100 else f"{Numbers(number // 100).name} hundred" if not number % 100 else f"{Numbers(number // 100).name} hundred and {number_to_name(number % 100)}")
-    
+
+
 def sort_by_name(arr):
-    return sorted(arr,key=number_to_name)
+    return sorted(arr, key=number_to_name)

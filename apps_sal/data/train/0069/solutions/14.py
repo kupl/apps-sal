@@ -1,4 +1,6 @@
 mod = 10**9 + 7
+
+
 def solve():
     a, b = map(int, input().split())
     s = input()
@@ -23,6 +25,8 @@ def solve():
         else:
             break
     print(ans)
+
+
 t = 1
 t = int(input())
 while t > 0:

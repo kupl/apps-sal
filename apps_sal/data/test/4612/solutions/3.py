@@ -9,4 +9,3 @@ if num % 1 != 0:
     ans += 1
 
 print(ans)
-

@@ -6,8 +6,8 @@ while t:
     t -= 1
     n = int(input())
     print(2)
-    arr = [n-1,n]
+    arr = [n - 1, n]
     print(*arr)
-    for i in range(2,n):
-        arr = [n-i,n-i+2]
+    for i in range(2, n):
+        arr = [n - i, n - i + 2]
         print(*arr)

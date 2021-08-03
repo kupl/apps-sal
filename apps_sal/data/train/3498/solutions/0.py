@@ -1,6 +1,8 @@
 code = {'black': 0, 'brown': 1, 'red': 2, 'orange': 3, 'yellow': 4,
-'green': 5, 'blue': 6, 'violet': 7, 'gray': 8, 'white': 9,
-'gold': 5, 'silver': 10, '': 20}
+        'green': 5, 'blue': 6, 'violet': 7, 'gray': 8, 'white': 9,
+        'gold': 5, 'silver': 10, '': 20}
+
+
 def decode_resistor_colors(bands):
     colors = (bands + ' ').split(' ')
     value = 10 * code[colors[0]] + code[colors[1]]
@@ -12,4 +14,3 @@ def decode_resistor_colors(bands):
             prefix = p
             value /= 1000
     return "%g%s ohms, %d%%" % (value, prefix, tolerance)
-

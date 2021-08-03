@@ -1,6 +1,8 @@
 import bisect
 
-en2asc = lambda s: ord(s) - 97
+
+def en2asc(s): return ord(s) - 97
+
 
 S = input()
 T = input()

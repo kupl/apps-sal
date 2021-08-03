@@ -1,6 +1,6 @@
 def divisible_by(numbers, divisor):
-    new=[]
+    new = []
     for item in numbers:
-        if item%divisor==0:
+        if item % divisor == 0:
             new.append(item)
     return new

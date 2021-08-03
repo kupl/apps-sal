@@ -16,4 +16,3 @@ for i in range(len(b)):
     else:
         sum += col2
 print(sum)
-

@@ -13,4 +13,3 @@ for i in range(M):
     cur = b
 
 print(ans)
-

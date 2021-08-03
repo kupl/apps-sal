@@ -4,8 +4,10 @@ def fac(n):
         ret *= i
     return ret
 
+
 def C(n, k):
     return fac(n) // fac(k) // fac(n - k)
+
 
 def transform(s):
     res = 0
@@ -15,6 +17,7 @@ def transform(s):
         else:
             res -= 1
     return res
+
 
 s1 = input().strip()
 s2 = input().strip()
@@ -43,4 +46,3 @@ else:
             if transform(bin(i)[2:].rjust(u, '0')) == d:
                 well += 1
         print(well / (1 << u))
-

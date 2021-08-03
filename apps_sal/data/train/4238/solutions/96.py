@@ -1,5 +1,6 @@
 from math import log, floor
 
+
 def squares_needed(grains):
     if grains == 0:
         return 0

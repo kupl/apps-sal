@@ -20,6 +20,3 @@ if stage == 3 and a > 0 and b > 0 and (c == a or c == b):
     print('YES')
 else:
     print('NO')
-
-
-

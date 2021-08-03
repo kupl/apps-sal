@@ -9,8 +9,7 @@ def check(c):
             return "B"
         else:
             return "W"
-    
+
+
 def chess_board_cell_color(cell1, cell2):
     return check(cell1) == check(cell2)
-
-

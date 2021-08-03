@@ -21,4 +21,3 @@ for i in range(14):
             n_ans += a[k]
     ans = max(ans, n_ans)
 print(ans)
-

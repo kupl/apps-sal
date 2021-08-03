@@ -18,4 +18,3 @@ for i in range(N):
     if tmp != -1:
         used.append(tmp)
 print((len(used)))
-

@@ -36,4 +36,3 @@ class Solver:
 
 
 Solver().main()
-

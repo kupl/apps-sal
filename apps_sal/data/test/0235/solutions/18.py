@@ -2,6 +2,7 @@ DEBUG = True
 n = input().strip().split(" ")
 n = int(n[0])
 
+
 def oneTest(N, k):
     n = N
 
@@ -41,7 +42,6 @@ print(k)
 
 if DEBUG:
     if k > 1:
-        assert not oneTest(n, k-1)
+        assert not oneTest(n, k - 1)
     assert oneTest(n, k)
-    assert oneTest(n, k+1)
-
+    assert oneTest(n, k + 1)

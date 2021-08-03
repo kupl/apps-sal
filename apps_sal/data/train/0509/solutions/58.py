@@ -2,10 +2,11 @@ import sys
 sys.setrecursionlimit(10**6)
 readline = sys.stdin.readline
 
+
 class UnionFind:
     def __init__(self, n):
         self.table = [-1] * n
- 
+
     def _root(self, x):
         stack = []
         tbl = self.table
@@ -15,10 +16,10 @@ class UnionFind:
         for y in stack:
             tbl[y] = x
         return x
- 
+
     def find(self, x, y):
         return self._root(x) == self._root(y)
- 
+
     def union(self, x, y):
         r1 = self._root(x)
         r2 = self._root(y)
@@ -32,6 +33,7 @@ class UnionFind:
                 self.table[r1] -= 1
         else:
             self.table[r1] = r2
+
 
 def main():
     N, M = map(int, readline().split())
@@ -52,7 +54,7 @@ def main():
         edge_to_label[(u, v)] = c
         edge_to_label[(v, u)] = c
 
-    label = [0]*(N + 1)
+    label = [0] * (N + 1)
     label[1] = 1
     stack = [1]
     while stack:
@@ -69,6 +71,7 @@ def main():
                 stack.append(y)
 
     print(*label[1:], sep='\n')
+
 
 def __starting_point():
     main()

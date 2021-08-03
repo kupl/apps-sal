@@ -3,4 +3,3 @@ def smash(words):
     for word in words:
         newword += word + ' '
     return newword.strip()
-

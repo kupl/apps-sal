@@ -2,21 +2,22 @@
 # encoding: utf-8
 
 
-
-#----------
+# ----------
 # Constants
-#----------
+# ----------
 
 DEGREE_ARRAY_SIZE = 32
 
-#----------
+# ----------
 # Functions
-#----------
+# ----------
+
+
 def convert(a):
     from collections import Counter
-    b = [ 0 for i in range(DEGREE_ARRAY_SIZE) ]
+    b = [0 for i in range(DEGREE_ARRAY_SIZE)]
     for val, cnt in list(Counter(a).items()):
-        b[val.bit_length()-1] += cnt
+        b[val.bit_length() - 1] += cnt
     start = 0
     for i, cnt in enumerate(reversed(b)):
         if cnt != 0:
@@ -42,18 +43,18 @@ def calc(q, b):
 # Reads a string from stdin, splits it by space chars, converts each
 # substring to int, adds it to a list and returns the list as a result.
 def get_ints():
-    return [ int(n) for n in input().split() ]
+    return [int(n) for n in input().split()]
 
 
 # Reads a string from stdin, splits it by space chars, converts each substring
 # to floating point number, adds it to a list and returns the list as a result.
 def get_floats():
-    return [ float(n) for n in input().split() ]
+    return [float(n) for n in input().split()]
 
 
-#----------
+# ----------
 # Execution start point
-#----------
+# ----------
 
 def __starting_point():
     a = get_ints()
@@ -74,5 +75,6 @@ def __starting_point():
     for i in qj:
         ans = calc(i, b)
         print(ans)
+
 
 __starting_point()

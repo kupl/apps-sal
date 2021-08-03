@@ -1,1 +1,1 @@
-print(int(input())**2-int(input()))
+print(int(input())**2 - int(input()))

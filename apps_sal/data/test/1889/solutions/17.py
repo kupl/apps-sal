@@ -1,17 +1,19 @@
 def func(a):
-    s=0
-    per= 0
+    s = 0
+    per = 0
     for i in range(len(a)):
         if a[i] == '1':
-            
-            per+=1
+
+            per += 1
         else:
-            s=max(s, per)
-            per=0
-    s=max(per, s)
+            s = max(s, per)
+            per = 0
+    s = max(per, s)
     return s
+
+
 def main(a):
-    A= []
+    A = []
     B = [0] * int(a[0])
     for i in range(int(a[0])):
         A.append(input().split())
@@ -25,5 +27,7 @@ def main(a):
         for i in B:
             s = max(s, i)
         print(s)
-a =input().split()
+
+
+a = input().split()
 main(a)

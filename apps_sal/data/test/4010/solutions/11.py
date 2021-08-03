@@ -4,7 +4,7 @@ def go():
     d = {}
     for i, aa in enumerate(a):
         if aa in d:
-            if i - d[aa] > 1 :
+            if i - d[aa] > 1:
                 return 'YES'
         d[aa] = d.get(aa, i)
     return 'NO'
@@ -13,4 +13,3 @@ def go():
 t = int(input())
 for _ in range(t):
     print(go())
-

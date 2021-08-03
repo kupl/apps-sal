@@ -1,12 +1,12 @@
 import sys
 
 n, k = list(map(int, input().split()))
- 
+
 if k * 3 > n:
     print(-1)
     return
-    
-    
+
+
 ans = [1] * n
 if n == k * 3 and n % 2 == 1:
     if n == 3:
@@ -14,7 +14,7 @@ if n == k * 3 and n % 2 == 1:
         return
     l = n - (n % 6) - 6
     l = max(0, l)
-    
+
     filled = 0
     f, s = 1, 2
     for i in range(l):
@@ -53,7 +53,6 @@ else:
             filled += 1
         if j == 3:
             filled += 1
- 
+
 s = ' '.join(map(str, ans))
 sys.stdout.write(s)
-

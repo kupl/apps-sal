@@ -17,4 +17,5 @@ def main():
         if m <= 0:
             return amount
 
+
 print(main())

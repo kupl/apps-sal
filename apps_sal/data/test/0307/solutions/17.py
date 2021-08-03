@@ -4,4 +4,3 @@ ans = k * 256
 k2 -= k
 ans += 32 * min(k2, k3)
 print(ans)
-

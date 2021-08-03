@@ -10,7 +10,7 @@ class Solution:
         while p:
             nums.append(p.val)
             p = p.__next__
-        
+
         def check(nums):
             cur, k = 0, 0
             stack = []
@@ -21,14 +21,14 @@ class Solution:
                         stack.append((j, i))
                         k = i + 1
             return stack
-        
+
         stack = check(nums)
         while stack:
             while stack:
                 j, i = stack.pop()
                 nums[j: i + 1] = []
             stack = check(nums)
-        
+
         if not nums:
             return None
         ans = ListNode(nums[0])
@@ -37,9 +37,3 @@ class Solution:
             p.next = ListNode(nums[i])
             p = p.__next__
         return ans
-            
-            
-            
-            
-            
-

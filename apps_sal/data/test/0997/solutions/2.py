@@ -5,16 +5,18 @@ def isNumber(x):
     except:
         return False
 
+
 def conc(p):
     if len(p) == 0:
         return "-"
 
     s = "\""
-    for i in range(len(p)-1):
+    for i in range(len(p) - 1):
         s += p[i] + ','
-    s += p[len(p)-1] + "\""
+    s += p[len(p) - 1] + "\""
 
     return s
+
 
 s = input().split(";")
 p = []
@@ -32,4 +34,3 @@ q = conc(q)
 
 print(p)
 print(q)
-

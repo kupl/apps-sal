@@ -6,7 +6,7 @@ class Solution:
 
         array = [v for k, v in sorted(list(dic.items()), key=lambda item: item[1], reverse=True)]
 
-        target = len(arr)/2
+        target = len(arr) / 2
 
         current, i = 0, 0
         for num in array:
@@ -14,4 +14,3 @@ class Solution:
             current += num
             if current >= target:
                 return i
-

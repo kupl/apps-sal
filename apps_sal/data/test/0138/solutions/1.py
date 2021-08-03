@@ -8,4 +8,3 @@ for _ in range(100):
                 a[to] = a[i] + a[j]
 
 print(a[(4 - n % 4) % 4])
-

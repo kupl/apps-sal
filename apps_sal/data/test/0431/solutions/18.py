@@ -1,6 +1,7 @@
 from sys import stdin as fin
 # fin = open("cfr417b.in", "r")
 
+
 def f(i, csum, csl=True):
     nonlocal num_f, l_a, r_a, minv
     l, r = l_a[i], r_a[i]
@@ -11,6 +12,7 @@ def f(i, csum, csl=True):
         f(i + 1, csum + m + 2, not csl)
         f(i + 1, csum + (r if csl else l) * 2 + 1, csl)
         # print(num_f)
+
 
 n, m = list(map(int, fin.readline().split()))
 arr = [list(int(sym) for sym in fin.readline().strip()) for i in range(n)]
@@ -44,4 +46,3 @@ if num_f > -1:
     print(minv)
 else:
     print(0)
-

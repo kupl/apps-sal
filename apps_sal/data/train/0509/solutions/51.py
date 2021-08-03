@@ -30,4 +30,3 @@ if -1 in Ans:
 else:
     for ans in Ans:
         print(ans)
-

@@ -7,5 +7,5 @@ def jumping(arr, n):
         if here >= n:
             arr[ind] -= 1
         ind += here
-            
+
     return len([i for i in arr if i == n])

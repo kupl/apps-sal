@@ -38,9 +38,9 @@ def solution(n, a, t):
     return total
 
 
-f = lambda: [int(c) for c in input().split()]
+def f(): return [int(c) for c in input().split()]
+
+
 n, t = f()
 a = f()
 print(solution(n, a, t))
-
-

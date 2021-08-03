@@ -1,4 +1,6 @@
 import re
+
+
 def replace_dots(string):
     if string == "":
         return ""

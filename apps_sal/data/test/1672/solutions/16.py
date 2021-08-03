@@ -1,10 +1,10 @@
-n = int ( input() )
+n = int(input())
 
 str = input()
 
 LAST = str[1]
 S = 1
-n-=1
+n -= 1
 
 while n > 0:
     str = input()
@@ -12,5 +12,5 @@ while n > 0:
         S += 1
         LAST = str[1]
     n -= 1
-    
-print (S)
+
+print(S)

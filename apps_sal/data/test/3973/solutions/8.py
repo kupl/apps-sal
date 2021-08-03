@@ -1,6 +1,7 @@
 n, m = list(map(int, input().split()))
 As = list(map(int, input().split()))
 
+
 def solve(n, m, As):
     weighted_sum = [0] * m
     row_sum = [0] * m
@@ -14,7 +15,8 @@ def solve(n, m, As):
         a = As[i]
         b = As[i + 1]
         sol += (b - a) % m
-        if a == b or (a + 1)%m == b: continue
+        if a == b or (a + 1) % m == b:
+            continue
         row_sum[a] += 1
         col_sum[b] += 1
         weighted_sum[b] += (b - a - 1) % m
@@ -30,6 +32,6 @@ def solve(n, m, As):
         delta_weighted += delta_sum[x] - weighted_sum[x - 1]
         record = max(record, delta_weighted)
     return sol - record
-    
-print((solve(n, m, As)))
 
+
+print((solve(n, m, As)))

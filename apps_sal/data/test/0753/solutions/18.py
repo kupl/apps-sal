@@ -25,8 +25,6 @@ def decrease(a):
     return [i - 1 for i in a]
 
 
-
-
 def main():
     # nonlocal input
     # nonlocal print
@@ -53,4 +51,6 @@ def __starting_point():
     # import doctest
     # doctest.testmod()
     main()
+
+
 __starting_point()

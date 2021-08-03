@@ -5,6 +5,7 @@ Created on Nov 11, 2013
 '''
 import sys
 
+
 def printDigitSoroban(digit):
     if(digit == 0):
         print("O-|-OOOO")
@@ -27,18 +28,20 @@ def printDigitSoroban(digit):
     elif(digit == 9):
         print("-O|OOOO-")
 
+
 def convert(x):
     if(x == 0):
         printDigitSoroban(0)
-    while(x>=1):
-        digit = x%10
+    while(x >= 1):
+        digit = x % 10
         printDigitSoroban(digit)
         x //= 10
-        
+
+
 def main():
     f = sys.stdin
     n = int(f.readline())
     convert(n)
-    
-main()
 
+
+main()

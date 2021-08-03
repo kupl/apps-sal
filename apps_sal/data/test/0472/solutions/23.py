@@ -3,7 +3,6 @@ def s(x):
     return sum(int(i) for i in str(x))
 
 
-
 n = input()
 
 l, n = 9 * len(n), int(n)
@@ -21,6 +20,4 @@ for x in range(max(1, m - l), m + 1):
 print(ans)
 
 
-
 # Made By Mostafa_Khaled
-

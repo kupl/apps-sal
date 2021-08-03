@@ -9,4 +9,3 @@ for i in range(1000):
     if 2 <= cnt[i]:
         res = min(res, s - cnt[i] * i)
 print(res)
-

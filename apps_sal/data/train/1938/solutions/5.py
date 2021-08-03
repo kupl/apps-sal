@@ -3,16 +3,16 @@ class Solution:
         Xs = [x for x1, _, x2, _ in rectangles for x in [x1, x2]]
         Xs.sort()
         X_idx_lookup = {x: idx for idx, x in enumerate(Xs)}
-        
+
         res = 0
         prev_y = 0
         X_span = 0
-        
+
         Ys = [e for x1, y1, x2, y2 in rectangles for e in [[y1, x1, x2, 1], [y2, x1, x2, -1]]]
         Ys.sort()
-        
+
         overlap_count = [0] * len(Xs)
-        
+
         for y, xl, xr, inout in Ys:
             res += (y - prev_y) * X_span
             prev_y = y
@@ -27,10 +27,10 @@ class Solution:
         Xs.sort()
         covered = [0] * len(Xs)
         res = 0
-        
+
         keypoints = [e for x1, y1, x2, y2 in rectangles for e in [[y1, x1, x2, 1], [y2, x1, x2, -1]]]
         keypoints.sort()
-        
+
         prev_y = 0
         width_span = 0
         for y, x1, x2, inout in keypoints:

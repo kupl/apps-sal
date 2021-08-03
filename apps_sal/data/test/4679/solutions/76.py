@@ -2,7 +2,7 @@ sa = list(input())
 sb = list(input())
 sc = list(input())
 turn = "a"
-for i in range(len(sa+sb+sc)):
+for i in range(len(sa + sb + sc)):
     if turn == "a":
         if len(sa) == 0:
             print("A")

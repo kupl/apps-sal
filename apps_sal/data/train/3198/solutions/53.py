@@ -1,4 +1,4 @@
-def check_exam(answer_sheet,test):
+def check_exam(answer_sheet, test):
     score = 0
     for correct, answer in zip(answer_sheet, test):
         if not answer:

@@ -6,12 +6,13 @@ def main():
         l = input()
         if l not in d:
             d[l] = 0
-        d[l] +=1
+        d[l] += 1
     ans = max(d.values())
     print(ans)
 
+
 def __starting_point():
     main()
-    
+
 
 __starting_point()

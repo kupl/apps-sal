@@ -1,2 +1,2 @@
 import re
-dad_filter = lambda s: re.sub(r',+',',',s).strip(', ')
+def dad_filter(s): return re.sub(r',+', ',', s).strip(', ')

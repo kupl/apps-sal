@@ -24,7 +24,5 @@ for _ in range(n):
     #     ansa = ai * math.ceil(anst/ti)
     #     anst = ti * math.ceil(anst/ti)
     # # print("anst", anst,"ansa = ", ansa)
-        
-print((int(anst + ansa)))
-    
 
+print((int(anst + ansa)))

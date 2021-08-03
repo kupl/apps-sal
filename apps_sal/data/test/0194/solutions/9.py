@@ -19,4 +19,3 @@ for i in L:
         else:
             ans += 2
 print(ans)
-

@@ -1,5 +1,5 @@
 class StreamChecker:
-    
+
     def build_trie(self, word: str) -> None:
         place = self.trie
         for ch in word:
@@ -9,7 +9,7 @@ class StreamChecker:
                 place[ch] = dict()
                 place = place[ch]
         place['*'] = None
-    
+
     def __init__(self, words: List[str]) -> None:
         self.words = set(words)
         self.trie = dict()
@@ -32,5 +32,3 @@ class StreamChecker:
                 continue
         self.temp = self.temp2
         return can
-            
-

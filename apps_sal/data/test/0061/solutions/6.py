@@ -21,5 +21,3 @@ elif res1 < res2:
     print('<')
 else:
     print('=')
-
-

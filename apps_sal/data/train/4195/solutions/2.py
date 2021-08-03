@@ -1,10 +1,12 @@
 from itertools import chain, groupby
 
+
 def merge_group(grp):
     xs = list(grp)
     q, r = divmod(len(xs), 2)
     return [xs[0] * 2] * q + [xs[0]] * r
-    
+
+
 def merge(line):
     n = len(line)
     line = list(filter(None, line))

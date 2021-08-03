@@ -2,7 +2,7 @@ class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         locationsLen, modulus = len(locations), 10 ** 9 + 7
         dp = [[-1] * (fuel + 1) for _ in range(locationsLen)]
-        
+
         def dfs(city, fuel):
             if fuel < 0:
                 return 0
@@ -16,5 +16,5 @@ class Solution:
                     result += dfs(i, fuel - abs(locations[i] - locations[city])) % modulus
             dp[city][fuel] = result
             return result
-            
+
         return dfs(start, fuel) % modulus

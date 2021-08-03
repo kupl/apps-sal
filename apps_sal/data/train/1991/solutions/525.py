@@ -4,7 +4,7 @@ class Solution:
         N = len(locations)
         dp = [[0] * (fuel + 1) for _ in range(N)]
         dp[finish] = [1] * (fuel + 1)
-        
+
         for f in range(1, fuel + 1):
             for u in range(N):
                 for v in range(N):
@@ -14,4 +14,3 @@ class Solution:
                             dp[u][f] += dp[v][f - delta]
                             dp[u][f] %= MOD
         return dp[start][fuel]
-

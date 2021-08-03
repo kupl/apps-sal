@@ -2,7 +2,7 @@ import sys
 
 input = sys.stdin.readline
 
-c, v0, v1, a, l = map(int,input().split())
+c, v0, v1, a, l = map(int, input().split())
 
 day = 0
 read = 0

@@ -1,8 +1,7 @@
 def reverseWords(s):
     spl = s.split(" ")
     x = spl[::-1]
-    new =''
+    new = ''
     for i in x:
-        new+=i + " "
+        new += i + " "
     return new.strip()
-

@@ -13,8 +13,10 @@ if stream_enable:
     sys.stdin = io.StringIO(inpstream)
     input()
 
+
 def inpmap():
     return list(map(int, input().split()))
+
 
 n = int(input())
 arr = inpmap()
@@ -25,4 +27,3 @@ for i in range(n - 1):
 r.append(arr[n - 1])
 print(len(r))
 print(*r)
-

@@ -10,6 +10,3 @@ class Solution:
                 if j >= coins[i]:
                     dp[i][j] = min(dp[i][j], dp[i][j - coins[i]] + 1)
         return -1 if dp[-1][-1] == math.inf else dp[-1][-1]
-        
-    
-

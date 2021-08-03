@@ -1,7 +1,7 @@
 n, x = list(map(int, input().split()))
 a = list(map(int, input().split()))
 idx = x % n
-for j in range(x, x+n):
+for j in range(x, x + n):
     if a[j % n] <= a[idx]:
         idx = j % n
 temp = a[idx]
@@ -13,4 +13,3 @@ while j % n != x % n:
     j += 1
     a[idx] += 1
 print(*a)
-

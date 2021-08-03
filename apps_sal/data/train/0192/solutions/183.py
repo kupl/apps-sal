@@ -3,7 +3,7 @@ class Solution:
         my_coins = 0
 
         piles.sort()
-        count = len(piles)/3
+        count = len(piles) / 3
         i = 0
         j = -2
         k = -1
@@ -14,6 +14,4 @@ class Solution:
             k -= 2
             count -= 1
 
-
         return my_coins
-

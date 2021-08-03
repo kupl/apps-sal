@@ -7,6 +7,6 @@ for x in S:
 ans = list(set(al) ^ set(data))
 ans.sort()
 if len(ans) == 0:
-    print('None') 
+    print('None')
 else:
     print(ans[0])

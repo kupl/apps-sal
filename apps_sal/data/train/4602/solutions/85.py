@@ -4,7 +4,7 @@ def is_anagram(test, original):
         return False
 
     res = ''
-    counter = 0    
+    counter = 0
     sortedTest = sorted(test.lower())
     sortedOriginal = sorted(original.lower())
 
@@ -15,5 +15,3 @@ def is_anagram(test, original):
         else:
             res = True
     return res
-        
-

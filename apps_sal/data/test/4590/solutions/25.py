@@ -39,4 +39,3 @@ while True:
         cnt -= 1
 
 print(res)
-

@@ -9,4 +9,3 @@ else:
         print(1, i)
     for i in range(2, n - m + 2):
         print(i, m)
-

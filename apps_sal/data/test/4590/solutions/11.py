@@ -5,7 +5,7 @@ B = list(map(int, input().split()))
 a, b = [0], [0]
 for i in range(N):
     a.append(a[i] + A[i])
-    
+
 for i in range(M):
     b.append(b[i] + B[i])
     ans, j = 0, M

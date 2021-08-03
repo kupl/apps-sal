@@ -1,5 +1,5 @@
-N,K,M = map(int,input().split())
-score = list(map(int,input().split()))
+N, K, M = map(int, input().split())
+score = list(map(int, input().split()))
 lastscore = N * M - (sum(score))
 if lastscore <= 0:
     print('0')

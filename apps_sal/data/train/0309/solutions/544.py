@@ -24,4 +24,3 @@ class Solution:
                     sequenceEnds[diff] = sequencesWithDiff
                 seenDiffs.add(diff)
         return maxSequenceLen
-

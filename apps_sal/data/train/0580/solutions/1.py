@@ -6,7 +6,7 @@ for _ in range(int(input())):
     s = list(' ' * n)
     s[0] = s[-1] = '1'
 
-    l, r = 1, n-2
+    l, r = 1, n - 2
     for i in range(2, n):
         s[l] = s[r] = '1'
         print(*s, sep='')

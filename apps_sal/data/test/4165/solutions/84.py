@@ -1,6 +1,6 @@
 # 数値の取得
 polynum = int(input())
-length = list(map(int,input().split()))
+length = list(map(int, input().split()))
 
 # 図形の成立可否を検証し結果を出力
 most_l = max(length)

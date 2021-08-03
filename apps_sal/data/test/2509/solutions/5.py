@@ -32,7 +32,7 @@ def f(n, N, K):
 
 def solve(N: int, K: int):
     ans = 0
-    for b in range(N+1):
+    for b in range(N + 1):
         #print(b, f(b, N, K))
         ans += f(b, N, K)
     return ans
@@ -49,12 +49,15 @@ def main():
     K = int(next(tokens))  # type: int
     print((solve(N, K)))
 
+
 def test():
     import doctest
     doctest.testmod()
 
+
 def __starting_point():
     test()
     main()
+
 
 __starting_point()

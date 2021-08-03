@@ -29,7 +29,7 @@ class Solution:
             chars[level], chars[i] = chars[i], chars[level]
             seen.add(chars[i])
         return 0
-    
+
     def reorderedPowerOf2(self, N: int) -> bool:
         N = str(N)
         chars = [char for char in N]

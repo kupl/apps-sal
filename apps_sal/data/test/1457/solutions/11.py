@@ -1,11 +1,11 @@
 def main():
-	s = input()
-	p = input()
-	print(s.count(p))
-
-		
+    s = input()
+    p = input()
+    print(s.count(p))
 
 
 def __starting_point():
-	main()
+    main()
+
+
 __starting_point()

@@ -1,9 +1,9 @@
-h,w,k = list(map(int, input().split()))
+h, w, k = list(map(int, input().split()))
 
-s = [list(map(str,list(input()))) for i in range(h)]
-ans =0
-for ii in range(1<<h):
-    for jj in range(1<<w):
+s = [list(map(str, list(input()))) for i in range(h)]
+ans = 0
+for ii in range(1 << h):
+    for jj in range(1 << w):
         cnt = 0
         for i in range(h):
             for j in range(w):
@@ -17,4 +17,3 @@ for ii in range(1<<h):
         if cnt == k:
             ans += 1
 print(ans)
-

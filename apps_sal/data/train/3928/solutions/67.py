@@ -9,4 +9,3 @@ def billboard(name, price=30):
             p += price
         return p
     # Flez
-

@@ -3,5 +3,5 @@ def find_multiples(integer, limit):
     n = integer
     while n <= limit:
         mults.append(n)
-        n = n + integer  
+        n = n + integer
     return mults

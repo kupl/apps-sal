@@ -4,6 +4,7 @@ import re
 
 A = {x: i for i, x in enumerate(ascii_uppercase + ascii_lowercase)}
 
+
 def f(P, W):
     row, col = divmod(P, W)
     r = [
@@ -25,8 +26,10 @@ def f(P, W):
         r.append([s - (W - 1) * i for i in range(s // W + 1)])
     return r
 
+
 def whoIsWinner(G, n, w, d="Draw"):
-    if n > w: return d
+    if n > w:
+        return d
     D, P, C = dict(), Counter(), Counter()
     for x in G:
         p, t = x.split("_")

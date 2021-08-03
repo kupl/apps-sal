@@ -17,4 +17,3 @@ if v != [0, 0]:
         print(x1, y1, R)
 else:
     print(x1 + R / 2, y1, R / 2)
-

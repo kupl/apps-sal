@@ -1,4 +1,4 @@
-def get_size(w,h,d):
+def get_size(w, h, d):
     "Измеряем объем и площадь коробки"
     s_o = []
     s = (w * h * 2) + (h * d * 2) + (d * w * 2)

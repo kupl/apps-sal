@@ -1,1 +1,1 @@
-remove_exclamation_marks=lambda s: s.replace("!","")
+def remove_exclamation_marks(s): return s.replace("!", "")

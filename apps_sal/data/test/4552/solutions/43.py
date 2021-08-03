@@ -2,6 +2,7 @@ import sys
 
 input = sys.stdin.readline
 
+
 def main():
     N = int(input())
     F = []
@@ -23,18 +24,20 @@ def main():
                 select.append(A[j])
         if len(select) == 0:
             continue
-        
+
         for j in range(N):
             cnt = 0
             for k in select:
                 if F[j][k] == 1:
                     cnt += 1
             score += P[j][cnt]
-        
+
         ans = max(ans, score)
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

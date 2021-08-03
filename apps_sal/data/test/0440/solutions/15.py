@@ -11,4 +11,3 @@ while True:
         i += 1
 
 print(s)
-

@@ -8,4 +8,3 @@ drinks = [tuple(map(int, input().split()))
 time_sum_raw = sum(times)
 for pi, xi in drinks:
     print((time_sum_raw - times[pi - 1] + xi))
-

@@ -7,10 +7,9 @@ def getMatrixProduct(a, b):
     if acl != brl:
         return -1
     # Handy data extraction lambdas
-    row = lambda ar, n: ar[n]
-    col = lambda ar, n: [r[n] for r in ar]
+    def row(ar, n): return ar[n]
+    def col(ar, n): return [r[n] for r in ar]
     # Sum of the products of parallel arrays
-    prod_sum = lambda ar1, ar2: sum((v1 * v2 for v1, v2 in zip(ar1, ar2)))
+    def prod_sum(ar1, ar2): return sum((v1 * v2 for v1, v2 in zip(ar1, ar2)))
     # Answer!
     return [[prod_sum(row(a, r), col(b, c)) for c in range(bcl)] for r in range(arl)]
-

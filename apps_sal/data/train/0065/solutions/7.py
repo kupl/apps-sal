@@ -1,5 +1,6 @@
 from math import ceil
 
+
 def main():
     t = int(input())
     for i in range(t):

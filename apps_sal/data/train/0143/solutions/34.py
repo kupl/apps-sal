@@ -24,6 +24,6 @@ class Solution:
                     max_len = 0
                     s = set()
                     i = next_start_pos
-                    
+
         res.append(max_len)
         return max(res)

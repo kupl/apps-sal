@@ -2,7 +2,7 @@ class Solution:
     def maxUniqueSplit(self, s: str) -> int:
         def check(st, cm):
             mx = 0 if st in cm else 1
-            for i in range(1,len(st)):
+            for i in range(1, len(st)):
                 a = st[:i]
                 b = st[i:]
                 if a not in cm:

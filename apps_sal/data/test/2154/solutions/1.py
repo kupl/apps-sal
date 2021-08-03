@@ -7,13 +7,12 @@ def maxProfit(prices, days):
     payoff = 0
     maxPrice, minPrice = max(prices), min(prices)
     maxIndex, minIndex = prices.index(maxPrice), prices.index(minPrice)
-    iterator = iter(prices) 
-    h = [] # heap
+    iterator = iter(prices)
+    h = []  # heap
 
     if days == 1:
         print(0)
         return
-
 
     for i in range(days):
         p = next(iterator)
@@ -29,9 +28,10 @@ def maxProfit(prices, days):
     print(payoff)
 
 
-
 def __starting_point():
     n = int(input())
     prices = list(map(int, input().split()))
     maxProfit(prices, n)
+
+
 __starting_point()

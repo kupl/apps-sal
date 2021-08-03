@@ -6,4 +6,3 @@ def feast(beast, dish):
     else:
         is_valid = False
         return is_valid
-

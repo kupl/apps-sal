@@ -8,5 +8,5 @@ def sum_prod(strexpression):
         reduce(lambda result, y: result * float(y), product_, 1.0)
         for product_ in to_sum
     )
-    
+
     return f'{total:.5e}'

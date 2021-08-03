@@ -11,4 +11,3 @@ for i in range(2, n):
     a.append(t[i][1] // b)
 
 print(*a)
-

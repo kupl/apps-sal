@@ -7,15 +7,15 @@ class Solution:
         elif not nums2:
             return sum(num1)
         ans = 0
-        
+
         dp = collections.defaultdict(lambda: 0)
         dp[-1] = 0
-        
-        for i in  range(len(nums1)):
+
+        for i in range(len(nums1)):
             if i == 0:
                 prev[nums1[i]].add(-1)
             prev[nums1[i]].add(nums1[i - 1])
-            
+
         for i in range(len(nums2)):
             if i == 0:
                 prev[nums2[i]].add(-1)
@@ -29,9 +29,8 @@ class Solution:
             else:
                 target = nums2[j]
                 j += 1
-        
+
             for p in prev[target]:
                 dp[target] = max(dp[p] + target, dp[target])
                 ans = max(ans, dp[target])
         return ans % MOD
-

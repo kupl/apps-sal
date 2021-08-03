@@ -1,5 +1,5 @@
 class Hero(object):
-    def __init__(self, name = None):
+    def __init__(self, name=None):
         if name == None:
             self.name = 'Hero'
         else:

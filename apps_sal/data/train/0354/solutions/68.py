@@ -6,7 +6,7 @@ class Solution:
         pst = init()
         for i in range(1, 7):
             pst[i][1] = 1
-            
+
         for _ in range(1, n):
             for i in range(1, 7):
                 st[i][1] = 0

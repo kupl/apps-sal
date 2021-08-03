@@ -1,7 +1,7 @@
 class Solution:
     def canReach(self, arr: List[int], start: int) -> bool:
         seen = set()
-        
+
         def canReachRec(ix):
             if ix < 0 or ix >= len(arr):
                 return False
@@ -17,4 +17,3 @@ class Solution:
                 return True
             return False
         return canReachRec(start)
-

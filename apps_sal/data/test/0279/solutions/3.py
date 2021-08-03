@@ -13,8 +13,8 @@ def solve(v1, v2, t, d):
         if cache_key in cache:
             return cache[cache_key]
 
-        max_v = min(cur_v + d, v2 + d*remain_t)
-        min_v = max(0, max(cur_v - d, v2 - d*remain_t))
+        max_v = min(cur_v + d, v2 + d * remain_t)
+        min_v = max(0, max(cur_v - d, v2 - d * remain_t))
         for v in range(max_v, min_v - 1, -1):
             cur_dist = max(cur_dist, calc_max(v, remain_t - 1))
 
@@ -29,5 +29,5 @@ def main():
     t, d = list(map(int, input().strip().split()))
     print(solve(v1, v2, t, d))
 
-main()
 
+main()

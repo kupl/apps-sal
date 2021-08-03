@@ -7,4 +7,3 @@ if sp == s or sp + 1 == p:
     print(sp)
 else:
     print(sp + p)
-

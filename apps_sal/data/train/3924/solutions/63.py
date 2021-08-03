@@ -1,5 +1,6 @@
 import re
 
+
 def reverse_words(text):
     list = re.split(r'(\s+)', text)
     res = ""

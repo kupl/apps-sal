@@ -1,6 +1,7 @@
 from typing import List, Dict, Set
 from collections import defaultdict
 
+
 def find_safe_nodes(graph: Dict, rev_graph: Dict):
     outcount_nodes = defaultdict(set)
     for node, list_innodes in list(graph.items()):
@@ -18,6 +19,7 @@ def find_safe_nodes(graph: Dict, rev_graph: Dict):
             outcount_nodes[prev_outcount - 1].add(safer_node)
         safe_nodes.add(safe_node)
     return safe_nodes
+
 
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
@@ -39,13 +41,11 @@ class Solution:
         safe_nodes = find_safe_nodes(graph, rev_graph)
         return sorted(safe_nodes)
 
+
 s = Solution()
 
-print((s.eventualSafeNodes(graph = [[1,2],[2,3],[5],[0],[5],[],[]])))
-print((s.eventualSafeNodes(graph = [[1,2],[2,3],[5],[0],[5],[],[]]) == [2,4,5,6]))
+print((s.eventualSafeNodes(graph=[[1, 2], [2, 3], [5], [0], [5], [], []])))
+print((s.eventualSafeNodes(graph=[[1, 2], [2, 3], [5], [0], [5], [], []]) == [2, 4, 5, 6]))
 
-print((s.eventualSafeNodes([[],[0,2,3,4],[3],[4],[]])))
-print((s.eventualSafeNodes([[],[0,2,3,4],[3],[4],[]]) == [0, 1, 2, 3, 4]))
-
-
-
+print((s.eventualSafeNodes([[], [0, 2, 3, 4], [3], [4], []])))
+print((s.eventualSafeNodes([[], [0, 2, 3, 4], [3], [4], []]) == [0, 1, 2, 3, 4]))

@@ -15,4 +15,3 @@ while apple != 0:
         result += (p * apple) // 2
         apple //= 2
 print(result)
-

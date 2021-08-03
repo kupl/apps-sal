@@ -1,11 +1,12 @@
 from queue import PriorityQueue
 
+
 class Solution:
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
         mod = 10 ** 9 + 7
         if k == 1:
             return max([speed[i] * efficiency[i] for i in range(n)]) % mod
-        
+
         engs = sorted([(efficiency[i] % mod, speed[i] % mod) for i in range(n)])
         others = PriorityQueue()
         maxi = 0
@@ -16,5 +17,5 @@ class Solution:
             others.put(engs[i][1])
             while others.qsize() > k - 1:
                 otherSum -= others.get()
-            
+
         return maxi % mod

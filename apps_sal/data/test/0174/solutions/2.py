@@ -20,16 +20,17 @@ def f(a):
         a[-3] = '(0'
         a[-2] = '0)'
         print("YES\n" + "->".join(str(x) for x in a))
-        return      
+        return
     for i in range(len(a) - 3, -1, -1):
         if a[i] == 0:
             a[i] = '(' + str(a[i])
-            a[i+1] = '(' + str(a[i+1])
+            a[i + 1] = '(' + str(a[i + 1])
             a[-2] = '0))'
             print("YES\n" + "->".join(str(x) for x in a))
             return
     print("NO")
     return
+
 
 n = int(input())
 a = list(int(x) for x in input().split())

@@ -1,10 +1,12 @@
 from sys import stdin
 from collections import deque
-def NC_Dij(lis,start):
+
+
+def NC_Dij(lis, start):
 
     ret = [float("inf")] * len(lis)
     ret[start] = 0
-    
+
     q = deque([start])
     plis = [i for i in range(len(lis))]
 
@@ -18,32 +20,33 @@ def NC_Dij(lis,start):
                 plis[nex] = now
                 q.append(nex)
 
-    return ret,plis
+    return ret, plis
+
 
 tt = int(stdin.readline())
 
 for loop in range(tt):
 
-    n,a,b,da,db = list(map(int,stdin.readline().split()))
+    n, a, b, da, db = list(map(int, stdin.readline().split()))
     N = n
     a -= 1
     b -= 1
-    lis = [ [] for i in range(n)]
+    lis = [[] for i in range(n)]
 
-    for i in range(n-1):
-        u,v = list(map(int,stdin.readline().split()))
+    for i in range(n - 1):
+        u, v = list(map(int, stdin.readline().split()))
         u -= 1
         v -= 1
         lis[u].append(v)
         lis[v].append(u)
 
-    if 2*da >= db:
-        print ("Alice")
+    if 2 * da >= db:
+        print("Alice")
         continue
 
-    fa,tmp = NC_Dij(lis,a)
+    fa, tmp = NC_Dij(lis, a)
     if fa[b] <= da:
-        print ("Alice")
+        print("Alice")
         continue
 
     mv = 0
@@ -51,10 +54,8 @@ for loop in range(tt):
         if fa[i] > fa[mv]:
             mv = i
 
-    fv,tmp = NC_Dij(lis,mv)
-    if max(fv) <= 2*da:
-        print ("Alice")
+    fv, tmp = NC_Dij(lis, mv)
+    if max(fv) <= 2 * da:
+        print("Alice")
     else:
-        print ("Bob")
-    
-
+        print("Bob")

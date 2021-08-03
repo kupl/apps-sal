@@ -9,7 +9,7 @@ class Solution:
         heapq.heapify(dic2)
         res = []
         count = 0
-        while(count<K):
+        while(count < K):
             res.extend(dic[heapq.heappop(dic2)])
             count = len(res)
         return res

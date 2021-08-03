@@ -17,4 +17,3 @@ for i in range(n):
         co[k] += 1
 
 print(' '.join(map(str, ans)))
-

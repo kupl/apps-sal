@@ -20,4 +20,3 @@ for i in range(n):
             if cnt[i][j] != int(f[i][j]):
                 ans = "NO"
 print(ans)
-

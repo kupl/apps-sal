@@ -6,17 +6,17 @@ from functools import reduce
 from itertools import combinations
 
 
-eval_function = lambda x: lambda f: f(x)
+def eval_function(x): return lambda f: f(x)
 
 
 @eval_function(int((10**9)**0.5))
 def prime(n):
-    sieve = [True] * (n+1)
+    sieve = [True] * (n + 1)
     sieve[0] = sieve[1] = False
     index = 2
     for i in range(int(len(sieve)**0.5)):
         if sieve[i]:
-            for j in range(2*i, len(sieve), i):
+            for j in range(2 * i, len(sieve), i):
                 sieve[j] = False
         index += 1
     return [i for i, is_prime in enumerate(sieve) if is_prime]
@@ -36,12 +36,12 @@ def factorized(n):
 
 
 def count_coprime_parts(n, mod=None):
-    count = pow(2, n-1, mod)
+    count = pow(2, n - 1, mod)
     unique_factors = set(factorized(n))
-    for i in range(1, len(unique_factors)+1):
+    for i in range(1, len(unique_factors) + 1):
         for factors in combinations(unique_factors, i):
             d = reduce(mul, factors)
-            count += (-1)**i * pow(2, n//d-1, mod)
+            count += (-1)**i * pow(2, n // d - 1, mod)
             count %= mod
     return count
 
@@ -49,15 +49,16 @@ def count_coprime_parts(n, mod=None):
 def solve(x, y, mod=None):
     if gcd(x, y) != x:
         return 0
-    return count_coprime_parts(y//x, mod)
+    return count_coprime_parts(y // x, mod)
 
 
 def main():
     x, y = [int(n) for n in input().split()]
-    print(solve(x, y, 10**9+7))
+    print(solve(x, y, 10**9 + 7))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -13,4 +13,3 @@ for i in range(n - 2):
         return
 
 print((-1, -1))
-

@@ -1,31 +1,35 @@
-from math import ceil,floor,factorial,gcd,sqrt,log2,cos,sin,tan,acos,asin,atan,degrees,radians,pi,inf
-from itertools import accumulate,groupby,permutations,combinations,product,combinations_with_replacement
-from collections import deque,defaultdict,Counter
-from bisect import bisect_left,bisect_right
+from math import ceil, floor, factorial, gcd, sqrt, log2, cos, sin, tan, acos, asin, atan, degrees, radians, pi, inf
+from itertools import accumulate, groupby, permutations, combinations, product, combinations_with_replacement
+from collections import deque, defaultdict, Counter
+from bisect import bisect_left, bisect_right
 from operator import itemgetter
-from heapq import heapify,heappop,heappush
-from queue import Queue,LifoQueue,PriorityQueue
+from heapq import heapify, heappop, heappush
+from queue import Queue, LifoQueue, PriorityQueue
 from copy import deepcopy
 from time import time
 from functools import reduce
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input() : return sys.stdin.readline().strip()
-def INT()   : return int(input())
-def MAP()   : return map(int,input().split())
-def MAP1()  : return map(lambda x:int(x)-1,input().split())
-def LIST()  : return list(MAP())
-def LIST1() : return list(MAP1())
+def input(): return sys.stdin.readline().strip()
+def INT(): return int(input())
+def MAP(): return map(int, input().split())
+def MAP1(): return map(lambda x: int(x) - 1, input().split())
+def LIST(): return list(MAP())
+def LIST1(): return list(MAP1())
 
 #####segfunc#####
+
+
 def segfunc(x, y):
     return gcd(x, y)
 #################
 
+
 #####ide_ele#####
 ide_ele = 0
 #################
+
 
 class SegTree:
     """
@@ -33,6 +37,7 @@ class SegTree:
     update(k, x): k番目の値をxに更新 O(logN)
     query(l, r): 区間[l, r)をsegfuncしたものを返す O(logN)
     """
+
     def __init__(self, init_val, segfunc, ide_ele):
         """
         init_val: 配列の初期値
@@ -86,6 +91,7 @@ class SegTree:
             r >>= 1
         return res
 
+
 def solve():
     N = INT()
     a = LIST()
@@ -98,6 +104,9 @@ def solve():
         seg.update(i, a[i])
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

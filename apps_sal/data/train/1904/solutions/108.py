@@ -1,5 +1,6 @@
 import heapq
 
+
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         heap = []
@@ -8,7 +9,7 @@ class Solution:
             heapq.heappush(heap, (-dist, point))
             if len(heap) > K:
                 heapq.heappop(heap)
-        
+
         return [tuple[1] for tuple in heap]
 
 #         left = 0
@@ -22,8 +23,8 @@ class Solution:
 #             else:
 #                 right = mid - 1
 #         return points[:K]
-             
-    
+
+
 #     def helperPivot(self,start, end, points):
 #         def dist(point):
 #             return point[0]**2 + point[1]**2
@@ -41,8 +42,3 @@ class Solution:
 #         #right is the correct position of pivot
 #         points[pivot], points[right] = points[right], points[pivot]
 #         return right
-            
-    
-                    
-        
-

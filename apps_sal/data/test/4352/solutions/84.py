@@ -17,4 +17,3 @@ elif a < b:
 else:
     ans = 'Draw'
 print(ans)
-

@@ -36,7 +36,8 @@ def factors(f):
             FS[f] = factors3(f)
         else:
             n >>= 1
-            while n & 1 == 0: n >>= 1
+            while n & 1 == 0:
+                n >>= 1
             FS[f] = [2] + factors3(n) if n > 1 else [2]
     return FS[f]
 
@@ -46,10 +47,10 @@ def factors3(f, start=3):
         for i in range(start, int(sqrt(n)) + 1, 2):
             if n % i == 0:
                 n = n // i
-                while n % i == 0: n = n // i
+                while n % i == 0:
+                    n = n // i
                 FS[f] = [i] + factors3(n, i + 2) if n > 1 else [i]
                 break
         else:
             FS[f] = [f]
     return FS[f]
-

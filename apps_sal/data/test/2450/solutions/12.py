@@ -19,4 +19,3 @@ for _ in range(int(input())):
                 i += 1
 
     print(ans)
-

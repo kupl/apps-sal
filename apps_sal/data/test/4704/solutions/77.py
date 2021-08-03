@@ -8,4 +8,3 @@ for i in range(n - 1):
     res = min(res, abs(tmp_sum - (sum_a - tmp_sum)))
 
 print(res)
-

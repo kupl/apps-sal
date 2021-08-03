@@ -6,5 +6,5 @@ def champernowne_digit(n):
         i, l = i + 1, l + 9 * (i + 1) * 10**i
     return ((n - l) // (i * 10**(i - 1 - (n - l) % i))) % 10
 
-champernowneDigit = champernowne_digit
 
+champernowneDigit = champernowne_digit

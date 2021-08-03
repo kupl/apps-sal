@@ -1,8 +1,8 @@
 w, a, b = map(int, input().split())
 
 if a + w < b:
-  print(abs(b - (a+w)))
+    print(abs(b - (a + w)))
 elif b + w < a:
-  print(abs(a - (b+w)))
+    print(abs(a - (b + w)))
 else:
-  print(0)
+    print(0)

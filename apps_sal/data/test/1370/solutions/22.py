@@ -34,7 +34,7 @@ def solve(w, l):
                 elif i == n - 1:
                     x[i] = w[-1][j] - w[l[-1]][j]
                 else:
-                    x[i] = w[l[i]][j] - w[l[i-1]][j]
+                    x[i] = w[l[i]][j] - w[l[i - 1]][j]
                 if x[i] > K:
                     return INF
                 dp[i] += x[i]
@@ -49,7 +49,7 @@ def solve(w, l):
 def main():
     w = [S[0]]
     for i in range(1, H):
-        w.append([w[i-1][j] + S[i][j] for j in range(W)])
+        w.append([w[i - 1][j] + S[i][j] for j in range(W)])
 
     ans = INF
     num_list = [i for i in range(H - 1)]
@@ -63,5 +63,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -4,21 +4,25 @@ N = int(input())
 *P, = list(map(int, input().split()))
 MOD = 10**9 + 7
 
-G = [[] for i in range(N+1)]
-U = [0]*(N+1)
-C = [0]*(N+1)
+G = [[] for i in range(N + 1)]
+U = [0] * (N + 1)
+C = [0] * (N + 1)
 for i, p in enumerate(P):
-    G[p].append(i+1)
-    U[i+1] = u = U[p]+1
+    G[p].append(i + 1)
+    U[i + 1] = u = U[p] + 1
     C[u] += 1
-Q = [None]*(N+1)
+Q = [None] * (N + 1)
 PP = {}
+
+
 def pp(k):
     if k not in PP:
         PP[k] = p = pow(2, k, MOD)
         return p
     return PP[k]
-L = [0]*(N+1)
+
+
+L = [0] * (N + 1)
 
 ept = []
 sz = L.__getitem__
@@ -41,7 +45,8 @@ for i in range(N, -1, -1):
     if k > 1:
         # a0 <- a2
         for s, r in zip(Q[g[1]] or ept, R):
-            r[0] += r[2]; r[2] = 0
+            r[0] += r[2]
+            r[2] = 0
 
         for j in g[1:]:
             S = Q[j]
@@ -50,10 +55,10 @@ for i in range(N, -1, -1):
 
             # dequeの小さい方から大きい方へマージする処理
             for (a0, a1, a2), r in zip(S, R):
-                b0, b1, b2 = r; a0 += a2
-                r[0] = a0*b0 % MOD
-                r[1] = (a0*b1 + a1*b0) % MOD
-                r[2] = ((a0+a1)*b2 + a1*b1) % MOD
+                b0, b1, b2 = r
+                a0 += a2
+                r[0] = a0 * b0 % MOD
+                r[1] = (a0 * b1 + a1 * b0) % MOD
+                r[2] = ((a0 + a1) * b2 + a1 * b1) % MOD
     R.appendleft(e)
-print(((pp(N) + sum(pp(N+1-c) * a1 % MOD for (a0, a1, a2), c in zip(Q[0], C[1:]))) % MOD))
-
+print(((pp(N) + sum(pp(N + 1 - c) * a1 % MOD for (a0, a1, a2), c in zip(Q[0], C[1:]))) % MOD))

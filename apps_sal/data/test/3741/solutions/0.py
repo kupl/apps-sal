@@ -54,4 +54,3 @@ def bfs(start):
 
 answer = min(list(map(bfs, list(range(n)))))
 print(answer if answer <= n else -1)
-

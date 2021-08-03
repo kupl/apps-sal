@@ -11,7 +11,7 @@ def main():
 
     ans = []
     for t in range(q):
-        c = {'L':0, 'R':0, 'U':0, 'D':0}
+        c = {'L': 0, 'R': 0, 'U': 0, 'D': 0}
         for i in range(n[t]):
             c[s[t][i]] += 1
         lr_min = min(c['L'], c['R'])
@@ -34,7 +34,9 @@ def main():
         print(len(ans[t]))
         print(ans[t])
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

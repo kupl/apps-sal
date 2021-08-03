@@ -2,7 +2,7 @@ class Solution:
     def maxFreq(self, s, maxLetters, minSize, maxSize):
         if minSize > len(s):
             return 0
-            
+
         words = {}
         for size in range(minSize, maxSize + 1):
             left = 0
@@ -15,9 +15,9 @@ class Solution:
                     words[word] += 1
                 left += 1
                 right += 1
-        
+
         maxOccurences = 0
         for word in words:
             maxOccurences = max(maxOccurences, words[word])
-        
+
         return maxOccurences

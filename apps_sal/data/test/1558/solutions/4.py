@@ -1,4 +1,4 @@
-n,r,avg = list(map(int, input().split()))
+n, r, avg = list(map(int, input().split()))
 score = []
 total = 0
 for i in range(n):
@@ -14,9 +14,4 @@ for b, a in score:
     if a < r:
         ans += b * min(r - a, need_point)
         need_point -= min(r - a, need_point)
-print(ans)    
-
-
-
-
-
+print(ans)

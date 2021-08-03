@@ -15,4 +15,3 @@ while ok - ng > 1:
     else:
         ng = m
 print(ok)
-

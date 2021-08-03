@@ -10,4 +10,3 @@ if n <= m:
     print(sum(a) - d * (m - n))
 else:
     print(sum(a[:m]))
-

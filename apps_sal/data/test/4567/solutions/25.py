@@ -12,4 +12,4 @@ else:
     if a == 0:
         print(0)
     else:
-        print(sum(score)-a)
+        print(sum(score) - a)

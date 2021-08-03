@@ -3,10 +3,12 @@ class Solution:
         from math import ceil
         left = 1
         right = max(piles) + 1
-        timeConsumption = lambda speed: sum(ceil(pile / speed) for pile in piles)
+        def timeConsumption(speed): return sum(ceil(pile / speed) for pile in piles)
         while left < right:
             mid = left + (right - left) // 2
             time = timeConsumption(mid)
-            if time > H: left = mid + 1
-            else: right = mid
+            if time > H:
+                left = mid + 1
+            else:
+                right = mid
         return left

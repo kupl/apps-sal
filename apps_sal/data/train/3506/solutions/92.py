@@ -1,4 +1,4 @@
 def vowel_indices(word):
-  vowel = "aeiouyAEIOUY"
+    vowel = "aeiouyAEIOUY"
 
-  return [x + 1 for x in range(len(word)) if word[x] in vowel]
+    return [x + 1 for x in range(len(word)) if word[x] in vowel]

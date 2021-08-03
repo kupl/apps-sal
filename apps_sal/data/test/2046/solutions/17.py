@@ -1,11 +1,13 @@
 import sys
 import heapq
 
+
 def debug(x, table):
     for name, val in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
+
 
 def solve():
     n = int(input())
@@ -21,6 +23,9 @@ def solve():
             nxt -= 1
         print(*tmp)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

@@ -4,9 +4,10 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution:     
+class Solution:
     def delNodes(self, root: TreeNode, to_delete: List[int]) -> List[TreeNode]:
-        if root is None: return
+        if root is None:
+            return
         tovisit = []
         result = []
         if root in to_delete:
@@ -19,7 +20,7 @@ class Solution:
         else:
             tovisit.append(root)
             result.append(root)
-            
+
         while len(tovisit) > 0:
             new_tovisit = []
             for item in tovisit:

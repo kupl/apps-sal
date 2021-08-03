@@ -5,7 +5,7 @@ class Solution:
         source, target = tuple(source), tuple(target)
         if source in block_set or target in block_set:
             return False
-        
+
         def findPath(source, target, block_set):
             from collections import deque
             queue = deque()
@@ -23,7 +23,7 @@ class Solution:
                             continue
                         pos = (x, y)
                         if pos == target:
-                            return True                    
+                            return True
                         elif pos in covered:
                             continue
                         elif pos in block_set:
@@ -32,16 +32,12 @@ class Solution:
                         else:
                             queue.append(pos)
                             covered.add(pos)
-                
+
                 if len(queue) + len(covered_block) > len(block_set):
                     return True
             return False
-        
+
         if not findPath(source, target, block_set):
             return False
-        
+
         return findPath(target, source, block_set)
-            
-
-
-

@@ -11,7 +11,7 @@ for i in range(0, n):
 v = abs(sum)
 ans = -1
 for i in range(0, n):
-    vv = sum - 2*(a[i] - b[i])
+    vv = sum - 2 * (a[i] - b[i])
     vv = abs(vv)
     if(vv > v):
         v = vv

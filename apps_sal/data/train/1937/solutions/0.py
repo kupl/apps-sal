@@ -4,14 +4,13 @@ class ThroneInheritance:
         self.graph = collections.defaultdict(list)
         self.deaths = set()
         self.root = kingName
-        
 
     def birth(self, parentName: str, childName: str) -> None:
         self.graph[parentName].append(childName)
 
     def death(self, name: str) -> None:
         self.deaths.add(name)
-        
+
     def inorder(self, root, res):
         if root not in self.deaths:
             res.append(root)
@@ -30,4 +29,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

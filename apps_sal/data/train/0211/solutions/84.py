@@ -1,15 +1,17 @@
 import itertools
+
+
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
         positions = []
-        for i in range(1,len(s)):
+        for i in range(1, len(s)):
             positions.append(i)
         if(len(s) < 3):
             if(s[0] != s[1]):
                 return 2
         maximally_split = 1
-        for i in range(1,len(s)):
-            separate_positions = list(itertools.combinations(positions,i))
+        for i in range(1, len(s)):
+            separate_positions = list(itertools.combinations(positions, i))
             for separate_position in separate_positions:
                 curr_position = 0
                 curr_idx = 0

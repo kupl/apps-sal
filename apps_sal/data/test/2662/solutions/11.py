@@ -9,12 +9,11 @@ for _ in range(n):
 
 
 li = deque([l[0]])
-for j in range(1,n):
+for j in range(1, n):
     ai = l[j]
-    ind = bisect_left(li , ai)
+    ind = bisect_left(li, ai)
     if ind == 0:
         li.appendleft(ai)
     else:
-        li[ind-1] = ai
+        li[ind - 1] = ai
 print((len(li)))
-

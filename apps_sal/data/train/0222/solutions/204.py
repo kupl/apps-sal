@@ -3,6 +3,7 @@ class Solution:
     '''dp[a, b] represents the length of fibo sequence ends up with (a, b)
 Then we have dp[a, b] = (dp[b - a, a] + 1) or 2
     '''
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         n = len(A)
         dp = collections.defaultdict(int)

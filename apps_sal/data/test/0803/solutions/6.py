@@ -4,12 +4,12 @@ sit = 0
 for i in str:
     if (i == 'x'):
         sit += 1
-minutes =  abs(n / 2 - sit)
+minutes = abs(n / 2 - sit)
 result = ''
 if (minutes == 0):
     result = str
 else:
-    if (sit >= n /2):
+    if (sit >= n / 2):
         s = 'X'
     else:
         s = 'x'
@@ -24,4 +24,3 @@ else:
 
 print("%d" % minutes)
 print(result)
-

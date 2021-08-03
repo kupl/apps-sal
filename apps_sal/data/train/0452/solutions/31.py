@@ -1,9 +1,12 @@
 import functools
+
+
 class Solution:
 
     def minDifficulty(self, A, d):
         n = len(A)
-        if n < d: return -1
+        if n < d:
+            return -1
 
         @functools.lru_cache(None)
         def dfs(i, d):
@@ -25,11 +28,11 @@ class Solution:
 #         \"\"\"
 #         self.n = len(A)
 #         self.A = A
-#         if self.n < d: 
+#         if self.n < d:
 #             return -1
-        
+
 #         return self.dfs(0, d)
-    
+
 #     @functools.lru_cache(None)
 #     def dfs(self, i, d):
 #         if d == 1:
@@ -39,5 +42,3 @@ class Solution:
 #             maxd = max(maxd, self.A[j])
 #             res = min(res, maxd + self.dfs(j + 1, d - 1))
 #         return res
-
-

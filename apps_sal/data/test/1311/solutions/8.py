@@ -18,4 +18,3 @@ for x, w in sorted_pairs[1:N]:
             stack[-1] = (x, w)
 
 print(len(stack))
-

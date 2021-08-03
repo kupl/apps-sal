@@ -19,8 +19,10 @@ def main():
             ans = True
             break
 
-    if ans: print("No War")
-    else: print("War")
+    if ans:
+        print("No War")
+    else:
+        print("War")
 
 
 main()

@@ -7,9 +7,9 @@
 class Solution:
     def __init__(self):
         self.max_diff = -1
-    
+
     def maxAncestorDiff(self, root: TreeNode) -> int:
-        
+
         def max_diff_calc(root):
             if not root:
                 return []
@@ -20,6 +20,6 @@ class Solution:
                     self.max_diff = abs(root.val - ans)
             ancestors.append(root.val)
             return ancestors
-        
+
         max_diff_calc(root)
         return self.max_diff

@@ -16,4 +16,3 @@ for c in a[1:]:
         print(1, end=' ')
     prev = c
 print(prev)
-

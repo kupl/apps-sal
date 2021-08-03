@@ -25,6 +25,8 @@ A, B = list(map(int, input().split()))
 #     if t % 2 != 0:
 #         B = B ^ 1
 # ans = a ^ B
+
+
 def calc(a):
     t = (a + 1) // 2
     ans = t % 2
@@ -32,5 +34,5 @@ def calc(a):
         ans = ans ^ a
     return ans
 
-print((calc(A-1) ^ calc(B)))
 
+print((calc(A - 1) ^ calc(B)))

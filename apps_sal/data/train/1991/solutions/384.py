@@ -8,9 +8,8 @@ class Solution:
             for j, r in list(dic[f].items()):
                 for i in range(len(locations)):
                     if j != i:
-                        meh = f - abs(locations[j]-locations[i])
+                        meh = f - abs(locations[j] - locations[i])
                         if meh >= 0:
                             dic[meh][i] = (dic[meh][i] + r) % mod
-            ans = (ans + dic[f-1][finish]) % mod
-        return ans + (start==finish)
-
+            ans = (ans + dic[f - 1][finish]) % mod
+        return ans + (start == finish)

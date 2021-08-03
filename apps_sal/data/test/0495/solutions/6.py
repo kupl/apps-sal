@@ -25,4 +25,3 @@ a, k = str.split(input())
 k = int(k)
 
 print(str.join("", yoba(list(a), k)))
-

@@ -8,4 +8,4 @@ for i in range(n):
 if(cnt <= 2):
     print("YES")
 else:
-    print("NO")        
+    print("NO")

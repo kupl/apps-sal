@@ -1,4 +1,4 @@
-def is_even(n): 
+def is_even(n):
     if type(n) == float:
         return False
     if n % 2 == 0:

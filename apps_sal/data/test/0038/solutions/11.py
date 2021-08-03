@@ -16,4 +16,3 @@ for i in range(n):
     aa.pop(0)
 else:
     print("NO")
-

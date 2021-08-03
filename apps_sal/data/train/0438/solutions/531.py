@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def findLatestStep(self, placed, target):
         N = len(placed)
@@ -14,12 +16,13 @@ class Solution:
                 if 0 <= y < N and A[y]:
                     sizes[dsu.size(y)] -= 1
                     dsu.union(x, y)
-            
+
             sizes[dsu.size(x)] += 1
             if sizes[target] > 0:
                 ans = i
-        
+
         return ans
+
 
 class DSU:
     def __init__(self, N):

@@ -8,5 +8,4 @@ for i in range(n):
         bs.append(i + 1)
 bs.append(n + 1)
 
-print(sum(bs[i] - bs[i-1] - c for i in range(1, len(bs)) if bs[i] - bs[i-1] > c))
-
+print(sum(bs[i] - bs[i - 1] - c for i in range(1, len(bs)) if bs[i] - bs[i - 1] > c))

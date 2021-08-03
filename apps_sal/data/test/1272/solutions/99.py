@@ -1,4 +1,4 @@
-#AC
+# AC
 
 class UnionFind():
     def __init__(self, n):
@@ -47,37 +47,35 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 def culc(x):
-    return x*(x-1)//2
+    return x * (x - 1) // 2
 
-n,m=list(map(int,input().split()))
-edge=[]
+
+n, m = list(map(int, input().split()))
+edge = []
 for i in range(m):
-    a,b=list(map(int,input().split()))
-    a-=1
-    b-=1
-    edge.append((a,b))
+    a, b = list(map(int, input().split()))
+    a -= 1
+    b -= 1
+    edge.append((a, b))
 
 
-ans=[culc(n)]
+ans = [culc(n)]
 
-uf=UnionFind(n)
+uf = UnionFind(n)
 for i in range(m):
-    a,b=edge[m-i-1]
-    if uf.same(a,b):
+    a, b = edge[m - i - 1]
+    if uf.same(a, b):
         ans.append(ans[-1])
     else:
-        member_a=uf.size(a)
-        member_b=uf.size(b)
-        uf.union(a,b)
-        #不便さの減少幅(>=0)
-        add=culc(uf.size(a))-culc(member_a)-culc(member_b)
-        ans.append(ans[-1]-add)
+        member_a = uf.size(a)
+        member_b = uf.size(b)
+        uf.union(a, b)
+        # 不便さの減少幅(>=0)
+        add = culc(uf.size(a)) - culc(member_a) - culc(member_b)
+        ans.append(ans[-1] - add)
 
 
 for i in range(m):
-    print((ans[m-i-1]))
-
-
-
-
+    print((ans[m - i - 1]))

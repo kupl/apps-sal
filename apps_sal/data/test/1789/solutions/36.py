@@ -1,8 +1,8 @@
 a, b, x, y = map(int, input().split())
 
 if a < b:
-  print(x + min(2 * x, y) * (b - a))
+    print(x + min(2 * x, y) * (b - a))
 elif a == b:
-  print(x)
+    print(x)
 else:
-  print(x + min(2 * x, y) * (a - b - 1))
+    print(x + min(2 * x, y) * (a - b - 1))

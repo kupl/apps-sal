@@ -1,7 +1,7 @@
 for ahfiuyh in range(int(input())):
-    n, x = list(map(int,input().split()))
-    a = list(map(int,input().split()))
-    a.sort(reverse = True)
+    n, x = list(map(int, input().split()))
+    a = list(map(int, input().split()))
+    a.sort(reverse=True)
     s = 0
     cc = 0
     f = True
@@ -10,9 +10,7 @@ for ahfiuyh in range(int(input())):
         s += a[i]
         if s // cc < x:
             print(i)
-            f= False
+            f = False
             break
-    if f:print(n)
-    
-        
-
+    if f:
+        print(n)

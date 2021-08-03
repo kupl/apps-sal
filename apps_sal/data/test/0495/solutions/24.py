@@ -11,4 +11,3 @@ while len(inp) != 0:
     inp.pop(pos)
 
 print(''.join(ans))
-

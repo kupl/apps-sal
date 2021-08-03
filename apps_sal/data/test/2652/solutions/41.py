@@ -5,6 +5,7 @@ input = sys.stdin.readline
 f_inf = float('inf')
 mod = 10 ** 9 + 7
 
+
 class UnionFind:
     def __init__(self, n):
         self.n = n
@@ -82,5 +83,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

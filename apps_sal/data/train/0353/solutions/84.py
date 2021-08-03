@@ -1,9 +1,10 @@
 from typing import List
 
+
 class Solution:
-    def numSubseq(self, nums: List[int], target: int) -> int: 
+    def numSubseq(self, nums: List[int], target: int) -> int:
         res = 0
-        end = len(nums)-1
+        end = len(nums) - 1
         nums.sort()
         for start in range(len(nums)):
             while nums[start] + nums[end] > target:

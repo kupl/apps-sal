@@ -12,7 +12,7 @@ if sum > 2 * c:
         pass
     else:
         total = 2 * min(x, y) * c
-        num = (max(x, y)-min(x, y))
+        num = (max(x, y) - min(x, y))
         if cost * num < 2 * num * c:
             total += cost * num
         else:
@@ -24,7 +24,7 @@ elif sum == 2 * c:
         pass
     else:
         total = min(x, y) * 2 * c
-        num = (max(x, y)-min(x, y))
+        num = (max(x, y) - min(x, y))
         if cost * num < 2 * c * num:
             total += cost * num
         else:
@@ -33,4 +33,3 @@ else:
     total = a * x + b * y
 
 print(total)
-

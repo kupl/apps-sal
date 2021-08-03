@@ -1,1 +1,1 @@
-say_hello = lambda name: "Hello, %s" % name
+def say_hello(name): return "Hello, %s" % name

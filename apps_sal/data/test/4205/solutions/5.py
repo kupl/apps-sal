@@ -1,5 +1,5 @@
 N = int(input())
-p = list(map(int,input().split()))
+p = list(map(int, input().split()))
 
 if p == sorted(p):
     print('YES')
@@ -7,8 +7,8 @@ else:
     ret = 'NO'
     is_sorted = False
     # 全通りの組み合わせをみて、昇順かどうか調べる
-    for i in range(N-1):
-        for j in range(i+1, N):
+    for i in range(N - 1):
+        for j in range(i + 1, N):
             # p[i]とp[j]より小さければ抜ける
             if p[i] < p[j]:
                 continue

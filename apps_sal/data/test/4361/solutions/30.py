@@ -26,4 +26,5 @@ def __starting_point():
     # h = [randint(1, 10 ** 9) for _ in range(N)]
     # solve(N, K, h)
 
+
 __starting_point()

@@ -35,11 +35,12 @@ def main():
     for i in range(n):
         if arr[i] != x:
             index = i
-    print(index+1)
+    print(index + 1)
     # print(n-index)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

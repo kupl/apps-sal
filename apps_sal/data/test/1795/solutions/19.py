@@ -4,6 +4,8 @@ def func(v):
         if v[v[v[i]]] == i:
             return True
     return False
+
+
 def __starting_point():
     n = int(input())
     v = list(map(int, input().split()))
@@ -13,4 +15,6 @@ def __starting_point():
         print("YES")
     else:
         print("NO")
+
+
 __starting_point()

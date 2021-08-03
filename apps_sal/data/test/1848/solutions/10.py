@@ -28,4 +28,5 @@ def __starting_point():
     A = read_input()
     print(solution(A))
 
+
 __starting_point()

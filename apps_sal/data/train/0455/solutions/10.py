@@ -1,11 +1,13 @@
 import queue
+
+
 class Solution:
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
         color_bounds = {}
         for i, row in enumerate(targetGrid):
             for j, color in enumerate(row):
                 if not color in color_bounds:
-                    color_bounds[color] = {'row': [1e6,-1e6], 'col': [1e6,-1e6]}
+                    color_bounds[color] = {'row': [1e6, -1e6], 'col': [1e6, -1e6]}
                 color_bounds[color]['row'][0] = min(color_bounds[color]['row'][0], i)
                 color_bounds[color]['row'][1] = max(color_bounds[color]['row'][1], i)
                 color_bounds[color]['col'][0] = min(color_bounds[color]['col'][0], j)
@@ -34,5 +36,3 @@ class Solution:
                 if degree[next_color] == 0:
                     q.put(next_color)
         return processed_nodes == len(color_bounds)
-            
-

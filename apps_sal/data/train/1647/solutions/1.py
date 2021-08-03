@@ -16,4 +16,3 @@ def next_bigger(n):
             return int(''.join(digits))
 
     return -1
-

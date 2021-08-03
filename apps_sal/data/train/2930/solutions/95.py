@@ -3,10 +3,7 @@ def summation(num: int) -> int:
     resultado = i
 
     while i <= num:
-        resultado +=i
+        resultado += i
         i += 1
-    
+
     return resultado
-
-    
-

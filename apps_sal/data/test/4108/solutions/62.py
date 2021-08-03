@@ -8,7 +8,7 @@ n = len(s)
 for i in range(n):
     si = ord(s[i]) - ord("a")
     ti = ord(t[i]) - ord("a")
-    
+
     s_map[si].append(i)
     t_map[ti].append(i)
 
@@ -21,4 +21,3 @@ else:
     print("No")
 # print(s_map)
 # print(t_map)
-

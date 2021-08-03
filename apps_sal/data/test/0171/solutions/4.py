@@ -7,7 +7,7 @@ for i in range(len(S)):
     k = ord(S[i])
     if k >= 48 and k <= 57:
         ns += 1
-    elif k >=65 and k <= 90:
+    elif k >= 65 and k <= 90:
         Ans += 1
     elif k >= 97 and k <= 122:
         ans += 1

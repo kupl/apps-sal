@@ -1,5 +1,6 @@
 import heapq
 
+
 def main():
     N, M = list(map(int, input().split()))
     G = [[] for _ in range(N)]
@@ -29,5 +30,5 @@ def main():
                     heapq.heappush(H, (c + cc, b, d))
     return M - len(used)
 
-print((main()))
 
+print((main()))

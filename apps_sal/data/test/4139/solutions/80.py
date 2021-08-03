@@ -11,14 +11,15 @@ Created on Wed Sep 30 22:08:28 2020
 @author: liang
 """
 
+
 class Solve():
-    
+
     def __init__(self):
         self.N = int(input())
         self.key = len(str(self.N))
     ans = 0
     tmp = list()
-    
+
     def solve(self):
         if self.tmp:
             s = "".join(self.tmp)
@@ -39,17 +40,18 @@ class Solve():
         self.tmp.append("3")
         self.solve()
         self.tmp.pop()
-        
+
         self.tmp.append("5")
         self.solve()
         self.tmp.pop()
-        
+
         self.tmp.append("7")
         self.solve()
         self.tmp.pop()
-        
+
     def print_ans(self):
         print(self.ans)
+
 
 s = Solve()
 s.solve()

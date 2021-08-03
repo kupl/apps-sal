@@ -40,4 +40,3 @@ casos = input()
 for i in range(int(casos)):
     numero = input()
     print(bases(numero))
-

@@ -1,6 +1,6 @@
 n = int(input())
-a = list(map(int,input().split()))
-b = list(map(int,input().split()))
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
 b = b[::-1]
 
 l = []
@@ -13,7 +13,7 @@ for i in range(n):
 ind = 0
 for i in range(n):
     if b[i] != num and a[i] != num and ind < len(l):
-        b[i],b[l[ind]] = b[l[ind]],b[i]
+        b[i], b[l[ind]] = b[l[ind]], b[i]
         ind += 1
 if ind < len(l):
     print("No")

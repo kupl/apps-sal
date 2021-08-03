@@ -11,6 +11,7 @@ a = [int(ch) for ch in s.split()]
 a = a[0:n]
 a.sort()
 
+
 def check_num(p, i):
 
     # i = ap + b(p+1)
@@ -27,8 +28,9 @@ def check_num(p, i):
         return None
     return cur
 
+
 def sets_num(p):
-    
+
     total = 0
     for i in a:
         if check_num(p, i):
@@ -36,6 +38,7 @@ def sets_num(p):
         else:
             return None
     return total
+
 
 for div_sets in range(1, a[0] + 1):
     p, q = divmod(a[0], div_sets)

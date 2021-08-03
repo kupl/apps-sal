@@ -10,16 +10,19 @@ def deli(n):
     if n != 1:
         return -1, -1
     else:
-        return n2,n3
+        return n2, n3
+
+
 def solve():
     n = int(input())
-    a,b = deli(n)
+    a, b = deli(n)
     if a == -1:
         print(-1)
     elif b < a:
         print(-1)
     else:
         print(b + b - a)
+
 
 for i in range(int(input())):
     solve()

@@ -1,10 +1,11 @@
 from collections import defaultdict
 
+
 class Solution:
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
         if len(A) < len(B):
             A, B = B, A
-        
+
         dp = [[0] * (len(B) + 1) for _ in range(len(A) + 1)]
         vals_A = defaultdict(list)
         for i in range(len(A)):
@@ -20,7 +21,7 @@ class Solution:
                     dp[i + 1][j + 1] = max(dp[i + 1][j + 1], dp[i][pos] + 1)
 
                 vals_B[B[j]] += [j]
-            
+
             vals_A[A[i]] += [i]
-            
+
         return dp[len(A)][len(B)]

@@ -2,13 +2,13 @@ class UF:
     def __init__(self, n):
         self.par = list(range(n))
         self.size = [1] * n
-        
+
     def find(self, x):
         if self.par[x] != x:
             self.par[x] = self.find(self.par[x])
         return self.par[x]
-    
-    def union(self, x , y):
+
+    def union(self, x, y):
         rx, ry = self.find(x), self.find(y)
         if rx == ry:
             return False
@@ -18,7 +18,7 @@ class UF:
         self.size[rx] += self.size[ry]
         self.size[ry] = self.size[rx]
         return True
-    
+
     def sizee(self, x):
         return self.size[self.find(x)]
 
@@ -28,7 +28,7 @@ class Solution:
         for i in range(len(edges)):
             edges[i][1] -= 1
             edges[i][2] -= 1
-            
+
         alice = []
         bob = []
         both = []
@@ -39,7 +39,7 @@ class Solution:
                 bob.append([u, v])
             else:
                 both.append([u, v])
-                
+
         uf1 = UF(N)
         uf2 = UF(N)
         res = 0
@@ -50,7 +50,7 @@ class Solution:
             res += not uf1.union(u, v)
         for u, v in bob:
             res += not uf2.union(u, v)
-            
+
         if uf1.sizee(0) != N or uf2.sizee(0) != N:
             return -1
         return res

@@ -31,4 +31,3 @@ for i in range(Q):
     l, r = list(map(int, input().split()))
     ans = cumsum[r] - cumsum[l - 1]
     print(ans)
-

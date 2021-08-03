@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-from sys import stdin,stdout
+from sys import stdin, stdout
 
 
 def ri():
     return list(map(int, input().split()))
+
 
 n, l, r = ri()
 a = list(ri())
@@ -16,9 +17,9 @@ b = [0 for i in range(n)]
 i = pi[0]
 b[i] = l
 cp = b[i] - a[i]
-for ii in range(1,n):
+for ii in range(1, n):
     i = pi[ii]
-    if a[i] + cp + 1 >=l:
+    if a[i] + cp + 1 >= l:
         b[i] = a[i] + cp + 1
     else:
         b[i] = l
@@ -29,5 +30,3 @@ for ii in range(1,n):
         return
 
 print(*b)
-
-

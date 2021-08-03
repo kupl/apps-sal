@@ -9,7 +9,7 @@ class Solution:
                     return 0
                 else:
                     return float('inf')
-                
+
             cost = float('inf')
             if houses[i] == 0:
                 for index, c in enumerate(Cost[i]):
@@ -19,7 +19,7 @@ class Solution:
                         if index + 1 == k:
                             cost = min(cost, dfs(i + 1, j, index + 1) + c)
                         else:
-                            cost = min(cost, dfs(i + 1, j + 1, index + 1) + c)     
+                            cost = min(cost, dfs(i + 1, j + 1, index + 1) + c)
                     houses[i] = 0
             else:
                 if i == 0:
@@ -30,8 +30,6 @@ class Solution:
                     else:
                         cost = dfs(i + 1, j + 1, houses[i])
             return cost
-        
+
         ans = dfs(0, 0, 0)
         return ans if ans != float('inf') else -1
-    
-

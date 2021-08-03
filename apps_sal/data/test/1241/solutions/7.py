@@ -33,5 +33,5 @@ def main():
         print(0)
         print(" ".join(map(str, a)))
 
-main()
 
+main()

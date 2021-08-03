@@ -1,6 +1,7 @@
 3
 # -*- coding: utf8 -*-
 
+
 def main():
     s = input()
     c = 'CODEFORCES'
@@ -10,7 +11,9 @@ def main():
             return
     print('NO')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

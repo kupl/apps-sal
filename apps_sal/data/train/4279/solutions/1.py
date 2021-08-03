@@ -1,5 +1,6 @@
 from itertools import groupby
 
+
 def group_in_10s(*args):
     if not args:
         return []

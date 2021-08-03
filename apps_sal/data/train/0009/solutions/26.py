@@ -5,7 +5,7 @@ from string import ascii_letters
 input = stdin.readline
 #print = stdout.write
 letters = ascii_letters[:26]
- 
+
 for _ in range(int(input())):
     arr = list(map(int, input().strip()))
     lens = []
@@ -24,4 +24,3 @@ for _ in range(int(input())):
     for i in range(0, len(lens), 2):
         res += lens[i]
     print(res)
-

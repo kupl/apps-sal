@@ -1,3 +1,1 @@
-get_average = lambda marks: sum(marks)//len(marks)
-    
-
+def get_average(marks): return sum(marks) // len(marks)

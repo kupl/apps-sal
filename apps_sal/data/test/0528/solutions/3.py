@@ -33,7 +33,7 @@ def main():
     n = next(it)
     m = next(it)
 
-    adjList = [[] for _ in range(n+3)]
+    adjList = [[] for _ in range(n + 3)]
 
     for _ in range(m):
         u = next(it)
@@ -41,9 +41,9 @@ def main():
         adjList[u].append(v)
         adjList[v].append(u)
 
-    vis = [False] * (n+3)
+    vis = [False] * (n + 3)
 
-    for u in range(1, n+1):
+    for u in range(1, n + 1):
         if not vis[u]:
             if not bfs(u, adjList, vis):
                 sys.stdout.write("NO\n")
@@ -54,5 +54,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

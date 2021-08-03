@@ -3,10 +3,10 @@ class Solution:
         counter = 0
         left = defaultdict(int)
         right = defaultdict(int)
-        
+
         for c in s:
             right[c] += 1     # pre-populate\\
-        
+
         for i in range(len(s)):
             left[s[i]] += 1
             right[s[i]] -= 1

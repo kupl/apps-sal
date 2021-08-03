@@ -11,12 +11,14 @@
 
 K = int(input())
 
+
 def make_snk(num):
     s = str(num)
     sm = 0
     for c in s:
         sm += int(c)
     return num / sm
+
 
 snk_list = []
 mn = float('inf')
@@ -40,4 +42,3 @@ for i in range(9999, 0, -1):
 snk_list.reverse()
 for i in range(K):
     print((snk_list[i]))
-

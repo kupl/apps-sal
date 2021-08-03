@@ -1,10 +1,12 @@
 from itertools import permutations as perms
-read = lambda: tuple(map(int, input().split()))
+def read(): return tuple(map(int, input().split()))
+
+
 n = read()[0]
 cbs = []
 for i in range(n):
     cbs += [read()]
-    
+
 for i in range(1, 10000):
     ds = str(i)
     ch = False
@@ -21,5 +23,3 @@ for i in range(1, 10000):
     if not ch:
         print(i - 1)
         break
-    
-

@@ -14,8 +14,3 @@ for i in range(n):
         break
 else:
     print('NO')
-
-
-
-
-

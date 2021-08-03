@@ -6,4 +6,3 @@ if mod <= A:
     print("Yes")
 else:
     print("No")
-

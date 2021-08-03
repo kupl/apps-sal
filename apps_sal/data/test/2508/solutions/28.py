@@ -13,7 +13,7 @@ def bfs(maze, visited, sy, sx, gy, gx):
             for k in range(1, K + 1):
                 new_x = x + dx * k
                 new_y = y + dy * k
-                
+
                 if (0 <= new_y < H) and (0 <= new_x < W):
                     if maze[new_y][new_x] == "@":
                         break

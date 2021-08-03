@@ -30,5 +30,3 @@ for i in range(len(ans)):
         return
 print("Possible")
 print(" ".join(map(str, ans)))
-
-

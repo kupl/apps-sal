@@ -14,4 +14,3 @@ for i in range(0, len(s)):
 
 wds = set(s)
 print(len(wds))
-

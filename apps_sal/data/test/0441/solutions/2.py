@@ -25,5 +25,5 @@ def main():
 
     print(t - a - b)
 
-main()
 
+main()

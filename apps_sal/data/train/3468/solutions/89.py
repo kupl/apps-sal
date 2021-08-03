@@ -1,4 +1,4 @@
-def scramble(str1,str2):
+def scramble(str1, str2):
     if len(str1) < len(str2):
         return False
     str1 = "".join(sorted(str1))

@@ -1,5 +1,6 @@
 class Trie(dict):
     word = False
+
     def add(self, word):
         t = self
         for c in word:
@@ -7,7 +8,7 @@ class Trie(dict):
                 t[c] = Trie()
             t = t[c]
         t.word = True
-        
+
 
 class StreamChecker:
     def __init__(self, words: List[str]):
@@ -26,4 +27,3 @@ class StreamChecker:
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

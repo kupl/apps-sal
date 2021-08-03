@@ -1,5 +1,10 @@
 # region header
-import sys, bisect, math, itertools, heapq, collections
+import sys
+import bisect
+import math
+import itertools
+import heapq
+import collections
 from operator import itemgetter
 # a.sort(key=itemgetter(i)) # i番目要素でsort
 from functools import lru_cache
@@ -54,4 +59,3 @@ while l + 1 < r:
     else:
         l = x
 print(r)
-

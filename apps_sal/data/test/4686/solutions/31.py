@@ -9,11 +9,14 @@ def answer(w: str) -> str:
 
     return 'Yes'
 
+
 def main():
     w = input()
     print((answer(w)))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

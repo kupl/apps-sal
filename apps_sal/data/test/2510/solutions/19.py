@@ -2,7 +2,7 @@ class UnionFind():
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
-        self.size=[1]*n
+        self.size = [1] * n
 
     def find(self, x):
         if self.parents[x] < 0:
@@ -20,8 +20,8 @@ class UnionFind():
 
         if self.parents[x] > self.parents[y]:
             x, y = y, x
-        self.size[x]+=self.size[y]
-        self.size[y]=self.size[x]
+        self.size[x] += self.size[y]
+        self.size[y] = self.size[x]
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -47,9 +47,10 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m=map(int,input().split())
+
+n, m = map(int, input().split())
 uf = UnionFind(n)
 for i in range(m):
-    a,b=map(int,input().split())
-    uf.union(a-1,b-1)
+    a, b = map(int, input().split())
+    uf.union(a - 1, b - 1)
 print(max(uf.size))

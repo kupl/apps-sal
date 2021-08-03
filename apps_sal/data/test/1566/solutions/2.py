@@ -2,10 +2,11 @@ def main():
     size = int(input())
     sq = [[int(c) for c in input().strip()] for _ in range(size)]
     print('Yes' if haslair(sq) else 'No')
-        
+
+
 def haslair(sq):
     corners = [(r, c) for r, row in enumerate(sq) for c, count in enumerate(row)
-                if count==1]
+               if count == 1]
     if len(corners) != 4:
         return False
     left, right, top, bottom = corners[0][1], corners[3][1], corners[0][0], corners[3][0]
@@ -18,5 +19,6 @@ def haslair(sq):
             if count != (0, 0, 1, 0, 2, None, 4)[score]:
                 return False
     return True
+
 
 main()

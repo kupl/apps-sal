@@ -9,9 +9,6 @@ def main():
     return "YES"
 
 
-
-
-
 tests = int(input())
 for _ in range(tests):
     print(main())

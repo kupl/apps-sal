@@ -20,4 +20,3 @@ for i in range(n):
         ans.pop()
         ans.append(n - sum(ans))
 print(*ans)
-

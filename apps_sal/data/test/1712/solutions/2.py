@@ -4,7 +4,7 @@ from sys import stdin
 def main():
     n, x, y = list(map(int, stdin.readline().strip().split()))
     xy = x + y
-    for health in map(int,(stdin.readline().strip()for _ in range(n))):
+    for health in map(int, (stdin.readline().strip()for _ in range(n))):
         health %= xy
         hitsx = health * x // xy
         hitsy = health * y // xy
@@ -26,4 +26,3 @@ def main():
 
 
 main()
-

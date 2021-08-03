@@ -9,7 +9,7 @@ Considering that delivery(i) is always after of pickup(i), we need to divide 2.
 So it's (n * 2 - 1) * n.
 
         '''
-        res=1
-        for i in range(2,n+1):
-            res=res*i*(2*i-1)
-        return res%(10**9+7)
+        res = 1
+        for i in range(2, n + 1):
+            res = res * i * (2 * i - 1)
+        return res % (10**9 + 7)

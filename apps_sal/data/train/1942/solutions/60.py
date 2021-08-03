@@ -2,7 +2,7 @@ class Solution:
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         res = []
         subsets = [[set(companies), i]
-                            for i, companies in enumerate(favoriteCompanies)]
+                   for i, companies in enumerate(favoriteCompanies)]
         for i, companies in enumerate(subsets):
             companies, res_i = companies
             for j, companies2 in enumerate(subsets):

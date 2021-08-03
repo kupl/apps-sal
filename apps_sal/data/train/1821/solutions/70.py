@@ -3,7 +3,7 @@ class Solution:
         if len(nums) <= 1:
             return nums
         else:
-            pivot = nums[int(len(nums)/2)]
+            pivot = nums[int(len(nums) / 2)]
             L = []
             M = []
             R = []

@@ -1,10 +1,13 @@
 from functools import cmp_to_key
+
+
 def mycmp(a, b):
     if a == b:
         return 0
     if a in b:
         return -1
     return 1
+
 
 def main():
     n = int(input())
@@ -21,5 +24,6 @@ def main():
     print('YES')
     for x in a:
         print(x)
-main()
 
+
+main()

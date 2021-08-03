@@ -1,7 +1,7 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], b_cost: int, r_cost: int) -> int:
         A = customers
-        #cc, 3 0, four 0s. 累积的wating！=0，但是cur=0
+        # cc, 3 0, four 0s. 累积的wating！=0，但是cur=0
         profit = 0
         times = 0
         cotinues_0 = 0
@@ -35,22 +35,22 @@ class Solution:
             if max_profit < profit:
                 best_times = times
                 max_profit = profit
-                    
+
         # print(max_profit, times, pass_customer, waiting)
-        
+
         remain = waiting // 4
         profit += 4 * b_cost - r_cost
         times += remain
         if waiting % 4 != 0:
             # print(\"final cost=\" + str((waiting% 4) * b_cost - r_cost))
-            if (waiting% 4) * b_cost - r_cost > 0:
+            if (waiting % 4) * b_cost - r_cost > 0:
                 # print(\"add 1\")
                 times += 1
-                profit += (waiting% 4) * b_cost - r_cost
+                profit += (waiting % 4) * b_cost - r_cost
         if max_profit < profit:
-                out.insert(0,(max_profit, times))
-                best_times = times
-                max_profit = profit
+            out.insert(0, (max_profit, times))
+            best_times = times
+            max_profit = profit
         # print(out)
         # print(sum(A), len(A), \"remain=\"+str(remain))
         return best_times if max_profit > 0 else -1

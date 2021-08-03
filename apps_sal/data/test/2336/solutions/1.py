@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from sys import stdin, stdout
 
+
 def rint():
     return list(map(int, stdin.readline().split()))
 #lines = stdin.readlines()
@@ -16,19 +17,16 @@ for i in range(n):
     l[ll] += 1
 
 f = [0 for i in range(200001)]
-for i in range(1,200001):
-    f[i] = f[i-1] + l[i] - r[i-1]
+for i in range(1, 200001):
+    f[i] = f[i - 1] + l[i] - r[i - 1]
 
 ss = [0 for i in range(200002)]
 for i in range(200000, 0, -1):
     if f[i] >= k:
-        ss[i] = ss[i+1] + 1
+        ss[i] = ss[i + 1] + 1
     else:
-        ss[i] = ss[i+1]
+        ss[i] = ss[i + 1]
 
 for i in range(q):
     ll, rr = rint()
-    print( ss[ll] - ss[rr+1])
-
-
-
+    print(ss[ll] - ss[rr + 1])

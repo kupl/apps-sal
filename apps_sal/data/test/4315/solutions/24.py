@@ -1,2 +1,2 @@
 import math
-print(int(input())*math.tau)
+print(int(input()) * math.tau)

@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class DenseSubsequence():
     def __init__(self, m, s):
         self.m = m
@@ -16,7 +17,7 @@ class DenseSubsequence():
             elif self.s[i] == ch:
                 lch = i
 
-            if i-lv == self.m:
+            if i - lv == self.m:
                 if lch > lv:
                     seq.append(lch)
                     lv = lch
@@ -34,21 +35,22 @@ class DenseSubsequence():
         for i in range(len(self.s)):
             char_map[self.s[i]].append(i)
 
-        mask = [0]*len(self.s)
+        mask = [0] * len(self.s)
 
         res = ''
 
         for ch in self.chars:
             is_possible, seq = self.get_min_sequence(ch, mask)
             if is_possible:
-                res = res+''.join([ch]*len(seq))
+                res = res + ''.join([ch] * len(seq))
                 break
             else:
-                res = res+''.join([ch]*len(char_map[ch]))
+                res = res + ''.join([ch] * len(char_map[ch]))
                 for v in char_map[ch]:
                     mask[v] = 1
         print(res)
 
+
 m = int(input())
 s = input().strip(' ')
-DenseSubsequence(m,s).get_sequence()
+DenseSubsequence(m, s).get_sequence()

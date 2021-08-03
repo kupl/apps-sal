@@ -20,4 +20,4 @@ while True:
 D = list(D)
 D.sort()
 
-print(D[k-1])
+print(D[k - 1])

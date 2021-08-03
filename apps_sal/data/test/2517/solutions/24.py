@@ -39,4 +39,3 @@ for p in itertools.permutations(list(range(R))):
     ans = min(ans, sum([RE[p[i]][p[i + 1]] for i in range(R - 1)]))
 
 print(ans)
-

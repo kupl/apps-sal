@@ -12,6 +12,7 @@ class Solution:
         for c in result:
             mapper[c] = -1
         used = [0] * 10
+
         def solve(i, j, s):
             if j == n or i == len(result) + 1:
                 l = len(result) - i

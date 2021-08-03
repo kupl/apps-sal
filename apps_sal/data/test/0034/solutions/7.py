@@ -6,4 +6,3 @@ for k in range(1, n):
     snd = n - k
     best = max(best, min(a // fst, b // snd))
 print(best)
-

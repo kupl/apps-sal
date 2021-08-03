@@ -18,11 +18,11 @@ class Solution:
                     i = j
                 i += 1
             return res
-        
+
         prev = S
         cur = remove(S)
         while cur != prev:
             prev = cur
             cur = remove(prev)
-        
+
         return cur

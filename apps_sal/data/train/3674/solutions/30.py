@@ -1,1 +1,1 @@
-add_binary = lambda a,b: format(a+b, 'b')
+def add_binary(a, b): return format(a + b, 'b')

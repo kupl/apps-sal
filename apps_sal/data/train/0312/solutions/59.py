@@ -52,9 +52,6 @@
 # B[i] can help us make the subarray length shorter and sum bigger. So no need to keep d.back() in our deque.
 
 
-
-
-
 class Solution:
     def shortestSubarray(self, A, K):
         d = collections.deque([[0, 0]])
@@ -67,6 +64,3 @@ class Solution:
                 d.pop()
             d.append([i + 1, cur])
         return res if res < float('inf') else -1
-
-                
-

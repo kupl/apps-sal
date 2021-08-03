@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().strip()
+def input(): return sys.stdin.readline().strip()
+
+
 n, m = [int(x) for x in input().split()]
 can = [True for i in range(n + 1)]
 for i in range(m):

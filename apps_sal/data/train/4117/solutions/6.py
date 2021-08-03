@@ -7,5 +7,5 @@ def sum_from_string(string):
         else:
             if have_nr:
                 all_nr.append(int(str_nr))
-                have_nr , str_nr = False, ''
+                have_nr, str_nr = False, ''
     return sum(all_nr)

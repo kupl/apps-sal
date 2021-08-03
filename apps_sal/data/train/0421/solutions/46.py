@@ -1,20 +1,20 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
         # Create a suffix array, and sort it to fetch the biggest one
-#         suffix_array = []
-        
-#         for idx in range(len(s)):
-#             suffix_array.append(s[idx:])
-        
-#         suffix_array.sort()
-        
-#         return suffix_array[-1]
+        #         suffix_array = []
+
+        #         for idx in range(len(s)):
+        #             suffix_array.append(s[idx:])
+
+        #         suffix_array.sort()
+
+        #         return suffix_array[-1]
         # O(n^2)
-    
+
         n = len(s)
         starts = list(range(n))
         offset = 0
-        
+
         while len(starts) > 1:
             max_end = max(s[start + offset] for start in starts if start + offset < n)
             new_starts = []
@@ -29,5 +29,4 @@ class Solution:
                     new_starts.append(start)
             offset += 1
             starts = new_starts
-        return s[starts[0]:]         
-
+        return s[starts[0]:]

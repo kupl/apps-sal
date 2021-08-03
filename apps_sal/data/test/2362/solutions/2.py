@@ -19,7 +19,6 @@ def get_primes(n):
     return list(result)
 
 
-
 def calc(w, t, n):
     stack = []
     stack.append((t[0], dict([(p, [0]) for p in get_primes(w[0])])))
@@ -64,5 +63,6 @@ def __starting_point():
         tree[y - 1].append(x - 1)
 
     print(calc(weights, tree, n))
+
 
 __starting_point()

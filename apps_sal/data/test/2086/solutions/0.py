@@ -12,12 +12,11 @@ for i in range(n - 1):
         ans = mx
         k = s + (n - (i + 2) + 1)
         if k > n:
-            k -= n  
+            k -= n
         h = k
     elif ans == mx:
         k = s + (n - (i + 2) + 1)
         if k > n:
-            k -= n    
+            k -= n
         h = min(h, k)
 print(h)
-

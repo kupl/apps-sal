@@ -27,4 +27,3 @@ while len(q) != 0:
         break
 else:
     print((0))
-

@@ -13,4 +13,3 @@ for i in range(n):
                 if l[i] + l[j] > l[k]:
                     ans += 1
 print(ans)
-

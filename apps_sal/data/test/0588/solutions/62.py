@@ -22,5 +22,5 @@ def solve():
                 ans = max(ans, hypot(sx - tx, sy - ty))
     print(ans)
 
-solve()
 
+solve()

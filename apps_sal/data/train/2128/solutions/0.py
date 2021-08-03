@@ -12,4 +12,3 @@ for i in a:
         s += 1
 
 print(res)
-

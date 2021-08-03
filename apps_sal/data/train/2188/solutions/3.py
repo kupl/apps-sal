@@ -1,21 +1,19 @@
 
 
+from collections import defaultdict
+
+
 def convert(strVal):
-    
+
     ls = list()
     for c in strVal:
-        if (ord(c)&1):
+        if (ord(c) & 1):
             ls.append('1')
         else:
             ls.append('0')
-    
-    
+
     a = ''.join(ls)
-    
-    
-    
-    
-    
+
     '''strLength = len(strVal)
     a='0'*strLength
     
@@ -40,54 +38,49 @@ def convert(strVal):
             a = a[:i]+divByTwo+a[i+1:]
         
         i-=1'''
-        #aLength-=1
-    
+    # aLength-=1
+
     return int(a)
 
-from collections import defaultdict
-inputList=defaultdict(int)
+
+inputList = defaultdict(int)
 
 inputNum = int(input())
 
 #print (inputNum)
 
-#iterate n times and do changes in each iteration
-for  x in range(0,inputNum):
-    inputStr=input()
-    
+# iterate n times and do changes in each iteration
+for x in range(0, inputNum):
+    inputStr = input()
+
     firstValue = inputStr[0]
     secondValue = inputStr[2:]
-    
-    if firstValue!='?':
+
+    if firstValue != '?':
         convertedValue = convert(secondValue)
-        #print(secondValue)
-        #print(convertedValue)
+        # print(secondValue)
+        # print(convertedValue)
     #print (convertedValue)
-    
+
     # + case
-    if firstValue=='+':
+    if firstValue == '+':
         #plusVal = int(convertedValue)
-        inputList[convertedValue]+=1
-    
+        inputList[convertedValue] += 1
+
     # - case
-    elif firstValue=='-':
+    elif firstValue == '-':
         #minusVal = int(convertedValue)
-        inputList[convertedValue]-=1
-    
+        inputList[convertedValue] -= 1
+
     # ? case
-    elif firstValue=='?':
+    elif firstValue == '?':
         patString = int(secondValue)
-        count=inputList[patString]
-        print(count)                    
-        
- 
-#print(inputList) 
-       
-#print(inputList)        
+        count = inputList[patString]
+        print(count)
+
+
+# print(inputList)
+
+# print(inputList)
 '''for x in inputList:
     print('{}, {}', x, inputList[x])'''
-        
-        
-
-
-

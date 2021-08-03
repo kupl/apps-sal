@@ -1,4 +1,4 @@
-n , m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 A = input().split()
 B = input().split()
 
@@ -11,9 +11,7 @@ for i in A:
         return
 
 
-
 if(A[0] < B[0]):
-    print(A[0]+B[0])
+    print(A[0] + B[0])
 else:
     print(B[0] + A[0])
-

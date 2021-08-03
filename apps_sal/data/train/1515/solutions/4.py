@@ -6,5 +6,5 @@ for _ in range(t):
     n = int("{}00".format(ord(s[0]) - 96))
     res = 0
     for i in s:
-        res+=(n+ord(i) - 97)
-    print(res%1000000007)
+        res += (n + ord(i) - 97)
+    print(res % 1000000007)

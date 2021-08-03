@@ -14,5 +14,3 @@ while L:
     cnt += 1
     # print(L)
 print(cnt)
-        
-

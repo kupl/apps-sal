@@ -26,4 +26,3 @@ class Solution:
             else:
                 man_idx.append(man_copy[curr_man[0]])
         return max_time
-

@@ -7,4 +7,3 @@ if a_x < b_x:
     print('A')
 else:
     print('B')
-

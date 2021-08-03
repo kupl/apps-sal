@@ -9,6 +9,7 @@ class Solution:
         for i in range(n):
             for j in range(i, n):
                 d[(i, j)] = count_char(s[i:j + 1])
+
         @lru_cache(None)
         def dfs(i, j, l):
             if l == j - i + 1:

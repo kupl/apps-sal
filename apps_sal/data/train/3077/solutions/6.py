@@ -1,14 +1,14 @@
 def pattern(n):
     # Happy Coding ^_^
     a = ""
-    lst=[]
-    result=""
-    for i in range(1,n+1):
-        a=str(i)
-        
-        for m in range(i+1,n+1):
+    lst = []
+    result = ""
+    for i in range(1, n + 1):
+        a = str(i)
+
+        for m in range(i + 1, n + 1):
             a += str(m)
         lst.append(a)
     for i in lst:
-        result += i+'\n'
+        result += i + '\n'
     return result[:-1]

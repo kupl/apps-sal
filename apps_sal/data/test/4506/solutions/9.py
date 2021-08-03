@@ -7,4 +7,3 @@ c = 998244353
 for i in range(n):
     ans = (ans + a1[i] * b[i]) % c
 print(ans)
-

@@ -13,4 +13,4 @@ if a != b:
     print(s)
 else:
     print(2)
-    print("{} {}".format(s[:-1],s[-1]))
+    print("{} {}".format(s[:-1], s[-1]))

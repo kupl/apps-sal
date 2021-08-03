@@ -13,4 +13,3 @@ for _ in range(t):
                 x //= 2
     ans_l.append(len(ar))
 print(*ans_l, sep='\n')
-

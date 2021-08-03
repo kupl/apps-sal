@@ -25,4 +25,3 @@ else:
     result = "NO"
 
 print(result)
-

@@ -3,7 +3,7 @@ class Solution:
         if x == roots[x]:
             return x
         return self.find(roots, roots[x])
-    
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []
         n = len(points)
@@ -21,7 +21,7 @@ class Solution:
         for d, x, y in edges:
             rx = self.find(roots, x)
             ry = self.find(roots, y)
-            if rx != ry:                
+            if rx != ry:
                 if ranks[rx] > ranks[ry]:
                     roots[ry] = rx
                 elif ranks[rx] < ranks[ry]:
@@ -33,5 +33,5 @@ class Solution:
                 res += d
                 if count == n - 1:
                     return res
-        
+
         return res

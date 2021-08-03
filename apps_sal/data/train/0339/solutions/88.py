@@ -5,10 +5,10 @@ class Solution:
         for i, num in enumerate(nums1):
             m1[num] += 1
         for i, num in enumerate(nums2):
-            m2[num] += 1            
+            m2[num] += 1
         self.ans = 0
-        
-        def count(nums : List[int], m: dict) -> None:
+
+        def count(nums: List[int], m: dict) -> None:
             for i in range(len(nums)):
                 for j in range(i + 1, len(nums)):
                     prod = nums[i] * nums[j]
@@ -18,4 +18,3 @@ class Solution:
         count(nums1, m2)
         count(nums2, m1)
         return self.ans
-

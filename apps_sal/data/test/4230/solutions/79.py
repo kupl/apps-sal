@@ -17,4 +17,3 @@ for i in range(-1, 102):
             ans = i
 
 print(ans)
-

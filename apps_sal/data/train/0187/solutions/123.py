@@ -15,7 +15,7 @@ class Solution:
             if p > ans:
                 ans = p
                 ff = t
-    
+
         while cur > 0:
             cnt = min(cur, 4)
             cur -= cnt

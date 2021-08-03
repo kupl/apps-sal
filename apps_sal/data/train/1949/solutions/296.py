@@ -7,7 +7,6 @@ class Solution:
                 result = max(self.search(grid, i, j), result)
         return result
 
-
     def search(self, grid, x, y):
         if x < 0 or x >= len(grid) or y < 0 or y >= len(grid[0]):
             return 0
@@ -19,10 +18,10 @@ class Solution:
         grid[x][y] = 0
 
         # Search all neighbours
-        result += max(self.search(grid, x-1, y),
-                      self.search(grid, x, y-1),
-                      self.search(grid, x+1, y),
-                      self.search(grid, x, y+1))
+        result += max(self.search(grid, x - 1, y),
+                      self.search(grid, x, y - 1),
+                      self.search(grid, x + 1, y),
+                      self.search(grid, x, y + 1))
 
         grid[x][y] = temp
 

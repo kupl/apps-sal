@@ -5,6 +5,7 @@ from collections import deque
 def norm_edge(i, j):
     return (i, j) if i < j else (j, i)
 
+
 inpt = sys.stdin.read().split('\n')
 n, k = list(map(int, inpt[0].split()))
 edges = []
@@ -59,4 +60,3 @@ print(' '.join([str(color[e] + 1) for e in edges]))
 #     for j in neigh[i]:
 #         e = norm_edge(i, j)
 #         print("    ", e, color[e])
-

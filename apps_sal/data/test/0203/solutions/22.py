@@ -5,13 +5,15 @@ s = input()
 R, D = collections.deque(), collections.deque()
 
 for i in range(n):
-    if s[i] == 'R': R.append(i)
-    else: D.append(i)
+    if s[i] == 'R':
+        R.append(i)
+    else:
+        D.append(i)
 
 
-#print(R)
-#print(D)
-    
+# print(R)
+# print(D)
+
 while R and D:
     r = R.popleft()
     d = D.popleft()

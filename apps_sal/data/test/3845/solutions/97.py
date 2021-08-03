@@ -9,6 +9,8 @@ mod = 10 ** 9 + 7
 #
 #
 # @stop_watch
+
+
 def solve(A, B):
     ans = [['#' for _ in range(101)] for _ in range(101)]
     B -= 1
@@ -64,5 +66,6 @@ def __starting_point():
     # import tool.testcase as tt
     # from tool.testcase import random_str, random_ints
     # solve()
+
 
 __starting_point()

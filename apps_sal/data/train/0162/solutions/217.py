@@ -9,12 +9,12 @@ class Solution:
                 else:
                     dp[row][col] = max(dp[row - 1][col], dp[row][col - 1])
         return dp[n][m]
-    
+
     def longestCommonSubsequence1(self, text1: str, text2: str) -> int:
         def helper(i1, i2):
             if (i1, i2) in self.memo:
                 return self.memo[(i1, i2)]
-            
+
             res = 0
             if i1 == len(text1) or i2 == len(text2):
                 res = 0
@@ -22,9 +22,9 @@ class Solution:
                 res = 1 + helper(i1 + 1, i2 + 1)
             else:
                 res = max(helper(i1 + 1, i2), helper(i1, i2 + 1))
-            
+
             self.memo[(i1, i2)] = res
             return self.memo[(i1, i2)]
-        
+
         self.memo = {}
         return helper(0, 0)

@@ -40,4 +40,3 @@ for item in list(count.items()):
 ans = sorted(ans)
 for w in ans:
     print(w)
-

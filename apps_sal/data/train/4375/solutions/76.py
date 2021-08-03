@@ -11,5 +11,5 @@ def get_planet_name(id):
     }
     return planents[id]
 
-print((get_planet_name(3)))
 
+print((get_planet_name(3)))

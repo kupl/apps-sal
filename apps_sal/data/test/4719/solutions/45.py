@@ -1,11 +1,10 @@
-n=int(input())
-S=list(input() for _ in range(n))
+n = int(input())
+S = list(input() for _ in range(n))
 
-T="abcdefghijklmnopqrstuvwxyz"
+T = "abcdefghijklmnopqrstuvwxyz"
 for c in T:
-    x=50
+    x = 50
     for s in S:
-        x=min(x,s.count(c))
-    print(c*x,end='')
+        x = min(x, s.count(c))
+    print(c * x, end='')
 print()
-

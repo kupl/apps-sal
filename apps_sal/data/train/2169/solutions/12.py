@@ -15,4 +15,3 @@ for i in range(n):
     ans += d[now] - 1
 ans //= 2
 print(ans)
-

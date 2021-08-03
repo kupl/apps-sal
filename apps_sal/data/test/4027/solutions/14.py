@@ -1,7 +1,7 @@
-n=int(input())
-xx=(n*(n+1))//2
-if xx%2==0:
-	print(0)
-	return
+n = int(input())
+xx = (n * (n + 1)) // 2
+if xx % 2 == 0:
+    print(0)
+    return
 else:
-	print(1)
+    print(1)

@@ -10,6 +10,5 @@ pat = input()
 a = ["vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceon", "sylveon"]
 for n in a:
     if match(pat, n):
-            print(n)
-            break
-
+        print(n)
+        break

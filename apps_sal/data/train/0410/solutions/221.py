@@ -9,13 +9,13 @@ class Solution:
                 if n % 2 == 0:
                     n = n // 2
                 else:
-                    n = 3*n+1
+                    n = 3 * n + 1
                 step += 1
             memo[num] = step
             return step
         mheap = []
         memo = {}
-        for n in range(lo, hi+1):
+        for n in range(lo, hi + 1):
             mheap.append([powerof(n, memo), n])
         heapq.heapify(mheap)
         return heapq.nsmallest(k, mheap)[-1][1]

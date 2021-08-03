@@ -11,7 +11,8 @@ class CustomStack:
             self.inc.append(0)
 
     def pop(self):
-        if not self.inc: return -1
+        if not self.inc:
+            return -1
         if len(self.inc) > 1:
             self.inc[-2] += self.inc[-1]
         return self.stack.pop() + self.inc.pop()
@@ -19,7 +20,6 @@ class CustomStack:
     def increment(self, k, val):
         if self.inc:
             self.inc[min(k, len(self.inc)) - 1] += val
-        
 
 
 # Your CustomStack object will be instantiated and called as such:
@@ -27,4 +27,3 @@ class CustomStack:
 # obj.push(x)
 # param_2 = obj.pop()
 # obj.increment(k,val)
-

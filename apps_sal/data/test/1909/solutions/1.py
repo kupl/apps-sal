@@ -15,6 +15,7 @@ def get_min_power(n, k, powers):
     task = min(mins)
     return mins.index(task) + 1
 
+
 def main():
     n, k, powers = read()
     print(get_min_power(n, k, powers))
@@ -22,4 +23,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

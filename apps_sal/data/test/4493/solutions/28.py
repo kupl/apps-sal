@@ -8,7 +8,7 @@ b = [0] * 3
 for j in range(3):
     b[j] = c[0][j] - a[0]
 
-for i in range(1,3,1):
+for i in range(1, 3, 1):
     a[i] = c[i][0] - b[0]
 
 for i in range(3):
@@ -18,4 +18,3 @@ for i in range(3):
             return
 
 print("Yes")
-

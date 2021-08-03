@@ -16,4 +16,3 @@ for x in range(m):
     r.append(cr)
 
 print(str.join(" ", list(map(str, r))))
-

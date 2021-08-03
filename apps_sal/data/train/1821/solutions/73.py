@@ -1,9 +1,9 @@
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
-        quickSort(nums, 0, len(nums)-1)
+        quickSort(nums, 0, len(nums) - 1)
         return nums
-    
-    
+
+
 def partition(arr, low, high):
     # i = (low-1)         # index of smaller element
     i = low
@@ -17,10 +17,10 @@ def partition(arr, low, high):
     # return (i+1)
     return i
 
+
 def quickSort(arr, low, high):
     if low >= high:
         return
     pi = partition(arr, low, high)
-    quickSort(arr, low, pi-1)
-    quickSort(arr, pi+1, high)
-
+    quickSort(arr, low, pi - 1)
+    quickSort(arr, pi + 1, high)

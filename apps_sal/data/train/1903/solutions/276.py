@@ -4,16 +4,16 @@ class Solution:
         if n == 1:
             return 0
         dMat = [[-1 for j in range(n)] for i in range(n)]
-        
+
         def d(p1, p2):
             a, b = p1
             c, d = p2
-            return abs(a-c) + abs(b-d)
-        
+            return abs(a - c) + abs(b - d)
+
         for i, p1 in enumerate(points):
             for j, p2 in enumerate(points):
                 dMat[i][j] = d(p1, p2)
-        
+
         key = [float('inf')] * n
         parent = [None] * n
         key[0] = 0
@@ -43,6 +43,5 @@ class Solution:
             if parent[v] != -1:
                 u = parent[v]
                 res += dMat[u][v]
-        
-        return res
 
+        return res

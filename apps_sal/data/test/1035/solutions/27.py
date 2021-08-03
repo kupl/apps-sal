@@ -1,5 +1,7 @@
 
 from math import gcd
+
+
 def resolve():
     def prime_factorize(n):
         if 2 <= n < 4:
@@ -25,5 +27,6 @@ def resolve():
 
 def __starting_point():
     resolve()
+
 
 __starting_point()

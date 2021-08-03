@@ -3,5 +3,5 @@ def get_strings(str):
     str = str.lower().replace(' ', '')
     for char in str:
         if char not in output:
-            output += (f'{char}:{"*" * str.count(char)},');
+            output += (f'{char}:{"*" * str.count(char)},')
     return output[:-1]

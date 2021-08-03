@@ -1,3 +1,1 @@
-am_i_wilson = lambda n: n in [5, 13, 10429, 17, 563]
-    
-
+def am_i_wilson(n): return n in [5, 13, 10429, 17, 563]

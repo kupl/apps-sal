@@ -15,4 +15,6 @@ def main():
         else:
             print(e[-1][1], end=' ')
             e.pop()
+
+
 main()

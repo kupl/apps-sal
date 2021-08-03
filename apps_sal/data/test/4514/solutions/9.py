@@ -1,23 +1,23 @@
 
-n,q = [int(x) for x in input().split()]
-L = [int(x)-1 for x in input().split()]
+n, q = [int(x) for x in input().split()]
+L = [int(x) - 1 for x in input().split()]
 
 G = []
 for i in range(n):
     G.append([])
-for i in range(n-1):
-    G[L[i]].append((i+1,L[i]))
-    G[i+1].append((L[i],i+1))
-    
-L = [-1]+L
+for i in range(n - 1):
+    G[L[i]].append((i + 1, L[i]))
+    G[i + 1].append((L[i], i + 1))
+
+L = [-1] + L
 G[0].reverse()
 
-for t in range(1,n):
-    G[t] = [G[t][0]]+list(reversed(G[t][1:]))
+for t in range(1, n):
+    G[t] = [G[t][0]] + list(reversed(G[t][1:]))
 
-options = [(0,0)]
-visited = [0]*n
-sub = [1]*n
+options = [(0, 0)]
+visited = [0] * n
+sub = [1] * n
 path = []
 while options:
     t = options.pop()
@@ -34,8 +34,8 @@ for i in range(n):
 
 
 for i in range(q):
-    u,k = [int(x) for x in input().split()]
-    if sub[u-1] < k:
+    u, k = [int(x) for x in input().split()]
+    if sub[u - 1] < k:
         print(-1)
     else:
-        print(path[Position[u-1]+k-1]+1)
+        print(path[Position[u - 1] + k - 1] + 1)

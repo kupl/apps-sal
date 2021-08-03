@@ -12,4 +12,3 @@ while ub - lb > 1:
     else:
         ub = mid
 print((n - lb + 1))
-

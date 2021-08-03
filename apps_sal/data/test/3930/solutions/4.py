@@ -13,7 +13,7 @@ else:
 
 s = 0
 ans = 0
-count = {s : 1}
+count = {s: 1}
 for i in a:
     s += i
     for j in valid:
@@ -24,4 +24,3 @@ for i in a:
     else:
         count[s] = 1
 print(ans)
-

@@ -23,4 +23,3 @@ for _ in range(int(input())):
             answer = i - k + 2
 
     print(max_peaks + 1, answer + 1)
-

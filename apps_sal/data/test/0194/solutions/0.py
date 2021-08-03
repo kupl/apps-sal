@@ -1,4 +1,4 @@
-n, a, b = list(map(int,input().split()))
+n, a, b = list(map(int, input().split()))
 l = input().split()
 o = 0
 c = 0
@@ -19,4 +19,3 @@ for i in l:
         else:
             o += 1
 print(o)
-

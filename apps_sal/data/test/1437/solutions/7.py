@@ -3,6 +3,7 @@
 
 str_in = input()
 
+
 def decode_char(c):
     if '0' <= c <= '9':
         return ord(c) - ord('0')
@@ -16,10 +17,10 @@ def decode_char(c):
         return 63
     assert False
 
+
 result_num = 0
 for c in str_in:
     res_str = "{0:06b}".format(decode_char(c))
     result_num += sum(1 for i in res_str if i == '0')
 
 print(pow(3, result_num, 10**9 + 7))
-

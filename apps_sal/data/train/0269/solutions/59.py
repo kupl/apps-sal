@@ -7,4 +7,3 @@ class Solution:
                     return False
                 last_one = i
         return True
-

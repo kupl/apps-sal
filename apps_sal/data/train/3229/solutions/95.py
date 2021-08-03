@@ -16,10 +16,8 @@
 #     return fact
 
 def am_i_wilson(n):
-#     if not is_prime(n):
-#         return False
-#     else:
-#         return fact(n - 1) == -1 % (n * n)
+    #     if not is_prime(n):
+    #         return False
+    #     else:
+    #         return fact(n - 1) == -1 % (n * n)
     return n in [5, 13, 563, 5971, 558771, 1964215, 8121909, 12326713, 23025711, 26921605, 341569806, 399292158]
-    
-

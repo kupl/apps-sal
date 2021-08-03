@@ -13,4 +13,3 @@ for i in range(len(ar)):
 print(min(len(a1), len(a2), len(a3)))
 for i in range(min(len(a1), len(a2), len(a3))):
     print(a1[i], a2[i], a3[i])
-

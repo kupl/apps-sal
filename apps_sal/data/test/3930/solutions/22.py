@@ -15,15 +15,14 @@ import heapq
 from typing import List
 
 
-
 def solve(N, K, A):
-    presum = [0 for _ in range(N+1)]
+    presum = [0 for _ in range(N + 1)]
     vi = collections.defaultdict(list)
     for i, v in enumerate(A):
-        presum[i+1] = presum[i] + v
+        presum[i + 1] = presum[i] + v
     for i, v in enumerate(presum):
         vi[v].append(i)
-        
+
     maxval = max(presum)
     minval = min(presum)
     ans = 0
@@ -55,16 +54,13 @@ def solve(N, K, A):
             us = [v + 1]
         elif K == -1:
             us = [v + 1, v - 1]
-        
+
         for u in us:
             if u in vi:
                 idx = vi[u]
                 ans += len(idx) - bisect.bisect_right(idx, i)
-    
+
     return ans
-    
-    
-    
 
 
 N, K = map(int, input().split())

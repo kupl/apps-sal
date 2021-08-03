@@ -7,9 +7,9 @@ for _ in range(t):
     result = [1] * len(s)
     for i in range(len(s)):
         indeks = i + 1
-        start = 2*indeks
+        start = 2 * indeks
         while start <= n:
-            if s[start-1] > s[i]:
-                result[start-1] = max(result[start-1], result[i] + 1)
+            if s[start - 1] > s[i]:
+                result[start - 1] = max(result[start - 1], result[i] + 1)
             start += indeks
     print(max(result))

@@ -1,5 +1,7 @@
 u = 0
 v = 0
+
+
 def f(c):
     nonlocal u
     nonlocal v
@@ -24,6 +26,7 @@ def f(c):
     elif c == 'p':
         v += 1
 
+
 for i in range(8):
     for c in input():
         f(c)
@@ -34,6 +37,3 @@ elif u > v:
     print('White')
 else:
     print('Black')
-
-
-

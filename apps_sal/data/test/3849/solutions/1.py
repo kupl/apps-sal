@@ -1,9 +1,13 @@
 import sys
 
+
 def sum_range(l, r):
-    if r < l: return 0
-    if l == 0: return sum[r]
+    if r < l:
+        return 0
+    if l == 0:
+        return sum[r]
     return sum[r] - sum[l - 1]
+
 
 n, k = map(int, input().split())
 
@@ -25,7 +29,7 @@ for i in range(0, n):
     else:
         min0 = min(min0, i)
         max0 = i
-        
+
 toki = False
 qual = True
 for i in range(0, n - k + 1):
@@ -33,7 +37,7 @@ for i in range(0, n - k + 1):
         toki = True
     if sum_range(0, i - 1) + sum_range(i + k, n - 1) + 0 == 0:
         toki = True
-        
+
     prefix = sum_range(0, i - 1) == 0
     suffix = sum_range(i + k, n - 1) == 0
     if i > 0 and i + k < n and (prefix ^ suffix) == 0:

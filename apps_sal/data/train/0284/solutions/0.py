@@ -21,8 +21,7 @@ class Solution:
                 P += tokens[right]
                 points -= 1
                 right -= 1
-            
-            
+
             elif points == 0 and tokens[left] > P:
                 break
         if P >= tokens[left]:

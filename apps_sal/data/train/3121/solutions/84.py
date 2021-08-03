@@ -6,4 +6,5 @@ def solve(arr):
         for j in range(len(arr)):
             if arr[i] == (-arr[j]):
                 count += 1
-        if count != 1: return arr[i]
+        if count != 1:
+            return arr[i]

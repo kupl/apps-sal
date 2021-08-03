@@ -1,2 +1,2 @@
-def zero_fuel(dist,mpg,fuel):
-    return bool(dist<=mpg*fuel)
+def zero_fuel(dist, mpg, fuel):
+    return bool(dist <= mpg * fuel)

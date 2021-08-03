@@ -18,6 +18,5 @@ for i in range(n):
             quit()
 print(ans)
 for i in anslist:
-    print(i, end = " ")
+    print(i, end=" ")
 print()
-

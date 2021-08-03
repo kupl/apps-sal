@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         minFreq = {}
@@ -24,4 +26,3 @@ class Solution:
             if flag:
                 ans.append(word)
         return ans
-

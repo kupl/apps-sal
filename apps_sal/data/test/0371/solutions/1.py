@@ -1,6 +1,7 @@
 SIZE = 171000
 L = [i ** 3 for i in range(SIZE)]
 
+
 def get_count(n):
     MAX = int(n ** (1 / 3)) + 1
     if L[MAX] > n:
@@ -15,6 +16,7 @@ def get_count(n):
             res += MAX - i + 1
             break
     return res
+
 
 def bin_search(m):
     beg = int(4.8 * m)
@@ -32,6 +34,6 @@ def bin_search(m):
             beg = mid + 1
     return -1
 
+
 m = int(input())
 print(bin_search(m))
-

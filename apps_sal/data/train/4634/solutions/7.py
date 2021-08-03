@@ -28,4 +28,4 @@ def pac_man(N, PM, enemies):
     y = min(rows_more) - max(rows_less) - 1
     x = min(columns_more) - max(columns_less) - 1
 
-    return x*y - 1
+    return x * y - 1

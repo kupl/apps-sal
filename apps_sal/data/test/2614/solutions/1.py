@@ -13,7 +13,7 @@ for _ in range(testCases):
     mn = float("inf")
 
     for x in cntr:
-        if x!=1:
-            mn = min(mn, int(math.floor((n-cntr[x])/(x-1)))-1)
-            
+        if x != 1:
+            mn = min(mn, int(math.floor((n - cntr[x]) / (x - 1))) - 1)
+
     print(mn)

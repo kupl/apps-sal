@@ -10,4 +10,3 @@ for i in range(len(s) - 1, -1, -1):
     snew += '-'
     snew += 'O' * (4 - x % 5)
     print(snew)
-

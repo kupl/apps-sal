@@ -1,5 +1,7 @@
 import math
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n = int(input())
 arr = []
 for i in range(n):

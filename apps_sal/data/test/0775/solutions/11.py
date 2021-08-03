@@ -17,4 +17,3 @@ if pos not in holes:
                 break
 
 print(pos)
-

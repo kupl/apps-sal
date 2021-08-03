@@ -3,11 +3,11 @@ class Solution:
         totalSum = sum(A)
         if totalSum % 3 != 0:
             return False
-        
+
         target = totalSum // 3
         numPartitions = 0
         currSum = 0
-        
+
         for num in A:
             currSum += num
             if currSum == target:
@@ -15,6 +15,5 @@ class Solution:
                 currSum = 0
                 if numPartitions == 3:
                     return True
-                
-        return False
 
+        return False

@@ -10,4 +10,3 @@ def new_avg(arr, average):
     if donation > 0:
         return donation
     raise ValueError
-

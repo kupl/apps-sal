@@ -9,9 +9,9 @@ class KMP:
             if p[i] == p[j]:
                 j += 1
             nxt.append(j)
-            
+
         return nxt
-    
+
     def Match(self, s, p):
         n = len(s)
         m = len(p)
@@ -34,5 +34,3 @@ class Solution:
         kmp = KMP()
         nxt = kmp.Build(s)
         return s[:nxt[-1]]
-        
-

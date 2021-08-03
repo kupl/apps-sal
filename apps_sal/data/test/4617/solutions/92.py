@@ -7,4 +7,5 @@ def answer(c1: str, c2: str) -> str:
     else:
         return 'NO'
 
+
 print(answer(c1, c2))

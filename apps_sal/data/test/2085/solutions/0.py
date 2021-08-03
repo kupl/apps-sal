@@ -8,5 +8,3 @@ for i in range(n):
         for k in range(j, n):
             best = max(best, l[i] | l[j] | l[k])
 print(best)
-            
-

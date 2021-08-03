@@ -11,7 +11,7 @@ class Solution:
                 es.append((val, i, j))
         es.sort()
         # print(es)
-        self.father = {i:i for i in range(n)}
+        self.father = {i: i for i in range(n)}
         ans = size = 0
         for cost, u, v in es:
             if self.find(u) != self.find(v):
@@ -21,7 +21,7 @@ class Solution:
             if size == n - 1:
                 break
         return ans
-        
+
     def find(self, a):
         path = []
         nd = a
@@ -33,11 +33,10 @@ class Solution:
         for nd in path:
             fa[nd] = root
         return root
-    
+
     def union(self, a, b):
         fa = self.father
         ra = self.find(a)
         rb = self.find(b)
         if ra != rb:
             fa[ra] = rb
-

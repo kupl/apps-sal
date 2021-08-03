@@ -4,6 +4,5 @@ def reverseWords(s):
     return x
 
 
-# Complete the solution so that it reverses 
+# Complete the solution so that it reverses
 # all of the words within the string passed in.
-

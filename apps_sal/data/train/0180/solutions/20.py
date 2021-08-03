@@ -5,13 +5,13 @@ class Solution:
         i = 0
         while target > fuel:
             target -= fuel
-            stations = [[dist-fuel, gas] for dist, gas in stations]
+            stations = [[dist - fuel, gas] for dist, gas in stations]
             try:
                 j, fuel = max([[j, gas]
-                               for j, (dist, gas) 
-                               in enumerate(stations) 
-                               if dist <= 0], 
-                               key=lambda stop: stop[1])
+                               for j, (dist, gas)
+                               in enumerate(stations)
+                               if dist <= 0],
+                              key=lambda stop: stop[1])
             except ValueError:
                 return -1
             if fuel == 0:

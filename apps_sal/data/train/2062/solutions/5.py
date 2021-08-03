@@ -42,4 +42,3 @@ def solve(n, a, b, c, d, MOD):
 n, a, b, c, d = list(map(int, input().split()))
 MOD = 10 ** 9 + 7
 print((solve(n, a, b, c, d, MOD)))
-

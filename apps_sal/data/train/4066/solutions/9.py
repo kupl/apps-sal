@@ -4,4 +4,3 @@ def string_to_array(s):
         return s.split(',')
     else:
         return s.split()
-

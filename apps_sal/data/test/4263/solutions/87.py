@@ -13,4 +13,3 @@ for (i, char) in enumerate(s):
 mx = max(cnt, mx)
 
 print(mx)
-

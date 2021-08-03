@@ -25,8 +25,8 @@ class Musk:
 
         # Reading multiple lines of pairs
         pairs = (" ".join(uinput() for i in range(self.m))).split()
-        self.numa = [int(pairs[i])-1 for i in range(0, 2*self.m, 2)]
-        self.numb = [int(pairs[i])-1 for i in range(1, 2*self.m, 2)]
+        self.numa = [int(pairs[i]) - 1 for i in range(0, 2 * self.m, 2)]
+        self.numb = [int(pairs[i]) - 1 for i in range(1, 2 * self.m, 2)]
 
         # Array of sets
         self.sets = [set() for i in range(self.n)]
@@ -102,7 +102,7 @@ class unitTests(unittest.TestCase):
 
         # Random inputs
         test = str(nmax) + " " + str(nmax) + "\n"
-        numnums = [str(i) + " " + str(i+1) for i in range(nmax)]
+        numnums = [str(i) + " " + str(i + 1) for i in range(nmax)]
         test += "\n".join(numnums) + "\n"
         nums = [random.randint(1, 10000) for i in range(nmax)]
         test += " ".join(map(str, nums)) + "\n"
@@ -113,9 +113,10 @@ class unitTests(unittest.TestCase):
         calc = timeit.default_timer()
         d.calculate()
         stop = timeit.default_timer()
-        print(("\nTimelimit Test: " +
-              "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
-              format(stop-start, calc-start, stop-calc)))
+        print(("\nTimelimit Test: "
+              + "{0:.3f}s (init {1:.3f}s calc {2:.3f}s)".
+               format(stop - start, calc - start, stop - calc)))
+
 
 def __starting_point():
 
@@ -127,5 +128,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(Musk().calculate())
+
 
 __starting_point()

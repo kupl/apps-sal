@@ -1,4 +1,4 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     st = ''
     for index, value in enumerate(s):
         if index in ind:

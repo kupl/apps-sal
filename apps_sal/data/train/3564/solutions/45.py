@@ -6,4 +6,3 @@ def stringy(size):
         result += str(int(value))
         value = not value
     return result
-

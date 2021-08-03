@@ -1,6 +1,6 @@
 n, t, k, d = [int(i) for i in input().split()]
 
-n = (n+k-1)//k
+n = (n + k - 1) // k
 
 t0 = t * n
 

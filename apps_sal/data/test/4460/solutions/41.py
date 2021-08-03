@@ -9,4 +9,3 @@ if d == 0:
     print((4))
 if e == 0:
     print((5))
-

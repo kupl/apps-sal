@@ -9,5 +9,3 @@ for i in reversed(list(range(h + 1))):
     if i == d2:
         ans = max(0, ans - w2)
 print(ans)
-
-

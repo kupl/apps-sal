@@ -1,7 +1,6 @@
-3
-
-import os
 import sys
+import os
+3
 
 
 def main():
@@ -34,7 +33,7 @@ def build(A, S, l, r):
     i = l
     S -= 1
     while S > 0:
-        #dprint(ans)
+        # dprint(ans)
         if i == 0:
             j = 1
         elif i == 1:
@@ -92,5 +91,6 @@ def dprint(*value, sep=' ', end='\n'):
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -4,6 +4,7 @@ import sys
 
 cache = {}
 
+
 def max_possible(pie_slices, current_slice, pre_sums):
 
     if current_slice in cache:
@@ -11,7 +12,6 @@ def max_possible(pie_slices, current_slice, pre_sums):
 
     if len(pie_slices) - 1 == current_slice:
         return pie_slices[current_slice]
-
 
     max_score = -1
     for cs in range(current_slice, len(pie_slices) - 1):
@@ -28,6 +28,7 @@ def max_possible(pie_slices, current_slice, pre_sums):
 
     return max_score
 
+
 def main():
     n = int(sys.stdin.readline().strip())
 
@@ -39,13 +40,8 @@ def main():
     print(sum(pie_slices) - b, b)
 
 
-
-
-
-
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

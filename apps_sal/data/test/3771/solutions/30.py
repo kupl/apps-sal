@@ -11,19 +11,19 @@ class Dinic:
         self.graph = [[] for _ in range(n)]
         self.level = None
         self.it = None
-    
+
     def add_edge(self, fr, to, cap):
         forward = [to, cap, None]
         forward[2] = backward = [fr, 0, forward]
         self.graph[fr].append(forward)
         self.graph[to].append(backward)
-    
+
     def add_multi_edge(self, v1, v2, cap1, cap2):
         edge1 = [v2, cap1, None]
         edge1[2] = edge2 = [v1, cap2, edge1]
         self.graph[v1].append(edge1)
         self.graph[v2].append(edge2)
-    
+
     def bfs(self, s, t):
         self.level = level = [-1] * self.n
         deq = deque([s])
@@ -37,7 +37,7 @@ class Dinic:
                     level[w] = lv
                     deq.append(w)
         return level[t] != -1
-    
+
     def dfs(self, v, t, f):
         if v == t:
             return f
@@ -50,7 +50,7 @@ class Dinic:
                     rev[1] += d
                     return d
         return 0
-    
+
     def flow(self, s, t):
         flow = 0
         INF = 10 ** 18
@@ -80,12 +80,13 @@ def solve():
             elif line[j] == 'T':
                 dinic.add_edge(i, t, INF)
                 dinic.add_edge(H + j, t, INF)
-    
+
     ans = dinic.flow(s, t)
     print((ans if ans < INF else -1))
 
 
 def __starting_point():
     solve()
+
 
 __starting_point()

@@ -11,7 +11,7 @@ for i in range(n):
         up.append(a[i])
     else:
         down.append(a[i])
-        
+
 up = sorted(up)
 down = sorted(down)
 

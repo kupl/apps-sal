@@ -23,7 +23,7 @@ for case in testCases:
     dAll = []
     lAll = []
     rAll = []
-    
+
     for r in range(R):
         if(readFromFile):
             row = f.readline()
@@ -33,23 +33,23 @@ for case in testCases:
         for c in range(C):
             if(row[c] == '#'):
                 if(r not in aByRows):
-                    aByRows[r] = []                
+                    aByRows[r] = []
                 aByRows[r].append(c)
                 if(c not in aByCols):
                     aByCols[c] = []
                 aByCols[c].append(r)
 
             elif(row[c] == 'U'):
-                uAll.append((r,c))
+                uAll.append((r, c))
 
             elif(row[c] == 'D'):
-                dAll.append((r,c))
+                dAll.append((r, c))
 
             elif(row[c] == 'L'):
-                lAll.append((r,c))
+                lAll.append((r, c))
 
             elif(row[c] == 'R'):
-                rAll.append((r,c))
+                rAll.append((r, c))
 
     # U ant will die if # in same column, smaller row
     for x in range(len(uAll)):
@@ -63,7 +63,7 @@ for case in testCases:
         age = R
         for y in eaters:
             if (y < r):
-                age = min(age, r-y)
+                age = min(age, r - y)
         uAll[x] = (item[0], item[1], age)
 
     # D ant will die if # in same column, larger row
@@ -78,7 +78,7 @@ for case in testCases:
         age = R
         for y in eaters:
             if (y > r):
-                age = min(age, y-r)
+                age = min(age, y - r)
         dAll[x] = (item[0], item[1], age)
 
     # L ant will die if # in same row, smaller col
@@ -93,7 +93,7 @@ for case in testCases:
         age = C
         for y in eaters:
             if (y < c):
-                age = min(age, c-y)
+                age = min(age, c - y)
         lAll[x] = (item[0], item[1], age)
 
     # R ant will die if # in same row, larger col
@@ -108,21 +108,21 @@ for case in testCases:
         age = C
         for y in eaters:
             if (y > c):
-                age = min(age, y-c)
+                age = min(age, y - c)
         rAll[x] = (item[0], item[1], age)
 
     uBySum = {}
     uByDiff = {}
     uByCol = {}
-    
+
     dBySum = {}
     dByDiff = {}
     dByCol = {}
-    
+
     rBySum = {}
     rByDiff = {}
     rByRow = {}
-    
+
     lBySum = {}
     lByDiff = {}
     lByRow = {}
@@ -130,58 +130,58 @@ for case in testCases:
     for x in uAll:
         r = x[0]
         c = x[1]
-        if (r+c not in uBySum):
-            uBySum[r+c] = []
-        if (r-c not in uByDiff):
-            uByDiff[r-c] = []
+        if (r + c not in uBySum):
+            uBySum[r + c] = []
+        if (r - c not in uByDiff):
+            uByDiff[r - c] = []
         if (c not in uByCol):
             uByCol[c] = []
 
-        uBySum[r+c].append((r,c,x[2]))
-        uByDiff[r-c].append((r,c,x[2]))
-        uByCol[c].append((r,c,x[2]))
+        uBySum[r + c].append((r, c, x[2]))
+        uByDiff[r - c].append((r, c, x[2]))
+        uByCol[c].append((r, c, x[2]))
 
     for x in dAll:
         r = x[0]
         c = x[1]
-        if (r+c not in dBySum):
-            dBySum[r+c] = []
-        if (r-c not in dByDiff):
-            dByDiff[r-c] = []
+        if (r + c not in dBySum):
+            dBySum[r + c] = []
+        if (r - c not in dByDiff):
+            dByDiff[r - c] = []
         if (c not in dByCol):
             dByCol[c] = []
 
-        dBySum[r+c].append((r,c,x[2]))
-        dByDiff[r-c].append((r,c,x[2]))
-        dByCol[c].append((r,c,x[2]))
+        dBySum[r + c].append((r, c, x[2]))
+        dByDiff[r - c].append((r, c, x[2]))
+        dByCol[c].append((r, c, x[2]))
 
     for x in lAll:
         r = x[0]
         c = x[1]
-        if (r+c not in lBySum):
-            lBySum[r+c] = []
-        if (r-c not in lByDiff):
-            lByDiff[r-c] = []
+        if (r + c not in lBySum):
+            lBySum[r + c] = []
+        if (r - c not in lByDiff):
+            lByDiff[r - c] = []
         if (r not in lByRow):
             lByRow[r] = []
 
-        lBySum[r+c].append((r,c,x[2]))
-        lByDiff[r-c].append((r,c,x[2]))
-        lByRow[r].append((r,c,x[2]))
+        lBySum[r + c].append((r, c, x[2]))
+        lByDiff[r - c].append((r, c, x[2]))
+        lByRow[r].append((r, c, x[2]))
 
     for x in rAll:
         r = x[0]
         c = x[1]
-        if (r+c not in rBySum):
-            rBySum[r+c] = []
-        if (r-c not in rByDiff):
-            rByDiff[r-c] = []
+        if (r + c not in rBySum):
+            rBySum[r + c] = []
+        if (r - c not in rByDiff):
+            rByDiff[r - c] = []
         if (r not in rByRow):
             rByRow[r] = []
 
-        rBySum[r+c].append((r,c,x[2]))
-        rByDiff[r-c].append((r,c,x[2]))
-        rByRow[r].append((r,c,x[2]))
+        rBySum[r + c].append((r, c, x[2]))
+        rByDiff[r - c].append((r, c, x[2]))
+        rByRow[r].append((r, c, x[2]))
 
     uSums = set(uBySum.keys())
     uDiffs = set(uByDiff.keys())
@@ -198,7 +198,7 @@ for case in testCases:
 
     total = 0
 
-    ## same sums: possible collision between U and L
+    # same sums: possible collision between U and L
     candidates = uSums & lSums
     for cc in candidates:
         r1 = [(x[0], 1, x[2]) for x in uBySum[cc]]
@@ -218,7 +218,7 @@ for case in testCases:
             elif (item[1] == 0):
                 zeros.append(item)
 
-    ## same sums: possible collision between D and R
+    # same sums: possible collision between D and R
     candidates = dSums & rSums
     for cc in candidates:
         r1 = [(x[0], 1, x[2]) for x in rBySum[cc]]
@@ -238,7 +238,7 @@ for case in testCases:
             elif (item[1] == 0):
                 zeros.append(item)
 
-    ## same diffs: possible collision between U and R
+    # same diffs: possible collision between U and R
     candidates = uDiffs & rDiffs
     for cc in candidates:
         r1 = [(x[0], 1, x[2]) for x in uByDiff[cc]]
@@ -258,7 +258,7 @@ for case in testCases:
             elif (item[1] == 0):
                 zeros.append(item)
 
-    ## same diffs: possible collision between D and L
+    # same diffs: possible collision between D and L
     candidates = dDiffs & lDiffs
     for cc in candidates:
         r1 = [(x[0], 1, x[2]) for x in lByDiff[cc]]
@@ -278,7 +278,7 @@ for case in testCases:
             elif (item[1] == 0):
                 zeros.append(item)
 
-    ## same cols: possible collision between D and U
+    # same cols: possible collision between D and U
     candidates = dCols & uCols
     for cc in candidates:
         r1 = [(x[0], 1, x[2]) for x in uByCol[cc]]
@@ -294,12 +294,12 @@ for case in testCases:
             item = rTot[i]
             if (item[1] == 1):
                 for j in zeros:
-                    if ((item[0] - j[0]) % 2 == 0) and (item[0] - j[0] < 2*j[2]) and (item[0] - j[0] < 2*item[2]):
+                    if ((item[0] - j[0]) % 2 == 0) and (item[0] - j[0] < 2 * j[2]) and (item[0] - j[0] < 2 * item[2]):
                         total = total + 1
             elif (item[1] == 0):
                 zeros.append(item)
 
-    ## same rows: possible collision between L and R
+    # same rows: possible collision between L and R
     candidates = lRows & rRows
     for cc in candidates:
         r1 = [(x[1], 1, x[2]) for x in lByRow[cc]]
@@ -307,7 +307,7 @@ for case in testCases:
         rTot = r1 + r2
         rTot.sort()
 
-        # Collision only when col of L > col of R, 
+        # Collision only when col of L > col of R,
         # distance is even
         # both parties survive
         zeros = []
@@ -315,7 +315,7 @@ for case in testCases:
             item = rTot[i]
             if (item[1] == 1):
                 for j in zeros:
-                    if ((item[0] - j[0]) % 2 == 0) and (item[0] - j[0] < 2*j[2]) and (item[0] - j[0] < 2*item[2]):
+                    if ((item[0] - j[0]) % 2 == 0) and (item[0] - j[0] < 2 * j[2]) and (item[0] - j[0] < 2 * item[2]):
                         total = total + 1
             elif (item[1] == 0):
                 zeros.append(item)

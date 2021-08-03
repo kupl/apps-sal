@@ -1,7 +1,6 @@
-N,K=list(map(int, input().split()))
-H=sorted(list(map(int, input().split())), reverse=True)
-if N<=K:
-	print((0))
+N, K = list(map(int, input().split()))
+H = sorted(list(map(int, input().split())), reverse=True)
+if N <= K:
+    print((0))
 else:
-	print((sum(H[K:])))
-
+    print((sum(H[K:])))

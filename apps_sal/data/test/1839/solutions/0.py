@@ -1,7 +1,7 @@
 n = int(input())
 h = [False] * n
 v = [False] * n
-result = [ ]
+result = []
 for i in range(n * n):
     a, b = list(map(int, input().split()))
     a -= 1
@@ -10,4 +10,3 @@ for i in range(n * n):
         h[a] = v[b] = True
         result.append(i + 1)
 print(' '.join(map(str, result)))
-

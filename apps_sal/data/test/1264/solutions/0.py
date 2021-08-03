@@ -6,5 +6,3 @@ for i in range(n):
         s = a[i:j + 1]
         ans = max(ans, s.count('0') + (a[:i] + a[j + 1:]).count('1'))
 print(ans)
-
-

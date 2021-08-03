@@ -4,7 +4,7 @@ def series_sum(n):
     d = 1
     ans = 0
     for i in range(n):
-        ans += 1/d
+        ans += 1 / d
         d += 3
     ans = f"{round(ans, 2)}"
     return ans if len(ans) == 4 else ans + "0" * (4 - len(ans))

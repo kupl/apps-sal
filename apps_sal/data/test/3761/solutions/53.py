@@ -5,10 +5,11 @@ def search(arr, start):
     for i in arr:
         ns = set()
         for j in s:
-            ns.add(j+i)
-            ns.add(j-i)
+            ns.add(j + i)
+            ns.add(j - i)
         s = ns
     return s
+
 
 def main():
     t = 0
@@ -59,7 +60,9 @@ def main():
     else:
         print('No')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

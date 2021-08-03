@@ -8,7 +8,7 @@ def solve():
     if (1 <= n <= 2):
         print(1)
     else:
-        print(ceil((n-2)/x)+1)
+        print(ceil((n - 2) / x) + 1)
     return
 
 

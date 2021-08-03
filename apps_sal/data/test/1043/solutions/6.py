@@ -6,7 +6,7 @@ for i in range(N):
         k = i
         break
 A = [0] + [0 if i < k else A[i] for i in range(N) if i != k]
- 
+
 ans = A.pop()
 H = []
 while N > 2:
@@ -14,7 +14,5 @@ while N > 2:
     for i in range(N):
         heappush(H, A.pop())
     ans += heappop(H)
- 
-print(ans)
- 
 
+print(ans)

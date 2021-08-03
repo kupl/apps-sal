@@ -14,4 +14,3 @@ for i in range(1, n + 1):
         mat[i][j + 1] = (mat[i][j] + mat[i - 1][j]) % p
 
 print(mat[n][n - 1] % p)
-

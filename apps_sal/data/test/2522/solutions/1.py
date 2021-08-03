@@ -5,7 +5,7 @@ s = 0
 c = True
 for i in range(n):
     if i > 0:
-        if a[i] != a[i-1]:
+        if a[i] != a[i - 1]:
             s = 0
     if a[i] != b[i]:
         continue

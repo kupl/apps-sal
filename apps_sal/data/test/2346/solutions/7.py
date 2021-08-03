@@ -1,6 +1,6 @@
 import sys
 N = int(input())
-Er = set(range(1, N+1))
+Er = set(range(1, N + 1))
 for i in range(1, N + 1):
     p, c = map(int, sys.stdin.readline().split())
     if c == 0:

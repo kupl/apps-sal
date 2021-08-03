@@ -1,13 +1,13 @@
-n,k,q = map(int,input().split())
-t = list(map(int,input().split()))
+n, k, q = map(int, input().split())
+t = list(map(int, input().split()))
 d = {}
 for i in range(n):
-    d[i+1] = t[i]
+    d[i + 1] = t[i]
 
 sp = []
 
 for i in range(q):
-    a,b = map(int,input().split())
+    a, b = map(int, input().split())
     if a == 1:
         if len(sp) == 0:
             sp.append(b)

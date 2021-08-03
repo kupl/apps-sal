@@ -33,14 +33,16 @@ def main():
     print(((N - 1) * 2))
     if ma + mi >= 0:
         for i in range(1, N + 1):
-            if i == mai: continue
+            if i == mai:
+                continue
             print((mai, i))
         for i in range(1, N):
             print((i, i + 1))
         return
     else:
         for i in range(1, N + 1):
-            if i == mii: continue
+            if i == mii:
+                continue
             print((mii, i))
         for i in range(N - 1, 0, -1):
             print((i + 1, i))
@@ -49,5 +51,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

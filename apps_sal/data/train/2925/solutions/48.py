@@ -3,7 +3,4 @@ def multiply(n):
     if n >= 0:
         return n * 5 ** count
     else:
-        return n * 5 ** (count -1)
-        
-    
-
+        return n * 5 ** (count - 1)

@@ -12,9 +12,8 @@ for b in a:
     ymin = min(ymin, b[1])
     ymax = max(ymax, b[1])
 
-r = (xmax-xmin) * (ymax-ymin)
+r = (xmax - xmin) * (ymax - ymin)
 if r == 0:
     print(-1)
 else:
     print(r)
-

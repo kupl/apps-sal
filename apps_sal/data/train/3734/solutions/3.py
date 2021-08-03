@@ -1,6 +1,7 @@
 import re
 import random
 
+
 def roll(desc, verbose=False):
     if isinstance(desc, str):
         desc_cleared = re.sub(r'\s', '', desc)

@@ -5,13 +5,13 @@ tabs = [int(x) for x in input().split()]
 
 mods = [sum(tabs[i::k]) for i in range(k)]
 
-#print(mods)
+# print(mods)
 
 summods = sum(mods)
 ans = -1
 for i in range(k):
-	cand = abs(summods - mods[i])
-	if cand > ans:
-		ans = cand
+    cand = abs(summods - mods[i])
+    if cand > ans:
+        ans = cand
 
 print(ans)

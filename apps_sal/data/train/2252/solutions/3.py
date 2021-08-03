@@ -37,4 +37,3 @@ for key in mp:
             ans += mp[key] * mp[key[0:idx] + key[idx + 1:]]
 
 print(ans)
-

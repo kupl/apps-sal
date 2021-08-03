@@ -31,4 +31,3 @@ for el in a:
         print('YES')
         return
 print('NO')
-

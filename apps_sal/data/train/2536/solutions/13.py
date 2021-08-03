@@ -12,7 +12,7 @@ class Solution:
                     break
             if flag == True:
                 continue
-                
+
             for j in range(i, n):
                 if arr[j] == arr[i]:
                     count += 1

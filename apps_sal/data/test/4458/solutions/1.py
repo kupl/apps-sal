@@ -5,8 +5,8 @@ ans = 0
 m = p[0]
 
 for i in p:
-	if m >= i:
-		ans += 1
-		m = i
+    if m >= i:
+        ans += 1
+        m = i
 
 print(ans)

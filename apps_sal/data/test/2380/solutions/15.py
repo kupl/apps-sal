@@ -16,4 +16,3 @@ for i in bc:
     else:
         break
 print((sum(a)))
-

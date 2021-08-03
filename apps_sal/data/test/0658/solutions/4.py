@@ -1,12 +1,16 @@
 class vec(object):
     def __init__(self, x, y):
         self.x, self.y = x, y
+
     def cross(self, k):
         return self.x * k.y - self.y * k.x
+
     def dot(self, k):
         return self.x * k.x + self.y * k.y
+
     def __sub__(self, k):
         return vec(self.x - k.x, self.y - k.y)
+
 
 n, w, v, u = list(map(int, input().split(' ')))
 p = vec(v, u)
@@ -35,4 +39,3 @@ b = (l[i].cross(p) + v * w) / u / v
 
 
 print('%.8f' % b)
-

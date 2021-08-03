@@ -8,4 +8,3 @@ for c in range(1, n + 1):
             count += 1
 
 print(count)
-

@@ -1,6 +1,6 @@
 class Solution:
     def isEscapePossible(self, b: List[List[int]], s: List[int], t: List[int]) -> bool:
-        def find(source,  target, blocked):
+        def find(source, target, blocked):
             queue = [source]
             visited = set()
 
@@ -29,11 +29,11 @@ class Solution:
 
                 next_options.sort(key=lambda point: (point[0] - target[0]) ** 2 + (point[1] - target[1]) ** 2, reverse=True)
                 queue += next_options
-        
+
             return False
-    
+
         bl = set()
         for bi in b:
             bl.add(tuple(bi))
-            
+
         return find(s, t, bl) and find(t, s, bl)

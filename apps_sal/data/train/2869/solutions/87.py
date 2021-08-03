@@ -1,8 +1,8 @@
 def distinct(seq):
-    result=[]
-    seen=[]
+    result = []
+    seen = []
     for i in seq:
         if i not in seen:
             result.append(i)
             seen.append(i)
-    return result        
+    return result

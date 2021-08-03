@@ -1,5 +1,5 @@
 def step(g, m, n):
-    return next(([a, a+g] for a in range(m, n-g+1) if is_prime(a) and is_prime(a+g)), None)
+    return next(([a, a + g] for a in range(m, n - g + 1) if is_prime(a) and is_prime(a + g)), None)
 
 
 def is_prime(n):
@@ -20,4 +20,3 @@ def is_prime(n):
     if n > 1:
         factors += 1
     return factors == 1
-

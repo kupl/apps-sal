@@ -7,8 +7,7 @@ class Solution:
         self.memo = {}
         self.recursion(amount)
         return -1 if self.memo[amount] == float('inf') else self.memo[amount]
-        
-    
+
     def recursion(self, amt):
         min_coins = float('inf')
         if amt == 0:
@@ -22,4 +21,3 @@ class Solution:
             min_coins = min(min_coins, x)
         self.memo[amt] = 1 + min_coins
         return self.memo[amt]
-

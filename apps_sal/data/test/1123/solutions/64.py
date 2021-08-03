@@ -11,10 +11,10 @@ for i in range(k, 0, -1):
         s[i] -= s[j]
         s[i] %= 1e9 + 7
 
-for i in range(1, k+1):
+for i in range(1, k + 1):
     ans += i * s[i]
     ans %= 1e9 + 7
 
-ans %= 1e9+7
+ans %= 1e9 + 7
 
 print(int(ans))

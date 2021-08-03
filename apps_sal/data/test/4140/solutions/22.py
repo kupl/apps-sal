@@ -10,4 +10,3 @@ for i in range(len(S)):
             count += 1
 
 print((min(len(S) - count, count)))
-

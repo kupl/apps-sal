@@ -1,1 +1,1 @@
-print(sum(range(int(input())+1)))
+print(sum(range(int(input()) + 1)))

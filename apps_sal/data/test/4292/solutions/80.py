@@ -3,4 +3,3 @@ l = list(map(int, input().split()))
 S = sorted(l)
 sums = sum(S[:K])
 print(sums)
-

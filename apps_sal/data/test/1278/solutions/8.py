@@ -15,5 +15,3 @@ for i in range(n):
         continue
     print(i + 1)
     return
-
-

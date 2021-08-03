@@ -7,5 +7,3 @@ def sum_digits(number):
         print(i)
         sum += int(i)
     return sum
-        
-

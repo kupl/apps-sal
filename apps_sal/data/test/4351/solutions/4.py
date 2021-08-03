@@ -1,7 +1,7 @@
-n=str(input())
+n = str(input())
 
-if n[0]==n[2]:
-    ans="Yes"
+if n[0] == n[2]:
+    ans = "Yes"
 else:
-    ans="No"
+    ans = "No"
 print(ans)

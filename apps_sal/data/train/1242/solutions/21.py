@@ -1,6 +1,6 @@
 # cook your dish here
 t = int(input())
-for i in range(0,t):
- n = int(input())
- a = list(map(int, input().split()))
- print(min(a) * (n-1))
+for i in range(0, t):
+    n = int(input())
+    a = list(map(int, input().split()))
+    print(min(a) * (n - 1))

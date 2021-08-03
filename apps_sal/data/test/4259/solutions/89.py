@@ -1,10 +1,10 @@
 k = int(input())
-[a,b] = input().split()
+[a, b] = input().split()
 a = int(a)
 b = int(b)
 
 ans = False
-for i in range(a,b+1):
+for i in range(a, b + 1):
     if i % k == 0:
         ans = True
         break

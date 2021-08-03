@@ -1,8 +1,10 @@
 def six(n):
-	return(1+(n-1)%6)
+    return(1 + (n - 1) % 6)
+
 
 def f(numbers):
     return sum(list(map(six, numbers)))
+
 
 t = int(input())
 answers = list()

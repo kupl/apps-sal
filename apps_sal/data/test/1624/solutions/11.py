@@ -10,4 +10,3 @@ while i < ln // 2:
     i += 1
 
 print(ans)
-

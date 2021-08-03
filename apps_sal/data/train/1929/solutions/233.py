@@ -4,7 +4,7 @@ class StreamChecker:
         self.tries = {}
         self.hist = []
         for word in words:
-            cur = self.tries            
+            cur = self.tries
             for c in word[::-1]:
                 if c not in cur:
                     cur[c] = {}
@@ -12,7 +12,7 @@ class StreamChecker:
             cur['#'] = word
 
     def query(self, letter: str) -> bool:
-        self.hist.insert(0, letter) 
+        self.hist.insert(0, letter)
         cur = self.tries
         for c in self.hist:
             if '#' in cur:
@@ -23,11 +23,7 @@ class StreamChecker:
                 return False
         return '#' in cur
 
-    
-        
-
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

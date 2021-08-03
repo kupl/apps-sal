@@ -7,10 +7,11 @@ def main():
         if (i > b):
             continue
         taken += i
-        
+
         if (taken > d):
             taken = 0
             num += 1
     print(num)
-    
+
+
 main()

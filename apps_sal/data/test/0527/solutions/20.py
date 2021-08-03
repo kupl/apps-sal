@@ -11,7 +11,7 @@ for i in range(len(S)):
     if S[i] in D:
         D[S[i]].append(i)
 
-if len(set(T)-set(S))>0:
+if len(set(T) - set(S)) > 0:
     print(-1)
 else:
     r = -1
@@ -23,4 +23,4 @@ else:
         else:
             r = D[T[i]][0]
             cnt += 1
-    print(len(S)*cnt+r+1)
+    print(len(S) * cnt + r + 1)

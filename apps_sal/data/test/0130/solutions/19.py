@@ -68,4 +68,5 @@ def __starting_point():
         canvas.append(input())
     print(min_squares(canvas, l, w))
 
+
 __starting_point()

@@ -2,9 +2,10 @@
 
 import itertools
 
+
 def main():
     n = int(input())
-    a = [ ]
+    a = []
     for i in range(n):
         a.append(tuple(map(int, input().split())))
     for a, b in itertools.combinations(a, 2):
@@ -14,9 +15,9 @@ def main():
     else:
         print(-1)
 
+
 try:
     while True:
         main()
 except EOFError:
     pass
-

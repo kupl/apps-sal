@@ -15,13 +15,12 @@ l = 0
 sc = 0
 
 for i in nis:
-	sc += cis[i]
-	res[i] = sc
-	heappush(hc, cis[i])
-	if l == k:
-		sc -= heappop(hc)
-	else:
-		l += 1
+    sc += cis[i]
+    res[i] = sc
+    heappush(hc, cis[i])
+    if l == k:
+        sc -= heappop(hc)
+    else:
+        l += 1
 
 print(' '.join(map(str, res)))
-

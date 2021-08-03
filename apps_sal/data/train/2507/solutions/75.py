@@ -10,4 +10,3 @@ class Solution:
             if len(d1 - d) == 0:
                 ans += sum(d1.values())
         return ans
-

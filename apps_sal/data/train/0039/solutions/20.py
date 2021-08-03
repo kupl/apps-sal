@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    a,b,p = map(int,input().split())
+    a, b, p = map(int, input().split())
     sl = list(input())
     before = ""
     for idx, i in enumerate(sl[::-1][1:]):

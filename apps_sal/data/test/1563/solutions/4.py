@@ -15,4 +15,3 @@ for colour in count:
     elif len(count[colour]) == mx and colour < ans:
         ans = colour
 print(ans)
-

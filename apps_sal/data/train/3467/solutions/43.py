@@ -10,7 +10,6 @@
 # The coefficient and exponent is always a positive integer.
 
 def integrate(coefficient, exponent):
-    number = str(int(coefficient/(exponent+1)))
+    number = str(int(coefficient / (exponent + 1)))
     power = str(exponent + 1)
-    return number + "x" + "^" + power 
-
+    return number + "x" + "^" + power

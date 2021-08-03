@@ -31,4 +31,3 @@ for _ in range(int(input())):
         ans = max(ans, cnt)
 
     print(ans)
-

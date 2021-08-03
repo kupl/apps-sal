@@ -1,5 +1,5 @@
 from math import gcd
-MOD = 10**9+7
+MOD = 10**9 + 7
 N = int(input())
 d = {}
 zero = 0
@@ -35,10 +35,9 @@ for _ in range(N):
 
 ans = 1
 for (a, b), (k, l) in list(d.items()):
-    ans *= (pow(2, k, MOD)-1 + pow(2, l, MOD)-1 + 1)  # 最後の+1はどちらからも選ばなかったパターン
+    ans *= (pow(2, k, MOD) - 1 + pow(2, l, MOD) - 1 + 1)  # 最後の+1はどちらからも選ばなかったパターン
     ans %= MOD
 ans -= 1
 ans += zero
 ans %= MOD
 print(ans)
-

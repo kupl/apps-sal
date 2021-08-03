@@ -18,13 +18,12 @@ else:
     if n > b:
         l = hand[n - b]
         lost = max(0, l[0] - l[1])
-        for creature in hand[:n-b]:
+        for creature in hand[:n - b]:
             best = max(best, (creature[0] << a) - creature[1] - lost)
 
-    for creature in hand[max(0,n-b):]:
+    for creature in hand[max(0, n - b):]:
         best = max(best, (creature[0] << a) - max(creature))
 
-    print((sum(creature[1] for creature in hand)
-          + sum(max(0, creature[0] - creature[1]) for creature in hand[max(0,n-b):])
-          + best))
-
+    print((sum(creature[1] for creature in hand) +
+          sum(max(0, creature[0] - creature[1]) for creature in hand[max(0, n-b):]) +
+          best))

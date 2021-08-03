@@ -1,8 +1,20 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
 
 sys.setrecursionlimit(10**7)
 inf = 10**20
 mod = 10**9 + 7
+
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
 def LF(): return [float(x) for x in sys.stdin.readline().split()]
@@ -13,7 +25,7 @@ def S(): return input()
 
 
 def main():
-    n,q = LI()
+    n, q = LI()
     nn = n
     k = 0
     while nn > 0:
@@ -33,7 +45,7 @@ def main():
 
         for c in s:
             if c == 'U':
-                if ti == k-1:
+                if ti == k - 1:
                     continue
                 if t & ii[ti]:
                     t ^= ii[ti]
@@ -55,4 +67,3 @@ def main():
 
 
 print(main())
-

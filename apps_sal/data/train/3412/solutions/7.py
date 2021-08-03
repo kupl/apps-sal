@@ -1,10 +1,14 @@
 from functools import reduce
+
+
 def f(n):
     facts = factorization(n)
     return mul(power * prime ** (power - 1) for prime, power in facts)
 
+
 def mul(ar):
-    return reduce(lambda x,y:x*y, ar)
+    return reduce(lambda x, y: x * y, ar)
+
 
 def factorization(n):
     result = []
@@ -17,6 +21,6 @@ def factorization(n):
                 n /= i
             result.append((i, power))
         i += 1
-    if n > 1: result.append((n, 1))
+    if n > 1:
+        result.append((n, 1))
     return result
-

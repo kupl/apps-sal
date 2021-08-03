@@ -1,33 +1,34 @@
 from sys import stdin
-nii=lambda:map(int,stdin.readline().split())
-lnii=lambda:list(map(int,stdin.readline().split()))
+def nii(): return map(int, stdin.readline().split())
+def lnii(): return list(map(int, stdin.readline().split()))
 
-n,x,m=nii()
 
-ans=x
-x_list=[x]
-x_table=[0 for i in range(m+1)]
-x_table[x]=1
+n, x, m = nii()
 
-for i in range(1,n):
-  x=(x**2)%m
+ans = x
+x_list = [x]
+x_table = [0 for i in range(m + 1)]
+x_table[x] = 1
 
-  if x_table[x]!=0:
-    inx=x_list.index(x)
-    loop=x_list[inx:]
-    zan=n-i
+for i in range(1, n):
+    x = (x**2) % m
 
-    p=zan//len(loop)
-    q=zan%len(loop)
+    if x_table[x] != 0:
+        inx = x_list.index(x)
+        loop = x_list[inx:]
+        zan = n - i
 
-    ans+=sum(loop)*p
-    ans+=sum(loop[:q])
+        p = zan // len(loop)
+        q = zan % len(loop)
 
-    break
+        ans += sum(loop) * p
+        ans += sum(loop[:q])
 
-  else:
-    ans+=x
-    x_list.append(x)
-    x_table[x]+=1
+        break
+
+    else:
+        ans += x
+        x_list.append(x)
+        x_table[x] += 1
 
 print(ans)

@@ -10,4 +10,3 @@ for a, b in ab:
     if num_sum >= k:
         print(a)
         return
-

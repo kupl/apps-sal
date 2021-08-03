@@ -65,4 +65,3 @@ def dfs(u, p):  # 現在のuと親のp
 
 
 print((dfs(0, -1)))
-

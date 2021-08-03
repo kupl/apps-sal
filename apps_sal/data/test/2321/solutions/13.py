@@ -12,5 +12,4 @@ for _ in range(t):
         if c == '<':
             break
         cr += 1
-    print(min(cl,cr))
-
+    print(min(cl, cr))

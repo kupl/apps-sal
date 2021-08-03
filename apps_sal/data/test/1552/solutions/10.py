@@ -14,4 +14,3 @@ for i in range(count):
     a += 1
     b += 1
     c += 1
-

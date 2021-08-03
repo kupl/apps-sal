@@ -1,5 +1,7 @@
 import heapq
 from collections import defaultdict
+
+
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         heap = []
@@ -17,4 +19,3 @@ class Solution:
                 k -= top[0]
                 heapq.heappop(heap)
         return len(heap)
-

@@ -7,7 +7,6 @@ for i in range(n):
 for i in range(m):
     ln.append(3)
 for x in itertools.combinations(ln, 2):
-    if (x[0]+x[1]) % 2 == 0:
+    if (x[0] + x[1]) % 2 == 0:
         ans += 1
 print(ans)
-

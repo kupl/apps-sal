@@ -24,4 +24,3 @@ else:
     config[ans[0]][ans[2] - 1] = '+'
     for row in config:
         print(''.join(row))
-

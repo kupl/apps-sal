@@ -8,4 +8,3 @@ if len(s) == 2 and a.count(s[0]) == a.count(s[1]):
     print(*s)
 else:
     print('NO')
-

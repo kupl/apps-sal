@@ -9,12 +9,12 @@ a.reverse()
 
 inf = float('inf')
 N = 19
-dp = [[inf] * (N+2) for _ in range(1 << N)]
+dp = [[inf] * (N + 2) for _ in range(1 << N)]
 
 sum = [0] * (1 << 21)
 now = n
 for i in range(1, 20):
-    sum[i] = sum[i-1] + now // 2
+    sum[i] = sum[i - 1] + now // 2
     now //= 2
 
 

@@ -11,4 +11,3 @@ for i in range(N + 1):
     for a in A:
         dp[i + M_lst[a]] = max(dp[i + M_lst[a]], dp[i] * 10 + a)
 print((dp[N]))
-

@@ -6,11 +6,11 @@ def escape(maze):
     paths = [[i, j, face, []]]
     while paths:
         i, j, face, path = paths.pop(0)
-        if i == 0 or i+1 == h or j == 0 or j+1 == w:
+        if i == 0 or i + 1 == h or j == 0 or j + 1 == w:
             return path
         for step, mi, mj, new_face in directions(i, j, face):
             if maze[mi][mj] != '#':
-                paths.append([mi, mj, new_face, path+step])
+                paths.append([mi, mj, new_face, path + step])
                 maze[mi][mj] = '#'
     return []
 
@@ -25,8 +25,7 @@ def find_self(maze):
 
 def directions(i, j, face):
     fi, fj = face
-    return [[['F'],      i+fi, j+fj, face], 
-            [['L', 'F'], i-fj, j+fi, (-fj, fi)],
-            [['R', 'F'], i+fj, j-fi, (fj, -fi)],
-            [['B', 'F'], i-fi, j-fj, (-fi, -fj)]]
-
+    return [[['F'], i + fi, j + fj, face],
+            [['L', 'F'], i - fj, j + fi, (-fj, fi)],
+            [['R', 'F'], i + fj, j - fi, (fj, -fi)],
+            [['B', 'F'], i - fi, j - fj, (-fi, -fj)]]

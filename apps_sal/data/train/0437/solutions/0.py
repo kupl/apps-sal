@@ -16,4 +16,3 @@ class Solution:
                 size /= int(c)
             else:
                 size -= 1
-

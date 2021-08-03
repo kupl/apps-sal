@@ -55,7 +55,7 @@ class Solution:
                 ua = points[i][0] + base * points[i][1]
                 va = points[j][0] + base * points[j][1]
 
-                t = (ua, va), abs(u[0] - v[0])  + abs(u[1] - v[1])
+                t = (ua, va), abs(u[0] - v[0]) + abs(u[1] - v[1])
                 egs.append(t)
 
         egs.sort(key=lambda x: x[1])
@@ -75,5 +75,3 @@ class Solution:
                     break
 
         return ans
-
-

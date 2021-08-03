@@ -1,3 +1,3 @@
 X, Y = map(int, input().split())
 
-print(X + int(Y/2))
+print(X + int(Y / 2))

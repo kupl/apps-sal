@@ -1,8 +1,8 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        amount_list = [i for i in range(amount+1)]
-        
-        for i in range(amount+1):
+        amount_list = [i for i in range(amount + 1)]
+
+        for i in range(amount + 1):
             if i == 0:
                 amount_list[i] = 0
             elif i in coins:
@@ -19,5 +19,5 @@ class Solution:
                     amount_list[i] = -1
                 else:
                     amount_list[i] = min(temp) + 1
-                    
+
         return amount_list[amount]

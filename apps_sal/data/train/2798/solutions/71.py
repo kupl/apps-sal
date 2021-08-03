@@ -5,6 +5,6 @@ def to_alternating_case(string):
             resultStr += k.upper()
         elif k.isupper():
             resultStr += k.lower()
-        else: 
+        else:
             resultStr += k
     return resultStr

@@ -11,7 +11,7 @@ for _ in range(int(input())):
     A.append(d - sum(A))
     ans = 1
     for x in A:
-        ans *= (x+1)
+        ans *= (x + 1)
         ans %= m
     ans -= 1
     ans %= m

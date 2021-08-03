@@ -15,4 +15,3 @@ for s in sys.stdin:
         p >>= 1
         t[j + 1][p] = (or_, xor)[j & 1](*t[j][p << 1: (p << 1) + 2])
     print(t[-1][0])
-

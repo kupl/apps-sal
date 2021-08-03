@@ -6,4 +6,3 @@ def find_longest(arr):
         list1.append(z)
         y = list1.index(max(list1))
     return arr[y]
-

@@ -47,7 +47,6 @@ def main():
             add(bound, r, c, x1, y1, i)
             add(bound, r, c, x2, y2, i)
 
-
     print(('YES' if solve(bound) else 'NO'))
 
 

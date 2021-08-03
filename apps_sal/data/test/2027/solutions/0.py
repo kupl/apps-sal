@@ -6,5 +6,6 @@ def main():
     for i in range(n):
         ans.append(arr[i] + arr[i + 1])
     print(*ans)
-    
+
+
 main()

@@ -3,8 +3,8 @@ def getmin(s):
     if ls % 2 == 1:
         return s
 
-    s1 = getmin(s[:ls//2])
-    s2 = getmin(s[ls//2:])
+    s1 = getmin(s[:ls // 2])
+    s2 = getmin(s[ls // 2:])
     return s1 + s2 if s1 < s2 else s2 + s1
 
 

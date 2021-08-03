@@ -1,4 +1,4 @@
-def merge_arrays(first, second): 
+def merge_arrays(first, second):
     m_tup = set(first + second)
     n_tup = list(m_tup)
     n_tup.sort()

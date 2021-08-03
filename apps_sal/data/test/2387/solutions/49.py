@@ -10,7 +10,7 @@ for t in s:
     u.append((close_cnt, tmp - close_cnt))
 M = 10**6 + 1
 acc = 0
-for a, b in sorted(u, key=lambda z: (- M - z[0] if sum(z)>= 0 else M - z[1])):
+for a, b in sorted(u, key=lambda z: (- M - z[0] if sum(z) >= 0 else M - z[1])):
     if acc + a < 0:
         print("No")
         return

@@ -20,4 +20,3 @@ for i in range(2, m + 1):
 if m == 1:
     ans = -1
 print(ans)
-

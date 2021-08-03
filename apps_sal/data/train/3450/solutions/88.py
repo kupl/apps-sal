@@ -6,5 +6,3 @@ def array(string):
         string.pop(0)
         string.pop(len(string) - 1)
     return ' '.join(string)
-        
-

@@ -6,7 +6,6 @@ def logical_calc(array, op):
         return (True in array)
     status = False
     for bool in array:
-        status = bool ^ status  
-        
-    return status
+        status = bool ^ status
 
+    return status

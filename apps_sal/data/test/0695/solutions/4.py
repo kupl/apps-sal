@@ -11,4 +11,3 @@ while(i < 32 * 32 + 33):
 
 a1, a2 = list(map(int, input().split()))
 print(k[a1][a2])
-

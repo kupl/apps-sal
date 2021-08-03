@@ -23,4 +23,3 @@ for item in my_dict:
         ret += val * (val - 1) // 2
 
 print(ret)
-

@@ -6,6 +6,7 @@ import io
 
 from collections import Counter
 
+
 def solve(n, vs):
     # vs: votes
     assert 2 <= n <= 1000
@@ -141,7 +142,9 @@ def getstdin_lines():
             break
     return stdin
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

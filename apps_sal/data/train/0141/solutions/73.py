@@ -13,5 +13,3 @@ class Solution:
                 i = i + 1
                 j = j - 1
         return(count)
-                
-

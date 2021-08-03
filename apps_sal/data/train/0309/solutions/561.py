@@ -1,6 +1,8 @@
 from collections import defaultdict, Counter
+
+
 class Solution:
-    def longestArithSeqLength(self, A: List[int]) -> int:        
+    def longestArithSeqLength(self, A: List[int]) -> int:
         dp = defaultdict(lambda: defaultdict(lambda: 1))
         best = 0
         for i in range(len(A)):
@@ -13,5 +15,3 @@ class Solution:
             dp[num][0] = max(dp[num][0], 1)
             best = max(dp[num][0], best)
         return best
-                
-

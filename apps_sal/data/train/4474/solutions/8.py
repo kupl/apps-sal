@@ -1,4 +1,4 @@
-def start_smoking(bars,boxes):
+def start_smoking(bars, boxes):
     cigarettes = bars * 10 * 18 + boxes * 18
     smoked = 0
     leftovers = 0

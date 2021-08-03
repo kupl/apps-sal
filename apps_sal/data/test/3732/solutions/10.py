@@ -13,4 +13,3 @@ else:
         x, y = max(x, y), x + y
         cnt += 1
     print(cnt)
-

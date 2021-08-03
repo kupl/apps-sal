@@ -1,6 +1,6 @@
-n= int(input())
-a=list(map(int,input().strip().split()))
-t= int(input())
+n = int(input())
+a = list(map(int, input().strip().split()))
+t = int(input())
 for i in range(t):
-    j=int(input())
-    print(a.pop(j-1))
+    j = int(input())
+    print(a.pop(j - 1))

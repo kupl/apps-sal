@@ -7,7 +7,7 @@ class Solution:
             if char >= max_char:
                 max_char = char
                 chars.append(i)
-        
+
         max_string = ''
         # now build the max substring from the chars array
         for idx in chars:

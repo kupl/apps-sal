@@ -18,4 +18,3 @@ elif some_pow:
     print(d)
 else:
     print(1)
-

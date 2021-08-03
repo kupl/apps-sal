@@ -5,12 +5,9 @@ class Solution:
         left = 0
         right = len(piles) - 1
 
-        
         while (left < right):
             ret += piles[right - 1]
             left += 1
             right -= 2
-            
-            
-        return ret
 
+        return ret

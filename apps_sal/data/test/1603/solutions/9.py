@@ -2,11 +2,11 @@ count = int(input())
 v = [int(c) for c in input().split()]
 vsort = v[:]
 vsort.sort()
-sumV = [0,v[0]]
-sumVS = [0,vsort[0]]
-for i in range(1,count):
-    sumV.append(sumV[i]+v[i])
-    sumVS.append(sumVS[i]+vsort[i])
+sumV = [0, v[0]]
+sumVS = [0, vsort[0]]
+for i in range(1, count):
+    sumV.append(sumV[i] + v[i])
+    sumVS.append(sumVS[i] + vsort[i])
 
 qc = int(input())
 

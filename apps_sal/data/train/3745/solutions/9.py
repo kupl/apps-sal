@@ -3,6 +3,7 @@ def get_key(d, value):
         if v == value:
             return k
 
+
 def encode(message, key, initShift):
     new_key = ''
     for i in key:

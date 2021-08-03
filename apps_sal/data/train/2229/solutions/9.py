@@ -1,9 +1,12 @@
 import sys
 
 # listindexes is sorted
+
+
 def removeat(string, indexes):
 
     return [c for i, c in enumerate(string) if i not in indexes]
+
 
 def contains(string, what):
 
@@ -21,22 +24,21 @@ def contains(string, what):
 
     return checked == len(what)
 
+
 string = list(input())
 what = list(input())
-indexes = [i-1 for i in map(int, input().split())]
+indexes = [i - 1 for i in map(int, input().split())]
 
 first = 0
-last = len(indexes)-1
+last = len(indexes) - 1
 
-while first<last:
+while first < last:
 
-    midpoint = first + (last - first)//2 + (last - first)%2
-    
+    midpoint = first + (last - first) // 2 + (last - first) % 2
+
     if contains(removeat(string, set(indexes[:midpoint])), what):
         first = midpoint
     else:
-        last = midpoint-1
+        last = midpoint - 1
 
 print(first)
-
-

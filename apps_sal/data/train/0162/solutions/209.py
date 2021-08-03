@@ -1,5 +1,5 @@
 class Solution:
-    
+
     def _longest_common_subsequence(self, s1, s2, cache):
         if (s1, s2) in cache:
             return cache[(s1, s2)]
@@ -14,6 +14,6 @@ class Solution:
             answer = max(self._longest_common_subsequence(s1, s2[:-1], cache), self._longest_common_subsequence(s1[:-1], s2, cache))
             cache[(s1, s2)] = answer
             return answer
-    
+
     def longestCommonSubsequence(self, s1: str, s2: str) -> int:
         return self._longest_common_subsequence(s1, s2, {})

@@ -19,4 +19,3 @@ for i in range(0, len(segs)):
             break
 
 print('yes' if intersect else 'no')
-

@@ -6,4 +6,3 @@ for i in input():
         result -= 1
 
 print(result)
-

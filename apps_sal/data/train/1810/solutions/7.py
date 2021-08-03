@@ -10,9 +10,8 @@ class Solution:
                 j = 1
                 new_name = f'{name}({j})'
                 while new_name in created_fld:
-                    j+=1
+                    j += 1
                     new_name = f'{name}({j})'
                 created_fld.add(new_name)
                 result_set.append(new_name)
         return result_set
-

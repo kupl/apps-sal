@@ -1,7 +1,8 @@
-#Codeforces Round #479
-#Problem D
+# Codeforces Round #479
+# Problem D
 
 from sys import stdin, stdout
+
 
 def main():
     n = int(stdin.readline())
@@ -10,8 +11,8 @@ def main():
     for v in a:
         v3 = 0
         vc = v
-        while vc%3 == 0:
-            vc = vc//3
+        while vc % 3 == 0:
+            vc = vc // 3
             v3 += 1
         temp = d.get(v3, [])
         temp.append(v)
@@ -26,6 +27,5 @@ def main():
         out += temp
     stdout.write(" ".join([str(i) for i in out]) + "\n")
 
-main()
-        
 
+main()

@@ -4,54 +4,56 @@ import sys
 readline = sys.stdin.readline
 read = sys.stdin.read
 
+
 def solve():
     s = input()
     n = len(s)
     if all(s[0] == k for k in s):
         return 1
-    
+
     somesame = 0
-    for j in range(n-1):
-        if s[j] == s[j+1]:
+    for j in range(n - 1):
+        if s[j] == s[j + 1]:
             somesame = 1
             break
 
-    x = [(ord(i)-1)%3 for i in s]
-    v = sum(x)%3
+    x = [(ord(i) - 1) % 3 for i in s]
+    v = sum(x) % 3
 
-    if n==2: return 2
-    if n==3:
-        if v==0: return 3
-        if somesame==0:
+    if n == 2:
+        return 2
+    if n == 3:
+        if v == 0:
+            return 3
+        if somesame == 0:
             return 7
         else:
             return 6
-    
-    dp = [[1,0,0],[0,1,0],[0,0,1]]
-    for _ in range(n-1):
-        ndp = [[0]*3 for i in range(3)]
+
+    dp = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+    for _ in range(n - 1):
+        ndp = [[0] * 3 for i in range(3)]
         for i in range(3):
             for j in range(3):
                 for k in range(3):
-                    if k == j: continue
-                    ndp[(i+k)%3][k] += dp[i][j]
-                    ndp[(i+k)%3][k] %= MOD
-        dp = ndp    
-        #for c in dp:
+                    if k == j:
+                        continue
+                    ndp[(i + k) % 3][k] += dp[i][j]
+                    ndp[(i + k) % 3][k] %= MOD
+        dp = ndp
+        # for c in dp:
         #    print(3**(_+1) - sum(c), end = " ")
-        #print(dp)
-        
-    c = pow(3,n-1,MOD)    
+        # print(dp)
+
+    c = pow(3, n - 1, MOD)
     c -= sum(dp[v])
-    if somesame==0:
+    if somesame == 0:
         c += 1
-    return c%MOD
-        
+    return c % MOD
 
-        
-MOD = 998244353    
+
+MOD = 998244353
 print(solve())
-
 
 
 """

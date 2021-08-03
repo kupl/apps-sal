@@ -1,9 +1,11 @@
 from sortedcontainers import SortedList
+
+
 class Solution:
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         hm = defaultdict(SortedList)
         res = set()
-        
+
         for name, time in zip(keyName, keyTime):
             int_time = self.get_time_as_int(time)
             hm[name].add(int_time)
@@ -12,7 +14,7 @@ class Solution:
             if self.check(hm[name]):
                 res.add(name)
         return sorted(res)
-    
+
     def check(self, arr):
         left = 0
         for right in range(len(arr)):
@@ -21,10 +23,9 @@ class Solution:
                     return True
                 left += 1
         return False
-    
+
     def get_time_as_int(self, time):
         t1 = time[:2]
         t2 = time[3:]
-        int_time = int(t1+t2)
+        int_time = int(t1 + t2)
         return int_time
-

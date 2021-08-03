@@ -2,8 +2,8 @@
 def nonDecreasing(N, A):
     Amin = min(A)
     Amax = max(A)
-    Amin_index = A.index(Amin)+1
-    Amax_index = A.index(Amax)+1
+    Amin_index = A.index(Amin) + 1
+    Amax_index = A.index(Amax) + 1
 
     res = []
 
@@ -13,10 +13,10 @@ def nonDecreasing(N, A):
         for i in range(1, N):
             while A[i - 1] > A[i]:
                 A[i] += Amax
-                res.append((Amax_index, i+1))
+                res.append((Amax_index, i + 1))
                 if A[i] > Amax:
                     Amax = A[i]
-                    Amax_index = i+1
+                    Amax_index = i + 1
 
     # 左をどんどん減らしていく
     # Aminは負の数のはず
@@ -39,5 +39,6 @@ def __starting_point():
     print((len(ans)))
     for a in ans:
         print((*a))
+
 
 __starting_point()

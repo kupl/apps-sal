@@ -11,17 +11,17 @@ else:
     f = 0
     s = 0
     c1 = a1[f]
-    c2 = a2[s]    
+    c2 = a2[s]
     while s + 1 < len(a2) and f + 1 < len(a1):
         if c1 == c2:
             f += 1
-            s += 1              
+            s += 1
             c += 1
             c1 = a1[f]
-            c2 = a2[s]             
+            c2 = a2[s]
         elif c1 > c2:
             s += 1
-            c2 += a2[s]            
+            c2 += a2[s]
         else:
             f += 1
             c1 += a1[f]

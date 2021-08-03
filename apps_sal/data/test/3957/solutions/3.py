@@ -1,6 +1,6 @@
 def bfs(source):
 
-    q = [0] * (n + 1);
+    q = [0] * (n + 1)
 
     fa = [-1] * n
 
@@ -18,7 +18,7 @@ def bfs(source):
 
         for y in e[x]:
 
-            if  fa[y] == -1:
+            if fa[y] == -1:
 
                 fa[y] = x
 
@@ -26,7 +26,7 @@ def bfs(source):
 
                 q[r] = y
 
-    i = r;
+    i = r
 
     while i >= 1:
 
@@ -43,8 +43,7 @@ def bfs(source):
         i -= 1
 
 
-
-n, m =[int(x) for x in input().split()]
+n, m = [int(x) for x in input().split()]
 
 m <<= 1
 
@@ -75,6 +74,4 @@ bfs(0)
 print(dp[0])
 
 
-
 # Made By Mostafa_Khaled
-

@@ -3,5 +3,5 @@ def number(lines):
     l = []
     for i in lines:
         n += 1
-        l.append(str(n) +': '+ i)
+        l.append(str(n) + ': ' + i)
     return l

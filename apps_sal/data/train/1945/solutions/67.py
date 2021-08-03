@@ -3,7 +3,7 @@ class Solution:
         for i, val in enumerate(row):
             row[i] = row[i] ^ 1
         return row
-       
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         # O(n^2) time, O(n) space
         seen = defaultdict(int)
@@ -12,9 +12,9 @@ class Solution:
                 seen[tuple(row)] += 1
             else:
                 seen[tuple(row)] += 1
-    
+
         result = 0
         for val in seen.values():
             result = max(result, val)
-        
+
         return result

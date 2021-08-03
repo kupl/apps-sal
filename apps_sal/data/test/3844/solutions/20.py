@@ -1,10 +1,10 @@
+from collections import Counter
 n = int(input().strip())
 ns = list(map(int, input().strip().split()))
 
-from collections import Counter
 
 cards = Counter(ns)
-#print(cards)
+# print(cards)
 
 # given largest cards, invariant is parity of copies
 parities = sorted([item for item in cards.items()], reverse=True)

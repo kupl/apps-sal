@@ -19,4 +19,3 @@ if curr_memory <= memory:
     print(steps)
 else:
     print(-1)
-

@@ -1,4 +1,4 @@
-# @author 
+# @author
 
 import sys
 
@@ -54,10 +54,10 @@ class DHarmoniousGraph:
             cc[g] = (min(cc[g][0], i), max(cc[g][1], i))
 
         ccs = [[g, cc[g][0], cc[g][1]] for g in cc]
-        ccs.sort(key=lambda x:x[1])
+        ccs.sort(key=lambda x: x[1])
 
         ans = 0
-        done = {g : 0 for g in cc}
+        done = {g: 0 for g in cc}
         for g, cur, r in ccs:
             if done[g]:
                 continue
@@ -77,8 +77,8 @@ class DHarmoniousGraph:
 
         print(ans)
 
+
 solver = DHarmoniousGraph()
 input = sys.stdin.readline
 
 solver.solve()
-

@@ -1,11 +1,12 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-f = [0]*n
-g = [0]*n
+f = [0] * n
+g = [0] * n
 for i in range(n):
-  f[i] = a[i] ^ a[(i+1)%n]
-  g[i] = b[i] ^ b[(i+1)%n]
+    f[i] = a[i] ^ a[(i + 1) % n]
+    g[i] = b[i] ^ b[(i + 1) % n]
+
 
 def KMP(S, W):
     ls, lw = len(S), len(W)
@@ -44,7 +45,9 @@ def _KMP_table(W):
             T[i] = 0
             i += 1
     return T
-res = KMP(f*2, g)
+
+
+res = KMP(f * 2, g)
 for x in res:
-  if x < n:
-    print(x, a[x]^b[0])
+    if x < n:
+        print(x, a[x] ^ b[0])

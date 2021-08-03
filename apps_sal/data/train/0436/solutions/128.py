@@ -3,7 +3,7 @@ class Solution:
         q = deque([n])
         days = 0
         visited = set()
-        
+
         while q:
             days += 1
             for _ in range(len(q)):
@@ -20,4 +20,3 @@ class Solution:
                 if node - 1 not in visited:
                     q.append(node - 1)
                     visited.add(node - 1)
-

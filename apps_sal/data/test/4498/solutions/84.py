@@ -1,14 +1,14 @@
-a,b,c,d=map(int,input().split())
+a, b, c, d = map(int, input().split())
 
-x=abs(b-a)
-y=abs(c-b)
-z=abs(c-a)
+x = abs(b - a)
+y = abs(c - b)
+z = abs(c - a)
 
 
-if x<=d and y<=d:
+if x <= d and y <= d:
     print('Yes')
 
-elif z<=d:
+elif z <= d:
     print('Yes')
 
 else:

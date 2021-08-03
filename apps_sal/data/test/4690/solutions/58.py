@@ -7,4 +7,3 @@ if rec1 >= rec2:
     print(rec1)
 else:
     print(rec2)
-

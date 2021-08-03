@@ -14,6 +14,8 @@
     Xは整数
     0 ≦ X ≦ 1,000,000,000
 '''
+
+
 class A:
     def __init__(self, money, yorokobi):
         self.money = money
@@ -24,10 +26,11 @@ class A:
 
     # def print_self(self):
         # print(calc_yorokobi(self, credit))
-# 
+#
 # def calc_yorokobi(input_money, x, yorokobi):
 #     ret = input_money // x * yorokobi
 #     return ret
+
 
 # 標準入力から X の値を取得する
 input_x = int(input())
@@ -53,4 +56,3 @@ print(result)
 # ret4 = ret3 // 5 # （X円から500円の枚数分を引いたお金）÷ 5
 # ret5 = ret4 * 5 # 高橋君 5円の喜び
 # print(ret2 + ret5)
-

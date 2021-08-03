@@ -16,4 +16,3 @@ for i in range(n):
     if (ans != L[i]):
         a = "NO"
 print(a)
-

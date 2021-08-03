@@ -12,4 +12,3 @@ for j in range(t):
     ans.append(k)
 for i in ans:
     print(i)
-

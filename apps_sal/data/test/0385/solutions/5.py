@@ -4,6 +4,7 @@ class Node:
         self.right = index + 1
         self.pair = -1
 
+
 def __starting_point():
     n, m, p = map(int, input().split())
     brackets = input()
@@ -27,7 +28,7 @@ def __starting_point():
             p = nodes[p].right
         else:
             pair_id = nodes[p].pair
-            
+
             left = min(p, pair_id)
             right = max(p, pair_id)
 
@@ -48,4 +49,6 @@ def __starting_point():
         p = nodes[p].right
 
     print("".join(result))
+
+
 __starting_point()

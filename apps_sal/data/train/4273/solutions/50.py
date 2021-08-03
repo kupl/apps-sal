@@ -1,8 +1,8 @@
 def shorten_to_date(d):
-    s=""
+    s = ""
     for i in d:
-        if i ==",":
+        if i == ",":
             break
         else:
-            s+=i
+            s += i
     return s

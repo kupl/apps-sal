@@ -1,1 +1,1 @@
-xor = lambda *_: _[0]^_[1]
+xor = lambda *_: _[0] ^ _[1]

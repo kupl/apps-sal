@@ -9,7 +9,6 @@ if n < 20:
     print(single[n])
 else:
     if n % 10 == 0:
-        print(dec[n//10 - 2])
+        print(dec[n // 10 - 2])
     else:
-        print(dec[n//10 - 2] + '-' + single[int(n%10)])
-
+        print(dec[n // 10 - 2] + '-' + single[int(n % 10)])

@@ -5,7 +5,7 @@ class Solution:
             counts = collections.Counter(b)
             for char, count in list(counts.items()):
                 max_counts[char] = max(max_counts[char], count)
-                
+
         universals = []
         for a in A:
             counts = collections.Counter(a)
@@ -14,6 +14,5 @@ class Solution:
                     break
             else:
                 universals.append(a)
-                
-        return universals
 
+        return universals

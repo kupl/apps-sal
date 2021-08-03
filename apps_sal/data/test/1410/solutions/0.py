@@ -5,10 +5,10 @@ input = sys.stdin.readline
 
 n = int(input())
 cost = [list(map(int, input().split())) for i in range(3)]
-info = [list(map(int, input().split())) for i in range(n-1)]
+info = [list(map(int, input().split())) for i in range(n - 1)]
 graph = [[] for i in range(n)]
 
-for i in range(n-1):
+for i in range(n - 1):
     a, b = info[i]
     a -= 1
     b -= 1
@@ -25,7 +25,7 @@ for i, j in enumerate(graph):
         start = i
         break
 
-visited = [-1]*n
+visited = [-1] * n
 visited[start] = 0
 q = deque([start])
 
@@ -48,7 +48,7 @@ for ptn in [[0, 1, 2], [0, 2, 1], [1, 0, 2], [1, 2, 0], [2, 0, 1], [2, 1, 0]]:
         ind = ptn[0:]
 
 print(ans)
-new_ans = [0]*n
+new_ans = [0] * n
 for i in range(n):
     new_ans[i] = ind[visited[i]] + 1
 print(*new_ans)

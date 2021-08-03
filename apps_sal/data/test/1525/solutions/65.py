@@ -28,4 +28,3 @@ for h in range(2, H + 1):
         dp[h][k] %= p
 
 print((dp[H][K]))
-

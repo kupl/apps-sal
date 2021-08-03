@@ -1,1 +1,1 @@
-bonus_time = lambda salary, bonus: '${}'.format(salary * 10 if bonus else salary)    
+def bonus_time(salary, bonus): return '${}'.format(salary * 10 if bonus else salary)

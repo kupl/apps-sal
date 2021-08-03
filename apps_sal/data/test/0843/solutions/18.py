@@ -17,4 +17,5 @@ def __starting_point():
             print('INFINITE')
             break
 
+
 __starting_point()

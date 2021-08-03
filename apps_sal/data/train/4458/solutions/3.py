@@ -15,4 +15,3 @@ def time_correct(t: Union[str, None]) -> Union[str, None]:
         m, s = divmod(m, 60)
 
         return f"{h % 24:02}:{m:02}:{s:02}"
-

@@ -7,8 +7,7 @@ for i in range(N):
 
 h = sorted(h)
 
-for j in range(N-K+1):
-    if ans > h[j+K-1]-h[j]:
-        ans = h[j+K-1]-h[j]
+for j in range(N - K + 1):
+    if ans > h[j + K - 1] - h[j]:
+        ans = h[j + K - 1] - h[j]
 print(ans)
-

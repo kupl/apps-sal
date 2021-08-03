@@ -22,23 +22,23 @@ def _read_ints():
 def find_good_pairs_n(sequence, k):
     sequence = tuple(sequence)
     factors_seq = tuple(map(_find_prime_factors, sequence))
-    
+
     factors_seq = [[(kv[0], kv[1] % k) for kv in list(factors.items())] for factors in factors_seq]
     factors_seq = [[kv for kv in factors if kv[1] > 0] for factors in factors_seq]
     factors_seq = list(map(sorted, factors_seq))
     factors_seq = tuple(map(tuple, factors_seq))
-    
+
     counter = defaultdict(int)
     for factors in factors_seq:
         counter[factors] += 1
-    
+
     result = 0
     for factors in factors_seq:
         necessary_factors = tuple((factor, k - amount) for factor, amount in factors)
         result += counter[necessary_factors]
         if factors == necessary_factors:
             result -= 1
-    
+
     assert result % 2 == 0
     result //= 2
     return result
@@ -46,14 +46,14 @@ def find_good_pairs_n(sequence, k):
 
 def _find_prime_factors(x):
     result = dict()
-    
+
     if x % 2 == 0:
         factor_2_n = 0
         while x & 1 == 0:
             x >>= 1
             factor_2_n += 1
         result[2] = factor_2_n
-    
+
     factor = 3
     while x != 1 and factor * factor <= x:
         if x % factor == 0:
@@ -72,5 +72,6 @@ def _find_prime_factors(x):
 
 def __starting_point():
     main()
+
 
 __starting_point()

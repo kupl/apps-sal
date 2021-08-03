@@ -7,4 +7,3 @@ for i in range(K + 1):
             count += 1
 
 print(count)
-

@@ -21,7 +21,6 @@ def test(a, s):
         if tof:
             return [-1]
     return k
-        
 
 
 k = ['', '', '', '']
@@ -62,5 +61,3 @@ r = test(a, m)
 if r != [-1]:
     for i in r:
         print(i, end='')
-
-

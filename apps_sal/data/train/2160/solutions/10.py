@@ -1,7 +1,7 @@
-n,k = list(map(int, input().split()))
-s = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
+s = list(map(int, input().split()))
 _sum = sum(s)
-if( _sum % k != 0):
+if(_sum % k != 0):
     print("No")
     return
 V = _sum // k
@@ -12,7 +12,7 @@ count = 0
 ans = []
 while idx < len(s):
     current_val += s[idx]
-    count+=1
+    count += 1
     if(current_val > V):
         print("No")
         return
@@ -20,7 +20,6 @@ while idx < len(s):
         ans.append(count)
         count = 0
         current_val = 0
-    idx+=1
+    idx += 1
 print("Yes")
-print(' '.join(list(map(str,ans))))
-
+print(' '.join(list(map(str, ans))))

@@ -26,4 +26,5 @@ def main():
     res = max(res, counter[0])
     print(res)
 
+
 main()

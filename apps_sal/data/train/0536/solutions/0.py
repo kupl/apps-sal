@@ -1,5 +1,5 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for i in range(t):
- (n,k)=tuple(map(int,input().split()))
- print(k//n)
+    (n, k) = tuple(map(int, input().split()))
+    print(k // n)

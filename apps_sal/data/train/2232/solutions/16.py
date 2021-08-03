@@ -10,4 +10,3 @@ for i in range(1, N + 1):
         tmp1 = tmp2
         tmp2 //= i
         tmp2 *= (i + 2)
-

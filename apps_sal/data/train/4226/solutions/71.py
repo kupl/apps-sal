@@ -10,5 +10,3 @@ def remove_smallest(numbers):
         new_numbers = numbers.copy()
         new_numbers.remove(smallest)
         return new_numbers
-
-

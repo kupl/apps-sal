@@ -5,7 +5,7 @@ class Solution:
 
         ans = 0
         for k, c in enumerate(A):
-            for j in range(k-1, k//2-2, -1):
+            for j in range(k - 1, k // 2 - 2, -1):
                 i = index.get(c - A[j], None)
                 if i is not None and i < j:
                     cand = longest[j, k] = longest[i, j] + 1

@@ -8,12 +8,11 @@ for i in range(n):
         d[val] = 1
 for i in list(d.keys()):
     for j in list(d.keys()):
-        if i==j:
+        if i == j:
             continue
         if d[i] == d[j]:
-            if d[i]+d[j] == n:
+            if d[i] + d[j] == n:
                 print('YES')
-                print(i,j)
+                print(i, j)
                 quit()
 print('NO')
-

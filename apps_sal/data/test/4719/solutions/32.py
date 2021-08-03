@@ -1,5 +1,5 @@
-N = int(input())
 from collections import Counter
+N = int(input())
 S = [Counter(input()) for _ in range(N)]
 
 x = S[0]

@@ -8,8 +8,8 @@ try:
         if a > b:
             flag = True
             a, b = b, a
-        if 6*n <= a * b:
-            print(a*b)
+        if 6 * n <= a * b:
+            print(a * b)
             res = str(a) + " " + str(b)
             print(res)
             continue
@@ -17,14 +17,14 @@ try:
         i = a
         ans1 = 0
         ans2 = 0
-        while i*i <= 6 * n:
-            tmp = 6*n//i
+        while i * i <= 6 * n:
+            tmp = 6 * n // i
             if tmp * i < 6 * n:
                 tmp += 1
             if tmp < b:
                 i += 1
                 continue
-            if i*tmp < res:
+            if i * tmp < res:
                 res = i * tmp
                 ans1 = i
                 ans2 = tmp
@@ -38,4 +38,3 @@ try:
 
 except EOFError:
     pass
-

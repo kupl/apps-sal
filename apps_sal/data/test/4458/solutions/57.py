@@ -1,5 +1,5 @@
 n = int(input())
-p = list(map(int,input().split()))
+p = list(map(int, input().split()))
 ans = 0
 m = 10**18
 

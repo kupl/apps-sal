@@ -15,8 +15,8 @@ for i in range(N):
 count = 0
 for i in range(N):
     distance = X[i]**2 + Y[i]**2
-    if distance <= D*D:
+    if distance <= D * D:
         count += 1
 
 # 結果
-print(count)    
+print(count)

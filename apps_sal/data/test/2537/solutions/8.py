@@ -1,13 +1,14 @@
 from collections import defaultdict as dd, deque
 q = int(input())
 
+
 def solve():
     def f(x):
         C = dd(int)
         for a in x:
             C[a] += 1
         return C
-    
+
     s = input()
     t = input()
     p = input()
@@ -39,11 +40,10 @@ def solve():
                 return False
             j += 1
     return i == len(s) and j == len(t)
-    
+
 
 for _ in range(q):
     if solve():
         print('YES')
     else:
         print('NO')
-

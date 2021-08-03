@@ -14,7 +14,7 @@ for i in range(1, M + 1):
     p.append(an)
     a = an
 
-q = p[r[an] :]
+q = p[r[an]:]
 p = p[: r[an]]
 
 if N <= len(p):
@@ -27,4 +27,3 @@ else:
     ans += sum(q[:b])
 
 print(ans)
-

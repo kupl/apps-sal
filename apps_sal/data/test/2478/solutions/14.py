@@ -12,12 +12,12 @@ def main2():
                 pair[1] = i
                 break
         if pair[0] != -1 and pair[1] != -1:
-            s = s[:pair[0]] + ' ' + s[pair[0]+1:pair[1]] + ' ' + s[pair[1]+1:]
+            s = s[:pair[0]] + ' ' + s[pair[0] + 1:pair[1]] + ' ' + s[pair[1] + 1:]
         elif pair[0] != -1 and pair[1] == -1:
-            s = s[:pair[0]] + ' ' + s[pair[0]+1:]
+            s = s[:pair[0]] + ' ' + s[pair[0] + 1:]
             ans = ans + ')'
         elif pair[0] == -1 and pair[1] != -1:
-            s = s[:pair[1]] + ' ' + s[pair[1]+1:]
+            s = s[:pair[1]] + ' ' + s[pair[1] + 1:]
             ans = '(' + ans
         pair = [-1] * 2
     print(ans)
@@ -25,4 +25,6 @@ def main2():
 
 def __starting_point():
     main2()
+
+
 __starting_point()

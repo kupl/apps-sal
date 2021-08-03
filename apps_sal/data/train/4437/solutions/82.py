@@ -1,5 +1,5 @@
 def cookie(x):
-    if x==26:
+    if x == 26:
         return "Who ate the last cookie? It was Monica!"
     if isinstance(x, str):
         return "Who ate the last cookie? It was Zach!"

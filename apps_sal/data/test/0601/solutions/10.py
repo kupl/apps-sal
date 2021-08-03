@@ -1,4 +1,5 @@
-from math import  ceil, sqrt
+from math import ceil, sqrt
+
 
 def main():
     t = int(input())
@@ -18,5 +19,6 @@ def main():
             g = min(count_b - l, (f - r * a) // b)
             ans = max(ans, i + l + r + g)
         print(ans)
+
 
 main()

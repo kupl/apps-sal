@@ -3,4 +3,3 @@ def greet(name, owner):
         return 'Hello guest'
     elif owner == name:
         return 'Hello boss'
-

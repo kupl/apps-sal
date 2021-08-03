@@ -4,13 +4,15 @@ class Employee:
         self.inf_time = inf_time
         self.subs = []
 
-class Solution:            
+
+class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         subs_dct = defaultdict(list)
         for empl, manager in enumerate(manager):
             subs_dct[manager].append(empl)
-        
+
         root = Employee(headID, informTime[headID])
+
         def makeTree(node):
             for sub in subs_dct[node.idx]:
                 node.subs.append(Employee(
@@ -20,11 +22,12 @@ class Solution:
             for sub_node in node.subs:
                 makeTree(sub_node)
         makeTree(root)
-        
+
         total = 0
+
         def dfs(node):
             if not node.subs:
                 return node.inf_time
             return max([dfs(sub_node) for sub_node in node.subs])
-        
+
         return dfs(root)

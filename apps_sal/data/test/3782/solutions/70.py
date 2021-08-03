@@ -1,10 +1,10 @@
 import sys
 input = sys.stdin.readline
 
+
 def I(): return int(input())
 def MI(): return list(map(int, input().split()))
 def LI(): return list(map(int, input().split()))
-
 
 """
 各Aiについて「その数を選ばないで，何回の行動ができますか」がわかればいけるかも?
@@ -37,64 +37,62 @@ Yを決め打てば，Y未満は選べなくなるのでいけそう．
 Xを最小化したいので，使える数字をしたから選んでいく
 
 """
+
+
 def main():
-    mod=10**9+7
-    N,K,Q=MI()
-    A=LI()
-    inf=10**10
-    
-    if Q==1:
+    mod = 10**9 + 7
+    N, K, Q = MI()
+    A = LI()
+    inf = 10**10
+
+    if Q == 1:
         print((0))
         return()
-    
+
     def calc(Y):
         # Yを決め打つ
-        L=[]#消せる数字
-        temp=[]#今見ている区間
+        L = []  # 消せる数字
+        temp = []  # 今見ている区間
         for a in A:
-            if a>=Y:
+            if a >= Y:
                 temp.append(a)
             else:
-                if len(temp)>=K:
+                if len(temp) >= K:
                     temp.sort()
-                    #消せる=上位勢を除いた数字を追加
-                    if K>1:
-                        L+=temp[:-(K-1)]
+                    # 消せる=上位勢を除いた数字を追加
+                    if K > 1:
+                        L += temp[:-(K - 1)]
                     else:
-                        L+=temp
-                    
-                    
-                temp=[]
-        
+                        L += temp
+
+                temp = []
+
         # 最後の方に小さい数字がない場合の処理
-        if len(temp)>=K:
+        if len(temp) >= K:
             temp.sort()
             # print(temp[:-(K-1)])
-            if K>1:
-                L+=temp[:-(K-1)]
+            if K > 1:
+                L += temp[:-(K - 1)]
             else:
-                L+=temp
+                L += temp
         L.sort()
-        
+
         # print(Y,L)
         # print("---")
-        if len(L)>=Q:
-            return L[Q-1]
+        if len(L) >= Q:
+            return L[Q - 1]
         else:
             return inf
-        
-    ans=inf
-    
+
+    ans = inf
+
     for b in A:
-        y=b
-        x=calc(y)
-        temp=x-y
-        ans=min(ans,temp)
-        
+        y = b
+        x = calc(y)
+        temp = x - y
+        ans = min(ans, temp)
+
     print(ans)
-    
-        
-            
+
 
 main()
-

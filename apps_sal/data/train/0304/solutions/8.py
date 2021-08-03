@@ -41,6 +41,7 @@
     O(1)
 '''
 
+
 class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
         def invert(a):

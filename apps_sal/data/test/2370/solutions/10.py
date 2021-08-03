@@ -14,4 +14,3 @@ else:
             if np.min(A[i] + A[j]) != A[i, j]:
                 ans += int(A[i, j])
     print(ans)
-

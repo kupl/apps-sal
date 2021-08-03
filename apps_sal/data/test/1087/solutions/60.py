@@ -13,7 +13,7 @@ for i in A:
             C[j][0] -= 1
 
 P = 0
-for j in range(L-1, -1, -1):
+for j in range(L - 1, -1, -1):
     if C[j][0] >= C[j][1]:
         if P + 2 ** j <= K:
             P += 2 ** j
@@ -23,5 +23,3 @@ for i in A:
     ans += P ^ i
 
 print(ans)
-
-

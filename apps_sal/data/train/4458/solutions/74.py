@@ -16,6 +16,4 @@ def time_correct(t):
         min %= 60
     if hour > 23:
         hour %= 24
-    return "%02d:%02d:%02d" %(hour, min, sec)
-    
-
+    return "%02d:%02d:%02d" % (hour, min, sec)

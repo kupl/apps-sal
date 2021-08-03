@@ -1,7 +1,7 @@
 class Solution:
     def maxProfitAssignment(self, difficulty, profit, worker):
-        
-        data = sorted([(d,p) for d,p in zip(difficulty, profit)])
+
+        data = sorted([(d, p) for d, p in zip(difficulty, profit)])
         worker.sort()
         i, n, money = 0, len(data), 0
         res = 0
@@ -11,7 +11,3 @@ class Solution:
                 i += 1
             res += money
         return res
-        
-        
-        
-

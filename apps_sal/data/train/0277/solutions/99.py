@@ -6,8 +6,8 @@ class Solution:
                 curSum += i
                 cumSum.append(curSum)
             return cumSum
-        
+
         cumSum = cumulative_sum(light)
-        cumSum_target = cumulative_sum(list(range(1, len(light)+1)))
-        
-        return sum([cumSum[i]==cumSum_target[i] for i in range(len(cumSum))])
+        cumSum_target = cumulative_sum(list(range(1, len(light) + 1)))
+
+        return sum([cumSum[i] == cumSum_target[i] for i in range(len(cumSum))])

@@ -1,5 +1,6 @@
 import re
-score_dict = {'Quaffle goal' : 10, 'Caught Snitch' : 150}
+score_dict = {'Quaffle goal': 10, 'Caught Snitch': 150}
+
 
 def quidditch_scoreboard(teams, actions):
     actions = re.sub(r'Caught Snitch.+', 'Caught Snitch', actions)

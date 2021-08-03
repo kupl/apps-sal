@@ -39,7 +39,7 @@ cc.add('7')
 cc.add('8')
 cc.add('9')
 cc.add('0')
-pp =''
+pp = ''
 pk = 0
 pr = 0
 for i in range(len(ans)):
@@ -75,7 +75,7 @@ if answer[-1] == '0' and answer[-2] == '0' and answer[-3] == '.':
 if answer[0] == '.':
     answer = answer[1:]
 print(answer)
-    
+
 """
         ans[j] = ans[j] * 10 + int(s[i])
     elif s[i] == '.':

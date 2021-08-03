@@ -2,7 +2,6 @@ class StockSpanner:
 
     def __init__(self):
         self.stack = []
-        
 
     def next(self, price: int) -> int:
         # stack, almost by myself. Idea is simple. Brute force - store prices in stack, and at every new price iterate all over stack. Innefficient!
@@ -17,10 +16,8 @@ class StockSpanner:
         self.stack.append([price, result])
         print((self.stack))
         return result
-        
 
 
 # Your StockSpanner object will be instantiated and called as such:
 # obj = StockSpanner()
 # param_1 = obj.next(price)
-

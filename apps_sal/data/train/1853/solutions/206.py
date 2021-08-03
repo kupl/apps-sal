@@ -2,7 +2,8 @@ class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         MAX_VAL = 1e6 + 1
         self.graph = [[MAX_VAL for _ in range(n)] for _ in range(n)]
-        for idx in range(n): self.graph[idx][idx] = 0
+        for idx in range(n):
+            self.graph[idx][idx] = 0
         for edge in edges:
             self.graph[edge[0]][edge[1]] = edge[2]
             self.graph[edge[1]][edge[0]] = edge[2]

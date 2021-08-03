@@ -59,10 +59,9 @@ def go():
         done.add(cur)
         index += 1
 
-    return ' '.join(map(str,sums))
+    return ' '.join(map(str, sums))
 
 
 # t = int(input())
 for _ in range(1):
     print(go())
-

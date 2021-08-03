@@ -1,6 +1,5 @@
 for _ in range(int(input())):
- n=int(input())
- a=list(map(int,input().split()))
- m=min(a)
- print(m*(n-1))
-
+    n = int(input())
+    a = list(map(int, input().split()))
+    m = min(a)
+    print(m * (n - 1))

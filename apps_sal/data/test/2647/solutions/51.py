@@ -1,3 +1,4 @@
+from collections import deque
 a, b = map(int, input().split())
 G = []
 white_num = 0
@@ -5,7 +6,8 @@ for i in range(a):
     s = list(input())
     white_num += s.count('.')
     G.append(s)
-from collections import deque
+
+
 def mazesearch(G, initial_h, initial_w, target_h, target_w):
     '''
     G is for example:
@@ -15,7 +17,7 @@ def mazesearch(G, initial_h, initial_w, target_h, target_w):
             [1,1,1,0,1,1]]
     '''
     steps = 0
-    BLOCKED, ALLOWED   = '#', '.'
+    BLOCKED, ALLOWED = '#', '.'
     UNVISITED, VISITED = 0, 1
     directions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
     if G[initial_h][initial_w] == BLOCKED:
@@ -37,9 +39,10 @@ def mazesearch(G, initial_h, initial_w, target_h, target_w):
                 queue.append((new_h, new_w, steps + 1))
                 is_visited[new_h][new_w] = VISITED
     return -1
-steps = mazesearch(G, 0, 0, a-1, b-1)
+
+
+steps = mazesearch(G, 0, 0, a - 1, b - 1)
 if steps == -1:
     print(-1, flush=True)
 else:
     print(white_num - steps - 1, flush=True)
-

@@ -1,16 +1,18 @@
 MOD = 10 ** 9 + 7
 
-n,k=map(int, input().split())
-a=list(map(int, input().split()))
-aplus,aminus=[],[]
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+aplus, aminus = [], []
 
 for i in range(n):
-    if a[i] >= 0: aplus.append(a[i])
-    else: aminus.append(a[i])
+    if a[i] >= 0:
+        aplus.append(a[i])
+    else:
+        aminus.append(a[i])
 
-      
+
 if len(aplus) == 0 and k % 2 == 1:
-    asort = sorted(a,reverse=True)
+    asort = sorted(a, reverse=True)
     ans = 1
     for i in range(k):
         ans = (ans * asort[i]) % MOD
@@ -24,11 +26,11 @@ if n == k:
     print(ans)
     return
 
-newa = sorted(a,reverse=True,key=abs)
-newaplus = sorted(aplus,reverse = True)
+newa = sorted(a, reverse=True, key=abs)
+newaplus = sorted(aplus, reverse=True)
 newaminus = sorted(aminus)
 
-cntp,cntm,pp,mm=0,0,0,0
+cntp, cntm, pp, mm = 0, 0, 0, 0
 
 for i in range(k):
     if newa[i] >= 0:
@@ -54,5 +56,5 @@ if cntm % 2 == 1:
 ans = 1
 for i in range(k):
     ans = (ans * newa[i]) % MOD
-    
+
 print(ans)

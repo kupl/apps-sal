@@ -3,8 +3,9 @@ n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
+
 def try_solve(t):
-    for i in range(n-1):
+    for i in range(n - 1):
         ok = False
 
         for x in range(4):
@@ -17,6 +18,7 @@ def try_solve(t):
             return False
 
     return True
+
 
 ok = False
 
@@ -31,4 +33,3 @@ for x in range(4):
 
 if not ok:
     print("NO")
-

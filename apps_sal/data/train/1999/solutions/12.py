@@ -11,7 +11,7 @@ class Solution:
         seen = {}
         while cur:
             prefix += cur.val
-            seen[prefix] = cur 
+            seen[prefix] = cur
             cur = cur.__next__
         cur = dummy
         prefix = 0
@@ -20,8 +20,3 @@ class Solution:
             cur.next = seen[prefix].__next__
             cur = cur.__next__
         return dummy.__next__
-            
-    
-            
-        
-

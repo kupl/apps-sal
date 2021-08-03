@@ -19,11 +19,13 @@ res = 0
 for i in range(1, n + 1):
     for j in range(1, m + 1):
         if a[i][j] == 0:
-            if curr == ma: res += 1
+            if curr == ma:
+                res += 1
             curr = 0
         else:
             curr += 1
-    if curr == ma: res += 1
+    if curr == ma:
+        res += 1
     curr = 0
 print(ma)
 for i in range(q - 1):
@@ -39,8 +41,10 @@ for i in range(q - 1):
             j += 1
             here += 1
         a[x][y] = 0
-        if here == ma: res -=1
-        if res >= 1: print(ma)
+        if here == ma:
+            res -= 1
+        if res >= 1:
+            print(ma)
         else:
             ma = 0
             curr = 0
@@ -57,13 +61,15 @@ for i in range(q - 1):
             for i in range(1, n + 1):
                 for j in range(1, m + 1):
                     if a[i][j] == 0:
-                        if curr == ma: res += 1
+                        if curr == ma:
+                            res += 1
                         curr = 0
                     else:
                         curr += 1
-                if curr == ma: res += 1
+                if curr == ma:
+                    res += 1
                 curr = 0
-            print(ma)       
+            print(ma)
     else:
         a[x][y] = 1
         j = y - 1
@@ -74,13 +80,10 @@ for i in range(q - 1):
         j = y + 1
         while j <= m and a[x][j] == 1:
             j += 1
-            here += 1      
+            here += 1
         if here > ma:
             ma = here
             res = 1
         elif here == ma:
             res += 1
         print(ma)
-        
-        
-

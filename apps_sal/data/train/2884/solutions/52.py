@@ -5,4 +5,3 @@ def stringify(node):
         node = node.__next__
     ans.append("None")
     return " -> ".join(ans)
-

@@ -6,4 +6,3 @@ class Solution:
             curr = {a | b for b in curr} | {a}
             results |= curr
         return len(results)
-

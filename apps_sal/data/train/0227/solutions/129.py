@@ -12,7 +12,6 @@ class Solution:
                 if A[l] == 1:
                     count -= 1
                 l += 1
-            max_count = max(r-l+1, max_count)
+            max_count = max(r - l + 1, max_count)
             r += 1
         return max_count
-

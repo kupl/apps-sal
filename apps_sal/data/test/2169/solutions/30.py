@@ -21,7 +21,7 @@ for num in range(h * w):
         total += dd
         dif[j] = total
         check[j] = True
-        
+
 for _ in range(int(input())):
     l, r = map(int, input().split())
     l -= 1

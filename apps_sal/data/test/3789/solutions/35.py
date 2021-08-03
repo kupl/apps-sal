@@ -1,14 +1,18 @@
 import collections
+
+
 class Dinic:
     def __init__(self, vnum):
         self.edge = [[] for i in range(vnum)]
         self.n = vnum
         self.inf = float('inf')
+
     def addedge(self, st, en, c):
         self.edge[st].append([en, c, len(self.edge[en])])
-        self.edge[en].append([st, 0, len(self.edge[st])-1])
+        self.edge[en].append([st, 0, len(self.edge[st]) - 1])
+
     def bfs(self, vst):
-        dist = [-1]*self.n
+        dist = [-1] * self.n
         dist[vst] = 0
         Q = collections.deque([vst])
         while Q:
@@ -18,6 +22,7 @@ class Dinic:
                     dist[vt] = dist[nv] + 1
                     Q.append(vt)
         self.dist = dist
+
     def dfs(self, nv, en, nf):
         nextv = self.nextv
         if nv == en:
@@ -33,13 +38,14 @@ class Dinic:
                     return df
             nextv[nv] += 1
         return 0
+
     def getmf(self, st, en):
         mf = 0
         while True:
             self.bfs(st)
             if self.dist[en] == -1:
                 break
-            self.nextv = [0]*self.n
+            self.nextv = [0] * self.n
             while True:
                 fl = self.dfs(st, en, self.inf)
                 if fl > 0:
@@ -48,18 +54,21 @@ class Dinic:
                     break
         return mf
 
+
 def inpl(): return [int(i) for i in input().split()]
+
+
 N = int(input())
 a = inpl()
-K = Dinic(N+2)
+K = Dinic(N + 2)
 inf = float('inf')
-for i, v in enumerate(a,1):
+for i, v in enumerate(a, 1):
     if v > 0:
-        K.addedge(i, N+1, v)
+        K.addedge(i, N + 1, v)
     else:
         K.addedge(0, i, -v)
-for i in range(1,N+1):
-    for j in range(2*i, N+1, i):
+for i in range(1, N + 1):
+    for j in range(2 * i, N + 1, i):
         K.addedge(i, j, inf)
 
-print(sum([i for i in a if i > 0]) - K.getmf(0, N+1))
+print(sum([i for i in a if i > 0]) - K.getmf(0, N + 1))

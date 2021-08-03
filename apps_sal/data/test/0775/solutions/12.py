@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-from sys import stdin,stdout
+from sys import stdin, stdout
 
 
 def ri():
     return list(map(int, stdin.readline().split()))
 
+
 n, m, k = ri()
-h = [0 for i in range(n+1)]
+h = [0 for i in range(n + 1)]
 hh = list(ri())
 for i in range(m):
     h[hh[i]] = 1
@@ -23,6 +24,3 @@ for i in range(k):
             p = a
 
 print(p)
-
-
-

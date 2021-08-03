@@ -5,7 +5,7 @@ class Solution:
         set_one = set()
         set_two = set()
         s_r = s[::-1]
-        
+
         for i in range(len(s)):
             # if s[i] in set_one:
             #     continue
@@ -16,7 +16,7 @@ class Solution:
                 break
             else:
                 set_one.add(s[i])
-                    
+
         for i in range(len(s_r)):
             # if s_r[i] in set_two:
             #     continue
@@ -28,10 +28,7 @@ class Solution:
                 break
             else:
                 set_two.add(s_r[i])
-                    
-        print((index_one, index_two))
-                    
-        return index_two - index_one
-                    
-        
 
+        print((index_one, index_two))
+
+        return index_two - index_one

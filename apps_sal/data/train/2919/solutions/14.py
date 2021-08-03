@@ -5,5 +5,5 @@ def encode(message, key):
         + key_digs[i % len(key_digs)]
         for i, ch in enumerate(message)
     ]
-    
+
     return result

@@ -1,6 +1,6 @@
-n, k =[int(x) for x in input().split()]
-a =[int(x) for x in input().split()] 
-bodr = [int(x) for x in input().split()] 
+n, k = [int(x) for x in input().split()]
+a = [int(x) for x in input().split()]
+bodr = [int(x) for x in input().split()]
 su = 0
 for i in range(n):
     if bodr[i]:

@@ -1,6 +1,7 @@
 N, K, C = map(int, input().split())
 S = input()
 
+
 def get_positions():
     res = []
     i = 0
@@ -11,6 +12,7 @@ def get_positions():
         else:
             i += 1
     return res
+
 
 l = get_positions()
 S = S[::-1]
@@ -29,7 +31,7 @@ for i in range(N):
 lastr = [-1] * (N + 1)
 for i in range(K):
     lastr[r[i]] = i
-for i in range(N-1, -1, -1):
+for i in range(N - 1, -1, -1):
     if lastr[i] == -1:
         lastr[i] = lastr[i + 1]
 

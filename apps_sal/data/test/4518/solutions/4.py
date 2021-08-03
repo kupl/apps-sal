@@ -44,7 +44,7 @@ from copy import deepcopy
 # mod = 10 ** 9 + 7
 mod2 = 998244353
 def data(): return sys.stdin.readline().strip()
-def out(var, end="\n"): sys.stdout.write(str(var)+end)
+def out(var, end="\n"): sys.stdout.write(str(var) + end)
 def outa(*var, end="\n"): sys.stdout.write(' '.join(map(str, var)) + end)
 def l(): return list(sp())
 def sl(): return list(ssp())
@@ -70,4 +70,3 @@ for _ in range(int(data())):
             outa(1, i + 1)
     for i in L:
         outa(no, i)
-

@@ -4,4 +4,3 @@ def reverse_words(text):
         r.append(w[int(len(w))::-1])
     s = ' '
     return s.join(r)
-

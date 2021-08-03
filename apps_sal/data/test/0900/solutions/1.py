@@ -6,7 +6,7 @@ n = len(s) + 1
 dp = [0] * 13
 dp[0] = 1
 
-r = [[(j-i)*4%13 for i in range(10)]for j in range(13)]
+r = [[(j - i) * 4 % 13 for i in range(10)]for j in range(13)]
 
 for i, x in enumerate(s):
     next_dp = [0] * 13

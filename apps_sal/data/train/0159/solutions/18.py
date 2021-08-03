@@ -9,7 +9,7 @@ class Solution:
             q.append(i)
             if i - q[0] == k:
                 q.popleft()
-            
+
             ans = max(ans, nums[i])
-                
+
         return ans

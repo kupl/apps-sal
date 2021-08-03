@@ -9,4 +9,3 @@ a = input()
 n = len(a)
 
 print((dfs(0, a[0])))
-

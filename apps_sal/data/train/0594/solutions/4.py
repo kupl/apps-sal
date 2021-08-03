@@ -1,9 +1,11 @@
-def maxSubArraySum(a,size):      
- max_so_far,curr_max = a[0],a[0] 
- for i in range(1,size): 
-  curr_max = max(a[i], curr_max + a[i]) 
-  max_so_far = max(max_so_far,curr_max) 
- return max_so_far 
-n,x = map(int,input().split())
-a = list(map(int,input().split()))
-print(sum(a)-maxSubArraySum(a,n)+ (maxSubArraySum(a,n)/x))
+def maxSubArraySum(a, size):
+    max_so_far, curr_max = a[0], a[0]
+    for i in range(1, size):
+        curr_max = max(a[i], curr_max + a[i])
+        max_so_far = max(max_so_far, curr_max)
+    return max_so_far
+
+
+n, x = map(int, input().split())
+a = list(map(int, input().split()))
+print(sum(a) - maxSubArraySum(a, n) + (maxSubArraySum(a, n) / x))

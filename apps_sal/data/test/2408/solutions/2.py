@@ -127,4 +127,3 @@ for i in range(m):
         if not straights[i].is_parallel(straights[j]):
             res += 1
 print(res)
-

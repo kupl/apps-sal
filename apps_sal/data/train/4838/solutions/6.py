@@ -4,4 +4,3 @@ def find_nth_occurrence(substring, string, occurrence=1):
         return -1
     else:
         return indicies[occurrence - 1]
-

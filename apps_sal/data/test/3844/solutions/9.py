@@ -8,4 +8,3 @@ for x in sorted(c, reverse=True):
         break
 else:
     print("Agasa")
-

@@ -7,7 +7,7 @@ def lower_bownd(key):
             left = middle
         else:
             right = middle
-    
+
     if right < m:
         r = b[right] - key
     else:

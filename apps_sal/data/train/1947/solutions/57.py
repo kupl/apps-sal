@@ -4,15 +4,12 @@ class Solution:
         for b in B:
             for char in b:
                 dic[char] = max(dic.get(char, 0), b.count(char))
-        
+
         res = []
         for a in A:
             if all(a.count(k) >= dic[k] for k in dic):
                 res.append(a)
         return res
-        
-        
-        
-        
-#https://leetcode.com/problems/word-subsets/discuss/659164/Python-90-with-comments-and-explanation
 
+
+# https://leetcode.com/problems/word-subsets/discuss/659164/Python-90-with-comments-and-explanation

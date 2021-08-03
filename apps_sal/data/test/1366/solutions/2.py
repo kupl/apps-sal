@@ -13,4 +13,3 @@ for i in range(n):
             flag = 1
     res += 1 - flag
 print(res)
-

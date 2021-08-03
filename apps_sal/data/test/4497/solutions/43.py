@@ -21,5 +21,4 @@ ind = a.index(max_value)
 if N2 == 1:
     print((1))
 else:
-    print((N2-ind+1))
-
+    print((N2 - ind + 1))

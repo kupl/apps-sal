@@ -9,6 +9,4 @@ for i in range(m):
     words[w2] = w
 data = input().split()
 for i in range(n):
-    print(words[data[i]], end = " ")
-    
-    
+    print(words[data[i]], end=" ")

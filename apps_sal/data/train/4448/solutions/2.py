@@ -10,4 +10,4 @@ def get_derivative(s):
         return str(a * b) + 'x'
     elif b == 1:
         return str(a * b)
-    return str(a * b) + 'x^' + str(b-1) 
+    return str(a * b) + 'x^' + str(b - 1)

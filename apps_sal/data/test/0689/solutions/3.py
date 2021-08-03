@@ -20,4 +20,3 @@ for _ in range(int(input())):
             can = False
             break
     print('YES' if can else 'NO')
-

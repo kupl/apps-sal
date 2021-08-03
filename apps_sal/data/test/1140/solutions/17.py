@@ -1,6 +1,6 @@
 n = int(input())
-flowers = list(map(int,input().split()))
+flowers = list(map(int, input().split()))
 flowers.sort()
 minCount = flowers.count(flowers[0])
 maxCount = flowers.count(flowers[-1])
-print(flowers[-1]-flowers[0],n*(n-1)//2 if flowers[0]==flowers[-1] else minCount*maxCount)
+print(flowers[-1] - flowers[0], n * (n - 1) // 2 if flowers[0] == flowers[-1] else minCount * maxCount)

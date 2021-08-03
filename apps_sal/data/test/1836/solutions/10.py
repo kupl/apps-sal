@@ -21,4 +21,3 @@ for i in range(1, n + 1):
     max_ans = max(max_ans, max_len[i] * neibs_count[i])
 
 print(max_ans)
-

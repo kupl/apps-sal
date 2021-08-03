@@ -2,7 +2,7 @@ S = input()
 T = input()
 p = 0
 
-for i in range(0,len(S)):
+for i in range(0, len(S)):
     if S[i] == T[i]:
         pass
     else:

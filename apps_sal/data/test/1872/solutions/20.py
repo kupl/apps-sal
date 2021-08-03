@@ -11,4 +11,3 @@ def zvezda(n, r):
 
 N, R = [int(j) for j in input().split()]
 print(zvezda(N, R))
-

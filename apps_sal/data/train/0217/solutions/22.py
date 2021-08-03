@@ -3,7 +3,7 @@ class Solution:
         ans = set()
         previous = set()
         for v in A:
-            current = set([i|v for i in previous])
+            current = set([i | v for i in previous])
             current.add(v)
             ans.update(current)
             previous = current

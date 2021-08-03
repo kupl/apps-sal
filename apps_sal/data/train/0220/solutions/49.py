@@ -12,4 +12,3 @@ class Solution:
                 curr -= ((grumpy[i - X]) * customers[i - X])
             windowMax = max(windowMax, curr)
         return satisfied + windowMax
-

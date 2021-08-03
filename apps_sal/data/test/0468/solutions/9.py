@@ -1,6 +1,6 @@
+from math import log
 x, y = list(map(int, input().split()))
 
-from math import log
 
 xx, yy = (log(x) / x), (log(y) / y)
 
@@ -10,4 +10,3 @@ elif (xx < yy):
     print("<")
 else:
     print("=")
-

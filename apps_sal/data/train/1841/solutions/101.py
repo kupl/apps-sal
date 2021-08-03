@@ -42,7 +42,7 @@ class Solution:
         if k == n:
             return arr
 
-        kth = n - (n-1) // 2
+        kth = n - (n - 1) // 2
         median = self.findKthMax(arr, kth, cmp=lambda x, y: x - y)
 
         new_arr = [(abs(e - median), e) for e in arr]
@@ -76,14 +76,14 @@ class Solution:
         bl = [i for i in l[:key] + l[key + 1:] if cmp(i, keyv) >= 0]
 
         # 如果bl的长度恰好是k-1,那么说明keyv就是第k大的数
-        if len(bl) == k-1:
+        if len(bl) == k - 1:
             return keyv
         # 如果bl的长度大于等于k,说明第k大的数在bl中，迭代findKthMax函数，找出bl中第k大的数
         elif len(bl) >= k:
             return self.findKthMax(bl, k, cmp)
         # 如果bl的长度小于k-1,说明第k大的数在sl中，因为bl中已经有len(bl)个比目标值大的数，加上keyv本身，所以要找出sl中第（k-len(bl)-1）大的数
         else:
-            return self.findKthMax(sl, k-len(bl)-1, cmp)
+            return self.findKthMax(sl, k - len(bl) - 1, cmp)
 
 
 def __starting_point():
@@ -91,5 +91,6 @@ def __starting_point():
     arr = [6, -3, 7, 2, 11]
     k = 3
     print((s.getStrongest(arr, k)))
+
 
 __starting_point()

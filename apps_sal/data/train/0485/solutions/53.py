@@ -12,9 +12,9 @@ class Solution:
                 change_list[ind % K].append(ind)
         if num == 0:
             change_list[rem].append(l)
-    
+
         num_flips = 0
-        
+
         for r, mini_list in enumerate(change_list):
             mini_list_len = len(mini_list)
             if mini_list_len % 2 == 1:
@@ -23,17 +23,12 @@ class Solution:
                 first = mini_list.pop(0)
                 second = mini_list.pop(0)
                 num_flips += (second - first) // K
-        
+
         return num_flips
-        
-        
-        
-        
-    
-    
+
     def oldMinKBitFlips(self, A: List[int], K: int) -> int:
         l = len(A)
-        
+
         # find indexes where the number changes
         prev = 1
         change_list = []
@@ -41,10 +36,10 @@ class Solution:
             if prev != num:
                 prev = num
                 change_list.append(ind)
-        
+
         if len(change_list) == 0:
             return 0
-        
+
         num_flips = 0
 
         while len(change_list) > 1:
@@ -62,10 +57,9 @@ class Solution:
             elif change_list[left_insertion_pt] == first + K:
                 del change_list[left_insertion_pt]
             else:
-                change_list.insert(left_insertion_pt, first+K)
+                change_list.insert(left_insertion_pt, first + K)
             num_flips += 1
-            
-            
+
         if len(change_list) > 0:
             # in this section, len(change_list) == 1
             first = change_list[0]
@@ -74,5 +68,5 @@ class Solution:
                 return num_flips + q
             else:
                 return -1
-            
+
         return num_flips

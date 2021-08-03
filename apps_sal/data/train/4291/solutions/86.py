@@ -1,8 +1,8 @@
 def century(year):
-    if year <100:
+    if year < 100:
         return 1
-    elif year%100 == 0:
-        return year//100
+    elif year % 100 == 0:
+        return year // 100
     else:
         x = year // 100
-        return x+1
+        return x + 1

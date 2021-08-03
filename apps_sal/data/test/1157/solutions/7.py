@@ -1,14 +1,14 @@
 import sys
 
 n = int(sys.stdin.readline().strip())
-a = list(map(int,sys.stdin.readline().strip().split()))
+a = list(map(int, sys.stdin.readline().strip().split()))
 
 v1 = 0
 v2 = 0
 
 p = 0
 m = 0
-for i in range (0, n):
+for i in range(0, n):
     if a[i] == 0:
         p = 0
         m = 0

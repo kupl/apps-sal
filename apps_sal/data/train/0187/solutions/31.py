@@ -4,7 +4,7 @@ class Solution:
         profit = 0
         cur = 0
         count = 0
-        for i,c in enumerate(customers):
+        for i, c in enumerate(customers):
             cur += c
             if cur >= 4:
                 profit += boardingCost * 4 - runningCost
@@ -12,11 +12,11 @@ class Solution:
             else:
                 profit += boardingCost * cur - runningCost
                 cur = 0
-                
+
             if profit > p:
                 p = profit
                 res = i + 1
-        
+
         i = len(customers)
         while cur > 0:
             if cur >= 4:
@@ -25,9 +25,9 @@ class Solution:
             else:
                 profit += boardingCost * cur - runningCost
                 cur = 0
-                
+
             if profit > p:
                 p = profit
-                res = i + 1   
+                res = i + 1
             i += 1
         return -1 if res == 0 else res

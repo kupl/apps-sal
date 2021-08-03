@@ -3,6 +3,5 @@ def reverse_words(text):
     str = ''
     for i in text:
         i = i[::-1]
-        str =str + ' '  + i
+        str = str + ' ' + i
     return str[1:]
-

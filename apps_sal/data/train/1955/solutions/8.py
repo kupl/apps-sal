@@ -41,4 +41,3 @@ class Solution:
                     sa[li[i][0]] = lsv[i][1]
 
         return ''.join(sa)
-

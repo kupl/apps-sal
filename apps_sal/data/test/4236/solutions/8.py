@@ -1,4 +1,4 @@
-a = [False,] * 110
+a = [False, ] * 110
 b = []
 ans = 0
 n, m = map(int, input().split())

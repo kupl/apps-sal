@@ -1,6 +1,6 @@
 def distribution_of(golds):
     g = golds[::]
-    R = [0,0]
+    R = [0, 0]
     toggle = 0
     currentVar = 'A'
     while g:

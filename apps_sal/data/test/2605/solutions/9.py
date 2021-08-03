@@ -17,10 +17,10 @@ used = 0
 for i in arrK:
     cur = i
     if cur == 0:
-        pre = N-1
+        pre = N - 1
     else:
         pre = cur - 1
-    if cur == N-1:
+    if cur == N - 1:
         next = 0
     else:
         next = cur + 1
@@ -37,12 +37,3 @@ for i in arrK:
     used += arr[cur]
 
 print(res)
-
-
-
-
-
-
-
-
-

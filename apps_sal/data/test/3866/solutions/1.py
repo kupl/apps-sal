@@ -6,4 +6,3 @@ else:
     print(' '.join(map(str, a)))
     print(' '.join(map(str, a)))
     print(' '.join([str((x[0] + x[1]) % n) for x in zip(a, a)]))
-

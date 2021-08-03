@@ -2,12 +2,12 @@ N = int(input())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
-count = [0] * (N+1)
+count = [0] * (N + 1)
 for a, b in zip(A, B):
     count[a] += 1
     count[b] += 1
 
-for i in range(N+1):
+for i in range(N + 1):
     if count[i] > N:
         print('No')
         return
@@ -25,4 +25,4 @@ for i, b in enumerate(B):
 
 
 print('Yes')
-print(*(B[-diff:]+B[:-diff]))
+print(*(B[-diff:] + B[:-diff]))

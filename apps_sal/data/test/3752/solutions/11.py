@@ -12,4 +12,3 @@ if (t - e < k):
 else:
     z += k + (t - e - k) * 2
 print(z)
-

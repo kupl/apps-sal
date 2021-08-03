@@ -1,17 +1,17 @@
 def capitalize(s):
-    #BDD
-    #Given a sring
-    #When capitalize letters with even indexes
-    
-    #ps
-    #3lists 
-    #for loop thet will loop through the string
-    #If statement
-    even=[]
-    odd=[]
-    final=[]
+    # BDD
+    # Given a sring
+    # When capitalize letters with even indexes
+
+    # ps
+    # 3lists
+    # for loop thet will loop through the string
+    # If statement
+    even = []
+    odd = []
+    final = []
     for i in range(len(s)):
-        if i % 2 ==0:
+        if i % 2 == 0:
             a = s[i].capitalize()
             even.append(a)
         else:
@@ -27,4 +27,3 @@ def capitalize(s):
     final.append(finaleven)
     final.append(finalodd)
     return final
-

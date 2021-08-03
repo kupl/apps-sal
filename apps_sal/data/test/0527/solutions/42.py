@@ -25,4 +25,3 @@ for i in range(len(t)):
         now -= n
         ans += n
 print((ans + now + 1))
-

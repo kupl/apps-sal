@@ -8,4 +8,3 @@ for v in list(C.values()):
         print("No")
         return
 print("Yes")
-

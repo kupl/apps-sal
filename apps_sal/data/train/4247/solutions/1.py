@@ -2,6 +2,7 @@ import re
 
 o = re.compile(r"o(.*?)d(.*?)d")
 
+
 def odd(stg):
     count = 0
     while o.search(stg):

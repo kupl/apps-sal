@@ -5,25 +5,26 @@ class Node:
         self.right = None
         self.length = 0
 
+
 class Solution:
     def findLatestStep(self, arr, m):
         def remove(node):
             left = node.left
             node.right.left = left
             left.right = node.right
-            
+
         count = 0
         node = {}
-        M= max(arr)
-        for i in range(M+2):
+        M = max(arr)
+        for i in range(M + 2):
             n = Node()
             node[i] = n
             if i == 0:
                 continue
-            
-            node[i-1].right = n
-            n.left = node[i-1]
-        
+
+            node[i - 1].right = n
+            n.left = node[i - 1]
+
         ans = -1
         for step, i in enumerate(arr):
             node[i].length = 1
@@ -44,5 +45,3 @@ class Solution:
                 ans = step + 1
             #print(step, count, ans)
         return ans
-                
-

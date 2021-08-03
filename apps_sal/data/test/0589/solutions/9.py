@@ -21,4 +21,3 @@ if 'A' <= s[0] <= 'J':
 if s[0] == '?':
     ans = ans // 10 * 9
 print(ans)
-

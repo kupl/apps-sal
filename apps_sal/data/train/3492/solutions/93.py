@@ -1,4 +1,4 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     # your code here
     polish = {
         'ą': 'a',
@@ -11,7 +11,7 @@ def correct_polish_letters(st):
         'ź': 'z',
         'ż': 'z'
     }
-    
+
     res = ''
     for i in st:
         if i in polish:
@@ -19,6 +19,5 @@ def correct_polish_letters(st):
             res += st[q].replace(st[q], polish.get(st[q]))
         else:
             res += i
-
 
     return res

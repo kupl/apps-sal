@@ -5,5 +5,7 @@ def __starting_point():
     if n == 0:
         print(1)
     else:
-        print(1+3*n*(n+1))
+        print(1 + 3 * n * (n + 1))
+
+
 __starting_point()

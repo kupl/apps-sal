@@ -1,5 +1,5 @@
 def max_multiple(divisor, bound):
     total = 0
     while total <= bound:
-        total+= divisor
+        total += divisor
     return total - divisor

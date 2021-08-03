@@ -1,5 +1,5 @@
-#python3
-#utf-8
+# python3
+# utf-8
 
 doctors_nr = int(input())
 doctor_idx___start_day_idx = []
@@ -18,4 +18,3 @@ for day_idx in range(1, 3000000):
         if doctors_visited_nr == doctors_nr:
             print(day_idx)
             quit()
-

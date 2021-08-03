@@ -12,4 +12,3 @@ while test_case > 0:
     elif val == 'f':
         print("Frigate")
     test_case -= 1
-

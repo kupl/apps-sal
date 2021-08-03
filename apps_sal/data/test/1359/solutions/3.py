@@ -5,8 +5,8 @@ to_sets = [set() for _ in range(n)]
 from_sets = [set() for _ in range(n)]
 for i in range(m):
     m1, m2 = [int(i) for i in sys.stdin.readline().split()]
-    to_sets[m1-1].add(m2-1)
-    from_sets[m2-1].add(m1-1)
+    to_sets[m1 - 1].add(m2 - 1)
+    from_sets[m2 - 1].add(m1 - 1)
 
 bd_choices_cache = [[0 for _ in range(n)] for _ in range(n)]
 for a in range(n):
@@ -23,4 +23,3 @@ for a in range(n):
         ans += bd_choices * (bd_choices - 1) // 2
 
 print(ans)
-

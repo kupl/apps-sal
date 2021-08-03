@@ -1,6 +1,7 @@
 class Solution:
     def stoneGameII(self, piles: List[int]) -> int:
         n = len(piles)
+
         @lru_cache(None)
         def dp(i, m):
             if i == n:
@@ -14,4 +15,3 @@ class Solution:
                 b = min(b, c)
             return a, b
         return dp(0, 1)[0]
-

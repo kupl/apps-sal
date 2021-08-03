@@ -1,2 +1,1 @@
-unscramble_eggs = lambda x:''.join(x.split('egg'))
-
+def unscramble_eggs(x): return ''.join(x.split('egg'))

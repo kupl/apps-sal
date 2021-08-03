@@ -1,13 +1,12 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for i in range(t):
-    n=input()
-    if(n=='B'or n=='b'):
+    n = input()
+    if(n == 'B' or n == 'b'):
         print("BattleShip")
-    elif (n=="C" or n=="c"):
+    elif (n == "C" or n == "c"):
         print("Cruiser")
-    elif (n=="D" or n=="d"):
+    elif (n == "D" or n == "d"):
         print("Destroyer")
     else:
         print("Frigate")
-

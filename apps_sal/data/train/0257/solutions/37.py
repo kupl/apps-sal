@@ -1,5 +1,7 @@
 from collections import defaultdict
 from heapq import heappop, heappush
+
+
 class Solution:
     def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start: int, end: int) -> float:
         adjlist = defaultdict(list)
@@ -16,11 +18,10 @@ class Solution:
             if curr in visited:
                 continue
             for child, price in adjlist[curr]:
-                heappush(hq, [-(price*cost), child])
+                heappush(hq, [-(price * cost), child])
             visited.add(curr)
             if probability[curr] < cost:
                 probability[curr] = cost
         if probability[end] == float('-inf'):
             return 0
         return probability[end]
-

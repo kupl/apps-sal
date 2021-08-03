@@ -1,4 +1,4 @@
-def make_negative( number ):
+def make_negative(number):
     if str(number).startswith("-"):
         return number
     elif str(number).startswith("0"):

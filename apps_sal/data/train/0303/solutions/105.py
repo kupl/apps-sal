@@ -1,6 +1,7 @@
 class Solution:
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         hashmap = {}
+
         def partitionMatrix(lst, currScore):
             key = tuple(lst)
             if key in hashmap:
@@ -19,4 +20,3 @@ class Solution:
             hashmap[key] = best - currScore
             return best
         return partitionMatrix(arr, 0)
-

@@ -1,4 +1,4 @@
-def capitalize(s,ind):
+def capitalize(s, ind):
     s_list = [ch for ch in s]
     for i in ind:
         try:

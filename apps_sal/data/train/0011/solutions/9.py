@@ -6,8 +6,12 @@ def lim(s):
         up = max(up, now)
         down = min(down, now)
     return up, down
+
+
 def f(a):
     return a[0] - a[1] + 1
+
+
 def upg(s):
     t = lim(s)
     up, down = t[0], t[1]
@@ -30,10 +34,14 @@ for q in range(int(input())):
     s = input()
     s1, s2 = [0], [0]
     for i in s:
-        if i == 'W': s1.append(1)
-        if i == 'S': s1.append(-1)
-        if i == 'A': s2.append(1)
-        if i == 'D': s2.append(-1)
+        if i == 'W':
+            s1.append(1)
+        if i == 'S':
+            s1.append(-1)
+        if i == 'A':
+            s2.append(1)
+        if i == 'D':
+            s2.append(-1)
     u1 = upg(s1)
     u2 = upg(s2)
     res1, res2 = f(lim(s1)), f(lim(s2))

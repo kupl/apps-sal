@@ -11,4 +11,3 @@ for i in A:
         max_diff = i - min_A
         ans = 1
 print(ans)
-

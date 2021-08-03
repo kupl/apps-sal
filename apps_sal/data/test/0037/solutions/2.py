@@ -7,5 +7,6 @@ def mina():
             return
         k += 1
     print("No")
-    
+
+
 mina()

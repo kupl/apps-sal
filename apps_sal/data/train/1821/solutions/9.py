@@ -5,11 +5,11 @@ class Solution:
                 return arr2
             if not arr2:
                 return arr1
-            
+
             res = []
             a1 = 0
             a2 = 0
-            
+
             while a1 < len(arr1) or a2 < len(arr2):
                 if a1 == len(arr1):
                     res.append(arr2[a2])
@@ -19,7 +19,7 @@ class Solution:
                     res.append(arr1[a1])
                     a1 += 1
                     continue
-                
+
                 if arr1[a1] < arr2[a2]:
                     res.append(arr1[a1])
                     a1 += 1
@@ -27,7 +27,7 @@ class Solution:
                     res.append(arr2[a2])
                     a2 += 1
             return res
-        
+
         def mergesort(arr):
             if len(arr) == 1:
                 return arr

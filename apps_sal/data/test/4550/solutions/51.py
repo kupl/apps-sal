@@ -4,7 +4,6 @@ s = sum([A, B, C])
 y = s - x
 
 if x == y:
-  print('Yes')
+    print('Yes')
 else:
-  print('No')
-
+    print('No')

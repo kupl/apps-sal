@@ -1,6 +1,6 @@
+from collections import Counter
 import sys
 input = sys.stdin.readline
-from collections import Counter
 
 N, M = map(int, input().split())
 Ss = [input().rstrip() for _ in range(N)]

@@ -9,4 +9,3 @@ elif alp.index(x) > alp.index(y):
     print(">")
 else:
     print("=")
-

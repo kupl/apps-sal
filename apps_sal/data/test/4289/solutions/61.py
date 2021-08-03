@@ -14,4 +14,4 @@ for i in range(n):
 
 for i in range(n):
     if tmp[i] == min(tmp):
-        print(i+1)
+        print(i + 1)

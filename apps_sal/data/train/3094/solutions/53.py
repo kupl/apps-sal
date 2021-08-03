@@ -6,4 +6,3 @@ def sum_array(arr):
     else:
         sorted_arr = sorted(arr)
         return sum(sorted_arr[1:-1])
-

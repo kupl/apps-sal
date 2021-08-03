@@ -1,6 +1,6 @@
 Y, M, D = input().split("/")
 
-S = int(Y+M+D)
+S = int(Y + M + D)
 
 if S <= 20190430:
     print("Heisei")

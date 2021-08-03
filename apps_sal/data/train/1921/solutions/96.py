@@ -1,12 +1,12 @@
 from queue import PriorityQueue
+
+
 class DinnerPlates:
 
     def __init__(self, capacity: int):
         self.cap = capacity
-        self.stacks =[]
+        self.stacks = []
         self.q = PriorityQueue()
-
-         
 
     def push(self, val: int) -> None:
         while self.stacks and not self.q.empty():
@@ -20,7 +20,7 @@ class DinnerPlates:
             if len(self.stacks[idx]) < self.cap:
                 self.q.put(idx)
             return
-        
+
         if not self.stacks:
             self.stacks = [[val]]
             if len(self.stacks[-1]) < self.cap:
@@ -29,7 +29,6 @@ class DinnerPlates:
             self.stacks.append([val])
             if len(self.stacks[-1]) < self.cap:
                 self.q.put(len(self.stacks) - 1)
-        
 
     def pop(self) -> int:
         while self.stacks:
@@ -38,11 +37,10 @@ class DinnerPlates:
             else:
                 v = self.stacks[-1][-1]
                 del self.stacks[-1][-1]
-                if len(self.stacks[-1]) == self.cap -1:
+                if len(self.stacks[-1]) == self.cap - 1:
                     self.q.put(len(self.stacks) - 1)
                 return v
         return -1
-        
 
     def popAtStack(self, index: int) -> int:
         if index < len(self.stacks):
@@ -56,9 +54,6 @@ class DinnerPlates:
                 return -1
         else:
             return -1
-                
-        
-        
 
 
 # Your DinnerPlates object will be instantiated and called as such:
@@ -66,4 +61,3 @@ class DinnerPlates:
 # obj.push(val)
 # param_2 = obj.pop()
 # param_3 = obj.popAtStack(index)
-

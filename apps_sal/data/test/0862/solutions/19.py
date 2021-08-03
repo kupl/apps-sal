@@ -8,7 +8,7 @@ while 1:
                 tour += 1
             a[i] = tour
         min_tour = float("inf")
-        
+
         for i in range(n):
             if a[i] < min_tour:
                 answer = i
@@ -16,4 +16,3 @@ while 1:
         print(answer + 1)
     except EOFError:
         break
-

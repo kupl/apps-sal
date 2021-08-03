@@ -4,7 +4,7 @@ class Solution:
             return -1
         if amount == 0:
             return 0
-        min_com = [0 for i in range(amount+1)]
+        min_com = [0 for i in range(amount + 1)]
         for i in range(1, amount + 1):
             for c in coins:
                 if i >= c and (min_com[i - c] > 0 or i - c == 0):
@@ -17,4 +17,3 @@ class Solution:
         if min_com[amount] == 0:
             return -1
         return min_com[amount]
-

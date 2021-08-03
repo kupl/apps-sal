@@ -4,32 +4,26 @@ import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 
-n,*a = map(int,read().split())
+n, *a = map(int, read().split())
 
-res = [(0,-1)]+[(a[i],i) for i in range(n)]
+res = [(0, -1)] + [(a[i], i) for i in range(n)]
 res.sort()
 
-ans = [0]*n
+ans = [0] * n
 num = 0
 cnt = 0
-midx = idx = n-1
+midx = idx = n - 1
 v = res[-1][0]
 
-#print(res)
+# print(res)
 while res:
-    #print(num,cnt,idx)
-    ans[midx] += (v-res[-1][0])*cnt
+    # print(num,cnt,idx)
+    ans[midx] += (v - res[-1][0]) * cnt
     v = res[-1][0]
 
-    while res and res[-1][0]==v:
-        ai,idx = res.pop()        
+    while res and res[-1][0] == v:
+        ai, idx = res.pop()
         cnt += 1
-    midx = min(midx,idx)
+    midx = min(midx, idx)
 
-print(*ans,sep="\n")
-
-
-
-
-
-
+print(*ans, sep="\n")

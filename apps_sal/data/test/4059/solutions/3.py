@@ -6,5 +6,5 @@ for a in range(1, N):
         b_num += int(N / a) - 1
     else:
         b_num += N // a
-        
+
 print(b_num)

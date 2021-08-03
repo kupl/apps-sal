@@ -1,4 +1,7 @@
-a,b,x=map(int,input().split())
-if a==x:print("YES")
-elif a<x and a+b>=x:print("YES")
-else:print("NO")
+a, b, x = map(int, input().split())
+if a == x:
+    print("YES")
+elif a < x and a + b >= x:
+    print("YES")
+else:
+    print("NO")

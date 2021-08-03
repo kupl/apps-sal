@@ -1,3 +1,3 @@
-N,X,T=map(int,input().split())
 import math
-print(math.ceil(N/X)*T)
+N, X, T = map(int, input().split())
+print(math.ceil(N / X) * T)

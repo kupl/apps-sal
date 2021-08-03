@@ -27,5 +27,3 @@ else:
     for i in range(6):
         ans += abs(q[i] - aa[i])
     print(ans // 2)
-
-

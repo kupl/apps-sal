@@ -18,4 +18,3 @@ else:
                 answer = sum(a[:i + 1]) + sum(b[i + 1:])
         i += 1
     print(answer)
-

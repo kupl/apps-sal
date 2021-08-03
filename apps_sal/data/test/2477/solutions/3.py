@@ -8,6 +8,7 @@ def judge(A, x, k):
             return False
     return True
 
+
 n, k = map(int, input().split())
 A = list(map(int, input().split()))
 l = 0

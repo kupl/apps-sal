@@ -2,6 +2,7 @@ import sys
 
 inf = 1 << 30
 
+
 def solve():
     def check(mid):
         if a_max > mid:
@@ -44,6 +45,9 @@ def solve():
 
     print(ans)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

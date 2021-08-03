@@ -4,10 +4,10 @@ def ceil(a, b):
     else:
         return a // b + 1
 
+
 t = int(input())
 for case in range(t):
     n, m, k = list(map(int, input().split()))
-    taken = min(m, n//k)
+    taken = min(m, n // k)
     remaining = m - taken
-    print(taken - ceil(remaining, k-1))
-
+    print(taken - ceil(remaining, k - 1))

@@ -11,4 +11,3 @@ minimum = min(diff)
 ans = diff.index(minimum) + 1
 
 print(ans)
-

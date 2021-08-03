@@ -1,5 +1,5 @@
 n = int(input())
-x = list(map(int,input().split()))
+x = list(map(int, input().split()))
 ave = sum(x) // len(x)
 ans_list = []
 ans_list2 = []

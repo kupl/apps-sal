@@ -18,13 +18,12 @@ if k > n:
 p = list(s[0:k])
 t = list(p)
 
-for i in range(k-1, -1, -1):
+for i in range(k - 1, -1, -1):
     if s[i] >= t[i]:
         j = h[s[i]]
         if j < ld - 1:
-            t[i] = d[j+1]
-            for m in range(i+1, len(t)):
+            t[i] = d[j + 1]
+            for m in range(i + 1, len(t)):
                 t[m] = d[0]
             print(''.join(t))
             return
-

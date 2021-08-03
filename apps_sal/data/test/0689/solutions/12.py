@@ -1,14 +1,14 @@
 import sys
-# sys.stdin = open('input.txt', 'r') 
+# sys.stdin = open('input.txt', 'r')
 # sys.stdout = open('output.txt', 'w')
- 
+
 import math
 import collections
-from sys import stdin,stdout,setrecursionlimit
+from sys import stdin, stdout, setrecursionlimit
 import bisect as bs
 setrecursionlimit(2**20)
-M = 10**9+7
-    
+M = 10**9 + 7
+
 T = int(stdin.readline())
 # T = 1
 
@@ -29,8 +29,10 @@ for _ in range(T):
             d[c] += 1
     res = True
     for c in d:
-        if(d[c]%n != 0):
+        if(d[c] % n != 0):
             res = False
             break
-    if(res): print("YES")
-    else: print("NO")
+    if(res):
+        print("YES")
+    else:
+        print("NO")

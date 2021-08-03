@@ -17,4 +17,3 @@ for q in range(0, t):
             now = 1
     mn = max(mn, now)
     print(max(min(number - 1, mn), min(number, mn - 1)))
-

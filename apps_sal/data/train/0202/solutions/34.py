@@ -27,39 +27,39 @@ while j < len
         check/override max
 '''
 
+
 class Solution:
     def longestMountain(self, A: List[int]) -> int:
-        
+
         long_mont = 0
         i, j = 0, 0
-        
+
         while j < len(A):
-            
+
             incr = False
-            while j!=len(A)-1 and A[j] < A[j+1]:
+            while j != len(A) - 1 and A[j] < A[j + 1]:
                 incr = True
-                j+=1
-            
+                j += 1
+
             if not incr:
-                j+=1
-                i=j
+                j += 1
+                i = j
                 continue
-                
+
             decr = False
-            while j!=len(A)-1 and A[j] > A[j+1]:
+            while j != len(A) - 1 and A[j] > A[j + 1]:
                 decr = True
-                j+=1
-                
+                j += 1
+
             if not decr:
-                j+=1
-                i=j
+                j += 1
+                i = j
                 continue
-                
-            curr_len = j-i+1
+
+            curr_len = j - i + 1
             if curr_len >= 3:
                 long_mont = max(long_mont, curr_len)
 
             i = j
-                
-        return long_mont
 
+        return long_mont

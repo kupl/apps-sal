@@ -8,7 +8,7 @@ kill_mon.append(0)
 # 持ち越しパワーの初期化
 killed_monster = 0
 carry_power = 0
-for mons, kill in zip(monster_list, kill_mon):   
+for mons, kill in zip(monster_list, kill_mon):
     # 全パワーを使い果たす
     if mons >= (kill + carry_power):
         killed_monster += (kill + carry_power)

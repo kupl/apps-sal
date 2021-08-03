@@ -3,14 +3,14 @@ class Solution:
         q = collections.deque()
         for i in range(len(nums)):
             nums[i] += q[0] if q else 0
-            
+
             while q and nums[i] > q[-1]:
                 q.pop()
-                
+
             if nums[i] > 0:
                 q.append(nums[i])
-                
-            if i >= k and q and q[0] == nums[i-k]:
+
+            if i >= k and q and q[0] == nums[i - k]:
                 q.popleft()
-                
+
         return max(nums)

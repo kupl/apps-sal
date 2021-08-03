@@ -11,4 +11,4 @@ class Solution:
             while deq and prefix[deq[0]] <= x - K:
                 res = min(res, i - deq.popleft())
             deq.append(i)
-        return res if res < float('inf') else -1       
+        return res if res < float('inf') else -1

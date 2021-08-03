@@ -1,5 +1,6 @@
 import collections
 
+
 def pos_score(S):
     s = 0
     for c in S:
@@ -10,6 +11,7 @@ def pos_score(S):
         if s < 0:
             return None
     return s
+
 
 def neg_score(S):
     s = 0
@@ -22,6 +24,7 @@ def neg_score(S):
             return None
     return s
 
+
 def score(S):
     p = pos_score(S)
     if p is not None:
@@ -30,6 +33,7 @@ def score(S):
     if n is not None:
         return n
     return None
+
 
 N = int(input())
 scores = [score(input()) for _ in range(N)]
@@ -43,4 +47,3 @@ for key in score_pos_map:
     neg = score_neg_map.get(key, 0)
     ans += min(pos, neg)
 print(ans)
-

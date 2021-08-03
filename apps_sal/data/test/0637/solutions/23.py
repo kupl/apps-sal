@@ -1,5 +1,5 @@
-N=int(input())
-arr=list(map(int, input().split(' ')[:N]))
+N = int(input())
+arr = list(map(int, input().split(' ')[:N]))
 i = 0
 comp = 0
 while i < N and arr[i] == arr[0]:

@@ -40,4 +40,3 @@ for k in range(t):
         a += 1
 
     print(a)
-

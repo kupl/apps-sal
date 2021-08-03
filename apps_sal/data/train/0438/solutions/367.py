@@ -8,7 +8,7 @@ class Solution:
             left[ll] = left[rr] = ll
             right[rr] = right[ll] = rr
             mp[rr - ll + 1] += 1
-            
+
         res = -1
         mp = Counter()
         n = len(arr)
@@ -17,14 +17,12 @@ class Solution:
         for i, a in enumerate(arr):
             mp[1] += 1
             left[a] = right[a] = a
-                        
+
             if a - 1 > 0 and left[a - 1] != -1:
-                union(a-1, a)                
+                union(a - 1, a)
             if a + 1 <= n and left[a + 1] != -1:
                 union(a, a + 1)
-                
+
             if mp[m] != 0:
                 res = i + 1
         return res
-            
-

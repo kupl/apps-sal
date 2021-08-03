@@ -15,5 +15,3 @@ for t in z:
         if p * p != t:
             ans = max(ans, t)
 print(ans)
-
-

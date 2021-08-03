@@ -8,7 +8,7 @@ aux = list(map(int, input().split()))
 for i in range(n):
     numbers.append(aux[i])
 
-ser, dim  = 0, 0
+ser, dim = 0, 0
 
 for i in range(n):
     if numbers[0] > numbers[-1]:

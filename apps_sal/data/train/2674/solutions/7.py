@@ -1,1 +1,1 @@
-two_sort = lambda a: "***".join(min(a))
+def two_sort(a): return "***".join(min(a))

@@ -13,6 +13,7 @@ def gen_primes(upper_bound):
             t[j] = 1
     return primes
 
+
 def main():
     n = int(input())
     a = list(map(int, input().split()))
@@ -38,7 +39,9 @@ def main():
     print(len(process))
     print('\n'.join(process))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

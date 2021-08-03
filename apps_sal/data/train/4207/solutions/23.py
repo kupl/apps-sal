@@ -4,4 +4,4 @@ def sum_cubes(n):
     while i <= n:
         sums = sums + i ** 3
         i += 1
-    return sums 
+    return sums

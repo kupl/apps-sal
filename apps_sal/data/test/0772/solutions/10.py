@@ -15,6 +15,6 @@ for i in range(3):
                 outarray[i + 1][j] ^= 1
             if(j + 1 < 3):
                 outarray[i][j + 1] ^= 1
-            
+
 for i in range(3):
     print("".join([str(x) for x in outarray[i]]))

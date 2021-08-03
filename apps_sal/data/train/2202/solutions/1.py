@@ -25,10 +25,10 @@ class DualBIT():
 
 n = int(input())
 a = list(map(int, input().split()))
-                        
-bit = DualBIT(n+3)
-for i in range(1, n+1):
-    bit.add(i+1, n+1, i)
+
+bit = DualBIT(n + 3)
+for i in range(1, n + 1):
+    bit.add(i + 1, n + 1, i)
 
 li = []
 flag = False
@@ -55,6 +55,3 @@ while True:
     li.append(tmp)
     del a[-1]
 print(*li[::-1])
-          
-
-

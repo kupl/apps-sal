@@ -8,13 +8,13 @@ for i in range(M):
     G[l].append([r, d])
     G[r].append([l, -d])
 INF = float('inf')
-dist = [INF]*N
-seen = [False]*N
+dist = [INF] * N
+seen = [False] * N
 q = deque([])
 for s in range(N):
     if dist[s] != INF:
         continue
-    q.append([s,0])
+    q.append([s, 0])
     while len(q) != 0:
         p = q.popleft()
         if seen[p[0]] and dist[p[0]] != p[1]:

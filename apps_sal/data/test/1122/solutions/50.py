@@ -15,4 +15,3 @@ while i < M:
     odd_r -= 1
     even_l += 1
     even_r -= 1
-

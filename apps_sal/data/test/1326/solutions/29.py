@@ -8,4 +8,3 @@ for a in range(1, int(n ** .5) + 1):
     s += a + 1
 
 print(ans)
-

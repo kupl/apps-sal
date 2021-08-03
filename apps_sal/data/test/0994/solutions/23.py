@@ -22,5 +22,3 @@ if res == float('inf'):
     print("IMPOSSIBLE")
 else:
     print(res)
-    
-

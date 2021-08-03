@@ -1,5 +1,5 @@
 def final_grade(exam, projects):
-    grade = [100,90,75,0]
+    grade = [100, 90, 75, 0]
     x = 3
     if exam > 90 or projects > 10:
         x = 0

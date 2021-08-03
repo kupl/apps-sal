@@ -23,10 +23,8 @@ for _ in range(q):
                 break
             else:
                 c.pop()
-            
+
         for j in range(m):
             for idx in indices:
-                b[j] -= abs(idx-j)
+                b[j] -= abs(idx - j)
     print(''.join(map(str, ans)))
-        
-

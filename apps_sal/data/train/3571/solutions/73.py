@@ -4,9 +4,6 @@ def is_divisible(wall_length, pixel_size):
     pixel_n = pixel_size
     math = wall_n % pixel_n
     if math != 0:
-          return False
+        return False
     elif math == 0:
-          return True
-        
-
-
+        return True

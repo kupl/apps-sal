@@ -6,20 +6,26 @@ def iscollinear(p1, p2, p3):
     ans = bool(cross)
     return not ans
 
+
 def checkfortwolines(a, b, points):
     set1 = set(points)
-    for i in range(n): # erase all points collinear with a, b
-        if iscollinear(a, b, points[i]): set1.remove(points[i])
+    for i in range(n):  # erase all points collinear with a, b
+        if iscollinear(a, b, points[i]):
+            set1.remove(points[i])
 
-    if len(set1) <= 2: return True
+    if len(set1) <= 2:
+        return True
     else:
         pts1 = list(set1)
-        for i in range(len(pts1)): # check if remaining points are all collinear
-            if not iscollinear(pts1[0], pts1[1], pts1[i]): return False
+        for i in range(len(pts1)):  # check if remaining points are all collinear
+            if not iscollinear(pts1[0], pts1[1], pts1[i]):
+                return False
         return True
 
+
 n = int(input())
-if n <= 4: print("YES")
+if n <= 4:
+    print("YES")
 else:
     points = [0 for i in range(n)]
     for i in range(n):
@@ -29,6 +35,5 @@ else:
     c = points[2]
     if checkfortwolines(a, b, points) or checkfortwolines(b, c, points) or checkfortwolines(c, a, points):
         print("YES")
-    else: print("NO") 
-
-
+    else:
+        print("NO")

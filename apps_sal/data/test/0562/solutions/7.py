@@ -4,7 +4,7 @@ segment = []
 for _ in range(n):
     segment.append(list(map(int, input().split())))
 
-segment.sort(key = lambda x: x[0])
+segment.sort(key=lambda x: x[0])
 
 start1 = 0
 end1 = -float('inf')

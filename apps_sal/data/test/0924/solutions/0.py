@@ -60,4 +60,3 @@ mx = max(mx, get((fnb - fna - 2) * gc))
 
 #print(stb - sta)
 print(mx)
-

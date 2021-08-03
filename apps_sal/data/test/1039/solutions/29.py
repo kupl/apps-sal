@@ -32,4 +32,3 @@ ans = []
 for _ in range(Q):
     x, y = list(map(int, input().split()))
     print((d[x] + d[y]))
-

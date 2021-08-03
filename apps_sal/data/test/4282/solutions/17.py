@@ -11,13 +11,13 @@ for _ in range(n):
     d[b].add(a)
     sees.append(set((a, b)))
 res = []
-if b in sees[a-1]:
+if b in sees[a - 1]:
     res.extend([a, b])
     d[b].remove(a)
 else:
     res.extend([b, a])
     d[a].remove(b)
-for _ in range(n-2):
+for _ in range(n - 2):
     last = res[-1]
     nex = d[last].pop()
     d[nex].remove(last)
@@ -25,4 +25,3 @@ for _ in range(n-2):
 for r in res:
     print(r, end=' ')
 print()
-

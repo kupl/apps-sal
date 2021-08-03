@@ -13,4 +13,3 @@ class Solution:
                 even += 1
             ans %= 10**9 + 7
         return ans
-

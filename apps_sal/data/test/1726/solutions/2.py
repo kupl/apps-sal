@@ -6,4 +6,3 @@ for i in range(n):
     if s >= t:
         print(i + 1)
         break
-

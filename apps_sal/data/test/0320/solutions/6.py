@@ -25,4 +25,3 @@ else:
             a[i], b[i] = b[i], a[i]
             a[j], b[j] = b[j], a[j]
     print('-1')
-

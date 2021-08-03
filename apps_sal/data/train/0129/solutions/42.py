@@ -5,8 +5,8 @@ class Solution:
         best_ind = 0
         max_score = 0
         for ind in range(1, len(A)):
-            max_score = max(max_score, best_val+A[ind]+best_ind-ind)
-            if A[ind]+ind-best_ind >= best_val:
+            max_score = max(max_score, best_val + A[ind] + best_ind - ind)
+            if A[ind] + ind - best_ind >= best_val:
                 best_val = A[ind]
                 best_ind = ind
         return max_score

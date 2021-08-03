@@ -6,4 +6,3 @@ for x in range(k + 1):
         if 0 <= z <= k:
             ans += 1
 print(ans)
-

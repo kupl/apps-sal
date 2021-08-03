@@ -7,7 +7,7 @@ SPECIFICITY_PATTERN = re.compile(r'(^#)|(^[\.\[:][^:]?)|(^::|^[^#\.:[])')
 
 
 def compare(a, b):
-    return max((b,a), key=get_specificity)
+    return max((b, a), key=get_specificity)
 
 
 def get_specificity(selector):
@@ -20,7 +20,7 @@ def sum_specificities(*specificities):
 
 def simple_selector_to_specificity(simple_selector):
     if simple_selector == '*':
-        return [0,0,0]
+        return [0, 0, 0]
     return [1 if x else 0 for x in SPECIFICITY_PATTERN.match(simple_selector).groups()]
 
 
@@ -30,4 +30,3 @@ def get_simple_selectors(selector):
         for match in SIMPLE_SELECTOR_PATTERN.finditer(selector)
         if match.group(1)
     ]
-

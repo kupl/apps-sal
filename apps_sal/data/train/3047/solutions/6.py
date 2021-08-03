@@ -12,4 +12,3 @@ def repeating_fractions(numerator, denominator):
         except StopIteration:
             grouped.append(k)
     return '{}.{}'.format(integer, ''.join(grouped))
-

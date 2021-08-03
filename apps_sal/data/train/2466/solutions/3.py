@@ -5,6 +5,5 @@ class Solution:
         for i in range(n):
             ans = ans + mat[i][i] + mat[i][n - i - 1]
         if n % 2 != 0:
-            ans = ans - mat[n//2][n//2]
+            ans = ans - mat[n // 2][n // 2]
         return ans
-

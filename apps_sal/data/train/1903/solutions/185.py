@@ -3,7 +3,7 @@ class Solution:
         n = len(points)
         adj = [[inf for _ in range(n)] for _ in range(n)]
         for i in range(n):
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 adj[i][j] = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 adj[j][i] = adj[i][j]
         selected = [False for _ in range(n)]

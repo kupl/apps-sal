@@ -14,23 +14,23 @@ while q:
     nei = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 
     for xo, yo in nei:
-        nextx, nexty = x+xo, y+yo
+        nextx, nexty = x + xo, y + yo
 
         if nextx < 0 or nextx >= w or nexty < 0 or nexty >= h:
             continue
         if grid[nexty][nextx] == "#":
             continue
 
-        dist = dists[y][x]+1
+        dist = dists[y][x] + 1
 
         if dist < dists[nexty][nextx]:
             dists[nexty][nextx] = dist
             prev[nexty][nextx] = (x, y)
             q.append((nextx, nexty))
 
-if prev[h-1][w-1] != -1:
+if prev[h - 1][w - 1] != -1:
     path = []
-    cur = (w-1, h-1)
+    cur = (w - 1, h - 1)
 
     while cur != -1:
         path.append(cur)

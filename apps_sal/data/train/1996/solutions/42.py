@@ -2,6 +2,7 @@ class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)
         state = ['UNPROCESSED'] * n
+
         def isAcyclic(node):
             if state[node] == 'PROCESSING':
                 return False

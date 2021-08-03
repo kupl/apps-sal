@@ -1,4 +1,6 @@
 from collections import *
+
+
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         mapper = defaultdict(int)
@@ -7,7 +9,7 @@ class Solution:
         mapper[0] = -1
         mapper[arr[0]] = 0
         for i in range(1, len(arr)):
-            prefix[i] = prefix[i-1] + arr[i]
+            prefix[i] = prefix[i - 1] + arr[i]
             mapper[prefix[i]] = i
         cumu = count = 0
         l = r = None
@@ -26,7 +28,7 @@ class Solution:
                 else:
                     l = min(l, i - mapper[cumu - target])
             if l != None and cumu + target in mapper:
-                ans = min(ans, mapper[cumu+target]-i+l)
+                ans = min(ans, mapper[cumu + target] - i + l)
         if ans == float('inf'):
             return -1
         return ans

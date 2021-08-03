@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 z = []
 for i in 'ii':
     a = rd()
@@ -12,4 +14,3 @@ for i in range(u[0], u[3] + 1):
             print('YES')
             return
 print('NO')
-

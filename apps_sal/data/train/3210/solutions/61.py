@@ -10,8 +10,7 @@ def get_strings(city):
         else:
             counter += 1
 
-    for x,y in list(collect.items()):
-        record.append(x+y)
+    for x, y in list(collect.items()):
+        record.append(x + y)
 
     return ','.join(record)
-

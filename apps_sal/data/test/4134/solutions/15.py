@@ -21,11 +21,11 @@ def main():
             cnt[x][y][val] += 1
             return
 
-        if x+1 < n:
+        if x + 1 < n:
             go_start(x + 1, y, val, steps + 1)
 
-        if y+1 < m:
-            go_start(x, y+1, val, steps + 1)
+        if y + 1 < m:
+            go_start(x, y + 1, val, steps + 1)
 
     def go_end(x, y, val, steps):
         if steps + half == all:
@@ -37,17 +37,18 @@ def main():
         val ^= g[x][y]
 
         if x > 0:
-            go_end(x-1, y, val, steps + 1)
+            go_end(x - 1, y, val, steps + 1)
         if y > 0:
-            go_end(x, y-1, val, steps + 1)
+            go_end(x, y - 1, val, steps + 1)
 
     go_start(0, 0, 0, 0)
-    go_end(n-1, m-1, 0, 0)
+    go_end(n - 1, m - 1, 0, 0)
 
     print(res[0])
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

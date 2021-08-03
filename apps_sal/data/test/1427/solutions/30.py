@@ -5,7 +5,7 @@ mod = 1000000007
 
 lcm = {}
 ps = []
-for i in range(n): 
+for i in range(n):
     ai = a[i]
     p = 2
     ps.append({})
@@ -25,6 +25,7 @@ lcmv = 1
 for p in lcm:
     lcmv = (lcmv * (p ** lcm[p])) % mod
 
+
 def inv(p, k):
     k = mod - k - 1
     ret = 1
@@ -36,6 +37,7 @@ def inv(p, k):
         k //= 2
     return ret
 
+
 ret = 0
 for i in range(n):
     prod = lcmv
@@ -44,5 +46,3 @@ for i in range(n):
     ret = (ret + prod) % mod
 
 print(ret)
-        
-

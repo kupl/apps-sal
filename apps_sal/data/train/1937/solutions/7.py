@@ -1,4 +1,4 @@
-#junge
+# junge
 
 class ThroneInheritance:
     root = ''
@@ -21,7 +21,7 @@ class ThroneInheritance:
     def getInheritanceOrder(self) -> List[str]:
         res = []
         tosee = []
-        tosee.append(self.root);
+        tosee.append(self.root)
         while (len(tosee) != 0):
             cur = tosee[0]
             tosee.pop(0)
@@ -33,4 +33,3 @@ class ThroneInheritance:
                 tosee.insert(0, item)
 
         return res
-

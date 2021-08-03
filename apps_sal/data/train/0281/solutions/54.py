@@ -9,15 +9,14 @@ class Solution:
                 if val1 < val2:
                     if val2 - val1 in aux:
                         aux[val2 - val1] += 1
-                    else:   aux[val2 - val1] = 1
+                    else:
+                        aux[val2 - val1] = 1
                 else:
                     if 26 - val1 + val2 in aux:
                         aux[26 - val1 + val2] += 1
-                    else:   aux[26 - val1 + val2] = 1
+                    else:
+                        aux[26 - val1 + val2] = 1
         ans = 0
         for elem in aux:
-            ans = max(ans, 26 * (aux[elem]-1) + elem)
+            ans = max(ans, 26 * (aux[elem] - 1) + elem)
         return ans <= k
-        
-                
-

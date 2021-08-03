@@ -10,7 +10,7 @@ def can_destroy(A):
             color_now = A[i]
             num_now = 1
     return -1
-        
+
 
 def destroy(A):
     while len(A) > 0 and can_destroy(A) != -1:
@@ -19,6 +19,7 @@ def destroy(A):
         while i < len(A) and A[i] == c:
             A.pop(i)
     return A
+
 
 n, k, x = map(int, input().split())
 A = list(map(int, input().split()))

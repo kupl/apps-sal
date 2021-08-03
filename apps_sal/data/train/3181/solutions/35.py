@@ -3,5 +3,4 @@ def check_alive(health):
         return False
     else:
         return True
-    #pogchamp
-
+    # pogchamp

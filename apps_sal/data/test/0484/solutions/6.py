@@ -15,4 +15,3 @@ for i in range(n):
                     if max(d[i][x1], d[j][x2]) <= a and d[i][1 - x1] + d[j][1 - x2] <= b:
                         ans = max(ans, tmp)
 print(ans)
-

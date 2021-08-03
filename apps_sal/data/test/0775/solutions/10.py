@@ -10,4 +10,3 @@ for i in range(k):
     x, y = list(map(int, input().split()))
     ball = x if ball == y else y if ball == x else ball
 print(ball)
-

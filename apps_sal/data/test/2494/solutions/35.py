@@ -11,7 +11,7 @@ def solve(K):
         n = q.pop()
         if n == 0:
             break
-        m = (n*10)%K
+        m = (n * 10) % K
         if m not in dists:
             dists[m] = dists[n]
             q.append(m)
@@ -19,7 +19,7 @@ def solve(K):
             dists[m] = dists[n]
             q.append(m)
         if n % 10 != 9:
-            m = (n+1)%K
+            m = (n + 1) % K
             if m not in dists:
                 dists[m] = dists[n] + 1
                 q.appendleft(m)
@@ -36,5 +36,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

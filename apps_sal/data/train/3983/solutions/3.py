@@ -1,6 +1,6 @@
-def Xbonacci(signature,n):
+def Xbonacci(signature, n):
     l = len(signature)
 
     for i in range(l, n):
-        signature += [sum(signature[i-l:i])]
+        signature += [sum(signature[i - l:i])]
     return signature[:n]

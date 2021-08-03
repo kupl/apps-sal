@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         graph = defaultdict(list)
@@ -7,7 +9,7 @@ class Solution:
                 graph[node].append(idx)
         visited_node = set([S])
         visited_route = [0 for _ in range(len(routes))]
-        queue = [(idx, 0) for idx in graph[S]] # route idx
+        queue = [(idx, 0) for idx in graph[S]]  # route idx
         for idx, _ in queue:
             visited_route[idx] = 1
         while queue:
@@ -15,7 +17,8 @@ class Solution:
             new_nodes = set(routes[id]) - visited_node
             visited_node = visited_node | new_nodes
             for node in new_nodes:
-                if node == T: return depth + 1
+                if node == T:
+                    return depth + 1
                 for idx in graph[node]:
                     if visited_route[idx] == 0:
                         visited_route[idx] = 1

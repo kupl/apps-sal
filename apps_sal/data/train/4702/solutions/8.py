@@ -2,9 +2,12 @@ from math import gcd, log
 from operator import mul
 from functools import reduce
 
+
 def digits_product(product):
-    if product <= 1: return 10 + product
-    count = lambda p: round(log(gcd(product, p ** 9), p))
+    if product <= 1:
+        return 10 + product
+
+    def count(p): return round(log(gcd(product, p ** 9), p))
     n2, n3, n5, n7 = map(count, [2, 3, 5, 7])
     digits = [5] * n5 + [7] * n7 + [8] * (n2 // 3) + [9] * (n3 // 2)
     n2 %= 3

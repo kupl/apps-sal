@@ -2,21 +2,23 @@ els = "H,He,Li,Be,B,C,N,O,F,Ne,Na,Mg,Al,Si,P,S,Cl,Ar,K,Ca,Sc,Ti,V,Cr,Mn,Fe,Co,Ni
 
 els = els.upper().split(',')
 
+
 def check(s):
-   for el in els:
-      if s == el:
-         return True
-      match = False
-      if len(el) <= len(s):
-         match = True
-         for x in range(len(el)):
-            if s[x] != el[x]:
-               match = False
-               break
-      if match:
-         if check(s[len(el):]):
+    for el in els:
+        if s == el:
             return True
-   return False
+        match = False
+        if len(el) <= len(s):
+            match = True
+            for x in range(len(el)):
+                if s[x] != el[x]:
+                    match = False
+                    break
+        if match:
+            if check(s[len(el):]):
+                return True
+    return False
+
 
 print("YES" if check(input()) else "NO")
 
@@ -30,8 +32,7 @@ print("YES" if check(input()) else "NO")
 #    n = input()
 #    s = input()
 #    print(len(s.replace('UR','D').replace('RU','D')))
-   
+
 # # for tc in range(int(input())): solve()
 
 # solve()
-

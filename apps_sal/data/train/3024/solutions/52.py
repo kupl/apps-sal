@@ -1,9 +1,8 @@
 def friend(x):
-    #Code
+    # Code
     resultList = []
     for friend in x:
-        if len(friend)==4 : resultList.append(friend)
-    
-    return resultList
-    
+        if len(friend) == 4:
+            resultList.append(friend)
 
+    return resultList

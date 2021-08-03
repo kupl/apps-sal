@@ -1,6 +1,6 @@
 n = int(input())
 
 if n % 2 == 0:
-  print(n)
+    print(n)
 else:
-  print(2*n)
+    print(2 * n)

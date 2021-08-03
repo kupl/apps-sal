@@ -6,4 +6,3 @@ while N - i * X > 0:
     i += 1
 
 print(ans)
-

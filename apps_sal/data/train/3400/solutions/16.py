@@ -1,8 +1,8 @@
-def even_numbers(arr,n):
-    x=[]
+def even_numbers(arr, n):
+    x = []
     for i in arr[::-1]:
-        if len(x)<n and i%2 ==0:
-            x.append(i) 
+        if len(x) < n and i % 2 == 0:
+            x.append(i)
         else:
             pass
-    return  x[::-1]
+    return x[::-1]

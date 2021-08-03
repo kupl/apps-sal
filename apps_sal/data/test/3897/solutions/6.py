@@ -12,7 +12,7 @@ A = list(map(int, input().split()))
 
 B = [0] * MAX
 
-bePrime = [0] * MAX;
+bePrime = [0] * MAX
 
 primNum = []
 
@@ -66,7 +66,7 @@ l = len(C)
 
 for j in range(0, l):
 
-    num = 0;
+    num = 0
 
     for k in range(0, l):
 
@@ -83,4 +83,3 @@ for j in range(0, l):
         ans = ans * calc(n + num - 1, n - 1) % Mod
 
 print(str(ans % Mod))
-

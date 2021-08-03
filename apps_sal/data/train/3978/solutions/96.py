@@ -1,1 +1,1 @@
-check_for_factor = lambda x,y: not x%y
+def check_for_factor(x, y): return not x % y

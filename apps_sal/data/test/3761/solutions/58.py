@@ -19,4 +19,3 @@ ans = (
 )
 # 出力
 print(ans)
-

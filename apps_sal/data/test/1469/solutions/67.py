@@ -12,7 +12,7 @@ import array
 from bisect import *
 from collections import *
 import fractions
-import heapq 
+import heapq
 from itertools import *
 import math
 import random
@@ -35,8 +35,8 @@ edges = []  # (from, to, cost)
 n = 2
 cost = 1
 while n <= L:
-    edges.append((v, v+1, 0))
-    edges.append((v, v+1, cost))
+    edges.append((v, v + 1, 0))
+    edges.append((v, v + 1, cost))
     cost *= 2
     v += 1
     n *= 2

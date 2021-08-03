@@ -8,4 +8,3 @@ while (t > 0):
     else:
         c = (ms - i + 1) // 2
         print(min(c, e + 1))
-

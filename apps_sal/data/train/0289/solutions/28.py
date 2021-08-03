@@ -2,7 +2,7 @@ class Solution:
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         if L + M > len(A):
             assert False
-        
+
         l = []
         s = 0
         for i in range(len(A) - L + 1):
@@ -12,8 +12,8 @@ class Solution:
                 s -= A[i - 1]
                 s += A[i + L - 1]
             l.append((-s, (i, i + L - 1)))
-        l = sorted(l, key=lambda tup : tup[0])
-        #print(l)
+        l = sorted(l, key=lambda tup: tup[0])
+        # print(l)
         m = []
         s = 0
         for i in range(len(A) - M + 1):
@@ -23,8 +23,8 @@ class Solution:
                 s -= A[i - 1]
                 s += A[i + M - 1]
             m.append((-s, (i, i + M - 1)))
-        m = sorted(m, key=lambda tup : tup[0])
-        
+        m = sorted(m, key=lambda tup: tup[0])
+
         maximum = 0
         for i in range(len(l)):
             for j in range(len(m)):
@@ -36,7 +36,5 @@ class Solution:
                         maximum = sl + sm
                 else:
                     break
-        
-        return maximum
-                
 
+        return maximum

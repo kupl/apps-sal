@@ -2,6 +2,7 @@
 
 import sys
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -14,6 +15,8 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
@@ -30,14 +33,14 @@ c = sum(A[m:r])
 d = sum(A[r:])
 ans = max(a, b, c, d) - min(a, b, c, d)
 # 尺取法(3点動かす)
-while m < N-1:
+while m < N - 1:
     # a,bの差が最小になるまで左を動かす
-    while l < m-1 and abs(a - b) > abs(a+A[l] - (b-A[l])):
+    while l < m - 1 and abs(a - b) > abs(a + A[l] - (b - A[l])):
         a += A[l]
         b -= A[l]
         l += 1
     # c,dの差が最小になるまで右を動かす
-    while r < N-1 and abs(c - d) > abs(c+A[r] - (d-A[r])):
+    while r < N - 1 and abs(c - d) > abs(c + A[r] - (d - A[r])):
         c += A[r]
         d -= A[r]
         r += 1
@@ -52,4 +55,3 @@ while m < N-1:
         d -= A[r]
         r += 1
 print(ans)
-

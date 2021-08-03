@@ -14,5 +14,3 @@ pred, dist = nx.dijkstra_predecessor_and_distance(G, K - 1)
 
 for x, y in XY:
     print((dist[x - 1] + dist[y - 1]))
-
-

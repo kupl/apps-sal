@@ -9,8 +9,10 @@ while (m >= put):
     m -= put
     ans += 1
     put += (left > 0) + (right > 0)
-    if (left): left -= 1
-    if (right): right -= 1
+    if (left):
+        left -= 1
+    if (right):
+        right -= 1
     if (left == right == 0):
         ans += (m // put)
         break

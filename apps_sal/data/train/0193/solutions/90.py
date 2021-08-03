@@ -1,6 +1,6 @@
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
-        halfLength = len(arr)//2
+        halfLength = len(arr) // 2
         valDict = {}
         for val in arr:
             if val in valDict:

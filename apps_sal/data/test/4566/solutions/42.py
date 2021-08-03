@@ -7,4 +7,3 @@ for i in range(M):
 
 for i in range(1, N + 1):
     print((len(data[i])))
-

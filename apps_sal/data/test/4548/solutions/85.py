@@ -24,4 +24,3 @@ if a_cost > b_cost:
     print(b_cost)
 else:
     print(a_cost)
-

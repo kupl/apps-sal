@@ -37,4 +37,3 @@ for i, seal1 in enumerate(seals):
                 max_area = max(max_area, seal1[0] * seal1[1] + seal2[0] * seal2[1])
 
 print(max_area)
-

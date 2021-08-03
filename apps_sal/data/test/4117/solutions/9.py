@@ -22,4 +22,3 @@ for (a, b, c) in list(itertools.combinations(numbers, 3)):
         total += 1
 
 print(total)
-

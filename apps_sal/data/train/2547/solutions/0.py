@@ -4,5 +4,5 @@ class Solution:
         for arr in grid:
             for num in arr:
                 if num < 0:
-                    count +=1
+                    count += 1
         return count

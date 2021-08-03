@@ -9,4 +9,3 @@ for i in arr:
     res = max(res, temp % p + sum_ % p)
 
 print(res)
-

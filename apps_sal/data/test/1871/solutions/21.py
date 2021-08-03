@@ -11,7 +11,7 @@ c.sort()
 time = 0
 
 for i in c:
-    time += i*x
+    time += i * x
     x -= 1 if x > 1 else 0
 
 print(time)

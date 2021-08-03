@@ -10,11 +10,7 @@ while roop == True:
         else:
             roop = False
             break
-            
+
     if roop == True:
         count += 1
 print(count)
-
-
-
-

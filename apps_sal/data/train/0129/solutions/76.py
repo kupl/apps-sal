@@ -8,4 +8,3 @@ class Solution:
             if A[j] + j > ti:
                 i = j
         return res
-

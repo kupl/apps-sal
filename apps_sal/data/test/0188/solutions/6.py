@@ -45,4 +45,3 @@ if 0 <= s1 and 0 <= s2 and 0 <= s4:
     print("YES")
 else:
     print("NO")
-

@@ -1,8 +1,10 @@
+from math import factorial
+from itertools import permutations
 import sys
 read = sys.stdin.read
 #readlines = sys.stdin.readlines
-from itertools import permutations
-from math import factorial
+
+
 def main():
     n = int(input())
     xy = [tuple(map(int, input().split())) for _ in range(n)]
@@ -21,6 +23,9 @@ def main():
     ans = dis_sum / factorial(n)
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

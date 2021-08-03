@@ -15,4 +15,3 @@ elif S in ['ABBA', 'BAAA', 'BAAB', 'BBBA']:
     print(b)
 else:
     print((1))
-

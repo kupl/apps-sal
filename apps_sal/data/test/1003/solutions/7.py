@@ -4,4 +4,3 @@ while n >= m:
     r += m
     n -= m - 1
 print(r + n)
-

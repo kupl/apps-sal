@@ -4,10 +4,10 @@ a = list(map(int, input().split()))
 a = sorted(a)
 ans = N
 psum = 0
-for i in range(N-1, -1, -1) :
-    if psum+a[i] < K :
+for i in range(N - 1, -1, -1):
+    if psum + a[i] < K:
         psum += a[i]
-    else :
+    else:
         ans = min(ans, i)
 
 print(ans)

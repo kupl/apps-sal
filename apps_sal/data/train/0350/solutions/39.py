@@ -1,7 +1,7 @@
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-        
-        def helper(A,K):
+
+        def helper(A, K):
 
             d = defaultdict(int)
             begin = 0
@@ -29,5 +29,4 @@ class Solution:
                 res += end - begin + 1
 
             return res
-        return helper(A,K) - helper(A,K-1)
-
+        return helper(A, K) - helper(A, K - 1)

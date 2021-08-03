@@ -1,7 +1,6 @@
 class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
-        
-        
+
         consecutive = 0
         q = deque(arr)
         winner = None
@@ -19,5 +18,5 @@ class Solution:
                 consecutive = 0
                 winner = q[0]
             consecutive += 1
-        
+
         return winner

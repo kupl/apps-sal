@@ -5,11 +5,11 @@ class Solution:
         self.sumsOfL(A, L, sums)
         for i in range(len(A) - M + 1):
             available = self.getAvailableIndices(A, L, M, i)
-            current_sum = sum(A[i:i+M])
+            current_sum = sum(A[i:i + M])
             for j in available:
                 max_found = max(max_found, sums[j] + current_sum)
         return max_found
-        
+
     def getAvailableIndices(self, A, L, M, i):
         available = []
         for j in range(len(A) - L + 1):
@@ -24,4 +24,3 @@ class Solution:
             dictionary[left] = sum(A[left:right])
             left += 1
             right += 1
-

@@ -14,11 +14,11 @@ for i in range(5):
 
 for i in range(5):
     print(k[i])"""
-  
-  
+
+
 import sys
 import math
-  
+
 n = int(sys.stdin.readline())
 
 k = [0] * 9
@@ -32,7 +32,5 @@ for i in range(4):
             if(k[ind] > n * 2):
                 print("NO")
                 return
-                
+
 print("YES")
-
-

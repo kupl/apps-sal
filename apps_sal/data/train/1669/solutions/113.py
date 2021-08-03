@@ -25,5 +25,5 @@ class Solution:
                     break
             if group and len(group) != W:
                 return False
-        
+
         return True

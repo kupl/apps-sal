@@ -23,16 +23,16 @@ def solve(n, p):
 
 
 # IDK why generation is so slow for this.
-#@given(integers(min_value=2, max_value=int(1e2))
+# @given(integers(min_value=2, max_value=int(1e2))
 #    .flatmap(lambda n: permutations(range(1, 2*n + 1)))
 #    .map(lambda ab: [(ab[i], ab[i + 1]) for i in range(0, len(ab), 2)]))
-#def test_solve(p):
+# def test_solve(p):
 #    solve(len(p), p)
 
 
 def main():
     n = int(input())
-    p = [None]*n
+    p = [None] * n
     for i in range(n):
         p[i] = tuple(map(int, input().split()))
     i = solve(n, p)
@@ -42,5 +42,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

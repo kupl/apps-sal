@@ -15,13 +15,13 @@ faces = [[2, 4, 6, 8, 10, 12, 23, 21], [13, 14, 5, 6, 17, 18, 21, 22],
 
 def rotate(g, face):
     c = g[:]
-    temp1 = c[face[0]-1]
-    temp2 = c[face[1]-1]
+    temp1 = c[face[0] - 1]
+    temp2 = c[face[1] - 1]
     for i in range(0, 6, 2):
-        c[face[i]-1] = c[face[i+2]-1]
-        c[face[i+1]-1] = c[face[i+3] - 1]
-    c[face[-2]-1] = temp1
-    c[face[-1]-1] = temp2
+        c[face[i] - 1] = c[face[i + 2] - 1]
+        c[face[i + 1] - 1] = c[face[i + 3] - 1]
+    c[face[-2] - 1] = temp1
+    c[face[-1] - 1] = temp2
     return c
 
 
@@ -41,4 +41,3 @@ if canSolve(color):
     print("YES")
 else:
     print("NO")
-

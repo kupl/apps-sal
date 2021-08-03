@@ -31,4 +31,5 @@ def e_handshake():
     happiness += (M - shake) * left
     return happiness
 
+
 print(e_handshake())

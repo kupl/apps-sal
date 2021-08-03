@@ -4,4 +4,3 @@ def trouble(x, t):
         if i + n[-1] != t:
             n.append(i)
     return n
-

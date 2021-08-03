@@ -8,4 +8,3 @@ for i in range(int(max_range)):
         print("Yes")
         return
 print("No")
-

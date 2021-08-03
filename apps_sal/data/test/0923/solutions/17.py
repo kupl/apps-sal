@@ -19,6 +19,3 @@ for i in range(1, n):
         break
 if d >= 0:
     print("Yes")
-    
-    
-

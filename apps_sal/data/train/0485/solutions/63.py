@@ -27,6 +27,5 @@ class Solution:
                     if total & 1:
                         return -1
             if i >= K - 1:
-                total -= flips[i-K+1]
+                total -= flips[i - K + 1]
         return res
-

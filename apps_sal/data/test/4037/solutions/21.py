@@ -15,16 +15,20 @@ for a, b in pos:
         ans += 1
 neg.sort(key=sum, reverse=True)
 memo = {}
+
+
 def dp(i, r):
     if(i, r) in memo:
         return memo[i, r]
-    if i == len(neg):return 0
+    if i == len(neg):
+        return 0
     a, b = neg[i]
-    ans  = dp(i+1, r)
+    ans = dp(i + 1, r)
     if r >= a and r + b >= 0:
-        ans = max(ans, dp(i+1, r + b) + 1)
+        ans = max(ans, dp(i + 1, r + b) + 1)
     memo[i, r] = ans
     return ans
-print( dp(0, R) + ans  ) 
-#purvikaurraina
 
+
+print(dp(0, R) + ans)
+# purvikaurraina

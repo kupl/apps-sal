@@ -12,6 +12,5 @@ for i in range(1, n):
     elif a[i] == b[i - 1] and a[i - 1] == b[i]:
         c[i] = (1 + c[i - 2] if i > 1 else 1)
     c[i] = min(c[i], c[i - 1] + 1)
-    
-print(c[n - 1])
 
+print(c[n - 1])

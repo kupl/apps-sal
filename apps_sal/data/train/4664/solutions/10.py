@@ -5,9 +5,9 @@ def conference_picker(cities_visited, cities_offered):
     shortList = list()
     for city in confPicker:
         if city not in SECSR:
-            shortList.append(city)            
+            shortList.append(city)
         else:
-            pass            
+            pass
     if len(shortList) > 0:
         return shortList[0]
     else:

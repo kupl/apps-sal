@@ -1,4 +1,4 @@
-def Xbonacci(signature,n):
+def Xbonacci(signature, n):
     def gen_bonacci(signature):
         yield from signature
         from collections import deque
@@ -9,5 +9,3 @@ def Xbonacci(signature,n):
             yield signature[-1]
     from itertools import islice
     return [i for i in islice(gen_bonacci(signature), n)]
-
-

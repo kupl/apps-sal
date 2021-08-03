@@ -1,6 +1,6 @@
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
-        folder = sorted(folder,key = lambda e: len(e))
+        folder = sorted(folder, key=lambda e: len(e))
         res = set()
         for f in folder:
             flag = True
@@ -11,4 +11,3 @@ class Solution:
             if flag:
                 res.add(f)
         return list(res)
-

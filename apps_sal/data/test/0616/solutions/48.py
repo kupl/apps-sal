@@ -1,4 +1,5 @@
-import sys, re
+import sys
+import re
 from collections import deque, defaultdict, Counter
 from math import ceil, sqrt, hypot, factorial, pi, sin, cos, radians
 from itertools import accumulate, permutations, combinations, product, groupby
@@ -14,28 +15,32 @@ def INT(): return int(input())
 def MAP(): return list(map(int, input().split()))
 def LIST(): return list(map(int, input().split()))
 def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
 
 
 def main():
-	N, M = MAP()
-	dp = [INF]*(1<<N)
-	dp[0] = 0
+    N, M = MAP()
+    dp = [INF] * (1 << N)
+    dp[0] = 0
 
-	for _ in range(M):
-		a, b = MAP()
-		c = LIST()
-		tmp = 0
-		for x in c:
-			tmp = tmp|1<<(x-1)
-		for S in range(1<<N):
-			dp[S|tmp] = min(dp[S|tmp], dp[S]+a)
+    for _ in range(M):
+        a, b = MAP()
+        c = LIST()
+        tmp = 0
+        for x in c:
+            tmp = tmp | 1 << (x - 1)
+        for S in range(1 << N):
+            dp[S | tmp] = min(dp[S | tmp], dp[S] + a)
 
-	print((dp[-1] if dp[-1] != INF else -1))
+    print((dp[-1] if dp[-1] != INF else -1))
+
 
 def __starting_point():
-	main()
+    main()
+
 
 __starting_point()

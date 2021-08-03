@@ -23,6 +23,7 @@ def f(G, not_searched, results={0: '0'}):
 
     return results
 
+
 N = int(input())
 G = [{} for _ in range(N)]
 not_searched = set([i for i in range(N)])
@@ -30,10 +31,10 @@ not_searched = set([i for i in range(N)])
 if N == 1:
     print(results[0])
 else:
-    for i in range(N-1):
+    for i in range(N - 1):
         u, v, w = map(int, input().split())
-        G[u-1][v-1] = w
-        G[v-1][u-1] = w
+        G[u - 1][v - 1] = w
+        G[v - 1][u - 1] = w
 
     results = f(G, not_searched)
     for i in range(N):

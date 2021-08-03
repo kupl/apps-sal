@@ -51,4 +51,3 @@ else:
 
 ans = (abc + abc2 + abc3 + abc4) % MOD
 print(ans)
-

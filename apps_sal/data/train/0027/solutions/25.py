@@ -11,4 +11,3 @@ for i in range(0, t):
             count += 1
         d[a] = max(d.get(a, 0), count)
     print(sum(d.values()))
-

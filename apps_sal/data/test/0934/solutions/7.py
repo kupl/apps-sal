@@ -22,4 +22,3 @@ for i in cs:
         return
 
 print('NO')
-

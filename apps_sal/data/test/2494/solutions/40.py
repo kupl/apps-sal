@@ -29,4 +29,3 @@ for i in range(1, k):
 dist = dijkstra(graph, k, 1)
 ans = dist[0] + 1
 print(ans)
-

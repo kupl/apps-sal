@@ -1,6 +1,7 @@
 import heapq
 import collections
 
+
 class Solution:
     def isNStraightHand(self, hand, W) -> bool:
         if len(hand) % W != 0:

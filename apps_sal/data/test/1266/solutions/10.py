@@ -43,8 +43,7 @@ for i in range(n):
             elif y1 - y < t2:
                 t2 = y1 - y
                 ind2 = arr[i][0]
-    
-    
+
     if y1 == y:
         if x > x1:
             if t1 == -1:
@@ -60,8 +59,7 @@ for i in range(n):
             elif x1 - x < t3:
                 t3 = x1 - x
                 ind3 = arr[i][0]
-                
-    
+
     if abs(x1 - x) == abs(y1 - y):
         if y1 > y:
             if x1 < x:

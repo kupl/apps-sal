@@ -1,1 +1,1 @@
-isLeapYear=__import__("calendar").isleap 
+isLeapYear = __import__("calendar").isleap

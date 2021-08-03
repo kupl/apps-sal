@@ -18,13 +18,13 @@ class ThroneInheritance:
             raise Exception('Child already exists')
         children[childName] = OrderedDict()
         self.parentChildrenDictMap[childName] = children[childName]
-                 
 
     def death(self, name: str) -> None:
         self.dead.add(name)
 
     def getInheritanceOrder(self) -> List[str]:
         ans = []
+
         def dfs(root):
             for parent, children in list(root.items()):
                 if parent not in self.dead:
@@ -32,9 +32,6 @@ class ThroneInheritance:
                 dfs(root[parent])
         dfs(self.family)
         return ans
-            
-    
-    
 
 
 # Your ThroneInheritance object will be instantiated and called as such:
@@ -42,4 +39,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

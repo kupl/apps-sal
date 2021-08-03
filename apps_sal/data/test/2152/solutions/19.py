@@ -13,7 +13,7 @@ for i in range(n):
     if meat == 0:
         cost += p[i] * a[i]
         meat += a[i]
-        for j in range(i+1, n):
+        for j in range(i + 1, n):
             if p[j] < p[i]:
                 break
             cost += p[i] * a[j]
@@ -22,5 +22,3 @@ for i in range(n):
     meat -= a[i]
 
 print(cost)
-
-

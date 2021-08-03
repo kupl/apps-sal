@@ -6,7 +6,7 @@ def prefix_func(s):
             j = p[j - 1]
 
         if s[i] == s[j]:
-        	j += 1
+            j += 1
         p[i] = j
 
     return p[-1]

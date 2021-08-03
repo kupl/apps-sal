@@ -17,4 +17,3 @@ else:
         if sum_digits >= k:
             break
     print(count)
-

@@ -15,9 +15,9 @@ for i in a:
     if i < 0:
         countNeg += 1
 
-if countPos >= ceil(n/2):
+if countPos >= ceil(n / 2):
     print(1)
-elif countNeg >= ceil(n/2):
+elif countNeg >= ceil(n / 2):
     print(-1)
 else:
     print(0)

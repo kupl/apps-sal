@@ -5,4 +5,3 @@ def get_number_of_squares(n):
         j += i
         k += j
     return i >> 1
-

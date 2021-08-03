@@ -7,9 +7,9 @@ class HTMLGen:
         self.div = lambda t: self.tag("div", t)
         self.span = lambda t: self.tag("span", t)
         self.title = lambda t: self.tag("title", t)
-        
+
     def tag(self, tag_str, content):
         return "<{}>{}</{}>".format(tag_str, content, tag_str)
-        
+
     def comment(self, content):
         return "<!--{}-->".format(content)

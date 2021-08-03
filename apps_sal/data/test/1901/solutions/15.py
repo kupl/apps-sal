@@ -10,7 +10,7 @@ def dfs(edge):
     queue = []
     visited.add(edge)
     queue.append(edge)
-    lowest_cost = price_list[edge-1]
+    lowest_cost = price_list[edge - 1]
     while len(queue) > 0:
         cur_edge = queue.pop()
         for i in merge_matrix[cur_edge]:
@@ -25,11 +25,10 @@ for i in range(m):
     x, y = list(map(int, input().split()))
     merge_matrix[x].append(y)
     merge_matrix[y].append(x)
-for i in range(1, n+1):
+for i in range(1, n + 1):
     if i not in visited:
         summary += dfs(i)
-for i in range(1, n+1):
+for i in range(1, n + 1):
     if i not in visited:
-        summary += price_list[i-1]
+        summary += price_list[i - 1]
 print(summary)
-

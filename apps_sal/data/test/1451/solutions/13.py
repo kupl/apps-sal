@@ -11,4 +11,3 @@ for number in numbers:
         result += 1
 
 print("%d" % result)
-

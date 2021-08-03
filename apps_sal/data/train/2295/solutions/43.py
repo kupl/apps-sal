@@ -10,5 +10,4 @@ if ans == []:
     min_ans = sum_a
 else:
     min_ans = min(ans)
-print((sum_a-min_ans))
-
+print((sum_a - min_ans))

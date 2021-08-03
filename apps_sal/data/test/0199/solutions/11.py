@@ -10,5 +10,4 @@ else:
     if s > n * v[0]:
         print(-1)
     else:
-        print(v[0] - (s + n - 1) // n)  
-
+        print(v[0] - (s + n - 1) // n)

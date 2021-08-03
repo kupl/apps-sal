@@ -6,6 +6,7 @@ def count_guest_uniform_on_host_team(n_teams: int, home_colours: list, guest_col
 
     return result
 
+
 n = int(input())
 h = [None] * n
 a = [None] * n

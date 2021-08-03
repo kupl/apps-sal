@@ -8,4 +8,3 @@ for i in range(N):
         table[i + 1][j] = max(table[i][j] + (A[i] if not (i + j) % 2 else 0), table[i + 1][j])
         table[i + 1][j + 1] = max(table[i][j], table[i + 1][j + 1])
 print((table[N][K]))
-

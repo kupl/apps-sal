@@ -2,6 +2,7 @@
 
 import sys
 
+
 def input(): return sys.stdin.readline().strip()
 def list2d(a, b, c): return [[c] * b for i in range(a)]
 def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
@@ -14,9 +15,12 @@ def Yes(): print('Yes')
 def No(): print('No')
 def YES(): print('YES')
 def NO(): print('NO')
+
+
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
+
 
 class Dinic:
     """ 最大流(Dinic) """
@@ -28,11 +32,11 @@ class Dinic:
         self.links = [[] for _ in range(n)]
         self.depth = None
         self.progress = None
- 
+
     def add_link(self, _from, to, cap):
         self.links[_from].append([cap, to, len(self.links[to])])
         self.links[to].append([0, _from, len(self.links[_from]) - 1])
- 
+
     def bfs(self, s):
         from collections import deque
 
@@ -46,7 +50,7 @@ class Dinic:
                     depth[to] = depth[v] + 1
                     q.append(to)
         self.depth = depth
- 
+
     def dfs(self, v, t, flow):
         if v == t:
             return flow
@@ -63,7 +67,7 @@ class Dinic:
             self.links[to][rev][0] += d
             return d
         return 0
- 
+
     def max_flow(self, s, t):
         INF = Dinic.INF
         flow = 0
@@ -77,11 +81,12 @@ class Dinic:
                 flow += current_flow
                 current_flow = self.dfs(s, t, INF)
 
+
 N = INT()
 A = LIST()
 
 # 最大流を最小カットに使用、流量がコストとみなせる
-dinic = Dinic(N+2)
+dinic = Dinic(N + 2)
 s = N
 t = N + 1
 total = 0
@@ -94,14 +99,13 @@ for i, a in enumerate(A):
         dinic.add_link(i, t, a)
         total += a
 
-for i in range(1, N+1):
+for i in range(1, N + 1):
     j = i
     while j <= N:
         # 制約で異なる選択肢を選べない組にコストINFの辺を張る
-        dinic.add_link(i-1, j-1, INF)
+        dinic.add_link(i - 1, j - 1, INF)
         j += i
 
 res = dinic.max_flow(s, t)
 # 最大利益 = 調整分 - 最小カット
 print((total - res))
-

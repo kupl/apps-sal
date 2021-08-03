@@ -4,5 +4,5 @@ def remove_duplicate_words(s):
         if i not in tot:
             tot.append(i)
     return ' '.join(tot)
-    
+
     return ' '.join(tot)

@@ -33,6 +33,5 @@ for item in c4:
     else:
         if item not in letters:
             letters.append(item)
-answer = {letters[0]: broken1, letters[1]: broken2,letters[2]: broken3,letters[3]: broken4}
-print(answer['R'],answer['B'],answer['Y'],answer['G'])
-
+answer = {letters[0]: broken1, letters[1]: broken2, letters[2]: broken3, letters[3]: broken4}
+print(answer['R'], answer['B'], answer['Y'], answer['G'])

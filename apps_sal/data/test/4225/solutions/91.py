@@ -25,4 +25,3 @@ else:
     res = 2 * a + b - k
 
 print(res)
-

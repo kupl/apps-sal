@@ -15,4 +15,3 @@ s3 = 5 * l3 * l3 / math.tan(math.pi / 5) / 4
 v3 = s3 * h3 / 3
 
 print(v1 + v2 + v3)
-

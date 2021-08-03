@@ -8,18 +8,17 @@ def max_tri_sum(numbers):
         for item in numbers:
             if item >= max:
                 max = item
-        
+
         if max not in result:
             result.append(max)
-        
+
         for item in numbers:
             if item == max:
                 numbers.remove(max)
-        
+
         i += 1
-        
+
     for item in result:
         sum += item
 
     return sum
-

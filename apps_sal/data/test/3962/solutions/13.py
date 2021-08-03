@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 import sys
 
+
 def rint():
     return map(int, sys.stdin.readline().split())
 #lines = stdin.readlines()
 
+
 n = int(input())
-r = [0]*n
-l = [0]*n
+r = [0] * n
+l = [0] * n
 
 for i in range(n):
     r[i], l[i] = rint()

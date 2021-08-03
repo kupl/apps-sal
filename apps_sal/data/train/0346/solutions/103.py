@@ -12,8 +12,6 @@ class Solution:
                     k += A[i] & 1
                     i += 1
                 ret += j - i + 1
-            return ret 
-        
-        return atMost(nums, k) - atMost(nums, k-1)
-            
+            return ret
 
+        return atMost(nums, k) - atMost(nums, k - 1)

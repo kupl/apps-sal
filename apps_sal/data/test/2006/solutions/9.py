@@ -14,9 +14,8 @@ for i in range(h):
     if ps < pg:
         good = False
     ans.add(ps - pg)
-    
+
 if not good:
     print(-1)
 else:
     print(len(ans))
-

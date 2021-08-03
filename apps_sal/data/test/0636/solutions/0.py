@@ -11,4 +11,4 @@ for i in arr2:
         ans.append(i[1])
 print(len(ans))
 for i in ans:
-    print(i + 1, end = ' ')
+    print(i + 1, end=' ')

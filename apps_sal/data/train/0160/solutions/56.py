@@ -4,7 +4,7 @@ class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
         length = len(piles)
         self.memo = [[[-1] * (length + 1) for _ in range(length + 1)] for i in range(2)]
-        return (self.helper(0, length-1, piles, 1)) >= 0
+        return (self.helper(0, length - 1, piles, 1)) >= 0
 
     def helper(self, l, r, piles, ID):
         if l > r:
@@ -20,5 +20,3 @@ class Solution:
             self.memo[ID][l][r] = min(-piles[l] + self.helper(l + 1, r, piles, next),
                                       -piles[r] + self.helper(l, r - 1, piles, next))
         return self.memo[ID][l][r]
-
-

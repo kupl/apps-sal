@@ -8,7 +8,6 @@ class Solution:
             else:
                 right = mid
         return left
-    
-    
+
     def findSum(self, nums, divisor):
         return sum(math.ceil(num / divisor) for num in nums)

@@ -9,5 +9,3 @@ class Solution:
                 dp[d, i] = dp.get((d, j), 1) + 1
                 res = max(res, dp[d, i])
         return res
-                
-

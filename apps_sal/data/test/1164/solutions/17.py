@@ -5,16 +5,16 @@ def fr(s):
     if len(s[-1]) == 2 and len(s) != 1:
         ans += int(s[-1]) / 100
         was = True
-    
+
     s = s[::-1]
     for i in range(was, len(s)):
         ans += int(s[i]) * (10 ** (3 * (i - was)))
-       
+
     return ans
 
 
 def to(n):
-    ans =  []
+    ans = []
     was = False
     if int(n) != n:
         tmp = str(n - int(n))
@@ -32,20 +32,19 @@ def to(n):
         ans.append(tmp)
         was = True
     n = int(n)
-    
+
     while n > 0:
         tmp = str(n % 1000)
         if len(tmp) < 3 and n >= 1000:
             tmp = '0' * (3 - len(tmp)) + tmp
         ans.append(tmp)
-        
+
         n //= 1000
     ans = ans[::-1]
     if was and len(ans) == 1:
         ans = ["0"] + ans
-    
-    return ".".join(ans)
 
+    return ".".join(ans)
 
 
 s = input() + "a"
@@ -62,7 +61,7 @@ for i in range(len(s)):
     if not number:
         last = i
         number = True
-        
+
 nums = [fr(i) for i in data]
 
 print(to(sum(nums)))

@@ -11,7 +11,7 @@ for i in range(len(s) - 1, -1, -1):
         ans += 1
     elif s[:i + 1].count('0') != len(s[:i + 1]):
         cnt += 1
-    
+
     if cnt == k:
         stdout.write(str(ans))
         break

@@ -30,4 +30,3 @@ if onlyPos:
     return
 
 print(sum([abs(i) for i in ar]))
-

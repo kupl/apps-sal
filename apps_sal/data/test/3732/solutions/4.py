@@ -11,4 +11,3 @@ else:
         c += q
         x, y = y, x + q * y
     print(c)
-

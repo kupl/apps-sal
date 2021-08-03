@@ -6,12 +6,13 @@ def gcd(x, y):
     t = x % y
     while t != 0:
         x = y
-        y = t;
+        y = t
         t = x % y
     return y
 
+
 def main():
-    readData = lambda : list(map(int, input().split()))
+    def readData(): return list(map(int, input().split()))
     n = int(input())
     X = list(readData())
     d = 0
@@ -19,7 +20,9 @@ def main():
         d = gcd(d, x)
     print(d * len(X))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

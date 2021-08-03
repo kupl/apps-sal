@@ -18,4 +18,3 @@ if flag == 1:
     print("Yes")
 else:
     print("No")
-

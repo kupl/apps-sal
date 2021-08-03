@@ -14,12 +14,13 @@ class Solution:
             if uf.union(i, j):
                 ans += c
         return ans
-        
+
+
 class UnionFind:
     def __init__(self, n):
         self.id = [i for i in range(n)]
         self.size = [1 for _ in range(n)]
-    
+
     def find(self, i):
         root = i
         while root != self.id[root]:
@@ -29,7 +30,7 @@ class UnionFind:
             self.id[i] = root
             i = j
         return root
-    
+
     def union(self, i, j):
         root_i = self.find(i)
         root_j = self.find(j)

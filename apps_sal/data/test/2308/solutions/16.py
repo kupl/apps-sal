@@ -7,7 +7,7 @@ for _ in range(T):
     p = -1
     for i in range(len(y)):
         if y[i] == '1':
-            p = i 
+            p = i
             break
     q = -1
     for i in range(len(x)):
@@ -16,4 +16,3 @@ for _ in range(T):
             break
     ans = q - p
     print(ans)
-

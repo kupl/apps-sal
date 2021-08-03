@@ -1,22 +1,22 @@
 #! /usr/bin/env python3
-#------------------------------------------------
+# ------------------------------------------------
 # Author:    krishna
 # Created:   Fri Dec 29 23:04:38 IST 2017
 # File Name: f.py
 # USAGE:
 #       f.py
 # Description:
-# 
-#------------------------------------------------
+#
+# ------------------------------------------------
 import sys
 
 
 n = int(sys.stdin.readline().rstrip())
 
 locations = {
-    'R' : [],
-    'G' : [],
-    'B' : []
+    'R': [],
+    'G': [],
+    'B': []
 }
 
 for i in range(n):
@@ -25,6 +25,7 @@ for i in range(n):
 
 # for c in locations.keys():
 #     locations[c].sort()
+
 
 def solve(locations):
     count = 0
@@ -43,25 +44,25 @@ def solve(locations):
     while (len(locations['G']) > gPtr):
         # Eat predecessors
         if (
-            (len(locations['R']) > rPtr)
-            and (locations['G'][gPtr] > locations['R'][rPtr])
+            (len(locations['R']) > rPtr) and
+            (locations['G'][gPtr] > locations['R'][rPtr])
         ):
             count += locations['G'][gPtr] - locations['R'][rPtr]
             while (
-                (len(locations['R']) > rPtr)
-                and (locations['G'][gPtr] > locations['R'][rPtr])
+                (len(locations['R']) > rPtr) and
+                (locations['G'][gPtr] > locations['R'][rPtr])
             ):
                 rPtr += 1
 
         # Eat predecessors
         if (
-            (len(locations['B']) > bPtr)
-            and (locations['G'][gPtr] > locations['B'][bPtr])
+            (len(locations['B']) > bPtr) and
+            (locations['G'][gPtr] > locations['B'][bPtr])
         ):
             count += locations['G'][gPtr] - locations['B'][bPtr]
             while (
-                (len(locations['B']) > bPtr)
-                and (locations['G'][gPtr] > locations['B'][bPtr])
+                (len(locations['B']) > bPtr) and
+                (locations['G'][gPtr] > locations['B'][bPtr])
             ):
                 bPtr += 1
 
@@ -108,5 +109,5 @@ def solve(locations):
 
     return count
 
-print(solve(locations))
 
+print(solve(locations))

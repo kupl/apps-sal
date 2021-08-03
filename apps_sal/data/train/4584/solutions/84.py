@@ -3,4 +3,3 @@ def invert(lst):
     for i in lst:
         neg.append(-i)
     return neg
-

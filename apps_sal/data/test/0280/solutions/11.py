@@ -31,15 +31,16 @@ def main():
         dp[0] = 0
         for i in range(1, N):
             wsum = w[p[i]]
-            for j in range(i-1, -1, -1):
+            for j in range(i - 1, -1, -1):
                 wsum += w[p[j]]
                 d = bisect_left(V, wsum)
-                dp[i] = max(dp[i], dp[j]+LV2[d-1][1])
+                dp[i] = max(dp[i], dp[j] + LV2[d - 1][1])
         ans = min(ans, dp[N - 1])
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

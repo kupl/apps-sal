@@ -16,6 +16,3 @@ for i in range(len(p)):
 
 for x in q:
     print(worms[int(x) - 1] + 1)
-
-
-

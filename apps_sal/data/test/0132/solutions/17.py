@@ -8,4 +8,3 @@ for a in range(0, kolichestvoKuskov):
         if raznica > abs(180 - sum):
             raznica = abs(180 - sum)
 print(raznica * 2)
-

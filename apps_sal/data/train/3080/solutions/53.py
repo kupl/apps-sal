@@ -6,4 +6,4 @@ def who_is_paying(name):
     elif name == name[0:2]:
         return [name]
     else:
-        return [name,name[0:2]]
+        return [name, name[0:2]]

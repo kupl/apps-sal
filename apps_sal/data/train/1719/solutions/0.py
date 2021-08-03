@@ -1,6 +1,6 @@
-def zeroes (base, number):
+def zeroes(base, number):
     pzeros = []
-    for p in range(2, base+1):
+    for p in range(2, base + 1):
         e = 0
         while base % p == 0:
             base /= p

@@ -27,4 +27,3 @@ while i < len(s):
 
 
 print(*ans, sep='')
-

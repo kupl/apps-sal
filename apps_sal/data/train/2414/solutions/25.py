@@ -12,4 +12,3 @@ class Solution:
                             arr[i] - arr[k]) <= c:
                         total_good_triplets += 1
         return total_good_triplets
-

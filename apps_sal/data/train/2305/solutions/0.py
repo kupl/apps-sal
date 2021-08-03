@@ -64,4 +64,3 @@ for line in sys.stdin:
     links[w].add(v)
 
 print((*solve(n, links)))
-

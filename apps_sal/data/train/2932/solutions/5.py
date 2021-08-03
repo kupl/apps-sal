@@ -1,1 +1,1 @@
-colour_association=lambda arr: [{k:v} for k,v in arr]
+def colour_association(arr): return [{k: v} for k, v in arr]

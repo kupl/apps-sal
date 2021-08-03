@@ -13,4 +13,4 @@ while len(lun) < k:
         lun.append(lun[i] * 10 + lun[i] % 10 - 0)
         lun.append(lun[i] * 10 + lun[i] % 10 + 1)
     i += 1
-print(lun[k-1])
+print(lun[k - 1])

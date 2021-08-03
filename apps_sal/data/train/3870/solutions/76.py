@@ -1,5 +1,6 @@
 import re
 
+
 def solve(s):
     rev = []
     for i in reversed(s):
@@ -11,4 +12,3 @@ def solve(s):
         rev.insert(m.start(), " ")
 
     return "".join(rev)
-

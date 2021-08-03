@@ -13,4 +13,3 @@ while find == False:
         ans += 1
 
 print(ans)
-

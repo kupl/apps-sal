@@ -1,8 +1,8 @@
-s=input()
+s = input()
 
 for i in "abcdefghijklmnopqrstuvwxyz":
-  if i not in s:
-    print(i)
-    break
+    if i not in s:
+        print(i)
+        break
 else:
-  print("None")
+    print("None")

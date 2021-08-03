@@ -5,12 +5,12 @@ qc = {}
 for i in range(n):
     qh[i] = []
     qc[i] = 0
-for i in range(n-2):
+for i in range(n - 2):
     q1, q2, q3 = list(map(int, input().split()))
-    q.append([q1-1, q2-1, q3-1])
+    q.append([q1 - 1, q2 - 1, q3 - 1])
     for d in [q1, q2, q3]:
-        qh[d-1].append(i)
-        qc[d-1] += 1
+        qh[d - 1].append(i)
+        qc[d - 1] += 1
 pp = []
 for i in range(n):
     if qc[i] == 1:
@@ -36,7 +36,7 @@ if d == qh[p1][0]:
     d = qh[p6][1]
 for i in q[d]:
     qc[i] -= 1
-for i in range(n-6):
+for i in range(n - 6):
     fg = p[-1]
     d = -1
     for j in qh[fg]:
@@ -50,7 +50,4 @@ if n != 5:
     p.append(p3)
 p.append(p4)
 p.append(p2)
-print(' '.join([str(x+1) for x in p]))
-
-
-
+print(' '.join([str(x + 1) for x in p]))

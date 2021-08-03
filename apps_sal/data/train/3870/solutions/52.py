@@ -4,4 +4,3 @@ def solve(s):
         if s[i] == ' ':
             ss = ss[:i] + ' ' + ss[i:]
     return ss
-

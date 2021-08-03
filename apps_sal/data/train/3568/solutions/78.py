@@ -3,7 +3,7 @@ def bumps(road):
     for x in road:
         if x == "n":
             dead += 1
-            
+
     if dead > 15:
         return "Car Dead"
     else:

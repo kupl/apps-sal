@@ -1,12 +1,14 @@
 from collections import defaultdict
+
+
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        if(S==T):
+        if(S == T):
             return 0
         routes = [set(r) for r in routes]
         graph = defaultdict(list)
         for i in range(len(routes)):
-            for j in range(i+1, len(routes)):
+            for j in range(i + 1, len(routes)):
                 for k in routes[i]:
                     if k in routes[j]:
                         graph[j].append(i)
@@ -24,5 +26,5 @@ class Solution:
             seen.add(cur)
             for child in graph[cur]:
                 if(child not in seen):
-                    queue.append((child, cost+1))
+                    queue.append((child, cost + 1))
         return -1

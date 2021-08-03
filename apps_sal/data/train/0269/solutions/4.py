@@ -12,4 +12,3 @@ class Solution:
             else:
                 counter += 1
         return True
-

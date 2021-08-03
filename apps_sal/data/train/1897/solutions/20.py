@@ -4,14 +4,14 @@ class Solution:
         resultArr = []
         for index in range(len(arr)):
             if(index == 0):
-                cumArr.insert(index,arr[index])
+                cumArr.insert(index, arr[index])
             else:
-                cumArr.insert(index,arr[index]^cumArr[index-1])
+                cumArr.insert(index, arr[index] ^ cumArr[index - 1])
         for query in queries:
             left = query[0]
-            right = query[1]    
+            right = query[1]
             if(left is not 0):
-                resultArr.append(cumArr[right]^cumArr[left-1])
+                resultArr.append(cumArr[right] ^ cumArr[left - 1])
             else:
                 resultArr.append(cumArr[right])
-        return resultArr        
+        return resultArr

@@ -10,12 +10,13 @@ while K > 0:
     max_deg += K // 2
     K //= 2
 
-den_deg = n * (k-1) - max_deg
+den_deg = n * (k - 1) - max_deg
 
 kk = 1
 for i in range(n):
     kk *= 2
-    if kk >= k: break
+    if kk >= k:
+        break
 else:
     print(1, 1)
     return
@@ -24,7 +25,8 @@ numerator = 1
 two_p_n = pow(2, n, MOD)
 for i in range(1, min(k, MOD + 1)):
     numerator *= (two_p_n - i + MOD) % MOD
-    if numerator == 0: break
+    if numerator == 0:
+        break
     numerator %= MOD
 
 rev = (MOD + 1) // 2

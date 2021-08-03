@@ -10,4 +10,3 @@ for i in n:
         res += "O" * (i - 5) + "-" + "O" * (9 - i)
     print(res)
     res = ""
-

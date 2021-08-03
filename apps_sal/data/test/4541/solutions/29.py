@@ -1,6 +1,6 @@
 s = input()
-aiueo = ["a","i","u","e","o"]
+aiueo = ["a", "i", "u", "e", "o"]
 if s in aiueo:
-  print("vowel")
+    print("vowel")
 else:
-  print("consonant")
+    print("consonant")

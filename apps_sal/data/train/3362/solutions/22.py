@@ -3,4 +3,3 @@ def sum_mix(arr):
     for i in map(int, arr):
         total += i
     return total
-

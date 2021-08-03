@@ -19,6 +19,5 @@ else:
             print('no')
             break
         j += 1
-    else: print('yes')
-
-
+    else:
+        print('yes')

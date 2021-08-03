@@ -67,4 +67,3 @@ class Solution:
             mapping.root(k) for k in mapping)
         # print(mapping)
         return max(counter.values())
-

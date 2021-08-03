@@ -11,4 +11,3 @@ def sorted_insert(head, data):
         node = node.__next__
     node.next = Node(data, node.next)
     return head
-

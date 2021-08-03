@@ -14,6 +14,7 @@ keypad_neighbors = {
     '0': ['0', '8']
 }
 
+
 def get_pins(observed):
     # Build a 2D array of possibilities
     # Each row in the array is an entry
@@ -21,7 +22,7 @@ def get_pins(observed):
     pins = []
     for num in observed:
         pins.append(keypad_neighbors[num])
-    
+
     # Generate every permutation of the possible numbers.
     for tup in product(*pins):
         yield ''.join(tup)

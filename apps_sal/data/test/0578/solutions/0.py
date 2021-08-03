@@ -28,5 +28,4 @@ if '.' not in a:
     while len(a) > 1 and a[0] == '0':
         a.pop(0)
 for i in range(len(a)):
-    print(a[i], end = '')
-
+    print(a[i], end='')

@@ -8,9 +8,11 @@ from collections import defaultdict, deque, Counter
 from functools import lru_cache
 sys.setrecursionlimit(10**8)
 
-ii = lambda: int(input())
-mi = lambda: map(int, input().split())
-li = lambda: list(map(int, input().split()))
+
+def ii(): return int(input())
+def mi(): return map(int, input().split())
+def li(): return list(map(int, input().split()))
+
 
 N = ii()
 for a in range(1, 100):

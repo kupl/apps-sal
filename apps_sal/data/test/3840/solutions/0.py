@@ -11,4 +11,3 @@ else:
         ans += d
         a[x] -= d
     print(ans + max(0, a[1]))
-

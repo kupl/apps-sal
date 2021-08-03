@@ -4,19 +4,19 @@ class Solution:
         if A[0] == K:
             return 1
         for i in range(1, len(A)):
-            A[i] += A[i-1]
+            A[i] += A[i - 1]
             if A[i] >= K:
-                mx = min(mx, i+1)
-                
+                mx = min(mx, i + 1)
+
         st = [0]
         for i in range(1, len(A)):
             while len(st) and A[i] - A[st[0]] >= K:
                 popped = st.pop(0)
                 mx = min(mx, i - popped)
-                
+
             while len(st) and A[i] <= A[st[-1]]:
                 st.pop()
-                
+
             st.append(i)
         return mx if mx != sys.maxsize else -1
         '''
@@ -34,9 +34,3 @@ class Solution:
         print(o)
         return res if res < float('inf') else -1
     '''
-                
-                
-        
-        
-        
-

@@ -1,4 +1,4 @@
-def compare(s1,s2):
+def compare(s1, s2):
     first = 0
     second = 0
     if s1:

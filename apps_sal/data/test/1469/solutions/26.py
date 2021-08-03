@@ -9,7 +9,7 @@ def solve(L: int):
         a.append(tmp)
         tmp //= 2
     a.reverse()
-    #print(a)
+    # print(a)
     e = []
     for i in range(1, len(a)):
         e.append([i, i + 1, 0])
@@ -31,7 +31,9 @@ def main():
     L = int(next(tokens))  # type: int
     solve(L)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

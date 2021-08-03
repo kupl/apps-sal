@@ -1,49 +1,52 @@
-isPrime=[1 for i in range(1000005)]
-primes=[]
-for i in range(2,1000005):
-    if(isPrime[i]==1):
+isPrime = [1 for i in range(1000005)]
+primes = []
+for i in range(2, 1000005):
+    if(isPrime[i] == 1):
         primes.append(i)
-        j=2*i
-        while(j<1000005):
-            isPrime[j]=0
-            j+=i
+        j = 2 * i
+        while(j < 1000005):
+            isPrime[j] = 0
+            j += i
 
-def gcd(a,b):
-    if(b==0):
+
+def gcd(a, b):
+    if(b == 0):
         return a
     else:
-        return gcd(b,a%b)
+        return gcd(b, a % b)
 
-def lcm(a,b):
-    return a*b/gcd(a,b)
 
-t=int(input())
-while(t>0):
-    n=int(input())
-    d=list(map(int,input().split()))
+def lcm(a, b):
+    return a * b / gcd(a, b)
+
+
+t = int(input())
+while(t > 0):
+    n = int(input())
+    d = list(map(int, input().split()))
     d.sort()
-    ans=1
-    flag=1
-    for i in range(len(d)-1):
-        if(d[i]*d[n-i-1]!=d[i+1]*d[n-i-2]):
-            flag=0
+    ans = 1
+    flag = 1
+    for i in range(len(d) - 1):
+        if(d[i] * d[n - i - 1] != d[i + 1] * d[n - i - 2]):
+            flag = 0
             break
-    if(flag==0):
+    if(flag == 0):
         print(-1)
     else:
-        ans=d[0]*d[-1]
-        amt=1
-        x=ans
+        ans = d[0] * d[-1]
+        amt = 1
+        x = ans
         for i in primes:
-            if(ans%i==0):
-                cnt=1
-                while(x%i==0):
-                    cnt+=1
-                    x/=i
-                amt*=cnt
-        if(x>1):
-            amt*=2
-        if(amt-2==len(d)):
+            if(ans % i == 0):
+                cnt = 1
+                while(x % i == 0):
+                    cnt += 1
+                    x /= i
+                amt *= cnt
+        if(x > 1):
+            amt *= 2
+        if(amt - 2 == len(d)):
             print(int(ans))
         else:
             print(-1)
@@ -84,5 +87,4 @@ while(t>0):
         else:
             print(-1)
     """
-    t-=1
-
+    t -= 1

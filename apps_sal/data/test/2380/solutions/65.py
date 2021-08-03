@@ -18,12 +18,16 @@ def integerCards(n, m, alist, bclist):
 
     return sum(alist)
 
+
 def main():
     n, m = map(int, input().split())
     alist = list(map(int, input().split()))
     bclist = [list(map(int, input().split()))for i in range(m)]
     print(integerCards(n, m, alist, bclist))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

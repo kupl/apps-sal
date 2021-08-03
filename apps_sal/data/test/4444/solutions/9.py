@@ -1,6 +1,5 @@
-#149-A
+# 149-A
 
-S,T = list(map(str,input().split()))
+S, T = list(map(str, input().split()))
 
-print((T+S))
-
+print((T + S))

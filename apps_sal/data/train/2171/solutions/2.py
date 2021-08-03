@@ -1,33 +1,36 @@
 import sys
-read = lambda t=int: list(map(t,sys.stdin.readline().split()))
+def read(t=int): return list(map(t, sys.stdin.readline().split()))
 # import resource, sys
 # resource.setrlimit(resource.RLIMIT_STACK, (2**20,-1))
 # sys.setrecursionlimit(10**5+5)
 
+
 N, = read()
 tree = [[] for _ in range(N)]
-for _ in range(N-1):
+for _ in range(N - 1):
     a, b = read()
-    tree[a-1].append(b-1)
-    tree[b-1].append(a-1)
+    tree[a - 1].append(b - 1)
+    tree[b - 1].append(a - 1)
 labels = read()
 goals = read()
 res = []
 
+
 def dfs(root, par, xor0, xor1, depth):
     if depth == 0:
-        if labels[root]^xor0 != goals[root]:
+        if labels[root] ^ xor0 != goals[root]:
             res.append(root)
             xor0 ^= 1
     if depth == 1:
-        if labels[root]^xor1 != goals[root]:
+        if labels[root] ^ xor1 != goals[root]:
             res.append(root)
             xor1 ^= 1
     for v in tree[root]:
         if v != par:
-            yield (v, root, xor0, xor1, depth^1)
+            yield (v, root, xor0, xor1, depth ^ 1)
 
-stack = [(0,-1,0,0,0)]
+
+stack = [(0, -1, 0, 0, 0)]
 while stack:
     for item in dfs(*stack.pop()):
         stack.append(item)
@@ -35,5 +38,4 @@ while stack:
 
 print(len(res))
 for x in res:
-    print(x+1)
-
+    print(x + 1)

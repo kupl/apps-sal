@@ -25,7 +25,7 @@ class UnionFind():
         print()での表示用
         ルート要素: [そのグループに含まれる要素のリスト]を文字列で返す
     """
-    
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -73,21 +73,19 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
-N,M=list(map(int,input().split()))
-ab=[tuple(map(int,input().split())) for _ in range(M)]
-ans=0
+N, M = list(map(int, input().split()))
+ab = [tuple(map(int, input().split())) for _ in range(M)]
+ans = 0
 
 for i in range(M):
     uf = UnionFind(N)
-    
+
     for j in range(M):
-        if i!=j:
-            a,b=ab[j][0],ab[j][1]
-            uf.union(a-1,b-1)
-    #print(i)
-    if uf.group_count()!=1:
-        ans+=1
-        
+        if i != j:
+            a, b = ab[j][0], ab[j][1]
+            uf.union(a - 1, b - 1)
+    # print(i)
+    if uf.group_count() != 1:
+        ans += 1
+
 print(ans)
-
-

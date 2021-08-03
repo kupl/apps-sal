@@ -7,9 +7,9 @@ def __starting_point():
 
     rr, cc = None, None
 
-    for r in range(1, h-1):
+    for r in range(1, h - 1):
         for c in range(1, w - 1):
-            if s[r][c] == s[r-1][c] == s[r][c-1] == s[r+1][c] == s[r][c+1] == '*':
+            if s[r][c] == s[r - 1][c] == s[r][c - 1] == s[r + 1][c] == s[r][c + 1] == '*':
                 s[r][c] = '.'
 
                 i = r + 1
@@ -42,7 +42,6 @@ def __starting_point():
                 return
 
     print("NO")
-
 
 
 __starting_point()

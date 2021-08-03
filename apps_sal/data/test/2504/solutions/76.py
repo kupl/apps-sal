@@ -6,8 +6,8 @@ N, M, L = list(map(int, input().split()))
 graph = np.zeros((N, N))
 for _ in range(M):
     A, B, C = list(map(int, input().split()))
-    graph[A-1][B-1] = C
-    graph[B-1][A-1] = C
+    graph[A - 1][B - 1] = C
+    graph[B - 1][A - 1] = C
 shortest_paths = dijkstra(csr_matrix(graph), directed=False)
 graph = np.full((N, N), inf)
 for i in range(N):
@@ -16,11 +16,13 @@ for i in range(N):
             graph[i][j] = 1
 
 Q = int(input())
+
+
 def int_(num_str):
     return int(num_str) - 1
+
 
 costs = dijkstra(csr_matrix(graph), directed=False)
 for _ in range(Q):
     s, t = list(map(int_, input().split()))
-    print((int(costs[s][t])-1 if costs[s][t] != inf else -1))
-
+    print((int(costs[s][t]) - 1 if costs[s][t] != inf else -1))

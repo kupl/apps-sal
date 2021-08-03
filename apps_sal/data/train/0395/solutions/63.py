@@ -17,6 +17,7 @@ class Solution:
             stack.append(i)
         reachable = [[-1, -1] for _ in range(l)]
         reachable[-1] = [1, 1]
+
         def helper(i, j):
             if reachable[i][j] >= 0:
                 return reachable[i][j]

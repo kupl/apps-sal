@@ -1,9 +1,12 @@
 import itertools
-def find(n,z):
-    find.combination_dict = {0:((),), 
-        1:( ((0,),), ), }
-        # 2:(((0,), (1,)), ((0, 1),), ), }
-        # 3: (((0,), (1,), (2,)), ((0,), (1,2)), ((1,), (0,2)), ((2,), (0,1)), ((0,1,2),),)}
+
+
+def find(n, z):
+    find.combination_dict = {0: ((),),
+                             1: (((0,),), ), }
+    # 2:(((0,), (1,)), ((0, 1),), ), }
+    # 3: (((0,), (1,), (2,)), ((0,), (1,2)), ((1,), (0,2)), ((2,), (0,1)), ((0,1,2),),)}
+
     def get_combination(length):
         if length not in find.combination_dict:
             for i in range(length):
@@ -25,15 +28,14 @@ def find(n,z):
     def f(num):
         num = str(num)
         value = []
-        for combinations in get_combination(len(num)):            
+        for combinations in get_combination(len(num)):
             if len(combinations) != 1:
                 for combination in combinations:
                     value.append(''.join(num[i] for i in combination))
         return sum(map(int, value))
-        
+
 #     print('running', n, f(n), z)
     limit = f(n) + z
     for nf in itertools.count(n):
-        if f(nf) > limit:      
+        if f(nf) > limit:
             return nf
-

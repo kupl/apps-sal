@@ -12,4 +12,3 @@ for i in range(M):
         peaks[B - 1] = 0
 
 print((sum(peaks)))
-

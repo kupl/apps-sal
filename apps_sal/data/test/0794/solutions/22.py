@@ -1,6 +1,6 @@
 def main():
     n = int(input())
-    array = list(map(int,input().split()))
+    array = list(map(int, input().split()))
     array.sort()
     first_half = sum(array[:n])
     second_half = sum(array[n:])
@@ -10,7 +10,7 @@ def main():
         return
 
     for i in array:
-        print(i,end = ' ')
+        print(i, end=' ')
+
 
 main()
-

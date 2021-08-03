@@ -4,8 +4,8 @@ for i in range(int(input())):
     a = [int(x) for x in input().split()]
     b = []
     for t in reversed(range(n)):
-        x = d//a[t]
-        b.append(x*a[t])
-        d = x*a[t]
-        
+        x = d // a[t]
+        b.append(x * a[t])
+        d = x * a[t]
+
     print(min(b))

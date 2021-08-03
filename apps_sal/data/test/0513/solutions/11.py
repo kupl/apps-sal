@@ -34,4 +34,3 @@ if check():
     print("respectable")
 else:
     print("ugly")
-

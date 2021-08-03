@@ -6,4 +6,3 @@ if x > 0 and x % 5 == 0:
 else:
 
     print(-1)
-

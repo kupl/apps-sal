@@ -7,5 +7,3 @@ for i in range(1000):
 for i in range(1000):
     print(b, 1, b, 2)
     b -= 1
-
-

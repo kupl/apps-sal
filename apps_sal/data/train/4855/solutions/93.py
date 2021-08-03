@@ -13,5 +13,6 @@ def hor_mirror(s):
     splitted_s.reverse()
     return('\n'.join(splitted_s))
 
+
 def oper(fct, s):
     return(fct(s))

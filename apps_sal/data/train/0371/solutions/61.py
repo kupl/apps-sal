@@ -5,7 +5,7 @@ class Solution:
         stop = {}
         for i in range(len(routes)):
             for s in routes[i]:
-                stop[s] = stop.get(s,[]) + [i]
+                stop[s] = stop.get(s, []) + [i]
         for k in stop:
             stop[k] = set(stop[k])
         stack = [(S, 0)]

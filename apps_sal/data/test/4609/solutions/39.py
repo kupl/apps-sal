@@ -13,4 +13,3 @@ for v in list(d.values()):
     if v > 0:
         ans += 1
 print(ans)
-

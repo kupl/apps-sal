@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, k = read()
 a = list(read())
 s = 0
@@ -10,4 +12,3 @@ for i in range(n):
         break
 ans = a[k - s - 1]
 print(ans)
-

@@ -9,11 +9,11 @@ if diff > 1:
     return
 
 n_p = 1
-for i in range(1, N+1):
+for i in range(1, N + 1):
     n_p *= i
     n_p %= mod
 m_p = 1
-for i in range(1, M+1):
+for i in range(1, M + 1):
     m_p *= i
     m_p %= mod
 

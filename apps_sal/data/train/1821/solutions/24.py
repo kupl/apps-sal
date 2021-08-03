@@ -5,11 +5,11 @@ class Solution:
             # print(f'nums: {nums}')
             return nums
         else:
-            left = nums[:L//2]
-            right = nums[L//2:]
-            #print(left, \"  \", right)
+            left = nums[:L // 2]
+            right = nums[L // 2:]
+            # print(left, \"  \", right)
             return self.compare(self.sortArray(left), self.sortArray(right))
-    
+
     def compare(self, left, right):
         combined = []
         # print(f'before sort: {left}  {right}   {combined}')
@@ -24,4 +24,4 @@ class Solution:
         combined.extend(left)  # one will be empty, doesn't matter which
         combined.extend(right)  # one will be empty, doesn't matter which
         # print(f'after sort: {left}  {right}   {combined}')
-        return combined        
+        return combined

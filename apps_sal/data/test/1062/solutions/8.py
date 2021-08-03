@@ -27,4 +27,3 @@ for i in diffs:
 
 print(res_d - (2 if perfect_swapped else 1 if swapped else 0))
 print(res_i, res_j)
-

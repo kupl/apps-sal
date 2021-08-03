@@ -1,4 +1,4 @@
-def get_score(dice): 
+def get_score(dice):
     counter = [dice.count(n + 1) for n in range(6)]
     if counter.count(1) == 6:
         return 1000

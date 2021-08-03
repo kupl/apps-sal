@@ -15,7 +15,7 @@ for c in t:
     j = bisect_left(ls, i)
     if j == len(ls):
         ans += len(s)
-        i = ls[0]+1
+        i = ls[0] + 1
     else:
-        i = ls[j]+1
-print(ans+i)
+        i = ls[j] + 1
+print(ans + i)

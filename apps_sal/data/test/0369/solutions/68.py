@@ -11,7 +11,7 @@ while True:
         break
     check = False
     for i in range(M, 0, -1):
-        if S[p-i] == '0':
+        if S[p - i] == '0':
             check = True
             ans.append(i)
             p -= i

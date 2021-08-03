@@ -6,7 +6,7 @@ a = sorted(a)
 s = sum(a)
 
 for i in range(n):
-    cnt[a[i]-1] += 1
+    cnt[a[i] - 1] += 1
 
 q = int(input().strip())
 
@@ -16,4 +16,3 @@ for i in range(q):
     cnt[c - 1] += cnt[b - 1]
     cnt[b - 1] = 0
     print(s)
-

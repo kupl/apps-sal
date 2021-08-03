@@ -9,4 +9,3 @@ if n + arr[0] - arr[3] >= 0:
     print(n * (n + arr[0] - arr[3]))
 else:
     print(0)
-

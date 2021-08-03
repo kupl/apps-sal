@@ -4,9 +4,7 @@ s2.sort()
 k = 0
 n = 0
 for i in s2:
-    if i>=k:
-        n+=1
-        k+=i
+    if i >= k:
+        n += 1
+        k += i
 print(n)
-        
-

@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         cur_queue = deque(initialBoxes)
@@ -26,5 +28,5 @@ class Solution:
 
             cur_queue = next_queue
             next_queue = deque([])
-            
+
         return total

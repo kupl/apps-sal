@@ -19,6 +19,3 @@ class Solution:
             if wins == k:
                 break
         return prev
-            
-        
-

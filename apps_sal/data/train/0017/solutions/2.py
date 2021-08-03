@@ -5,6 +5,7 @@ def calcCntAtPrefix(a):
         cntAtPrefix[-1][x] += 1
     return cntAtPrefix
 
+
 def solve():
     n = int(input())
     a = list(map(int, input().split()))
@@ -18,6 +19,6 @@ def solve():
             ans += cntAtPrefix[j][a[k]] * cntAtSuffix[n - 1 - k][a[j]]
     print(ans)
 
+
 for t in range(int(input())):
     solve()
-

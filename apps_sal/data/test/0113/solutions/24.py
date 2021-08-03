@@ -1,6 +1,6 @@
 import math
 
-a,b = list(map(int, input().split()))
+a, b = list(map(int, input().split()))
 d = a
 cnt_2 = 0
 cnt_5 = 0
@@ -23,4 +23,3 @@ while cnt_5_raz > 0:
     umn *= 5
     cnt_5_raz -= 1
 print(d * umn)
-

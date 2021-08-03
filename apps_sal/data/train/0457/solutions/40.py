@@ -22,4 +22,3 @@ class Solution:
 
         helper(coins, 0, amount, 0)
         return result
-

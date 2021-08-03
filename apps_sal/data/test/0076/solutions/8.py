@@ -10,5 +10,5 @@ else:
     mod = n % m
     ans = min(ans, mod * b)
     ans = min(ans, (m - mod) * a)
-    
+
     stdout.write(str(ans))

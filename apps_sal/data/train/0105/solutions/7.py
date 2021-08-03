@@ -16,4 +16,3 @@ while t:
     for i in range(1, n):
         ans += max(0, k - a[i]) // a[0]
     print(ans)
-

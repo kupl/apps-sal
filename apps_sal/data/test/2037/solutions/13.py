@@ -16,4 +16,4 @@ for i in range(m):
                 null += 1
     else:
         ans += '0'
-print(ans)        
+print(ans)

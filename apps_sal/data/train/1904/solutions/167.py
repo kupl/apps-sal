@@ -1,5 +1,6 @@
 import random
 
+
 class Solution:
     # def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
     #     values = [(points[i][0] ** 2 + points[i][1] ** 2, i) for i in range(len(points))]
@@ -7,7 +8,7 @@ class Solution:
     #     return [points[i] for _, i in values[:K]]
     def _value(self, point):
         return point[0] ** 2 + point[1] ** 2
-    
+
     def _quickSelect(self, start: int, end: int, points: List[List[int]]) -> int:
         if start == end:
             return start
@@ -22,9 +23,9 @@ class Solution:
         # swap i to its correct position
         points[j - 1], points[start] = points[start], points[j - 1]
         return j - 1
-                
+
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
-        
+
         start = 0
         end = len(points) - 1
         # select the pivot using quick select
@@ -37,7 +38,5 @@ class Solution:
             elif p > K - 1:
                 end = p - 1
             else:
-                return points[:p+1]
+                return points[:p + 1]
         return None
-           
-

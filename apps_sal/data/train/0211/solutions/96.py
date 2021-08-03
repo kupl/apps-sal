@@ -10,5 +10,3 @@ class Solution:
                 if len(set(splits)) == len(splits):
                     return len(splits)
         return 0
-
-

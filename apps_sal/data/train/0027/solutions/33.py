@@ -4,9 +4,9 @@ for i in range(t):
     a = [int(j) for j in input().split()]
     used = set()
     for j in a:
-        if j%2==1:
+        if j % 2 == 1:
             continue
-        while j%2==0 and j not in used:
+        while j % 2 == 0 and j not in used:
             used.add(j)
             j /= 2
     print(len(used))

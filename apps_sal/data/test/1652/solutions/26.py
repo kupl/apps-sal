@@ -41,7 +41,7 @@ def solve2():
         db(('pop', str))
         if len(str) < len(S):
             for w in words:
-                stack.append(str+w)
+                stack.append(str + w)
         elif len(str) == len(S) and str == S:
             return True
     return False
@@ -53,12 +53,12 @@ def solve3():
     n = len(string)
     while n > 1:
         for w in words:
-            db((string.rfind(w, 0, n),len(w),n))
+            db((string.rfind(w, 0, n), len(w), n))
             if string.rfind(w, 0, n) + len(w) + 1 == n:
                 break
         else:
             return False
-        db((n,w))
+        db((n, w))
         n -= len(w)
     return True
 
@@ -71,4 +71,3 @@ if solve3():
     print('YES')
 else:
     print('NO')
-

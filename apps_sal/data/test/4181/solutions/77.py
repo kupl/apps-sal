@@ -10,15 +10,17 @@ def main():
         else:
             ans += A[i]
             remain = B[i] - A[i]
-            if A[i+1] >= remain:
+            if A[i + 1] >= remain:
                 ans += remain
-                A[i+1] -= remain
+                A[i + 1] -= remain
             else:
-                ans += A[i+1]
-                A[i+1] = 0
+                ans += A[i + 1]
+                A[i + 1] = 0
     print(ans)
+
 
 def __starting_point():
     main()
+
 
 __starting_point()

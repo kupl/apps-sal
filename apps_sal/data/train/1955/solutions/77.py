@@ -1,5 +1,6 @@
 from heapq import heappush, heappop
 
+
 class Solution:
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         def parent(a):
@@ -7,14 +8,14 @@ class Solution:
             if val == a:
                 return a
             return parent(val)
-        
+
         def union(a, b):
             parent1 = parent(a)
             parent2 = parent(b)
-            
+
             if parent1 == parent2:
                 return
-            
+
             a, n1 = d[parent1]
             b, n2 = d[parent2]
             if n1 > n2:
@@ -23,7 +24,7 @@ class Solution:
             else:
                 d[a] = (b, n1)
                 d[b] = (b, n1 + n2)
-                
+
         d = [(i, 1) for i in range(len(s))]
         for i, j in pairs:
             union(i, j)
@@ -34,5 +35,3 @@ class Solution:
         for i in range(len(s)):
             sol.append(heappop(arrs[parent(i)]))
         return ''.join(sol)
-        
-

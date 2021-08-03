@@ -18,4 +18,3 @@ for point in points:
 
 print(1)
 print(points.pop())
-

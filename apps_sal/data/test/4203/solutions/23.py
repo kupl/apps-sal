@@ -1,18 +1,19 @@
-#-*-coding:utf-8-*-
+# -*-coding:utf-8-*-
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
+
 
 def main():
     s = input()
-    if s[0]!="A":
+    if s[0] != "A":
         print("WA")
         return
-    if s[2:-2].count('C')!=1:
+    if s[2:-2].count('C') != 1:
         print("WA")
         return
-    s=s.replace('A','')
-    s=s.replace('C','')
-    if s.islower()==False:
+    s = s.replace('A', '')
+    s = s.replace('C', '')
+    if s.islower() == False:
         print("WA")
         return
     else:
@@ -21,4 +22,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

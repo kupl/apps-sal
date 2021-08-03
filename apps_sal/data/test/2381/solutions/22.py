@@ -1,8 +1,8 @@
 import sys
 
 mod = 10 ** 9 + 7
-N, K = map(int,input().split())
-A = list(map(int,input().split()))
+N, K = map(int, input().split())
+A = list(map(int, input().split()))
 if all([a < 0 for a in A]):
     if K % 2 == 0:
         A.sort()
@@ -13,7 +13,7 @@ if all([a < 0 for a in A]):
         print(ans)
         return
     else:
-        A.sort(reverse = True)
+        A.sort(reverse=True)
         ans = 1
         for i in range(K):
             ans *= A[i]
@@ -32,12 +32,12 @@ if K % 2 == 1:
     r -= 1
 
 for _ in range(K // 2):
-    if A[l] * A[l+1] >= A[r] * A[r-1]:
-        ans *= A[l] * A[l+1]
+    if A[l] * A[l + 1] >= A[r] * A[r - 1]:
+        ans *= A[l] * A[l + 1]
         ans %= mod
         l += 2
     else:
-        ans *= A[r] * A[r-1]
+        ans *= A[r] * A[r - 1]
         ans %= mod
         r -= 2
 

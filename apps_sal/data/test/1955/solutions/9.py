@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-from sys import stdin,stdout
+from sys import stdin, stdout
+
 
 def ri():
     return map(int, stdin.readline().split())
+
 
 def solve(ee):
     dest = [-1 for i in range(m)]
@@ -10,7 +12,7 @@ def solve(ee):
         if d[i] != -1 and dest[d[i]] == -1:
             dest[d[i]] = i
     pd = -1
-    for i in range(ee+1):
+    for i in range(ee + 1):
         da = d[i]
         if da != -1 and dest[da] == i:
             pd += a[da]
@@ -22,20 +24,21 @@ def solve(ee):
     else:
         return 1
 
+
 n, m = ri()
 d = list(ri())
 a = list(ri())
-d = [i-1 for i in d]
+d = [i - 1 for i in d]
 
 s = 0
 e = n
 while s < e:
-    mid = (e+s)//2
+    mid = (e + s) // 2
     if solve(mid):
         e = mid
     else:
-        s = mid+1
+        s = mid + 1
 if s >= n:
     print(-1)
 else:
-    print(s+1)
+    print(s + 1)

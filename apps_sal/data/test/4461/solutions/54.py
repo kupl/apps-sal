@@ -12,5 +12,6 @@ def divide_into_three(X, Y):
         minimum = min(minimum, diff)
     return minimum
 
+
 H, W = map(int, input().split())
 print(min(divide_into_three(H, W), divide_into_three(W, H)))

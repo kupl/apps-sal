@@ -7,4 +7,5 @@ def resolve():
         a = list(map(lambda x: x / 2, a))
     print(res)
 
+
 resolve()

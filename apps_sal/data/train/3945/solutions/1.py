@@ -1,4 +1,6 @@
 from math import sqrt
+
+
 def decipher_message(message):
     key = int(sqrt(len(message)))
     plaintext = [""] * key

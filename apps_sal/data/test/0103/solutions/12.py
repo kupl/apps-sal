@@ -11,4 +11,3 @@ for i in range(0, n):
             else:
                 ans = max(j - i - 1, ans)
 print(ans)
-

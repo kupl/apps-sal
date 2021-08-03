@@ -1,4 +1,4 @@
-def sum_str(a = '0', b = '0'):
+def sum_str(a='0', b='0'):
     if a == "":
         a = '0'
     if b == "":

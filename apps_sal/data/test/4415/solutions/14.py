@@ -11,7 +11,7 @@ def __starting_point():
         if elem in inc[-1:] and elem in dec[-1:]:
             inc = None
             dec = None
-            break;
+            break
 
         if elem in inc[-1:]:
             dec.append(elem)
@@ -26,5 +26,6 @@ def __starting_point():
         print(" ".join(str(e) for e in inc))
         print(len(dec))
         print(" ".join(str(e) for e in dec[::-1]))
+
 
 __starting_point()

@@ -1,12 +1,14 @@
 from math import floor
 
+
 def convert(dd, direction):
     degrees = floor(dd)
     seconds = round((dd % 1) * 3600000)
-    return "%03d*%02d\'%06.3f\"%s" % (degrees, 
-                                       seconds // 60000,
-                                       seconds % 60000 / 1000,
-                                       direction)
+    return "%03d*%02d\'%06.3f\"%s" % (degrees,
+                                      seconds // 60000,
+                                      seconds % 60000 / 1000,
+                                      direction)
+
 
 def convert_to_dms(dd_lat, dd_lon):
     dd_lat = float(dd_lat)

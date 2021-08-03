@@ -5,4 +5,3 @@ if s == 'RSR':
     ans = 1
 
 print(ans)
-

@@ -17,4 +17,3 @@ INF = float('inf')
 t, x = LI()
 t_a = t / x
 print(t_a)
-

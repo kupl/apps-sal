@@ -3,14 +3,14 @@ def test(n):
     for i in range(2, min(maximum, n)):
         if n % i == 0:
             return False
-    return True   
+    return True
 
 
 n = int(input())
 if n % 2 == 0:
     if n == 2:
         print(1)
-    else:    
+    else:
         print(2)
 else:
     if test(n) == True:

@@ -1,9 +1,13 @@
 from fractions import gcd
+
+
 def lcm(l):
     v = 1
     for li in l:
         v = v * li // gcd(v, li)
     return v
+
+
 n, c = int(input()), [0] + list(map(int, input().split()))
 f, l = [False] * (n + 1), []
 for i in range(1, n + 1):

@@ -12,18 +12,18 @@ class Solution:
                 mp[s] = {i: True}
             else:
                 mp[s][i] = True
-        
-        #print(K)
-        #print(L)
+
+        # print(K)
+        # print(L)
         result = 0
         for i, c in enumerate(L):
             if L[-1] > L[i]:
                 result = max(result, len(K) - i - 1)
-                #print(\"ss\", i, result)
+                # print(\"ss\", i, result)
             if 0 < L[i]:
-                result = max(result, i + 1) 
-                #print(\"ddd\", i)
-                
+                result = max(result, i + 1)
+                # print(\"ddd\", i)
+
             if i > 0 and L[i - 1] + 1 in mp:
                 s = mp[L[i - 1] + 1]
                 #print(result, s, i)
@@ -37,7 +37,6 @@ class Solution:
             #print(result, i)
         return result
 
-    
     def longestWPI(self, hours: List[int]) -> int:
         mp = {}
         accu = 0
@@ -49,10 +48,8 @@ class Solution:
                 result = max(result, i + 1)
                 print((result, i))
             if accu - 1 in mp:
-                result = max(result, i - mp[accu-1])
+                result = max(result, i - mp[accu - 1])
                 print((result, i))
             if accu not in mp:
                 mp[accu] = i
         return result
-                
-

@@ -13,4 +13,3 @@ for i in range(N):
     A[i + 1] -= tmp_r
     B[i] -= tmp_r
 print(ans)
-

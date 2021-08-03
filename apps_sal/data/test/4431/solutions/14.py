@@ -10,11 +10,11 @@ for i in s:
         cur += 1
     else:
         if cur != "":
-            total += cur*(cur+1) // 2
+            total += cur * (cur + 1) // 2
         cur = 0
 
 if cur != 0:
-    total += cur*(cur+1) // 2
+    total += cur * (cur + 1) // 2
 
 
 print(total)

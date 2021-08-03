@@ -5,5 +5,5 @@ n = int(stdin.readline())
 #a, b = map(int, stdin.readline().split())
 for _ in range(n):
     n1 = int(stdin.readline())
-    abd = (n1*(n1-1))//2
+    abd = (n1 * (n1 - 1)) // 2
     print(abd)

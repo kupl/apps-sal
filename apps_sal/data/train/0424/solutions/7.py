@@ -8,8 +8,7 @@ class Solution:
                     for x2 in range(size):
                         for y2 in range(size):
                             if B[y2][x2] == 1:
-                                diff = (x2-x1, y2-y1)
+                                diff = (x2 - x1, y2 - y1)
                                 counts[diff] = counts.get(diff, 0) + 1
                                 best = counts[diff] if counts[diff] > best else best
         return best
-

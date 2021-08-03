@@ -1,8 +1,10 @@
 import sys
 INF = 1 << 60
-MOD = 10**9 + 7 # 998244353
+MOD = 10**9 + 7  # 998244353
 sys.setrecursionlimit(2147483647)
-input = lambda:sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 def resolve():
     A = list(map(int, input().split()))
     A.sort()
@@ -13,4 +15,6 @@ def resolve():
         print("Yes")
     else:
         print("No")
+
+
 resolve()

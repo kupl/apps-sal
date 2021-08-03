@@ -5,4 +5,3 @@ def past(h, m, s):
     return ms
 
 # Yes that could've been datetime or oneliner, but what's the point.
-

@@ -1,6 +1,5 @@
-A,P = list(map(int,input().split()))
+A, P = list(map(int, input().split()))
 
-P = P + 3*A
+P = P + 3 * A
 
-print((P//2))
-
+print((P // 2))

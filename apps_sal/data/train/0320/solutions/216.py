@@ -11,7 +11,7 @@ class Solution:
                     op_0 += 1
                     n -= 1
             return op_0, op_1
-        
+
         ans = 0
         op_1 = 0
         for n in nums:

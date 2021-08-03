@@ -9,6 +9,5 @@ def round_to_next5(n):
             i = i + 5
         elif x >= 5:
             i = i - 5
-        
-        
+
     return n

@@ -37,4 +37,3 @@ for i in range(1, n + 1):
                 min_step = now_step
     s += ' ' + str(min_step)
 print(s[1:])
-

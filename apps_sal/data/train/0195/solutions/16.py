@@ -3,12 +3,12 @@ class Solution:
         counter = Counter()
         for a in A:
             for b in A:
-                counter[a&b] += 1
-        
+                counter[a & b] += 1
+
         res = 0
         for a in A:
             for b in counter:
-                if a&b==0:
+                if a & b == 0:
                     res += counter[b]
-                    
+
         return res

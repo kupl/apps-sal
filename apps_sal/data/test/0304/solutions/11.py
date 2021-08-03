@@ -1,9 +1,14 @@
 def ii():
     return int(input())
+
+
 def mi():
     return map(int, input().split())
+
+
 def li():
     return list(mi())
+
 
 fact = [1] * 1000
 for i in range(2, 1000):
@@ -14,6 +19,7 @@ cnt = {}
 for d in '0123456789':
     cnt[int(d)] = s.count(d)
 ans = 0
+
 
 def getcnt(p):
     q = [pi for pi in p if pi != 0]
@@ -33,6 +39,7 @@ def getcnt(p):
     #print(p, gc)
     return gc
 
+
 def rec(d, p):
     nonlocal ans
     if d == 10:
@@ -45,6 +52,7 @@ def rec(d, p):
     for c in range(1, cnt[d] + 1):
         p[d] = c
         rec(d + 1, p)
+
 
 p = [0] * 10
 rec(0, p)

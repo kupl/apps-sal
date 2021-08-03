@@ -1,7 +1,7 @@
 def f(N, M):
     setn = set()
     setrn = set()
-    for ele in N+M:
+    for ele in N + M:
         if ele in setrn:
             continue
         elif ele in setn:
@@ -9,9 +9,9 @@ def f(N, M):
             setrn.add(ele)
         else:
             setn.add(ele)
-    
+
     return list(setn)
-    
+
 
 t = int(input())
 answers = list()

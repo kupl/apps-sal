@@ -4,14 +4,14 @@ class Solution:
             return 0
 
         graph = collections.defaultdict(set)
-        
+
         for route in routes:
             for stop in set(route):
                 graph[stop].update(route)
 
         queue = [(S, 0)]
         visited = {S}
-        
+
         while queue:
             stop, dist = queue.pop(0)
             if stop == T:

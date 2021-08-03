@@ -11,9 +11,11 @@ class UnionFind:
 
     def union(self, u, v):
         u_parent, v_parent = self.find(u), self.find(v)
-        if u_parent == v_parent: return False
+        if u_parent == v_parent:
+            return False
         self.parent[u_parent] = v_parent
         return True
+
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
@@ -21,7 +23,7 @@ class Solution:
         pq = list()
         heapq.heapify(pq)
         for i in range(n - 1):
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 # get distance
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 heapq.heappush(pq, (dist, i, j))

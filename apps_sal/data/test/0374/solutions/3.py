@@ -31,4 +31,3 @@ for i in range(n - 1, -1, -1):
     a[i] -= (a[i] + b[i] - 1) // b[i] * b[i]
 
 print(now[0])
-

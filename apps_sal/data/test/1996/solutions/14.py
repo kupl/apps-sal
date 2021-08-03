@@ -22,4 +22,3 @@ for i in range(n):
     if len(t) == 1:
         flag = False
 print(a - b)
-

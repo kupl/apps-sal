@@ -1,5 +1,7 @@
 import collections
 import itertools
+
+
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
         def check(b):
@@ -19,10 +21,10 @@ class Solution:
                     return -1
                 else:
                     h[w] = 1
-            #print(h)
+            # print(h)
             return len(h)
         ans = 1
-        for b in itertools.product([0,1], repeat=len(s)-1):
+        for b in itertools.product([0, 1], repeat=len(s) - 1):
             n = check(b)
             if n > 0:
                 ans = max(ans, n)

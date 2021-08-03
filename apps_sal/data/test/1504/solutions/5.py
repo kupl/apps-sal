@@ -25,4 +25,3 @@ for _ in range(int(input())):
     if k <= 0:
         ans = 0
     print(ans)
-

@@ -1,5 +1,5 @@
 # cook your dish here
-t= int(input())
+t = int(input())
 a = list()
 for i in range(t):
     a.append(int(input()))

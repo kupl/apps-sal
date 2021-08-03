@@ -9,5 +9,3 @@ def meeting(rooms, number):
         ans.append(min(chairs[i], number - sum(ans)))
         i += 1
     return ans if sum(ans) >= number else "Not enough!"
-        
-

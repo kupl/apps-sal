@@ -9,5 +9,3 @@ class Solution:
             product *= i
             result = product - sum_1
         return result
-            
-

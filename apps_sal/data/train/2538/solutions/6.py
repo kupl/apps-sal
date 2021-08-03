@@ -7,12 +7,10 @@ class Solution:
                 m //= 10
             return res
         dic = collections.defaultdict(list)
-        for i in range(1,n+1):
+        for i in range(1, n + 1):
             count_i = countDigits(i)
             dic[count_i].append(i)
-        
-        max_count = max(len(dic[k]) for k in dic)
-        res = [len(dic[k])==max_count for k in dic]
-        return sum(res)
-            
 
+        max_count = max(len(dic[k]) for k in dic)
+        res = [len(dic[k]) == max_count for k in dic]
+        return sum(res)

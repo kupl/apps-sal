@@ -1,7 +1,7 @@
-s=input()
-st=set(s)
+s = input()
+st = set(s)
 
-if len(st)==2:
+if len(st) == 2:
     print("Yes")
 else:
     print("No")

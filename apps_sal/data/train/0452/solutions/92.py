@@ -22,4 +22,3 @@ class Solution:
                 res = min(res, max_cost_current_day + dfs(j + 1, d - 1))
             return res
         return dfs(0, d)
-

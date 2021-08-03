@@ -24,4 +24,3 @@ for _ in range(int(input())):
     for i in l[::-1]:
         s += str(i)
     print(int(s, 3))
-

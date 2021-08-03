@@ -12,6 +12,5 @@ for c in s:
     x = x.rjust(8, '0')
     ans += x.count('0') - 1
 
-M0D = 10**9 +7
+M0D = 10**9 + 7
 print(pow(3, ans, M0D))
-

@@ -11,5 +11,5 @@ class Solution:
             else:
                 count += prev_odd
                 prev_even += 1
-        
+
         return count % (10**9 + 7)

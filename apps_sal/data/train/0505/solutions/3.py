@@ -9,7 +9,7 @@ class Solution:
                 open_bracket.remove(max(open_bracket))
             elif s[i] == ')' and len(open_bracket) == 0:
                 redundant_indices.add(i)
-                
+
         if open_bracket:
             for bracket in open_bracket:
                 redundant_indices.add(bracket)

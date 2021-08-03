@@ -1,5 +1,6 @@
 import math
 
+
 def digit_sum(num):
     res = 0
     while num:
@@ -7,7 +8,10 @@ def digit_sum(num):
         num //= 10
     return res
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 n = int(input())
 res = math.inf
 for s in range(1, 91):

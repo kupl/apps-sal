@@ -24,13 +24,13 @@ for X, Y in XY:
     x, y = 0, 0
     w = ''
     for di in d:
-        if abs(X-(x-di)) + abs(Y-y) <= di:
+        if abs(X - (x - di)) + abs(Y - y) <= di:
             w += 'L'
             x -= di
-        elif abs(X-(x+di)) + abs(Y-y) <= di:
+        elif abs(X - (x + di)) + abs(Y - y) <= di:
             w += 'R'
             x += di
-        elif abs(X-x) + abs(Y-(y-di)) <= di:
+        elif abs(X - x) + abs(Y - (y - di)) <= di:
             w += 'D'
             y -= di
         else:

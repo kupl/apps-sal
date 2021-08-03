@@ -17,7 +17,7 @@ def HQ9(code):
                 line += 'Take one down and pass it around, ' + str(i - 1) + ' bottle of beer on the wall.\n'
             else:
                 line += str(i) + ' bottles of beer on the wall, ' + str(i) + ' bottles of beer.\n'
-                line += 'Take one down and pass it around, ' + str(i - 1) + ' bottles of beer on the wall.\n'     
+                line += 'Take one down and pass it around, ' + str(i - 1) + ' bottles of beer on the wall.\n'
         return line
     else:
         pass

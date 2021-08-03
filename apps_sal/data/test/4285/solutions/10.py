@@ -1,7 +1,7 @@
 MOD = 10 ** 9 + 7
 
 n = int(input())
-# (used ?) * 3 + cur 
+# (used ?) * 3 + cur
 dp = [0] * 12
 qcnt = 0
 for c in input():

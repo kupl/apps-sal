@@ -26,5 +26,5 @@ else:
             l.append(n)
             cur += n
             n -= 1
-print(len(l), end = ' ')
+print(len(l), end=' ')
 print(*l)

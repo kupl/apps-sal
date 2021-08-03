@@ -3,10 +3,11 @@ import itertools
 
 input = sys.stdin.readline
 
+
 def main():
     N = int(input())
     l = ['M', 'A', 'R', 'C', 'H']
-    m = [0]*5
+    m = [0] * 5
     for _ in range(N):
         S = input()[:-1]
         Shead = S[0]
@@ -27,7 +28,9 @@ def main():
 
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

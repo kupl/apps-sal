@@ -1,16 +1,15 @@
 import sys
-n,k=list(map(int,input().split()))
-h=list(map(int,input().split()))
+n, k = list(map(int, input().split()))
+h = list(map(int, input().split()))
 
-list.sort(h,reverse=True)
+list.sort(h, reverse=True)
 
-if k>=n:
+if k >= n:
     print('0')
     return
 
-c=0
-for i in range(k,n):
-    c+=h[i]
+c = 0
+for i in range(k, n):
+    c += h[i]
 
 print(c)
-

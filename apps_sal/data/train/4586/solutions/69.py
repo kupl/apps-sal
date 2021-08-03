@@ -1,13 +1,15 @@
 def split(string):
     return [char for char in string]
 
-layout = [split("abcde123"),
-     split("fghij456"),
-     split("klmno789"),
-     split("pqrst.@0"),
-     split("uvwxyz_/")]
 
-position = dict((j,(x, y)) for x, i in enumerate(layout) for y, j in enumerate(i))
+layout = [split("abcde123"),
+          split("fghij456"),
+          split("klmno789"),
+          split("pqrst.@0"),
+          split("uvwxyz_/")]
+
+position = dict((j, (x, y)) for x, i in enumerate(layout) for y, j in enumerate(i))
+
 
 def tv_remote(word):
     presses = 0

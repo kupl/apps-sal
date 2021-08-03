@@ -1,9 +1,11 @@
 def how_many_bees(hive):
     if not(hive) or not(len(hive)) or not(len(hive[0])):
         return 0
+
     class Model(object):
         def __init__(self):
             self.bees = 0
+
         def checker(self, row, col):
             if row > 1 and hive[row - 1][col] == 'e' and hive[row - 2][col] == 'e':
                 self.bees += 1

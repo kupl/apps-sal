@@ -8,6 +8,7 @@ def generatepyramids():
         pyramids.append(total)
     return pyramids
 
+
 def largestpyramid(n, pyramids):
     lo = 0
     hi = len(pyramids)
@@ -22,7 +23,8 @@ def largestpyramid(n, pyramids):
     if cur_pyramid <= n:
         return pyramids[mid]
     else:
-        return pyramids[mid-1]
+        return pyramids[mid - 1]
+
 
 pyramids = generatepyramids()
 t = int(input())
@@ -33,8 +35,4 @@ for case in range(t):
         cur = largestpyramid(n, pyramids)
         n -= cur
         answer += 1
-    print (answer)
-        
-
-    
-
+    print(answer)

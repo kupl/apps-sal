@@ -4,5 +4,6 @@ def decode(binary):
         return 'error'
     return binary[:-1]
 
+
 def parity_bit(binaries):
     return ' '.join(decode(binary) for binary in binaries.split())

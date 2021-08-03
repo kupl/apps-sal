@@ -11,7 +11,7 @@ while 1:
     # print('-')
     # print(f_deck)
     # print(s_deck)
-    rec.append(''.join(list(map(str,f_deck))) +'_'+ ''.join(list(map(str,s_deck))))
+    rec.append(''.join(list(map(str, f_deck))) + '_' + ''.join(list(map(str, s_deck))))
     if f_deck[0] > s_deck[0]:
         f_deck.append(s_deck.pop(0))
         f_deck.append(f_deck.pop(0))
@@ -19,16 +19,16 @@ while 1:
         s_deck.append(f_deck.pop(0))
         s_deck.append(s_deck.pop(0))
     idx += 1
-    if ''.join(list(map(str,f_deck))) +'_'+ ''.join(list(map(str,s_deck))) in rec:
+    if ''.join(list(map(str, f_deck))) + '_' + ''.join(list(map(str, s_deck))) in rec:
         break
     if len(f_deck) == 0 or len(s_deck) == 0:
         break
     # if idx>5000000:
     #     break
 if len(f_deck) == 0:
-    print("{} {}".format(idx,2))
+    print("{} {}".format(idx, 2))
 elif len(s_deck) == 0:
-    print("{} {}".format(idx,1))
+    print("{} {}".format(idx, 1))
 else:
     print(-1)
 

@@ -1,6 +1,8 @@
 from math import gcd
 
-# THis is the main function 
+# THis is the main function
+
+
 def main():
     n = int(input())
     a = [int(c) for c in input().split()]
@@ -9,7 +11,7 @@ def main():
     for i in range(1, n):
         g = gcd(g, a[i])
 
-    final=0
+    final = 0
     for i in range(1, int(g ** (0.5)) + 1):
         if g % i == 0:
             if g // i != i:
@@ -19,5 +21,5 @@ def main():
 
     print(final)
 
-main()
 
+main()

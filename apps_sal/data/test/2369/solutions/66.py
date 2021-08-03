@@ -36,4 +36,3 @@ for i in range(N - K + 1):
     minX %= m
 
 print(((maxX - minX) % m))
-

@@ -11,4 +11,3 @@ while True:
     if b < 0:
         print('Valera')
         break
-

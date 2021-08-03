@@ -1,3 +1,2 @@
-str=input()
-print((str.replace(","," ")))
-
+str = input()
+print((str.replace(",", " ")))

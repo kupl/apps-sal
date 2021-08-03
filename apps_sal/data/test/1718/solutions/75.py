@@ -12,7 +12,6 @@ cn = 1
 
 Z = N - K
 
-cn = cn + math.ceil(Z / (K-1))
+cn = cn + math.ceil(Z / (K - 1))
 
 print(cn)
-

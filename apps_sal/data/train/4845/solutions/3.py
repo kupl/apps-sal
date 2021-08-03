@@ -1,5 +1,6 @@
 def sort_nested_list(A):
     numbers = []
+
     def peel(A, insert=False):
         for i in range(len(A)):
             if len(A[i]) != 0 and isinstance(A[i][0], list):

@@ -3,6 +3,7 @@ class ProductOfNumbers:
     def __init__(self):
         self.__list = []
         self.__product = []
+
     def add(self, num: int) -> None:
         self.__list.append(num)
         if num == 0:
@@ -25,4 +26,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

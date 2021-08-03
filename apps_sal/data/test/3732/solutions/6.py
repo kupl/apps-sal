@@ -7,6 +7,7 @@ def change(x, y):
         x = tmp
     return (x, y)
 
+
 x, y, m = [int(x) for x in input().split()]
 if x >= m or y >= m:
     ans = 0
@@ -26,4 +27,3 @@ else:
         x, y = change(x, y)
         ans += 1
 print(ans)
-

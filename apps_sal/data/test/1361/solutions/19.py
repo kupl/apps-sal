@@ -1,6 +1,7 @@
 n = int(input())
 a = list(map(int, input(). split()))
-sl = []; s2 = []
+sl = []
+s2 = []
 for i in range(n - 2):
     sl += [a[i + 2] - a[i]]
     s2 += [a[i + 1] - a[i]]

@@ -5,16 +5,16 @@ def f(m):
             b[i] += 1
         else:
             b[i] = 1
-    #print(m,b)
+    # print(m,b)
     k = 0
     for i in b:
         if b[i] > 1:
             k += 1
     if k == 0:
         return True
-    for i in range(n-m):
-        b[a[i+m]] -= 1
-        if b[a[i+m]] == 1:
+    for i in range(n - m):
+        b[a[i + m]] -= 1
+        if b[a[i + m]] == 1:
             k -= 1
         if a[i] in b:
             b[a[i]] += 1
@@ -26,13 +26,14 @@ def f(m):
             return True
     return False
 
+
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 
 l = 0
 r = n
-while r-l > 1:
-    m = (r+l)//2
+while r - l > 1:
+    m = (r + l) // 2
     if f(m):
         r = m
     else:
@@ -40,4 +41,3 @@ while r-l > 1:
 if f(l):
     r = l
 print(r)
-

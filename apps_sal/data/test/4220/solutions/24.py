@@ -5,7 +5,7 @@ s = input()
 ans = ""
 
 if len(s) <= k:
-    print(s)    
+    print(s)
 else:
     for i in range(k):
         ans += s[i]

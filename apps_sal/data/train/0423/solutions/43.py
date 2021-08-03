@@ -6,7 +6,7 @@ class Solution:
         res = 1
         for i in range(l):
             if (arr[i] - difference) in index_map:
-                j = index_map[arr[i]-difference]
+                j = index_map[arr[i] - difference]
                 dp[i] = dp.get(j, 1) + 1
                 if dp[i] > res:
                     res = dp[i]

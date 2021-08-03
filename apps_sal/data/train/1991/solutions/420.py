@@ -3,6 +3,7 @@ class Solution:
         dp = [[-1] * 201 for _ in range(101)]
         dp[start][fuel] = 1
         MOD = 1000000007
+
         def helper(pos, left):
             if dp[pos][left] != -1:
                 return dp[pos][left]
@@ -14,5 +15,3 @@ class Solution:
             dp[pos][left] = ans
             return ans
         return sum(helper(finish, left) for left in range(fuel + 1)) % MOD
-        
-

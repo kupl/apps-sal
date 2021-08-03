@@ -1,5 +1,6 @@
 LIMIT = 100
 
+
 def riders(stations, station_x):
     riders = 1
     rode = 0
@@ -8,7 +9,7 @@ def riders(stations, station_x):
             # Too far, switch riders
             riders += 1
             rode = 0
-            
+
         if station == station_x:
             # Rider lost, send a rescue rider back from station_x
             riders += 1
@@ -24,4 +25,3 @@ def riders(stations, station_x):
             rode += distance
 
     return riders
-

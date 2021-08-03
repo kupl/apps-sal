@@ -4,24 +4,24 @@ b = arr[1]
 l = arr[2]
 r = arr[3]
 
-pivots = [];
+pivots = []
 
-pivots.append(l - 1);
+pivots.append(l - 1)
 for aTimes in range(65):
     for bTimes in range(65):
-        now = a ** aTimes + b**bTimes;
+        now = a ** aTimes + b**bTimes
         if now < l:
-            continue;
+            continue
         if now > r:
-            break;
-        pivots.append(now);
-pivots.append(r + 1);
+            break
+        pivots.append(now)
+pivots.append(r + 1)
 
-pivots.sort();
-ans = 0;
+pivots.sort()
+ans = 0
 for i in range(len(pivots)):
     if i == 0:
-        continue;
-    ans = max(pivots[i] - pivots[i - 1] - 1,ans);
+        continue
+    ans = max(pivots[i] - pivots[i - 1] - 1, ans)
 
-print(ans);
+print(ans)

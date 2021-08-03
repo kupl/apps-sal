@@ -1,6 +1,6 @@
 def main():
-    N, K  = [int(i) for i in input().split()]
-    A  = [int(i) for i in input().split()]
+    N, K = [int(i) for i in input().split()]
+    A = [int(i) for i in input().split()]
     v = {0: 1}
     n = [0]
     r = 0
@@ -18,4 +18,3 @@ def main():
 
 
 print((main()))
-

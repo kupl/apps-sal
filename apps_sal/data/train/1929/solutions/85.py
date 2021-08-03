@@ -5,7 +5,7 @@ class StreamChecker:
         self.p = []
         for w in words:
             self.insert(w)
-    
+
     def insert(self, w):
         p = self.trie
         for c in w:
@@ -24,10 +24,8 @@ class StreamChecker:
                 p2.append(p[letter])
         self.p = p2
         return any('#' in p for p in self.p)
-                
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

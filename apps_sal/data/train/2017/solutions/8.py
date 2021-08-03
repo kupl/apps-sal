@@ -10,5 +10,3 @@ for i in range(1, len(a), 2):
         a[j - 1], a[j] = a[j], a[j - 1]
         j -= 1
 print(ans)
-    
-

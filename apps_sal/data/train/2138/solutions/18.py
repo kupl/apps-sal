@@ -12,6 +12,7 @@ def maxConsecutive(a):
         ans = max(ans, curr)
     return ans
 
+
 def countOne(a):
     ans = 0
     for i in range(len(a)):
@@ -19,13 +20,13 @@ def countOne(a):
             ans += 1
     return ans
 
+
 a = input()
 b = input()
-if countOne(a) + countOne(a)%2 >= countOne(b):
+if countOne(a) + countOne(a) % 2 >= countOne(b):
     print("YES")
 else:
     print("NO")
 
 # 101101
 #       01111
-

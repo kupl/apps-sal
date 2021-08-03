@@ -1,5 +1,5 @@
 def paperwork(n, m):
-    z =  n*m
+    z = n * m
     if n <= 0:
         return 0
     elif m <= 0:
@@ -7,4 +7,3 @@ def paperwork(n, m):
     else:
         return z
     # Happy Coding! ^_^
-

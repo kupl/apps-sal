@@ -7,6 +7,5 @@ def solution(a, b):
     else:
         long = b
         short = a
-    
-    return short + int + short
 
+    return short + int + short

@@ -1,5 +1,6 @@
 parens = dict([')(', '][', '}{'])
 
+
 def group_check(s):
     stack = []
     for c in s:

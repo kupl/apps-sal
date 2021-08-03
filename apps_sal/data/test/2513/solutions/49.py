@@ -37,8 +37,7 @@ for i in range(4):
         if t[i][-2] == t[i][0]:
             flag = False
     if flag:
-        print(*t[i], sep = "")
+        print(*t[i], sep="")
         return
 
 print(-1)
-

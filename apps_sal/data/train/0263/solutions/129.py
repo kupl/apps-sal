@@ -25,4 +25,3 @@ class Solution:
             ans += v
             ans %= MOD
         return ans
-

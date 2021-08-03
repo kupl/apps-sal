@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n, m, w = R()
 arr = list(R())
 l, r = min(arr), min(arr) + m

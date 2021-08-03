@@ -1,4 +1,4 @@
-def correct_polish_letters(st): 
+def correct_polish_letters(st):
     replace = {
         'ą': 'a',
         'ć': 'c',

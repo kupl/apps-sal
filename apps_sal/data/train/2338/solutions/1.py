@@ -10,4 +10,3 @@ for _ in range(int(input())):
         ans.append(ansi)
         sign = -sign
     print(len(ans), *ans)
-

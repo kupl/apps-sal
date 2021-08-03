@@ -10,7 +10,7 @@ for startx in range(w):
         if grid[starty][startx] == "#":
             continue
 
-        dist = [[10000]*w for _ in range(h)]
+        dist = [[10000] * w for _ in range(h)]
         dist[starty][startx] = 0
         maxDist = 0
 

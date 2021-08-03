@@ -13,4 +13,3 @@ for _ in range(int(input())):
         continue
     else:
         print(m)
-

@@ -14,8 +14,10 @@ def solve():
         else:
             break
     if n != post1 + pref0:
-        print(pref0 *"0"+"0"+post1*"1")
+        print(pref0 * "0" + "0" + post1 * "1")
     else:
         print(pref0 * "0" + post1 * "1")
+
+
 for i in range(int(input())):
     solve()

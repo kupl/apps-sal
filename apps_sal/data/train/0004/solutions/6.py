@@ -28,5 +28,3 @@ for t_i in range(t):
             max_seen = max(r_cand, max_seen)
         beaut.append('1' if max_seen == r - l + 1 else '0')
     print(''.join(beaut))
-            
-

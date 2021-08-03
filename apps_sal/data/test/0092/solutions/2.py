@@ -1,4 +1,6 @@
 from functools import reduce
+
+
 def main():
     from itertools import product
     from functools import reduce
@@ -23,11 +25,13 @@ def main():
             cache[xyz] = u = (
                 reduce(mul, list(map(sum, list(zip(
                     l[x], l[y], l[z], (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1))))),
-                       1) & 1073741823)
+                    1) & 1073741823)
             res += u
     print(res & 1073741823)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

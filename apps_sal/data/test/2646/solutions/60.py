@@ -8,7 +8,7 @@ for _ in range(m):
     graph[a - 1].append(b - 1)
     graph[b - 1].append(a - 1)
 ans = [-1] * (n - 1)
-used = [0]*n
+used = [0] * n
 used[0] = 1
 que = deque([0])
 while que:
@@ -16,7 +16,7 @@ while que:
     for p in graph[posi]:
         if not used[p]:
             que.append(p)
-            ans[p-1] = posi+1
+            ans[p - 1] = posi + 1
             used[p] = 1
 print('Yes')
 print(*ans, sep='\n')

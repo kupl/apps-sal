@@ -6,8 +6,8 @@ ans = 0
 
 for i in range(m):
     x, y = list(map(int, input().split()))
-    graph[x-1].add(y - 1)
-    graph[y-1].add(x - 1)
+    graph[x - 1].add(y - 1)
+    graph[y - 1].add(x - 1)
 
 for i in range(n):
     strengths.append([v[i], i])
@@ -22,4 +22,3 @@ while len(strengths) > 0:
             graph[s[1]].remove(i)
 
 print(ans)
-

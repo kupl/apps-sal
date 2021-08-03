@@ -3,8 +3,6 @@ def solve():
     print(n)
 
 
-
 t = int(input())
 for i in range(t):
     solve()
-

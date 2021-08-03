@@ -10,7 +10,7 @@ elif n == 4:
     print(4)
     print(3, 1, 4, 2)
 else:
-    if n % 2 != 0: 
+    if n % 2 != 0:
         ind1 = n // 2 + 2
     else:
         ind1 = n // 2 + 1

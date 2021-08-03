@@ -1,5 +1,5 @@
-a,b = map(int,input().split())
-L = [str(a)*b, str(b)*a]
+a, b = map(int, input().split())
+L = [str(a) * b, str(b) * a]
 
 
 L = sorted(L)

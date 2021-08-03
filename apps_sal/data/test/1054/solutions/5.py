@@ -8,6 +8,3 @@ for _ in range(number_of_mines):
     x_coords.append(x)
     y_coords.append(y)
 print(max(abs(max(x_coords) - min(x_coords)), abs(max(y_coords) - min(y_coords))) ** 2)
-    
-
-

@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def palindrome(num):
     if not isinstance(num, int) or num < 0:
         return 'Not valid'

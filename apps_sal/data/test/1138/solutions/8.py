@@ -18,4 +18,3 @@ else:
         if dh < dv:
             dh, dv = dv, dh
         print((dh - 1) // 2 + (dv - 1) // 2 + 1)
-

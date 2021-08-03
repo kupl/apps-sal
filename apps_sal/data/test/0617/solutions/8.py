@@ -17,8 +17,8 @@ while i1 < len(s):
 
     i2 = i2 - 2
     if i2 - i1 > 2:
-        s1 = eval(s[i1+1: i2])
-        s = s[:i1+1] + str(s1) + s[i2:]
+        s1 = eval(s[i1 + 1: i2])
+        s = s[:i1 + 1] + str(s1) + s[i2:]
         i1 += 4
     else:
         i1 += 2
@@ -31,10 +31,9 @@ for i in range(len(s)):
 mults.append(len(s))
 max = 0
 for i in range(len(mults)):
-    for j in range(i+1, len(mults)):
-        news =  s[:mults[i]+1] + '(' + s[mults[i]+1:mults[j]] + ')' +s[mults[j]:]
+    for j in range(i + 1, len(mults)):
+        news = s[:mults[i] + 1] + '(' + s[mults[i] + 1:mults[j]] + ')' + s[mults[j]:]
         v = eval(news)
         if v > max:
             max = v
 print(max)
-

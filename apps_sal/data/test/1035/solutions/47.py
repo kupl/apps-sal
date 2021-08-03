@@ -1,22 +1,23 @@
 def factrization(n):
     arr = []
     temp = n
-    
-    for i in range(2, int(n**0.5//1) + 2):
-        if temp%i == 0:
+
+    for i in range(2, int(n**0.5 // 1) + 2):
+        if temp % i == 0:
             cnt = 0
-            while temp%i == 0:
+            while temp % i == 0:
                 cnt += 1
                 temp //= i
             arr.append(i)
-    
+
     if temp != 1:
         arr.append(temp)
-    
+
     if arr == []:
         arr.append(n)
-    
+
     return arr
+
 
 a, b = map(int, input().split())
 ans = 0

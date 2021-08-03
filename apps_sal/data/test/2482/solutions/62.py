@@ -35,14 +35,16 @@ def main():
     IN = readlines()
     for i in range(K):
         p, q = list(map(int, IN[i].split()))
-        p -= 1; q -= 1
+        p -= 1
+        q -= 1
         uf1.union(p, q)
     for j in range(K, K + L):
         r, s = list(map(int, IN[j].split()))
-        r -= 1; s -= 1
+        r -= 1
+        s -= 1
         # if uf1.find(r) == uf1.find(s):
         uf2.union(r, s)
-    
+
     # ans = []
     # for i in range(N):
     #     ans.append(-uf2.parents[uf2.find(i)])
@@ -62,5 +64,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

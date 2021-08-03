@@ -12,7 +12,8 @@ for i in range(n):
         if (uk + 1 == len(mult)):
             amount //= mult[-1]
         mult.pop()
-        if (uk == len(mult)): uk -= 1
+        if (uk == len(mult)):
+            uk -= 1
     if l[0] == "add":
         while uk < len(mult) - 1:
             uk += 1

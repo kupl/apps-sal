@@ -33,4 +33,3 @@ class Solution:
         else:
             result = win_list[0]
         return result
-

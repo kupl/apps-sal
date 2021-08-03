@@ -6,4 +6,3 @@ for i in list(map(int, input().split()))[::-1]:
         a.add(i)
         res = i
 print(res)
-

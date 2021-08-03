@@ -6,7 +6,8 @@ T = int(input())
 def cnt(points):
     med = statistics.median(points)
     # print('points', points, 'med',med)
-    return int(sum(abs(p-med) for p in points))
+    return int(sum(abs(p - med) for p in points))
+
 
 for t in range(T):
     N, m = [int(_) for _ in input().split()]
@@ -19,14 +20,14 @@ for t in range(T):
 
     for i in range(N):
         for j in range(m):
-            mir_left = m-j-1
+            mir_left = m - j - 1
             points = []
             points.append(M[i][j])
             if mir_left > j:
                 points.append(M[i][mir_left])
             elif mir_left < j:
                 continue
-            mir_bot = N-i-1
+            mir_bot = N - i - 1
             if mir_bot > i:
                 points.append(M[mir_bot][j])
             elif mir_bot < i:
@@ -36,4 +37,3 @@ for t in range(T):
             answer += cnt(points)
 
     print(answer)
-

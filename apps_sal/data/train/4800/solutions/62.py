@@ -5,7 +5,7 @@ def hotpo(n):
             n = n / 2
         elif n % 2 == 1:
             n = 3 * n + 1
-            
+
         t += 1
-        
+
     return t

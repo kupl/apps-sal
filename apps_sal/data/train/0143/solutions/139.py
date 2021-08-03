@@ -19,6 +19,5 @@ class Solution:
                 lo = seen.pop(remove[1])
             seen[tree[hi]] = hi
             #print(lo, hi, seen)
-            ans = max(ans, hi-lo)
+            ans = max(ans, hi - lo)
         return ans
-

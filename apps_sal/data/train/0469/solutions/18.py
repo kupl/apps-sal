@@ -8,12 +8,16 @@ def build_graph(n, leftChild, rightChild):
         if right != -1:
             adj_list[i].append(right)
     return adj_list
+
+
 def gather_inDegrees(n, graph):
     inDegrees = [0] * n
     for i in range(len(graph)):
         for neighbor in graph[i]:
             inDegrees[neighbor] += 1
     return inDegrees
+
+
 class Solution:
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         graph = build_graph(n, leftChild, rightChild)
@@ -28,10 +32,11 @@ class Solution:
                     return False
                 else:
                     zero_count += 1
-        
+
         visited = set()
         topo_order = []
         processing = set()
+
         def _dfs(node):
             processing.add(node)
             visited.add(node)
@@ -46,7 +51,7 @@ class Solution:
             processing.remove(node)
             topo_order.append(node)
             return False
-        
+
         for i in range(n):
             if i not in visited:
                 if _dfs(i):

@@ -3,7 +3,7 @@ class Solution:
         def cost(a, b):
             alen, blen = len(a), len(b)
             minlen = min(alen, blen)
-            for i in range(minlen - 1,0,-1):
+            for i in range(minlen - 1, 0, -1):
                 if a[alen - i:] == b[:i]:
                     return blen - i
             return blen
@@ -11,29 +11,32 @@ class Solution:
         g = [[-1] * n for _ in range(n)]
         for i in range(n):
             for j in range(n):
-                if j == i: continue
-                g[i][j] = cost(A[i],A[j])
+                if j == i:
+                    continue
+                g[i][j] = cost(A[i], A[j])
 
-        dp = [[float('inf')] * n for _ in range(1<<n)]
-        parent = [[-1] * n for _ in range(1<<n)]
+        dp = [[float('inf')] * n for _ in range(1 << n)]
+        parent = [[-1] * n for _ in range(1 << n)]
         anslen = float('inf')
         cur = -1
         ans = ''
         for i in range(n):
-            dp[1<<i][i] = len(A[i])
-        for s in range(1, 1<<n):
+            dp[1 << i][i] = len(A[i])
+        for s in range(1, 1 << n):
             for j in range(n):
-                if (s & (1<<j)) == 0: continue
+                if (s & (1 << j)) == 0:
+                    continue
                 ps = s & ~(1 << j)
                 for i in range(n):
-                    if i == j: continue
+                    if i == j:
+                        continue
                     if dp[s][j] > dp[ps][i] + g[i][j]:
                         dp[s][j] = dp[ps][i] + g[i][j]
                         parent[s][j] = i
 
         for i in range(n):
-            if anslen > dp[(1<<n)-1][i]:
-                anslen = dp[(1<<n)-1][i]
+            if anslen > dp[(1 << n) - 1][i]:
+                anslen = dp[(1 << n) - 1][i]
                 cur = i
         s = (1 << n) - 1
         while s > 0:

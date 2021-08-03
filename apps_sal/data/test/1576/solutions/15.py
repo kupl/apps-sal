@@ -6,5 +6,5 @@ while len(t) > 0:
         t = t[:-1]
     else:
         ans = t[0] + ans
-        t = t[1:] 
+        t = t[1:]
 print(ans)

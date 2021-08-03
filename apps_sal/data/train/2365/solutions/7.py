@@ -3,14 +3,16 @@ import collections
 import threading
 import copy
 
+
 def check(itr, sets):
-    d={}
+    d = {}
+
     def dmap(x):
-        return d[x]    
+        return d[x]
     for i in range(len(itr)):
         d[itr[i]] = i
     for perm in sets:
-        tmp = sorted(list( map(dmap, perm) ))
+        tmp = sorted(list(map(dmap, perm)))
         if len(tmp) != tmp[-1] - tmp[0] + 1:
             return False
 
@@ -18,12 +20,12 @@ def check(itr, sets):
 
 
 def main():
-    n = int( input() )
+    n = int(input())
     sets = []
     start = set()
-    for _ in range(n-1):
-        l, *tmp = list(map( int, input().split() ))
-        sets.append( set(tmp) )
+    for _ in range(n - 1):
+        l, *tmp = list(map(int, input().split()))
+        sets.append(set(tmp))
         if l == 2:
             start.add(tmp[0])
             start.add(tmp[1])
@@ -32,7 +34,8 @@ def main():
     for i in start:
         permuts = copy.deepcopy(sets)
         next = i
-        while len(ans) > 0: ans.pop()
+        while len(ans) > 0:
+            ans.pop()
 
         ans.append(next)
         while len(ans) < n:
@@ -43,23 +46,18 @@ def main():
                     if len(permut) == 1:
                         q.append(permut)
             if len(q) != 1:
-                break ########## exit
+                break  # exit
             next = list(q[0])[0]
             ans.append(next)
-        if len(ans)==n and check(ans, sets):
+        if len(ans) == n and check(ans, sets):
             print(*ans)
             return
     print("error")
     return
-        
-
-        
-
-
 
 
 input = sys.stdin.readline
-#sys.setrecursionlimit(2097152)
+# sys.setrecursionlimit(2097152)
 tnum = int(input())
 for _ in range(tnum):
     main()
@@ -69,4 +67,3 @@ for _ in range(tnum):
 # main_thread = threading.Thread(target=main)
 # main_thread.start()
 # main_thread.join()
-

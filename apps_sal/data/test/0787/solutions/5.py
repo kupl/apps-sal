@@ -24,5 +24,3 @@ if len(ts) >= k + 1:
         print(q[a:b])
 else:
     print('NO')
-
-

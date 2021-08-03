@@ -11,7 +11,7 @@ for i in range(n):
     j = (i + 1) % p
     if a[i] >= j:
         var = (a[i] - j) % p
-        opt[var] = max(opt[var], a[i] - j) 
+        opt[var] = max(opt[var], a[i] - j)
     if j == 0:
         high = min(high, a[i])
     low = max(low, a[i] - i)
@@ -26,5 +26,3 @@ for i in range(low, high):
         result.append(i)
 print(len(result))
 print(' '.join(map(str, result)))
-
-

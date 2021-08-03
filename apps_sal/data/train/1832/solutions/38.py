@@ -1,6 +1,8 @@
 import math
 from collections import defaultdict
 from queue import PriorityQueue
+
+
 class Solution:
     def reachableNodes(self, edges: List[List[int]], M: int, N: int) -> int:
         adj = defaultdict(list)
@@ -8,7 +10,7 @@ class Solution:
             adj[x].append([y, w + 1])
             adj[y].append([x, w + 1])
         dist = [math.inf for _ in range(N)]
-        q = PriorityQueue() # queue of [dist, vertex_id]
+        q = PriorityQueue()  # queue of [dist, vertex_id]
         q.put([0, 0])
         dist[0] = 0
         while not q.empty():

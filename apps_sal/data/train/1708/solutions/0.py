@@ -21,7 +21,9 @@ some useful information about memory allocation in operating system
 PS. I HAVE IMPLEMENTED Best Fit Algorithm IN JAVASCRIPT AND IMPLEMENTED Next Fit Algorithm in PYTHON :)
 '''
 
-#Next fit Algorithm
+# Next fit Algorithm
+
+
 class MemoryManager:
     def __init__(self, memory):
         self.storage = [True] * len(memory)
@@ -31,30 +33,35 @@ class MemoryManager:
 
     def allocate(self, size):
         find_next = self.process_allocate(self.previous_allocated_index, len(self.data) - size + 1, size)  # start searching from previously allocated block
-        if find_next is not None : return find_next
+        if find_next is not None:
+            return find_next
         from_start = self.process_allocate(0, self.previous_allocated_index - size + 1, size)              # if we cant find from last index then start searching from starting to previously allocated index
-        if from_start is not None : return from_start
+        if from_start is not None:
+            return from_start
         raise IndexError('caused by insufficient space in storage')
-    
+
     def process_allocate(self, initial, end, size):
-        for i in range(initial, end):  
+        for i in range(initial, end):
             if all(self.storage[i:i + size]):
                 self.previous_allocated_index = i
                 self.storage[i:i + size] = [False] * size
                 self.allocated[i] = i + size
                 return i
-    
+
     def release(self, pointer):
-        if self.storage[pointer] : raise RuntimeError('caused by providing incorrect pointer for releasing memory')
+        if self.storage[pointer]:
+            raise RuntimeError('caused by providing incorrect pointer for releasing memory')
         size = self.allocated[pointer] - pointer
         self.storage[pointer:size] = [True] * size
         self.data[pointer:size] = [None] * size
         del self.allocated[pointer]
 
     def read(self, pointer):
-        if self.storage[pointer] : raise RuntimeError('caused by providing incorrect pointer for reading memory')
+        if self.storage[pointer]:
+            raise RuntimeError('caused by providing incorrect pointer for reading memory')
         return self.data[pointer]
 
     def write(self, pointer, value):
-        if self.storage[pointer] : raise RuntimeError('caused by providing incorrect pointer for writing memory')
+        if self.storage[pointer]:
+            raise RuntimeError('caused by providing incorrect pointer for writing memory')
         self.data[pointer] = value

@@ -9,9 +9,8 @@ for _ in range(Q):
             mi = i
             break
     for i in range(N):
-        if s[N-1-i] == "<":
+        if s[N - 1 - i] == "<":
             mi = min(mi, i)
             break
 
     print(mi)
-

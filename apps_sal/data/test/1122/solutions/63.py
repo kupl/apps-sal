@@ -7,4 +7,3 @@ for i in range(1, M + 1):
     else:
         j = (i - 2) // 2
         print((M + 2 + j, 2 * M + 1 - j))
-

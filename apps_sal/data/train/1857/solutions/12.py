@@ -17,11 +17,11 @@ class Solution:
                     if seatint & (2**2 + 2**3 + 2**8 + 2**9) == 0:
                         subcounter += 1
                 else:
-                    if seatint &(2**2 + 2**3 + 2**4 + 2**5) == 0: 
+                    if seatint & (2**2 + 2**3 + 2**4 + 2**5) == 0:
                         subcounter += 1
                     elif seatint & (2**6 + 2**7 + 2**8 + 2**9) == 0:
                         subcounter += 1
                 processed[seatint] = subcounter
                 counter += subcounter
         counter += 2 * (n - len(seatdict))
-        return counter  
+        return counter

@@ -8,14 +8,14 @@ class Solution:
             return -1
         arr = [0 for _ in range(6)]
         arr[0] = 9999999
-        index = {'c':1, 'r':2, 'o':3, 'a':4, 'k':5}
-        
+        index = {'c': 1, 'r': 2, 'o': 3, 'a': 4, 'k': 5}
+
         for letter in croak:
-            i = index[letter]            
-            if arr[i-1] > 0:
+            i = index[letter]
+            if arr[i - 1] > 0:
                 if i == 1 and arr[5]:
                     arr[5] -= 1
-                arr[i-1] -= 1
+                arr[i - 1] -= 1
                 arr[i] += 1
             else:
                 return -1

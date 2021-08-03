@@ -14,4 +14,3 @@ for i in range(n - 1):
                 c_s_f[j][2] + c_s_f[j][0]
     print(t)
 print((0))
-

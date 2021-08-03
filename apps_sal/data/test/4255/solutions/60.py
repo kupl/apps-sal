@@ -1,3 +1,3 @@
-l=[int(x) for x in input().split()]
+l = [int(x) for x in input().split()]
 l.sort()
-print((l[0]*l[1])//2)
+print((l[0] * l[1]) // 2)

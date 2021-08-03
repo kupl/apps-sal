@@ -1,6 +1,6 @@
 def evil(n):
     num = bin(n)
-    ones = 0 
+    ones = 0
     for i in num:
         if i == '1':
             ones += 1

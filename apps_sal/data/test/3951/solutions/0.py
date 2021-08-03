@@ -29,19 +29,21 @@ def test(n):
     shuffle(table)
     print(sorted(array) == sorted(get_original_array(n, table)))
 
+
 def __starting_point():
-#    n = 4
-#    numbers = [2, 1, 2, 3, 4, 3, 2, 6, 1, 1, 2, 2, 1, 2, 3, 2]
-#    print(get_original_array(n, numbers))
-#    test(10)
-#    test(100)
-#    test(200)
-#    test(300)
-#    test(400)
-#    test(500)
-#else:
+    #    n = 4
+    #    numbers = [2, 1, 2, 3, 4, 3, 2, 6, 1, 1, 2, 2, 1, 2, 3, 2]
+    #    print(get_original_array(n, numbers))
+    #    test(10)
+    #    test(100)
+    #    test(200)
+    #    test(300)
+    #    test(400)
+    #    test(500)
+    # else:
     n = int(input())
     numbers = read_numbers()
     print(' '.join(map(str, get_original_array(n, numbers))))
+
 
 __starting_point()

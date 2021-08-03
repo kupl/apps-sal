@@ -1,5 +1,5 @@
 def merge_arrays(arr1, arr2):
-    l=[]
+    l = []
     for x in arr1:
         l.append(x)
     for x in arr2:

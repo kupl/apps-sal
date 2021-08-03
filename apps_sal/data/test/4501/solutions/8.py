@@ -1,7 +1,7 @@
 def solve():
     N, A = list(map(int, input().split()))
     X = list(map(int, input().split()))
- 
+
     dp = [[0] * (A * N + 1) for _ in range(N + 1)]
     dp[0][0] = 1
     for i, x in enumerate(X):
@@ -9,6 +9,6 @@ def solve():
             for a in range(x, A * N + 1):
                 dp[j][a] += dp[j - 1][a - x]
     print((sum(dp[i][A * i] for i in range(1, N + 1))))
- 
-solve()
 
+
+solve()

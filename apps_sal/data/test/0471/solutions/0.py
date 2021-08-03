@@ -4,7 +4,7 @@ A = list(map(int, input().split()))
 A.sort()
 if n == 1:
     print(0)
-    
+
 else:
     if a > A[-1]:
         print(abs(a - A[1]))

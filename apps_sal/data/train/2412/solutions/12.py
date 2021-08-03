@@ -12,4 +12,3 @@ class Solution:
             if stack[-1][1] == 2:
                 stack.pop()
         return ''.join(char * num for char, num in stack)
-

@@ -28,5 +28,3 @@ for _ in range(Q):
             if d[i] and l <= d[i][-1] and d[i][idx] < r:
                 ans += 1
         print(ans)
-
-

@@ -1,1 +1,1 @@
-parse_float = lambda string: None if not all(c.isdigit() or c=='.' for c in string) else float(string)
+def parse_float(string): return None if not all(c.isdigit() or c == '.' for c in string) else float(string)

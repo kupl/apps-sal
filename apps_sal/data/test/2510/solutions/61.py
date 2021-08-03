@@ -20,7 +20,7 @@ class UnionFind():
         自身が親であれば、その集合に属する頂点数に-1を掛けたもの
         そうでなければ親のid
         """
-        self.r = [-1]*n
+        self.r = [-1] * n
 
     def root(self, x: int):
         if self.r[x] < 0:
@@ -46,11 +46,12 @@ def main():
     uf = UnionFind(n)
     for i in range(m):
         a, b = list(map(int, input().split()))
-        uf.unite(a-1, b-1)
+        uf.unite(a - 1, b - 1)
     print((-min(uf.r)))
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

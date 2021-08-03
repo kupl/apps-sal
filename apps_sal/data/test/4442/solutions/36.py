@@ -10,4 +10,3 @@ bbb = B * a
 # 辞書順で小さい方を出力
 lists = sorted([aaa, bbb])
 print((lists[0]))
-

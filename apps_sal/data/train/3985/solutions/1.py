@@ -7,4 +7,3 @@ def find_even_index(lst):
             return i
         left_sum += a
     return -1
-

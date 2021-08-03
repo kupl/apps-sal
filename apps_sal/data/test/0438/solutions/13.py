@@ -1,8 +1,10 @@
 from math import *
+
+
 def Main(n):
     sm = 0
     A = []
-    for i in range(1,n + 1):
+    for i in range(1, n + 1):
         sm += i
         A.append(i)
         if(sum(A) == n):
@@ -19,7 +21,6 @@ def Main(n):
     print(len(A))
     print(*A)
 
-
     # print(int(sqrt(n)))
     # if n%2 == 1:
     #     res = n//2
@@ -28,7 +29,10 @@ def Main(n):
     #         print(i, end = ' ')
     #     print()
 
+
 def __starting_point():
     n = int(input())
     Main(n)
+
+
 __starting_point()

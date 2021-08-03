@@ -10,4 +10,3 @@ for j, (_, i) in enumerate(data):
     if i == 0:
         print(j + 1)
         break
-

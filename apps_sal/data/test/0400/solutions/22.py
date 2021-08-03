@@ -1,5 +1,6 @@
 import math as m
 
+
 def solve():
     n, k = (int(i) for i in input().split())
 
@@ -17,7 +18,7 @@ def solve():
     ai.sort(reverse=True)
 
     for i in range(len(ai)):
-        diff = 10- ai[i]
+        diff = 10 - ai[i]
         if diff <= k:
             k -= diff
             cnt += 1
@@ -26,6 +27,5 @@ def solve():
 
     return cnt
 
+
 print(solve())
-
-

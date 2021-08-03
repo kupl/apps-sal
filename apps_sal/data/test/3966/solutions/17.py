@@ -9,4 +9,3 @@ for i in range(n - 1):
     ans = ans + (i + 2) * a[i]
 ans = ans + n * a[n - 1]
 print(ans)
-

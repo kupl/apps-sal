@@ -10,4 +10,3 @@ if flag:
     print("#Black&White")
 else:
     print("#Color")
-

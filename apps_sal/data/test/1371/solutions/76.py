@@ -2,6 +2,7 @@ import numpy as np
 
 memory = {}
 
+
 def recursive(n):
     if n < 3:
         return 0
@@ -11,10 +12,11 @@ def recursive(n):
     if catch is not None:
         return catch
     peterns = 1
-    for i in range(3, n-3+1):
-        peterns += recursive(n-i)
+    for i in range(3, n - 3 + 1):
+        peterns += recursive(n - i)
     memory[n] = peterns
     return peterns
+
 
 def __starting_point():
 
@@ -22,5 +24,6 @@ def __starting_point():
     s = int(input_str)
     ans = recursive(s)
     print((ans % (10**9 + 7)))
+
 
 __starting_point()

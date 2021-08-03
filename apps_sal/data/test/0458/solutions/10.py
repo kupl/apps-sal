@@ -1,6 +1,7 @@
 ans = []
 a, b, c = list(map(int, input().split()))
 
+
 def sumDig(x):
     ret = 0
     if x <= 0:
@@ -8,7 +9,8 @@ def sumDig(x):
     while x:
         ret += x % 10
         x //= 10
-    return ret 
+    return ret
+
 
 for s in range(1, 90):
     val = b * pow(s, a) + c
@@ -17,4 +19,3 @@ for s in range(1, 90):
 
 print(len(ans))
 print(' '.join(map(str, sorted(ans))))
-

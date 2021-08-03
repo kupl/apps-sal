@@ -16,4 +16,4 @@ for i in range(n):
         sz.append(cnt)
 
 sz.sort()
-print(sum(list(map(lambda x: x*x, sz))) + 2 * sz[-1] * sz[-2])
+print(sum(list(map(lambda x: x * x, sz))) + 2 * sz[-1] * sz[-2])

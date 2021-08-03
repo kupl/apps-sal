@@ -25,6 +25,8 @@ def SR(n): return [S() for i in range(n)]
 def LSR(n): return [LS() for i in range(n)]
 def SRL(n): return [list(S()) for i in range(n)]
 def MSRL(n): return [[int(j) for j in list(S())] for i in range(n)]
+
+
 mod = 1000000007
 
 
@@ -50,6 +52,7 @@ def f(u):
     cnt[u] = ret
     return ret
 
+
 f(0)
 pow2 = [1] * (n + 1)
 for i in range(1, n + 1):
@@ -69,8 +72,3 @@ while q:
     ans = (ans + ret) % mod
 
 print((ans * pow(pow2[n], mod - 2, mod) % mod))
-
-
-
-
-

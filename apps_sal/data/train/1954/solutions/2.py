@@ -4,6 +4,7 @@ class Solution:
         for i, p in enumerate(people):
             p_skills[i] = set(p)
         res = [0] * 17
+
         def dfs(idx=0, path=[], has=set()):
             nonlocal res
             if idx == len(req_skills):
@@ -16,4 +17,3 @@ class Solution:
                         dfs(idx + 1, path + [i], has | p_skills[i])
         dfs()
         return res
-

@@ -1,5 +1,5 @@
 n = int(input())
-lst = list(map(int,input().split()))
+lst = list(map(int, input().split()))
 pref = dict()
 sum = lst[0]
 pref[lst[0]] = 1

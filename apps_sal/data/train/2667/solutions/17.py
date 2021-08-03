@@ -1,2 +1,1 @@
-zero_fuel = lambda d,m,f: m*f>=d
-
+def zero_fuel(d, m, f): return m * f >= d

@@ -11,8 +11,10 @@ class Solution:
         n = len(nums)
 
         def check(size):
-            if size == 0: return True
-            if size > n: return False
+            if size == 0:
+                return True
+            if size > n:
+                return False
 
             p = 1
             lo = hi = 0
@@ -40,8 +42,10 @@ class Solution:
             m = (lo + hi) // 2
             r1, r2 = check(m), check(m + 1)
             if r1 or r2:
-                if r1: res = m
-                if r2: res = m + 1
+                if r1:
+                    res = m
+                if r2:
+                    res = m + 1
                 lo = m + 2
             else:
                 hi = m - 1

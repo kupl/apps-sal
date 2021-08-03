@@ -18,4 +18,3 @@ while x != n or y != m:
         y += 1
         s2 += b[y]
 print(ans + 1)
-

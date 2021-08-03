@@ -12,5 +12,3 @@ if len(s) >= 5 and up and low and digit:
     print('Correct')
 else:
     print('Too weak')
-
-

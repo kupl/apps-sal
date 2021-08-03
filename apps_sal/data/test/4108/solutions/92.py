@@ -15,4 +15,3 @@ if tuple(sc) == tuple(tc):
     print('Yes')
 else:
     print('No')
-

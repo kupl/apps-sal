@@ -11,4 +11,3 @@ for _ in range(n):
     pos = (pos + 1) % n
     val += 1
 print(ans + 1)
-

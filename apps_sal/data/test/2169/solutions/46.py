@@ -35,4 +35,3 @@ for l, r in LR:
     s = (l - 1) // D
     e = (r - 1) // D
     print((p[i][e] - p[i][s]))
-

@@ -17,4 +17,3 @@ for line in sys.stdin:
         print("No")
     if not fail:
         print("Yes")
-

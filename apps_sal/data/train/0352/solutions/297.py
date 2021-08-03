@@ -14,10 +14,10 @@ class Solution:
                 i += 1
                 j += 1
             return True
-        
+
         # build graph
         numPredecessor = [0] * len(words)
-        
+
         graph = defaultdict(lambda: [])
         for i in range(len(words)):
             for j in range(i + 1, len(words)):
@@ -27,23 +27,18 @@ class Solution:
                 elif isPredecessor(words[j], words[i]):
                     graph[j].append(i)
                     numPredecessor[i] += 1
-        
+
         # dfs for each node without predecessor
         def dfs(node, path):
             nonlocal out
-            
+
             path.append(node)
             out = max(out, len(path))
             for nei in graph[node]:
-                dfs(nei,path)
+                dfs(nei, path)
             path.pop()
-            
-        
+
         out = 0
         for node in [i for i in range(len(words)) if not numPredecessor[i]]:
-            dfs(node,[])
+            dfs(node, [])
         return out
-        
-        
-        
-

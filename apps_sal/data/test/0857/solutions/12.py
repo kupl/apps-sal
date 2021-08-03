@@ -6,4 +6,3 @@ for i in range(n):
     if a[i] in b:
         ans.append(a[i])
 print(*ans)
-

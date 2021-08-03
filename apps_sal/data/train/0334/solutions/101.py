@@ -1,4 +1,6 @@
 from functools import reduce
+
+
 class Solution:
     def minCost(self, s: str, cost: List[int]) -> int:
         t = 0
@@ -9,18 +11,16 @@ class Solution:
         s = n
         p = '?'
         e = -1
-        for i,l in enumerate(ins):
+        for i, l in enumerate(ins):
             if p == l:
                 if s == n:
-                    s = i-1
+                    s = i - 1
             else:
                 p = l
                 if s != n:
-                    #only ones before are problematic
-                    t += reduce(lambda a,b:a+b,cost[s:i],0) - max(cost[s:i])
+                    # only ones before are problematic
+                    t += reduce(lambda a, b: a + b, cost[s:i], 0) - max(cost[s:i])
                     s = n
         if s != n:
-            t += reduce(lambda a,b:a+b,cost[s:],0) - max(cost[s:])
+            t += reduce(lambda a, b: a + b, cost[s:], 0) - max(cost[s:])
         return t
-                
-

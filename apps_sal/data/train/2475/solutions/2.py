@@ -11,4 +11,3 @@ class Solution:
             if col != col_sort:
                 D.append(i)
         return len(D)
-

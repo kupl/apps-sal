@@ -4,16 +4,16 @@ def main():
     s = 6 * n
 
     if a * b >= s:
-        print(a*b)
+        print(a * b)
         print(a, b)
         return
-    
+
     ma, mb = min(a, b), max(a, b)
 
     _s = float('inf')
     _a = 0
-    
-    for i in range(min(int(s**0.5)+1, s // mb), ma - 1, -1):
+
+    for i in range(min(int(s**0.5) + 1, s // mb), ma - 1, -1):
         _b = (s + i - 1) // i
         si = i * _b
         if _s > si:

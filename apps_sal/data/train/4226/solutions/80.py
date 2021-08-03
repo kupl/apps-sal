@@ -5,4 +5,3 @@ def remove_smallest(numbers):
             copy_numbers.remove(num)
             return copy_numbers
     return copy_numbers
-

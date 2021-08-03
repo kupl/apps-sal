@@ -1,4 +1,4 @@
-def merge_arrays(first, second): 
+def merge_arrays(first, second):
     array = sorted(first + second)
     array_num = [0]
     for i in array:
@@ -8,4 +8,3 @@ def merge_arrays(first, second):
             pass
     array_num.remove(0)
     return array_num
-

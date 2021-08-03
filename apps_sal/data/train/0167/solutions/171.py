@@ -1,5 +1,5 @@
 # class Solution:
-#     def superEggDrop(self, K: int, N: int) -> int:    
+#     def superEggDrop(self, K: int, N: int) -> int:
 #         def segment_sum(x,k):
 #             # x is worst case, k is number of eggs available
 #             # returns max N for worst case x, eggs k
@@ -17,7 +17,7 @@
 #         drops = 0                           # the number of eggs dropped
 #         floors = [0 for _ in range(K + 1)]  # floors[i] is the number of floors that can be checked with i eggs
 
-#         while floors[K] < N:                # until we can reach N floors with K eggs 
+#         while floors[K] < N:                # until we can reach N floors with K eggs
 
 #             for eggs in range(K, 0, -1):
 #                 floors[eggs] += 1 + floors[eggs - 1]
@@ -68,24 +68,27 @@
 #         return n
 #     return sum(e(k-1, j)+1 for j in range(n))
 from math import floor, log2
+
+
 class Solution:
     def superEggDrop(self, k: int, n: int) -> int:
-        best_case = floor(log2(n)+1)
+        best_case = floor(log2(n) + 1)
         if k >= best_case:
             return best_case
-        def fast_sum(k,l):
+
+        def fast_sum(k, l):
             s = 0
             c = 1
             for i in range(k):
-                c *= (l-i)/(i+1)
+                c *= (l - i) / (i + 1)
                 s += c
             return s
         if k == 0:
             return n
         a, b = 1, n
         while a < b:
-            c = (a+b)//2
-            if fast_sum(k,c) < n:
+            c = (a + b) // 2
+            if fast_sum(k, c) < n:
                 a = c + 1
             else:
                 b = c

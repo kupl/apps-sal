@@ -1,3 +1,3 @@
-def main (verb, noun):
+def main(verb, noun):
     sum = verb + noun
     return sum

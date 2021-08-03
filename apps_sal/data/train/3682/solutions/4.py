@@ -8,4 +8,3 @@ def string_constructing(a, s):
             y = a[i % len(a)]
         i += 1
     return r + i // len(a) + -i % len(a) - (i % len(a) == 0)
-

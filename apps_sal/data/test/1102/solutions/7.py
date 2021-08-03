@@ -1,6 +1,7 @@
 def in_bounds(x, n):
     return 0 <= x < n
 
+
 n, a = list(map(int, input().split()))
 t = list(map(int, input().split()))
 
@@ -18,4 +19,3 @@ for d in range(1, n):
         ans += 1
 
 print(ans)
-

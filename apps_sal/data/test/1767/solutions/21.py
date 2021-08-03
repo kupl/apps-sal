@@ -13,4 +13,3 @@ for l in range(n):
         maxi = max(maxi, s_a + s_b)
 
 print(maxi)
-

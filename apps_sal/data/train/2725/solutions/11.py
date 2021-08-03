@@ -1,1 +1,1 @@
-gimme = lambda a: a.index(sorted(a)[1])
+def gimme(a): return a.index(sorted(a)[1])

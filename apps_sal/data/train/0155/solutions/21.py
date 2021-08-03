@@ -3,12 +3,13 @@ class Solution:
         result = 1
         N = len(arr)
         cache = {}
-        def helper(i : int) -> int:
+
+        def helper(i: int) -> int:
             if i in cache:
                 return cache[i]
             result = 1
             if ((i == 0 or arr[i] <= arr[i - 1]) and
-                (i == N - 1 or arr[i] <= arr[i + 1])):
+                    (i == N - 1 or arr[i] <= arr[i + 1])):
                 cache[i] = result
                 return cache[i]
             j = i - 1
@@ -23,7 +24,7 @@ class Solution:
                 j = j + 1
             cache[i] = result
             return cache[i]
-        
+
         for i in range(N):
             cur = helper(i)
             result = max(cur, result)

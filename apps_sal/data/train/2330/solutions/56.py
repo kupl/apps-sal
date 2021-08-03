@@ -12,7 +12,7 @@ from operator import add, mul, sub
 
 sys.setrecursionlimit(100000)
 input = sys.stdin.readline
-INF = 2**62-1
+INF = 2**62 - 1
 
 
 def read_int():
@@ -60,7 +60,7 @@ def mt(f):
 @mt
 def slv(S):
     N = len(S)
-    if S[N-1] == '1':
+    if S[N - 1] == '1':
         print(-1)
         return -1
 
@@ -68,19 +68,18 @@ def slv(S):
         print(-1)
         return -1
 
-    if S[N-2] != '1':
+    if S[N - 2] != '1':
         print(-1)
         return -1
 
-
-    for i in range(N//2):
-        if S[i] != S[N-2-i]:
+    for i in range(N // 2):
+        if S[i] != S[N - 2 - i]:
             print(-1)
             return -1
 
     p = [N]
     for i in range(N, 0, -1):
-        if S[i-1] == '1':
+        if S[i - 1] == '1':
             p.append(i)
         else:
             p.append(p[-1])
@@ -100,5 +99,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

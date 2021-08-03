@@ -1,6 +1,6 @@
 def main():
     N, A, B, C = list(map(int, input().split()))
-    S = [{'AB':(0, 1), 'BC': (1, 2), 'AC': (0, 2)}[input()] for _ in range(N)]
+    S = [{'AB': (0, 1), 'BC': (1, 2), 'AC': (0, 2)}[input()] for _ in range(N)]
     ABC = [A, B, C]
     RR = ['A', 'B', 'C']
     R = []
@@ -18,10 +18,10 @@ def main():
         R.append(RR[s2])
     return True, R
 
+
 a, s = main()
 if not a:
     print('No')
 else:
     print('Yes')
     print(('\n'.join(s)))
-

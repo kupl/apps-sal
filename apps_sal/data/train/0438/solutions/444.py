@@ -6,9 +6,10 @@ class DSU:
         self.size = []
         for i in range(n + 2):
             self.size.append(1)
+
     def union(self, u, v):
         pu = self.find(u)
-        pv  = self.find(v)
+        pv = self.find(v)
         if pu == pv:
             return
         if self.size[pv] > self.size[pu]:
@@ -16,14 +17,17 @@ class DSU:
         #pu is bigger
         self.parent[pv] = pu
         self.size[pu] += self.size[pv]
+
     def find(self, u):
         if self.parent[u] != u:
             self.parent[u] = self.find(self.parent[u])
         return self.parent[u]
+
+
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         current_arr = [-1] * (len(arr) + 2)
-        dsu = DSU(len(arr)+2)
+        dsu = DSU(len(arr) + 2)
         res = -1
         cur_sol = set()
         for i, val in enumerate(arr):
@@ -48,4 +52,3 @@ class Solution:
                     res = i + 1
                 #res = i + 1
         return res
-

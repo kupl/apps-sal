@@ -1,2 +1,2 @@
-def solve(a,b):
+def solve(a, b):
     return list(map(a.count, b))

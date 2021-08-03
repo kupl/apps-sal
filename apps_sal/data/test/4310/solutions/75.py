@@ -1,3 +1,3 @@
-s = list(map(int,input().split()))
+s = list(map(int, input().split()))
 s.sort()
-print(s[2]-s[0])
+print(s[2] - s[0])

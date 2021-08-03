@@ -5,4 +5,3 @@ for i in range(n - 1):
     a[v1] += 1
     a[v2] += 1
 print(a.count(1))
-

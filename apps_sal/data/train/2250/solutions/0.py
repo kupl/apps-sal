@@ -1,4 +1,4 @@
-n, m, k = list(map(int,input().split()))
+n, m, k = list(map(int, input().split()))
 dm, dp = {}, {}
 vis = {}
 sensors = []
@@ -15,13 +15,13 @@ for _ in range(k):
         dp[x + y] = []
     dp[x + y].append((x, y))
     vis[(x, y)] = -1
-    sensors.append((x,y))
+    sensors.append((x, y))
 
 x, y = 0, 0
 time = 0
-move = (1,1)
+move = (1, 1)
 while True:
-    if move == (1,1):
+    if move == (1, 1):
         v = min(n - x, m - y)
         nxt = (x + v, y + v)
         if nxt[0] == n:
@@ -35,7 +35,7 @@ while True:
                     vis[sensor] = time + sensor[0] - x
         time += v
 
-    elif move == (-1,-1):
+    elif move == (-1, -1):
         v = min(x, y)
         nxt = (x - v, y - v)
         if nxt[0] == 0:
@@ -49,7 +49,7 @@ while True:
                     vis[sensor] = time + x - sensor[0]
         time += v
 
-    elif move == (-1,1):
+    elif move == (-1, 1):
         v = min(x, m - y)
         nxt = (x - v, y + v)
         if nxt[0] == 0:
@@ -86,6 +86,5 @@ while True:
     #print('bum', x, y)
 
 for i in range(k):
-    #print(sensors[i])
+    # print(sensors[i])
     print(vis[sensors[i]])
-

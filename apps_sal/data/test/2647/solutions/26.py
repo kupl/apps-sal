@@ -45,4 +45,3 @@ if dist[-1][-1] == -1:
 black = sum([i.count('#') for i in s])
 ans = (H * W - black) - (dist[-1][-1] + 1)
 print(ans)
-

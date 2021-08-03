@@ -11,4 +11,3 @@ for a in A:
     print(t, "", end="")
     t = -t + a * 2
 print()
-

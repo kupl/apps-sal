@@ -4,4 +4,4 @@ def next_item(xs, item):
         if y:
             return x
         if item == x:
-            y = True   
+            y = True

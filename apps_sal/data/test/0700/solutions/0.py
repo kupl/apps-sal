@@ -1,16 +1,18 @@
-3
-
 import copy
+3
 
 
 def rotate90(n, f):
     return [[f[n - j - 1][i] for j in range(n)] for i in range(n)]
 
+
 def fliphor(n, f):
     return [[f[i][n - j - 1] for j in range(n)] for i in range(n)]
 
+
 def flipver(n, f):
     return [[f[n - i - 1][j] for j in range(n)] for i in range(n)]
+
 
 def eq(n, f, g):
     for i in range(n):

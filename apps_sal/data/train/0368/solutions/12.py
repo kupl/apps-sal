@@ -4,13 +4,13 @@ class Solution:
         total = 0
         beneficial = deque()
         negative = []
-        
+
         if satisfaction[0] > 0:
             return calc_satisfaction(satisfaction)
-        
+
         for s in satisfaction:
             if s >= 0:
-                beneficial.append(s) # [0, 2, 5]
+                beneficial.append(s)  # [0, 2, 5]
             else:
                 negative.append(s)  # [-3, -2]
 
@@ -23,13 +23,12 @@ class Solution:
             else:
                 beneficial.popleft()
                 break
-                
+
         return curr_satisfaction
 
-    
+
 def calc_satisfaction(dishes):
     total = 0
-    for i,s in enumerate(dishes):
-        total += (i+1) * s
+    for i, s in enumerate(dishes):
+        total += (i + 1) * s
     return total
-

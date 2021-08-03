@@ -5,4 +5,3 @@ def make_upper_case(s):
 
 
 print((make_upper_case("hello")))
-

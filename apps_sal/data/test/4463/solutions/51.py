@@ -5,6 +5,6 @@ s.sort(reverse=False)
 t.sort(reverse=True)
 
 if "".join(s) < "".join(t):
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
+    print("No")

@@ -24,4 +24,3 @@ while H > 0:
         ans += math.ceil(H / a_max)
         break
 print(ans)
-

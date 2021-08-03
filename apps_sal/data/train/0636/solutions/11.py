@@ -8,7 +8,7 @@ array.sort()
 sums = [0 for i in range(T)]
 total = 0
 for i in range(N):
-    for forward in range(i+1, N):
+    for forward in range(i + 1, N):
         sm = array[i] + array[forward]
         if sm < T:
             total += sums[T - sm]

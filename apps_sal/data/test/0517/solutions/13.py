@@ -18,4 +18,3 @@ else:
         start = 2
     for ver in range(prev + 1, prev + 1 + (n - prev)):
         print('{} {}'.format(start, ver))
-

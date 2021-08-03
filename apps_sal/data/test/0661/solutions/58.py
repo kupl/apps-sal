@@ -29,4 +29,5 @@ def __starting_point():
     ans = xor_matching(M, K)
     print((*ans))
 
+
 __starting_point()

@@ -50,4 +50,3 @@ while len(A) and (A[0] > last or A[-1] > last):
             ans += 'R'
 print(len(ans))
 print(ans)
-

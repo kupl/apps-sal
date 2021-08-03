@@ -12,9 +12,12 @@ def main():
             a.append(i + 1)
     print(len(a))
     for i in range(len(a) - 1):
-        print(a[i], end = ' ')
+        print(a[i], end=' ')
     print(a[-1])
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

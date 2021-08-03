@@ -6,4 +6,3 @@ for i in range(k):
     for j in tmp:
         a[j - 1] = 0
 print((sum(a)))
-

@@ -1,9 +1,9 @@
+import bisect
 N, M, X = map(int, input().split())
 A = list(map(int, input().split()))
 
 A.sort()
 
-import bisect
 idx = bisect.bisect(A, X)
 
 ans_r = len(A[idx:])

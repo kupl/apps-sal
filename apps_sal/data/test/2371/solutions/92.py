@@ -8,13 +8,11 @@ if n >= 2:
     # yがaiをとったときにxが最適に行動した時のスコア
     dp_y = [abs(a[-1] - a[i]) for i in range(n)]
 
-    for i in reversed(list(range(n-1))):
+    for i in reversed(list(range(n - 1))):
         for j in range(i):
             dp_x[j] = min(dp_x[j], dp_y[i])
             dp_y[j] = max(dp_y[j], dp_x[i])
 
-    print((max(abs(a[-1]-w), max(dp_x))))
+    print((max(abs(a[-1] - w), max(dp_x))))
 else:
-    print((abs(a[-1]-w)))
-
-
+    print((abs(a[-1] - w)))

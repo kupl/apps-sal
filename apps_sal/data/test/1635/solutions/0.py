@@ -26,6 +26,6 @@ for n, i in enumerate(ar):
     mp[i] = n
 mini = ar[0]
 for i in mp:
-    if mp[mini]>mp[i]:
-        mini=i
+    if mp[mini] > mp[i]:
+        mini = i
 print(mini)

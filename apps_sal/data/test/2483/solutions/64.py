@@ -18,4 +18,3 @@ for c in range(C):
 
 table_sum = [sum(table[c][i] for c in range(C)) for i in range(MAX)]
 print((max(itertools.accumulate(table_sum))))
-

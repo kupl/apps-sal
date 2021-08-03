@@ -1,6 +1,6 @@
 
 def convergents_of_e(n):
-    
+
     n0, n1, L = 1, 2, n
     for i in range(2, n + 1):
         if i % 3 != 0:

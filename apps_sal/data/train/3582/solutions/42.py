@@ -1,4 +1,6 @@
 import re
+
+
 def is_digit(n):
     if len(n) > 1:
         return False
@@ -10,5 +12,3 @@ def is_digit(n):
             return False
     else:
         return False
-    
-

@@ -13,4 +13,3 @@ ks = sorted(list(pos.keys()), key=lambda k: pos[k])
 
 print(len(ks))
 print(" ".join(map(str, ks)))
-

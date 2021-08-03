@@ -45,4 +45,3 @@ for _ in range(m):
     links[a].remove(b)
     links[b].remove(a)
 print((is_bipartite(n, links)))
-

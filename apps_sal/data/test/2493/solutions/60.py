@@ -1,3 +1,4 @@
+from collections import Counter
 mod = 10 ** 9 + 7
 
 SIZE = 10 ** 5 + 5
@@ -19,9 +20,6 @@ def nCr(n, r):
     return fact[n] * (finv[r] * finv[n - r] % mod) % mod
 
 
-from collections import Counter
-
-
 n = int(input())
 A = list(map(int, input().split()))
 counterA = Counter(A)
@@ -38,9 +36,7 @@ for i, a in enumerate(A):
 
 first, second, *_ = duplicate_pos
 
-for k in range(1, n+2):
-    base = nCr(n+1, k)
-    duplicate_pattern = nCr(first + n-second, k-1)
+for k in range(1, n + 2):
+    base = nCr(n + 1, k)
+    duplicate_pattern = nCr(first + n - second, k - 1)
     print(((base - duplicate_pattern) % mod))
-
-

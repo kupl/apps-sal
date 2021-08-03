@@ -1,7 +1,6 @@
 from sys import stdin, stdout
 
 
-
 k = int(stdin.readline())
 
 n, m = list(map(int, stdin.readline().split()))
@@ -11,12 +10,9 @@ left, right, down, up = [], [], [], []
 coordinates = []
 
 
-
 for i in range(k):
 
     x1, y1, x2, y2 = list(map(int, stdin.readline().split()))
-
-    
 
     if x1 == x2:
 
@@ -38,8 +34,6 @@ for i in range(k):
 
             coordinates.append((x2, y2, x1, y1, i))
 
-    
-
     left.append(coordinates[-1])
 
     right.append(coordinates[-1])
@@ -49,11 +43,9 @@ for i in range(k):
     down.append(coordinates[-1])
 
 
+left.sort(key=lambda x: (x[0], x[2]))
 
-left.sort(key = lambda x: (x[0], x[2]))
-
-down.sort(key = lambda x: (x[1], x[3]))
-
+down.sort(key=lambda x: (x[1], x[3]))
 
 
 challengers = [[], [], [], []]
@@ -63,20 +55,17 @@ cntl, cntr, cntd, cntu = list(map(int, stdin.readline().split()))
 label = 1
 
 
-
 if cntl or not cntl:
 
     for i in range(cntl, -1, -1):
 
         if (left[i][0], left[i][2]) == (left[cntl][0], left[cntl][2]):
 
-            challengers[0].append(left[i][-1])  
+            challengers[0].append(left[i][-1])
 
         else:
 
             break
-
-        
 
     for i in range(cntl + 1, k):
 
@@ -84,16 +73,13 @@ if cntl or not cntl:
 
             label = 0
 
-        
-
         if (left[i][0], left[i][2]) == (left[cntl][0], left[cntl][2]):
 
-            challengers[0].append(left[i][-1])  
+            challengers[0].append(left[i][-1])
 
         else:
 
             break
-
 
 
 if cntr or not cntr:
@@ -108,15 +94,11 @@ if cntr or not cntr:
 
             break
 
-    
-
     for i in range(k - 2 - cntr, -1, -1):
 
         if (left[i][0], left[i][2]) == (left[k - 1 - cntr][0], left[k - 1 - cntr][2]) and left[i][2] > left[i][0]:
 
             label = 0
-
-        
 
         if (left[i][0], left[i][2]) == (left[k - 1 - cntr][0], left[k - 1 - cntr][2]):
 
@@ -127,9 +109,7 @@ if cntr or not cntr:
             break
 
 
-
 #!!!!!!!!!!!
-
 
 
 if cntd or not cntd:
@@ -144,25 +124,20 @@ if cntd or not cntd:
 
             break
 
-        
-
     for i in range(cntd + 1, k):
 
         if (down[i][1], down[i][3]) == (down[cntd][1], down[cntd][3]) and down[i][3] > down[i][1]:
 
             label = 0
 
-            
-
         if (down[i][1], down[i][3]) == (down[cntd][1], down[cntd][3]):
 
-            challengers[2].append(down[i][-1])  
+            challengers[2].append(down[i][-1])
 
         else:
 
             break
 
-        
 
 if cntu or not cntu:
 
@@ -176,15 +151,11 @@ if cntu or not cntu:
 
             break
 
-    
-
     for i in range(k - 2 - cntu, -1, -1):
 
         if (down[i][1], down[i][3]) == (down[k - 1 - cntu][1], down[k - 1 - cntu][3]) and down[i][3] > down[i][1]:
 
             label = 0
-
-        
 
         if (down[i][1], down[i][3]) == (down[k - 1 - cntu][1], down[k - 1 - cntu][3]):
 
@@ -195,9 +166,7 @@ if cntu or not cntu:
             break
 
 
-
 ans = set(challengers[0]) & set(challengers[1]) & set(challengers[2]) & set(challengers[3])
-
 
 
 if not len(ans) or not label:
@@ -209,6 +178,4 @@ else:
     stdout.write(str(list(ans)[0] + 1))
 
 
-
 # Made By Mostafa_Khaled
-

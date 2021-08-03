@@ -29,4 +29,3 @@ for X in ans_candidates:
             break
 
 print(ans)
-

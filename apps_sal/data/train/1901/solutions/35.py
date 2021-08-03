@@ -1,8 +1,10 @@
 DIRECTIONS = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+
+
 class Solution:
     def largestIsland(self, grid: List[List[int]]) -> int:
         N = len(grid)
-        
+
         def move(x, y):
             ans = []
             for mv_x, mv_y in DIRECTIONS:
@@ -11,7 +13,7 @@ class Solution:
                 if 0 <= x_ < N and 0 <= y_ < N:
                     ans.append((x_, y_))
             return ans
-        
+
         # return area of the island
         def dfs(x, y, idx):
             ans = 1
@@ -20,7 +22,7 @@ class Solution:
                 if grid[i][j] == 1:
                     ans += dfs(i, j, idx)
             return ans
-        
+
         idx = 2
         areas = {0: 0}
         for i in range(N):
@@ -28,7 +30,7 @@ class Solution:
                 if grid[i][j] == 1:
                     areas[idx] = dfs(i, j, idx)
                     idx += 1
-        
+
         ans = max(areas.values())
         for i in range(N):
             for j in range(N):

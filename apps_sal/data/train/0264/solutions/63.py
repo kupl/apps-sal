@@ -7,30 +7,25 @@ class Solution:
         self.len = 0
         self.backtrack(0)
         return self.mlen
-    
-    def backtrack(self,pos):
+
+    def backtrack(self, pos):
         # print(self.tmp,self.len)
         if pos == len(self.arr):
-            
+
             if self.len > self.mlen:
                 # print(self.len,self.mlen)
                 self.mlen = self.len
             return
-        self.backtrack(pos+1)
+        self.backtrack(pos + 1)
         lb = len(self.tmp)
         self.tmp = self.tmp + list(self.arr[pos])
         l = len(self.arr[pos])
         if l == len(self.arr[pos]) and lb + l == len(set(self.tmp)):
-            
-            self.len+=l
-            self.backtrack(pos+1)
-            self.len-=l
-        
-                
+
+            self.len += l
+            self.backtrack(pos + 1)
+            self.len -= l
+
         for i in range(l):
             self.tmp.pop()
         # self.tmp = self.tmp[:-l]
-        
-        
-        
-

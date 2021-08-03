@@ -1,3 +1,3 @@
-a,b,t = map(int, input().split())
+a, b, t = map(int, input().split())
 cnt = t // a
-print(cnt*b)
+print(cnt * b)

@@ -2,7 +2,7 @@ class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         dic = {}
         out = []
-        
+
         for word in B:
             dicWord = {}
             for letter in word:
@@ -15,7 +15,7 @@ class Solution:
                     dic[letter] = dicWord[letter]
                 else:
                     dic[letter] = max(dic[letter], dicWord[letter])
-                    
+
         for word in A:
             dicWord = {}
             universal = True
@@ -24,20 +24,18 @@ class Solution:
                     dicWord[letter] += 1
                 else:
                     dicWord[letter] = 1
-            
+
             for letter in dic:
                 if not letter in dicWord:
                     universal = False
                     break
                 if dic[letter] > dicWord[letter]:
                     universal = False
-                    break                    
-                        
+                    break
+
             if not universal:
                 continue
             else:
                 out += [word]
-        
-        return out
-            
 
+        return out

@@ -1,19 +1,21 @@
 import sys
 
 sys.setrecursionlimit(10 ** 6)
-int1 = lambda x: int(x) - 1
-p2D = lambda x: print(*x, sep="\n")
+def int1(x): return int(x) - 1
+def p2D(x): return print(*x, sep="\n")
 def II(): return int(sys.stdin.readline())
 def MI(): return map(int, sys.stdin.readline().split())
 def MI1(): return map(int1, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
 
+
 def main():
     def dfs(u=0, pu=-1):
         res = 1
         for cu in to[u]:
-            if cu == pu: continue
+            if cu == pu:
+                continue
             ret = dfs(cu, u)
             children_size[u].append(ret)
             res += ret
@@ -26,7 +28,7 @@ def main():
         a, b = MI1()
         to[a].append(b)
         to[b].append(a)
-    #print(to)
+    # print(to)
 
     # 1/2をmodで表して、累乗を事前計算
     half = pow(2, md - 2, md)
@@ -47,9 +49,11 @@ def main():
     ans = 0
     noblack = exp_half[n - 1]
     for cs in children_size:
-        if not cs: continue
+        if not cs:
+            continue
         sum_cs = sum(cs)
-        if sum_cs != n - 1: cs.append(n - 1 - sum_cs)
+        if sum_cs != n - 1:
+            cs.append(n - 1 - sum_cs)
         onlyone = 0
         for child_size in cs:
             onlyone += (1 - exp_half[child_size]) * exp_half[n - 1 - child_size]
@@ -57,5 +61,5 @@ def main():
         ans %= md
     print(ans)
 
-main()
 
+main()

@@ -1,7 +1,7 @@
-def wtf(i, k , n):
+def wtf(i, k, n):
     if i >= n - k:
         return i
-    elif (n-k) % 2 == 0:
+    elif (n - k) % 2 == 0:
         if i % 2 == 0:
             return i + 1
         elif i == 1:
@@ -15,14 +15,17 @@ def wtf(i, k , n):
             return i + 1
 
 
-def main ():
+def main():
     n, k = list(map(int, input().split()))
     if n == k:
-        print (-1)
+        print(-1)
     else:
-        permutation = [str(wtf(i, k, n+1)) for i in range(1, n+1)]
-        print (" ".join(permutation))
+        permutation = [str(wtf(i, k, n + 1)) for i in range(1, n + 1)]
+        print(" ".join(permutation))
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

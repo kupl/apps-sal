@@ -1,5 +1,7 @@
 import math
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 ax, ay, bx, by, tx, ty = R()
 n = int(input())
 dp = [[0] * (n + 1) for i in range(4)]

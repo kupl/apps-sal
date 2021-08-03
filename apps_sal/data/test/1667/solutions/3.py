@@ -10,9 +10,11 @@ maxLocations = 0
 intervals = [(i, i) for i in range(len(aa))]
 lengths = {}
 
+
 def incCount(val):
     nonlocal lengths
     lengths[val] = lengths.get(val, 0) + 1
+
 
 def decCount(val):
     nonlocal lengths
@@ -21,6 +23,7 @@ def decCount(val):
     else:
         lengths[val] -= 1
 
+
 def mergeIntervals(a, b):
     return (min(a[0], b[0]), max(a[1], b[1]))
 
@@ -28,7 +31,7 @@ def mergeIntervals(a, b):
 for v, i in appear:
     if v == BigNum:
         continue
-    
+
     inter = intervals[i]
     if aa[i - 1] < aa[i]:
         li = intervals[i - 1]
@@ -51,4 +54,3 @@ for v, i in appear:
         #print(v + 1, count)
 
 print(ans)
-

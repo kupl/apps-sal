@@ -1,5 +1,6 @@
 3
 
+
 def check_l(a, l, r):
     d = 0
     last = 0
@@ -8,6 +9,7 @@ def check_l(a, l, r):
         l += 1
         d += 1
     return d
+
 
 def check_r(a, l, r):
     d = 0
@@ -18,6 +20,7 @@ def check_r(a, l, r):
         d += 1
     return d
 
+
 def main():
     # skip N
     input()
@@ -26,7 +29,7 @@ def main():
 
     l, r = 0, n - 1
     res = []
-    
+
     last = 0
     picked = True
 
@@ -40,7 +43,7 @@ def main():
             elif a[l] == a[r]:
                 dl = check_l(a, l, r)
                 dr = check_r(a, l, r)
-                
+
                 if dl > dr:
                     res.extend(['L'] * dl)
                     last = a[l + dl - 1]
@@ -55,25 +58,27 @@ def main():
                 r -= 1
             picked = True
             continue
-        
+
         if last < a[l]:
             last = a[l]
             res.append('L')
             l += 1
             picked = True
             continue
-        
+
         if last < a[r]:
             last = a[r]
             res.append('R')
             r -= 1
             picked = True
             continue
-    
+
     print(len(res))
     print("".join(res))
-        
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

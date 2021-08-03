@@ -8,6 +8,5 @@ for i in range(n):
     for j in range(i, n):
         fa |= a[j]
         fb |= b[j]
-    r = max(r, fa+fb)
+    r = max(r, fa + fb)
 print(r)
-

@@ -10,4 +10,3 @@ ans += time_in_row[s]
 if n % 2 == 1:
     ans += 7
 print(ans)
-

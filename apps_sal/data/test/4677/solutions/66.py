@@ -12,4 +12,3 @@ for c in s:
         stack.extend(c)
 for c in stack:
     print(c, end="")
-

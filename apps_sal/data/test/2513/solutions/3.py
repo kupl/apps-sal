@@ -3,9 +3,9 @@ n = int(input())
 s = input()
 
 for ans in [["S", "S"], ["S", "W"], ["W", "S"], ["W", "W"]]:
-    for i in range(n-1):
-        if s[(i+1)] == "o":
-            if ans[i+1] == "S":
+    for i in range(n - 1):
+        if s[(i + 1)] == "o":
+            if ans[i + 1] == "S":
                 if ans[i] == "S":
                     ans.append("S")
                 else:
@@ -15,8 +15,8 @@ for ans in [["S", "S"], ["S", "W"], ["W", "S"], ["W", "W"]]:
                     ans.append("W")
                 else:
                     ans.append("S")
-        if s[(i+1)] == "x":
-            if ans[i+1] == "S":
+        if s[(i + 1)] == "x":
+            if ans[i + 1] == "S":
                 if ans[i] == "S":
                     ans.append("W")
                 else:
@@ -48,4 +48,3 @@ for ans in [["S", "S"], ["S", "W"], ["W", "S"], ["W", "W"]]:
             print(("".join(ans)))
             return
 print((-1))
-

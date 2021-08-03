@@ -13,4 +13,3 @@ for i in range(n):
             distressed += 1
 
 print(x, distressed)
-

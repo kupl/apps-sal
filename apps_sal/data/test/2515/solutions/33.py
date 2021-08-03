@@ -19,26 +19,25 @@ def is_prime(n):
 a = []
 b = []
 c = []
-for i in range(0, 10**5+5):
+for i in range(0, 10**5 + 5):
     a_tmp = is_prime(i)
 
     if i % 2 == 0:
         b_tmp = False
     else:
-        b_tmp = is_prime((i+1)//2)
+        b_tmp = is_prime((i + 1) // 2)
 
     a.append(a_tmp)
     b.append(b_tmp)
-    c.append(a_tmp*b_tmp)
+    c.append(a_tmp * b_tmp)
 
 c_sum = [0]
 for i in range(1, len(c)):
-    c_sum.append(c[i]+c_sum[-1])
+    c_sum.append(c[i] + c_sum[-1])
 # print(c)
 # print(c_sum)
 
 
 for i in range(q):
     l, r = list(map(int, input().split()))
-    print((c_sum[r]-c_sum[l-1]))
-
+    print((c_sum[r] - c_sum[l - 1]))

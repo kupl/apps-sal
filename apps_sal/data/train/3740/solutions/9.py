@@ -1,5 +1,5 @@
 def sort_time(arr):
-    #def to_minutes(t):
+    # def to_minutes(t):
     #    hh,mm = t.split(':')
     #    return int(hh)*60+int(mm)
     arr = arr[:]
@@ -12,12 +12,10 @@ def sort_time(arr):
             break
         next = None
         for t in arr:
-            if result[-1][1]<=t[0]:
-                if next is None or next[0]>t[0]:
+            if result[-1][1] <= t[0]:
+                if next is None or next[0] > t[0]:
                     next = t
         if next is None:
             next = min(arr)
-            
-                
-    return result
 
+    return result

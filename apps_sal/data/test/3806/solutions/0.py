@@ -1,12 +1,14 @@
 import math
+
+
 def dist(x, y, x1, y1, x2, y2):
-    a = x-x1
-    b = y-y1
-    c = x2-x1
-    d = y2-y1
-    dot = a*c+b*d
-    lensq = c*c+d*d
-    param=-1
+    a = x - x1
+    b = y - y1
+    c = x2 - x1
+    d = y2 - y1
+    dot = a * c + b * d
+    lensq = c * c + d * d
+    param = -1
     if lensq != 0:
         param = dot / lensq
     if param < 0:
@@ -21,10 +23,13 @@ def dist(x, y, x1, y1, x2, y2):
 
     dx = x - xx
     dy = y - yy
-    return (dx*dx+dy*dy)**0.5
+    return (dx * dx + dy * dy)**0.5
+
+
 def dist2(x, y):
-    return ((x[0]-y[0])**2+(x[1]-y[1])**2)**0.5
-import math
+    return ((x[0] - y[0])**2 + (x[1] - y[1])**2)**0.5
+
+
 maxx = -1
 minn = 100000000000000000
 pts = []
@@ -38,7 +43,6 @@ for i in pts:
     k.append(dist2(i, [b, c]))
 pts.append(pts[0])
 for i in range(a):
-    k.append(dist(b, c, pts[i][0], pts[i][1], pts[i+1][0], pts[i+1][1]))
+    k.append(dist(b, c, pts[i][0], pts[i][1], pts[i + 1][0], pts[i + 1][1]))
 
-print((max(k)**2-min(k)**2)*math.pi)
-
+print((max(k)**2 - min(k)**2) * math.pi)

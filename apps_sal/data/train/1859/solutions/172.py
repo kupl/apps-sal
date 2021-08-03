@@ -11,7 +11,7 @@ class Solution:
                     if i == 0 or j == 0:
                         ret += 1
                     else:
-                        min_side = min(matrix[i-1][j-1], matrix[i-1][j], matrix[i][j-1]) + 1
+                        min_side = min(matrix[i - 1][j - 1], matrix[i - 1][j], matrix[i][j - 1]) + 1
                         matrix[i][j] = min_side
                         ret += min_side
         return ret

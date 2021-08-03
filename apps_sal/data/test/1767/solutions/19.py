@@ -7,6 +7,5 @@ tmp1 = tmp2 = 0
 for i in range(n):
     tmp1 |= a[i]
     tmp2 |= b[i]
-    
-print(tmp1 + tmp2)
 
+print(tmp1 + tmp2)

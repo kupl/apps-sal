@@ -3,7 +3,4 @@ def abacaba(k):
     s = ''
     for i in range(26):
         s = s + alph[i] + s
-    return s[k-1]
-    
-         
-
+    return s[k - 1]

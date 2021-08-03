@@ -2,7 +2,8 @@ class Solution:
     def minDifficulty(self, A: List[int], d: int) -> int:
         n = len(A)
         dp, dp2 = [float('inf')] * n, [0] * n
-        if n < d: return -1
+        if n < d:
+            return -1
         for d in range(d):
             stack = []
             for i in range(d, n):

@@ -1,5 +1,6 @@
 n = int(input())
 
+
 def check(k):
     a, b = 0, 0
     i = n
@@ -13,6 +14,7 @@ def check(k):
         i -= t
     # dbvar(k, a, b)
     return a >= b
+
 
 left = 1
 right = n

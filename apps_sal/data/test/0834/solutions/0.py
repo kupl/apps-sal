@@ -3,13 +3,16 @@ f = list(map(int, input().split()))
 for i in range(n):
     f[i] -= 1
 
+
 def gcd(a, b):
     while (a != 0 and b != 0):
         a, b = b, a % b
     return a + b
 
+
 def lcm(a, b):
     return a * b // gcd(a, b)
+
 
 ans = 1
 minn = 0
@@ -30,5 +33,4 @@ for i in range(n):
     minn = max(minn, pr)
     ans = lcm(ans, st - pr)
 
-print(((max(0, minn - 1))// ans + 1) * ans)
-
+print(((max(0, minn - 1)) // ans + 1) * ans)

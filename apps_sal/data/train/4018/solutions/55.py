@@ -3,4 +3,3 @@ def isDigit(n):
         return type(float(n)) == float
     except:
         return False
-

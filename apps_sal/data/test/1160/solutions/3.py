@@ -45,74 +45,74 @@ if len(L[0]) <= T[0]:
 else:
     print("NO")
     ok = 0
-    
-a = max(0,len(D[0]) - T[0])
-for i in range(min(len(D[0]),T[0])):
+
+a = max(0, len(D[0]) - T[0])
+for i in range(min(len(D[0]), T[0])):
     R[D[0][i]] = "S"
 
 # M
-if a+len(L[1]) <= T[1]:
-    for i in range(len(D[0])-a,len(D[0])):
+if a + len(L[1]) <= T[1]:
+    for i in range(len(D[0]) - a, len(D[0])):
         R[D[0][i]] = "M"
     for x in L[1]:
         R[x] = "M"
-    T[1] -= len(L[1])+a
+    T[1] -= len(L[1]) + a
 else:
     print("NO")
     ok = 0
-    
-a = max(0,len(D[1]) - T[1])
-for i in range(min(len(D[1]),T[1])):
+
+a = max(0, len(D[1]) - T[1])
+for i in range(min(len(D[1]), T[1])):
     R[D[1][i]] = "M"
 
 # L
-if a+len(L[2]) <= T[2]:
-    for i in range(len(D[1])-a,len(D[1])):
+if a + len(L[2]) <= T[2]:
+    for i in range(len(D[1]) - a, len(D[1])):
         R[D[1][i]] = "L"
     for x in L[2]:
         R[x] = "L"
-    T[2] -= len(L[2])+a
+    T[2] -= len(L[2]) + a
 else:
     print("NO")
     ok = 0
-    
-a = max(0,len(D[2]) - T[2])
-for i in range(min(len(D[2]),T[2])):
+
+a = max(0, len(D[2]) - T[2])
+for i in range(min(len(D[2]), T[2])):
     R[D[2][i]] = "L"
 
 # XL
-if a+len(L[3]) <= T[3]:
-    for i in range(len(D[2])-a,len(D[2])):
+if a + len(L[3]) <= T[3]:
+    for i in range(len(D[2]) - a, len(D[2])):
         R[D[2][i]] = "XL"
     for x in L[3]:
         R[x] = "XL"
-    T[3] -= len(L[3])+a
+    T[3] -= len(L[3]) + a
 else:
     print("NO")
     ok = 0
-    
-a = max(0,len(D[3]) - T[3])
-for i in range(min(len(D[3]),T[3])):
+
+a = max(0, len(D[3]) - T[3])
+for i in range(min(len(D[3]), T[3])):
     R[D[3][i]] = "XL"
 
 # XXL
-if a+len(L[4]) <= T[4]:
-    for i in range(len(D[3])-a,len(D[3])):
+if a + len(L[4]) <= T[4]:
+    for i in range(len(D[3]) - a, len(D[3])):
         R[D[3][i]] = "XXL"
     for x in L[4]:
         R[x] = "XXL"
-    T[4] -= len(L[4])+a
+    T[4] -= len(L[4]) + a
 else:
     print("NO")
     ok = 0
-    
-a = max(0,len(D[4]) - T[4])
-for i in range(min(len(D[4]),T[4])):
+
+a = max(0, len(D[4]) - T[4])
+for i in range(min(len(D[4]), T[4])):
     R[D[4][i]] = "XXL"
 
 # XXXL
-if a+len(L[5]) <= T[5]:
-    for i in range(len(D[4])-a,len(D[4])):
+if a + len(L[5]) <= T[5]:
+    for i in range(len(D[4]) - a, len(D[4])):
         R[D[4][i]] = "XXXL"
     for x in L[5]:
         R[x] = "XXXL"
@@ -124,5 +124,3 @@ if ok:
     print("YES")
     for i in range(n):
         print(R[i])
-
-

@@ -28,4 +28,6 @@ def solve():
             l.append('1')
 
     print(''.join(reversed(l)))
+
+
 solve()

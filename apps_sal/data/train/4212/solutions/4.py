@@ -1,5 +1,6 @@
 from itertools import chain
 
+
 def unite_unique(*lists):
     cache = set()
     result = list()

@@ -24,4 +24,3 @@ while q:
             q.append(v)
 
 print(*coler, sep="\n")
-

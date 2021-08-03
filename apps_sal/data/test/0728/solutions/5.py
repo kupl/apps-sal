@@ -4,6 +4,7 @@ def check(m, a):
             return True
     return False
 
+
 n = int(input())
 a = list(map(int, input().split()))
 ms = a[0]
@@ -14,4 +15,3 @@ while check(a[0], a):
     a[0] += 1
     ans += 1
 print(ans)
-

@@ -12,4 +12,6 @@ def main():
         g += 1
     print(ret)
     return 0
+
+
 main()

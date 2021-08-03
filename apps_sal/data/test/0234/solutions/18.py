@@ -2,7 +2,7 @@ import sys
 
 n, m = map(int, input().split())
 l1 = [list(input()) for i in range(n)]
-l2 = [[0]  * m for i in range(n)]
+l2 = [[0] * m for i in range(n)]
 dy = [1, 1, 1, 0, -1, -1, -1, 0]
 dx = [-1, 0, 1, 1, 1, 0, -1, -1]
 for i in range(n):

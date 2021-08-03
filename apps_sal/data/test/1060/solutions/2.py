@@ -18,4 +18,5 @@ def __starting_point():
     result = clique_in_the_divisibility_graph(n, a)
     print(result)
 
+
 __starting_point()

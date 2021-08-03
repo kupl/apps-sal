@@ -1,11 +1,11 @@
 def rec(s, l, arr, current):
     for i in range(len(s)):
         current.append(s[i])
-        if len(current)==l:
+        if len(current) == l:
             arr.append(''.join(current))
-        rec(s[i+1:],l,arr,current)
-        current.pop(len(current)-1)
-        
+        rec(s[i + 1:], l, arr, current)
+        current.pop(len(current) - 1)
+
 
 class CombinationIterator:
 
@@ -15,15 +15,15 @@ class CombinationIterator:
         self.index = 0
         self.arr = []
         c = []
-        rec(characters, combinationLength, self.arr,c)
+        rec(characters, combinationLength, self.arr, c)
 
     def __next__(self) -> str:
         ret = self.arr[self.index]
-        self.index+=1
+        self.index += 1
         return ret
 
     def hasNext(self) -> bool:
-        if self.index<len(self.arr):
+        if self.index < len(self.arr):
             return True
         return False
 
@@ -32,4 +32,3 @@ class CombinationIterator:
 # obj = CombinationIterator(characters, combinationLength)
 # param_1 = obj.next()
 # param_2 = obj.hasNext()
-

@@ -1,10 +1,10 @@
 n = int(input())
-ai = list(map(int,input().split()))
+ai = list(map(int, input().split()))
 ans = 0
 ans2 = ""
 num = 0
 left = 0
-right = n-1
+right = n - 1
 flag = 0
 for i in range(n):
     if ai[left] <= num:
@@ -15,7 +15,7 @@ for i in range(n):
         right -= 1
         ans2 += "R"
         continue
-        
+
     if ai[right] <= num:
         if ai[left] <= num:
             break
@@ -70,4 +70,3 @@ if flag == 1:
         ans2 += "R" * temp2
 print(ans)
 print(ans2)
-

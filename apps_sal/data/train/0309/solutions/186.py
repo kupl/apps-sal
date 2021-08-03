@@ -12,4 +12,3 @@ class Solution:
                 else:
                     dp[(j, d)] = 2
         return max(dp.values())
-

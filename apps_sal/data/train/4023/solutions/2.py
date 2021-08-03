@@ -1,14 +1,14 @@
 def high(x):
-    scoreboard=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    scoreboard = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     heck = x.split()
-    score=0
-    score_final=0
-    big_word=[]
+    score = 0
+    score_final = 0
+    big_word = []
     for each in heck:
         print(each)
         for every in each:
             if every in scoreboard:
-                score= score + scoreboard.index(every) + 1
+                score = score + scoreboard.index(every) + 1
                 print(score)
         if score > score_final:
             score_final = score
@@ -18,6 +18,5 @@ def high(x):
             score = 0
     return big_word
     # Code here 54
-    
-    #for every in word: if every in scoreboard, score + every.index()
 
+    # for every in word: if every in scoreboard, score + every.index()

@@ -3,4 +3,3 @@ def opposite(number):
         return float("-" + str(number))
     else:
         return number - number - number
-

@@ -5,5 +5,5 @@ def expression_matter(a, b, c):
     o = a * (b + c)
     q = a * b + c
     r = a + b * c
-    
-    return max(s,m,n,o,q,r)
+
+    return max(s, m, n, o, q, r)

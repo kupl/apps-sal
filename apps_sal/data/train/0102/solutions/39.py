@@ -11,4 +11,3 @@ for i in range(t):
         else:
             break
     print(ans)
-

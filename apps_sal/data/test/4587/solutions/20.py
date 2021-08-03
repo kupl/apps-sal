@@ -10,6 +10,7 @@ def bs_left(list, target):
             high = mid
     return low
 
+
 def bs_right(list, target):
     low = 0
     high = len(list)
@@ -20,6 +21,7 @@ def bs_right(list, target):
         else:
             low = mid + 1
     return low
+
 
 n = int(input())
 A = list(map(int, input().split()))
@@ -32,5 +34,3 @@ ans = 0
 for b in B:
     ans += (bs_left(A, b) * (n - bs_right(C, b)))
 print(ans)
-
-

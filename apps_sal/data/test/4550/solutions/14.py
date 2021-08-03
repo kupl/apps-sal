@@ -9,4 +9,3 @@ if a + b == c or a + c == b or a == b + c:
     result = 'Yes'
 
 print(result)
-

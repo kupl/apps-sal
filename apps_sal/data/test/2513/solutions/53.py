@@ -1,7 +1,7 @@
 n = int(input())
 s = list(input())
 for i in range(4):
-# 1,2 = 羊,羊 の場合
+    # 1,2 = 羊,羊 の場合
     ans = ['?'] * n
     flg = True
     if i == 0:
@@ -76,53 +76,53 @@ for i in range(4):
             else:
                 ans[2] = 'W'
     if flg:
-        for i in range(2,n-1):
+        for i in range(2, n - 1):
             if ans[i] == 'S':
                 if s[i] == 'o':
-                    if ans[i-1] == 'S':
-                        if ans[i+1] == 'W':
+                    if ans[i - 1] == 'S':
+                        if ans[i + 1] == 'W':
                             flg = False
                         else:
-                            ans[i+1] = 'S'
+                            ans[i + 1] = 'S'
                     else:
-                        if ans[i+1] == 'S':
+                        if ans[i + 1] == 'S':
                             flg = False
                         else:
-                            ans[i+1] = 'W'
+                            ans[i + 1] = 'W'
                 else:
-                    if ans[i-1] == 'S':
-                        if ans[i+1] == 'S':
+                    if ans[i - 1] == 'S':
+                        if ans[i + 1] == 'S':
                             flg = False
                         else:
-                            ans[i+1] = 'W'
+                            ans[i + 1] = 'W'
                     else:
-                        if ans[i+1] == 'W':
+                        if ans[i + 1] == 'W':
                             flg = False
                         else:
-                            ans[i+1] = 'S'
+                            ans[i + 1] = 'S'
             else:
                 if s[i] == 'o':
-                    if ans[i-1] == 'S':
-                        if ans[i+1] == 'S':
+                    if ans[i - 1] == 'S':
+                        if ans[i + 1] == 'S':
                             flg = False
                         else:
-                            ans[i+1] = 'W'
+                            ans[i + 1] = 'W'
                     else:
-                        if ans[i+1] == 'W':
+                        if ans[i + 1] == 'W':
                             flg = False
                         else:
-                            ans[i+1] = 'S'
+                            ans[i + 1] = 'S'
                 else:
-                    if ans[i-1] == 'S':
-                        if ans[i+1] == 'W':
+                    if ans[i - 1] == 'S':
+                        if ans[i + 1] == 'W':
                             flg = False
                         else:
-                            ans[i+1] = 'S'
+                            ans[i + 1] = 'S'
                     else:
-                        if ans[i+1] == 'S':
+                        if ans[i + 1] == 'S':
                             flg = False
                         else:
-                            ans[i+1] = 'W'
+                            ans[i + 1] = 'W'
         if ans[-1] == 'S':
             if s[-1] == 'o':
                 if ans[-2] != ans[0]:

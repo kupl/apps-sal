@@ -8,4 +8,3 @@ for i in range(t):
         if arr[j] % 2 == 0:
             ans += arr[j]
     print(ans)
-

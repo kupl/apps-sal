@@ -1,3 +1,4 @@
 from itertools import takewhile
 
-house_numbers_sum = lambda lst: sum(takewhile(lambda n: n != 0, lst))
+
+def house_numbers_sum(lst): return sum(takewhile(lambda n: n != 0, lst))

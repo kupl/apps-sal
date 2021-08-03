@@ -3,6 +3,7 @@ class Solution:
         positions = position
         positions.sort()
         n = len(positions)
+
         def f(d):
             prev = 0
             balls = 1
@@ -21,8 +22,3 @@ class Solution:
             else:
                 hi = mi - 1
         return lo
-        
-                    
-            
-            
-

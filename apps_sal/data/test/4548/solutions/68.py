@@ -1,4 +1,4 @@
-n,m,x = map(int,input().split())
+n, m, x = map(int, input().split())
 lst = list(map(int, input().split()))
 
 a_cost = 0

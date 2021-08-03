@@ -1,5 +1,6 @@
 from itertools import combinations
 
+
 def strings_crossover(arr, result):
     combs = [*combinations(arr, 2)]
     t = 0

@@ -12,5 +12,5 @@ def main():
     else:
         print("=")
 
-main()
 
+main()

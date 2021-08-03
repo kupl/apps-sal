@@ -1,3 +1,2 @@
-square = lambda n: n**2
+def square(n): return n**2
 #    write a function that takes an argument and returns the square of it
-

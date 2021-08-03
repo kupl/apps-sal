@@ -1,22 +1,22 @@
 class Solution:
-    
+
     def recur_helper(self, num, n, cnt, memo, next_moves):
-        
+
         if n == 0:
             return cnt
-        
+
         key = (num, n)
         if key in memo:
             return memo[key]
-        
+
         cnt = 0
         for next_num in next_moves[num]:
-            cnt += self.recur_helper(next_num, n-1, 1, memo, next_moves)
-        
+            cnt += self.recur_helper(next_num, n - 1, 1, memo, next_moves)
+
         memo[key] = cnt
-        
+
         return memo[key]
-    
+
     def knightDialer(self, n: int) -> int:
         next_moves = {
             0: [4, 6],
@@ -33,7 +33,6 @@ class Solution:
         memo = dict()
         cnt = 0
         for num in range(10):
-            cnt += self.recur_helper(num, n-1, 1, memo, next_moves)
-        
-        return cnt % (10 ** 9 + 7)
+            cnt += self.recur_helper(num, n - 1, 1, memo, next_moves)
 
+        return cnt % (10 ** 9 + 7)

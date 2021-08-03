@@ -5,4 +5,3 @@ if (-100 <= A <= 100) and (-100 <= B <= 100) and (-100 <= C <= 100):
         print('Yes')
     else:
         print('No')
-

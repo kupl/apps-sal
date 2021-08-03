@@ -6,14 +6,13 @@ class Solution:
         d = collections.defaultdict(set)
         i = 1
         while i < len(nums):
-            while 0 <= i < len(nums) and  nums[i] == nums[i - 1]:
+            while 0 <= i < len(nums) and nums[i] == nums[i - 1]:
                 d[flag].add(i)
                 d[flag].add(i - 1)
                 i += 1
             flag += 1
             i += 1
-            
-    
+
         for v in d.values():
             # print(v)
             print(v)

@@ -1,1 +1,2 @@
-s=input();print(s+'es'[s[-1]!='s':])
+s = input()
+print(s + 'es'[s[-1] != 's':])

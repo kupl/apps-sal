@@ -9,4 +9,3 @@ for i in range(n):
     out %= MOD
 out -= pow(2, n - 1, MOD)
 print(out % MOD)
-

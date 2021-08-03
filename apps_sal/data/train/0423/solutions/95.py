@@ -1,6 +1,6 @@
 class Solution:
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
-        
+
         subseqs = dict()
 
         for num in arr:

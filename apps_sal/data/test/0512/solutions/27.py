@@ -1,6 +1,6 @@
 def main():
     n = int(input())
-    ab = [list(map(int, input().split())) for _ in [0]*n]
+    ab = [list(map(int, input().split())) for _ in [0] * n]
     d_left = dict()
     d_right = dict()
     s_left = set()
@@ -37,37 +37,37 @@ def main():
             s.add(b)
 
     def check(x, y):
-        size = (y-x)//2
-        for i in range(x, x+size):
+        size = (y - x) // 2
+        for i in range(x, x + size):
             if i in d_left:
-                if d_left[i] != i+size:
+                if d_left[i] != i + size:
                     return False
             elif i in s_right:
                 return False
             elif i in d_right:
                 return False
             elif i in s_left:
-                if i+size in s_right:
+                if i + size in s_right:
                     return False
-        for i in range(x+size, x+2*size):
+        for i in range(x + size, x + 2 * size):
             if i in d_right:
-                if d_right[i] != i-size:
+                if d_right[i] != i - size:
                     return False
             elif i in s_left:
                 return False
             elif i in d_left:
                 return False
             elif i in s_right:
-                if i-size in s_left:
+                if i - size in s_left:
                     return False
         return True
-    dp = [False]*(n+1)
+    dp = [False] * (n + 1)
     dp[0] = True
 
-    for i in range(1, n+1):
-        for j in range(i-1, -1, -1):
+    for i in range(1, n + 1):
+        for j in range(i - 1, -1, -1):
             if dp[j]:
-                if check(2*j+1, 2*i+1):
+                if check(2 * j + 1, 2 * i + 1):
                     dp[i] = True
                     break
     print(["No", "Yes"][dp[-1]])

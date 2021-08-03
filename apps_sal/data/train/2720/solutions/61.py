@@ -1,12 +1,12 @@
 def solution(digits):
-    numli=[]
-    if len(digits)>5:
+    numli = []
+    if len(digits) > 5:
         for ind in range(len(digits)):
-            if ind <= len(digits)-5:
-                num=digits[ind:ind+5]
+            if ind <= len(digits) - 5:
+                num = digits[ind:ind + 5]
                 numli.append(num)
-    elif len(digits)<=5:
+    elif len(digits) <= 5:
         numli.append[0]
 
-    #print(numli)
+    # print(numli)
     return int(max(numli))

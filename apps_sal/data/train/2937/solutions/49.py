@@ -1,5 +1,5 @@
-def between(a,b):
+def between(a, b):
     returnArr = []
-    for i in range(a,b+1): 
+    for i in range(a, b + 1):
         returnArr.append(i)
     return returnArr

@@ -31,4 +31,3 @@ for i in range(n - 1, 0, -1):
 
 print(("\n".join(
     map(str, [i + 1 for i in range(n) if workL[i] + workR[i + 1] < k]))))
-

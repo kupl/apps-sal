@@ -25,6 +25,3 @@ class Solution:
             customerWaiting -= willBeServed
             i += 1
         return -1 if highestProfit < 0 else step
-        
-            
-

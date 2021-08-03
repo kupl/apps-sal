@@ -15,6 +15,7 @@ def add(x):
     if x > 1:
         primes.add(x)
 
+
 ans = float('inf')
 primes = {2}
 
@@ -29,10 +30,10 @@ for p in primes:
             cand += p - x
         else:
             r = x % p
-            cand += min(r, p-r)
+            cand += min(r, p - r)
 
     ans = min(ans, cand)
-    if ans==0: break
+    if ans == 0:
+        break
 
 print(ans)
-

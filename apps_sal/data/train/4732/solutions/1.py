@@ -1,2 +1,2 @@
-def absent_vowel(x): 
+def absent_vowel(x):
     return 'aeiou'.index((set('aeiou') - set(x.lower())).pop())

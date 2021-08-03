@@ -8,6 +8,7 @@ def modular_pow(base, exponent, modulus):
         base = (base * base) % modulus
     return result
 
+
 len_a, len_b = list(map(int, input().split()))
 a = input()[::-1]
 b = input()[::-1]
@@ -29,5 +30,3 @@ for i in range(len_a - 1, -1, -1):
         soma = soma % primo
 
 print(soma)
-
-

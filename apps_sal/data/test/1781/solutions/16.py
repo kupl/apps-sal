@@ -49,8 +49,3 @@ for i in range(n):
             else:
                 break
     print(plane[i])
-
-
-
-
-

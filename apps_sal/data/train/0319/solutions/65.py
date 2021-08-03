@@ -1,6 +1,7 @@
 class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         n = len(stoneValue)
+
         @lru_cache(None)
         def dp(cur):
             if cur >= n:

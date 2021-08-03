@@ -23,10 +23,9 @@ for i in range(mx, mn, -1):
         cur += nc + curcl
         curcl += nc
     else:
-        ans +=1
+        ans += 1
         curcl += nc
         cur = curcl
 if cur > 0:
     ans += 1
 print(ans)
-

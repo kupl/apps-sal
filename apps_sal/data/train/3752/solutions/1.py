@@ -4,6 +4,7 @@ def aCb(a, b):
         result = result * (a - i) / (i + 1)
     return result
 
+
 def value_at(poly_spec, x):
     answer = 0
     l = len(poly_spec)

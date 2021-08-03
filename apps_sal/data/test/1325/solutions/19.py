@@ -4,7 +4,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#Journey to moon
+# Journey to moon
 '''
 def main():
 	from sys import stdin,stdout
@@ -41,7 +41,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#Djikstra's
+# Djikstra's
 '''
 import collections
 class Graph:
@@ -111,7 +111,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#Larget pallindrome in String
+# Larget pallindrome in String
 '''
 def main():
 	from sys import stdin,stdout
@@ -177,7 +177,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#276B
+# 276B
 '''
 def main():
 	from sys import stdin,stdout
@@ -193,7 +193,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#362B
+# 362B
 '''
 def main():
 	from sys import stdin,stdout
@@ -217,7 +217,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#279B SUM OF SUB-ARRAY
+# 279B SUM OF SUB-ARRAY
 '''
 def main():
 	from sys import stdin,stdout
@@ -252,7 +252,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#469B
+# 469B
 '''
 def main():
 	from sys import stdin,stdout
@@ -337,7 +337,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#286C
+# 286C
 '''
 def main():
 	from sys import stdin,stdout
@@ -355,7 +355,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#387B
+# 387B
 '''
 def main():
 	from sys import stdin,stdout
@@ -377,7 +377,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#365B
+# 365B
 '''
 def main():
 	from sys import stdin,stdout
@@ -398,7 +398,7 @@ def main():
 	stdout.write(str(min(maxim,n)))
 def __starting_point():
 	main()
-'''	#474D
+'''  # 474D
 '''
 def main():
 	from sys import stdin,stdout
@@ -413,7 +413,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#330B
+# 330B
 #not working
 '''
 def main():
@@ -443,7 +443,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#208D
+# 208D
 '''
 def main():
 	from sys import stdin,stdout
@@ -468,9 +468,9 @@ def main():
 def __starting_point():
 	main()
 '''
-#339D Using Al.Cash's Segment Trees
-#Segment Tree
-#not-working
+# 339D Using Al.Cash's Segment Trees
+# Segment Tree
+# not-working
 '''
 powers=1
 t=[0 for x in range(3*int(1e5))]
@@ -529,7 +529,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#330B
+# 330B
 '''
 def main():
 	from sys import stdin,stdout
@@ -551,7 +551,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#116B
+# 116B
 '''
 def main():
 	from sys import stdin,stdout
@@ -587,7 +587,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#339D using Al.Cash's Segment Tree Implementation
+# 339D using Al.Cash's Segment Tree Implementation
 '''
 def main():
 	from sys import stdin,stdout
@@ -632,7 +632,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#515C
+# 515C
 '''
 def main():
 	from sys import stdin,stdout
@@ -670,7 +670,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#313B
+# 313B
 '''
 def main():
 	from sys import stdin,stdout
@@ -695,7 +695,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#431C
+# 431C
 '''
 def main():
 	from sys import stdin,stdout
@@ -720,7 +720,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#441C
+# 441C
 '''
 def main():
 	from sys import stdin,stdout
@@ -780,7 +780,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#538B
+# 538B
 '''
 def main():
 	from sys import stdin,stdout
@@ -802,64 +802,70 @@ def main():
 def __starting_point():
 	main()
 '''
-#486C
+# 486C
+
+
 def main():
-	from sys import stdin,stdout
-	n,o=list(map(int,stdin.readline().split()))
-	string=stdin.readline().strip()
-	if n & 1:
-		s1=string[:n//2]
-		s2=string[n//2+1:]
-		rev=s2[::-1]
-		minim=0
-		indexlist=[]
-		for i in range(n//2):
-			k=abs(ord(s1[i])-ord(rev[i]))
-			minim+=min(k,26-k)
-			if k:
-				indexlist.append(i)
-		if o>n//2:
-			o=(n-o)
-		else:
-			o-=1
-		if len(indexlist):
-			indexlist+=[o]
-			for i in range(len(indexlist)):
-				indexlist[i]=indexlist[i]-o
-			minia=min(indexlist)
-			maxia=max(indexlist)
-			minim+=min(abs(minia),abs(maxia))*2+max(abs(minia),abs(maxia))
-		stdout.write(str(minim))
-	else:
-		s1=string[:n//2]
-		s2=string[n//2:]
-		rev=s2[::-1]
-		#print(s1,rev)
-		minim=0
-		indexlist=[]
-		for i in range(n//2):
-			k=abs(ord(s1[i])-ord(rev[i]))
-			minim+=min(k,26-k)
-			if k:
-				indexlist.append(i)
-		if o > n//2:
-			o=(n-o)
-		else:
-			o-=1
-		#print(minim)
-		#print(indexlist)
-		if len(indexlist):
-			indexlist+=[o]
-			for i in range(len(indexlist)):
-				indexlist[i]=indexlist[i]-o
-			#print(indexlist)
-			minia=min(indexlist)
-			maxia=max(indexlist)
-			minim+=min(abs(minia),abs(maxia))*2+max(abs(minia),abs(maxia))
-		stdout.write(str(minim))
+    from sys import stdin, stdout
+    n, o = list(map(int, stdin.readline().split()))
+    string = stdin.readline().strip()
+    if n & 1:
+        s1 = string[:n // 2]
+        s2 = string[n // 2 + 1:]
+        rev = s2[::-1]
+        minim = 0
+        indexlist = []
+        for i in range(n // 2):
+            k = abs(ord(s1[i]) - ord(rev[i]))
+            minim += min(k, 26 - k)
+            if k:
+                indexlist.append(i)
+        if o > n // 2:
+            o = (n - o)
+        else:
+            o -= 1
+        if len(indexlist):
+            indexlist += [o]
+            for i in range(len(indexlist)):
+                indexlist[i] = indexlist[i] - o
+            minia = min(indexlist)
+            maxia = max(indexlist)
+            minim += min(abs(minia), abs(maxia)) * 2 + max(abs(minia), abs(maxia))
+        stdout.write(str(minim))
+    else:
+        s1 = string[:n // 2]
+        s2 = string[n // 2:]
+        rev = s2[::-1]
+        # print(s1,rev)
+        minim = 0
+        indexlist = []
+        for i in range(n // 2):
+            k = abs(ord(s1[i]) - ord(rev[i]))
+            minim += min(k, 26 - k)
+            if k:
+                indexlist.append(i)
+        if o > n // 2:
+            o = (n - o)
+        else:
+            o -= 1
+        # print(minim)
+        # print(indexlist)
+        if len(indexlist):
+            indexlist += [o]
+            for i in range(len(indexlist)):
+                indexlist[i] = indexlist[i] - o
+            # print(indexlist)
+            minia = min(indexlist)
+            maxia = max(indexlist)
+            minim += min(abs(minia), abs(maxia)) * 2 + max(abs(minia), abs(maxia))
+        stdout.write(str(minim))
+
+
 def __starting_point():
-	main()
-#4B
+    main()
+
+
+# 4B
 '''
 def main():	
 	from sys import stdin,stdout
@@ -885,7 +891,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#282B
+# 282B
 '''
 def main():
 	from sys import stdin,stdout

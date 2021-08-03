@@ -1,10 +1,12 @@
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
         disjoint = {}
+
         def find(x):
             while disjoint[x] != x:
                 x = disjoint[x]
             return disjoint[x]
+
         def union(x, y):
             disjoint[find(y)] = find(x)
         for i in range(len(grid)):
@@ -18,4 +20,3 @@ class Solution:
                             return True
                         union((i, j), (i + di, j + dj))
         return False
-

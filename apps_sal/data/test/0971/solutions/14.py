@@ -8,4 +8,3 @@ for cur in map(int, input().split()):
             v = 0
             cnt += 1
 print(cnt)
-

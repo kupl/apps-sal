@@ -1,4 +1,3 @@
-n=int(input())
 from math import ceil
-print((ceil(n/111)*111))
-
+n = int(input())
+print((ceil(n / 111) * 111))

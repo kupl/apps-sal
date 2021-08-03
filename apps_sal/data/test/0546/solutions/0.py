@@ -19,7 +19,7 @@ for _ in range(n):
             else:
                 print("YES")
     else:
-        if len(temp) < len(s)-1:
+        if len(temp) < len(s) - 1:
             print("NO")
         else:
             for i in range(a):
@@ -31,7 +31,7 @@ for _ in range(n):
                     print("NO")
                     break
             else:
-                for i in range(-(len(s) - a-1), 0):
+                for i in range(-(len(s) - a - 1), 0):
                     if s[i] == '?':
                         if temp[i] not in g:
                             print("NO")
@@ -40,7 +40,7 @@ for _ in range(n):
                         print("NO")
                         break
                 else:
-                    for i in range(a, len(temp)-(len(s) - a-1)):
+                    for i in range(a, len(temp) - (len(s) - a - 1)):
                         if temp[i] in g:
                             print("NO")
                             break

@@ -1,21 +1,21 @@
-s=int(input())
+s = int(input())
 
-a_list=[s]
+a_list = [s]
 
 
-a=s
+a = s
 while True:
-    
-    if a%2==0:
-        a=a//2
+
+    if a % 2 == 0:
+        a = a // 2
     else:
-        a=3*a+1
-    
+        a = 3 * a + 1
+
     if a in a_list:
         break
     else:
         a_list.append(a)
 
-ans=len(a_list)+1
+ans = len(a_list) + 1
 
 print(ans)

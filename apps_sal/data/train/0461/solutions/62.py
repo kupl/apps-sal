@@ -5,7 +5,8 @@ from collections import defaultdict, deque
 
 class Solution(object):
     def numOfMinutes(self, n, headID, manager, informTime):
-        if not manager or not informTime: return 0
+        if not manager or not informTime:
+            return 0
         sub = defaultdict(list)
         q = [(0, headID)]
         heapq.heapify(q)
@@ -14,7 +15,8 @@ class Solution(object):
             sub[manager[i]].append(i)
         while q:
             spent, emp = heapq.heappop(q)
-            if used.get(emp, -1) != -1: continue
+            if used.get(emp, -1) != -1:
+                continue
             used[emp] = spent
             for next_emp in sub[emp]:
                 if used.get(next_emp, -1) == -1:

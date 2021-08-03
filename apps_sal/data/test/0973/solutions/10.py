@@ -9,6 +9,8 @@ for i in range(R):
     field.append(f)
 
 lu = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+
+
 def main():
     for i in range(R):
         for j in range(C):
@@ -17,7 +19,8 @@ def main():
                 field[i][j] = 'D'
             if item == 'S':
                 for [di, dj] in lu:
-                    di += i; dj += j
+                    di += i
+                    dj += j
                     if di in range(R) and dj in range(C):
                         if field[di][dj] == 'W':
                             print('No')
@@ -27,5 +30,5 @@ def main():
     for line in field:
         print(''.join(line))
 
-main()
 
+main()

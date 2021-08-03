@@ -13,5 +13,6 @@ def main():
                 a[r] -= 1
     result += 4 * max(a) + 2
     print(result)
-    
+
+
 main()

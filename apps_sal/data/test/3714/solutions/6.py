@@ -1,10 +1,13 @@
 from fractions import gcd
+
+
 def dfs(node):
     if (vis[node] == idd[0]):
         return node
     cycleLen[0] += 1
     vis[node] = idd[0]
     return dfs(crush[node])
+
 
 n = int(input())
 crush = list(map(int, input().split()))
@@ -22,8 +25,10 @@ for i in range(n):
     V.append(cycleLen[0])
 V.sort()
 
+
 def lcm(x, y):
     return x * y // gcd(x, y)
+
 
 if (ans == -1):
     print(ans)
@@ -34,7 +39,7 @@ else:
 
         mem = {}
         bad = False
-        while (True):    
+        while (True):
             if (ans % item == 0):
                 break
             if (item % 2 == 0 and ans % item == item // 2):
@@ -49,4 +54,3 @@ else:
             break
         inc = lcm(inc, ans)
     print(ans)
-

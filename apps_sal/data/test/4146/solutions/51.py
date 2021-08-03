@@ -34,9 +34,8 @@ for key, val in list(even.items()):
 if odd_1 != even_1:
     res = n - odd_values[0] - even_values[0]
 else:
-    res = min(n - odd_values[0] - even_values[1], 
+    res = min(n - odd_values[0] - even_values[1],
               n - odd_values[1] - even_values[0])
 print(res)
 # print(odd)
 # print(even)
-

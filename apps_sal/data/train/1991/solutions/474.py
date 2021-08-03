@@ -4,7 +4,7 @@ class Solution:
         dp = [[0 for j in range(N)] for i in range(F + 1)]
         for i in range(F + 1):
             dp[i][t] = 1
-        
+
         for f in range(1, F + 1):
             for i in range(len(loc)):
                 for j in range(len(loc)):
@@ -14,4 +14,3 @@ class Solution:
                             continue
                         dp[f][i] += dp[d][j]
         return dp[F][s] % (10 ** 9 + 7)
-

@@ -1,4 +1,4 @@
-n, m , k = map(int, input().split())
+n, m, k = map(int, input().split())
 
 a = list(map(int, input().split()))
 
@@ -13,10 +13,10 @@ for i in range(m):
 
 ans, j = 0, m
 
-for i in range(n+1):
+for i in range(n + 1):
     if A[i] > k:
         break
     while B[j] > k - A[i]:
         j -= 1
-    ans = max(ans,i+ j)
+    ans = max(ans, i + j)
 print(ans)

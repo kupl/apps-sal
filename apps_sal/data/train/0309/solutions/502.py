@@ -7,5 +7,5 @@ class Solution:
             for j in range(i):
                 d = A[j] - A[i]
                 dp[i][d] = dp[j][d] + 1
-                res = max(res, dp[i][d]+1)
+                res = max(res, dp[i][d] + 1)
         return res

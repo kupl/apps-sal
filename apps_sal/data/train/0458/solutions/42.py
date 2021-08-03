@@ -5,7 +5,7 @@ class Solution:
             return 0
         re = sm % p
         pre = 0
-        reMap = {0:-1}
+        reMap = {0: -1}
         ret = len(nums)
         for i, n in enumerate(nums):
             pre += n
@@ -14,5 +14,5 @@ class Solution:
             if key in reMap:
                 ret = min(ret, i - reMap[key])
             reMap[now] = i
-        
+
         return ret if ret != len(nums) else -1

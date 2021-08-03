@@ -5,13 +5,14 @@ def is_palindrome(n):
         return True
     else:
         return False
-    
+
+
 def palindrome_chain_length(n):
     i = 0
     while True:
         if is_palindrome(n):
             break
-        else: 
+        else:
             n += int(''.join(reversed(str(n))))
         i += 1
     return i

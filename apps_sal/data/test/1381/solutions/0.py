@@ -5,4 +5,3 @@ y = k * x
 z = (y + p - 1) // p
 
 print(z)
-

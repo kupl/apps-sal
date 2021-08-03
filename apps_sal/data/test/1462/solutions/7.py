@@ -13,4 +13,3 @@ for _, count in collections.Counter(input()).most_common():
         break
 
 print(coins)
-

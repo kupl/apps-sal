@@ -4,4 +4,3 @@ for c in s:
     if c in 'aiueo13579':
         cnt += 1
 print(cnt)
-

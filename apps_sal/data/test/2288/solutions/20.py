@@ -23,7 +23,7 @@ for t in range(0, test):
     # n, x = list(map(int, input().split()))
     brr = [int(x) for x in input().split()]
     arr = [int(x) for x in input().split()]
-    if(brr==sorted(brr)):
+    if(brr == sorted(brr)):
         print('Yes')
     else:
         ans = solve(arr)
@@ -45,4 +45,3 @@ try:                                                                          # 
 except:                                                                       # ex. to stop at EOF
     #code 2 , if error occurs
 '''
-

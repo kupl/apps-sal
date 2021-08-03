@@ -14,4 +14,3 @@ for ind, i in enumerate(a):
     if maxf == 1 or (freqs[maxf] + freqs[0] == n - 1 and freqs[1] == 1) or (freqs[maxf] == 1 and freqs[maxf - 1] + freqs[0] == n - 1):
         best = ind + 1
 print(best)
-

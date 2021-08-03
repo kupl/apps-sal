@@ -10,7 +10,7 @@ for i in range(1, n, 2):
 l.append(ans)
 
 for i in range(n - 1):
-    ans = a[i]*2 - ans
+    ans = a[i] * 2 - ans
     l.append(ans)
 
 print(*l)

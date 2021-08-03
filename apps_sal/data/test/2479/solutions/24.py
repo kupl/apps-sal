@@ -17,4 +17,3 @@ for _ in range(q):
         w = min(w, x)
         a -= C[x]
 print(a)
-

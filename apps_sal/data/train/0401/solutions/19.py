@@ -17,7 +17,7 @@ class Solution:
                     mod_two[0] = x
                 elif mod_two[1] == -1 or x < mod_two[1]:
                     mod_two[1] = x
-        
+
         if total_sum % 3 == 0:
             return total_sum
         elif total_sum % 3 == 1:

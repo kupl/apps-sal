@@ -19,4 +19,3 @@ for c in s:
         count = (count + increment) % n
 
 print(count)
-

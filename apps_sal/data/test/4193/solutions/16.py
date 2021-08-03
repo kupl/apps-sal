@@ -35,4 +35,3 @@ class Info:
 info = Info(a_3_3, n, b_n)
 info.setting()
 info.result()
-

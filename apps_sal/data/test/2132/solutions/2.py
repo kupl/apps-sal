@@ -37,5 +37,3 @@ for event in events:
         overtaking_forbidden += 1
 
 print(ignores)
-
-

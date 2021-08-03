@@ -7,9 +7,9 @@ for i in range(T):
         l, r = list(map(int, input().split()))
         X.append([j, l, r])
 
-    X = sorted(X, key = lambda x: x[1])
+    X = sorted(X, key=lambda x: x[1])
     # print(X)
-    
+
     Y = ["2"] * n
     s = -1
     rmax = X[0][2]
@@ -20,9 +20,8 @@ for i in range(T):
             break
         rmax = max(rmax, X[i][2])
         Y[X[i][0]] = "1"
-        
+
     if s < 0:
         print(-1)
     else:
         print(" ".join(Y))
-

@@ -1,13 +1,13 @@
-H,W,M = map(int ,input().split())
-width = [0]*W
-height = [0]*H
+H, W, M = map(int, input().split())
+width = [0] * W
+height = [0] * H
 
 st = set()
 for i in range(M):
-  y,x = map(int, input().split())
-  st.add((x-1,y-1))
-  width[x-1] += 1
-  height[y-1] += 1
+    y, x = map(int, input().split())
+    st.add((x - 1, y - 1))
+    width[x - 1] += 1
+    height[y - 1] += 1
 
 maxW = max(width)
 maxH = max(height)
@@ -23,18 +23,18 @@ tempY = indexH[0]
 flag = False
 
 for x in indexW:
-  y = tempY
-  if not (x,y) in st:
-    flag = True
-    break
+    y = tempY
+    if not (x, y) in st:
+        flag = True
+        break
 
 for y in indexH:
-  x = tempX
-  if not(x,y) in st:
-    flag = True
-    break
+    x = tempX
+    if not(x, y) in st:
+        flag = True
+        break
 
 if flag:
-  print(ans)
+    print(ans)
 else:
-  print(ans-1)
+    print(ans - 1)

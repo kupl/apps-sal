@@ -11,4 +11,3 @@ for i in range(N - 2):
         b = L[j]
         ans += bisect_left(L, a + b, lo=j + 1) - (j + 1)
 print(ans)
-

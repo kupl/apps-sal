@@ -29,7 +29,7 @@ while True:
     FU = F(N, upper)
     if FL <= S <= FU:
         if (FU - S) % d == 0:
-            pos = (FU - S)//d
+            pos = (FU - S) // d
             ans = min(ans, upper + pos)
 
 for b in range(2, upper + 1):

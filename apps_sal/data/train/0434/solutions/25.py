@@ -6,11 +6,11 @@ class Solution:
                 zeros += 1
             else:
                 ones += 1
-                
+
             while zeros > 1:
                 if nums[start] == 0:
                     zeros -= 1
                 start += 1
-            maxx = max(maxx,end - start)
+            maxx = max(maxx, end - start)
             end += 1
         return maxx

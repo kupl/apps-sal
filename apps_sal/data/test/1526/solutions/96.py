@@ -4,4 +4,3 @@ if r % 2:
     print((r // 2 + 2))
 else:
     print((r // 2))
-

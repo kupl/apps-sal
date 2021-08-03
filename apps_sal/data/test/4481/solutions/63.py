@@ -10,9 +10,9 @@ v = list(c.values())
 
 l = []
 for i in range(len(c)):
-  if v[i] == m:
-    l.append(k[i])
+    if v[i] == m:
+        l.append(k[i])
 
 l.sort()
-    
-print(*l,sep="\n")
+
+print(*l, sep="\n")

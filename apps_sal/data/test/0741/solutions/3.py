@@ -1,5 +1,6 @@
 3
 
+
 def solve(N, M, A):
     A = [0] + A + [M]
 
@@ -41,5 +42,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

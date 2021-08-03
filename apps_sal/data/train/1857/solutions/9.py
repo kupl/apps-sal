@@ -13,14 +13,11 @@ class Solution:
                 available[j] = 0
             for start, end in [(1, 5), (5, 9)]:
                 if sum(available[start: end]) == 4:
-                # if all(j not in lookup[i] for j in range(start, end)):
+                    # if all(j not in lookup[i] for j in range(start, end)):
                     res += 1
                     used = True
             if not used and sum(available[3:7]) == 4:
-            # if not used and all(j not in lookup[i] for j in range(4, 8)):
+                # if not used and all(j not in lookup[i] for j in range(4, 8)):
                 res += 1
         res += 2 * (n - len(lookup))
         return res
-                    
-                    
-

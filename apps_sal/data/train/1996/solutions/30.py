@@ -28,4 +28,3 @@ class Solution:
                     graph_map[n].remove(i)
 
         return sorted(result)
-

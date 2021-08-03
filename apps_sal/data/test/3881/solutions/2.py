@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 from collections import defaultdict
 
+
 def main():
     n, q = list(map(int, input().split()))
     instrs = [input().split() for _ in range(q)]
@@ -22,5 +23,5 @@ def main():
 
     print(len(last_q))
 
-main()
 
+main()

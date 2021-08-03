@@ -9,4 +9,3 @@ elif x < 0 and y > 0:
     print(x - y, 0, 0, -x + y)
 else:
     print(x + y, 0, 0, x + y)
-

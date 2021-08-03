@@ -25,5 +25,5 @@ def main():
             e = list(cands)[0]
             print(e + 1)
 
-main()
 
+main()

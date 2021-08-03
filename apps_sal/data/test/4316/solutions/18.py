@@ -1,13 +1,12 @@
 s = input()
 lst = []
 for i in range(4):
-  lst.append(s[i])
+    lst.append(s[i])
 ans = 0
 for i in range(4):
-  if(lst.count(lst[i]) != 2):
-    ans = 1
+    if(lst.count(lst[i]) != 2):
+        ans = 1
 if (ans == 0):
-  print("Yes")
+    print("Yes")
 else:
-  print("No")
-
+    print("No")

@@ -10,4 +10,4 @@ for i in range(N):
             r += 1
     else:
         r += 1
-print("("*l+S+")"*r)
+print("(" * l + S + ")" * r)

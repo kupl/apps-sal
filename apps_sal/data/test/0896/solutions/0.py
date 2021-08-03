@@ -10,13 +10,12 @@ if t1 != t2:
     print('NO')
 else:
     print('YES')
-    for i in range(n-1):
-        for j in range(m-1):
+    for i in range(n - 1):
+        for j in range(m - 1):
             print(0, end=' ')
         print(a[i])
     tmp = 0
-    for j in range(m-1):
+    for j in range(m - 1):
         print(b[j], end=' ')
         tmp ^= b[j]
-    print(a[n-1]^tmp)
-
+    print(a[n - 1] ^ tmp)

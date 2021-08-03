@@ -1,5 +1,6 @@
 import sys
-input = lambda: sys.stdin.readline()
+def input(): return sys.stdin.readline()
+
 
 n, m = list(map(int, input().split()))
 g = [[] for _ in range(n + 1)]
@@ -25,4 +26,3 @@ while que:
         que.append(v)
 
 print(("\n".join(map(str, num[1:]))))
-

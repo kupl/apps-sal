@@ -3,8 +3,8 @@ def unsort(d, left, right, k):
         return
     k[0] -= 2
     mid = (left + right) // 2
-    tmp = d[mid-1]
-    d[mid-1] = d[mid]
+    tmp = d[mid - 1]
+    d[mid - 1] = d[mid]
     d[mid] = tmp
     unsort(d, left, mid, k)
     unsort(d, mid, right, k)
@@ -16,9 +16,9 @@ def main():
     if k[0] % 2 == 0:
         print('-1')
         return
-    d = [i for i in range(n+1)]
+    d = [i for i in range(n + 1)]
     k[0] -= 1
-    unsort(d, 1, n+1, k)
+    unsort(d, 1, n + 1, k)
     if k[0] == 0:
         print(*d[1:])
     else:
@@ -27,4 +27,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -19,4 +19,4 @@ if (z == 0):
 if (f // 9 == 0):
     print(0)
 else:
-    print ("5" * (f - f % 9) + "0" * z)
+    print("5" * (f - f % 9) + "0" * z)

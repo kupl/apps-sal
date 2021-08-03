@@ -20,5 +20,3 @@ for i in range(1, 5):
     if P[i] and H[i]:
         ans = "YES"
 print(ans)
-
-

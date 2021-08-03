@@ -5,6 +5,7 @@ def cmp(a, b, c):
         return b + c
     return a
 
+
 n = int(input())
 cs = list(map(int, input().split()))
 dp = [[-1, -1] for i in range(n)]
@@ -19,19 +20,19 @@ for i in range(1, n):
     rs = s[::-1]
 
     if s >= last:
-        dp[i][0] = cmp(dp[i][0], dp[i-1][0], 0)
+        dp[i][0] = cmp(dp[i][0], dp[i - 1][0], 0)
     if s >= rlast:
-        dp[i][0] = cmp(dp[i][0], dp[i-1][1], 0)
+        dp[i][0] = cmp(dp[i][0], dp[i - 1][1], 0)
     if rs >= last:
-        dp[i][1] = cmp(dp[i][1], dp[i-1][0], cs[i])
+        dp[i][1] = cmp(dp[i][1], dp[i - 1][0], cs[i])
     if rs >= rlast:
-        dp[i][1] = cmp(dp[i][1], dp[i-1][1], cs[i])
-    
+        dp[i][1] = cmp(dp[i][1], dp[i - 1][1], cs[i])
+
     last = s
 
-if dp[n-1][0] == -1:
-    print(dp[n-1][1])
-elif dp[n-1][1] == -1:
-    print(dp[n-1][0])
+if dp[n - 1][0] == -1:
+    print(dp[n - 1][1])
+elif dp[n - 1][1] == -1:
+    print(dp[n - 1][0])
 else:
-    print(min(dp[n-1][0], dp[n-1][1]))
+    print(min(dp[n - 1][0], dp[n - 1][1]))

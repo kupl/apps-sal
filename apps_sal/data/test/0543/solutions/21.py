@@ -10,7 +10,7 @@ for i in a:
         break
     elif i == 0:
         continue
-    elif i%2 != 0:
+    elif i % 2 != 0:
         mi = 1
 else:
     if mi == 1:
@@ -18,4 +18,3 @@ else:
     else:
         r = 'YES'
 print(r)
-

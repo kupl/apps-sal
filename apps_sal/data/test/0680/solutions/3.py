@@ -6,11 +6,14 @@ class Coord():
         self.x = x
         self.y = y
 
+
 def cdist(c1, c2):
     return abs(c1.x - c2.x) + abs(c1.y - c2.y)
 
+
 def dist(x1, y1, x2, y2):
     return abs(x1 - x2) + abs(y1 - y2)
+
 
 x1, y1 = list(map(int, input().split()))
 x2, y2 = list(map(int, input().split()))
@@ -44,11 +47,11 @@ for i in range(3):
             if flag:
                 cnt += 1
                 continue
-            
+
             s.add(tuple([new_x, new_y]))
             cur_x, cur_y = new_x, new_y
             break
-        
+
         if cnt == 4:
             break
 
@@ -56,4 +59,3 @@ arr = list(s)
 print(len(arr))
 for a in arr:
     print(*a)
-

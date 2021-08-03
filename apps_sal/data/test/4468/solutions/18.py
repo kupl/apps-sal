@@ -52,8 +52,8 @@ def resolve():
     t = list(map(int, input().split()))
 
     ans = T
-    for i in range(N-2, -1, -1):
-        ans += min(T, t[i+1]-t[i])
+    for i in range(N - 2, -1, -1):
+        ans += min(T, t[i + 1] - t[i])
 
     print(ans)
 
@@ -61,5 +61,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

@@ -24,4 +24,3 @@ for c in s:
             lexeme = ['<', c]
 if len(lexeme):
     print("%s>" % ''.join(lexeme))
-

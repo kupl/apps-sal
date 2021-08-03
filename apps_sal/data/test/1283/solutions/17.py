@@ -32,4 +32,3 @@ for i in range(n):
         if s[ans[0] - 1][ans[1] - 1] < s[i][j]:
             ans = (i + 1, j + 1)
 print(' '.join(map(str, ans)))
-

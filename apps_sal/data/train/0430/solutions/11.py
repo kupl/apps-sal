@@ -4,22 +4,22 @@ class Solution:
         if len(S) == 0:
             return 0
         l = [1]
-        
+
         for i in range(1, len(S)):
             cur = 0
-            for j in range(i-1, -1, -1):
+            for j in range(i - 1, -1, -1):
                 cur += l[j]
                 if S[i] == S[j]:
                     break
                 if j == 0:
-                    cur +=1
-                    
-            l.append(cur%ln)
-        
-        #print(l)
+                    cur += 1
+
+            l.append(cur % ln)
+
+        # print(l)
         res = 0
         for i in l:
             res += i
-            res %=ln
-        
+            res %= ln
+
         return res

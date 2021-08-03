@@ -19,14 +19,14 @@ while ng - ok > 1:
     hashes = dict()
     flg = False
     for i in range(N - mid + 1):
-        hashofsub = (rhs[i+mid] - rhs[i] * pws[mid]) % MOD
+        hashofsub = (rhs[i + mid] - rhs[i] * pws[mid]) % MOD
         if hashofsub in hashes:
             if i >= hashes[hashofsub] + mid:
                 flg = True
                 break
         else:
             hashes[hashofsub] = i
-    
+
     if flg:
         ok = mid
     else:

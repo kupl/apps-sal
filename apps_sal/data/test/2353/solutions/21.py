@@ -8,9 +8,8 @@ for _ in range(int(input())):
         print(b)
         continue
 
-    diff = a-b
-    step = c-d
+    diff = a - b
+    step = c - d
 
-    howmany = (diff+step-1)//step
+    howmany = (diff + step - 1) // step
     print(b + howmany * c)
-

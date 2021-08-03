@@ -21,4 +21,3 @@ def main():
 t = int(input())
 for _ in range(t):
     main()
-

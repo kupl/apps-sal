@@ -44,4 +44,5 @@ def __starting_point():
     # for i in range(1, 29 + 1):
     #     solve(N, i)
 
+
 __starting_point()

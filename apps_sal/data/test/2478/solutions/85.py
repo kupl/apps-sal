@@ -12,4 +12,3 @@ for s in S:
 left = -min(0, m)
 right = abs(cnt - m)
 print(("(" * left + S + ")" * right))
-

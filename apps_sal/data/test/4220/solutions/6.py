@@ -1,8 +1,9 @@
-def answer(k:int, s:str) -> str:
+def answer(k: int, s: str) -> str:
     if len(s) <= k:
         return s
     else:
         return s[:k] + '...'
+
 
 k = int(input())
 s = input()

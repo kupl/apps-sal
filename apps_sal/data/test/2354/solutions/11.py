@@ -1,4 +1,4 @@
-f, c, i = lambda x: x // 2, lambda x: x - f(x), lambda : map(int, input().split())
+f, c, i = lambda x: x // 2, lambda x: x - f(x), lambda: map(int, input().split())
 n, q = i()
 res = ''
 for _ in range(q):

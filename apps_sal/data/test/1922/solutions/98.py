@@ -6,9 +6,9 @@ def solve(N: int, M: int):
     if N == 1 and M == 1:
         print((1))
     elif N == 1 or M == 1:
-        print((max(N, M)-2))
+        print((max(N, M) - 2))
     else:
-        print(((N * M) - (2*N) - (2 * M) + 4))
+        print(((N * M) - (2 * N) - (2 * M) + 4))
     return
 
 
@@ -23,7 +23,9 @@ def main():
     M = int(next(tokens))  # type: int
     solve(N, M)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

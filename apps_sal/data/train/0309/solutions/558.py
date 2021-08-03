@@ -5,7 +5,7 @@ class Solution:
         index = [-1] * 501
         res = 2
         for i in range(n):
-            for j in range(i+1, n):
+            for j in range(i + 1, n):
                 first = 2 * A[i] - A[j]
                 if first < 0 or first >= 500 or index[first] == -1:
                     continue

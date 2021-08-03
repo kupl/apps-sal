@@ -10,4 +10,3 @@ for _ in range(int(input())):
         i = i * 2 + 1
 
     print(ans)
-

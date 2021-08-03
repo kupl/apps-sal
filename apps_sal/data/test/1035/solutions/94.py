@@ -1,11 +1,13 @@
 from functools import lru_cache
 
+
 def main():
-    a,b=map(lambda x: set(prime_factorize(int(x))),input().split())
-    print(len(a&b)+1)
+    a, b = map(lambda x: set(prime_factorize(int(x))), input().split())
+    print(len(a & b) + 1)
+
 
 @lru_cache(maxsize=None)
-def primes(n:int) -> list:
+def primes(n: int) -> list:
     '''n以下の全素数をlistで返す'''
     is_prime = [True] * (n + 1)
     is_prime[0] = False
@@ -18,6 +20,8 @@ def primes(n:int) -> list:
     return [i for i in range(n + 1) if is_prime[i]]
 
 # 素数判定（単純な素数判定なら十分早い。大量にやる場合はX in primesがよさそう）
+
+
 @lru_cache(maxsize=None)
 def is_prime(n: int) -> bool:
     '''引数nが素数であればTrue、そうでなければFalseを返す'''
@@ -27,13 +31,15 @@ def is_prime(n: int) -> bool:
         return True
     elif n % 2 == 0:
         return False
-    
-    for i in range(3, int(n**0.5)+1, 2):
+
+    for i in range(3, int(n**0.5) + 1, 2):
         if n % i == 0:
             return False
     return True
 
 # 素因数分解
+
+
 @lru_cache(maxsize=None)
 def prime_factorize(n: int) -> list:
     '''引数nの素因数分解結果のlistを返す。'''
@@ -51,18 +57,23 @@ def prime_factorize(n: int) -> list:
         arr.append(n)
     return arr
 
-#約数リスト
+# 約数リスト
+
+
 def make_divisors(n: int) -> list:
-    lower_divisors , upper_divisors = [], []
+    lower_divisors, upper_divisors = [], []
     i = 1
-    while i*i <= n:
+    while i * i <= n:
         if n % i == 0:
             lower_divisors.append(i)
             if i != n // i:
-                upper_divisors.append(n//i)
+                upper_divisors.append(n // i)
         i += 1
     return lower_divisors + upper_divisors[::-1]
-        
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -3,6 +3,7 @@ class Solution:
         # only need the first 2 elements to define a fib seq
         setA = set(A)
         rint = 0
+
         def getLen(i, j):
             a, b = A[i], A[j]
             if a + b not in setA:

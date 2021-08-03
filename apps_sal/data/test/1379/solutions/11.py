@@ -1,4 +1,6 @@
-R = lambda: map(int, input().split())
+def R(): return map(int, input().split())
+
+
 n, m, d = R()
 a = sorted((x, i) for i, x in enumerate(R()))
 res = [-1] * len(a)

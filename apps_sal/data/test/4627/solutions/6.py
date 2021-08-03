@@ -34,4 +34,3 @@ for _ in range(T):
             print("YES")
         else:
             print("NO")
-

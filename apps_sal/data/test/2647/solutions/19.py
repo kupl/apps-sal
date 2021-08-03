@@ -1,5 +1,5 @@
 H, W = map(int, input().split())
-MAP = [ list(input()) for _ in range(H) ]
+MAP = [list(input()) for _ in range(H)]
 cnt = 0
 for l in MAP:
     cnt += l.count("#")

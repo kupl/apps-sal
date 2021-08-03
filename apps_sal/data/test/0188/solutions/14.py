@@ -1,5 +1,7 @@
 debug = 0
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 k, n = read()
 a = list(read())
 cnt4 = k
@@ -8,12 +10,14 @@ for i in range(n):
     cnt = min(cnt4, a[i] // 4)
     a[i] -= cnt * 4
     cnt4 -= cnt
-if debug: print(*a)
+if debug:
+    print(*a)
 for i in range(n):
     cnt = min(cnt2, a[i] // 2)
     a[i] -= cnt * 2
     cnt2 -= cnt
-if debug: print(' '.join(map(str, a)), ' ', cnt2, cnt4)
+if debug:
+    print(' '.join(map(str, a)), ' ', cnt2, cnt4)
 c = [0] * 20
 for i in a:
     c[min(i, 19)] += 1

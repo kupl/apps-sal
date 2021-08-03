@@ -10,6 +10,3 @@ class Solution:
             if numberOfWin == k:
                 break
         return curMax
-                
-                
-

@@ -20,7 +20,9 @@ def main():
             max_diff_count += 1
     print(max_diff_count)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

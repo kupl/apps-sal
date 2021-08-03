@@ -2,6 +2,7 @@ class Hero(object):
     """
     Prototype for Hero
     """
+
     def __init__(self, name='Hero'):
         self.name = name
         self.position = '00'

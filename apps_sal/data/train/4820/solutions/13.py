@@ -5,9 +5,10 @@ class Animal:
         else:
             self.voice = voice
         self.name = name
+
     def speak(self):
         return f"{self.name} {self.voice}."
 
+
 class Cat(Animal):
     pass
-

@@ -15,4 +15,3 @@ for i in range(n):
             v += 1
 
 print(u * az + v * ao - u * v)
-

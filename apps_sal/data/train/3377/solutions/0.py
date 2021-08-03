@@ -1,6 +1,7 @@
 def solve(time):
     def number(n):
-        if n > 20: return "twenty {}".format(number(n - 20))
+        if n > 20:
+            return "twenty {}".format(number(n - 20))
         return [
             None, "one", "two", "three", "four",
             "five", "six", "seven", "eight", "nine",
@@ -23,4 +24,3 @@ def solve(time):
         return "half past {}".format(hour)
     return "{} minute{} {} {}".format(
         number(minutes), "" if minutes == 1 else "s", direction, hour)
-

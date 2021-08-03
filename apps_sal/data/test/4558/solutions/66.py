@@ -1,2 +1,2 @@
-a,b = map(int,input().split())
-print((a-b,0)[a<b])
+a, b = map(int, input().split())
+print((a - b, 0)[a < b])

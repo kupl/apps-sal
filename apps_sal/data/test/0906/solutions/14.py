@@ -1,13 +1,15 @@
 def f(b, e, m):
     result = 1
     while e != 0:
-        if (e&1) == 1:
+        if (e & 1) == 1:
             # ei = 1, then mul
             result = (result * b) % m
         e >>= 1
         # b, b^2, b^4, b^8, ... , b^(2^n)
-        b = (b*b) % m
+        b = (b * b) % m
     return result
+
+
 a = [int(i) for i in input().split()]
 n, m, k = a[0], a[1], a[2]
 if k == -1:

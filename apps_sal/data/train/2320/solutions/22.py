@@ -5,4 +5,3 @@ for i in range(n):
     d[b[i][0]] = a[i]
 for i in range(n):
     print(d[i], end=' ')
-

@@ -4,6 +4,7 @@ from os.path import commonprefix
 
 first = itemgetter(0)
 
+
 def radix_tree(*words):
     words = [w for w in words if w]
     result = {}

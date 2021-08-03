@@ -21,4 +21,3 @@ else:
     answer = count_start
 
 print(answer)
-

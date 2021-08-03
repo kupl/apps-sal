@@ -3,9 +3,9 @@ import collections
 n = int(input())
 list = []
 for i in range(n):
-  x = input()
-  list.append(x)
-  
+    x = input()
+    list.append(x)
+
 c = collections.Counter(list)
 
 print("AC x {}".format(c['AC']))

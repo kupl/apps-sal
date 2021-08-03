@@ -4,9 +4,9 @@ vasya = input()
 row = int(vasya[:-1]) - 1
 seat = vasya[-1]
 seconds = 0
-if row % 4 == 0 or row % 4 == 2: seconds += (row//4) * 16
-else: seconds += (row//4) * 16 + 7
+if row % 4 == 0 or row % 4 == 2:
+    seconds += (row // 4) * 16
+else:
+    seconds += (row // 4) * 16 + 7
 seconds += seat_secs[seat]
 print(seconds)
-
-

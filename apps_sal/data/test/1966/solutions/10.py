@@ -5,10 +5,11 @@ def read_data():
         a = []
         for i in range(n):
             a.append(input().strip())
-        if j<3:
+        if j < 3:
             input().strip()
         pieces.append(a)
     return n, pieces
+
 
 def solve():
     counts = []
@@ -17,12 +18,12 @@ def solve():
         sum = 0
         for i in range(n):
             for j in range(n):
-                if ord(piece[i][j])-48 == cur:
+                if ord(piece[i][j]) - 48 == cur:
                     sum += 1
                 cur += 1
                 cur %= 2
         counts.append(sum)
-    max= n*n
+    max = n * n
     counts.sort()
     sum = 0
     for i in range(4):
@@ -31,6 +32,7 @@ def solve():
         else:
             sum += max - counts[i]
     return sum
+
 
 n, pieces = read_data()
 print(solve())

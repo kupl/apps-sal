@@ -22,7 +22,7 @@ def main():
     # ここから2枚ずつ3回抜けるか判定するなら、
     # sum(E) >= 2 * 3 = 6
     # であるか見ればよい。今回の場合ちょうど6なので、2枚ずつ3回は抜ける。
-    
+
     # 3枚ずつ2回ぬけるか調べる場合、
     # E = [2 2 1] となり、sum(E) = 5 < 3 * 2 = 6 なので、抜けないことが分かる
 
@@ -44,13 +44,13 @@ def main():
     # K+1のとき、Kでの答えの位置から0へと探索していけば、O(N)で答えが見つかる
     S = [0] * (N + 1)
     f = [0] * (N + 1)
-    for x in range(1, N+1):
-        S[x] = S[x-1] + D[x]
+    for x in range(1, N + 1):
+        S[x] = S[x - 1] + D[x]
         f[x] = S[x] // x
 
     ans = []
     prev_ans = N
-    for K in range(1, N+1):
+    for K in range(1, N + 1):
         a = prev_ans
         while True:
             if f[a] >= K or a == 0:
@@ -61,6 +61,9 @@ def main():
 
     print(*ans, sep='\n')
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

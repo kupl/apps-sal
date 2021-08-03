@@ -6,5 +6,4 @@ def kebabize(string):
         if i.islower():
             a += i
     return a.strip('-')
-    #your code here
-
+    # your code here

@@ -4,6 +4,6 @@ def cube_odd(arr):
         if type(i) == bool or type(i) == str:
             return None
         else:
-            if i%2==1:
+            if i % 2 == 1:
                 s += i**3
     return s

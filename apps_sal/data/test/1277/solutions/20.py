@@ -1,13 +1,13 @@
+from queue import Queue
 n, u, v = map(int, input().split())
-u, v = u-1, v-1
+u, v = u - 1, v - 1
 
 tree = [[] for _ in range(n)]
-for _ in range(n-1):
+for _ in range(n - 1):
     a, b = map(int, input().split())
-    tree[a-1].append(b-1)
-    tree[b-1].append(a-1)
+    tree[a - 1].append(b - 1)
+    tree[b - 1].append(a - 1)
 
-from queue import Queue
 
 # 青木君によるWFS
 aoki = [-1 for _ in range(n)]

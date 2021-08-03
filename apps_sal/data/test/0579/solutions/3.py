@@ -1,7 +1,7 @@
 n, k = map(int, input().split())
 p = list(map(int, input().split()))
 _c = list(map(int, input().split()))
-c = [0]*n
+c = [0] * n
 for i in range(n):
     p[i] -= 1
     c[i] = _c[p[i]]
@@ -11,17 +11,17 @@ vertex = list()
 score = list()
 vertex.append(p)
 score.append(c)
-for a in range(1, m+1):
+for a in range(1, m + 1):
     p_ath = [0] * n
     c_ath = [0] * n
     for i in range(n):
-        p_ath[i] = vertex[a-1][vertex[a-1][i]]
-        c_ath[i] = score[a-1][i] + score[a-1][vertex[a-1][i]]
+        p_ath[i] = vertex[a - 1][vertex[a - 1][i]]
+        c_ath[i] = score[a - 1][i] + score[a - 1][vertex[a - 1][i]]
     vertex.append(p_ath)
     score.append(c_ath)
-    
+
 prv = [[MIN, 0] for _ in range(n)]
-nxt = [[MIN, MIN] for _ in range(n)] 
+nxt = [[MIN, MIN] for _ in range(n)]
 for b in range(m, -1, -1):
     for i in range(n):
         if (k >> b) & 1:

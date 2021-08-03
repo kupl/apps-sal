@@ -1,4 +1,4 @@
-def between(a,b):
+def between(a, b):
     arr = [a]
     while a < b:
         a += 1

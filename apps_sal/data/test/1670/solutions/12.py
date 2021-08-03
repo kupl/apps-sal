@@ -12,17 +12,16 @@ for i in range(n):
     m = int(info[2])
     card = info[3]
 
-    if team=='h': td = 0
-    else: td = 1
-    
-    if foul[td][m]>=2: continue
-    if card=='y': foul[td][m] += 1
-    else: foul[td][m] += 2
-    if foul[td][m]>=2:
+    if team == 'h':
+        td = 0
+    else:
+        td = 1
+
+    if foul[td][m] >= 2:
+        continue
+    if card == 'y':
+        foul[td][m] += 1
+    else:
+        foul[td][m] += 2
+    if foul[td][m] >= 2:
         print('{0} {1} {2}'.format(teamname[td], m, t))
-
-    
-        
-        
-
-

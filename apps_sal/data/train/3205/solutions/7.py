@@ -1,2 +1,2 @@
-def is_divisible(n,x,y):
+def is_divisible(n, x, y):
     return (n % x == 0) & (n % y == 0)

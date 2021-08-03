@@ -1,6 +1,6 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
-        
+
         # rating.sort()
         def ascend(nums, curLargest, count):
             if count == 3:
@@ -10,9 +10,9 @@ class Solution:
             total = 0
             for i in range(len(nums)):
                 if nums[i] > curLargest:
-                    total += ascend(nums[i+1:], nums[i], count+1)
+                    total += ascend(nums[i + 1:], nums[i], count + 1)
             return total
-        
+
         def descend(nums, curSmallest, count):
             if count == 3:
                 return 1
@@ -21,10 +21,7 @@ class Solution:
             total = 0
             for i in range(len(nums)):
                 if nums[i] < curSmallest:
-                    total += descend(nums[i+1:], nums[i], count+1)
+                    total += descend(nums[i + 1:], nums[i], count + 1)
             return total
-        
-        return ascend(rating, 0, 0) + descend(rating, float('inf'), 0)
-                
-            
 
+        return ascend(rating, 0, 0) + descend(rating, float('inf'), 0)

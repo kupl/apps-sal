@@ -1,5 +1,6 @@
 import random
 
+
 class RollingHash(object):
     def __init__(self, S: str, MOD: int = 998244353, BASE: int = 37):
         self.S = S
@@ -9,7 +10,7 @@ class RollingHash(object):
         self.S_arr = [ord(x) for x in S]
 
         self.POWER = [1] * (N + 1)
-        self.HASH  = [0] * (N + 1)
+        self.HASH = [0] * (N + 1)
         p, h = 1, 0
         for i in range(N):
             self.POWER[i + 1] = p = (p * BASE) % MOD
@@ -27,17 +28,20 @@ class RollingHash(object):
 # search_max: check_func(x) = true となるxの"最大値"を探索する場合はTrue
 # check_func: search_max = False の場合、answer <= x であればcheck_func(x) = true となるような関数
 #             search_max = True  の場合、x <= answer であればcheck_func(x) = true となるような関数
-def binary_search(left: int, right: int, check_func, search_max:bool=False):
+
+
+def binary_search(left: int, right: int, check_func, search_max: bool = False):
     # ok と ng のどちらが大きいかわからないことを考慮
     while abs(right - left) > 1:
         mid = (left + right) // 2
-    
+
         if check_func(mid) ^ search_max:
             right = mid
         else:
             left = mid
 
     return left if search_max else right
+
 
 def main():
     N = int(input())
@@ -50,10 +54,11 @@ def main():
     D = [0] * N
     # 長さLの部分文字列同士が、範囲を重ねず同じ文字列となる場合はTrue,
     # そうでない場合はFalseを返す関数
+
     def isOK(L):
         if L == 0:
             return True
-        
+
         for i in range(min(L, N - 2 * L + 1)):
             D[i] = rs.hash(i, i + L)
         hashes = set()
@@ -72,6 +77,9 @@ def main():
     ans = binary_search(0, N // 2 + 1, isOK, search_max=True)
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

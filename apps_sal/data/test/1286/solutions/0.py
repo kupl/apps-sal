@@ -16,5 +16,5 @@ if parity:
     p %= MOD
 else:
     p = (q - 1) * antithree
-    p %= MOD    
-print(p, q, sep = '/')
+    p %= MOD
+print(p, q, sep='/')

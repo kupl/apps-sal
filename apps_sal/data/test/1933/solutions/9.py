@@ -11,8 +11,8 @@ def main():
     for i in range(m):
         window = count1(matr[i][:k])
         row_scores = []
-        for j in range(k, n+k):
-            if matr[i][j-k] == '1':
+        for j in range(k, n + k):
+            if matr[i][j - k] == '1':
                 row_scores.append(window)
                 window -= 1
             else:
@@ -35,5 +35,6 @@ def count1(lst):
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -11,11 +11,9 @@ for n in range(N):
         s += incre
     if curM == None:
         curM = s
-        
+
     else:
         if curM > s:
             ans = n
             curM = s
-print(ans + 1) 
-        
-
+print(ans + 1)

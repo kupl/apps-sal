@@ -6,8 +6,7 @@ class Solution:
                 maxcb[ch] = max(maxcb[ch], cb[ch])
         ans = []
         for a in A:
-            ca = Counter(a) 
+            ca = Counter(a)
             if all(ca[ch] >= maxcb[ch] for ch in maxcb):
                 ans.append(a)
-        return ans        
-
+        return ans

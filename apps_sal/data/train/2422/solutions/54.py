@@ -3,11 +3,10 @@ class Solution:
         s = set([])
         m = 0
         for num in nums:
-            x = num-1
+            x = num - 1
             for y in s:
-                p = x*y
-                if m<p:
+                p = x * y
+                if m < p:
                     m = p
             s.add(x)
         return m
-

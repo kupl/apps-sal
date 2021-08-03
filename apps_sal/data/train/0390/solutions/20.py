@@ -1,4 +1,4 @@
- 
+
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
         @lru_cache(maxsize=None)
@@ -9,6 +9,5 @@ class Solution:
             for i in range(1, square_root + 1):
                 if not dfs(n - i * i):
                     return True
-            return False                  
+            return False
         return dfs(n)
-

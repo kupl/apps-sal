@@ -7,7 +7,7 @@ for i in range(n):
 p = False
 
 for i in range(2**n):
-    k = ('0'*20 + str(bin(i))[2:])[-n:]
+    k = ('0' * 20 + str(bin(i))[2:])[-n:]
 
     total = 0
     for j in range(n):
@@ -16,11 +16,10 @@ for i in range(2**n):
         else:
             total -= l[j]
 
-    if (total%360 == 0):
+    if (total % 360 == 0):
         p = True
 
 if p:
     print('YES')
 else:
     print('NO')
-

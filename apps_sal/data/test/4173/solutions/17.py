@@ -1,15 +1,18 @@
-from sys import stdin,stdout
+from sys import stdin, stdout
 #from collections import defaultdict as dd
-inp=lambda :(int(o) for o in  stdin.readline().split())
-sinp=lambda:(o for o in  stdin.readline().split())
-out=lambda: stdout.write(str())
-I=lambda:map(int,input().split())
-Y=lambda:int(input())
-#print(inp())    #generator object
+def inp(): return (int(o) for o in stdin.readline().split())
+def sinp(): return (o for o in stdin.readline().split())
+def out(): return stdout.write(str())
+
+
+def I(): return map(int, input().split())
+def Y(): return int(input())
+# print(inp())    #generator object
+
 
 for _ in range(int(input())):
-    n,a,b=I()
-    if 2*a<b:
-        print(n*a)
+    n, a, b = I()
+    if 2 * a < b:
+        print(n * a)
     else:
-        print((n//2)*b+(n%2)*a)
+        print((n // 2) * b + (n % 2) * a)

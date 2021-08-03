@@ -8,4 +8,3 @@ if b in AT:
 else:
     CG.remove(b)
     print((*CG))
-

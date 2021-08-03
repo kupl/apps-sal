@@ -1,5 +1,5 @@
 n = int(input())
-x = [ int(i) for i in input().split() ][::-1]
+x = [int(i) for i in input().split()][::-1]
 
 y = set()
 
@@ -13,5 +13,4 @@ for i in x:
 yy = yy[::-1]
 print(len(yy))
 for i in yy:
-    print(i,end=" ")
-
+    print(i, end=" ")

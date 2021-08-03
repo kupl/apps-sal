@@ -8,8 +8,6 @@ for i in range(n):
     while not visited[i]:
         visited[i] = True
         i = pointers[i]
-    results.append(str(i+1))
+    results.append(str(i + 1))
 
 print(' '.join(results))
-
-

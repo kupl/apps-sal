@@ -9,4 +9,3 @@ def count_coin_maximum():
 
 
 print((count_coin_maximum()))
-

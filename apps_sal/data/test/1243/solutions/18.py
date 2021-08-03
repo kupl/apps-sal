@@ -17,6 +17,4 @@ for i in a:
 print(ans)
 
 
-
 # Made By Mostafa_Khaled
-

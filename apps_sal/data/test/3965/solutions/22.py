@@ -4,7 +4,7 @@
 from collections import Counter
 
 N = int(input())
-patterns = list(map(int,input().split()))
+patterns = list(map(int, input().split()))
 
 vowels = []
 for n in range(N):
@@ -16,5 +16,3 @@ if vowels == patterns:
     print('YES')
 else:
     print('NO')
-        
-

@@ -26,4 +26,3 @@ while q:
             break
 if w:
     print((0))
-

@@ -9,8 +9,6 @@ def main():
         print(abs(x1 - x2) + abs(y1 - y2) + 2)
 
 
-
 # for _ in range(1):
 for _ in range(int(input())):
     main()
-

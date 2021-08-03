@@ -1,4 +1,4 @@
-A = [list(map(int,input().split())) for i in range(3)]
+A = [list(map(int, input().split())) for i in range(3)]
 N = int(input())
 sheet = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 for i in range(N):
@@ -22,10 +22,10 @@ for i in range(3):
         return
 
 if sheet[0][0] == sheet[1][1] == sheet[2][2] == 1:
-        print('Yes')
-        return
+    print('Yes')
+    return
 if sheet[0][2] == sheet[1][1] == sheet[2][0] == 1:
-        print('Yes')
-        return
+    print('Yes')
+    return
 else:
     print('No')

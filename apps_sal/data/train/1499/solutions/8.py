@@ -1,31 +1,30 @@
 for _ in range(int(input())):
- n, m = list(map(int, input().split()))
- a = [input().split() for _ in range(n)]
- s = input()
- p, q = list(map(int, input().split()))
+    n, m = list(map(int, input().split()))
+    a = [input().split() for _ in range(n)]
+    s = input()
+    p, q = list(map(int, input().split()))
 
- t = 0
+    t = 0
 
- for i, j in enumerate(s):
-  c = 0
+    for i, j in enumerate(s):
+        c = 0
 
-  if i >= m:
-   x = i-m+1
-   y = m-1
-  else:
-   x = 0
-   y = i
+        if i >= m:
+            x = i - m + 1
+            y = m - 1
+        else:
+            x = 0
+            y = i
 
-  f = 0
+        f = 0
 
-  while 0 <= x < n and 0 <= y < m:
-   c += a[x][y] != j
-   f += 1
+        while 0 <= x < n and 0 <= y < m:
+            c += a[x][y] != j
+            f += 1
 
-   x += 1
-   y -= 1
+            x += 1
+            y -= 1
 
-  t += min(c * p, p * (f-c) + q)
+        t += min(c * p, p * (f - c) + q)
 
- print(t)
-
+    print(t)

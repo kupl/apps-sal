@@ -1,7 +1,8 @@
 class Solution:
     def distinctEchoSubstrings(self, text: str) -> int:
-        
+
         echos = set()
+
         def find_echos(suffix):
             n = len(suffix)
             z = [0] * n
@@ -14,13 +15,15 @@ class Solution:
                 if i + z[i] - 1 > r:
                     l, r = i, i + z[i] - 1
             for half in range(1, 1 + (n // 2)):
-                if z[half] >= half: echos.add(suffix[:2*half])
-        
+                if z[half] >= half:
+                    echos.add(suffix[:2 * half])
+
         for i in range(len(text) - 1):
             find_echos(text[i:])
-            
+
         return len(echos)
-        
+
+
 '''
 
 aaaaaaaaaa

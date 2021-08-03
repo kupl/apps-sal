@@ -6,7 +6,9 @@ def dfs(a, b, v, e):
         if not v[x] and dfs(x, b, v, e):
             return True
     return False
-a, e = [], []    
+
+
+a, e = [], []
 for i in range(int(input())):
     t, x, y = map(int, input().split())
     if t == 1:

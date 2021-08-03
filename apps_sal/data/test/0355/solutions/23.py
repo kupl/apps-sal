@@ -21,4 +21,3 @@ if (7 - bmin < wmin):
     print("B")
 else:
     print("A")
-

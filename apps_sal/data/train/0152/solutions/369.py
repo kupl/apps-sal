@@ -3,6 +3,7 @@ class Solution:
         start = 0
         position.sort()
         end = position[-1]
+
         def good(x):
             s = -1e100
             count = 0

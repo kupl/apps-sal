@@ -4,7 +4,7 @@ d = True
 for i in range(100):
     if d and n > 0:
         if m % (n ** (a + 1)) == n ** a:
-            m  -= n ** a
+            m -= n ** a
             a += 1
         elif m % (n ** (a + 1)) == 0:
             a += 1
@@ -16,4 +16,3 @@ for i in range(100):
             print("NO")
 if d:
     print("YES")
-

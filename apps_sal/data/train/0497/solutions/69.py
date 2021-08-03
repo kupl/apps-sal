@@ -1,7 +1,7 @@
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         time_line, sz, time_mapping, f = [], len(profit), {}, [0] * (2 * len(profit))
-        for i in range(sz): 
+        for i in range(sz):
             time_line.append((startTime[i], sz))
             time_line.append((endTime[i], i))
         for index, entry in enumerate(sorted(time_line)):

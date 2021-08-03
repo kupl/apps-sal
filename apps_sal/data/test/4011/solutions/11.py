@@ -20,4 +20,3 @@ if ok:
     for i in range(i1, i2):
         a1[i] = a2[i]
 print(''.join(map(str, a1)))
-

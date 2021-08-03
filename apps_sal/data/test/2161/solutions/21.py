@@ -14,7 +14,7 @@ for i in range(n):
         if not name in book:
             book[name] = [ph]
             continue
-        f= True
+        f = True
         for j in range(len(book[name])):
             if len(book[name][j]) <= len(ph) and ph.rfind(book[name][j]) + len(book[name][j]) == len(ph):
                 book[name][j] = ph
@@ -31,5 +31,3 @@ for name in book:
     for ph in book[name]:
         print(ph + '', end=' ')
     print()
-    
-

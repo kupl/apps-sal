@@ -1,6 +1,7 @@
 from itertools import permutations
 import heapq
 
+
 def dijkstra(N, G, s):
     INF = 10**40
     d = [INF] * N
@@ -42,4 +43,3 @@ def main():
 
 
 print((main()))
-

@@ -8,4 +8,4 @@ for i in range(n):
     else:
         t = t + a[i] * (m - i)
 
-print( t )
+print(t)

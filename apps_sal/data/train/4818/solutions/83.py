@@ -7,4 +7,3 @@ def solution(a, b):
     else:
         answer = a + b + a
         return answer
-

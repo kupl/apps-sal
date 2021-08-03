@@ -25,4 +25,3 @@ while cnt < n:
             bomb += HP
             heappush(actions, (a + 2 * d, 1, HP))
 print(bomb)
-

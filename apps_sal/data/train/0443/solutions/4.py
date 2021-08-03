@@ -14,6 +14,4 @@ class Solution:
                     thirdChoice = rating[k]
                     if (firstChoice < secondChoice < thirdChoice) or (firstChoice > secondChoice > thirdChoice):
                         count += 1
-        return count        
-            
-
+        return count

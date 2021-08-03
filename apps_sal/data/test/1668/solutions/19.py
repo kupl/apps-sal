@@ -14,14 +14,13 @@ for t in range(T):
         for i in range(4):
             tVal = int(c[i])
             for j in range(1, 10):
-                c = c[:i] + str((tVal + j)%10) + c[i+1:]
+                c = c[:i] + str((tVal + j) % 10) + c[i + 1:]
                 if c not in V:
                     V.add(c)
                     break
             else:
-                c = c[:i] + str(tVal) + c[i+1:]
+                c = c[:i] + str(tVal) + c[i + 1:]
                 continue
             break
         Ans[pos] = c
-    print(len(coll), *Ans, sep = '\n')
-
+    print(len(coll), *Ans, sep='\n')

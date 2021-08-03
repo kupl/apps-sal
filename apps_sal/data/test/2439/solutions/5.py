@@ -1,6 +1,6 @@
 def solve():
     n = int(input())
-    lst = list(map(int,input().split()))
+    lst = list(map(int, input().split()))
     if sum(lst) == 0:
         print("NO")
         return 0
@@ -10,5 +10,7 @@ def solve():
     else:
         lst.sort()
     print(*lst)
+
+
 for i in range(int(input())):
     solve()

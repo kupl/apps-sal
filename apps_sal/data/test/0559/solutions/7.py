@@ -83,11 +83,11 @@ class Combination:
         if n < r:
             return 0
         return (
-                self._factorials[n]
-                * self._finvs[r]
-                % self._mod
-                * self._finvs[n - r]
-                % self._mod
+            self._factorials[n]
+            * self._finvs[r]
+            % self._mod
+            * self._finvs[n - r]
+            % self._mod
         )
 
 
@@ -132,4 +132,3 @@ for j, a in enumerate(A):
     B[-1] += 1
     B %= P
 print((*B[::-1]))
-

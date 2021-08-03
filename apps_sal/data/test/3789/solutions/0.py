@@ -1,13 +1,13 @@
 from collections import deque
- 
- 
+
+
 class Dinic:
     def __init__(self, n: int):
         """頂点数をnとする"""
         self.INF = float("inf")
         self.n = n
         self.graph = [[] for _ in range(n)]
- 
+
     def add_edge(self, _from: int, to: int, capacity: int):
         """残余グラフを構築
         1. _fromからtoへ向かう容量capacityの辺をグラフに追加する
@@ -17,7 +17,7 @@ class Dinic:
         forward[2] = backward = [_from, 0, forward]
         self.graph[_from].append(forward)
         self.graph[to].append(backward)
- 
+
     def bfs(self, s: int, t: int):
         """capacityが正の辺のみを通ってsからtに移動可能かどうかBFSで探索
         level: sからの最短路の長さ
@@ -31,7 +31,7 @@ class Dinic:
                 if capacity > 0 and self.level[to] < 0:
                     self.level[to] = self.level[_from] + 1
                     q.append(to)
- 
+
     def dfs(self, _from: int, t: int, f: int) -> int:
         """流量が増加するパスをDFSで探索
         BFSによって作られた最短路に従ってfを更新する
@@ -47,7 +47,7 @@ class Dinic:
                     reverse_edge[1] += d
                     return d
         return 0
- 
+
     def max_flow(self, s: int, t: int):
         """s-tパス上の最大流を求める
         計算量: O(|E||V|^2)
@@ -64,6 +64,7 @@ class Dinic:
                 f = self.dfs(s, t, self.INF)
         return flow
 
+
 n = int(input())
 a = list(map(int, input().split()))
 
@@ -73,18 +74,18 @@ t = n + 1
 _sum = 0
 for i in range(0, n):
     if a[i] > 0:
-        dinic.add_edge(s, i+1, 0)
-        dinic.add_edge(i+1, t, a[i])
+        dinic.add_edge(s, i + 1, 0)
+        dinic.add_edge(i + 1, t, a[i])
         _sum += a[i]
     elif a[i] < 0:
-        dinic.add_edge(s, i+1, -a[i])
-        dinic.add_edge(i+1, t, 0)
+        dinic.add_edge(s, i + 1, -a[i])
+        dinic.add_edge(i + 1, t, 0)
     else:
-        dinic.add_edge(s, i+1, 0)
-        dinic.add_edge(i+1, t, 0)
+        dinic.add_edge(s, i + 1, 0)
+        dinic.add_edge(i + 1, t, 0)
 
 for i in range(n):
-    num = i+1
+    num = i + 1
     next_num = 2 * num
     while next_num <= n:
         dinic.add_edge(num, next_num, 10**18)

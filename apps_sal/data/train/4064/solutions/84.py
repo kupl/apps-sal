@@ -8,4 +8,3 @@ def count_by(x, n):
         k = k + x
         w.append(k)
     return w
-

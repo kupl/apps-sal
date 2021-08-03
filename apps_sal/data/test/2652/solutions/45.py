@@ -49,7 +49,7 @@ def clascal(N, E, tree_count=1):
     counter = 0
     # E[w, A, B]
     for e in sorted(E):
-        if counter >= N-1:
+        if counter >= N - 1:
             break
         if tree.ifSame(e[1], e[2]):
             continue
@@ -72,8 +72,7 @@ X.sort()
 Y.sort()
 diff = []
 for i in range(N - 1):
-    diff.append((X[i + 1][0] - X[i][0], X[i][1], X[i+1][1]))
+    diff.append((X[i + 1][0] - X[i][0], X[i][1], X[i + 1][1]))
     diff.append((Y[i + 1][0] - Y[i][0], Y[i][1], Y[i + 1][1]))
 diff.sort()
 print((clascal(N, diff)))
-

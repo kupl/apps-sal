@@ -1,5 +1,6 @@
 from bisect import bisect_left
 
+
 def yoga(a, b):
     c = []
     for x in a:

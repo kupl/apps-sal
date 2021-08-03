@@ -20,15 +20,13 @@ class Solution:
             return sum_ - sum(vals[False])
         return 0
 
-
-
     def min_two(self, l):
         if not l:
             return []
         idx = [i for i in range(len(l))]
-        out = [min(idx, key = lambda i: l[i])]
+        out = [min(idx, key=lambda i: l[i])]
         idx.pop(out[0])
         if idx:
-            out.append(min(idx, key = lambda i: l[i]))
+            out.append(min(idx, key=lambda i: l[i]))
 
         return [l[i] for i in out]

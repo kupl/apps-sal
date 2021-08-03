@@ -5,5 +5,6 @@ def super_pad(string, width, fill=" "):
         pad = (width * fill[1:])[:max(0, width - len(string) + 1) // 2]
         return (pad + string + pad)[:width]
     else:
-        if fill.startswith('<'): fill = fill[1:]
+        if fill.startswith('<'):
+            fill = fill[1:]
         return (width * fill)[:max(0, width - len(string))] + string[max(0, len(string) - width):]

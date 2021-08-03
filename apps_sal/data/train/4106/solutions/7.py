@@ -1,5 +1,6 @@
 from itertools import count
 
+
 def self_converge(p):
     width = len(str(p))
     previous = set()
@@ -12,4 +13,3 @@ def self_converge(p):
             return i
         p = n
         previous.add(n)
-

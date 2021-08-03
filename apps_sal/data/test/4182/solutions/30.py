@@ -7,4 +7,3 @@ if max(xs) < min(ys):
     print("No War")
 else:
     print("War")
-

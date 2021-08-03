@@ -1,8 +1,8 @@
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 for i in range(m):
     a = list(map(int, input().split()))
     s = set()
-    for i in range(1,len(a)):
+    for i in range(1, len(a)):
         s.add(a[i])
     k = list(s)
     isok = 0
@@ -13,7 +13,3 @@ for i in range(m):
         print("YES")
         return
 print("NO")
-            
-        
-    
-

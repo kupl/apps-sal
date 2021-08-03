@@ -8,7 +8,7 @@ class Solution:
             for j in range(i):
                 x = 2 * A[j] - A[i]
                 if x in pos:
-                    dp[i][j] = max(dp[i][j],1 + dp[j][pos[x]])
-                ans = max(ans,dp[i][j])
+                    dp[i][j] = max(dp[i][j], 1 + dp[j][pos[x]])
+                ans = max(ans, dp[i][j])
                 pos[A[j]] = j
         return ans

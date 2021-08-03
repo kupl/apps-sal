@@ -29,4 +29,3 @@ ans = 0
 for diff in range(1, N // 2 + 1):
     ans = max(ans, count_max(diff))
 print(ans)
-

@@ -8,9 +8,10 @@ class Solution:
                 else:
                     ans += '1'
             return ans
+
         def helper(n):
             if n == 1:
                 return '0'
             res = helper(n - 1)
             return res + '1' + revert(res)[::-1]
-        return helper(n)[k-1]
+        return helper(n)[k - 1]

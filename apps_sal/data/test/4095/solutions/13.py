@@ -1,6 +1,7 @@
 def readints():
     return [int(x) for x in input().strip().split()]
 
+
 def main():
     n, m = readints()
     p = readints()
@@ -27,12 +28,13 @@ def main():
         if p[i] < m:
             diff -= 1
 
-        ans += sums.get(-diff, 0) + sums.get(1-diff, 0)
+        ans += sums.get(-diff, 0) + sums.get(1 - diff, 0)
 
     print(ans)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

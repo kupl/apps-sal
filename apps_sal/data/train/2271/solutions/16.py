@@ -36,6 +36,7 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 def main():
     n, m = list(map(int, input().split()))
     P = list([int(x) - 1 for x in input().split()])
@@ -49,7 +50,9 @@ def main():
             ans += 1
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

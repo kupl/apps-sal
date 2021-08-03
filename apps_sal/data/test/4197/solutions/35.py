@@ -1,7 +1,7 @@
 n = int(input())
-a = list(map(int,input().split()))
-ans = [0]*n
+a = list(map(int, input().split()))
+ans = [0] * n
 for i in range(n):
-  ans[a[i]-1] = i+1
+    ans[a[i] - 1] = i + 1
 for i in range(n):
-  print(ans[i],end=" ")
+    print(ans[i], end=" ")

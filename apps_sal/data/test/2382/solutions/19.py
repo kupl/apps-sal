@@ -58,4 +58,3 @@ if solve():
     print('Yes')
 else:
     print('No')
-

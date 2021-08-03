@@ -3,6 +3,5 @@ def century(year):
 
 #             OR
 #import math
-#def century(year):
+# def century(year):
 #   return math.ceil(year / 100)
-

@@ -1,6 +1,7 @@
 from collections import Counter
 from re import compile, fullmatch
 
+
 class Checkout:
     offers = {
         compile('(\d+)for([.\d]+)'): lambda m: (lambda qty, price: qty // int(m[1]) * float(m[2]) + qty % int(m[1]) * price),
@@ -11,7 +12,8 @@ class Checkout:
     def _parse_sale(self, sale):
         for offer, func in list(self.offers.items()):
             match = offer.fullmatch(sale)
-            if match: return func(match)
+            if match:
+                return func(match)
 
     def __init__(self, sales=None):
         self.products = Counter()
@@ -25,8 +27,7 @@ class Checkout:
             return self.sales[product](self.products[product], get_price(product))
         except KeyError:
             return self.products[product] * get_price(product)
-        
+
     @property
     def total(self):
         return sum(self.calculate_cost(p) for p in self.products)
-

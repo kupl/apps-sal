@@ -6,8 +6,8 @@ answ = 0
 
 for k in incl:
     answ += n // k
-    
+
 for k in excl:
     answ -= n // k
-    
-print(n-answ)
+
+print(n - answ)

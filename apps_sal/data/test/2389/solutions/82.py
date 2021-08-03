@@ -1,5 +1,5 @@
 # greedyな選択：数字が小さいほうを増やし大きいほうを減らす。等しい場合どっちでもいい（とりあえず左を増やす）。
-# 
+#
 # 初手 1 1 1 なら絶対成功 (greedy)
 # どこかの状態で 1 1 1 を作れるなら絶対成功 (greedy)
 # 0 1 2 なら絶対成功 (greedy)
@@ -32,13 +32,14 @@ def select(x, y, ops, i, z):
     # 先読みして xy なら y を増やす
     # 先読みして xy なら どっちでもいい
     op = ops[i]
-    nop = ops[i+1]
+    nop = ops[i + 1]
 
     oo = (op, nop)
     if oo in [("AB", "AC"), ("BC", "AB"), ("AC", "AB")]:
         return True
 
     return False
+
 
 def main():
     nabc = [int(_x) for _x in input().split()]
@@ -57,31 +58,31 @@ def main():
         if op == "AB":
             if select(a, b, ops, i, c):
                 result.append("A")
-                a+=1
-                b-=1
+                a += 1
+                b -= 1
             else:
                 result.append("B")
-                a-=1
-                b+=1
+                a -= 1
+                b += 1
         if op == "AC":
             if select(a, c, ops, i, b):
                 result.append("A")
-                a+=1
-                c-=1
+                a += 1
+                c -= 1
             else:
                 result.append("C")
-                a-=1
-                c+=1
+                a -= 1
+                c += 1
         if op == "BC":
             if select(b, c, ops, i, a):
                 result.append("B")
-                b+=1
-                c-=1
+                b += 1
+                c -= 1
             else:
                 result.append("C")
-                b-=1
-                c+=1
-        if a <0 or b<0 or c<0:
+                b -= 1
+                c += 1
+        if a < 0 or b < 0 or c < 0:
             print("No")
             return
 
@@ -89,5 +90,5 @@ def main():
     for r in result:
         print(r)
 
-main()
 
+main()

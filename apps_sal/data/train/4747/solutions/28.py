@@ -4,4 +4,5 @@ def repeat_str(repeat, string):
         repeated_words += string
     return repeated_words
 
+
 repeat_str(5, "a")

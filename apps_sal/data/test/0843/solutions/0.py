@@ -13,4 +13,3 @@ while True:
         print('INFINITE')
         return
     b[c] = True
-

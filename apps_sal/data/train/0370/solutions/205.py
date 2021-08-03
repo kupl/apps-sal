@@ -31,4 +31,3 @@ class Solution:
             cache[xp] = 1 + cache.get(xp, 0)
 
         return count
-

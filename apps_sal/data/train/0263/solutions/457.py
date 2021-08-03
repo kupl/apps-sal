@@ -1,7 +1,9 @@
 
 from functools import reduce
+
+
 class Solution:
-    
+
     validMoves = {
         0: {4, 6},
         1: {6, 8},
@@ -14,18 +16,18 @@ class Solution:
         8: {1, 3},
         9: {2, 4}
     }
-    
+
     def knightDialer(self, n: int) -> int:
-        cache = {} # from (remainingMoves, location) => numberOfPaths
-        
+        cache = {}  # from (remainingMoves, location) => numberOfPaths
+
         def reducer(acc: int, x: int) -> int:
-            return (acc + x) % 1000000007 #10^9+7
-        
+            return (acc + x) % 1000000007  # 10^9+7
+
         def helper(remainingMoves: int, location: int) -> int:
             depth = n - remainingMoves
             insert = '\\t' * depth
             # print('{}ENTER: at {} with {} remaining'.format('\\t' * (depth - 1), location, remainingMoves))
-            
+
             if remainingMoves == 0:
                 # print('{}Ran out of moves in location {}'.format(insert, location))
                 return 1
@@ -41,7 +43,7 @@ class Solution:
                     cache[(remainingMoves, location)] = reduced
                     # print('{}Calculated ({}, {}) = {}'.format(insert, remainingMoves, location, reduced))
                     return reduced
-        
-        answers = [helper(n-1, x) for x in range(0, 10)]
+
+        answers = [helper(n - 1, x) for x in range(0, 10)]
         reduced = reduce(reducer, answers, 0)
         return reduced

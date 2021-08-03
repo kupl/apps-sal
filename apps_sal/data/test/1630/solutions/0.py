@@ -28,6 +28,7 @@ for name in first.keys():
                 ans[i] = c
         first[name] = 0
 
+
 def process(name):
     nonlocal F
     if F == False:
@@ -44,12 +45,11 @@ def process(name):
             first[name] = 0
             if c in first.keys() and first[c] != 0:
                 process(c)
-                
 
 
 for name in first.keys():
     process(name)
-                
+
 
 if F:
     print('YES')

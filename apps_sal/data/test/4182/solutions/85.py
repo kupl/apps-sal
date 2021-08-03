@@ -23,7 +23,7 @@ q = city_b[0]
 
 check = False
 
-for i in range(x + 1, y+1):
+for i in range(x + 1, y + 1):
     if p < i <= q:
         check = True
         break
@@ -32,4 +32,3 @@ if check:
     print('No War')
 else:
     print('War')
-

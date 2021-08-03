@@ -1,1 +1,1 @@
-hamming_weight = lambda x: str(bin(x)).count('1')
+def hamming_weight(x): return str(bin(x)).count('1')

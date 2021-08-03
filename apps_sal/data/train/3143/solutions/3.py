@@ -1,19 +1,20 @@
 ones = {'0': 'zero', '1': 'one', '2': 'two', '3': 'three', '4': 'four',
-        '5': 'five', '6': 'six','7': 'seven', '8': 'eight', '9': 'nine' }
+        '5': 'five', '6': 'six', '7': 'seven', '8': 'eight', '9': 'nine'}
 
 teens = {'11': 'eleven', '12': 'twelve', '13': 'thirteen', '14': 'fourteen',
-         '15': 'fifteen', '16': 'sixteen', '17': 'seventeen', 
-         '18': 'eighteen', '19': 'nineteen' }
+         '15': 'fifteen', '16': 'sixteen', '17': 'seventeen',
+         '18': 'eighteen', '19': 'nineteen'}
 
-tens = { '1': 'ten', '2': 'twenty', '3': 'thirty', '4': 'forty', 
-         '5': 'fifty', '6': 'sixty', '7': 'seventy', '8': 'eighty', 
-         '9': 'ninety' }
+tens = {'1': 'ten', '2': 'twenty', '3': 'thirty', '4': 'forty',
+        '5': 'fifty', '6': 'sixty', '7': 'seventy', '8': 'eighty',
+        '9': 'ninety'}
 
-hundreds = {'100' : 'one hundred', '200' : 'two hundred',
-            '300' : 'three hundred', '400' : 'four hundred',
-            '500' : 'five hundred', '600' : 'six hundred',
-            '700' : 'seven hundred', '800' : 'eight hundred',
-            '900' : 'nine hundred'}
+hundreds = {'100': 'one hundred', '200': 'two hundred',
+            '300': 'three hundred', '400': 'four hundred',
+            '500': 'five hundred', '600': 'six hundred',
+            '700': 'seven hundred', '800': 'eight hundred',
+            '900': 'nine hundred'}
+
 
 def num_to_word(n):
 
@@ -29,7 +30,6 @@ def num_to_word(n):
     else:
         return ones[str_num]
 
-
     if n > 99:
         if second_digit == '0' and third_digit != '0':
             return '{} {}'.format(hundreds[first_digit], ones[third_digit])
@@ -41,7 +41,7 @@ def num_to_word(n):
             return '{} {}-{}'.format(hundreds[first_digit], tens[second_digit], ones[third_digit])
         else:
             return hundreds[str_num]
-            
+
     else:
         if n > 10 and n < 20:
             return teens[str_num]
@@ -50,9 +50,10 @@ def num_to_word(n):
         else:
             return tens[first_digit]
 
-int_to_word = {_ : num_to_word(_) for _ in range(1000)}                             
-word_to_int = {num_to_word(_) : _ for _ in range(1000)} 
+
+int_to_word = {_: num_to_word(_) for _ in range(1000)}
+word_to_int = {num_to_word(_): _ for _ in range(1000)}
+
 
 def sort_by_name(arr):
     return [word_to_int[word] for word in sorted(int_to_word[num] for num in arr)]
-

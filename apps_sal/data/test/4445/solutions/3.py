@@ -19,7 +19,6 @@ o = len(O)
 if e == o:
     print(0)
 elif e < o:
-    print(sum(O[:o-e-1]))
+    print(sum(O[:o - e - 1]))
 else:
-    print(sum(E[:e-o-1]))
-
+    print(sum(E[:e - o - 1]))

@@ -5,9 +5,9 @@ class Solution:
             while j >= 0 and grid[i][j] == 0:
                 j -= 1
             grid[i] = j
-            
+
         count = 0
-        
+
         for i in range(len(grid)):
             if grid[i] <= i:
                 continue

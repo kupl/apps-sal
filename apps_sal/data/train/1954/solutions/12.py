@@ -2,9 +2,9 @@ class Solution:
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
         n, m = len(req_skills), len(people)
         key = {v: i for i, v in enumerate(req_skills)}
-        
+
         @functools.lru_cache(None)
-        def helper(cur = 0):
+        def helper(cur=0):
             if cur == (1 << n) - 1:
                 return []
             ans = math.inf

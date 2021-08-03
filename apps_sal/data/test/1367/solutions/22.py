@@ -1,9 +1,9 @@
 n = int(input())
-watched = [False]*n
+watched = [False] * n
 for i in map(int, input().split()):
-    watched[i-1] = True
+    watched[i - 1] = True
 
 for i in range(n):
     if not watched[i]:
-        print(i+1)
+        print(i + 1)
         break

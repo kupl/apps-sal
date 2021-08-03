@@ -80,10 +80,3 @@ if k != 0:
 print(neighbours)
 for i in range(n):
     print(''.join(plain[i]))
-
-
-
-
-
-
-

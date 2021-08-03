@@ -31,13 +31,17 @@ def main():
     while h:
         t, ag, loc = heappop(h)
         for to, fare, dt in g[loc]:
-            if (n_Ag := ag - fare) < 0: continue
-            if time[to][n_Ag] <= (n_time := t + dt): continue
+            if (n_Ag := ag - fare) < 0:
+                continue
+            if time[to][n_Ag] <= (n_time := t + dt):
+                continue
             time[to][n_Ag] = n_time
             heappush(h, (n_time, n_Ag, to))
 
-        if (e_Ag := ag + exchange[loc][0]) > MX_AG: continue
-        if time[loc][e_Ag] <= (e_time := t + exchange[loc][1]): continue
+        if (e_Ag := ag + exchange[loc][0]) > MX_AG:
+            continue
+        if time[loc][e_Ag] <= (e_time := t + exchange[loc][1]):
+            continue
         time[loc][e_Ag] = e_time
         heappush(h, (e_time, e_Ag, loc))
 
@@ -48,5 +52,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

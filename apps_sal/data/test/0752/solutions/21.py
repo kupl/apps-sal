@@ -8,4 +8,3 @@ for i in ['M', 'S', 'XS', 'XXS', 'XXXS', 'L', 'XL', 'XXL', 'XXXL']:
         del A[A.index(i)]
         del B[B.index(i)]
 print(len(A))
-

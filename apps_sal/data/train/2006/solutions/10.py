@@ -9,8 +9,7 @@ g = 0
 for i in a:
     g = fractions.gcd(g, i)
 
-if (m//g - n) % 2 == 0:
+if (m // g - n) % 2 == 0:
     print('Bob')
 else:
     print('Alice')
-

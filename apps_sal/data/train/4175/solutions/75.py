@@ -1,5 +1,5 @@
 def repeater(string, n):
-  final = ""
-  for _ in range(n):
-    final += string
-  return final
+    final = ""
+    for _ in range(n):
+        final += string
+    return final

@@ -17,4 +17,3 @@ while x < m and y < m:
     result += tmp
     x = x + tmp * y
 print(result)
-

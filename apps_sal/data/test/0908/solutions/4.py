@@ -27,4 +27,3 @@ if ans == inf:
     print(-1)
 else:
     print(ans)
-

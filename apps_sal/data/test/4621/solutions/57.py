@@ -5,4 +5,3 @@ for i in range(h):
     c.append(s)
     c.append(s)
 print(("\n".join(c)))
-

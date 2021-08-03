@@ -31,4 +31,3 @@ for x, y in XY:
             x += d
 
     print(w)
-

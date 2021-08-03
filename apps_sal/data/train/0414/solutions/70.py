@@ -14,7 +14,7 @@ class Solution:
                 temp = arr[1]
                 arr.pop(1)
                 N = len(arr)
-                arr.insert(N,temp)
+                arr.insert(N, temp)
             else:
                 r = 1
                 if r == k:
@@ -22,6 +22,4 @@ class Solution:
                 temp = arr[0]
                 arr.pop(0)
                 N = len(arr)
-                arr.insert(N,temp)
-
-
+                arr.insert(N, temp)

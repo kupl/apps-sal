@@ -6,4 +6,3 @@ for _ in range(int(input())):
         if a[i] < b[i]:
             a[i], b[i] = b[i], a[i]
     print(sum(a))
-

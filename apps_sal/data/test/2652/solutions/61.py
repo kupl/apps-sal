@@ -2,13 +2,13 @@
 
 # Built?
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
 N = int(input())
 d = []
 
 for i in range(N):
     x, y = list(map(int, input().split()))
-    d.append((i+1, x, y))
+    d.append((i + 1, x, y))
 
 edge = []
 
@@ -16,10 +16,10 @@ edge = []
 
 d.sort(key=lambda x: x[1])
 
-for i in range(N-1):
+for i in range(N - 1):
     a, px, py = d[i]
-    b, qx, qy = d[i+1]
-    dis = abs(px-qx)
+    b, qx, qy = d[i + 1]
+    dis = abs(px - qx)
 
     edge.append((dis, a, b))
     edge.append((dis, b, a))
@@ -28,10 +28,10 @@ for i in range(N-1):
 
 d.sort(key=lambda x: x[2])
 
-for i in range(N-1):
+for i in range(N - 1):
     a, px, py = d[i]
-    b, qx, qy = d[i+1]
-    dis = abs(py-qy)
+    b, qx, qy = d[i + 1]
+    dis = abs(py - qy)
 
     edge.append((dis, a, b))
     edge.append((dis, b, a))
@@ -40,7 +40,7 @@ for i in range(N-1):
 class UnionFind():
     def __init__(self, n):
         self.n = n
-        self.parents = [-1] * (n+1)
+        self.parents = [-1] * (n + 1)
 
     def find(self, x):
         if self.parents[x] < 0:
@@ -84,8 +84,11 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 edge.sort()
 # 最小全域木（クラスかるほう）
+
+
 def kruskal():
     res = 0
     G = UnionFind(N)
@@ -99,4 +102,3 @@ def kruskal():
 ans = kruskal()
 
 print(ans)
-

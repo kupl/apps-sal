@@ -1,4 +1,7 @@
 # 参考URL https://note.nkmk.me/python-union-find/
+import sys
+
+
 class UnionFind():
     # parents
     # 各要素の親要素の番号を格納するリスト
@@ -31,9 +34,10 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-import sys
+
 def input():
     return sys.stdin.readline().strip()
+
 
 n, k, l = map(int, input().split())
 
@@ -41,10 +45,10 @@ road = UnionFind(n)
 rail = UnionFind(n)
 for _ in range(k):
     p, q = map(int, input().split())
-    road.union(p-1, q-1)
+    road.union(p - 1, q - 1)
 for _ in range(l):
     r, s = map(int, input().split())
-    rail.union(r-1, s-1)
+    rail.union(r - 1, s - 1)
 
 dic = {}
 l = []

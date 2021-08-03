@@ -48,8 +48,5 @@ def make_spanning_tree(edges, t):
         r = result[ri]
         if not r in edges_set:
             result[ri] = r[0][1] + r[0][0], r[1]
-            
 
     return result  # vertices of a spanning tree
-
-

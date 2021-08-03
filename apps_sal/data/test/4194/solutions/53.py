@@ -16,4 +16,3 @@ if N - sum(data) < 0:
     print((-1))
 else:
     print((N - sum(data)))
-

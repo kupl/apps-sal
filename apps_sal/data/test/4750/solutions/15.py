@@ -4,4 +4,3 @@ for _ in range(int(input())):
         print(la, lb)
     else:
         print(la, lb + 1)
-

@@ -1,4 +1,4 @@
-  
+
 a = int(input())
 s = input()
 

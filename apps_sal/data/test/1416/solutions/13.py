@@ -6,6 +6,6 @@ a = list(map(int, input().split()))
 s = sum(a)
 a.sort()
 
-ans = min(3*n*a[0], 3*n*a[n]/2, w)
+ans = min(3 * n * a[0], 3 * n * a[n] / 2, w)
 
 print(ans)

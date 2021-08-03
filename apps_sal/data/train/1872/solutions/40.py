@@ -6,6 +6,7 @@
 #         self.right = right
 from collections import deque
 
+
 class Solution:
     def maxLevelSum(self, root: TreeNode) -> int:
         if not root:
@@ -14,10 +15,10 @@ class Solution:
         mxlvl = 1
         if root.right is None and root.left is None:
             return 1
-        
+
         clvl = 2
         s = 0
-        
+
         q = deque()
         q.append((root.right, 2))
         q.append((root.left, 2))
@@ -41,4 +42,3 @@ class Solution:
             mx = s
             mxlvl = clvl
         return mxlvl
-

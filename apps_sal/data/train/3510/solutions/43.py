@@ -4,5 +4,5 @@ def count_red_beads(n):
         return counter
     else:
         for x in range(1, n):
-            counter +=2
+            counter += 2
         return counter

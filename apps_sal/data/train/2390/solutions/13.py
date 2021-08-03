@@ -2,7 +2,7 @@ t = int(input())
 
 while t > 0:
     n = int(input())
-    a = list(map(int,input().split()))
+    a = list(map(int, input().split()))
 
     P = (1 + n) * [0]
     for i in a:
@@ -18,7 +18,7 @@ while t > 0:
     m = len(b) - 1
     ans = 0
     take = b[m]
-    
+
     for i in range(m, -1, -1):
         if take < 0:
             break
@@ -30,5 +30,5 @@ while t > 0:
             take -= 1
 
     print(ans)
-    
+
     t -= 1

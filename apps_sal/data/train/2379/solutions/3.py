@@ -1,13 +1,13 @@
 for _ in range(int(input())):
     n = int(input())
     s = list(input())
-    
+
     result = [0] * n
-    
+
     ones = []
     zeroes = []
     current = 1
-    
+
     for i in range(n):
         if s[i] == '0':
             if len(zeroes) == 0:
@@ -29,6 +29,3 @@ for _ in range(int(input())):
                 zeroes.append(x)
     print(current - 1)
     print(*result)
-                
-                
-

@@ -7,4 +7,3 @@ for a in A:
         ans = -1
         break
 print(ans)
-

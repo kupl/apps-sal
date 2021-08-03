@@ -44,4 +44,3 @@ for i in range(H):
 M = [[-1] * W for i in range(H)]
 
 bfs(xs, ys, 0)
-

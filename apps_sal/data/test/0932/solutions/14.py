@@ -24,6 +24,5 @@ if tr:
     print('YES')
     for s in ans:
         for x in s:
-            print(x, end = ' ')
+            print(x, end=' ')
         print()
-

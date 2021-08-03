@@ -4,8 +4,7 @@ def fold_to(distance):
     thickness = 0.0001
     count = 0
     while thickness < distance:
-        thickness = thickness*2
-        count+=1
+        thickness = thickness * 2
+        count += 1
     return count
-    #end
-
+    # end

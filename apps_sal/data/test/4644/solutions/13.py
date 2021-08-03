@@ -3,11 +3,10 @@
 for _ in range(int(input())):
     n = int(input())
     a = [int(i) for i in input().split()]
-    
+
     if sum(a) % 2 == 1:
         print('YES')
-    
-    
+
     else:
         par = False
         impar = False
@@ -20,7 +19,3 @@ for _ in range(int(input())):
             print('YES')
         else:
             print('NO')
-            
-
-
-

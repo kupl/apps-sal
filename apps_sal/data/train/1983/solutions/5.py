@@ -1,11 +1,11 @@
 import numpy as np
 
+
 class ProductOfNumbers:
 
     def __init__(self):
         self.nums = []
         self.prods = np.array([])
-        
 
     def add(self, num: int) -> None:
         self.nums.append(num)
@@ -19,4 +19,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

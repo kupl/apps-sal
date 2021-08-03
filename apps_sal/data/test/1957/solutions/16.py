@@ -16,4 +16,3 @@ for i in range(len(blockable)):
         break
 
 print(blocked_no)
-

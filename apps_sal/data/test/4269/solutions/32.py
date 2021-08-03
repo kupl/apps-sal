@@ -14,6 +14,7 @@
     S は半角数字のみからなる長さ 4 の文字列
 '''
 
+
 def abc131a(s: str) -> str:
     if s[0] == s[1]:
         return 'Bad'
@@ -24,6 +25,6 @@ def abc131a(s: str) -> str:
     else:
         return 'Good'
 
+
 s = str(input())
 print((abc131a(s)))
-

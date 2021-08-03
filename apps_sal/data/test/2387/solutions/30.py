@@ -14,11 +14,12 @@ for i in range(N):
         else:
             state -= 1
         min_state = min(min_state, state)
-    
+
     if state > 0:
         list_plus.append((min_state, state))
     else:
         list_minus.append((min_state - state, -state))
+
 
 def compute(arr):
     total_state = 0
@@ -28,6 +29,7 @@ def compute(arr):
             return
         total_state += state
     return total_state
+
 
 list_plus.sort()
 total_state_plus = compute(list_plus)

@@ -3,5 +3,3 @@ length = list(map(int, input().split(' ')))
 length.sort(reverse=True)
 max_length = sum(length[:k])
 print(max_length)
-
-

@@ -8,4 +8,3 @@ for i in range(n - 1, -1, -1):
     minKillIndex = min(i - a[i], minKillIndex)
 
 print(alive)
-

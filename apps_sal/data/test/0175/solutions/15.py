@@ -13,4 +13,3 @@ while (n != 0 and m != 0) or (n >= 2 * m) or (m >= 2 * n):
         break
 
 print(n, m)
-

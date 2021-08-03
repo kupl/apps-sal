@@ -18,8 +18,7 @@ class Solution:
             start = start + 1
             end = end + 1
         return count
-            
-            
+
     def checkOdd(self, num):
         if num % 2 == 0:
             return False

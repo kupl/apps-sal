@@ -20,4 +20,3 @@ while ni < n and mi < m:
         mi += 1
 
 print(pairs)
-

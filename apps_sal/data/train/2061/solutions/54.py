@@ -54,4 +54,3 @@ for _ in range(t):
     buf.append(ans)
 
 print(('\n'.join(map(str, buf))))
-

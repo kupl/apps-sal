@@ -4,6 +4,7 @@ def set_color(edge, colors, color):
     colors[edge] = color
     colors[(edge[1], edge[0])] = color
 
+
 def set_node_color(node, parent, parent_color, index, bad_nodes, colors):
     color = 1
     for child_node in (child for child in index[node] if child != parent):
@@ -14,9 +15,10 @@ def set_node_color(node, parent, parent_color, index, bad_nodes, colors):
         set_color((node, child_node), colors, new_color)
         set_node_color(child_node, node, new_color, index, bad_nodes, colors)
 
+
 def solve(n, k, edges):
     colors = {edge: None for edge in edges}
-    index = {i : set() for i in range(1, n + 1)}
+    index = {i: set() for i in range(1, n + 1)}
     for a, b in edges:
         index[a].add(b)
         index[b].add(a)
@@ -41,6 +43,7 @@ def solve(n, k, edges):
     # set_node_color(nodes[k], None, None, index, bad_nodes, colors)
     return [colors[edge] for edge in edges]
 
+
 def main():
     n, k = map(int, input().split())
     edges = []
@@ -57,6 +60,9 @@ def main():
     # tock = time.time()
     # print('T:', round(tock - tick, 5))
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

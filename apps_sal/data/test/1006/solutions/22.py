@@ -15,11 +15,11 @@ def solve(n: int, board: List[List[str]]) -> str:
                         return 'NO'
                     if board[x][y] == '#':
                         board[x][y] = '.'
-    return ['YES', 'NO'][any(board[i][j] == '#' \
-        for i in range(n) for j in range(n))]
+    return ['YES', 'NO'][any(board[i][j] == '#'
+                             for i in range(n) for j in range(n))]
+
 
 n = int(input())
 board = [list(input()) for _ in range(n)]
 
 print(solve(n, board))
-

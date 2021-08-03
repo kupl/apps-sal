@@ -4,4 +4,5 @@ def any_arrows(arrows):
             return True
         elif arrow["damaged"] == False:
             return True
-    else: return False
+    else:
+        return False

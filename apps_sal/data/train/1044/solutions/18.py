@@ -2,7 +2,7 @@
 t = int(input())
 for i in range(t):
     n = input()
-    s  = 0
+    s = 0
     for i in n:
         s += int(i)
     print(s)

@@ -1,4 +1,4 @@
-sections=int(input())
+sections = int(input())
 
 ones = int(sections / 2)
 printSeven = False

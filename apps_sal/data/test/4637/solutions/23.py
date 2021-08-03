@@ -8,4 +8,4 @@ while t:
     for i in range(k):
         a[i] = max(a[i], b[i])
     print(sum(a))
-    t-=1
+    t -= 1

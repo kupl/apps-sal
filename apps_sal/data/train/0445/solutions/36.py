@@ -19,4 +19,3 @@ class Solution:
             nums[-3] - nums[1],
             nums[-4] - nums[0]
         ])
-

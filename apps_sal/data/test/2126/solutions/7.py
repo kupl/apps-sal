@@ -11,4 +11,3 @@ for i in range(n):
 
 for i in d:
     print(*i)
-

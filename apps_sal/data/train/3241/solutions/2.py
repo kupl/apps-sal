@@ -1,4 +1,6 @@
 import re
+
+
 def buy_newspaper(s1, s2):
     if not set(s2) <= set(s1):
         return -1

@@ -3,7 +3,7 @@ n, s = map(int, input().split())
 dist = []
 for i in range(n):
     a, b, c = map(int, input().split())
-    dist.append((a*a + b*b, c))
+    dist.append((a * a + b * b, c))
 dist = sorted(dist)
 i = 0
 while s < 1000000 and i < n:

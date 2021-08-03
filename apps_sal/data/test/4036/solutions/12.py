@@ -34,4 +34,3 @@ if m == 0:
     print(*a)
 else:
     print('NO')
-

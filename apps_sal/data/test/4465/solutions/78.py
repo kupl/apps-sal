@@ -8,7 +8,7 @@ def Input():
 
 def main():
     a, b = Input()
-    print((a-1) * (b-1))
+    print((a - 1) * (b - 1))
 
 
 main()

@@ -1,6 +1,6 @@
 import collections
 N = int(input())
-lsA = list(map(int,input().split()))
+lsA = list(map(int, input().split()))
 counterA = collections.Counter(lsA)
 lsline = []
 for i in counterA.keys():
@@ -9,11 +9,11 @@ for i in counterA.keys():
 lsline.sort(reverse=True)
 if bool(lsline):
     if counterA[lsline[0]] >= 4:
-        ans = lsline[0]*lsline[0]
+        ans = lsline[0] * lsline[0]
     elif len(lsline) < 2:
         ans = 0
     else:
-        ans = lsline[0]*lsline[1]
+        ans = lsline[0] * lsline[1]
 else:
     ans = 0
 print(ans)

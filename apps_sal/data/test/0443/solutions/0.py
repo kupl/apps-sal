@@ -9,5 +9,3 @@ if n < 2 or (n == 2 and tab[0] == tab[1]):
 else:
     print(1)
     print(tab.index(min(tab)) + 1)
-
-

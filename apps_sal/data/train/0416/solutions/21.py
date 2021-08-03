@@ -60,4 +60,3 @@ class Solution:
 
         # everything else is a draw.
         return 0
-

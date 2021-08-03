@@ -13,12 +13,8 @@ for i in range(N):
 for i in range(H):
     if i % 2 == 0:
         for j in range(W):
-            print(data[i][j],'', end = '')
+            print(data[i][j], '', end='')
     else:
         for j in range(W):
-            print(data[i][W - j - 1],'', end = '')
+            print(data[i][W - j - 1], '', end='')
     print()
-
-
-
-

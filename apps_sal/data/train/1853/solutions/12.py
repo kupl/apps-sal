@@ -1,14 +1,15 @@
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
-        
+
         graph = collections.defaultdict(list)
-        
+
         for u, v, w in edges:
             graph[u].append((v, w))
             graph[v].append((u, w))
-            
+
         dist = collections.defaultdict(list)
         self.min = float('inf')
+
         def getNumberOfNeighbors(city):
             heap = [(0, city)]
             count = 0
@@ -25,10 +26,10 @@ class Solution:
                         heapq.heappush(heap, (currW + w, v))
                 count += 1
             return count
-        
+
         for city in range(n):
             num = getNumberOfNeighbors(city)
             dist[num].append(city)
             self.min = min(self.min, num)
-        
+
         return max(dist[self.min])

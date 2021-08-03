@@ -19,10 +19,9 @@ for v in V:
     elif currentLength > target:
         possible = False
         break
-if possible: 
+if possible:
     print('Yes')
     for s in S:
         print(s, end=' ')
 else:
     print('No')
-

@@ -25,7 +25,6 @@ def check(a):
     return False
 
 
-
 a, flag = [input() for i in range(4)], False
 for i in range(4):
     for j in range(4):

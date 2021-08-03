@@ -3,30 +3,32 @@
 
 import time
 
-def flag(a, b, c, d, e, f, X, Y, Z):
-    if (b == d and d == f and a+c+e == b):
 
-        m = [ [ 0 for i in range(b) ] for i in range(b) ]
+def flag(a, b, c, d, e, f, X, Y, Z):
+    if (b == d and d == f and a + c + e == b):
+
+        m = [[0 for i in range(b)] for i in range(b)]
 
         for i in range(a):
             for j in range(b):
                 m[i][j] = X
 
-        for i in range(a, a+c):
+        for i in range(a, a + c):
             for j in range(b):
                 m[i][j] = Y
 
-        for i in range(a+c, a+c+e):
+        for i in range(a + c, a + c + e):
             for j in range(b):
                 m[i][j] = Z
 
         return (b, m)
     return False
 
-def frame(a, b, c, d, e, f, X, Y, Z):
-    if ((a == c + e) and ( a == b+d ) and (d == f)):
 
-        m = [ [ 0 for i in range(a) ] for i in range(a) ]
+def frame(a, b, c, d, e, f, X, Y, Z):
+    if ((a == c + e) and (a == b + d) and (d == f)):
+
+        m = [[0 for i in range(a)] for i in range(a)]
 
         for i in range(a):
             for j in range(b):
@@ -42,11 +44,13 @@ def frame(a, b, c, d, e, f, X, Y, Z):
         return (a, m)
     return False
 
+
 def test0(a, b, c, d, e, f, X, Y, Z):
     ans = flag(a, b, c, d, e, f, X, Y, Z)
     if ans == False:
         ans = frame(a, b, c, d, e, f, X, Y, Z)
     return ans
+
 
 def test(a, b, c, d, e, f, X, Y, Z):
     ans = test0(a, b, c, d, e, f, X, Y, Z)
@@ -70,6 +74,7 @@ def test(a, b, c, d, e, f, X, Y, Z):
 
     return ans
 
+
 (a, b, c, d, e, f) = (int(i) for i in input().split())
 
 start = time.time()
@@ -89,9 +94,8 @@ else:
 
     for i in range(ans[0]):
         for j in range(ans[0]):
-            print(ans[1][i][j], end = '' )
+            print(ans[1][i][j], end='')
         print()
 
 finish = time.time()
 #print(finish - start)
-

@@ -10,4 +10,3 @@ for _ in range(n):
     else:
         ans = "NO"
 print(ans)
-

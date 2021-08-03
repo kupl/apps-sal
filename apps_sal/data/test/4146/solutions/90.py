@@ -9,9 +9,9 @@ vs_odd = vs[1::2]
 count_e = collections.Counter(vs_even).most_common()
 count_o = collections.Counter(vs_odd).most_common()
 
-#ダミー
-count_e.append((0,0))
-count_o.append((0,0))
+# ダミー
+count_e.append((0, 0))
+count_o.append((0, 0))
 
 
 e_max = len(vs_even) - count_e[0][1]
@@ -23,4 +23,4 @@ if(count_e[0][0] != count_o[0][0]):
     print(e_max + o_max)
 
 else:
-    print(min(e_second+o_max, e_max+o_second))
+    print(min(e_second + o_max, e_max + o_second))

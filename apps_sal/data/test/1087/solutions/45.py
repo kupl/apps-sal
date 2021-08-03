@@ -12,7 +12,7 @@ for i, col in enumerate(zip(*A_bin)):
         continue
 
     zero_cnt = col.count('0')
-    one_cnt = n-zero_cnt
+    one_cnt = n - zero_cnt
     if one_cnt < zero_cnt:
         X += '1'
     else:

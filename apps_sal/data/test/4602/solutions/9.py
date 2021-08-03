@@ -11,7 +11,7 @@ def main():
     x = Input()
     ans = 0
     for i in range(n):
-        ans += min(abs(0-x[i]), abs(k-x[i])) * 2
+        ans += min(abs(0 - x[i]), abs(k - x[i])) * 2
     print(ans)
 
 

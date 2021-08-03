@@ -7,4 +7,3 @@ for i in range(int(input())):
         if int(str(j) * len(str(n))) <= n:
             minn = j
     print(9 * (len(str(n)) - 1) + minn)
-

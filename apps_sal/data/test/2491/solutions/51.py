@@ -24,4 +24,3 @@ for i in range(N - 1):
             path[b] = float('inf')
 
 print((path[-1]))
-

@@ -7,5 +7,3 @@ def reverse_letter(string):
         else:
             continue
     return newString[::-1]
-
-

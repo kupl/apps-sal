@@ -3,7 +3,7 @@ class Solution:
         '''
         # Notes:
             k adjacent flowers
-        
+
         '''
         # edge case
         n = len(bloomDay)
@@ -11,7 +11,7 @@ class Solution:
             return -1
         if k * m == n:
             return max(bloomDay)
-        
+
         def feasible(days) -> bool:
             bonquets, flowers = 0, 0
             for bloom in bloomDay:
@@ -32,4 +32,3 @@ class Solution:
             else:
                 left = mid + 1
         return left
-

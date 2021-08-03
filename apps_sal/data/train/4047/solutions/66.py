@@ -16,4 +16,3 @@ def to_leet_speak(string):
         }
     )
     return string.translate(trans)
-

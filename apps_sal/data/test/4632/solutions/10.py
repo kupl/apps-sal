@@ -8,9 +8,8 @@ for _ in range(int(input())):
         continue
     a = [[0, 0]] + a
     s = ""
-    for i in range(1, n+1):
-        s += "R"*(a[i][0]-a[i-1][0])
-        s += "U"*(a[i][1]-a[i-1][1])
+    for i in range(1, n + 1):
+        s += "R" * (a[i][0] - a[i - 1][0])
+        s += "U" * (a[i][1] - a[i - 1][1])
     print("YES")
     print(s)
-

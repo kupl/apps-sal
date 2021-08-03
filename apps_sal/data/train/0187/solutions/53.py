@@ -7,22 +7,22 @@ class Solution:
             waiting += customers[i]
             if waiting >= 4:
                 waiting -= 4
-                profit += boardingCost*4 - runningCost
+                profit += boardingCost * 4 - runningCost
             else:
-                profit += boardingCost*waiting - runningCost
+                profit += boardingCost * waiting - runningCost
                 waiting = 0
             profits.append(profit)
-        
+
         while waiting > 0:
             if waiting >= 4:
                 waiting -= 4
-                profit += boardingCost*4 - runningCost
+                profit += boardingCost * 4 - runningCost
             else:
-                profit += boardingCost*waiting - runningCost
+                profit += boardingCost * waiting - runningCost
                 waiting = 0
             profits.append(profit)
-            
+
         if max(profits) <= 0:
             return -1
         else:
-            return profits.index(max(profits)) + 1    
+            return profits.index(max(profits)) + 1

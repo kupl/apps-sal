@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def pair_of_shoes(shoes):
     c = Counter()
     for lr, size in shoes:

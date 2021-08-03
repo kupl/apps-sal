@@ -35,11 +35,12 @@ def __starting_point():
     comb = Combination(2 * 10 ** 6 + 10, mod)
 
     def f(r, c):
-        return comb(r+c+2, r+1)
+        return comb(r + c + 2, r + 1)
 
-    CD = (f(r2, c2) - f(r2, c1-1) + mod) % mod
-    C = (f(r1-1, c2) - f(r1-1, c1-1) + mod) % mod
+    CD = (f(r2, c2) - f(r2, c1 - 1) + mod) % mod
+    C = (f(r1 - 1, c2) - f(r1 - 1, c1 - 1) + mod) % mod
     ans = (CD - C + mod) % mod
     print(ans)
+
 
 __starting_point()

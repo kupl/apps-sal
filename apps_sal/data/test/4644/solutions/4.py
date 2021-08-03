@@ -17,4 +17,3 @@ def main():
 
 for t in range(int(input())):
     print(main())
-

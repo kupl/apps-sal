@@ -7,4 +7,3 @@ for o in ops:
     else:
         c += 1
 print(c)
-

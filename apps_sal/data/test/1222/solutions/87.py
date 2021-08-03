@@ -19,4 +19,3 @@ for i in range(1, 10):
 ans = sorted(ans)
 
 print((ans[k - 1]))
-

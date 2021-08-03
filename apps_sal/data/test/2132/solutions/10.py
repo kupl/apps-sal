@@ -24,5 +24,3 @@ for i in d:
     elif i[0] == 6:
         c += 1
 print(ans)
-    
-

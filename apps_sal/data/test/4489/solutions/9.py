@@ -20,4 +20,3 @@ for i in range(N + 1):
             cnt -= 1
     ans = max(ans, cnt)
 print(ans)
-

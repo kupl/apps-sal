@@ -11,7 +11,6 @@ def main():
         else:
             a += 1
     print(ans)
- 
- 
-main()
 
+
+main()

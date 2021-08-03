@@ -10,4 +10,4 @@ class Solution:
         print(maxHere, minHere)
         if minHere == sum(A) and 0 not in A:
             return maxHere
-        return max(maxHere, sum(A)-minHere)
+        return max(maxHere, sum(A) - minHere)

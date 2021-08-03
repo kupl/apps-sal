@@ -8,4 +8,3 @@ for c in [chr(c) for c in range(97, 123)]:
         ans = c
         break
 print(ans)
-

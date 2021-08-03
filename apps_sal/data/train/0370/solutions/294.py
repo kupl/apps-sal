@@ -3,6 +3,7 @@
 from math import gcd, sqrt
 from collections import defaultdict
 
+
 class DSU:
     def __init__(self, size):
         self.sizes = [1] * size
@@ -44,7 +45,6 @@ class Solution:
             ans = max(ans, counter[dsu.find(x)])
         return ans
 
-
         # # O(n^2)
         # dsu = DSU(len(A))
         # for i in range(len(A)):
@@ -52,4 +52,3 @@ class Solution:
         #         if i != j and gcd(A[i], A[j]) > 1:
         #             dsu.union(i, j)
         # return max(dsu.sizes)
-

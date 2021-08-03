@@ -1,4 +1,6 @@
 __author__ = '1'
+
+
 def minimize(m, s):
     if m == 1 and s == 0:
         return 0
@@ -7,23 +9,23 @@ def minimize(m, s):
     array = [0 for i in range(m)]
     array[0] = 1
 
-    currentFiller = m-1
-    val = s-1
-    for i in range(s-1):
-        if array[currentFiller]<9:
-            array[currentFiller]+=1;
-            val-=1
+    currentFiller = m - 1
+    val = s - 1
+    for i in range(s - 1):
+        if array[currentFiller] < 9:
+            array[currentFiller] += 1
+            val -= 1
         else:
-            currentFiller-=1
-            if currentFiller>=0:
-                array[currentFiller]+=1
-                val-=1
+            currentFiller -= 1
+            if currentFiller >= 0:
+                array[currentFiller] += 1
+                val -= 1
             else:
                 break
     if val == 0:
         s = ""
         for i in range(len(array)):
-            s+=str(array[i])
+            s += str(array[i])
         return s
     else:
         return -1
@@ -35,14 +37,15 @@ def maximizeS(m, s):
         summ = 0
         st = str(i)
         for j in range(len(st)):
-            summ+=ord(str(st[j])[0])-ord('0')
+            summ += ord(str(st[j])[0]) - ord('0')
         if summ == s:
             array.append(i)
     array = sorted(array)
-    if len(array)==0:
+    if len(array) == 0:
         return -1
     else:
         return array[-1]
+
 
 def minimizeS(m, s):
     array = []
@@ -51,14 +54,15 @@ def minimizeS(m, s):
             summ = 0
             st = str(i)
             for j in range(len(st)):
-                summ+=ord(str(st[j])[0])-ord('0')
+                summ += ord(str(st[j])[0]) - ord('0')
             if summ == s:
                 array.append(i)
     array = sorted(array)
-    if len(array)==0:
+    if len(array) == 0:
         return -1
     else:
         return array[0]
+
 
 def maximize(m, s):
     if m == 1 and s == 0:
@@ -68,22 +72,22 @@ def maximize(m, s):
     array = [0 for i in range(m)]
     array[0] = 1
     currentFiller = 0
-    val = s-1
-    for i in range(s-1):
-        if array[currentFiller]<9:
-            array[currentFiller]+=1;
-            val-=1
+    val = s - 1
+    for i in range(s - 1):
+        if array[currentFiller] < 9:
+            array[currentFiller] += 1
+            val -= 1
         else:
-            currentFiller+=1
-            if currentFiller<m:
-                array[currentFiller]+=1
-                val-=1
+            currentFiller += 1
+            if currentFiller < m:
+                array[currentFiller] += 1
+                val -= 1
             else:
                 break
     if val == 0:
         s = ""
         for i in range(len(array)):
-            s+=str(array[i])
+            s += str(array[i])
         return s
     else:
         return -1
@@ -103,4 +107,3 @@ m, s = list(map(int, input().split(' ')))
 a = minimize(m, s)
 b = maximize(m, s)
 print(a, b)
-

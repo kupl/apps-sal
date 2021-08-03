@@ -1,9 +1,9 @@
-a,b = map(int,input().split())
+a, b = map(int, input().split())
 
-ans = a+b
+ans = a + b
 if (a - b) > ans:
-  ans = a - b
+    ans = a - b
 if (a * b) > ans:
-  ans = a * b
-  
+    ans = a * b
+
 print(ans)

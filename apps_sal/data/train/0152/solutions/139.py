@@ -2,7 +2,7 @@ class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         n = len(position)
-        
+
         def check(force):
             k = m - 1
             pre = 0

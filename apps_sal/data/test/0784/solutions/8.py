@@ -24,4 +24,3 @@ if b in prev:
     print(' '.join(map(str, res[::-1])))
 else:
     print('NO')
-

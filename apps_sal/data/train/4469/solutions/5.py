@@ -7,7 +7,3 @@ def is_narcissistic(i):
         sum += (int(number) ** power)
 
     return sum == i
-    
-    
-
-

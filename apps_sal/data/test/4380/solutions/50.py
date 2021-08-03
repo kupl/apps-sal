@@ -9,4 +9,3 @@ if even_count == 0:
     print('Yes')
 else:
     print('No')
-

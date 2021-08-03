@@ -1,7 +1,10 @@
 K = int(input())
 
+
 def S(n):
     return sum(int(c) for c in str(n))
+
+
 d9 = 0
 cnt = 0
 upper = 1
@@ -14,4 +17,3 @@ while cnt < K:
     else:
         d9 += 1
         upper //= 10
-

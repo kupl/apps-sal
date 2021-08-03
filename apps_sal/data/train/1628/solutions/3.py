@@ -5,5 +5,6 @@ def proper_fractions(n):
             phi -= phi // p
             while not n % p:
                 n //= p
-    if n > 1: phi -= phi // n
+    if n > 1:
+        phi -= phi // n
     return phi

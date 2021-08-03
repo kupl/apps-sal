@@ -5,6 +5,6 @@ if N <= K:
     print(0)
 
 else:
-    lst.sort(reverse = True)
+    lst.sort(reverse=True)
     lst = lst[K:]
     print(sum(lst))

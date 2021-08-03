@@ -1,5 +1,6 @@
 def readln(): return tuple(map(int, input().split()))
 
+
 ans = 1
 cnt = set()
 for i, c in enumerate(list(input())):
@@ -9,4 +10,3 @@ for i, c in enumerate(list(input())):
         ans *= 10 - len(cnt) - (i == 0)
         cnt.add(c)
 print(ans)
-

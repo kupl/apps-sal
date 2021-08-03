@@ -11,4 +11,3 @@ if ans >= m:
     print('Yes')
 else:
     print('No')
-

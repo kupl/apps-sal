@@ -6,8 +6,8 @@ for _ in range(t):
     a = list(map(int, input().split()))
     b = sorted(a)
     c = {}
-    for i in range(n-1):
-        c[b[i+1]] = b[i]
+    for i in range(n - 1):
+        c[b[i + 1]] = b[i]
     c[b[0]] = -1
     li = {}
     for i in a:
@@ -15,4 +15,4 @@ for _ in range(t):
             li[i] = li[c[i]] + 1
         else:
             li[i] = 1
-    print(n-max(li.values()))
+    print(n - max(li.values()))

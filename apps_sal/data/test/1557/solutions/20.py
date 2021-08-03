@@ -16,4 +16,3 @@ while True:
 
 print(len(ans))
 print('\n'.join(ans))
-

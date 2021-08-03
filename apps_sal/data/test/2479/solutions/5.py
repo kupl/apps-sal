@@ -40,4 +40,3 @@ for num, x in query:
 stone_sum = (n - 2) * (n - 2) + 2 * n - 1 + q
 ans = stone_sum - white
 print(ans)
-

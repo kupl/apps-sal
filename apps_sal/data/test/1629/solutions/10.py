@@ -1,4 +1,4 @@
-n, x = list(map(int,input().split()))
+n, x = list(map(int, input().split()))
 a = [int(i) for i in input().split()]
 j = x - 1
 z = min(a)
@@ -24,7 +24,7 @@ elif x - 1 < j:
             a[i] -= m
             k += m
         else:
-            a[i] -=(m + 1)
+            a[i] -= (m + 1)
             k += (m + 1)
     a[j] += k
 else:
@@ -33,4 +33,3 @@ else:
         k += m
     a[j] += k
 print(*a)
-

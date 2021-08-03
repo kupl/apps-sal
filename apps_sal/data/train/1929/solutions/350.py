@@ -9,6 +9,7 @@ class StreamChecker:
                 t = t[c]
             t['#'] = True
         self.stack = []
+
     def query(self, letter):
         self.stack.append(letter)
         t = self.trie
@@ -20,34 +21,7 @@ class StreamChecker:
             t = t[c]
         return '#' in t     # last check
 
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 class StreamChecker:
     def __init__(self, words):
         self.trie = dict()
@@ -59,6 +33,7 @@ class StreamChecker:
                 t = t[c]
             t['#'] = True
         self.stack = []
+
     def query(self, letter):
         self.stack.append(letter)
         t = self.trie
@@ -70,7 +45,3 @@ class StreamChecker:
             else:
                 return False
         return '#' in t
-
-        
-        
-

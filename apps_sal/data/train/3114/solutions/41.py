@@ -4,4 +4,4 @@ def year_days(y):
         leap = 1
     elif y % 4 == 0 and y % 100 != 0:
         leap = 1
-    return '{} has {} days'.format(y,365+leap)
+    return '{} has {} days'.format(y, 365 + leap)

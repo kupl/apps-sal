@@ -30,6 +30,8 @@ Submissions
 NOTE: Clarify: rectangle formed by ALL these points (convex hull)
             v. rectangle formed by ANY four distinct points
 '''
+
+
 class Solution:
     def minAreaRectangularHull(self, points: List[List[int]]) -> int:
         area = 0
@@ -41,9 +43,8 @@ class Solution:
                 miny = min(miny, y)
                 maxx = max(maxx, x)
                 maxy = max(maxy, y)
-            area = (maxx - minx)*(maxy - miny)
+            area = (maxx - minx) * (maxy - miny)
         return area
-                
 
     def minAreaRect(self, points):
         '''
@@ -58,13 +59,14 @@ class Solution:
                 if (xA != xB and yA != yB and (xA, yB) in S and (xB, yA) in S):
                     ans = min(ans, abs((xB - xA) * (yB - yA)))
         return ans if ans < float('inf') else 0
-    
+
 
 class Solution:
     '''
     Runtime: 688 ms, faster than 88.20% of Python3 online submissions for Minimum Area Rectangle.
     Memory Usage: 31.7 MB, less than 17.19% of Python3 online submissions for Minimum Area Rectangle.
     '''
+
     def minAreaRect(self, points):
         columns = collections.defaultdict(set)
         for x, y in points:
@@ -78,7 +80,6 @@ class Solution:
                 for i in range(j):
                     y1 = column[i]
                     if (y1, y2) in lastx:
-                        ans = min(ans, (x - lastx[y1,y2]) * (y2 - y1))
+                        ans = min(ans, (x - lastx[y1, y2]) * (y2 - y1))
                     lastx[y1, y2] = x
         return ans if ans < float('inf') else 0
-

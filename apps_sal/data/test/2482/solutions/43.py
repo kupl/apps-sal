@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -42,6 +45,7 @@ class UnionFind():
     def all_group_members(self):
         return {r: self.members(r) for r in self.roots()}
 
+
 def int_(num_str):
     return int(num_str) - 1
 
@@ -55,8 +59,6 @@ uf2 = UnionFind(N)
 for _ in range(L):
     r, s = list(map(int_, input().split()))
     uf2.union(r, s)
-from collections import Counter
 pair = [(uf1.find(i), uf2.find(i)) for i in range(N)]
 ans = Counter(pair)
 print((*[ans[p] for p in pair]))
-

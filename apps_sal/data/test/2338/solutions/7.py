@@ -5,19 +5,19 @@ import heapq
 from collections import defaultdict as dd, deque
 def data(): return sys.stdin.readline().strip()
 def mdata(): return list(map(int, data().split()))
-#sys.setrecursionlimit(100000)
+# sys.setrecursionlimit(100000)
 
 
-n=int(data())
-A=[]
-ans=[]
-d=dd(list)
+n = int(data())
+A = []
+ans = []
+d = dd(list)
 for i in range(n):
-    x,y=mdata()
-    A.append((x,y))
-A.sort(key=lambda x:abs(x[0])+abs(x[1]))
+    x, y = mdata()
+    A.append((x, y))
+A.sort(key=lambda x: abs(x[0]) + abs(x[1]))
 for i in A:
-    x,y=i
+    x, y = i
     if x > 0:
         ans.append('1 %d R' % x)
     elif x < 0:
@@ -38,6 +38,3 @@ for i in A:
     ans.append('3')
 print(len(ans))
 print('\n'.join(ans))
-
-
-

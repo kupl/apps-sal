@@ -5,7 +5,9 @@ def sum_o(s):
     for el in s:
         res += int(el)
     return res
-def can(s, summ):# 3452 7
+
+
+def can(s, summ):  # 3452 7
     if sum_o(s) == summ:
         return True
     res = ''
@@ -13,18 +15,21 @@ def can(s, summ):# 3452 7
         wl = s[i]
         res += wl
         if sum_o(res) == summ:
-            if can(s[i+1:], summ):
+            if can(s[i + 1:], summ):
                 return True
             else:
                 return False
         if sum_o(res) > summ:
             return False
+
+
 def main():
     n = int(input())
     s = input()
-    for i in range(1,n):
+    for i in range(1, n):
         if can(s[i:], sum_o(s[:i])):
             return 'YES'
     return 'NO'
-print(main())
 
+
+print(main())

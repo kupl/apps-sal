@@ -10,5 +10,6 @@ word = {
     9: "Nine",
     0: "Zero"}
 
+
 def switch_it_up(number):
     return word.get(number)

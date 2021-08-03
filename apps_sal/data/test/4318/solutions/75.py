@@ -9,4 +9,3 @@ for height in h:
         ans += 1
 
 print(ans)
-

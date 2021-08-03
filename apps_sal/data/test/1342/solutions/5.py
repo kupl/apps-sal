@@ -5,7 +5,7 @@ from math import sqrt
 n = int(input())
 a = list(map(int, input().split()))
 
-sq = int(sqrt(a[0]))+2
+sq = int(sqrt(a[0])) + 2
 s = set()
 
 for box in range(1, sq):
@@ -24,10 +24,9 @@ for size in sorted(s, reverse=True):
     ans = 0
     for x in a:
         if x / size >= x % size:
-            ans += (x+size) // (size+1)
+            ans += (x + size) // (size + 1)
         else:
             break
     else:
         print(ans)
         return
-

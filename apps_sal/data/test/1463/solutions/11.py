@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
 
+
 def main():
     n = int(sys.stdin.readline())
     mat = [None for __ in range(n)]
@@ -19,6 +20,7 @@ def main():
     else:
         print("No")
 
+
 def check_this_element(mat, row, col):
     n = len(mat)
     for _row in range(n):
@@ -27,7 +29,9 @@ def check_this_element(mat, row, col):
                 return True
     return False
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

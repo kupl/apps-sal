@@ -7,42 +7,50 @@
 #INF = 10 ** 9
 #PI = 3.14159265358979323846
 
-INT = lambda: int(input())
-INTM = lambda: map(int,input().split())
-STRM = lambda: map(str,input().split())
-STR = lambda: str(input())
-LIST = lambda: list(map(int,input().split()))
-LISTS = lambda: list(map(str,input().split()))
+def INT(): return int(input())
+
+
+def INTM(): return map(int, input().split())
+def STRM(): return map(str, input().split())
+def STR(): return str(input())
+
+
+def LIST(): return list(map(int, input().split()))
+def LISTS(): return list(map(str, input().split()))
+
 
 def do():
-    s=STR()
-    ls=len(s)
-    ans=[0]*ls
-    flg=True
-    ct=0
+    s = STR()
+    ls = len(s)
+    ans = [0] * ls
+    flg = True
+    ct = 0
     for i in range(ls):
         if flg:
-            if s[i]=='R':
-                ct+=1
+            if s[i] == 'R':
+                ct += 1
             else:
-                ans[i]+=ct//2
-                ans[i-1]+=ct//2+ct%2
-                ct=1
-                temp=i
-                flg=False
+                ans[i] += ct // 2
+                ans[i - 1] += ct // 2 + ct % 2
+                ct = 1
+                temp = i
+                flg = False
         else:
-            if s[i]=='L':
-                ct+=1
+            if s[i] == 'L':
+                ct += 1
             else:
-                ans[temp]+=ct//2+ct%2
-                ans[temp-1]+=ct//2
-                ct=1
-                flg=True
-    ans[temp]+=ct//2+ct%2
-    ans[temp-1]+=ct//2
+                ans[temp] += ct // 2 + ct % 2
+                ans[temp - 1] += ct // 2
+                ct = 1
+                flg = True
+    ans[temp] += ct // 2 + ct % 2
+    ans[temp - 1] += ct // 2
 
     print(*ans)
 
+
 def __starting_point():
     do()
+
+
 __starting_point()

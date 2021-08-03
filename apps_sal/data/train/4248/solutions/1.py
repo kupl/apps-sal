@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def solve(files):
     c = Counter(f[f.rfind("."):] for f in files)
     MAX = max(c.values(), default=0)

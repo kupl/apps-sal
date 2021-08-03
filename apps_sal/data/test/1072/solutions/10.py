@@ -3,12 +3,17 @@ __author__ = 'trunghieu11 - vuondenthanhcong11@gmail.com'
 # ---------- My Tools -------------
 
 # ------ Input output tools -------
+
+
 def read_int(): return int(input())
 def read_ints(): return map(int, input().split())
 def read_list_int(): return list(map(int, input().split()))
+
+
 def read_strings(row_count):
     answer = []
-    for i in range(0, row_count): answer.append(input())
+    for i in range(0, row_count):
+        answer.append(input())
     return answer
 
 

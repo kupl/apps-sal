@@ -3,8 +3,8 @@ events = []
 for i in range(n):
     gender, a, b = input().split()
     a, b = int(a), int(b)
-    events.append((a, -1, gender)) # -1: arrives
-    events.append((b, 1, gender))  #  1: left
+    events.append((a, -1, gender))  # -1: arrives
+    events.append((b, 1, gender))  # 1: left
 events.sort()
 currM = 0
 currF = 0

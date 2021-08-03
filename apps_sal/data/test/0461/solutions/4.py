@@ -28,4 +28,3 @@ while n > 0:
             result += c
     n -= 1
 print(result)
-

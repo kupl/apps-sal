@@ -2,7 +2,7 @@ import bisect
 
 t = int(input())
 
-tmp_ans = [0]*100
+tmp_ans = [0] * 100
 for i in range(100):
     tmp_ans[i] = 3**i
 

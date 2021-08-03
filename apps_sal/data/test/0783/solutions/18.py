@@ -9,7 +9,3 @@ for i in range(n):
         print(dp[i] - lst[i] + 1, end=' ')
     else:
         print(0, end=' ')
-        
-
-           
-

@@ -21,7 +21,7 @@ def alphabet_war(fight):
             left_power += 4
         else:
             continue
-            
+
     if left_power > right_power:
         return "Left side wins!"
     elif right_power > left_power:

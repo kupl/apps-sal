@@ -1,4 +1,6 @@
-read = lambda: list(map(int, input().split()))
+def read(): return list(map(int, input().split()))
+
+
 n, m = read()
 a = list(read())
 t = []
@@ -19,4 +21,3 @@ for i in range(1, len(t)):
             a[j - 1] = b[x]
             x += 1
 print(*a)
-

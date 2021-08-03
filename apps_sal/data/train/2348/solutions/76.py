@@ -18,7 +18,8 @@ Q = int(input())
 answers = []
 for _ in range(Q):
     a, b = map(int, input().split())
-    a -= 1; b -= 1
+    a -= 1
+    b -= 1
     if a == b:
         answers.append(0)
         continue
@@ -31,5 +32,5 @@ for _ in range(Q):
             a = ancestor[k][a]
     ans += 1
     answers.append(ans)
-        
+
 print(*answers, sep='\n')

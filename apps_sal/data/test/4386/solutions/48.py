@@ -1,1 +1,2 @@
-a=int(input());print(['red',input()][a>=3200])
+a = int(input())
+print(['red', input()][a >= 3200])

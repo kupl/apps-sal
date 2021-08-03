@@ -12,4 +12,3 @@ while visited[now] != True:
         print(count)
         return
 print((-1))
-

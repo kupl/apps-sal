@@ -1,5 +1,6 @@
 class Solution:
     MODS = 10 ** 9 + 7
+
     def numSubseq(self, nums: List[int], target: int) -> int:
         N = len(nums)
         cal_map = [1]
@@ -16,5 +17,3 @@ class Solution:
             # print(left, right, cal_map[right - left], nums[left])
             left += 1
         return res % self.MODS
-            
-

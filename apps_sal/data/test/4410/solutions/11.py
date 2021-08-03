@@ -12,4 +12,3 @@ for _ in range(int(input())):
     for i in range(1, len(a)):
         cou += (a[i] - a[i - 1] - 1 - k) // (k + 1)
     print(cou)
-

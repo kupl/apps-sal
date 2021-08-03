@@ -18,6 +18,3 @@ for i in range(t):
         arr[mass[j]] += 1
         minn = min(minn, kol)
     print(minn)
-        
-        
-

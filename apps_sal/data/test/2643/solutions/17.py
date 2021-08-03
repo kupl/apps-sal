@@ -9,6 +9,5 @@ for n, x, m in queries:
     d_mod = d % m
     quotient, rem = divmod(n - 1, k)
     rem_d_mod = d_mod[:rem]
-    print((n - 1 - (x % m + quotient * np.sum(d_mod) + np.sum(rem_d_mod)) // m
-          - quotient * np.count_nonzero(d_mod == 0) - np.count_nonzero(rem_d_mod == 0)))
-
+    print((n - 1 - (x % m + quotient * np.sum(d_mod) + np.sum(rem_d_mod)) // m -
+          quotient * np.count_nonzero(d_mod == 0) - np.count_nonzero(rem_d_mod == 0)))

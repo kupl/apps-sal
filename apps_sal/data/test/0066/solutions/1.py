@@ -13,5 +13,4 @@ rem = min(b, rem)
 x = num + rem - 1
 
 g = gcd(x, a)
-print(str(x//g) + '/' + str(a//g))
-
+print(str(x // g) + '/' + str(a // g))

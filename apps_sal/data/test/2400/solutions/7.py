@@ -18,4 +18,4 @@ for _ in range(t):
             cnt_q0 += 1
         else:
             cnt_q1 += 1
-    print(cnt_p0*cnt_q0 + cnt_p1*cnt_q1)
+    print(cnt_p0 * cnt_q0 + cnt_p1 * cnt_q1)

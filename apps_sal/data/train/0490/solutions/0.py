@@ -7,13 +7,11 @@ class Solution:
             for nei in rooms[node]:
                 if nei in visited:
                     continue
-                dfs(nei,visited)
+                dfs(nei, visited)
             return
         visited = set()
         dfs(0, visited)
         if len(visited) == len(rooms):
             return True
-        else: 
+        else:
             return False
-            
-

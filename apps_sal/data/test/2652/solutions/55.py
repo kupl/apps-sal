@@ -58,6 +58,7 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 def resolve():
     N = int(input())
     X = []
@@ -77,7 +78,7 @@ def resolve():
     for i in range(1, N):
         a, x1 = X[i - 1]
         b, x2 = X[i]
-        G.append((a,b,x2-x1))
+        G.append((a, b, x2 - x1))
         a, y1 = Y[i - 1]
         b, y2 = Y[i]
         G.append((a, b, y2 - y1))
@@ -92,6 +93,9 @@ def resolve():
             ans += w
     print(ans)
 
+
 def __starting_point():
     resolve()
+
+
 __starting_point()

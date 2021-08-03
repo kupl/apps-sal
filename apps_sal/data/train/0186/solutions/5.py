@@ -5,4 +5,3 @@ class Solution:
             p = iter(dp[t - c] * 10 + i + 1 for i, c in enumerate(cost))
             dp[t] = max(p)
         return str(max(dp[t], 0))
-

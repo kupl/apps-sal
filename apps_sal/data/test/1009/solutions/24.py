@@ -7,4 +7,5 @@ def __starting_point():
     c_list = [a + b for a, b in zip(a_list, b_list)]
     print(max(max(c_list or [0]), max(s_list)))
 
+
 __starting_point()

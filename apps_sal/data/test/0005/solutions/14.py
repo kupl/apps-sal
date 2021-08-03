@@ -25,4 +25,3 @@ else:
     right_first = pos - r + r - l + 2
 
 print(min([left_first, right_first]))
-

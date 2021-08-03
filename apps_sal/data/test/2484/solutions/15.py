@@ -9,7 +9,8 @@ for left in range(n):
         xor ^= a[right]
         right += 1
     ans += right - left
-    if left == right: right += 1
+    if left == right:
+        right += 1
     else:
         s -= a[left]
         xor ^= a[left]

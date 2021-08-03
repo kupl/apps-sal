@@ -31,4 +31,3 @@ ans = 0
 for i in range(1, m, 2):
     ans = max(ans, s[i + k * 2] - s[i - 1])
 print(ans)
-

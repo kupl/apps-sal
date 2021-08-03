@@ -2,15 +2,16 @@ import re
 import itertools
 from collections import Counter, deque
 
+
 class Task:
     maxDigitSum = 18 * 9
     n = 0
-    answer = "" 
-	
+    answer = ""
+
     def getData(self):
         self.n = int(input())
         #inFile = open('input.txt', 'r')
-        #inFile.readline().rstrip()
+        # inFile.readline().rstrip()
         #self.childs = inFile.readline().rstrip()
 
     def solve(self):
@@ -45,10 +46,10 @@ class Task:
     def printAnswer(self):
         print(self.answer)
         #outFile = open('output.txt', 'w')
-        #outFile.write(self.answer)
+        # outFile.write(self.answer)
+
 
 task = Task()
 task.getData()
 task.solve()
 task.printAnswer()
-

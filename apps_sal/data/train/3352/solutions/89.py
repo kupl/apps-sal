@@ -7,4 +7,3 @@ def find_longest(arr):
             longest_len = sample_len
             longest = el
     return longest
-

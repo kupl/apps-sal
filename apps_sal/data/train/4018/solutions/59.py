@@ -8,4 +8,3 @@ def isDigit(string):
         return False
     else:
         return False
-

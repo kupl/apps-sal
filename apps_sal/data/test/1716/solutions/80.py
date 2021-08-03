@@ -18,4 +18,3 @@ for p, q in pq:
     p -= 1
     ans = acc[q][q] - acc[p][q] - acc[q][p] + acc[p][p]
     print(ans)
-

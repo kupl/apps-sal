@@ -9,13 +9,13 @@ for i in range(k):
     last[x[i]] = max(last[x[i]], i)
 
 cnt = 0
-for i in range(1,n+1):
+for i in range(1, n + 1):
     if last[i] == -1:
         cnt += 1
-    if i+1 <= n:
-        if last[i] < first[i+1]:
+    if i + 1 <= n:
+        if last[i] < first[i + 1]:
             cnt += 1
-        if last[i+1] < first[i]:
+        if last[i + 1] < first[i]:
             cnt += 1
 
 print(cnt)

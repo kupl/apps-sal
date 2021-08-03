@@ -1,10 +1,10 @@
-S,T = input(),input()
+S, T = input(), input()
 
-d = [None]*26
+d = [None] * 26
 flag = True
-for s,t in zip(S,T):
-    s = ord(s)-ord('a')
-    t = ord(t)-ord('a')
+for s, t in zip(S, T):
+    s = ord(s) - ord('a')
+    t = ord(t) - ord('a')
     if d[s] is None:
         d[s] = t
     elif d[s] != t:

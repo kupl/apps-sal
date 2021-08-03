@@ -13,4 +13,3 @@ if ans == 10 ** 18:
     print(-1)
 else:
     print(ans)
-

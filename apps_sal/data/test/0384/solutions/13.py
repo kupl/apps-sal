@@ -6,5 +6,5 @@ print(len(arr))
 if(len(arr)):
     s = ''
     for x in arr:
-        s += str(len(x))+' '
+        s += str(len(x)) + ' '
     print(s)

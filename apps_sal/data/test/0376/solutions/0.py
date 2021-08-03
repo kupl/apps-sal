@@ -23,7 +23,7 @@ def sol():
     for x in st[::-1]:
         if x[0] == single_hardest:
             hardest.append(x[1])
-        elif x[0] == single_hardest-1:
+        elif x[0] == single_hardest - 1:
             almost.append(x[1])
         else:
             break
@@ -37,15 +37,15 @@ def sol():
 
     lower_bound = single_hardest
 
-    inte = d[hardest[0]]+[hardest[0]]
+    inte = d[hardest[0]] + [hardest[0]]
     for h in hardest[1:]:
-        inte = inter(inte, d[h]+[h])
+        inte = inter(inte, d[h] + [h])
 
     if not inte:
-        return (single_hardest+2)
+        return (single_hardest + 2)
 
     if len(hardest) > 1:
-        return single_hardest+1
+        return single_hardest + 1
 
     # hardest is len 1
     if not almost:
@@ -55,7 +55,8 @@ def sol():
 
     for h in almost:
         if h not in d[cand]:
-            return single_hardest+1
+            return single_hardest + 1
     return single_hardest
+
 
 print(sol())

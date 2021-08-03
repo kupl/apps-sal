@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     s = [ch for ch in input()]
     ans = ''.join(s).count('VK')
@@ -22,12 +23,16 @@ def solve():
 
     print(ans)
 
+
 def debug(x, table):
     for name, val in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

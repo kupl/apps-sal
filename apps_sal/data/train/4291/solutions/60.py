@@ -4,4 +4,4 @@ def century(year):
     while year > x:
         x = x + 100
         count = count + 1
-    return count    
+    return count

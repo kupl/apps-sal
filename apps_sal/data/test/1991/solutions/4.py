@@ -14,6 +14,7 @@ def solve():
         i = j
     print(min(ans, 2))
 
+
 t = int(input())
 for _ in range(t):
     solve()

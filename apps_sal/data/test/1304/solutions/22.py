@@ -40,8 +40,3 @@ for i in toprint:
     if syms % 33 == 0 and syms != 99:
         toprint2 += '\n'
 print(toprint2)
-        
-            
-            
-        
-

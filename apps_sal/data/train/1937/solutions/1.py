@@ -10,16 +10,16 @@ class ThroneInheritance:
 
     def death(self, name: str) -> None:
         self.dead.add(name)
-    
+
     def dfs(self, name, arr):
         if name not in self.dead:
             arr.append(name)
-        
+
         for nei in self.graph[name]:
             self.dfs(nei, arr)
-        
+
         return arr
-    
+
     def getInheritanceOrder(self) -> List[str]:
         ans = []
         self.dfs(self.root, ans)
@@ -31,4 +31,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

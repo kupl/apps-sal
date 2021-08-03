@@ -22,4 +22,3 @@ for case_num in range(t):
             b.append(i)
     print(''.join(a))
     print(''.join(b))
-

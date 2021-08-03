@@ -3,7 +3,8 @@ class Node:
         self.name = name
         self.children = []
         self.isAlive = True
-        
+
+
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
@@ -18,11 +19,13 @@ class ThroneInheritance:
 
     def death(self, name: str) -> None:
         self.directory[name].isAlive = False
-        
+
     def getInheritanceOrder(self) -> List[str]:
         ans = []
+
         def dfs(node):
-            if not node: return
+            if not node:
+                return
             if node.isAlive:
                 ans.append(node.name)
             for child in node.children:
@@ -36,4 +39,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

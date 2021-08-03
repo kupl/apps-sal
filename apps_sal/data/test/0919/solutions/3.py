@@ -1,9 +1,9 @@
-n,leng = list(map(int,input().split()))
+n, leng = list(map(int, input().split()))
 s = input()
-l = [0]*27
+l = [0] * 27
 
 for c in s:
-    l[ord(c)-ord('a')+1] += 1
+    l[ord(c) - ord('a') + 1] += 1
 
 i = 0
 num = 0
@@ -20,4 +20,3 @@ if num == leng:
     print(out)
 else:
     print(-1)
-

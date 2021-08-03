@@ -13,7 +13,7 @@ class Solution:
         return max(dp)
 
     def is_predecessor(self, str1, str2):
-        if len(str1)+1 != len(str2):
+        if len(str1) + 1 != len(str2):
             return False
         cnt = 0
         n = len(str1)
@@ -30,6 +30,3 @@ class Solution:
                 l2 += 1
 
         return l1 == l2 or cnt == 1
-
-                
-

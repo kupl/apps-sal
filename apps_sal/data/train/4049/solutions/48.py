@@ -6,6 +6,3 @@ def monkey_count(n):
         arr.append(i)
         i += 1
     return arr
-            
-            
-

@@ -32,6 +32,3 @@ while True:
             print('C')
             break
         x = c.popleft()
-
-
-

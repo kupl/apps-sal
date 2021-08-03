@@ -7,7 +7,7 @@ class Solution:
             if i == len(s1):
                 return True
         return False
-    
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         fc = [(sorted(e), i) for i, e in enumerate(favoriteCompanies)]
         fc = sorted(fc, key=lambda x: len(x[0]), reverse=True)
@@ -23,6 +23,5 @@ class Solution:
                     break
             if not found:
                 res.append(si)
-            
-        return sorted(res)
 
+        return sorted(res)

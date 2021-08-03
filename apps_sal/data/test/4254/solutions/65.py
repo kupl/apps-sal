@@ -21,4 +21,3 @@ if w >= s:
     res = "unsafe"
 
 print(res)
-

@@ -21,4 +21,3 @@ for i in p[::-1]:
     else:
         res += 1
 print(res)
-

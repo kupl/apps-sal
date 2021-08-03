@@ -5,8 +5,7 @@ class Solution:
         for w in words:
             table[len(w)].append(w)
         max_len = max(len(w) for w in words)
-            
-        
+
         def backtracking(cur, n):
             if len(cur) == max_len:
                 return 0
@@ -19,7 +18,7 @@ class Solution:
                             break
                 dp[cur] = res
             return dp[cur]
-        
+
         res = 0
         for i, v in table.items():
             for w in v:

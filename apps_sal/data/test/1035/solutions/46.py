@@ -2,6 +2,7 @@
 
 import math
 
+
 def gcd(a, b):
     while b > 0:
         tmp = b
@@ -28,5 +29,3 @@ a, b = list(map(int, input().strip().split()))
 x = gcd(a, b)
 res = count_prime_factorize(x)
 print(res)
-
-

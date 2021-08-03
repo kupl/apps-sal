@@ -1,8 +1,11 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
 
 n, s, t = rd()
 p = rd()
 for i in range(n):
-  if s == t : print(i); return
-  s = p[s-1]
+    if s == t:
+        print(i)
+        return
+    s = p[s - 1]
 print(-1)

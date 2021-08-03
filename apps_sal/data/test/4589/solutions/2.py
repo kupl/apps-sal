@@ -12,12 +12,12 @@ if H == 1:
         s = list(input())
         for w in range(W):
             if w == 0:
-                cnt[w] += s[w+1] == "#"
-            elif w == W-1:
-                cnt[w] += s[w-1] == "#"
+                cnt[w] += s[w + 1] == "#"
+            elif w == W - 1:
+                cnt[w] += s[w - 1] == "#"
             else:
-                cnt[w] += s[w+1] == "#"
-                cnt[w] += s[w-1] == "#"
+                cnt[w] += s[w + 1] == "#"
+                cnt[w] += s[w - 1] == "#"
         for w in range(W):
             if s[w] == "#":
                 cnt[w] = "#"
@@ -31,71 +31,71 @@ if W == 1:
         s.append(input())
     for h in range(H):
         if h == 0:
-            cnt[h] += s[h+1] == "#"
-        elif h == H-1:
-            cnt[h] += s[h-1] == "#"
+            cnt[h] += s[h + 1] == "#"
+        elif h == H - 1:
+            cnt[h] += s[h - 1] == "#"
         else:
-            cnt[h] += s[h-1] == "#"
-            cnt[h] += s[h+1] == "#"
+            cnt[h] += s[h - 1] == "#"
+            cnt[h] += s[h + 1] == "#"
     for h in range(H):
         if s[h] == "#":
             print("#")
         else:
             print(cnt[h])
     return
-    
+
 S = []
 cnt = [[0 for _ in range(W)] for _ in range(H)]
 for h in range(H):
     s = list(input())
     for w in range(W):
         if w == 0:
-            cnt[h][w] += s[w+1] == "#"
-        elif w == W-1:
-            cnt[h][w] += s[w-1] == "#"
+            cnt[h][w] += s[w + 1] == "#"
+        elif w == W - 1:
+            cnt[h][w] += s[w - 1] == "#"
         else:
-            cnt[h][w] += s[w+1] == "#"
-            cnt[h][w] += s[w-1] == "#"
+            cnt[h][w] += s[w + 1] == "#"
+            cnt[h][w] += s[w - 1] == "#"
     S.append(s)
-    
+
 for h in range(H):
     for w in range(W):
         if h == 0:
-            cnt[h][w] += S[h+1][w] == "#"
+            cnt[h][w] += S[h + 1][w] == "#"
             if w == 0:
-                cnt[h][w] += S[h+1][w+1] == "#"
-            elif w == W-1:
-                cnt[h][w] += S[h+1][w-1] == "#"
+                cnt[h][w] += S[h + 1][w + 1] == "#"
+            elif w == W - 1:
+                cnt[h][w] += S[h + 1][w - 1] == "#"
             else:
-                cnt[h][w] += S[h+1][w-1] == "#"
-                cnt[h][w] += S[h+1][w+1] == "#"
-        elif h == H-1:
-            cnt[h][w] += S[h-1][w] == "#"
+                cnt[h][w] += S[h + 1][w - 1] == "#"
+                cnt[h][w] += S[h + 1][w + 1] == "#"
+        elif h == H - 1:
+            cnt[h][w] += S[h - 1][w] == "#"
             if w == 0:
-                cnt[h][w] += S[h-1][w+1] == "#"
-            elif w == W-1:
-                cnt[h][w] += S[h-1][w-1] == "#"
+                cnt[h][w] += S[h - 1][w + 1] == "#"
+            elif w == W - 1:
+                cnt[h][w] += S[h - 1][w - 1] == "#"
             else:
-                cnt[h][w] += S[h-1][w-1] == "#"
-                cnt[h][w] += S[h-1][w+1] == "#"
+                cnt[h][w] += S[h - 1][w - 1] == "#"
+                cnt[h][w] += S[h - 1][w + 1] == "#"
         else:
-            cnt[h][w] += S[h+1][w] == "#"
+            cnt[h][w] += S[h + 1][w] == "#"
             if w == 0:
-                cnt[h][w] += S[h+1][w+1] == "#"
-            elif w == W-1:
-                cnt[h][w] += S[h+1][w-1] == "#"
+                cnt[h][w] += S[h + 1][w + 1] == "#"
+            elif w == W - 1:
+                cnt[h][w] += S[h + 1][w - 1] == "#"
             else:
-                cnt[h][w] += S[h+1][w-1] == "#"
-                cnt[h][w] += S[h+1][w+1] == "#"
-            cnt[h][w] += S[h-1][w] == "#"
+                cnt[h][w] += S[h + 1][w - 1] == "#"
+                cnt[h][w] += S[h + 1][w + 1] == "#"
+            cnt[h][w] += S[h - 1][w] == "#"
             if w == 0:
-                cnt[h][w] += S[h-1][w+1] == "#"
-            elif w == W-1:
-                cnt[h][w] += S[h-1][w-1] == "#"
+                cnt[h][w] += S[h - 1][w + 1] == "#"
+            elif w == W - 1:
+                cnt[h][w] += S[h - 1][w - 1] == "#"
             else:
-                cnt[h][w] += S[h-1][w-1] == "#"
-                cnt[h][w] += S[h-1][w+1] == "#"
-                
+                cnt[h][w] += S[h - 1][w - 1] == "#"
+                cnt[h][w] += S[h - 1][w + 1] == "#"
+
 for h in range(H):
     s = S[h]
     for w in range(W):

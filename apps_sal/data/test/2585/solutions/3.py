@@ -15,8 +15,11 @@ def lcm(a, b): return abs(a * b) // math.gcd(a, b)
 def revn(n): return str(n)[::-1]
 def dd(): return collections.defaultdict(int)
 def ddl(): return collections.defaultdict(list)
+
+
 def sieve(n):
-    if n < 2: return list()
+    if n < 2:
+        return list()
     prime = [True for _ in range(n + 1)]
     p = 3
     while p * p <= n:
@@ -29,6 +32,8 @@ def sieve(n):
         if prime[p]:
             r.append(p)
     return r
+
+
 def divs(n, start=1):
     r = []
     for i in range(start, int(math.sqrt(n) + 1)):
@@ -38,6 +43,8 @@ def divs(n, start=1):
             else:
                 r.extend([i, n // i])
     return r
+
+
 def divn(n, primes):
     divs_number = 1
     for i in primes:
@@ -48,20 +55,31 @@ def divn(n, primes):
             t += 1
             n //= i
         divs_number *= t
+
+
 def prime(n):
-    if n == 2: return True
-    if n % 2 == 0 or n <= 1: return False
+    if n == 2:
+        return True
+    if n % 2 == 0 or n <= 1:
+        return False
     sqr = int(math.sqrt(n)) + 1
     for d in range(3, sqr, 2):
-        if n % d == 0: return False
+        if n % d == 0:
+            return False
     return True
+
+
 def convn(number, base):
     newnumber = 0
     while number > 0:
         newnumber += number % base
         number //= base
     return newnumber
+
+
 def cdiv(n, k): return n // k + (n % k != 0)
+
+
 def ispal(s):
     for i in range(len(s) // 2 + 1):
         if s[i] != s[-i - 1]:

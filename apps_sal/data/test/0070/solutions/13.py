@@ -16,6 +16,3 @@ if f:
     print(ans)
 else:
     print(len(s) - 1)
-
-
-

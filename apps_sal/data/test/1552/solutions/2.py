@@ -9,4 +9,3 @@ for i in t:
 print(m)
 for i in range(m):
     print(t[0][i], t[1][i], t[2][i])
-

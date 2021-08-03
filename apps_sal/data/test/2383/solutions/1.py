@@ -11,4 +11,3 @@ else:
         else:
             ans += 1
     print(ans)
-

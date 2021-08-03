@@ -1,5 +1,6 @@
 import itertools
 
+
 def choose_best_sum(t, k, ls):
     print(t, k, ls)
     list_sorted = sorted(ls)

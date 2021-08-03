@@ -5,4 +5,3 @@ def evaporator(content, evap_per_day, threshold):
         days += 1
         percent_of_content -= percent_of_content * evap_per_day * 0.01
     return days
-

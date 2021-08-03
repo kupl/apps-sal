@@ -26,4 +26,3 @@ for i, list_a in sorted(f.items()):
         len(sugg),
         ' '.join(map(str, sorted(sugg)))
     ))
-

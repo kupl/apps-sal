@@ -11,4 +11,3 @@ for index, step in enumerate(s, start=1):
             break
 
 print(result)
-

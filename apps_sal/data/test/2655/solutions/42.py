@@ -1,11 +1,11 @@
 n = int(input())
-friendry = list(map(int,input().split()))
+friendry = list(map(int, input().split()))
 friendry.sort()
 friendry.reverse()
 # print(friendry)
 ans = 0
-t = n-1
-for i in range(n-1):
+t = n - 1
+for i in range(n - 1):
     lim = 2
     if(i == 0):
         lim = 1
@@ -15,5 +15,3 @@ for i in range(n-1):
             t -= 1
 
 print(ans)
-
-

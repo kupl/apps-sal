@@ -11,4 +11,3 @@ for a in map(int, input().split()):
         ans = max(ans, a)
 
 print(ans)
-

@@ -35,4 +35,5 @@ def main():
     res = min(dp[n - 1][0], dp[n - 1][1])
     print(res == INF and -1 or res)
 
+
 main()

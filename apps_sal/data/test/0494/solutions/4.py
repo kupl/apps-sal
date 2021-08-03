@@ -24,4 +24,5 @@ def main():
             a[i] = unused.pop()
     return ' '.join(map(str, a))
 
+
 print(main())

@@ -1,1 +1,1 @@
-distribution_of=lambda g,r=[0,0],c=0: r if not len(g) else distribution_of(*([g[:-1],[r[0],r[1]+g[-1]],0] if g[-1]>g[0] else [g[1:],[r[0],r[1]+g[0]],0])) if c else distribution_of(*([g[:-1],[r[0]+g[-1],r[1]],1] if g[-1]>g[0] else [g[1:],[r[0]+g[0],r[1]],1]))
+distribution_of = lambda g, r=[0, 0], c=0: r if not len(g) else distribution_of(*([g[:-1], [r[0], r[1] + g[-1]], 0] if g[-1] > g[0] else [g[1:], [r[0], r[1] + g[0]], 0])) if c else distribution_of(*([g[:-1], [r[0] + g[-1], r[1]], 1] if g[-1] > g[0] else [g[1:], [r[0] + g[0], r[1]], 1]))

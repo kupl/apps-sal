@@ -8,4 +8,3 @@ for i in a:
 for i in b:
     sum = sum - 2 ** i + 1
 print(sum % 1000000007)
-

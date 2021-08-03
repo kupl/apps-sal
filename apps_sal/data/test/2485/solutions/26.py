@@ -15,4 +15,3 @@ for h, w in zip(*[iter(hw)] * 2):
 
 ans = h_max + w_max
 print(ans) if not_on_bomb else print(ans - 1)
-

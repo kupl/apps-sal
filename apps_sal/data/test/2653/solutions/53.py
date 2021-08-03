@@ -27,4 +27,3 @@ while len(d) != 0:
         score[c] += score[now]
         d.append(c)
 print((" ".join(map(str, score[1:]))))
-

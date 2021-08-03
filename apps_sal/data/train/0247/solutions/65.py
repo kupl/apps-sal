@@ -3,7 +3,7 @@ class Solution:
         n_arr = len(arr)
         if n_arr == 0:
             return -1
-        
+
         def get_minlen_ending_before(array: List[int]) -> List[int]:
             n_array = len(array)
             minlen_array = [float('inf')] * n_array
@@ -21,12 +21,12 @@ class Solution:
                 elif curr_sum < target:
                     increment_j = True
                     if j < n_array - 1:
-                        curr_sum += array[j+1]
+                        curr_sum += array[j + 1]
                 elif curr_sum > target:
                     curr_sum -= array[i]
                     increment_i = True
                 if j < n_array - 1:
-                    minlen_array[j+1] = min_len
+                    minlen_array[j + 1] = min_len
                 if increment_i:
                     i += 1
                 if increment_j:
@@ -35,10 +35,10 @@ class Solution:
                     j = i
                     curr_sum = array[i]
             return minlen_array
-        
+
         prefix = get_minlen_ending_before(arr)
         postfix = (get_minlen_ending_before(arr[::-1] + [0])[1:])[::-1]
-        
+
         min_sum = float('inf')
         for i in range(n_arr):
             min_sum = min(min_sum, prefix[i] + postfix[i])

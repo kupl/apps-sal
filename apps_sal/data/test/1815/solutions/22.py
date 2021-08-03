@@ -27,4 +27,3 @@ for i in range(N):
         elif drr[1] == drr[0] + 1 and len(cnt[drr[1]]) == 1:
             answer = i + 1
 print(answer)
-

@@ -13,7 +13,7 @@ for _ in range(T):
         for i in range(m):
             if b[i] == 0:
                 zeros.append(i)
-        for i in range(25,-1,-1):
+        for i in range(25, -1, -1):
             if count[i] >= len(zeros):
                 c = chr(i + 97)
                 count[i] = 0

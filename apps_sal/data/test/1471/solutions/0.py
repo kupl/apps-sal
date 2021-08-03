@@ -1,20 +1,20 @@
 N = int(input())
-u, v, w = [0]*(N-1), [0]*(N-1), [0]*(N-1)
+u, v, w = [0] * (N - 1), [0] * (N - 1), [0] * (N - 1)
 n = [-1] * N
-# n[][0] 色　n[][1] 連結先一覧リスト n[][2] mod2 
+# n[][0] 色　n[][1] 連結先一覧リスト n[][2] mod2
 for i in range(N):
-    n[i] = [0]*4
+    n[i] = [0] * 4
     n[i][1] = []
     n[i][2] = []
 
-for i in range(N-1):
+for i in range(N - 1):
     u[i], v[i], w[i] = list(map(int, input().split()))
-    n[u[i]-1][1].append(v[i]-1)
-    n[v[i]-1][1].append(u[i]-1)
-    n[u[i]-1][2].append(w[i]%2)
-    n[v[i]-1][2].append(w[i]%2)
+    n[u[i] - 1][1].append(v[i] - 1)
+    n[v[i] - 1][1].append(u[i] - 1)
+    n[u[i] - 1][2].append(w[i] % 2)
+    n[v[i] - 1][2].append(w[i] % 2)
 
-stack = [u[0]-1]
+stack = [u[0] - 1]
 
 while True:
     num = stack.pop()

@@ -1,5 +1,5 @@
 def main():
-    read = lambda: list(map(int, input().split()))
+    def read(): return list(map(int, input().split()))
     n, m, k = read()
     x, s = read()
     a = list(read())
@@ -17,9 +17,11 @@ def main():
         while j < m and b[j][0] + d[i] <= s:
             Min = min(Min, a[b[j][1]])
             j += 1
-        if d[i] > s: continue
+        if d[i] > s:
+            continue
         cur = (n - c[i]) * Min
         ans = min(ans, cur)
     print(ans)
-main()
 
+
+main()

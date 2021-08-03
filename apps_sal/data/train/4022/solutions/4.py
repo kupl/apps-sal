@@ -1,9 +1,11 @@
 import re
+
+
 def soundex(s):
-    d, li = {k:i for i,j in zip(list(range(1, 7)), ['bfpv','cgjkqsxz','dt','l','mn','r'])for k in j}, []
+    d, li = {k: i for i, j in zip(list(range(1, 7)), ['bfpv', 'cgjkqsxz', 'dt', 'l', 'mn', 'r'])for k in j}, []
     for i in s.split():
         first = i[0]
-        i = first+re.sub(r'[hwHW]','',i[1:])
+        i = first + re.sub(r'[hwHW]', '', i[1:])
         i = re.sub(r'[^aeiouy]', lambda x: str(d.get(x.group().lower(), x.group())), i)
         i = re.sub(r'(\d)(\1+)', r'\1', i)
         i = i[0] + re.sub(r'[aeiouyAEIOUY]', '', i[1:])

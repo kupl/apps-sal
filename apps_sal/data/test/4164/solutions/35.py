@@ -1,3 +1,3 @@
-r=int(input())
-r**=2
+r = int(input())
+r **= 2
 print(r)

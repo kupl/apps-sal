@@ -1,7 +1,9 @@
 def smaller(nums):
-    i = 0; res = []
+    i = 0
+    res = []
     while i < len(nums):
-        j = i + 1; nb = 0
+        j = i + 1
+        nb = 0
         while j < len(nums):
             if nums[i] > nums[j]:
                 nb += 1

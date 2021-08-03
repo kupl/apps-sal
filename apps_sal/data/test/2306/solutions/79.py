@@ -20,4 +20,3 @@ answer = np.minimum(tmp, answer)
 answer = np.abs(answer[1:] + answer[:-1]) * 0.5 / 2
 
 print((answer.sum()))
-

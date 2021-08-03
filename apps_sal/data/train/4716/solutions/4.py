@@ -3,8 +3,8 @@ def take_one(golds):
         return golds.pop(0)
     else:
         return golds.pop() if golds else 0
-        
-        
+
+
 def distribution_of(golds):
     golds = golds[:]
     a = b = 0

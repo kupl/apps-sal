@@ -1,5 +1,6 @@
 """ Created by Shahen Kosyan on 3/11/17 """
 
+
 def __starting_point():
     n, k = [int(x) for x in input().split()]
     kc = k
@@ -22,5 +23,6 @@ def __starting_point():
         i += 1
 
     print(password)
+
 
 __starting_point()

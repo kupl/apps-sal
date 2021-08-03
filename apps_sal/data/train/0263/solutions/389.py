@@ -22,5 +22,3 @@ class Solution:
                 for p in self.pos(idx):
                     memo[idx][s] += memo[p][s - 1]
         return sum((memo[i][n] for i in range(10))) % (10 ** 9 + 7)
-
-

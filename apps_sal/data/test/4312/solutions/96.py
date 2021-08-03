@@ -20,4 +20,3 @@ while A > 0 and B > 0:
     if A <= 0:
         print('No')
         break
-

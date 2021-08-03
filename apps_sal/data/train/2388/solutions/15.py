@@ -1,7 +1,7 @@
 import sys
 from collections import deque
 for case in range(int(input())):
-    n, m = map(int, sys.stdin.readline().split()) #fast io
+    n, m = map(int, sys.stdin.readline().split())  # fast io
     g = [[] for i in range(n + 1)]
     for i in range(m):
         x, y = map(int, sys.stdin.readline().split())
@@ -9,7 +9,7 @@ for case in range(int(input())):
         g[y].append(x)
     col = [-1] * (n + 1)
     col[1] = 1
-    Q = deque() #calling deque data structure from collections
+    Q = deque()  # calling deque data structure from collections
     Q.append(1)
     ans = [[] for i in range(2)]
     ans[1].append(1)

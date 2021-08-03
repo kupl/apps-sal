@@ -1,6 +1,6 @@
 def deep_count(a):
     b = []
-    while  a:
+    while a:
         for i in a:
             if type(i) == list:
                 a.extend(i)

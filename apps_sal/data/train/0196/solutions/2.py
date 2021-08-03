@@ -12,25 +12,21 @@ class Solution:
             max_sum = max(max_sum, cur_sum)
         if len(A) <= 2:
             return max_sum
-        
+
         right_sum = A[-1]
         right_max = [A[-1]]
-        for i in A[len(A)-2::-1]:
+        for i in A[len(A) - 2::-1]:
             right_sum += i
             right_max.append(max(right_max[-1], right_sum))
         right_max = right_max[::-1]
         # print(right_max)
-        
+
         left_max = A[0]
         left_sum = A[0]
-        for i in range(1, len(A)-1):
+        for i in range(1, len(A) - 1):
             # print(A[i], left_max, left_sum)
             left_sum += A[i]
             left_max = max(left_max, left_sum)
-            max_sum = max(max_sum, left_max + right_max[i+1])
-            
-        return max_sum
-        
-            
-        
+            max_sum = max(max_sum, left_max + right_max[i + 1])
 
+        return max_sum

@@ -26,7 +26,7 @@ ans = 0
 while True:
     l = back_l
     r = back_r
-    for i in range(back_r+1, n):
+    for i in range(back_r + 1, n):
         if c[i] == 1:
             l = i
             r = i
@@ -36,7 +36,7 @@ while True:
         M = max(M, a[i])
         if i + 1 >= n:
             r = i
-        elif c[i+1] == 0:
+        elif c[i + 1] == 0:
             r = i
             break
         else:
@@ -49,28 +49,27 @@ while True:
     left = -1
     right = -1
     if l > 0:
-        left = a[l-1]
+        left = a[l - 1]
 
-    if r < n-1:
-        right = a[r+1]
+    if r < n - 1:
+        right = a[r + 1]
 
-
-    if N < k  and M > left and M > right:
+    if N < k and M > left and M > right:
         print(-1)
         return
 
-    if x/k <= y:
-        ans += (N//k) * x
-        N -= (N//k)*k
-        ans += y*N
+    if x / k <= y:
+        ans += (N // k) * x
+        N -= (N // k) * k
+        ans += y * N
     else:
 
         if M < left or M < right:
-            ans += y*N
+            ans += y * N
         else:
             ans += x
             N -= k
-            ans += y*N
+            ans += y * N
     back_l = l
     back_r = r
 print(ans)

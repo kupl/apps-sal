@@ -7,6 +7,8 @@ def check(i):
     if s == 0:
         return True
     return False
+
+
 a = int(input())
 b = [int(i) for i in list(input())]
 for i in range(max(1, sum(b))):

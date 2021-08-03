@@ -1,17 +1,24 @@
 import sys
+
+
 def main():
     input = sys.stdin.readline
-    K=int(input())
-    N=max(2,min(50,K))
-    ans=[i+K//N for i in range(N)]
-    m=K%N
+    K = int(input())
+    N = max(2, min(50, K))
+    ans = [i + K // N for i in range(N)]
+    m = K % N
     for i in range(m):
         for j in range(N):
-            if i==j: ans[j]+=N
-            else: ans[j]-=1
+            if i == j:
+                ans[j] += N
+            else:
+                ans[j] -= 1
     print(N)
     print(*ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

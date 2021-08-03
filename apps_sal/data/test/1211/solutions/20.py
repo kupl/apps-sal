@@ -11,4 +11,3 @@ for x in range(len(lst)):
         t = x
 
 print(t + 1, n // lst[t])
-

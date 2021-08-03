@@ -1,5 +1,6 @@
 from math import factorial
 
+
 class Solution:
     def getProbability(self, balls: List[int]) -> float:
         # number of distinct arrangements where some balls are identical
@@ -25,6 +26,7 @@ class Solution:
             return result
 
         t = sum(balls) // 2
+
         def dfs(a, b, i, sa, sb):
             if sa > t:
                 return 0
@@ -47,9 +49,5 @@ class Solution:
 
             return result
 
-
         splits = dfs(a, b, 0, 0, sum(b))
         return round(splits / perm(balls), 5)
-
-
-

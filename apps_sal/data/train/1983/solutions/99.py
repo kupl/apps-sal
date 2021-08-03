@@ -25,7 +25,7 @@ class ProductOfNumbers:
             divisor = 1
             if k + 1 <= len(self.nums) and self.products[-k - 1] != 0:
                 divisor = self.products[-k - 1]
-            return int(self.products[-1]/divisor)
+            return int(self.products[-1] / divisor)
         else:
             return 0
 
@@ -34,4 +34,3 @@ class ProductOfNumbers:
 # obj = ProductOfNumbers()
 # obj.add(num)
 # param_2 = obj.getProduct(k)
-

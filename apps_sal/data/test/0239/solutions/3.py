@@ -6,12 +6,14 @@ if n > m:
     n, m = m, n
     swapped = True
 
+
 def mprint(x, y):
     nonlocal swapped
     if swapped:
         print(y, x)
     else:
         print(x, y)
+
 
 def mlen(pnt):
     res = 0.0
@@ -21,6 +23,7 @@ def mlen(pnt):
         val = math.sqrt(val)
         res += val
     return res
+
 
 if n == 0:
     mprint(0, 1)
@@ -34,4 +37,3 @@ else:
         two = one
     for x in two:
         mprint(*x)
-

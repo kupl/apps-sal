@@ -17,4 +17,3 @@ while l != r:
     else:
         l = pos + 1
 print(r)
-

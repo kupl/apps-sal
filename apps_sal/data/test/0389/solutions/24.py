@@ -1,7 +1,10 @@
 MAX = 1e9 + 7
 m = {}
+
+
 def main():
     nonlocal m
+
     def f(a, b):
         if (a, b) in m:
             return m[(a, b)]
@@ -13,11 +16,11 @@ def main():
             return f(b, a)
         ret = int(MAX)
         if a % 2 == 0:
-            ret = min(ret, 1 + f(a/2, b))
+            ret = min(ret, 1 + f(a / 2, b))
         if a % 3 == 0:
-            ret = min(ret, 1 + f(a/3, b))
+            ret = min(ret, 1 + f(a / 3, b))
         if a % 5 == 0:
-            ret = min(ret, 1 + f(a/5, b))
+            ret = min(ret, 1 + f(a / 5, b))
         m[(a, b)] = ret
         return ret
     (a, b) = list(map(int, input().split(' ')))
@@ -26,5 +29,5 @@ def main():
         return -1
     return x
 
-print(main())
 
+print(main())

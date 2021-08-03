@@ -1,2 +1,2 @@
 def odd_count(n):
-    return ((n-1)/2,n/2)[n%2==0]
+    return ((n - 1) / 2, n / 2)[n % 2 == 0]

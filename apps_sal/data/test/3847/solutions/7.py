@@ -1,7 +1,10 @@
 from itertools import accumulate
 from sys import stdout
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 n, m = R()
 a, b = list(accumulate(R())), list(R())
 x = int(input())

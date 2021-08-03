@@ -1,5 +1,6 @@
 import string
 
+
 def single_check(p, a):
     if not p:
         return 1
@@ -36,6 +37,3 @@ for _ in range(n):
                     print('YES')
             else:
                 print('NO')
-
-
-

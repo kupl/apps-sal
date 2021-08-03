@@ -1,4 +1,4 @@
-def starts_with(st, prefix): 
+def starts_with(st, prefix):
     if len(prefix) == 0:
         return True
     elif len(prefix) > len(st):

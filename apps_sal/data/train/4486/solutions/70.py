@@ -1,4 +1,4 @@
-def repeat_it(string,n):
+def repeat_it(string, n):
     if isinstance(string, str):
         final = ""
         for i in range(n):
@@ -6,4 +6,3 @@ def repeat_it(string,n):
         return final
     else:
         return "Not a string"
-

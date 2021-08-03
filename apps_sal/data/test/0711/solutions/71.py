@@ -6,7 +6,7 @@ MOD = 10 ** 9 + 7
 def prime_decomposition(n):
     i = 2
     prime2exponent = {}  # key:prime --> value:its exponent
-    while i*i <= n:
+    while i * i <= n:
         while n % i == 0:
             n //= i
             if i in prime2exponent:
@@ -63,7 +63,6 @@ comb = Combination(1000000)
 pd = prime_decomposition(M)
 ans = 1
 for v in list(pd.values()):
-    c = comb(N + v - 1, N-1)
+    c = comb(N + v - 1, N - 1)
     ans = ans * c % MOD
 print(ans)
-

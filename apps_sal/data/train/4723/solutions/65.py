@@ -3,6 +3,6 @@ def greet(name):
     z = name[1::]
     h = z.lower()
     u = y.upper()
-    return("Hello {}!".format(u+h))
+    return("Hello {}!".format(u + h))
 
     pass

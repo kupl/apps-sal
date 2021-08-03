@@ -7,5 +7,4 @@ d = int(input())
 e = min(a, b)
 f = min(c, d)
 
-print((e+f))
-
+print((e + f))

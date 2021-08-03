@@ -1,6 +1,6 @@
 def double_char(s):
-    a=""
+    a = ""
     for i in s:
-        i=i*2
-        a+=i
-    return a   
+        i = i * 2
+        a += i
+    return a

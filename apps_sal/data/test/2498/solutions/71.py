@@ -1,7 +1,9 @@
 from math import gcd
 
+
 def lcm(a, b):
     return a * b // gcd(a, b)
+
 
 n, m = list(map(int, input().split()))
 a = list(map(int, input().split()))
@@ -18,4 +20,3 @@ res = 1
 for i in range(n):
     res = lcm(res, a[i] // 2)
 print((m // res - m // (res * 2)))
-

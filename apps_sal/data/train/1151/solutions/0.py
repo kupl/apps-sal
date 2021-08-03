@@ -11,6 +11,7 @@ def dfs(src, visit):
         if visit[nbr] == 0:
             dfs(nbr, visit)
 
+
 for _ in range(int(stdin.readline())):
     n, m = list(map(int, stdin.readline().split()))
     d = {}
@@ -34,4 +35,3 @@ for _ in range(int(stdin.readline())):
             if i in d:
                 dfs(i, visited)
     print(ans)
-

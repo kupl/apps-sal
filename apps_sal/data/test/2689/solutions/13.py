@@ -1,30 +1,30 @@
 # cook your dish here
-s=input().rstrip()
-i=0
-final=''
-while i<len(s):
+s = input().rstrip()
+i = 0
+final = ''
+while i < len(s):
     if s[i].isdigit():
-        val=int(s[i])
-        s1=''
-        while s[i]!='-':
+        val = int(s[i])
+        s1 = ''
+        while s[i] != '-':
             if s[i].isalpha():
-                s1+=s[i]
-            i+=1
-        i+=1
-        final+=s1*val
+                s1 += s[i]
+            i += 1
+        i += 1
+        final += s1 * val
     else:
-        s1=''
+        s1 = ''
         while s[i].isalpha():
-            s1+=s[i]
-            i+=1
-            if i>=len(s):
+            s1 += s[i]
+            i += 1
+            if i >= len(s):
                 break
-        final+=s1
-#print(final)
-final=list(final)
-temp=final[::-1]
-#print(temp,final)
-if final==temp:
+        final += s1
+# print(final)
+final = list(final)
+temp = final[::-1]
+# print(temp,final)
+if final == temp:
     print('Return')
 else:
     print('Continue')

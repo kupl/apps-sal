@@ -1,10 +1,10 @@
 bingo = []
-kiroku = [[0,0,0] for i in range(3)]
+kiroku = [[0, 0, 0] for i in range(3)]
 for i in range(3):
-    a,b,c = map(int,input().split())
-    bingo.append([a,b,c])
+    a, b, c = map(int, input().split())
+    bingo.append([a, b, c])
 
-n =  int(input())
+n = int(input())
 for j in range(n):
     num = int(input())
     for k in range(3):

@@ -1,5 +1,5 @@
-a,b=map(str,input().split())
+a, b = map(str, input().split())
 if (a == "H" and b == "H") or (a == "D" and b == "D"):
-  print("H")
+    print("H")
 else:
-  print("D")
+    print("D")

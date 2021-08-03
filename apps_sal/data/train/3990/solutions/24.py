@@ -1,2 +1,2 @@
-def derive(c, e): 
+def derive(c, e):
     return f"{c*e}x^{e-1}"

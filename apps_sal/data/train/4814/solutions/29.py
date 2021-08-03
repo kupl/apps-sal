@@ -7,4 +7,4 @@ def is_palindrome(s):
             print(s)
             return False
         s = s[1:-1]
-    return True    
+    return True

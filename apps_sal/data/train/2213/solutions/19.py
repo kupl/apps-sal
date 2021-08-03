@@ -7,4 +7,3 @@ for T in range(int(input())):
         print(b)
     else:
         print(a ^ b)
-

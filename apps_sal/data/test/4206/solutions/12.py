@@ -22,7 +22,7 @@ while cur >= 0:
                 x = 1
                 break
             tmp2 //= 10
-        
+
     cur -= 1
 
 print(ans)

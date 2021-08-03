@@ -1,8 +1,8 @@
 class Solution:
-    
+
     def minTaps1(self, n: int, ranges: List[int]) -> int:
         intervals = []
-        for i in range(n+1):
+        for i in range(n + 1):
             if ranges[i]:
                 left = max(0, i - ranges[i])
                 right = min(n, i + ranges[i])
@@ -18,13 +18,13 @@ class Solution:
             # i > max_pos: [max_pos, i] not covered
             if i > max_pos:
                 return -1
-            elif prev_max_pos < i <= max_pos: # (i, j) will cover new interval
+            elif prev_max_pos < i <= max_pos:  # (i, j) will cover new interval
                 res = res + 1
                 prev_max_pos = max_pos
                 print((i, j), res)
             max_pos = max(max_pos, j)
         return res if max_pos >= n else -1
-        
+
     def minTaps(self, n: int, ranges: List[int]) -> int:
         dp = [0] + [n + 1] * n
         for i, x in enumerate(ranges):

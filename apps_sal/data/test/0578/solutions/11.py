@@ -14,10 +14,9 @@ def main():
             print(s2[i], end='')
         else:
             print(0, end='')
-    s2 = s2[i+1:]
+    s2 = s2[i + 1:]
     if s2:
         print('.' + s2)
 
-main()
-    
 
+main()

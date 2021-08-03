@@ -16,4 +16,3 @@ for state in range(1 << N):
             dp[state | k] = dp[state] + a
 ans = dp[(1 << N) - 1]
 print((ans if ans < 10**18 else -1))
-

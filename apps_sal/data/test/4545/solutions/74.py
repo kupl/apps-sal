@@ -4,4 +4,3 @@ A = int(input())
 
 # 出力
 print((N ** 2 - A))
-

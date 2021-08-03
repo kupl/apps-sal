@@ -1,7 +1,7 @@
 import math
 
 N, X = map(int, input().split())
-x= list(map(int, input().split()))
+x = list(map(int, input().split()))
 
 absx = [abs(X - xx) for xx in x]
 absx.sort()

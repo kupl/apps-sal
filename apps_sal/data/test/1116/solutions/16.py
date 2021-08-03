@@ -7,11 +7,11 @@ for i in range(T):
         tmp = r
         r = b
         b = tmp
-    
+
     g = gcd(r, b)
     r = r // g
     b = b // g
-    if r*(k-1)+1<b:
+    if r * (k - 1) + 1 < b:
         print("REBEL")
     else:
         print("OBEY")

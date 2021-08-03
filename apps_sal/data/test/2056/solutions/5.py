@@ -15,4 +15,3 @@ for i in range(N):
             s ^= 1 << j
     ans += s * s
 print(ans)
-

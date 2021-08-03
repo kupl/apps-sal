@@ -1,6 +1,6 @@
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        if S==T:
+        if S == T:
             return 0
         stops = collections.defaultdict(list)
         for i, route in enumerate(routes):
@@ -11,7 +11,7 @@ class Solution:
         q = collections.deque()
         routes = [set(route) for route in routes]
         for route in stops[S]:
-            q.append([route,1])
+            q.append([route, 1])
             expanded.add(route)
         while q:
             cur_route, buses_taken = q.popleft()
@@ -21,6 +21,5 @@ class Solution:
                 for transfer_route in stops[stop]:
                     if transfer_route not in expanded:
                         expanded.add(transfer_route)
-                        q.append([transfer_route,buses_taken+1])
+                        q.append([transfer_route, buses_taken + 1])
         return -1
-

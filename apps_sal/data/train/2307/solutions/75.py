@@ -35,15 +35,14 @@ class UnionFind(list):
 
 
 un = UnionFind(n)
-for i in range(n-1):
-    if (xlist[i+1]-xlist[i])*a <= b:
-        un.unite(i, i+1)
+for i in range(n - 1):
+    if (xlist[i + 1] - xlist[i]) * a <= b:
+        un.unite(i, i + 1)
 
 ans = 0
-for i in range(n-1):
-    if un.same(i, i+1):
-        ans += (xlist[i+1]-xlist[i])*a
+for i in range(n - 1):
+    if un.same(i, i + 1):
+        ans += (xlist[i + 1] - xlist[i]) * a
     else:
         ans += b
 print(ans)
-

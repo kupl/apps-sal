@@ -1,4 +1,4 @@
-from collections import deque  
+from collections import deque
 
 n = int(input())
 line = list(input())

@@ -1,6 +1,6 @@
-h1,a1,c1 = list(map(int,input().split()))
-h2,a2 = list(map(int,input().split()))
-actions = [0]*10000
+h1, a1, c1 = list(map(int, input().split()))
+h2, a2 = list(map(int, input().split()))
+actions = [0] * 10000
 j = 0
 
 while h2 >= 0:
@@ -24,5 +24,3 @@ for i in range(j):
         print("STRIKE")
     elif actions[i] == 2:
         print("HEAL")
-    
-

@@ -3,6 +3,7 @@ h = list(map(int, input().split(' ')))
 
 p = [0] * n
 
+
 def doit(k):
     ts = 0
     td = 0
@@ -20,6 +21,7 @@ def doit(k):
         return 1
     else:
         return 0
+
 
 mir = min(h)
 mar = mir + m

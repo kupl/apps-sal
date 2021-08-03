@@ -40,9 +40,8 @@ def main():
         print(("{}-{}-{}-{}=7".format(L[0], L[1], L[2], L[3])))
 
 
-
-
 def __starting_point():
     main()
+
 
 __starting_point()

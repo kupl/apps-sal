@@ -26,4 +26,3 @@ if max_diff > n - 1:
 else:
     ans = (n - max_diff) * n
 print(ans)
-

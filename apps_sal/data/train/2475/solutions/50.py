@@ -11,8 +11,7 @@ class Solution:
                     inDecreasingOrder = False
                     break
                 maximum = val
-                j   += 1
+                j += 1
             if inDecreasingOrder:
                 count += 1
-        return len(A[0])-count
-
+        return len(A[0]) - count

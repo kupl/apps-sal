@@ -35,7 +35,7 @@ def main():
     edges = list()
     for _ in range(M):
         a, b, c = list(map(int, input().split(' ')))
-        from_node = a - 1 
+        from_node = a - 1
         to_node = b - 1
         weight = c
         edges.append(Edge(from_node, to_node, weight))
@@ -49,5 +49,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

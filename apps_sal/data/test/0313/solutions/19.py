@@ -13,6 +13,3 @@ for l in lessons:
         home = False
     prev = l
 print(cnt)
-
-
-

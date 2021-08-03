@@ -33,5 +33,3 @@ class Solution:
                 cal_with_cache(i, j)
 
         return cal_with_cache(len(text1) - 1, len(text2) - 1)
-
-

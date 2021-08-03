@@ -27,11 +27,12 @@ def remove_me(to_left, to_right, index):
         to_right[left_id] = right_id
     return (left_id, right_id)
 
+
 def join_team(n, k, students):
     teams = ['0'] * n
     mydict = dict(list(zip(students, list(range(n)))))    # {skill: id}
-    to_left = [i-1 for i in range(n)]
-    to_right = [i+1 for i in range(n)]
+    to_left = [i - 1 for i in range(n)]
+    to_right = [i + 1 for i in range(n)]
 
     next_chosen = n
     chosen_total = 0
@@ -59,11 +60,13 @@ def join_team(n, k, students):
                 left_id, right_id = remove_me(to_left, to_right, right_id)
     return teams
 
+
 def main(argv=None):
     n, k = list(map(int, input().split()))
     students = list(map(int, input().split()))
     print(''.join(join_team(n, k, students)))
     return 0
+
 
 def __starting_point():
     STATUS = main()

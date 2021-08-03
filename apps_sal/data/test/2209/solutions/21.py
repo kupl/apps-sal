@@ -15,4 +15,3 @@ for ti in t:
     if ti == 'h':
         res += cnt
 print(res)
-

@@ -1,25 +1,28 @@
 def is_digit(p):
     return p >= '0' and p <= '9'
-    
+
+
 def is_sign(p):
     return p in '+-*/^%'
+
 
 def calc(sign, a, b):
     try:
         if sign == '+':
-            return a+b
+            return a + b
         elif sign == '-':
-            return a-b
+            return a - b
         elif sign == '*':
-            return a*b
+            return a * b
         elif sign == '/':
-            return a//b
+            return a // b
         elif sign == '^':
             return a**b
         else:
-            return a%b
+            return a % b
     except:
         return None
+
 
 def no_order(equation):
     left, right = 0, ""

@@ -5,5 +5,6 @@ def narcissistic(n):
     except ValueError:
         return False
 
+
 def is_narcissistic(*args):
     return all(map(narcissistic, args))

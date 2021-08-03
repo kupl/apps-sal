@@ -18,16 +18,15 @@ for i in range(N):
 
 laptops.sort()
 
-#print(laptops)
+# print(laptops)
 
 isReverse = False
 
-for i in range(N-1):
-    if laptops[i+1][1] < laptops[i][1]:
+for i in range(N - 1):
+    if laptops[i + 1][1] < laptops[i][1]:
         isReverse = True
         print("Happy Alex")
         break
 
 if isReverse == False:
     print("Poor Alex")
-

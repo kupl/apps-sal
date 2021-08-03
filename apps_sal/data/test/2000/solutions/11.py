@@ -19,10 +19,10 @@ print(ans)
 '''
 d = Counter()
 for i in range(n):
-    for j in range(1,31):
+    for j in range(1, 31):
         val = 2**j - a[i]
         if val > 0:
             if val in d:
                 ans += d[val]
-    d[a[i]] +=1
+    d[a[i]] += 1
 print(ans)

@@ -10,4 +10,3 @@ for i in range(1, 6):
     if (i + t) % (n + 1) != 1:
         slon += 1
 print(slon)
-

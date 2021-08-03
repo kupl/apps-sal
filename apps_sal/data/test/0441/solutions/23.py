@@ -8,13 +8,13 @@ n1 = 0  # num of odd parts
 
 i_prev = -1
 while True:
-	i_next = s.find('*', i_prev + 1)
-	if i_next < 0:
-		break
-	l = i_next - i_prev - 1
-	l0 += l // 2
-	n1 += l % 2
-	i_prev = i_next
+    i_next = s.find('*', i_prev + 1)
+    if i_next < 0:
+        break
+    l = i_next - i_prev - 1
+    l0 += l // 2
+    n1 += l % 2
+    i_prev = i_next
 
 c = min(a, b, l0)
 res = 2 * c
@@ -23,5 +23,4 @@ b -= c
 l0 -= c
 res += min(l0 + n1, a + b)
 
-print (res)
-
+print(res)

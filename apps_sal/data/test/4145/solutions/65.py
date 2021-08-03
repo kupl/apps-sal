@@ -1,6 +1,7 @@
 # coding: utf-8
 from math import sqrt
 
+
 def main():
     X = int(input())
 
@@ -17,7 +18,9 @@ def main():
 
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

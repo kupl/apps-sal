@@ -15,4 +15,3 @@ for i in tom:
         if i * j > r:
             r = i * j
 print(r, flush=True)
-

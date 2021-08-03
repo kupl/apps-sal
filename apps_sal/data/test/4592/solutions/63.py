@@ -1,5 +1,6 @@
 MOD = 10 ** 9 + 7
 
+
 def sieve(n):
     srn = int(n ** 0.5) + 1
     f = [False] * (srn + 1)
@@ -12,9 +13,10 @@ def sieve(n):
             f[j] = True
     return res
 
+
 def trial_division(n):
     res = dict()
-    for i in range(2, n+1):
+    for i in range(2, n + 1):
         m = i
         for p in pn:
             while m % p == 0:
@@ -25,6 +27,7 @@ def trial_division(n):
         if m > 1:
             res[m] = res.get(m, 0) + 1
     return res
+
 
 N = int(input())
 pn = sieve(N)

@@ -3,7 +3,7 @@ class Solution:
         s = sum(nums)
         lo = max(1, s // threshold)
         hi = max(nums)
-        
+
         while lo < hi:
             mid = (lo + hi) // 2
             r = sum([math.ceil(n / mid) for n in nums])
@@ -11,5 +11,5 @@ class Solution:
                 lo = mid + 1
             else:
                 hi = mid
-                
+
         return lo

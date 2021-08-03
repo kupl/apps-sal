@@ -7,4 +7,3 @@ def string_clean(s):
         else:
             final.append(i)
     return ''.join(final)
-

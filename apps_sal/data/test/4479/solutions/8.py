@@ -7,7 +7,4 @@ class Solution:
             A[i] = -A[i]
             i += 1
 
-        return sum(A) - (K - i) % 2 * 2 * min(A[i-1:i] + A[i:i+1])
-            
-        
-
+        return sum(A) - (K - i) % 2 * 2 * min(A[i - 1:i] + A[i:i + 1])

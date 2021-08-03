@@ -8,4 +8,3 @@ def correct(string):
         elif i == "5":
             string = string.replace("5", "S")
     return string
-

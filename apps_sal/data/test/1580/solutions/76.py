@@ -8,8 +8,9 @@ from collections import Counter
 from collections import deque
 from operator import itemgetter
 def input(): return sys.stdin.readline().strip()
-def mp(): return map(int,input().split())
-def lmp(): return list(map(int,input().split()))
+def mp(): return map(int, input().split())
+def lmp(): return list(map(int, input().split()))
+
 
 class UnionFind():
     def __init__(self, n):
@@ -58,9 +59,10 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m=mp()
+
+n, m = mp()
 uf = UnionFind(n)
 for i in range(m):
-    X,Y,Z=mp()
-    uf.union(X-1,Y-1)
+    X, Y, Z = mp()
+    uf.union(X - 1, Y - 1)
 print(len(uf.roots()))

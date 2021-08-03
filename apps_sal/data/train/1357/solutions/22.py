@@ -13,11 +13,11 @@ while n > 0:
         if i == 5:
             total += 5
         else:
-            total -= (i-5)
-            
+            total -= (i - 5)
+
             if total < 0:
                 print("NO")
                 break
     else:
         print("YES")
-    n-=1
+    n -= 1

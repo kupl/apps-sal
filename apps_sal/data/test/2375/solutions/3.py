@@ -6,4 +6,3 @@ else:
 
 # abs(x - y) <= 1 → abs(x - y) >= 2
 # abs(x - y) >= 2 → abs(x - y) <= 1
-

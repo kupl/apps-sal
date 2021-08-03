@@ -6,4 +6,3 @@ def rule30(l, n):
         l = [0] * 2 + l + [0] * 2
         l = [d[(l[j], l[j + 1], l[j + 2])] for j in range(0, len(l) - 2)]
     return l
-

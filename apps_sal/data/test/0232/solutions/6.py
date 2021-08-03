@@ -31,4 +31,3 @@ for i in range(n - s):
         return
 
 print('NO')
-

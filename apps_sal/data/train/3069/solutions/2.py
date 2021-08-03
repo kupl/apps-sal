@@ -18,5 +18,6 @@ welcome_message = {
     'welsh': 'Croeso',
 }
 
+
 def greet(language):
     return welcome_message.get(language, welcome_message['english'])

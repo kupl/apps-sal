@@ -4,7 +4,7 @@ class Solution:
         for j in range(6):
             dp[0][j] = 1
         dp[0][-1] = 6
-        
+
         for i in range(1, n):
             total = 0
             for j in range(6):
@@ -15,7 +15,5 @@ class Solution:
                     dp[i][j] -= dp[i - rollMax[j] - 1][-1] - dp[i - rollMax[j] - 1][j]
                 total += dp[i][j]
             dp[i][-1] = total
-            
-        return dp[-1][-1] % (10 ** 9 + 7)
-                    
 
+        return dp[-1][-1] % (10 ** 9 + 7)

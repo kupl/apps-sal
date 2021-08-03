@@ -21,4 +21,3 @@ for i in b:
         ans = min(sum(b[i][:k]), ans)
 
 print(ans)
-

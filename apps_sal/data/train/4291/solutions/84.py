@@ -1,5 +1,6 @@
 import math
 
+
 def century(year):
     # year is divisible by 100
     if year % 100 == 0:
@@ -7,6 +8,5 @@ def century(year):
     # the year is not divisible by 100
     else:
         what_century = math.floor(year / 100) + 1
-            
-    return what_century
 
+    return what_century

@@ -3,7 +3,7 @@ a, b = input().split(' ')
 a, b = int(a), int(b)
 m = max(a, b)
 bol = True
-for i in range(n-1):
+for i in range(n - 1):
     x, y = input().split(' ')
     x, y = int(x), int(y)
     if max(x, y) <= m:
@@ -16,4 +16,3 @@ if bol:
     print("YES")
 else:
     print("NO")
-

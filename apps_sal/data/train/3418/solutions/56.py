@@ -3,4 +3,3 @@ def reverse_list(l):
     for i in reversed(l):
         updt.append(i)
     return updt
-

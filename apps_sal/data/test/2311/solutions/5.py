@@ -55,4 +55,3 @@ for i, j in pairs:
         total += act * bct
 
 print(total)
-

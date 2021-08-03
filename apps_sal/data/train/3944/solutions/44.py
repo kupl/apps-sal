@@ -6,9 +6,8 @@ def sum_triangular_numbers(n):
     calc = 1
     inc = 2
     sm = 1
-    for x in range(2,n + 1):
-        calc = calc + inc 
+    for x in range(2, n + 1):
+        calc = calc + inc
         sm = sm + calc
         inc = inc + 1
     return sm
-

@@ -4,14 +4,14 @@ from itertools import product
 
 def main():
     h, w = list(map(int, input().split()))
-    c = tuple([int(x)+1 for x in input().split()])
-    d = tuple([int(x)+1 for x in input().split()])
-    s = ['#'*(w+4)]*2 + [f'##{input()}##' for _ in range(h)] + ['#'*(w+4)]*2
+    c = tuple([int(x) + 1 for x in input().split()])
+    d = tuple([int(x) + 1 for x in input().split()])
+    s = ['#' * (w + 4)] * 2 + [f'##{input()}##' for _ in range(h)] + ['#' * (w + 4)] * 2
 
     move_a_area = [(0, -1), (-1, 0), (1, 0), (0, 1)]
     move_b_area = [(i, j) for i, j in product(list(range(-2, 3)), repeat=2) if (i, j) not in [(0, 0)] + move_a_area]
 
-    cost = [[float('inf')] * (w+4) for _ in range(h+4)]
+    cost = [[float('inf')] * (w + 4) for _ in range(h + 4)]
     cost[c[0]][c[1]] = 0
     yet = deque([(c[0], c[1], 0)])
     done = deque()
@@ -42,5 +42,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

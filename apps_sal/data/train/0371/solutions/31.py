@@ -22,30 +22,29 @@ class Solution:
         #             seen.add(nxt)
         #             q.append((nxt, jumps+1))
         # return -1
-        
-#         st = defaultdict(set)
-#         rt = defaultdict(set)
-#         for i, route in enumerate(routes):
-#             for stop in route:
-#                 st[stop].add(i)
-#                 rt[i].add(stop)
-        
-#         q = deque([(S,0)])
-#         st_seen = set()
-#         rt_seen = set()
-#         while q:
-#             node, jumps = q.popleft()
-#             if node == T: return jumps
-#             for r in st[node]:
-#                 if r not in rt_seen:
-#                     rt_seen.add(r)
-#                     for stop in routes[r]:
-#                         if stop not in st_seen:
-#                             q.append((stop, jumps+1))
-#                             st_seen.add(stop)
-#         return -1
-    
-    
+
+        #         st = defaultdict(set)
+        #         rt = defaultdict(set)
+        #         for i, route in enumerate(routes):
+        #             for stop in route:
+        #                 st[stop].add(i)
+        #                 rt[i].add(stop)
+
+        #         q = deque([(S,0)])
+        #         st_seen = set()
+        #         rt_seen = set()
+        #         while q:
+        #             node, jumps = q.popleft()
+        #             if node == T: return jumps
+        #             for r in st[node]:
+        #                 if r not in rt_seen:
+        #                     rt_seen.add(r)
+        #                     for stop in routes[r]:
+        #                         if stop not in st_seen:
+        #                             q.append((stop, jumps+1))
+        #                             st_seen.add(stop)
+        #         return -1
+
         to_routes = collections.defaultdict(set)
         for i, route in enumerate(routes):
             for j in route:
@@ -53,7 +52,8 @@ class Solution:
         bfs = [(S, 0)]
         seen = set([S])
         for stop, bus in bfs:
-            if stop == T: return bus
+            if stop == T:
+                return bus
             for i in to_routes[stop]:
                 for j in routes[i]:
                     if j not in seen:
@@ -61,4 +61,3 @@ class Solution:
                         seen.add(j)
                 routes[i] = []  # seen route
         return -1
-

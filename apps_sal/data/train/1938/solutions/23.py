@@ -28,7 +28,7 @@ class Solution(object):
             if typ is OPEN:
                 active.append((x1, x2))
                 active.sort()
-            else:    
+            else:
                 active.remove((x1, x2))
 
             cur_y = y

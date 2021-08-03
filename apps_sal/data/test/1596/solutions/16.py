@@ -16,7 +16,7 @@ for i in range(2, n):
 ans = 1
 w = 0
 m = 0
-#print(dp)
+# print(dp)
 if u[0] == 'u':
     w += 1
 elif u[0] == 'n':
@@ -38,15 +38,3 @@ if w != 0:
 if m != 0:
     ans *= dp[m - 1]
 print(ans % q)
-
-
-
-
-
-
-
-
-
-
-    
-

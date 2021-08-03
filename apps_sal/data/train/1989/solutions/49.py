@@ -10,4 +10,3 @@ class Solution:
             if prefix not in seen:
                 seen[prefix] = i
         return ans
-

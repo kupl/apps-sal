@@ -1,6 +1,7 @@
 n, k = list(map(int, input().split()))
 sizes = list(map(int, input().split()))
 
+
 def solve(n, k, sizes):
     if k >= n:
         return max(sizes)
@@ -10,5 +11,5 @@ def solve(n, k, sizes):
         tail[i] += h
     return max(tail)
 
-print(solve(n, k, sizes))
 
+print(solve(n, k, sizes))

@@ -26,4 +26,3 @@ class Solution:
                     res = i + 1
             # print(countToNum)
         return res
-

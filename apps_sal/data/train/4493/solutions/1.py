@@ -3,4 +3,3 @@ def get_last_digit(index):
     for i in range(index):
         last, tmp = tmp, (last + tmp) % 10
     return last
-

@@ -8,8 +8,8 @@ class Solution:
                 d[i] = 1
         if len(d) == len(s):
             return len(d)
-        
-        def waysToSplit(s): # return list of sequences
+
+        def waysToSplit(s):  # return list of sequences
             if not s:
                 return []
             if len(s) == 1:
@@ -17,17 +17,17 @@ class Solution:
             else:
                 res = []
                 for i in range(len(s)):
-                    first = [s[:i+1]]
-                    second = waysToSplit(s[i+1:])
+                    first = [s[:i + 1]]
+                    second = waysToSplit(s[i + 1:])
                     for seq in second:
                         res.append(first + seq)
                 res.append([s])
             return res
-        
+
         maxCount = 1
-        
+
         sequences = waysToSplit(s)
-        #print(sequences)
+        # print(sequences)
         for seq in sequences:
             s = set()
             count = 0
@@ -42,6 +42,3 @@ class Solution:
             if not foundDup:
                 maxCount = max(maxCount, count)
         return maxCount
-                
-                
-

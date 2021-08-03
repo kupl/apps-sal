@@ -1,7 +1,6 @@
 A, B, X = [int(i) for i in input().split()]
 
 if A <= X <= A + B:
-  print('YES')
+    print('YES')
 else:
-  print('NO')
-
+    print('NO')

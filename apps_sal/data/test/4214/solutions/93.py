@@ -1,4 +1,5 @@
-import itertools, math
+import itertools
+import math
 N = int(input())
 ls = []
 L = 0

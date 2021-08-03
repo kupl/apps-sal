@@ -10,8 +10,9 @@ class Solution:
         VISITING = 1
         VISITED = 2
         status = [AVAILABLE] * size
+
         def isSafe(source, res):
-            if status[source] != AVAILABLE: 
+            if status[source] != AVAILABLE:
                 return status[source] == VISITED
             status[source] = VISITING
             for neighbour in graph[source]:
@@ -24,5 +25,3 @@ class Solution:
         for node in range(size):
             isSafe(node, res)
         return sorted(res)
-
-

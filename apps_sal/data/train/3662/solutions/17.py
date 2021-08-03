@@ -1,4 +1,4 @@
-def xor(a,b):
+def xor(a, b):
     truCount = 0
     if a:
         truCount += 1

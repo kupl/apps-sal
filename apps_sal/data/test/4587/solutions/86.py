@@ -11,4 +11,3 @@ for i in b:
     ans += an * cn
 
 print(ans)
-

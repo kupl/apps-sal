@@ -26,4 +26,3 @@ for down in range(h - a):
     right_pattern = facts[h - 1 - down + w - b - 1] * invs[h - 1 - down] * iwb % MOD
     ans = (ans + left_pattern * right_pattern) % MOD
 print(ans)
-

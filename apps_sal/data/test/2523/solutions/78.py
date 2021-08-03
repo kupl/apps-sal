@@ -28,17 +28,17 @@ for count in pressed[::-1]:
 length = len(left_cumsum)
 
 if length == 1:
-    print(len(S)-1)
+    print(len(S) - 1)
     return
 
 change_k = [0] * length
 
 for idx in range(1, length):
-    k = right_cumsum[-idx-1]
-    change_k[idx-1] = k
+    k = right_cumsum[-idx - 1]
+    change_k[idx - 1] = k
 
 for idx in range(1, length):
-    k = left_cumsum[-idx-1]
+    k = left_cumsum[-idx - 1]
     change_k[-idx] = max(change_k[-idx], k)
 
 ans1 = min(change_k[::2])

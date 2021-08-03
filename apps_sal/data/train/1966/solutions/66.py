@@ -1,6 +1,6 @@
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
-        
+
         row = len(mat)
         col = len(mat[0])
         res = 0
@@ -14,13 +14,12 @@ class Solution:
                     ans += pre
                 else:
                     pre = 0
-            return ans 
-        
+            return ans
+
         for a in range(row):
             arr = [1] * col
             for b in range(a, row):
                 for c in range(col):
-                    arr[c] &= mat[b][c] 
+                    arr[c] &= mat[b][c]
                 res += calculate1dArray(arr)
-        return res 
-
+        return res

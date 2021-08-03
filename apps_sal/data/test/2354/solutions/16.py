@@ -3,6 +3,7 @@ from math import ceil
 n, q = map(int, input().split())
 a = []
 
+
 def getNumber(x, y):
     nonlocal n
 

@@ -9,6 +9,7 @@ sys.setrecursionlimit(10**6)
 INF = 10**12
 m = 10**9 + 7
 
+
 def main():
     N, M = list(map(int, input().split()))
     xyz = [None for _ in range(N)]
@@ -28,7 +29,9 @@ def main():
         ans = max(ans, sum(tmp[:M]))
     print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

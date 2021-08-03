@@ -14,6 +14,5 @@ class Solution:
     #         # print(cur,cnt)
     #     return total
 
-    
     def sumSubseqWidths(self, A):
         return sum(((1 << i) - (1 << len(A) - i - 1)) * a for i, a in enumerate(sorted(A))) % (10**9 + 7)

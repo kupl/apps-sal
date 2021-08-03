@@ -11,4 +11,3 @@ class Solution:
         for v, c in zip(sorted(count[:-1]), sorted(A)):
             res += v * c
         return res % (10**9 + 7)
-

@@ -1,1 +1,1 @@
-rake_garden = lambda g: " ".join(['gravel', 'rock'][e == 'rock']for e in g.split())
+def rake_garden(g): return " ".join(['gravel', 'rock'][e == 'rock']for e in g.split())

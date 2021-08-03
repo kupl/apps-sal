@@ -1,12 +1,12 @@
-def calculator(x,y,op):
+def calculator(x, y, op):
     try:
         x = int(x)
         y = int(y)
     except:
-        return 'unknown value'        
+        return 'unknown value'
     if op == '+':
         return x + y
-    elif op =='-':
+    elif op == '-':
         return x - y
     elif op == '*':
         return x * y

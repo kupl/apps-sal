@@ -1,12 +1,12 @@
-from sys import stdin, stdout # only need for big input
+from sys import stdin, stdout  # only need for big input
 
 
 def solve():
-    n = int(input()) 
+    n = int(input())
     pos = []
     for _ in range(n):
         t, x, y = list(map(int, input().split()))
-        pos.append((t,x,y))
+        pos.append((t, x, y))
 
     prev = (0, 0, 0)
 
@@ -24,8 +24,6 @@ def solve():
 
     print("Yes")
 
-    
-    
 
 def main():
     solve()
@@ -33,4 +31,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -17,13 +17,13 @@ solvable = True
 for i in range(n):
     currSum = sum(arr[i])
     if i == nullRow:
-        guessByRow = sumRow - currSum 
+        guessByRow = sumRow - currSum
     elif currSum != sumRow:
         solvable = False
 for j in range(n):
     currSum = sum(arrT[j])
     if j == nullCol:
-        guessByCol = sumCol - currSum 
+        guessByCol = sumCol - currSum
     elif currSum != sumCol:
         solvable = False
 if guessByRow != guessByCol or sumRow != sumCol:

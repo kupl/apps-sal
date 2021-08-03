@@ -5,7 +5,7 @@ class Solution:
         for n in nums:
             mul = 0
             while n:
-                if n%2:
+                if n % 2:
                     n -= 1
                     ones += 1
                 else:

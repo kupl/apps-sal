@@ -5,4 +5,3 @@ if abs(x - 1) + abs(y - 1) <= abs(x - n) + abs(y - n):
     print('White')
 else:
     print('Black')
-

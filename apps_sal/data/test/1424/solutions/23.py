@@ -1,7 +1,7 @@
 import math
-n,m,k = list(map(int,input().split()))
-lst = [0]*m
-res = [0]*m
+n, m, k = list(map(int, input().split()))
+lst = [0] * m
+res = [0] * m
 ans = 0
 otvet = 0
 for i in range(m):
@@ -17,10 +17,9 @@ for i in range(m):
     for j in range(len(res[i])):
 
         if res[i][j] == '1':
-            ans+=1
+            ans += 1
 
-    if ans<=k:
+    if ans <= k:
 
-         otvet+=1
+        otvet += 1
 print(otvet)
-

@@ -1,4 +1,6 @@
 import math
+
+
 def main():
     N = int(input())
     d = {}
@@ -9,7 +11,7 @@ def main():
     mod = 10**9 + 7
     for i in range(N):
         a, b = list(map(int, input().split()))
-        if a== 0 and b == 0:
+        if a == 0 and b == 0:
             zab += 1
         elif b == 0:
             zb += 1
@@ -20,10 +22,10 @@ def main():
                 a = -a
                 b = -b
             x = math.gcd(abs(a), abs(b))
-            if (a//x, b//x) in d:
-                d[(a//x, b//x)] += 1
+            if (a // x, b // x) in d:
+                d[(a // x, b // x)] += 1
             else:
-                d[(a//x, b//x)] = 1
+                d[(a // x, b // x)] = 1
     used = set()
     l = []
     for x in d:
@@ -50,5 +52,6 @@ def main():
         r *= (pow(2, i[0]) + pow(2, i[1]) - 1)
         r %= mod
     return (r - 1 + zab) % mod
-print((main()))
 
+
+print((main()))

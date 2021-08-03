@@ -1,7 +1,9 @@
 import bisect
 
+
 def get_int(l, xa, j):
-    return int(''.join(l + [xa[j]] + sorted(xa[:j] + xa[j+1:])))
+    return int(''.join(l + [xa[j]] + sorted(xa[:j] + xa[j + 1:])))
+
 
 def f(a, b):
     if len(a) < len(b):
@@ -19,9 +21,10 @@ def f(a, b):
                 r = get_int(l, xa, j)
                 mj = j
         l.append(xa[mj])
-        xa = xa[:mj] + xa[mj+1:]
+        xa = xa[:mj] + xa[mj + 1:]
 
     return int(''.join(l))
+
 
 def test_f():
     assert f('123', '222') == 213
@@ -34,4 +37,3 @@ def test_f():
 a = input()
 b = input()
 print(f(a, b))
-

@@ -5,10 +5,11 @@ import copy
 import bisect
 from itertools import accumulate
 from collections import Counter, defaultdict, deque
-def mp():return list(map(int,input().split()))
-def lmp():return list(map(int,input().split()))
-def ceil(U,V):return (U+V-1)//V
-def modf1(N,MOD):return (N-1)%MOD+1
+def mp(): return list(map(int, input().split()))
+def lmp(): return list(map(int, input().split()))
+def ceil(U, V): return (U + V - 1) // V
+def modf1(N, MOD): return (N - 1) % MOD + 1
+
 
 class UnionFind():
     def __init__(self, n):
@@ -77,7 +78,8 @@ class UnionFind():
         # ルート要素：[グループに属する要素のリスト]を文字列で返す
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-n,m = mp()
+
+n, m = mp()
 a = lmp()
 b = lmp()
 uf = UnionFind(n)
@@ -85,10 +87,10 @@ ar = copy.deepcopy(a)
 br = copy.deepcopy(b)
 # nodeは0-indexedにすることに注意
 for i in range(m):
-    c,d = mp()
-    e,f = uf.find(c-1),uf.find(d-1)
-    uf.union(c-1,d-1)
-    g = uf.find(c-1)
+    c, d = mp()
+    e, f = uf.find(c - 1), uf.find(d - 1)
+    uf.union(c - 1, d - 1)
+    g = uf.find(c - 1)
     if e == f:
         pass
     elif e == g:
@@ -105,4 +107,3 @@ for i in rot:
         print("No")
         return
 print("Yes")
-

@@ -9,7 +9,7 @@ r = list(map(int, input().split()))
 
 s = 0
 answer = []
-clients.sort(reverse = True)
+clients.sort(reverse=True)
 r = [1001] + r
 for i in clients:
     pos = 0
@@ -23,4 +23,3 @@ for i in clients:
 
 print(len(answer), s)
 print('\n'.join(answer))
-

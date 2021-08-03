@@ -6,6 +6,6 @@ class Solution:
         for i in range(N):
             for j in range(i):
                 diff = A[j] - A[i]
-                dp[i][diff] = dp[j].get(diff,1)+1
-                ans = max(ans,dp[i][diff])
+                dp[i][diff] = dp[j].get(diff, 1) + 1
+                ans = max(ans, dp[i][diff])
         return ans

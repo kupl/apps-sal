@@ -25,4 +25,3 @@ if K <= head_len:
 else:
     K -= head_len
     print((path[head_len + K % cycle_len] + 1))
-

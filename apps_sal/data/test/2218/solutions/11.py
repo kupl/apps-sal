@@ -25,6 +25,4 @@ for i in range(min(n - 1, k)):
         print(*(tem + [c[j]]))
         k -= 1
         if not k:
-           return
-
-
+            return

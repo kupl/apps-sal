@@ -1,7 +1,8 @@
 class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         N = len(jobDifficulty)
-        if d > N: return -1
+        if d > N:
+            return -1
         memo = [[float('inf')] * (d + 1) for _ in range(N + 1)]
         memo[0][0] = 0
         for i in range(1, N + 1):

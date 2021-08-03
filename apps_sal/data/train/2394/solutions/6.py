@@ -10,4 +10,3 @@ for testcase in range(int(input())):
             sum -= 1
         ans = max(ans, -sum)
     print(ans)
-

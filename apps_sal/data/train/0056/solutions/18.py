@@ -38,4 +38,3 @@ for _ in range(T):
     print(value)
     for line in matrix:
         print(''.join(map(str, line)))
-

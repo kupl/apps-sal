@@ -5,5 +5,3 @@ s = 0
 for i in range(n):
     s += abs(a[i] - i - 1)
 print(s)
-
-

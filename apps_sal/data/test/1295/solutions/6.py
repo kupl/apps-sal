@@ -14,7 +14,7 @@ while r > l + 1:
             i += 1
         else:
             j += 1
-            
+
     if i == n:
         r = t
     else:

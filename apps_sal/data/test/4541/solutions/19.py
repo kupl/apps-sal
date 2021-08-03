@@ -1,22 +1,22 @@
 c = str(input())
 
 if c == 'a':
-        print('vowel')
+    print('vowel')
 
 elif c == 'i':
-        print('vowel')
+    print('vowel')
 
 
 elif c == 'u':
-        print('vowel')
+    print('vowel')
 
 
 elif c == 'e':
-        print('vowel')
+    print('vowel')
 
 
 elif c == 'o':
-        print('vowel')
+    print('vowel')
 
 else:
     print('consonant')

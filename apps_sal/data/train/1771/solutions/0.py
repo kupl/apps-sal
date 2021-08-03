@@ -1,5 +1,6 @@
 from heapq import heappush, heappop
 
+
 def closure_gen(*s):
     q = sorted(s)
     m = set(s)

@@ -12,7 +12,7 @@ p = 0
 for (k, v) in x.items():
     a = len(v) // 2
     b = len(v) - a
-    p += (a-1) * a / 2
-    p += (b-1) * b / 2
+    p += (a - 1) * a / 2
+    p += (b - 1) * b / 2
 
 print(int(p))

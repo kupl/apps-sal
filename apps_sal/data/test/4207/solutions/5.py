@@ -2,6 +2,7 @@ from decimal import Decimal as mag, getcontext
 
 getcontext().prec = 100
 
+
 def main():
     n = int(input())
     arr = list(map(mag, input().split()))
@@ -20,4 +21,3 @@ def main():
 
 
 main()
-

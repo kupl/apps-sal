@@ -10,7 +10,6 @@ for l in range(0, n):
     for r in range(l, n):
         aa |= a[r]
         bb |= b[r]
-        if not max or max < aa+bb:
+        if not max or max < aa + bb:
             max = aa + bb
 print(max)
-

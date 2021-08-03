@@ -15,11 +15,11 @@ def main():
         X, Y, r = dq.popleft()
         c_hypot = [c * hypot(max(abs(X - x) - r, 0), max(abs(Y - y) - r, 0)) for x, y, c in XYC]
         c_hypot.sort()
-        if ans * 0.9999995 > c_hypot[K-1]:
+        if ans * 0.9999995 > c_hypot[K - 1]:
             c_hypot = [c * hypot(X - x, Y - y) for x, y, c in XYC]
             c_hypot.sort()
-            if c_hypot[K-1] < ans:
-                ans = c_hypot[K-1]
+            if c_hypot[K - 1] < ans:
+                ans = c_hypot[K - 1]
 
             r /= 2
             dq += [
@@ -29,5 +29,6 @@ def main():
                 (X - r, Y - r, r),
             ]
     print(ans)
+
 
 main()

@@ -2,7 +2,7 @@ from sys import stdin
 
 for _ in range(int(stdin.readline())):
     n = int(stdin.readline())
-    arr = list(map(int,stdin.readline().split()))
+    arr = list(map(int, stdin.readline().split()))
     final = {}
     m = sorted(list(set(arr)))
     count = 0
@@ -12,7 +12,7 @@ for _ in range(int(stdin.readline())):
             d[arr[i]].append(i)
         else:
             d[arr[i]] = [i]
-            
+
     pos = d[m[0]][0]
     j = 1
     while(j < len(m)):
@@ -27,5 +27,4 @@ for _ in range(int(stdin.readline())):
         else:
             count += 1
             pos = -1
-    print(count+1)
-
+    print(count + 1)

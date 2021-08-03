@@ -1,5 +1,5 @@
 def find_needed_guards(k):
-    
+
     prev = True
     guards = 0
     for i in k:
@@ -8,5 +8,5 @@ def find_needed_guards(k):
             prev = True
         else:
             prev = i
-            
+
     return guards

@@ -7,4 +7,3 @@ class Solution:
                     matrix[i][j] ^= 1
         cnt = Counter(list(map(tuple, matrix)))
         return max(cnt.values())
-

@@ -1,7 +1,7 @@
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:
         nums.sort()
-        left= 0
+        left = 0
         right = len(nums) - 1
         res = 0
         mod = 10**9 + 7
@@ -12,5 +12,3 @@ class Solution:
             else:
                 right -= 1
         return res % mod
-
-

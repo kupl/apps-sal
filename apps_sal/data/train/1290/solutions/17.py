@@ -3,6 +3,6 @@ n = input()
 
 lent = len(n)
 if lent <= 3:
- print(lent)
+    print(lent)
 else:
- print('More than 3 digits')
+    print('More than 3 digits')

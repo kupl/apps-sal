@@ -1,7 +1,9 @@
 import string
 
+
 def scramble_words(words):
-    if (len(words) <= 1): return words
+    if (len(words) <= 1):
+        return words
 
     words = words.split(" ")
 

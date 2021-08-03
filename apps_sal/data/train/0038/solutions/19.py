@@ -7,4 +7,3 @@ for query in range(t):
         print("YES")
     else:
         print("NO")
-

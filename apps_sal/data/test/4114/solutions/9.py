@@ -2,7 +2,7 @@ n = int(input())
 xyh = []
 for i in range(n):
     xyh.append(list(map(int, input().split())))
-xyh.sort(key = lambda x: x[2], reverse = True)
+xyh.sort(key=lambda x: x[2], reverse=True)
 for i in range(101):
     for j in range(101):
         h = xyh[0][2] + abs(xyh[0][0] - i) + abs(xyh[0][1] - j)

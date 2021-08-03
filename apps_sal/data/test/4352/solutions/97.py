@@ -12,8 +12,10 @@ def main():
         print('Alice')
     else:
         print('Bob')
-  
-        
+
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -10,4 +10,3 @@ for ele in arr:
         print("Yes")
     else:
         print("No")
-

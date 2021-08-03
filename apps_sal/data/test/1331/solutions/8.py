@@ -1,4 +1,6 @@
-f = lambda: map(int, input().split())
+def f(): return map(int, input().split())
+
+
 n, m, k = f()
 t = sorted(f())
 d = [1] * n

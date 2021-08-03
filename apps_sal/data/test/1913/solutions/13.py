@@ -6,7 +6,7 @@ def main():
     q = False
     for i in range(n):
         a = arr[i].count("1")
-        b = arr[i].count("0")        
+        b = arr[i].count("0")
         if arr[i] == "0":
             q = True
         if a == 1 and a + b == len(arr[i]):
@@ -21,6 +21,6 @@ def main():
         else:
             print("1", end="")
         print("0" * zero)
-    
-    
+
+
 main()

@@ -12,4 +12,3 @@ for i in range(K):
     T: List[str] = S + S
     S = [winner(T[2 * j], T[2 * j + 1]) for j in range(N)]
 print((S[0]))
-

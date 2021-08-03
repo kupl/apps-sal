@@ -4,11 +4,9 @@ def odd_or_even(arr):
     if len(arr) == 0:
         result = 'even'
     for x in arr:
-        suma = suma +x
-        if suma%2 == 0:
+        suma = suma + x
+        if suma % 2 == 0:
             result = 'even'
-        else:   
+        else:
             result = 'odd'
     return result
-            
-

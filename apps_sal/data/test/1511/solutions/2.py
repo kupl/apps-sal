@@ -12,17 +12,15 @@ for r in range(m):
     for i, el in enumerate(ins):
         if el == 0 or ans[i]:
             continue
-        if lock[el-1]:
-            deadlock[el-1] = True
+        if lock[el - 1]:
+            deadlock[el - 1] = True
         else:
-            lock[el-1] = True
+            lock[el - 1] = True
     for i in range(n):
         if ins[i] == 0 or ans[i]:
             continue
-        if deadlock[ins[i]-1]:
-            ans[i] = r+1
+        if deadlock[ins[i] - 1]:
+            ans[i] = r + 1
     lock = [False for i in range(k)]
 for el in ans:
     print(el)
-
-

@@ -23,4 +23,3 @@ if A[m - 1] * m * 4 >= sum(A):
     res = "Yes"
 
 print(res)
-

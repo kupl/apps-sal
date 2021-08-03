@@ -56,13 +56,13 @@ def gen_2d(n, m, fill=0):
 
 @mt
 def slv(N, K):
-    memo = gen_2d(N+1, 2*N+1)
+    memo = gen_2d(N + 1, 2 * N + 1)
     memo[0][0] = 1
     M = 998244353
-    for n in range(1, N+1):
+    for n in range(1, N + 1):
         for k in range(n, 0, -1):
-            x = memo[n-1][k-1]
-            x += memo[n][k*2]
+            x = memo[n - 1][k - 1]
+            x += memo[n][k * 2]
             x %= M
             memo[n][k] = x
     return memo[N][K]
@@ -75,5 +75,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -21,4 +21,3 @@ for i in range(1, n + 1):
         vv %= k
         d[vv] -= 1
 print(ans)
-

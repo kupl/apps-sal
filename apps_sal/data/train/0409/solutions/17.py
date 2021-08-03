@@ -12,7 +12,7 @@ class Solution:
         for i in range(1, n * min(2, k)):
             cur = arr[i % n]
             if dp + cur >= cur:
-                dp = dp+cur
+                dp = dp + cur
                 end = i
             else:
                 dp = cur
@@ -26,7 +26,6 @@ class Solution:
         if ans < 0:
             return 0
         if maxend % n < maxbegin or maxend < n:
-            return ans  % (10**9+7)
+            return ans % (10**9 + 7)
         else:
-            return (ans + sums*(k-2)) % (10**9+7)
-
+            return (ans + sums * (k - 2)) % (10**9 + 7)

@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def solve(n, a, b, xs):
     group = [None] * n
     id_ = {x: i for i, x in enumerate(xs)}
@@ -45,6 +46,7 @@ def solve(n, a, b, xs):
 
     return group
 
+
 n, a, b = list(map(int, input().split()))
 xs = list(map(int, input().split()))
 group = solve(n, a, b, xs)
@@ -53,4 +55,3 @@ if isinstance(group, list):
     print(' '.join(map(str, group)))
 else:
     print('NO')
-

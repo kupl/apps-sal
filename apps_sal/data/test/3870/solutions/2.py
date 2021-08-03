@@ -15,7 +15,6 @@ a.sort()
 d.sort()
 
 
-
 def solve1():
 
     ret = 0
@@ -26,7 +25,7 @@ def solve1():
 
         for i in range(m):
 
-            if not used[i] and my[i] > val: 
+            if not used[i] and my[i] > val:
 
                 used[i] = True
 
@@ -55,24 +54,22 @@ def solve1():
     return ret + sum([my[i] for i in range(m) if not used[i]])
 
 
-
 def solve2():
 
     ret = 0
 
     for k in range(min(len(a), m)):
 
-        if my[-k-1] >= a[k]: ret += my[-k-1] - a[k]
+        if my[-k - 1] >= a[k]:
+            ret += my[-k - 1] - a[k]
 
-        else: break
+        else:
+            break
 
     return ret
-
 
 
 print(max(solve1(), solve2()))
 
 
-
 # Made By Mostafa_Khaled
-

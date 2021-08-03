@@ -2,13 +2,16 @@ n = int(input())
 s = input()
 t = input()
 
+
 def ff(ch):
     return ord(ch) - ord('a')
 
+
 def answer(a, b, sc):
     print(cans + sc)
-    print(a+1, b+1)
+    print(a + 1, b + 1)
     return
+
 
 cans = 0
 matrix = [[None] * 26 for i in range(26)]
@@ -33,4 +36,3 @@ for i in range(26):
                 answer(matrix[h][i], matrix[i][v], -1)
 
 answer(-2, -2, 0)
-

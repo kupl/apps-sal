@@ -11,4 +11,4 @@ for i in range(N):
     if end < 0:
         start += 1
         end = 0
-print('('*start+motoS+')'*end)
+print('(' * start + motoS + ')' * end)

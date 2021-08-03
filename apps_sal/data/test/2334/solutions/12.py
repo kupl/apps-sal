@@ -9,4 +9,3 @@ for address in addresses:
         if to_move % (max_satoshies + fee) != 0:
             movements += 1
 print(movements * fee)
-

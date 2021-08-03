@@ -1,8 +1,8 @@
 def two_decimal_places(n):
     return round(n * 100) / 100
 
-#My solution. It's ugly :(
-#def two_decimal_places(n):
+# My solution. It's ugly :(
+# def two_decimal_places(n):
 #    if isinstance(n, float):
 #        if n > 0:
 #            int_n = int(n)
@@ -25,4 +25,3 @@ def two_decimal_places(n):
 #            else:
 #                return float(int_n) + (three_last_digits+last_digit)/1000
 #    return float()
-

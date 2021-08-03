@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
 
+
 def main():
     n = int(sys.stdin.readline())
     l = list(map(int, sys.stdin.readline().split()))
@@ -12,7 +13,9 @@ def main():
         alive_indx = min(alive_indx, indx - l[indx])
     print(alive)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -48,10 +48,12 @@ def resolve():
             right += 1
 
         ans = max(ans, tmp)
-        
+
     print(ans)
 
 
 def __starting_point():
     resolve()
+
+
 __starting_point()

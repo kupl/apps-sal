@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 INF = 10 ** 20
 DP = [-INF] * 12
 DP[1] = a[0]
@@ -22,5 +22,4 @@ for elem in a[1:]:
 if n == 1:
     print(a[0])
 else:
-    print(max(DP[7],DP[10]))
-
+    print(max(DP[7], DP[10]))

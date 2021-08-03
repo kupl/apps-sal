@@ -3,6 +3,7 @@ from functools import lru_cache
 
 mod = 1000000007
 
+
 def num_iters(x):
     ans = 0
     while x > 1:
@@ -10,9 +11,11 @@ def num_iters(x):
         ans += 1
     return ans
 
+
 @lru_cache(maxsize=1001)
 def fact(n):
     return factorial(n) % mod
+
 
 def egcd(a, b):
     if a == 0:
@@ -21,6 +24,7 @@ def egcd(a, b):
         g, y, x = egcd(b % a, a)
         return (g, x - (b // a) * y, y)
 
+
 def modinv(a, m):
     g, x, y = egcd(a, m)
     if g != 1:
@@ -28,12 +32,15 @@ def modinv(a, m):
     else:
         return x % m
 
+
 @lru_cache(maxsize=1001)
 def inv(a):
     return modinv(a, mod)
 
+
 def binom(n, k):
     return (fact(n) * inv(fact(k)) * inv(fact(n - k))) % mod
+
 
 def num_numbers(n, i):
     # number of numbers in [1..n] that have exactly i 1s
@@ -56,7 +63,9 @@ def num_numbers(n, i):
 
     return ans
 
+
 precalc = [num_iters(x) for x in range(1001)]
+
 
 def solve(n, k):
     if k == 0:
@@ -70,8 +79,8 @@ def solve(n, k):
                 ans = (ans + num_numbers(n, i)) % mod
         return ans
 
+
 n = input()
 k = int(input())
 
 print(solve(n, k))
-

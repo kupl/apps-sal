@@ -9,8 +9,7 @@ def triangle(row):
                 new_row += a
             else:
                 for letter in "RGB":
-                    if letter not in (a,b):
+                    if letter not in (a, b):
                         new_row += letter
                         break
         return triangle(new_row)
-

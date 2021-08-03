@@ -8,5 +8,7 @@ for i in range(t):
     else:
         break
 
-if cnt == t - 1:print("YES")
-else:print("NO")
+if cnt == t - 1:
+    print("YES")
+else:
+    print("NO")

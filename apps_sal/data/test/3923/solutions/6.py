@@ -6,6 +6,8 @@ n, a, b = list(map(int, sys.stdin.readline().strip().split()))
 
 # supposed a>=0, b>=0, a+b>0
 # returns (d, p, q) where d = gcd(a, b) = a*p + b*q
+
+
 def euc(a, b):
     if b > a:
         (d, p, q) = euc(b, a)
@@ -15,6 +17,7 @@ def euc(a, b):
     s = a // b
     (d, sp, sq) = euc(a - s * b, b)
     return (d, sp, sq - s * sp)
+
 
 def normalize(n, a, b, d, p, q):
     if p < 0:
@@ -31,16 +34,17 @@ def normalize(n, a, b, d, p, q):
     else:
         return (sp, sq)
 
+
 (d, p, q) = euc(a, b)
 if n % d != 0:
-    print ('-1')
+    print('-1')
     return
 m = n // d
 p, q = m * p, m * q
 try:
     (p, q) = normalize(n, a, b, d, p, q)
 except ValueError:
-    print ('-1')
+    print('-1')
     return
 
 res = []
@@ -55,4 +59,3 @@ for _ in range(q):
     last += b
 
 print(' '.join(map(str, res)))
-

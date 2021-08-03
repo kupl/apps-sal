@@ -6,7 +6,8 @@ N, M = map(int, input().split())
 edge = [[] for _ in range(N)]
 for i in range(M):
     u, v, c = map(int, sys.stdin.readline().split())
-    u -= 1; v -= 1
+    u -= 1
+    v -= 1
     edge[u].append((v, c))
     edge[v].append((u, c))
 path = [-1] * N
@@ -31,4 +32,3 @@ while q:
                 q.append((v, nv, nc))
 
 print(*path, sep='\n')
-

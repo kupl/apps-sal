@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def frogPosition(self, n: int, edges: List[List[int]], t: int, target: int) -> float:
         self.prob = 0
@@ -8,7 +10,7 @@ class Solution:
             mp[edge[1]].add(edge[0])
         visited = set()
         visited.add(1)
-        
+
         def backtrack(pos: int, nowprob: float, currtime: int, visited: Set[int]):
             if currtime == t:
                 if pos == target:
@@ -26,12 +28,8 @@ class Solution:
             for edge in mp[pos]:
                 if edge not in visited:
                     visited.add(edge)
-                    backtrack(edge, nowprob/div, currtime+1, visited)
+                    backtrack(edge, nowprob / div, currtime + 1, visited)
                     visited.remove(edge)
-        
-            
+
         backtrack(1, 1, 0, visited)
         return self.prob
-                
-            
-

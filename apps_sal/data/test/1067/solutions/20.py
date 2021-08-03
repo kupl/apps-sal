@@ -14,10 +14,13 @@ for i in range(n):
         num_zero += 1
     elif a[i] < 0:
         num_neg += 1
-        cost += (-1-a[i])
+        cost += (-1 - a[i])
     else:
-        cost += a[i]-1
-        
-if num_zero > 0: print(cost)
-elif num_neg % 2 == 1: print(cost+2)
-else: print(cost)
+        cost += a[i] - 1
+
+if num_zero > 0:
+    print(cost)
+elif num_neg % 2 == 1:
+    print(cost + 2)
+else:
+    print(cost)

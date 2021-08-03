@@ -16,7 +16,7 @@ destinations = [None for x in range(n)]
 for ii in range(n):
     g, p, t = [int(x) for x in input().split()]
     dancers.append((g, p, t))
-    groups[p-t].append(ii)
+    groups[p - t].append(ii)
 
 
 for gg in list(groups.values()):
@@ -29,11 +29,10 @@ for gg in list(groups.values()):
             H.append(dancer)
     V.sort(key=lambda x: -x[1])
     H.sort(key=lambda x: x[1])
-    table = {orig: get_dest(new, w, h) for orig, new in zip(V+H, H+V)}
+    table = {orig: get_dest(new, w, h) for orig, new in zip(V + H, H + V)}
     for ii in gg:
         destinations[ii] = table[dancers[ii]]
 
 # print(destinations)
 for dd in destinations:
     print(" ".join(dd))
-

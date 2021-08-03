@@ -4,7 +4,7 @@ max = -1
 for i in range(0, count):
     tmp = number[i]
     if tmp > max:
-        max = tmp    
+        max = tmp
     for j in range(i + 1, count):
         tmp = tmp ^ number[j]
         if tmp > max:

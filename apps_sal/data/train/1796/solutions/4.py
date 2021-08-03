@@ -1,7 +1,8 @@
 operand = set("0123456789")
-operator = {'+':1, '-':1, '*':2, '/':2, '^':3}
+operator = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
 
-def to_postfix (infix):
+
+def to_postfix(infix):
     stack, res = [], []
     for c in "({})".format(infix):
         if c in operand:

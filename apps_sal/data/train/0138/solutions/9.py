@@ -5,18 +5,18 @@ class Solution:
             for n in nums:
                 if n < 0:
                     cnt += 1
-            if cnt%2 == 0:
+            if cnt % 2 == 0:
                 return len(nums)
             for i in range(len(nums)):
                 if nums[i] < 0:
                     first = i
                     break
-            for i in range(len(nums)-1, -1, -1):
+            for i in range(len(nums) - 1, -1, -1):
                 if nums[i] < 0:
                     last = i
                     break
-            return max(last, len(nums)-first-1)
-        
+            return max(last, len(nums) - first - 1)
+
         l = 0
         ans = 0
         nums.append(0)
@@ -24,5 +24,5 @@ class Solution:
             if nums[r] == 0:
                 cur = solve(nums[l:r])
                 ans = max(ans, cur)
-                l = r+1
+                l = r + 1
         return ans

@@ -18,4 +18,3 @@ for i in range(n):
             res += new_t2 - t2 + 1
     t1, t2 = new_t1, new_t2
 print(res)
-

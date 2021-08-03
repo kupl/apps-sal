@@ -14,4 +14,3 @@ while right - left > 1:
     else:
         right = mid
 print((n - left + 1))
-

@@ -1,5 +1,5 @@
 def solution(string):
-    d=''
+    d = ''
     for i in string:
-        d=i+d
+        d = i + d
     return d

@@ -16,7 +16,7 @@ for i in range(k):
     fb = numbers[3]
 
     if ta == tb:
-        print(abs(fa-fb))
+        print(abs(fa - fb))
     else:
         total = 0
         if fa < a:
@@ -26,7 +26,6 @@ for i in range(k):
             total += fa - b
             total += abs(fb - b)
         else:
-            total += abs(fa-fb)
+            total += abs(fa - fb)
         total += abs(ta - tb)
         print(total)
-

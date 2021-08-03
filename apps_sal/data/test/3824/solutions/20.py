@@ -1,6 +1,5 @@
 x1, y1 = list(map(int, input().split()))
 x2, y2 = list(map(int, input().split()))
-x = 1 if not abs(x1-x2) else abs(x1-x2)
-y = 1 if not abs(y1-y2) else abs(y1-y2)
-print((x+1)*2 + (y+1)*2)
-
+x = 1 if not abs(x1 - x2) else abs(x1 - x2)
+y = 1 if not abs(y1 - y2) else abs(y1 - y2)
+print((x + 1) * 2 + (y + 1) * 2)

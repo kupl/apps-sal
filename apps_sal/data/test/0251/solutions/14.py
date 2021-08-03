@@ -41,4 +41,3 @@ if curr_slice_size > 0:
     num_slices += 1
 
 print(min(num_slices, best_so_far))
-

@@ -5,13 +5,13 @@ lq = 0
 rq = 0
 TK = input()
 
-for i in range(N//2):
+for i in range(N // 2):
     if TK[i] == '?':
         lq += 1
     else:
         L += int(TK[i])
 
-for i in range(N//2, N):
+for i in range(N // 2, N):
     if TK[i] == '?':
         rq += 1
     else:
@@ -30,7 +30,7 @@ if lq > rq:
     if R < 0:
         print('Monocarp')
     else:
-        if (t//2) * 9 == R:
+        if (t // 2) * 9 == R:
             print('Bicarp')
         else:
             print('Monocarp')

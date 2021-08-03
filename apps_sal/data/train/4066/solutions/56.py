@@ -5,6 +5,7 @@ def string_to_array(s):
         if i == " ":
             answer.append(words)
             words = ""
-        else: words += i
+        else:
+            words += i
     answer.append(words)
     return answer

@@ -1,5 +1,6 @@
 import math
 
+
 class Position:
     def __init__(self, x, y):
         self.x = x
@@ -7,6 +8,7 @@ class Position:
 
     def distance(self, other):
         return math.hypot(self.x - other.x, self.y - other.y)
+
 
 Direction = {
     '←': lambda position: Position(position.x - 1, position.y),
@@ -20,6 +22,7 @@ Direction = {
 }
 PIEP_PIPER = 'P'
 
+
 class Rat:
     def __init__(self, position, move):
         self.position = position
@@ -29,6 +32,7 @@ class Rat:
         current_distance = piper.distance(self.position)
         distance_after_one_step = piper.distance(self.move(self.position))
         return current_distance - distance_after_one_step < 0
+
 
 def count_deaf_rats(town_square):
     rats = []

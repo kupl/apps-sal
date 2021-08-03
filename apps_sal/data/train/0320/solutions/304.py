@@ -1,9 +1,9 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        
+
         print(0 % 2)
         step = 0
-        while any(( n > 0 for n in nums)):
+        while any((n > 0 for n in nums)):
             # print('nums', nums)
             if all((n % 2 == 0 for n in nums)):
                 nums = [n // 2 for n in nums]

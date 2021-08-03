@@ -1,5 +1,5 @@
-n, q = map(int,input().split())
-A = list(map(int,input().split()))
+n, q = map(int, input().split())
+A = list(map(int, input().split()))
 sizes = dict()
 
 
@@ -8,8 +8,8 @@ for j in range(n):
         sizes[A[j]][2] += 1
         sizes[A[j]][1] = j
     else:
-        sizes[A[j]] = [j,j,1]
-#print(sizes)
+        sizes[A[j]] = [j, j, 1]
+# print(sizes)
 
 answer = 0
 end = -1
@@ -18,7 +18,7 @@ for j in range(n):
     end = max(end, sizes[A[j]][1])
     max_size = max(max_size, sizes[A[j]][2])
     if j == end:
-        answer+= max_size
+        answer += max_size
         #print(j, max_size)
         max_size = 0
 

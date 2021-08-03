@@ -71,7 +71,7 @@ for c in s[::-1]:
         curr = 0
     suff.append(curr)
 suff.reverse()
-    
+
 
 st = SegmentTree(suff)
 
@@ -80,7 +80,7 @@ add = 0
 for i in range(n):
     if s[i] == '1':
         lo = -1
-        hi =  i - pref[i] + 1
+        hi = i - pref[i] + 1
         while hi - lo > 1:
             t = (lo + hi) // 2
             if st.query(t, i - pref[i] + 1) >= pref[i]:
@@ -88,8 +88,6 @@ for i in range(n):
             else:
                 hi = t
         add += (i - lo)
-    #print(add)
+    # print(add)
     out += add
 print(out)
-    
-

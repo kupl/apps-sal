@@ -1,6 +1,7 @@
 n = int(input())
 bs = list(map(int, input().split()))
 
+
 def solve(n, bs):
     steps = 0
     level = 0
@@ -9,5 +10,5 @@ def solve(n, bs):
         level = b
     return steps
 
-print(solve(n, bs))
 
+print(solve(n, bs))

@@ -14,8 +14,7 @@ for i in a:
     else:
         odd += 1
         continue
-if odd<=num4 or (N%2==1 and num4==N//2):
+if odd <= num4 or (N % 2 == 1 and num4 == N // 2):
     print('Yes')
 else:
     print('No')
-

@@ -6,7 +6,7 @@ if d == 0:
     if x == 0:
         print(1)
     else:
-        print(n+1)
+        print(n + 1)
     return
 if d < 0:
     x *= -1
@@ -15,18 +15,18 @@ if d < 0:
 p = dict()
 q = dict()
 
-for k in range(n+1):
+for k in range(n + 1):
     temp = k * x % d
     if temp in p.keys():
         #print((k - p[temp]) * x)
         a = (k - p[temp]) * x // d
-        L = (k-1)*k//2 + a
-        H = (2*n-k-1)*k//2 + a
+        L = (k - 1) * k // 2 + a
+        H = (2 * n - k - 1) * k // 2 + a
         q[temp].append([L, H])
     else:
         p[temp] = k
-        L = (k-1)*k//2
-        H = (2*n-k-1)*k//2
+        L = (k - 1) * k // 2
+        H = (2 * n - k - 1) * k // 2
         q[temp] = [[L, H]]
 
 ans = 0

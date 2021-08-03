@@ -5,20 +5,20 @@ class Solution:
         # Union Find
         parents = [-1] * (max(A) + 1)
 
-        def find(x :int) -> int:
+        def find(x: int) -> int:
             if parents[x] < 0:
                 return x
-            
-            parents[x] = find( parents[x] )
+
+            parents[x] = find(parents[x])
             return parents[x]
 
-        def union(x,y):
+        def union(x, y):
             root_x = find(x)
             root_y = find(y)
 
             if root_x == root_y:
                 return
-            
+
             depth_x = parents[root_x]
             depth_y = parents[root_y]
 
@@ -32,30 +32,26 @@ class Solution:
                 parents[root_x] = root_y
         ##############################
 
-
-        def get_factor(n :int) -> list:
+        def get_factor(n: int) -> list:
             ans = []
 
-            for i in range(2, int(n**(1/2)+1) ):  # exclude \"factor 1\" and \"max factor\"
-                if  n % i == 0:
+            for i in range(2, int(n**(1 / 2) + 1)):  # exclude \"factor 1\" and \"max factor\"
+                if n % i == 0:
                     ans.append(i)
 
                     d = n / i
                     if (d != i) and (d % 1 == 0):
-                        ans.append( int(d) )
+                        ans.append(int(d))
 
             return ans
-
 
         for num in A:
             fact = get_factor(num)
 
             for v in fact:
                 union(num, v)
-        
 
-        group = [ find(num) for num in A ]
+        group = [find(num) for num in A]
         cnt = Counter(group)
-        
-        return cnt.most_common(1)[0][1]
 
+        return cnt.most_common(1)[0][1]

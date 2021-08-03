@@ -11,6 +11,5 @@ def hidden(num):
         '0': "o",
         '5': "t",
     }
-    
-    return ''.join(num_by_char[n] for n in str(num))
 
+    return ''.join(num_by_char[n] for n in str(num))

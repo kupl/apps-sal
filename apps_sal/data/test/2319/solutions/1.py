@@ -1,7 +1,10 @@
+import sys
+
+
 def num(c):
     return ord(c) - 97
 
-import sys
+
 input = sys.stdin.readline
 
 t = int(input())
@@ -20,19 +23,19 @@ for _ in range(t):
         print(-1)
         continue
 
-    dp = [[(False, 0, 0) for j in range(n+1)] for i in range(n + 1)]
-    dp[0][0] = [True, 0,[0]*26]
+    dp = [[(False, 0, 0) for j in range(n + 1)] for i in range(n + 1)]
+    dp[0][0] = [True, 0, [0] * 26]
 
     def upd(a, b, val, sett):
         if not dp[a][b][0] or val > dp[a][b][1]:
             dp[a][b] = (True, val, sett)
-    
+
     for i in range(n):
         for j in range(n):
             valid, val, tab = dp[i][j]
             if not valid:
                 continue
-            
+
             top = s1[i]
             bot = s2[j]
 
@@ -44,7 +47,7 @@ for _ in range(t):
             if tab[num(top)] > 0:
                 sett = tab[:]
                 sett[num(top)] -= 1
-                
+
                 #upd(i+1, j, val, sett)
                 if not dp[i + 1][j][0] or val > dp[i + 1][j][1]:
                     dp[i + 1][j] = [True, val, sett]
@@ -58,8 +61,5 @@ for _ in range(t):
             del dp[i][j][2]
 
     poss = [dp[i][n][1] for i in range(n + 1)]
-        
 
     print(n - max(poss))
-            
-

@@ -3,7 +3,10 @@ def bad():
     print("NO")
     return
 
+
 node = 1
+
+
 def make_branch(u, d, deg, g, n, k):
     nonlocal node
     while deg[u] < k and d > 0 and node < n:
@@ -12,6 +15,7 @@ def make_branch(u, d, deg, g, n, k):
         deg[node] = 1
         g[u].append(node)
         make_branch(node, d - 1, deg, g, n, k)
+
 
 def main():
     nonlocal node
@@ -55,7 +59,5 @@ def main():
         for v in g[u]:
             print(u, v)
 
+
 main()
-
-
-

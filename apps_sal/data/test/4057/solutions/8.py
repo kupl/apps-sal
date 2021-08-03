@@ -1,12 +1,12 @@
-n=int(input())
-a=list(map(int,input().split()))
-d=dict()
+n = int(input())
+a = list(map(int, input().split()))
+d = dict()
 for i in a:
     if(i in d):
-        d[i]+=1
+        d[i] += 1
     else:
-        d[i]=1
-maxi=0
+        d[i] = 1
+maxi = 0
 for i in d:
-    maxi=max(maxi,d[i])
+    maxi = max(maxi, d[i])
 print(maxi)

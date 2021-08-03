@@ -7,4 +7,3 @@ for i in range(int(input())):
         d[q] = d.get(q, 0) + 1
     p.append((x, y))
 print(sum(k * k - k for k in list(d.values())) // 4)
-

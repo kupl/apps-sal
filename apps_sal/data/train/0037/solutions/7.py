@@ -11,6 +11,7 @@ for i in range(1, maxn):
     for j in range(i):
         f[i] += f[j] * g[i - j - 1]
 
+
 def kth(n, k):
     if n == 1:
         return [1]
@@ -40,6 +41,7 @@ def kth(n, k):
     ret[-1] = p2[-1]
     return [x + 1 for x in ret]
 
+
 def solve(n, k):
     if n == 0:
         return []
@@ -52,6 +54,7 @@ def solve(n, k):
     k = (k - 1) // f[n - i] + 1
     return kth(i, k) + rem
 
+
 def SOLVE():
     n, k = map(int, input().split())
     if k > f[n]:
@@ -59,8 +62,9 @@ def SOLVE():
         return
     ans = solve(n, k)
     for x in ans:
-        print(x, end = " ")
+        print(x, end=" ")
     print()
+
 
 T = int(input())
 while T > 0:

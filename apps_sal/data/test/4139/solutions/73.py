@@ -1,8 +1,11 @@
 n = int(input())
+
+
 def Base_10_to_n(X, n):
-    if (int(X/n)):
-        return Base_10_to_n(int(X/n), n)+str(X%n)
-    return str(X%n)
+    if (int(X / n)):
+        return Base_10_to_n(int(X / n), n) + str(X % n)
+    return str(X % n)
+
 
 if n < 357:
     print((0))
@@ -22,4 +25,3 @@ else:
             if len(set(a)) == 3 and n >= int(a):
                 ans += 1
     print(ans)
-

@@ -1,8 +1,8 @@
-n,m=list(map(int,input().split()))
-p=list(map(int,input().split()))
-xy=[list(map(int,input().split())) for _ in range(m)]
-
 from collections import defaultdict
+n, m = list(map(int, input().split()))
+p = list(map(int, input().split()))
+xy = [list(map(int, input().split())) for _ in range(m)]
+
 
 class UnionFind():
     def __init__(self, n):
@@ -55,14 +55,13 @@ class UnionFind():
         return '\n'.join(f'{r}: {m}' for r, m in list(self.all_group_members().items()))
 
 
-uf=UnionFind(n)
+uf = UnionFind(n)
 for i in xy:
-    uf.union(i[0]-1,i[1]-1)
+    uf.union(i[0] - 1, i[1] - 1)
 
-ans=0
+ans = 0
 for i in range(n):
-    if uf.same(i,p[i]-1):
-        ans+=1
+    if uf.same(i, p[i] - 1):
+        ans += 1
 
 print(ans)
-

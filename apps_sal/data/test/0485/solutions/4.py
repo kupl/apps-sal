@@ -28,7 +28,7 @@ def main():
             for m in range(60):
                 ans = []
                 for i in range(4 * n + 1):
-                    if ((x == a[i][0] or x + m == a[i][0]) and y <= a[i][1] <= y+m) or ((y == a[i][1] or y + m == a[i][1]) and x <= a[i][0] <= x+m):
+                    if ((x == a[i][0] or x + m == a[i][0]) and y <= a[i][1] <= y + m) or ((y == a[i][1] or y + m == a[i][1]) and x <= a[i][0] <= x + m):
                         continue
                     else:
                         ans.append(a[i])
@@ -40,5 +40,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,7 +1,9 @@
 from functools import lru_cache
+
+
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        
+
         @lru_cache(maxsize=None)
         def dfs(left, numConsecutive, last):
             total = 0
@@ -16,6 +18,6 @@ class Solution:
                         total += dfs(left - 1, numConsecutive + 1, i)
                 else:
                     total += dfs(left - 1, 1, i)
-            return total 
-        
+            return total
+
         return dfs(n, 0, -1) % (10**9 + 7)

@@ -7,4 +7,3 @@ def find_digit(n1, n2):
         return int(n3[n4])
     except IndexError:
         return 0
-

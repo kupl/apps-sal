@@ -4,4 +4,3 @@ ans = 0
 for _ in range(n):
     ans += d[str(input()).strip()]
 print(ans)
-

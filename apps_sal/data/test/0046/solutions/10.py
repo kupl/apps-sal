@@ -12,4 +12,3 @@ for i in range(1, 5):
     cnt += a[i] * b[5 - i]
 
 print(cnt)
-

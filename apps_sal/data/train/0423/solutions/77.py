@@ -7,4 +7,3 @@ class Solution:
             else:
                 dic[arr[i]] = 1
         return max(dic.values())
-

@@ -1,4 +1,6 @@
-from collections import Counter 
+from collections import Counter
+
+
 def scramble(s1, s2):
     s1 = list(s1)
     s2 = list(s2)

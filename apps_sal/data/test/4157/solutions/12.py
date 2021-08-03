@@ -12,6 +12,7 @@ def f(x):
         f(x * 2)
         ans.pop()
 
+
 n = int(input())
 a = list(map(int, input().split()))
 
@@ -20,4 +21,3 @@ for i in range(n):
     ans.append(a[i])
     f(a[i])
     ans.pop()
-

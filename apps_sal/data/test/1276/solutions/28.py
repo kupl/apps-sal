@@ -1,11 +1,11 @@
+from collections import Counter, deque
+import itertools
+import sys
 import math
-from math import gcd,pi
+from math import gcd, pi
 INF = float("inf")
 
-import sys
 sys.setrecursionlimit(10**6)
-import itertools
-from collections import Counter,deque
 def i_input(): return int(input())
 def i_map(): return list(map(int, input().split()))
 def i_list(): return list(i_map())
@@ -27,13 +27,13 @@ def main():
     g_cn = s.count("G")
     b_cn = s.count("B")
 
-    ans = r_cn*g_cn*b_cn
+    ans = r_cn * g_cn * b_cn
 
     for i in range(n):
         for d in range(n):
-            j = i+d
-            k = j+d
-            if k >=n:
+            j = i + d
+            k = j + d
+            if k >= n:
                 break
             if s[i] != s[j] and s[j] != s[k] and s[k] != s[i]:
                 ans -= 1
@@ -42,5 +42,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

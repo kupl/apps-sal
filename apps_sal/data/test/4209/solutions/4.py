@@ -37,4 +37,3 @@ for s in hah:
 print(ansq)
 for i in bm:
     print(i[0], i[1])
-

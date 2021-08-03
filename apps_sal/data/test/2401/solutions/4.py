@@ -6,4 +6,3 @@ for _ in range(t):
     while (s + x + r) % n != 0:
         x += 1
     print(x)
-

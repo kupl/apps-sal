@@ -1,5 +1,7 @@
 from itertools import product
-def main(): 
+
+
+def main():
     with open(0) as f:
         N = int(f.readline())
         A = [list(map(int, line.split())) for line in f.readlines()]
@@ -7,8 +9,9 @@ def main():
     possible = True
     ans = 0
     r = range(N)
-    for i,j in product(r, r) :
-        if j <= i: continue
+    for i, j in product(r, r):
+        if j <= i:
+            continue
         for k in r:
             if k == i or k == j:
                 continue
@@ -26,4 +29,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

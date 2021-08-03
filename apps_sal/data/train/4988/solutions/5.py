@@ -4,11 +4,13 @@ def mult(a, b):
         mv = sumVal(mv, a)
     return mv
 
+
 def sumVal(a, b):
     for c in range(b):
         a = add1(a)
     return a
-    
+
+
 def add1(a):
     out = ''
     binval = dec2bin(a)
@@ -36,15 +38,17 @@ def add1(a):
     if carry == 1:
         out = '1' + out
     return bin2dec(out)
-    
+
+
 def dec2bin(a):
     if a == 0:
         return '0'
     out = ''
     while a > 0:
-        out = str(a%2) + out
-        a = a //2
+        out = str(a % 2) + out
+        a = a // 2
     return out
+
 
 def bin2dec(a):
     out = 0
@@ -53,6 +57,7 @@ def bin2dec(a):
         out += int(a[0])
         a = a[1:]
     return out
-    
+
+
 def square(n):
-    return mult(n,n)
+    return mult(n, n)

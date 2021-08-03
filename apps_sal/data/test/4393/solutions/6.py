@@ -1,7 +1,8 @@
 
 
 MOD = 10**9 + 7
-I = lambda:list(map(int,input().split()))
+def I(): return list(map(int, input().split()))
+
 
 n, = I()
 s = input()

@@ -1,10 +1,12 @@
 import sys
 sys.setrecursionlimit(2147483647)
 INF = float("inf")
-MOD = 10**9 + 7 # 998244353
-input = lambda:sys.stdin.readline().rstrip()
+MOD = 10**9 + 7  # 998244353
+def input(): return sys.stdin.readline().rstrip()
+
+
 def resolve():
-    S = list(map(lambda c : ord(c) - ord('a'), input()))
+    S = list(map(lambda c: ord(c) - ord('a'), input()))
     n = len(S)
     sigma = 26
 
@@ -35,6 +37,8 @@ def resolve():
         now = next[now][character[now]] + 1
         if now == 0:
             break
-    res = ''.join(map(lambda x : chr(x + ord('a')), res))
+    res = ''.join(map(lambda x: chr(x + ord('a')), res))
     print(res)
+
+
 resolve()

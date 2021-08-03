@@ -28,4 +28,3 @@ for s in S:
 
 ans = ("(" * cnt_close) + oS + (")" * cnt_open)
 print(ans)
-

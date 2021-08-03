@@ -8,11 +8,10 @@ for a in A:
         pos += 1
     elif a < 0:
         neg += 1
-        
-if pos >= (N+1)//2:
+
+if pos >= (N + 1) // 2:
     print(1)
-elif neg >= (N+1)//2:
+elif neg >= (N + 1) // 2:
     print(-1)
 else:
     print(0)
-

@@ -1,22 +1,29 @@
 ######
-from collections import defaultdict,deque,Counter,OrderedDict
-from heapq import heappop,heappush
-import bisect,sys,threading
+from collections import defaultdict, deque, Counter, OrderedDict
+from heapq import heappop, heappush
+import bisect
+import sys
+import threading
 mod = 10**9 + 7
 
-def dfs_order(i,visited,G,order):
-    if visited[i]: return
+
+def dfs_order(i, visited, G, order):
+    if visited[i]:
+        return
     visited[i] = 1
     for j in G[i]:
-        dfs_order(j,visited,G,order)
+        dfs_order(j, visited, G, order)
     order.append(i)
 
-def dfs_scc(leader,s,RG,visited,comp,cost):
-    if visited[s]: return
+
+def dfs_scc(leader, s, RG, visited, comp, cost):
+    if visited[s]:
+        return
     visited[s] = 1
     for j in RG[s]:
-        dfs_scc(leader,j,RG,visited,comp,cost)
+        dfs_scc(leader, j, RG, visited, comp, cost)
     comp[leader].append(cost[s])
+
 
 def main():
     n = int(input())
@@ -50,9 +57,12 @@ def main():
 
     print(ans1, ans2)
 
+
 def __starting_point():
     sys.setrecursionlimit(200000)
     threading.stack_size(10240000)
     thread = threading.Thread(target=main)
     thread.start()
+
+
 __starting_point()

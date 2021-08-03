@@ -1,6 +1,6 @@
 def alternateCase(s):
     # your code here
-    if s=='':
+    if s == '':
         return s
     r = ''
     for i in range(len(s)):

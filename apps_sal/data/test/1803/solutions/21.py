@@ -12,11 +12,8 @@ for i in range(m):
         an[x - 1] += y - 1
     if(x + 1 < n):
         an[x + 1] += an[x] - y
-        
+
     an[x] = 0
-    
+
 for i in an:
     print(i)
-    
-
-

@@ -1,16 +1,16 @@
-N,*A = map(int,open(0).read().split())
+N, *A = map(int, open(0).read().split())
 
-m =1
+m = 1
 ans = 0
-#for a in A:
+# for a in A:
 #  m *=a
-#m-=1
+# m-=1
 #
-#for a in A:
+# for a in A:
 #  ans+=m%a
 #  pass
-#print(ans)
+# print(ans)
 
 for a in A:
-  ans += a-1
+    ans += a - 1
 print(ans)

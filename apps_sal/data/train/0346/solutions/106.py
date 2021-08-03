@@ -1,6 +1,6 @@
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
-        
+
         def atMost(m):
             if m < 0:
                 return 0
@@ -13,7 +13,7 @@ class Solution:
                 res += right - left + 1
             return res
         return atMost(k) - atMost(k - 1)
-        
+
         # left = cnt = res = 0
         # for right, x in enumerate(nums):
         #     if x & 1:
@@ -37,4 +37,3 @@ class Solution:
         #         res += right - left + 1
         #     return res
         # return atMost(k) - atMost(k-1)
-

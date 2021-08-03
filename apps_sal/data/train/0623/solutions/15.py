@@ -1,5 +1,5 @@
 t = int(input())
-lst=[]
+lst = []
 for _ in range(t):
     x = int(input())
     lst.append(x)

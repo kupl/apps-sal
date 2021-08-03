@@ -6,4 +6,3 @@ for i in range(n):
     if cur > val:
         val = cur
 print(val)
-

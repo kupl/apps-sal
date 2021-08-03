@@ -16,4 +16,4 @@ class Solution:
                 l = mid
             else:
                 r = mid - 1
-        return l 
+        return l

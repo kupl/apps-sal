@@ -3,8 +3,8 @@ class Solution:
         count = 0
 
         for i in range(len(arr) - 2):
-            for j in range(i+1, len(arr) - 1):
-                for k in range(j+1, len(arr)):
+            for j in range(i + 1, len(arr) - 1):
+                for k in range(j + 1, len(arr)):
 
                     # print(f'{arr[i]}, {arr[j]}, {arr[k]}')
 

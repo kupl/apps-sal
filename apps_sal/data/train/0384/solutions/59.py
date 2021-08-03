@@ -6,5 +6,5 @@ class Solution:
 
         ans = 0
         for i, x in enumerate(A):
-            ans = (ans + ((1<<i) - (1<<(N-1-i))) * x) % MOD
-        return ans        
+            ans = (ans + ((1 << i) - (1 << (N - 1 - i))) * x) % MOD
+        return ans

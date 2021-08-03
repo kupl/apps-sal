@@ -23,7 +23,7 @@ idx = []
 
 for i in range(N):
     if A[i] not in A[:i]:
-        idx.append(i+1)
+        idx.append(i + 1)
     if len(idx) == K:
         break
 

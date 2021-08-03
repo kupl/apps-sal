@@ -6,4 +6,3 @@ for i in range(2, 2 * N + 1):
         continue
     ans += min(i - 1, 2 * N - i + 1) * min(j - 1, 2 * N - j + 1)
 print(ans)
-

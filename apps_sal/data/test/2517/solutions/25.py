@@ -5,7 +5,9 @@ import numpy as np
 from scipy.sparse.csgraph import dijkstra
 from scipy.sparse import csr_matrix
 
-int1 = lambda x: int(x) - 1
+
+def int1(x): return int(x) - 1
+
 
 N, M, R = map(int, input().split())
 T = sorted(list(map(int1, input().split())))

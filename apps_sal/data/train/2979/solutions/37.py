@@ -1,3 +1,3 @@
 def get_age(age):
-    #your code here
+    # your code here
     return int(age[:age.index(' ')])

@@ -35,5 +35,5 @@ while len(s) > 1:
     if dr >= cr:
         s = 'D'
         break
-    
+
 print(s[0])

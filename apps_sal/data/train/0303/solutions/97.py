@@ -8,10 +8,3 @@ class Solution:
             dp.append(curr)
         print(dp)
         return dp[-1]
-                
-                
-                
-
-                
-    
-

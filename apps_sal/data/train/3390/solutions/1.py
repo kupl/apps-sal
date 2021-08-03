@@ -1,4 +1,4 @@
-def narcissistic( value ):
+def narcissistic(value):
     value = str(value)
     size = len(value)
     sum = 0

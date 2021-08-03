@@ -1,7 +1,10 @@
 import sys
 readline = sys.stdin.readline
+
+
 def ceil(a, b):
-    return -(-a//b)
+    return -(-a // b)
+
 
 def main():
     N = int(readline())
@@ -27,7 +30,9 @@ def main():
 
     print((scr_t + scr_a))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

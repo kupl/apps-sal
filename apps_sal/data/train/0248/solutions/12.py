@@ -11,7 +11,7 @@ class Solution:
         def union(u, v):
             x, y = find(u), find(v)
             if x != y:
-                parent[y] = x 
+                parent[y] = x
             return x != y
 
         m, n = len(grid), len(grid[0])
@@ -22,5 +22,5 @@ class Solution:
                         return True
                 if j + 1 < n and grid[i][j] == grid[i][j + 1]:
                     if not union((i, j), (i, j + 1)):
-                        return True 
+                        return True
         return False

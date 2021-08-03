@@ -6,5 +6,5 @@ for _ in range(int(input())):
     y = min(b)
     ans = 0
     for i in range(n):
-        ans += max(a[i]-x, b[i]-y)
+        ans += max(a[i] - x, b[i] - y)
     print(ans)

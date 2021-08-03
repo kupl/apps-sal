@@ -7,4 +7,5 @@ def __starting_point():
     list_coordinate = list(map(int, input().split()))
     print((minimum_dist(list_coordinate)))
 
+
 __starting_point()

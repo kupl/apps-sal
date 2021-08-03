@@ -14,12 +14,12 @@ for _ in range(pile_number):
 
 for pile in even:
     n = len(pile)
-    player1 += sum(pile[:n//2])
-    player2 += sum(pile[n//2:])
+    player1 += sum(pile[:n // 2])
+    player2 += sum(pile[n // 2:])
 
-for pile in sorted(odd, reverse=True, key=lambda x: x[len(x)//2]):
+for pile in sorted(odd, reverse=True, key=lambda x: x[len(x) // 2]):
     n = len(pile)
-    top, middle, bottom = pile[:n//2], pile[n//2], pile[n//2+1:]
+    top, middle, bottom = pile[:n // 2], pile[n // 2], pile[n // 2 + 1:]
     player1 += sum(top)
     player2 += sum(bottom)
     if player1_turn:
@@ -30,4 +30,3 @@ for pile in sorted(odd, reverse=True, key=lambda x: x[len(x)//2]):
         player1_turn = not player1_turn
 
 print(player1, player2)
-

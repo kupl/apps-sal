@@ -1,11 +1,11 @@
-n=int(input())
-s=list(str(n))
+n = int(input())
+s = list(str(n))
 for i in range(len(s)):
-  s[i]=int(s[i])
-b=sum(s)
-a=n%b
+    s[i] = int(s[i])
+b = sum(s)
+a = n % b
 
-if a==0:
-  print('Yes')
+if a == 0:
+    print('Yes')
 else:
-  print('No')
+    print('No')

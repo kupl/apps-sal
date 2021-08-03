@@ -16,23 +16,22 @@ class Solution:
                 # print(f\"Too much! Next day work\")
                 current_day_weight = 0
                 days_needed += 1
-                
+
         # print(\"f{days_needed}\")
         return days_needed <= D
-        
-        
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         if len(weights) == 0:
             return 0
 
         left = max(weights)
         right = sum(weights)
-        
+
         while left < right:
             mid = (left + right) // 2
             if self.canShipAllPackages(mid, D, weights):
                 right = mid
             else:
                 left = mid + 1
-                
+
         return left

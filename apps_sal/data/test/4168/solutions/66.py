@@ -13,4 +13,3 @@ while N != 0:
         ans = '0' + ans
     N //= -2
 print(ans)
-

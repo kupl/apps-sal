@@ -8,5 +8,3 @@ while p != 0:
     p //= -k
 print(cnt)
 print(a)
-
-

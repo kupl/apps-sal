@@ -11,4 +11,3 @@ class Solution:
             stack.append(i)
 
         return result % (10**9 + 7)
-

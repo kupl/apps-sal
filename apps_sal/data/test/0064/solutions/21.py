@@ -11,4 +11,3 @@ for color, i in list(d.items()):
         break
 else:
     print('YES')
-

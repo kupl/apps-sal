@@ -7,4 +7,3 @@ for num in tab:
         cmex += 1
 
 print(cmex)
-

@@ -9,5 +9,5 @@ def dbl_linear(n):
             i += 1
         if x >= y:
             j += 1
-        u.append(min(x,y))
+        u.append(min(x, y))
     return u[n]

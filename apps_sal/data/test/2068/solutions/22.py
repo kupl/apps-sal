@@ -4,6 +4,7 @@ def length(arr, nowman):
         l += length(arr, arr[nowman])
     return l
 
+
 rarr = {}
 for i in range(int(input())):
     r = input().lower().split()
@@ -11,9 +12,8 @@ for i in range(int(input())):
 
 maxl = 1
 for key, value in list(rarr.items()):
-    l = length(rarr, rarr[key])+1
+    l = length(rarr, rarr[key]) + 1
     if maxl < l:
         maxl = l
 
 print(maxl)
-

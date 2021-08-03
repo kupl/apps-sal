@@ -21,4 +21,3 @@ if check(a, n, m) or check(b, m, n):
     print('YES')
 else:
     print('NO')
-

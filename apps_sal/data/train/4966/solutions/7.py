@@ -27,7 +27,7 @@ def fight(robot_1, robot_2, tactics):
                 pass
             if robot_2['health'] <= 0:
                 return "Rocky has won the fight."
-            
+
     if robot_1['health'] > robot_2['health']:
         return "Rocky has won the fight."
     elif robot_2['health'] > robot_1['health']:

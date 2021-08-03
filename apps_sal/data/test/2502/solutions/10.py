@@ -3,15 +3,16 @@ def getTableKMP(Ss):
     lenS = len(Ss)
     table = [-1] * lenS
     j = -1
-    for i in range(lenS-1):
+    for i in range(lenS - 1):
         while j >= 0 and Ss[i] != Ss[j]:
             j = table[j]
         j += 1
-        if Ss[i+1] == Ss[j]:
-            table[i+1] = table[j]
+        if Ss[i + 1] == Ss[j]:
+            table[i + 1] = table[j]
         else:
-            table[i+1] = j
+            table[i + 1] = j
     return table
+
 
 def getPosPtnsKMP(Ss, ptn, table):
     anss = []
@@ -22,7 +23,7 @@ def getPosPtnsKMP(Ss, ptn, table):
             iS += 1
             iP += 1
             if iP == lenP:
-                anss.append(iS-lenP)
+                anss.append(iS - lenP)
                 iP = table[iP]
         else:
             iP = table[iP]
@@ -36,7 +37,7 @@ Ss = input()
 Ts = input()
 
 lenS, lenT = len(Ss), len(Ts)
-num = (lenT+lenS-1+lenS-1) // lenS
+num = (lenT + lenS - 1 + lenS - 1) // lenS
 S2s = Ss * num
 
 tableKMP = getTableKMP(Ts)
@@ -52,13 +53,13 @@ ans = 0
 numDone = 0
 for i in range(lenS):
     if not isFounds[i]:
-        i = (i+lenT) % lenS
-        for num in range(lenS+1):
+        i = (i + lenT) % lenS
+        for num in range(lenS + 1):
             if not isFounds[i]:
                 ans = max(ans, num)
-                numDone += num+1
+                numDone += num + 1
                 break
-            i = (i+lenT) % lenS
+            i = (i + lenT) % lenS
         else:
             ans = -1
             break
@@ -66,4 +67,3 @@ for i in range(lenS):
 if numDone < lenS:
     ans = -1
 print(ans)
-

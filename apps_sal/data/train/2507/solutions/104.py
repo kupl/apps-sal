@@ -1,10 +1,10 @@
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
         freq = defaultdict(int)
-        
+
         for l in chars:
             freq[l] += 1
-        
+
         count = 0
         for word in words:
             testFreq = freq.copy()
@@ -16,5 +16,5 @@ class Solution:
                 testFreq[letter] -= 1
             if match:
                 count += len(word)
-            
+
         return count

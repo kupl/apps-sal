@@ -10,7 +10,7 @@ def func():
 
     mx = 0
     for n in range(N):
-        cells[n] = list(map(int,input().split()))
+        cells[n] = list(map(int, input().split()))
         mx = max(mx, sum(cells[n]))
 
     ans = None
@@ -31,11 +31,10 @@ def func():
             return -1
     if mx != sum([cells[j][j] for j in range(N)]):
         return -1
-    if mx != sum([cells[j][N-1-j] for j in range(N)]):
+    if mx != sum([cells[j][N - 1 - j] for j in range(N)]):
         return -1
-    
+
     return ans
 
+
 print(func())
-
-

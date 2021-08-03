@@ -2,22 +2,23 @@ def least_bribes(bribes):
     d = dict()
     result = dp_worst_case(d, 0, len(bribes) - 1, bribes)
     return result
-    
+
+
 def dp_worst_case(d, start, end, l):
     # DP to re-use results
     if start in d:
         if end in d[start]:
             return d[start][end]
-            
+
     diff = end - start
-    
+
     if diff == 0:
         return l[start]
     elif diff == 1:
         return l[start] + l[end]
     elif diff == 2:
         # For 3 doors, the worst case is having to open 2 (doors [2,1] or [2,3]). You never have to open 3.
-        return max([l[start+1] + l[start], l[start+1] + l[end]])
+        return max([l[start + 1] + l[start], l[start + 1] + l[end]])
     else:
         anchor_wc_list = list()
         # Iterate over every anchor door ...
@@ -35,7 +36,7 @@ def dp_worst_case(d, start, end, l):
                 anchor_wc_list.append(max([wcleft, wcright]))
         # the result is the "best" worst case for all anchors
         result = min(anchor_wc_list)
-        
+
         # save results for DP
         if start in d:
             d[start][end] = result

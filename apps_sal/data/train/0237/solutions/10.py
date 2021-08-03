@@ -7,7 +7,7 @@ class Solution:
                 zerosBefore += 1
                 index -= 1
             return zerosBefore
-    
+
         def findZerosAfter(index, array):
             zerosAfter = 0
             index += 1
@@ -15,20 +15,21 @@ class Solution:
                 zerosAfter += 1
                 index += 1
             return zerosAfter
+
         def zeroString(index, array):
             zeros = 0
             while (index < len(array) and array[index] != 1):
                 zeros += 1
                 index += 1
-            
+
             return zeros
-            
+
         def zeroCombs(n):
             combs = 0
             for i in range(n, 0, -1):
                 combs = combs + n - i + 1
             return combs
-            
+
         def firstZero(index, array):
             if (index == 0):
                 return True
@@ -36,9 +37,9 @@ class Solution:
                 return True
             else:
                 return False
-                    
+
         total = 0
-        
+
         if (S > 0):
             # get indices of all ocurrences of 1 in 'A'
             one_array = [i for i, one in enumerate(A) if one == 1]
@@ -57,30 +58,12 @@ class Solution:
                 print(Bef)
                 Aft = findZerosAfter(end_index[i], A)
                 total = total + Bef + Aft + (Bef * Aft) + 1
-        
+
         if (S == 0):
             zero_array = [i for i, zero in enumerate(A) if zero == 0]
             for n in range(len(zero_array)):
                 if (firstZero(zero_array[n], A)):
                     sticky = zeroString(zero_array[n], A)
                     total = total + zeroCombs(sticky)
-        
-        return total
-                
-                
-                
-            
-            
-            
-    
-            
-            
-            
-            
-            
-        
-        
-                
-                
-    
 
+        return total

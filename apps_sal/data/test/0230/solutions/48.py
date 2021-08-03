@@ -16,4 +16,3 @@ ans = 0
 for i in range(1, N - 1):
     ans = max(ans, match_length(S[i:], S[:-i], i))
 print(ans)
-

@@ -17,7 +17,6 @@ if k == 0:
 else:
     print(k)
     for i in range(k1):
-        print(s[i*p: (i+1)*p])
+        print(s[i * p: (i + 1) * p])
     for i in range(k - k1):
-        print(s[p*k1 + i*q: p*k1 + (i + 1)*q])
-
+        print(s[p * k1 + i * q: p * k1 + (i + 1) * q])

@@ -23,4 +23,3 @@ for _ in range(int(input())):
     else:
         ans = max(ans - 1, 0)
     print(ans)
-

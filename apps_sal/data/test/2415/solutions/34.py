@@ -14,11 +14,11 @@ def dfs(cur, s, n):
     if (cur >= n):
         return 1
     flg = 0
-    if (cur < n-1):
-        if (f(str()+s[cur]+s[cur+1]) == 1):
-            flg |= dfs(cur+2, s, n)
+    if (cur < n - 1):
+        if (f(str() + s[cur] + s[cur + 1]) == 1):
+            flg |= dfs(cur + 2, s, n)
     if (f(s[cur]) == 1):
-        flg |= dfs(cur+1, s, n)
+        flg |= dfs(cur + 1, s, n)
     return flg
 
 
@@ -33,4 +33,3 @@ if (flg == 0):
     print("NO")
 else:
     print("YES")
-

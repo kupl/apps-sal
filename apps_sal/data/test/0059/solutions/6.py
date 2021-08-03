@@ -14,9 +14,9 @@ def check(vals, allowed):
             return False
     return True
 
+
 n = int(input())
 vals = [int(v) for v in input().split()]
 allowed = input().strip() + '0'
 
 print(["NO", "YES"][check(vals, allowed)])
-

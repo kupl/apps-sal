@@ -3,6 +3,7 @@ class Solution:
         MAX = 300 * 1000 * 10
         N = len(jobDifficulty)
         cache = {}
+
         def dp(left_days: int, left_jobs_i: int, current_jobs_i: int) -> int:
             key = (left_days, left_jobs_i, current_jobs_i)
             if key not in cache:

@@ -10,4 +10,3 @@ elif a < 6:
 else:
     print((b // 2))
     return
-

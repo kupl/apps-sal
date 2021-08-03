@@ -7,5 +7,5 @@ elif req % 5 != 0:
     ans = total
 else:
     ans = total - req - 0.5
-ans = total if ans < 0 else ans 
+ans = total if ans < 0 else ans
 print(ans)

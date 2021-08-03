@@ -13,7 +13,7 @@ class Solution:
                 count += 1
                 total = 0
             return count <= D
-        
+
         total = sum(weights)
         # attention: lb also bound by max element, or it can't fit in
         # so why not set lb directly to be the maximum element!

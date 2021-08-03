@@ -41,7 +41,7 @@ def get_prefix(s):
 
 
 def get_suffix(s):
-    prev_c = s[len(s)-1]
+    prev_c = s[len(s) - 1]
     curr_len = 0
     for i in range(len(s) - 1, -1, -1):
         c = s[i]
@@ -76,4 +76,3 @@ for i in range(1, n):
             longest_s[i] = max(longest_s[i], longest_t[i])
 
 print(max(longest_s))
-

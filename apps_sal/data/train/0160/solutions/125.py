@@ -9,5 +9,5 @@ class Solution:
                 if i == j:
                     dp[i] = piles[i]
                 else:
-                    dp[j] = max(piles[i] - dp[j], piles[j] - dp[j+1])
+                    dp[j] = max(piles[i] - dp[j], piles[j] - dp[j + 1])
         return dp[0] > 0

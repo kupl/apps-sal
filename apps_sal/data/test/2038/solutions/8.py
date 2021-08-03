@@ -23,7 +23,6 @@ for i in range(n):
     a[target] = i
     a[pos] = old_v
 
-
     if (abs(pos - target) * 2 >= n):
         ans.append((pos, target))
         continue

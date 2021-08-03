@@ -1,9 +1,9 @@
 class Solution:
     def shortestBridge(self, A: List[List[int]]) -> int:
-        
+
         row_shifts = [-1, 0, 1, 0]
         col_shifts = [0, 1, 0, -1]
-            
+
         def bfs_mark_first(row, col, mark):
             nonlocal A, row_shifts, col_shifts
             queue = [(row, col)]
@@ -25,7 +25,7 @@ class Solution:
                 if add_to_edges:
                     edges.append((curr_row, curr_col))
             return edges
-        
+
         terminate = False
         for row in range(len(A)):
             for col in range(len(A[0])):
@@ -35,7 +35,7 @@ class Solution:
                     break
             if terminate:
                 break
-                    
+
         queue = edges
         # print(edges)
         while len(queue) > 0:
@@ -49,5 +49,5 @@ class Solution:
                         queue.append((new_row, new_col))
                     if A[new_row][new_col] == 1:
                         return abs(A[curr_row][curr_col]) - 1
-        
+
         return -1

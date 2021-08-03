@@ -9,4 +9,3 @@ for _ in range(int(input())):
     else:
         n -= 3
         print(n // x + 2)
-

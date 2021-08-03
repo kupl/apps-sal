@@ -4,4 +4,3 @@ def digitize(n):
     comp = [res.append(int(number)) for number in string_num]
     res.reverse()
     return res
-

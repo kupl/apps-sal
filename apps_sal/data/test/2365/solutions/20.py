@@ -1,7 +1,7 @@
 class Solution:
     def parseBoolExpr(self, expression: str) -> bool:
         ops = {'!', '&', '|'}
-        
+
         def parse(start):
             if expression[start] == 'f':
                 return False, start + 1
@@ -24,5 +24,5 @@ class Solution:
                 if expression[start] == '&':
                     return all(vals), new_start
                 return any(vals), new_start
-        
+
         return parse(0)[0]

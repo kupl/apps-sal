@@ -1,12 +1,13 @@
 t = input()
 p = input()
-ai = list(map(int,input().split()))
+ai = list(map(int, input().split()))
 n = len(ai)
-ti = [[t[i],1] for i in range(n)]
+ti = [[t[i], 1] for i in range(n)]
 for i in range(n):
     ai[i] -= 1
 
 num2 = 1
+
 
 def check(num):
     nonlocal num2
@@ -23,6 +24,7 @@ def check(num):
                 return True
     return False
 
+
 high = n
 low = 0
 mid = (high + low) // 2
@@ -34,4 +36,3 @@ while high >= low:
     mid = (high + low) // 2
 
 print(mid)
-

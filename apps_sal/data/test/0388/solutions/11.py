@@ -1,11 +1,13 @@
 n, k = map(int, input().split())
 names = []
 
+
 def getNext(a):
     if a[1] == 'z':
         return chr(ord(a[0]) + 1) + 'a'
     else:
         return a[0] + chr(ord(a[1]) + 1)
+
 
 a = list(input().split())
 for i in range(len(a)):
@@ -21,8 +23,8 @@ else:
     names.append(tmp)
     for i in range(k - 2):
         tmp = getNext(tmp)
-        names.append(getNext(tmp))  
-        
+        names.append(getNext(tmp))
+
 for i in range(k, n):
     if a[i - k + 1]:
         tmp = getNext(tmp)

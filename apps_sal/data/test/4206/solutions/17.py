@@ -3,6 +3,8 @@
 s = [int(i) for i in input()]
 ans = 0
 last = 0
+
+
 def check(x):
     Sum = 0
     while x != 0:
@@ -11,6 +13,7 @@ def check(x):
         if Sum % 3 == 0:
             return True
     return False
+
 
 for i in range(len(s)):
     if s[i] % 3 == 0:
@@ -22,4 +25,3 @@ for i in range(len(s)):
             ans += 1
             last = 0
 print(ans)
-

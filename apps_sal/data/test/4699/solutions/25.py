@@ -11,6 +11,7 @@ def check(pay, like):
 
     return True
 
+
 N, K = list(map(int, input().split()))
 
 D = []
@@ -27,4 +28,3 @@ while True:
         print(pay)
         return
     pay += 1
-

@@ -10,4 +10,3 @@ for x in range(len(lst)):
     array[lst[x] - 1] += 1
 
 print(min(array))
-

@@ -1,7 +1,7 @@
 class Solution:
     def minCost(self, s: str, cost: List[int]) -> int:
         ans, pos = 0, 0
-        
+
         for _, v in itertools.groupby(s):
             v = list(v)
             if len(v) > 1:
@@ -12,5 +12,5 @@ class Solution:
                 ans += sum(sorted(to_sort)[:-1])
             else:
                 pos += 1
-            
+
         return ans

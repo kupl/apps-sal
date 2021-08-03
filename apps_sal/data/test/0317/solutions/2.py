@@ -1,5 +1,7 @@
 import string
-f = lambda: input()
+def f(): return input()
+
+
 n = int(f())
 
 s = f().lower()
@@ -15,4 +17,3 @@ if ret:
     print("YES")
 else:
     print("NO")
-

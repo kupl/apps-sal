@@ -9,7 +9,7 @@ ans = 0
 while True:
     if n > N:
         break
-    ans += N//n
+    ans += N // n
     n *= 5
 
 print(ans)

@@ -5,7 +5,7 @@ def solve():
 
     alpha = "abcdefghijklmnopqrstuvwxyz"
     alp = [[]]
-    
+
     for st in sentence:
         if st in alpha:
             if st not in alp[-1]:
@@ -13,8 +13,8 @@ def solve():
         else:
             alp.append([])
 
-    #print(alp)
+    # print(alp)
     return max([len(e) for e in alp])
 
-print(solve())
 
+print(solve())

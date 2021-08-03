@@ -21,11 +21,10 @@ if p in [2, 5]:
         d = s[i]
         if d in ok_list:
             ans += n - i
-           
+
 else:
     for i in range(p):
-        ans += cnt[i] * (cnt[i]-1) // 2
+        ans += cnt[i] * (cnt[i] - 1) // 2
 
 
 print(ans)
-

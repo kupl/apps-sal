@@ -6,7 +6,7 @@ tt = int(stdin.readline())
 for loop in range(tt):
 
     n = int(stdin.readline())
-    a = list(map(int,stdin.readline().split()))
+    a = list(map(int, stdin.readline().split()))
 
     r = a[0]
     l = 0
@@ -19,6 +19,6 @@ for loop in range(tt):
             r = a[i] - l
 
     if r >= 0:
-        print ("YES")
+        print("YES")
     else:
-        print ("NO")
+        print("NO")

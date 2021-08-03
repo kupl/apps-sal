@@ -5,4 +5,3 @@ for i in a:
     ans += abs(i)
 
 print(ans)
-

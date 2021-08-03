@@ -9,4 +9,3 @@ if ans:
     print('Yes')
 else:
     print('No')
-

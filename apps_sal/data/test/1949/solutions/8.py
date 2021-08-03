@@ -9,10 +9,9 @@ l = 0
 j = 0
 for i in range(k):
     while d < len(T) and T[d] <= j:
-        d+=1
+        d += 1
     if d < len(T):
-        print(T[d]-j)
-        j=T[d]
+        print(T[d] - j)
+        j = T[d]
     else:
         print(0)
-

@@ -6,4 +6,3 @@ for _ in range(int(input())):
     # s = input()
     x = (n + 1) // 2
     print(x)
-

@@ -1,6 +1,6 @@
-a1 = list(map(int,input().split()))
-a2 = list(map(int,input().split()))
-a3 = list(map(int,input().split()))
+a1 = list(map(int, input().split()))
+a2 = list(map(int, input().split()))
+a3 = list(map(int, input().split()))
 n = int(input())
 for i in range(n):
     b = int(input())

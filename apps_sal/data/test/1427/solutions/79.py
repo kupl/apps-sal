@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class SieveOfEratosthenes:
     def __init__(self, V):
         self.is_prime = np.ones(V + 1, dtype=bool)
@@ -12,7 +13,7 @@ class SieveOfEratosthenes:
                 self.primes.append(i)
                 if i * i < V + 1:
                     self.is_prime[i * i::i] = False
-    
+
     def factorize(self, x):
         assert x >= 1
         if x == 1:
@@ -54,4 +55,3 @@ for p, e in list(lcm.items()):
 
 B = [val * pow(a, M - 2, M) % M for a in A]
 print((sum(B) % M))
-

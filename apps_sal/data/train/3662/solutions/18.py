@@ -1,4 +1,4 @@
-def xor(a,b):
-    #your code here
+def xor(a, b):
+    # your code here
     result = a ^ b
     return result

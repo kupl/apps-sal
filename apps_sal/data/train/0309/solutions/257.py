@@ -1,5 +1,6 @@
 from collections import OrderedDict
 
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         # 1. Compute pairwise differences d_ij: O(n^2)
@@ -16,7 +17,7 @@ class Solution:
                 diff = A[tgt] - A[src]
                 # Only record the closest j to maximize LAS
                 diffs[src, diff] = tgt
-        
+
         inbound_edges = {}
         for edge, tgt in diffs.items():
             inbound_edges.setdefault(tgt, []).append(edge)

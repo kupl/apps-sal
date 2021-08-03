@@ -10,7 +10,10 @@ def main():
         print(max(arr[0], arr[-1]))
     else:
         print(max(arr))
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

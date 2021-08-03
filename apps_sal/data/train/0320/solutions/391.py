@@ -7,28 +7,13 @@ class Solution:
                 if nums[i] % 2 != 0:
                     nums[i] -= 1
                     res += 1
-            if nums == zeros: break
+            if nums == zeros:
+                break
             nums = [el / 2 for el in nums]
             res += 1
         return res
-                
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
 #         double_arr = [math.floor(math.log(num, 2)) for num in nums]
 #         calc = [0 for el in nums]
 #         zeros_arr = [0 for el in nums]
@@ -60,10 +45,7 @@ class Solution:
 #             print(\"res\", res)
 #             # if iters>50: break
 #             # iters += 1
-        
+
 #         diff_remain = sum(nums) - sum(calc)
 #         res += diff_remain
 #         return res
-        
-            
-

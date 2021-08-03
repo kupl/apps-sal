@@ -6,5 +6,5 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
     while growth < desiredHeight:
         growth += upSpeed - downSpeed
         counter += 1
-    
+
     return counter

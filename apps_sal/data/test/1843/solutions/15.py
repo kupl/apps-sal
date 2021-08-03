@@ -8,4 +8,3 @@ for t in range(T):
         sum -= 2 * x
         x *= 2
     print(sum)
-

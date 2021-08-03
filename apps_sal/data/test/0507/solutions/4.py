@@ -8,7 +8,7 @@ def main():
     res = []
     for i in a:
         res.append(i)
-    all_numbers = set([i for i in range(1, n+1)])
+    all_numbers = set([i for i in range(1, n + 1)])
     seta = set(a)
     setb = set(b)
     non_a = list(all_numbers - seta)[0]
@@ -21,7 +21,7 @@ def main():
         if diff(res, a) == 1 and diff(res, b) == 1:
             print(*res)
             return
-        res[i]= temp
+        res[i] = temp
     for i in dpb:
         temp = res[i]
         res[i] = non_b
@@ -31,7 +31,6 @@ def main():
         res[i] = temp
 
 
-
 def diff(a, b):
     c = 0
     for i in range(len(a)):
@@ -39,16 +38,18 @@ def diff(a, b):
             c += 1
     return c
 
+
 def double_positions(a):
     count = [-1 for i in range(len(a))]
     res = []
     for i in range(len(a)):
-        if count[a[i]-1] != -1:
-            return count[a[i]-1], i
-        count[a[i]-1] = i
-    
-    
+        if count[a[i] - 1] != -1:
+            return count[a[i] - 1], i
+        count[a[i] - 1] = i
+
+
 def __starting_point():
     main()
+
 
 __starting_point()

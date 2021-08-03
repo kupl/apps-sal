@@ -1,5 +1,5 @@
 import collections
-n, q = list(map(int ,input().split()))
+n, q = list(map(int, input().split()))
 Q = collections.deque()
 A = [0] * n
 B = A[:]
@@ -27,4 +27,3 @@ for k in range(q):
                 s -= 1
     L.append(str(s))
 print('\n'.join(L))
-

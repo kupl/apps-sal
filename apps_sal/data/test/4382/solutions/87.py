@@ -1,2 +1,2 @@
-n=int(input())
-print(n*n*n)
+n = int(input())
+print(n * n * n)

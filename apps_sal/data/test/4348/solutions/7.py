@@ -18,4 +18,3 @@ for a in s[::-1]:
         c[a] -= 1
         lst.append(a)
 print("".join(lst[::-1]))
-

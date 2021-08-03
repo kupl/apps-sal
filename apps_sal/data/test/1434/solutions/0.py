@@ -26,5 +26,3 @@ while queue:
 print(len(ans))
 for el in ans:
     print(el[0], el[1])
-
-

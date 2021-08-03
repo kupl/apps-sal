@@ -1,4 +1,6 @@
 from collections import defaultdict
+
+
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
         '''
@@ -52,25 +54,23 @@ class Solution:
         m = defaultdict(list)
         for i in range(len(arr)):
             m[arr[i]].append(i)
-        start = (0,0)
+        start = (0, 0)
         queue = [start]
         visited = set([0])
         while queue != []:
             current = queue.pop(0)
             # print(current,queue)
-            if current[0] == len(arr)-1:
+            if current[0] == len(arr) - 1:
                 return current[1]
             if current[0] + 1 < len(arr) and current[0] + 1 not in visited:
-                queue.append((current[0]+1,current[1]+1))
+                queue.append((current[0] + 1, current[1] + 1))
                 visited.add(current[0] + 1)
             if current[0] - 1 >= 0 and current[0] - 1 not in visited:
-                queue.append((current[0]-1,current[1]+1))
+                queue.append((current[0] - 1, current[1] + 1))
                 visited.add(current[0] - 1)
             for n in m[arr[current[0]]]:
                 if n not in visited:
-                    queue.append((n,current[1] + 1))
+                    queue.append((n, current[1] + 1))
                     visited.add(n)
             if arr[n] in m:
                 del m[arr[n]]
-        
-

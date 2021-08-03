@@ -11,6 +11,6 @@ for i in range(n):
         values[a[i]] = 1
 
     if values[a[i]] == a[i]:
-            cnt -= a[i]
+        cnt -= a[i]
 
 print(cnt)

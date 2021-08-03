@@ -11,4 +11,3 @@ if b:
     print('.' + b)
 else:
     print()
-

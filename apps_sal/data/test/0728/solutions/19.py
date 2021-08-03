@@ -17,5 +17,5 @@ while limak <= cur_max:
     c[cur_max - 1] += 1
     if c[cur_max] == 0:
         cur_max -= 1
-    
+
 print(ans)

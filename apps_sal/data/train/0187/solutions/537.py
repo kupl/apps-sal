@@ -25,4 +25,3 @@ class Solution:
                 ret = cr
             i += 1
         return ret
-

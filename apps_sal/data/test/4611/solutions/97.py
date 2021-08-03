@@ -49,4 +49,3 @@ if(ok == 1):
     print('Yes')
 else:
     print('No')
-

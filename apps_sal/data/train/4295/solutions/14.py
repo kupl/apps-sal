@@ -16,7 +16,7 @@ def balanced_num(number):
         i = len(str(number)) // 2
         bsum = 0
         asum = 0
-        for n in b[0:i-1]:
+        for n in b[0:i - 1]:
             bsum += int(n)
         for n in b[-1:i:-1]:
             asum += int(n)

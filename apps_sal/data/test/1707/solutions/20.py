@@ -1,6 +1,7 @@
 N = int(input())
 A = list(map(int, input().split()))
 
+
 def count(X, Y):
     res = 0
     r = 0
@@ -9,17 +10,18 @@ def count(X, Y):
     for l in range(len(X)):
         xl = X[l]
         for _ in range(len(Y)):
-            if Y[r+1] <= 2*xl:
+            if Y[r + 1] <= 2 * xl:
                 r += 1
                 continue
             break
         for _ in range(len(Y)):
-            if Y[r2+1] < xl:
+            if Y[r2 + 1] < xl:
                 r2 += 1
                 continue
             break
         res += max(0, r - r2)
     return res
+
 
 AP = [a for a in A if a > 0]
 AP.sort()

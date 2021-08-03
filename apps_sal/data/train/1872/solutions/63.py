@@ -12,7 +12,7 @@ class Solution:
         lv = 1
         lv_nodes = [root]
         while lv_nodes:
-            
+
             if max_sum < sum([n.val for n in lv_nodes]):
                 max_level = lv
                 max_sum = sum([n.val for n in lv_nodes])
@@ -25,5 +25,3 @@ class Solution:
                     new_nodes.append(n.right)
             lv_nodes = new_nodes
         return max_level
-
-

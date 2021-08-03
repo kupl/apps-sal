@@ -1,4 +1,6 @@
 import json
+
+
 def get_strings(city):
     cityAmount = {}
     for x in range(len(city)):
@@ -9,4 +11,3 @@ def get_strings(city):
         else:
             cityAmount[city[x].lower()] = '*'
     return ",".join(("{}:{}".format(*i) for i in list(cityAmount.items())))
-

@@ -1,1 +1,1 @@
-row_sum_odd_numbers=lambda n: n*n*n
+def row_sum_odd_numbers(n): return n * n * n

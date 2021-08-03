@@ -14,4 +14,3 @@ def obtain_max_number(arr):
                 j += 1
         i += 1
     return max(arr)
-

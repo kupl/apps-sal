@@ -6,14 +6,14 @@ L = input().split()
 
 cost_0 = 0
 for n in L:
-   if 0 < int(n) < X:
-      cost_0 += 1
-   elif X < int(n):
-      break
+    if 0 < int(n) < X:
+        cost_0 += 1
+    elif X < int(n):
+        break
 
 cost_N = 0
 for n in L:
-   if X < int(n) < N:
-      cost_N += 1
+    if X < int(n) < N:
+        cost_N += 1
 
 print(min([cost_0, cost_N]))

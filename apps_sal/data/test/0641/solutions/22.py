@@ -10,9 +10,10 @@ month = l[2] == "month"
 tot = 0
 while cur.year == 2016:
     if month:
-        if cur.day == hit: tot += 1
+        if cur.day == hit:
+            tot += 1
     else:
-        if cur.isoweekday() == hit: tot += 1
+        if cur.isoweekday() == hit:
+            tot += 1
     cur += day
 print(tot)
-

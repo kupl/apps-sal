@@ -1,24 +1,31 @@
 from math import log2, ceil
 
+
 def readGenerator():
     while True:
         tokens = input().split(' ')
         for t in tokens:
             yield t
 
+
 reader = readGenerator()
+
 
 def readWord():
     return next(reader)
 
+
 def readInt():
     return int(next(reader))
+
 
 def readFloat():
     return float(next(reader))
 
+
 def readLine():
     return input()
+
 
 def solve(a):
     v0, v1 = 0, 0

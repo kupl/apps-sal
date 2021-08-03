@@ -8,4 +8,3 @@ def solve():
 
 N = int(input())
 print((solve()))
-

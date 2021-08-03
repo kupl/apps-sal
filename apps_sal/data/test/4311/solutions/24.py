@@ -4,11 +4,14 @@ if s == 1 or s == 2:
     print(4)
     return
 
+
 def function(n):
     if n % 2 == 0:
-        return int(n/2)
+        return int(n / 2)
     else:
-        return int(n*3+1)
+        return int(n * 3 + 1)
+
+
 i = 0
 count = 0
 a = []

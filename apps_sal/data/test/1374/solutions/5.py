@@ -28,6 +28,7 @@ def f(n, a):
             Ri = i
     print(x[Li])
 
+
 n = int(input())
 a = list(map(int, input().split()))
 f(n, a)

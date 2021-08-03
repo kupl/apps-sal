@@ -19,7 +19,7 @@ for i in range(n):
         while ptr < 10 and cnt[ptr] == 0:
             ptr += 1
         new_mor[i] = ptr
-        cnt[ptr] -= 1    
+        cnt[ptr] -= 1
 for i in range(n):
     if new_mor[i] < sh[i]:
         takes += 1
@@ -41,4 +41,4 @@ for i in range(n):
 for i in range(n):
     if new_mor[i] > sh[i]:
         gives += 1
-print(takes, gives, sep = '\n')
+print(takes, gives, sep='\n')

@@ -1,10 +1,9 @@
-N=int(input())
-a=list(map(int,input().split()))
-x=0
+N = int(input())
+a = list(map(int, input().split()))
+x = 0
 for i in range(N):
-    x^=a[i]
+    x ^= a[i]
 
 for i in range(N):
-    print(x^a[i],end=' ')
+    print(x ^ a[i], end=' ')
 print()
-

@@ -7,4 +7,3 @@ for i in range(N):
         a = i + 1
     h.append(v)
 print(a)
-

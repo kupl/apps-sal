@@ -13,4 +13,3 @@ if ori_str == rev_str:
     print("YES")
 else:
     print("NO")
-

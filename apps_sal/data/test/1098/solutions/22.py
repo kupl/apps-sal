@@ -8,7 +8,7 @@ def ldist(a, b):
     minsa = (int(a.split(':')[0]) + 24) * 60 + int(a.split(':')[1])
     minsb = int(b.split(':')[0]) * 60 + int(b.split(':')[1])
     return minsa - minsb - 1
-    
+
 
 a = int(input())
 x = []
@@ -29,11 +29,10 @@ m = ans - (h * 60)
 if (h < 10):
     if (m < 10):
         print("0" + str(h) + ":0" + str(m))
-    else:    
+    else:
         print("0" + str(h) + ":" + str(m))
 else:
     if (m < 10):
         print(str(h) + ":0" + str(m))
-    else:    
+    else:
         print(str(h) + ":" + str(m))
-

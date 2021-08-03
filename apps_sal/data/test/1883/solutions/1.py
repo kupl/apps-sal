@@ -1,6 +1,8 @@
 3
 
+
 def readln(): return tuple(map(int, input().split()))
+
 
 n, = readln()
 t = (-1,) + readln()
@@ -20,4 +22,3 @@ for i in range(1, n + 1):
             ans = tmp
 print(len(ans))
 print(*tuple(reversed(ans)))
-

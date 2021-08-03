@@ -14,4 +14,3 @@ if len(Words) > 1:
     print(Amount)
 else:
     print(0)
-

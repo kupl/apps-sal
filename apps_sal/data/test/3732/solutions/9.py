@@ -9,7 +9,7 @@ elif y <= 0:
 else:
     c = 0
     while y < m:
-        q = (2*y-x) //y
+        q = (2 * y - x) // y
         c += q
-        x, y = y, x+q*y
+        x, y = y, x + q * y
     print(c)

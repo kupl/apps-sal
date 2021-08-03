@@ -27,14 +27,10 @@ else:
                 flaga1 = 0
                 break
 
-
         for i in number:
             if a not in i and c not in i:
                 flaga2 = 0
                 break
-
-
-
 
     if b <= n:
         c = b
@@ -50,15 +46,12 @@ else:
                 flagb1 = 0
                 break
 
-
         for i in number:
             if b not in i and c not in i:
                 flagb2 = 0
                 break
 
-
     if flaga1 == 0 and flaga2 == 0 and flagb1 == 0 and flagb2 == 0:
         print("NO")
     else:
         print("YES")
-

@@ -21,4 +21,3 @@ for c in range(26):
         cur = max(cur, tot)
     ans += cur
 print(ans / l)
-

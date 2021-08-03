@@ -11,4 +11,3 @@ else:
     ans = (N * M) - (2 * N + 2 * M - 4)
 
 print(ans)
-

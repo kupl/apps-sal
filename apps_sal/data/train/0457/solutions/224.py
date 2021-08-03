@@ -8,6 +8,7 @@ class Solution:
                 if (n - coins[i] >= 0):
                     subProbSol = dp[n - coins[i]]
                     dp[n] = min(dp[n], subProbSol + 1)
-        if dp[amount] == math.inf : return -1
-        else : return (dp[amount])
-
+        if dp[amount] == math.inf:
+            return -1
+        else:
+            return (dp[amount])

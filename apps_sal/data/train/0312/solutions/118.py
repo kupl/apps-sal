@@ -19,4 +19,3 @@ class Solution:
             mono_queue.append(end)
             end += 1
         return res if res != float('inf') else -1
-

@@ -10,9 +10,8 @@ class Solution:
         curSum = 0
         for i, val in enumerate(arr):
             curSum += val
-            if curSum-target in preSum:
-                lsize = min(lsize, i-preSum[curSum-target])
-            if curSum+target in preSum and lsize != float('inf'):
-                minLen = min(minLen, preSum[curSum+target]-i+lsize)
+            if curSum - target in preSum:
+                lsize = min(lsize, i - preSum[curSum - target])
+            if curSum + target in preSum and lsize != float('inf'):
+                minLen = min(minLen, preSum[curSum + target] - i + lsize)
         return minLen if minLen != float('inf') else -1
-

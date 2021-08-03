@@ -22,11 +22,10 @@ for i in range(26):
         if i == j or c[i][j] == 0 or max(c[j]) == 0:
             continue
         print(l - 1)
-        print(c[i][j], end = ' ')
+        print(c[i][j], end=' ')
         for k in range(26):
             if c[j][k] > 0:
                 print(c[j][k])
         return
 print(l)
 print(-1, -1)
-

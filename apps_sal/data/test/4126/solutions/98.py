@@ -9,4 +9,3 @@ elif S[(N + 3) // 2 - 1:] != (S[(N + 3) // 2 - 1:])[::-1]:
     print('No')
 else:
     print('Yes')
-

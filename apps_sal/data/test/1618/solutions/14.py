@@ -15,4 +15,3 @@ while q:
     lowest = height + h
     print(height)
     q -= 1
-

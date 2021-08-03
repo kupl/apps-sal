@@ -16,17 +16,15 @@ a+b+cがkの倍数である必要があり、かつ差を取ると結局a,b,cが
 ならない。
 """
 
-if k%2==0:
-    k//=2
-    a = n//k
-    even = a//2
-    if a%2==0:
+if k % 2 == 0:
+    k //= 2
+    a = n // k
+    even = a // 2
+    if a % 2 == 0:
         odd = even
     else:
-        odd = even+1
+        odd = even + 1
     ans = even**3 + odd**3
 else:
-    ans = (n//k)**3
+    ans = (n // k)**3
 print(ans)
-
-

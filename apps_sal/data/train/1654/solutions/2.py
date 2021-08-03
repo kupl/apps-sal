@@ -1,5 +1,6 @@
 import re
 
+
 def solve_runes(runes):
     for d in '0123456789':
         if d not in runes:

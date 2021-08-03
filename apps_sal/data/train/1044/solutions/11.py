@@ -1,7 +1,6 @@
 for _ in range(int(input())):
-    sum=0
-    n=str(input())
+    sum = 0
+    n = str(input())
     for i in n:
-        sum+=int(i)
+        sum += int(i)
     print(sum)
-

@@ -25,4 +25,3 @@ for i in range(0, n + 1):
     freq[s[i]] += 1
 
 print(result)
-

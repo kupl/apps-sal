@@ -22,7 +22,7 @@ if a[0] >= b[0]:
                     else:
                         ans = 0
                         break
-                        
+
                 if ans == 1:
                     print('YES')
                     print(*t)
@@ -32,4 +32,3 @@ if a[0] >= b[0]:
 
 else:
     print('NO')
-

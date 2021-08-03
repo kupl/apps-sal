@@ -4,7 +4,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#Journey to moon
+# Journey to moon
 '''
 def main():
 	from sys import stdin,stdout
@@ -41,7 +41,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#Djikstra's
+# Djikstra's
 '''
 import collections
 class Graph:
@@ -111,7 +111,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#Larget pallindrome in String
+# Larget pallindrome in String
 '''
 def main():
 	from sys import stdin,stdout
@@ -177,7 +177,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#276B
+# 276B
 '''
 def main():
 	from sys import stdin,stdout
@@ -193,7 +193,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#362B
+# 362B
 '''
 def main():
 	from sys import stdin,stdout
@@ -217,7 +217,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#279B SUM OF SUB-ARRAY
+# 279B SUM OF SUB-ARRAY
 '''
 def main():
 	from sys import stdin,stdout
@@ -252,7 +252,7 @@ def main():
 def __starting_point():
 	main()
 '''
-#469B
+# 469B
 '''
 def main():
 	from sys import stdin,stdout
@@ -337,23 +337,26 @@ def main():
 def __starting_point():
 	main()
 '''
-#286C
-def main():
-	from sys import stdin,stdout
-	m,n=list(map(int,stdin.readline().split()))
-	minim=min(m,n)
-	stdout.write(str(minim+1)+'\n')
-	if n==minim:
-		for i in range(minim+1):
-			stdout.write(str(m)+' '+str(i)+'\n')
-			m-=1
-	else:
-		for i in range(minim+1):
-			stdout.write(str(i)+' '+str(n)+'\n')
-			n-=1
-def __starting_point():
-	main()
+# 286C
 
+
+def main():
+    from sys import stdin, stdout
+    m, n = list(map(int, stdin.readline().split()))
+    minim = min(m, n)
+    stdout.write(str(minim + 1) + '\n')
+    if n == minim:
+        for i in range(minim + 1):
+            stdout.write(str(m) + ' ' + str(i) + '\n')
+            m -= 1
+    else:
+        for i in range(minim + 1):
+            stdout.write(str(i) + ' ' + str(n) + '\n')
+            n -= 1
+
+
+def __starting_point():
+    main()
 
 
 __starting_point()

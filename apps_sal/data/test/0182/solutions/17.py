@@ -6,7 +6,6 @@ j = (b - y) // 2 if b > y else 0
 k = (c - z) // 2 if c > z else 0
 
 if max(x - a, 0) + max(y - b, 0) + max(z - c, 0) <= i + j + k:
-	print('Yes')
+    print('Yes')
 else:
-	print('No')
-
+    print('No')

@@ -7,4 +7,3 @@ for char in s:
         c += 1
 
 print(c)
-

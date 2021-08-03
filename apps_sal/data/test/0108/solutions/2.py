@@ -9,4 +9,4 @@ for i in range(len(s)):
 if (st <= 'z'):
     print(-1)
 else:
-    print(*s,sep = '')
+    print(*s, sep='')

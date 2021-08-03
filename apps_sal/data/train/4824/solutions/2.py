@@ -1,1 +1,1 @@
-get_min_max = lambda seq: (min(seq), max(seq))
+def get_min_max(seq): return (min(seq), max(seq))

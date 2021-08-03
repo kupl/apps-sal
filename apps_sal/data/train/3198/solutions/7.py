@@ -7,7 +7,3 @@ def check_exam(arr1, arr2):
         elif arr2[i] != "":
             score -= 1
     return max(score, 0)
-
-  
-  
-

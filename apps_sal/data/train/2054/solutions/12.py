@@ -9,7 +9,7 @@ def read_ints():
 def main():
     N = read_ints()[0]
     edges = []
-    vx_to_neighbor_colors = collections.defaultdict(set) 
+    vx_to_neighbor_colors = collections.defaultdict(set)
     for _ in range(N - 1):
         u, v = read_ints()
         u -= 1
@@ -48,5 +48,6 @@ def __starting_point():
         print(f'YES\n{root}')
     else:
         print('NO')
+
 
 __starting_point()

@@ -11,12 +11,12 @@ def main():
             i += 1
     A.append(i)
 
-    m, l  = len(S), 0
+    m, l = len(S), 0
     for a in A:
         t = max(l + a, len(S) - l - a)
         m = min(m, t)
         l += a
     return m
 
-print((main()))
 
+print((main()))

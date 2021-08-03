@@ -14,4 +14,3 @@ for i in range(cap2 * 5 + 1, cap2 * 5 + (n % 5) + 1):
             result += 1
 
 print(result)
-

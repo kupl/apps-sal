@@ -1,985 +1,110 @@
 
 
-
-
-
-
-
-
-
-
-
+import sys
 ure, nre = list(map(int, input().split()))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 lolly = [list(map(int, input().split())) for i in range(nre)]
 
 
-
-
-
-import sys
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 xre = lolly[0][0]
 
 
-
-
-
-
-
-
-
-
-
-
-
 for i in range(nre):
-	
-	
-	
-	
-	
-	
-	if( xre not in lolly[i]):
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		yre = lolly[i][0]
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		zre = lolly[i][1]
-		
-		
-		
-		
-		
-		
-		
-		
-		j = i
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		break
-	
-	
-	
-	
-	
-	
-	
-	if( i == nre-1):
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		print("YES")
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		return
 
+    if(xre not in lolly[i]):
 
+        yre = lolly[i][0]
 
+        zre = lolly[i][1]
 
+        j = i
 
+        break
 
+    if(i == nre - 1):
 
+        print("YES")
 
-
-
-
-
-
-
+        return
 
 
 kre1 = 1
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 kre2 = 1
 
 
+for i in range(j, nre):
 
+    if(xre not in lolly[i] and yre not in lolly[i]):
 
+        kre1 = 0
 
-
-
-
-
-
-
-
-
+        break
 
 
 for i in range(j, nre):
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	if( xre not in lolly[i] and yre not in lolly[i]):
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		kre1 = 0
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		break
 
+    if (xre not in lolly[i] and zre not in lolly[i]):
 
+        kre2 = 0
 
+        break
 
 
+if(kre1 == 1 or kre2 == 1):
 
+    print("YES")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-for i in range(j, nre):
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	if (xre not in lolly[i] and zre not in lolly[i]):
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		kre2 = 0
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import sys
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-if( kre1==1 or kre2==1):
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	print("YES")
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	return
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return
 
 
 xre = lolly[0][1]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 for i in range(nre):
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	if( xre not in lolly[i]):
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		yre = lolly[i][0]
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		zre = lolly[i][1]
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		j = i
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		break
 
+    if(xre not in lolly[i]):
 
+        yre = lolly[i][0]
 
+        zre = lolly[i][1]
 
+        j = i
 
-
-
-
-
-
-
+        break
 
 
 kre1 = 1
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 kre2 = 1
 
 
+for i in range(j, nre):
 
+    if (xre not in lolly[i] and yre not in lolly[i]):
 
+        kre1 = 0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        break
 
 
 for i in range(j, nre):
 
+    if (xre not in lolly[i] and zre not in lolly[i]):
 
+        kre2 = 0
 
+        break
 
 
+if(kre1 == 1 or kre2 == 1):
 
+    print("YES")
 
-
-
-
-
-
-
-
-	if (xre not in lolly[i] and yre not in lolly[i]):
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		kre1 = 0
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		break
-
-
-
-
-
-
-
-
-
-
-
-
-
-for i in range(j, nre):
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	if (xre not in lolly[i] and zre not in lolly[i]):
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		kre2 = 0
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import sys
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-if( kre1==1 or kre2==1):
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	print("YES")
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	return
-
+    return
 
 
 print("NO")

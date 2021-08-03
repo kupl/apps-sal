@@ -7,11 +7,11 @@ dp[0] = 1
 cum[0] = 1
 for i in range(n):
     for l, r in lr:
-        if i-l >= 0:
-            dp[i] += cum[i-l]
-        if i-r-1 >= 0:
-            dp[i] -= cum[i-r-1]
+        if i - l >= 0:
+            dp[i] += cum[i - l]
+        if i - r - 1 >= 0:
+            dp[i] -= cum[i - r - 1]
         dp[i] %= mod
-        cum[i] = cum[i-1] + dp[i]
+        cum[i] = cum[i - 1] + dp[i]
         cum[i] %= mod
-print(dp[-1]%mod)
+print(dp[-1] % mod)

@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 z = False
 mi = 1
 sc = 0
@@ -14,4 +14,3 @@ for i in a:
 if mi == -1 and not z:
     sc += 2
 print(sc)
-

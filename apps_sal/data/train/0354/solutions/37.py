@@ -10,7 +10,7 @@ class Solution:
         for r in range(1, n):
             for c in range(6):
                 if r < rollMax[c]:
-                    dp[r][c] = sum(dp[r-1])
+                    dp[r][c] = sum(dp[r - 1])
                 else:
                     for prev in range(r - rollMax[c], r):
                         dp[r][c] += sum(dp[prev]) - dp[prev][c]

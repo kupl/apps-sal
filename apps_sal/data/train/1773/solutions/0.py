@@ -4,13 +4,15 @@ def validSolution(board):
     rows = validate_rows(board)
     return boxes and cols and rows
 
+
 def validate_boxes(board):
     for i in range(0, 9, 3):
         for j in range(0, 9, 3):
-            nums = board[i][j:j+3] + board[i+1][j:j+3] + board[i+2][j:j+3]
+            nums = board[i][j:j + 3] + board[i + 1][j:j + 3] + board[i + 2][j:j + 3]
             if not check_one_to_nine(nums):
                 return False
     return True
+
 
 def validate_cols(board):
     transposed = zip(*board)
@@ -18,14 +20,15 @@ def validate_cols(board):
         if not check_one_to_nine(row):
             return False
     return True
-    
+
+
 def validate_rows(board):
     for row in board:
         if not check_one_to_nine(row):
             return False
     return True
-            
+
 
 def check_one_to_nine(lst):
-    check = range(1,10)
+    check = range(1, 10)
     return sorted(lst) == check

@@ -14,11 +14,10 @@ def main():
         [2, 4, 6],
     ]
     ans = 'No'
-    
+
     for _ in range(3):
         for i in list(map(int, input().split())):
             A.append(i)
-        
 
     N = int(input())
 
@@ -35,5 +34,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -48,4 +48,3 @@ vs = input().split()
 ts = input().split()
 ss = [(int(vs[i]), int(ts[i])) for i in range(n)]
 print(get_max_volume(ss, t))
-

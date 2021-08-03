@@ -15,7 +15,7 @@ len_c = len(c)
 # print(len_c)
 # print(c)
 ans = 0
-while(len_c-k > 0):
+while(len_c - k > 0):
     # print(len_c-k)
     # print()
     # print(k)
@@ -23,4 +23,3 @@ while(len_c-k > 0):
     len_c -= 1
     ans += j
 print(ans)
-

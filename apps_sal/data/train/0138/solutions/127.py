@@ -17,8 +17,7 @@ class Solution:
                 neg_len = min_val
             neg_len_p = neg_len
             pos_len_p = pos_len
-            
-            result = max(result, pos_len)
-        
-        return max(result, 0)
 
+            result = max(result, pos_len)
+
+        return max(result, 0)

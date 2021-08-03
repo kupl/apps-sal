@@ -1,5 +1,6 @@
 only_show_wrong()
 
+
 def rpg(map: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int, int, int, List[str]]:
     class Hero:
         def __init__(self, coordy, coordx, pointer):
@@ -42,10 +43,10 @@ def rpg(map: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int,
                 elif field[y][x] in ("^", ">", "v", "<"):
                     hero = Hero(y, x, field[y][x])
                 elif field[y][x] == "M":
-                    merchdict[(y, x)] = Merchant(y,x)
+                    merchdict[(y, x)] = Merchant(y, x)
         return (monstdict, hero, merchdict)
 
-    def monsters_move(hero,monstdict):
+    def monsters_move(hero, monstdict):
         for i in [(hero.coordy, hero.coordx - 1), (hero.coordy + 1, hero.coordx), (hero.coordy, hero.coordx + 1),
                   (hero.coordy - 1, hero.coordx)]:
             if i in monstdict:
@@ -57,14 +58,14 @@ def rpg(map: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int,
         coordy = hero.coordy + pointer[hero.pointer][1]
         return (coordx, coordy)
 
-    def move_forward(hero,field,monstdict,merchdict):
-        monsters_move(hero,monstdict)
+    def move_forward(hero, field, monstdict, merchdict):
+        monsters_move(hero, monstdict)
         field[hero.coordy][hero.coordx] = " "
         coords = forward_coords(hero)
         hero.coordx = coords[0]
         hero.coordy = coords[1]
         if 0 <= hero.coordy < len(field) and 0 <= hero.coordx < len(field[hero.coordy]) and field[hero.coordy][
-            hero.coordx] not in ("D", "E", "M", "#", "-", "|"):
+                hero.coordx] not in ("D", "E", "M", "#", "-", "|"):
             if field[hero.coordy][hero.coordx] in ("C", "H", "K"):
                 hero.bag.append(field[hero.coordy][hero.coordx])
             elif field[hero.coordy][hero.coordx] == "S":
@@ -76,16 +77,16 @@ def rpg(map: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int,
         else:
             return False
 
-    def change_pointer(hero,field,monstdict,merchdict,pointer):
-        monsters_move(hero,monstdict)
+    def change_pointer(hero, field, monstdict, merchdict, pointer):
+        monsters_move(hero, monstdict)
         hero.pointer = pointer
         field[hero.coordy][hero.coordx] = pointer
         if hero.health <= 0:
             return False
         return True
 
-    def use_coin(hero,field,monstdict,merchdict):
-        monsters_move(hero,monstdict)
+    def use_coin(hero, field, monstdict, merchdict):
+        monsters_move(hero, monstdict)
         coords = forward_coords(hero)
         x = coords[0]
         y = coords[1]
@@ -98,20 +99,20 @@ def rpg(map: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int,
             return True
         return False
 
-    def use_potion(hero,field,monstdict,merchdict):
+    def use_potion(hero, field, monstdict, merchdict):
         if "H" in hero.bag and hero.health != 3:
             hero.health = 3
             hero.bag.pop(hero.bag.index("H"))
         else:
             return False
-        monsters_move(hero,monstdict)
+        monsters_move(hero, monstdict)
         return True if hero.health > 0 else False
 
-    def use_key(hero,field,monstdict,merchdict):
+    def use_key(hero, field, monstdict, merchdict):
         coords = forward_coords(hero)
         x = coords[0]
         y = coords[1]
-        monsters_move(hero,monstdict)
+        monsters_move(hero, monstdict)
         if "K" in hero.bag and 0 <= x < len(field[y]) and 0 <= y < len(field) and field[y][x] in (
                 "-", "|") and hero.health > 0:
             field[y][x] = " "
@@ -119,7 +120,7 @@ def rpg(map: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int,
             return True
         return False
 
-    def attack(hero,field,monstdict,merchdict):
+    def attack(hero, field, monstdict, merchdict):
         coords = forward_coords(hero)
         x = coords[0]
         y = coords[1]
@@ -135,7 +136,7 @@ def rpg(map: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int,
                 del monstdict[(y, x)]
         else:
             return False
-        monsters_move(hero,monstdict)
+        monsters_move(hero, monstdict)
         return True if hero.health > 0 else False
 
     field = [[str(x) for x in line] for line in map]
@@ -147,9 +148,9 @@ def rpg(map: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int,
     actionsdict = {"F": move_forward, "A": attack, "C": use_coin, "K": use_key, "H": use_potion}
     for i in actions:
         if i in actionsdict:
-            flag = actionsdict[i](hero,field,monstdict,merchdict)
+            flag = actionsdict[i](hero, field, monstdict, merchdict)
         else:
-            flag = change_pointer(hero,field,monstdict,merchdict,i)
-        if not flag or hero.health <=0:
+            flag = change_pointer(hero, field, monstdict, merchdict, i)
+        if not flag or hero.health <= 0:
             return None
     return (field, hero.health, hero.attack, hero.defence, sorted(hero.bag))

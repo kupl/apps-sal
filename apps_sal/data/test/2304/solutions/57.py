@@ -32,16 +32,17 @@ class WeightedUF:
     def diff(self, x, y):
         return self.weight[x] - self.weight[y]
 
-n,m=map(int,input().split())
-wuf=WeightedUF(n)
+
+n, m = map(int, input().split())
+wuf = WeightedUF(n)
 for i in range(m):
-    l,r,d=map(int,input().split())
-    l-=1
-    r-=1
-    if wuf.same(l,r):
-        if wuf.diff(l,r)!=d:
+    l, r, d = map(int, input().split())
+    l -= 1
+    r -= 1
+    if wuf.same(l, r):
+        if wuf.diff(l, r) != d:
             print("No")
             return
     else:
-        wuf.unite(l,r,d)
+        wuf.unite(l, r, d)
 print("Yes")

@@ -62,5 +62,3 @@ if len(mp) == 3:
         print('Yes')
         return
 print('No')
-
-

@@ -14,11 +14,11 @@ for i in range(n):
     else:
         far = 0
         for ind, j in enumerate(lib):
-            o = i+1
-            while o < n+1 and a[o] != j:
+            o = i + 1
+            while o < n + 1 and a[o] != j:
                 o += 1
             if o > far:
-                far = min(o, n-1)
+                far = min(o, n - 1)
                 maxindex = ind
                 maxele = j
                 if o == n:
@@ -27,4 +27,3 @@ for i in range(n):
         cost += 1
 
 print(cost)
-

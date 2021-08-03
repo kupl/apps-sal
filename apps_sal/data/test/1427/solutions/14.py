@@ -1,6 +1,6 @@
+from collections import defaultdict
 import sys
 input = sys.stdin.readline
-from collections import defaultdict
 
 
 class PrimeFactor():
@@ -63,12 +63,13 @@ class PrimeFactor():
         else:
             return res % mod
 
+
 mod = 10 ** 9 + 7
 
 N = int(input())
 A = list(map(int, input().split()))
 table = PrimeFactor(10**6)
-num = table.prime_lcm(A,mod)
+num = table.prime_lcm(A, mod)
 
 res = 0
 for a in A:

@@ -1,4 +1,5 @@
 from datetime import *
 
-def seconds_ago(s,n):
+
+def seconds_ago(s, n):
     return str(datetime.strptime(s, '%Y-%m-%d %H:%M:%S') - timedelta(seconds=n))

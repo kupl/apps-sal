@@ -1,5 +1,6 @@
 import sys
-import heapq, math
+import heapq
+import math
 from itertools import zip_longest, permutations, combinations, combinations_with_replacement
 from itertools import accumulate, dropwhile, takewhile, groupby
 from functools import lru_cache
@@ -28,4 +29,3 @@ Q = int(input())
 for i in range(Q):
     L, R = list(map(int, input().split()))
     print((S[R] - S[L]))
-

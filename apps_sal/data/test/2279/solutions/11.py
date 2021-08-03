@@ -19,4 +19,3 @@ for i in range(n):
     ans[y] = x + 1
 
 print(' '.join(map(str, ans)))
-

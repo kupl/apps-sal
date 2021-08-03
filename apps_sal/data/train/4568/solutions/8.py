@@ -1,15 +1,18 @@
-import random, math
+import random
+import math
 
 # even if k is on the order of n, the average case is O(n)
 # worst case is O(n^2)
+
+
 def find_min_max_product(arr, k):
     if k < 1 or k > len(arr) or len(arr) == 0:
         return None
-    
+
     # get k largest values (by absolute value)
     # and also construct a list of all the other values
     k_vals, other_vals = partition_around_k(arr, k, True)
-        
+
     largest_product = 1
     smallest_positive_k_val = None
     smallest_negative_k_val = None
@@ -22,11 +25,11 @@ def find_min_max_product(arr, k):
             smallest_positive_k_val = num
         if num < 0 and (smallest_negative_k_val == None or num > smallest_negative_k_val):
             smallest_negative_k_val = num
-    
+
     # min and max are the same
     if k == len(arr):
         return largest_product, largest_product
-    
+
     # if the largest product was positive: now find the largest negative product
     # if the largest product was negative: now find the largest positive product
     other_min_or_max = negate_product(arr, largest_product, smallest_negative_k_val, smallest_positive_k_val, other_vals)
@@ -47,6 +50,8 @@ def find_min_max_product(arr, k):
         return largest_product, other_min_or_max
 
 # find the other min or max by flipping one of its factors from positive to negative or vice versa
+
+
 def negate_product(arr, largest_product, smallest_negative_k_val, smallest_positive_k_val, other_vals):
     other_min_or_max = None
     need_min = largest_product > 0
@@ -56,7 +61,7 @@ def negate_product(arr, largest_product, smallest_negative_k_val, smallest_posit
         negate_removed = largest_product // smallest_negative_k_val
     if smallest_positive_k_val != None:
         positive_removed = largest_product // smallest_positive_k_val
-    
+
     # single loop through arr, so still O(n)
     for num in other_vals:
         # calculate new possible product
@@ -66,7 +71,7 @@ def negate_product(arr, largest_product, smallest_negative_k_val, smallest_posit
             product = positive_removed * num
         else:
             continue
-        
+
         # update the min or max
         if other_min_or_max == None:
             other_min_or_max = product
@@ -74,18 +79,20 @@ def negate_product(arr, largest_product, smallest_negative_k_val, smallest_posit
         is_product_better = product < other_min_or_max if need_min else product > other_min_or_max
         if is_product_better:
             other_min_or_max = product
-            
+
     return other_min_or_max
 
 # find k-th largest element, by distance from zero
 # average case O(n), worst case is O(n^2)
+
+
 def quick_select_absolute_k(arr, k, seek_largest):
     # base cases
     if len(arr) == 1:
         return arr[0]
     if k == 1:
         return find_absolute_extreme(arr, seek_largest)
-    
+
     pivot_index = pick_pivot_index(arr, 0, len(arr) - 1)
     smaller = []
     larger = []
@@ -101,11 +108,11 @@ def quick_select_absolute_k(arr, k, seek_largest):
             else:
                 smaller.append(num)
             same.append(num)
-    
+
     # everything remaining is duplicates
     if len(same) == len(arr):
         return arr[0]
-    
+
     preferred_array = larger if seek_largest else smaller
     other_array = smaller if seek_largest else larger
     if len(preferred_array) >= k:
@@ -114,9 +121,12 @@ def quick_select_absolute_k(arr, k, seek_largest):
         return quick_select_absolute_k(other_array, k - len(preferred_array), seek_largest)
 
 # change to median-of-medians to improve worst case from O(n^2) to O(n)
+
+
 def pick_pivot_index(arr, min, max):
     return random.randint(min, max)
-    
+
+
 def find_absolute_extreme(arr, seek_largest):
     extreme = None
     for num in arr:
@@ -127,6 +137,7 @@ def find_absolute_extreme(arr, seek_largest):
         elif not seek_largest and abs(extreme) > abs(num):
             extreme = num
     return extreme
+
 
 def partition_around_k(arr, k, seek_largest):
     k_val = quick_select_absolute_k(arr, k, seek_largest)
@@ -147,12 +158,12 @@ def partition_around_k(arr, k, seek_largest):
                 k_vals.append(num)
         else:
             k_val_copies.append(num)
-    
+
     # handling for duplicates
     remainder = k - len(k_vals)
     for i in range(remainder):
         k_vals.append(k_val_copies[i])
     for i in range(remainder, len(k_val_copies)):
         other_vals.append(k_val_copies[i])
-    
+
     return k_vals, other_vals

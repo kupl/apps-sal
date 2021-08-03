@@ -3,8 +3,8 @@
 # import bisect
 # from collections import deque
 # from decorator import stop_watch
-# 
-# 
+#
+#
 # @stop_watch
 def solve(N, As):
     all_xor = 0
@@ -23,5 +23,6 @@ def __starting_point():
     As = [int(i) for i in input().split()]
     # Bs = [int(i) for i in input().split()]
     solve(N, As)
+
 
 __starting_point()

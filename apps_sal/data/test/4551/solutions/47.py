@@ -4,7 +4,7 @@
 # 天秤がどちらに傾くかを出力する
 
 
-A,B,C,D = list(map(int,input().split()))
+A, B, C, D = list(map(int, input().split()))
 
 left_dish = A + B
 right_dish = C + D
@@ -15,4 +15,3 @@ elif left_dish < right_dish:
     print('Right')
 elif left_dish == right_dish:
     print('Balanced')
-

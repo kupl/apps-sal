@@ -18,4 +18,3 @@ if correct:
     print("YES")
 else:
     print("NO")
-

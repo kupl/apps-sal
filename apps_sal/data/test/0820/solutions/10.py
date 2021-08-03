@@ -1,4 +1,4 @@
-#In the name of Allah
+# In the name of Allah
 
 from sys import stdin, stdout
 input = stdin.readline
@@ -8,12 +8,11 @@ m = int(input())
 
 a = [int(input())for i in range(n)]
 
-a.sort(reverse = True)
+a.sort(reverse=True)
 
 i = 0
 cap = 0
 while cap < m:
-        cap += a[i]
-        i += 1
+    cap += a[i]
+    i += 1
 stdout.write(str(i))
-

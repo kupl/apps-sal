@@ -5,7 +5,8 @@ class Graph():
 
     # from adjacency matrix to dictionary
     def adjmat_2_graph(self, adjm):
-        if len(adjm) != self.v: return "Dimension error"
+        if len(adjm) != self.v:
+            return "Dimension error"
         nodes = ['A' + str(i) for i in range(0, self.v)]
         graph = {}
         for n, v in enumerate(nodes):
@@ -43,7 +44,8 @@ class Graph():
 
     # find all path from node start_vertex to node end_vertex
     def find_all_paths(self, graph, start_vertex, end_vertex):
-        pths = []; st = [[start_vertex]]
+        pths = []
+        st = [[start_vertex]]
         while st:
             top = st.pop()
             if top[-1] == end_vertex:

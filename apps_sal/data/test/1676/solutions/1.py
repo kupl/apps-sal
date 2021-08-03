@@ -1,6 +1,6 @@
+from collections import deque
 n, b = map(int, input().split())
 
-from collections import deque
 
 q = deque()
 
@@ -10,9 +10,7 @@ for i in range(n):
         q.popleft()
     if len(q) <= b:
         r = t if len(q) == 0 else q[-1]
-        print(r + d, end = ' ')
+        print(r + d, end=' ')
         q.append(r + d)
     else:
-        print(-1, end = ' ')
-    
-
+        print(-1, end=' ')

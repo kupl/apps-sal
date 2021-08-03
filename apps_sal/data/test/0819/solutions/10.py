@@ -20,4 +20,3 @@ elif a == 2:
         print(min1)
     else:
         print(min2)
-

@@ -18,4 +18,3 @@ for s in sys.stdin:
     a.append(str(t[-1][0]))
 
 print('\n'.join(a))
-

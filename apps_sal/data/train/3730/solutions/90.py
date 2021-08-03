@@ -1,5 +1,6 @@
 def capitalize(str):
     resArr = []
+
     def one(string):
         resStr = ""
         for index in range(len(string)):
@@ -8,6 +9,7 @@ def capitalize(str):
             else:
                 resStr = resStr + string[index].lower()
         return resStr
+
     def two(string):
         resStr = ""
         for index in range(len(string)):
@@ -19,5 +21,3 @@ def capitalize(str):
     resArr.append(one(str))
     resArr.append(two(str))
     return resArr
-        
-

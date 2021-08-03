@@ -12,4 +12,3 @@ for x in a:
         lst.append(x)
     else:
         print('YES')
-

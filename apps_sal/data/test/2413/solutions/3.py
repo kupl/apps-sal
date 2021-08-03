@@ -5,4 +5,3 @@ for _ in range(int(input())):
         print(n)
     else:
         print(max(n - s.index('1'), s.rindex('1') + 1) * 2)
-

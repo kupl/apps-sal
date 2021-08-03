@@ -1,6 +1,6 @@
 class Solution:
     def minDays(self, n: int) -> int:
-        
+
         @lru_cache(None)
         def days(m: int, steps: int):
             nonlocal maxSteps
@@ -14,7 +14,7 @@ class Solution:
                 if m % 2 == 0:
                     days(m // 2, steps + 1)
                 days(m - 1, steps + 1)
-             
+
         maxSteps = n
         days(n, 0)
         return maxSteps

@@ -9,8 +9,8 @@ class Solution:
             boss = manager[cur]
             total_time[cur] = check(manager, informTime, total_time, boss) + informTime[boss]
             return total_time[cur]
-            
-        total_time = [-1]*n
+
+        total_time = [-1] * n
         rtv = 0
         for i in range(n):
             rtv = max(rtv, check(manager, informTime, total_time, i))

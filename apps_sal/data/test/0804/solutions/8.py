@@ -5,13 +5,13 @@ s = input()
 k = int(input())
 
 if len(s) < k:
-  print('impossible')
-  return
+    print('impossible')
+    return
 
-f = [False]*L
+f = [False] * L
 
 for c in s:
-  f[ord(c)-ord_a] = True
+    f[ord(c) - ord_a] = True
 
 
-print(max(k-sum(f),0))
+print(max(k - sum(f), 0))

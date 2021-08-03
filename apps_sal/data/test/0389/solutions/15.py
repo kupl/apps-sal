@@ -6,6 +6,7 @@ def gcd(a, b):
         b = t
     return a
 
+
 def main():
     a, b = list(map(int, input().split(' ')))
     gg = gcd(a, b)
@@ -32,13 +33,15 @@ def main():
             if ok == 0:
                 can = 0
                 break
-    
+
     if can == 0:
         print("-1")
     else:
         print(ans)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -5,7 +5,7 @@ for i in range(N):
     ab[i][0], ab[i][1] = map(int, input().split())
 ab = sorted(ab)
 
-#print(ab)
+# print(ab)
 for i in range(N):
     s += ab[i][1]
     if s >= K:

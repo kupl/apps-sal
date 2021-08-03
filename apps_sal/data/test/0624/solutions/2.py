@@ -15,4 +15,3 @@ for removal in range(1, min(n - 1, m) + 1):
         max_avg = new_avg
 
 print(max_avg)
-

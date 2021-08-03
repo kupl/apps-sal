@@ -25,4 +25,3 @@ for i in range(q):
         if v[r - 1] == 1:
             ans -= 1
     print(ans)
-

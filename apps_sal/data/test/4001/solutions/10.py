@@ -9,4 +9,3 @@ while a:
         y = d
         break
 print(x, y)
-

@@ -1,7 +1,8 @@
 import re
 
 a = input()
-if not '.' in a: a += '.'
+if not '.' in a:
+    a += '.'
 
 a, b = a.strip('0').split('.')
 
@@ -16,7 +17,9 @@ elif len(a) == 0:
     a = r[0]
     b = r[1:]
 
-if a: print (a, end = '')
-if b: print ('.' + b, end = '')
-if st: print('E' + str(st))
-
+if a:
+    print(a, end='')
+if b:
+    print('.' + b, end='')
+if st:
+    print('E' + str(st))

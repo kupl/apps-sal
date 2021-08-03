@@ -3,5 +3,3 @@ def solution(string):
     y = x.reverse()
     z = ''.join(x)
     return z
-
-

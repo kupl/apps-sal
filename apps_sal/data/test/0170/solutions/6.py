@@ -17,7 +17,6 @@ def main():
     first_cards = collections.deque(reversed(list(map(int, sys.stdin.readline().split()))[1:]))
     second_cards = collections.deque(reversed(list(map(int, sys.stdin.readline().split()))[1:]))
 
-
     existing_states = set()
     number_of_fights = 0
 
@@ -25,7 +24,7 @@ def main():
         # code = get_code(first_cards, second_cards)
         code = (tuple(first_cards), tuple(second_cards))
         if code in existing_states:
-            print (-1)
+            print(-1)
             return
         existing_states.add(code)
 
@@ -37,9 +36,11 @@ def main():
             second_cards.appendleft(second_cards.pop())
         number_of_fights += 1
 
-    print ('%d %d' % (number_of_fights, 1 if not second_cards else 2))
+    print('%d %d' % (number_of_fights, 1 if not second_cards else 2))
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

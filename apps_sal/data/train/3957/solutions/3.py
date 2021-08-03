@@ -1,5 +1,6 @@
 from itertools import groupby
 
+
 def uniq_c(seq):
     ans = []
     for c, e in groupby(seq):

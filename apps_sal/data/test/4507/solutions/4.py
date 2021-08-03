@@ -7,7 +7,7 @@ items2 = []
 for i in range(k):
     items2 += [heappop(items)]
 items = items2
-offers = defaultdict(lambda :0)
+offers = defaultdict(lambda: 0)
 for i in range(m):
     a, b = map(int, input().split())
     if a <= k:

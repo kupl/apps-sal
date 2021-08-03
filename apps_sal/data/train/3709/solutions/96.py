@@ -1,4 +1,4 @@
-def simple_multiplication(n) :
+def simple_multiplication(n):
     if n % 2 == 0:
         n *= 8
     else:

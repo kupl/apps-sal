@@ -12,4 +12,3 @@ for i in range(n - 1, -1, -1):
     welth += apples * p // 2
 
 print(welth)
-

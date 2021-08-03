@@ -4,6 +4,3 @@ def tower_of_hanoi(rings):
         moves *= 2
         moves += 1
     return moves
-
-
-

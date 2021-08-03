@@ -13,7 +13,7 @@ elif n >= 4:
     print(-1)
 elif n == 2:
     cnt1, cnt2 = 0, 0
-    
+
     for x in range(m):
         if x % 2 == 0:
             cnt1 += (a[0][x] == a[1][x])
@@ -65,5 +65,5 @@ elif n == 3:
                 cnt4 += 0
             else:
                 cnt4 += 1
-                
+
     print(min(cnt1, cnt2, cnt3, cnt4))

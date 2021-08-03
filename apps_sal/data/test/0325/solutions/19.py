@@ -45,4 +45,3 @@ def bellman_ford(sub_abc, n):
 use = dfs(rev_edge, n - 1)
 print((bellman_ford([(a, b, c)
                     for (a, b, c) in abc if a in use and b in use], n)))
-

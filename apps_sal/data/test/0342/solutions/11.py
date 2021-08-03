@@ -7,4 +7,3 @@ ans += 2 * m
 if a + b > 0:
     ans += 1
 print(ans)
-

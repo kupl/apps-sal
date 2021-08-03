@@ -8,10 +8,10 @@ igor_turns = n // 2
 min_oleg_id = 0
 min_igor_id = n - igor_turns
 ans = ['?'] * n
-max_oleg_id = oleg_turns - 1 
+max_oleg_id = oleg_turns - 1
 max_igor_id = n - 1
 curr_turn = 'o'
-next_turn = {'o' : 'i', 'i' : 'o'}
+next_turn = {'o': 'i', 'i': 'o'}
 l_ans = 0
 r_ans = n - 1
 while r_ans >= l_ans:
@@ -37,4 +37,3 @@ while r_ans >= l_ans:
         curr_turn = 'o'
 strans = ''.join(ans)
 print(strans)
-

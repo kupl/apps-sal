@@ -14,5 +14,3 @@ elif (a[5] == a[6] == a[7] == a[8]) and (a[21] == a[22] == a[23] == a[24]) and (
     print("YES")
 else:
     print("NO")
-    
-

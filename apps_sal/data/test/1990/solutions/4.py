@@ -5,6 +5,9 @@
 
 # MODIFIED SEGMENT TREE (MIN = MINIMUM PREFIX SUM instead of MINIMUM ELEMENT IN PREFIX)
 
+from sys import stdin
+
+
 class SegmentTree:
     def __init__(self, n, arr=[]):
         self.n = n
@@ -13,22 +16,23 @@ class SegmentTree:
         self.tmax = [0] * (2 * n)
         if arr:
             for i in range(len(arr)):
-                self.tsum[n + i] = arr[i];
-            for i in range(len(arr) - 1, 0, -1) :
-                self.tsum[i] = self.tsum[i << 1] + self.tsum[i << 1 | 1];
+                self.tsum[n + i] = arr[i]
+            for i in range(len(arr) - 1, 0, -1):
+                self.tsum[i] = self.tsum[i << 1] + self.tsum[i << 1 | 1]
 
     def update(self, p, val):
-        p += self.n;
-        self.tsum[p] = val;
-        self.tmin[p] = val;
-        self.tmax[p] = val;
+        p += self.n
+        self.tsum[p] = val
+        self.tmin[p] = val
+        self.tmax[p] = val
 
-        i = p;
+        i = p
         while i > 1:
-            self.tsum[i >> 1] = self.tsum[i] + self.tsum[i ^ 1];
-            self.tmin[i >> 1] = min(self.tmin[i], self.tmin[i ^ 1] + self.tsum[i]) if i%2==0 else min(self.tmin[i^1], self.tmin[i] + self.tsum[i^1])
-            self.tmax[i >> 1] = max(self.tmax[i], self.tmax[i ^ 1] + self.tsum[i]) if i%2==0 else max(self.tmax[i^1], self.tmax[i] + self.tsum[i^1])
-            i >>= 1;
+            self.tsum[i >> 1] = self.tsum[i] + self.tsum[i ^ 1]
+            self.tmin[i >> 1] = min(self.tmin[i], self.tmin[i ^ 1] + self.tsum[i]) if i % 2 == 0 else min(self.tmin[i ^ 1], self.tmin[i] + self.tsum[i ^ 1])
+            self.tmax[i >> 1] = max(self.tmax[i], self.tmax[i ^ 1] + self.tsum[i]) if i % 2 == 0 else max(self.tmax[i ^ 1], self.tmax[i] + self.tsum[i ^ 1])
+            i >>= 1
+
 
 '''
 import math
@@ -38,10 +42,10 @@ st = SegmentTree(n, array)
 st.update(0, 2)
 '''
 
-from sys import stdin
-import math
+
 def input():
     return stdin.readline()[:-1]
+
 
 n = int(input())
 s = input()
@@ -76,5 +80,3 @@ for c in s:
         output.append(-1)
 
 print(' '.join(map(str, output)))
-
-

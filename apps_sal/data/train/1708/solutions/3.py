@@ -6,7 +6,7 @@ class MemoryManager:
         """
         self.memory = memory
         self.allocated = {}
-        self.free_memory = {0:len(memory)}
+        self.free_memory = {0: len(memory)}
 
     def allocate(self, size):
         """
@@ -20,11 +20,11 @@ class MemoryManager:
         for pointer, block_size in list(self.free_memory.items()):
             if block_size >= size:
                 self.allocated[pointer] = size
-                self.free_memory[pointer+size]= block_size-size
+                self.free_memory[pointer + size] = block_size - size
                 del self.free_memory[pointer]
                 return pointer
         raise 'Cannot allocate more memory than available'
-    
+
     def release(self, pointer):
         """
         Releases a previously allocated block of memory.
@@ -34,9 +34,9 @@ class MemoryManager:
         self.free_memory[pointer] = self.allocated[pointer]
         del self.allocated[pointer]
         for p, b_size in sorted(self.free_memory.items()):
-            if self.free_memory.get(p+b_size):
-                self.free_memory[p] += self.free_memory[p+b_size]
-                del self.free_memory[p+b_size]
+            if self.free_memory.get(p + b_size):
+                self.free_memory[p] += self.free_memory[p + b_size]
+                del self.free_memory[p + b_size]
 
     def read(self, pointer):
         """
@@ -46,7 +46,7 @@ class MemoryManager:
         @raises If pointer is in unallocated memory.
         """
         for p, b_size in list(self.allocated.items()):
-            if p <= pointer < p+b_size:
+            if p <= pointer < p + b_size:
                 return self.memory[pointer]
         raise 'No memory has been allocated'
 
@@ -58,10 +58,7 @@ class MemoryManager:
         @raises If pointer is in unallocated memory.
         """
         for p, b_size in list(self.allocated.items()):
-            if p <= pointer < p+b_size:
+            if p <= pointer < p + b_size:
                 self.memory[pointer] = value
                 return None
         raise 'No memory has been allocated'
-            
-            
-

@@ -26,10 +26,10 @@ class Solution:
                     if A[i][j] == 1:
                         dfs(i, j, seen, island)
                         return seen, island
-        
+
         seen, island = find_island()
         q = collections.deque(list([(x, 0) for x in island]))
-        
+
         while q:
             (i, j), cnt = q.popleft()
             for ni, nj in neighbors(i, j):
@@ -38,6 +38,5 @@ class Solution:
                     if A[ni][nj] == 1:
                         return cnt
                     q.append(((ni, nj), cnt + 1))
-        
-        return -1
 
+        return -1

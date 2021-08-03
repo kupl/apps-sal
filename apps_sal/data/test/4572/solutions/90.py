@@ -5,4 +5,3 @@ for c in "abcdefghijklmnopqrstuvwxyz":
         break
 else:
     print("None")
-

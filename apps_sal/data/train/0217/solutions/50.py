@@ -8,7 +8,7 @@ class Solution:
 
 # @param {Integer[]} a
 # @return {Integer}
-#def subarray_bitwise_o_rs(a)
+# def subarray_bitwise_o_rs(a)
     # Get subarrays
 #    solutions = {}
 #    iterating_array = a.clone
@@ -22,5 +22,4 @@ class Solution:
 #        iterating_array.shift
 #    end
 #    solutions.keys.length
-#end
-
+# end

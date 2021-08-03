@@ -5,4 +5,5 @@ def __starting_point():
         s += 'aabb'
     print(s[:n])
 
+
 __starting_point()

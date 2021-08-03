@@ -7,8 +7,8 @@ N, Q = list(map(int, input().split()))
 STX = [[int(x) for x in input().split()] for _ in range(N)]
 EVENT = []
 for s, t, x in STX:
-    EVENT.append((s-x, 1, x))
-    EVENT.append((t-x, 0, x))
+    EVENT.append((s - x, 1, x))
+    EVENT.append((t - x, 0, x))
 
 for i in range(Q):
     d = int(input())
@@ -33,4 +33,3 @@ for t, op, x in EVENT:
         STOP.remove(x)
 
 print(("\n".join(map(str, ans))))
-

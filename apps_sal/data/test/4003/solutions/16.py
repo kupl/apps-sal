@@ -6,6 +6,7 @@
 @Author  : Koushiro 
 """
 
+
 def __starting_point():
     n = int(input())
     nums = list(map(int, input().split()))
@@ -67,5 +68,6 @@ def __starting_point():
 
     print(len(result))
     print("".join(result))
+
 
 __starting_point()

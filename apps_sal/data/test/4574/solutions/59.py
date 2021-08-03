@@ -13,4 +13,3 @@ if len(ans) >= 2:
     print((ans[0] * ans[1]))
 else:
     print((0))
-

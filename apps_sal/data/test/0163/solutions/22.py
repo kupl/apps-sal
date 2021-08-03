@@ -14,4 +14,3 @@ if d[b]:
     print('YES')
 else:
     print('NO')
-

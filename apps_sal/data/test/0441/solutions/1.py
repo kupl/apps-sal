@@ -1,5 +1,7 @@
 def inpmap():
     return list(map(int, input().split()))
+
+
 n, a, b = inpmap()
 arr = list(input())
 s = 0 if a > b else 1
@@ -14,4 +16,3 @@ for i in range(n):
     else:
         s = 0 if ix[0] > ix[1] else 1
 print(res)
-

@@ -59,17 +59,14 @@ for a in ans:
             if not Deg[vf]:
                 break
         loop[a] = loopa
-Ans = [] 
+Ans = []
 for a in ans:
     if loop[a]:
         Ans.extend(loop[a])
         loop[a] = []
     else:
-        Ans.append(a)    
+        Ans.append(a)
 if len(Ans) != N:
     print(-1)
     return
 print(*Ans)
-
-
-

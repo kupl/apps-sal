@@ -13,4 +13,3 @@ for a in arr:
         cur_len = 0
 
 print(max_len)
-

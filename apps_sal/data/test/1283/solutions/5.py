@@ -4,6 +4,7 @@ def make():
         s += field[x][i]
     return s
 
+
 n, k = map(int, input().split())
 field = []
 for i in range(n):

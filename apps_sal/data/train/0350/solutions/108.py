@@ -1,4 +1,6 @@
 from collections import Counter
+
+
 class Solution:
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         equalCt, lessCt = Counter(), Counter()
@@ -7,6 +9,7 @@ class Solution:
 
         def add_to_counter(x, co):
             co[x] += 1
+
         def subtr_from_counter(x, co):
             co[x] -= 1
             if co[x] == 0:
@@ -17,7 +20,7 @@ class Solution:
             add_to_counter(num, lessCt)
 
             while len(equalCt) > K:
-                subtr_from_counter(A[equalPt],equalCt)
+                subtr_from_counter(A[equalPt], equalCt)
                 equalPt += 1
 
             while len(lessCt) >= K:
@@ -26,4 +29,3 @@ class Solution:
             res += (lessPt - equalPt)
 
         return res
-

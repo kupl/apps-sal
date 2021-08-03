@@ -6,7 +6,6 @@ class ThroneInheritance:
         self.get_child = {}
         self.get_parent = {}
         self.is_dead = set()
-        
 
     def birth(self, parentName: str, childName: str) -> None:
         if parentName in self.get_child:
@@ -54,4 +53,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

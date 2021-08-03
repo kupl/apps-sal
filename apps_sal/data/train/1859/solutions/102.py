@@ -1,6 +1,6 @@
 
 class Solution:
-    
+
     def countSquares(self, A):
         for i in range(1, len(A)):
             for j in range(1, len(A[0])):

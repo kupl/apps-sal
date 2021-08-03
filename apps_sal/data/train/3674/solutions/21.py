@@ -1,5 +1,5 @@
-def add_binary(a,b):
-    #your code here
+def add_binary(a, b):
+    # your code here
     c = a + b
     l = []
     if c < 0:

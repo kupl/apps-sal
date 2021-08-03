@@ -17,4 +17,3 @@ if (l == k):
     print(w)
 else:
     print(-1)
-

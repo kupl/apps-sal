@@ -1,5 +1,5 @@
 n = int(input())
-h = list(map(int,input().split()))
+h = list(map(int, input().split()))
 count = 0
 lst = []
 if (n == 1):
@@ -18,4 +18,3 @@ else:
     lst.reverse()
 
     print((lst[0]))
-

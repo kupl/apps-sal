@@ -8,8 +8,8 @@ for i in range(N):
         dct[s] = 1
 
     else:
-        dct[s] +=  1
-    
+        dct[s] += 1
+
 m = max(dct.values())
 for s in sorted(k for k in dct if dct[k] == m):
     print(s)

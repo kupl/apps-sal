@@ -3,6 +3,7 @@ class Point:
         self.x = x
         self.y = y
 
+
 class Vector:
     def __init__(self, begin, end):
         self.x = end.x - begin.x
@@ -10,6 +11,7 @@ class Vector:
 
     def mult(self, other):
         return self.x * other.y - self.y * other.x
+
 
 n, d = list(map(int, input().split()))
 m = int(input())

@@ -2,13 +2,13 @@ def main():
     n, m = [int(i) for i in input().split()]
     f = [-1] + [int(i) for i in input().split()]
     b = [-1] + [int(i) for i in input().split()]
-    
+
     d = [-1] * (n + 1)
     cnt = [0] * (n + 1)
     for i in range(1, n + 1):
         cnt[f[i]] += 1
         d[f[i]] = i
-   
+
     a = [-1] * (m + 1)
     for i in range(1, m + 1):
         a[i] = d[b[i]]
@@ -21,6 +21,6 @@ def main():
             return
     print("Possible")
     print(' '.join(str(i) for i in a[1:]))
-    
+
 
 main()

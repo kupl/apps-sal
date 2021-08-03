@@ -1,7 +1,7 @@
 class Solution:
     def canArrange(self, arr: List[int], k: int) -> bool:
-        cnt = [0] * k 
-        
+        cnt = [0] * k
+
         for a in arr:
             a %= k
             remainder = (k - a) % k
@@ -9,6 +9,5 @@ class Solution:
                 cnt[remainder] -= 1
             else:
                 cnt[a] += 1
-        
-        return all(c == 0 for c in cnt)
 
+        return all(c == 0 for c in cnt)

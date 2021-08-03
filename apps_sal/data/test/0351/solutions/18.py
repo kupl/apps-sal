@@ -1,4 +1,6 @@
-read = lambda: map(int, input().split())
+def read(): return map(int, input().split())
+
+
 n, k = read()
 a = sorted(read())
 cur = k

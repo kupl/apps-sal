@@ -11,12 +11,12 @@ M = [0] + L + [0]
 c = True
 d = False
 tot = 0
-for j in range(1, len(s)+1):
-    if M[j] == 1 and M[j-1] != 2 and a > 0:
+for j in range(1, len(s) + 1):
+    if M[j] == 1 and M[j - 1] != 2 and a > 0:
         c = True
     else:
         c = False
-    if M[j] == 1 and M[j-1] != 3 and b > 0:
+    if M[j] == 1 and M[j - 1] != 3 and b > 0:
         d = True
     else:
         d = False
@@ -34,4 +34,3 @@ for j in range(1, len(s)+1):
         b -= 1
         tot += 1
 print(tot)
-

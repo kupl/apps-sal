@@ -28,7 +28,6 @@ for i in range(fouls):
         out1[c] = True
     elif b == 'h' and d == 'y' and not warn1[c]:
         warn1[c] = True
-warns.sort(key = lambda x:x[2])
+warns.sort(key=lambda x: x[2])
 for a in warns:
     print(' '.join([str(x) for x in a]))
-

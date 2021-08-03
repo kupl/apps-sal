@@ -19,7 +19,7 @@ for _ in range(N):
     k1 = K[ami]
     x1, y1 = XY[ami]
     for i, (k2, (x2, y2)) in enumerate(zip(K, XY)):
-        new_cost = (k1+k2) * (abs(x1-x2)+abs(y1-y2))
+        new_cost = (k1 + k2) * (abs(x1 - x2) + abs(y1 - y2))
         if C[i] > new_cost:
             C[i] = new_cost
             CC[i] = ami
@@ -29,10 +29,10 @@ print(cnt)
 A = []
 B = []
 for i, a in enumerate(Ans, 1):
-    if a==-1:
+    if a == -1:
         A.append(i)
     else:
-        B.append((i, a+1))
+        B.append((i, a + 1))
 print(" ".join(map(str, A)))
 print(N - cnt)
 for a, b in B:

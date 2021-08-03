@@ -1,4 +1,4 @@
-n, a, b, c = map(int,input().split())
+n, a, b, c = map(int, input().split())
 ost = (-n) % 4
 if ost == 0:
     print(0)

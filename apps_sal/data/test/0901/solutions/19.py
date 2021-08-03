@@ -1,5 +1,6 @@
 """ Created by Henrikh Kantuni on 3/23/17 """
 
+
 def __starting_point():
     n, m = list(map(int, input().split()))
 
@@ -25,5 +26,6 @@ def __starting_point():
         print("YES")
     else:
         print("NO")
+
 
 __starting_point()

@@ -9,8 +9,7 @@ class Solution:
                     h[col] &= mat[down][col]
                 res += self.oneArray(h)
         return res
-                
-    
+
     def oneArray(self, arr):
         res = length = 0
         for a in arr:

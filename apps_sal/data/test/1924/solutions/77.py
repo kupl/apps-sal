@@ -50,4 +50,3 @@ for i in range(r2 + c2 + 1, 0, -1):
     under[i] = under[i + 1] * (i + 1) % MOD
 
 print(((g(r2, c2) - g(r2, c1 - 1) - g(r1 - 1, c2) + g(r1 - 1, c1 - 1)) % MOD))
-

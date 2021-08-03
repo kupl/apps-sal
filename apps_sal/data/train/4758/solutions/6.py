@@ -6,4 +6,3 @@ def connect_four_place(columns):
                 line[column] = "R" if turn % 2 else "Y"
                 break
     return board[::-1]
-

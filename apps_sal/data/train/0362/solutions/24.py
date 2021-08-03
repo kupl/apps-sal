@@ -9,12 +9,12 @@ class Solution:
                 rev[e].append(i)
         dp[0][0] = 1
         for i in range(40):
-            r = rev[i+1]
+            r = rev[i + 1]
             for j in range(1 << n):
-                dp[i+1][j] += dp[i][j]
-                dp[i+1][j] %= MOD
+                dp[i + 1][j] += dp[i][j]
+                dp[i + 1][j] %= MOD
                 for k in r:
                     if not (j & (1 << k)):
-                        dp[i+1][j | (1 << k)] += dp[i][j]
-                        dp[i+1][j | (1 << k)] %= MOD
+                        dp[i + 1][j | (1 << k)] += dp[i][j]
+                        dp[i + 1][j | (1 << k)] %= MOD
         return dp[40][(1 << n) - 1]

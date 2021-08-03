@@ -3,7 +3,7 @@ def solve():
     s = input()
     stack = []
     for c in s:
-        if c == 'x' and len(stack) >= 2 and stack[-1] == 'o' and stack[-2] ==  'f':
+        if c == 'x' and len(stack) >= 2 and stack[-1] == 'o' and stack[-2] == 'f':
             stack.pop()
             stack.pop()
         else:
@@ -12,4 +12,3 @@ def solve():
 
 
 solve()
-

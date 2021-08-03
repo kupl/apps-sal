@@ -11,14 +11,12 @@ def HQ9(code):
         return code
     if code == '9':
         while count > 2:
-            song = song + str(count) + " bottles of beer on the wall, " + str(count) + " bottles of beer.\nTake one down and pass it around, " + str(count - 1) +" bottles of beer on the wall.\n"
+            song = song + str(count) + " bottles of beer on the wall, " + str(count) + " bottles of beer.\nTake one down and pass it around, " + str(count - 1) + " bottles of beer on the wall.\n"
             count -= 1
             if count == 2:
-                
+
                 song = song + two_left + one_left + none_left
-        
+
         return song
     else:
         return None
-    
-

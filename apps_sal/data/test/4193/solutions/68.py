@@ -1,9 +1,11 @@
 import sys
 input = sys.stdin.readline
-ins = lambda: input().rstrip()
-ini = lambda: int(input().rstrip())
-inm = lambda: map(int, input().rstrip().split())
-inl = lambda: list(map(int, input().split()))
+def ins(): return input().rstrip()
+def ini(): return int(input().rstrip())
+def inm(): return map(int, input().rstrip().split())
+def inl(): return list(map(int, input().split()))
+
+
 out = lambda x, s='\n': print(s.join(map(str, x)))
 
 a = inl()
@@ -28,4 +30,4 @@ elif (ct[0] + ct[4] + ct[8]) == 3 or (ct[2] + ct[4] + ct[6]) == 3:
 elif (ct[0] + ct[3] + ct[6]) == 3 or (ct[1] + ct[4] + ct[7]) == 3 or (ct[2] + ct[5] + ct[8]) == 3:
     print("Yes")
 else:
-    print("No")    
+    print("No")

@@ -40,4 +40,3 @@ for w in range(t):
             q1.append(m)
 
     print(' '.join(str(x) for x in q1))
-

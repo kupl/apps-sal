@@ -1,8 +1,9 @@
 N = int(input())
 S = list(map(int, input().split()))
-L = 0;  R = N-1
+L = 0
+R = N - 1
 ans = 0
-for i in range(1, (N+1)//2):
+for i in range(1, (N + 1) // 2):
     r = R
     l = L
     j = 1
@@ -21,4 +22,3 @@ for i in range(1, (N+1)//2):
         ans = max(ans, a)
         j += 1
 print(ans)
-

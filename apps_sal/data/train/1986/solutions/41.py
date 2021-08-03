@@ -16,7 +16,7 @@ class Solution:
                     p.pop()
                 j <<= 1
             return False
-        
+
         visited = {start}
         p = [start]
         dfs(start)

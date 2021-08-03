@@ -6,5 +6,5 @@ if y > 0:
         cnt += 1
 else:
     cnt = 0
-    
+
 print((x // 11) * 2 + cnt)

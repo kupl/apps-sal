@@ -9,11 +9,10 @@ for i in range(N):
     else:
         sum_ += A[i]
         B[i] -= A[i]
-        if A[i+1] >= B[i]:
+        if A[i + 1] >= B[i]:
             sum_ += B[i]
-            A[i+1] -= B[i]
+            A[i + 1] -= B[i]
         else:
-            sum_ += A[i+1]
-            A[i+1] = 0
+            sum_ += A[i + 1]
+            A[i + 1] = 0
 print(sum_)
-

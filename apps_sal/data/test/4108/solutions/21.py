@@ -3,4 +3,3 @@ T = input()
 S_cnt = sorted(S.count(c) for c in set(S))
 T_cnt = sorted(T.count(c) for c in set(T))
 print("Yes") if S_cnt == T_cnt else print("No")
-

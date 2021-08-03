@@ -34,4 +34,6 @@ def __starting_point():
     if count == MAX:
         count = 0
     print(count)
+
+
 __starting_point()

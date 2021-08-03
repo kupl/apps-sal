@@ -8,7 +8,8 @@ class Solution:
 
         def uni(x, y):
             x, y = find(x), find(y)
-            if x == y: return 0
+            if x == y:
+                return 0
             root[x] = y
             return 1
 

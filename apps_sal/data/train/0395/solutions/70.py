@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def oddEvenJumps(self, A: List[int]) -> int:
         cand = defaultdict(lambda: [set(), set()])
@@ -12,12 +13,12 @@ class Solution:
             while len(stack_dec) > 0 and stack_dec[-1][1] < i:
                 cand[i][1].add(stack_dec.pop()[1])
             stack_dec.append((x, i))
-        
+
         n = len(A)
         ans = {n - 1}
         for_odd, for_even = {n - 1}, {n - 1}
         time = 0
-        
+
         while len(for_odd) > 0 or len(for_even) > 0:
             time += 1
             new_odd, new_even = set(), set()
@@ -30,6 +31,5 @@ class Solution:
             for x in new_odd:
                 ans.add(x)
             for_odd, for_even = new_odd, new_even
-        
-        return len(ans)
 
+        return len(ans)

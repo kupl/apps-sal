@@ -39,4 +39,3 @@ while 1:
         s.add(d[v])
     x -= 1
 print(x + 1)
-

@@ -1,5 +1,5 @@
 def toUnderScore(name):
-    
+
     list_of_chars = []
     previous_char = None
 
@@ -9,7 +9,7 @@ def toUnderScore(name):
 
             if char.isupper() or char.isdigit() and not previous_char.isdigit():
                 list_of_chars.append("_")
-            
+
         list_of_chars.append(char)
         previous_char = char
 

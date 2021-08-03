@@ -24,4 +24,3 @@ for value in list(re_list.values()):
     ans += comb(value, 2, exact=True)
 
 print(ans)
-

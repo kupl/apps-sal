@@ -40,14 +40,15 @@ class Dijkstra:
 
         return d
 
-A,B,X,Y = map(int, input().split())
+
+A, B, X, Y = map(int, input().split())
 graph = Dijkstra()
-for i in range(1,101):
-    graph.add(i,100+i,X)
-for i in range(1,100):
-    graph.add(i+1,100+i,X)
-for i in range(1,100):
-    graph.add(i,i+1,Y)
-    graph.add(100+i,100+i+1,Y)
+for i in range(1, 101):
+    graph.add(i, 100 + i, X)
+for i in range(1, 100):
+    graph.add(i + 1, 100 + i, X)
+for i in range(1, 100):
+    graph.add(i, i + 1, Y)
+    graph.add(100 + i, 100 + i + 1, Y)
 SA = graph.search(A)
-print(SA[B+100])
+print(SA[B + 100])

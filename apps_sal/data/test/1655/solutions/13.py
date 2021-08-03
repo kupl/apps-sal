@@ -8,5 +8,3 @@ for i in range(n - 1, -1, -1):
         ans += 1
     c = min(c, i - l[i])
 print(ans)
-
-

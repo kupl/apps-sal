@@ -3,7 +3,7 @@
 
 # In[134]:
 
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 
 
 # In[135]:
@@ -15,7 +15,7 @@ for i in range(n):
 
 # In[136]:
 
-plan2 = list(map(list,list(zip(*plan))))
+plan2 = list(map(list, list(zip(*plan))))
 
 
 # In[137]:
@@ -32,8 +32,8 @@ def findLeft(string):
 # In[138]:
 
 def findRight(string):
-    i = len(string)-1
-    while i>=0:
+    i = len(string) - 1
+    while i >= 0:
         if string[i] == '1':
             return i
         else:
@@ -49,7 +49,7 @@ for each in plan:
     elif each.count('1') > 1:
         l = findLeft(each)
         r = findRight(each)
-        count += each[:l].count('0')+2*each[l+1:r].count('0') + each[r+1:].count('0')
+        count += each[:l].count('0') + 2 * each[l + 1:r].count('0') + each[r + 1:].count('0')
 
 
 for each in plan2:
@@ -58,11 +58,9 @@ for each in plan2:
     elif each.count('1') > 1:
         l = findLeft(each)
         r = findRight(each)
-        count += each[:l].count('0')+2*each[l+1:r].count('0') + each[r+1:].count('0')
+        count += each[:l].count('0') + 2 * each[l + 1:r].count('0') + each[r + 1:].count('0')
 
 
 # In[140]:
 
 print(count)
-
-

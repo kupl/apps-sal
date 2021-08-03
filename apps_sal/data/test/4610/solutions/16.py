@@ -1,4 +1,4 @@
-n,k  =map(int, input().split())
+n, k = map(int, input().split())
 A = list(map(int, input().split()))
 
 d = {}
@@ -10,6 +10,6 @@ if len(d) <= k:
 else:
     d = sorted(d.values())
     cnt = 0
-    for i in range(len(d)-k):
+    for i in range(len(d) - k):
         cnt += d[i]
     print(cnt)

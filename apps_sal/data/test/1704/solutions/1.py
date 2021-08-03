@@ -6,9 +6,9 @@ innums = []
 for i in range(n):
     innums.append(int(input(), 2))
 
-sdp = [[30000]*10 for i in range(1<<7)]
+sdp = [[30000] * 10 for i in range(1 << 7)]
 
-for i in range(1<<7):
+for i in range(1 << 7):
     for j in range(10):
         # possible to append
         if (i & nums[j]) == i:
@@ -25,7 +25,7 @@ dp[n][0] = True
 for idx, num in reversed(list(enumerate(innums))):
     for cost in sdp[num]:
         for k_ in range(cost, k + 1):
-            dp[idx][k_] |= dp[idx+1][k_- cost]
+            dp[idx][k_] |= dp[idx + 1][k_ - cost]
 if not dp[0][k]:
     print(-1)
 else:
@@ -36,9 +36,8 @@ else:
             if cost > cur_k:
                 continue
 
-            if dp[idx+1][cur_k - cost]:
+            if dp[idx + 1][cur_k - cost]:
                 cur_k -= cost
                 ans.append(i)
                 break
     print(''.join(map(str, ans)))
-

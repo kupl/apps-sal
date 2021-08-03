@@ -1,4 +1,6 @@
 from collections import deque
+
+
 def count_cows(n):
     if not isinstance(n, int):
         return None

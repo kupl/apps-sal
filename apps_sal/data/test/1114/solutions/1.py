@@ -7,7 +7,7 @@ try:
         n, m = list(map(int, input().split()))
         f = list(map(int, input().split()))
         b = list(map(int, input().split()))
-        d = [[ ] for i in range(n + 1)]
+        d = [[] for i in range(n + 1)]
         for i, x in enumerate(f, 1):
             d[x].append(i)
         a = [None] * m
@@ -29,4 +29,3 @@ try:
                 print(' '.join(map(str, a)))
 except EOFError:
     pass
-

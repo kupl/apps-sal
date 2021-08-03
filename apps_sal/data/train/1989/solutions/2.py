@@ -3,7 +3,7 @@ class Solution:
         d = {}
         d[0] = -1
         sm, res = 0, 0
-        for i,c in enumerate(s):
+        for i, c in enumerate(s):
             sm ^= 1 << int(c)
             if sm in d:
                 res = max(res, i - d[sm])

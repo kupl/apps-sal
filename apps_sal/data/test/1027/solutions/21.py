@@ -18,9 +18,8 @@ for i in range(len(arr)):
             cur += num
         j = j + 1
         if(j == 14):
-            j = 0  
+            j = 0
     if(cur > ans):
-        #print(arr[i])
+        # print(arr[i])
         ans = cur
 print(ans)
-

@@ -7,13 +7,12 @@ sumB = sum(B)
 
 cnt = []
 
-for i in range(n-1):
-    if A[i]+1 == A[i+1]:
-        cnt.append(A[i]-1)
+for i in range(n - 1):
+    if A[i] + 1 == A[i + 1]:
+        cnt.append(A[i] - 1)
 
 sumC = 0
 for i in cnt:
     sumC += C[i]
 
-print((sumB+sumC))
-
+print((sumB + sumC))

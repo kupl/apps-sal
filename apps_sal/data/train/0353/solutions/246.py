@@ -7,9 +7,9 @@ class Solution:
         for i in range(len(nums)):
             while i <= j and nums[i] + nums[j] > target:
                 j -= 1
-            
+
             if i <= j and nums[i] + nums[j] <= target:
-                count += pow(2, j-i, mod)
+                count += pow(2, j - i, mod)
                 count = count % mod
-                
+
         return count

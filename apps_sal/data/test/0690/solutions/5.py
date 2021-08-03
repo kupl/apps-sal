@@ -13,7 +13,7 @@ for i in x:
     elif i == 4:
         print('O-|OOOO-')
     elif i == 5:
-        print('-O|-OOOO')    
+        print('-O|-OOOO')
     elif i == 6:
         print('-O|O-OOO')
     elif i == 7:

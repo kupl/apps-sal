@@ -7,6 +7,7 @@ class Multiples:
         last = base * (count - 1)
         return count * last // 2
 
+
 def solution(number):
     multiples = Multiples(number - 1)
     return multiples.sum(3) + multiples.sum(5) - multiples.sum(15)

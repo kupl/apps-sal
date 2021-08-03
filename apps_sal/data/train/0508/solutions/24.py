@@ -2,14 +2,14 @@ from heapq import heappush, heappop
 
 N, Q = list(map(int, input().split()))
 l = []
-ans = [0]*Q
+ans = [0] * Q
 used = set()
 q = []
 
 for i in range(N):
     S, T, X = list(map(int, input().split()))
-    l.append((S-X, 1, X))
-    l.append((T-X, 0, X))
+    l.append((S - X, 1, X))
+    l.append((T - X, 0, X))
 
 for i in range(Q):
     v = int(input())
@@ -18,9 +18,9 @@ for i in range(Q):
 l.sort()
 
 for pos, m, x in l:
-    if m==0:
+    if m == 0:
         used.remove(x)
-    elif m==1:
+    elif m == 1:
         heappush(q, x)
         used.add(x)
     else:
@@ -33,4 +33,3 @@ for pos, m, x in l:
 
 for i in range(Q):
     print((ans[i]))
-

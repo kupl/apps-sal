@@ -20,4 +20,3 @@ elif b1 - b2 - b3 >= 0 and a2 <= a1 and a3 <= a1:
     print("YES")
 else:
     print("NO")
-

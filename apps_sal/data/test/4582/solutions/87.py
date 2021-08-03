@@ -1,1 +1,1 @@
-print("HD"[len(set(input().split()))-1])
+print("HD"[len(set(input().split())) - 1])

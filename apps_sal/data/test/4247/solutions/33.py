@@ -12,10 +12,10 @@ now = lst[1]
 
 for i in range(2, n):
     if di == 1 and now > lst[i]:
-            ans += 1
+        ans += 1
 
     elif di == -1 and now < lst[i]:
-            ans += 1
+        ans += 1
 
     else:
         di = -di
@@ -23,4 +23,3 @@ for i in range(2, n):
     now = lst[i]
 
 print(ans)
-

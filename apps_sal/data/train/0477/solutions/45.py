@@ -14,4 +14,3 @@ class Solution:
             res += '1' + invert(res)[::-1]
 
         return res[k - 1]
-

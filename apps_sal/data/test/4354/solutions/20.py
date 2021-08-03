@@ -12,10 +12,10 @@ for i in range(n):
     for j in range(m):
         if j == 0:
             distance = 1
-            shortest_cp = abs(st[i][0]-cp[j][0]) + abs(st[i][1]-cp[j][1])
+            shortest_cp = abs(st[i][0] - cp[j][0]) + abs(st[i][1] - cp[j][1])
         else:
-            if (abs(st[i][0]-cp[j][0]) + abs(st[i][1]-cp[j][1])) < shortest_cp:
+            if (abs(st[i][0] - cp[j][0]) + abs(st[i][1] - cp[j][1])) < shortest_cp:
                 distance = j + 1
-                shortest_cp = abs(st[i][0]-cp[j][0]) + abs(st[i][1]-cp[j][1])
-                
+                shortest_cp = abs(st[i][0] - cp[j][0]) + abs(st[i][1] - cp[j][1])
+
     print(distance)

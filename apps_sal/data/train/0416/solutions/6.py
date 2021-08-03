@@ -7,11 +7,11 @@ class Solution(object):
         def parents(m, c, t):
             if t == 2:
                 for m2 in graph[m]:
-                    yield m2, c, 3-t
+                    yield m2, c, 3 - t
             else:
                 for c2 in graph[c]:
                     if c2:
-                        yield m, c2, 3-t
+                        yield m, c2, 3 - t
 
         DRAW, MOUSE, CAT = 0, 1, 2
         color = collections.defaultdict(int)
@@ -20,8 +20,8 @@ class Solution(object):
         degree = {}
         for m in range(N):
             for c in range(N):
-                degree[m,c,1] = len(graph[m])
-                degree[m,c,2] = len(graph[c]) - (0 in graph[c])
+                degree[m, c, 1] = len(graph[m])
+                degree[m, c, 2] = len(graph[c]) - (0 in graph[c])
 
         # enqueued : all nodes that are colored
         queue = collections.deque([])
@@ -42,7 +42,7 @@ class Solution(object):
                 # if this parent is not colored :
                 if color[i2, j2, t2] is DRAW:
                     # if the parent can make a winning move (ie. mouse to MOUSE), do so
-                    if t2 == c: # winning move
+                    if t2 == c:  # winning move
                         color[i2, j2, t2] = c
                         queue.append((i2, j2, t2, c))
                     # else, this parent has degree[parent]--, and enqueue if all children

@@ -16,12 +16,14 @@ def main():
         mid = middle[i]
         index_up = bisect.bisect_left(upper, mid)
         index_low = bisect.bisect_right(lower, mid)
-        
+
         cnt += index_up * (N - index_low)
-    
+
     print(cnt)
 
 
 def __starting_point():
     main()
+
+
 __starting_point()

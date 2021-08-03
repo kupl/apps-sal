@@ -8,7 +8,5 @@ m = int(input())
 for qu in range(m):
     k, p = list(map(int, input().split()))
     c = b[:k]
-    c.sort(key = lambda x: x[1])
-    print(c[p-1][0])
-
-
+    c.sort(key=lambda x: x[1])
+    print(c[p - 1][0])

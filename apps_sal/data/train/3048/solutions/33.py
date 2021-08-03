@@ -1,5 +1,5 @@
 def alternateCase(s):
-    lst=[]
+    lst = []
     for x in s:
         if x.islower():
             lst.append(x.upper())

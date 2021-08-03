@@ -3,6 +3,8 @@ def exgcd(i, j):
         return 1, 0, i
     u, v, d = exgcd(j, i % j)
     return v, u - v * (i // j), d
+
+
 ma, ra, mb, rb, L, R = list(map(int, input().split(' ')))
 L = max(L, ra, rb)
 if L > R:
@@ -25,7 +27,10 @@ else:
     bv, av, _ = exgcd(ma, mb)
     r = ra * mb * av + rb * ma * bv
     r = (r % m + m) % m
+
+
 def calc(i):
     return (i - r) // m
-print(calc(R) - calc(L - 1))
 
+
+print(calc(R) - calc(L - 1))

@@ -7,4 +7,3 @@ elif day <= x:
     print('safe')
 else:
     print('dangerous')
-

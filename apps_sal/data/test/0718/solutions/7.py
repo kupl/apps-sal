@@ -7,5 +7,6 @@ while True:
     for i in range(len(str(a))):
         if str(a)[i] == '8':
             flag = True
-    if flag: break
+    if flag:
+        break
 print(b)

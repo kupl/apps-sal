@@ -6,4 +6,4 @@ while w > 0:
     ans += min(w / (l * k), (10 ** l - m))
     w -= k * (10 ** l - m) * l
     m = 10 ** l
-print (int(ans))
+print(int(ans))

@@ -1,4 +1,6 @@
-rd = lambda: list(map(int, input().split()))
+def rd(): return list(map(int, input().split()))
+
+
 n, m = rd()
 a = sorted(([*rd()] + [i + 1] for i in range(m)), key=lambda x: x[1])
 r = [0] * n
@@ -14,4 +16,3 @@ for x in a:
         print(-1)
         return
 print(*r)
-

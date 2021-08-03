@@ -3,9 +3,9 @@ class Solution:
         n, m = len(mat), len(mat[0])
 
         for i in range(n):
-            for j in range(m-1):
-                if mat[i][j+1]:
-                    mat[i][j+1] += mat[i][j]
+            for j in range(m - 1):
+                if mat[i][j + 1]:
+                    mat[i][j + 1] += mat[i][j]
 
         ans = 0
 

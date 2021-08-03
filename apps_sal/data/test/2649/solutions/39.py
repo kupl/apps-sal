@@ -1,12 +1,13 @@
 def get_ints():
-    return list(map(int,input().split()))
+    return list(map(int, input().split()))
+
 
 n = int(input())
 a, b = [], []
 for i in range(n):
     x, y = get_ints()
-    a.append(x-y)
-    b.append(x+y)
+    a.append(x - y)
+    b.append(x + y)
 
 a.sort()
 b.sort()

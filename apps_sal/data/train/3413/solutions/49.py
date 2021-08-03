@@ -4,4 +4,4 @@ def solution(nums, default=None):
         return nums
     else:
         nums = []
-        return  nums
+        return nums

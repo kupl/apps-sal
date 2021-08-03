@@ -97,4 +97,3 @@ for line in sys.stdin:
     bwd_link[b].add(a)
 
 solve(fwd_link, bwd_link)
-

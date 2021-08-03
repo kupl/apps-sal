@@ -7,4 +7,3 @@ for i in range(n):
 
 final.sort()
 print((''.join(final)))
-

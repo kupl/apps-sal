@@ -4,6 +4,7 @@ coins = [2, 7, 10]
 amount = 14
 '''
 
+
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         if not amount:
@@ -16,7 +17,7 @@ class Solution:
                 return 1
             visited[coin] = 1
             sums.append(coin)
-        
+
         q = []
         q.append((1, sums))
         while q:
@@ -35,4 +36,3 @@ class Solution:
             if next_sums:
                 q.insert(0, (count + 1, next_sums))
         return -1
-

@@ -1,14 +1,15 @@
-#E_Coprime
+# E_Coprime
 import math
 import functools
 
 # エラトステネスの篩
-        
+
+
 def primes(n):
     is_prime = [1] * (n + 1)
     is_prime[0] = 0
     is_prime[1] = 0
-    D_prime = [i for i in range(n+1)] 
+    D_prime = [i for i in range(n + 1)]
     D_prime[0] = 0
     D_prime[1] = 1
     for i in range(2, int(n**0.5) + 1):
@@ -20,12 +21,11 @@ def primes(n):
             D_prime[j] = i
     return D_prime
 
-    
 
 Fnum_list2 = []
 # 入力
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 #Fnum_list = eratosthenes(N)
 
@@ -35,14 +35,14 @@ Fnum_list2 = primes(Amax)
 j = A[0]
 ans = 1
 #Fnum_list = eratosthenes(N)
-Ai_primes     = set()
+Ai_primes = set()
 Ai_primes_add = []
 gcd_num = 0
-for i in range(len(A) ):
+for i in range(len(A)):
     p = A[i]
     while p != 1:
         j = p
-        p = int (p / Fnum_list2[j])
+        p = int(p / Fnum_list2[j])
         if Fnum_list2[j] in Ai_primes:
             ans = 0
         else:
@@ -53,7 +53,7 @@ for i in range(len(A) ):
         Ai_primes |= set(Ai_primes_add)
         Ai_primes_add.clear()
 
-gcd_num = functools.reduce(math.gcd,A)
+gcd_num = functools.reduce(math.gcd, A)
 
 if ans == 0:
     if gcd_num == 1:
@@ -67,4 +67,3 @@ else:
         print("setwise coprime")
     else:
         print("not coprime")
-

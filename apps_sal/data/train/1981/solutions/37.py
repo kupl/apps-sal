@@ -14,4 +14,3 @@ class Solution:
         for num, frequency in zipper:
             max_sum += num * frequency
         return max_sum % (10**9 + 7)
-

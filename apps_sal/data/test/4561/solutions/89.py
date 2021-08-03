@@ -6,4 +6,3 @@ elif a < b and abs(a - b) <= x:
     print("safe")
 else:
     print("dangerous")
-

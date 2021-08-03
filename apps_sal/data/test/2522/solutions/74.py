@@ -25,4 +25,3 @@ for i, e in enumerate(b):
 
 ans = b[-mx:] + b[:-mx]
 print((*ans))
-

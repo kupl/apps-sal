@@ -1,6 +1,7 @@
 from collections import defaultdict
 
-def delete_nth(order,max_e):
+
+def delete_nth(order, max_e):
     count = defaultdict(int)
     ret = []
     for x in order:

@@ -1,3 +1,4 @@
+import sys
 3
 # Copyright (C) 2017 Sayutin Dmitry.
 #
@@ -13,7 +14,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; If not, see <http://www.gnu.org/licenses/>.
 
-import sys
 
 def main():
     n = int(input())
@@ -33,5 +33,6 @@ def main():
         print("home")
     else:
         return(1)
-main()
 
+
+main()

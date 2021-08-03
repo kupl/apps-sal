@@ -11,4 +11,3 @@ def solution(a, b):
     else:
         m = a + b + a
         return m
-

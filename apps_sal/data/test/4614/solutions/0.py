@@ -1,20 +1,34 @@
-import bisect,collections,copy,heapq,itertools,math,string
+import bisect
+import collections
+import copy
+import heapq
+import itertools
+import math
+import string
 import sys
+
+
 def I():
-    #1 line 1 int
-     return int(sys.stdin.readline().rstrip())
+    # 1 line 1 int
+    return int(sys.stdin.readline().rstrip())
+
+
 def LI():
-    #1 line n int
-     return list(map(int,sys.stdin.readline().rstrip().split()))
+    # 1 line n int
+    return list(map(int, sys.stdin.readline().rstrip().split()))
+
+
 def S():
-    #1 line 1 string
-     return sys.stdin.readline().rstrip()
+    # 1 line 1 string
+    return sys.stdin.readline().rstrip()
+
+
 def LS():
-    #1 line n strings
-     return list(sys.stdin.readline().rstrip().split())
+    # 1 line n strings
+    return list(sys.stdin.readline().rstrip().split())
 
 
-xs=LI()
+xs = LI()
 
 if xs[0] == xs[1]:
     print(xs[2])

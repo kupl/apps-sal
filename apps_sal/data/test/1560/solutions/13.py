@@ -64,6 +64,9 @@ def B():
     print(min(co, first))
     return 0
 
+
 def __starting_point():
     B()
+
+
 __starting_point()

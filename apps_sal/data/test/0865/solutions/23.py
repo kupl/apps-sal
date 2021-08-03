@@ -12,4 +12,3 @@ for a, b in cuisines:
     knapsack[a:] = np.maximum(knapsack[a:], knapsack[:-a] + b)
 
 print((max(tmp_ans, knapsack.max())))
-

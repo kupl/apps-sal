@@ -17,7 +17,7 @@ def greet(language):
         'spanish': 'Bienvenido',
         'swedish': 'Valkommen',
         'welsh': 'Croeso',
-        'ip_address_invalid' : 'not a valid ipv4 or ipv6 ip address',
-        'ip_address_not_found' : 'ip address not in the database',
-        'ip_address_required' : 'no ip address was supplied'
-    }.get(language,'Welcome')
+        'ip_address_invalid': 'not a valid ipv4 or ipv6 ip address',
+        'ip_address_not_found': 'ip address not in the database',
+        'ip_address_required': 'no ip address was supplied'
+    }.get(language, 'Welcome')

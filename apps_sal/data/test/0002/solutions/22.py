@@ -8,4 +8,3 @@ else:
     f = int(n[0]) + 1
     f *= 10 ** (l - 1)
     print(f - y)
-

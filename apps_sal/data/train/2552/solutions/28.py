@@ -1,8 +1,8 @@
 class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
         for ar in arr:
-            a = self.find(arr, ar,True)
-            b = self.find(arr, ar,False)
+            a = self.find(arr, ar, True)
+            b = self.find(arr, ar, False)
             if (b - a + 1) > len(arr) * 0.25:
                 return ar
 
@@ -25,21 +25,19 @@ class Solution:
             else:
                 left = mid
 
-
         if fromLeft:
             while index > 0:
-                if arr[index] == arr[index-1]:
+                if arr[index] == arr[index - 1]:
                     index -= 1
                 else:
                     break
 
             return index
         else:
-            while index < (len(arr)-1):
+            while index < (len(arr) - 1):
                 if arr[index] == arr[index + 1]:
                     index += 1
                 else:
                     break
-
 
             return index

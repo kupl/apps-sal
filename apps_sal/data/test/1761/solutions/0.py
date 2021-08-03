@@ -13,8 +13,8 @@ cur = 0
 i = 0
 while cur < len(s) and i < len(arr):
     if s[cur] == arr[i]:
-        i+=1
-    cur+=1
+        i += 1
+    cur += 1
 if i == len(arr):
     print('yes')
 else:

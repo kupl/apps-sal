@@ -5,5 +5,5 @@ def main():
 
     print(t - int(s))
 
-main()
 
+main()

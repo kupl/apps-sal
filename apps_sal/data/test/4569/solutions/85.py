@@ -1,2 +1,2 @@
 t = ['Sunny', 'Cloudy', 'Rainy', 'Sunny']
-print(t[t.index(input())+1])
+print(t[t.index(input()) + 1])

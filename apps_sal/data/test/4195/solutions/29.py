@@ -8,4 +8,3 @@ while True:
         print(start)
         break
     start += 100 ** d
-

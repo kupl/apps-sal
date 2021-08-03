@@ -1,5 +1,6 @@
-n, L = list(map(int,input().split()))
+n, L = list(map(int, input().split()))
 arr = [int(x) for x in input().split()]
+
 
 def pos(x):
     ans = 0
@@ -7,6 +8,7 @@ def pos(x):
         x //= 2
         ans += 1
     return ans - 1
+
 
 def solve(ltr):
     if ltr == 0:
@@ -26,7 +28,7 @@ def solve(ltr):
             amt = i
     minCost = arr[amt]
     minCost *= ltr // (2 ** amt)
-    return min(minCost + solve(ltr % ( 2 ** amt)), Bmin)
+    return min(minCost + solve(ltr % (2 ** amt)), Bmin)
+
 
 print(solve(L))
-

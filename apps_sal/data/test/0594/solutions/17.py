@@ -1,4 +1,4 @@
-a,b = input().strip().split(' ')
+a, b = input().strip().split(' ')
 a = int(a)
 b = int(b)
 right = [int(x) for x in input().strip().split(' ')]
@@ -7,8 +7,7 @@ wrong = [int(x) for x in input().strip().split(' ')]
 maxR = max(right)
 minR = min(right)
 
-v = 2*minR if (2*minR > maxR) else maxR
+v = 2 * minR if (2 * minR > maxR) else maxR
 
 minW = min(wrong)
 print(-1 if minW <= v else v)
-

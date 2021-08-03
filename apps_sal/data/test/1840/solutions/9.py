@@ -20,14 +20,14 @@ for i in range(b):
     if i == 0:
         pref.append(base[i][1])
     else:
-        pref.append(pref[i-1]+base[i][1])
+        pref.append(pref[i - 1] + base[i][1])
 
 
 for i in range(s):
     ans = 0
     lef, r = 0, b
-    while r-lef > 1:
-        mid = int((r+lef)/2)
+    while r - lef > 1:
+        mid = int((r + lef) / 2)
         if base[mid][0] > arr[i]:
             r = mid
         else:
@@ -38,6 +38,3 @@ for i in range(s):
     else:
         ans += pref[lef]
     print(ans, end=" ")
-
-
-

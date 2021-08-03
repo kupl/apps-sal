@@ -17,5 +17,6 @@ def main():
             print(ans)
             return
     print(-1)
-main()
 
+
+main()

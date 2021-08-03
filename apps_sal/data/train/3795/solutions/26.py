@@ -1,8 +1,8 @@
 def combat(health, damage):
     a = health
     b = damage
-    c = a-b
-    if c >= 0 :
+    c = a - b
+    if c >= 0:
         return c
-    else :
+    else:
         return 0

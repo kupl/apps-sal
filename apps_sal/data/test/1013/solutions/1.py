@@ -8,4 +8,3 @@ for i in range(n):
     if A[i][0] == 1 or A[i][-1] == 1:
         count = 2
 print(count)
-

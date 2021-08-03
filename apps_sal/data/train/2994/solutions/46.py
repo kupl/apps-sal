@@ -3,5 +3,5 @@ def find_digit(num, nth):
         return -1
     x = abs(num)
     for i in range(1, nth):
-        x //=  10
+        x //= 10
     return x % 10

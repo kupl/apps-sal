@@ -8,7 +8,7 @@ class Solution:
                 onesCount += 1
             elif n > 1:
                 aboveOneIdxs.append(idx)
-                
+
         while onesCount + len(aboveOneIdxs) != 0:
             count += onesCount
             onesCount = 0
@@ -23,8 +23,7 @@ class Solution:
                 else:
                     newAboveOneIdxs.append(idx)
             if len(aboveOneIdxs) > 0:
-                count += 1 # multiplied by 2
+                count += 1  # multiplied by 2
             aboveOneIdxs = newAboveOneIdxs
-                    
-        return count
 
+        return count

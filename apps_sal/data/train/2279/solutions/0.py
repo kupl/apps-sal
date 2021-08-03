@@ -57,10 +57,11 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
+
 
 primes = []
-prime = [True] * (10 ** 6  +5)
+prime = [True] * (10 ** 6 + 5)
 prime[0] = False
 
 for i in range(2, 10 ** 6):
@@ -74,7 +75,7 @@ for i in range(1, 10 ** 6 + 5):
     if prime[i]:
         pref[-1] += 1
     s = round(i ** .5)
-    if  s * s == i and prime[s] and i != 1:
+    if s * s == i and prime[s] and i != 1:
         pref[-1] -= 1
 
 n = int(input())
@@ -82,5 +83,4 @@ l = list(map(int, input().split()))
 out = []
 for v in l:
     out.append(pref[v])
-print('\n'.join(map(str,out)))
-
+print('\n'.join(map(str, out)))

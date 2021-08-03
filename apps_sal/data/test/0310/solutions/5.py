@@ -1,7 +1,5 @@
 
 
-
-
 n, k = list(map(int, input().split()))
 
 a, b, c = 0, k, 0
@@ -14,4 +12,3 @@ while a < b:
         b = c
 
 print(a)
-

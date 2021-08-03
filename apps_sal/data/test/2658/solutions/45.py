@@ -1,7 +1,9 @@
+import numpy as np
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-import numpy as np
+
+
 def main():
     n, k, *a = map(int, read().split())
 
@@ -24,6 +26,9 @@ def main():
         k -= 1
     print(cur)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

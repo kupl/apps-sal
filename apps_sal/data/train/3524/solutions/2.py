@@ -6,4 +6,3 @@ def dna_to_rna(dna):
         else:
             rna.append(x)
     return ''.join(rna)
-

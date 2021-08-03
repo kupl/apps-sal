@@ -25,6 +25,6 @@ class Solution:
                     res = c
                 toextend[nextval][diff] = c
             if val not in onleft:
-                #onleftl.append(val)
+                # onleftl.append(val)
                 onleft.add(val)
         return res

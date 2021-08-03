@@ -19,4 +19,3 @@ else:
         m *= 10
         m %= P
 print(result)
-

@@ -34,5 +34,5 @@ def chain_arith_deriv(start, m, chain=None):
     else:
         next_num = 0
         for p, k in factors.items():
-            next_num += k/p*start
-    return chain_arith_deriv(round(next_num), m-1, chain=chain)
+            next_num += k / p * start
+    return chain_arith_deriv(round(next_num), m - 1, chain=chain)

@@ -1,8 +1,10 @@
 class Solution:
     def numWays(self, s: str) -> int:
         n = sum(1 for i in s if i == '1')
-        if n == 0: return ((len(s) - 1) * (len(s) - 2) // 2) % (10 ** 9 + 7)
-        if n % 3 != 0: return 0
+        if n == 0:
+            return ((len(s) - 1) * (len(s) - 2) // 2) % (10 ** 9 + 7)
+        if n % 3 != 0:
+            return 0
         f1 = f2 = f3 = f4 = False
         i1 = i2 = i3 = i4 = 0
         k = n // 3

@@ -34,5 +34,6 @@ def ARC072C():
         #print(sum1, sum2)
     #print(cnt1, cnt2)
     print((min(cnt1, cnt2)))
-ARC072C()
 
+
+ARC072C()

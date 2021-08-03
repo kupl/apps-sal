@@ -37,4 +37,3 @@ for i in range(n):
     ans = max(ans, max(dp[i]))
 
 print(ans)
-

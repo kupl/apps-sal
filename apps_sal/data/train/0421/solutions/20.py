@@ -12,5 +12,4 @@ class Solution:
                 if i == j:
                     j += 1
                 offset = 0
-        return s[i :]
-
+        return s[i:]

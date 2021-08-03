@@ -11,18 +11,16 @@ class Solution:
             if tmp_sum - target in record:
                 dp[i] = i - record[tmp_sum - target] + 1
             record[tmp_sum] = i + 1
-            if i>0:
-                dp[i] = min(dp[i], dp[i-1])
-        
+            if i > 0:
+                dp[i] = min(dp[i], dp[i - 1])
+
         record.clear()
         tmp_sum = 0
         record[0] = len(arr)
-        for i in range(len(arr)-1, 0, -1):
+        for i in range(len(arr) - 1, 0, -1):
             tmp_sum += arr[i]
             if tmp_sum - target in record:
-                res = min(res, dp[i-1] + record[tmp_sum - target] - i)
+                res = min(res, dp[i - 1] + record[tmp_sum - target] - i)
             record[tmp_sum] = i
-            
-        return res if res<float('Inf') else -1
-        
 
+        return res if res < float('Inf') else -1

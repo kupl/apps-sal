@@ -23,7 +23,7 @@ def digits_product(product):
         return 10
     elif product == 1:
         return 11
-    
+
     factors = prime_factors(product)
     if not set(factors) <= {2, 3, 5, 7}:
         return -1

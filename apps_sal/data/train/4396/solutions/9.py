@@ -9,4 +9,3 @@ def freq_seq(s, sep):
     for i in s:
         newStr.append(str(freq[i]))
     return sep.join(newStr)
-

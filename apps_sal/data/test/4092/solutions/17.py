@@ -11,4 +11,3 @@ for x in map(int, input().split()):
     prefix_sums_shift -= x
     prefix_sums.add(x + prefix_sums_shift)
 print(result)
-

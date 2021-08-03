@@ -11,4 +11,3 @@ for _ in range(int(input())):
                 cnt1 += 1
     ans.append(max(cnt1, cnt0))
 print(*ans, sep='\n')
-

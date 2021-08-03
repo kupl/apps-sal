@@ -1,8 +1,8 @@
-def is_even(n): 
+def is_even(n):
     # your code here
-    if type(n)!=int:
+    if type(n) != int:
         return False
-    elif n%2==1:
+    elif n % 2 == 1:
         return False
     else:
         return True

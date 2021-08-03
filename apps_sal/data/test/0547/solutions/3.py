@@ -1,7 +1,8 @@
-#def hh(a):
+# def hh(a):
 #    return -a
 
-import sys, math
+import sys
+import math
 n, k = list(map(int, input().split()))
 z = [0] * n
 for i in range(n):
@@ -16,4 +17,3 @@ for i in range(n):
     elif z[i] < passw:
         bef += 1
 print((bef + 1) + 5 * (bef // k), (bef + same) + 5 * ((bef + same - 1) // k))
-

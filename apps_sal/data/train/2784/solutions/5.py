@@ -1,3 +1,3 @@
-#fix this code!
+# fix this code!
 def spam(number):
-    return ''.join(['hue']*number)
+    return ''.join(['hue'] * number)

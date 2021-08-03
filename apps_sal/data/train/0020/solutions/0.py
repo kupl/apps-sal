@@ -3,7 +3,7 @@ for _ in range(q):
     n, m = list(map(int, input().split()))
     info = [list(map(int, input().split())) for i in range(n)]
     info = sorted(info)
-    now =(m, m)
+    now = (m, m)
     time = 0
     flag = True
     for i in range(n):

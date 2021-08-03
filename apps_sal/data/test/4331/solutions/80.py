@@ -10,4 +10,3 @@ for i in range(0, len(n)):
 
 if f == 0:
     print("No")
-

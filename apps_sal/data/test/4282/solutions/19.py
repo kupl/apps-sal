@@ -7,7 +7,7 @@ def func():
         return None
 
     xor = [1]
-    for i in range(n-1):
+    for i in range(n - 1):
         # print(xor)
         x, y = (j for j in g[xor[-1]])
         # print(x,y)

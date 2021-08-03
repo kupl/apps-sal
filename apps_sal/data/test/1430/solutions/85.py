@@ -17,12 +17,11 @@ n_group = len(l) // 2
 sum_ = 0
 k = min(K, n_group)
 for i in range(k):
-    sum_ += l[2*i] + l[2*i+1]
-sum_ += l[2*k]
+    sum_ += l[2 * i] + l[2 * i + 1]
+sum_ += l[2 * k]
 max_ = sum_
 for i in range(k, n_group):
-    sum_ -= l[2*i-2*K] + l[2*i+1-2*K]
-    sum_ += l[2*i+1] + l[2*i+2]
+    sum_ -= l[2 * i - 2 * K] + l[2 * i + 1 - 2 * K]
+    sum_ += l[2 * i + 1] + l[2 * i + 2]
     max_ = max(max_, sum_)
 print(max_)
-

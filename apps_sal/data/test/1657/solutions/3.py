@@ -2,12 +2,15 @@ import math
 from bisect import bisect_right
 from itertools import accumulate
 
-R = lambda: map(int, input().split())
+
+def R(): return map(int, input().split())
+
+
 n, p = R()
 devs = []
 for i in range(n):
     devs.append(tuple(R()))
-devs = sorted(devs, key=lambda x: x[1]/x[0])
+devs = sorted(devs, key=lambda x: x[1] / x[0])
 sp, sr, t = 0, 0, math.inf
 for d in devs:
     sp += d[0]

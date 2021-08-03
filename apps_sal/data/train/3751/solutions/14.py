@@ -1,1 +1,1 @@
-bool_to_word = lambda b : ["No", "Yes"][b];
+def bool_to_word(b): return ["No", "Yes"][b]

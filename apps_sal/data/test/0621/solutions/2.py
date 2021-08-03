@@ -1,5 +1,6 @@
 def readln(): return tuple(map(int, input().split()))
 
+
 n, = readln()
 cnt = al = 0
 ans = []
@@ -12,4 +13,3 @@ for a in readln():
 ans.append(al)
 print(len(ans))
 print(*ans)
-

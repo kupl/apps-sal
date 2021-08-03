@@ -46,9 +46,8 @@ def testcase():
             else:
                 print(n, n - 1)
 
-
-
     return
+
 
 t = int(input())
 for _ in range(t):

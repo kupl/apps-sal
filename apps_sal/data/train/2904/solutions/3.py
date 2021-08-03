@@ -1,2 +1,2 @@
 def filter_words(s):
-  return ' '.join(s.split()).capitalize()
+    return ' '.join(s.split()).capitalize()

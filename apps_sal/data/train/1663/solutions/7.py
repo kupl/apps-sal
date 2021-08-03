@@ -1,5 +1,6 @@
 import math
 
+
 def count_divisors(n):
     sum = 0
     h = int(math.sqrt(n))

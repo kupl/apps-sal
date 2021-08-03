@@ -6,6 +6,6 @@ def robot_transfer(matrix, k):
             for n in range(k):
                 u, v = map(int, matrix[u][v].split(','))
                 if (x, y) == (u, v):
-                    cycles += n == k-1
+                    cycles += n == k - 1
                     break
     return cycles

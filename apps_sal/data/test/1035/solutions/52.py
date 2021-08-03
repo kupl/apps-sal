@@ -1,8 +1,8 @@
 
-a,b = map(int,input().split())
-
 import math
-g = math.gcd(a,b)
+a, b = map(int, input().split())
+
+g = math.gcd(a, b)
 
 """
 gを素因数分解したときの素因数のリストの要素数 + 「1」を含める
@@ -12,7 +12,6 @@ g == 1のとき
 g != 1のとき
 素因数リストの要素数 +1
 """
-
 
 
 def prime_factorize(n):
@@ -33,7 +32,7 @@ def prime_factorize(n):
 
 
 gdlist = prime_factorize(g)
-if gdlist ==[]:
+if gdlist == []:
     print(1)
 else:
-    print(len(set(gdlist))+1)
+    print(len(set(gdlist)) + 1)

@@ -1,6 +1,9 @@
 from collections import deque
 
-int1 = lambda x: int(x) - 1
+
+def int1(x): return int(x) - 1
+
+
 MOD = 10 ** 9 + 7
 
 N, K = list(map(int, input().split()))
@@ -27,4 +30,3 @@ while D:
         if x not in visited:
             D.append(x)
 print(ans)
-

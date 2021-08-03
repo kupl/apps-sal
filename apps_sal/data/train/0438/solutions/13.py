@@ -1,7 +1,6 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        
-        
+
         n = len(arr)
         if m == n:
             print(n)
@@ -27,6 +26,4 @@ class Solution:
                 res = max(res, dfs(start, end, step - 1, target))
             return res
 
-
         return dfs(1, n, n, m)
-

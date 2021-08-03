@@ -2,9 +2,9 @@ from collections import deque
 
 a = sorted(input())
 l = len(a)
-a = deque(a[:(len(a)+1)//2])
+a = deque(a[:(len(a) + 1) // 2])
 b = sorted(input())
-b = deque(b[len(b)-len(b)//2:])
+b = deque(b[len(b) - len(b) // 2:])
 # print(a, b)
 
 result = ["0"] * l
@@ -13,7 +13,7 @@ right = l
 
 while left <= right:
     if len(b) == 0:
-        result[left+1] = a[0]
+        result[left + 1] = a[0]
         break
     if a[0] >= b[-1]:
         right -= 1
@@ -26,7 +26,7 @@ while left <= right:
     # print(result)
     #print(left, right)
     if len(a) == 0:
-        result[left+1] = b[0]
+        result[left + 1] = b[0]
         break
     if a[0] >= b[-1]:
         right -= 1

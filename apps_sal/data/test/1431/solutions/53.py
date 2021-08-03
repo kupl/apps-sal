@@ -4,9 +4,9 @@ A = tuple(map(int, input().split()))
 state = [0] * (N + 1)
 for i in range(N, 0, -1):
     if N < i + i:
-        state[i] = A[i-1]
+        state[i] = A[i - 1]
     else:
-        state[i] = A[i-1]
+        state[i] = A[i - 1]
         j = i + i
         while j <= N:
             state[i] ^= state[j]

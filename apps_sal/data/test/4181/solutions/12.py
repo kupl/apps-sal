@@ -12,11 +12,11 @@ for i in range(N):
         B[i] -= A[i]
         A[i] = 0
         if B[i] > 0:
-            if A[i+1]<=B[i]:
-                A[i+1] = 0
-                B[i] -= A[i+1]
-            elif A[i+1]>B[i]:
-                A[i+1] -= B[i]
+            if A[i + 1] <= B[i]:
+                A[i + 1] = 0
+                B[i] -= A[i + 1]
+            elif A[i + 1] > B[i]:
+                A[i + 1] -= B[i]
                 B[i] = 0
     elif A[i] > B[i]:
         A[i] -= B[i]

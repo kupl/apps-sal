@@ -38,7 +38,7 @@ def main():
     r = {}
     for i in range(n):
         if d[i] in r:
-            r[d[i]] = [r[d[i]][0], i + 1, r[d[i]][2]+1]
+            r[d[i]] = [r[d[i]][0], i + 1, r[d[i]][2] + 1]
         else:
             r[d[i]] = [i + 1, i + 1, 1]
 
@@ -47,4 +47,3 @@ def main():
 
 
 main()
-

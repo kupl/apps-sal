@@ -1,10 +1,12 @@
-N,M = map(int, input().split())
+N, M = map(int, input().split())
 E = []
 for _ in range(M):
-  a,b = map(int, input().split())
-  E.append((a-1,b-1))
+    a, b = map(int, input().split())
+    E.append((a - 1, b - 1))
 
-## https://note.nkmk.me/python-union-find/
+# https://note.nkmk.me/python-union-find/
+
+
 class UnionFind():
     def __init__(self, n):
         self.n = n
@@ -51,22 +53,24 @@ class UnionFind():
 
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+
+
 ###
 uf = UnionFind(N)
 
-ans = [0] * (M+1)
-ans[M] = N*(N-1) // 2
-  
-for i in range(M-1,-1,-1):
-  a,b = E[i]
-  if uf.same(a,b):
-    ans[i] = ans[i+1]
-  else:
-    # union
-    _t, _u = uf.size(a), uf.size(b)
-    uf.union(a,b)
-    #_v = uf.size(a)
-    ans[i] = ans[i+1] - _t*_u
-  
-for i in range(1,M+1):
-  print(ans[i])
+ans = [0] * (M + 1)
+ans[M] = N * (N - 1) // 2
+
+for i in range(M - 1, -1, -1):
+    a, b = E[i]
+    if uf.same(a, b):
+        ans[i] = ans[i + 1]
+    else:
+        # union
+        _t, _u = uf.size(a), uf.size(b)
+        uf.union(a, b)
+        #_v = uf.size(a)
+        ans[i] = ans[i + 1] - _t * _u
+
+for i in range(1, M + 1):
+    print(ans[i])

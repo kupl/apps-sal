@@ -15,4 +15,3 @@ while left < N and right < N:
         left += 1
     right += 1
 print(count)
-

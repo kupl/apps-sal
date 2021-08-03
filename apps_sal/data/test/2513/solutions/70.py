@@ -11,7 +11,7 @@ s = input()
 cands = [['S', 'S'], ['S', 'W'], ['W', 'S'], ['W', 'W']]
 
 for cand in cands:
-    for i in range(1, len(s)-1):
+    for i in range(1, len(s) - 1):
         if cand[-1] == 'S':
             if s[i] == 'o' and cand[-2] == 'S':
                 cand.append('S')
@@ -36,4 +36,3 @@ for cand in cands:
         return
 
 print((-1))
-

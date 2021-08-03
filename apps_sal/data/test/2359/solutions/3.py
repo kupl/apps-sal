@@ -31,4 +31,3 @@ for case_num in range(tt):
         print(p)
     else:
         print(q)
-

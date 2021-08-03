@@ -39,21 +39,22 @@ class UnionFind:
         # 根ごとの集団要素列挙
         return {r: self.members(r) for r in self.roots()}
 
-N,M=map(int,input().split())
-A=list(map(int,input().split()))
-B=list(map(int,input().split()))
+
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
 UF = UnionFind(N)
 for _ in range(M):
-  c,d=map(int,input().split())
-  UF.union(c-1,d-1)
+    c, d = map(int, input().split())
+    UF.union(c - 1, d - 1)
 a_sum = [0] * N
 b_sum = [0] * N
-for i,(a,b) in enumerate(zip(A,B)):
-  a_sum[UF.find(i)] += a
-  b_sum[UF.find(i)] += b
-for ai,bi in zip(a_sum,b_sum):
-  if ai != bi:
-    print('No')
-    break
+for i, (a, b) in enumerate(zip(A, B)):
+    a_sum[UF.find(i)] += a
+    b_sum[UF.find(i)] += b
+for ai, bi in zip(a_sum, b_sum):
+    if ai != bi:
+        print('No')
+        break
 else:
-  print('Yes')
+    print('Yes')

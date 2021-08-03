@@ -44,4 +44,3 @@ while stack:
 counter = Counter(node_idx___group)
 ans = counter[0] * counter[1] - nodes_nr + 1
 print(ans)
-

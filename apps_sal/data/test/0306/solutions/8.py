@@ -1,5 +1,6 @@
 import sys
 
+
 def calc(a, b, p, x):
     ans = 0
     power = pow(a, p - 2, p)
@@ -12,9 +13,7 @@ def calc(a, b, p, x):
         d1 = (d1 * power) % p
         s += 1
     return str(ans)
- 
- 
-a, b, p, x = list(map(int,sys.stdin.readline().split()))
+
+
+a, b, p, x = list(map(int, sys.stdin.readline().split()))
 sys.stdout.write(calc(a, b, p, x))
-
-

@@ -1,4 +1,4 @@
-def solve(s,t):
+def solve(s, t):
     hash_s = [False] * 256
     hash_t = [False] * 256
     arr = []
@@ -12,7 +12,7 @@ def solve(s,t):
             print(-1)
             return
     rev = s[::-1]
-    i,j = 0,0
+    i, j = 0, 0
     while i < len(t):
         flag = True
         temp = t[i]
@@ -26,28 +26,28 @@ def solve(s,t):
         if flag:
             x = s.find(temp)
             if x != -1:
-                arr.append((x + 1,x + len(temp)))
+                arr.append((x + 1, x + len(temp)))
                 # print('1',x + 1,x + len(temp))
             else:
                 y = rev.find(temp)
-                arr.append((n - y,n - y - len(temp) + 1))
+                arr.append((n - y, n - y - len(temp) + 1))
                 # print('2',n - y,n - y - len(temp) + 1)
         else:
             x = s.find(temp[:-1])
             if x != -1:
-                arr.append((x + 1,x + len(temp) - 1))
+                arr.append((x + 1, x + len(temp) - 1))
                 # print('3',x + 1,x + len(temp) - 1)
             else:
                 x = rev.find(temp[:-1])
-                arr.append((n - x,n - x - len(temp) + 2))
+                arr.append((n - x, n - x - len(temp) + 2))
                 # print('4',n - x,n - x - len(temp) + 2)
         i = j
     print(len(arr))
-    for x,y in arr:
-        print(x,y)
+    for x, y in arr:
+        print(x, y)
+
 
 s = input()
 t = input()
 
-solve(s,t)
-
+solve(s, t)

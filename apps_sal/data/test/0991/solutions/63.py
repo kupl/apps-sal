@@ -26,7 +26,7 @@ def solve(link):
             ans[v] = t
             if len(ans) == N:
                 break
-        
+
         # buy
         if s < lim:
             c, d = CD[v]
@@ -35,7 +35,7 @@ def solve(link):
             if new_t < w[v][new_s]:
                 w[v][new_s] = new_t
                 heappush(hq, (new_t, v, new_s))
-        
+
         # move
         for u, a, b in link[v]:
             if s < a:
@@ -45,7 +45,7 @@ def solve(link):
             if new_t < w[u][new_s]:
                 w[u][new_s] = new_t
                 heappush(hq, (new_t, u, new_s))
-        
+
     return ans
 
 
@@ -54,7 +54,7 @@ def main():
     for u, v, a, b in UVAB:
         link[u - 1].append((v - 1, a, b))
         link[v - 1].append((u - 1, a, b))
-    
+
     ans = solve(link)
     for i in range(1, N):
         print((ans[i]))
@@ -62,5 +62,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

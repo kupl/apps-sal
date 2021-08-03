@@ -7,7 +7,7 @@ def bin_insert(n, lst):
 
         if lst[check] == n:
             return check
-        
+
         if lst[check] < n:
             start = check + 1
         else:
@@ -16,6 +16,7 @@ def bin_insert(n, lst):
     if len(lst) != 0 and lst[start] < n:
         return start + 1
     return start
+
 
 def comb(fruits):
     fruits.sort()

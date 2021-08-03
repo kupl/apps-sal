@@ -7,4 +7,3 @@ for i in range(t):
 
     l = max(0, f - s)
     print(abs(a - b) - l)
-

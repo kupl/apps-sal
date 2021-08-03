@@ -1,1 +1,1 @@
-summation = lambda s: sum(range(s+1))
+def summation(s): return sum(range(s + 1))

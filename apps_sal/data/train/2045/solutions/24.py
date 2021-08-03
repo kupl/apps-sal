@@ -1,3 +1,6 @@
+import bisect
+import math
+from collections import Counter
 import os
 import sys
 from io import BytesIO, IOBase
@@ -50,19 +53,16 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
+
+
 ##########################################################
-from collections import Counter
-import math
-#n,m=map(int,input().split())
-from collections import Counter
-#for i in range(n):
-import math
-#for _ in range(int(input())):
+# n,m=map(int,input().split())
+# for i in range(n):
+# for _ in range(int(input())):
 #n = int(input())
-#for _ in range(int(input())):
+# for _ in range(int(input())):
 #n = int(input())
-import bisect
 '''for _ in range(int(input())):
 
     n=int(input())
@@ -72,29 +72,22 @@ import bisect
     arr = list(map(int, input().split()))'''
 
 #n = int(input())
-m=0
-n,k=list(map(int, input().split()))
-ans=[0]*n
-jump=[i+1 for i in range(n+2)]
+m = 0
+n, k = list(map(int, input().split()))
+ans = [0] * n
+jump = [i + 1 for i in range(n + 2)]
 for _ in range(k):
-    l,r,x= list(map(int, input().split()))
-    i=l
-    while i<=r:
-        if ans[i-1]==0 and i!=x:
-            ans[i-1]=x
-        var=jump[i]
-        if i<x:
-            jump[i]=x
+    l, r, x = list(map(int, input().split()))
+    i = l
+    while i <= r:
+        if ans[i - 1] == 0 and i != x:
+            ans[i - 1] = x
+        var = jump[i]
+        if i < x:
+            jump[i] = x
         else:
-            jump[i]=r+1
-        i=var
-    #print(ans)
+            jump[i] = r + 1
+        i = var
+    # print(ans)
 
 print(*ans)
-
-
-
-
-
-
-

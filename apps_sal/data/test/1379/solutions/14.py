@@ -7,6 +7,7 @@ l.sort()
 uk1 = 1
 uk2 = n
 
+
 def pos(n):
     cnt = [-10000000001] * len(l)
     nonlocal k
@@ -17,6 +18,8 @@ def pos(n):
             cnt[i % n] = l[i][0]
 
     return True
+
+
 while uk2 - uk1 > 1:
     if pos((uk2 + uk1) // 2):
         uk2 = (uk1 + uk2) // 2
@@ -29,10 +32,10 @@ if not pos(uk1):
         ans[l[i][1]] = i % uk2 + 1
     print(uk2)
     for i in range(n):
-        print(ans[i], end =' ')
+        print(ans[i], end=' ')
 else:
     for i in range(n):
         ans[l[i][1]] = i % uk1 + 1
     print(uk1)
     for i in range(n):
-        print(ans[i], end =' ')
+        print(ans[i], end=' ')

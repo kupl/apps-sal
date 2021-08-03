@@ -3,7 +3,8 @@ def mn(ms):
     index = ms.index(ret)
     ms[index] = 101
     return [ret, index]
-    
+
+
 n, k = [int(i) for i in input().split()]
 ms = [int(i) for i in input().split()]
 mx = max(ms)
@@ -19,4 +20,4 @@ for i in range(len(ms)):
 print(p)
 if ret != []:
     for i in ret:
-        print(i, end = ' ')
+        print(i, end=' ')

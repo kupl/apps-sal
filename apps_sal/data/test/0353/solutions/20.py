@@ -15,6 +15,7 @@ def ans(n, seq):
     elif seq[-1] < seq[-2] and seq[-1] != 0:
         return 'DOWN'
 
+
 n = int(input())
 seq = list(map(int, input().split()))
-print(ans(n,seq))
+print(ans(n, seq))

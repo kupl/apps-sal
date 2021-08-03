@@ -10,11 +10,11 @@ import math
 q = int(input())
 for _ in range(q):
     n = int(input())
-    a, b, c = map(int,input().split(' '))
+    a, b, c = map(int, input().split(' '))
 
     bob = input()
     alice = ['X'] * n
-    
+
     cnt = 0
     for i in range(n):
         s = bob[i]
@@ -30,14 +30,14 @@ for _ in range(q):
             a = a - 1
             cnt = cnt + 1
             alice[i] = 'R'
-                
+
     if (n + 1) // 2 <= cnt:
         win = ''
         for i in range(n):
             if alice[i] == 'X':
                 if a > 0:
                     a = a - 1
-                    win = win + 'R' 
+                    win = win + 'R'
                 elif b > 0:
                     b = b - 1
                     win = win + 'P'
@@ -46,7 +46,7 @@ for _ in range(q):
                     win = win + 'S'
             else:
                 win = win + alice[i]
-        print ("YES")
-        print (win)
+        print("YES")
+        print(win)
     else:
-        print ("NO")
+        print("NO")

@@ -1,6 +1,6 @@
 n = int(input())
 p = []
-for i in range(2,n+1):
+for i in range(2, n + 1):
     isprime = True
     for j in p:
         if i % j == 0:
@@ -16,4 +16,3 @@ for i in p:
         k += 1
 print(len(ans))
 print(' '.join(ans))
-

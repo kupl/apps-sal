@@ -22,4 +22,3 @@ class Solution:
                 stack.pop()
             i -= 1
         return res
-

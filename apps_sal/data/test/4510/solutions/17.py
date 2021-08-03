@@ -1,7 +1,7 @@
+from collections import deque
 N, K = map(int, input().split())
 id_list = list(map(int, input().split()))
 
-from collections import deque
 
 que = deque()
 used = set()
@@ -18,5 +18,4 @@ for id in id_list:
 
 print(len(que))
 while len(que) != 0:
-      print(que.popleft(), end=" ")
-
+    print(que.popleft(), end=" ")

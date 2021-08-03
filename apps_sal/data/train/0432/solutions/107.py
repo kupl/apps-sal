@@ -13,9 +13,7 @@ class Solution:
                 last_required -= que.popleft()
             last_num = num
         return last_required == 0
-            
-    
-    
+
     def isPossibleDivide_II(self, nums: List[int], k: int) -> bool:
         count = collections.Counter(nums)
         for next_num in sorted(count):

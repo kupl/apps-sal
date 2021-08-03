@@ -18,4 +18,3 @@ while True:
 ans = sum(a) * (n)
 ans = sum(a[:i]) + sum(a[i:]) * ((n - i) // j) + sum(a[i:i + (n - i) % j])
 print(ans)
-

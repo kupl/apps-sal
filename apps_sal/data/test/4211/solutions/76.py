@@ -7,5 +7,3 @@ for i in b:
     prev = i
 cnt += b[-1]
 print(cnt)
-
-

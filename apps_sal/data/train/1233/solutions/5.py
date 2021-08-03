@@ -1,5 +1,6 @@
 import sys
 
+
 def GRIG(L):
 
     MINT = 1
@@ -27,11 +28,11 @@ def GRIG(L):
 
     return MINT
 
+
 TESTCASES = int(input().strip())
 
 for i in range(0, TESTCASES):
-    
-    L = [int(x) for x in list(input().strip())]
-    
-    print(GRIG(L))
 
+    L = [int(x) for x in list(input().strip())]
+
+    print(GRIG(L))

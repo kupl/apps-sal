@@ -18,4 +18,3 @@ elif len(s) == 2:
         print(abs(l[0] - l[1]) // 2)
 else:
     print(0)
-

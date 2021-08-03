@@ -58,29 +58,31 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-input = lambda: sys.stdin.readline().rstrip("\r\n")
+def input(): return sys.stdin.readline().rstrip("\r\n")
+
 
 MOD = 10 ** 9 + 7
 
 memo = dict()
+
+
 def solve(m):
     if m not in memo:
         if m < 0:
             memo[m] = 0
         if m == 0:
             memo[m] = 1
-        half = m//2
+        half = m // 2
         memo[m] = (solve(half) + solve(half - 1) + solve(half - 2) + solve(half - 3)) % MOD
     return memo[m]
-    
+
 
 t = int(input())
 out = []
 for m in map(int, input().split()):
-    #out.append(solve(m))
-    v = m//2
-    u = v//2
-    w = (v-u)
-    out.append((u*w+u+w+1)%MOD)
-print('\n'.join(map(str,out)))
-
+    # out.append(solve(m))
+    v = m // 2
+    u = v // 2
+    w = (v - u)
+    out.append((u * w + u + w + 1) % MOD)
+print('\n'.join(map(str, out)))

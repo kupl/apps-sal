@@ -13,17 +13,17 @@ def solve(S: str):
     for Si in map(int, reversed(S)):
         mod_s.append(mod_year[Si - 1])
         mod_year = (mod_year * 10) % YEAR
-    #print(mod_s)
+    # print(mod_s)
     # mod_s を累積和にする
     cum_sum = 0
     cum_sums = [cum_sum]
     for x in mod_s:
-        cum_sum = (cum_sum+x) % YEAR
+        cum_sum = (cum_sum + x) % YEAR
         cum_sums.append(cum_sum)
 
     answer = 0
     for _, num in list(Counter(cum_sums).items()):
-        answer += (num * (num-1)) // 2   # 1 の時0なので場合分けはいらない
+        answer += (num * (num - 1)) // 2   # 1 の時0なので場合分けはいらない
     return answer
 
 
@@ -35,5 +35,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

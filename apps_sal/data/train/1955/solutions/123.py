@@ -23,4 +23,3 @@ class Solution:
                 for i in range(len(component)):
                     s[component[i]] = chars[i]
         return ''.join(s)
-

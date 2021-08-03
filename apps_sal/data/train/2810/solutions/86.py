@@ -23,5 +23,3 @@ def solve(arr):
         res.append(r)
         r = 0
     return res
-
-

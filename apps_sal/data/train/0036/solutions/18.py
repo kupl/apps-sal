@@ -14,9 +14,10 @@ def timer(f):
     def tmp(*args, **kwargs):
         t = time.time()
         res = f(*args, **kwargs)
-        print("Время выполнения функции: %f" % (time.time()-t))
+        print("Время выполнения функции: %f" % (time.time() - t))
         return res
     return tmp
+
 
 def contains(l, elem):
     index = bisect.bisect_left(l, elem)
@@ -47,12 +48,12 @@ print(l)
 print(qs)
 """
 
-#print(l)
-#print(qs)
+# print(l)
+# print(qs)
 
 partials = list(itertools.accumulate(l))
-#print(partials)
+# print(partials)
 
 for i in range(q):
     kuchka = bisect.bisect_left(partials, qs[i])
-    print(kuchka+1)
+    print(kuchka + 1)

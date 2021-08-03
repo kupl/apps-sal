@@ -6,4 +6,5 @@ def mainA():
         ans += ans // a * b
         print(ans)
 
+
 mainA()

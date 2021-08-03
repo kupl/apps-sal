@@ -24,5 +24,6 @@ def main():
                 print(i + 1, j + 1)
                 return
     print("NO")
-    
+
+
 main()

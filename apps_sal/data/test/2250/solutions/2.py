@@ -1,5 +1,7 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
+
 T = int(input())
 for _ in range(T):
     N = int(input())
@@ -21,5 +23,3 @@ for _ in range(T):
     else:
         X.append(c)
     print(sum([x // 3 for x in X]))
-
-

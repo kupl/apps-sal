@@ -7,4 +7,3 @@ class Solution:
             maxSub = max(maxSub, s[loc:])
             loc = s.find(c, loc + 1)
         return maxSub
-

@@ -1,5 +1,6 @@
 import math
 
+
 def main():
     (n, xs, ys) = tuple([int(x) for x in input().split()])
 
@@ -32,7 +33,9 @@ def main():
         best = [xs, ys + 1]
     print(' '.join([str(x) for x in best]))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

@@ -1,7 +1,9 @@
-n, k = list(map(int,input().split()))
-ai = list(map(int,input().split()))
+n, k = list(map(int, input().split()))
+ai = list(map(int, input().split()))
+
+
 def binsearch(num):
-    high = n-1
+    high = n - 1
     low = 0
     mid = (high + low) // 2
     while high >= low:
@@ -13,8 +15,10 @@ def binsearch(num):
             return mid
         mid = (high + low) // 2
     return -1
+
+
 ai.sort()
-ar = [0]*n
+ar = [0] * n
 ans = 0
 for i in range(n):
     if ar[i]:
@@ -26,4 +30,3 @@ for i in range(n):
 if k == 1:
     ans = 0
 print(n - ans)
-

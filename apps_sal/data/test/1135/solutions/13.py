@@ -1,5 +1,8 @@
 from collections import defaultdict
-import sys, os, math
+import sys
+import os
+import math
+
 
 def __starting_point():
     #n, m = list(map(int, input().split()))
@@ -15,4 +18,6 @@ def __starting_point():
         else:
             ans = ans + s[i]
     print(ans)
+
+
 __starting_point()

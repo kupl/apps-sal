@@ -13,4 +13,3 @@ for i in range(t):
         if x % 2 == 0:
             b1 += 1
     print(a1 * b1 + (len(a) - a1) * (len(b) - b1))
-

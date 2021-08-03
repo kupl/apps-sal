@@ -6,4 +6,3 @@ def find_difference(a, b):
     if cube1 - cube2 < 0:
         result = cube2 - cube1
     return result
-

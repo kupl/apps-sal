@@ -28,4 +28,3 @@ else:
         ans *= Z.pop()
         ans %= MOD
     print(ans)
-

@@ -2,12 +2,12 @@ class Solution:
     def totalFruit(self, tree: List[int]) -> int:
         tran_ptr = 0
         maxlist = []
-        
+
         while True:
             scan_ptr = tran_ptr
             count = 0
             types = []
-            
+
             # Scan pointer reaches the end of tree[]
             # or until finding 3rd type of fruit
             while True:
@@ -20,14 +20,14 @@ class Solution:
                     tran_ptr = scan_ptr
                     types.append(tree[scan_ptr])
                     count += 1
-                else: # New type of fruit and types are full
+                else:  # New type of fruit and types are full
                     break
                 scan_ptr += 1
                 if scan_ptr == len(tree):
                     break
             maxlist.append(count)
-            
+
             if scan_ptr == len(tree):
                 break
-        
+
         return max(maxlist)

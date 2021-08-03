@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def racecar(self, target):
         # 车子初始位置0，速度1
@@ -25,7 +26,7 @@ class Solution:
                 # 此时表明踩3脚油门就能到了
                 dp[t] = k
                 continue
-            
+
             # 此时必定 2 ** (k - 1) <= t <= 2 ** (k + 1)
             assert 2 ** (k - 1) <= t <= 2 ** (k + 1)
 
@@ -36,21 +37,21 @@ class Solution:
             for m in range(k - 1):
                 # 注意：后面的k - 1 + m + 2是当前走了这么多步
                 dp[t] = min(dp[t], dp[t - 2 ** (k - 1) + 2 ** m] + k - 1 + m + 2)
-            
+
             # 情况2：直接k步，假设能够超过t，就采取再回头的策略
-            #（已经走了k步, 就是在最后min函数括号里加的那一部分，加1是指一个R）
+            # （已经走了k步, 就是在最后min函数括号里加的那一部分，加1是指一个R）
             # 然后再往回走
             # 走了k步距离就是2 ** k - 1，这个距离已经超越了t
             # 所以还要继续走2 ** k - 1 - t步才能走到t
             if 2 ** k - 1 - t > 0:
                 dp[t] = min(dp[t], dp[2 ** k - 1 - t] + k + 1)
         return dp[target]
-        
+
         # BFS解法，非最优，但是好想
 #         queue = deque([(0, 1)])
 #         # 状态是(location, speed)
 #         visited = set([(0, 1)])
-        
+
 #         res = 0
 #         while queue:
 #             q_len = len(queue)
@@ -58,14 +59,14 @@ class Solution:
 #                 curr_pos, curr_speed = queue.popleft()
 #                 if curr_pos == target:
 #                     return res
-                
+
 #                 # case-1: 当前选择A
 #                 new_pos = curr_pos + curr_speed
 #                 new_speed = 2 * curr_speed
 #                 if (new_pos, new_speed) not in visited:
 #                     queue.append((new_pos, new_speed))
 #                     visited.add((new_pos, new_speed))
-                
+
 #                 # case-2: 当前选择R
 #                 new_pos = curr_pos
 #                 new_speed = -1 if curr_speed > 0 else 1
@@ -73,6 +74,5 @@ class Solution:
 #                     queue.append((new_pos, new_speed))
 #                     visited.add((new_pos, new_speed))
 #             res += 1
-            
-#         return res
 
+#         return res

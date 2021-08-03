@@ -9,7 +9,7 @@ def openBracket(i):
     s[i: ind + 1] = a
     ans += [[i + 1, ind + 1]]
     firstOpen += 1
-    
+
 
 def closeBracket(i):
     nonlocal firstClose, ans
@@ -20,8 +20,8 @@ def closeBracket(i):
     ans += [[i + 1, ind + 1]]
     s[i: ind + 1] = a
     firstClose += 1
-    
-    
+
+
 t = int(input())
 for h in range(t):
     n, k = map(int, input().split())
@@ -33,9 +33,9 @@ for h in range(t):
     firstClose = 0
     for i in range(n):
         if s[i] == "(":
-            index[0] += [i];
+            index[0] += [i]
         else:
-            index[1] += [i];
+            index[1] += [i]
     for i in range(2 * k - 2):
         if fl == 0:
             if s[i] != "(":
@@ -64,4 +64,3 @@ for h in range(t):
             fl = 1
     print(len(ans))
     [print(*i) for i in ans]
-

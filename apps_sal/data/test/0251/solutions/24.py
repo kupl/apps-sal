@@ -1,7 +1,9 @@
 from collections import defaultdict
 
+
 def ii():
     return list(map(int, input().split()))
+
 
 maxv = int(2e5) + 1
 n, k = ii()
@@ -28,4 +30,3 @@ while True:
     i -= 1
 
 print(ans)
-

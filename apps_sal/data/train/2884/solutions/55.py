@@ -6,5 +6,5 @@ def stringify(node):
     while curr != None:
         curr = curr.next
         list.append(str(curr.data) if curr else "None")
-        
+
     return " -> ".join(list)

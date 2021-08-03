@@ -11,14 +11,15 @@ def AlmostPrime(n):
             pf.append(k)
         k += 2
     return len(pf) == 2 and pf[0] != pf[1]
+
+
 def semi_prime(n):
-    for i in range(6,n//2+1):
-        if AlmostPrime(i) and AlmostPrime(n-i):
+    for i in range(6, n // 2 + 1):
+        if AlmostPrime(i) and AlmostPrime(n - i):
             # print(i,n-i)
             return "YES"
     return "NO"
 
+
 for _ in range(int(input())):
     print(semi_prime(int(input())))
-        
-    

@@ -9,11 +9,9 @@ class Solution:
 
         for i in range(n):
             for j in range(i):
-                if diff_c[(j, A[i]-A[j])] == 0:
-                    diff_c[(i, A[i]-A[j])] = 2
+                if diff_c[(j, A[i] - A[j])] == 0:
+                    diff_c[(i, A[i] - A[j])] = 2
                 else:
-                    diff_c[(i, A[i] - A[j])] = diff_c[(j, A[i]-A[j])] + 1
-
+                    diff_c[(i, A[i] - A[j])] = diff_c[(j, A[i] - A[j])] + 1
 
         return max(diff_c.values())
-

@@ -21,4 +21,3 @@ rua = 2
 while rua <= M:
     print(rua, end=' ')
     rua += 2
-

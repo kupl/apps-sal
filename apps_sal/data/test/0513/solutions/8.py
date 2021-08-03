@@ -1,4 +1,4 @@
-lines = [tuple(map(int,input().split())) for i in range(8)]
+lines = [tuple(map(int, input().split())) for i in range(8)]
 x_set = set()
 y_set = set()
 
@@ -18,4 +18,3 @@ else:
     flag = True
 
 print("ugly" if flag else "respectable")
-

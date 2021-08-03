@@ -7,4 +7,3 @@ def vowel_indices(word):
             indexes.append(i + 1)
     return indexes
     # your code here
-

@@ -2,9 +2,10 @@ from math import sqrt, floor
 
 n = input()
 
+
 def is_square(n):
     f = floor(sqrt(n))
-    return f*f == n or (f+1)*(f+1) == n
+    return f * f == n or (f + 1) * (f + 1) == n
 
 
 def min_to_square(d, n):
@@ -20,6 +21,7 @@ def min_to_square(d, n):
     m = min([min_to_square(d + 1, n[:i] + n[i + 1:]) for i in range(len(n))])
 
     return m
+
 
 def mts(n):
     min_ = 100

@@ -1,5 +1,5 @@
 n = int(input())
-ps = list(map(lambda x: int(x)-1, input().split()))
+ps = list(map(lambda x: int(x) - 1, input().split()))
 
 sum = 0
 maxest_pipe = 0
@@ -32,4 +32,4 @@ while True:
     else:
         current_point = next_point
 
-print(sum - max_pipe*max_pipe - maxest_pipe*maxest_pipe + (max_pipe+maxest_pipe)*(max_pipe+maxest_pipe))
+print(sum - max_pipe * max_pipe - maxest_pipe * maxest_pipe + (max_pipe + maxest_pipe) * (max_pipe + maxest_pipe))

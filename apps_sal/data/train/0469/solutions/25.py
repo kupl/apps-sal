@@ -13,7 +13,7 @@ class DSU:
             self.parent[x] = root
             x = next_root
         return root
-    
+
     def union(self, x, y):
         r1, r2 = self.find(x), self.find(y)
         if r1 == r2:
@@ -26,7 +26,8 @@ class DSU:
             self.parent[r2] = r1
         self.components -= 1
         return True
-    
+
+
 class Solution:
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         dsu = DSU(n)
@@ -38,5 +39,5 @@ class Solution:
             if right != -1:
                 if not dsu.union(i, right):
                     return False
-        
+
         return dsu.components == 1

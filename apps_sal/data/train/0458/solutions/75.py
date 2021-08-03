@@ -5,24 +5,23 @@ class Solution:
         need = total % p
         if need == 0:
             return 0
-        
+
         prefix = []
         for i, n in enumerate(nums):
             if i == 0:
                 prefix.append(n % p)
             else:
                 prefix.append((prefix[-1] + n) % p)
-                
+
         ans = len(nums)
-        seen = {0:-1}
+        seen = {0: -1}
         for i, v in enumerate(prefix):
             req = (v - need) % p
             if req in seen:
                 ans = min(ans, i - seen[req])
             seen[v] = i
-        #print(total)
+        # print(total)
         if ans == len(nums):
             return -1
-
 
         return ans

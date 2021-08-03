@@ -10,7 +10,7 @@ class Solution:
         while temp:
             nodeList.append(temp.val)
             temp = temp.next
-        
+
         x = 0
         while x < len(nodeList):
             y = x
@@ -19,7 +19,7 @@ class Solution:
                 sum = sum + nodeList[y]
                 if sum == 0:
                     # delete array index x to y
-                    del nodeList[x:y+1]
+                    del nodeList[x:y + 1]
                     x -= 1
                     break
                 y += 1

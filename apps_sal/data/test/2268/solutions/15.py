@@ -1,4 +1,4 @@
-#In the name of Allah
+# In the name of Allah
 
 from sys import stdin, stdout
 input = stdin.readline
@@ -10,16 +10,14 @@ s = input()
 xy = [input()for i in range(m)]
 
 for i in d:
-        t = i
-        for j in xy:
-                if j[0] == t:
-                        t = j[2]
-                elif j[2] == t:
-                        t = j[0]
-        d[i] = t
-                        
-        
+    t = i
+    for j in xy:
+        if j[0] == t:
+            t = j[2]
+        elif j[2] == t:
+            t = j[0]
+    d[i] = t
+
+
 for i in range(n):
-        stdout.write(d[s[i]])
-
-
+    stdout.write(d[s[i]])

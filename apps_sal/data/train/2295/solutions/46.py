@@ -11,8 +11,11 @@ def main():
     if x == 10**10:
         print(0)
     else:
-        print(s-x)
+        print(s - x)
+
 
 def __starting_point():
     main()
+
+
 __starting_point()

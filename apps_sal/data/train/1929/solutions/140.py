@@ -12,9 +12,11 @@ class Trie:
     def search(self, word):
         cur_trie = self
         for char in word + '$':
-            if '$' in cur_trie.child: return True
-            if char not in cur_trie.child: return False
-            
+            if '$' in cur_trie.child:
+                return True
+            if char not in cur_trie.child:
+                return False
+
             cur_trie = cur_trie.child[char]
 
         return False
@@ -30,10 +32,9 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.buffer = letter + self.buffer
-        return self.trie.search(self.buffer) 
+        return self.trie.search(self.buffer)
 
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)
 # param_1 = obj.query(letter)
-

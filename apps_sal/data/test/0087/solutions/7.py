@@ -8,4 +8,3 @@ M -= 1
 D -= 1
 
 print(math.ceil((days_in_month[M] + D) / 7))
-

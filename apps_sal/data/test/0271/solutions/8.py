@@ -1,3 +1,3 @@
 n = int(input())
 
-print((n + 4)//10 * 10)
+print((n + 4) // 10 * 10)

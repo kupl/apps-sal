@@ -8,32 +8,29 @@ Output:
 For each test case, print a single line containing one integer ― the maximum required number of operations(if the conversion is possible), or else print "-1"
 """
 
-T=int(input())
-while T>0:
-    T-=1 
-    p,q,r=list(map(int,input().split()))
-    a,b,c=list(map(int,input().split()))
-    #ds=list()
-    s=0
-    d1=a-p
-    if d1>0:
-        #ds.append(d1)
-        s+=d1
-    d2=b-q
-    if d2>0:
-        #ds.append(d2)
-        s+=d2
-    d3=c-r
-    if d3>0:
-        #ds.append(d3)
-        s+=d3
-    
-    if(d1==0 and d2==0 and d3==0):
+T = int(input())
+while T > 0:
+    T -= 1
+    p, q, r = list(map(int, input().split()))
+    a, b, c = list(map(int, input().split()))
+    # ds=list()
+    s = 0
+    d1 = a - p
+    if d1 > 0:
+        # ds.append(d1)
+        s += d1
+    d2 = b - q
+    if d2 > 0:
+        # ds.append(d2)
+        s += d2
+    d3 = c - r
+    if d3 > 0:
+        # ds.append(d3)
+        s += d3
+
+    if(d1 == 0 and d2 == 0 and d3 == 0):
         print(0)
-    elif(d1<0 or d2<0 or d3<0):
+    elif(d1 < 0 or d2 < 0 or d3 < 0):
         print(-1)
     else:
         print(s)
-        
-    
-

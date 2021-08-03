@@ -1,5 +1,6 @@
 import sys
 
+
 def solve():
     n, m, k = map(int, sys.stdin.readline().split())
     h = [int(i) - 1 for i in sys.stdin.readline().split()]
@@ -16,7 +17,7 @@ def solve():
 
     for i in range(k):
         u, v = map(int, sys.stdin.readline().split())
-        u, v = u-1, v-1
+        u, v = u - 1, v - 1
 
         if u != pos and v != pos:
             continue
@@ -39,6 +40,9 @@ def debug(x, table):
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

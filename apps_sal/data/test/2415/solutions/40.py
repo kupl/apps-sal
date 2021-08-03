@@ -10,10 +10,9 @@ n = len(s)
 d = [0 for _ in range(n)]
 for i in range(n):
     for l in range(0, 3):
-        if i-l >= 0 and s[i-l:i+1] in e[l]:
-            if i-l == 0 or d[i-l-1]:
+        if i - l >= 0 and s[i - l:i + 1] in e[l]:
+            if i - l == 0 or d[i - l - 1]:
                 d[i] = 1
                 break
 
-print('YES' if d[n-1] else 'NO')
-
+print('YES' if d[n - 1] else 'NO')

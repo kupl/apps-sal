@@ -1,8 +1,8 @@
-n,m = list(map(int,input().split()))
-a = list(map(int,input().split()))
+n, m = list(map(int, input().split()))
+a = list(map(int, input().split()))
 
-st = sum(a) / (4*m)
-a.sort(reverse = True)
+st = sum(a) / (4 * m)
+a.sort(reverse=True)
 el = a[:m]
 
 for i in range(m):
@@ -11,4 +11,3 @@ for i in range(m):
         return
 
 print('Yes')
-

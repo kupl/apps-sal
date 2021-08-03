@@ -1,5 +1,6 @@
 from typing import Union
 
+
 def my_first_kata(a: Union[int, str], b: Union[int, str]) -> Union[bool, int]:
     """
     Get a value based on types passed as the arguments:

@@ -1,4 +1,4 @@
-def check_exam(arr1,arr2):
+def check_exam(arr1, arr2):
     if len(arr1) == len(arr2) and arr1 != [] and arr2 != []:
         score = 0
         for a in range(len(arr1)):
@@ -10,6 +10,5 @@ def check_exam(arr1,arr2):
                 score -= 1
         if score < 0:
             score = 0
-    
-    return score
 
+    return score

@@ -40,7 +40,5 @@ else:
         ans.append(''.join(others[ot: ot + ln]) + mid + ''.join(others[ot: ot + ln][::-1]))
         ot += ln
 
-
     print(t)
     print(' '.join(ans))
-

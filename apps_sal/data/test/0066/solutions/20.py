@@ -1,12 +1,15 @@
 t, a, b = list(map(int, input().split()))
 
+
 def gcd(a, b):
     if (b == 0):
         return a
     return gcd(b, a % b)
 
+
 def lcm(a, b):
     return a // gcd(a, b) * b
+
 
 l = lcm(a, b)
 last = t // l * l
@@ -18,5 +21,3 @@ ans //= g
 t //= g
 ans = str(ans) + '/' + str(t)
 print(ans)
-
-

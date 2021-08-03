@@ -1,13 +1,19 @@
 def ii():
     return int(input())
+
+
 def mi():
     return map(int, input().split())
+
+
 def li():
     return list(mi())
+
 
 ss = [input().strip(), input().strip()]
 s = [a + b for a, b in zip(ss[0], ss[1])] + ['XX']
 n = len(s)
+
 
 def solve(i, j):
     c = 0
@@ -32,6 +38,7 @@ def solve(i, j):
         else:
             k += 1
     return c
+
 
 i = 0
 c = 0

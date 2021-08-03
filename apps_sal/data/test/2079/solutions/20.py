@@ -5,13 +5,14 @@
 import sys
 import math
 
+
 def fun():
     n = int(input())
     arr = list(map(int, input().split()))
     enter_list = input()
 
-    width_list = [[i+1,arr[i]] for i in range(n)]
-    width_list.sort(key=lambda x:x[-1])
+    width_list = [[i + 1, arr[i]] for i in range(n)]
+    width_list.sort(key=lambda x: x[-1])
 
     j = 0
     seated_list = [width_list[0]]
@@ -31,9 +32,11 @@ def fun():
     all_list = [str(i) for i in all_list]
     print(' '.join(all_list))
 
+
 def __starting_point():
     fun()
 
 # print(str)
+
 
 __starting_point()

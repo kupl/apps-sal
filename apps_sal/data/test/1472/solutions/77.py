@@ -1,4 +1,17 @@
-import math,string,itertools,fractions,heapq,collections,re,array,bisect,sys,random,time, copy,bisect
+import math
+import string
+import itertools
+import fractions
+import heapq
+import collections
+import re
+import array
+import bisect
+import sys
+import random
+import time
+import copy
+import bisect
 #from operator import itemgetter
 #from heapq import heappush, heappop
 import numpy as np
@@ -13,20 +26,22 @@ mod = 10**9 + 7
 
 stdin = sys.stdin
 
-ni = lambda: int(ns())
-nf = lambda: float(ns())
-na = lambda: list(map(int, stdin.readline().split()))
-nb = lambda: list(map(float, stdin.readline().split()))
-ns = lambda: stdin.readline().rstrip()  # ignore trailing spaces
+
+def ni(): return int(ns())
+def nf(): return float(ns())
+def na(): return list(map(int, stdin.readline().split()))
+def nb(): return list(map(float, stdin.readline().split()))
+def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+
 
 N, X, Y = na()
 g = [[0] * N for _ in range(N)]
-for i in range(N-1):
-    g[i][i+1] = 1
-    g[i+1][i] = 1
+for i in range(N - 1):
+    g[i][i + 1] = 1
+    g[i + 1][i] = 1
 
-g[X-1][Y-1] = 1
-g[Y-1][X-1] = 1
+g[X - 1][Y - 1] = 1
+g[Y - 1][X - 1] = 1
 g = np.array(g)
 d = shortest_path(g)
 ct = [0] * N
@@ -35,5 +50,3 @@ for i in range(N):
         ct[int(d[i][j])] += 1
 for i in range(1, N):
     print((ct[i]))
-
-

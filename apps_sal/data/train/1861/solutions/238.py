@@ -14,4 +14,3 @@ class Solution:
                         if not result:
                             break
         return 0 if result == float('inf') else result
-

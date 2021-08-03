@@ -9,7 +9,7 @@ class Solution:
                     nums[i] -= 1
                     res += 1
             s = 0
-            nums = list([x for x in nums if x>0])
+            nums = list([x for x in nums if x > 0])
             if not nums:
                 break
             # mineve = min(nums)
@@ -18,6 +18,3 @@ class Solution:
                 s += nums[i]
             res += 1
         return res
-            
-                
-

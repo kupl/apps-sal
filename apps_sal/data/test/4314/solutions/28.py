@@ -21,4 +21,3 @@ for i, a in enumerate(A):
 
 for a in zip(*B[::-1]):
     print(("".join(a[::-1])))
-

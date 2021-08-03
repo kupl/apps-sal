@@ -20,6 +20,5 @@ if len(rem_lo) == 0:
     print(0)
 else:
     print(1)
-    print(2*len(rem_lo))
+    print(2 * len(rem_lo))
     print(*[x + 1 for x in rem_lo + list(reversed(rem_hi))])
-

@@ -21,4 +21,3 @@ for _ in range(int(input())):
             res[i] = arr[vals[last]]
             last += 1
     print(*res)
-

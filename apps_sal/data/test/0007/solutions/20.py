@@ -12,4 +12,3 @@ while (L + 1 < R):
     else:
         L = M
 print(R)
-

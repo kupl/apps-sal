@@ -9,4 +9,3 @@ for i in a:
         st.append(tmp)
 
 print(len(st))
-

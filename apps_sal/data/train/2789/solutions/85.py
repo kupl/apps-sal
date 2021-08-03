@@ -9,4 +9,3 @@ def bmi(weight, height):
         if b <= i:
             return health[i]
     return 'Obese'
-

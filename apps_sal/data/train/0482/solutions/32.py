@@ -9,9 +9,9 @@ class Solution:
                 if mini_idx == 0:
                     adj_idx = 1
                 else:
-                    adj_idx = mini_idx-1
+                    adj_idx = mini_idx - 1
                 res += arr[adj_idx] * arr[mini_idx]
             arr.pop(mini_idx)
-            #print(arr)
-            #print(res)
+            # print(arr)
+            # print(res)
         return res

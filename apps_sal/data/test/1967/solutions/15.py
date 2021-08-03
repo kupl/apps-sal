@@ -6,7 +6,7 @@ for i in range(n):
 
 for i in range(m):
     arr.append(list(input()))
-    
+
 for i in range(m):
     for j in range(n):
         turn[j][i] = arr[i][n - j - 1]
@@ -14,7 +14,7 @@ for i in range(m):
 s = []
 for i in range(n):
     s.append(list(turn[i]))
-#------------------------------------------
+# ------------------------------------------
 
 
 for i in range(m):
@@ -27,7 +27,3 @@ for i in range(n):
         for j in range(m):
             print(turn[i][j] * 2, end="")
         print()
-            
-
-    
-

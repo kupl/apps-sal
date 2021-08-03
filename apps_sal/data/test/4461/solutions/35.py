@@ -1,26 +1,29 @@
+from decimal import Decimal, ROUND_HALF_UP, ROUND_HALF_EVEN
+from math import floor, ceil
 import sys
 readline = sys.stdin.readline
-from math import floor, ceil
-from decimal import Decimal, ROUND_HALF_UP, ROUND_HALF_EVEN
+
+
 def round(f, r=0):
     return Decimal(str(f)).quantize(Decimal(str(r)), rounding=ROUND_HALF_UP)
+
 
 def main():
     H, W = map(int, readline().rstrip().split())
     ans = H * W
     if H >= 3:
-        y1 = int(round(H/3))
-        y2 = (H-y1) // 2
+        y1 = int(round(H / 3))
+        y2 = (H - y1) // 2
         y3 = H - y1 - y2
-        ans = min(ans, max(W*y1, W*y2, W*y3)-min(W*y1, W*y2, W*y3))
+        ans = min(ans, max(W * y1, W * y2, W * y3) - min(W * y1, W * y2, W * y3))
     if W >= 3:
-        x1 = int(round(W/3))
-        x2 = (W-x1) // 2
+        x1 = int(round(W / 3))
+        x2 = (W - x1) // 2
         x3 = W - x1 - x2
-        ans = min(ans, max(x1*H, x2*H, x3*H)-min(x1*H, x2*H, x3*H))
-    
+        ans = min(ans, max(x1 * H, x2 * H, x3 * H) - min(x1 * H, x2 * H, x3 * H))
+
     # 縦にスライス + 残りに横にスライス
-    x1_cand = [floor(W/3), ceil(W/3)]
+    x1_cand = [floor(W / 3), ceil(W / 3)]
     # x1_cand = [i for i in range(1, W)]
     y1 = H
     for x1 in x1_cand:
@@ -28,10 +31,10 @@ def main():
         x3 = x2
         y2 = H // 2
         y3 = H - y2
-        ans = min(ans, max((x1*y1), (x2*y2), (x3*y3)) - min((x1*y1), (x2*y2), (x3*y3)))
+        ans = min(ans, max((x1 * y1), (x2 * y2), (x3 * y3)) - min((x1 * y1), (x2 * y2), (x3 * y3)))
 
     # 横にスライス + 残りに縦にスライス
-    y1_cand = [floor(H/3), ceil(H/3)]
+    y1_cand = [floor(H / 3), ceil(H / 3)]
     # y1_cand = [i for i in range(1, H)]
     x1 = W
     for y1 in y1_cand:
@@ -39,10 +42,13 @@ def main():
         y3 = y2
         x2 = W // 2
         x3 = W - x2
-        ans = min(ans, max((x1*y1), (x2*y2), (x3*y3)) - min((x1*y1), (x2*y2), (x3*y3)))
+        ans = min(ans, max((x1 * y1), (x2 * y2), (x3 * y3)) - min((x1 * y1), (x2 * y2), (x3 * y3)))
 
     print(ans)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

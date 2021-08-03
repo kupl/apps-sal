@@ -1,7 +1,7 @@
 X, Y = input().split()
 if X < Y:
-  print("<")
+    print("<")
 if X > Y:
-  print(">")
+    print(">")
 if X == Y:
-  print("=")
+    print("=")

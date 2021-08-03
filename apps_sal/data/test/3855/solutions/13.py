@@ -1,4 +1,5 @@
-import sys, math
+import sys
+import math
 from itertools import permutations
 
 DEBUG = 0
@@ -8,8 +9,10 @@ if DEBUG:
 else:
     input = sys.stdin.readline
 
+
 def mp():
     return list(map(int, input().split()))
+
 
 def main():
     n = int(input())
@@ -18,4 +21,6 @@ def main():
         n //= 2
         c += 1
     print(c)
+
+
 main()

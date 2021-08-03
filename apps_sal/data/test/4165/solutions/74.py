@@ -13,4 +13,3 @@ if longest_edge < left_sum:
     print('Yes')
 else:
     print('No')
-

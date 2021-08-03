@@ -8,4 +8,3 @@ for c in s:
     ans += p
     cur = c
 print(ans)
-

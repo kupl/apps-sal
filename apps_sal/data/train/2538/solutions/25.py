@@ -12,4 +12,3 @@ class Solution:
             elif nums[total] == maxFreq:
                 maxCount += 1
         return maxCount
-

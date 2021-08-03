@@ -6,4 +6,3 @@ def is_uppercase(inp):
     else:
         strn = False
     return strn
-

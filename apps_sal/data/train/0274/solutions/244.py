@@ -1,7 +1,7 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         from collections import deque
-        
+
         min_q = deque()
         max_q = deque()
         ans = 0

@@ -8,4 +8,3 @@ if a * 2 > b:
 else:
     b = 2 * a
 print(min(w, a * n + b * n))
-

@@ -1,14 +1,15 @@
 import sys
 
 mod = 10**9 + 7
-inf = 1<<30
+inf = 1 << 30
+
 
 def solve():
     n = int(input())
     msg = input()
     clim = [int(i) for i in input().split()]
 
-    dp = [0]*(n + 1)
+    dp = [0] * (n + 1)
     dp[0] = 1
     max_len = 0
 
@@ -17,7 +18,7 @@ def solve():
         cur_len = 0
 
         for j in range(i, 0, -1):
-            alpha = ord(msg[j-1]) - ord('a')
+            alpha = ord(msg[j - 1]) - ord('a')
             limlen = min(limlen, clim[alpha])
             cur_len += 1
 
@@ -45,6 +46,9 @@ def solve():
     print(max_len)
     print(min_sp + 1)
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

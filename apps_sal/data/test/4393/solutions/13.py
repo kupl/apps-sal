@@ -9,4 +9,3 @@ while pos < n:
         pos += 1
     count += 1
 print(ans)
-

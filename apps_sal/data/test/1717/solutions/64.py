@@ -4,10 +4,9 @@ def gcd(a, b):
 
     return a
 
+
 def lcm(a, b):
     return a * b // gcd(a, b)
-
-
 
 
 def main():
@@ -23,7 +22,9 @@ def main():
             n = lcm(n, i)
     print((n + 1))
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

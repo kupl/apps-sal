@@ -1,6 +1,6 @@
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
-        prev_count = curr =  count_b = result = 0
+        prev_count = curr = count_b = result = 0
         a = None
         b = None
         for c in tree:

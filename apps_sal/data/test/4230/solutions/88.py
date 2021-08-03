@@ -14,4 +14,3 @@ while True:
         print((x + a))
         break
     a += 1
-

@@ -1,20 +1,20 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
-        
+
         steps = n
         a1 = [[1, n]]
         a2 = [n]
         if m == n:
             return steps
-        
+
         while steps > 0:
             steps -= 1
             i = arr[steps]
-            
+
             l = 0
             r = len(a1) - 1
-            
+
             while l <= r:
                 mid = (l + r) // 2
                 if a1[mid][0] > i:
@@ -24,7 +24,7 @@ class Solution:
                 else:
                     left = [a1[mid][0], i - 1]
                     right = [i + 1, a1[mid][1]]
-                    
+
                     if left[0] > left[1]:
                         if right[0] > right[1]:
                             a1.pop(mid)

@@ -37,4 +37,3 @@ for i in range(t):
         print(ansstr)
     else:
         print("NO")
-

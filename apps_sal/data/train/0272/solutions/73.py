@@ -4,7 +4,7 @@ class Solution:
         unused_keys = set()
         candy_count = 0
         cur_box = []
-        
+
         for box in initialBoxes:
             if status[box]:
                 cur_box.append(box)

@@ -1,5 +1,5 @@
-#problem: let's play nim
-#problem id: arc105 d
+# problem: let's play nim
+# problem id: arc105 d
 
 import sys
 from collections import Counter
@@ -32,5 +32,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

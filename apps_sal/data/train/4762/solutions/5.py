@@ -1,7 +1,8 @@
 def services(service_list):
     hdpt = "Homie dont play that!"
-    names = [req.split()[2].capitalize()+'! ' + hdpt for req in service_list]
+    names = [req.split()[2].capitalize() + '! ' + hdpt for req in service_list]
     return names
+
 
 def nkotb_vs_homie(requirements):
     monitoring = services(requirements[0])

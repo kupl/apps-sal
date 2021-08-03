@@ -1,5 +1,5 @@
 def sequence_sum(begin_number, end_number, step):
-    x =[]
+    x = []
     count = begin_number
     if begin_number > end_number:
         return 0

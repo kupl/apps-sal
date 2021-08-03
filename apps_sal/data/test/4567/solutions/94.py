@@ -7,7 +7,7 @@ Created on Tue Sep 22 15:10:57 2020
 
 N = int(input())
 lis10 = list()
-lis =list()
+lis = list()
 ans = 0
 for i in range(N):
     s = int(input())

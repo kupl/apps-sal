@@ -6,23 +6,21 @@ class Solution:
             for s in p:
                 peopleSkills[skillsMap[s]].add(i)
         n = len(req_skills)
-        
+
         memo = {}
         res = []
-        
-        
+
         self.dfs(1 << n, memo, peopleSkills, res, n, people, skillsMap)
         return memo[1 << n]
-    
-    
+
     def dfs(self, state, memo, peopleSkills, res, n, people, skillsMap):
         # print(bin(state)[1:])
-        if state == 2 ** (n+1) - 1:
+        if state == 2 ** (n + 1) - 1:
             return []
-        
+
         if state in memo:
             return memo[state]
-        
+
         currState = list(bin(state)[3:])
         mini = float('inf')
         ans = []
@@ -42,7 +40,3 @@ class Solution:
         # print(ans)
         memo[state] = ans
         return ans
-                
-        
-        
-

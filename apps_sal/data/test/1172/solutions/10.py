@@ -10,7 +10,7 @@ def main():
 
     pows = [0] * 4
     if q_cnt >= 3:
-        pows[3] = pow(3, q_cnt-3, mod)
+        pows[3] = pow(3, q_cnt - 3, mod)
         pows[2] = pows[3] * 3 % mod
         pows[1] = pows[2] * 3 % mod
         pows[0] = pows[1] * 3 % mod
@@ -43,5 +43,6 @@ def main():
             q_num += 1
 
     print(ans)
+
 
 main()

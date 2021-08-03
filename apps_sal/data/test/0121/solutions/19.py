@@ -6,9 +6,10 @@ def has_win(mat, r, c):
                 continue
             if mat[r + i][c + j] in ['x', '.']:
                 tm = '.' if mat[r + i][c + j] == 'x' else 'x'
-                if 0<= r + 2*i < 4 and 0 <= c + 2*j < 4 and mat[r + 2*i][c + 2*j] == tm:
+                if 0 <= r + 2 * i < 4 and 0 <= c + 2 * j < 4 and mat[r + 2 * i][c + 2 * j] == tm:
                     return True
     return False
+
 
 def is_win(mat):
     for i in range(4):
@@ -17,9 +18,11 @@ def is_win(mat):
                 return True
     return False
 
+
 def nput(n):
     for i in range(n):
         yield input()
+
 
 def main():
     mat = [list(l) for l in nput(4)]
@@ -28,7 +31,9 @@ def main():
     else:
         print("NO")
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

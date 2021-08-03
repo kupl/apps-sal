@@ -1,4 +1,6 @@
 import re
-def solve(a,b):
+
+
+def solve(a, b):
     rx = '^' + '.*'.join(a.split('*')) + '$'
-    return bool(re.search(rx,b))
+    return bool(re.search(rx, b))

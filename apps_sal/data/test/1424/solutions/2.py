@@ -6,6 +6,8 @@ def f(n, a, b):
             cnt += 1
         now *= 2
     return cnt
+
+
 n, m, k = map(int, input().split())
 a = []
 for i in range(m + 1):

@@ -5,7 +5,7 @@ z = c
 g = 0
 if a > b + c or b > a + c or c > a + b or (a + b + c) % 2 != 0:
     print('Impossible')
-    return 
+    return
 if a >= b and a >= c:
     while x != y + z:
         g += 1
@@ -25,4 +25,4 @@ if c >= a and c >= b:
         g += 1
         x -= 1
         y -= 1
-    print(g, y, x) 
+    print(g, y, x)

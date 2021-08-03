@@ -15,4 +15,3 @@ class Solution:
                 dic[groupSizes[i]] = []
 
         return res
-

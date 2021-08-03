@@ -17,4 +17,3 @@ for L in range(n):
             print("YES")
             return
 print("NO")
-

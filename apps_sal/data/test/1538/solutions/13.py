@@ -11,4 +11,3 @@ while i < n:
     ans = max(ans, idx - i)
     i = idx
 print(ans)
-

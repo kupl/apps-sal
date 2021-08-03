@@ -1,9 +1,11 @@
 import functools
+
+
 class Solution:
-    def maximum69Number (self, num: int) -> int:
-        
-        lmax = lambda xs: functools.reduce(lambda x, y: x+y, xs)
-        print(lmax(['1','2','3'])) 
+    def maximum69Number(self, num: int) -> int:
+
+        def lmax(xs): return functools.reduce(lambda x, y: x + y, xs)
+        print(lmax(['1', '2', '3']))
         str_num = list(str(num))
         for i in range(len(str_num)):
             if int(str_num[i]) == 6:

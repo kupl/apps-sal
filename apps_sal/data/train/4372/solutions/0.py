@@ -1,2 +1,2 @@
-def lostSheep(friday,saturday,total):
-    return total - sum(friday+saturday)
+def lostSheep(friday, saturday, total):
+    return total - sum(friday + saturday)

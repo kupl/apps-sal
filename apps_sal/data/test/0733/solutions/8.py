@@ -12,4 +12,3 @@ if count == 2:
     print((b - A[0]) // RR + 1)
 else:
     print(count)
-

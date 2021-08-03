@@ -5,4 +5,3 @@ for _ in range(q):
         print(4 - n)
     else:
         print(n % 2)
-

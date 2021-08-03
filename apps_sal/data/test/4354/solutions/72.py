@@ -17,5 +17,5 @@ for i in range(N):
         calc = abs(Nlist[i][0] - Mlist[j][0]) + abs(Nlist[i][1] - Mlist[j][1])
         if calc < mini:
             mini = calc
-            res = j+1
-    print(res) 
+            res = j + 1
+    print(res)

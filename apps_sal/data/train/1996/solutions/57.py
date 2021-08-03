@@ -1,8 +1,10 @@
-#[] Graph(Reversed-Topology, outdegree)
-#1) node A has no child nodes => A must be stable
-#2) All childs of node A are stable => A must be stable
-#Solution: Traverse all nodes in reversed topological order (remove nodes with out-degree==0 first)
+# [] Graph(Reversed-Topology, outdegree)
+# 1) node A has no child nodes => A must be stable
+# 2) All childs of node A are stable => A must be stable
+# Solution: Traverse all nodes in reversed topological order (remove nodes with out-degree==0 first)
 from collections import defaultdict, deque
+
+
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         revadj, outdegree = defaultdict(list), dict()

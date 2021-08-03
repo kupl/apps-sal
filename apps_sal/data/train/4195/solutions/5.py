@@ -40,12 +40,13 @@ def merge(line):
             else:
                 return [line[2], line[3], 0, 0]
 
+
 def merge(line):
     i, res = 0, []
     while i < len(line):
         x = line[i]
         if x:
-            for j,y in enumerate(line[i+1:], 1):
+            for j, y in enumerate(line[i + 1:], 1):
                 if y:
                     if x == y:
                         res.append(x + y)
@@ -56,4 +57,4 @@ def merge(line):
             else:
                 res.append(x)
         i += 1
-    return res + [0]*(len(line) - len(res))
+    return res + [0] * (len(line) - len(res))

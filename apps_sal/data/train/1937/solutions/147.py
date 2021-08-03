@@ -4,12 +4,12 @@ class ThroneInheritance:
         self.lineageTree = [kingName, []]
         self.lineageLocs = {kingName: self.lineageTree}
         self.deaths = set([])
-        
+
     def birth(self, parentName: str, childName: str) -> None:
         parentLoc = self.lineageLocs[parentName]
         parentLoc[1].append([childName, []])
         self.lineageLocs[childName] = parentLoc[1][-1]
-        
+
     def death(self, name: str) -> None:
         self.deaths.add(name)
 
@@ -30,4 +30,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

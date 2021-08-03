@@ -4,7 +4,7 @@ class Solution:
         visited = set()
         q.append(A)
         visited.add(A)
-        
+
         step = -1
         while q:
             step += 1
@@ -14,17 +14,17 @@ class Solution:
                 if curr == B:
                     return step
                 #print(self._swap(curr, B))
-                for next in self._swap(curr, B): 
+                for next in self._swap(curr, B):
                     if next in visited:
                         continue
                     q.append(next)
                     visited.add(next)
-                
-    def _swap(self, s, B):  
+
+    def _swap(self, s, B):
         i = 0
-        while s[i] == B[i]:   
+        while s[i] == B[i]:
             i += 1
-        if s[i]!=B[i]:
+        if s[i] != B[i]:
             for j in range(i + 1, len(s)):
                 if s[j] == B[i]:
-                    yield s[:i] + s[j] + s[i+1:j] + s[i] + s[j+1:]  
+                    yield s[:i] + s[j] + s[i + 1:j] + s[i] + s[j + 1:]

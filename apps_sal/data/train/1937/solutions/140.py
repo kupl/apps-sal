@@ -17,6 +17,7 @@ class ThroneInheritance:
         order = [self.king]
         s = set(order)
         # inord = {k: cc[::-1] for k, (pp, _, cc) in self.inh.items()}
+
         def fs(x):
             p, a, ch = self.inh[x]
             # if not inord[x]: #  no children or all of x's children are in curOrder:
@@ -37,4 +38,3 @@ class ThroneInheritance:
 # obj.birth(parentName,childName)
 # obj.death(name)
 # param_3 = obj.getInheritanceOrder()
-

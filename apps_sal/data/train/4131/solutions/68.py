@@ -6,4 +6,4 @@ def how_much_water(water, load, clothes):
     elif load == clothes:
         return water
     elif clothes > load:
-        return round((water * 1.1 ** (clothes - load)),2) 
+        return round((water * 1.1 ** (clothes - load)), 2)

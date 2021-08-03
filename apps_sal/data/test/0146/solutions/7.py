@@ -12,4 +12,3 @@ for i in range(k):
     if abs(a - b) > answer:
         answer = abs(a - b)
 print(answer)
-

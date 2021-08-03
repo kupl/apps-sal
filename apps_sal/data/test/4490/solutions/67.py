@@ -1,6 +1,7 @@
 #N, K=map(int,input().split())
 b = str(input())
 
+
 def main():
     if b == "A":
         print("T")
@@ -11,6 +12,9 @@ def main():
     elif b == "G":
         print("C")
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

@@ -1,7 +1,7 @@
 n = int(input())
-r = [[0,0,0],[0,0,0]]
+r = [[0, 0, 0], [0, 0, 0]]
 for i in range(n):
-    t,x,y = map(int, input().split())
+    t, x, y = map(int, input().split())
     if t == 1:
         r[0][0] += 1
         r[0][1] += x

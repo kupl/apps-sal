@@ -6,4 +6,3 @@ if N == 1:
     return
 
 print((max(abs(A[-1] - W), abs(A[-2] - A[-1]))))
-

@@ -23,16 +23,15 @@ class UnionFind:
             self.parent[x] += self.parent[y]
             self.parent[y] = x
             self.cnt -= 1
-          
+
     def is_same(self, x, y):
         return self.root(x) == self.root(y)
-             
+
     def get_size(self, x):
         return -self.parent[self.root(x)]
-    
+
     def get_cnt(self):
         return self.cnt
-
 
 
 n, m = map(int, input().split())

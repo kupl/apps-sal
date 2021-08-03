@@ -5,6 +5,6 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
         result += 1
         height += upSpeed
         if height >= desiredHeight:
-            break;
+            break
         height -= downSpeed
     return result

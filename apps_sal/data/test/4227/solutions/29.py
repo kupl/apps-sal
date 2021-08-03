@@ -23,4 +23,3 @@ for path in permutations(list(range(1, N))):
     if all(g[v][nv] for v, nv in window(path, 2)):
         ans += 1
 print(ans)
-

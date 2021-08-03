@@ -43,4 +43,3 @@ else:
 
     print(ans)
     print(' '.join([' '.join([str(abc[j]) for i in range(ans_co[j])]) for j in range(3)]).strip())
-

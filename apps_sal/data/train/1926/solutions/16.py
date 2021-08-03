@@ -7,9 +7,9 @@ class Solution:
                 if not n % i:
                     return i
             return 1
-        res = [] 
+        res = []
         for n in [num + 1, num + 2]:
             a = maxFactor(n)
             b = n // a
             res.append((abs(a - b), [a, b]))
-        return min(res, key = lambda x:x[0])[1]
+        return min(res, key=lambda x: x[0])[1]

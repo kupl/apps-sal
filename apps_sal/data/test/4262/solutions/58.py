@@ -1,12 +1,13 @@
 import itertools
 
+
 def count_order():
     # 入力
     N = int(input())
     P = list(map(int, input().split()))
     Q = list(map(int, input().split()))
     # 処理
-    permutations_list = itertools.permutations(x for x in range(1,N+1))
+    permutations_list = itertools.permutations(x for x in range(1, N + 1))
     count = 0
     for one_case in permutations_list:
         count += 1
@@ -27,7 +28,8 @@ def count_order():
                 break
         if is_ok_Q:
             b = count
-    return abs(a-b)
+    return abs(a - b)
+
 
 result = count_order()
 print(result)

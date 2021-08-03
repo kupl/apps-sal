@@ -33,23 +33,24 @@ if C == 0:
 
 R = int(input())
 
-l = min(nb//B , ns//S , nc//C)
+l = min(nb // B, ns // S, nc // C)
 r = inf
 ans = l
 
+
 def ck(z):
-    v = max(0,(B*z-nb)*pb) + max(0,(S*z-ns)*ps) + max(0,(C*z-nc)*pc)
+    v = max(0, (B * z - nb) * pb) + max(0, (S * z - ns) * ps) + max(0, (C * z - nc) * pc)
     if v <= R:
         return 1
     return 0
 
+
 while l <= r:
-    mid = (l+r)>>1
+    mid = (l + r) >> 1
     if ck(mid):
         ans = mid
-        l = mid+1
+        l = mid + 1
     else:
-        r = mid-1
+        r = mid - 1
 print(ans)
 ###
-

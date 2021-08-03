@@ -1,6 +1,7 @@
 from fractions import gcd
 import sys
 
+
 def solve():
     n = int(input())
     if n < 3:
@@ -25,7 +26,8 @@ def solve():
                 tup = (xdiff, ydiff)
                 if tup in slopes:
                     slopes[tup] += 1
-                else: slopes[tup] = 2
+                else:
+                    slopes[tup] = 2
         for val in slopes:
             mem[slopes[val]] += 1
     for i in range(2, len(mem)):
@@ -39,10 +41,13 @@ def solve():
 def fact(n, k):
     large, small = max(k, n - k), min(k, n - k)
     res = 1
-    for i in range(large + 1, n + 1): res *= i
-    for i in range(2, small + 1): res //= i
+    for i in range(large + 1, n + 1):
+        res *= i
+    for i in range(2, small + 1):
+        res //= i
     return res
 
-    
-if sys.hexversion == 50594544 : sys.stdin = open("test.txt")
+
+if sys.hexversion == 50594544:
+    sys.stdin = open("test.txt")
 solve()

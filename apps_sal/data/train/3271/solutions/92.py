@@ -1,4 +1,4 @@
-def arr(n = 0):
+def arr(n=0):
     a = []
     i = 0
     while i < n:

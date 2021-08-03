@@ -8,7 +8,7 @@
 class Solution:
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
         return self.search(cloned, target)
-    
+
     def search(self, node, target):
         if not node:
             return

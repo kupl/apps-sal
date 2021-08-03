@@ -1,4 +1,6 @@
 from functools import lru_cache
+
+
 class Solution:
     def tallestBillboard(self, rods):
         @lru_cache(None)
@@ -10,4 +12,3 @@ class Solution:
                        dp(i + 1, s + rods[i]) + rods[i])
 
         return dp(0, 0)
-

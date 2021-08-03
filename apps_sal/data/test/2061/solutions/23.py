@@ -1,4 +1,6 @@
 import sys
+
+
 def dfs(i, j):
     nonlocal used, ans
     used[i][j] = True
@@ -6,7 +8,7 @@ def dfs(i, j):
     if (i - 1 >= 0 and j >= 0 and not used[i - 1][j]):
         dfs(i - 1, j)
     if (i >= 0 and j + 1 <= m - 1 and not used[i][j + 1]):
-        dfs(i, j + 1)  
+        dfs(i, j + 1)
     if (i + 1 <= n - 1 and j <= m - 1 and not used[i + 1][j]):
         dfs(i + 1, j)
     if (i <= n - 1 and j - 1 >= 0 and not used[i][j - 1]):

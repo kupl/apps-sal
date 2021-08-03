@@ -1,4 +1,6 @@
 import numpy as np
+
+
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
         n = len(arr)
@@ -8,7 +10,7 @@ class Solution:
                 dict_model[it] += 1
             else:
                 dict_model[it] = 1
-        min_deactivate = np.ceil(n/2)
+        min_deactivate = np.ceil(n / 2)
         generators = list(dict_model.values())
         generators.sort()
         turn_off = 0
@@ -16,4 +18,4 @@ class Solution:
         while turn_off < min_deactivate:
             turn_off += generators[-i]
             i += 1
-        return i-1
+        return i - 1

@@ -13,4 +13,3 @@ class Solution:
         strength = sorted(arr, key=lambda x: (abs(x - median), x), reverse=True)
         # print(strength)
         return [i for i in strength[:k]]
-

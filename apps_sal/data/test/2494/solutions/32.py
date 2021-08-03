@@ -1,7 +1,8 @@
+import heapq
 k = int(input())
 
-import heapq
 INF = 10**9
+
 
 class Dijkstra:
     def __init__(self, adj):
@@ -25,10 +26,11 @@ class Dijkstra:
                     self.prev[dest] = src
         return self.dist
 
+
 edge = [[] for _ in range(k)]
 for i in range(k):
-    edge[i].append([(i+1) % k, 1])
-    edge[i].append([(i*10) % k, 0])
+    edge[i].append([(i + 1) % k, 1])
+    edge[i].append([(i * 10) % k, 0])
 
 DIJ = Dijkstra(edge)
 DIJ.calc

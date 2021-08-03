@@ -4,4 +4,3 @@ def men_from_boys(arr):
     z1 = sorted(y, reverse=True)
     z2 = sorted(x, reverse=False)
     return z2 + z1
-

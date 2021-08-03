@@ -1,6 +1,7 @@
 def is_pal(s):
     return s == s[::-1]
 
+
 s = input()
 i = int(s)
 j = 0
@@ -13,4 +14,3 @@ if is_pal(s):
     print('YES')
 else:
     print('NO')
-

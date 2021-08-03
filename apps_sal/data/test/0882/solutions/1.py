@@ -37,4 +37,3 @@ if ans[len(s) - 1][0] == 7:
     print(o.count(1))
 else:
     print(ans[len(s) - 1][0])
-

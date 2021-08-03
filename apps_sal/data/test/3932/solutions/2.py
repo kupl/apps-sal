@@ -6,15 +6,15 @@ def DFS(x):
 
             continue
 
-        if(Rem[i]>=C[x]):
+        if(Rem[i] >= C[x]):
 
-            if(Rem[i]==C[x] and len(Children[i])==0):
+            if(Rem[i] == C[x] and len(Children[i]) == 0):
 
                 continue
 
-            Rem[i]-=C[x]
+            Rem[i] -= C[x]
 
-            Parent[x]=i
+            Parent[x] = i
 
             Children[i].append(x)
 
@@ -26,137 +26,115 @@ def DFS(x):
 
             continue
 
-        Y=[]
+        Y = []
 
         for j in range(len(Children[i])):
 
-            
-
-            child=Children[i][j]
+            child = Children[i][j]
 
             if(Seen[i][child]):
 
                 continue
 
-            Parent[child]=-1
+            Parent[child] = -1
 
-            Rem[i]+=C[child]
+            Rem[i] += C[child]
 
-            Seen[i][child]=True
+            Seen[i][child] = True
 
-            Seen[child][i]=True
+            Seen[child][i] = True
 
             if(DFS(child)):
 
-                Seen[i][child]=False
+                Seen[i][child] = False
 
-                Seen[child][i]=False
+                Seen[child][i] = False
 
                 continue
 
-            Seen[i][child]=False
+            Seen[i][child] = False
 
-            Seen[child][i]=False
+            Seen[child][i] = False
 
-            Parent[child]=i
+            Parent[child] = i
 
-            Rem[i]-=C[child]
+            Rem[i] -= C[child]
 
             Y.append(child)
 
-        Children[i]=list(Y)
+        Children[i] = list(Y)
 
-        if(Rem[i]>=C[x]):
+        if(Rem[i] >= C[x]):
 
-            if(Rem[i]==C[x] and len(Children[i])==0):
+            if(Rem[i] == C[x] and len(Children[i]) == 0):
 
                 continue
 
-            Rem[i]-=C[x]
+            Rem[i] -= C[x]
 
             Children[i].append(x)
 
-            Parent[x]=i
+            Parent[x] = i
 
             return True
 
     return False
 
-                
 
-        
-
+n = int(input())
 
 
+C = list(map(int, input().split()))
 
+Rem = [-1] * n
 
+Parent = [-1] * n
 
+Children = []
 
-
-
-n=int(input())
-
-
-
-C=list(map(int,input().split()))
-
-Rem=[-1]*n
-
-Parent=[-1]*n
-
-Children=[]
-
-Seen=[]
+Seen = []
 
 for i in range(n):
 
-    Seen.append([False]*n)
+    Seen.append([False] * n)
 
 C.sort(reverse=True)
 
 
-
-if(C[0]!=n or C.count(2)>0):
+if(C[0] != n or C.count(2) > 0):
 
     print("NO")
-
 
 
 else:
 
     for i in range(n):
 
-        Rem[i]=C[i]-1
+        Rem[i] = C[i] - 1
 
         Children.append([])
 
-    Parent[0]=0
+    Parent[0] = 0
 
-    Ans="YES"
+    Ans = "YES"
 
-    for i in range(1,n):
+    for i in range(1, n):
 
-        if(DFS(i)==False):
+        if(DFS(i) == False):
 
-            Ans="NO"
+            Ans = "NO"
 
             break
 
     for i in range(n):
 
-        if(Rem[i]!=0 and C[i]!=1):
+        if(Rem[i] != 0 and C[i] != 1):
 
-            Ans="NO"
+            Ans = "NO"
 
             break
 
     print(Ans)
 
-            
-
-
-
-
 
 # Made By Mostafa_Khaled
-

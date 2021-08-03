@@ -8,4 +8,3 @@ for i in range(n * 2):
         ans += array[i]
 
 print(ans)
-

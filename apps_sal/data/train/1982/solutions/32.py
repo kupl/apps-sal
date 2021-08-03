@@ -1,11 +1,13 @@
 from collections import defaultdict, deque
+
+
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         graph = defaultdict(set)
         for dislike in dislikes:
             graph[dislike[0]].add(dislike[1])
             graph[dislike[1]].add(dislike[0])
-        
+
         colors = [-1 for i in range(N + 1)]
         queue = deque()
         for i in range(1, N):
@@ -19,6 +21,6 @@ class Solution:
                             colors[neighbor] = 1 - colors[cur]
                             queue.append(neighbor)
                         elif colors[neighbor] == colors[cur]:
-                                return False
-                    
+                            return False
+
         return True

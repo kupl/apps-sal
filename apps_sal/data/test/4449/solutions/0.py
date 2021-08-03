@@ -19,7 +19,7 @@ for _ in range(int(input())):
         J.sort()
         s = set()
         for i in range(n):
-            s.add(J[i] * J[-i-1])
+            s.add(J[i] * J[-i - 1])
         if len(s) != 1:
             ans = 'NO'
     print(ans)

@@ -12,4 +12,3 @@ for q in range(Q):
             bad += 1
 
     print(bad)
-

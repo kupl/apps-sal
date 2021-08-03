@@ -1,11 +1,11 @@
 t = int(input())
 for _ in range(t):
     n = int(input())
-    a = list(map(int,input().split()))
+    a = list(map(int, input().split()))
     p = []
     for i in range(n):
-        p.append((a[i],i))
-    p.sort(key = lambda x: x[0])
+        p.append((a[i], i))
+    p.sort(key=lambda x: x[0])
     aOrder = [-1] * n
     for i in range(n):
         aOrder[p[i][1]] = i

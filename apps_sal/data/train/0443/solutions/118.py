@@ -6,7 +6,7 @@ class Solution:
             less_right = 0
             greater_left = 0
             greater_right = 0
-            
+
             for j in range(len(rating)):
                 if j < i:
                     if rating[i] > rating[j]:
@@ -20,4 +20,3 @@ class Solution:
                         greater_right += 1
             count += less_left * greater_right + greater_left * less_right
         return count
-

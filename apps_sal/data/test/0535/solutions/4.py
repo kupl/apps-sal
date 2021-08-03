@@ -73,7 +73,7 @@ if is_prime(n):
 
 
 sn = int(n**0.5)
-if (sn*sn == n) and is_prime(sn):
+if (sn * sn == n) and is_prime(sn):
     print(solve(sn, 2))
     return
 
@@ -110,4 +110,3 @@ if n > 1:
     ans = ans * solve(n, 1) % 1000000007
 
 print(ans)
-

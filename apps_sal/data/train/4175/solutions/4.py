@@ -1,1 +1,1 @@
-repeater = lambda a,n : a*n
+def repeater(a, n): return a * n

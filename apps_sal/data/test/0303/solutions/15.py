@@ -5,5 +5,3 @@ if abs(c - a) % abs(x) == 0 and abs(c - a) / abs(x) % 2 == abs(d - b) / abs(y) %
     print("YES")
 else:
     print("NO")
-
-

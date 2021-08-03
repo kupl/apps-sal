@@ -3,10 +3,10 @@ def reverse_number(n):
     x = sN[::-1]
     new = ''
     for i in x:
-        if i =='-':
+        if i == '-':
             continue
         else:
-            new+=i
+            new += i
     if n < 0:
         return -int(new)
     else:

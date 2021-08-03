@@ -12,4 +12,4 @@ for i in range(1, N):
     mxI = max(mxI, A[i - 1] - B_prefix[i - 1])
     total_mx = max(total_mx, mxI + A[i] + B_prefix[i - 1])
 
-print(max(max(A),total_mx))
+print(max(max(A), total_mx))

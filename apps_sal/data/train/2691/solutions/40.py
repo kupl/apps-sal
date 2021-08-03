@@ -15,4 +15,3 @@ def solve(s):
         else:
             pass
     return max
-

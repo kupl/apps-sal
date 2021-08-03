@@ -33,4 +33,3 @@ if bl.all():
 
 else:
     print((-1))
-

@@ -8,7 +8,7 @@ class Cashier:
 
     def getBill(self, product: List[int], amount: List[int]) -> float:
         if self.customer_num == 0:
-            multiplier = 1-(self.discount/100)
+            multiplier = 1 - (self.discount / 100)
         else:
             multiplier = 1
         self.customer_num = (self.customer_num + 1) % self.n
@@ -17,4 +17,3 @@ class Cashier:
 # Your Cashier object will be instantiated and called as such:
 # obj = Cashier(n, discount, products, prices)
 # param_1 = obj.getBill(product,amount)
-

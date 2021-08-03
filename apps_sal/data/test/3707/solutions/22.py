@@ -5,4 +5,3 @@ n = (n // k) + (1 if n % k else 0)
 
 # print(n, d, t)
 print("YES" if d < (n - 1) * t else "NO")
-

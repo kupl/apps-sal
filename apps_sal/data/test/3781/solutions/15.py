@@ -15,14 +15,13 @@ from collections import Counter
 T = int(input())
 for _ in range(T):
     N = int(input())
-    A = list(map(int,input().split()))
-    if N&1:
+    A = list(map(int, input().split()))
+    if N & 1:
         print("Second")
     else:
         for v in list(Counter(A).values()):
-            if v&1:
+            if v & 1:
                 print("First")
                 break
         else:
             print("Second")
-

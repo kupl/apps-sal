@@ -1,1 +1,1 @@
-monkey_count = lambda c: list(range(1, c + 1))
+def monkey_count(c): return list(range(1, c + 1))

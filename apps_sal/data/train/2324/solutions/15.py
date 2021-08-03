@@ -32,4 +32,3 @@ near = nearlist(n, ab)
 fennec, snuke = bfs(0), bfs(n - 1)
 ans = sum(fennec[i] <= snuke[i] for i in range(n))
 print(('Fennec' if ans * 2 > n else 'Snuke'))
-

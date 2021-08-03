@@ -1,5 +1,7 @@
 from collections import defaultdict
 from collections import Counter
+
+
 class Solution:
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         dic = defaultdict(int)

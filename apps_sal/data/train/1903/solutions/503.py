@@ -1,5 +1,7 @@
 from collections import defaultdict
 from heapq import *
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
@@ -8,9 +10,9 @@ class Solution:
             for j, (h, k) in enumerate(points):
                 if j <= i:
                     continue
-                d = abs(x-h)+abs(y-k)
+                d = abs(x - h) + abs(y - k)
                 edges.append((i, j, d))
-        
+
         g = defaultdict(list)
         for e in edges:
             g[e[0]].append((e[1], e[2]))
@@ -23,11 +25,13 @@ class Solution:
         for _ in range(n):
             while True:
                 w, u = heappop(q)
-                if u in seen: continue  
+                if u in seen:
+                    continue
                 cost += w
                 seen.add(u)
                 for v, w in g[u]:
-                    if v in seen: continue
+                    if v in seen:
+                        continue
                     heappush(q, (w, v))
-                break           
+                break
         return cost

@@ -13,5 +13,3 @@ for idx, cost in enumerate(costs[2:]):
     stored_val_2.append(cost + min(stored_val_2[-1], stored_val_2[-2]))
 
 print(min(stored_val_1[-1], stored_val_1[-2], stored_val_2[-1]))
-
-

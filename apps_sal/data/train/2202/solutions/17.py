@@ -1,9 +1,8 @@
+from math import log
 _ = input()
 x = [int(i) for i in input().split()]
 
 res = []
-
-from math import log
 
 
 class SegmentTree(object):
@@ -36,6 +35,7 @@ class SegmentTree(object):
                 n -= 1
             n >>= 1
         return res
+
 
 tree = SegmentTree(list(range(1, len(x) + 1)))
 org = len(x)

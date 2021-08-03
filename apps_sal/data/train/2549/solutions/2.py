@@ -16,7 +16,7 @@ class Solution:
         else:
             extra_space = cnt_space % (cnt_words - 1)
             avg_space = cnt_space // (cnt_words - 1)
-        
+
         #
         result = ''
         word_appeared = False
@@ -26,7 +26,6 @@ class Solution:
                     result += ' ' * avg_space
                 word_appeared = True
                 result += text[i]
-                
-                
+
         result += ' ' * extra_space
         return result

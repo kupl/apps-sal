@@ -5,4 +5,3 @@ for i in range(0, len(a)):
         count += 1
 
 print((700 + count * 100))
-

@@ -10,8 +10,8 @@ def main():
     n = bisect_left(A, 0)
     p = bisect_right(A, 0)
 
-    Negative = np.array(A[:n], dtype = np.int64)
-    Positive = np.array(A[p:], dtype = np.int64)
+    Negative = np.array(A[:n], dtype=np.int64)
+    Positive = np.array(A[p:], dtype=np.int64)
 
     Number_Negative = len(Negative) * len(Positive)
     Number_Positive = len(Negative) * (len(Negative) - 1) // 2 + len(Positive) * (len(Positive) - 1) // 2
@@ -23,7 +23,7 @@ def main():
     # print (Positive)
     # print (Number_Zero)
 
-    def Ncount(x): #x以下の数を数える(x < 0)
+    def Ncount(x):  # x以下の数を数える(x < 0)
         tmp = 0
         for a in Negative:
             tmp += len(Positive) - bisect_left(Positive, (x + a + 1) // a)
@@ -31,10 +31,10 @@ def main():
         return tmp
 
     def Ncount1(x):
-        tmp = (len(Positive) - np.searchsorted(Positive, (-x - 1) // (-Negative), side = 'right')).sum() 
-        return tmp 
+        tmp = (len(Positive) - np.searchsorted(Positive, (-x - 1) // (-Negative), side='right')).sum()
+        return tmp
 
-    def Pcount(x): #x以下の数を数える(x > 0)
+    def Pcount(x):  # x以下の数を数える(x > 0)
         tmp = 0
         for index, a in enumerate(Positive):
             tmp += bisect_right(Positive[index + 1:], x // a)
@@ -46,8 +46,8 @@ def main():
 
     def Pcount1(x):
         tmp = 0
-        tmp += np.searchsorted(Positive, x // Positive, side = 'right').sum()
-        tmp += (len(Negative) - np.searchsorted(Negative, (-x - 1) // (-Negative), side = 'rigth')).sum()
+        tmp += np.searchsorted(Positive, x // Positive, side='right').sum()
+        tmp += (len(Negative) - np.searchsorted(Negative, (-x - 1) // (-Negative), side='rigth')).sum()
         tmp -= np.count_nonzero(Positive * Positive <= x)
         tmp -= np.count_nonzero(Negative * Negative <= x)
         return tmp // 2
@@ -62,12 +62,11 @@ def main():
                 r = mid
             else:
                 l = mid
-        print (r)
+        print(r)
         return
-            
 
     elif Number_Negative < K <= Number_Negative + Number_Zero:
-        print (0)
+        print(0)
         return
 
     else:
@@ -82,12 +81,15 @@ def main():
             else:
                 l = mid
 
-        print (r)
+        print(r)
         # return
 
     # print (Pcount(l) + Number_Negative + Number_Zero)
     # print (Pcount(r) + Number_Negative + Number_Zero)
 
+
 def __starting_point():
     main()
+
+
 __starting_point()

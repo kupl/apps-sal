@@ -1,3 +1,3 @@
-def largest(n,xs):
-  xs.sort()
-  return xs[-n:]
+def largest(n, xs):
+    xs.sort()
+    return xs[-n:]

@@ -8,8 +8,8 @@ curr_empl = set()
 day_empl = set()
 d_s = 0
 for i in range(n):
-    #print(curr_empl)
-    #print(day_empl)
+    # print(curr_empl)
+    # print(day_empl)
     e = A[i]
     if e < 0:
         if -e not in curr_empl:
@@ -33,5 +33,3 @@ if imposs or len(curr_empl) > 0:
 else:
     print(len(days))
     print(' '.join([str(di) for di in days]))
-
-

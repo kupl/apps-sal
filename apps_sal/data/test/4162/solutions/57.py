@@ -1,11 +1,10 @@
-N=int(input())
+N = int(input())
 
-a=list(map(int,input().split()))
+a = list(map(int, input().split()))
 
-ans=0
+ans = 0
 
 for i in range(N):
-    ans+=a[i]-1
+    ans += a[i] - 1
 
 print(ans)
-

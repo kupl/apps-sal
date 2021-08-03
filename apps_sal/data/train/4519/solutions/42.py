@@ -7,7 +7,3 @@ def max_number(n):
     num.reverse()
     out = "".join(num)
     return int(out)
-    
-    
-    
-

@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
         d = defaultdict(set)
@@ -16,5 +17,3 @@ class Solution:
                         continue
                 j += 1
         return ans + 2 * (n - len(list(d.keys())))
-            
-

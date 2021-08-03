@@ -1,7 +1,7 @@
-def even_or_odd(number): 
-    #and that's okay!
+def even_or_odd(number):
+    # and that's okay!
     if number % 2 == 0:
-        #TELL MEEEEE
+        # TELL MEEEEE
         return "Even"
     else:
         return "Odd"

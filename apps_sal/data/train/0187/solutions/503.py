@@ -10,14 +10,14 @@ class Solution:
             curr += c
             temp += min(curr, 4)
             curr -= min(curr, 4)
-            if maxi < temp*bc - rc*r:
-                maxi = temp*bc - rc*r
+            if maxi < temp * bc - rc * r:
+                maxi = temp * bc - rc * r
                 ans = r
         while curr:
             r += 1
             temp += min(curr, 4)
             curr -= min(curr, 4)
-            if maxi < temp*bc - rc*r:
-                maxi = temp*bc - rc*r
+            if maxi < temp * bc - rc * r:
+                maxi = temp * bc - rc * r
                 ans = r
         return ans

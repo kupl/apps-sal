@@ -40,10 +40,9 @@ def solve(k):
     k = k - calc(ans - 1)
     return ds(k)
 
+
 q = int(input())
 
 for i in range(q):
     k = int(input())
     print(solve(k))
-
-

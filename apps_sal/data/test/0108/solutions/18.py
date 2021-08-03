@@ -13,4 +13,3 @@ if current_char < 123:
     print(-1)
 else:
     print(''.join(s))
-

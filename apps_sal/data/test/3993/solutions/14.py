@@ -9,5 +9,3 @@ for i in range(m):
         page = (lst[i] - result) // k
     new_result += 1
 print(count)
-
-

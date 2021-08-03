@@ -1,26 +1,31 @@
 from heapq import *
 
+
 def find(x):
     parent = data[x]
-    if parent < 0: return x
+    if parent < 0:
+        return x
     root = find(parent)
     data[x] = root
     return root
 
+
 def union(x, y):
     root, second = find(x), find(y)
-    if root == second: return False
+    if root == second:
+        return False
     if height[root] < data[second]:
         second, root = root, second
     data[root] += data[second]
-    height[root] = max(height[root], height[second]+1)
+    height[root] = max(height[root], height[second] + 1)
     data[second] = root
     return True
 
+
 N = int(input())
-X = [(0,0)] * N
-Y = [(0,0)] * N
-E = [(0,0)] * N
+X = [(0, 0)] * N
+Y = [(0, 0)] * N
+E = [(0, 0)] * N
 
 for i in range(N):
     x, y = list(map(int, input().split()))
@@ -42,8 +47,8 @@ for i in range(N - 1):
     heappush(H, (y2 - y1, k1, k2))
 
 answer = 0
-data = [-1] * (N+1)  # 1-indexed rootには-sizeが入る
-height = [0] * (N+1)
+data = [-1] * (N + 1)  # 1-indexed rootには-sizeが入る
+height = [0] * (N + 1)
 
 while H:
     w, s, t = heappop(H)
@@ -52,4 +57,3 @@ while H:
         answer += w
 
 print(answer)
-

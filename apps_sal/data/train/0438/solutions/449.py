@@ -12,24 +12,25 @@ class DSU:
         while i != r:
             i, self.fa[i] = self.fa[i], r
         return r
-    
+
     def join(self, x, y):
         x = self.find(x)
         y = self.find(y)
         if x != y:
             self.fa[x] = y
             self.sz[y] += self.sz[x]
-    
+
     def size(self, x):
         x = self.find(x)
         return self.sz[x]
+
 
 class Solution:
     def findLatestStep(self, a: List[int], m: int) -> int:
         n = len(a)
         b = [0 for _ in range(n)]
         dsu = DSU(n)
-        
+
         ans = -1
         valid = set()
         for k, i in enumerate(a, 1):
@@ -42,7 +43,7 @@ class Solution:
 
             if m == dsu.size(j):
                 valid.add(j)
-            
+
             valid = set(p for p in valid if m == dsu.size(p))
             if valid:
                 ans = k

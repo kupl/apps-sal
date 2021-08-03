@@ -1,5 +1,6 @@
 num = int(input())
 
+
 def the_algorithm(num):
     ary = list(str(num))
     sum = 0
@@ -18,5 +19,6 @@ def the_algorithm(num):
             sum += int(i)
 
     return sum
+
 
 print(the_algorithm(num))

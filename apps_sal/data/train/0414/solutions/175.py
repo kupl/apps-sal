@@ -7,5 +7,6 @@ class Solution:
                 cur = arr[i]
                 win = 0
             win += 1
-            if (win == k): break
+            if (win == k):
+                break
         return cur

@@ -19,4 +19,3 @@ while ((h1 > 0) and (h2 > 0)):
 
 print(len(l))
 print('\n'.join(l))
-

@@ -7,8 +7,8 @@ class Solution:
         start_row, start_col = 0, 0
         for row in range(0, rows):
             for col in range(0, cols):
-                cell = grid[row][col] 
-                if  cell >= 0:
+                cell = grid[row][col]
+                if cell >= 0:
                     non_obstacles += 1
                 if cell == 1:
                     start_row, start_col = row, col
@@ -28,8 +28,8 @@ class Solution:
                 path_count += 1
                 return
 
-            # mark the square as visited. case: 0, 1, 2 
-            temp = grid[row][col] 
+            # mark the square as visited. case: 0, 1, 2
+            temp = grid[row][col]
             grid[row][col] = -4
             remain -= 1   # we now have one less square to visit
 

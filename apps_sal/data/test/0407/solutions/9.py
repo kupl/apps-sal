@@ -34,4 +34,3 @@ for num in nums:
     sum += int(''.join(str(matching_digits[c]) for c in num))
 
 print(sum)
-

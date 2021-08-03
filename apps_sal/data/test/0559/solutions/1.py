@@ -24,4 +24,3 @@ for i, a in enumerate(aaa):
     coefs = (coefs - bins * pows[i]) % p
 
 print((*coefs))
-

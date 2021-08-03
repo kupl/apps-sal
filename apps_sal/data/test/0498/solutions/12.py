@@ -7,4 +7,3 @@ side = 'L' if K % 2 == 0 else 'R'
 d = K // 2
 
 print(row + 1, d + 1, side)
-

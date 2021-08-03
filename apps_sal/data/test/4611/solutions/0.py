@@ -21,4 +21,3 @@ for i in range(N):
     Y = y
 else:
     print("Yes")
-

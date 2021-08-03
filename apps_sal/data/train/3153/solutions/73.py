@@ -4,4 +4,3 @@ def playerRankUp(pts):
                "Win 2 out of your next 3 games to rank up."
     else:
         return False
-

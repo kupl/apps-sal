@@ -23,6 +23,7 @@ def cmpfunc(x, y):
     else:
         return 1
 
+
 bb = sorted(strings, key=cmp_to_key(cmpfunc))
 print("".join(bb))
 

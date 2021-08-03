@@ -7,11 +7,12 @@ def main():
         if(l == 1):
             print(n)
             continue
-        c = 9*(l-1)
-        f = int(s[0]*l)
-        if(n>=f):
-            print(c+(f%10))
+        c = 9 * (l - 1)
+        f = int(s[0] * l)
+        if(n >= f):
+            print(c + (f % 10))
         else:
-            print(c+(f%10)-1)
+            print(c + (f % 10) - 1)
+
 
 main()

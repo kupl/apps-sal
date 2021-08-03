@@ -77,4 +77,3 @@ def maxflow(graph):
 
 solve()
 stdout.close()
-

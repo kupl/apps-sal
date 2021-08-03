@@ -1,14 +1,13 @@
 def f(n):
-    line=n
-    p=1
-    
-    while line>0:
+    line = n
+    p = 1
+
+    while line > 0:
         for i in range(line):
             print(p, end="")
             p += 1
         print()
         line -= 1
-    
 
 
 t = int(input())

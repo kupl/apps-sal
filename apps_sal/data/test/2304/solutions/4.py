@@ -1,6 +1,7 @@
 import sys
 sys.setrecursionlimit(10**7)
 
+
 def main():
     N, M = list(map(int, input().split()))
     C = [[] for _ in range(N)]
@@ -10,6 +11,7 @@ def main():
         C[r - 1].append((l - 1, -d))
     INF = 10 ** 10
     P = [INF] * N
+
     def dfs(n, p, f):
         if P[n] != INF:
             if P[n] != p:
@@ -22,7 +24,7 @@ def main():
             if not dfs(i, p + d, n):
                 return False
         return True
-            
+
     for i in range(N):
         if P[i] != INF:
             continue
@@ -30,5 +32,5 @@ def main():
             return False
     return True
 
-print(('Yes' if main() else 'No'))
 
+print(('Yes' if main() else 'No'))

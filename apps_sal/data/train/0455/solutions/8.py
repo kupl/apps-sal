@@ -1,9 +1,9 @@
 class Solution:
     def isPrintable(self, A: List[List[int]]) -> bool:
         m, n = len(A), len(A[0])
-        
+
         c = collections.Counter()
-        dic = collections.defaultdict(lambda: [m+n, -1, m + n, -1, 0])
+        dic = collections.defaultdict(lambda: [m + n, -1, m + n, -1, 0])
         seen = set()
         removed = set()
         for i, row in enumerate(A):
@@ -14,29 +14,31 @@ class Solution:
                 dic[x][3] = max(dic[x][3], j)
                 dic[x][4] += 1
                 seen.add(x)
-        #print(dic)
+        # print(dic)
+
         def helper(x):
-            return abs((dic[x][1] - dic[x][0] + 1)*(dic[x][3] - dic[x][2] + 1) - dic[x][4])
-        
-        temp = sorted(seen, key = helper)
-        
-        #print(temp)
-        
+            return abs((dic[x][1] - dic[x][0] + 1) * (dic[x][3] - dic[x][2] + 1) - dic[x][4])
+
+        temp = sorted(seen, key=helper)
+
+        # print(temp)
+
         k = 0
         #flag = True
         while len(temp) != len(removed):
-            #flag= False 
+            #flag= False
             for t in temp:
-                if t in removed: continue
+                if t in removed:
+                    continue
                 if helper(t) == 0:
                     removed.add(t)
                     break
                 else:
                     a, b, c, d, total = dic[t]
                     flag = True
-                    for i in  range(a, b + 1):
+                    for i in range(a, b + 1):
                         for j in range(c, d + 1):
-                            if A[i][j]!= t and A[i][j] not in removed:
+                            if A[i][j] != t and A[i][j] not in removed:
                                 flag = False
                                 break
                         if not flag:
@@ -48,6 +50,3 @@ class Solution:
             else:
                 break
         return len(temp) == len(removed)
-                        
-
-

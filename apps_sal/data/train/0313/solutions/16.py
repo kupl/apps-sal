@@ -13,12 +13,12 @@ class Solution:
                     if bouq >= m:
                         return True
             return bouq >= m
-        
+
         lo, hi = 1, max(blooms)
         while lo < hi:
-            mid = (hi+lo)//2
+            mid = (hi + lo) // 2
             if not check(mid):
                 lo = mid + 1
-            else: hi = mid
+            else:
+                hi = mid
         return lo if check(lo) else -1
-

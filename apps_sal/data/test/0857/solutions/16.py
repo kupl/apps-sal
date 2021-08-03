@@ -4,11 +4,11 @@ real = [i for i in input().split()]
 
 ht = {}
 for i in real:
-	ht[i] = True
+    ht[i] = True
 
 ans = []
 for i in cons:
-	if ht.get(i, None) == True:
-		ans.append(i)
+    if ht.get(i, None) == True:
+        ans.append(i)
 
 print(" ".join(ans))

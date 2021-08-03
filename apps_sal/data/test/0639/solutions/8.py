@@ -10,4 +10,3 @@ if x in a:
     result += 1
 
 print(result)
-

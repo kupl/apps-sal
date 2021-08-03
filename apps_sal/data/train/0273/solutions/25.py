@@ -1,4 +1,6 @@
 from collections import deque
+
+
 class Solution:
     def racecar(self, target: int) -> int:
         if target == 0:
@@ -8,7 +10,7 @@ class Solution:
         queue.append((0, 1))
         visited.add((0, 1))
         step = 1
-        
+
         while queue:
             for _ in range(len(queue)):
                 cur_pos, cur_speed = queue.popleft()
@@ -26,5 +28,5 @@ class Solution:
                     queue.append((cur_pos, next_speed))
                     visited.add((cur_pos, next_speed))
             step += 1
-        
+
         return -1

@@ -8,4 +8,3 @@ while len(s) > 0:
         a += 1
     s.pop()
 print(a)
-

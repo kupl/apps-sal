@@ -1,11 +1,13 @@
 import sys
 from collections import deque
 
+
 def debug(x, table):
     for name, val in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
+
 
 def get_minsp(message, As):
     min_sp = 0
@@ -32,6 +34,7 @@ def get_minsp(message, As):
                 capa = As[index]
 
     return max_len, min_sp + 1
+
 
 def solve():
     MOD = 10**9 + 7
@@ -91,8 +94,8 @@ def solve():
     print(min_sp)
 
 
-
-
 def __starting_point():
     solve()
+
+
 __starting_point()

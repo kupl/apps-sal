@@ -53,4 +53,3 @@ for i in range(N):
     ans = (ans * color[i]) % mod
 
 print(ans)
-

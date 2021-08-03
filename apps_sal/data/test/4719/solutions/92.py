@@ -6,7 +6,7 @@ cnt = []
 for si in s:
     tmp = [0] * 26
     for i in range(len(si)):
-        tmp[ord(si[i])-97] += 1
+        tmp[ord(si[i]) - 97] += 1
     if cnt == []:
         cnt = deepcopy(tmp)
     else:
@@ -16,6 +16,5 @@ for si in s:
 ans = ''
 for i in range(26):
     for j in range(cnt[i]):
-        ans += chr(i+97)
+        ans += chr(i + 97)
 print(ans)
-

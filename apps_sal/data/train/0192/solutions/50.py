@@ -10,7 +10,6 @@ class Solution:
             urs = st.pop()
             # print(left, urs, right)
             mySum += urs
-            
 
         # print(st)
         return mySum

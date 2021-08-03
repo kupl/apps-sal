@@ -23,4 +23,3 @@ for i in range(1, K + 2):
     p = p * (s_len + i - 1) * inv[i] * 25 * inv[26] % MOD
 
 print(ans)
-

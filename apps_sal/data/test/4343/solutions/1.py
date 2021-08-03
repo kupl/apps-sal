@@ -26,4 +26,3 @@ for i in range(n - 1, -1, -1):
         tt[i - 1] += c // 26
     res[i] = chr(tt[i] + ord('a'))
 print(''.join(res))
-

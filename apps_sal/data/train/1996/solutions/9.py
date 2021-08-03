@@ -6,12 +6,12 @@ class Solution:
         visited, res = set(), []
         for i in range(len(graph)):
             outdegree[i] += len(graph[i])
-            if not graph[i]: 
+            if not graph[i]:
                 queue.append(i)
                 visited.add(i)
             for node in graph[i]:
                 dic[node].append(i)
-        
+
         while queue:
             node = queue.popleft()
             res.append(node)
@@ -22,9 +22,3 @@ class Solution:
                     visited.add(nbr)
 
         return(sorted(res))
-        
-
-            
-                    
-
-

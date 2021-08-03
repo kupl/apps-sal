@@ -2,7 +2,7 @@ def str_count(strng, letter):
     count = 0
     for i in strng:
         if i == letter:
-            count +=1
+            count += 1
         else:
             pass
     return count

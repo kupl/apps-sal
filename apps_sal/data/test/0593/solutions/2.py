@@ -14,4 +14,3 @@ for i in range(n):
     if b[i] == q:
         print(i + 1)
         return
-

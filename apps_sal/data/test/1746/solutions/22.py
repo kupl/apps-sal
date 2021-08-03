@@ -31,4 +31,3 @@ for i in range(2, n + 1):
     graph[j].append(i)
 
 print(('No', 'Yes')[BFS(1)])
-

@@ -1,10 +1,10 @@
 def calculate_age(year_of_birth, current_year):
     if year_of_birth > current_year:
-            diff = year_of_birth - current_year
-            if diff == 1:
-                return f"You will be born in {diff} year."
-            else:
-                return f"You will be born in {diff} years."
+        diff = year_of_birth - current_year
+        if diff == 1:
+            return f"You will be born in {diff} year."
+        else:
+            return f"You will be born in {diff} years."
     elif year_of_birth == current_year:
         return "You were born this very year!"
     else:

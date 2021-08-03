@@ -1,11 +1,12 @@
 3
 
+
 def main():
     s = input()
     n = len(s)
     if n == 1:
         return 1
-    
+
     fst = 1
     if int(s[0]) < int(s[1]):
         fst = 2
@@ -27,8 +28,6 @@ def main():
         else:
             cur += 1
     return ans
-    
-        
+
 
 print(main())
-

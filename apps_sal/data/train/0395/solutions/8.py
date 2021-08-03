@@ -2,6 +2,7 @@ from collections import deque
 from bisect import bisect_left
 from math import inf
 
+
 def calc_jumps(nums):
     nums = sorted((a, i) for i, a in enumerate(nums))
     jumps = [None] * len(nums)
@@ -12,7 +13,8 @@ def calc_jumps(nums):
             index_stack.popleft()
         index_stack.appendleft(i)
     return jumps
-    
+
+
 class Solution:
     def oddEvenJumps(self, A: List[int]) -> int:
         odd_jumps = calc_jumps(A)

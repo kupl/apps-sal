@@ -6,10 +6,9 @@ for n in range(N):
     if s >= T:
         a = s
     else:
-        a = (T-s+d-1) // d
-        a = s+d*a
+        a = (T - s + d - 1) // d
+        a = s + d * a
     if bt == -1 or a < bt:
         bt = a
-        br = n+1
+        br = n + 1
 print(br)
-

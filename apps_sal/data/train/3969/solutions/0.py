@@ -1,5 +1,6 @@
 from math import ceil, log10
 
+
 def graceful_tipping(bill):
     bill *= 1.15
     if bill < 10:

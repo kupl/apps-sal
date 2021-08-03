@@ -18,12 +18,15 @@ class Factorial():
         return self.inv[m]
 
     def perm(self, m, k):
-        if m < k: return 0
+        if m < k:
+            return 0
         return self.fct[m] * self.inv[m - k] % self.mod
 
     def comb(self, m, k):
-        if m < k: return 0
+        if m < k:
+            return 0
         return self.fct[m] * self.inv[k] * self.inv[m - k] % self.mod
+
 
 MOD = 1000000007
 

@@ -2,14 +2,19 @@
 import sys
 
 #lines = stdin.readlines()
+
+
 def rint():
     return list(map(int, sys.stdin.readline().split()))
+
 
 def input():
     return sys.stdin.readline().rstrip('\n')
 
+
 def oint():
     return int(input())
+
 
 n = oint()
 
@@ -22,6 +27,8 @@ for _ in range(n):
         else:
             node[c1] = node[c1].union(s)
 v = set()
+
+
 def dfs(k):
     if k in v:
         return
@@ -30,6 +37,8 @@ def dfs(k):
         if not kk in v:
             dfs(kk)
     return
+
+
 ans = 0
 for k in node:
     if k in v:
@@ -38,6 +47,3 @@ for k in node:
     dfs(k)
 
 print(ans)
-
-
-

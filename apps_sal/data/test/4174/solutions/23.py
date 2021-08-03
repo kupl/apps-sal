@@ -2,7 +2,7 @@
 n, x = list(map(int, input().split()))
 L = list(map(int, input().split()))
 ans = 0
-ct = 1 
+ct = 1
 for i in range(n):
     ans = ans + L[i]
     if ans > x:
@@ -10,4 +10,3 @@ for i in range(n):
     else:
         ct += 1
 print(ct)
-

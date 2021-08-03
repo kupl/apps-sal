@@ -23,4 +23,3 @@ assert old == new
 ans += old
 
 print(ans)
-

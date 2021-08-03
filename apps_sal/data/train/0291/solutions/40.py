@@ -10,4 +10,3 @@ class Solution:
                 even += 1
             res = (res + odds) % 1000000007
         return res % 1000000007
-

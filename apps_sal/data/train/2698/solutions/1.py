@@ -1,4 +1,4 @@
-def sum_arrays(array1,array2):
+def sum_arrays(array1, array2):
     number1 = 0
     number2 = 0
     b1 = False

@@ -10,7 +10,7 @@ for _ in range(m):
     v -= 1
     gph[u].append((v, _))
     gph[v].append((u, _))
-    
+
 t = -1
 if d.count(1) % 2 == 1:
     if -1 not in d:
@@ -41,8 +41,7 @@ while len(stk) > 0:
             ans[e] = True
         stk.pop()
         pass
-    
-print(ans.count(True))
-print("\n".join([str(i+1) for i in range(m) if ans[i]]))
-#1231
 
+print(ans.count(True))
+print("\n".join([str(i + 1) for i in range(m) if ans[i]]))
+# 1231

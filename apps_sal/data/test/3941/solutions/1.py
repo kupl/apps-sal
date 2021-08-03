@@ -1,11 +1,13 @@
 import sys
 from collections import deque
 
+
 def debug(x, table):
     for name, val in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
+
 
 def solve():
     n, m = map(int, sys.stdin.readline().split())
@@ -48,6 +50,7 @@ def solve():
 
     print('YES')
 
+
 def bfs(Adj, edges, cols, u):
     nxts = deque([u])
     cols[u] = 0
@@ -71,6 +74,9 @@ def bfs(Adj, edges, cols, u):
 
     return True
 
+
 def __starting_point():
     solve()
+
+
 __starting_point()

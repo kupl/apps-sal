@@ -8,5 +8,3 @@ def count_correct_characters(correct, guess):
                 if i == j and x == y:
                     count += 1
         return count
-    
-

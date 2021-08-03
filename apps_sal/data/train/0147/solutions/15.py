@@ -1,12 +1,12 @@
 class Solution:
     def maxPerformance1(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
-        people = sorted(zip(speed,efficiency),key=lambda x: -x[1])
-        total,sumSpeed = 0,0
-        for s,e in people:
-            sumSpeed +=s
-            total = max(total,sumSpeed * e)
+        people = sorted(zip(speed, efficiency), key=lambda x: -x[1])
+        total, sumSpeed = 0, 0
+        for s, e in people:
+            sumSpeed += s
+            total = max(total, sumSpeed * e)
         return total
-        
+
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
         people = sorted(zip(speed, efficiency), key=lambda x: -x[1])
         print(people)
@@ -20,22 +20,5 @@ class Solution:
                 sum_speed += s - heapq.heappushpop(min_heap, s)
 
             result = max(result, sum_speed * e)
-           
-        return result  % 1000000007
 
-
-
-
-
-
-
-
-
-
-        
-        
-        
-        
-        
-        
-
+        return result % 1000000007

@@ -35,4 +35,3 @@ print((n - 1))
 for i in range(2, n + 1):
     ans = c(n, i) - c(left_len + right_len, i - 1)
     print((ans % mod))
-

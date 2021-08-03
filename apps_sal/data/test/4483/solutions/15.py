@@ -19,4 +19,3 @@ result = 0
 
 result = (x - a) % b
 print(result)
-

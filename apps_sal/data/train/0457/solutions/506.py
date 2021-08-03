@@ -1,13 +1,16 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        if amount == 0: return 0
+        if amount == 0:
+            return 0
         queue = [[0, 0]]
         visited = {0}
         num = 0
         for pos, num in queue:
             for c in coins:
-                if pos + c in visited: continue
-                if pos + c == amount: return num + 1
+                if pos + c in visited:
+                    continue
+                if pos + c == amount:
+                    return num + 1
                 if pos + c < amount:
                     queue.append([pos + c, num + 1])
                     visited.add(pos + c)

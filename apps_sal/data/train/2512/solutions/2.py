@@ -12,10 +12,10 @@ class Solution:
                     if ch == '.':
                         pass
                     elif ch == '+':
-                        afterplus=True
+                        afterplus = True
                     elif ch == '@':
                         newemail.append(ch)
-                        afterat=True
+                        afterat = True
                     else:
                         if not afterplus:
                             newemail.append(ch)

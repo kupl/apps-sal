@@ -1,7 +1,7 @@
 s = list(input())
 n = len(s)
-s1 = s[0:(n-1)//2]
-s2 = s[(n-1)//2+1:n]
+s1 = s[0:(n - 1) // 2]
+s2 = s[(n - 1) // 2 + 1:n]
 sr = list(reversed(s))
 s1r = list(reversed(s1))
 s2r = list(reversed(s2))

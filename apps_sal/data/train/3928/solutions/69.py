@@ -3,4 +3,3 @@ def billboard(name, price=30):
     for _ in name:
         r += price
     return r
-

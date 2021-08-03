@@ -1,4 +1,4 @@
-def check_exam(arr1,arr2):
+def check_exam(arr1, arr2):
     print((arr1, arr2))
     i = 0
     result = []
@@ -11,5 +11,3 @@ def check_exam(arr1,arr2):
             result.append(-1)
         i += 1
     return sum(result) if sum(result) > 0 else 0
-  
-

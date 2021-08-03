@@ -3,7 +3,7 @@ for _ in range(t):
     a = 0
     b = 0
     n = int(input())
-    As = list(map(int,input().split()))
+    As = list(map(int, input().split()))
     left = 0
     right = n - 1
 
@@ -31,4 +31,3 @@ for _ in range(t):
     if curr != 0:
         count += 1
     print(count, a, b)
-

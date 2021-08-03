@@ -12,5 +12,3 @@ for i, n in enumerate(N):
         break
 
 print("".join(list(map(str, N))))
-        
-

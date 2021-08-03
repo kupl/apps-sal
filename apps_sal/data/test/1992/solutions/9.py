@@ -13,10 +13,6 @@ for i in range(len(b)):
         d[a[d[b[i]]]] += 1
         m = a[d[b[i]]]
         a[d[b[i]]] = a[d[b[i]] + 1]
-        a[d[b[i]] + 1] = m 
-    
-print(cnt)
-    
-    
-    
+        a[d[b[i]] + 1] = m
 
+print(cnt)

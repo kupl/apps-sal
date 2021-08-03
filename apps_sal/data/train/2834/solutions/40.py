@@ -10,5 +10,5 @@ def symmetric_point(p, q):
     elif q[1] < p[1]:
         y = q[1] - abs(p[1] - q[1])
     else:
-        y = p[1]   
+        y = p[1]
     return [x, y]

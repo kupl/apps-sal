@@ -22,4 +22,3 @@ else:
             continue
 
 print(ans)
-

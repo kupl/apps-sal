@@ -1,11 +1,14 @@
 # Solution link: https://leetcode.com/problems/verbal-arithmetic-puzzle/discuss/939496/Python-Optimizations-to-beat-TLE-Top-Down-DP-(93)
 
 
-#dt = {} for i in x: dt[i] = dt.get(i,0)+1
-import sys;input = sys.stdin.readline
-inp,ip = lambda :int(input()),lambda :[int(w) for w in input().split()]
+# dt = {} for i in x: dt[i] = dt.get(i,0)+1
+import collections
+import functools
+import sys
+input = sys.stdin.readline
+inp, ip = lambda: int(input()), lambda: [int(w) for w in input().split()]
 
-import functools,collections
+
 def isSolvable(words, result):
 
     @functools.lru_cache(None)
@@ -16,20 +19,20 @@ def isSolvable(words, result):
 
         if i - 1 in checkpoints:
             t = str(abs(total))[::-1]
-            for j in checkpoints[i-1]:
+            for j in checkpoints[i - 1]:
                 if (j < len(t)) and (t[j] != '0'):
                     return False
 
         for j in range(len(nums)):
-            if (nums[j] == 0) and (chars[i] not in not_zero) and helper(i+1, total, nums[:j]+nums[j+1:]):
+            if (nums[j] == 0) and (chars[i] not in not_zero) and helper(i + 1, total, nums[:j] + nums[j + 1:]):
                 return True
-            elif (nums[j] != 0) and helper(i+1, total + nums[j] * mult[chars[i]], nums[:j] + nums[j+1:]):
+            elif (nums[j] != 0) and helper(i + 1, total + nums[j] * mult[chars[i]], nums[:j] + nums[j + 1:]):
                 return True
 
         return False
 
     # 1. Check the lengths of each word and result
-    longest_word = len(max(words, key = len))
+    longest_word = len(max(words, key=len))
     if (len(result) < longest_word) or (len(result) > longest_word + 1):
         return False
 
@@ -39,21 +42,22 @@ def isSolvable(words, result):
 
     # 3. Leading letters cannot be zero unless the length of the word is 1
     not_zero = set((word[0] for word in words if len(word) > 1))
-    if len(result) > 1: not_zero.add(result[0])
+    if len(result) > 1:
+        not_zero.add(result[0])
 
     # 4. Set of all letters
     chars = set(result + ''.join(words))
 
     # 5. Letters in words add to the total
-    mult = {char:0 for char in chars}
+    mult = {char: 0 for char in chars}
     groups = collections.defaultdict(set)
     for word in words:
-        for i,char in enumerate(reversed(word)):
+        for i, char in enumerate(reversed(word)):
             mult[char] += 10**i
             groups[i].add(char)
 
     # 6. And letters in result subtract from the total
-    for i,char in enumerate(reversed(result)):
+    for i, char in enumerate(reversed(result)):
         mult[char] -= 10**i
         groups[i].add(char)
 
@@ -65,15 +69,15 @@ def isSolvable(words, result):
 
     # 8. All letters that occur later in the word may affect letters ealrier in the word
     for g in range(1, len(groups)):
-        groups[g] |= groups[g-1]
-    chars.sort(key = lambda c: min(g for g in range(len(groups)) if c in groups[g]))
+        groups[g] |= groups[g - 1]
+    chars.sort(key=lambda c: min(g for g in range(len(groups)) if c in groups[g]))
 
     # 9. Once a number has been assigned to all the letters in a group
     #    the digit in total at position 10**i must be zero for a solution to exist
     checkpoints = collections.defaultdict(list)
     seen = set()
     checked = set()
-    for i,char in enumerate(chars):
+    for i, char in enumerate(chars):
         seen.add(char)
         for g in groups:
             if (g not in checked) and groups[g].issubset(seen):
@@ -82,12 +86,12 @@ def isSolvable(words, result):
 
     return helper(0, 0, tuple(range(10)))
 
+
 n = inp()
 x = [input().strip() for i in range(n)]
 y = input().strip()
-ans = isSolvable(x,y)
+ans = isSolvable(x, y)
 if ans:
     print("true")
 else:
     print("false")
-

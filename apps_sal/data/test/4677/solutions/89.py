@@ -10,4 +10,3 @@ for char in s:
             le = len(ans)
             ans = ans[0:le - 1]
 print(ans)
-

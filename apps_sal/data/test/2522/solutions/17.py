@@ -8,11 +8,10 @@ for idx_A, a in enumerate(A):
         idx_B += 1
     if ma < idx_A - idx_B:
         ma = idx_A - idx_B
-Ans = (B+B)[N-ma-1:2*N-ma-1]
+Ans = (B + B)[N - ma - 1:2 * N - ma - 1]
 for a, b in zip(A, Ans):
     if a == b:
         print("No")
         return
 print("Yes")
 print((" ".join(map(str, Ans))))
-

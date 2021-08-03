@@ -18,5 +18,5 @@ def shift():
         i += 1
     return shifted
 
-print(shift())
 
+print(shift())

@@ -25,4 +25,3 @@ while idx1 < len(msg1):
     count += 1
 
 print(count)
-

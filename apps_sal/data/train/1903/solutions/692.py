@@ -1,15 +1,16 @@
 class UF:
     def __init__(self, n):
         self.root = [i for i in range(n)]
-    
+
     def find(self, a):
         if self.root[a] != a:
             self.root[a] = self.find(self.root[a])
         return self.root[a]
-    
+
     def unite(self, a, b):
         self.root[self.find(a)] = self.find(b)
-        
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)

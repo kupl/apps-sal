@@ -13,7 +13,7 @@ for i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
 for i in 'abcdefghijklmnopqrstuvwxyz':
     g1[i] = 0
     g3[i] = 0
-    
+
 e = 0
 f = 0
 
@@ -28,7 +28,7 @@ for i in x:
     else:
         l.append(i)
         g1[i] += 1
-        
+
 for i in y:
     if i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
         u2.append(i)
@@ -49,7 +49,7 @@ for i in g1:
             g3[i] = can - ct
             e += g1[i]
             g1[i] = 0
-            
+
 
 for i in g2:
     ct = g2[i]
@@ -76,7 +76,7 @@ for i in g1:
             g4[i.upper()] = can - ct
             f += g1[i]
             g1[i] = 0
-            
+
 
 for i in g2:
     ct = g2[i]
@@ -90,7 +90,6 @@ for i in g2:
             g3[i.lower()] = can - ct
             f += g2[i]
             g2[i] = 0
-            
+
 
 print(e, f)
-

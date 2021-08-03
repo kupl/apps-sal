@@ -9,4 +9,3 @@ def jumping(arr, n):
             arr[i] += 1
         i += k
     return sum([i == n for i in arr])
-

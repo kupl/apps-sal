@@ -12,21 +12,20 @@ ls_s = [i for i in range(N) if a[i] < b[i]]
 
 flg = 1
 if len(ls_l) > 1:
-    ls_l2 = [(b[i],i) for i in ls_l]
+    ls_l2 = [(b[i], i) for i in ls_l]
     ls_l2.sort()
     idx = ls_l2[0][1]
-    count = sum(a)-b[idx]
+    count = sum(a) - b[idx]
 elif len(ls_m) == N:
     count = 0
 else:
     for idx in ls_m:
         count += a[idx]
-    
+
     for idx in ls_s:
         count += a[idx]
-    
-    if flg==1:
-        for idx in ls_l:
-            count += a[idx]-b[idx]
-print(count)
 
+    if flg == 1:
+        for idx in ls_l:
+            count += a[idx] - b[idx]
+print(count)

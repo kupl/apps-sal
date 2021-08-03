@@ -1,6 +1,8 @@
 import sys
 
 q = 998244353
+
+
 def exp(b, e):
     ans = 1
     while e > 0:
@@ -12,9 +14,10 @@ def exp(b, e):
             e = e - 1
     return ans
 
+
 n = int(sys.stdin.readline().strip())
 x = []
-for i in range (1, n):
+for i in range(1, n):
     ans = 0
     ans = ans + 9 * exp(10, n - i - 1)
     ans = ans + 9 * exp(10, n - i - 1)

@@ -1,6 +1,6 @@
 def is_palindrome(string):
     string = string.lower()
-    if string == string[::-1] :
+    if string == string[::-1]:
         return True
-    else :
+    else:
         return False

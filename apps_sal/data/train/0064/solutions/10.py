@@ -1,5 +1,6 @@
 import sys
-input = lambda: sys.stdin.readline().rstrip()
+def input(): return sys.stdin.readline().rstrip()
+
 
 T = int(input())
 for _ in range(T):
@@ -10,8 +11,8 @@ for _ in range(T):
     x2 = N - 1
     t1, t2 = 0, 0
     while x2 - x1 > 1:
-        a1 = t1 + (A[x1+1] - A[x1]) / (x1 + 1)
-        a2 = t2 + (A[x2] - A[x2-1]) / (N - x2)
+        a1 = t1 + (A[x1 + 1] - A[x1]) / (x1 + 1)
+        a2 = t2 + (A[x2] - A[x2 - 1]) / (N - x2)
         if a1 < a2:
             t1 = a1
             x1 += 1
@@ -23,5 +24,3 @@ for _ in range(T):
     else:
         ans = t1 + ((A[x2] - A[x1]) - (N - x2) * (t1 - t2)) / (x1 + 1 + N - x2)
     print(ans)
-
-

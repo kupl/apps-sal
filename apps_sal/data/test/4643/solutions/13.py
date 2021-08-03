@@ -5,4 +5,3 @@ x = 1234**500000
 for i in range(n):
     print('{} '.format(a[i]), end='')
 print('')
-

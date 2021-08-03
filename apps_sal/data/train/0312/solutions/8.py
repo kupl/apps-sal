@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class Solution:
     def shortestSubarray(self, A, K):
         d = collections.deque([[0, 0]])

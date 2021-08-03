@@ -1,2 +1,2 @@
 import math
-print(math.ceil(int(input())/2))
+print(math.ceil(int(input()) / 2))

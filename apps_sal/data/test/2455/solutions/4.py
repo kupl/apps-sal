@@ -9,11 +9,13 @@ def test(s):
             res.append(i)
     return res
 
+
 def check(a):
     for i in range(len(a[0])):
         if not "O" in [a[j][i] for j in range(len(a))]:
             return True
     return False
+
 
 t = int(input())
 for i in range(t):
@@ -23,4 +25,3 @@ for i in range(t):
     for j in x:
         print(j[0], "x", j[1], sep="", end=" ")
     print()
-

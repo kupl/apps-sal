@@ -14,23 +14,23 @@ possible = {
 
 cache = {}
 
+
 class Solution:
     def knightDialer(self, n: int) -> int:
         total = self.helper(-1, n, 0) % 1000000007
         return total
-    
-    
+
     def helper(self, num, n, total):
         if (num, n) in cache:
             total += cache[(num, n)]
             return total
-            
+
         nxt = possible[num]
         total_begin = total
         if n == 1:
             total += len(nxt)
         else:
             for num_next in nxt:
-                total = self.helper(num_next, n-1, total) % 1000000007
+                total = self.helper(num_next, n - 1, total) % 1000000007
         cache[(num, n)] = total - total_begin
         return total

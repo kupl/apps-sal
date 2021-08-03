@@ -6,4 +6,3 @@ def set_alarm(employed, vacation):
     elif employed == False:
         return False
     return True
-

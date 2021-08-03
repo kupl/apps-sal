@@ -12,5 +12,5 @@ for v in d.values():
         sum_c += comb(v, 2, exact=True)
 
 for a in A:
-    x = sum_c - comb(d[a], 2, exact=True) + comb(d[a]-1, 2, exact=True)
+    x = sum_c - comb(d[a], 2, exact=True) + comb(d[a] - 1, 2, exact=True)
     print(x)

@@ -26,4 +26,3 @@ for i in range(0, 200001, 1):
     res = min(res, tmp)
 
 print(res)
-

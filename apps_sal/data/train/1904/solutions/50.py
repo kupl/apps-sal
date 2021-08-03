@@ -1,10 +1,11 @@
 import heapq
 
+
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         def dist(p):
             return p[0]**2 + p[1]**2
-        
+
         def qs(l, r, k):
             if l >= r:
                 return
@@ -21,6 +22,6 @@ class Solution:
             if ppos < k:
                 qs(ppos + 1, r, k)
             qs(l, ppos - 1, k)
-        
+
         qs(0, len(points) - 1, K - 1)
         return points[:K]

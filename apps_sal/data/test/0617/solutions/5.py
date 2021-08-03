@@ -11,7 +11,7 @@ for i in p:
         if i >= j:
             continue
         if s[i] == '*' and s[j] == '*':
-            t = s[:i+1] + "(" + s[i+1:j] + ")" + s[j:]
+            t = s[:i + 1] + "(" + s[i + 1:j] + ")" + s[j:]
             res = eval(t)
             if res > ans:
                 ans = res

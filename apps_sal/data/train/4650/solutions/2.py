@@ -6,7 +6,5 @@ def validPhoneNumber(phoneNumber):
             number += 'x'
         else:
             number += l
-    
+
     return number == template
-
-

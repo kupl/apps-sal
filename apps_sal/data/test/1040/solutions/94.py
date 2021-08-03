@@ -19,5 +19,4 @@ for i in range(n):
             stack.clear()
     else:
         stack.clear()
-print((n-ans*3))
-
+print((n - ans * 3))

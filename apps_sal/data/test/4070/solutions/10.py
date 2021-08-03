@@ -9,4 +9,3 @@ x += s.count('A')
 x += s.count('B') << 1
 x += s.count('D')
 print(x)
-

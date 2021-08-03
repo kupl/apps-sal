@@ -12,7 +12,7 @@ class Solution:
                 cur_customer -= 4
                 cur_income += full_income
             else:
-                cur_income += cur_customer * boardingCost - runningCost 
+                cur_income += cur_customer * boardingCost - runningCost
                 cur_customer = 0
             cnt += 1
             if cur_income > max_income:

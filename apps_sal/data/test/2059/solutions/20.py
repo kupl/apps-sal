@@ -16,4 +16,3 @@ for i in range(n):
     # k = min(k, int(a[i] / (n - 1 - i)), int(a[i] / i))
 
 print(k)
-

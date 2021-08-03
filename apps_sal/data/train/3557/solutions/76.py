@@ -15,4 +15,3 @@ class TestOddCount(unittest.TestCase):
         n = 15023
         actual = odd_count(n)
         self.assertEqual(actual, 7511)
-

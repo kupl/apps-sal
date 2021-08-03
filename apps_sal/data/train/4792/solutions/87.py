@@ -9,4 +9,3 @@ def parse_float(string):
     else:
 
         return result
-

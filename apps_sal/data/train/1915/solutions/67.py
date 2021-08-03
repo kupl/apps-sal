@@ -37,7 +37,7 @@ class Solution:
                     visited.add(i)
 
                     for j in range(m):
-                        cleared.add(i+j)
+                        cleared.add(i + j)
                         if invert_idx[i + j]:
                             for k in invert_idx[i + j]:
                                 invalid[k].remove(i + j)

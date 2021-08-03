@@ -4,7 +4,7 @@ class Solution:
 
         def is_possible(threshold):
             count = 0
-            prev = -math.inf 
+            prev = -math.inf
             for x in position:
                 if x - prev >= threshold:
                     count += 1
@@ -16,7 +16,7 @@ class Solution:
         while lo < hi:
             mid = (lo + hi + 1) // 2
             if is_possible(mid):
-                lo = mid 
+                lo = mid
             else:
                 hi = mid - 1
         return lo

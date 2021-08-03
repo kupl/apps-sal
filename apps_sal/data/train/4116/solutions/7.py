@@ -1,3 +1,5 @@
-c = lambda x,f: bool(__import__('re').match(r'([a-zA-Z]+\.({}))'.format("|".join(x)),f))
-is_audio=lambda f:c(['mp3','flac','alac','aac'],f)
-is_img=lambda f:c(['jpg','jpeg','png','bmp','gif'],f)
+def c(x, f): return bool(__import__('re').match(r'([a-zA-Z]+\.({}))'.format("|".join(x)), f))
+
+
+def is_audio(f): return c(['mp3', 'flac', 'alac', 'aac'], f)
+def is_img(f): return c(['jpg', 'jpeg', 'png', 'bmp', 'gif'], f)

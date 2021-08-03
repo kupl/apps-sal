@@ -4,8 +4,9 @@ for i in range(2, 100050):
     if (phi[i] == 0):
         for j in range(i, 100051, i):
             if (phi[j] == 0):
-                phi[j]=j
-            phi[j] = phi[j]//i*(i-1)
+                phi[j] = j
+            phi[j] = phi[j] // i * (i - 1)
+
 
 def Fenjie(n):
     k = {}
@@ -13,8 +14,8 @@ def Fenjie(n):
         return {}
     a = 2
     while (n >= 2):
-        b = n%a
-        if (a*a > n):
+        b = n % a
+        if (a * a > n):
             if (n in k):
                 k[n] += 1
             else:
@@ -25,10 +26,11 @@ def Fenjie(n):
                 k[a] += 1
             else:
                 k[a] = 1
-            n = n//a
+            n = n // a
         else:
             a += 1
     return k
+
 
 def Euler(k):
     if (len(k) == 0):
@@ -37,15 +39,15 @@ def Euler(k):
     for i in k:
         s = k[i]
         ans *= pow(i, s)
-        ans = ans//i*(i-1)
+        ans = ans // i * (i - 1)
     return ans
 
+
 n, k = list(map(int, input().split()))
-k = (k+1)//2
+k = (k + 1) // 2
 while (k):
     k -= 1
     n = Euler(Fenjie(n))
-    if (n==1):
+    if (n == 1):
         break
-print(n%(10**9+7))
-
+print(n % (10**9 + 7))

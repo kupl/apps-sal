@@ -9,7 +9,8 @@ for z in arr:
     if z == z[::-1]:
         p = z
     else:
-        if z not in s: continue
+        if z not in s:
+            continue
         if z[::-1] in s:
             s.remove(z)
             s.remove(z[::-1])

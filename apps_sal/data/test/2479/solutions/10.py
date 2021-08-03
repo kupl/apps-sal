@@ -12,4 +12,3 @@ for _ in range(q):
     H[a] = min(H[a], b)
     ans -= X[a][b]
 print(ans)
-

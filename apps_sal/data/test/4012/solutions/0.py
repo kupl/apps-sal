@@ -1,4 +1,4 @@
-mii = 3*10**4
+mii = 3 * 10**4
 
 factors = [set() for _ in range(mii + 1)]
 factors[1] = set([1])
@@ -6,7 +6,7 @@ factors[1] = set([1])
 for k in range(2, mii + 1):
     for p in range(2, mii + 1):
         if k % p == 0:
-            factors[k] = set(ole*p for ole in factors[k//p]) | factors[k//p]
+            factors[k] = set(ole * p for ole in factors[k // p]) | factors[k // p]
             break
         elif p * p > k:
             factors[k] = set([1, k])
@@ -18,7 +18,6 @@ t = int(input())
 for _ in range(t):
 
     a, b, c = [int(x) for x in input().split()]
-
 
     best_score = 10**15
     best_trip = a, b, c
@@ -46,4 +45,3 @@ for _ in range(t):
 
     print(best_score)
     print(*best_trip)
-

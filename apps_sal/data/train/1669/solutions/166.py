@@ -1,6 +1,7 @@
 class Solution:
     import heapq
     # https://www.youtube.com/watch?v=Zz7BWDY5kvM&list=UUSYPN_WIvDy4spjxzdevk6Q
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if W == 1:
             return True
@@ -23,4 +24,3 @@ class Solution:
                 else:
                     return False
         return bool(not heap)
-

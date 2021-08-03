@@ -1,5 +1,6 @@
 MOD = 1000000007
 
+
 def main():
     opts = [0] * 64
     for i in range(64):
@@ -28,5 +29,5 @@ def main():
 
     print(ans)
 
-main()
 
+main()

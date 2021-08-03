@@ -7,7 +7,7 @@ def compress(bstr):
         elif pc == block[1]:
             pk += block[0]
         else:
-            yield  pk, pc
+            yield pk, pc
             pk, pc = block
 
     if pc is not None:
@@ -16,7 +16,7 @@ def compress(bstr):
 
 def find1(text, query):
     (bk, bc), = query
-    return sum(k-bk+1 for k, c in text if c == bc and k >= bk)
+    return sum(k - bk + 1 for k, c in text if c == bc and k >= bk)
 
 
 class Query:
@@ -26,7 +26,7 @@ class Query:
         self._suffixes = {}
 
     def precompute(self):
-        for i in range(self._len-1):
+        for i in range(self._len - 1):
             self._suffix(i)
 
     def _suffix(self, i, pblock=None):
@@ -39,12 +39,12 @@ class Query:
         if (i, pblock) in self._suffixes:
             return self._suffixes[i, pblock]
         else:
-            sfx = self.next(self._suffix(i-1), pblock)
+            sfx = self.next(self._suffix(i - 1), pblock)
             self._suffixes[i, pblock] = sfx
             return sfx
 
     def _match(self, i, block):
-        if i == 0 or i == self._len -1:
+        if i == 0 or i == self._len - 1:
             return (block[1] == self._query[i][1]
                     and block[0] >= self._query[i][0])
         else:
@@ -54,9 +54,9 @@ class Query:
         while True:
             if i is None:
                 return 0 if self._match(0, block) else None
-            elif i < self._len-1:
-                if self._match(i+1, block):
-                    return i+1
+            elif i < self._len - 1:
+                if self._match(i + 1, block):
+                    return i + 1
                 else:
                     i = self._suffix(i)
             else:
@@ -64,7 +64,7 @@ class Query:
                 pblock = None
 
     def is_match(self, i):
-        return i == self._len-1
+        return i == self._len - 1
 
 
 def find2(text, query):
@@ -102,5 +102,6 @@ def get_input():
 
 def __starting_point():
     print(find(*get_input()))
+
 
 __starting_point()

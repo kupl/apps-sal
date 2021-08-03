@@ -1,6 +1,9 @@
 A, B, X = map(int, input().split(' '))
+
+
 def cost(N):
     return A * N + B * len(str(N))
+
 
 if cost(0) >= X:
     print(0)
@@ -8,7 +11,7 @@ if cost(0) >= X:
 
 if cost(10 ** 9) <= X:
     print(10 ** 9)
-    return    
+    return
 
 bottom = 1
 top = 10 ** 9

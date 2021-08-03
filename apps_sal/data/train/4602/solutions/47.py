@@ -12,4 +12,3 @@ def is_anagram(test, original):
             return False
 
     return True
-

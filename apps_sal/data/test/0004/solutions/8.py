@@ -8,8 +8,7 @@ for y in range(3600):
         t += 60 * 24
     h_new = t // 60
     m_new = t % 60
-    
+
     if '7' in str(h_new) + str(m_new):
         print(y)
         break
-

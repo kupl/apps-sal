@@ -29,8 +29,8 @@ for i in range(N):
             continue
         visited.add(n)
 
-        a_sum += A[n] 
-        b_sum += B[n] 
+        a_sum += A[n]
+        b_sum += B[n]
         for nn in edges[n]:
             q.append(nn)
 

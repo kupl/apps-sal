@@ -13,7 +13,7 @@ def fib(n):
 def main():
     h, w, k = list(map(int, input().split()))
     mod = 10 ** 9 + 7
-    
+
     dp = [[0] * (w + 2) for _ in range(h + 1)]
     dp[0][1] = 1
     c = [i for i in fib(w + 1)]
@@ -31,5 +31,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

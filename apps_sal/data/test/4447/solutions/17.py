@@ -17,11 +17,11 @@ queue = deque()
 
 for i in range(0, 2 * m):
     r = i % m
-    
+
     while c[r] > n_m:
         queue.append((i, indices[r].pop()))
         c[r] -= 1
-    
+
     while c[r] < n_m and queue:
         j, index = queue.popleft()
         indices[r].append(index)

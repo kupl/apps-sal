@@ -9,7 +9,6 @@ class Solution:
                     words[y] = [i]
                 else:
                     words[y].append(i)
-      
 
         for i, x in enumerate(favoriteCompanies):
             c = Counter()
@@ -24,5 +23,5 @@ class Solution:
                         break
                 elif len(c) == 1:
                     subsets.append(i)
-                    
+
         return subsets

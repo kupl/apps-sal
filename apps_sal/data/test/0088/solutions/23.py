@@ -8,4 +8,3 @@ for i in range(60):
         if a <= (k - (d << j) - 1) <= b:
             ans += 1
 print(ans)
-

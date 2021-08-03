@@ -3,4 +3,3 @@ class Solution:
         if not s:
             return True
         return self.isValid(s.replace('abc', '')) if s.replace('abc', '') != s else False
-

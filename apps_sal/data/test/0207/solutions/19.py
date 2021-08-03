@@ -8,5 +8,5 @@ def main():
         return "Yes"
     return "No"
 
-print(main())
 
+print(main())

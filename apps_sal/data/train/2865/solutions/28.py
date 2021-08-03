@@ -1,5 +1,5 @@
 def solution(string):
-    word=''
+    word = ''
     for letter in reversed(string):
-        word+=letter
+        word += letter
     return word

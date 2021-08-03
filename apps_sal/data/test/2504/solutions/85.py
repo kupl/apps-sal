@@ -1,9 +1,9 @@
-n,m,l = map(int,input().split())
-A = [list(map(int,input().split())) for i in range(m)]
-q = int(input())
-S = [list(map(int,input().split())) for i in range(q)]
-
 from scipy.sparse.csgraph import floyd_warshall
+n, m, l = map(int, input().split())
+A = [list(map(int, input().split())) for i in range(m)]
+q = int(input())
+S = [list(map(int, input().split())) for i in range(q)]
+
 
 for i in range(m):  # ノード番号が1始まりで与えられている場合
     for j in range(2):
@@ -44,7 +44,7 @@ for i in range(n):
 M = floyd_warshall(M)
 
 for i in range(q):
-    ans = M[S[i][0]][S[i][1]]-1
+    ans = M[S[i][0]][S[i][1]] - 1
     if ans == float("inf"):
         ans = -1
     print(int(ans))

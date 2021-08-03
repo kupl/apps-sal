@@ -7,8 +7,8 @@ t = nums[1]
 
 curr = 1
 while curr < t:
-	curr += a[curr-1]
+    curr += a[curr - 1]
 if curr == t:
-	print("YES")
+    print("YES")
 else:
-	print("NO")
+    print("NO")

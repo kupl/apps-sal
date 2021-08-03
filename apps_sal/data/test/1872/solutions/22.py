@@ -1,4 +1,4 @@
-#More es mi pastor nada me faltara
+# More es mi pastor nada me faltara
 import math
 ln = input().split(" ")
 n = int(ln[0])

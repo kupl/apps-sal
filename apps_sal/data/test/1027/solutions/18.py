@@ -1,6 +1,6 @@
 def main():
     a = [int(i) for i in input().split(' ')]
-    
+
     ans = 0
     for i in range(14):
         if (a[i] == 0):
@@ -23,7 +23,6 @@ def main():
 
         ans = max(ans, score)
     print(ans)
-        
+
 
 main()
-

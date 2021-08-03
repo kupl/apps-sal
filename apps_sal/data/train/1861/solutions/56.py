@@ -25,4 +25,4 @@ class Solution:
                     else:
                         result = min(result, (xlist1[i] - x0) * (y2 - y1))
                         break
-        return 0 if math.isinf(result) else  result
+        return 0 if math.isinf(result) else result

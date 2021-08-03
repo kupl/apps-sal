@@ -9,5 +9,3 @@ for i in range(n):
     else:
         ans = d * ((ans - s) // d + 1) + s
 print(ans)
-    
-

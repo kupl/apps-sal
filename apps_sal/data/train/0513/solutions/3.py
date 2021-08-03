@@ -7,21 +7,24 @@ sysread = sys.stdin.readline
 sys.setrecursionlimit(10**7)
 #import math
 #from itertools import combinations
+
+
 def run():
     N = int(input())
     A = [0] + list(map(int, sysread().split()))
-    to = [[] for _ in range(N+1)]
-    for _ in range(N-1):
-        u,v = map(int, sysread().split())
+    to = [[] for _ in range(N + 1)]
+    for _ in range(N - 1):
+        u, v = map(int, sysread().split())
         to[u].append(v)
         to[v].append(u)
-    seen = [False] * (N+1)
-    dp = [float('inf')] * (N+2)
+    seen = [False] * (N + 1)
+    dp = [float('inf')] * (N + 2)
     dp[0] = -float('inf')
     ddp2 = [0]
     paths = []
-    actions = []# (idx, pre, pro)
-    ans = [0] * (N+1)
+    actions = []  # (idx, pre, pro)
+    ans = [0] * (N + 1)
+
     def dfs(node, parent=None):
 
         a = A[node]
@@ -52,6 +55,7 @@ def run():
         print(s)
     return None
 
+
 def bin_search(A, x):
     '''
     return index which is lowest in values more than or equal to x
@@ -59,7 +63,8 @@ def bin_search(A, x):
     low = 0
     high = len(A) - 1
     c = (low + high) // 2
-    if A[-1] < x: return float('inf')
+    if A[-1] < x:
+        return float('inf')
     while high - low > 1:
         if A[c] < x:
             low = c
@@ -72,6 +77,9 @@ def bin_search(A, x):
             return c
     return high
 
+
 def __starting_point():
     run()
+
+
 __starting_point()

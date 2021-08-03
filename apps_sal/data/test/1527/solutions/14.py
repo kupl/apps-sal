@@ -9,7 +9,8 @@ def abc151d_maze_master():
         s.append(input())
     for hi in range(h):
         for wi in range(w):
-            if s[hi][wi] == '#': continue
+            if s[hi][wi] == '#':
+                continue
             flg = [[-1] * w for _ in range(h)]
             flg[hi][wi] = 0
             q = [(0, hi, wi)]

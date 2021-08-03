@@ -23,4 +23,3 @@ def solve():
 t = int(input())
 for jjj in range(t):
     solve()
-

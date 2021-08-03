@@ -4,4 +4,3 @@ for i in range(a, (a * b) + 1, a):
         print("YES")
         return
 print("NO")
-

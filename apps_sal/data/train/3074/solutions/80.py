@@ -8,4 +8,3 @@ def growing_plant(upSpeed, downSpeed, desiredHeight):
         if actual_height >= desiredHeight:
             return counter
         actual_height -= downSpeed
-

@@ -2,7 +2,10 @@
     Author : thekushalghosh
     Team   : CodeDiggers
 '''
-import sys,math,statistics as ss,collections as cc
+import sys
+import math
+import statistics as ss
+import collections as cc
 input = sys.stdin.readline
 n = int(input())
 a = input()

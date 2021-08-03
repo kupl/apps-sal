@@ -15,7 +15,7 @@ class PokerHand(object):
         Two Pairs       : 7
         Pair            : 8
         High Card       : 9
-    
+
     In the sample test, the sorted poker hands are displayed with the highest ranking hand in the top.
     The sort method, sorts in ascending order, this means the highest weight would have to be considered the lowest number.
 
@@ -42,6 +42,7 @@ class PokerHand(object):
         hand (str): String representation of the poker hand.
         cards (List[PokerCard]): The list of poker cards in this hand.
     '''
+
     def __repr__(self):
         return self.hand
 
@@ -50,20 +51,20 @@ class PokerHand(object):
         self.cards = [PokerCard(card) for card in hand.split(' ')]
         self.cards.sort()
         self.hand_weight = self._calculate_hand_weight()
-        
+
     def __eq__(self, other):
         if self.hand_weight[0] != other.hand_weight[0]:
             return False
-        
+
         for i in range(1, len(self.hand_weight)):
             if self.hand_weight[i] != other.hand_weight[i]:
                 return False
         return True
-    
+
     def __lt__(self, other):
         if self.hand_weight[0] < other.hand_weight[0]:
             return True
-        
+
         # if both hands have teh same weight, the tie must be broken by highest ranking cards.
         if self.hand_weight[0] == other.hand_weight[0]:
             for i in range(1, len(self.hand_weight)):
@@ -124,30 +125,30 @@ class PokerHand(object):
             # triple:
             if 3 in values:
                 i_triple = values.index(3)
-                return (6, self.cards[i_triple], *self.cards[:i_triple], *self.cards[i_triple+1:])
+                return (6, self.cards[i_triple], *self.cards[:i_triple], *self.cards[i_triple + 1:])
 
             # two pairs:
             i_pair = values.index(2)
-            j_pair = values.index(2, i_pair+1)
+            j_pair = values.index(2, i_pair + 1)
             i_kicker = values.index(1)
             return (7, self.cards[i_pair], self.cards[j_pair], self.cards[i_kicker])
 
         if length == 4:
             # this is a pair:
             i_pair = values.index(2)
-            return (8, self.cards[i_pair], *self.cards[:i_pair], *self.cards[i_pair+1:])
+            return (8, self.cards[i_pair], *self.cards[:i_pair], *self.cards[i_pair + 1:])
 
     def is_suited(self):
         '''Check if hand is Suited.'''
-        for i in range(len(self.cards)-1):
-            if self.cards[i].suit != self.cards[i+1].suit:
+        for i in range(len(self.cards) - 1):
+            if self.cards[i].suit != self.cards[i + 1].suit:
                 return False
 
         return True
-    
+
     def is_a_straight(self):
         '''Check if hand is a Straight
-        
+
         Returns:
             The highest card in the Straight.
         '''
@@ -156,8 +157,8 @@ class PokerHand(object):
         if self.cards[0].rank == 'A' and self.cards[1].rank == '5':
             starter = 1
 
-        for i in range(starter, len(self.cards)-1):
-            if self.cards[i+1] - self.cards[i] != 1:
+        for i in range(starter, len(self.cards) - 1):
+            if self.cards[i + 1] - self.cards[i] != 1:
                 return False
 
         # in case it was a Low Straight, you want to return the 5 instead of the Ace
@@ -184,24 +185,25 @@ class PokerCard(object):
         rank (str): The rank of the card.
         suit (str): The suit of the card.
     '''
+
     def __repr__(self):
         return self.card_weight
-    
+
     def __init__(self, card: str):
         self.card = card
         self.rank = card[0]
         self.suit = card[1]
         self.card_weight = self.get_card_weight()
-    
+
     def __eq__(self, other):
         return True if self.card_weight == other.card_weight else False
-    
+
     def __lt__(self, other):
         return True if self.card_weight < other.card_weight else False
-    
+
     def __sub__(self, other):
         return self.card_weight - other.card_weight
-    
+
     def get_card_weight(self):
         '''Return the card weight based on its rank.'''
         if self.rank == 'T':
@@ -215,4 +217,3 @@ class PokerCard(object):
         if self.rank == 'A':
             return 1
         return (63 - ord(self.rank))
-

@@ -1,5 +1,6 @@
-letter=str(input())
+letter = str(input())
 
-if letter[-1] == "s":print((letter + "es"))
-else:print((letter + "s"))
-
+if letter[-1] == "s":
+    print((letter + "es"))
+else:
+    print((letter + "s"))

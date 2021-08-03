@@ -35,4 +35,3 @@ else:
         ans = n - (CKM[0][1] + CGM[0][1])
 
 print(ans)
-

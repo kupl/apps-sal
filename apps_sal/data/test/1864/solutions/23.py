@@ -128,7 +128,7 @@ class unitTests(unittest.TestCase):
         imax = 1000
         num = str(imax)
         test = num + "\n"
-        numnums = [str(i) + " " + str(i+1) for i in range(imax)]
+        numnums = [str(i) + " " + str(i + 1) for i in range(imax)]
         test += "\n".join(numnums) + "\n"
         nums = [random.randint(1, 10000) for i in range(imax)]
         test += " ".join(map(str, nums)) + "\n"
@@ -148,7 +148,8 @@ class unitTests(unittest.TestCase):
         print((
             "\nTime Test: " +
             "{0:.3f}s (inp {1:.3f}s init {2:.3f}s calc {3:.3f}s)".
-            format(stop-start, init-start, calc-init, stop-calc)))
+            format(stop - start, init - start, calc - init, stop - calc)))
+
 
 def __starting_point():
 
@@ -160,5 +161,6 @@ def __starting_point():
 
     # Print the result string
     sys.stdout.write(calculate())
+
 
 __starting_point()

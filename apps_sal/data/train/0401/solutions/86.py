@@ -7,7 +7,7 @@ class Solution:
         # For each number, consider the result when adding it and check whether the sum increases or not.
         # ------------------------------------------------------------------------------------------------------------
         dic = {0: 0}
-        
+
         for n in nums:
             dic_new = {}
             #  If add `n`, the temporary result is denoted by `dic_new`
@@ -17,5 +17,5 @@ class Solution:
             # Update `dict` by `dic_new`
             for i, s in dic_new.items():
                 dic[i] = max(s, dic.get(i, 0))
-                        
+
         return dic.get(0, 0)

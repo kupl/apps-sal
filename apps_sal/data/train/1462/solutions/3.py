@@ -1,10 +1,10 @@
 # cook your dish here
-t=int(input())
+t = int(input())
 for _ in range(t):
-    s=input()
-    ss=s.lower()
-    a='berhampore'
-    b='serampore'
+    s = input()
+    ss = s.lower()
+    a = 'berhampore'
+    b = 'serampore'
     if a in ss and b in ss:
         print("Both")
     elif a in ss:

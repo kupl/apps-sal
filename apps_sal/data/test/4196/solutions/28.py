@@ -12,4 +12,3 @@ ans = 0
 for i in range(N + 1):
     ans = max(ans, gcd(acc_l[i], acc_r[N - i - 1]))
 print(ans)
-

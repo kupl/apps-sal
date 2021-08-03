@@ -5,8 +5,7 @@ for _ in range(K):
     A.sort(reverse=True)
     for i, a in enumerate(A, 1):
         if a < i:
-            print(i-1)
+            print(i - 1)
             break
     else:
         print(N)
-

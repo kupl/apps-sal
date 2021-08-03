@@ -6,14 +6,14 @@ def tv_remote(word):
              ['p', 'q', 'r', 's', 't', '.', '@', '0'],
              ['u', 'v', 'w', 'x', 'y', 'z', '_', '/'],
              ['aA', ' '],
-             ]
+    ]
 
-    vertical_inversion = {0:0, 1:1, 2:2, 3:3, 4:2, 5:1}
-    horizontal_inversion = {0:0, 1:1, 2:2, 3:3, 4:4, 5:3, 6:2, 7:1}
+    vertical_inversion = {0: 0, 1: 1, 2: 2, 3: 3, 4: 2, 5: 1}
+    horizontal_inversion = {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 3, 6: 2, 7: 1}
     actions = ([0, 0],)
     upper_mode = False
     press_ok = 0
-    func = lambda x, y: (vertical_inversion[abs(x[0]-y[0])] + horizontal_inversion[abs(x[1]-y[1])])
+    def func(x, y): return (vertical_inversion[abs(x[0] - y[0])] + horizontal_inversion[abs(x[1] - y[1])])
 
     for char in word:
         for i in range(6):

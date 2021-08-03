@@ -12,6 +12,7 @@ def unique_products(sets, excluding=frozenset()):
         for rest in unique_products(sets[1:], excluding | {x}):
             yield (x,) + rest
 
+
 def solve_column(column, clue):
     # First calculates all valid fillings with the given column, than merges the solutions in a single list where each
     # cell is the set containing the values in the same position of each solution.
@@ -30,6 +31,7 @@ def see(column):
         visible += building > tallest
         tallest = max(building, tallest)
     return visible
+
 
 def simplify(column, clue, n):
     if clue is 1:
@@ -78,5 +80,6 @@ def solve(n, clues):
                     solve_cross(city, s, t)
             city = [list(row) for row in reversed(list(zip(*city)))]  # rotates the city 90° anti-clockwise
     return tuple(tuple(cell.pop() for cell in row) for row in city)
-    
-solve_puzzle = lambda x: solve(4, x)
+
+
+def solve_puzzle(x): return solve(4, x)

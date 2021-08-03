@@ -9,5 +9,3 @@ class Solution:
                 take += stones[j - 1]
                 dp[i] = max(dp[i], take - dp[j])
         return 'Alice' if dp[0] > 0 else 'Bob' if dp[0] < 0 else 'Tie'
-
-

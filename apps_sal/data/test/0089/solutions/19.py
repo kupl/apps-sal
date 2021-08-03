@@ -9,5 +9,3 @@ for i in range(n // 2 + (0 if n % 2 == 0 else 1)):
     ans += l
 
 print(ans)
-    
-

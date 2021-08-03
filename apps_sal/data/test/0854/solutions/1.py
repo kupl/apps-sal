@@ -4,6 +4,7 @@ def sum(a):
         s += i
     return s
 
+
 n, T = map(int, input().split())
 a = list(map(int, input().split()))
 

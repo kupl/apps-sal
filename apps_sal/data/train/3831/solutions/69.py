@@ -1,5 +1,5 @@
 def angle(n):
-    if n <=2:
+    if n <= 2:
         raise ValueError
     else:
-        return 180*(int(n)-2)
+        return 180 * (int(n) - 2)

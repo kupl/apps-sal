@@ -15,4 +15,3 @@ for c in s:
     else:
         stack.append(c)
 print((len(stack)))
-

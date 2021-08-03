@@ -5,25 +5,25 @@ def main():
     class BIT():
         def __init__(self, n):
             self.n = n
-            self.maxbit = 2**(len(bin(n))-3)
-            self.bit = [0]*(n+1)
+            self.maxbit = 2**(len(bin(n)) - 3)
+            self.bit = [0] * (n + 1)
             self.allsum = 0
 
         # 初期化する
         def make_bit(self, a):
             n, bit = self.n, self.bit
             for i, j in enumerate(a):
-                x = i+1
+                x = i + 1
                 self.allsum += j
-                while x < n+1:
+                while x < n + 1:
                     bit[x] += j
                     x += x & (-x)
 
         # 位置iに値vを足す
         def add(self, i, v):
-            x, n, bit = i+1, self.n, self.bit
+            x, n, bit = i + 1, self.n, self.bit
             self.allsum += v
-            while x < n+1:
+            while x < n + 1:
                 bit[x] += v
                 x += x & (-x)
 
@@ -45,8 +45,8 @@ def main():
                 return 0
             x, k, n, bit = 0, self.maxbit, self.n, self.bit
             while k:
-                if x+k <= n and bit[x+k] < w:
-                    w -= bit[x+k]
+                if x + k <= n and bit[x + k] < w:
+                    w -= bit[x + k]
                     x += k
                 k //= 2
             return x
@@ -61,7 +61,7 @@ def main():
     for c in s:
         counter[c] += 1
     for i, j in list(counter.items()):
-        must[i] = j//2
+        must[i] = j // 2
     if n % 2 == 1:
         for i, j in list(counter.items()):
             if j % 2 == 1:
@@ -82,12 +82,12 @@ def main():
             must[c] -= 1
             half.append(c)
             cnt += 1
-        if cnt == n//2:
+        if cnt == n // 2:
             break
     half2 = half[::-1]
     if center != "":
         half.append(center)
-    s2 = half+half2
+    s2 = half + half2
 
     for i in range(n):
         deque_dict[s[i]].append(i)
@@ -107,4 +107,3 @@ def main():
 
 
 main()
-

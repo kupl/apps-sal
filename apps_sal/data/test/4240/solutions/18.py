@@ -1,8 +1,9 @@
-#-*-coding:utf-8-*-
+# -*-coding:utf-8-*-
 import sys
-input=sys.stdin.readline
+input = sys.stdin.readline
 
-def main(): 
+
+def main():
     s = list(input().rstrip())
     t = input().rstrip()
     for i in range(len(s)):
@@ -10,12 +11,13 @@ def main():
             print("Yes")
             return
         else:
-            tmp=s.pop(0)
+            tmp = s.pop(0)
             s.append(tmp)
     print("No")
 
 
-
 def __starting_point():
     main()
+
+
 __starting_point()

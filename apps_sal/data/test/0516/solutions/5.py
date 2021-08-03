@@ -1,4 +1,4 @@
-n,m = list(map(int, input().split()))
+n, m = list(map(int, input().split()))
 s = input()
 t = input()
 
@@ -6,14 +6,14 @@ t = input()
 tot = 1000000000
 pos = []
 
-for k in range(m-n+1):
+for k in range(m - n + 1):
     ctot = 0
     cpos = []
 
     for e in range(n):
-        if s[e] != t[e+k]:
-            cpos.append(e+1)
-            ctot+=1
+        if s[e] != t[e + k]:
+            cpos.append(e + 1)
+            ctot += 1
 
     if ctot < tot:
         pos = cpos
@@ -21,4 +21,3 @@ for k in range(m-n+1):
 
 print(tot)
 print(*pos)
-

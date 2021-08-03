@@ -13,6 +13,6 @@ for i in range(1, len(a)):
         if maxx > my_max:
             my_max = maxx
         maxx = 1
-        
+
 
 print(my_max)

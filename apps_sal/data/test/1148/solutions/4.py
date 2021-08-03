@@ -3,7 +3,7 @@ v = [int(x) for x in input().split()]
 low = min(v)
 
 res = low * n
-v = [x-low for x in v]
+v = [x - low for x in v]
 v *= 2
 
 start = -1
@@ -15,9 +15,8 @@ for i, x in enumerate(v):
             start = i
     else:
         if start >= 0:
-            sol = max(sol, i-start)
+            sol = max(sol, i - start)
             start = -1
 
 res += sol
 print(res)
-

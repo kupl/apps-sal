@@ -5,5 +5,4 @@ class Solution:
             for i in range(len(word)):
                 pred = word[:i] + word[i + 1:]
                 longestchain[pred] = max(longestchain[pred], 1 + longestchain[word])
-        return max(longestchain.values()) 
-
+        return max(longestchain.values())

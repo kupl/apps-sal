@@ -11,7 +11,6 @@ for t in range(T):
             ct += 1
             idx.append(i)
 
-    
     if ct == 2:
         s1[idx[0]], s2[idx[1]] = s2[idx[1]], s1[idx[0]]
         if s1 == s2:
@@ -20,4 +19,3 @@ for t in range(T):
             print('No')
     else:
         print('No')
-

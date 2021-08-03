@@ -1,4 +1,4 @@
-def unflatten(flat_array, depth, direction = 1):
+def unflatten(flat_array, depth, direction=1):
     if depth == 0:
         return flat_array
     ind = 0
@@ -16,4 +16,4 @@ def unflatten(flat_array, depth, direction = 1):
         else:
             array.append(flat_array[ind:ind + elem % nleft][::direction])
             ind += elem % nleft
-    return unflatten(array[::direction], depth-1, -direction)
+    return unflatten(array[::direction], depth - 1, -direction)

@@ -1,4 +1,4 @@
-#577_A
+# 577_A
 
 import sys
 
@@ -25,4 +25,3 @@ for i in range(0, m):
     s += max(cts) * pts[i]
 
 print(s)
-

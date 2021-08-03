@@ -1,6 +1,7 @@
 import calendar
 from collections import deque
 
+
 def whatday(num: int) -> str:
     """ Get weekday according to the input number (days rotated by 1). """
     days = deque(list(calendar.day_name))

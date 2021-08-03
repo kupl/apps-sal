@@ -4,4 +4,3 @@ def quadratic(x1, x2):
     mul = x1 * x2
     list = (1, sum, mul)
     return list
-

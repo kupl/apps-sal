@@ -1,4 +1,7 @@
-import os, sys, re, math
+import os
+import sys
+import re
+import math
 
 (N, M) = [int(n) for n in input().split()]
 
@@ -24,4 +27,3 @@ if not answer:
         answer += '%d' % min(A[i])
 
 print(answer)
-

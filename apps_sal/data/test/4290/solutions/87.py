@@ -1,7 +1,6 @@
-N,M = list(map(int,input().split()))
+N, M = list(map(int, input().split()))
 
-ki = (N*(N-1))//2
-gu = (M*(M-1))//2
+ki = (N * (N - 1)) // 2
+gu = (M * (M - 1)) // 2
 
-print((ki+gu))
-
+print((ki + gu))

@@ -1,8 +1,8 @@
 n = int(input())
-d =[]
+d = []
 for i in range(n):
-    s,p = input().split()
-    l = [s,-int(p),i+1]
+    s, p = input().split()
+    l = [s, -int(p), i + 1]
     d.append(l)
 d.sort()
 for x in d:

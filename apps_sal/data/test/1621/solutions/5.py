@@ -1,6 +1,6 @@
 s = input()
 k = int(input())
-a = list(map(int,input().split()))
+a = list(map(int, input().split()))
 ma = 1
 ans = 0
 for i in range(len(a)):

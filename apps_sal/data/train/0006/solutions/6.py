@@ -15,7 +15,7 @@ def solve(n, m, g):
             dp[i] = max(dp[i], dp[w] + 1)
         if dp[i] >= 2:
             dp[i] = -1
-            ans.append(i+1)
+            ans.append(i + 1)
     wi(len(ans))
     wia(ans)
 
@@ -26,11 +26,12 @@ def main():
         g = [[] for i in range(n)]
         for __ in range(m):
             u, v = ria()
-            g[v-1].append(u-1)
+            g[v - 1].append(u - 1)
         solve(n, m, g)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

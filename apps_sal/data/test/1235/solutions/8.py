@@ -4,4 +4,3 @@ m = int(input())
 b = list(map(int, input().split()))
 
 print(max(a), max(b))
-

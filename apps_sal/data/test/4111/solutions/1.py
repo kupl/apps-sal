@@ -8,8 +8,8 @@ for i in range(0, n, 2):
     if (i + 1 < n):
         c.append(c[-1] + a[i + 1])
         c.append(c[-1])
-#print(b)
-#print(c)
+# print(b)
+# print(c)
 ans = 0
 for i in range(n):
     k1 = 0

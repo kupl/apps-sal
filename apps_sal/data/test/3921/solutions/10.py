@@ -14,4 +14,3 @@ for i in a:
     for j in t[i]:
         p[j] = x
 print(max(p))
-

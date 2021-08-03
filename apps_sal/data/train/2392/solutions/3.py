@@ -13,4 +13,3 @@ for i in range(q):
     for i in range(pages + 1):
         ans += (m * i) % 10
     print(ans)
-

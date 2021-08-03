@@ -10,6 +10,7 @@ ar = [
 
 std = []
 
+
 def main():
     mx = -1
     mq = -1
@@ -18,7 +19,7 @@ def main():
         s = input()
         std.append(s)
         for i in range(8):
-            if( s[i] == '.' and ar[q][i] > mx):
+            if(s[i] == '.' and ar[q][i] > mx):
                 mx = ar[q][i]
                 mq = q
                 mi = i
@@ -31,5 +32,5 @@ def main():
                 s += std[q][i]
         print(s)
 
-main()
 
+main()

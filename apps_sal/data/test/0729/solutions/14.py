@@ -4,7 +4,7 @@ if len(set(list(s))) == 1:
     print("NO")
     return
 for i in range(1, n):
-    if s[i] != s[i-1]:
+    if s[i] != s[i - 1]:
         print("YES")
-        print(s[i-1]+s[i])
+        print(s[i - 1] + s[i])
         return

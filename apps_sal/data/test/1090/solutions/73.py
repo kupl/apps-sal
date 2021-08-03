@@ -9,4 +9,3 @@ for s0, s1 in zip(S, S[1:]):
 groups = max(1, groups - 2 * K)
 
 print((N - groups))
-

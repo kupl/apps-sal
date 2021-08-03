@@ -1,5 +1,5 @@
-n,l=map(int,input().split())
-li=[input() for i in range(n)]
+n, l = map(int, input().split())
+li = [input() for i in range(n)]
 
-sortli=sorted(li)
+sortli = sorted(li)
 print(''.join(sortli))

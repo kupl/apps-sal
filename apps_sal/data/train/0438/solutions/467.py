@@ -6,11 +6,14 @@ class Solution:
         s = [0 for i in range(n)]
         counts = collections.Counter()
         res = []
+
         def find(a):
-            if p[a] == a: return a
+            if p[a] == a:
+                return a
             p[a] = find(p[a])
-            
+
             return p[a]
+
         def union(a, b):
             p_a, p_b = find(a), find(b)
             if p[p_b] != p[p_a]:
@@ -38,10 +41,9 @@ class Solution:
             else:
                 counts[l[find(i)]] += 1
             res.append(counts[m])
-            
+
         for i in range(n - 1, -1, -1):
             if res[i] > 0:
                 return i + 1
-        
-        return -1
 
+        return -1

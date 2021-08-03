@@ -10,5 +10,5 @@ def solve(s):
 
     str_lst.append(temp) if temp != "" else False
 
-    maximum = max( [int(elem) for elem in str_lst] )
+    maximum = max([int(elem) for elem in str_lst])
     return maximum

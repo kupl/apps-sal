@@ -2,15 +2,17 @@ __author__ = '$'
 import sys
 
 
-def GCD (x, y):
+def GCD(x, y):
     return x if y == 0 else GCD(y, x % y)
+
+
 try:
     while True:
         n = int(input())
         val = list(map(int, input().split(" ")))
         res = val[0]
-        for i in range(n-1):
-            res = GCD(res, val[i+1])
+        for i in range(n - 1):
+            res = GCD(res, val[i + 1])
         ans = True
         for i in range(n):
             tmp = val[i] // res

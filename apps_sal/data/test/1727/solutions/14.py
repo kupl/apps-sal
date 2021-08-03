@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-
-n  = int(input())
+n = int(input())
 X = []
 H = []
 
@@ -17,18 +16,14 @@ if n < 3:
 else:
     tr = 2
     min = X[0]
-    for i in range(1, n-1):
-        if min < X[i] - H[i] :
+    for i in range(1, n - 1):
+        if min < X[i] - H[i]:
             tr += 1
             min = X[i]
-        elif X[i+1]> X[i] + H[i]:
-            tr +=1
-            min = X[i]+H[i]
+        elif X[i + 1] > X[i] + H[i]:
+            tr += 1
+            min = X[i] + H[i]
         else:
             min = X[i]
 
 print(tr)
-
-
-
-

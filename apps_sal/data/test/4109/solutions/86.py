@@ -52,7 +52,7 @@ def resolve():
 
     ans = float("inf")
     for bit in range(1 << N):
-        S = [0]*(M+1)
+        S = [0] * (M + 1)
         for i, ca in enumerate(CA):
             if (1 << i) & bit == 1 << i:
                 S = list(map(sum, list(zip(S, ca))))
@@ -71,5 +71,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

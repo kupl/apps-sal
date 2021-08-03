@@ -14,10 +14,9 @@ res = 0
 for i in nums:
     wo = str(i)
     le = len(wo)
-    mimo = (k-(i % k)) % k
+    mimo = (k - (i % k)) % k
     if mimo in counts[le]:
         res += counts[le][mimo]
-        if int(wo+wo) % k == 0:
+        if int(wo + wo) % k == 0:
             res -= 1
 print(res)
-

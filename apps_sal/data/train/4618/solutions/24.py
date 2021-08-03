@@ -5,4 +5,3 @@ def positive_sum(arr):
             positive_list.append(num)
     result = sum(positive_list)
     return result
-

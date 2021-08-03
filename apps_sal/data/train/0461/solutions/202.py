@@ -3,11 +3,12 @@ class Solution:
         def __init__(self, id):
             self.id = id
             self.next = []
-            
-            
+
     # BFS on a generated tree => O(n)
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
-        if len(manager) == 0: return 0
+        if len(manager) == 0:
+            return 0
 
         directs = defaultdict(list)
         for i, m in enumerate(manager):
@@ -22,4 +23,3 @@ class Solution:
                 for d in directs[curr]:
                     q.append((d, currT + informTime[curr]))
         return t
-

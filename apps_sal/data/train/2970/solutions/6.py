@@ -10,9 +10,12 @@ product_numbers = {
     18: [96]
 }
 
-is_prime = lambda number: all([number % i for i in range(2, number)])
+
+def is_prime(number): return all([number % i for i in range(2, number)])
+
 
 PRIMES = [i for i in range(2, 100) if is_prime(i) == True]
+
 
 def prod_int_part(n):
     assert n <= 100
@@ -20,11 +23,13 @@ def prod_int_part(n):
     b = prime_factorization(n)
     return [a, b]
 
+
 def number_of_products(n):
     for number in product_numbers:
         if n in product_numbers[number]:
             return number
     return 0
+
 
 def prime_factorization(number):
     if number in PRIMES:

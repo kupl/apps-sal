@@ -17,4 +17,3 @@ for _ in range(t):
         for x, y in l:
             if (s[x][y] == '1') ^ (x >= 0):
                 print(x % n + 1, y % n + 1)
-

@@ -3340,6 +3340,7 @@ class SortedValuesView(ValuesView, Sequence):
 # Copyright 2014 - 2019 Grant Jenks
 # https://github.com/grantjenks/python-sortedcontainers
 
+
 """
 sl=SortedList()
 sl.update(not sorted list/str) / list(sl) / list(reversed(sl)) / sl *3
@@ -3351,11 +3352,11 @@ sl[2]=x   <- del[2] & sl.add(x)
 sl.reverse() <- reversed(sl)
 sl.append(x) <- sl.add(x)
 """
-sl=SortedList()
+sl = SortedList()
 for i in range(int(input())):
-    x=-int(input())
-    ind=sl.bisect_right(x)
-    if len(sl)!=ind:
+    x = -int(input())
+    ind = sl.bisect_right(x)
+    if len(sl) != ind:
         sl.pop(ind)
     sl.add(x)
 print(len(sl))

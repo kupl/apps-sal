@@ -14,8 +14,8 @@ def main():
                 g = a // k
                 break
             else:
-                d = (a//k) + 1
-                a -= d * ((a - k * (a//k))//d)
+                d = (a // k) + 1
+                a -= d * ((a - k * (a // k)) // d)
                 if a < k:
                     g = 0
                     break
@@ -34,5 +34,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

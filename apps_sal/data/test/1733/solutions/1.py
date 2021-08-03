@@ -22,12 +22,12 @@ def dfs(y, x, graph):
         if len(order) != 0:
             stack_order.append((curr, order))
 
-  
     while len(stack_order) != 0:
         curr = stack_order.pop()
         for child in curr[1]:
             sub_count[curr[0]] += sub_count[child]
             sub_checks[curr[0]] |= sub_checks[child]
+
 
 graph = defaultdict(list)
 for _ in range(n - 1):
@@ -46,4 +46,3 @@ for child in graph[y]:
         break
 
 print(n * (n - 1) - (exclude * sub_count[x]))
-

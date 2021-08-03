@@ -10,4 +10,3 @@ for left in range(1, 100):
             ans += 1
         s += '1'
 print(ans)
-

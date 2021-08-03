@@ -11,4 +11,3 @@ for _ in range(m):
     if b == n:
         y.add(a)
 print((("POSSIBLE", "IMPOSSIBLE")[len(x & y) == 0]))
-

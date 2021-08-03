@@ -8,6 +8,3 @@ class Solution:
                 curMax = max(curMax, arr[i - j + 1])
                 dp[i] = max(dp[i], dp[i - j] + curMax * j)
         return dp[N - 1]
-
-    
-

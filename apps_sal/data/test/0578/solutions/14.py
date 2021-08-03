@@ -14,4 +14,3 @@ else:
     if not number:
         number = '0'
 print(number)
-

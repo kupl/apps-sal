@@ -1,6 +1,6 @@
+from collections import deque
 import sys
 sys.setrecursionlimit(100000)
-from collections import deque
 
 UNDEF = 0
 
@@ -13,6 +13,7 @@ for _ in range(n - 1):
 c = [UNDEF] * (n + 1)
 c[1] = 1
 
+
 def dfs(par, v):
     cur = 1
     for to in g[v]:
@@ -23,6 +24,7 @@ def dfs(par, v):
         c[to] = cur
         cur += 1
         dfs(v, to)
+
 
 def bfs():
     q = deque([(0, 1)])
@@ -37,6 +39,7 @@ def bfs():
             c[to] = cur
             cur += 1
             q.appendleft((v, to))
+
 
 bfs()
 print('%d\n%s' % (max(c), ' '.join(map(str, c[1:]))))

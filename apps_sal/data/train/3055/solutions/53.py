@@ -5,7 +5,7 @@ def sum_str(a, b):
     elif b == "":
         return a
     elif a == "":
-        return b       
+        return b
     else:
         a = int(a)
         b = int(b)

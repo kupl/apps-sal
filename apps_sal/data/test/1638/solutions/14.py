@@ -1,6 +1,7 @@
 from copy import copy
 from math import *
 
+
 def arr_float_inp():
     return [float(s) for s in input().split()]
 
@@ -57,5 +58,6 @@ def __starting_point():
 
     for el in max_out[1]:
         print(el, end=' ')
+
 
 __starting_point()

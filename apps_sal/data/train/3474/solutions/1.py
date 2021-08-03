@@ -5,6 +5,5 @@ def pattern(n):
             s += '1\n'
         else:
             s += '1{}{}\n'.format('*' * i, i + 1)
-    
-    return s.rstrip('\n')
 
+    return s.rstrip('\n')

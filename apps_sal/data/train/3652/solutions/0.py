@@ -1,6 +1,6 @@
 def button_sequences(seqR, seqB):
     pattern, state = '', ''
-    toBool = lambda seq : [i == '1' for i in seq]
+    def toBool(seq): return [i == '1' for i in seq]
     for red, blue in zip(toBool(seqR), toBool(seqB)):
         if red and state == 'R' or blue and state == 'B':
             continue

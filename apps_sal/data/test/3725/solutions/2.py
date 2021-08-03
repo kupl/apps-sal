@@ -2,10 +2,11 @@ __author__ = 'kitkat'
 import sys
 
 
-
 def GetNext(h, x, y):
     nonlocal m
     return (x * h + y) % m
+
+
 try:
     while True:
         m = int(input())
@@ -16,7 +17,7 @@ try:
         t1 = []
         t2 = []
         T = 0
-        for i in range (2 * m + 1):
+        for i in range(2 * m + 1):
             if h1 == a1:
                 t1.append(T)
             if h2 == a2:
@@ -48,7 +49,7 @@ try:
         res1 = t1[0]
         res2 = t2[0]
         flag = False
-        for i in range (5000000):
+        for i in range(5000000):
             if res1 == res2:
                 flag = True
                 print(res1)
@@ -61,4 +62,3 @@ try:
             print("-1")
 except EOFError:
     pass
-

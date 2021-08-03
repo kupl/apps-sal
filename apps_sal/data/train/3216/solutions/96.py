@@ -1,7 +1,6 @@
 from math import ceil
 
 
-
 def movie(card, ticket, rate):
     count = 0
     totala = 0.0
@@ -13,4 +12,3 @@ def movie(card, ticket, rate):
         count += 1
 
     return count
-

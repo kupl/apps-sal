@@ -9,4 +9,3 @@ for i in range(N):
     if AB + C > 0:
         S += 1
 print(S)
-

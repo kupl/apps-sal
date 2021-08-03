@@ -1,4 +1,4 @@
-n=input()
+n = input()
 if int(n) < 10:
     print(n)
 else:
@@ -11,4 +11,3 @@ else:
     for i in sb:
         sum += int(i)
     print(sum)
-

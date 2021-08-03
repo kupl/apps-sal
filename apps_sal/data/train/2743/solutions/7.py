@@ -1,5 +1,7 @@
 import numpy
 import math
+
+
 def sum_average(arr):
     print(arr)
     total = 0

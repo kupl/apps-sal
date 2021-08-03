@@ -7,7 +7,7 @@ from functools import reduce
 def solve(primes):
     products = 1
     for x in primes.values():
-        products *= x+1
+        products *= x + 1
         products %= 2 * (10 ** 9 + 6)
 
     n = 1
@@ -26,4 +26,6 @@ def main():
 
 def __starting_point():
     main()
+
+
 __starting_point()

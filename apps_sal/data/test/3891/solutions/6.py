@@ -12,4 +12,3 @@ for y in range(r):
 
 y = (mini + maxi) // 2
 print(y + 1, x + 1)
-

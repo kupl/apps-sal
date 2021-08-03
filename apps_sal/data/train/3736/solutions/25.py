@@ -1,5 +1,5 @@
 def minimum(arr):
-    #your code here...
+    # your code here...
     smallest = None
     for i in arr:
         if smallest is None:
@@ -7,9 +7,7 @@ def minimum(arr):
         elif i < smallest:
             smallest = i
     return smallest
-    
-    
-    
+
 
 def maximum(arr):
     #...and here

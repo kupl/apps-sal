@@ -1,6 +1,7 @@
 from operator import __and__, __or__, __xor__
 from functools import reduce
 
+
 def logical_calc(a, op):
     if op == "AND":
         return reduce(__and__, a)

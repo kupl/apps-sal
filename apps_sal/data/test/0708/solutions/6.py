@@ -16,5 +16,3 @@ v.append(b)
 print(*v)
 u = [c, a, extra] + list(reversed(v[3:]))
 print(*u)
-
-

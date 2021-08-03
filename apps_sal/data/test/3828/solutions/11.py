@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-import collections, itertools, functools, math
+import collections
+import itertools
+import functools
+import math
+
 
 def solve():
     n = int(input())
@@ -10,7 +14,7 @@ def solve():
     longest = 1
     seq = 1
     for i in range(1, n):
-        if pos[i-1][1] < pos[i][1]:
+        if pos[i - 1][1] < pos[i][1]:
             seq += 1
         else:
             seq = 1

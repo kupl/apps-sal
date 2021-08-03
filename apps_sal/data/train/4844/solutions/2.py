@@ -5,6 +5,7 @@ DIRS = {
     'down': (1, 0),
 }
 
+
 def get_password(grid, directions):
     i, j = next((i, j) for i, row in enumerate(grid) for j, x in enumerate(row) if x == 'x')
     pw = ''

@@ -1,1 +1,1 @@
-duty_free = lambda price, discount, holiday_cost: int(100*holiday_cost/(price*discount))
+def duty_free(price, discount, holiday_cost): return int(100 * holiday_cost / (price * discount))

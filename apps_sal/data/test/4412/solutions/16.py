@@ -1,3 +1,4 @@
+import sys
 3.6
 
 '''
@@ -16,11 +17,11 @@
 # one-way
 # ./haha.py > input.txt ; ./code.py < input.txt
 
-import sys
 
 def eprint(*args, **kwargs):
     if __debug__:
         print(*args, file=sys.stderr, **kwargs)
+
 
 def __starting_point():
     q = int(input())
@@ -37,22 +38,22 @@ def __starting_point():
             print(10)
             continue
 
-        z = arr[len(arr)-1]
-        if (z%2==0) and (z%3==0) and (z%5==0) and (arr.count(z//2) > 0) and (arr.count(z//3) > 0) and (arr.count(z//5) > 0):
-            ans = max(ans, (z//2) + (z//3) + (z//5))
-        
+        z = arr[len(arr) - 1]
+        if (z % 2 == 0) and (z % 3 == 0) and (z % 5 == 0) and (arr.count(z // 2) > 0) and (arr.count(z // 3) > 0) and (arr.count(z // 5) > 0):
+            ans = max(ans, (z // 2) + (z // 3) + (z // 5))
+
         res = []
         while len(arr) > 0 and len(res) < 3:
             c = arr.pop()
             flag = 1
             for x in res:
-                flag &= ((x%c) != 0)
+                flag &= ((x % c) != 0)
             if flag == 1:
                 res.append(c)
 
-        
         ans = max(ans, sum(res))
         print(ans)
         # eprint(f'x:{x}, y:{y}, z:{z}')
+
 
 __starting_point()

@@ -4,6 +4,7 @@ def binom(x, k):
         r *= (x - i + 1) / i
     return r
 
+
 def value_at(poly_spec, x):
     r = 0
     for k, c in enumerate(poly_spec[::-1]):

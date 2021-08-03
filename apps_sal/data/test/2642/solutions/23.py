@@ -22,7 +22,7 @@ for _ in range(n):
     used[r] = 0
 
 res = 1
-mod = 10**9+7
+mod = 10**9 + 7
 add = 0
 for k, v in list(ration.items()):
     if used[k]:
@@ -45,4 +45,3 @@ res -= 1
 if res < 0:
     res += mod
 print(res)
-

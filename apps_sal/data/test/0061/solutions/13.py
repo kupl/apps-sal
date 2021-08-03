@@ -19,4 +19,3 @@ for i in range(m):
     st *= by
 
 print("=" if ansx == ansy else ("<" if ansx < ansy else ">"))
-

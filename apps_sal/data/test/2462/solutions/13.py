@@ -12,4 +12,3 @@ for _ in range(int(input())):
             print(6, 10, 13, 15)
         else:
             print(6, 10, 14, n - 30)
-

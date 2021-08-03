@@ -3,8 +3,10 @@ def gcd(a, b):
         b, a = a, b % a
     return b
 
+
 def min_price(coins):
-    if(1 in coins): return 1
+    if(1 in coins):
+        return 1
     coins.sort()
     print(coins)
     n = [0] + [-1] * (coins[0] - 1)
@@ -21,6 +23,7 @@ def min_price(coins):
                     p = nn % coins[0]
                     nn = min(nn, n[p]) if n[p] != -1 else nn
                     n[p] = nn
-    
-    if(len(coins) < 2 or -1 in n): return -1
+
+    if(len(coins) < 2 or -1 in n):
+        return -1
     return max(n) - coins[0] + 1

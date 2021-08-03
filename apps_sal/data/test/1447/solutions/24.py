@@ -1,10 +1,6 @@
-n,m=list(map(int,input().split()))
+n, m = list(map(int, input().split()))
 
-print(1.0 if n==m==1 else 1/n*((n-1)*(m-1)/(n*m-1)+1))
-
-
-
+print(1.0 if n == m == 1 else 1 / n * ((n - 1) * (m - 1) / (n * m - 1) + 1))
 
 
 # Made By Mostafa_Khaled
-

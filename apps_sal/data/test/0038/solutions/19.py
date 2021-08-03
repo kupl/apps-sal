@@ -10,14 +10,13 @@ if n == 1:
 for i in range(n):
     if ans:
         break
-    diff = (d1[0]-d2[0])%L
+    diff = (d1[0] - d2[0]) % L
     fl = True
     for j in range(n):
-        if (d1[j]-d2[j])%L != diff:
+        if (d1[j] - d2[j]) % L != diff:
             fl = False
     if fl:
         ans = True
     d2.rotate(1)
 
-print(["NO","YES"][ans])
-
+print(["NO", "YES"][ans])

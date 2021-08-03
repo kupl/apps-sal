@@ -8,9 +8,10 @@ if n == 1:
         print(''.join(S))
 else:
     while k:
-        if i == n: break
+        if i == n:
+            break
         if i == 0:
-            if S[i] == '1': 
+            if S[i] == '1':
                 i += 1
                 continue
             else:

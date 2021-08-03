@@ -15,7 +15,7 @@ class Solution:
                 if abs(j - i) <= d:
                     left_jumps[i].append(j)
             left.append((i, nums[i]))
-        
+
         right_jumps = [[] for _ in range(N)]
         right = [(-1, np.inf)]
         for i in reversed(range(N)):
@@ -24,7 +24,7 @@ class Solution:
                 if abs(j - i) <= d:
                     right_jumps[i].append(j)
             right.append((i, nums[i]))
-        
+
         @lru_cache(maxsize=None)
         def longest_path_from(pos: int):
             left_max = max((longest_path_from(p) for p in left_jumps[pos]), default=0)

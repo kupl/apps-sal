@@ -5,6 +5,7 @@ def change(s):
     s = s.replace('i', '1')
     return s
 
+
 log = change(input())
 
 num = int(input())
@@ -16,4 +17,3 @@ if log in logins:
     print('No')
 else:
     print('Yes')
-

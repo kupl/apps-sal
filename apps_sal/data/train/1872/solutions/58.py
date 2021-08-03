@@ -8,22 +8,23 @@ class Solution:
     def levelSumHelper(self, node, level, sums):
         if node is None:
             return sums
-        if(len(sums)==level):
+        if(len(sums) == level):
             sums.append(node.val)
         else:
-            sums[level]+=node.val
-        sums = self.levelSumHelper(node.left, level+1, sums)
-        sums = self.levelSumHelper(node.right, level+1, sums)
+            sums[level] += node.val
+        sums = self.levelSumHelper(node.left, level + 1, sums)
+        sums = self.levelSumHelper(node.right, level + 1, sums)
         return sums
+
     def maxLevelSum(self, root: TreeNode) -> int:
         sums = self.levelSumHelper(root, 0, [])
-        #print(sums)
+        # print(sums)
         m = sums[0]
         ret = 0
         for i, s in enumerate(sums):
-            #print(i,s)
+            # print(i,s)
             #print(m, ret)
-            if s>m:
+            if s > m:
                 m = s
                 ret = i
-        return ret+1
+        return ret + 1

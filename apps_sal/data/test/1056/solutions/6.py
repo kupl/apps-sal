@@ -20,7 +20,7 @@ for y in range(h):
     for x in range(w):
         y1 = y + grid[y][x]
         if y1 != y:
-#            print(f"({x}, {y}) --> ({x}, {y1})", pos(x, y), pos(x, y1))
+            #            print(f"({x}, {y}) --> ({x}, {y1})", pos(x, y), pos(x, y1))
             to[pos(x, y)] = pos(x, y + grid[y][x])
 # print(to)
 
@@ -36,4 +36,3 @@ for i in range(n - 2, -1, -1):
         exp[i] = CUBE * exp[i] / (n - 1 - i)
 # print(*[f"{x:.1f}" for x in exp[:n]])
 print(f"{exp[0]:.16f}")
-

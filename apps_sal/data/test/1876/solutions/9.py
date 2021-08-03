@@ -22,4 +22,3 @@ for i in range(1, n + 1):
         res = (res + pow(cur, k)) % MOD
 res = (MOD + pow(n, k) - res) % MOD
 print(res)
-

@@ -47,4 +47,3 @@ for _ in range(H):
 M = [[float('inf')] * W for _ in range(H)]
 
 bfs(xs - 1, ys - 1, 0)
-

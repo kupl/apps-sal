@@ -9,10 +9,9 @@ for x in input().split():
 if n == 1:
     ans = 1
 else:
-    if ans == int(ans/n)*n:
+    if ans == int(ans / n) * n:
         ans = n
     else:
-        ans = n-1
+        ans = n - 1
 
 print(ans)
-

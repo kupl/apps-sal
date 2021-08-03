@@ -1,7 +1,7 @@
 def capitalize(s):
     ret = ""
-    ter  = ""
-    i = True   
+    ter = ""
+    i = True
     for char in s:
         if i:
             ret += char.upper()
@@ -17,4 +17,4 @@ def capitalize(s):
             ter += char.lower()
         if char != ' ':
             i = not i
-    return [ret,ter]
+    return [ret, ter]

@@ -5,7 +5,6 @@ import sys
 input = sys.stdin.readline
 
 
-
 def get_input():
     n, m, h = [int(x) for x in input().split(' ')]
 
@@ -51,7 +50,7 @@ def dfs_cc_1(graph):
     color = ['white'] * n
     for i in range(1, n):
         if color[i] == 'white':
-            dfs_cc_1_visit(graph, i, color, finalization_stack)    
+            dfs_cc_1_visit(graph, i, color, finalization_stack)
     return finalization_stack
 
 
@@ -99,13 +98,13 @@ def strongly_connected_components(digraph, transpose):
         for adj in digraph[node]:
             if scc[node] != scc[adj]:
                 out_deg[scc[node]] += 1
-    
+
     # searching minimum strongly connectected component with out degree 0
     minimum_component = None
     for i, value in enumerate(out_deg):
         if value == 0 and (minimum_component is None or len(scc_nodes[i]) < len(scc_nodes[minimum_component])):
             minimum_component = i
-    
+
     # return the size of the component and the nodes
     return len(scc_nodes[minimum_component]), scc_nodes[minimum_component]
 
@@ -113,8 +112,9 @@ def strongly_connected_components(digraph, transpose):
 def __starting_point():
     digraph, transpose = get_input()
     count, nodes = strongly_connected_components(digraph, transpose)
-    
+
     print(count)
     print(' '.join([str(x) for x in nodes]))
+
 
 __starting_point()

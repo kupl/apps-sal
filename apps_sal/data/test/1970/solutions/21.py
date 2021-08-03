@@ -17,6 +17,5 @@ for _ in range(t):
         print('YES')
     else:
         print('NO')
-    if( _ < t - 1):
+    if(_ < t - 1):
         k = input()
-

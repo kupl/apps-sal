@@ -36,7 +36,7 @@ def resolve():
     for i in range(K):
         t = max(I)
         I.remove(t)
-        I.append(t*2)
+        I.append(t * 2)
 
     print((sum(I)))
 
@@ -44,5 +44,6 @@ def resolve():
 def __starting_point():
     # unittest.main()
     resolve()
+
 
 __starting_point()

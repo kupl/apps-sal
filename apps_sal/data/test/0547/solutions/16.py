@@ -4,11 +4,14 @@ def getin():
         xin = input()
     return xin
 
+
 def gi():
     return [int(x) for x in getin().split()]
 
+
 def count(n, k):
-    return int(n/k) * k + int((n - 1)/k) * 5 + n%k
+    return int(n / k) * k + int((n - 1) / k) * 5 + n % k
+
 
 n, k = gi()
 m = -1
@@ -35,4 +38,3 @@ else:
         i += 1
 
     print(count(mi + 1, k), count(mi + c[len(ac)], k))
-

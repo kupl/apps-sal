@@ -1,4 +1,6 @@
 import math
+
+
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
@@ -6,12 +8,12 @@ class Solution:
         for i in range(n):
             p = points[i]
             for j in range(n):
-                if i!=j:
-                    w = abs(points[i][0]-points[j][0])+abs(points[i][1]-points[j][1])
-                    e = (min(i,j),max(i,j),w)
+                if i != j:
+                    w = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
+                    e = (min(i, j), max(i, j), w)
                     edges.add(e)
-        edges = sorted(edges, key = lambda x: x[2])
-        tree_id = [0]*n
+        edges = sorted(edges, key=lambda x: x[2])
+        tree_id = [0] * n
         for i in range(n):
             tree_id[i] = i
         cost = 0
@@ -27,9 +29,3 @@ class Solution:
                     if tree_id[j] == old_tree:
                         tree_id[j] = new_tree
         return cost
-            
-        
-        
-        
-                    
-

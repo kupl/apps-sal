@@ -13,4 +13,3 @@ elif 32 <= n < 64:
     print((32))
 else:
     print((64))
-

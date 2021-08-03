@@ -12,6 +12,7 @@ def subsolve(a):
         dp[i][3] = min(dp[i - 1][2], n) + int(a[i] != 'L')
     return min(dp[n - 1][2], dp[n - 1][3], n)
 
+
 def solve():
     n = int(input())
     a = input()
@@ -20,6 +21,7 @@ def solve():
     for i in range(min(n, 4)):
         ans = min(ans, subsolve(a[i:i + n]))
     print(ans)
+
 
 t = int(input())
 for _ in range(t):

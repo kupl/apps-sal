@@ -1,7 +1,9 @@
 import sys
 
-input = lambda: sys.stdin.readline()[:-1]
-print = lambda s: sys.stdout.write(f"{s}\n")
+
+def input(): return sys.stdin.readline()[:-1]
+def print(s): return sys.stdout.write(f"{s}\n")
+
 
 for _ in range(int(input())):
     sentence = input()
@@ -13,4 +15,3 @@ for _ in range(int(input())):
         print("JAPANESE")
 
 sys.stdout.flush()
-

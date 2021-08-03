@@ -1,1 +1,1 @@
-words_to_marks = lambda s: sum(ord(e)-96 for e in s)
+def words_to_marks(s): return sum(ord(e) - 96 for e in s)

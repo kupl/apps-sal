@@ -1,6 +1,8 @@
 a, b = map(int, input().split())
 rows = [list(input()) for x in range(a)]
 columns = [[x[y] for x in rows] for y in range(b)]
+
+
 def check(l):
     line = []
     for x in l:
@@ -14,6 +16,8 @@ def check(l):
         return [False, line]
     else:
         return [True, line]
+
+
 def colors(c, l):
     p = c[1][0]
     n = 0
@@ -40,6 +44,8 @@ def colors(c, l):
             return True
     else:
         return False
+
+
 condition = False
 if a % 3 == 0 or b % 3 == 0:
     c, d = check(rows), check(columns)

@@ -12,8 +12,8 @@ def read():
 
 
 def solve(N, M, AB):
-    S = [False for i in range(N+1)]
-    T = [False for i in range(N+1)]
+    S = [False for i in range(N + 1)]
+    T = [False for i in range(N + 1)]
     for a, b in AB:
         if a > b:
             a, b = b, a
@@ -30,5 +30,6 @@ def solve(N, M, AB):
 def __starting_point():
     inputs = read()
     print(("%s" % solve(*inputs)))
+
 
 __starting_point()

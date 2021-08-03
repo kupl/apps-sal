@@ -19,7 +19,7 @@ class UnionFind:
         y = self.find(y)
         if x == y:
             return
-        
+
         if self.rank[x] < self.rank[y]:
             self.par[x] = y
             self.size[y] += self.size[x]
@@ -28,7 +28,7 @@ class UnionFind:
             self.size[x] += self.size[y]
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
-    
+
     def same(self, x, y):
         if self.find(x) == self.find(y):
             return True
@@ -46,19 +46,19 @@ def kruskal(n, edges):
             res += d
     return res
 
+
 n = int(input())
 
-xy = [[i] + list(map(int, input().split())) for i in range(n)] 
+xy = [[i] + list(map(int, input().split())) for i in range(n)]
 
 edges = set()
 for key in [itemgetter(1), itemgetter(2)]:
-    xy.sort(key = key)
-    for i in range(n-1):
+    xy.sort(key=key)
+    for i in range(n - 1):
         i1, x1, y1 = xy[i]
-        i2, x2, y2 = xy[i+1]
+        i2, x2, y2 = xy[i + 1]
         d = min(abs(x1 - x2), abs(y1 - y2))
         edges.add((d, i1, i2))
 
 edges = list(edges)
 print((kruskal(n, edges)))
-

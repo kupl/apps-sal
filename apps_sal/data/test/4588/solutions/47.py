@@ -6,4 +6,3 @@ elif ord(x) > ord(y):
     print('>')
 else:
     print('=')
-

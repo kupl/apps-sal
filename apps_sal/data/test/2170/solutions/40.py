@@ -44,5 +44,5 @@ def main():
 
     print(((all - dup) % MOD))
 
-main()
 
+main()

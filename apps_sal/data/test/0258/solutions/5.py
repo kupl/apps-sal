@@ -32,4 +32,3 @@ if lol[0] <= 0 <= lol[-1]:
     print('Bicarp')
 else:
     print('Monocarp')
-

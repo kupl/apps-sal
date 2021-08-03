@@ -1,7 +1,7 @@
 try:
     N, M = list(map(int, input().split()))
     L = []
-    for i in range(N+M):
+    for i in range(N + M):
         L.append(int(input()))
     l = []
     for i in L:
@@ -12,5 +12,3 @@ try:
             l.remove(max(l))
 except:
     pass
-    
-

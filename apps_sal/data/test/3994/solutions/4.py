@@ -4,7 +4,7 @@ for i in range(a):
     b[i] = int(b[i])
 har = []
 for i in range(a):
-    c, d = list(map(int,input().split()))
+    c, d = list(map(int, input().split()))
     har.append((c, d))
 ma = sum(b)
 for i in range(10000):
@@ -13,4 +13,3 @@ for i in range(10000):
             b[j] = 1 - b[j]
     ma = max(ma, sum(b))
 print(ma)
-

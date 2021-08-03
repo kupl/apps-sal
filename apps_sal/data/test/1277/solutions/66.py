@@ -5,6 +5,7 @@ from heapq import heappop, heappush
 
 INF = float("inf")
 
+
 def dijkstra(n, G, s):
     dist = [INF] * n
     dist[s] = 0
@@ -18,6 +19,7 @@ def dijkstra(n, G, s):
                 dist[child] = dist[v] + child_d
                 heappush(hq, (dist[child], child))
     return dist
+
 
 n, u, v = list(map(int, input().split()))
 graph = [[] for _ in range(n)]
@@ -35,9 +37,8 @@ from_v = dijkstra(n, graph, v - 1)
 # print(from_v)
 
 fil = [x for x in [[fu, fv] for fu, fv in zip(from_u, from_v)] if x[0] < x[1]]
-sfil = sorted(list(fil), key=lambda x: [-x[1], -x[0]])  
+sfil = sorted(list(fil), key=lambda x: [-x[1], -x[0]])
 
 # print(sfil)
 
 print((sfil[0][1] - 1))
-

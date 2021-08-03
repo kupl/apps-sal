@@ -9,7 +9,9 @@ for i in range(m):
 j, k = c[1], 0
 for i, s in t.items():
     l = len(s)
-    if l >= k: 
-        if l > k: j, k = i, l
-        elif j > i: j = i
+    if l >= k:
+        if l > k:
+            j, k = i, l
+        elif j > i:
+            j = i
 print(j)

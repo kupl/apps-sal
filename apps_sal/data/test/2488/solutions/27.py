@@ -1,7 +1,9 @@
 from math import ceil
 from collections import deque
+
+
 def main():
-    N,D,A = list(map(int, input().split()))
+    N, D, A = list(map(int, input().split()))
     # 座標X[i]のモンスターはceil(H[i]/A)回攻撃すれば倒せる
     # N=5, D=2
     # 0 1 2 3 4 5 6 7 8 9 10
@@ -12,7 +14,7 @@ def main():
     # ->よって5+3+1=9回が最小回数..?
 
     Monsters = sorted([list(map(int, input().split())) for i in range(N)])
-    Monsters = [[x-1, ceil(h / A)] for x, h in Monsters]
+    Monsters = [[x - 1, ceil(h / A)] for x, h in Monsters]
 
     acc_damage = 0
     que = deque([])
@@ -35,4 +37,3 @@ def main():
 
 
 main()
-

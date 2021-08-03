@@ -1,5 +1,6 @@
 from functools import lru_cache
 
+
 class Combination:
     def __init__(self, size):
         self.size = size + 2
@@ -25,6 +26,7 @@ class Combination:
     def nhr(self, n, r):  # 重複組合せ: x_1 + ... + x_n = r
         return self.ncr(n + r - 1, n - 1)
 
+
 N, M = list(map(int, input().split()))
 MOD = 10**9 + 7
 comb = Combination(M + 100)
@@ -34,4 +36,3 @@ for k in range(N + 1):
     ans += comb.ncr(N, k) * ((-1)**k) * comb.npr(M, k) * (comb.npr(M - k, N - k)**2)
     ans %= MOD
 print(ans)
-

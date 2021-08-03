@@ -19,7 +19,8 @@ while q:
         g[p[v]][0].remove(v)
         g[p[v]][1] += g[v][1] + 1
         q.append(p[v])
-        if g[v][1] & 1: ans += 1
+        if g[v][1] & 1:
+            ans += 1
         continue
     for i in g[v][0]:
         if not visited[i]:

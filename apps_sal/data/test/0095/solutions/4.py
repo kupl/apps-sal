@@ -12,4 +12,3 @@ for x in range(i, j + 1):
         flag = False
         break
 print("YES" if flag else "NO")
-

@@ -19,7 +19,7 @@ for i in range(3):
     dic = d[i]
     for j in range(c):
         for k, v in list(dic.items()):
-            cost[i][j-1] += v * D[k-1][j-1]
+            cost[i][j - 1] += v * D[k - 1][j - 1]
 
 ans = 1e9
 
@@ -27,6 +27,3 @@ for i, j, k in itertools.permutations(list(range(c)), 3):
     ans = min(cost[0][i] + cost[1][j] + cost[2][k], ans)
 
 print(ans)
-
-
-

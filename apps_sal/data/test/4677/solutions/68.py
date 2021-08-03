@@ -1,8 +1,8 @@
-s=input()
-res=""
+s = input()
+res = ""
 for i in s:
-    if i!="B":
-        res+=i
+    if i != "B":
+        res += i
     else:
-        res=res[:len(res)-1]
+        res = res[:len(res) - 1]
 print(res)

@@ -18,8 +18,5 @@ for i in range(n - 2, -1, -1):
     else:
         for k in helpers[q[i]]:
             helping[k] += 1
-        
+
 print(ans)
-
-    
-

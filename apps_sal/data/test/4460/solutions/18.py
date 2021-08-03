@@ -19,4 +19,3 @@ res = 0
 res = 15 - sum(X)
 
 print(res)
-

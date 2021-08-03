@@ -16,9 +16,9 @@ for s_nudge in nudges:
     for e_nudge in nudges:
         s_val = data[0] + s_nudge
         e_val = data[len(data) - 1] + e_nudge
-        if ((e_val - s_val) % (n-1)) == 0:
+        if ((e_val - s_val) % (n - 1)) == 0:
             num_change = abs(e_nudge) + abs(s_nudge)
-            diff = (e_val - s_val) / (n-1)
+            diff = (e_val - s_val) / (n - 1)
 
             val = s_val + diff
             for idx in range(1, last_idx):
@@ -33,4 +33,3 @@ for s_nudge in nudges:
                     if result == -1 or result > num_change:
                         result = num_change
 print(result)
-

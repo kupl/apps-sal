@@ -8,4 +8,3 @@ for i in range(k):
         a1 = i + 1
         a2 = n // a[i]
 print(a1, a2)
-

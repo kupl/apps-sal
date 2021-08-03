@@ -10,15 +10,16 @@ class Solution:
             while dq:
                 r, c = dq.popleft()
                 cnt += 1
-                if r==rd and c==cd or cnt>19900: return True
-                
-                for ro, co in [(1,0), (-1,0), (0,1), (0,-1)]:
-                    nr, nc = r+ro, c+co
-                    if 0<=nr<N and 0<=nc<N and (nr, nc) not in seen and (nr, nc) not in bset:
+                if r == rd and c == cd or cnt > 19900:
+                    return True
+
+                for ro, co in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
+                    nr, nc = r + ro, c + co
+                    if 0 <= nr < N and 0 <= nc < N and (nr, nc) not in seen and (nr, nc) not in bset:
                         seen.add((nr, nc))
                         dq.append((nr, nc))
-                
+
             return False
-        
+
         bset = {tuple(b) for b in blocked}
         return bfs(source, target) and bfs(target, source)

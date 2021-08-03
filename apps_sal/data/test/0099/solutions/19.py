@@ -1,5 +1,5 @@
-b1 , q , l , m = list(map(int, input().split()))
-s = set(map(int , input().split()))
+b1, q, l, m = list(map(int, input().split()))
+s = set(map(int, input().split()))
 ans = 0
 cnt = 0
 while abs(b1) <= l:
@@ -9,9 +9,8 @@ while abs(b1) <= l:
     if cnt == 100000:
         break
     b1 *= q
-    
+
 if ans >= 50000:
     print('inf')
 else:
     print(ans)
-

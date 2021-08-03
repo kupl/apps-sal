@@ -7,15 +7,15 @@ class Solution:
         for n in nums:
             prefix += n
             # if p
-            if prefix-target in cnt:
+            if prefix - target in cnt:
                 ans += 1
                 cnt = collections.Counter()
             cnt[prefix] += 1
             # print(cnt, ans)
         # print('--')
         return ans
-    
-    
+
+
 #         dic = {0:0}
 #         ans = 0
 #         sum = 0
@@ -26,4 +26,3 @@ class Solution:
 #                 dic = {}
 #             dic[sum] = i
 #         return ans
-

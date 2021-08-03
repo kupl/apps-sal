@@ -1,5 +1,6 @@
 from heapq import heapify, heappush, heappop
 
+
 def solve():
     N = int(input())
     Ss = list(map(int, input().split()))
@@ -18,7 +19,7 @@ def solve():
                 if -PQs[tm][0] > S:
                     heappop(PQs[tm])
                     nums[tm] += 1
-                    for i in range(tm+1, N):
+                    for i in range(tm + 1, N):
                         heappush(PQs[i], -S)
                     break
         else:
@@ -26,8 +27,8 @@ def solve():
 
     return True
 
+
 if solve():
     print('Yes')
 else:
     print('No')
-

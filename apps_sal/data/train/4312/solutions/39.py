@@ -1,11 +1,11 @@
 def pick_peaks(arr):
-    #your code here
+    # your code here
     pos = []
     peaks = []
     plateau = []
 
     numbers = len(arr)
-    print("length of array: "+str(numbers))
+    print("length of array: " + str(numbers))
     print("list:")
     print(arr)
 
@@ -22,7 +22,7 @@ def pick_peaks(arr):
             elif number == 1 or number == (numbers - 2):
                 pass
 #             elif candidate == post and candidate == arr[(number + 2)] and number != (number - 1):
-            elif candidate > pre and candidate == post:  
+            elif candidate > pre and candidate == post:
                 if candidate >= arr[(number + 2)] and number != (number - 1) and candidate != arr[(numbers - 1)]:
                     pos.append(number)
                     peaks.append(candidate)

@@ -43,11 +43,9 @@ else:
         sum = 0
 
         for i in range(0, len(dec)):
-            sum += dec[i]*(t**i)
+            sum += dec[i] * (t**i)
 
         if sum == a:
             num += 1
 
     print(num)
-
-

@@ -17,6 +17,6 @@ for h in range(hmin, 1001):
             l += i[1]
         else:
             l += min(i[0], i[1])
-            
+
     s = min(s, l * h)
 print(s)

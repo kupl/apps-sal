@@ -2,6 +2,7 @@ def count(num):
     string = bin(num)[2:]
     return string.count('0') + 6 - len(string)
 
+
 key = [3 ** count(x) for x in range(64)]
 
 dic = {}

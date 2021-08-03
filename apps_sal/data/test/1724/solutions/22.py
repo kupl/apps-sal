@@ -28,4 +28,3 @@ for i in range(n - 1, -1, -1):
         ans = max(ans, cum[i] + (cum2[-1] - cum2[i + 1]))
 
 print(ans)
-

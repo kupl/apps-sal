@@ -1,7 +1,8 @@
 def oddity(n):
     while True:
         n, m = divmod(n, 2)
-        yield m       
+        yield m
+
 
 def oddest(arr):
     res = arr[0]

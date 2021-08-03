@@ -1,7 +1,7 @@
 n = int(input())
-lst = [ int(i) for i in input().split()]
- 
+lst = [int(i) for i in input().split()]
+
 if len(set(lst)) == n:
-  print("YES")
+    print("YES")
 else:
-  print("NO")
+    print("NO")

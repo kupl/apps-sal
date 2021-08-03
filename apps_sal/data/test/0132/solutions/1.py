@@ -12,6 +12,3 @@ for a in range(len(kosi)):
             mini = abs(first - second)
 
 print(mini)
-        
-
-

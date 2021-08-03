@@ -5,4 +5,3 @@ def power_of_two(x):
     if x in list_of_powers:
         return True
     return False
-

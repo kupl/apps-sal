@@ -1,17 +1,19 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        cost = lambda i,j: abs(locations[i]-locations[j])
+        def cost(i, j): return abs(locations[i] - locations[j])
+
         @lru_cache(None)
         def dfs(i, f):
-            if f<0: return 0 
-            return sum([dfs(j,f-cost(i,j)) for j in range(len(locations)) if j != i]) + (i==finish)
-        return dfs(start, fuel) % (10**9+7)
+            if f < 0:
+                return 0
+            return sum([dfs(j, f - cost(i, j)) for j in range(len(locations)) if j != i]) + (i == finish)
+        return dfs(start, fuel) % (10**9 + 7)
 # class Solution:
 #     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
 #         self.sol = [[-1]*(fuel+1)]*len(locations)
 #         self.dfs(start, fuel, locations, finish, 0)
 #         print(self.sol)
-    
+
 #     def dfs(self, current, fuel, locations, end, local_ans):
 #         print(self.sol)
 #         if fuel<0:
@@ -29,8 +31,6 @@ class Solution:
 #         return self.sol[current][fuel]
 
 
-    
-    
 # private long solve(int[] locations, int curCity, int e, long[][] dp, int fuel) {
 #         // 4. There is no further way left.
 #         if (fuel < 0) return 0;
@@ -46,4 +46,3 @@ class Solution:
 #         }
 #         return dp[curCity][fuel] = ans;
 #     }
-

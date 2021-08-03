@@ -9,13 +9,13 @@ for _ in range(q):
     n = int(test[k])
 
     h, c = [], []
-    for j in range(k+1, k+n+1):
+    for j in range(k + 1, k + n + 1):
         x, y = list(map(int, test[j].split()))
         h.append(x)
         c.append(y)
 
     dp = [[0, c[0], 2 * c[0]]]
-    dp += [[0, 0, 0] for i in range(n-1)]
+    dp += [[0, 0, 0] for i in range(n - 1)]
 
     for i in range(1, n):
         for j in range(3):
@@ -27,4 +27,3 @@ for _ in range(q):
     print(min(dp[n - 1]))
 
     k += n + 1
-

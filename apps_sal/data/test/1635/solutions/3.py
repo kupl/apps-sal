@@ -1,5 +1,5 @@
 def main():
-    read = lambda: tuple(map(int, input().split()))
+    def read(): return tuple(map(int, input().split()))
     n = read()[0]
     l = read()
     last = {}
@@ -12,5 +12,6 @@ def main():
             ans = k
             mn = last[k]
     print(ans)
-main()
 
+
+main()

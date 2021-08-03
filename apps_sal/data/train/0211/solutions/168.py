@@ -1,6 +1,6 @@
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
-        
+
         def dfs(i):
             nonlocal used, ret
             if i == n:
@@ -13,7 +13,7 @@ class Solution:
                 used.add(w)
                 dfs(j)
                 used.discard(w)
-        
+
         n = len(s)
         used = set()
         ret = 0

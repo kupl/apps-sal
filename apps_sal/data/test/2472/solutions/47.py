@@ -4,7 +4,7 @@ def main():
     for i in range(N):
         A, B = list(map(int, input().split()))
         works.append((A, B))
-    
+
     works.sort(key=lambda x: x[1])
 
     time = 0
@@ -16,7 +16,9 @@ def main():
             return
     print('Yes')
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

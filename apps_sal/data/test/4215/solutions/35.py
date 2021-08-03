@@ -1,8 +1,8 @@
-a,b=map(int,input().split())
+a, b = map(int, input().split())
 
-result=a-b*2
+result = a - b * 2
 
 if result > 0:
-  print(result)
+    print(result)
 else:
-  print(0)
+    print(0)

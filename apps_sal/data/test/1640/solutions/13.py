@@ -1,6 +1,6 @@
-n =int(input())
+n = int(input())
 a = list(map(int, input().split()))
-res , sum = 0, a[0]
+res, sum = 0, a[0]
 cnt = dict()
 cnt[a[0]] = 1
 for i in range(1, n):

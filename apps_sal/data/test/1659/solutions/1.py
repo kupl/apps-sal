@@ -7,8 +7,7 @@ for i in range(a):
         ic += int(y)
     else:
         if (int(y) > ic):
-            d+=1
+            d += 1
         else:
             ic -= int(y)
 print(ic, d)
-

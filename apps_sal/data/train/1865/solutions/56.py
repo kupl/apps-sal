@@ -1,4 +1,6 @@
 from heapq import heappush, heappop
+
+
 class Solution:
     def minPushBox(self, A: List[List[str]]) -> int:
         m, n = len(A), len(A[0])
@@ -10,7 +12,7 @@ class Solution:
                     t_pos = (i, j)
                 elif A[i][j] == 'S':
                     p_pos = (i, j)
-        
+
         def estimate(pos):
             return abs(t_pos[0] - pos[0]) + abs(t_pos[1] - pos[1])
         seen = {(p_pos, b_pos)}
@@ -33,4 +35,3 @@ class Solution:
                         heappush(heap, [estimate(n_box) + n_cost, n_cost, n_person, n_box])
                         seen.add((n_person, n_box))
         return -1
-

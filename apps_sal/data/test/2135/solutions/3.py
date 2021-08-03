@@ -30,7 +30,7 @@ for i in range(h):
         sumincols[j][i] = sum
 for test in range(q):
     r1, c1, r2, c2 = map(int, input().split())
-    r1, c1, r2, c2 = r1-1, c1-1, r2-1, c2-1
+    r1, c1, r2, c2 = r1 - 1, c1 - 1, r2 - 1, c2 - 1
     ans = 0
     ans += (suminrows[r2][c2] - suminrows[r1 - 1][c2]) - (suminrows[r2][c1] - suminrows[r1 - 1][c1])
     ans += (sumincols[c2][r2] - sumincols[c1 - 1][r2]) - (sumincols[c2][r1] - sumincols[c1 - 1][r1])

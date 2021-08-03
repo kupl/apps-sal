@@ -17,7 +17,7 @@ for _ in range(t):
         for ch in s[0::2]:
             if int(ch) % 2 == 1:
                 ben_wins = False
-    
+
     if ben_wins:
         print(2)
     else:

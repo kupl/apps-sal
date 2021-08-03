@@ -16,4 +16,3 @@ for i in range(maxn):
 mean2 /= maxn
 
 print(mean1 + mean2)
-

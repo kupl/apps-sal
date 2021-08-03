@@ -2,6 +2,7 @@ class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)
         color = [0] * n
+
         def dfs(node):
             if color[node]:
                 return color[node] == 2

@@ -32,11 +32,14 @@ def bags_variants(bag, item):
 
 
 def solve(bag, items):
-    if not items: return bag
+    if not items:
+        return bag
 
     for temp_bag in bags_variants(bag, items[0]):
         r = solve(temp_bag, items[1:])
-        if r: return r
+        if r:
+            return r
+
 
 def fit_bag(height, width, items):
     bag = [[0] * width for _ in range(height)]

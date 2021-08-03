@@ -6,7 +6,8 @@ class Solution:
             l = 0
             while n > 0:
                 l += 1
-                if n % 2 == 1: op0 += 1
+                if n % 2 == 1:
+                    op0 += 1
                 n //= 2
-            op1 = max(op1, l-1)
+            op1 = max(op1, l - 1)
         return op0 + op1

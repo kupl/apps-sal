@@ -11,4 +11,3 @@ for k, v in list(d.items()):
         c[k][j] = i + 1
 for p, y in q:
     print(("{:0>6}{:0>6}".format(p, c[p][y])))
-

@@ -43,4 +43,4 @@ for i in range(1, n + 1):
         ar.append(i)
 print(len(ar))
 for i in ar:
-    print(i,end=' ')
+    print(i, end=' ')

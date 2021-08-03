@@ -1,4 +1,7 @@
-import os, sys, re, math
+import os
+import sys
+import re
+import math
 
 
 def get_exp_value(number):
@@ -31,4 +34,3 @@ for i in range(max_pos - K, max_pos):
     answer += exps[P[i + 1]]
 
 print(answer)
-

@@ -1,6 +1,6 @@
 import numpy as np
 
-H, W = map(int,input().split())
+H, W = map(int, input().split())
 S = [list(str(input())) for _ in range(H)]
 S = np.array(S)
 S = (S == '.') * 1

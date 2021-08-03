@@ -26,4 +26,3 @@ n = int(input())
 c = input()
 
 print((solve1(n, c)))
-

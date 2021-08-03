@@ -24,4 +24,3 @@ for i in range(1, n):
     c[1][i] = min(c[1][i - 1] + a2[i - 1], c[0][i] + b[i])
 ans += c[-1][-1]
 print(ans)
-

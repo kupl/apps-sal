@@ -13,4 +13,3 @@ for a in aa:
         return
 
 print(result)
-

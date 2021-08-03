@@ -31,7 +31,7 @@ def union(x, y):
     '''
     x = find(x)
     y = find(y)
-    
+
     if x == y:
         return False
 
@@ -60,9 +60,9 @@ for i in range(n):
 x.sort()
 y.sort()
 edge = []
-for i in range(n-1):
-    edge.append([x[i+1][0]-x[i][0], x[i+1][1], x[i][1]])
-    edge.append([y[i+1][0]-y[i][0], y[i+1][1], y[i][1]])
+for i in range(n - 1):
+    edge.append([x[i + 1][0] - x[i][0], x[i + 1][1], x[i][1]])
+    edge.append([y[i + 1][0] - y[i][0], y[i + 1][1], y[i][1]])
 
 par = [-1] * n
 print(kruskal())

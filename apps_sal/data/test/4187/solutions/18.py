@@ -10,5 +10,3 @@ while i < len(a):
     m = max(m, j - i - 1)
     i = j
 print(m)
-
-

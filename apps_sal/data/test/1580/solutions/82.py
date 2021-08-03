@@ -11,7 +11,8 @@ class UnionFind:
     def merge(self, x, y):
         x = self.root(x)
         y = self.root(y)
-        if x == y: return False
+        if x == y:
+            return False
 
         # y の方がデータ数を多く
         if self.data[x] < self.data[y]:
@@ -34,21 +35,23 @@ class UnionFind:
         """
         return -self.data[self.root(x)]
 
+
 def main():
-    N,M=[int(_) for _ in input().split()]
+    N, M = [int(_) for _ in input().split()]
     uf = UnionFind(N)
     for i in range(M):
-        x,y,z=[int(_) for _ in input().split()]
-        uf.merge(x-1,y-1)
+        x, y, z = [int(_) for _ in input().split()]
+        uf.merge(x - 1, y - 1)
 
-    cnt=0
+    cnt = 0
     for i in range(N):
-        if uf.root(i)==i:
-            cnt+=1
+        if uf.root(i) == i:
+            cnt += 1
     print(cnt)
 
 
 def __starting_point():
     main()
+
 
 __starting_point()

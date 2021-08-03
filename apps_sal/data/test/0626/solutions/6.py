@@ -18,5 +18,3 @@ while cur < n:
                 cur += 1
                 used[i] = True
 print(ans - 1)
-    
-

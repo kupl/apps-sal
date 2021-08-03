@@ -10,4 +10,3 @@ for elem in A:
         dp[-1][0] = max(dp[-2][1] + elem, dp[-2][0])
         dp[-1][1] = max(dp[-2][0] + elem, dp[-2][1], elem)
 print(dp[-1][1])
-

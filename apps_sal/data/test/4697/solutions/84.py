@@ -1,9 +1,9 @@
 def main():
     n, m = list(map(int, input().split()))
     ans = 0
-    if m >= 2*n:
+    if m >= 2 * n:
         ans += n
-        m -= 2*n
+        m -= 2 * n
         n = 0
     else:
         ans += m // 2
@@ -14,5 +14,6 @@ def main():
 
 def __starting_point():
     main()
+
 
 __starting_point()

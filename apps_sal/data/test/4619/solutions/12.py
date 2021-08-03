@@ -13,4 +13,3 @@ for _ in range(n):
         y_pos[1] = min(y_pos[1], y)
 ans = max(0, (x_pos[1] - x_pos[0])) * max(0, (y_pos[1] - y_pos[0]))
 print(ans)
-

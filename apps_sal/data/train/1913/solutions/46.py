@@ -2,7 +2,7 @@ class Solution:
     def prevPermOpt1(self, A: List[int]) -> List[int]:
         def findLarger():
             prev = A[-1]
-            for i in range(len(A)-1, -1, -1):
+            for i in range(len(A) - 1, -1, -1):
                 if A[i] > prev:
                     return i
                 prev = A[i]
@@ -20,4 +20,3 @@ class Solution:
         print((larger, sl))
         A[sl], A[larger] = A[larger], A[sl]
         return A
-

@@ -21,13 +21,8 @@ for s in S:
             r -= 1
         else:
             l += 1
-ans = "".join(["("*l , S, ")"*r])
+ans = "".join(["(" * l, S, ")" * r])
 print(ans)
 
 
 # In[ ]:
-
-
-
-
-

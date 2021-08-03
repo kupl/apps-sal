@@ -87,4 +87,3 @@ for _ in range(Q):
         else:
             print(A)
             break
-

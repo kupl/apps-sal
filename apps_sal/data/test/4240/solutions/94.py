@@ -6,4 +6,3 @@ for i in range(len(string)):
         print('Yes')
         return
 print('No')
-

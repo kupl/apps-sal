@@ -11,6 +11,7 @@ def num(a):
     print
     return int(b) * q
 
+
 a = input()
 b = 0
 nn = ''

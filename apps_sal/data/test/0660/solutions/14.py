@@ -1,7 +1,6 @@
-n,b, p = input().split();
-n= int(n)
-b=int(b)
-p=int(p)
-print((n-1)*2*b+(n-1),end=' ')
-print(n*p)
-
+n, b, p = input().split()
+n = int(n)
+b = int(b)
+p = int(p)
+print((n - 1) * 2 * b + (n - 1), end=' ')
+print(n * p)

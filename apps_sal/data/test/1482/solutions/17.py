@@ -17,4 +17,3 @@ for i in range(n * k):
 
 for x in o:
     print(' '.join(x))
-

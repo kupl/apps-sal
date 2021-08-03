@@ -1,11 +1,12 @@
 def greet(language):
-        if language in x.keys():
-            i=language
-            return x[i]
-        else:
-            return "Welcome"
-        
-x={      
+    if language in x.keys():
+        i = language
+        return x[i]
+    else:
+        return "Welcome"
+
+
+x = {
     'english': 'Welcome',
     'czech': 'Vitejte',
     'danish': 'Velkomst',
@@ -13,7 +14,7 @@ x={
     'estonian': 'Tere tulemast',
     'finnish': 'Tervetuloa',
     'flemish': 'Welgekomen',
-    'french': 'Bienvenue', 
+    'french': 'Bienvenue',
     'german': 'Willkommen',
     'irish': 'Failte',
     'italian': 'Benvenuto',
@@ -23,4 +24,4 @@ x={
     'spanish': 'Bienvenido',
     'swedish': 'Valkommen',
     'welsh': 'Croeso'
-    }
+}

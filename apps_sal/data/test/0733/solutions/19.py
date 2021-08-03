@@ -1,4 +1,4 @@
-x,y,a,b = map(int, input().split())
+x, y, a, b = map(int, input().split())
 g = 1
 while g % x or g % y:
     g += 1

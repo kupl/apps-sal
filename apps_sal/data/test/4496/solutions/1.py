@@ -1,3 +1,3 @@
-D = int (input ())
+D = int(input())
 x = 25 - D
-print ('Christmas', 'Eve '*x)
+print('Christmas', 'Eve ' * x)

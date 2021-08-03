@@ -8,4 +8,3 @@ else:
         if s[i] != s[i + 1]:
             print(s[i] + s[i + 1])
             break
-

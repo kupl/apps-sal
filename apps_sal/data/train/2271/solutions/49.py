@@ -1,7 +1,15 @@
-from collections import defaultdict,deque
-import sys,heapq,bisect,math,itertools,string,queue,datetime
+from collections import defaultdict, deque
+import sys
+import heapq
+import bisect
+import math
+import itertools
+import string
+import queue
+import datetime
 def inpl(): return list(map(int, input().split()))
 def inpl_s(): return list(input().split())
+
 
 class UnionFind():
     def __init__(self, n):
@@ -50,6 +58,7 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 N, M = map(int, input().split())
 p = inpl()
 uf = UnionFind(N)
@@ -61,7 +70,7 @@ for i in range(M):
 
 ans = 0
 for i in range(N):
-    if uf.same(p[i]-1,i):
+    if uf.same(p[i] - 1, i):
         ans += 1
 
 print(ans)

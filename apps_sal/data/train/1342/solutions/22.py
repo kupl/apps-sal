@@ -1,30 +1,29 @@
 
 for _ in range(int(input())):
 
- n,x=list(map(int,input().split()))
+    n, x = list(map(int, input().split()))
 
- l=list(map(int,input().split()))
+    l = list(map(int, input().split()))
 
- l.sort()
+    l.sort()
 
- i=cnt=0
- while i<n and 2*l[i]<x:
-  cnt+=1
+    i = cnt = 0
+    while i < n and 2 * l[i] < x:
+        cnt += 1
 
-  i+=1
+        i += 1
 
- while i<n:
-  cnt+=1
-  
-  if l[i]>x and 2*(l[i]-x)>l[i] :
-   x=x*2
-   continue
+    while i < n:
+        cnt += 1
 
-  if l[i]<=x:
-   x=l[i]
-   i+=1
+        if l[i] > x and 2 * (l[i] - x) > l[i]:
+            x = x * 2
+            continue
 
-  x=x*2
+        if l[i] <= x:
+            x = l[i]
+            i += 1
 
- print(cnt)
+        x = x * 2
 
+    print(cnt)

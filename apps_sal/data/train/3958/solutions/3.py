@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def custom_fib(sig, ind, n):
     sig = deque(sig)
     while n >= len(sig):

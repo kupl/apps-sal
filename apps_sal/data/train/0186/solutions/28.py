@@ -1,6 +1,7 @@
 class Solution:
     def largestNumber(self, cost: List[int], target: int) -> str:
         cache = {}
+
         def helper(remaining):
             if remaining == 0:
                 return ''
@@ -13,7 +14,7 @@ class Solution:
                 result = helper(remaining - cost[i])
                 if result == '0':
                     continue
-                maximum = larger(maximum, str(i+1) + result)
+                maximum = larger(maximum, str(i + 1) + result)
             cache[remaining] = maximum
             return maximum
 

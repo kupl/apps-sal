@@ -41,7 +41,7 @@ def calculate(n, arr):
             isOk = False
             break
 
-        result.__setitem__(arr[i], result.get(arr[i])-1)
+        result.__setitem__(arr[i], result.get(arr[i]) - 1)
 
     if isOk == False:
         print((0))
@@ -54,4 +54,3 @@ def calculate(n, arr):
 
 
 calculate(N, ARR)
-

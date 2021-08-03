@@ -6,26 +6,26 @@
 #         self.right = right
 class Solution:
     def recoverFromPreorder(self, S: str) -> TreeNode:
-        
+
         if not S:
-            return 
-        
+            return
+
         ins = list(S)
-        
+
         root = TreeNode(-1)
         current = None
-        
+
         while ins:
-            
+
             while ins and ins[0] == '-':
-                
+
                 # if right present
                 if current.right:
-                    current = current.right                
+                    current = current.right
                 # if left present
                 elif current.left:
                     current = current.left
-                
+
                 ch = ins.pop(0)
 
             # node val can be multiple digits
@@ -33,7 +33,7 @@ class Solution:
             while ins and ins[0] != '-':
                 ch = ins.pop(0)
                 node_val += ch
-                
+
             # if root None yet
             if not root.left:
                 root.left = TreeNode(node_val)
@@ -47,5 +47,5 @@ class Solution:
 
             # reset current
             current = root
-            
+
         return root.left

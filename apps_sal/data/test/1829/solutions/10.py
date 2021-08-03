@@ -4,13 +4,13 @@ my_set = set()
 for i in range(n):
     s = input()
     my_set.add(s)
-    
+
 double = 0
 for i in range(m):
     s = input()
     if s in my_set:
         double += 1
-        
+
 n -= double
 m -= double
 while True:
@@ -21,7 +21,7 @@ while True:
         double -= 1
     else:
         n -= 1
-    
+
     if not double and not m:
         print('YES')
         break

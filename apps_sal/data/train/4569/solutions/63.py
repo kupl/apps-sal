@@ -9,5 +9,3 @@ def next_item(xs, item=None):
     except AttributeError:
         if item in xs:
             return next(xs)
-                
-

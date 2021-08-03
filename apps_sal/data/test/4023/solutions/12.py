@@ -12,17 +12,18 @@ def f():
         else:
             b.append(e)
 
-    if len(b)==0:
+    if len(b) == 0:
         print('YES')
 
     else:
-        if len(set(b))==1 and b[0]==max(a):
+        if len(set(b)) == 1 and b[0] == max(a):
             print('YES')
         else:
             print('NO')
 
-n=int(input())
-a=[int(i) for i in input().split()]
+
+n = int(input())
+a = [int(i) for i in input().split()]
 
 
 f()

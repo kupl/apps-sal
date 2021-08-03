@@ -11,13 +11,17 @@ for i in range(n):
         if s[j] == 'S':
             isRowFree[i] = False
             isColFree[j] = False
-      
+
+
 def FreeRows():
     return sum(1 for i in range(n) if isRowFree[i])
+
+
 def FreeColumns():
-    return sum(1 for i in range(m) if isColFree[i])      
+    return sum(1 for i in range(m) if isColFree[i])
+
 
 a = FreeRows()
-b = FreeColumns()      
-      
+b = FreeColumns()
+
 print(a * m + b * (n - a))

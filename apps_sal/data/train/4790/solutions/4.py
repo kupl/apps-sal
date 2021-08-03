@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def clean_mean(sample, cutoff):
     sample = np.array(sample)
     while(True):

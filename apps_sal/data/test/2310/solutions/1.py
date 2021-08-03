@@ -9,7 +9,7 @@ for test in range(test_count):
     unhappy = []
     for i in range(m - 1):
         t, r = list(map(int, sys.stdin.readline().split()))
-        t -= 1 # -1 means unknown
+        t -= 1  # -1 means unknown
         took.append(t)
         unhappy.append(r)
 
@@ -57,4 +57,3 @@ for test in range(test_count):
     sys.stdout.write(
         ''.join(['Y' if x else 'N' for x in answer]) + '\n'
     )
-

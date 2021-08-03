@@ -5,9 +5,9 @@ dp = [0] * (len(s) + 1)
 dp[0] = 1
 for i in range(1, len(s) + 1):
     for ei in e:
-        if (len(ei) <= i and 
-            ei == s[i - len(ei):i] and 
-            dp[i - len(ei)] == 1):
+        if (len(ei) <= i and
+            ei == s[i - len(ei):i] and
+                dp[i - len(ei)] == 1):
             dp[i] = 1
 
 print('YES' if dp[len(s)] else 'NO')

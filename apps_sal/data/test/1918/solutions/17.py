@@ -14,14 +14,13 @@ start = sum([x for x in values if max(x, 0)])
 total = start
 best = start
 for i in values:
-	total -= i
-	best = max(total, best)
+    total -= i
+    best = max(total, best)
 
 total = start
 for i in reversed(values):
-	total -= i
-	best = max(total, best)
+    total -= i
+    best = max(total, best)
 
 # print(p, teams, values, best)
 print(best)
-

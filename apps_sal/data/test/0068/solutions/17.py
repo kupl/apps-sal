@@ -33,13 +33,13 @@ for i in range(lops):
         u += 1
     else:
         d += 1
-    ll[i+1] = l
-    lr[i+1] = r
-    ld[i+1] = d
-    lu[i+1] = u
+    ll[i + 1] = l
+    lr[i + 1] = r
+    ld[i + 1] = d
+    lu[i + 1] = u
 
 l, r, u, d = 0, 0, 0, 0
-for i in range(lops-1, -1, -1):
+for i in range(lops - 1, -1, -1):
     op = ops[i]
     if op == 'L':
         l += 1
@@ -54,8 +54,9 @@ for i in range(lops-1, -1, -1):
     rd[i] = d
     ru[i] = u
 
+
 def check(lsub):
-    for i in range(lops-lsub+1):
+    for i in range(lops - lsub + 1):
         # j-i+1 == lsub, j < lops => i+lsub-1 <lops => i < lops-lsub+1
         j = i + lsub - 1
 
@@ -63,15 +64,15 @@ def check(lsub):
         l0, r0, u0, d0 = ll[i], lr[i], lu[i], ld[i]
 
         # l, r, u, d of ops [j+1, N-1], rr[j]={'R' of lops-1,...,j}
-        l1, r1, u1, d1 = rl[j+1], rr[j+1], ru[j+1], rd[j+1]
+        l1, r1, u1, d1 = rl[j + 1], rr[j + 1], ru[j + 1], rd[j + 1]
 
-        x = (r0+r1) - (l0+l1)
-        y = (u0+u1) - (d0+d1)
+        x = (r0 + r1) - (l0 + l1)
+        y = (u0 + u1) - (d0 + d1)
 
-        dx = abs(X-x)
-        dy = abs(Y-y)
+        dx = abs(X - x)
+        dy = abs(Y - y)
 
-        if dx + dy <= lsub and (lsub-dx-dy) % 2 == 0:
+        if dx + dy <= lsub and (lsub - dx - dy) % 2 == 0:
             return True
 
     return False
@@ -87,7 +88,3 @@ while sl < sr:
 
 sl = -1 if sl > lops else sl
 print(sl)
-
-
-
-

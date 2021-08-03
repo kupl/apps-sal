@@ -5,4 +5,3 @@ for i in range(int(input())):
         print("prekrasnyy")
     else:
         print("ne krasivo")
-

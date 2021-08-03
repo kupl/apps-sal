@@ -17,7 +17,7 @@
                         res = tmp
                         resPath = path
         return res'''
-        
+
 '''def dfs(self, grid, x,y,rLen, cLen):
             val = grid[x][y]
             grid[x][y] = 0
@@ -46,9 +46,6 @@
             path.append([x,y])
             grid[x][y] = val
             return curSum + val, path'''
- 
-        
-
 
 
 '''class Solution:
@@ -83,35 +80,35 @@
         else:
             return 0, []'''
 
+
 class Solution:
     def getMaximumGold(self, grid):
         path = []
-        total = 0 
+        total = 0
         self.rLen = len(grid)
         self.cLen = len(grid[0])
         for i in range(self.rLen):
             for j in range(self.cLen):
                 if grid[i][j] != 0:
-                    retTotal, retPath = self.dfs(grid,i,j)
+                    retTotal, retPath = self.dfs(grid, i, j)
                     if retTotal > total:
-                        total = retTotal 
-                        path = retPath 
-        return total 
-    def dfs(self,grid,i,j):
+                        total = retTotal
+                        path = retPath
+        return total
+
+    def dfs(self, grid, i, j):
         tmp = grid[i][j]
-        grid[i][j] = 0 
-        total = 0 
+        grid[i][j] = 0
+        total = 0
         path = []
-        for newI, newJ in [[i+1,j],[i-1,j],[i,j+1], [i,j-1]]:
-            if 0<=newI<self.rLen and 0<=newJ<self.cLen and grid[newI][newJ] != 0:
-                retTotal, retPath = self.dfs(grid,newI, newJ)
+        for newI, newJ in [[i + 1, j], [i - 1, j], [i, j + 1], [i, j - 1]]:
+            if 0 <= newI < self.rLen and 0 <= newJ < self.cLen and grid[newI][newJ] != 0:
+                retTotal, retPath = self.dfs(grid, newI, newJ)
                 if retTotal > total:
-                    total = retTotal 
-                    path = retPath 
+                    total = retTotal
+                    path = retPath
         grid[i][j] = tmp
-        return total + tmp, path + [[i,j]]
-    
-        
+        return total + tmp, path + [[i, j]]
 
 
 '''from collections import namedtuple
@@ -163,8 +160,8 @@ class Solution:
             max_path = max(max_path, dfs(self.neighbor(v_idx, grid[row][col]), checked, 0, -float('inf'))[1])
             checked[v_idx] = False
         return max_path'''
-        
-            
+
+
 '''import functools
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
@@ -190,10 +187,4 @@ class Solution:
                     for x, y in ((i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)):
                         if 0 <= x < len(grid) and 0 <= y < len(grid[0]) and grid[x][y]:
                             graph[m[i, j]].append(m[x, y])
-        return max(dfs(u, 1 << u) for u in range(len(vertex_gold))) '''       
-            
-        
-        
-        
-        
-
+        return max(dfs(u, 1 << u) for u in range(len(vertex_gold))) '''

@@ -8,5 +8,5 @@ if rem > 0:
     if rem % 2 == 1:
         cur = cur - d
 
-ans = abs(cur) 
+ans = abs(cur)
 print(ans)

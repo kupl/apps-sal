@@ -18,8 +18,4 @@ size, num = input(), [int(x) for x in input().split()]
 print(maximum_xor_secondary(num))
 
 
-
-
-
 # Made By Mostafa_Khaled
-

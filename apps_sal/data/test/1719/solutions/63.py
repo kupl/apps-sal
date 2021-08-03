@@ -56,6 +56,6 @@ def submit():
 
     ans = sum(v % modp for v in dp[n].values())
     print(ans % modp)
-    
+
 
 submit()

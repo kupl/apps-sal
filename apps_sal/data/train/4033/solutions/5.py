@@ -1,1 +1,1 @@
-contamination=lambda t,c: c*len(t)
+def contamination(t, c): return c * len(t)

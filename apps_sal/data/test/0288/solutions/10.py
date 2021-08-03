@@ -12,7 +12,7 @@ while k < n:
     k = k + l[m]
     m = m + 1
     l.append(k)
-    
+
 if k > n:
     m = m - 1
 

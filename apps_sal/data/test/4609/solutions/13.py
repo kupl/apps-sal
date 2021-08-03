@@ -1,12 +1,11 @@
 n = int(input())
 kami = set()
 
-for i in range(n) :
+for i in range(n):
     a = int(input())
-    if a in kami :
+    if a in kami:
         kami.remove(a)
-    else :
+    else:
         kami.add(a)
 
 print((len(kami)))
-

@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 count = {}
 rect = {}
@@ -16,7 +16,7 @@ if len(rect) < 1:
 else:
     x = max(rect)
     if rect[x] >= 4:
-        ans = x * x 
+        ans = x * x
     else:
         del rect[x]
         if len(rect) < 1:
@@ -25,4 +25,3 @@ else:
             y = max(rect)
             ans = x * y
 print(ans)
-

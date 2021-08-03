@@ -14,5 +14,3 @@ for c in S:
             needs_right -= 1
 
 print(('(' * needs_left + S + ')' * needs_right))
-
-

@@ -1,6 +1,6 @@
+import sys
 3
 
-import sys
 
 n = int(input())
 
@@ -17,5 +17,4 @@ while n != 0:
     # sys.stdout.write(str(num) + " ")
 
 print(len(nums))
-print(" ".join(map (str, nums)))
-
+print(" ".join(map(str, nums)))

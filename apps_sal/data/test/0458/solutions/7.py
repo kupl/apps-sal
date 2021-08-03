@@ -5,6 +5,7 @@ def sd(n):
         n //= 10
     return val
 
+
 a, b, c = (int(x) for x in input().split())
 l = []
 for s in range(1, 82):

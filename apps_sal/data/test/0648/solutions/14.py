@@ -8,6 +8,7 @@ def calc(x):
     # print(x, ret)
     return ret
 
+
 m, b = list(map(int, input().split()))
 i = 0
 ans = 0
@@ -15,4 +16,3 @@ while i <= m * b:
     ans = max(ans, calc(i))
     i += m
 print(ans)
-

@@ -4,11 +4,10 @@ b = a + 'n'
 prev = 'a'
 valid = 'YES'
 for c in s:
-  if prev not in b and c not in a:
-    valid = 'NO'
-    break
-  prev = c
+    if prev not in b and c not in a:
+        valid = 'NO'
+        break
+    prev = c
 if prev not in b:
-  valid = 'NO'
+    valid = 'NO'
 print(valid)
-

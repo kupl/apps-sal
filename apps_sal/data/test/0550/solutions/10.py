@@ -17,7 +17,7 @@ def compare(c1, c2):
 
     if 'A' <= c1 <= 'Z' and chr(ord(c1) - ord('A') + ord('a')) == c2:
         return True
-    
+
     return c1 == c2
 
 
@@ -42,4 +42,3 @@ for _ in range(n):
         return
 
 print("Yes")
-

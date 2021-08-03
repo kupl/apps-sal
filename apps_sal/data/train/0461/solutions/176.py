@@ -4,7 +4,7 @@ class Solution:
             return total_time
         else:
             return max(self.numMin(informTime[headID] + total_time, n, e, subordinates, informTime) for e in subordinates[headID])
-    
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         subordinates = [[] for x in range(n)]
         for i, m in enumerate(manager):
@@ -12,4 +12,3 @@ class Solution:
                 subordinates[m].append(i)
         print(subordinates)
         return self.numMin(0, n, headID, subordinates, informTime)
-

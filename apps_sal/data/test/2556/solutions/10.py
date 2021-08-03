@@ -5,6 +5,5 @@ for i in range(n):
     r = minSum // count
     ans = (r**2) * count
     ans -= ost * (r**2)
-    ans += ((r+1) ** 2) * ost
+    ans += ((r + 1) ** 2) * ost
     print(ans)
-

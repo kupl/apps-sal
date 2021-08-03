@@ -19,4 +19,3 @@ for i in range(1, n + 1):
         ans[i - 1] += delta
 
 print(' '.join(map(str, ans)))
-

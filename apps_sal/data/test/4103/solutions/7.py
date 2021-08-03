@@ -14,4 +14,3 @@ for i in range(n):
     else:
         b -= 1
 print(n)
-

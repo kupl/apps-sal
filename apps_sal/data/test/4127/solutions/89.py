@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from decimal import Decimal  
+from decimal import Decimal
 import math
 
 a, b = input().split()
@@ -10,5 +10,3 @@ b = Decimal(b)
 x = a * b
 
 print((math.floor(int(a) * Decimal(b))))
-
-

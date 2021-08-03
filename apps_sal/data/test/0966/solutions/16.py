@@ -5,5 +5,3 @@ while True:
     if len(c) == len(str(n)):
         print(n)
         break
-
-

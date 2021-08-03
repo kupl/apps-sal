@@ -7,8 +7,8 @@ def get_planet_name(id):
         4: "Mars",
         5: "Jupiter",
         6: "Saturn",
-        7: "Uranus"  ,
+        7: "Uranus",
         8: "Neptune"
     }
-    
-    return switch.get(id, "LOL");
+
+    return switch.get(id, "LOL")

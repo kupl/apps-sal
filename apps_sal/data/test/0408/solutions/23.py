@@ -9,5 +9,3 @@ elif x >= 0 and y <= 0:
     print(n)
 else:
     print(m)
-    
-

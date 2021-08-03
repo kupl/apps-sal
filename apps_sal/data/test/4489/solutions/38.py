@@ -18,4 +18,3 @@ for i in list(s.keys()):
         ans_tmp = s[i]
     ans = max(ans, ans_tmp)
 print(ans)
-

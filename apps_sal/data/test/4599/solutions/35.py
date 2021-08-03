@@ -22,7 +22,9 @@ def main():
     a = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
     solve(N, a)
 
+
 def __starting_point():
     main()
+
 
 __starting_point()

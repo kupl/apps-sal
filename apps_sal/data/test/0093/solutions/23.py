@@ -11,6 +11,6 @@ B = B.replace('X', '')
 A = A + A
 
 if (A.find(B) == -1):
-  print('NO')
+    print('NO')
 else:
-  print('YES')
+    print('YES')

@@ -24,4 +24,3 @@ else:
     for v in b:
         a.append(idx[v])
     print(' '.join(map(str, a)))
-

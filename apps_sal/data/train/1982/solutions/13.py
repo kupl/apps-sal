@@ -1,7 +1,7 @@
 class Solution:
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         pairs = {}
-        for a,b in dislikes:
+        for a, b in dislikes:
             if not a in pairs:
                 pairs[a] = set()
             if not b in pairs:
@@ -9,7 +9,7 @@ class Solution:
             pairs[a].add(b)
             pairs[b].add(a)
         seen = set()
-        for i in range(1,N+1):
+        for i in range(1, N + 1):
             if i in seen:
                 continue
             curr = set([i])
@@ -37,6 +37,3 @@ class Solution:
                 curr = _next
                 flag ^= 1
         return True
-                
-                
-

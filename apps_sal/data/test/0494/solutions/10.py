@@ -1,6 +1,6 @@
-input_ar = list(map(int,input().rstrip().split(" ")))
-leaders = list(map(int,input().rstrip().split(" ")))
-not_there_set = {i+1 for i in range(input_ar[0])}
+input_ar = list(map(int, input().rstrip().split(" ")))
+leaders = list(map(int, input().rstrip().split(" ")))
+not_there_set = {i + 1 for i in range(input_ar[0])}
 a_n_done = [False for i in range(input_ar[0])]
 a_n = [0 for i in range(input_ar[0])]
 possible = True

@@ -60,7 +60,7 @@ A = list(map(int, input().split()))
 #MAXN = 10**6+10
 #sieve = [i for i in range(MAXN+1)]
 #p = 2
-#while p*p <= MAXN:
+# while p*p <= MAXN:
 #    if sieve[p] == p:
 #        for q in range(2*p, MAXN+1, p):
 #            if sieve[q] == q:
@@ -75,7 +75,7 @@ for a in A:
     if a in st:
         sieve[a] = 0
     if sieve[a] == 1:
-        for q in range(2*a, MAXN+1, a):
+        for q in range(2 * a, MAXN + 1, a):
             if sieve[q] == 1:
                 sieve[q] = 0
     st.add(a)

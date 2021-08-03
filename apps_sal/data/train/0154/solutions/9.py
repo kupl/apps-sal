@@ -5,13 +5,11 @@ class Solution:
         prev = 0
         hm = 0
         for i in hh:
-            hm = max(hm,i-prev)
+            hm = max(hm, i - prev)
             prev = i
         prev = 0
         vm = 0
         for i in vv:
-            vm = max(vm,i-prev)
+            vm = max(vm, i - prev)
             prev = i
-        return (vm * hm)  % (10**9 + 7)
-        
-
+        return (vm * hm) % (10**9 + 7)

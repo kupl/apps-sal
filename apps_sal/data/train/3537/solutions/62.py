@@ -1,5 +1,5 @@
-def is_even(n): 
-    bool=False
-    if n%2==0:
-        bool=True
+def is_even(n):
+    bool = False
+    if n % 2 == 0:
+        bool = True
     return bool

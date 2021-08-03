@@ -11,7 +11,7 @@ for i in range(2**n):
     for j in range(n):
         if (i >> j) & 1:
             lst[j] = 1
-    
+
     flag = True
     for j in range(n):
         if lst[j] == 1:

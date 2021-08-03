@@ -1,2 +1,1 @@
-count_by = lambda start, end: list(range(start, start*end+1, start))
-
+def count_by(start, end): return list(range(start, start * end + 1, start))

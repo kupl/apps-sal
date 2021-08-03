@@ -43,4 +43,3 @@ for _ in range(Q):
             cnt += 1
 
         print(cnt)
-

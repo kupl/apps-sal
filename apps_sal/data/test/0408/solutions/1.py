@@ -16,4 +16,3 @@ while n > 0 and m > 1:
         m = t
 
 print(s)
-

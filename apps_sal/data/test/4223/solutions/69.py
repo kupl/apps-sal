@@ -11,7 +11,3 @@ for s in S:
 
 print((len(ans)))
 # print(ans)
-
-
-
-

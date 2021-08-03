@@ -5,4 +5,3 @@ mx = 10**6
 for i in range(len(a) - 1):
     mx = min(mx, max(a[i] - a[0], a[-1] - a[i + 1]))
 print(mx)
-

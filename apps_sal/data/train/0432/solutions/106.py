@@ -4,19 +4,19 @@ class Solution:
             return False
         from collections import Counter
         import heapq
-        
+
         d = Counter(nums)
         num_groups = len(nums) // k
-        h = [(i,c) for i,c in d.items()]
+        h = [(i, c) for i, c in d.items()]
         heapq.heapify(h)
 
         while len(h) > 0:
             temp = []
-            k_= k
+            k_ = k
             while k_ > 0:
                 if h:
-                    x,c = heapq.heappop(h) # pop the smallest element
-                    #if d[x] > 0:
+                    x, c = heapq.heappop(h)  # pop the smallest element
+                    # if d[x] > 0:
                     if temp:
                         if temp[-1] == x - 1:
                             temp.append(x)
@@ -26,11 +26,11 @@ class Solution:
                         temp.append(x)
                 else:
                     return False
-                
+
                 d[x] -= 1
                 k_ -= 1
             for x in temp:
                 if d[x] > 0:
-                    heapq.heappush(h,(x,d[x]))
-            
+                    heapq.heappush(h, (x, d[x]))
+
         return True

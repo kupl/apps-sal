@@ -7,6 +7,7 @@ def sev(n):
         m += 1
     return m
 
+
 def fil(n, m, l, r):
     d = []
     for i in range(r):
@@ -15,10 +16,11 @@ def fil(n, m, l, r):
     for i in range(l):
         d += [n % 7]
         n //= 7
-    
+
     if len(set(d)) != l + r:
         return 0
     return 1
+
 
 n, m = list(map(int, input().split()))
 l, r = sev(n - 1), sev(m - 1)
@@ -31,4 +33,3 @@ else:
         for j in range(m):
             c += fil(i, j, l, r)
     print(c)
-

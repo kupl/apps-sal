@@ -12,4 +12,3 @@ for _ in range(n):
     if sum_num > 0:
         ans += 1
 print(ans)
-

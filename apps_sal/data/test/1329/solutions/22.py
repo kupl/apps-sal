@@ -24,13 +24,13 @@ def factorization(n):
 
 def solve():
     N = int(rl())
-    
+
     counter = defaultdict(int)
     for x in range(1, N + 1):
         facts = factorization(x)
         for fact, exp in facts:
             counter[fact] += exp
-    
+
     M = len(list(counter.keys()))
     nums = tuple(counter.values())
     div75 = (1, 3, 5, 15, 25, 75)
@@ -46,5 +46,6 @@ def solve():
 
 def __starting_point():
     solve()
+
 
 __starting_point()

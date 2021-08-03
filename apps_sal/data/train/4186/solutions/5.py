@@ -1,5 +1,6 @@
 from bisect import bisect
 
+
 def sum_of_threes(n, xs=[3**i for i in range(34)]):
     result = []
     while n >= 1:

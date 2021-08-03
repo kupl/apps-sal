@@ -10,4 +10,3 @@ elif a < b:
     print("Bob")
 elif b < a:
     print("Alice")
-

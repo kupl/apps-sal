@@ -6,8 +6,7 @@ for i in range(k):
     d = int(input())  # お菓子を持ってる人の合計
     l = list(map(int, input().split()))
     safe += l
-for i in range(1, n+1):
+for i in range(1, n + 1):
     if i not in list(set(safe)):
         ans += 1
 print(ans)
-

@@ -31,4 +31,3 @@ while t:
         multiset[convert_num(item)] -= 1
     else:
         print(multiset[convert_pattern(item)])
-

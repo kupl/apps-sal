@@ -9,5 +9,5 @@ def get_planet_name(id):
         6: "Saturn",
         7: "Uranus",
         8: "Neptune",
-        }
+    }
     return planets[id]

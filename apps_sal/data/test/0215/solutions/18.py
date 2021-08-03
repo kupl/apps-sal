@@ -9,4 +9,3 @@ print(max(list(map(len, list(map(set, ss))))))
 11
 aaaaBAAAVDAaabAbA
 """
-

@@ -7,5 +7,5 @@ for i in range(n):
         x += 1
     else:
         x -= 1
-    ans = max(ans,x)
+    ans = max(ans, x)
 print(ans)

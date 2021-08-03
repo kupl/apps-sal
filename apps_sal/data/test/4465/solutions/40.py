@@ -1,3 +1,2 @@
 a, b = list(map(int, input().split()))
-print((a*b - a - b + 1))
-
+print((a * b - a - b + 1))

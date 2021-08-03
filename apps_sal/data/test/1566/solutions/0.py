@@ -21,11 +21,11 @@ else:
             ex = 0
             if x1 <= x <= x2 and y1 <= y <= y2:
                 ex = 4
-            elif (x == x1-1 or x == x2+1) and y1 <= y <= y2:
+            elif (x == x1 - 1 or x == x2 + 1) and y1 <= y <= y2:
                 ex = 2
-            elif (y == y1-1 or y == y2+1) and x1 <= x <= x2:
+            elif (y == y1 - 1 or y == y2 + 1) and x1 <= x <= x2:
                 ex = 2
-            elif (x == x1-1 or x == x2+1) and (y == y1-1 or y == y2+1):
+            elif (x == x1 - 1 or x == x2 + 1) and (y == y1 - 1 or y == y2 + 1):
                 ex = 1
             if ex != grid[y][x]:
                 print('No')
@@ -35,4 +35,3 @@ else:
         break
     else:
         print('Yes')
-
