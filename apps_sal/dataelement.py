@@ -33,8 +33,7 @@ class DataElement:
         self.solutions: Iterable[str] = []
         solutions_dir = self.path / 'solutions'
         if solutions_dir.exists():
-            self.solutions = map(lambda py: py.read_text(),
-                                 solutions_dir.glob('*.py'))
+            self.solutions = [py.read_text() for py in solutions_dir.glob('*.py')]
 
     def __repr__(self) -> str:
         return f'DataElement("{self.path}")'
