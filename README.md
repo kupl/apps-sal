@@ -33,7 +33,7 @@ apps-sal $ [sudo] pip3 install .
 
 #### Currently Developing Version
 Instead of installing latest released version, you can install currently developing snapshot in a similar way.
-Use follo
+Use the following command to install currently developing `apps_sal` with pip and ssh:
 ```bash
 $ [sudo] pip3 install git+ssh://git@github.com/kupl/apps-sal.git # clone from main branch
 ```
