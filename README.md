@@ -51,3 +51,6 @@ import apps_sal
 
 train = apps_sal.load_train_dataset()
 ```
+
+### Changelog
+Changes in this project are documented in [CHANGELOG.md](CHANGELOG.md).
