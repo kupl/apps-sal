@@ -7,8 +7,8 @@ def fun(a1, x1, y1):
 
 for _ in range(n):
     a = int(input())
-    op1 = fun(a, x, y) * y  # cal for Vova
-    op2 = fun(a, y, x) * x  # cal for Vanya
+    op1 = fun(a, x, y) * y
+    op2 = fun(a, y, x) * x
     if op1 == op2:
         print('Both')
     elif op1 < op2:

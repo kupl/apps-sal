@@ -1,6 +1,3 @@
-# n = int(input())
-# w, h = map(int, input().split())
-# to_zero_based = lambda x: int(x) - 1
 from fractions import gcd
 
 

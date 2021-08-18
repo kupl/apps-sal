@@ -18,7 +18,6 @@ for j in range(len(s) - 1, -1, -1):
                 s_streak = 0
     s_streak = 0
 
-# print(s_streak_ind)
 
 if s_streak_ind == -1:
     print("UNRESTORABLE")

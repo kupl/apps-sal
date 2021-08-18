@@ -14,7 +14,6 @@ while cx < x or cy < y:
         cy += 1
 
 
-# sprint(A)
 for _ in range(n):
     a = int(input())
     a -= 1

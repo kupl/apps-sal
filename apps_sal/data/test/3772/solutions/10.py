@@ -2,7 +2,6 @@ import fractions
 
 
 def resistance():
-    #  print("Input the two values")
     _a, _b = input().split()
     a = int(_a)
     b = int(_b)
@@ -14,7 +13,6 @@ def resistance():
         n = f.numerator
         d = f.denominator
 
-        #  If either the num or denom are one, go straight up the line and finish
         if (n == 1) and (d == 1):
             print(answer)
             return

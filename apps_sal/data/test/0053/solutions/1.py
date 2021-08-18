@@ -19,7 +19,6 @@ for i in range(26):
     if(cnt[chr(ord('a') + i)] > cnt[biggest]):
         biggest = chr(ord('a') + i)
 more = max(max(cnt.values()) * 2 - sum(cnt.values()), 0)
-# print(more)
 takes = []
 for i in range(n // 2):
     if(s[i] != s[n - i - 1] and s[i] != biggest and s[n - i - 1] != biggest):
@@ -27,6 +26,4 @@ for i in range(n // 2):
 
 takes = sorted(takes)[:more]
 pen = sum(takes)
-# print(pen)
-# print(takes)
 print(ans - pen)

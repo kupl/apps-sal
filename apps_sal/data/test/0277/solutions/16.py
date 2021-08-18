@@ -6,9 +6,7 @@ m = n
 while m > 1:
     m >>= 1
     rounds += 1
-# print(rounds)
 while len(ls) > 1:
-    # print(ls)
     k += 1
     newls = []
     for i in range(0, len(ls), 2):

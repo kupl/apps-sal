@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Sep 28 02:20:36 2020
 
@@ -23,18 +22,14 @@ for i in range(len(S) - len(T) + 1):
         ans = ""
         for k in range(len(S)):
             if i <= k <= i + len(T) - 1:
-                # print(T[k-i])
                 ans += T[k - i]
             elif S[k] != "?":
-                # print("B")
                 ans += S[k]
             else:
-                # print("C")
                 ans += "a"
         ans = ans[::-1]
         print(ans)
         break
-        # res.append(ans)
 else:
     print("UNRESTORABLE")
 """
@@ -44,5 +39,3 @@ if res:
 else:
     print("UNRESTORABLE")
 """
-# print(S)
-# print(T)

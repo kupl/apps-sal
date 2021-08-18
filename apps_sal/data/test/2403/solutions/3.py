@@ -7,14 +7,12 @@ indeg = [0] * n
 for x in b:
     if x >= 0:
         indeg[x] += 1
-# print(*indeg)
 q = [i for i in range(n) if indeg[i] == 0]
 ans = 0
 res = []
 end = []
 while q:
     top = q.pop()
-    #print("yo", top)
     if a[top] < 0:
         end.append(top)
     else:

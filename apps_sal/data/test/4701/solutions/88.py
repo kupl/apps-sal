@@ -12,6 +12,5 @@ while c < N:
     else:
         tmp += K
     c += 1
-    # print(tmp)
 
 print(tmp)

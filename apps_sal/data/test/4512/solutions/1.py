@@ -34,11 +34,9 @@ class Node:
 def build(nums, l, r):
     if l == r:
         temp = Node(l, l)
-        # print(temp.start,ord(nums[l])-ord('a'),nums)
         temp.lis[ord(nums[l]) - ord('a')] = 1
     else:
         mid = (l + r) >> 1
-        # print(mid,l,r)
         temp = Node(l, r)
         temp.left = build(nums, l, mid)
         temp.right = build(nums, mid + 1, r)
@@ -70,7 +68,6 @@ def query(root, start, end):
 s = input().rstrip('\n')
 root = build(s, 0, len(s) - 1)
 ansarun = []
-# print('arun')
 for _ in range(int(input())):
     templist = list(input().split())
     if templist[0] == '1':

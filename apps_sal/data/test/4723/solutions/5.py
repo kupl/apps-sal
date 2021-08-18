@@ -13,12 +13,10 @@ for i in range(len(s)):
     if (end > len(s)):
         break
     tar = s[start:end]
-    # print(tar)
     index = 0
     name_flag = True
 
     for a, b in zip(tar, t):
-        # print(tar[index])
         if (a == b):
             pass
         elif (a == '?'):
@@ -34,15 +32,11 @@ for i in range(len(s)):
         count_out += 1
     else:
         pre_org = s[:start]
-        # pre = pre_org.replace('?', 'a')
         post_org = s[end:]
-        # post = post_org.replace('?', 'a')
 
-        # tar_mod = pre + tar + post
         tar_mod = pre_org + tar + post_org
         ans.append(tar_mod)
 
-# print(ans)
 if (count_out == (len(s) - len(t) + 1)):
     print(fail)
 else:

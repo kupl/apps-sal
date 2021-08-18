@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 [n, m] = list(map(int, input().strip().split()))
 bis = [input().strip() for _ in range(n)]

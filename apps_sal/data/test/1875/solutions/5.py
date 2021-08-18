@@ -22,7 +22,6 @@ for i in range(n - 1):
         for k in range(n):
             if i != j and i != k and j != k:
                 area = (l[j][0] - l[i][0]) * (l[k][1] - l[i][1]) - (l[j][1] - l[i][1]) * (l[k][0] - l[i][0])
-                # print(area/2)
                 if area > 0:
                     if area > max_upper:
                         max_upper = area
