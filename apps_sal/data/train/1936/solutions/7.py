@@ -1,6 +1,5 @@
 class Solution:
     def pathInZigZagTree(self, label: int) -> List[int]:
-        # 1. Generate non-zig path
         path = [label]
         while label != 1:
             label = label // 2
@@ -9,7 +8,6 @@ class Solution:
         path.reverse()
 
         odd = len(path) % 2 != 0
-        # 2. Account for zig-zag
         for i in range(1, len(path) - 1):
             if not odd and i % 2 == 0:
                 print("Here")

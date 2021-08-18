@@ -1,14 +1,5 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain
-
-# floor(A x / B) - A * floor(x / B)
-#
-# x = B * x1 + x2  : (x2 < B) とする
-#
-# = floor(A (B*x1+x2) / B) - A floor((B*x1+x2) / B)
-# = A x1 + floor(A x2 / B) - A x1
-# = floor(A x2 / B)
 
 
 def solve(A: int, B: int, N: int):
@@ -22,9 +13,9 @@ def solve(A: int, B: int, N: int):
 
 def main():
     tokens = chain(*(line.split() for line in sys.stdin))
-    A = int(next(tokens))  # type: int
-    B = int(next(tokens))  # type: int
-    N = int(next(tokens))  # type: int
+    A = int(next(tokens))
+    B = int(next(tokens))
+    N = int(next(tokens))
     answer = solve(A, B, N)
     print(answer)
 

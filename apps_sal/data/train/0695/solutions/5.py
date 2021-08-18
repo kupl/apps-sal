@@ -10,7 +10,6 @@ for testcase in range(testcases):
         continue
     diffbit = 0
     biggestnum = 1 << 5
-    # print(biggestnum)
     checknum = 0
     flag = 0
     while True:

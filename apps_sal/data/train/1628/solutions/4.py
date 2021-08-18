@@ -1,8 +1,5 @@
 from fractions import Fraction
 
-# Euler's totient function
-# Prime factors search can be easily optimize but it's already really fast anyway
-
 
 def proper_fractions(n):
     res = Fraction(n)

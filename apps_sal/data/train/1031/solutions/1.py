@@ -8,8 +8,6 @@ for i in range(int(input())):
     else:
         thita = (math.asin(cv)) / 2
         ratio = math.tan(thita)
-        # ratio=1/ratio
-        # print ratio
         hh = math.sqrt(((2 * a) / ratio))
         b = (2 * a) / hh
         m = max(b, hh)

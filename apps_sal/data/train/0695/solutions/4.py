@@ -15,7 +15,6 @@ for i in range(t):
     k = -1
     if(lx != ly):
         index = max(lx, ly)
-        # print(index)
         if((n + 1) % 2**(index) >= 2**(index - 1)):
             k = 2**(index - 1)
         else:
@@ -36,7 +35,6 @@ for i in range(t):
                 else:
                     flag = 1
                 break
-        #  print(index)
         if((n + 1) % 2**(index) >= 2**(index - 1)):
             k = 2**(index - 1)
         else:
@@ -47,11 +45,3 @@ for i in range(t):
             print(n + 1 - (int((n + 1) / 2**index) * (2**(index - 1)) + k))
         else:
             print(int((n + 1) / 2**index) * (2**(index - 1)) + k)
-
-
-# for 0
-# if((n+1)%2**(index) >= 2**(index-1)) : k = 2**(index-1)
-# else :k =( n+1)%(2**(index))
-#
-# (int(n+1)/2**index)*(2**(index-1) + k
-#

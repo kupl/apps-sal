@@ -6,7 +6,6 @@ i = 0
 j = num[0]
 L = []
 R = []
-# rR=[]
 while countl != num[1]:
     if string[i] == 'o':
         L.append(i + 1)
@@ -25,10 +24,7 @@ while countr != 0:
         j = j - 1
     if j < 0:
         break
-# print(R)
 R.reverse()
-# print(L)
-# print(rR)
 for k in range(num[1]):
     if L[k] == R[k]:
         print((L[k]))

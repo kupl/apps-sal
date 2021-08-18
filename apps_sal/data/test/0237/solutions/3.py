@@ -5,7 +5,6 @@ def __starting_point():
     res = 1
     lvl = 0
     while m > 0:
-        # print(m)
         x = min(k, lvl + 1) + min(n - k, lvl)
         if (x == n):
             res += m // n

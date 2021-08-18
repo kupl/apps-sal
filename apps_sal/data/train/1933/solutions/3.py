@@ -6,8 +6,6 @@ class Solution:
         :rtype: str
         """
 
-        # a( e + f ) * b( g + h )
-
         ae, af = a.split('+')
         af = af[:-1]
         ae, af = int(ae), int(af)

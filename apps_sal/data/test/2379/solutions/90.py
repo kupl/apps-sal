@@ -1,12 +1,9 @@
-#
 import sys
 import math
 import numpy as np
 import itertools
-# いくつか入力
 n, k, c = (int(i) for i in input().split())
 
-# 文字列を一文字ずつのリストに代入 test は['t', 'e', 's', 't']
 m = list(input())
 
 l = [-1] * n

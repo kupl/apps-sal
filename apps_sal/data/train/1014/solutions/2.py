@@ -13,7 +13,6 @@ while(t > 0):
     ans = 0
     while(i <= high):
 
-        # print(i)
         k = str(i)
         k = ''.join(sorted(k))
         if i >= n1 and int(k) == n1:

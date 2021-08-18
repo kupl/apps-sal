@@ -1,7 +1,6 @@
 def f(med):
     left = k - 1
     right = n - k
-    #print(med, left, right)
     ans = 0
     if med > left + 1:
         d = med - left
@@ -10,7 +9,6 @@ def f(med):
         ans += med * (med + 1) // 2
         left -= (med - 1)
         ans += left
-    # print(ans)
     if med > right + 1:
         d = med - right
         ans += (med + d) * (med - d + 1) // 2
@@ -18,7 +16,6 @@ def f(med):
         ans += med * (med + 1) // 2
         right -= (med - 1)
         ans += right
-    # print(ans)
     if ans - med <= m:
         return True
     else:
