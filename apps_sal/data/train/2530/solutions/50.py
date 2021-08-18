@@ -13,6 +13,5 @@ class Solution:
             if(s % 60 not in m):
                 m.update({s % 60: 0})
             m.update({s % 60: m.get(s % 60) + 1})
-            # print(m)
 
         return result

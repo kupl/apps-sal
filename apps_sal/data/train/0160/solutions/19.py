@@ -1,7 +1,6 @@
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
         n = len(piles)
-        #1 + (N - 1)
 
         @lru_cache(None)
         def solve(i, j):

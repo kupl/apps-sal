@@ -1,5 +1,4 @@
 class Solution:
-    # return True would work because Alex always wins the game
     def stoneGame(self, piles: List[int]) -> bool:
         prefix = list(itertools.accumulate(piles))
 

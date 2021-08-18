@@ -12,12 +12,3 @@ class Solution:
                 result = result + temp[c % 60]
             temp[r] = temp[r] + 1
         return int(result)
-
-
-#         result = 0
-#         for i in range(0,len(time)-1):
-#             for j in range(i+1,len(time)):
-#                 if((time[i]+time[j]) % 60 ==0):
-
-#                     result = result+1
-#         return result

@@ -8,7 +8,6 @@ class Solution:
                 dicts[element] = 1
             else:
                 dicts[element] += 1
-        #print (dicts)
         for i in range(len(time)):
             dicts[time[i]] -= 1
             target = 60 - time[i]

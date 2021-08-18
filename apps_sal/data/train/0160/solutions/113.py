@@ -4,7 +4,6 @@ class Solution:
         return self.recursive(0, 0, len(piles) - 1, 0, 0, piles, memo)
 
     def recursive(self, turn, left_idx, right_idx, sum1, sum2, piles, memo):
-        # Base Case
         if left_idx >= right_idx:
             return sum1 > sum2
 
