@@ -8,8 +8,6 @@ class Solution:
             for i in c:
                 rd[i] = max(rd[i], c[i])
 
-        # b = \"\".join([i * rd[i] for i in rd])
-
         cts = {i: Counter(i) for i in A}
         for i in rd:
             rdi = rd[i]

@@ -30,7 +30,6 @@ def main():
             tup = (int(m[0]) * int(m[1]), int(m[1]) - 1)
             v.append(tup)
 
-        # sort descending
         v = sorted(v, key=lambda x: (-x[1], x[0]))
 
         fterm = v[0]

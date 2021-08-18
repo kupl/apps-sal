@@ -3,9 +3,9 @@ class Solution:
         trie_tree = {'root': {}}
         for word in dict:
             parent = trie_tree['root']
-            for c in word + '#':
-                parent.setdefault(c, {})
-                parent = parent[c]
+            for c in word + '
+            parent.setdefault(c, {})
+            parent = parent[c]
         sentence, res = sentence.split(), []
         for word in sentence:
             parent = trie_tree['root']
@@ -14,7 +14,7 @@ class Solution:
                     res.append(word)
                     break
                 parent = parent[c]
-                if '#' in parent:
-                    res.append(word[:i + 1])
-                    break
+                if '
+                res.append(word[:i + 1])
+                break
         return ' '.join(res)

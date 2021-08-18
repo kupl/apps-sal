@@ -6,11 +6,9 @@ def groupsInInterval(L, R, M, N):
 
 
 def power(a, b):
-    # print(a,'**',b, a**b)
     MOD = 998244353
     res = 1
     while(b > 0):
-        # print('a = ', a,"b = ",b)
 
         if(b % 2):
             res *= a
@@ -18,7 +16,6 @@ def power(a, b):
         b //= 2
         a *= a
         a %= MOD
-    # print('res',res)
     return res
 
 
@@ -32,15 +29,12 @@ while(True):
         n, m = list(map(int, input().split()))
         taken, ways = 0, 1
         for i in range(1, 70):
-            # print(ways)
             L = n // m**i + 1
             R = n // m**(i - 1)
             groups = groupsInInterval(L, R, m, n)
             if(i % 2 == 0):
                 taken += (i // 2) * groups
-                # print("ways ",ways)
                 ways *= power((i // 2 + 1), groups)
-                # ways*= ((i//2 +1)**groups)
             else:
                 taken += ((i + 1) // 2) * groups
                 ways *= (1)

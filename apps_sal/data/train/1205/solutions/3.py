@@ -1,4 +1,3 @@
-# cook your dish here
 def check(s, n):
     temp = 0
     haha = s[0]

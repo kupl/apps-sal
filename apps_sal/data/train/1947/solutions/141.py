@@ -17,7 +17,6 @@ class Solution:
                             d[k] = v
                     else:
                         d.update({k: v})
-        # print(d)
 
         if not d:
             return A

@@ -37,11 +37,8 @@ while t:
         for j in range(8):
             if rows[i][j] == '1':
                 r = identify(i, j)
-                # print '\n'.join([''.join(ro) for ro in rows])
-                # print r
                 if n == 0:
                     total += 1
-                    # print total
                     continue
                 if r == 0:
                     total += pow(2, 2 * n, P)
@@ -63,5 +60,4 @@ while t:
                     total += pow(2, n - 1, P)
                     if r == 11 or r == 7:
                         total += 1
-                # print total
     print(total % P)

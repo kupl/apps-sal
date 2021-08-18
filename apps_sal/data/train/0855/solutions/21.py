@@ -1,4 +1,3 @@
-# cook your dish here
 count = input()
 for i in range(int(count)):
     stringToConvert = input()

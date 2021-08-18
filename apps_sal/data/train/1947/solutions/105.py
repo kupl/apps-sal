@@ -14,11 +14,8 @@ class Solution:
             res_b = count(b)
             for i in range(26):
                 b_max[i] = max(b_max[i], res_b[i])
-        # print(b_max)
         for a in A:
-            # print(a)
             res_a = count(a)
-            # prin
             for i in range(26):
                 if b_max[i] > res_a[i]:
                     break

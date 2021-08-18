@@ -42,7 +42,6 @@ while Q:
             Q.append(to)
             USED[to] = 1
 
-# print(EW)
 LOOP = []
 
 ANS = 0

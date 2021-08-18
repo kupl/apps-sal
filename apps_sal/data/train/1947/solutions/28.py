@@ -1,8 +1,6 @@
 class Solution:
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
-        # So we don't process the same word twice
         seen = set()
-        # Freq of union of all words in B
         freq_B = [0] * 26
         for word in B:
             if word not in seen:
