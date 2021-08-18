@@ -1,10 +1,5 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # i = coin index
-        # c[i] = coin cost
-        # f(0,0) = 0
-        # f(coin, amount) = minimum number of coins needed to pay amount
-        # f(i, j) = min( f(i-1, j), f(i, j-c[i]) + 1)
 
         dp = []
 

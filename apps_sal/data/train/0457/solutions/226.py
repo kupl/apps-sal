@@ -17,7 +17,6 @@ class Solution:
                     minCoin = min(numCoins[i - coin], minCoin)
             if change and minCoin != float('inf'):
                 numCoins[i] = minCoin + 1
-            # print(numCoins)
         if numCoins[-1] == float('inf'):
             return -1
         return numCoins[-1]

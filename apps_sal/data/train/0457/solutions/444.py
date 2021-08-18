@@ -39,17 +39,11 @@ class Solution:
             for amt in range(amount + 1):
                 cache[amt][0] = (amt // sorted_coins[0]) if ((amt % sorted_coins[0]) == 0) else float('inf')
 
-            #print(f'first: {cache}')
             for i in range(1, len(cache)):
                 for j in range(1, len(sorted_coins)):
                     max_num_of_denom = (i // sorted_coins[j]) + 1
                     for k in range(max_num_of_denom):
-                        #print(f'BEFORE: i: {i}, j:{j}, k: {k}, each: {cache}')
                         cache[i][j] = min(cache[i][j], k + cache[i - (k * sorted_coins[j])][j - 1])
-                        #print(f'AFTER: i: {i}, j:{j}, k: {k}, each: {cache}')
-
-            # for idx, change in enumerate(cache):
-                #print(f'amount: {idx}, change: {change}')
 
             return cache[amount][-1]
 
@@ -82,24 +76,11 @@ class Solution:
                     if (amt_left >= 0):
                         cache[amt][denom_idx] = 1 + min(cache[amt_left][0:(denom_idx + 1)])
 
-            # for amt, num in enumerate(cache):
-                #print(f'amount: {amt}, num: {num}')
-
             return min(cache[amount])
 
         return _dp_bottom_up_1
 
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # backtracking solution
-        # fewest_coins = [float('inf')]
-        # coins_sorted_desc = sorted(coins, reverse = True)
-        # self.back_tracking_solution()(amount, 0, fewest_coins, coins_sorted_desc, 0)
-        # return -1 if fewest_coins[0] == float('inf') else fewest_coins[0]
 
-        # Dynamic Programming - recursive call result caching
-        # result = self.dynamic_programming_solution()(amount, coins, cache = {0: 0})
-        # return -1 if (result == float('inf')) else result
-
-        # Dynamic Programming - non-recursive bottom-up version 1
         result = self.dynamic_programming_solution()(amount, coins)
         return -1 if (result == float('inf')) else result

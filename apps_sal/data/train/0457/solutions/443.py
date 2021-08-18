@@ -1,8 +1,5 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # coin exchange
-        # coins = [3,5,6]
-        # amount = 9
 
         coins.sort()
         n_coins = len(coins)
@@ -37,7 +34,4 @@ class Solution:
                         mat[i][j] = min(1 + mat[i][j - curr_coin], mat[i - 1][j])
                 else:
                     mat[i][j] = mat[i - 1][j]
-        # print('-'*20)
-        # for row in mat:
-        #     print(row)
         return mat[-1][-1]

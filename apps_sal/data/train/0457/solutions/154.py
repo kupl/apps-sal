@@ -9,7 +9,7 @@ class Solution:
             if amount < 0:
                 return
             for i in range(index, len(coins)):
-                if coins[i] * (self.min - count) > amount >= coins[i]:  # if hope still exists
+                if coins[i] * (self.min - count) > amount >= coins[i]:
                     dfs(i, amount - coins[i], count + 1)
 
         dfs(0, amount, 0)

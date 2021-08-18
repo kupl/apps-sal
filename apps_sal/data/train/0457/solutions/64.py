@@ -35,6 +35,4 @@ class Solution:
         c = [coin for coin in coins if coin <= amount]
         if len(c) == 0:
             return -1
-        # c.sort(reverse=True)
         return self.do_something(c, amount)
-        # return self.do_du_tab(c, amount)

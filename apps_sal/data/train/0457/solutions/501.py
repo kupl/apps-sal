@@ -1,6 +1,5 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # Use a queue to maintain current possible paths towards amount
         if amount == 0:
             return 0
         que = deque()

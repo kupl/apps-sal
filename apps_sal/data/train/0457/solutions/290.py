@@ -3,7 +3,6 @@ class Solution:
     def helper(self, amount: int) -> int:
 
         if amount in list(self.cache.keys()):
-            # print(amount, self.cache[amount], \"found\")
             return self.cache[amount]
 
         counts = []
@@ -19,7 +18,6 @@ class Solution:
         else:
             self.cache[amount] = min(counts)
 
-        # print(amount, self.cache[amount], \"inserted\")
         return self.cache[amount]
 
     def coinChange(self, coins: List[int], amount: int) -> int:

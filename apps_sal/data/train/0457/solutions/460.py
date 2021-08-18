@@ -1,5 +1,4 @@
 class Solution:
-    # min(cnt(11-1),cnt(11-2),cnt(11-5))
     def coinChange(self, coins: List[int], total: int) -> int:
         dic = {0: 0, }
 

@@ -1,7 +1,6 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         dp = [[0 for i in range(amount + 1)] for i in range(len(coins))]
-        # print(dp)
         coins.sort()
         col = amount + 1
         for i in range(len(coins)):
@@ -9,7 +8,6 @@ class Solution:
                 if i == 0:
                     r = i
                     c = j - coins[i]
-                    # print(r,c)
                     if c < 0 or dp[r][c] == -1:
                         dp[i][j] = -1
                     else:
@@ -22,5 +20,4 @@ class Solution:
                         dp[i][j] = dp[i][incIndex] + 1
                         if dp[i - 1][j] != -1:
                             dp[i][j] = min(dp[i - 1][j], dp[i][incIndex] + 1)
-        # print(dp)
         return dp[len(coins) - 1][col - 1]

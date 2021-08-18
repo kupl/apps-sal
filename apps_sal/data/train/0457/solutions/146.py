@@ -8,11 +8,7 @@ class Solution:
             for coin in coins:
                 if coin > i:
                     break
-                #print(i, coin, len(dp))
-                #dp[i//coin] + dp[i%coin]
                 dp[i] = min(dp[i], dp[i - coin] + 1)
-
-        # print(dp)
 
         res = dp[amount] if dp[amount] < amount + 1 else -1
 

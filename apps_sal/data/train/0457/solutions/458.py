@@ -2,9 +2,6 @@ class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         dp = {}
 
-        # print(coins)
-        # print(amount)
-
         def dfs(total):
             if total < 0:
                 return float('inf')

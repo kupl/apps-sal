@@ -1,4 +1,3 @@
-# top down approach
 import math
 
 
@@ -12,7 +11,6 @@ class Solution:
 
 def f(coins, amount, counts):
 
-    # base case
     if amount < 0:
         return -1
     if amount == 0:

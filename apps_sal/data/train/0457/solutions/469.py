@@ -1,6 +1,5 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # (3) Dynamic Programming - top-down
         self.dp = [float('inf')] * (amount + 1)
         self.dp[0] = 0
 
@@ -17,7 +16,6 @@ class Solution:
                     self.dp[a] = min(tmp + 1, self.dp[a])
             if self.dp[a] == float('inf'):
                 self.dp[a] = -1
-            # remember to return
             return self.dp[a]
 
         change(amount)

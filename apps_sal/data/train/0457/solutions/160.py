@@ -1,6 +1,5 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # 0-1 bag, dp[i][j] is the minimum number of coins only use the first i coins can sum up to target j
         dp = [-1 for i in range(amount + 1)]
         dp[0] = 0
 

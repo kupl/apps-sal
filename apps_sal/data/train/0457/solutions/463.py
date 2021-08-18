@@ -1,20 +1,4 @@
 class Solution:
-    #     def coinChange_bottomUp(self, coins: List[int], amount: int) -> int:
-    #         # Intialize the lookup, and initialize a base case of 0
-    #         lookup = {x: amount + 1 for x in range(1, amount + 1)}
-    #         lookup[0] = 0
-
-    #         for i in range(amount + 1):
-    #             for coin in coins:
-    #                 remainder = i - coin
-    #                 if remainder < 0:
-    #                     continue
-    #                 best_min = min(lookup[remainder] + 1, lookup[i])
-    #                 lookup[i] = best_min
-    #         if lookup[i] > amount:
-    #             return -1
-    #         else:
-    #             return lookup[i]
 
     def coinChange(self, coins: List[int], amount: int) -> int:
         coins.sort()
