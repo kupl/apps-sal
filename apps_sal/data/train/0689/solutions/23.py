@@ -1,4 +1,3 @@
-# cook your dish here
 T = int(input())
 mat = []
 for _ in range(T):

@@ -4,5 +4,4 @@ class Solution:
         for i, n in enumerate(nums):
             l[i + 1] = l[i] + n % 2
         c = Counter(l)
-        # print(l)
         return sum(c[x - k] * c[x] for x in c)

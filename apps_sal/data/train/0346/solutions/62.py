@@ -3,8 +3,7 @@ from collections import deque
 
 class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
-        # nums = nums[:]  # if we need to avoid tampering with nums
-        nums.append(1)  # Dummy odd value to avoid final value edge case
+        nums.append(1)
 
         odds = deque()
         odds.append(-1)

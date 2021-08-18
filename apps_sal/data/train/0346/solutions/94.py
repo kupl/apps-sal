@@ -1,4 +1,3 @@
-# 20201007 ref
 class Solution:
     def numberOfSubarrays(self, A: List[int], k: int) -> int:
         d = []

@@ -12,13 +12,11 @@ class Solution:
         temp_arr.append(temp_count)
         if len(temp_arr) - 1 < k:
             return 0
-        # print(temp_arr)
         i = k - 1
         count = 0
         while i < len(temp_arr) - 1:
             start_len = temp_arr[i - k + 1] + 1
             end_len = temp_arr[i + 1] + 1
-            #print(start_len * end_len)
             count = count + (start_len * end_len)
             i = i + 1
         return count

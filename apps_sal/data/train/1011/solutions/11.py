@@ -21,8 +21,6 @@ for _ in range(iinput()):
         else:
             low += 1
 
-    # print(cap, low)
-
     if cap <= k and low <= k:
         print("both")
     elif cap <= k:

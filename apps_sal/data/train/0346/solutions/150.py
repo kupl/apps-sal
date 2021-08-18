@@ -8,7 +8,6 @@ class Solution:
             if nums[i] == 1:
                 indexlist.append(i)
 
-        # print(indexlist)
         for i in range(len(indexlist)):
             if i != 0:
                 left = indexlist[i - 1] + 1

@@ -7,11 +7,11 @@ class Solution:
             for end_ptr in range(len(nums)):
                 k -= nums[end_ptr] % 2
 
-                while k < 0:  # Already satisfied the condition, let's reduce the window size
+                while k < 0:
                     k += nums[start_ptr] % 2
                     start_ptr += 1
 
-                result += end_ptr - start_ptr + 1   # Now k just hit > 0, so we can compute this. No of subarray possible is end_ptr - start_ptr + 1. Start_ptr would have gotten as close as possible after this.
+                result += end_ptr - start_ptr + 1
 
             return result
 

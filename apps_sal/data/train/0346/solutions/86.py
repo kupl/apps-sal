@@ -3,7 +3,6 @@ class Solution:
         odd_indeces = []
         for i, elem in enumerate(nums):
             if elem % 2 != 0:
-                # is odd
                 odd_indeces.append(i)
 
         if len(odd_indeces) < k:

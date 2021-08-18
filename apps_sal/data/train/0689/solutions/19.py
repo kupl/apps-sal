@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import deque, defaultdict
 from math import sqrt, ceil
 import sys

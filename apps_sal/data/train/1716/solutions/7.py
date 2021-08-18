@@ -26,9 +26,7 @@ def equal_to_24(a, b, c, d):
                 temp1 = copy.deepcopy(temp)
                 temp1.remove(thrd[0])
                 for exp2 in gnrt_exp(exp1, thrd[0]):
-                    #                    print("exp2=",exp2)
                     for exp3 in gnrt_exp(exp2, temp1[0]):
-                        #                        print(exp3)
                         try:
                             rst_final = eval(exp3)
                         except:
