@@ -4,7 +4,6 @@ from collections import defaultdict
 class UnionFind:
 
     def __init__(self, n):
-        # * Access m-th node by index `m`, not `m - 1`.
         self.parents = [i for i in range(n + 1)]
         self.ranks = [0 for _ in range(n + 1)]
 
@@ -14,7 +13,7 @@ class UnionFind:
             return node
         else:
             root_node = self.find_root(parent_node)
-            self.parents[node] = root_node  # reduction
+            self.parents[node] = root_node
             return root_node
 
     def union(self, one, other):
@@ -45,7 +44,6 @@ def main():
     for _ in range(L):
         r, s = list(map(int, input().split(' ')))
         train_tree.union(r, s)
-    # Calculate groups
     group_count = defaultdict(int)
     group_list = list()
     for node in range(1, N + 1):

@@ -69,12 +69,10 @@ def test():
     for test_input, ans in zip(TEST_INPUT, ANSWER):
         ih = InputHandler(test_input, True)
         res = input_and_solve(ih)
-        # print(res, ans)
         assert str(res) == str(ans)
 
 
 def __starting_point():
-    # test()
     main()
 
 

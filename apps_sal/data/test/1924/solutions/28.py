@@ -2,7 +2,6 @@ r1, c1, r2, c2 = list(map(int, input().split()))
 n = 2 * max(r1, r2, c1, c2) + 2
 mod = 10**9 + 7
 
-# nCk
 factorial = [1]
 for i in range(1, n + 1):
     factorial.append(factorial[-1] * i % mod)

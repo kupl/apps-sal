@@ -1,8 +1,6 @@
 r1, c1, r2, c2 = map(int, input().split())
 L = 10 ** 9 + 7
 
-# 互除法
-
 
 def get_euclidian(A, B):
     if B == 1:
@@ -11,12 +9,9 @@ def get_euclidian(A, B):
         return (int((1 - A * get_euclidian(B, A % B)) / B))
 
 
-# 階乗計算
 F = [1]
 for i in range(1, r2 + c2 + 3):
     F.append((F[i - 1] * i) % L)
-
-# 組み合わせ計算
 
 
 def get_combi(n, r):

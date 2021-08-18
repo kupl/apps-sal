@@ -11,7 +11,6 @@ def cmb(n, r, mod):
 
 def make_table(n, mod=10 ** 9 + 7):
     N = n
-    # 元テーブル
     g1 = [0] * (N + 1)
     g1[0] = 1
     g1[1] = 1

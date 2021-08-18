@@ -24,7 +24,6 @@ class UnionFind():
             x, y = y, x
         self.parents[x] += self.parents[y]
         self.parents[y] = x
-    # 木の深さじゃなくxを含む集合の要素数
 
     def size(self, x):
         return -self.parents[self.find(x)]
@@ -60,7 +59,6 @@ for _ in range(l):
     tetsu.union(r, s)
 
 count = [(load.find(i), tetsu.find(i)) for i in range(1, n + 1)]
-# print(count)
 C = Counter(count)
 ans = []
 for i in range(n):

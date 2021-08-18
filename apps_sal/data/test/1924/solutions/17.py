@@ -6,8 +6,6 @@ sys.setrecursionlimit(10 ** 7)
 r1, c1, r2, c2 = list(map(int, input().split()))
 
 
-# 階乗、Combinationコンビネーション(numpyを使う)
-
 def cumprod(arr, MOD):
     L = len(arr)
     Lsq = int(L**.5 + 1)

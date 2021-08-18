@@ -26,7 +26,6 @@ def main():
 
     comb = combination(2000010)
 
-    # c1 ~ c2+1, r1 ~ r2+1
     ans = comb.comb(c2 + r2 + 2, r2 + 1) - 1
     ans -= comb.comb(c1 + r2 + 1, c1) - 1
     ans -= comb.comb(c2 + r1 + 1, r1) - 1

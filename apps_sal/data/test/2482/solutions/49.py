@@ -1,12 +1,7 @@
-# python 3.4.3
 from collections import defaultdict
 import numpy as np
 import sys
 input = sys.stdin.readline
-
-# -------------------------------------------------------------
-# function
-# -------------------------------------------------------------
 
 
 class UnionFind:
@@ -35,24 +30,18 @@ class UnionFind:
         return self.find(x) == self.find(y)
 
 
-# -------------------------------------------------------------
-# main
-# -------------------------------------------------------------
 N, K, L = map(int, input().split())
 PQ = [tuple(map(int, input().split())) for _ in range(K)]
 RS = [tuple(map(int, input().split())) for _ in range(L)]
 
-# 道路
 A = UnionFind(N)
 for p, q in PQ:
     A.unite(p - 1, q - 1)
 
-# 鉄道
 B = UnionFind(N)
 for r, s in RS:
     B.unite(r - 1, s - 1)
 
-# 集計
 dic = defaultdict(int)
 for i in range(N):
     dic[A.find(i), B.find(i)] += 1

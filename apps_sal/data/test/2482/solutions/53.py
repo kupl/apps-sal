@@ -40,8 +40,6 @@ for i in range(1, N + 1):
     par_list[i] = get_par(i)
 par_list_rail = par_list[:]
 
-# print(par_list_road)
-# print(par_list_rail)
 answer_dic = defaultdict(int)
 for i in range(1, N + 1):
     road_i = par_list_road[i]

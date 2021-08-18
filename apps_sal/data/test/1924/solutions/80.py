@@ -1,7 +1,7 @@
 Q = 10**9 + 7
 
 
-def getInv(N):  # Qはmod
+def getInv(N):
     inv = [0] * (N + 1)
     inv[0] = 1
     inv[1] = 1

@@ -4,7 +4,6 @@ import decimal
 decimal.getcontext().prec = 1000
 
 inp = input().split()
-# inp = [417,0.57,742]
 n = int(inp[0])
 p = decimal.Decimal(inp[1])
 t = int(inp[2])
@@ -24,8 +23,6 @@ for i in range(1, max(n, t) + 1):
 def c(n, k):
     return facs[n] / facs[n - k] / facs[k]
 
-# print(c(2000, 1000))
-
 
 res = decimal.Decimal(0)
 up = min(n, t)
@@ -38,7 +35,6 @@ for i in range(1, up + 1):
     cur *= ps[i]
     cur *= p1s[t - i]
     res += cur
-    # print(res)
 
 if n < t:
     cur2 = t
@@ -49,8 +45,5 @@ if n < t:
         cur *= p1s[cur2 - n]
         res += cur
         cur2 -= 1
-        # print(cur, res)
 
-# decimal.getcontext().prec = 15
-# res = decimal.Decimal(res)
 print(res)

@@ -5,7 +5,6 @@ sys.setrecursionlimit(10**7)
 
 N, K, L = list(map(int, input().split()))
 
-# Group1
 G1 = [[] for i in range(N)]
 for i in range(K):
     p, q = list(map(int, input().split()))
@@ -32,7 +31,6 @@ for i in range(N):
         dfs1(i, gid)
         gid += 1
 
-# Group2
 G = [[] for i in range(N)]
 for i in range(L):
     r, s = list(map(int, input().split()))
@@ -62,7 +60,6 @@ for i in range(N):
         dfs(i, gid)
         gid += 1
 
-# answer
 ans = [0] * N
 for i in range(N):
     ans[i] = D[gids2[i]][gids[i]]
