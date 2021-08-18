@@ -10,7 +10,6 @@ class Solution:
             return -1
 
         dp = [[float('inf')] * njobs for _ in range(d)]
-        # base case - complete first j jobs using 1 day
         for j in range(njobs):
             dp[0][j] = max(jobDifficulty[:j + 1])
 

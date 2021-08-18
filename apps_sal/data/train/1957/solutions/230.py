@@ -2,7 +2,7 @@ class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         H, W = len(grid), len(grid[0])
         if k >= H + W - 3:
-            return H + W - 2  # we can always travel along the sides
+            return H + W - 2
 
         step = 0
         node_list = [(0, 0, k)]
@@ -19,10 +19,8 @@ class Solution:
                 for i, j in [[x - 1, y], [x + 1, y], [x, y - 1], [x, y + 1]]:
                     if i < 0 or i >= H or j < 0 or j >= W:
                         continue
-                    # accessible path
                     if grid[i][j] == 0:
                         new_list.append((i, j, k_remains))
-                    # obstacle
                     elif grid[i][j] == 1 and k_remains > 0:
                         new_list.append((i, j, k_remains - 1))
 

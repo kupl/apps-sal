@@ -3,7 +3,6 @@ class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
 
         length, width = len(grid), len(grid[0])
-        # (l,w,steps,k)
         que = collections.deque([])
         que.append((0, 0, 0, k))
         visited = set()
@@ -11,7 +10,6 @@ class Solution:
         directions = ([-1, 0], [0, 1], [1, 0], [0, -1])
         while len(que):
             x, y, steps, eliminates = que.popleft()
-            # BFS 保证第一个visit是steps最少的
             if x == length - 1 and y == width - 1:
                 return steps
             for dx, dy in directions:

@@ -13,8 +13,6 @@ class Solution:
         M, N = len(grid), len(grid[0])
         visited = [[[None] * (k + 1) for _ in range(N)] for _ in range(M)]
 
-        # visited[0][0][k] = True
-
         queue = deque([(0, 0, k, 0)])
 
         while queue:

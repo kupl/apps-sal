@@ -15,14 +15,11 @@ class Solution:
                 tmp = M
                 got = False
                 for k in range(j + 1, len(grid[i - 1])):
-                    # print(i, j, k)
                     if grid[i - 1][k] > -1:
                         tmp = min(m + grid[i - 1][k], tmp)
                         got = True
                     m = max(jobDifficulty[k], m)
                 if got:
                     grid[i][j] = tmp
-
-        # print(grid)
 
         return grid[-1][0]

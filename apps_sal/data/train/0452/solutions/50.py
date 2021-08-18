@@ -1,19 +1,4 @@
 class Solution:
-    # def minDifficulty(self, A: List[int], d: int) -> int:
-    #     if len(A) < d:
-    #         return -1
-    #     dp = {}
-    #     def diff(i,d,maxVal):
-    #         if i == len(A):
-    #             return 10**9
-    #         if d == 1:
-    #             return max(maxVal, max(A[i:]))
-    #         if (i,d,maxVal) in dp:
-    #             return dp[(i,d,maxVal)]
-    #         maxVal = max(maxVal,A[i])
-    #         dp[(i,d,maxVal)] =  min(diff(i+1,d, maxVal), maxVal+diff(i+1,d-1,0))
-    #         return dp[(i,d,maxVal)]
-    #     return diff(0,d,0)
 
     def minDifficulty(self, A: List[int], d: int) -> int:
         if len(A) < d:

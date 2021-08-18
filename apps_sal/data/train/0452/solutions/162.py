@@ -23,5 +23,3 @@ class Solution:
 
         ans = dp(0, d)
         return ans if ans != math.inf else -1
-
-        # [6,5,4,3,2,1] d=2

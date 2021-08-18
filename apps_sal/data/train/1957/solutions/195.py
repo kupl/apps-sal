@@ -1,7 +1,7 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         R, C = len(grid), len(grid[0])
-        heap = [(0, k, 0, 0)]  # length, elimination, i, j
+        heap = [(0, k, 0, 0)]
         visited = set()
 
         while heap:

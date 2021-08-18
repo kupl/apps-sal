@@ -2,7 +2,7 @@ class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         m, n = len(grid), len(grid[0])
         dst = (len(grid) - 1, len(grid[0]) - 1)
-        heap = [(0, 0, (0, 0))]  # cost, stop, node
+        heap = [(0, 0, (0, 0))]
         cost_map = collections.defaultdict(lambda: float('inf'))
         while heap:
             cost, stop, node = heapq.heappop(heap)

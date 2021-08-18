@@ -1,4 +1,3 @@
-# Why do we fall ? So we can learn to pick ourselves up.
 
 from math import acos
 
