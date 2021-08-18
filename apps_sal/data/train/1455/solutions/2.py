@@ -9,8 +9,6 @@ for df in range(m):
     arr = grades[x - 1:y]
     arr.sort()
     sum = 0
-    # arr.append(1000000)
     for nh in range(0, len(arr) - 1, 1):
         sum = sum + (arr[nh + 1] - arr[nh]) * (arr[nh + 1] - arr[nh])
-        # print sum,len(arr),nh+1,nh
     print(sum)

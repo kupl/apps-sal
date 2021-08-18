@@ -10,5 +10,4 @@ class Solution:
 
         visited = [False] * len(rooms)
         dfs(0, visited)
-        # print(visited)
         return all(visited)

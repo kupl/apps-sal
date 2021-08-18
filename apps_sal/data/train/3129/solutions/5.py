@@ -1,4 +1,3 @@
-# You can just do "int(st) % 3 == 0"
 
 def divisible_by_three(st):
     while len(st) > 1:

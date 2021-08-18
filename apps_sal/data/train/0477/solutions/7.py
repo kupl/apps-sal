@@ -3,11 +3,9 @@ class Solution:
         l = [0] * (n + 1)
         for i in range(1, n + 1):
             l[i] = 2 * l[i - 1] + 1
-        # print(l)
 
         def helper(n, k, f):
             m = l[n]
-            # print(m,k,f)
             if n == 1:
                 return 0 ^ f
             if k == m // 2 + 1:

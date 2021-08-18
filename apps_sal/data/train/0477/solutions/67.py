@@ -1,6 +1,5 @@
 class Solution:
     def findKthBit(self, n: int, k: int) -> str:
-        # Si = Si-1 + \"1\" + reverse(invert(Si-1)) for i > 1
         s = ''
 
         def recurse(n):

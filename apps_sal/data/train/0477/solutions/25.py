@@ -1,4 +1,3 @@
-# 10th finish 14:18
 
 class Solution:
     def findKthBit(self, n: int, k: int) -> str:
@@ -13,5 +12,4 @@ class Solution:
             temp1.reverse()
             temp = s + ['1'] + temp1
             s = temp
-        # print(s)
         return s[k - 1]
