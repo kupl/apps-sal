@@ -18,7 +18,6 @@ while(j < len(l)):
     elif(f != 0):
         if l[j] == f:
             c = c + 1
-            #j = j + 1
             if j == len(l) - 1:
                 farr.append(c)
 

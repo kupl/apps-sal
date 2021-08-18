@@ -1,5 +1,3 @@
-# cook your dish here
-# -*- coding: utf-8 -*-
 """
 Created on Tue Apr 28 22:53:59 2020
 

@@ -28,5 +28,4 @@ class Solution:
             groups[rightPos - a] -= 1
             if groups[m] >= 1:
                 res = i + 1
-            #print(a, left, right, leftPos, rightPos, groups, dp)
         return res

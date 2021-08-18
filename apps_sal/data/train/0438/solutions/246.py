@@ -1,10 +1,4 @@
-# class Solution:
-#     def findLatestStep(self, arr: List[int], m: int) -> int:
-#         bits = [0]*len(arr)
 
-#         #2 choice for key: step value or index locations
-
-#         for i in reversed(range(len(arr))):
 
 from collections import Counter
 

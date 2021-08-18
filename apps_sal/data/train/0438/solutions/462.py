@@ -26,7 +26,6 @@ class Solution:
         res = -1
         for i, pos in enumerate(arr):
             size[pos] = 1
-            # counter[1] += 1
             if pos > 0:
                 if getSize(pos - 1) > 0:
                     s_last = getSize(pos - 1)

@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 modulus = 10**9 + 7
 s = 0
