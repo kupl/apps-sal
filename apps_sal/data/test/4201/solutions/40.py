@@ -16,8 +16,8 @@ for i in range(1 << h):
                     ci[sh][t] = '.'
         for ss in range(h):
             for tt in range(w):
-                if ci[ss][tt] == '#':
-                    a += 1
+                if ci[ss][tt] == '
+                a += 1
         if a == k:
             ans += 1
 print(ans)

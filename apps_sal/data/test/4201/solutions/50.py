@@ -14,8 +14,8 @@ for i in range(H + 1):
                             continue
                         if tc in column:
                             continue
-                        if c[tr][tc] == '#':
-                            tmp += 1
+                        if c[tr][tc] == '
+                        tmp += 1
                 if tmp == K:
                     ans += 1
 print(ans)

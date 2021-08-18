@@ -15,8 +15,8 @@ def count(w, h):
     c = 0
     for hh in range(H):
         for ww in range(W):
-            if Dtemp[hh][ww] == '#':
-                c += 1
+            if Dtemp[hh][ww] == '
+            c += 1
     return c
 
 

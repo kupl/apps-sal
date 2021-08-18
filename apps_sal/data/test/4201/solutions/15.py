@@ -1,4 +1,3 @@
-# 2bit全探索
 h, w, k = map(int, input().split())
 ans = [list(input()) for i in range(h)]
 n = h + w
@@ -11,8 +10,8 @@ for i in range(1 << n):
     count = 0
     for i in range(h):
         for j in range(w):
-            if cond[i] == 0 and cond[h + j] == 0 and ans[i][j] == "#":
-                count += 1
+            if cond[i] == 0 and cond[h + j] == 0 and ans[i][j] == "
+            count += 1
     if count == k:
         answer += 1
 print(answer)

@@ -7,8 +7,8 @@ for row in range(2 ** H - 1):
         count = 0
         for i in range(H):
             for j in range(W):
-                if not ((row >> i) & 1) and not ((col >> j) & 1) and C[i][j] == '#':
-                    count += 1
+                if not ((row >> i) & 1) and not ((col >> j) & 1) and C[i][j] == '
+                count += 1
         if count == K:
             ans += 1
 

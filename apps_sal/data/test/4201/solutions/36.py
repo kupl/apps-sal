@@ -25,7 +25,7 @@ for i in range(2**h - 1):
                 if ((x in nuritubu_row) or (y in nuritubu_col)):
                     c_tmp[x][y] = "o"
 
-        if sum([c_tmp[k].count("#") for k in range(h)]) == kkk:
+        if sum([c_tmp[k].count("
             cnt += 1
 
 print(cnt)

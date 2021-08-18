@@ -13,8 +13,8 @@ for x in product((0, 1), repeat=w):
             for j in range(w):
                 if x[j]:
                     continue
-                if CC[i][j] == '#':
-                    count += 1
+                if CC[i][j] == '
+                count += 1
         if count == k:
             total += 1
 print(total)

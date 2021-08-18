@@ -5,7 +5,7 @@ h, w, k = map(int, input().split())
 graph = []
 
 for i in range(h):
-    row = [1 if x == '#' else 0 for x in input()]
+    row = [1 if x == '
     graph.append(row)
 
 graph = np.array(graph)

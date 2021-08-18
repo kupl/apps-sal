@@ -10,7 +10,7 @@ for m in range(2**(h + w)):
             if ij in range(h, h + w):
                 for t in range(h):
                     cc[t] = cc[t][:ij - h] + '.' + cc[t][ij + 1 - h:]
-    num = sum(cc[s].count('#') for s in range(h))
+    num = sum(cc[s].count('
     if num == k:
         cnt += 1
 print(cnt)

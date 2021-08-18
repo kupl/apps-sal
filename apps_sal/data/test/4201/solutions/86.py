@@ -23,6 +23,6 @@ for i in H_bit:
     for j in W_bit:
         check = copy.deepcopy(c)
         li = mark(i, j, check)
-        if sum(a.count("#") for a in li) == K:
+        if sum(a.count("
             ans += 1
 print(ans)

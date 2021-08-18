@@ -7,8 +7,8 @@ for mask_h in range(2 ** H):
         black = 0
         for i in range(H):
             for j in range(W):
-                if ((mask_h >> i) & 1 == 0) and ((mask_w >> j) & 1 == 0) and table[i][j] == '#':  # 塗り潰し行、列ではなくて、色が黒'#'の場合
-                    black += 1
+                if ((mask_h >> i) & 1 == 0) and ((mask_w >> j) & 1 == 0) and table[i][j] == '
+                black += 1
 
         if black == K:
             ans += 1

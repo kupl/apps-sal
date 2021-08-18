@@ -16,7 +16,7 @@ for i in range(2**H):
             if t >= (2**(W - l - 1)):
                 t -= 2**(W - l - 1)
                 bt[l] = ["."] * H
-        u = sum(bt[m].count("#") for m in range(W))
+        u = sum(bt[m].count("
         if u == K:
             ans += 1
 print(ans)

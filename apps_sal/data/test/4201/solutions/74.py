@@ -17,8 +17,8 @@ for i in range(2 ** (h + w)):
         if a[j] == 0:
             for l in range(w):
                 if a[h + l] == 0:
-                    if c[j][l] == '#':
-                        x += 1
+                    if c[j][l] == '
+                    x += 1
 
     if x == k:
         y += 1

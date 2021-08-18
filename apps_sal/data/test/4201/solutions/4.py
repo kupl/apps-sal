@@ -14,8 +14,8 @@ for i in range(1 << h):
                     continue
                 if (j >> jj & 1):
                     continue
-                if c[ii][jj] == "#":
-                    cnt += 1
+                if c[ii][jj] == "
+                cnt += 1
         if cnt == k:
             ans += 1
 

@@ -42,7 +42,7 @@ def main():
 
             cnt = 0
             for h in range(H):
-                cnt += CC[h].count("#")
+                cnt += CC[h].count("
 
             if cnt == K:
                 ans += 1

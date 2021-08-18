@@ -13,10 +13,9 @@ for i in range(1 << h):
         cnt_t = 0
         for m in range(h):
             for n in range(w):
-                if bit_h[m] == 0 and bit_w[n] == 0 and c[m][n] == "#":
-                    cnt_t += 1
+                if bit_h[m] == 0 and bit_w[n] == 0 and c[m][n] == "
+                cnt_t += 1
         if cnt_t == k:
             cnt += 1
-            # print(cnt_t)
 
 print(cnt)

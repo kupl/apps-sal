@@ -15,8 +15,8 @@ for p in range(len(pattern)):
             for j in range(w):
                 if p_w[j] == 0:
                     now = grid[i][j]
-                    if now == '#':
-                        cnt += 1
+                    if now == '
+                    cnt += 1
 
     if cnt == k:
         result += 1
