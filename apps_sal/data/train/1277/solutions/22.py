@@ -1,4 +1,3 @@
-# cook your dish here
 for e in range(int(input())):
     c = 0
     num = int(input())

@@ -2,7 +2,6 @@ class Solution:
     def numWays(self, s: str) -> int:
         n = len(s)
 
-        # calculate count
         cnt = 0
         for i in s:
             if i == '1':
@@ -16,7 +15,6 @@ class Solution:
         range1 = [0, n - 3]
         first = 0
         last = 0
-        # calculate range1
         cnt = 0
         for idx, i in enumerate(s[:n - 2]):
             if i == '1':
@@ -32,9 +30,6 @@ class Solution:
                     last = 1
                     range1[1] = idx - 1
 
-        #print(range1_low, range1_high)
-
-        # calculate range2
         range2 = [range1[0] + 1, n - 2]
         first = 0
         last = 0
@@ -54,9 +49,6 @@ class Solution:
                     last = 1
                     range2[1] = range1[0] + idx
 
-        #print(range2_low, range2_high)
-#         print(range1, range2)
-
         total = 0
         modulo = pow(10, 9) + 7
         for i in range(range1[0], range1[1] + 1):
@@ -64,10 +56,7 @@ class Solution:
             if i < j and i < n and j < n:
                 add = (range2[1] - range2[0] + 1)
                 total += add % modulo
-                #print(add, total)
             else:
                 total += (range2[1] - i) % modulo
-        # print(total)
         total = total % modulo
-        # print(total)
         return total

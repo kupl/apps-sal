@@ -8,5 +8,5 @@ def prime_factors(n):
     return [n] if n > 1 else []
 
 
-def mult_primefactor_sum(a, b):  # [a, b] range of numbers included a and b
+def mult_primefactor_sum(a, b):
     return [c for c in range(a, b + 1) if len(prime_factors(c)) > 1 and c % sum(prime_factors(c)) == 0]

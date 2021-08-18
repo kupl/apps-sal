@@ -1,6 +1,5 @@
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
-        # get the most freq occurring ints
         d = {}
         for a in arr:
             if a in d:

@@ -1,5 +1,4 @@
 def did_we_win(plays):
-    # print(plays)
     increment = ["pass", "run"]
     decrement = ["sack"]
     gameOver = ["turnover"]

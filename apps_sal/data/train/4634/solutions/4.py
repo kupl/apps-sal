@@ -7,7 +7,6 @@ def count(gamefield, PM, N):
     case2 = 0
     case3 = 0
     case4 = 0
-# recursive case
     if (PM[0] + 1) < N and gamefield[PM[0] + 1, PM[1]] != -1:
         case1 = 1 + count(gamefield, [PM[0] + 1, PM[1]], N)
     if (PM[0] - 1) > -1 and gamefield[PM[0] - 1, PM[1]] != -1:
@@ -21,20 +20,17 @@ def count(gamefield, PM, N):
 
 
 def pac_man(N, PM, enemies):
-  # coding and coding..
-    # base case 1
     if N == 1:
         return 0
-    # base case 2
     if len(enemies) == 0:
         return (N**2) - 1
 
     gamefield = np.ones((N, N))
-    gamefield[PM[0], PM[1]] = 7  # PM
+    gamefield[PM[0], PM[1]] = 7
 
     for e in enemies:
-        gamefield[:, e[1]] = -1  # enemy
-        gamefield[e[0], :] = -1  # enemy
+        gamefield[:, e[1]] = -1
+        gamefield[e[0], :] = -1
     print(gamefield)
 
     return count(gamefield, PM, N)

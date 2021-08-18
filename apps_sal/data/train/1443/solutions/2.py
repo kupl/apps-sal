@@ -1,4 +1,3 @@
-# cook your dish here
 w = int(input())
 for i in range(w):
     B, f = list(map(int, input().split()))
