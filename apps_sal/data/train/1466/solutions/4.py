@@ -8,7 +8,6 @@ a.append(xor_a)
 prefix = [a[0]]
 for i in range(1, len(a)):
     prefix.append(a[i] ^ prefix[i - 1])
-# print(prefix)
 for i in range(0, q):
     x = int(input())
     print(prefix[(x - 1) % (n + 1)])

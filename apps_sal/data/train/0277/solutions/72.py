@@ -1,5 +1,4 @@
 class Solution:
-    # 2:00
     '''
     - light yellow
     - if left is blue

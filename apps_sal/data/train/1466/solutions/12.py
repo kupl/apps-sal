@@ -1,4 +1,3 @@
-# cook your dish here
 
 n, q = [int(a) for a in input().strip().split()]
 

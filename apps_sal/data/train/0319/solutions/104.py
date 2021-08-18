@@ -22,8 +22,6 @@ class Solution:
             return p1, p2
 
         p1, p2 = play(0)
-        # print(p1, p2)
-        # p2 = sum(vals) - p1
         if p1 > p2:
             return 'Alice'
         elif p1 == p2:

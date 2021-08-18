@@ -1,7 +1,6 @@
 class Solution:
     def stoneGameIII(self, stones: List[int]) -> str:
         rowlen = len(stones)
-        #dp=[0] * (rowlen+1)
         i = rowlen - 1
         i_1, i_2, i_3 = 0, 0, 0
 
@@ -30,7 +29,6 @@ class Solution:
             return 'Tie'
 
         '''
-        # Recursion + TopDown
         rowlen=len(stones)
         index=0
         memo=[-1] * rowlen

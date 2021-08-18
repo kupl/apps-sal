@@ -5,7 +5,6 @@ class Solution:
         :rtype: bool
         """
 
-   #    my second solution...still beat 28%...
         if num <= 5:
             return False
 
@@ -20,7 +19,6 @@ class Solution:
         return num == sum
 
         """
-    #    my first solution...beat 28%...
          
          if num <= 5:
              return False

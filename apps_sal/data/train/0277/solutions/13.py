@@ -1,6 +1,6 @@
 class Solution:
     def numTimesAllBlue(self, light: List[int]) -> int:
-        state = []  # on/off
+        state = []
         count = 0
         blue = 0
         last = 0
@@ -11,7 +11,6 @@ class Solution:
         for i, k in enumerate(light):
             state[k - 1] = True
 
-            # count how many are blue
             for c in range(last, len(light)):
                 if not state[c]:
                     last = c

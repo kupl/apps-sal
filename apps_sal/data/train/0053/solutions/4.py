@@ -26,7 +26,6 @@ def solve(N, S):
             )
         curr += count
 
-    # print(" " + " ".join(S))
     return " ".join(map(str, shortest)) + "\n" + " ".join(map(str, longest))
 
 
