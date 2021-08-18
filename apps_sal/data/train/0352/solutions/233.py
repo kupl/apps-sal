@@ -36,7 +36,6 @@ class Solution:
             for j in range(i + 1, n):
 
                 if len(words[j]) == len(words[i]) + 1 and extraChar(words[j], words[i]):
-                    #print('words[j]: ', words[j], ' words[j]: ', words[i])
                     mem[i] = max(mem[i], dp(j) + 1)
 
                 elif len(words[j]) > len(words[i]) + 1:

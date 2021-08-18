@@ -23,6 +23,4 @@ class Solution:
                             print((a, b))
                             values.append(1 + memo[b])
                     memo[a] = max(values) if values else 1
-#         for key, value in memo.items():
-#             print(key, value)
         return max(memo.values())

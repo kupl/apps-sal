@@ -6,7 +6,6 @@ class Solution:
         for i in words:
             min_l = min([min_l, len(i)])
             cnt[len(i) - 1].append(i)
-        # print(cnt)
 
         def match(a, b):
             i = j = 0
@@ -40,6 +39,5 @@ class Solution:
                     ans = max([ans, dp[j]])
                 else:
                     ans = max([ans, topdown(j)])
-                # print(dp,i)
 
         return ans

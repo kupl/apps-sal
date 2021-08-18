@@ -16,7 +16,6 @@ class Solution:
         return max(dp)
 
     def helper(self, w1, w2):
-        # check if w1 is a predecessor of w2
         i = 0
         while i < len(w1) and w1[i] == w2[i]:
             i += 1

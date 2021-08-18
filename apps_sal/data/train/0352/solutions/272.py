@@ -10,8 +10,6 @@ class Solution:
             if(len(s1) > len(s2)):
                 s2, s1 = s1, s2
 
-            # print(\"s1\",\"s2\",s1,s2)
-
             if(len(s1) + 1 != len(s2)):
                 return False
             i, j = 0, 0
@@ -30,7 +28,6 @@ class Solution:
 
         dp = [1 for _ in range(len(words))]
 
-        # dp[0] = 1
         ans = 1
         for i in range(1, len(words)):
             j = i - 1

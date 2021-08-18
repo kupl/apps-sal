@@ -14,7 +14,6 @@ class Solution:
                 j += 1
             return True
 
-        # build graph
         numPredecessor = [0] * len(words)
 
         graph = defaultdict(lambda: [])
@@ -27,7 +26,6 @@ class Solution:
                     graph[j].append(i)
                     numPredecessor[i] += 1
 
-        # dfs for each node without predecessor
         def dfs(node, path):
             nonlocal out
 

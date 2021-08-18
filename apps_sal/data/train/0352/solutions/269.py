@@ -4,7 +4,6 @@ from collections import deque
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
 
-        # return self.run_graph_solution(words)
         return self.run_dp_solution(words)
 
     def run_dp_solution(self, words):

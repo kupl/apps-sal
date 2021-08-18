@@ -23,9 +23,7 @@ class Solution:
         if not words:
             return 0
         words.sort(key=lambda word: -len(word))
-        # print(words)
         dp = {}
-        # prev = {}
         best = 1
         for i, word in enumerate(words):
             for other in words[i + 1:]:
@@ -33,8 +31,5 @@ class Solution:
                     break
                 if self.one_off(word, other):
                     dp[other] = max(dp.get(other, 0), dp.get(word, 1) + 1)
-                    # if dp[other] > best:
-                    #     prev[other] = word
                     best = max(best, dp[other])
-        # print(prev)
         return best

@@ -8,7 +8,6 @@ class Solution:
             j = 0
             for i in range(len(s1)):
                 while s2[j] != s1[i]:
-                    # print(s2[j], s1[i])
                     if insert:
                         return False
                     j = j + 1
@@ -23,13 +22,10 @@ class Solution:
             m = 0
             d[words[i]] = 1
             for j in range(i, len(words)):
-                # print(words[i], words[j], determine(words[i], words[j]))
                 if determine(words[i], words[j]):
                     if d[words[j]] > m:
                         d[words[i]] = d[words[j]] + 1
                         m = d[words[i]]
-
-        # print(d)
 
         out = 0
         for k in d:

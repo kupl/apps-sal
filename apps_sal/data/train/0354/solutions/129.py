@@ -3,7 +3,6 @@ from functools import lru_cache
 
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        # dp[idx,prev]  = (dp[idx-1,prev] +
         @lru_cache(None)
         def helper(idx, prev):
             e, c = prev

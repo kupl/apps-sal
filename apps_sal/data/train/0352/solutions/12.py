@@ -28,8 +28,6 @@ class Solution:
                 if i >= 0:
                     a[i][j] = True
 
-        # print(a)
-
         dp = [1] * len(words)
         for i in range(1, len(words)):
             for j in range(i):

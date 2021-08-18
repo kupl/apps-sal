@@ -4,7 +4,6 @@ class Solution:
         W = defaultdict(list)
         for i, w in enumerate(words):
             W[len(w)].append(i)
-        # print(W)
         G = defaultdict(set)
         for i in range(n):
             for j in W[len(words[i]) + 1]:
@@ -15,7 +14,6 @@ class Solution:
                         break
                 if found:
                     G[i].add(j)
-        # print(G)
 
         @lru_cache(None)
         def dfs(i):

@@ -16,10 +16,6 @@ class Solution:
         if word in memo:
             return memo[word]
 
-        # if word not in preToPost:
-        #     memo[word] = 1
-        #     return memo[word]
-
         ans = 1
         for post in preToPost[word]:
             ans = max(ans, 1 + self.dfs(post, preToPost, memo))

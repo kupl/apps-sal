@@ -1,5 +1,4 @@
 def winner(candidates):
-    # Filter inputs
     if len(candidates) != 3 or any(
             not c.get("name") or not c.get("scores") or
             len(c["scores"]) not in (1, 2) or

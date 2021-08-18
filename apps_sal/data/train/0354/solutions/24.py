@@ -1,5 +1,3 @@
-# https://leetcode.com/problems/dice-roll-simulation/discuss/404840/Short-Python-DP-with-detailed-image-explanation
-# 解説見ればわかるけど、難しい
 
 
 class Solution:

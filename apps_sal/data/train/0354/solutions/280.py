@@ -14,19 +14,9 @@ class Solution:
                         continue
                     elif i > p:
                         F[i][j] = (F[i][j] + sumF[i - p] - F[i - p][j]) % MOD
-                    # for k in range(6):
-                    #     if j == k: continue
-                    #     if i > p:
-                    #         F[i][j] = (F[i][j] + F[i - p][k]) % MOD
                 sumF[i] += F[i][j]
 
         res = 0
         for i in range(6):
             res = (res + F[n][i]) % MOD
-            # print(F[n][i])
         return round(res)
-
-        # 1(11), 2(11), 3(11), 4(11), 5(11), 6(11) -> 6
-        # 1(22), 2(22), 3(22), 4(22), 5(22), 6(22) -> 6
-        # 1(33), 2(33), 3(33), 4(33), 5(33), 6(33) -> 6
-        #

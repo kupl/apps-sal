@@ -30,5 +30,4 @@ class Solution:
                 if len(words[j]) + 1 == len(words[i]) and valid(words[j], words[i]):
                     dp[i] = max(dp[i], dp[j] + 1)
             res = max(res, dp[i])
-        # print(dp)
         return res

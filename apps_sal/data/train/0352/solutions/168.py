@@ -1,6 +1,5 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
-        # Sorting words by length is necessary
         words.sort(key=lambda x: len(x))
         max_len = [1] * len(words)
         res = 1
@@ -11,12 +10,9 @@ class Solution:
                     res = max(res, max_len[j])
         return res
 
-    # Use this function to check whether s1 is a predecessor of s2
     def isPredecessor(self, s1, s2):
-        # Corner case:
         if len(s2) - len(s1) != 1:
             return False
-        # Use flag to record whether difference between s1 and s2 is found
         flag = 0
         i, j = 0, 0
         while i < len(s1) and j < len(s2):
