@@ -10,8 +10,6 @@ def gcd(a1, a2):
     else:
         return gcd(a2, a1 % a2)
 
-# return (g, x, y) a*x + b*y = gcd(x, y)
-
 
 def egcd(a, b):
     if a == 0:
@@ -22,7 +20,6 @@ def egcd(a, b):
 
 
 def __starting_point():
-    #n, m = list(map(int, input().split()))
     a1, b1, a2, b2, L, R = map(int, input().split())
     a2 *= -1
     LCM = a1 * a2 // gcd(a1, a2)

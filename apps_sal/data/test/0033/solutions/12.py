@@ -1,4 +1,3 @@
-#from IPython import embed
 
 def xgcd(b, n):
     x0, x1, y0, y1 = 1, 0, 0, 1
@@ -30,7 +29,7 @@ def main():
     if b2 < b1:
         a1, a2, b1, b2 = a2, a1, b2, b1
 
-    d, x, y = xgcd(a1, -a2)  # extended_gcd(a1,-a2)
+    d, x, y = xgcd(a1, -a2)
     if(d < 0):
         d *= -1
         x *= -1
@@ -40,7 +39,6 @@ def main():
         print(0)
         return
 
-    # print(d,x,y)
     fact = (b2 - b1) // d
     x *= fact
     y *= fact
@@ -60,5 +58,4 @@ def main():
     print(max(0, tope + 1 - bajo))
 
 
-    # embed()
 main()

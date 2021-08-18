@@ -7,12 +7,8 @@ import sys
 def __starting_point():
     n = int(input())
     table = list()
-    # newT = list()
     for i in range(n):
         table.append(input())
-    # for i in range(2 * n):
-        # newT.append(1)
-   # table = [input() for i in range(n)]
     newT = [[1] * (2 * n) for i in range(2 * n)]
 
     for i in range(n):

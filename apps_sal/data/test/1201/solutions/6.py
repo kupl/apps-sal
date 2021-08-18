@@ -17,7 +17,6 @@ for i in arr:
 dp = [[0 for j in range(n)] for i in range(T)]
 for time in range(1, T):
     for i in range(n):
-        #dp[time][i] = max(dp[time - 1][i], dp[time][i - 1])
         dp[time][i] = dp[time][i - 1]
         if d[i] > time >= t[i]:
             if i:

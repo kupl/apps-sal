@@ -4,8 +4,6 @@ from collections import defaultdict
 
 input = stdin.readline
 
-# n, k = map(int, input().split(" "))
-# l = list(map(int, input().split(" ")))
 
 n = int(input())
 l = list(map(int, input().split(" ")))

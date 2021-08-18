@@ -1,5 +1,3 @@
-# n=int(input())
-# n,k=map(int,input().split())
 '''l=0
 r=10**13
 while l+1<r:
@@ -9,13 +7,6 @@ while l+1<r:
         r=mid
     if val<=money:
         l=mid'''
-# arr=list(map(int,input().split()))
-# n=int(input())
-# if all([size%ele==0 for ele,size in s.items()]):
-# n,k=map(int,input().split())
-# arr=list(map(int,input().split()))
-#from collections import Counter
-#arr=sorted([(n-int(x),i) for i,x in enumerate(input().split())])
 n = int(input())
 arr = [int(q) - 1 for q in input().split()]
 ans = [0] * n

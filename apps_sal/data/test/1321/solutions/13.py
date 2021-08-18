@@ -1,5 +1,3 @@
-#import time
-#start = time.time()
 
 hwarr = []
 l = int(input())
@@ -27,6 +25,3 @@ for i in range(l):
     pixs += str(sw * mh) + ' '
 
 print(pixs[:-1])
-
-#stop = time.time()
-# print(stop-start)

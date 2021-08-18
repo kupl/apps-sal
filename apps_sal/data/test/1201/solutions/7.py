@@ -12,7 +12,6 @@ for er in range(n):
     else:
         n -= 1
 arr.sort(key=lambda x: x[1])
-# print(arr)
 temp = []
 for i in range(n):
     temp.append([0])
@@ -39,9 +38,7 @@ for i in range(1, m + 1):
                     temp.append(ty)
                 else:
                     temp.append(temp[j - 1])
-    #print(temp , " temp")
     com.append(temp)
-# print(com)
 print(total[0])
 if(total[0] > 0):
     print(len(total) - 1)

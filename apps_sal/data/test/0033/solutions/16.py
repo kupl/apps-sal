@@ -12,7 +12,6 @@ def solve(a, b, x, y, r):
     y = (y - x) % b
 
     gg, X, Y = gcd(a, b)
-    #print(gg, X, Y, y, a, b)
     if y % gg != 0:
         return 0
     X *= y // gg
@@ -52,7 +51,6 @@ while d1 < L:
 while d2 < L:
     d2 += a2
 
-#print(d1, d2, L, R)
 
 if R < max(d1, d2):
     print(0)

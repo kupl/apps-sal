@@ -12,7 +12,6 @@ n, k = [int(s) for s in input().split()]
 needs = [int(s) for s in input().split()]
 has = [int(s) for s in input().split()]
 can_bake = [int(has[i] / needs[i]) for i in range(n)]
-# print(can_bake)
 while k > 0:
     min_value, min_index = minimum(can_bake)
     has[min_index] += 1

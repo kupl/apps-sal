@@ -2,8 +2,6 @@ from math import gcd
 from collections import defaultdict
 from sys import stdin, stdout
 
-# This method is better cause for all the same results we only calculate once
-
 
 def main():
     GCD_count = defaultdict(int)

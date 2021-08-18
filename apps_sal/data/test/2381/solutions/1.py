@@ -1,6 +1,5 @@
 import numpy
 3
-# -*- coding:utf-8 -*-
 
 
 MAX = 10 ** 9 + 7

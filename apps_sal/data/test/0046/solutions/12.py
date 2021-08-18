@@ -10,6 +10,4 @@ for j in range(m % 5):
 ans = left_first[-1] * left_second[-1]
 for i in range(4):
     ans += left_first[i] * left_second[3 - i]
-    # print(ans)
-# print(left_first,left_second)
 print(ans)

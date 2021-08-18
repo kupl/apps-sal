@@ -39,6 +39,5 @@ else:
     serg_q = num_q[x - 1][y - 1]
 
     pass
-# print(num_q)
 
 print(max_q, min_q, serg_q)

@@ -10,8 +10,6 @@ q = int(input())
 d = defaultdict(lambda: 0)
 
 current = defaultdict(lambda: 0)
-# totalCount1 = 0
-# count1 = 0
 
 for i in range(n):
     newCurrent = defaultdict(lambda: 0)
@@ -28,10 +26,8 @@ for i in range(n):
 
 totalCombi = (n * (n + 1)) // 2
 
-# print(d)
 d[1] = totalCombi - sum(d.values()) + arr.count(1)
 
-# print(d)
 for _ in range(q):
     x = int(input())
     print(d[x])
