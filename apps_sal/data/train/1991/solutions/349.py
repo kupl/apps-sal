@@ -13,10 +13,7 @@ class Solution:
         return x
 
     def num_routes(self, current_city, end, current_fuel):
-        # add num_routes for (places, fuel) states that can be travelled to with current fuel.
-        # print('Start eval:', current_city, current_fuel)
         if self.evaluated[current_city][current_fuel]:
-            # print('Applied old eval:', current_city, current_fuel, self.nr[current_city][current_fuel])
             return self.nr[current_city][current_fuel]
         cur_nr = self.nr[current_city][current_fuel]
         for target_city in range(len(self.locations)):
@@ -29,6 +26,4 @@ class Solution:
         cur_nr = cur_nr % (10**9 + 7)
         self.nr[current_city][current_fuel] = cur_nr
         self.evaluated[current_city][current_fuel] = True
-        # print(location, current_fuel, cur_nr)
-        # print('Fin eval:', current_city, current_fuel, cur_nr)
         return cur_nr

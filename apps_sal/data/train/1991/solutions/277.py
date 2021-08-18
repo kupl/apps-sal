@@ -4,22 +4,6 @@ from collections import deque
 
 class Solution:
 
-    # Brute Force
-    #     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-    #         ans = 0
-
-    #         q = deque([(start, fuel)])
-
-    #         while q:
-    #             curr, tel = q.popleft()
-    #             if curr == finish:
-    #                 ans+=1%(10**9 + 7   )
-
-    #             for i in range(len(locations)):
-    #                 if i!=curr and tel-abs(locations[i]-locations[curr])>=0:
-    #                     q.append((i, tel-abs(locations[i]-locations[curr])))
-    #         return ans
-
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
 
         def aux(curr, tel):

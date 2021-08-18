@@ -1,7 +1,6 @@
 class Solution:
     def countRoutes(self, nums: List[int], start: int, finish: int, fuel: int) -> int:
         def dp(i, f, cache):
-            # print(i, f)
             if f < 0:
                 return 0
             if f == 0:

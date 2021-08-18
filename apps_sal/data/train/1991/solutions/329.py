@@ -20,16 +20,10 @@ class Solution:
 
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         self.n = len(locations)
-        # sx, tx: start and finish city coordinates
         sx, tx = locations[start], locations[finish]
-        # self.L: sorted city coordinates
         self.L = sorted(locations)
-        # self.d: city coordinates -> sorted index
         self.d = {x: i for i, x in enumerate(self.L)}
-        # self.s, self.t: start/finish city in sorted index
         self.s, self.t = self.d[sx], self.d[tx]
-        # minimum fuel required on each city to reach finish
         self.m = {i: abs(x - tx) for i, x in enumerate(self.L)}
-        # memo
         self.recursive.cache_clear()
         return self.recursive(self.s, fuel) % (10 ** 9 + 7)

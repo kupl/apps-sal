@@ -9,8 +9,6 @@ class Solution:
         @lru_cache(None)
         def dp(pos, f):
 
-            # print (pos, f)
-
             nonlocal finish
             nonlocal MOD
 

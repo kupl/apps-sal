@@ -1,6 +1,5 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        # Dynamic Programming
         mod = 10**9 + 7
 
         @lru_cache(None)

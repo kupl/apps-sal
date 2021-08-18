@@ -8,7 +8,6 @@ class Solution:
         if abs(finish - start) > fuel:
             return 0
         locations = [x for x in locations if abs(x - start) <= fuel]
-        # print(start, finish)
 
         @lru_cache(None)
         def dfs(u, fuel):

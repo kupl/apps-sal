@@ -1,7 +1,5 @@
 class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
-        # For each i, find j > i, s.t.
-        # suf[j] = p - pref[i].
         index = collections.defaultdict(list)
         n = len(nums)
         pref = [0] * n
@@ -18,7 +16,6 @@ class Solution:
             ans = index[0][-1]
         for i in range(n):
             target = (p - pref[i]) % p
-            # Find j > i.
             while index[target] and index[target][-1] <= i:
                 index[target].pop()
             if index[target]:

@@ -17,5 +17,4 @@ class Solution:
         for k in range(fuel + 1):
             res += dp[finish][k]
         mod = 1000000007
-        # print(res)
         return res % mod

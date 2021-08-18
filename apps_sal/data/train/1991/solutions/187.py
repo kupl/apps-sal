@@ -2,7 +2,7 @@ class Solution:
 
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         '''
-        f(s, cost) # 到达city_s时， 剩余的cost
+        f(s, cost) 
         '''
         def cost(i, j): return abs(locations[i] - locations[j])
         n, MOD = len(locations), 10**9 + 7

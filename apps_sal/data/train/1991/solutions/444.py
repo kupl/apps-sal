@@ -10,6 +10,6 @@ class Solution:
                         continue
                     cost = abs(locations[i] - locations[k])
                     if cost <= j:
-                        dp[i][j] += dp[k][j - cost]  # add ways k to i
+                        dp[i][j] += dp[k][j - cost]
 
         return dp[start][fuel] % (10**9 + 7)

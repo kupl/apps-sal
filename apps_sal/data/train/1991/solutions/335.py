@@ -8,8 +8,6 @@ class Solution:
 
         @lru_cache(None)
         def dp(cur_start, fuel):
-            # if cur_start == finish:
-            #     return 0
 
             res = 0
             for l in range(len(locations)):

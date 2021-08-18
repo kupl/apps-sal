@@ -3,7 +3,6 @@ class Solution:
         cache = {}
 
         def dfs(start, fuel):
-            # Number of routes from start to finish using less or equal than fuel
             if (start, fuel) not in cache:
                 res = 0
                 for c in range(len(locations)):

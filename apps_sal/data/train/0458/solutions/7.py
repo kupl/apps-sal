@@ -16,7 +16,5 @@ class Solution:
             if (current_sum - m) % p in mod_last_positions:
                 ans = min(ans, idx - mod_last_positions[(current_sum - m) % p])
             mod_last_positions[current_sum % p] = idx
-            # print(mod_last_positions)
-            #print(ans, current_sum)
 
         return ans if ans != IMPOSSIBLE else -1

@@ -1,13 +1,3 @@
-# (city,loc)
-# [(0,2),(1,3),(2,6),(3,8),(4,4)]
-# 012345678
-# ..014.2.3
-# p[x,f] = sum (p[i,f + dist(i,x)] if i!=x and dist(i,x) <= f)
-# trivial case
-# p[start,fuel] = 1
-# p[x,fuel] = 0 if x != start
-# p[x,fuel-1] = ..
-# return p[finish,0]
 
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
@@ -24,5 +14,4 @@ class Solution:
                         s += grid[k][f + dist]
                 grid[i][f] = s
 
-        # print(grid)
         return sum(grid[finish]) % (pow(10, 9) + 7)
