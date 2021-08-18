@@ -8,8 +8,6 @@ class Solution:
         for i, v in enumerate(manager):
             sub[v].append(i)
         while q:
-            # print(q)
-            # print(uninformed)
             TI, ID = heapq.heappop(q)
             uninformed -= set([(ID)])
             if not uninformed:

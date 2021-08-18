@@ -1,6 +1,5 @@
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
-        # adjacency list
 
         adj = [[] for _ in range(n)]
         s = headID

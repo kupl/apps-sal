@@ -15,8 +15,6 @@ class Solution:
                     count += cache[curr]
                     break
 
-            # print(i, count)
             cache[i] = count
-            # print(cache)
             maxx = max(maxx, count)
         return maxx

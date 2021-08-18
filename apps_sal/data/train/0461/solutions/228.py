@@ -10,7 +10,6 @@ class Solution:
         queue = deque([(headID, informTime[headID])])
         while queue:
             cur_id, cur_time = queue.popleft()
-            # calculate max
             rst = max(rst, cur_time)
             for child in childs[cur_id]:
                 queue.append((child, cur_time + informTime[child]))

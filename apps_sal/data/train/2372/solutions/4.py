@@ -1,5 +1,3 @@
-# Created by: WeirdBugsButOkay
-# 28-09-2020, 13:44:16
 
 import math
 

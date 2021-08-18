@@ -1,6 +1,5 @@
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
-        # DFS Stack
         self.max = 0
         directSub = self.makeDirectSub(manager)
         self.dfs(headID, directSub, informTime)
@@ -19,7 +18,6 @@ class Solution:
         while stk:
             employee, time = stk.pop()
             self.max = max(self.max, time)
-            # add all subemployees and record the time it took them to get the information
             for subEmp in directSub[employee]:
                 stk.append((subEmp, time + informTime[employee]))
         return

@@ -1,7 +1,5 @@
 class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
-        # using manager make graph => Value is key, Index is value, cost is informTime[Value]
-        # do DFS find max
 
         graph = []
         for i in range(n):
@@ -10,7 +8,6 @@ class Solution:
             if(manager[i] != -1):
                 graph[manager[i]].append(i)
         print(graph)
-        # DFS
         stack = [(headID, 0)]
         cost = 0
         maxi = 0

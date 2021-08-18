@@ -9,7 +9,6 @@ class Solution:
         if not root or root is None:
             return time
         final_time = time
-        # print(root.val, root.children)
         for node in root.children:
             final_time = max(final_time, self.traversal(node, time + root.inform))
         return final_time
@@ -28,9 +27,7 @@ class Solution:
         for i, m in enumerate(manager):
             if m == -1:
                 continue
-            d[m].children.append(d[i])  # add reportees
-#         for k,v in d.items() :
-#           print(k, v.val, len(v.children))
+            d[m].children.append(d[i])
 
         final_time = self.traversal(root, 0)
         return final_time

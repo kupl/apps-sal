@@ -15,7 +15,6 @@ class Solution:
 
         def get_children(m):
             return manager_to_subs.get(m, [])
-        # calculate the maximum path as the max of all the max paths of the subtrees
 
         def max_path(r):
             children = get_children(r)
