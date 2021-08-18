@@ -2,7 +2,6 @@ Q = int(input())
 for q in range(Q):
     c, m, x = tuple(map(int, input().split()))
     ans = min(c, m)
-    #m = ans
     c -= ans
     m -= ans
 

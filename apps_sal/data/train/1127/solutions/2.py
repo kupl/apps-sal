@@ -1,4 +1,3 @@
-# cook your dish here
 for t in range(int(input())):
     a = input().split()
     if len(a) == 1:

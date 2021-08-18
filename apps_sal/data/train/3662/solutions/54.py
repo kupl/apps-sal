@@ -4,4 +4,3 @@ def xor(a, b):
         return True
     else:
         return False
-    # your code here

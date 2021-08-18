@@ -8,4 +8,3 @@ for _ in range(int(input())):
         print('Dynamic')
     else:
         print('Not')
-# cook your dish here

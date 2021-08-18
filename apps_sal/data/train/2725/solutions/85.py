@@ -1,5 +1,4 @@
 def gimme(input_array):
-    # Implement this function
     Max = max(input_array)
     Min = min(input_array)
     n = round(sum(input_array), 3)

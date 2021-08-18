@@ -51,13 +51,11 @@ for _ in range(II()):
     if maketo():
         print(-1)
         continue
-    # print(to)
 
     ans = []
     flap = [-1] * n
     ng = False
     for u in range(n):
-        # u+=n
         if flap[u % n] != -1:
             continue
         cur = [[], []]
@@ -66,7 +64,6 @@ for _ in range(II()):
             ans += cur[0]
         else:
             ans += cur[1]
-        # print(u,flap,cur,ans)
         if ng:
             break
 
