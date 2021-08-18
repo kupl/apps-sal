@@ -2,7 +2,6 @@ n = int(input())
 a = []
 for i in range(n):
     a.append(list(map(int, list(input()))))
-# print(*a)
 m = int(input())
 b = list(map(int, input().split()))
 for i in range(n):
@@ -24,4 +23,3 @@ for i in range(m):
     ans.append(b[i])
 print(len(ans))
 print(*ans)
-# print(*a)

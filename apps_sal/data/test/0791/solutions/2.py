@@ -2,7 +2,6 @@ import sys
 
 
 def main():
-    # fin = open("input.txt", "r")
     fin = sys.stdin
     fout = sys.stdout
 

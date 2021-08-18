@@ -3,7 +3,6 @@ def XorSum2():
     a = list(map(int, input().split()))
     ans, tmp0, tmp1 = 0, 0, 0
 
-    # 尺取法インデックス
     right = 0
 
     for left in range(n):

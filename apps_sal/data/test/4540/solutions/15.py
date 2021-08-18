@@ -11,7 +11,6 @@ def main():
     total += abs(inlis[-1])
     inlis.append(0)
 
-    #i = 0
     if 0 <= inlis[0] and inlis[0] > inlis[1]:
         if inlis[1] > 0:
             print(total - 2 * abs(inlis[1] - inlis[0]))

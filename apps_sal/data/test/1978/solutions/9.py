@@ -8,7 +8,7 @@ def inl(): return list(map(int, input().split()))
 def inm(): return list(map(int, input().split()))
 
 
-DBG = True  # and False
+DBG = True
 BIG = 999999999
 R = 10**9 + 7
 
@@ -34,8 +34,6 @@ def setc2c():
                     heapq.heappush(hp, (newdist, nxtloc))
         for c2 in range(n):
             c2c[c1][c2] = dist[c2]
-
-# main
 
 
 n = inn()

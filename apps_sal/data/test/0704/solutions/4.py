@@ -19,16 +19,13 @@ def solve(n, lines, r1, c1, r2, c2):
             else:
                 continue
 
-        # left or right to the target column
         if c2 <= lines[r - 1] + 1:
             queue.appendleft((r, c2, cost + abs(c - c2)))
 
-        # right to last column
         last_pos = lines[r - 1] + 1
         if c < last_pos:
             queue.appendleft((r, last_pos, cost + abs(c - last_pos)))
 
-        # up
         if r - 1 >= 1:
             last_pos_prev = lines[r - 2] + 1
             if last_pos_prev >= c:
@@ -36,7 +33,6 @@ def solve(n, lines, r1, c1, r2, c2):
             else:
                 queue.appendleft((r - 1, last_pos_prev, cost + 1))
 
-        # down
         if r + 1 <= n:
             last_pos_next = lines[r] + 1
             if last_pos_next >= c:

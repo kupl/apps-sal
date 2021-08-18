@@ -1,5 +1,4 @@
 def warshall_floyd(d):
-    #d[i][j]: iからjへの最短距離
     for k in range(n):
         for i in range(n):
             for j in range(n):

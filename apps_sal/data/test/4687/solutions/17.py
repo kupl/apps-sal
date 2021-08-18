@@ -1,4 +1,3 @@
-# ABC 061: C – Big Array
 N, K = [int(i) for i in input().split()]
 a, b = [], []
 for _ in range(N):

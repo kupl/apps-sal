@@ -1,4 +1,3 @@
-# D - We Like AGC
 
 from collections import defaultdict
 
@@ -6,13 +5,9 @@ MOD = 10**9 + 7
 N = int(input())
 charactors = ['A', 'G', 'C', 'T']
 
-# dp[l][s] := 長さがlで、末尾3文字がsである文字列の個数
 dp = [defaultdict(int) for _ in range(N + 1)]
 
-# 無関係の文字で初期化しておく
 dp[0]['ZZZ'] = 1
-
-# NGケース: AGC, ACG, GAC, A?GC, AG?C
 
 
 def check(s, c):
@@ -34,7 +29,6 @@ def check(s, c):
 for i in range(N):
     for s in list(dp[i].keys()):
         for c in charactors:
-            # NGケースに該当しなければ、カウントする
             if check(s, c):
                 dp[i + 1][s[1:] + c] += dp[i][s]
                 dp[i + 1][s[1:] + c] %= MOD
