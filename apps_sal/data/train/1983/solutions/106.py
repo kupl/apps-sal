@@ -41,14 +41,14 @@ class SlidingWindow:
 
 
 window = SlidingWindow(3)
-window.add(1)  # [1]
-window.add(2)  # [1, 2]
+window.add(1)
+window.add(2)
 assert window.getProduct() == 2
-window.add(3)  # [1, 2, 3]
+window.add(3)
 assert window.getProduct() == 6
-window.add(4)  # [2, 3, 4]
+window.add(4)
 assert window.getProduct() == 24
-window.add(5)  # [3, 4, 5]
+window.add(5)
 assert window.getProduct() == 60
 
 
@@ -60,8 +60,3 @@ window.add(5)
 assert window.getProduct() == 0
 window.add(4)
 assert window.getProduct() == 40
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

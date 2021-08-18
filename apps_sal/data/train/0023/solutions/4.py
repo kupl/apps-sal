@@ -16,12 +16,8 @@ for test in range(t):
         M[m].append(p)
         MCOUNT[m] += 1
 
-    # print(M)
-    # print(MCOUNT)
-
     ACC = list(accumulate(MCOUNT))
 
-    # print(ACC)
     HQ = []
     ANS = 0
     use = 0
@@ -29,8 +25,6 @@ for test in range(t):
     for i in range(n - 1, -1, -1):
         for j in M[i]:
             heapq.heappush(HQ, j)
-
-        # print(HQ)
 
         while ACC[i - 1] + use < i:
             x = heapq.heappop(HQ)

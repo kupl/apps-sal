@@ -1,5 +1,4 @@
 def traffic_jam(main_road, side_streets):
-    #display(main_road, side_streets)
 
     result = ''
 

@@ -1,6 +1,5 @@
 import sys
 from heapq import *
-#sys.stdin = open('in', 'r')
 t = int(input())
 for ti in range(t):
     n = int(input())
@@ -18,8 +17,3 @@ for ti in range(t):
             res += heappop(h)
             c += 1
     print(res)
-
-
-# sys.stdout.write('YES\n')
-# sys.stdout.write(f'{res}\n')
-#sys.stdout.write(f'{y1} {x1} {y2} {x2}\n')

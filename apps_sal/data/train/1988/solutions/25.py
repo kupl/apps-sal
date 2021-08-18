@@ -9,7 +9,7 @@ class Solution:
                 src, tar = edge[0], edge[1]
                 edges[i].setdefault(src, []).append(tar)
 
-        def shortedAlterPath(source, target, colour):  # dfs
+        def shortedAlterPath(source, target, colour):
             queue = deque([source])
             visited = {(colour, source)}
             count = 0

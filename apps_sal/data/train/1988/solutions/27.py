@@ -1,5 +1,4 @@
 class Solution:
-    # TLE
     def shortestAlternatingPaths(self, n: int, red_edges: List[List[int]], blue_edges: List[List[int]]) -> List[int]:
         '''
         O(N^3)
@@ -37,10 +36,8 @@ class Solution:
 
         for u, v in red_edges:
             state[(u, v, 0, 0)] = 1
-            # state[(v, u, 0, 0)] = 1
         for u, v in blue_edges:
             state[(u, v, 1, 1)] = 1
-            # state[(v, u, 1, 1)] = 1
 
         def relax(k):
             for i in range(n):
@@ -54,21 +51,10 @@ class Solution:
                             )
 
         for k in range(0, n):
-            # if k == 5:
-            #     print(state[(5, 5, 0, 0)])
-            #     print(state[(5, 5, 1, 1)])
-            #     print(state[(0, 5, 1, 0)])
-            #     print(state[(0, 5, 1, 1)])
-            #     print(state[(5, 2, 0, 0)])
-            #     print(state[(5, 2, 1, 0)])
             relax(k)
-
-        # print('end', state[(5, 2, 1, 0)])
 
         for k in range(0, n):
             relax(k)
-
-        # print('end', state[(5, 2, 1, 0)])
 
         ans = [0]
         for i in range(1, n):
@@ -109,9 +95,6 @@ class Solution:
 
 
 class Solution:
-    # AC
-    # Runtime: 144 ms, faster than 22.01% of Python3 online submissions for Shortest Path with Alternating Colors.
-    # Memory Usage: 14.2 MB, less than 10.36% of Python3 online submissions for Shortest Path with Alternating Colors.
     def shortestAlternatingPaths(self, n: int, red_edges: List[List[int]], blue_edges: List[List[int]]) -> List[int]:
         '''
         modified SPFA (Dijkstra)
@@ -131,7 +114,7 @@ class Solution:
 
         from queue import PriorityQueue
         pq = PriorityQueue()
-        pq.put((0, 0, 0))  # distance, node, color
+        pq.put((0, 0, 0))
         pq.put((0, 0, 1))
         dist = {}
         for u in range(n):
@@ -139,11 +122,9 @@ class Solution:
                 dist[(u, c)] = MAX
         dist[(0, 0)] = 0
         dist[(0, 1)] = 0
-        # solved = {}
         solved = set()
         while not pq.empty():
             d, u, c = pq.get()
-            # solved[(u, c)] = d
             for v, cc in adj[u]:
                 if cc != c:
                     if dist[(v, cc)] > d + 1:

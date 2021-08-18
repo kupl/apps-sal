@@ -2,8 +2,8 @@ class Solution:
     def shortestAlternatingPaths(self, n: int, red_edges: List[List[int]], blue_edges: List[List[int]]) -> List[int]:
 
         distance = [[float('inf'), float('inf')] for _ in range(n)]
-        distance[0][0] = 0  # red
-        distance[0][1] = 0  # blue
+        distance[0][0] = 0
+        distance[0][1] = 0
 
         for _ in range(n):
             for u, v in red_edges:

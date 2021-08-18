@@ -10,8 +10,6 @@ class Solution:
 
         ans = collections.defaultdict(lambda: float('inf'))
 
-        # 0 = red, 1 = blue
-
         def bfs(queue):
             seen = set()
             while queue:

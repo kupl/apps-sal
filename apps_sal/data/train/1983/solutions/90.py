@@ -21,8 +21,3 @@ class ProductOfNumbers:
         else:
             ret = self.products[-1] // self.products[-k - 1]
         return ret
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

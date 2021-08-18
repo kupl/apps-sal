@@ -1,5 +1,5 @@
-from math import floor  # import function to round down
-from statistics import mean  # import function to calculate average
+from math import floor
+from statistics import mean
 
 
 def get_average(marks):
