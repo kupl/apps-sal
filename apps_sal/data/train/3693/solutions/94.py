@@ -7,4 +7,3 @@ def make_negative(number):
 
     else:
         return number
-    # ...

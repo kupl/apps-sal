@@ -3,4 +3,4 @@ def generate_hashtag(s):
         return False
     if len(s) == 0:
         return False
-    return f"#{''.join([x.capitalize() for x in s.split()])}"
+    return f"

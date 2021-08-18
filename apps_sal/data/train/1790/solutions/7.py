@@ -2,7 +2,6 @@ class Graph():
     def __init__(self, vertices_num):
         pass
 
-    # from adjacency matrix to dictionary
     @staticmethod
     def adjmat_2_graph(adjm):
         nodes_dct = {}
@@ -29,7 +28,6 @@ class Graph():
     def graph_2_list(graph):
         return [[k, v] for k, v in sorted(graph.items())]
 
-    # from adjacency list to dictionary
     @staticmethod
     def list_2_graph(lst):
         return dict((vertex[0], vertex[1]) for vertex in lst)

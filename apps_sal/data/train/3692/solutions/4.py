@@ -6,7 +6,6 @@ def median(lst):
 
 
 def quickselect(lst, nth, even):
-    # O(n) but what a pain to get right.
     pivot = choice(lst)
     smaller = [n for n in lst if n < pivot]
     n_equal = sum(n == pivot for n in lst)

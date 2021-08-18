@@ -1,12 +1,9 @@
 class Graph():
 
     def __init__(self, vertices_num):
-        # number of nodes (an integer)
         self.v = vertices_num
-        # (maybe not useful here) : list of nodes from "A0", "A1" ... to "A index (vertices_num - 1)"
         self.nodes = None
 
-    # from adjacency matrix to dictionary
     def adjmat_2_graph(self, adjm):
         d = {}
         for indice, ligne in enumerate(adjm):
@@ -20,7 +17,6 @@ class Graph():
             d[cle] = laliste
         return d
 
-    # from dictionary to adjacency matrix
     def graph_2_mat(self, graph):
         m = [[0 for k in range(self.v)] for i in range(self.v)]
         for noeud in graph:
@@ -31,7 +27,6 @@ class Graph():
                 m[indice][indiceVoisin] = distance
         return m
 
-    # from dictionary to adjacency list
     def graph_2_list(self, graph):
         m = []
         for noeud in graph:
@@ -40,7 +35,6 @@ class Graph():
         m.sort()
         return m
 
-    # from adjacency list to dictionary
     def list_2_graph(self, lst):
         d = {}
         for elt in lst:
@@ -49,20 +43,15 @@ class Graph():
             d[cle] = laliste
         return d
 
-    # from adjacency matrix to adjacency list
-
     def mat_2_list(self, mat):
         d = self.adjmat_2_graph(mat)
         adj = self.graph_2_list(d)
         return adj
 
-    # from adjacency list to adjacency matrix
     def list_2_mat(self, lst):
         d = self.list_2_graph(lst)
         a = self.graph_2_mat(d)
         return a
-
-    # find all path from node start_vertex to node end_vertex
 
     def find_all_paths(self, graph, start_vertex, end_vertex):
         if start_vertex == end_vertex:
