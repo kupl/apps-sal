@@ -1,9 +1,5 @@
 class Solution:
     def longestPrefix(self, s: str) -> str:
-        # rolling hash
-        # use large prime as hash function, pay attention to the possible hash collision.
-        # fibonacci primes: 2, 3, 5, 13, 89, 233, 1597, 28657, 514229, 433494437, 2971215073,
-        #  99194853094755497, 1066340417491710595814572169, 19134702400093278081449423917, ..
         M = 19134702400093278081449423917
         n, h, t = len(s), 0, 0
         v = list(map(lambda x: ord(x) - ord('a'), s))

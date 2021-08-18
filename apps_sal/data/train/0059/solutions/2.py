@@ -25,7 +25,6 @@ for test in range(t):
     if DIFMIN == 10**10:
         print(0, 0)
     else:
-        # print(DIFMIN,DIFMAX)
         k = (DIFMAX + DIFMIN) // 2
         m = max(MAX, DIFMAX - k, k - DIFMIN)
 

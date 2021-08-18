@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     x = int(input())
     l = [250000, 500000, 750000, 1000000, 1250000, 1500000]

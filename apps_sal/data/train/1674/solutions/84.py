@@ -1,7 +1,7 @@
 class Solution:
     def stoneGameII(self, piles: List[int]) -> int:
         self.piles = piles
-        self.memo = {}  # map of (start, M, is_player_1) to int
+        self.memo = {}
         return self.minimax(0, 1, True)
 
     def minimax(self, start: int, M: int, is_player_1: bool) -> int:

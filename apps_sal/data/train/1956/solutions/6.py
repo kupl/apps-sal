@@ -30,13 +30,11 @@ class Solution:
             return True
         kee = min(self.val.keys(), key=lambda x: len(self.val[x]))
         possible_nums = self.val[kee]
-        #update = {}
         for n in possible_nums:
             update = {kee: self.val[kee]}
             if self.ValidOne(n, kee, update):
                 if self.Solver():
                     return True
-            # self.val[kee]=possible_nums
             self.undo(kee, update)
         return False
 

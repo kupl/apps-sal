@@ -7,8 +7,8 @@ class Solution:
             M, N = len(pat), len(txt)
             lps = failure(pat)
 
-            i = 0  # index for txt[]
-            j = 0  # index for pat[]
+            i = 0
+            j = 0
             while i < N:
                 if pat[j] == txt[i]:
                     i += 1

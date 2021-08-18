@@ -19,5 +19,5 @@ class Solution:
         for j in (jump - 1, jump, jump + 1):
             if self.dfs(stones, pos + j, j, target, memo):
                 return True
-        memo.add((pos, jump))   # record bad position and jump
+        memo.add((pos, jump))
         return False

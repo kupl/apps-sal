@@ -1,4 +1,3 @@
-# cook your dish here
 s = input()
 dp = [1, 1]
 cant = False
@@ -9,7 +8,6 @@ for i in range(1, len(s)):
         dp.append(dp[-1] + dp[-2])
     else:
         dp.append(dp[-1])
-    # print(s[i],dp[-1])
 if cant:
     print(0)
 else:
