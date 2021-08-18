@@ -12,9 +12,6 @@ class Solution:
 
                     table[i][j] = (hor, ver)
 
-        # for i in table:
-        #     print(i)
-
         ans = float('-inf')
 
         for i in reversed(range(rows)):

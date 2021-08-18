@@ -3,8 +3,6 @@ class Solution:
         universal = Counter()
         for b in B:
             universal |= Counter(b)
-            # for char, count in Counter(b).items():
-            #     universal[char] = max(universal[char], count)
 
         ans = []
         for a in A:

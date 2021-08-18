@@ -10,6 +10,5 @@ while t > 0:
     tf = cir / abs(a - b)
     s = min(t1, t2) * x
     s = s / tf
-    # op = (min(t1,t2)*x)//tf
     s = ceil(s)
     print(s - 1)

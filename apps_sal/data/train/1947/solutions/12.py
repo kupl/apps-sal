@@ -26,5 +26,3 @@ class Solution:
                 universal.append(word)
 
         return universal
-
-        # len(A) = n, len(B) = m, word len = 10, time: 10m + 10n + 26 = O(m + n)

@@ -19,7 +19,6 @@ class Solution:
                         up[r][c] = up[r - 1][c] + 1
                     else:
                         up[r][c] = 1
-        # print(left, up)
 
         ret = 0
         for r in range(nrow):
@@ -29,7 +28,6 @@ class Solution:
                 for dist in range(0, min(r, c) + 1):
 
                     r2, c2 = r - dist, c - dist
-                    # print(r, c, dist, r2, c2)
                     if grid[r2][c] == 0 or grid[r][c2] == 0:
                         break
                     if left[r2][c] >= dist + 1 and up[r][c2] >= dist + 1:

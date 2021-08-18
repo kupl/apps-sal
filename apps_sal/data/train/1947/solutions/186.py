@@ -4,7 +4,7 @@ class Solution:
 
         for w in B:
             for c, n in collections.Counter(w).items():
-                d[c] = max(n, d[c])  # max(2,1)
+                d[c] = max(n, d[c])
         res = []
         for w in A:
             t = collections.Counter(w)

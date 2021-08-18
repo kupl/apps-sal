@@ -1,17 +1,10 @@
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 from collections import defaultdict
 from collections import deque
 import math
 import copy
 
-#T = int(input())
 N = int(input())
-#s1 = input()
-#s2 = input()
-#N,Q = [int(x) for x in stdin.readline().split()]
 arr = [int(x) for x in stdin.readline().split()]
 
 bit = [0] * (N + 1)
@@ -37,7 +30,6 @@ def query(x):
     return s
 
 
-# init
 for i in range(1, N + 1):
     bit[i] += series[i]
     y = i + lowbit(i)
@@ -48,7 +40,6 @@ visited = [0] * (N + 1)
 ans = [0] * N
 
 for i in range(N - 1, -1, -1):
-    # find
     left = 1
     right = N
     target = arr[i]
@@ -58,7 +49,6 @@ for i in range(N - 1, -1, -1):
         num = left - 1 + 2**int(math.log(L, 2))
 
         q = bit[num]
-        # print(num,q,target,left,right)
         if q < target:
             target -= q
             left = num + 1
@@ -73,7 +63,6 @@ for i in range(N - 1, -1, -1):
                 ans[i] = num
                 break
 
-    # update
     update(num + 1, -num)
 
 

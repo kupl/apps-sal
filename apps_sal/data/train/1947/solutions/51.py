@@ -6,7 +6,6 @@ class Solution:
                 ans[ord(c) - ord('a')] += 1
             return ans
 
-        # simplify B
         bmax = [0] * 26
         for b in B:
             ls = count(b)
@@ -19,6 +18,6 @@ class Solution:
             for i in range(26):
                 if ls[i] < bmax[i]:
                     break
-            else:  # execute if the for-loop ends without break
+            else:
                 ans.append(a)
         return ans

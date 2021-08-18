@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 
 
@@ -13,7 +12,6 @@ while(t != 0):
     r = z[1]
     a = z[2]
     b = z[3]
-    #p = math.pi
     peri = 2 * r
     tp = x * peri
 

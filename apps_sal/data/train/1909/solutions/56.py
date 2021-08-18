@@ -3,12 +3,7 @@ import copy
 
 class Solution:
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
-        # step1, O(N^2), dp, count the consecutive 1s start at (i, j) to top, left, down, right, (t, l, d, r)
-        # step2, O(N^3), straightforward, at (i, j), take (i + k, j + k), for k in range(1, min(d,r)-at-(i,j)),
-        #  see if min(t,l)-at-(i+k, j+k) >= k for k-square, often, k is limited and early break, so the overall
-        #  performance is expected to be close to O(N^2) instead of O(N^3).
         m, n = len(grid), len(grid[0])
-        # tldr: 4 x m x n
         tldr = [copy.deepcopy(grid) for _ in range(4)]
         for i in range(m):
             for j in range(n):
@@ -24,7 +19,6 @@ class Solution:
                         tldr[2][i][j] = tldr[2][i + 1][j] + 1
                     if j + 1 < n:
                         tldr[3][i][j] = tldr[3][i][j + 1] + 1
-        # diagonal only
         mk = 0
         for i in range(m):
             for j in range(n):

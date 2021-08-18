@@ -1,9 +1,5 @@
 class Solution:
     def bagOfTokensScore(self, tokens: List[int], P: int) -> int:
-        # use 100, P = 100, p = 1
-        # 400 down, P = 500, p = 0
-        # use 200, P = 300, p = 1
-        # use 300, P = 0, p = 2
         '''
         sort tokens
         play smallest tokens until you can't anymore
