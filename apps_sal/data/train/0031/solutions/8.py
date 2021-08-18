@@ -9,8 +9,6 @@ def ni(): return int(readline().rstrip())
 def nm(): return list(map(int, readline().split()))
 def nl(): return list(map(int, readline().split()))
 
-# eps = 10**-7
-
 
 def solve():
     s = ns()
@@ -35,8 +33,6 @@ def solve():
                 break
     print(cnt)
 
-
-# solve()
 
 T = ni()
 for _ in range(T):

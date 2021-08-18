@@ -70,7 +70,6 @@ for _ in range(int(input())):
     nbs_memo = dict()
     ils, numBlo = find_interleavings_2(a, b, 0, 0)
     ils = [tuple(x) for x in ils]
-    #print(ils, numBlo)
     memo = dict()
     for c in numBlo:
         if c == k:

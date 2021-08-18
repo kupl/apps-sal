@@ -4,7 +4,7 @@ class Solution:
 
         def get_max(arr):
             max_val = 0
-            heap = []  # min_val, min_idx
+            heap = []
             for idx, val in enumerate(arr):
                 if heap:
                     min_val, min_idx = heap[0]

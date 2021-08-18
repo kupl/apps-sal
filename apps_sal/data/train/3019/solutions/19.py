@@ -1,5 +1,4 @@
 def str_count(string, letter):
-    # Your code here ;)
     count = 0
     if string == '':
         return 0

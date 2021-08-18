@@ -1,6 +1,6 @@
 import random
 
-CERTAINTY = 10  # False positive rate: 4 ** -CERTAINTY
+CERTAINTY = 10
 
 
 def number_property(n):
@@ -21,7 +21,7 @@ def is_prime(n, k=CERTAINTY):
         if _is_witness(x, n, s):
             return False
 
-    return True  # Probably
+    return True
 
 
 def _factorize(n):

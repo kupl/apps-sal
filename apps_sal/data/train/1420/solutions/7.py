@@ -26,7 +26,6 @@ for _ in range(int(input())):
     res = 0
 
     ils = find_interleavings(a, b)
-    # print(ils)
     for c in ils:
         num_blocks = 0
         prev = math.inf
@@ -34,7 +33,6 @@ for _ in range(int(input())):
             if i != prev:
                 num_blocks += 1
             prev = i
-        # num_blocks += 1
         if num_blocks == k:
             res += 1
     print(res)

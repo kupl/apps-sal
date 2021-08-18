@@ -3,8 +3,6 @@ import math
 
 def number_property(n):
     return [isPrime(n), isEven(n), isMultipleOf10(n)]
-    # Return isPrime? isEven? isMultipleOf10?
-    # your code here
 
 
 def isPrime(n):

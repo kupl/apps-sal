@@ -1,7 +1,6 @@
 class Solution:
     def primePalindrome(self, N: int) -> int:
 
-        # Brutal force over time limit
         if N == 1 or N == 2:
             return 2
 

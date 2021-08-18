@@ -8,5 +8,3 @@ def str_count(string, letter):
             counter + 0
 
     return counter
-
-    # Your code here ;)
