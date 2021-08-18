@@ -21,7 +21,3 @@ def u(n):
     for i in range(3, n + 1):
         u.append(u[i - u[i - 1]] + u[i - u[i - 2]])
     return u
-
-    #     if n == 1 or n == 2:
-    #         return 1
-    #     return u(n - u(n-1)) + u(n - u(n-2))

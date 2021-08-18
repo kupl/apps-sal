@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 for h in range(int(input())):
     f, d, t, b = map(int, input().split())

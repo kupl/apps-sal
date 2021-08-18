@@ -4,7 +4,6 @@ import sys
 import os
 import math
 
-# sys.setrecursionlimit(10**6)
 
 T = int(input())
 

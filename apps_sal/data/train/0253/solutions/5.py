@@ -13,6 +13,6 @@ class Solution:
         cnt = 0
         result = 0
         for m in machines:
-            cnt += m - avg  # load-avg is "gain/lose"
+            cnt += m - avg
             result = max(result, abs(cnt), m - avg)
         return result

@@ -3,11 +3,9 @@ from itertools import combinations
 
 
 def solve(A, x):
-    # preliminary
-    if x < 0 or x > sum(A):  # T = sum(A)
+    if x < 0 or x > sum(A):
         return False
 
-    # algorithm
     sub_sum = [False] * (x + 1)
     sub_sum[0] = True
     p = 0
@@ -34,14 +32,11 @@ def main():
             b = val[2]
             arr[a:b] = reversed(arr[a:b])
         else:
-            # print solve(arr[val[1]-1:val[2]], val[3])
 
             if solve(arr[val[1] - 1:val[2]], val[3]):
                 print("Yes")
             else:
                 print("No")
-
-        # print arr
 
 
 main()

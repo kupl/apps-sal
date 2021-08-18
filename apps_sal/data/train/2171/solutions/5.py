@@ -1,4 +1,3 @@
-# 429A
 
 __author__ = 'artyom'
 
@@ -22,17 +21,6 @@ for i in range(n - 1):
 init = [0] + list(read_int_ary())
 goal = [0] + list(read_int_ary())
 s = []
-
-
-# def solve(graph, level, state, node, parent=-1):
-# t = level % 2
-# st = list(state)
-# if init[node] ^ st[t] == goal[node]:
-#     s.append(node)
-#     st[t] = 1 - st[t]
-#   for child in graph[node]:
-#     if child != parent:
-#       solve(graph, level + 1, st, child, node)
 
 
 def solve(graph, start):

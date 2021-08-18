@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 
 while t:
@@ -6,7 +5,7 @@ while t:
     n = int(n)
     Deec = 0
     Dumc = 0
-    b = []  # Dee starts with 0; Dum starts with 1
+    b = []
     for _ in range(n):
         x = input()
         if x[0] == '0':

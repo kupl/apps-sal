@@ -32,11 +32,8 @@ while q > 0:
         r -= 1
         k = l[l1:r + 1]
         k.reverse()
-        # print k
         l = l[:l1] + k + l[r + 1:]
     else:
         i = int(s[1])
         x = int(s[2])
-        # print i
         l[i - 1] = x
-    # print l

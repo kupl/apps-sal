@@ -1,4 +1,3 @@
-# cook your dish here
 a, n, k = input().split()
 a, n, k = int(a), int(n), int(k)
 klist = [0 for i in range(k)]

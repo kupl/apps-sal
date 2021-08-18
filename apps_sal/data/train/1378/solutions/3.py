@@ -1,4 +1,3 @@
-# cook your dish here
 A, N, K = map(int, input().split())
 
 ans = "" + str(A % (N + 1))

@@ -1,11 +1,9 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     a, b = list(input().split())
     l = []
     for i in range(int(a)):
         l.append(input())
-    # print(l)
     r = 0
     r1 = 0
     for i in range(len(l)):
