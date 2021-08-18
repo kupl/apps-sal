@@ -14,7 +14,7 @@ class UnionFind:
             root = node
         else:
             root = self.get_root(parent)
-            self.parent[node] = root  # 同じnodeへの2回目以降のget_rootを高速にするために、直接rootに繋いでおく
+            self.parent[node] = root
         return root
 
     def in_same_group(self, node1, node2):
@@ -27,7 +27,7 @@ class UnionFind:
             return
         main_root = self.get_root(node1)
         sub_root = self.get_root(node2)
-        if self.rank[main_root] < self.rank[sub_root]:  # rankの大きい方をmain_rootにする
+        if self.rank[main_root] < self.rank[sub_root]:
             main_root, sub_root = sub_root, main_root
 
         self.parent[sub_root] = main_root

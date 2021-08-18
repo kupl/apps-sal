@@ -9,9 +9,6 @@ if py2:
     range = xrange
 
 
-# FastIO for PyPy2 and PyPy3 by Pajenegod
-
-
 class FastI(object):
     def __init__(self, fd=0, buffersize=2**14):
         self.stream = stream = BytesIO()
@@ -51,8 +48,6 @@ class FastO(IOBase):
 sys.stdin, sys.stdout = FastI(), FastO()
 input = sys.stdin.readline
 
-# REWRITTEN HEAPQ
-
 
 def heappush(heap, item):
     heap.append(item)
@@ -68,15 +63,11 @@ def heappop(heap):
     _siftup(heap)
     return returnitem
 
-# Does a pop and then a push
-
 
 def heapreplace(heap, item):
     returnitem, heap[0] = heap[0], item
     _siftup(heap)
     return returnitem
-
-# Does a push and then a pop
 
 
 def heappushpop(heap, item):
@@ -102,8 +93,6 @@ def _siftdown(heap, pos):
 
 
 def _siftup(heap, pos=0):
-    # Move the item at pos to a leaf
-    # by switching place with smallest child (bias to right)
     newitem = heap[pos]
 
     leftchild = 2 * pos + 1
@@ -117,15 +106,13 @@ def _siftup(heap, pos=0):
             pos = rightchild
         leftchild = 2 * pos + 1
         rightchild = leftchild + 1
-    if leftchild < len(heap):  # Special case of only one child
+    if leftchild < len(heap):
         heap[pos] = heap[leftchild]
         pos = leftchild
-    # Now newitem has been moved to an leaf
     heap[pos] = newitem
     _siftdown(heap, pos)
 
 
-# ACTUAL CODE
 s = sys.stdin.read().replace(b'\r', b'')
 inp = []
 numb = 0

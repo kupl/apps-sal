@@ -10,9 +10,6 @@ if py2:
     range = xrange
 
 
-# FastIO for PyPy2 and PyPy3 by Pajenegod
-
-
 class FastI(object):
     def __init__(self, fd=0, buffersize=2**14):
         self.stream = stream = BytesIO()
@@ -52,7 +49,6 @@ class FastO(IOBase):
 sys.stdin, sys.stdout = FastI(), FastO()
 input = sys.stdin.readline
 
-# ACTUAL CODE
 s = sys.stdin.read().replace(b'\r', b'')
 inp = []
 numb = 0

@@ -4,19 +4,16 @@ class UnionFind:
         self.parents = [i for i in range(N)]
         self.sizes = [1 for _ in range(N)]
 
-    # 木の根をまとめる, 頂点 v が属するグループ番号を得る (O(α(n)))
     def root(self, x):
         if self.parents[x] == x:
-            return x  # 根
+            return x
         else:
-            self.parents[x] = self.root(self.parents[x])  # 経路圧縮
+            self.parents[x] = self.root(self.parents[x])
             return self.parents[x]
 
-    # xとyが同じ集合に属するか否か
     def is_same(self, x, y):
         return self.root(x) == self.root(y)
 
-    # xとyの属する集合を併合, 頂点 u が属するグループと頂点 v が属するグループを併合し、同じグループにする (O(α(n)))
     def unite(self, x, y):
         x = self.root(x)
         y = self.root(y)
@@ -28,7 +25,6 @@ class UnionFind:
         self.parents[y] = x
         return True
 
-    # 頂点 v が属するグループと同じグループに属する頂点数を得る (O(1))
     def size(self, x):
         return self.sizes[self.root(x)]
 

@@ -1,4 +1,3 @@
-# your code goes here
 a = (input())
 b = (input())
 j = 0

@@ -1,4 +1,3 @@
-# D - Wide Flip
 
 S = input()
 

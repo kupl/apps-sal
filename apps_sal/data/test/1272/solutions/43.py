@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-# sys.setrecursionlimit(100000)
 
 
 class UnionFind:
@@ -9,7 +8,6 @@ class UnionFind:
         self.parents = [-1] * n
         self.rank = [0] * n
 
-    # retrun the root of element x
     def find(self, x):
         if self.parents[x] < 0:
             return x
@@ -17,7 +15,6 @@ class UnionFind:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    # unite the group include element x and group include element y
     def unite(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -32,11 +29,9 @@ class UnionFind:
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
 
-    # get size of the gourp which element x belongs
     def get_size(self, x):
         return -self.parents[self.find(x)]
 
-    # check if element x and element y is same group
     def same(self, x, y):
         return self.find(x) == self.find(y)
 

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 
@@ -26,7 +25,6 @@ N = len(S)
 
 ans = ceil(N, 2)
 for i in range(ceil(N, 2), N):
-    # 真ん中から始めて、反対側と一致してるかと、1つ前と一致しているか
     if not S[i] == S[N - 1 - i] == S[i - 1]:
         break
     ans += 1

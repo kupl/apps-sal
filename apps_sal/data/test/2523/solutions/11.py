@@ -1,4 +1,3 @@
-# dame
 def main():
     S = input()
     r = len(S)

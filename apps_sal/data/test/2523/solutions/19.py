@@ -1,5 +1,4 @@
 import sys
-#input = sys.stdin.buffer.readline
 
 
 def main():

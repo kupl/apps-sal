@@ -59,14 +59,10 @@ for i in range(M):
     A[i] = a - 1
     B[i] = b - 1
 
-# print(A)
-# print(B)
 
 cmax = int(N * (N - 1) / 2)
 FD = [cmax] * (M + 1)
-# print(FD)
 for i in range(M):
-    # print(uf)
     if uf.same(A[M - i - 1], B[M - i - 1]):
         FD[M - i - 1] = FD[M - i]
     else:
@@ -76,7 +72,5 @@ for i in range(M):
             FD[M - i - 1] = 0
     uf.union(A[M - 1 - i], B[M - 1 - i])
 
-# print(uf)
-# print(FD[1:])
 for fd in FD[1:]:
     print(fd)
