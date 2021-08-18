@@ -30,7 +30,7 @@ def reduced_echelon_form(matrix):
 
 class Poly:
     def __init__(self, k, coef, lambda_=[1]):
-        vector = [(_[1], e)for e, _ in enumerate(zip(range(0, k + 1), coef))]  # _[1]:coef
+        vector = [(_[1], e)for e, _ in enumerate(zip(range(0, k + 1), coef))]
         self.poly = vector
         self.lambda_ = lambda_
 
@@ -72,8 +72,6 @@ class Datamining:
         for l in lmbds:
             for d in degrees:
                 for iter in range(iterations):
-                    # make matrix
-                    # required deg+1 points
                     m = []
                     tmp = []
                     for p in self.train[:deg + 1 + d]:
@@ -83,7 +81,6 @@ class Datamining:
                         tmp.append(y)
                         m.append(tmp)
 
-                    # reduced form
                     mtx = reduced_echelon_form(m)
                     coef = [r[-1] for r in mtx]
 

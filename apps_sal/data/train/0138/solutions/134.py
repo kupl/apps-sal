@@ -9,8 +9,6 @@ class Solution:
         nums = list(map(sgn, nums))
 
         def get_ans(start, end):
-            # find ans of nums[start: end]
-            # nums[start: end] doesn't contain 0
             arr = nums[start: end]
             negative = arr.count(-1)
             result = end - start

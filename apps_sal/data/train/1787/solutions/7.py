@@ -28,8 +28,6 @@ def matrix_vector_multiply(a, b):
 
     return c
 
-# Very crude Gaussian elimination, little regard to performance or accuracy.
-
 
 def matrix_solve(x, y):
     n, u, v = len(x), deepcopy(x), deepcopy(y)

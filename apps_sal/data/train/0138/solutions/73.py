@@ -1,6 +1,5 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
-        # \"pos[i]\", \"neg[i]\" represent longest consecutive numbers ending with nums[i] forming a positive/negative product.
 
         n = len(nums)
         pos, neg = [0] * n, [0] * n
