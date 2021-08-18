@@ -16,7 +16,6 @@ ddn = [(-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1)]
 
 
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
-# def LF(): return [float(x) for x in sys.stdin.readline().split()]
 def I(): return int(sys.stdin.readline())
 def F(): return float(sys.stdin.readline())
 def LS(): return sys.stdin.readline().split()
@@ -45,8 +44,6 @@ def main():
             to_last_distance[i - 1] = to_last_distance[i + d - 1]
             to_last_distance[i - 1] += (abs(i_y - ipd_y) + abs(i_x - ipd_x))
 
-    # print(to_last_distance)
-
     ans = []
     for st, ed in ql:
         ans.append(to_last_distance[st - 1] - to_last_distance[ed - 1])
@@ -56,4 +53,3 @@ def main():
 
 
 main()
-# print(main())

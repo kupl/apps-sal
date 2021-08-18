@@ -21,10 +21,7 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 8)
 alf = list("abcdefghijklmnopqrstuvwxyz")
 ALF = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-#import numpy as np
 INF = float("inf")
-#d = defaultdict(int)
-#d = defaultdict(list)
 H, W, D = list(map(int, input().split()))
 A = [list(map(int, input().split())) for _ in range(H)]
 table = [[-1, -1] for _ in range(H * W + 1)]

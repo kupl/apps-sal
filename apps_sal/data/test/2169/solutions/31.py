@@ -12,7 +12,6 @@ for i in range(h):
 dpp = [0] * (h * w + 1)
 
 for k in range(d + 1, h * w + 1):
-    #    print(k)
     dpp[k] = dpp[k - d] + abs(dp[k][0] - dp[k - d][0]) + abs(dp[k][1] - dp[k - d][1])
 
 q = int(input())

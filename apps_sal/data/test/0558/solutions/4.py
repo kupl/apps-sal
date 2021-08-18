@@ -29,6 +29,5 @@ for i in range(K + 1):
         C *= table[i]
         C %= mod
     ans += C * base
-    # print((f(N-1,i)%mod)==C,f(N-1,i),C,)
     ans %= mod
 print(ans)

@@ -57,5 +57,4 @@ ans = 0
 for i in range(k + 1):
     ans += m * comb(n - 1, i) * mod_pow(m - 1, n - 1 - i)
     ans %= MOD
-    # print(ans)
 print(ans)

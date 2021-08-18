@@ -29,7 +29,6 @@ def valid(i, j):
         return 0
     if j < 0 or j >= n:
         return 0
-    # print(i,j,mat)
     if vis[i][j] == 1 or mat[i][j] == "1":
         return 0
     return 1

@@ -1,7 +1,7 @@
 import sys
 import re
 from collections import deque, defaultdict, Counter
-from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees  # , log2
+from math import ceil, sqrt, hypot, factorial, pi, sin, cos, tan, asin, acos, atan, radians, degrees
 from itertools import accumulate, permutations, combinations, combinations_with_replacement, product, groupby
 from operator import itemgetter, mul
 from copy import deepcopy
@@ -20,7 +20,6 @@ def ZIP(n): return zip(*(MAP() for _ in range(n)))
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10**9 + 7
-#from decimal import *
 
 H, W, D = MAP()
 A = [LIST() for _ in range(H)]
@@ -40,11 +39,9 @@ for i in range(1, H * W + 1):
         tmp = abs(dic[i][0] - dic[i - D][0]) + abs(dic[i][1] - dic[i - D][1])
         power[i % D].append(tmp)
 
-# print(power)
 power_acc = []
 for x in power:
     power_acc.append(list(accumulate(x)))
-# print(power_acc)
 
 Q = INT()
 for _ in range(Q):

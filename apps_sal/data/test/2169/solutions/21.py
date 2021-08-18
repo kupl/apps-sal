@@ -10,7 +10,6 @@ for i in range(H):
 for i in range(D + 1, H * W + 1):
     d[i] = d[i - D] + abs(px[i] - px[i - D]) + abs(py[i] - py[i - D])
 
-# print(d)
 
 Q = int(input())
 for _ in range(Q):

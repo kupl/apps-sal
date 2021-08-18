@@ -3,8 +3,6 @@ import math
 import collections
 from collections import defaultdict
 
-#from itertools import permutations,combinations
-
 
 def file():
     sys.stdin = open('input.py', 'r')
@@ -18,7 +16,6 @@ def get_array():
 
 def get_ints():
     return map(int, input().split())
-    # return a,b
 
 
 def get_3_ints():
@@ -96,14 +93,12 @@ def maxSumRangeQuery(nums, req):
     for i in range(len(l)):
         d[l[i]].append(i)
     di = collections.OrderedDict(sorted(d.items()))
-    # print(di)
     k = 0
     ans = [0] * len(nums)
     for i in di:
         for j in di[i]:
             ans[j] = nums[len(nums) - k - 1]
             k += 1
-        # return ans
     c = 0
     for i in req:
         st = ans[i[0]:i[1] + 1]
@@ -111,7 +106,6 @@ def maxSumRangeQuery(nums, req):
     return c % (10**9 + 7)
 
 
-# file()
 def main():
     c = 0
     a, b = get_ints()
@@ -119,10 +113,6 @@ def main():
         a -= b
         c += 1
     print(c)
-
-#[1, 1, 1, 0]
-#[1, 2, 2, 1]
-#[1, 3, 2, 1]
 
 
 def __starting_point():

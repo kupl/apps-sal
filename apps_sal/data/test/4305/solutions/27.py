@@ -1,4 +1,3 @@
-# 153-A
 
 H, A = list(map(int, input().split()))
 

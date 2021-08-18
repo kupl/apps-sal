@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 n, M, K = list(map(int, input().split()))
 
 mod = 998244353
@@ -24,7 +22,7 @@ def comb(n, r):
 
 
 ans = 0
-temp = (M * (M - 1)**(n - K - 1)) % mod  # 1乗
+temp = (M * (M - 1)**(n - K - 1)) % mod
 for k in range(K + 1)[::-1]:
     ans = (ans + temp * comb(n - 1, k)) % mod
     temp = (temp * (M - 1)) % mod

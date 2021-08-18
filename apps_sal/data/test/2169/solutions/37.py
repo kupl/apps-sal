@@ -9,8 +9,6 @@ for i in range(H):
     for j in range(len(line)):
         route[line[j]] = (i, j)
 
-# 1,2,3 ... の頂点番号を格納した配列を作る
-# D個おきに距離を格納する
 
 dist = [0] * (H * W + 1)
 for i in range(D + 1, len(route)):

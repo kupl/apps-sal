@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
@@ -18,7 +17,6 @@ def main():
         for j in range(W):
             A[s[j] - 1] = (i, j)
 
-    # print(A)
     costs = [0] * (H * W)
     for i in range(D):
         j = H * W - 1 - i

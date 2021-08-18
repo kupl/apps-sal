@@ -1,11 +1,9 @@
 n, k = map(int, input().split())
 cost = list(map(int, input().split()))
 s = input()
-# return
 a = []
 b = []
 c = []
-# print(n,k,cost)
 kek1 = 0
 kek2 = 0
 kek3 = 0

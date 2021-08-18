@@ -40,4 +40,3 @@ for i in range(q):
         print(-1)
     else:
         print(minimo)
-# 1538793706889
