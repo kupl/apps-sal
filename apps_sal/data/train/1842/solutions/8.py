@@ -12,12 +12,9 @@ class Solution:
             graph[end].append(f)
             degree[end] += 1
         start = 1
-        # for ind, val in enumerate(degree):
-        #     if val == 0:
-        #         start = ind
         visited = set()
 
-        q.put([start, 1, 1])  # node, level (t is # of level), prob
+        q.put([start, 1, 1])
         visited.add(start)
         res = 0
         qt = 0

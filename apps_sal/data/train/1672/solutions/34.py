@@ -3,7 +3,6 @@ s = []
 for i in range(11):
     s.append(int(input()))
 s.reverse()
-# print(s)
 for i in range(0, 11):
     a = s[i]**3 * 5
     b = abs(s[i])**0.5

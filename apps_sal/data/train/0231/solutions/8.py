@@ -5,8 +5,6 @@ class Solution:
         :rtype: int
         """
 
-        # put numbers to their places
-        # [-1,0,2,1] -> [1,2,0,0]
         for i in range(len(nums)):
             if nums[i] < 0:
                 nums[i] = 0

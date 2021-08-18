@@ -9,9 +9,7 @@ def values(n):
     return sum(i < n for i in found)
 
 
-# this is how i achieved that :D
 '''
-#generate palindomre upto 10**digits quickly
 def generate_palindromes(digits):
     batches = [None,
                [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],

@@ -6,7 +6,6 @@ def f(x):
     aresult = sqrt(abs(x))
     bresult = pow(x, 3) * 5
     result = bresult + aresult
-    # result *= sign
     return result
 
 

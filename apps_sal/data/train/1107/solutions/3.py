@@ -8,9 +8,6 @@ def len(n):
 
 e = 10**9 + 7
 t = int(input())
-# l=[0]
-# for i in range(1,10**7):
-# l.append((l[-1]+i*len(i))%e)
 
 f = [0]
 a = 9
@@ -26,7 +23,6 @@ for i in range(10):
     a *= 10
 
     f.append(x)
-# print(f)
 
 
 def ans(n):
@@ -38,13 +34,11 @@ def ans(n):
     b = ((n + a) * (n - a + 1)) % e
     b = (b * pow(2, e - 2, e)) % e
     b = (b * x) % e
-    # print(y,b,n)
     return (b + y) % e
 
 
 for _ in range(t):
     a, b = map(int, input().split())
-    # print(l[b]-l[a-1])
     b = ans(b)
     a = ans(a - 1)
     print((b - a) % e)

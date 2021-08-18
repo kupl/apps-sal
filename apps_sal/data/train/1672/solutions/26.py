@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 
 import os
@@ -22,8 +21,6 @@ def main():
         else:
             print("f({}) = {:.2f}".format(v, result))
 
-
-# region fastio
 
 BUFSIZE = 8192
 
@@ -93,8 +90,6 @@ else:
 
 
 def input(): return sys.stdin.readline().rstrip("\r\n")
-
-# endregion
 
 
 def __starting_point():
