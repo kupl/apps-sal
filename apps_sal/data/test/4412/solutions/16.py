@@ -10,12 +10,6 @@ import sys
      \/      \/          \/                     \/        \/        \/
 
 '''
-# Run locally with python3.6 -O code.py to run in not debug mode. [ONLINE_JUDGE]
-# rm ~/pipe2; mkfifo ~/pipe2 ; ./code.py < ~/pipe2 | ./interactive.py > ~/pipe2
-# rm ~/pipe2; mkfifo ~/pipe2 ; ./code.py < ~/pipe2 | ./matcher.py > ~/pipe2
-
-# one-way
-# ./haha.py > input.txt ; ./code.py < input.txt
 
 
 def eprint(*args, **kwargs):
@@ -29,11 +23,9 @@ def __starting_point():
         ans = 0
         q -= 1
         x = y = z = 0
-        # eprint(f's: {s}, q:{q}')
         n = int(input())
         arr = list(set(map(int, input().split(' '))))
         arr.sort()
-        # print(arr)
         if arr == [2, 3, 5]:
             print(10)
             continue
@@ -53,7 +45,6 @@ def __starting_point():
 
         ans = max(ans, sum(res))
         print(ans)
-        # eprint(f'x:{x}, y:{y}, z:{z}')
 
 
 __starting_point()

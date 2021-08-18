@@ -25,5 +25,4 @@ else:
         elif m < res:
             oper += (res - m)
             m = res
-      #  print (m)
     print(oper)

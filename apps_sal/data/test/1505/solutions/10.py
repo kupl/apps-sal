@@ -35,12 +35,12 @@ sol.append(getEndPoint(px, py, vLeft[0], vLeft[1], a2))
 
 p2 = getEndPoint(px, py, vLeft[0], vLeft[1], c2)
 sol.append(p2)
-sol.append(getEndPoint(p2[0], p2[1], -vx, -vy, d))  # p3
+sol.append(getEndPoint(p2[0], p2[1], -vx, -vy, d))
 vRight = getRight90(vx, vy)
 p5 = getEndPoint(px, py, vRight[0], vRight[1], c2)
-sol.append(getEndPoint(p5[0], p5[1], -vx, -vy, d))  # p4
+sol.append(getEndPoint(p5[0], p5[1], -vx, -vy, d))
 sol.append(p5)
-sol.append(getEndPoint(px, py, vRight[0], vRight[1], a2))  # p6
+sol.append(getEndPoint(px, py, vRight[0], vRight[1], a2))
 
 
 for i in sol:

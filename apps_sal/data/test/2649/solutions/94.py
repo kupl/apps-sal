@@ -1,7 +1,7 @@
 def ans():
     N = int(input())
-    Z = []  # x + y
-    W = []  # x - y
+    Z = []
+    W = []
     for _ in range(N):
         x, y = map(int, input().split())
         Z.append(x + y)

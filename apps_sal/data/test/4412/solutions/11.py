@@ -8,7 +8,6 @@ for i in range(int(input())):
     ind = len(data) - 2
     cnt = 1
     while ind >= 0:
-        #print(ind, nums)
         if cnt == 1:
             if nums[0] % data[ind] != 0:
                 nums.append(data[ind])

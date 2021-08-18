@@ -7,7 +7,6 @@ def ir(): return int(sr())
 def lr(): return list(map(int, sr().split()))
 
 
-# Ciの値でsortする、Tを0000で固定した後、最後に2**N倍
 N = ir()
 C = np.array(lr())
 MOD = 10 ** 9 + 7

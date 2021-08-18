@@ -1,4 +1,3 @@
-# B
 n = int(input())
 ps = list(map(int, input().split()))
 count = 0

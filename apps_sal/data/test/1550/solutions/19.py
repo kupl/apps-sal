@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 n = int(input())
 state = [int(c) for c in input()]

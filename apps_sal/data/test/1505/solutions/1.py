@@ -75,11 +75,9 @@ class Vector:
 
     def __str__(self):
         return str(self.x) + ' ' + str(self.y)
-        # return "{:.2f} {:.2f}".format(self.x, self.y)
 
 
 px, py, vx, vy, a, b, c, d = [int(i) for i in input().split()]
-# px, py, vx, vy, a, b, c, d = [int(i) for i in "8 8 0 2 8 3 4 5".split()]
 
 LEFT = math.pi * 0.5
 RIGHT = -math.pi * 0.5

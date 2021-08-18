@@ -4,7 +4,6 @@ from collections import defaultdict
 def find(A):
     if len(A) == 0:
         return 0
-    # A=sorted(A,reverse=True)
     checked = [0] * len(A)
     temp = []
     for i in range(len(A)):
