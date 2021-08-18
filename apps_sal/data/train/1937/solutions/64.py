@@ -41,10 +41,3 @@ class ThroneInheritance:
             sc = self.successor(sc)
         self.order_set = set()
         return [n.name for n in res if not n.is_dead]
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

@@ -11,7 +11,6 @@ class ThroneInheritance:
     def birth(self, p: str, c: str) -> None:
         self.parent[c] = p
         self.children[p].append(c)
-        # print(self.parent)
 
     def death(self, name: str) -> None:
         self.dead.add(name)
@@ -45,10 +44,3 @@ class ThroneInheritance:
             if child not in self.orderset:
                 return False
         return True
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

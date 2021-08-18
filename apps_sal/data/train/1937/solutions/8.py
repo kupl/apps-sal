@@ -4,7 +4,6 @@ from collections import defaultdict
 class Node:
     def __init__(self, name):
         self.name = name
-        #self.parent = None
         self.childs = []
         self.live = 1
 
@@ -18,7 +17,6 @@ class ThroneInheritance:
 
     def birth(self, parentName: str, childName: str) -> None:
         child = Node(childName)
-        #child.parent = parentName
         self.p2cList[parentName].childs.append(child)
         self.p2cList[childName] = child
 
@@ -38,10 +36,3 @@ class ThroneInheritance:
             return
         for childname in cur.childs:
             self.helper(res, childname)
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

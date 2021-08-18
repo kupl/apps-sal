@@ -1,4 +1,3 @@
-#   多叉树--前序遍历
 class Node:
     def __init__(self, name):
         self.val = name
@@ -17,8 +16,6 @@ class Node:
 
 class ThroneInheritance:
     def __init__(self, kingName: str):
-        #   天然是个树形结构
-        #   为了生和死的快一些，需要能够通过名字直接找到各个节点
         self.king = Node(kingName)
         self.d = dict()
         self.d[kingName] = self.king
@@ -33,7 +30,6 @@ class ThroneInheritance:
         self.d[name].death()
 
     def getInheritanceOrder(self) -> List[str]:
-        #   前序遍历，只记录活着的
         rtv = []
         todo = []
         todo.append(self.king)
@@ -44,10 +40,3 @@ class ThroneInheritance:
             for c in t.children[::-1]:
                 todo.append(c)
         return rtv
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

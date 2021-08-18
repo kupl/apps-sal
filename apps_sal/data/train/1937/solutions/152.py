@@ -1,7 +1,7 @@
 class Node:
     def __init__(self, val):
         self.val = val
-        self.child = []   # list of Nodes
+        self.child = []
         self.alive = True
 
 
@@ -19,7 +19,6 @@ class ThroneInheritance:
         self.dic[name].alive = False
 
     def getInheritanceOrder(self) -> List[str]:
-        # dfs
         res = []
 
         def dfs(node):
@@ -31,10 +30,3 @@ class ThroneInheritance:
                 dfs(n)
         dfs(self.root)
         return res
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

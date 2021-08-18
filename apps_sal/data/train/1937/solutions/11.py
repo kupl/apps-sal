@@ -3,8 +3,6 @@ class ThroneInheritance:
     allNames = {}
 
     def __init__(self, kingName: str):
-        # order=[kingName]
-        # familyTree=Tree(kingName)
         self.name = kingName
         self.alive = True
         self.children = []
@@ -23,10 +21,3 @@ class ThroneInheritance:
         for child in self.children:
             answ += child.getInheritanceOrder()
         return answ
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()
