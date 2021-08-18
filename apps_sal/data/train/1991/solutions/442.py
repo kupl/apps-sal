@@ -18,9 +18,5 @@ class Solution:
 
                     route_count += array[fuel_res][loc_idx]
 
-                    # if fuel_max >= 2:
-                    #     print(\"fuel_max\", fuel_max, \"current\", loc, \"target\", loc_idx, \"fuel res\", fuel_res,\"count\", route_count, \"array\", array)
-
                 array[fuel_max][loc] = route_count
-        # print(array)
         return array[fuel][start] % (10**9 + 7)

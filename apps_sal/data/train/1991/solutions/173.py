@@ -2,9 +2,6 @@ def count_all_possible_routes(locations, start, finish, fuel):
     loc_count = len(locations)
     dp_store = [[-1] * (fuel + 1) for loc in range(loc_count)]
 
-    # print('*' * 80)
-    # print('iron man dp_store', dp_store)
-
     def count_all_possible_routes_recur(curr_loc, rem_fuel):
         if rem_fuel < 0:
             return 0

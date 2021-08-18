@@ -4,7 +4,6 @@ class Solution:
         def dp(start, fuel):
             if fuel < 0:
                 return 0
-            # if abs(locations[start] - locations[finish])> fuel: return 0
             res = 0
             if start == finish:
                 res += 1

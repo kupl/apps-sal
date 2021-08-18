@@ -43,10 +43,8 @@ else:
     if x>0:
         while (x+2*i)*bi*((0.5)**i)>eps:
             r=r+(x+2*i)*bi*((0.5)**i)
-            #print(r)
             bi=(bi*(n+i))//(i+1)
             i=i+1
-            #print(bi,i)
     else:
         r=0
     r=r*((0.5)**n)

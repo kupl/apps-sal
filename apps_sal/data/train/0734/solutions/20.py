@@ -13,7 +13,6 @@ for _ in range(int(input())):
             d[a[i]] = 1
             h[a[i]] = [i]
     x = list(map(list, sorted(list(d.items()), key=lambda y: y[1])))
-    # print(x)
     l = 0
     r = len(x) - 1
 
@@ -34,7 +33,6 @@ for _ in range(int(input())):
                 x[l][1] -= x[r][1]
                 x[r][1] = 0
             r -= 1
-    # print(g)
     s = []
     m = x[-1][0]
     k = -1
@@ -47,7 +45,6 @@ for _ in range(int(input())):
         else:
             s.append(i)
             k = a[i]
-    # print(b)
     if k == m:
         print('No')
     else:

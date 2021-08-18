@@ -11,19 +11,6 @@ class Solution:
                 adj_matrix[i][j] = abs(locations[i] - locations[j])
                 adj_matrix[j][i] = abs(locations[i] - locations[j])
 
-        # q = deque()
-        # ans = 0
-        # q.append((start, fuel))
-        # while len(q) > 0:
-        #     location, fuel_left = q.popleft()
-        #     # print(location, fuel_left)
-        #     if location == finish:
-        #         ans = (ans + 1) % M
-        #     for dst in range(N):
-        #         if dst == location:
-        #             continue
-        #         if adj_matrix[location][dst] + adj_matrix[dst][finish] <= fuel_left:
-        #             q.append((dst, fuel_left - adj_matrix[location][dst]))
         memo = {}
 
         def dfs(location, fuel_left):

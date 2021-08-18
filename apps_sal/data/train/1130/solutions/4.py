@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     n, d = map(int, input().split())
     l = list(map(int, input().split()))

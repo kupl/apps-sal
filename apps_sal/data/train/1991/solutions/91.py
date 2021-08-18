@@ -5,7 +5,6 @@ class Solution:
 
         @lru_cache(None)
         def go(x, remain):
-            #print(x, remain)
 
             if remain < 0:
                 return 0

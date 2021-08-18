@@ -13,7 +13,6 @@ class Solution:
                 if x == i:
                     continue
                 needed = abs(locations[x] - locations[i])
-                # print(needed,left_over)
                 if left_fuel >= needed:
                     s += dfs(i, left_fuel - needed)
 

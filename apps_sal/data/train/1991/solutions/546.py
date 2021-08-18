@@ -14,10 +14,6 @@ class Solution:
             toEnd = abs(pos - pos_finish)
             if toEnd > fuel:
                 return 0
-            # elif toEnd == fuel:
-            #    DP[loc][fuel]=1
-            #    return 1
-            # toEnd >= fuel
             for loc2 in range(n):
                 if loc2 == loc:
                     continue

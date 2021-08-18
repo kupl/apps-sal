@@ -1,13 +1,11 @@
 class Solution:
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        # self.count = 0
         if abs(locations[start] - locations[finish]) > fuel:
             return 0
         d = {}
 
         def findcombo(current_pos, rem_fuel):
             count = 0
-            # print(current_pos, rem_fuel)
             if (current_pos, rem_fuel) in d:
                 return d[(current_pos, rem_fuel)]
             if rem_fuel >= 0 and current_pos == finish:

@@ -22,9 +22,6 @@ for i in range(t):
             break
         elif hash[l[j]] > max:
             max = hash[l[j]]
-    # l.sort()
-    # print(max)
-    # print(l)
     v = sorted(range(len(l)), key=lambda k: l[k])
     u = sorted(l)
     ans = [0] * n

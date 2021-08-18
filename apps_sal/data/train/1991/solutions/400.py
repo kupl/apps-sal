@@ -7,7 +7,7 @@ class Solution:
             if (start, fuel) in memo:
                 return memo[(start, fuel)]
 
-            s = 0  # sum
+            s = 0
             if start == finish:
                 s += 1
             for i in range(len(locations)):
