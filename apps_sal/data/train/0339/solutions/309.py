@@ -11,9 +11,6 @@ class Solution:
                 for i in range(len(l2)):
                     curr = l2[i]
                     c2[curr] -= 1
-                    # if c2[curr] == 0:
-                    #     c2.pop(curr)
-                    # print(num,curr,c2)
                     if num % curr == 0 and num // l2[i] in c2:
                         ans += c2[num // l2[i]]
 

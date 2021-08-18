@@ -7,7 +7,6 @@ class Solution:
         nums1_product = defaultdict(int)
         nums2_product = defaultdict(int)
 
-        # count pairs for product
         for i in range(n1 - 1):
             for j in range(i + 1, n1):
                 nums1_product[(nums1[i] * nums1[j])] += 1

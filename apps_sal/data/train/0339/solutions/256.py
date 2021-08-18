@@ -1,7 +1,5 @@
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        # nums1.sort()
-        # nums2.sort()
 
         def count(A, B):
             res = 0

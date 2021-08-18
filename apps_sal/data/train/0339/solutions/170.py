@@ -5,7 +5,6 @@ def pairs(arr):
 
 
 def count(A, B):
-    # Counts the number of triplets of type 1.
 
     tally_A = {}
     for elem in A:

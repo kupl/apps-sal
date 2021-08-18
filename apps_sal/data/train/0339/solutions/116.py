@@ -11,7 +11,6 @@ class Solution:
                     d = prod // n
                     if d in c2:
                         res += c2[d]
-                        # print(str(x) + \",\" + str(n) + \",\" + str(d))
                         if d == n:
                             res -= 1
             return res

@@ -13,8 +13,6 @@ class Solution:
         count = 0
         m = {}
         for i, item in enumerate(arr):
-            # if val == 16:
-            #     print(i, item, m, arr)
             if val % item:
                 continue
             tmp = val / item

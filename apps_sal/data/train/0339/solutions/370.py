@@ -24,7 +24,6 @@ class Solution:
                 num2 = nums2[idx2]
                 lookup2[num2] -= 1
                 if lookup2.get((num1**2 / num2), 0) > 0:
-                    #print(num1, num2, lookup2)
                     ans1_tmp += lookup2[(num1**2 / num2)]
                 lookup2[num2] += 1
 

@@ -12,12 +12,10 @@ class Solution:
 
                 x = a / j
                 if x in B:
-                    # print(x, a, j)
                     ans += B[x]
 
                 y = b / i
                 if y in A:
-                    # print(i, b, y , j)
                     ans += A[y]
 
                 B[j] += 1

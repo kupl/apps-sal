@@ -2,7 +2,6 @@ class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
 
         def get_prod_dic(arr, num_dic):
-           # num_dic = {}
 
             i = 0
             while i < len(arr):

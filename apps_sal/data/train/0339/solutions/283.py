@@ -8,11 +8,8 @@ class Solution:
                 if x % B[j] == 0 and x // B[j] in countB:
                     if B[j] * B[j] == x:
                         res += (countB[x // B[j]] - 1)
-                        # print(B[j], countB[B[j]] - 1)
                     else:
                         res += countB[x // B[j]]
-                        # print(B[j], x, countB[B[j]])
-        # print(res)
         for i in range(len(B)):
             x = B[i] * B[i]
             for j in range(len(A)):

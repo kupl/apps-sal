@@ -1,6 +1,5 @@
 class Solution:
     def formMulitplication(s, a):
-        # a should have been sorted in ascending order
         n = len(a)
         square_nums = []
         for i in range(n - 1):

@@ -13,7 +13,6 @@ class Solution:
         squared_nums2 = [i**2 for i in nums2]
         products_nums1 = self.all_products(nums1)
         products_nums2 = self.all_products(nums2)
-        # print (squared_nums1, squared_nums2, products_nums1, products_nums2)
         for i in set(squared_nums2):
             c1 = squared_nums2.count(i)
             c2 = products_nums1.count(i)
