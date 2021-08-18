@@ -1,5 +1,4 @@
 def main():
-    #n, m = map(int, input().split())
 
     n = int(input())
     s = input()
@@ -20,10 +19,7 @@ def main():
             a = (a + cnt) % 1000_000_007
     print(ans)
 
-#input = sys.stdin.readline
 
-
-# sys.setrecursionlimit(2097152)
-tn = 1  # int(input())
+tn = 1
 for _ in range(tn):
     main()

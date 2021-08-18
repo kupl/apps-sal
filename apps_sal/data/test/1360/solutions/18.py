@@ -35,7 +35,6 @@ for i in range(n):
 array = sorted(array, key=lambda x: x[0] * 100 + x[1])
 currentDate = 0
 
-# print(array)
 
 for i in range(len(array)):
     if array[i][0] >= currentDate and array[i][1] >= currentDate:
@@ -46,7 +45,6 @@ for i in range(len(array)):
         else:
             if array[i][1] > currentDate:
                 currentDate = array[i][1]
-    # print(currentDate)
 
 
 print(currentDate)

@@ -1,4 +1,3 @@
-# 073a
 
 def atc_073a(N: int) -> str:
     try:

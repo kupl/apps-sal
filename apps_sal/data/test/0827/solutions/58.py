@@ -3,7 +3,6 @@ def main():
     t = input()
     v = 10 ** 10
 
-    # tがSに含まれているか
     is_included = False
     first_threes = ["110", "101", "011"]
     for first_three in first_threes:

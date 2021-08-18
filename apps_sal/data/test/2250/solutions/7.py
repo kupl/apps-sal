@@ -4,7 +4,6 @@ for i in range(t):
     s = list(input())
 
     ans = 0
-    # print(set(s))
     if len(set(s)) != 1:
         ind = 0
         for i in range(1, n):
@@ -18,7 +17,6 @@ for i in range(t):
                 A.append(1)
             else:
                 A[-1] += 1
-        # print(A)
         for i in range(len(A)):
             ans += A[i] // 3
 

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def rl(T=str):
     return list(map(T, input().split()))

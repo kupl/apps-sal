@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# from typing import *
 
 import io
 import sys
@@ -9,11 +7,6 @@ import decimal
 import itertools
 
 sys.setrecursionlimit(1000000)
-
-# _INPUT = """2
-# 01
-# """
-# sys.stdin = io.StringIO(_INPUT)
 
 
 def is_T_ok(T):

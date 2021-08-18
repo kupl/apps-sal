@@ -22,7 +22,6 @@ for loop in range(tt):
             break
 
     ans = 0
-    #print (S)
     for i in S:
         if i == "R":
             rnum += 1

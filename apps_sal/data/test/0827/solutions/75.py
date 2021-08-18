@@ -23,7 +23,6 @@ def main():
                 print(pow(10, 10))
     else:
         if T[0] == "1" and T[1] == "1" and T[2] == "0":
-            # 繰り返しになっているかを確認
             for i in range(N):
                 if i % 3 in [0, 1]:
                     if T[i] != "1":
@@ -40,7 +39,6 @@ def main():
             else:
                 print(pow(10, 10) - s)
         elif T[0] == "1" and T[1] == "0" and T[2] == "1":
-            # 繰り返しになっているかを確認
             for i in range(N):
                 if i % 3 in [0, 2]:
                     if T[i] != "1":
@@ -53,12 +51,10 @@ def main():
             t = N % 3
             s = N // 3
             if t == 0:
-                # ここがバグってる
                 print(pow(10, 10) - s)
             else:
                 print(pow(10, 10) - s)
         elif T[0] == "0" and T[1] == "1" and T[2] == "1":
-            # 繰り返しになっているかを確認
             for i in range(N):
                 if i % 3 in [1, 2]:
                     if T[i] != "1":

@@ -12,5 +12,4 @@ for i in range(n):
     else:
         k += n + i + 1
     arry.append(k)
-# print(arry)
 print(arry.index(min(arry)) + 1)
