@@ -3,8 +3,8 @@ from itertools import product
 
 
 def fit_bag(h, w, items):
-    items = sorted(map(np.array, items), key=lambda i: np.prod(i.shape), reverse=True)  # sort by size(area) of array by converting each item to array and sorting by product of shape(reverse)
-    bag = np.zeros((h, w), dtype=int)  # create zeros matrix of size of bag
+    items = sorted(map(np.array, items), key=lambda i: np.prod(i.shape), reverse=True)
+    bag = np.zeros((h, w), dtype=int)
 
     def fit_bag_rec(bag, items, n=0):
         item = items[n]

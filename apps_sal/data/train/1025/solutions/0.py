@@ -49,11 +49,9 @@ while t:
         l.append((height[u], u, i))
     l.sort()
     vis = [0] * (n + 1)
-    # print(l)
     for i in l:
         he, u, ind = i
         if(vis[u] == 0):
-            # print(u)
             opbfs(u, vis, ll, parr)
     print(*ll)
     t -= 1

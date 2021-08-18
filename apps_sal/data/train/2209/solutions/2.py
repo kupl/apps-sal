@@ -14,7 +14,6 @@ for i in range(n - 1):
     neigh[b].append(a)
     l.append((a, b))
 
-# Max
 edges = set()
 for a, b in l:
     if len(neigh[a]) == 1:
@@ -27,7 +26,6 @@ for a, b in l:
 
 MAX = len(edges)
 
-# Min
 leafDepth = []
 visited = [False] * n
 q = deque()
@@ -49,5 +47,4 @@ for d in leafDepth:
         MIN = 3
 
 
-# Out
 print(MIN, MAX)

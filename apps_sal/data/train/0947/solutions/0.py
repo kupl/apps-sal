@@ -35,7 +35,6 @@ def longest(k):
 
 n = int(input())
 l = []
-# parent=[0]*n
 d = {}
 cost = {}
 for i in range(n):
@@ -60,7 +59,6 @@ for i in range(n):
                 if y == 2:
                     d[i].append(j)
 ans = 0
-# print(d)
 
 for i in range(n):
     ans = max(ans, longest(i))

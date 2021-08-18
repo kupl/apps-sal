@@ -23,5 +23,4 @@ def tri(arr, n):
 
 n = int(input())
 a = [int(x) for x in input().split()]
-#print('YES' if tri(a, n) else 'NO')
 tri(a, n)

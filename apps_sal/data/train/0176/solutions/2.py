@@ -3,7 +3,6 @@ class Solution:
         self.maps = {}
 
     def isScramble(self, s1, s2):
-     #   print(s1, s2)
         if (s1, s2) in self.maps:
             return self.maps[(s1, s2)]
         if len(s1) != len(s2) or sorted(s1) != sorted(s2):
