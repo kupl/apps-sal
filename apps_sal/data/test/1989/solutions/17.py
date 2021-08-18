@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 BIT = [0] * (10**7)
 

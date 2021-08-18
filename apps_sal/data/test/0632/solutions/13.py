@@ -1,10 +1,3 @@
-# test = iter('''0
-# 1 2
-# '''.splitlines())
-#
-#
-# def input():
-#     return next(test)
 
 
 def int_input():

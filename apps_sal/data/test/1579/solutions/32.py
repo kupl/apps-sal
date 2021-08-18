@@ -41,16 +41,13 @@ def connected(x=None, y=None, xret=None, yret=None):
 x_counted = set()
 y_counted = set()
 
-# X と Y の二部グラフで、連結であるすべての組に辺を張る
 ans = 0
 for x in list(xy.keys()):
     if x in x_counted:
         continue
     xs, ys = connected(x=x)
-    # 辺数
     ans += len(xs) * len(ys)
     x_counted |= xs
     y_counted |= ys
-# すでにある辺が重複してる
 ans -= N
 print(ans)

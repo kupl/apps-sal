@@ -4,13 +4,11 @@ def main():
     ixy = [[i, x, y] for i, (x, y) in enumerate(xy)]
 
     class unionfind():
-        # size:要素数,tree：unionfind木
-        def __init__(self, size):  # self,要素数
+        def __init__(self, size):
             self.size = size
             self.tree_root = list(range(self.size))
             self.tree_depth = [1] * self.size
 
-        # rootを探す
         def root(self, index):
             temp_list = []
             temp = self.tree_root[index]
@@ -22,7 +20,6 @@ def main():
                 self.tree_root[i] = index
             return index
 
-        # 結合
         def unite(self, index1, index2):
             r1 = self.root(index1)
             r2 = self.root(index2)
@@ -35,13 +32,11 @@ def main():
                     self.tree_root[r2] = r1
                     self.tree_depth[r1] = max(d2 + 1, d1)
 
-        # 同じか判定
         def same(self, index1, index2):
             r1 = self.root(index1)
             r2 = self.root(index2)
             return r1 == r2
 
-        # 連結成分の個数
         def component(self):
             return len({self.root(i) for i in range(self.size)})
 

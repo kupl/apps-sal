@@ -26,7 +26,4 @@ for w in range(1, W):
     ruil[:, w] = (ruil[:, w - 1] + nowl) * nowl
     nowr = np.where(S[:, -(w + 1)] == ".", 1, 0)
     ruir[:, -(w + 1)] = (ruir[:, -w] + nowr) * nowr
-# print(ruir)
-# print(ruil)
-# print(ruib)
 print((int((ruit + ruib + ruil + ruir - 3).max())))

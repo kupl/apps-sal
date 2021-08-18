@@ -19,10 +19,8 @@ while cnt <= 10**5:
                 curr1.add(i * 10 + j)
 
                 cnt += 1
-    # print(curr1)
     curr |= curr1
 curr = sorted(list(curr))
-# print(curr)
 ans = 0
 for i in curr:
     if i >= 1 and i <= n:

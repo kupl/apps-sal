@@ -19,8 +19,6 @@ def solve():
     print(n)
     return
 
-# solve()
-
 
 T = ni()
 for _ in range(T):

@@ -15,8 +15,6 @@ for i in range(H):
     up[i] = (up[i - 1] + 1) * maze[i]
     down[-(i + 1)] = (down[-i] + 1) * maze[-(i + 1)]
 
-# print(up)
-# print(down)
 
 for i in range(W):
     right[:, i] = (right[:, i - 1] + 1) * maze[:, i]

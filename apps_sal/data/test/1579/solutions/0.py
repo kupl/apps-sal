@@ -15,7 +15,7 @@ def main():
         to[X].append(Y)
         to[Y].append(X)
     visited = [0] * (2 * V)
-    cnt = [0] * 2  # cnt = [cnt of X, cnt of Y]
+    cnt = [0] * 2
 
     def dfs(v):
         if visited[v] == 1:

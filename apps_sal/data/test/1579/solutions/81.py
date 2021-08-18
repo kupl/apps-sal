@@ -13,7 +13,7 @@ yj = {y: j for j, y in enumerate(set(Y))}
 class UnionFind():
     def __init__(self, size):
         self.dat = list(range(size))
-        self.SIZE = [1] * size  # 0-indexed
+        self.SIZE = [1] * size
 
     def find(self, x):
         dat = self.dat

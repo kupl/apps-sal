@@ -1,4 +1,3 @@
-# coding: utf-8
 import sys
 import numpy as np
 
@@ -9,13 +8,13 @@ def lr(): return list(map(int, sr().split()))
 
 
 H, W = lr()
-S = np.array(['#' * (W + 2)] + ['#' + sr() + '#' for _ in range(H)] + ['#' * (W + 2)])
-S = np.array([[x == '.' for x in row] for row in S])
-S = S.astype(np.int16)
-left = S.copy()
-right = S.copy()
-up = S.copy()
-down = S.copy()
+S = np.array(['
+S=np.array([[x == '.' for x in row] for row in S])
+S=S.astype(np.int16)
+left=S.copy()
+right=S.copy()
+up=S.copy()
+down=S.copy()
 for i in range(1, W + 1):
     left[:, i] += left[:, i - 1]
     left[:, i] *= S[:, i]
@@ -29,5 +28,5 @@ for i in range(H, 0, -1):
     down[i, :] += down[i + 1, :]
     down[i, :] *= S[i, :]
 
-answer = (left + right + up + down - 3).max()
+answer=(left + right + up + down - 3).max()
 print(answer)

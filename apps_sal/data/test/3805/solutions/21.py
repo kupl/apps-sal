@@ -12,5 +12,3 @@ if L == []:
     print('Yes')
 else:
     print('No')
-
-# 1532039711851

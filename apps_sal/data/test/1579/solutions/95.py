@@ -1,18 +1,12 @@
-# using main() makes code faster from the point of view of "access to variables in nonlocal name-space"
-# def main():
 
-# for i, a in enumerate(iterable)
-# q, mod = divmod(a, b)
-# divmod(x, y) returns the tuple (x//y, x%y)
-# manage median(s) using two heapq https://atcoder.jp/contests/abc127/tasks/abc127_f
-from heapq import heapify, heappop, heappush, heappushpop, heapreplace, nlargest, nsmallest  # https://docs.python.org/ja/3/library/heapq.html
-from collections import deque, Counter, defaultdict  # https://docs.python.org/ja/3/library/collections.html#collections.deque
-from fractions import gcd  # Deprecated since version 3.5: Use math.gcd() instead.
+from heapq import heapify, heappop, heappush, heappushpop, heapreplace, nlargest, nsmallest
+from collections import deque, Counter, defaultdict
+from fractions import gcd
 from functools import reduce
 from operator import itemgetter
-from copy import deepcopy, copy  # https://docs.python.org/ja/3/library/copy.html
+from copy import deepcopy, copy
 from math import factorial
-from itertools import accumulate, combinations, permutations  # https://docs.python.org/ja/3/library/itertools.html
+from itertools import accumulate, combinations, permutations
 import sys
 sys.setrecursionlimit(10**7)
 
@@ -26,8 +20,8 @@ def factorize(n):
     Returns:
         list of tuples: factorize(220) returns [(2, 2), (5, 1), (11, 1)]
     """
-    fct = []  # prime factor
-    b, e = 2, 0  # base, exponent
+    fct = []
+    b, e = 2, 0
     while b * b <= n:
         while n % b == 0:
             n = n // b
@@ -53,7 +47,6 @@ def combinations_count(n, r):
     Returns:
         long: number
     """
-    # TODO: How should I do when n - r is negative?
     if n < 0 or r < 0:
         raise Exception('combinations_count(n, r) not defined when n or r is negative')
     if n - r < r:
@@ -101,10 +94,6 @@ def combinations_with_replacement_count(n, r):
         return combinations_count(n + r - 1, r)
 
 
-# ex1: List.sort(key=itemgetter(1))
-# ex2: sorted(tuples, key=itemgetter(1,2))
-
-
 def gcds(numbers):
     return reduce(gcd, numbers)
 
@@ -117,16 +106,12 @@ def lcms(numbers):
     return reduce(lcm, numbers, 1)
 
 
-# first create factorial_list
-# fac_list = mod_factorial_list(n)
 INF = 10 ** 18
 MOD = 10 ** 9 + 7
-def modpow(a, n, p=MOD): return pow(a, n, p)  # Recursive function in python is slow!
+def modpow(a, n, p=MOD): return pow(a, n, p)
 
 
 def modinv(a, p=MOD):
-    # evaluate reciprocal using Fermat's little theorem:
-    # a**(p-1) is identical to 1 (mod p) when a and p is coprime
     return modpow(a, p - 2, p)
 
 
@@ -153,8 +138,6 @@ def modfactorial_list(n, p=MOD):
 
 
 def modcomb(n, k, fac_list=[], p=MOD):
-    # fac_list = modfactorial_list(100)
-    # print(modcomb(100, 5, modfactorial_list(100)))
     from math import factorial
     if n < 0 or k < 0 or n < k:
         return 0
@@ -186,42 +169,15 @@ def modmul(a, b, p=MOD):
 def moddiv(a, b, p=MOD):
     return modmul(a, modpow(b, p - 2, p))
 
-# initialize variables and set inputs
-# initialize variables
-    # to initialize list, use [0] * n
-    # to initialize two dimentional array, use [[0] * N for _ in range(N)]
-# set inputs
-    # open(0).read() is a convenient method:
-    # ex) n, m, *x = map(int, open(0).read().split())
-    #     min(x[::2]) - max(x[1::2])
-    # ex2) *x, = map(int, open(0).read().split())
-    #     don't forget to add comma after *x if only one variable is used
-# preprocessing
-    # transpose = [x for x in zip(*data)]
-    # ex) [[1, 2, 3], [4, 5, 6], [7, 8, 9]] => [(1, 4, 7), (2, 5, 8), (3, 6, 9)]
-# calculate and output
-    # output pattern
-    # ex1) print(*l) => when l = [2, 5, 6], printed 2 5 6
 
-
-# functions used
 def r(): return sys.stdin.readline().strip()
 def r_int(): return int(r())
 def R(): return list(map(int, r().split()))
 def Rfloat(): return list(map(float, r().split()))
 def Rtuple(): return tuple(map(int, r().split()))
 def Rmap(): return list(map(int, r().split()))
-# single int: int(r())
-# single string: r()
-# single float: float(r())
-# line int: R()
-# line string: r().split()
-# line (str, int, int): [j if i == 0 else int(j) for i, j in enumerate(r().split())]
-# lines int: [R() for _ in range(n)]
 
 
-# set inputs
-# sys.stdin = open('sample.txt') # for test
 N = r_int()
 Dic = defaultdict(list)
 V = 10**5 + 5
@@ -261,7 +217,5 @@ for k, v in list(Dic.items()):
     ans += cntx * cnty - cntdot // 2
 print(ans)
 
-# def __starting_point():
-#     main()
 
 __starting_point()

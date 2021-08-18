@@ -8,8 +8,6 @@ def IA(): return [int(x) for x in input().split()]
 def IM(N): return [IA() for _ in range(N)]
 
 
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 N = 100005
 fa = [int(0) for i in range(2 * (N + 1))]
 xNum = [int(0) for i in range(2 * (N + 1))]

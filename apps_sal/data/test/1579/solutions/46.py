@@ -9,7 +9,7 @@ def main():
 
     g = tuple(set() for _ in range(M * 2))
     for _ in range(N):
-        x, y = (int(x) - 1 for x in input().split())  # 一律に移動
+        x, y = (int(x) - 1 for x in input().split())
         g[x].add(y + M)
         g[y + M].add(x)
 
@@ -37,7 +37,6 @@ def main():
                 visited[u] = 1
                 dq.append(u)
         ans += (sz - x) * x - (e // 2)
-        # ans += (sz - x) * x - (sz - 1) # sz-1は木に限られるのでWA
 
     print(ans)
 

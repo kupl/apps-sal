@@ -21,13 +21,8 @@ X = np.array(X)
 Y = np.array(Y) + PAD
 
 graph = csr_matrix(([True] * N, (X, Y)), shape=(PAD * 2, PAD * 2))
-# i から j までのパスがあれば components[i] と components[j] が同じ値
 _, components = connected_components(graph)
 
-# 同じ連結成分に含まれる X の数
-# x_cnt[i]: 連結成分 i に含まれる x の数
 x_cnt = np.bincount(components[:PAD], minlength=PAD * 2)
 y_cnt = np.bincount(components[PAD:], minlength=PAD * 2)
-# 同じ連結成分である x の数と y の数をかけた数だけその間に辺を張れる
-# すでにある分は引く
 print(((x_cnt * y_cnt).sum() - N))
