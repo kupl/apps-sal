@@ -25,14 +25,14 @@ class BIT():
             self.T[i] += x
             i += i & -i
 
-    def _sum(self, i):  # [0,i)
+    def _sum(self, i):
         ret = 0
         while i > 0:
             ret += self.T[i]
             i ^= i & -i
         return ret
 
-    def sum(self, l, r):  # [l,r)
+    def sum(self, l, r):
         return self._sum(r) - self._sum(l)
 
     def lower_bound(self, w):

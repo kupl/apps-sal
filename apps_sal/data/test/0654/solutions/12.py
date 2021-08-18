@@ -3,7 +3,6 @@ u = 1000000007
 
 
 def P(n):
-    # take first edge or no? depth == < - >
     X = [[0 for i in range(2 * n + 1)] for j in range(2 * n + 1)]
     X[0][0] = 1
     r = 0

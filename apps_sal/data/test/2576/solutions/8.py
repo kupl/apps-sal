@@ -1,4 +1,3 @@
-# map(int, input().split())
 def main():
     a, b, c, d = map(int, input().split())
     f = []

@@ -38,16 +38,13 @@ edges = sorted(edges, key=lambda item: item[0])
 specials = [0] * (n + 1)
 for item in x:
     specials[item] = 1
-#special_edges = []
 ans = -1
 for w, u, v in edges:
     ufather, vfather = find(u, uf), find(v, uf)
     if ufather != vfather:
         if specials[ufather] == 1 and specials[vfather] == 1:
-            #special_edges.append((w, u, v))
             ans = max(ans, w)
         union(u, v, uf, specials)
-#special_edges = sorted(special_edges, key=lambda item:item[0])
 
 res = [ans] * k
 print(' '.join(map(str, res)))

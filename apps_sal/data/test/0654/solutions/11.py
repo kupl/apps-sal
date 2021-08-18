@@ -10,8 +10,6 @@ for i in range(2, N + 1):
     arr = arr + [arr[-1]]
     d = i + 1
 
-    # print(arr)
-
     s = 0
 
     for i in range(len(arr)):
@@ -21,6 +19,5 @@ for i in range(2, N + 1):
     res += s
 
     res = res % 1000000007
-    # print(res)
 
 print(res)

@@ -27,6 +27,3 @@ else:
 print(x * y)
 
 print(x, y)
-
-
-# Made By Mostafa_Khaled

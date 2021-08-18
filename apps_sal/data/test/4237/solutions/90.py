@@ -1,4 +1,3 @@
-# ABC 131 C
 import math
 [A, B, C, D] = [int(i) for i in input().split()]
 u = int((C * D) / math.gcd(C, D))

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 n = int(input())
 d = []
 l, p, t = 0, 0, 0,

@@ -3,15 +3,9 @@ l1 = [int(x) - 1 for x in input().split()]
 l2 = [0 for x in range(0, n)]
 l3 = [0 for x in range(0, n)]
 l4 = [[] for x in range(0, n)]
-# l3[i] gives index of i in input array
-# l4[i][0] is prev untaken element
-# l4[i][1] is forward untaken element
-# l1 is input array
-# l2[i] gives team of i
 for i in range(0, n):
     l4[i].append(i - 1)
     l4[i].append(i + 1)
-# print(l4)
 for i in range(0, n):
     l3[l1[i]] = i
 i = n - 1

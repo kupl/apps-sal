@@ -25,17 +25,7 @@ for i in range(n):
 done = [0] * (n + 1)
 h = [-(i + 1) for i in range(n)]
 heapify(h)
-# print(a)
 while taken < n:
-    # max_index = -1
-    # mx = -float("inf")
-    # mx_l = -1
-    # for l in still_map:
-    #     r = still_map[l]
-    #     local_max = get_max(l, r)
-    #     if local_max > mx:
-    #         mx = local_max
-    #         mx_l = l
     local_max = -heappop(h)
     while done[local_max]:
         local_max = -heappop(h)
@@ -81,8 +71,6 @@ while taken < n:
     coach ^= 1
     done_map_l[l_search + 1] = r_search - 1
     done_map_r[r_search - 1] = l_search + 1
-    # print(done_map_l, done_map_r)
-    # print(coaches, l_search, r_search)
 
 
 print(''.join('1' if i in coaches[0] else '2' for i in range(n)))

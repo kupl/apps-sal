@@ -17,7 +17,6 @@ for i in ranked:
         teams[i] = current
         took = 1
 
-        # walk left
         count = k
         left = prev[i]
         while count > 0 and left != -1:
@@ -26,7 +25,6 @@ for i in ranked:
             took += 1
             count -= 1
 
-        # walk right
         count = k
         right = nxt[i]
         while count > 0 and right != n:

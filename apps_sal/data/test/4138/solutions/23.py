@@ -2,8 +2,6 @@ from functools import *
 
 
 def sumnum(start, end):
-    # ex end
-    # inc start
     return end * (end - 1) // 2 - start * (start - 1) // 2
 
 
@@ -60,7 +58,6 @@ def naive_cum(i):
         for j in range(1, ii + 1):
             cum = cum + len(f"{j}")
     return cum
-    # print("cum", cum)
 
 
 a = input()
