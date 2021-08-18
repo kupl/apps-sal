@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 import sys
 import numpy as np
@@ -9,10 +8,8 @@ def input():
 
 
 def main():
-    # n, k = map(int, sys.stdin.buffer.readline().split())
     n, k = list(map(int, input().split()))
 
-    # warps = list(map(int, sys.stdin.buffer.readline().split()))
     warps = list(map(int, input().split()))
     warps = [0] + warps
     warps = np.array(warps, dtype=int)
@@ -25,7 +22,6 @@ def main():
         dp[h] = dp[h - 1][dp[h - 1]]
 
     node = 1
-    # for i in reversed(range(k.bit_length())):
     for i in range(k.bit_length(), -1, -1):
         if k >> i & 1:
             node = dp[i][node]

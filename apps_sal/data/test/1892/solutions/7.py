@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# read = lambda: map(int, input().split())
 
 
 L = int(1e9 + 7)

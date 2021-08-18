@@ -1,10 +1,5 @@
-#!/usr/bin/env python3
 
 import numpy as np
-
-
-# def input():
-#     return sys.stdin.readline().rstrip()
 
 
 def main():
@@ -23,20 +18,13 @@ def main():
         order_num[node] = len(path_history)
         node = warps[node]
 
-    # print(order_num)
-    # print(path_history)
     begin = order_num[node]
-    # print(tail)
 
     if k <= begin:
         print((path_history[k]))
     else:
-        # path_history = path_history[tail:]
-        # print(path_history)
         leng = len(path_history) - order_num[node] + 1
-        # print(leng)
         index = (k - (begin - 1)) % leng
-        # print(index)
         print((path_history[begin - 1 + index]))
 
 

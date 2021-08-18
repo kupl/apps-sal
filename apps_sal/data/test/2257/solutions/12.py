@@ -3,7 +3,6 @@ x = [0] * n
 y = [0] * n
 for i in range(n):
     x[i], y[i] = map(int, input().split())
-# �������� �� ���� �������
 z1, z2 = [0] * n, [0] * n
 for i in range(n):
     z1[i] = (x[i] - x1)**2 + (y[i] - y1)**2
@@ -24,7 +23,6 @@ for i in range(n):
 
     if maxi > a1 + m:
         maxi = a1 + m
-    # print(maxi)
 if maxi > max(z2):
     maxi = max(z2)
 print(maxi)

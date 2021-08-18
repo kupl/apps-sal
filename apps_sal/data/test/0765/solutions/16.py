@@ -4,7 +4,6 @@ p = 0
 while True:
     S = S + (q - 1)
     p += q
-    # rint(S,p)
     if S >= T:
         break
     if p >= S:

@@ -42,18 +42,8 @@ while(i < n):
                 dp[i][j] = prefix[i - 1][n - 1] - prefix[i - 1][j - 1]
             prefix[i][j] = add(prefix[i][j - 1], dp[i][j])
             j += 1
-    # print(prefix)
     i += 1
 
-# i=0
-# while(i<n):
-# 	j=0
-# 	while(j<n):
-# 		print(dp[i][j])
-# 		j+=1
-# 	i+=1
-
-# print(dp)
 
 ans = 0
 j = 0

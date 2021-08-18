@@ -17,7 +17,6 @@ align[0] = xs[0]
 align[1] = xs[0]
 
 for i in range(1, len(xs)):
-    # print(align)
     for j in range(0, i):
         if f([min(xs[i - 1:i + 1]), max(xs[i - 1:i + 1])], align[2 * j:2 * j + 2]):
             ans = "yes"

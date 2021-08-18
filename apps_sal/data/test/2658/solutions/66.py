@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
 
-# import
-#import math
-#import numpy as np
 N, K = list(map(int, input().split()))
 A = list(map(int, input().split()))
 A = [a - 1 for a in A]

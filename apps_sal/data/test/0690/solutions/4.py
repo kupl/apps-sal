@@ -1,4 +1,3 @@
-# Soroban
 
 n = input()
 soroban = ""

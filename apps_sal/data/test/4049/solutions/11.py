@@ -35,7 +35,7 @@ while True:
     ROUTE = [-1] * V
     Q = [(start, float("inf"))]
 
-    while Q:  # DFS
+    while Q:
         NOW, cost = Q.pop()
         if NOW == goal:
             break

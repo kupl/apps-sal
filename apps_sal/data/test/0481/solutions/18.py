@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
 """
-Codeforces Round #319 (Div. 2)
+Codeforces Round 
 
 Problem 577 A. Multiplication Table
 
