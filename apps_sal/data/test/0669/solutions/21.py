@@ -25,7 +25,7 @@ s2.sort()
 maxi = 0
 
 
-def check(l, x):  # largest number less than x in l  # l is asc
+def check(l, x):
     lo = 0
     hi = len(l) - 1
     ans = 0

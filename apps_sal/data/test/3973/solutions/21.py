@@ -1,6 +1,6 @@
 n, m = list(map(int, input().split()))
 a = [int(x) for x in input().split()]
-ps = [0] * (m + 2)  # 0,1,2,...,m,m+1
+ps = [0] * (m + 2)
 
 for i in range(n - 1):
     if a[i] < a[i + 1]:

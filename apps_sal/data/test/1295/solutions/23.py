@@ -1,5 +1,3 @@
-#!/usr/bin/env	python
-# -*-coding:utf-8 -*-
 n, m = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = tuple(map(int, input().split()))

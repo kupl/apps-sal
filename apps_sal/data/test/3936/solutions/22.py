@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from functools import lru_cache, reduce
 from bisect import bisect_left, bisect_right
 import random
@@ -12,10 +11,6 @@ from itertools import permutations
 def input(): return sys.stdin.readline().strip()
 
 
-# def input(): return sys.stdin.buffer.readline()[:-1] # warning bytes
-# def input(): return sys.stdin.buffer.readline().strip() # warning bytes
-# def input(): return sys.stdin.buffer.readline().decode('utf-8').strip()
-# string.ascii_lowercase
 MOD = int(1e9) + 7
 INF = float('inf')
 
@@ -24,7 +19,6 @@ sys.setrecursionlimit(int(1e7))
 
 def solve():
     n = int(input())
-    # n, m, k = [int(x) for x in input().split()]
     a = input()
     b = input()
 
@@ -55,7 +49,6 @@ def solve():
 
 
 T = 1
-# T = int(input())
 for case in range(1, T + 1):
     ans = solve()
 

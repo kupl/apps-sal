@@ -2,7 +2,6 @@ def ans():
     n, t = [int(i) for i in input().split()]
     a = [0]
     a += [int(i) for i in input().split()]
-    # print(a)
 
     ans = 1
     i = 1

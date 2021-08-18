@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 n = int(input().strip())
 degs = [0 for _ in range(n)]
@@ -21,7 +20,7 @@ elif len(ni[3]) == 1:
     u = ni[3][0]
     for v in ni[1]:
         print(u + 1, v + 1)
-else:  # ni[3] == []
+else:
     print('Yes')
     print(1)
     print(ni[1][0] + 1, ni[1][1] + 1)

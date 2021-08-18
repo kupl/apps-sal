@@ -1,6 +1,5 @@
 l = input().split()
 ld = sorted(l, reverse=True)
-# print(ld)
 a = ld[0] + ld[1]
 b = ld[2]
 m = int(a)

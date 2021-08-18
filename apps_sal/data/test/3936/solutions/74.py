@@ -25,7 +25,6 @@ def resolve():
     N = I()
     S = [SS() for _ in range(2)]
 
-    # ドミノの縦横を判別 0行目だけ見れば良い
     t = []
     i = 0
     if N == 1:
@@ -40,7 +39,6 @@ def resolve():
                 i += 1
         if S[0][-2] != S[0][-1]:
             t.append('v')
-    # print(t)
 
     ans = 1
     if t[0] == 'h':

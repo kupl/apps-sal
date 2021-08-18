@@ -7,7 +7,6 @@ for i in a:
     except KeyError:
         d[i] = 1
 
-# print(d)
 
 mx = m // n
 

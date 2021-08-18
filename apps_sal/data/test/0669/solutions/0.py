@@ -3,8 +3,6 @@ import bisect
 n, m = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 
-# n : number of integers
-# m : mod
 
 half_n = n // 2
 

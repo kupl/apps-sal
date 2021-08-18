@@ -3,7 +3,6 @@ n, m = list(map(int, input().split()))
 
 b = Counter(list(map(int, input().split())))
 
-# print(b.values())
 
 res = 0
 for days in range(1, m // n + 1):

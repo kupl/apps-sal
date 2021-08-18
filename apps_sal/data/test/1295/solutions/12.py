@@ -8,10 +8,8 @@ def check(city, tower, r):
     c = 0
     while c < len(city):
         if abs(city[c] - tower[t]) > r:
-            # Current tower is too far
             t += 1
             if t == len(tower):
-                # Ran out of towers
                 return False
         else:
             c += 1

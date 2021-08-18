@@ -12,7 +12,6 @@ def main():
 
     res = 0
     for i in range(0, n):
-        # cover from left
         cover_left = -1
         bi = bisect.bisect_left(b, a[i])
         if bi != m and b[bi] == a[i]:
@@ -20,7 +19,6 @@ def main():
         elif bi:
             cover_left = a[i] - b[bi - 1]
 
-        # cover from right
         cover_right = -1
         bi = bisect.bisect_right(b, a[i])
         if bi != m:

@@ -17,10 +17,8 @@ else:
     temp.sort()
     days = 0
     j = 1
-    # print(temp)
     while(1):
         cnt = 0
-        # print(j)
         for i in temp:
             cnt += i // j
             if(cnt >= m):
