@@ -5,7 +5,7 @@ def generate_hashtag(s):
     if len(s) > 140:
         return False
 
-    result = "#"
+    result = "
     for word in s.split():
         result += word[0].upper() + word[1:].lower()
 

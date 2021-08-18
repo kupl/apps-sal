@@ -19,8 +19,3 @@ class Cashier:
         if(self.customer % self.n == 0):
             total = total - (self.discount / 100) * total
         return total
-
-
-# Your Cashier object will be instantiated and called as such:
-# obj = Cashier(n, discount, products, prices)
-# param_1 = obj.getBill(product,amount)

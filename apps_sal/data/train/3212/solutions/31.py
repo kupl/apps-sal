@@ -3,4 +3,4 @@ def generate_hashtag(s):
         return False
     s = s.split()
     a = [i.title() for i in s]
-    return '#' + ''.join(a)
+    return '

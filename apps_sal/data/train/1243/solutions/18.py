@@ -6,4 +6,3 @@ while(t > 0):
     else:
         print(0)
     t -= 1
-# cook your dish here

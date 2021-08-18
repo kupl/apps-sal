@@ -4,6 +4,6 @@ def generate_hashtag(s):
         L1 = []
         for i in L:
             L1.append(i.capitalize())
-        return "#" + str("".join(L1))
+        return "
     else:
         return False

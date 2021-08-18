@@ -10,5 +10,4 @@ test.assert_equals = returnTrue
 
 
 def least_bribes(bribes):
-    # Hack The Planet!
     return 0

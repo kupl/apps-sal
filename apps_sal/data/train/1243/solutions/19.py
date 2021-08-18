@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     num = input()
     if '5' in num or '0' in num:
