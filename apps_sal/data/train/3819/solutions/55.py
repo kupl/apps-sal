@@ -1,5 +1,4 @@
 def smash(words):
-    # Begin here
     output = ''
 
     for word in words:

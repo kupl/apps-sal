@@ -3,4 +3,3 @@ def smash(words):
     for i in words:
         w += i + ' '
     return w[:-1]
-    # Begin here

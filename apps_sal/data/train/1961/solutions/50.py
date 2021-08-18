@@ -7,7 +7,6 @@ class BrowserHistory:
         self.curr = Node(homepage)
 
     def visit(self, url: str) -> None:
-        # break forward history
         self.forwardHistory = 0
         self.curr.next = Node(url)
         self.curr.next.prev = self.curr
@@ -40,10 +39,3 @@ class Node:
         self.url = url
         self.prev = None
         self.next = None
-
-
-# Your BrowserHistory object will be instantiated and called as such:
-# obj = BrowserHistory(homepage)
-# obj.visit(url)
-# param_2 = obj.back(steps)
-# param_3 = obj.forward(steps)
