@@ -1,4 +1,3 @@
-# solution
 import io
 
 nim, mike = map(int, input().split())

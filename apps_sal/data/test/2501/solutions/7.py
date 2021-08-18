@@ -23,8 +23,6 @@ def solve(N, A):
         if k not in memo1:
             memo1[k] = 0
         memo1[k] += 1
-    # print(f"{memo0=}")
-    # print(f"{memo1=}")
     answer = 0
     for a, n in A:
         k = a - n
@@ -37,5 +35,4 @@ def solve(N, A):
     return answer // 2
 
 
-#print(test(N, A))
 print((solve(N, A)))

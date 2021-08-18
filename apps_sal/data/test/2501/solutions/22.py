@@ -13,9 +13,8 @@ N = int(input())
 '''
 
 ans = 0
-diff_list = []  # ①照合用の差分リスト
-count = defaultdict(int)  # ②各要素がどれだけはみ出ているかのカウント
-# 前処理として、最初のループで①と②を作成
+diff_list = []
+count = defaultdict(int)
 for i in range(1, N):
     if i == A[0] + A[i]:
         ans += 1
@@ -26,7 +25,7 @@ for i in range(1, N):
     count[A[0] + A[i] - i] += 1
 
 for i in range(N - 1):
-    count[A[0] + A[i + 1] - (i + 1)] -= 1  # その要素自身を忘れずに引く
+    count[A[0] + A[i + 1] - (i + 1)] -= 1
     d = diff_list[i]
     ans += count[-d]
 

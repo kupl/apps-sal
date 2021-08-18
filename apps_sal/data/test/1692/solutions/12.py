@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 s = list(map(int, list(input())))
 a = 0
 while len(s) > 0:

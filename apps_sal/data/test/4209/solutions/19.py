@@ -12,7 +12,6 @@ def schedule(times):
     b_keys = sorted(list(index_by_b.keys()))
     result = []
     a_min = 0
-    # Get interval with minimun end time whose start time >= a_min.
     for end_time in b_keys:
         start = index_by_b[end_time][-1][0]
         if start >= a_min:

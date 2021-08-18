@@ -12,7 +12,6 @@ def main():
             for c, s, f in csf[i:]:
                 t = max(s, t)
                 t = math.ceil(t / f) * f + c
-                #print("start:", i, t)
             print(t)
 
 

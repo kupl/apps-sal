@@ -1,5 +1,4 @@
 def Bellman_Ford(s, g, inf=1 << 60):
-    # https://tjkendev.github.io/procon-library/python/graph/bellman-ford.html
     N = len(g)
     dist = [inf] * N
     dist[s] = 0
@@ -16,7 +15,6 @@ def Bellman_Ford(s, g, inf=1 << 60):
         if not_updated:
             return -dist[N - 1]
 
-    # 負閉路が存在する
     ret = dist[N - 1]
     for _ in range(N):
         not_updated = True

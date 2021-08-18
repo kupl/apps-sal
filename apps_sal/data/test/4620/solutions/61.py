@@ -11,8 +11,6 @@ def lin(): return list(tin())
 
 mod = 1000000007
 
-# +++++
-
 
 def cc(al):
     ret = 0
@@ -27,16 +25,11 @@ def cc(al):
 
 def main():
     n = int(input())
-    # if n==4:
-    #	return 1/0
-    #b , c = tin()
-    #s = input()
     al = [lin() for _ in range(n - 1)]
     for i in range(n):
         cc(al[i:])
 
 
-# +++++
 isTest = False
 
 
@@ -65,7 +58,6 @@ def __starting_point():
         isTest = True
     else:
         pass
-        #input = sys.stdin.readline
 
     ret = main()
     if ret is not None:

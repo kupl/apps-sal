@@ -24,7 +24,6 @@ def BellmanFord(V: int, es: list, source=0):
         if not upd:
             return D[-1]
     else:
-        # Negative Cycle
         return None
 
 
