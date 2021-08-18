@@ -19,9 +19,6 @@ class Solution:
                 if nei_i != cur_i and nei_i not in visited:
                     visited.add(nei_i)
                     q.append((nei_i, jumps + 1))
-            # clear the neighbors, since we have tried every
-            # jumping ways in this mapping and we do not to
-            # jump back
             mapping[curnum] = []
             if cur_i + 1 < n and cur_i + 1 not in visited:
                 visited.add(cur_i + 1)

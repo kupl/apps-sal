@@ -7,8 +7,6 @@ class Solution:
         else:
             for val in set(arr):
                 index[val] = [ic for ic, v0 in enumerate(arr) if v0 == val]
-#        print(len(index),len(arr))
-#        return 6
         neigh = {}
         for ic, val in enumerate(arr):
             if ic - 1 >= 0:

@@ -1,6 +1,5 @@
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
-        # U could do this in BFS
 
         record = collections.defaultdict(list)
         for i, v in enumerate(arr):

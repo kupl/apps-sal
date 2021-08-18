@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 def process(t, N, G):
     Improvment = 0

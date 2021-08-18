@@ -3,7 +3,6 @@ class Solution:
         if len(arr) == 1:
             return 0
 
-        # intuition: BFS
         dic = {}
         for i, num in enumerate(arr):
             if num not in dic:
@@ -20,7 +19,6 @@ class Solution:
                 node = queue.pop(0)
                 if node == len(arr) - 1:
                     return res
-                # neighbors
                 if node > 0:
                     if node - 1 in bag:
                         queue.append(node - 1)
@@ -37,7 +35,6 @@ class Solution:
                             dic[arr[node - 1]].remove(node - 1)
                             if not dic[arr[node - 1]]:
                                 del dic[arr[node - 1]]
-                # SAME VALUE
                 if arr[node] in dic:
                     for i in dic[arr[node]]:
                         if i in bag:

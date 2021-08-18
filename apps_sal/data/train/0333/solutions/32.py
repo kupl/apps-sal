@@ -1,4 +1,3 @@
-# 1345. Jump Game IV
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
         maps = collections.defaultdict(list)

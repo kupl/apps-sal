@@ -6,7 +6,6 @@ class Solution:
         :rtype: int
         """
         res = 0
-        # i=0
         if timeSeries == []:
             return 0
         last = timeSeries[0]
@@ -19,8 +18,6 @@ class Solution:
                 res += cur - last + duration
                 last = timeSeries[i]
                 cur = timeSeries[i]
-            # print("i",i,"res",res)
-            # i+=1
         res += cur - last + duration
 
         return res

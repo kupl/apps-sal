@@ -13,7 +13,6 @@ class Solution:
 
         while heap:
             c, i = heappop(heap)
-            # print(f'Now {i}  Cost {c}  Heap {heap}')
             if i == N - 1:
                 return c
             for n in (g[arr[i]] * (arr[i] not in val_flag)) + [i - 1, i + 1]:

@@ -1,6 +1,5 @@
 class Solution:
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
-        # group into differences of 60
         offset_from_60 = {}
         for duration in time:
             offset = duration % 60
@@ -8,7 +7,6 @@ class Solution:
                 offset_from_60[offset].append(duration)
             else:
                 offset_from_60[offset] = [duration]
-        # now group keys
         key_pairs = []
         sorted_keys = sorted(list(offset_from_60.keys()))
         for key in [k for k in sorted_keys if k <= 30]:
@@ -16,7 +14,6 @@ class Solution:
                 key_pairs.append((key, 60 - key))
             if key == 0:
                 key_pairs.append((0, 0))
-        # now multiply
         count = 0
         for k1, k2 in key_pairs:
             len_k1 = len(offset_from_60[k1])

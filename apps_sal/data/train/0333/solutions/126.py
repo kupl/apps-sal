@@ -12,7 +12,6 @@ class Solution:
         steps = 0
         pos_m[arr[0]].remove(0)
 
-        # (idx, step)
         q = deque()
         q.append((0, 0))
         while q:

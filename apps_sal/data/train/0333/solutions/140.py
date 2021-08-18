@@ -14,7 +14,6 @@ def dedup(arr):
                 is_equal = True
                 ret.append(arr[i])
             else:
-                #visited[ret[-1]] = 1
                 ret[-1] = arr[i]
         else:
             ret.append(arr[i])
@@ -34,9 +33,6 @@ class Solution:
         for i in range(n):
             memo[arr[i]].append(i)
 
-        # for k in memo.keys():
-        #    memo[k] = dedup(memo[k], visited)
-
         q = Queue()
         q.put((0, 0))
         visited[0] = 1
@@ -47,7 +43,6 @@ class Solution:
 
             wk = [cur + 1, cur - 1]
             for v in memo[arr[cur]] + wk:
-                #print(cur, v)
                 if -1 < v < n and not visited[v]:
                     q.put((v, cnt + 1))
                     visited[v] = 1

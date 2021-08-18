@@ -11,7 +11,6 @@ class Solution:
             if i >= k - 1:
                 max_vowel = max(max_vowel, vowel)
                 front = s[i - k + 1]
-                # print(vowel,i)
                 if front == 'a' or front == 'e' or front == 'i' or front == 'o' or front == 'u':
                     vowel -= 1
 

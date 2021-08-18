@@ -1,8 +1,6 @@
 class Solution:
     def maxVowels(self, s: str, k: int) -> int:
 
-        # Bounded sliding window solution
-
         vowel = set('aeiou')
         leftwindow = 0
 
@@ -11,7 +9,6 @@ class Solution:
 
         for rightwindow in range(len(s)):
 
-            # expand the window
             if rightwindow < k:
                 if s[rightwindow] in vowel:
                     temp += 1

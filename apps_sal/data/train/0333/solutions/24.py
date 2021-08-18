@@ -1,11 +1,6 @@
 class Solution:
     def minJumps(self, arr: List[int]) -> int:
 
-        # Each array index is a node
-        # Each link (i+1), (i-1), (arr[i] == arr[j]) is a connection
-        # Create a graph of arr
-        # BFS to find the shortest path from 0 to arr.length - 1
-
         if len(arr) == 1:
             return 0
 
@@ -26,8 +21,8 @@ class Solution:
                 id_to_neigh[i] = set([i - 1, i + 1]) | val_to_id[val]
                 id_to_neigh[i].remove(i)
 
-        t = len(arr) - 1  # target index
-        q = [(0, 0)]  # (n) number of jumps, (i) current index
+        t = len(arr) - 1
+        q = [(0, 0)]
         v = set([0])
 
         while q:

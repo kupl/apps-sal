@@ -6,11 +6,11 @@ class Solution:
         frontier = collections.deque([(0, 0)])
         num_met, pos_met = set(), set()
         while frontier:
-            pos, step = frontier.popleft()  # state: position, step
+            pos, step = frontier.popleft()
             if pos == len(arr) - 1:
                 return step
             num = arr[pos]
-            pos_met.add(pos)  # track explored positions
+            pos_met.add(pos)
 
             nexts = [pos - 1, pos + 1] + nei[num] if num not in num_met else [pos - 1, pos + 1]
 
@@ -19,4 +19,4 @@ class Solution:
                     continue
                 frontier.append((p, step + 1))
 
-            num_met.add(num)  # track explored values
+            num_met.add(num)

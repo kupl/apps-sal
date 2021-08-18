@@ -4,7 +4,6 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        # build a count array for nums
         if len(nums) == 0:
             return 0
 
