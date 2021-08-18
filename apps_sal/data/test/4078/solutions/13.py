@@ -11,21 +11,20 @@ for i in range(m):
 ma = -1
 mai = -1
 for i in range(n):
-    B = [a for a in A]  # Copy of A
+    B = [a for a in A]
     for j in range(m):
         if L[j] > i or R[j] < i:
             for k in range(L[j], R[j] + 1):
                 B[k] -= 1
 
     d = B[i] - min(B)
-    # print(d, B)
 
     if d > ma:
         ma = d
         mai = i
 
 print(ma)
-B = [a for a in A]  # Copy of A
+B = [a for a in A]
 X = []
 for j in range(m):
     if L[j] > mai or R[j] < mai:

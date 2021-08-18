@@ -29,8 +29,6 @@ for test in range(t):
             x = O.popleft()
             ANS.append(x)
 
-    # print(ANS,E,O)
-
     if len(E) != 0:
         ANS.extend(E)
     elif len(O) != 0:

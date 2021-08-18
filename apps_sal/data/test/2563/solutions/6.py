@@ -1,6 +1,4 @@
-# PARITY'S RELATIVE POSITION DOESN'T CHANGE! (PROBLEM C)
 def solve1(s):
-    # return list
     evens = [u for u in s if u % 2 == 0]
     odds = [u for u in s if u % 2 == 1]
     if len(odds) == 0:
@@ -24,8 +22,6 @@ def solve1(s):
 
 
 def solve2(s):
-    # return list
-    # lazy code lmao
     odds = [u for u in s if u % 2 == 0]
     evens = [u for u in s if u % 2 == 1]
     if len(odds) == 0:

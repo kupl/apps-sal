@@ -11,7 +11,6 @@ for i in range(n):
 
 ans = []
 arr.sort()
-# print(arr)
 done = [0] * n
 i = 0
 j = 1
@@ -25,14 +24,11 @@ while i < n and j < n:
     else:
         i += 1
         j += 1
-# print(ans)
-# print(done)
 arr1 = []
 for i in range(n):
     if done[arr[i][3] - 1] == 0:
         arr1.append(arr[i])
 n = len(arr1)
-# print("arr1",arr1)
 i = 0
 j = 1
 while i < n and j < n:
@@ -45,15 +41,11 @@ while i < n and j < n:
     else:
         i += 1
         j += 1
-# print(ans)
 arr2 = []
-#print("arr1", arr1)
 for i in range(n):
     if done[arr1[i][3] - 1] == 0:
         arr2.append(arr1[i])
-# print(done)
 n = len(arr2)
-# print(arr2)
 for i in range(n):
     if i % 2 == 0:
         ans.append([arr2[i][3], arr2[i + 1][3]])

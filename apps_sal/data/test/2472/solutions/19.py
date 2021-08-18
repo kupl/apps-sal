@@ -2,7 +2,7 @@ Row = int(input())
 List = []
 for i in range(Row):
     List.append(list(map(int, input().split())))
-List = sorted(List, key=lambda x: x[1])  # [1]に注目してソート
+List = sorted(List, key=lambda x: x[1])
 res = 0
 flag = True
 for i in range(Row):

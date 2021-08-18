@@ -4,7 +4,6 @@ ans = []
 pair = []
 for i in range(m):
     x = list(map(int, input().split()))
-    # print(x)
     pair.append(x)
 for i in range(n):
     for j in range(n):
@@ -16,7 +15,6 @@ for i in range(n):
                 d.append(k + 1)
         d = [a[i] - a[j] + b] + d
         ans.append(d)
-        # print(*d)
 ans.sort()
 print(ans[-1][0])
 sz = len(ans[-1]) - 1

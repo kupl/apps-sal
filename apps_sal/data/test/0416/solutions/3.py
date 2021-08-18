@@ -12,7 +12,6 @@ for i in range(len(s) - k + 1):
         flag = False
     if (i > 0) and (s[i - 1] == 'N'):
         flag = False
-    #print(i, flag)
     if (flag):
         ans = True
         break

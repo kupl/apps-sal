@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 n, x, t = map(int, input().split())
 k = n // x
 if n % x == 0:
