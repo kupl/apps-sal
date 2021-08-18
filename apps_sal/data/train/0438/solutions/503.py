@@ -37,6 +37,3 @@ class Solution:
                     if size[j]:
                         union(i, j)
         return ans
-
-    # 4 1 3
-    # 4 5 8

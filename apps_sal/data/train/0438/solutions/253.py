@@ -40,7 +40,6 @@ class Solution:
             uf.size[i] = 1
             for j in (i - 1, i + 1):
                 if 0 <= j < n:
-                    # if uf.ranks[uf.find(j)] == m:
                     if uf.size[uf.find(j)] == m:
                         ans = step
                     if uf.ranks[j]:

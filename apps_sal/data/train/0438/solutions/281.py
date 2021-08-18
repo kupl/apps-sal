@@ -41,7 +41,6 @@ class UnionFind:
         self.sz_count[self.size[x]] += 1
         self.component_count -= 1
 
-    # return true if two are newly unioned, false if already unioned.
     def find_and_union(self, x, y):
         x0 = self.find(x)
         y0 = self.find(y)

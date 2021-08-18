@@ -46,7 +46,6 @@ class Solution:
                 curr_size = union.union(x, x + 1)
 
             counter[curr_size] += 1
-            # print(counter)
             if counter[m] > 0:
                 res = i + 1
         return res

@@ -27,8 +27,6 @@ class Solution:
         res = -1
 
         for i, num in enumerate(arr):
-            # print(p)
-            # print(count)
             count[num] = 1
             left = num - 1
             right = num + 1

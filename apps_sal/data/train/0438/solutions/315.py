@@ -71,8 +71,6 @@ class Solution:
             if len(parents):
                 ans = time
 
-            # print(parents)
-
             time += 1
 
         return ans

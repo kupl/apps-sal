@@ -1,9 +1,7 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         res, n = -1, len(arr)
-        # length of group
         length = [0] * (n + 2)
-        # count of length
         count = [0] * (n + 1)
 
         for i, v in enumerate(arr):

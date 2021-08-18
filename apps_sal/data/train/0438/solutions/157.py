@@ -38,6 +38,4 @@ class Solution:
             if cnt > 0:
                 ans = step + 1
 
-            # print(step, x, UF, SZ, cnt, ans)
-
         return ans

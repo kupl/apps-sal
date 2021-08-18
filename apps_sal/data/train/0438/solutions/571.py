@@ -21,9 +21,9 @@ class Solution:
             left = days[i - m] if(i - m >= 0) else float('inf')
             right = days[i + 1] if(i + 1 < len(days)) else float('inf')
             max_day_turn1 = deq[0]
-            if i == m - 1:  # checking just right, sliding window start
+            if i == m - 1:
                 latest = max(latest, right - 1) if right > max_day_turn1 else latest
-            else:  # making sure left and right side turn after sliding window max, and the min will be the latest
+            else:
                 if left > max_day_turn1 and right > max_day_turn1:
                     latest = max(latest, min(left, right) - 1)
         left = days[-1 - m]

@@ -41,7 +41,6 @@ class Solution:
                 if new_size == m:
                     goal_freq += 1
 
-                # print(new_size, goal_freq)
                 if goal_freq > 0:
                     last_freq = idx
 

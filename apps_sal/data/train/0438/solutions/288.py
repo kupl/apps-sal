@@ -1,19 +1,6 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        # length = [0] * (len(arr) + 2)
-        # cnt = [0] * (len(arr) + 1)
-        # ans = -1
-        # for i, a in enumerate(arr):
-        #     left, right = length[a - 1], length[a + 1]
-        #     length[a] = length[a - left] = length[a + right] = left + right + 1
-        #     cnt[left] -= 1
-        #     cnt[right] -= 1
-        #     cnt[length[a]] += 1
-        #     if cnt[m]:
-        #         ans = i + 1
-        # return ans
 
-        # Union-Find
         uf = {}
         seen = [0] * (len(arr) + 1)
 

@@ -38,8 +38,6 @@ class Solution:
             intervals[iid] = (s, e)
             starts[s] = iid
             ends[e] = iid
-            # print(iid, s, e)
-            # print(starts, ends, intervals)
             if e - s + 1 == m:
                 ans = max(ans, i + 1)
 

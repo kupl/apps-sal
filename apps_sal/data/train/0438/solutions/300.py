@@ -41,5 +41,4 @@ class Solution:
                 cnt += 1
             if cnt >= 1:
                 ans = i + 1
-            # print(par, cnt)
         return ans

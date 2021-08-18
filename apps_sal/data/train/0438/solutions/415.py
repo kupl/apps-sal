@@ -41,7 +41,6 @@ class DSU:
 
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        # dsu
         dsu, s = DSU(m=m), -1
         for i, x in enumerate(arr):
             dsu.add(x)

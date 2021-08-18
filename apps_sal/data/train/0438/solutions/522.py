@@ -59,9 +59,4 @@ class Solution:
             if dsu.count[m] > 0:
                 last_step = i + 1
 
-            # print(dsu.parent)
-            # print(dsu.size)
-            # print(dsu.count)
-            # print()
-
         return last_step

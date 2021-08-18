@@ -21,7 +21,6 @@ class Solution:
             count[a + b] += 1
         ans = -1
         for i, x in enumerate(arr):
-            #print('in', i, x, cur, length, count)
             cur[x] += 1
             length[x] = 1
             count[1] += 1

@@ -54,8 +54,6 @@ class Solution:
                 d[u.size(val + 1)] -= 1
                 u.union(val, val + 1)
             d[u.size(val)] += 1
-            # print(d)
             if d[m] >= 1:
                 res = max(res, i + 1)
-        # print(\"------------\")
         return res

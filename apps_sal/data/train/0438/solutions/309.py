@@ -41,7 +41,6 @@ class Solution:
 
             if size[find(a)] == m:
                 good.add(find(a))
-            # print(step, good)
             if len(good) > 0:
                 ret = step
 

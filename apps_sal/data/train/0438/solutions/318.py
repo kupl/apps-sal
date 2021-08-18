@@ -11,7 +11,6 @@ class Solution:
         last = -1
         for it, x in enumerate(arr):
             state[x] = True
-            # print(state, heads, children, counts)
             neighbors = [i for i in [x + 1, x - 1] if 0 <= i < N and state[i]]
             counts[0] -= 1
             if not neighbors:

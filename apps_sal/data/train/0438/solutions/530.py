@@ -54,5 +54,4 @@ class Solution:
             count[r - l + 1] += 1
             if count[m] >= 1:
                 latest = step + 1
-            # print(idx,state,count,left.parent,right.parent,l,r)
         return latest
