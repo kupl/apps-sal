@@ -38,7 +38,6 @@ def main():
                         break
                     l += 1
 
-    # print(rr)
     k = II()
     ans = []
     for _ in range(k):

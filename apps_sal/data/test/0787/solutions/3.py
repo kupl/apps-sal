@@ -12,7 +12,6 @@ class Profiler(object):
 
 k = int(input())
 s = input()
-#b = list(map(int, input().split()))
 
 m = {}
 for el in string.ascii_lowercase:
@@ -77,7 +76,7 @@ for i in range(1, len(cases)+1):
 
 
 
-    fout.write("Case #" + i.__str__() + ": " + cur_min.__str__() + "\n")
+    fout.write("Case 
 fin.close()
 fout.close()
 '''

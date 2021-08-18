@@ -7,7 +7,6 @@ def iread(): return int(input().strip())
 def viread(): return [int(_) for _ in input().strip().split()]
 
 
-# code goes here
 n = iread()
 _sum = 0
 for i in range(n - 2):

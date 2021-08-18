@@ -9,7 +9,6 @@ for i in range(q):
     m.append([i, m_i, 0])
 
 m.sort(key=lambda x: x[1])
-# print(m)
 
 i = 0
 j = 0
@@ -29,6 +28,5 @@ while j < q:
 
 
 m.sort(key=lambda x: x[0])
-# print(m)
 for x in m:
     print(x[2])

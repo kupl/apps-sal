@@ -1,5 +1,3 @@
-# import sys
-# sys.stdin = open('in.txt', 'r')
 
 n, m, k = list(map(int, input().split()))
 d = [input() for _ in range(n)]

@@ -24,12 +24,9 @@ def solve(n):
     if n == 1:
         return (1, 0)
     fctr, sqfree = fct(n)
-    # print("fctr = ", fctr)
     mx = max(fctr)
-    # print("mx = ", mx)
     next_pow2 = 2**ceil(log(mx) / log(2))
 
-    # print("next_pow2  = ", next_pow2)
     times = 0
     if (any(x != next_pow2 for x in fctr)):
         times += 1

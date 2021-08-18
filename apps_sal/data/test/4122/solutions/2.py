@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/19 23:03
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : E. Superhero Battle.py
 
 
 def main():
@@ -23,7 +18,6 @@ def main():
         return
 
     min_val, round_dmg = -min(c), -c[-1]
-    # print(min_val, round_dmg)
     temp_round = (total_hp - min_val + (round_dmg - 1)) // round_dmg
     ret = temp_round * n
     total_hp -= temp_round * round_dmg

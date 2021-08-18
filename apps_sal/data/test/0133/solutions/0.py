@@ -1,5 +1,3 @@
-# Contest: Codeforces Round #593 (Div. 2) (https://codeforces.com/contest/1236)
-# Problem: B: Alice and the List of Presents (https://codeforces.com/contest/1236/problem/B)
 
 def rint():
     return int(input())

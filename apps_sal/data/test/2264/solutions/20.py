@@ -11,6 +11,5 @@ for i in range(a):
     A.sort()
     B.sort()
     Ans.append(max(0, A[-1] - B[0]))
-    # Ans.append(B[-1])
 for b in Ans:
     print(b)

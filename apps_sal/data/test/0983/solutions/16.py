@@ -1,6 +1,4 @@
 import sys
-# =int(input())
-# =list(map(int, input().split()))
 n, p, q, r = list(map(int, input().split()))
 a = list(map(int, input().split()))
 minil = [0] * n

@@ -1,9 +1,6 @@
 import sys
 
 
-#sys.stdin = open("input.txt")
-#sys.stdout = open("output.txt", "w")
-
 n, m = [int(x) for x in input().split()]
 s = input()
 c1 = ord('a')

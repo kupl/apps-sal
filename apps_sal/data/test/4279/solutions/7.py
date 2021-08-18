@@ -24,7 +24,6 @@ def zaj(n):
             mid = (left + right) // 2
             cur = cale(poz - 1) * mid
             cur += sm(poz, poz, mid)
-            # print('mid {} cur {}'.format(mid, cur))
             if cur >= n:
                 right = mid
             else:
@@ -64,9 +63,7 @@ for asdsjfhajfhsajf in range(q):
             assert n > 0, 'n == 0 down'
         else:
             left -= 1
-            # print('{} left'.format(left))
             n -= poz * left
             l = str(10**(poz - 1) + left)
-            # print(str(n) + ' w ' + l)
             print(l[n - 1])
             break

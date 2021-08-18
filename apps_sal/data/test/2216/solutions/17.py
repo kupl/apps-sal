@@ -25,4 +25,3 @@ while cury < n:
     res[k - 1].append([cury + 1, curx + 1])
     curx, cury = addX(curx, cury)
 print('\n'.join(str(len(x)) + ' ' + ' '.join(' '.join(list(map(str, y))) for y in x) for x in res))
-# print(res)

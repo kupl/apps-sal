@@ -15,10 +15,8 @@ else:
         print(-1)
     else:
         sd = -sd
-        # print(mn, sd)
         repeat = (H + mn) // sd
         h = H - repeat * sd
-        # print(repeat, h)
         for i, d in enumerate(ds):
             h += d
             if h <= 0:

@@ -1,7 +1,6 @@
 t = int(input())
 for _ in range(t):
     n, xx = list(map(int, input().split()))
-    # print(n,xx)
     it = []
     for __ in range(n):
         it.append(list(map(int, input().split())))

@@ -60,26 +60,3 @@ for _ in range(ri(1)):
                 print(hey + 1)
             else:
                 print(hey + 2)
-
-    # if curr<= a[0][0]:
-    # 	print(1)
-    # 	continue
-    # if hey<=0:
-    # 	print(-1)
-    # else:
-
-    # 	now = curr//hey
-    # 	if now==0:
-    # 		print(1)
-    # 		continue
-    # 	now -=1
-    # 	rem = curr - now*hey
-    # 	ans =now
-    # 	#print(now,rem)
-    # 	while (rem>0):
-    # 		rem -= a[0][0]
-    # 		ans +=1
-    # 		if rem<=0:
-    # 			break
-    # 		rem += a[0][1]
-    # 	print(ans)

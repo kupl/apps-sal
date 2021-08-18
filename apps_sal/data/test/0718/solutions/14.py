@@ -7,8 +7,7 @@ def f(a):
 
 
 a = int(input())
-# a = 18
 d = 1
-while not f(a + d):  # and not f(a - d):
+while not f(a + d):
     d += 1
 print(d)

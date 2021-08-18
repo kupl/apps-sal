@@ -26,8 +26,6 @@ for i in range(LEN + 1):
     ANS2[i] += ANS3[i]
 ANS2 = list(accumulate(ANS2))
 
-# print(ANS)
-# print(ANS2)
 
 A = 0
 for i in range(LEN):

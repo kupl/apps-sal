@@ -29,9 +29,6 @@ def solve():
         while ch[leader] == 0:
             leader = (leader + 1) % n
 
-        # print(ch)
-        # print(leader + 1)
-
     print(*ans)
 
 

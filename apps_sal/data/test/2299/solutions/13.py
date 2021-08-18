@@ -18,6 +18,3 @@ for i in range(t):
     else:
         ans += "No\n"
 print(ans)
-
-
-# Made By Mostafa_Khaled

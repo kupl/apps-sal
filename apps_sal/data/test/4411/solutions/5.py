@@ -4,11 +4,6 @@ template author-: Pyduper
 import heapq
 import sys
 
-# stdin = open("testdata.txt", "r")
-# ip = stdin
-# def input():
-# 	return ip.readline().strip()
-
 
 def input():
     return sys.stdin.readline().strip()

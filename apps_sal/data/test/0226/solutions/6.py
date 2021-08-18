@@ -29,7 +29,6 @@ N = getInt()
 values = getInts()
 
 nConsidered = 0
-#                nC, nO
 bestForChooserSoFar = [0, 0]
 
 for i in range(len(values)):
