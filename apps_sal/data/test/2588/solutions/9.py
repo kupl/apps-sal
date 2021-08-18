@@ -1,4 +1,3 @@
-# E71_C
 
 T = int(input())
 

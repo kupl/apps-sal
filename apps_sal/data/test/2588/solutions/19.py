@@ -28,7 +28,7 @@ def solve(A, n, a, b):
     return cost
 
 
-in_file = sys.stdin  # open("C.txt", "r")
+in_file = sys.stdin
 
 t = int(in_file.readline().strip())
 for _ in range(t):

@@ -19,8 +19,6 @@ def count_needed_lights(data, i):
     l1 = count_needed_lights(data, 2 * i + 1)
     l2 = count_needed_lights(data, 2 * i + 2)
 
-    #print(l1, l2, '----')
-
     total = l1[0] + l2[0]
     total += abs(l1[1] - l2[1])
 

@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# author: firolunis
-# version: 0.1
 
 n = int(input())
 park = input().split(' ')

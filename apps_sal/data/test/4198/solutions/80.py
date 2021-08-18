@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def is_ok(arg, a, b, x):
     return True if a * arg + b * len(str(arg)) <= x else False

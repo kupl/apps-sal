@@ -1,9 +1,9 @@
 n, d = map(int, input().split())
 
-num = 0  # distance from the last step
-v = 0  # value of steps
-a = 1  # flag for excistence
-k = 0  # coord. of the last step variant destination
+num = 0
+v = 0
+a = 1
+k = 0
 
 st = input()
 

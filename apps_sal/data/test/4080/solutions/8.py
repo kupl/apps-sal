@@ -31,16 +31,11 @@ for l, r in LR:
         for k in range(MDICT[l] * 2 + 1, MDICT[r] * 2 + 2):
             MINUSLIST[j][k] += 1
 
-# print(MLIST)
-# print(MINUSLIST)
-
 
 A_m = [[float("inf"), -float("inf")] for i in range(MLEN * 2 - 1)]
 
 if MLIST[0] != 1:
     A_m[0] = [min(A[:MLIST[0] - 1]), max(A[:MLIST[0] - 1])]
-# if MLIST[MLEN-2]!=n:
-#    A_m[MLEN*2-2]=[min(A[MLIST[MLEN-2]:]),max(A[MLIST[MLEN-2]:])]
 
 for i in range(MLEN - 1):
     x = MLIST[i] - 1

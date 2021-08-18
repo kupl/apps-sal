@@ -16,5 +16,4 @@ while m > 1:
     c = 1 - c
     r += 1
     m //= 2
-    #print(c, m, r, n)
 print(r)

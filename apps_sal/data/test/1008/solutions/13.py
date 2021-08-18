@@ -1,6 +1,5 @@
 s = input()
 n = int(input())
-#a = [int(c) for c in input().split()]
 
 wordlength = len(s) // n
 if wordlength * n != len(s):

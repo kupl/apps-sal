@@ -1,5 +1,3 @@
-# author:  Taichicchi
-# created: 26.09.2020 15:29:37
 
 import sys
 from math import ceil
