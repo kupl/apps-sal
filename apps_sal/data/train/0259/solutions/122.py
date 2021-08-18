@@ -9,7 +9,6 @@ class Solution:
                 else:
                     s += num // divisor + 1
 
-            # print(divisor, s)
             return s
 
         left = 1

@@ -1,5 +1,4 @@
 def reverse(st):
-    # Your Code Here
     l = st.strip().split()
     if len(l) > 1:
         l = l[::-1]

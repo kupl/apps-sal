@@ -1,7 +1,4 @@
-# Fast IO (only use in integer input) or take care about string
 
-# import os,io
-# input=io.BytesIO(os.read(0,os.fstat(0).st_size)).readline
 
 t = int(input())
 for _ in range(t):

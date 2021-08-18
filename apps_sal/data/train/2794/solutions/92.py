@@ -1,5 +1,4 @@
 def calculate_age(year_of_birth, current_year):
-    # your code here
     age = current_year - year_of_birth
     if abs(age) == 1:
         unit = 'year'

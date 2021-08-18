@@ -13,5 +13,4 @@ class Solution:
             return 0
         if len(nums) == 1:
             return nums[0]
-        # rob the last house or not, calculate the maximum
         return max(helper(nums[:len(nums) - 1]), nums[-1] + helper(nums[1:len(nums) - 2]))

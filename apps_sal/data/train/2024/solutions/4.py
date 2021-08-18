@@ -20,6 +20,3 @@ for u in p:
     l = (l + 1) * u
 
 print(v)
-
-
-# Made By Mostafa_Khaled

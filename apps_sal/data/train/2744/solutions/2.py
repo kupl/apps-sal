@@ -2,13 +2,10 @@ import re
 
 
 def poohbear(code):
-    # initialize variables
     data, ptr, step, clipboard, stack, loop, output = {}, 0, 0, 0, [], {}, []
 
-    # break code into valid commands
     code = re.sub('[^+-><cpWEPNTQULIVABYD]', '', code)
 
-    # parse loops and store start/end
     for i, command in enumerate(code):
         if command == 'W':
             stack.append(i)
@@ -16,7 +13,6 @@ def poohbear(code):
             start = stack.pop()
             loop[start], loop[i] = i, start
 
-    # execute the code
     while step < len(code):
         data[ptr] = data.get(ptr, 0)
 
