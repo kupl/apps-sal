@@ -4,7 +4,6 @@ input = sys.stdin.readline
 
 N, M = list(map(int, input().split()))
 
-# N: 処理する区間の長さ
 INF = 2**31 - 1
 
 LV = (M + 2 - 1).bit_length()
@@ -26,8 +25,6 @@ def gindex(l, r):
         L >>= 1
         R >>= 1
 
-# 遅延伝搬処理
-
 
 def propagates(*ids):
     for i in reversed(ids):
@@ -39,8 +36,6 @@ def propagates(*ids):
         data[2 * i - 1] += v
         data[2 * i] += v
         lazy[i - 1] = 0
-
-# 区間[l, r)にxを加算
 
 
 def update(l, r, x):
@@ -62,8 +57,6 @@ def update(l, r, x):
         R >>= 1
     for i in ids:
         data[i - 1] = min(data[2 * i - 1], data[2 * i])
-
-# 区間[l, r)内の最小値を求める
 
 
 def query(l, r):
@@ -93,12 +86,8 @@ for i in range(N):
     L, R = list(map(int, input().split()))
     hito.append((L, R))
 hito.sort()
-#test=[query(i,i+1) for i in range(M+2)]
-# print(test)
 for l, r in hito:
     update(0, r + 1, -1)
-    #test=[query(i,i+1) for i in range(M+2)]
-    # print(test)
     m = query(l + 1, M + 2) + l
     add = min(m, add)
 

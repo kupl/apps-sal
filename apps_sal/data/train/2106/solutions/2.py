@@ -37,6 +37,3 @@ if(len(tab)):
             s1 += tab[i]
 
 print(s1, s2)
-
-
-# Made By Mostafa_Khaled

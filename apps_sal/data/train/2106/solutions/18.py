@@ -17,8 +17,6 @@ mids = []
 for x in piles:
     cielTotal += sum(x[:len(x) // 2])
     jiroTotal += sum(x[len(x) // 2 + len(x) % 2:])
-    # print(x)
-    # print(cielTotal,jiroTotal)
     if len(x) % 2 == 1:
         mids.append(x[len(x) // 2])
 

@@ -1,4 +1,3 @@
-# cook your dish here
 def primes(n):
     prime = [True] * (n + 1)
     p = 2

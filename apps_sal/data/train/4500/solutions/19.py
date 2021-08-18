@@ -7,9 +7,3 @@ def define_suit(card):
         return 'hearts'
     if "S" in card:
         return 'spades'
-
-
-# ('3C') -> return 'clubs'
-# ('3D') -> return 'diamonds'
-# ('3H') -> return 'hearts'
-# ('3S') -> return 'spades'

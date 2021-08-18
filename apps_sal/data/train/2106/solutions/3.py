@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 odd, even = [], []
 player1_turn = True

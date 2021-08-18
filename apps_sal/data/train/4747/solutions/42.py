@@ -1,4 +1,3 @@
-# String repeat: codewars.com
 ''' repeats the given string src
 exactly count times  '''
 

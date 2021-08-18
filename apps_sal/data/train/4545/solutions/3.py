@@ -10,15 +10,15 @@ def get_score(x, y):
     mod = ''
 
     if distance > 340 / 2:
-        return 'X'         # outside
+        return 'X'
     elif distance < 12.7 / 2:
-        return 'DB'        # bull's eye
+        return 'DB'
     elif distance < 31.8 / 2:
-        return 'SB'        # bull
+        return 'SB'
     elif 198 / 2 < distance < 214 / 2:
-        mod = 'T'          # triple
+        mod = 'T'
     elif 324 / 2 < distance < 340 / 2:
-        mod = 'D'          # double
+        mod = 'D'
 
     number = str(scores[int((angle + 180 + 9) / 18) - 1])
 

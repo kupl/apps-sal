@@ -11,7 +11,6 @@ class Solution:
                     k += 1
                 else:
                     k += 1
-                # print(l)
                 if(len(l) > 2):
                     k = k - 1
                     break

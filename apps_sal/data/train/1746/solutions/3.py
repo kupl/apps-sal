@@ -3,38 +3,13 @@ only_show_wrong()
 
 def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int, int, int, List[str]]:
 
-    # Scan through the game to find the player
-    # Any invalid action, or death, returns None
-
-    # If player is attacking
-    # Decrease health of enemy in front, or return None if invalid
-    # If enemy dies, update map
-
-    # If player is moving
-    # Update location on map, or return None if invalid
-
-    # If player is rotating
-    # Update player character inside array
-
-    # If player is using object
-    # Check if object is in bag and can be used
-    # Is valid object usage?
-    # Potion - is player low on health?
-    # Coin   - is there a merchant in front of player?
-    # Key    - is there a door in front of player?
-    # Use object, or return None if invalid
-
-    # After all action (related to where the player WAS, not their new location)
-    # If there are enemies to attack player
-    # Decrease player health, check is alive
-
     class GameObject:
         def __init__(self, game, h, a, d, l=None):
             self.g = game
             self.l = l if l is not None else (0, 0)
-            self.h = h  # health
-            self.a = a  # attack
-            self.d = d  # defense
+            self.h = h
+            self.a = a
+            self.d = d
 
         @property
         def is_alive(self):
@@ -64,7 +39,7 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
 
         def __init__(self, game, s, l=None, b=None):
             super().__init__(game, 3, 1, 1, l)
-            self.s = s  # symbol, "^" ">" "v" or "<"
+            self.s = s
             self.b = b if b is not None else []
             self.exp = 0
 
@@ -92,7 +67,7 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
                 self.b.append(item)
             elif item == "X":
                 self.a += 1
-            else:   # == "S"
+            else:
                 self.d += 1
 
         def rotate(self, symb):
@@ -102,8 +77,8 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
 
         def move(self):
             new_loc = self.__check_forward()
-            if new_loc is None or new_loc[1] in "#MED-|":
-                return False
+            if new_loc is None or new_loc[1] in "
+            return False
             if new_loc[1] in "CKHSX":
                 self.__pickup_item(new_loc[1])
 
@@ -134,12 +109,10 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
                 self.exp = 0
 
         def use_item(self, item_s):
-            # Check if item is in bag
             item = self.__find_item(item_s)
             if item is None:
                 return False
 
-            # Check for proper item usage
             if item == "H":
                 if self.h < 3:
                     self.h = 3
@@ -237,7 +210,6 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
         def run_game(self, action_list):
             for action in action_list:
                 prev_loc = self.player.l
-                # The player acts
                 success = True
                 if action in "^><v":
                     self.player.rotate(action)
@@ -248,10 +220,8 @@ def rpg(game: List[List[str]], actions: List[str]) -> Tuple[List[List[str]], int
                 else:
                     success = self.player.move()
                 if not success:
-                    # Unsuccessful act? Return None
                     return None
 
-                # Enemies attack, if there are any
                 is_alive = self.check_enemies(prev_loc)
                 if not is_alive:
                     return None
