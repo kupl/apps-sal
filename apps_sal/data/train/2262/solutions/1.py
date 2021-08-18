@@ -1,4 +1,3 @@
-# coding: utf-8
 
 import heapq
 
@@ -25,14 +24,13 @@ def on_edge(x1, y1, x2, y2, R, C, i, edge_points):
 
 def solve():
     R, C, N = list(map(int, input().split()))
-    edge_points = []            # (coord, point#)
+    edge_points = []
     for i in range(N):
         x1, y1, x2, y2 = list(map(int, input().split()))
         on_edge(x1, y1, x2, y2, R, C, i, edge_points)
     q = []
     while edge_points:
         c, i = heapq.heappop(edge_points)
-        # print((c, i))           # dbg
         if len(q) and q[-1] == i:
             q.pop()
         else:

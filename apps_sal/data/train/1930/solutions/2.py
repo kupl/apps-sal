@@ -16,8 +16,3 @@ class Cashier:
         if self.idx % self.n == 0:
             res *= (1 - self.discount)
         return res
-
-
-# Your Cashier object will be instantiated and called as such:
-# obj = Cashier(n, discount, products, prices)
-# param_1 = obj.getBill(product,amount)

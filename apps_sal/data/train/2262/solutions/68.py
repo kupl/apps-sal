@@ -8,7 +8,6 @@ left = []
 bottom = []
 for i in range(N):
     x1, y1, x2, y2 = map(int, input().split())
-    # if both points are on the edge
     if (x1 in (0, R) or y1 in (0, C)) and (x2 in (0, R) or y2 in (0, C)):
         if x1 == 0:
             top.append((y1, i))

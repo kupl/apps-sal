@@ -12,7 +12,6 @@ def main():
             self.bit = [0] * (self.n + 1)
             self.allsum = 0
 
-        # 要素iにvを追加する
         def add(self, i, v):
             x = self.member_dict[i]
             self.allsum += v
@@ -20,7 +19,6 @@ def main():
                 self.bit[x] += v
                 x += x & (-x)
 
-        # 位置0からiまでの和(sum(bit[:i]))を計算する
         def sum(self, i):
             ret = 0
             x = i
@@ -29,11 +27,9 @@ def main():
                 x -= x & (-x)
             return ret
 
-        # 位置iからjまでの和(sum(bit[i:j]))を計算する
         def sum_range(self, i, j):
             return self.sum(j) - self.sum(i)
 
-        # 和がw以上となる最小のインデックスを求める
         def lowerbound(self, w):
             if w <= 0:
                 return 0
@@ -45,7 +41,6 @@ def main():
                 k //= 2
             return x
 
-        # vに一番近いv以上の値を求める
         def greater(self, v):
             if v > self.maxmember:
                 return None
@@ -54,7 +49,6 @@ def main():
                 return None
             return self.member_list[self.lowerbound(p + 1)]
 
-        # vに一番近いv以下の値を求める
         def smaller(self, v):
             if v < self.minmember:
                 return None

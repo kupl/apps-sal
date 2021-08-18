@@ -1,4 +1,3 @@
-# coding: utf-8
 import array
 import bisect
 import collections
@@ -31,8 +30,6 @@ def read():
     return R, C, N, num_point
 
 
-# 周上を (0, 0) を原点として反時計回りに 1 本の数直線とした時の point の座標を返す．
-# 周上にあるかの判定も行う．
 def change_edge_point(R, C, point):
     x, y = point
     if x == 0:

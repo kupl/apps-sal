@@ -3,13 +3,11 @@ UP, RIGHT, DOWN, LEFT = [], [], [], []
 for i in range(N):
     x1, y1, x2, y2 = list(map(int, input().split()))
 
-    # 2つとも周上にない
     if 0 < x1 < R and 0 < y1 < C:
         continue
     if 0 < x2 < R and 0 < y2 < C:
         continue
 
-    # 2つとも周回上にある
     if x1 == 0:
         UP.append([i, y1])
     elif x1 == R:
@@ -29,16 +27,13 @@ for i in range(N):
         RIGHT.append([i, x2])
 
 
-# 時計回りに探索できるようにする
 UP.sort(key=lambda x: x[1])
 RIGHT.sort(key=lambda x: x[1])
 DOWN.sort(key=lambda x: x[1], reverse=True)
 LEFT.sort(key=lambda x: x[1], reverse=True)
 
-# 全体を連結
 Numbers = UP + RIGHT + DOWN + LEFT
 
-# 時計回りに探索
 stack = []
 for n, z in Numbers:
     if stack and stack[-1] == n:

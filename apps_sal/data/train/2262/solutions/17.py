@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 w, h, n = list(map(int, input().split()))
 
 

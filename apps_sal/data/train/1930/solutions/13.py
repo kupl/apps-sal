@@ -29,8 +29,3 @@ class Cashier:
             bill += a * price
 
         return bill - (bill * d / 100)
-
-
-# Your Cashier object will be instantiated and called as such:
-# obj = Cashier(n, discount, products, prices)
-# param_1 = obj.getBill(product,amount)
