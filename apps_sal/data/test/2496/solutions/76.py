@@ -29,14 +29,11 @@ def main():
         setwise_coprime = gcd(setwise_coprime, An)
         if setwise_coprime == 1:
             break
-    # print(prime)
     for An in A:
         if An == 1:
             continue
-        # print('An = {}'.format(An))
         not_pairwise_coprime = False
         while prime[An] != An:
-            # print('prime[An]={}, f[prime[An]]={}'.format(prime[An], f[prime[An]]))
             if f[prime[An]]:
                 not_pairwise_coprime = True
                 break
@@ -52,7 +49,6 @@ def main():
                     f[An] = True
         if not_pairwise_coprime:
             break
-        # print(f)
     else:
         print('pairwise coprime')
         return

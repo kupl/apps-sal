@@ -28,9 +28,6 @@ def mat_pow(A, x, mod):
         A = mat_dot(A, A, mod)
     return res
 
-# if there exists K such that X**K %mod == Y % mod, return K % (mod-1)
-# Otherwise, return -1
-
 
 def bsgs(X, Y, mod):
     Y %= mod

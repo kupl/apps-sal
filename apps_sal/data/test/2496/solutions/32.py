@@ -8,7 +8,7 @@ for i in range(2, r2_num):
                 prime[j] = i
 
 
-def gcd(a, b):  # a >= b
+def gcd(a, b):
     if a % b == 0:
         return b
     else:

@@ -17,7 +17,6 @@ def calc(gen, limit):
         i += 1
     if gen != 1:
         divisors.append(gen)
-    # print(divisors)
 
     l = len(divisors)
     res = 0
@@ -26,7 +25,6 @@ def calc(gen, limit):
         for j, div in enumerate(divisors):
             if (bit >> j) & 1:
                 prod *= div
-        #print(bit, prod)
         if popcnt(bit):
             res -= (limit - 1) // prod
         else:

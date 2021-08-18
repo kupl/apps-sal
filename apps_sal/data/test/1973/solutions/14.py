@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 dic = {a[0]: 1}
-#board= ['*']*11
 su = 1
 kq = 1
 for i in range(1, n):

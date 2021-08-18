@@ -1,4 +1,3 @@
-# cook your dish here
 lst = []
 for _ in range(int(input())):
     lst.append(input())
@@ -13,7 +12,6 @@ lst1 = set(lst1)
 for i in lst1:
     for j in lst:
         if i == j:
-            # print(i,j)
             count += 1
             break
 print(count)

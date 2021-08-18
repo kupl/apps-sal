@@ -33,7 +33,6 @@ def main():
         _min = min([cnt[i] for cnt in counters])
         ans += _min
 
-    # ans = sum([min([cnt[i] for cnt in counters]) for i in range(n)])
     print(ans)
 
 

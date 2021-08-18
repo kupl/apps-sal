@@ -1,5 +1,4 @@
 import sys
-#fin = open("ecr4b.in", "r")
 fin = sys.stdin
 
 n = int(fin.readline())

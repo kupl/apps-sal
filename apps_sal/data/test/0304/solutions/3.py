@@ -52,19 +52,9 @@ for x in it.product(*(list(range(0 if i == 0 else 1, i + 1)) for i in freq)):
         n = fac[s]
         y = list(x)
         y[d] -= 1
-        # assert(s==sum(y))
         for k in range(0, 10):
             n //= fac[y[k]]
         g += n
-        # print(x,d,n,g)
-    # print(Q,x,g)
     total += g
 
 print(total)
-
-# 208
-# 280
-# 802
-# 820
-#2028, 2082, 2208, 2280, 2802, 2820
-#8022, 8202, 8220

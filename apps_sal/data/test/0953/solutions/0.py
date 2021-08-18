@@ -5,8 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.4.2
 """
 
-# SOLUTION
-
 
 def main():
     n, = read()
@@ -34,8 +32,6 @@ def main():
             for i, e in zip(indices, elements):
                 res[i] = e
     write(res)
-
-# HELPERS
 
 
 class DSU(object):
@@ -90,9 +86,6 @@ class DSU(object):
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs

@@ -16,6 +16,3 @@ for v in [int(x) for x in input().split()]:
         p, i = p + A[i], i + 1
 
     print(i)
-
-
-# Made By Mostafa_Khaled

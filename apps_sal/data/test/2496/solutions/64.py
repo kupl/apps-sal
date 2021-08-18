@@ -17,13 +17,9 @@ def primes(n):
 
 
 l = primes(max(A))
-# print(l)
 d = [0] * max(A)
 for i in A:
     d[i - 1] = 1
-# print(d)
-# for i in l:
-#  print(d[i-1::i])
 if reduce(gcd, A) > 1:
     print('not coprime')
 elif all(sum(d[i - 1::i]) <= 1 for i in l):

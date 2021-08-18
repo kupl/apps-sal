@@ -10,12 +10,10 @@ def calc(n, m, interval):
     it_list = [(0, n - 1)]
     for i in range(m):
         interval_now = interval[i]
-        # print(it_list, interval_now)
 
         if len(interval_now) == 0:
             return 0
         next_list = []
-        # calc
         j = 0
         k = 0
         while j < len(it_list) and k < len(interval_now):
@@ -36,7 +34,6 @@ def calc(n, m, interval):
         it_list = next_list
         if len(it_list) == 0:
             return 0
-    # print(it_list)
     for it in it_list:
         l = it[1] - it[0] + 1
         ret += l * (l + 1) // 2 - l
@@ -71,16 +68,13 @@ def main():
             else:
                 if r > l:
                     it = (a_now[l], a_now[r])
-                    # print(l, r, it)
                     now.append(it)
                 l = j
                 r = j
         if r > l:
             it = (a_now[l], a_now[r])
-            # print("end", l, r, it)
             now.append(it)
         now = sorted(now, key=lambda x: x[0])
-        # print(a_now, now, "\n")
         interval.append(now)
     ans += calc(n, m, interval)
     print(ans)
