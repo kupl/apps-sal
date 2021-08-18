@@ -54,9 +54,6 @@ def solve(H):
     return dp[99]
 
 
-###############################################################################
-# AUXILIARY FUNCTIONS
-
 DEBUG = 'DEBUG' in os.environ
 
 

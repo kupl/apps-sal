@@ -8,5 +8,4 @@ for i in range(60):
     zero = N - one
     ans += (one * zero) * pow(2, i, M) % M
     ans %= M
-    # print(one,zero)
 print(ans)

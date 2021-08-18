@@ -3,7 +3,6 @@ a = list(input())
 
 f = ['0']
 f.extend(list(input().split()))
-# print('f:', f)
 
 started = False
 for i, item in enumerate(a):

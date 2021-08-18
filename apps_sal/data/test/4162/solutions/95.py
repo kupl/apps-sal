@@ -1,7 +1,6 @@
 [n] = [int(i) for i in input().split()]
 li = [int(i) for i in input().split()]
 
-# print(li)
 
 ans = 0
 for i in li:

@@ -1,18 +1,8 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-##################################
-# University of Wisconsin-Madison
-# Author: Yaqi Zhang
-##################################
-# This module contains
-##################################
 
-# standard library
 import sys
 
 
 def main():
-    # nums = list(map(int, input().split()))
     n = int(input())
     s = input()
     assert(len(s) == n)

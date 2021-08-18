@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import numpy as np
 
 
@@ -12,7 +11,7 @@ def main():
     for n in range(limit):
         res = A & (1 << n)
         x = np.count_nonzero(res)
-        y = N - x  # 0の数
+        y = N - x
         x *= y
         for _ in range(n):
             x *= 2

@@ -6,7 +6,7 @@ mod = 10 ** 9 + 7
 s = 0
 
 for i in range(60):
-    c1 = np.count_nonzero(arr & 1)  # 自分がnp.sumを利用したがどうしても正解になれなかった。なぜ？
+    c1 = np.count_nonzero(arr & 1)
     s += 2 ** i * c1 * (n - c1)
     arr >>= 1
 

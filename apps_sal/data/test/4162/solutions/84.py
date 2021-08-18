@@ -2,7 +2,6 @@ N = int(input())
 a = list(map(int, input().split()))
 a.sort(reverse=True)
 
-# ユークリッドの互除法により最大公約数を求める
 ans = 0
 val1, val2 = a[0], a[1]
 while 1:

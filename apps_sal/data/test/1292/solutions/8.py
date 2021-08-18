@@ -11,8 +11,8 @@ for ind in range(len(inp)):
         board.append(-1)
     elif 49 <= ord(inp[ind]) <= 58:
         board.append(ord(inp[ind]) - 49)
-    elif inp[ind] == '#':
-        board.append(-2)
+    elif inp[ind] == '
+    board.append(-2)
 
 new_castles = [dq() for _ in range(P)]
 

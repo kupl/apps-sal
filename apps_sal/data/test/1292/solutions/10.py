@@ -11,8 +11,8 @@ for ind in range(len(inp)):
         board.append(-1)
     elif 49 <= ord(c) <= 58:
         board.append(ord(c) - 49)
-    elif c == '#':
-        board.append(-2)
+    elif c == '
+    board.append(-2)
 
 new_castles = [[] for _ in range(P)]
 new_castles_ind = [0 for _ in range(P)]
