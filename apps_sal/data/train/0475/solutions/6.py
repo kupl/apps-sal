@@ -7,10 +7,8 @@ class Solution:
             sums = 0
             for k in range(i, len(nums)):
                 sums = sums + nums[k]
-                # print('sums',sums)
                 output.append(sums)
         output.sort()
-        # print(output)
         for i in range(left - 1, right):
             final_sum = final_sum + output[i]
 

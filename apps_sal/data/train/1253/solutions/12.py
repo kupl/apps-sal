@@ -1,4 +1,3 @@
-# cook your dish here
 
 def spread(arr):
     for i in range(len(arr)):

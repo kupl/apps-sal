@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 from collections import defaultdict
 from math import log2
 import sys

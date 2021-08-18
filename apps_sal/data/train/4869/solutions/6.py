@@ -8,7 +8,7 @@ def has_7_of_7_son(person, parent_is_7=False):
     broken = False
     if person['children']:
         for child in person['children']:
-            if child['gender'] == 'male':  # and
+            if child['gender'] == 'male':
                 counter += 1
             else:
                 broken = True

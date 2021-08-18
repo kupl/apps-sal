@@ -10,7 +10,6 @@ class Solution:
                 nums.append(prefix[i + k] - prefix[i])
 
         nums.sort()
-        # print(nums)
 
         t = 1000000007
         ans = 0

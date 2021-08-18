@@ -1,8 +1,5 @@
 from sys import stdin as stin, stdout as stout, setrecursionlimit as srl
 from collections import defaultdict as dd, Counter, deque as dq
-#from heapq import heapify,heappush as hpu,heappop as hpo
-#import math
-#import numpy
 srl(10**6)
 def get_ints(): return map(int, stin.readline().split())
 def get_list(): return list(map(int, stin.readline().split()))

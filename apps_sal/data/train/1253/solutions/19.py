@@ -14,7 +14,6 @@ for _ in range(int(input())):
         if s[i] == "1":
             dist[i] = 0
             q.append(i)
-            # vis[i]=True
     d = int(input())
     p = [int(o) for o in input().split()]
     while q:

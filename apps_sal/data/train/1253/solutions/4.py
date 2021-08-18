@@ -18,10 +18,7 @@ for i in range(t):
         elif s[p[j] - 1] == '1':
             s[p[j] - 1] = '2'
         s1 = s[:]
-        # print(s)
-        # q1=''.join(s).lstrip('0')
         q = s[f:g + 1]
-        # q=q1.rstrip('0')
         if len(q) - (c + e) == 0 and q[0] == '2' and k == g + 1:
             if c + e == 0:
                 c = len(q)
@@ -68,6 +65,4 @@ for i in range(t):
                         c += 1
 
         s = s1[:]
-        # print(s)
-        # print(c,e)
     print(c + e)
