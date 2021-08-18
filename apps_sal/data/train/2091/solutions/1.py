@@ -29,7 +29,6 @@ class SegTree:
         self.opened = [0] * (2 * self.size)
         self.closed = [0] * (2 * self.size)
 
-    # O(size * (O(func) + O(init))
     def build(self, s):
         for i in range(self.size):
             self.answer[self.size + i] = 0
@@ -42,7 +41,6 @@ class SegTree:
             self.opened[i] = self.opened[2 * i] + self.opened[2 * i + 1] - matched
             self.closed[i] = self.closed[2 * i] + self.closed[2 * i + 1] - matched
 
-    # O(log(size)), [l,r]
     def query(self, l, r):
         l += self.size
         r += self.size

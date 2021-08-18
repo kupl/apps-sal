@@ -1,9 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class FindElements:
 
     def recover(self, root):
@@ -40,23 +34,5 @@ class FindElements:
         self.values = [0]
         self.root = self.recover(root)
 
-
-#     def find_target(self,target,root):
-
-#         if not root:
-#             return False
-
-#         if root.val == target:
-#             return True
-
-#         else:
-#             return self.find_target(target,root.left) or self.find_target(target,root.right)
-
-
     def find(self, target: int) -> bool:
         return target in self.values
-
-
-# Your FindElements object will be instantiated and called as such:
-# obj = FindElements(root)
-# param_1 = obj.find(target)

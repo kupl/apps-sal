@@ -6,10 +6,8 @@ for qq in range(t):
     armrest_max = n * (m + 1)
     armrest_used = l + r
     if (seat_used >= seat_max):
-        #   print "used only l,r,z"
         print(seat_max)
     else:
-        #   print "armrest_used= ",armrest_used,"seat_used=",seat_used
         armrest_used_by_b = (armrest_max - armrest_used) / 2
         seat_used_by_b = min(armrest_used_by_b, b, ((m + 1) / 2) * n)
         seat_used += seat_used_by_b

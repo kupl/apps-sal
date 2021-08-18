@@ -1,4 +1,3 @@
-# cook your dish here
 for h in range(int(input())):
     x, y, k = map(int, input().split())
     c = (x + y) // k

@@ -4,7 +4,6 @@ for _ in range(int(input())):
     d = s // k
     if s % k != 0:
         d += 1
-    # print(d)
     if d % 2 == 1:
         print("Chef")
     else:

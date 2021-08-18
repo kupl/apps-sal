@@ -12,4 +12,4 @@ for _ in range(t):
         if math.ceil(s / k) % 2 == 0:
             print("Paja")
         else:
-            print("Chef")  # cook your dish here
+            print("Chef")
