@@ -37,7 +37,6 @@ def solve(a, b):
             res[i - 1] = r[idx]
 
         return res
-    # print(res)
     return build(a, res)
 
 

@@ -51,20 +51,16 @@ class UnionFind():
         y : int
             併合したノード
         """
-        # 入力ノードのrootノードを見つける
         x = self.find_root(x)
         y = self.find_root(y)
-        # すでに同じ木に属していた場合
         if(x == y):
             return
-        # 違う木に属していた場合rankを見てくっつける方を決める
         elif(self.rank[x] > self.rank[y]):
             self.root[x] += self.root[y]
             self.root[y] = x
         else:
             self.root[y] += self.root[x]
             self.root[x] = y
-            # rankが同じ（深さに差がない場合）は1増やす
             if(self.rank[x] == self.rank[y]):
                 self.rank[y] += 1
 

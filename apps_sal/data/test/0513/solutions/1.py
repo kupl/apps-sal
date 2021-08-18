@@ -1,4 +1,3 @@
-#f = open('data.txt')
 lists = []
 dicts = {}
 sets = set()

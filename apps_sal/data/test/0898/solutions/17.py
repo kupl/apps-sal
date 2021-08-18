@@ -15,9 +15,7 @@ def make_divisors(n):
 
 
 b = make_divisors(m)
-# print(b)
 a = m // n
-# print(a)
 ans = 0
 for i in b:
     if i <= a:

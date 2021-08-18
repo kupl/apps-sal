@@ -1,9 +1,7 @@
 class UnionFind():
     def __init__(self, n):
         self.n = n
-        # 親の添字、親自身は木の要素数*-1をもつ
         self.root = [-1] * (n)
-        # 枝の最大長さ
         self.rank = [0] * (n)
 
     def find_root(self, x):
@@ -12,7 +10,6 @@ class UnionFind():
         else:
             self.root[x] = self.find_root(self.root[x])
             return self.root[x]
-    # 高さによる合併
 
     def unite(self, x, y):
         x = self.find_root(x)
@@ -57,7 +54,7 @@ u = UnionFind(N)
 for a, b in AB:
     u.unite(a - 1, b - 1)
 
-ans = [u.count(i) - 1 for i in range(N)]  # 木の要素数から自分を引く
+ans = [u.count(i) - 1 for i in range(N)]
 ans
 
 for a, b in AB:

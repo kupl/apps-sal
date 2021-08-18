@@ -35,7 +35,7 @@ def indexes(L, R):
     return INDLIST
 
 
-def updates(l, r, x):  # 区間[l,r)をxに更新
+def updates(l, r, x):
 
     L = l + seg_el
     R = r + seg_el
@@ -69,7 +69,7 @@ def updates(l, r, x):  # 区間[l,r)をxに更新
         SEG[ind] = SEG[ind << 1] + SEG[1 + (ind << 1)]
 
 
-def getvalues(l, r):  # 区間[l,r)に関するminを調べる
+def getvalues(l, r):
 
     L = l + seg_el
     R = r + seg_el

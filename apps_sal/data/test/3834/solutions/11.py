@@ -17,6 +17,3 @@ def work(y): return sum(minm(bin(x ^ y).count('1')) for x in xs)
 ans = min(list(map(work, xs if m > k else list(range(1 << m)))))
 
 print(ans if ans <= k else -1)
-
-
-# Made By Mostafa_Khaled

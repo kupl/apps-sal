@@ -12,7 +12,7 @@ SEG = [0] * (2 * seg_el)
 LAZY = [0] * (2 * seg_el)
 
 
-def indexes(L, R):  # 遅延伝搬すべきノードのリストを返す. （つまり, updateやgetvaluesで見るノードより上にあるノードたち）
+def indexes(L, R):
     INDLIST = []
 
     R -= 1
@@ -35,7 +35,7 @@ def indexes(L, R):  # 遅延伝搬すべきノードのリストを返す. （�
     return INDLIST
 
 
-def updates(l, r, x):  # 区間[l,r)をxに更新
+def updates(l, r, x):
 
     L = l + seg_el
     R = r + seg_el
@@ -45,7 +45,7 @@ def updates(l, r, x):  # 区間[l,r)をxに更新
 
     UPIND = indexes(L, R)
 
-    for ind in UPIND[::-1]:  # 遅延伝搬
+    for ind in UPIND[::-1]:
         if LAZY[ind] != None:
             update_lazy = LAZY[ind] * (1 << (seg_height - 1 - (ind.bit_length())))
             LAZY[ind << 1] = LAZY[1 + (ind << 1)] = LAZY[ind]
@@ -69,7 +69,7 @@ def updates(l, r, x):  # 区間[l,r)をxに更新
         SEG[ind] = SEG[ind << 1] + SEG[1 + (ind << 1)]
 
 
-def getvalues(l, r):  # 区間[l,r)に関するminを調べる
+def getvalues(l, r):
 
     L = l + seg_el
     R = r + seg_el
@@ -79,7 +79,7 @@ def getvalues(l, r):  # 区間[l,r)に関するminを調べる
 
     UPIND = indexes(L, R)
 
-    for ind in UPIND[::-1]:  # 遅延伝搬
+    for ind in UPIND[::-1]:
         if LAZY[ind] != None:
             update_lazy = LAZY[ind] * (1 << (seg_height - 1 - (ind.bit_length())))
             LAZY[ind << 1] = LAZY[1 + (ind << 1)] = LAZY[ind]
