@@ -19,7 +19,7 @@ elif p == 5:
 
 else:
     power = 1
-    for i in range(len(s) - 1, -1, -1):  # handling of 0's as n and rem
+    for i in range(len(s) - 1, -1, -1):
         n = int(s[i]) * power + rem
         power *= 10
         power = power % p

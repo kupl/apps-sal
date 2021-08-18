@@ -28,8 +28,6 @@ def resolve():
         G[u - 1].append((v - 1, w))
         G[v - 1].append((u - 1, w))
 
-    # print(G)
-
     ans = [-1] * N
     ans[0] = 0
     visited = [False] * N

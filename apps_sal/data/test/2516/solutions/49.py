@@ -16,7 +16,6 @@ else:
         cnt[x % p] += 1
         d *= 10
         d %= p
-    # print(cnt)
     for v in cnt:
         ans += v * (v - 1) // 2
 print(ans)

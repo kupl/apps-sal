@@ -12,7 +12,6 @@ for query in range(N - 1):
     cost[u].append(w % 2)
     graph[v].append(u)
     cost[v].append(w % 2)
-# print('input')
 
 que = deque()
 
@@ -21,25 +20,18 @@ que.append(1)
 
 while que:
     now = que.popleft()
-    # print(graph[now])
     for index in range(len(graph[now])):
         nextg = graph[now][index]
         nextc = cost[now][index]
-        # print(ans[nextg])
         if ans[nextg] != -1:
-            # print('continued')
             continue
         que.append(nextg)
 
-        # print(nextc)
         if nextc == 1:
             ans[nextg] = (ans[now] + 1) % 2
         else:
             ans[nextg] = ans[now]
-    # print(que)
-    # print(ans)
 
-# print(ans)
 
 for i in range(1, N + 1):
     print(ans[i])

@@ -8,7 +8,6 @@ for i in range(n - 1):
     w %= 2
     d[u - 1].append([v - 1, w])
     d[v - 1].append([u - 1, w])
-# print(d)
 
 Q = deque()
 Q.append(0)

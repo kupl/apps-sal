@@ -14,7 +14,6 @@ parity[0] = 0
 que = deque()
 que.append(0)
 while que:
-    # print(que)
     v = que.popleft()
     for nv, w in g[v]:
         if used[nv]:
@@ -23,6 +22,5 @@ while que:
         used[nv] = 1
         que.append(nv)
 
-# print(used)
 for i in range(n):
     print(parity[i])

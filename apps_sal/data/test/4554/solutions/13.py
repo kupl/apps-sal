@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 w, a, b = map(int, input().split())
 if b > a:
     if b - w - a > 0:

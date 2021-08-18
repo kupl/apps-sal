@@ -1,4 +1,3 @@
-# B - NarrowRectanglesEasy
 def main():
     W, a, b = map(int, input().split())
 

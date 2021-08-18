@@ -3,7 +3,6 @@ import math
 import fractions
 f = sys.stdin
 
-#f = open("input.txt", "r")
 
 line_ = list(map(int, f.readline().split()))
 

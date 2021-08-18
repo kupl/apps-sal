@@ -4,7 +4,6 @@
 from sys import stdin
 
 
-# main starts
 l, r = list(map(int, stdin.readline().split()))
 x = l
 for i in range(l, r + 1):

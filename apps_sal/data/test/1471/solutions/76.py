@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from operator import add, itemgetter, mul, xor
 from math import gcd
 from decimal import Decimal
@@ -36,7 +35,6 @@ for i in range(n - 1):
     w = w % 2
     graph[u].append([v, w])
     graph[v].append([u, w])
-# vをcに塗る。pはvの親
 
 
 def dfs(v, p, c, ans):

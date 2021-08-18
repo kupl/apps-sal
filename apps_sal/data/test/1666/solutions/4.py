@@ -2,13 +2,11 @@ def all_outcome(x, y, a, b):
     s = x + y
     outcomes = []
 
-    # first player's outcomes
     for c in range(a, x + 1):
         for d in range(b, y + 1):
             if d >= b and d <= y and c > d:
                 outcomes.append([c, d])
 
-    # if
     print(len(outcomes))
     for o in outcomes:
         print(o[0], o[1])

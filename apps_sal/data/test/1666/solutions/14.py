@@ -1,4 +1,3 @@
-# coding=utf-8
 
 x, y, a, b = list(map(int, input().split(' ')))
 ans = 0

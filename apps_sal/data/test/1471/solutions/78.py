@@ -18,9 +18,7 @@ while q:
     for next_node, next_dist in d[node]:
         if not visited[next_node]:
             q.append(next_node)
-            # 距離を更新
             distance[next_node] = distance[node] + next_dist
 
-# print(distance)
 for dist in distance[1:]:
     print(dist % 2)
