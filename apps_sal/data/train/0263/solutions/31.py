@@ -13,13 +13,11 @@ class Solution:
                 for neighbor in neighbors[position]:
                     current_case[position] += prior_case[neighbor]
             prior_case = current_case
-            # print(sum(prior_case))
 
         return sum(prior_case) % (10**9 + 7)
         '''
         moves = [[4,6],[6,8],[7,9],[4,8],[0,3,9],[],[0,1,7],[2,6],[1,3],[2,4]]
-        # down up dp appraoch
-        prev_level = [1] * 10 # base
+        prev_level = [1] * 10 
         curr_level = [0] * 10
         level = 1
         

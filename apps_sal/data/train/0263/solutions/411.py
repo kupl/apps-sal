@@ -28,23 +28,3 @@ class Solution:
         self.cache[key] = ans
 
         return self.cache[key]
-#         pkey = str(i) + '-' + str(j) + '-' + str(n)
-
-#         if pkey in self.dp.keys():
-#             return self.dp[pkey]
-
-
-#         for dx,dy in self.dirs:
-#             x = i + dx
-#             y = j + dy
-#             temp = 0
-#             if 0 <= x <= self.m -1 and 0 <= y <= self.n-1 and self.numpad[x][y] != -1:
-#                 key = str(x) + '-' + str(y) + '-' + str(n-1)
-#                 if key in self.dp.keys():
-#                     temp =  self.dp[key]
-#                 else:
-#                     temp =  self.solve(x,y,n-1)
-#                     self.dp[key] = temp
-#             ans += temp
-
-#         self.dp[pkey] = ans

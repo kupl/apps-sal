@@ -1,4 +1,3 @@
-# to find the second largest number from given 3 number
 
 n = int(input())
 for _ in range(n):

@@ -27,12 +27,5 @@ class DinnerPlates:
     def popAtStack(self, index: int) -> int:
         if index >= len(self.arr) or not self.arr[index]:
             return -1
-        # print(index, self.arr)
         heapq.heappush(self.indices, index)
         return self.arr[index].pop()
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

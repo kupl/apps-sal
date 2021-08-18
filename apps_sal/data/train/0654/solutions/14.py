@@ -6,4 +6,4 @@ for i in range(t):
     elif (y > x and y < z) or (y > z and y < x):
         print(y)
     else:
-        print(z)  # cook your dish here
+        print(z)

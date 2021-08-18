@@ -47,10 +47,3 @@ class DinnerPlates:
                 heapq.heappush(self.leftmost, index)
 
             return stack.pop()
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

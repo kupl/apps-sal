@@ -8,5 +8,4 @@ class Solution:
             for j in range(10):
                 for v in d[j]:
                     f[i & 1][v] += f[(i - 1) & 1][j] % (10**9 + 7)
-            # print(f[i&1])
         return sum(f[n & 1]) % (10**9 + 7)

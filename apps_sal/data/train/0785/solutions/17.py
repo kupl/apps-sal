@@ -9,9 +9,7 @@ try:
         max = 0
         k = 0
         g = 1
-        # print('ff')
         while(g > 0):
-            # print('hjh')
             s = s + a
             f = f + (2**(j - 1))
             j = j + 1

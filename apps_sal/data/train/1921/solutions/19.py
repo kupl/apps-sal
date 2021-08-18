@@ -1,5 +1,4 @@
 class DinnerPlates:
-    # Use heap to store index of available stack
     def __init__(self, capacity: int):
         self.cap = capacity
         self.stacks = []
@@ -41,9 +40,3 @@ class DinnerPlates:
 
             return item
         return -1
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

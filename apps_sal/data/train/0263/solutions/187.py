@@ -14,8 +14,6 @@ class Solution:
         return cache[(curr_n, n)]
 
     def knightDialer(self, n: int) -> int:
-        # TLE, let's take care of some symmetry
-        # 1 == 3 == 9 == 7, 4 == 6, 2 == 8, 0
         if n == 1:
             return 10
 
@@ -33,7 +31,6 @@ class Solution:
             0: [4, 6],
         }
 
-        # Bottom-up
         dp_curr = [1] * 10
         dp_next = [0] * 10
 
@@ -44,9 +41,3 @@ class Solution:
             dp_next = [0] * 10
 
         return sum(dp_curr) % mod
-
-#         nums = 0
-#         for m, weight in [(1,4),(2,2),(4,2),(0,1)]:
-#             nums += weight * self._knightDialer(n-1, m, moves_map, cache)
-
-#         return nums % mod

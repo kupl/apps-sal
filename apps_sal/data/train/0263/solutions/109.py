@@ -23,7 +23,6 @@ class Solution:
         def dfs(d, x, y):
             if d == n:
                 ans.append()
-            # check x, y
             x + 2, y + 1, y - 1
             x - 2, y + 1, y - 1
             y + 2, x + 1, x - 1
@@ -32,26 +31,3 @@ class Solution:
             dfs(d + 1, nx, ny)
         
         '''
-#         def dfs(d, x, y):
-#             nonlocal ans
-#             if d == n:
-#                 ans += 1
-#                 return
-#             for dx, dy in directions:
-#                 nx, ny = x + dx, y + dy
-#                 if nx < 0 or nx > M - 1 or ny < 0 or ny > N - 1 or matrix[nx][ny] == -1:
-#                     continue
-#                 dfs(d + 1, nx, ny)
-
-#         matrix = [[1, 2, 3],
-#                   [4, 5, 6],
-#                   [7, 8, 9],
-#                   [-1, 0, -1]]
-#         M, N = len(matrix), len(matrix[0])
-#         directions = [(2, 1), (2, -1), (-2, 1), (-2, -1), (1, 2), (-1, 2), (1, -2), (-1, -2)]
-#         ans = 0
-#         for i in range(M):
-#             for j in range(N):
-#                 if matrix[i][j] != -1:
-#                     dfs(1, i, j)
-#         return ans % (10**9 + 7)

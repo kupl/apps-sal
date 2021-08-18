@@ -11,7 +11,7 @@ class Solution:
 
             if 0 <= x < 4 and 0 <= y < 3 and ((x, y) != (3, 0) or (x, y) != (3, 2)):
                 curr += dp[x][y]
-        return curr  # %(10**9+7)
+        return curr
 
     def knightDialer(self, n: int) -> int:
 

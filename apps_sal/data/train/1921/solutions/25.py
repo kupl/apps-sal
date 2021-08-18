@@ -7,7 +7,6 @@ class DinnerPlates:
         self.capacity = capacity
         self.stacklist = []
         self.minh = []
-        # heapq.heapify(self.minh)
 
     def push(self, val: int) -> None:
         while len(self.minh) > 0:
@@ -46,10 +45,3 @@ class DinnerPlates:
             res = self.stacklist[index].pop()
             heapq.heappush(self.minh, index)
             return res
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

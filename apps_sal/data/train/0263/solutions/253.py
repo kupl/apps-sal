@@ -13,30 +13,6 @@ class Solution:
         cell2jump[9] = [2, 4]
         cell2jump[0] = [4, 6]
 
-#         # dp[n, i] = helper(n, i)
-#         dp = defaultdict()
-
-#         def helper(num_jumps, cell):
-#             # return number of jumps if place at cell and have num_jumps remaining
-#             if num_jumps == 1:
-#                 return 1
-#             elif num_jumps == 2:
-#                 return len(cell2jump[cell])
-
-#             if (num_jumps, cell) in dp:
-#                 return dp[num_jumps, cell]
-
-#             res = 0
-#             for nei in cell2jump[cell]:
-#                 res += helper(num_jumps-1, nei)
-
-#             dp[num_jumps, cell] = res
-#             return res
-
-#         total = []
-#         for i in range(10):
-#             total.append(helper(n, i))
-
         dp = [1] * 10
         for _ in range(n - 1):
             new_dp = [0] * 10

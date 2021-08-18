@@ -14,12 +14,10 @@ class Solution:
                 return memo[(key, rem)]
 
             count = 0
-            # Move to each valid key from this key
             moves = moveMap[key]
             for m in moves:
                 count += aux(m, rem - 1)
 
-            # Save the result
             memo[(key, rem)] = count
             return count
 
