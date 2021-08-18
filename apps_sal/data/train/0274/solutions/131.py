@@ -22,9 +22,5 @@ class Solution:
                     min_deque.popleft()
 
             ans = max(ans, r - l + 1)
-            # print(\"iteration\")
-            # print(r)
-            # print(ans)
-            # print(r - l + 1)
 
         return ans

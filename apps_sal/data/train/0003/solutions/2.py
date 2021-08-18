@@ -1,4 +1,3 @@
-# map(int, input().split())
 rw = int(input())
 for wewq in range(rw):
     n, k = list(map(int, input().split()))

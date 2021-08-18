@@ -15,18 +15,10 @@ class Solution:
             pq_max.add(-val)
             end += 1
 
-            # print(pq_min)
-            # print(pq_max)
-            # print(\" - \")
-
             while abs(pq_min[0] + pq_max[0]) > limit:
                 pq_min.remove(nums[st])
                 pq_max.remove(-nums[st])
                 st += 1
-
-            # print(pq_min)
-            # print(pq_max)
-            # print(\" ----------- \")
 
             res = max(res, end - st)
 

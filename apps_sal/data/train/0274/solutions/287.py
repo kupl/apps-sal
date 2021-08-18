@@ -13,7 +13,6 @@ class Solution:
         max_n = min_n = nums[0]
 
         while i <= j and j < len(nums):
-            # print(i, j, max_len)
 
             if max_n - min_n <= limit:
                 max_len = max(max_len, j - i + 1)
@@ -44,6 +43,4 @@ class Solution:
                             break
 
                 i += 1
-            # print(i, j, max_len)
-            # print('-------------')
         return max_len

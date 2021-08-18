@@ -1,11 +1,6 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
 
-        # nums = [8,2,4,7]
-        # max_len = 0
-        # first = 0
-        # second = 0
-
         max_list = []
         min_list = []
 

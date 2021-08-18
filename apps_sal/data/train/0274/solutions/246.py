@@ -3,12 +3,10 @@ import collections
 
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
-        # sliding window
         mx, mn = collections.deque([0]), collections.deque([0])
         ans = 1
         left = 0
         for i in range(1, len(nums)):
-            # update max and min monotonic q
             while mx and nums[mx[-1]] < nums[i]:
                 mx.pop()
             mx.append(i)

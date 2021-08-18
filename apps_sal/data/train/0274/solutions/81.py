@@ -4,7 +4,6 @@ class Solution:
             return 0
         if(len(nums) == 1):
             return 1
-        #n = len(nums)
         start = 0
         end = 1
         maxi = nums[0]
@@ -16,7 +15,6 @@ class Solution:
             if(maxi - mini <= limit):
                 max_l = max(max_l, end - start + 1)
             else:
-                #max_l = max(max_l, end-start)
                 if(nums[start] == maxi):
                     maxi = max(nums[start + 1:end + 1])
                 if(nums[start] == mini):

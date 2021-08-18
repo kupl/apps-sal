@@ -21,7 +21,6 @@ for i in range(len(a)):
             str1[30] = '1'
         if str[30] == '1':
             str1[30] = '0'
-        # print(str1)
         str1 = ''.join(str1)
         x = int(str1, 2)
         c.append(x)

@@ -5,8 +5,8 @@ class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         N = len(nums)
         ans = 0
-        maxi = deque()  # decreasing 9 5 1
-        mini = deque()  # increasing 1 5 9
+        maxi = deque()
+        mini = deque()
         j = 0
 
         for i in range(N):
@@ -22,7 +22,6 @@ class Solution:
             if abs(nums[maxi[0]] - nums[mini[0]]) <= limit:
                 ans = max(ans, abs(maxi[0] - mini[0]) + 1)
             else:
-                # remove elements outside of the window
                 while mini and mini[0] <= j:
                     mini.popleft()
                 while maxi and maxi[0] <= j:

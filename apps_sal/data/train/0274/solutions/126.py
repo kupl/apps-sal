@@ -1,22 +1,5 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
-        # [8, 2, 4, 7] limit = 4
-        # want to keep track of max and min elements + indexes
-        # thinking of a sliding window approach
-        # 8, 8 -> 8, 2 -> 2, 4 -> 2, 7 -> end
-        # difference between i and j + 1
-        # [10, 1, 2, 4, 7, 2], limit = 5
-        # 10, 10 -> 10, 1 -> 1, 2 -> 1, 4 -> 1, 7 -> 2, 7 -> 2, 2 -> end
-        # turns out i need a list of max and min elements + indexes
-        # [8, 11, 5, 7, 9, 10, 8, 7, 6];
-        # (8, 11) -> (11, 5) ->
-        # The list of max elements must contain elements in window, descending order
-        # The list of min elements must contain elements in window, ascending order
-
-        # (6, 8) (7, 7) (9, 6)
-        # (9, 6)
-        # i = 3, j = 10
-        # res = 6
 
         if limit < 0:
             return 0

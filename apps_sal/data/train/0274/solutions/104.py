@@ -1,5 +1,4 @@
 import heapq
-# import collections
 
 
 class Solution:
@@ -19,23 +18,3 @@ class Solution:
 
             res = max(res, j - i + 1)
         return res
-
-#         maxq = collections.deque()
-#         minq = collections.deque()
-#         res = i = 0
-
-#         for j in range(len(nums)):
-#             while maxq and nums[maxq[-1]] < nums[j]: maxq.pop()
-#             while minq and nums[minq[-1]] > nums[j]: minq.pop()
-
-#             maxq.append(j)
-#             minq.append(j)
-
-#             while nums[maxq[0]] - nums[minq[0]] > limit:
-#                 i = min(maxq[0], minq[0]) + 1
-#                 while i > maxq[0]: maxq.popleft()
-#                 while i > minq[0]: minq.popleft()
-
-#             res = max(res, j-i+1)
-
-#         return res
