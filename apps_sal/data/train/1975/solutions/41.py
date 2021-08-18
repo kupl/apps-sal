@@ -24,10 +24,3 @@ class CustomStack:
             k -= 1
         while(tstack):
             self.stack.appendleft(tstack.pop())
-
-
-# Your CustomStack object will be instantiated and called as such:
-# obj = CustomStack(maxSize)
-# obj.push(x)
-# param_2 = obj.pop()
-# obj.increment(k,val)

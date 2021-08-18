@@ -7,7 +7,6 @@ def complete_binary_tree(a):
 
     while len(rows):
         newrows = []
-        # print(rows)
         for x in rows:
             ln = len(x)
             if ln > 1:
