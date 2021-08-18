@@ -15,6 +15,4 @@ for i in range(Q):
     D[C[i]] += D[B[i]]
     s = s + C[i] * D[B[i]]
     D[B[i]] = 0
-#  A = [C[i] if B[i]==A[j] else A[j] for j in range(N)]
-#  print(A)
     print(s)

@@ -6,7 +6,6 @@ c = C(l)
 s = sum(l)
 res = []
 
-# print(c)
 
 for i, e in enumerate(l):
 

@@ -1,4 +1,3 @@
-# C - K-th Substring
 
 s = str(input())
 K = int(input())

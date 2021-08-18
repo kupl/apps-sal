@@ -1,7 +1,5 @@
 s = input()
 k = int(input())
-#l = "abcdefghijklmnopqrstuvwxyz"
-# print(ord("b")) 97
 ans = []
 for i in range(len(s)):
     x = 0
@@ -11,5 +9,4 @@ for i in range(len(s)):
             ans.append((x, s[i:i + j + 1]))
 ans = list(set(ans))
 ans.sort()
-# print(ans)
 print(ans[k - 1][1])

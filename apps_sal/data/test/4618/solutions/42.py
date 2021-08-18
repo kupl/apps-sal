@@ -11,15 +11,8 @@ for i in range(len(s)):
         l = 0
         while l < 5 and x > d[l]:
             l += 1
-        # print(k, d[0:k], x, d[k:])
         if l < 5:
             d = d[0:l] + [x] + d[l:]
             d = d[0:5]
-        # print(f"->{d}")
-# l = list(d)
-# l.sort()
-# print(l)
-# if l[0] == '':
-    # l = l[1:]
 
 print((d[k - 1]))

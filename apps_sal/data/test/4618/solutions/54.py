@@ -11,7 +11,6 @@ for i in range(len(s)):
         cand.append(temp)
 
 cand.sort()
-# print(cand)
 ans = cand.pop(0)
 k -= 1
 while k != 0:

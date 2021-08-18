@@ -20,7 +20,6 @@ def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10**9 + 7
-#from decimal import *
 
 
 def main():
@@ -28,9 +27,8 @@ def main():
     K = INT()
 
     strings = set()
-    for i in range(1, K + 1):  # 文字列の長さ : K番目で長さがK以上のを考える必要はない。
-        for j in range(len(s) - i + 1):  # スタート地点
-            #print(j, i)
+    for i in range(1, K + 1):
+        for j in range(len(s) - i + 1):
             strings.add(s[j:j + i])
 
     print((sorted(strings)[K - 1]))

@@ -1,4 +1,3 @@
-# http://codeforces.com/contest/791/problem/B
 
 nax = 150123
 

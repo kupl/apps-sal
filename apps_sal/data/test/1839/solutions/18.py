@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 n = int(input())
 H = [False for i in range(n + 1)]

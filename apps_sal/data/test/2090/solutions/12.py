@@ -32,7 +32,6 @@ songs.sort(key=lambda x: -x[1])
 h = []
 maxsofar = 0
 newlen = 0
-# print(songs)
 for i in range(k):
     beauty = songs[i][1]
 
@@ -50,5 +49,4 @@ for i in range(k, n):
         removed = heapq.heappushpop(h, songs[i][0])
         newlen += songs[i][0] - removed
         maxsofar = max(maxsofar, newlen * beauty)
-    # print(h)
 print(maxsofar)

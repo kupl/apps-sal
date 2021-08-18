@@ -20,11 +20,9 @@ while nn > 0:
     nn //= 2
 q = (final[0][0] * 3 + final[0][1] * 2 + final[0][2] * 1) % N
 p = q - (n % N) + N
-# p to potega c
 ef3 = (final[0][0] * 1) % N
 ef2 = (final[0][1] * 1) % N
 ef1 = (final[0][2] * 1) % N
-# print f1^ef1 *f2^ef2*f3^ef3 * c^p
 
 
 def pot(a, w):

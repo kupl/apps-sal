@@ -1,6 +1,5 @@
 import os
 from io import BytesIO, StringIO
-#input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
 
 DEBUG = False
 debug_print = print if DEBUG else lambda *x, **y: None
