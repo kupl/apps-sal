@@ -31,7 +31,6 @@ else:
     b -= cnt // 2
 cnt = 0
 
-# print(a,b)
 if(a <= 0):
     if(b <= 0):
         print(A + B)

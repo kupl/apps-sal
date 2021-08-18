@@ -4,10 +4,8 @@
 '''
 from sys import stdin
 import collections
-# from random import randint
 
 
-# heapdict source code
 def doc(s):
     if hasattr(s, '__call__'):
         s = s.__doc__
@@ -126,8 +124,6 @@ def create_necessities(arr, n):
     size_heap = heapdict()
     link = dict()
 
-    # for unique indentification
-    # for last element processing and saving code
     arr.append(-1)
     count = 1
     for i in range(n + 1):
@@ -145,7 +141,6 @@ def create_necessities(arr, n):
                 leader = arr[i]
                 size = 1
 
-    # creating neighbours
     next_node = dict()
     prev_node = dict()
     for i in link:
@@ -166,17 +161,12 @@ def create_necessities(arr, n):
             else:
                 next_node[i] = None
 
-    # print(prev_node, next_node)
     return link, size_heap, prev_node, next_node
 
 
-# main start
 n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 
-# arr = []
-# for i in range(200000):
-# 	arr.append(randint(1, 1))
 link, size_heap, prev_node, next_node = create_necessities(arr, len(arr))
 
 op = 0
@@ -186,7 +176,6 @@ while len(size_heap) > 0:
     if prev_node[node] != None and next_node[node] != None and link[prev_node[node]] == link[next_node[node]]:
         if prev_node[node] in size_heap and next_node[node] in size_heap:
 
-            # adjusting the size_heap
             temp1 = size_heap[prev_node[node]]
             t1 = (-temp1) % (10 ** 14)
             temp2 = size_heap[next_node[node]]
@@ -197,7 +186,6 @@ while len(size_heap) > 0:
             size_heap.popitem()
             size_heap[prev_node[node]] = temp1 + temp2 + t2
 
-            # adjusting neighbours
             next_node[prev_node[node]] = next_node[next_node[node]]
             if next_node[next_node[node]] != None:
                 prev_node[next_node[next_node[node]]] = prev_node[node]

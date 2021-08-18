@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
 
 [n, a, b] = list(map(int, input().strip().split()))
 s = input().strip() + '*'
 
-l0 = 0  # tot len of even parts
-n1 = 0  # num of odd parts
+l0 = 0
+n1 = 0
 
 i_prev = -1
 while True:

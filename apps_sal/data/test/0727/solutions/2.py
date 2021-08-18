@@ -3,7 +3,6 @@ import heapq
 n = int(input())
 a = list(map(int, input().split()))
 
-# idx: l, r, length, val
 d = {}
 pre, l = None, 0
 seg = []
@@ -36,7 +35,6 @@ while len(Q) > 0:
     length, idx = heapq.heappop(Q)
     length = -length
 
-    # print(d[idx])
     if d[idx][2] != length:
         continue
 

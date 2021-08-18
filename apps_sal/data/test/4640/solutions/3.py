@@ -78,9 +78,6 @@ for _ in range(val()):
         totnow = curright - i
         dp[i] = totnow
 
-    # print(l, k)
-    # print(dp)
-
     root = build(dp, 0, n)
 
     for i in range(n):

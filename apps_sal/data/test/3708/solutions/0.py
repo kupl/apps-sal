@@ -41,7 +41,6 @@ while i < len(a):
     else:
         r = a[i][0]
         d = [[d[0][0], n]]
-    #print(r, i, d)
 
 if len(d) == 0 or d[len(d) - 1][1] < n:
     print(-1)

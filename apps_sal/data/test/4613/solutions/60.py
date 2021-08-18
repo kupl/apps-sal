@@ -40,14 +40,12 @@ def lowlink(g, root=0):
     for v in seq:
         for u in child[v]:
             low[v] = min(low[v], low[u])
-    # bridge
     bridge = []
     for p in range(n):
         for c in child[p]:
             if order[p] < low[c]:
                 bridge.append((p, c))
 
-    # articulation points
     AP = []
     for v in range(n):
         if v == root:

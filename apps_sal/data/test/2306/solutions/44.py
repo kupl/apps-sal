@@ -46,7 +46,6 @@ def solve():
     for i in range(sumt):
         ans += (vs[i] + vs[i + 1]) / 4
 
-    # print(dict(zip(range(len(vs)), vs)))
     print(ans)
 
 

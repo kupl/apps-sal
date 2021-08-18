@@ -5,7 +5,7 @@ vtmax = [0]
 tmp = 0
 Tsum = sum(T)
 for t, v in zip(T, V):
-    vtmax[-1] = min(tmp, v)  # 境界は小さい方が制約
+    vtmax[-1] = min(tmp, v)
     vtmax += [v] * (t * 2)
     tmp = v
 vtmax[-1] = 0

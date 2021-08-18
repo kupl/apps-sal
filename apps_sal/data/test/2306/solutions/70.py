@@ -12,7 +12,6 @@ def NLI(): return list(NMI())
 def SI(): return input()
 
 
-# 配列から累積和を返す
 def make_cumulative(A):
     C = [0] * (len(A) + 1)
     for i, a in enumerate(A):
