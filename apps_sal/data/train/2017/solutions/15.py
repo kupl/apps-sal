@@ -8,7 +8,6 @@ for i in range(2*n):
 	count[a[i]] = -1
 	real_position[a[i]].append(i)
 
-#print(position)
 sum = [i for i in position]
 for i in range(1, 2*n):
 	sum[i] += sum[i - 1]
@@ -18,8 +17,6 @@ ans1 = 0
 for i in range(n):
 	ans1 += (sum[real_position[i][1] - 1] - sum[real_position[i][0]])
 
-#ans = -(ans // 2)
-#print(ans)
 ans = 0
 for i in range(n):
 	ans += (real_position[i][1] - real_position[i][0] - 1)

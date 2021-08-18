@@ -1,4 +1,3 @@
-# Create a function args_count, that returns count of passed arguments
 def args_count(*args, **kwargs):
     ctr = 0
     for x in args:

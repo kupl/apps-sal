@@ -1,4 +1,3 @@
-# fierce battles - codechef oct 2012 - drgnbool.py
 
 t = int(input())
 

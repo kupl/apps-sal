@@ -1,5 +1,3 @@
-# Ankan Kumar Das
-# Date : 27/02/2020
 MOD = 10**9 + 7
 for _ in range(int(input())):
     l, r = map(int, input().split())

@@ -14,5 +14,4 @@ for i in range(0, n, 2):
                     res += 1
                 break
 
-#print (a)
 print(res)

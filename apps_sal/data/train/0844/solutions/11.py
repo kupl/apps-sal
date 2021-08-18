@@ -1,4 +1,3 @@
-#data = open("P5.txt")
 n, k = list(map(int, input().split()))
 tweets = [False] * n
 count = 0
