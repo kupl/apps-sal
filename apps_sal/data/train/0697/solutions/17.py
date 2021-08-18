@@ -13,5 +13,4 @@ for _ in range(int(input())):
         else:
             lastsum += pows[i + k - 1] - pows[i - 1]
             arr.append(lastsum)
-    # print(arr)
     print(max(arr))

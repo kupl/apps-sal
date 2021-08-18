@@ -1,7 +1,6 @@
 key = "GA DE RY PO LU KI"
 key += ' ' + key.lower()
 
-# generate translation dictionary
 dict = {}
 for a, b in key.split():
     dict[a] = b

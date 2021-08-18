@@ -1,8 +1,5 @@
 from sys import stdin
 
-# Input data
-#stdin = open("input", "r")
-
 
 for _ in range(int(stdin.readline())):
     n, k = list(map(int, stdin.readline().split()))

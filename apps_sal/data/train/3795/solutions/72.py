@@ -1,5 +1,4 @@
 def combat(health, damage):
-    # your code here
     all = health - damage
 
     if all > 0:

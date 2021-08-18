@@ -10,8 +10,6 @@ for i in range(N):
         A[i][ord(S[i]) - ord('a') + 1] += 1
     except:
         pass
-# for i in A:
-#     print(i)
 while Q > 0:
     Q -= 1
     X, Y = [int(x) for x in input().split()]

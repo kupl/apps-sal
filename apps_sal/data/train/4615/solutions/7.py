@@ -1,5 +1,4 @@
 def logistic_map(width, height, xs, ys):
-    # kind of a brute force solution but hey
 
     supply_stops = zip(*[xs, ys])
     points = [[None for x in range(width)] for x in range(height)]

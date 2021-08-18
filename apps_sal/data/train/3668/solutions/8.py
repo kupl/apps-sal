@@ -1,4 +1,3 @@
-# No need to store more than the last value so no functools.lru_cache
 def ST(n): return 6**n + 5**n - 2**n - 1
 def SF(x, y): return (x - 5 * y - 4) // 4
 
