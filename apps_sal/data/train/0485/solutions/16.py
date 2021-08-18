@@ -3,10 +3,6 @@ class Solution:
 
         flipped = collections.deque()
 
-        # Greedy
-        # 1. Never flip a 1
-        # 2. Try flipping every 0
-
         flips = 0
         for i in range(len(A)):
 

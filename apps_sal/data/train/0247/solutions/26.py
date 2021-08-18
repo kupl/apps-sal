@@ -34,7 +34,7 @@ class Solution:
             return min_right
 
         min_left = get_min(arr)
-        min_right = get_min_right()  # get_min(arr[::-1])[::-1]
+        min_right = get_min_right()
         print((min_right[::-1]))
 
         best = float('inf')

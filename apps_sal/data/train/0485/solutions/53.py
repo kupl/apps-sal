@@ -2,8 +2,6 @@ class Solution:
     def minKBitFlips(self, A: List[int], K: int) -> int:
         l = len(A)
         rem = l % K
-        # find indexes where the number changes
-        # add to change_list based on remainder class mod K
         prev = 1
         change_list = [[] for i in range(K)]
         for ind, num in enumerate(A):
@@ -29,7 +27,6 @@ class Solution:
     def oldMinKBitFlips(self, A: List[int], K: int) -> int:
         l = len(A)
 
-        # find indexes where the number changes
         prev = 1
         change_list = []
         for ind, num in enumerate(A):
@@ -44,12 +41,8 @@ class Solution:
 
         while len(change_list) > 1:
             first = change_list[0]
-            # if first + K > l, we are doomed
             if first + K >= l:
                 return -1
-            # remove first, and either
-                # 1) remove first + K if it exists, or
-                # 2) add first + K if it does not exist
             change_list = change_list[1:]
             left_insertion_pt = bisect.bisect_left(change_list, first + K)
             if left_insertion_pt >= len(change_list):
@@ -61,7 +54,6 @@ class Solution:
             num_flips += 1
 
         if len(change_list) > 0:
-            # in this section, len(change_list) == 1
             first = change_list[0]
             q, r = divmod(l - first, K)
             if r == 0:

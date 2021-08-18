@@ -20,12 +20,10 @@ class Solution:
         pointer1 = 0
         pointer2 = 1
         res = -1
-        # print(queue,min_q)
         while(pointer2 < len(queue)):
             if queue[pointer2][0] <= queue[pointer1][1]:
                 pointer2 += 1
                 continue
-            # print(pointer1,pointer2,res)
             if res < 0:
                 res = queue[pointer1][1] - queue[pointer1][0] + 1 + min_q[pointer2]
             else:

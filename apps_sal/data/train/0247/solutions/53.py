@@ -16,9 +16,6 @@ class Solution:
                 dp1[i] = min(dp1[i], i - table[cursum - target])
             table[cursum] = i
 
-        # print(table)
-        # print(dp1)
-
         table = {0: len(arr)}
         cursum = 0
         dp2 = [sys.maxsize for i in range(len(arr))]
@@ -29,9 +26,6 @@ class Solution:
             if cursum - target in list(table.keys()):
                 dp2[i] = min(dp2[i], table[cursum - target] - i)
             table[cursum] = i
-
-        # print(table)
-        # print(dp2)
 
         res = sys.maxsize
 

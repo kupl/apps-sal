@@ -27,8 +27,3 @@ class Solution:
         if ans == sys.maxsize:
             return -1
         return ans
-
-        # [3,1,1,1,5,1,2,1]
-        # 3 4 5 6 11 12 14 15
-
-       # 1 0 0 3 0 0.  2. 2

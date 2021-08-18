@@ -1,7 +1,5 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        # dp_leftは、右から見たときの最小長さarrayを保存
-        # dp_rightは、左から見たときの最小長さarrayを保存
         def get_sub_arrays(arr):
             lookup = collections.defaultdict(int)
             running_sum = 0
@@ -17,8 +15,8 @@ class Solution:
                 dp[i] = min(dp[i - 1], dp[i])
             return dp
 
-        dp_left = get_sub_arrays(arr)                     # from front
-        dp_right = get_sub_arrays(arr[::-1])[::-1]        # from backwards
+        dp_left = get_sub_arrays(arr)
+        dp_right = get_sub_arrays(arr[::-1])[::-1]
 
         ans = float('inf')
         for i in range(1, len(arr)):

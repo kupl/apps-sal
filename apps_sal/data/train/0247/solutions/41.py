@@ -37,7 +37,6 @@ class Solution:
                 heapq.heappush(lengths, len_one + len_two)
 
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        # What's the best I can do ENDING at this index.
         self.preceeding_soln_lens = [sys.maxsize] * len(arr)
         min_len_sum = sys.maxsize
         buffer = []
@@ -45,25 +44,20 @@ class Solution:
         buffer_len = 0
 
         i = 0
-        # O(N)
         while i < len(arr):
-            # update state
             buffer_sum += arr[i]
             buffer_len += 1
             buffer.append(i)
 
             sub_array_end_idx = buffer[-1]
 
-            # check constraint
             if buffer_sum < target:
-                # copy over the previous one
                 self.preceeding_soln_lens[sub_array_end_idx] = self.preceeding_soln_lens[sub_array_end_idx - 1]
 
             while buffer_sum >= target:
                 popped_idx = buffer.pop(0)
 
                 if buffer_sum == target:
-                    # check for the min
                     self.preceeding_soln_lens[sub_array_end_idx] = min(buffer_len, self.preceeding_soln_lens[sub_array_end_idx - 1])
 
                     if popped_idx > 0:

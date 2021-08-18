@@ -1,16 +1,13 @@
 class Solution:
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         result = float('inf')
-        # prefix shortest length read from left to right
         leftmin = self.getMinLen(arr, target, True)
-        # suffix shortest length read from right to left
         rightmin = self.getMinLen(arr, target, False)
         for i in range(0, len(arr) - 1):
             result = min(result, leftmin[i] + rightmin[i + 1])
         return result if result != float('inf') else -1
 
     def getMinLen(self, arr, target, l2r):
-        # if it's reading from right to left, then reverse input array
         if not l2r:
             arr = arr[::-1]
         memo = {0: 0}

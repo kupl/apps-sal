@@ -3,10 +3,8 @@ class Solution:
         for i in range(1, len(arr)):
             arr[i] += arr[i - 1]
 
-        # arr is now prefix_sum
-
-        index = {0: -1}  # map prefix_sum -> index of that sum
-        best_till = [float('inf')] * len(arr)  # best_till[i] is best answer up till that
+        index = {0: -1}
+        best_till = [float('inf')] * len(arr)
         res = float('inf')
         best = float('inf')
 
