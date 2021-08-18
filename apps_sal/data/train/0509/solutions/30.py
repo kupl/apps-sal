@@ -1,4 +1,3 @@
-# C
 from queue import Queue
 N, M = map(int, input().split())
 P = [-1] * (N + 1)

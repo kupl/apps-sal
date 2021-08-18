@@ -1,4 +1,3 @@
-# See. https://atcoder.jp/contests/arc108/tasks/arc108_c
 
 import numpy as np
 
@@ -44,5 +43,3 @@ def main():
 
 
 main()
-
-# vim: ts=2 sw=2

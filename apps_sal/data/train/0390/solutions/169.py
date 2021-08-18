@@ -1,6 +1,5 @@
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
-        # Square numbers: 1, 4, 9, 16, 25...
 
         def removeSquare(n: int, memo: [int]):
 
@@ -18,9 +17,6 @@ class Solution:
 
                 memo[n - (i * i)] = removeSquare(n - (i * i), memo)
 
-                # If you can make a move, that will result
-                # in the case: n==0
-                # Then you can win
                 if memo[n - (i * i)] == False:
                     return True
 

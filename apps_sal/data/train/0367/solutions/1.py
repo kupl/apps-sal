@@ -5,9 +5,6 @@ class Solution:
         :rtype: int
         """
 
-        # similar to find cycle in the linked list
-        # actually, here we have more than 1 logical linked list(with or without cycle)
-        # begin with nums[0] can help us determining at least one cycled linked list of them
         fast, slow = nums[0], nums[0]
         while(True):
             slow = nums[slow]

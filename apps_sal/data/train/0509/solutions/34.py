@@ -26,7 +26,6 @@ def HalfDead():
         u, v, c = R()
         g[u][v] = c
         g[v][u] = c
-    # print("here")
     color = [0] * (n + 2)
     color[1] = 1
 
@@ -55,7 +54,6 @@ def HalfDead():
 
 
 def __starting_point():
-    # for _ in range(I()):
     HalfDead()
 
 

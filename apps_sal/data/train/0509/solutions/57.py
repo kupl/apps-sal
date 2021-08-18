@@ -29,6 +29,5 @@ while len(q) > 0:
             else:
                 ansDic[l1] = k
 
-# print(ansDic)
 for i in range(1, n + 1):
     print(ansDic[i])

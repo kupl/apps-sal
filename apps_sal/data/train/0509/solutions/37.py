@@ -7,10 +7,6 @@ E = [list(map(int, input().split())) for i in range(m)]
 
 F = []
 
-# E = [(cost, v, w), ...]
-#   G上の全ての辺(v, w)とそのcostを含むlist
-
-# Union-Findを使うことで頂点間の連結判定を行う
 
 *p, = range(n)
 
@@ -41,7 +37,6 @@ for v, w, c in E:
         F.append([v, w, c])
         ans += c
 
-# ansが最小全域木の解
 
 g = [[] for i in range(n)]
 ans = [0] * n

@@ -9,7 +9,7 @@ for u, v, c in UVC:
     tree[v].append((u, c))
 
 result = [0] * N
-result[0] = 1  # 適当
+result[0] = 1
 stack = [0]
 while stack:
     current = stack.pop()

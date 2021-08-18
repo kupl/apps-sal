@@ -17,9 +17,6 @@ def input():
     return stdin.readline().strip()
 
 
-# unionfind
-
-
 class UnionFind():
     def __init__(self, n):
         self.n = n

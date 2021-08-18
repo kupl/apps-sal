@@ -7,14 +7,14 @@ class UnionFind():
         self.n = n
         self.parents = [-1] * n
 
-    def find(self, x):  # 親を返す
+    def find(self, x):
         if self.parents[x] < 0:
             return x
         else:
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    def unite(self, x, y):  # 和集合の生成
+    def unite(self, x, y):
         x = self.find(x)
         y = self.find(y)
 
@@ -27,23 +27,23 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-    def size(self, x):  # 所属する集合の大きさ
+    def size(self, x):
         return -self.parents[self.find(x)]
 
-    def same(self, x, y):  # 同じ集合に属しているか判定
+    def same(self, x, y):
         return self.find(x) == self.find(y)
 
-    def members(self, x):  # 同じ集合に属する要素全列挙
+    def members(self, x):
         root = self.find(x)
         return [i for i in range(self.n) if self.find(i) == root]
 
-    def roots(self):  # 集合のリーダー全列挙
+    def roots(self):
         return [i for i, x in enumerate(self.parents) if x < 0]
 
-    def group_count(self):  # 集合の数
+    def group_count(self):
         return len(self.roots())
 
-    def all_group_members(self):  # 辞書型,{(リーダーの番号):(その集合の要素全列挙)}
+    def all_group_members(self):
         self.group = {r: [] for r in self.roots()}
         for i in range(self.n):
             self.group[self.find(i)].append(i)

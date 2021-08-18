@@ -9,7 +9,6 @@ for _ in range(t):
         for i in range(n):
             for j in range(l[i]):
                 ans.append(i + 1)
-        # final_ans=[-1]*n
         for i in range(len(ans)):
             if ans[i] == i + 1:
 

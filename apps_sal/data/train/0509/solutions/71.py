@@ -1,5 +1,3 @@
-# BFS_領域木_無向グラフ_多重辺
-# 空のリストの集合は[[] for i in range(n)]を用いる。後者だとすべてリンクしてしまう。
 from collections import deque
 n, m = map(int, input().split())
 edge = [[] for i in range(n)]

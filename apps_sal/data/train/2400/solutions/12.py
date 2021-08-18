@@ -29,7 +29,6 @@ for tc in range(int(input())):
             if ls[i] != ls[i - 1]:
                 st = 3 - st
 
-        #print(res, st)
         if st == 2:
             i = (i - 1) % n
             res[i] = 3
