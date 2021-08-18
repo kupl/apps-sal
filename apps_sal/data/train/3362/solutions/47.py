@@ -5,4 +5,3 @@ def sum_mix(arr):
         c = int(i)
         ls.append(c)
     return sum(ls)
-    # your code here

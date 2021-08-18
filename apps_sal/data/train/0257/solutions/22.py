@@ -1,12 +1,10 @@
 class Solution:
     def maxProbability(self, n: int, edges: List[List[int]], probs: List[float], s: int, t: int) -> float:
-        # first build the graph
         graph = {u: {} for u in range(n)}
         for (u, v), prob in zip(edges, probs):
             graph[u][v] = prob
             graph[v][u] = prob
 
-        # run DFS/BFS search
         frontier = [s]
         path_probs = {u: 0 for u in range(n)}
         path_probs[s] = 1

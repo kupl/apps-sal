@@ -22,8 +22,6 @@ class Solution:
 
             return ans if ans != float('-inf') else 0
 
-        # return method1()
-
         def method2():
             AdjList = [set() for _ in range(n)]
 

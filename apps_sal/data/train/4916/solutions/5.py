@@ -8,7 +8,7 @@ def makePrimes(n):
     return primes
 
 
-PRIMES = makePrimes(650000)          # => 52831 prime numbers
+PRIMES = makePrimes(650000)
 
 
 def get_primes(how_many, group_size=2):

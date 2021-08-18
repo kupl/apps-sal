@@ -3,7 +3,6 @@ class Solution:
         count = 0
         length = len(A[0])
         noofstr = len(A)
-        #print(length, noofstr)
 
         for i in range(length):
             increasing = True

@@ -8,18 +8,14 @@ def input():
 
 
 class DijkstraList():
-    # 隣接リスト版
-    # 同一頂点の複数回探索を防ぐため訪問した頂点数を変数cntで持つ
     def __init__(self, adj, start):
         self.list = adj
         self.start = start
         self.size = len(adj)
 
     def solve(self):
-        #self.dist = [float("inf") for _ in range(self.size)]
         self.dist = defaultdict(lambda: 10**30)
         self.dist[self.start] = 0
-        #self.prev = [-1 for _ in range(self.size)]
         self.q = []
         self.cnt = 0
 
@@ -32,7 +28,6 @@ class DijkstraList():
             for v, w in self.list[u]:
                 if self.dist[v] > u_dist + w:
                     self.dist[v] = u_dist + w
-                    #self.prev[v] = u
                     heapq.heappush(self.q, (self.dist[v], v))
             self.cnt += 1
         return

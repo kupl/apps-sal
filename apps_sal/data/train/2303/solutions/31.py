@@ -17,8 +17,8 @@ def solve():
     for _ in range(m):
         edges.append(list(map(int, input().split())))
     edges.sort(key=lambda item: item[2])
-    G = defaultdict(list)  # 记录每个点可能在哪个分组里面
-    G1 = defaultdict(list)  # 记录每个分组里面的点
+    G = defaultdict(list)
+    G1 = defaultdict(list)
     en = 0
     cnt = 0
     while en < len(edges):
