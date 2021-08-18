@@ -19,13 +19,10 @@ for e in range(1, n + 1):
     dis = (CS[e] - 2 * CA) ** 2 + 4 * (S[e] * CA - Y[e])
     if abs(dis) < 1e-12:
         dis = 0
-    # print(dis)
     A[e] = CS[e] - 2 * CA + math.sqrt(dis)
     A[e] /= 2
     CA += A[e]
     B[e] = S[e] - A[e]
 
-# print(Y, Z, S)
-# print(CS)
 print(' '.join(['%.7f' % a for a in A[1:]]))
 print(' '.join(['%.7f' % a for a in B[1:]]))

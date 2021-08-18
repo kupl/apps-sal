@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from sys import stdin
 
 
@@ -12,7 +11,6 @@ def solve(tc):
             n -= 1
 
     print(n)
-    # items = map(int,stdin.readline().split())
     pass
 
 

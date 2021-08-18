@@ -12,7 +12,6 @@ for i in range(1, n):
     c[i] = min(2 * c[i - 1], c[i])
 cost = 0
 fincost = []
-# print(powers)
 for i in range(n - 1, -1, -1):
     cost += (L // powers[i]) * c[i]
     L = L % powers[i]

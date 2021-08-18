@@ -6,14 +6,12 @@ for tests in range(t):
     S = input().strip()
 
     ANSP = []
-    # ANSS=[]
 
     f = 0
     l = len(S) - 1
 
     while f < l and S[f] == S[l]:
         ANSP.append(S[f])
-        # ANSS.append(S[l])
         f += 1
         l -= 1
 
@@ -21,10 +19,7 @@ for tests in range(t):
         print(S)
         continue
 
-    # print(ANSP)
-
     S2 = S[f:l + 1]
-    # print(S2)
 
     SS2 = []
     for s in S2:
@@ -32,12 +27,10 @@ for tests in range(t):
         SS2.append("$")
     SS2.pop()
 
-    # print(SS2)
-
     LEN = len(SS2)
     i = 0
     j = 0
-    R = [0] * LEN  # 文字 i を中心とする最長の回文の半径
+    R = [0] * LEN
 
     while i < LEN:
         while i - j >= 0 and i + j < LEN and SS2[i - j] == SS2[i + j]:
@@ -52,8 +45,6 @@ for tests in range(t):
         i += k
         j -= k
 
-    # print(R)
-
     MAX = 0
 
     for i in range(LEN):
@@ -63,8 +54,6 @@ for tests in range(t):
                 MAXind = i
 
     S3 = SS2[MAXind - MAX + 1:MAXind + MAX]
-
-    # print(S3)
 
     SS3 = []
     for s in S3:

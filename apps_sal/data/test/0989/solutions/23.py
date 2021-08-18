@@ -8,7 +8,6 @@ problem:from code forces
 
 
 '''
-# install xampp https://vitux.com/how-to-install-xampp-on-your-ubuntu-18-04-lts-system/
 
 
 class Solve():
@@ -24,7 +23,6 @@ class Solve():
 
             s = (self.fuad[i + 1] - self.fuad[i]) * (i + 1) + (self.fuad[self.n - i - 1] - self.fuad[self.n - i - 2]) * (i + 1)
 
-            # print("i {} j {} s {} k {}".format(i,self.n-i-1,s,self.k))
             if s <= self.k:
                 self.k -= s
             else:

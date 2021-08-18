@@ -10,11 +10,6 @@ def solver(s):
     if dotIndex == -1:
         s += '.'
         dotIndex = len(s) - 1
-        # if len(s) == 1:
-        # 	return s
-        # elif
-        # result = '{}.{}E{}'.format(s[0], s[1:], str(len(s) - 1))
-        # return result
 
     s = s[:firstTrailingZero(s)]
     if dotIndex == 0:
@@ -61,15 +56,5 @@ def firstNonLeadingZero(s):
         index += 1
     return index
 
-# print(solver("0016"))
-# print(solver("001600"))
-# print(solver("001600."))
-# print(solver("0123.230"))
-# print(solver("0123.230"))
 
-
-# print(solver("01.23400"))
-# print(solver(".100"))
-# print(solver("0.0012"))
-# print(solver("0001100"))
 main()

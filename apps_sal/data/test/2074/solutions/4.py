@@ -1,10 +1,3 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-# vim:fenc=utf-8
-#
-# Copyright © 2016 missingdays <missingdays@missingdays>
-#
-# Distributed under terms of the MIT license.
 
 """
 
@@ -20,7 +13,7 @@ for i in range(n):
 ma = 0
 
 for i in range(n):
-    ml = 1e10  # bigger than any
+    ml = 1e10
 
     for j in range(m):
         ml = min(ml, city[i][j])

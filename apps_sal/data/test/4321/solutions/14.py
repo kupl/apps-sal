@@ -1,5 +1,4 @@
 n, k = map(int, input().split())
-# a = [int(i) for i in input().split()]
 while k:
     k -= 1
     if n >= 10:

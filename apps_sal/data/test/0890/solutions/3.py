@@ -2,7 +2,6 @@ n, l, r, x = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 a.sort()
 k = 1 << n
-# print(a)
 res = 0
 lst = 0
 for i in range(k):
@@ -16,9 +15,6 @@ for i in range(k):
             if fst == -1:
                 fst = j
             lst = j
-            #print(1 << j, i)
-    # print(num)
     if (cnt > 1) and (a[lst] - a[fst] >= x) and (num >= l) and (num <= r):
-        #print(num, cnt, i)
         res += 1
 print(res)

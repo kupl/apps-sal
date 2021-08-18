@@ -1,4 +1,3 @@
-# IAWT
 n = int(input())
 s = (n + 1) * n // 4
 a = []

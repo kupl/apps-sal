@@ -1,6 +1,5 @@
 n = int(input())
 a = [0 for i in range(n + 1)]
-# a[-1]=set
 
 if n % 2 == 0:
     a[n] = 1
