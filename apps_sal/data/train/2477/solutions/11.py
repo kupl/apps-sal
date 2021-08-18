@@ -1,7 +1,6 @@
 class Solution:
     def numSpecialEquivGroups(self, A: List[str]) -> int:
 
-        # set1 = set()
         even_set = []
         odd_set = []
         for i in A:

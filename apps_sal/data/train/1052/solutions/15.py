@@ -1,4 +1,3 @@
-# https://www.codechef.com/OCT18B/problems/MINDSUM
 '''
 	Author - Subhajit Das
 	University of Engineering and Management, Kolkata

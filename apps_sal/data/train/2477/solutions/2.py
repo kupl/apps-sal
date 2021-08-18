@@ -13,5 +13,4 @@ class Solution:
                 else:
                     sodd += s[i]
             count[''.join(sorted(seven)), ''.join(sorted(sodd))] += 1
-        # print(count.keys())
         return len(count)

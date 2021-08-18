@@ -6,9 +6,6 @@ def create_octahedron(size):
     for i in range(size // 2 + 1):
         for j in range(size):
             for k in range(size):
-                #                 if j-i <= k <= j+i and size-j-1-i <= k <= size-j-1+i and j-(size-1-i) <= k <= j+size-1-i and (size-1)-j-((size-1)-i) <= k <= (size-1)-j+((size-1)-i):
-                # brain and server exhausting, time limit, but funny
-                # halving cube and mirroring at the end doas the trick
 
                 if j - i <= k <= j + i and size - j - 1 - i <= k <= size - j - 1 + i:
                     r3.append(1)

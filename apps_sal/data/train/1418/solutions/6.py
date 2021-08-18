@@ -1,5 +1,3 @@
-# cook your dish here
-# SFRV
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().rstrip().split()))
