@@ -34,9 +34,6 @@ def solve(N):
     return g
 
 
-###############################################################################
-# AUXILIARY FUNCTIONS
-
 DEBUG = 'DEBUG' in os.environ
 
 

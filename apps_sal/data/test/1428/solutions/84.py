@@ -16,10 +16,8 @@ for i in range(c):
                     tryans = 0
                     num = [i, j, k]
                     for l in range(3):
-                      #                         print(num[l], masu[l])
                         for h in range(c):
                             if h != num[l]:
                                 tryans += lis[h][num[l]] * masu[l][h]
                     ans = min(ans, tryans)
-  #                 print(i,j,k,ans)
 print(ans)

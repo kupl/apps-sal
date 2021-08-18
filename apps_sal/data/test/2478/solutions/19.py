@@ -1,14 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 N = int(input())
 S = input()
-
-
-# In[2]:
 
 
 l = 0
@@ -23,6 +16,3 @@ for s in S:
             l += 1
 ans = "".join(["(" * l, S, ")" * r])
 print(ans)
-
-
-# In[ ]:

@@ -20,8 +20,6 @@ while left < right:
 largeAv = n - x
 smallAv = x - 1
 
-#print(smallc, smallAv)
-#print(largec, largeAv)
 
 mod = 1000000007
 
@@ -38,5 +36,4 @@ oc = n - (largec + smallc + 1)
 v = v * permutations(oc, oc) % mod
 
 
-#print(permutations(largeAv, largec), permutations(smallAv, smallc), permutations(oc, oc))
 print(v)

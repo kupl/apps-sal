@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 x1, y1 = input().split()
 x2, y2 = input().split()
@@ -10,26 +9,18 @@ def ans(p1, p2, p3):
     x1, y1 = p1
     x2, y2 = p2
     x3, y3 = p3
-    # x,x    x
-    # x  x   x
     if (x1 == x2 == x3):
         return 1
 
-    #  x  x
-    #  x
     if (x1, y1) == (x2, y3):
         return 2
 
     if y1 == y2:
         if x1 < x3 < x2:
-            # x   x
-            #   x
             return 3
         if x2 < x3 < x1:
             return 3
         else:
-            # 	  x x
-            # x
             return 2
 
     return 3

@@ -43,9 +43,7 @@ fact_2 = np.array(fact_2, dtype=np.int64)
 def dp_add_edge(data):
     N = len(data) - 1
     data1 = np.zeros(N + 2, dtype=np.int64)
-    # 辺を反例に加えない
     data1[1:] = data
-    # 辺を反例に加える
     data1[1] = - (data * fact_2[:N + 1] % MOD).sum() % MOD
     return data1
 
@@ -56,7 +54,6 @@ def dfs(v, parent=None):
         if y == parent:
             continue
         data1 = dfs(y, v)
-        # mergeする前に、最後の辺をひとつ加える
         data1 = dp_add_edge(data1)
         if data is None:
             data = data1

@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
 
-# from numba import njit
-
-# input = stdin.readline
 
 MOD = 10**9 + 7
 
@@ -14,8 +10,6 @@ def modFact(x):
     for i in range(x):
         res = res * (i + 1) % MOD
     return res
-
-# @njit
 
 
 def solve(n, m):
@@ -29,7 +23,6 @@ def solve(n, m):
 
 def main():
     N, M = list(map(int, input().split()))
-    # a = list(map(int,input().split()))
     print((solve(N, M)))
     return
 
