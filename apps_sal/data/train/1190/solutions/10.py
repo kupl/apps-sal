@@ -1,4 +1,3 @@
-# cook your dish here
 s = int(input())
 b = [2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1]
 for _ in range(s):

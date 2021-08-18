@@ -1,4 +1,3 @@
-# cook your dish here
 def sree(k, n):
     k.sort()
     l = [0, 0, 0]

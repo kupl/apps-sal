@@ -1,5 +1,3 @@
-# cook your dish here
-# https://www.codechef.com/CSEP2020/problems/TOBY
 from collections import Counter
 for _ in range(int(input())):
     n = int(input())

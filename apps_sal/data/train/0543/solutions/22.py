@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     t_r = int(input())
     tr = list(map(int, input().split()))
@@ -22,4 +21,4 @@ for _ in range(int(input())):
                 flag = False
                 break
 
-    print("yes" if flag else "no")  # cook your dish here
+    print("yes" if flag else "no")

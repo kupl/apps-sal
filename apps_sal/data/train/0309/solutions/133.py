@@ -6,5 +6,4 @@ class Solution:
                 diff = nums[j] - nums[i]
                 dp[(j, diff)] = dp.get((i, diff), 1) + 1
 
-        # print(dp)
         return max(dp.values())

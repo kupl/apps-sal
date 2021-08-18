@@ -12,5 +12,4 @@ class Solution:
                 else:
                     dp[i][d] = 2
                 res = max(res, dp[i][d])
-        # print(dp)
         return res

@@ -19,5 +19,4 @@ class Solution:
                 )
                 ret_val = max(ret_val, counter[delta])
                 counters[idx] = counter
-            # return
         return ret_val

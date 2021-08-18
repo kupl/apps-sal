@@ -3,7 +3,7 @@ from collections import defaultdict
 
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
-        dp = defaultdict(dict)  # { index: {difference: steps} }
+        dp = defaultdict(dict)
         max_cnt = 0
         for i in range(1, len(A)):
             for j in range(0, i):
