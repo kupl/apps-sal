@@ -1,9 +1,6 @@
 t = int(input())
 no_of_chars = 256
 
-# Function to find smallest window
-# containing all characters of 'pat'
-
 
 def findSubString(string, pat):
     len1 = len(string)
@@ -17,20 +14,20 @@ def findSubString(string, pat):
         hash_pat[ord(pat[i])] += 1
 
     start, start_index, min_len = 0, -1, float('inf')
-    count = 0  # count of characters
+    count = 0
     for j in range(0, len1):
         hash_str[ord(string[j])] += 1
-        if (hash_pat[ord(string[j])] != 0 and
-            hash_str[ord(string[j])] <=
-                hash_pat[ord(string[j])]):
+        if (hash_pat[ord(string[j])] != 0
+            and hash_str[ord(string[j])]
+                <= hash_pat[ord(string[j])]):
             count += 1
         if count == len2:
-            while (hash_str[ord(string[start])]
-                   > hash_pat[ord(string[start])]
-                   or hash_pat[ord(string[start])] == 0):
+            while (hash_str[ord(string[start])] >
+                   hash_pat[ord(string[start])] or
+                   hash_pat[ord(string[start])] == 0):
 
-                if (hash_str[ord(string[start])] >
-                        hash_pat[ord(string[start])]):
+                if (hash_str[ord(string[start])]
+                        > hash_pat[ord(string[start])]):
                     hash_str[ord(string[start])] -= 1
                 start += 1
             len_window = j - start + 1
@@ -41,8 +38,6 @@ def findSubString(string, pat):
     if start_index == -1:
         return 0
 
-    # Return substring starting from
-    # start_index and length min_len
     return min_len
 
 

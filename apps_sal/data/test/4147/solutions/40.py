@@ -16,7 +16,6 @@ def test(n, a, b, c, na, nb, nc):
     :return: 消費MP
     """
     if n == N:
-        # 最終MPの確定
         if min(na, nb, nc) == 0:
             return 10**9
         else:
@@ -27,10 +26,10 @@ def test(n, a, b, c, na, nb, nc):
             mp += abs(A - a) + abs(B - b) + abs(C - c)
             return mp
     else:
-        mp1 = test(n + 1, a, b, c, na, nb, nc)  # 使用しない
-        mp2 = test(n + 1, a + L[n], b, c, na + 1, nb, nc)  # 竹aに適用
-        mp3 = test(n + 1, a, b + L[n], c, na, nb + 1, nc)  # 竹bに適用
-        mp4 = test(n + 1, a, b, c + L[n], na, nb, nc + 1)  # 竹cに適用
+        mp1 = test(n + 1, a, b, c, na, nb, nc)
+        mp2 = test(n + 1, a + L[n], b, c, na + 1, nb, nc)
+        mp3 = test(n + 1, a, b + L[n], c, na, nb + 1, nc)
+        mp4 = test(n + 1, a, b, c + L[n], na, nb, nc + 1)
         return min(mp1, mp2, mp3, mp4)
 
 

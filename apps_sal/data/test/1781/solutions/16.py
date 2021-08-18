@@ -20,16 +20,13 @@ for i in range(n):
                 c -= 1
             count[c] += 1
             neig[i][j] = c
-# print(count)
 k1 = k
 for i in range(3):
     if k1 >= count[i]:
         k1, count[i] = k1 - count[i], count[i]
     else:
         k1, count[i] = 0, k1
-# print(count_all, count)
 print(count_all + count[1] + 2 * count[2])
-# print(plane[12])
 for i in range(n):
     for j in range(12):
         if plane[i][j] == '.':

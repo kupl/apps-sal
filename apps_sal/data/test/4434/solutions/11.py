@@ -17,7 +17,6 @@ def getList():
     return list(map(int, input().split()))
 
 
-# sys.setrecursionlimit(1000000)
 INF = 10 ** 17
 MOD = 998244353
 

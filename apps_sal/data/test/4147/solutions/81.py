@@ -6,7 +6,6 @@ INF = 10 ** 9
 def dfs(cnt, a, b, c):
     if cnt == N:
         return abs(a - A) + abs(b - B) + abs(c - C) - 30 if min(a, b, c) > 0 else INF
-        # 最初は0から始めていて不要な処理が一回あるため-30する。
     res0 = dfs(cnt + 1, a, b, c)
     res1 = dfs(cnt + 1, a + l[cnt], b, c) + 10
     res2 = dfs(cnt + 1, a, b + l[cnt], c) + 10

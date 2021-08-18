@@ -45,11 +45,7 @@ def main():
 
 
 def __starting_point():
-    ##sys.stdin = open("in.txt",'r')
-    ##sys.stdout = open("out.txt",'w')
     main()
-    # sys.stdin.close()
-    # sys.stdout.close()
 
 
 __starting_point()

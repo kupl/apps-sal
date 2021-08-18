@@ -1,4 +1,3 @@
-# 36 C - Skip
 import bisect
 import math
 N, X = map(int, input().split())
@@ -6,7 +5,6 @@ x = list(map(int, input().split()))
 x = sorted(x, reverse=False)
 
 bisect.insort_left(x, X)
-# 間隔の最小の素数
 d_lis = []
 for i in range(len(x) - 1):
     d = x[i + 1] - x[i]

@@ -34,7 +34,6 @@ for i in range(n):
     for j in range(lt):
         for c in chars:
             if not t[j] == c:
-                # h=(h0+b*(ord(c)-ord(t[j])))%MOD
                 mem[lt].add((h0 + b * (ord(c) - ord(t[j]))) % MOD)
         b *= P
         b %= MOD
@@ -52,5 +51,3 @@ for i in range(m):
         prt.append('NO')
 
 print('\n'.join(prt))
-
-# print((time()-S)*1000)
