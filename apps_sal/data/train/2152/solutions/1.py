@@ -27,9 +27,7 @@ else:
         mm = m // 2
         k = 0
         ans = 0
-        # print("m, mm =", m, mm)
         for i in range(N):
-            # print("i, k =", i, k)
             if A[i]:
                 k = (k + 1) % m
             if k <= mm:
@@ -38,6 +36,5 @@ else:
                 pass
             else:
                 ans += m - k
-            # print("ans =", ans)
         mi = min(mi, ans)
     print(mi)

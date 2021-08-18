@@ -19,15 +19,15 @@ class PokerHand(object):
             isStraight = True
             valCount['1'] = valCount.pop('E')
 
-        mainVal = next(i for i, elt in enumerate([5 in list(colorCount.values()) and isStraight,              # Straight Flush
-                                                  4 in list(valCount.values()),                               # Square
-                                                  3 in list(valCount.values()) and 2 in list(valCount.values()),    # Full house
-                                                  5 in list(colorCount.values()),                             # Flush
-                                                  isStraight,                                           # Straight
-                                                  3 in list(valCount.values()),                               # Three of a kind
-                                                  2 in list(valCount.values()) and len(list(valCount.keys())) == 3,  # 2 pairs
-                                                  2 in list(valCount.values()) and len(list(valCount.keys())) == 4,  # 1 pair,
-                                                  True]) if elt)                                       # 1 card
+        mainVal = next(i for i, elt in enumerate([5 in list(colorCount.values()) and isStraight,
+                                                  4 in list(valCount.values()),
+                                                  3 in list(valCount.values()) and 2 in list(valCount.values()),
+                                                  5 in list(colorCount.values()),
+                                                  isStraight,
+                                                  3 in list(valCount.values()),
+                                                  2 in list(valCount.values()) and len(list(valCount.keys())) == 3,
+                                                  2 in list(valCount.values()) and len(list(valCount.keys())) == 4,
+                                                  True]) if elt)
 
         self.handValue = int(''.join(sorted(list(valCount.keys()), key=lambda k: (valCount[k], k), reverse=True)), 16) + (8 - mainVal) * 16**5
 

@@ -1,6 +1,5 @@
 class Solution:
     def mirrorReflection(self, p: int, q: int) -> int:
-        #if p > q: p = q + p%q
         start = [0, 'left', 'up']
         if q == p:
             return 1
@@ -42,5 +41,3 @@ class Solution:
                     else:
                         tmp = [q - start[0], 'left', 'up']
             start = tmp
-            # if num == 5:
-            # break

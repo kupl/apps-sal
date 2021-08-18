@@ -1,4 +1,4 @@
-import re  # Jai Shree Ram!!!
+import re
 
 
 def solve(s):

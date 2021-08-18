@@ -5,11 +5,8 @@ class Solution:
         wall = 1
         while 1:
             b = y - m * x
-            # print(x, y, m, b, wall)
-            # y = m * x + b
             flag = 0
             if flag == 0 and wall != 0:
-                # y = 0
                 temp = x
                 x = -b / m
                 if 0 <= x <= p:
@@ -19,7 +16,6 @@ class Solution:
                 else:
                     x = temp
             if flag == 0 and wall != 2:
-                # y = p
                 temp = x
                 x = (p - b) / m
                 if 0 <= x <= p:
@@ -29,7 +25,6 @@ class Solution:
                 else:
                     x = temp
             if flag == 0 and wall != 3:
-                # x = 0
                 temp = y
                 y = b
                 if 0 <= y <= p:
@@ -39,7 +34,6 @@ class Solution:
                 else:
                     y = temp
             if flag == 0 and wall != 1:
-                # x = p
                 temp = y
                 y = m * p + b
                 if 0 <= y <= p:

@@ -20,15 +20,14 @@ def solve(s):
 
         else:
 
-            if new_number != []:  # if there is a number to be compared:
+            if new_number != []:
                 k = int(''.join(new_number))
                 if k > max_number:
                     max_number = k
 
             new_number = []
 
-    # and for the last char:
-    if new_number != []:  # if there is a number to be compared:
+    if new_number != []:
         k = int(''.join(new_number))
         if k > max_number:
             max_number = k

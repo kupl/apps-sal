@@ -62,7 +62,6 @@ class PokerHand(object):
             str: the name of the combination
         '''
         vec_hand = PokerHand.hand_to_vector(hand)
-        # suited --> True, when all cards of the same suit
         suited = False
         if 1 == len(set([x[1] for x in hand.split()])):
             suited = True

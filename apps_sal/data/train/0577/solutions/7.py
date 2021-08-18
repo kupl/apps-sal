@@ -1,4 +1,3 @@
-# book = ''.join(sorted(str(raw_input())))
 book = input()
 
 
