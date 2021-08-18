@@ -6,7 +6,6 @@ class Solution:
         visited = [False for i in range(n)]
         L_neighbor = {}
         R_neighbor = {}
-        #limit = {}
 
         for i in range(n):
             L_neighbor[i] = i

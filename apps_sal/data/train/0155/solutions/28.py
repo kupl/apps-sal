@@ -33,6 +33,5 @@ class Solution:
         for i in range(n):
             visited = [0] * n
             ret = max(dfs(i, visited), ret)
-            #print(i,ret, memo)
 
         return ret

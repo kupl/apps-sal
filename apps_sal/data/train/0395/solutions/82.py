@@ -1,20 +1,5 @@
 class Solution:
     def oddEvenJumps(self, A: List[int]) -> int:
-        # [ 0, 1, 2, 3, 4]
-        # [10,13,12,14,15]
-
-        # [ 0, 2, 1, 3, 4]
-        # [10,12,13,14,15]
-        # [-15,-14,-13,-12,-10]
-
-        # [ 0, 2, 1, 3, 4]
-        # [ 0, 2, 2, 3, 4]
-
-        # [12,14,14,15,15] - odds_next
-        # [10,12,12,14,15] - evens_next
-
-        # [ N, N, N, Y, Y]
-        # [ N, N, N, N, Y]
 
         increasing = [(v, i) for i, v in enumerate(A)]
         increasing.sort()

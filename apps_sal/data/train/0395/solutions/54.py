@@ -24,5 +24,4 @@ class Solution:
         for i in range(n - 2, -1, -1):
             higher[i] = lower[next_high[i]]
             lower[i] = higher[next_low[i]]
-        # print(higher, lower)
         return sum(higher)

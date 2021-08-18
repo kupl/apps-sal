@@ -8,10 +8,8 @@ class Solution:
                 while stack and arr[stack[-1]] == arr[same_height_idx[0]]:
                     same_height_idx.append(stack.pop())
                 for j in same_height_idx:
-                    # jump to left
                     if i - j <= d:
                         dp[i] = max(dp[i], dp[j] + 1)
-                    # jump to right
                     if stack and j - stack[-1] <= d:
                         dp[stack[-1]] = max(dp[stack[-1]], dp[j] + 1)
             stack.append(i)

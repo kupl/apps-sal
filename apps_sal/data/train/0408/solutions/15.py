@@ -8,7 +8,6 @@ class Solution:
 
         while(left <= right):
 
-            #print(left, right)
             if left == right:
                 return left
 

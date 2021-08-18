@@ -1,7 +1,6 @@
 
 
 class Solution:
-    # O(n x d) time, O(n) space
     def maxJumps(self, arr: List[int], d: int) -> int:
         n = len(arr)
         cache = {}
