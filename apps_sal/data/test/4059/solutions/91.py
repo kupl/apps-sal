@@ -15,11 +15,6 @@ def main():
             if A * B >= N:
                 break
 
-            # C = N - A * B
-            # if C == 0: continue
-
-            # if A * B + C == N:
-             # print(A, B, C)
             ans += 1
 
     print(ans)

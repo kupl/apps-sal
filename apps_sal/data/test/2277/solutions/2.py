@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 
-inv = False  # even
+inv = False
 for i in range(n):
     for j in range(i + 1, n):
         if a[i] > a[j]:

@@ -11,7 +11,6 @@ def f(a, b):
 n = int(input())
 ar = list(map(int, input().split()))
 inv = f(0, n)
-# print()
 m = int(input())
 ans = []
 for x in range(m):
@@ -20,6 +19,4 @@ for x in range(m):
     inv += int(z * (z - 1) / 2)
     inv %= 2
     ans.append('odd' if inv else 'even')
-    # print(query(0,n-1))
-# print(*t)
 print(*ans, sep='\n')

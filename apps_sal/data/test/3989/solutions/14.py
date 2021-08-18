@@ -7,8 +7,6 @@ def main():
     pass
 
 
-# region fastio
-
 BUFSIZE = 8192
 
 
@@ -107,7 +105,6 @@ for i in s:
             cm = (cm * 10 + n) % 7
             f[n] -= 1
             print(i, end="")
-# print(a,cm)
 for i in range(0, 4):
     cm = (cm * 10) % 7
 if(cm == 0):

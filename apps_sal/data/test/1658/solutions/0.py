@@ -1,4 +1,3 @@
-# fast io
 from sys import stdin
 _data = iter(stdin.read().split('\n'))
 def input(): return next(_data)

@@ -1,4 +1,3 @@
-# https://codeforces.com/contest/1054/problem/D
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 p = [0] * (n + 1)
@@ -29,6 +28,3 @@ for k, v in list(d.items()):
     minus += kC2(v // 2) + kC2(v - v // 2)
 
 print(ans - minus)
-
-# 6 3
-# 1 4 4 7 3 4

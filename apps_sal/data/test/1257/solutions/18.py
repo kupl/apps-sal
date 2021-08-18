@@ -1,4 +1,3 @@
-# You lost the game.
 
 n, k = list(map(int, input().split()))
 
