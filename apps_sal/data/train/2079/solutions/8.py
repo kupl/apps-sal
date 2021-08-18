@@ -9,7 +9,6 @@ def est_dessous(v, u):
 
 
 def pqc(u, v):
-    # retourne la liste des ARETES empruntées
     res = []
     while not est_dessous(v, u):
         res.append((u, u // 2))

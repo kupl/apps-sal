@@ -36,7 +36,6 @@ for i in range(p):
                 dic["{}{}".format(path[i], path[i + 1])] += value[3]
                 dic["{}{}".format(path[i + 1], path[i])] += value[3]
     else:
-        #action == 2
         total = 0
         path = find_path(value[1], value[2])
         for i in range(len(path) - 1):

@@ -16,7 +16,7 @@ def lca(u, v, w):
 
 for i in range(n):
     l = list(map(int, I().split()))
-    if l[0] == 1:  # To add
+    if l[0] == 1:
         lca(l[1], l[2], l[3])
     else:
         print(lca(l[1], l[2], 0))

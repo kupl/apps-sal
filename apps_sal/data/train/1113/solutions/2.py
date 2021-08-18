@@ -10,7 +10,6 @@ def CountMax(nA, A):
             hT[n] += 1
     vals = [(pair[0], pair[1]) for pair in hT.items()]
     vals.sort(key=lambda p: p[0])
-    # print vals
     return max(vals, key=lambda p: p[1])
 
 

@@ -1,4 +1,3 @@
-# from debug import debug
 from collections import defaultdict
 from math import log2
 import sys
