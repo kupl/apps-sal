@@ -27,16 +27,13 @@ class Solution:
                 i1, j1 = points[idx1]
                 dis = abs(i0 - i1) + abs(j0 - j1)
                 distances.append([dis, idx0, idx1])
-        # print(distances)
         heapq.heapify(distances)
-        # print(distances)
 
         res = 0
         uf = UnionFind(n)
         while uf.size[0] < n:
             dis, idx0, idx1 = heapq.heappop(distances)
             if uf.find(idx0) != uf.find(idx1):
-                # print(dis, idx0, idx1)
                 res += dis
                 uf.union(idx0, idx1)
         return res

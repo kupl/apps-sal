@@ -1,4 +1,3 @@
-# Sort the $%&*!#$! textbooks
 def sorter(textbooks):
     obj = {}
     lower_case_textbooks = []

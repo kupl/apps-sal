@@ -10,7 +10,6 @@ class Solution:
         curr = 0
         sign = 1
         for c in expression:
-            # print(c,res)
             if c.isdigit():
                 curr *= 10
                 curr += int(c)

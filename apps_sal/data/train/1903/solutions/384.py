@@ -1,6 +1,5 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # 基本功不扎实呀，是一个minimum spanning tree
         visited = set()
         graph = [[0] * len(points) for _ in range(len(points))]
         for i in range(len(points)):

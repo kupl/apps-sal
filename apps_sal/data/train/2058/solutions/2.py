@@ -1,7 +1,7 @@
 from bisect import bisect_left as BL
 
 n = int(input())
-graph = [(-99**9, 0)]  # x, slope
+graph = [(-99**9, 0)]
 ans = 0
 for i, a in enumerate(map(int, input().split())):
     a -= i
@@ -10,7 +10,6 @@ for i, a in enumerate(map(int, input().split())):
     if turnj != len(graph) - 1:
         ans += graph[-1][0] - a
 
-    # add |x-a|
     for j in range(turnj):
         x, sl = graph[j]
         new.append((x, sl - 1))
@@ -22,7 +21,6 @@ for i, a in enumerate(map(int, input().split())):
         else:
             new.append((x, sl + 1))
 
-    # remove positive slopes
     graph = new
     while graph[-1][1] > 0:
         x, sl = graph.pop()

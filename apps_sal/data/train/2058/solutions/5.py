@@ -10,10 +10,10 @@ class Maxheap:
 
 class Graph:
     def __init__(_):
-        _.change = Maxheap()  # increment slope at ...
+        _.change = Maxheap()
         _.change.add(-10**18)
-        _.a = _.y = 0  # last line has slope a, starts from y
-        _.dx = 0      # the whole graph is shifted right by ...
+        _.a = _.y = 0
+        _.dx = 0
 
     def __repr__(_): return f"<{[x+_.dx for x in _.change]}; {_.a} {_.y}>"
 

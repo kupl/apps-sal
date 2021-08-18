@@ -9,7 +9,6 @@ class Solution:
             stack.append(c)
             while len(stack) >= 3 and stack[-1] == 'c' and stack[-2] == 'b' and stack[-3] == 'a':
                 stack = stack[:-3]
-            # print(stack)
         if stack:
             return False
         else:

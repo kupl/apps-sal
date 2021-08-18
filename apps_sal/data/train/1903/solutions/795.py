@@ -11,7 +11,6 @@ class Solution:
 
         distance = sorted(distance, key=lambda x: x[0])
         points = [tuple(p) for p in points]
-        # print(points)
         union_find = UnionFind(points=points)
         ans = 0
         for dist_pair in distance:

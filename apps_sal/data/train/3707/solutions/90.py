@@ -20,5 +20,4 @@ def compare(item1, item2):
 
 
 def sorter(textbooks):
-    # Cramming before a test can't be that bad?
     return sorted(textbooks, key=functools.cmp_to_key(compare))

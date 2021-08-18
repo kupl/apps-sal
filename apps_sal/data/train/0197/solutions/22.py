@@ -11,7 +11,6 @@ class Solution:
             if i < len(s):
                 stack.append(s[i])
                 i += 1
-        # print('stack',stack)
         if not stack:
             return True
         return False

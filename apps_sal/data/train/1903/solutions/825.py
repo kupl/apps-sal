@@ -36,7 +36,6 @@ class Solution:
                 rank[y] += 1
 
         def kruskal(graph):
-            # mst = set()
             ans = 0
             edges = sorted(graph['edges'])
             for vertice in graph['vertices']:
@@ -45,7 +44,6 @@ class Solution:
                 weight, vertice1, vertice2 = edge
                 if find(vertice1) != find(vertice2):
                     union(vertice1, vertice2)
-                    # mst.add(edge)
                     ans += edge[0]
             return ans
         return kruskal(graph)

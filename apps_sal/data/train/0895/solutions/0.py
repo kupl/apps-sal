@@ -7,7 +7,6 @@ for i in range(2, n):
     dp[i] = min(dp[i - 2], dp[i - 1]) + ar[i]
 
 ar.reverse()
-# print(ar)
 dp1 = [0] * n
 dp1[0] = ar[0]
 dp1[1] = ar[1]

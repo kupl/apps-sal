@@ -1,7 +1,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         def getDist(p1, p2):
-            # |xi - xj| + |yi - yj|
             xi, yi = p1
             xj, yj = p2
             return abs(xi - xj) + abs(yi - yj)

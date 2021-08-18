@@ -10,7 +10,6 @@ class Solution:
                 val = abs(x - x2) + abs(y - y2)
                 es.append((val, i, j))
         es.sort()
-        # print(es)
         self.father = {i: i for i in range(n)}
         ans = size = 0
         for cost, u, v in es:
