@@ -20,5 +20,4 @@ class Solution:
                 k0, k1 = sorted(freq_counter)
                 if freq_counter[1] == 1 or k1 - k0 == 1 and freq_counter[k1] == 1:
                     res = max(res, i + 1)
-            # print(i, num, res, freq_counter)
         return res

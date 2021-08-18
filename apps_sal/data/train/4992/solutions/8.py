@@ -48,7 +48,7 @@ def check_diag2(card):
 
 
 def check_rows(card):
-    for i in range(1, 6):  # check rows
+    for i in range(1, 6):
         if card[i] == ['X', 'X', 'X', 'X', 'X']:
             return True
         else:

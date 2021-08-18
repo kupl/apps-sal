@@ -51,4 +51,3 @@ def decomp(chisl):
         if exp[ii] == 1:
             otvet += [str(div[ii])]
     return(' * '.join(otvet))
-    # your code here

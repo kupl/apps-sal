@@ -1,4 +1,3 @@
-# Recursive power function that evaluates in O(log n)
 def power(x, y):
     if y == 0:
         return 1
@@ -11,11 +10,8 @@ def power(x, y):
 
 
 def __starting_point():
-    # Read number of cases
     T = int(input())
-    # Run a loop for all test cases
     for i in range(T):
-        # Read values
         N, K = list(map(int, input().split()))
 
         val = K * power(K - 1, N - 1)

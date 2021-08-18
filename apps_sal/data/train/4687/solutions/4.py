@@ -21,7 +21,7 @@ def genPrimesUpTo(n):
 
 def genPrimeDivs(n):
     genPrimesUpTo(n)
-    dec.append(dec[-1][:])                                # Duplicate last factorial decomposition
+    dec.append(dec[-1][:])
     for i, p in enumerate(primes):
         while not n % p:
             n //= p

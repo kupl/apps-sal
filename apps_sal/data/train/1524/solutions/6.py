@@ -1,4 +1,3 @@
-# cook your code here
 mod = 10**9
 mod += 7
 t = input()

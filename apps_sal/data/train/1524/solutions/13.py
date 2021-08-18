@@ -16,7 +16,6 @@ for t in range(int(input())):
 
     pro = 1
     a, b = list(map(int, input().split()))
-    # for i in xrange(a):
     pro *= b
 
     pro *= fast_exp((b - 1), (a - 1))

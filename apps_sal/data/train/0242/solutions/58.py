@@ -10,7 +10,6 @@ class Solution:
         n = len(nums)
         a = Counter(nums)
 
-        # print(nums)
         for i in range(n - 1, 0, -1):
             if len(a) == 1:
                 p = [i for i in list(a.keys())][0]

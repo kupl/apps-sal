@@ -1,4 +1,3 @@
-# cook your dish here
 x = []
 y = []
 n = int(input())
@@ -14,10 +13,8 @@ for i in range(-1, n - 1):
 
 def polygonArea(X, Y, n):
 
-    # Initialze area
     area = 0.0
 
-    # Calculate value of shoelace formula
     j = n - 1
     for i in range(n):
         area += (X[j] + X[i]) * (Y[j] - Y[i])

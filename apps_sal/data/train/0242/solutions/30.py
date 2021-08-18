@@ -1,11 +1,9 @@
 class Solution:
     def maxEqualFreq(self, nums: List[int]) -> int:
         d = Counter(nums)
-        # print(d)
 
         for i in reversed(range(len(nums))):
             vlist = list(d.values())
-            # print(vlist)
             s = list(set(vlist))
 
             if len(s) == 1:
