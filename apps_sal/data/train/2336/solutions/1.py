@@ -5,15 +5,6 @@ s = input()
 sk = s.split(' ')
 ml = [int(i) for i in sk]
 kl = [0 for i in ml]
-# for i in range(0, 7*N+2):
-#    A=random.randint(0,N-1)
-#    B=A
-#    while(A==B):
-#        B=random.randint(0,N-1)
-#    swap=ml[A]
-#    ml[A]=ml[B]
-#    ml[B]=swap
-# print(ml)
 k = 0
 for i in range(0, N):
     if kl[i] == 0:

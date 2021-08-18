@@ -1,7 +1,7 @@
 def check_password(s):
     import re
-    chars = "!@#$%^&*?1234567890qazwsxedcrfvtgbyhnujmiklopQAZWSXEDCRFVTGBYHNUJMIKLOP"
-    sp = "[!@#$%^&*?]"
+    chars = "!@
+    sp = "[!@
     a = "[a-z]"
     if len(s) in range(8, 21):
         for c in s:

@@ -1,5 +1,4 @@
 def string_parse(string):
-    # your code here
     if string == None or not isinstance(string, str):
         return "Please enter a valid string"
     if string == '':

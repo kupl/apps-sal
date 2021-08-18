@@ -4,4 +4,3 @@ def bonus_time(salary, bonus):
         a = "${}".format(salary)
         return a
     return "$" + str(salary)
-    # your code here

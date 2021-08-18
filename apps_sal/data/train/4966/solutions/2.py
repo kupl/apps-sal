@@ -1,5 +1,4 @@
 def fight(robot_1, robot_2, tactics):
-    # Determine the fastest robot for the rest of the fight
     if robot_2['speed'] > robot_1['speed']:
         robot_first = robot_2
         robot_second = robot_1

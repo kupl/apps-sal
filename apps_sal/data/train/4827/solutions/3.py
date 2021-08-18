@@ -19,4 +19,4 @@ def stats_disc_distr(distrib):
     var = sum([(values[i] - mean)**2 * probs[i] for i in range(len(values))])
     std_dev = var**0.5
 
-    return [mean, var, std_dev]  # or alert messages
+    return [mean, var, std_dev]
