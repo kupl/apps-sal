@@ -9,7 +9,4 @@ def num_of_open_lockers(n):
 """
 
 
-#  ...  a-ha, OK, gotcha:
-
-
 def num_of_open_lockers(n): return int(n ** .5)

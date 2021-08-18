@@ -1,14 +1,4 @@
-# ==========================================================================================================================================
-# title         : squares, v2: faster with dictionnary instead of graph
-# description   :
-# author        : JR
-# date          : 28.04.20
-# version       :
-# IDE           : PyCharm
-# ==========================================================================================================================================
 import math
-
-# code standard graphs (dirty-duct-copy networkx behavior)
 
 
 class nx(dict):
@@ -30,14 +20,11 @@ class nx(dict):
 
     @staticmethod
     def Graph(G):
-        # here we will implement the by-copy
         return nx(G.copy())
 
     def __init__(self, nodes, edges=None):
         if edges is None:
             if isinstance(nodes, dict):
-                # by-copy => this one should not really be used for our problem, but it is simpler at the beginning to be able to concentrate
-                # on the central matter
                 dict.__init__(self, {n: e.copy() for n, e in list(nodes.items())})
             else:
                 dict.__init__(self, {n: set() for n in nodes})
@@ -104,18 +91,17 @@ def dfs_travel(G=23, visit_ordered=None, N=None, display=False, verbose=False):
 
     if len(visit_ordered) == 0:
 
-        # We do the best guess to visit nodes by random... starting by most certain ones
         if len(ending_nodes) > 0:
             if verbose:
                 print('Guess zero')
-            return dfs_travel(G, [ending_nodes[-1]], N, verbose=verbose)  # if two, it will arrive at the second node !
+            return dfs_travel(G, [ending_nodes[-1]], N, verbose=verbose)
 
         degrees = G.degree
         max_degree = max([y for x, y in degrees])
         for d in range(2, max_degree + 1):
             for n in [nd for nd, deg in degrees if deg == d]:
                 sol = dfs_travel(G, [n], verbose=verbose)
-                if sol != False:  # don't want the unsafe "if sol" with list
+                if sol != False:
                     if verbose:
                         print('YESSS')
                     return sol
@@ -127,10 +113,10 @@ def dfs_travel(G=23, visit_ordered=None, N=None, display=False, verbose=False):
     elif len(ending_nodes) == 2 and not visit_ordered[-1] in ending_nodes:
         return False
 
-    G2 = nx.Graph(G)  # copy the graph... will need to improve if >100 graphs are needed !
+    G2 = nx.Graph(G)
 
     last_idx = visit_ordered[-1]
-    for current_idx in G2[last_idx]:  # .keys():
+    for current_idx in G2[last_idx]:
         if verbose:
             print((last_idx, current_idx))
         visit_ordered.append(current_idx)

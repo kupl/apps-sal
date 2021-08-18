@@ -1,4 +1,3 @@
-# cook your dish here
 NUMBER = input().split()
 D1 = int(NUMBER[0])
 V1 = int(NUMBER[1])

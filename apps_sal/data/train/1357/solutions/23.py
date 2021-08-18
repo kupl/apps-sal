@@ -26,7 +26,6 @@ while n > 0:
 
         elif temp == 15:
             if d[10] >= 1:
-                #d[15] += 1
                 d[10] -= 1
             else:
                 print("NO")
