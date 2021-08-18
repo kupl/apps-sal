@@ -1,4 +1,3 @@
-# cook your dish here
 from math import log
 try:
     for i in range(int(input())):

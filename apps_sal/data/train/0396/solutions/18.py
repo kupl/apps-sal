@@ -5,9 +5,6 @@ class Solution:
         p10 = 10
         N = 1
 
-        # any number not divisible by 2 or 5 will divide some number of the form 111...1
-        # this requires a proof ofc
-
         if not K % 2:
             return -1
 

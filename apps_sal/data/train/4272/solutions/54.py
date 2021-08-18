@@ -1,5 +1,5 @@
 def greet(name):
-    name = name.title()  # returns proper capitalisation
+    name = name.title()
     if name == "Johnny":
         return "Hello, my love!"
     else:

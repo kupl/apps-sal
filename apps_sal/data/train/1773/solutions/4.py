@@ -1,4 +1,3 @@
-# Accessors
 def get_row(board, row_index):
     return board[row_index]
 
@@ -8,8 +7,6 @@ def get_col(board, col_index):
 
 
 def get_subgrid(board, base_x, base_y):
-    # Returns elements (array) in a 3x3 subgrid
-    # base_x,base_y are the x,y coordinates of the top-left element in the 3x3 subgrid
     result = []
     for x in range(0, 3):
         for y in range(0, 3):
@@ -22,7 +19,6 @@ class InvalidSudokuSet(Exception):
 
 
 def validate_9(arr, identifier="Group"):
-    # Validates any 9 elements
     if len(arr) != 9:
         raise InvalidSudokuSet("{} has length {} (not 9): {}".format(identifier, len(arr), arr))
 

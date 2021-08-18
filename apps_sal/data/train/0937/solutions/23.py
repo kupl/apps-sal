@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 for t in range(int(input())):
     ls = list(input())
     flag1 = 0
