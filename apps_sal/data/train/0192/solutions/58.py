@@ -1,10 +1,5 @@
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
-        # piles = sorted(piles)
-        # while piles:
-        #     piles.pop(-1)
-        #     res += piles.pop(-1)
-        #     piles.pop(0)
         min_, max_ = min(piles), max(piles)
 
         cnt = [0 for i in range(min_, max_ + 1)]

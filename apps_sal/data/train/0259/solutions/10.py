@@ -1,14 +1,5 @@
 class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        # (s + n) / x <= threshold
-        # x >= (s + n) / threshold
-        # x >= (s + n) // threshold
-
-        # n <= t
-        # n >= 1
-        # t >= 1
-        # s / x <= t
-        # x <= s
 
         n, j = len(nums), sum(nums)
         i = (j + n) // threshold

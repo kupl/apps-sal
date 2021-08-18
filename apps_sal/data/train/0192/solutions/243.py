@@ -27,9 +27,6 @@ class Solution:
                 return mxl
 
             return dp(tuple(piles))
-        # return dps()
-
-        # def bu_dp():
 
         def iter_appr():
             assert(len(piles) % 3 == 0)

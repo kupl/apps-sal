@@ -10,7 +10,6 @@ class Solution:
         while l < r:
             mid = (l + r) // 2
             val = calc(mid)
-            # print (\"[%d, %d] => %d v %r\" %(l, r, mid, val))
 
             if calc(mid):
                 r = mid

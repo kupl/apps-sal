@@ -15,5 +15,4 @@ class Solution:
             else:
                 surfix[i] = surfix[i + 1]
 
-        # print(surfix)
         return surfix[0] > surfix[1]

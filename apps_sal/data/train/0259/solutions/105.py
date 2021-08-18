@@ -32,8 +32,6 @@ class Solution:
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
 
         maxDivisor = self.divide(2 * sum(nums), threshold)
-        # print(maxDivisor)
-        #maxDivisor = 1000000
         results = dict()
 
         return self.helper(results, nums, 1, maxDivisor, threshold)

@@ -24,16 +24,13 @@ def modinv(a, m):
 def factorialMod(n, modulus):
     ans = 1
     if n <= modulus // 2:
-        # calculate the factorial normally (right argument of range() is exclusive)
         for i in range(1, n + 1):
             ans = (ans * i) % modulus
     else:
-        # Fancypants method for large n
         for i in range(1, modulus - n):
             ans = (ans * i) % modulus
         ans = modinv(ans, modulus)
 
-        # Since m is an odd-prime, (-1)^(m-n) = -1 if n is even, +1 if n is odd
         if n % 2 == 0:
             ans = -1 * ans + modulus
     return ans % modulus
@@ -50,16 +47,11 @@ while t > 0:
         uy = ''
         for i in range(len(s)):
             uy += str(i)
-        # xxx=p(s,len(s))
         xxc = cc(uy, 2)
         rtt = []
         for i in xxc:
             rtt.append(i)
         a = []
-        # for i in xxx:
-        #    a.append(''.join(i))
-        # a=set(a)
-        # a=list(a)
         ans_ct = 0
         s = list(s)
         flag = 0
@@ -72,7 +64,6 @@ while t > 0:
                 temp2 = temp1[:]
                 temp2[int(jj[0])], temp2[int(jj[1])] = temp2[int(jj[1])], temp2[int(jj[0])]
                 lul.append(''.join(temp2))
-        # print ans_ct
         ans_ct = len(set(lul))
         dic = {}
         for i in s:

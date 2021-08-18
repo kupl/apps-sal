@@ -17,7 +17,6 @@ class Solution:
             rounds -= 1
 
             alex, me = -heapq.heappop(max_heap), -heapq.heappop(max_heap)
-            # bob = heapq.heappop(min_heap)
 
             res += me
 

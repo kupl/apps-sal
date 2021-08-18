@@ -1,2 +1,2 @@
-def goals(*goals):    # *goals unpacks all variables into a tuple
+def goals(*goals):
     return sum(goals)

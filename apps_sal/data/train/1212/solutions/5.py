@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     s = input()
     l = [0 for i in range(26)]
