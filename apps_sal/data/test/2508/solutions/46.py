@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from heapq import heappush, heappop, heapify
 def input(): return sys.stdin.readline().strip()
@@ -16,7 +15,6 @@ def main():
          for i in range(H)]
     c = [[-1] * (W + 2)] + c + [[-1] * (W + 2)]
 
-    # 0123: 上下左右
     stack = []
     heappush(stack, (0, x1, y1, 0))
     heappush(stack, (0, x1, y1, 1))

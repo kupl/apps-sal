@@ -5,7 +5,6 @@ import math
 
 
 def __starting_point():
-    #n, m = list(map(int, input().split()))
     b, d, s = map(int, input().split())
     ans = 0
     if b > d and b > s:

@@ -1,27 +1,18 @@
 def main():
-    # IMPORT MODULE
     from collections import deque
     import sys
     def input(): return sys.stdin.readline().rstrip()
 
-    # sys.setrecursionlimit(100000)
-
-    # f_inf=float("inf")
-    # MOD=10**9+7
-
     if 'get_ipython' in globals():
-        # SAMPLE INPUT
         h, w, k = 3, 5, 2
         x1, y1, x2, y2 = 3, 2, 3, 4
         dist = ['.....', '.@..@', '..@..']
 
     else:
-        # INPUT
         h, w, k = map(int, input().split())
         x1, y1, x2, y2 = map(int, input().split())
         dist = [input() for _ in range(h)]
 
-    # SUBMITION CODES HERE
     x1 -= 1
     y1 -= 1
     x2 -= 1

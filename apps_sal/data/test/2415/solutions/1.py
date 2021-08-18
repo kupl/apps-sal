@@ -3,7 +3,7 @@ elements = "H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe 
 
 def decompose(word):
     """Express given word as chemical compound. If there are multiple solutions, return one of minimal weight."""
-    progress = [False for x in range(len(word) + 1)]  # solution for word[:i]
+    progress = [False for x in range(len(word) + 1)]
     progress[0] = []
 
     for i in range(1, len(word) + 1):
@@ -16,7 +16,6 @@ def decompose(word):
                 possibles.append(progress[j] + [alchemical])
 
         if possibles:
-            # choose minimal solution
             progress[i] = min(possibles, key=len)
 
     if progress[-1] == False:

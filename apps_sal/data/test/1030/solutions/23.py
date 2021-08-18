@@ -1,12 +1,4 @@
-# @Author: Justin Hershberger
-# @Date:   23-03-2017
-# @Filename: 399A.py
-# @Last modified by:   Justin Hershberger
-# @Last modified time: 23-03-2017
 
-
-# Justin Hershberger
-# Py3.5
 
 import fileinput
 

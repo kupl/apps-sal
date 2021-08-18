@@ -1,4 +1,3 @@
-# F - Pond Skater
 
 from collections import deque
 

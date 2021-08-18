@@ -10,8 +10,6 @@ def get_divisor(num, max_val):
 
     return ret
 
-# 下からmodが低いのを取ってきてマッチングを取る
-
 
 def solve():
     N, K = map(int, input().split())
@@ -26,7 +24,6 @@ def solve():
         flag = True
         mod_d = [a % d for a in A]
         mod_d.sort()
-        # print(d, mod_d)
         for a in mod_d:
             if sum_k + a <= K:
                 sum_k += a

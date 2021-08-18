@@ -1,4 +1,3 @@
-# 解説AC
 from collections import deque
 
 
@@ -8,21 +7,17 @@ def check(d: int):
 
     ans = 0
     while mod:
-        modmin = mod.popleft()  # modの最小値
+        modmin = mod.popleft()
 
-        # modmin -> 0 を考える
         ans += modmin
         while modmin:
             if not mod:
-                return False  # modmin -> 0 にできない
+                return False
             modmax = mod.pop()
-            sub = d - modmax  # modmax -> d にする操作回数
+            sub = d - modmax
             if sub <= modmin:
-                # modmin -> 0 の方が操作回数が必要な場合
                 modmin -= sub
             else:
-                # modmax -> d の方が操作回数が必要な場合
-                # (※ modmax > d となることはない)
                 modmax += modmin
                 if modmax % d != 0:
                     mod.append(modmax)
@@ -43,7 +38,6 @@ def make_divisors(n: int):
     return divisors
 
 
-###############################
 N, K = map(int, input().split())
 A = [int(i) for i in input().split()]
 

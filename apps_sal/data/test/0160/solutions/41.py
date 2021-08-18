@@ -15,7 +15,6 @@ for cdd in candidates:
         div_cdd[i] = a[i] % cdd
     div_cdd = sorted(div_cdd)
     pstv, ngtv = 0, -sum(div_cdd)
-    # calc need
     if pstv == -ngtv:
         ans = max(ans, cdd)
         continue

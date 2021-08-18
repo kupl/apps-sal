@@ -3,7 +3,6 @@ from collections import deque
 
 
 def dijkstra(xs, ys, xg, yg, h, w, k, field):
-    # que->(cost, x, y, direction)
     inf = 1e18
     dist = [[inf] * w for _ in range(h)]
     dist[xs][ys] = 0
@@ -40,7 +39,6 @@ def main():
     xs, ys, xg, yg = map(int, input().split())
     field = [[False] * (w + 2) for _ in range(h + 2)]
     for i in range(h):
-        # False で覆うことでx,yの制限をなくす。
         s = [True if _ == '.' else False for _ in input()]
         field[i + 1] = [False] + s + [False]
     h += 2

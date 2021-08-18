@@ -22,21 +22,8 @@ def can(w, i):
 
 new = input()
 print('YES' if can(new, 0) else 'NO')
-# if new in GOOD:
-#    print('YES')
-# elif new in BAD:
-#    print('NO')
-# else:
-#    print('YES')
 
 
 def score(w):
     n = [ord(c) - ord('A') + 1 for c in w]
     print(w, n, len([x for x in n if x % 2 == 1]))
-
-#print('== GOOD ==')
-# for w in GOOD:
-#    print(can(w, 0))
-#print('== BAD ==')
-# for w in BAD:
-#    print(can(w, 0))

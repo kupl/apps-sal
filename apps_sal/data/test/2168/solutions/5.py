@@ -7,7 +7,6 @@ for i in range(n):
     m.pop(0)
     company.append(m)
 
-# maxx - общая наибольшая зарплата
 maxx = company[0][0]
 for i in company:
     for j in i:

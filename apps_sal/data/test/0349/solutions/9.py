@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/5/5 1:09
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : B. Double Matrix.py
 
 
 def main():

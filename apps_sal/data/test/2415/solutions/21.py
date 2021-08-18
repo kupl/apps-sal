@@ -117,11 +117,9 @@ Mc
 Lv
 Ts
 Og""".upper().split("\n")
-# print(elems)
 
 
 def does_it_work(word):
-    # print(word)
     if word == '':
         return True
     for x in elems:

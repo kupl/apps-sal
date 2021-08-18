@@ -20,8 +20,6 @@ def check(arr, x, y, a, b, mid, k):
         MID = a
     GCN = mid // MAD - GdCN
     BCN = mid // MID - GdCN
-    #print(arr[:GdCN], arr[GdCN:GdCN + GCN], arr[GdCN + GCN:GdCN + GCN + BCN])
-    #print(mid, GdCN, GCN, BCN, sum(arr[:GdCN]) * ((x + y) // 100) + sum(arr[GdCN:GdCN + GCN]) * (MAP // 100) + sum(arr[GdCN + GCN:GdCN + GCN + BCN]) * (MIP // 100))
     if sum(arr[:GdCN]) * (x + y) // 100 + sum(arr[GdCN:GdCN + GCN]) * MAP // 100 + sum(arr[GdCN + GCN:GdCN + GCN + BCN]) * MIP // 100 >= k:
         return True
     else:
@@ -50,4 +48,3 @@ for i in range(n):
         print(right)
     else:
         print(-1)
-    # print('--------------------------------------------------')

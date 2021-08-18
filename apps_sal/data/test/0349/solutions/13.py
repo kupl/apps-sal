@@ -15,11 +15,6 @@ for i in range(n):
     for j in range(m):
         a[i][j], b[i][j] = min(a[i][j], b[i][j]), max(a[i][j], b[i][j])
 
-# print('a:')
-# print(a)
-
-# print('b:')
-# print(b)
 
 works = True
 

@@ -1,5 +1,3 @@
-# 約数の列挙
-#############################################################
 
 
 def make_divisors(n):
@@ -12,7 +10,6 @@ def make_divisors(n):
                 upper_divisors.append(n // i)
         i += 1
     return lower_divisors + upper_divisors[::-1]
-#############################################################
 
 
 N, K = list(map(int, input().split()))
@@ -21,7 +18,6 @@ A = list(map(int, input().split()))
 sum_A = sum(A)
 div_list = make_divisors(sum_A)
 ans = 1
-# print(div_list)
 
 for div in div_list:
     tmp = []
