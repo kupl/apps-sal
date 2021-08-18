@@ -11,5 +11,4 @@ for x, y, a in X_Y_A:
         oY = max(y, oY)
     else:
         H = min(y, H)
-# print(W, oX, H, oY)
 print((max(0, W - oX) * max(0, H - oY)))

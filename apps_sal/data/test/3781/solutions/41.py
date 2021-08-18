@@ -6,6 +6,7 @@ def I(): return int(input())
 def MI(): return list(map(int, input().split()))
 def LI(): return list(map(int, input().split()))
 
+
 """
 結局のところ，袋から出し終えた時点で勝敗はついている．
 袋から出す段階でもgrundyの議論ができそう
@@ -62,7 +63,7 @@ def main():
         if N % 2 == 1:
             print("Second")
         else:
-            flag = 1  # 全部偶数個か?
+            flag = 1
             from collections import defaultdict
             dd = defaultdict(int)
 

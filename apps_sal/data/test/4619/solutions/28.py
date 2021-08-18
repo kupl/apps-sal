@@ -16,10 +16,8 @@ for i in range(N):
             elif a == 4:
                 if j >= y:
                     Black[j][k] = False
-                    # print(Black)
 
 c = 0
-# print(Black)
 for i in range(H):
     c += Black[i].count(True)
 print(c)

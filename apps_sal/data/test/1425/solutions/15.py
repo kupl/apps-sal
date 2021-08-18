@@ -23,7 +23,6 @@ def check(circle):
     return True
 
 
-# main starts
 n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 arr.sort()
@@ -41,7 +40,6 @@ for i in range(1, n):
         flag = 0
 
 circle = list(circle)
-# print(circle)
 if check(circle):
     print("YES")
     print(*circle)

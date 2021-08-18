@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 W, H, N = list(map(int, input().split()))
 xs = ys = 0

@@ -1,4 +1,4 @@
-w, h, n = list(map(int, input().split()))  # 初期値
+w, h, n = list(map(int, input().split()))
 lx = 0
 ly = 0
 rx = w
@@ -21,5 +21,4 @@ for i in range(n):
     else:
         if ry > y:
             ry = y
-# 出力
 print((max(rx - lx, 0) * max(ry - ly, 0)))

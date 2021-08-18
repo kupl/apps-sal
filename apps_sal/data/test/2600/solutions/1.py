@@ -27,8 +27,6 @@ def solve():
     return
 
 
-# solve()
-
 T = ni()
 for _ in range(T):
     solve()

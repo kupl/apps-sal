@@ -1,6 +1,3 @@
-# Date [ 2020-10-11 23:52:10 ]
-# Problem [ d.py ]
-# Author Koki_tkg
 
 import sys
 from collections import Counter

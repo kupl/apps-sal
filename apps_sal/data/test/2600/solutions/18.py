@@ -16,6 +16,4 @@ for _ in range(int(input())):
     for i in range(len(brr) // 2):
         ans += min(brr[i][0] + brr[-i - 1][0],
                    brr[i][1] + brr[-i - 1][1])
-    # if len(brr) % 2 == 1:
-    #     ans += min(brr[len(brr) // 2])
     print(ans)

@@ -13,7 +13,7 @@ def solve(N, A):
     return ans
 
 
-for tc in range(1):  # rri()):
+for tc in range(1):
     N = rri()
     A = rrm()
     print(solve(N, A))

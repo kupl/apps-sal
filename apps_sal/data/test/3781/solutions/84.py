@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collections import Counter
 import sys
 sys.setrecursionlimit(10**9)

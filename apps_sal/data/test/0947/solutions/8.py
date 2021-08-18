@@ -30,5 +30,3 @@ for _ in range(int(input())):
         pass
     else:
         print(1, n - 1)
-    # n, m = map(int, input().split())
-    # a = list(map(int, input().split()))

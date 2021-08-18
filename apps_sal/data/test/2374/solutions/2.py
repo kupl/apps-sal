@@ -1,7 +1,7 @@
 from bisect import bisect_left, bisect_right
 import sys
 INF = 1 << 60
-MOD = 10**9 + 7  # 998244353
+MOD = 10**9 + 7
 sys.setrecursionlimit(2147483647)
 def input(): return sys.stdin.readline().rstrip()
 

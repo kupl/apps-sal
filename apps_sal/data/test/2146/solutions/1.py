@@ -3,7 +3,6 @@ a = [int(i) - 1 for i in input().split()]
 
 m = [-1] * len(a)
 
-# print(m)
 
 scur = set()
 snext = set()

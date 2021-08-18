@@ -1,6 +1,3 @@
-#!python3.8
-# -*- coding: utf-8 -*-
-# arc105/arc105_d
 import sys
 from collections import Counter
 
@@ -17,7 +14,6 @@ def ii2nnn(n): return ss2nnn(ii2ss(n))
 
 
 def case():
-    # Nが奇数で逆転
     N = i2n()
     a = i2nn()
     cntr = Counter(a)

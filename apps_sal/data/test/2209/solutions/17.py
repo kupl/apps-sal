@@ -1,11 +1,9 @@
-# input
 n = int(input())
 
 a = []
 for i in range(0, n):
     a.append(input())
 
-# calculation
 noise = 0
 
 
@@ -55,6 +53,5 @@ for i in range(0, n):
     str += a[v[i][0]]
 noise = calc_noise(str)
 
-# output
 
 print(noise)

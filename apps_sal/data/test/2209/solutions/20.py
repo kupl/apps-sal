@@ -1,31 +1,5 @@
-# n = int(input())
-# occurences = [''] * n
-# t = [0] * n
 
-# for i in range(n):
-#     s = input()
-#     occurences[i] = s
-#     num_s = s.count('s')
-#     num_h = s.count('h')
-#     if num_h>0:
-#         t[i]=num_s/num_h
-#     else:
-#         t[i]=10000000
 
-# order = list(range(n))
-# order.sort(reverse=True,key=lambda i:t[i])
-# dum = ''
-# for i in order:
-#     dum += occurences[i]
-
-# a = 0
-# b = 0
-# for c in dum:
-#     if c=='s':
-#         a+=1
-#     else:
-#         b+=a
-# print(b)
 import sys
 import functools
 
