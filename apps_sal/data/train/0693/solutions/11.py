@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 fact = [1, 1]
 for i in range(2, 21):

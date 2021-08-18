@@ -11,23 +11,19 @@ class Solution:
             else:
                 graph[arr[i]] = [i]
 
-        curs = [0]  # store layers from start
+        curs = [0]
         visited = {0, n - 1}
         step = 0
 
-        other = [n - 1]  # store layers from end
+        other = [n - 1]
 
-        # when current layer exists
         while curs:
-            # search from the side with fewer nodes
             if len(curs) > len(other):
                 curs, other = other, curs
             nex = []
 
-            # iterate the layer
             for node in curs:
 
-                # check same value
                 for child in graph[arr[node]]:
                     if child in other:
                         return step + 1
@@ -35,10 +31,6 @@ class Solution:
                         visited.add(child)
                         nex.append(child)
 
-                # clear the list to prevent redundant search
-                # graph[arr[node]].clear()
-
-                # check neighbors
                 for child in [node - 1, node + 1]:
                     if child in other:
                         return step + 1

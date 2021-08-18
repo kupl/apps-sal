@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 for i in range(int(input())):
     N = int(input())
     Arr = list(map(int, input().split()))

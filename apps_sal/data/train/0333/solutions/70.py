@@ -4,7 +4,6 @@ class Solution:
         if len(arr) == 1:
             return 0
 
-        # prune duplicates
         i = 0
         while i < len(arr) - 2:
             if arr[i] == arr[i + 1] == arr[i + 2]:
@@ -19,7 +18,6 @@ class Solution:
             if i + 1 < len(arr):
                 nexts.append(i + 1)
             for index in d[arr[i]]:
-                #print('index', index)
                 if index != i:
                     nexts.append(index)
             return nexts
@@ -29,7 +27,7 @@ class Solution:
             if arr[i] in d:
                 d[arr[i]].add(i)
             else:
-                d[arr[i]] = {i}  # value is set
+                d[arr[i]] = {i}
 
         for k, v in list(d.items()):
             d[k] = list(v)

@@ -29,7 +29,6 @@ for i in range(0, n):
         p[j + 1] = A + (A % 3)
     if len(p) % 2 == 1:
         p[len(p) - 1] = int(p[len(p) - 1]) + (int(p[len(p) - 1])) % 3
-    # print(p)
     p.sort(key=int)
     ans1 = -1
     ans2 = -1

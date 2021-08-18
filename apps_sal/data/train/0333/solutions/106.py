@@ -13,7 +13,6 @@ class Solution:
         vis = set()
         vis.add(0)
         while queue:
-            # print(queue)
             num, index, count = queue.popleft()
             if index == end:
                 return count

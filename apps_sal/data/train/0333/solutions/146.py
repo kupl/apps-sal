@@ -1,4 +1,3 @@
-# 20201003 链表
 class Solution:
     def minJumps(self, arr):
         length = len(arr)
@@ -7,7 +6,7 @@ class Solution:
         if arr[0] == arr[-1]:
             return 1
 
-        _map = defaultdict(set)  # connection map
+        _map = defaultdict(set)
         for i, val in enumerate(arr):
             _map[val].add(i)
 

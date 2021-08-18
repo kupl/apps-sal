@@ -4,7 +4,7 @@ class Solution:
         for i, num in enumerate(arr):
             g[num].append(i)
         visited = set()
-        q = deque([(0, 0)])  # idx,step
+        q = deque([(0, 0)])
 
         while q:
             idx, step = q.popleft()

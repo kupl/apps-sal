@@ -1,7 +1,4 @@
 def amidakuji(ar):
-    # your code goes here. you can do it!
-    # uncomment the line below to view the structure of the test case
-    # print(visualizer(ar))
     width = len(ar[0])
     current = [i for i in range(width + 1)]
     for i in ar:

@@ -4,8 +4,6 @@
 3 7 5 4 6 2 1
 '''
 
-#~ @author = dwij28 (Abhinav Jha) ~#
-
 
 def pow2(n): return n and (not(n & (n - 1)))
 
