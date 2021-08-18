@@ -20,7 +20,6 @@ for _ in range(t):
       c=False
       if True:
        l=[j+ind for j,i in enumerate(s[ind:]) if i==m]
-       #print([s[:ind]+s[aa]+s[ind:aa]+s[aa+1:] for aa in l])
        mm=min(l,key=lambda aa:s[:ind]+s[aa]+s[ind:aa]+s[aa+1:])
       s=s[:ind]+m+s[ind:mm]+s[mm+1:]
     print(s)'''

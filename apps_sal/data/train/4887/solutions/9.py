@@ -11,7 +11,7 @@ def days(day, month, year):
     try:
         target_date = date(year, month, day)
         distance = (CURR_DATE - target_date).days
-    except ValueError:  # Gregorian/Julian conflict
+    except ValueError:
         target_date = date(year, month, day - 1)
         distance = (CURR_DATE - target_date).days - 1
     if target_date < GREG_START:

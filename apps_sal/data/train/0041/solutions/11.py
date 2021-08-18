@@ -13,7 +13,6 @@ while t:
         hyp.append('(')
     for i in range(ll):
         hyp.append(')')
-    # print(hyp,s)
     ans = []
     for i in range(n):
         if hyp[i] != s[i]:

@@ -11,8 +11,8 @@ def day_of_year(d, m, y=2437):
 
 
 def days(d, m, y, d0=24, m0=3, y0=2437):
-    A = day_of_year(d0, m0)  # current year
-    B = sum(map(is_leap, range(y + 1, y0))) + 365 * (y0 - y)  # years between y and y0
-    C = 11 * (y < 1752 or y == 1752 and day_of_year(d, m) < 246)  # < 03.09.1752
-    D = is_leap(y) - day_of_year(d, m, y)  # desired year
+    A = day_of_year(d0, m0)
+    B = sum(map(is_leap, range(y + 1, y0))) + 365 * (y0 - y)
+    C = 11 * (y < 1752 or y == 1752 and day_of_year(d, m) < 246)
+    D = is_leap(y) - day_of_year(d, m, y)
     return A + B - C + D

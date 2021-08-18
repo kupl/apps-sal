@@ -32,21 +32,21 @@ dp2[n - 1][m - 1] = a[n - 1][m - 1]
 dp3[n - 1][0] = a[n - 1][0]
 dp4[0][m - 1] = a[0][m - 1]
 for i in range(1, n):
-    dp1[i][0] = dp1[i - 1][0] + a[i][0]  # >>>>
+    dp1[i][0] = dp1[i - 1][0] + a[i][0]
 for i in range(n - 2, -1, -1):
-    dp2[i][m - 1] = dp2[i + 1][m - 1] + a[i][m - 1]  # <<<<
+    dp2[i][m - 1] = dp2[i + 1][m - 1] + a[i][m - 1]
 for i in range(n - 2, -1, -1):
-    dp3[i][0] = dp3[i + 1][0] + a[i][0]  # <<<<
+    dp3[i][0] = dp3[i + 1][0] + a[i][0]
 for i in range(1, n):
-    dp4[i][m - 1] = dp4[i - 1][m - 1] + a[i][m - 1]  # >>>>
+    dp4[i][m - 1] = dp4[i - 1][m - 1] + a[i][m - 1]
 for i in range(1, m):
-    dp1[0][i] = dp1[0][i - 1] + a[0][i]  # >>>>
+    dp1[0][i] = dp1[0][i - 1] + a[0][i]
 for i in range(m - 2, -1, -1):
-    dp2[n - 1][i] = dp2[n - 1][i + 1] + a[n - 1][i]  # <<<<
+    dp2[n - 1][i] = dp2[n - 1][i + 1] + a[n - 1][i]
 for i in range(1, m):
-    dp3[n - 1][i] = dp3[n - 1][i - 1] + a[n - 1][i]  # >>>>
+    dp3[n - 1][i] = dp3[n - 1][i - 1] + a[n - 1][i]
 for i in range(m - 2, -1, -1):
-    dp4[0][i] = dp4[0][i + 1] + a[0][i]  # >>>>
+    dp4[0][i] = dp4[0][i + 1] + a[0][i]
 for i in range(1, n):
     for j in range(1, m):
         dp1[i][j] = max(dp1[i - 1][j], dp1[i][j - 1]) + a[i][j]

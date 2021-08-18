@@ -28,7 +28,6 @@ def main():
             _min = min(a)
             _max = max(a)
 
-            # decrease max
             _min_rindex = a.index(_min)
             for i in range(_min_rindex, len(a)):
                 if a[i] == _min:
@@ -37,7 +36,6 @@ def main():
             if _max_index > _min_rindex:
                 return True
 
-            # increase min
             _max_rindex = a.index(_max)
             for i in range(_max_rindex, len(a)):
                 if a[i] == _max:

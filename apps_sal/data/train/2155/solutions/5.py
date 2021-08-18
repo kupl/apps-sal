@@ -19,7 +19,6 @@ aToEnd = [[0 for i in range(m + 2)] for j in range(n + 2)]
 for i in range(1, n + 1):
     for j in range(m, 0, -1):
         aToEnd[i][j] = gym[i][j] + max(aToEnd[i - 1][j], aToEnd[i][j + 1])
-#print(bToMid[1][2], bToEnd[3][2], aToMid[2][1], aToEnd[2][3])
 best = 0
 bestIJ = ()
 for i in range(2, n):
@@ -28,4 +27,3 @@ for i in range(2, n):
         best = max(best, bToMid[i - 1][j] + bToEnd[i + 1][j] + aToMid[i][j - 1] + aToEnd[i][j + 1])
         bestIJ = (i, j)
 print(best)
-# print(bestIJ)

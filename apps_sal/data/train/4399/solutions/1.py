@@ -23,10 +23,6 @@ def fold_cube(nums):
     for n in stack:
         if (int((n - 1) / 5)) not in rows:
             rows.append(int((n - 1) / 5))
-#     print()
-#     print(rows)
-#     print()
-#     print(cols)
     if len(rows) + len(cols) != 7:
         return False
     if len(rows) == 2:

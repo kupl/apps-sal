@@ -1,5 +1,4 @@
 def anagrams(word, words):
-    # your code here
     list = []
     word = sorted(word)
     for i in range(len(words)):

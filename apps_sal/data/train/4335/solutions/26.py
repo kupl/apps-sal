@@ -1,5 +1,4 @@
 def anagrams(word, words):
-    # your code here
     wordnum = sum(ord(ch) for ch in word)
     res = []
     if not words:

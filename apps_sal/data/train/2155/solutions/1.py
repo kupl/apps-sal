@@ -4,7 +4,6 @@
 100 1 100
 100 100 100
 '''
-# again a coding delight
 from sys import stdin
 
 
@@ -60,16 +59,15 @@ def create_dp4(matrix, n, m):
     return dp
 
 
-# main starts
 n, m = list(map(int, stdin.readline().split()))
 matrix = []
 for _ in range(n):
     matrix.append(list(map(int, stdin.readline().split())))
 
-dp1 = create_dp1(matrix, n, m)  # from 0, 0 to i, j
-dp2 = create_dp2(matrix, n, m)  # from i, j to n, m
-dp3 = create_dp3(matrix, n, m)  # from n, 1 to i, j
-dp4 = create_dp4(matrix, n, m)  # from i, j to 1, m
+dp1 = create_dp1(matrix, n, m)
+dp2 = create_dp2(matrix, n, m)
+dp3 = create_dp3(matrix, n, m)
+dp4 = create_dp4(matrix, n, m)
 
 total = -float('inf')
 for i in range(1, n - 1):
