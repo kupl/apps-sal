@@ -20,4 +20,3 @@ for i in range(T):
                 if sum <= total_sum:
                     count = count + 1
         print(count)
-# cook your dish here

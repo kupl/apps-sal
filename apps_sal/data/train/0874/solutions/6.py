@@ -6,18 +6,15 @@ for _ in range(int(input())):
     arr.sort()
     while(i < len(arr) and m > 1):
         if(arr[i] <= s):
-            # print(arr[i])
             m -= 1
             count += 1
         else:
             if(arr[i] % s == 0):
                 if(arr[i] // s <= 2):
-                    # print(arr[i])
                     m = m - (arr[i] // s)
                     count += 1
             else:
                 if((arr[i] // s + 1) <= 2):
-                    # print(arr[i])
                     m = m - (arr[i] // s + 1)
                     count += 1
         i += 1

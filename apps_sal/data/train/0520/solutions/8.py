@@ -8,4 +8,4 @@ for i in range(0, t):
     elif ch == 'd' or ch == 'D':
         print("Destroyer\n")
     elif ch == 'f' or ch == 'F':
-        print("Frigate\n")    # cook your dish here
+        print("Frigate\n")

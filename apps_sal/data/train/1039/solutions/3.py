@@ -1,5 +1,4 @@
 for _ in range(int(input())):
-    # k=int(input())
     a, b = [int(x) for x in input().split()]
     if a == b:
         print(0)

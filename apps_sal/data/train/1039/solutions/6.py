@@ -1,4 +1,3 @@
-# cook your dish here
 for testcases in range(int(input())):
     x, y = map(int, input("").split())
     z = y - x

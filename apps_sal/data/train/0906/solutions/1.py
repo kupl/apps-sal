@@ -1,4 +1,3 @@
-# Author: Dancing Monkey | Created: 09.DEC.2018
 
 
 import bisect
@@ -38,24 +37,18 @@ for _ in range(int(input())):
     s1 = [0]
     for i in range(y2):
         s1.append(s1[-1] + x2[i])
-    # print(s1)
     s2 = [0]
     for i in range(y2):
         s2.append(s2[-1] + x2[y2 - 1 - i])
-    # print(s2)
 
     for i in x1:
         for j in x3:
             p1 = (i + j) / 2
             p = bisect.bisect_left(x2, p1)
-            # print('p', p)
             l = p
             h = y2 - l
-            # print(l, h)
 
             area += p1 * (l) - s1[l]
-            # print('dfg', area)
             area += s2[h] - p1 * (h)
 
     print(format(area, 'f'))
-    # print()

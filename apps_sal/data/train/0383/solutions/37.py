@@ -13,7 +13,6 @@ class Solution:
             visited = set()
 
             while q != []:
-                # print(q)
                 v = q.pop()
                 if v != i and not v in visited:
                     total_infected += 1
@@ -21,8 +20,6 @@ class Solution:
                     for j, edge in enumerate(graph[v]):
                         if j != i and (edge == 1) and not (j in visited):
                             q.append(j)
-
-            # print(total_infected,i)
 
             if total_infected < least_infections:
                 least_infections = total_infected

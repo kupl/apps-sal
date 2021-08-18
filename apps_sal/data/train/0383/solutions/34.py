@@ -3,12 +3,10 @@ from collections import Counter, defaultdict
 
 class Solution:
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
-        # Total nodes
         N = len(graph)
         seen = set()
         refcounter = Counter()
 
-        # clean nodes which are not infected
         clean_nodes = set(range(N)) - set(initial)
         maxval = 0
 

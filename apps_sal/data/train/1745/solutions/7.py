@@ -1,4 +1,3 @@
-################################################################
 ADD = "+"
 SUB = "-"
 MUL = "*"
@@ -17,8 +16,6 @@ DECIMAL = "."
 
 eMsg = "400: Bad request"
 
-################################################################
-
 
 class RouteError(ValueError):
     pass
@@ -29,8 +26,6 @@ class RouteError(ValueError):
   def _ _init_ _(self, text):
     self.text=text
   '''
-
-################################################################
 
 
 class Scaner:
@@ -92,10 +87,8 @@ class Scaner:
         if chr in DIGITS or chr == DECIMAL:
             return self.get_number()
 
-        self.pos += 1       # NOT nesessary
+        self.pos += 1
         raise RouteError("Illegal character in expression.")
-
-################################################################
 
 
 class Parser:
@@ -171,8 +164,6 @@ class Parser:
     def generate_op(self, op):
         self.rpn.append(op)
 
-################################################################
-
 
 def tryint(num):
     '''
@@ -198,8 +189,6 @@ def Evaluate(rpn):
             stk.append(t)
 
     return tryint(stk[0])
-
-################################################################
 
 
 def calculate(expression):

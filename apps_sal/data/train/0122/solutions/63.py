@@ -20,7 +20,5 @@ class Solution:
                 sum1 += cardPoints[i]
                 if (sum1 < minimum):
                     minimum = sum1
-        # else:
-         #   minimum = 0
         print(minimum)
         return sum(cardPoints) - minimum
