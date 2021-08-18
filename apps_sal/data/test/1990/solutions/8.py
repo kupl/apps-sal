@@ -3,8 +3,6 @@
 (R)R(R)Ra)c
 '''
 
-# https://codeforces.com/blog/entry/18051
-# Min = minimum prefix sum instead of minimum value
 
 from sys import stdin
 
@@ -29,12 +27,12 @@ class SegmentTree:
 
         i = p
         while i > 1:
-            par = i >> 1  # parent
-            if i & 1:  # i is a right child (odd index)
+            par = i >> 1
+            if i & 1:
                 self.tsum[par] = self.tsum[i] + self.tsum[i ^ 1]
-                self.tmin[par] = min(self.tmin[i ^ 1], self.tmin[i] + self.tsum[i ^ 1])  # i^1 = other child of i's parent
+                self.tmin[par] = min(self.tmin[i ^ 1], self.tmin[i] + self.tsum[i ^ 1])
                 self.tmax[par] = max(self.tmax[i ^ 1], self.tmax[i] + self.tsum[i ^ 1])
-            else:  # i is a left child
+            else:
                 self.tsum[par] = self.tsum[i] + self.tsum[i ^ 1]
                 self.tmin[par] = min(self.tmin[i], self.tmin[i ^ 1] + self.tsum[i])
                 self.tmax[par] = max(self.tmax[i], self.tmax[i ^ 1] + self.tsum[i])
@@ -70,7 +68,6 @@ def main():
     n = int(input())
     s = input()
 
-    #n = 2 ** math.ceil(math.log(n, 2))
     n = 1048576
     st = SegmentTree(n)
 

@@ -1,7 +1,6 @@
 L = input()
 ll = len(L)
 MOD = 10**9 + 7
-# [*2 if 1][*1 if 1][*3]
 
 comb = 1
 ans = 0

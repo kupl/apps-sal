@@ -11,7 +11,6 @@ for i in range(m):
     adj[a - 1].append(b - 1)
     adj[b - 1].append(a - 1)
 
-# print(adj)
 
 best = 1000000
 

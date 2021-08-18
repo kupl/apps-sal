@@ -14,21 +14,14 @@ for i in range(n):
 
 mod = 10**9 + 7
 ans = 0
-# iは、「最初にL[i]=1かつai=0かつbi=0となるindex」
 for i in range(n):
     if L[i] == '1':
         p = 1
-        # 自分より左側の0の度に2パターン増加
         if i >= 1:
             p *= pow(2, csum_1[i - 1], mod)
-        # print(p)
-        # 自分より右側はどの桁も3パターン増加
         p *= pow(3, n - i - 1, mod)
-        # print(p)
         ans += p
         ans %= mod
-# L=a+bの場合
 p = pow(2, csum_1[-1], mod)
-# print(p)
 ans = (ans + p) % mod
 print(ans)

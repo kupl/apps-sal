@@ -1,7 +1,3 @@
-#import math
-#import itertools
-#import numpy as np
-#from collections import deque
 
 
 def INT(): return int(input())
@@ -27,7 +23,6 @@ def do():
     bcs = sorted(bcs, key=lambda x: x[1], reverse=True)
     itr = -1
     flg = False
-    # print(A)
     for b, c in bcs:
         if itr + b > n - 1:
             flg = True
@@ -54,7 +49,6 @@ def do():
         if itr > n - 1:
             break
     print(sum(A))
-    # print(A)
 
 
 def __starting_point():

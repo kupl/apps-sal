@@ -8,8 +8,6 @@ for i in range(n):
 for _ in range(m):
     b, c = list(map(int, input().split()))
     s.append((c, b))
-#  for j in range(b):
-#    a.append(c)
 
 s.sort(reverse=True)
 idx = 0
@@ -22,8 +20,5 @@ for i in range(n):
     sum += s[i][0] * s[i][1]
     idx += s[i][1]
 
-
-# for i in range(l-n, l):
-#  sum += a[i]
 
 print(sum)

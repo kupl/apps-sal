@@ -6,9 +6,6 @@ N = [int(i) for i in L]
 keta = len(N)
 dp = [[0 for i in range(2)] for j in range(keta + 1)]
 dp[0][0] = 1
-#dp[0][0][1] =0
-#dp[0][1][0] =0
-#dp[0][1][1] =0
 
 for i in range(keta):
     for smaller in [0, 1]:

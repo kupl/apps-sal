@@ -1,6 +1,5 @@
 import sys
 import itertools
-# import numpy as np
 import time
 import math
 from heapq import heappop, heappush
@@ -16,7 +15,6 @@ read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
 
-# map(int, input().split())
 L = input()
 
 dp = [[0] * 2 for _ in range(len(L) + 1)]
@@ -31,4 +29,3 @@ for i in range(1, len(L)):
         dp[i][0] = dp[i - 1][0]
         dp[i][1] = (3 * dp[i - 1][1]) % MOD
 print((sum(dp[len(L) - 1]) % MOD))
-# print(dp)

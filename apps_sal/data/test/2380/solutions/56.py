@@ -14,7 +14,6 @@ l = l[::-1]
 L = []
 cn = 0
 for b, c in l:
-    # print(b,c)
     if cn > n:
         break
     c = min(c, 10**5 + 10)
@@ -25,5 +24,4 @@ L += A
 
 L.sort()
 L = L[::-1]
-# print(L)
 print(sum(L[:n]))

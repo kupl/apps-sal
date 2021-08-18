@@ -39,8 +39,6 @@ def add(ls1, ls2, n):
     return ls1
 
 
-# input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
-# input = io.StringIO(os.read(0, os.fstat(0).st_size).decode()).readline
 def kk(): return list(map(int, input().split()))
 def k2(): return [int(x) - 1 for x in input().split()]
 def ll(): return list(kk())
