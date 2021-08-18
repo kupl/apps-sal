@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 a = list(map(int, input().split()))[1]
 b = list(map(int, input().split()))

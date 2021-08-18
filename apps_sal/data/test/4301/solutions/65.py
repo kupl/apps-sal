@@ -1,11 +1,3 @@
-#import math
-#import itertools
-#import numpy as np
-#from collections import deque
-# sys.setrecursionlimit(10 ** 6)
-#mod = 10 ** 9 + 7
-#INF = 10 ** 9
-#PI = 3.14159265358979323846
 
 def INT(): return int(input())
 
@@ -33,8 +25,6 @@ def do():
     else:
         index = A.index(B[0])
         flg = False
-
-    # print(A,B,index)
 
     if flg:
         for i in range(n):

@@ -1,7 +1,6 @@
 N, C = map(int, input().split())
 prog = [list(map(int, input().split())) for _ in range(N)]
 
-#tv[i] = [t, c]
 tv = [[-1, 0] for i in range(C)]
 
 prog.sort()

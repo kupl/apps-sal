@@ -1,4 +1,3 @@
-# 077a
 
 def atc_077a(input_value: str) -> str:
     C1 = input_value[0]

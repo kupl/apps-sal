@@ -6,8 +6,6 @@ for _ in range(n):
 
 b = a.copy()
 
-# これを加える！！！！
-
 
 def _heappush_max(heap, item):
     heap.append(item)
@@ -16,7 +14,7 @@ def _heappush_max(heap, item):
 
 def _heappop_max(heap):
     """Maxheap version of a heappop."""
-    lastelt = heap.pop()    # raises appropriate IndexError if heap is empty
+    lastelt = heap.pop()
     if heap:
         returnitem = heap[0]
         heap[0] = lastelt

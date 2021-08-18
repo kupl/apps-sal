@@ -1,4 +1,3 @@
-# ABC 134 C
 N = int(input())
 A = []
 for i in range(N):

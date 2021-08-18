@@ -1,4 +1,3 @@
-# A - Rotation
 line1 = input()
 line2 = input()
 my_list1 = []
@@ -16,5 +15,3 @@ if my_list1 == my_list2:
     print('YES')
 else:
     print('NO')
-
-# print(my_list1, my_list2)

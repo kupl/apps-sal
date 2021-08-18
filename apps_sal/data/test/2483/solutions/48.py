@@ -1,7 +1,6 @@
 import numpy as np
 N, C = list(map(int, input().split()))
 
-# s~tでc
 L = np.zeros((C, 10**5 + 1))
 
 for i in range(N):

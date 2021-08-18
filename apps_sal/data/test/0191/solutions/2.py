@@ -1,7 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
-"""Codeforces Round #553 (Div. 2)
+"""Codeforces Round 
 
 Problem F. Sonya and Informatics
 
@@ -79,7 +77,6 @@ def memoize(func):
 
 @memoize
 def matrix_pow(M, n, mod):
-    # print(f'n is {n}')
     if n == 2:
         return multiply(M, M, mod)
     if n == 1:

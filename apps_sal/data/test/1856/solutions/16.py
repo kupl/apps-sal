@@ -53,10 +53,6 @@ class Disjoint_set:
         return pr
 
 
-# range = xrange
-# input = raw_input
-# print("Case #{}: {} {}".format(i, n + m, n * m))
-
 def main():
     n = iin()
     s = [''.join(list(set(input()))) for i in range(n)]
@@ -68,7 +64,6 @@ def main():
         for j in i:
             adj[ord(j) - ord('a')].append(k + 1)
     ds = Disjoint_set(l)
-    #print(s, adj)
     done = set()
     for i in range(26):
         if adj[i]:

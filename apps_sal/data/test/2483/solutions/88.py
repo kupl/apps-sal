@@ -16,14 +16,14 @@ for k, v in dic.items():
             tmax = val[1]
         if prev == [-1, -1]:
             prev[0] = val[0]
-            prev[1] = val[1]  # end_time
+            prev[1] = val[1]
             if lev != 1:
                 continue
             else:
                 events.append((prev[0] - eps, 1))
                 events.append((prev[1], 0))
                 break
-        if prev[1] == val[0]:  # prev_end == now_start
+        if prev[1] == val[0]:
             prev[1] = val[1]
             if i == lev - 1:
                 events.append((prev[0] - eps, 1))

@@ -28,7 +28,6 @@ def find_parent(node):
     return node
 
 
-# main starts
 n = int(stdin.readline().strip())
 password = []
 parent = dict()
