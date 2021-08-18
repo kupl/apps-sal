@@ -1,6 +1,5 @@
 class Solution:
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
-        # start with smallest number
         if len(nums) % k != 0:
             return False
 

@@ -27,7 +27,7 @@ C19x5_18x1 = definer(C19_6, 5, C18_6, 1, "C19x5_18x1")
 C19x4_18x1 = definer(C19_6, 4, C18_6, 1, "C19x4_18x1")
 C_x5andx4 = definer(C19x5_18x1, 1, C19x4_18x1, 1, "C_x5andx4")
 C_x13andx4 = definer(C_x5andx4, 13, C19x4_18x1, 1, "C_x13andx4")
-C_TOP = definer(C_x13andx4, INF, C2, 0, "C_TOP")                # C2 is dummy, here
+C_TOP = definer(C_x13andx4, INF, C2, 0, "C_TOP")
 
 START = definer(C00, 1, C_TOP, 1, "START")
 

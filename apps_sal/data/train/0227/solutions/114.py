@@ -1,6 +1,5 @@
 class Solution:
     def longestOnes(self, A: List[int], K: int) -> int:
-        # intuition: probably use sliding windows
 
         l = 0
         r = 0
@@ -17,9 +16,7 @@ class Solution:
             if r == len(A) - 1 and val <= K:
                 maxlength = max(maxlength, r - l + 1)
             elif val > K:
-                # this must mean that A[r]==0
                 maxlength = max(maxlength, r - l)
-                # print(l,r,maxlength, val)
                 while val > K:
                     if A[l] == 0:
                         val -= 1

@@ -6,7 +6,6 @@ class Solution:
             start = min(count)
 
             while len(count):
-                # print(count)
                 if count[start] == 0:
                     start = min(count)
                 for num in range(start, start + k):

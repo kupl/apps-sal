@@ -15,8 +15,7 @@ class Solution:
             k_ = k
             while k_ > 0:
                 if h:
-                    x, c = heapq.heappop(h)  # pop the smallest element
-                    # if d[x] > 0:
+                    x, c = heapq.heappop(h)
                     if temp:
                         if temp[-1] == x - 1:
                             temp.append(x)

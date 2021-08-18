@@ -15,17 +15,14 @@ class Solution:
         r = 0
         ans = K
         while (l < len(A)):
-            #print (l,r)
             while (r < len(A) and (r - l + 1) - cal(l, r) <= K):
                 ans = max(ans, r - l + 1)
                 r = r + 1
-            #print (r)
 
             if (r == len(A)):
                 break
 
             while (l < len(A) and (r - l + 1) - cal(l, r) > K):
                 l = l + 1
-            #print (l)
 
         return ans

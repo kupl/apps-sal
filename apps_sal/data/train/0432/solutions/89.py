@@ -17,7 +17,6 @@ class Solution:
             count = 0
             iters -= 1
             for key in sorted(d):
-                # print(key,d, count,'here')
                 if count != 0 and not count % k:
                     break
                 if not prev or (d[key] > 0 and prev + 1 == key):
@@ -25,9 +24,7 @@ class Solution:
                     prev = key
                     count += 1
                 else:
-                    # print(d, count, '===')
                     return False
-            # print(d,'---')
             a = list(d.keys())
             for key in a:
                 if d[key] == 0:

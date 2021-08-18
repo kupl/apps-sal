@@ -8,7 +8,6 @@ class Solution:
         max_count = 0
         l = 0
         for r in range(len(A)):
-            # update the count
             count[A[r]] += 1
             max_count = max(max_count, count[1])
             if r - l + 1 - max_count > K:

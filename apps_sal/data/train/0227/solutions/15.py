@@ -8,4 +8,3 @@ class Solution:
                 i = c.pop(0) + 1
             ans = max(ans, j - i + 1)
         return ans
-# Sanyam Rajpal
