@@ -1,12 +1,6 @@
 
 
-#!/usr/bin/env python3
-
-# from numba import njit
-
-# input = stdin.readline
 INF = pow(10, 10)
-# @njit
 
 
 def solve(n, a):
@@ -22,7 +16,6 @@ def solve(n, a):
 
 def main():
     N = int(input())
-    # N,M = map(int,input().split())
     a = list(map(int, input().split()))
     print((solve(N, a)))
     return

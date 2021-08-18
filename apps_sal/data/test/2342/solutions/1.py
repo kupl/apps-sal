@@ -31,11 +31,11 @@ def bfs(M, i, j):
 
     while Q:
         eli, elj = Q.popleft()
-        if M[eli][elj] == '#':
-            continue
+        if M[eli][elj] == '
+        continue
         for ni, nj in neighbours(M, eli, elj):
-            if M[ni][nj] == '#':
-                continue
+            if M[ni][nj] == '
+            continue
             if visited[ni][nj]:
                 continue
             visited[ni][nj] = True
@@ -69,7 +69,7 @@ for t in range(T):
                     if M[i][j] == 'B':
                         for x, y in neighbours(M, i, j):
                             if M[x][y] == '.':
-                                M[x][y] = '#'
+                                M[x][y] = '
                             elif M[x][y] == 'G':
                                 print('No')
                                 raise Found()

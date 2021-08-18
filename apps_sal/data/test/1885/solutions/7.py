@@ -12,7 +12,6 @@ RI = lambda x=' ': list(map(int, input().split(x)))
 RS = lambda x=' ': input().rstrip().split(x)
 mod = int(1e9 + 7)
 eps = 1e-6
-#################################################
 n = RI()[0]
 v = n * (n - 1) * (n - 2) * (n - 3) * (n - 4)
 v1 = v // 120

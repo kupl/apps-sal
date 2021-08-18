@@ -1,5 +1,3 @@
-# Akhilesh Ravi
-# Codechef - Chef and Inequality
 
 T = int(input())
 l = []

@@ -23,20 +23,6 @@ def main():
                     w += 1
                 print(chr(w) + c * (m - i - 1))
                 return
-# for i in range(m):
-# if i < n and s[i] in q:
-# q.remove(s[i])
-# if len(q) == 1:
-##                    print(*q, end = '')
-# elif len(q) == 0:
-##                    print(c, end = '')
-# else:
-##                    print(s[i], end = '')
-# else:
-# if i < n and len(q) <= 1:
-##                    print(c, end = '')
-# else:
-##                    print(s[i], end = '')
     else:
         print(s + c * (m - n))
 

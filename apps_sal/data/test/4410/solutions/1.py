@@ -6,7 +6,6 @@ for t in range(T):
     next_ones = [-1 for i in range(n)]
     last_one = -1
     for i in range(n - 1, -1, -1):
-        # print(i)
         if tables[i] == "1":
             next_ones[i] = i
             last_one = i

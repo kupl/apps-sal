@@ -2,7 +2,6 @@ INF = float('inf')
 
 
 def solve(grid, n, m):
-    # print('\n'.join(map(str, grid)))
 
     dp = [[INF for _ in range(2)] for _ in range(n)]
 
@@ -25,8 +24,6 @@ def solve(grid, n, m):
 
         dp[i][1] = min(dp[i][1], dp[i - 1][0] + (m + 2))
         dp[i][1] = min(dp[i][1], dp[i - 1][1] + (2 * (m + 2 - min(occur) - 1) + 1))
-
-    # print('\n'.join(map(str, dp)))
 
     occur = [j for j in range(m + 2) if grid[n - 1][j] == '1']
 

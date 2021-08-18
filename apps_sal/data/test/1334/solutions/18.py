@@ -1,4 +1,3 @@
-# coding=utf-8
 n, k = list(map(int, input().split()))
 s = input()
 e = list(set(s))

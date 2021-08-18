@@ -17,7 +17,6 @@ def fun(a):
         i_edges = set()
         for j in a:
             if value & j > 0:
-                #                 print(i+1)
                 k += 1
                 if k > 2:
                     del i_edges
@@ -61,7 +60,6 @@ if type(nodes) == int:
 else:
     mass = []
     while len(nodes.keys()) != 0:
-        # print(type(nodes.keys()))
         i = list(nodes.keys())[0]
         if len(nodes[i].edges) != 0:
 

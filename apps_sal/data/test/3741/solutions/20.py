@@ -39,7 +39,7 @@ def solve(n, a):
                         frontier.append((v, u))
             ptr += 1
 
-        return 10**18  # INF
+        return 10**18
 
     ans = min([shortest_cycle(n, adj, i) for i in range(n)])
     if ans == 10**18:

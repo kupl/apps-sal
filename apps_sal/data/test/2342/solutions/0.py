@@ -21,16 +21,16 @@ for _ in range(t):
                     if grid[nbi][nbj] == 'G':
                         impossible = True
                         break
-                    elif grid[nbi][nbj] == 'B' or grid[nbi][nbj] == '#':
-                        continue
+                    elif grid[nbi][nbj] == 'B' or grid[nbi][nbj] == '
+                    continue
                     elif grid[nbi][nbj] == '.':
-                        grid[nbi][nbj] = "#"
+                        grid[nbi][nbj] = "
                     else:
                         assert False, "What's in the grid?"
 
-    if grid[n - 1][m - 1] == '#' or impossible:
-        print("No")
-        continue
+    if grid[n - 1][m - 1] == '
+    print("No")
+    continue
 
     seen = [[False] * m for _ in range(n)]
     stack = [(n - 1, m - 1)]
@@ -41,9 +41,9 @@ for _ in range(t):
 
         for nbi, nbj in [(i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)]:
             if 0 <= nbi < n and 0 <= nbj < m:
-                if grid[nbi][nbj] != '#' and not seen[nbi][nbj]:
-                    seen[nbi][nbj] = True
-                    stack.append((nbi, nbj))
+                if grid[nbi][nbj] != '
+                seen[nbi][nbj] = True
+                stack.append((nbi, nbj))
 
     for i in range(n):
         for j in range(m):

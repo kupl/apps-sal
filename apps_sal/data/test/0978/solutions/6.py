@@ -14,9 +14,8 @@ v = list(panels.values())
 
 for i in v:
     if i > 2 * k:
-        flag = False  # print('NO')
+        flag = False
 
-# print(panels)
 if flag:
     print('YES')
 else:

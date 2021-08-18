@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import math
 import collections
@@ -50,11 +49,8 @@ def solve(N, A):
                     edges.append((u, v))
         b <<= 1
 
-    # print(g)
     ans = float('inf')
     for u, v in edges:
-        # remove edge u, v
-        # print(u, v, shortest_path(u, v, g))
         ans = min(ans, 1 + shortest_path(u, v, g))
 
     return ans if ans < float('inf') else -1

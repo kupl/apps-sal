@@ -1,4 +1,3 @@
-# stdin = open("testdata.txt", "r")
 from sys import stdin
 
 
@@ -11,11 +10,9 @@ t = int(input())
 for _ in range(t):
     n, m = list(map(int, input().split()))
     weight = list(map(int, input().split()))
-    # print(weight)
     edges = [(i, (i + 1) % n) for i in range(n)]
     edges.sort(key=lambda x: (weight[x[0]] + weight[x[1]]))
     total = sum(weight[u] + weight[v] for u, v in edges)
-    # print(edges)
     if m < n:
         print(-1)
     elif n == 2:
