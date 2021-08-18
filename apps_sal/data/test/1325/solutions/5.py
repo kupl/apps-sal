@@ -22,10 +22,8 @@ m = n // 2
 y = m + (1 if n % 2 else 0)
 s1, s2 = s[:m], s[y:][::-1]
 a, b, r = ds(s1, s2)
-#print(s1, s2, a, b, r)
 d1 = min(abs(p - a), abs(p - b)) + abs(a - b)
 d2 = min(abs(p - y - m + 1 + a), abs(p - y - m + 1 + b)) + abs(a - b)
-#print(d1, d2)
 if r == 0:
     print(0)
 else:

@@ -19,7 +19,6 @@ def run(w, m):
         if m == 0:
             Y()
             return
-        # if w**(i) > mm: break
 
     print("NO")
 

@@ -16,8 +16,6 @@ def get_score(l, q):
 
 
 def get_series(N, M):
-    # N: number of elms
-    # M: upper limit of val of elm
     all_series = []
     checked = [[0] * M for i in range(N)]
     to_check = [[0, j + 1] for j in range(M)]

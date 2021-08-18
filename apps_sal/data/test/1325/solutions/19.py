@@ -4,7 +4,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# Journey to moon
 '''
 def main():
 	from sys import stdin,stdout
@@ -41,7 +40,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# Djikstra's
 '''
 import collections
 class Graph:
@@ -101,8 +99,6 @@ def main():
 			G.add_edge(a,b,c)
 		initial=int(stdin.readline())
 		v,p=dijsktra(G, initial)
-		#print(v)
-		#print(p)
 		for i in range(1,n+1):
 			if i!=initial:
 				k=v.get(i,-1)
@@ -111,13 +107,11 @@ def main():
 def __starting_point():
 	main()
 '''
-# Larget pallindrome in String
 '''
 def main():
 	from sys import stdin,stdout
 	string=stdin.readline().strip()
 	l=len(string)
-	#Triangle logic	
 	
 	arrlen=(l*(l-1))//2
 	arr=list(0 for x in range(arrlen))
@@ -129,7 +123,6 @@ def main():
 				arr[f+j-i-1]=1
 		f+=c
 		c-=1
-	#print(arr)
 	if any(arr):
 		
 	else:
@@ -137,7 +130,6 @@ def main():
 			stdout.write('First')
 		else:
 			stdout.write('Second')
-	#2-d Array Logic
 	arr=list(list(0 for i in range(l)) for j in range(l))
 	for i in range(l):
 		for j in range(l):
@@ -146,7 +138,6 @@ def main():
 	maxim=0
 	for i in range(0,l*(l-1)-2,l+1):
 		a,b=i+1,i+2
-		#print(a,b)
 		acount=0
 		x=a//5
 		y=a%5
@@ -177,7 +168,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 276B
 '''
 def main():
 	from sys import stdin,stdout
@@ -193,7 +183,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 362B
 '''
 def main():
 	from sys import stdin,stdout
@@ -217,7 +206,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 279B SUM OF SUB-ARRAY
 '''
 def main():
 	from sys import stdin,stdout
@@ -252,7 +240,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 469B
 '''
 def main():
 	from sys import stdin,stdout
@@ -260,7 +247,6 @@ def main():
 	a=[]
 	b=[]
 	visited=list(0 for x in range(r-l+1))
-	#print(visited)	
 	for i in range(p):
 		x,y=map(int,stdin.readline().split())
 		a.append(x)
@@ -270,15 +256,11 @@ def main():
 		x+=l
 		y+=l
 		for j in range(p):
-			#print('x=',x,'y=',y)
 			lower=max(0,a[j]-y)
 			upper=min(b[j]-x,r)+1
 			if upper > lower:
 				delta=upper-lower
-				#print('upper=',upper,'lower=',lower)
 				visited[lower:upper]=list(1 for x in range(delta))
-				#print('visited:\n',visited)
-	#	print(visited)
 	stdout.write(str(visited[:r-l+1].count(1)))
 def __starting_point():
 	main()
@@ -286,7 +268,6 @@ def __starting_point():
 '''
 def main():
 	from sys import stdin,stdout
-	#import numpy as np
 	n,k=map(int,stdin.readline().split())
 	a=tuple(map(int,stdin.readline().split()))
 	minim=min(a)
@@ -322,7 +303,6 @@ def main():
 		stdout.write('second')
 	else:
 		maxim=max(n,p)
-		#print(maxim)
 		if maxim==p:
 			if maxim==n:
 				if last<0:
@@ -337,7 +317,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 286C
 '''
 def main():
 	from sys import stdin,stdout
@@ -355,7 +334,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 387B
 '''
 def main():
 	from sys import stdin,stdout
@@ -365,7 +343,6 @@ def main():
 	i=0
 	j=0
 	while True:
-		#print(i,j)
 		if i>=n or j>=m:
 			break
 		if b[j]>=a[i]:
@@ -377,7 +354,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 365B
 '''
 def main():
 	from sys import stdin,stdout
@@ -398,7 +374,7 @@ def main():
 	stdout.write(str(min(maxim,n)))
 def __starting_point():
 	main()
-'''  # 474D
+'''
 '''
 def main():
 	from sys import stdin,stdout
@@ -413,8 +389,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 330B
-#not working
 '''
 def main():
 	from sys import stdin,stdout
@@ -443,7 +417,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 208D
 '''
 def main():
 	from sys import stdin,stdout
@@ -468,9 +441,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 339D Using Al.Cash's Segment Trees
-# Segment Tree
-# not-working
 '''
 powers=1
 t=[0 for x in range(3*int(1e5))]
@@ -490,9 +460,6 @@ def modify(i,v,n):
 	nonlocal t
 	flag=False
 	if t[i+n-1]==v or v|t[(i+n-1)^1]==t[(i+n-1)>>1]:
-		#print('skipped')
-		#print('t[i+n-1]=',t[i+n-1],'v=',v)
-		#print('v|t[(i+n-1)^1]=',v|t[(i+n-1)^1],'t[(i+n-1)>>1]',t[(i+n-1)>>1])		
 		t[i+n-1]=v		
 		return
 	t[i+n-1]=v
@@ -520,16 +487,13 @@ def main():
 	for i in range(n):
 		t[i+n]=p[i]
 	build(n)
-	#print(t[:2*n])
 	for _ in range(m):
 		a,b=map(int,stdin.readline().split())
 		modify(a,b,n)
-		#print(t[:2*n])
 		stdout.write(str(t[1])+'\n')
 def __starting_point():
 	main()
 '''
-# 330B
 '''
 def main():
 	from sys import stdin,stdout
@@ -551,7 +515,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 116B
 '''
 def main():
 	from sys import stdin,stdout
@@ -587,7 +550,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 339D using Al.Cash's Segment Tree Implementation
 '''
 def main():
 	from sys import stdin,stdout
@@ -632,7 +594,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 515C
 '''
 def main():
 	from sys import stdin,stdout
@@ -670,14 +631,13 @@ def main():
 def __starting_point():
 	main()
 '''
-# 313B
 '''
 def main():
 	from sys import stdin,stdout
 	s=stdin.readline().strip()
 	flag=s[0]
 	if flag=='.':
-		anti='#'
+		anti='
 	else:
 		anti='.'
 	n=len(s)
@@ -688,14 +648,12 @@ def main():
 		else:
 			flag,anti=anti,flag
 			l[i]=l[i-1]
-	#print(l)
 	for _ in range(int(stdin.readline())):
 		a,b=map(int,stdin.readline().split())
 		stdout.write(str(l[b-1]-l[a-1])+'\n')
 def __starting_point():
 	main()
 '''
-# 431C
 '''
 def main():
 	from sys import stdin,stdout
@@ -711,8 +669,6 @@ def main():
 		dlist=[1]+dlist
 		for i in range(d+1,n+1):
 			dlist.append((dlist[i-1]*2-dlist[i-1-d])%MOD)
-	#print(klist)
-	#print(dlist)
 		ans=klist[n]-dlist[n]
 	else:
 		ans=klist[n]
@@ -720,7 +676,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 441C
 '''
 def main():
 	from sys import stdin,stdout
@@ -780,7 +735,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 538B
 '''
 def main():
 	from sys import stdin,stdout
@@ -802,7 +756,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 486C
 
 
 def main():
@@ -836,7 +789,6 @@ def main():
         s1 = string[:n // 2]
         s2 = string[n // 2:]
         rev = s2[::-1]
-        # print(s1,rev)
         minim = 0
         indexlist = []
         for i in range(n // 2):
@@ -848,13 +800,10 @@ def main():
             o = (n - o)
         else:
             o -= 1
-        # print(minim)
-        # print(indexlist)
         if len(indexlist):
             indexlist += [o]
             for i in range(len(indexlist)):
                 indexlist[i] = indexlist[i] - o
-            # print(indexlist)
             minia = min(indexlist)
             maxia = max(indexlist)
             minim += min(abs(minia), abs(maxia)) * 2 + max(abs(minia), abs(maxia))
@@ -865,7 +814,6 @@ def __starting_point():
     main()
 
 
-# 4B
 '''
 def main():	
 	from sys import stdin,stdout
@@ -891,7 +839,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 282B
 '''
 def main():
 	from sys import stdin,stdout

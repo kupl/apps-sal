@@ -63,7 +63,6 @@ if cntr or not cntr:
         else:
             break
 
-#!!!!!!!!!!!
 
 if cntd or not cntd:
     for i in range(cntd, -1, -1):

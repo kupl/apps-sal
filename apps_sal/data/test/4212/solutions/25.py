@@ -1,5 +1,3 @@
-# 12653415
-# わからんが、とてもきれいですね
 
 N, M, Q = list(map(int, input().split()))
 

@@ -16,7 +16,6 @@ def main():
         b -= 1
         eachA_is_equalOrNot = A[:, b] - A[:, a] == c
         score += d * eachA_is_equalOrNot
-        # print(score)
     print(score.max())
 
 

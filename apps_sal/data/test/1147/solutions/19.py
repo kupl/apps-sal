@@ -39,5 +39,4 @@ for i in a:
     left = left + (k - 1) * x
     left = max(left, i)
     ans = ans + bisect.bisect_right(a, right) - bisect.bisect_left(a, left)
-    # print(left, right, ans)
 print(ans)

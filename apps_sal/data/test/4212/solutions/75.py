@@ -10,7 +10,7 @@ def f(A, N, M, Q, conditions):
         for j in range(A[L], M + 1):
             fans = max(fans, f(A + [j], N, M, Q, conditions))
 
-    else:  # L = N
+    else:
         fans = 0
         for i in range(Q):
             a, b, c, d = conditions[i]

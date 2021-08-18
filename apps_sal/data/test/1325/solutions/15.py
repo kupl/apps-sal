@@ -8,7 +8,6 @@ def mini(arr, p):
     if len(arr) == 0:
         return 0
     if arr[-1] <= p:
-        # print(arr[-1],p)
         return p - arr[0]
     if arr[0] >= p:
         return arr[-1] - p
@@ -26,7 +25,6 @@ def func(s, p):
         if s[i] != s[len(s) - 1 - i]:
             steps += change(s[i], s[len(s) - 1 - i])
             mis.append(i + 1)
-    # print(steps)
     steps = steps + mini(mis, p)
     return steps
 

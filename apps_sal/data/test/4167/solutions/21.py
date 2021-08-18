@@ -29,7 +29,7 @@ def main():
     ans = 0
     for a in range(k):
         b = (k - a) % k
-        if 2 * b % k == 0:  # b==cとしてbを2倍
+        if 2 * b % k == 0:
             ans += R[a] * R[b] * R[b]
 
     print(ans)

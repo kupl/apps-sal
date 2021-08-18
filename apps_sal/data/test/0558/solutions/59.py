@@ -1,4 +1,3 @@
-# E - Colorful Blocks
 import sys
 sys.setrecursionlimit(10**8)
 

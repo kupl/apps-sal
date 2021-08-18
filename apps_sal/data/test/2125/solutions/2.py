@@ -39,12 +39,6 @@ for j in reversed(list(range(m))):
         if strips[k - 1][0] >= strips[k][0] <= strips[k + 1][0]:
             l = strips[k][1] - strips[k][0]
             r = strips[k - 1][1] + strips[k][0]
-            # print(strips)
-            # print('interval',l,r)
             res = min(Dx[i][j + 1] for i in range(l, r))
-            #print([Dx[i][j+1] for i in range(l,r)])
-            # print(res)
             count += res
-    # for
-# print(Dx)
 print(count)

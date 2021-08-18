@@ -13,7 +13,6 @@ else:
         if A[I] > 10000000001000000000:
             N = I
             break
-    # print(N)
     S = set()
 
     ok = False

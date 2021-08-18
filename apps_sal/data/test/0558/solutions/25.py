@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 
 N, M, K = list(map(int, input().rstrip().split()))
-# -----
-# Calculate the Factorial and it's Inverse Element
 fact = [0] * (N + 1)
 fact_inv = [0] * (N + 1)
 inv = [0] * (N + 1)
@@ -18,15 +15,12 @@ for i in range(2, N + 1):
     inv[i] = mod - (inv[mod % i] * (mod // i)) % mod
     fact_inv[i] = (fact_inv[i - 1] * inv[i]) % mod
 
-# -----
-# Calculate (M-1) raised to the power of "0 to N-1"
 pow_M1 = [0] * N
 pow_M1[0] = 1
 
 for i in range(1, N):
     pow_M1[i] = (pow_M1[i - 1] * (M - 1)) % mod
 
-# -----
 ans = 0
 
 for i in range(K + 1):
