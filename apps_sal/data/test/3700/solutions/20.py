@@ -14,13 +14,6 @@ def brute(n, k):
 
     return ans
 
-# a < k - a
-# 2a < k
-# a < n
-# k - a <= n
-# k - n <= a
 
-
-# (1, k - 1), (2, k - 2), ... (k / 2, k / 2)
 n, k = list(map(int, input().split()))
 print(solve(n, k))

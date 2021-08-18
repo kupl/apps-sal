@@ -4,8 +4,6 @@ k = (int)(data[1])
 
 
 data = list(map(int, input().split()))
-# for i in range(len(data)):
-#	data[i] = (int)(data[i])
 
 ans = 0
 last = (data[0] - 1) // k

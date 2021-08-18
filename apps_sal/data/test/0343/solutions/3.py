@@ -6,21 +6,20 @@ if p < y:
 else:
     kol = 0
     summ = 0
-    for i in s:  # ������� ����� � ���������� ������� ��� y
+    for i in s:
         summ += i
         if i >= y:
             kol += 1
-    if k - kol >= n // 2 + 1 or summ > x:  # ���� ������� �������� ������ y
-        print(-1)  # , '!1')
-    elif kol >= n // 2 + 1:  # ���� ������� �������� ������ y
+    if k - kol >= n // 2 + 1 or summ > x:
+        print(-1)
+    elif kol >= n // 2 + 1:
         if summ + n - k <= x:
             print('1 ' * (n - k))
         else:
-            print(-1)  # , '!2')
-    else:  # ���������� � ������� �����
-        #print('!!!', summ, y*(n//2+1-kol), n-k-n//2-1+kol, kol)
+            print(-1)
+    else:
         if summ + y * (n // 2 + 1 - kol) + (n - k - n // 2 - 1 + kol) > x:
-            print(-1)  # , '!3')
+            print(-1)
         else:
             for i in range(n // 2 + 1 - kol):
                 print(y, end=' ')

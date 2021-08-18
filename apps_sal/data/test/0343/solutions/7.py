@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 (n, k, p, x, y) = (int(i) for i in input().split())
 a = [int(i) for i in input().split()]

@@ -1,8 +1,5 @@
-# 入力
 a, b = input().split()
 
-# 出力
-# a = 'H' のときatくんは正直者
 if a == 'H' and b == 'H':
     print('H')
 elif a == 'D' and b == 'H':

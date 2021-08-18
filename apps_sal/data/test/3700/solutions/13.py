@@ -1,4 +1,3 @@
-#!/bin/python3
 
 a, b = list(map(int, input().split()))
 

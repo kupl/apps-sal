@@ -2,7 +2,6 @@ r = int(input())
 
 
 def factorise(n):
-    # n is an odd number and we've ruled out 1 already
     factors = []
     guess = 3
     while guess < n:
@@ -25,7 +24,6 @@ if r % 2 == 1:
         print("NO")
 else:
     '''r -= 1
-    # solve x(x + 2y + 1)
     factors = factorise(r)
     for x in factors:
         y = (-x -1 + 15/x)/2

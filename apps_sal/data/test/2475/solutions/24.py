@@ -18,7 +18,6 @@ for i in range(1, N // 2):
             ANS = max(ANS, SCORE)
             s += i
             l -= i
-        # print(SCORE,i,l,s)
     else:
         while l != s and l > i:
 
@@ -27,6 +26,5 @@ for i in range(1, N // 2):
             s += i
             l -= i
 
-        # print(SCORE,i,l,s)
 
 print(ANS)

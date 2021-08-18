@@ -1,10 +1,7 @@
-# coding=utf-8
 
 def tk(s):
     s1 = s[0:len(s) // 2 + 1]
     s2 = s[len(s) // 2:len(s)]
-
-    #print(s1, s2)
 
     if s1 == s2[::-1]:
         return True
@@ -21,8 +18,6 @@ def Kaibun(s):
 
 def __starting_point():
     S = input()
-    # print(len(S)//2)
-    # print(S[0:len(S)//2])
 
     if tk(S) and Kaibun(S[0:len(S) // 2]) and Kaibun(S[len(S) // 2 + 1:len(S)]):
         print('Yes')

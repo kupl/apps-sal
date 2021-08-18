@@ -17,11 +17,8 @@ for _ in range(t):
 
         acc += cur
 
-        #print(f"Now k={k}, used={used}, z={z}")
         if (k - used + 2) // 2 <= z and used <= k + 1:
-            #print("Allowed at (prev, cur) =", (prev, cur))
             score = acc + (((k + 1) - used) // 2 * best_pair) + ((k + 1 - used) % 2) * prev
             if score > best:
-                #print(f"used={used}, (prev, cur) = {(prev, cur)}, best = {score}")
                 best = score
     print(best)

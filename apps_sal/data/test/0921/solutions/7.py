@@ -9,7 +9,6 @@ def luckyYear():
         p += 1
     f += 1
     f *= 10 ** p
-    # print(f)
     print(f - original)
 
 
