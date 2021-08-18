@@ -1,6 +1,5 @@
 class Solution:
     def racecar1(self, target: int) -> int:
-        # bfs 能够快速想起来的方法！剪枝的策略不理解！
         q = collections.deque()
         q.append([0, 1])
         visited = set()
@@ -13,16 +12,14 @@ class Solution:
                 pos, speed = q.popleft()
 
                 pos1 = pos + speed
-                speed1 = speed * 2  # 加速！注意第一个可能性的构造方法：首先是新的pos1，然后是新的速度！
+                speed1 = speed * 2
                 if pos1 == target:
                     return steps + 1
                 p1 = [pos1, speed1]
-                #key1 = '{}_{}'.format(pos1, speed1)
-                if abs(speed1) < 2 * target and abs(pos1) < 2 * target and not key1 in visited:  # 相当于说，如果>= 2*target的时候，就剪枝了！
-                    q.append(p1)  # 如果 < ??? # 这里没有把p1加入visited???
-                    # visited.add(key1) # this makes things slower... yet still can pass!
+                if abs(speed1) < 2 * target and abs(pos1) < 2 * target and not key1 in visited:
+                    q.append(p1)
 
-                speed2 = -1 if speed > 0 else 1  # 掉头！注意是维持pos位置不变，速度如果原来是》0，则变成-1，如果是《0则变成1！！
+                speed2 = -1 if speed > 0 else 1
                 p2 = [pos, speed2]
                 key2 = '{}_{}'.format(pos, speed2)
                 if key2 not in visited:

@@ -79,9 +79,7 @@ class Solution:
 
                     nPos, nSpd = nextStep[0], nextStep[1]
 
-                    # check is too far node:
                     if abs(nPos - tgt) <= tgt:
-                        # check visited
                         if nPos not in visited or nSpd not in visited[nPos]:
                             q.appendleft(nextStep)
                             if nPos not in visited:

@@ -1,8 +1,6 @@
 
-# Read the number of test cases.
 T = int(input())
 for tc in range(T):
-    # Read number
     num = int(input())
     count = 0
     while num:

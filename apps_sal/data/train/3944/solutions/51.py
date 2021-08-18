@@ -13,6 +13,4 @@ def sum_triangular_numbers(n):
         x += 1
         t += s
 
-        #print(s, t)
-
     return t

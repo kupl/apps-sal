@@ -1,6 +1,5 @@
 class Solution:
     def racecar(self, target: int) -> int:
-        # bfs
         bq = collections.deque([(0, 1, 0)])
         visited = set((0, 1))
         while bq:

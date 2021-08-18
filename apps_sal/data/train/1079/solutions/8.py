@@ -1,4 +1,3 @@
-# cook your dish here
 for t in range(int(input())):
     n = str(input())
     count = 0
