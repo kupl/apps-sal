@@ -22,5 +22,4 @@ def sol(i, j):
 n, k, A, B = mp()
 a = list(mp())
 a.sort()
-# print(a)
 print(sol(1, 2**n))

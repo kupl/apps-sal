@@ -57,11 +57,9 @@ def factor(n):
 @functools.lru_cache(maxsize=None)
 def solve(n, k):
     divs = factor(n)
-    # print(divs)
     ret = 0
     for subset in powerset(divs):
         div = functools.reduce(operator.mul, subset, 1)
-        # print(div, f(n // div, k))
         if n // div >= k:
             tmp = fact[n // div - 1] * inv_fact[n // div - k] % P * inv_fact[k - 1] % P
             ret += (-1 if len(subset) % 2 == 1 else 1) * tmp

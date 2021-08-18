@@ -3,8 +3,6 @@ N, T = map(int, input().split())
 
 meals = [tuple(map(int, input().split())) for _ in range(N)]
 
-# dp1[t]: i番目の料理まででt分以内に食べれるものの美味しさ
-# dp2[t]: i番目の料理まででt分以内に食べれるものの美味しさ (最後に食べる用のを選んだ仮定)
 
 dp1 = np.zeros(T, dtype=int)
 dp2 = np.zeros(T, dtype=int)

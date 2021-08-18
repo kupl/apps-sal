@@ -8,5 +8,4 @@ ans = 0
 for a, b in ab:
     ans = max(ans, dp[-1] + b)
     dp[a:] = np.maximum(dp[:-a] + b, dp[a:])
-# print(dp,ans)
 print(max(ans, dp[-1]))

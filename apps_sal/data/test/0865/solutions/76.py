@@ -14,8 +14,6 @@ ABs.sort()
 
 for A, B in ABs:
     dp[A:T + A] = np.maximum(dp[A:T + A], dp[:T] + B)
-    # for i in reversed(range(A,T+A)):
-    #     dp[i] = max(dp[i-A] + B, dp[i])
 
 
 print((max(dp)))

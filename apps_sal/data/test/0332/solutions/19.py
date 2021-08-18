@@ -21,8 +21,6 @@ for i in range(n):
         indexj += 1
     temparr1.sort()
     temparr2.sort()
-    # print(*temparr1)
-    # print(*temparr2)
     for j in range(len(temparr1)):
         if(temparr1[j] != temparr2[j]):
             flag = 1
@@ -42,7 +40,6 @@ else:
             indexj += 1
         temparr1.sort()
         temparr2.sort()
-        # print(*temparr1)
         for j in range(len(temparr1)):
             if(temparr1[j] != temparr2[j]):
                 flag = 1

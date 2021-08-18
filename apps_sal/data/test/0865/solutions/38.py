@@ -1,5 +1,3 @@
-# https://codeforces.com/blog/entry/71482
-# https://atcoder.jp/contests/abc145/submissions/8473167
 
 import numpy
 n, t = map(int, input().split())

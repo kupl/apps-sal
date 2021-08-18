@@ -13,6 +13,3 @@ for i in reversed(sorted(map(float, input().split()))):
     ans = max(ans, tmp)
 
 print('%0.12f' % ans)
-
-
-# Made By Mostafa_Khaled
