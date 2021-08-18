@@ -20,7 +20,6 @@ class Solution:
             for i in range(len(arr)):
                 el = arr[i]
                 rest = arr[:i] + arr[i + 1:]
-                # if all([is_not_square(el+n) for n in rest]): continue
                 if el not in seen:
                     sub_perms = perms(rest)
                     if not sub_perms:

@@ -7,13 +7,11 @@ class Solution:
             ln = len(q)
             for _ in range(ln):
                 x = q.popleft()
-                # print(x)
                 for i in friends[x]:
                     if i not in vis:
                         q.append(i)
                         vis.add(i)
             level -= 1
-        # print(q)
         d = defaultdict(int)
         for i in q:
             for j in watchedVideos[i]:

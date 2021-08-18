@@ -2,9 +2,6 @@ import heapq as hp
 import sys
 input = sys.stdin.readline
 
-# O(NlogN)構築、クエリO(1)のRMQ
-# 変更はできない
-
 
 class SparseTable():
     def __init__(self, N, A):
@@ -23,7 +20,6 @@ class SparseTable():
                     tab.append(ind2)
             self.table.append(tab)
 
-    # [l, r)のminの(val, key)
     def query_min(self, l, r):
         k = (r - l).bit_length() - 1
         indl = self.table[k][l]

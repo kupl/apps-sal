@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your code here
 t = int(input())
 for i in range(t):
     num = int(input())

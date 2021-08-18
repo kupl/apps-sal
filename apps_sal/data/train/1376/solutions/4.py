@@ -33,21 +33,10 @@ for _ in range(int(input())):
         abc(balls, n)
         continue
 
-    # y = n
-    # missing = n
-    # temp = []
-    # for i in range(i+1):
-    #     if balls[i]!=0:
-    #         temp.append(i)
-    #     else:
-    #         missing = i
-    #         n = n-1
-
     arr = []
     for i in range(n + 1):
         arr.append([balls[i], i])
     arr = sorted(arr, key=lambda x: x[0])
-    # print(arr)
 
     i = 0
     j = n

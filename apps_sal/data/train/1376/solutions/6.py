@@ -6,9 +6,7 @@ for i in range(int(input())):
     total = 0
     for i in range(n + 1):
         mylis.append([i, lis[i]])
-    # print(mylis)
     mylis = sorted(mylis, key=lambda x: x[1])
-    # print(mylis)
     i = 0
     j = n
     ''''
@@ -42,5 +40,3 @@ for i in range(int(input())):
             mylis = mylis[1:]
             mylis[-1][1] = mylis[-1][1] - (k - val)
             total += k
-
-        # print(total,mylis)

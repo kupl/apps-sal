@@ -11,7 +11,6 @@ class Solution:
                 return len1 + len2 + len3
 
         return 0
-        # print(A)
 
     def check_triangle(self, len1, len2, len3):
         if len1 + len2 <= len3 or len2 + len3 <= len1 or len1 + len3 <= len2:

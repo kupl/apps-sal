@@ -1,4 +1,3 @@
-# cook your dish here
 f = []
 for i in range(100000 + 1):
     if i == 0:

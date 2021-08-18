@@ -3,7 +3,6 @@ class Solution:
 
         graph = defaultdict(list)
 
-        # build graph
         for i, v in enumerate(friends):
             graph[i].extend(v)
             for r in v:

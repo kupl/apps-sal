@@ -1,6 +1,5 @@
 class Solution:
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
-        # return self.fast(watchedVideos, friends, id, level)
 
         q = deque([id])
         visited = set()
@@ -14,9 +13,6 @@ class Solution:
                         q.append(friend)
                         visited.add(friend)
 
-        # q contains friends at level k
-
-        # get videos for friends at level k
         video_dict = defaultdict(int)
         for friend in q:
             for video in watchedVideos[friend]:

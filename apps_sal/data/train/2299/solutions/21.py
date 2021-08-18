@@ -8,8 +8,6 @@ def MI(): return map(int, sys.stdin.readline().split())
 def LI(): return list(map(int, sys.stdin.readline().split()))
 def LLI(rows_number): return [LI() for _ in range(rows_number)]
 
-# lから1つおきにみたときの最小値を求める特別製
-
 
 class SparseTable:
     def __init__(self, aa):
@@ -29,7 +27,6 @@ class SparseTable:
             tablei1 = tablei
         self.table = table
 
-    # [l,r)の最小値
     def min(self, l, r):
         if (r - l) % 2:
             r += 1
@@ -47,7 +44,6 @@ def main():
     pp = LI()
     st = SparseTable(pp)
     ptoi = [0] + [i for i, p in sorted(enumerate(pp), key=lambda x: x[1])]
-    # 区間偶数番目の最小値と[l,r)をヒープに
     hp = []
     heappush(hp, [st.min(0, n), 0, n])
     ans = []

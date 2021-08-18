@@ -22,7 +22,6 @@ for j in range(T):
                 sm = sm + ar_v[k]
                 m *= 3
         sm = sm * m
-        # print(sm)
         if mx < sm:
             mx = sm
     print(mx)

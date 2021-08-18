@@ -1,6 +1,5 @@
 class Solution:
     def numSquarefulPerms(self, A: List[int]) -> int:
-        #visited = [False] * len(A)
 
         visited = collections.Counter(A)
 
@@ -12,7 +11,6 @@ class Solution:
     def calc(self, A, visited, tmp, ans):
         if len(tmp) == len(A):
             ans[0] += 1
-            # print(tmp)
 
         for i in list(visited.keys()):
             if visited[i] == 0:

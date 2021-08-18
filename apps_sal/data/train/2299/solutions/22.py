@@ -4,7 +4,6 @@ INF = 10**30
 
 class Rmin():
     def __init__(self, size):
-        # the number of nodes is 2n-1
         self.n = 1
         while self.n < size:
             self.n *= 2
@@ -21,7 +20,6 @@ class Rmin():
             self.node[x] = min(self.node[2 * x + 1], self.node[2 * x + 2])
         return
 
-    # [l, r)
     def Get(self, l, r):
         L, R = l + self.n, r + self.n
         s = INF

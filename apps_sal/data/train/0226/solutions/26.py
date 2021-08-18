@@ -7,7 +7,6 @@ class Solution:
         if index == len(used):
             return 1
         total = 0
-        # print(partners, partners[last_num])
         for partner, partner_list in partners[last_num].items():
             for partner_index in partner_list:
                 if not used[partner_index]:

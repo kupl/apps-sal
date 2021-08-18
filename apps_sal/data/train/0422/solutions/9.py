@@ -28,6 +28,6 @@ class Solution:
     def addChar(self, st):
         stLs = ['<']
         for c in st:
-            stLs.extend(['#', c])
-        stLs.extend(['#', '>'])
+            stLs.extend(['
+        stLs.extend(['
         return stLs

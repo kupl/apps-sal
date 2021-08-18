@@ -1,7 +1,7 @@
 def parse_fen(string):
     ranks = string.split('/')
     game_info_fields = ranks[7].split(' ')
-    ranks[7] = game_info_fields[0]  # trimming out the unused fields after the last rank
+    ranks[7] = game_info_fields[0]
     color = game_info_fields[1]
 
     pretty_pieces = {'r': '♖', 'n': '♘', 'b': '♗', 'q': '♕', 'k': '♔', 'p': '♙',

@@ -4,7 +4,6 @@ class Solution:
         :type n: int
         :rtype: int
         """
-        # 1-9: 9, 10-99: 90, 100-999: 900, 1000-9999: 9000
         i, count = 1, 9
         total = 9
         while total < n:

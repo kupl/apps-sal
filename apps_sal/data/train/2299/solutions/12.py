@@ -1,4 +1,3 @@
-# seishin.py
 from heapq import heappush, heappop
 N = int(input())
 *P, = map(int, input().split())
@@ -47,7 +46,6 @@ def get_data(data, l, r):
 
 
 def get(data, l, r):
-    # return __get(data, l, r, 0, 0, len(data)//2)
     return min(get_data(data, l, r))
 
 
@@ -81,13 +79,10 @@ while que:
 
         yi = M[y]
 
-        # [l, xi)
         if l < xi:
             heappush(que, (query_x(l, xi), l, xi))
-        # [xi+1, yi)
         if xi + 1 < yi:
             heappush(que, (query_x(xi + 1, yi), xi + 1, yi))
-        # [yi+1, r)
         if yi + 1 < r:
             heappush(que, (query_x(yi + 1, r), yi + 1, r))
     else:
