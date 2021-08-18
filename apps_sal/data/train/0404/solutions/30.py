@@ -22,7 +22,6 @@ class Solution:
             tmp = max(tmp, dp(si, ei + 1, remainK))
             return tmp
 
-        #maxSum = max(maxSum, dp(ovr_))
         maxSum = dp(0, 1, K)
         print(maxSum)
 

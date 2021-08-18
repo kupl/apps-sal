@@ -1,7 +1,5 @@
 class Solution:
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
-        # https://leetcode.com/problems/two-city-scheduling/discuss/297143/Python-faster-than-93-28-ms
-        # https://leetcode.com/problems/two-city-scheduling/discuss/278944/3-ways-to-solve.
         res = 0
         costs.sort(key=lambda x: x[1] - x[0], reverse=True)
         for i in range(len(costs) // 2):

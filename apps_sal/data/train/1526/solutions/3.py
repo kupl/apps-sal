@@ -8,7 +8,6 @@ while(t > 0):
     bob = []
     for j in range(n):
         s = str(stdin.readline().strip("\n"))
-        # print(s)
         isalice = True
         for i in range(1, len(s) - 1):
             if(s[i] in z):
@@ -66,7 +65,6 @@ while(t > 0):
         x = x * bo[i][1]
     for i in ali:
         y = y * ali[i][1]
-    # print(x,y)
     alice = len(alice)
     bob = len(bob)
     for i in range(bob):

@@ -12,20 +12,3 @@ class Solution:
                     DP[i] = max(DP[i], self.mean(A[i:j]) + DP[j])
 
         return DP[0]
-
-
-#         n = len(A)
-#         if n==1:
-#             return A[0]
-#         if K==1:
-#             return self.mean(A)
-#         DP = {}
-
-#         for i in range(1, n-K+2):
-#             if i>n-1:
-#                 break
-#             if K==2:
-#                 DP[i] = self.mean(A[:i]) + self.mean(A[i:])
-#             else:
-#                 DP[i] = self.mean(A[:i]) + self.largestSumOfAverages(A[i:], K-1)
-#         return max(list(DP.values()))

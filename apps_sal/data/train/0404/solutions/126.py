@@ -1,6 +1,5 @@
 class Solution:
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
-        # dp[i][k]: max avg sum to divide A[:i] into k sub group
         n = len(A)
         dp = [[0 for _ in range(K + 1)] for _ in range(n + 1)]
 

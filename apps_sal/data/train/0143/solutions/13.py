@@ -5,7 +5,6 @@ class Solution:
         dic = {}
         for i in range(n):
             dic[tree[i]] = i
-            #print(dic, ans)
             if len(dic) > 2:
                 ans = max(ans, i - j)
                 k = None

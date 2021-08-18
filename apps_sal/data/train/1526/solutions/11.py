@@ -25,9 +25,6 @@ for _ in range(int(input())):
         else:
             alice.append(cur)
 
-#     print(alice)
-#     print(bob)
-    # Alice
     n1 = len(alice)
     freq_a = {}
     for i in alice:
@@ -42,15 +39,12 @@ for _ in range(int(input())):
         for j in alice:
             if i in j:
                 num_a[i] += 1
-#     print(freq_a)
-#     print(num_a)
     num1 = 1
     den1 = 1
     for i in num_a:
         num1 = (num1 * num_a[i])
         den1 = den1 * freq_a[i]
 
-    # Bob alphabets
     n2 = len(bob)
     freq_b = {}
     for i in bob:
@@ -71,17 +65,6 @@ for _ in range(int(input())):
         num2 = (num2 * num_b[i])
         den2 = den2 * freq_b[i]
     if n <= 10:
-        #         if n2>=n1:
-        #             ans = pow(den2/den1,n1)*pow(den2,n2-n1)
-        #         else:
-        #             ans = pow(den2/den1,n2)*pow(den1,-(n1-n2))
-        #         t = num1/num2
-        #         ans = ans*t
-        #         if ans>10000000.0:
-        #             print("Infinity")
-        #         else:
-        #             print(ans)
-        #     else:
         ans1 = log10(num1) + n2 * log10(den2)
         ans2 = log10(num2) + n1 * (log10(den1))
         ans1 = ans1 - ans2

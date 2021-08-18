@@ -1,4 +1,3 @@
-#!/usr/bin/python
 
 import sys
 import math
@@ -42,8 +41,6 @@ def getlen(chain_1, chain_2, num1, num2):
     root = list(set(chain_1) & set(chain_2))
     root.sort()
     root = root[-1]
-    # distance = int(math.log(num1, 2) + 1) + int(math.log(num2, 2) + 1)   - 2        *int(math.log(root, 2)+1)
-    # print root
     distance = chain_1.index(root) + chain_2.index(root)
     return distance
 
@@ -57,8 +54,6 @@ for num in lines[1:]:
     parent_c2 = []
     find_chain_1(num1, parent_c1)
     cache_parent[num1] = parent_c1
-    # print parent_c1
     find_chain_2(num2, parent_c2)
     cache_parent[num2] = parent_c2
-    # print parent_c2
     print(getlen(parent_c1, parent_c2, num1, num2))

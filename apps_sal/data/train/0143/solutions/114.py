@@ -14,7 +14,6 @@ class Solution:
 
             return res
 
-        # Main
         n = len(tree)
         cnt = Counter(tree)
         if len(cnt) <= 2:

@@ -3,12 +3,7 @@ from math import log10
 
 
 def score(df):
-    #     a=""
     n = len(df)
-
-    # calulation of fxc
-#     for val in df:
-#         a=a+val
 
     res = {}
     for val in df:
@@ -18,14 +13,11 @@ def score(df):
             else:
                 res[key] += 1
 
-
-#     print(res)
     fx = 1
     for val in res.values():
         fx = fx * val
 
     li2 = {}
-    # calculation of xc
     for val in res:
         li2[val] = 0
         for i in df:
@@ -36,7 +28,6 @@ def score(df):
     for val in li2:
 
         x = x * li2[val]
-#     print(x,fx,"x","fc")
     return [x, fx]
 
 
@@ -61,15 +52,11 @@ def prog(li):
         else:
             al.append(cur)
 
-#     print(al)
-#     print(bo)
     sca = score(al)
     scb = score(bo)
-#     print(sca,scb,"dd")
     ans1 = log10(sca[0]) + len(bo) * log10(scb[1])
     ans2 = log10(scb[0]) + len(al) * (log10(sca[1]))
     ans1 = ans1 - ans2
-#     print(ans1)
 
     return ans1
 

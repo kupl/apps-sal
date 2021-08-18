@@ -75,4 +75,3 @@ for _ in range(int(input())):
         print("Infinity")
     else:
         print(ans)
-# partailly correct [75 pts]
