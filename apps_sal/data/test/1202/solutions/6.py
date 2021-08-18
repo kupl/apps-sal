@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 n = int(input())
 a, b = [], []
@@ -11,10 +10,8 @@ p = q = 0
 c = 0
 while c < n:
     if a[p] < b[q]:
-        #print('{}<{}'.format(a[p], a[q]))
         p += 1
     else:
-        #print('{}>{}'.format(a[p], a[q]))
         q += 1
     c += 1
 

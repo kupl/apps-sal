@@ -50,7 +50,6 @@ def solve2(ABC):
             else:
                 G.add_q1(q0, q1)
         else:
-            # 余裕の無い方に足しておく
             if G.ABC[q0] <= G.ABC[q1]:
                 G.add_q0(q0, q1)
             else:
@@ -70,7 +69,6 @@ def solve3(ABC):
         elif G.ABC[q1] == 0:
             G.add_q1(q0, q1)
         else:
-            # 余裕の無い方に足しておく
             if G.ABC[q0] <= G.ABC[q1]:
                 G.add_q0(q0, q1)
             else:

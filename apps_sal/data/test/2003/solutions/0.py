@@ -1,14 +1,3 @@
-# 10
-# + 8
-# + 9
-# + 11
-# + 6
-# + 1
-# ? 3
-# - 8
-# ? 3
-# ? 8
-# ? 11
 
 MAX_BIT = 30
 
@@ -52,7 +41,7 @@ def insert(u, num, dig=MAX_BIT):
         return
 
     bit = (num >> dig) & 1
-    if bit > 0:  # insert to right
+    if bit > 0:
         u.AddRight()
         insert(u.right, num, dig - 1)
     else:
@@ -65,7 +54,7 @@ def remove(u, num, dig=MAX_BIT):
         return
 
     bit = (num >> dig) & 1
-    if bit > 0:  # remove right
+    if bit > 0:
         u.RemRight()
         remove(u.right, num, dig - 1)
     else:
@@ -78,12 +67,12 @@ def cal(u, num, dig=MAX_BIT):
         return 0
 
     bit = (num >> dig) & 1
-    if bit > 0:  # try to go to left first
-        if u.Left():  # if valid
+    if bit > 0:
+        if u.Left():
             return (1 << dig) + cal(u.left, num, dig - 1)
         elif u.Right():
             return cal(u.right, num, dig - 1)
-    else:  # try to go to right first
+    else:
         if u.Right():
             return (1 << dig) + cal(u.right, num, dig - 1)
         elif u.Left():

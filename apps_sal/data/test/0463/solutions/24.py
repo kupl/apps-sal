@@ -1,6 +1,5 @@
 from sys import stdin, stdout
 
-# string input
 n, x = stdin.readline().split()
 n, x = int(n), int(x)
 
@@ -19,7 +18,6 @@ if flag == 0:
     arr1 = [(arr[i] & x) for i in range(len(arr))]
     arr2 = [(arr1[i], arr[i]) for i in range(len(arr))]
     arr2 = sorted(arr2, key=lambda x: x[0])
-    # print(arr2)
     currentAns = -1
     for i in range(len(arr2) - 1):
         if(arr2[i][0] == arr2[i + 1][0]):
@@ -30,6 +28,3 @@ if flag == 0:
             else:
                 currentAns = 2
     print(currentAns)
-
-# print to stdout
-# stdout.write(str(summation))

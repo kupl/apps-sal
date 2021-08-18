@@ -1,4 +1,3 @@
-# ABC150D
 
 from math import gcd, ceil
 import sys
