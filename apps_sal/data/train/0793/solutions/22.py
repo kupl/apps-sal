@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 
 n, r = list(map(int, input().split()))

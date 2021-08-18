@@ -15,7 +15,6 @@ class Solution:
             str_of_num = (' ' + Solution.ten_to_str[ten * 10] + Solution.digit_to_str[unit]) if ten > 1 else Solution.digit_to_str[unit]
 
         str_of_num = (Solution.digit_to_str[hundred] + ' Hundred' if hundred > 0 else "") + str_of_num
-        # print(str_of_num + str(index))
         return str_of_num[1:] + ' ' + Solution.quantity_unit[index] if str_of_num else str_of_num[1:]
 
     def numberToWords(self, num):

@@ -1,4 +1,3 @@
-# cook your dish here
 testcase = int(input(''))
 
 for iterate in range(testcase):

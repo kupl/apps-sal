@@ -8,7 +8,7 @@ class Solution:
             count = 0
             idx = 0
             while idx < len(arr2) and base > arr2[idx]:
-                idx += 1  # util arr2[idx] >= base
+                idx += 1
             if idx == 0:
                 ans += abs(base - arr2[idx]) > d
             elif idx == len(arr2):

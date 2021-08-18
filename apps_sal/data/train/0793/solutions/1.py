@@ -1,4 +1,3 @@
-# cook your dish here
 n, r = map(int, input().split())
 h = list(map(int, input().split()))
 d = [abs(r - h[0])]

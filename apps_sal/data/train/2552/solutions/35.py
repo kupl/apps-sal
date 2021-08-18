@@ -7,8 +7,6 @@ class Solution:
         curr = arr[0]
         count = 1
 
-        # print(len(arr), limit)
-
         for i in range(1, len(arr)):
             if arr[i] != curr:
                 curr = arr[i]

@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 n, k = map(int, input().split())
 ls = list(map(int, input().split()))

@@ -6,5 +6,3 @@ def pre_fizz(n):
         i = i + 1
 
     return a
-
-    # your code here

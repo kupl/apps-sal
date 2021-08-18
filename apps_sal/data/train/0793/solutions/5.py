@@ -1,13 +1,10 @@
-# cook your dish here
 import math
 n, r = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 a = sorted(a + [r])
 diff = []
-# print(a)
 for i in range(0, len(a) - 1):
     diff.append(abs(a[i + 1] - a[i]))
-# print(diff)
 if len(diff) == 1:
     print(diff[0])
 else:

@@ -5,7 +5,6 @@ class Solution:
         print(threshold)
         oldnum = None
         for num in arr:
-            # print (oldnum, num)
             if oldnum == num:
                 count += 1
                 if count > threshold:
