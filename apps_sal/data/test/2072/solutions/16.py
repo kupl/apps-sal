@@ -17,7 +17,6 @@ while t1 - t0 > 1e-7:
         if inter[0] <= b <= inter[1]:
             inter[1] = min(inter[1], b)
         if b < inter[0] or a > inter[1]:
-            # print("breaking")
             break
     else:
         va = 0

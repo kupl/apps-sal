@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 def get_input() -> str:
     """
@@ -19,18 +18,14 @@ def main(S: str) -> None:
     Args:\n
         S (str): 文字列(|S| = 4, 各文字は"+"または"-")
     """
-    # 求解処理
     ans = S.count("+") - S.count("-")
 
-    # 結果出力
     print(ans)
 
 
 def __starting_point():
-    # 標準入力を取得
     S = get_input()
 
-    # メイン処理
     main(S)
 
 

@@ -53,8 +53,6 @@ def divisor(n):
 
 n, k = map(int, input().split())
 
-# print(factorization(n), file=sys.stderr)
-# print(divisor(n), file=sys.stderr)
 
 n_div = divisor(n)
 

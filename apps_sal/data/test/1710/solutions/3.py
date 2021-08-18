@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/992/D
 n, k = map(int, input().split())
 a = list(map(int, input().split()))
 max_ = 10 ** 13 + 1
@@ -37,14 +36,12 @@ def solve(a, k):
 
             if curP % curS == 0:
                 if curP // curS == k:
-                    #print(arr[i], arr[j], curP, curS)
                     cnt += 1
 
             r = arr[j + 1] - arr[j] - 1
             x = curP // k - curS
 
             if curP % k == 0 and x > 0 and x <= l + r:
-                #print(arr[i], arr[j], curP, curS)
                 cnt += get(l, r, x)
             curS += r
 

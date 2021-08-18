@@ -10,7 +10,6 @@ for i in range(1, n):
     b[i] += b[i - 1]
 for i in range(int(cin.readline())):
     q, x, y = (list(map(int, cin.readline().split())))
-    # print(q,x,y)
     if q == 1:
         if x == 1:
             print(a[y - 1] - a[x - 1] + a[0])

@@ -24,7 +24,6 @@ def solve(p, v, n):
         else:
             r = m
         iter = iter + 1
-    # print(l,r)
     print("%.9f" % l)
 
 

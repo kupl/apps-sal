@@ -10,7 +10,6 @@ def our_sum(a, n):
 
 a, b, n, x = map(int, input().split())
 mod = 10 ** 9 + 7
-#n %= mod
 res = pow(a, n, mod) * x
 res %= mod
 if a != 1:

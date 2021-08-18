@@ -1,4 +1,3 @@
-#!/usr/bin/env pypy3
 
 import sys
 
@@ -35,17 +34,6 @@ def ans_slow(n, s):
             return i
 
 
-# print(ans(2,2))
-# print(ans_slow(2,2))
-
-# return
-
-# for s in range(1, 162):
-# 	for n in range(1, 10000):
-# 		if ans(n,s) != ans_slow(n, s):
-# 			print(n, s)
-
-# return
 T = int(input())
 for t in range(T):
     n, s = input().split()

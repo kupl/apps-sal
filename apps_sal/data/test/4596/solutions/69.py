@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 
 def divided_2(x): return int(x / 2)
 def enable_divided_2(x): return True if int(x % 2) == 0 else False

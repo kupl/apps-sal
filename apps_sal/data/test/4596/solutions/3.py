@@ -1,4 +1,3 @@
-# 81B
 N = int(input())
 data = map(int, input().split())
 
