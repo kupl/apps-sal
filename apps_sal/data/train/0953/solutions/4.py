@@ -21,7 +21,6 @@ for _ in range(int(input())):
             continue
         ans1 = fun(mid)
         ans2 = fun(mid - 1)
-        # print(mid,ans1,ans2)
         if ans1 <= 0 and ans2 > 0:
             break
 
@@ -33,5 +32,4 @@ for _ in range(int(input())):
 
     ans1 = ((n - mid) * (n - mid + 1)) // 2
     ans = max(maxi, ans1)
-    # print(mid,ans1)
     print(ans)

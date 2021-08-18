@@ -21,7 +21,6 @@ class Solution:
                 else:
                     right = m - 1
             res += i - left
-            # find same age:
             left, right = i + 1, len(ages) - 1
             while left <= right:
                 m = (left + right) // 2

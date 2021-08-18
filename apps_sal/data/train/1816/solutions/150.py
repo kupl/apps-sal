@@ -18,7 +18,6 @@ class Solution:
                 r_time = time_list[r]
                 hour, minute = r_time.split(':')
                 r_minutes = int(hour) * 60 + int(minute)
-                #print(l, r, name, time_list, l_minutes, r_minutes, ans)
                 if r_minutes - l_minutes <= 60:
                     if r - l >= 2:
                         ans.append(name)

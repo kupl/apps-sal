@@ -34,8 +34,6 @@ def solve():
                     d[i] = j
                     l.append(j)
                     break
-        # print(d)
-        # print(l)
         for i in range(len(grid)):
             my_set = set()
             my_set2 = set()

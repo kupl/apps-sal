@@ -6,7 +6,6 @@ class Solution:
         if hdiff > 1 or hdiff < 0:
             return False
         sdiff = ss2 - ss1
-        #print(t1, t2, hdiff, sdiff, hdiff * 60 + sdiff)
         return (hdiff * 60 + sdiff) <= 60
 
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:

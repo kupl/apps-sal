@@ -92,7 +92,7 @@ class Solution:
         r = endIndex
 
         while l < r:
-            m = (l + r) // 2  # originally ages[l], ages[r] instead of l, r -- I'm very compromised today.
+            m = (l + r) // 2
 
             if ages[m] <= lowerBound:
                 l = m + 1
@@ -143,12 +143,11 @@ class Solution:
 
         numRequests = 0
 
-        ages.sort()  # O(n log n)/O(n)
+        ages.sort()
 
         for i, a in enumerate(ages):
-            lowerBound = a * 0.5 + 7  # divided instead of multiplied originally
+            lowerBound = a * 0.5 + 7
             startIndex = self.firstLTE(lowerBound, ages, i - 1)
-            #print('i = {}, startIndex = {}, delta = {}'.format(i, startIndex, i - startIndex))
             numRequests += i - startIndex
 
             if a > lowerBound:

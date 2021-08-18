@@ -1,4 +1,3 @@
-# cook your dish here
 def s(n):
     sn = str(n)
     r = 0

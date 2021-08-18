@@ -3,10 +3,7 @@ class Solution:
         d = {}
         n = len(keyName)
         res = []
-        # keyTime, keyName = [y,x for y,x in sorted(zip(keyTime,keyName))]
         keyTime, keyName = list(zip(*sorted(zip(keyTime, keyName))))
-        # print(keyName)
-        # print(keyTime)
         for i in range(n):
             if keyName[i] not in d:
                 d[keyName[i]] = [keyTime[i], [0], [0], True, False]
@@ -18,10 +15,8 @@ class Solution:
                     if min_diff < 0:
                         min_diff = 60 + min_diff
                         hr_diff = hr_diff - 1
-                    # print(\"=\", hr_diff)
                     if hr_diff < 0:
                         d[keyName[i]] = [keyTime[i], [0], [0], True, False]
-                        # print(\"Here\")
                     else:
                         d[keyName[i]][0] = keyTime[i]
                         d[keyName[i]][1].append(hr_diff * 60 + min_diff)
@@ -30,5 +25,4 @@ class Solution:
                         if len(d[keyName[i]][2]) > 2 and d[keyName[i]][2][-1] <= 60:
                             d[keyName[i]][4] = True
                             res.append(keyName[i])
-            # print(d)
         return sorted(res)

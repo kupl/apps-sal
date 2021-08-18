@@ -1,7 +1,5 @@
 class Solution:
 
-    # problem: https://leetcode.com/problems/friends-of-appropriate-ages/
-
     def numFriendRequests(self, ages: List[int]) -> int:
         count = [0] * 121
         for age in ages:

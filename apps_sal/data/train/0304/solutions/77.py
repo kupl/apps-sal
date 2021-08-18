@@ -2,7 +2,6 @@ class Solution:
     def numFriendRequests(self, ages: List[int]) -> int:
         count = collections.Counter(ages)
 
-        # print(count)
         ans = 0
 
         for ageA in count:

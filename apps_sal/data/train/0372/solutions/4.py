@@ -18,13 +18,10 @@ class Solution:
                     pi -= 1
 
         from collections import deque
-        # p = b*bab*a*
-        # s = bbbba
         if not p:
             return p == s
-        plist = list(parsePatern(p))  # [('a', 1), ('b', 1), ('a', 0), ('b', 0), ('b', 1)]
+        plist = list(parsePatern(p))
         P = len(plist)
-        #q = deque([(0, len(s)-1)])
         q = set([(0, len(s) - 1)])
         seen = set()
         """
@@ -38,10 +35,8 @@ class Solution:
          
          """
         while q:
-            # print(q)
             pat_i, si = q.pop()
             if (pat_i, si) in seen:
-                # print('seen')
                 continue
 
             seen.add((pat_i, si))
@@ -72,18 +67,11 @@ class Solution:
             if not pat and si < 0:
                 return True
             if is_as:
-                # match 0 -> n
                 q.add((pat_i + 1, si))
-                #q.append((pat_i+1, si))
-                #if (pat_i+1, si) in q: print('dup', (pat_i+1, si))
                 while si >= 0 and (s[si] == pat or pat == '.'):
                     si -= 1
-                    #if (pat_i+1, si) in q: print('dup', (pat_i+1, si))
                     q.add((pat_i + 1, si))
-                    #q.append((pat_i+1, si))
             elif si >= 0 and (s[si] == pat or pat == '.'):
-                #if (pat_i+1, si-1) in q: print('dup', (pat_i+1, si))
                 q.add((pat_i + 1, si - 1))
-                #q.append((pat_i+1, si-1))
 
         return False
