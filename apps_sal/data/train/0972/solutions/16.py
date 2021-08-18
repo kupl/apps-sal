@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 n, k = map(int, input().strip().split())
 trees = []

@@ -1,4 +1,4 @@
-def get_positions(n):  # Jai Shree Ram!!!
+def get_positions(n):
     num2 = n
     num3 = n
     p2 = [0, 0, 0, 1, 1, 1, 2, 2, 2]

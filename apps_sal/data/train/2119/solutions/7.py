@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Fri Dec  9 16:14:34 2016
 
@@ -31,7 +29,6 @@ def union(x_start, y_start):
     sums[y] = sums[x]
     if x == y:
         return x
-        #sums[x] += sums[x_start]
     if r[x] == r[y]:
         r[x] += 1
     if r[x] < r[y]:
@@ -50,16 +47,13 @@ for i in range(n):
     flag = 0
 
     max_list.append(total_max)
-    #pos = n-i-1
 
     elem = b[n - i - 1] - 1
     check_array[elem] = 1
-    #pos_x = find_x(elem)
     if elem > 0:
         if check_array[elem - 1] == 1:
             pos = union(elem - 1, elem)
             cur_sum = sums[pos]
-            #print(sums, check_array, total_max, cur_sum, elem, find_x(elem))
 
         else:
             flag += 1
@@ -69,7 +63,6 @@ for i in range(n):
         if check_array[elem + 1] == 1:
             pos = union(elem, elem + 1)
             cur_sum = sums[pos]
-            #print(sums, check_array, total_max, cur_sum, elem, find_x(elem))
 
         else:
             flag += 1

@@ -36,7 +36,7 @@ class dsu:
 
 
 n, m = list(map(int, input().split()))
-vdata = []  # (required, gain)
+vdata = []
 for _ in range(n):
     a, b = list(map(int, input().split()))
     vdata.append((max(a - b, 0), b))
@@ -48,7 +48,7 @@ for _ in range(m):
     to[u].append(v)
     to[v].append(u)
 s = dsu(n)
-dp = vdata.copy()  # (extra, tot_gain)
+dp = vdata.copy()
 visited = [False] * n
 for u in sorted(list(range(n)), key=lambda i: vdata[i][0]):
     req, gain = vdata[u]

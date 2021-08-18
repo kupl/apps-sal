@@ -1,7 +1,6 @@
 MOD = 1000000007
 for _ in range(int(input())):
     n, k = list(map(int, input().split()))
-    # n = int(input())
     weights = list(map(int, input().split()))
     if max(weights) > k:
         print(-1)

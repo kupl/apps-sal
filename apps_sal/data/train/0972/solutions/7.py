@@ -1,8 +1,6 @@
 from sys import stdin, stdout
-for _ in range(1):  # int(stdin.readline())):
+for _ in range(1):
     n, k = list(map(int, stdin.readline().split()))
-    # n = int(stdin.readline())
-    # a=list(map(int,stdin.readline().split()))
     a = []
     ans = float('inf')
     for _ in range(n):

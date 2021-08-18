@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 while n > 0:
     line1 = [int(x) for x in input().split()]

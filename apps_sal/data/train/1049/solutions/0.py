@@ -1,4 +1,3 @@
-#
 
 for _ in range(int(input())):
     n, k = list(map(int, input().split()))
@@ -8,7 +7,6 @@ for _ in range(int(input())):
     max = -1
     for i in range(n - k + 1):
         temp = set(arr[i:i + k])
-        # print(temp,i,k+i+1)
         t = len(temp)
         if t1 == t:
             if max < sum(arr[i:k + i]):

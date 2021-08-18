@@ -17,7 +17,6 @@ def f():
             else:
                 count[a[i]] += 1
                 s += a[i]
-        # print(temp,s)
         if len(temp) == k:
             if c == distinctitem:
                 maxi = max(maxi, s)

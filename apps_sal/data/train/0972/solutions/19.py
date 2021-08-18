@@ -13,4 +13,3 @@ for i in range(n - k):
         min = x[-1] - x[0]
         res = x[:]
 print(min)
-# print(res)

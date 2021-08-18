@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n, k = map(int, input().split())
     lst = list(map(int, input().split()))
@@ -9,8 +8,6 @@ for _ in range(int(input())):
         d = sum(x)
         dic = {j for j in set(x)}
         elm = len(dic)
-        # print(x)
-        # print(p,ele,d,elm)
         if elm >= ele:
             if ele > ele:
                 p = d

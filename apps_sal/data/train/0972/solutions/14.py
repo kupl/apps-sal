@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     n, k = map(int, input().split())
     l = []
