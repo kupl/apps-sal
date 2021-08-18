@@ -1,25 +1,17 @@
-# cook your dish here
 def val(c):
     if c >= '0' and c <= '9':
         return ord(c) - ord('0')
     else:
         return ord(c) - ord('A') + 10
 
-# Function to convert a number
-# from given base 'b' to decimal
-
 
 def toDeci(str, base):
     llen = len(str)
-    power = 1  # Initialize power of base
-    num = 0  # Initialize result
+    power = 1
+    num = 0
 
-    # Decimal equivalent is str[len-1]*1 +
-    # str[len-1]*base + str[len-1]*(base^2) + ...
     for i in range(llen - 1, -1, -1):
 
-        # A digit in input number must
-        # be less than number's base
         if val(str[i]) >= base:
             print('Invalid Number')
             return -1

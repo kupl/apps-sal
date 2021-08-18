@@ -6,7 +6,6 @@ class VectorInputCoordsValidationError(Exception):
 
 
 class Vector:
-    # https://www.mathsisfun.com/algebra/vectors.html
 
     def __init__(self, *args):
         try:
@@ -30,8 +29,6 @@ class Vector:
         )
 
     def __eq__(self, other) -> bool:
-        # https://www.grc.nasa.gov/www/k-12/airplane/vectcomp.html
-        # https://onlinemschool.com/math/library/vector/equality/
         return all((
             self.x == other.x,
             self.y == other.y,
@@ -39,7 +36,6 @@ class Vector:
         ))
 
     def cross(self, other) -> "Vector":
-        # https://www.mathsisfun.com/algebra/vectors-cross-product.html
         return Vector(
             self.y * other.z - self.z * other.y,
             self.z * other.x - self.x * other.z,
@@ -47,7 +43,6 @@ class Vector:
         )
 
     def dot(self, other) -> int:
-        # https://www.mathsisfun.com/algebra/vectors-dot-product.html
         return self.x * other.x + self.y * other.y + self.z * other.z
 
     def to_tuple(self) -> tuple:

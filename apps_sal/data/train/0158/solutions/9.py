@@ -1,6 +1,4 @@
 class Solution:
-    # Just like the shuffle board game, consider each string as a node
-    # And for each child is the shuffled result
     def kSimilarity(self, A: str, B: str) -> int:
         def find(s):
             i = 0

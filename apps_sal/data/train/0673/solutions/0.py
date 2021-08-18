@@ -15,7 +15,6 @@ for _ in range(t):
             e = j[0]
             for v in j:
                 e = (e * v) // gcd(e, v)
-            # print(e)
             if i % 2:
                 ans -= m // e - (n - 1) // e
             else:

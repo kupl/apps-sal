@@ -1,5 +1,4 @@
 def palindrome(n):
-    # your code here
     if not isinstance(n, int) or n < 0:
         return "Not valid"
     rev, temp = 0, n

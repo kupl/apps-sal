@@ -51,7 +51,6 @@ def getSumUtil(ss, se, qs, qe, si):
 
 def getSum(n, qs, qe):
     if (qs < 0 or qe > n - 1 or qs > qe):
-        #print("Invalid Input", end = "");
         return -1
 
     return getSumUtil(0, n - 1, qs, qe, 0)
@@ -73,7 +72,6 @@ def constructST(arr, n):
     constructSTUtil(arr, 0, n - 1, 0)
 
 
-# Driver code
 for _ in range(int(input())):
     tree = [0] * MAX
     lazy = [0] * MAX

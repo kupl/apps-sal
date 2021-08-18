@@ -5,7 +5,6 @@ input = reader.__next__
 
 def solve():
     s, c = input().split()
-    # i,jでjが複数あるとき
     n = len(s)
     for i in range(n - 1):
         prev = s[i]

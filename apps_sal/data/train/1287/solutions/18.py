@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 m = pow(10, 9) + 7
 for i in range(n):
