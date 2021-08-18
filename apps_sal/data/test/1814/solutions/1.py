@@ -15,7 +15,6 @@ for i in range(q):
         output = abs(y2 - y1)
     else:
         lft = math.ceil(abs((x2 - x1)) / v)
-        # print(lft)
         sta = abs(x2 - x1)
         if cl > 0:
             nearestele = bisect.bisect_left(l, y1)
@@ -27,16 +26,13 @@ for i in range(q):
                 second = abs(l[nearestele - 1] - y1) + abs(y2 - l[nearestele - 1])
             else:
                 second = 1000000000001
-            # print(first,second,nearestele)
             nearestele = min(first, second)
         else:
             nearestele = 1000000000001
         if ce > 0:
             neareststa = bisect.bisect_left(e, y1)
-            # print('n',neareststa)
             if len(e) > neareststa:
                 first = abs(e[neareststa] - y1) + abs(y2 - e[neareststa])
-                # print(first)
             else:
                 first = 1000000000001
             if neareststa != 0:
@@ -46,7 +42,6 @@ for i in range(q):
             neareststa = min(first, second)
         else:
             neareststa = 1000000000001
-        # print(lft,sta,neareststa,nearestele,first,second)
         output = min(lft + neareststa, sta + nearestele)
 
     sys.stdout.write(str(output) + '\n')

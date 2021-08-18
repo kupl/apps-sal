@@ -10,9 +10,6 @@ for i in range(1, s1):
         et = s2[i]
     if s2[i] == s2[i - 1] and tp != s2[i]:
         p = p + 1
-        # tp=s2[i]
-    # if s2[i]!=tp:
-     #   tp=2
 if p == 0:
     print(d)
 elif p == 1:

@@ -1,6 +1,6 @@
 array = input("").split(' ')
-totalsum = 0  # to be used for m<n
-summ = 0  # to be used for m>=n
+totalsum = 0
+summ = 0
 
 n = array[0]
 d = array[1]

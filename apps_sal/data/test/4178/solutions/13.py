@@ -8,12 +8,6 @@ def main():
     for i in range(1, N):
         if h0 < h[i]:
             h0 = h[i] - 1
-            # h1 = h[i] - 1
-            # if h1 > h0:
-            #     ans = 'No'
-            #     break
-            # else:
-            #     h0 = h1
         elif h0 > h[i]:
             ans = 'No'
             break

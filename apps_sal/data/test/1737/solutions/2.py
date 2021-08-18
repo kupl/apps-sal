@@ -1,6 +1,3 @@
-# f = open("input.txt")
-# def readline():
-# return f.readline().strip()
 
 def readline():
     return input()

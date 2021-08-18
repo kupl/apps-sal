@@ -7,14 +7,12 @@ class Solution:
         """
         V = numCourses
 
-        # Store outgoing edges
         edges = []
 
         for _ in range(V):
             edges.append(set())
 
         for p in prerequisites:
-            # Edge goes from v1 to v2
             v2, v1 = p
             edges[v1].add(v2)
 

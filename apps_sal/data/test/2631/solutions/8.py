@@ -18,7 +18,6 @@ class Solution:
                 print(self.adjList)
                 print(self.invAdjList, self.inDegree)
                 print(self.visited)
-        # initialization
         vertices = []
         for _ in range(numCourses):
             vertices.append(Vertex())
@@ -30,7 +29,6 @@ class Solution:
             vertices[post].inDegree += 1
             vertices[post].invAdjList.append(pre)
 
-        # BFS
         q = deque()
         coursesLearned = []
         for i in range(numCourses):

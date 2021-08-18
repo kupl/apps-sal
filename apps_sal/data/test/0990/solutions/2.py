@@ -13,11 +13,11 @@ def main():
         d[(a - 1, b - 1)] = i
 
     def tree_path(root, goal):
-        d = [-1] * n  # 根からの距離
+        d = [-1] * n
         d[root] = 0
         q = [root]
         cnt = 0
-        while q:  # BFS
+        while q:
             cnt += 1
             qq = []
             while q:

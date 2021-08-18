@@ -4,7 +4,6 @@ count = [0, 0, 0]
 turn = 0
 
 while(True):
-    #print(count, n)
     count[turn] += 1
     if count[0] > n[0]:
         print("A")
@@ -16,4 +15,3 @@ while(True):
         print("C")
         break
     turn = ord(s[turn][count[turn] - 1]) - 97
-    #print(count, turn)

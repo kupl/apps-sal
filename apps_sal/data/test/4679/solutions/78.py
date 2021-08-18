@@ -1,4 +1,3 @@
-# 68 B - 3人でカードゲームイージー
 from collections import deque
 Sa = deque(input())
 Sb = deque(input())

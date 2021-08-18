@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 n, d = tuple(map(int, input().split(None, 2)))
 a = list(map(int, input().split()))

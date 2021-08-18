@@ -1,4 +1,3 @@
-# 多分TLE
 from scipy.sparse.csgraph import dijkstra
 from itertools import combinations
 

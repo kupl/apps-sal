@@ -1,4 +1,3 @@
-# coding: utf-8
 
 num = input()
 count = 0

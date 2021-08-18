@@ -1,6 +1,5 @@
 import sys
 f = sys.stdin
-#f = open("input.txt", "r")
 line = [int(i) for i in f.read().strip().split()]
 x, y = line[0], line[1]
 x1, x2 = 0, abs(x) + abs(y)

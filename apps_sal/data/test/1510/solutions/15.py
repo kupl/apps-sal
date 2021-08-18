@@ -1,4 +1,3 @@
-# it's me
 
 n, m = list(map(int, input().split()))
 a = sorted(map(int, input().split()))

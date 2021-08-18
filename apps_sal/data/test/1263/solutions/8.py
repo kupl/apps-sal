@@ -10,7 +10,6 @@ def Rf(x): return list(map(float, x.split()))
 
 
 MaxN = int(1e5) + 10
-# dp,A = []
 
 
 def f(i, x, n, k, dp, A, B):
@@ -27,7 +26,6 @@ def f(i, x, n, k, dp, A, B):
 
 
 def main():
-    # t = int(R())
     for x in stdin:
         n, x = Ri(x)
         A = list(Ri(R()))
@@ -43,8 +41,6 @@ def main():
 
 def __starting_point():
     main()
-
-# 60 == 360
 
 
 __starting_point()

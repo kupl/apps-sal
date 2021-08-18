@@ -22,7 +22,6 @@ def main():
         else:
             candy_dict[i] += 1
 
-    #print (candy_dict)
     for i in candy_dict:
         if candy_dict[i] > 0:
             if (k - i) in list(candy_dict.keys()):
