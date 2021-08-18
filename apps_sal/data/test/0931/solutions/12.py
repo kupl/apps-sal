@@ -50,7 +50,6 @@ def print1():
 
 n, m, x, y, z, p = arr_inp(1)
 a = [arr_inp(1) for i in range(p)]
-# print(x % 4, y % 2, z % 4)
 
 clockwise(x % 4)
 horizontal(y % 2)

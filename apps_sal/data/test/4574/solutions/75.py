@@ -1,16 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# FileName: 	C
-# CreatedDate:  2020-09-04 15:20:21 +0900
-# LastModified: 2020-09-04 15:31:03 +0900
-#
 
 
 import os
 import sys
-# import numpy as np
-# import pandas as pd
 from collections import Counter
 
 

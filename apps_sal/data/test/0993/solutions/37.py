@@ -9,6 +9,6 @@ for p in P:
 ans = 0
 for key, val in dic.items():
     if key == 0:
-        ans += val  # あまり0の時はそれ自体もカウント
+        ans += val
     ans += val * (val - 1) // 2
 print(ans)

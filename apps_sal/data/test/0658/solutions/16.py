@@ -1,5 +1,3 @@
-#!/usr/bin/env	python
-# -*-coding:utf-8 -*-
 n, w, v, u = list(map(int, input().split()))
 v = u / v
 l = r = 0
@@ -9,6 +7,3 @@ for _ in range(n):
     l = min(l, y)
     r = max(r, y)
 print((w - (l if r else 0)) / u)
-
-
-# Made By Mostafa_Khaled

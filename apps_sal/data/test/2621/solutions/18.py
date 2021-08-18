@@ -1,7 +1,4 @@
 import math
-# helpful:
-# r,g,b=map(int,input().split())
-# arr = [[0 for x in range(columns)] for y in range(rows)]
 
 t = int(input())
 for i in range(t):

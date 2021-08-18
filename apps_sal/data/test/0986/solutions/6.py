@@ -1,7 +1,7 @@
 from collections import deque
 
 
-class Treap():  # self.priority_comparator(root.priority, descendant.priority) == True
+class Treap():
     def __init__(self, key, priority, prrty_cmprtr):
         self.key = key
         self.priority = priority
@@ -9,7 +9,7 @@ class Treap():  # self.priority_comparator(root.priority, descendant.priority) =
         self.left = None
         self.right = None
 
-    def merge(self, right):  # self a.k.a. left <= right ========= tested
+    def merge(self, right):
         if right is None:
             return self
         if self.priority_comparator(self.priority, right.priority):
@@ -23,7 +23,7 @@ class Treap():  # self.priority_comparator(root.priority, descendant.priority) =
             root.left = self.merge(right.left)
         return root
 
-    def split(self, key):                   # tested
+    def split(self, key):
         if self.key <= key:
             left = self
             if left.right is not None:
@@ -38,7 +38,7 @@ class Treap():  # self.priority_comparator(root.priority, descendant.priority) =
                 left, right.left = None, None
         return (left, right)
 
-    def insert(self, element):     # tested
+    def insert(self, element):
         left, right = self.split(element.key)
         if left is not None:
             t = left.merge(element)
@@ -48,7 +48,7 @@ class Treap():  # self.priority_comparator(root.priority, descendant.priority) =
             return t.merge(right)
         return t
 
-    def delete(self, key):        # UN!tested
+    def delete(self, key):
         left, right = self.split(key)
         left, middle = left.split(key - 1)
         if left is not None:

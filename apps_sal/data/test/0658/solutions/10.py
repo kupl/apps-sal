@@ -17,7 +17,7 @@ def dist_line(A, l):
     x, y = A
     a, b, c = l
     d = a * a + b * b
-    res = (a * x + b * y + c)  # / d
+    res = (a * x + b * y + c)
     return res
 
 

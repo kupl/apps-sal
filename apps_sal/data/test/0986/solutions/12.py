@@ -47,6 +47,3 @@ for i in range(n):
         z[a[i]] = 1
 
 print(ans)
-
-
-# Made By Mostafa_Khaled

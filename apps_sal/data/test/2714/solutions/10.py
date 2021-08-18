@@ -1,11 +1,7 @@
 from collections import defaultdict
 import sys
-# sys.setrecursionlimit(10**6)
-#sys.stdin = open('E56D_input.txt', 'r')
-#sys.stdout = open('output.txt', 'w')
 
 input = sys.stdin.readline
-# print=sys.stdout.write
 
 graph = defaultdict(list)
 color = [0] * ((3 * 10 ** 5) + 1000)
@@ -34,12 +30,10 @@ def dfs(s, c):
 
 t = int((input()))
 
-# precomputing powers
 pow_value.append(1)
 for i in range(1, (3 * 10**5) + 1000):
     next_value = (pow_value[i - 1] * 2) % MOD
     pow_value.append(next_value)
-# ------------------------
 
 
 while t:
@@ -64,7 +58,6 @@ while t:
         if (color[i] != -1):
             continue
 
-        # bfs---
         bipertite = True
         color_count[0] = color_count[1] = 0
         queue = []
@@ -72,7 +65,6 @@ while t:
         color[i] = 0
         color_count[0] += 1
         while queue:
-           # print(color_count[0],' ',color_count[1])
             if bipertite == False:
                 break
             front_node = queue.pop()
@@ -87,7 +79,6 @@ while t:
                     bipertite = False
                     break
 
-        # bfs end
         if bipertite == False:
             print(0)
             break

@@ -16,7 +16,7 @@ for _ in range(t):
             if m < 0:
                 result = False
                 break
-        else:  # ==
+        else:
             pass
 
     if result:
