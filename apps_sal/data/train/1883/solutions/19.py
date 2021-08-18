@@ -3,9 +3,8 @@ class Solution:
         rows, cols = len(grid), len(grid[0])
         directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
         start_cell, end_cell = None, None
-        empty_cells = {}  # the set of neighbors' positions for each cell
+        empty_cells = {}
 
-        # collect empty cells
         for i in range(rows):
             for j in range(cols):
                 if grid[i][j] in [0, 1]:
@@ -15,7 +14,6 @@ class Solution:
                 elif grid[i][j] == 2:
                     end_cell = (i, j)
 
-        # collect their neighbors
         for x, y in empty_cells:
             for xch, ych in directions:
                 neighbor = (x + xch, y + ych)

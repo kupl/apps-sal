@@ -14,12 +14,3 @@ class Solution:
                 if j:
                     dp[i][j] = max(dp[i][j], dp[i][j - 1])
         return dp[-1][-1]
-        #         dp[i+1][j+1] = max(dp[i][j] + max(0, nums1[i] * nums2[j]), dp[i][j+1], dp[i+1][j])
-        # # print(dp)
-        # if dp[-1][-1] != 0:
-        #     return dp[-1][-1]
-        # nums1.sort()
-        # nums2.sort()
-        # a = nums1[0] if nums1[0] > 0 else nums1[-1]
-        # b = nums2[0] if nums2[0] > 0 else nums2[-1]
-        # return a * b

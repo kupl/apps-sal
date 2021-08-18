@@ -2,7 +2,6 @@ class Solution:
     def maxDotProduct(self, nums1, nums2) -> int:
         n, m = len(nums1), len(nums2)
 
-        # dp[i][j] max dot product of nums[:i+1][:j+1]
         dp = [[0 for _ in range(m)] for _ in range(n)]
 
         dp[0][0] = nums1[0] * nums2[0]

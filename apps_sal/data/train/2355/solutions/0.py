@@ -9,7 +9,6 @@ for i in range(1, K + 1):
     fact[i] = i * fact[i - 1] % mod
 inv_fact = [pow(f, mod - 2, mod) for f in fact]
 
-# r = [sum(pow(aa,t,mod) for aa in A)%mod for t in range(K+1)]##遅い
 r = [0] * (K + 1)
 r[0] = N
 temp = np.ones(N, dtype="int32")

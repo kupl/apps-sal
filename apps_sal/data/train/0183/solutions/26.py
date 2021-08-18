@@ -12,10 +12,6 @@ class Solution:
                         dp[i][j] = max(dp[i][j - 1], nums1[i] * nums2[j])
                     if i > 0 and j == 0:
                         dp[i][j] = max(dp[i - 1][j], nums1[i] * nums2[j])
-                # print(i,j,dp[i][j])
-
-      #  print(dp)
-      #  print(max(dp))
 
         ans = max([max(x) for x in dp])
 

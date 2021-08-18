@@ -1,4 +1,3 @@
-# https://oeis.org/A203464
 from bisect import bisect
 s = [0]
 for m in range(0, 10**9):

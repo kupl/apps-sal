@@ -15,7 +15,6 @@ def help(a, s):
     return dp[s][len(a) - 1]
 
 
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     s = int(input())

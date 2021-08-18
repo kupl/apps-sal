@@ -1,4 +1,3 @@
-# cook your dish here
 def countsubsetsum(S, arr, n):
     k = [[0 for i in range(S + 1)] for i in range(n + 1)]
     for i in range(n + 1):

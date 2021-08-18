@@ -1,5 +1,4 @@
 def solve(l, i, n, m):
-    # print(i,m)
     if(m == 0):
         return 1
     elif(i >= n):
