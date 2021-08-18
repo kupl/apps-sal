@@ -10,9 +10,7 @@ class Solution:
         most_recent = {}
         min_area = float('inf')
 
-        # for x in sorted(columns):
         for x in columns:
-            #column = sorted(columns[x])
             column = columns[x]
 
             for index, y2 in enumerate(column):

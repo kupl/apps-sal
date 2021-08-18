@@ -1,5 +1,4 @@
 def monkey_count(n):
-    # your code here
     poop = []
 
     c = 1

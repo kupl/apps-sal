@@ -1,7 +1,5 @@
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
-        # sort by x // N log(N)
-        # [y0, y1] -> (min dx, last) // log(N)
 
         lines = self.find_lines(points)
         min_area = 0

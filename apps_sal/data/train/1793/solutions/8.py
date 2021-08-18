@@ -38,8 +38,6 @@ class PlayingCards:
                     p[k] += 1
         return [self.CARDS[i]for i in p]
 
-    # Takes a String containing a message, and returns an array of Strings representing
-    # a deck of playing cards ordered to hide the message, or None if the message is invalid.
     def encode(self, message):
         if not all(c == ' ' or 'A' <= c <= 'Z' for c in message):
             return
@@ -49,8 +47,6 @@ class PlayingCards:
         p = self.permute(n)
         return p
 
-    # Takes an array of Strings representing a deck of playing cards, and returns
-    # the message that is hidden inside, or None if the deck is invalid.
     def decode(self, deck):
         if set(deck) != set(self.CARDS):
             return

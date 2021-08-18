@@ -7,7 +7,6 @@ class Solution:
         for r, c in points:
             d[r].add(c)
 
-        #A = sorted(d.keys())
         A = list(d.keys())
         for i, r1 in enumerate(A):
             cols1 = d[r1]

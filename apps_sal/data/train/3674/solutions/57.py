@@ -1,5 +1,4 @@
 def add_binary(a, b):
-    # your code here
     count = a + b
     output = ''
 

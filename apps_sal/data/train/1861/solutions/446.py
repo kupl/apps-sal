@@ -8,7 +8,6 @@ class Solution:
         y_pairs = dict()
         for x in sorted(columns):
             ys = sorted(columns[x])
-            # print('ys',ys,x)
             for i in range(len(ys) - 1):
                 for j in range(i + 1, len(ys)):
                     if (ys[i], ys[j]) in y_pairs:
