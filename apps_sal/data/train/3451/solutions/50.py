@@ -3,9 +3,8 @@ def triangle(row):
     nex = ""
 
     while len(act) > 2:
-        for i in range(len(act) - 1):   # pro 4 znaky (0-3), chci i = 0,1,2  a ne 0,1,2,3
-            #print(i, act[i], act[i+1])
-            if act[i] == act[i + 1]:  # porovnám 0a1, 1a2, 2a3
+        for i in range(len(act) - 1):
+            if act[i] == act[i + 1]:
                 nex = nex + act[i]
             elif (act[i] == "R" and act[i + 1] == "G") or (act[i] == "G" and act[i + 1] == "R"):
                 nex = nex + "B"
@@ -15,7 +14,6 @@ def triangle(row):
 
             elif (act[i] == "R" and act[i + 1] == "B") or (act[i] == "B" and act[i + 1] == "R"):
                 nex = nex + "G"
-            # print(nex)
         act = nex
         nex = ""
     if len(act) == 2:

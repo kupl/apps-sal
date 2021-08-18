@@ -1,5 +1,4 @@
 def pick_peaks(arr):
-    # your code here
     a_1 = []
     a_2 = []
 
@@ -11,12 +10,11 @@ def pick_peaks(arr):
                 a_1.append(i)
                 a_2.append(arr[i])
             elif (arr[i] > arr[i - 1]) and (arr[i] == arr[i + 1]):
-                # elem = i
                 copy_arr = arr[:]
                 while (copy_arr[i] == copy_arr[i + 1]):
                     del copy_arr[i + 1]
                     if i != len(copy_arr) - 1:
-                        if (copy_arr[i] > copy_arr[i + 1]):  # !!!
+                        if (copy_arr[i] > copy_arr[i + 1]):
                             a_1.append(i)
                             a_2.append(arr[i])
                             break

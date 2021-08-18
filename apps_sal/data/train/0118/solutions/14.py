@@ -12,5 +12,4 @@ for _ in range(int(input())):
         else:
             teamMem += 1
         i += 1
-        # print(teams,teamMem)
     print(teams)

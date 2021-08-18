@@ -20,10 +20,6 @@ def triangle(row):
 
 
 def sec(rwo):
-    # a=rwo[0]
-    # for i in range(len(rwo)-1):
-    #    a=check(a,i)
-    # return a
     lis = []
     for i in range(len(rwo) - 1):
         lis.append(check(rwo[i], rwo[i + 1]))

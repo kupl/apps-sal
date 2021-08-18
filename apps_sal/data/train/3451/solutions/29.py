@@ -4,7 +4,6 @@ def triangle(array):
     digit = {0: "R", 1: "G", 2: "B"}
     a = [colors.get(item, item) for item in list(array)]
 
-    # Generate nth the pascal's triangle row
     def pascalRowFast(rowIndex):
         row = [0] * (rowIndex + 1)
         row[0] = row[-1] = 1

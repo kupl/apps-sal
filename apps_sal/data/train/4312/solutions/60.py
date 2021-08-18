@@ -1,5 +1,4 @@
 def pick_peaks(arr):
-    # your code here
     pos, peaks = [], []
     for i in range(len(arr) - 2):
         a, b, c = list(range(i, i + 3))

@@ -100,8 +100,6 @@ def maxSubArraySum(a):
 def longestsubarray(arr, n, k):
     current_count = 0
 
-    # this will contain length of
-    # longest subarray found
     max_count = 0
 
     for i in range(0, n, 1):
@@ -113,12 +111,6 @@ def longestsubarray(arr, n, k):
                         max_count)
 
     return max_count
-
-# print(SieveOfEratosthenes(100))
-# print(Divisors(100))
-# print(primeFactors(100))
-# print(Factors(100))
-# print(maxSubArraySum(a))
 
 
 def main():

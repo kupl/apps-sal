@@ -7,5 +7,3 @@ def colour_association(arr):
 
     print(dict1)
     return dict1
-
-    # your code here
