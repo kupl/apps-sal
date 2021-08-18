@@ -1,10 +1,9 @@
-# https://www.codechef.com/problems/SLAEL
 
 for _ in range(int(input())):
     n, k = list(map(int, input().split()))
     ays = list(map(int, input().split()))
 
-    gt = k  # sentinel
+    gt = k
     gtp = -1
     mseg = 0
     seg = 0
@@ -21,7 +20,7 @@ for _ in range(int(input())):
             seg = ax - gtp
             gtp = ax
 
-    if gt == k:  # check sentinel
+    if gt == k:
         mseg = 0
     elif seg > mseg:
         mseg = seg

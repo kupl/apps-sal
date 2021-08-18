@@ -7,4 +7,3 @@ def invite_more_women(arr):
         if person == 1:
             men += 1
     return men > women
-    # your code here

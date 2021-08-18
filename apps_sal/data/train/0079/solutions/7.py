@@ -57,7 +57,6 @@ for _ in range(q):
             test = p**2
             if n % test != 0:
                 p, q = q, p
-            # p^2 dzieli n
             dzielniki = set(dzielniki)
             dzielniki.remove(p * q)
             dzielniki.remove(p * p * q)

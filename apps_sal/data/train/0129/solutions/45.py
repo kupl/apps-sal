@@ -6,5 +6,4 @@ class Solution:
             res = max(res, keep[0] + A[j] + keep[1] - j)
             if A[j] >= keep[0] or keep[0] - A[j] < j - keep[1]:
                 keep = (A[j], j)
-            # print(j, keep, res)
         return res

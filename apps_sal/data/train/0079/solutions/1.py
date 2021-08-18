@@ -112,7 +112,6 @@ for _ in range(T):
         continue
 
     lpf = list(pf)
-    # print("lpf =", lpf)
 
     X = [[] for _ in range(len(pf))]
     S = {1}
@@ -127,7 +126,6 @@ for _ in range(T):
                 S.add(p ** j)
     else:
         for i, p in enumerate(lpf):
-            # print("i, p, pf[p] =", i, p, pf[p])
             X[i].append(lpf[i - 1] * p)
             S.add(lpf[i - 1] * p)
             for j in range(1, pf[p] + 1):
@@ -139,7 +137,6 @@ for _ in range(T):
                 if a % p == 0:
                     X[i].append(a)
                     break
-    # print("X =", X)
     ANS = []
     for x in X:
         for y in x:

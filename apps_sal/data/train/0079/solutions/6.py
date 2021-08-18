@@ -39,7 +39,6 @@ for _ in range(val()):
             l.append(j)
     l1 = set(l1)
     l1 -= set(l)
-    # print(l, l1)
     d = defaultdict(set)
     for j in range(len(l)):
         for i in sorted(list(l1)):
@@ -47,13 +46,11 @@ for _ in range(val()):
                 d[tuple(sorted([l[j], l[j - 1]]))].add(i)
                 l1.remove(i)
                 break
-    # print(l, l1)
     for j in range(len(l)):
         for i in sorted(list(l1)):
             if i % l[j] == 0 and i % l[j - 1] == 0:
                 d[tuple(sorted([l[j], l[j - 1]]))].add(i)
                 l1.remove(i)
-    # print(l, l1, d)
 
     only = defaultdict(list)
     for j in range(len(l)):

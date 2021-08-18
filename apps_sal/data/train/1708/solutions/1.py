@@ -5,8 +5,8 @@ class MemoryManager:
         @param {memory} An array to use as the backing memory.
         """
         self.mem = memory
-        self.blockpointers = []  # A list of pointers to the start of each allocated block
-        self.blocksizes = []    # A list of sizes of each block
+        self.blockpointers = []
+        self.blocksizes = []
 
     def allocate(self, size):
         """
@@ -18,20 +18,17 @@ class MemoryManager:
         if size > len(self.mem):
             raise Exception("Cannot allocate more memory than exists")
 
-        # check start of memory
         if self.blockpointers == [] or (0 not in self.blockpointers and size <= self.blockpointers[0]):
             self.blockpointers.insert(0, 0)
             self.blocksizes.insert(0, size)
             return 0
 
-        # check after every allocated block
         for i, e in enumerate(self.blocksizes[:-1]):
             if size <= (self.blockpointers[i + 1] - self.blockpointers[i] - e):
                 self.blockpointers.insert(i, self.blockpointers[i] + e)
                 self.blocksizes.insert(i, size)
                 return self.blockpointers[i]
 
-        # check after last allocated block
         if size <= (len(self.mem) - self.blockpointers[-1] - self.blocksizes[-1]):
             self.blockpointers.append(self.blockpointers[-1] + self.blocksizes[-1])
             self.blocksizes.append(size)

@@ -58,6 +58,3 @@ t = int(stdin.readline())
 for _ in range(t):
     n = int(stdin.readline())
     solve(n)
-
-# for i in range(2, 50):
-#    solve(i)

@@ -21,8 +21,6 @@ some useful information about memory allocation in operating system
 PS. I HAVE IMPLEMENTED Best Fit Algorithm IN JAVASCRIPT AND IMPLEMENTED Next Fit Algorithm in PYTHON :)
 '''
 
-# Next fit Algorithm
-
 
 class MemoryManager:
     def __init__(self, memory):
@@ -32,10 +30,10 @@ class MemoryManager:
         self.data = memory
 
     def allocate(self, size):
-        find_next = self.process_allocate(self.previous_allocated_index, len(self.data) - size + 1, size)  # start searching from previously allocated block
+        find_next = self.process_allocate(self.previous_allocated_index, len(self.data) - size + 1, size)
         if find_next is not None:
             return find_next
-        from_start = self.process_allocate(0, self.previous_allocated_index - size + 1, size)              # if we cant find from last index then start searching from starting to previously allocated index
+        from_start = self.process_allocate(0, self.previous_allocated_index - size + 1, size)
         if from_start is not None:
             return from_start
         raise IndexError('caused by insufficient space in storage')

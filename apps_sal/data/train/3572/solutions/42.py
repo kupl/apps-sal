@@ -1,7 +1,5 @@
 def invite_more_women(arr):
 
-  # No way this is the short way :(
-
     men = 0
     women = 0
 

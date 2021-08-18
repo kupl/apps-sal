@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     x1, y1, x2, y2 = [int(i) for i in input().split()]
