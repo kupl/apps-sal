@@ -7,7 +7,6 @@ for i in range(N):
     x, y = list(map(int, input().split()))
     L[i] = (x**2 + y**2)**0.5
 
-# print(L)
 
 for i in range(N):
     if L[i] <= D:

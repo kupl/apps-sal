@@ -21,26 +21,20 @@ counter = 1
 while st < n:
     st *= 2
     counter += 1
-#print(st, counter)
 if st != n:
     st // 2
     counter -= 1
 dp = [[] for i in range(counter)]
-# print(dp)
 for i in range(n):
     dp[0].append([0, S[i]])
-# print(dp)
 for i in range(1, counter):
     chislo = stp(i)
-    # print(chislo)
     for l in range(n - chislo + 1):
         r = l + chislo
-        #print(l, r)
         dp[i].append([dp[i - 1][l][0] + dp[i - 1][l + chislo // 2][0], (dp[i - 1][l][1] + dp[i - 1][l + chislo // 2][1]) % 10])
         if dp[i - 1][l][1] + dp[i - 1][l + chislo // 2][1] > 9:
             dp[i][l][0] += 1
 q = int(input())
-# print(dp)
 for i in range(q):
     a, b = map(int, input().split())
     w = b - a + 1

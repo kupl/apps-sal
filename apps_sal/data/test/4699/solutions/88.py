@@ -5,7 +5,6 @@ def minN(N: int, usable: list, restrict=True):
         for i in usable:
             if i >= N:
                 return str(i)
-        # 桁が増える
         return '1' + str(usable[0])
     else:
         return str(usable[0])

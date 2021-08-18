@@ -21,7 +21,6 @@ data = {}
 
 
 def foo(s, s_len, l, r):
-   # print("{}:{}".format(l,r))
     diff = r - l
     if diff == 0:
         return (0, 0)

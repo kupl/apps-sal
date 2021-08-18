@@ -9,19 +9,17 @@ def resolve():
     ans = 0
 
     flag = 1
-    if S[i] == T[i]:  # 縦に置いている
-        # 色を3通り選べる
+    if S[i] == T[i]:
         ans = 3
         i += 1
         flag = 1
     else:
-        # 色を6通り選べる
         ans = 6
         i += 2
         flag = 2
 
     while i < N:
-        if S[i] == T[i]:  # 縦に置いている
+        if S[i] == T[i]:
             if flag == 1:
                 ans *= 2
                 ans %= MOD

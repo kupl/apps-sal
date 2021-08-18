@@ -1,4 +1,4 @@
-from functools import reduce, lru_cache     # decorator: 関数をメモ化再起してくれる. max_size=128
+from functools import reduce, lru_cache
 from pprint import pprint
 from collections import deque, defaultdict
 from itertools import combinations as comb, combinations_with_replacement as comb_w, accumulate, product, permutations
@@ -21,9 +21,6 @@ def gen_matrix(h, w, init): return [[init] * w for _ in range(h)]
 
 
 INF = float('inf')
-# from bisect import bisect_left, bisect_right
-# from heapq import heapify, heappop, heappush
-# import numpy as np    # cumsum
 
 
 def solve():

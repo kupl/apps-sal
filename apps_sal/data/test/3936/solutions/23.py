@@ -5,7 +5,6 @@ i = 0
 
 
 def define(index):
-    # たてバージョンん
     if S[0][index] == S[1][index]:
         return 1
     else:

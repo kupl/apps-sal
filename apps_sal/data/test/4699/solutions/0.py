@@ -15,8 +15,8 @@ def cal(N, target_num, keta):
 
 
 def __starting_point():
-    N, K = map(int, input().split())  # N円の品物、K個の嫌いな数字
-    D = set(list(map(int, input().split())))  # 嫌いな数字のリスト
+    N, K = map(int, input().split())
+    D = set(list(map(int, input().split())))
     base = set(range(10))
 
     target_num = base - D

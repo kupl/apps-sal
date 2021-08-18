@@ -10,7 +10,6 @@ for i in range(N):
     s += arr[i]
     prefix[i] = s
 
-# print(prefix)
 
 Q = int(input())
 
@@ -21,7 +20,5 @@ for i in range(Q):
         range_sum = prefix[R - 1]
     else:
         range_sum = prefix[R - 1] - prefix[L - 2]
-
-    # print(range_sum)
 
     print(range_sum // 10)

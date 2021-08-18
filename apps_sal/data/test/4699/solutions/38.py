@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[21]:
 
 
 import itertools
@@ -30,6 +26,3 @@ def main():
 
 
 main()
-
-
-# In[ ]:

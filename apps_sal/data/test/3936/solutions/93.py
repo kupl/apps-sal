@@ -11,7 +11,6 @@ else:
     K, I = 6, 2
     Mode = False
 
-# Mode:True->縦,False->横
 
 while I < N:
     if S[I] == T[I]:

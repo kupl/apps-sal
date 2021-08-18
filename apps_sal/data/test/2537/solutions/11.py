@@ -31,5 +31,4 @@ for _ in range(int(input())):
                 except:
                     flag = 1
                     break
-        # print(arr,flag)
         print("YES" if flag == 0 else "NO")

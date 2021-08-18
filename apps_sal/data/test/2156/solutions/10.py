@@ -1,21 +1,10 @@
-# -*- coding: utf-8 -*-
 import sys
-# from operator import itemgetter
-# from fractions import gcd
-# from math import ceil, floor
-# from copy import deepcopy
-# from itertools import accumulate
 from collections import deque
-# import math
-# from functools import reduce
 input = sys.stdin.readline
 def ii(): return int(input())
 def mi(): return list(map(int, input().rstrip().split()))
 def lmi(): return list(map(int, input().rstrip().split()))
 def li(): return list(input().rstrip())
-# template
-
-# BEGIN CUT HERE
 
 
 class BIT:
@@ -84,15 +73,12 @@ class BIT:
     def __str__(self):
         return str(self[1:self.size + 1])
 
-# END CUT
-
 
 def main():
     n = ii()
     a = lmi()
     q = ii()
     bit = BIT(a)
-    # print(bit)
     for i in range(q):
         l, r = mi()
         a = bit.query(l, r + 1)
