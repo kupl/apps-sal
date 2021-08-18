@@ -11,6 +11,5 @@ class Solution:
                 tv = dmap[j]
                 for t in tv:
                     dp[i][j] += dp[i - 1][t] % mod_val
-        # print(dp)
         ans = sum(dp[n]) % mod_val
         return ans

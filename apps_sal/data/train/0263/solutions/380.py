@@ -4,7 +4,6 @@ from collections import defaultdict
 class Solution:
     def knightDialer(self, n: int) -> int:
 
-        # the graph
         G = {1: [6, 8],
              2: [7, 9],
              3: [4, 8],
@@ -15,11 +14,6 @@ class Solution:
              8: [1, 3],
              9: [2, 4],
              0: [4, 6]}
-
-        # keys are 0,1,2....10
-        # values are dict
-        # .      keys are number of movement from this point
-        #       how many different combination exist
 
         dp = defaultdict(lambda: defaultdict(lambda: 0))
 

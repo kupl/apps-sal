@@ -24,9 +24,6 @@ class Solution:
         for i in range(2, n):
             for j in range(10):
                 valid = valid_moves[j]
-                # print (\"computing i: {0}, j:{1} with valid:{2}\".format(i, j, valid))
                 dp[i][j] = sum([dp[i - 1][r] for r in valid])
-        # print (dp)
-        # print (  sum(dp[n-1]) % (10**9+7))
 
         return sum(dp[n - 1]) % (10**9 + 7)

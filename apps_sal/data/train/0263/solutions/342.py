@@ -22,4 +22,3 @@ class Solution:
         for i in range(0, 10):
             count += self.helper(keys, n - 1, i, cache)
         return count % (10**9 + 7)
-        # def helper()

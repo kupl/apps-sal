@@ -7,8 +7,6 @@ class Solution:
             for j in range(10):
                 for m in moves[j]:
                     memonext[m] += memo[j]
-                    # print(memonext,m)
             for j in range(10):
                 memo[j] = memonext[j]
-            # print(memo)
         return sum(memo) % (10**9 + 7)

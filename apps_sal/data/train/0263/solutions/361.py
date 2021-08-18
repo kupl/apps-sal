@@ -21,6 +21,5 @@ class Solution:
         for i in range(10):
             ans += dfs(i, n - 1) % MOD
             ans = ans % MOD
-        #    print (\"i:{}, ans={}\".format(i,ans))
 
         return ans

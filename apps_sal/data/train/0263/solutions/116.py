@@ -3,7 +3,6 @@ class Solution:
         moves = [[4, 6], [6, 8], [7, 9], [4, 8], [3, 9, 0], [],
                  [1, 7, 0], [2, 6], [1, 3], [2, 4]]
 
-        # dp[i] denotes the number of combinations starting from i
         dp = [1] * 10
 
         for n in range(N - 1):

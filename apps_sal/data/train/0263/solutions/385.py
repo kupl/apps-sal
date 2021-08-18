@@ -5,8 +5,6 @@ class Solution:
         MOD = 10 ** 9 + 7
         g = [[4, 6], [6, 8], [7, 9], [4, 8], [0, 3, 9], [], [0, 1, 7], [2, 6], [1, 3], [2, 4]]
         dp = [[None] * 10 for _ in range(n + 1)]
-        # kd(n,start) = sum(kd(n-1,nxtstart) for nxtstart in g[start]))
-        # kd(1,start) = 1
 
         def kd(n, start):
             if n == 1:

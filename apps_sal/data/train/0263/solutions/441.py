@@ -5,10 +5,8 @@ class Solution:
     def knightDialer(self, n: int) -> int:
         @lru_cache(None)
         def dfs(i, j, k):
-            # base case
             if k == n - 1:
                 return 1
-            # recursion
             res = 0
             for di, dj in [(-2, -1), (-2, 1), (2, -1), (2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2)]:
                 ni, nj = i + di, j + dj

@@ -15,12 +15,10 @@ class Solution:
 
         memo = [[0] * 10 for i in range(n + 1)]
         memo[1] = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-        # print(memo)
 
         for i in range(2, n + 1):
             for key, val in list(d.items()):
                 for v in val:
                     memo[i][key] += memo[i - 1][v]
 
-        # print(memo[-3:-1])
         return sum(memo[-1]) % mod

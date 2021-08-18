@@ -13,7 +13,6 @@ class Solution:
                     for ele in d[i]:
                         dp[i][j] += dp[ele][j - 1]
                         dp[i][j] %= mod
-        # print(dp)
         ans = 0
         for i in range(10):
             ans += dp[i][n]

@@ -12,20 +12,3 @@ class Solution:
             curr_dial = next_dial
 
         return sum(curr_dial) % (10 ** 9 + 7)
-
-#         case = set()
-
-#         def dfs(curr = \"\", k = 0):
-#             if k == n:
-#                 case.add(curr)
-#                 return
-#             if k == 0:
-#                 for i in range(10):
-#                     dfs(curr + str(i), k+1)
-#             else:
-#                 for i in move[int(curr[-1])]:
-#                     dfs(curr + str(i), k+1)
-
-#         dfs()
-
-#         return len(case) % (10 ** 9 +7)

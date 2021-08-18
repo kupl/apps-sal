@@ -1,5 +1,3 @@
-# DFS solution
-# O(n) time and space
 class Solution:
     def knightDialer(self, N: int) -> int:
         steps = {
