@@ -12,5 +12,4 @@ class Solution:
             if t in d:
                 dp[i + 1] = max(dp[i + 1], dp[d[t] + 1] + 1)
             d[s] = i
-        # print(d)
         return dp[n]

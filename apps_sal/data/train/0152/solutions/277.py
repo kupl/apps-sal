@@ -21,5 +21,4 @@ class Solution:
                 lo = mi + 1
             else:
                 hi = mi - 1
-            # print(mi,check(mi))
         return ans

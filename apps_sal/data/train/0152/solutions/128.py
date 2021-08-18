@@ -3,8 +3,6 @@ class Solution:
         n = len(position)
         position.sort()
 
-        # Counts number of balls that can be placed into baskets if minimum distance is d
-        # Find maximum d where count(d) == m
         def count(d):
             ans, curr = 1, position[0]
             for i in range(1, n):

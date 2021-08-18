@@ -11,7 +11,6 @@ class Solution:
                 if p >= prev + mid:
                     prev = p
                     cnt += 1
-            # print(l, r, mid, cnt)
             if cnt < m:
                 r = mid
             else:

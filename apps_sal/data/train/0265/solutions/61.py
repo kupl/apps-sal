@@ -11,12 +11,9 @@ class Solution:
 
         d = {}
         ans = 0
-        # print(pref)
         for i in range(len(pref)):
-            #print(pref[i], d)
             if pref[i] - target in d:
                 ans += 1
-                # print(ans)
                 d.clear()
             d[pref[i]] = i
         return ans

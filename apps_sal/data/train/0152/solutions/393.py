@@ -20,7 +20,6 @@ class Solution:
 
                 if next_ball not in position_set:
 
-                    # search the next larger
                     next_idx = bisect.bisect_left(position, next_ball, next_idx, last_idx)
                     next_ball = position[next_idx]
                     if next_idx == last_idx:

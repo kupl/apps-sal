@@ -8,7 +8,6 @@ class Solution:
         position = sorted(position)
 
         def fea(D):
-            # print(\"   \",D)
             s = min(position)
             need = 1
             last = 1
@@ -21,7 +20,6 @@ class Solution:
                         break
                 if last == len(position) - 1 or position[-1] < s + D:
                     break
-            # print(\" \",need)
             return need
 
         print((fea(2)))

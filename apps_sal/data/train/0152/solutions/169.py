@@ -14,7 +14,6 @@ class Solution:
             return ans
 
         while lo < hi:
-            #mid= (lo+hi+1)//2
             mid = hi - (hi - lo) // 2
             res = count(mid)
             if res >= m:

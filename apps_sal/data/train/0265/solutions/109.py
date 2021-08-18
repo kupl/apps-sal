@@ -1,7 +1,6 @@
 class Solution:
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
 
-        # maintain a list of end indices
         hmap = collections.defaultdict(int)
         rsum = 0
         res = 0
@@ -13,9 +12,6 @@ class Solution:
             rsum += num
 
             csum = rsum - target
-
-            # if rsum == target:
-            #     res += 1
 
             if csum in hmap and hmap[csum] >= last:
                 res += 1

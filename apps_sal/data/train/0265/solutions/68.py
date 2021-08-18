@@ -13,7 +13,6 @@ class Solution:
             ne = total - target
             if ne in presum and presum[ne] < i:
                 rtv += 1
-                # print(\"{} {}\".format(presum[ne]+1, i))
 
                 presum = dict()
                 presum[0] = i

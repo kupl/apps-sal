@@ -29,7 +29,6 @@ class Solution:
         while left < right:
             mid = left + (right - left) // 2
             if check(mid):
-                # add to answer, check if can do better increase mid and look up in right part
                 left = mid + 1
             else:
                 right = mid

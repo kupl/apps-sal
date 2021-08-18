@@ -18,7 +18,6 @@ class Solution:
 
         while left < right:
             mid = left + (right - left) // 2
-            # print(mid, condition(mid))
             if condition(mid):
                 left = mid + 1
             else:
@@ -27,5 +26,4 @@ class Solution:
             return left
         else:
             return left - 1
-        # print(left)
         return left
