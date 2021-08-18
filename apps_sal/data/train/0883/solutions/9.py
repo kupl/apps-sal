@@ -26,7 +26,6 @@ for _ in range(t):
             aa.sort()
             if aa[1] - aa[0] == 1:
                 x = len([i for i in it if i == aa[0]])
-                #  y=len([i for i in it if i==aa[1]])
                 if x == aa[1]:
                     print(n - x)
                 else:

@@ -2,16 +2,16 @@ def escape(maze):
     h, w = len(maze), len(maze[0])
     maze = [list(row) for row in maze]
     i, j, face = find_self(maze)
-    maze[i][j] = '#'
+    maze[i][j] = '
     paths = [[i, j, face, []]]
     while paths:
         i, j, face, path = paths.pop(0)
         if i == 0 or i + 1 == h or j == 0 or j + 1 == w:
             return path
         for step, mi, mj, new_face in directions(i, j, face):
-            if maze[mi][mj] != '#':
-                paths.append([mi, mj, new_face, path + step])
-                maze[mi][mj] = '#'
+            if maze[mi][mj] != '
+            paths.append([mi, mj, new_face, path + step])
+            maze[mi][mj] = '
     return []
 
 

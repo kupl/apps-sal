@@ -1,4 +1,3 @@
-# cook your dish here
 def F(S):
     balance = 0
     max_balance = 0

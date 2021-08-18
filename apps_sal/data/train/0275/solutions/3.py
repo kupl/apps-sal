@@ -9,7 +9,6 @@ class Solution:
         count = {'(': 0, ')': 0, '*': 0}
         newS = []
         for i in s:
-            #count[i] += 1
             if i == ')':
                 if open > 0:
                     open -= 1

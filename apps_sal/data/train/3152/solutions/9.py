@@ -1,4 +1,4 @@
-def interpreter(tape, array):  # Tape is given as a string and array is given as a string.
+def interpreter(tape, array):
     stepArray = 0
     stepTape = 0
     arr = list(array)

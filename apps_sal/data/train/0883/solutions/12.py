@@ -23,5 +23,3 @@ for _ in range(t):
         print(x)
     else:
         print(-1)
-    # ans = max(s)
-    # print(n-ans)

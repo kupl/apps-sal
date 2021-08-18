@@ -12,7 +12,6 @@ class Solution:
             if b1 > n / 2 or b2 > n / 2:
                 return
             if idx == len(balls):
-                # times = fact[b1] / p1 * fact[b2] / p2
                 self.total += p * int(b1 == b2)
                 self.valid += p * int(b1 == b2) * int(c1 == c2)
             else:

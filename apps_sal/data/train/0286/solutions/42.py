@@ -3,22 +3,12 @@ from math import factorial
 
 class Solution:
     def getProbability(self, balls: List[int]) -> float:
-        # number of distinct arrangements where some balls are identical
-        # fact(sum(balls)) / fact(balls[0]) * fact(balls[1]) * .. * fact(balls[n - 1])
 
         n = len(balls)
         a = [0] * n
         b = balls[:]
 
         def perm(xs):
-            # result = 1
-            # j = 1
-            # for i in range(n):
-            #     for k in range(1, xs[i] + 1):
-            #         result = result * j / k
-            #         j += 1
-
-            # return result
 
             result = factorial(sum(xs))
             for x in xs:

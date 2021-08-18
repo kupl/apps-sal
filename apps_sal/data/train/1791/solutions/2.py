@@ -13,7 +13,6 @@ def escape(maze):
         for path in paths:
             r, c = path[-1]
 
-            # Have we escaped?
             if r * c == 0 or r == len(maze) - 1 or c == len(maze[0]) - 1:
                 moves = []
                 for p in [(b[0] - a[0], b[1] - a[1]) for a, b in zip(path, path[1:])]:
@@ -21,7 +20,6 @@ def escape(maze):
                     faces = p
                 return moves
 
-            # Are there any more moves to be made on this path?
             for p in {(r + 1, c), (r - 1, c), (r, c + 1), (r, c - 1)} & P:
                 newp.append(path + [p])
                 P.remove(p)
