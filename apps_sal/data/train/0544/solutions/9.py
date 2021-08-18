@@ -1,4 +1,3 @@
-# cook your dish here
 map_dict = {'0000': 'a',
             '0001': 'b',
             '0010': 'c',

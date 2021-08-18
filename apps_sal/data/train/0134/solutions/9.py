@@ -30,7 +30,5 @@ class Solution:
                             if (1 << dig) & used:
                                 continue
                             ret += dp(i + 1, True, True, used | (1 << dig))
-            # print(i, smaller, nonzero, bin(used), ret)
             return ret
-        # print(dp(0, False, False, 0))
         return n - dp(0, False, False, 0)

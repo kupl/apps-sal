@@ -1,4 +1,3 @@
-# cook your dish here
 def division(x, s):
     l = []
     for i in range(0, s, 4):

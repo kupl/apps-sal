@@ -8,4 +8,3 @@ def factorial(n):
         return 1
     if n > 0:
         return math.factorial(n)
-    # return None

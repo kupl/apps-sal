@@ -35,7 +35,6 @@ class Solution:
             return dp[dig][state]
 
         v = 0
-        # print(k)
         for d in range(1, 10):
             seen = set()
             if d < num[0]:
@@ -48,6 +47,4 @@ class Solution:
                 seen = set()
                 dp = [[0 for _ in range(2)] for _ in range(k + 1)]
                 v += count(dp, i + 1, 0, p, seen)
-            # print(v)
-        # print(dp[3][0])
         return N - v

@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     lst = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p']

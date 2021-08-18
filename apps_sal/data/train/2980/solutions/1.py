@@ -14,7 +14,6 @@ def number_of_div(n):
         factors.append(n)
 
     mu = 1
-    # print(factors)
     po = [i + 1 for i in list(Counter(factors).values())]
     for i in po:
         mu *= i

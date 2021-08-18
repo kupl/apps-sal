@@ -62,9 +62,9 @@ class Solution1:
             stack, dp = [-1], [0] * (n + 1)
             for j in range(n):
                 histogram[j] = 0 if mat[i][j] == 0 else histogram[j] + 1
-                while histogram[j] < histogram[stack[-1]]:  # increasing stack
+                while histogram[j] < histogram[stack[-1]]:
                     stack.pop()
-                dp[j] = dp[stack[-1]] + histogram[j] * (j - stack[-1])  # Important!!
+                dp[j] = dp[stack[-1]] + histogram[j] * (j - stack[-1])
                 stack.append(j)
             res += sum(dp)
         return res

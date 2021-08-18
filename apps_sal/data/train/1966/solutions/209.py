@@ -14,8 +14,6 @@ class Solution:
                         bound = y
                     y += 1
 
-                # bound is the boundary of col, if mat[a][b] == 0, means top-left cornor is 0, we won't have any
-                # submatrics with all 1's, so return directly
                 if bound == b:
                     return count
             return count
