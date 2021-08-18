@@ -20,7 +20,7 @@ class Solution:
                 return True
             if j < 0 or j >= m:
                 return True
-            return grid[i][j] == '#'
+            return grid[i][j] == '
 
         heap = [[heuristic(start_box), 0, start_person, start_box]]
         visited = set()

@@ -21,7 +21,6 @@ class Solution:
                         ans += 1
                     elif (l[3] == 0) & (l[4] == 0) & (l[5] == 0) & (l[6] == 0):
                         ans += 1
-                    # print(r[i],l)
                     l = [0 for i in range(10)]
                     l[r[i][1] - 1] = 1
         ans += (n - n_occ) * 2

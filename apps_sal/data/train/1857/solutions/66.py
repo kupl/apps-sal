@@ -33,6 +33,4 @@ class Solution:
                 if not right:
                     result -= 1
 
-            # print(\"\\tleft=%s middle=%s right=%s result=%s\" % (left,middle,right,result))
-
         return result

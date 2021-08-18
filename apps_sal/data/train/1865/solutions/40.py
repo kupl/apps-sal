@@ -36,9 +36,9 @@ class Solution:
                 return True
             for dx, dy in [(0, 1), (0, -1), (-1, 0), (1, 0)]:
                 i, j = si + dx, sj + dy
-                if (i, j) not in visited and 0 <= i < m and 0 <= j < n and (i, j) != (bi, bj) and grid[i][j] != '#':
-                    q.append((i, j))
-                    visited.add((i, j))
+                if (i, j) not in visited and 0 <= i < m and 0 <= j < n and (i, j) != (bi, bj) and grid[i][j] != '
+                q.append((i, j))
+                visited.add((i, j))
         return False
     '''
     def canMoveTo(self, grid, bi, bj, si, sj, si_new, sj_new, visited):
@@ -48,7 +48,7 @@ class Solution:
         visited.add((si, sj))
         for dx, dy in [(0, 1), (0, -1), (-1, 0), (1, 0)]:
             i, j = si+dx, sj+dy
-            if (i, j) not in visited and 0 <= i < m and 0 <= j < n and (i, j) != (bi, bj) and grid[i][j] != '#' and self.canMoveTo(grid, bi, bj, i, j, si_new, sj_new, visited):
+            if (i, j) not in visited and 0 <= i < m and 0 <= j < n and (i, j) != (bi, bj) and grid[i][j] != '
                 return True
         return False
         
@@ -58,7 +58,7 @@ class Solution:
             i, j = si+dx, sj+dy
             if (i, j) in validSet:
                 continue
-            if 0 <= i < m and 0 <= j < n and (i, j) != (bi, bj) and grid[i][j] != '#':
+            if 0 <= i < m and 0 <= j < n and (i, j) != (bi, bj) and grid[i][j] != '
                 validSet.add((i, j))
                 self.canMoveTo(grid, bi, bj, i, j, validSet)
         return validSet

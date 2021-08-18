@@ -2,32 +2,6 @@ from collections import defaultdict
 
 
 class Solution:
-    #     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
-    #         reservedSeats.sort()
-    #         n_res = len(reservedSeats)
-    #         ans = 2 * n
-    #         row, res_id = 0, 0
-
-    #         while res_id < n_res:
-    #             cur_row = reservedSeats[res_id][0]
-
-    #             rm = set()
-    #             while res_id < n_res and reservedSeats[res_id][0] == cur_row:
-    #                 j = reservedSeats[res_id][1]
-    #                 if j in (2, 3, 4, 5):
-    #                     rm.add(0)
-    #                 if j in (4, 5, 6, 7):
-    #                     rm.add(1)
-    #                 if j in (6, 7, 8, 9):
-    #                     rm.add(2)
-    #                 res_id += 1
-
-    #             if len(rm) == 3:
-    #                 ans -= 2
-    #             else:
-    #                 ans -= 1
-
-    #         return ans
 
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
         seats = defaultdict(set)

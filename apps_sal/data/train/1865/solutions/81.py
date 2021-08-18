@@ -45,7 +45,6 @@ class Solution:
                     queue.append((x - 1, y, count + 1, x + 1, y))
 
             if y + 1 < n and 0 <= y - 1 and grid[x][y - 1] == '.' and grid[x][y + 1] == '.':
-                # print(\"{}.{}\".format(x, y))
                 if (x, y - 1, x, y) not in visited and (x, y - 1) in ss:
                     visited.add((x, y - 1, x, y))
                     queue.append((x, y + 1, count + 1, x, y - 1))

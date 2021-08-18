@@ -6,8 +6,8 @@ class Solution:
             r, c = pos
             res = []
             for nr, nc in [[r + 1, c], [r, c + 1], [r - 1, c], [r, c - 1]]:
-                if 0 <= nr < R and 0 <= nc < C and grid[nr][nc] != '#':
-                    res.append((nr, nc))
+                if 0 <= nr < R and 0 <= nc < C and grid[nr][nc] != '
+                res.append((nr, nc))
             return res
 
         def connected(p, q, box):
@@ -38,7 +38,6 @@ class Solution:
         level = []
         seen = set()
         for pos in nxt(box):
-            # print(pos)
             if connected(pos, worker, box):
                 level.append((box, pos))
                 seen.add((box, pos))

@@ -12,22 +12,19 @@ class Solution:
                 if grid[i][j] == 'S':
                     S = (i, j)
 
-        #cost, B, S
         heap = [((0, B[0], B[1], S[0], S[1]))]
         heapq.heapify(heap)
-        # bi,bj,si,sj
         seen = set()
         while heap:
             c, bi, bj, si, sj = heapq.heappop(heap)
-            # print((bi,bj),(si,sj),c)
             if (bi, bj) == T:
                 return c
             if (bi, bj, si, sj) in seen:
                 continue
             seen.add((bi, bj, si, sj))
             for nsi, nsj in [(si + 1, sj), (si - 1, sj), (si, sj + 1), (si, sj - 1)]:
-                if 0 <= nsi < n and 0 <= nsj < m and grid[nsi][nsj] != '#':
-                    if (nsi, nsj) != (bi, bj) and (bi, bj, nsi, nsj) not in seen:
+                if 0 <= nsi < n and 0 <= nsj < m and grid[nsi][nsj] != '
+                   if (nsi, nsj) != (bi, bj) and (bi, bj, nsi, nsj) not in seen:
                         heapq.heappush(heap, (c, bi, bj, nsi, nsj))
                     elif (bi, bj) == (nsi, nsj):
                         nbi, nbj = nsi - (si - nsi), nsj - (sj - nsj)

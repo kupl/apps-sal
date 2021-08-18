@@ -10,8 +10,8 @@ class Solution:
                     player = (i, j)
                 if c == 'T':
                     target = (i, j)
-                if c == '#':
-                    self.empty[i][j] = '#'
+                if c == '
+                self.empty[i][j] = '
         visit = [[0 for _ in range(n)] for _ in range(m)]
         visit[start[0]][start[1]] += 1
         deq = collections.deque([(start, player, (-1, -1))])

@@ -10,9 +10,7 @@ watchMen = {}
 for i in range(n):
     watchman = tuple(map(int, input().split()))
     watchMen[watchman] = watchMen.get(watchman, 0) + 1
-    # print(watchMen[watchman])
     x2[watchman[0]] = x2.get(watchman[0], 0) + 1
-    # print(x2[watchman[0]])
     y2[watchman[1]] = y2.get(watchman[1], 0) + 1
 pairs = 0
 for i in watchMen.items():

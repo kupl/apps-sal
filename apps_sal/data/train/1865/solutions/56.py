@@ -24,14 +24,14 @@ class Solution:
                 return cost
             for a, b in nbs:
                 x, y = person[0] + a, person[1] + b
-                if 0 <= x < m and 0 <= y < n and A[x][y] != '#':
-                    n_person = (x, y)
-                    n_box = box
-                    n_cost = cost
-                    if n_person == box:
+                if 0 <= x < m and 0 <= y < n and A[x][y] != '
+                n_person = (x, y)
+                 n_box = box
+                  n_cost = cost
+                   if n_person == box:
                         n_box = (x + a, y + b)
                         n_cost += 1
-                    if 0 <= n_box[0] < m and 0 <= n_box[1] < n and A[n_box[0]][n_box[1]] != '#' and (n_person, n_box) not in seen:
-                        heappush(heap, [estimate(n_box) + n_cost, n_cost, n_person, n_box])
-                        seen.add((n_person, n_box))
+                    if 0 <= n_box[0] < m and 0 <= n_box[1] < n and A[n_box[0]][n_box[1]] != '
+                    heappush(heap, [estimate(n_box) + n_cost, n_cost, n_person, n_box])
+                     seen.add((n_person, n_box))
         return -1

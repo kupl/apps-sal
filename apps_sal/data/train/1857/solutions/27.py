@@ -22,7 +22,6 @@ class Solution:
                     if sum(lookup[k][3:7]) == 0 or sum(lookup[k][5:9]) == 0:
                         res += 1
                 else:
-                    #print(i, res)
                     if sum(lookup[k][1:5]) == 0:
                         res += 1
                         first = True
@@ -31,7 +30,6 @@ class Solution:
                         third = True
                     if not first and not third and sum(lookup[k][3:7]) == 0:
                         res += 1
-                    #print(i, res)
                 dic[data_tup] = res - prev
             else:
                 res += dic[data_tup]

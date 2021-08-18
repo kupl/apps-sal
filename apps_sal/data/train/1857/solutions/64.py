@@ -3,7 +3,7 @@ class Solution:
 
         d = {}
 
-        for r, c in reservedSeats:  # O(M)
+        for r, c in reservedSeats:
             if r not in d:
                 d[r] = [1, 1, 1]
 

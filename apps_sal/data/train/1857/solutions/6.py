@@ -1,7 +1,6 @@
 class Solution:
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
 
-        # fams = n*2
         res = {}
         for seat in reservedSeats:
             row, seat_n = seat
@@ -11,13 +10,13 @@ class Solution:
                 res[row] = [seat_n]
         fams = 0
         for row in list(res.keys()):
-            if len(res[row]) == 1:  # only one seat taken
+            if len(res[row]) == 1:
                 seat_n = res[row][0]
                 if seat_n in [1, 10]:
                     fams += 2
                 else:
                     fams += 1
-            else:  # multiple seats taken
+            else:
                 curr_row = [True for i in range(10)]
                 for s in res[row]:
                     curr_row[s - 1] = False
