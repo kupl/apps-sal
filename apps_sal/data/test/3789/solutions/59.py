@@ -1,4 +1,3 @@
-# Dinic's algorithm
 from collections import deque
 
 

@@ -14,8 +14,6 @@ n, k, q = MI()
 aa = LI()
 pp = list(sorted(set(aa)))
 
-# 最大-最小を返す
-
 
 def diff(p):
     can = []
@@ -41,13 +39,11 @@ def diff(p):
     return res
 
 
-# print(pp)
 ans = 10**16
 for p in pp:
     ret = diff(p)
     if ret == -1:
         break
-    # print(p,ret)
     ans = min(ans, ret)
 
 print(ans)

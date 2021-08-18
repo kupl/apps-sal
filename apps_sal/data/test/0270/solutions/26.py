@@ -10,10 +10,8 @@ for line in sys.stdin:
     links[s].add(t)
     counts[s] += 1
 
-# Expected number of edges passing from i to N
 expected = [0.] * n
 
-# i から伸びる辺を1本消すことで削減できる"iからNまでの辺数の期待値"の最大量
 reducible = [0.] * n
 
 for i in range(n - 2, -1, -1):
@@ -29,7 +27,6 @@ for i in range(n - 2, -1, -1):
     else:
         reducible[i] = 0.
 
-# Probability of visiting i when starting from 1
 probability = [0.] * n
 probability[0] = 1.
 

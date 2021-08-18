@@ -9,17 +9,12 @@ for _ in range(m):
 prob = [0] * N
 prob[0] = 1
 for n, dest in enumerate(passages):
-    # print(n,dest,'ndest')
     for d in dest:
         prob[d] += prob[n] / len(dest)
-# no blocking
 e = [0] * N
-# print(prob)
 for n, dest in list(enumerate(passages))[::-1]:
-    #print(dest,n,'n dess t')
     e[n] = sum(e[d] for d in dest) / len(dest) + 1
 min_e = e[0]
-# with blocking
 for n, dest in enumerate(passages):
     if len(dest) == 1:
         continue

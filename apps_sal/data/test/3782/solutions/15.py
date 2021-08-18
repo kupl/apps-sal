@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 
@@ -25,9 +24,7 @@ N, K, Q = MAP()
 A = LIST()
 
 ans = INF
-# 使う要素の最小値とする値xを全探索
 for x in A:
-    # 数列Aをx未満の値で区切った数列Bを作る
     B = []
     tmp = []
     for i in range(N):
@@ -37,14 +34,12 @@ for x in A:
             B.append(tmp)
             tmp = []
     B.append(tmp)
-    # 数列B内の各数列から、使える要素を集める
     C = []
     for li in B:
         m = len(li)
         if m - K + 1 >= 1:
             li.sort()
             C += li[:m - K + 1]
-    # 集めた要素からQ個をクエリで使うので、小さい方からQ番目が使う要素の最大値y
     C.sort()
     if len(C) < Q:
         continue

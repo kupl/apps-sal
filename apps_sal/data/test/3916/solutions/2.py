@@ -51,8 +51,6 @@ branched = 0
 frequency = [0] * (P + 1)
 while (max(BPD) > 0):
 
-    # Find the best prime divisors:
-
     for i in range(P + 1):
         frequency[i] = 0
 

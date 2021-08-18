@@ -15,8 +15,6 @@ def popcnt(n):
     return c
 
 
-# print(F)
-
 for i in range(1, num):
     temp = 0
     for j in range(n):

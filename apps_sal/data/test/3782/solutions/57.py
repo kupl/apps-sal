@@ -64,9 +64,6 @@ mod = 10 ** 9 + 7
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
 
-#############
-# Main Code #
-#############
 
 """
 数列A
@@ -121,9 +118,9 @@ for i in range(N):
     s = []
     opt = []
     for j in range(N):
-        if flag[j] == 1:  # しきりあれば　
+        if flag[j] == 1:
             s = []
-        else:  # しきりなければ
+        else:
             heappush(s, A[j])
             if len(s) >= K:
                 opt.append(heappop(s))
@@ -131,7 +128,6 @@ for i in range(N):
     opt.sort()
     if len(opt) >= Q:
         ans = min(ans, opt[Q - 1] - opt[0])
-    # 仕切りを立てる
     flag[point[i][1]] = 1
 
 print(ans)

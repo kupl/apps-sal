@@ -1,13 +1,8 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
-#   = input()
 n = int(input())
 
-#() = (i for i in input().split())
-#   = [i for i in input().split()]
 
 d1 = {}
 d2 = {}
@@ -38,4 +33,3 @@ for i in list(d2.keys()):
 
 print(ans)
 finish = time.time()
-#print(finish - start)

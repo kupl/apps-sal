@@ -22,7 +22,7 @@ t = inp()
 
 for _ in range(t):
     n = inp()
-    aa = inpl()  # RPS
+    aa = inpl()
     bb = input()
     ans = []
     for b in bb:
