@@ -1,7 +1,5 @@
 import math
 n = int(input())
-# 99-9
-# 999-99
 a = [9]
 for i in range(2, 20):
     a.append(10**i - 10**(i - 1))
@@ -13,10 +11,7 @@ for i in range(20):
         break
 p = b[i - 1]
 k = n - p
-# print(p,k)
 ans = 10**(i - 1) - 1 + math.ceil(k / (i))
-# print(k,p,i)
-# print(ans,i,k)
 if k % i == 0:
     print(('0' + str(ans))[i])
 else:

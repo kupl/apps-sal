@@ -1,6 +1,3 @@
-#!/c/Python34/python
-# coding: utf-8
-# Anser
 
 
 def main():

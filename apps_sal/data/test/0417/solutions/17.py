@@ -22,14 +22,12 @@ def solve():
     g[0] = [(0, 0)]
     for i in range(1, n + 1):
         c, y = divmod(x * i, d)
-        # print((c, y))
         f = (c + i * (i - 1) // 2, c + n * i - i * (i + 1) // 2)
         if y not in g:
             g[y] = list()
         g[y].append(f)
     for y in g:
         f = sorted(g[y])
-        # print(f)
         cx, cy = f[0]
         for nx, ny in f:
             if nx <= cy:

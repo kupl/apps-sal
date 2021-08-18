@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections import defaultdict
 
@@ -53,9 +52,9 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    X = int(next(tokens))  # type: int
-    D = int(next(tokens))  # type: int
+    N = int(next(tokens))
+    X = int(next(tokens))
+    D = int(next(tokens))
     solve(N, X, D)
 
 

@@ -1,4 +1,3 @@
-# C - Digits in Multiplication
 def main():
     n = int(input())
     ans = []
