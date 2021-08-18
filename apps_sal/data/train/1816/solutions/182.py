@@ -19,11 +19,6 @@ class Solution:
                     ans.append(name)
                     break
 
-            # for j in range(0,2301,100):
-            #     count = len([x for x in d[name] if x>=j and x<=j+100])
-            #     if count>=3:
-            #         ans.append(name)
-            #         break
         print(d)
 
         return sorted(ans)

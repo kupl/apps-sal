@@ -19,9 +19,3 @@ class Solution:
             else:
                 stack[-1][0] += ch
         return stack[0][0]
-
-
-# def decodeString(self, s):
-#     while '[' in s:
-#         s = re.sub(r'(\d+)\[([a-z]*)\]', lambda m: int(m.group(1)) * m.group(2), s)
-#     return s

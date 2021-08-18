@@ -1,4 +1,3 @@
-# cook your dish here
 def subCount(arr, n, k):
 
     mod = []

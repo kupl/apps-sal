@@ -23,7 +23,6 @@ class Solution:
         time_converted.sort()
 
         left = 0
-        # print(time_converted)
         for i in range(len(time_converted)):
             while time_converted[i] - time_converted[left] > 60:
                 left += 1

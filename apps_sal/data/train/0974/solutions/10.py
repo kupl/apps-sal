@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 p = int(input())
 while(p > 0):

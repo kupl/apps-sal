@@ -4,14 +4,11 @@ import collections
 
 def subarraysDivByK(A, K):
     d = collections.defaultdict(int)
-    # generate accum
     accum = [0, ] * len(A)
     for ai, a in enumerate(A):
         div = a % K if ai == 0 else (a + accum[ai - 1]) % K
         accum[ai] = div
         d[div] += 1
-    # count
-    # print(accum,d)
     ans = 0
     for k, v in list(d.items()):
         ans += v * (v - 1) // 2

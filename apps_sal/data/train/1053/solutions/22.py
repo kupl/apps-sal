@@ -25,10 +25,6 @@ for _ in range(int(input())):
     n = int(input())
     nn = list(map(int, input().split(" ")))
     nn = sorted(nn)
-    # res = 0
-    # for ele in nn:
-    #     res = (res << 1) | ele
-    # print(res)
 
     arr = nn
     n = len(arr)
