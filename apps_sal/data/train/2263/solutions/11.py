@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 import sys
 readline = sys.stdin.readline
 read = sys.stdin.read
@@ -41,9 +39,6 @@ def solve():
                     ndp[(i + k) % 3][k] += dp[i][j]
                     ndp[(i + k) % 3][k] %= MOD
         dp = ndp
-        # for c in dp:
-        #    print(3**(_+1) - sum(c), end = " ")
-        # print(dp)
 
     c = pow(3, n - 1, MOD)
     c -= sum(dp[v])
@@ -65,7 +60,6 @@ def check(n):
             if a[j] == a[j+1]: break
         else:
             continue
-        #print(a)
         if sum(a)%3==0:
             res += 1
     print(res)
@@ -91,7 +85,6 @@ def check2(a):
 
             
 check(5)
-#check2([0,1,2,0,1,2])
 
 
 """

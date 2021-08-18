@@ -7,8 +7,6 @@ def bin_search1(arr, x):
             e = m - 1
         else:
             s = m + 1
-        # print(s, e)
-    # print(s)
     return s
 
 
@@ -21,8 +19,6 @@ def bin_search2(arr, x):
             e = m - 1
         else:
             s = m + 1
-        # print(s, e)
-    # print(s)
     return s
 
 
@@ -47,22 +43,16 @@ for i in range(t):
             ind2 = i
             break
 
-    # print(ind1, ind2)
     arr1 = arr[:ind1 + 1]
     arr2 = arr[ind2:]
-
-    # print(arr1, arr2)
 
     count = len(arr1) + len(arr2)
     for i in range(len(arr1)):
         x = bin_search1(arr2, arr1[i])
-        # print(x)
         count += len(arr2) + 1 - x
 
-    # print(count)
     for i in range(len(arr2)):
         x = bin_search2(arr1, arr2[i])
-        # print(x)
         count += x + 1
 
     print(count // 2)

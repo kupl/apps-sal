@@ -1,4 +1,3 @@
-# cook your dish here
 sTot = 0
 for _ in range(int(input())):
     s, n, k, r = map(int, input().split())

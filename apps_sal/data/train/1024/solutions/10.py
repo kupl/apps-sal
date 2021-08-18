@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 extra = 0
 required = 0

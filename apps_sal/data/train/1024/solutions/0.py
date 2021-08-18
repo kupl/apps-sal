@@ -1,4 +1,3 @@
-# cook your dish here
 extra, less = 0, 0
 for _ in range(int(input())):
     sli, mem, sma, luc = list(map(int, input().split()))

@@ -1,29 +1,6 @@
 class Solution:
     def canReach(self, arr: List[int], start: int) -> bool:
 
-        #         n = len(arr);
-
-        #         visited = [False for _ in range(n)];
-
-        #         def helper(i):
-        #             if  i < 0 or i > n-1 or visited[i]:
-        #                 return False;
-        #             if arr[i] == 0:
-        #                 return True;
-
-        #             visited[i] = True;
-
-        #             right = helper(i+arr[i]);
-        #             left  = helper(i-arr[i]);
-
-        #             visited[i] = False;
-
-        #             if right or left:
-        #                 return True;
-        #             return False;
-
-        #         return helper(start);
-
         n = len(arr)
         if n == 0:
             return False

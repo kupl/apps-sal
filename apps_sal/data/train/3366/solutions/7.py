@@ -6,10 +6,8 @@ def sil(a):
 
 
 def nth_perm(n, d):
-    # tworzenie listy do permutacji
     lit = list(('0123456789')[:d])
     out = []
-    # iteracja pozycji
     for i in range(d):
         el = int((n - 1) / sil(d - 1))
         out.append(lit.pop(el))

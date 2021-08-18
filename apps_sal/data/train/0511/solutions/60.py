@@ -1,9 +1,6 @@
 import sys
 input = sys.stdin.readline
 
-#l = list(map(int, input().split()))
-#import numpy as np
-#arr = np.array([int(i) for i in input().split()])
 '''
 a,b=[],[]
 for i in range():

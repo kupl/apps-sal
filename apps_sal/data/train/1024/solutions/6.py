@@ -1,4 +1,3 @@
-# cook your dish here
 from math import pow
 check_possible = 0
 for _ in range(int(input())):

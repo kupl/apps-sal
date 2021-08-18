@@ -10,7 +10,6 @@ def solve(s):
             return 7
         else:
             return 3
-    # dp[has succession][mod 3][last char]
     dp = [[[0] * 3 for _ in range(3)] for _ in range(2)]
     dp[0][0][0] = 1
     dp[0][1][1] = 1
