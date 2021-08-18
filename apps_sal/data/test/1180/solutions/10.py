@@ -30,5 +30,3 @@ else:
         s = (s * 10 + i) % d
 
 print(s)
-
-# GG

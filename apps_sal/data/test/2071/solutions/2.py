@@ -21,15 +21,11 @@ def main():
     bestres = 0
     sofar = 0
 
-    # for u, d in zip(roundup, rounddown):
-    # 	print(u, d, '-')
-
     for i, (a, b) in enumerate(zip(A, B)):
         rup, rdo = roundup, rounddown
         if i % 2:
             a, b = b, a
             rup, rdo = rdo, rup
-        # print(i, sofar + rup[i])
         bestres = max(bestres, sofar + rup[i] + sumsofar[i] * 2 * i)
         sofar += a * 2 * i
         sofar += b * (2 * i + 1)

@@ -20,7 +20,6 @@ for y in range(t):
                 key = 1
                 break
         if(key == 1):
-            # print(a[i])
             for j in range(4):
                 b = a[i][::]
                 flag = 0

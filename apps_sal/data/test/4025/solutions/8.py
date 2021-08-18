@@ -10,7 +10,6 @@ a -= week * 3
 b -= week * 2
 c -= week * 2
 
-# Do simulation
 max_day = 0
 
 for i in range(7):

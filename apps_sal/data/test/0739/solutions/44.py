@@ -1,7 +1,6 @@
 import numpy as np
 import sys
 sys.setrecursionlimit(pow(10, 6))
-# input = sys.stdin.readline
 
 
 def pow_matmul(r, n, m):

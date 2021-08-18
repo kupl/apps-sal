@@ -6,7 +6,6 @@ for i in range(10):
 
 def next_squares(x, y):
     current_dir = 1 if x % 2 else -1
-    # print(x, y, current_dir)
     res = []
     for _ in range(6):
         nx, ny = x, y + current_dir
@@ -17,7 +16,6 @@ def next_squares(x, y):
                 break
         x, y = nx, ny
         res.append([x, y])
-    # print(x, y, res)
     return res
 
 
@@ -29,7 +27,6 @@ def dp(i, j, can_climb):
     for x, y in next_squares(i, j):
         expected.append(dp(x, y, True))
     score = sum(expected) / len(expected) + (6 / len(expected))
-    # print(i, j)
     if can_climb and board[i][j]:
         return min(score, dp(i - board[i][j], j, False))
     return score

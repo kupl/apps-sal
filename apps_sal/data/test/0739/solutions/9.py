@@ -128,7 +128,7 @@ class SquareMatrix():
                 res.mat[i][j] = self.mat[j][i]
         return res
 
-    def inverse(self):  # self.determinant() != 0
+    def inverse(self):
         res = SquareMatrix.id(self.n, self.mod)
         tmp = SquareMatrix(self.n, self.mod)
         sgn = 1

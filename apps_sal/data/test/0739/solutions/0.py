@@ -6,7 +6,7 @@ stdin = sys.stdin
 
 def ni(): return int(ns())
 def na(): return list(map(int, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+def ns(): return stdin.readline().rstrip()
 
 
 L, A, B, mod = na()
@@ -52,12 +52,6 @@ def mul(A, B, mod):
     return ret
 
 
-# x = x * high + val
-# val += B
-# (high 1 0)
-# (0 1 1)
-# (0 0 1)
-
 v = [0, A, B]
 ra = A
 
@@ -65,7 +59,6 @@ while low < 1e18:
     mat = [[high % mod, 1, 0], [0, 1, 1], [0, 0, 1]]
     step = max(0, min(L, (high - ra + B - 1) // B))
     v = matpow(mat, v, step, mod)
-    # print(low, high, step, ra + B*step, v)
     ra = ra + B * step
     L -= step
 

@@ -19,7 +19,6 @@ if True:
         c = c % 2
         a -= nn * 3
         b -= nn * 2
-# print(a,b,c)
 st = (aa + bb + cc) - (a + b + c)
 for i in range(7):
     mm = [a, b, c]

@@ -23,13 +23,11 @@ for i in range(n):
 ans = value[1][0]
 count = 0
 s = 0
-# print(value)
 for i in range(n):
     if i % 2 == 0:
         s += a[0][i] * (2 * i) + a[1][i] * (2 * i + 1)
     else:
         s += a[1][i] * (2 * i) + a[0][i] * (2 * i + 1)
     ans = max(ans, s + value[i % 2][(i + 1)])
-  #  print(s + value[i % 2][(i + 1)])
 
 print(ans)

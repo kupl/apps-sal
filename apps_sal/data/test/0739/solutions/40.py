@@ -8,11 +8,6 @@ def mul(m1, m2):
             m[i][j] = sum(m1[i][k] * m2[k][j] for k in range(3)) % mod
     return m
 
-# mat = [[1, 0, 0],
-#        [0, 1, 0],
-#        [0, 0, 1]]
-# vec = (0, a, 1)
-
 
 mat = [[0, 0, 0],
        [a, 0, 0],
@@ -34,5 +29,4 @@ while e >= d:
         bit = mul(bit, bit)
         t //= 2
 
-# print((mat[0][0] * vec[0] + mat[0][1] * vec[1] + mat[0][2] * vec[2]) % mod)
 print(mat[0][0])

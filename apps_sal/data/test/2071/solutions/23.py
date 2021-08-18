@@ -16,7 +16,6 @@ for i in range(n):
     q2[i + n] = u1[n - i - 1] * (n + i) + q2[i + n - 1]
 ans = q1[-1]
 cur = 0
-# print(ans)
 for i in range(n):
     ans1 = (a1[-1] - a1[i] + a2[-1] - a2[i]) * (i + 1)
     if i % 2 == 0:
@@ -28,7 +27,6 @@ for i in range(n):
         cur += u1[i] * (i * 2 + 1)
         ans1 += (q1[n * 2 - i - 2] - q1[i]) + cur
     ans = max(ans, ans1)
-    #print(ans1, cur)
 print(ans)
 '''
 3

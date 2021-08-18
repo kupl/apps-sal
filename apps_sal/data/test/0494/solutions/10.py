@@ -19,10 +19,8 @@ for i in range(len(leaders) - 1):
         break
 
 if not possible:
-    # print(a_n)
     print(-1)
 else:
-    # print('a_n is : {}'.format(a_n))
     for i in range(len(a_n)):
         if a_n[i] is 0:
             if len(not_there_set) <= 0:

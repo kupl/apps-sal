@@ -14,5 +14,4 @@ def dfs_input(G, m):
         G[b].append(a)
 
 
-###################################
 print(len(set(lint())))

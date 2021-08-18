@@ -24,7 +24,6 @@ for i in range(7):
         d = (d + 1) % 7
         cnt += 1
     cnt -= 1
-    # print(cnt)
     m = max(m, cnt)
     cnt = 0
 

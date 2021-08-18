@@ -1,4 +1,3 @@
-# C. Two TVs
 n = int(input())
 
 events = []
