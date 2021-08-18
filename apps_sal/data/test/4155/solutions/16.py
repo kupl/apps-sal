@@ -1,4 +1,3 @@
-# Nがちいさいので愚直にやってもいいね
 n = int(input())
 h = list(map(int, input().split()))
 s = sum(h)

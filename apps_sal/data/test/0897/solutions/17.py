@@ -1,5 +1,3 @@
-# a and m must be coprime!
-# returns x such that xa = 1 mod m
 def modinverse(a, m):
     m0 = m
     y = 0
@@ -23,7 +21,6 @@ def modinverse(a, m):
         x += m0
 
     return x
-# runs in log(m)
 
 
 M = (10 ** 9) + 7

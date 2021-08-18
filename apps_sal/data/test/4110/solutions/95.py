@@ -14,7 +14,6 @@ for bit in range(1 << d):
             count += pc[i][0]
             nokori.discard(i + 1)
 
-    # G 点に満たなければ nokori のうち一番大きいものを解く
     if sum < g:
         use = max(nokori)
         n = min(pc[use - 1][0], -(-(g - sum) // (use * 100)))

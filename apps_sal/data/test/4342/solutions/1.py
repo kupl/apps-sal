@@ -1,7 +1,6 @@
 import sys
 from collections import defaultdict
 n = int(input())
-#n,k = [int(__) for __ in raw_input().split()]
 arr = [int(__) for __ in input().split()]
 sactive = set()
 sactive.add(0)
@@ -80,8 +79,3 @@ if len(sactive1 & sactive2) > 0:
     print(0)
 else:
     print(len(sactive) - len(sactive1) - len(sactive2) + 1)
-# print(nums)
-# print('both',sactive)
-# print('1',sactive1)
-# print('2',sactive2)
-# print(d)

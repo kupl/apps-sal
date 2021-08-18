@@ -13,6 +13,3 @@ for i in range(n - 2, -1, -1):
     ma[i] = max(ma[i + 1] - 1, ma[i])
 
 print(sum(ma) - sum(a) - n)
-
-
-# Made By Mostafa_Khaled

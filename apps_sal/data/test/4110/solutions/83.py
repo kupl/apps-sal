@@ -18,7 +18,7 @@ for i in range(2**d):
         if x[j] == 1:
             po += 100 * (j + 1) * p[j] + c[j]
             m += p[j]
-    q = [[] for j in range(d)]  # 残りp、c
+    q = [[] for j in range(d)]
     s = 0
     for j in range(d):
         if x[j] == 0:

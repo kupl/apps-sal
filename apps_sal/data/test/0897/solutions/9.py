@@ -27,7 +27,6 @@ class RN:
         return (self.u * u) % p, (self.d * d) % p
 
     def mult_ip(self, u, d):
-        # r.cleanup()
         self.u, self.d = self.u * u, (self.d * d) % p
 
     def get_m_exp(self):
@@ -36,7 +35,6 @@ class RN:
         self.u //= a
         self.d //= a
 
-        # print(str(self))
         return ((pow(self.d, p - 2, p)) * self.u) % p
 
 
@@ -80,15 +78,15 @@ def sol(s1, s2, m):
 
 
 '''
-a = sol([0,0],[1,1], 2) # 3/4
+a = sol([0,0],[1,1], 2) 
 
-a = sol([0,0,0],[1,1,1], 2) # 7/8
-a = sol([0,1,1],[1,1,1], 2) # 1/2
-a = sol([1,0,1],[1,1,1], 2) # 1/2
+a = sol([0,0,0],[1,1,1], 2) 
+a = sol([0,1,1],[1,1,1], 2) 
+a = sol([1,0,1],[1,1,1], 2) 
 
-a = sol([0,0,0],[1,3,3], 3) # 2/2
-a = sol([0,0,0],[1,1,0], 2) # 5/8
-a = sol([0,0,0],[0,0,0], 2) # 13/16
+a = sol([0,0,0],[1,3,3], 3) 
+a = sol([0,0,0],[1,1,0], 2) 
+a = sol([0,0,0],[0,0,0], 2) 
 '''
 
 print(sol(s1, s2, m))

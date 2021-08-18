@@ -7,7 +7,6 @@ ans = float("inf")
 for bit in range(1 << d):
     sum = 0
     cnt = 0
-    # 残ってるやつのmaxのインデックス取得するためsetを設定
     nokori = set(range(1, d + 1))
     for i in range(d):
         if bit & (1 << i):

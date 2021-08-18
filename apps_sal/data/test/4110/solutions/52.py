@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 from itertools import product
 
 ans = 10**9

@@ -24,7 +24,6 @@ class UnionFind():
 
 
 n = int(input())
-#d = [[[] for _ in range(4)] for _ in range(4)]
 d = [[] for _ in range(4)]
 uf = UnionFind(4)
 CVC = [list(map(int, input().split())) for _ in range(n)]
@@ -33,8 +32,6 @@ min_not_auto = float("inf")
 for i in range(n):
     cvc = CVC[i]
     vals.append(cvc[1])
-    #d[cvc[0] - 1][cvc[2] - 1] = cvc[1]
-    #d[cvc[2] - 1][cvc[0] - 1] = cvc[1]
     d[cvc[0] - 1].append(cvc[1])
     d[cvc[2] - 1].append(cvc[1])
     if cvc[0] != cvc[2] and cvc[1] < min_not_auto:

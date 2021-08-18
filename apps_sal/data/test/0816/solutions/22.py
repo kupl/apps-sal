@@ -68,7 +68,6 @@ class IntReader:
         return res
 
 
-###############################################################################
 ej = EJudge()
 int_reader = IntReader()
 def fmap(f, l): return list(map(f, l))
@@ -78,7 +77,6 @@ def parse_int(): return fmap(int, input().split())
 def sign(x): return (x > 0) - (x < 0)
 
 
-# input
 n, x = parse_int()
 st = [0] * 100500
 xored = [0] * 100500

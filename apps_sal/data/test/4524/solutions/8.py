@@ -9,8 +9,6 @@ elif m > n:
     addition = ''.join(["0"] * (m - n))
     a = addition + a
 
-# print(a)
-# print(b)
 
 l = max(m, n)
 count_bigger = [0] * l

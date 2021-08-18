@@ -16,5 +16,4 @@ for digs in range(2, mx):
                 d[(digs, sm)].append(curr * pw + num)
 
 perfects = sorted(d[(mx - 1, 10)])
-# print(len(perfects))
 print(perfects[k - 1])

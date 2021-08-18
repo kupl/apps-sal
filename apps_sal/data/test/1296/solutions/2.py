@@ -22,7 +22,6 @@ maxgood = -1
 
 while lo < hi:
     mid = (lo + hi) // 2
-    #print("\nl m h", lo, mid, hi)
     temp = tr(mid)
     d[mid] = temp
     if temp is not None:
@@ -30,7 +29,6 @@ while lo < hi:
         maxgood = max(maxgood, mid)
     else:
         hi = mid
-    #print("new l m h", lo, mid, hi, "\n")
 
 temp = tr(hi)
 d[hi] = temp

@@ -8,7 +8,6 @@ for _ in range(d):
     p.append(i)
     c.append(j // 100)
 
-# full search about complete bonuses
 ans = sum(p)
 for tf in product([True, False], repeat=d):
     score = 0

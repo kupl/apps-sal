@@ -45,7 +45,6 @@ for i in range(0, n):
         else:
             dp[0][i] = dp[0][i - 1] % mod
             dp[1][i] = dp[1][i - 1] % mod
-    #print(dp[0][i], dp[1][i])
 
 p = dp[1][n - 1]
 q = base

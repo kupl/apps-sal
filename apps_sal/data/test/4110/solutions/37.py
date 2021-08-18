@@ -46,6 +46,4 @@ for i in range(2**d):
                         break
                     else:
                         break
-    # print(kari,nkanli,karimon)
-# print(numli)
 print(min(numli))

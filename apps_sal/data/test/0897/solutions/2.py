@@ -38,7 +38,6 @@ for x, y in zip(a1, a2):
         break
 a.reverse()
 
-# print(a)
 
 P, Q = 0, 1
 for c, ce, mc in a:
