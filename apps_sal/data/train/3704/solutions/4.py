@@ -1,7 +1,5 @@
 from itertools import count
 
-# Brute force: the solution to all your problems
-
 
 def solve_for_x(equation):
     equation = equation.replace('=', '==')

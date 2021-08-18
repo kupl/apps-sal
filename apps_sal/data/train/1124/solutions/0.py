@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n, p, q = list(map(int, input().split(" ")))

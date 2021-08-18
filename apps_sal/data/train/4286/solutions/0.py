@@ -8,7 +8,6 @@ def solve(n):
             if p % x == 0:
                 return False
         return True
-        # return not any([p%x==0 for x in range(3,int(p**.5))])
 
     if is_prime(n):
         return n

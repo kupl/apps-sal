@@ -1,7 +1,6 @@
 class Solution:
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         res = 0
-        # type1
         d1 = collections.defaultdict(int)
         l1 = [i**2 for i in nums1]
         for i in range(len(nums2)):

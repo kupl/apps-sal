@@ -14,7 +14,5 @@ class Solution:
             d = collections.defaultdict(list)
             for j in range(len(nums)):
                 if target % nums[j] == 0 and int(target / nums[j]) in d:
-                    # print(target,nums[j],d[nums[j]])
                     self.cnt += len(d[target / nums[j]])
                 d[nums[j]].append(j)
-                # print(target,d)
