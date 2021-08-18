@@ -5,7 +5,6 @@ class Solution:
         :type k: int
         :rtype: str
         """
-        # l = s.split()
         r = []
         k_str = ''
         for i in range(len(s)):

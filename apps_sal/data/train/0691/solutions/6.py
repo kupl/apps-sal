@@ -8,7 +8,6 @@ for u in range(int(input())):
         for j in range(i):
             if x[j] % x[i] == 0:
                 c += 1
-        # print(c)
         ans = max(ans, c)
 
     print(ans)

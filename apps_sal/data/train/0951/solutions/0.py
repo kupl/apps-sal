@@ -41,7 +41,6 @@ for _ in range(int(input())):
             good = val(i)
             yes.append(i)
             break
-    #yes.sort(key = lambda x: len(x))
     print(" ".join([str(b.index(i) + 1) for i in yes[0]]))
     x = round(av(yes[0]) - perimeter(diff(b, yes[0])), 2)
     print(f'{x:.2f}')

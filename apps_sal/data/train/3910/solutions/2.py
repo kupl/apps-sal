@@ -16,7 +16,6 @@ def operator_insertor(n):
         return None
     else:
         return bestsofar
-    # your code here
 def genstr(y):
     a=list("123456789")
     b=list(tc(y))

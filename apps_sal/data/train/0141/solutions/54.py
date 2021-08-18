@@ -10,8 +10,6 @@ class Solution:
             if people[i] + people[j] <= limit:
                 i += 1
             j -= 1
-            # else:
-            #     j -= 1
 
             boats += 1
 

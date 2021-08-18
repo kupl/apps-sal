@@ -1,12 +1,9 @@
 def differentiate(equation, point):
-    # This can almost certainly be done waaaaay better with regex ...
 
-    # Where are all the signs between terms?
     signs = [i for i in range(len(equation)) if equation[i] in "+-"]
     if not 0 in signs:
         signs = [0] + signs
 
-    # Parse the coefficients and powers (all assumed integers)
     coeffs = []
     powers = []
     for i in range(len(signs)):
