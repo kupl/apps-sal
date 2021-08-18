@@ -46,7 +46,7 @@ for x in s:
         cnt_1 += 1
 
 ans = 0
-for i in range(1, n // cnt_0 + 1):  # length of r_0
+for i in range(1, n // cnt_0 + 1):
     j = n - cnt_0 * i
     if j % cnt_1 == 0 and j != 0:
         j //= cnt_1

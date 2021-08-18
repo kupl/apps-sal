@@ -47,4 +47,3 @@ if(flag and ans != -1):
     print('Yes')
 else:
     print('No')
-# 1523803863385

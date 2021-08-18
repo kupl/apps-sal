@@ -2,15 +2,13 @@ N, K = map(int, input().split())
 P = list(map(int, input().split()))
 _c = list(map(int, input().split()))
 
-# Cを書き換える
 C = [0] * N
 for i in range(N):
     P[i] -= 1
     C[i] = _c[P[i]]
 
-m = 31  # bit数
+m = 31
 
-# ダブリング
 vertex = list()
 score = list()
 vertex.append(P)
@@ -24,7 +22,6 @@ for b in range(1, m + 1):
     vertex.append(p_bth)
     score.append(c_bth)
 
-# 桁DP
 MIN = -(1 << 63)
 prv = [[MIN, 0] for _ in range(N)]
 nxt = [[MIN, MIN] for _ in range(N)]

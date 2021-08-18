@@ -30,7 +30,6 @@ while True:
         r += 1
 
     ans = max(ans, r - l - 1)
-    #print(l,r, S[l:r], S[r:], ans)
     l += 1
     if l == r:
         r = l + 1

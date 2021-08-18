@@ -35,7 +35,6 @@ def get(K, cycle):
 
 
 def solve():
-    # square labelled from 1 to N
     N, K = it()
     P = it()
     C = it()
@@ -57,7 +56,6 @@ def solve():
                     break
             cycles.append(cycle)
 
-    # print(cycles)
     ans = float('-inf')
     for cycle in cycles:
         ans = max(ans, get(K, cycle))

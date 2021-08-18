@@ -10,13 +10,13 @@ def main():
     for i in range(n):
         start, count = i, 1
         val = c[start]
-        while p[start] - 1 != i:  # ループ部分
+        while p[start] - 1 != i:
             start = p[start] - 1
             count += 1
             val += c[start]
         start = i
         if val > 0:
-            a = (k // count - 1) * val  # 一周目はループのどの部分から始めるのが最適かわからないので
+            a = (k // count - 1) * val
             ans = max(a, ans)
             num = count + k % count
         else:

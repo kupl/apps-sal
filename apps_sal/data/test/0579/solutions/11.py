@@ -23,7 +23,6 @@ def calcweight_tree(N_vertices, edges, times, inf):
                 dest = edges[left][1]
                 cost = edges[dest][0]
                 if(passed[dest] == False):
-                    #passed[left] = True
                     passed[dest] = True
                     cost_sum += cost
                     costs.append(cost_sum)
@@ -34,7 +33,6 @@ def calcweight_tree(N_vertices, edges, times, inf):
                     period = len(costs)
                     increase_period = cost_sum
                     break
-            # 2 period項準備
             remainder = times % period
             cost_minus = [0]
             for j in range(period - 1):
@@ -58,10 +56,8 @@ def calcweight_tree(N_vertices, edges, times, inf):
                         maxindex_start = st
                 """
                 costs_last = []
-                # a_0は0なので。そしてこれは最大値を考えるときには数えないので
                 remainder2 = remainder % period
 
-                #print("x", costs, increase_period, remainder2)
                 """
                 for j in range(remainder2, period):
                     costs_last.append(costs[j])
@@ -75,7 +71,6 @@ def calcweight_tree(N_vertices, edges, times, inf):
                 for j in range(period):
                     costs_last.append(costs_last[j] + increase_period)
                 maxvalue = -inf
-                #print(costs_last, cost_minus)
                 for j in range(period):
                     maxvalue_candidate = max(costs_last[j:j + period])
                     if(maxvalue_candidate - cost_minus[j] > maxvalue):
@@ -84,11 +79,9 @@ def calcweight_tree(N_vertices, edges, times, inf):
                 travel_max = max(maxvalue, travel_max)
             else:
                 costs_last = []
-                # a_0は0なので。そしてこれは最大値を考えるときには数えないので
                 remainder2 = remainder % period
                 times_period = times // period - 1
                 add_n = times_period * increase_period
-                #print(costs, increase_period, remainder2, times_period, add_n)
                 for j in range(remainder2, period):
                     costs_last.append(costs[j] + add_n)
                 for j in range(0, remainder2):
@@ -96,7 +89,6 @@ def calcweight_tree(N_vertices, edges, times, inf):
                 for j in range(period):
                     costs_last.append(costs_last[j] + increase_period)
                 maxvalue = -inf
-                #print(costs_last, cost_minus)
                 for j in range(period):
                     maxvalue_candidate = max(costs_last[j:j + period])
                     if(maxvalue_candidate - cost_minus[j] > maxvalue):
@@ -113,7 +105,7 @@ def __starting_point():
 
     edges = [ [] for _ in range(N+2) ]
     for i in range(N):
-        edges[0].append([0, i]) #[cost, edge]
+        edges[0].append([0, i]) 
     for i in range(1, N+1):
         edges[i].append([0, N+1])
     for i in range(N):
@@ -132,8 +124,6 @@ def __starting_point():
         edges3.append([CList[i], PList[i] - 1])
 
     weight = calcweight_tree(N_vertices, edges3, K, inf)
-
-    #weight= calcweight_bellman_ford(N_vertices, 0, edges3, K+2, cost, inf)
 
     print(weight)
 

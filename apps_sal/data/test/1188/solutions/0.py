@@ -79,6 +79,3 @@ for l in range(maxk):
 if not was:
 
     print(-1)
-
-
-# Made By Mostafa_Khaled

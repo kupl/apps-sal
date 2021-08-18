@@ -2,7 +2,6 @@ a = int(input())
 b = int(input())
 c = int(input())
 d = int(input())
-# print(a,b,c,d)
 x1 = a ^ b
 x2 = c | d
 x3 = b & c

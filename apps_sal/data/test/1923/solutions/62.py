@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 sys.setrecursionlimit(10**9)
 INF = 10**18

@@ -17,7 +17,6 @@ class RollingHash(object):
             self.HASH[i + 1] = h = (h * BASE + self.S_arr[i]) % MOD
 
     def hash(self, l: int, r: int):
-        # get hash for S[l:r]
         _hash = (self.HASH[r] - self.HASH[l] * self.POWER[r - l]) % self.MOD
         return _hash
 
@@ -38,9 +37,6 @@ def main():
         L = mid
         for i in range(N - L + 1):
             _hash = (h[i + L] - h[i] * p[L]) % MOD
-            # hashが衝突しても文字列が完全に一致するか分からないので、
-            # 衝突した場合は文字列が完全に一致するか調べ、かつ
-            # 文字列同士がSの中で重なるような範囲にない場合はOKとする
             for j in hash_to_left[_hash]:
                 if j + L <= i and S[i:i + L] == S[j:j + L]:
                     ok = True
@@ -55,28 +51,6 @@ def main():
             right = mid
 
     print(left)
-    # # 長さLの部分文字列同士が、範囲を重ねず同じ文字列となる場合はTrue,
-    # # そうでない場合はFalseを返す関数
-    # def isOK(L):
-    #     if L == 0:
-    #         return True
-    #     hash_to_left = defaultdict(list)
-    #     for i in range(N - L + 1):
-    #         _hash = rs.hash(i, i + L)
-    #         # hashが衝突しても文字列が完全に一致するか分からないので、
-    #         # 衝突した場合は文字列が完全に一致するか調べ、かつ
-    #         # 文字列同士がSの中で重なるような範囲にない場合はOKとする
-    #         for j in hash_to_left[_hash]:
-    #             if j+L <= i and S[i:i+L] == S[j:j+L]:
-    #                 return True
-    #         hash_to_left[_hash].append(i)
-
-    #     return False
-    # # 範囲が重ならないことが条件にあるので、答えは最大でもN // 2（文字列の長さの半分）となる。
-    # # ただし、二分探索する上で絶対に答えとならない範囲を含めたいので、
-    # # 探索範囲としてはN // 2 + 1 と、+1しておく。
-    # ans = binary_search(0, N // 2 + 1, isOK, search_max=True)
-    # print(ans)
 
 
 def __starting_point():

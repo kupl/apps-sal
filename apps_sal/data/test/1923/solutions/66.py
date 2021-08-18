@@ -1,4 +1,3 @@
-# https://atcoder.jp/contests/agc001/tasks/agc001_a
 
 n = int(input())
 l = list(map(int, input().split()))
