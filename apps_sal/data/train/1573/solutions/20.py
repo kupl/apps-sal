@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -13,10 +12,7 @@ for _ in range(t):
         for r in range(n):
             c_pos = s_pos
             for c in range(win):
-                #print(f'Row : {r}, Col : {c_pos}')
                 matches[r][c_pos] = '1'
-                # print(matches[r][c_pos])
-                # print(matches)
                 c_pos = (c_pos + 1) % n
 
             s_pos = (s_pos + 1) % n

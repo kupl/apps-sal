@@ -6,10 +6,8 @@ class Dog ():
         return "Woof"
 
 
-# Instantiate two Dog Objects
 snoopy = Dog("Beagle")
 scoobydoo = Dog("Great Dane")
 
-# Call bark() method
 snoopy.bark()
 scoobydoo.bark()

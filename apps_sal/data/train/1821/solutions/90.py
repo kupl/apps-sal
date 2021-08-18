@@ -1,9 +1,7 @@
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
-        # MergeSort
         def merge(nums, lo, hi):
             mid = (lo + hi) // 2
-            # [lo, mid] and [mid+1, hi] are already sorted
             i, j = lo, mid + 1
             sortedNums = []
             while i <= mid and j <= hi:
@@ -31,7 +29,6 @@ class Solution:
 
             mergeSort(nums, lo, mid)
             mergeSort(nums, mid + 1, hi)
-            # Both left and right portions are sorted
             merge(nums, lo, hi)
 
         mergeSort(nums, 0, len(nums) - 1)

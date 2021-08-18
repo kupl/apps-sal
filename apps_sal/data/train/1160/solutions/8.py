@@ -10,7 +10,7 @@ def calc(h, m, f):
             u, v = i + 1, i
         if f:
             u, v = v, u
-        H, M = h[u] - h[v], m[v] - m[u]  # M * t < H
+        H, M = h[u] - h[v], m[v] - m[u]
         if M > 0:
             r = min(int(math.floor(1.0 * H / M - 1e-12)), r)
         elif M < 0:

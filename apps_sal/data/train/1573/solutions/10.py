@@ -1,4 +1,3 @@
-# cook your dish here
 
 arr = [[0 for i in range(101)] for i in range(101)]
 for i in range(1, 100):
