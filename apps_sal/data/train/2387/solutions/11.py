@@ -15,7 +15,6 @@ def case():
         back = spend // 10
         s -= spend
         s += back
-        # print(spend, back, s)
     print(ans)
 
 

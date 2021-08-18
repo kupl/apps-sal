@@ -8,6 +8,5 @@ class Solution:
 
         for i in range(n):
             res = (res + A[i] * c - A[n - i - 1] * c) % M
-            # print(res)
             c = (c << 1) % M
         return res

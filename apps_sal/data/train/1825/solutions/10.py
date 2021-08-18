@@ -1,9 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def lcaDeepestLeaves(self, root: TreeNode) -> TreeNode:
         node0, node1 = None, None
@@ -14,7 +8,6 @@ class Solution:
         if node0 == node1:
             return node0
         result = None
-        # NodeWithStatus = collections.namedtuple('NodeWithStatus', ['node','status'])
 
         def lca(root: TreeNode) -> bool:
             nonlocal result

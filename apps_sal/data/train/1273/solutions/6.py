@@ -6,7 +6,7 @@ for qq in range(t):
     for i in range(n):
         s = input()
         for j in range(m):
-            if s[j] == "*":  # coordinates=i,j
+            if s[j] == "*":
                 count += 1
                 if i < xmin:
                     xmin = i
@@ -24,7 +24,6 @@ for qq in range(t):
         if count == 1:
             print(1)
         else:
-            #   print "xmax,xmin,ymax,ymin",xmax,xmin,ymax,ymin
             num = max((xmax - xmin), (ymax - ymin))
             if num & 1 == 0:
                 print((num / 2) + 1)

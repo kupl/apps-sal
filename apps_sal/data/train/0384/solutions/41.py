@@ -11,5 +11,4 @@ class Solution:
             cur %= MOD
             total += cur
             total %= MOD
-            # print(cur,cnt)
         return total
