@@ -1,11 +1,3 @@
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# # from collections import deque
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(N, S):
     W_sum = [0]
     E_sum = [0]
@@ -28,11 +20,6 @@ def __starting_point():
     N = int(input())
     S = input()
     solve(N, S)
-
-    # # test
-    # from random import randint
-    # from func import random_str
-    # solve()
 
 
 __starting_point()

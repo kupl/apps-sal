@@ -23,7 +23,7 @@ M = []
 for i in range(n + 1):
     M.append(L[i])
 M.sort()
-dou = 1  # 重複する数
+dou = 1
 for i in range(n + 1):
     if M[i] == dou:
         dou += 1

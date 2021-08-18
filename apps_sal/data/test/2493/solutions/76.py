@@ -39,12 +39,8 @@ def main():
     li, ri = find(a)
 
     for k in range(1, n + 2):
-        ret = (cmb(n + 1, k) - cmb(n + 1 - (ri - li + 1), k - 1)) % mod  # mod忘れ
+        ret = (cmb(n + 1, k) - cmb(n + 1 - (ri - li + 1), k - 1)) % mod
         print(ret)
-        # for j in range(k + 1):
-        #     ret -= cmb(li, j) * cmb(n - ri, k - j - 1)
-        # PxQxRのPRからk-1個とる
-        # PRの取り方の総和を求めるより、区間PRに含まれる総個数からk-1個選ぶ方法を考える
 
 
 def __starting_point():

@@ -13,8 +13,8 @@ for i in D:
 L = pl
 M = pr - pl - 1
 N = n - pr
-mod = int(1e9) + 7  # <-- input modulo
-maxf = n + 11          # <-- input factional limitation
+mod = int(1e9) + 7
+maxf = n + 11
 
 
 def make_fact(n, k):

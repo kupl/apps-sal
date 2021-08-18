@@ -1,7 +1,7 @@
 N = int(input())
 *T, = map(int, input().split())
 *V, = map(int, input().split())
-speed = [0]  # speed[i]: speed of train after 0.5*i seconds
+speed = [0]
 for t, v in zip(T, V):
     speed[-1] = min(speed[-1], v)
     speed += [v] * (2 * t)

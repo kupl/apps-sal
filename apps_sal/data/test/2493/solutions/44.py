@@ -24,7 +24,7 @@ class Combination:
             return 0
         return self.fact[n] * (self.factInv[r] * self.factInv[n - r] % self.mod) % self.mod
 
-    def nhr(self, n, r):  # 重複組合せ
+    def nhr(self, n, r):
         return self.ncr(n + r - 1, n - 1)
 
     def factN(self, n):

@@ -1,7 +1,6 @@
 import os
 import sys
 
-# zeilen = [l.strip() for l in sys.stdin.readlines()]
 
 q = int(sys.stdin.readline().strip())
 
@@ -16,23 +15,23 @@ for _ in range(q):
         print('NO')
     elif len(gaps) > 1 and gaps[-2] >= 2 * b:
         print('NO')
-    elif gaps[-1] < 2 * b:  # no problematic, need only count
+    elif gaps[-1] < 2 * b:
         print('YES' if (len(gaps) % 2) else 'NO')
-    else:  # exactly one problematic gap
+    else:
         p = gaps[-1]
-        if (len(gaps) % 2):  # A tries to make this gap into zero or two
-            if p <= (a + 2 * b - 2):  # short enough for 0
+        if (len(gaps) % 2):
+            if p <= (a + 2 * b - 2):
                 print('YES')
-            elif p < 3 * a:  # we have to try two
-                print('NO')  # not long enough
-            elif p > (a + 4 * b - 2):  # too long
+            elif p < 3 * a:
+                print('NO')
+            elif p > (a + 4 * b - 2):
                 print('NO')
             else:
                 print('YES')
-        else:  # A tries to make this gap into one
-            if p < 2 * a:  # too short
+        else:
+            if p < 2 * a:
                 print('NO')
-            elif p > (a + 3 * b - 2):  # too long
+            elif p > (a + 3 * b - 2):
                 print('NO')
             else:
                 print('YES')

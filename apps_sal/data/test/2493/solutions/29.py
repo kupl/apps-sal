@@ -39,7 +39,7 @@ def make_fact(U, MOD):
     return fact, fact_inv
 
 
-U = 10 ** 5 + 10  # 階乗テーブルの上限
+U = 10 ** 5 + 10
 fact, fact_inv = make_fact(U, MOD)
 
 N = ir()
@@ -61,4 +61,3 @@ for i in range(2, N + 1):
     print((answer % MOD))
 
 print((1))
-# 10

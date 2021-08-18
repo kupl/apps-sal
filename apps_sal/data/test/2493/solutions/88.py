@@ -37,7 +37,6 @@ for i in range(N + 1):
         left = lst[a]
         right = i
         break
-# print (left, right)
 F = Factorial(N + 1, MOD).comb
 
 for i in range(1, N + 2):

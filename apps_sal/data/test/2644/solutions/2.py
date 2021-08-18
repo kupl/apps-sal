@@ -23,7 +23,6 @@ def get_min(p):
 
 def solve(n, p):
     p2 = get_min(p)
-    # print(p2)
     left = 0
     ret = []
     while left < n - 1:

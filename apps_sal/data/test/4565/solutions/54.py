@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 N = int(input())
 S = list(input())
@@ -24,7 +23,6 @@ for i in range(N):
     else:
         res1 = 0
     res2 = E[N - 1] - E[i]
-    # print(i,res1,res2)
     ans = min(ans, res1 + res2)
 
 print(ans)

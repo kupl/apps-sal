@@ -64,7 +64,6 @@ def main():
 
 
 def __starting_point():
-    # test()
     main()
 
 

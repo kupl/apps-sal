@@ -16,10 +16,8 @@ def removeX(s, p):
 def doable(lenght, a, b, parity):
     for x in range((lenght - a) // 2 + 1):
         y = lenght - a - x
-        # print(x,y)
         if ((not((x >= b) & (x < a))) & (not(x >= 2 * b)) & (not((y >= b) & (y < a))) & (not(y >= 2 * b))):
             e = 0
-            # print('oui')
             if((x >= a) & (x < 2 * b)):
                 e += 1
             if((y >= a) & (y < 2 * b)):
@@ -42,7 +40,6 @@ for i in range(int(input())):
         elif (k >= 2 * b):
             v[2] += 1
             lenght = k
-    # print(v)
     if ((v[0] > 0) | (v[2] > 1)):
         print('NO')
     elif (v[2] == 1):

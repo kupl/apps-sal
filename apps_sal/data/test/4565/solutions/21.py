@@ -1,6 +1,3 @@
-#
-# abc096 c
-#
 
 import sys
 from io import StringIO
@@ -40,16 +37,6 @@ def resolve():
     N = int(input())
     S = list(input())
 
-#    ans = float("inf")
-#    for i in range(N):
-#        if i == 0:
-#            ans = min(ans, S[1:].count("E"))
-#        elif i == N-1:
-#            ans = min(ans, S[0:N-1].count("W"))
-#        else:
-#            ans = min(ans, S[0:i].count("W") + S[i+1:].count("E"))
-#    print(ans)
-
     W = [0] * N
     E = [0] * N
     L = 0
@@ -70,7 +57,6 @@ def resolve():
 
 
 def __starting_point():
-    # unittest.main()
     resolve()
 
 

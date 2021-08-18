@@ -15,7 +15,6 @@ x_l_index = A.index(duplicate_x)
 x_r_index = N + 1 - A[::-1].index(duplicate_x) - 1
 
 
-# 逆元の前計算
 factorial = [1, 1]
 inverse = [1, 1]
 invere_base = [0, 1]

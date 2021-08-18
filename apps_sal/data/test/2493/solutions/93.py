@@ -17,9 +17,9 @@ def cmb(n, r, p):
 
 
 p = 10 ** 9 + 7
-fact = [1, 1]  # fact[n] = (n! mod p)
-factinv = [1, 1]  # factinv[n] = ((n!)^(-1) mod p)
-inv = [0, 1]  # factinv 計算用
+fact = [1, 1]
+factinv = [1, 1]
+inv = [0, 1]
 
 for i in range(2, n + 2):
     fact.append((fact[-1] * i) % p)

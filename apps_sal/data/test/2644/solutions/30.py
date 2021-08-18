@@ -14,7 +14,6 @@ ok = True
 
 while ok and idx != N:
     cur = RP[idx]
-    # print(cur, idx)
     while ok and cur != idx:
         if cur > idx:
             if used[cur - 1]:
@@ -37,7 +36,6 @@ while ok and idx != N:
 
             cur += 1
 
-        # print(P, RP)
     idx += 1
 
 if ok and len(record) == N - 1:
@@ -45,5 +43,3 @@ if ok and len(record) == N - 1:
         print(ans)
 else:
     print((-1))
-#
-# print(used)
