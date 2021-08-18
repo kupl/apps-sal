@@ -14,7 +14,6 @@ while(t):
     for h in range(a[0]):
         p = list(input())
         r.append(p)
-    # print(r)
     for z in range(a[0]):
         for i in range(a[1]):
             for j in range(i + 1, a[1]):

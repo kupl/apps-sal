@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from collections import deque
 n = int(input())
 edge = [[] for _ in range(n + 1)]
@@ -30,8 +29,6 @@ while len(q) > 0:
             svisited[e] = svisited[s] + 1
             q.append(e)
 
-# print(fvisited)
-# print(svisited)
 fcnt = 0
 scnt = 0
 for i in range(1, n + 1):

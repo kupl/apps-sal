@@ -30,5 +30,4 @@ f_cnt = 1
 for i in range(2, N):
     if f_costs[i] <= s_costs[i]:
         f_cnt += 1
-# print(f_costs, s_costs, f_cnt)
 print(('Fennec' if f_cnt > N - f_cnt else 'Snuke'))

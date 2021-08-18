@@ -1,9 +1,6 @@
 class Solution:
     def minCameraCover(self, root):
         def solve(node):
-            # 0: Strict ST; All nodes below this are covered, but not this one
-            # 1: Normal ST; All nodes below and incl this are covered - no camera
-            # 2: Placed camera; All nodes below this are covered, plus camera here
 
             if not node:
                 return 0, 0, float('inf')

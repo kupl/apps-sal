@@ -6,14 +6,14 @@ for _ in range(int(input())):
     f = 0
     if z1 in nums or z2 in nums:
         f = 1
-        print(1)  # can directly pick and win
+        print(1)
         continue
     cnt = 0
     for val in nums:
         if val - z1 in nums or val - z2 in nums:
             cnt += 1
     if f == 0 and cnt == n + n:
-        print(2)  # still_mate ...where ever u go..u will be killed
+        print(2)
         f = 2
     if not f:
         print(0)

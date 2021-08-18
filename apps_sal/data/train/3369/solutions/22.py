@@ -1,5 +1,4 @@
 def move(position, roll):
-    # my solution
     return position + 2 * roll
 
 

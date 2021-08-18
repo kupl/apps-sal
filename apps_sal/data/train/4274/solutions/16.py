@@ -129,5 +129,4 @@ def do_math(s):
     return round(result)
 
 
-# print(do_math("111a 222c 444y 777u 999a 888p"))
 print((do_math("2j 87j 169a 1275c 834f 683v")))

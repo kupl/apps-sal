@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n, z1, z2 = [int(i) for i in input().split()]
     A = [int(i) for i in input().split()]
