@@ -1,4 +1,3 @@
-# cook your dish here
 import string
 a = string.ascii_uppercase
 b = [i for i in range(1, 27)]

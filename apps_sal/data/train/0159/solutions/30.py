@@ -12,5 +12,4 @@ class Solution:
 
             dp[i] = nums[i] + max(- cur, 0)
             heappush(heap, (- dp[i], i))
-        # print(dp)
         return max(dp)

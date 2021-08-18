@@ -6,13 +6,11 @@ class Solution:
         if len(arr) < k:
             return 0
         else:
-            # check the first k numbers
             for i in range(k):
                 total += arr[i]
             if total >= threshold:
                 ans += 1
 
-            # slide window to the right 1
             i = k
             while i < len(arr):
                 total += arr[i] - arr[i - k]

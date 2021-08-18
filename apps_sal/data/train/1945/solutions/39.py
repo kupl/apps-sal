@@ -1,4 +1,3 @@
-# https://www.cnblogs.com/seyjs/p/11026157.html
 
 class Solution:
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:

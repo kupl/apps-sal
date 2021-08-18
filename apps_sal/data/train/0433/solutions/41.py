@@ -2,7 +2,7 @@ class Solution:
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
         sumThreshold = k * threshold
         arrLength = len(arr)
-        currentSum = 0  # be sure you always define local variables before calling them...
+        currentSum = 0
         for i in range(k):
             currentSum += arr[i]
         count = 0

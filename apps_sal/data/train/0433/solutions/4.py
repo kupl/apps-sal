@@ -1,6 +1,5 @@
 class Solution:
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
-        # subarry, not sub elements, can be resolved by using running sum
 
         cur = 0
         res = 0

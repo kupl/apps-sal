@@ -14,8 +14,6 @@ class Solution:
             if average >= threshold:
                 counter += 1
 
-            #print(arr[i:i+k], prevAverage, average)
-
             prevAverage = average
 
         return counter

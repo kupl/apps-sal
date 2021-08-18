@@ -3,7 +3,7 @@ class Solution:
         N = len(nums)
         dp = [-math.inf] * N
 
-        q = deque()  # . Val, Index
+        q = deque()
         for i in range(N):
             dp[i] = max(dp[i], nums[i] + (q[0][0] if q else 0), nums[i])
 
@@ -13,5 +13,4 @@ class Solution:
                 q.popleft()
             q.append((dp[i], i))
 
-        # print(dp)
         return max(dp)

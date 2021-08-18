@@ -11,5 +11,4 @@ class Solution:
                 t2 = ((t2 << 1) + 1 - matrix[i][j]) % mod
             d[t1] += 1
             d[t2] += 1
-        # print(d)
         return max(d.values())

@@ -4,9 +4,9 @@ from collections import deque
 class Solution:
     def constrainedSubsetSum(self, nums, k):
         if max(nums) <= 0:
-            return max(nums)   # optimization
+            return max(nums)
         if min(nums) >= 0:
-            return sum(nums)   # optimization
+            return sum(nums)
 
         N, queue = len(nums), deque()
         dp = [val for val in nums]

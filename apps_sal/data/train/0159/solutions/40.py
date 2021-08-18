@@ -3,7 +3,6 @@ from heapq import heappush, heappop
 
 class Solution:
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
-        # [-max_sum, idx]
 
         res = -float('inf')
         queue = []

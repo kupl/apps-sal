@@ -10,5 +10,4 @@ class Solution:
                 while dp and dp[-1][1] <= cur:
                     dp.pop()
                 dp.append((i, cur))
-            # print('dp', dp)
         return res
