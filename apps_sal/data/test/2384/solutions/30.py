@@ -1,14 +1,10 @@
-# 写経AC
 from collections import defaultdict
 
 N = int(input())
 A = [int(i) for i in input().split()]
 
-# dp[(i, x, flag)]:= i番目まででx個選んでいる時の最大値
-# flag: i番目をとるフラグ
 dp = defaultdict(lambda: -float("inf"))
 
-# 初期条件
 dp[(0, 0, 0)] = 0
 
 for i, a in enumerate(A, 1):

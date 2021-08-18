@@ -36,9 +36,6 @@ lcm = 1
 for i, v in enumerate(cycle_lens):
     lcm = lcm * v // gcd(lcm, v)
 
-# res = to_start
-# if lcm > 1:
-# 	res += lcm
 
 res = to_start
 if to_start % lcm > 0 or to_start == 0:

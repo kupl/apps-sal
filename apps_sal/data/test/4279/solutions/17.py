@@ -27,8 +27,6 @@ def calc(a):
 
 for i in range(22000):
     li.append(calc(i + 1))
-    # if(i%10000==0):
-    #     print(f"i{i}")
 
 summ = 0
 for j in li:
@@ -39,10 +37,7 @@ _1 = time.time_ns()
 q = int(input())
 for i in range(q):
     x = int(input())
-    # x=999996000-i
     zz = bisect.bisect(si, x - 1)
-    # print(zz)
-    # print(x-si[zz-1])
     if x == 1:
         print("1")
     else:

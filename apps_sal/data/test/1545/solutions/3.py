@@ -1,4 +1,3 @@
-#!/bin/python3
 import sys
 mod = 10 ** 9 + 7
 n = int(input())

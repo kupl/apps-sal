@@ -40,7 +40,6 @@ for i in range(len(eventspos)):
 
 check = [0 for i in range(r + 1)]
 
-# print(eventsneg)
 
 for i in range(len(eventsneg)):
     for j in range(eventsneg[i][0], r + 1):
@@ -52,5 +51,3 @@ if max(check) + ans == n:
     print("YES")
 else:
     print("NO")
-
-# print(eventsneg,eventspos)

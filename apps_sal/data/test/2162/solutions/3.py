@@ -10,7 +10,6 @@ for i in l2:
     assign[i - 1] = 2
 for i in l3:
     assign[i - 1] = 3
-#ilenie2wprawo = [0] * n
 ilenie3wprawo = [0] * n
 ilenie1wlewo = [0] * n
 ilenie1wlewo[n - 1] = k2 + k3
@@ -18,19 +17,13 @@ i = n - 1
 ilenie3wprawo[n - 1] = (1 if assign[n - 1] != 3 else 0)
 while i > 0:
     i -= 1
-#	ilenie2wprawo[i] = ilenie2wprawo[i+1]
     ilenie3wprawo[i] = ilenie3wprawo[i + 1]
     ilenie1wlewo[i] = ilenie1wlewo[i + 1]
-#	if assign[i] != 2:
-#		ilenie2wprawo[i] += 1
     if assign[i] != 3:
         ilenie3wprawo[i] += 1
     if assign[i + 1] != 1:
         ilenie1wlewo[i] -= 1
-# print(assign)
-#print(ilenie1wlewo, ilenie3wprawo)
 odp = [0] * (n + 1)
-# odp[i] to odp zakladajac ze dokladnie i pierwszych nalezy do pierwszego
 odp[n] = k2 + k3
 i = n
 while i > 1:
@@ -47,5 +40,4 @@ if assign[0] == 1:
     odp[0] = odp[1] + 1
 if assign[0] == 3:
     odp[0] = min(odp[i + 1], ilenie3wprawo[0])
-# print(odp)
 print(min(odp))

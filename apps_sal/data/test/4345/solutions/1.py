@@ -1,4 +1,3 @@
-# testing https://codeforces.com/contest/1144/submission/52125086
 
 n = int(input())
 a = [int(ai) for ai in input().split()] + [0]

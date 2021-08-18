@@ -5,10 +5,6 @@ import collections
 from collections import Counter
 input = sys.stdin.readline
 
-#########################
-# imgur.com/Pkt7iIf.png #
-#########################
-
 
 def sieve(n):
     prime = [True for i in range(n + 1)]

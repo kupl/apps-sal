@@ -17,7 +17,6 @@ def find_index(num):
     return index
 
 
-# main starts
 arr = [0, 1]
 s = 0
 for i in range(2, 10 ** 6):
@@ -37,5 +36,4 @@ q = int(stdin.readline().strip())
 for _ in range(q):
     num = int(stdin.readline().strip())
     index = bisect_left(arr, num)
-    # print(num, index, arr[index], arr[index - 1])
     print(search[num - arr[index - 1]])

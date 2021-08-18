@@ -9,7 +9,6 @@ for v, num in c.items():
 ll = sorted(li, key=lambda x: x[1], reverse=True)
 
 for i in range(k, len(ll)):
-    # print(ll[i][1])
     ans += ll[i][1]
 
 print(ans)

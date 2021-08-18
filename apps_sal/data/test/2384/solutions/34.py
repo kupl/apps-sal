@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import math
 import sys
 from itertools import accumulate
@@ -51,8 +50,8 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    A = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
+    N = int(next(tokens))
+    A = [int(next(tokens)) for _ in range(N)]
     solve(N, A)
 
 

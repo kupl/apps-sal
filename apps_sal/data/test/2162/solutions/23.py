@@ -7,9 +7,5 @@ for i in range(1, n + 1):
     for j in range(3):
         for k in range(j, 3):
             dp[i][k] = min(dp[i][k], dp[i - 1][j] + (i not in s[k]))
-# for j in range(3):
- #   for i in range(n+1):
-  #      print(dp[i][j],end=" ")
-   # print()
 
 print(min(dp[n]))

@@ -1,7 +1,7 @@
 n = int(input())
 for i in range(n):
     st = input()
-    st += '#'
+    st += '
     k = len(st)
     lastch = '.'
     lastl = 0

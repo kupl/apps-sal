@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 n, a = int(input()), list(map(int, input().split())) + [0, ]
 

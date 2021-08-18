@@ -1,22 +1,12 @@
 import sys
-#import copy
-#import numpy as np
-#import itertools
-#import collections
-#from collections import deque
-#from scipy.sparse.csgraph import shortest_path, floyd_warshall, dijkstra, bellman_ford, johnson
-#from scipy.sparse import csr_matrix
 
 sys.setrecursionlimit(10**6)
 readline = sys.stdin.readline
-#read = sys.stdin.buffer.read
 
 inf = float('inf')
-#inf = pow(10, 10)
 
 
 def main():
-    # input
     N = int(readline())
     A = list(map(int, readline().split()))
 
@@ -44,9 +34,6 @@ def main():
     else:
         ans = DP1[N - 1]
 
-    # print(DP0)
-    # print(DP1)
-    # print(DP2)
     print(ans)
 
 

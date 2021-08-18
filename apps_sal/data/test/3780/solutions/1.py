@@ -8,7 +8,6 @@ vmax, t1 = read()
 vx, vy = read()
 wx, wy = read()
 
-# Translate and scale
 x2, y2 = (x2 - x1) / vmax, (y2 - y1) / vmax
 vx, vy, wx, wy = vx / vmax, vy / vmax, wx / vmax, wy / vmax
 

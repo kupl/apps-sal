@@ -2,7 +2,6 @@ INF = 10**18
 
 
 def solve(n, a):
-    # 現在の位置 x 選んだ個数 x 直前を選んだかどうか
     dp = [{j: [-INF, -INF] for j in range(i // 2 - 1, (i + 1) // 2 + 1)} for i in range(n + 1)]
     dp[0][0][False] = 0
     for i in range(n):

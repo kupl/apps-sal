@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-dp = [0]  # dp[i]=左からi番目までで(i//2)個選んだときの最大値
+dp = [0]
 sum_odd = a[0]
 
 dp.append(0)
