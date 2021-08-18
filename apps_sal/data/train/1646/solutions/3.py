@@ -12,17 +12,14 @@ def automorphic(p):
         for j in range(k, size + 1):
             m5 = n % (10 ** j)
             m6 = 10 ** j + 1 - m5
-            # print("n = " + str(n) + "\n[t, m5, m6] = " + str([t,m5,m6]) + " ")
             res.append(m5)
             res.append(m6)
-            # print("res = " + str(res))
     return sorted(list(set(res)))
 
 
 @functools.lru_cache(maxsize=1)
 def greent():
     res = automorphic(13)
-    # print(res)
     return res
 
 

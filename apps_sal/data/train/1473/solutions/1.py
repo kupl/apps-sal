@@ -2,7 +2,6 @@ import string
 
 T = eval(input())
 for x in range(T):
-    # a=raw_input()
     b = input().split()
     R = int(b[0])
     C = int(b[1])

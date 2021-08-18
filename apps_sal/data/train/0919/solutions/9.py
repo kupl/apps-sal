@@ -15,12 +15,9 @@ def solve(A):
             count += 1
         else:
             if count % 2:
-                # I can fix this for on op or delete me for one op.
                 if i + 1 < len(A) and A[i + 1] == prev:
-                    # If delete me is the same as fixing it, delete me
                     ops += 1
                 else:
-                    # Fix it
                     ops += 1
                     count = 1
                     prev = a

@@ -1,6 +1,5 @@
 class Solution:
     def equalSubstring(self, s: str, t: str, maxCost: int) -> int:
-        # I could first create an array with the cost of each character change
 
         currCost = 0
         maxLength = 0

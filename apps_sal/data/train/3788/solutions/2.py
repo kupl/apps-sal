@@ -16,10 +16,7 @@ def isqrt(num):
 
 
 def sqrt(n):
-    # return n ** .5                                 ## Nope
-    # return __import__('math').sqrt(n)              ## Not enough precision...
-    # return __import__('decimal').Decimal(n).sqrt() ## That one works great!
-    return isqrt(n)  # The very best, you don't need those nasty floating point numbers
+    return isqrt(n)
 
 
 def s_num(n):

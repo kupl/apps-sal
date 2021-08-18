@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict as dd
 from collections import deque
 import bisect
