@@ -9,7 +9,7 @@ class Solution:
                 return
 
             if is_safe[node] == VISITED:
-                is_safe[node] = UNSAFE  # detected cycle
+                is_safe[node] = UNSAFE
                 return
 
             if is_safe[node] == None:

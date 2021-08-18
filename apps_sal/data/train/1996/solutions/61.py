@@ -27,7 +27,3 @@ class Solution:
             if dfs(i):
                 res.append(i)
         return res
-
-        # for k, v in sorted(memo.items(), key = lambda x: x[1]):
-        #     if v:
-        #         res.append(v)

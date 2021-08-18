@@ -35,9 +35,3 @@ class MagicDictionary:
             if (self.word_set.get(cand, 0) > 1 or (self.word_set.get(cand, 0) == 1 and word not in self.word_origin)):
                 return True
         return False
-
-
-# Your MagicDictionary object will be instantiated and called as such:
-# obj = MagicDictionary()
-# obj.buildDict(dict)
-# param_2 = obj.search(word)

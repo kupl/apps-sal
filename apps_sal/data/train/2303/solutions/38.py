@@ -5,9 +5,7 @@ from collections import deque
 class UnionFindVerSize():
     def __init__(self, init):
         """ N個のノードのUnion-Find木を作成する """
-        # 親の番号を格納する。自分が親だった場合は、自分の番号になり、それがそのグループの番号になる
         self._parent = [n for n in range(0, len(init))]
-        # グループのサイズ（個数）
         self._size = [1] * len(init)
         self._dict = {key: 0 for key in init}
         for i in range(len(init)):
@@ -20,7 +18,7 @@ class UnionFindVerSize():
             x = self._dict[x]
         if self._parent[x] == x:
             return x
-        self._parent[x] = self.find_root(self._parent[x], 0)  # 縮約
+        self._parent[x] = self.find_root(self._parent[x], 0)
         return self._parent[x]
 
     def unite(self, x, y):
@@ -32,7 +30,6 @@ class UnionFindVerSize():
         if gx == gy:
             return
 
-        # 小さい方を大きい方に併合させる（木の偏りが減るので）
         if self._size[gx] < self._size[gy]:
             self._parent[gx] = gy
             self._size[gy] += self._size[gx]

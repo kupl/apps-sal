@@ -1,7 +1,7 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)
-        color = [0 for _ in range(n)]  # 0 white, 1 gray, 2 black
+        color = [0 for _ in range(n)]
         res = []
         for node_index in range(n):
             if self.dfs(graph, index=node_index, color=color):

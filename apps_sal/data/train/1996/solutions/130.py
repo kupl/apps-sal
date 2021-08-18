@@ -25,6 +25,3 @@ class Solution:
             dfs(i)
 
         return [i for i, s in enumerate(safe) if s > 0]
-
-        # if (1) all of my children are safe
-        # if (2)

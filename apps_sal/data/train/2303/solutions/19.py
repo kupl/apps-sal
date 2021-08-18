@@ -10,7 +10,6 @@ class UnionFind:
         self.par = [i for i in range(n)]
         self.rank = [0] * n
 
-    # 検索
     def find(self, x):
         if self.par[x] == x:
             return x
@@ -18,7 +17,6 @@ class UnionFind:
             self.par[x] = self.find(self.par[x])
             return self.par[x]
 
-    # 併合
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -33,7 +31,6 @@ class UnionFind:
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
 
-    # すべての頂点に対して親を検索する
     def all_find(self):
         for n in range(len(self.par)):
             self.find(n)
@@ -72,7 +69,6 @@ def dijkstra(x):
     d = {x: 0, N - 1: 10**9}
     visited = {x}
 
-    # d, u
     queue = deque([(0, x)])
 
     while queue:

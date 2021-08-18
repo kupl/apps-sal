@@ -2,7 +2,6 @@ import sys
 from collections import defaultdict, deque
 input = sys.stdin.readline
 n, m = map(int, input().split())
-# +路線*chg : その路線ホーム
 chg = 10**6
 
 edge = defaultdict(set)
@@ -33,7 +32,6 @@ while len(edgelist):
     for e in edge[x]:
         if used[e]:
             continue
-        # 行先が改札
         if x <= 10**5 and chg <= e:
             edgelist.appendleft((e, cost + 1))
         else:

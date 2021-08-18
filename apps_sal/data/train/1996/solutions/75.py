@@ -4,12 +4,10 @@ class Solution:
         ans = []
 
         def dfs(node):
-            # print(i, \" \", arr)
             if arr[node] != -1:
                 return arr[node] == 1
             arr[node] = 0
             for j in graph[node]:
-                # print(j)
                 if arr[j] == 1:
                     continue
                 elif arr[j] == 0 or not dfs(j):

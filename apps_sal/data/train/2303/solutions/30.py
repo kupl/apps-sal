@@ -54,7 +54,6 @@ gdist = [INF] * M
 while que:
     cost, v, t = que.popleft()
     if t:
-        # edge
         if gdist[v] < cost or v not in P:
             continue
         for w in P[v]:
@@ -62,7 +61,6 @@ while que:
                 dist[w] = cost + 1
                 que.append((cost + 1, w, 0))
     else:
-        # node
         if dist[v] < cost or v not in E:
             continue
         for w in list(D[v].values()):

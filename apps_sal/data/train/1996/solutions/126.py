@@ -36,7 +36,6 @@ class Solution:
             for edge in node:
                 self.d[i].append(edge)
 
-        # print(self.d)
         for k in self.d.keys():
             Solution.safe_finder(self, k)
 

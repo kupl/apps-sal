@@ -56,13 +56,6 @@ sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
 
-##########################################################
-# n,m=map(int,input().split())
-# for i in range(n):
-# for _ in range(int(input())):
-#n = int(input())
-# for _ in range(int(input())):
-#n = int(input())
 '''for _ in range(int(input())):
 
     n=int(input())
@@ -71,7 +64,6 @@ def input(): return sys.stdin.readline().rstrip("\r\n")
 
     arr = list(map(int, input().split()))'''
 
-#n = int(input())
 m = 0
 n, k = list(map(int, input().split()))
 ans = [0] * n
@@ -88,6 +80,5 @@ for _ in range(k):
         else:
             jump[i] = r + 1
         i = var
-    # print(ans)
 
 print(*ans)

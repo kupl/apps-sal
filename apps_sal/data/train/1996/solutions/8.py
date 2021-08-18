@@ -1,10 +1,10 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)
-        state = [-1] * n  # -1 = unvisited, 0 = involved in directed cycle, 1 = eventually safe
+        state = [-1] * n
 
         def dfs(node):
-            state[node] = 0  # may be involved in a cycle
+            state[node] = 0
             for adj in graph[node]:
                 if state[adj] == 0 or (state[adj] == -1 and dfs(adj)):
                     return True

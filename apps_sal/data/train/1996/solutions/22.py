@@ -12,12 +12,6 @@ class Solution:
             for node in graph[i]:
                 dic[node].append(i)
 
-        # print(indegree)
-        # print(outdegree)
-        # print(dic)
-        # print(queue)
-        # print('*********')
-
         while queue:
             node = queue.popleft()
             res.append(node)
@@ -26,5 +20,4 @@ class Solution:
                 if nbr not in visited and outdegree[nbr] == 0:
                     queue.append(nbr)
                     visited.add(nbr)
-            # print(queue)
         return(sorted(res))

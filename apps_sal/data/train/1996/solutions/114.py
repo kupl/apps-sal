@@ -1,4 +1,3 @@
-# 0: unknown, 1: visiting, 2: safe
 from collections import defaultdict
 
 

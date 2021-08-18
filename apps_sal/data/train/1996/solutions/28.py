@@ -7,7 +7,6 @@ class Solution:
 
         return sorted(list(res))
 
-    # dfs is to check if there's a cycle starting from this point
     def dfs(self, graph, i, visited, res):
         for j in graph[i]:
             if j in visited:
@@ -15,7 +14,6 @@ class Solution:
             if j in res:
                 continue
             visited.add(j)
-            # Now we go on to the next step and see if there's a cycle
             if not self.dfs(graph, j, visited, res):
                 return False
             visited.remove(j)
