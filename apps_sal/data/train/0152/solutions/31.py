@@ -22,24 +22,3 @@ class Solution:
             else:
                 r = guess - 1
         return l
-
-    #    position.sort()
-    #    l, r = 1, position[-1] - position[0]
-    #    while l < r:
-    #        cand = (l + r + 1) >> 1
-    #        if self.is_valid(position, m, cand):
-    #            l = cand
-    #        else:
-    #            r = cand - 1
-    #    return l
-    #
-    # def is_valid(self, position, m, cand):
-    #    prev = position[0]
-    #    rem = m - 1
-    #    for pos in position[1:]:
-    #        if pos >= prev + cand:
-    #            prev = pos
-    #            rem -= 1
-    #        if rem == 0:
-    #            return True
-    #    return False

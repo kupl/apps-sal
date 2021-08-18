@@ -3,25 +3,21 @@ class Solution:
         ''' DP causing timeout 
         def get_max_force(pos, count):
 
-            #print(f\"get_max_force pos_index {pos} posistion {position[pos]} count {count}\")
             if count <=1 :
                 return float('inf')
 
             if dp[pos][count-1] > -1: 
-                #print(\"saved time\")
                 return dp[pos][count-1] 
 
             if n - pos == count:
                 min_force = float('inf')
                 for pos_index in range(pos+1, n):
                     min_force = min(min_force, position[pos_index]-position[pos_index-1])
-                #print(f\"dp 3 pos_index {pos} position {position[pos]} count{count} : {dp[pos][count-1]}\")  
                 dp[pos][count-1] = min_force
                 return min_force
 
             if count == 2:
                 dp[pos][count-1] = position[-1] - position[pos]
-                #print(f\"dp 2 pos_index {pos} position {position[pos]} position[-1] {position[-1]} count{count} : {dp[pos][count-1]}\")
                 return dp[pos][count-1]
 
             max_force = 0
@@ -32,7 +28,6 @@ class Solution:
                 max_force = max(max_force, min(position[pos_index]-position[pos], get_max_force(pos_index, count-1)))
 
             dp[pos][count-1] = max_force
-            #print(f\"dp 1 pos_index {pos} position {position[pos]} count{count} : {max_force}\")
             return max_force
 
         n = len(position)
@@ -54,8 +49,7 @@ class Solution:
         n = len(position)
         position.sort()
 
-        def calc(d):  # return number of balls while maintaining distance d
-            # print(f\"calc {d}\")
+        def calc(d):
             curr = position[0]
             ans = 1
             for i in range(1, n):
@@ -63,16 +57,12 @@ class Solution:
                     index = i
                     curr = position[i]
                     ans += 1
-            # print(f\"return {ans}\")
             return ans
 
         l, r = 0, position[-1] - position[0]
-        #d = r
         d = 0
         while l < r:
 
-            #mid = (r + l + 1) // 2
-            # print(f\"l {l} r{r} d {mid}\")
             mid = l + (r - l) // 2
             count = calc(mid)
             if count < m:
@@ -86,9 +76,6 @@ class Solution:
             elif count >= m:
                 l = mid
             '''
-        #print(l, r)
-        # print(f\"{calc(l)}\")
-        # print(f\"{calc(l-1)}\")
         if calc(l) == m:
             return l
         else:

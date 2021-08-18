@@ -26,7 +26,3 @@ class Solution:
             else:
                 l = mid + 1
         return l - 1
-#         if check(l):
-#             return l
-#         else:
-#             return l - 1

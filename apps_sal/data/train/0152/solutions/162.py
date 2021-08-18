@@ -13,7 +13,6 @@ class Solution:
 
             return cnt
 
-        # Binary Search on the answer
         l = 1
         r = position[-1] - position[0]
 

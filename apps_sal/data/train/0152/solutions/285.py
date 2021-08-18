@@ -15,10 +15,8 @@ class Solution:
 
         l, r = 0, position[-1]
         ret = 0
-        # print(position, l, r)
         while l < r:
             mid = l + (r - l) // 2
-            # print(l, r, mid)
             if valid(mid):
                 ret = max(ret, mid)
                 l = mid + 1

@@ -7,7 +7,7 @@ class Solution:
         if m == 2:
             return position[-1] - position[0]
 
-        def can_place(mid):  # mid is candidate for minimum magnetic force
+        def can_place(mid):
             num_placed = 1
             prev = position[0]
 

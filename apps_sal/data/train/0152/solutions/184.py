@@ -1,6 +1,5 @@
 class Solution:
     def maxDistance(self, position: List[int], m: int) -> int:
-        # binary search on answer
         n = len(position)
         position.sort()
         left = 1
@@ -17,7 +16,6 @@ class Solution:
             return left
 
     def ok(self, position, m, force):
-        # first one at the
         n = len(position)
         stack = [position[0]]
         i = 0

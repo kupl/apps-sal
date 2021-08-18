@@ -1,5 +1,4 @@
 class Solution:
-    # min-max, dp?
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
 
@@ -7,7 +6,7 @@ class Solution:
             placed, pos = 0, 0
             prev = float('-inf')
             while pos < len(position):
-                if position[pos] - prev >= dist:  # can place one more
+                if position[pos] - prev >= dist:
                     placed += 1
                     prev = position[pos]
                 pos += 1

@@ -9,7 +9,6 @@ class Solution:
 
             mid = (lo + hi + 1) // 2
 
-            # count number of balls that can be placed if distance at least mid
             ind1 = 0
             ind2 = 1
             count = 1

@@ -5,7 +5,7 @@ class Solution:
 
         def isfail(mid):
             ans = 1
-            curr = position[0]  # alike greedy idea, we just put the first ball at position 0!
+            curr = position[0]
             for i in range(1, n):
                 if position[i] - curr >= mid:
                     ans += 1
@@ -20,5 +20,4 @@ class Solution:
                 right = mid
             else:
                 left = mid + 1
-        return left - 1  # left is the min value to fail, so left-1 is the max value to succeed!
-        # 因为求的是最大值！所以需要巧妙使用binary search!
+        return left - 1

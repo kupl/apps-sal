@@ -25,11 +25,9 @@ class Solution:
             mid = (right - left) // 2 + left
 
             if (self.is_valid(position, mid, m)):
-                # Too small
                 left = mid
                 res = max(res, mid)
             else:
-                # Too big
                 right = mid
 
         for i in range(left, right + 1):
