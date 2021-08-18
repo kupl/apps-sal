@@ -9,16 +9,12 @@ neg = A[A < 0]
 pos = A[A > 0]
 
 
-def f(x):  # count pairs x or less
+def f(x):
     cnt = 0
-    # zero
     if x >= 0:
         cnt += len(zero) * n
-    # pos
     cnt += A.searchsorted(x // pos, side="right").sum()
-    # neg
     cnt += (n - A.searchsorted(-(-x // neg), side="left")).sum()
-    # except a*a
     cnt -= np.count_nonzero(A * A <= x)
     return cnt // 2
 

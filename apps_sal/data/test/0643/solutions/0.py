@@ -17,7 +17,6 @@ def solve(x, y, p, q):
             R = M
         else:
             L = M
-        #print(L, R)
     if R == INF:
         return -1
     return R * q - y

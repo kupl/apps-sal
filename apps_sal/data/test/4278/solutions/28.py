@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Thu Sep 10 00:32:19 2020
 
@@ -10,7 +9,6 @@ d = dict()
 for i in range(N):
     S = input()
     S = ''.join(sorted(list(S)))
-    # print(S)
     if S in d.keys():
         d[S] += 1
     else:

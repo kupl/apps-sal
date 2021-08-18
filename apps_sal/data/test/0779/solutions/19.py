@@ -1,11 +1,8 @@
-# cook your dish here
 import sys
 import bisect
 import math
 from itertools import permutations
 m = 1000000007
-#a=list(map(int,input().strip().split(' ')))
-#n,k,s= map(int, sys.stdin.readline().split(' '))
 
 
 def find_lt(a, x):

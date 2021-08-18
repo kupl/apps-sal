@@ -98,8 +98,6 @@ def solve():
     p = int(s[2])
     q = int(s[3])
 
-    # x, y, p, q = 3, 10, 1, 2
-
     if p == 0:
         if x == 0:
             return 0
@@ -121,8 +119,6 @@ def solve():
     ansy1 = (p * y - q * x - (q - p) * ans1) // (-p)
     ansy2 = (p * y - q * x - (q - p) * ans2) // (-p)
 
-    # print(x, y)
-
     sum1 = int(10 ** 25)
     if ans1 >= 0 and ansy1 >= 0 and (x + ans1) * q == (y + ansy1 + ans1) * p:
         sum1 = min(sum1, ans1 + ansy1)
@@ -132,7 +128,6 @@ def solve():
     if sum1 == int(10 ** 25):
         return -1
     return sum1
-# print(solve())
 
 
 t = int(input())

@@ -10,7 +10,7 @@ zero = len(A[A == 0])
 
 
 def cnt(x):
-    """return #{a <= x | a in A}"""
+    """return 
     ret = 0
 
     if x >= 0:

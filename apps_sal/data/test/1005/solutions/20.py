@@ -14,6 +14,5 @@ for i in range(t):
             else:
                 tmp.append(a[i])
                 kol_d += 1
-        # print(tmp)
         ans = min(len(tmp), ans)
     print(ans)

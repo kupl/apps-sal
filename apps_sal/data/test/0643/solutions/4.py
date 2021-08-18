@@ -40,9 +40,6 @@ def solve(x, y, p, q):
     return a
 
 
-#sys.stdin = open('input.txt', 'r')
-
-
 t = int(input())
 for it in range(t):
     x, y, p, q = list(map(int, input().split()))

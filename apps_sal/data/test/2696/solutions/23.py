@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 cubes = list(map(int, input().split()))
 col = cubes[n - 1]
@@ -7,7 +6,6 @@ i = n - 1
 while(i > -1):
     if(col == cubes[i]):
         col = cubes[i]
-        # print(col==cubes[i],i,col,cubes[i])
     else:
         print(i + 2)
         break

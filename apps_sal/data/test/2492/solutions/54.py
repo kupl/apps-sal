@@ -10,10 +10,8 @@ def solve(N, K, A):
     rb = 10**18 + 1
 
     def check(x):
-        # x以下の積がK個以上ある
         cnt = 0
         for i, a in enumerate(A):
-            # 区間i2∈[0,i) でA[i]*A[i2]<=xとなるようなi2の個数
             l = 0
             r = i
             if a > 0:
@@ -29,7 +27,6 @@ def solve(N, K, A):
             cnt += r - l
         return cnt >= K
 
-    # Min x for check(x) == True
     while rb - lb > 1:
         mid = (rb + lb) // 2
         if check(mid):

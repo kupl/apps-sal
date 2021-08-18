@@ -12,14 +12,10 @@ neg = a[a < 0]
 def f(x):
     """count the number of products , <= x"""
     cnt_tpl = 0
-    # zero and ...
     if x >= 0:
         cnt_tpl += len(zero) * n
-    # positive and ...
     cnt_tpl += np.searchsorted(a, x // pos, side='right').sum()
-    # negative and ...
     cnt_tpl += (n - np.searchsorted(a, (-x - 1) // (-neg), side='right')).sum()
-    # a^2
     cnt_tpl -= np.count_nonzero(a * a <= x)
     assert cnt_tpl % 2 == 0
     return cnt_tpl // 2

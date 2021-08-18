@@ -6,10 +6,8 @@ d = collections.defaultdict(list)
 for _ in range(pairs):
     a, b = [int(x) for x in input().split()]
     d[a].append(b)
-    # d[b].append(a)
 
 rooks = collections.defaultdict(list)
-# rooks = [[] for _ in range(cols)]
 
 current_line = 1
 for i in range(1, cols + 1):
