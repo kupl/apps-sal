@@ -2,7 +2,6 @@ MOD = 998244353
 
 
 def w(a, b):
-    # SUM (k = 0..min) C(a, k) * C(b, k) * k!
     rt, ca, cb, fl = 1, 1, 1, 1
     for k in range(1, min(a, b) + 1):
         fl = fl * k % MOD

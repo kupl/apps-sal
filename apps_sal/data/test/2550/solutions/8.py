@@ -6,10 +6,6 @@ NTC here
 import sys
 inp = sys.stdin.readline
 def input(): return inp().strip()
-# flush= sys.stdout.flush
-# import threading
-# sys.setrecursionlimit(10**6)
-# threading.stack_size(2**26)
 
 
 def iin(): return int(input())
@@ -29,8 +25,6 @@ def main():
 
 
 main()
-
-# threading.Thread(target=main).start()
 
 
 """

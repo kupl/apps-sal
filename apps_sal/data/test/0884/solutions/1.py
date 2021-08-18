@@ -60,16 +60,13 @@ def sp(n, m):
     s = 1
     d1 = 1
     d2 = 1
-    # print(d1,d2,"!")
     for i in range(1, n + 1):
         d1 *= n - i + 1
         d2 *= m - i + 1
 
-        #print(i, d1,d2)
         d1 %= MOD
         d2 %= MOD
         s += d1 * d2 * (fi[i] % MOD)
-        #print(d1*d2 *(fi[i]%MOD))
         s %= MOD
 
     return s
@@ -83,6 +80,3 @@ for i in range(2, max(a, max(b, c)) + 1):
 
 
 print((sp(a, b) * sp(a, c) * sp(b, c)) % MOD)
-# print(sp(1,2))
-# print(sp(2,2))
-# print()

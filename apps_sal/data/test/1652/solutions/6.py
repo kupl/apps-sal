@@ -1,10 +1,7 @@
-# coding: utf-8
-# Your code here!
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 
-#n,*a = map(int,readline().split())
 
 """
 a = "dream"[::-1]

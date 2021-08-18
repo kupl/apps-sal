@@ -7,11 +7,11 @@ def main():
     d1, d2 = map(lambda x: int(x) + 1, input().split())
     work1 = [(1, 0), (-1, 0), (0, 1), (0, -1)]
     work2 = [(i, j) for i in range(-2, 3) for j in range(-2, 3) if (i, j) not in [(0, 0)] + work1]
-    memo = ["#" * (w + 4)] * 2 + ["##" + input() + "##" for _ in range(h)] + ["#" * (w + 4)] * 2
+    memo = ["
     dist = [[-1] * (w + 4) for _ in range(h + 4)]
     for i in range(h + 4):
         for j in range(w + 4):
-            if memo[i][j] == "#":
+            if memo[i][j] == "
                 dist[i][j] = float("inf")
     que1 = deque([(c1, c2)])
     que2 = deque([])

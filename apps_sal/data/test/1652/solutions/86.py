@@ -6,7 +6,6 @@ l = len(s)
 
 
 def dfs(i):
-   #    print("->", s[i:])
     if i == l:
         print("YES")
         return

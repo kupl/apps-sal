@@ -75,7 +75,6 @@ def remove_indices_and_multiply_remaining(indices_to_remove, n):
     """
     indices_to_remove should be a sorted list of 1-based indices
     """
-    # multiply together indices to remove and then actually remove last one
     operations = []
     previous = None
     for index in indices_to_remove:
@@ -90,8 +89,6 @@ def remove_indices_and_multiply_remaining(indices_to_remove, n):
 
 
 def find_index_of_largest_negative(xs):
-    # or index of smallest absolute value negative
-    # returns 1 based index
     maximum = float('-inf')
     maximum_index = None
     for index, x in enumerate(xs):
@@ -106,7 +103,6 @@ def solve(xs):
     Returns list of |xs| - 1 operations
     """
     n = len(xs)
-    # Count negatives and zeros
     negatives = 0
     zeros = 0
     for x in xs:
@@ -116,36 +112,26 @@ def solve(xs):
             negatives += 1
 
     if zeros == 0 and negatives == 0:
-        # all positive so just multiply everything to maximize
         return multiply_everything(n)
     elif zeros == n:
-        # can only be left with 0, multiply everything...
         return multiply_everything(n)
     elif zeros == 0 and negatives > 0:
         if negatives % 2 == 0:
-            # multiply everything for largest positive number
             return multiply_everything(n)
         else:
-            # get rid of smallest absolute value negative to be left with even number of negatives
-            # then multiply everything for largest positive number
             return remove_indices_and_multiply_remaining([find_index_of_largest_negative(xs)], n)
     elif negatives == 0 and zeros > 0:
         return remove_indices_and_multiply_remaining(find_zero_indices(xs), n)
-    else:  # if zeros > 0 and negatives > 0
+    else:
         if negatives % 2 == 0:
-            # get rid of zeros and
-            # multiply everything for largest positive number
             return remove_indices_and_multiply_remaining(find_zero_indices(xs), n)
         else:
-            # get rid of zeros as well as smallest negative number
-            # then multiply everything for largest positive number
             indices_to_remove = sorted([find_index_of_largest_negative(xs)] + find_zero_indices(xs))
             return remove_indices_and_multiply_remaining(indices_to_remove, n)
 
 
 def verify(xs, maximum):
     solution = solve(xs)
-    #print("solve(", xs, ") returned ", solution)
 
     assert len(solution) == len(xs) - 1
 
@@ -182,33 +168,3 @@ for operation in solve(xs):
         print(1, operation.index_a, operation.index_b)
     else:
         print(2, operation.index)
-
-# verify([-1, -1, -1, -1, -1, -1], 1)
-# verify([-1, -1, -1, -1, -1], 1)
-# verify([-1, -1, -100, -1, -1], 100)
-# verify([-100, -1, -1, -1, -1], 100)
-# verify([0, 0], 0)
-# verify([0, 0, 0], 0)
-# verify([1, 2, 3], 6)
-# verify([0, 2, 3], 6)
-# verify([2, 0, 3], 6)
-# verify([2, 1, 0, 3], 6)
-# verify([2, 2, 0, 3], 12)
-# verify([2, 2, 0, 0, 3], 12)
-# verify([2, 2, 0, 0, 0, 3], 12)
-# verify([0, 2, 2, 0, 0, 0, 3], 12)
-# verify([2, 2, 0, 0, 0, 3], 12)
-# verify([0, 2, 0, 2, 0, 0, 0, 3, 0], 12)
-# verify([-1, 2, 3], 6)
-# verify([2, -1, 3], 6)
-# verify([2, 3, -100], 6)
-# verify([2, 0, 3, -1, -100], 600)
-# verify([2, 0, -1, -100, 3, -2, -2], 2400)
-# verify([2, 0, -1, -100, 3, -2, -2, 0], 2400)
-# verify([2, 0, -1, -100, 3, -2, -2, 0, 2], 4800)
-# verify([0, -1, 5], 5)
-# verify([0, -1, 0, 5], 5)
-# verify([0, -1, 0, -100, 5], 500)
-# verify([0, -2, 0, -100, -5, 5], 2500)
-# verify([0, -10, 0, 0], 0)
-# verify([0, -10, -10, 0], 100)

@@ -10,7 +10,7 @@ def main():
     dist_table = [[-2] * (W + 4)]
     dist_table.append([-2] * (W + 4))
     for _ in range(H):
-        row = '##' + input() + '##'
+        row = '
         row = [-1 if c == '.' else -2 for c in row]
         dist_table.append(row)
     dist_table.append([-2] * (W + 4))

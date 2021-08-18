@@ -19,8 +19,8 @@ def main():
         th = t[h]
         Sh = S[h]
         for w in range(W):
-            if Sh[w] == '#':
-                th[w] = -1
+            if Sh[w] == '
+            th[w] = -1
 
     t[Ch][Cw] = 0
     q = deque([(Ch, Cw)])

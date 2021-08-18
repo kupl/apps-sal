@@ -28,35 +28,13 @@ import io
 import sys
 import time
 import random
-# ~ start = time.clock()
-# ~ test ='''5
-# ~ BBBBB'''
-# ~ test = '''2
-# ~ RB'''
-# ~ test = '''3
-# ~ GRG'''
-# ~ test = '''3
-# ~ RGB'''
-# ~ test = '''5
-# ~ RGBBB'''
-# ~ test = '''2
-# ~ RG'''
-# ~ test = '''3
-# ~ RRG'''
-# ~ test = '''3
-# ~ BBG'''
 
-# ~ sys.stdin = io.StringIO(test)
 
 n = int(input())
 cols = 'RGB'
 counts = {'R': 0, 'G': 0, 'B': 0}
 for c in input():
     counts[c] += 1
-
-# single color
-# 2 colors -> c1, c2
-# 3 colors
 
 
 def gettwocolors(counts):
@@ -91,7 +69,6 @@ else:
     elif counts[c2] == 0:
         printcols(c1)
     else:
-        # really two colors
         if counts[c1] >= 2 and counts[c2] >= 2:
             printcols("RGB")
         elif counts[c1] >= 2:
@@ -100,6 +77,3 @@ else:
             printcols(c1 + complement[sortedcols(c1 + c2)])
         else:
             printcols(complement[sortedcols(c1 + c2)])
-
-# ~ dur = time.clock()-start
-#~ print("Time:",dur)

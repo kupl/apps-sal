@@ -1,4 +1,3 @@
-# Antennas coverage
 
 import sys
 from bisect import bisect_right
@@ -29,16 +28,12 @@ def upgrade_minCost(n, m, antennas):
 
 
 def main():
-    # inf = open('input.txt', 'r')
-    # reader = (map(int, line.split()) for line in inf)
     reader = (map(int, s.split()) for s in sys.stdin)
 
     n, m = next(reader)
     antennas = [list(next(reader)) for _ in range(n)]
     ans = upgrade_minCost(n, m, antennas)
     print(ans)
-
-    # inf.close()
 
 
 def __starting_point():

@@ -1,14 +1,10 @@
 
-# add 0,4,9,49
-# this is a stupid solution
 
 import sys
-# sys.stdin=open("data.txt")
 input = sys.stdin.readline
 
 n = int(input())
 
-# do a stupid approach
 dp = [0] * 150
 s = set([0])
 for i in range(150):
