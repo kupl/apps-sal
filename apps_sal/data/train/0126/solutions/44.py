@@ -14,14 +14,9 @@ class Solution:
                 if sw[chL] == 0:
                     del sw[chL]
                 l += 1
-            #print(r, r + 1 - maxSize, r + 1 - minSize + 1)
-            #print(l, r)
             for j in range(r + 1 - maxSize, r + 1 - minSize + 1):
                 if j < l:
                     continue
                 substrings[s[j: r + 1]] += 1
                 res = max(res, substrings[s[j: r + 1]])
-            # print(substrings)
         return res
-
-        # l r

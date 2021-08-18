@@ -4,7 +4,7 @@ class Solution:
         if wordsListLength <= 1:
             return wordsListLength
 
-        def isPredecessor(word1, word2):  # is word1 predecessor of word2
+        def isPredecessor(word1, word2):
             for i in range(len(word2)):
                 if word2[:i] + word2[i + 1:] == word1:
                     return True

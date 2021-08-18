@@ -8,8 +8,6 @@ class Solution:
             maxlen = max(maxlen, len(word))
             minlen = min(minlen, len(word))
 
-        # print(graph, minlen, maxlen)
-
         def predecessor(word1, word2):
             if not word1:
                 return True
@@ -27,7 +25,6 @@ class Solution:
                         return False
                 left += 1
                 right += 1
-            # print(word1, word2, True)
             return True
 
         def chain(length, s=''):

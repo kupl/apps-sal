@@ -19,15 +19,6 @@ class Solution:
 
                 l += 1
 
-#             c = (r == len(s) - 1) and (l < len(s) - minSize)
-
-#             if c:
-#                 currS[s[l]] -= 1
-#                 if currS[s[l]] <= 0:
-#                     del currS[s[l]]
-
-#                 l += 1
-
             currC = s[r]
             currS[currC] += 1
 

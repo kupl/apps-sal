@@ -14,12 +14,3 @@ class Solution:
                     freq_hash[stri] = 1
                 max_occur = max(max_occur, freq_hash[stri])
         return max_occur
-        # counts = dict()
-        # for j in range(len(s)-minSize+1):
-        #     word = s[j:j+minSize]
-        #     if word in counts:
-        #         counts[word]+=1
-        #     else:
-        #         if len(collections.Counter(word))<=maxLetters:
-        #             counts[word]=1
-        # return max(counts.values()) if len(counts)!=0 else 0

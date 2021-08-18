@@ -21,14 +21,11 @@ class Solution:
             else:
                 return False
 
-        # print (check(words[0], words[1]))
-        # return
         words.sort(key=len)
         dp = [1 for _ in range(len(words))]
         for j in range(len(words)):
             for i in range(j):
                 if check(words[i], words[j]):
-                    # print (i, j)
                     dp[j] = max(dp[j], dp[i] + 1)
         res = max(dp)
         return res

@@ -6,7 +6,6 @@ class Solution:
             if len(cur) <= maxLetters:
                 cnt[s[:sz]] += 1
             for i in range(1, len(s) - sz + 1):
-                # print(s[i:i+sz], s[i+sz-1])
                 cur[s[i + sz - 1]] += 1
                 cur[s[i - 1]] -= 1
                 if cur[s[i - 1]] == 0:

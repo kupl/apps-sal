@@ -1,4 +1,3 @@
-# https://leetcode.com/problems/longest-string-chain/discuss/295008/Python-graph-DFS
 import collections
 
 

@@ -4,14 +4,11 @@ class Solution:
         for ele in words:
             ele = list(ele)
         words = sorted(words, key=lambda x: len(x))
-        # print(words)
         arr = [1] * n
         for i in range(1, n):
             for j in range(0, i):
                 if len(words[j]) == len(words[i]) - 1:
                     if(all(x in words[i] for x in words[j])):
                         arr[i] = max(arr[i], arr[j] + 1)
-                        # print(words[i],words[j])
-                # print(words[i],words[j])
         print(arr)
         return max(arr)

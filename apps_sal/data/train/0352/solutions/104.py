@@ -1,8 +1,6 @@
 class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         def is_predecessor(w1, w2):
-            # if(len(w1) + 1 != len(w2)):
-            #     return False
 
             skip = 0
             for i in range(len(w2)):
@@ -24,7 +22,6 @@ class Solution:
             for j in range(0, i):
 
                 if(len(words[i]) + 1 == len(words[j]) and combos[i] < combos[j] + 1 and is_predecessor(words[i], words[j])):
-                    # print(words[i] + ', ' + words[j])
                     combos[i] = combos[j] + 1
 
         for i in range(len_words):

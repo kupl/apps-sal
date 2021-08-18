@@ -5,5 +5,3 @@ for _ in range(int(input())):
     for i in l:
         t[i - 1] += 1
     print(min(t))
-
-# cook your dish here

@@ -11,7 +11,6 @@ class Solution:
                         toSearch[S] += 1
                     else:
                         toSearch[S] = 1
-        # print(toSearch)
         ans = 0
         for e in toSearch:
             ans = max(ans, toSearch[e])

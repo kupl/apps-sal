@@ -9,7 +9,3 @@ class Solution:
                     occ[sub] = occ.get(sub, 0) + 1
 
         return(max(list(occ.values()) or [0]))
-#         ans = list(occ.values())
-#         ans.sort(reverse=True)
-
-#         return(ans[0] if ans else 0)

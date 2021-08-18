@@ -4,7 +4,6 @@ class Solution:
         words = list(set(words))
         words.sort(key=lambda x: len(x))
         res = [[i] for i in words]
-        # print(l,res)
         for i in range(1, len(words)):
             for j in range(i):
                 if len(words[j]) + 1 == len(words[i]):

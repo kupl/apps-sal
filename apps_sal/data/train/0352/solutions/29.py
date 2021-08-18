@@ -1,6 +1,3 @@
-# Longest increasing sequence.
-# Instead, you can store all the words in a hashmap with their indexes. Now, for
-# Every word, try to delete one character and see if it is present in the map. But you need to sort the array first.
 from collections import defaultdict
 
 

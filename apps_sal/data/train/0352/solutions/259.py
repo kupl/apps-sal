@@ -5,10 +5,9 @@ class Solution:
             by_length[len(word)].add(word)
 
         longest = 1
-        seen = {*()}  # set()
+        seen = {*()}
         mx = len(by_length)
 
-        # in descending order
         for length in sorted(by_length, reverse=True):
             for word in by_length[length]:
                 if longest == mx:

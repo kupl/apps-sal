@@ -16,7 +16,6 @@ class Solution:
 
         dp = [1] * words_len
         for i in range(words_len):
-            # cur_possibles = makePossibles(words[i])
             curLen = len(words[i])
             for j in range(i - 1, -1, -1):
                 if len(words[j]) < curLen - 1:
@@ -25,7 +24,3 @@ class Solution:
                     dp[i] = max(dp[i], 1 + dp[j])
 
         return max(dp)
-
-        # makePossibles(words[2])
-        # getAdjacents(words[2], 2)
-        # print(words)
