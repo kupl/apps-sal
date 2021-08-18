@@ -1,4 +1,3 @@
-# cook your dish here
 import bisect
 for _ in range(int(input())):
     N, Q = list(map(int, input().strip().split(' ')))

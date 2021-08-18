@@ -5,7 +5,6 @@ class Solution:
         :rtype: str
         """
 
-   #    public solution....beat 96%...
         res = ""
         res += "0" * s.count('z')
         res += "1" * (s.count('o') - s.count('z') - s.count('w') - s.count('u'))
@@ -20,7 +19,6 @@ class Solution:
         return res
 
         """
-    #    my solution..........beat 68%....
          from collections import Counter
          dic = Counter(s)
          res = {0:'', 1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:''}

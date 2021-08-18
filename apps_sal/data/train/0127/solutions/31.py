@@ -16,5 +16,4 @@ class Solution:
                     if y > MOD:
                         y -= MOD
                     dp[x] = y
-            #print(*[(i,x) for i,x in enumerate(dp) if x])
         return sum(dp[g << 7 | P] for g in range(G + 1)) % MOD

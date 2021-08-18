@@ -28,7 +28,6 @@ for _ in range(int(input())):
         else:
             yl = max(yl, -inf)
 
-        # print(xl,xh,yl,yh)
     if xl <= xh and yl <= yh:
         print(1, xl, yl)
     else:

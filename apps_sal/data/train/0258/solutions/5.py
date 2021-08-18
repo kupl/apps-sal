@@ -5,12 +5,9 @@ class Solution:
         :rtype: str
         """
         '''
-         # unique letter in nums: zero, two, four, six, eight
          uniques = [['z', 'w', 'u', 'x', 'g'],
                     ['zero', 'two', 'four', 'six', 'eight'],
                     ['0', '2', '4', '6', '8']]
-         # then the leftover are: one, three, five, seven, nine
-         # the unique letter in each is: except nine
          leftover = [['o', 't', 'f', 's'],
                      ['one', 'three', 'five', 'seven'],
                      ['1', '3', '5', '7']]
@@ -24,7 +21,6 @@ class Solution:
                  for m in uniques[1][idx]:
                      s = s.replace(m, '', cntl)
                      count[m] -= cntl
-         #return s
          for l in leftover[0]:
              cntl = count[l]
              if cntl != 0:

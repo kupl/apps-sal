@@ -5,15 +5,7 @@ def get_electron_configuration(element):
     '''
     Return the electron configuration of the supplied element.
     '''
-    # ELEMENTS
-    # array is an array of the element symbols in order by
-    # atomic number. The atomic number is 1 plus the index in the array
-    # For example:
-    #  ELEMENTS = ['H', 'He', 'Li', ...]
 
-    # exceptions array
-    # Elements whose electron fill order are not normal.  Format is
-    # <element>:[<the remaining orbitals/electrons>]
     exceptions = \
         {"Cr": ["3d5", "4s1"],
          "Cu": ["3d10", "4s1"],
@@ -35,35 +27,32 @@ def get_electron_configuration(element):
          "Np": ["5f4", "6d1", "7s2"],
          "Cm": ["5f7", "6d1", "7s2"]}
 
-    # orbitals array
-    # Orbitals are listed in order they are normally filled.  Also listed
-    # with their maximum fill
     orbitals = ["1s2", "2s2", "2p6", "3s2", "3p6", "4s2", "3d10", "4p6", "5s2",
                 "4d10", "5p6", "6s2", "4f14", "5d10", "6p6", "7s2", "5f14",
                 "6d10", "7p6", "8s2"]
 
     atomicNumber = ELEMENTS.index(element) + 1
     numElectrons = atomicNumber
-    orbitalIndex = 0  # Index into the array of orbitals
-    config = []  # List of the orbitals with electrons
+    orbitalIndex = 0
+    config = []
 
-    while numElectrons > 0:  # If orbital is filled
+    while numElectrons > 0:
         if numElectrons - int(orbitals[orbitalIndex][2:]) > 0:
             config.append(orbitals[orbitalIndex])
-        else:                 # otherwise add the remaining e's to this orbital
+        else:
             config.append(orbitals[orbitalIndex][:2] + str(numElectrons))
 
         numElectrons -= int(orbitals[orbitalIndex][2:])
         orbitalIndex += 1
 
-    if element in list(exceptions.keys()):  # Abnormal electron fill
-        end = exceptions[element]  # Retrieve the config of the last few e's
-        e = 0  # The number of abnormal e's
-        for orb in end:                 # sum them
+    if element in list(exceptions.keys()):
+        end = exceptions[element]
+        e = 0
+        for orb in end:
             e += int(orb[2:])
-        while e > 0:  # Remove the orbitals at end that have
-            e -= int(config.pop()[2:])    # than number of electrons
+        while e > 0:
+            e -= int(config.pop()[2:])
 
-        config.extend(end)  # Add back the abnormal electon fill
+        config.extend(end)
 
     return element + " -> " + " ".join(sorted(config, key=lambda x: x[0]))

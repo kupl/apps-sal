@@ -8,7 +8,7 @@ class Solution:
             if pr <= 0:
                 return 1
             return 0
-        pr = max(pr, 0)  # profit
+        pr = max(pr, 0)
         if (i, mem_left, pr) in dp:
             return dp[i, mem_left, pr]
 

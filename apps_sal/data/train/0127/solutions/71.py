@@ -7,7 +7,6 @@ class Solution:
 
         @functools.lru_cache(None)
         def dp(g, p, i):
-            # print(g, p, i)
             if i == n or g == 0:
                 if p == 0:
                     return 1

@@ -10,5 +10,4 @@ class Solution:
             m = max(num, m)
             if m == i:
                 ans += 1
-                # m = -1
         return ans

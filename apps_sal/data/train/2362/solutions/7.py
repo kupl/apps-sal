@@ -20,9 +20,3 @@ for _ in range(t):
         print(1, xMin, yMin)
     else:
         print(0)
-
-
-# (x−1, y)
-## (x, y+1)
-## (x+1, y)
-# (x, y−1)

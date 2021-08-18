@@ -23,7 +23,6 @@ for _ in range(t):
         else:
             pre[i] = ind
     ind = 1
-   # print(pre)
     ss = set()
     suff = [0 for i in range(n)]
     for i in range(n - 1, -1, -1):

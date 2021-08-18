@@ -24,8 +24,6 @@ for _ in range(int(input())):
                 dpB[i] = 1
         else:
             break
-    # print(dpF)
-    # print(dpB)
     ans = 0
     ansList = []
     for i in range(n - 1):

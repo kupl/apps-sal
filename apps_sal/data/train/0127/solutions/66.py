@@ -1,8 +1,5 @@
 class Solution:
     def profitableSchemes(self, G: int, P: int, group: List[int], profit: List[int]) -> int:
-        # Dynamic Programming
-        # Time  complexity: O(N x P x G), where N is the number of crimes available to the gang.
-        # Space complexity: O(P x G)
         MOD = 10**9 + 7
         cur = [[0] * (G + 1) for _ in range(P + 1)]
         cur[0][0] = 1

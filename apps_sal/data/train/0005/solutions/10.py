@@ -15,7 +15,6 @@ for _ in range(t):
                 demand += 1
             pre[i] = demand - 1
     d2 = dict()
-    # print(pre)
     demand = 1
     for i in range(n - 1, -1, -1):
         d2[arr[i]] = 1
@@ -23,7 +22,6 @@ for _ in range(t):
             while(demand in d2):
                 demand += 1
             post[i] = demand - 1
-    # print(post)
     l = []
     for i in range(1, n):
         if(post[i] + pre[i - 1] == n):
