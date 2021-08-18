@@ -20,19 +20,11 @@ class Solution:
 
         for i in range(len(nums)):
 
-            # generate all window sizes
-            # [1,2,3]
-            # if k = 3
             for windowSize in range(1, k + 1):
                 startIndex = i - windowSize + 1
 
-                # Bounding Function to make sure that I don't run out of bounds
                 if startIndex < 0:
                     break
-
-                #         v
-                #           v
-                # # [1,15,7,9,2,5,10]
 
                 maxVal = max(nums[startIndex: i + 1])
 

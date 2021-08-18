@@ -26,7 +26,6 @@ class Solution:
                     elif ord(char) == curr_ord:
                         new_group.append(g_idx)
 
-                    # remove a column
                     else:
                         in_order = False
                         break

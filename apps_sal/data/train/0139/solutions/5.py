@@ -15,8 +15,6 @@ class Solution:
                 for i in range(start + 1, end):
                     c = words[i][col]
                     if c > cprev:
-                        # create new interval
-                        # reset cprev and iprev
                         next_intervals.append([iprev, i])
                         cprev = c
                         iprev = i
@@ -27,7 +25,6 @@ class Solution:
                     pass
                 if del_this_col:
                     break
-                # add another last interval
                 next_intervals.append([iprev, end])
                 pass
             if not del_this_col:

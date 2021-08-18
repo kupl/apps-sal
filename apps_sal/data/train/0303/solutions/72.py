@@ -12,7 +12,6 @@ class Solution:
             maxNum = max(maxNum, arr[i - 1])
             subarr = arr[:i]
             sumArr = self.partition(arr[i:], k, index + i, memo)
-            # i is the size of the array you're examining
             sumArr += maxNum * (i)
             maxSum = max(sumArr, maxSum)
 
