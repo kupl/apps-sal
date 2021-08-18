@@ -68,11 +68,8 @@ def ant_bridge(ants, terrain):
     ant_positions = dict(list(zip(ants[::-1], list(range(len(ants) - 1, -1, -1)))))
 
     for k in range(len(ants), terrain_length):
-        #print("Iteration " + str(k))
         max_ant_position = max(ant_positions.values())
         min_ant_position = min(ant_positions.values())
-
-        #print(create_terrain_with_ants(ant_positions, terrain))
 
         for ant in ants:
             i = ant_positions[ant]
@@ -83,17 +80,13 @@ def ant_bridge(ants, terrain):
             if is_end_of_terrain_reached:
                 terrain = terrain + ['-', '-']
 
-            # ant is not part of a bridge and next position cannot be part of a bridge => increment by 1
             if terrain[i] == '-' and terrain[i + 1] == '-' and terrain[i + 2] == '-' and s == '':
                 ant_positions[ant] = i + 1
                 ant_states[ant] = ''
-            # ant is not part of a bridge and it is at the front of the queue and next position is start of a bridge => increment by 1 and start a bridge
             if terrain[i] == '-' and terrain[i + 1] == '-' and terrain[i + 2] == '.' and s == '' and i == max_ant_position:
                 ant_positions[ant] = i + 1
                 ant_states[ant] = 'b'
-            # ant is not part of a bridge and it is not at the front of the queue and next position is start of a bridge => jump ahead to the front of the queue
             if terrain[i] == '-' and terrain[i + 1] == '-' and terrain[i + 2] == '.' and s == '' and not i == max_ant_position:
-                # DUPLICATED CODE
                 next_bridge_end = find_next_bridge_end(i, terrain)
                 if next_bridge_end < max_ant_position:
                     ant_positions[ant] = next_bridge_end + 1
@@ -102,7 +95,6 @@ def ant_bridge(ants, terrain):
                 ant_states[ant] = ''
                 if check_if_bridge_position(ant_positions[ant], terrain):
                     ant_states[ant] = 'b'
-            # ant is part of a bridge and it is at the back of the queue => jump ahead to the next bridge end or to the front of the queue
             if s == 'b' and i == min_ant_position:
                 next_bridge_end = find_next_bridge_end(i, terrain)
                 if next_bridge_end < max_ant_position:
@@ -116,7 +108,5 @@ def ant_bridge(ants, terrain):
 
             if is_end_of_terrain_reached:
                 terrain = terrain[:len(terrain) - 2]
-
-            #print(create_terrain_with_ants(ant_positions, terrain))
 
     return ''.join(sorted(ant_positions, key=ant_positions.get))

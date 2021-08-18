@@ -1,4 +1,3 @@
-# cook your dish here
 def gcd(a, b):
     while True:
         if (b == 0):

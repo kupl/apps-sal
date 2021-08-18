@@ -1,25 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-
-# for each node
-# i get:
-#     left_min, right_min
-#     left_max, right_max
-
-# val = node.val
-# current_min = min(left_min, right_min)
-# current_max = max(left_max, right_max)
-
-# max_dist = max(abs(val-current_min), abs(val-current_max))
-# self.result = max(self.result, max_dist)
-
-# return (current_min, current_max)
-
-# after recursion return self.result
 
 
 class Solution:

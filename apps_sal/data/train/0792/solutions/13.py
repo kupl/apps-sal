@@ -1,4 +1,3 @@
-# cook your dish here
 x = 7 + 10**9
 for i in range(int(input())):
     n, s = input().split()
