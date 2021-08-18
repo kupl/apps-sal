@@ -26,5 +26,3 @@ for i in range(0, a):
             print(l[index], end=' ')
         print(l[index + 1])
     print()
-    #  print l
-# print word[0].split()

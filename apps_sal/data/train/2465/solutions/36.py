@@ -11,7 +11,6 @@ class Solution:
                     res.append(n)
             return res
 
-        # Initial conditions
         table = {
             1: False,
             2: True,
@@ -33,19 +32,5 @@ class Solution:
                     return True
             table[i] = False
             return False
-
-
-#         for n in range(3, N+1):
-#             divs = divisors(n)
-
-#             for d in divs:
-#                 next_num = n - d
-#                 if table[next_num] == False:
-#                     # We want the next number to be a losing number
-#                     table[n] = True
-#                     break
-#             if n not in table:
-#                 # If all next numbers are winning, then this is a losing number
-#                 table[n] = False
 
         return compute(N)

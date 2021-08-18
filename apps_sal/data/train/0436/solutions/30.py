@@ -5,7 +5,6 @@ class Solution:
         f = {1: 1}
 
         def search(n, one, two):
-            # if n == 1 return 1
             if one > ONE_LIMIT:
                 return 1000
             if two > TWO_LIMIT:

@@ -1,5 +1,4 @@
 def between(a, b):
-    # good luck
     between = a + 1
     v = [a]
     while between < b:

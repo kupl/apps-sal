@@ -16,14 +16,12 @@ class Solution:
 
     def minDays(self, n: int) -> int:
         '''
-        # DFS => MLE
         sys.setrecursionlimit(2000000000)
         self.dp = {}
         return self.helper(n)
         '''
 
         '''
-        # BFS
         '''
         q = [n]
         step = 0

@@ -6,7 +6,6 @@ class Solution:
         seen = set()
         while q:
             os, days = q.popleft()
-            # print(os, days)
             if os == 0:
                 return days
             if os % 2 == 0:

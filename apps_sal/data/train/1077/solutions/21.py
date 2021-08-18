@@ -1,4 +1,3 @@
-#!/usr/bin/python
 
 def main():
     t = int(input())

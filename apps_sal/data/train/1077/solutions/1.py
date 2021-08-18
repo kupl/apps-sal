@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sun Dec 23 22:17:11 2012
 
@@ -30,7 +29,6 @@ for i in range(0, T):
         l2.append(temp)
 
         direction = word[0]
-       # l2.append(direction + "on" + l[length-i][])
 
     for sentence in l2:
         print(sentence)

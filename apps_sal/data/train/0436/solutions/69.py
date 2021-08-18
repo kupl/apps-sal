@@ -5,7 +5,7 @@ class Solution:
         res = 0
         while q:
             nq = []
-            for x in q:  # SIMPLE BFS
+            for x in q:
                 if x == 0:
                     return res
                 cur = x

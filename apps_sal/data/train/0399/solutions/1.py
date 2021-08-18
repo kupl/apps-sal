@@ -8,7 +8,6 @@ class Solution:
             return 0
         cipher = dict((str(k + 1), v) for k, v in
                       enumerate("abcdefghijklmnopqrstuvwxyz"))
-        # funhash = dict((str(k),1) for k,v in cipher.items())
         funhash = {"": 1}
 
         def helpRec(s):
@@ -22,6 +21,5 @@ class Solution:
                 r2 = helpRec(s[2:])
             rval = r1 + r2
             funhash[s] = rval
-            # print(s,rval)
             return rval
         return helpRec(s)
