@@ -9,14 +9,7 @@ def f(a, b, alice, bob, un, n, check):
         for i in range(n):
             inf += int(inp[i][1])
     else:
-        # print("alice")
-        # print(*alice)
-        # print("bob")
-        # print(*bob);
-        # print("un")
-        # print(*un)
 
-        # print("H")
         tempb = 0
         j = 0
         for i in range(a):
@@ -26,26 +19,20 @@ def f(a, b, alice, bob, un, n, check):
                 tempb += 1
             j += 1
         i = 0
-        # print("inf",inf,"j",j,"tempb",tempb)
-        # print("d",d)
         while(i < b and tempb < a):
             if d[bob[i][1]] == 0:
-                # (bob[i])
                 inf += bob[i][0]
                 tempb += 1
                 j += 1
             i += 1
-        # print(inf,j)
         if j < 2 * a:
             k = 0
             unn = len(un)
-            # print(i)
             while(j < 2 * a and i < b and k < unn):
                 if (i < b and k < unn):
                     if (d[bob[i][1]] == 1):
                         i += 1
                     else:
-                        # print(bob[i][0],un[k][0])
                         if (bob[i][0] > un[k][0]):
                             inf += bob[i][0]
                             i += 1
@@ -99,13 +86,9 @@ for i in range(n):
 alice.sort(key=fun, reverse=True)
 bob.sort(key=fun, reverse=True)
 un.sort(key=fun, reverse=True)
-# print(*alice);
-# print(*bob);
-# print(*un)
 inf = 0
 
 if a < b:
     f(a, b, alice, bob, un, n, 1)
 else:
-    # print("YO")
     f(b, a, bob, alice, un, n, 0)

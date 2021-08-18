@@ -1,7 +1,5 @@
 __MULTITEST = False
 
-# solve
-
 
 def isSubseq(a, b):
     ptr = 0
@@ -20,7 +18,6 @@ def solve():
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
 
-    # check
     if not isSubseq(a, b):
         print(-1)
     else:
@@ -32,18 +29,13 @@ def solve():
         lenA = len(a)
         lenB = len(b)
 
-        #print(a, b)
-
         ans = 0
 
         pa1 = 0
         pa2 = 1
         pb = 0
         while pb + 1 < lenB:
-            # find surrounded seg in a that has border is b[pb] and b[pb+1]
             maxOfSeg = -3
-
-            #print(pb, pa1, pa2)
 
             while a[pa1] != b[pb]:
                 pa1 += 1
@@ -52,7 +44,6 @@ def solve():
                 maxOfSeg = max(maxOfSeg, a[pa2])
                 pa2 += 1
 
-            # solve that seg
             segLen = pa2 - pa1 - 1
             if segLen >= k:
                 if x > y * k:
@@ -69,13 +60,11 @@ def solve():
                 else:
                     ans += segLen * y
 
-            # after solve, increment pointers
             pb += 1
             pa1 = pa2
         print(ans)
 
 
-# main
 def __starting_point():
     t = (int(input()) if __MULTITEST else 1)
     for tt in range(t):

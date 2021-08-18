@@ -20,7 +20,6 @@ for i in ans:
     Max = i
     break
 
-# print(ans)
 MaxLen = len(ans[Max])
 for i in ans:
     LAns = len(ans[i])

@@ -8,11 +8,9 @@ def __starting_point():
     for i in range(n):
         [x, y] = [int(x) for x in input().split()]
         supporters[x].append(y)
-        # print(x,y)
 
     for x in supporters:
         supporters[x].sort(reverse=True)
-        # print(supporters[x])
 
     t = 0
     res = 0
@@ -47,10 +45,8 @@ def __starting_point():
     supporters[0].sort(reverse=True)
     t = min(x + y, x + z)
     i = 0
-    # print(res)
     while 2 * t > k and i < len(supporters[0]):
         k += 1
-        # print(supporters[0][i])
         res += supporters[0][i]
         i += 1
 

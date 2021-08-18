@@ -2,8 +2,6 @@ from math import floor
 import sys
 input = sys.stdin.readline
 
-#n = int(input())
-#l = list(map(int, input().split()))
 
 '''
 a=[]
@@ -17,9 +15,7 @@ for i in range():
 n = int(input())
 a = list(map(int, input().split()))
 a.sort()
-# print(a)
 ans = 0
 for i in range(1, n):
     ans += a[n - 1 - floor(i / 2)]
-    # print(ans)
 print(ans)

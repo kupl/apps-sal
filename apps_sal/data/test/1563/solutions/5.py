@@ -14,6 +14,3 @@ for i in range(m):
         adj[c[a - 1]].add(c[b - 1])
 
 print(max(adj, key=lambda x: len(adj[x])))
-
-
-# http://codeforces.com/problemset/problem/246/D

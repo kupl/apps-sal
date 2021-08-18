@@ -10,22 +10,16 @@ def main():
     rem = nums[:]
     for i in range(n - 1):
         newRem = []
-        # Remainder is 0
-        # 0 + 0 / 1 + 2 / 2 + 1
         newRem.append(
             ((nums[0] * rem[0]) % mod +
              (nums[1] * rem[2]) % mod +
              (nums[2] * rem[1]) % mod) % mod
         )
-        # Remainder is 1
-        # 0 + 1 / 1 + 0 / 2 + 2
         newRem.append(
             ((nums[0] * rem[1]) % mod +
              (nums[1] * rem[0]) % mod +
              (nums[2] * rem[2]) % mod) % mod
         )
-        # Remainder is 2
-        # 0 + 2 / 1 + 1 / 2 + 0
         newRem.append(
             ((nums[0] * rem[2]) % mod +
              (nums[1] * rem[1]) % mod +

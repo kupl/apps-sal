@@ -7,8 +7,6 @@ d = []
 
 
 def main():
-    #sys.stdin = open('D:\\Sublime\\in.txt', 'r')
-    #sys.stdout = open('D:\\Sublime\\out.txt', 'w')
 
     n = int(sys.stdin.readline().strip('\n'))
 

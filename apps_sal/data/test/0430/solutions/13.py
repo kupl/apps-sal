@@ -1,5 +1,5 @@
 '''
-Codefoces #248 Div. 2
+Codefoces 
 Problem A
 Solver
 '''
