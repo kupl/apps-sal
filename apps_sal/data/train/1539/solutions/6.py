@@ -5,7 +5,6 @@ for i in range(a):
     str1 = input()
     str2 = input()
     str1 = set(str1)
-#   str2 = set(str2)
     for a in str1:
         for b in str2:
             if a == b:

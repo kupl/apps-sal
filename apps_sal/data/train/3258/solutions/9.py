@@ -75,10 +75,6 @@ def transpose(amount, tab):
             add_to_tab(new_tab, column)
             aa = [''] * 6
 
-            #print("UPDATED TAB")
-            # for item in new_tab:
-            #    print(item[-20:])
-
         idx += 1
 
     return new_tab

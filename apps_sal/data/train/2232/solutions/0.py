@@ -5,8 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-# SOLUTION
-
 
 def main():
     n, = read()
@@ -17,12 +15,8 @@ def main():
         curr = lv * (lv + 1)
     return
 
-# HELPERS
-
 
 def read(typ=int):
-    # None: String, non-split
-    # Not None: Split
     input_line = input().strip()
     if typ is None:
         return input_line

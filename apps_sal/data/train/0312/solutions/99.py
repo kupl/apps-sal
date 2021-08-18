@@ -10,10 +10,6 @@ class Solution:
         P = [0]
         for x in A:
             P.append(P[-1] + x)
-        # the largest i for j such that  A[j] - A[i] >= k
-        # [2, -1, 2, 3]  -> [0, 2, 1, 3, 5]
-        # [0, 1, 3, 5]
-        #
         ans = len(A) + 1
         dq = collections.deque([])
         for i, y in enumerate(P):

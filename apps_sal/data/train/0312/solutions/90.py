@@ -11,10 +11,8 @@ class Solution:
             s.append((s[-1] if len(s) else 0) + A[i])
         print(s)
         queue = deque()
-        # queue.append((0,0))
         ans = float('inf')
         for i, e in enumerate(s):
-            # print(queue)
             if len(queue) == 0:
                 queue.append((i, e))
 

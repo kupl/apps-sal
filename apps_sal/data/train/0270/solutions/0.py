@@ -6,12 +6,10 @@ class Solution:
         self.happy_string = ''
 
     def getHappyString(self, n: int, k: int) -> str:
-        # determine starting character
         poss_per_group = 2 ** (n - 1)
         group_num = math.ceil(k / poss_per_group) - 1
         starting_char = ''
 
-        # check to make sure there are at least k happy strings
         if k > poss_per_group * 3:
             return ''
 
@@ -30,7 +28,6 @@ class Solution:
             lower_index = -1
             upper_index = -1
 
-            # 0 = 'a', 1 = 'b', 2 = 'c'
             if char_index == 0:
                 lower_index = 1
                 upper_index = 2

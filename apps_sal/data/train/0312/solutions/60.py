@@ -6,7 +6,7 @@ class Solution:
             cur += a
             while d and cur - d[0][1] >= K:
                 res = min(res, i + 1 - d.popleft()[0])
-            while d and cur <= d[-1][1]:  # new i make the further subarray length shorter and sum bigger
+            while d and cur <= d[-1][1]:
                 d.pop()
             d.append([i + 1, cur])
         return res if res < len(A) + 1 else -1

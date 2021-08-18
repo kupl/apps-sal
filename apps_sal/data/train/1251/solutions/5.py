@@ -15,7 +15,7 @@ def main():
     while t:
         t -= 1
         dist = 0
-        v = [0] * n  # visited
+        v = [0] * n
         route = input().split()
         if route[0] == '1':
             if route[-1] in city:

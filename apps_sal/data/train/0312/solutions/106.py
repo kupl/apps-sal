@@ -17,8 +17,6 @@ class Solution:
 
         for i in range(len(pref)):
 
-            # print(dq)
-
             while dq and pref[i] <= pref[dq[-1]]:
 
                 dq.pop(-1)

@@ -9,8 +9,6 @@ class Solution:
         for x in A:
             p.append(p[-1] + x)
 
-        # print(p)
-
         ans = n + 1
         q = collections.deque()
 
@@ -22,6 +20,5 @@ class Solution:
                 ans = min(ans, key - q.popleft())
 
             q.append(key)
-            # print(q)
 
         return ans if ans < n + 1 else -1

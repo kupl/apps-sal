@@ -15,5 +15,4 @@ class Solution:
             while dq and pre[dq[0]] + K <= pre[i]:
                 ans = min(ans, i - dq.popleft())
             dq.append(i)
-        # print(ans)
         return (ans if ans < l + 1 else -1)

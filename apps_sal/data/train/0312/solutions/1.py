@@ -1,5 +1,3 @@
-# The solution looks good,
-# also: https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/discuss/143726/C%2B%2BJavaPython-O(N)-Using-Deque
 class Solution:
     def shortestSubarray(self, A: List[int], K: int) -> int:
         queue = collections.deque([(0, -1)])

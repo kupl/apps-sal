@@ -18,8 +18,6 @@ class Solution:
                 dq.pop()
             dq.append(i)
 
-            # This loop is used because if there is [2,-1,2] and K=3 for cums=[0,2,1,3] we know that from 2 to 1 the value decreased from 1 to x increased so the min will be from 1 to x rather than 2 to x so eliminated(because length b/w 1 to x < 2 to x)
-
         if min1 == float('inf'):
             return -1
         return min1

@@ -7,10 +7,6 @@ class Solution:
 
         min_len = sys.maxsize
 
-        # 0 2 1 3 7
-
-        # 0 1 3 7
-
         q = collections.deque([])
         for i in range(len(preSum)):
             while q and preSum[q[-1]] > preSum[i]:

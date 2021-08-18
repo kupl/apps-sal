@@ -18,7 +18,6 @@ class Solution:
                 ansr = min(ansr, i - queue[0])
                 queue.popleft()
 
-            # shrink the window from left
             while queue and suma[i] <= suma[queue[-1]]:
                 queue.pop()
 

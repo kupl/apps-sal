@@ -8,10 +8,10 @@ class Solution:
 
         res = float('inf')
         for i in range(n + 1):
-            while q and B[i] < B[q[-1]]:   # maintain increasing Manatonic queue
+            while q and B[i] < B[q[-1]]:
                 q.pop()
 
-            while q and B[i] - B[q[0]] >= K:   # find the nearest previous element with sum at least K
+            while q and B[i] - B[q[0]] >= K:
                 res = min(res, i - q.popleft())
 
             q.append(i)
