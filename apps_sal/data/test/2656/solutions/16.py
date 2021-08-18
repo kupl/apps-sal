@@ -1,5 +1,3 @@
-# 写経
-# https://atcoder.jp/contests/abc171/submissions/14574647
 from functools import reduce
 
 

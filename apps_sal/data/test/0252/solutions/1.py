@@ -72,9 +72,6 @@ def main():
             right[i] = st[-1]
         st.append(i)
 
-    #print(left, right, p)
-    #
-
     if max(a) <= 0:
         print(0)
         return None
@@ -91,7 +88,6 @@ def main():
             lminn = min(lminn, 0)
 
         s = rmaxx - lminn
-        #print(i, s, a[i], l, r)
 
         ret = max(ret, s - a[i])
 

@@ -6,11 +6,9 @@ cumsum = [0]
 for i in map(int, input().split()):
     tmp += i
     cumsum.append(tmp)
-# print(alist,cumsum)
 total = 0
 for end in range(n):
     if cumsum[end + 1] - cumsum[0] >= k:
-        # 2分探索
         tmpstart = 0
         tmpend = end
         tmp = (tmpstart + tmpend) // 2

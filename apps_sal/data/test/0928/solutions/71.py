@@ -1,7 +1,6 @@
 n, k = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
-# 尺取り法
 cnt = 0
 ans = 0
 right = -1

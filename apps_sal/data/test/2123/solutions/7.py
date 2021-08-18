@@ -12,5 +12,4 @@ for i in range(0, n):
     else:
         c += abs(e + t)
         e = 0
-    #print (t,e,c)
 print(c)

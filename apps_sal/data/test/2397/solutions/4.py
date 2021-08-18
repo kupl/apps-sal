@@ -9,7 +9,6 @@ for a in A[::-1]:
     SUM.append(SUM[-1] + a)
 
 SUM = SUM[::-1]
-# print(SUM)
 
 ANS = SUM[0]
 ANS += sum(sorted(SUM[1:-1], reverse=True)[:k - 1])

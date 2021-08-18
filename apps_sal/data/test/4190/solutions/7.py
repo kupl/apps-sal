@@ -13,21 +13,17 @@ def main():
         cnt[val] += 1
 
     all_set = sorted(set(b))
-    # print(all_set)
     n_all_set = len(all_set)
 
     nextL = [0] * n
     nextR = [0] * n
     for i in range(1, n_all_set):
         nextL[all_set[i]] = all_set[i - 1]
-        # print('l',nextL)
     for i in range(n_all_set - 1):
         nextR[all_set[i]] = all_set[i + 1]
-        # print('r',nextR)
 
     nextR[all_set[-1]] = all_set[0]
     nextL[all_set[0]] = all_set[-1]
-    # print(nextR,nextL)
 
     res = []
 
@@ -57,7 +53,6 @@ def main():
         if cnt[cand_val] == 0:
             nextL[nextR[cand_val]] = nextL[cand_val]
             nextR[nextL[cand_val]] = nextR[cand_val]
-            # print(nextR,nextL)
 
     print(*res)
 

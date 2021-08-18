@@ -1,31 +1,15 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[19]:
 
 
 word = list(input())
 
 
-# In[20]:
-
-
 n = len(word)
-
-
-# In[21]:
 
 
 emptyword = []
 
 
-# In[22]:
-
-
 popcount = 0
-
-
-# In[23]:
 
 
 for i in range(n):
@@ -39,13 +23,7 @@ for i in range(n):
             emptyword.append(word[i])
 
 
-# In[24]:
-
-
 if popcount % 2 == 0:
     print('No')
 else:
     print('Yes')
-
-
-# In[ ]:

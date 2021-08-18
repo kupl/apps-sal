@@ -13,7 +13,6 @@ for i in range(n):
 ans = 0
 ansarr = []
 for i in list(dict1.keys()):
-    # print(i,len(dict1[i]))
     if(len(dict1[i]) > ans):
         arr2 = []
         for j in range(len(dict1[i])):

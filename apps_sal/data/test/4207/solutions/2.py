@@ -1,5 +1,3 @@
-#!/usr/bin/pypy
-# -*- coding: utf-8 -*-
 
 from collections import defaultdict
 

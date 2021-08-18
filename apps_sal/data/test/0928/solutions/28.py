@@ -1,11 +1,3 @@
-#import math
-#import itertools
-#import numpy as np
-#from collections import deque
-# sys.setrecursionlimit(10 ** 6)
-#MOD = 10 ** 9 + 7
-#INF = 10 ** 9
-#PI = 3.14159265358979323846
 
 def INT(): return int(input())
 def INTM(): return map(int, input().split())
@@ -32,9 +24,7 @@ def do():
                 low = mid
             else:
                 high = mid
-        # print(low)
         ans += n - low
-    # print(suma)
     print(ans)
 
 

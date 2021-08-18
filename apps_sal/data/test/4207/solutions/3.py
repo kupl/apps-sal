@@ -19,7 +19,6 @@ for i in range(n):
         if b[i] == 0:
             w += 1
 mx = 0
-# print(d)
 for c in d:
     x = d[c]
 
