@@ -3,10 +3,6 @@ import math
 n, k = [int(i) for i in input().split()]
 x = [int(i) for i in input().split()]
 
-# ==================================================-
-# 二分探索
-# functionを満たす,search_listの最大の要素を出力
-# 【注意点】searchリストの初めの方はfunctionを満たし、後ろに行くにつれて満たさなくなるべき
 sys.setrecursionlimit(10**9)
 
 

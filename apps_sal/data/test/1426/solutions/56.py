@@ -6,7 +6,6 @@ for i in range(m):
     for j in range(1, 4):
         p = j + 3 * u - 3
         q = (j % 3) + 3 * v - 2
-        #print("{} -> {}".format(p, q))
         adjacent_list[p].append(q)
 s, t = list(map(int, input().split()))
 

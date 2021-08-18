@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 
 [s, w] = input().split()
 s = int(s)

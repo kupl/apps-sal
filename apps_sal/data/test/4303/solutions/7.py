@@ -7,7 +7,6 @@ from itertools import combinations, product
 import numpy as np
 from collections import Counter, deque, defaultdict
 
-# sys.setrecursionlimit(10 ** 6)
 MOD = 10 ** 9 + 7
 INF = 10 ** 9
 PI = 3.14159265358979323846

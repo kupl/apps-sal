@@ -3,7 +3,6 @@ from collections import deque
 
 
 def main():
-    # 入力
     readline = stdin.readline
     n, m = map(int, readline().split())
     G = [[] for _ in range(n * 3)]
@@ -15,7 +14,6 @@ def main():
     s, t = map(lambda x: int(x) - 1, readline().split())
     s *= 3
     t *= 3
-    # bfs
     d = deque([s])
     flags = [-1] * (3 * n)
     flags[s] = 0

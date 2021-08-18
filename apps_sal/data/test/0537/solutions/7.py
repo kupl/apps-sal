@@ -1,6 +1,5 @@
 
 import sys
-# sys.stdin=open("data.txt")
 input = sys.stdin.readline
 
 n, k = list(map(int, input().split()))

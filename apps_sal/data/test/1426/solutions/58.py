@@ -22,7 +22,6 @@ def main():
         x, d = q.popleft()
         for y in G[x]:
             if D[y * 3 + (d + 1) % 3] < 0:
-                # G2[x*3 + d].add(y)
                 q.append((y, d + 1))
                 D[y * 3 + (d + 1) % 3] = d + 1
 

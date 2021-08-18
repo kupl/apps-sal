@@ -6,7 +6,7 @@ for i in range(M):
     a, b = map(int, input().split())
     A[a - 1].append(b - 1)
 S, T = map(int, input().split())
-sys.setrecursionlimit(10**7)  # 再帰制限のとっぱらい
+sys.setrecursionlimit(10**7)
 D = [[-1] * 3 for i in range(N)]
 
 

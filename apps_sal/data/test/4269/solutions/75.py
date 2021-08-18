@@ -1,5 +1,3 @@
-# A - Security
-# https://atcoder.jp/contests/abc131/tasks/abc131_a
 
 s = input()
 

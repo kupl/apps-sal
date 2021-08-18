@@ -18,7 +18,6 @@ def main(n, k, x):
         ans = min(abs(x[0]), abs(x[idx])) * 2 + max(abs(x[0]), abs(x[idx]))
     for i in range(k, n):
         temp = 0
-        # print(ans)
         if x[i - k + 1] >= 0:
             temp = x[i]
         elif x[i] <= 0:

@@ -20,7 +20,6 @@ while q:
     t += 1
     for x in to[a]:
         q.append((x, t))
-    # print(q)
 
 
 if v[T][0] == -1:

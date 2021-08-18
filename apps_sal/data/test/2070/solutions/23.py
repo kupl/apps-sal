@@ -29,26 +29,3 @@ for letter in encounters:
 
 
 print(count)
-
-
-# partial_sums = [0]
-#
-# for c in s:
-#     partial_sums.append(partial_sums[-1] + score_dict[c])
-#
-# partial_sums = partial_sums[1:]
-#
-# encounters = {letter: [] for idx, letter in enumerate(string.ascii_lowercase)}
-#
-# count = 0
-#
-# for idx, c in enumerate(s):
-#
-#     for evt_idx in encounters[c]:
-#         score = partial_sums[idx] - partial_sums[evt_idx] - score_dict[c]
-#         if score == 0:
-#             count += 1
-#
-#     encounters[c].append(idx)
-
-# print(count)

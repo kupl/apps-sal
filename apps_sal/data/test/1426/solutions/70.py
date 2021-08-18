@@ -6,7 +6,6 @@ s, t = list(map(int, input().split()))
 graph = [[] for _ in range(n)]
 for v in uv:
     graph[v[0] - 1].append(v[1] - 1)
-# print(graph)
 s -= 1
 t -= 1
 
@@ -27,5 +26,4 @@ while q:
         if is_checked[i][(cnt + 1) % 3] == 0:
             q.append([i, cnt + 1])
             is_checked[i][(cnt + 1) % 3] = 1
-# print(is_checked)
 print(ans)

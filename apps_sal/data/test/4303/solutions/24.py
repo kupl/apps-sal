@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 n, k, *x = list(map(int, open(0).read().split()))
 ans = 10**18
 neg = [i for i in x if i < 0] + [0]

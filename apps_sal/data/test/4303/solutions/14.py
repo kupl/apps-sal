@@ -19,6 +19,5 @@ for i in range(L, R - K + 2):
         t = r
     else:
         t = min(abs(l), r) * 2 + max(abs(l), r)
-    # print(X[i:i+K],t)
     ans = min(ans, t)
 print(ans)

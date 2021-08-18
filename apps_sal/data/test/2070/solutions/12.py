@@ -14,14 +14,12 @@ def main():
         if i:
             num[i] += num[i - 1]
         pos[ord(s[i]) - ord('a')].append(i)
-    #print(pos, num)
     for i in range(26):
         if len(pos[i]) > 1:
             for j in range(len(pos[i])):
                 count += tr[i][num[pos[i][j] - 1]]
                 tr[i][num[pos[i][j]]] += 1
     print(count)
-    #print(a, s)
 
 
 def __starting_point():
