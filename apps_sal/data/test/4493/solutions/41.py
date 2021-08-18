@@ -1,4 +1,4 @@
-from sys import stdin, stdout  # only need for big input
+from sys import stdin, stdout
 
 
 def solve():

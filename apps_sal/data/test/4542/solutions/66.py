@@ -1,7 +1,6 @@
 from itertools import groupby
 
 
-# RUN LENGTH ENCODING str -> tuple
 def runLengthEncode(S: str):
     grouped = groupby(S)
     res = []
@@ -10,7 +9,6 @@ def runLengthEncode(S: str):
     return res
 
 
-# RUN LENGTH DECODING tuple -> str
 def runLengthDecode(L: "list[tuple]"):
     res = ""
     for c, n in L:
@@ -18,7 +16,6 @@ def runLengthDecode(L: "list[tuple]"):
     return res
 
 
-# RUN LENGTH ENCODING str -> list
 def rle_list(S: str):
     grouped = groupby(S)
     res = ""

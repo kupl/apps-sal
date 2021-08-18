@@ -1,5 +1,4 @@
 import sys
-# sys.setrecursionlimit(200000)
 input = sys.stdin.readline
 n, m = map(int, input().split())
 a = list(map(int, input().split()))

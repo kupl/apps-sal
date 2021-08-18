@@ -1,4 +1,3 @@
-# codeforces_1006_B
 n, k = [int(e) for e in input().split(" ")]
 L = [int(e) for e in input().split(" ")]
 M = L[:]

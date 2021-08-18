@@ -36,7 +36,6 @@ for _ in range(T):
                 a2 += 1
             if(s[j] != rq3[j - i]):
                 a3 += 1
-        # print(a1,a2,a3,rq1,rq2,rq3)
 
         ans = min(ans, min(a1, a2, a3))
 

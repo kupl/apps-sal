@@ -16,8 +16,6 @@ def input_strings():
     return input().split()
 
 
-# Solution written by john21
-
 n = int(input())
 
 a = ceil(sqrt(n))

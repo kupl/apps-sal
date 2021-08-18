@@ -1,13 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 N, K = list(map(int, input().split()))
-
-
-# In[5]:
 
 
 mod = 10**9 + 7
@@ -23,9 +16,6 @@ def nCr(N, R, mod):
     return res
 
 
-# In[7]:
-
-
 for i in range(1, K + 1):
     if N - K + 1 < i:
         print((0))
@@ -33,6 +23,3 @@ for i in range(1, K + 1):
     y = nCr(N - K + 1, i, mod)
     y *= nCr(K - 1, i - 1, mod)
     print((y % mod))
-
-
-# In[ ]:

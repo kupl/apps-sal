@@ -1,15 +1,15 @@
 def f(t):
-    n = t.count('#') - 1
-    k = t.rfind('#') + 1
-    t = t.replace('#', ')')
-    t = [2 * ord(i) - 81 for i in t]
+    n = t.count('
+    k=t.rfind('
+    t=t.replace('
+    t=[2 * ord(i) - 81 for i in t]
 
-    a = b = c = 0
+    a=b=c=0
     for i in t[k:]:
         b -= i
         c -= i
         if c < 0:
-            c = 0
+            c=0
     if c > 0:
         return -1
     for i in t[: k]:

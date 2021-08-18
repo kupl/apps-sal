@@ -1,4 +1,3 @@
-# Anuneet Anand
 q = int(input())
 while q:
     a, b, c = list(map(int, input().split()))

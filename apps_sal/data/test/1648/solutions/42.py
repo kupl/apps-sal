@@ -20,9 +20,7 @@ def main():
         return numer // denom % modulo
 
     for i in range(1, k + 1):
-        # i分割する方法
         a = cmb(k - 1, i - 1)
-        # 赤のボールを分割する方法
         b = cmb(n - k + 1, i)
         print(a * b % modulo)
 
