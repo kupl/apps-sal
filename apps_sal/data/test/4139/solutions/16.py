@@ -18,12 +18,9 @@ q = [3, 7, 5]
 count = 0
 
 while len(q) > 0:
-    # print(q)
     front = q.pop(0)
-    # print('front:', front, end=' ')
     if len(str(front)) >= 3 and is_753(front):
         count += 1
-    # create next
     for i in [3, 5, 7]:
         cand = int(str(i) + str(front))
         if cand <= n:

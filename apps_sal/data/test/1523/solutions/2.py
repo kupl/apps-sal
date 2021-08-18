@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/1075/B
 
 n, k = list(map(int, input().split()))
 ideal = list(map(str, input().split()))

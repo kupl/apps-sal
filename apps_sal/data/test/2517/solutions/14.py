@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 import itertools
 
@@ -31,13 +30,13 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    M = int(next(tokens))  # type: int
-    R = int(next(tokens))  # type: int
-    r = [int(next(tokens)) for _ in range(R)]  # type: "List[int]"
-    A = [int()] * (M)  # type: "List[int]"
-    B = [int()] * (M)  # type: "List[int]"
-    C = [int()] * (M)  # type: "List[int]"
+    N = int(next(tokens))
+    M = int(next(tokens))
+    R = int(next(tokens))
+    r = [int(next(tokens)) for _ in range(R)]
+    A = [int()] * (M)
+    B = [int()] * (M)
+    C = [int()] * (M)
     for i in range(M):
         A[i] = int(next(tokens))
         B[i] = int(next(tokens))

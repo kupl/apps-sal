@@ -28,7 +28,6 @@ def warshall(d):
                     d[i][j] = d[i][k] + d[k][j]
 
 
-# d = floyd_warshall(d)
 warshall(d)
 
 

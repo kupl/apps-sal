@@ -19,5 +19,4 @@ def solve2(x):
 
 
 x = input()
-# print(solve1(x))
 print(solve2(x))

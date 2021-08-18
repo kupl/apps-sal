@@ -1,11 +1,11 @@
 import itertools as it
 n, m, r = map(int, input().split())
 ll = list(map(int, input().split()))
-d = [[float("inf") for _ in range(n)] for _ in range(n)]  # 各頂点から各頂点への最小コスト
-for i in range(m):  # 重複なしver
+d = [[float("inf") for _ in range(n)] for _ in range(n)]
+for i in range(m):
     a, b, t = map(int, input().split())
     d[a - 1][b - 1] = t
-    d[b - 1][a - 1] = t  # 有向グラフの場合消す
+    d[b - 1][a - 1] = t
 for i in range(n):
     d[i][i] = 0
 for k in range(n):

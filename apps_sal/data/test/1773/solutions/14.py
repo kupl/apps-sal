@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
@@ -26,4 +24,3 @@ else:
     ans = sum(N.values()) + sum(buf[:len(N) + 1])
 print(ans)
 finish = time.time()
-#print(finish - start)

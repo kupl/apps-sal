@@ -5,7 +5,6 @@ from scipy.sparse.csgraph import csgraph_from_dense
 
 
 def main():
-    # 入力
     readline = stdin.readline
     inf = 10**9
     n, m, r = map(int, readline().split())
@@ -18,12 +17,10 @@ def main():
         G[a][b] = min(G[a][b], c)
         G[b][a] = min(G[b][a], c)
 
-    # ワーシャルフロイド
     G = csgraph_from_dense(G, null_value=10**9)
     li = floyd_warshall(G)
     li = [list(map(int, li[i])) for i in range(n)]
 
-    # 順列全探索
     ans = inf
     for p in permutations(targets, r):
         tmp = 0
