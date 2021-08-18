@@ -1,7 +1,5 @@
-# cook your dish here
 
 t = int(input())
-#d = {"1":1, "2":3, "3":3, "4":3, "5":3, "6":3, "7":4, "8":3, "9":4, "0":1}
 for rep in range(t):
     p = 1
     s = input()

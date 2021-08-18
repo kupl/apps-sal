@@ -1,5 +1,3 @@
-# https://www.youtube.com/watch?v=N7womGmLXh8
-# https://www.youtube.com/watch?v=pD3cHFNyW2I
 class Solution:
     def maxLength(self, arr: List[str]) -> int:
         self.maxLen = 0

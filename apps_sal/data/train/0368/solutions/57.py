@@ -8,7 +8,6 @@ class Solution:
         sums = []
         temp = [0] * len(satisfaction)
         for i in range(len(satisfaction), 0, -1):
-            #temp = [a+b for a,b in zip(temp,[0]*(i-1)+satisfaction[i-1:] )]
             temp = np.add(temp, [0] * (i - 1) + satisfaction[i - 1:])
             sums.append(np.sum(temp))
 

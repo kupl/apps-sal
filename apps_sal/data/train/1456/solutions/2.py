@@ -13,12 +13,8 @@ def getFirstSetBitPos(n):
 def xpr(n):
     if IsPowerOfTwo(n):
         return (-1, -1)
-    # Has the first set bit from lsb
     index = getFirstSetBitPos(n)
-    # print("Index : ", index)
-    # Convert the number to binary string
     binary_n_string = str(bin(n))[2:]
-    # print(binary_n_string)
     a = ""
     b = ""
     i = 0
@@ -56,13 +52,6 @@ t = int(input())
 while t > 0:
     l, r = list(map(int, input().split()))
     sumt = 0
-    # dict1 = defaultdict(int)
-    # for i in range(l, r+1):
-    #   val = xpr(i)
-    #   if val[1] != -1 and i%2 == 0:
-    #       dict1[val[1]] += 1
-    #   # print(i, val)
-    #   sumt += val[1]
 
     print(glr(r) - glr(l - 1))
     t = t - 1

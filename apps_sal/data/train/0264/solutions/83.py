@@ -21,7 +21,6 @@ class Solution:
 
                 if val not in dct.keys():
                     if self.is_unique(t):
-                        # print(t)
                         arr.append(t)
                         dct[val] = len(val)
                         maxVal = max(maxVal, len(val))

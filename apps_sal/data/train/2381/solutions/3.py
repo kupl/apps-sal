@@ -2,8 +2,6 @@ from bisect import bisect_left, bisect_right
 
 
 def go():
-    # n = int(input())
-    # a = list(map(int, input().split()))
     s = input()
     prev = -1
     mx = 0

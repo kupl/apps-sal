@@ -9,9 +9,6 @@ class Solution:
                     self.max = max(self.max, len(chars))
             else:
                 helper(idx + 1, chars)
-                # temp =
-                # for c in arr[idx]:
-                #     chars.append(c)
                 helper(idx + 1, chars + list(arr[idx]))
 
         helper(0, [])

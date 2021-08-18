@@ -1,4 +1,3 @@
-# Ever so slightly computationally inefficient method :)
 
 def mutations(s):
     def flip(c):

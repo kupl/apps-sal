@@ -1,4 +1,3 @@
-# cook your dish here
 def ans(p):
     pika = (p * (p + 1)) // 2
     tmep = 1

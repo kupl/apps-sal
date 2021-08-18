@@ -15,7 +15,6 @@ class Solution:
                     s.add(ch)
 
                 if not invalid:
-                    # print(string)
                     ans = max(ans, len(string))
                 return
 

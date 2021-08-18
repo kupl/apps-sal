@@ -9,11 +9,9 @@ class Solution:
         return self.mlen
 
     def backtrack(self, pos):
-        # print(self.tmp,self.len)
         if pos == len(self.arr):
 
             if self.len > self.mlen:
-                # print(self.len,self.mlen)
                 self.mlen = self.len
             return
         lb = len(self.tmp)
@@ -25,7 +23,5 @@ class Solution:
             self.backtrack(pos + 1)
             self.len -= l
 
-        # for i in range(l):
-        #     self.tmp.pop()
         self.tmp = self.tmp[:-l]
         self.backtrack(pos + 1)

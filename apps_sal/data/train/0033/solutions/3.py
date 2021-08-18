@@ -1,14 +1,11 @@
 import sys
 import random
-# import numpy as np
 import math
 import copy
 from heapq import heappush, heappop, heapify
 from functools import cmp_to_key
 from bisect import bisect_left, bisect_right
 from collections import defaultdict, deque, Counter
-# sys.setrecursionlimit(1000000)
-# input aliases
 input = sys.stdin.readline
 def getS(): return input().strip()
 def getN(): return int(input())
@@ -54,7 +51,6 @@ def main():
 
 def __starting_point():
     main()
-    # solve()
 
 
 __starting_point()

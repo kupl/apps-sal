@@ -18,7 +18,6 @@ class Solution:
             for sat in satisfaction:
                 if sat < 0:
                     badDishes.append(sat)
-            # print(badDishes)
             for bad in badDishes:
                 satisfaction.remove(bad)
                 print(satisfaction)

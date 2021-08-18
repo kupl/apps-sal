@@ -12,7 +12,6 @@ class Solution:
                 set_2 = set(list(arr[ix_2]))
                 if len(set_1) == len(arr[ix_1]) and len(set_2) == len(arr[ix_2]) and len(set_1.intersection(set_2)) == 0:
                     self.m[ix_1].append(ix_2)
-                    # self.m[ix_2].append(ix_1)
 
         self.ans = 0
         for ix in range(len(arr)):
