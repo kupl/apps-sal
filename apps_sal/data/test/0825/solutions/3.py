@@ -1,7 +1,5 @@
 import collections
 
-# https://note.nkmk.me/python-prime-factorization/
-
 
 def prime_factorize(n):
     a = []

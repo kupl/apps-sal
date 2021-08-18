@@ -44,7 +44,3 @@ def solve():
 
 
 print(solve())
-
-# q = nextInt()
-# for i in range(q):
-#     print(YN(solve()))

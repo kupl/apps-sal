@@ -28,10 +28,8 @@ elif n % 2 == 0:
 else:
     ans = 1
     while not is_prime(n):
-        # print(max_p(n))
         if n % 2:
             n = n - max_p(n)
-            # print(n)
             ans += 1
         else:
             ans += 1

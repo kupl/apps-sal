@@ -31,7 +31,6 @@ def bfs(graph, parent, n):
     return ans
 
 
-# main starts
 n = int(stdin.readline().strip())
 graph = defaultdict(list)
 parent = -1
@@ -41,7 +40,6 @@ for i in range(1, n + 1):
         parent = i
         continue
     graph[node].append([i, key])
-# print(graph)
 ans = bfs(graph, parent, n)
 ans.sort()
 if len(ans) > 0:

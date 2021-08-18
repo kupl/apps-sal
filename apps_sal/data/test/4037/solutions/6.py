@@ -1,15 +1,8 @@
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 import math
 import copy
 
-#T = int(input())
-#N = int(input())
-# print(N)
 N, r = [int(x) for x in stdin.readline().split()]
-#arr = [int(x) for x in stdin.readline().split()]
 
 visited = [0] * N
 
@@ -34,8 +27,6 @@ for i in range(pos):
     start = 0
     gain = -50000
     for j in range(N):
-        # find available and largest gain
-        # if gain tie, find largest start r
         if visited[j] == 1 or b[j] < 0:
             continue
 
@@ -54,7 +45,6 @@ for i in range(pos):
         visited[idx] = 1
         r += b[idx]
         valid = i + 1
-        # print(idx,r)
 
 dp[r] = valid
 tmp = []
@@ -65,7 +55,6 @@ for i in range(N):
 
 tmp.sort(key=lambda e: (e[0] + e[1], e[0]), reverse=True)
 
-# print(dp)
 for i in range(len(tmp)):
     dp_tmp = copy.deepcopy(dp)
 
@@ -77,11 +66,9 @@ for i in range(len(tmp)):
             else:
                 dp_tmp[new_r] = dp[threshold] + 1
 
-    # print(dp_tmp)
     dp = dp_tmp
 
 res = 0
-# print(dp)
 for key in dp:
     if key >= 0:
         res = max(res, dp[key])

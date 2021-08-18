@@ -10,7 +10,6 @@ for i in range(1, n + 1):
     graph[p].append(i)
     parent_respect[i] = r
 
-# print(graph)
 result = []
 
 for i in range(1, n + 1):
