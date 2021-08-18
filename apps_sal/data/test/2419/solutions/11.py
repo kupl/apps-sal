@@ -7,7 +7,6 @@ import bisect
 import string
 import math
 import time
-#import random
 
 
 def I():
@@ -69,8 +68,6 @@ inf = float('inf')
 l_alp = string.ascii_lowercase
 u_alp = string.ascii_uppercase
 
-# sys.setrecursionlimit(10**5)
-
 
 def input(): return sys.stdin.readline().rstrip()
 
@@ -91,10 +88,7 @@ for _ in range(t):
     nb = max(int((2 * (b - a))**0.5) - 3, 0)
 
     for i in range(nb, nb * 2 + 100):
-        #show(a+i*(i-1)//2,b , (a+i*(i-1)//2-b)%2,i)
         if a + i * (i + 1) // 2 >= b and (a + i * (i + 1) // 2 - b) % 2 == 0:
             print(i)
 
             break
-
-    # print(ans)

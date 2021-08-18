@@ -105,9 +105,6 @@ while t > 0:
                 if r1 >= m:
                     ans = 1
 
-                # if i==0 and j==0:
-                #    print(str(r1)+" "+str(p1)+" "+str(r)+" "+str(p))
-
                 c = i
                 d = j
                 r = 0

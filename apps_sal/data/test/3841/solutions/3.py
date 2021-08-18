@@ -1,5 +1,3 @@
-# python3
-# utf-8
 
 p, k = (int(x) for x in input().split())
 
@@ -9,7 +7,6 @@ curr_pow = 1
 curr_k_pow = 1
 i = 0
 while p2 > 0:
-    # print(p2)
     curr_pow += 1
     curr_k_pow *= k
     if curr_pow % 2 == 1:

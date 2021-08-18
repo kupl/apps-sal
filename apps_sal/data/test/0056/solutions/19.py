@@ -53,7 +53,6 @@ def main():
                 opyramid[y - 1][z] -= max(opyramid[y - 1][z] - 1, 0) * 0.5
             opyramid[y][y] += max(opyramid[y - 1][y - 1] - 1, 0)
             opyramid[y - 1][y - 1] -= max(opyramid[y - 1][y - 1] - 1, 0)
-        # print(opyramid)
         count = 0
         for x in range(n):
             for y in opyramid[x]:
@@ -61,36 +60,6 @@ def main():
                     count += 1
         countarr.append(count)
     print(countarr[k])
-
-    # arr = [
-    #     [1],
-    #     [0.5, 0.5],]
-    # for x in range(3, 11):
-    #     na = []
-    #     for y in range(x - 2):
-    #         na.append(arr[-1][y]*0.5 + arr[-1][y + 1]*0.5)
-    #     arr.append([arr[-1][0] * 0.5] + na + [arr[-1][-1] * 0.5])
-    # print(arr)
-    # #     [1, 2, 1],
-    # #     [1, 3, 3, 1],
-    # #     [1, 4, 6, 4, 1],
-    # #     [1, 5, 10, 10, 5, 1],
-    # #     [1, 6, 15, 20, 15, 6, 1],
-    # #     [1, 7, 21, 35, 35, 21, 7, 1],
-    # #     [1, 8, 28, 56, 70, 56, 28, 8, 1]]
-
-    # # arr = [
-    # #     [1],
-    # #     [1, 1],
-    # #     [1, 2, 1],
-    # #     [1, 3, 3, 1],
-    # #     [1, 4, 6, 4, 1],
-    # #     [1, 5, 10, 10, 5, 1],
-    # #     [1, 6, 15, 20, 15, 6, 1],
-    # #     [1, 7, 21, 35, 35, 21, 7, 1],
-    # #     [1, 8, 28, 56, 70, 56, 28, 8, 1]]
-
-    # # print(arr)
 
 
 main()

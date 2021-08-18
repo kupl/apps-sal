@@ -23,8 +23,6 @@ for f in FACT:
         ANS_f += n // x
         x *= f
 
-    # print(f,ANS_f)
-
     ANS = min(ANS, ANS_f // FACT[f])
 
 print(ANS)

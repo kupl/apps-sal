@@ -12,7 +12,7 @@ def gcd(a, b):
 g = m[0][1]
 for i in range(2, n):
     g = gcd(g, m[0][i])
-b = [m[0][i] / g for i in range(1, n)]  # a2, a3,.., an jest wielokrotnoscia b
+b = [m[0][i] / g for i in range(1, n)]
 kw = math.sqrt(m[1][2] / (b[0] * b[1]))
 c = [b[i] * kw for i in range(n - 1)]
 a0 = m[0][1] / c[0]

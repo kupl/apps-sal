@@ -20,8 +20,6 @@ for i in s:
     sumx.append(sx)
     sumy.append(sy)
 
-#print("sxy",sx, sy)
-
 
 def check(mid):
     i = 0
@@ -30,11 +28,9 @@ def check(mid):
         dy = sumy[i + mid] - sumy[i]
         cx = sx - dx
         cy = sy - dy
-        # print("cxy",cx,cy)
         gdx = x - cx
         gdy = y - cy
         t = abs(gdx) + abs(gdy)
-        # print("t",t)
         if(t % 2 == mid % 2 and t <= mid):
             return True
         i += 1
@@ -46,12 +42,10 @@ lo = 0
 mid = (hi + lo) // 2
 while(hi - lo > 1):
     mid = (hi + lo) // 2
-    #print("mid", mid)
     if(check(mid)):
         hi = mid
     else:
         lo = mid
-# print(lo)
 if(check(lo)):
     print(lo)
 elif(check(mid)):

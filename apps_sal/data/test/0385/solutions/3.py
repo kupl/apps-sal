@@ -25,9 +25,7 @@ str = input().strip()
 ops = input().strip()
 pairs = preproc(str, leng)
 flags = [-1] * leng
-#print(leng, op_num, cursor, str, ops, pairs)
 for i in ops:
-    #print(i, cursor, flags)
     if i == 'R' or i == 'L':
         cursor = {
             'R': (lambda cursor=cursor, flags=flags: cursor + 1 if flags[cursor + 1] == -1 else flags[cursor + 1] + 1),

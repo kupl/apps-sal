@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 for _ in range(int(input())):
     n = int(input())
     a, b, c = 0, 0, 0

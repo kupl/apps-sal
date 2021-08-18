@@ -13,9 +13,6 @@ def negaternary(i, k):
 
 p, k = map(int, input().split())
 ans = negaternary(p, k)
-# while (p):
-# 	ans.append(p % (-k))
-# 	p //= (-k)
 while(ans[-1] == 0):
     ans = ans[::-1]
 print(len(ans))

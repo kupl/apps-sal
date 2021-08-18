@@ -23,7 +23,6 @@ def memo(row, z, o):
     if(o > 1):
         dp[z][o] += (o * (o - 1) // 2) * (memo(row + 1, z, o - 2))
         dp[z][o] %= mod
-    # print(row,z,o,dp[z][o])
     dp[z][o] += 1
     dp[z][o] %= mod
     return dp[z][o] % mod
@@ -34,7 +33,6 @@ a = []
 for i in range(m):
     s = list(input())
     a.append(s)
-# print(a)
 ct = [0 for i in range(n)]
 for i in range(m):
     for j in range(n):
