@@ -10,7 +10,6 @@ class Solution:
                 p = p[c]
             p['$'] = full
 
-        # print(trie)
         ans = []
         for f in folder:
             p = trie

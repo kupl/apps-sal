@@ -2,7 +2,6 @@ class Solution:
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         freq = {}
 
-        # create frq
         for b in barcodes:
             if b in freq:
                 freq[b] += 1
@@ -12,7 +11,7 @@ class Solution:
         descBarcode = sorted([(k, v) for (k, v) in list(freq.items())], key=lambda i: i[1], reverse=True)
 
         newBarcode = []
-        maxIncrements = descBarcode[0][1]  # -1
+        maxIncrements = descBarcode[0][1]
 
         curIndex, curIncrements = 1, 0
         for num, count in descBarcode:

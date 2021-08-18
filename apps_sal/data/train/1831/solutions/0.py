@@ -54,7 +54,6 @@ class Solution:
         if abs(ones - zeros) > 1:
             return -1
 
-        # get rid of smaller ones
         if n % 2 == 0:
             return min(zeros_in_even, ones_in_even)
         elif ones > zeros:

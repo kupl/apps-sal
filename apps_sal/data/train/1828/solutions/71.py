@@ -4,7 +4,6 @@ class Solution:
         for b in barcodes:
             d[b] += 1
 
-        #heap = [(d[b],b) for b in barcodes]
         counter = 0
         heap = []
         for b in d:

@@ -18,8 +18,6 @@ class Solution:
 
             while pq and k > 0:
 
-                # print(pq)
-
                 count, curr = heapq.heappop(pq)
                 count = count * -1
 

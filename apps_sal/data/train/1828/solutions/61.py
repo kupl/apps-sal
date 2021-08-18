@@ -8,5 +8,4 @@ class Solution:
                 i += 2
                 if i >= n:
                     i = 1
-                # print(res)
         return res

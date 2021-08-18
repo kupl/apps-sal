@@ -33,10 +33,6 @@ def inp(flag=0):
     else:
         return int(input())
 
-# Code credits
-# assert(debug()==true)
-# for _ in range(int(input())):
-
 
 t = inp(1)
 while t:
