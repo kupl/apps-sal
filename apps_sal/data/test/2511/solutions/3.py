@@ -14,8 +14,7 @@ for _ in range(n - 1):
 
 
 def dfs(v, v_p):
-    # 子部分木の塗り方の場合の数
-    if v_p == -1:  # root
+    if v_p == -1:
         c = k - 1
     else:
         c = k - 2

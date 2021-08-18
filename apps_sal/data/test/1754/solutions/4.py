@@ -8,9 +8,6 @@ for i in range(n):
 for i in range(m):
     d[i].sort(reverse=True)
 
-# for i in d:
-    # print(*i)
-# print('')
 
 ans = 0
 for i in range(m):

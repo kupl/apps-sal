@@ -7,7 +7,7 @@ MOD = 10 ** 9 + 7
 def main():
     N, K = (int(_) for _ in input().split())
 
-    fact = [0] * (N + 1)  # fact[n] = n!
+    fact = [0] * (N + 1)
     ifact = [0] * (N + 1)
 
     for i in range(N + 1):

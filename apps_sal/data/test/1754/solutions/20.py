@@ -8,7 +8,6 @@ cc = [None] * m
 
 for x in range(0, m):
     who = [y for y in range(0, n) if s[y] == x]
-#	print(x, who)
     who.sort(key=lambda y: p[y])
     who.reverse()
     cool = False
@@ -18,7 +17,6 @@ for x in range(0, m):
         who = [-1]
     cc[x] = (cool, who[0])
 
-# print(cc)
 
 a = 0
 for x in c:

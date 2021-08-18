@@ -1,5 +1,4 @@
 from sys import stdin
-# 入力
 readline = stdin.readline
 N, K = map(int, readline().split())
 

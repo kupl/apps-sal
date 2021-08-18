@@ -15,7 +15,6 @@ def __starting_point():
     for i in range(len(p) - 1, -1, -1):
         eff += t[i]
         rade += max(0, p[i] - (eff * c))
-        #print("aa-> ",rade)
     if limak > rade:
         print("Limak")
     elif limak < rade:

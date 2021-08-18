@@ -1,13 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
-#   = input()
-#   = int(input())
-
-#() = (i for i in input().split())
-#   = [i for i in input().split()]
 
 (n, c) = (int(i) for i in input().split())
 p = [int(i) for i in input().split()]
@@ -34,4 +27,3 @@ else:
     print('Radewoosh')
 
 finish = time.time()
-#print(finish - start)

@@ -1,10 +1,7 @@
-#!/usr/bin/env python3
 
 from collections import Counter
 from itertools import combinations
 
-# n: number of books
-# m: number of genres
 n, m = map(int, input().split())
 genres = Counter(map(int, input().split()))
 

@@ -39,12 +39,11 @@ def main():
 
         return fac[n] * finv[n - r] % MOD
 
-    # dfs
     com_init()
 
     def dfs(s):
         stack = deque()
-        stack.append((s, -1))  # now, par
+        stack.append((s, -1))
         res = K
         while stack:
             now, par = stack.pop()

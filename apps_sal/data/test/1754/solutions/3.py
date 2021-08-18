@@ -1,4 +1,3 @@
-# Take your protein pills and put your helmet on...
 n, m, k = map(int, input().split())
 d = {}
 arr = [int(x) for x in input().split()]

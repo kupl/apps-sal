@@ -1,13 +1,10 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
-# 双方向グラフで幅優先探索
 from collections import deque
 mod = 10**9 + 7
-N = 10**6                   # 出力の制限
-g1 = [1] * (N + 1)              # 元テーブル
-g2 = [1] * (N + 1)              # 逆元テーブル
-for i in range(2, N + 1):  # 準備
+N = 10**6
+g1 = [1] * (N + 1)
+g2 = [1] * (N + 1)
+for i in range(2, N + 1):
     g1[i] = (g1[i - 1] * i) % mod
 g2[N] = pow(g1[-1], mod - 2, mod)
 for i in range(N, 0, -1):
@@ -29,14 +26,12 @@ def nPr(n, r):
 
 n, k = map(int, input().split())
 graph = [[] for _ in range(n)]
-# 隣接リストの作成
 for i in range(n - 1):
     a, b = map(int, input().split())
     a, b = a - 1, b - 1
     graph[a].append(b)
     graph[b].append(a)
 
-# 幅優先探索
 q = deque()
 seen = [False] * n
 parent = [-1] * n
@@ -53,7 +48,6 @@ while len(q) > 0:
     for i in graph[cur]:
         if seen[i] == False:
             seen[i] = True
-            # 親
             parent[i] = cur
             q.append(i)
             ret *= cnt
