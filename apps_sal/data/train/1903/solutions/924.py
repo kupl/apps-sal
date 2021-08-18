@@ -8,15 +8,6 @@ class Solution:
 
         def dist(point1, point2):
             return abs(point1[0] - point2[0]) + abs(point1[1] - point2[1])
-#         mat = []
-#         for x, point1 in enumerate(points):
-#           mat.append([])
-#           for y, point2 in enumerate(points):
-#             if x == y:
-#               dis = float('inf')
-#             else:
-#               dis = abs(point1[0] - point2[0]) + abs(point1[1] - point2[1])
-#             mat[-1].append(dis)
 
         heap = []
         connected = set([0])

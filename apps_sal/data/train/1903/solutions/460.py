@@ -1,6 +1,5 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # dikstra algo
         if len(points) == 0:
             return 0
         heap = []

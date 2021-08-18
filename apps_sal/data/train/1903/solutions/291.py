@@ -50,5 +50,3 @@ class Solution:
                 ans += e[0]
                 if uf.size(e[1]) == len(points):
                     return ans
-
-        # return ans

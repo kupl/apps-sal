@@ -23,7 +23,6 @@ class Solution:
             val, i, j = heappop(q)
             if i not in cur or j not in cur:
                 ans += val
-                # print(ans, i, j, q)
             cur.add(i)
             cur.add(j)
             while d[i] and d[i][0][2] in cur:

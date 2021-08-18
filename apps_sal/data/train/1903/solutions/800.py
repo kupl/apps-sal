@@ -13,7 +13,6 @@ class Solution:
                 edges.append((i, j, dis(i, j)))
 
         edges.sort(key=lambda x: x[2])
-        # print(edges)
 
         fa = defaultdict(lambda: -1)
 

@@ -1,9 +1,8 @@
 class Graph:
 
     def __init__(self, vertices):
-        self.V = vertices  # No. of vertices
-        self.graph = []  # default dictionary
-        # to store graph
+        self.V = vertices
+        self.graph = []
 
     def addEdge(self, u, v, w):
         self.graph.append([u, v, w])
@@ -38,7 +37,6 @@ class Solution:
                 b = tuple(points[j])
                 g.addEdge(a, b, abs(a[0] - b[0]) + abs(a[1] - b[1]))
         g.graph = sorted(g.graph, key=lambda item: item[2])
-       # print(g.graph,g.V)
         parent = [0] * g.V
         rank = [0] * g.V
 

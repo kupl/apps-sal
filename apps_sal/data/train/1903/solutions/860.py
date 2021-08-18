@@ -16,7 +16,6 @@ class Graph:
     parent: list = field(default_factory=list)
     rank: list = field(default_factory=list)
 
-    # minimum spanning tree
     mst: list = field(default_factory=list)
 
     def FindParent(self, node):

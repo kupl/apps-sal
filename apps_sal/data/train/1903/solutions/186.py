@@ -4,7 +4,7 @@ class Solution:
         if len(points) == 1:
             return 0
         res = 0
-        curr = 0  # select a random point as the starting point
+        curr = 0
         dis = [float('inf')] * n
         explored = set()
 

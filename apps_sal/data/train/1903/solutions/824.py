@@ -4,9 +4,8 @@ import heapq
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
-        mst_nodes = set()  # int
-        # mst_edges = set() # (int,int)
-        h = []  # heap of edges connected to MST (distance, source, dest)
+        mst_nodes = set()
+        h = []
         def man_dist(i, j): return abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
 
         mst_nodes.add(0)

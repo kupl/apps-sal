@@ -32,26 +32,3 @@ class Solution:
                     break
 
         return ans
-
-        # n = len(points)
-        # dist = lambda x, y: abs(x[0] - y[0]) + abs(x[1] - y[1])
-        # dic = collections.defaultdict(list)
-        # for i in range(n):
-        #     for j in range(i + 1, n):
-        #         d = dist(points[i], points[j])
-        #         dic[i].append((d, j))
-        #         dic[j].append((d, i))
-        # hp = dic[0]
-        # heapq.heapify(hp)
-        # ans, cnt, seen = 0, 1, [1] + [0] * (n - 1)
-        # while hp:
-        #     d, i = heapq.heappop(hp)
-        #     if not seen[i]:
-        #         ans += d
-        #         cnt += 1
-        #         seen[i] = 1
-        #         for j in dic[i]:
-        #             heapq.heappush(hp, j)
-        #         if cnt == n:
-        #             break
-        # return ans

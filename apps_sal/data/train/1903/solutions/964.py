@@ -25,7 +25,6 @@ class Solution:
                 r2, c2 = points[j]
                 distances.append([abs(r1 - r2) + abs(c1 - c2), i, j])
         distances.sort()
-        # print(distances)
 
         res = 0
         parents = UF.init(n)

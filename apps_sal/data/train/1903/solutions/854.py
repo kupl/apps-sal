@@ -2,7 +2,6 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
-        #distance = collections.defaultdict(list)
         edges = []
         
         def distance(point1, points):
@@ -48,8 +47,6 @@ class DisjointSet:
         self.parent = [i for i in range(n)]
         self.rank = [0 for _ in range(n)]
 
-    # make a and b part of the same component
-    # union by rank optimization
     def union(self, a, b):
         pa = self.find(a)
         pb = self.find(b)
@@ -62,8 +59,6 @@ class DisjointSet:
             self.parent[pa] = pb
             self.rank[pb] += self.rank[pa]
 
-    # find the representative of the
-    # path compression optimization
     def find(self, a):
         if self.parent[a] == a:
             return a
@@ -82,10 +77,8 @@ class Solution:
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 edges.append((dist, i, j))
 
-        # sort based on cost (i.e. distance)
         edges.sort()
 
-        # using Kruskal's algorithm to find the cost of Minimum Spanning Tree
         res = 0
         ds = DisjointSet(n)
         for cost, u, v in edges:
