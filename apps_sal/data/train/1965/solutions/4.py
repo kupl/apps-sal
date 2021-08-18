@@ -23,11 +23,11 @@ class Solution:
         for t, u, v in edges:
             if t != 3:
                 continue
-            ans += A.union(u, v)  # return 1 if connected else 0
+            ans += A.union(u, v)
             B.union(u, v)
         for t, u, v in edges:
             if t == 3:
                 continue
             d = A if t == 1 else B
             ans += d.union(u, v)
-        return ans if A.e == B.e == n - 1 else -1  # merge times equal to edges
+        return ans if A.e == B.e == n - 1 else -1

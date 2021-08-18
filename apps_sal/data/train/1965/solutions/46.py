@@ -14,11 +14,6 @@ class Solution:
             c2 = edge[1]
             p1 = self.find(c1, parents)
             p2 = self.find(c2, parents)
-            # print(f'edge:    {edge}')
-            # print(f'p1  p2:  {p1} {p2}')
-            # print(f'type:    {t}')
-            # print(f'parents: {parents}')
-            # print()
             if p1 == p2:
                 delete.add((t, c1, c2))
             else:
@@ -36,7 +31,6 @@ class Solution:
 
         self.delete_cycles(common, parents1, delete, 3)
         self.delete_cycles(type1, parents1, delete, 1)
-        # print(\"-----------------------------------------------\")
         self.delete_cycles(common, parents2, delete, 3)
         self.delete_cycles(type2, parents2, delete, 2)
 

@@ -1,10 +1,8 @@
 class UnionSet:
     def __init__(self, n):
         self.parent = {i: i for i in range(1, n + 1)}
-        # self.level = {i:0 for i in range(1, n+1)}
 
     def union(self, i, j):
-        # if self.level[i] < self.level[j]:
         self.parent[self.get(i)] = self.get(j)
 
     def get(self, i):

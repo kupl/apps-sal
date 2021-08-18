@@ -36,9 +36,6 @@ class Solution:
         if edges_count < n - 1:
             return -1
 
-        # print(edges_count)
-        # print(colors)
-
         colors = colors2
         edges_count = edges_3
         for one in edges:

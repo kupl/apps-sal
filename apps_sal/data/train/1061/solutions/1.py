@@ -43,5 +43,4 @@ while t > 0:
         if(i == len(exp) - 1):
             num.append(int(temp))
     t -= 1
-    # print(num,operator)
     print(max(break_rules(num, operator)))

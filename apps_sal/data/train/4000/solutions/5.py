@@ -1,5 +1,5 @@
-def strong_num(number):   # performance version
-    fac = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880]   # factorial from 0-9
+def strong_num(number):
+    fac = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880]
     digits = sorted([int(i) for i in str(number)])
     digits.reverse()
 

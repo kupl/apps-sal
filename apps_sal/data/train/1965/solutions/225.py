@@ -22,7 +22,7 @@ class Solution:
                 else:
                     res += 1
 
-        root_copy = root[:]  # a copy of connection 3
+        root_copy = root[:]
         for t, u, v in edges:
             if t == 1:
                 if union(u, v):

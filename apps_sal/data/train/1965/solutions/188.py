@@ -34,36 +34,25 @@ class Solution:
                 dic[a].append(b)
                 dic[b].append(a)
             seen = set()
-            # print(dic)
 
             def dfs(curr):
-                # print(curr)
                 if curr in seen:
                     return
                 seen.add(curr)
                 for nxt in dic[curr]:
-                    # print('nxt',nxt)
                     dfs(nxt)
             dfs(1)
-            # print(seen, dic)
-            # print(len(seen))
             return len(seen) == n
         if not pre_check(1) or not pre_check(2):
             return -1
         both_edges = [edge for edge in edges if edge[0] == 3]
-        # print(both_edges)
         a_cnt = sum(edge[0] == 1 for edge in edges)
         b_cnt = sum(edge[0] == 2 for edge in edges)
         uf = UnionFind()
         rid = 0
         for edge in both_edges:
-            # print(edge)
             if not uf.join(edge[1], edge[2]):
                 rid += 1
         uniq = set(uf.find(i) for i in range(1, n + 1))
         uniq = len(uniq)
-        # print(rid,uniq)
-        # print(uniq)
-        # print(rid)
-        # print(a_cnt, b_cnt)
         return rid + a_cnt - uniq + 1 + b_cnt - uniq + 1

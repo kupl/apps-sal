@@ -22,6 +22,3 @@ def st(i): return str(i + 1)
 
 
 print(' '.join(list(map(st, ans))))
-
-
-# Made By Mostafa_Khaled

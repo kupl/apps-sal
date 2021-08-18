@@ -1,8 +1,4 @@
-# Python3 function to
-# calculate nCr % p
 def ncr(n, r, p):
-    # initialize numerator
-    # and denominator
     num = den = 1
     for i in range(r):
         num = (num * (n - i)) % p

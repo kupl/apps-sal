@@ -23,11 +23,9 @@ class Solution:
         for t, i, j in edges:
             if t == 3:
                 if union(i, j):
-                    # get one more edge
                     alice += 1
                     bob += 1
                 else:
-                    # i, j has been connected, this one is not necessary
                     res += 1
 
         tmpG = graph[:]

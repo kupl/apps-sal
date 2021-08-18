@@ -26,9 +26,6 @@ class Solution:
             count[t] += 1
 
         print(count)
-        # print(d1)
-        # print(d2)
-        # print(d3)
 
         def check(d):
             visited = [False] * (n + 1)
@@ -39,11 +36,9 @@ class Solution:
                     return
                 self.sz += 1
                 visited[i] = True
-                # print(d[i])
                 for j in d[i]:
                     trav(j)
             trav(1)
-            #print(visited, self.sz)
             return self.sz == n
 
         if(not check(d1)):
@@ -68,7 +63,6 @@ class Solution:
             if visited[i] == False:
                 comps += 1
                 travers(i)
-            #print(i, comps)
         print(('comps', comps))
 
         print(((count[1] - comps + 1), (count[2] - comps + 1), count[3] - n + comps))

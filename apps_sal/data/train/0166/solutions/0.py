@@ -5,7 +5,6 @@ class Solution:
         print(bin(b))
         print(bin(c))
         while a or b or c:
-            # print(a, b, c)
             if c % 2:
                 if not (a % 2 or b % 2):
                     flips += 1

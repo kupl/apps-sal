@@ -26,7 +26,6 @@ class DSU:
 class Solution(object):
     def maxNumEdgesToRemove(self, N, edges):
         for row in edges:
-            # row[0] -= 1
             row[1] -= 1
             row[2] -= 1
         alice = []

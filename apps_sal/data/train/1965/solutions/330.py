@@ -6,7 +6,7 @@ class DSU:
     def find_parent(self, x):
         if self.p[x] == -1:
             return x
-        self.p[x] = self.find_parent(self.p[x])  # path compression
+        self.p[x] = self.find_parent(self.p[x])
         return self.p[x]
 
     def union(self, a, b):
@@ -15,7 +15,7 @@ class DSU:
         if pa == pb:
             return False
         if self.r[pa] > self.r[pb]:
-            self.p[pb] = pa     # here rank can be adding
+            self.p[pb] = pa
         elif self.r[pa] < self.r[pb]:
             self.p[pa] = pb
         else:
@@ -28,7 +28,7 @@ class DSU:
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         edges = sorted(edges, key=lambda x: -x[0])
-        dsu_alice = DSU(n)    # this can be done using on dsu and counting edges for alice and bob. if connected at the end, both tree should have n-1 edges
+        dsu_alice = DSU(n)
         dsu_bob = DSU(n)
         res = 0
 
@@ -44,7 +44,6 @@ class Solution:
             else:
                 if not dsu_bob.union(e[1], e[2]):
                     res += 1
-            # print (e, res)
 
         ap = 0
         bp = 0

@@ -13,7 +13,6 @@ class Solution:
         edge_total = 0
         edge_1 = 0
         edge_2 = 0
-       # make 1 first
         for w, v, u in sorted(edges, reverse=True):
             if w == 2:
                 continue
@@ -27,7 +26,6 @@ class Solution:
                 edge_2 += 1
         if edge_1 < n - 1:
             return -1
-        # make 2 next
         for w, v, u in edges:
             if w == 1:
                 continue

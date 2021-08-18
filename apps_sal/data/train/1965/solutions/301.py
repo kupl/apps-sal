@@ -14,7 +14,6 @@ class Solution:
 
         res, e1, e2 = 0, 0, 0
         parent = [x for x in range(N + 1)]
-        # Alice and Bob
         for t, x, y in edges:
             if t == 3:
                 if union(x, y):
@@ -24,7 +23,6 @@ class Solution:
                     res += 1
         parent_ = parent[:]
 
-        # only Alice
         for t, x, y in edges:
             if t == 1:
                 if union(x, y):
@@ -32,7 +30,6 @@ class Solution:
                 else:
                     res += 1
 
-        # only Bob
         parent = parent_
         for t, x, y in edges:
             if t == 2:

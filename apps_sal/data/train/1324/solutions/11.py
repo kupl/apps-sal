@@ -1,4 +1,3 @@
-# Thanks to Shelam
 
 t = int(input())
 
