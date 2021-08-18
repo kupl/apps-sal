@@ -19,5 +19,3 @@ while a > 0 and b > 0 and c > 0 and d > 0:
     c -= 1
     d -= 1
 print(i)
-
-# 1481311408782

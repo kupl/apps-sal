@@ -1,8 +1,4 @@
-# coding=utf-8
 
-# lib
-#import copy
-#import collections
 import sys
 
 
@@ -37,7 +33,6 @@ def __starting_point():
     N, M = map(int, input().split())
 
     sc = input_2d_array(2, M)
-    # print(sc)
 
     if M == 0 and N != 1:
         print(10**(N - 1))
@@ -79,7 +74,6 @@ def __starting_point():
     for i in reversed(range(10**(N - 1), 10**N)):
         for j in range(M):
             temp = str(i)
-            # print('i=',i,'temp=',temp[sc[j][0]-1],'sc=',sc[j][1])
             if str(sc[j][1]) == temp[sc[j][0] - 1] and flag:
                 flag = True
             else:

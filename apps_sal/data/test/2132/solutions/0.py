@@ -5,7 +5,6 @@ speed = 0
 n = int(input())
 for e in range(n):
     inp = list(map(int, input().split()))
-    # print(inp)
     if inp[0] == 4:
         overtakes.append(True)
     elif inp[0] == 6:

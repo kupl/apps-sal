@@ -1,7 +1,6 @@
 import sys
 
 inf = sys.stdin
-#inf = open("input_data.in", "r")
 
 lines = inf.readlines()
 

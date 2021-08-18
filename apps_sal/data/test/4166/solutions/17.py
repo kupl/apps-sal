@@ -17,7 +17,6 @@ for i in range(1, M + 1):
 if ans[0] == "*" and len(ans) >= 2:
     ans[0] = 1
 ans = list(map(lambda x: 0 if x == "*" else x, ans))
-# print(ans)
 if flag == 1 or all(x == 0 for x in ans) or ans[0] == 0:
     if len(ans) == 1 and ans[0] == 0:
         print(ans[0])

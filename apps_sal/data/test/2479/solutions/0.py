@@ -11,7 +11,7 @@ def solve():
     R = [N] * (N + 1)
     for _ in range(Q):
         a, b = map(int, input().split())
-        if a == 1:  # 横向き
+        if a == 1:
             if b < db:
                 total -= (rb - 2)
                 for i in range(b, db):
@@ -19,7 +19,7 @@ def solve():
                 db = b
             else:
                 total -= (R[b] - 2)
-        else:  # 縦向き
+        else:
             if b < rb:
                 total -= (db - 2)
                 for i in range(b, rb):

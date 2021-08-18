@@ -1,4 +1,3 @@
-# D. Driving Test
 
 n = int(input())
 
