@@ -14,8 +14,3 @@ class Solution:
                     max_sum = max(max_sum, m_sum + l_sum)
 
         return max_sum
-
-        # we know there will be len - (L+M) elements excluded
-        # there will a stretch between before them
-        # iterate through looking for the larger array sum
-        # search in the left and right remainders for the smaller array sum of size x

@@ -11,4 +11,3 @@ def array_madness(a, b):
         return True
     else:
         return False
-    # Ready, get, set, GO!!!

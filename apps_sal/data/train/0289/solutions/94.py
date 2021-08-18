@@ -5,10 +5,6 @@ class Solution:
         for i in range(len(A)):
             acc += A[i]
             preSum.append(acc)
-        #preSum[j] = A[0] + A[1] + ...+ A[j - 1]
-        # preSum[j] - preSum[i] = A[j - 1] + ... + A[i] length = j - i
-        # preSum[i] - preSum[i - L] = A[i - 1] + .... + A[i - L]
-        # preSum[j + M] - preSum[j] = A[j + M - 1] + ...+ A[j]
         mx = 0
         for i in range(L, len(preSum)):
             for j in range(i, len(preSum) - M):

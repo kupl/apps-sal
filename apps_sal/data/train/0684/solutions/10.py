@@ -12,8 +12,6 @@ import time
 starttime = time.time()
 mod = int(pow(10, 9) + 7)
 mod2 = 998244353
-# from sys import stdin
-# input = stdin.readline
 def data(): return sys.stdin.readline().strip()
 def out(*var, end="\n"): sys.stdout.write(' '.join(map(str, var)) + end)
 def L(): return list(sp())
@@ -25,9 +23,7 @@ def l2d(n, m, val=0): return [l1d(n, val) for j in range(m)]
 
 
 try:
-    # sys.setrecursionlimit(int(pow(10,6)))
     sys.stdin = open("input.txt", "r")
-    # sys.stdout = open("../output.txt", "w")
 except:
     pass
 
@@ -83,4 +79,3 @@ for _ in range(L()[0]):
 
 
 endtime = time.time()
-# print(f"Runtime of the program is {endtime - starttime}")

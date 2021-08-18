@@ -9,4 +9,4 @@ def switch_it_up(number):
             7: "Seven",
             8: "Eight",
             9: "Nine"
-            }.get(number)  # get() retrives from the dictionary
+            }.get(number)

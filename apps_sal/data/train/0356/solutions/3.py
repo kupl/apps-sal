@@ -20,7 +20,6 @@ class Solution:
                 existFlag = 1
                 break
         if existFlag == 1:
-            # existFlag=0
             print("yes it is 1")
             for j in range(last, -1, -1):
                 print(("j= ", j))

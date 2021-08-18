@@ -7,7 +7,6 @@ class Solution:
         prefixSums[0] = A[0]
         for i in range(1, len(A)):
             prefixSums[i] = prefixSums[i - 1] + A[i]
-        # print(prefixSums)
 
         maxSum = -1
         tempSum = None

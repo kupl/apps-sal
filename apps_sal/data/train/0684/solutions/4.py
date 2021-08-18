@@ -1,6 +1,5 @@
 try:
     import math
-    # from collection import Counter
 
     def findAll(n):
         p = 0
@@ -45,4 +44,3 @@ try:
 
 except EOFError:
     print(" ")
-# This code is contributed by chandan_jnu

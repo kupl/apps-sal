@@ -22,10 +22,6 @@ class Solution:
             m_sums.append(cumsum[i + M - 1] - cumsum[i] + A[i])
             i += 1
 
-#         print(cumsum)
-#         print(l_sums)
-#         print(m_sums)
-
         i = 0
         j = len(m_sums) - 1
 

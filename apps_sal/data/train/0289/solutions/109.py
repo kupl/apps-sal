@@ -18,7 +18,7 @@ class Solution:
         Msums = [0] * len(A)
 
         if M > L:
-            L, M = M, L  # makes M smaller
+            L, M = M, L
 
         for j in range(L - 1, len(A)):
             if j == L - 1:
@@ -34,8 +34,6 @@ class Solution:
         out = 0
         for l in range(L - 1, len(A)):
             for m in range(M - 1, len(A)):
-                # M is before L completely
-                # M is after L completely
                 if m <= l - L or m - M >= l:
                     out = max(out, Lsums[l] + Msums[m])
         return out

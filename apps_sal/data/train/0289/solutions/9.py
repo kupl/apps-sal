@@ -9,7 +9,6 @@ class Solution:
             end1 = M
             tot = sum(A[pin1:end1])
             while end1 < start + 1:
-                # print(pin1,end1,t,tot,'yo')
                 if t + tot > maxs:
                     maxs = t + tot
                 tot = tot - A[pin1]
@@ -20,7 +19,6 @@ class Solution:
             end2 = end + M
             tot2 = sum(A[pin2:end2])
             while end2 <= len(A):
-                # print(pin2,end2,t,tot2,'po')
                 if t + tot2 > maxs:
                     maxs = t + tot2
                 if end2 == len(A):
@@ -35,5 +33,4 @@ class Solution:
             t = t + A[end]
             start += 1
             end += 1
-            # print(t,maxs)
         return maxs

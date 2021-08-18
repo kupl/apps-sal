@@ -20,12 +20,10 @@ class Solution:
             i += 1
 
         max_sum = 0
-        # L before M
         for i, lsum in enumerate(L_sum):
             for j in range(i + L, len(M_sum)):
                 max_sum = max(max_sum, lsum + M_sum[j])
 
-        # M before L
         for i, msum in enumerate(M_sum):
             for j in range(i + M, len(L_sum)):
                 max_sum = max(max_sum, msum + L_sum[j])

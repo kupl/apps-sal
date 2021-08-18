@@ -2,5 +2,4 @@ dic = {0: "Zero", 1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five", 6: "Six"
 
 
 def switch_it_up(i):
-    # your code here
     return dic[i]

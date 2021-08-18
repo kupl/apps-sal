@@ -9,15 +9,11 @@ class Solution:
                 Lsum.append(Lsum[i - 1] + A[i + L - 1] - A[i - 1])
             return [(s, i) for i, s in enumerate(Lsum)]
         Lsum = get_subsum(L)
-        # print(Lsum)
         Lsum.sort(reverse=True)
         Msum = get_subsum(M)
-        # print(Msum)
         Msum.sort(reverse=True)
 
         def overlap(i, j, L=L, M=M):
-            #i, i+L-1
-            #j, j+M-1
             return j <= i < j + M or i <= j < i + L
         i = j = 0
         Llen = len(Lsum)
@@ -27,8 +23,6 @@ class Solution:
         heapq.heappush(stack, (0, (0, 0)))
         while stack:
             _, (i, j) = heapq.heappop(stack)
-            # visited.add((i,j))
-            # print(i, j, Lsum[i], Msum[j])
             if not overlap(Lsum[i][1], Msum[j][1]):
                 return Lsum[i][0] + Msum[j][0]
             if i < Llen - 1 and not (i + 1, j) in visited:

@@ -22,14 +22,3 @@ class Solution:
                 maxy = max(maxy, dp2[i] + max(dp1[i + M:]))
 
         return maxy
-
-        # maxy = 0
-        # for a,b,d1,d2 in [(L,M,dp1,dp2), (M,L,dp2,dp1)]:
-        #     i,j = 0,n-b
-        #     while i+a<j:
-        #         maxy = max(maxy,d1[i]+d2[j])
-        #         if d1[i+1]>d1[i]: i+=1
-        #         else: j-=1
-        # print(L,dp1)
-        # print(M,dp2)
-        # return maxy
