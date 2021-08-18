@@ -1,4 +1,3 @@
-# cook your dish herr
 for i in range(int(input())):
     N, K = map(int, input().split())
     H = []

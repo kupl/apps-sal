@@ -1,32 +1,32 @@
 def main():
     N, Q = map(int, input().split())
-    tl = []  # イベントタイムライン
+    tl = []
     for _ in range(N):
         S, T, X = map(int, input().split())
-        tl.append((S - X, 1, X))  # insert
-        tl.append((T - X, 0, X))  # erase
+        tl.append((S - X, 1, X))
+        tl.append((T - X, 0, X))
     for _ in range(Q):
         D = int(input())
-        tl.append((D, 2, 0))  # min
+        tl.append((D, 2, 0))
     tl.sort()
-    working = set()  # 工事中
-    wcur = 0  # 工事中の区域の数
+    working = set()
+    wcur = 0
     curmin = -1
     flag = False
     for t, c, x in tl:
-        if c == 0:  # erase
+        if c == 0:
             wcur -= 1
             working.remove(x)
             if x <= curmin:
                 curmin = x
                 flag = True
-        elif c == 1:  # insert
+        elif c == 1:
             wcur += 1
             working.add(x)
             if curmin < 0 or curmin >= x:
                 curmin = x
                 flag = False
-        else:  # min
+        else:
             if wcur == 0:
                 curmin = -1
                 flag = False

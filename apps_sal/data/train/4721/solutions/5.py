@@ -1,5 +1,4 @@
 FUNCS = {
-    #     to C       C to X
     'C': (lambda t: t, lambda t: t),
     'F': (lambda t: (t - 32) * 5 / 9, lambda t: t * 9 / 5 + 32),
     'K': (lambda t: t - 273.15, lambda t: t + 273.15),

@@ -1,4 +1,3 @@
-# coding: utf-8
 import sys
 
 
@@ -42,4 +41,3 @@ for a, b, c in event:
             answer[c] = min_x
 
 print(('\n'.join(map(str, answer))))
-# 19

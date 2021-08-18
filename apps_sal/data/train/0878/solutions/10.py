@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     N, K = list(map(int, input().split()))
     h = list(map(int, input().split()))

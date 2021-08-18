@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     n = int(input())
     lst = list(map(int, input().split()))
@@ -7,7 +6,6 @@ for i in range(int(input())):
     for key in lst:
         dict1[key] += 1
 
-    # print(dict1)
     for key in dict1:
         if(dict1[key] > 0):
             print(key, end=' ')

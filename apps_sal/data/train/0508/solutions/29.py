@@ -1,5 +1,3 @@
-# E - Roadwork
-# https://atcoder.jp/contests/abc128/tasks/abc128_e
 
 from heapq import heappop, heappush
 from collections import defaultdict
@@ -28,7 +26,7 @@ for a, b, c in task:
     elif b == 1:
         se.add(c)
         heappush(se_hp, c)
-    else:  # b == 2
+    else:
         while se_hp and se_hp[0] not in se:
             heappop(se_hp)
         answer[c] = se_hp[0] if se_hp else -1

@@ -1,4 +1,3 @@
-# This is a Python implementation of the excellent algorithm user g964 wrote in C. Credit goes to him/her.
 
 def dbl_linear(n):
     arr = [1]

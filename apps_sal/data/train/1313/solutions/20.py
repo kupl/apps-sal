@@ -1,4 +1,3 @@
-# cook your dish here
 from math import gcd, sqrt
 for _ in range(int(input())):
     s = 0

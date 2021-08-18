@@ -8,4 +8,3 @@ for _ in range(int(input())):
         else:
             a[i] = 0
     print(*a)
-# cook your dish here
