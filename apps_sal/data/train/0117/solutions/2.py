@@ -4,9 +4,7 @@ from collections import deque
 from sys import stdin, stdout, setrecursionlimit
 from string import ascii_letters
 letters = ascii_letters[:26]
-#from functools import reduce
 input = stdin.readline
-#print = stdout.write
 
 for _ in range(int(input())):
     n, m = list(map(int, input().split()))

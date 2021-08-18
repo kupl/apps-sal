@@ -16,16 +16,13 @@ class Solution:
         nxt_event = 0
 
         for i in range(n):
-            # open here
             while nxt_event < len(events) and events[nxt_event][0] <= i:
                 if events[nxt_event][1] == OPEN:
                     open_events += 1
                 else:
                     break
                 nxt_event += 1
-            # compute weight
             weights[i] = open_events
-            # close here
             while nxt_event < len(events) and events[nxt_event][0] <= i:
                 if events[nxt_event][1] == CLOSE:
                     open_events -= 1

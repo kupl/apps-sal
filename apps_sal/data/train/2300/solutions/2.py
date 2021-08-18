@@ -101,7 +101,6 @@ while res:
             size[a0] = ss
     ans = (ans + val[a0] * p2[N + 1 - size[a0]]) % MOD
     res = [nr[:] for nr in newres]
-    # print(res)
 print(ans)
 
 """

@@ -8,7 +8,6 @@ class Solution:
         cur = 0
         for s, e in requests:
             while h and h[0] < s:
-                # all intervals in heap share [cur, h[0]]
                 for i in range(cur, h[0] + 1):
                     count[i] += len(h)
                 cur = h[0] + 1

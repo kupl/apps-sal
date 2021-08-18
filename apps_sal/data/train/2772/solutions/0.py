@@ -9,15 +9,14 @@ Recreated mystery function from bytecode using the dis module.
     http://www.sciencedirect.com/science/article/pii/S0304414905001602
     """
     c = 0
-    while(n != 1 and n != 13 and n < 1000000):  # Should have "n != 17" too.
+    while(n != 1 and n != 13 and n < 1000000):
         c = c + 1
-        # Without the line below the function hangs for some n > 0.
         if(n == 17):
             return -1
         if (n & 1):
-            n = n + n + n + n + n + 1  # n = 5n+1
+            n = n + n + n + n + n + 1
             continue
-        n = n >> 1  # n = n/2
+        n = n >> 1
     return c
 
 

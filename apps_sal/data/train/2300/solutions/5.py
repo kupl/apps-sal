@@ -1,4 +1,3 @@
-# seishin.py
 from collections import deque
 N = int(input())
 *P, = list(map(int, input().split()))
@@ -31,7 +30,6 @@ for i in range(N, -1, -1):
     if not g:
         continue
 
-    # 子ノードのdequeを集める
     g.sort(key=sz, reverse=1)
     k = len(g)
     e = [pp(k) - k, k, 0]
@@ -43,7 +41,6 @@ for i in range(N, -1, -1):
         continue
     Q[i] = R = Q[g0]
     if k > 1:
-        # a0 <- a2
         for s, r in zip(Q[g[1]] or ept, R):
             r[0] += r[2]
             r[2] = 0
@@ -53,7 +50,6 @@ for i in range(N, -1, -1):
             if not S:
                 break
 
-            # dequeの小さい方から大きい方へマージする処理
             for (a0, a1, a2), r in zip(S, R):
                 b0, b1, b2 = r
                 a0 += a2

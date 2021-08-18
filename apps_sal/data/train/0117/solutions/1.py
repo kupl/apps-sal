@@ -16,7 +16,6 @@ def main():
             i_first_column += 1
         first_column = columns[i_first_column]
 
-        # Can be written in O(N*log(N)) but it is not necessary for N <= 500
         rows = sorted(rows, key=lambda row: first_column.index(row[0]))
 
         for row in rows:
