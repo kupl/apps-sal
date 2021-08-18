@@ -1,4 +1,3 @@
-# You lost the game.
 n, b, d = list(map(int, input().split()))
 L = list(map(int, input().split()))
 r = 0

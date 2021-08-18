@@ -10,10 +10,6 @@ def iin(): return int(stdin.readline())
 def lin(): return list(map(int, stdin.readline().split()))
 
 
-# range = xrange
-# input = raw_input
-
-
 def main():
     t = iin()
     while t:
@@ -38,6 +34,3 @@ def main():
 
 
 main()
-# try:
-#     main()
-# except Exception as e: print(e)

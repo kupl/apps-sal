@@ -9,5 +9,4 @@ for i in range(len(b)):
     s += b[i]
     if i % 2 == 0:
         mm = max(mm, s)
-# print(c)
 print(sum(c) + mm)

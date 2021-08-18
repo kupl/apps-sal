@@ -1,4 +1,3 @@
-# your code goes here
 t = int(input())
 for h in range(t):
     ans = 1000000000

@@ -10,10 +10,6 @@ MOD = 1000000007
 
 
 class UnionFindWeighted:
-    # Reference:
-    # https://note.nkmk.me/python-union-find/
-    # https://at274.hatenablog.com/entry/2018/02/03/140504
-    # https://qiita.com/drken/items/cce6fc5c579051e64fab
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n

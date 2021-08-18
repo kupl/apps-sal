@@ -1,4 +1,3 @@
-#!/bin/python3
 import sys
 import math
 n = int(input())

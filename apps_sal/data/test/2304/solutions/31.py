@@ -27,9 +27,7 @@ for start in range(n):
                 visited_cost[ni] = cost + nd
                 st.append([ni, cost + nd])
             else:
-                # 既に記録されていて、矛盾している場合
                 if visited_cost[ni] != cost + nd:
-                    # 終了
                     ng = True
                     break
         if ng:

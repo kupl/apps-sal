@@ -11,7 +11,6 @@ while position < n:
         if heaters[index] == 1:
             last_seen_heater = index
         index += 1
-    # print(position, last_seen_heater)
     new_pos = position
     if last_seen_heater >= 0:
         new_pos = last_seen_heater + r

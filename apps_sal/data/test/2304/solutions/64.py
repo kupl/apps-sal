@@ -14,14 +14,12 @@ def bfs():
                 j = q.popleft()
                 for g in G[j]:
                     if not e[g[2]]:
-                        #print(e, visit, q, x, j)
                         e[g[2]] = 1
                         if not visit[g[0]]:
                             x[g[0]] = g[1] + x[j]
                             visit[g[0]] = 1
                             q.append(g[0])
                         else:
-                            #print(x[g[0]], g[1] + x[j])
                             if not x[g[0]] == g[1] + x[j]:
                                 return False
     return True

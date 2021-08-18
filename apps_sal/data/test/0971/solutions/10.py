@@ -1,4 +1,3 @@
-#putIn = list(map(int, input().split()))
 nbd = list(map(int, input().split()))
 oranges = list(map(int, input().split()))
 numTimesEmptied = 0
