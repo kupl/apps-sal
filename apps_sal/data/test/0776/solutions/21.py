@@ -36,7 +36,6 @@ else:
     j = b
     b = 0
     num += j
-#print(j, summ, num)
 while (c > 0 and (i < len(usb) or j < len(pc2))):
     if(i >= len(usb)):
         if(len(pc2) - j >= c):

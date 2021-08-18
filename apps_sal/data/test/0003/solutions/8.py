@@ -50,5 +50,4 @@ for i in range(q):
         else:
             ct = 0
         np = max(np, n - (co1 + co2 + ct + zeroes[-1]))
-        # print(i,j,np,co1,co2,ct,zeroes[-1],x2,y1)
 print(np)

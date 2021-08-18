@@ -4,14 +4,12 @@ input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 7)
 
 
-# 適当な素数と原始根でrolling hash
 MOD = 10 ** 9 + 993
 base = 123450
 
 S = np.array([ord(x) for x in input().rstrip()], dtype=np.int64)
 T = np.array([ord(x) for x in input().rstrip()], dtype=np.int64)
 
-# Sの方が長くする
 LS = len(S)
 LT = len(T)
 n = (LT + (-LT) % LS) // LS
@@ -47,7 +45,7 @@ def to_rolling_hash(S):
 
 
 S_hash = to_rolling_hash(S)
-T_hash = to_rolling_hash(T)[-1]  # 文字列全体
+T_hash = to_rolling_hash(T)[-1]
 
 S_hash_LT = S_hash[LT - 1:]
 S_hash_LT[1:] -= S_hash.copy()[:LS]
@@ -57,7 +55,7 @@ S_hash_LT %= MOD
 
 INF = 10 ** 18
 visited = [False] * LS
-dist = [INF] * LS  # 操作終了位置からの距離
+dist = [INF] * LS
 
 q = np.where(S_hash_LT[:LS] != T_hash)[0].tolist()
 

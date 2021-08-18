@@ -37,7 +37,6 @@ def fast(g, d, f):
         else:
             res += sub_pairs(fr, fl + 1) * max(0, gr - gl) * sub_pairs(dr, dl)
             fl += 1
-##        print(res, mn, mx, (gl, gr), (dl, dr), (fl, fr))
     return res
 
 

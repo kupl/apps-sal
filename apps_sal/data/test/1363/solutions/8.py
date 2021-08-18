@@ -25,7 +25,6 @@ while i < n:
     g1 = g[j + 1] - g[i]
     d1 = d[j + 1] - d[i]
     f1 = f[j + 1] - f[i]
-    # print(i, j, g1, d1, f1)
     if a[i][1] == 1:
         s += d1 * (d1 - 1) * f1 * (f1 - 1) * (f1 - 2) // 12
     elif a[i][1] == 2:

@@ -37,10 +37,8 @@ while either > 0 and (usbCnt < len(usb) or upsCnt < len(ups)):
     val2 = float('inf')
     if usbCnt < len(usb):
         val1 = usb[usbCnt]
-        # usbCnt+=1
     if upsCnt < len(ups):
         val2 = ups[upsCnt]
-        # upsCnt+=1
     numMouse += 1
     minVal = min(val1, val2)
     if minVal == val1:

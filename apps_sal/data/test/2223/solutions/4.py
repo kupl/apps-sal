@@ -1,6 +1,3 @@
-# n nodes, n - 1 edges, no possibility for loop
-# so no need of maintaining a vis array, it'd not visit nodes previously visited
-# as long as you don't go along the edge back which leads you to the current node
 
 
 from collections import deque
@@ -9,9 +6,9 @@ from collections import deque
 def main():
     n = int(input())
     neis = [[] for i in range(n + 1)]
-    vis = [0 for i in range(n + 1)]  # vis[i] -- the next node i is going to visit is neis[vis[i]]
-    nodes = [1 for i in range(n + 1)]  # nodes[i] -- the number of nodes 'belong to' i(included i)
-    pre = [None for i in range(n + 1)]  # pre[i] -- the node which leads to node i in fake dfs process
+    vis = [0 for i in range(n + 1)]
+    nodes = [1 for i in range(n + 1)]
+    pre = [None for i in range(n + 1)]
     cut = 0
 
     for _ in range(n - 1):

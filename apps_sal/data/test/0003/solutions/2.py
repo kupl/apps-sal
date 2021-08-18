@@ -23,31 +23,29 @@ for i in range(q - 1):
         lj = l[j]
         ri = r[i]
         rj = r[j]
-        # puts "(#{li} #{ri}) - (#{lj} #{rj}) " if DBG
         if li > lj:
             li, lj = lj, li
             ri, rj = rj, ri
-        # end  # now li <= lj
 
-        if rj <= ri:   # li  lj  rj  ri
+        if rj <= ri:
             oneal = li
             onear = lj - 1
             twol = lj
             twor = rj
             onebl = rj + 1
             onebr = ri
-        elif lj <= ri:  # li  lj  ri  rj
+        elif lj <= ri:
             oneal = li
             onear = lj - 1
             twol = lj
             twor = ri
             onebl = ri + 1
             onebr = rj
-        else:  # li  ri    lj  rj
+        else:
             oneal = li
             onear = ri
             twol = lj
-            twor = lj - 1  # null
+            twor = lj - 1
             onebl = lj
             onebr = rj
 
@@ -55,7 +53,6 @@ for i in range(q - 1):
         oneredb = acc1[onebr] - acc1[onebl - 1]
         twored = acc12[twor] - acc12[twol - 1]
         redsum = onereda + oneredb + twored
-        # puts " - 1l: #{onereda}, 2:#{twored}, 1r: #{oneredb}" if DBG
         minred = min(minred, redsum)
 
 zcnt = 0

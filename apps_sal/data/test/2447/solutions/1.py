@@ -9,11 +9,8 @@ def main():
     inf = 10 ** 20
 
     t = int(input())
-#    t, a, b = map(int, input().split())
-#    t = 1
 
     for _ in range(1, t + 1):
-        #    print("Case #{}: ".format(_), end = '')
 
         s = input().strip()
         ps0, ps1 = [0], [0]

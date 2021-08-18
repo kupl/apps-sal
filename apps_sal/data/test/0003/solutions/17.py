@@ -48,8 +48,5 @@ for i in range(q - 1):
         if MICAN < MINUS:
             MINUS = MICAN
 
-        # print(i,j)
-        # print(l0,r0,l1,r1)
-        # print(MICAN)
 
 print(ANS - MINUS)

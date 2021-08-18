@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/7 13:43
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : C. Painting the Fence.py
 
 
 def main():
@@ -10,7 +5,6 @@ def main():
     painters = []
     for _ in range(q):
         painters.append(list(map(int, input().split())))
-    # print(painters)
 
     ret = 0
     for index in range(q):

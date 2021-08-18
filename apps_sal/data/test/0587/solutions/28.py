@@ -8,7 +8,6 @@ for i in range(N):
     dtlist.append((d, t))
     tset_all.add(t)
 dtlist.sort()
-# print(heapq)
 
 dtlist_Krev = []
 dsum = 0
@@ -22,7 +21,6 @@ dtlist_Krev.sort(reverse=True)
 
 t0 = len(tdic)
 max_answer = dsum + (t0**2)
-# print(t0,max_answer)
 
 for i in range(t0 + 1, min(K, len(tset_all)) + 1):
     loop_flg = True
@@ -41,7 +39,6 @@ for i in range(t0 + 1, min(K, len(tset_all)) + 1):
                     break
 
     answer_i = dsum + (i**2)
-    # print(i,answer_i)
     max_answer = max(max_answer, answer_i)
 
 print(max_answer)
