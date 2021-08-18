@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/1/23 23:46
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : F. MST Unification.py
 
 
 class UnionFind(object):

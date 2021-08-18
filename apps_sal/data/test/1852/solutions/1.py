@@ -33,9 +33,6 @@ def solve(N, M, G):
     levels = [0] * M
     ans = []
     for level in range(1, N):
-        #dprint('level', level, [x for x in levels])
-        #dprint('vs', vs)
-        #dprint('layer_vcount', layer_vcount)
 
         if len(vs) not in (layer_vcount - 1, layer_vcount):
             return []
@@ -48,14 +45,12 @@ def solve(N, M, G):
                 sp_deg_off = 1
         else:
             sp_deg_off = 0
-        #dprint('sp_deg_off', sp_deg_off)
 
         ndeg = 3 if level < N - 1 else 2
         us = set()
         ss = set()
 
         for v in vs:
-            #dprint('v', v)
             levels[v] = level
             p = None
             for u in G[v]:
@@ -64,11 +59,9 @@ def solve(N, M, G):
                         return []
                     p = u
                     break
-            #dprint('  p', p)
             if p is None:
                 return []
             deg = len(G[p])
-            #dprint('  deg', deg)
 
             if deg == ndeg:
                 us.add(p)
@@ -78,9 +71,6 @@ def solve(N, M, G):
                 ss.add(p)
             else:
                 return []
-
-        #dprint('us', us)
-        #dprint('ss', ss)
 
         if sp_deg_off != 0:
             if len(ss) != 1:

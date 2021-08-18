@@ -6,17 +6,6 @@ sys.setrecursionlimit(max(1000, 10**9))
 def write(x): return sys.stdout.write(x + "\n")
 
 
-# def sub(kouho, target):
-#     l = len(kouho)
-#     best = None
-#     for b in range(1<<l):
-#         v = 0
-#         for i in range(l.bit_length()):
-#             if b>>i&1:
-#                 v += 1<<i
-#         if
-
-
 n = int(input())
 a = list(map(int, input().split()))
 
@@ -35,8 +24,6 @@ else:
         v2 = tmp
         kouho = []
         ans = None
-#         if tmp>a[0]:
-#             ans = -1
         diff = k - 2 * tmp
         for i in range(diff.bit_length()):
             if (diff & 1 << i) & tmp:

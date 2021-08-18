@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/1108/F
 n, m = map(int, input().split())
 edge = [list(map(int, input().split())) for _ in range(m)]
 edge = sorted(edge, key=lambda x: x[2])

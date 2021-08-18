@@ -1,5 +1,3 @@
-# not submitted not completed
-# http://codeforces.com/problemset/problem/753/A
 n = int(input())
 sum = 0
 numbers = []

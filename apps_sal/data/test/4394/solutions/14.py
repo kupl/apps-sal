@@ -35,4 +35,3 @@ while i < m:
     cnt = cnt + num
     i = j
 print(cnt)
-# JSR

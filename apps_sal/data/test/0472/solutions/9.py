@@ -21,7 +21,6 @@ def main():
             mini = x
         if b.is_integer() and x != 999959999 and y > 0 and digit_sum(y) == s and (mini == -1 or y < mini):
             mini = y
-        # print("mini", mini)
     print(mini)
 
 

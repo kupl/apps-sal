@@ -1,4 +1,3 @@
-# AFTER EDITORIAL
 
 
 def solve(ls):
@@ -9,34 +8,6 @@ def solve(ls):
     s = 0
     for a in ls:
         s ^= a
-
-    #
-    # Max a <= x  s.t.
-    #   0 = NimSum(a, (x + y) - a, ls)
-    # <=>
-    # Max a <= x s.t.
-    #   ∃b.
-    #     a + b = x + y  (NOTE: a + b = a ^ b + 2 (a & b))
-    #     a ^ b = NimSum(ls)
-    # <=>
-    # Max a <= x s.t.
-    #   ∃b.
-    #     a & b = (x + y - NimSum(ls)) / 2
-    #     a ^ b = NimSum(ls)
-    #
-
-    #
-    # Thus it amounts to solve
-    #   a ^ b = s
-    #   a & b = (z - s) / 2 = t
-    #
-    # which is bit-wise independent as
-    #   a  b  ^  &
-    #   0  0  0  0
-    #   0  1  1  0
-    #   1  0  1  0
-    #   1  1  0  1
-    #
 
     if (z - s) < 0 or (z - s) % 2 == 1:
         return -1
@@ -53,7 +24,7 @@ def solve(ls):
     for i in range(first_set + 1)[::-1]:
         k = 1 << i
         if s & k:
-            if (a | k) <= x:  # Greedy is optimal
+            if (a | k) <= x:
                 a = a | k
             else:
                 b = b | k

@@ -79,7 +79,6 @@ print(e-s)
 t = int(input())
 for i in range(t):
     n, k = list(map(int, input().split()))
-    # n=int(input())
     a = set(map(int, input().split()))
     n = len(a)
     if n == 1:

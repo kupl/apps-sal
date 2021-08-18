@@ -17,7 +17,6 @@ def main():
         return
     k = x.bit_length()
     tmp = d
-    # d^tmp はd&x=0からd|tmpと一緒
     for i in range(k, -1, -1):
         if (x >> i) & 1:
             if tmp | 1 << i <= a[0]:

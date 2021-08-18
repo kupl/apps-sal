@@ -13,6 +13,5 @@ while len(a) > 1:
             ans += 1
         else:
             t.append(a[i])
-            #temp += 1
     a = t
 print(ans)

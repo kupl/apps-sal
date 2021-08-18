@@ -24,7 +24,6 @@ def try_from(start, a, b):
             del counts_a[seq[i - 1]]
 
         ok = counts_a == counts_b
-        #ok = sorted(seq[i:i+len(b)]) == sorted(b)
 
         if ok:
             result.append(start + p * i)
@@ -38,6 +37,3 @@ for start in range(p):
 
 print(len(result))
 print(' '.join(map(str, sorted(result))))
-
-
-# Made By Mostafa_Khaled

@@ -1,6 +1,5 @@
 import sys
 f = sys.stdin
-#f = open("input.txt", "r")
 n = int(f.readline().strip())
 a = [int(i) for i in f.readline().strip().split()]
 cnt = dict.fromkeys(a)

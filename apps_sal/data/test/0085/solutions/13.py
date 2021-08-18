@@ -33,7 +33,6 @@ def bfs(x, g):
     min_[x] = 0
     i = 0
 
-    # [num, type]
     prev = {}
 
     while i < len(s):

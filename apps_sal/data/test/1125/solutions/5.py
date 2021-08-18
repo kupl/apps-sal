@@ -47,7 +47,6 @@ for i in range(59):
                     nk = 0
 
                 DP[i + 1][nj][nk] = min(DP[i + 1][nj][nk], DP[i][j][k] | ((1 << i) * nb))
-                # print(i,j,k,nj,nk,DP[i][j][k]|((1<<i)*nb))
 
 ANS = DP[59][0][1] - A[1]
 

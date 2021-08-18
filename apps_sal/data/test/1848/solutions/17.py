@@ -1,5 +1,3 @@
-# ATTENTION:
-# never attend codeforces if u're drunk
 n = int(input())
 a = sorted([int(x) for x in input().split()])
 c = dict()
