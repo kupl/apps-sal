@@ -2,27 +2,27 @@ h, w = map(int, input().split())
 field = [input() for i in range(h)]
 q = int(input())
 
-inrow = [[0] * (w + 1) for i in range(h + 1)]  # [row][end_col]
+inrow = [[0] * (w + 1) for i in range(h + 1)]
 for i in range(h):
     sum = 0
     for j in range(1, w):
         if field[i][j] == field[i][j - 1] == ".":
             sum += 1
         inrow[i][j] = sum
-incol = [[0] * (h + 1) for i in range(w + 1)]  # [col][start_row]
+incol = [[0] * (h + 1) for i in range(w + 1)]
 for j in range(w):
     sum = 0
     for i in range(1, h):
         if field[i][j] == field[i - 1][j] == ".":
             sum += 1
         incol[j][i] = sum
-suminrows = [[0] * (w + 1) for i in range(h + 1)]  # [end_row][end_col]
+suminrows = [[0] * (w + 1) for i in range(h + 1)]
 for j in range(w):
     sum = 0
     for i in range(h):
         sum += inrow[i][j]
         suminrows[i][j] = sum
-sumincols = [[0] * (h + 1) for i in range(w + 1)]  # [end_col][end_row]
+sumincols = [[0] * (h + 1) for i in range(w + 1)]
 for i in range(h):
     sum = 0
     for j in range(w):

@@ -23,10 +23,8 @@ def factorization(n):
 
 L1 = factorization(N - 1)
 s = 1
-# print(L1)
 for [a, b] in L1:
     s *= (b + 1)
-# print(s)
 
 
 def make_divisors(n):

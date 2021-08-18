@@ -1,8 +1,5 @@
 N = int(input())
 
-# 約数
-# O(N**0.5)
-
 
 def yakusu(N):
     ret = [[], []]

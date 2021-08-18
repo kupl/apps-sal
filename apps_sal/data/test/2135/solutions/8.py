@@ -10,8 +10,8 @@ for i in range(h):
     for j in range(w):
         vr[j + 1][i + 1] = vr[j][i + 1] + vr[j + 1][i] - vr[j][i]
         hr[j + 1][i + 1] = hr[j][i + 1] + hr[j + 1][i] - hr[j][i]
-        if a[i][j] == '#':
-            continue
+        if a[i][j] == '
+        continue
         if i != h - 1 and a[i + 1][j] == '.':
             vr[j + 1][i + 1] += 1
         if j != w - 1 and a[i][j + 1] == '.':

@@ -36,4 +36,4 @@ for b in B:
     if wk % b == 1:
         ANS.add(b)
 
-print(len(ANS) - 1)  # 1を除く
+print(len(ANS) - 1)

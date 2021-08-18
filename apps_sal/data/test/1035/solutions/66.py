@@ -4,11 +4,9 @@ import math
 def using_sqrt(k):
     factor = 0
 
-    # 2以外の偶数は素数ではないので無視する
     if k % 2 == 0 and k != 2:
         return False
 
-    # 繰り返しの上限を対象の平方根にする
     for divisor in range(2, math.floor(math.sqrt(k)) + 1):
         if k % divisor == 0:
             factor += 1
@@ -42,7 +40,6 @@ def make_codivisors(n):
             if j == len(n) - 1:
                 divisors.append(i)
 
-    # divisors.sort()
     return divisors
 
 

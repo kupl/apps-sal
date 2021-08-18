@@ -16,7 +16,6 @@ for i in range(0, len(a), 2):
     while len(c) > 0 and c[len(c) - 1] == 0:
         c.pop()
     o = max(o, len(c))
-    # print(*c)
 print(o + 1)
 for i in range(300000):
     if b[i] == []:

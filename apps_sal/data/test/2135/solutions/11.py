@@ -39,8 +39,6 @@ def solve(h, w, board, queries):
             acum += base
         return acum
 
-    #print(get_horiz(h, w, board))
-    # print(query(1,2,4,5))
     res = []
     for q in queries:
         res.append(query(*q))

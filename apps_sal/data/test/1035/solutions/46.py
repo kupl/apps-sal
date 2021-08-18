@@ -1,4 +1,3 @@
-# 問題：https://atcoder.jp/contests/abc142/tasks/abc142_d
 
 import math
 

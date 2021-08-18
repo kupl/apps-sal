@@ -19,8 +19,6 @@ def primes(n: int) -> list:
             is_prime[j] = False
     return [i for i in range(n + 1) if is_prime[i]]
 
-# 素数判定（単純な素数判定なら十分早い。大量にやる場合はX in primesがよさそう）
-
 
 @lru_cache(maxsize=None)
 def is_prime(n: int) -> bool:
@@ -37,18 +35,14 @@ def is_prime(n: int) -> bool:
             return False
     return True
 
-# 素因数分解
-
 
 @lru_cache(maxsize=None)
 def prime_factorize(n: int) -> list:
     '''引数nの素因数分解結果のlistを返す。'''
     arr = []
-    # 2で割り続け奇数まで還元する
     while n % 2 == 0:
         arr.append(2)
         n //= 2
-    # sqrt(n)までの素数で試し割
     for f in primes(int(n**0.5)):
         while n % f == 0:
             arr.append(f)
@@ -56,8 +50,6 @@ def prime_factorize(n: int) -> list:
     if n != 1:
         arr.append(n)
     return arr
-
-# 約数リスト
 
 
 def make_divisors(n: int) -> list:

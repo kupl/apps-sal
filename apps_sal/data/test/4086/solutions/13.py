@@ -1,4 +1,3 @@
-# your code goes here
 n = int(input())
 l = list(map(int, input().split()))
 rdup = []

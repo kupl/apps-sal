@@ -6,7 +6,6 @@ def getInt(): return int(input())
 def getVars(): return list(map(int, input().split()))
 def getArr(): return list(map(int, input().split()))
 def getStr(): return input().strip()
-# -------------------------------
 
 
 N = getInt()

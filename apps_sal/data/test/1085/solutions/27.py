@@ -1,4 +1,3 @@
-# F - Division or Subtraction
 def pf(x):
     plist = [1]
     p = 2

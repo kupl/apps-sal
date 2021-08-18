@@ -11,12 +11,10 @@ ass = s.add
 for i in range(n):
     if i in s:
         continue
-    # print()
     Q = i
     k = 1
     ass(Q)
     while True:
-        # print(Q,s,i)
         if step[Q] != 2:
             ass(Q)
             break

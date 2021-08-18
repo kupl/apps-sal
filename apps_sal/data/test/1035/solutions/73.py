@@ -19,7 +19,5 @@ def prime_numbers(N):
 
 a = prime_numbers(A)
 b = prime_numbers(B)
-#print(a, b)
-# print(a.intersection(b))
 ans = len(a.intersection(b))
 print(ans)
