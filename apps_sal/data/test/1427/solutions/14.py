@@ -5,7 +5,7 @@ input = sys.stdin.readline
 
 class PrimeFactor():
 
-    def __init__(self, n):                  # エラトステネス　O(N loglog N)
+    def __init__(self, n):
         self.n = n
         self.table = [i if i % 2 else 2 for i in range(n + 1)]
         self.table[0] = 0
@@ -14,12 +14,12 @@ class PrimeFactor():
                 for q in range(p * p, n + 1, 2 * p):
                     self.table[q] = p
 
-    def is_prime(self, x):  # 素数判定　O(1)
+    def is_prime(self, x):
         if x < 2:
             return False
         return self.table[x] == x
 
-    def prime_factors(self, x):             # 素因数分解 O(logN)
+    def prime_factors(self, x):
         res = []
         if x < 2:
             return res
@@ -28,7 +28,7 @@ class PrimeFactor():
             x //= self.table[x]
         return res
 
-    def prime_counter(self, x):             # 素因数分解（個数のリスト）
+    def prime_counter(self, x):
         res = defaultdict(int)
         if x < 2:
             return res
@@ -37,7 +37,7 @@ class PrimeFactor():
             x //= self.table[x]
         return res
 
-    def prime_gcd(self, X):                 # n個の最大公約数　X:n個のリスト
+    def prime_gcd(self, X):
         exponents = self.prime_counter(X[0])
         for x in X[1:]:
             Y = self.prime_counter(x)
@@ -49,7 +49,7 @@ class PrimeFactor():
             res *= pow(prime, exp)
         return res
 
-    def prime_lcm(self, X, mod=None):       # n個の最小公倍数　X:n個のリスト
+    def prime_lcm(self, X, mod=None):
         exponents = defaultdict(int)
         for x in X:
             for prime, exp in self.prime_counter(x).items():

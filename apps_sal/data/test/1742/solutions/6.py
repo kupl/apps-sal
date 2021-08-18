@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/13 11:57
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : D. Nastya Is Buying Lunch.py
 
 import sys
 

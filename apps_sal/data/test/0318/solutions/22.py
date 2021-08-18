@@ -1,7 +1,6 @@
 import collections
 import math
 
-#n ,m = map(int, input().split())
 t = list(input())
 a = int(input()) % 1440
 m = (a % 60 + int(t[3]) * 10 + int(t[4])) % 60

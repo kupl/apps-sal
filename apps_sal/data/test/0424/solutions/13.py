@@ -1,4 +1,4 @@
-def max_less_prime_divisor(n):  # 1 for primes
+def max_less_prime_divisor(n):
     d, max_d = 2, 1
     while d * d <= n:
         while n % d == 0:

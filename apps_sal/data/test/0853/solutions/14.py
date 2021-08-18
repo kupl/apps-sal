@@ -9,9 +9,7 @@ if 0 in m:
             if m[i] == 0:
                 l += 1
         p = k // 9
-        # print(p)
         p1 = p // 5
-        # print(p1)
         if p1 != 0:
             print('5' * p1 * 9 + '0' * l)
         else:

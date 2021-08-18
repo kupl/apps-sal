@@ -11,7 +11,7 @@ for i in range(n // 2 + 1, n):
 
 for i in range(len(jumps)):
     weight = i + 1
-    if weight * jumps[i] > k:  # the median cannot go jumps[i] jumps
+    if weight * jumps[i] > k:
         this_jump = k // weight
         median += this_jump
         k -= this_jump * weight

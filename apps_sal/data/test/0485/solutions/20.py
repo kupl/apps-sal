@@ -1,4 +1,3 @@
-# https://codeforces.com/contest/1184/problem/C1
 n = int(input())
 p = []
 dx = {}
@@ -41,7 +40,6 @@ for y in sorted(dy.keys())[::-1]:
         break
 
 outlier = None
-#print(min_x, max_x), (min_y, max_y)
 
 for x, y in p:
     if (x - min_x) * (x - max_x) <= 0 and (y - min_y) * (y - max_y) <= 0:
@@ -53,13 +51,3 @@ for x, y in p:
         break
 
 print(' '.join([str(x) for x in outlier]))
-# 2
-# 0 0
-# 0 1
-# 0 2
-# 1 0
-# 1 1
-# 1 2
-# 2 0
-# 2 1
-# 2 2

@@ -26,8 +26,6 @@ for i in range(len(a[0])):
                 a[0][i] = 'X'
                 a[1][i] = 'X'
                 bljet = 1
-        # print(a[0])
-        # print(a[1])
 
     if bljet:
         n += 1

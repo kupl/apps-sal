@@ -2,8 +2,6 @@ import math
 from functools import reduce
 from collections import defaultdict
 
-# 素因数分解O(√n)
-
 
 def primeFactor(n):
     res = defaultdict(lambda: 0)

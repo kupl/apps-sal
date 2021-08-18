@@ -2,7 +2,6 @@ import collections
 
 
 def doit():
-    # rows = [[] for y in range(M)]
     rows = dict()
 
     N = int(input())
@@ -34,22 +33,15 @@ def doit():
                 continue
             yield colorindex
 
-    # visited = set()
-    # visited.add(root)
     queue = collections.deque([root])
     while queue:
         vertex = queue.popleft()
-        # newcolors = [c for c in range(1, msize+2) if c != colors[vertex] and c != colors[parents[vertex]] ]
-        # newcolors = filter(lambda c: c != colors[vertex] and c != colors[parents[vertex]], range(1, msize+2))
-        #
-        # print(f'newcolors={newcolors}')
         colorgen = color(colors[vertex], colors[parents[vertex]])
         for neighbour in graph[vertex]:
             if neighbour == parents[vertex]:
                 continue
             parents[neighbour] = vertex
             colors[neighbour] = next(colorgen)
-            # visited.add(neighbour)
             queue.append(neighbour)
     print(" ".join(map(str, colors)))
 

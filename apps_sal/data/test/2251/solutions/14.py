@@ -1,4 +1,3 @@
-# 505B
 from collections import defaultdict
 
 __author__ = 'artyom'

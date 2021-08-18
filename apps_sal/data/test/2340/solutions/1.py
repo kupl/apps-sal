@@ -11,7 +11,6 @@ for tt in range(t):
     last = h
     i = 1
     while i < n:
-        #print('last =', last, '; i =', i, '; a[i] =', a[i], '; a[i + 1] =', a[i + 1], '; ans =', ans)
         last = min(last, a[i] + 1)
         if a[i + 1] == last - 2:
             last = a[i + 1]

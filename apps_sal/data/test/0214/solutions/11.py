@@ -16,7 +16,6 @@ if board[1][0] == 'X':
     dp[1][0] = inf
 
 
-#print([dp[j][0] for j in range(4)])
 for i in range(1, n):
     prev_best = max(dp[j][i - 1] for j in range(4))
     for j in range(4):
@@ -33,6 +32,5 @@ for i in range(1, n):
     if board[1][i] == 'X':
         dp[0][i] = inf
         dp[1][i] = inf
-    #print([dp[j][i] for j in range(4)])
 
 print(max(max(dp[i][-1] for i in range(4)), 0))

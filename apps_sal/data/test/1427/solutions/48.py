@@ -1,25 +1,18 @@
 import sys
-# import re
 import math
 import collections
-# import decimal
 import bisect
 import itertools
 import fractions
-# import functools
 import copy
-# import heapq
 import decimal
-# import statistics
 import queue
 from functools import reduce
 
-# import numpy as np
 
 sys.setrecursionlimit(10000001)
 INF = 10 ** 16
 MOD = 10 ** 9 + 7
-# MOD = 998244353
 
 
 def ni(): return int(sys.stdin.readline())
@@ -27,12 +20,9 @@ def ns(): return list(map(int, sys.stdin.readline().split()))
 def na(): return list(map(int, sys.stdin.readline().split()))
 
 
-# ===CODE===
-
 def main():
     from functools import reduce
 
-    # 最小公倍数
     def lcm_base(x, y):
         return (x * y) // math.gcd(x, y)
 

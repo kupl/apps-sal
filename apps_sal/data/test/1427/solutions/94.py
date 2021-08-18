@@ -15,7 +15,6 @@ def fac(n):
             if so_list[i] < cnt:
                 so_list[i] = cnt
     if temp != 1:
-        #  print(temp)
         if so_list[temp] == 0:
             so_list[temp] = 1
 
@@ -29,7 +28,6 @@ for i in range(len(so_list)):
         l *= pow(i, so_list[i], mod)
         l %= mod
 ans = 0
-# print(l)
 for i in a:
     t = pow(i, mod - 2, mod)
     ans += (l * t) % mod
