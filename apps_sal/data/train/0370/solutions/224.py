@@ -3,7 +3,6 @@ from collections import defaultdict
 import time
 
 DEBUG = False
-# DEBUG = True
 
 
 def debug(*args):
@@ -27,17 +26,9 @@ class Sieve:
 
 sieve = Sieve(100000)
 
-# s = Sieve(10000)
-# print(s.factors(6))
-# print(s.factors(512))
-# print(s.factors(1007))
-# print(s.factors(5040))
-
 
 class Solution:
     def largestComponentSize(self, a: List[int]) -> int:
-        # start = time.time()
-        #
         by_factors = defaultdict(list)
         for x in a:
             for f in sieve.factors(x):
@@ -66,6 +57,4 @@ class Solution:
                                 seenf.add(ff)
             ans = max(ans, streak)
 
-        # end = time.time()
-        # print(end - start)
         return ans

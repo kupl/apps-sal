@@ -32,23 +32,19 @@ class UnionFind:
 
 class Solution:
     def gcd(self, a, b):
-        # Everything divides 0
         if (b == 0):
             return a
         return gcd(b, a % b)
 
     def largestComponentSize(self, A: List[int]) -> int:
-        dsu = UnionFind(max(A) + 1)  # cause we have max(A) as node
+        dsu = UnionFind(max(A) + 1)
 
-        # attribute each element in A
-        #   to all the groups that lead by its factors.
         for a in A:
             for factor in range(2, int(sqrt(a)) + 1):
                 if a % factor == 0:
                     dsu.union(a, factor)
                     dsu.union(a, a // factor)
 
-        # count the size of group one by one
         group_count = defaultdict(int)
         for a in A:
             group_id = dsu.find(a)

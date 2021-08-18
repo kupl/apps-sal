@@ -1,13 +1,5 @@
-# class Solution:
-#     def largestComponentSize(self, A: List[int]) -> int:
 
 
-#     def find_prime(self, num):
-#         ans = []
-#         for i in range(2, int(math.sqrt(num)) + 1):
-#             if num % i == 0:
-#                 ans.append(i)
-#         return ans
 class DSU:
     def __init__(self, N):
         self.p = list(range(N))

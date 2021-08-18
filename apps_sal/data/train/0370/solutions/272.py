@@ -15,10 +15,7 @@ class DisjointSetUnion(object):
         if px == py:
             return px
 
-        # connect the two sets (components)
         if self.size[px] > self.size[py]:
-            # add the node to the union with less members
-            # keeping px as the index of the smaller component
             px, py = py, px
         self.parent[px] = py
         self.size[py] += self.size[px]

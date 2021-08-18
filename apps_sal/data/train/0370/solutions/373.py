@@ -12,9 +12,6 @@ class Solution:
         count_ = defaultdict(int)
         out = 0
 
-#         print(uf.parent)
-#         print(uf.size)
-
         for a in A:
             groupid = uf.find(a)
             count_[groupid] += 1

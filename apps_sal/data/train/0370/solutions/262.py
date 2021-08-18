@@ -1,5 +1,3 @@
-# Largest Component Size by Common Factor
-# https://www.youtube.com/watch?v=6Ud_4A9qTp4
 
 from math import sqrt
 from collections import Counter
@@ -26,27 +24,18 @@ class Solution:
         for x in A:
             y = 2
             factors = []
-            # # 1
-            # find common & primes of X
             while x >= y * y:
                 if x % y == 0:
                     factors.append(y)
-                    # delete y common
                     while x % y == 0:
                         x //= y
                 y += 1
-            if x > 1:  # find new primes
+            if x > 1:
                 factors.append(x)
 
-            # # 2
-            # zip(factors, factors[1:]) -> [a,b,c] => ab , bc ~~
-            # Linking parent (if link => small -> large)
             for a, b in zip(factors, factors[1:]):
                 uunion(a, b)
 
-            # # 3
-            # prime > 0
-            # minimum factors += 1
             if len(factors) > 0:
                 count[factors[0]] += 1
 

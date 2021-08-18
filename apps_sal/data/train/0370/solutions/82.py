@@ -15,10 +15,8 @@ class UFS:
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        # from time import time
-        # start_time = time()
 
-        def primeFactors(k):  # Prime factor decomposition
+        def primeFactors(k):
             out = set()
             while k % 2 == 0:
                 out.add(2)
@@ -33,19 +31,14 @@ class Solution:
 
         n = len(A)
         maxa = max(A)
-        # print(f\"{maxa=}, {len(A)=}\")
 
         ufs = UFS(maxa + 1)
 
         for cur in A:
             factors = primeFactors(cur)
-            # print(f\"{cur=}, {factors=}\")
 
             for f in factors:
                 ufs.union(f, cur)
-
-        # union_time = time() - start_time
-        # print(f\"{union_time=}\")
 
         count = [0] * (maxa + 1)
         for cur in A:

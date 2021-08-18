@@ -26,5 +26,3 @@ class Solution:
             count = max(count, 1 + cache.get(xp, 0))
             cache[xp] = 1 + cache.get(xp, 0)
         return count
-
-    # O(N * sqrt*max(A[i]))

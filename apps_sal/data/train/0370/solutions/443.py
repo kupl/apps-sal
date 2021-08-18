@@ -1,10 +1,4 @@
-#
-# @lc app=leetcode id=952 lang=python3
-#
-# [952] Largest Component Size by Common Factor
-#
 
-# @lc code=start
 from collections import defaultdict
 
 
@@ -12,13 +6,13 @@ class Solution:
     MAXA = 100001
     isPrime = [0 for _ in range(MAXA + 1)]
     isPrime[0] = -1
-    isPrime[1] = -1  # 0 and 1 are not prime numbers
+    isPrime[1] = -1
     for i in range(2, MAXA):
-        if isPrime[i] == 0:  # i is prime
+        if isPrime[i] == 0:
             for multiple in range(i * i, MAXA + 1, i):
                 if isPrime[multiple] == 0:
                     isPrime[multiple] = i
-            isPrime[i] = i  # let i store itself for consistency
+            isPrime[i] = i
 
     def largestComponentSize(self, A: List[int]) -> int:
         label = defaultdict(int)
@@ -48,4 +42,3 @@ class Solution:
             label[root_id] -= 1
 
         return -min(label.values())
-# @lc code=end

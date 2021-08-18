@@ -1,4 +1,3 @@
-# cook your dish here
 d = 2**0.5
 for _ in range(int(input())):
     a, b, c = map(int, input().split())

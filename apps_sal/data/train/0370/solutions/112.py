@@ -30,7 +30,7 @@ class Solution:
                 while n % i == 0:
                     primes.add(i)
                     n //= i
-            if n > 2:  # incase 3
+            if n > 2:
                 primes.add(n)
             return primes
         uf = UnionFind()
