@@ -3,7 +3,6 @@ class Solution:
         maxRolls = min(n, max(rollMax))
         dp = [[[0] * (maxRolls + 1) for _ in range(7)] for _ in range(n + 1)]
 
-        # Base case
         for j in range(1, 7):
             dp[1][j][1] = 1
 
@@ -11,11 +10,9 @@ class Solution:
             for j in range(1, 7):
                 for k in range(1, min(i, rollMax[j - 1]) + 1):
                     if k > 1:
-                        # Last roll was also a j
                         dp[i][j][k] = sumMod(dp[i][j][k], dp[i - 1][j][k - 1])
                         continue
 
-                    # Last roll was a jj != j
                     for jj in range(1, 7):
                         if jj == j:
                             continue

@@ -1,6 +1,5 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        # O(n + sum(rollMax))
         if n == 1:
             return 6
         states = []

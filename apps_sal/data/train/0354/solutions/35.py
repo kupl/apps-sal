@@ -1,4 +1,3 @@
-# from copy import deepcopy
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         dp = [[0 for _ in range(i)] for i in rollMax]
@@ -9,7 +8,6 @@ class Solution:
         for i in range(6):
             dp[i][0] = 1
 
-        # print(dp)
         for i in range(n - 1):
             dp2 = [[0 for _ in range(i)] for i in rollMax]
             for j in range(6):
@@ -19,5 +17,4 @@ class Solution:
                 dp2[j][0] = sum_dp(j)
             dp = dp2
 
-        # print(dp)
         return sum_dp() % 1000000007

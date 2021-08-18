@@ -5,7 +5,6 @@ class Solution:
     def dieSimulator(self, n, rollMax):
         r = max(rollMax)
         dp = [[0] * (r + 1) for _ in range(6)]
-        # dp[i][j] last roll was i and i was thrown j consecutive times
         for i in range(6):
             dp[i][1] = 1
         for _ in range(n - 1):

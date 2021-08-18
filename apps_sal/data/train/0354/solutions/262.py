@@ -14,5 +14,4 @@ class Solution:
                             continue
                         inc -= dp[prev][k]
                 dp[i][j] = inc
-        # print(dp)
         return sum(dp[-1]) % (10 ** 9 + 7)

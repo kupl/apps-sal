@@ -16,5 +16,3 @@ class Solution:
         ans = sum(dfs(n - 1, i, 1) for i in range(6))
 
         return ans % 1000000007
-
-    # https://leetcode.com/problems/dice-roll-simulation/discuss/833495/Python-3-or-DFS-%2B-Memoization-or-Explanation

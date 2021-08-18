@@ -1,6 +1,5 @@
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        # dp template 2: number of paths
 
         cache = {}
         MOD = 10**9 + 7
@@ -9,13 +8,13 @@ class Solution:
             if n == 0:
                 return 1
 
-            if (n, prev_roll, prev_count) in cache:  # store state
+            if (n, prev_roll, prev_count) in cache:
                 return cache[n, prev_roll, prev_count]
 
             res = 0
             for i in range(len(rollMax)):
                 if prev_roll != None and i == prev_roll:
-                    if prev_count == rollMax[i]:  # can't be more than rollMax[i] consecutive times
+                    if prev_count == rollMax[i]:
                         continue
                     res += dp(n - 1, i, prev_count + 1)
                 else:
