@@ -1,4 +1,3 @@
-# cook your code here
 t = eval(input())
 while t:
     s1 = input().lower()

@@ -7,8 +7,6 @@ class Solution:
         rods.sort()
         l = len(rods)
 
-        # max_rods = sum(rods) / 2
-
         @lru_cache(maxsize=None)
         def search(idx, diff):
             if idx < 0:

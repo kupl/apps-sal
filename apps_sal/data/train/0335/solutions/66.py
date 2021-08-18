@@ -11,13 +11,3 @@ class Solution:
                 cur[s - i] = max(dp[s], cur[s - i])
             dp = cur
         return dp[0]
-
-
-#         total = sum(rods)
-#         n = len(rods)
-#         m = total // 2
-#         dp = [0] * (m + 1)
-#         for i in range(n):
-#             for j in range(m, rods[i] - 1, -1):
-#                 dp[j] = max(dp[j], dp[j - rods[i]] + rods[i])
-#         print(dp)
