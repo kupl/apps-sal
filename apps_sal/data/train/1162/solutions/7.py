@@ -34,7 +34,6 @@ def getMaxFour(N):
 
 def __starting_point():
     Ns = readInput(sys.stdin)
-    # print Ns
     for N in Ns:
         slevin = getMaxFour(N)
         print(slevin)

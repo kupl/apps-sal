@@ -15,7 +15,6 @@ for _ in range(int(input())):
         temp.append(0)
         A[i] = temp
 
-    # print(A)
     ans = [[0 for i in range(m)] for j in range(n)]
     dp = [[0 for i in range(m + 2)] for j in range(n)]
     for i in range(m):
@@ -23,7 +22,6 @@ for _ in range(int(input())):
     for i in range(1, n):
         for j in range(1, m + 1):
             temp = max(dp[i - 1][j - 1], dp[i - 1][j], dp[i - 1][j + 1])
-            # print(temp)
             if(temp > A[i][j]):
                 ans[i - 1][j - 1] = 0
             else:

@@ -1,5 +1,4 @@
 class Solution:
-    # O(n^2) time, O(n) space
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
 
         OPEN, CLOSED = 1, 0

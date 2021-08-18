@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     n, k = [int(i) for i in input().split()]
     if(n % 2 == 0):

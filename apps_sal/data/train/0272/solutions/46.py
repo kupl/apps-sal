@@ -24,12 +24,6 @@ class Solution:
                 for futureBox in box_set:
                     if futureBox in key_set or status[futureBox] == 1:
                         queue.append(futureBox)
-                # for newBox in toBeOpenBox:
-                #     queue.append(newBox)
-                #     if newBox in key_set:
-                #         key_set.remove(newBox)
-                #     if newBox in box_set:
-                #         box_set.remove(newBox)
             else:
                 box_set.add(box)
 

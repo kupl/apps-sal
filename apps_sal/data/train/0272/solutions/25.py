@@ -27,13 +27,11 @@ class Solution:
                     unboxes.add(adj)
 
             newBoxes = set()
-            # print(ns, unboxes)
             for box in unboxes:
                 if status[box] and box not in visited:
                     ns.add(box)
                     newBoxes.add(box)
             for box in newBoxes:
                 unboxes.remove(box)
-            # print(ns, unboxes)
             boxes = list(ns)
         return got

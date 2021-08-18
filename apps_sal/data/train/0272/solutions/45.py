@@ -11,7 +11,6 @@ class Solution:
             q.put(x)
 
         while not q.empty():
-            # print(q.queue)
             cur = q.get()
             if status[cur] == 1:
                 ans += candies[cur]
