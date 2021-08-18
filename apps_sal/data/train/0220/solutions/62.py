@@ -15,5 +15,4 @@ class Solution:
             cur += grumpy[j]
             cur -= grumpy[i]
             maxsum = max(maxsum, cur)
-        # print(maxsum)
         return total + maxsum

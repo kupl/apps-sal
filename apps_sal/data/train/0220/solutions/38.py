@@ -6,9 +6,7 @@ class Solution:
             grumpy[i] = 0 if grumpy[i] == 1 else 1
         mults = [x * y for x, y in zip(customers, grumpy)]
         sum_not_grumpy = sum(customers[:X])
-        #not_grumpy = [sum_not_grumpy]
         sum_normal = sum(mults[X:])
-        #normal_custs = [sum_normal]
 
         max_customers = sum_not_grumpy + sum_normal
         for i in range(1, len(customers) - X + 1):

@@ -30,5 +30,4 @@ class Solution:
                     res = f[i] + res
                     flag = True
             pre = num & (1 << i)
-            # print(pre)
         return res

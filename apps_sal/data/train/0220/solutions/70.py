@@ -1,6 +1,5 @@
 class Solution:
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
-        # sliding window of possible grumping times
         satisfied = 0
         n = len(customers)
         grumpySum = [0] * (n - X + 1)

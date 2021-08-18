@@ -1,4 +1,3 @@
-# coding = utf-8
 from functools import reduce
 div = 1000000007
 s = input()

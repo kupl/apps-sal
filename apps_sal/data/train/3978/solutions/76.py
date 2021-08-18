@@ -1,5 +1,5 @@
 def check_for_factor(base, factor):
-    a = base % factor  # your code here
+    a = base % factor
     if a == 0:
         c = True
     else:

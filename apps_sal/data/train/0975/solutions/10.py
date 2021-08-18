@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     n, r, x, y = list(map(int, input().strip().split(' ')))

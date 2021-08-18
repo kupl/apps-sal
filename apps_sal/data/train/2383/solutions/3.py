@@ -1,7 +1,6 @@
 T = int(input())
 II = 0
 while II < T:
-    # n=int(input())
     s = input().split()
     a = int(s[0])
     b = int(s[1])

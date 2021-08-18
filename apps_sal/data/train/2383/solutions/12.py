@@ -8,8 +8,6 @@ def eprint(*args):
 
 
 zz = 1
-#from math import *
-# sys.setrecursionlimit(10**6)
 if zz:
     input = sys.stdin.readline
 else:

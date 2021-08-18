@@ -7,7 +7,6 @@ class Solution:
                 s += customers[i]
                 customers[i] = 0
 
-        # print(customers)
         tmp = [sum(customers[:X])]
 
         for i in range(X, len(customers)):

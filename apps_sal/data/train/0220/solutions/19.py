@@ -3,7 +3,7 @@ class Solution:
         if X == len(customers):
             return sum(customers)
         sum_not_grumpy = sum(customers[:X])
-        sum_normal = sum([x * (1 - y) for x, y in zip(customers, grumpy)][X:])  # sum(mults[X:])
+        sum_normal = sum([x * (1 - y) for x, y in zip(customers, grumpy)][X:])
 
         max_customers = sum_not_grumpy + sum_normal
         for i in range(1, len(customers) - X + 1):
