@@ -5,7 +5,7 @@ class Solution:
             hours[i] = 1 if v > 8 else -1
             pre_sum.append(pre_sum[-1] + hours[i])
 
-        dec_stack = []  # idx to pre_sum
+        dec_stack = []
         for i, v in enumerate(pre_sum):
             if len(dec_stack) == 0 or (len(dec_stack) > 0 and v < pre_sum[dec_stack[-1]]):
                 dec_stack.append(i)
@@ -17,7 +17,6 @@ class Solution:
                 continue
             max_r = n
             while len(dec_stack) > 0:
-                # pop top < n
                 left_idx = dec_stack[-1]
                 if pre_sum[left_idx] < n:
                     dec_stack = dec_stack[0:-1]

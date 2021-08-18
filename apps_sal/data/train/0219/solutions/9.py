@@ -1,7 +1,7 @@
 class Solution:
     def longestWPI(self, hours: List[int]) -> int:
         d = {}
-        P = [0]  # prefix sum
+        P = [0]
         F = [0 for i in range(len(hours))]
         res = 0
         for i in range(len(hours)):

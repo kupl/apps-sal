@@ -1,19 +1,10 @@
 import sys
-# import math as mt
-# from collections import Counter
-# from itertools import permutations
-# from functools import reduce
-# from heapq import nsmallest, nlargest, heapify, heappop, heappush, heapreplace
 
 
 def get_inpt(): return sys.stdin.readline().strip()
 def get_int(): return int(sys.stdin.readline().strip())
 def get_ints(): return map(int, sys.stdin.readline().strip().split())
 def get_array(): return list(map(int, sys.stdin.readline().strip().split()))
-
-# sys.setrecursionlimit(10**7)
-# INF = float('inf')
-# MOD1, MOD2 = 10**9+7, 998244353
 
 
 n, k = get_ints()

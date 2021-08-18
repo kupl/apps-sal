@@ -1,4 +1,3 @@
-# generate primes
 from bisect import bisect
 LIMIT = 100000
 sieve = [True] * (LIMIT // 2)

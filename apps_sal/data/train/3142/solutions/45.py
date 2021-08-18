@@ -1,4 +1,3 @@
-# shittiest solution ever
 def seven_ate9(txt):
     count = 0
     txt = list(txt)

@@ -6,7 +6,6 @@ class Solution:
                 h[i] = 1
             else:
                 h[i] = -1
-        # longest subarray with sum >0
         pre = [0] * n
         pre[0] = h[0]
         maxi = 0
@@ -18,7 +17,6 @@ class Solution:
             if pre[x] > 0:
                 maxi = x + 1
             if d.get(pre[x] - 1, -1) != -1:
-                # print(i,d[pre[x]])
                 maxi = max(maxi, x - d[pre[x] - 1])
             if d.get(pre[x], -1) == -1:
                 d[pre[x]] = x

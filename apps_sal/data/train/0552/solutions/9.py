@@ -1,4 +1,3 @@
-# cook your dish here
 for x in range(int(input())):
     n, k = input().split()
     n = int(n)

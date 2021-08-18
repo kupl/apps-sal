@@ -10,6 +10,5 @@ while t > 0:
         k = n - k
     l1 = li[:k]
     l2 = li[k:]
-    # print(l1,l2)
     print(abs(sum(l1) - sum(l2)))
     t -= 1

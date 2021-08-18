@@ -1,22 +1,19 @@
-from sys import stdin, stdout                           #
-import math                                            #
-import heapq                                           #
-#
-t = 1                                                  #
+from sys import stdin, stdout
+import math
+import heapq
+t = 1
 
 
-def aint():                                            #
-    return int(input().strip())                        #
+def aint():
+    return int(input().strip())
 
 
-def lint():                                            #
-    return list(map(int, input().split()))              #
+def lint():
+    return list(map(int, input().split()))
 
 
-def fint():                                            #
-    return list(map(int, stdin.readline().split()))     #
-    #
-########################################################
+def fint():
+    return list(map(int, stdin.readline().split()))
 
 
 def main():
@@ -27,12 +24,9 @@ def main():
         print("YES")
     else:
         print("NO")
-    # solve
 
 
 t = int(input())
 
-########################################################
-for i in range(t):                                     #
-    #print("Case #"+str(i+1)+":",end=" ")		       #
-    main()                                             #
+for i in range(t):
+    main()
