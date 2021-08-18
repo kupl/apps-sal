@@ -34,8 +34,8 @@ while pos != []:
 
 for j in range(H):
     for k in range(W):
-        if sq[j][k] == "#":
-            c -= 1
+        if sq[j][k] == "
+        c -= 1
 
 if ans == True:
     print((c - depth - 1))

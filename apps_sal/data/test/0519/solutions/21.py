@@ -1,4 +1,3 @@
-# In the name of Allah
 
 from sys import stdin, stdout
 input = stdin.readline

@@ -1,9 +1,6 @@
 import sys
 
 
-#sys.stdin = open("input.txt")
-#sys.stdout = open("output.txt", "w")
-
 l = int(input())
 p = int(input())
 q = int(input())

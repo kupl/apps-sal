@@ -12,7 +12,7 @@ move = [[-1, 0], [1, 0], [0, -1], [0, 1]]
 
 que = deque([])
 que.append([0, 0])
-length[0][0] = 1  # １スタート
+length[0][0] = 1
 visited[0][0] = 1
 
 white = 0
@@ -28,8 +28,8 @@ while que:
 
         if ny < 0 or ny >= h or nx < 0 or nx >= w:
             continue
-        elif field[ny][nx] == "#":
-            continue
+        elif field[ny][nx] == "
+        continue
         elif visited[ny][nx] == 1:
             continue
 
@@ -40,4 +40,4 @@ while que:
 if length[h - 1][w - 1] == inf:
     print(-1)
 else:
-    print(white - length[h - 1][w - 1])  # 白の総数から最小距離分引く
+    print(white - length[h - 1][w - 1])

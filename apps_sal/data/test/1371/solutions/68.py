@@ -26,7 +26,7 @@ def main():
 
     ans = 0
     S -= 3
-    if S >= 0:  # 1つのケース
+    if S >= 0:
         ans += 1
 
     S -= 3

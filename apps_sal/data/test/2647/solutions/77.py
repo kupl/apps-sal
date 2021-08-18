@@ -21,9 +21,9 @@ def bfs():
         for i in range(4):
             nx, ny = x + dx[i], y + dy[i]
 
-            if 0 <= nx < H and 0 <= ny < W and visited[nx][ny] == float("inf") and C[nx][ny] != "#":
-                work_queue.append((nx, ny))
-                visited[nx][ny] = visited[x][y] + 1
+            if 0 <= nx < H and 0 <= ny < W and visited[nx][ny] == float("inf") and C[nx][ny] != "
+            work_queue.append((nx, ny))
+            visited[nx][ny] = visited[x][y] + 1
     return visited[gx][gy]
 
 

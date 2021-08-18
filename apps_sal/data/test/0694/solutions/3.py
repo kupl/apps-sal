@@ -1,6 +1,3 @@
-# import sys
-# sys.stdin = open("F:\\Scripts\\input","r")
-# sys.stdout = open("F:\\Scripts\\output","w")
 
 
 MOD = 10**9 + 7

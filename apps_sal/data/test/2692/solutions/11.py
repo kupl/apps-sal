@@ -13,7 +13,6 @@ for _ in range(t):
         aa = mid % b
         d = mid
         while a:
-            #   print(a,aa)
             d += a
             tt = a + aa
             a = tt // b

@@ -32,8 +32,8 @@ while Q:
         elif next_pos == goal:
             is_reached = True
             break
-        elif S[next_pos[0]][next_pos[1]] == "#":
-            continue
+        elif S[next_pos[0]][next_pos[1]] == "
+        continue
         else:
             S_check[next_pos[0]][next_pos[1]] = True
             Q.append((next_pos[0], next_pos[1], step + 1))
@@ -44,8 +44,8 @@ while Q:
 cnt = 0
 for i in range(H):
     for j in range(W):
-        if S[i][j] == "#":
-            cnt += 1
+        if S[i][j] == "
+        cnt += 1
 ans = -1
 if is_reached:
     ans = H * W - step - 1 - cnt

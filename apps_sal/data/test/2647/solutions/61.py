@@ -28,8 +28,8 @@ while que:
 
         if ny < 0 or ny >= h or nx < 0 or nx >= w:
             continue
-        elif field[ny][nx] == "#":
-            continue
+        elif field[ny][nx] == "
+        continue
         elif visited[ny][nx] == 1:
             continue
 

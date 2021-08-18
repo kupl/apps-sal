@@ -1,6 +1,5 @@
 import sys
 
-# D - Redistribution
 S = int(input())
 
 if S < 3:

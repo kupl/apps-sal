@@ -26,7 +26,6 @@ for i in range(1, S):
         break
     x = S - 3 * i
     c = combi(x + i - 1, i - 1)
-    # print(x, i, c)
     cnt = (cnt + c) % MOD
 
 print(cnt)

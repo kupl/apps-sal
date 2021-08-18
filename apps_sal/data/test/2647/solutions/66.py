@@ -17,9 +17,9 @@ while queue:
     dx, dy = [-1, 0, 1, 0], [0, -1, 0, 1]
     for i in range(4):
         nx, ny = x + dx[i], y + dy[i]
-        if 0 <= nx and nx < H and 0 <= ny and ny < W and s[nx][ny] != '#' and d[nx][ny] == inf:
-            queue.append([nx, ny])
-            d[nx][ny] = d[x][y] + 1
+        if 0 <= nx and nx < H and 0 <= ny and ny < W and s[nx][ny] != '
+        queue.append([nx, ny])
+        d[nx][ny] = d[x][y] + 1
 
 if d[H - 1][W - 1] == inf:
     print(-1)

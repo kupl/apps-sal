@@ -1,4 +1,3 @@
-#a,b,c,d = map(int, input().split())
 s = int(input())
 d = [[0] * (s + 1) for i in range((s + 2) // 3 + 1)]
 d[0][0] = 1

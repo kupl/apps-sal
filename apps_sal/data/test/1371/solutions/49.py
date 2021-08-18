@@ -28,7 +28,6 @@ ans = 0
 for n in range(1, S):
     if 3 * n > S:
         break
-    # print(ans)
     ans += nCk(S - 3 * n + n - 1, n - 1)
     ans %= MOD
 

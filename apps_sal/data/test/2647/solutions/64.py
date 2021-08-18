@@ -15,7 +15,6 @@ def main():
     H -= 1
     W -= 1
 
-    # initialize
     queue.append((0, 0))
     dist[0][0] = 0
     cnt = 0
@@ -40,16 +39,14 @@ def main():
                     queue.append((vx + dx, vy + dy))
                     dist[vy + dy][vx + dx] = dist[vy][vx] + 1
 
-            elif graph[vy + dy][vx + dx] == "#":
-                continue
+            elif graph[vy + dy][vx + dx] == "
+            continue
             else:
                 continue
 
-    # can't goal
     if dist[H][W] == -1:
         print(-1)
     else:
-        # the number of "." - min(dist) - "." of start
         print(cnt - dist[H][W] - 1)
 
 

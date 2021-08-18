@@ -28,8 +28,6 @@ def main():
             break
     if done == 0:
         print("NO")
-        # print(forward)
-        # print(backward)
 
 
 main()

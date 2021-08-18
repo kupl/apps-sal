@@ -31,7 +31,6 @@ for i in range(n):
     m = i + 1
     c = s - m * 3
     now = comb(c + i, i, mod)
-    # print(now)
     ans += now
     ans %= mod
 print(ans)

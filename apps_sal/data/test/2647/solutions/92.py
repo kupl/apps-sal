@@ -21,9 +21,9 @@ def bfs():
         for i in range(4):
             nr = p[0] + dr[i]
             nc = p[1] + dc[i]
-            if (0 <= nr < R) and (0 <= nc < C) and masu[nr][nc] != "#" and d[nr][nc] == float("inf"):
-                que.append((nr, nc))
-                d[nr][nc] = d[p[0]][p[1]] + 1
+            if (0 <= nr < R) and (0 <= nc < C) and masu[nr][nc] != "
+            que.append((nr, nc))
+            d[nr][nc] = d[p[0]][p[1]] + 1
 
     return d[gr][gc]
 
