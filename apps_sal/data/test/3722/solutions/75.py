@@ -1,4 +1,3 @@
-#from collections import deque,defaultdict
 def printn(x): return print(x, end='')
 def inn(): return int(input())
 def inl(): return list(map(int, input().split()))
@@ -6,10 +5,9 @@ def inm(): return map(int, input().split())
 def ins(): return input().strip()
 
 
-DBG = True  # and False
+DBG = True
 BIG = 10**18
 R = 10**9 + 7
-#R = 998244353
 
 
 def ddprint(x):
@@ -39,6 +37,5 @@ else:
     for i in range(2, n - 1):
         for j in range(i - 1):
             d[i] = (d[i] + d[j] * (i - j - 1)) % R
-        #ddprint(f"{i=} {x=} {d[i]=}")
         x = (x + d[i]) % R
     print(x)

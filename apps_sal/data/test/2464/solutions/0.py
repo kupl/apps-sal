@@ -29,9 +29,6 @@ class UnionFind:
 
     def size(self, x):
         return self.rank[self.find_par(x)]
-# 2 unionfind, para 0 e para 1 formando 2 florestas
-# lista de adj
-# verificar todos os componentes existentes e adicionar na resposta n * (n-1)
 
 
 n = int(input())
@@ -61,7 +58,6 @@ for i in set(uf0.par):
 for i in set(uf1.par):
     resp += uf1.rank[i] * (uf1.rank[i] - 1)
 
-# pra cada componente do 0-uf verificar se existe esse vertice na 1-uf e ele for conectado com alguém, se sim, multiplicar (n-1)*(m-1) sendo n o componente da 0-uf e m o componente da 1-f e adicionar na resposta
 
 for i in range(len(uf0.par)):
     if uf0.rank[uf0.find_par(i)] > 1:

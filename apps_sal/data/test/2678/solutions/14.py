@@ -22,5 +22,4 @@ for i in range(n):
         count += 1
         mi = k
 
-    # print(bs,chu)
 print(count)

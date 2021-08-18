@@ -17,7 +17,6 @@ l.sort()
 best_pos = pos
 
 op = bisect_right(l, (bal, float('inf')))
-# print(l)
 
 w = []
 for i, v in l[op:]:
@@ -31,7 +30,6 @@ while w:
     bal -= head
     pos -= 1
 
-    #print(w, op)
     while op >= 0 and l[op][0] > bal:
         heapq.heappush(w, l[op][1])
         op -= 1

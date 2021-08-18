@@ -42,5 +42,4 @@ else:
             t = max(t, tpA[i] - tpB[i])
     for i in range(N):
         ans[i + t - N] = B[i]
-    #print(tpA, tpB, t)
     print(" ".join([str(_) for _ in ans]))

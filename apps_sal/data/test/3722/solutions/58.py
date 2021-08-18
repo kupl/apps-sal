@@ -12,7 +12,6 @@ if not cab:
     caa, cbb = cbb ^ 1, caa ^ 1
     cab ^= 1
     cba ^= 1
-#print(N, caa, cab, cba, cbb)
 
 if N == 2:
     print((1))

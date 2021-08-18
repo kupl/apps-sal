@@ -1,4 +1,4 @@
-def cmb(n, r, mod):  # コンビネーションの高速計算　
+def cmb(n, r, mod):
     if (r < 0 or r > n):
         return 0
     r = min(r, n - r)
@@ -7,9 +7,9 @@ def cmb(n, r, mod):  # コンビネーションの高速計算　
 
 mod = 10**9 + 7
 N = 2 * 10**5
-g1 = [1] * (N + 1)  # 元テーブル
-g2 = [1] * (N + 1)  # 逆元テーブル
-inverse = [1] * (N + 1)  # 逆元テーブル計算用テーブル
+g1 = [1] * (N + 1)
+g2 = [1] * (N + 1)
+inverse = [1] * (N + 1)
 
 for i in range(2, N + 1):
     g1[i] = ((g1[i - 1] * i) % mod)

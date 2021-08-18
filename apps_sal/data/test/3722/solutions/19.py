@@ -60,10 +60,10 @@ def main():
     if N == 2:
         return 1
 
-    if Cab == 'A' and Caa == 'A':  # 4
+    if Cab == 'A' and Caa == 'A':
         return 1
 
-    if Cab == 'B' and Cbb == 'B':  # 4
+    if Cab == 'B' and Cbb == 'B':
         return 1
 
     if Cs in ['ABBA', 'BAAA', 'BAAB', 'BBBA']:

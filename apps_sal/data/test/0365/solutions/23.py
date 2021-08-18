@@ -1,4 +1,3 @@
-# your code goes here
 segment, length = map(int, input().split(' '))
 segments = [int(x) for x in input().strip().split(' ')]
 total = sum(segments)

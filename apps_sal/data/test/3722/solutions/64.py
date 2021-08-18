@@ -29,11 +29,3 @@ if Ss[1] == "B":
     Ss = [ot(Ss[3]), "A", ot(Ss[2]), ot(Ss[0])]
 
 print((solve(Ss[0], Ss[1], Ss[2], Ss[3])))
-
-# AB = ["A", "B"]
-# for s1 in AB:
-#     for s2 in AB:
-#         for s3 in AB:
-#             for s4 in AB:
-#                 print(s1+s2+s3+s4)
-#                 T(6, [s1, s2, s3, s4])

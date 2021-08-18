@@ -59,7 +59,6 @@ def main():
             roots.add(r)
             s = -UF1.root[r]
             ans += s * (s - 1)
-    # print(ans)
 
     roots = set()
     for v in range(1, N + 1):
@@ -68,7 +67,6 @@ def main():
             roots.add(r)
             s = -UF0.root[r]
             ans += s * (s - 1)
-    # print(ans)
 
     for v in range(1, N + 1):
         W = 0
