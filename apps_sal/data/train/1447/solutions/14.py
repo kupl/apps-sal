@@ -18,7 +18,6 @@ for _ in range(int(input())):
             else:
                 ans = "NO"
                 break
-        # print(ing,count)
     if c in count:
         ans = "NO"
     print(ans)

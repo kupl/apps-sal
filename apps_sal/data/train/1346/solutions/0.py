@@ -1,7 +1,6 @@
 for _ in range(int(input())):
     n, w = map(int, input().split())
     sigma = 1
-    # len(str(num)) == n and D[i] - D[i - 1] ... = w
     if(w > 9 or w < -9):
         print(0)
         continue

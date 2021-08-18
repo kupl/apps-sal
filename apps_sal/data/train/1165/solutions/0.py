@@ -1,10 +1,8 @@
-# cook your dish here
 d = {'january': 31, 'february': 29, 'march': 31,
      'april': 30, 'may': 31, 'june': 30, 'july': 31,
      'august': 31, 'september': 30, 'october': 31,
      'november': 30, 'december': 31}
 
-# l=[[15,'january'],[31,'august'],[10,'october']]
 l2 = list(d.keys())
 for _ in range(int(input())):
     l = input().split()

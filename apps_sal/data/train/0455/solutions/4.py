@@ -27,15 +27,13 @@ class Solution:
                     if color != otherColor and top[otherColor] <= row <= bottom[otherColor] and left[otherColor] <= col <= right[otherColor]:
                         edges[otherColor].append(color)
 
-        # detect if there's a cycle in directed graph
-        nodestates = [0 for _ in range(61)]  # 0 not visited, 1 being visited, 2 done
+        nodestates = [0 for _ in range(61)]
 
         def dfs(current):
             nodestates[current] = 1
 
             for neighbor in edges[current]:
                 if nodestates[neighbor] == 1:
-                    # detect an edge
                     return True
                 elif nodestates[neighbor] == 0:
                     dfs(neighbor)

@@ -18,13 +18,9 @@ class Grid(object):
         return len(self.ps) == (self.rx - self.lx + 1) * (self.ry - self.ly + 1)
 
     def overlap(self, grid):
-        # self on the left grid
         flag = self.rx < grid.lx
-        # self on the upper grid
         flag = flag and self.ry > grid.ly
-        # self on the right grid
         flag = flag and self.lx > grid.rx
-        # self on the bottom grid
         flag = flag and self.ly < grid.ry
         return not flag
 
@@ -60,11 +56,6 @@ class Solution:
                     graph[c1].add(c2)
                     degree[c2] += 1
 
-        # for c in colors:
-#             print(c, grids[c])
-#         print(graph)
-#         print(degree)
-
         q = []
         for c in colors:
             if degree[c] == 0:
@@ -79,5 +70,4 @@ class Solution:
                 if degree[c2] == 0:
                     q.append(c2)
 
-        # print(vis)
         return len(vis) == len(colors)

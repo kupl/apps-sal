@@ -1,6 +1,5 @@
 class Solution:
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
-        # FIND RECTANGLE BOUNDARIES FOR EACH COLOR
         boundaries = [(math.inf, math.inf, -math.inf, -math.inf) for _ in range(61)]
         for i in range(len(targetGrid)):
             for j in range(len(targetGrid[i])):
@@ -8,7 +7,6 @@ class Solution:
                 min_i, min_j, max_i, max_j = boundaries[color]
                 boundaries[color] = (min(min_i, i), min(min_j, j), max(max_i, i), max(max_j, j))
 
-        # BUILD GRAPH
         graph = defaultdict(set)
         for color in range(len(boundaries)):
             min_i, min_j, max_i, max_j = boundaries[color]
@@ -18,7 +16,6 @@ class Solution:
                         if targetGrid[i][j] != color:
                             graph[color].add(targetGrid[i][j])
 
-        # DETECT CYCLES IN GRAPH
         visited = set()
         in_progress = set()
 

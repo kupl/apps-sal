@@ -7,4 +7,3 @@ def how_much_water(water, load, clothes):
     else:
         x = round(water * (1.1 ** (clothes - load)), 2)
         return x
-    # Good luck!

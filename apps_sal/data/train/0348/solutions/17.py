@@ -2,8 +2,8 @@ class Solution:
     def maximumSum(self, arr: List[int]) -> int:
         A = arr
         N = len(A)
-        dp0 = [None] * N  # largest ending here
-        dp1 = [None] * N  # largest starting here
+        dp0 = [None] * N
+        dp1 = [None] * N
 
         cur = A[0]
         dp0[0] = cur

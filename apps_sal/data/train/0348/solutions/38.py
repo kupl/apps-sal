@@ -13,8 +13,6 @@ class Solution:
             else:
                 return max(arr[idx] + recurse(idx + 1, False), recurse(idx + 1, True), arr[idx])
 
-            # return memo[(idx, isSkipped)]
-
         curMax = float('-inf')
         for i in range(len(arr)):
             curMax = max(recurse(i, False), curMax)

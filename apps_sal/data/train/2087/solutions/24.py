@@ -16,6 +16,5 @@ for j in range(0, len(li) + 1):
         s1 = ri[j] * l + ri[len(li)] * r - ri[j] * r + ql * (2 * j - len(li) - 1)
     else:
         s1 = ri[j] * l + ri[len(li)] * r - ri[j] * r
-    # print(s1)
     minans = min([s1, minans])
 print(minans)

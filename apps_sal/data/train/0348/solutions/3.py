@@ -15,7 +15,4 @@ class Solution:
             if i > 1:
                 max_sum_one_del[i] = max(max_sum[i - 2] + arr[i], max_sum_one_del[i])
 
-        # print(max_sum)
-        # print(max_sum_one_del)
-
         return max(max_sum_one_del)

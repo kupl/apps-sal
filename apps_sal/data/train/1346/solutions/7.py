@@ -14,8 +14,6 @@ for _ in range(t):
     ans = 0
     for i in range(1, 10):
         pass
-        # ans+=abc(i,n,w,0,1)
-    # print(ans)
     if n == 1:
         if w == 0:
             print(9)
