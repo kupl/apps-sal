@@ -1,8 +1,7 @@
-# Question B. Road to Cinema
 import sys
 
 
-def roadToCinema(V, S, T, stations):  # O(M)
+def roadToCinema(V, S, T, stations):
     """
     V       : volume of fuel tank
     S       : total distance
@@ -13,24 +12,14 @@ def roadToCinema(V, S, T, stations):  # O(M)
     """
     m = len(stations)
     t = 0
-    stations.append(S)  # destination
+    stations.append(S)
     prev = 0
     for cur in stations:
         dis = cur - prev
-        # let Sa, Sb as the distance of accelerated mode/ normal mode respectively
-        # then the task is:
-        #  min t = (Sa + 2 * Sb)
-        # s.t. Sa + Sb = dis
-        #      2 * Sa + Sb <= V
 
         if dis > V:
-            # Sa <= V - dis < 0
             return False
         else:
-            # t = Sa + 2Sb = 3(Sa + Sb) - (2Sa + Sb)
-            #   >= 3 * dis - V
-            # on the other hand, Sb is non-negative
-            # Sb = t - dis
             t += max(dis * 3 - V, dis)
 
         if t > T:
@@ -41,7 +30,7 @@ def roadToCinema(V, S, T, stations):  # O(M)
     return True
 
 
-def binSearch(S, T, stations):  # O(logS * M)
+def binSearch(S, T, stations):
     """
     to find the least tank volume to enable the aircraft to complete the journey
     the fastest way is to complete the whole journey with the speed of 2km/min, at 2L/km
@@ -73,7 +62,7 @@ def binSearch(S, T, stations):  # O(logS * M)
     return float("inf")
 
 
-def __starting_point():  # O(logS * M + N)
+def __starting_point():
 
     line = sys.stdin.readline()
     [N, M, S, T] = list(map(int, line.split(" ")))
@@ -89,7 +78,6 @@ def __starting_point():  # O(logS * M + N)
     minVolume = binSearch(S, T, stations)
 
     if minVolume == float("inf"):
-        # no aircraft can complete the journey
         print(-1)
     else:
         res = float("inf")
@@ -98,7 +86,6 @@ def __starting_point():  # O(logS * M + N)
                 res = min(res, aircrafts[i][0])
 
         if res == float('inf'):
-            # no given aircraft can complete the journey
             print(-1)
         else:
             print(res)

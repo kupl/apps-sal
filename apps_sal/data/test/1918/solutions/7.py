@@ -1,7 +1,6 @@
 import collections
 import math
 
-#n, p = map(int, input().split())
 n = int(input())
 p = list(map(int, input().split()))
 s = input()

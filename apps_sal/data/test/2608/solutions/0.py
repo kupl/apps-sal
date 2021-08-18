@@ -29,12 +29,10 @@ for t in range(ii()):
     x3, y3, x4, y4 = mi()
     w = pre(m, n)
     b = m * n - w
-    # white spill
     wc, bc = count(x1, y1, x2, y2)
     w -= wc
     b -= bc
     w += (x2 - x1 + 1) * (y2 - y1 + 1)
-    # black spill
     if max(x1, x3) <= min(x2, x4) and max(y1, y3) <= min(y2, y4):
         x5 = max(x1, x3)
         y5 = max(y1, y3)

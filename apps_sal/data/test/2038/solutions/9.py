@@ -1,7 +1,5 @@
-# from bisect import bisect_left
 import sys
 
-# (n) = (int(x) for x in input().split())
 n = int(input())
 a = [int(_) - 1 for _ in sys.stdin.readline().split()]
 
@@ -17,7 +15,6 @@ for i in range(n):
     if pos == target:
         continue
 
-    # do swap
     b[old_v] = pos
     b[i] = i
     a[target] = i
@@ -49,5 +46,3 @@ for i in range(n):
 
 print(len(ans))
 print("\n".join(f"{i[0] + 1} {i[1] + 1}" for i in ans))
-# for i in ans:
-#     print(i[0] + 1, i[1] + 1)

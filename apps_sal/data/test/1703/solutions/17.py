@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
 from sys import stdin, stdout
 
 
 def rint():
     return list(map(int, stdin.readline().split()))
-#lines = stdin.readlines()
 
 
 n = int(input())
@@ -22,11 +20,8 @@ for i in range(n):
 
 m = dict()
 for i in range(n):
-    # ) : -1, ( : +1
-    # )...( : invalid
     if s[i][0] == -1 and s[i][-1] == 1 and len(s[i]) > 2:
         continue
-    # )((((()) : for right
     if s[i][-1] == -1:
         ss = 0
         flag = 0
@@ -38,13 +33,11 @@ for i in range(n):
         if flag == 1:
             pass
         else:
-            # add to r list
             ss = ss * (-1)
             if not ss in m:
                 m[ss] = (0, 1)
             else:
                 m[ss] = (m[ss][0], m[ss][1] + 1)
-    # (((() : for left
     if s[i][0] == 1:
         ss = 0
         flag = 0
@@ -60,9 +53,7 @@ for i in range(n):
                 m[ss] = (1, 0)
             else:
                 m[ss] = (m[ss][0] + 1, m[ss][1])
-            # add to l list
 
-# print(m)
 
 ans = 0
 for mm in m:
@@ -70,7 +61,6 @@ for mm in m:
         k = m[mm][1]
         ans += k * (k + 1) - k
     else:
-        #print(m[mm][0], m[mm][1])
         ans += m[mm][0] * m[mm][1]
 
 print(ans)

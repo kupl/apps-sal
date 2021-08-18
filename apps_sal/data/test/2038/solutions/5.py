@@ -15,7 +15,6 @@ for i in range(1, n + 1):
         d[ele] = d[i]
         d[i] = i
 
-        # print("a")
     elif ele != i and abs(i - d[i]) * 2 < n and i <= n // 2 and 2 * (d[i] - 1) >= n:
         m += 5
         b.append([1, d[i]])
@@ -28,7 +27,6 @@ for i in range(1, n + 1):
 
         d[ele] = d[i]
         d[i] = i
-        # print("b")
     elif ele != i and abs(i - d[i]) * 2 < n and i <= n // 2 and 2 * (d[i] - 1) < n:
         m += 3
         b.append([n, d[i]])
@@ -39,7 +37,6 @@ for i in range(1, n + 1):
 
         d[ele] = d[i]
         d[i] = i
-        # print("b")
 
     elif ele != i and abs(i - d[i]) * 2 < n:
         m += 3
@@ -50,10 +47,6 @@ for i in range(1, n + 1):
         a[d[i]] = ele
         d[ele] = d[i]
         d[i] = i
-        # print("c")
-    # print(d,a)
 print(m)
 for i in b:
     print(*i)
-
-# print(a)

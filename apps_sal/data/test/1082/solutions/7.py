@@ -23,6 +23,3 @@ for k in set(map(int, input().split())):
         s.append(d)
 
 print(pow(2, n - len(s), 1000000007) - 1)
-
-
-# Made By Mostafa_Khaled

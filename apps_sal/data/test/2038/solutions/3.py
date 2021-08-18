@@ -36,7 +36,6 @@ def swap(i, j):
     return ans
 
 
-# print(a)
 ans = []
 for i in range(n):
     ans.extend(swap(i, a[i + 1]))
@@ -46,7 +45,6 @@ for i in range(n):
     b[a[i + 1]] = t
     a[t] = a[i + 1]
     a[i + 1] = i
-# print(a)
 print(len(ans))
 for k in ans:
     print(k[0] + 1, k[1] + 1)

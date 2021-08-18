@@ -14,9 +14,7 @@ def main():
         distinct.append(distinct[-1] + 1)
     distinct.pop()
     seen.clear()
-    # print(tuple(reversed(distinct)))
     for x, distinct_right in zip(a, reversed(distinct)):
-        #print(x, distinct_right)
         if x in seen:
             continue
         seen.add(x)

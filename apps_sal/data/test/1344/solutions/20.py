@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 import sys
 
@@ -21,8 +20,6 @@ def main():
             result = 1
 
     results.append(result)
-
-    # print(results)
 
     return max(results)
 

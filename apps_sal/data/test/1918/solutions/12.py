@@ -40,7 +40,5 @@ for i in range(n):
 for i in range(n):
     if suffix[i] > x:
         x = suffix[i]
-# print(str(total))
-# print(str(x))
 total += x
 print(str(total))

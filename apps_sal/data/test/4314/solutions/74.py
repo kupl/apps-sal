@@ -9,8 +9,8 @@ for i in reversed(range(h)):
 
 for i in reversed(range(w)):
     for j in range(len(aL)):
-        if aL[j][i] == "#":
-            break
+        if aL[j][i] == "
+        break
     else:
         for k in range(len(aL)):
             del aL[k][i]

@@ -3,8 +3,6 @@ import re
 import sys
 3
 
-# BEGIN template
-
 
 def dbg(x, y=''):
     if len(y) > 0:
@@ -14,7 +12,6 @@ def dbg(x, y=''):
 
 
 oo = 0x3f3f3f3f3f3f3f3f
-# END template
 
 
 def minn(x, y):

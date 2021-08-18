@@ -1,5 +1,4 @@
 def build(a0, a1, a01, a10, arr):
-    #print(a0, a1, a01, a10)
     while True:
         if a0 + a1 == 0 and a01 + a10 > 0:
             return False, ''

@@ -6,16 +6,11 @@ for item in st:
 a.reverse()
 zero_count = 0
 for i, item in enumerate(a):\
-        # huaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    # where all this peps got this kind of solutionnnnnnnnnn
-    # huaawdkaowkdoakwdoj
-    # zsevorinpunu8opzersvnopsvzerveorunppioupenirszuinorpsuozserinpvnopugiyuoprgeinwpuirzsdtgnopuvxynpozsdrtuoprtudsz
     if item == 0:
         zero_count += 1
     elif zero_count > 0:
         zero_count -= 1
     else:
         a[i] = 0
-    # print(i,item,zero_count)
 a.reverse()
 print("".join([str(item) for item in a]))

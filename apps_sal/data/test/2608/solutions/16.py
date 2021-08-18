@@ -6,7 +6,6 @@ for _ in range(int(input())):
     r, c = mi()
     y1, x1, y2, x2 = mi()
     y3, x3, y4, x4 = mi()
-    # (col,row)
     ts = r * c
     if ts % 2:
         i_w = (ts + 1) // 2
@@ -49,10 +48,8 @@ for _ in range(int(input())):
     c_b = ts3 - temp3
     i_b -= r1_b
     i_w += r1_b
-    #print ("LOL", i_w, i_b)
     i_w -= r2_w
     i_b += r2_w
-    #print ("LOL", i_w, i_b)
     i_b += c_b
     i_w -= c_b
     print(i_w, i_b)

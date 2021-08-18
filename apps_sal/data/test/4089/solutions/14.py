@@ -6,7 +6,6 @@ sou = "Zabcdefghijklmnopqrstuvwxyz"
 N = n
 for i in range(100):
     x = N % 26
-    # 　余り分ひく
     N -= x
 
     if x == 0:
@@ -16,7 +15,6 @@ for i in range(100):
 
     if N == 0:
         break
-    # 　次元落とす
     N //= 26
 
 ans = Z[::-1]

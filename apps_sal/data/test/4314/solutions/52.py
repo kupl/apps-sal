@@ -3,8 +3,8 @@ grid = [input().split() for _ in range(H)]
 check = []
 
 for i in range(H):
-    if '#' not in grid[i][0]:
-        check.append(i - len(check))
+    if '
+    check.append(i - len(check))
 for i in check:
     grid = grid[:i] + grid[i + 1:]
 check = []

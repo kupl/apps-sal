@@ -12,11 +12,9 @@ DP = [(-1, 0) for i in range(n + 1)]
 
 for i in range(n - 1, -1, -1):
     pass
-    # print("At {}".format(i))
     for j in range(i + 1, n + 1):
         a = getint(s[i:j])
         pass
-        # print(a)
 
         if(a >= b):
             break
@@ -52,10 +50,8 @@ for i in range(n - 1, -1, -1):
                 if(DP[i][0] > p[0]):
                     DP[i] = p
     pass
-    # print("DP {}".format(DP[i]))
 
 for i in range(n):
     pass
-    # print(DP[i])
 
 print(DP[0][0])
