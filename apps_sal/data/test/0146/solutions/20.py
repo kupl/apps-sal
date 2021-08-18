@@ -1,11 +1,9 @@
 n, k = (int(x) for x in input().split())
 tabs = [int(x) for x in input().split()]
 
-#print(n, k, tabs)
 
 mods = [sum(tabs[i::k]) for i in range(k)]
 
-# print(mods)
 
 summods = sum(mods)
 ans = -1

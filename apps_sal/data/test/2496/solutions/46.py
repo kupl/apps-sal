@@ -1,8 +1,5 @@
-# E_Coprime
 import math
 import functools
-
-# エラトステネスの篩
 
 
 def primes(n):
@@ -23,18 +20,15 @@ def primes(n):
 
 
 Fnum_list2 = []
-# 入力
 N = int(input())
 A = list(map(int, input().split()))
 
-#Fnum_list = eratosthenes(N)
 
 A.sort()
 Amax = A[-1]
 Fnum_list2 = primes(Amax)
 j = A[0]
 ans = 1
-#Fnum_list = eratosthenes(N)
 Ai_primes = set()
 Ai_primes_add = []
 gcd_num = 0
@@ -59,7 +53,6 @@ if ans == 0:
     if gcd_num == 1:
         ans = 2
 
-# 出力
 if ans == 1:
     print("pairwise coprime")
 else:

@@ -49,16 +49,15 @@ logger.addHandler(ch)
 
 def solve(s):
     if len(s) == 1 and s == '0':
-        return False  # Its possible to seat someone
+        return False
     elif len(s) == 1 and s == '1':
         return True
     elif len(s) == 2 and '1' in s and '0' in s:
-        return True  # maximal
+        return True
     if '11' in s:
         return False
     if '000' in s or s[:2] == '00' or s[-2:] == '00':
-        return False  # Its possible to seat someone
-    # raise 'Missing something?'
+        return False
     return True
 
 

@@ -3,9 +3,7 @@ import math
 
 def eratosthenes():
     erat = [0 for _ in range(max_a + 1)]
-    #lim = int(math.sqrt(max_a))
     pair = True
-    # for i in range(2, lim+1):
     for i in range(2, max_a + 1):
         cnt = 0
         if not erat[i]:

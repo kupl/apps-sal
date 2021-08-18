@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from math import sqrt
 from collections import Counter
 
@@ -48,7 +47,6 @@ def solve(A):
         print("not coprime")
 
 
-#solve([x for x in range(1, 10**6+1)])
 N = int(input())
 A = [int(x) for x in input().split()]
 solve(A)

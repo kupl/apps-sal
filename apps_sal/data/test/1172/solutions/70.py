@@ -1,4 +1,3 @@
-# we love abc
 s = input()
 mod = 10**9 + 7
 dpa = [[0, 0] for i in range(len(s) + 1)]

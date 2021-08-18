@@ -2,7 +2,6 @@ input()
 problem = input()
 stones = []
 rs = []
-# 赤が1,白が0
 W = 0
 R = 0
 for s in problem:

@@ -1,5 +1,3 @@
-# = list(map(int, input().split()))
-# = map(int, input().split())
 n, k = list(map(int, input().split()))
 z = list(map(int, input().split()))
 ans = -1

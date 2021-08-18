@@ -6,7 +6,6 @@ def f(k, c):
                 e += 1
             else:
                 s += 1
-    #print(k, c, e,s)
     return abs(e - s)
 
 

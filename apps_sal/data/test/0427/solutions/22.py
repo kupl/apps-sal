@@ -15,6 +15,3 @@ while l < r:
         l = v + 1
 
 print(r)
-
-
-# Made By Mostafa_Khaled

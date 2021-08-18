@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 number = input().split(" ")
 D = int(number[0])
 T = int(number[1])

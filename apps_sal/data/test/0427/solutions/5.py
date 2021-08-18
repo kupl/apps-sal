@@ -34,5 +34,4 @@ def check(v, debug=False):
         return 0
 
 
-#print([check(v, True) for v in range(20)])
 print(1 + search(check, 0, 1, y * c1 + x * c2 + 1))

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 
 abc = list(map(int, input().split()))

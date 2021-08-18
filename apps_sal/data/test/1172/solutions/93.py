@@ -4,7 +4,6 @@ n = len(S)
 
 dp = [[0] * 4 for _ in range(n)]
 dp[-1][0] = 1
-# dp[i文字目までの?を確定させた][i文字目までで文字をn個選んだ]
 
 for i, s in enumerate(S):
     if s == '?':

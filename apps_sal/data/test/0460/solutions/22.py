@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import sys
 
 
@@ -25,7 +24,7 @@ def main():
     for __ in range(475):
         if eligible(x + diff, p, y):
             succ = diff // 100
-            unsucc = (diff // 50) % 2  # if 1, we need additional success
+            unsucc = (diff // 50) % 2
             print(str(succ + unsucc))
             return
         diff += 50

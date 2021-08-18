@@ -34,4 +34,3 @@ for i in reversed(list(range(n))):
             dp[i][j] += m1 * dp[i + 1][j] + m2 * dp[i + 1][j + 1]
         dp[i][j] %= mod
 print((dp[0][0] % mod))
-# print(dp)

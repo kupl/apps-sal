@@ -1,8 +1,8 @@
 S = input()
-A = 0  # Aの数
-B = 0  # ABの数
-C = 0  # ABCの数
-n = 1  # 通り数
+A = 0
+B = 0
+C = 0
+n = 1
 mod = 10**9 + 7
 for s in S:
     if s == "?":

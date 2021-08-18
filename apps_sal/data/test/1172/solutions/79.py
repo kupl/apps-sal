@@ -1,7 +1,6 @@
 mod = 10**9 + 7
 s = list(input())
 s = ['-'] + s
-# print(s)
 l = len(s)
 dp = [[0 for j in range(4)] for i in range(l)]
 dp[0][0] = 1
@@ -15,4 +14,3 @@ for i in range(1, l):
         dp[i][j] %= mod
 
 print((dp[-1][3]))
-# print(dp)

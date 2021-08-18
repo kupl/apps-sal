@@ -1,6 +1,6 @@
 N = input()
 DP = [[0] * (len(N) + 1) for i in range(4)]
-DP[0][0] = 1  # 後側が位置
+DP[0][0] = 1
 mod = 10**9 + 7
 for i in range(len(N)):
     if N[i] == "A":
