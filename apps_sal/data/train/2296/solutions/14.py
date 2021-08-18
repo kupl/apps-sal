@@ -4,11 +4,7 @@ input = sys.stdin.readline
 S = list(input().rstrip())
 L = len(S)
 
-# binary indexed tree
 bit = [0 for _ in range(L + 1)]
-
-# 0からiまでの区間和
-# 立っているビットを下から処理
 
 
 def query_sum(i):
@@ -17,9 +13,6 @@ def query_sum(i):
         s += bit[i]
         i -= i & -i
     return s
-
-# i番目の要素にxを足す
-# 覆ってる区間すべてに足す
 
 
 def add(i, x):

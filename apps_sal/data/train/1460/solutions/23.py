@@ -1,4 +1,3 @@
-# cook your dish here
 d, x, y = list(map(int, input().split()))
 lis = list(map(int, input().split()))
 ans = d * x

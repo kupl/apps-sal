@@ -1,5 +1,3 @@
-# dt = {} for i in x: dt[i] = dt.get(i,0)+1
-#dt = {k:v for k,v in sorted(x.items(), key=lambda i: i[1])}
 def ipnl(n): return [int(input()) for _ in range(n)]
 
 

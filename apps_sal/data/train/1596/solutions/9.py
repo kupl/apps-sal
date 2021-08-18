@@ -15,11 +15,9 @@ def jumpsto(n):
 
 
 for _ in range(int(input())):
-    # = int(input())
     x, y = list(map(int, input().strip().split()))
     x += 1
     y += 1
-    # = list(map(int, input().strip().split()))
     jumpx = jumpsto(x)
     jumpy = jumpsto(y)
     if jumpx == jumpy:

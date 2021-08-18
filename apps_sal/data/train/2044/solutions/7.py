@@ -20,7 +20,6 @@ while q and st <= n:
     leaves[(cnt) % k] += 1
     cnt += 1
     st += 1
-# print(leaves,'leaves')
 dis = leaves[0] + leaves[1]
 leaves.sort()
 dis = leaves[-1] + leaves[-2]

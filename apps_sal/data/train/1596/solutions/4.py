@@ -19,37 +19,6 @@ for _ in range(T):
     count_x = bit(x)
     count_y = bit(y)
 
-    # while(x>0):
-    #   n = bit(x)
-    #   # print('n_x ' , n)
-    #   if x == 2**(n+1)-1:
-    #       count_x += 1
-    #       break
-    #   elif 2**n -1 < x:
-    #       x = (x-(2**n-1))
-    #       count_x +=1
-    #       if x != 1:
-    #           x = x-1
-    #       else:
-    #           count_x += 1
-    #           break
-
-    # while y>0:
-    #   n = bit(y)
-    #   # print('n ' , n)
-    #   if y == 2**(n+1)-1:
-    #       count_y += 1
-    #       break
-    #   elif 2**n -1 < y:
-    #       y = (y-(2**n-1))
-    #       count_y += 1
-    #       if y != 1:
-    #           y = y-1
-    #       else:
-    #           count_y += 1
-    #           break
-    # print('x',count_x, count_y)
-
     if count_x < count_y:
         print('1', count_y - count_x)
     elif count_y < count_x:

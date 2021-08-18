@@ -26,11 +26,6 @@ for testcases in range(t):
     EASY.sort()
     HARD.sort()
 
-    # print(LCAN,a,b)
-    # print(EASY)
-    # print(HARD)
-    # print()
-
     eind = 0
     hind = 0
 

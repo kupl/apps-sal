@@ -1,9 +1,6 @@
 def last_chair(n):
-    # The secret is, that it's always the next to last seat!
     return n - 1
 
-    # Actual simulation for fun :)
-    # dist to e, used, nearest l, nearest r, nearest, spaces
     spots = [[i, False, None, None, None, None] for i in range(n)]
 
     def clean(n, d=0): return n if n is not None else d
@@ -37,9 +34,6 @@ def last_chair(n):
         options.sort(key=near, reverse=True)
         best = near(options[0])
         options = [s for s in options if near(s) == best]
-        # print "Options"
-        # for s in options:
-        #    print s
         options.sort(key=spaces, reverse=True)
         best = spaces(options[0])
         options = [s for s in options if spaces(s) == best]

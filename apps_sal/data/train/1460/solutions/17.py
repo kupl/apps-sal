@@ -1,4 +1,3 @@
-# Enter your code here...
 try:
     num = list(map(int, input().split()))
     n = num[0]

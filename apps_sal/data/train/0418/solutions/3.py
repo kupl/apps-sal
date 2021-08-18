@@ -5,7 +5,6 @@ class Solution:
         :rtype: int
         """
         return self.integerReplacementDP(n)
-        # return self.integerReplacementBitwise(n)
         if n == 1:
             return 0
 

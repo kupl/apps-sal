@@ -1,9 +1,7 @@
 class Solution:
     def canArrange(self, arr: List[int], k: int) -> bool:
         '''
-        # Note:
             the arr's length is even
-        # Notes:
             each pair has two numbers
             get the remainder of each number divided by k
         '''

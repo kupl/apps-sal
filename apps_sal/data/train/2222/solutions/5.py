@@ -1,6 +1,3 @@
-# import sys
-
-# sys.stdin = open('cf586d.in')
 
 
 def handle_test():
@@ -73,6 +70,3 @@ t = int(input())
 for _ in range(t):
 
     print(['NO', 'YES'][handle_test()])
-
-
-# Made By Mostafa_Khaled
