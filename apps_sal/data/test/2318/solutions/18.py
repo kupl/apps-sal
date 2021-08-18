@@ -45,8 +45,6 @@ for tee in range(n):
                 cc = 1
         i += 1
     brr.append([pre, cc])
-    # print(arr)
-    # print(brr)
     if len(brr) != len(arr):
         print("NO")
     else:

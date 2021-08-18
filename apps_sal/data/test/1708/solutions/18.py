@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/1/31 20:48
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : B. Lunar New Year and Food Ordering.py
 
 
 def main():
@@ -14,7 +9,6 @@ def main():
     for i in range(n):
         price_index.append((c[i], i))
     price_index.sort()
-    # print(price_index)
 
     ptr = 0
     for _ in range(m):

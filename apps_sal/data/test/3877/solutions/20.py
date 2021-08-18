@@ -31,11 +31,11 @@ def process_rec(n, l, r):
         m_count = int(n[-1])
         res = 0
 
-        if l < l_count:  # [0-l_count) V [l, r)0
+        if l < l_count:
             res += process_rec(n[:-1], l, min(r, l_count))
-        if l <= l_count and r > l_count:  # [l_count, l_count + 1) V [l, r)
+        if l <= l_count and r > l_count:
             res += m_count
-        if r > l_count + 1:  # [l_count + 1, ...) V [l, r)
+        if r > l_count + 1:
             res += process_rec(n[:-1], max(l - l_count - 1, 0), r - l_count - 1)
 
         return res

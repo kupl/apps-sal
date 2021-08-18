@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 n, d = [int(i) for i in input().split()]
 

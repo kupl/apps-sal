@@ -20,10 +20,8 @@ for val in lft:
     rht.append(val)
 for i in range(1, len(lft)):
     lft[i] = lft[i] | lft[i - 1]
-#print (lft);
 for i in range(len(rht) - 2, -1, -1):
     rht[i] = rht[i] | rht[i + 1]
-#print (rht);
 ans = 0
 for i in range(1, len(lft) - 1):
     if(ans < (lft[i - 1] | pw(a[i - 1], x, k) | rht[i + 1])):

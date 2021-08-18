@@ -1,7 +1,7 @@
 import sys
 
 
-class IoTool:  # a tool for input redirection
+class IoTool:
     DEBUG = 0
 
     def _reader_dbg():

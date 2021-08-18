@@ -1,6 +1,6 @@
-n, m = list(map(int, input().split()))  # kinds of food,customers
-A = [0] + list(map(int, input().split()))  # initial remain of i-th foods
-C = [0] + list(map(int, input().split()))  # costs
+n, m = list(map(int, input().split()))
+A = [0] + list(map(int, input().split()))
+C = [0] + list(map(int, input().split()))
 O = [list(map(int, input().split())) for i in range(m)]
 
 C2 = [[C[i + 1], i + 1] for i in range(n)]
@@ -20,7 +20,6 @@ for f, d in O:
         ANS += A[f] * C[f]
         d -= A[f]
         A[f] = 0
-        # print(ANS,f,d,C2[C2NOW])
 
         while d > 0:
 

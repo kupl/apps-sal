@@ -1,8 +1,4 @@
 from operator import itemgetter
-# int(input())
-# map(int,input().split())
-#[list(map(int,input().split())) for i in range(q)]
-#print("YES" * ans + "NO" * (1-ans))
 n, k = map(int, input().split())
 si = list(map(int, input().split()))
 num = 10**5 * 2 + 1

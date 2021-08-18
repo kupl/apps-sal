@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Codeforces
 567 A. Lineland Mail

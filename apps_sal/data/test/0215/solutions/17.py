@@ -13,7 +13,6 @@ def solve():
         else:
             alp.append([])
 
-    # print(alp)
     return max([len(e) for e in alp])
 
 

@@ -44,7 +44,6 @@ else:
     dv.append(a[pre:])
     l.append(a[pre - 1])
     r.append(INF)
-# print(dv,l,r)
 res = 0
 for i in range(k + 1):
     li = []

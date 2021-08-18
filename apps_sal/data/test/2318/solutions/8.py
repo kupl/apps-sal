@@ -1,17 +1,8 @@
-# alpha = "abcdefghijklmnopqrstuvwxyz"
-# prime = 998244353
-# INF = 1000_000_000
 
-# from heapq import heappush, heappop
-# from collections import defaultdict
-# from math import sqrt
-# from collections import deque
 
 t = int(input())
 
 for test in range(t):
-    # n = int(input())
-    # a,b,c,d = map(int, input().split())
     s = input()
     t = input()
     arr_s = []

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import defaultdict
 
 
@@ -34,7 +33,6 @@ def pn(n):
 
 
 def findval(i, p, n):
-    #    print(i, p, n)
     if p == i:
         return n % 2
     if p > i:
