@@ -1,6 +1,5 @@
 n = int(input())
 a = sorted(zip(map(int, input().split()), range(n)))
-# print(a)
 s = []
 
 for i in range(n):

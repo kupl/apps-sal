@@ -23,7 +23,6 @@ class Solution:
 
         footer = []
         for key, val in list(my_dict.items()):
-            # footer.append([key]+list(map(str,val)))
             footer.append([key] + val)
 
         result = [header] + footer

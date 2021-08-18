@@ -1,7 +1,6 @@
 import sys
 cases = int(sys.stdin.readline())
 input_arr = [int(x) for x in sys.stdin.readline().strip().split(" ")]
-#input_arr = [-1, -4, 10, 9, 200]
 
 sort = sorted(input_arr)
 sorted_dict = dict()

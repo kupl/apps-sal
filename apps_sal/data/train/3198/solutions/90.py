@@ -1,6 +1,6 @@
 def check_exam(arr1, arr2):
     liste = []
-    for i, x in enumerate(arr1):  # weil sich enumerate immer auf Position und WErt (i, x) bezieht
+    for i, x in enumerate(arr1):
         y = arr2[i]
         if ((x) != (y)):
             if y == (""):
@@ -9,7 +9,6 @@ def check_exam(arr1, arr2):
                 liste.append(-1)
         else:
             liste.append(4)
-    # return(x)
 
     x = sum(liste)
     if x < 0:

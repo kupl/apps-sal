@@ -1,11 +1,11 @@
 import sys
 SIZE = 5 * 10**3
-MOD = 10**9 + 7  # 998244353 #ここを変更する
+MOD = 10**9 + 7
 
 SIZE += 1
-inv = [0] * SIZE  # inv[j] = j^{-1} mod MOD
-fac = [0] * SIZE  # fac[j] = j! mod MOD
-finv = [0] * SIZE  # finv[j] = (j!)^{-1} mod MOD
+inv = [0] * SIZE
+fac = [0] * SIZE
+finv = [0] * SIZE
 fac[0] = fac[1] = 1
 finv[0] = finv[1] = 1
 for i in range(2, SIZE):
@@ -16,30 +16,27 @@ for i in range(SIZE - 1, 0, -1):
     inv[i] = finv[i] * fac[i - 1] % MOD
 
 
-def choose(n, r):  # nCk mod MOD の計算
+def choose(n, r):
     if 0 <= r <= n:
         return (fac[n] * finv[r] % MOD) * finv[n - r] % MOD
     else:
         return 0
 
 
-def chofuku(ball, box):  # nHk mod MOD の計算
+def chofuku(ball, box):
     return choose(box + ball - 1, box)
 
 
-# coding: utf-8
-# Your code here!
 read = sys.stdin.read
 readline = sys.stdin.readline
 
 n, a, b, c, d = list(map(int, read().split()))
 
 
-dp = [0] * (n + 1)  # i まで見て、x人グループが決まっている
+dp = [0] * (n + 1)
 dp[0] = 1
 
 
-# for i in range(b,a-1,-1):
 for i in range(a, b + 1):
     invmod = [1]
     for p in range(1001 // i + 2):
@@ -54,9 +51,5 @@ for i in range(a, b + 1):
             ndp[j + i * p] += coeff[p] * dp[j] % MOD * choose(n - j, i * p)
             ndp[j + i * p] %= MOD
 
-    # print(invmod,i)
-    # print(coeff)
     dp = ndp
-    # if i < 100:break
-    # print(dp,i)
 print((dp[n] % MOD))

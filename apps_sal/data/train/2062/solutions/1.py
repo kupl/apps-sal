@@ -43,7 +43,6 @@ facts = getFacts(N, MOD)
 invFacts = getInvFacts(N, facts[N], MOD)
 invss = getInvss(B, D, facts, MOD)
 
-# dp[i][j]: i人以下のグループのみで、j人使っている場合の数
 dp = [[0] * (N + 1) for _ in range(B + 1)]
 dp[A - 1][0] = 1
 
