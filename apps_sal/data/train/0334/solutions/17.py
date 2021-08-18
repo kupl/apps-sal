@@ -14,7 +14,6 @@ class Solution:
             i += 1
 
         for v in d.values():
-            # print(v)
             print(v)
             curr_cost = [cost[c] for c in v]
             max_val = max(curr_cost)

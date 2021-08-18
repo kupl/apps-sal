@@ -106,7 +106,6 @@ class Solution:
         for i in range(len(S)):
             self.AddOccurences(self.getNode(root, S[i]), i, S)
 
-        #self.print_tree(root, '')
         maxDepthDuplicates = self.getLongestDuplicate(root)
         
         return maxDepthDuplicates

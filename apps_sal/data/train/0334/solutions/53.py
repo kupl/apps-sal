@@ -10,6 +10,5 @@ class Solution:
                 ans += sum(cost[left:idx + 1]) - max(cost[left:idx + 1])
             idx += 1
             left = idx
-            # print(idx, left)
 
         return ans

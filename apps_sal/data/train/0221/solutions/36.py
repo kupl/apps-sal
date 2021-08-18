@@ -6,7 +6,7 @@ class Solution:
         mod = 10 ** 9 + 7
 
         def get_rep(l: int) -> str:
-            mp = defaultdict(list)  # key: hash_code, value: list of start indexes of substrings
+            mp = defaultdict(list)
             a = 13
             sofar = 0
             factor = 1

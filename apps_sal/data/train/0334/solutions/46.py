@@ -8,7 +8,6 @@ class Solution:
         while ptr < len(cost):
             delete = False
             while ptr < len(cost) and s[ptr] == s[r]:
-                # print(ptr,r)
                 delete = True
                 ptr += 1
             if delete:

@@ -12,7 +12,6 @@ class Solution:
                     j = i + 2
 
                     while s[i] == s[j] and j < len(s) - 1:
-                        # print(j)
                         j += 1
 
                     print(cost[i:j])

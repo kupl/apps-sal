@@ -14,7 +14,6 @@ class Solution:
                 tmp = x
                 tmp.sort()
                 tmp = tmp[:-1]
-                # print(tmp)
                 ans += sum(tmp)
                 tmp = []
 

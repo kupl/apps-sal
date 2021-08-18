@@ -27,7 +27,6 @@ class Solution:
                     break
 
                 dups.add(h)
-                # print(mid, h)
             if res[1] - res[0] < mid:
                 r = mid
             else:

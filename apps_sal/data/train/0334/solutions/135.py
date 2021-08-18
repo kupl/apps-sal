@@ -14,8 +14,6 @@ class Solution:
                 c1 = cost[i]
                 c2 = cost[i + 1]
 
-                # print(v1,c1,c2,i)
-
                 if c1 < c2:
                     f += c1
                 else:

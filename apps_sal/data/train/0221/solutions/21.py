@@ -30,4 +30,3 @@ class Solution:
         elif test(lo):
             res = test(lo)
             return S[res: res + lo]
-        # return ''

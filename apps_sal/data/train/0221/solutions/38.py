@@ -19,7 +19,6 @@ class Solution:
         while l < r:
             mid = (l + r + 1) >> 1
             pos = k_dup(mid)
-            # print(pos, mid)
             if pos:
                 l = mid
                 ans = pos

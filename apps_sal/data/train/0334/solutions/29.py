@@ -15,7 +15,6 @@ class Solution:
                     maxs = max(maxs, cost[j])
                     j += 1
 
-                # print(i,j)
                 res += sums - maxs
                 i = j
 

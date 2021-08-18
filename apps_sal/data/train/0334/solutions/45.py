@@ -8,7 +8,6 @@ class Solution:
         while i < n:
             if s[i] == s[i - 1]:
                 j = i
-                # 找到连续的一片重复字母
                 while j < n and s[j] == s[j - 1]:
                     j += 1
                 res += sum(cost[i - 1:j]) - max(cost[i - 1:j])

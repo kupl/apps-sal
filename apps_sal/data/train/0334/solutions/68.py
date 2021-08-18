@@ -12,7 +12,6 @@ class Solution:
                 to_delete.append((i, j))
             i = j
         ans = 0
-        # print(to_delete)
         for interval in to_delete:
             cos = sorted(cost[interval[0]: interval[1]])
             l = interval[1] - interval[0] - 1

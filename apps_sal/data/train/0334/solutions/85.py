@@ -20,12 +20,10 @@ class Solution:
         cst = 0
         s = list(S)
         indexes = checkStr(s)
-        # print (indexes)
         i = 0
         while i < len(indexes):
             curr = indexes[i]
             costs = list(map(lambda x: cost[x], curr))
-            # print (costs)
             cst += sum(costs) - max(costs)
             i += 1
         return cst

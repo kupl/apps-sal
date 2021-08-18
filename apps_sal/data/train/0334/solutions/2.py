@@ -1,13 +1,10 @@
 class Solution:
     def minCost(self, s: str, cost: List[int]) -> int:
-        # identify all candidates to delete and their costs, then pick min?
-        # a) determine the min cost to delete for each consecutive character block.
         val = 0
         i = 0
         start = 0
         while i + 1 < len(s):
             if s[i] == s[i + 1]:
-                # current character = same as next character
                 if start == 0:
                     temp = [(i, cost[i])]
                     start = 1
