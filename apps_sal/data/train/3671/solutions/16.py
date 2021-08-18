@@ -5,4 +5,3 @@ def problem(a):
     except:
         print((a, type(a)))
         return "Error"
-      # Easy Points ^_^

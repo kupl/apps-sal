@@ -11,12 +11,10 @@ for _ in range(N - 1):
     path[a - 1].append((b - 1, c - 1, d))
     path[b - 1].append((a - 1, c - 1, d))
 
-# doublingに必要なKを求める
 for K in range(18):
     if 2 ** K >= N:
         break
 
-# dfs
 parent = [[-1] * N for _ in range(K)]
 rank = [-1 for _ in range(N)]
 
@@ -31,13 +29,10 @@ while queue:
             parent[0][nex] = cur
             rank[nex] = rank[cur] + 1
 
-# doubling
 for i in range(1, K):
     for j in range(N):
         if parent[i - 1][j] > 0:
             parent[i][j] = parent[i - 1][parent[i - 1][j]]
-
-# lca
 
 
 def lca(a, b):
@@ -63,7 +58,6 @@ def lca(a, b):
     return parent[0][a]
 
 
-# Queryの先読み
 schedule = [[] for _ in range(N)]
 for i in range(Q):
     x, y, u, v = map(int, input().split())

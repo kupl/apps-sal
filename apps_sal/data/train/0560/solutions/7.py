@@ -1,4 +1,3 @@
-# cook your dish here
 def alice_bob(alice, bob):
     alice.remove(max(alice))
     bob.remove(max(bob))
@@ -17,7 +16,6 @@ def alice_bob(alice, bob):
 T = int(input())
 for i in range(T):
     N = int(input())
-    # for j in range(2):
     alice = list(map(int, input().split()))
     bob = list(map(int, input().split()))
     print(alice_bob(alice, bob))

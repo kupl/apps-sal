@@ -73,7 +73,6 @@ def resolve():
     G = LCA(to)
     Query = [[] for _ in range(n)]
     for i in range(q):
-        # idx, color, mag, coef
         x, y, u, v = map(int, input().split())
         u -= 1
         v -= 1

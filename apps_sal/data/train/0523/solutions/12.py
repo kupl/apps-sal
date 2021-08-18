@@ -23,10 +23,8 @@ for _ in range(int(input())):
     prod = 1
     l = [int(i) for i in input().split()]
     l.sort()
-    # nck=combo_nck(n,k)
     for i in range(n):
         tot = nck(n - 1, k - 1)
-        # print(tot)
         x = n - i
         if x >= k - 1:
             asmin = nck(x - 1, k - 1)
@@ -37,8 +35,5 @@ for _ in range(int(input())):
             asmax = nck(y - 1, k - 1)
         else:
             asmax = 0
-        # print(asmin)
-        # print(asmin,asmax)
         prod *= pow(l[i], tot - asmin - asmax, MOD)
-        # print(prod)
     print(prod % MOD)

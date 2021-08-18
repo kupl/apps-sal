@@ -1,4 +1,3 @@
-# N,M = map(int, input().split())
 from copy import copy
 T = int(input())
 
@@ -10,7 +9,6 @@ def dfs(lst):
         if topv < e:
             topv = e
             topi = i
-    # print("top: ", topi, topv)
     if topi == 0 or topi == len(lst) - 1:
         return 1
 

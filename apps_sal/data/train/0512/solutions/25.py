@@ -49,20 +49,14 @@ def solve(n, links, queries):
             tmp_dists[uc][0] -= ud
             tmp_dists[uc][1] -= 1
 
-    # 存在しない範囲は深さが他よりも大きくなるようにする
     INF = (n, None)
 
-    # Euler Tour の構築
     euler_tour = []
     first_appear = [0] * n
     depth = [0] * n
 
     dfs(0, -1, 0)
-    # print(euler_tour)
-    # print(first_appear)
-    # print(depth)
 
-    # LCAを計算するクエリの前計算
     m = 2 * n
     m0 = 2 ** (m - 1).bit_length()
     data = [INF] * (2 * m0)
@@ -70,8 +64,6 @@ def solve(n, links, queries):
         data[m0 - 1 + i] = (depth[v], i)
     for i in range(m0 - 2, -1, -1):
         data[i] = min(data[2 * i + 1], data[2 * i + 2])
-
-    # print(data)
 
     v_queries = [{} for _ in range(n)]
     lca = []

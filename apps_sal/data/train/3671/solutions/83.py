@@ -1,5 +1,4 @@
 def problem(a):
-    # Easy Points ^_^
     if isinstance(a, str):
         return "Error"
     else:

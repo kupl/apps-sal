@@ -2,7 +2,6 @@ import re
 
 
 def coffee_limits(year, month, day):
-    # Your code here!
     h_cafe = str(year)
 
     if len(str(month)) == 1:

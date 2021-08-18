@@ -12,14 +12,13 @@ for x, y, c, l in EDGE:
     EDGELIST[x][y] = (c, l)
     EDGELIST[y][x] = (c, l)
 
-# LCA(オイラーツアー＋Segment tree)
 
 DEPTH = [-1] * (N + 1)
 DEPTH[1] = 0
 
 QUE = deque([1])
 QUE2 = deque()
-EULER = []  # (i,j)で,(1からツアーで辿った点の深さ,そのindex)
+EULER = []
 
 USED = [0] * (N + 1)
 while QUE:
@@ -48,27 +47,27 @@ for ind, (depth, p) in enumerate(EULER):
 
 LEN = len(EULER)
 
-seg_el = 1 << (LEN.bit_length())  # Segment treeの台の要素数
-SEG = [(1 << 30, 0)] * (2 * seg_el)  # 1-indexedなので、要素数2*seg_el.Segment treeの初期値で初期化
+seg_el = 1 << (LEN.bit_length())
+SEG = [(1 << 30, 0)] * (2 * seg_el)
 
-for i in range(LEN):  # Dを対応する箇所へupdate
+for i in range(LEN):
     SEG[i + seg_el] = EULER[i]
 
-for i in range(seg_el - 1, 0, -1):  # 親の部分もupdate
+for i in range(seg_el - 1, 0, -1):
     SEG[i] = min(SEG[i * 2], SEG[i * 2 + 1])
 
 
-def update(n, x, seg_el):  # A[n]をxへ更新（反映）
+def update(n, x, seg_el):
     i = n + seg_el
     SEG[i] = x
-    i >>= 1  # 子ノードへ
+    i >>= 1
 
     while i != 0:
         SEG[i] = min(SEG[i * 2], SEG[i * 2 + 1])
         i >>= 1
 
 
-def getvalues(l, r):  # 区間[l,r)に関するminを調べる
+def getvalues(l, r):
     L = l + seg_el
     R = r + seg_el
     ANS = (1 << 30, 0)

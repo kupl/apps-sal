@@ -12,8 +12,6 @@ class Solution:
         k = 0
         B = []
         for i in range(len(A)):
-            # if i==len(A)-1:
-            # B.append
             if temp == 0:
                 temp = A[i]
             elif (temp + 1 + A[i]) > maxWidth:

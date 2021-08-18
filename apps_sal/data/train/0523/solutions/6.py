@@ -1,15 +1,10 @@
-# cook your dish here
 MOD = (10**9) + 7
 
 
 def binomialCoefficient(n, k):
-    # since C(n, k) = C(n, n - k)
     if(k > n - k):
         k = n - k
-    # initialize result
     res = 1
-    # Calculate value of
-    # [n * (n-1) *---* (n-k + 1)] / [k * (k-1) *----* 1]
     for i in range(k):
         res = res * (n - i)
         res = res / (i + 1)
@@ -42,7 +37,6 @@ for _ in range(int(input())):
         else:
             temp2 = 0
 
-        # print(value,ans,temp1,temp2)
         ans = (ans * (arr[x]**(value - temp2 - temp1))) % MOD
 
     print(ans)

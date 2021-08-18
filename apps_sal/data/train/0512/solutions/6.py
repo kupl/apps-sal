@@ -26,7 +26,7 @@ def set_ancestor(x=1, d=0, parent=0):
 
 depth = [0] * (N + 1)
 U = 17
-ancestor = [[0] * (U + 1) for _ in range(N + 1)]  # 2**i だけ遡った頂点の番号、行き過ぎは0
+ancestor = [[0] * (U + 1) for _ in range(N + 1)]
 set_ancestor()
 
 
@@ -58,7 +58,7 @@ for i, (x, y, u, v) in enumerate(query):
     tasks[v].append((i, x, y, 1))
     tasks[LCA(u, v)].append((i, x, y, -2))
 
-answer = [0] * Q  # 頂点、色に対して、距離、自色距離、自色個数)を入れる
+answer = [0] * Q
 
 
 def dfs(x, sums=defaultdict(int), nums=defaultdict(int), total=0, parent=0):

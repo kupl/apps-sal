@@ -1,4 +1,3 @@
-# <!:(){}^@""+%_*&$?>
 def problem(a):
     fifty = 50
     six = 6
