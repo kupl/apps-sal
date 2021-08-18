@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 H = int(input())
 
 n = 0

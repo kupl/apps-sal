@@ -17,7 +17,6 @@ def bfs(edges, start):
                 if done[n] != 2:
                     done[n] = 1
                     waiting.append(n)
-    # print(done,c)
     return c
 
 

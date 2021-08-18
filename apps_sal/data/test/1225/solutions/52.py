@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def main():
     def solve(n):
         if n == 1:

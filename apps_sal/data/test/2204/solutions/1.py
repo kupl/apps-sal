@@ -7,7 +7,7 @@ for _ in range(int(input())):
     if _ != 0:
         s = input()
     n, m = list(map(int, input().split()))
-    flower = []  # b,a
+    flower = []
     for i in range(m):
         a, b = list(map(int, input().split()))
         flower.append((b, a))

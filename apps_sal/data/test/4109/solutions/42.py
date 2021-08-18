@@ -4,7 +4,6 @@ INF = 10**7
 
 ans = set()
 ans.add(INF)
-# 深さ優先探索
 
 
 def DFS(n, cost, Xls):

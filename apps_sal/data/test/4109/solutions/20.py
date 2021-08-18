@@ -14,25 +14,18 @@ def all0(v):
 
 
 for i in range(2**N):
-    # print(bin(i))
     sum = 0
     unst = list(map(all0, unst))
     for j in range(N):
         if (i >> j) & 1:
-            # print(j)
             sum += B[j][0]
-            # unst = list(map(lamda:x,x+B[j][]))
             for k in range(M):
                 unst[k] += B[j][k + 1]
-    # print(unst)
-    # print("sum=",sum)
     if all(elem >= X for elem in unst):
         sum_ok = sum
         flg = 1
     x = min(x, sum_ok)
-    # print(x)
 
-# print(unst)
 
 if flg == 0:
     print((-1))

@@ -13,7 +13,7 @@ INF = inf
 MOD = 1000000007
 
 n, m = [int(i) for i in input().split()]
-A = [[int(i) for i in input().split()]for j in range(m)]    # nは行数
+A = [[int(i) for i in input().split()]for j in range(m)]
 
 tmp = 0
 res = 0

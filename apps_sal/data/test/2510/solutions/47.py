@@ -1,11 +1,9 @@
-# -*- coding utf-8 -*-
 
 MOD = 10 ** 9 + 7
 
 N, M = list(map(int, input().split()))
 AB_M = [list(map(int, input().split())) for _ in range(M)]
 
-# union find
 parents = [-1] * (N + 1)
 
 

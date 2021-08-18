@@ -1,4 +1,4 @@
-class UnionFind():  # 0インデックス
+class UnionFind():
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -27,7 +27,7 @@ class UnionFind():  # 0インデックス
         return -self.parents[self.find(x)]
 
 
-N, M = map(int, input().split())  # N人、M個の関係
+N, M = map(int, input().split())
 union_find = UnionFind(N)
 for _ in range(M):
     A, B = map(int, input().split())

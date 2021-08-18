@@ -1,4 +1,4 @@
-class UnionFind():  # 0インデックス
+class UnionFind():
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n

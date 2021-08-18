@@ -1,6 +1,5 @@
 from collections import deque
 n, m = list(map(int, input().split()))
-# 隣接行列は作っておく
 g = [[] for i in [0] * (n + 1)]
 for _ in range(m):
     a, b = list(map(int, input().split()))

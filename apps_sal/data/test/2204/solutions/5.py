@@ -12,7 +12,6 @@ def input_split():
 testCases = int(input())
 answers = []
 for test in range(testCases):
-    # take input
     n, m = input_split()
     arr = []
     barr = []
@@ -46,7 +45,6 @@ for test in range(testCases):
                 potential = score + (n - done - 1) * val + arr[index]
             else:
                 potential = score + (n - done) * val
-                # can break here?
             maxi = max(potential, maxi)
 
         pointer += 1
