@@ -4,5 +4,4 @@ def dna_to_rna(dna):
         if(x == 'T'):
             x = 'U'
         t += x
-        # print(t)
     return(t)

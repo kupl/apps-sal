@@ -1,6 +1,4 @@
 def dna_to_rna(dna):
-    # if dna="":
-    #    print('No entry value!')
 
     dna = dna.upper()
 

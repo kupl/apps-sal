@@ -1,6 +1,4 @@
-# Convert chess notation to zero indexed tuple (x, y)
 def int_pos(s): return (ord(s[0]) - ord("a"), int(s[1]) - 1)
-# Convert zero indexed tuple (x, y) to chess notation
 def note_pos(t): return "{}{}".format(chr(t[0] + ord("a")), t[1] + 1)
 
 
@@ -39,10 +37,7 @@ def bishop_diagonal(bishop1, bishop2):
     b1, b2 = int_pos(bishop1), int_pos(bishop2)
     b1_attack, b2_attack = bishop_attack(b1), bishop_attack(b2)
     if b1 in b2_attack:
-        # Attack paths intersect
         b1d, b2d = b1_attack[b2], b2_attack[b1]
-        # move b1 in the direction b2 attacked and keep last legal move
         bishop1 = note_pos(list(bishop_extend(b1, b1d))[-1])
-        # Same for b2
         bishop2 = note_pos(list(bishop_extend(b2, b2d))[-1])
     return sorted([bishop1, bishop2])

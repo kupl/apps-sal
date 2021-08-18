@@ -1,4 +1,3 @@
-# import numpy as np
 
 def dist(a, b):
     return (b - a) % n
@@ -18,9 +17,6 @@ for i in range(n):
     if len(sweets[i]):
         t[i] = (len(sweets[i]) - 1) * n + dist(i, sweets[i][-1])
 
-# t = np.array([t[i] for i in range(n)], dtype=int)
-# raise ValueError("")
-# print(t)
 result = []
 
 m_max, i_max = 0, 0

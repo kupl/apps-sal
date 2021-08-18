@@ -15,20 +15,9 @@ class Solution:
                 predecessor_arrival = arrival
         return fleets
 
-# position: [10,8,0,5,3] -> [0,3,5,8,10]
-# spee:     [2,4,1,1,3]  -> [1,3,1,4,2]
-
 
 if True:
     print((Solution().carFleet(
         10,
         [0, 4, 2],
-        [2, 1, 3])))  # 1
-# [0,2,4]
-# [2,3,1]
-# [5,3,6]
-
-# pos[i] + x1*speed[i] == 12
-# pos[i+1] + x2*speed[i+1] == 12
-# x1 = (12 - pos[i])/speed[i]
-# x2 = (12 - pos[i+1])/speed[i+1]
+        [2, 1, 3])))

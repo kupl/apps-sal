@@ -1,5 +1,4 @@
 def one_down(txt):
-    # your code here
 
     if type(txt) is not str:
         return "Input is not a string"
