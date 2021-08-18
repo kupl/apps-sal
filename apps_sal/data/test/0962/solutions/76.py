@@ -2,13 +2,10 @@ def find_cycle(N, AB):
     for c in range(N):
         stack = [(c, [])]
         while stack:
-            # print("stack:", stack)
             curr, visited = stack.pop()
             if curr in visited:
-                # print("cycle found:", curr)
                 return visited
             else:
-                # print("adding in visited:", curr)
                 for i in AB[curr]:
                     stack.append((i, visited + [curr]))
     return False
@@ -41,7 +38,6 @@ for _ in range(M):
     AB[A].append(B)
 
 cycle = find_cycle(N, AB)
-# print("cycle:", cycle)
 if not cycle:
     print(-1)
 else:

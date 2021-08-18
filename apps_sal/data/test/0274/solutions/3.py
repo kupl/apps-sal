@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
-d = 0  # depth
-md = 0  # max depth
+d = 0
+md = 0
 for i in s:
     if i == '[':
         d += 1
@@ -9,9 +9,8 @@ for i in s:
         d -= 1
     md = max(md, d)
 
-# print(md)
 
-nv = md * 2 - 1  # kol-vo palok at this moment
+nv = md * 2 - 1
 out = ""
 res = []
 i = 0
@@ -67,7 +66,6 @@ while i < n:
     out += '+'
     res.append(out)
     out = ""
-    # print(out)
     i += 1
 
 norm = md * 2 + 1

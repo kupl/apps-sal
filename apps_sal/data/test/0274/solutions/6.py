@@ -1,7 +1,7 @@
 def lmap(func, x): return list(map(func, x))
 
 
-_, scobes = input(), input()  # '', '[[[][][][][][][][]][]][]'
+_, scobes = input(), input()
 scobes = scobes.replace('[]', '[   ]')
 
 
@@ -62,5 +62,3 @@ def draw_line(line): return ''.join(lmap(str, line)).replace('0', ' ').replace('
 
 
 print('\n'.join(lmap(draw_line, picture)))
-
-# Here was me!

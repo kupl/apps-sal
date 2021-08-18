@@ -2,9 +2,6 @@ from collections import deque
 import sys
 input = sys.stdin.buffer.readline
 
-# sys.setrecursionlimit(10**9)
-#from functools import lru_cache
-
 
 def RD(): return input().rstrip().decode()
 def II(): return int(input())
@@ -14,7 +11,6 @@ def MF(): return map(float, input().split())
 def LI(): return list(map(int, input().split()))
 def LF(): return list(map(float, input().split()))
 def TI(): return tuple(map(int, input().split()))
-# rstrip().decode()
 
 
 def main():
@@ -31,7 +27,6 @@ def main():
         Q = deque([[i, 0]])
         D = [-1] * (n + 1)
         while Q:
-            # print(Q)
             now, d = Q.popleft()
             if now == i and d > 0:
                 A[i] = d
@@ -40,17 +35,14 @@ def main():
                 if D[nx] == -1:
                     D[nx] = d + 1
                     Q.append([nx, d + 1])
-    # print(A)
 
     k = min(A)
-    # print(k)
 
     if k == 10**5:
         print(-1)
         return
 
     s = A.index(k)
-    # print(s)
 
     A = []
     Q = deque([[s, 0]])
@@ -68,9 +60,6 @@ def main():
                 D[nx] = d + 1
                 Q.append([nx, d + 1])
     D[s] = 0
-
-    # print(A)
-    # print(D)
 
     ans = []
     d = k - 1

@@ -1,4 +1,3 @@
-# You lost the game.
 n, k = map(int, input().split())
 r = 0
 for i in range(min(k, n // 2)):

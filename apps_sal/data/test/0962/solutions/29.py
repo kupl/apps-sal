@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 
@@ -39,10 +38,8 @@ def SCC(N, edges):
         for nxt in nodes1[cur]:
             if not visited[nxt]:
                 rec1(nxt)
-        # 行き止まったところから順にTに入れていく
         T.append(cur)
 
-    # グラフが連結とは限らないので全頂点やる
     for u in range(N):
         if not visited[u]:
             rec1(u)
@@ -58,7 +55,6 @@ def SCC(N, edges):
             if not visited[nxt]:
                 rec2(nxt)
 
-    # 逆順で進めるところまで行く
     for u in reversed(T):
         if not visited[u]:
             rec2(u)
@@ -76,11 +72,9 @@ def bfs(N, nodes, src):
     end = -1
     while que:
         u, prev, c = que.popleft()
-        # 同じ強連結成分内のみでやる
         if group[u] != group[src]:
             continue
         if dist[u]:
-            # 訪問済で始点に帰ってきたら、最短チェック
             if u == src:
                 if c < mn:
                     mn = c
@@ -89,7 +83,6 @@ def bfs(N, nodes, src):
         dist[u] = (c, prev)
         for v in nodes[u]:
             que.append((v, u, c + 1))
-    # 経路、始点に戻ってくる最短距離、その直前の頂点を返す
     return dist, mn, end
 
 
@@ -116,11 +109,9 @@ for i in range(M):
     nodes[a].append(b)
     edges.append((a, b))
 
-# 強連結成分毎に見る
 grpcnt, group = SCC(N, edges)
 ans = INF
 for i in range(N):
-    # 経路、始点に戻ってくる最短距離、その直前の頂点
     dist, mn, end = bfs(N, nodes, i)
     if mn < ans:
         ans = mn
@@ -129,5 +120,4 @@ if ans != INF:
     print(ans)
     [print(u + 1) for u in route]
 else:
-    # そもそも閉路なし
     print(-1)

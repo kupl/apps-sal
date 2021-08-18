@@ -2,8 +2,8 @@ import heapq as hq
 
 n, k = map(int, input().split())
 A = []
-S0 = []  # 種類が増えない寿司
-S1 = []  # 種類が増える寿司
+S0 = []
+S1 = []
 for i in range(n):
     t, d = map(int, input().split())
     A.append([t, d])
@@ -20,10 +20,10 @@ for i in range(n):
         now = t
 hq.heapify(S0)
 hq.heapify(S1)
-C = []  # 消し得る寿司のストック(S0から出したもの)
+C = []
 
-x = 0  # おいしさの合計
-y = 0  # 種類数
+x = 0
+y = 0
 for i in range(k):
     if len(S0) == 0:
         x += -hq.heappop(S1)

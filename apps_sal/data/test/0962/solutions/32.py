@@ -20,7 +20,6 @@ for i in range(n):
                 dist[i][v_next] = c + 1
                 queue.append((v_next, c + 1))
 
-# print(dist)
 ans_len = n + 1
 for i in range(n):
     if dist[i][i] != -1:
@@ -47,9 +46,6 @@ else:
                 queue.append((v_next, c + 1))
 
     ans = []
-    # print(start_v)
-    # print(dist)
-    # print(prev_v)
     v = start_v
     for i in range(ans_len):
         ans.append(v + 1)

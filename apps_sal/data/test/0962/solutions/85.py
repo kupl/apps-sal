@@ -33,14 +33,12 @@ else:
 if dag:
     print(-1)
 else:
-    # construct a directed cycle
     cycle = set()
     cycle.add(s)
     pv = prev[s]
     while pv != s:
         cycle.add(pv)
         pv = prev[pv]
-    # shrink the directed cycle
     for a, b in edges:
         if a in cycle and b in cycle and prev[b] != a:
             pv = prev[b]

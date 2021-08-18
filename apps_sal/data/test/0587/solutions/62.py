@@ -8,14 +8,11 @@ for _ in range(N):
 
 I.sort(reverse=True)
 
-# heap_can_delete
 h_d = []
-# heap_can_add
 h_a = []
 
 wk = 0
 kind = 0
-# 出現したことのあるネタ
 ap = set()
 for i in range(K):
     d, t = I[i]
@@ -30,7 +27,6 @@ for i in range(K, N):
     d, t = I[i]
     if t not in ap:
         ap.add(t)
-        # maxをpopさせるために、価値を-1かけておく
         heapq.heappush(h_a, ((-1) * d, t))
 
 ans = wk + kind ** 2

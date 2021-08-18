@@ -16,11 +16,8 @@ def main():
 def vs(v: List[List[int]], k: int) -> int:
     v.sort(key=lambda x: x[1], reverse=True)
 
-    # Dup type
     h0 = []
-    # New type
     h1 = []
-    # types
     s = set()
     types = 0
     op = 0

@@ -69,6 +69,4 @@ for i in range(1, n):
                         f[i][j] += tmp
                     f[i][j] %= M
 
-# print(f)
-#print(f[n - 1][len(b) - 1], res)
 print(f[n - 1][len(b) - 1] * pw(res, M - 2) % M)

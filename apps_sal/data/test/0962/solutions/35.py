@@ -30,9 +30,6 @@ def main():
             if u in to[v]:
                 mn = min(mn, [dist[v], v])
 
-        # print(dist)
-        # print(mn)
-        # print(pre)
         res = []
         v = mn[1]
         if mn[0] == inf:

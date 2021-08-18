@@ -1,4 +1,3 @@
-#!python3
 
 import sys
 sys.setrecursionlimit(10 ** 6)
@@ -7,11 +6,9 @@ sys.setrecursionlimit(10 ** 6)
 def LI(): return list(map(int, input().split()))
 
 
-# input
 N, M = LI()
 AB = [LI() for _ in range(M)]
 
-# params
 link = [[] for _ in range(N)]
 for a, b in AB:
     link[a - 1].append(b - 1)

@@ -29,12 +29,10 @@ for t in range(1, N + 1):
         heappush(H, (D[t].pop(), t))
         T[t - 1] -= 1
 
-#print(ans, H, T, cnt)
 for i in range(K, N):
     if H:
         t1, d1 = TD[i]
         d2, t2 = heappop(H)
-        #print(t1, d1, t2, d2)
         if T[t1 - 1] == 0 and d1 - d2 + 2 * cnt + 1 >= 0:
             ans += d1 - d2 + 2 * cnt + 1
             cnt += 1
@@ -45,9 +43,7 @@ for i in range(K, N):
                 heappush(H, (D[t2].pop(), t2))
         else:
             heappush(H, (d2, t2))
-        #print(ans, H, T, cnt)
 
-# 元のやつとの組み合わせ...？
 ans2 = 0
 T2 = [0] * N
 D2 = []
