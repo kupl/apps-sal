@@ -1,6 +1,5 @@
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:
-        # two pointer solution
         nums.sort()
         ans = 0
         for i in range(len(nums)):

@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     for _ in range(int(input())):
         number = int(input())
@@ -9,17 +8,14 @@ try:
             if(list_hai_bhai[cv] == list_hai_bhai[cv + 1]):
                 list_hai_bhai[cv + 1] = -1
                 verma = 1
-        # print(list_hai_bhai)
         list_hai_bhai.sort()
         for cv in range(number):
             if list_hai_bhai[cv] in dic:
                 dic[list_hai_bhai[cv]] += 1
             else:
                 dic[list_hai_bhai[cv]] = 1
-        # print(dic)
         if verma == 1:
             dic.pop(-1)
-        # print(dic)
         print(max(dic, key=dic.get))
 except:
     pass

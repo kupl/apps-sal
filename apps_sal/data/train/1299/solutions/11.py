@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -11,5 +10,4 @@ for _ in range(int(input())):
                 continue
         types[a[i]] += 1
         flag = 0
-        # print(i,a[i],types)
     print(types.index(max(types)))

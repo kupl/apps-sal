@@ -4,9 +4,9 @@ def has_exit(maze):
             return True
         if not j in range(len(maze[i])):
             return True
-        if maze[i][j] == '#':
-            return False
-        maze[i][j] = '#'
+        if maze[i][j] == '
+        return False
+        maze[i][j] = '
         return any(rec(i + k, j + l) for k in (-1, 0, 1) for l in (-1, 0, 1) if bool(k) != bool(l))
 
     pos = None

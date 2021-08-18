@@ -58,7 +58,6 @@ class Solution:
                     count %= mod
         return count
 
-    # 加强
     def numSubseq1(self, nums: List[int], target: int) -> int:
         nums = sorted(nums)
         n = len(nums)
@@ -71,7 +70,7 @@ class Solution:
             if i == j:
                 if (nums[i] + nums[j]) <= target:
                     count += 1
-            elif (nums[i] + nums[j - 1]) <= target:  # 防止第一个数就超过
+            elif (nums[i] + nums[j - 1]) <= target:
                 count += pow(2, j - i - 1) % mod
         return count % mod
 
@@ -104,7 +103,7 @@ class Solution:
             if i == j:
                 if (nums[i] + nums[j]) <= target:
                     count += 1
-            elif (nums[i] + nums[j - 1]) <= target:  # 防止第一个数就超过
+            elif (nums[i] + nums[j - 1]) <= target:
                 count += pow_map[j - i - 1]
         return count % mod
 

@@ -1,14 +1,7 @@
-#import bisect
-#i = bisect.bisect_left(a, k)
-# a=[]
-#from sys import stdin
-# input=stdin.readline
 
 for _ in range(int(input())):
-    # n=int(input())
     ans = 0
     n, m = list(map(int, input().split()))
-    #a=list(map(int, input().split()))
     a = []
     if m > n:
         print('0')
@@ -23,4 +16,3 @@ for _ in range(int(input())):
     for i in range(p):
         ans += a[i]
     print(ans)
-    # YOUR CODE HERE

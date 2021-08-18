@@ -14,6 +14,5 @@ class Solution:
             while right - 1 >= left and nums[left] > target - nums[right]:
                 right -= 1
             res += cal_map[right - left]
-            # print(left, right, cal_map[right - left], nums[left])
             left += 1
         return res % self.MODS

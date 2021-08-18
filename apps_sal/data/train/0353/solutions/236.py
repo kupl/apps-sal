@@ -8,6 +8,5 @@ class Solution:
                 right -= 1
             else:
                 ans += pow(2, right - left, mod)
-                #ans %= mod
                 left += 1
         return ans % mod

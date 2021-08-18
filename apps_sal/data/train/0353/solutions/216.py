@@ -3,7 +3,6 @@ class Solution:
         nums.sort()
         ans = 0
         mod = 1000000007
-        # print(nums)
         st = 0
         ed = len(nums) - 1
         while(st < ed):
@@ -12,7 +11,6 @@ class Solution:
             if(st < ed):
                 ans += 2**(ed - st) - 1
                 ans %= mod
-            # print(st,ed)
             st += 1
 
         for i in range(len(nums)):
