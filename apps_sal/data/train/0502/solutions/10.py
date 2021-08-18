@@ -1,9 +1,5 @@
 class Solution:
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
-        # Graph represented as an adjaency matrix
-        # Loop through infected
-        # Simulate condition of what would happen if only this infected node is removed
-        # If num infected is the new min -> then we have a potential answer
 
         infected_nodes = set(initial)
         max_infected = len(graph)
@@ -20,9 +16,6 @@ class Solution:
                 node_to_remove = infected_node
                 max_infected = len(infected)
         return node_to_remove
-        # Loop through the infected nodes
-        # Do a traversal to simulate an \"infection\"
-        # Count number of nodes infected and track max infected
 
     def dfs(self, node, graph, infected):
         infected.add(node)

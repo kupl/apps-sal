@@ -51,7 +51,6 @@ def solve(addresses):
         if(len(group_domains) > 1):
             groups.append(group_domains)
 
-    # print(groups)
     return groups
 
 
@@ -70,34 +69,6 @@ def main():
 
 
 def test():
-    # addresses = """
-    # 	http://abacaba.ru/test
-    # 	http://abacaba.ru/
-    # 	http://abacaba.com
-    # 	http://abacaba.com/test
-    # 	http://abacaba.de/
-    # 	http://abacaba.ru/test
-    # 	http://abacaba.de/test
-    # 	http://abacaba.com/
-    # 	http://abacaba.com/t
-    # 	http://abacaba.com/test
-    # 	""".split()
-    # addresses = """
-    # 	http://c
-    # 	http://ccc.bbbb/aba..b
-    # 	http://cba.com
-    # 	http://a.c/aba..b/a
-    # 	http://abc/
-    # 	http://a.c/
-    # 	http://ccc.bbbb
-    # 	http://ab.ac.bc.aa/
-    # 	http://a.a.a/
-    # 	http://ccc.bbbb/
-    # 	http://cba.com/
-    # 	http://cba.com/aba..b
-    # 	http://a.a.a/aba..b/a
-    # 	http://abc/aba..b/a
-    # 	""".split()
 
     import random
     import string
@@ -116,7 +87,6 @@ def test():
 
 
 def __starting_point():
-    # test()
     main()
 
 

@@ -6,7 +6,6 @@ class Solution:
             testInit = initial.copy()
             testInit.remove(node)
             touch, testSpread = touchAnyNodes([node], graph, testInit)
-            # print (str(node) + \" \" + str(touch) + \" \" + str(testSpread) )
             if not touch:
                 if testSpread > maxSpread or (testSpread == maxSpread and node < minNode):
                     maxSpread = testSpread

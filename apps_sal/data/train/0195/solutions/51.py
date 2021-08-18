@@ -15,11 +15,3 @@ class Solution:
                 if num & A[k] == 0:
                     ans += count
         return ans
-
-#         (a & b) & c== 0
-
-# # 0010
-# # 0001
-# # 1101
-# # 0011
-# # 1110

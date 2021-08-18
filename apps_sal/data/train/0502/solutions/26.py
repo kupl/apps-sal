@@ -1,6 +1,5 @@
 class Solution:
     def minMalwareSpread(self, graph, initial):
-        # dfs
         def dfs(node, visited):
             if node in initial:
                 return 0
@@ -32,10 +31,8 @@ class Solution:
 
         def union(x, y):
             parents[find(x)] = find(y)
-        # init
         n = len(graph)
         parents = list(range(n))
-        # union
         for i in range(n):
             for j in range(i + 1, n):
                 if graph[i][j] == 1:

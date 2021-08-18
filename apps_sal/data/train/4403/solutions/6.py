@@ -1,5 +1,3 @@
-# Switch the endianness of integer n
-# Assume 64-bit unsigned integers
 def switch_endian(n, bits):
     if n < 0 or bits & (bits - 1) or bits < 8 or n >= 2**bits:
         return None

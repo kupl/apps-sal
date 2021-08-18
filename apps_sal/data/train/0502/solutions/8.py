@@ -13,10 +13,8 @@ class Solution(object):
             if node not in t_vis:
                 vis = set([node])
                 dfs(node, vis)
-                # caculate the number of infected node in the subgraph
                 infect = vis & s
                 if len(infect) == 1:
-                    # more number of nodes or smaller index
                     if len(vis) > subgraph_len or (len(vis) == subgraph_len and list(infect)[0] < del_node):
                         del_node, subgraph_len = list(infect)[0], len(vis)
                 t_vis |= vis

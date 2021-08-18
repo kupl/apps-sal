@@ -12,13 +12,9 @@ def lin(): return list(tin())
 
 mod = 1000000007
 
-# +++++
-
 
 def main():
-    #a = int(input())
     n, m = tin()
-    #s = input()
     al = [-1] + lin()
     bb = [[] for _ in range(n + 1)]
     for _ in range(m):
@@ -43,7 +39,6 @@ def main():
         ll.append(t)
 
     ret = 0
-    # pa(ll)
     for t in ll:
         st = set(t)
         for v in t:
@@ -52,7 +47,6 @@ def main():
     print(ret)
 
 
-# +++++
 isTest = False
 
 
@@ -81,7 +75,6 @@ def __starting_point():
         isTest = True
     else:
         pass
-        #input = sys.stdin.readline
 
     ret = main()
     if ret is not None:

@@ -1,5 +1,4 @@
 def pattern(n):
-    # Happy Coding ^_^
     gtext = ""
     for i in range(1, n + 1):
         s = ""

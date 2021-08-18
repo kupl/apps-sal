@@ -19,12 +19,10 @@ class Solution:
                 dfs(node, c)
                 c += 1
 
-        # find node with unique color
         color_count = Counter()
         for node in initial:
             color_count[color[node]] += 1
 
-        # if unique color, ans is node color with greatest size else smallest index
         ans = -1
         for node in initial:
             c = color[node]

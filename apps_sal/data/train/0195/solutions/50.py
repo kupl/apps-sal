@@ -12,5 +12,4 @@ class Solution:
             for tgt, ct in dp.items():
                 if A[i] & tgt == 0:
                     ways += ct
-                    #print(A[i], tgt, ct)
         return ways

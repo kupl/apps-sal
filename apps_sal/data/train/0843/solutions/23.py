@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     n = int(input())
@@ -7,7 +6,6 @@ while t:
         l1 = list(map(int, input().split()))
         l1 = sorted(l1)
         l.append(l1)
-    # print(l)
     count = l[n - 1][n - 1]
     m = l[n - 1][n - 1]
     c = 0
@@ -15,7 +13,6 @@ while t:
     for i in range(n - 2, -1, -1):
         for j in range(n - 1, -1, -1):
             if(l[i][j] < m):
-                # print(count)
                 count += l[i][j]
                 m = l[i][j]
                 c += 1
