@@ -45,10 +45,8 @@ dis = [0] * n
 u = g.bfs(0, dis)
 dis = [0] * n
 d = g.bfs(u, dis)
-# print(dis)
 temp = [0] * n
 x = g.bfs(d, temp)
-# print(temp)
 count = 0
 for i in range(n):
     if(temp[i] <= k and dis[i] <= k):

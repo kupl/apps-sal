@@ -1,4 +1,3 @@
-# Problem D: Slime
 
 n = int(input())
 
@@ -8,7 +7,7 @@ for i in range(n):
     a[i] = int(a[i])
 
 if(n == 1):
-    print(a[0])  # Obvious Case
+    print(a[0])
 else:
     sm = 0
     havePositive = False
@@ -26,14 +25,12 @@ else:
             sm -= c
 
     if(haveNegative and havePositive):
-        print(sm)  # Final Answer
+        print(sm)
     else:
         for i in range(n):
             a[i] = abs(a[i])
-        # Get the minimum
         ans = sum(a)
         low = a[0]
         for c in a:
             low = min(low, c)
-        # Final Answer
         print(ans - 2 * low)

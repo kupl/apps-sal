@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 import sys
 r_input = sys.stdin.readline
 

@@ -18,14 +18,14 @@ def solve(R, C, K, item):
     for i in range(R):
         for j in range(C):
             for k in range(4):
-                if i > 0:  # 前の行から
-                    DP[i, j, 0] = max(DP[i, j, 0], max(DP[i - 1, j]))  # 取らない
-                    DP[i, j, 1] = max(DP[i, j, 1], max(DP[i - 1, j]) + item[i, j])  # 取る
+                if i > 0:
+                    DP[i, j, 0] = max(DP[i, j, 0], max(DP[i - 1, j]))
+                    DP[i, j, 1] = max(DP[i, j, 1], max(DP[i - 1, j]) + item[i, j])
 
-                if j > 0:  # 前の列から
-                    DP[i, j, k] = max(DP[i, j, k], DP[i, j - 1, k])  # 取らない
+                if j > 0:
+                    DP[i, j, k] = max(DP[i, j, k], DP[i, j - 1, k])
                     if k >= 1:
-                        DP[i, j, k] = max(DP[i, j, k], DP[i, j - 1, k - 1] + item[i, j])  # 取る
+                        DP[i, j, k] = max(DP[i, j, k], DP[i, j - 1, k - 1] + item[i, j])
 
     print(max(DP[R - 1, C - 1]))
 

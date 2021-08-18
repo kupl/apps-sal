@@ -1,24 +1,15 @@
 
-# coding: utf-8
-
-# In[134]:
 
 n, m = list(map(int, input().split()))
 
-
-# In[135]:
 
 plan = []
 for i in range(n):
     plan.append(input().split())
 
 
-# In[136]:
-
 plan2 = list(map(list, list(zip(*plan))))
 
-
-# In[137]:
 
 def findLeft(string):
     i = 0
@@ -29,8 +20,6 @@ def findLeft(string):
             i += 1
 
 
-# In[138]:
-
 def findRight(string):
     i = len(string) - 1
     while i >= 0:
@@ -39,8 +28,6 @@ def findRight(string):
         else:
             i -= 1
 
-
-# In[139]:
 
 count = 0
 for each in plan:
@@ -60,7 +47,5 @@ for each in plan2:
         r = findRight(each)
         count += each[:l].count('0') + 2 * each[l + 1:r].count('0') + each[r + 1:].count('0')
 
-
-# In[140]:
 
 print(count)

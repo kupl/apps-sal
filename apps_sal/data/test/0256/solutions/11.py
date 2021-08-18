@@ -10,8 +10,6 @@ t11 = t1[0]
 t12 = t1[1]
 t21 = t2[0]
 t22 = t2[1]
-# if any team of t1 wins both game, then t1 wins
-# if any both team loses to any of t2, t2 wins
 
 if t11[0] > t21[1] and t11[0] > t22[1] and t11[1] > t21[0] and t11[1] > t22[0]:
     print("Team 1")

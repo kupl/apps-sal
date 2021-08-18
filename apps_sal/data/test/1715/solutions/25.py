@@ -12,12 +12,10 @@ import decimal
 import statistics
 import queue
 
-# import numpy as np
 
 sys.setrecursionlimit(10 ** 9)
 INF = 10 ** 16
 MOD = 10 ** 9 + 7
-# MOD = 998244353
 
 
 def ni(): return int(sys.stdin.readline())
@@ -25,8 +23,6 @@ def ns(): return list(map(int, sys.stdin.readline().split()))
 def na(): return list(map(int, sys.stdin.readline().split()))
 def na1(): return list([int(x) - 1 for x in sys.stdin.readline().split()])
 
-
-# ===CODE===
 
 def disLR(a, idx):
     small = a[max(0, idx - 1)]

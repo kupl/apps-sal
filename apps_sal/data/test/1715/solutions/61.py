@@ -1,4 +1,3 @@
-# https://img.atcoder.jp/abc119/editorial.pdf
 import bisect
 A, B, Q = map(int, input().split())
 INF = 10 ** 18

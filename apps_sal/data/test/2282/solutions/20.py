@@ -7,12 +7,6 @@ import math
 import sys
 import os
 
-# map(int, input().split())
-# list(map(int, input().split()))
-# [list(map(int, input().split())) for I in range(n)]
-
-##############################################################
-
 
 n = int(input())
 s = str(input())

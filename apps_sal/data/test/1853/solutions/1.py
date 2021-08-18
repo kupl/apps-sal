@@ -9,8 +9,6 @@ def mi():
 def li():
     return list(mi())
 
-# D. Similar Arrays
-
 
 n, m = mi()
 g = [[] for i in range(n + 1)]

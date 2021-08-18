@@ -1,4 +1,3 @@
-# Power substring 913G
 def dlog(x, n):
     bigMod = 5 ** n
     ans = [None, 0, 1, 3, 2][x % 5]

@@ -1,4 +1,3 @@
-# ABC133 C
 
 L, R = map(int, input().split())
 A = []
