@@ -8,7 +8,6 @@ for i in range(1, m + 1):
 
 y_last = m
 for i in range(1, n + 1):
-    # print("> ---")
     if i == x:
         continue
     if y_last == m:

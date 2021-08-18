@@ -1,4 +1,3 @@
-# 参考:https://drken1215.hatenablog.com/entry/2020/04/26/193500 #
 from math import pi
 from math import atan2
 a, b, x = map(int, input().split())

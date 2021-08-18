@@ -3,8 +3,6 @@ Created on 2019. 9. 21.
 
 @author: kkhh88
 '''
-#q = int(input())
-#x, y = map(int,input().split(' '))
 
 q = int(input())
 for _ in range(q):

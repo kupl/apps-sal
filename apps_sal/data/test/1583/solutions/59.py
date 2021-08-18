@@ -2,7 +2,6 @@ import math
 
 a, b, x = [int(n) for n in input().split()]
 v = a**2 * b / 2
-#print(v, x)
 
 if v == x:
     theta = math.atan(b / a)

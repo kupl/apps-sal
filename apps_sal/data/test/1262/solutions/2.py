@@ -21,8 +21,6 @@ ANS2 = []
 
 while H:
     x = heapq.heappop(H)
-    # print(x)
-    # print(H)
 
     if len(x) == 2:
         cost, town = x
@@ -40,7 +38,6 @@ while H:
             if USE[i + 1] == 1:
                 continue
             costp = (abs(T[i][0] - xt) + abs(T[i][1] - yt)) * (K[i] + K[town - 1])
-            # print(costp,xt,yt,i)
             if costp < C[i]:
                 C[i] = costp
                 heapq.heappush(H, (costp, town, i + 1))

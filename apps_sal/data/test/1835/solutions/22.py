@@ -9,7 +9,6 @@ for i in range(int(input())):
                 cnt0 += 1
             else:
                 cnt1 += 1
-   # print(cnt0,cnt1,cnt2)
     if((cnt2 - (cnt0 & 1) - (cnt1 & 1)) % 2 == 1) or (cnt0 & 1 and cnt1 & 1 and cnt2 == 0):
         print(n - 1)
     else:

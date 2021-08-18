@@ -1,8 +1,6 @@
 import sys
 
 
-# inf = open('input.txt', 'r')
-# reader = (map(int, line.split()) for line in inf)
 reader = (list(map(int, s.split())) for s in sys.stdin)
 
 n, = next(reader)
@@ -42,11 +40,3 @@ myprint(str(len(stations)) + '\n')
 [myprint(str(st + 1) + ' ') for st in stations]
 myprint(str(len(connections)) + '\n')
 [myprint(str(c1 + 1) + ' ' + str(c2 + 1) + '\n') for c1, c2 in connections]
-
-# print(totalCost)
-# print(len(stations))
-# print(*(st + 1 for st in stations))
-# print(len(connections))
-# [print(c1 + 1, c2 + 1) for c1, c2 in connections];
-
-# inf.close()

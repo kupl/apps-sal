@@ -29,7 +29,6 @@ l = [
 move = []
 for x in s:
     move.append(l[int(x)])
-# print(move)
 
 cnt = 0
 for i in range(10):

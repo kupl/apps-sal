@@ -9,7 +9,6 @@ for _ in range(Q):
         zs += s.count('0')
         os += s.count('1')
         odd += len(s) % 2
-    # print(zs,os,odd)
     if zs % 2 == 1 and os % 2 == 1 and odd == 0:
         print(n - 1)
     else:

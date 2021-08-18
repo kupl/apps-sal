@@ -6,13 +6,10 @@ def __starting_point():
     Y.sort()
 
     flg = False
-    # xの場所がYのFROM-に入っていないこと
     if (Y[0] <= x):
         flg = True
-    # yの場所がXのFROM-に入っていないこと
     elif (y <= X[n - 1]):
         flg = True
-    # Xの右端とYの左端が交わらないこと
     elif (X[n - 1] >= Y[0]):
         flg = True
 
