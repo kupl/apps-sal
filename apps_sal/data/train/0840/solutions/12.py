@@ -1,4 +1,3 @@
-# cook your dish here
 def f(n):
     if n == 1:
         print('*')

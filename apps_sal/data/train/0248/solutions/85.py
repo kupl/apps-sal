@@ -25,7 +25,6 @@ class DSU:
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
 
-        # dsu for each cell
         m, n = len(grid), len(grid[0])
         dsu = DSU(m * n)
 

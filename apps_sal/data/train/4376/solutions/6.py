@@ -1,4 +1,4 @@
-def count_pal(n):  # amount of digits
+def count_pal(n):
     res = '1' + ('0' * n)
     temp = '9'
     l = []

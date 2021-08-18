@@ -10,7 +10,6 @@ class Solution:
         return False
 
     def eraseComponent(self, grid, startPoint):
-        # startPoint is the position (x,y)
         startX, startY = startPoint
         value = grid[startX][startY]
         if value is None:
@@ -26,7 +25,6 @@ class Solution:
                     pointsToErase.append(nextPoint)
 
     def containsCycleInComponent(self, grid, startPoint):
-        # startPoint is the position (x,y)
         startX, startY = startPoint
         value = grid[startX][startY]
         if value is None:

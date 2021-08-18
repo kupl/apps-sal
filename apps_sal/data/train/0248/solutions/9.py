@@ -23,12 +23,3 @@ class Solution:
                     if dfs(None, (i, j)):
                         return True
         return False
-
-#     for each cell, if not in visited, do a DFS
-
-#     DFS (prev->(x,y), curx, cury, visited):
-#         if cur is visited: return True
-#         for each cell,
-#             if nei is not prev and nei == cur:
-#                 if (DFS on the nei) return True
-#         return False

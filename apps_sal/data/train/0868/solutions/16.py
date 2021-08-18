@@ -22,7 +22,6 @@ while(t):
             if(int(z) != z):
                 z = int(z) + 1
             z = int(z)
-            # print(d,x[z])
             q = d[x[z]]
             if(d.get(q, -1) != -1):
                 c += 1
