@@ -23,7 +23,7 @@ class Solution:
                 else:
                     newAboveOneIdxs.append(idx)
             if len(aboveOneIdxs) > 0:
-                count += 1  # multiplied by 2
+                count += 1
             aboveOneIdxs = newAboveOneIdxs
 
         return count

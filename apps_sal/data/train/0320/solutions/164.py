@@ -7,7 +7,6 @@ class Solution:
             add = mut = 0
             while n:
                 if n % 2:
-                    # n is odd and delete it by one which require one action as add
                     n -= 1
                     add += 1
                 else:

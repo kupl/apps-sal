@@ -17,6 +17,5 @@ class Solution:
             for i in range(n):
                 nums[i] = (nums[i] // 2)
             ans += 1
-            # print(nums, ans, co)
 
         return ans

@@ -14,7 +14,6 @@ class Solution:
 
         for n in nums:
             category(n, zero_num, even_num, odd_num)
-        # print(zero_num, even_num, odd_num)
         ans = 0
         while len(even_num) or len(odd_num):
             new_odd_num = []
@@ -32,7 +31,5 @@ class Solution:
                 n = n // 2
                 category(n, zero_num, new_even_num, odd_num)
             even_num = new_even_num
-
-            # print(zero_num, even_num, odd_num)
 
         return ans

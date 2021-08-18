@@ -7,10 +7,10 @@ class Solution:
 
         while nums[idx] != 0:
             for i, n in enumerate(nums):
-                ans += n % 2  # minus 1 to make all number even
+                ans += n % 2
                 nums[i] = n - n % 2
             if nums[idx] != 0:
-                for i, n in enumerate(nums):  # devide all numbers by 2
+                for i, n in enumerate(nums):
                     nums[i] = nums[i] // 2
                 ans += 1
 

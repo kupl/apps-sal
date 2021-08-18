@@ -10,5 +10,4 @@ class Solution:
                 cnt += 1
                 x //= 2
             mx = max(mx, cnt)
-        # print(ans,mx)
         return max(ans + mx - 1, 0)

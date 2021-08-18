@@ -8,7 +8,6 @@ class Solution:
             Y = num
             X = 1
             while Y > X:
-                # step += 1
                 if Y % 2 == 1:
                     Y -= 1
                     add_op += 1
