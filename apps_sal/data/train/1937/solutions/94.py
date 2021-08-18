@@ -2,7 +2,6 @@ class ThroneInheritance:
 
     def __init__(self, king: str):
         self.king = king
-        # par -> children
         self.g = defaultdict(list)
         self.dead = set()
 

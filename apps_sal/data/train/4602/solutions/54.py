@@ -1,4 +1,3 @@
-# write the function is_anagram
 def is_anagram(test, original):
 
     counter1 = [0] * 255

@@ -1,4 +1,3 @@
-# junge
 
 class ThroneInheritance:
     root = ''

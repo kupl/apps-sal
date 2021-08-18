@@ -7,7 +7,7 @@ class Tree:
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
-        self.dic = {}  # name:实体
+        self.dic = {}
         self.dead = set()
         self.kingNode = Tree(kingName)
         self.dic[kingName] = self.kingNode
@@ -34,10 +34,3 @@ class ThroneInheritance:
         self.ans = []
         self.output(self.kingNode)
         return self.ans
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

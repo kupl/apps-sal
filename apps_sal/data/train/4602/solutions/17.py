@@ -7,8 +7,6 @@ def aprime_sum(str):
     strChList = list(str.lower())
     return sum([aprime[x] for x in strChList])
 
-# write the function is_anagram
-
 
 def is_anagram(test, original):
     if aprime_sum(test) == aprime_sum(original):

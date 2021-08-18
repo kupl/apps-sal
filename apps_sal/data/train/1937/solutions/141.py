@@ -1,8 +1,4 @@
 
-# ThroneInheritance(string kingName) Initializes an object of the ThroneInheritance class. The name of the king is given as part of the constructor.
-# void birth(string parentName, string childName) Indicates that parentName gave birth to childName.
-# void death(string name) Indicates the death of name. The death of the person doesn't affect the Successor function nor the current inheritance order. You can treat it as just marking the person as dead.
-# string[] getInheritanceOrder() Returns a list representing the current order of inheritance excluding dead people.
 from collections import OrderedDict
 
 
@@ -68,10 +64,3 @@ class ThroneInheritance:
             x = self.people[newsuc]
             curOrder.append(newsuc)
         return [name for name in curOrder if self.people[name].alive]
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()
