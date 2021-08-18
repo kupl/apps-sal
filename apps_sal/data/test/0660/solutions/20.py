@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import math
 n, b, p = list(map(int, input().split()))
 b_sum = 0

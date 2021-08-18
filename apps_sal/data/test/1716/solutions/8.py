@@ -1,10 +1,8 @@
 def train_map(LR, N):
     train = [[0 for _ in range(N + 1)] for _ in range(N + 1)]
-    # train[i][j]:ちょうど区間iからjを走る電車の本数（後に累積和に）
     for l, r in LR:
         train[l][r] += 1
 
-    # 累積和
     for i in range(N + 1):
         for j in range(1, N + 1):
             train[i][j] += train[i][j - 1]

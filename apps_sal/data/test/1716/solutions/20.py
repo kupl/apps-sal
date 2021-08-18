@@ -1,4 +1,3 @@
-# 累積和(2次元)
 N, M, Q = list(map(int, input().split()))
 
 t = [[0] * (N + 1) for _ in range(N + 1)]
@@ -19,4 +18,3 @@ for _ in range(Q):
     p, q = list(map(int, input().split()))
     result.append(t[q][q] + t[p - 1][p - 1] - t[p - 1][q] - t[q][p - 1])
 print(('\n'.join(str(v) for v in result)))
-#print(*result, sep='\n')

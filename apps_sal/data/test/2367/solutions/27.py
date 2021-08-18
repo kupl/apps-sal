@@ -7,7 +7,6 @@ from itertools import combinations, product
 import string
 inf = float('inf')
 MOD = 10**9 + 7
-# MOD = 998244353
 
 
 class NumberTheory():
@@ -127,7 +126,7 @@ class Combinatorics():
 
     sys.setrecursionlimit(10**6)
 
-    def choose(self, n, r, mod=None):  # no mod, or mod ≠ prime
+    def choose(self, n, r, mod=None):
         if r > n or r < 0:
             return 0
         if r == 0:
@@ -427,8 +426,8 @@ class ABC007():
             for i, j in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
                 i += y
                 j += x
-                if maze[i][j] == '#' or dist[i, j] != np.inf:
-                    continue
+                if maze[i][j] == '
+                continue
                 dist[i, j] = dist[y, x] + 1
                 queue.append((i, j))
         print(int(dist[gy, gx]))
@@ -785,7 +784,7 @@ class ABC173():
                     for x in range(w):
                         if i >> y & 1 or j >> x & 1:
                             continue
-                        cnt += c[y][x] == '#'
+                        cnt += c[y][x] == '
                 tot += cnt == k
         print(tot)
 
@@ -800,7 +799,7 @@ class ABC173():
         n, k, *a = map(int, sys.stdin.read().split())
         minus = [x for x in a if x < 0]
         plus = [x for x in a if x > 0]
-        if len(plus) + len(minus) // 2 * 2 >= k:  # plus
+        if len(plus) + len(minus) // 2 * 2 >= k:
             *minus, = map(abs, minus)
             minus.sort(reverse=True)
             plus.sort(reverse=True)

@@ -1,9 +1,8 @@
-#!/usr/bin/env python3
 import sys
 sys.setrecursionlimit(10**8)
 INF = float("inf")
 
-MOD = 1000000007  # type: int
+MOD = 1000000007
 
 
 class Combination(object):
@@ -57,10 +56,10 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    H = int(next(tokens))  # type: int
-    W = int(next(tokens))  # type: int
-    A = int(next(tokens))  # type: int
-    B = int(next(tokens))  # type: int
+    H = int(next(tokens))
+    W = int(next(tokens))
+    A = int(next(tokens))
+    B = int(next(tokens))
     solve(H, W, A, B)
 
 

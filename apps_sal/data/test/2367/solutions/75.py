@@ -1,6 +1,6 @@
 h, w, a, b = list(map(int, input().split()))
-fac = [0] * 200001  # iの階乗mod(1000000007)
-inv = [0] * 200001  # iの逆元mod(1000000007)
+fac = [0] * 200001
+inv = [0] * 200001
 fac[0] = 1
 ans = 0
 for i in range(1, 200001):
@@ -14,8 +14,8 @@ for i in range(h - a):
         if h == 1:
             x = 1
         else:
-            x = (fac[w - b + h - 2
-                     - i] * inv[w - 1 - b] * inv[h - 1 - i]) % 1000000007
+            x = (fac[w - b + h - 2 -
+                     i] * inv[w - 1 - b] * inv[h - 1 - i]) % 1000000007
     else:
         x = ((fac[b - 1 + i] * inv[b - 1] * inv[i]) % 1000000007) * ((fac[w - b + h - 2 - i] * inv[w - b - 1] * inv[h - 1 - i]) % 1000000007)
     ans = (ans + x) % 1000000007

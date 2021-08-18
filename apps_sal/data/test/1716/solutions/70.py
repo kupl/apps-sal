@@ -1,4 +1,3 @@
-# 20-08-06再トライ
 from itertools import accumulate
 import sys
 input = sys.stdin.readline

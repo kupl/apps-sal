@@ -21,14 +21,12 @@ INF = float('inf')
 mod = 10 ** 9 + 7
 
 
-lim = 2 * 10**5  # 必要そうな階乗の限界を入力
+lim = 2 * 10**5
 
-#階乗#
 fact = [1] * (lim + 1)
 for n in range(1, lim + 1):
     fact[n] = n * fact[n - 1] % mod
 
-#階乗の逆元#
 fact_inv = [1] * (lim + 1)
 fact_inv[lim] = pow(fact[lim], mod - 2, mod)
 for n in range(lim, 0, -1):

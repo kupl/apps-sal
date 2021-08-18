@@ -6,9 +6,9 @@ class CombinationFermat:
         MOD = 10**9 + 7
         MAX = 2 * 10**5
 
-        self.fac = [0] * MAX   # self.fac[n]:  (n!) mod p
-        self.finv = [0] * MAX  # self.finv[n]: (n!)^-1 mod p
-        self.inv = [0] * MAX   # inv[n]:  (n)^-1 mod -p
+        self.fac = [0] * MAX
+        self.finv = [0] * MAX
+        self.inv = [0] * MAX
         self.fac[0] = self.fac[1] = 1
         self.finv[0] = self.finv[1] = 1
         self.inv[1] = 1

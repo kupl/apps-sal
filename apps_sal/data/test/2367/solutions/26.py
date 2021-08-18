@@ -1,7 +1,6 @@
 h, w, a, b = list(map(int, input().split()))
 
 p = 10**9 + 7
-# p=127
 
 
 def modp_factorial(n):

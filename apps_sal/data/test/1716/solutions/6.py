@@ -1,4 +1,3 @@
-# D - AtCoder Express 2
 
 N, M, Q = map(int, input().split())
 G = [[0] * (N + 1) for _ in range(N + 1)]

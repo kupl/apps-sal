@@ -1,5 +1,3 @@
-# float型を許すな
-# numpyはpythonで
 from math import floor, ceil, pi, factorial
 from bisect import bisect_left, bisect_right
 from operator import itemgetter
@@ -33,8 +31,6 @@ for i in range(n):
 for i in range(n):
     for j in range(n - 1):
         lis[j + 1][i] += lis[j][i]
-# print(lis)
-# print(lis)
 for i in range(que):
     p, q = MI()
     if p == 1:

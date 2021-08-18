@@ -6,10 +6,10 @@ def cmb(n, r, p):
 
 
 p = 10 ** 9 + 7
-N = 3 * 10 ** 5  # N は必要分だけ用意する
-fact = [1, 1]  # fact[n] = (n! mod p)
-factinv = [1, 1]  # factinv[n] = ((n!)^(-1) mod p)
-inv = [0, 1]  # factinv 計算用
+N = 3 * 10 ** 5
+fact = [1, 1]
+factinv = [1, 1]
+inv = [0, 1]
 
 for i in range(2, N + 1):
     fact.append((fact[-1] * i) % p)
@@ -19,10 +19,7 @@ for i in range(2, N + 1):
 
 def __starting_point():
     H, W, A, B = list(map(int, input().split()))
-    #HW = [[0] * W for i in range(H)]
     p = 10 ** 9 + 7
-    # print(HW)
-    #visited = [[0] * W for i in range(H)]
     ans = 0
     for i in range(H - A):
         if i == 0:

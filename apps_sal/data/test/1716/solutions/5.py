@@ -1,4 +1,3 @@
-# D - AtCoder Express 2
 import sys
 
 N, M, Q = list(map(int, sys.stdin.readline().strip().split()))
@@ -8,14 +7,13 @@ for _ in range(M):
     L, R = list(map(int, sys.stdin.readline().strip().split()))
     cusum[L][R] += 1
 
-# 累積和の計算
 for i in range(N):
     for j in range(N):
         cusum[i + 1][j + 1] += cusum[i + 1][j] + cusum[i][j + 1] - cusum[i][j]
 
 
 for _ in range(Q):
-    p, q = list(map(int, sys.stdin.readline().strip().split()))  # p <= q
+    p, q = list(map(int, sys.stdin.readline().strip().split()))
 
     ans = cusum[q][q] - cusum[q][p - 1] - cusum[p - 1][q] + cusum[p - 1][p - 1]
     print(ans)

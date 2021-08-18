@@ -25,6 +25,3 @@ for i, x in a:
         s += s if s > x else x
 
 print(s)
-
-
-# Made By Mostafa_Khaled
