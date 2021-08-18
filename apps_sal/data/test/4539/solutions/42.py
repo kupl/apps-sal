@@ -1,4 +1,3 @@
-# coding = SJIS
 
 n = str(input())
 

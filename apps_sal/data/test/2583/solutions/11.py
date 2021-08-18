@@ -1,7 +1,6 @@
 import math
 for nt in range(int(input())):
     n = int(input())
-    # print (n)
     if n == 1:
         print("FastestFinger")
         continue

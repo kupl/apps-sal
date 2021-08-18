@@ -22,16 +22,13 @@
     入力中のすべての値は整数である。
 '''
 
-# 標準入力から H, N, Ai を取得する
 h, m = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
-# 必殺技を1回ずつ使った場合、モンスターの体力をどれだけ削れるか計算する
 hissatsu_hp = 0
 for i in range(0, m):
     hissatsu_hp += a[i]
 
-# 同じ必殺技を使わずアライグマを倒せるか判定して結果を出力する
 result = ""
 if hissatsu_hp >= h:
     result = "Yes"

@@ -1,12 +1,5 @@
 import sys
-# import math
 from collections import deque
-# import heapq
-# from math import inf
-# from math import gcd
-
-# print(help(deque))
-# 26
 
 
 def pprint(s): return print(' '.join(map(str, s)))

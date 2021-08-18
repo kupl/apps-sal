@@ -11,7 +11,6 @@ for i in range(n - 1):
     u, v = map(int, input().split())
     a[u - 1].append(v - 1)
     a[v - 1].append(u - 1)
-# print(a)
 count1 = 0
 count2 = 0
 j = 0
@@ -33,8 +32,6 @@ if(count1 == 2 and count2 == n - 2):
             j = a[j][0]
         else:
             j = a[j][1]
-    # 6 cases
-    # case 1 (1 2 3)
     ans1 = 0
     color1 = [0 for i in range(n)]
     for i in range(n):
@@ -47,7 +44,6 @@ if(count1 == 2 and count2 == n - 2):
         else:
             ans1 += c3[b[i]]
             color1[b[i]] = 3
-    # case 2 (3 1 2)
     ans2 = 0
     color2 = [0 for i in range(n)]
     for i in range(n):
@@ -60,7 +56,6 @@ if(count1 == 2 and count2 == n - 2):
         else:
             ans2 += c2[b[i]]
             color2[b[i]] = 2
-    # case 3 (2 3 1)
     ans3 = 0
     color3 = [0 for i in range(n)]
     for i in range(n):
@@ -73,7 +68,6 @@ if(count1 == 2 and count2 == n - 2):
         else:
             ans3 += c1[b[i]]
             color3[b[i]] = 1
-    # case 4 (1 3 2)
     ans4 = 0
     color4 = [0 for i in range(n)]
     for i in range(n):
@@ -86,7 +80,6 @@ if(count1 == 2 and count2 == n - 2):
         else:
             ans4 += c2[b[i]]
             color4[b[i]] = 2
-    # case 5 (3 2 1)
     ans5 = 0
     color5 = [0 for i in range(n)]
     for i in range(n):
@@ -99,7 +92,6 @@ if(count1 == 2 and count2 == n - 2):
         else:
             ans5 += c1[b[i]]
             color5[b[i]] = 1
-    # case 6 (2 1 3)
     ans6 = 0
     color6 = [0 for i in range(n)]
     for i in range(n):

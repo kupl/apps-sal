@@ -5,7 +5,6 @@ def main():
     while True:
         amari = N % 10
         sum += amari
-        # print(amari,sum)
         N //= 10
         if N == 0:
             break

@@ -5,7 +5,6 @@ def calc(x):
     ret += fix1 * (x + 1)
     fix2 = x * (x + 1) // 2
     ret += fix2 * (y + 1)
-    # print(x, ret)
     return ret
 
 

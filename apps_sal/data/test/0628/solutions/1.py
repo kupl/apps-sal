@@ -20,7 +20,6 @@ def getTransIntList(n):
 
 n, k = getIntList()
 a = getIntList()
-# sums[i][j] - сумма a по индексам от i до j не включая j
 sums = [[0] * (n + 1) for _ in range(n + 1)]
 for i in range(n):
     for j in range(i + 1, n + 1):
@@ -36,7 +35,6 @@ class SearchProblem:
         self.tiLim = time.time() + tiLim
 
     def search(self, currResult, currIndex, currLines):
-        # Время вышло - заканчиваем.
         if time.time() > self.tiLim:
             return
         if currLines > 0 and currResult <= self.maxResult:
@@ -59,7 +57,6 @@ class SearchProblem:
         return self.maxResult, flag
 
 
-# upLim[i][j] - оценка сверху на красоту разбиения книг с номерами с j до конца по i полкам
 upLim = [[0] * (n + 1) for _ in range(k + 1)]
 for i in range(1, k + 1):
     if i == 1:
@@ -74,19 +71,15 @@ for i in range(1, k + 1):
 
 
 def solve():
-    # Сначала ищем начальное решение deepfirst
     problem = SearchProblem(a, n, k, 0.1)
     if k == 1:
         return sum(a)
     maxResult, solved = problem.search(0, 0, 0)
     if solved:
-        #print("deep first succeed")
         return maxResult
     results = [[set() for _ in range(n + 1)] for _ in range(k + 1)]
-    # А теперь ищем полное решение динамическим программированием
     for i in range(1, n + 1):
         for firstIndexSum in range(0, i):
-            # print(firstIndexSum, i);
             currSum = sums[firstIndexSum][i]
             if firstIndexSum == 0:
                 if currSum > maxResult:
@@ -102,7 +95,6 @@ def solve():
             else:
                 for lines in range(k):
                     for prevSum in results[lines][firstIndexSum]:
-                        # print(prevSum,"&",currSum,"=",prevSum&currSum)
                         fullSum = prevSum & currSum
                         currLines = lines + 1
                         if currLines == k - 1:
@@ -117,7 +109,6 @@ def solve():
                             continue
                         if fullSum > maxResult:
                             results[currLines][i].add(fullSum)
-                        # print(i, results[i])
 
     return maxResult
 

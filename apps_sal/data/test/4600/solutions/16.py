@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import numpy as np
 import sys
 input = sys.stdin.readline

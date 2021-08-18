@@ -47,7 +47,6 @@ else:
             ms = s
             best_per = per
 
-# print(b)
     print(ms)
     ci = 0
     res = ['' for i in range(n + 1)]

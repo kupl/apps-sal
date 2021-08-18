@@ -36,7 +36,6 @@ def main():
             cts[ord(s[i - 1]) - ord('A')] -= 1
         if s[i + 25] != '?':
             cts[ord(s[i + 25]) - ord('A')] += 1
-        #print(s[i-1], i,cts,sum(cts))
         max_ct = max(cts)
         if max_ct <= 1:
             print(ans(s, i, cts))
