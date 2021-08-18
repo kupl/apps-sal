@@ -3,7 +3,6 @@ class Solution:
         waitingNum = 0
         highest = 0
         res = 0
-        # print(profit)
         index = 0
         for i in customers:
             waitingNum += i

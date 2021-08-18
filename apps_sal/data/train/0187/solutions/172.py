@@ -1,4 +1,4 @@
-import sys  # O(N) , N is customers.length
+import sys
 
 
 class Solution:
@@ -36,5 +36,3 @@ class Solution:
             return -1
 
         return ans + 1
-
-#         member도 늘어나야 한다.

@@ -35,7 +35,6 @@ class Solution:
                 found = True
                 ans = time
             time += 1
-            # print(cost,waiting,customers)
             if customers:
                 waiting.append(customers.popleft())
         return ans if found else -1

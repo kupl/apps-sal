@@ -22,7 +22,6 @@ class Solution:
 
                 rt += 1
                 al += cum
-                # if al * boardingCost -rt* runningCost > maxl:
                 maxl = al * boardingCost - rt * runningCost
                 cum = 0
         a = cum // 4
@@ -34,20 +33,3 @@ class Solution:
             rt += a
 
         return rt
-
-
-#         if b == 0:
-#             return a
-#         else:
-#             rt = a
-#             tryone = cumulate * boardingCost - (a+1) * runningCost
-#             anotherone = a * 4 * boardingCost - a * runningCost
-#             profit = boardingCost * b - runningCost
-#             print(a, b, cumulate,tryone,anotherone )
-#             if profit > 0:
-#                 rt=a+1
-
-#             if tryone > anotherone:
-#                 return a+1
-#             else:
-#                 return rt

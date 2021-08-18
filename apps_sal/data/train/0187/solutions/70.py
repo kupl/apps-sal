@@ -12,7 +12,6 @@ class Solution:
         while currwaiting > 0 or i < n:
             if i < n:
                 currwaiting += customers[i]
-            # print(currwaiting)
             if currwaiting >= 4:
                 currwaiting -= 4
                 gone += 4
@@ -20,11 +19,8 @@ class Solution:
                 gone += currwaiting
                 currwaiting = 0
 
-            # print(currwaiting)
-
             i += 1
             currprof = gone * boardingCost - i * runningCost
-            # print(currprof)
             if currprof > highestprof:
                 highestprof = currprof
                 imax = i

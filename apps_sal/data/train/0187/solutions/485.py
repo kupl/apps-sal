@@ -12,7 +12,6 @@ class Solution:
             boarding = min(4, waiting)
             waiting -= boarding
             profit += boardingCost * boarding - runningCost
-            # print(\"profit =\",profit,\"waiting =\",waiting,\"boarding =\",boarding)
             turns += 1
             if profit > best[0]:
                 best = (profit, turns)

@@ -21,6 +21,5 @@ class Solution:
             if tans > ans:
                 ans = tans
                 anst = times
-            # print(waiting, i, c, tans, done, times)
 
         return anst

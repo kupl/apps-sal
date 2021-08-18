@@ -28,7 +28,6 @@ class Solution:
                 wheel = [max(0, wheel[0] - 1), max(0, wheel[1] - 1), max(0, wheel[2] - 1), max(0, wheel[3] - 1)]
                 wait = 0
             curProfit -= runningCost
-            # print(wait, wheel, curProfit)
             t += 1
             if t < maxt:
                 wait += customers[t]

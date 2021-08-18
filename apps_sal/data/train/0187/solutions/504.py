@@ -28,7 +28,6 @@ class Solution:
             if currProfit > maxProf:
                 maxProf = currProfit
                 maxProf_rot = currRotation
-            # print(currProfit,maxProf,maxProf_rot,totPeople,currVisitor)
 
         while currVisitor > 0:
             currRotation += 1
@@ -46,10 +45,8 @@ class Solution:
             if currProfit > maxProf:
                 maxProf = currProfit
                 maxProf_rot = currRotation
-            # print(currProfit,maxProf,maxProf_rot,totPeople,currVisitor)
 
         return maxProf_rot
-        # print(maxProf,maxProf_rot,currRotation,gondolas,currVisitor)
 
 
 '''

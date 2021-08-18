@@ -17,7 +17,6 @@ class Solution:
             curProfit += customers[i] * boardingCost - runningCost
             runs += 1
             profit.append((curProfit, runs))
-        #print(customers, curProfit, runs)
         if customers[-1] > 0:
             runs = runs + (customers[-1] // 4)
             curProfit += (customers[-1] // 4) * boardingCost - (customers[-1] // 4) // 4 * runningCost
@@ -25,8 +24,6 @@ class Solution:
             if customers[-1] * boardingCost > runningCost:
                 runs = runs + 1
                 curProfit += customers[-1] * boardingCost - runningCost
-            # print(\"w\", curProfit, runs)
             profit.append((curProfit, runs))
         profit.sort(key=lambda x: (-x[0], x[1]))
-        # print(profit)
         return profit[0][1] if profit[0][0] > 0 else -1

@@ -12,7 +12,6 @@ class Solution:
                 i += 1
                 waiting += customer
             if waiting:
-                # board upto 4 customers
                 boarded = 4
                 if waiting < 4:
                     boarded = waiting

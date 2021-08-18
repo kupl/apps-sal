@@ -1,10 +1,6 @@
 class Solution:
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
 
-        # my solution ... 2112 ms ... 73 % ... 17.4 MB ... 98 %
-        #  time: O(n)
-        # space: O(1)
-
         curr_profit, curr_rotate = 0, 0
         best_profit, best_rotate = -1, 0
         queue_count = 0

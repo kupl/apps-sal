@@ -24,14 +24,11 @@ class Solution:
         if cur > 0:
             m = cur // 4
             for i in range(m + 1):
-                # print(cur)
                 if cur >= 4:
                     cur_p = (prev + 4) * boardingCost - (i + 1 + n) * runningCost
                     prev += 4
                     cur -= 4
                 elif cur < 4:
-                    # print(prev+cur)
-                    # print(i+1+n)
                     cur_p = (prev + cur) * boardingCost - (i + 1 + n) * runningCost
 
                     prev += cur
@@ -39,6 +36,4 @@ class Solution:
                 if cur_p > temp:
                     ans = i + 1 + n
                     temp = cur_p
-                # print(cur_p)
-                # print(\" \")
         return ans

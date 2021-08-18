@@ -6,12 +6,10 @@ class Solution:
         profit = 0
         ans = -1
         i = 0
-        # for each in customers:
         while(wait > 0 or i < len(customers)):
             each = 0
             if(i < len(customers)):
                 each = customers[i]
-            # print(\"profit\",profit)
             round_no += 1
             wait += each
             trip = wait
@@ -25,7 +23,5 @@ class Solution:
                 profit = cost
                 if(profit > 0):
                     ans = round_no
-                    # print(\"ans\",ans)
             i += 1
-            # print(profit , wait)
         return ans
