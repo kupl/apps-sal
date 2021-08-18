@@ -34,7 +34,6 @@ for _ in range(int(input())):
     if ndiff == 1 or ndiff > 2:
         print('No')
     else:
-        # print(aa,bb)
         if ndiff == 2:
             if aa[0] != aa[1] or bb[1] != bb[0]:
                 print('No')

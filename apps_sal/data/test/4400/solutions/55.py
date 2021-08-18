@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 S = input()
 
 if S == "RRR":

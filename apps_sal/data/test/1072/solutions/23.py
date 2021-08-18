@@ -16,6 +16,3 @@ for i in range(m):
             removed += 1
             break
 print(removed)
-
-
-# Made By Mostafa_Khaled

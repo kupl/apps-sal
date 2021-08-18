@@ -11,5 +11,3 @@ else:
             ans += "0"
         N //= -2
     print((ans[::-1]))
-    # tmp = [1*(i==0) for i in ans][::-1]
-    # print("".join(map(str, tmp)))

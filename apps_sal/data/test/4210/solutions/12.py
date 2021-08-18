@@ -27,9 +27,7 @@ for i in range(n):
     c = 1
     while c <= 11:
         key = (m - (mul * arr[i]) % m) % m
-       # print(key,c,arr[i]*mul)
         if key in cnt[c]:
-           # print("*",cnt[c][key])
             ans += cnt[c][key]
         c += 1
         mul *= 10

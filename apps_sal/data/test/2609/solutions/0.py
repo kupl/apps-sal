@@ -16,11 +16,7 @@ for _ in range(t):
     covering = set()
     atS = 0
     atE = 0
-    # print(starts)
     while atE < n:
-        # print("%d, %d"%(atS, atE))
-        # print(covering)
-        # print(connects)
         if atS != n and ends[atE][0][1] >= starts[atS][0][0]:
             if len(covering) == 1:
                 gap = list(covering)[0]

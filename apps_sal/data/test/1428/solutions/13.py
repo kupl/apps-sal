@@ -15,7 +15,6 @@ l = list(range(0, c))
 ll = list(itertools.permutations(l, 3))
 res = float('inf')
 
-# axを変換していくコストを全列挙
 for i in ll:
     temp = 0
     for j in range(c):

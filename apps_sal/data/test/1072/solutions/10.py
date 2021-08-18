@@ -1,9 +1,5 @@
 __author__ = 'trunghieu11 - vuondenthanhcong11@gmail.com'
 
-# ---------- My Tools -------------
-
-# ------ Input output tools -------
-
 
 def read_int(): return int(input())
 def read_ints(): return map(int, input().split())
@@ -16,8 +12,6 @@ def read_strings(row_count):
         answer.append(input())
     return answer
 
-
-# ---------- Actual Code ----------
 
 row_count, column_count = read_ints()
 table = read_strings(row_count)

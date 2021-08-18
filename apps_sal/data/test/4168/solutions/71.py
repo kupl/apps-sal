@@ -27,9 +27,7 @@ def main():
         D = defaultdict(int)
         index = 0
         while N >= 1:
-            # bitフラグがたっていたら
             if N & 1 == 1:
-                # 2の倍数の場合D[index]とD[index+1]に1を足す
                 if index % 2 == 0:
                     D[index] += 1
                     D[index + 1] += 1
@@ -49,9 +47,7 @@ def main():
         N = N >> 1
 
         while N >= 1:
-            # bitフラグがたっていたら
             if N & 1 == 1:
-                # 2の倍数の場合D[index]とD[index+1]に1を足す
                 if index % 2 == 1:
                     D[index] += 1
                     D[index + 1] += 1

@@ -4,7 +4,6 @@ X = [[[0, 1][a == "*"] for a in input()] for i in range(H)]
 
 def main():
     s = sum([sum(x) for x in X])
-    # print(X, s)
 
     h, w = -1, -1
     for i in range(H):
@@ -32,9 +31,7 @@ def main():
 
     c = 1
     for di, dj in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
-        # print(di, dj)
         i, j = h, w
-        # print("h, w =", h, w)
         if 0 <= i + di < H and 0 <= j + dj < W:
             if X[i + di][j + dj] == 0:
                 return 0
@@ -44,12 +41,9 @@ def main():
         while 0 <= i + di < H and 0 <= j + dj < W:
             i += di
             j += dj
-            # print("--", i,j)
             if X[i][j] == 0:
                 break
-            # print("i, j =", i, j)
             c += 1
-    # print(s, c)
     if s == c:
         return 1
     return 0

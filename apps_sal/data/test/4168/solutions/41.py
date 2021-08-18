@@ -1,7 +1,7 @@
 def main():
     import math
     N = int(input())
-    n = math.ceil(math.log(100000000000, 4))  # toriaezu BIG ENOUGH na number
+    n = math.ceil(math.log(100000000000, 4))
     M = int('10' * n, 2)
     B = format(N + M, 'b')
     print(even_toggle(B))
