@@ -43,7 +43,6 @@ def tour(board, last_x, last_y, move_number):
 
     for move, _ in sorted(list(priorities.items()), key=by_value):
 
-        # for move in legal_moves:
         board_copy = copy.deepcopy(board)
         board_copy[last_x][last_y] = move
         result, trace = tour(board_copy, last_x + move[0], last_y + move[1], move_number + 1)

@@ -36,6 +36,3 @@ else:
     print(*p)
 
     print(*q)
-
-
-# Made By Mostafa_Khaled

@@ -1,4 +1,3 @@
-# cook your dish here
 from decimal import Decimal
 import math
 t = int(input())

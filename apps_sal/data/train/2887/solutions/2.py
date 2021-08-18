@@ -2,7 +2,6 @@ import base64
 
 
 def adFly_decoder(sc):
-    # your code here
     code1 = ''
     code2 = ''
     flg = True

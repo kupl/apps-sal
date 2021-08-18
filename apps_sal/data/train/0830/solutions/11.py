@@ -30,16 +30,12 @@ def solve():
 
         for i in range(0, N):
             if B[i] == ch and A[i] != ch:
-                # print("ch",ch)
                 idx_pos.append(i)
-        # print("idx_pos", idx_pos)
         if chk is False and len(idx_pos):
             for i in range(0, N):
                 if A[i] == ch:
-                    # print("setting chk = True")
                     chk = True
                     idx_pos.append(i)
-        # print("now idx_pos",idx_pos)
         if chk is False and len(idx_pos):
             print(-1)
             return

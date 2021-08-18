@@ -27,7 +27,6 @@ for _ in range(0, t):
             e[i] = 1
         lb += 1
     left = la + lb
-# print d
     for i in d:
         try:
             e[i] += 0
@@ -37,7 +36,6 @@ for _ in range(0, t):
             left -= (2 * d[i])
         else:
             left -= (2 * e[i])
-# print left
     f = ['F', 'L', 'A', 'M', 'E', 'S']
     old = 0
     for q in range(0, 5):

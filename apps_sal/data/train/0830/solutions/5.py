@@ -21,7 +21,6 @@ for _ in range(int(input())):
         indices = {char: index for index, char in enumerate(c_str)}
         m_match = {}
         for i in range(N):
-            # c_str[i] is greater than target_str[i]
             if c_str[i] != target_str[i]:
                 if m_match.get(target_str[i]):
                     m_match[target_str[i]].append(str(i))
