@@ -9,7 +9,6 @@ def gcd(a, b):
 
 x = input()
 x = [int(_) for _ in x.split()]
-# print(x)
 
 t = x[0]
 w = x[1]

@@ -29,7 +29,6 @@ def __starting_point():
             pre[array[i]] = 0
         dp[i] = max(up[i - 1] + 1, dp[pre[array[i]]] + 1)
         pre[array[i]] = i
-        # print(i)
         ans = max(ans, dp[i] + down[i + 1])
     print(ans)
 

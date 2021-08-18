@@ -9,9 +9,7 @@ for i in range(200):
         if (c[j] > 0):
             c[j] -= 1
             t += 1
-        # print(c)
     r.append(t)
-# print(r)
 c2 = []
 for i in range(n):
     t = 0
@@ -19,7 +17,6 @@ for i in range(n):
         if (r[j] > 0):
             r[j] -= 1
             t += 1
-        # print(r)
     c2.append(t)
 c2.reverse()
 for i in c2:

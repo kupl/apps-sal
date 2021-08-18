@@ -30,7 +30,6 @@ for i in range(x * 100, y * 100):
         if array[j][0] <= coord <= array[j][1]:
             f = False
     if f:
-        # print(coord)
         summ = summ + 1
 
 print(int(round(summ / 100)))

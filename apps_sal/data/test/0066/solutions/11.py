@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import math
 t, a, b = list(map(int, input().split()))
 l = a * b // math.gcd(a, b)

@@ -4,7 +4,6 @@ l.sort(reverse=True)
 a = []
 i = 0
 while i < len(l) - 1:
-    #print(l[i], l[i + 1])
     if l[i] == l[i + 1]:
         a.append(l[i])
         i += 2
@@ -15,7 +14,6 @@ while i < len(l) - 1:
         else:
             i += 1
 
-# print(a)
 if len(a) % 2 != 0:
     a.append(0)
 

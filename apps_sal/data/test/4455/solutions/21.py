@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
 from sys import stdin, stdout
 from bisect import bisect_left
 
 
 def rint():
     return map(int, stdin.readline().split())
-#lines = stdin.readlines()
 
 
 n, k = rint()
@@ -24,9 +22,6 @@ for i in range(k):
 ans = [-1 for i in range(n)]
 r_sorted = r[:]
 r_sorted.sort()
-#print("r", r)
-#print("r_sorted", r_sorted)
-#print("q", q)
 for i in range(n):
     lower = bisect_left(r_sorted, r[i])
     ans[i] = max(0, lower - q[i])

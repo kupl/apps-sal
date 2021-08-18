@@ -14,7 +14,6 @@ for col in range(8):
     for b in black[col]:
         if all(b > w for w in white[col]) and b > max_b:
             max_b = b
-#print(min_w, max_b)
 
 if min_w <= 7 - max_b:
     print('A')

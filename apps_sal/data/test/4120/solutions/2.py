@@ -11,7 +11,6 @@ INFTY = n + 1
 levels = [INFTY] * n
 levels[0] = 0
 E_min = [[] for _ in range(n)]
-# bfs
 while len(Q) > 0:
     city = Q.pop(0)
     for adj, i in E[city]:
@@ -33,10 +32,9 @@ def gen_poss(city, selected, all_poss, next_choice, poss):
     if city == n:
         all_poss.append(''.join(selected))
     else:
-        # choose one from E_min[edge]
         for i in E_min[city]:
             selected[i] = '1'
-            next_city = next_choice[city]   # skip edges with only one choice
+            next_city = next_choice[city]
             gen_poss(next_city, selected, all_poss, next_choice, poss * len(E_min[city]))
             selected[i] = '0'
 

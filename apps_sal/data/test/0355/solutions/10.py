@@ -12,10 +12,8 @@ def checkB(i, j):
     return 7 - i
 
 
-#fin = open('a.in', 'r')
 arr = []
 for i in range(8):
-    #a = fin.readline().strip()
     a = input()
     arr.append(a)
 minA = 1000
