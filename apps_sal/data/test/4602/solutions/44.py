@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 N = int(input())
 K = int(input())
 x_list = list(map(int, input().split()))

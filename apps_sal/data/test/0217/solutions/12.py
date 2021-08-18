@@ -10,7 +10,6 @@ def solve(a, b, f, k):
         cur_b -= f
 
     while cur_k < k:
-        # from f to a now
         faf_path = 2 * (a - f)
         can_faf = cur_b - faf_path >= 0
         can_faf_with_refueling = b - faf_path >= 0
@@ -36,7 +35,6 @@ def solve(a, b, f, k):
         if cur_k == k:
             return refueling_count, cur_k
 
-        # from f to 0 now
         f0f_path = 2 * f
         can_f0f = cur_b - f0f_path >= 0
         can_f0f_with_refueling = b - f0f_path >= 0
@@ -61,7 +59,6 @@ def solve(a, b, f, k):
     return refueling_count, cur_k
 
 
-# This is so sad code
 def main():
     a, b, f, k = map(int, input().split())
 

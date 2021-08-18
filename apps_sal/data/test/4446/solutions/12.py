@@ -9,7 +9,6 @@ for i in range(0, n):
         totm = a + b
     ska.append(math.ceil(totm / a) - 1)
 ska.sort()
-# print(ska)
 cnt = 0
 ans = 0
 i = 0

@@ -8,5 +8,3 @@ for i in a:
 m = ceil(max(d.values()) / k) * len(d) * k
 s = sum(d.values())
 print(m - s)
-# print(d)
-# print(m)

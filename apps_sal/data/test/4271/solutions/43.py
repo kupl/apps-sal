@@ -1,4 +1,3 @@
-# 問題：https://atcoder.jp/contests/abc140/tasks/abc140_a
 
 n = int(input())
 a = list(map(int, input().strip().split()))

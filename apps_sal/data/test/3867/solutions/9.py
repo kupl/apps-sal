@@ -23,18 +23,6 @@ for item in graph:
     item.sort(key=(lambda x: positions[x]))
 
 
-# def func(i):
-#     if visited[i] == True:
-#         return
-#     visited[i] = True
-#     for item in graph[i]:
-#         if not visited[item]:
-#             levels[item] = levels[i] + 1
-#         func(item)
-#
-# # func(0)
-
-
 stack = deque()
 
 ok_route = True
@@ -50,7 +38,6 @@ while len(stack):
         if not visited[item]:
             stack.append(item)
 
-# print(output_seq)
 
 if output_seq == seq:
     print("Yes")

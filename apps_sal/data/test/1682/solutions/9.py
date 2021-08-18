@@ -12,11 +12,11 @@ costDiff = [b[i] - a[i] for i in range(n)]
 sortedCostDiff = sorted(costDiff, reverse=True)
 
 savingMade = len([i for i in costDiff if i >= 0])
-if savingMade >= k:  # Then he simply spends on all item which are cheaper
+if savingMade >= k:
     totalSpend = 0
     for i in range(n):
         totalSpend += min([a[i], b[i]])
-else:  # Now we need to find the k biggest cost differential
+else:
     maxCost = sortedCostDiff[k - 1]
     cutoffSortedDiff = sortedCostDiff[:k]
     minCount = cutoffSortedDiff.count(maxCost)

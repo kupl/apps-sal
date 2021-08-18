@@ -3,7 +3,6 @@ a, b, f, k = map(int, input().split())
 x = 0
 g = b
 for kk in range(k - 1):
-    # print(g)
     if kk % 2 == 0:
         d = a + (a - f)
         if g < d:

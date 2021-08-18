@@ -24,7 +24,6 @@ for i in range(n):
     while l[i] != i + 1 and ct < 5:
         cr = ix[i + 1]
         pr = sv[cr - i + 1]
-        # print(i,cr,pr)
         an.append(sorted([cr + 1, cr - pr + 2]))
         l[cr], l[cr - pr + 1] = l[cr - pr + 1], l[cr]
         ix[l[cr]], ix[l[cr - pr + 1]] = ix[l[cr - pr + 1]], ix[l[cr]]

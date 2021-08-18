@@ -3,7 +3,6 @@ a = [int(x) for x in input().strip().split(' ')]
 b = [int(x) for x in input().strip().split(' ')]
 c = [(xb - xa, xa, xb) for xa, xb in zip(a, b)]
 c.sort(key=lambda x: x[0], reverse=True)
-# print(c)
 cnt = sum([cx[1] for cx in c[:k]])
 
 while k < n and c[k][0] >= 0:

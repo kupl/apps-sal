@@ -16,7 +16,6 @@ def YES_NO(flag):
 
 
 def main():
-    # q = [int(i) for i in sys.stdin.readline().split()]
     n, a, b, k = [int(i) for i in sys.stdin.readline().split()]
     q = [int(i) for i in sys.stdin.readline().split()]
     t = [0 for i in range(n)]

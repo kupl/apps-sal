@@ -95,8 +95,6 @@ for i in range(0, len(s)):
             pos[(i + 1) % n] = 2
 
 
-# print('pos',pos)
-
 temp = 0
 str1 = 0
 itr = []
@@ -107,7 +105,6 @@ for i in range(0, len(pos)):
         str1 = i
     itr.append([10**9 + 7, 'W'])
 
-# print('itr',itr)
 if(temp == 1):
     for i in range(str1, str1 + n):
         if(pos[(i % n)] > 0):
@@ -120,8 +117,6 @@ if(temp == 1):
             else:
                 itr[(i % n)][1] = 'B'
 
-    #print('inside itr',itr)
-
     for i in range(str1, str1 - n, -1):
         if(pos[(i % n)] > 0):
             curr = pos[(i % n)]
@@ -133,8 +128,6 @@ if(temp == 1):
                     itr[(i % n)][1] = 'W'
                 else:
                     itr[(i % n)][1] = 'B'
-
-    #print('inside itr',itr)
 
 
 ans = ''
