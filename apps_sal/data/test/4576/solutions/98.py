@@ -1,6 +1,6 @@
-A = int(input())  # 500
-B = int(input())  # 100
-C = int(input())  # 50
+A = int(input())
+B = int(input())
+C = int(input())
 X = int(input())
 
 count = 0

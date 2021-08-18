@@ -10,9 +10,9 @@ def cmb(n, r, mod):
 
 mod = 998244353
 N = 200000
-g1 = [1, 1]  # 元テーブル
-g2 = [1, 1]  # 逆元テーブル
-inverse = [0, 1]  # 逆元テーブル計算用テーブル
+g1 = [1, 1]
+g2 = [1, 1]
+inverse = [0, 1]
 
 for i in range(2, N + 1):
     g1.append((g1[-1] * i) % mod)

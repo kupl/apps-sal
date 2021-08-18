@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def gcd(x, y):
     if y == 0 or x == 0:

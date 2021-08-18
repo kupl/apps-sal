@@ -27,8 +27,5 @@ for i in range(2, n + 1):
                   cost[bisect.bisect_left(times, times[i - 1] - 89)] + 50,
                   cost[bisect.bisect_left(times, times[i - 1] - 1439)] + 120)
 
-    # print(cost[getIndex(89, times, i - 1)] + 50)
-# print(cost)
-# print(times)
 for i in range(1, n + 1):
     print(cost[i] - cost[i - 1])

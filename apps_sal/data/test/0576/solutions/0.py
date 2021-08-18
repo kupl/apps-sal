@@ -67,7 +67,6 @@ def solve(n):
             how_many = has_coprime(num)
 
             while how_many > 0:
-                # print(how_many)
                 now = st.pop()
                 if math.gcd(now, num) == 1:
                     ans = max(ans, num * now * g)

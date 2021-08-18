@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/2/10 22:11
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : B. Yet Another Array Partitioning Task.py
 
 
 def main():

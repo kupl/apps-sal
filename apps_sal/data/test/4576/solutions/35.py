@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 
 a = int(input())
 b = int(input())

@@ -1,4 +1,3 @@
-# coding: utf-8
 n = int(input())
 x = [int(i) for i in input().split()]
 while True:

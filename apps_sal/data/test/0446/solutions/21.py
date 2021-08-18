@@ -1,7 +1,6 @@
 import math
 a = []
 for k in range(1, 12):
-    # print(math.pow(2,k) - 1)
     a.append((int(math.pow(2, k)) - 1) * int(math.pow(2, k - 1)))
 
 a = a[::-1]

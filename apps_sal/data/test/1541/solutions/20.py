@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 s1, s2 = input().split('^')
 s1 = s1[::-1]

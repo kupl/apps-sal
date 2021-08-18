@@ -28,7 +28,6 @@ for i in range(n):
 x = abs(upp - low) + 1
 y = abs(right - left) + 1
 s = max(x, y)
-# print(upp,low,left,right)
 if cnt == 0:
     print(1)
 elif s > n or s > m:

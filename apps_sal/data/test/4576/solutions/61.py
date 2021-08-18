@@ -1,7 +1,7 @@
-A = int(input())  # 500円玉
-B = int(input())  # 100円玉
-C = int(input())  # 50円玉
-X = int(input())  # 合計金額。50の倍数
+A = int(input())
+B = int(input())
+C = int(input())
+X = int(input())
 count = 0
 
 for a in range(0, A + 1):

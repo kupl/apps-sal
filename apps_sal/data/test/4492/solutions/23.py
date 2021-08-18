@@ -10,8 +10,6 @@ if A[0] + A[1] > x:
         ans += A[1] + (A[0] - x)
         A[0] -= (x - A[1])
         A[1] = 0
-# print(A)
-# print(ans)
 
 for i in range(1, N - 1):
     sum_val = A[i] + A[i + 1]
@@ -19,5 +17,4 @@ for i in range(1, N - 1):
         continue
     ans += sum_val - x
     A[i + 1] -= sum_val - x
-# print(A)
 print(ans)

@@ -22,8 +22,6 @@ class SegmTree():
             i >>= 1
 
 
-# inf = open('input.txt', 'r')
-# reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
 
@@ -36,5 +34,3 @@ for _ in range(m):
     p, b = list(map(int, input().split()))
     st.modify(p - 1, b)
     print(st.tree[1])
-
-# inf.close()

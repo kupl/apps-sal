@@ -29,11 +29,8 @@ for _ in range(int(input())):
             buff += sq * (4**ans - 1) // 3
         else:
             buff = 10**19
-        # print(sq, k, buff)
         if ans == 0:
             break
-        # if n < 60:
-        # 	buff += get(ans)
     if buff < k:
         print("NO")
     else:

@@ -7,7 +7,6 @@ t = [list(map(int, input().split()))]
 for i in range(n):
     t += [[(or_, xor)[i & 1](t[i][j], t[i][j + 1]) for j in range(0, len(t[i]), 2)]]
 
-# print(t)
 
 for s in sys.stdin:
     p, b = s.split()

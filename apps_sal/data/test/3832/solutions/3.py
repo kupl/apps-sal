@@ -3,7 +3,6 @@ import sys
 import time
 
 length = int(input())
-# heights = [random.randint(0, 500) for x in range(0, length)]
 heights = [int(x) for x in input().split(' ')]
 start = time.time()
 cache = {}
@@ -50,4 +49,3 @@ while i > 0:
 
 print(' '.join(map(str, new_step(0, -sys.maxsize))))
 end = time.time()
-# print(end - start)

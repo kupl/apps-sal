@@ -1,6 +1,5 @@
 N, x = list(map(int, input().split()))
 nums = list(map(int, input().split()))
-# print(nums)
 ans = 0
 for i in range(1, N):
     if nums[i - 1] + nums[i] > x:
@@ -11,5 +10,4 @@ for i in range(1, N):
         else:
             nums[i] -= diff
         ans += diff
-# print(nums)
 print(ans)

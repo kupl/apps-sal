@@ -11,7 +11,7 @@ for i in range(len(l)):
 
 for i in range(len(r)):
     if not (r[i] == '='):
-        r_sum += int(r[i]) * (i + 1)  # + 1)
+        r_sum += int(r[i]) * (i + 1)
 if l_sum < r_sum:
     print('right')
 elif l_sum > r_sum:

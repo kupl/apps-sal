@@ -13,7 +13,6 @@ else:
         l, u = u, l
 
     diffs = sorted(list([9 - x for x in l]) + u)[::-1]
-    # print(diffs)
     for i in range(1, 7):
         if sum(diffs[:i]) >= sum(u) - sum(l):
             print(i)
