@@ -22,11 +22,10 @@ def solve(A):
     print(' '.join(str(i + 1) for _, i in A))
 
 
-q = 1  # input()
+q = 1
 tests = []
 for test in range(1):
     n = input()
     tests.append([int(p) for p in input().split(' ')])
 for test in tests:
     solve(test)
-# print(solve(n,b))

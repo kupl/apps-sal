@@ -22,7 +22,6 @@ dy2 = 0
 a = []
 for i in range(n):
     x, y = [int(j) for j in input().split()]
-# a.append([x,y,i])
     a.append(Point(x, y, i + 1))
 a.sort(key=lambda item: m.atan2(item.Y, item.X))
 a.append(a[0])

@@ -41,7 +41,6 @@ def merge(index):
     return aux
 
 
-# main starts
 n = int(stdin.readline().strip())
 arr = []
 arr = list(map(int, stdin.readline().split()))

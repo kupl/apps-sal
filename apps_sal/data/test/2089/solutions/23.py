@@ -45,7 +45,6 @@ class Dijkstra(object):
         for i in self.nodelist:
             arr.append(i.minDistance)
         return arr
-# Dj till here
 
 
 n, m, s, t = list(map(int, input().split(' ')))
@@ -67,14 +66,13 @@ for i in range(m):
     nodelist[int(en) - 1].paths.append(Path(en, st, 1))
 dij = Dijkstra(nodelist, s)
 dij.calculateShortestPath()
-dn1 = dij.disp()  # minimum Distance of all nodes from source node
+dn1 = dij.disp()
 mindis = dn1[t - 1]
 for i in nodelist:
-    i.minDistance = sys.maxsize  # Reinitializing all distance to infinity
+    i.minDistance = sys.maxsize
 dij = Dijkstra(nodelist, t)
 dij.calculateShortestPath()
-dn2 = dij.disp()  # minimum distance of all nodes from target node
-# print(dn1,"\n",dn2);
+dn2 = dij.disp()
 ctr = 0
 for u in range(len(nodelist) - 1):
     for v in range(u + 1, len(nodelist)):

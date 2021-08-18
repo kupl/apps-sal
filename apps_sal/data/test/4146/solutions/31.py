@@ -1,16 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# FileName: 	sample
-# CreatedDate:  2020-09-27 14:00:12 +0900
-# LastModified: 2020-09-27 14:35:21 +0900
-#
 
 
 import os
 import sys
-# import numpy as np
-# import pandas as pd
 from collections import Counter
 
 

@@ -1,5 +1,3 @@
-#!/bin/python3
-# template
 
 import sys
 from collections import Counter
@@ -21,7 +19,6 @@ def sol1(A):
 
 
 def __starting_point():
-    #T ,= read_ints()
     for i in range(1):
         A = next(sys.stdin).strip()
         print(sol1(A))

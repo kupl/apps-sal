@@ -11,8 +11,6 @@ INF = float("inf")
 IINF = 10 ** 18
 MOD = 10 ** 9 + 7
 
-# 解説AC
-# https://img.atcoder.jp/abc143/editorial.pdf
 N = int(sys.stdin.readline())
 A = list(map(int, sys.stdin.readline().split()))
 
@@ -24,7 +22,6 @@ ld = (D * np.arange(len(D))).cumsum()
 ud = D[::-1].cumsum()[::-1]
 
 X = np.arange(1, N + 1, dtype=int)
-# L[x]: x 回取れるときの最大の長さ k
 L = np.zeros(N + 1, dtype=int)
 L[X] = (ld[X] + X * ud[X + 1]) // X
 

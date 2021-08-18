@@ -1,4 +1,3 @@
-# python 3
 """
 """
 
@@ -23,7 +22,6 @@ def __starting_point():
     with open("input.txt", 'r') as f_input:
         n = int(f_input.readline())
         students = f_input.readline()
-        # print(n, students)
 
     sitting = lefthanders_and_righthanders(n, students)
     with open("output.txt", 'w') as f_output:

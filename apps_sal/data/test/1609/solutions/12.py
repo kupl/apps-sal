@@ -3,7 +3,6 @@ import sys
 n = int(sys.stdin.readline())
 things = list(map(int, sys.stdin.readline().split()))
 
-#maxnum = max(things)
 lastnum = 1
 count = [0] * (n + 1)
 for num in things:

@@ -8,7 +8,6 @@ m = 1000000007
 
 flag0 = 1
 count = 0
-# 偶数だったら
 if N % 2 == 0:
     colA = collections.Counter(A)
     for key, val in list(colA.items()):
@@ -21,7 +20,6 @@ if N % 2 == 0:
             break
         else:
             count += 1
-# 奇数だったら
 else:
     A.append(0)
     colA = collections.Counter(A)

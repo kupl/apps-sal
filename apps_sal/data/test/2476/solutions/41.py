@@ -15,8 +15,6 @@ def main():
     for a in aa:
         s += a
         cs += [s]
-    # print(aa)
-    # print(cs)
     ans = n + 1
     i = len(aa)
     for k in range(1, n + 1):

@@ -1,4 +1,3 @@
-# FSX sb
 
 
 def work():

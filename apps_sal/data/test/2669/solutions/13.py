@@ -5,7 +5,6 @@ timings = []
 for i in range(N):
     timings.append([l1[i], l2[i]])
 
-#timings = sorted(timings, key=lambda x :x[0])
 
 end = timings[0][1]
 tasks = [0]

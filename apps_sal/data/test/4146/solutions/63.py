@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
 from collections import Counter
-# from numba import njit
-
-# input = stdin.readline
-
-# @njit
 
 
 def solve(n, v):
@@ -26,7 +20,6 @@ def solve(n, v):
 
 def main():
     N = int(input())
-    # N,M = map(int,input().split())
     v = list(map(int, input().split()))
     print((solve(N, v)))
     return

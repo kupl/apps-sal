@@ -11,14 +11,11 @@ for i in range(m):
     g[u - 1].append(v - 1)
     g[v - 1].append(u - 1)
 
-# bfs
 md[s][0] = 0
 d = 0
 st = [s]
 c = 1
-# print('s')
 while c < n:
-    # print(c)
     d += 1
     st2 = []
     for node in st:
@@ -30,14 +27,11 @@ while c < n:
     c += len(st2)
     st = st2[:]
 
-# bfs
 md[e][1] = 0
 d = 0
 st = [e]
 c = 1
-# print('s')
 while c < n:
-    # print(c)
     d += 1
     st2 = []
     for node in st:
@@ -48,7 +42,6 @@ while c < n:
 
     c += len(st2)
     st = st2[:]
-# print(md)
 dis = md[e][0]
 t = 0
 for i in range(n):

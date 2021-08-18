@@ -14,9 +14,6 @@ def main():
         cum_C.append(cu)
     Ans = []
     for k in range(1, N + 1):
-        # K = k のとき、 n 組以上作れる <=> 使えるカードが nk 枚以上
-        # n 組以上作れる <=> 同じカードは n 枚以下
-        # 同じカードは n 枚以下で全体として nk 枚以上用意できるか？
         ok, ng = 0, N // k + 1
         while ok + 1 < ng:
             n = ok + ng >> 1

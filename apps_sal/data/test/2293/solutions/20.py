@@ -10,10 +10,6 @@ for i in range(m):
     sets.append(mas.difference(s))
 
 
-# print(setd)
-# print(sets)
-
-
 flag = True
 for i in range(m):
     for j in range(m):
