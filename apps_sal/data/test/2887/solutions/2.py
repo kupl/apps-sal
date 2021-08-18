@@ -1,4 +1,3 @@
-# cook your dish here
 x = int(input())
 
 sop = [int(i) for i in input().split()]

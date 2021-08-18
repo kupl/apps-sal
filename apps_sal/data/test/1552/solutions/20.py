@@ -1,9 +1,6 @@
 i2 = input().split()
 i1 = input().split()
 i = 0
-# while i<len(i1):
-#   i1[i]=int(i1[i])
-#  i=i+1
 aa = i1.count('1')
 b = i1.count('2')
 c = i1.count('3')

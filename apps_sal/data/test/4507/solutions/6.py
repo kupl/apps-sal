@@ -1,7 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
-"""Codeforces Round #552 (Div. 3)
+"""Codeforces Round 
 
 Problem F. Shovels Shop
 
@@ -41,7 +39,6 @@ def main(argv=None):
     for line in range(m):
         x, y = list(map(int, input().split()))
         if x > k:
-            # this discount is useless as we can't buy more than k
             continue
         if x not in discounts:
             discounts[x] = y

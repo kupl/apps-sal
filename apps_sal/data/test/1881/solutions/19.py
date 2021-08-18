@@ -30,11 +30,5 @@ for i in range(n):
     else:
         pass
     ans[i] = done[c]
-    # print(ans[i])
-    # print(done)
-    # if ans[i]==146:
-    #     print(ans[i])
-    #     print(done)
-    #     input()
 ans = [str(x)for x in ans]
 print(' '.join(ans))

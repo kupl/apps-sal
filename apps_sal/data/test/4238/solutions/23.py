@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 def main():
     num = sum(list(map(lambda x: int(x), input())))
     if num % 9 == 0:

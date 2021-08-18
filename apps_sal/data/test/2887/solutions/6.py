@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 v = [int(x) for x in input().split()]
 t = [int(x) for x in input().split()]

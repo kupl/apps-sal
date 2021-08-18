@@ -12,8 +12,6 @@ if debug and files:
     sys.stdin = open('test.in')
 else:
     pass
-    # sys.stdin = open('schools.in')
-    # sys.stdout = open('schools.out', 'w')
 
 
 def ria():

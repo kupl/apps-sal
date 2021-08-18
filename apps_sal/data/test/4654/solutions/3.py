@@ -24,8 +24,6 @@ def solve():
     print('NO')
     return
 
-# solve()
-
 
 T = ni()
 for _ in range(T):

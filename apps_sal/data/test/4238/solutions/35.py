@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 n = str(input())
 s = len(n)
 h = 0

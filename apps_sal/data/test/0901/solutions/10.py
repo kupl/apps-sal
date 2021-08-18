@@ -5,7 +5,6 @@ def main():
         mk = True
         mp = set()
         ar = [int(i) for i in input().split()[1:]]
-        # print(ar)
         for i in ar:
             if (-i) in mp:
                 mk = False

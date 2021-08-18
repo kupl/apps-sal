@@ -20,6 +20,3 @@ for i in range(n):
 
 
 print(' '.join(map(str, ans)))
-
-
-# Made By Mostafa_Khaled

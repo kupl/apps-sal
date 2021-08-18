@@ -11,7 +11,6 @@ from itertools import *
 from io import BytesIO, IOBase
 from collections import *
 
-# <fast I/O>
 BUFSIZE = 8192
 
 
@@ -60,30 +59,28 @@ class IOWrapper(IOBase):
 
 
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-# </fast I/O>
 
-# <template>
 mod = (10**9) + 7
 pi = 3.14159265358979323846264338327950
 
 
-def i1():  # int(input())
+def i1():
     return int(sys.stdin.readline())
 
 
-def sf():  # input()
+def sf():
     return sys.stdin.readline()
 
 
-def mi():  # map(int(input()))
+def mi():
     return map(int, sys.stdin.readline().split())
 
 
-def arr():  # list(map(int,input().split()))
+def arr():
     return list(map(int, sys.stdin.readline().split()))
 
 
-def pf(ans):  # print(x)
+def pf(ans):
     return sys.stdout.write(str(ans) + "\n")
 
 
@@ -135,9 +132,6 @@ def sieve(n):
         i += 1
         p += 2
     return ps
-# </template>
-
-# <solve>
 
 
 def solve():
@@ -159,10 +153,3 @@ def solve():
 
 
 solve()
-# </solve>
-
-# <solution>
-# tc=i1()
-# for t in range (tc):
-# 	solve()
-# <solution>

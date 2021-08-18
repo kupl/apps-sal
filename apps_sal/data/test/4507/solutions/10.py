@@ -19,14 +19,11 @@ def make(first, second):
 
 
 def brute(arr, dp, offers, index, remain):
-    #print(index, remain)
-    # base case:
     if remain == 0:
         return 0
     if make(index, remain) in dp:
         return dp[make(index, remain)]
     min_cost = arr[index] + brute(arr, dp, offers, index + 1, remain - 1)
-    # print(min_cost)
     for i in range(len(offers)):
         cost = 0
         if offers[i][0] <= remain:

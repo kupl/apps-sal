@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 s = [int(j) for j in input().split()]
 t = [int(j) for j in input().split()]
