@@ -7,7 +7,7 @@ class Solution:
             newStations = set()
             for i, route in enumerate(routes):
                 if i in routeDones or len(stations.intersection(set(route))) == 0:
-                    continue  # case only continue?
+                    continue
                 newStations = newStations.union(set(route) - stations)
                 routeDones.add(i)
             if len(newStations) == 0:

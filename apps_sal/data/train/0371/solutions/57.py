@@ -2,7 +2,7 @@ class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
-        graph = collections.defaultdict(set)  # node is the bus, not stop
+        graph = collections.defaultdict(set)
         routes = list(map(set, routes))
         for i, r1 in enumerate(routes):
             for j in range(i + 1, len(routes)):

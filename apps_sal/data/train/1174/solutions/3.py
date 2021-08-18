@@ -1,4 +1,3 @@
-# cook your dish here
 def f(n):
     c = 0
     while(n):

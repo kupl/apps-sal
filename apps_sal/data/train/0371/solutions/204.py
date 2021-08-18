@@ -27,7 +27,6 @@ class Solution:
                             stack.append((bus, count + 1))
                             visited.add(bus)
 
-                #routes[neighbor] = []
                 visited_route.add(neighbor)
 
         return -1

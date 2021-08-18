@@ -1,4 +1,3 @@
-# Reference: https://leetcode.com/problems/bus-routes/discuss/122712/Simple-Java-Solution-using-BFS
 from collections import deque
 
 

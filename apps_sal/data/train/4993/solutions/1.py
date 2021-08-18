@@ -1,12 +1,11 @@
 from math import *
 
-# Constants:
-GRAVITY_ACC = 9.81 * 3.6 * 60.0                        # gravity acceleration
-DRAG = 60.0 * 0.3 / 3.6                         # force applied by air on the cyclist
-DELTA_T = 1.0 / 60.0                               # in minutes
-G_THRUST = 60 * 3.6 * 3.6                           # pedaling thrust
-MASS = 80.0                                     # biker's mass
-WATTS0 = 225.0                                    # initial biker's power
+GRAVITY_ACC = 9.81 * 3.6 * 60.0
+DRAG = 60.0 * 0.3 / 3.6
+DELTA_T = 1.0 / 60.0
+G_THRUST = 60 * 3.6 * 3.6
+MASS = 80.0
+WATTS0 = 225.0
 D_WATTS = 0.5
 
 

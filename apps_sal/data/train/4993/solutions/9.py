@@ -3,18 +3,18 @@ import math
 
 def temps(v0, slope, d_tot):
     GRAVITY_ACC = 9.81 * 60.0 * 3.6
-    DRAG = 60.0 * 0.3 / 3.6  # air drag
+    DRAG = 60.0 * 0.3 / 3.6
     DELTA_T = 1.0 / 60.0
     G_THRUST = 60 * 3.6 * 3.6
     MASS = 80.0
     WATTS0 = 225.0
     D_WATTS = 0.5
     DELTA_P = D_WATTS * DELTA_T
-    SLOPE = math.sin(math.atan(slope / 100.0))  # slope and slope(percentage)
+    SLOPE = math.sin(math.atan(slope / 100.0))
 
-    p = WATTS0               # cyclist power
-    v = v0                   # actual speed
-    a, d, t = 0.0, 0.0, 0.0  # acceleration, distance, time
+    p = WATTS0
+    v = v0
+    a, d, t = 0.0, 0.0, 0.0
     while d < d_tot:
         t += DELTA_T
         p -= DELTA_P

@@ -1,9 +1,5 @@
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], source: int, destination: int) -> int:
-        # 1 - 2 - 7
-        #         7 - 3 - 6
-        #             3 - 5
-        #     2 --------- 5 - 8
         if not routes:
             return -1
 
