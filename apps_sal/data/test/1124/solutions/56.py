@@ -1,7 +1,4 @@
-# MAX-=min
 
-# 0 <= x <= y で，gcd(x, y) = gcd(x, y - x) が成立
-# gcd(a) を求めればよい
 
 import math
 

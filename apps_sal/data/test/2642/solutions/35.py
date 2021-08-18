@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 from collections import defaultdict
 from fractions import Fraction
@@ -9,10 +7,6 @@ from pprint import pformat as pf
 from pprint import pprint as pp
 import sys
 sys.setrecursionlimit(10**7)
-# @pysnooper.snoop()
-# import pysnooper # debug
-
-# from sortedcontainers import SortedList, SortedDict, SortedSet # no in atcoder
 
 
 def is_same_sign(a, b):
@@ -35,7 +29,6 @@ def fraction_taple(a, b):
 
 
 def mode(a, b):
-    # retrun dict_key, arr_key
     if a == 0 and b == 0:
         return 0, 0
     if a == 0:
@@ -66,8 +59,6 @@ def __starting_point():
             zero += 1
         else:
             d[dkey][akey] += 1
-    # print('d') # debug
-    # pp(d) # debug
 
     ans = 1
     for pair in list(d.values()):
@@ -75,10 +66,7 @@ def __starting_point():
         ans *= tmp
     ans += zero - 1
     ans %= MOD
-    # print('ans') # debug
     print(ans)
-
-    # print('\33[32m' + 'end' + '\033[0m') # debug
 
 
 __starting_point()

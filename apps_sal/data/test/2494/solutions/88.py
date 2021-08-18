@@ -1,10 +1,9 @@
 from collections import deque
 
-# 1から初めて、xがあるとき10x、x+1のいずれかが行えるとしてqueue
 
 K = int(input())
 q = deque()
-q.append((1, 1))  # 各桁の和、modulo K
+q.append((1, 1))
 visited = [False] * K
 
 ans = 0

@@ -24,7 +24,6 @@ for i in range(N):
             elif y == 0:
                 D[(1, 0)] += 1
 ans = corner
-# 以下、(0,0) を入れない時。(X,Y) のYは全て0以上で統一する（何も入れないも一応カウント）
 c = 1
 sub = []
 for x, y in D.keys():

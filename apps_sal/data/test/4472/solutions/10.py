@@ -37,18 +37,5 @@ for i in range(n // 2):
     else:
         ans += min(tmp1, tmp2, tmp3)
 
-    # print(tmp1, tmp2, t)
-    # check = False
-    # for i in range(1, 4):
-    #     if t[i-1] == t[i]:
-    #         if check: check = False
-    #         else:
-    #             tmp += 1
-    #             check = True
-    #     else:
-    #         if check: check = False
-
-    # print(t, tmp)
-    # ans += 2 - tmp
 
 print(ans)

@@ -26,7 +26,6 @@ for i in range(n):
     else:
         bad[x, y][1] += 1
 
-# print(bad)
 
 cnt = 1
 for x, y in bad:
@@ -38,7 +37,4 @@ for x, y in bad:
 
 ans = (cnt + zero - 1) % mod
 
-# print('cnt',cnt)
-# print('zero',zero)
-# print('ans',ans)
 print(((ans + mod) % mod))

@@ -19,9 +19,7 @@ def kikaku(a, b):
     return a, b
 
 
-# aもbも正の場合Dposでカウント。
 Dpos = defaultdict(int)
-# aが正bが負の場合Dnegでカウント。
 Dneg = defaultdict(int)
 
 zerozero = 0
@@ -52,7 +50,6 @@ for k, v in list(Dpos.items()):
     a, b = k
     j = Dneg[(b, a)]
     r *= pow(2, v, MOD) + pow(2, j, MOD) - 1
-    # print(a,b,v,j,r)
     r %= MOD
 
 r *= pow(2, azero, MOD) + pow(2, bzero, MOD) - 1
@@ -63,5 +60,3 @@ r %= MOD
 ans = r + zerozero
 ans %= MOD
 print(ans)
-# print(Dpos)
-# print(Dneg)

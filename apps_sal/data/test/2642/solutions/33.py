@@ -9,7 +9,6 @@ ab = [tuple(map(int, input().split())) for _ in range(n)]
 d = defaultdict(int)
 zero = 0
 for a, b in ab:
-    # zero　別処理
     if a == b == 0:
         zero += 1
         continue
@@ -20,7 +19,6 @@ for a, b in ab:
         d[(1, 0)] += 1
         continue
 
-    # a[i]が絶対に非負になるように
     if a < 0:
         a *= -1
         b *= -1

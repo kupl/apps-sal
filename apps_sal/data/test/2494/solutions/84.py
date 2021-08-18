@@ -6,10 +6,10 @@ for i in range(K):
     G[i].append((a, 0))
 
 
-def dijkstra(G, s):  # Gはi->jの辺をG[i]=[(j,cost),...]で保存
+def dijkstra(G, s):
     INF = 10**19
     n = len(G)
-    d = [INF] * n  # n=node数
+    d = [INF] * n
     d[s] = 0
     visited = {s}
     que = [(0, s)]

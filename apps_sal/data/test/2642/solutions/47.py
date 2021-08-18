@@ -19,7 +19,6 @@ for _ in range(n):
         zero_cnt += 1
         continue
     g = gcd(abs(a), abs(b))
-#    if a == 0 or b == 0: g = max(abs(a), abs(b))
     a //= g
     b //= g
 
@@ -38,5 +37,5 @@ for key in cnt:
     ans %= MOD
 
 ans += zero_cnt
-ans -= 1  # for empty set
+ans -= 1
 print((ans % MOD))

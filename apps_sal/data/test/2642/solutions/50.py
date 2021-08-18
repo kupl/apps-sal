@@ -25,12 +25,10 @@ for i in range(N):
     else:
         Fish[(A, B)] += 1
 
-# print(Fish)
 done_set = set()
 
 ans = 1
 for (a, b) in list(Fish.keys()):
-    # print(a,b)
     if b > 0:
         c = b
         d = -a
@@ -40,12 +38,8 @@ for (a, b) in list(Fish.keys()):
     else:
         c, d = -b, a
 
-    # print(done_set)
-    #print((a,b), (c,d), done_set)
     if (a, b) in done_set or (c, d) in done_set:
         continue
-    #print((a,b), Fish[(a,b)])
-    #print((c,d), Fish[(c,d)])
     if (c, d) not in list(Fish.keys()):
 
         ans *= pow(2, Fish[(a, b)], MOD)
@@ -54,11 +48,9 @@ for (a, b) in list(Fish.keys()):
         done_set.add((c, d))
     ans %= MOD
 
-    #print(done_set, ans)
     done_set.add((a, b))
 
 ans += zeros
 ans -= 1
 ans %= MOD
-# print(zeros)
 print(ans)
