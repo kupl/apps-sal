@@ -13,7 +13,6 @@ def f(a, x):
         return a + 1
 
 
-#input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
 for i in range(int(input())):
     a, b, c = list(map(int, input().split()))
     x = int((a + b + c) / 3 + 0.5)

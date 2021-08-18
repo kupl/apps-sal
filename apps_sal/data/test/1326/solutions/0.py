@@ -2,7 +2,6 @@ import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
-#import numpy as np
 
 
 def main():

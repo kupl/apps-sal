@@ -4,7 +4,6 @@ def main():
     for i in range(1, N + 1):
         m = N // i
         ans += i * m * (m + 1) // 2
-        # print(i,N//i,m)
     print(ans)
 
 

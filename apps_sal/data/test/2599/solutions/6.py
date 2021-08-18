@@ -18,7 +18,7 @@ for _ in range(q):
             if n % 2 == 1:
                 if n < 18:
                     print(n // 2)
-                else:  # n > 18
+                else:
                     k = 0
                     while 18 * (k + 1) < n:
                         k += 1

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def main():
     blue = [input() for i in range(int(input()))]

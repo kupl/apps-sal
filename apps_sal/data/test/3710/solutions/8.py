@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/687/B
 MAX = 1000000
 n, k = map(int, input().split())
 ancient = [int(x) for x in input().split()]

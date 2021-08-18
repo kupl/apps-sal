@@ -1,5 +1,4 @@
 from collections import Counter
-# ABC091
 N = int(input())
 S = Counter([input() for _ in range(N)])
 M = int(input())

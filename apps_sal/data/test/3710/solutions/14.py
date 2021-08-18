@@ -15,7 +15,6 @@ def lcm(a, b):
 def solve(n, k):
     ans = 1
     a = list(map(int, input().split()))
-    # print(a);
     for i in range(n):
         ans = math.gcd(k, lcm(ans, a[i]))
     return ans == k

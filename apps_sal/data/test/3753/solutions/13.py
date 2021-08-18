@@ -16,7 +16,6 @@ while q:
 
 q = cc.deque()
 q.append([n - 1, m - 1])
-# print(ar)
 while q:
     x, y = q.pop()
     if x - 1 >= 0 and ar[x - 1][y] == 1:
@@ -28,7 +27,6 @@ while q:
 if ar[n - 1][m - 1] != 1:
     print(0)
 else:
-    # print(ar)
     ans = [0] * (n + m + 10)
     for i in range(n):
         for j in range(m):

@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 x1, y1, x2, y2 = list(map(int, input().split()))
 
 xdiff = x2 - x1

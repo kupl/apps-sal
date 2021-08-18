@@ -1,5 +1,3 @@
-# import sys
-# sys.stdin = open('cf588a.in')
 
 n = int(input())
 vals = [tuple(int(v) for v in input().split()) for _ in range(n)]

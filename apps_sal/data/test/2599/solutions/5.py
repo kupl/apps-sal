@@ -55,14 +55,12 @@ for _ in range(int(input())):
     mp = k * (k + 1) // 2
     res = 10 ** 100
 
-    # くりあがりなし
     if n - mp > 0 and (n - mp) % (k + 1) == 0:
         fx = (n - mp) // (k + 1)
         res = min(res, g(fx, 9 - k))
 
-    # くりあがりあり
-    for i in range(k + 1):  # くりあがる位置
-        for j in range(1, 30):  # 9の個数
+    for i in range(k + 1):
+        for j in range(1, 30):
             mp = nc(k - i) - nc(i)
             if (n + 9 * j * (k - i) - mp) > 0 and (n + 9 * j * (k - i) - mp) % (k + 1) == 0:
                 fx = (n + 9 * j * (k - i) - mp) // (k + 1)

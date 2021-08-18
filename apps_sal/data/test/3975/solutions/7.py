@@ -1,5 +1,3 @@
-# https://codeforces.com/problemset/problem/1010/D
-# TLE
 import sys
 input = sys.stdin.readline
 
@@ -35,8 +33,6 @@ def and_(a, b):
 
 
 g = {}
-
-# {key: [type, val]}
 
 
 def push(d, u, v):

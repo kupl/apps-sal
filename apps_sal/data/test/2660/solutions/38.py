@@ -21,10 +21,6 @@ for i in range(n):
             l += -b - x
             heappush(R, -x)
             r += -x
-        # print(L,R,l,r)
-        # print(b,x)
     else:
         med = -L[0]
-#        print(L,R)
-#        print(l,r)
         print(med, cnt % 2 * med + B + l + r)

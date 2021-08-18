@@ -24,15 +24,12 @@ for nitish in range(int(input())):
             done = 0
             for j in range(k + 1):
                 done += digitsum(xx + j)
-            # print(done)
             done -= max(0, k + 1 - (10 - lastdigit))
-            # print(done,xx)
             if(done > n):
                 continue
             for aurek in range(9):
                 p = min(k + 1, 10 - lastdigit)
                 ddone = done + aurek * p + (aurek + 1) * (k + 1 - p)
-                # print(aurek,ddone)
                 if(ddone > n):
                     continue
                 if(ddone == n):

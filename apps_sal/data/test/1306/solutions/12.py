@@ -14,6 +14,5 @@ else:
                 t *= (a[i - 1] + 1)
             elif dif == 1:
                 t *= (a[i - 1])
-        # print(t)
         t %= (1000000000 + 7)
     print(t)

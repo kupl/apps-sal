@@ -13,9 +13,6 @@ def main():
         if query[0] == 1:
             ab_list.append((query[1], query[2]))
 
-    # query_type->[1,1,2,1,2]
-    # ab_list->[(a,b),(a,b),(a,b)]
-
     L = []
     R = []
 

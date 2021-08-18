@@ -26,7 +26,6 @@ def listStr():
 
 
 def solve():
-    # we need to know whether, amongst the C values, there are two or more pairwise coprime values whose product equals K
     N, K = getInts()
     C = getInts()
     lcm = 1
@@ -36,5 +35,4 @@ def solve():
     return "Yes" if lcm == K else "No"
 
 
-# for _ in range(getInt()):
 print(solve())
