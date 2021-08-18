@@ -1,4 +1,3 @@
-# solution
 
 import numpy as np
 import io
@@ -9,7 +8,7 @@ nim, mike = map(int, input().split())
 
 array = [[int(x) for x in input().split()] for _ in range(mike)]
 
-graph = np.zeros((nim, nim))  # 0-indexed
+graph = np.zeros((nim, nim))
 for a, b, c in array:
     graph[a - 1, b - 1] = c
 

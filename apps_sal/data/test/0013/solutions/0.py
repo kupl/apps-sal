@@ -1,4 +1,3 @@
-# This code is dedicated to Vlada S.
 
 class Course:
     def __init__(self, reqs, number):

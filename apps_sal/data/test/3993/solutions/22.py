@@ -7,7 +7,6 @@ while len(p) > 0:
     currRemoved = 1
     front = p.popleft()
     currPage = (front - numRemoved) // k
-    #print(str(ops) + ": " + str(front))
     while (len(p) > 0 and (p[0] - numRemoved) // k == currPage):
         currRemoved += 1
         p.popleft()

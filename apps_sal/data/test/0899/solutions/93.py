@@ -15,7 +15,6 @@ for i in range(n):
 
 
 def warshall_floyd(adj_m):
-    # _dist[i][j] : i から j への最短距離
     _dist = adj_m
     for _k in range(n):
         for _i in range(n):

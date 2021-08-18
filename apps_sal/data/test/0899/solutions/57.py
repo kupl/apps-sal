@@ -6,7 +6,6 @@ INF = 10 ** 6
 
 
 def check(N, adj_nodes, costs, from_node, to_node):
-    # calculate shortest distances on a graph without a edge (from_node, to_node)
     dists = [INF for _ in range(N)]
     dists[from_node] = 0
     frontier = [(0, from_node)]

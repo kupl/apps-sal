@@ -6,7 +6,6 @@ d = [[INF for j in range(N)] for i in range(N)]
 prev = [[i for j in range(N)] for i in range(N)]
 t = [[0 for j in range(N)] for i in range(N)]
 
-# 初期化
 for i in range(N):
     d[i][i] = 0
     dist[i][i] = 0
@@ -18,13 +17,11 @@ for _ in range(M):
     d[a - 1][b - 1] = c
     d[b - 1][a - 1] = c
 
-#　d[a][b]:aとbの距離
-
 
 def warshall_floyd(n):
     for k in range(n):
-        for i in range(n):  # 始点
-            for j in range(n):  # 終点
+        for i in range(n):
+            for j in range(n):
                 d[i][j] = min(d[i][j], d[i][k] + d[k][j])
 
 

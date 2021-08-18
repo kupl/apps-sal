@@ -17,15 +17,12 @@ for i in range(w):
 
 for i in range(n):
     d[i][i] = 0
-# print("d",d)
 
 csr = csr_matrix(d)
 dp = floyd_warshall(csr)
 ans = 0
-# print("dp",dp)
 
 for i, j, c in edges:
-    # print(i,j,c)
     if dp[i, j] < c:
         ans += 1
 print(ans)

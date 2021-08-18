@@ -46,7 +46,6 @@ class Solver:
                 degs[e] -= 1
                 if degs[e] == 0:
                     nq.append(e)
-        # print(nq)
         if len(q) != len(nq):
             print(-1)
             return

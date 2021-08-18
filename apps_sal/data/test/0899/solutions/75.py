@@ -11,8 +11,6 @@ INF = 1 << 60
 MOD = 1000000007
 sys.setrecursionlimit(10 ** 7)
 
-# UnionFind
-
 
 class UnionFind():
     def __init__(self, n):
@@ -71,10 +69,7 @@ def is_prime(n):
     return True
 
 
-# ワーシャルフロイド (任意の2頂点の対に対して最短経路を求める)
-# 計算量n^3 (nは頂点の数)
 def warshall_floyd(d, n):
-    #d[i][j]: iからjへの最短距離
     for k in range(n):
         for i in range(n):
             for j in range(n):
@@ -82,11 +77,9 @@ def warshall_floyd(d, n):
     return d
 
 
-# ダイクストラ
 def dijkstra_heap(s, edge, n):
-    # 始点sから各頂点への最短距離
     d = [10**20] * n
-    used = [True] * n  # True:未確定
+    used = [True] * n
     d[s] = 0
     used[s] = False
     edgelist = []
@@ -94,7 +87,6 @@ def dijkstra_heap(s, edge, n):
         heapq.heappush(edgelist, a * (10**6) + b)
     while len(edgelist):
         minedge = heapq.heappop(edgelist)
-        # まだ使われてない頂点の中から最小の距離のものを探す
         if not used[minedge % (10**6)]:
             continue
         v = minedge % (10**6)
@@ -104,8 +96,6 @@ def dijkstra_heap(s, edge, n):
             if used[e[1]]:
                 heapq.heappush(edgelist, (e[0] + d[v]) * (10**6) + e[1])
     return d
-
-# 素因数分解
 
 
 def factorization(n):
@@ -127,28 +117,19 @@ def factorization(n):
 
     return arr
 
-# 2数の最小公倍数
-
 
 def lcm(x, y):
     return (x * y) // gcd(x, y)
-
-# リストの要素の最小公倍数
 
 
 def lcm_list(numbers):
     return reduce(lcm, numbers, 1)
 
-# リストの要素の最大公約数
-
 
 def gcd_list(numbers):
     return reduce(gcd, numbers)
 
-# 素数判定
 
-
-# limit以下の素数を列挙
 def eratosthenes(limit):
     A = [i for i in range(2, limit + 1)]
     P = []
@@ -173,8 +154,6 @@ def eratosthenes(limit):
 
     return P
 
-# 同じものを含む順列
-
 
 def permutation_with_duplicates(L):
 
@@ -184,7 +163,6 @@ def permutation_with_duplicates(L):
     else:
         ret = []
 
-        # set（集合）型で重複を削除、ソート
         S = sorted(set(L))
 
         for i in S:
@@ -198,7 +176,6 @@ def permutation_with_duplicates(L):
         return ret
 
 
-# ここから書き始める
 n, m = list(map(int, input().split()))
 d = [[INF for j in range(n)] for i in range(n)]
 x = []
@@ -208,7 +185,6 @@ for i in range(m):
     d[a - 1][b - 1] = c
     d[b - 1][a - 1] = c
 d2 = warshall_floyd(d, n)
-# print(d2)
 ans = 0
 for i in x:
     if d2[i[0]][i[1]] != i[2]:

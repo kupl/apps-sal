@@ -20,7 +20,6 @@ for i in range(k + 1):
 for i in range(n - k, n):
     ans = ans * i
 for i in range(n - k, n):
-    # print(n - 1 - i)
     ans = ans // (n - i)
 '''
 for i in range(1, k + 1):

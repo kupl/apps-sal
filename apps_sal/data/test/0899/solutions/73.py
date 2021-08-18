@@ -16,7 +16,7 @@ def main():
         a -= 1
         b -= 1
         dist[a][b][0] = dist[b][a][0] = c
-        dist[a][b][1] = dist[b][a][1] = 1 << idx  # weight,edge_idx
+        dist[a][b][1] = dist[b][a][1] = 1 << idx
 
     for k in range(N):
         for i in range(N):

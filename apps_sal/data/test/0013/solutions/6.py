@@ -1,4 +1,3 @@
-# This code is dedicated to Vlada S.
 
 class Course:
     def __init__(self, reqs, number):
@@ -49,6 +48,3 @@ while requirements:
 else:
     print(answer.count(" "))
     print(answer[1:])
-
-
-# Made By Mostafa_Khaled

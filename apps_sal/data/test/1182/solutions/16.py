@@ -1,4 +1,3 @@
-# You lost the game.
 r, c, n, k = list(map(int, input().split()))
 V = [list(map(int, input().split())) for _ in range(n)]
 

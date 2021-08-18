@@ -8,5 +8,4 @@ for i in range(l):
     for j in range(f):
         cnt += (s[j][i] == 'Y')
     ans += (cnt >= t)
-# kitten
 print(ans)

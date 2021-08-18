@@ -12,4 +12,3 @@ for i in range(n):
     best = max(best, dp[i])
 
 print(best)
-# print(dp)

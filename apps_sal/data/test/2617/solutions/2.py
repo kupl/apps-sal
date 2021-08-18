@@ -29,7 +29,6 @@ def solve():
                 m *= 2
             b += m
         d += 1
-#  print(S,b)
     print(d)
     for c in S:
         print(c, end=" ")

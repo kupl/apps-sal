@@ -1,4 +1,3 @@
-# cook your dish here
 l, r, x, y, k = map(int, input().strip().split(' '))
 u = 0
 for i in range(x, y + 1):

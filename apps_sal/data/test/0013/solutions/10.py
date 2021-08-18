@@ -43,19 +43,13 @@ class Graph:
 
     def addEdge(self, v, w):
         self.adj[v].append(w)
-        # self.adj[w].append(v)
 
     @bootstrap
     def isCyclicUtil(self, v, visited, recStack):
 
-        # Mark current node as visited and
-        # adds to recursion stack
         visited[v] = True
         recStack[v] = True
 
-        # Recur for all neighbours
-        # if any neighbour is visited and in
-        # recStack then graph is cyclic
         for neighbour in self.adj[v]:
             if visited[neighbour] == False:
                 ans = yield self.isCyclicUtil(neighbour, visited, recStack)
@@ -64,12 +58,9 @@ class Graph:
             elif recStack[neighbour] == True:
                 yield True
 
-        # The node needs to be poped from
-        # recursion stack before function ends
         recStack[v] = False
         yield False
 
-    # Returns true if graph is cyclic else false
     def isCyclic(self, nodes):
         visited = [False] * self.V
         recStack = [False] * self.V
@@ -93,7 +84,6 @@ for i in range(0, n):
 visited = [False for _ in range(n)]
 
 path = []
-# print(G.adj)
 for subj in m:
     temp = []
     if visited[subj - 1] == False:
