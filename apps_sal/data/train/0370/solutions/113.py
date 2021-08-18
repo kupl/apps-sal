@@ -19,7 +19,7 @@ class UnionFind(object):
         self.size[x_root] = 0
 
 
-def primeFactors(n):  # Prime factor decomposition
+def primeFactors(n):
     out = set()
     while n % 2 == 0:
         out.add(2)

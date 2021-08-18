@@ -26,7 +26,6 @@ def __starting_point():
             for i in range(n):
                 gcd = a[i] + math.gcd(Lgcd[i], Rgcd[i + 1])
                 ans.append(gcd)
-           # print(ans)
             print(max(ans))
 
 

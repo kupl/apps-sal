@@ -1,9 +1,7 @@
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
 
-        # max number of components:
         fc = DisjointSetUnion(max(A))
-        # share common factor:
         for a in A:
             for i in range(2, int(sqrt(a)) + 1):
                 if a % i == 0:

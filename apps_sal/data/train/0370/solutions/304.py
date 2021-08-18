@@ -34,7 +34,7 @@ class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
 
         max_val = max(A)
-        uf = UnionFind(max_val + 1)  # +1 for ease of access
+        uf = UnionFind(max_val + 1)
         for num in A:
             for i in range(2, int(math.sqrt(num)) + 1):
                 if num % i == 0:

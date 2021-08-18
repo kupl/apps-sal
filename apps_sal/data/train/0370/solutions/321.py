@@ -6,7 +6,6 @@ MAX_N = 100000
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        # compute factors
         sieve = Sieve(MAX_N)
         factors = defaultdict(list)
         for x in A:
@@ -28,7 +27,6 @@ class Solution:
         return max(list(Counter(uf.root(x) for x in A).values()), default=0)
         '''
         
-        # build bipartite graph from factors and values
         g = Graph()
         for factor, values in factors.items():
             g.add_factor(factor)
@@ -71,7 +69,6 @@ class UnionFind:
 class Sieve:
     def __init__(self, max_n):
         self.primes = self._compute_primes(max_n)
-        # better runtime than simply empty dict!
         self.factors = {p: [p] for p in self.primes}
 
     def _compute_primes(self, max_n):
@@ -83,14 +80,11 @@ class Sieve:
 
             primes.append(prime)
 
-            # better runtime than a manual while loop!
             for j in range(prime + prime, max_n + 1, prime):
                 sieve[j] = False
 
         return primes
 
-    # this hurts the runtime!
-    # @lru_cache(maxsize=MAX_N)
     def factorize(self, n):
         if n in self.factors:
             return self.factors[n]
@@ -98,7 +92,6 @@ class Sieve:
         self.factors[n] = factors = set()
         work = n
         for prime in self.primes:
-            # does not improve runtime!
             if work < prime:
                 break
 

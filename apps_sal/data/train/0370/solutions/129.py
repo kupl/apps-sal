@@ -1,11 +1,9 @@
 class DSU:
     def __init__(self, nums):
-        # self.idx = {v:i for i, v in enumerate(nums)}
         self.nums = [i for i in range(len(nums))]
         self.cnt = [1] * len(nums)
 
     def find(self, idx):
-        # idx = self.idx[x]
         if self.nums[idx] == idx:
             return idx
         pidx = self.find(self.nums[idx])

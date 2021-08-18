@@ -1,4 +1,3 @@
-# cook your dish here
 for a in range(int(input())):
     N, M = map(int, input().split())
     b = []

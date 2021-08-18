@@ -27,7 +27,6 @@ class DSU:
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        # Union-Find on Prime Factors
         def primeDecompose(num):
             factor = 2
             prime_factors = []
@@ -45,9 +44,7 @@ class Solution:
 
         for num in A:
             prime_factors = list(set(primeDecompose(num)))
-            # map a number to its first prime factor
             num_factor_map[num] = prime_factors[0]
-            # merge all groups that contain the prime factors.
             for i in range(0, len(prime_factors) - 1):
                 dsu.union(prime_factors[i], prime_factors[i + 1])
 

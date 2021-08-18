@@ -1,4 +1,3 @@
-# You can do it!
 def capitalize(s, ind):
     split_s = list(s)
     for i in ind:

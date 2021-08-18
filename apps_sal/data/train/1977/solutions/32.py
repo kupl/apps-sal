@@ -21,19 +21,13 @@ class Solution:
         return closedIslands
 
     def isClosedIslands(self, grid, i, j, R, C):
-        # -1 = visited
-        # 1 = water
-        # 0 = land
-        # If we encounter -1 or 1, it's still considered an island thus far. We consider those elements as part of our island or surrounding our island.
         if grid[i][j] == -1 or grid[i][j] == 1:
             return True
 
-        # We know we have a 0(land). If the element is on the perimeter, it can't be a closed island.
         if self.isOnPerimeter(i, j, R, C):
             return False
         grid[i][j] = -1
 
-        # Check directions
         left = self.isClosedIslands(grid, i, j - 1, R, C)
         right = self.isClosedIslands(grid, i, j + 1, R, C)
         up = self.isClosedIslands(grid, i - 1, j, R, C)

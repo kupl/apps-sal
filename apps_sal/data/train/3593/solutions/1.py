@@ -4,5 +4,5 @@ def capitalize(s, ind):
         try:
             result[index] = result[index].upper()
         except IndexError:
-            break  # assumes the indexes are sorted
+            break
     return ''.join(result)

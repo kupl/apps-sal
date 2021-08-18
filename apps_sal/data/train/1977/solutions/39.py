@@ -1,6 +1,5 @@
 class Solution:
     def closedIsland(self, grid: List[List[int]]) -> int:
-        # time O(mn); space O(1)
         def DFS(row, col):
             if row < 0 or row >= nrow or col < 0 or col >= ncol:
                 return True

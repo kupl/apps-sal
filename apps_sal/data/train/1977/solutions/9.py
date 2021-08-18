@@ -1,6 +1,5 @@
 class Solution:
     def closedIsland(self, grid: List[List[int]]) -> int:
-        # find connected 0s not touching any border
         if not grid or not grid[0]:
             return 0
         m = len(grid)

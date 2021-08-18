@@ -11,7 +11,6 @@ class Solution:
                 if grid[i][j] == 0:
                     grid[i][j] = 1
 
-                    # DFS to neighbors
                     bot = dfs(i + 1, j)
                     top = dfs(i - 1, j)
                     right = dfs(i, j + 1)
