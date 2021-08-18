@@ -78,8 +78,6 @@ class Solution:
 
         for i in range(1, n):
             if not bob_dset.is_connected(i, i + 1) or not alice_dset.is_connected(i, i + 1):
-                # print(i, bob_dset.parent(i), bob_dset.parent(i + 1))
-                # print(i, alice_dset.parent(i), alice_dset.parent(i + 1))
 
                 return -1
 

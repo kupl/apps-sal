@@ -1,8 +1,6 @@
-# solution building polydivisible numbers ground up
-# using sets over lists and removing multiple type conversions helped speed
 def next_num(n):
-    mpl = 25  # maximum length of polydivisible number
-    lpn = 3608528850368400786036725  # largest polydivisible number
+    mpl = 25
+    lpn = 3608528850368400786036725
     if n >= lpn:
         return None
     nl = len(str(n))
@@ -18,7 +16,7 @@ def next_num(n):
         else:
             extend[i] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
 
-    d = {1: {"1", "2", "3", "4", "5", "6", "7", "8", "9"}}  # dictionary of all polydivisible numbers, excluding 0
+    d = {1: {"1", "2", "3", "4", "5", "6", "7", "8", "9"}}
     for l in range(2, 2 + nl):
         d[l] = {p + i for i in extend[l] for p in d[l - 1] if int(p + i) % (l) == 0}
     d[1].add("0")

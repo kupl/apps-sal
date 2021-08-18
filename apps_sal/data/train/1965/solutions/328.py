@@ -1,7 +1,6 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, e: List[List[int]]) -> int:
         def union(UF, u, v):
-            # UF.setdefault(u, u); UF.setdefault(v, v)
             pu, pv = find(UF, u), find(UF, v)
             if pu != pv:
                 UF[pv] = pu

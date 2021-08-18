@@ -70,7 +70,6 @@ class Pairs(HandValue):
         counter_self_values = Counter(self.poker_hand.card_values)
         counter_other_values = Counter(other.poker_hand.card_values)
 
-        # Check the pair
         self_value_2 = next(value for value, nb_repet in counter_self_values.items() if nb_repet == 2)
         other_value_2 = next(value for value, nb_repet in counter_other_values.items() if nb_repet == 2)
         if self_value_2 > other_value_2:
@@ -78,7 +77,6 @@ class Pairs(HandValue):
         if self_value_2 < other_value_2:
             return 'Loss'
 
-        # Check the remaining solo cards
         self_value_remaining = sorted((value for value, nb_repet in counter_self_values.items() if nb_repet == 1), reverse=True)
         other_value_remaining = sorted((value for value, nb_repet in counter_other_values.items() if nb_repet == 1), reverse=True)
         for i in range(3):
@@ -99,7 +97,6 @@ class TwoPairs(HandValue):
         counter_self_values = Counter(self.poker_hand.card_values)
         counter_other_values = Counter(other.poker_hand.card_values)
 
-        # Check the highest pair
         max_self_value_2 = max([value for value, nb_repet in counter_self_values.items() if nb_repet == 2])
         max_other_value_2 = max([value for value, nb_repet in counter_other_values.items() if nb_repet == 2])
         if max_self_value_2 > max_other_value_2:
@@ -107,7 +104,6 @@ class TwoPairs(HandValue):
         if max_self_value_2 < max_other_value_2:
             return 'Loss'
 
-        # Check the lowest pair
         min_self_value_2 = min([value for value, nb_repet in counter_self_values.items() if nb_repet == 2])
         min_other_value_2 = min([value for value, nb_repet in counter_other_values.items() if nb_repet == 2])
         if min_self_value_2 > min_other_value_2:
@@ -115,7 +111,6 @@ class TwoPairs(HandValue):
         if min_self_value_2 < min_other_value_2:
             return 'Loss'
 
-        # Otherwise check the lowest remaining value
         self_value_1 = next(value for value, nb_repet in counter_self_values.items() if nb_repet == 1)
         other_value_1 = next(value for value, nb_repet in counter_other_values.items() if nb_repet == 1)
         if self_value_1 > other_value_1:
@@ -135,7 +130,6 @@ class ThreeOfAKind(HandValue):
         counter_self_values = Counter(self.poker_hand.card_values)
         counter_other_values = Counter(other.poker_hand.card_values)
 
-        # Check the value of the 3 of a kind
         max_self_value_3 = [value for value, nb_repet in counter_self_values.items() if nb_repet == 3][0]
         max_other_value_3 = [value for value, nb_repet in counter_other_values.items() if nb_repet == 3][0]
         if max_self_value_3 > max_other_value_3:
@@ -143,7 +137,6 @@ class ThreeOfAKind(HandValue):
         if max_self_value_3 < max_other_value_3:
             return 'Loss'
 
-        # Check the highest remaining value
         max_self_value_2 = max(value for value, nb_repet in counter_self_values.items() if nb_repet == 1)
         max_other_value_2 = max(value for value, nb_repet in counter_other_values.items() if nb_repet == 1)
         if max_self_value_2 > max_other_value_2:
@@ -151,7 +144,6 @@ class ThreeOfAKind(HandValue):
         if max_self_value_2 < max_other_value_2:
             return 'Loss'
 
-        # Otherwise check the lowest remaining value
         min_self_value_2 = min(value for value, nb_repet in counter_self_values.items() if nb_repet == 1)
         min_other_value_2 = min(value for value, nb_repet in counter_other_values.items() if nb_repet == 1)
         if min_self_value_2 > min_other_value_2:
@@ -171,7 +163,6 @@ class FullHouse(HandValue):
         counter_self_values = Counter(self.poker_hand.card_values)
         counter_other_values = Counter(other.poker_hand.card_values)
 
-        # Check the value of the 3 of a kind
         max_self_value_3 = [value for value, nb_repet in counter_self_values.items() if nb_repet == 3][0]
         max_other_value_3 = [value for value, nb_repet in counter_other_values.items() if nb_repet == 3][0]
         if max_self_value_3 > max_other_value_3:
@@ -179,7 +170,6 @@ class FullHouse(HandValue):
         if max_self_value_3 < max_other_value_3:
             return 'Loss'
 
-        # Case 3 of a kind value is the same, check pair value
         max_self_value_2 = [value for value, nb_repet in counter_self_values.items() if nb_repet == 2][0]
         max_other_value_2 = [value for value, nb_repet in counter_other_values.items() if nb_repet == 2][0]
         if max_self_value_2 > max_other_value_2:
@@ -281,7 +271,6 @@ class PokerHand(object):
         self.hand_value = None
         for hand_value_cls in reversed(self.HV_ORDER):
             if hand_value_cls.is_valid(self):
-                # print("{} is {}".format(hand, hand_value_cls.__name__))
                 self.hand_value = hand_value_cls(self)
                 break
 

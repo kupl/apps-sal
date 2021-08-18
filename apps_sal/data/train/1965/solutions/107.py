@@ -39,8 +39,6 @@ class DSU:
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
 
-        # Spanning Tree for Type 3 edges
-
         edges_removed = 0
 
         alice_graph, bob_graph = DSU(), DSU()
@@ -50,8 +48,6 @@ class Solution:
                 if not (alice_graph.add_edge(u, v) and bob_graph.add_edge(u, v)):
                     edges_removed += 1
 
-        # Spanning Tree for Type 2 and Type 3 edges
-
         for typ, u, v in edges:
             if typ == 2:
                 if not bob_graph.add_edge(u, v):
@@ -59,9 +55,6 @@ class Solution:
             if typ == 1:
                 if not alice_graph.add_edge(u, v):
                     edges_removed += 1
-
-        # print('alice_graph',alice_graph.parent)
-        # print('bob_graph',bob_graph.parent)
 
         if alice_graph.get_node_count() != n or bob_graph.get_node_count() != n:
             return -1

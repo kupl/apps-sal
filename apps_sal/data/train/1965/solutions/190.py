@@ -1,10 +1,8 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         A, B = {i: i for i in range(1, n + 1)}, {i: i for i in range(1, n + 1)}
-        #print(A, B)
 
         def find(dp, i):
-            #print(i, dp)
             if dp[i] != i:
                 dp[i] = find(dp, dp[i])
             return dp[i]

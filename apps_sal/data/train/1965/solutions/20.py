@@ -23,20 +23,20 @@ class UnionFind:
 
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        ufa = UnionFind(n)  # for Alice
-        ufb = UnionFind(n)  # for Bob
+        ufa = UnionFind(n)
+        ufb = UnionFind(n)
 
         ans = 0
         edges.sort(reverse=True)
         for t, u, v in edges:
             u, v = u - 1, v - 1
-            if t == 3:  # Alice & Bob
+            if t == 3:
                 if not (ufa.union(u, v) and ufb.union(u, v)):
                     ans += 1
-            elif t == 2:  # Bob only
+            elif t == 2:
                 if not ufb.union(u, v):
                     ans += 1
-            else:  # Alice only
+            else:
                 if not ufa.union(u, v):
                     ans += 1
         return ans if ufa.count == 1 and ufb.count == 1 else -1

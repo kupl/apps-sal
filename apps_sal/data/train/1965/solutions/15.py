@@ -6,7 +6,7 @@ class DSU:
     def find_parent(self, x):
         if self.p[x] == -1:
             return x
-        self.p[x] = self.find_parent(self.p[x])  # path compression
+        self.p[x] = self.find_parent(self.p[x])
         return self.p[x]
 
     def union(self, a, b):
@@ -15,7 +15,7 @@ class DSU:
         if pa == pb:
             return False
         if self.r[pa] <= self.r[pb]:
-            self.p[pb] = pa     # here rank can be adding
+            self.p[pb] = pa
             self.r[pa] += 1
         else:
             self.p[pa] = pb
@@ -43,7 +43,6 @@ class Solution:
             else:
                 if not dsu_bob.union(e[1], e[2]):
                     res += 1
-            # print (e, res)
 
         ap = 0
         bp = 0

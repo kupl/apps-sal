@@ -1,9 +1,5 @@
 class Solution:
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        # first remove type3 edge
-        # remove type2 edge
-        # remove type1 edge
-        # union find
 
         L1 = []
         L2 = []
@@ -19,12 +15,10 @@ class Solution:
         father = [0] * (n + 1)
         for i in range(1, n + 1):
             father[i] = i
-        # remove type3 edge
         count3 = 0
         for edge in L3:
             x, a, b = edge
             count3 += self.union(a, b, father)
-        # remove type1 edge
         father1 = father[:]
         for edge in L1:
             x, a, b = edge
@@ -34,7 +28,6 @@ class Solution:
         for edge in L2:
             x, a, b = edge
             count2 += self.union(a, b, father2)
-        # print(father1, father2, father)
         for i in range(1, n + 1):
             if self.find(father1, i) != self.find(father1, 1):
                 return -1

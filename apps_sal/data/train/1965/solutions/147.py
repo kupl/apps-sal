@@ -25,11 +25,9 @@ class Solution:
         a = self.num_components(n, A + C)
         b = self.num_components(n, B + C)
         c = self.num_components(n, C)
-        #print(f'a={a}, b={b}, c={c}')
         if a > 1 or b > 1:
             return -1
         deleted_common_edges = len(C) - n + c
         deleted_alice_edges = len(A) + len(C) - n + 1 - deleted_common_edges
         deleted_bob_edges = len(B) + len(C) - n + 1 - deleted_common_edges
-        #print(deleted_common_edges, deleted_alice_edges, deleted_bob_edges)
         return deleted_common_edges + deleted_alice_edges + deleted_bob_edges
