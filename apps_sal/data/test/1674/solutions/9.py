@@ -121,8 +121,6 @@ def modu(a, n):
         return n
     return a % n
 
-# /////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 for i in range(1):
     n, k = map(int, input().split())
@@ -140,13 +138,10 @@ for i in range(1):
             f = False
     if True:
         b.append(c)
-    # print(b)
     ans = 0
     su = 0
     for i in b:
         c = a[su:min(su + i, 10**9)]
-
-        # print(c)
 
         c.sort(reverse=True)
         c = c[:min(i, k)]

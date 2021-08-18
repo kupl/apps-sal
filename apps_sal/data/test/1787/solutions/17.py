@@ -14,6 +14,5 @@ for s in S:
         OK = (OK + YET) % mod
         YET = 0
 
-    # print(YET,OK,ANS)
 
 print(ANS)

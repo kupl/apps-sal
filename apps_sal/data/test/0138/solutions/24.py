@@ -6,7 +6,7 @@ import sys
 import queue
 
 try:
-    import dev_act_ffc429465ab634  # empty file in directory
+    import dev_act_ffc429465ab634
     DEV = True
 except:
     DEV = False
@@ -71,14 +71,12 @@ class IntReader:
         return res
 
 
-###############################################################################
 ej = EJudge()
 int_reader = IntReader()
 fmap = lambda f, *l: list(map(f, *l))
 def parse_int(): return fmap(int, input().split())
 
 
-# input
 n, t1, t2, t3 = parse_int()
 t3 = min(t3, t2 + t1, t1 * 3)
 t2 = min(t2, t1 * 2, t3 * 2)

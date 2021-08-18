@@ -1,16 +1,16 @@
 with open(0) as f:
     N, A, B, *H = map(int, f.read().split())
 
-diff = A - B  # 追加ダメージ
-T = (max(H) + B - 1) // B  # 答えはT以下
+diff = A - B
+T = (max(H) + B - 1) // B
 
 
-def clearable(t):  # t回以内で敵を全滅できるか判定
+def clearable(t):
     Higher = [h - B * t for h in H if h - B * t > 0]
     return True if sum([(h + diff - 1) // diff for h in Higher]) <= t else False
 
 
-def binary_search(a, b, judge):  # b must be a or higher
+def binary_search(a, b, judge):
     if a == b:
         return a, b
 

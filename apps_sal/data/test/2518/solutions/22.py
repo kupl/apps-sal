@@ -26,14 +26,6 @@ def main():
             return biser(t + 1, l - l // 2)
     l = max(h) // b + 1
     t = biser(0, l)
-    # while l>0:
-    #    t=t+l//2
-    #    if enough(t):
-    #        t=t-l//2
-    #        l=l//2
-    #    else:
-    #        t+=1
-    #        l=l-l//2
     print(t)
 
 

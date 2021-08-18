@@ -15,8 +15,8 @@ def func(cnt):
         return True
 
 
-ok = 10**9  # exist
-ng = 0  # not exist
+ok = 10**9
+ng = 0
 while abs(ok - ng) > 1:
     cnt = (ok + ng) // 2
     if func(cnt):

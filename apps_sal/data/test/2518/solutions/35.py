@@ -22,7 +22,7 @@ def isok(ans):
 
 
 ok = saiaku
-ng = -1  # -1にしとけば答えが0の時も普通に扱えるな
+ng = -1
 
 while ok - ng > 1:
     m = (ok + ng) // 2

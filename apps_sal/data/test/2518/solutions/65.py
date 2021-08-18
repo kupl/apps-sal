@@ -7,7 +7,6 @@ h = [int(input()) for i in range(n)]
 
 
 def check(k):
-    # k回で可能か?
     tmp = list([x - b * k for x in h])
     return sum(0 - -i // a for i in tmp if i > 0) <= k
 

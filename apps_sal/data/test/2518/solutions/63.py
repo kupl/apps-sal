@@ -5,7 +5,6 @@ for _ in range(N):
 
 
 def is_ok(arg):
-    # 条件を満たすかどうか？問題ごとに定義
     cnt = 0
     C = A - B
     for h in H:
