@@ -19,13 +19,9 @@ class Solution:
 
         for key in list(seen.keys()):
             keys_by_time = {}
-            # print(key,len(seen[key]))
-            # print(seen[key])
             for i in range(len(seen[key])):
-                # print(seen[key][i][1])
                 keys_by_time[seen[key][i][1]] = i
             seen[key].append(keys_by_time)
-            # print(seen[key])
 
         for key in list(seen.keys()):
 
@@ -36,15 +32,12 @@ class Solution:
                     current = seen[key][i]
                     nex = seen[key][j]
 
-                    # print(\"current \",current[1],\"nex \",nex[1])
                     if current[3] != nex[3] and abs(current[1] - nex[1]) <= 60:
-                        # print(\"condition1\")
                         if current[4] not in final:
                             final.append(current[4])
                         if nex[4] not in final:
                             final.append(nex[4])
 
                 if seen[key][i][4] not in final and seen[key][i][2] > 1000:
-                    # print(\"condition2\")
                     final.append(seen[key][i][4])
         return final

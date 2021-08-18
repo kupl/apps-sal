@@ -12,7 +12,6 @@ class Solution:
             for transaction in transactions_by_name[key]:
                 for other_transaction in transactions_by_name[key]:
                     if int(transaction[2]) >= 1000 and ','.join(transaction) not in suspicious_transactions:
-                        # over 1k
                         suspicious_transactions.add(','.join(transaction))
                         continue
                     if transaction == other_transaction:

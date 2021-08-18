@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[5]:
 
 
 from collections import deque
@@ -42,6 +38,3 @@ for i in a:
 
 
 print(max(res1, res2))
-
-
-# In[ ]:

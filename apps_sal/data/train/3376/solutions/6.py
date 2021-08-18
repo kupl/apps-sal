@@ -13,4 +13,3 @@ def square_free_part(n):
                     break
             if b:
                 return i
-    # return n

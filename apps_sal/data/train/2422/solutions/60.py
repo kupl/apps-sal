@@ -12,9 +12,3 @@ class Solution:
                     candidates[1] = j
 
         return (nums[candidates[0]] - 1) * (nums[candidates[1]] - 1)
-
-    # i = 1
-    # j = 3
-    # product = 25
-    # highest = 25
-    # candidates = [1, 3]

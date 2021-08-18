@@ -2,8 +2,6 @@ class Solution:
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
         if not transactions:
             return []
-        # transactions = sorted(transactions)
-        # print(transactions)
         res = set()
         names = defaultdict(list)
         time, amt, city = [], [], []
@@ -22,13 +20,5 @@ class Solution:
                             res.add(e + ',' + str(f) + ',' + str(g) + ',' + h)
                 if c > 1000:
                     res.add(a + ',' + str(b) + ',' + str(c) + ',' + d)
-
-                # if i>=1:
-                #     f,g,h,e = v[i-1]
-                #     if (abs(b-f) <= 60) and (a == e) and (d != h):
-                #         res.add(a+','+str(b)+','+str(c)+','+d)
-                #         res.add(e+','+str(f)+','+str(g)+','+h)
-                # if c > 1000:
-                #     res.add(a+','+str(b)+','+str(c)+','+d)
 
         return res

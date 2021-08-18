@@ -4,7 +4,6 @@ class Solution:
         for i in range(len(nums)):
             for j in range(i + 1, len(nums)):
 
-                # print((nums[i]-1),(nums[j]-1))
                 k.append((nums[i] - 1) * (nums[j] - 1))
 
         print((max(k)))

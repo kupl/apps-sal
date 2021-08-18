@@ -25,7 +25,6 @@ class Solution:
                 if(record[i] >= even_max_freq):
                     even_max_freq = record[i]
                     even_rec = i
-        #ax_freq = max(odd_freq, even_freq)
         if (odd_freq > even_freq):
             rec = odd_rec
         else:

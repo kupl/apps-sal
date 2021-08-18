@@ -1,5 +1,4 @@
 def hello(name="World"):
-    # check if we passed empty string ''
     if len(name) == 0:
         return "Hello, World!"
     else:

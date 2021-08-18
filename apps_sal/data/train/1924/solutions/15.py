@@ -38,6 +38,4 @@ class Solution:
             hashcity[n].append(c)
             hashindex[n].append(i)
 
-            # print(invalid, t)
-
         return invalid
