@@ -18,7 +18,6 @@ class Solution:
             for j in range(n):
                 if(graph[i][j] <= distanceThreshold):
                     count += 1
-            # print(count)
             if(count <= min1):
                 min1 = count
                 ans = i

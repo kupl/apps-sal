@@ -19,8 +19,6 @@ class Solution:
                 if table[i][j] <= distanceThreshold:
                     count[i] += 1
 
-        # print(count)
-        # print(table)
         m = min(count)
         res = -1
         for i in range(n):

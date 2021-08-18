@@ -2,14 +2,10 @@ class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         d = [[float('inf') for _ in range(n)] for _ in range(n)]
 
-        # Floyd Warshall
-        # bases cases
         for s, t, w in edges:
             d[s][t] = w
-            # add in opposite
             d[t][s] = w
 
-        # get all paths from node
         for i in range(n):
             for s in range(n):
                 for t in range(n):

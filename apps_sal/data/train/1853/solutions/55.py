@@ -17,10 +17,8 @@ class Solution:
         minCity = -1
 
         for i in range(n):
-            # Count how many of city i's neighbors are within the distance threshold.
             neighborCount = sum(minDistance[i][j] <= distanceThreshold for j in range(n) if j != i)
 
-            # Update the result if a city with less neighbors has been found or the id is higher
             if neighborCount <= minNeighborCount:
                 minNeighborCount = neighborCount
                 minCity = i

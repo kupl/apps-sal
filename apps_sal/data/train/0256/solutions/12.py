@@ -13,7 +13,6 @@ class Solution:
                     t += 1
                 time += t
 
-            #print(k, time)
             if time <= H:
                 hi = k - 1
                 ans = k

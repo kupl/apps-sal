@@ -1,6 +1,5 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        # Find the first <= in  [> > > > > <= <=]
         n = len(piles)
         low, high = 1, max(piles)
         while (low + 1) < high:

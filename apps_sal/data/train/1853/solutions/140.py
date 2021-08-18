@@ -28,16 +28,12 @@ class Solution:
             if edge[0] not in matrix:
                 matrix[edge[0]] = []
             matrix[edge[0]].append((edge[1], edge[2]))
-            # This line holds good only if the graph is bidirectional
             if edge[1] not in matrix:
                 matrix[edge[1]] = []
             matrix[edge[1]].append((edge[0], edge[2]))
         for i in range(n):
             cities = djikstras(matrix, [], i)
-            #print(cities, i)
-            # Removing source city
             if cities:
                 heapq.heappush(cityList, (len(cities), i * -1))
-            # print(cityList)
 
         return heapq.heappop(cityList)[1] * -1

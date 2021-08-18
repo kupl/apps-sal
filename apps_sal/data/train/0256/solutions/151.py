@@ -3,7 +3,7 @@ class Solution:
         left, right = 1, max(piles)
         while left <= right:
             k = left + (right - left) // 2
-            if self.finish(k, piles) <= H:  # count time to eat all bananas at speed K
+            if self.finish(k, piles) <= H:
                 right = k - 1
             else:
                 left = k + 1

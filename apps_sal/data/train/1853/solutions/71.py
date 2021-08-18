@@ -9,7 +9,6 @@ class Solution:
         for i in range(n):
             dis[i][i] = 0
 
-        # Dijkstra
         visited = set()
         for i in range(n):
             pool = [(0, i)]

@@ -1,6 +1,5 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        # use binary search to find the correct value
         maxPile = 0
         for i in piles:
             if i > maxPile:

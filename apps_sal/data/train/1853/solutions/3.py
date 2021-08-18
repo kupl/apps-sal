@@ -1,8 +1,6 @@
 class Solution:
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
 
-        # Floyd-warshall
-
         dp = [[float('inf') for _ in range(n)] for _ in range(n)]
         for ed in edges:
             u, v, weight = ed[0], ed[1], ed[2]

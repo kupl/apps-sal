@@ -1,10 +1,5 @@
 class Solution:
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        # wants to eat all bananas within H hours
-        # K - speed at which eat banana
-        # can eat up to pile[i] banana
-        # cannot eat 2 piles in 1 hour
-        # return min K to eat all bananas in H hours
 
         def get_hours_needed(piles, K):
             hours_needed = 0
@@ -22,7 +17,7 @@ class Solution:
 
             if get_hours_needed(piles, mid) > H:
                 lo = mid + 1
-            else:  # hours_needed <= H
+            else:
                 hi = mid
 
         return lo

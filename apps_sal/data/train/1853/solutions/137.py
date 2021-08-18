@@ -19,11 +19,11 @@ class Solution:
             graph[u].append((v, w))
             graph[v].append((u, w))
 
-        print([(self.getNumberOfNeighbors(city, graph, distanceThreshold), city) for city in range(n)])  # [(2, 0), (3, 1), (3, 2), (2, 3)] -> len(dist), city
-        print(max([(self.getNumberOfNeighbors(city, graph, distanceThreshold), city) for city in range(n)]))  # (3, 2)
-        print(max([(self.getNumberOfNeighbors(city, graph, distanceThreshold), city) for city in range(n)], key=lambda x: (-x[0], x[1])))  # (2, 3)
+        print([(self.getNumberOfNeighbors(city, graph, distanceThreshold), city) for city in range(n)])
+        print(max([(self.getNumberOfNeighbors(city, graph, distanceThreshold), city) for city in range(n)]))
+        print(max([(self.getNumberOfNeighbors(city, graph, distanceThreshold), city) for city in range(n)], key=lambda x: (-x[0], x[1])))
 
-        return max([(self.getNumberOfNeighbors(city, graph, distanceThreshold), city) for city in range(n)], key=lambda x: (-x[0], x[1]))[-1]  # least distance dict, but max city number
+        return max([(self.getNumberOfNeighbors(city, graph, distanceThreshold), city) for city in range(n)], key=lambda x: (-x[0], x[1]))[-1]
 
     def getNumberOfNeighbors(self, city, graph, distanceThreshold):
         heap = [(0, city)]

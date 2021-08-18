@@ -7,7 +7,7 @@ class Solution:
         def canDo(k):
             ans = 0
             for v in piles:
-                ans -= (-v // k)  # round up
+                ans -= (-v // k)
             return ans <= H
 
         while l < r:
