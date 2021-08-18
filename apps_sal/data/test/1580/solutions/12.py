@@ -1,4 +1,3 @@
-#import sys
 import pprint
 from collections import defaultdict
 from functools import lru_cache
@@ -10,11 +9,6 @@ from collections import deque
 import math
 MOD = 10 ** 9 + 7
 INFI = 10**10
-#input = sys.stdin.readline
-#import bisect
-
-# oo=list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-# ko=list("abcdefghijklmnopqrstuvwxyz")
 
 
 def sosuhante(n):
@@ -61,9 +55,6 @@ def my_index(l, x, default=False):
         return l.index(x)
     else:
         return default
-
-#    h,w,a,b = map(int, input().split())
-#    c = [[0 for j in range(n)] for i in range(n)]
 
 
 def ret(a):
@@ -143,7 +134,6 @@ def main():
         else:
             continue
 
-#    print(n,count,zones)
     print(n - count + zones)
 
 

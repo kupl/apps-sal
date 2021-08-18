@@ -1,4 +1,3 @@
-# cook your dish here
 def print_pattern(n):
     a = [1]
     b = []

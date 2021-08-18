@@ -7,7 +7,6 @@ import math
 from bisect import bisect_left
 
 
-# main starts
 n = int(stdin.readline().strip())
 string = (stdin.readline().strip())
 one = 0

@@ -4,8 +4,6 @@ import math
 def dis(a0, b0, x, y):
     return ((a0 - x) ** 2 + (b0 - y) ** 2) ** 0.5
 
-# distance from point to segment
-
 
 def minDistance(A, B, E):
 
@@ -18,22 +16,17 @@ def minDistance(A, B, E):
 
     reqAns = 0
 
-    # Case 1
     if AB_BE > 0:
-        # Finding the magnitude
         y = E[1] - B[1]
         x = E[0] - B[0]
         return (x * x + y * y) ** 0.5
 
-    # Case 2
     elif (AB_AE < 0):
         y = E[1] - A[1]
         x = E[0] - A[0]
         return (x * x + y * y) ** 0.5
 
-    # Case 3
     else:
-        # Finding the perpendicular distance
         x1, y1, x2, y2 = AB[0], AB[1], AE[0], AE[1]
         mod = (x1 * x1 + y1 * y1) ** 0.5
 

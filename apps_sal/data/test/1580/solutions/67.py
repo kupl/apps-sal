@@ -48,7 +48,7 @@ class UnionFind():
 
 n, m = list(map(int, input().split()))
 
-uf = UnionFind(n)  # n: 頂点数
+uf = UnionFind(n)
 
 for i in range(m):
     x, y, z = list(map(int, input().split()))

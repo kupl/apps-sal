@@ -7,7 +7,6 @@ from collections import deque
 import math
 
 
-# main starts
 n, k = list(map(int, stdin.readline().split()))
 arr = list(map(int, stdin.readline().split()))
 myq = deque([])

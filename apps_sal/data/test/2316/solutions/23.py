@@ -1,5 +1,3 @@
-# The only beautiful path is the one you create. Maxime Lagac�
-# by : Blue Edge - Create some chaos
 
 for _ in range(int(input())):
     x, n, m = list(map(int, input().split()))

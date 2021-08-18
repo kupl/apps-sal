@@ -1,4 +1,3 @@
-# cook your dish here
 def first_row(n):
     l = [1]
     s = [2]

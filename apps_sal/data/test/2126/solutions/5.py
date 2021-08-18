@@ -1,6 +1,6 @@
 n, m, h = [int(i) for i in input().split()]
-front = [int(i) for i in input().split()]  # len = m
-left = [int(i) for i in input().split()]  # len = n
+front = [int(i) for i in input().split()]
+left = [int(i) for i in input().split()]
 A = []
 for i in range(n):
     B = [int(i) for i in input().split()]

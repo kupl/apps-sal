@@ -7,6 +7,5 @@ for x in range(n):
         print('NO')
         break
     play = [x for x in range(1, 4) if (x not in play) or (x in play and x == a)]
-    # print(play)
 else:
     print('YES')
