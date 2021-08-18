@@ -8,7 +8,7 @@ A.sort(reverse=True)
 l = 0
 r = 3 * 10**5
 while r - l > 1:
-    m = (r + l) // 2  # 和がm以上になるペアはいくつ？
+    m = (r + l) // 2
     ind = N - 1
     cnt = 0
     for a in A:

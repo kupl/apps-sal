@@ -9,7 +9,6 @@ def main():
             colors.append(c)
     assert len(colors) == H * W
     ans = [[0 for _ in range(W)] for _ in range(H)]
-    # 蛇腹状にぬっていく
     for i, c in enumerate(colors):
         w = i // H
         h = min([i % (2 * H), 2 * H - 1 - (i % (2 * H))])

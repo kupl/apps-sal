@@ -26,7 +26,6 @@ def div(n):
 
 ANS = list(set(div(ab[0][0]) + div(ab[0][1])))
 
-# print(ANS)
 
 for i in range(1, n):
     ANSX = []

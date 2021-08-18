@@ -13,7 +13,6 @@ p = 10**9 + 7
 H, W, K = map(int, input().split())
 
 dp = [[0] * W for _ in range(H + 1)]
-# dp[i][j] : i段目までみたときjにいくようなあみだくじの本数
 
 dp[0][0] = 1
 

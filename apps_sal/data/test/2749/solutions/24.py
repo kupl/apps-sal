@@ -8,7 +8,6 @@ x, y = 0, 0
 c = 1
 for a in alist:
     while a:
-        # print(x,y)
         cmat[x][y] = c
         y += 1
         a -= 1
@@ -18,7 +17,6 @@ for a in alist:
             y = 0
     c += 1
 
-# print(cmat)
 for i in range(H):
     if i % 2 == 1:
         cmat[i].reverse()

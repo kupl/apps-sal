@@ -32,4 +32,3 @@ for i in range(1, h + 1):
 
 ans = dp[h][k - 1]
 print(ans)
-#print(*dp, sep="\n")

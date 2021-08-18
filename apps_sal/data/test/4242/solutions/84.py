@@ -1,4 +1,3 @@
-# B k-th common Divisor
 a, b, k = list(map(int, input().split()))
 ans = []
 for i in range(1, 101):

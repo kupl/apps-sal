@@ -4,7 +4,6 @@ import itertools as it
 import operator as op
 import fractions as fr
 
-# n,m = map(int,sys.stdin.readline().split())
 n = int(sys.stdin.readline().strip())
 T = list(map(int, sys.stdin.readline().split()))
 

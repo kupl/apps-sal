@@ -1,4 +1,3 @@
-# 実はDPと割り切るとわかりやすい
 mod = 10**9 + 7
 h, w, K = map(int, input().split())
 dp = [[0] * w for j in range(h + 1)]
@@ -28,5 +27,4 @@ for i in range(1, h + 1):
                             dp[i][l - 1] += dp[i - 1][l]
                     else:
                         dp[i][l] += dp[i - 1][l]
-            # dp[i][l]%=mod
 print(dp[h][K - 1] % mod)

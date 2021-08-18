@@ -12,6 +12,3 @@ print(n)
 print(*f[n])
 print(n - 1)
 print(*f[n - 1])
-
-
-# Made By Mostafa_Khaled

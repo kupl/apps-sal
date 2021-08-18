@@ -1,5 +1,3 @@
-# float型を許すな
-# numpyはpythonで
 from math import floor, ceil, pi, factorial
 from bisect import bisect_left, bisect_right
 from operator import itemgetter
@@ -32,7 +30,6 @@ weight = []
 for i in range(100):
     weight.append(a + b)
     a, b = b, a + b
-# print(weight)
 for i in range(h):
     for j in range(w):
         if 0 <= j + 1 < w:

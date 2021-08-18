@@ -1,4 +1,3 @@
-# D - Number of Amidakuji
 
 H, W, K = list(map(int, input().split()))
 MOD = 10**9 + 7
@@ -26,7 +25,6 @@ dp = [[0] * W for _ in range(H + 1)]
 dp[0][0] = 1
 for h in range(H):
     for w in range(W):
-        # まっすぐ降りてくるケース
         tmp = 0
         for i in comb:
             if w == 0 and i[w] == 0:
@@ -37,7 +35,6 @@ for h in range(H):
                 tmp += 1
         dp[h + 1][w] += dp[h][w] * tmp
 
-        # 左からくるケース
         if w != 0:
             tmp = 0
             for i in comb:
@@ -45,7 +42,6 @@ for h in range(H):
                     tmp += 1
             dp[h + 1][w] += dp[h][w - 1] * tmp
 
-        # 右からくるケース
         if w != (W - 1):
             tmp = 0
             for i in comb:

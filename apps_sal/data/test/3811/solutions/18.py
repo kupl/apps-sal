@@ -33,8 +33,6 @@ def divisors(a, b):
     if b != 1 and b not in Divisors:
         Divisors.append(int(b))
 
-    # print(Divisors)
-
     return Divisors
 
 
@@ -56,7 +54,6 @@ def main():
         Ok = 1
         for j in range(1, n):
             if A[j * 2] % Prime[i] != 0 and A[2 * j + 1] % Prime[i] != 0:
-                # print(Prime[i])
                 Ok = 0
                 break
         if (Ok != 0):

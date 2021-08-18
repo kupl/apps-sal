@@ -1,5 +1,3 @@
-# python3
-# utf-8
 
 n = int(input())
 A = [1]

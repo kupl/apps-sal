@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 import itertools
 mod = 1000000007
@@ -18,7 +17,6 @@ for h_ in range(1, h + 1):
                 continue
         if flag == 1:
             continue
-        # print(bridges)
         for w_ in range(w):
             if w_ > 0:
                 if bridges[w_ - 1] == 1:
@@ -30,6 +28,5 @@ for h_ in range(1, h + 1):
                     continue
             dp[h_][w_] += dp[h_ - 1][w_] % mod
 
-# print(dp)
 
 print((dp[-1][k - 1] % mod))

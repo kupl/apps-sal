@@ -12,7 +12,6 @@ def main():
         for j in range(W):
             for k in range(2**(W - 1)):
                 b = bin(k)[2:].zfill(W - 1)
-                # 近接する2つの横線がつながってるか判定
                 flg = True
                 for l in range(W - 2):
                     if b[l] == b[l + 1] == '1':
@@ -21,15 +20,12 @@ def main():
                 if not flg:
                     continue
                 if j >= 1 and b[j - 1] == '1':
-                    # 左方向に横線を辿るケース
                     dp[i + 1][j - 1] += dp[i][j]
                     dp[i + 1][j - 1] %= MOD
                 elif j <= W - 2 and b[j] == '1':
-                    # 右方向に横線を辿るケース
                     dp[i + 1][j + 1] += dp[i][j]
                     dp[i + 1][j + 1] %= MOD
                 else:
-                    # 横線を辿らないケース
                     dp[i + 1][j] += dp[i][j]
                     dp[i + 1][j] %= MOD
 

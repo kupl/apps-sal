@@ -75,13 +75,9 @@ for j in range(2, 151):
         f.append(t_1)
     elif t_2.is_legal():
         f.append(t_2)
-    # print(":(")
 
 
 print(f[n].degree)
 f[n].print()
 print(f[n - 1].degree)
 f[n - 1].print()
-
-# for j in range(len(f)):
-# f[j].print()

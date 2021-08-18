@@ -15,10 +15,4 @@ def make_divisors(n):
 div_A = make_divisors(A)
 div_B = make_divisors(B)
 
-# l = []
-# for i in div_A:
-#     for j in div_B:
-#         if i == j:
-#             l.append(i)
-# print(l[-K])
 print((sorted(set(div_A) & set(div_B))[-K]))
