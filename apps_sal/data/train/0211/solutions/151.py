@@ -1,4 +1,3 @@
-# Brute Force
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
         N = len(s)
@@ -17,7 +16,6 @@ class Solution:
 
             if word:
                 words.append(''.join(word))
-            #print(num, words)
             return len(set(words))
 
         ways = 2 ** (N - 1)

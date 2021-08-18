@@ -1,4 +1,3 @@
-# test case - \"acting\" for explanation
 class Solution:
     def lastSubstring(self, s: str) -> str:
         i = 0

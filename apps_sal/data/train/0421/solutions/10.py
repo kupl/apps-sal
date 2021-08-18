@@ -6,7 +6,7 @@ class Solution:
         char_to_id = {c: i for i, c in enumerate(sorted(set(s)))}
 
         for i in range(len(s) - 1, -1, -1):
-            curr_value = char_to_id[s[i]] + curr_value / len(char_to_id)  # Note, uses floating point.
+            curr_value = char_to_id[s[i]] + curr_value / len(char_to_id)
 
             if curr_value > max_value:
                 max_value = curr_value

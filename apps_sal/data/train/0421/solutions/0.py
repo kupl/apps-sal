@@ -1,9 +1,5 @@
 class Solution:
     def lastSubstring(self, s: str) -> str:
-        # mx = \"\"
-        # for i in range(len(s)):
-        #    mx = max(mx,s[i:])
-        # return mx
         index = {c: i for i, c in enumerate(sorted(set(s)))}
         cur, radix, max_val, max_i = 0, len(index), 0, 0
         for i in range(len(s) - 1, -1, -1):

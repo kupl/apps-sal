@@ -9,7 +9,6 @@ class Solution:
         ans = arr[-1]
         i = n - 2
         while i > -1:
-            # for i in range (n-2,-1,-1):
             if s[i] == char_max:
                 if s[i:] > ans:
                     ans = s[i:]

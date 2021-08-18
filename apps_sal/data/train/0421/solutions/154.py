@@ -11,7 +11,6 @@ class Solution:
         cur, prev = 0, 0
         for i in range(len(s)):
             if s[i] == max_char:
-                #print(i, s[i], s[cur:i+1])
                 if cur and s[cur:] > largest:
                     largest = s[cur:]
                 cur = i
