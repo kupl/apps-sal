@@ -10,7 +10,6 @@ class Solution:
 
         counter = Counter()
         for e, fg in arr:
-            #print(cnt, e-pre)
             if fg == -1:
                 counter[cnt] += e - pre
                 pre = e

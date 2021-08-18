@@ -15,9 +15,8 @@ def solve():
         u, v = getint1()
         adj[u].append(v)
         adj[v].append(u)
-    # dfs 1
     max_child = [[-1] * 3 for _ in range(n)]
-    stack = [(a, -1, 1)]  # (node, parent)
+    stack = [(a, -1, 1)]
     while stack:
         u, p, flag = stack.pop()
         if p != -1 and len(adj[u]) < 2:
@@ -43,13 +42,11 @@ def solve():
                     max_child[u][1] = len_v
                 elif len_v > max_child[u][2]:
                     max_child[u][2] = len_v
-    # end of dfs 1
-    # dfs 2
     body = []
     ret = [False] * n
     max_parent = [-1] * n
     stack.clear()
-    stack = [(a, -1, 0)]  # (node, parent, max len from parent)
+    stack = [(a, -1, 0)]
     while stack:
         u, p, mxp = stack.pop()
         if mxp >= 0:
@@ -83,7 +80,6 @@ def solve():
                 body.append(u)
             ret[u] = is_body
     del ret
-    # end of dfs2
     ok = False
     body_len = len(body)
     can_turn = [False] * n
@@ -95,7 +91,6 @@ def solve():
         print("NO")
         return
     treelen = [1] * body_len
-    # print(body)
     for i in range(body_len):
         cur = body[i]
         pre = -1 if i == 0 else body[i - 1]
@@ -107,7 +102,6 @@ def solve():
             if can_turn[v]:
                 can_turn[cur] = True
                 continue
-            # dfs 3
             stack = [(v, cur)]
             while stack and not can_turn[cur]:
                 u, p = stack.pop()
@@ -119,10 +113,6 @@ def solve():
                         break
                     stack.append((w, u))
             stack.clear()
-            # end of dfs 3
-        # print(i, cur, can_turn[cur])
-    # use two pointer to find if we can enter the turing point
-    # print(body_len, treelen)
     l = 0
     r = body_len - 1
     lmax = treelen[r] - 1
@@ -137,17 +127,11 @@ def solve():
             lmax = max(lmax, r - (body_len - treelen[r]))
         if can_turn[body[l]] or can_turn[body[r]]:
             ok = True
-    ##
     print("YES" if ok else "NO")
     return
-    # end of solve
 
 
 def __starting_point():
-    # solve()
-    # for t in range(getint()):
-    #     print('Case #', t + 1, ': ', sep='')
-    #     solve()
     for _ in range(getint()):
         solve()
 

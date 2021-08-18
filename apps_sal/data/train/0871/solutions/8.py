@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     r, c = [int(a) for a in input().split()]
     a = []
@@ -19,32 +18,32 @@ for i in range(int(input())):
             if a[i][j] == 'R':
                 l = 1
                 for p in range(j + 1, c):
-                    if a[i][p] == '#':
-                        break
+                    if a[i][p] == '
+                    break
                     complete_list[i][p][l] += 1
                     l += 1
 
             elif a[i][j] == 'L':
                 l = 1
                 for p in range(j - 1, -1, -1):
-                    if a[i][p] == '#':
-                        break
+                    if a[i][p] == '
+                    break
                     complete_list[i][p][l] += 1
                     l += 1
 
             elif a[i][j] == 'D':
                 l = 1
                 for p in range(i + 1, r):
-                    if a[p][j] == '#':
-                        break
+                    if a[p][j] == '
+                    break
                     complete_list[p][j][l] += 1
                     l += 1
 
             elif a[i][j] == 'U':
                 l = 1
                 for p in range(i - 1, -1, -1):
-                    if a[p][j] == '#':
-                        break
+                    if a[p][j] == '
+                    break
                     complete_list[p][j][l] += 1
                     l += 1
 

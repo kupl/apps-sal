@@ -11,7 +11,6 @@ class Solution:
 
         for i in range(1, n + 1):
             count[i] += count[i - 1]
-        # print(count)
 
         count = sorted(count, reverse=True)
         nums = sorted(nums, reverse=True)

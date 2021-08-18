@@ -7,7 +7,6 @@ for i in range(q):
         plus = 1
         ost -= 1
     mini = min(n, m) + ost + plus
-    #print('mini: ' + str(mini))
     if k < mini:
         print(-1)
     elif (k - mini) % 2 == 0 or plus == 1:

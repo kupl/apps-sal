@@ -10,7 +10,6 @@ class Solution:
         for i in range(1, n + 1):
             arry[i] += arry[i - 1]
         q = []
-        # print(arry)
         new_arry = [0] * n
         for idx, a in enumerate(arry):
             if a != 0:

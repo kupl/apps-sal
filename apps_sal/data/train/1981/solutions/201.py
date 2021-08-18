@@ -21,9 +21,6 @@ class Solution:
         sc = list(sorted(counts))
         sn = list(sorted(nums))
 
-        # print(sc)
-        # print(sn)
-
         for i in range(len(sc)):
             r += sc[i] * sn[i]
 

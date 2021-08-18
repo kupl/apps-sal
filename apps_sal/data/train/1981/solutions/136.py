@@ -8,19 +8,16 @@ class Solution:
         for i in range(1, len(l)):
             l[i] += l[i - 1]
         l = l[:-1]
-        # print(l)
         d = collections.defaultdict(list)
         for i in range(len(l)):
             d[l[i]].append(i)
         di = collections.OrderedDict(sorted(d.items()))
-        # print(di)
         k = 0
         ans = [0] * len(nums)
         for i in di:
             for j in di[i]:
                 ans[j] = nums[len(nums) - k - 1]
                 k += 1
-        # return ans
         c = 0
         print(ans)
         for i in range(1, len(ans)):

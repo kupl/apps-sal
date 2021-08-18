@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 from math import factorial
 t = int(input())
@@ -19,8 +18,8 @@ for _ in range(t):
                 y = j
 
                 while y < m:
-                    if l[x][y] != '#':
-                        hash[(count, x, y)] += 1
+                    if l[x][y] != '
+                    hash[(count, x, y)] += 1
                     else:
                         break
 
@@ -32,8 +31,8 @@ for _ in range(t):
                 y = j
                 count = 0
                 while y >= 0:
-                    if l[x][y] != '#':
-                        hash[(count, x, y)] += 1
+                    if l[x][y] != '
+                    hash[(count, x, y)] += 1
                     else:
                         break
 
@@ -45,8 +44,8 @@ for _ in range(t):
                 y = j
                 count = 0
                 while x >= 0:
-                    if l[x][y] != '#':
-                        hash[(count, x, y)] += 1
+                    if l[x][y] != '
+                    hash[(count, x, y)] += 1
                     else:
                         break
 
@@ -57,8 +56,8 @@ for _ in range(t):
                 y = j
                 count = 0
                 while x < n:
-                    if l[x][y] != '#':
-                        hash[(count, x, y)] += 1
+                    if l[x][y] != '
+                    hash[(count, x, y)] += 1
                     else:
                         break
 
@@ -71,5 +70,4 @@ for _ in range(t):
         if z > 1:
             ans += factorial(z) // ((factorial(z - 2)) * factorial(2))
 
-    # print(hash.keys())
     print(ans)

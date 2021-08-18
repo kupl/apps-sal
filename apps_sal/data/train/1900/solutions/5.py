@@ -4,9 +4,6 @@ class Solution:
         :type root: TreeNode
         :rtype: int
         """
-        # perform iterative level traversal with null also accounted
-        # Notice each node can be represented with depth, position
-        # root.left = d+1, pos*2; root.right = d+1, pos*2-1
         if not root:
             return 0
         queue = collections.deque([[root, 0]])

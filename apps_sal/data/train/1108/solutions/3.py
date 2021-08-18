@@ -1,4 +1,3 @@
-# cook your dish here
 n, m, k = map(int, input().split())
 condit = 0
 for _ in range(n):
