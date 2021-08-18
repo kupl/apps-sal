@@ -1,20 +1,6 @@
 class Solution:
     def consecutiveNumbersSum(self, N: int) -> int:
-        #         if N < 3: return 1
-        #         l = 1
-        #         r = 0
-        #         s = 0
-        #         ret = 0
-        #         while r < (N + 1) // 2:
-        #             r += 1
-        #             s += r
 
-        #             while s > N:
-        #                 s -= l
-        #                 l += 1
-        #             if s == N:
-        #                 ret += 1
-        #         return ret + 1
         ans = 0
         k = 1
         while True:

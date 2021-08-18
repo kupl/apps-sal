@@ -2,8 +2,6 @@ class Solution:
     def consecutiveNumbersSum(self, N: int) -> int:
         l = 1
         out = 0
-        # range start a, end b
-        # l = b - a + 1
         while (1 + l) * l / 2 <= N:
             b = (2 * N + l**2 - l) / (2 * l)
             a = b + 1 - l

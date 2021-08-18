@@ -7,8 +7,3 @@ class Solution:
                 res += 1
             i += 1
         return res
-
-
-# N = k + k+1 + ... k+i-1
-# N = k*i + (0+i-1)*i/2
-# N - i*(i-1)/2 = k*i

@@ -38,7 +38,6 @@ class Solution1:
                 res += 1
 
         return res
-# refactor
 
 
 class Solution:

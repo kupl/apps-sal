@@ -1,11 +1,9 @@
 def hex_to_dec(s):
     hex_dic = {}
 
-    # Numbers
     for i in range(10):
         hex_dic[str(i)] = i
 
-    # Letters
     next_letter = 10
     for i in ['a', 'b', 'c', 'd', 'e', 'f']:
         hex_dic[i] = next_letter

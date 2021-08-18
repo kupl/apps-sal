@@ -11,5 +11,4 @@ class Solution:
                 m = c // 2
                 if m > 0:
                     ans += 1
-                    #print(m, k)
         return ans

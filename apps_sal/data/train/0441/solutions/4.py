@@ -6,6 +6,5 @@ class Solution:
             if x <= 0:
                 break
             if x == int(x):
-                # print(i,x)
                 ans += 1
         return ans

@@ -38,6 +38,5 @@ for testcases in range(t):
             count = 1
             countmax = K[x][1]
 
-        # print(a,count,countmax,ANS)
     else:
         print(ANS)

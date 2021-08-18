@@ -1,5 +1,4 @@
 def sum_to_infinity(sequence):
-    # Good Luck!
     sum = 0
     print(sequence)
     if(len(sequence) > 1):

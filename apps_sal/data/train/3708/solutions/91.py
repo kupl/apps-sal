@@ -4,7 +4,7 @@ def hex_to_dec(s):
 
     result = 0
 
-    rev = s[::-1]  # 10 -> 01 -> 0 * 16^0 + 1 * 16^1 = 16
+    rev = s[::-1]
 
     for idx in range(len(rev)):
         result += hex[rev[idx]] * 16**idx
