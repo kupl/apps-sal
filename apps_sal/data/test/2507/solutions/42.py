@@ -15,7 +15,7 @@ left = -1
 right = 10 ** 12 + 1
 while right > left + 1:
     mid = (right + left) // 2
-    if C(mid):  # 食べきれる場合
+    if C(mid):
         right = mid
     else:
         left = mid

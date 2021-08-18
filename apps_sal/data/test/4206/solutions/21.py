@@ -1,4 +1,3 @@
-# codeforces_1005D_live
 s = input()
 ans = 0
 stack = ""

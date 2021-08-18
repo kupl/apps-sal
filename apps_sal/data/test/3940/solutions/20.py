@@ -5,7 +5,6 @@ input = sys.stdin.readline
 n, m = list(map(int, input().split()))
 ans = n
 lists = []
-##
 for k in range(m):
     st, en = list(map(int, input().split()))
 

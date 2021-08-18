@@ -1,7 +1,7 @@
 S = input()
 ans = 0
-flag = False  # 繰り上がりありならTrue
-flag2 = False  # 前が5ならTrue
+flag = False
+flag2 = False
 for k in range(len(S)):
     n = int(S[-k - 1])
     if flag2:

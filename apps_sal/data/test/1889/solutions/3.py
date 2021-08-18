@@ -40,11 +40,11 @@ def main_input(info=0):
     g = list(range(n))
     sc = list(range(n))
     for i in range(n):
-        g[i] = VI()  # m elem
+        g[i] = VI()
         sc[i] = get_score(g[i])
     r = list(range(q))
     for k in range(q):
-        i, j = VI()  # i,j - 2 elem
+        i, j = VI()
         i, j = i - 1, j - 1
         g[i][j] = 1 - g[i][j]
         sc[i] = get_score(g[i])

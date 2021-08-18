@@ -18,7 +18,7 @@ f.sort(reverse=True)
 a = np.array(a)
 f = np.array(f)
 
-l, r = -1, 10**12  # l:ng, r:ok
+l, r = -1, 10**12
 while l + 1 < r:
     mid = (l + r) // 2
     if is_ok(mid, k):

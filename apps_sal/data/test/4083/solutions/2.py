@@ -30,7 +30,5 @@ for i in ss:
         l = [i for i in l if i != -1]
         l.sort()
         l = l[:k]
-     #   if sum(l)<mi:
-      #      print(l,i)
         mi = min(mi, sum(l))
 print(mi)

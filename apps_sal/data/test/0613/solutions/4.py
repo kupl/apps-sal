@@ -23,6 +23,5 @@ if len(cf) >= 2 and cf[-1] == 1 and cf[-2] == 0:
     a2 = sum([x * y for x, y in zip(cf, [t**n for n in range(len(cf))])])
     if a2 == a:
         ans += 1
-#if a == b: ans += 1
 
 print(ans)

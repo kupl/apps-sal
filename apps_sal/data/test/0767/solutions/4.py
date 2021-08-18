@@ -10,7 +10,6 @@ for i in range(len(p) // 2, len(p)):
 if pos == -1:
     print(0)
 else:
-    # print(z, p, pos)
     r = pos
     l = 0
     ctr = 0

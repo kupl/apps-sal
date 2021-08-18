@@ -16,7 +16,6 @@ def test(x):
 def nibutan(low, hi):
     while True:
         ave = (low + hi) // 2
-        # ここの条件式を問題文に合わせる
         if test(ave):
             hi = ave
         else:

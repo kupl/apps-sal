@@ -5,13 +5,11 @@ def main():
     up = 0
     for i, n in enumerate(N):
         d = n + up
-        # くりあがりアリ
         if d > 5 or (i < len(N) - 1 and d == 5 and N[i + 1] >= 5):
-            ans += 10 - d  # 0枚の支払い（後に回す）、10-d枚のおつり
+            ans += 10 - d
             up = 1
-        # くりあがりナシ
         else:
-            ans += d  # d枚の支払い、0枚のおつり
+            ans += d
             up = 0
     print(ans)
 

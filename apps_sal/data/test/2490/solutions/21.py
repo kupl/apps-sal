@@ -1,6 +1,6 @@
 def solve(N):
     N = [0] + N
-    k = 0  # 繰り上がり
+    k = 0
     ans = 0
     for d, d_next in zip(N[::-1], N[-2::-1]):
         d += k
@@ -27,7 +27,4 @@ def main():
     print((solve(N)))
 
 
-    # for i in range(1, 10000):
-    #     ans = solve(list(map(int, str(i))))
-    #     test(i, ans)
 main()

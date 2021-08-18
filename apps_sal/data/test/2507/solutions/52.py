@@ -13,7 +13,6 @@ else:
         r = 10**12
         while (r - l) > 1:
             mid = (r + l) // 2
-            # 成績がmidだったとして、修行しなければならない回数を算出
             fmid = (np.fmax([0] * N, A - (mid // F))).sum()
             if fmid <= K:
                 r = mid
