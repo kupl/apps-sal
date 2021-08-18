@@ -1,4 +1,3 @@
-# 適当に愚直
 h, w = list(map(int, input().split()))
 table = [list(input()) for _ in range(h)]
 table2 = []

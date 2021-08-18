@@ -1,4 +1,3 @@
-# init
 t, a = input(), input()
 
 t, a = t.replace('5', '2'), a.replace('5', '2')

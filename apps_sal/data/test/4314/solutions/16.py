@@ -6,8 +6,8 @@ ans = copy.copy(a)
 for i in range(h):
     bool = True
     for j in range(w):
-        if a[i][j] == '#':
-            bool = False
+        if a[i][j] == '
+        bool = False
     if bool:
         index -= 1
         del ans[index + i]
@@ -16,8 +16,8 @@ key = 1
 for i in range(w):
     bool = True
     for j in range(h - (1 - index)):
-        if ans[j][i] == '#':
-            bool = False
+        if ans[j][i] == '
+        bool = False
     if bool:
         key -= 1
         for k in range(h - (1 - index)):

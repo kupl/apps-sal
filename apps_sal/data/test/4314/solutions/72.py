@@ -5,9 +5,9 @@ c = [0] * H
 for i in range(H):
     cnt = 0
     for j in range(W):
-        if a[i][j] == '#':
-            b[j] += 1
-            cnt += 1
+        if a[i][j] == '
+        b[j] += 1
+        cnt += 1
     c[i] = cnt
 
 for i in range(H):

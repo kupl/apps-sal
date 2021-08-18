@@ -6,15 +6,15 @@ resW = [True] * W
 for h in range(H):
     judge = False
     for w in range(W):
-        if a[h][w] == "#":
-            judge = True
+        if a[h][w] == "
+        judge = True
     resH[h] = judge
 
 for w in range(W):
     judge = False
     for h in range(H):
-        if a[h][w] == "#":
-            judge = True
+        if a[h][w] == "
+        judge = True
     resW[w] = judge
 
 for h, row in enumerate(a):

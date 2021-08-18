@@ -24,7 +24,7 @@ for i in range(amat2.shape[0]):
     temp = ''
     for s in amat2[i]:
         if s == 1:
-            temp += '#'
+            temp += '
         else:
             temp += '.'
     ans.append(temp)

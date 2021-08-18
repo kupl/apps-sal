@@ -7,9 +7,9 @@ row = [False] * h
 col = [False] * w
 for i in range(h):
     for j in range(w):
-        if a[i][j] == '#':
-            row[i] = True
-            col[j] = True
+        if a[i][j] == '
+        row[i] = True
+        col[j] = True
 
 for i in range(h):
     if row[i]:

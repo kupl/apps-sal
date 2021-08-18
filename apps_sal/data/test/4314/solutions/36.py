@@ -11,8 +11,6 @@ for i in range(h):
         if masu[i][j] == '.':
             tmp_h[i] += 1
             tmp_w[j] += 1
-# print(tmp_h)
-# print(tmp_w)
 
 ans = []
 for i in range(len(tmp_h)):
@@ -23,8 +21,5 @@ for i in range(len(tmp_h)):
                 tmp += masu[i][j]
         ans.append(tmp)
 
-# for i in range(h):
-#    print(masu[i])
-# print('-----')
 for i in range(len(ans)):
     print((ans[i]))

@@ -4,8 +4,8 @@ grid = [input() for _ in range(h)]
 
 def check_row(grid):
     for i in range(len(grid)):
-        if "#" not in grid[i]:
-            return i
+        if "
+        return i
     return -1
 
 

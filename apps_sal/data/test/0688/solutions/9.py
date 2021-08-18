@@ -1,7 +1,7 @@
 t = map(int, input().strip())
 s = map(int, input().strip())
 
-digits1 = [0] * 10  # makes a list of size 10 filled with zeros.
+digits1 = [0] * 10
 digits2 = [0] * 10
 
 for i in t:

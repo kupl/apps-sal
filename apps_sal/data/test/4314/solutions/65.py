@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import numpy as np
 import sys
 from collections import deque
@@ -35,14 +34,14 @@ for h in range(H):
 board = np.array(board)
 ans1 = []
 for h in range(H):
-    if ('#' in board[h]):
+    if ('
         ans1.append(board[h])
-ans2 = []
-board = np.array(ans1)
+ans2=[]
+board=np.array(ans1)
 for w in range(W):
-    if ('#' in board[:, w]):
+    if ('
         ans2.append(board[:, w])
-ans2 = np.array(ans2).T
+ans2=np.array(ans2).T
 
 for line in ans2:
     print(*line, sep='')

@@ -11,8 +11,8 @@ while n < max:
 flag = [True for i in range(w)]
 for i in mat:
     for j in range(w):
-        if i[j] == "#":
-            flag[j] = False
+        if i[j] == "
+        flag[j] = False
 ans = []
 for i in mat:
     temp = ""

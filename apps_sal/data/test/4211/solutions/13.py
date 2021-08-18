@@ -1,4 +1,3 @@
-# nは数列Aの長さ　Bの長さはn-1
 n = int(input())
 bn = list(map(int, input().split()))
 
