@@ -52,7 +52,6 @@ def bfs(sor):
             if vis[i] == 0:
                 vis[i] = 1
                 s.append(i)
-                # final.append((k,i))
 
 
 def bfs2(sor):
@@ -106,7 +105,6 @@ if lk <= d:
     else:
         vis = [0 for i in range(n + 1)]
         bfs2(1)
-        # print(vis,t)
         if sum(vis) == n:
             print("YES")
             for i in final:

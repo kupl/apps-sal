@@ -1,5 +1,5 @@
 import time
-from collections import*  # defaultdict Counter deque appendleft
+from collections import*
 import sys
 input = sys.stdin.readline
 t = time.time()

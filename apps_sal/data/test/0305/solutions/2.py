@@ -7,8 +7,6 @@ def getVars(): return list(map(int, input().split()))
 def getList(): return list(map(int, input().split()))
 def getStr(): return input().strip()
 
-# -------------------------------
-
 
 a = getInt()
 b = getInt()

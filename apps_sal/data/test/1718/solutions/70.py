@@ -1,6 +1,6 @@
 import sys
 def MI(): return list(map(int, sys.stdin.readline().rstrip().split()))
-def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))  # 空白あり
+def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 
 
 N, K = MI()

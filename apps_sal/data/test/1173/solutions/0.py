@@ -32,8 +32,6 @@ def main():
         print(-1)
         return
 
-    # print(d)
-
     while len(d) > 0:
         if time.time() - t1 >= 1.95:
             print(n * (n - 1) // 2)
@@ -51,8 +49,6 @@ def main():
 
                 if check[mys] == n - 1 or check[psn] == n - 1:
                     continue
-                # print(tmp,psn,a[psn][check[psn]])
-                # print(i,j,tmp,psn,check[mys],check[psn])
                 if used[mys] == True or used[psn] == True:
                     continue
 
@@ -62,7 +58,6 @@ def main():
                     used[psn] = True
                     check[mys] += 1
                     check[psn] += 1
-        # print(d)
 
     for i in range(n):
         if check[i] != n - 1:

@@ -1,5 +1,3 @@
-#!/usr/local/bin/python3
-# https://atcoder.jp/contests/abc160/tasks/abc160_c
 
 K, N = list(map(int, input().split()))
 A = list(map(int, input().split()))

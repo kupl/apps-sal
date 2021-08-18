@@ -42,7 +42,6 @@ def main():
 
         ans += 1
 
-    # 全て空なら
     size = 0
     for i in range(N):
         size += len(q[i])

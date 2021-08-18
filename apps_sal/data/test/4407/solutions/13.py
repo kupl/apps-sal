@@ -1,17 +1,7 @@
-#!/usr/bin/env python3
-# encoding: utf-8
 
-
-# ----------
-# Constants
-# ----------
 
 DEGREE_ARRAY_SIZE = 32
 VALUES = {2**i: i for i in range(DEGREE_ARRAY_SIZE)}
-
-# ----------
-# Functions
-# ----------
 
 
 def convert(a):
@@ -32,15 +22,7 @@ def calc(q, b):
     ans = 0
     val = 2 ** (len(b) - 1)
     for cnt in reversed(b):
-        # if q >= val * cnt:
-        #    q -= val * cnt
-        #    ans += cnt
-        #    if q == 0:
-        #        break
         if q >= val:
-            #    c = min(cnt, q // val)
-            #    q -= c * val
-            #    ans += c
             r = q % val
             d = q // val
             if cnt < d:
@@ -55,21 +37,13 @@ def calc(q, b):
     return ans if q == 0 else -1
 
 
-# Reads a string from stdin, splits it by space chars, converts each
-# substring to int, adds it to a list and returns the list as a result.
 def get_ints():
     return [int(n) for n in input().split()]
 
 
-# Reads a string from stdin, splits it by space chars, converts each substring
-# to floating point number, adds it to a list and returns the list as a result.
 def get_floats():
     return [float(n) for n in input().split()]
 
-
-# ----------
-# Execution start point
-# ----------
 
 def __starting_point():
     a = get_ints()

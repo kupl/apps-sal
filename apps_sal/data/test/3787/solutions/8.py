@@ -26,14 +26,5 @@ def main():
 def __starting_point():
     main()
 
-# import sys
-#
-# sys.setrecursionlimit(10 ** 7)
-#
-# input = sys.stdin.readline
-# rstrip()
-# int(input())
-# map(int, input().split())
-
 
 __starting_point()

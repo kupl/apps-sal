@@ -13,10 +13,6 @@ day = 1
 s = set()
 
 while q:
-    # print('-' * 30)
-    # print('pool:', pool)
-    # print('s:', s)
-    # print('q:', q)
     p = q.popleft()
     if p not in pool:
         pool.add(p)
@@ -38,7 +34,6 @@ while q:
         if idx[y] < n - 1:
             q.append(a[y][idx[y]])
 
-# print('=' * 20)
 if pool:
     print(-1)
 else:
