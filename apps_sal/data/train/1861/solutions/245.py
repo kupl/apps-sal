@@ -15,24 +15,3 @@ class Solution:
                         res = min(res, abs(p1[1] - p2[1]) * abs(p1[0] - p2[0]))
         res = res if res < 2**31 else 0
         return res
-
-
-#         p = collections.defaultdict(list)
-#         if nx > ny:
-#             for x, y in points:
-#                 p[x].append(y)
-#         else:
-#             for x, y in points:
-#                 p[y].append(x)
-
-#         lastx = {}
-#         res = float('inf')
-#         for x in sorted(p):
-#             p[x].sort()
-#             for i in range(len(p[x])):
-#                 for j in range(i):
-#                     y1, y2 = p[x][j], p[x][i]
-#                     if (y1, y2) in lastx:
-#                         res = min(res, (x - lastx[y1, y2]) * abs(y2 - y1))
-#                     lastx[y1, y2] = x
-#         return res if res < float('inf') else 0

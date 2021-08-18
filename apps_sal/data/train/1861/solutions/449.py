@@ -7,7 +7,6 @@ class Solution:
 
         print('columns is: ' + str(columns))
 
-        # Map from (y1, y2) pair to x
         lastSeen = {}
         for x in sorted(columns.keys()):
             column = sorted(columns[x])

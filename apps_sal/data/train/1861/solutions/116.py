@@ -1,12 +1,5 @@
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
-        #
-        #  0123456
-        # 0
-        # 1 * **
-        # 2
-        # 3 * **
-        # 4
         seen = set()
         best = 0
 

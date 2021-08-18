@@ -6,18 +6,17 @@ class Solution:
         for j, p2 in enumerate(points):
             for i in range(j):
                 p1 = points[i]
-                if (p1[0] != p2[0] and p1[1] != p2[1] and
-                        (p1[0], p2[1]) in S and (p2[0], p1[1]) in S):
+                if (p1[0] != p2[0] and p1[1] != p2[1]
+                        and (p1[0], p2[1]) in S and (p2[0], p1[1]) in S):
                     ans = min(ans, abs(p2[0] - p1[0]) * abs(p2[1] - p1[1]))
         return ans if ans < float('inf') else 0
 
-        res = float('inf')  # initiate as inf
+        res = float('inf')
         lookup = set()
         for x1, y1 in points:
             for x2, y2 in lookup:
-                if (x1, y2) in lookup and (x2, y1) in lookup:  # if all in the lookup
-                    res = min(res, abs(x1 - x2) * abs(y1 - y2))  # check the min area
-            # add to lookup for the outer loop
+                if (x1, y2) in lookup and (x2, y1) in lookup:
+                    res = min(res, abs(x1 - x2) * abs(y1 - y2))
             lookup.add((x1, y1))
         return res if res != float('inf') else 0
 

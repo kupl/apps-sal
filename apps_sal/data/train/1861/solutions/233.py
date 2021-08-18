@@ -3,7 +3,7 @@ from collections import defaultdict
 
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
-        dctyx = defaultdict(set)  # key: y, value:x
+        dctyx = defaultdict(set)
         dctxy = defaultdict(set)
         xlist = []
         ylist = []

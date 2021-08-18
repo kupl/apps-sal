@@ -1,8 +1,5 @@
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
-        # [[1,1],[2,2],[1,3],[3,1],[3,3],[4,1],[4,3]]
-        # vsides = {1: [1,3], 2:[2], 3:[1, 3], 4:[1,3]}
-        # slengths = {(1,3):1}
         vsides = dict()
         for x, y in points:
             if x in vsides:

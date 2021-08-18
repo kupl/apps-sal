@@ -9,7 +9,6 @@ class Solution:
                 B = points[j]
                 if A[0] == B[0] or A[1] == B[1]:
                     continue
-                # if (A[1]-B[1])//(A[0]-B[0]) >= 0: continue
 
                 if (A[0], B[1]) in pointset and (B[0], A[1]) in pointset:
                     ans = min(ans, area(A, B))

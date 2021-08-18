@@ -1,8 +1,5 @@
 class Solution:
     def minAreaRect(self, points: List[List[int]]) -> int:
-        # N = 500 is really loose.
-        # Just check all pairs of points.
-        # Time O(N^2) , 1000ms ~ 1200ms
 
         seen = set()
         minA = float('inf')
