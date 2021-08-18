@@ -1,13 +1,3 @@
-#
-# Written by NoKnowledgeGG @YlePhan
-# ('ω')
-#
-#import math
-#mod = 10**9+7
-#import itertools
-#import fractions
-#import numpy as np
-#mod = 10**4 + 7
 """def kiri(n,m):
   r_ = n / m
   if (r_ - (n // m)) > 0:
@@ -43,15 +33,15 @@ print(next(generator))
 print(next(generator))
 """
 """def gcd_(a,b):
-  if b == 0:#結局はc,0の最大公約数はcなのに
+  if b == 0:
     return a
-  return gcd_(a,a % b) # a = p * b + q"""
-"""def extgcd(a,b,x,y):
+  return gcd_(a,a % b)
+"""def extgcd(a, b, x, y):
   d = a
-  if b!=0:
-    d = extgcd(b,a%b,y,x)
-    y -= (a//b) * x
-    print(x,y)
+  if b != 0:
+    d = extgcd(b, a % b, y, x)
+    y -= (a // b) * x
+    print(x, y)
   else:
     x = 1
     y = 0

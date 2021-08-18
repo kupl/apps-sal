@@ -1,5 +1,3 @@
-# coding: utf-8
-# hello worldと表示する
 from math import floor, ceil, pi, factorial
 from bisect import bisect_left, bisect_right
 from copy import deepcopy
@@ -41,7 +39,6 @@ SMAX1 = (w - fw) * (h - fh)
 SMIN1 = min(fw * h, (w - fw) * fh)
 SMAX2 = max(cw * h, (w - cw) * (h - fh))
 SMIN2 = (w - cw) * fh
-# print(SMAX1,SMIN1,SMAX2,SMIN2)
 s3 = min(SMAX1 - SMIN1, SMAX2 - SMIN2)
 h, w = w, h
 fw = floor(w / 3)
@@ -52,6 +49,5 @@ SMIN1 = min(fw * h, (w - fw) * fh)
 SMAX2 = max(cw * h, (w - cw) * (h - fh))
 SMIN2 = (w - cw) * fh
 s4 = min(SMAX1 - SMIN1, SMAX2 - SMIN2)
-# print(s1,s2,s3,s4)
 ans = min(s1, s2, s3, s4)
 print(ans)

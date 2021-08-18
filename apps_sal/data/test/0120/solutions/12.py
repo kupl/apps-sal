@@ -1,4 +1,3 @@
-#   Yergali B
 n = int(input())
 s = input()
 k = n // 4

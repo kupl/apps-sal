@@ -1,13 +1,12 @@
-# 75 C - 怪文書
 import collections
 n = int(input())
 S = [input() for _ in range(n)]
 
 cnt = collections.Counter(S[0])
-for s in S[1:]:  # O (50)
-    for a in cnt.keys():  # O(26)
-        if a in s:  # O(50)
-            cnt[a] = min(cnt[a], s.count(a))  # O(50)
+for s in S[1:]:
+    for a in cnt.keys():
+        if a in s:
+            cnt[a] = min(cnt[a], s.count(a))
         else:
             cnt[a] = 0
 

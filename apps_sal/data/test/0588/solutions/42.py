@@ -27,7 +27,6 @@ m = 0
 for start in range(N):
     for end in range(N):
         s = 0
-        # print(start,end,N,L(start,end,N))
         for k in L(start, end, N):
             s += cs[k]
         m = max(m, abs(s))

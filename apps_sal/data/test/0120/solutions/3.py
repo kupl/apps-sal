@@ -17,8 +17,6 @@ def main():
             app += i[0] * (n // 4 - i[1])
         else:
             return 0
-    # print(s)
-    # print(app)
     print(s.replace("?", "{}").format(*list(app)))
     return 1
 

@@ -18,7 +18,6 @@ fights = 0
 while k1 and k2:
     topcomb = (''.join(map(str, k1)), ''.join(map(str, k2)))
     if topcomb in combs:
-        #        print(fights)
         fights = -1
         break
     combs.add(topcomb)

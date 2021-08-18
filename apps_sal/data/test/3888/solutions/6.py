@@ -8,7 +8,6 @@ N = int(input())
 a = [list(map(int, input().split()))]
 for i in range(1, N):
     a.append([int(input())])
-    # 最初の4行 / 4列のみを愚直に計算する
     if i < 4:
         stop = N
     else:

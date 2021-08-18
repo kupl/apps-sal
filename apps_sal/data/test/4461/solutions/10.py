@@ -1,7 +1,7 @@
 H, W = map(int, input().split())
 
 
-def abc(x, y, z):  # x,y:高さまたは幅、z:ｙの幅をもつピースの高さ
+def abc(x, y, z):
     a = z * y
     if (x - z) & 1 and y & 1:
         b = max(x - z, y) // 2 * min(x - z, y)
@@ -11,11 +11,11 @@ def abc(x, y, z):  # x,y:高さまたは幅、z:ｙの幅をもつピースの�
     return a, b, c
 
 
-def diffS(a, b, c):  # a,b,c:abc()の戻り値
+def diffS(a, b, c):
     return max(a, b, c) - min(a, b, c)
 
 
-def solve(x, y):  # x,y:高さまたは幅
+def solve(x, y):
     z = x // 3
     return min(diffS(*abc(x, y, z)), diffS(*abc(x, y, z + 1)))
 

@@ -1,4 +1,3 @@
-# C - 怪文書
 def main():
     n = int(input())
     ans = list(input())

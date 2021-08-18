@@ -20,7 +20,6 @@ def main0(n, a0, a1):
         for i in range(1, n):
             mat[i][j] = met(mat[i][j - 1], mat[i - 1][j])
             ret[mat[i][j]] += 1
-    #for x in mat:print(*x)
     return ret
 
 

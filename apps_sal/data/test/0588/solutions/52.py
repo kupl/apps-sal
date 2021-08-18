@@ -6,7 +6,6 @@ A = [t for _ in range(N) if (t := tuple(map(int, input().split()))) != (0, 0)]
 
 A.sort(key=lambda x: atan2(x[1], x[0]))
 
-# 向きが同じエンジンは１つにまとめる
 Ax, Ay = [], []
 for _, v in itertools.groupby(A, key=lambda x: atan2(x[1], x[0])):
     sx, sy = 0, 0

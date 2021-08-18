@@ -24,6 +24,3 @@ def s(a, b):
 f = s(h, w)
 g = s(w, h)
 print((min(f, g)))
-
-# print(ans)
-# print(min(ans))
