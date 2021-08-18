@@ -1,6 +1,5 @@
 t = int(input().strip())
 for _ in range(t):
-    #a,b = map(int,input().strip().split())
     n = int(input().strip())
     nums = [int(i) for i in input().strip().split()]
     if n == 1 and nums[0] % 2 != 0:

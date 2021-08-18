@@ -9,7 +9,6 @@ def main():
     m = k % dow
     ans = [d[(m - 1 + x) % dow] + 7 * (w + int(m - 1 + x >= (dow if m else 0))) - d[x] + 1 for x in range(dow)]
     print(min(ans))
-    # print(ans)
 
 
 for _ in range(int(input())):

@@ -1,4 +1,3 @@
-# 36
 n, m = map(int, input().split())
 l_max, r_min = -1, float('inf')
 for i in range(m):

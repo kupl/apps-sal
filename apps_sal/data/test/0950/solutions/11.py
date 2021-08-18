@@ -4,7 +4,7 @@ import itertools
 
 alpha = list('abcdefghijklmnopqrstuvwxyz')
 digit = list('1234567890')
-spec = ['*', '&', '#']
+spec = ['*', '&', '
 
 
 def find(s):

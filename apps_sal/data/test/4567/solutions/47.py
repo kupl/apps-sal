@@ -5,7 +5,6 @@ for i in range(n):
     now = int(input())
     point.append(now)
     sum += now
-#point = list(map(int, input()))
 if sum % 10 != 0:
     print(sum)
 else:

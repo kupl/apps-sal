@@ -47,7 +47,6 @@ for i in range(m - 1, -1, -1):
         Sortlist.append([r[i], t[i]])
         Sortcount += 1
         M = r[i]
-# a.qsort(0,Sortlist[-1][0]-1,1)
 S = sorted(adata[0:Sortlist[-1][0]])
 L = 0
 R = M - 1

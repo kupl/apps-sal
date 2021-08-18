@@ -8,7 +8,7 @@ lines = [sys.stdin.readline() for _ in range(n)]
 classes = [
     [str(x) for x in range(10)],
     [chr(x) for x in range(ord('a'), ord('z') + 1)],
-    ['#', '*', '&']
+    ['
 ]
 
 

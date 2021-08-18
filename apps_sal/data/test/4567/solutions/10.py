@@ -1,4 +1,3 @@
-# 16 C - Bugged
 N = int(input())
 s = [int(input()) for _ in range(N)]
 s = sorted(s, reverse=False)

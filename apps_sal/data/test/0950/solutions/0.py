@@ -26,8 +26,8 @@ for _ in range(n):
     for i in range(len(a[-1])):
         if a[-1][i] in '0123456789':
             c = min(c, i, len(a[-1]) - i)
-        if a[-1][i] in '#*&':
-            t = min(t, i, len(a[-1]) - i)
+        if a[-1][i] in '
+        t = min(t, i, len(a[-1]) - i)
         if 'a' <= a[-1][i] <= 'z':
             l = min(l, i, len(a[-1]) - i)
     '''if c == t == 1000000 or c == l == 1000000 or l == t == 1000000:

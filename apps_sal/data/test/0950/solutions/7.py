@@ -7,7 +7,7 @@ for k in range(n):
 def f(x):
     if x in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]:
         return "c"
-    elif x in ["*", "#", "&"]:
+    elif x in ["*", "
         return "s"
     else:
         return "l"

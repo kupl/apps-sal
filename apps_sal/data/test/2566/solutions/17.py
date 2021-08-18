@@ -8,8 +8,6 @@ for i in range(n):
     ans = -1
     for j in range(7):
         schedule = [tmpSchedule[k % 7] for k in range(j, j + 7)]
-    #l = schedule.find('1')
-    #r = schedule.rfind('1')
         worked = []
         for i in range(len(schedule)):
             if schedule[i] == '1':

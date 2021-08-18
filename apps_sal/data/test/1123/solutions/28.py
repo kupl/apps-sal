@@ -1,4 +1,3 @@
-# E - Sum of gcd of Tuples (Hard)
 MOD = 10**9 + 7
 
 
