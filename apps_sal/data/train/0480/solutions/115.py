@@ -5,7 +5,6 @@ class Solution:
 
         MODULO = 10 ** 9 + 7
         ans = [0] * arrLen
-        # step 1:
         ans[0] = 1
         ans[1] = 1
 

@@ -1,4 +1,3 @@
-#!/usr/bin/env pypy3
 
 from sys import stdin, stdout
 
@@ -17,7 +16,6 @@ def ans(S):
     for c in S:
         if c == '0':
             if len(num_1) == 0:
-                # create new
                 num_0 += [(len(num_0) + len(num_1))]
             else:
                 num_0 += [num_1.pop()]
@@ -28,7 +26,6 @@ def ans(S):
             assert(c == '1')
 
             if len(num_0) == 0:
-                # create new
                 num_1 += [(len(num_0) + len(num_1))]
             else:
                 num_1 += [num_0.pop()]

@@ -3,7 +3,7 @@ class Solution:
         mod = 10 ** 9 + 7
         if arrlen == 1:
             return 1
-        dp = [[0] * min(arrlen, steps + 1) for _ in range(steps + 1)]  # dp[a][b]: stays at position b after a steps
+        dp = [[0] * min(arrlen, steps + 1) for _ in range(steps + 1)]
         dp[1][0] = 1
         dp[1][1] = 1
         for a in range(2, steps + 1):

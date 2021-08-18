@@ -1,8 +1,6 @@
 class Solution:
     def numWays(self, steps: int, arrLen: int) -> int:
         def ncr(n, r, p):
-            # initialize numerator
-            # and denominator
             num = den = 1
             for i in range(r):
                 num = (num * (n - i)) % p
@@ -28,7 +26,5 @@ class Solution:
             if numMoves % 2 != 0:
                 continue
             ans += (ncr(numstay + numMoves, numstay, 1000000007) * dp[numMoves][0]) % 1000000007
-            # print(numstay,numMoves,ans)
             ans = ans % 1000000007
-        # print(dp)
         return ans + 1

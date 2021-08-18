@@ -8,7 +8,6 @@ for i in range(2, 10, 2):
     for j in range(1, i / 2 + 1):
         blocks[i].append((j, 0))
         blocks[i + 1].append((0, j))
-# print blocks
 blocks[10] = [(0, 0), (0, 1), (1, 0), (1, 1)]
 blocks[11] = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
 blocks[12] = [(0, 0), (0, 1), (0, 2), (1, 2), (2, 2)]
@@ -21,7 +20,6 @@ blocks[18] = [(0, 1), (1, 0), (1, 1)]
 blocks[19] = [(0, 0), (1, 0), (1, 1)]
 
 grid = [['.'] * 10] * 10
-# print grid
 
 id1, id2, id3 = list(map(int, input().split()))
 while not (id1 == id2 == id3 == -1):

@@ -41,7 +41,6 @@ class Solution:
         total = 0
 
         if (S > 0):
-            # get indices of all ocurrences of 1 in 'A'
             one_array = [i for i, one in enumerate(A) if one == 1]
             print(one_array)
             start_index = []

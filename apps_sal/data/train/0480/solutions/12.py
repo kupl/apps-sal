@@ -4,7 +4,6 @@ from functools import lru_cache
 class Solution:
     def numWays(self, steps: int, arrLen: int) -> int:
         MOD = 10**9 + 7
-        # num_ways(0, 0, 0) = 1
 
         @lru_cache(maxsize=steps * arrLen)
         def num_ways(current, target, steps):

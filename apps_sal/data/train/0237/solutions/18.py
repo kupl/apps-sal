@@ -8,6 +8,5 @@ class Solution:
         print(csum)
         for p in csum:
             ans += counter[p - S]
-            # print('with',p,'found',counter[p-S],p-S)
             counter[p] += 1
         return ans

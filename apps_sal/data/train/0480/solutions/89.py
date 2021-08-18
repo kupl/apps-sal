@@ -8,7 +8,6 @@ class Solution:
         start = [1, 1] + ([0] * (min(steps, arrLen) - 2))
         return self.numWaysHelper(steps - 1, start)
 
-    # Assumes len(start) > 1
     def numWaysHelper(self, steps, start):
         if steps == 0:
             return start[0] % (10**9 + 7)

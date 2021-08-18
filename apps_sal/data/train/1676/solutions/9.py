@@ -8,7 +8,6 @@ def printBS(li):
     print(" ".join(s))
 
 
-# grid defined as array 10x10 of 0's and 1's 1 means occupied
 grid = [[0] * 10 for i in range(10)]
 blocks = ({1: [[1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 2: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 3: [[1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 4: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 5: [[1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 6: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 7: [[1, 1, 1, 1, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 8: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0]], 9: [[1, 1, 1, 1, 1], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 10: [[1, 1, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 11: [[1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 12: [[1, 1, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 13: [[0, 0, 1, 0, 0], [0, 0, 1, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 14: [[1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [1, 1, 1, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 15: [[1, 1, 1, 0, 0], [1, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 16: [[1, 1, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 17: [[1, 1, 0, 0, 0], [0, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 18: [[0, 1, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]], 19: [[1, 0, 0, 0, 0], [1, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]})
 leftBelow = {1: (0, 0), 2: (1, 0), 3: (0, 0), 4: (2, 0), 5: (0, 0), 6: (3, 0), 7: (0, 0), 8: (4, 0), 9: (0, 0), 10: (1, 0), 11: (2, 0), 12: (2, 0), 13: (2, 0), 14: (2, 0), 15: (2, 0), 16: (1, 0), 17: (1, 0), 18: (1, 0), 19: (1, 0)}
@@ -63,14 +62,11 @@ def boundary(tempGrid, block, x, y):
 
 
 def points(block, x, y):
-    # creatw a local copy
-    # place it on grid
     tempGrid = [i[:] for i in grid]
     for i in range(min(5, 10 - x)):
         for j in range(min(5, 10 - y)):
             if blocks[block][i][j] == 1:
                 tempGrid[i + x][j + y] = block
-    # calculate lines heuristics
     lines = 0
     for i in range(10):
         for j in range(10):
@@ -84,10 +80,8 @@ def points(block, x, y):
                 break
         else:
             lines += 1
-    # caculatw nearby non zeroes
     nearby = adjnon(tempGrid, block, x, y)
     nearholes = adjnon(tempGrid, block, x, y)
-    # calculate boundary close points
     bndcls = boundary(tempGrid, block, x, y)
     return 20.0 * lines + 0.25 * nearby + 0.1 * bndcls
 
@@ -109,7 +103,6 @@ def placeBlock(block, x, y):
 
 
 def clearFilledLines():
-    # check horizontal
     horz = []
     for i in range(10):
         for j in range(10):
@@ -118,7 +111,6 @@ def clearFilledLines():
         else:
             horz.append(i)
     vertz = []
-    # check vertical
     for j in range(10):
         for i in range(10):
             if grid[i][j] == 0:
@@ -155,7 +147,6 @@ def findPos(block):
         for j in range(10):
             if checkPos(i, j, block):
                 pos.append((points(block, i, j), i, j))
-    # print pos
     if pos:
         return max(pos)
     return (-1, -1, -1)
@@ -196,10 +187,8 @@ while True:
             i = maxp[pi]
             x = pos[pi][0]
             y = pos[pi][1]
-            # print x,y
             placeBlock(i[0], x, y)
             clearFilledLines()
-            # printGrid()
             outstr.extend([i[1], x + 1 + leftBelow[i[0]][0], y + 1])
             count += 1
     for i in range(3 - count):

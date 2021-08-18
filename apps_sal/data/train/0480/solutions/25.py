@@ -2,7 +2,7 @@ class Solution:
     def numWays(self, steps: int, arrLen: int) -> int:
         @lru_cache(None)
         def dp(index, steps):
-            if index < 0 or index == arrLen:  # index outside arraySize
+            if index < 0 or index == arrLen:
                 return 0
 
             if steps == 0:

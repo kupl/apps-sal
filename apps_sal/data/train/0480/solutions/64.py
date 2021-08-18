@@ -4,7 +4,6 @@ class Solution:
 
         @lru_cache(None)
         def dp(curr, steps):
-            # print(curr, steps)
             if steps:
                 temp = 0
                 for i in [curr - 1, curr, curr + 1]:

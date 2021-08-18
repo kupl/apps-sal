@@ -6,7 +6,6 @@ class Solution:
 
         for a in A:
             prefix = (prefix + a)
-            # print(prefix)
             if prefix - S in count:
                 result += count[prefix - S]
             if prefix in count:
