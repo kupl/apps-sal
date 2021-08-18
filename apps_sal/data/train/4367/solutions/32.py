@@ -1,5 +1,5 @@
 def area_or_perimeter(l, w):
-    if l == w:  # check square or rectangle
+    if l == w:
         result = l**2
         return int(result)
     else:

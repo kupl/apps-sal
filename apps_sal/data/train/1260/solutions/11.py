@@ -1,5 +1,3 @@
-# import Queue
-# q = Queue.Queue()
 def bfs(visited, musium, count, roads, explore):
     visited[explore - 1] = True
     count[0] += musium[explore]
@@ -26,7 +24,6 @@ while t > 0:
         hashm.update({i[0]: i[1]})
 
     musium.sort(key=lambda x: x[1])
-    # print(musium)
 
     count, lavany, end, begin = [0], True, n - 1, 0
 
@@ -34,7 +31,6 @@ while t > 0:
         if lavany:
             while visited[musium[end][0] - 1] and end > begin:
                 end -= 1
-            # visited[musium[end][0]] = True
             bfs(visited, hashm, count, roads, musium[end][0])
             end -= 1
 

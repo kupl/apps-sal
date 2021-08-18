@@ -1,4 +1,3 @@
-# cook your dish here
 T = int(input())
 for a in range(T):
     X, K = input().split(" ")

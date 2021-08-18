@@ -1,4 +1,3 @@
-# https://codeforces.com/contest/1265/problem/B
 
 def main():
     n = int(input())

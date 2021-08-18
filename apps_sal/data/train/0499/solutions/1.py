@@ -24,9 +24,9 @@ class Solution:
         reusableOperations = target[0]
 
         for i in range(1, tLen):
-            if target[i] <= reusableOperations:  # Case 1
+            if target[i] <= reusableOperations:
                 reusableOperations = target[i]
-            else:  # Case 2
+            else:
                 steps += target[i] - reusableOperations
                 reusableOperations = target[i]
 

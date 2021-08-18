@@ -14,7 +14,6 @@ class Solution:
             ans = float('-inf')
             dfs(headID, 0)
             return ans
-        # return method1()
 
         def method2():
             children = [[] for i in range(n)]

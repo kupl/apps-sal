@@ -9,6 +9,5 @@ class Solution:
                 continue
             if num > prev:
                 ans += (num - prev)
-            #print(ans, num, prev)
             prev = num
         return ans
