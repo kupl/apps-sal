@@ -2,7 +2,6 @@ class Solution:
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
         m = 10**9 + 7
 
-        # kadane helper algo
         def kadane(numbers):
             best = 0
             curr = 0
@@ -10,10 +9,6 @@ class Solution:
                 curr = max(0, curr + x)
                 best = max(best, curr)
             return best
-
-        # stupid approach
-        #a = arr*k
-        # return max_subarray(a) % m
 
         tot = sum(arr)
 

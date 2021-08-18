@@ -2,7 +2,6 @@ import sys
 
 
 def difference_in_ages(ages):
-    # your code here
     array = []
     youngest = sys.maxsize
     oldest = -sys.maxsize - 1

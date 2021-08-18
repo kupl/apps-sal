@@ -17,6 +17,4 @@ def goose_filter(birds):
 
             birds.remove(i)
 
-    # print(delete_array)
-
     return birds

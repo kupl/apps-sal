@@ -21,6 +21,5 @@ class Solution:
 
         if arr_sum >= 0 and next_max_sum > arr_sum:
             return (next_max_sum + (k - 2) * arr_sum) % (10**9 + 7)
-        # if arr_sum >
 
         return max(first_max_sum, 0)

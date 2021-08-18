@@ -1,7 +1,6 @@
 def who_wins_beggar_thy_neighbour(hand_1, hand_2):
     hs, vs = (hand_1, hand_2), {'J': 1, 'Q': 2, 'K': 3, 'A': 4}
     hands = {player: [vs.get(card[0], 0) for card in hs[player]] for player in range(2)}
-    # print(hands)
     player = 0
     draw = -1
     pile = []

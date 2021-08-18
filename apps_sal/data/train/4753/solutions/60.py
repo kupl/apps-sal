@@ -7,5 +7,3 @@ def goose_filter(birds):
         if bird not in geese:
             n.append(bird)
     return n
-    # go through birds list if matches any in list drop string
-    # loop through all birds match place in lists

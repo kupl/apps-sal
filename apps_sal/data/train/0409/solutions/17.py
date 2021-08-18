@@ -1,9 +1,6 @@
 class Solution:
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
         n = len(arr)
-        # dp = [0 for i in range(2*n)]
-        # dp[0] = arr[0]
-        # ans = dp[0]
         dp = arr[0]
         ans = dp
         sums = sum(arr)

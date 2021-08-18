@@ -6,5 +6,4 @@ def difference_in_ages(ages):
     return youngest, oldest, difference
     return ages_sorted
 
-    # your code here
     pass

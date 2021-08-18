@@ -1,4 +1,3 @@
-# change list to set to speed up search
 geese = {"African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"}
 
 

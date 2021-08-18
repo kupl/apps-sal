@@ -17,8 +17,6 @@ class Solution:
 
         mp = max(max_prefix)
         ms = max(max_suffix)
-        # print(max_prefix)
-        # print(max_suffix)
         in_arry_max_sum = get_in_arry_max_sum()
         if k == 1:
             return in_arry_max_sum
