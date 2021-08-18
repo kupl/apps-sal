@@ -7,7 +7,6 @@ def ham(x):
 
 
 def num_shuff(w_a, w_b, c):
-    #known = {}
     if w_a < 0 or w_b < 0:
         return 0
     if c == 0:

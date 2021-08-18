@@ -26,7 +26,6 @@ for s in range(size, 1, -1):
         for y in range(m - s + 1):
             ic = min(invert(x, y, s, 0), invert(x, y, s, 1))
             res[s] = min(res[s], ic)
-            # print(x,y,s,ic)
             if not ic:
                 flag = 1
                 break

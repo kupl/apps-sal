@@ -10,7 +10,6 @@ def ham(x):
 
 
 def num_shuff(w_a, w_b, c):
-    #known = {}
     if w_a < 0 or w_b < 0:
         return 0
     if c == 0:
@@ -35,7 +34,6 @@ def num_shuff(w_a, w_b, c):
 
 t = int(stdin.readline().strip())
 known = {}
-#abcs = []
 for _ in range(t):
     a, b, c = list(map(int, stdin.readline().strip().split()))
     print(num_shuff(ham(a), ham(b), c))

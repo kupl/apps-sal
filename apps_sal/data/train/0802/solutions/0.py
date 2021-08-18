@@ -24,7 +24,6 @@ def f(ca, cb, i, cf, C, n, dp):
     if (C & (1 << i)) > 0:
         x = 1
     if x == 1:
-        # we will have odd num of set bits
         if cf == 1:
             dp[st] = f(ca, cb, i + 1, 0, C, n, dp) + f(ca - 1, cb - 1, i + 1, 1, C, n, dp)
         else:
