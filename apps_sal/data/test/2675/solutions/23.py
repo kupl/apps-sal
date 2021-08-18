@@ -1,4 +1,3 @@
-# cook your dish here
 import functools
 from bisect import bisect_left
 arr = []
@@ -15,7 +14,6 @@ for i in range(m):
 brr.sort()
 brr = [a[1] for a in brr]
 count = 0
-# print(arr,brr)
 for i in range(m):
     pos = bisect_left(arr, brr[i])
     if pos < len(arr) and arr[pos] == brr[i]:

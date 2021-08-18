@@ -1,4 +1,3 @@
-# MOD = 10**180
 MOD = 1000000007
 
 x, n = map(int, input().split())

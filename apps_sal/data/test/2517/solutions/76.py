@@ -1,5 +1,3 @@
-# ワーシャルフロイドで、各町間の最短距離の更新は200^3 = 8,000,000
-# 訪れるべき町Rはたかだか8個なので、順番の全通りを試して8! = 約40000通り
 
 import numpy as np
 from scipy.sparse.csgraph import shortest_path, floyd_warshall
@@ -18,7 +16,6 @@ for i in range(M):
 E = np.array(E)
 E = shortest_path(E, method="FW")
 
-# DFSですべての数を試す
 stack = []
 for i in range(len(r)):
     stack.append([r[i], [], 0])

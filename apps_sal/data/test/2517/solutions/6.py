@@ -19,10 +19,6 @@ for _ in range(M):
         d[a][b] = c
         d[b][a] = c
 
-# for k in range(N):
-#     for i in range(N):
-#         for j in range(N):
-#             d[i][j] = min(d[i][j], d[i][k] + d[k][j])
 
 d = floyd_warshall(d)
 

@@ -46,7 +46,6 @@ def main():
                 e.append(x)
             tmp.extend(ret)
         return tmp
-    # print(distdict,permlist(r))
     pathlist = [sum([distdict[v][w] for v, w in zip(lst, lst[1:])]) for lst in permlist(r)]
     print((min(pathlist)))
 

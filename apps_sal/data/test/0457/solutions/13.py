@@ -1,8 +1,4 @@
-# 589_C
 
-#import time
-
-#start = time.time()
 
 import math
 
@@ -72,5 +68,4 @@ for i in range(0, len(ndv)):
         nn = ex(nm, fs)
 
         sm = (sm * nn) % md
-        #print(sm, i)
 print(sm)

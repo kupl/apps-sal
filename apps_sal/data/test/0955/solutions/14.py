@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
@@ -52,4 +50,3 @@ if ans == max:
 else:
     print(ans)
 finish = time.time()
-#print(finish - start)

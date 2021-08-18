@@ -1,4 +1,3 @@
-# cook your dish here
 n, m, k = map(int, input().split())
 bom = []
 for _ in range(k):
@@ -37,7 +36,6 @@ else:
         if len(sets) == 0:
             break
 
-        # print(sets)
         for v in list(sets):
             if v <= i - n + 1:
                 sets.remove(v)

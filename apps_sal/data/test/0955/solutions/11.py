@@ -1,4 +1,3 @@
-# ns=[int(x)for x in input().split()]
 n = int(input())
 d = {}
 for _ in range(n):
@@ -7,7 +6,6 @@ for _ in range(n):
     s[1] = list(s[1])
     s[1].sort()
     s[1] = ''.join(s[1])
-    # s[1]=s[1].sort()
     if s[1] in d:
         d[s[1]] = min(d[s[1]], p)
     else:

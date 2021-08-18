@@ -14,6 +14,5 @@ for i in range(m):
 
 ss = 0
 for i, v in d.items():
-    # print(i, v)
     ss += v
 print(ss)

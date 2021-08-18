@@ -5,7 +5,6 @@ for i in range(n):
     c, v = [j for j in input().split()]
     v = "".join(sorted(v))
     c = int(c)
-    # print(v)
     if v not in d:
         d[v] = c
     else:

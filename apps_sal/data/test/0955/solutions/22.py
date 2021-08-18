@@ -21,8 +21,6 @@ for i in range(n):
     if 'C' in s:
         isC = True
 
-    # print(s)
-
     name = ''.join(sorted(s))
 
     try:
