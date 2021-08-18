@@ -1,4 +1,3 @@
-# 992. Subarrays with K Different Integers
 
 class Window:
     def __init__(self):

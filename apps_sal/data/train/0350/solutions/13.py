@@ -15,7 +15,6 @@ class Solution:
                     del self.c[num]
 
         def subarraysWithAtLeast(k):
-            # print(\"---------\")
             start = 0
             c = counter()
             ret = 0
@@ -30,10 +29,7 @@ class Solution:
                     c.removeValue(tmp)
                     start += 1
                 assert len(c.c) == k
-                # print(A[start: i+1])
                 ret += i - start + 1
             return ret
 
-        # print(subarraysWithAtLeast(K))
-        # print(subarraysWithAtLeast(K-1))
         return subarraysWithAtLeast(K) - subarraysWithAtLeast(K - 1)

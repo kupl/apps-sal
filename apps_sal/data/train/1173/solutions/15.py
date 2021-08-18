@@ -1,4 +1,3 @@
-# cook your dish here
 test_cases = int(input())
 for test in range(test_cases):
     n = int(input())
@@ -16,7 +15,6 @@ for test in range(test_cases):
         else:
             xors[res[i]].append(i)
 
-    # print(xors)
     for key in xors.keys():
         if len(xors[key]) > 1:
             for i in range(len(xors[key]) - 1):
