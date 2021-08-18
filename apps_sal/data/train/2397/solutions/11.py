@@ -1,10 +1,8 @@
 import math
 import sys
-# sys.setrecursionlimit(10**6)
 input = sys.stdin.readline
 t = int(input())
 for t1 in range(t):
-    # n=int(input())
     k, n = list(map(int, input().split(" ")))
     l = []
     for i in range(k):
@@ -27,12 +25,10 @@ for t1 in range(t):
                 while(d.get(curr + 1, 0) == 1):
                     curr += 1
                 curr += 1
-                # increase by 1
         else:
             if(l[i] >= curr):
                 while(d.get(curr - 1, 0) == 1):
                     curr -= 1
-                # decrease by 1
                 curr -= 1
             else:
                 a = 1

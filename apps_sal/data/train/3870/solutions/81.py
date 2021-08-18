@@ -1,5 +1,4 @@
 def solve(s):
-    # s= i love codewars
     rev = s[::-1]
     rev2 = ""
     f = ""

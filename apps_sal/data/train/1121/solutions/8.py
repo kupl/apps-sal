@@ -1,6 +1,5 @@
 for _ in range(int(input())):
     h, m = tuple(map(int, input().split(":")))
-    #a = list(map(int, input().split()))
     if m % 5 != 0:
         m = m + (5 - m % 5)
     anm = int(360 * (m / 60)) % 360

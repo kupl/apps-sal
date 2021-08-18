@@ -12,10 +12,7 @@ for tests in range(t):
     indskip = 0
     ANS = 0
 
-    # print(A)
-
     while True:
-        # print(ANS,ind,indskip)
         if A[indskip] == ANS:
             ANS += 1
             indskip += 1

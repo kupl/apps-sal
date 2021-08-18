@@ -1,5 +1,4 @@
 class Solution:
-    # def minTaps(self, n: int, ranges: List[int]) -> int:
     def minTaps(self, n: int, ranges: List[int]) -> int:
         opens, closes, closed = [[] for _ in range(n)], [[] for _ in range(n)], set()
         for i in range(len(ranges)):

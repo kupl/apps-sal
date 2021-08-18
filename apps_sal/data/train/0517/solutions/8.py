@@ -1,4 +1,3 @@
-# cook your dish here
 def prime_factors(n):
     i = 2
     factors = set()
@@ -20,10 +19,7 @@ if n > 1:
     fs = prime_factors(n)
     ans = 2**n - 2
     for v in fs:
-        # print(ans, v)
         ans -= 2**v - 2
-        # print(ans)
-    # print(fs)
     print(ans % m)
 else:
     print(1)

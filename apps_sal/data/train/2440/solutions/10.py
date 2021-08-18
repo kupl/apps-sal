@@ -5,12 +5,6 @@ class Solution:
         :rtype: int
         """
 
-        # n[0] = 1
-        # n[1] = 1
-        # n[2] = n[0] + n[1]
-        # n[3] = n[1] + n[2]
-        # n[4] = n[2] + n[3]
-
         if n == 0 or n == 1:
             return 1
 
