@@ -1,8 +1,5 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
-        # dp[i, j] = # of distinct phone numbers of length j that can be dialed starting at i
-        # dp[i, 1] = 1
-        # dp[i, j] = sum(dp[i-1, k]) where k are all the possible numbers the knight can jump to
         if n == 1:
             return 10
         possible_next_digits = {

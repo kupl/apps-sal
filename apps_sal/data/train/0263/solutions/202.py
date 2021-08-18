@@ -10,9 +10,9 @@ class Solution:
         if n == 0:
             return 1
         elif (i, n) not in self.cache:
-            self.cache[i, n] = sum(self.dfs(val, n - 1) for val in self.d[i])  # Memoization
+            self.cache[i, n] = sum(self.dfs(val, n - 1) for val in self.d[i])
             if i in [1, 4, 7]:
-                self.cache[i + 2, n] = self.cache[i, n]           # Symmetry
+                self.cache[i + 2, n] = self.cache[i, n]
             elif i in [3, 6, 9]:
                 self.cache[i - 2, n] = self.cache[i, n]
         return self.cache[i, n]

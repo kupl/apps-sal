@@ -1,5 +1,4 @@
 def reverse_words(text):
-    # go for it
     word = ''
     rev_word = ''
     for i in range(0, len(text)):

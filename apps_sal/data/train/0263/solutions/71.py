@@ -28,16 +28,3 @@ class Solution:
             prior = current
 
         return sum(prior) % 1000000007
-
-#     def traverse(self, pos: int, length: int) -> int:
-#         if length == 1:
-#             return 1
-#         if (pos, length) in self.cache:
-#             return self.cache[(pos, length)]
-#         jumps = 0
-#         for neighbor in self.get_neighbors(pos):
-#             jumps += self.traverse(neighbor, length - 1)
-
-#         jumps %= 1000000007
-#         self.cache[(pos, length)] = jumps
-#         return jumps

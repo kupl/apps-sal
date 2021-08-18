@@ -1,7 +1,4 @@
 def reverse_words(text):
-    # change string to list of words with split
-    # reverse each word
-    # concatenate the words back together and return
 
     lis = text.split(" ")
     reversed_words = []

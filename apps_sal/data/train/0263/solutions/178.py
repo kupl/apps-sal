@@ -15,7 +15,6 @@ class Solution:
 
         self.forbidden = set([(3, 0), (3, 2)])
         self.next_pos = self.build_pos()
-        # print(self.next_pos)
         self.dp = [1] * 10
         self.helper(k - 1)
         return sum(self.dp) % self.mod
@@ -23,13 +22,11 @@ class Solution:
     def helper(self, k):
         if k == 0:
             return
-        # print(self.dp)
         next_dp = [0] * 10
         for i in range(10):
             for j in self.next_pos[i]:
                 next_dp[j] += (self.dp[i] % self.mod)
                 next_dp[j] %= self.mod
-        # print(next_dp)
         self.dp = next_dp
         self.helper(k - 1)
 
@@ -43,7 +40,6 @@ class Solution:
                 if self.is_valid(x + nx, y + ny):
 
                     num = self.get_num(x + nx, y + ny)
-                    # print(i, x + nx, y + ny, num)
                     next_num.append(num)
             res[i] = next_num
         return res

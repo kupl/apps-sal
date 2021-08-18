@@ -13,13 +13,6 @@ class Solution:
         if n == 1:
             return 1
 
-        # if i in set([0,1,2,3,7,8,9]):
-        #     return self.getOrCreate(i, n-1) + 2
-        # elif i in set([4,6]):
-        #     return self.getOrCreate(i, n-1) + 3
-        # else:
-        #     return 0
-
         if i == 0:
             return self.getOrCreate(4, n - 1) + self.getOrCreate(6, n - 1)
         elif i == 1:

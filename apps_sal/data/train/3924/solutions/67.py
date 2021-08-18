@@ -1,5 +1,4 @@
 def reverse_words(text):
-  # go for it
     n = len(text)
     liste = text.split(" ")
     liste = [reverse(mot) for mot in liste]

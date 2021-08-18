@@ -9,8 +9,6 @@ class Solution:
             else:
                 moves = 0
                 for neigb in graph[node]:
-                    # if neigb in (3, 6, 9):
-                    #     neigb -= 2
                     moves += dfs(neigb, n - 1)
                 return moves
 

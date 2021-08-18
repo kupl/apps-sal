@@ -10,5 +10,3 @@ def reverse_words(text):
         return '  '.join(res)
     else:
         return ' '.join(res)
-
-  # go for it
