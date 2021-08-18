@@ -1,5 +1,3 @@
-# フェルマーの小定理
-# 繰り返し2乗法
 
 n, a, b = map(int, input().split())
 mod = pow(10, 9) + 7

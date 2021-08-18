@@ -36,13 +36,13 @@ for i in range(n):
     hhidari.append(hh)
 
 ans = 0
-for i in range(n):  # migi
+for i in range(n):
     if n - i - 2 >= 0 and hhidari[n - i - 2] - migi[i] > 0:
         ans = max(ans, mmigi[i] + hhidari[n - i - 2] - migi[i])
     else:
         ans = max(ans, mmigi[i])
 
-for i in range(n):  # hidari
+for i in range(n):
     if n - i - 2 >= 0 and mmigi[n - i - 2] - hidari[i] > 0:
         ans = max(ans, hhidari[i] + mmigi[n - i - 2] - hidari[i])
     else:

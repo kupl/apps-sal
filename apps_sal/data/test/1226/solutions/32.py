@@ -13,7 +13,7 @@ def modpow(a, n):
     return ans % mod
 
 
-def cmb(n, i):  # 逆元
+def cmb(n, i):
     inv, ans = 1, 1
     for j in range(1, i + 1):
         ans = ans * (n - j + 1) % mod

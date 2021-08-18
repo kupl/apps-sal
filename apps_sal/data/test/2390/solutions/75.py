@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 N, C = map(int, input().split())
 
 sushi = []

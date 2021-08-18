@@ -1,4 +1,3 @@
-# D - Bouquet
 n, a, b = map(int, input().split())
 MOD = 10**9 + 7
 

@@ -41,13 +41,11 @@ for i in reversed(range(N)):
         left2[i] = max(cal - d2, left[i - 1])
 
 ans = 0
-# 左側を全部試す
 for i in range(N):
     if i == 0:
         ans = max(ans, left[i])
     else:
         ans = max(ans, left[i] + right2[i - 1])
-# 右側を全部試す
 for i in range(N):
     if i == N - 1:
         ans = max(ans, right[i])

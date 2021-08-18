@@ -1,4 +1,3 @@
-# 160 B
 X = int(input())
 h1000 = int(X / 500)
 h5 = int((X % 500) / 5)

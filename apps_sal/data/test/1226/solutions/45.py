@@ -20,7 +20,6 @@ for i in range(a):
 for i in range(a):
     dl *= pow(a - i, mod - 2, mod)
     dl %= mod
-# print(dl)
 vv = 1
 for i in range(b):
     vv *= n - i
@@ -28,6 +27,5 @@ for i in range(b):
 for i in range(b):
     vv *= pow(b - i, mod - 2, mod)
     vv %= mod
-# print(vv)
 res = pow(2, n, mod) - dl - vv - 1
 print(res % mod)

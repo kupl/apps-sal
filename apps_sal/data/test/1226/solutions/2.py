@@ -1,13 +1,9 @@
 def main():
-    # input data
     import sys
     def input(): return sys.stdin.readline().strip()
 
     N, A, B = map(int, input().split())
     mod = 10**9 + 7
-    # solve
-    # 二項係数の和=2**n
-    # 2**n-1-nCa-nCb
 
     def cmb(n, r, mod=10**9 + 7):
         r = min(r, n - r)

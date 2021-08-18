@@ -37,15 +37,12 @@ for i in range(N):
 
 ans = 0
 for i in range(N):
-    # when to turn back?
-    #valB = -xv[i][0] + max(sumB[:N-i+1])
     valB = -xv[i][0] + maxB[N - i]
     if valB < 0:
         ans = max(ans, sumA[i])
     else:
         ans = max(ans, sumA[i] + valB)
 
-    # when to turn back?
     valA = -C + xv[N - i + 1][0] + maxA[N - i]
     if valA < 0:
         ans = max(ans, sumB[i])

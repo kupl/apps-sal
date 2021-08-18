@@ -25,8 +25,6 @@ def f(l, x, v):
 
 f(lst1, x1, v1)
 f(lst2, x2, v2)
-# print(lst1)
-# print(lst2)
 
 ans = 0
 for i in range(n + 1):

@@ -1,5 +1,3 @@
-# nCr mod m
-# rがn/2に近いと非常に重くなる
 def combination(n, r, mod=10**9 + 7):
     n1, r = n + 1, min(r, n - r)
     numer = denom = 1

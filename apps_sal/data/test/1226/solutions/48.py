@@ -1,12 +1,9 @@
 n, a, b = list(map(int, input().split()))
-# 全通り - nCa - nCb
 mod = 10 ** 9 + 7
 
 
 def inv(x):
     return pow(x, mod - 2, mod)
-
-# n ~ n - k + 1
 
 
 def c(n, k):

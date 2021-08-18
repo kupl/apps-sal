@@ -1,4 +1,3 @@
-# ABC160
 X = int(input())
 happiness = 0
 happiness += (X // 500) * 1000

@@ -12,7 +12,6 @@ def RI(): return list(map(int, input().split()))
 def RS(): return input().rstrip().split()
 
 
-#################################################
 n, k = RI()
 if n == k:
     print(-1)

@@ -13,9 +13,8 @@ life = h
 count = 0
 for a, b in katana:
     if b <= a_max:
-        # aで殴り続ける方が早い(投げない)
         break
-    else:  # bの最大値はaの最大値より大きい
+    else:
         life -= b
 
     count += 1
