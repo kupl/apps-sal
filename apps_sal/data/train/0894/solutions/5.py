@@ -11,7 +11,6 @@ for testCase in range(t):
         array2.append(list(map(int, input().split())))
     for i in range(n):
         array.append(i)
-#	print array2,"     ",array1
     for i in range(n):
         print(array[i] + 1, end=' ')
     print()
@@ -34,7 +33,6 @@ for testCase in range(t):
         if(count > max):
             answer = array
             max = count
-            # print max,count
     for x in answer:
         print(x + 1, end=' ')
     print()

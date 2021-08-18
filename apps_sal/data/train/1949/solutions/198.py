@@ -10,7 +10,7 @@ class Solution:
         self.max_gold = 0
 
         def backtrack(r, c):
-            if grid[r][c] == 0:  # no gold, not allowed to process
+            if grid[r][c] == 0:
                 return
             gold_cnt = grid[r][c]
             self.cur_gold += gold_cnt
@@ -21,7 +21,7 @@ class Solution:
             for dr, dc in neighbor(r, c):
                 backtrack(dr, dc)
 
-            grid[r][c] = gold_cnt  # backtrack
+            grid[r][c] = gold_cnt
             self.cur_gold -= gold_cnt
 
         nrow, ncol = len(grid), len(grid[0])

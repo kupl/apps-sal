@@ -11,7 +11,7 @@ def runoff(voters):
             return [elt for elt in c if c[elt] == maxVote][0]
 
         for k in set(c.keys()) ^ set(voters[0]):
-            c[k] = 0   # add those who addn't receive any "first choice vote"
+            c[k] = 0
         minVote = min(c.values())
         voters = [[p for p in v if not p in [elt for elt in c if c[elt] == minVote]] for v in voters]
 

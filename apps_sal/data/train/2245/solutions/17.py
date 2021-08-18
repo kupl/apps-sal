@@ -6,7 +6,6 @@ def __starting_point():
 
     operations = [tuple(map(int, input().split())) for _ in range(m)]
     op_counter = [0] * (m + 1)
-    # queries
     for _ in range(k):
         x, y = list(map(int, input().split()))
         op_counter[x - 1] += 1

@@ -18,9 +18,6 @@ for _ in range(T):
         if tomu[i] < motu[i]:
             tomu[i], motu[i] = motu[i], tomu[i]
             k -= 1
-    # for i in range(k):
-    #     if motu[i] > tomu[i]:
-    #         motu[i], tomu[i] = tomu[i], motu[i]
     if sum(tomu) > sum(motu):
         print("YES")
     else:

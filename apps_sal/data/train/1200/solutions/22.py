@@ -1,4 +1,3 @@
-# vivek hirpara
 for _ in range(int(input())):
     s1 = input()
     f = 0

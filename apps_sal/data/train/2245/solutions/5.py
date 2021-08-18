@@ -21,7 +21,6 @@ for i in range(m):
     num_queries += queries[i]
     temp[instructions[i][0] - 1] += num_queries * instructions[i][2]
     temp[instructions[i][1]] -= num_queries * instructions[i][2]
-#print(temp[0]+a[0], end=" ")
 x = temp[0]
 print(x + a[0], end=" ")
 for i in range(1, n):

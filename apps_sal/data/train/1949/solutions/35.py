@@ -4,15 +4,11 @@ class Solution:
         maximum = 0
         for x in range(len(grid)):
             for y in range(len(grid[0])):
-                # not 0
                 if (grid[x][y]):
-                    # print(\"checking: \" + str((x,y)))
                     visited = set()
                     value = self.recursive(0, x, y, grid, visited)
 
                     if (value > maximum):
-                        # print(\"new max point: \" + str((x,y)))
-                        # print(\"new max: \" + str(value))
                         maximum = value
         return maximum
 
@@ -26,10 +22,6 @@ class Solution:
         visited = set(visited)
         visited.add((x, y))
         total = total + grid[x][y]
-        # left = (x-1,y)
-        # right = (x+1,y)
-        # top = (x,y-1)
-        # btm = (x,y+1)
         left, right, top, btm = total, total, total, total
 
         if (x > 0):

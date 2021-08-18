@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import Counter
 from math import ceil
 for _ in range(int(input())):
