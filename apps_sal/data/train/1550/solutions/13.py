@@ -1,4 +1,3 @@
-# cook your dish here
 def togglebit(n):
     if (n == 0):
         return 1

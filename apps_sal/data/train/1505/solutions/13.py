@@ -1,4 +1,3 @@
-# cook your dish here
 x = int(input())
 y = list(map(int, input().strip().split(" ")))
 d, pd, l, pl = 0, 0, 0, 0

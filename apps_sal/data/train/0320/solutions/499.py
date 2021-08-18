@@ -1,7 +1,5 @@
 class Solution:
     def minOperations(self, nums: List[int]) -> int:
-        # count all ones in binary representation
-        # count length of max number (number of double operation)
         ones = 0
         maxLength = 0
         for x in nums:

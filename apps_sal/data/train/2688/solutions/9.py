@@ -6,5 +6,3 @@ def repeat_sequence_len(n):
         n = sum([int(x)**2 for x in str(n)])
         i += 1
     return i - seen[n]
-
-#89,145,42, 20,4,16,37,58

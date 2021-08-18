@@ -1,4 +1,3 @@
-# cook your dish here
 
 T = int(input())
 l = list(map(int, input().strip().split(" ")))

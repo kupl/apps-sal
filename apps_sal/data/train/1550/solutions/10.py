@@ -17,7 +17,6 @@ def togglebit(n):
 
 def xnor(num1, num2):
 
-    # Make sure num1 is larger
     if (num1 < num2):
         temp = num1
         num1 = num2

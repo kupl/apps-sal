@@ -35,7 +35,6 @@ def mix(s1, s2):
     letters_used_with_prefix = []
     string_to_return = ""
 
-    # filter variables
     different_lengths = []
     array_of_letters_with_the_same_length = []
 
@@ -46,9 +45,6 @@ def mix(s1, s2):
 
     lowercase_letters_in_s1 = list(filter(filter_lowercase, characters_in_s1))
     lowercase_letters_in_s2 = list(filter(filter_lowercase, characters_in_s2))
-# Final parte 1: now I got two lists with the lowercase letters of each string
-
-# 2-para cada letra del abecedario(array), comprueba cuentas hay en cada string. consigue el máximo, y de qué string(1,2). Ten variables sobre cuantas veces aparece la letra en cada string
 
     for alphabet_letter in lowercase_alphabet:
         lowercase_letters_in_s = []
@@ -70,7 +66,7 @@ def mix(s1, s2):
         elif lowercase_letters_in_s2.count(alphabet_letter) > lowercase_letters_in_s1.count(alphabet_letter):
             where_is_maximum.append("2")
 
-        if maximum[i] > 1:  # puede dar problemas la condicion del and
+        if maximum[i] > 1:
             if where_is_maximum[i] == "b":
                 string_to_append = "=:" + lowercase_alphabet[i] * maximum[i]
             elif where_is_maximum[i] != "b":
@@ -78,10 +74,7 @@ def mix(s1, s2):
 
             letters_used_with_prefix.append(string_to_append)
 
-# 1: longitud decreciente 2: numero más chico ascendente 3: letra más chica ascendente
-
     letters_used_with_prefix = sorted(letters_used_with_prefix, key=lambda conjunto: (len(conjunto)), reverse=True)
-    #letters_used_with_prefix=sorted(letters_used_with_prefix, key=order_alphabetically_ascendent)
 
     for string in letters_used_with_prefix:
         if len(string) not in different_lengths:
