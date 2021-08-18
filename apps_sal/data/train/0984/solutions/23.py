@@ -1,4 +1,3 @@
-# cook your dish here
 def pairs(arr):
     x = 0
     pairs = 0

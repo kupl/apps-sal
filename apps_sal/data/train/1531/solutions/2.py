@@ -14,6 +14,5 @@ for i in range(Ns):
         tree[branch + 1] += l
     except:
         pass
-    # print(tree)
 for nb in tree:
     print(nb)

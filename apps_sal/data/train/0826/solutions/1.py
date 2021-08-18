@@ -1,11 +1,7 @@
-# This is not my code, it's Snehasish Karmakar's.  Refer to http://www.codechef    .com/viewsolution/7153774
-# for original version.
-# Submitting it to try and work out if it can be sped up.
 
 def compute_nCr(n, r):
     C[0][0] = 1
     for i in range(1, n + 1):
-        #       print "i",i
         C[i][0] = 1
         for j in range(1, min(i, r) + 1):
             if i != j:
@@ -22,7 +18,6 @@ def solve(n, m):
         for j in range(1, m + 1):
             s = (s + store[j]) % MOD
             store[j] = (s * C[m + j - 1][j]) % MOD
-        #   print "a[%d][%d]=%d"%(i,j,s)
 
     return s
 

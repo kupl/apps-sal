@@ -1,11 +1,7 @@
-#!/usr/bin/env python3
 
 import sys
 import math
 import copy
-# import fractions, itertools
-# import numpy as np
-# import scipy
 
 HUGE = 2147483647
 HUGEL = 9223372036854775807

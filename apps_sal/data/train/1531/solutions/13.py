@@ -1,4 +1,3 @@
-# cook your dish here
 while True:
     try:
         n = int(input())

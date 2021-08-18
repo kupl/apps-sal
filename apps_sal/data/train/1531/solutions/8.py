@@ -9,7 +9,6 @@ for i in range(m):
     x = x - 1
     left = y - 1
     right = a[x] - left - 1
-    # print(left,right)
     if x - 1 >= 0:
         a[x - 1] += left
 
@@ -17,6 +16,5 @@ for i in range(m):
         a[x + 1] += right
     a[x] = 0
 
-    # print(a)
 for i in range(len(a)):
     print(a[i])

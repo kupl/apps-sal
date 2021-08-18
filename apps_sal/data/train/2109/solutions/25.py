@@ -1,6 +1,5 @@
 
 def bsearch(target, min_i, max_i, func):
-    # func(index) <= target < func(index+1) となるindexを返す
     if func(max_i) < target:
         return max_i
     if target <= func(min_i):
@@ -17,7 +16,6 @@ def bsearch(target, min_i, max_i, func):
 
 def f(N):
     def g(i):
-        #        print(i,I,J)
         if i < I or J < i:
             return i * (N - i + 1)
         elif i == I:
