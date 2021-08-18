@@ -1,11 +1,3 @@
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(N, M, PY):
     ken = [0] * (N + 1)
     PY = [PY[i] + [i] for i in range(M)]
@@ -23,13 +15,6 @@ def __starting_point():
     N, M = list(map(int, input().split()))
     PY = [[int(i) for i in input().split()] for _ in range(M)]
     solve(N, M, PY)
-
-    # # test
-    # from random import randint, sample
-    # from func import random_str
-    # N, M = 10 ** 5, 10 ** 5
-    # PY = sample([[randint(1, 5), 10 ** 8 - i] for i in range(M)], M)
-    # solve(N, M, PY)
 
 
 __starting_point()

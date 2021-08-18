@@ -1,13 +1,3 @@
-#! /usr/bin/env python3
-# ------------------------------------------------
-# Author:    krishna
-# Created:   Sun Dec 24 17:45:40 IST 2017
-# File Name: 910c.py
-# USAGE:
-#       910c.py
-# Description:
-#
-# ------------------------------------------------
 import sys
 import operator
 
@@ -41,7 +31,6 @@ code = {}
 counter = 1
 zeroUsed = 0
 
-# For given column, fix the values
 for k in (sorted(list(count.items()), key=operator.itemgetter(1), reverse=True)):
     if (k[0] in code):
         continue
@@ -61,5 +50,4 @@ for i in range(maxLen):
 
     s *= 10
 
-# print(sorted(code.items()))
 print(int(s / 10))

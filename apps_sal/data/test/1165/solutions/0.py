@@ -12,8 +12,6 @@ for i in range(1, n):
         f[i] = f[i - 1]
 for i in range(m):
     l, r, x = map(int, input().split())
-    #q.append([l - 1, r - 1, x])
-    # for i in range(m):
     if A[r - 1] != x:
         ans.append(r)
     elif f[r - 1] >= l - 1:

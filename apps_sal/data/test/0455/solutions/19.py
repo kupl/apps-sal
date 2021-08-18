@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 try:
     from typing import List
@@ -44,9 +43,9 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    X = [int()] * (N)  # type: "List[int]"
-    Y = [int()] * (N)  # type: "List[int]"
+    N = int(next(tokens))
+    X = [int()] * (N)
+    Y = [int()] * (N)
     for i in range(N):
         X[i] = int(next(tokens))
         Y[i] = int(next(tokens))

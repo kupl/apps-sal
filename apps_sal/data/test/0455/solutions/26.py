@@ -1,11 +1,3 @@
-# できなかった
-# アームの長さが決まると(xm+ym)mod2は一定になる、これが一定でなければ無理
-# (xj+yj)mod2=1としてよい、長さ1の腕を追加することで0の場合も考えられる
-# (u,v)=(x+y,x-y)(回転座標)とすると、ui,viをu(i+1),v(i+1)から独立に決定できる(+d,-dいづれかはされることが確定している)
-# よってdiを決めたときにui,viを決める問題をu,vについて独立に解けば、各関節の向きを決定できる
-# u(i+1)=ui+diとなるi∈{1,...,m}の集合をSとすると、u(m)=-Σ(1≦i≦m) di +Σ(i∈S) 2di が成り立つ
-# -2*10^9≦Uj,Vj≦2*10^9 と 1≦m≦40 より m=31,di=2^(i-1) とできる。すると、Uj=-(2^31-1) +Σ(i∈S) 2di となる
-# つまりΣ(i∈S) 2di =Uj+(2^31-1) となるようにSを選ぶことができるので解ける
 
 n = int(input())
 listXY = [list(map(int, input().split())) for _ in range(n)]
@@ -36,7 +28,6 @@ else:
             u //= 2
             v //= 2
             u1, v1 = u % 2, v % 2
-            # L(-d,-d),R(+d,+d),D(-d,+d),U(+d,-d)
             if u1 == 0 and v1 == 1:
                 s += 'D'
                 y = y - d[k]
@@ -50,9 +41,6 @@ else:
                 s += 'U'
                 y = y + d[k]
         w.append(s)
-        # print(x,y,s)
-    # print(listXY)
-    # print(listUV)
     print((32 - isOdd))
     s = ''
     if not isOdd:

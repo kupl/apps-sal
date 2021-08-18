@@ -45,7 +45,6 @@ def main():
         for _ in range(N)
     ))
 
-    # m, d, w = part_300(N, X, Y)
     m, d, w = ref(N, X, Y)
 
     if m == -1:
@@ -177,9 +176,7 @@ def ref(N, X, Y):
         d.append(1)
     m = len(d)
 
-    # w = transform_xy(N, X, Y, d)
     w = no_transform_xy(N, X, Y, d)
-    # print(w)
 
     return m, d, w
 
@@ -187,18 +184,16 @@ def ref(N, X, Y):
 def transform_xy(N, X, Y, d):
     w = []
     dirs = {
-        # dir: x', y'
-        (-1, -1): "L",  # 本来の座標(x, y): (-1,  0)
-        (+1, +1): "R",  # 本来の座標(x, y): (+1,  0)
-        (+1, -1): "U",  # 本来の座標(x, y): ( 0, +1)
-        (-1, +1): "D",  # 本来の座標(x, y): ( 0, -1)
+        (-1, -1): "L",
+        (+1, +1): "R",
+        (+1, -1): "U",
+        (-1, +1): "D",
     }
     for x, y in zip(X, Y):
         x_sum = 0
         y_sum = 0
         _w = ""
         for _d in d:
-            # 変換後の座標でx',y'を独立に求めている?
             if x_sum <= x:
                 x_dir = 1
                 x_sum += _d

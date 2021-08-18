@@ -4,7 +4,7 @@ input = sys.stdin.readline
 
 def solve():
     N = int(input())
-    noInOuts = [None] * (2 * N + 1)  # (-1, '')
+    noInOuts = [None] * (2 * N + 1)
     fIns = [-1] * (N + 1)
     fOuts = [-1] * (N + 1)
     for no in range(1, N + 1):

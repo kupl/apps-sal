@@ -1,7 +1,6 @@
 n, m, L, R = list(map(int, input().split()))
 p = 998244353 * 2
 pp = p // 2
-# liczba pokryc n x m ze jest parzyscie wiele zer albo parzyscie wiele jedynek
 
 
 def pow(a, w):

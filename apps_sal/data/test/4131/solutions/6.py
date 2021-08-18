@@ -23,4 +23,3 @@ for tpl in tpl_lst:
     id = str(id)
     id = "0" * (12 - len(id)) + id
     print(id)
-# print(prefecture)

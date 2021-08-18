@@ -9,8 +9,8 @@ def OE(x): return print('Odd') if x % 2 else print('Even')
 INF = 10**18
 
 N = ri()
-U = [0] * N  # u = x + y
-V = [0] * N  # v = x - y
+U = [0] * N
+V = [0] * N
 parity = 0
 for i in range(N):
     x, y = rl()

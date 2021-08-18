@@ -1,6 +1,3 @@
-# region Header
-#!/usr/bin/env python3
-# from typing import *
 
 import sys
 import io
@@ -17,19 +14,13 @@ def input():
 
 
 sys.setrecursionlimit(1000000)
-# endregion
 
-# _INPUT = """# paste here...
-# """
-# sys.stdin = io.StringIO(_INPUT)
 
 MOD = 998244353
 
-# def solve(A: int, B: int, C: int) -> int:
-
 
 def solve(A, B, C):
-    pass  # TODO: edit here
+    pass
 
 
 def main():

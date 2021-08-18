@@ -41,7 +41,6 @@ for i in d:
 if len(b):
     a.remove(max(b))
 a.sort(reverse=True)
-# print(a)
 ans = 0
 for i in range(len(a)):
     ans += (i + 1) * a[i]

@@ -1,4 +1,3 @@
-# -- code beginning
 import sys
 n, m = list(map(int, sys.stdin.read().split()))
 if m * n == 1:

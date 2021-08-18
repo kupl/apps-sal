@@ -1,4 +1,3 @@
-# 190 div 2 B. Ciel and Flowers
 
 data = input().split(" ")
 r = int(data[0])

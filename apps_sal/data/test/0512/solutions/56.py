@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import bisect
 import heapq
 import math
@@ -12,8 +11,6 @@ from operator import add, mul, sub, itemgetter, attrgetter
 
 
 import sys
-# sys.setrecursionlimit(10**6)
-# readline = sys.stdin.buffer.readline
 readline = sys.stdin.readline
 
 INF = 1 << 60

@@ -24,19 +24,19 @@ for a, b in ab:
         if t[a - 1] is not None:
             ans = -1
             break
-        t[a - 1] = (1, None)  # 乗った
+        t[a - 1] = (1, None)
     elif b > 0:
         if t[b - 1] is not None:
             ans = -1
             break
-        t[b - 1] = (2, None)  # 降りた
+        t[b - 1] = (2, None)
 if ans == -1:
     print("No")
 else:
     for i in range(len(t)):
         if t[i] is None:
             t[i] = (0, None)
-    dp = [False] * (2 * n + 1)  # i番目の直後で仕切れるか
+    dp = [False] * (2 * n + 1)
     dp[0] = True
 
     def sub(j, i):
@@ -50,10 +50,8 @@ else:
             elif t[j + (i - j) // 2 + k][1] is not None and t[j + (i - j) // 2 + k][1] != (i - j) // 2:
                 return False
             elif t[j + k][0] != 0 and t[j + k][1] is None and t[j + k + (i - j) // 2][0] != 0:
-                #                 print(j,k,i)
                 return False
             elif t[j + (i - j) // 2 + k][0] != 0 and t[j + (i - j) // 2 + k][1] is None and t[j + k][0] != 0:
-                #                 print(j,k,i)
                 return False
         return True
     for i in range(1, 2 * n + 1):
