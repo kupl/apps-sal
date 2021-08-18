@@ -7,16 +7,13 @@ def main():
         valid = [False for i in range(16)]
         for i in range(8):
             line = input()
-            # print()
             for j in range(8):
-                #print(get(i, j), end="\t")
-                if line[j] != '#':
-                    valid[get(i, j)] = True
+                if line[j] != '
+                valid[get(i, j)] = True
                 if line[j] == 'K':
                     knights[get(i, j)] += 1
 
         for i in range(16):
-            #print(i, knights[i], valid[i])
             if knights[i] == 2 and valid[i]:
                 out += "YES\n"
                 break

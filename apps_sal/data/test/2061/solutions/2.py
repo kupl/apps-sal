@@ -19,7 +19,6 @@ for i in range(n):
     for j in range(m):
         if g[i][j] != 1 or labels[i][j] > 0:
             continue
-        # print(i,j)
         labels[i][j] = curlab
         stack = [(i, j)]
         if i == 0 or j == 0 or i == n - 1 or j == m - 1:
@@ -27,7 +26,6 @@ for i in range(n):
 
         while stack:
             (i1, j1) = stack.pop()
-            # print(i1,j1)
             for (i2, j2) in [(i1 - 1, j1), (i1 + 1, j1), (i1, j1 - 1), (i1, j1 + 1)]:
                 if (0 <= i2 and i2 < n and 0 <= j2 and j2 < m and
                         g[i2][j2] == 1 and labels[i2][j2] == 0):
@@ -42,7 +40,6 @@ for i, j in itertools.product(list(range(n)), list(range(m))):
     lab = labels[i][j]
     if lab > 0 and lab not in sidecomps:
         lakes[lab].append((i, j))
-# pprint(dict(lakes))
 
 lakesizes = sorted((len(lakes[lab]), lab) for lab in lakes)
 num_remove = len(lakesizes) - k

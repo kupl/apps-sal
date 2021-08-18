@@ -1,6 +1,3 @@
-# Though I've passed one hundred thousand miles
-# I'm feeling very still
-# And I know my spaceship knows which way to go...
 def r(x):
     return int(x + 0.50000000001)
 

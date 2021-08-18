@@ -15,16 +15,12 @@ d = defaultdict(list)
 
 def dfs(g, u, visited):
     visited[u[0]][u[1]] = True
-    # print(visited)
 
     for i in range(4):
         y = u[0] + dy[i]
         x = u[1] + dx[i]
-        # print('y = {0} x = {1}'.format(y, x))
         if y >= 0 and y < n and x >= 0 and x < m \
            and g[y][x] == '.' and not visited[y][x]:
-            # if u == (2, 3):
-            # print('y = {0} x = {1}'.format(y, x))
             dfs(g, (y, x), visited)
 
 
@@ -40,7 +36,6 @@ def dfs_(g, u, visited, component):
             dfs_(g, (y, x), visited, component)
 
 
-# dfs from the outer edge and mark the bad ones
 visited = [[False for j in range(m)] for i in range(n)]
 
 for i in range(m):
@@ -63,7 +58,6 @@ for i in range(1, n - 1):
             component += 1
 
 
-# print(d)
 l = sorted(list(d.items()), key=lambda x: len(x[1]))
 
 i = 0

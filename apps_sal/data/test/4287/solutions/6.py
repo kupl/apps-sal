@@ -1,6 +1,3 @@
-# Author: S Mahesh Raju
-# Username: maheshraju2020
-# Date: 03/07/2020
 
 from sys import stdin, stdout
 from math import gcd, ceil, sqrt
@@ -49,7 +46,6 @@ for i in range(a + 1):
             else:
                 break
 
-# print(dp)
 
 if umb[0][0] > rain[0]:
     print(-1)

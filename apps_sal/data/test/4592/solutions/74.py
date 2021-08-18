@@ -19,7 +19,6 @@ for i in range(2, N + 1):
         while(i % p == 0):
             numofdiv[p] += 1
             i //= p
-# print(numofdiv)
 for q in range(N + 2):
     ans *= numofdiv[q] + 1
     ans %= MOD

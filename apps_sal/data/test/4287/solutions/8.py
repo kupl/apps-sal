@@ -33,17 +33,14 @@ for i in range(n):
         rain[(j, j + 1)] = 1
 
 
-# print(rain)
 umbrellas = [float('inf')] * (a + 5)
 for i in range(m):
     c, b = li()
     umbrellas[c] = min(umbrellas[c], b)
-# print(umbrellas[:a + 1])
 
 
 @lru_cache(None)
 def dp(i=0, umbon=0):
-    # print(i, umbon)
     if i == a:
         if rain[(i - 1, i)]:
             if umbon:

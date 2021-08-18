@@ -1,4 +1,3 @@
-# エラトステネスの篩, 素因数分解
 def make_prime_table(n):
     sieve = list(range(n + 1))
     sieve[0] = -1

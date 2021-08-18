@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 n = int(input())
 mod = 10**9 + 7
@@ -23,7 +22,6 @@ for p in range(2, 1100):
         if cnt != 0:
             ind.append(cnt)
 
-#print('ind =', ind)
 ans = 1
 for i in range(len(ind)):
     ans *= (ind[i] + 1)

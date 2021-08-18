@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/5/5 1:05
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : A. Zoning Restrictions Again.py
 
 
 def main():

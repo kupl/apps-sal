@@ -13,7 +13,6 @@ def factor(n):
 
 s, p = map(int, input().split())
 l = factor(p)
-# print(l)
 n = len(l)
 for i in range(n):
     x = (p // l[i]) + l[i]

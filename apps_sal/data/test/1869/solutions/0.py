@@ -17,7 +17,6 @@ for i in range(1, n + 1):
             dp[i] = min(dp[i], dp[j] + max(0, a[i] - a[j]) + (i - j - 1))
         nmin = min(nmin, a[j])
 
-#print (dp)
 for i in range(n + 1):
     ans = min(ans, dp[i] + n - i)
 print(ans)

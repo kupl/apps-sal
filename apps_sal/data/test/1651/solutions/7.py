@@ -8,7 +8,6 @@ def yakusu(n):
             ans.append(i)
             if n != i**2:
                 ans.append(n // i)
-#    ans.sort()
     return ans
 
 

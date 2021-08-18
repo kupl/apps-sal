@@ -36,7 +36,6 @@ def check(a, b, op, i):
     else:
         diff = e2 + e1
     if perfectSquare(diff):
-        # print(diff)
         if diff - arr[i - 1] > 0 or i == 0:
             arr[i] = diff
             arr[i + 1] = e2
@@ -57,9 +56,9 @@ def __starting_point():
             arr[i] = even[j]
             j += 1
 
-    k = 0  # arr[0]+...arr[i] =k*k      current sum
-    l = 0  # arr[0]+...arr[i+1] =l*l     forward sum
-    s = 0  # arr[0]+...arr[i-1] =s        previous sum
+    k = 0
+    l = 0
+    s = 0
 
     zcnt = 0
     b_end = 10**13
@@ -71,8 +70,6 @@ def __starting_point():
             if (k * k - s > b_end):
                 print('No')
                 return
-            # given current sum=k^2
-            # then checking if k*k+arr[i+1]=l^2
             forward_sum = k * k + arr[i + 1]
             while(forward_sum > l * l):
                 l += 1
@@ -81,7 +78,6 @@ def __starting_point():
                 arr[i] = k * k - s
                 s = forward_sum
                 k = l
-        # print(arr,s)
     print('Yes')
     print(*arr)
 
