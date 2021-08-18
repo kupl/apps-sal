@@ -1,7 +1,7 @@
 class Trie:
     def __init__(self):
         self.end_word = False
-        self.letters = [None] * 26  # as there are 26 alphabets
+        self.letters = [None] * 26
 
     def insert(self, s):
         t = self
@@ -33,8 +33,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
         return self.t.search(self.stream)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

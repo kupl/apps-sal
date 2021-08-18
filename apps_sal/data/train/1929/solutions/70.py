@@ -28,8 +28,3 @@ class Trie:
             n.prefix = self.prefix + word[0]
             self.words[word[0]] = n
             self.words[word[0]].add(word[1:])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

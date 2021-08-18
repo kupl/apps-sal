@@ -42,8 +42,3 @@ class StreamChecker:
             self.stack.pop(0)
         self.stack.append(letter)
         return self.trie.search(''.join(self.stack[::-1]))
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

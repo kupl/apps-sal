@@ -13,7 +13,7 @@ class StreamChecker:
             for ch in word:
                 node = node.child[ch]
 
-            node.child['#'] = defaultdict(TrieNode)
+            node.child['
 
     def query(self, letter: str) -> bool:
         waitlist = []
@@ -27,12 +27,7 @@ class StreamChecker:
 
         self.waitlist = waitlist
         for node in waitlist:
-            if '#' in node.child:
+            if '
                 return True
 
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

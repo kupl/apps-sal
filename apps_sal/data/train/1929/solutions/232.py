@@ -1,5 +1,3 @@
-# https://leetcode.com/problems/stream-of-characters/discuss/320837/Easily-implemented-Python-Trie-Solution
-# Trie implemented based on defaultdict get TLE, originial Python dict won't get
 class TrieNode:
     def __init__(self) -> None:
         self.children = {}
@@ -39,7 +37,3 @@ class StreamChecker:
                 return True
             idx -= 1
         return False
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -8,7 +8,7 @@ class StreamChecker:
                 if w not in root:
                     root[w] = {}
                 root = root[w]
-            root['#'] = {}
+            root['
         self.q = []
 
     def query(self, letter: str) -> bool:
@@ -17,11 +17,6 @@ class StreamChecker:
         if letter in self.trie:
             self.q.append(self.trie[letter])
         for p in self.q:
-            if '#' in p:
+            if '
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

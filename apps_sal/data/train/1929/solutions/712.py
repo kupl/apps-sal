@@ -19,7 +19,6 @@ class StreamChecker:
 
         self.q.append(self.d)
 
-        # print(letter, len(self.q))
         temp = []
         flag = False
         for ptr in self.q:
@@ -32,8 +31,3 @@ class StreamChecker:
         self.q = temp
 
         return flag
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

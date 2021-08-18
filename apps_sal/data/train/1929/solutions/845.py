@@ -33,7 +33,3 @@ class StreamChecker:
                 return False
             index = (index + 1) % MAX_WORD_LEN
         return True
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
