@@ -1,4 +1,3 @@
-#! /usr/bin/env python
 
 from sys import stdin
 from functools import reduce

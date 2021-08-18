@@ -1,9 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def __init__(self):
         self.sols = {}
@@ -53,7 +47,7 @@ class Solution:
                 yield node.right
 
     def maxLevelSum(self, root: TreeNode) -> int:
-        levels = [[root]]  # {1: [root]}
+        levels = [[root]]
 
         do_more = True
         cur = 1
@@ -78,7 +72,4 @@ class Solution:
             if level_sum > max_val:
                 max_index = i
                 max_val = level_sum
-        # for i, l in enumerate(levels):
-        #    print(i, list(map(lambda x: x.val, l)))
-        #print([random.randint(-100000,100000) for _ in range(10000)])
         return max_index + 1

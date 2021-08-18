@@ -1,4 +1,3 @@
-# cook your dish here
 c, f = list(map(int, input().split()))
 l = [[1000001 for i in range(c)] for j in range(c)]
 while f:

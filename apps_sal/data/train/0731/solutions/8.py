@@ -1,4 +1,3 @@
-# cook your dish here
 c, n = input().split()
 c, n = int(c), int(n)
 a = []
