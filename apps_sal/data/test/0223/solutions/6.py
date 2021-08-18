@@ -19,13 +19,10 @@ for i in range(c - 1):
 
 def calc(arr):
     data = []
-    #sm = 0
     av = num
     for i in range(c):
         data.append((num // arr[i] - (num - av), av))
         av -= data[-1][0]
-
-    # print(data)
 
     ans = 1
     for d in data:
@@ -43,7 +40,6 @@ if num >= pow2 // 2 * 3:
                 dat = [3 * dat[0]] + dat
             else:
                 dat = [2 * dat[0]] + dat
-        # print(dat)
         a = calc(dat)
         answer += a
 

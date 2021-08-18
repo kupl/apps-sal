@@ -2,8 +2,6 @@ import numpy as np
 N = int(input())
 X_ls = np.array(list(map(int, input().split())))
 
-# N=2
-#X_ls =np.array( [1,4])
 
 ans = 0
 for p in range(max(X_ls) + 1):

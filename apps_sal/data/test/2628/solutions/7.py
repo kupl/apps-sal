@@ -13,7 +13,6 @@ class Solution:
         cnt = 1
         while len(result) != res_len:
             cnt *= 2
-            #orig_len = len(result)
             for i in range(cnt - 1, -1, -1):
                 result.append(result[i] + cnt)
 

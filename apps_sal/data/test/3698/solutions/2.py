@@ -43,9 +43,6 @@ def binom(n, k):
 
 
 def num_numbers(n, i):
-    # number of numbers in [1..n] that have exactly i 1s
-    # in their binary representation
-    # n is a str
 
     ans = 0
     num_ones_in_prefix = 0

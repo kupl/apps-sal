@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
@@ -20,4 +18,3 @@ for now in a:
 for now in ans:
     print(now)
 finish = time.time()
-#print(finish - start)

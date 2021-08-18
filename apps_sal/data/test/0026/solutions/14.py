@@ -59,7 +59,6 @@ else:
     if z > 1.0:
         zss = rets(z, x, y, 'z', 'x', 'y', 8)
     anss = sorted(xss + yss + zss, key=lambda x: (x[0], -x[2]))
-    # print(anss)
     ans = anss[-1][1]
 
 print(ans)

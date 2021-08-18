@@ -6,8 +6,8 @@ def main(n, d):
             return 0
         r = min(r, n - r)
         return (g1[n] * g2[r] * g2[n - r]) % mod
-    g1 = [1, 1]  # g1[i]=i! % mod　:階乗
-    g2 = [1, 1]  # g2[i]=(i!)^(-1) % mod　:階乗の逆元
+    g1 = [1, 1]
+    g2 = [1, 1]
     inverse = [0, 1]
     for i in range(2, n + 1):
         g1.append((g1[-1] * i) % mod)

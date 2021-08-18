@@ -14,10 +14,7 @@ else:
         j = i + 1
         p = False
         while j < len(m):
-            # print(m)
             z = len(sc[i].intersection(sc[j]))
-            # a=len(sc[i])
-            # b=len(sc[j])
             if m[i] in m[j]:
                 m[i] = m[j]
                 sc[i] = sc[j]

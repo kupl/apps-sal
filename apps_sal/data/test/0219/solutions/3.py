@@ -1,7 +1,6 @@
 n, m, s, d = map(int, input().split())
 A = sorted(list(map(int, input().split())))
 
-# Intervals
 inv = []
 prev = -1
 for i in range(len(A)):
@@ -16,7 +15,6 @@ if A[-1] < m:
 
 output = [inv[-1]]
 
-# Use of intervals
 last = inv[-1]
 for i in range(len(inv) - 2, -1, -1):
     a, b = inv[i], last

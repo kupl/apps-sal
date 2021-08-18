@@ -1,9 +1,6 @@
-# a値段,b本数
-# n軒,m本
 n, m = list(map(int, input().split()))
 
 ab_list = [list(map(int, input().split())) for _ in range(n)]
-# print(ab_list)
 ab_list.sort()
 ans = 0
 num = 0

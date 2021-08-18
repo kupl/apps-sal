@@ -1,5 +1,4 @@
 import sys
-# input = sys.stdin.buffer.readline
 def I(): return(list(map(int, input().split())))
 
 
@@ -13,7 +12,6 @@ def sieve(n):
 
 
 for __ in range(int(input())):
-    # n=int(input())
     s = input()
     if min(s.count("0"), s.count("1")) % 2 == 0:
         print("NET")

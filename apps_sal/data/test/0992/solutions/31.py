@@ -26,7 +26,7 @@ class PolySolver:
         self.f = np.zeros(size, np.int64)
         self.f[0] = 1
 
-    def multiple(self, polynomial, MOD):  # const1 * x^dim1 + const2 * x^dim2 + ... をfにかけ合わせる
+    def multiple(self, polynomial, MOD):
         new_F = np.zeros(self.size, np.int64)
         for dim, const in polynomial:
             if dim != 0:

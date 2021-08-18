@@ -8,7 +8,6 @@ def main():
     dp[0] = 1
     for ai in A:
         tmp = dp[:-ai].copy()
-        # print(tmp)
         dp *= 2
         dp[ai:] += tmp
         dp %= 998244353

@@ -1,4 +1,3 @@
-# coding: utf-8
 
 def main():
     N, M = list(map(int, input().split()))

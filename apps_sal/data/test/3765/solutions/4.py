@@ -4,7 +4,6 @@ if a > b:
 
 factor = list(map(int, input().strip().split(' ')))
 factor = sorted(factor)[::-1]
-# print(factor)
 
 
 def findout(a, b, h, w, factor):
