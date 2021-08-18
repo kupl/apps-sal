@@ -1,5 +1,4 @@
 class MajorityChecker:
-    # copied https://leetcode.com/problems/online-majority-element-in-subarray/discuss/355848/Python-Binary-Search-%2B-Find-the-Majority-Element
 
     def __init__(self, arr: List[int]):
         a2i = collections.defaultdict(list)
@@ -15,7 +14,3 @@ class MajorityChecker:
             if r - l >= threshold:
                 return a
         return -1
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

@@ -27,11 +27,9 @@ while t > 0:
     black = list(map(int, stdin.readline().split()))
     buttons = white + black
     buttons.sort(reverse=True)
-# print buttons
     diff = []
     for i in range(n):
         diff.append(planned[i] - completed[i])
     diff.sort(reverse=True)
-# print diff
     print(minTasks(diff, buttons))
     t -= 1

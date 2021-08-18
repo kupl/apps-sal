@@ -1,4 +1,3 @@
-# cook your dish here
 from bisect import bisect_left as bl
 from bisect import bisect_right as br
 from sys import stdin, stdout

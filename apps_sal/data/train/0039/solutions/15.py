@@ -18,7 +18,6 @@ while t:
             cost += a
         else:
             cost += b
-    # print(cost)
     ind = -1
     for i in range(len(l) - 1):
         if cost <= p:

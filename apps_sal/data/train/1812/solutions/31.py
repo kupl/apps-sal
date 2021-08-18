@@ -3,8 +3,6 @@ import bisect
 
 
 class MajorityChecker:
-    # Use a dictionary to store the index of each element in arr and sort the dictionary by the frequence of each value in arr
-    # Use bisection search to fix the insertion position of left and right, and compare right-left to the threshold
 
     def __init__(self, arr: List[int]):
         self.d = defaultdict(list)
@@ -23,8 +21,3 @@ class MajorityChecker:
             else:
                 break
         return -1
-
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

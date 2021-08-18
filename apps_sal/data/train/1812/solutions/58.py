@@ -44,8 +44,8 @@ class MajorityChecker:
         left_freq = node.left.most_frequent
         right_freq = node.right.most_frequent
         if (
-            node.left.values[left_freq] + node.right.values[left_freq] >=
-            node.left.values[right_freq] + node.right.values[right_freq]
+            node.left.values[left_freq] + node.right.values[left_freq]
+            >= node.left.values[right_freq] + node.right.values[right_freq]
         ):
             node.most_frequent = left_freq
         else:
@@ -68,8 +68,3 @@ class MajorityChecker:
         left_values, left_set = self.rec_query(node.left, left, node.mid)
         right_values, right_set = self.rec_query(node.right, node.mid, right)
         return left_values + right_values, left_set + right_set
-
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

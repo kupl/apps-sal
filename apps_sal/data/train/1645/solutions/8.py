@@ -1,5 +1,4 @@
 def sum_of_squares(n):
-    # three-square theorem
     if n**0.5 == int(n**0.5):
         return 1
     while n % 4 == 0:

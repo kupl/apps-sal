@@ -60,8 +60,3 @@ class MajorityChecker:
             return candidate
         else:
             return -1
-
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

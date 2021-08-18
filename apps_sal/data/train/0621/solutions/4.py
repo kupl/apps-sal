@@ -20,7 +20,6 @@ while t > 0:
                     l1[le] = s
                 else:
                     l1[le] = min(l1[le], s)
-                # print s,l1
     for i in range(20, 0, -1):
         if l1[i] != "":
             ans = l1[i]
