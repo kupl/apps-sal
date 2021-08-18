@@ -51,7 +51,6 @@ def Dijkstra(lis, start):
                 rnum[nex] = 0
             if ret[nex] == ncost + ecost:
                 rnum[nex] = (rnum[nex] + rnum[now]) % mod
-        #print (now,rnum)
     return ret, rnum
 
 
@@ -75,7 +74,6 @@ DT, rootT = Dijkstra(lis, T)
 ans = (rootS[T] ** 2) % mod
 L = DS[T]
 
-#print (DS,rootS)
 
 for v in range(N):
 

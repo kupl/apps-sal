@@ -1,7 +1,5 @@
 import sys
-#input = sys.stdin.readline
 for _ in range(int(input())):
-    #n = int(input())
     s = str(input())
     arr = [int(i) for i in s]
     n = len(arr)

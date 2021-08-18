@@ -10,7 +10,6 @@ for i in range(M):
     adjList[U - 1].append((V - 1, D))
     adjList[V - 1].append((U - 1, D))
 
-# 頂点Sから各頂点への最短路の個数
 numRouteS = [0] * N
 numRouteS[S] = 1
 
@@ -40,7 +39,6 @@ while pq:
             prev[v2] += [vNow]
             numRouteS[v2] = (numRouteS[v2] + numRouteS[vNow]) % MOD
 
-# 頂点Tから各頂点への最短路の個数
 numRouteT = [0] * N
 numRouteT[T] = 1
 cST = cost[T]
@@ -51,7 +49,6 @@ for iV, v in enumerate(reversed(vs)):
     for v0 in prev[v]:
         numRouteT[v0] = (numRouteT[v0] + numRouteT[v]) % MOD
 
-# 二人の最短路の選び方の組から、途中で出会うものを引く
 ans = (numRouteS[T] ** 2) % MOD
 
 for v in vs[:iVLim]:

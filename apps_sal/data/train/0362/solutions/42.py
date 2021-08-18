@@ -4,7 +4,6 @@ class Solution:
 
         @lru_cache(None)
         def helper(mask, i):
-            # print(mask,i)
             if i == 41:
                 if mask == 0:
                     return 1
@@ -14,9 +13,6 @@ class Solution:
                 return 1
             else:
                 total = 0
-                # for pref in hats[i]:
-                #     if mask & (1 << pref):
-                #         total += helper(mask ^ (1 << pref), i+1)
                 for pers in range(N):
                     if mask & (1 << pers) and i in hats[pers]:
                         total += helper(mask ^ (1 << pers), i + 1)

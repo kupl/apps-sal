@@ -23,15 +23,12 @@ for _ in range(T):
     a.sort()
     band = True
     startPos = 0
-    # print(a)
     for i, e in enumerate(a[1:]):
-        #print("i: {}, e: {}, ant:{}".format(i,e,a[i]))
         if e - a[i] > d:
             band = False
             break
         if e == startVal:
             startPos = i + 1
-    # print(band)
     if band and (check(a, startPos, d) or check2(a, startPos, d)):
         print("YES")
     else:

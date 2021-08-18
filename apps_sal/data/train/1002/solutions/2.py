@@ -19,7 +19,6 @@ for te in range(tests):
     if(flag == 1):
         continue
     if(index == 0 or index == n - 1):
-        #flag = 1
         print('YES')
         continue
     for i in range(index + 1, n):

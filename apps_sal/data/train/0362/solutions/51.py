@@ -21,7 +21,7 @@ class Solution:
                         answer = 1
                 else:
                     answer = 0
-                    answer += computeWays(assigned, currentHat + 1)  # don't assign currentHat to anyone.
+                    answer += computeWays(assigned, currentHat + 1)
                     answer %= BIG_NUMBER
                     for index, num in enumerate(assigned):
                         if num == 0 and index in hatDesired[currentHat]:
@@ -32,4 +32,4 @@ class Solution:
                             answer %= BIG_NUMBER
                 numberWays[(assigned, currentHat)] = answer
                 return answer
-        return computeWays(tuple([0] * numPeople), 1)  # be careful about arguments you provide
+        return computeWays(tuple([0] * numPeople), 1)

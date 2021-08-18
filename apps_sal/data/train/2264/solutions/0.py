@@ -1,4 +1,3 @@
-# ARC090E
 
 def hoge():
     M = 10**9 + 7
@@ -43,7 +42,7 @@ def hoge():
         vals = [None] * n
         nums = [None] * n
         nums[start] = 1
-        h = [(0, start)]  # (距離, ノード番号)
+        h = [(0, start)]
         vals[start] = 0
         while h:
             val, u = heapq.heappop(h)
@@ -61,8 +60,8 @@ def hoge():
 
     T = vals1[t]
 
-    c1 = 0  # 頂点で衝突するペアの数
-    c2 = 0  # エッジ(端点除く)で衝突するペアの数
+    c1 = 0
+    c2 = 0
 
     for u in range(n):
         if 2 * vals1[u] == T and 2 * vals2[u] == T:

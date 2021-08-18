@@ -41,8 +41,6 @@ for i in range(2, n + 1):
         a = find(parent, j)
         co[a] += 1
     x = dd(int)
-    # print(com)
-    # print(co,i)
     for j in com:
         x[j] = com[j]
     lol = 0

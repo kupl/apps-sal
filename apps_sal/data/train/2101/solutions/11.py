@@ -1,7 +1,6 @@
 import collections as cc
 import sys
 input = sys.stdin.readline
-# sys.setrecursionlimit(10**9)
 def I(): return list(map(int, input().split()))
 
 
@@ -16,17 +15,14 @@ parent = [i for i in range(n + 1)]
 
 
 def find(x):
-    # print(x,parent[x])
     while x != parent[x]:
         x = parent[x]
     return x
 
 
 def union(x, y):
-    # print(x,y)
     a = find(x)
     b = find(y)
-    # print(a,b)
     if a != b:
         parent[x] = parent[y] = min(a, b)
 

@@ -1,6 +1,5 @@
 class Solution:
     def numberWays(self, hats: List[List[int]]) -> int:
-        # mask = (1<<10)-1 #-> person i is wearing a hat already
         hat_per_map = defaultdict(list)
         for idx, i in enumerate(hats):
             for j in i:

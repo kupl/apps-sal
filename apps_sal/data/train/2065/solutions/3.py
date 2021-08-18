@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 (N, K) = list(map(int, input().split()))
 
@@ -14,6 +12,6 @@ for k in range(K):
                 group -= 1
             else:
                 break
-    ret += group - 1   # split
-ret += K + ret - 1   # join
+    ret += group - 1
+ret += K + ret - 1
 print(ret)

@@ -12,7 +12,6 @@ for each in range(t):
         if (a[i] == '0' and a[i + 1] == '1'):
             picks[i] += 1
         i -= 1
-    # print(picks)
 
     disp = [0] * (n + 1)
     soldiers = 0
@@ -22,7 +21,6 @@ for each in range(t):
             disp[i] = n - soldiers - 1 - i
             soldiers += 1
         i -= 1
-    # print(disp)
 
     ans = 0
     for i in range(n):

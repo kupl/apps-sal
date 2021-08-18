@@ -5,7 +5,6 @@ for i in range(t):
     count = 0
     s.insert(0, "temp")
     for i in range(1, len(s)):
-        # print(s[-i])
         if i > len(s) // 2:
             break
         if s[i] != s[-i]:

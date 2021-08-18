@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 n, k = list(map(int, input().split()))
 y = 0
 for i in range(k):
@@ -9,9 +8,9 @@ for i in range(k):
         while j < m and xs[j] == j + 1:
             j += 1
         m -= j
-        y += m  # decompose
-        y += m  # compose
+        y += m
+        y += m
     else:
-        y += m - 1  # decompose
-        y += m  # compose
+        y += m - 1
+        y += m
 print(y)

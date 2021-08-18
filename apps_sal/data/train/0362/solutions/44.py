@@ -2,25 +2,6 @@ import functools as ft
 
 
 class Solution:
-    # def numberWays(self, hats: List[List[int]]) -> int:
-    #     cache = {}
-    #     l = len(hats)
-    #     def f(allowed, i):
-    #         if i == l:
-    #             return 1
-    #         key = (tuple(allowed), i)
-    #         if key in cache:
-    #             return cache[key]
-    #         c = 0
-    #         for hat in hats[i]:
-    #             if allowed[hat]:
-    #                 allowed[hat] = False
-    #                 c += f(allowed, i+1)
-    #                 allowed[hat] = True
-    #         cache[key] = c
-    #         return c
-    #     allowed = [True]*40
-    #     return f(allowed, 0)
     def numberWays(self, hats: List[List[int]]) -> int:
         const = 10**9 + 7
         cache = {}
