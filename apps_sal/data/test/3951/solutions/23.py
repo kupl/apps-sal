@@ -11,8 +11,6 @@ import threading
 from collections import deque, Counter, OrderedDict, defaultdict
 import heapq
 from math import ceil, floor, log, sqrt, factorial, pow, pi, gcd
-# from bisect import bisect_left,bisect_right
-# from decimal import *,threading
 """from io import BytesIO, IOBase
 if sys.version_info[0] < 3:
     from __builtin__ import xrange as range
@@ -97,11 +95,6 @@ def gcd(x, y):
     while y:
         x, y = y, x % y
     return x
-# For getting input from input.txt file
-# sys.stdin = open('input.txt', 'r')
-
-# Printing the Output to output.txt file
-# sys.stdout = open('output.txt', 'w')
 
 
 graph = defaultdict(list)

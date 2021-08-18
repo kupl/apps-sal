@@ -1,4 +1,3 @@
-#! /usr/bin/env python
 
 n, k = input().split()
 n = int(n)

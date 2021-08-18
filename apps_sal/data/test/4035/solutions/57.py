@@ -5,7 +5,6 @@ def main():
             print(m)
             return
     print((-1))
-    # N = int(input())
 
 
 main()

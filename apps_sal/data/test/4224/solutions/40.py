@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 n = int(input())
 cnt = 0
 a_list = list(map(int, input().split()))

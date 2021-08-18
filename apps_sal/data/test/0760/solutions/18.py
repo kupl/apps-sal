@@ -1,10 +1,8 @@
-# input
 
 s = str(input())
 k = int(input())
 
 
-# variables
 a = 0
 
 
@@ -18,7 +16,6 @@ def tandem(string):
             return False
 
 
-# main
 if len(s) <= k:
     a = 2 * ((len(s) + k) // 2)
 else:

@@ -32,7 +32,7 @@ def check(k):
     return n >= k
 
 
-left = 1  # True
+left = 1
 right = N
 while left + 1 < right:
     mid = (left + right) // 2

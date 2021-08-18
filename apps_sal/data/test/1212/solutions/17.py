@@ -6,7 +6,6 @@ pref = [0]
 for i in range(1, n + 1):
     pref.append(z[i - 1] + pref[i - 1])
 
-##print (pref[:])
 minsum = 1000000000
 minind = 1
 

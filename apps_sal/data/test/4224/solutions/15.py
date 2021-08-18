@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 def get_input() -> tuple:
     """
@@ -45,15 +44,12 @@ def main(N: int, a: list) -> tuple:
     for n in range(N):
         ans += get_divisible_count(a[n])
 
-    # 結果出力
     print(ans)
 
 
 def __starting_point():
-    # 標準入力を取得
     N, a = get_input()
 
-    # メイン処理
     main(N, a)
 
 

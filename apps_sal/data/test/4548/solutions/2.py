@@ -1,5 +1,3 @@
-# B - Toll Gates
-# https://atcoder.jp/contests/abc094/tasks/abc094_b
 
 n, m, x = list(map(int, input().split()))
 a = list(map(int, input().split()))

@@ -33,7 +33,6 @@ for i in arrK:
     test = arr[cur] * (sum - arr[cur] - arr[pre] - arr[next] - used + tmp)
     res += test
     dictU[cur] = True
-    #print(res, test, cur)
     used += arr[cur]
 
 print(res)

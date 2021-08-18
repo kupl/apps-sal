@@ -12,7 +12,6 @@ def tandemRepeat(i, j):
 s = input()
 n = int(input())
 s = s + ("*" * n)
-# print(s)
 ans = -1
 for i in range(len(s)):
     for j in range(1, len(s)):
