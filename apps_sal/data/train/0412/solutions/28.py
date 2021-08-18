@@ -8,11 +8,9 @@ class Solution:
 
         memo = [[0 for _ in range(target)] for _ in range(d)]
 
-        # set first line
         for i in range(f):
             memo[0][i] = 1
 
-        # run algo
         for i, row in enumerate(memo[1:]):
             for j, _2 in enumerate(row):
                 if j - f < 0:

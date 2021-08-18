@@ -1,7 +1,5 @@
 class Solution:
     def minSteps(self, s: str, t: str) -> int:
-        # ct = Counter(t)
-        # cs = Counter(s)
         ct = {}
         cs = {}
         for i in range(len(s)):

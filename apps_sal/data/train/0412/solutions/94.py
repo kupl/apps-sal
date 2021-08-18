@@ -12,8 +12,6 @@ class Solution:
                 return memo[(d, target)]
 
             for c in range(1, f + 1):
-                # for c in range(max(0, target-f), target):
                 memo[(d, target)] += helper(d - 1, target - c)
-                #memo[(d, target)] += helper(d - 1, c)
             return memo[(d, target)]
         return helper(d, target) % (10**9 + 7)

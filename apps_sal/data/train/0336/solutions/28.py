@@ -2,7 +2,7 @@ class Solution:
     def minSteps(self, s: str, t: str) -> int:
         if len(s) != len(t):
             return -1
-        s_count = collections.Counter(s)  # b=2 a=1
+        s_count = collections.Counter(s)
         for c in t:
             if c in s_count:
                 s_count[c] -= 1

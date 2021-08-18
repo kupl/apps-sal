@@ -5,7 +5,6 @@ class Solution:
         ss = Counter(s)
 
         cnt = 0
-        # print(tt,ss)
         all_c = set(s + t)
 
         for k in all_c:

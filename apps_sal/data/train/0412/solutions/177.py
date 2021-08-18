@@ -1,14 +1,10 @@
 class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
 
-        # target < d -> impossible
-
-        # target > f*d -> impossible
         def auxNumRolls(d, f, target, memoization):
             if target < d or target > d * f:
                 return 0
 
-            # one die condition: only one possibility targe == die roll
             if d == 1:
                 return 1
 

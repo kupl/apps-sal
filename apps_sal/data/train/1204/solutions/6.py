@@ -34,7 +34,6 @@ for _ in range(t):
             if c != 0:
                 gap.append(c)
                 c = 0
-    # print(gap,k,l)
     gap.sort()
     for i in gap:
         k -= 1

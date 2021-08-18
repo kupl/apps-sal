@@ -19,12 +19,10 @@ class Solution:
                 if count1[ch] == count2[ch]:
                     continue
                 else:
-                    # We have the case where count is greater
                     if count2[ch] > count1[ch]:
                         diff = count2[ch] - count1[ch]
                         count += diff
                         continue
-                    # We have the case where count is lesser
                     else:
                         pass
             else:

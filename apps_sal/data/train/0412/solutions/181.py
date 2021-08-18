@@ -1,8 +1,7 @@
 class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
-        # NRT(d, f, t) = (sum over f' = {1, 2, ..., f}) numRollsToTarget(d - 1, f, t - f')
 
-        dp = []  # dice x target
+        dp = []
         mod = math.pow(10, 9) + 7
 
         for _ in range(d + 1):
