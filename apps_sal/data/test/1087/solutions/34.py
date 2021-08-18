@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 N, K = list(map(int, input().split()))
 A = list(map(int, input().split()))
@@ -19,17 +18,3 @@ for i in range(64):
         ans += cnt * b
     b >>= 1
 print(ans)
-
-# zero.reverse()
-# print(zero)
-# print(k)
-
-# k.reverse()
-# zero.reverse()
-
-# ans = 0
-# count = 2**(len(k)-1)
-# for i in range(len(zero)):
-#     ans += count*max(zero[i], n-zero[i])
-#     count //= 2
-# print(ans)

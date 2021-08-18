@@ -26,8 +26,6 @@ def solve(N, K, A):
             x >>= 1
     k = k[::-1]
     b = b[::-1]
-    # dp[i][1]: 上位iビットがKと等しいときの最大値
-    # dp[i][0]: 上位iビットがKより小さいときの最大値
     dp = [[-1, -1] for i in range(L + 1)]
     dp[0][1] = 0
     for i in range(L):

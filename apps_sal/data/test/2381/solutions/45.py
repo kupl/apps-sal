@@ -10,14 +10,10 @@ import itertools
 from collections import deque, Counter, defaultdict
 from operator import mul
 import copy
-# ! /usr/bin/env python
-# -*- coding: utf-8 -*-
 import heapq
 sys.setrecursionlimit(10**6)
-# INF =  float("inf")
 INF = 10**18
 mod = 10**9 + 7
-# mod = 998244353
 
 N, K = list(map(int, input().split()))
 A = list(map(int, input().split()))

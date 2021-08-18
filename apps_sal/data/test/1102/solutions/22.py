@@ -1,7 +1,7 @@
 [n, a] = list(map(int, input().split(" ")))
 t = list(map(int, input().split(" ")))
 
-m1 = min(n - a, a - 1)  # t==2 then can catch for m1>=d>=1
+m1 = min(n - a, a - 1)
 
 s = t[a - 1]
 

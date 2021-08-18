@@ -8,7 +8,6 @@ for k in range(1, min(N + 1, K + 1)):
     for j in range(k // 2 + 1):
         push = j
         pop = k - j
-        # print(k,pop,push)
         if pop > N:
             continue
         else:
@@ -23,7 +22,6 @@ for k in range(1, K + 1):
     for j in range(k // 2 + 1):
         push = j
         pop = k - j
-        # print(k,pop,push)
         if pop > N:
             continue
         else:

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 
 
@@ -19,8 +18,8 @@ def main():
 
     ans = 1
     cnt = 0
-    i_p = 0  # index of A_plus
-    i_m = 0  # index of A_minus
+    i_p = 0
+    i_m = 0
 
     while (cnt < K):
         if (K - cnt) == 1:

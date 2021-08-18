@@ -3,12 +3,6 @@ from collections import deque
 import sys
 
 sys.setrecursionlimit(10 ** 7)
-# import bisect
-# import numpy as np
-# from collections import deque
-# map(int, sys.stdin.read().split())
-#import itertools
-#import heapq
 
 
 def input():
@@ -21,13 +15,10 @@ def main():
     mod = 10 ** 9 + 7
     A.sort()
 
-    #    print(A)
     pp = int(bisect.bisect_left(A, 0))
     A_minus = deque(A[:pp])
     A_plus = deque(A[pp:])
 
-    #    print(A_plus)
-    #    print(A_minus)
     AA = deque([])
     AAm = deque([])
     if N == K:

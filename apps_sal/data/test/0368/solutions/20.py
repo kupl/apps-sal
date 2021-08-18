@@ -1,4 +1,3 @@
-# sorry for the source code iam a newbie in Python
 chess = []
 for i in range(8):
     chess.append(input())

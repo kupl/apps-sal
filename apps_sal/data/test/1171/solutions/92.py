@@ -11,10 +11,8 @@ for k in range(1, K + 1):
             if (ka + kb <= kcd) or (ka + kb > N):
                 continue
 
-            #print(ka, kb, kcd)
             s = V[:ka] + V[-kb:] if kb != 0 else V[:ka]
             s.sort()
-            #print(s[kcd:], sum(s[kcd:]))
             MAX = max(MAX, sum(s[kcd:]))
 
 print(MAX)

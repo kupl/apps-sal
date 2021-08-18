@@ -12,13 +12,13 @@ AA = sum([binstr(i) for i in A])
 X = 0
 ans = 0
 for i in range(40):
-    if AA[i] > N - AA[i]:   # 0にした方がいい
+    if AA[i] > N - AA[i]:
         ans += AA[i] * (2**(39 - i))
-    else:                 # 1にした方がいい
-        if X + 2**(39 - i) <= K:    # 1
+    else:
+        if X + 2**(39 - i) <= K:
             ans += (N - AA[i]) * (2**(39 - i))
             X += 2**(39 - i)
-        else:                  # 0
+        else:
             ans += AA[i] * (2**(39 - i))
 
 print(ans)

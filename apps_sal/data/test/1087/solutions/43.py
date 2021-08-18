@@ -28,20 +28,19 @@ while k:
 
 under = [-1] * (j + 1)
 just = [0] * (j + 1)
-# print (j)
 
 tmp = 0
 for i in range(49, j - 1, -1):
     tmp += pow(2, i) * count[i]
 
 for i in range(j - 1, -1, -1):
-    tmp1 = count[i]  # 1の数
-    tmp0 = N - tmp1  # 0の数
+    tmp1 = count[i]
+    tmp0 = N - tmp1
     if B[i] == 0:
         just[i] = just[i + 1] + pow(2, i) * tmp1
         if under[i + 1] >= 0:
             under[i] = under[i + 1] + pow(2, i) * max(tmp1, tmp0)
-    else:  # B[i] == 1
+    else:
         just[i] = just[i + 1] + pow(2, i) * tmp0
         if under[i + 1] == -1:
             under[i] = just[i + 1] + pow(2, i) * tmp1
@@ -51,9 +50,3 @@ for i in range(j - 1, -1, -1):
 
 
 print((max(under[0], just[0]) + tmp))
-
-# print ('count', count)
-# print ('B', B)
-# print (under)
-# print (just)
-# print (tmp)
