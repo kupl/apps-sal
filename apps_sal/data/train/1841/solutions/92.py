@@ -9,7 +9,6 @@ class Solution:
         medianValue = sList[medianIndex]
         
         strongList = [(abs(elem - medianValue), elem) for elem in sList]
-        #finalList = sorted(strongList, reverse = True, key=lambda x:x[0])
         ht = {}
         returnList = []
         for elem in strongList:

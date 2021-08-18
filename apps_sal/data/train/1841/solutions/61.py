@@ -1,10 +1,8 @@
 class Solution:
-    # arr min 1 item
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr = sorted(arr)
         l = len(arr)
 
-        # median = average of middle 2 if even
         if l % 2 == 0:
             median = arr[(l - 1) // 2]
         else:

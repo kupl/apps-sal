@@ -7,5 +7,4 @@ class Solution:
         arr.sort()
         med = arr[(len(arr) - 1) // 2]
         sorted_diff = sorted(arr, key=lambda x: abs(x - med))
-        # print (sorted_diff)
         return sorted_diff[-k:]

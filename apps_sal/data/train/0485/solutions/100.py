@@ -9,10 +9,10 @@ class Solution:
                 flip = 0
             else:
                 flip = 1
-            if (x == 1 and flip == 1) or (x == 0 and flip == 0):  # If we must flip the subarray starting here...
-                ans += 1  # We're flipping the subarray from A[i] to A[i+K-1]
+            if (x == 1 and flip == 1) or (x == 0 and flip == 0):
+                ans += 1
                 if i + K > N:
-                    return -1  # If we can't flip the entire subarray, its impossible
+                    return -1
                 flip = 1 - flip
                 if i + K < N:
                     hint[i + K] = 1 - hint[i + K]

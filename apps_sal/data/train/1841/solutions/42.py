@@ -4,10 +4,6 @@ from collections import defaultdict
 class Solution:
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
 
-        # 计算median
-        # 挨个计算绝对值，保存(key:abs,value:[num])
-        # key[从大到小]，value从大到小。res到达k的长度，就return
-
         n = len(arr)
         new_a = sorted(arr)
         median = new_a[(n - 1) // 2]
