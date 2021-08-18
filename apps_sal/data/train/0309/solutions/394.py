@@ -1,6 +1,6 @@
 class Solution:
     def longestArithSeqLength(self, A):
-        max_len, dp = 0, [{} for _ in range(len(A))]  # index_of_array: {diff: curr_max_len}
+        max_len, dp = 0, [{} for _ in range(len(A))]
         for i in range(1, len(A)):
             for j in range(0, i):
                 diff = A[i] - A[j]

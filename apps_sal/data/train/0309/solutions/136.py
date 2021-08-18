@@ -12,7 +12,5 @@ class Solution:
                     dp[A[i], diff] = dp.get((A[j], diff), 1) + 1
             dp[A[i], 0] = samecnt
 
-        # print(dp)
         key = max(dp, key=dp.get)
-        # print(key)
         return dp[key]

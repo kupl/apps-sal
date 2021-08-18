@@ -1,6 +1,5 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
-        # dp[(index, diff)] equals to the length of arithmetic sequence at index with difference diff.
         dp = collections.defaultdict(int)
 
         for i in range(len(A)):

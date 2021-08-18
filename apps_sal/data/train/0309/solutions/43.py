@@ -22,7 +22,6 @@ class Solution:
         for right in range(1, len(A)):
             for left in range(right):
                 diff = A[right] - A[left]
-                #print(diff, sequences[left])
                 if diff in sequences[left]:
                     count = sequences[left][diff] + 1
                     sequences[right][diff] = count

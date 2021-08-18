@@ -10,10 +10,10 @@ class Solution:
             for j in range(i):
                 diff = A[i] - A[j]
 
-                if diff in dp[j]:  # see if i's distance from j  is possible from a prev number to j
+                if diff in dp[j]:
                     dp[i][diff] = max(2, 1 + dp[j][diff])
                 else:
-                    dp[i][diff] = 2  # len 2 is always possible
+                    dp[i][diff] = 2
 
                 ans = max(ans, dp[i][diff])
 
