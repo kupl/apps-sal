@@ -1,5 +1,4 @@
 def dont_give_me_five(start, end):
-    # your code here
 
     l = list(range(start, end + 1))
     new_l = []

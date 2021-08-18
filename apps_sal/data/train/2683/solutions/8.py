@@ -1,5 +1,4 @@
 def split_the_bill(x):
-    # Good Luck!
     avg = sum(x.values()) / float(len(x))
     group = {}
     for key in x:

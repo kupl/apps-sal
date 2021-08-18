@@ -47,25 +47,18 @@ while t > 0:
                 Sum5 += temp1 * temp2
                 for k in range(j + 1, q):
                     Sum3 += y[i] * y[j] * y[k]
-                    # print y[i],y[j],y[k]
                     if y[i] > 1:
                         Sum6 += (y[i] * (y[i] - 1)) / 2 * y[j] * y[k]
-                        # print Sum6
                     if y[j] > 1:
                         Sum6 += y[i] * (y[j] * (y[j] - 1)) / 2 * y[k]
-                    # print Sum6
                     if y[k] > 1:
                         Sum6 += y[i] * y[j] * (y[k] * (y[k] - 1)) / 2
-                    # print Sum6
                     for z in range(k + 1, q):
                         Sum4 += y[i] * y[j] * y[k] * y[z]
-        # print "Sum2=%d,Sum3=%d,Sum4=%d,Sum5=%d,Sum6=%d"%(Sum2,Sum3,Sum4,Sum5,Sum6)
         return ((Sum2 % MAX + (Sum3 * 2) % MAX + (Sum4 * 3) % MAX + Sum5 % MAX + (Sum6 * 2) % MAX))
     ans1 = bruce()
     fact = math.factorial(l)
-    # print "fact=%d,prod=%d"%(fact,prod)
     ast = fact / prod
-    # print ast
     temp = (((ast) % MAX) * ((ast - 1) % MAX)) % MAX
     RRR = ((ast % MAX) * (ans1 % MAX)) % MAX
     ans = (temp - RRR + MAX) % MAX

@@ -1,5 +1,4 @@
 def get_size(w, h, d):
-    # your code here
     area = 0
     volume = 0
 

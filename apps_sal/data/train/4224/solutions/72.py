@@ -1,5 +1,4 @@
 def dont_give_me_five(start, end):
-    # your code here
     num = list(range(start, end + 1))
     count = 0
     for i in num:

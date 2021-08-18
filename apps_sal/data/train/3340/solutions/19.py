@@ -6,8 +6,6 @@ def factorTwos(n):
 
     return (twos, n)
 
-# not the prettiest, but it works
-
 
 def sharkovsky(a, b):
     twosA, remA = factorTwos(a)
