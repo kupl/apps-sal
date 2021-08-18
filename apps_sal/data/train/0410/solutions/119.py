@@ -1,12 +1,5 @@
 class Solution:
     def getKth(self, lo: int, hi: int, k: int) -> int:
-        # use DP to cut down on calculation time
-        # 1 = 1
-        # 2 = 2, 1
-        # 3 = 3, 10, 5, 16, 8, 4, 2, 1
-        # 4 = 4, 2, 1
-        # 5 = 5, 16, 8, 4, 2, 1
-        # 6 = 6, 3
 
         dp_steps = {}
 

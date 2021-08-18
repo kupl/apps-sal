@@ -16,5 +16,4 @@ class Solution:
             p = power(i)
             arr.append((i, p))
         arr = [j[0] for j in sorted(arr, key=lambda x: x[1])]
-        # print(arr)
         return arr[k - 1]

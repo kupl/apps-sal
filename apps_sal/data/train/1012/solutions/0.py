@@ -9,8 +9,6 @@ def R(t=int): return t(input())
 def RL(t=int): return [t(x) for x in input().split()]
 def RLL(n, t=int): return [RL(t) for _ in range(n)]
 
-# primes up to n
-
 
 def primes(n):
     P = []

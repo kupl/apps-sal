@@ -1,4 +1,3 @@
-# cook your dish here
 
 n = int(input())
 
@@ -34,7 +33,4 @@ for i in range(len(k)):
 
     y -= 1
 
-    # k[-1]+=h
-    # if k[-1]<0:
-    #     sum+=abs(k[-1])*y
 print(sum)

@@ -16,5 +16,5 @@ class Solution:
         for element in range(lo, hi + 1):
             p = determine_power(element)
             dic.update({element: p})
-        dd = sorted(list(dic.items()), key=lambda x: x[1])  # sort by value
+        dd = sorted(list(dic.items()), key=lambda x: x[1])
         return (dd[k - 1][0])

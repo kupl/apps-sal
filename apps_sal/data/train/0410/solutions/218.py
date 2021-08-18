@@ -26,7 +26,6 @@ class Solution:
         else:
             n = n // 8 * 27 + 26
             steps = 6
-        # if n in self.cache.keys():
         if n <= 8:
             return self.cache[n] + steps
         else:

@@ -3,7 +3,6 @@ ans = []
 for x in range(n):
     a = input()
     a = (' '.join(a.split()[::-1]))
-    # print(a)
     punctuation = ".,:;'"
     b = ""
     for i in a:

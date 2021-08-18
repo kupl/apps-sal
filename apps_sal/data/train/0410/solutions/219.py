@@ -4,7 +4,6 @@ class Solution:
         dp[1] = 0
 
         def go(i):
-            # print(i)
             if i == 1:
                 return 0
             if dp[i] > 0:

@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 l = [int(i) for i in input().split()]
 x = int(input())

@@ -16,10 +16,6 @@ if(x == 0):
 elif(x == 1):
     print(-l[0])
 elif(x < len(l)):
-    # cost=0
-    #cost1 = -l[x]*x
-    #cost2 = -(sum(l[:(x)])-l[x]*x)
-    #cost  = cost1+cost2
     cost = -(sum(l[:(x)]))
     print(cost)
 else:

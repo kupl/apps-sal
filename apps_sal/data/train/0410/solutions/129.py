@@ -4,10 +4,7 @@ class Solution:
         d = {}
 
         def steps(num, level):
-            #             if num in d:
-            #                 return d[num] + level
 
-            #             d[num] = level
             if num == 1:
                 return level
             if num % 2 == 0:
