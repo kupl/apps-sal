@@ -3,7 +3,7 @@ val = []
 
 totNums = int(inp[0])
 totOpt = int(inp[1])
-inp = input().split(' ')  # assert(len(inp) == totNums)
+inp = input().split(' ')
 for it in inp:
     val.append(int(it))
 

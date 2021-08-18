@@ -11,4 +11,3 @@ def cube_odd(arr):
         if not element % 2 == 0:
             sum += element
     return sum
-    # your code here - return None if at least a value is not an integer

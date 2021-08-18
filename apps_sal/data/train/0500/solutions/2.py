@@ -12,7 +12,7 @@ class Solution:
         stack = [0]
         pre_op = '+'
         cur_num = 0
-        s += '#'
+        s += '
 
         for c in s:
             if c == ' ':

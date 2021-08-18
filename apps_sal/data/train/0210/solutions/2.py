@@ -11,7 +11,6 @@ class Solution(object):
         import sys
 
         bh = {}
-        # To prevent 0 as a divisor
         w = t + 1
         for i in range(len(nums)):
             n_i = nums[i]

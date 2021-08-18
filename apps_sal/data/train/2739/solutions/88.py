@@ -9,4 +9,3 @@ def cube_odd(arr):
         if x % 2 != 0:
             r += x
     return r
-    # Flez

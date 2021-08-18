@@ -15,8 +15,6 @@ def find_missing_number(sequence):
     if numbers[0] == 2 and numbers == list(range(2, len(numbers) + 2)):
         return 1
 
-    #"It must return 1 for a sequence missing the first element"
-
     else:
         for i in range(len(numbers) - 1):
             if numbers[i] + 1 != numbers[i + 1]:

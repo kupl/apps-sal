@@ -7,5 +7,3 @@ def cube_odd(arr):
             result += n**3
 
     return result
-
-    # your code here - return None if at least a value is not an integer
