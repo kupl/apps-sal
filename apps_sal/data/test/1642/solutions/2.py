@@ -23,9 +23,5 @@ def cnt(m):
 ans = Decimal(cnt(0))
 for i in range(0, n):
     ans = min(ans, cnt(i))
-    # for j in range(0,n):
-    #     if i == j :continue;
-    #     cur = ((d[i][0] - d[j][0]) ** 2 + (d[i][1] - d[j][1]) ** 2) ** (1/2)
-    #     ans = min(ans, cur / 2)
 
 print(ans)

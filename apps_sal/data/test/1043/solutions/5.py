@@ -2,11 +2,6 @@ import math
 import sys
 from sys import stdin, stdout
 
-# sys.setrecursionlimit(300000)
-# print(sys.getrecursionlimit())
-
-# dp O(NlogN)
-
 
 def getMinimunCost(a, sum, i, j, dp):
 
@@ -53,12 +48,6 @@ def getMinimunCost2(a, sum, dp):
                         dp[i][j] = min(dp[i][j], dp[i - 1][j - 1] + a[j])
             else:
                 dp[i][j] = min(dp[i][j], dp[i][j - 1])
-                # break;
-
-    # for i in range(len(dp)):
-    #    print(dp[i])
-
-    # print(a)
 
     return dp[-1][-1]
 
@@ -78,13 +67,8 @@ def __starting_point():
             sum.append(sum[i - 1] + x)
             x = int(x / 2)
 
-        #dp = [[-1 for i in range(n)] for i in range(bcnt + 1)]
         dp = [[float("inf") for i in range(n)] for i in range(bcnt + 1)]
 
-        # print(sum)
-        #print(str(dp[0][0] + 1))
-
-        # set 0
         flag = True
         for i in range(len(a)):
             if a[i] == -1:
@@ -94,7 +78,6 @@ def __starting_point():
                 a[i] = 0
 
         a.reverse()
-        #res = getMinimunCost(a, sum, 0, 0, dp)
         res = getMinimunCost2(a, sum, dp)
 
         stdout.write(str(res))

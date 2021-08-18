@@ -13,8 +13,6 @@ q, k = map(int, input().split())
 
 distance = [-1 for i in range(n + 1)]
 
-# 再帰でkから各頂点までの距離を求める
-
 
 def dfs(now, pre, c):
     distance[now] = c

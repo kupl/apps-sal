@@ -8,9 +8,8 @@ for _ in range(N - 1):
     connection[a - 1].append(branch(b - 1, c))
     connection[b - 1].append(branch(a - 1, c))
 
-dist = [0] * N  # dist from root(K)
+dist = [0] * N
 Q, K = list(map(int, input().split()))
-# bfs
 reserved = deque([K - 1])
 seen = {K - 1}
 while len(reserved) > 0:
@@ -22,7 +21,6 @@ while len(reserved) > 0:
         reserved.append(next.id)
         dist[next.id] = dist[current] + next.dist
 
-# deal with query
 Query = [list(map(int, input().split())) for _ in range(Q)]
 for x, y in Query:
     print((dist[x - 1] + dist[y - 1]))

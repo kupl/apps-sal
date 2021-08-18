@@ -26,18 +26,18 @@ def ni(): return int(ns())
 def nf(): return float(ns())
 def na(): return list(map(int, stdin.readline().split()))
 def nb(): return list(map(float, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+def ns(): return stdin.readline().rstrip()
 
 
-def dijkstra(s, n):  # (始点, ノード数)
+def dijkstra(s, n):
     dist = [inf] * n
-    hq = [(0, s)]  # (distance, node)
+    hq = [(0, s)]
     dist[s] = 0
-    seen = [False] * n  # ノードが確定済みかどうか
+    seen = [False] * n
     while hq:
-        v = heappop(hq)[1]  # ノードを pop する
+        v = heappop(hq)[1]
         seen[v] = True
-        for to, cost in adj[v]:  # ノード v に隣接しているノードに対して
+        for to, cost in adj[v]:
             if seen[to] == False and dist[v] + cost < dist[to]:
                 dist[to] = dist[v] + cost
                 heappush(hq, (dist[to], to))

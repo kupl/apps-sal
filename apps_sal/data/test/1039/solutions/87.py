@@ -13,12 +13,10 @@ dist = [-1] * N
 
 
 def dfs(v, total_cost):
-    # v：頂点, total_cost：今までかかったコストの合計
     dist[v] = total_cost
     for v_next, cost in tree[v]:
         if dist[v_next] >= 0:
             continue
-            # v_nextが訪問済みならスキップ
         dfs(v_next, total_cost + cost)
 
 

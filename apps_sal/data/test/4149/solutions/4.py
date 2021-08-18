@@ -1,4 +1,3 @@
-# @author
 
 import sys
 
@@ -42,19 +41,15 @@ class DRecoverIt:
             p_order[p[i]] = i
 
         res = []
-        # print(p[:10])
         for i in range(2 * n):
             if cnt[b[i]] == 0:
                 continue
             if is_prime[b[i]]:
-                # print(b[i], cnt[b[i]], res)
                 if b[i] < len(p) and p[b[i]] in cnt and cnt[p[b[i]]] > 0:
-                    # print(p[b[i]], "*")
                     res.append(b[i])
                     cnt[p[b[i]]] -= 1
                     cnt[b[i]] -= 1
                 elif p_order[b[i]] in cnt and cnt[p_order[b[i]]] > 0:
-                    # print(p_order[b[i]])
                     res.append(p_order[b[i]])
                     cnt[p_order[b[i]]] -= 1
                     cnt[b[i]] -= 1

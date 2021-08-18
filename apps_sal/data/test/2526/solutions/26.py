@@ -1,6 +1,5 @@
 import sys
 sys.setrecursionlimit(10 ** 9)
-# input = sys.stdin.readline    ####
 def int1(x): return int(x) - 1
 def II(): return int(input())
 def MI(): return list(map(int, input().split()))
@@ -15,19 +14,10 @@ def printlist(lst, k=' '): print((k.join(list(map(str, lst)))))
 
 
 INF = float('inf')
-# from math import ceil, floor, log2
-# from collections import deque, defaultdict
-# from itertools import combinations as comb, combinations_with_replacement as comb_w, accumulate, product, permutations
-# from heapq import heapify, heappop, heappush
-# import numpy as np    # cumsum
-# from bisect import bisect_left, bisect_right
 
 
 def solve():
     X, Y, A, B, C = MI()
-    # R = LI()
-    # G = LI()
-    # T = LI()
     L = []
     for r in LI():
         L.append((r, 'R'))
@@ -36,7 +26,6 @@ def solve():
     for t in LI():
         L.append((t, 'T'))
     L = sorted(L, reverse=True)
-    # print(L)
 
     ans = 0
     left = X + Y

@@ -1,13 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
 
 
 from collections import deque
-
-
-# In[6]:
 
 
 N = int(input())
@@ -18,13 +11,7 @@ for _ in range(N - 1):
     t[b - 1].append([a, c])
 
 
-# In[7]:
-
-
 Q, K = list(map(int, input().split()))
-
-
-# In[8]:
 
 
 visited = [-1 for _ in range(N)]
@@ -41,6 +28,3 @@ while len(que):
 for i in range(Q):
     x, y = list(map(int, input().split()))
     print((visited[x - 1] + visited[y - 1]))
-
-
-# In[ ]:

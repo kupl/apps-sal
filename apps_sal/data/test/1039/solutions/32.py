@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
@@ -29,7 +28,6 @@ def main():
         adj[b - 1].append((a - 1, c))
     Q, K = list(map(int, input().split()))
 
-    # Kを頂点とする根付き木を作成する
     dfs(K - 1, -1, 0)
 
     for _ in range(Q):

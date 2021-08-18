@@ -1,4 +1,3 @@
-# グラフの連結成分を調べる
 from collections import deque
 
 
