@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import deque, Counter
 from heapq import heappop, heappush
 from bisect import bisect_right
@@ -32,7 +31,6 @@ def main():
     for _ in range(M):
         X, Y, Z = [int(x) - 1 for x in input().split()]
         uf.union(X, Y)
-    # print(len(set(uf.parents)))
     ans = [uf.find(x) for x in uf.parents]
     print((len(set(ans))))
 

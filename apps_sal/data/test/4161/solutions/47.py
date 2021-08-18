@@ -1,4 +1,3 @@
-# C - Sum of gcd of Tuples (Easy)
 
 import math
 

@@ -1,10 +1,3 @@
-#    Copyright 2016-2019 NetworkX developers.
-#    Copyright (C) 2004-2019 by
-#    Aric Hagberg <hagberg@lanl.gov>
-#    Dan Schult <dschult@colgate.edu>
-#    Pieter Swart <swart@lanl.gov>
-#    All rights reserved.
-#    BSD license.
 """
 Union-find data structure.
 """
@@ -53,20 +46,17 @@ class UnionFind:
     def __getitem__(self, object):
         """Find and return the name of the set containing the object."""
 
-        # check for previously unknown object
         if object not in self.parents:
             self.parents[object] = object
             self.weights[object] = 1
             return object
 
-        # find path of objects leading to the root
         path = [object]
         root = self.parents[object]
         while root != path[-1]:
             path.append(root)
             root = self.parents[root]
 
-        # compress the path and return
         for ancestor in path:
             self.parents[ancestor] = root
         return root
@@ -90,18 +80,15 @@ class UnionFind:
             [['x', 'y'], ['z']]
 
         """
-        # Ensure fully pruned paths
         for x in list(self.parents.keys()):
-            _ = self[x]  # Evaluated for side-effect only
+            _ = self[x]
 
-        # TODO In Python 3.3+, this should be `yield from ...`.
         for block in list(groups(self.parents).values()):
             yield block
 
     def union(self, *objects):
         """Find the sets containing the objects and merge them all."""
         roots = [self[x] for x in objects]
-        # Find the heaviest root according to its weight.
         heaviest = max(roots, key=lambda r: self.weights[r])
         for r in roots:
             if r != heaviest:

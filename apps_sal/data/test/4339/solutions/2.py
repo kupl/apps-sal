@@ -5,7 +5,6 @@ input = sys.stdin.readline
 n = int(input())
 x = [*map(int, input().split())]
 y = [xi - yi for xi, yi in zip(x, map(int, input().split()))]
-# print(y)
 y.sort()
 ans = 0
 for i in range(n):

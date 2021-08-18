@@ -1,5 +1,3 @@
-#!/usr/env python3
-# encoding:utf8
 
 import math
 from itertools import combinations_with_replacement as comb
@@ -20,7 +18,6 @@ def main():
         else:
             k = 6
         ans += gcd * k
-        #print(f"abc={abc} gcd={gcd} k={k}")
 
     print(ans)
 

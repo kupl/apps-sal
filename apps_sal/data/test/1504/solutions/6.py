@@ -9,7 +9,7 @@ for _ in range(t):
     if l1 > l2:
         l1, r1, l2, r2 = l2, r2, l1, r1
 
-    if l2 <= r1:  # already overlapping
+    if l2 <= r1:
         per_interval = abs(l1 - l2) + abs(r1 - r2)
         already_overlap = min(r1, r2) - max(l1, l2)
         k -= already_overlap * n
@@ -22,8 +22,6 @@ for _ in range(t):
         print(cost)
         continue
 
-    # not overlapping
-
     diff = l2 - r1
     per_interval = r2 - l1
 
@@ -32,7 +30,6 @@ for _ in range(t):
         continue
 
     cost = diff + per_interval
-    #print(diff, per_interval)
     rem_n = n - 1
     rem_k = k - per_interval
     while rem_n and diff < per_interval and rem_k >= per_interval:

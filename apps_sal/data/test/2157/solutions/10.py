@@ -1,5 +1,3 @@
-# in the name of god
-# Mr_Rubick
 n, q = list(map(int, input().split()))
 t = [0] + list(map(int, input().split()))
 p = [0] * (n + 1)

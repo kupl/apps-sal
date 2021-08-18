@@ -1,14 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
 
 
 N = int(input())
 a = list(map(int, input().split()))
-
-
-# In[6]:
 
 
 mylist = [0] * (N + 1)
@@ -29,6 +22,3 @@ for i in range(1, N + 1):
 print((len(ans)))
 if ans:
     print((*ans))
-
-
-# In[ ]:

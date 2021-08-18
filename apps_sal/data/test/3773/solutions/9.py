@@ -6,7 +6,6 @@ n = int(input())
 info = [list(map(int, input().split())) for i in range(n)]
 
 
-# 愚直解
 def mex(array):
     if not array:
         return 0
@@ -32,7 +31,6 @@ else:
 """
 
 
-# a(3n)=n, otherwise a(n)=a(floor(2n/3))
 """
 def solve(n, k):
     if n % k == 0:
