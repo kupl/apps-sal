@@ -1,10 +1,8 @@
-# E
 N, D = list(map(int, input().split()))
 dv = list(map(int, input().split()))
 Q = int(input())
 qv = list(map(int, input().split()))
 
-# trace of Alice
 dist_alice = D
 dist_alice_list = [D]
 for i in range(N):

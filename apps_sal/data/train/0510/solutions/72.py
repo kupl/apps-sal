@@ -1,11 +1,7 @@
-# coding: utf-8
 import math
 from collections import defaultdict
 import sys
-#from operator import itemgetter
 sysread = sys.stdin.readline
-#from heapq import heappop, heappush
-#from itertools import combinations
 sys.setrecursionlimit(10**7)
 
 
@@ -90,7 +86,7 @@ def run():
     Q = int(input())
     queries = [sysread().split() for _ in range(Q)]
 
-    bins = [0] * N  # a: ord('a') - 97
+    bins = [0] * N
     for i, s in enumerate(S):
         id = ord(s) - 97
         bins[i] = 1 << id

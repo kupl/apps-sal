@@ -1,4 +1,3 @@
-# cook your dish here
 def check(n):
     l = list(map(int, str(n)))
     t = len(l)

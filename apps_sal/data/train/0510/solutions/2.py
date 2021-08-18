@@ -7,10 +7,8 @@ def segfunc(x, y):
 
 
 def init(init_val):
-    # set_val
     for i in range(n):
         seg[i + num - 1] = init_val[i]
-    # built
     for i in range(num - 2, -1, -1):
         seg[i] = segfunc(seg[2 * i + 1], seg[2 * i + 2])
 
@@ -52,10 +50,8 @@ li = []
 for i in range(n):
     li.append(1 << ord(s[i]) - ord('a'))
 
-#####単位元######
 ide_ele = 0
 
-# num:n以上の最小の2のべき乗
 num = 2**(n - 1).bit_length()
 seg = [ide_ele] * 2 * num
 init(li)

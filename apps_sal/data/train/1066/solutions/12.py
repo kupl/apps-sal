@@ -3,7 +3,6 @@ T = int(input())
 for _ in range(T):
     N = int(input())
     V = list(str(N))
-    # fa=ckt(N)
     ans = ""
     n = len(V)
     for i in range(n):

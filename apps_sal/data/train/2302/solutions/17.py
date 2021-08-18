@@ -6,7 +6,6 @@ q = list(map(int, input().split()))
 ind = [D]
 for i in range(n):
     ind.append(min(ind[-1], abs(ind[-1] - x[i])))
-# print(ind)
 
 l = [1]
 for i in range(n - 1, -1, -1):

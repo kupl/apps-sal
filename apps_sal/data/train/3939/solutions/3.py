@@ -1,5 +1,4 @@
 def rps(p1, p2):
-    # your code here
     winner = {"scissors": "paper", "paper": "rock", "rock": "scissors"}
     if p1 == p2:
         return 'Draw!'

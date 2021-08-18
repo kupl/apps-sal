@@ -5,7 +5,7 @@ class SegmentTree:
     """
 
     def __init__(self, size, initValue):
-        self.size = 1 << (size.bit_length())  # 完全二分木にする
+        self.size = 1 << (size.bit_length())
         self.data = [initValue] * (2 * self.size - 1)
         self.initValue = initValue
 

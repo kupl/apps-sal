@@ -12,9 +12,6 @@ def prod(l):
         p *= i
     return p
 
-# http://jeromekelleher.net/generating-integer-partitions.html
-# No recursion
-
 
 def parts(n):
     a = [0] * (n + 1)

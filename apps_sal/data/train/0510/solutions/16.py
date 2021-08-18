@@ -12,7 +12,6 @@ for i, x in enumerate(s):
 
 for x in query:
     a, b, c = x.split()
-    # print(c)
     if a == '1':
         b = int(b) - 1
         if s[b] == c:
@@ -27,7 +26,6 @@ for x in query:
     else:
         b = int(b) - 1
         c = int(c) - 1
-        #print(b, c)
         ans = 0
         for i in range(26):
             L = bisect_left(p[i], b)

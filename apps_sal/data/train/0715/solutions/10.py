@@ -1,4 +1,3 @@
-# cook your dish here
 a = input().strip()
 x = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 s = 0

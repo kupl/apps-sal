@@ -15,6 +15,6 @@ def tv_remote(word):
         for i, row in enumerate(screen_keyboard_layout):
             if ch in row:
                 next_position = (i, row.index(ch))
-        button_presses += abs(next_position[0] - cur_position[0]) + abs(next_position[1] - cur_position[1]) + 1     # +1 for OK
+        button_presses += abs(next_position[0] - cur_position[0]) + abs(next_position[1] - cur_position[1]) + 1
         cur_position = next_position
     return button_presses

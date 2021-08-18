@@ -1,5 +1,4 @@
 def tv_remote(word):
-    # Your code here!!
     keyboard = [
         "abcde123",
         "fghij456",

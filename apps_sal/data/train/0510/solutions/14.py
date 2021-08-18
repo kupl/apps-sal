@@ -2,7 +2,6 @@ from math import log2, ceil
 
 
 class SegTree:
-    #####単位元######
     ide_ele = 0
 
     def __init__(self, init_val):
@@ -13,11 +12,9 @@ class SegTree:
         for i in range(n):
             self.seg[i + self.num - 1] = init_val[i]
 
-        # built
         for i in range(self.num - 2, -1, -1):
             self.seg[i] = self.segfunc(self.seg[2 * i + 1], self.seg[2 * i + 2])
 
-    #####segfunc######
     def segfunc(self, x, y):
         return x | y
 

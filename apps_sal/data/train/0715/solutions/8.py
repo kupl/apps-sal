@@ -1,4 +1,3 @@
-# cook your dish here
 import string
 s = [x for x in str(input())]
 d = {}
