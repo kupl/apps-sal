@@ -1,4 +1,3 @@
-# cook your dish here
 EPS = 1e-8
 
 

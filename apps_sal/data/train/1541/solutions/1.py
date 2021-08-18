@@ -17,7 +17,6 @@ for ii in range(t):
     q = sum(2 * (b[i] - c[i]) * v[i] for i in range(n))
     r = sum(vi ** 2 for vi in v)
     def func(t): return p / t / t + q / t + r
-    # ternary search
 
     def ternsearch():
 
@@ -33,8 +32,6 @@ for ii in range(t):
                 hi = m2
             else:
                 lo = m1
-            # print(hi,lo)
-            # print(func(lo)**(0.5))
         return max(0, func(lo))**(0.5)
     ans = ternsearch()
     print('%.12f' % (ans,))

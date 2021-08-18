@@ -3,7 +3,6 @@ from collections import OrderedDict
 
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
-        # im going to use a map, and we need to sort the map based on
         m = {}
         for i in arr:
             m[i] = m.get(i, 0) + 1

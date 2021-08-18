@@ -2,7 +2,6 @@ from itertools import islice
 
 
 def A000166():
-    # https://oeis.org/A000166
     a, b, n = 1, 0, 1
     while True:
         yield a

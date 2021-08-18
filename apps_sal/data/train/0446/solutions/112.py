@@ -1,6 +1,4 @@
 class Solution:
-    # Time: O(n*log(n))
-    # Space: O(n)
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         heap = []
         for key, val in collections.Counter(arr).items():

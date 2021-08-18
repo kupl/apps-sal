@@ -1,4 +1,3 @@
-# cook your dish here
 for text in range(int(input())):
     n, u, d = map(int, input().split())
     l = list(map(int, input().split()))

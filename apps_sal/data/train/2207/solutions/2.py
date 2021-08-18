@@ -1,6 +1,4 @@
 import sys
-#f = sys.stdin
-# f = open("input.txt", "r")
 n = int(input())
 a, b = [[], []], [[], []]
 for i in range(n):

@@ -1,4 +1,3 @@
-# cook your dish here
 def power(a, b):
     if(b == 0):
         return 1
