@@ -18,12 +18,9 @@ class Solution:
 class Solution:
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         modulo = 10**9 + 7
-        #don't use row 0 and all column 0 
         dp = [[0 for i in range(target+1)] for j in range(d+1)]
         
-        #from die No. 1 to d
         for dd in range(1, d+1):
-            #for target from 0 to min(f*dd, target)
             for tt in range(dd, min(f * dd, target) + 1 ):
                 if dd == 1:
                     dp[dd][tt] = 1
@@ -35,7 +32,6 @@ class Solution:
         return dp[d][target] % modulo                          
         
   
-        #f(d, target) = f(d-1, target-1) + f(d-1, target-2) + ... + f(d-1, target-f)  assuming target > f
         modulo = 10**9 + 7
         cache = {}
         def numRollsToTargetHelper(dd, tt):

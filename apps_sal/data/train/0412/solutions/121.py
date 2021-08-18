@@ -18,5 +18,4 @@ class Solution:
                 for k in range(1, min(j + 1, f + 1)):
                     dp[1][j] += dp[0][j - k] * dp_1[k]
             dp[0] = dp[1]
-        # print(dp,dp_1)
         return dp[1][-1] % 1000000007

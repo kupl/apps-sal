@@ -13,5 +13,4 @@ class Solution:
                     temp[j] = temp[j] % mod
             dp = temp.copy()
             temp = lol.copy()
-        # print(dp)
         return dp[-1]

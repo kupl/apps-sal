@@ -3,10 +3,6 @@ class Solution:
 
         dp = [[0] * (target + 1) for i in range(d + 1)]
 
-        # for i in range(d+1):
-        #     if
-        #     dp[1][0] = 1
-
         dp[0][0] = 1
 
         for i in range(d + 1):

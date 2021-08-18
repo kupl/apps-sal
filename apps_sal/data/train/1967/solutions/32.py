@@ -1,6 +1,5 @@
 class Solution:
     def ok(self, S, j, res):
-        # print(j, res)
         if j == len(S):
             return True
         for k in range(j + 1, len(S) + 1):

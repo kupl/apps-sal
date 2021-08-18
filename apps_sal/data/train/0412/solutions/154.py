@@ -12,5 +12,4 @@ class Solution:
                     dp2[j] += dp[j - k]
                 dp2[j] %= (10**9 + 7)
             dp = dp2
-        # print(dp)
         return dp[-1]

@@ -1,6 +1,5 @@
 class Solution:
     def dfs(self, final, S, path, original):
-        # print(path)
         if not S and len(path) > 2 and all([int(i) <= 2**31 - 1 for i in path]):
             final.append(path)
         for i in range(1, len(S) + 1):

@@ -1,10 +1,7 @@
 class Solution:
     def splitIntoFibonacci(self, S: str) -> List[int]:
-        # When the first two numbers are decided,
-        # all next numbers are decided too.
 
         for i in range(1, len(S) - 1):
-            # need have at least 1 chracter left for third number
             for j in range(i + 1, len(S)):
                 first = to_number(S[:i])
                 second = to_number(S[i:j])
@@ -15,7 +12,6 @@ class Solution:
 
 
 def to_number(s):
-    # print(s)
     num = int(s)
     if s.startswith('0') and num != 0:
         return None

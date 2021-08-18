@@ -1,5 +1,4 @@
 class Solution:
-    # Recursive memoized solution
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         memo = {}
         return self.num_rolls_util(memo, d, f, target, 0, 0)

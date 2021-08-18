@@ -14,5 +14,4 @@ class Solution:
                         if j + k <= target:
                             dp[i][j + k] += dp[i - 1][j]
                             dp[i][j + k] %= (10**9 + 7)
-        # print(dp)
         return dp[d][target]
