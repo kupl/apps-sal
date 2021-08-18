@@ -9,8 +9,6 @@ class Solution:
         for i in customers:
             w+=i
             tc+=i
-            #bd = min(4,w)
-            #w-=bd
             if w//4 == 0:
                 r+=1
             else:

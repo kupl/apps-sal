@@ -9,14 +9,10 @@ class Solution:
         while rem or i < n:
             if i < n:
                 rem += a[i]
-                # print(f'{rem = }')
             boarding = min(rem, cap)
-            # print(f'{boarding = }')
             rem = max(0, rem - cap)
             profit += boarding * boardingCost - runningCost
             profits.append(profit)
-            # print(f'{rem = }')
-            # print(f'{profits = }')
             i += 1
 
         argmax = -1

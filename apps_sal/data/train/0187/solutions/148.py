@@ -12,7 +12,6 @@ class Solution:
             current += canadd * boardingCost
             current -= runningCost
             currentindex += 1
-            # print(current)
 
             if current > best:
                 best = current
@@ -24,7 +23,6 @@ class Solution:
             current += canadd * boardingCost
             current -= runningCost
             currentindex += 1
-            # print(current)
 
             if current > best:
                 best = current

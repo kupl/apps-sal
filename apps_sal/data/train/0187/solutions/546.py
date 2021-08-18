@@ -5,7 +5,6 @@ class Solution:
         max_profit = -1
         rem = 0
         max_turns = -1
-        # print(sum(customers))
         for i, c in enumerate(customers):
             t, rem = divmod(c + rem, 4)
             turns += t
@@ -18,7 +17,6 @@ class Solution:
             if profit > max_profit:
                 max_profit = profit
                 max_turns = turns
-            # print(i, c, boarded, rem, turns, res)
         if rem > 0:
             boarded += rem
             turns += 1

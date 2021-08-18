@@ -25,7 +25,6 @@ class Solution:
                     profit += 4 * boardingCost - runningCost
                     waiting = waiting - 4
                     rotation += 1
-                    # print(profit)
                     if max_profit < profit:
                         max_pprofit = profit
                         ans = rotation

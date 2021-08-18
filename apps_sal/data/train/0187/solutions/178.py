@@ -19,7 +19,6 @@ class Solution:
             if profit > maxProfit:
                 maxId = i
                 maxProfit = profit
-            # print(remain,profit,maxProfit)
 
         j = maxId + 1
 
@@ -28,7 +27,6 @@ class Solution:
             if profit > maxProfit:
                 maxId = j
                 maxProfit = profit
-            # print(remain,profit,maxProfit,maxId)
             remain = max(remain - 4, 0)
             j = j + 1
 

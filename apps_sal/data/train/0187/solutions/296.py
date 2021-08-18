@@ -18,7 +18,6 @@ class Solution:
             if cp > 0:
                 curVal = True
             total += customers[i]
-        # print(cp, ans, total)
         if total > 3:
             if not curVal:
                 cp += (total // 4) * (4 * boardingCost - runningCost)
@@ -29,7 +28,6 @@ class Solution:
                 total = total % 4
             else:
                 return -1
-        # print(cp, ans, total)
         if total > 0 and total * boardingCost > runningCost:
             if not curVal:
                 cp += (total * boardingCost - runningCost)

@@ -12,12 +12,6 @@ class Solution:
 
             newCust = min(4, leftover)
             leftover -= newCust
-            # if leftover>=4:
-            #     newCust = 4
-            #     leftover -= 4
-            # else:
-            #     newCust = leftover
-            #     leftover = 0
 
             temp = dp[-1] + newCust * boardingCost - runningCost
             dp.append(temp)

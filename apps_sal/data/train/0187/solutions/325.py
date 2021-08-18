@@ -22,8 +22,6 @@ class Solution:
                     max_prof = cost
                 if r < len(customers):
                     wait += customers[r]
-                # if wait <10:
-                #     print(cost, r, wait, onboard)
 
         if max_prof <= 0:
             return -1

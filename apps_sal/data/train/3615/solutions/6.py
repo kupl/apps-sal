@@ -14,7 +14,7 @@ def presentation_agenda(friend_list):
             return loc not in locations_visited_by_peers
 
         exclusive = list(filter(is_unique, friend['dest']))
-        if exclusive:  # at least one location?
+        if exclusive:
             agenda.append({'person': friend['person'], 'dest': exclusive})
         return agenda
 

@@ -2,7 +2,6 @@ import re
 
 
 def who_is_winner(pieces_position_list):
-    # Your code here!
     tempList = ["".join(["*" for j in range(7)]) + "\t" for i in range(6)]
     for i in pieces_position_list:
         temp = i.split("_")

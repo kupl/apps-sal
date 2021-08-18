@@ -14,9 +14,7 @@ class Solution:
             if profit > maxProfit:
                 maxProfit = profit
                 minOp = i
-            # print(profit, i, boardingCost, totalCustomers)
 
-        # print(currCustomers, i, profit)
         while currCustomers:
             i += 1
             totalCustomers += min(4, currCustomers)
@@ -25,7 +23,5 @@ class Solution:
             if profit > maxProfit:
                 maxProfit = profit
                 minOp = i
-            # profit += (boardingCost * currCustomers - (math.factorial(int(ceil(currCustomers/4)))-math.factorial(i)) * runningCost)
-            # i += ceil(currCustomers/4)
 
         return minOp if maxProfit > 0 else -1

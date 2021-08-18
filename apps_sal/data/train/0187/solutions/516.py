@@ -11,15 +11,11 @@ class Solution:
             if cur_profit > max_profit:
                 max_profit = cur_profit
                 max_idx = i + 1
-        #     print(i+1, cur_profit)
-        # print(n_wait, n_board)
         while n_wait:
             i += 1
             n_board += min(n_wait, 4)
             n_wait -= min(n_wait, 4)
             cur_profit = boardingCost * n_board - (i + 1) * runningCost
-            # print(n_board, n_wait)
-            # print(i+1, cur_profit)
             if cur_profit > max_profit:
                 max_profit = cur_profit
                 max_idx = i + 1

@@ -23,23 +23,6 @@ class Solution:
             if debug:
                 print(f'i is {i}, new comer is {cust} and total waiting is {waiting}, '
                       f'board {board} people, curp is {curp}, rnd = {rnd}')
-        # for i, cust in enumerate(customers):
-            # if waiting <= 4:
-            #     curp = curp + waiting * bc - rc
-            #     if debug:
-            #         print(f'i is {i}, new comer is {cust} and total waiting is {waiting}, '
-            #               f'board {waiting} people, curp is {curp}, rnd = {rnd + 1}')
-            #     waiting = 0
-            #     rnd += 1
-            # else:
-            #     board = waiting - waiting % 4
-            #     boardrnd = board // 4
-            #     curp = curp + board * bc - boardrnd * rc  # t * (4*bc - rc)
-            #     if debug:
-            #         print(f'i is {i}, new comer is {cust} and total waiting is {waiting}, '
-            #               f'board {board} people, curp is {curp}, rnd = {rnd + boardrnd}')
-            #     waiting %= 4
-            #     rnd += boardrnd
 
             if curp > profit:
                 profit = curp
@@ -54,8 +37,3 @@ class Solution:
                 profit = curp
                 ans = rnd
         return ans
-
-
-# [17,0,45,39,19,4,9,3,16]
-# 11
-# 33

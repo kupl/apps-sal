@@ -1,6 +1,5 @@
 class Solution:
     def profit(self, s, customers, count, curr_profit, waiting, rot_cost, bill):
-        # print(s,waiting,count)
         if curr_profit > self.profit_so_far:
             self.profit_so_far = curr_profit
             self.ans = count

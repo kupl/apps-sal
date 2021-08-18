@@ -28,7 +28,6 @@ class Solution:
                 cur_pro = total_onboarded * boardingCost - shift * runningCost
                 continue
 
-        # no more new customers
         while wait > 0:
             shift += 1
 

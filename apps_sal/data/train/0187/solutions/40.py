@@ -1,6 +1,5 @@
 class Solution:
     def minOperationsMaxProfit(self, arr, bc, rc):
-        # ok
         profit = 0
         turn = 0
         maxProfit = 0

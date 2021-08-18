@@ -40,5 +40,4 @@ class Solution:
             distance, start, destination
         )
 
-        # compare which path took less time
         return min(clockwise_total, counterclockwise_total)
