@@ -7,8 +7,8 @@ class Solution:
         right = left * len(weights) // D
         while left < right:
             mid = left + (right - left) // 2
-            c = 0  # capacity
-            d = 1  # days
+            c = 0
+            d = 1
             for w in weights:
                 if c + w <= mid:
                     c += w

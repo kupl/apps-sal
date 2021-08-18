@@ -9,9 +9,6 @@ def no(n):
     return c
 
 
-# Function to find modulo inverse of b. It returns
-# -1 when inverse doesn't
-# modInverse works for prime m
 def modInverse(a, m):
     m0 = m
     y = 0
@@ -22,35 +19,26 @@ def modInverse(a, m):
 
     while (a > 1):
 
-        # q is quotient
         q = a // m
 
         t = m
 
-        # m is remainder now, process
-        # same as Euclid's algo
         m = a % m
         a = t
         t = y
 
-        # Update x and y
         y = x - q * y
         x = t
 
-    # Make x positive
     if (x < 0):
         x = x + m0
 
     return x
 
 
-# Function to compute a/b under modulo m
-
-
 for _ in range(int(input())):
     a, n, m = map(int, input().split(' '))
     s = len(str(a))
-    # print(s)
     c = 10**s - 1
     w = c * m
     b = pow(10, n * s, w) - 1

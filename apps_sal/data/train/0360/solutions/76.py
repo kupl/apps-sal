@@ -9,7 +9,6 @@ class Solution:
         def canDo(arr, D, num):
             j = 0
             for i in range(D):
-                # can ship a pool
                 total = 0
                 while j < len(arr) and total + arr[j] <= num:
                     total += arr[j]

@@ -3,8 +3,6 @@ class Solution:
         cap_min = max(weights)
         cap_max = sum(weights)
 
-        # binary search the minimum cap
-
         while cap_min < cap_max:
             cap_mid = (cap_min + cap_max) // 2
 

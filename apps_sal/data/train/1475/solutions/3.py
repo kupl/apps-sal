@@ -1,4 +1,3 @@
-# your code goes here
 from sys import stdin, stdout
 s = stdin.readline().strip().split(' ')
 k = stdin.readline().strip()

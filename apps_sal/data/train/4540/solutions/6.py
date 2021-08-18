@@ -1,4 +1,3 @@
-# Miller-Rabin primality test
 
 from random import randrange
 

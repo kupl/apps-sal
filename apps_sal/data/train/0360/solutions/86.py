@@ -2,8 +2,6 @@ class Solution:
 
     def can_ship(self, weights, D, max_weight):
 
-        #print(weights, D)
-
         i = 0
         s = 0
 
@@ -38,8 +36,6 @@ class Solution:
 
             D -= 1
 
-            # print(\"test \", i, D, weights)
-
         if D == 0 and i < len(weights):
             return False
 
@@ -58,8 +54,6 @@ class Solution:
                 right = mid
             else:
                 left = mid
-
-            # print(\"mid = \", mid, left, right)
 
             if right == left + 1:
                 if self.can_ship(weights, D, left):

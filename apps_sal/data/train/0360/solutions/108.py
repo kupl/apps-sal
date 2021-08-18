@@ -18,7 +18,6 @@ class Solution:
         self.weights = weights
         self.D = D
 
-        # print(self.possible(15))
         lo, hi = 1, 0x3f3f3f3f
         while lo <= hi:
             mid = lo + ((hi - lo) >> 1)

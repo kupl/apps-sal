@@ -1,6 +1,5 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        # binary search, check capacity every time
         def checkCapacity(cap: int, weights: List[int], D: int):
             val = 0
             res = 1

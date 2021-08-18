@@ -5,7 +5,6 @@ class Solution:
 
         while l < r:
             m = l + (r - l) // 2
-            # now check if we use this m as the weight capacity for ship how many days we need
             days = 1
             s = 0
             for i in range(len(weights)):

@@ -1,9 +1,6 @@
 class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
 
-        # search space
-        # MIN (LEFT) has to be at least the largest weight of the packages, otherwise boat cannot carry it
-        # MAX (RIGHT) is the sum of all packages, since boat can carry all of it in ONE day
         left = 0
         right = 0
         for i in range(len(weights)):

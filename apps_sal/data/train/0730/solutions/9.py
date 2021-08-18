@@ -15,8 +15,6 @@ for _ in range(t):
 
                     m[l].append(items[k + 1])
                     break
-            # print m
-        # print m
         for k in range(len(m)):
             if len(m[k]) == 4:
                 iscore += (4 + 1)
@@ -27,7 +25,6 @@ for _ in range(t):
             else:
                 iscore += len(m[k])
         scores.append(iscore)
-    # print scores
     f = scores.index(max(scores))
     if scores.count(max(scores)) > 1:
         print("tie")

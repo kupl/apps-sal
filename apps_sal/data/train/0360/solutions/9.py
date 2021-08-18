@@ -29,8 +29,4 @@ class Solution:
             return m
         else:
             return r + 1
-        # val = test_ship_weights(l)
-        # if val==False:
-        #     if test_ship_weights(r):
-        #         return r
         return l

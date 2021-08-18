@@ -14,7 +14,6 @@ while n != 0:
         for j in range(i, len(v), b):
             vals.append(v[j])
         values.append(vals)
-    # print values
     for i in range(len(values)):
         if sum(values[i]) / len(values[i]) != number:
             flag = False

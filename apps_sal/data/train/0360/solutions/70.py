@@ -7,7 +7,6 @@ class Solution:
         while lo <= hi:
             mid = lo + (hi - lo) // 2
 
-            # try packing
             days = 0
             curr_weight = 0
             for i in range(len(weights)):
