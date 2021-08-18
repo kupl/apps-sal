@@ -19,16 +19,16 @@ def inpl_str(): return list(sys.stdin.readline().split())
 
 
 class UnionFind:
-    def __init__(self, N):  # 頂点数 N
-        self.table = [i for i in range(N)]    # 親 table[x] == x で根
-        self.rank = [1 for i in range(N)]    # 木の長さ
-        self.size = [1 for i in range(N)]    # 集合のサイズ
+    def __init__(self, N):
+        self.table = [i for i in range(N)]
+        self.rank = [1 for i in range(N)]
+        self.size = [1 for i in range(N)]
 
-    def Find(self, x):  # xの根を返す
+    def Find(self, x):
         if self.table[x] == x:
             return x
         else:
-            self.table[x] = self.Find(self.table[x])  # 親の更新
+            self.table[x] = self.Find(self.table[x])
             self.size[x] = self.size[self.table[x]]
             return self.table[x]
 

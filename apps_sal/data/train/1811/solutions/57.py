@@ -13,8 +13,3 @@ class StockSpanner:
         print((self.stack))
         self.stack.append((price, days))
         return days
-
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)

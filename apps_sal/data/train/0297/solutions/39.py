@@ -1,10 +1,9 @@
 class Solution:
     def numTilePossibilities(self, tiles: str) -> int:
-        # sequence can be of length 0 to len(tiles)
         result = set()
 
-        def backtrack(left_tiles, curr_seq):  # k is our desired length
-            if len(curr_seq) == k:  # reached our desired length
+        def backtrack(left_tiles, curr_seq):
+            if len(curr_seq) == k:
                 result.add(''.join(curr_seq))
                 return
             else:

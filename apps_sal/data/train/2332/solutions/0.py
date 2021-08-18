@@ -47,8 +47,6 @@ for testcaess in range(t):
                 USE2[to] = 1
                 Q.append(to)
 
-    # print(USE1,USE2)
-
     ANS1 = 0
     ANS2 = 0
 

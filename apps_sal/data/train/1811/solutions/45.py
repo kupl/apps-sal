@@ -1,7 +1,6 @@
 class StockSpanner:
 
     def __init__(self):
-        # from collections import defaultdict
         self.Dict = defaultdict(int)
         self.s = []
         self.count = 0
@@ -22,8 +21,3 @@ class StockSpanner:
             ans = self.Dict[(self.count, price)]
             self.count += 1
             return ans
-
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)

@@ -14,7 +14,3 @@ class Solution:
                 out.add(x)
 
         return len(out)
-
-
-# complexity: N = len(t), N*N!
-# space complexity: O(N!)

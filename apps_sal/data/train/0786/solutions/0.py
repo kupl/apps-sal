@@ -1,7 +1,4 @@
 from sys import stdin, stdout
-#from math import gcd as g
-#a,b = map(int, stdin.readline().split())
-#l1 = list(map(int, stdin.readline().split()))
 l = [1, 6, 7]
 c = 1
 for x in range(3, 100001):

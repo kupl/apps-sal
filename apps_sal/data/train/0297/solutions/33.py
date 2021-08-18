@@ -2,7 +2,6 @@ class Solution:
 
     def subsets(self, tiles, buff, buff_index, boolean, s):
         if tuple(buff[:buff_index]) not in s:
-            # print(buff[:buff_index])
             s.add(tuple(buff[:buff_index]))
             self.count += 1
         if len(buff) == buff_index:

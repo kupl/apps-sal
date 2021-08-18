@@ -18,5 +18,4 @@ class Solution:
             return ans
 
         ans = recur(tiles)
-        # print(ans)
         return len(ans)
