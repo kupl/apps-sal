@@ -6,7 +6,6 @@ class Solution:
             sum = 0
             for j in range(len(s)):
                 sum += int(s[j])
-            # print(sum)
             l[sum] += 1
         mm = max(l)
         c = 0

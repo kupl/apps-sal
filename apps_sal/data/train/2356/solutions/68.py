@@ -2,7 +2,6 @@ def resolve():
     mod = 998244353
     N, K = list(map(int, input().split(" ")))
 
-    # dp = [[0]*(K+1) for _ in range(N+1)]
     dp = [[0] * (N + 1) for _ in range(N + 1)]
     for n in range(N + 1):
         dp[n][n] = 1

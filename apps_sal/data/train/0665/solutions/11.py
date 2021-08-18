@@ -12,8 +12,6 @@ for _ in range(int(input())):
         for j in scrs:
             usr_mnthly[i].append(usr_mnthly[i][-1] + j)
 
-    # print(usr_mnthly)
-
     for mnth in range(1, m + 1):
         mnthly = {i: usr_mnthly[i][mnth] for i in range(n)}
         mnthly = sorted(mnthly.items(), key=lambda x: x[1], reverse=True)
@@ -29,7 +27,6 @@ for _ in range(int(input())):
                 usr_ranks[key].append(rank)
                 pos = 1
             prev = value
-    # print(usr_ranks)
 
     ans = 0
     for i in range(n):

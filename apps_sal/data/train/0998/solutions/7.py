@@ -12,11 +12,8 @@ import math
 import copy
 from bisect import bisect
 from io import BytesIO, IOBase
-# from math import sqrt,floor,factorial,gcd,log,ceil
 from collections import deque, Counter, defaultdict
 from itertools import permutations, combinations
-
-# define function
 
 
 def Int(): return int(sys.stdin.readline())
@@ -30,8 +27,6 @@ def Mod(): return 1000000007
 def Ncr(n, r, p): return ((fact[n]) * ((ifact[r] * ifact[n - r]) % p)) % p
 def Most_frequent(list): return max(set(list), key=list.count)
 def Mat2x2(n): return [List() for _ in range(n)]
-
-# Driver Code
 
 
 def solution():
@@ -49,7 +44,6 @@ def solution():
     print(str(max(a) + max(b)) + '\n')
 
 
-# Call the solve function
 def __starting_point():
     solution()
 

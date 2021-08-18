@@ -4,8 +4,9 @@ from itertools import chain
 
 p = re.compile('{legs}{body}{body}0{body}{body}0{body}{body}{legs}'.format(
     legs='[a-z]',
-    body=r'[[\]|};&#/><()*]',
-))
+    body=r'[[\] |}
+
+& ))
 
 
 def count_robots(a):

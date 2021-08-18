@@ -12,7 +12,6 @@ def solve(n, k):
                 dp[i][j] = (dp[i - 1][j - 1] + dp[i][2 * j]) % MOD
             else:
                 dp[i][j] = dp[i - 1][j - 1]
-    # print(dp)
     return dp[n][k]
 
 

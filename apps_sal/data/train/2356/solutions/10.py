@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 
 import sys
 sys.setrecursionlimit(10**6)
-# readline = sys.stdin.buffer.readline
 readline = sys.stdin.readline
 
 INF = 1 << 60

@@ -3,9 +3,6 @@ from math import gcd, log2, log10, floor
 import math
 from collections import defaultdict, OrderedDict
 from bisect import bisect_left
-# import numpy as np
-# input=stdin.readline
-# print=stdout.write
 
 n, q = list(map(int, input().split()))
 

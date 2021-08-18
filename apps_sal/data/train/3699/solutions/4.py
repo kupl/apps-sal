@@ -2,14 +2,13 @@ import copy
 
 
 def ranks(lst):
-    sortedVals = copy.deepcopy(lst)  # need deep copy to not mutate original list
-    sortedVals.sort(reverse=True)  # descending order
+    sortedVals = copy.deepcopy(lst)
+    sortedVals.sort(reverse=True)
 
     rankVec = []
-    for v in lst:  # for every value in the list, calculate its rank
-        indLoc = sortedVals.index(v)  # always finds first occurance so repetition does not matter
-        rankOfVal = indLoc + 1  # min rank is 1 not 0
+    for v in lst:
+        indLoc = sortedVals.index(v)
+        rankOfVal = indLoc + 1
         rankVec.append(rankOfVal)
 
     return rankVec
-# ---end function

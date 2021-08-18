@@ -1,12 +1,7 @@
-# 解答AC
 N, K = map(int, input().split())
 
 MOD = 998244353
 
-# dp[i][j]
-# jを、i個の1,1/2,...に分解する方法は何通りあるか
-# dp[i][j] = dp[i - 1][j - 1] + dp[i][2 * j]
-# i < j => dp[i][j] = 0
 dp = [[0] * (2 * N + 1) for _ in range(N + 1)]
 
 dp[0][0] = 1

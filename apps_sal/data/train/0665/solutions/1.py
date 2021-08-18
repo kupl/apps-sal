@@ -32,7 +32,4 @@ for _ in range(t):
         i2 = rank.index(min(rank))
         if i1 != i2:
             count += 1
-    # print(rating)
-    # print(ranking)
     print(count)
-    # print("---------------------------------------------------")

@@ -1,5 +1,3 @@
-# cook your dish here
-# Author : Ashutosh Wagh, Codechef : ashutosh0903
 for _ in range(int(input())):
     n, m = list(map(int, input().split()))
     r = list(map(int, input().split()))

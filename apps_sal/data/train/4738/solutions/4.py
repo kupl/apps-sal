@@ -1,5 +1,4 @@
 def find(r):
-    # Your code here
     a = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
     for i in r:
         a[i] = '1'

@@ -1,4 +1,3 @@
-# cook your dish here
 def __starting_point():
     t = int(input())
     while t > 0:
