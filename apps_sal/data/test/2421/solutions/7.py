@@ -2,13 +2,13 @@ import heapq
 
 
 def dijkstra(g: list, start, goal=None):
-    num = len(g)          # グラフのノード数
+    num = len(g)
     dist = [float('inf') for i in range(num)]
     dist[start] = 0
     q = []
-    heapq.heappush(q, (0, start))  # 始点をpush
+    heapq.heappush(q, (0, start))
     while q:
-        prov_cost, src = heapq.heappop(q)  # pop
+        prov_cost, src = heapq.heappop(q)
         if dist[src] < prov_cost:
             continue
         for node, cost in g[src]:

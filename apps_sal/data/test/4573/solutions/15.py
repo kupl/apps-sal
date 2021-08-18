@@ -1,4 +1,3 @@
-# 51 C - Many Medians
 N = int(input())
 X = list(map(int, input().split()))
 Xsrt = sorted(X, reverse=False)

@@ -1,4 +1,3 @@
-# solution
 import io
 from collections import Counter
 

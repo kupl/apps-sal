@@ -12,7 +12,6 @@ for i in range(N):
                     A[(a - t, b - s)] = 1
                 else:
                     A[(a - t, b - s)] += 1
-# print(A)
 ans = [-1]
 temp = list(A.values())
 total = 0

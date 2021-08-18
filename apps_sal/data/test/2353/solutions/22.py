@@ -7,9 +7,7 @@ p = [0] * T
 
 
 for t in range(T):
-    # n[t] = int(input())   #,m[t] = [int(i) for i in input().split(' ')]
     a, b, c, d = [int(i) for i in input().split(' ')]
-    #p[t] = [int(i) for i in input().split(' ')]
     if b >= a:
         print(b)
     elif c <= d:

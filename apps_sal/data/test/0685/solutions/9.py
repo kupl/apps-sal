@@ -1,4 +1,3 @@
-# Glider
 
 n, h = map(int, input().split())
 s = [0 for i in range(n)]

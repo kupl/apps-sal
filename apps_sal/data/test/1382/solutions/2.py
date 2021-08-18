@@ -1,5 +1,3 @@
-# 解説AC
-# 二部グラフでないグラフの性質や，パスの長さを考察する
 
 def main():
     N, M = (int(i) for i in input().split())
