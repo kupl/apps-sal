@@ -1,13 +1,9 @@
 class Solution:
     def stoneGameII(self, A: List[int]) -> int:
 
-        # my solution ...
-        #  time: O()
-        # space: O()
-
         seen = {}
 
-        def max_stones(sidx, m):  # 返回面对 A[sidx:] 时，直至游戏结束，所能取到的最多石头
+        def max_stones(sidx, m):
             if sidx == len(A):
                 return 0
             if (sidx, m) not in seen:

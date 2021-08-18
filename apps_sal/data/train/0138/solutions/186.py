@@ -2,9 +2,9 @@ class Solution:
     def getMaxLen(self, a: List[int]) -> int:
         n = len(a)
         ans = 0
-        neg = -1  # position of last negative element
-        zero = -1  # position of last zero
-        cnt = 0  # number of negatives seen so far
+        neg = -1
+        zero = -1
+        cnt = 0
         for i, x in enumerate(a):
             if x == 0:
                 neg = zero = i

@@ -11,8 +11,6 @@ class Solution:
 
         @lru_cache(None)
         def solve(p, m, is_alex):
-            # if (p, m, is_alex) in solved:
-            # return solved[(p, m, is_alex)]
             if p >= len(piles):
                 return 0
             if is_alex:

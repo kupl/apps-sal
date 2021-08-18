@@ -11,11 +11,9 @@ class Solution:
         if len(St) == 0:
             return (0)
         Ed = [i for i, j in enumerate(nums) if (i == len(nums) - 1 and j != 0) or (i < len(nums) - 1 and nums[i + 1] == 0 and j != 0)]
-        # print(St,Ed)
         Sta = np.array(St)
         Eda = np.array(Ed)
         Lns = (-(Eda - Sta + 1)).argsort()
-        # print(Lns)
         k = 0
         mxLen = 0
         while(k < len(Lns)):

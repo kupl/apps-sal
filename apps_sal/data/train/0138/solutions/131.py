@@ -10,7 +10,6 @@ class Solution:
             else:
                 record.append(0)
                 index.append(i)
-        # print(record,index)
         index.append(len(nums))
 
         res = 0
@@ -18,7 +17,6 @@ class Solution:
             left = index[i] + 1
             right = index[i + 1]
             res = max([res, self.getMax(record[left:right])])
-            # print(left,right,res)
         return res
 
     def getMax(self, arr):
@@ -31,7 +29,6 @@ class Solution:
         for k in range(len(arr), 0, -1):
             for j in range(0, len(arr) - k + 1):
                 tmp = Cum[j + k] / Cum[j]
-                # print(Cum[j+k],Cum[j],tmp)
                 if tmp > 0:
                     return k
         return 0

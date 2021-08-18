@@ -39,11 +39,6 @@ class Solution:
         else:
             roots.append(node)
 
-        # t_node = roots[0]
-        # while t_node:
-        #     print(t_node.size)
-        #     t_node = t_node.right
-
         longest = 0
         for node in roots:
             first_count = node.size
@@ -62,8 +57,6 @@ class Solution:
                     ind = 0
                 curr_node = curr_node.right
 
-            # print(first_count)
-            # print(second_count)
             longest = max(longest, first_count, second_count)
 
         return longest

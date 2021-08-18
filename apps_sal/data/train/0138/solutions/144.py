@@ -6,13 +6,11 @@ class Solution:
         while left < len(nums) - ans:
             right = left
             s = 1
-            #nextleft = left
             while right < len(nums):
                 s *= sign(nums[right])
                 if s > 0:
                     ans = max(ans, right - left + 1)
                 elif s == 0:
-                    #nextleft = right
                     break
                 right += 1
 

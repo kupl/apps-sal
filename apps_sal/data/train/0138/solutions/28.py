@@ -52,6 +52,3 @@ class Solution:
                         p2 += 1
                     continue
         return answer
-
-
-#[1, -4, 3, 2, 0, 2, -2, 3, -2, -2, 3, 4, 5]

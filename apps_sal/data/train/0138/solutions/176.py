@@ -3,7 +3,6 @@ class Solution:
         if not nums:
             return 0
 
-        # index of last neg accumulated product
         last_neg_i = -1
         acc_product = 1
         bound = -1

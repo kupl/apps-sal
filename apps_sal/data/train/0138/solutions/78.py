@@ -21,7 +21,6 @@ class Solution:
             else:
                 if prev == 0 or negative == 0:
                     prev += 1
-            # print(prev)
             max_length = max(max_length, prev)
             idx += 1
 
@@ -44,7 +43,6 @@ class Solution:
             else:
                 if prev == 0 or negative == 0:
                     prev += 1
-            # print(prev)
             max_length = max(max_length, prev)
             idx -= 1
 

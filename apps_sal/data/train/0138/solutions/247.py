@@ -5,9 +5,6 @@ class Solution:
             if is_pos:
                 subgroup = list(group)
                 num_negs = 0
-                # if the num negs is odd, the answer is either
-                # the length without the first negative
-                # or the length without the last negative
                 first = last = None
                 for i, n in enumerate(subgroup):
                     if n < 0:

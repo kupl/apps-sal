@@ -11,7 +11,6 @@ class Solution:
                 neg += 1
             hi = i
             if neg % 2 == 0:
-                # print(lo,hi)
                 ans = max(ans, hi - lo + 1)
 
         neg = 0
@@ -25,7 +24,6 @@ class Solution:
                 neg += 1
             hi = i
             if neg % 2 == 0:
-                # print(lo,hi)
                 ans = max(ans, hi - lo + 1)
 
         return ans

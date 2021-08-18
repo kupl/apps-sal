@@ -7,7 +7,6 @@ class Solution:
 
         for num in nums:
             if num == 0:
-                # global_max = max(global_max, local_max)
                 local_max = 0
                 curr_neg = 0
                 curr_pos = 0
@@ -29,7 +28,6 @@ class Solution:
         neg_flag = False
         for num in nums[::-1]:
             if num == 0:
-                # global_max = max(global_max, local_max)
                 local_max = 0
                 curr_neg = 0
                 curr_pos = 0

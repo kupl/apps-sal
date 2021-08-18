@@ -1,6 +1,5 @@
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
-        # print(nums)
         if not nums:
             return 0
         memo = collections.defaultdict(list)
@@ -17,7 +16,6 @@ class Solution:
 
             arr1.append(self.getMaxLen(nums[memo[0][-1] + 1:]))
             return max(arr1)
-            # return max(self.getMaxLen(nums[:memo[0]]), self.getMaxLen(nums[memo[0]+1: ]))
         else:
             arr = []
             n = len(nums)
