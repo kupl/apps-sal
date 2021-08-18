@@ -21,11 +21,9 @@ for _ in range(int(input())):
                 flag1 = 1
                 ind = i
                 f.insert(ind, d)
-                # a[b.index(d)+t-1]=0
                 break
         if(flag1 == 0):
             f.append(d)
-            # a[b.index(d) + t - 1] = 0
             ind = len(f)
         flag2 = 0
         for i in range(ind):
@@ -42,11 +40,9 @@ for _ in range(int(input())):
                     flag3 = 1
                     inde = i
                     f.insert(inde, e)
-                    # a[len(b)-1 + t-1] = 0
                     break
             if(flag3 == 0):
                 f.append(e)
-                # a[len(b)-1+t-1]=0
                 inde = len(f)
 
         t += 1

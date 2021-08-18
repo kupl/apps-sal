@@ -1,4 +1,3 @@
-# cook your dish here
 inpu = list(map(int, input().split()))
 n, k = inpu[0], inpu[1]
 v = inpu[2:n + 2]

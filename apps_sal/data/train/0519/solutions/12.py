@@ -1,4 +1,3 @@
-# cook your dish here
 import bisect
 
 
@@ -39,5 +38,4 @@ for i in range(n):
             if i < ind:
                 dp[i][n + 1] = recur(i, ind, n + 1)
                 ans = max(ans, dp[i][n + 1])
-# print(dp)
 print(ans)

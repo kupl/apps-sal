@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 from math import gcd
 

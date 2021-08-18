@@ -1,4 +1,3 @@
-# cook your dish here
 import bisect
 n, k1, *l = map(int, input().split())
 v_l, b_l = l[:n], l[n:]

@@ -7,7 +7,6 @@ for i in range(t):
     for i in range(k - 1):
         l.append(l[i])
     length = len(l)
-    # print(length)
     sum = 0
     for i in range(k):
         sum += l[i]
