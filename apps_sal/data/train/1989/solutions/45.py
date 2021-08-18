@@ -10,12 +10,9 @@ class Solution:
         max_len = 0
         for i in range(len(s)):
             cur_xor = cur_xor ^ (1 << int(s[i]))
-#      print(i, s[i], bin(cur_xor), end=\" \")
             for try_xor in xors:
-                #        print(try_xor, end = \" \")
                 prev_xor = cur_xor ^ try_xor
                 if first_pos[prev_xor] != -1:
-                    #          print(bin(prev_xor), first_pos[prev_xor], end=\"|\")
                     max_len = max(max_len, i - first_pos[prev_xor] + 1)
 
             if first_pos[cur_xor] == -1:

@@ -7,8 +7,6 @@ def row_sum_odd_numbers(n):
 
     return sum
 
-# Return the position of the last number in the triangle row
-
 
 def find_numb_count(n):
     if n == 1:

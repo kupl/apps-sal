@@ -1,6 +1,6 @@
 class Solution:
     def longestAwesome(self, s: str) -> int:
-        F = {0: -1}  # fck important
+        F = {0: -1}
         res = 0
         mask = 0
 
@@ -16,5 +16,4 @@ class Solution:
                 if new_mask in list(F.keys()):
                     res = max(res, j - F[new_mask])
 
-            # print(F)
         return res

@@ -1,4 +1,3 @@
-# cook your code here
 for _ in range(eval(input())):
     n = eval(input())
     ind = 0

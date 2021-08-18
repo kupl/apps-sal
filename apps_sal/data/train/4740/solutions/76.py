@@ -5,4 +5,3 @@ def row_sum_odd_numbers(num_line):
     for j in range(first_line, stop_line, 2):
         sum_permid += j
     return sum_permid
-# your code here
