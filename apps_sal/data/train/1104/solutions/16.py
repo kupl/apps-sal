@@ -1,4 +1,3 @@
-# dt = {} for i in x: dt[i] = dt.get(i,0)+1
 def ipnl(n): return [int(input()) for _ in range(n)]
 
 

@@ -14,7 +14,6 @@ class DinnerPlates:
             self.left = 0
 
         else:
-            # find the leftmost stack with size less than capacity to append item
             while self.left < len(self.stacks) and len(self.stacks[self.left]) == self.size:
                 self.left += 1
             if self.left == len(self.stacks):
@@ -29,7 +28,6 @@ class DinnerPlates:
         if not self.stacks:
             return -1
 
-        # find the rightmost non empty stack
         if not self.stacks[self.right]:
             while not self.stacks[self.right]:
                 self.stacks.pop(self.right)
@@ -37,7 +35,6 @@ class DinnerPlates:
 
         item = self.stacks[self.right].pop()
 
-        # if stack gets empty after pop item, move the pointer for rightmost non empty stack
         if not self.stacks[self.right]:
             self.stacks.pop(self.right)
             self.right -= 1
@@ -50,15 +47,7 @@ class DinnerPlates:
         if not self.stacks[index]:
             return -1
 
-        # before popping item from stack at index, update the pointer for leftmost stack with capacity
         if self.stacks[index]:
             if self.left > index:
                 self.left = index
         return self.stacks[index].pop()
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

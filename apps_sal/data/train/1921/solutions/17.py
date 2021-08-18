@@ -47,10 +47,3 @@ class DinnerPlates:
         if(self.LMNF > index or self.LMNF < 0):
             self.LMNF = index
         return val
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

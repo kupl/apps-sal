@@ -1,5 +1,4 @@
 n1 = input()
-# k = int(input())
 n, k = map(int, n1.split())
 main_lot = []
 rel_mat = []
@@ -9,21 +8,15 @@ for i in range(n):
         x1.append(0)
     rel_mat.append(x1)
 for i in range(n):
-    # print(i)
     rel_mat[i][i] = 1
-# print(rel_mat)
 for gen in range(n):
     length1 = list(map(int, input().split()))
     length1 = length1[1:]
-    # print(length1)
     for lits in range(len(main_lot)):
         independentcunt = 0
-        # main_lot[lits]
         for everyele in range(len(length1)):
-            # length1[everyele]
             if length1[everyele] in main_lot[lits]:
                 independentcunt += 1
-        # print(independentcunt)
         if independentcunt >= k:
             rel_mat[gen][lits] = rel_mat[lits][gen] = 1
             pass
@@ -31,11 +24,6 @@ for gen in range(n):
     pass
 
 
-# print(n)
-# print(k)
-
-# print(main_lot)
-# print(rel_mat)
 fami_ly = []
 unfam_ily = []
 i1te = 0
@@ -62,23 +50,14 @@ while i1te < 5:
         for iter1 in fami_ly:
             for iter2 in unfam_ily:
                 if new_ele_rel[iter1][iter2] == 1:
-                    # print("did reach")
 
                     new_ele_rel[iter2][lists1] = 1
                     new_ele_rel[lists1][iter2] = 1
-                    # print(new_ele_rel[lists1][iter1])
-                    # print(iter1,lists1)
-                    # print(new_ele_rel)
 
                     pass
                 pass
-        #     pass
-        # print(fami_ly)
-        # print(unfam_ily)
         fami_ly = []
         unfam_ily = []
-
-        # print(rel_mat)
 
 
 count = sum(new_ele_rel[0])
