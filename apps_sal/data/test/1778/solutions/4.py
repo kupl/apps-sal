@@ -1,4 +1,3 @@
-# Problem C: Gambling
 
 n = int(input())
 
@@ -26,7 +25,7 @@ for i in range(2 * n):
     cur = goList[i]
     pts = cur[0]
     owner = cur[1]
-    if(i % 2 == 0):  # First Player
+    if(i % 2 == 0):
         if(owner == 1):
             ans += pts
     else:

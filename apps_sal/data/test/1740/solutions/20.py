@@ -46,8 +46,6 @@ ds = DisjointSets(n)
 for i in range(n - 1):
     a, b = map(int, input().split())
     ds.union(a, b)
-# print(ds.rank)
-# print(ds.parent)
 ans = ds.ls[ds.find(1)]
 for a in ans:
     print(a, end=" ")

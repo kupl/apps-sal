@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 from sys import stdin
 from math import atan2, pi, degrees
@@ -12,7 +11,6 @@ def main():
         x, y = list(map(int, stdin.readline().split()))
         angles.append(atan2_deg(y, x))
 
-    # calculate best angle
     angles = sorted(angles)
     best = abs(angles[-1] - angles[0])
     for i in range(1, num_points):

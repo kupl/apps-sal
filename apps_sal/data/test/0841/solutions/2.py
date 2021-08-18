@@ -4,7 +4,6 @@ def closest(arr, pos):
     up = n - 1
     while(up >= low):
         mid = (up + low) // 2
-        # print(mid)
         if(arr[mid] == pos):
             return mid
         elif(arr[mid] > pos):
@@ -31,7 +30,6 @@ for i in range(t):
     s = ['1', '3', '3']
     no3 = closest(a, n)
     no7 = n - a[no3]
-    # print(no3,no7)
     s.extend(['7'] * no7)
     s.extend(['3'] * no3)
     s.append('7')

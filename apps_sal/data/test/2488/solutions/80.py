@@ -3,7 +3,6 @@ from collections import deque
 
 
 def main():
-    # 入力
     readline = stdin.readline
     n, d, a = map(int, readline().split())
     xh = [list(map(int, readline().split())) for _ in range(n)]

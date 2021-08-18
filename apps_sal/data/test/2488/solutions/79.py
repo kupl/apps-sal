@@ -4,13 +4,12 @@ input = sys.stdin.readline
 N, D, A = list(map(int, input().split()))
 xh = [list(map(int, input().split())) for _ in range(N)]
 xh = sorted(xh)
-total = 0  # 今与えているダメージの総和
+total = 0
 D = 2 * D
 ans = 0
 q = deque()
 for i in range(N):
     x, h = xh[i]
-    # 今いる場所が前回までの爆撃の範囲外になるならその分totalから引く
     while len(q) >= 1 and q[0][0] < x:
         total -= q.popleft()[1]
     h -= total

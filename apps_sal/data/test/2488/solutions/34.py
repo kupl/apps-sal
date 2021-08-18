@@ -35,10 +35,10 @@ for i, (X, H) in enumerate(XH):
     if i != 0:
         damage[i] += damage[i - 1]
     H -= damage[i]
-    if H > 0:  # 追加攻撃が必要
+    if H > 0:
         n = -(-H // A)
         ans += n
         d = A * n
         damage[i] += d
-        damage[right[i]] -= d  # 範囲外の敵
+        damage[right[i]] -= d
 print(ans)

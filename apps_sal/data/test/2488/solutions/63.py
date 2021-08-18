@@ -21,7 +21,6 @@ def main():
 
     X.sort()
 
-    # x, damage
     q = deque([])
 
     acc_damage = 0
