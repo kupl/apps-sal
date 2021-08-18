@@ -1,4 +1,3 @@
-#map(int, input().split())
 def check(a):
     if a % 3 == 0 or a % 7 == 0:
         return True

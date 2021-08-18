@@ -1,4 +1,3 @@
-# sorry for the source code iam a newbie in Python
 n, m = list(map(int, input().split()))
 c = min(n, m // 2)
 res = 0

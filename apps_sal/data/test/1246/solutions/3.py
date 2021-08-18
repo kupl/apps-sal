@@ -5,13 +5,12 @@ heap = []
 ops = []
 for i in range(n):
     ln = input().rstrip()
-    #print(">", ln, "<=>", heap)
-    if ln[0] == 'i':  # insert X
+    if ln[0] == 'i':
         X = int(ln.split()[1])
         heappush(heap, X)
         ops.append(ln)
         continue
-    if ln[0] == 'g':  # getMin X
+    if ln[0] == 'g':
         X = int(ln.split()[1])
         while heap and heap[0] < X:
             heappop(heap)
@@ -22,7 +21,6 @@ for i in range(n):
         ops.append(ln)
         continue
 
-    # removeMin
     if not heap:
         ops.append("insert 1")
     else:

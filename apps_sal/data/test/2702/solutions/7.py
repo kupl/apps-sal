@@ -3,9 +3,6 @@ answers = []
 for i in range(testCases):
     a = input().split()
     answers.append(a)
-# print(answers)
-# for i in range(len(answers)):
-#     print(answers[i])
 count = 0
 for i in range(testCases):
     flag = 0

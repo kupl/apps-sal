@@ -30,7 +30,6 @@ def manipulated_seive(N):
     for i in range(2, N):
         if isprime[i] == True:
 
-            # put i into prime[] vector
             prime.append(i)
 
             SPF[i] = i

@@ -1,4 +1,3 @@
-# ABC069
 s = input()
 
 print((s[0] + str(len(s[0:-2])) + s[-1]))

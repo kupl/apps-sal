@@ -1,4 +1,3 @@
-#print(sum(map(int, input().split())) // 3)
 import math
 n, m = list(map(int, input().split()))
 x = (2 * m - n) / 3

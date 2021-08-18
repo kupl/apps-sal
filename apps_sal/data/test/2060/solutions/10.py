@@ -1,5 +1,4 @@
 t = int(input())
-# t=1
 for i in range(t):
     n = int(input())
     f = 0

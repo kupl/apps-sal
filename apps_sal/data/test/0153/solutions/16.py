@@ -1,5 +1,3 @@
-# import sys
-# sys.stdin = open('in', 'r')
 
 n, k, m = list(map(int, input().split()))
 tt = list(map(int, input().split()))
