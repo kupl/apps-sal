@@ -1,16 +1,9 @@
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 from collections import defaultdict
 import math
 import copy
 
-#T = int(input())
 N = int(input())
-#s = input()
-#N,M = [int(x) for x in stdin.readline().split()]
-#arr = [int(x) for x in stdin.readline().split()]
 
 permu = [0] * N
 permu[0] = 1
@@ -38,7 +31,6 @@ for i in range(N):
 
 all = permu[-1]
 
-# first column
 p1 = 1
 for key in freq_one:
     f = freq_one[key]
@@ -53,21 +45,18 @@ for i in range(N):
     else:
         freq_two[a] += 1
 
-# second column
 p2 = 1
 for key in freq_two:
     f = freq_two[key]
     p2 *= permu[f - 1]
     p2 = p2 % 998244353
 
-# both sorted
 max_second = 0
 P = list(pair.keys())
 P.sort()
 
 p3 = 1
 for key in P:
-    # print(key)
     mini = min(pair[key])
     if mini < max_second:
         p3 = 0

@@ -1,4 +1,3 @@
-#! /usr/bin/env python
 
 a = len(input()[2:])
 b = len(input()[2:])

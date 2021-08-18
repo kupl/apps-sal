@@ -1,5 +1,4 @@
 N = input()
-# Nのi文字目とi＋1文字目が同じであればカウントを増やす。
 j_count = 0
 for i in range(0, 3):
     if N[i] == N[i + 1]:

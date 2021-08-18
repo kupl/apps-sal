@@ -7,7 +7,6 @@ def main():
     for i in range(n):
         pos[i + 1] = a[i]
         app[a[i]] = i + 1
-    #print(app[1:], pos[1:])
     swipes = 0
     for x in b:
         if app[x] % k != 0:
@@ -21,7 +20,6 @@ def main():
             app[tempApp] = tempPos
             app[x] = tempPos - 1
             pos[tempPos - 1] = x
-            #print(app[1:], pos[1:])
     print(swipes)
 
 

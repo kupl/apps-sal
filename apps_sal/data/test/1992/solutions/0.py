@@ -7,7 +7,6 @@ for i in input().split():
     arr[j - 1] = z
     pl[z] = j - 1
     z += 1
-#print(arr, pl)
 r = 0
 for i in input().split():
     j = int(i) - 1
@@ -17,5 +16,4 @@ for i in input().split():
         pl[c - 1], pl[c] = pl[c], pl[c - 1]
         arr[pl[c]] += 1
         arr[j] -= 1
-    #print(arr, pl)
 print(r)

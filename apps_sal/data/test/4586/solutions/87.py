@@ -12,7 +12,6 @@
     入力は整数からなる
 '''
 
-# 標準入力から N を取得する
 n = int(input())
 list_n = list(str(n))
 

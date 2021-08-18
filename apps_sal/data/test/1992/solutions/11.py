@@ -1,11 +1,10 @@
-#!/usr/env python3
 
 n, m, k = map(int, input().split())
-a = [int(x) for x in input().split()]  # a[p] = id of app at position p (p=0,1,2,...)
+a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
 assert(len(a) == n)
 assert(len(b) == m)
-pos = [0] * (n + 1)  # c[i] = position of app with id i (id=1,2,3,...)
+pos = [0] * (n + 1)
 for p in range(n):
     pos[a[p]] = p
 gesture = 0
