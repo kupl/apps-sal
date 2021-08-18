@@ -19,7 +19,6 @@ def judge(truthy):
                     break
         if not answer:
             break
-    # print(answer, truthy)
     return 0 if not answer else truthy.count(1)
 
 

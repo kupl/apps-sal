@@ -2,7 +2,7 @@ N = int(input())
 A = [0] * N
 x = [0] * N
 y = [0] * N
-tlist = [0] * N  # 1:正直 2:不親切
+tlist = [0] * N
 honest = 0
 
 for i in range(N):

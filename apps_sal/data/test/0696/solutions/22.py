@@ -2,7 +2,6 @@ from fractions import gcd
 
 tt = 0
 
-# phi(p-1)
 
 x = int(input())
 

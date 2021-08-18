@@ -22,7 +22,7 @@ for i in range(2**n):
                     break
         else:
             continue
-        break  # https://note.nkmk.me/python-break-nested-loops/
+        break
     else:
         ans = max(ans, sum(tmp))
 

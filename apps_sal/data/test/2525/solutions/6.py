@@ -17,8 +17,6 @@ for i in range(N):
             Q[end + 1] = q[2]
             end += 1
 ans = ""
-# print(Q)
-# print(toright)
 for i in range(top, end + 1):
     ans += Q[i]
 if not toright:

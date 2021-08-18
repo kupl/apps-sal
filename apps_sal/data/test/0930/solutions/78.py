@@ -3,10 +3,9 @@ mod = int(1e9 + 7)
 
 
 def init_cmb(Nmax):
-    # mod = 10**9+7 #出力の制限
-    g1 = [1, 1]  # 元テーブル
-    g2 = [1, 1]  # 逆元テーブル
-    inverse = [0, 1]  # 逆元テーブル計算用テーブル
+    g1 = [1, 1]
+    g2 = [1, 1]
+    inverse = [0, 1]
 
     for i in range(2, Nmax + 1):
         g1.append((g1[-1] * i) % mod)
@@ -23,9 +22,6 @@ def cmb(n, r, modn=mod):
         return 0
     r = min(r, n - r)
     return g1[n] * g2[r] * g2[n - r] % modn
-
-# ci = 0 である個数が m となるような数列の数は、 nCm ×n−m Hm = nCm * n-1Cn-m-1
-# 0 <= m < n で足算する
 
 
 ans = 0
