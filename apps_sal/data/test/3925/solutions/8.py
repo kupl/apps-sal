@@ -8,7 +8,6 @@ for i in range(1, len(s)):
         ans = max(ans, res)
         res = 1
 ans = max(ans, res)
-# print(ans)
 res1 = 1
 for i in range(1, len(s)):
     if s[i] != s[i - 1]:

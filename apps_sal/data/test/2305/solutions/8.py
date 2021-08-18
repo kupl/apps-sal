@@ -6,9 +6,6 @@ input = sys.stdin.readline
 n = int(input())
 C = list(map(int, input().split()))
 
-# ci = [set() for _ in range(n)]
-# for i,c in enumerate(C):
-#     ci[c-1].add(i)
 
 path = [set() for _ in range(n)]
 
@@ -22,10 +19,8 @@ for i in range(n - 1):
 ans = [n * (n + 1) // 2] * n
 cparent = [[] for _ in range(n)]
 root_size = [n] * n
-# index:color
 reached = [False] * n
 size = [0] * n
-# index:vertex
 
 
 def dfs(p):
@@ -42,12 +37,10 @@ def dfs(p):
         size[p] += ret
         ans[c] -= size[p] * (size[p] + 1) // 2
     cparent[c].pop()
-    # size[p] += s
     if cparent[c]:
         size[cparent[c][-1]] -= s
     else:
         root_size[c] -= s
-    # ans[c] -= size[p] * (size[p] - 1)//2
     return s
 
 

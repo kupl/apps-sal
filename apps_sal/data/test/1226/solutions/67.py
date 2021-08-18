@@ -29,5 +29,4 @@ def pow(x, n):
 A = pow(2, n) % mod
 B = factna[-1] * pow(facta[-1], mod - 2) % mod
 C = factnb[-1] * pow(factb[-1], mod - 2) % mod
-# print(factna,factb)
 print((A - B - C - 1) % mod)

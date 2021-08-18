@@ -1,6 +1,5 @@
 import sys
 
-#f = open('input', 'r')
 f = sys.stdin
 
 x, y = list(map(int, f.readline().split()))

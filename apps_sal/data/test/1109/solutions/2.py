@@ -4,7 +4,6 @@ b = []
 c = []
 for i in range(k):
     c.append([0, 0])
-#~ print(c)
 for i in range(k):
     b.append(a[i])
 par = True

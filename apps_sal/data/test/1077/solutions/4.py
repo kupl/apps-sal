@@ -20,12 +20,8 @@ for i in range(1, m + 1):
             a[lother[0]] = i
             lother.pop(0)
         else:
-            # print("in")
-            # print(len(a))
-            # print(lbig[0])
             a[lbig[0]] = i
             lbig.pop(0)
-            # print('out');
         count[i] += 1
 print(str(n // m) + ' ' + str(ans))
 for i in a:
