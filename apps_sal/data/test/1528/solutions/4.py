@@ -9,16 +9,14 @@ for i in range(1, n + 1):
     p[i] = p[i - 1] * 2 + 1
     l[i] = l[i - 1] * 2 + 3
 
-# バーガーの長さは奇数
-
 
 def rec(m, y):
     if y <= 0:
         return 0
     if m == 0:
         return 1
-    h = l[m] // 2  # レベルmの半分より左側の長さ
-    if h < y:  # 真ん中含む
+    h = l[m] // 2
+    if h < y:
         return 1 + p[m - 1] + rec(m - 1, y - h - 1)
     else:
         return rec(m - 1, y - 1)

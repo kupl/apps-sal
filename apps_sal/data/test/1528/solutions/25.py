@@ -6,7 +6,7 @@ for i in range(N):
     p.append(p[i] * 2 + 1)
 
 
-def f(N, X):  # X <= 0 や X > a_N を許容し解説本文から簡略化
+def f(N, X):
     if N == 0:
         return 0 if X <= 0 else 1
     elif X <= 1 + a[N - 1]:

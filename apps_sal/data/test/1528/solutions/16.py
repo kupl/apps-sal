@@ -24,13 +24,11 @@ def resolve():
     N, X = LI()
     X -= 1
 
-    # バーガーの厚さ
     l = [0] * (N + 1)
     l[0] = 1
     for i in range(N):
         l[i + 1] = 2 * l[i] + 3
 
-    # バーガーのパティ数
     p = [0] * (N + 1)
     p[0] = 1
     for i in range(N):

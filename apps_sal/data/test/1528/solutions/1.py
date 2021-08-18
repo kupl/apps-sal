@@ -1,4 +1,3 @@
-# レベルLのN番目
 def solve(L, N):
     if L == 0:
         return 1

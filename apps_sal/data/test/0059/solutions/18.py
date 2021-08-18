@@ -8,9 +8,8 @@ copy = list(nums)
 pos = input()
 
 
-pos = ["".join(g) for k, g in groupby(pos) if k != '#']
+pos = ["".join(g) for k, g in groupby(pos) if k != '
 
-# print(pos)
 
 cur_pos = 0
 

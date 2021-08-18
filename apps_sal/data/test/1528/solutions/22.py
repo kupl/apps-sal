@@ -10,7 +10,6 @@ for i in range(1, n + 1):
 
 
 def pbx(xx, nn):
-    #    print(xx,nn)
     if nn == 0:
         return 1
     if xx == 1:
@@ -21,9 +20,7 @@ def pbx(xx, nn):
         return pb[nn - 1][1] + 1
     elif xx <= 2 + pb[nn - 1][0] * 2:
         xxx = pbx(xx - pb[nn - 1][0] - 2, nn - 1)
-#        print("xxx1",xxx)
         xxx = pb[nn - 1][1] + 1 + xxx
-#        print("xxx2",xxx)
         return xxx
     elif xx == 3 + pb[nn - 1][0] * 2:
         return pb[nn][1]

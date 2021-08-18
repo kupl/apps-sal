@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/4/6 20:26
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : C. Ramesses and Corner Inversion.py
 
 def main():
     n, m = map(int, input().split())

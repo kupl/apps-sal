@@ -1,4 +1,3 @@
-# create date: 2020-07-01 09:01
 
 from functools import lru_cache
 import sys
@@ -18,7 +17,6 @@ def f(n, x):
     if x == 1:
         return 0
     elif x <= 2**(n + 1) - 2:
-        #print("f({}, {})".format(n-1, x-1))
         return f(n - 1, x - 1)
     elif x == 2**(n + 1) - 1:
         return f(n - 1, 2**(n + 1) - 3) + 1

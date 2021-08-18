@@ -1,4 +1,3 @@
-# You lost the game.
 a, b, c = list(map(int, input().split()))
 if (c == 0 and b == a):
     print("YES")

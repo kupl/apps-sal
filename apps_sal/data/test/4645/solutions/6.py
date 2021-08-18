@@ -1,6 +1,5 @@
 def solve(l, r):
     n = r - l + 1
-    # print(l,r,n)
     if n == 0:
         return []
     elif n % 4 == 0:
