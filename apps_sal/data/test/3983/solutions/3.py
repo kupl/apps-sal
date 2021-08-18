@@ -60,13 +60,11 @@ for _ in range(t):
     if (s & 1) ^ (t & 1):
         buf.append('First')
     elif (n * (n - 1) // 2 - m) & 1:
-        # 先手は偶-偶にしたい
         if s & 1 == 0:
             buf.append('First')
         else:
             buf.append('Second')
     else:
-        # 先手は奇-奇にしたい
         if s & 1 == 0:
             buf.append('Second')
         else:

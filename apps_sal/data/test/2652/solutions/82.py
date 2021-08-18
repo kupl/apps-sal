@@ -10,7 +10,6 @@ def input():
 
 
 class UnionFind:
-    # Reference: https://note.nkmk.me/python-union-find/
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n

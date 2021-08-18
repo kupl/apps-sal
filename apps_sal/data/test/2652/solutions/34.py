@@ -10,7 +10,6 @@ for i in range(n - 1):
     d.append([x[i + 1][1] - x[i][1], x[i + 1][0], x[i][0]])
     d.append([y[i + 1][1] - y[i][1], y[i + 1][0], y[i][0]])
 d.sort(key=lambda a: a[0], reverse=True)
-# Union FInd
 
 
 class UnionFind():

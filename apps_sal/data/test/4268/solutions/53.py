@@ -1,4 +1,3 @@
-# numpyを使わない解法
 import math
 n, d = (int(i) for i in input().split())
 list_x = [[int(i) for i in input().split()] for j in range(0, n)]

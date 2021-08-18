@@ -9,11 +9,11 @@ for i in range(N):
 A.sort()
 B.sort()
 if N % 2 == 0:
-    MIN = A[N // 2 - 1] + A[N // 2]  # Medianの二倍
+    MIN = A[N // 2 - 1] + A[N // 2]
     MAX = B[N // 2 - 1] + B[N // 2]
     ans = MAX - MIN + 1
 else:
-    MIN = A[N // 2]  # Medianの二倍
+    MIN = A[N // 2]
     MAX = B[N // 2]
     ans = MAX - MIN + 1
 print(ans)

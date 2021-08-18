@@ -1,8 +1,6 @@
-# D - Built?
 import sys
 import heapq
 
-# input
 N = int(input())
 
 X, Y = [], []
@@ -11,7 +9,6 @@ for n in range(N):
     X.append((x, n))
     Y.append((y, n))
 
-# build matrix
 G = [[] for _ in range(N)]
 
 X.sort()
@@ -30,9 +27,8 @@ for i in range(N - 1):
     G[v].append((d_v - d_u, u))
 
 
-# 最小全域木
 q = []
-fp = [False] * N  # 探索済み
+fp = [False] * N
 fp[0] = True
 
 for d, u in G[0]:

@@ -16,9 +16,7 @@ for i in a:
         temp.append(10 - x % 10)
         temp.append(x)
     b.append(temp)
-# print(b)
 b.sort()
-# print(b)
 j = 0
 ss = 0
 c = []
@@ -33,9 +31,7 @@ for t in b:
 c.sort()
 j = 0
 k = k // 10
-#print(c, k)
 while j < n:
-    #print(c[j], k)
     if ((10 - c[j]) <= k):
         k -= (10 - c[j])
         c[j] = 10
@@ -44,5 +40,4 @@ while j < n:
         k = 0
     ss += c[j]
     j += 1
-# print(c)
 print(ss)

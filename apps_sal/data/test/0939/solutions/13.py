@@ -15,7 +15,6 @@ def f(x):
             for j in q[v]:
                 p[j[0]] |= t[v]
                 p[j[1]] |= t[v]
-            # f(u)
             f(v)
         elif not t[u] and t[v]:
             t[u] = 7 - t[x] - t[v]
@@ -23,7 +22,6 @@ def f(x):
                 p[j[0]] |= t[u]
                 p[j[1]] |= t[u]
             f(u)
-            # f(v)
         else:
             for k in [1, 2, 4]:
                 t[u], t[v] = k, 7 - t[x] - k

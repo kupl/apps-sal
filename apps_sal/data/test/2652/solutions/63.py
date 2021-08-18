@@ -6,7 +6,6 @@ class UnionFind:
         self.par = [i for i in range(n + 1)]
         self.rank = [0] * (n + 1)
 
-    # 検索
     def find(self, x):
         if self.par[x] == x:
             return x
@@ -14,7 +13,6 @@ class UnionFind:
             self.par[x] = self.find(self.par[x])
             return self.par[x]
 
-    # 併合
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -25,7 +23,6 @@ class UnionFind:
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
 
-    # 同じ集合に属するか判定
     def same_check(self, x, y):
         return self.find(x) == self.find(y)
 
@@ -39,10 +36,7 @@ for i in range(N):
 B = copy.deepcopy(A)
 A = sorted(A, key=lambda x: x[1])
 B = sorted(B, key=lambda x: x[2])
-#print(A, B)
 
-# それぞれの辺のながさを求めて、小さい順にする
-# [点の番号、点の番号、２点間距離]
 A2 = [0] * (N - 1)
 for i in range(1, N):
     l = abs(A[i][1] - A[i - 1][1])
@@ -54,7 +48,6 @@ for i in range(1, N):
     B2[i - 1] = [B[i][0], B[i - 1][0], l]
 Len = A2 + B2
 Len = sorted(Len, key=lambda x: x[2])
-# print(Len)
 
 data = UnionFind(N + 1)
 cost = 0

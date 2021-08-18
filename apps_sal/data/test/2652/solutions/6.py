@@ -4,18 +4,14 @@ import sys
 
 class UnionFind:
     def __init__(self, n):
-        # total number of nodes.
         self.n = n
-        # node id -> root node id
         self._root_table = list(range(n))
-        # root node id -> group size
         self._size_table = [1] * n
 
     def find(self, x):
         """Returns x's root node id."""
         r = self._root_table[x]
         if r != x:
-            # Update the cache on query.
             r = self._root_table[x] = self.find(r)
         return r
 
@@ -27,7 +23,6 @@ class UnionFind:
         if x == y:
             return
 
-        # Ensure that x is the larger (or equal) group.
         if self._size_table[x] < self._size_table[y]:
             x, y = y, x
 
