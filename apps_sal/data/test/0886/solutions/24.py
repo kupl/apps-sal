@@ -1,14 +1,13 @@
 def judge(ss):
     n = len(ss)
     for i in range(n):
-        if((int(ss[i]) % 2 == 0)):  # input() haoxiang doushi str
+        if((int(ss[i]) % 2 == 0)):
             return i
     return -1
 
 
 s = input()
 p = judge(s)
-# print(p)
 if(p == -1):
     print("-1")
 else:

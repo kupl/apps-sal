@@ -11,7 +11,6 @@ def f(l):
         c += 1
 
     extra = left - l
-    # print(extra)
     ls = 0
     odd = 0
     eve = 0

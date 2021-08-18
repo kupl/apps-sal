@@ -9,4 +9,3 @@ for i in range(x):
         if num[n - 1 - i] != "0":
             ans += 1
 print(ans)
-#r = list(map(int, input().split()))

@@ -16,6 +16,5 @@ def lnint(n): return [int(input()) for _ in range(n)]
 def lint_list(n): return [lint() for _ in range(n)]
 
 
-############################################################
 N = ii()
 print((800 * N - 200 * (N // 15)))

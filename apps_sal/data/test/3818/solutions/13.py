@@ -20,8 +20,6 @@
 import sys
 from sys import stdin
 
-# 重みのないグラフでの最短経路問題
-#隣接リストと始点を与えると始点からの距離のリスト & 親のリストを返す
 from collections import deque
 
 

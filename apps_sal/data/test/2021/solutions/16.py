@@ -1,7 +1,3 @@
-# from sys import stdin
-# import math
-# import numpy as np
-# from itertools import permutations, combinations, combinations_with_replacement
 
 n = int(input())
 a = list(map(int, input().split()))

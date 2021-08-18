@@ -28,7 +28,7 @@ def calc(x):
     return sum(a), sum(b)
 
 
-def tot(x):  # total sum of nums till x nums in list
+def tot(x):
     odds, evens = calc(x)
     ans = 0
     ans += ((odds % mod) * (odds % mod)) % mod

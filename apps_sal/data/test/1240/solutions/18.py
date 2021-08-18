@@ -1,11 +1,6 @@
 from sys import stdin as fin
-# fin = open("cfr378b.in")
 
 n = int(fin.readline())
-# k, r = map(int, fin.readline().split())
-# line = tuple(fin.readline().strip())
-# line = fin.readline().strip()
-# cols = (tuple(map(int, fin.readline().strip().split())) for i in range(n))
 l, r = [None] * n, [None] * n
 ls = rs = 0
 for i in range(n):

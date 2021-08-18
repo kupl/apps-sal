@@ -1,8 +1,3 @@
-# import sys
-# n = int(input())
-# s = input().strip()
-# a = [int(tmp) for tmp in input().split()]
-# for i in range(n):
 n, m = [int(tmp) for tmp in input().split()]
 ans = 0
 for i in range(n):
