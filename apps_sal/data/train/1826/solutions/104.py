@@ -17,10 +17,10 @@ class Solution:
         answer = [[0] * width for _ in range(height)]
         for i in range(height):
             for j in range(width):
-                lri = min(height - 1, i + K)  # lower right i
-                lrj = min(width - 1, j + K)  # lower right j
-                uli = i - K - 1  # upper left i
-                ulj = j - K - 1  # upper left j
+                lri = min(height - 1, i + K)
+                lrj = min(width - 1, j + K)
+                uli = i - K - 1
+                ulj = j - K - 1
 
                 total = prefix_sum[lri][lrj]
                 up = prefix_sum[uli][lrj] if uli >= 0 else 0

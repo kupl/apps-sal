@@ -8,7 +8,6 @@ class Solution:
 
         for i in range(row):
             for j in range(1, col):
-                # answer[i][j] = self.new_matrix(mat,i,j,K,row,col)
                 mat[i][j] = mat[i][j - 1] + mat[i][j]
         print(mat)
 

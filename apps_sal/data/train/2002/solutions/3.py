@@ -12,9 +12,6 @@ for i in range(l):
     instances[s_i[i]].append(i)
 
 
-#sum_probability += len * probability
-#probability = sum_probabilty
-
 sum_probability = 0
 
 for c in range(0, 26):

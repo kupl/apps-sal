@@ -1,8 +1,4 @@
-# BFDU algorithm from:
-# Faster Algorithms for Frobenius Numbers
-# the electronic journal of combinatorics 12(2005), #R27
 
-# TODO: Implement DQQD(U) from the same paper
 
 import heapq
 import collections

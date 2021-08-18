@@ -12,5 +12,4 @@ for j in range(t):
     for i in range(len(s)):
         if s[i] == '0':
             count2 += 1
-    # print(count1,count2)
     print(count1 * count2)

@@ -1,6 +1,5 @@
 class Solution:
     def matrixBlockSum(self, mat, K):
-        # ok
         n = len(mat)
         m = len(mat[0])
         arr = [[0] * (m) for i in range(n)]
@@ -10,7 +9,6 @@ class Solution:
         for j in range(m):
             for i in range(1, n):
                 mat[i][j] += mat[i - 1][j]
-        # [print(mat[i]) for i in range(n)]
         for i in range(n):
             for j in range(m):
                 min_row, max_row = max(0, i - K), min(n - 1, i + K)

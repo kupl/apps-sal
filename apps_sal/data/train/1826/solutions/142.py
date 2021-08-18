@@ -13,7 +13,6 @@ class Solution:
 
                 mat[i][j] += mat[i][j - 1]
 
-        # print(mat,t)
         for i in range(len(mat)):
             for j in range(len(mat[0])):
                 s = 0
@@ -25,10 +24,8 @@ class Solution:
                 right = j + K
                 if right >= len(mat[0]):
                     right = len(mat[0]) - 1
-                # print(left,right)
                 for k in range(top, bot + 1):
                     if k >= 0 and k < len(mat):
                         s += (mat[k][right] - mat[k][left] + t[k][left])
-                        # print(s)
                 res[i][j] = s
         return res

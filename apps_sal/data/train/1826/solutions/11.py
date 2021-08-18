@@ -13,7 +13,6 @@ class Solution:
             col = []
             for j, c in enumerate(mat[0]):
 
-                # make sure to have out-of-boundary case
                 area = (0 if i - K < 0 else i - K, 0 if j - K < 0 else j - K), (m if i + K > m else i + K, n if j + K > n else j + K)
 
                 key = str(area)

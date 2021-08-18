@@ -43,9 +43,7 @@ class Pawn:
     def belongsTo(self, player):
         return self.player == player
 
-    # returns true if this pawn can move to the given cell in the context of a chess board
     def canMoveTo(self, cell, board):
-        # can't move ahead if cell is occupied
         if cell.is_occupied():
             return False
 
@@ -99,7 +97,6 @@ class Board:
 
             self.board_state.append(board_row)
 
-    # returns all pawns in a given column. At most 2 pawns per column.
     def pawnsInColumn(self, col):
         cells = [row[col] for row in self.board_state]
         return [cell.pawn for cell in cells if cell.is_occupied()]

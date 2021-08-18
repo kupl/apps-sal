@@ -13,7 +13,6 @@ def countsumzero(lst):
     return sum(v * (v - 1) // 2 for v in list(freq.values()))
 
 
-# Driver code
 try:
     n = int(input())
     a = list(map(int, input().split()))
