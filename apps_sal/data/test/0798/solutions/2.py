@@ -4,7 +4,6 @@ import sys
 
 def solve(a, b, c):
     ix, iy, iz = 3, 2, 1
-    # sort
     if b < a:
         a, b = b, a
         ix, iy = iy, ix
@@ -14,7 +13,6 @@ def solve(a, b, c):
     if c < b:
         b, c = c, b
         iz, ix = ix, iz
-    # solve
     x2 = a + (c - b)
     if x2 % 2 != 0:
         print('Impossible')

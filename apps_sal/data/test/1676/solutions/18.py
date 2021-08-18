@@ -13,7 +13,6 @@ def __starting_point():
     result = []
     for i in range(n):
         ti, di = list(map(int, input().split()))
-        # print(pt,lpt,'--',ti,di,cb)
         res = 0
         if pt == 0:
             pt += ti + di
@@ -30,7 +29,6 @@ def __starting_point():
                     res = -1
 
             elif ti >= lpt[0]:
-                # print(lpt,pt,ti,di)
                 if ti > lpt[-1]:
                     pt += abs(lpt[-1] - ti) + di
                 else:

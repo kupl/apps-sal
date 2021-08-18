@@ -1,13 +1,3 @@
-# -------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      Administrator
-#
-# Created:     03/05/2014
-# Copyright:   (c) Administrator 2014
-# Licence:     <your licence>
-# -------------------------------------------------------------------------------
 
 n, m = map(int, input().split())
 if n & 1:

@@ -1,4 +1,3 @@
-# C
 from collections import Counter
 
 N = int(input())

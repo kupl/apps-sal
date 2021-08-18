@@ -21,7 +21,6 @@ def main():
             k += 1
             n += C
         n += 1
-    # print(L)
 
 
 def __starting_point():

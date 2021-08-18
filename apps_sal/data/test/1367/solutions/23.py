@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 total_episodes = int(input())
 watched_episodes = list(map(int, input().split()))

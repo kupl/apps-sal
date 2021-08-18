@@ -1,4 +1,3 @@
-# Filename CF1.py
 n = int(input())
 size = [int(i) for i in (input().split())]
 m = []

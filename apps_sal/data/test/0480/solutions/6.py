@@ -3,7 +3,6 @@ from sys import stdin
 s, x1, x2 = list(map(int, stdin.readline().split()))
 t1, t2 = list(map(int, stdin.readline().split()))
 p, d = list(map(int, stdin.readline().split()))
-# d=v*t t=d/v
 if x1 >= x2:
     x2, x1 = s - x2, s - x1
     p = s - p

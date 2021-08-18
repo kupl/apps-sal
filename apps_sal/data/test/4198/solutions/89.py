@@ -1,4 +1,3 @@
-# 問題：https://atcoder.jp/contests/abc146/tasks/abc146_c
 
 def buy_an_integer(a, b, x, l, r):
     c = (l + r) // 2

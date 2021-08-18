@@ -1,4 +1,3 @@
-# E - Yutori
 N, K, C = map(int, input().split())
 S = input()
 L = [0] * K

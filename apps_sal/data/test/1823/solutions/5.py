@@ -27,6 +27,3 @@ for genre in range(1, num_genres + 1):
         best_score = score[genre]
         best_genre = genre
 print(best_genre)
-
-
-# Made By Mostafa_Khaled

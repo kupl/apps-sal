@@ -15,8 +15,6 @@ tmp = 0
 for i in range(M):
     tmp += B[i]
     RB.append(tmp)
-# print(RA)
-# print(RB)
 
 ans = 0
 best = M
