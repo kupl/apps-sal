@@ -1,5 +1,4 @@
 def decompose(n):
-    # your code
     from fractions import Fraction
     f = Fraction(n)
     ret = []

@@ -1,4 +1,3 @@
-# cook your dish here
 def power(x, y, p):
     res = 1
     x = x % p

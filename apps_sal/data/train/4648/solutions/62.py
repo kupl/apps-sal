@@ -6,4 +6,3 @@ def automorphic(n):
         return"Automorphic"
     else:
         return "Not!!"
-    # your code here

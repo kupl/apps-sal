@@ -18,7 +18,6 @@ class Solution:
 
         def backtrack(i, cuts):
             if (i, cuts) not in dp:
-                # K is not cuts but subdivisions
                 if cuts == 1:
                     dp[(i, cuts)] = substring_palindrome(s[:i + 1])
                 else:

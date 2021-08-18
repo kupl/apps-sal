@@ -1,4 +1,3 @@
-# your code goes here
 t = int(input())
 for j in range(t):
     vow = ['a', 'e', 'i', 'o', 'u']

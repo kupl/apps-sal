@@ -1,4 +1,3 @@
-# Cosmic rays
 import math
 import heapq
 
@@ -6,7 +5,6 @@ xs, ys, xt, yt = map(int, input().split())
 N = int(input())
 
 d = [((xs, ys), 0, 0)]
-# node,radius
 
 for _ in range(N):
     x, y, r = map(int, input().split())

@@ -23,7 +23,6 @@ def main():
         distances[start] = 0
         visited = [False] * n
 
-        # 距離・頂点
         hq = [(0, start)]
         while hq:
             dist, fr = heapq.heappop(hq)

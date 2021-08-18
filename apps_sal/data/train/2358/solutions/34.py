@@ -3,11 +3,9 @@ N = int(input())
 l = [[], [xs, yx, 0], [xt, yt, 0]]
 for i in range(N):
     l.append(list(map(int, input().split())))
-# 距離リスト
 d = [[0] * (N + 3) for _ in range(N + 3)]
 for i in range(1, N + 3):
     d[i][i] = 0
-# O(10**6)
 for i in range(1, N + 3):
     for j in range(i + 1, N + 3):
         sa = (l[i][0] - l[j][0])**2 + (l[i][1] - l[j][1])**2
@@ -22,7 +20,6 @@ for i in range(1, N + 3):
 seen = [False] * (N + 3)
 seen[1] = True
 while True:
-    # vを出す
     v = -1
     for i in h:
         if seen[i] == False and v == -1:

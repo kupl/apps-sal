@@ -8,7 +8,7 @@ def points(string):
             return 30
         else:
             return 40
-    if len(set(string)) == 5:  # Aici trebuie lucrat
+    if len(set(string)) == 5:
         valoare = 0
         if int(lista_1[3]) - int(lista_1[2]) == 1 and int(lista_1[4]) - int(lista_1[3]) == 1:
             valoare = 1

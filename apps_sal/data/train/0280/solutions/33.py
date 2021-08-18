@@ -12,7 +12,7 @@ class Solution:
                 j -= 1
             return count
 
-        dic = collections.defaultdict(int)  # dic[(i,j)] will store min change to make i:j a palindrome
+        dic = collections.defaultdict(int)
         for i in range(n):
             for j in range(i, n):
                 dic[(i, j)] = getMinChange(i, j)
