@@ -1,4 +1,3 @@
-#!usr/bin/env python3
 import sys
 def LI(): return [int(x) for x in sys.stdin.readline().split()]
 
@@ -16,8 +15,6 @@ def solve():
     print(len(ans))
     print(*ans)
     return
-
-# Solve
 
 
 def __starting_point():

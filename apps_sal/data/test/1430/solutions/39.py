@@ -1,7 +1,6 @@
 N, K = list(map(int, input().split()))
 S = str(input())
 
-# count sequence man and memo the cnt in group
 man_groups = []
 same_cnt = 0
 last_man = ""
@@ -21,7 +20,6 @@ if same_cnt > 0:
         same_cnt *= -1
     man_groups.append(same_cnt)
 
-# count max sequence man from evey pos
 sum_list = []
 end_pos = 2 * K if man_groups[0] > 0 else 2 * K - 1
 max_man_groups_idx = len(man_groups) - 1
@@ -43,6 +41,4 @@ for i in range(start_pos, len(man_groups), 2):
             last_max += abs(man_groups[end_pos])
     sum_list.append(last_max)
 
-# print(man_groups)
-# print(sum_list)
 print((max(sum_list)))

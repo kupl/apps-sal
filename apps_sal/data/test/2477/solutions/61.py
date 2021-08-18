@@ -12,11 +12,6 @@ def k_cut_less_than(k, l, woods):
     return True
 
 
-# 二分探索
-# functionを満たす,search_listの最大の要素を出力
-# 【注意点】searchリストの初めの方はfunctionを満たし、後ろに行くにつれて満たさなくなるべき
-
-
 def binary_research(start, end, function):
     if start == end:
         return start

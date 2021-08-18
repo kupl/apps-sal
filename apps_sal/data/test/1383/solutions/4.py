@@ -1,5 +1,3 @@
-# map(int, input().split())
-# list(map(int, input().split()))
 
 n, m = list(map(int, input().split()))
 

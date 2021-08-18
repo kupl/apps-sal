@@ -22,8 +22,8 @@ def main():
     N, K = NMI()
     A = NLI()
 
-    ng = 0  # ng:とり得る最小の値-1
-    ok = 10**9 + 10  # ok:とり得る最大の値+1
+    ng = 0
+    ok = 10**9 + 10
 
     while (abs(ok - ng) > 1):
         mid = (ok + ng) // 2

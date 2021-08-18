@@ -29,8 +29,6 @@ for i in range(0, len(s)):
 d.append(count)
 d.append(0)
 acum = list(itertools.accumulate([0] + d))
-# print(d)
-# print(acum)
 hantei = 0
 ans = 0
 if s[0] == "0":

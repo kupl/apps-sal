@@ -13,7 +13,6 @@ for i in range(n):
     query.append((a[i], -1, i))
 
 query.sort()
-# print(query)
 for val, q, id in query:
     if q == -1:
         r = (val - id - 1) % p

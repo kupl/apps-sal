@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 from decimal import Decimal, ROUND_HALF_UP
 
@@ -13,13 +12,13 @@ def main():
         for a in A_list:
             if a >= length:
                 quotient = a / length
-                divide = -(-quotient // 1)  # round up
+                divide = -(-quotient // 1)
                 cnt += (divide - 1)
 
         return (True if cnt <= K else False)
 
-    L = 0            # the minimum length
-    R = max(A_list)  # the maximum length
+    L = 0
+    R = max(A_list)
 
     while (R - L) > 1:
         M = L + (R - L) // 2

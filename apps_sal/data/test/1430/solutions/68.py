@@ -21,7 +21,6 @@ else:
 if(s[-1] == '1'):
     nums.append(0)
 
-# print(nums)
 
 ans = 0
 zero_num = len(nums) // 2
@@ -38,6 +37,5 @@ else:
         sumi -= (nums[i] + nums[i + 1])
         i += 2
         ans = max(ans, sumi)
-#    print(nums[-2*k:])
     ans = max(ans, sum(nums[-2 * k:]))
     print(ans)
