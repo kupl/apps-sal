@@ -55,7 +55,6 @@ def init_free_fields(size):
 
 def find_blocked_fields(queen, size):
 
-    # init
     attack = []
     x_arr = []
     y_arr = []
@@ -71,7 +70,6 @@ def find_blocked_fields(queen, size):
     x_arr.append([i for i in range(queen[1] + 1, size)])
     x_arr.append([i for i in reversed(list(range(queen[1])))])
 
-    # diagonal fields
     for i in range(0, 4):
         min_len = min(len(y_arr[i]), len(x_arr[i]))
         for j, k in zip(y_arr[i][0:min_len], x_arr[i][0:min_len]):
@@ -80,7 +78,6 @@ def find_blocked_fields(queen, size):
             else:
                 pass
 
-    # horizontal and vertical fields
     for i in range(0, size):
         if [queen[0], i] not in attack:
             attack.append([queen[0], i])
@@ -116,14 +113,12 @@ def update_board(size, solution):
 
 def place_queen(size, queen, solution):
 
-    # check if queen´s row is already part of solution
     check_row = False
     for s in solution:
         if s[0] == queen[0]:
             check_row = True
             break
 
-    # replace solution from row on with new queen and update solution
     if check_row == True:
         for i, s in enumerate(solution):
             if s[0] == queen[0]:
@@ -134,12 +129,10 @@ def place_queen(size, queen, solution):
     else:
         solution.append(queen)
 
-    # update board
     board = update_board(size, solution)
     free_fields = board[0]
     blocked_fields = board[1]
 
-    # move to next row
     rows = [r for r in range(0, size) if r not in [s[0] for s in solution]]
     next_row = [[min(rows), f[1]] for f in free_fields if f[0] == min(rows)]
 
@@ -157,7 +150,6 @@ def place_queen(size, queen, solution):
 
 def queens(position, size):
 
-    # init
     board = init_board(size)
     queen = position_to_xy(board, position)
 

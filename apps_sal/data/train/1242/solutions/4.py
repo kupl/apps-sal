@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     T = int(input())
     for i in range(T):
@@ -9,6 +8,5 @@ try:
         a.remove(a[0])
         b = len(a) * c
         print(b)
-        #  ans=(len(a)-1)*m
 except:
     pass

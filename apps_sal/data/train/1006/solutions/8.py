@@ -14,10 +14,8 @@ for _ in range(t):
             s1 += c
             ind = s.index(c)
             s = s[ind + 1:]
-            # print(s)
             for i in range(ind + 1):
                 s.append(str(k))
-                # print(s)
             c = min(s)
         z = len(s1)
         for i in range(l - z):

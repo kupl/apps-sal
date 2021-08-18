@@ -1,4 +1,3 @@
-# ------------------- fast io --------------------
 from math import gcd, ceil
 import os
 import sys
@@ -54,8 +53,6 @@ class IOWrapper(IOBase):
 sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
-# ------------------- fast io --------------------
-
 
 def prod(a, mod=10**9 + 7):
     ans = 1
@@ -74,10 +71,4 @@ def binary(x, length=16):
 
 for _ in range(int(input()) if True else 1):
     n = int(input())
-    #n, k = map(int, input().split())
-    #a, b = map(int, input().split())
-    #c, d = map(int, input().split())
-    #a = list(map(int, input().split()))
-    #b = list(map(int, input().split()))
-    #s = input()
     print(*[1] * n)

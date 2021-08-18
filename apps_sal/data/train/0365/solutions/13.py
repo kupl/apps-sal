@@ -4,7 +4,6 @@ class Solution:
         last = collections.defaultdict(int)
         count = 0
         for i, char in enumerate(s):
-            # print(last)
             for comp in last:
                 if comp != char:
                     count += last[comp][1]

@@ -10,12 +10,10 @@ class Solution:
         for c in chrLoc:
             locs = [-1] + chrLoc[c] + [l]
             loc_ct = len(locs)
-            #print(c, locs)
             for i in range(1, loc_ct - 1):
-                leftWingSpan = locs[i] - locs[i - 1]  # i-mostRecently + 1
-                rightWingSpan = locs[i + 1] - locs[i]  # l-i
+                leftWingSpan = locs[i] - locs[i - 1]
+                rightWingSpan = locs[i + 1] - locs[i]
                 ct += ((leftWingSpan % md) * (rightWingSpan % md)) % md
-                #print(leftWingSpan,rightWingSpan, c, i)
                 ct %= md
 
         return ct

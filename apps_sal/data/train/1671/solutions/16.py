@@ -50,12 +50,6 @@ def modInverse(b, m):
     else:
         return pow(b, m - 2, m)
 
-# def ceil(x,y):
-#     if x%y==0:
-#         return x//y
-#     else:
-#         return x//y+1
-
 
 def modu(a, b, m):
 
@@ -81,8 +75,6 @@ def main():
         ans = [n] * n
         print(*ans)
 
-
-# region fastio
 
 BUFSIZE = 8192
 
@@ -153,11 +145,8 @@ else:
 
 def input(): return sys.stdin.readline().rstrip("\r\n")
 
-# endregion
-
 
 def __starting_point():
-    # read()
     main()
 
 
