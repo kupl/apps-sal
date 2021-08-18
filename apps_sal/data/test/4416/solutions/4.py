@@ -10,8 +10,6 @@ for g, ps in zip(group, pref_sum):
     for i in g:
         ps.append(ps[-1] + i)
 
-# print(group)
-# print(pref_sum)
 ans = 10**18
 for i in range(min(k, len(group[3])) + 1):
     rest = k - i

@@ -5,13 +5,11 @@ class Solution:
 
     def helper(self, n, string, length, opened, openUsed):
 
-        # base case
         if length == n * 2:
             if string not in self.outPut:
                 self.outPut.append(string)
             return
 
-        # skip if already tried
         if string in self.hashMap:
             return
         else:

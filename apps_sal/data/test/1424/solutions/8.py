@@ -12,7 +12,6 @@ for i in range(m):
     c = 0
     t = bin(v[i])[2:]
     t = ('0' * (n - len(t))) + t
-    #print (bin(v[i]), t,f)
     for j in range(n):
         if t[j] != f[j]:
             c += 1

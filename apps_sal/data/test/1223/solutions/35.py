@@ -1,4 +1,3 @@
-# 参考 https://atcoder.jp/contests/abc140/submissions/7411285
 import sys
 input = sys.stdin.readline
 

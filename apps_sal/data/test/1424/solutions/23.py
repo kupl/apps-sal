@@ -6,10 +6,8 @@ ans = 0
 otvet = 0
 for i in range(m):
     lst[i] = int(input())
-    #lst[i] = bin(lst[i])[2:]
 
 fed = int(input())
-#fed = bin(fed[2:])
 for i in range(m):
     res[i] = lst[i] ^ fed
     res[i] = bin(res[i])[2:]

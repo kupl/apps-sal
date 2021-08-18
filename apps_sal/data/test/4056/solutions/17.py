@@ -32,18 +32,15 @@ def lcm(x, y):
 
 
 def printDivisors(n):
-    # Note that this loop runs till square root
     i = 1
     cc = 0
     while i <= ma.sqrt(n):
 
         if (n % i == 0):
 
-            # If divisors are equal, print only one
             if (n / i == i):
                 cc += 1
             else:
-                # Otherwise print both
                 cc += 2
         i = i + 1
     return cc

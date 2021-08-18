@@ -26,11 +26,9 @@ def cut(x1, y1, x2, y2, x3, y3, x4, y4):
 
 x1, y1, x2, y2 = cut(x1, y1, x2, y2, x3, y3, x4, y4)
 
-# print(x1,y1,x2,y2)
 
 x1, y1, x2, y2 = cut(x1, y1, x2, y2, x5, y5, x6, y6)
 
-# print(x1,y1,x2,y2)
 
 if x1 == x2 or y1 == y2:
     print("NO")

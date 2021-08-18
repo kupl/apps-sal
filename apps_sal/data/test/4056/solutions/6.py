@@ -1,7 +1,5 @@
 from math import gcd
 
-# THis is the main function
-
 
 def main():
     n = int(input())

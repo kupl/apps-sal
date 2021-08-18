@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 n, M = list(map(int, input().split()))
 t = list(map(int, input().split()))
 a = []

@@ -8,7 +8,6 @@ Sorted list implementations:
 * :class:`SortedList`
 * :class:`SortedKeyList`
 """
-# pylint: disable=too-many-lines
 
 
 from bisect import bisect_left, bisect_right, insort
@@ -18,16 +17,11 @@ from math import log
 from operator import add, eq, ne, gt, ge, lt, le, iadd
 from textwrap import dedent
 
-###############################################################################
-# BEGIN Python 2/3 Shims
-###############################################################################
 
 from functools import wraps
 from sys import hexversion
 
 if hexversion < 0x03000000:
-    # pylint: disable=redefined-builtin
-    # pylint: disable=redefined-builtin
     try:
         from _thread import get_ident
     except ImportError:
@@ -42,9 +36,6 @@ else:
 
 def recursive_repr(fillvalue='...'):
     "Decorator to make a repr function return fillvalue for a recursive call."
-    # pylint: disable=missing-docstring
-    # Copied from reprlib in Python 3
-    # https://hg.python.org/cpython/file/3.6/Lib/reprlib.py
 
     def decorating_function(user_function):
         repr_running = set()
@@ -64,10 +55,6 @@ def recursive_repr(fillvalue='...'):
         return wrapper
 
     return decorating_function
-
-###############################################################################
-# END Python 2/3 Shims
-###############################################################################
 
 
 class SortedList(MutableSequence):
@@ -153,7 +140,6 @@ class SortedList(MutableSequence):
         :param key: function used to extract comparison key (optional)
         :return: sorted list or sorted-key list instance
         """
-        # pylint: disable=unused-argument
         if key is None:
             return object.__new__(cls)
         else:
@@ -473,21 +459,12 @@ class SortedList(MutableSequence):
 
         total = 0
 
-        # Increment pos to point in the index to len(self._lists[pos]).
-
         pos += self._offset
-
-        # Iterate until reaching the root of the index tree at pos = 0.
 
         while pos:
 
-            # Right-child nodes are at odd indices. At such indices
-            # account the total below the left child node.
-
             if not pos & 1:
                 total += _index[pos - 1]
-
-            # Advance pos to the parent node.
 
             pos = (pos - 1) >> 1
 
@@ -655,9 +632,6 @@ class SortedList(MutableSequence):
 
             indices = list(range(start, stop, step))
 
-            # Delete items from greatest index to least so
-            # that the indices remain valid throughout iteration.
-
             if step > 0:
                 indices = reversed(indices)
 
@@ -717,10 +691,6 @@ class SortedList(MutableSequence):
                 result = self._getitem(slice(stop + 1, start + 1))
                 result.reverse()
                 return result
-
-            # Return a list because a negative step could
-            # reverse the order of the items and this could
-            # be the desired behavior.
 
             indices = list(range(start, stop, step))
             return list(self._getitem(index) for index in indices)
@@ -910,9 +880,6 @@ class SortedList(MutableSequence):
 
         _lists = self._lists
 
-        # Calculate the minimum (pos, idx) pair. By default this location
-        # will be inclusive in our calculation.
-
         if minimum is None:
             min_pos = 0
             min_idx = 0
@@ -931,9 +898,6 @@ class SortedList(MutableSequence):
                     return iter(())
 
                 min_idx = bisect_right(_lists[min_pos], minimum)
-
-        # Calculate the maximum (pos, idx) pair. By default this location
-        # will be exclusive in our calculation.
 
         if maximum is None:
             max_pos = len(_maxes) - 1
@@ -1330,29 +1294,18 @@ class SortedList(MutableSequence):
             assert len(self._maxes) == len(self._lists)
             assert self._len == sum(len(sublist) for sublist in self._lists)
 
-            # Check all sublists are sorted.
-
             for sublist in self._lists:
                 for pos in range(1, len(sublist)):
                     assert sublist[pos - 1] <= sublist[pos]
 
-            # Check beginning/end of sublists are sorted.
-
             for pos in range(1, len(self._lists)):
                 assert self._lists[pos - 1][-1] <= self._lists[pos][0]
-
-            # Check _maxes index is the last value of each sublist.
 
             for pos in range(len(self._maxes)):
                 assert self._maxes[pos] == self._lists[pos][-1]
 
-            # Check sublist lengths are less than double load-factor.
-
             double = self._load << 1
             assert all(len(sublist) <= double for sublist in self._lists)
-
-            # Check sublist lengths are greater than half load-factor for all
-            # but the last sublist.
 
             half = self._load >> 1
             for pos in range(0, len(self._lists) - 1):
@@ -1362,13 +1315,9 @@ class SortedList(MutableSequence):
                 assert self._len == self._index[0]
                 assert len(self._index) == self._offset + len(self._lists)
 
-                # Check index leaf nodes equal length of sublists.
-
                 for pos in range(len(self._lists)):
                     leaf = self._index[self._offset + pos]
                     assert leaf == len(self._lists[pos])
-
-                # Check index branch nodes are the sum of their children.
 
                 for pos in range(self._offset):
                     child = (pos << 1) + 1

@@ -1,4 +1,3 @@
-#!python3
 
 from collections import deque, Counter
 import array
@@ -13,8 +12,6 @@ def read_int():
 
 def read_int_array():
     return [int(i) for i in input().strip().split(' ')]
-
-######################################################
 
 
 W = read_int_array()

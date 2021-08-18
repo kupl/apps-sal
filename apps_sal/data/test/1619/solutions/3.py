@@ -44,7 +44,6 @@ def cross(a, b):
 def intersection_of_two_planes(p1, p2):
     A1, B1, C1, D1 = p1
     A2, B2, C2, D2 = p2
-#
     crossprod = cross([A1, B1, C1], [A2, B2, C2])
 
     if (A1 * B2 - A2 * B1) != 0:

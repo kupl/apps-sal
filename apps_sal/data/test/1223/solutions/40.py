@@ -8,11 +8,9 @@ I = [-1] * (n + 1)
 
 for i, P in enumerate(p):
     I[P] = i
-# I[1~Nまでの数字] = 0,1,...
-# index を求めている
 ans = 0
 
-for N, index in enumerate(I[1:], 1):  # 1からスタート
+for N, index in enumerate(I[1:], 1):
     L = index - 1
     if L >= 0:
         L = l[L]
@@ -23,7 +21,6 @@ for N, index in enumerate(I[1:], 1):  # 1からスタート
 
     l[R - 1] = L
     r[L + 1] = R
-#0 <= L , R < n
     if L >= 0:
         L2 = L - 1
         if L2 >= 0:

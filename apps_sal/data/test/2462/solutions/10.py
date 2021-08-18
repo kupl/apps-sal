@@ -1,5 +1,3 @@
-# import sys
-# input=sys.stdin.readine
 
 t = int(input())
 for _ in range(t):

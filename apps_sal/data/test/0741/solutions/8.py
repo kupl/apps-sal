@@ -18,7 +18,6 @@ def readlist():
     return list(map(int, input().split()))
 
 
-# B
 N, M = readmap()
 A = [0] + readlist() + [M]
 

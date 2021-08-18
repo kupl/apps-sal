@@ -6,7 +6,7 @@ import sys
 import queue
 
 try:
-    import dev_act_ffc429465ab634  # empty file in directory
+    import dev_act_ffc429465ab634
     DEV = True
 except:
     DEV = False
@@ -93,14 +93,12 @@ def tokenized(s):
         word = []
 
 
-###############################################################################
 ej = EJudge()
 int_reader = IntReader()
 fmap = lambda f, *l: list(map(f, *l))
 def parse_int(): return fmap(int, input().split())
 
 
-# input
 n, k = parse_int()
 
 seq = fmap(lambda x: x == "YES", input().split())

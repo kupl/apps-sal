@@ -1,5 +1,3 @@
-# Problem @ http://codeforces.com/problemset/problem/1060/D
-# greedy #math
 n = int(input())
 left = []
 right = []
