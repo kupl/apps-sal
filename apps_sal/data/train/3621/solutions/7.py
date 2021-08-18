@@ -22,16 +22,12 @@ def circular_list():
     for i in range(400):
         for j in range(0, i - s + 1):
             x = c[i] - c[j]
-            # print(i,j,x)
             if x in p:
                 if i - j > s:
                     s = i - j
-                #l += [[x,i-j,[p[k] for k in range(j,i)]]]
                 l += [[x, i - j]]
-                # print((x,s,i))
     l.sort()
     return l
-#    print(p[i])
 
 
 def prime_maxlength_chain(n):
@@ -53,8 +49,6 @@ def prime_maxlength_chain(n):
     return l
 
 
-# If you want to generate the circular primes list use cl=[] below
-#prime_maxlength_chain.cl = []
 prime_maxlength_chain.cl = [
     [2, 1], [3, 1], [5, 2], [17, 4], [41, 6], [127, 9], [197, 12], [281, 14], [379, 15], [491, 15], [499, 17], [563, 17], [857, 19], [953, 21], [1151, 23], [1259, 25], [1361, 25],
     [1583, 27], [1823, 27], [2069, 27], [2099, 29], [2399, 31], [2417, 33], [2579, 35], [2897, 35], [2909, 37], [3803, 39], [3821, 41], [4217, 43], [4421, 43], [4651, 45], [4871, 45], [5107, 47],

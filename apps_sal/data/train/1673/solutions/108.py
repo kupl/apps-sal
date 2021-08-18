@@ -3,7 +3,6 @@ class Solution:
         A = arr
         m = len(A)
         n = len(A[0])
-        # dp[i][j] = min(dp[i-1][j-1], dp[i-1][j], dp[i-1][j+1]) + A[i][j]
         if m == n == 1:
             return A[0][0]
 

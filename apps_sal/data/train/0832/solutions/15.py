@@ -1,4 +1,3 @@
-# cook your dish here
 import itertools
 t = int(input())
 for i in range(t):
