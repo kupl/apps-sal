@@ -26,7 +26,6 @@ def solve(hands, k):
     while k > 0:
         hands = nxt(hands)
         k -= 1
-#        print(hands,k)
     print(hands[0])
 
 

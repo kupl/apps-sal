@@ -1,4 +1,3 @@
-# 292B
 
 __author__ = 'artyom'
 

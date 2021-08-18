@@ -5,7 +5,7 @@ def main():
     h, w = map(int, input().split())
     ch, cw = map(lambda x: int(x) + 1, input().split())
     dh, dw = map(lambda x: int(x) + 1, input().split())
-    s = [["#"] * (w + 4) for _ in range(2)] + [["#"] * 2 + list(input()) + ["#"] * 2 for _ in range(h)] + [["#"] * (w + 4) for _ in range(2)]
+    s = [["
     m1 = ((-1, 0), (0, -1), (0, 1), (1, 0))
     m2 = [(i, j) for i in range(-2, 3) for j in range(-2, 3) if abs(i) + abs(j) > 1]
     a = deque([(ch, cw)])

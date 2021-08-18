@@ -5,8 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-# SOLUTION
-
 
 def main():
     n, = read()
@@ -19,8 +17,6 @@ def main():
         else:
             sm += dc[ord(c) - 65 + 10]
     print(sm)
-
-# HELPERS
 
 
 def read(callback=int):

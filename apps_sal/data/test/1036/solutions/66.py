@@ -1,14 +1,9 @@
-# See. https://atcoder.jp/contests/arc109/tasks/arc109_c
 
 
 def solve(S):
-    # R>S>P>R
     tbl = {
-        # ord("P")
         80: {80: 80, 82: 80, 83: 83},
-        # ord("R")
         82: {80: 80, 82: 82, 83: 82},
-        # ord("S")
         83: {80: 83, 82: 82, 83: 83},
     }
     if len(S) % 2 == 1:
@@ -31,5 +26,3 @@ def main():
 
 
 main()
-
-# vim: ts=2 sw=2

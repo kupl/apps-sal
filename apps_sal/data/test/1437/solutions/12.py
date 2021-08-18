@@ -7,11 +7,9 @@ for i in range(64):
             if i == (j & k):
                 r += 1
     Z[i] = r
-    #print(str(i) + ".", A[i], "=>", r)
 
 r = 1
 for c in input():
-    #print("c:", c, "idx:", A.index(c), "z:", Z[A.index(c)])
     r = (r * Z[A.index(c)]) % 1000000007
 print(r)
 

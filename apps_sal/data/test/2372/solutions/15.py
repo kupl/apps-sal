@@ -29,30 +29,30 @@ def solve(h, w, ch, cw, dh, dw, s):
     used = [True] * (W * H)
     for r in range(h):
         for c in range(w):
-            used[pos(r, c)] = (s[r][c] == "#")
-    que = deque([(start, 0)])
-    label_dist_mapping = [-1] * (label + 1)
-    used[start] = True
-    label_dist_mapping[G[start]] = 0
+            used[pos(r, c)] = (s[r][c] == "
+    que=deque([(start, 0)])
+    label_dist_mapping=[-1] * (label + 1)
+    used[start]=True
+    label_dist_mapping[G[start]]=0
     while que:
-        cpos, n = que.popleft()
+        cpos, n=que.popleft()
         if cpos == goal:
             return n
         for d in neighbors:
-            npos = cpos + d
+            npos=cpos + d
             if not used[npos]:
-                used[npos] = True
-                m = label_dist_mapping[G[npos]]
-                if (G[npos] == G[cpos]) or (n == m):  # 同一グループ
+                used[npos]=True
+                m=label_dist_mapping[G[npos]]
+                if (G[npos] == G[cpos]) or (n == m):
                     que.appendleft((npos, n))
                 else:
-                    label_dist_mapping[G[npos]] = n + 1
+                    label_dist_mapping[G[npos]]=n + 1
                     que.append((npos, n + 1))
     return -1
 
 
-h, w = list(map(int, input().split()))
-ch, cw = list(map(int, input().split()))
-dh, dw = list(map(int, input().split()))
-s = [input() for i in range(h)]
+h, w=list(map(int, input().split()))
+ch, cw=list(map(int, input().split()))
+dh, dw=list(map(int, input().split()))
+s=[input() for i in range(h)]
 print((solve(h, w, ch, cw, dh, dw, s)))

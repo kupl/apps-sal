@@ -1,8 +1,6 @@
 n = input()
 text = input()
 switcher = -1
-# b=1
-# r=-1
 lastbad = 0
 tries = 10000000
 triecount = 0
@@ -49,7 +47,6 @@ if abad1 >= abad2:
 else:
     triecount2 = abad2
 
-# print('tc1-'+str(triecount)+'tc2-'+str(triecount2))
 tc1 = triecount
 tc2 = triecount2
 

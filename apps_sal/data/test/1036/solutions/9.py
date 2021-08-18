@@ -17,5 +17,4 @@ for i in range(k):
             t.append(s[2 * j])
     n /= 2
     s = copy.deepcopy(t)
-    # print(s)
 print(s[0])

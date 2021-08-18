@@ -27,4 +27,3 @@ for sym in s:
     ans %= p
 
 print(ans)
-# print(get_num(s))
