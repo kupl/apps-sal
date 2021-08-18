@@ -15,7 +15,6 @@ def main():
     for i in range(t):
         s, n, m, k = list(map(int, sys.stdin.readline().split(' ')))
         D = float(c[s - 1][n - 1])
-        # print D
         N = 0.000000
         if s == n:
             print(1.000000)
@@ -26,7 +25,6 @@ def main():
         upper = min(m, n)
         for j in range(k, upper):
             N += c[m - 1][j] * c[s - m][n - 1 - j]
-        # print N
         ans = float(N / D)
         print("%f" % ans)
 

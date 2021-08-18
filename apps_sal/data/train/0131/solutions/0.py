@@ -78,6 +78,3 @@ class Solution(object):
             if isinstance(right, str):
                 right = newd[right]
             newd[left] = right
-
- # s = Solution()
- # print(s.evaluate("(let x 2 (mult x (let x 3 y 4 (add x y))))"))

@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for cases in range(t):
     n = int(input())

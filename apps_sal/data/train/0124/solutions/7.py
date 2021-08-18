@@ -18,20 +18,17 @@ class Solution:
             if start > end:
                 return False
             if nums[start] < nums[end]:
-                # normal
                 if target < nums[mid]:
                     end = mid - 1
                 else:
                     start = mid + 1
             else:
                 if nums[mid] < nums[start]:
-                    # peak between start and mid
                     if target < nums[mid] or target >= nums[start]:
                         end = mid - 1
                     else:
                         start = mid + 1
                 else:
-                    # peak between mid and end
                     if target > nums[mid] or target <= nums[end]:
                         start = mid + 1
                     else:

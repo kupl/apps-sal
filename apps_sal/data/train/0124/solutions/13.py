@@ -11,10 +11,8 @@ class Solution:
         while (i + 1 < len(nums) and nums[i] == nums[i + 1]):
             i += 1
         if (i + 1 == len(nums)):
-            # nums中所有元素相等
             return nums[0] == target
 
-        # 找到最大元素的位置
         l, r = i, len(nums) - 1
         while (l + 1 < r):
             mid = l + (r - l) // 2

@@ -18,7 +18,6 @@ def main(a):
             mi = set(range(nc))
     if any(tmp):
         ary.append(tmp)
-    #for x in ary:print(x)
     ans = []
     now = 0
     tmp = ary.pop()
@@ -45,7 +44,6 @@ def main(a):
         tmp[a2n(a[now])] -= 1
         now += 1
     while True:
-        # print(ary,tmp,ans)
         for i in range(nc):
             if tmp[i] == 0:
                 ans.append(n2a(i))

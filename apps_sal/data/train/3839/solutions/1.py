@@ -1,4 +1,3 @@
-# returns test score
 def score_test(tests, right, omit, wrong):
     final = 0
     for scores in tests:

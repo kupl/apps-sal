@@ -2,14 +2,10 @@ def nCk(N, K):
     nn = N
     klim = min(K, N - K) + 1
     res = 1
-    # print " res = " + str(res)
     for kk in range(1, klim):
         res *= nn
-        # print " res = " + str(res)
         res /= kk
-        # print " res = " + str(res)
         nn -= 1
-    # print str(N) + " choose " + str(K) + " = " + str(res)
     return res
 
 
@@ -20,9 +16,7 @@ def doTest():
     N = int(CCT[1])
     M = int(CCT[2])
     K = int(CCT[3])
-    # print "S=" + str(S) + " N = " + str(N) + " M = "  + str(M) + " K = " + str(K       )
     den = nCk(S - 1, N - 1)
-    # print "den = " + str(den)
     klim = min(M, N)
     num = 0
     for kk in range(K, klim):
@@ -30,13 +24,10 @@ def doTest():
             continue
         num += nCk(M - 1, kk) * nCk(S - M, N - kk - 1)
 
-    # print "num = " + str(num)
     ans = num / float(den)
     print("%.9f" % ans)
 
 
-# MAIN
 T = int(input())
-# print "T = " + str(T)
 for tt in range(0, T):
     doTest()

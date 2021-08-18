@@ -17,15 +17,14 @@ class Solution:
         if nums[mid] == target:
             return True
 
-        #print(nums[left], nums[mid], nums[right])
-        if nums[left] < nums[mid]:  # left sorted
+        if nums[left] < nums[mid]:
 
             if nums[left] <= target <= nums[mid]:
                 return self.bsearch(nums, target, left, mid - 1)
             else:
                 return self.bsearch(nums, target, mid + 1, right)
 
-        elif nums[mid] < nums[right]:  # right sorted
+        elif nums[mid] < nums[right]:
 
             if nums[mid] <= target <= nums[right]:
                 return self.bsearch(nums, target, mid + 1, right)

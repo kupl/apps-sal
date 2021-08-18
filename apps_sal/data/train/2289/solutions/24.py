@@ -3,7 +3,6 @@ def main():
     input = sys.stdin.readline
 
     a = list(input())[:-1]
-    # print(a)
     n = len(a)
 
     d = dict()

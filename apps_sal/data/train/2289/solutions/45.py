@@ -1,7 +1,4 @@
 def main():
-    # import sys
-    # readline = sys.stdin.readline
-    # readlines = sys.stdin.readlines
 
     A = input()
     N = len(A)
@@ -28,11 +25,6 @@ def main():
             elif dp[i] > dp[ni + 1] + 1:
                 dp[i] = dp[ni + 1] + 1
                 recon[i] = (chr(a + j), ni + 1)
-
-    # k =
-    # for j in range(26):
-    #     ni = na[0][j]
-    #     if dp[i] > dp[ni] + 1:
 
     i = 0
     ans = []

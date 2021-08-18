@@ -15,11 +15,9 @@ def main():
     ans = 0
     index = -1
     rem = k
-    # print(dp)
     for i in range(n):
         if index != -1:
             if i - index <= rem:
-                # print('here',i,index)
                 arr[i] *= m
             else:
                 index = -1
@@ -27,7 +25,6 @@ def main():
         total += arr[i]
         count += 1
         if count == k:
-            # print(total,start,i)
             count -= 1
             if total < m:
                 index = dp[i]
@@ -35,9 +32,7 @@ def main():
                     print(-1)
                     return
 
-                # print(index)
                 rem = k - (i - index + 1)
-                # print('what',rem)
                 total -= arr[index]
                 arr[index] *= m
                 total += arr[index]
@@ -47,7 +42,6 @@ def main():
             total -= arr[start]
             start += 1
 
-    # print(arr)
     print(ans)
 
 

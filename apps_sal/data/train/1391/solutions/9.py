@@ -10,7 +10,6 @@ for _ in range(int(input())):
             aux[p].append([s, f])
     tot = 0
     for i in aux:
-        # Sorting by finish time
         if len(aux[i]) > 1:
             aux[i].sort(key=lambda x: x[1])
             t_1 = 0

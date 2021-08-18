@@ -4,7 +4,6 @@ fsum = [ar[0]]
 for i in range(1, n):
     fsum.append(fsum[i - 1] + ar[i])
 i = k
-# print(fsum)
 c = 0
 while i <= n:
     if i == k:

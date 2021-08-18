@@ -25,6 +25,3 @@ while cards:
     draws += n - removed
     removed += new_removals
 print(draws)
-
-
-# Made By Mostafa_Khaled
