@@ -2,7 +2,6 @@ n = int(input())
 
 
 def n_base_digit_sum(v, a):
-    # 10baseの自然数vをn進数で表した時の桁和
     res = 0
     while v != 0:
         res += v % a

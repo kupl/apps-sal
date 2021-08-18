@@ -44,9 +44,6 @@ for i in range(n-1,0,-1):
     dp[i]=(n-i)+(dp[pos[i]])-(s[i]-pos[i])
     ans+=dp[i]
 
-#print(s)
-#print(pos)
-#print(dp)
 print(ans)
 
 
@@ -71,9 +68,6 @@ for i in range(n-2,-1,-1):
     dp[i]=(n-i)+(dp[pos[i]])-(s[i]-pos[i])
     ans+=dp[i]
 
-#print(s)
-#print(pos)
-#print(dp)
 print(ans)
 
 
@@ -98,8 +92,6 @@ for i in range(0, n):
     lookup[i][0] = (s[i], i)
 
 for j in range(1, K + 1):
-    # j=1
-    # while((1<<j)<=n):
     i = 0
     while(i + (1 << j) - 1 < n):
         if(lookup[i][j - 1][0] > lookup[i + (1 << (j - 1))][j - 1][0]):
@@ -109,8 +101,6 @@ for j in range(1, K + 1):
         i += 1
     j += 1
 
-
-# print(lookup)
 
 """pos=[]
 for i in range(0,len(s)-1):
@@ -141,7 +131,4 @@ for i in range(n - 2, -1, -1):
     dp[i] = (n - i) + (dp[pos[i]]) - (s[i] - pos[i])
     ans += dp[i]
 
-# print(s)
-# print(pos)
-# print(dp)
 print(ans)

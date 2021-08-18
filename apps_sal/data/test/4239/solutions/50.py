@@ -1,13 +1,12 @@
-# -*- coding: utf-8 -*-
 import sys
-sys.setrecursionlimit(100000)  # RecursionError対策
+sys.setrecursionlimit(100000)
 
 
 def func(n):
     if n == 0:
-        return 0  # 終端条件
+        return 0
     if memo[n] != -1:
-        return memo[n]  # 探索済み
+        return memo[n]
 
     res = n
 

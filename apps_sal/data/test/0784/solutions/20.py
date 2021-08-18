@@ -33,7 +33,7 @@ def m():
         if j == i:
             break
     l.reverse()
-    print('YES', len(l), ' '.join(str(i) for i in l), sep='\n')  # success!
+    print('YES', len(l), ' '.join(str(i) for i in l), sep='\n')
 
 
 def __starting_point():

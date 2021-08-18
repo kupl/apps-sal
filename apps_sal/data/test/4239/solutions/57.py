@@ -1,7 +1,6 @@
 n = int(input())
 
 dp = [0]
-# dp[n]を求める
 
 for i in range(1, n + 1):
     c = []

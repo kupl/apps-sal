@@ -1,6 +1,5 @@
 import heapq
 
-# d = [8, 2, 2, 7, 4, 6, 5, 3, 8]
 
 N = int(input())
 d = list(map(int, input().split()))

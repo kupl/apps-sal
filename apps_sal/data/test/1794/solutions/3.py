@@ -1,7 +1,7 @@
 from collections import deque
 
 
-def argmax(que, z):  # 二分求[i+1, a[i]]中a[x]最大的x
+def argmax(que, z):
     l = 0
     r = len(que) - 1
     while (l <= r):

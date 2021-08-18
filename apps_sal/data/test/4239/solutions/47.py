@@ -23,7 +23,6 @@ def LSS(): return input().split()
 def resolve():
     N = I()
 
-    # 引き出せる金額リスト
     l = [1]
     a = 6
     b = 9
@@ -35,7 +34,6 @@ def resolve():
             l.append(b)
             b *= 9
 
-    # ナップザック
     dp = [INF] * (N + 1)
     dp[0] = 0
     for i in range(1, N + 1):

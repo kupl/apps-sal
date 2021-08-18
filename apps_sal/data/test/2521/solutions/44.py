@@ -36,7 +36,6 @@ for i in range(N):
         heapq.heappush(h2, right_cand)
         heapq.heappush(used, now)
     now_w = now_w - left + 2 * now - right
-    #print(ans, i, now_w, left, now, right)
     ans = max(ans, now_w)
 
 print(ans)

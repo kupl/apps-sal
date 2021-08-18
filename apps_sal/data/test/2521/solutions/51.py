@@ -1,8 +1,6 @@
 import sys
 import queue
 
-# +++++
-
 
 def main():
     n = int(input())
@@ -44,7 +42,6 @@ def main():
     print(ans)
 
 
-# +++++
 isTest = False
 
 
@@ -59,7 +56,6 @@ def __starting_point():
         isTest = True
     else:
         pass
-        #input = sys.stdin.readline
 
     ret = main()
     if ret is not None:

@@ -10,7 +10,6 @@ for i in range(n):
     p = heapq.heappop(q)
     a1[i + 1] = a1[i] - p + max(p, l[i + n])
     heapq.heappush(q, max(p, l[i + n]))
-# print(a1)
 q = []
 l.reverse()
 for i in range(n):

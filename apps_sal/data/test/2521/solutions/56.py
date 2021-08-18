@@ -2,7 +2,7 @@ def main():
     from heapq import heappush, heappushpop
 
     n = int(input())
-    *a, = list(map(int, input().split()))  # [0,n),[n,2n),[2n,3n)
+    *a, = list(map(int, input().split()))
 
     to_rm = [0] * (n * 3)
 
@@ -33,7 +33,7 @@ def main():
     s = sum(a[:n - 1])
     for tail in range(n - 1, n * 2):
         s += a[tail]
-        ret = max(ret, s - (tot - s) + to_rm[tail])  # [0,tail]=前半
+        ret = max(ret, s - (tot - s) + to_rm[tail])
     print(ret)
 
 

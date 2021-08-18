@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 from heapq import heapify, heappush, heappop
@@ -45,12 +44,10 @@ heapify(que2)
 
 ans = sm1 - sm2
 for i in range(N, N * 2):
-    # 前半
     heappush(que1, (A[i], i))
     sm1 += A[i]
     a, _ = heappop(que1)
     sm1 -= a
-    # 後半
     if i not in S:
         sm2 -= A[i]
         while 1:

@@ -4,7 +4,6 @@ def main():
 
     from heapq import heapify, heappushpop
 
-    # first half
     fh = []
     l = a[:n]
     fh.append(sum(l))
@@ -15,7 +14,6 @@ def main():
         else:
             fh.append(fh[-1])
 
-    # latter half
     lh = []
     l = [-i for i in a[2 * n:]]
     lh.append(sum(l))

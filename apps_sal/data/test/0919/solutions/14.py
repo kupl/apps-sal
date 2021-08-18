@@ -1,4 +1,3 @@
-#input = open('a0.in').readline
 n, k = map(int, input().split())
 stages = sorted(input().strip())
 i = 0

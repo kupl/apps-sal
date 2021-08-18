@@ -1,7 +1,5 @@
 import sys
 input = sys.stdin.readline
-# lev contains height from root,lower neighbour, higher neighbours
-# lev[0] contains 0 (because it is the root), higher neighbours (=neighbours)
 n = int(input())
 p = list(map(int, input().split()))
 p.insert(0, 0)

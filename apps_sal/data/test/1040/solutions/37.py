@@ -9,7 +9,6 @@ while q:
     if a != "x":
         p.append(a)
         continue
-    # ここではa==xをみたす
     try:
         f = p[-2]
         o = p[-1]
@@ -20,4 +19,4 @@ while q:
     except:
         pass
     p.append(a)
-print(len(p))  # ,p)
+print(len(p))

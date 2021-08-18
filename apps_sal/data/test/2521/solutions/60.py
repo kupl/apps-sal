@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 import heapq
 
@@ -8,7 +7,6 @@ def minus(n):
 
 
 def solve(N: int, a: "List[int]"):
-    # N+iまでのリストの大きい順のNコのわ
     left_sum = [0] * (N + 1)
     heap = a[:N]
     left_sum[0] = sum(heap)
@@ -41,8 +39,8 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    a = [int(next(tokens)) for _ in range(3 * N)]  # type: "List[int]"
+    N = int(next(tokens))
+    a = [int(next(tokens)) for _ in range(3 * N)]
     solve(N, a)
 
 

@@ -11,10 +11,8 @@ for i in range(1, n + 1):
     while k <= n:
         if i - k >= 0:
             dp[i] = min(dp[i], dp[i - k] + 1)
-            # print(dp[i-1],dp[i-k])
         k *= 6
 
-        # print(dp)
     k = 9
     while k <= n:
         if i - k >= 0:

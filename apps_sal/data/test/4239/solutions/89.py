@@ -13,5 +13,4 @@ for i in range(n + 1):
     while(i + j <= n):
         dp[i + j] = min(dp[i + j], dp[i] + 1)
         j *= 9
-# print(dp)
 print((dp[n]))

@@ -3,9 +3,6 @@ import math
 from collections import defaultdict
 
 
-#stdin = open('input.txt','r')
-
-
 I = stdin.readline
 
 

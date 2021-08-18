@@ -32,6 +32,5 @@ for i in range(N, 2 * N):
             a, idx = heapq.heappop(r)
         used.add(idx)
         rr += a
-    #print(i, ll, rr, l, r)
     ans = max(ans, ll - rr)
 print(ans)
