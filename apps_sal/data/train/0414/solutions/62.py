@@ -9,7 +9,6 @@ class Solution:
         winner = -1 * 2**32
         winCount = 0
         while winCount < k:
-            #print(winCount, arr, winner)
             if arr[0] == maxi or arr[1] == maxi:
                 return maxi
             if arr[0] < arr[1]:

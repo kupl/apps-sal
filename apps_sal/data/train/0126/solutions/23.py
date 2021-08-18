@@ -27,12 +27,10 @@ class Solution:
                     j_tmp += 1
                     continue
                 counter[s[j_tmp:i + 1]] += 1
-                #print(f'{s[j_tmp:i+1]} {counter} {i} {j_tmp}')
                 letters_tmp[s[j_tmp]] -= 1
                 if letters_tmp[s[j_tmp]] == 0:
                     unique_tmp -= 1
                 j_tmp += 1
-                #print(f'i {i} j {j} unique {unique} {s[j:i+1]} letters {letters},res {res}, len {i-j+1}, {counter}')
             i += 1
         if len(counter.values()) == 0:
             return 0

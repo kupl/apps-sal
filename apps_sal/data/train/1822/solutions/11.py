@@ -18,6 +18,5 @@ class Solution:
                 temp.append(node[0])
 
             res.extend(sorted(temp))
-            # print(res)
 
         return res[:k]

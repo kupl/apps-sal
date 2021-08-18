@@ -15,11 +15,8 @@ class Solution:
                 if c[x] == 0:
                     letterlen -= 1
                 i += 1
-            # print(i,j)
             for l in range(minSize, maxSize):
                 beg = j - l + 1
-                # print(i,j,beg)
                 if beg >= i:
                     ans[s[beg:j + 1]] += 1
-        # print(ans)
         return max(ans.values()) if ans else 0

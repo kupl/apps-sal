@@ -26,7 +26,6 @@ class Solution:
                 window_len = reader - writer + 1
             if window_len >= minSize and window_len <= maxSize:
                 substring_count[tuple(s[writer:reader + 1])] += 1
-                #print (s[writer:reader+1], substring_count, window_len)
             reader += 1
 
         if not substring_count:

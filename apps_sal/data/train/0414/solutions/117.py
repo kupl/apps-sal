@@ -1,7 +1,6 @@
 class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
-        # My First Solution
-        widx = 0  # current winner index
+        widx = 0
         gen = (i for i, x in enumerate(arr) if x > arr[widx] and k >= i > 0)
         i = next(gen, None)
         if i:
@@ -17,13 +16,12 @@ class Solution:
             else:
                 return arr[widx]
 
-        # Clean Discussion Solution
-        win = cnt = 0  # winner & count
+        win = cnt = 0
         for i, x in enumerate(arr):
             if win < x:
-                win, cnt = x, 0  # new winner in town
+                win, cnt = x, 0
             if i:
-                cnt += 1  # when initializing (i.e. i == 0) count=0
+                cnt += 1
             if cnt == k:
-                break  # early break
+                break
         return win

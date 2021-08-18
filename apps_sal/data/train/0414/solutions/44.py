@@ -3,7 +3,6 @@ class Solution:
         cnt = 0
         max_el = 0
 
-        # Find array maximum
         for element in arr:
             if element > max_el:
                 max_el = element
@@ -11,7 +10,6 @@ class Solution:
         if(k >= len(arr) - 1):
             return max_el
 
-        # Loop until we reach the winner
         while(cnt < k):
             if(arr[0] > arr[1]):
                 arr.append(arr[1])

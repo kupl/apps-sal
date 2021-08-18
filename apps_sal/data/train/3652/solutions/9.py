@@ -1,5 +1,4 @@
 def button_sequences(seqR, seqB):
-    # You may code here
     seq = ''
     leds = ['R', 'B']
     action = [None, None]

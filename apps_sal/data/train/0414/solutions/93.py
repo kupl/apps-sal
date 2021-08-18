@@ -10,14 +10,12 @@ class Solution:
         while(win_count != k):
             if(first > arr[1]):
                 win_count += 1
-                #print(first, arr, win_count)
                 if(win_count == k):
                     best_num = first
                     break
                 arr.append(arr.pop(1))
             else:
                 win_count = 1
-                #print(first, arr, win_count)
                 arr.append(arr.pop(0))
                 first = arr[0]
                 if(win_count == k):

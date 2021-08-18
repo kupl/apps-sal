@@ -7,7 +7,6 @@ class Solution:
         w = queue[0]
         while queue[0] != maxv:
             a, b = queue.popleft(), queue.popleft()
-            # print(a, b)
             if a < b:
                 queue.append(a)
                 queue.appendleft(b)

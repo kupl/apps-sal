@@ -12,7 +12,6 @@ class Solution:
                     st.add(s[j])
                 x = s[i:j + 1]
                 ln = j - i + 1
-                # print(x,ln)
                 if ln >= minSize and ln <= maxSize and l <= maxLetters:
                     if x in d:
                         d[x] += 1
