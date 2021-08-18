@@ -4,21 +4,13 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        # Easy way to do it: sort them, take top 3 product
-        # But have to think about negative numbers, lowest
-        # 2 could be 2 giant negatives.. * biggest positive
-        # which could still be biggest product
 
         nums.sort()
         top = nums[~0] * nums[~1] * nums[~2]
         bottom = nums[0] * nums[1] * nums[~0]
         return max(top, bottom)
-        # Time O(nlogn) due to sorting
-        # Space O(1)
 
     def maximumProduct(self, nums):
-        # Other approach is keep track of min1/2
-        # and max1/2/3 while we iterate through the array
         min1 = min2 = float('inf')
         max1 = max2 = max3 = -float('inf')
 

@@ -5,7 +5,6 @@ for _ in range(int(input())):
     ind = {}
     for i in range(n):
         ind[l[i]] = i
-    # dup=l[:]
     dup = sorted(l)
     for i in range(n):
         chote = i
@@ -15,7 +14,6 @@ for _ in range(int(input())):
         chotewale_swap = 0
         badewale_swap = 0
         x = int(input())
-        # d1=d[x].copy()
         d1 = {}
         d1[0] = d[x][0]
         d1[1] = d[x][1]

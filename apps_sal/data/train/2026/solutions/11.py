@@ -15,6 +15,3 @@ for k in r:
     s = [[min(s[i][j], s[i][k] + s[k][j]) for i in r] for j in r]
 
 print(s[-1][0])
-
-
-# Made By Mostafa_Khaled

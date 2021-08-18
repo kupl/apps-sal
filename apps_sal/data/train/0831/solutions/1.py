@@ -10,7 +10,6 @@ for _ in range(int(input())):
     for i in range(n):
         for j in range(i, n):
             curr = (pre[j + 1] - pre[i] + p) % p
-            # print(curr)
             if curr > maxi:
                 maxi = curr
                 cmaxi = 1

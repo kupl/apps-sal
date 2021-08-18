@@ -15,7 +15,7 @@ class Solution:
         while diffs[prev_idx] == 0:
             prev_idx += 1
             if prev_idx == len(diffs):
-                return 1  # all equal
+                return 1
 
         cnt = 2
         for i in range(prev_idx + 1, len(diffs)):
