@@ -1,17 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[31]:
 
 
 import math
 n = int(input())
-
-
-# In[ ]:
-
-
-# In[32]:
 
 
 def divisorGenerator(n):
@@ -25,25 +15,13 @@ def divisorGenerator(n):
         yield divisor
 
 
-# In[33]:
-
-
 dlist = list(divisorGenerator(n))
-
-
-# In[34]:
 
 
 dlist.sort(key=lambda x: -x)
 
 
-# In[35]:
-
-
 fun = []
-
-
-# In[36]:
 
 
 for d in dlist:
@@ -51,10 +29,4 @@ for d in dlist:
     fun.append(number * (number + 1) // 2 * d - number * (d - 1))
 
 
-# In[37]:
-
-
 print(*fun)
-
-
-# In[ ]:

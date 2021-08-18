@@ -30,9 +30,7 @@ def __starting_point():
         u, v = map(int, input().split())
         g[u].append(v)
 
-    #print("The graph is:", g)
     op = topo_sort_variant(g, ncities)
-    #print("The topo sort output is", op)
 
     visited = [False] * (ncities + 1)
 

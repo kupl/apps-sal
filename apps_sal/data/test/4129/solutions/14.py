@@ -1,7 +1,5 @@
 from bisect import bisect
 from collections import defaultdict
-# l = list(map(int,input().split()))
-# map(int,input().split()))
 from math import gcd, sqrt, ceil
 from collections import Counter
 import sys

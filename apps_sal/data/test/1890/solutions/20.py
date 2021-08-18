@@ -13,6 +13,3 @@ for r in range(a):
     if A[r] in '05':
         s = (s + pow(2, r, m)) % m
 print((s * f) % m)
-
-
-#   C:\Users\Usuario\HOME2\Programacion\ACM

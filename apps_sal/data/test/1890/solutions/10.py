@@ -13,11 +13,9 @@ def fast_pow(a, b, mod):
 
 
 def inverse(a, mod):
-    # mod-простое
     return fast_pow(a, mod - 2, mod)
 
 
-# -------------------------------
 num = 0
 tmp = 1
 """

@@ -8,5 +8,3 @@ for i in range(n - 1, -1, -1):
         ans = (ans + pow(2, i, m) * t) % m
 
 print(ans)
-
-# comentario

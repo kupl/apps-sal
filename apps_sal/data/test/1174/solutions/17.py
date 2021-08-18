@@ -1,6 +1,6 @@
 import heapq
 import sys
-input = sys.stdin.readline  # 文字列入力はするな！！
+input = sys.stdin.readline
 n, m = list(map(int, input().split()))
 a = []
 for i in input().split():

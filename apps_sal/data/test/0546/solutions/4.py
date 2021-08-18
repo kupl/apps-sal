@@ -1,4 +1,3 @@
-# IAWT
 goods = input()
 
 ptrn = input()
@@ -22,7 +21,7 @@ def f(q):
         if len(q) != theL:
             return False
         for i in range(theL):
-            if ptrn[i] != '?':  # So should be exactly equal
+            if ptrn[i] != '?':
                 if ptrn[i] != q[i]:
                     return False
             elif not data[ord(q[i]) - 97]:

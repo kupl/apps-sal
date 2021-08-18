@@ -8,6 +8,5 @@ heapq.heapify(A)
 for i in range(M):
     t = heapq.heappop(A)
     heapq.heappush(A, (-1) * (-t // 2))
-    # print(A)
 
 print(-sum(A))

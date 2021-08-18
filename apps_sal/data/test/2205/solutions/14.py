@@ -14,6 +14,3 @@ for i in range(1, n + 1):
     s ^= a[i - 1]
 
 print(s)
-
-
-# Made By Mostafa_Khaled
