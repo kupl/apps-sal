@@ -1,8 +1,5 @@
-# from decorators import *
 from sys import stdin, stdout
 from math import ceil
-
-# @debug
 
 
 def solve(n):
@@ -16,5 +13,4 @@ def solve(n):
 
 for _ in range(int(input())):
     n = int(stdin.readline())
-    # s = list(map(int,stdin.readline().split()))
     solve(n)

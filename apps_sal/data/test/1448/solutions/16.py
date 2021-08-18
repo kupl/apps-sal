@@ -10,5 +10,3 @@ for i in range(m):
         print('YES')
     else:
         print('NO')
-
-# (bx-ax)*(py-ay)-(by-ay)*(px-ax)

@@ -23,12 +23,9 @@ for i in range(2 * n + 1):
     score = S2[i] - S2[y]
     rest = x - (S[i] - S[y])
 
-    # print(score,i,rest,D[(y-1)%n])
     MAX = D[(y - 1) % n]
 
     score += (MAX + (MAX - rest + 1)) * rest // 2
-
-    # print(score)
 
     ANS = max(ANS, score)
 

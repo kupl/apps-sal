@@ -3,7 +3,6 @@ from collections import Counter
 T = int(input().strip())
 for t in range(T):
     n = int(input().strip())
-    # a,b = list(map(int, input().strip().split()))
     res = 0
     d = 1
     while n + 1 > d:

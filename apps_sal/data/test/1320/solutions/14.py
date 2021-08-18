@@ -8,7 +8,6 @@ for i in range(n):
     for j in range(n):
         if a[i][j] == 'C':
             s += 1
-        # print(a[i][j])
     ans += s * (s - 1) // 2
 
 for i in range(n):

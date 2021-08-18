@@ -18,15 +18,12 @@ def main():
     result = []
 
     for v in [int(i) for i in input().split(' ')]:
-        # print(v)
         if v > 0:
             x = use[v]
             y = x + v
         else:
             y = use[v]
             x = y - v
-
-        # print(x, y, use[v], diag[v], use[v] > diag[v], (x-1, y) not in table, (x, y-1) not in table)
 
         use[v] += 1
 

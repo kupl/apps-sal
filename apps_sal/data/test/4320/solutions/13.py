@@ -13,17 +13,7 @@ import sys
 from sys import stdin
 from collections import deque
 mod = 10**9 + 7
-# sys.setrecursionlimit(10**6)
-# def rl():
-#     return [int(w) for w in stdin.readline().split()]
-# map(int,input().split())
-# # l = list(map(int,input().split()))
-# from itertools import permutations
-# input = lambda: sys.stdin.readline().rstrip()
 def input(): return sys.stdin.readline().rstrip()
-
-# def ncr(x, y):
-#     return f(x) // (f(y) * f(x - y))
 
 
 def ncr(n, r, p):

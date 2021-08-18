@@ -21,6 +21,3 @@ while process:
 print(len(edges))
 for a, b in edges:
     print(a, b)
-
-
-# Made By Mostafa_Khaled

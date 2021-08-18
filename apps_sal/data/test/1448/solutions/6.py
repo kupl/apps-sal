@@ -10,10 +10,10 @@ class Point:
         self.x = x
         self.y = y
 
-    def __add__(self, vec):  # point + VECTOR
+    def __add__(self, vec):
         return Point(self.x + vec.x, self.y + vec.y)
 
-    def __sub__(self, vec):  # point - VECTOR
+    def __sub__(self, vec):
         self.x -= vec.x
         self.y -= vec.y
 
@@ -31,11 +31,11 @@ class Point:
     def dist_to_segment(self, pA, pB):
         AB = vector_by_points(pA, pB)
         AC = vector_by_points(pA, self)
-        if AB * AC < 0:  # this means angle CAB > 90
+        if AB * AC < 0:
             return self.dist_to_point(pA)
         BA = -AB
         BC = vector_by_points(pB, self)
-        if BA * BC < 0:  # this means angle CBA > 90
+        if BA * BC < 0:
             return self.dist_to_point(pB)
         return abs(self.dist_to_line(line_by_points(pA, pB)))
 
@@ -54,31 +54,31 @@ class Vector:
         self.x = x
         self.y = y
 
-    def length(self):  # |vector|
+    def length(self):
         return math.sqrt(self.x * self.x + self.y * self.y)
 
-    def __mul__(self, vec):  # scalar multiplication
+    def __mul__(self, vec):
         return self.x * vec.x + self.y * vec.y
 
-    def __pow__(self, vec):  # vector multiplication
+    def __pow__(self, vec):
         return self.x * vec.y - self.y * vec.x
 
-    def __truediv__(self, x):  # vector / number
+    def __truediv__(self, x):
         return Vector(self.x / x, self.y / x)
 
-    def __add__(self, vec):  # vector1 + vector2
+    def __add__(self, vec):
         return Vector(self.x + vec.x, self.y + vec.y)
 
-    def __sub__(self, vec):  # vector1 - vector2
+    def __sub__(self, vec):
         return Vector(self.x - vec.x, self.y - vec.y)
 
-    def __neg__(self):  # -vector
+    def __neg__(self):
         return Vector(-self.x, -self.y)
 
     def __str__(self):
         return str(self.x) + ' ' + str(self.y)
 
-    def normalize(self):  # vector / |vector|
+    def normalize(self):
         ln = self.length()
         self.x /= ln
         self.y /= ln
@@ -142,7 +142,7 @@ def line_by_points(p1, p2):
     return Line(a, b, c)
 
 
-def segment_intersect(pA, pB, pC, pD):  # does AB intersect CD?
+def segment_intersect(pA, pB, pC, pD):
     AB = vector_by_points(pA, pB)
     AC = vector_by_points(pA, pC)
     AD = vector_by_points(pA, pD)
@@ -170,7 +170,7 @@ def ray_to_ray(pA, pB, pC, pD):
     return min(pA.dist_to_ray(pC, pD), pC.dist_to_ray(pA, pB))
 
 
-def area(a):  # a is list of Points (shape not necessary convex)
+def area(a):
     prev = Vector(a[-1].x, a[-1].y)
     ans = 0
     for pt in a:

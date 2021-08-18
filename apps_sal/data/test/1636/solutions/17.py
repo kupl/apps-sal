@@ -9,12 +9,9 @@ def zeror():
 def solution(n, c, cw, w):
 
     c.sort(key=lambda tup: tup[0])
-    # print(c)
 
     for k, v in cw.items():
         cw[k] = sorted(v, key=lambda tup: tup[0])[::-1]
-
-    # print(cw)
 
     ans = []
 
@@ -25,7 +22,6 @@ def solution(n, c, cw, w):
         else:
             ans.append(cw[elem].pop())
 
-    # print(ans)
     temp = ans[0]
     for elem in ans[1:]:
         if temp[0] >= elem[0] and temp[1] >= elem[1]:
