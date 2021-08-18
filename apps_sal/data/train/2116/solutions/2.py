@@ -24,7 +24,6 @@ for i in range(26):
                 break
             pre = cur
             ans += 1
-        #print(i, j, pre, cur, ans)
     if flag:
         ind = i
         sum = ans

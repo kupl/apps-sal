@@ -14,7 +14,6 @@ def str_single():
     return input()
 
 
-# start
 t = int_single()
 
 res = []

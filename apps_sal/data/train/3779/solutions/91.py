@@ -6,4 +6,3 @@ def past(h, m, s):
 
     miliseconds = hoursToMiliseconds + minutesToMiliseconds + secondsToMiliseconds
     return miliseconds
-    # Good Luck!

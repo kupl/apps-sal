@@ -17,5 +17,4 @@ class Solution:
                         memo[i].append(sub | set([s[j + 1:i + 1]]))
             return memo[i]
         sublen = [len(lst) for lst in unique_split(n - 1)]
-        # print(memo)
         return max(sublen)

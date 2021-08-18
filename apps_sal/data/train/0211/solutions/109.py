@@ -10,7 +10,6 @@ class Solution:
             return result
 
         l = permutations(s)
-        # print(l)
         maxt = 0
         totalset = set()
         for i in l:

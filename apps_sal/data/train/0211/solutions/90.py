@@ -21,7 +21,6 @@ class Solution:
                     return -1
                 else:
                     h[w] = 1
-            # print(h)
             return len(h)
         ans = 1
         for b in itertools.product([0, 1], repeat=len(s) - 1):

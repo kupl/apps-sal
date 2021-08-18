@@ -4,7 +4,6 @@ class Solution:
         self.ans = 1
 
         def rec(split, s):
-            # print(split,s)
             if not s:
                 se = set(split)
                 if len(se) == len(split):

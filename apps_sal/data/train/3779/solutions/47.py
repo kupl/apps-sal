@@ -9,5 +9,3 @@ def past(h, m, s):
     stoms = s * 1000
 
     return stoms
-
-    # Good Luck!

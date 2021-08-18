@@ -21,6 +21,5 @@ class Solution:
             if v in self.set:
                 continue
             self.set.add(v)
-            # print(self.set)
             self.solve(s, i + 1)
             self.set.remove(v)

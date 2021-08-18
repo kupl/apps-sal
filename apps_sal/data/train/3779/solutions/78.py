@@ -3,4 +3,3 @@ def past(h, m, s):
         return "Error"
     else:
         return ((h * 3600000) + (m * 60000) + (s * 1000))
-    # Good Luck!

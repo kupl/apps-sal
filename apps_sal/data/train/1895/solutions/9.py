@@ -18,7 +18,7 @@ class Solution:
         for c in range(2):
             if board[0][c] == 'X' and board[1][c] == 'X' and board[2][c] == 'X':
                 return X - O == 1
-            if board[c] == 'XXX':  # board[c][0] == 'X' and board[c][1] == 'X' and board[c][2] == 'X':
+            if board[c] == 'XXX':
                 return X - O == 1
         if board[0][0] == 'X' and board[1][1] == 'X' and board[2][2] == 'X':
             return X - O == 1
@@ -27,7 +27,7 @@ class Solution:
         for c in range(2):
             if board[0][c] == 'O' and board[1][c] == 'O' and board[2][c] == 'O':
                 return X - O == 0
-            if board[c] == 'OOO':  # board[c][0] == 'O' and board[c][1] == 'O' and board[c][2] == 'O':
+            if board[c] == 'OOO':
                 return X - O == 0
         if board[0][0] == 'O' and board[1][1] == 'O' and board[2][2] == 'O':
             return X - O == 0

@@ -11,7 +11,5 @@ class Solution:
             ans.append(s[start:pos + 1])
             a = self.dp(s, pos + 1, pos + 1, list(ans))
             ans.pop()
-        # ans.remove(s[start:pos+1])
 
         return a if a > b else b
-        # return ans

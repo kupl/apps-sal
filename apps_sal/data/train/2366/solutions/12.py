@@ -1,4 +1,3 @@
-# double underscore makes a class variable or a class method private
 mod = 1000000007
 def ii(): return int(input())
 def si(): return input()

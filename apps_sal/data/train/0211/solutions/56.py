@@ -23,5 +23,4 @@ class Solution:
         for prt in lst:
             if(len(set(prt)) == len(prt)):
                 ans = max(ans, len(prt))
-        # print(lst)
         return ans

@@ -6,12 +6,6 @@ class Solution:
         """
         valid_X, valid_O = 0, 0
         cnt_X, cnt_O = 0, 0
-        # for i in range (3):
-        #     if board[i] == 'OOO' or board[i] =='XXX':
-        #         valid_row += 1
-        #     cnt_X += board[i].count('X')
-        #     cnt_O += board[i].count('O')
-        # sum_row = sum(valid_row)
         for row in board:
             if row == 'XXX':
                 valid_X += 1
