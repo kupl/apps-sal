@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 n, *a = list(map(int, open(0).read().split()))
 b = [0]
 for i in a:

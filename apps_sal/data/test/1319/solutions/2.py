@@ -1,8 +1,6 @@
 from functools import reduce
 import sys
 
-#f = open('test', 'r')
-#sys.stdin = f
 m = int(input())
 p = 10**9 + 7
 dividors = [int(x) for x in input().split()]

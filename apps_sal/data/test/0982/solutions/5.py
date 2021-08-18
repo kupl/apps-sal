@@ -9,7 +9,7 @@ import copy
 import string
 
 
-ORDA = 97  # a
+ORDA = 97
 def ii(): return int(input())
 def mi(): return map(int, input().split())
 def li(): return [int(i) for i in input().split()]

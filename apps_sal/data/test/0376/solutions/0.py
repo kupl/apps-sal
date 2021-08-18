@@ -47,7 +47,6 @@ def sol():
     if len(hardest) > 1:
         return single_hardest + 1
 
-    # hardest is len 1
     if not almost:
         return single_hardest
 

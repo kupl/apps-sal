@@ -5,10 +5,8 @@ for i in range(len(s)):
         a.append(i + 1)
 a.append(len(s) + 1)
 maxRes = eval(s)
-# print(a)
 for i in a:
     for j in a:
         if j > i:
             maxRes = max(maxRes, eval(s[:i] + '(' + s[i:j - 1] + ')' + s[j - 1:]))
-            # print(s[:i]+'('+s[i:j-1]+')'+s[j-1:])
 print(maxRes)

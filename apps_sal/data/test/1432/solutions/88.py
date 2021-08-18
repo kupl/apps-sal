@@ -5,7 +5,6 @@ def main():
     N = int(input())
     A = list(map(int, input().split()))
 
-    # i%2==0を加算、i%2==1を減算すれば山1の高さになる。
     tmp = 0
     for i in range(N):
         if i % 2 == 0:

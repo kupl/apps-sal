@@ -1,8 +1,5 @@
 n, k, m, t = list(map(int, input().split(' ')))
 
-# n = nb univ
-# k = doc pos
-# m = max nb univ
 
 for _ in range(t):
     op, pos = list(map(int, input().split(' ')))

@@ -12,12 +12,6 @@ from itertools import chain, dropwhile, permutations, combinations
 from collections import defaultdict, deque
 import operator as op
 
-# Guide:
-#   1. construct complex data types while reading (e.g. graph adj list)
-#   2. avoid any non-necessary time/memory usage
-#   3. avoid templates and write more from scratch
-#   4. switch to "flat" implementations
-
 
 def VI(): return list(map(int, input().split()))
 def I(): return int(input())
@@ -25,7 +19,7 @@ def LIST(n, m=None): return [0] * n if m is None else [[0] * m for i in range(n)
 def ELIST(n): return [[] for i in range(n)]
 
 
-def MI(n=None, m=None):  # input matrix of integers
+def MI(n=None, m=None):
     if n is None:
         n, m = VI()
     arr = LIST(n)
@@ -34,7 +28,7 @@ def MI(n=None, m=None):  # input matrix of integers
     return arr
 
 
-def MS(n=None, m=None):  # input matrix of strings
+def MS(n=None, m=None):
     if n is None:
         n, m = VI()
     arr = LIST(n)
@@ -43,7 +37,7 @@ def MS(n=None, m=None):  # input matrix of strings
     return arr
 
 
-def MIT(n=None, m=None):  # input transposed matrix/array of integers
+def MIT(n=None, m=None):
     if n is None:
         n, m = VI()
     a = MI(n, m)
@@ -54,11 +48,8 @@ def MIT(n=None, m=None):  # input transposed matrix/array of integers
     return arr
 
 
-# BFS is probably overkill, as one can reach it by brute force (below)
 def bfs(l, sgn, r, best, par=0):
     if len(r) == 1:
-        # if par==1:
-        #     return max(best, sgn(l,r[0]))
         return max(best, sgn(l, r[0]))
     if sng == op.add:
         if par == 0:
@@ -73,8 +64,6 @@ def bfs(l, sgn, r, best, par=0):
 def run_bfs(s):
     x = list(s)
     lst = [int(v) if i % 2 == 0 else op.add if v == '+' else op.mul for i, v in enumerate(x)]
-    # d = [int(i) for i in x[::2]]
-    # g = x[1::2]
     b = bfs(lst[0], lst[1], lst[2:], 0)
 
 

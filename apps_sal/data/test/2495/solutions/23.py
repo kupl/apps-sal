@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import math
 import os
@@ -117,7 +116,6 @@ INF = int(1e15)
 
 
 def main():
-    # sys.stdin = open("sample.txt")
     N = Scanner.int()
     A = Scanner.map_int()
     s1, s2 = 0, 0

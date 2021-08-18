@@ -33,7 +33,6 @@ def __starting_point():
         if count % 2 == 1:
             needChangeLetters.append(i)
 
-    #print( needChangeLetters )
     while len(needChangeLetters) >= 2:
         preIndex = needChangeLetters.popleft()
         postIndex = needChangeLetters.pop()

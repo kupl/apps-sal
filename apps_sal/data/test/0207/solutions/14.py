@@ -16,8 +16,6 @@ def print_grid(grid, glue=' '):
     for row in grid:
         print_array(row, glue)
 
-#====================================#
-
 
 def solve():
     n = get_int()
@@ -30,6 +28,5 @@ def solve():
 
 
 ntest = 1
-# ntest = get_int()
 for _ in range(ntest):
     print(solve())

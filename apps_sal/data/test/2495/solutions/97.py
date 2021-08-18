@@ -1,7 +1,6 @@
 N = int(input())
 A = [int(i) for i in input().split()]
 ans = 0
-# i%2が正
 s = 0
 for i in range(N):
     s += A[i]
@@ -13,7 +12,6 @@ for i in range(N):
         if s >= 0:
             ans += s + 1
             s = -1
-    # print(s,ans)
 nums = 0
 s = 0
 for i in range(N):
@@ -26,5 +24,4 @@ for i in range(N):
         if s >= 0:
             nums += s + 1
             s = -1
-    # print(s,nums)
 print(min(nums, ans))

@@ -1,4 +1,3 @@
-# ABC127 B
 
 r, D, x = map(int, input().split())
 A = []

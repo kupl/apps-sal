@@ -4,7 +4,6 @@ input = stdin.readline
 n, k, m, t = list(map(int, input().split()))
 ans = [0] * n
 ans[k - 1] = 1
-# print(ans)
 for i in range(t):
     d, u = list(map(int, input().split()))
     if d == 0:
@@ -19,4 +18,3 @@ for i in range(t):
     else:
         ans = ans[:u - 1] + [0] + ans[u - 1:]
         print(len(ans), ans.index(1) + 1)
-    # print(ans)
