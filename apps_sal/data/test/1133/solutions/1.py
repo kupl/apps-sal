@@ -1,5 +1,3 @@
-# import sys
-# sys.stdin = open("cf593a.in")
 
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 

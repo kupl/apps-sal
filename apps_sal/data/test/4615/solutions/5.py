@@ -14,7 +14,6 @@ for i in range(len(sugar) - d):
     if sugar[i]:
         sugar[i + d] = True
 
-# denominator: 分母, numerator: 分子
 deno = a * 100
 nume = 0
 

@@ -27,8 +27,6 @@ def main():
 
 
 def __starting_point():
-    #import profile
-    # profile.run("main()")
     main()
 
 

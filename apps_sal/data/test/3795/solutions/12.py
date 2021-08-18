@@ -1,24 +1,3 @@
-# from collections import Counter
-#
-# x = """100
-# 60
-# 70"""
-#
-# x = """410
-# 55
-# 70"""
-#
-# x = """600
-# 60
-# 70"""
-#
-# def f(string):
-#     def c(x =(r for r in string.splitlines())):
-#         return next(x)
-#
-#     return c
-#
-# source = f(x)
 
 source = input
 

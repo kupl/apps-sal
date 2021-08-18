@@ -1,10 +1,5 @@
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 
-#N = int(input())
-#s = input()
 N, M = [int(x) for x in stdin.readline().split()]
 arrA = [int(x) for x in stdin.readline().split()]
 arrB = [int(x) for x in stdin.readline().split()]

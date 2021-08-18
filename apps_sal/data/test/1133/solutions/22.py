@@ -1,6 +1,3 @@
-# n = int(input())
-# s = input().strip()
-# a = [int(tmp) for tmp in input().split()]
 n = int(input())
 s = [[0] * 26 for i in range(26)]
 for i in range(n):

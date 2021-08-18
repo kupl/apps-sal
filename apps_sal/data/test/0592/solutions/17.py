@@ -10,5 +10,4 @@ else:
         ans += (2 * num * (num + 1))
         ans -= 4
         i += 1
-        # print(2*j*(j+1))
     print(ans)

@@ -11,7 +11,6 @@ for i in range(n):
             d[arr[i]][0] += 1
         except:
             d[arr[i]] = [1, s]
-# print(d)
 ans = 0
 for i in range(97, 97 + 26):
     for j in range(97, 97 + 26):

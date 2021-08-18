@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 
 """
 
@@ -11,15 +10,7 @@ N, M = list(map(int, input().split()))
 A = [int(x) for x in input().split()]
 B = [int(x) for x in input().split()]
 X = int(input())
-#
 
-# import time
-# t0 = time.time()
-#
-# N, M = 2000, 2000
-# A = [2000 for _ in range(N)]
-# B = [2000 for _ in range(M)]
-# X = 2*10**9
 
 leftA = [0] * (N + 1)
 leftB = [0] * (M + 1)

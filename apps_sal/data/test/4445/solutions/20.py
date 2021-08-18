@@ -16,7 +16,7 @@ for i in l:
 o.sort()
 e.sort()
 if len(e) > len(o):
-    o, e = e, o  # o
+    o, e = e, o
 for i in range(len(e)):
     e.pop(-1)
     o.pop(-1)

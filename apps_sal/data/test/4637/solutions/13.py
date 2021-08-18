@@ -1,6 +1,3 @@
-# int(input())
-# [int(s) for s in input().split()]
-# input()
 
 
 def solve():

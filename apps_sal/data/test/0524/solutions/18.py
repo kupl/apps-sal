@@ -27,7 +27,6 @@ def main():
                     br = 1
                     break
             else:
-                # print(ans, sm, val)
                 ans = min(ans, sm)
             if br:
                 break

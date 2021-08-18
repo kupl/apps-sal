@@ -15,7 +15,6 @@ def main():
         res = 0
         for j in range(n):
             res += a[j] * (2 * i + 2 * abs(i - j) + 2 * j)
-        # print(res)
         ans = min(ans, res)
     print(ans)
 

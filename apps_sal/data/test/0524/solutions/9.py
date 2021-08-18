@@ -12,13 +12,10 @@ maxNum = max(arry)
 maxRecur = maxNum ** (1 / (n - 1))
 
 currMin = float("inf")
-# print(maxRecur)
 arry.sort()
 for i in range(int(maxRecur) + 2):
     curr = 0
     for j in range(n):
-        # print(i**j)
         curr += abs(i**j - arry[j])
-    # print(i,curr)
     currMin = min(currMin, curr)
 print(currMin)
