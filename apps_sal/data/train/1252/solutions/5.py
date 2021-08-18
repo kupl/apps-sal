@@ -1,4 +1,3 @@
-# irrelevant sum
 def SieveOfEratosthenes(n):
     prime = [True for i in range(n + 1)]
     ans = []
@@ -9,11 +8,9 @@ def SieveOfEratosthenes(n):
                 prime[i] = False
         p += 1
 
-    # Print all prime numbers
     for p in range(2, n + 1):
         if prime[p]:
             ans.append(p)
-    # print p,
     return ans
 
 

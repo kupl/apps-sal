@@ -25,5 +25,4 @@ for i in range(n):
         s += m[1] * m[2]
         p[m[1] - 1] += m[2]
     ans[i] = str(s / t)
-    # print(p[:n+4],a,k,t)
 print("\n".join(ans))

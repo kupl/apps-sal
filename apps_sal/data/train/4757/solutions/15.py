@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
 import sys
-# sys.setrecursionlimit(10**6)
-# buff_readline = sys.stdin.buffer.readline
 buff_readline = sys.stdin.readline
 readline = sys.stdin.readline
 
@@ -16,7 +13,6 @@ def read_int_n():
     return list(map(int, buff_readline().split()))
 
 
-# @mt
 def slv(N, M, A, B):
     if N * A != M * B:
         print('NO')

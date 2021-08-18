@@ -7,8 +7,6 @@ from functools import reduce, cmp_to_key, lru_cache
 import io
 import os
 input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
-# import sys
-# input = sys.stdin.readline
 
 M = mod = 10**9 + 7
 def factors(n): return sorted(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0))))

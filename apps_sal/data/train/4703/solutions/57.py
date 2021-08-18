@@ -1,4 +1,4 @@
-def bar_triang(pointA, pointB, pointC):  # points A, B and C will never be aligned
+def bar_triang(pointA, pointB, pointC):
     xa, xb, xc = pointA[0], pointB[0], pointC[0]
     ya, yb, yc = pointA[1], pointB[1], pointC[1]
     x = round((xa + xb + xc) / 3, 4)

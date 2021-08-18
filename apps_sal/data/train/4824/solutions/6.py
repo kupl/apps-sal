@@ -1,4 +1,3 @@
-# Computational complexity of 1.5n
 def get_min_max(seq):
     seq = iter(seq)
     seq_min = seq_max = next(seq)

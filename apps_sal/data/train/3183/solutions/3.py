@@ -40,25 +40,25 @@ class Ticker():
         self.end = 1
 
     @skip
-    def _addN(self):  # !
+    def _addN(self):
         self.dat[self.cell] = ord(self.out[-1])
 
     @skip
-    def _dcrC(self):  # -
+    def _dcrC(self):
         self.dat[self.cell] -= 1
 
     @skip
-    def _icrC(self):  # +
+    def _icrC(self):
         self.dat[self.cell] += 1
 
     @skip
-    def _addA(self):  # *
+    def _addA(self):
         self.out += chr(self.dat[self.cell] % 256)
 
     @skip
-    def _incr(self):  # >
+    def _incr(self):
         self.cell += 1
 
     @skip
-    def _decr(self):  # <
+    def _decr(self):
         self.cell -= 1

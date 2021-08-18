@@ -8,10 +8,8 @@ class Solution:
             window += cardPoints[i]
             all += cardPoints[i]
         min = window
-        # print(all)
 
         for x in range(k):
-            # print(x)
             y = x + n
             all += cardPoints[y]
             window -= cardPoints[x]
@@ -19,5 +17,3 @@ class Solution:
             if window < min:
                 min = window
         return all - min
-        # print(all)
-        # print(all-min)

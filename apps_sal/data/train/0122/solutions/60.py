@@ -18,5 +18,4 @@ def max_score_using_subsequence(card_points, k):
 
 class Solution:
     def maxScore(self, cardPoints: List[int], k: int) -> int:
-        # return max_score_recursive(cardPoints, k, 0, len(cardPoints)-1, {})
         return max_score_using_subsequence(cardPoints, k)

@@ -12,7 +12,4 @@ def exchange_sort(sequence):
             swaps += 1
         elif a != b:
             cnt[a, b] += 1
-    # Special case: as there are only three keys at most,
-    # all remaining cycles will be 3-length cycles that
-    # need 2 transpositions to place 3 elements correctly.
     return swaps + sum(cnt.values()) // 3 * 2
