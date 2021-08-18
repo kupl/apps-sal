@@ -16,8 +16,7 @@ class Interpretor(object):
             '<': lambda: self.change_dir(-1, 0),
             '^': lambda: self.change_dir(0, -1),
             'v': lambda: self.change_dir(0, 1),
-            '?': lambda: self.change_dir(*random.choice([[1, 0], [-1, 0], [0, -1], [0, 1]])),
-            '#': self.move,
+            '?': lambda: self.change_dir(*random.choice([[1, 0], [-1, 0], [0, -1], [0, 1]])), '
             ' ': lambda: None,
             '@': self.stop,
             '"': self.toggle_string

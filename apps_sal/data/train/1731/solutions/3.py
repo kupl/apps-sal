@@ -57,9 +57,7 @@ opcodes = {
     ',': lambda itp: itp.output(chr(itp.pop())),
 
     'p': lambda itp: itp.put(itp.pop(), itp.pop(), itp.pop()),
-    'g': lambda itp: itp.push(itp.get(itp.pop(), itp.pop())),
-
-    '#': lambda itp: itp.advance(),
+    'g': lambda itp: itp.push(itp.get(itp.pop(), itp.pop())), '
     '@': lambda itp: itp.end(),
     ' ': lambda itp: None,
 }

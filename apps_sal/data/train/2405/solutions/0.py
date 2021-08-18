@@ -3,7 +3,7 @@ class Solution:
 
         obstacles = set([tuple(x) for x in obstacles])
 
-        face = 0  # NESW = 0123
+        face = 0
         x, y = 0, 0
         max_dist = 0
         for command in commands:

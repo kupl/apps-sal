@@ -1,8 +1,5 @@
 class Solution:
-    # def sortArray(self, nums: List[int]) -> List[int]:
-    #     return sorted(nums)
 
-    # merge sort
     def sortArray(self, nums: List[int]) -> List[int]:
         def mergeSort(nums, start, end):
             if start >= end:
@@ -18,7 +15,6 @@ class Solution:
                 L[i] = nums[start + i]
             for j in range(n2):
                 R[j] = nums[mid + 1 + j]
-            # two pointers
             i = j = 0
             for _ in range(start, end + 1):
                 if j >= n2 or (i < n1 and L[i] <= R[j]):

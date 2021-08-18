@@ -18,7 +18,6 @@ class Solution:
         return ret
 
     def sortArray(self, nums: List[int]) -> List[int]:
-        # implement merge sort
         if len(nums) == 1:
             return nums
 

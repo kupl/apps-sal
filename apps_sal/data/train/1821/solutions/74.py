@@ -5,8 +5,8 @@ class Solution:
 
 
 def partition(arr, low, high):
-    i = (low - 1)         # index of smaller element
-    pivot = arr[high]     # pivot
+    i = (low - 1)
+    pivot = arr[high]
     for j in range(low, high):
         if arr[j] < pivot:
             i = i + 1

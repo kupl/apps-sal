@@ -12,7 +12,6 @@ def merge(list1, list2):
 
 
 class Solution:
-    # Merge Sort
     def sortArray(self, nums: List[int]) -> List[int]:
         if len(nums) == 1:
             return nums

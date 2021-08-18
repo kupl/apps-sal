@@ -7,6 +7,5 @@ class Solution:
         hr_angle = h * angle_per_5_min
         min_angle = minutes * angle_per_min
 
-        # print(f'h={h}, minutes={minutes}, hr_angle={hr_angle}, min_angle={min_angle}')
         r = abs(hr_angle - min_angle)
         return min(360 - r, r)

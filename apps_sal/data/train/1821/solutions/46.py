@@ -14,11 +14,6 @@ class Solution:
         for i in range(mid + 1, high + 1):
             right.append(arr[i])
 
-        # print(\"During merge arrays are \", left, right)
-        # print(\"limits are \",l_limit, r_limit)
-
-        # using left and right as temp variables, merge it onto arr
-
         l_iter = 0
         r_iter = 0
 
@@ -40,7 +35,6 @@ class Solution:
                 r_iter += 1
 
             filler += 1
-            #print(l_iter, r_iter, l_limit, r_limit)
 
     def mergeSort(self, arr, low, high):
 
@@ -48,10 +42,8 @@ class Solution:
 
             mid = low + (high - low) // 2
 
-            # print(\"mergesort for \", arr[low:mid+1], arr[mid+1:high+1])
-
-            self.mergeSort(arr, low, mid)  # from low to mid
-            self.mergeSort(arr, mid + 1, high)  # from mid+1 to high
+            self.mergeSort(arr, low, mid)
+            self.mergeSort(arr, mid + 1, high)
 
             self.merge(low, mid, high, arr)
 
