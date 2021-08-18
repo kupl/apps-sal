@@ -1,4 +1,3 @@
-# 47
 data = list(input().split())
 if (int(data[0]) > int(data[1]) and int(data[0]) > int(data[2])):
     if int(data[0]) == int(data[1]) + int(data[2]):

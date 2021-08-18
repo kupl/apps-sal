@@ -1,10 +1,8 @@
 import sys
 input = sys.stdin.readline
-#from collections import deque
 
 n = int(input())
 A = list(map(int, input().split()))
-# B=deque(A)
 
 
 LIST = [1] * n

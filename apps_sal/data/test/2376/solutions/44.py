@@ -1,4 +1,3 @@
-# solution
 import io
 
 nim, mike = [int(_) for _ in input().split()]
