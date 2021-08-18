@@ -1,4 +1,3 @@
-#Python is love <3
 a = int(input())
 b = int(input())
 if((abs(b - a)) % 2 == 0):

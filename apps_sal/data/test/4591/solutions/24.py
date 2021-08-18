@@ -1,4 +1,3 @@
-# コーディング
 a, b, c, x, y = map(int, input().split())
 
 n = a * x + b * y

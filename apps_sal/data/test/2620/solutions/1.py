@@ -26,8 +26,6 @@ def calc(x):
 
         ANS.append(AA.pop(q))
 
-        # print(q,x,AA,ANS)
-
     return ANS
 
 

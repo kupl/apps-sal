@@ -1,7 +1,5 @@
 N, M = map(int, input().split())
 
-# 約数列挙
-
 
 def enum_div(N):
     ret = []

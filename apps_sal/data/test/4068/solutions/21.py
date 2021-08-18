@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def main():
     N, M = list(map(int, input().split()))
     A = set([int(input()) for x in range(M)])

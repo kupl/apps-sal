@@ -1,4 +1,3 @@
-# C
 A, B, C, X, Y = list(map(int, input().split()))
 ans = 0
 if 2 * C >= A + B:

@@ -9,11 +9,9 @@ for i in range(1, int(M**0.5) + 1):
         j = M // i
         r1 = j // N
         r2 = j % N
-        # print(i, j, r1, r2, math.gcd(r1, r2))
         ans = max(ans, min(r1, math.gcd(r1, r2)) * i)
         r1 = i // N
         r2 = i % N
-        # print(i, j, r1, r2, math.gcd(r1, r2))
         ans = max(ans, min(r1, math.gcd(r1, r2)) * j)
 
 print(ans)

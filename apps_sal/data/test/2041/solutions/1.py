@@ -37,7 +37,6 @@ def find_pos(levels, pos):
 
 
 def main():
-    # INPUT
     numbers = [int(x) for x in sys.stdin.read().split()]
     n = numbers[0]
     sequence = numbers[1:n + 1]
@@ -51,7 +50,6 @@ def main():
         else:
             queries[k] = {pos: None}
 
-    # WORK
     sequence1 = sorted([(s, -i) for i, s in enumerate(sequence)])
     tree = index_tree(n)
     size = n
@@ -64,7 +62,6 @@ def main():
         dec_index(tree, -neg_i)
         size -= 1
 
-    # PRINT
     for i in range(n + 2, n + 2 + 2 * m, 2):
         k, pos = numbers[i], numbers[i + 1]
         print(sequence[queries[k][pos]])

@@ -1,10 +1,3 @@
-# ===================================
-# (c) MidAndFeed aka ASilentVoice
-# ===================================
-# import math
-# import collections
-# import string
-# ===================================
 n, k = [int(x) for x in input().split()]
 q = [int(x) for x in input().split()]
 l = 0

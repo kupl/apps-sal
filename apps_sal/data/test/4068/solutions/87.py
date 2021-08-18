@@ -1,4 +1,3 @@
-# 入力:N,M(int:整数)
 def input2():
     return map(int, input().split())
 
@@ -19,7 +18,7 @@ n, m = input2()
 A = [int(input()) for _ in range(m)]
 INF = 1000000007
 
-start = 0  # 階段の開始点
+start = 0
 ans = 1
 for a in A:
     tmp = a - start
