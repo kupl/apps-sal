@@ -16,10 +16,8 @@ for i in range(3):
     else:
         lists.append(a_list[:rank])
 queue.append([lists[0][0] + lists[1][0] + lists[2][0], 0, 0, 0])
-# ret=[]
 for i in range(rank):
     poped = queue.pop(0)
-    # print(str(i+1)+":"+str(poped[0]))
     print((poped[0]))
     if i == rank - 1:
         break
@@ -33,8 +31,6 @@ for i in range(rank):
                 continue
             Done = True
             for k in range(len(queue)):
-                #print("to cmp")
-                # print(queue[k],to_append)
                 if queue[k] == to_append:
                     Done = False
                     break
@@ -42,15 +38,7 @@ for i in range(rank):
                     queue = queue[:k] + [to_append] + queue[k:]
                     Done = False
                     break
-            # print(Done)
             if Done == True:
                 queue.append(to_append)
-            #print("print Queue")
-            # for k in range(len(queue)):
-            #    print(queue[k])
     if len(queue) > rank - i - 1:
         queue = queue[:(rank - i - 1)]
-        # print("cut")
-    #print("print Queue")
-    # for j in range(len(queue)):
-    #            print(queue[j])

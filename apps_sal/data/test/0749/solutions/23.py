@@ -15,7 +15,6 @@ for c, coords in symbols.items():
     deltas.append(len(s) - coords[-1])
     dists[c] = deltas
 
-# print(dists)
 
 ans = ((len(s) + 2) // 2)
 for c in dists.keys():

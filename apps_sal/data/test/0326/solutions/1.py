@@ -28,7 +28,6 @@ def find_candidate(cost, use, s, is_left):
 
     if is_left:
         for t in list(D.keys()):
-            # reversed s is included in the end of t
             if t[::-1].find(s) == 0:
                 use[t] += 1
                 if use[t] > LIM:
@@ -36,7 +35,6 @@ def find_candidate(cost, use, s, is_left):
                 c = find_candidate(cost, use, t[:-len(s):], False)
                 cost = min(cost, c)
                 use[t] -= 1
-            # reveresed t is included in the begin of s
             elif s.find(t[::-1]) == 0:
                 use[t] += 1
                 c = find_candidate(cost, use, s[len(t):], True)
@@ -44,13 +42,11 @@ def find_candidate(cost, use, s, is_left):
                 use[t] -= 1
     else:
         for t in list(D.keys()):
-            # t is included in the end of reversed s
             if s[::-1].find(t) == 0:
                 use[t] += 1
                 c = find_candidate(cost, use, s[:-len(t):], False)
                 cost = min(cost, c)
                 use[t] -= 1
-            # s is included in the begin of reveresed t
             elif t.find(s[::-1]) == 0:
                 use[t] += 1
                 c = find_candidate(cost, use, t[len(s):], True)

@@ -5,7 +5,6 @@ read_data = input()
 res = 0
 log = []
 for i in range(len(read_data)):
-    # k = 2
     if len(log) < k:
         if read_data[i] == 'r':
             res += p

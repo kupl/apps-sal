@@ -1,7 +1,7 @@
 """
 Author: Andrew Jakubowicz
 Problem: Soldier and Traveling
-link: http://codeforces.com/problemset/problem/546/E#
+link: http://codeforces.com/problemset/problem/546/E
 
 n cities and m roads.
 Each city has an army.
@@ -21,7 +21,6 @@ class Edge:
         self.capacity = cap
         self.flow = flow
         self.target = target
-        # Reversed edges have capacity of 0
         self.rev = rev
 
     def __repr__(self):
@@ -74,35 +73,27 @@ def __starting_point():
     city_soldiers = list(map(int, input("").split()))
     want_soldiers = list(map(int, input("").split()))
 
-    # index 0 is start. Index 2n+1 is sink node.
     graph = [[] for _ in range(2 * n + 2)]
 
-    # Source to initial cities.
     for i, soldiers in enumerate(city_soldiers):
         graph[0].append(Edge(soldiers, 0, i + 1))
 
-    # Set up edges to sink.
     for i, soldiers in enumerate(want_soldiers):
         graph[n + i + 1].append(Edge(soldiers, 0, 2 * n + 1))
 
-    # Set up paths
     for _ in range(m):
         [s, t] = list(map(int, input("").split()))
         graph[t].append(Edge(1000, 0, n + s))
         graph[s].append(Edge(1000, 0, n + t))
 
-    # Set up staying soldiers.
     for i in range(n):
         i = i + 1
         graph[i].append(Edge(city_soldiers[i - 1], 0, n + i))
 
-    # Create residual graph
     residualGraph = [[] for _ in range(len(graph))]
-    # Generate the residual network
     for u, edges in enumerate(graph):
         for e in edges:
             target = e.target
-            # Circular link
             reverse = Edge(0, 0, u, e)
             e.rev = reverse
 

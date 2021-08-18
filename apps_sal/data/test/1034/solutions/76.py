@@ -1,4 +1,4 @@
-from heapq import *  # heapqライブラリのimport
+from heapq import *
 
 
 def solve():

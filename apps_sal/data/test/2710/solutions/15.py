@@ -6,7 +6,6 @@ class Edge:
         self.capacity = c
         self.flow = f
         self.target = t
-        # Reversed edges have capacity of 0
         self.rev = rev
 
     def __repr__(self):
@@ -50,35 +49,27 @@ def main():
     have = list(map(int, input("").split()))
     need = list(map(int, input("").split()))
 
-    # index 0 is start. Index 2n+1 is sink node.
     graph = [[] for _ in range(2 * n + 2)]
 
-    # Source to initial cities.
     for i, soldiers in enumerate(have):
         graph[0].append(Edge(soldiers, 0, i + 1))
 
-    # Set up edges to sink.
     for i, soldiers in enumerate(need):
         graph[n + i + 1].append(Edge(soldiers, 0, 2 * n + 1))
 
-    # Set up paths
     for _ in range(m):
         [s, t] = list(map(int, input("").split()))
         graph[t].append(Edge(1000, 0, n + s))
         graph[s].append(Edge(1000, 0, n + t))
 
-    # Set up staying soldiers.
     for i in range(n):
         i = i + 1
         graph[i].append(Edge(have[i - 1], 0, n + i))
 
-    # Create residual graph
     residualGraph = [[] for _ in range(len(graph))]
-    # Generate residuals
     for u, edges in enumerate(graph):
         for e in edges:
             target = e.target
-            # Circular link
             reverse = Edge(0, 0, u, e)
             e.rev = reverse
 
@@ -100,8 +91,6 @@ def main():
 
         for row in adjmatrix:
             print(" ".join(map(str, row)))
-
-# run this bad boy
 
 
 def __starting_point():

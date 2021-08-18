@@ -10,7 +10,7 @@ def main():
     for i in range(n):
         buf = input()
         buflist = buf.split()
-        sr.append((int(buflist[0]) - 1, int(buflist[1])))  # zero indexing
+        sr.append((int(buflist[0]) - 1, int(buflist[1])))
     sr = list(reversed(list(sorted(sr, key=lambda x: x[1]))))
     sp_list = []
     for i in range(m):
@@ -19,7 +19,7 @@ def main():
         sp_list[i[0]].append(i[1])
     sp_list = list(reversed(list(sorted(sp_list, key=lambda x: len(x)))))
     while len(sp_list[-1]) == 0:
-        sp_list.pop()  # remove empty subject
+        sp_list.pop()
     score_list = []
     for i, _ in enumerate(sp_list):
         score_list.append(0)

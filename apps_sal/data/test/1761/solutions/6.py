@@ -1,4 +1,3 @@
-# intent is to get a message with heasts to the fron tand the back.
 n = int(input())
 words = []
 for _ in range(n):

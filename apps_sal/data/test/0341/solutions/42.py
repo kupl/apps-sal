@@ -8,6 +8,5 @@ for i in range(N):
     if i >= K and T[i] == T[i - K]:
         T[i] = "."
         continue
-    # print(p[T[i]])
     ans += p[T[i]]
 print(ans)
