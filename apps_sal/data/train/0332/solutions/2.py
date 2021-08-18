@@ -5,7 +5,7 @@ class Solution:
         :rtype: int
         """
         def manachers(S):
-            A = '@#' + '#'.join(S) + '#$'
+            A = '@
             Z = [0] * len(A)
             center = right = 0
             for i in range(1, len(A) - 1):

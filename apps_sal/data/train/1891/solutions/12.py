@@ -30,7 +30,6 @@ class Solution:
                 for i in range(n):
                     if row[i] == 0:
                         temp_q.append((k, i))
-                        # print(temp_q)
                         backtracking(n, k + 1, temp_q)
                         temp_q.pop()
 

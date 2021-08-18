@@ -5,8 +5,7 @@ class Solution:
         :rtype: int
         """
 
-        # manacher
-        s = '^#' + '#'.join(s) + '#$'
+        s = '^
         Z = [1] * len(s)
         center, right = 0, 0
         for i in range(len(s) - 1):

@@ -9,4 +9,3 @@ def tidyNumber(n):
             return False
         i = s
     return True
-    # pass

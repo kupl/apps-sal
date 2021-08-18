@@ -9,11 +9,7 @@ class Solution:
         for skill in req_skills:
             ids[skill] = sid
             skills = skills | (1 << sid)
-            # print(sid, 1 << sid)
             sid += 1
-
-        # print(ids)
-        # print(skills)
 
         n = len(people)
 

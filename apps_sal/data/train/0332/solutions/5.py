@@ -5,11 +5,10 @@ class Solution:
         :rtype: int
         """
 
-        # manacher, find Z
-        s = '^#' + '#'.join(s) + '#$'
+        s = '^
         Z = [1] * len(s)
         center, right = 0, 0
-        for i in range(len(s) - 1):  # 注意 i不能取到 $
+        for i in range(len(s) - 1):
             if i < right:
                 i_mirror = 2 * center - i
                 Z[i] = min(Z[i_mirror], right - i + 1)
@@ -18,5 +17,4 @@ class Solution:
             if i + Z[i] - 1 > right:
                 center, right = i, i + Z[i] - 1
 
-        # sum Z
         return sum(z // 2 for z in Z)

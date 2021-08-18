@@ -17,9 +17,7 @@ class Solution:
                     continue
                 x = jj | idx
                 if dp[x] == -1 or dp[x] > dp[jj] + 1:
-                    # print(ii, jj, x, team)
                     dp[x] = dp[jj] + 1
                     team[x] = team[jj].copy()
                     team[x].append(ii)
-        # print(team)
         return team[NN - 1]

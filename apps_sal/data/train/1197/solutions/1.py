@@ -1,7 +1,5 @@
-#import sys,math,collections
 import math
 import sys
-#from itertools import permutations,combinations
 
 
 def file():
@@ -12,11 +10,9 @@ def file():
 def get_array():
     l = list(map(int, input().split()))
     return l
-# file()
 
 
 def main():
-    #a,b=map(int, input().split())
     for _ in range(int(input())):
         n = int(input())
         c = 0
@@ -37,7 +33,6 @@ def main():
 				return False	
 		return True		
 	def word_miss(a,b):
-		#print("a",a,"b",b)
 		if(a[0]!=b[0]):
 			a=a[1:]
 			c=0

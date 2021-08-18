@@ -1,9 +1,5 @@
 class Solution:
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
-        # return what people to use
-        # dp[i][j] : min people to has skill set of j using first i people
-        #dp[0][0] = 0
-        # n skillset, total combine: 2^n -1
         n = len(req_skills)
         target = (1 << n) - 1
         dic = {x: index for index, x in enumerate(req_skills)}

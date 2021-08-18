@@ -10,7 +10,6 @@ class Solution1:
             return False
 
         max_sum = sum(A)
-        # print(max_sum)
         sums = [0] * (max_sum + 1)
         for i in range(N):
             num = A[i]
@@ -18,8 +17,6 @@ class Solution1:
                 if sums[s - num]:
                     sums[s] |= sums[s - num] << 1
             sums[num] |= 1
-            # print(sums)
-        # print(sums)
         for l in range(1, N):
             if (max_sum * l) % N == 0:
                 s = int((max_sum * l) / N)
@@ -38,14 +35,12 @@ class Solution2:
 
         max_sum = sum(A)
         target_mean = max_sum / N
-        # print(target_mean)
         ans = False
 
         def choose(max_n, curr_n, curr_sum, next_id):
             nonlocal target_mean
             nonlocal ans
             nonlocal N
-            #print(max_n, curr_n, curr_sum, next_id)
             if ans:
                 return
             if curr_n > max_n:
@@ -77,7 +72,6 @@ class Solution(object):
         if N == 1:
             return False
 
-        # Want zero subset sum
         left = {A[0]}
         for i in range(1, N // 2):
             left = {z + A[i] for z in left} | left | {A[i]}

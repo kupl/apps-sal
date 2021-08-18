@@ -18,7 +18,7 @@ class Solution:
             for j in range(target + 1)[::-1]:
                 if dp[j] + 1 < dp[j | k]:
                     dp[j | k] = dp[j] + 1
-                    pt[j | k] = (j, i)  # (parent, current)
+                    pt[j | k] = (j, i)
         t = target
         ans = []
         while t:

@@ -1,11 +1,5 @@
 from math import ceil
 
-# All the solutions I saw were so slow, iterating the whole m -> n
-# For M, the solutions are the 37 + 63k in [m, n]
-# You can find that with chinese remainder theorem, or just by looking at the examples
-# Then just calculate B and C for each
-# No need to waste time doing useless loops
-
 
 def howmuch(m, n):
     m, n = min(m, n), max(m, n)
