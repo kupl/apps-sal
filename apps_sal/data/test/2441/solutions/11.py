@@ -78,6 +78,3 @@ while r:
     t = (t * k) % m
 
 print(s, t)
-
-
-# Made By Mostafa_Khaled

@@ -1,4 +1,3 @@
-# editorial
 
 n, s = input().split()
 n = int(n)
@@ -8,7 +7,6 @@ for start_ind in range(n):
     a_vs_t = 0
     g_vs_c = 0
     for endInd in range(start_ind, n):
-        # print(start_ind, endInd)
 
         if s[endInd] == 'A':
             a_vs_t += 1

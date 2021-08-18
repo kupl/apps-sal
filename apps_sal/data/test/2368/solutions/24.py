@@ -9,7 +9,6 @@ from copy import deepcopy
 sys.setrecursionlimit(10**9)
 INF = float('inf')
 MOD = 10**9 + 7
-#MOD = 998244353
 
 
 def si(): return input()
@@ -24,7 +23,6 @@ def lint_list(n): return [lint() for _ in range(n)]
 def lcm(a, b): return a * b // math.gcd(a, b)
 
 
-#######################################################
 N, M = lint()
 
 

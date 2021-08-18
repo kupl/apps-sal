@@ -1,4 +1,3 @@
-# cook your dish here
 r, c = list(map(int, input().split(" ")))
 
 mat = []

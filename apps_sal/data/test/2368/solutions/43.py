@@ -1,6 +1,4 @@
-# Values
 
-# 各連結成分においてa_iの総和とb_iの総和が等しければよい
 
 from collections import deque
 
@@ -23,7 +21,6 @@ while len(unreached) > 0:
     sum_a = a[node]
     sum_b = b[node]
 
-    # 頂点を幅優先探索
     while len(queue) > 0:
         for node in graph[queue.pop()]:
             if node in unreached:

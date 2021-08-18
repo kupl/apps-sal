@@ -12,9 +12,7 @@ for i in range(1, N + 1):
     X[i][0] = S[i][0] - S[i][1]
     X[i][1] = S[i][2] - S[i][3]
     X[i] = tuple(X[i])
-    #print(str(S[i]) + " " + str(X[i]))
 D = collections.Counter(X)
-# print(D)
 ans = 0
 for v in D.values():
     ans += v * (v - 1) // 2

@@ -1,4 +1,3 @@
-# This code is dedicated to Olya S.
 
 password = ''
 n, k = list(map(int, input().split()))

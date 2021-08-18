@@ -7,7 +7,7 @@ input = sys.stdin.readline
 class Graph(object):
     """docstring for Graph"""
 
-    def __init__(self, n, d):  # Number of nodes and d is True if directed
+    def __init__(self, n, d):
         self.n = n
         self.graph = [[] for i in range(n)]
         self.parent = [-1 for i in range(n)]
@@ -18,7 +18,7 @@ class Graph(object):
         if not self.directed:
             self.graph[y].append(x)
 
-    def bfs(self, root):  # NORMAL BFS
+    def bfs(self, root):
         queue = [root]
         queue = deque(queue)
         vis = [0] * self.n
@@ -31,10 +31,10 @@ class Graph(object):
                     self.parent[i] = element
                     vis[i] = 1
 
-    def dfs(self, root, vis):  # Iterative DFS
+    def dfs(self, root, vis):
         stack = [root]
         stack2 = []
-        while len(stack) != 0:  # INITIAL TRAVERSAL
+        while len(stack) != 0:
             element = stack.pop()
             if vis[element]:
                 continue
@@ -46,12 +46,12 @@ class Graph(object):
                     stack.append(i)
         return stack2[::-1], vis
 
-    def dfs2(self, root, vis):  # Iterative DFS
+    def dfs2(self, root, vis):
         stack = [root]
         stack2 = []
         cost = 10**18
         count = 0
-        while len(stack) != 0:  # INITIAL TRAVERSAL
+        while len(stack) != 0:
             element = stack.pop()
             if vis[element]:
                 continue
@@ -86,8 +86,6 @@ class Graph(object):
         vis = [0] * self.n
         a1 = 0
         a2 = 1
-        # print (stack)
-        # print (self.graph)
         count = 0
         while len(stack) != 0:
             e = stack.pop()
@@ -96,7 +94,6 @@ class Graph(object):
                 a1 += a
                 count += 1
                 a2 = (a2 * b) % mod
-            # print (vis)
         if a1 == 602483:
             print(count)
             print(vis)

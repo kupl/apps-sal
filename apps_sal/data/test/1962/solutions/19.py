@@ -13,7 +13,6 @@ def func():
     r = (n - 1) * k
     while a[r] - a[0] > l:
         r -= 1
-    # dbvar(r)
     if r < n - 1:
         return 0
 

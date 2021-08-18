@@ -1,5 +1,3 @@
-# UnionFind 参考は以下のサイト
-# https://note.nkmk.me/python-union-find/
 from collections import defaultdict
 
 

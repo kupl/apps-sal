@@ -1,4 +1,3 @@
-# your code goes here
 n = int(input())
 players = input()
 show_players = 0

@@ -1,4 +1,3 @@
-# 問題文の意味はまったくわからんが、とりあえず部分列でAとTの数およびCとGの数が同じところの数、ってこと？
 line = input().split()
 n, s = int(line[0]), list(line[1])
 ans = 0

@@ -1,6 +1,4 @@
 import math
-#import random
-#import time
 def r(): return int(input())
 def ra(): return [*list(map(int, input().split()))]
 
@@ -17,8 +15,6 @@ def s(a):
 
 n = r()
 a = ra()
-#a = [random.choice([1,2]) for i in range(n)]
-#ti = time.time()
 o = [i for i in a if i == 1]
 o = len(o)
 t = len(a) - o
@@ -39,4 +35,3 @@ else:
     a = [1] * o
 an += a
 print(*an)
-# print(time.time()-ti)

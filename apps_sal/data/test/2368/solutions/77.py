@@ -55,7 +55,6 @@ def resolve():
     N, M = LI()
     a = LI()
     b = LI()
-    # 連結成分の合計が等しければ実現可能
     uf = UnionFind(N)
     for _ in range(M):
         c, d = LI_()
@@ -65,7 +64,6 @@ def resolve():
     for i in range(N):
         p = uf.root(i)
         r[p].append(i)
-    # print(r)
     if [sum([a[j] for j in l]) == sum([b[j] for j in l]) for l in list(r.values())].count(False) == 0:
         print('Yes')
     else:

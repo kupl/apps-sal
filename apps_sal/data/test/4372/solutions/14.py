@@ -6,8 +6,6 @@ def gcd(a, b):
 
 n = int(input())
 l = [int(i) for i in input().split()]
-# x total
-# y*z taken
 m = max(l)
 d = [m - i for i in l]
 g = 0

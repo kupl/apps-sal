@@ -22,7 +22,6 @@ def NL(n):
 
 
 mod = pow(10, 9) + 7
-#import numpy as np
 sys.setrecursionlimit(2147483647)
 inf = float('inf')
 dic = defaultdict(lambda: 0)
@@ -62,7 +61,7 @@ class UnionFind():
             if self.rank[x] == self.rank[y]:
                 self.rank[y] += 1
 
-    def comp(self):  # rootまでの距離圧縮
+    def comp(self):
         for i in range(len(self.par)):
             self.root(i)
 

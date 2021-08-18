@@ -8,7 +8,6 @@ def solve(start, r, b):
     while r and b:
         i += 1
         if i % 2 == 0:
-            # if start[-1] == 'r' and r > 0 or start[-1] == 'b' and b == 0:
             if (start[-1] == 'r'):
                 start.append('r')
                 r -= 1
@@ -16,7 +15,6 @@ def solve(start, r, b):
                 start.append('b')
                 b -= 1
         else:
-            # if start[-1] == 'r' and b > 0 or start[-1] == 'b' and r == 0:
             if (start[-1] == 'r'):
                 start.append('b')
                 b -= 1

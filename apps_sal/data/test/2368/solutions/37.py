@@ -1,4 +1,3 @@
-#coding: utf-8
 
 from collections import defaultdict
 
@@ -80,6 +79,3 @@ for k in list(sa.keys()):
         flag = False
 
 print(("Yes" if flag else "No"))
-# print(sa)
-# print(sb)
-# print(uf.parents)

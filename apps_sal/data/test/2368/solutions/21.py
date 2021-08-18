@@ -91,7 +91,6 @@ class Union_Find():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
-# ================================================
 input = sys.stdin.readline
 N, M = map(int, input().split())
 A = list(map(int, input().split()))

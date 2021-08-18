@@ -1,7 +1,6 @@
 import sys
 import heapq
 
-# sys.stdin=open("data.txt")
 
 input = sys.stdin.readline
 
@@ -15,13 +14,9 @@ if a < b:
 
 if b == 0:
 
-    # 1 01 001 0001 ... is optimal, plus a long series of 0's
-
     print((n - 1) * a)
 
 else:
-
-    # pascal's triangle thing
 
     pascal = [[1] * 20005]
 
@@ -40,10 +35,6 @@ else:
 
     def getcom(a, b):
 
-        # return a+b choose b
-
-        # if larger than n, return infinite
-
         if len(pascal[a]) > b:
             return pascal[a][b]
 
@@ -55,23 +46,13 @@ else:
 
         return 100000005
 
-    # start with the null node (prefix cost 0)
-
-    # can split a node into two other nodes with added cost c+a+b
-
-    # new nodes have prefix costs c+a, c+b
-
-    # want n-1 splits in total
-
     remain = n - 1
 
     ans = 0
 
-    possible = [[a + b, 1]]    # [c,count]
+    possible = [[a + b, 1]]
 
     while 1:
-
-        # cost u, v leaves
 
         u, v = heapq.heappop(possible)
 
@@ -96,6 +77,3 @@ else:
         heapq.heappush(possible, [u + b, v])
 
     print(ans)
-
-
-# Made By Mostafa_Khaled
