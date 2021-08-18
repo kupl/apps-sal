@@ -22,7 +22,6 @@ class Trie:
             current_node = current_node.children[w]
 
         current_node.isEND = True
-        # current_node.word = words
 
     def built_failover(self):
 
@@ -51,7 +50,6 @@ class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.trie = Trie()
-        # self.q = deque()
         for word in words:
             self.trie.insert(word)
         self.trie.built_failover()
@@ -75,8 +73,3 @@ class StreamChecker:
             else:
                 self.curr = self.curr.fail
         return result
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

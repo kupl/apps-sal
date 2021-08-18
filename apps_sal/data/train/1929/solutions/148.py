@@ -38,7 +38,6 @@ class Trie:
 class StreamChecker:
 
     def __init__(self, words: List[str]):
-        # self.words = set(words)
         self.Trie = Trie()
         self.maxlen = -1
         for w in words:
@@ -54,8 +53,3 @@ class StreamChecker:
             self.searchArr.pop()
 
         return self.Trie.search(self.searchArr)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

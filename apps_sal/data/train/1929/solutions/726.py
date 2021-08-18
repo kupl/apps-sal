@@ -9,13 +9,13 @@ class StreamChecker:
                 if c not in curr:
                     curr[c] = {}
                 curr = curr[c]
-            curr['#'] = True
+            curr['
 
     def search(self):
         ind = len(self.chars) - 1
         curr = self.trie
         while curr and ind >= 0:
-            if '#' in curr:
+            if '
                 return True
             c = self.chars[ind]
             if c not in curr:
@@ -23,13 +23,8 @@ class StreamChecker:
 
             curr = curr[c]
             ind -= 1
-        return curr and '#' in curr
+        return curr and '
 
     def query(self, letter: str) -> bool:
         self.chars.append(letter)
         return self.search()
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

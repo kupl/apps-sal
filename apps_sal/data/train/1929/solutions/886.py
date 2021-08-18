@@ -1,5 +1,4 @@
 class StreamChecker:
-    # Approach: store reversed words in Trie
 
     def __init__(self, words: List[str]):
         self.stream = []
@@ -22,8 +21,3 @@ class StreamChecker:
                 return False
             node = node[char]
         return 'EOW' in node
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

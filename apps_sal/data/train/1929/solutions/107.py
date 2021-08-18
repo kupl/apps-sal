@@ -16,14 +16,6 @@ class Trie:
             p = p.children[c]
         p.isWord = True
 
-    # def search(self, word):
-    #     p = self.root
-    #     for c in word:
-    #         if c not in p.children:
-    #             return False
-    #         p = p.children[c]
-    #     return p.isWord
-
 
 class StreamChecker:
 
@@ -44,8 +36,3 @@ class StreamChecker:
             if p.isWord:
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -36,8 +36,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.word = ''.join([letter, self.word])
         return self.trie.contains(self.word)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

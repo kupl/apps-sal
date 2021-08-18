@@ -52,8 +52,3 @@ class StreamChecker:
 
         w = [c for c in self.q]
         return self._search(w[::-1])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

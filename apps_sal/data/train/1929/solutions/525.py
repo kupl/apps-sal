@@ -9,8 +9,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.s += letter
         return any(self.s.endswith(w) for w in self.di[letter])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
