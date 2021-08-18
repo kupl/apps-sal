@@ -11,9 +11,6 @@ def iin(): return int(stdin.readline())
 def lin(): return list(map(int, stdin.readline().split()))
 
 
-# range = xrange
-# input = raw_input
-
 MAX_INT = 99999999
 
 
@@ -31,7 +28,6 @@ def main():
         t -= 1
         n = iin()
         pw = p3(n) + [0, 0]
-        # print(pw)
         l = len(pw)
         ch = 1
         for i in range(l - 3, -1, -1):
@@ -56,6 +52,3 @@ def main():
 
 
 main()
-# try:
-#     main()
-# except Exception as e: print(e)

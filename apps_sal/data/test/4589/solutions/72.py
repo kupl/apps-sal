@@ -1,7 +1,6 @@
 import copy
 h, w = map(int, input().split())
 s = [list(input()) for _ in range(h)]
-# ans = [[0]*w for _ in range(h)]
 
 
 dir = [(i, j) for i in range(-1, 2) for j in range(-1, 2)]
@@ -13,8 +12,8 @@ for i in range(h):
             for y, x in dir:
                 iy, jx = i + y, j + x
                 if 0 <= iy < h and 0 <= jx < w:
-                    if s[iy][jx] == '#':
-                        cnt += 1
+                    if s[iy][jx] == '
+                    cnt += 1
             ans[i][j] = cnt
 
 

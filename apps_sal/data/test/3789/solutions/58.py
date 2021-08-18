@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 
@@ -85,27 +84,22 @@ class Dinic:
 N = INT()
 A = LIST()
 
-# 最大流を最小カットに使用、流量がコストとみなせる
 dinic = Dinic(N + 2)
 s = N
 t = N + 1
 total = 0
 for i, a in enumerate(A):
     if a < 0:
-        # 元々損失の部分はそのままコストとして扱う
         dinic.add_link(s, i, -a)
     elif a > 0:
-        # 利益については、予め利益を得られるとして、得られなくなる方の選択肢にコストとして足す
         dinic.add_link(i, t, a)
         total += a
 
 for i in range(1, N + 1):
     j = i
     while j <= N:
-        # 制約で異なる選択肢を選べない組にコストINFの辺を張る
         dinic.add_link(i - 1, j - 1, INF)
         j += i
 
 res = dinic.max_flow(s, t)
-# 最大利益 = 調整分 - 最小カット
 print((total - res))

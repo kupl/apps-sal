@@ -4,8 +4,8 @@ dx = [1, 0, -1, 0, 1, -1, -1, 1]
 dy = [0, 1, 0, -1, 1, 1, -1, -1]
 for i in range(h):
     for j in range(w):
-        if field[i][j] == "#":
-            continue
+        if field[i][j] == "
+        continue
         num = 0
         for k in range(8):
             ni = i + dy[k]
@@ -14,8 +14,8 @@ for i in range(h):
                 continue
             if nj < 0 or w <= nj:
                 continue
-            if field[ni][nj] == "#":
-                num += 1
+            if field[ni][nj] == "
+            num += 1
         field[i][j] = str(num)
 for out in field:
     print(("".join(out)))

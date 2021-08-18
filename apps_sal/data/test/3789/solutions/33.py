@@ -6,7 +6,6 @@ A = list(map(int, input().split()))
 
 gain = sum([max(a, 0) for a in A])
 
-# Flow network
 S, T = 0, N + 1
 c = [{} for i in range(N + 2)]
 for i in range(N):
@@ -19,13 +18,10 @@ for i in range(N):
     for j in range(2 * ix, N + 1, ix):
         c[ix][j] = 10e15
 
-# Residual network
 r = copy.deepcopy(c)
 
-# Edmonds-Karp algorithm
 max_flow = 0
 while True:
-    # Find path to T
     q, s, p = collections.deque(), {S}, None
     q.append((S,))
     findPath = False
@@ -44,7 +40,6 @@ while True:
     if not findPath:
         break
 
-    # Minimum flow
     min_flow = min([r[p[i]][p[i + 1]] for i in range(len(p) - 1)])
     max_flow += min_flow
     for i in range(len(p) - 1):

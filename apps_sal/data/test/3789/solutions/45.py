@@ -20,7 +20,7 @@ def main():
     N = read()
     A = reads()
     offset = sum(a for a in A if a > 0)
-    di = dinic(N + 2)  # 0: source, N+1: target
+    di = dinic(N + 2)
     for i in range(1, N + 1):
         a = A[i - 1]
         if a <= 0:

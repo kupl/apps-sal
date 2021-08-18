@@ -19,11 +19,8 @@ for i in range(1, n // 2 + 1):
         G.add_edge(i, j)
 
 try:
-    # mincut = nx.minimum_cut_value(G, source, sink)
     R = dinitz(G, source, sink)
-    # print(R, R.graph)
     res = sum(a for a in A if a > 0)
-    # print(res - mincut)
     print((res - R.graph["flow_value"]))
 
 except nx.NetworkXError:

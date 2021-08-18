@@ -10,8 +10,8 @@ for i in range(h):
                         continue
                     else:
                         if 0 <= i + y and 0 <= j + x and i + y < h and j + x < w:
-                            if s[i + y][j + x] == "#":
-                                c += 1
+                            if s[i + y][j + x] == "
+                            c += 1
             s[i][j] = str(c)
 for a in range(h):
     print("".join(s[a]))

@@ -5,7 +5,7 @@ input = sys.stdin.readline
 
 def main():
     ans = []
-    b = "#"
+    b = "
     h, w = map(int, input().split())
     s = [input().rstrip('\n') for _ in range(h)]
     for y in range(h):
@@ -37,7 +37,7 @@ def main():
     for y in range(h):
         for x in range(w):
             if ans[y][x] == 0 and s[y][x] == b:
-                ans[y][x] = "#"
+                ans[y][x] = "
             else:
                 ans[y][x] = str(ans[y][x])
         print(''.join(ans[y]))

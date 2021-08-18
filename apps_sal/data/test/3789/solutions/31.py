@@ -7,7 +7,7 @@ def edmonds_karp(s, t, C):
     import copy
     import collections
 
-    r = copy.deepcopy(c)  # Residual network
+    r = copy.deepcopy(c)
     maxf = 0
 
     while True:
@@ -44,7 +44,6 @@ A = list(map(int, input().split()))
 
 gain = sum([max(a, 0) for a in A])
 
-# Flow network
 S, T = 0, N + 1
 c = [{} for i in range(N + 2)]
 for i in range(N):

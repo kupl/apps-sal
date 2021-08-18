@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
 
 from sys import stdin
-from fractions import gcd  # math.gcd is introduced in python 3.5
+from fractions import gcd
 from functools import reduce
 
 

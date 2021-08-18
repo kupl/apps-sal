@@ -16,14 +16,12 @@ arr = []
 ret_arr = [[0] * w for i in range(h)]
 for i in range(h):
     x = list([(False if x == "." else True) for x in input()])
-    # x = list(map(lambda x: x, input()))
     arr.append(x)
 arr = np.array(arr)
-# print(arr)
 for i in range(h):
     for j in range(w):
         if arr[i, j] == True:
-            ret_arr[i][j] = "#"
+            ret_arr[i][j] = "
         else:
             ret_arr[i][j] = get_num_bomb(arr, i, j)
 for lis in ret_arr:

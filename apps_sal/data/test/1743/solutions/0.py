@@ -7,7 +7,7 @@ fed_left = {0: a[0]}
 not_fed_left = {0: b[0]}
 
 for i in range(1, n):
-    fed_left[i] = max(fed_left[i - 1] + b[i], not_fed_left[i - 1] + a[i])  # max(fed left, fed right)
-    not_fed_left[i] = max(fed_left[i - 1] + c[i], not_fed_left[i - 1] + b[i])  # max(fed left and right, fed right)
+    fed_left[i] = max(fed_left[i - 1] + b[i], not_fed_left[i - 1] + a[i])
+    not_fed_left[i] = max(fed_left[i - 1] + c[i], not_fed_left[i - 1] + b[i])
 
 print(fed_left[n - 1])

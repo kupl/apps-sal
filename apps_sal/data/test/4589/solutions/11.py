@@ -10,12 +10,12 @@ for i in range(H):
                 a = i + y[k]
                 b = j + x[k]
                 if 0 <= a < H and 0 <= b < W:
-                    if S[a][b] == "#":
+                    if S[a][b] == "
                         ans[i][j] += 1
 for i in range(H):
     for j in range(W):
-        if S[i][j] == "#":
-            print("#", end="")
+        if S[i][j] == "
+            print("
         else:
             print(ans[i][j], end="")
     print()

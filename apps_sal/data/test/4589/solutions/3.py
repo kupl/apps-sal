@@ -12,7 +12,7 @@ def bomb_cnt(i, j):
     cnt = 0
     for k in range(min_h, max_h):
         for g in range(min_w, max_w):
-            if (S[k][g] == "#"):
+            if (S[k][g] == "
                 cnt += 1
 
     return str(cnt)
@@ -20,10 +20,10 @@ def bomb_cnt(i, j):
 
 for i in range(H):
     for j in range(W):
-        if S[i][j] == "#":
-            M[i][j] = "#"
+        if S[i][j] == "
+            M[i][j]= "
         else:
-            M[i][j] = bomb_cnt(i, j)
+            M[i][j]=bomb_cnt(i, j)
 
 
 for i in range(H):

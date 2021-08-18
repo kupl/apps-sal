@@ -42,7 +42,6 @@ ans = 0
 while True:
     visit = [-1] * (N + 2)
     bfs(0)
-    # print(table,visit)
     if visit[N + 1] == -1:
         break
     while True:
@@ -50,6 +49,5 @@ while True:
         if df == 0:
             break
         ans += df
-        # print(ans)
 num = sum([p for p in P if p > 0])
 print(num - ans)
