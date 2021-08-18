@@ -23,8 +23,8 @@ def BIT_sum(tree, x):
     return s
 
 
-tree = [0] * (M + 1)  # BIT で管理。左にあるLの個数 - (R+1)の個数 → いくつの[L,R]に入っているか
-long = N  # 長すぎて自動回収できる
+tree = [0] * (M + 1)
+long = N
 answer = [0] * (M + 1)
 
 for m in range(1, M + 1):

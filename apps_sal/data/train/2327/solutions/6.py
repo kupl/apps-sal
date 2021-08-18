@@ -43,17 +43,17 @@ class Bit:
         (Cation) We must assume that A_i>=0
         """
         sum_ = 0
-        pos = -1    # 1-indexed の時は pos = 0
+        pos = -1
         if not equal:
             for i in range(self.depth, -1, -1):
                 k = pos + (1 << i)
-                if k < self.n and sum_ + self.tree[k] < x:  # 1-indexed の時は k <= self.n
+                if k < self.n and sum_ + self.tree[k] < x:
                     sum_ += self.tree[k]
                     pos += 1 << i
         if equal:
             for i in range(self.depth, -1, -1):
                 k = pos + (1 << i)
-                if k < self.n and sum_ + self.tree[k] <= x:  # 1-indexed の時は k <= self.n
+                if k < self.n and sum_ + self.tree[k] <= x:
                     sum_ += self.tree[k]
                     pos += 1 << i
         return pos, sum_
@@ -105,7 +105,6 @@ class BitImos:
         return text1
 
 
-#############################################################
 input = sys.stdin.readline
 
 N, M = map(int, input().split())

@@ -1,5 +1,4 @@
 def greek_comparator(lhs, rhs):
-    # the tuple greek_alphabet is defined in the nonlocal namespace
     greek_alphabet = (
         'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta',
         'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu',

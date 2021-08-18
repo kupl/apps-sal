@@ -4,7 +4,7 @@ class Solution:
         def helper(hIdx, prevColor, groups):
             if hIdx == m:
                 return 0 if groups == target else float('inf')
-            if houses[hIdx]:  # painted
+            if houses[hIdx]:
                 return helper(hIdx + 1, houses[hIdx], groups + int(houses[hIdx] != prevColor))
             total = float('inf')
             for c in range(1, n + 1):

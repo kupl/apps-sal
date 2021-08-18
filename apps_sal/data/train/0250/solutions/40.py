@@ -7,7 +7,6 @@ class Solution:
         workers = [(r, q, w) for r, q, w in zip(ratios, quality, wage)]
         workers = sorted(workers)
 
-        #heap = []
         pQueue = PriorityQueue()
         min_quality_sum = 0.0
         cost = float('inf')

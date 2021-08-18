@@ -7,19 +7,19 @@ class BIT():
         self.n = number
         self.list = [0] * (number + 1)
 
-    def add(self, i, x):  # ith added x  1indexed
+    def add(self, i, x):
         while i <= self.n:
             self.list[i] += x
             i += i & -i
 
-    def search(self, i):  # 1-i sum
+    def search(self, i):
         s = 0
         while i > 0:
             s += self.list[i]
             i -= i & -i
         return s
 
-    def suma(self, i, j):  # i,i+1,..j sum
+    def suma(self, i, j):
         return self.search(j) - self.search(i - 1)
 
 

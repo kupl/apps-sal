@@ -1,6 +1,5 @@
 class Solution:
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
-        # dp[color][target]
         dp = {(0, 0): 0}
         for i in range(len(houses)):
             tmp = {}

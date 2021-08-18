@@ -1,8 +1,6 @@
 class Solution:
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
         combine = sorted([(wage[i] / quality[i], quality[i]) for i in range(len(quality))], key=lambda x: (-x[0], x[1]))
-        # qual = [e[1] for e in combine]
-        # rates = [e[0] for e in combine]
         tc = float('inf')
         n = len(combine)
         q = []

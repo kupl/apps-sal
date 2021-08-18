@@ -38,7 +38,6 @@ class Solution:
         memo = {}
 
         def dp(i, pre_col, cur_t):
-            # print(i, cur_t)
             res = float('inf')
             if i == len(houses):
                 if cur_t == 0:
@@ -58,13 +57,9 @@ class Solution:
             else:
                 for color in range(1, n + 1):
                     if i > 0 and color == pre_col:
-                        # houses[i] = color
                         res = min(res, cost[i][color - 1] + dp(i + 1, pre_col, cur_t))
-                        # houses[i] = 0
                     else:
-                        # houses[i] = color
                         res = min(res, cost[i][color - 1] + dp(i + 1, color, cur_t - 1))
-                        # houses[i] = 0
             memo[(i, pre_col, cur_t)] = res
             return res
         ans = dp(0, houses[0], target)
