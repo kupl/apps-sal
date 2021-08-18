@@ -17,9 +17,6 @@ for i in range(2, n - 1):
     i_bc = bisect.bisect_left(cum, bc_mid)
     i_de = bisect.bisect_left(cum, de_mid)
 
-    # print(i_bc)
-    # print(i_de)
-
     for cum_b in (cum[i_bc - 1], cum[i_bc]):
         for cum_d in (cum[i_de - 1], cum[i_de]):
             b = cum_b

@@ -20,5 +20,4 @@ for i in range(1, N - 2):
     v = (S[j], s - S[j], S[k] - s, t - S[k])
     ans = min(ans, max(v) - min(v))
 
-    #print(i,j,k, v)
 print(ans)

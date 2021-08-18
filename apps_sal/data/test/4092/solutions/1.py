@@ -13,7 +13,5 @@ for i in range(n):
     else:
         pref.append(now)
         prefset.add(now)
-    # print(pref)
-    # print(prefset)
 
 print(ans)

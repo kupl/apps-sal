@@ -10,7 +10,6 @@ for i in range(1, n):
 preb = [blist[0]]
 for i in range(1, m):
     preb.append(preb[-1] + blist[i])
-# print(prea,preb)
 if prea[-1] != preb[-1]:
     print(-1)
 

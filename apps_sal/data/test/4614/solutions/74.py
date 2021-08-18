@@ -19,7 +19,6 @@ def main():
     def printni(x): print(('\n'.join(list(map(str, x)))))
     inf = 10**17
     mod = 10**9 + 7
-# main code here!
     a, b, c = MI()
     if a == b:
         print(c)

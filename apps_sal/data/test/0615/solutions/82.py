@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 from itertools import accumulate as ac
 N = int(input())
 A = list(ac(list(map(int, input().split()))))

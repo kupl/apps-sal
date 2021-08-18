@@ -1,13 +1,9 @@
-# coding: utf-8
-# Your code here!
 
 from itertools import accumulate
 import sys
 sys.setrecursionlimit(10**6)
 readline = sys.stdin.readline
 
-#n,x = [int(i) for i in readline().split()]
-#h,w = [int(i) for i in readline().split()]
 n = int(input())
 a = [int(i) for i in readline().split()]
 

@@ -15,7 +15,6 @@ for middle in range(2, N - 1):
     rightS = S[middle] - leftS
     diff = abs(leftS - rightS)
 
-    # 左側の更新
     for i in range(leftMiddle, middle):
         leftS += A[i]
         rightS -= A[i]
@@ -29,7 +28,6 @@ for middle in range(2, N - 1):
     rightS = S[-1] - S[rightMiddle]
     diff = abs(leftS - rightS)
 
-    # 右側の更新
     for i in range(rightMiddle, N):
         leftS += A[i]
         rightS -= A[i]

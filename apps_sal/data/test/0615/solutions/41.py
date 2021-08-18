@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 from itertools import accumulate, islice
 from bisect import bisect_left

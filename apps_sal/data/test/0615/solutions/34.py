@@ -1,4 +1,3 @@
-# D - Equal Cut
 import bisect
 
 N = int(input())

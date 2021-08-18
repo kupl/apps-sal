@@ -4,9 +4,6 @@ a = list(map(int, input().split()))
 
 
 s = list(accumulate(a))
-#s = [a[0]]
-# for i in range(1, n):
-#    s.append(a[i] + s[i-1])
 
 l = 0
 r = 2

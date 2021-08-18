@@ -4,7 +4,6 @@ A = list(map(int, input().split()))
 
 X = list(accumulate(A))
 
-# A[:m]をできるだけ均等に、A[:l + 1], A[l + 1:]に分けるようなlを探す
 l = 0
 L = [-1] * N
 for m in range(2, N - 1):
@@ -13,7 +12,6 @@ for m in range(2, N - 1):
         l += 1
     L[m] = l
 
-# A[m:]をできるだけ均等に、A[:r + 1], A[r + 1:]に分けるようなrを探す
 r = N - 1
 r_sum = 0
 R = [-1] * N

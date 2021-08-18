@@ -1,5 +1,3 @@
-# A - One out of Three
-# https://atcoder.jp/contests/abc075/tasks/abc075_a
 
 A, B, C = list(map(int, input().split()))
 

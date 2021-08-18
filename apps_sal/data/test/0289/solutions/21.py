@@ -1,4 +1,3 @@
-#l=[int(i)for i in input().split()]
 s = input()
 i = 0
 a = s.find("VK")
