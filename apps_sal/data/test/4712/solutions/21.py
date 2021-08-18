@@ -1,6 +1,6 @@
 h, w = map(int, input().split())
 a = [[]]
-print("#" * (w + 2))
+print("
 for _ in range(h):
-    print("#", input().strip(), "#", sep="")
-print("#" * (w + 2))
+    print("
+print("

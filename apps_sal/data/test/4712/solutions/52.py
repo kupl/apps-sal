@@ -1,9 +1,9 @@
 H, W = map(int, input().split())
 
 
-frame = [['#' for _ in range(W + 2)] for _ in range(H + 2)]
+frame = [['
 
-mat = [['#' for _ in range(W)] for _ in range(H)]
+mat = [['
 for i in range(H):
     line = input()
     for j in range(W):

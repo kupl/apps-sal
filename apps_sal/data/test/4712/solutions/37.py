@@ -1,11 +1,11 @@
 H, W = map(int, input().split())
-ls = [["#" for _ in range(W + 2)]]
+ls = [["
 
 for _ in range(H):
-    A = ["#"] + list(input()) + ["#"]
+    A = ["
     ls.append(A)
 
-ls.append(["#" for _ in range(W + 2)])
+ls.append(["
 
 for i in range(H + 2):
     print("".join(ls[i]))

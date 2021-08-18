@@ -2,10 +2,10 @@ h, w = map(int, input().split())
 al = []
 for _ in range(h):
     row = input()
-    row = '#' + row + '#'
+    row = '
     al.append(row)
 
-top = '#' * (w + 2)
+top = '
 print(top)
 for a in al:
     print(a)

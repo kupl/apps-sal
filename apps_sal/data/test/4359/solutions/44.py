@@ -1,4 +1,3 @@
-# 38
 menu = []
 jissai_menu = []
 for i in range(5):

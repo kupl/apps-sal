@@ -12,4 +12,3 @@ for i in range(5):
     if i != min_index and cooktime[i] % 10 != 0:
         sum += 10 - cooktime[i] % 10
 print((str(sum)))
-# print("min_index:"+str(min_index))

@@ -5,10 +5,10 @@ def resolve():
     H, W = [int(item) for item in input().split()]
     grid = [input() for _ in range(H)]
 
-    print(('#' * (W + 2)))
+    print(('
     for line in grid:
-        print(('#' + line + '#'))
-    print(('#' * (W + 2)))
+        print(('
+    print(('
 
 
 def __starting_point():

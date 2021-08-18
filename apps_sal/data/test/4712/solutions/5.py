@@ -1,5 +1,5 @@
 h, w = map(int, input().split())
-print('#' * -~-~w)
+print('
 for _ in [0] * h:
-    print('#' + input() + '#')
-print('#' * -~-~w)
+    print('
+print('

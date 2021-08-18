@@ -1,10 +1,10 @@
 h, w = map(int, input().split())
 
-s = "#" * (w + 2)
+s = "
 
 print(s)
 for i in range(h):
     t = input()
-    print("#", end="")
-    print(t, end="#\n")
+    print("
+    print(t, end="
 print(s)

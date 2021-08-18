@@ -6,11 +6,11 @@ W = int(HW[1])
 lst = []
 
 for i in range(H):
-    lst.append('#' + input() + '#')
+    lst.append('
 
-print('#' * (W + 2))
+print('
 
 for s in lst:
     print(s)
 
-print('#' * (W + 2))
+print('
