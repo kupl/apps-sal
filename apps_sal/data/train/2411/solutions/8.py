@@ -10,7 +10,7 @@ class Solution:
              return max(nums)
          
          maxes = [nums[0], nums[1], nums[2]]
-         maxes.sort() # ascending
+         maxes.sort() 
          
          for i in range(3, len(nums)):
              pos = self.findPos(nums[i], maxes)
@@ -38,7 +38,7 @@ class Solution:
             if self.isNew(i, maxes):
                 if len(maxes) < 3:
                     maxes.append(i)
-                    maxes.sort()  # ascending
+                    maxes.sort()
                 else:
                     pos = self.findPos(i, maxes)
                     if pos != None:

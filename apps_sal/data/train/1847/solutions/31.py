@@ -12,9 +12,3 @@ class SubrectangleQueries:
             if a <= row <= c and b <= col <= d:
                 return v
         return self.orig[row][col]
-
-
-# Your SubrectangleQueries object will be instantiated and called as such:
-# obj = SubrectangleQueries(rectangle)
-# obj.updateSubrectangle(row1,col1,row2,col2,newValue)
-# param_2 = obj.getValue(row,col)

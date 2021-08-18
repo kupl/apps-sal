@@ -4,7 +4,6 @@ class Solution:
             x, y = point
             return x ** 2 + y ** 2
 
-        # negative values to make a min-heap a max-heap
         distances = [(distance(p), p) for p in points]
         heapq.heapify(distances)
 

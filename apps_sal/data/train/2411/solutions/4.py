@@ -18,8 +18,6 @@ class Solution:
             else:
                 if max3 < carry:
                     max3, carry = carry, max3
-                # else:
-                #     continue
 
             if max2 == float("inf"):
                 max2 = carry
@@ -27,8 +25,6 @@ class Solution:
             else:
                 if max2 < carry:
                     max2, carry = carry, max2
-                # else:
-                #     continue
 
             if max1 == float("inf"):
                 max1 = carry

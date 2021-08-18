@@ -13,9 +13,3 @@ class SubrectangleQueries:
         if row > self.height - 1 or col > self.width - 1:
             return None
         return self.rect[row][col]
-
-
-# Your SubrectangleQueries object will be instantiated and called as such:
-# obj = SubrectangleQueries(rectangle)
-# obj.updateSubrectangle(row1,col1,row2,col2,newValue)
-# param_2 = obj.getValue(row,col)

@@ -1,4 +1,3 @@
-# boo for this kata
 def flatten_me(a):
     result = []
     for i in a:

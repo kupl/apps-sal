@@ -1,4 +1,3 @@
-# Why do we fall ? So we can learn to pick ourselves up.
 
 t = int(input())
 for _ in range(0, t):

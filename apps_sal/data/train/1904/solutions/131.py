@@ -4,8 +4,6 @@ class Solution:
         if length <= K:
             return points
 
-        # key: distance to origin
-        # value: list index in points
         distances: Dict[int, List[int]] = defaultdict(list)
         for i, li in enumerate(points):
             distance = (li[0] ** 2 + li[1] ** 2) ** 0.5
