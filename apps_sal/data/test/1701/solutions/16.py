@@ -9,5 +9,5 @@ for i in range(n):
 
 for i in range(m):
     cmd, ip = input().strip().split(" ")
-    print(cmd, ip, "#", end="")
+    print(cmd, ip, "
     print(s[ip[:-1]])

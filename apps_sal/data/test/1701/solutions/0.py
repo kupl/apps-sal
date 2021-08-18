@@ -8,4 +8,4 @@ for i in range(n):
 for i in range(m):
     x, y = input().split()
 
-    print(x, y, "#" + a[y.replace(';', '')])
+    print(x, y, "

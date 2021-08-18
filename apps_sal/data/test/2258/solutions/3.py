@@ -25,31 +25,13 @@ def check(pp):
 def solve():
     n = I()
     a = IL()
-    # inv = findinv(l)
-    # if len(inv) == 0 : print(0);return
-    # inv.sort()
-    # # print(inv)
-    # ll = l.copy()
-    # for a,_,b in inv:
-    # 	tmp = ll[a]
-    # 	ll[a]= ll[b]
-    # 	ll[b] = tmp
-    # if check(ll) :
-    # 	print(len(inv))
-    # 	for a,_,b in inv :
-    # 		print(a+1,b+1)
-    # 	# print()
-    # else : print(-1)
     b = a.copy()
 
-    # for(int i=0;i<n;i++)b[i]=a[i];
     b.sort()
-    # sort(b.begin(), b.end());
     inv = []
     for i in range(n):
         inv.append([])
     total = 0
-    # v<v<pair<int,int > >>inv(n);
     for i in range(n):
         for j in range(i + 1, n):
             if(a[j] < a[i]):
@@ -60,7 +42,6 @@ def solve():
         inv[i].sort()
     for i in range(n):
         for j in range(len(inv[i])):
-            # print(inv[i][j])
             inv[i][j][0] *= -1
             inv[i][j][1] *= -1
     for i in range(n):
@@ -69,7 +50,6 @@ def solve():
             a[inv[i][j][1]] = a[i]
             a[i] = tmp
 
-    # }
     flag = 1
     for i in range(n):
         if(b[i] != a[i]):

@@ -6,4 +6,4 @@ for _ in range(n):
 for _ in range(m):
     s = input().strip().split()
     s[1] = s[1][:-1]
-    print(s[0], s[1] + ";", "#" + ips[s[1]])
+    print(s[0], s[1] + ";", "

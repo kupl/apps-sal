@@ -14,7 +14,7 @@ def main():
     for i in range(m):
         s = input()
         ip = s.split()[1][:-1]
-        print('%s #%s' % (s, d[ip]))
+        print('% s
 
 
 main()

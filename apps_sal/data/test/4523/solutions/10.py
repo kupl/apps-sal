@@ -4,9 +4,7 @@ T = int(input())
 
 for i in range(T):
     n = int(input())
-    #n,k = map(int, input().split())
     a = list(map(int, input().split()))
-    #a = input()
     d = False
 
     a.sort()

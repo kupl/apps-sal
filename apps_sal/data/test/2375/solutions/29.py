@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 
@@ -41,12 +40,6 @@ def rec(x, y):
             res = 1
     memo[x][y] = res
     return res
-
-# for i in range(X+1):
-#     for j in range(Y+1):
-#         rec(i, j)
-# for i in range(X+1):
-#     print(memo[i][:Y+1])
 
 
 if abs(X - Y) >= 2:

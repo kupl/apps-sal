@@ -6,4 +6,4 @@ for i in range(n):
 for i in range(m):
     a = input()
     c, ip = a.split()
-    print(a + ' #' + g[ip[:-1]])
+    print(a + '

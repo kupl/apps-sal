@@ -3,9 +3,7 @@ a = list(map(int, input().split()))
 
 if n >= 2:
 
-    # xがaiをとったときにyが最適に行動した時のスコア
     dp_x = [abs(a[-1] - a[i]) for i in range(n)]
-    # yがaiをとったときにxが最適に行動した時のスコア
     dp_y = [abs(a[-1] - a[i]) for i in range(n)]
 
     for i in reversed(list(range(n - 1))):

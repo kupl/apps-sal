@@ -5,4 +5,4 @@ for i in range(n):
     ip[b] = a
 for i in range(m):
     a, b = input().split()
-    print(a, b + ' #' + ip[b[:-1]])
+    print(a, b + '

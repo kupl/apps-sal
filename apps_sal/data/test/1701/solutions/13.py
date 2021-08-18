@@ -8,4 +8,4 @@ for _ in range(m):
     ip = s.split()[-1]
     if ip[-1] == ';':
         ip = ip[:-1]
-    print(s, "#" + d[ip])
+    print(s, "

@@ -8,8 +8,8 @@ def main(n):
     mx = -99999999999
     a.sort()
     b.sort()
-    a2 = 0  # last b 2p
-    b2 = 0  # last a 2p
+    a2 = 0
+    b2 = 0
     for d in sorted(list(set([0] + a + b))):
         for a2 in range(a2, n + 1):
             if a2 == n or a[a2] > d:
@@ -26,12 +26,7 @@ def main(n):
 
 
 def main_input():
-    #n = int(input())
     n = input()
-    #a = [int(i) for i in input().split()]
-    #a = map(int, input().split())
-    #m = int(input())
-    #b = [int(i) for i in input().split()]
     main(n)
 
 

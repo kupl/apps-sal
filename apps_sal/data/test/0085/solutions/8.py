@@ -40,33 +40,21 @@ while True:
                     if not tt[0] * tt[1] in tested_total1:
                         q1.append(tt)
                         tested_total1.append(tt[0] * tt[1])
-                        #an = equal(tt[0]*tt[1], q2)
-                        # if ans:
-                        #    print(str(an[2] + tt[2]) + "\n" + str(tt[0]) + " " + str(tt[1]) + "\n" + str(an[0]) + " " + str(an[1]))
                 if q1[0][0] % 3 == 0:
                     tt = [q1[0][0] // 3 * 2, q1[0][1], q1[0][2] + 1]
                     if not tt[0] * tt[1] in tested_total1:
                         q1.append(tt)
                         tested_total1.append(tt[0] * tt[1])
-                        #an = equal(tt[0]*tt[1], q2)
-                        # if ans:
-                        #    print(str(an[2] + tt[2]) + "\n" + str(tt[0]) + " " + str(tt[1]) + "\n" + str(an[0]) + " " + str(an[1]))
                 if not(q1[0][1] & 1):
                     tt = [q1[0][0], q1[0][1] // 2, q1[0][2] + 1]
                     if not tt[0] * tt[1] in tested_total1:
                         q1.append(tt)
                         tested_total1.append(tt[0] * tt[1])
-                        #an = equal(tt[0]*tt[1], q2)
-                        # if ans:
-                        #    print(str(an[2] + tt[2]) + "\n" + str(tt[0]) + " " + str(tt[1]) + "\n" + str(an[0]) + " " + str(an[1]))
                 if q1[0][1] % 3 == 0:
                     tt = [q1[0][0], q1[0][1] // 3 * 2, q1[0][2] + 1]
                     if not tt[0] * tt[1] in tested_total1:
                         q1.append(tt)
                         tested_total1.append(tt[0] * tt[1])
-                        #an = equal(tt[0]*tt[1], q2)
-                        # if ans:
-                        #    print(str(an[2] + tt[2]) + "\n" + str(tt[0]) + " " + str(tt[1]) + "\n" + str(an[0]) + " " + str(an[1]))
                 q1.pop(0)
                 q1.sort(key=lambda x: x[0] * x[1], reverse=True)
 
@@ -81,33 +69,21 @@ while True:
                     if not tt[0] * tt[1] in tested_total2:
                         q2.append(tt)
                         tested_total2.append(tt[0] * tt[1])
-                        #an = equal(tt[0]*tt[1], q1)
-                        # if ans:
-                        #    print(str(an[2] + tt[2]) + "\n" + str(tt[0]) + " " + str(tt[1]) + "\n" + str(an[0]) + " " + str(an[1]))
                 if q2[0][0] % 3 == 0:
                     tt = [q2[0][0] // 3 * 2, q2[0][1], q2[0][2] + 1]
                     if not tt[0] * tt[1] in tested_total2:
                         q2.append(tt)
                         tested_total2.append(tt[0] * tt[1])
-                        #an = equal(tt[0]*tt[1], q1)
-                        # if ans:
-                        #    print(str(an[2] + tt[2]) + "\n" + str(tt[0]) + " " + str(tt[1]) + "\n" + str(an[0]) + " " + str(an[1]))
                 if not(q2[0][1] & 1):
                     tt = [q2[0][0], q2[0][1] // 2, q2[0][2] + 1]
                     if not tt[0] * tt[1] in tested_total2:
                         q2.append(tt)
                         tested_total2.append(tt[0] * tt[1])
-                        #an = equal(tt[0]*tt[1], q1)
-                        # if ans:
-                        #    print(str(an[2] + tt[2]) + "\n" + str(tt[0]) + " " + str(tt[1]) + "\n" + str(an[0]) + " " + str(an[1]))
                 if q2[0][1] % 3 == 0:
                     tt = [q2[0][0], q2[0][1] // 3 * 2, q2[0][2] + 1]
                     if not tt[0] * tt[1] in tested_total2:
                         q2.append(tt)
                         tested_total2.append(tt[0] * tt[1])
-                        #an = equal(tt[0]*tt[1], q1)
-                        # if ans:
-                        #    print(str(an[2] + tt[2]) + "\n" + str(tt[0]) + " " + str(tt[1]) + "\n" + str(an[0]) + " " + str(an[1]))
                 q2.pop(0)
                 q2.sort(key=lambda x: x[0] * x[1], reverse=True)
 

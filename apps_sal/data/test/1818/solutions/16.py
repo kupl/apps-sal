@@ -10,6 +10,3 @@ for i in range(max(x) + 1):
 
 
 print(int(s / 2))
-
-
-# Made By Mostafa_Khaled
