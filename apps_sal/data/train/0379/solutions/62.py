@@ -5,8 +5,6 @@ class Solution:
         s1 = 0
         s2 = 0
         total = 0
-        # [2 4 5 8 10]
-        # [4 6 8 9]
         l1 = len(nums1)
         l2 = len(nums2)
         while s1 < l1 and s2 < l2:

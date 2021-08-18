@@ -13,14 +13,12 @@ approach 2: dp time O(n) space(n)
 
 class Solution:
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
-      # dictonary 1 {val : index}
         dict1 = {}
         dict2 = {}
 
         for i in range(len(nums1)):
             dict1[nums1[i]] = i
 
-        # dictonary 2 {val : index}
         for i in range(len(nums2)):
             dict2[nums2[i]] = i
 

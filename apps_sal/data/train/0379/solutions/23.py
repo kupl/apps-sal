@@ -24,12 +24,3 @@ class Solution:
         ans += max(sum(nums1[:cross[0][0]]), sum(nums2[:cross[0][1]]))
         ans %= M
         return ans % M
-#         memo = {}
-#         def fun(cl,f):
-#             if (cl,f) in memo:
-#                 return memo[(cl,f)]
-#             if cl == l-1:
-#                 if f == 0:
-#                     return sum(nums1[cross[cl][0]:])
-#                 else:
-#                     return sum(nums2[cross[cl][1]:])

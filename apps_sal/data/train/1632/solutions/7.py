@@ -32,7 +32,6 @@ def countevenone(left, right, span, maxbincount):
 
 
 def countOnes(left, right):
-    # Your code here!
     span = right - left + 1
     maxbincount = len(bin(right).replace("0b", ''))
     return countevenone(left, right, span, maxbincount)

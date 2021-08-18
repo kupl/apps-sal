@@ -9,14 +9,11 @@ if mj <= cutoff then output mjth combo stored
 if mj > cutoff  then output = (max, (mj-cutoff-1)%(len-1)+1)
 """
 
-m = max(nums)  # max element
-# print(nums)
-# print(m)
+m = max(nums)
 ab = []
 while nums[0] < m:
     ab.append([nums[0], nums[1]])
     nums.append(nums.pop(1)) if nums[0] > nums[1] else nums.append(nums.pop(0))
-# print(ab)
 
 for i in range(q):
     mj = int(input())

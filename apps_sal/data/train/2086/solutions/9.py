@@ -3,11 +3,8 @@ import sys
 
 if getpass.getuser() != 'frohenk':
     filename = 'half'
-    # sys.stdin = open('input.txt')
-    # sys.stdout = open('output.txt', 'w')
 else:
     sys.stdin = open('input.txt')
-    # sys.stdin.close()
 
 import math
 import string
@@ -42,7 +39,6 @@ for i in range(n * 3):
     else:
         ar.appendleft(b)
         ar.append(a)
-# print(ans)
 for i in range(q):
     m = ria()[0]
     m -= 1

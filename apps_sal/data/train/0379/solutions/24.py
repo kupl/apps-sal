@@ -42,7 +42,6 @@ class Solution:
                 ps1 = pe1
                 ps2 = pe2
 
-            # print(i, ps1, pe1, ps2, pe2, sumT)
             sumMax += sumT
             sumMax = sumMax % maxVal
 
@@ -81,7 +80,6 @@ class Solution:
                     ps2 = pe2
                 else:
                     sumT = 0
-                # print(i, ps1, pe1, ps2, pe2, sumT)
                 sumMax += sumT
                 sumMax = sumMax % maxVal
                 idx2[v2] = i
@@ -89,7 +87,6 @@ class Solution:
                 if v2 > nums1[-1]:
                     break
 
-        # print(ps1, ps2)
         if(ps1 < nLen1):
             sum1 = sum(nums1[ps1:])
         else:

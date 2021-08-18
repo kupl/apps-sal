@@ -1,4 +1,3 @@
-# 1537. Get the Maximum Score
 
 from math import inf
 

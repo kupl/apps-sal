@@ -6,7 +6,6 @@ def main():
     import sys
     input = sys.stdin.readline
 
-    # O(N)
     def largest_rectangle_histogram(A):
         A.append(0)
         N = len(A)
@@ -15,7 +14,6 @@ def main():
         left = [0] * N
         for i in range(N):
             while A[st[-1]] >= A[i]:
-                # ret = max(ret, A[st[-1]] * (i - left[st[-1]] - 1))
                 ret = max(ret, (A[st[-1]] + 1) * (i - left[st[-1]]))
                 st.pop()
                 if not st:
@@ -27,7 +25,6 @@ def main():
             st.append(i)
         return ret
 
-    # O(H * W)
     def largest_rectangle_grid(grid, ok=1, ng=0):
         H = len(grid)
         W = len(grid[0])
@@ -50,14 +47,14 @@ def main():
     for h in range(H - 1):
         for w in range(W - 1):
             cnt = 0
-            if grid[h][w] == "#":
-                cnt += 1
-            if grid[h + 1][w] == "#":
-                cnt += 1
-            if grid[h][w + 1] == "#":
-                cnt += 1
-            if grid[h + 1][w + 1] == "#":
-                cnt += 1
+            if grid[h][w] == "
+            cnt += 1
+            if grid[h + 1][w] == "
+            cnt += 1
+            if grid[h][w + 1] == "
+            cnt += 1
+            if grid[h + 1][w + 1] == "
+            cnt += 1
             if cnt % 2 == 0:
                 corner[h][w] = 1
     print((max(largest_rectangle_grid(corner), H, W)))

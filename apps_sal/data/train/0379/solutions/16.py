@@ -36,9 +36,7 @@ class Solution:
             self.d_nums2[nums2[i]] = i
         self.dp = [[-1] * (len(nums1) + 1)]
         self.dp.append([-1] * (len(nums2) + 1))
-        # print(self.dp)
         self.f(nums1, nums2, 1, 0)
         self.f(nums1, nums2, 0, 0)
 
-        # print(self.dp)
         return max(self.dp[0][0], self.dp[1][0]) % mod

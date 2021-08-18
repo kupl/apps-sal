@@ -1,4 +1,3 @@
-# i0 = 0.14849853757254047
 from math import e
 
 
