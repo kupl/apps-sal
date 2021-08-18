@@ -13,6 +13,5 @@ class Solution:
                     row[c] += dp[min1]
                 else:
                     row[c] += dp[min2]
-                #row[c] += min(dp[:c]+dp[c+1:])
             dp = row[:]
         return min(dp)

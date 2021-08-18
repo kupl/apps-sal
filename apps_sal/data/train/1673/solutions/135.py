@@ -4,7 +4,6 @@ import numpy as np
 
 class Solution:
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
-        # This requires exploring all subpaths ? No I dont think so, It jus trquires an intelligent browse of the problem
 
         x = len(arr)
         new_count = np.zeros((x, x))

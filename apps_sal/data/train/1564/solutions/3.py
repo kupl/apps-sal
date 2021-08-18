@@ -6,9 +6,7 @@ while t > 0:
     t -= 1
     s = list(input())
     for i in range(len(s) - 1):
-        # print s[i]
         if a[ord(s[i]) - 65][ord(s[i + 1]) - 65] == 0:
-            # print s[i],"hello"
             a[ord(s[i]) - 65][ord(s[i + 1]) - 65] = 1
             ans += 1
     print(ans)

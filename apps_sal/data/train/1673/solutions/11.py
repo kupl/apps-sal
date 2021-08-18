@@ -1,12 +1,6 @@
 class Solution:
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
 
-        # [[1,2,3],
-        #  [4,5,6],
-        #  [7,8,9]]
-
-        # do a dp where dp(i,j) returns the minimum path starting from (i,j)
-
         if not arr:
             return 0
 

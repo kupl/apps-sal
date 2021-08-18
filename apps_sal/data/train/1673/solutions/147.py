@@ -3,7 +3,6 @@ class Solution:
         iMax = len(arr)
         jMax = len(arr[0])
 
-        # sortedIndex = [sorted([(arr[i][j], j) for j in range(jMax)]) for i in range(iMax)]
         dp = {}
         smallest2 = [None for _ in range(iMax)]
 
@@ -36,38 +35,3 @@ class Solution:
             dp[(preJ, iNow)] = subAns
             return subAns
         return moveDown(-1, 0)
-
-#         iMax = len(arr)
-#         jMax = len(arr[0])
-
-#         # sortedIndex = [sorted([(arr[i][j], j) for j in range(jMax)]) for i in range(iMax)]
-#         # print(sortedIndex)
-#         dp = {}
-#         dp2 = {}
-#         ans = [float('inf')]
-
-#         def moveDown(preJ, iNow, sumNow):
-#             if iNow == iMax:
-#                 ans[0] = min(ans[0], sumNow)
-#                 return 0
-
-#             if (preJ, iNow) in dp and dp[(preJ, iNow)] <= sumNow:
-#                 ans[0] = min(ans[0], sumNow +  dp2[(preJ, iNow)])
-#                 return dp2[(preJ, iNow)]
-#             # if (preJ, iNow) in dp2:
-#             #     ans[0] = min(ans[0], sumNow +  dp2[(preJ, iNow)])
-#             #     return dp2[(preJ, iNow)]
-#             dp[(preJ, iNow)] = sumNow
-#             # if sumNow >= ans[0]:
-#             #     return float('inf')
-#             subAns = float('inf')
-#             # for val,j in (sortedIndex[iNow]):
-#             for j, val in enumerate(arr[iNow]):
-#                 if j != preJ:
-#                     subAns = min(subAns, val + moveDown(j, iNow+1, val+sumNow))
-#                     # moveDown(j, iNow+1, val+sumNow)
-
-#             dp2[(preJ, iNow)] = subAns
-#             return subAns
-#         moveDown(-1, 0, 0)
-#         return ans[0]

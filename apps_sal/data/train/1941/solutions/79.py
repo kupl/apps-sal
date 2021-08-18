@@ -1,6 +1,6 @@
 class Solution:
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
-        dic = {}  # trie
+        dic = {}
         for word in words:
             cur = dic
             for c in word:

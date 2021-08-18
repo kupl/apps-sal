@@ -1,4 +1,3 @@
-# cook your dish here
 for T in range(int(input())):
     x1, x2, x3, v1, v2 = list(map(int, input().split()))
 
@@ -9,5 +8,3 @@ for T in range(int(input())):
             print("Chef")
         else:
             print("Draw")
-
-        # cook your dish here

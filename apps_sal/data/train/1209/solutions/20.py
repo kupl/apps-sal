@@ -18,8 +18,6 @@ while(tc != 0):
     r = (v1 + v2) * (t1 - t3) / (t1 - t2)
     l1 = v3 * (t3 - t2) / (t1 - t2)
     r1 = (v1 + v2) * (t3 - t2) / (t1 - t2)
-    # print(l,r)
-    # print(l1,r1)
     if l <= min(v2, r) and l1 <= min(v1, r1):
         print("YES")
     else:
