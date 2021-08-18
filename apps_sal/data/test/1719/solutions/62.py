@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
@@ -10,7 +9,6 @@ INF = 10**12
 m = 10**9 + 7
 
 N = int(input())
-# memo[i]: i番目の文字まで作った時の候補数
 memo = [{} for _ in range(N + 1)]
 
 

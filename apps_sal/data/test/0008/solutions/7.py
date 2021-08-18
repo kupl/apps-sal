@@ -50,7 +50,6 @@ elif done == 0 and b == c:
 elif done == 0 and a == c:
     ans = 1
     done = 1
-# Shuntsu
 if done == 0 and m >= 2:
     typem.sort()
     for i in range(len(typem) - 1):

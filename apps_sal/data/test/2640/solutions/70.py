@@ -3,7 +3,6 @@ import numpy as np
 
 
 def main():
-    # 入力
     readline = stdin.readline
     h, w = map(int, readline().split())
     grid = [readline().strip() for _ in range(h)]

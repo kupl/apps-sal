@@ -4,11 +4,9 @@ A = [1] + [0] * (n - 1)
 G = [1] + [0] * (n - 1)
 T = [1] + [0] * (n - 1)
 C = [1] + [0] * (n - 1)
-# NG:: AGC,GAC,ACG
 AG = [0] * n
 GA = [0] * n
 AC = [0] * n
-# NG:: AGGC,AGTC,ATGC
 AGG = [0] * n
 AGT = [0] * n
 ATG = [0] * n
@@ -26,10 +24,7 @@ for i in range(1, n):
 
     AGG[i] = AG[i - 1]
     AGT[i] = AG[i - 1]
-    ATG[i] = A[i - 2]  # == AT[i-1]
+    ATG[i] = A[i - 2]
 
 
 print(((A[-1] + G[-1] + C[-1] + T[-1]) % mod))
-# print(A,G,C,T)
-# print(AG,GA,AC)
-# print(AGG,AGT,ATG)

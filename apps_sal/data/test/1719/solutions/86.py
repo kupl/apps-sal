@@ -1,5 +1,3 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
 import itertools
 L = [''.join(i) for i in itertools.product('0123', repeat=3)]

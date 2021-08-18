@@ -42,9 +42,9 @@ def solve(n):
                 otherRows.append(['O'])
         n -= 1
     otherRows += [[] for _ in range(10 - len(otherRows))]
-    lastRow += (4 - len(lastRow)) * ['#']
+    lastRow += (4 - len(lastRow)) * ['
     for row in otherRows:
-        row += (3 - len(row)) * ['#']
+        row += (3 - len(row)) * ['
     printBus(lastRow, otherRows)
 
 

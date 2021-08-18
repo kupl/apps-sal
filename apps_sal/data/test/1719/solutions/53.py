@@ -2,7 +2,6 @@ from sys import stdin
 
 
 def main():
-    # 入力
     readline = stdin.readline
     mod = 10**9 + 7
     n = int(readline())

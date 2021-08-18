@@ -7,11 +7,6 @@ line = "0123456789ABC(EFGHIJKLMNsPQRSTUVWX"
 n = int(input())
 for i in range(n):
     ans = ans.replace(line[i], 'O')
-  #  print(ans)
- #   print("")
-# print("_________________________")
 for i in range(n, 34, 1):
-    ans = ans.replace(line[i], "#")
- #   print(ans)
-  #  print("")
+    ans = ans.replace(line[i], "
 print(ans)

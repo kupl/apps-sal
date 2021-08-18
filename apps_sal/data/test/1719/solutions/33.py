@@ -1,4 +1,3 @@
-# ABC122D - We Like AGC
 N, MOD = int(input()), 10 ** 9 + 7
 memo = [{} for i in range(N + 1)]
 

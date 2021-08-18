@@ -7,15 +7,7 @@ def submit():
     modp = 10 ** 9 + 7
     chars = ["A", "C", "G", "T"]
     modp = 10 ** 9 + 7
-    # ACGTの4通りの遷移
-    # 禁止は次の通り
-    # AG -> C
-    # A*G -> C
-    # GA -> C
-    # AC -> G
-    # AG* -> C
 
-    # このため,直前の三文字を覚えるようなdpをする
     dp = [defaultdict(int) for _ in range(n + 1)]
 
     for c1 in chars:
@@ -34,19 +26,14 @@ def submit():
     for i in range(4, n + 1):
         for k, v in dp[i - 1].items():
             for c in chars:
-                # *AG -> C
                 if k[1] == "A" and k[2] == "G" and c == "C":
                     continue
-                # A*G -> C
                 if k[0] == "A" and k[2] == "G" and c == "C":
                     continue
-                # *GA -> C
                 if k[1] == "G" and k[2] == "A" and c == "C":
                     continue
-                # *AC -> G
                 if k[1] == "A" and k[2] == "C" and c == "G":
                     continue
-                # AG* -> C
                 if k[0] == "A" and k[1] == "G" and c == "C":
                     continue
 
