@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = list(input())
     if len(n) % 2 == 1:

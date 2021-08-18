@@ -9,7 +9,6 @@ class Solution:
             next = None
             for i in range(n):
                 newNum = previous ^ (1 << i)
-                # print(i, newNum, previous)
                 if newNum not in visited:
                     visited.add(newNum)
                     answer.append(newNum)

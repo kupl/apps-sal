@@ -11,8 +11,6 @@ class Solution:
                     his_skill |= 1 << key[skill]
             if his_skill == 0:
                 continue
-            # if his_skill in dp and len(dp[his_skill]) == 1:
-            #     continue
             for skill_set, need in list(dp.items()):
                 with_him = skill_set | his_skill
                 if with_him == skill_set:

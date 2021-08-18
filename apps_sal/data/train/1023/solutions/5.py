@@ -17,7 +17,6 @@ for _ in range(int(input())):
             a += 1
             print(xx)
             xx += 1
-        # xx+=1
         for _ in range(1, n + 1):
             print(xx, end="")
             xx += 1

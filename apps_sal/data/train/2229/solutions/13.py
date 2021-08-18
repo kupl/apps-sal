@@ -18,6 +18,3 @@ while r - l > 1:
     if j != len(b):
         r = m
 print(l)
-
-
-# Made By Mostafa_Khaled

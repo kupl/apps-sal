@@ -9,7 +9,6 @@ from collections import defaultdict, Counter
 def input(): return sys.stdin.readline()
 def mapi(): return map(int, input().split())
 def maps(): return map(str, input().split())
-#
 
 
 def print(arg, *argv, end=None):
@@ -17,8 +16,6 @@ def print(arg, *argv, end=None):
     for i in argv:
         sys.stdout.write(" " + str(i))
     sys.stdout.write(end) if end else sys.stdout.write("\n")
-
-#---------------------------------------------------------------#
 
 
 mod = 1000000007
@@ -62,9 +59,7 @@ class Matrix(object):
      if n==0 or n==1:
       return self
      tmp = self
-     #copy.deepcopy(self)
      tmp = tmp**(n//2)
-     #print(tmp)
      tmp = tmp*tmp
      if(n%2 != 0):
       tmp = tmp*self
@@ -111,13 +106,9 @@ def solve():
         M[2][0] = (mod - m + 1) % mod
         M[2][1] = 0
         M[2][2] = m
-        # print(M)
         M = M**(n - 1)
         B = M * B
-        # print(B)
         print(B[0][0])
-
-#---------------------------------------------------------------#
 
 
 def __starting_point():

@@ -1,5 +1,4 @@
 def reverse_alternate(string):
-    # your code here
     if string == "":
         return ""
     else:

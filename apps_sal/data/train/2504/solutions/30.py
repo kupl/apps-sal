@@ -6,6 +6,5 @@ class Solution:
             cur_sum += arr[i - 1]
             prefix_sum[i] = cur_sum
             for j in range(1, i + 1, 2):
-                # print([i, j])
                 ret += prefix_sum[i] - prefix_sum[i - j]
         return ret

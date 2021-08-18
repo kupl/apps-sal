@@ -8,13 +8,13 @@ class Solution:
         def getSum(array, start, end):
             local_sum = 0
             for i in range(start, end):
-                local_sum += array[i]  # 1,
+                local_sum += array[i]
             return local_sum
 
-        while l < len(arr) - 1:  # 0<4
-            if r > len(arr) - 1:  # 1>4
+        while l < len(arr) - 1:
+            if r > len(arr) - 1:
                 l += 1
                 r = l
-            result += getSum(arr, l, r + 1)  # arr,0,2
+            result += getSum(arr, l, r + 1)
             r += 2
         return result

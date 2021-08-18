@@ -1,4 +1,3 @@
-# cook your dish here
 def letterNo(c):
     if i == '?':
         return 26

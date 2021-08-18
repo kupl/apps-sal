@@ -1,5 +1,4 @@
 def minimum(arr):
-    # your code here...
     numbers = arr
 
     numbers.sort()
@@ -10,7 +9,6 @@ def minimum(arr):
 
 
 def maximum(arr):
-    #...and here
     numbers = arr
 
     numbers.sort()
