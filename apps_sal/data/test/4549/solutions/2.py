@@ -11,8 +11,8 @@ for i, j in product(list(range(H)), list(range(W))):
         ni, nj = i + di, j + dj
         if not (0 <= ni < H and 0 <= nj < W):
             continue
-        if s[ni][nj] == "#":
-            is_ok = True
+        if s[ni][nj] == "
+        is_ok = True
     if not is_ok:
         print("No")
         break

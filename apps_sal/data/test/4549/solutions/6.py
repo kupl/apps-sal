@@ -9,8 +9,8 @@ cnt = [[0] * W for _ in range(H)]
 for h in range(H):
     c = 0
     for w in range(W):
-        if S[h][w] == "#":
-            c += 1
+        if S[h][w] == "
+        c += 1
         else:
             if c == 1:
                 cnt[h][w - 1] = 1
@@ -22,8 +22,8 @@ ans = "Yes"
 for w in range(W):
     c = 0
     for h in range(H):
-        if S[h][w] == "#":
-            c += 1
+        if S[h][w] == "
+        c += 1
         else:
             if c == 1:
                 if cnt[h - 1][w] == 1:

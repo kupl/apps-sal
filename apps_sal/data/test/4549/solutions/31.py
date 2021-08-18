@@ -13,8 +13,8 @@ for i, j in cells:
         nj = j + dj[k]
         if ni < 0 or nj < 0 or ni >= H or nj >= W:
             continue
-        if s[ni][nj] == '#':
-            flag = True
+        if s[ni][nj] == '
+        flag = True
     if not flag:
         print("No")
         break

@@ -15,17 +15,13 @@ import bisect
 from statistics import mean, mode, median, median_low, median_high
 
 
-# CONFIG
 sys.setrecursionlimit(10**9)
-
-# LOG
 
 
 def log(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
 
-# INPUT
 def ni():
     return list(map(int, input().split()))
 
@@ -38,7 +34,6 @@ def nia():
     return list(map(int, input().split()))
 
 
-# CONVERT
 def toString(aList, sep=" "):
     return sep.join(str(x) for x in aList)
 
@@ -47,12 +42,9 @@ def toMapInvertIndex(aList):
     return {k: v for v, k in enumerate(aList)}
 
 
-# SORT
 def sortId(arr):
     return sorted(list(range(len(arr))), key=lambda k: arr[k])
 
-
-# MAIN
 
 n, m = ni()
 
@@ -64,14 +56,11 @@ for i in range(n):
 
 dd = [['.' for j in range(m)] for i in range(n)]
 
-# pprint(s)
-# pprint(dd)
 
 res = deque()
 for i in range(n):
     for j in range(m):
         if s[i][j] == '*':
-            # print(i,j)
             k = 1
             while 0 <= i - k < n and 0 <= i + k < n and 0 <= j - k < m and 0 <= j + k < m and s[i - k][j] == "*" and s[i + k][j] == "*" and s[i][j - k] == "*" and s[i][j + k] == "*":
                 dd[i - k][j] = "*"
@@ -83,10 +72,7 @@ for i in range(n):
                     res.append((i + 1, j + 1, k))
                 else:
                     res[-1] = (i + 1, j + 1, k)
-                # print(i,j,k)
                 k += 1
-
-# pprint(dd)
 
 
 def check():

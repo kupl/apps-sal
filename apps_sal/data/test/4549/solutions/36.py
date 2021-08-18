@@ -10,19 +10,10 @@ def main():
         tmp = list(input()[:-1])
         field.append(tmp)
 
-    # import
     from collections import deque
 
-    # digtmp
     digtmp = [(0, 1), (1, 0), (0, -1), (-1, 0)]
-    #digtmp = [(0, 1), (-1, 1), (-1, 0), (-1, -1), (0, -1), (1, -1), (1, 0), (1, 1)]
 
-    # BFS
-    # please prefer objects:
-    #  H: height.
-    #  W: width
-    #  field: maze field made of '.', '#'.
-    #  check: check field
     for h in range(H):
         for w in range(W):
             a, b = h, w
@@ -34,9 +25,9 @@ def main():
                 y = b + dy
                 if not (0 <= x < H and 0 <= y < W):
                     continue
-                if field[x][y] == '#':
-                    flag = True
-                    continue
+                if field[x][y] == '
+                flag = True
+                continue
             if not flag:
                 print('No')
                 return

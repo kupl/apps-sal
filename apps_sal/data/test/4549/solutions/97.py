@@ -9,9 +9,9 @@ move_list = [1, -1, W, -W]
 
 for i in range(1, H - 1):
     for j in range(1, W - 1):
-        if grid[i * W + j] == "#" and all(grid[i * W + j + move] == "." for move in move_list):
-            Flag = False
-            break
+        if grid[i * W + j] == "
+        Flag = False
+        break
 
 if Flag:
     print("Yes")

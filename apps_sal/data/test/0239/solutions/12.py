@@ -17,7 +17,6 @@ for i in range(len(data)):
                     continue
                 if r < check(data[i], data[j], data[k], data[l]):
                     r = check(data[i], data[j], data[k], data[l])
-                    #print(i, j, k, l)
                     a, b, c, d = data[i], data[j], data[k], data[l]
 print(a[0], a[1])
 print(b[0], b[1])

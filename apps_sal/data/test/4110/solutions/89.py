@@ -13,7 +13,6 @@ def main():
 
 
 def ag(v: List[Tuple[int, int]], g: int) -> int:
-    # ex. [(3, 500), (5, 800)] -> [(1, 3, 500), (2, 5, 800)]
     v = [(i + 1, v[i][0], v[i][1]) for i in range(len(v))]
 
     result = 100 ** 10
@@ -22,7 +21,6 @@ def ag(v: List[Tuple[int, int]], g: int) -> int:
         for cb in itertools.combinations(v, j):
             sc = 0
             cnt = 0
-            # calc bonus score
             for (i, p, c) in cb:
                 sc += i * 100 * p + c
                 cnt += p

@@ -3,7 +3,7 @@ import sys
 input = sys.stdin.readline
 
 d = '.'
-dn = '#'
+dn = '
 
 
 def isPaintable(h, w, x, y, canvas):

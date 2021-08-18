@@ -1,13 +1,10 @@
-# 上下左右に#が全て隣接しているならOK
 
 N, M = map(int, input().split())
-# print(N)
 c = 0
 l = []
 for i in range(N):
     l.append(list(input()))
 
-# print(l)
 N -= 1
 M -= 1
 

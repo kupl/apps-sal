@@ -11,6 +11,3 @@ for x in max(a, key=lambda a: (len(set(map(tuple, a))) == len(a)) * all(map((lam
     print(*x)
 
 print()
-
-
-# Made By Mostafa_Khaled

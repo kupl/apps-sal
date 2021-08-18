@@ -26,7 +26,7 @@ def ag(v: List[Tuple[int, int]], g: int) -> int:
             if add < v[idx][0]:
                 cnt += add
             else:
-                cnt = 10 ** 10  # impossible
+                cnt = 10 ** 10
         ret = min(ret, cnt)
     return ret
 

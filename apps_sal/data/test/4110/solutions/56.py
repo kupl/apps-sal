@@ -15,7 +15,7 @@ for i in range(1 << d):
 
     if score < g:
         use = max(nokori)
-        n = min(pc[use - 1][0], -(-(g - score) // (use * 100)))  # (g-sum)//(use*100)＞0
+        n = min(pc[use - 1][0], -(-(g - score) // (use * 100)))
         cnt += n
         score += n * use * 100
     if score >= g:

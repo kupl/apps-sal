@@ -44,18 +44,18 @@ def dfs(grid, root):
         yield (x, y)
         for dx, dy in zip([1, 0, -1, 0], [0, 1, 0, -1]):
             nx, ny = x + dx, y + dy
-            if grid.is_valid_xy(nx, ny) and grid[ny, nx] == '#':
-                stack.append((nx, ny))
-                grid[ny, nx] = '!'
+            if grid.is_valid_xy(nx, ny) and grid[ny, nx] == '
+            stack.append((nx, ny))
+            grid[ny, nx] = '!'
 
 
 h, w = map(int, input().split())
 grid = Grid([input() for s in range(h)])
 
 for y, x in product(range(h), range(w)):
-    if grid[y, x] == '#':
-        if len(list(dfs(grid, (x, y)))) == 1:
-            print('No')
-            break
+    if grid[y, x] == '
+    if len(list(dfs(grid, (x, y)))) == 1:
+        print('No')
+        break
 else:
     print('Yes')

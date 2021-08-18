@@ -1,4 +1,4 @@
-from sys import stdin, stdout  # only need for big input
+from sys import stdin, stdout
 
 
 def solve():
@@ -17,12 +17,12 @@ def solve():
             isolate = True
             for px in [i - 1, i + 1]:
                 if px >= 0 and px < h:
-                    if grid[px][j] == '#':
-                        isolate = False
+                    if grid[px][j] == '
+                    isolate = False
             for py in [j - 1, j + 1]:
                 if py >= 0 and py < w:
-                    if grid[i][py] == '#':
-                        isolate = False
+                    if grid[i][py] == '
+                    isolate = False
             if isolate:
                 print("No")
                 return

@@ -28,7 +28,6 @@ def bf():
 
 n, m = list(map(int, input().split()))
 
-# bf()
 
 if m == 0:
     print("%d %d\n%d %d\n%d %d\n%d %d\n" % (1, 0, n, m, 0, 0, n - 1, m))
@@ -46,7 +45,6 @@ else:
     l.append(d(0, 0, n, m, 0, m, n, 0))
 
     a = list(reversed(sorted(l)))[0]
-    # print(a)
     a = a[1]
     for i in range(4):
         print(a[i * 2], a[i * 2 + 1])

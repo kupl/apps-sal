@@ -41,8 +41,6 @@ class SegmTree():
         return latest_change
 
 
-# inf = open('input.txt', 'r')
-# reader = (map(int, line.split()) for line in inf)
 reader = (list(map(int, line.split())) for line in sys.stdin)
 input = reader.__next__
 
@@ -65,5 +63,3 @@ for i in range(1, m + 1):
         else:
             ans = b[pos]
         sys.stdout.write(f'{ans}\n')
-
-# inf.close()
