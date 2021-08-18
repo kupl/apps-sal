@@ -1,9 +1,6 @@
-# Bhargey Mehta (Junior)
-#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
-#sys.stdin = open('input.txt', 'r')
 MOD = 998244353
 sys.setrecursionlimit(1000000)
 

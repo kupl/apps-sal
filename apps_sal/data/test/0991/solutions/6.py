@@ -24,7 +24,6 @@ reached = [False] * N
 reached_count = 0
 
 while queue:
-    #	print(len(queue))
     time, cur, money = heapq.heappop(queue)
     if not reached[cur]:
         reached[cur] = True
@@ -53,8 +52,6 @@ while queue:
             states[money] = time
             heapq.heappush(queue, (time, cur, money))
 
-# for i in range(N):
-#	print(i, state_table[i])
 
 for i in range(1, N):
     states = state_table[i]

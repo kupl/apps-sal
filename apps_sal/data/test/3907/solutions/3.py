@@ -16,21 +16,16 @@ for i in range(m):
 
     q[i], w[i] = [int(x) for x in input().split()]
 
-    # print(q[i],w[i])
 
 w.sort(reverse=True)
 
-# print(*w)
 
 s = 0
 
 v = 0
 
-# print("n=",n)
 
 for i in range(m):
-
-    #print("i=",i," v=",v,"w[i]=",w[i])
 
     if(Fun(i + 1) > n):
         break
@@ -38,6 +33,3 @@ for i in range(m):
     s += w[i]
 
 print(s)
-
-
-# Made By Mostafa_Khaled

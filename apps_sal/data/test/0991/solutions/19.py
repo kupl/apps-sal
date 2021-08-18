@@ -21,8 +21,8 @@ max_silver = max_a * (N - 1)
 
 ans = [-1] * N
 d = dict()
-d[(S, 0)] = 0  # silver, station
-Q = [(0, S, 0)]  # time, silver, station
+d[(S, 0)] = 0
+Q = [(0, S, 0)]
 sum_reached = 0
 reached = [False] * N
 

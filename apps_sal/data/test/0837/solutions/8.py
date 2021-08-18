@@ -1,7 +1,3 @@
-#import sys
-#sys.stdin = open('in', 'r')
-#n = int(input())
-#a = [int(x) for x in input().split()]
 
 import heapq
 n, x, y = list(map(int, input().split()))

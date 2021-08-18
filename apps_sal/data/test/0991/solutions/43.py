@@ -16,7 +16,7 @@ def main():
     dp = [[inf] * (max_s + 1)for _ in range(n)]
     kakutei = [[0] * (max_s + 1)for _ in range(n)]
     dp[0][min(s, max_s)] = 0
-    todo = [[0, 0, min(s, max_s)]]  # [dp[v][i],v,i]
+    todo = [[0, 0, min(s, max_s)]]
     heapq.heapify(todo)
     flgs = [0] * n
     flg = 0
@@ -31,12 +31,10 @@ def main():
             flgs[v] = 1
         c, d = cd[v]
         ans[v] = min(ans[v], _)
-        # 両替
         j = min(max_s, i + c)
         if kakutei[v][j] == 0:
             dp[v][j] = min(dp[v][j], dp[v][i] + d)
             heapq.heappush(todo, [dp[v][j], v, j])
-        # 鉄道
         l = g[v]
         for u, a, b in l:
             if i - a >= 0 and kakutei[u][i - a] == 0:

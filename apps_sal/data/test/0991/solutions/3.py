@@ -24,7 +24,6 @@ def dijkstra_heap():
     return used
 
 
-################################
 n, m, ss = map(int, input().split())
 ss = min(2450, ss)
 edge = [[] for i in range(n)]

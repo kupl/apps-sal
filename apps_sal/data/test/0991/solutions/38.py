@@ -50,8 +50,6 @@ def insort_queue(q, v):
 
 queue = []
 
-#hwd [location, money, time]
-
 
 def dijakstra(q):
     while q != []:
@@ -61,7 +59,6 @@ def dijakstra(q):
             least_cost[hwd[0]][hwd[1]] = hwd[2]
 
             for node in tree[hwd[0]]:
-                # from node, to node , money, time
                 if hwd[1] - node[2] >= 0:
                     insort_queue(q, [node[1], hwd[1] - node[2], hwd[2] + node[3]])
             if hwd[1] + change[hwd[0] - 1][0] <= 500:

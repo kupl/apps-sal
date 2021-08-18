@@ -55,7 +55,6 @@ sum = [0] * n
 
 dp = [0] * n
 
-#print(len(e), e)
 
 for i in range(n - 1):
 
@@ -72,6 +71,3 @@ for x in t:
 bfs(0)
 
 print(dp[0])
-
-
-# Made By Mostafa_Khaled
