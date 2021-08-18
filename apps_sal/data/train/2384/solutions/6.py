@@ -15,10 +15,10 @@ for _ in range(t):
     aCount = [0] * (curIndex + 1)
     for i in range(n):
         aCount[aOrder[i]] += 1
-    maxSubseq0 = [0] * (curIndex + 1)  # Only using one number
-    maxSubseq1 = [0] * (curIndex + 1)  # Extendable to next number but using >=2 numbers
-    maxSubseq2 = [0] * (curIndex + 1)  # How many current number is there in maxSubseq1 sequence
-    maxSubseq3 = [0] * (curIndex + 1)  # Not extendable to next number (not necessarily counted if < maxSubseq1)
+    maxSubseq0 = [0] * (curIndex + 1)
+    maxSubseq1 = [0] * (curIndex + 1)
+    maxSubseq2 = [0] * (curIndex + 1)
+    maxSubseq3 = [0] * (curIndex + 1)
     for i in range(n):
         aCurOrder = aOrder[i]
         curSubseq1 = maxSubseq1[aCurOrder] + 1

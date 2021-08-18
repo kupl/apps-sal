@@ -76,7 +76,6 @@ for i in range(100000):
 for i in range(100000):
     a.append((a1[i] + a2[i] + 1) % mod)
 t = int(input())
-# print(a)
 for i in range(t):
     n = int(input())
     print(a[n - 1])

@@ -18,12 +18,11 @@ def main():
 
         A = list(map(int, input().split()))
 
-        vis = [0 for i in range(N)]  # to mark visited vertices 0 for visited and             1 for not visited
-        maxval = [[0, 0] for i in range(N)]  # Nx2 list where each i stores max             value till now and its count
-        minval = [0 for i in range(N)]  # Nx2 list where each i stores min value             till now
-        lfnode = []  # list to store leaf nodes
+        vis = [0 for i in range(N)]
+        maxval = [[0, 0] for i in range(N)]
+        minval = [0 for i in range(N)]
+        lfnode = []
 
-        # Appending node 1
         vis[0] = 1
         Q = collections.deque([0])
         maxval[0][0], maxval[0][1] = A[0], 1
@@ -34,16 +33,15 @@ def main():
             mv1 = maxval[a][0]
             mv2 = minval[a]
 
-            flag = 0  # to check leaf node
+            flag = 0
 
             for i in Tree[a]:
                 if (vis[i] == 0):
                     vis[i] = 1
-                    flag = 1  # not a leaf node
+                    flag = 1
                     v = A[i]
                     Q.append(i)
 
-                    # Comparing maximum value of parent node
                     if (mv1 < v):
                         maxval[i][0], maxval[i][1] = v, 1
 
@@ -53,7 +51,6 @@ def main():
                     else:
                         maxval[i][0], maxval[i][1] = maxval[a][0], maxval[a][1]
 
-                    # Comparing minimum value of parent node
                     if (mv2 > v):
                         minval[i] = v
                     elif(v == mv2):
@@ -64,11 +61,10 @@ def main():
             if (flag == 0):
                 lfnode.append(a)
 
-        flag = 0  # For answer if 0 then NO else YES
+        flag = 0
 
-        K1 = len(bin(K)) - 2  # length of K
+        K1 = len(bin(K)) - 2
 
-        # print(lfnode,val)
         for i in lfnode:
             v1, v2 = maxval[i][0], maxval[i][1]
 
