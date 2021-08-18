@@ -8,6 +8,5 @@ def distance(x, y, i, j):
 
 
 for a, b in ab:
-    # 各チェックポイントとの距離
     dists = [distance(a, b, c, d) for c, d in cd]
     print(dists.index(min(dists)) + 1)

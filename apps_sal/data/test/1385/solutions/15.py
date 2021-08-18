@@ -6,6 +6,3 @@ for i in range(len(s)):
         l = [x for x in s[i].split() if x != '']
         if l != []:
             print('<', '>\n<'.join(l), '>', sep='')
-
-
-# Made By Mostafa_Khaled

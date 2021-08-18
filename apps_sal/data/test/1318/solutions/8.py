@@ -1,21 +1,17 @@
 import sys
 
-# request number
 n = int(sys.stdin.readline())
 request = []
 for i in range(1, n + 1):
     people, cost = map(int, sys.stdin.readline().split())
     request.append((i, people, cost))
 
-#request.sort(key=lambda item: (-item[2], item[1]))
-# print(request)
 
 k = int(sys.stdin.readline())
 tables = []
 for tmp in zip(range(1, k + 1), [int(s) for s in sys.stdin.readline().split()]):
     tables.append(tmp)
 tables.sort(key=lambda item: item[1])
-# print(tables)
 
 total = 0
 ans = []
@@ -37,7 +33,6 @@ for i, t in tables:
         ans.append((request_id, i))
         total += max_price
 
-# sorted(ans)
 print(str(count) + " " + str(total))
 for request_id, i in ans:
     print(str(request_id) + " " + str(i))

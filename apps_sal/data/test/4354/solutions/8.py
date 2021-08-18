@@ -19,6 +19,5 @@ for i in range(n):
             judge = abs(a[i] - c[j]) + abs(b[i] - d[j])
             num = j + 1
     ans.append(num)
-# print(ans)
 for i in ans:
     print(i)

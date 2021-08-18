@@ -5,7 +5,6 @@ N = int(math.log2(L)) + 1
 
 M = 2 * (N - 1)
 
-# print(N, )
 edges = []
 for i in range(N - 1):
     edges.append('{0} {1} {2}'.format((i + 1), (i + 2), 0))

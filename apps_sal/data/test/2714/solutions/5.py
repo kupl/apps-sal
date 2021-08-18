@@ -1,7 +1,7 @@
 import sys
 import threading
-sys.setrecursionlimit(10**6)  # max depth of recursion
-threading.stack_size(2**25)  # new thread will get stack of such size
+sys.setrecursionlimit(10**6)
+threading.stack_size(2**25)
 
 
 def main():

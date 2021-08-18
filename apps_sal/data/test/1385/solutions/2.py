@@ -1,6 +1,4 @@
 import sys
-# f = sys.stdin
-# f = open("input.txt", "r")
 a = input()
 i = 0
 while i < len(a):

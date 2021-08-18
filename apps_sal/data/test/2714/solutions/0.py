@@ -64,7 +64,6 @@ for test in range(testcase):
                 break
         if flag == 0:
             break
-        # print(score,allscore)
         ANS = ANS * calc(score, allscore) % mod
     if flag == 0:
         print(0)
