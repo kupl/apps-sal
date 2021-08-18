@@ -10,5 +10,5 @@ def printrow(num, s, t):
 a, b = map(int, input().split())
 
 print(100, 100)
-printrow(b, '#', '.')
-printrow(a, '.', '#')
+printrow(b, '
+printrow(a, '.', '

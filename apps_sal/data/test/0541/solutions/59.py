@@ -5,7 +5,6 @@ for i in range(M):
 
 B = sorted(B, key=lambda x: x[1])
 remove = []
-# print(B)
 for i in range(M):
     a, b = B[i][0], B[i][1]
     if remove == []:
@@ -14,5 +13,4 @@ for i in range(M):
         continue
     else:
         remove.append(b - 1)
-    # print(remove)
 print((len(remove)))

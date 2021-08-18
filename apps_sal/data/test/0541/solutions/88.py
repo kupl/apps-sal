@@ -1,15 +1,13 @@
-# 初期入力
 import sys
-input = sys.stdin.readline  # 文字列では使わない
+input = sys.stdin.readline
 
 N, M = map(int, input().split())
 ans = 1
 ab = [0] * M
 for i in range(M):
-    a, b = map(int, input().split())  # 争いのある部分
+    a, b = map(int, input().split())
     ab[i] = (a, b)
 
-# abをbでソート
 ab.sort(key=lambda x: x[1], reverse=True)
 max_a = ab[0][0]
 for a, b in ab:

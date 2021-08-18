@@ -18,7 +18,6 @@ def rlinput():
 
 
 def main():
-    #q = rlinput()
 
     n = iinput()
     b = rlinput()

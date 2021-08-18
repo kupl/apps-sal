@@ -1,13 +1,13 @@
 A, B = list(map(int, input().split()))
 white = [['.'] * 100 for _ in range(50)]
-black = [['#'] * 100 for _ in range(50)]
+black = [['
 
 flag = True
 if B != 1:
     for h in range(0, 50, 2):
         if flag:
             for w in range(0, 100, 2):
-                white[h][w] = '#'
+                white[h][w] = '
                 B -= 1
                 if B == 1:
                     flag = False

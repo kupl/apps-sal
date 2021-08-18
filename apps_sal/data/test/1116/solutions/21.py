@@ -1,4 +1,3 @@
-# https://codeforces.com/contest/1260/problem/C
 
 from fractions import gcd
 n = int(input())

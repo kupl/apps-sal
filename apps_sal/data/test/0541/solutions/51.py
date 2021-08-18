@@ -1,4 +1,3 @@
-# Segment tree (+)
 from operator import add
 from sys import stdin
 

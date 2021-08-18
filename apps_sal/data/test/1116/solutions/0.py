@@ -30,9 +30,6 @@ for _ in range(T):
     a, b = min(a, b), max(a, b)
 
     n = gcd(a, b)
-    # while n < b:
-    #     n += a
-    #     cnt += 1
     cnt = -((n - b) // a)
 
     if cnt >= k:

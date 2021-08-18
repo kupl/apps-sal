@@ -10,7 +10,4 @@ L3 = []
 for i in L2:
     L3.append(i)
 
-# print(N,P,Q,L,L2,L3)
-# print(L3.index(tuple(P)))
-# print(L3.index(tuple(Q)))
 print(abs(L3.index(tuple(P)) - L3.index(tuple(Q))))

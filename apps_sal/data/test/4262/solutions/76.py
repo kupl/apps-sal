@@ -1,6 +1,5 @@
 from itertools import permutations
 3
-#coding: utf-8
 
 
 N = int(input())

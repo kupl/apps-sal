@@ -25,7 +25,7 @@ def main():
     dropped_bridge = ENDsorted_sections[0][1]
 
     for m in range(M):
-        if ENDsorted_sections[m][0] >= dropped_bridge:  # 新しく橋を落とさないといけない
+        if ENDsorted_sections[m][0] >= dropped_bridge:
             ans += 1
             dropped_bridge = ENDsorted_sections[m][1]
     print(ans)
