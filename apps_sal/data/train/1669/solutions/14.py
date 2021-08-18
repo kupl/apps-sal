@@ -5,7 +5,6 @@ class Solution:
             return False
 
         C = Counter(hand)
-        #print (C)
         for i in range(n // W):
             mn = min(C.keys())
             for j in range(mn, mn + W):

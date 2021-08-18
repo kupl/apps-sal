@@ -25,14 +25,10 @@ class Solution:
 
         for i in range(1, W):
 
-            #print(seed, seed+i)
-
             if seed + i not in hand:
                 return False
 
         for i in range(0, W):
             hand.remove(seed + i)
-
-        # print(hand)
 
         return self.isNStraightHand(hand, W)

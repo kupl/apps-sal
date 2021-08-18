@@ -1,13 +1,5 @@
 class Solution:
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
-        # 1, 2, 2, 3, 3, 4, 6, 7, 8
-        # 1 2 3
-        #   2 3 4
-        #         6 7 8
-
-        # W length Q
-        # how many opened
-        # # of the element is current opened one
 
         q = deque()
         opened = 0

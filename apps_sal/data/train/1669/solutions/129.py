@@ -20,8 +20,6 @@ class Solution:
         return True
 
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
-        # [1,2,3,2,3,4]
-        # [1,2,2,3,3,4]
 
         if len(hand) % W != 0:
             return False
@@ -44,8 +42,6 @@ class Solution:
         return 0 == len(q)
 
     def isNStraightHand4(self, hand: List[int], W: int) -> bool:
-        # [1,2,3,2,3,4]
-        # [1,2,2,3,3,4]
 
         if len(hand) % W != 0:
             return False
@@ -58,8 +54,6 @@ class Solution:
             else:
                 q.append([num, 1])
 
-        # [[3,3]]
-        #
         n = len(hand)
         while n > 0:
             if len(q) < W:
@@ -68,9 +62,7 @@ class Solution:
                 if q[i][0] != q[i - 1][0] + 1:
                     return False
             j = 0
-            # print(j)
             for i in range(W):
-                # print(i)
                 if q[j][1] == 1:
                     q.pop(j)
                 else:

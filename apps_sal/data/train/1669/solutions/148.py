@@ -13,7 +13,6 @@ class Solution:
                 h = heappop(hand)
                 i = start
                 while True:
-                    #  print(h, i, arrange)
                     if len(arrange[i]) == W:
                         i += 1
                         start = i
@@ -29,5 +28,4 @@ class Solution:
                     else:
                         break
 
-                    #  return
-        return True  # arrange
+        return True

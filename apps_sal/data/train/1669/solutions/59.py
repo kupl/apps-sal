@@ -4,7 +4,6 @@ class Solution:
         dic = collections.OrderedDict(sorted(count.items()))
         while dic:
             m = next(iter(dic))
-            # print(m)
             for k in range(m, m + W):
                 v = dic.get(k)
                 print(v, k)

@@ -1,6 +1,5 @@
 class Solution:
     def nthMagicalNumber(self, N: int, A: int, B: int) -> int:
-        # H.C.F of A and B
         x, y = min(A, B), max(A, B)
         print(x, y)
         hcf = x

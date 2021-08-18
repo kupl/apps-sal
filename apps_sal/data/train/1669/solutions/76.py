@@ -6,7 +6,7 @@ class Solution:
             minCount = min(count)
 
             for i in range(minCount, minCount + W):
-                if not count[i]:  # if i not in count:
+                if not count[i]:
                     return False
                 if count[i] == 1:
                     del count[i]

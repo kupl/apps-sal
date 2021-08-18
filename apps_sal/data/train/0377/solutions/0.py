@@ -20,7 +20,6 @@ class Solution:
         mod = N - div * k
         k_C_cur = (mod * k_C) // k
         k_D_cur = mod - k_C_cur
-        #print(k_C, k_D, k, div, mod, k_C_cur, k_D_cur)
         while True:
             C_num = k_C_cur * C
             D_num = k_D_cur * D

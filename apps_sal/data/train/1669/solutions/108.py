@@ -22,7 +22,6 @@ class Solution:
 
         while len(cnt) and flag and num_sub_hands < len(hand) // W:
             flag = False
-            # pass by value
             tmp = sorted(set(unique_vals))
 
             for element in tmp:
