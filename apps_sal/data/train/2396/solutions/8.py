@@ -1,6 +1,4 @@
 import sys
-# sys.stdin = open("in", "r")
-# sys.stdout = open("out", "w")
 
 inp = sys.stdin.read().split()
 ii = 0

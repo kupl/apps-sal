@@ -1,5 +1,4 @@
 def derive(coefficient, exponent):
-    # your code here
     product = coefficient * exponent
     result_from_subtract = exponent - 1
 

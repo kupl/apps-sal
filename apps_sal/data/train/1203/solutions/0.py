@@ -14,7 +14,6 @@ for u in range(eval(input())):
             e = 1
             h = 1
             g = 1
-            # b=f(i-1)/f(k-1)/f(i-k)
             if(k - 1 > i - k):
                 for z in range(i - k):
                     b = b * d

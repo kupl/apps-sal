@@ -4,28 +4,21 @@ class Solution:
         箱子中有n个球，箱中有2种颜色的球，分别有k1,k2个
         箱子中的组合数为n!/k1!k2!
         '''
-        n = sum(balls)  # 总球数
-        k = len(balls)  # 球色数
+        n = sum(balls)
+        k = len(balls)
         total = 0
         valid = 0
-        fact = [1] * 50  # 得到每个数的阶乘
+        fact = [1] * 50
         for i in range(1, 50):
             fact[i] = fact[i - 1] * i
-        #d: depth
-        # b1, b2: # of balls in box1, box2
-        # c1,c2 :两个box中不同色的球数
-        # p1, p2: # permutations of duplicate balls in box1, box2
 
         def dfs(d, b1, b2, c1, c2, p1, p2):
             nonlocal total
             nonlocal valid
-            # 两个盒子中球数要相同
             if b1 > n // 2 or b2 > n // 2:
                 return
             if d == k:
                 count = fact[b1] / p1 * fact[b2] / p2
-                # 此时的组合总数
-                # 判断是否符合所要求的
                 total += count
                 valid += count * (c1 == c2)
                 return

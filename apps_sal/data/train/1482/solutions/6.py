@@ -1,7 +1,5 @@
-# cook your dish he
 def gcd(a, b):
 
-    # Everything divides 0
     if (b == 0):
         return a
     return gcd(b, a % b)
@@ -12,15 +10,12 @@ t = int(input())
 
 def isPalindrome(n: int) -> bool:
 
-    # Find reverse of n
     rev = 0
     i = n
     while i > 0:
         rev = rev * 10 + i % 10
         i //= 10
 
-    # If n and rev are same,
-    # then n is palindrome
     return (n == rev)
 
 
@@ -43,6 +38,5 @@ for _ in range(t):
                 p *= 10
 
     if flag == 0:
-        # print(gcd(3,4))
         q = 10**n - 10**(n - 1)
         print(str(p // gcd(p, q)) + " " + str(q // gcd(p, q)))
