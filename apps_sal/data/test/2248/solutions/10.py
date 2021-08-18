@@ -1,4 +1,3 @@
-# itne me hi thakk gaye?
 def bfs(x, g):
     n, q = len(g), [x]
     dist = [0 if y == x else -1 for y in range(n)]

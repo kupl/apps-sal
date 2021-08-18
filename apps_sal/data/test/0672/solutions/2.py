@@ -42,7 +42,6 @@ def count(muls, bound, viewed=None, x=1):
 
 
 a, b = list(map(int, input().split()))
-# a, b = 4, 0
 if a == b:
 
     print("infinity")

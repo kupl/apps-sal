@@ -3,7 +3,6 @@ res = 0
 if n % 2 == 0:
     for i in range(1, 30):
         p = n // (5 ** i)
-        # print(i,p)
         if p % 2 == 1:
             res += (p - 1) // 2
         else:

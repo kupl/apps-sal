@@ -1,4 +1,3 @@
-# 解説配信の模範解答
 N, K = map(int, input().split())
 S = str(input())
 score = 0

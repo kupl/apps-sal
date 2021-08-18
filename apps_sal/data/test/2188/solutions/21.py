@@ -6,7 +6,6 @@ mx_i = []
 mn_i = []
 for i in range(n):
     u, v = [int(x) for x in input().strip().split()]
-    # b.append((u,v))
     if u > v:
         mx.append((u, v))
         mx_i.append(i + 1)

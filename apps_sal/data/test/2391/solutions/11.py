@@ -7,7 +7,7 @@ aa = [a[i - 1] ^ a[i] for i in range(1, n * 2)]
 bb = [b[i - 1] ^ b[i] for i in range(1, n)]
 s = bb + aa
 roli_mod = 1370757747362922367
-roli_r = 1  # randint(2,roli_mod-2)
+roli_r = 1
 roli_table = [0]
 roli_rr = 1
 for i in range(3 * (n - 1)):

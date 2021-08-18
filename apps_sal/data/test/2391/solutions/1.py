@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def divisors(M):  # Mの約数列 O(n^(0.5+e))
+def divisors(M):
     import math
     d = []
     i = 1

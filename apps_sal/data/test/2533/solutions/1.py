@@ -51,7 +51,6 @@ if ans is None:
     print('NO')
 else:
     if len(ans) == (e + 1) and ans[0] == ans[-1]:
-        # 		print(ans)
         print("YES")
         temp_dict = {}
         for i in range(len(ans) - 1, 0, -1):

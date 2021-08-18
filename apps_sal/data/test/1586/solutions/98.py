@@ -9,5 +9,4 @@ else:
     while n > 1:
         ans += n // 5
         n = n // 5
-        # print(n)
 print(ans)

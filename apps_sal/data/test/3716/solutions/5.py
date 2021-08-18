@@ -1,5 +1,4 @@
 def gcd(a, b):
-    # print(a,b)
     if b == 0:
         return a
     else:
@@ -45,7 +44,6 @@ def main():
                 if gcd(i, j) == 1 and gcd(i, k) == 1 and gcd(j, k) == 1:
                     if (i * j * k) > (a * b * c):
                         [a, b, c] = [i, j, k]
-                        # print(i,j,k)
 
     print(a * b * c)
     if mode == "file":

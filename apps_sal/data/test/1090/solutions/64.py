@@ -1,4 +1,3 @@
-# https://drken1215.hatenablog.com/entry/2020/05/16/005300
 
 def main():
     from itertools import tee

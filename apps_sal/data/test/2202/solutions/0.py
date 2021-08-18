@@ -1,4 +1,3 @@
-# http://codeforces.com/contest/958/problem/C1
 
 N, p = list(map(int, input().split()))
 A = list(map(int, input().split()))
