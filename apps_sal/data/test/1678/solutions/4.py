@@ -3,7 +3,6 @@ n, t = map(int, r().split())
 arr = [int(x) for x in r().split()]
 N = -40**14 - 20**14
 presum = [0]
-# Function
 
 
 def update(Bit, x):
@@ -20,7 +19,6 @@ def get(Bit, x):
     return res
 
 
-#
 for i in arr:
     presum.append(presum[-1] + i)
 fakeIndex = [N]
@@ -30,14 +28,12 @@ for i in presum:
 fakeIndex.sort()
 Indx = {}
 for i, j in enumerate(fakeIndex):
-    #print(j,' ',i)
     Indx[j] = i
 n = len(fakeIndex)
 Bit = [0 for i in range(0, n + 1)]
 ans = 0
 cnt = 0
 for i in presum:
-    #temp = get(Bit,Indx[i-t])
     ans += (cnt - get(Bit, Indx[i - t]))
     update(Bit, Indx[i])
     cnt += 1

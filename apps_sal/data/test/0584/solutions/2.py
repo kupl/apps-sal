@@ -12,7 +12,6 @@ inside = False
 for w in word:
     if w == '':
         continue
-    # print(w)
     if w == '(':
         inside = True
         continue

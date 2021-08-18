@@ -1,8 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
-c = 0  # 負数の数
-ab = 10**10  # 絶対値の最小
-s = 0  # 絶対値の総和
+c = 0
+ab = 10**10
+s = 0
 for i in range(n):
     if a[i] < 0:
         c += 1

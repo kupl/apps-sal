@@ -11,8 +11,6 @@ INF = float('inf')
 def inp(): return int(sys.stdin.readline())
 def inpl(): return list(map(int, sys.stdin.readline().split()))
 
-# 素因数分解
-
 
 def prime_factorize(n):
     if n == 1:
@@ -36,7 +34,6 @@ def prime_factorize(n):
 n = inp()
 c = Counter(prime_factorize(n))
 res = 0
-# print(c)
 for k, v in c.items():
     if k == 1:
         continue

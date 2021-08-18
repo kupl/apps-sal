@@ -1,4 +1,3 @@
-# In the name of Allah
 
 from sys import stdin, stdout
 input = stdin.readline
@@ -16,9 +15,7 @@ for i in range(1, n):
         ans = max(ans, fc)
         fc -= f[start][1]
         start += 1
-        #print(f[start],fc, i)
 
     fc += f[i][1]
     ans = max(ans, fc)
-    #print(fc, ans)
 stdout.write(str(max(ans, fc)))

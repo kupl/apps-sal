@@ -1,4 +1,3 @@
-#!/bin/python3
 
 import sys
 n, m, k = list(map(int, input().split()))

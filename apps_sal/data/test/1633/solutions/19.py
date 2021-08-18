@@ -4,7 +4,6 @@ def Main():
     m = int(string[1])
     k = int(string[2])
 
-    # exit immediately if smth wrong
     if k == "0" or n == "0" or m == "0":
         print("0")
         return
@@ -21,9 +20,6 @@ def Main():
         string = (input()).split(" ")
         i = int(string[0]) - 1
         j = int(string[1]) - 1
-
-    #   i = i -1
-    #   j = j -1
 
         mas[i][j] = 1
         k = k - 1

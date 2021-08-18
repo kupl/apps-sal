@@ -10,7 +10,6 @@ for i in a:
     if abs(i) < min:
         min = abs(i)
     total += abs(i)
-#    print(i,min,total)
 if minus % 2 == 0:
     print(total)
 else:

@@ -1,7 +1,6 @@
 from collections import Counter
 import itertools as ittls
 3
-# -*- coding: <utf-8> -*-
 
 
 def sqr(x):
@@ -10,9 +9,6 @@ def sqr(x):
 
 def inputarray(func=int):
     return list(map(func, input().split()))
-
-# -------------------------------
-# -------------------------------
 
 
 N, d = list(map(int, input().split()))

@@ -1,4 +1,3 @@
-#!/bin/python
 import collections
 import random
 import sys

@@ -18,6 +18,3 @@ for _ in range(t):
     if len(b) >= 1:
         ans += max(b)
     print(ans)
-
-# a = list(map(int,input().split()))
-# n,m = map(int,input().split())

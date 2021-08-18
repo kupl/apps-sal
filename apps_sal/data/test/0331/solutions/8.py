@@ -2,10 +2,6 @@ import heapq
 from collections import deque
 import sys
 
-#
-# f = open('input.txt')
-# sys.stdin = f
-
 
 n, m, k = map(int, input().split())
 m -= 1

@@ -1,4 +1,3 @@
-# R=lambda:list(map(int,input().split()))
 """
 R=lambda:[int(i)for i in input().split()]
 I=3*10**8
