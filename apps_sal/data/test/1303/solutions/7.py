@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from sys import stdin
 p, q, l, r = map(int, stdin.readline().split())
 

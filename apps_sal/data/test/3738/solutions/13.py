@@ -31,7 +31,6 @@ class CodeforcesTask321ASolution:
         x = vector[0] * turns_away
         y = vector[1] * turns_away
         can = False
-        #print(vector, turns_away, x, y)
         if x == self.a_b[0] and y == self.a_b[1]:
             can = True
         for z in range(100):

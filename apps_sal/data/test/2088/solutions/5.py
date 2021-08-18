@@ -5,7 +5,6 @@ for i in range(n - 1):
     if not tr.get(p[i] - 1):
         tr[p[i] - 1] = []
     tr[p[i] - 1].append(i + 1)
-# print(tr)
 lc = [-1 for i in range(n)]
 
 

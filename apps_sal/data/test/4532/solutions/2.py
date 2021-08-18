@@ -22,5 +22,4 @@ for tests in range(t):
         elif MAX == C[c] and IND < c:
             IND = c
 
-    # print(MAX,IND)
     print(IND + 1 + (MAX - 1) * k)

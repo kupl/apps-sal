@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 E - Get Everything
 https://atcoder.jp/contests/abc142/tasks/abc142_e

@@ -14,20 +14,18 @@ ans = 0
 
 def comp(k, l, m, n):
     if m <= l and k <= n:
-        return 0  # eq
+        return 0
     elif m >= l:
-        return 1  # ab<cd
+        return 1
     else:
-        return -1  # ab>cd
+        return -1
 
 
 for t in range(x, y + 1):
     i = 0
     j = 0
     while i < p and j < q:
-        ##        print('i = ',i,'; j = ',j)
         z = comp(a[i], b[i], c[j] + t, d[j] + t)
-##        print('comp(', a[i],',',b[i],',',c[j]+t,',',d[j]+t,') = ',z)
 
         if z == 0:
             ans += 1

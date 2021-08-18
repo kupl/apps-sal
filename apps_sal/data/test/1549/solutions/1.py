@@ -16,4 +16,4 @@ for _ in range(Q):
         q += N
     else:
         q += bl(A, q)
-    sys.stdout.write(f'{(q - 1) % M + 1}\n')  # ----------------------------------------------
+    sys.stdout.write(f'{(q - 1) % M + 1}\n')

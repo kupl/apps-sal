@@ -1,4 +1,3 @@
-#!usr/bin/env python3
 import sys
 
 MOD = 10 ** 9 + 7

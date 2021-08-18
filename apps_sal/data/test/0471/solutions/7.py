@@ -1,4 +1,3 @@
-# You lost the game.
 n, a = list(map(int, input().split()))
 L = list(map(int, input().split()))
 L.sort()

@@ -9,7 +9,6 @@ def main():
         C = list(map(int, input().split()))
         c_bit = sum([1 << (c - 1) for c in C])
         for j in range(p):
-            #print(min(dp[i][j|c_bit], dp[i][j] + a))
             dp[j | c_bit] = min(dp[j | c_bit], dp[j] + a)
     if dp[p - 1] == inf:
         print(-1)
