@@ -5,7 +5,6 @@ class Solution:
         res = 0
         for i in range(n):
             for j in range(m):
-                # count the number of square with left-top corner be res[i][j]
                 done = False
                 new_i = i
                 new_j = j

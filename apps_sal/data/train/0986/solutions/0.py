@@ -42,21 +42,3 @@ while t > 0:
             print()
         else:
             print('CAPTAIN AMERICA EVADES')
-
-    # for i in range(1,n+1):
-    #   if i - k >=0 :
-    #       if a[abs(i-k-1)] == 0:
-    #           a[abs(i-k-1)] = i
-    #           done = True
-    #       else:
-    #           done = False
-    #           break
-    #   else:
-    #       done = False
-    #       break
-    # if done:
-    #   for c in a:
-    #       print c,
-    #   print
-    # else:
-    #   print "CAPTAIN AMERICA EVADES"

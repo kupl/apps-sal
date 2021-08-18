@@ -14,5 +14,3 @@ def get_drink_by_profession(param):
         return bartender[p]
     else:
         return "Beer"
-
-    # code me!

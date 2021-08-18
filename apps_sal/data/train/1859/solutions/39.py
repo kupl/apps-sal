@@ -11,7 +11,6 @@ class Solution:
                 new_j = j
 
                 while 0 <= new_i < n and 0 <= new_j < m and not done:
-                    #  check the squre of [i, new_i] * [j, new_j]
                     area = 0
                     for k in range(i, new_i + 1):
                         area += matrix[k][new_j]

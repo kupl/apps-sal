@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 def build_a_wall(x=0, y=0):
     if not x or not y or type(x) != int or type(y) != int or x < 0 or y < 0:
         return

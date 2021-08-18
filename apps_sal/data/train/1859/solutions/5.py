@@ -17,7 +17,6 @@ class Solution:
 
                 s_size = 0
                 while row + s_size < num_rows and col + s_size < num_cols and self.validate_sub_matrix(matrix, row, col, s_size):
-                    #print ((row, col, s_size))
                     count += 1
                     s_size += 1
         return count

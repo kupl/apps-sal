@@ -27,18 +27,12 @@ class Solution:
                     continue
                 r = num_right[(i, j)]
                 d = num_below[(i, j)]
-                # print('******************')
-                # print('Index', i,j)
-                # print('Counts', r,d)
-                # print(count)
-                # print(partial)
                 if matrix[i][j] == 1:
                     partial[(i, j, 1)] = 1
                     count += 1
                 diff = min(r, d)
                 flag = True
                 for k in range(2, diff + 2):
-                    #print('Checking k=', k)
                     if partial[(i, j + 1, k - 1)] == 1 and partial[(i + 1, j + 1, k - 1)] == 1 and partial[(i + 1, j, k - 1)] == 1:
                         partial[(i, j, k)] = 1
                         count += 1
@@ -47,5 +41,4 @@ class Solution:
                     if not flag:
                         break
 
-        # print(count)
         return count

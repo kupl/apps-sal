@@ -3,7 +3,6 @@ import copy
 
 class Solution:
     def countSquares(self, matrix: List[List[int]]) -> int:
-        # running sum first
         matrix2 = copy.deepcopy(matrix)
         for i in range(len(matrix)):
             start = matrix[i][0]
@@ -15,7 +14,6 @@ class Solution:
             for i in range(1, len(matrix)):
                 start += matrix2[i][j]
                 matrix2[i][j] = start
-        #print (matrix)
         res = 0
         row = len(matrix)
         col = len(matrix[0])
@@ -32,7 +30,6 @@ class Solution:
                             sums -= matrix2[i + t][j - 1]
                         if j - 1 >= 0 and i - 1 >= 0:
                             sums += matrix2[i - 1][j - 1]
-                        #print (i,j,length,sums,res)
                         if sums == length * length:
                             res += 1
                         else:

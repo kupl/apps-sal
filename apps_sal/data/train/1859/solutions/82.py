@@ -1,15 +1,9 @@
 class Solution:
     def countSquares(self, matrix: List[List[int]]) -> int:
-        # For every possible size (min(height, length))
-        # For every location of a 1
-        # Check if all 1's (if the remaining array sizes are valid i.e i + size < len(matrix) and j + size < len(matrix[0]))
 
-        # On the next size check, only continue if the previous step found at least 4.
-        # Error Checking
         if matrix is None or len(matrix) == 0 or len(matrix[0]) == 0:
             return 0
 
-        # General Case
         height = len(matrix)
         length = len(matrix[0])
         one_locations, square_submatrices = self.get_one_locations(matrix)
@@ -19,11 +13,9 @@ class Solution:
             if size != 2 and current_count < 4:
                 return square_submatrices
 
-            # Reset the count
             current_count = 0
 
             for location in one_locations:
-                # Check if it can even be valid before searching
                 h = location[0]
                 l = location[1]
 

@@ -27,16 +27,11 @@ class Solution:
                 count[1] += 1
                 r = num_right[(i, j)]
                 d = num_below[(i, j)]
-                # print('******************')
-                # print('Index', i,j)
-                # print('Counts', r,d)
-                # print(count)
                 curr = set()
                 if r == 0 and d == 0:
                     continue
                 flag = True
                 for k in range(2, min(r, d) + 2):
-                    #print('Checking k=',k)
                     for x in range(i, i + k):
                         for y in range(j, j + k):
                             curr.add(matrix[x][y])

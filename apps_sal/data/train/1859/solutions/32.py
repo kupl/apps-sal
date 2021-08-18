@@ -1,12 +1,5 @@
 class Solution:
     def countSquares(self, matrix: List[List[int]]) -> int:
-        #         def is_valid_square(start_row, end_row, start_col, end_col, matrix):
-        #             for row in range(start_row, end_row + 1):
-        #                 for col in range(start_col, end_col + 1):
-        #                     if matrix[row][col] != 1:
-        #                         return False
-
-        #             return True
 
         result = 0
         for row in range(len(matrix)):

@@ -1,4 +1,3 @@
-# cook your dish here
 def check(n):
     s = str(n)
     l = len(s)

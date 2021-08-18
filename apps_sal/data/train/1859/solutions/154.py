@@ -6,7 +6,6 @@ class Solution:
         for i in range(h):
             for j in range(w):
 
-                # check surounding value and status
                 if j - 1 >= 0:
                     left = acc_mat[i][j - 1]
                     left_status = merge_status_mat[i][j - 1]
@@ -28,10 +27,7 @@ class Solution:
                     topLeft = 0
                     topLeft_status = 0
 
-                # exec
                 merge_status_mat[i][j] = min(topLeft_status, top_status, left_status) + 1 if matrix[i][j] == 1 else 0
-                # print(i, j, topLeft_status,   merge_status_mat[i-1][j], left_status, merge_status_mat)
                 acc_mat[i][j] = left + top - topLeft + merge_status_mat[i][j]
-                # print(left, top, topLeft, acc_mat)
 
         return acc_mat[i][j]

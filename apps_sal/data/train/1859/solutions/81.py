@@ -12,12 +12,10 @@ class Solution:
             while x < len(matrix) and y < len(matrix[0]) and still_square:
                 for i in range(oriX, x + 1):
                     for j in range(oriY, y + 1):
-                        # print(oriX,oriY, x, y)
                         if matrix[i][j] != 1:
                             still_square = False
                             return count
                 count += 1
-                # print(oriX,oriY,x, y, \"this was a square\")
                 x += 1
                 y += 1
             return count

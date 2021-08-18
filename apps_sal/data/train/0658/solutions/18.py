@@ -1,6 +1,6 @@
 for i in range(int(input())):
     n = int(input())
-    dp = [[1 for k in range(n)] for k in range(2)]  # row 1: longest UD, row 2: longest DU
+    dp = [[1 for k in range(n)] for k in range(2)]
     nums = [int(i) for i in input().split()]
     answer = 0
     for k in range(n - 2, -1, -1):

@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     num = int(input())
     num_original = num2 = num
