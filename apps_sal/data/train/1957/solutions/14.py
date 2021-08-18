@@ -41,8 +41,6 @@ class Solution:
                         minDist[n] = min(minDist[n], dist[n][nk]) if n in minDist else dist[n][nk]
                         q.append((n[0], n[1], nk))
 
-        # print(dist)
-
         return minDist[target] if target in minDist else -1
 
     def neigh(self, pos):

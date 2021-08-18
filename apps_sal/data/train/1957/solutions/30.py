@@ -39,6 +39,3 @@ class Solution:
                         visited.add((n[0], n[1], k))
 
         return -1
-
-    # 1091 is shortest path in binary matrix
-    # time complexity is O(m*n*k)

@@ -11,7 +11,7 @@ class Solution:
         while dq:
             size = len(dq)
             for i in range(size):
-                r, c, p = dq.popleft()  # p: remaining k
+                r, c, p = dq.popleft()
                 if r == m - 1 and c == n - 1:
                     return step
                 for d in dirs:

@@ -3,7 +3,7 @@ class Solution:
         innerQueue = deque()
         innerQueue.append((0, 0, 0, 0))
 
-        gridSet = set()  # i, j, obstacle
+        gridSet = set()
         gridSet.add((0, 0, 0))
         directions = [[-1, 0], [0, -1], [1, 0], [0, 1]]
         ans = -1

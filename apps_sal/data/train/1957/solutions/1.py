@@ -23,7 +23,6 @@ class Solution:
                     R = r + x
                     C = c + y
 
-                    # We are approaching a already visited cell with same k
                     if (R, C, k) in seen:
                         continue
 

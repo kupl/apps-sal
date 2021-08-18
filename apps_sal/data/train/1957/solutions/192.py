@@ -3,7 +3,6 @@ class Solution:
         m, n = len(grid), len(grid[0])
         queue = collections.deque([(0, 0, k, 0)])
         visited = set()
-        # visited.add((0, 0, k))
         dirs = [(1, 0), (0, 1), (-1, 0), (0, -1)]
 
         if m == 1 and n == 1:

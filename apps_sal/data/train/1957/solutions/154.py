@@ -1,15 +1,5 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
-        # Just use BFS to record the steps and celss modified
-        # One concern is that you cannot simply record the stepped cells
-        # Because if u stepped on one cell u would not step on this again
-        # But u r using BFS, u might step on some cells because it is near the start
-        # But if u continue to walk down this path, u dont have enough modifications
-        # But there might be a path that require a detour first and then walk back on this
-        # Path, this requires step on stepped cells
-        # But if we dont record the stepped cells, it might TLE because u will running in cycles
-        # So we need to record stepped cells but can be stepped on again
-        # So we record the cells with the modifications made sofar
         q = collections.deque()
         if grid[0][0] == 1:
             k -= 1

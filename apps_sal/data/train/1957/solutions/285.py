@@ -1,9 +1,6 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
 
-        # i,j,k
-        # memo = {}
-
         H = len(grid)
         W = len(grid[0])
         direction = [[0, 1], [0, -1], [1, 0], [-1, 0]]
@@ -22,7 +19,6 @@ class Solution:
         q = 0
         K = k
 
-        # i,j,k
         visited = {}
         visited[(0, 0)] = k
 

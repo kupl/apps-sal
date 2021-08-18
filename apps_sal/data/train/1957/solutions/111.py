@@ -6,9 +6,6 @@ class Solution:
             return 0
         step = 1
 
-        # if k > nrows-1 + ncols-1:
-        #     return nrows-1+ncols-1
-
         q = collections.deque()
         visited = set([(0, 0, k)])
         q.append((0, 0, k, step))
@@ -39,6 +36,3 @@ class Solution:
                         visited.add((n[0], n[1], k))
 
         return -1
-
-    # 1091 is shortest path in binary matrix
-    # time complexity is O(m*n*k)

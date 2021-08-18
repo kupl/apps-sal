@@ -35,9 +35,6 @@ class Solution:
             step, (i, j, k) = q.popleft()
             if (i, j) == (m - 1, n - 1):
                 return step
-            # if k >= m + n - 3 - i - j:
-            #     print(i, j, k)
-            #     return step + m + n - 2 - i - j
 
             for ni, nj in neighbors(i, j):
                 nk = k - grid[ni][nj]

@@ -4,7 +4,6 @@ import collections
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
 
-        # (x, y, steps, remaining k)
         stack = collections.deque([(0, 0, 0, k)])
         visited = set()
         m = len(grid) - 1

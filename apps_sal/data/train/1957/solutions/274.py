@@ -23,7 +23,6 @@ class Solution:
             if i == len(grid) - 1 and j == len(grid[0]) - 1:
                 res = l
                 return True
-            # shortcut(只有(i,j) not in visited才能保证前面也是最短路径)
             if len(grid) - 1 - i + len(grid[0]) - 1 - j <= k + 1 and (i, j) not in visited:
                 res = l + len(grid) - 1 - i + len(grid[0]) - 1 - j
                 return True

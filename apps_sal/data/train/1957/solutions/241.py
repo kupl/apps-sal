@@ -5,7 +5,6 @@ MAX = 1601
 class Solution:
     def shortestPath(self, grid: List[List[int]], K: int) -> int:
         m, n = len(grid), len(grid[0])
-        #dp = [[{} for c in range(n)] for r in range(m)]
         maxK = [[-1] * n for _ in range(m)]
 
         q = deque([(0, 0, 0, K)])

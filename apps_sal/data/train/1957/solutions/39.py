@@ -4,7 +4,7 @@ class Solution:
             return -1
         n = len(grid)
         m = len(grid[0])
-        q = [[0, 0, 0, k]]  # len, row,col, obstacles is left
+        q = [[0, 0, 0, k]]
         seen = set()
         seen.add((0, 0, k))
         while q:

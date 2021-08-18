@@ -7,7 +7,7 @@ class Solution(object):
         if k >= m + n - 3:
             return m + n - 2
         n, m = n - 1, m - 1
-        bfs = [(0, 0, k)]  # i, j, remaining removals
+        bfs = [(0, 0, k)]
         seen = set()
         steps = 0
         while bfs:

@@ -1,8 +1,7 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
-        # BFS
         m, n = len(grid), len(grid[0])
-        initial_state = (0, 0, k)  # (i, j, remaining obstacle elimination ability)
+        initial_state = (0, 0, k)
         q = collections.deque()
         q.append(initial_state)
         visited = set()
