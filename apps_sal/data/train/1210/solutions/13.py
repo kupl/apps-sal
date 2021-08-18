@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     nx = input().split()
     n = int(nx[0])

@@ -1,9 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def maxAncestorDiff(self, root: TreeNode) -> int:
         return self.maxAncestorDiffHelper(root, [], 0)
@@ -21,5 +15,3 @@ class Solution:
         )
         ancestors.pop()
         return maxV
-
-    # TODO should be able to make this faster

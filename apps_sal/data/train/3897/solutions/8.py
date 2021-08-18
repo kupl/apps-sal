@@ -2,7 +2,6 @@ def solve(n, k):
     list1 = list(range(n))
     list1_values = list(list1)
     ball = list1[k]
-    # print(list1_values)
     counter = 0
     final_list = []
     for i in range(n):

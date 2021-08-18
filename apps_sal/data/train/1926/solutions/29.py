@@ -10,7 +10,6 @@ class Solution:
             for i in range(h1, 0, -1):
                 if n1 % i == 0:
                     tmp = n1 // i
-# print(i)
                     stack.append((abs(i - tmp), i, tmp))
         run(n1, h1)
         run(n2, h2)
