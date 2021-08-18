@@ -1,4 +1,3 @@
-# cook your dish here
 
 a, b = list(map(int, input().split()))
 ls = []

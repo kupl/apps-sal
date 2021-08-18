@@ -8,7 +8,6 @@ def find_average(array):
             self.val = val
 
         def __eq__(self, float_val):
-            # let me fix your comparisons..
             def isclose(a, b):
                 return abs(a - b) < 0.00000001
             return isclose(self.val, float_val)

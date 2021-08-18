@@ -17,7 +17,6 @@ for tests in range(t):
 
     count = 1
     Ans = 0
-    # print(A,Q)
     for i in range(1, n):
         if Q[i] > Q[i - 1]:
             count += 1

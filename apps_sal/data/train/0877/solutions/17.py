@@ -1,4 +1,3 @@
-# cook your dish here
 
 for TC in range(int(input())):
     x, y, k, n = list(map(int, input().split()))

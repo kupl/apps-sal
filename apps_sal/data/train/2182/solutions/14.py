@@ -23,6 +23,5 @@ while result_front - result_rear - 1 < n:
         else:
             result[result_rear] = igor.pop()
             result_rear -= 1
-    # print(result)
     o = not o
 print("".join(result))

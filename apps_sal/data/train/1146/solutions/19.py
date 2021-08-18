@@ -1,4 +1,3 @@
-# cook your dish here
 total, diff = list(map(int, input().split()))
 l1 = [int(input()) for m in range(total)]
 count = 0
