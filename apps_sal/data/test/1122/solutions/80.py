@@ -16,7 +16,6 @@ if n % 2 == 1:
 
 else:
     for i in range(m):
-        # ｎが偶数の場合は途中で1個捨てる
         a = x.popleft()
         aaa.append(a)
         b = x.pop()

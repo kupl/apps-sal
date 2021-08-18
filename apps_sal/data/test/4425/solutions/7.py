@@ -2,7 +2,6 @@ import math
 import sys
 input = sys.stdin.readline
 n, k = list(map(int, input().split()))
-#a = list(map(int,input().split()))
 
 par = 0
 

@@ -4,7 +4,6 @@ p = 1 / n
 
 ans = 0
 for result in range(1, n + 1):
-    # result = 1,2,3
     k = K
     k /= result
     cnt = 0

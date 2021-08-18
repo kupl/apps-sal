@@ -1,4 +1,3 @@
-#!/usr/bin/env python3.4
 
 n = int(input())
 ans = {'polycarp': 1}

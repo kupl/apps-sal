@@ -48,7 +48,6 @@ for begin in range(64):
             DP[keta][1][0] = DP[keta][1][0] + DP[keta + 1][0][0] * 0 + DP[keta + 1][0][1] * 0 + DP[keta + 1][1][0] * 1 + DP[keta + 1][1][1] * 0
             DP[keta][1][1] = DP[keta][1][1] + DP[keta + 1][0][0] * 0 + DP[keta + 1][0][1] * 0 + DP[keta + 1][1][0] * 0 + DP[keta + 1][1][1] * 1
 
-    # print(begin,DP[0])
     ANS += sum(DP[0][0]) + sum(DP[0][1])
 
 print(ANS % mod)

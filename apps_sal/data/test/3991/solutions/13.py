@@ -15,6 +15,3 @@ for i in range(len(x)):
     a %= 1000000007
 
 print(a)
-
-
-# Made By Mostafa_Khaled

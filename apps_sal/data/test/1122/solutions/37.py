@@ -7,8 +7,6 @@ import itertools
 from collections import deque, Counter
 from operator import mul
 import copy
-# ! /usr/bin/env python
-# -*- coding: utf-8 -*-
 import heapq
 
 n, m = list(map(int, input().split()))

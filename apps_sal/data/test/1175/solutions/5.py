@@ -28,13 +28,6 @@ for d in range(70):
         for rd in RD:
             a = 1
             for i in range(d):
-                # i<ld:  x==0 or 1
-                # i==ld: x==1
-                # i>ld:  x==L
-                # i<rd:  y==0 or 1
-                # i==rd: y==0
-                # i>rd:  y==R
-                # y>=x
                 if i < ld and i < rd:
                     a *= 3
                 if i < ld and i == rd:

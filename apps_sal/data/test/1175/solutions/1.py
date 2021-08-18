@@ -20,7 +20,6 @@ def subcalc(l, r):
     if (r & (r + 1) == 0) and (l == 0):
         return pow(3, r.bit_length(), P)
     t = (subcalc(l, r - (1 << bb - 1)) + subcalc(l, (1 << bb - 1) - 1) + subcalc(0, r - (1 << bb - 1))) % P
-    # print("subcalc", l, r, t)
     return t
 
 
@@ -36,12 +35,10 @@ def calc(L, R):
     b = R.bit_length()
     if b > a:
         t = (calc(L, (1 << b - 1) - 1) + calc(1 << b - 1, R)) % P
-        # print("calc", L, R, t)
         return t
 
     a = 1 << L.bit_length() - 1 if L else 0
     t = subcalc(L - a, R - a)
-    # print("calc", L, R, t)
     return t
 
 

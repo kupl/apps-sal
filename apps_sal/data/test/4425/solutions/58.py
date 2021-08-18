@@ -6,6 +6,5 @@ for i in range(1, n + 1):
     while tokuten < k:
         tokuten *= 2
         tmp = tmp / 2
-    # print(tmp)
     ans += tmp
 print(ans)

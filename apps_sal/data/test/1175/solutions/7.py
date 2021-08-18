@@ -34,62 +34,44 @@ def solve(L, R):
         l = max(L, (1 << msb))
         if l > r:
             continue
-        # print(bin(r), bin(l))
-        # dp[d][n][rより下を選んだ][lより上を選んだ]
         dp = np.zeros((r.bit_length(), 2, 2), dtype=int)
         for d in reversed(list(range(r.bit_length() - 1))):
             dp[-1][0][0] = 1
             if r >> d & 1:
                 if l >> d & 1:
-                    # r == 1, l == 1
-                    # y1, x1
                     dp[d][1][1] += dp[d + 1][1][1]
                     dp[d][1][0] += dp[d + 1][1][0]
                     dp[d][0][1] += dp[d + 1][0][1]
                     dp[d][0][0] += dp[d + 1][0][0]
-                    # y1, x0
                     dp[d][1][1] += dp[d + 1][1][1]
                     dp[d][0][1] += dp[d + 1][0][1]
-                    # y0, x0
                     dp[d][1][1] += dp[d + 1][1][1]
                     dp[d][1][1] += dp[d + 1][0][1]
                 else:
-                    # r == 1, l == 0
-                    # y1, x1
                     dp[d][1][1] += dp[d + 1][1][1]
                     dp[d][1][1] += dp[d + 1][1][0]
                     dp[d][0][1] += dp[d + 1][0][1]
                     dp[d][0][1] += dp[d + 1][0][0]
-                    # y1, x0
                     dp[d][1][1] += dp[d + 1][1][1]
                     dp[d][1][0] += dp[d + 1][1][0]
                     dp[d][0][1] += dp[d + 1][0][1]
                     dp[d][0][0] += dp[d + 1][0][0]
-                    # y0, x0
                     dp[d][1][1] += dp[d + 1][1][1]
                     dp[d][1][0] += dp[d + 1][1][0]
                     dp[d][1][1] += dp[d + 1][0][1]
                     dp[d][1][0] += dp[d + 1][0][0]
             else:
                 if l >> d & 1:
-                    # r == 0, l == 1
-                    # y1, x1
                     dp[d][1][1] += dp[d + 1][1][1]
                     dp[d][1][0] += dp[d + 1][1][0]
-                    # y1, x0
                     dp[d][1][1] += dp[d + 1][1][1]
-                    # y0, x0
                     dp[d][1][1] += dp[d + 1][1][1]
                     dp[d][0][1] += dp[d + 1][0][1]
                 else:
-                    # r == 0, l == 0
-                    # y1, x1
                     dp[d][1][1] += dp[d + 1][1][1]
                     dp[d][1][1] += dp[d + 1][1][0]
-                    # y1, x0
                     dp[d][1][1] += dp[d + 1][1][1]
                     dp[d][1][0] += dp[d + 1][1][0]
-                    # y0, x0
                     dp[d][1][1] += dp[d + 1][1][1]
                     dp[d][1][0] += dp[d + 1][1][0]
                     dp[d][0][1] += dp[d + 1][0][1]
@@ -101,8 +83,3 @@ def solve(L, R):
 
 
 print((solve(L, R)))
-# for l in range(1, R + 1):
-#     for r in range(l, R + 1):
-#         t1, t2 = solve(l, r), test(l, r)
-#         if t1 != t2:
-#             print(bin(l), bin(r), l, r, t1, t2)
