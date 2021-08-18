@@ -13,7 +13,6 @@ class Solution:
         if total == 0:
             return 0
         print(stack2)
-        # erase small
 
         def erase(i, j):
             print((i, j))

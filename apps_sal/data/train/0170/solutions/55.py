@@ -17,7 +17,6 @@ class Solution:
             nondecrright[i] = 1
 
         def f(l):
-            # true if removing l elements can make arr sorted
             for i in range(1, n - l):
                 if nondecrleft[i - 1] and nondecrright[i + l] and a[i - 1] <= a[i + l]:
                     return True

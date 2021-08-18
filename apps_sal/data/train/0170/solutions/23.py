@@ -24,5 +24,3 @@ class Solution:
             to_ret = min(to_ret, right_p - left_p - 1)
 
         return to_ret
-
-        # 10 2 99 12 13

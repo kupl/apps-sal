@@ -1,5 +1,3 @@
-# Matrix Block Sum
-# Ваш код ниже
 import numpy as np
 
 
@@ -22,7 +20,7 @@ class Solution:
         remove_sum_right = 0
         add_sum_right = 0
 
-        for i in range(size_row):  # i - строка
+        for i in range(size_row):
             if i != 0:
                 r_min = max(0, i - K)
                 r_max = min(size_row - 1, i + K)
@@ -32,7 +30,7 @@ class Solution:
 
                 res_cell = res[i - 1][0] + add_sum_down - remove_sum_down
 
-            for j in range(size_col):  # j - столбец
+            for j in range(size_col):
                 if j == 0:
                     res[i][j] = res_cell
                     continue

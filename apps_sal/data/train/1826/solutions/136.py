@@ -3,10 +3,8 @@ import numpy as np
 
 class Solution:
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
-        # Edge case
         if not mat or not mat[0]:
             return []
-        # General case
         mat = np.array(mat)
         m, n = mat.shape
         output = np.zeros((m, n), dtype=np.int)

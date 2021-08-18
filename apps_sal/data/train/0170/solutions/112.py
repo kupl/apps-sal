@@ -1,4 +1,3 @@
-# 1040
 
 class Solution:
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
@@ -37,16 +36,12 @@ class Solution:
                 a = begin - 1
                 b = end + 1
                 if (a < 0 or left_good[a]) and (b == n or right_good[b]) and ((not 0 <= a < b < n) or (arr[a] <= arr[b])):
-                    #print('found ', begin, sz)
                     return True
 
             return False
 
-        #print(left_good, right_good)
-
         while low <= high:
-            cur = int((low + high) / 2)  # low + (high - low) / 2
-            #print('trying', cur, enough(cur), low, high)
+            cur = int((low + high) / 2)
             if enough(cur):
                 high = cur - 1
             else:

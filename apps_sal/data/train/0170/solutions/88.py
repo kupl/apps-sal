@@ -10,7 +10,6 @@ class Solution:
         while r > 0 and arr[r] >= arr[r - 1]:
             r -= 1
         longest_array = max(longest_array, len(arr) - r)
-        #print(f'{l} {r}')
 
         p1 = 0
         p2 = r

@@ -39,9 +39,5 @@ class Solution:
                         left_extend = len(left)
 
                 ans = min(ans, min(left_extend, right_extend) + (end + 1 + shift2) - (start + shift1))
-                # extend.append(left_extend)
-                # extend.append(right_extend)
 
-        #print(extend, ans, desc_idx)
-        #ans += min(extend)
         return ans

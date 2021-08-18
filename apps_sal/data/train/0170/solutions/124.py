@@ -3,7 +3,6 @@ from typing import List
 
 class Solution:
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
-        # 1. formulate two non-decreasing arr
         pre_len = 1
         while pre_len < len(arr):
             if arr[pre_len] < arr[pre_len - 1]:
@@ -19,9 +18,7 @@ class Solution:
                 arr_b.insert(0, arr[j])
             else:
                 break
-        # print(arr_a, arr_b)
 
-        # 2. Loop through arr_a to find the ans
         ans = len(arr) - 1
         for i in range(len(arr_a)):
             j = self.binary_search(arr_b, arr_a[i])
@@ -31,7 +28,6 @@ class Solution:
         ans = min(ans, len(arr) - len(arr_b))
         return ans
 
-    # need to return the index i such that arr[i] >= num
     def binary_search(self, arr, num):
         low = 0
         high = len(arr) - 1
@@ -45,8 +41,6 @@ class Solution:
                 low = mid + 1
         return ans
 
-
-# leetcode submit region end(Prohibit modification and deletion)
 
 def __starting_point():
     solution = Solution()

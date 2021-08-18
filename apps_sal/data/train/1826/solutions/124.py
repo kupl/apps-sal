@@ -1,6 +1,5 @@
 class Solution:
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
-        #   积分图
         M = len(mat)
         N = len(mat[0])
 

@@ -9,7 +9,6 @@ class Solution:
             if arr[i] < arr[i - 1]:
                 l = i
                 break
-        # monotonicially increasing
         if l == n:
             return 0
 
@@ -18,13 +17,9 @@ class Solution:
                 r = j
                 break
 
-        # you can delete all to the left of r (including r)
-        # you can also delete all to the right of l (including l)
         ans = min(r + 1, n - l)
 
         i = 0
-        # sliding window, find the rightmost i for each j
-        # note at all time i must be less than l
         for j in range(r + 1, n):
             while i < l and arr[i] <= arr[j]:
                 i += 1
