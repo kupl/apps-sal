@@ -15,6 +15,4 @@ for i, a in enumerate(aaa, start=1):
         fwd_acc[i][a:] = fwd_acc[i][a:] + fwd_acc[i][:-a]
     fwd_acc[i] %= MOD
     ans = (ans + fwd_acc[i][s]) % MOD
-    # print(fwd_acc)
-    # print(ans)
 print(ans)

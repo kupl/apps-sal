@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     def socks():
         jacket, sock, money = map(int, input().split())

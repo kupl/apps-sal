@@ -1,4 +1,3 @@
-#!/usr/bin/env pypy3
 
 import array
 import itertools
@@ -7,7 +6,6 @@ IMPOSSIBLE = (-1, -1)
 
 
 def place_bomb(height, width, is_wall):
-    # zero-based
     walls_row = array.array("L", (sum(row) for row in is_wall))
     walls_column = array.array("L")
     for column_idx in range(width):
@@ -17,7 +15,6 @@ def place_bomb(height, width, is_wall):
         wiped_walls = walls_row[bomb_r] + walls_column[bomb_c]
         wiped_walls -= is_wall[bomb_r][bomb_c]
         if wiped_walls == total_walls:
-            # one-based
             return (bomb_r + 1, bomb_c + 1)
     else:
         return IMPOSSIBLE

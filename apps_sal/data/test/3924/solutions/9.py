@@ -23,7 +23,6 @@ for i in range(n):
                 x = 1
             else:
                 x = 0
-    # print(s,ans)
 
 
 if(s > 0):

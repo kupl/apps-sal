@@ -5,7 +5,6 @@ a = list(map(int, input().split()))
 ans = 0
 mod = 998244353
 
-# 係数を記録するための配列
 f = np.zeros(s + 1, int)
 
 for i in a:

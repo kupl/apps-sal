@@ -1,4 +1,3 @@
-# coding: utf-8
 import numpy as np
 mod = 998244353
 N, S = list(map(int, input().split()))

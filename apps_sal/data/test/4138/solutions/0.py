@@ -26,8 +26,8 @@ for _ in range(q):
 
     minSize = l[size - 1]
 
-    lo = 0  # Impossible
-    hi = (10**size - 10**(size - 1))  # Possible
+    lo = 0
+    hi = (10**size - 10**(size - 1))
 
     while hi - lo > 1:
         testV = (lo + hi) // 2

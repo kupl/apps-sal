@@ -23,12 +23,12 @@ class PolySolver:
         self.f = np.zeros(size, np.int64)
         self.f[0] = init_val
 
-    def multiple(self, polynomial, MOD):  # const1 * x^dim1 + const2 * x^dim2 + ... をfにかけ合わせる
+    def multiple(self, polynomial, MOD):
         new_F = np.zeros(self.size, np.int64)
         for dim, const in polynomial:
             if dim != 0:
                 g = np.zeros(self.size, np.int64)
-                g[dim:] += self.f[:-dim]  # dim分係数情報をずらす
+                g[dim:] += self.f[:-dim]
             else:
                 g = const * self.f.copy()
 
@@ -37,7 +37,7 @@ class PolySolver:
         self.f = new_F
         self.f %= MOD
 
-    def add(self, polynomial, MOD):  # const1 * x^dim1 + const2 * x^dim2 + ... をfに足す
+    def add(self, polynomial, MOD):
         for dim, const in polynomial:
             self.f[dim] += const
             self.f %= MOD

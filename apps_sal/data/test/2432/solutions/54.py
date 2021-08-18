@@ -1,5 +1,3 @@
-# Python3 code to check if k-th bit
-# of a given number is set or not
 
 def isKthBitSet(n, k):
     if n & (1 << (k - 1)):

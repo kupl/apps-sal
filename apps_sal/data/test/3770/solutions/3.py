@@ -84,7 +84,6 @@ def Dinic(s, g, lines, cost):
 
     while True:
 
-        # bfs
         q = deque([s])
         level = [float("inf")] * N
         level[s] = 0
@@ -99,7 +98,6 @@ def Dinic(s, g, lines, cost):
         if level[g] == float("inf"):
             return ans
 
-        # dfs
         delta_flow = Dinic_DFS(s, g, float("inf"), lines, cost, level)
         while delta_flow > 0:
             ans += delta_flow

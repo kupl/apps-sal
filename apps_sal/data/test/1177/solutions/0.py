@@ -2,7 +2,7 @@ import numpy as np
 from sys import stdin
 
 '''
-Reference: https://codeforces.com/blog/entry/75046#comment-591494 (1-based index)
+Reference: https://codeforces.com/blog/entry/75046
 
 (0-based index)
 
@@ -47,7 +47,7 @@ So the naive implementation is:
     for i, a in enumerate(A):
         dp[i, a] = i + 1
         for s in range(a + 1, S + 1):
-            dp[i, s] = dp[:i, s - a].sum() % M  # here can be optimized
+            dp[i, s] = dp[:i, s - a].sum() % M  
     
     ans = 0
     for i in range(N):

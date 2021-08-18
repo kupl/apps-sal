@@ -11,7 +11,6 @@ class TupleHeap(object):
     def add(self, var):
         self.heap.append(var)
         if len(self.heap) > 2:
-            # надо сортировать снизу
             el = len(self.heap) - 1
             par = el // 2
             while (el != 1) and (self.mult(el) > self.mult(par)):
@@ -21,13 +20,12 @@ class TupleHeap(object):
 
     def pop(self):
         if len(self.heap) == 1:
-            return None  # Нечего брать из кучи
+            return None
         ans = self.heap[1]
         if len(self.heap) == 2:
             self.heap.pop()
             return ans
         self.heap[1] = self.heap.pop()
-        # делаем сортировку вниз
         el = 1
         var_el = self.mult(el)
         child1 = el * 2
@@ -77,7 +75,6 @@ SUMM = 0
 
 curr = tuple_heap.pop()
 while (curr is not None) and (curr[0] > 0) and (curr[1] > 0) and (k > 0):
-    # кладём в кучу следующие элементы (если их там нет)
     new_tuple1 = (curr[0] - 1, curr[1])
     if new_tuple1 not in used:
         used.add(new_tuple1)
@@ -86,18 +83,11 @@ while (curr is not None) and (curr[0] > 0) and (curr[1] > 0) and (k > 0):
     if new_tuple2 not in used:
         used.add(new_tuple2)
         tuple_heap.add(new_tuple2)
-    # вычисляем кол-во элементов поля для такого curr
     x = 2 if curr[0] != max_x else col_max_x
     y = 2 if curr[1] != max_y else col_max_y
-    col = min(x * y, k)                          # размещаем рыбок в квадраты, но не более 1 рыбки на квадрат
-    k = k - col                           # сколько ещё рыбок надо разместить
+    col = min(x * y, k)
+    k = k - col
     SUMM = SUMM + col * curr[0] * curr[1]
     curr = tuple_heap.pop()
 
-# print(tuple_heap)
-# print(used)
-#print(max_x, max_y)
-#print(col_max_x, col_max_y)
-#print("SUMM =", SUMM)
-#print("Nr =", Nr)
 print(SUMM / Nr)

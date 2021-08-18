@@ -10,7 +10,7 @@ if (x == 0 or x_ % x == 0) and (y == 0 or y_ % y == 0):
     if x == 0 or y == 0:
         print("YES")
     if (x_ // x + y_ // y) % 2 == 0:
-        print("YES")  # kek
+        print("YES")
     else:
         print("NO")
 else:
