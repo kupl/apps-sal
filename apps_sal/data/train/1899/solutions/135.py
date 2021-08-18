@@ -27,7 +27,6 @@ class Solution:
                 dfs(new_row, new_col)
             return
 
-        # Find one island and use dfs to make them all #
         found = False
         for row in range(len(A)):
             for col in range(len(A[0])):
@@ -38,7 +37,6 @@ class Solution:
             if found:
                 break
 
-        # Do BFS starting from 2's
         twos = []
         for row in range(len(A)):
             for col in range(len(A[0])):

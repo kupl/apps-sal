@@ -6,9 +6,7 @@ class Solution:
 
         self.queue = []
 
-        # Source island index: 2
         self.src = 2
-        # Destination island index: 3
         self.dst = 3
         for island_index in [self.src, self.dst]:
             add_to_queue = (island_index == self.src)

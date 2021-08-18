@@ -37,7 +37,6 @@ class Solution:
                 break
 
         queue = edges
-        # print(edges)
         while len(queue) > 0:
             curr_row, curr_col = queue.pop(0)
             for row_shift, col_shift in zip(row_shifts, col_shifts):

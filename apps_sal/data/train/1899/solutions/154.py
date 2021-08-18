@@ -22,7 +22,6 @@ class Solution:
             break
 
         result = 2 * n
-        # print(zeros)
         q = collections.deque(zeros)
         visited = {(i, j)}
         steps = 1

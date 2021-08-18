@@ -1,6 +1,5 @@
 class Solution:
 
-    # Assigining '2' to one of the islands
     def paint(self, A, i, j):
         if i >= len(A) or i < 0 or j < 0 or j >= len(A[0]) or A[i][j] == 0 or A[i][j] == 2:
             return
@@ -8,7 +7,6 @@ class Solution:
         for nb in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
             self.paint(A, i + nb[0], j + nb[1])
 
-    # expanding from the perimeter of the island & incrementing color with every next outward move
     def expand(self, A, i, j, color):
         if i >= len(A) or i < 0 or j < 0 or j >= len(A[0]):
             return False
@@ -21,7 +19,6 @@ class Solution:
             return 0
         m, n, flag = len(A), len(A[0]), False
 
-        # Finding and coloring the first encountered island
         for i in range(m):
             if flag:
                 break
@@ -31,7 +28,6 @@ class Solution:
                     flag = True
                     break
 
-        # Growing outward and tracking number of steps taken to bump into other island
         for color in range(2, 2 + m + n + 1):
             for i in range(m):
                 for j in range(n):

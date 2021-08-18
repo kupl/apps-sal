@@ -20,15 +20,11 @@ class Solution:
                 if neighbour is not None
             ]
 
-        # find the first piece of land
         for i in range(n):
             for j in range(n):
                 if A[i][j] == 1:
                     first = (i, j)
-        # mark all pieces on the same land as \"2\",
-        # so we can easily diferentiate them from the other island
         q = queue([first])
-        # visited also contains all the pieces of land on the second island
         visited = set()
         visited.add(first)
         while q:

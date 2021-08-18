@@ -19,7 +19,7 @@ class Solution:
         for row in range(rows):
             for col in range(cols):
                 if A[row][col] == 1:
-                    A[row][col] = '#'
+                    A[row][col] = '
                     q = collections.deque([])
                     q.append((row, col))
                     while q:
@@ -34,12 +34,9 @@ class Solution:
                             nc = c + x
                             if nr < rows and nr >= 0 and nc < cols and nc >= 0 and A[nr][nc] == 1:
                                 q.append((nr, nc))
-                                A[nr][nc] = '#'
+                                A[nr][nc] = '
 
                     found_1 = True
-
-        # c1 = sorted(list(edges_1), key=lambda x: (x[0], x[1]))
-        # c2 = sorted(list(edges_2), key=lambda x: (x[0], x[1]))
 
         minn = float('inf')
 

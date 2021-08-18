@@ -1,7 +1,3 @@
-# 9:27 -> DNF
-# get an island as sets of 1s, bfs, O(|V|), where V is all A[i][j]
-# For one of the islands, run bfs from all its nodes to find the other island
-# return shortest of such bfs'
 from math import sqrt
 
 
@@ -83,19 +79,3 @@ class Solution:
                 shortest_bridge = min(shortest_bridge, shortest_bridge_here)
 
         return shortest_bridge - 1
-
-#         first_coords, second_coords = find_shortest_pair(first_island, second_island)
-
-#         i, j = first_coords
-
-#         return find_shortest_bridge(A, i, j, first_island) - 1
-
-#         shortest_bridge = len(A)*len(A[0])
-
-#         for island in first_island:
-#             i, j = island
-#             shortest_bridge_here = find_shortest_bridge(A, i, j, first_island)
-#             if shortest_bridge_here:
-#                 shortest_bridge = min(shortest_bridge, shortest_bridge_here)
-
-#         return shortest_bridge - 1

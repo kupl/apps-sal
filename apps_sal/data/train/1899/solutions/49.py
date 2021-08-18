@@ -50,6 +50,4 @@ class Solution:
                         if A[c_x][c_y]:
                             ans = min(ans, d[c_x][c_y] - 1)
 
-        # for v in i2:
-        #     ans = min(ans, d[v[0]][v[1]])
         return ans

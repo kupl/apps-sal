@@ -65,5 +65,4 @@ class Solution:
 
                         visited[new_x][new_y] = True
                         q.put((new_x, new_y, w + 1))
-        # Time Complexity O(V + E)
         return bfs(source_island, target_island, visited)

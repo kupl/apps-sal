@@ -1,6 +1,5 @@
 from collections import deque
 directions = [[0, 1], [0, -1], [1, 0], [-1, 0]]
-# 先dfs， 再bfs。
 
 
 class Solution:
@@ -17,7 +16,6 @@ class Solution:
                 if A[i][j] == 1:
                     self.dfs(i, j, A, q, visited)
                     found = True
-                    # 这里要break。 如果不break会继续往下找，那么两个岛就连成一个了。
                     break
 
         step = 0
@@ -44,8 +42,6 @@ class Solution:
         q.append((i, j))
         for dx, dy in directions:
             nx, ny = i + dx, j + dy
-            # if not self.isValid(nx, ny, A) or visited[nx][ny]:
-            #     continue
             self.dfs(nx, ny, A, q, visited)
 
     def isValid(self, i, j, A):

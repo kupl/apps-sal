@@ -13,7 +13,6 @@ class Solution:
 
         for i, j in product(list(range(m)), list(range(n))):
             if A[i][j] == 1:
-                # use dfs to detect the two island components
                 if (i, j) not in done:
                     stack = [(i, j)]
                     seen = {(i, j)}
@@ -29,9 +28,6 @@ class Solution:
 
         source, target = components
 
-        #
-        # BFS lke search from all source cells to any target cell
-        #
         heap = []
         for i, j in source:
             heappush(heap, (0, (i, j)))

@@ -39,17 +39,7 @@ class Solution:
             for neighbor in dirs((i, j), m, n):
                 if neighbor not in vis and grid[neighbor[0]][neighbor[1]] == 1:
                     dfs(grid, neighbor[0], neighbor[1], m, n, S)
-#             if (i<(m-1)) and ((i+1,j) not in vis) and (grid[i+1][j] == 1):
-#                 dfs(grid, i+1, j, m, n, S)
 
-#             if (i>0) and ((i-1,j) not in vis) and (grid[i-1][j] == 1):
-#                 dfs(grid, i-1, j, m, n, S)
-
-#             if (j<(n-1)) and ((i,j+1) not in vis) and (grid[i][j+1] == 1):
-#                 dfs(grid, i, j+1, m, n, S)
-
-#             if (j>0) and ((i,j-1) not in vis) and (grid[i][j-1] == 1):
-#                 dfs(grid, i, j-1, m, n, S)
             return
 
         M, N = len(A), len(A[0])
@@ -63,13 +53,8 @@ class Solution:
                     dfs(A, i, j, M, N, s)
                     I.append(s)
 
-        # print(len(I[0]), len(I[1]))
-
         level = {}
         visited = set()
         bfs(A)
-
-        # print(level)
-        # print(d)
 
         return min([level[j] for j in I[1]]) - 1
