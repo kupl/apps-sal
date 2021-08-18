@@ -13,6 +13,3 @@ else:
         x -= 1
 
     print(k - x)
-
-
-# Made By Mostafa_Khaled

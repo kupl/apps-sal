@@ -12,7 +12,6 @@ def read():
 
 
 def solve(X, Y, Z, K, A, B, C, INF=10000000001):
-    # 美味しさの上位K=3000件を出力する
     AB = [a + b for a, b in product(A, B)]
     AB.sort(reverse=True)
     AB = AB[:K]
@@ -24,14 +23,11 @@ def solve(X, Y, Z, K, A, B, C, INF=10000000001):
     for k in range(K):
         hi = 0
 
-        # find
         for i in range(len(D)):
             if D[hi] < D[i]:
                 hi = i
-        # print
         print((D[hi]))
 
-        # update
         E[hi] += 1
         if E[hi] >= len(C):
             D[hi] = -INF

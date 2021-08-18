@@ -1,4 +1,3 @@
-# import numpy as npy
 import functools
 import math
 
@@ -45,9 +44,6 @@ def cmpy(a, b):
 idx = sorted(idx, key=functools.cmp_to_key(cmpx))
 idy = sorted(idy, key=functools.cmp_to_key(cmpy))
 
-# print(idx)
-# print(idy)
-
 
 def disx(a, b):
     if x[a] != x[b]:
@@ -66,7 +62,6 @@ r = 2000000000
 ans = -1
 
 while l <= r:
-    # print(l,r)
     mid = (l + r) // 2
     for i in range(n):
         adj[i] = []
@@ -74,11 +69,9 @@ while l <= r:
         if disx(idx[i], idx[i + 1]) <= mid:
             adj[idx[i]].append(idx[i + 1])
             adj[idx[i + 1]].append(idx[i])
-            # print(idx[i],idx[i+1])
         if disy(idy[i], idy[i + 1]) <= mid:
             adj[idy[i]].append(idy[i + 1])
             adj[idy[i + 1]].append(idy[i])
-            # print(idy[i],idy[i+1])
     col = [0 for i in range(n)]
     cur = 0
 

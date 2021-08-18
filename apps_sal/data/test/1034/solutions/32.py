@@ -3,7 +3,6 @@ import heapq
 
 
 def main():
-    # 入力
     readline = stdin.readline
     x, y, z, k = map(int, readline().split())
     a = list(map(int, readline().split()))

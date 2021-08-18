@@ -32,6 +32,3 @@ else:
         u, v = v, u
 
     print(u[-1])
-
-
-# Made By Mostafa_Khaled

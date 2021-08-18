@@ -4,7 +4,7 @@ Blue = sorted([tuple(map(int, input().split())) for _ in range(N)])
 
 ans = 0
 for bx, by in Blue:
-    C = [(y, x) for x, y in Red if x < bx and y < by]  # 候補
+    C = [(y, x) for x, y in Red if x < bx and y < by]
     if len(C) == 0:
         continue
     ans += 1

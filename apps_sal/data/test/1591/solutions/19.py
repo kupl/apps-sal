@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
@@ -25,4 +23,3 @@ ans += ost // 2 + ost % 2
 print(ans)
 
 finish = time.time()
-#print(finish - start)

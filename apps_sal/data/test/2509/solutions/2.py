@@ -1,8 +1,5 @@
 N, K = 5, 2
 
-# N, K = 31415, 9265
-#
-# N, K = 10, 0
 
 N, K = list(map(int, input().split()))
 

@@ -11,7 +11,7 @@ for x in test:
     w1 = x
     f = False
     if w1 in st1:
-        f = True  # w1 - first lang
+        f = True
         w2 = st1[w1]
     else:
         w2 = st2[w1]
