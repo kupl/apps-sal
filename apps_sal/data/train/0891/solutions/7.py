@@ -1,4 +1,3 @@
-# cook your dish here
 n, m = map(int, input().split())
 for i in range(m):
     q = int(input())

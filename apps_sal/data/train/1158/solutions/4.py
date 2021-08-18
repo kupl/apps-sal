@@ -13,7 +13,6 @@ def check(s):
             d8 += 1
         else:
             return False
-    # print d3,d5,d8
     return d3 <= d5 <= d8
 
 
@@ -21,9 +20,7 @@ def main():
     cnt = 0
     for i in range(int(input())):
         s = input().split(" ")[-1]
-        # print s
         if check(s):
-            # print s
             cnt += 1
     print(cnt)
 

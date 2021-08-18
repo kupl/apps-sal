@@ -1,4 +1,3 @@
-# cook your dish here
 n = str(input())
 max = 0
 i = 0

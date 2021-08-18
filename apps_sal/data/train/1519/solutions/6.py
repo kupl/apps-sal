@@ -1,4 +1,3 @@
-# cook your dish here
 def fun(n):
     b = bin(n - 1).replace("0b", "")
     if b.count("0") == 0:

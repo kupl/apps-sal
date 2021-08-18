@@ -1,4 +1,3 @@
-# cook your dish here
 def isprime(n):
     i = 2
     while i * i < n:

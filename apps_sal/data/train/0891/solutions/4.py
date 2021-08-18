@@ -8,4 +8,3 @@ for i in range(m):
         print(x - n - 1)
     else:
         print((3 * n) + 1 - x)
-        # cook your dish here

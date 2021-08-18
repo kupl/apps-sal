@@ -1,4 +1,3 @@
-# this function tells you what you should drink based on your age.
 def people_with_age_drink(age):
     drink = "drink "
     if age < 14:

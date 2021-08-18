@@ -26,7 +26,6 @@ for MAXI in range(n + 1):
         ansMAXIBound = 0
         ansMAXI = 10 ** 10
         ansMIN = 0
-    # Find the maximum of minimum
     l = a[0]
     r = A - 1
 

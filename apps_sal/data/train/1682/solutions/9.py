@@ -1,4 +1,3 @@
-# cook your dish here
 a = input()
 a = [int(i) for i in a]
 l = []
