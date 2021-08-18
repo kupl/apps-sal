@@ -22,11 +22,6 @@ class Solution:
             if not val.isdigit():
                 str = str[:ind]
                 break
-        #sum = 0
-        #scale = 1
-        # for element in str[::-1]:
-        #    sum += scale * int (element)
-        #    scale *= 10
         sum = int(str)
 
         result = sign * sum

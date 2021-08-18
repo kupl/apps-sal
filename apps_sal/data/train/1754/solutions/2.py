@@ -3,7 +3,7 @@ from collections import Counter
 
 
 def valid(schedule):
-    N, G = len((schedule)[0]), len((schedule)[0][0])  # number of groups and sife of each one
+    N, G = len((schedule)[0]), len((schedule)[0][0])
     def test1(s): return all(len(set("".join(groups))) == N * G for groups in s)
     def test2(s): return all(len(groups) == N and all(len(g) == G for g in groups) for groups in s)
     def test3(s): return Counter(c for groups in s for g in groups for c in combinations(g, 2)).most_common(1)[0][1] < 2

@@ -14,7 +14,6 @@ for _ in range(T):
         elif word[x] == "a":
             left_count += curr_b
             right_count += (b_count - curr_b)
-            # print(x, left_count, right_count)
     res = K * (K + 1)
     res = res // 2
     res = res * (left_count + right_count)

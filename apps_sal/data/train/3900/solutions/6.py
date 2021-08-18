@@ -1,6 +1,6 @@
 def segment_display(num):
-    fline, fl, fr, frl, empty = ['  ###  '], [' #     '], ['     # '], [' #   # '], ['       ']
-    codes = [
+    fline, fl, fr, frl, empty = ['
+    codes= [
         empty * 9,
         fline + frl * 3 + empty + frl * 3 + fline,
         (empty + fr * 3) * 2 + empty,
@@ -14,7 +14,7 @@ def segment_display(num):
         fline + frl * 3 + fline + fr * 3 + fline
     ]
 
-    result = ""
-    for line in range(9):  # Hight is 9 lines
+    result= ""
+    for line in range(9):
         result += "|" + "|".join([codes[0 if letter == ' ' else int(letter) + 1][line] for letter in str(num).rjust(6)]) + "|\n"
     return result[:-1]

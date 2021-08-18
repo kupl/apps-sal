@@ -18,7 +18,7 @@ def simplify(path):
 
             remove_length = len(new_path_locations) - i
 
-            new_path_locations = new_path_locations[:i + 1]  # leave the current location
+            new_path_locations = new_path_locations[:i + 1]
 
             new_path = new_path[:i] + new_path[i + remove_length:]
 

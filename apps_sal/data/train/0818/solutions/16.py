@@ -20,7 +20,6 @@ while(t):
     ref1 = []
     for i in ref:
         ref1.append([i[1], i[0]])
-    # print(ref)
     q = int(input())
     while(q):
         q -= 1
