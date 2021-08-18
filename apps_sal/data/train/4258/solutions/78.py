@@ -1,5 +1,4 @@
 def series_sum(n):
-    # Happy Coding ^_^
     sum = float()
     j = 1
     for i in range(n):

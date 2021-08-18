@@ -1,4 +1,3 @@
-# cook your dish here
 class Animal:
     def __init__(self):
         start, end, starting_time = map(int, input().split())
@@ -43,7 +42,6 @@ def main():
             for j in range(no_cats):
                 time = rat.will_collide(Cats[j])
                 if time:
-                    # print(time)
                     if time < rat.eaten_by[1]:
                         rat.eaten_by = j + 1, time
 

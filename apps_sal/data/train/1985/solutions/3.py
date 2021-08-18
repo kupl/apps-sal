@@ -38,7 +38,6 @@ class Solution:
         return False
 
     def search(self, matrix, target):
-        # O(m+n)
         if not matrix or not matrix[0]:
             return False
         m, n = len(matrix), len(matrix[0])

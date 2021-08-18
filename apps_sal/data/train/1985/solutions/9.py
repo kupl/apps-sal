@@ -5,7 +5,6 @@ class Solution:
         :type target: int
         :rtype: bool
         """
-        # method1: brute-force o(n*m)
         if not matrix:
             return(False)
         row = len(matrix)

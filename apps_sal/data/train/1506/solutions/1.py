@@ -1,4 +1,3 @@
-# cook your dish here
 def issafe(a, b, n, m):
     if(0 <= a < n and 0 <= b < m):
         return True
