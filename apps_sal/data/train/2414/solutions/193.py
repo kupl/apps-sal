@@ -6,7 +6,6 @@ class Solution:
         C = list(combinations(arr, 3))
         C = [self.checkGood(x, a, b, c) for x in C]
         C = [x for x in C if x != None]
-        # print(C)
         return len(C)
 
     def checkGood(self, tup, a, b, c):

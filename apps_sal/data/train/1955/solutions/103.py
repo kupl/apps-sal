@@ -23,8 +23,6 @@ class Solution:
                     nodes.append(res[node])
                 nodes.sort()
                 visited.sort()
-                # print(nodes)
-                # print(visited)
                 for node, index in zip(nodes, visited):
                     res[index] = node
         return ''.join(res)

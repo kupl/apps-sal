@@ -17,13 +17,13 @@ class Solution:
         group2chars = defaultdict(list)
         for idx, char in enumerate(s):
             gid = find(idx)
-            group2chars[gid].append(char)  # collect chars for each group (connected component)
+            group2chars[gid].append(char)
         for gid in group2chars:
-            group2chars[gid].sort(reverse=True)  # sort the chars (in reverse order) in one connected component
+            group2chars[gid].sort(reverse=True)
 
         outstr = ''
         for idx, char in enumerate(s):
             gid = find(idx)
-            outchar = group2chars[gid].pop()  # pop from the order of a to z (since sorted in a reverse way)
+            outchar = group2chars[gid].pop()
             outstr += outchar
         return outstr

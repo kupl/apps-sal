@@ -1,5 +1,4 @@
 def reverse_fun(n):
-    # Solution 2
     from collections import deque as dq
     n = dq(n)
     n_dq = dq()

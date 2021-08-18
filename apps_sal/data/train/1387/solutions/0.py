@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 
 mod_val = 1000000007
@@ -35,11 +34,9 @@ def cal_recurse(i, target_sum):
     choose = rang[i + 1] % mod_val
     for j in range(1, max_pos + 1):
         temp = choose * cal_recurse(i + 1, target_sum - j * (i + 1))
-        # temp%=mod_val
         ans += temp
         ans %= mod_val
         choose *= rang[i + 1] + j
-        # choose %= mod_val
         choose *= pow_cache[j + 1]
         choose %= mod_val
     multisets[i, target_sum] = ans

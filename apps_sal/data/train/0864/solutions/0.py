@@ -10,5 +10,5 @@ for c in range(testCases):
         else:
             sum += i
         i += 1
-    answer = "Case #" + str(c + 1) + ": " + str(sum)
+    answer = "Case
     print(answer)

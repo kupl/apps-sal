@@ -7,7 +7,7 @@ class Solution:
                 parent[x] = find(parent[x])
             return parent[x]
 
-        for edge in pairs:  # Union
+        for edge in pairs:
             parent[find(edge[0])] = find(edge[1])
 
         parent_table = collections.defaultdict(list)

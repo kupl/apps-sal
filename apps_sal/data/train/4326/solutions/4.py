@@ -1,4 +1,4 @@
-def london_city_hacker(journey):  # Jai Shree Ram
+def london_city_hacker(journey):
     total = 0.0
     l = []
     for i in range(len(journey)):

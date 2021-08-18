@@ -11,8 +11,8 @@ class Solution:
                     if r in ij:
                         ij[r].append(q)
                     else:
-                        ij[r] = [q]  # r = j, q = i
-                if v <= b:  # q = j, r = k, ij[q] = i
+                        ij[r] = [q]
+                if v <= b:
                     if q in ij:
                         for i in ij[q]:
                             if abs(arr[i] - arr[r]) <= c:

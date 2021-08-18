@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     s = input()
@@ -11,7 +10,6 @@ for _ in range(t):
         for i in range(len(s) - 1, -1, -1):
             x = s[i - 3:i + 1]
 
-            # print(x)
             xx = 'CHEF'
             for j in range(len(x)):
                 if x[j] == '?':
@@ -23,4 +21,3 @@ for _ in range(t):
             if s[i] == '?':
                 s = s[:i] + 'A' + s[i + 1:]
     print(s)
-    # print()

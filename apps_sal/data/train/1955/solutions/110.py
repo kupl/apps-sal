@@ -4,7 +4,6 @@ from collections import defaultdict
 class Solution:
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         p = list(range(len(s)))
-        # r = [1]*len(s)
         d = defaultdict(list)
 
         def find(x):

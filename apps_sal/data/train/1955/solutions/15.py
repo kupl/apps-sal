@@ -25,7 +25,6 @@ class Solution:
 
                 sorted_tmp = sorted(self.tmp)
                 sorted_idx = sorted(self.idx)
-                # print(sorted_tmp, sorted_idx,\"CONNECTED\", self.visited)
 
                 for index in range(len(sorted_idx)):
                     self.ls[sorted_idx[index]] = sorted_tmp[index]

@@ -2,8 +2,6 @@ class Solution:
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
 
         def find(x):
-            # parent.setdefault(x,x)
-            # print(x)
             if x != parent[x]:
                 parent[x] = find(parent[x])
             return parent[x]
