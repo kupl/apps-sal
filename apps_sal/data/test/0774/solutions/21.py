@@ -4,7 +4,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 349B
 '''
 def main():
 	from sys import stdin,stdout
@@ -22,12 +21,9 @@ def main():
 	if maxindex > -1:
 		ans = [ (maxindex+1) for i in range(maxim)]
 		N= N%arr[maxindex]
-		#print(N)
 		i = 0
 		while i<maxim:
-			#print('i=',i,'N=',N)
 			for j in range(8,maxindex,-1):
-				#print('j=',j,'diff=',arr[j]-arr[ans[i]-1])
 				if arr[j]-arr[ans[i]-1] <=N:
 					N -= arr[j]-arr[ans[i]-1]
 					ans[i] = j+1
@@ -40,7 +36,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 234B Input and Output
 '''
 def main():
 	from sys import stdin,stdout
@@ -68,7 +63,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 151B
 '''
 def main():
 	from sys import stdin,stdout
@@ -85,7 +79,6 @@ def main():
 		while n:
 			ip=stdin.readline().strip()
 			ip=ip.replace('-','')
-			#test for taxi
 			flag=True
 			for i in range(1,6):
 				if ip[i]!=ip[0]:
@@ -95,7 +88,6 @@ def main():
 				names[ns][0]+=1
 				n-=1
 				continue
-			#test for pizza
 			flag = True
 			for i in range(1,6):
 				if int(ip[i])>=int(ip[i-1]):
@@ -107,8 +99,6 @@ def main():
 			else:
 				names[ns][2]+=1
 			n-=1
-	#print(names)
-	#for all girls
 	t=-1
 	p=-1
 	g=-1
@@ -132,7 +122,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# SQUADRUN Q2
 '''
 def LCMgen(a):
 	import math
@@ -158,7 +147,6 @@ def main():
 def __starting_point():
 	main()
 '''
-# 143B
 '''
 def main():
     from sys import stdin,stdout
@@ -201,7 +189,6 @@ def __starting_point():
     main()
 
 '''
-# A
 '''
 def main():
     from sys import stdin,stdout
@@ -219,7 +206,6 @@ def main():
 def __starting_point():
     main()
 '''
-# B
 '''
 def main():
     from sys import stdin,stdout
@@ -231,7 +217,6 @@ def main():
 def __starting_point():
     main()
 '''
-# 233B
 '''
 def main():
     from sys import stdin,stdout
@@ -283,7 +268,6 @@ def main():
 def __starting_point():
     main()
 '''
-# RECTANGL
 '''
 def main():
     from sys import stdin,stdout
@@ -301,7 +285,6 @@ def main():
 def __starting_point():
     main()
 '''
-# MAXSC
 '''
 def main():
     from sys import stdin,stdout
@@ -311,7 +294,6 @@ def main():
         mat = []
         for i in range(N):
             mat.append(sorted(map(int,stdin.readline().split())))
-##        print(mat)
         temp = mat[-1][-1]
         tsum = mat[-1][-1]
         flag = True
@@ -329,7 +311,6 @@ def main():
 def __starting_point():
     main()
 '''
-# 233B ********************
 '''
 def main():
     def rev(x):
@@ -344,7 +325,6 @@ def main():
     for i in range(91):
         r = i*i+(n<<2)
         x = ceil(sqrt(r))
-##        print(i,x)
         if x*x == r:
             num = (x-i)/2
             if num == int(num):
@@ -355,7 +335,6 @@ def main():
 def __starting_point():
     main()
 '''
-# 228B
 '''
 def main():
     from sys import stdin,stdout
@@ -367,8 +346,6 @@ def main():
     B= []
     for _ in range(ma):
         B.append([int(x) for x in stdin.readline().strip()])
-##    print(A)
-##    print(B)
     maxim , value = -1, None 
     for x in range(1-na,ma):
         for y in range(1-nb,mb):
@@ -377,18 +354,15 @@ def main():
                 for j in range(nb):
                     if i+x > -1 and i+x <ma and i>-1 and i<na and j>-1 and j<nb and j+y > -1 and j+y <mb:
                         tmp+=A[i][j]*B[i+x][j+y]
-##            print(x,y,tmp)
             if tmp > maxim:
                 maxim = tmp
                 value = (x,y)
-##    print("MAXIM:",maxim,"VALUE:",value)
     stdout.write(str(value[0])+' '+str(value[1]))
     
 def __starting_point():
     main()
 '''
 
-# 260B
 '''
 def main():
     import re , collections, datetime
@@ -420,7 +394,6 @@ def __starting_point():
     main()
 '''
 
-# 214B
 '''
 def main():
     from sys import stdin,stdout
@@ -458,7 +431,6 @@ def main():
 def __starting_point():
     main()
 '''
-# 281 B
 
 
 def main():
@@ -478,7 +450,6 @@ def main():
             ans.append((round(abs(b / n - ratio), 15), n, b))
         n -= 1
     ans.sort()
-# print(ans)
     stdout.write(str(ans[0][2]) + '/' + str(ans[0][1]))
 
 

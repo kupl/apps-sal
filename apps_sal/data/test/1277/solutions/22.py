@@ -31,8 +31,6 @@ while len(q) > 0:
             d_v[dst] = dist_tmp
             heapq.heappush(q, (dist_tmp, dst))
 
-# print("#", d_u)
-# print("#", d_v)
 
 ans = 0
 for i in range(N):

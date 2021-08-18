@@ -1,5 +1,3 @@
-# F - Playing Tag on Tree
-# https://atcoder.jp/contests/abc148/tasks/abc148_f
 
 from heapq import heappop, heappush
 
@@ -33,12 +31,9 @@ for a, b in edge:
 from_u = dijkstra(n, graph, u - 1)
 from_v = dijkstra(n, graph, v - 1)
 
-# print(from_u)
-# print(from_v)
 
 fil = [x for x in [[fu, fv] for fu, fv in zip(from_u, from_v)] if x[0] < x[1]]
 sfil = sorted(list(fil), key=lambda x: [-x[1], -x[0]])
 
-# print(sfil)
 
 print((sfil[0][1] - 1))

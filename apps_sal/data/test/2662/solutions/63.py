@@ -7,7 +7,6 @@ def bisect_right_reverse(a, x):
         return 0
     if x <= a[-1]:
         return len(a)
-    # 二分探索
     ok = len(a) - 1
     ng = 0
     while (abs(ok - ng) > 1):

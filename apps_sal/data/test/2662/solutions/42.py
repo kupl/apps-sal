@@ -5,7 +5,6 @@ for i in range(N):
     seq[i] = (-1) * int(input())
 
 """
-#リストseqからLISの長さを出す
 LIS = [seq[0]]
 for i in range(len(seq)):
     if seq[i] >= LIS[-1]:
@@ -14,7 +13,6 @@ for i in range(len(seq)):
         LIS[bisect_right(LIS, seq[i])] = seq[i]
 
 print(len(LIS) - 1)
-#print(LIS)
 """
 
 
@@ -25,7 +23,6 @@ def getLIS(_N, a):
     for i in range(_N):
         dp[bisect_right(dp, a[i])] = a[i]
 
-    # print(dp[:10])
     return dp[:bisect_left(dp, INF)]
 
 

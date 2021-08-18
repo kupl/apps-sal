@@ -13,7 +13,7 @@ def main():
     dp[0] = 0
     for AA in A:
         bis = bisect.bisect_right(dp, AA)
-        dp[bis] = AA  # n以下の個数を数える
+        dp[bis] = AA
     print(bisect.bisect_right(dp, inf - 100) - 1)
 
 

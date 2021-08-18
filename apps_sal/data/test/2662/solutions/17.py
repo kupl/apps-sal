@@ -1,4 +1,3 @@
-# AtCoder Beginner Contest 134 E - Sequence Decomposing
 
 import sys
 
@@ -14,9 +13,8 @@ for n in range(N - 1):
     elif ans[-1] >= now:
         ans.append(now)
     else:
-        # 2部探査で行進位置を探る
-        left = 0  # 挿入不可能
-        right = len(ans) - 1  # 挿入可能
+        left = 0
+        right = len(ans) - 1
 
         while right - left > 1:
             mid = (right + left) // 2

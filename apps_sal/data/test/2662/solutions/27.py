@@ -1,4 +1,3 @@
-# YouTube解説の方法（deque使わない）
 import sys
 input = sys.stdin.readline
 

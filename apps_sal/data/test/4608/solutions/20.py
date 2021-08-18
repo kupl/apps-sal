@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 
 import sys
 nyuryoku = [int(i) - 1 for i in sys.stdin]
@@ -10,7 +9,6 @@ a_list = nyuryoku[1:]
 cnt_push = 0
 button_list = [False] * N
 i = 0
-#cur_but_posi = a_list[0]
 
 while True:
     if button_list[i] == False:

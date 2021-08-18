@@ -10,8 +10,6 @@ def read():
 
 
 def solve(N, A, INF=10**9 + 1):
-    # LIS
-    # dp[i]: 長さiの最長増加部分列(A[i]<A[j])のうち、最も小さい数字
     dp = [INF for i in range(N)]
     for i in range(N):
         a = A[N - i - 1]

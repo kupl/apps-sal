@@ -12,8 +12,6 @@ for i in range(1, N):
 
     if ind == 0:
         dp.appendleft(A[i])
-    # elif dp[-1] < A[i]:
-    #     dp[-1] = A[i]
     else:
         dp[ind - 1] = A[i]
 
