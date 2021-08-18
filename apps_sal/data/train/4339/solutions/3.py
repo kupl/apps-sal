@@ -1,5 +1,4 @@
 def roots(a, b, c):
-    # your code
     d = b**2 - 4 * a * c
     if d < 0:
         return None

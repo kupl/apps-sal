@@ -18,4 +18,3 @@ def choose_best_sum(t, k, ls):
         return
     else:
         return t - c[0]
-        # your code

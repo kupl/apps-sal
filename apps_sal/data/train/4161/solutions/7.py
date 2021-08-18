@@ -1,7 +1,6 @@
 def rat_at(n):
     if n == 0:
         return 1, 1
-    # find line
     line = 1
     tot = 0
     while tot <= n:
@@ -10,13 +9,12 @@ def rat_at(n):
     if line > 1:
         line -= 1
     route = ''
-    b = 2**line  # nr of elements in the line
-    pos = n + 1 - 2**line  # pos in the line
+    b = 2**line
+    pos = n + 1 - 2**line
     while b > 1:
         if pos < b // 2:
             route += 'l'
             b = b // 2
-            # pos does not change
         else:
             route += 'r'
             b = b // 2

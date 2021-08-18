@@ -1,7 +1,3 @@
-# go through each item and choose one
-# add that plus choose best_sum of that list minus the item
-# return list if k == 0 and t >= 0
-# return None if k == 0 and t < 0
 import math
 
 from itertools import combinations

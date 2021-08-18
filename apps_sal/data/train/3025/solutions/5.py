@@ -1,5 +1,4 @@
 def locate(seq, value):
-    # initialize
     clean = []
     return value in unfold(clean, seq)
 

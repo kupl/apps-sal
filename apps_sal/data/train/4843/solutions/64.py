@@ -2,7 +2,6 @@ import itertools
 
 
 def choose_best_sum(t, k, ls):
-    # your code
     d = itertools.combinations(ls, k)
     d = [list(x) for x in d]
     d = list(k for k, _ in itertools.groupby(d))

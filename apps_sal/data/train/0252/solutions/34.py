@@ -5,5 +5,4 @@ class Solution:
         for i in range(0, n + 1):
             for j in range(max(0, i - ranges[i]), min(n + 1, i + ranges[i] + 1)):
                 dp[j] = min(dp[j], dp[max(0, i - ranges[i])] + 1)
-        # print(dp)
         return dp[n] if dp[n] < 2 * n else -1

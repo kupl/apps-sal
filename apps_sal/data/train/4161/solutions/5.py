@@ -1,9 +1,5 @@
-# This is not my code :,(
-# I used those functions from here http://240hoursoflearning.blogspot.com/2017/09/the-calkin-wilf-tree.html
-# Shame and dishonor on me :,(
 
 def rat_at(n):
-    # This is not my code :,(
     frac = [0, 1]
     n += 1
     nums = [n]
@@ -23,7 +19,6 @@ def rat_at(n):
 
 
 def index_of(a, b):
-    # This is not my code :,(
     if [a, b] == [1, 1]:
         return 0
 

@@ -1,7 +1,5 @@
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        # Start at 6:00PM
-        # Get ranges
         import heapq
         print(len(ranges))
         range_tuples = []
@@ -15,7 +13,6 @@ class Solution:
         heap = [(0, 0)]
 
         for (start_pos, end_pos) in range_tuples:
-            # Remove elements from the heap less than start_pos
             while heap and heap[0][0] < start_pos:
                 heapq.heappop(heap)
 
@@ -26,7 +23,6 @@ class Solution:
                     curr_min_cost = cost
 
             if curr_min_cost == float('inf'):
-                # Get the next closest point cost
                 if not heap:
                     return -1
             else:

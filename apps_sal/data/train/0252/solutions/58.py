@@ -10,7 +10,6 @@ class Solution:
             for j in range(left, right + 1):
                 steps[j] = right
 
-        # print(steps)
         res = 1
         prev = 0
         cur = steps[0]

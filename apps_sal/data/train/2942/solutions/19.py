@@ -1,5 +1,4 @@
 def fold_to(distance):
-    # your code here
     folds = 0
     thickness = 0.0001
     total = 0
