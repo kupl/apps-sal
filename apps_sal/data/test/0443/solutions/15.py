@@ -1,7 +1,6 @@
 def f():
     n = int(input())
     a = list(map(int, input().split()))
-    # print(n, a)
     s = sum(a)
     if n < 2:
         print(-1)

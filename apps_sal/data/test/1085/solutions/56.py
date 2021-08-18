@@ -1,4 +1,3 @@
-# coding: utf-8
 import sys
 
 
@@ -8,11 +7,10 @@ def lr(): return list(map(int, sr().split()))
 
 
 N = ir()
-# 候補はNかN-1の約数
 answer = 0
 
 
-def make_divisors(n):  # nの約数を列挙
+def make_divisors(n):
     divisors = []
     for i in range(1, int(n**0.5) + 1):
         if n % i == 0:

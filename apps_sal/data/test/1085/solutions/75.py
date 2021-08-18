@@ -1,9 +1,5 @@
-# 方針は解説と全く同じなので割愛
 
 n = int(input())
-
-# 約数列挙
-# ABC136Eより
 
 
 def get_divisors(num):
@@ -14,9 +10,9 @@ def get_divisors(num):
     for d in range(1, num):
         if d * d > num:
             break
-        if num % d == 0:  # 約数
+        if num % d == 0:
             divisors.append(d)
-            if d * d != num:  # numの平方根の場合は重複するので追加しない
+            if d * d != num:
                 divisors.append(int(num // d))
 
     return divisors

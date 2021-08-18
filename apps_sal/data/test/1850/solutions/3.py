@@ -1,5 +1,3 @@
-# PREYANSH RASTOGI
-# 2017176
 
 
 def __starting_point():

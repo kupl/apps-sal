@@ -39,13 +39,11 @@ def main():
         if dist[v][s] < x:
             continue
 
-        # 遷移
         ns = min(s + C[v], MAX_S)
         if dist[v][ns] > x + D[v]:
             dist[v][ns] = x + D[v]
             heapq.heappush(que, [x + D[v], v, ns])
 
-        # 遷移
         for e in E[v]:
             if s - e.cost < 0:
                 continue

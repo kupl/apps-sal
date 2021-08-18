@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     X = int(input())
     m = 1000000007

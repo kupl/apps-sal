@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from math import ceil
 
 
@@ -24,16 +23,9 @@ def problem(line1, line2, line3):
     enemies = position - 1
     awards = awards[-(enemies):]
 
-#    print(my_award)
-#    print(enemies)
-#    print(diffs)
-#    print(awards)
-
     enemy_idx = 0
     award_idx = 0
     overtakes = 0
-
-#    print(award_idx)
 
     while award_idx < len(awards):
         while (award_idx < enemies) and (diffs[enemy_idx] + awards[award_idx] > my_award):

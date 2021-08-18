@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import Counter
 N = int(input())
 A = list(map(int, input().split()))

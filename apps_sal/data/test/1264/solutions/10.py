@@ -1,5 +1,4 @@
 import sys
-# f = open('input', 'rt')
 f = sys.stdin
 n = int(f.readline())
 a = list(map(int, f.readline().split()))

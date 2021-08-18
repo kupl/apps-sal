@@ -84,7 +84,6 @@ else:
         xxx = chineseRemainder(I, x, lrem % I, rem)
         lrem = xxx[0]
         I = auxI
-        # print(lrem,rem,x,I)
     if lrem == 0:
         lrem = I
     if int(lrem) > m - k + 1:
@@ -93,5 +92,3 @@ else:
         print('NO')
     else:
         print('YES')
-
-# 1491583330722

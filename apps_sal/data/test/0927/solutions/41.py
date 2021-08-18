@@ -47,5 +47,3 @@ ans = str()
 for i in reversed(list(range(1, 10))):
     ans += str(i) * dp[-1][i]
 print(ans)
-# print(d)
-# print(dp[-1])

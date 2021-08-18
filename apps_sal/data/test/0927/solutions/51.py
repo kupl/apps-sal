@@ -2,7 +2,6 @@ def main():
     n, m = map(int, input().split())
     a = set(map(int, input().split()))
 
-    # type(x) == type(y) == string
     def bigger(x, y):
         if len(x) > len(y):
             return x

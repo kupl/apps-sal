@@ -18,11 +18,9 @@ ans = ""
 keta = ketadp(N, M, A)
 remain = keta[N]
 match = N
-# print(keta)
 
 while(match > 0):
     for i in A:
-        # print(i,match,remain,keta[match-honsuu[i]])
         if match - honsuu[i] < 0:
             continue
         if(keta[match - honsuu[i]] == remain - 1) and not (match - honsuu[i] != 0 and remain == 1):

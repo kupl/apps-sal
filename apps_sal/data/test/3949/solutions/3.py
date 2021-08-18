@@ -11,9 +11,9 @@ for i in range(r):
     kon = -1
     hasze = 0
     for j in range(c):
-        if mat[i][j] == '#':
-            hasze += 1
-            if st == -1:
+        if mat[i][j] == '
+          hasze += 1
+           if st == -1:
                 st = j
             kon = j
     wiersze.append([st, kon])
@@ -26,9 +26,9 @@ for j in range(c):
     kon = -1
     hasze = 0
     for i in range(r):
-        if mat[i][j] == '#':
-            hasze += 1
-            if st == -1:
+        if mat[i][j] == '
+          hasze += 1
+           if st == -1:
                 st = i
             kon = i
     if hasze == 0:

@@ -10,7 +10,6 @@ for a in alist:
 hq = []
 for k, b in adic.items():
     heapq.heappush(hq, (-b, k))
-# print(hq)
 
 cnt = 0
 while True:

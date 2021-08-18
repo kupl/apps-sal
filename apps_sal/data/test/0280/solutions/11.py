@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from bisect import bisect_left
 from itertools import permutations
 
@@ -25,7 +24,6 @@ def main():
         print((-1))
         return
     ans = INF
-    # N!通りを全探索する
     for p in permutations(list(range(N))):
         dp = [0] * N
         dp[0] = 0

@@ -10,5 +10,4 @@ for i in range(1, n + 1):
         if dp[i - match[j]] == -1:
             continue
         dp[i] = max(dp[i], dp[i - match[j]] * 10 + j)
-# print(dp)
 print(dp[n])

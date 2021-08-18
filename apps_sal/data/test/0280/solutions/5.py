@@ -20,17 +20,16 @@ def LS(): return list(sys.stdin.readline().rstrip().split())
 
 
 def bellman_ford(s, n, g):
-    d = [float('inf')] * n  # 各頂点への最小コスト
-    d[s] = 0  # 自身への距離は0
+    d = [float('inf')] * n
+    d[s] = 0
     for i in range(n):
-        update = False  # 更新が行われたか
+        update = False
         for x, y, z in g:
             if d[y] > d[x] + z:
                 d[y] = d[x] + z
                 update = True
         if not update:
             break
-        # 負閉路が存在
         if i == n - 1:
             return -1
     return d
@@ -49,20 +48,16 @@ def main():
         V_list_.append(v)
     V_list.sort(key=lambda tup: tup[0])
     V_list_.sort()
-    # print(V_list)
-    # print(V_list_)
     max_len_list = [0]
     maxlen = 0
     for i in range(M):
         if Parts[V_list[i][1]][0] > maxlen:
             maxlen = Parts[V_list[i][1]][0]
         max_len_list.append(maxlen)
-    # print(max_len_list)
     bit_list = []
     for i in range(1, 2 ** N):
         A_bit = "{:0>{}b}".format(i, N)
         bit_list.append(A_bit)
-    # print(bit_list)
     camel_len_dict = defaultdict()
     for bits in bit_list:
         cnt = 0
@@ -71,13 +66,11 @@ def main():
             if bit == '1':
                 cnt += 1
                 weight += W[i]
-        # print(camels)
         a = bisect.bisect_left(V_list_, weight)
         if cnt == 1 and a != 0:
             print(-1)
             return
         camel_len_dict[weight] = max_len_list[a]
-    # print(camel_len_dict)
     camel_number = []
     for i in range(N):
         camel_number.append(i)
@@ -89,13 +82,11 @@ def main():
         bit_list_.append(B_bit)
 
     for p in P:
-        #print(p, 'p')
         weight_p_list = []
         weight_p = 0
         for p_ in p:
             weight_p += W[p_]
             weight_p_list.append(weight_p)
-        # print(weight_p_list)
         C = []
         for i in range(N):
             for j in range(i + 1, N):
@@ -103,9 +94,7 @@ def main():
                     C.append([i, j, -(camel_len_dict[weight_p_list[j] - weight_p_list[i - 1]])])
                 else:
                     C.append([i, j, -(camel_len_dict[weight_p_list[j]])])
-        #print(C, 'C')
         ans_list.append(bellman_ford(0, N, C)[-1])
-    # print(ans_list)
     print(-(max(ans_list)))
 
 
