@@ -18,7 +18,6 @@ for i in range(1, n + 1):
         d.append(i)
     b = []
     while(d):
-        # print(d,vis)
         p = d.popleft()
         b.append(p)
         for j in (a[p]):
@@ -26,7 +25,6 @@ for i in range(1, n + 1):
                 d.append(j)
                 vis[j] = 1
     l = len(b)
-    # print(b)
     for j in b:
         ans[j] = l
 print(*ans[1:])

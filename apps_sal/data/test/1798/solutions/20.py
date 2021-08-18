@@ -1,4 +1,3 @@
-# http://codeforces.com/problemset/problem/352/B
 from collections import defaultdict
 def get(): return (list(map(int, input().split())))
 
@@ -23,7 +22,6 @@ d = defaultdict(lambda: [])
 for j, i in enumerate(l):
     d[i].append(j)
 ans = {}
-# print(d)
 for x in d:
     t = isap(d[x])
     if t != -1:

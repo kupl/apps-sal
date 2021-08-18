@@ -1,7 +1,4 @@
-# 複素数版
 
-# 凸包 Monotone Chain O(nlogn)
-# 参考: https://matsu7874.hatenablog.com/entry/2018/12/17/025713
 def get_convex_hull(points):
     def det(p, q):
         return (p.conjugate() * q).imag

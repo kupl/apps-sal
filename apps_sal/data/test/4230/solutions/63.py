@@ -1,15 +1,4 @@
-#
-# 　　  ⋀_⋀
-#　　  (･ω･)
-# .／ Ｕ ∽ Ｕ＼
-#  │＊　合　＊│
-#  │＊　格　＊│
-#  │＊　祈　＊│
-#  │＊　願　＊│
-#  │＊　　　＊│
-#      ￣
-#
-from math import floor, sqrt, factorial, hypot, log  # log2ないｙｐ
+from math import floor, sqrt, factorial, hypot, log
 from itertools import accumulate, permutations, combinations, product, combinations_with_replacement
 from collections import Counter, defaultdict, deque
 from bisect import bisect_left, bisect_right

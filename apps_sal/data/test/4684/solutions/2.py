@@ -1,5 +1,3 @@
-# A - RGB Cards
-# https://atcoder.jp/contests/abc064/tasks/abc064_a
 
 r, g, b = list(map(str, input().split()))
 

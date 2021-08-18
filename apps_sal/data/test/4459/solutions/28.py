@@ -7,7 +7,6 @@ for i in range(N):
         dict[A[i]] += 1
     else:
         dict[A[i]] = 1
-# print(dict)
 for x in dict:
     if x > dict[x]:
         ans += dict[x]
