@@ -37,8 +37,6 @@ class Solution:
 
             return dfs(*source)
 
-        # return method1(blocked)
-
         def method2(blocked):
             if not blocked:
                 return True
@@ -63,9 +61,7 @@ class Solution:
                     level += 1
                     if level == len(blocked):
                         return True
-                # else:
                 return False
-                # return True
 
             return check(blocked, source, target) and check(blocked, target, source)
 

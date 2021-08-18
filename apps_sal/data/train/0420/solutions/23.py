@@ -1,6 +1,5 @@
 class Solution:
     def findTheLongestSubstring(self, s: str) -> int:
-        #[F,F,F,F,F], [T,F,F,F,F], [F,F,F,F,F], [F,F,F,F,F]
         states = [(False, False, False, False, False)]
         seen = {}
         mapping = {'a': 0, 'e': 1, 'i': 2, 'o': 3, 'u': 4}

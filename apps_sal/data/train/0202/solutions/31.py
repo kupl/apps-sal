@@ -33,7 +33,7 @@ class Solution:
 
         '''
         l = ans = 0
-        phase = 0 #0:ascend, 1: descend
+        phase = 0 
         for r in range(1, len(A)):
             if phase==0:
                 if A[r-1]==A[r]:

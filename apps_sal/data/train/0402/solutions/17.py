@@ -1,7 +1,6 @@
 class Solution:
     def isEscapePossible(self, blocked: List[List[int]], source: List[int], target: List[int]) -> bool:
 
-        # Column and row of source and target (used for escape condition)
         sc, sr = source
         tc, tr = target
         R, C = 10**6, 10**6
@@ -10,8 +9,6 @@ class Solution:
             '''Calculates Manhattan distance from (r1,c1) to (r2,c2)'''
             return abs(r2 - r1) + abs(c2 - c1)
 
-        # Two priority queues: one starting from target and one from source
-        # Two visited sets: one for nodes visited by path from target and the other from source
         q = [[(0, *source[::-1])], [(0, *target[::-1])]]
         v = [set(), set()]
         b = set((tuple(b[::-1]) for b in blocked))
@@ -19,8 +16,6 @@ class Solution:
         if (tuple(source) in b) or (tuple(target) in b):
             return False
 
-        # if source and target can reach 200 distance from their origin
-        # it is safe to say 200 blocked spaces cannot contain them
         source_escape = False
         target_escape = False
 

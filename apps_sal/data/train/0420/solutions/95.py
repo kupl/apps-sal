@@ -11,5 +11,4 @@ class Solution:
                 if first[mask] == float('inf'):
                     first[mask] = last[last_mask] + 1
             last[mask] = i
-        # print([(i, j) for i, j in zip(first, last)])
         return max(j - i for i, j in zip(first, last) if j - i <= len(s))

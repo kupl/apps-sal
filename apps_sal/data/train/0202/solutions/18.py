@@ -11,9 +11,6 @@ class Solution:
             if A[i] > A[i + 1]:
                 down[i] = down[i + 1] + 1
 
-        # print(up)
-        # print(down)
-
         for i in range(1, len(A) - 1):
             if A[i - 1] < A[i] > A[i + 1]:
                 Max = max(Max, up[i] + down[i] - 1)

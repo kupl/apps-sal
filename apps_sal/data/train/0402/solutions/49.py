@@ -7,7 +7,6 @@ class Solution:
         blocked = set(tuple(x) for x in blocked)
 
         def dfs(r, c, dst, visited, count, steps):
-            # print(r, c)
             if (r, c) in visited:
                 return False
             if (r, c) == dst:

@@ -1,4 +1,3 @@
-# https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/solution/jian-dan-de-si-lu-by-mnizy/
 
 class Solution:
     def findTheLongestSubstring1(self, s: str) -> int:
@@ -40,7 +39,6 @@ class Solution:
         cnt_memo = {k: v for k, v in list(cnt_memo.items()) if k in 'aeiou'}
         memo = dict()
         res = check(0, len(s) - 1, cnt_memo)
-        # print (memo)
         return res
 
     def findTheLongestSubstring(self, s: str) -> int:

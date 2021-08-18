@@ -34,6 +34,4 @@ class Solution:
                 good = False
             print(A[i], temp, trend, ans)
 
-        # ans = max(ans,temp)
-
         return ans

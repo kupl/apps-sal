@@ -1,4 +1,3 @@
-# cook your dish here
 import numpy as np
 n, m = map(int, input().split())
 dp = np.zeros((n, n))

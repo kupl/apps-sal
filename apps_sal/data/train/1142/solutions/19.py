@@ -21,6 +21,5 @@ for i in range(1, n):
             ans.append(j + 2)
             break
 
-    #print(arr, val)
 
 print(*(ans), sep='\n')
