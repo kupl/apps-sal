@@ -22,7 +22,6 @@ for p in range(1, n + 1):
         for x in v[u]:
             if(x != p):
                 gp[x] += 1
-    # print(gp);
 
     for ch in gp:
         ans += (gp[ch] * (gp[ch] - 1)) // 2

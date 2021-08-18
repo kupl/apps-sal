@@ -34,12 +34,10 @@ def test():
 
 
 def __starting_point():
-    # test()
     N, M = list(map(int, input().split()))
     X = tuple(map(int, input().split()))
     Y = tuple(map(int, input().split()))
     print((solve(X, Y)))
-    # print(naive(X,Y))
 
 
 __starting_point()

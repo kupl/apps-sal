@@ -6,7 +6,6 @@ def solve():
     n, = rv()
     a, = rl(1)
     mem = [0] * n
-    # mem[0] = 1
     timesofar = 0
     for i in range(n):
         ariveat = a[i] - 1

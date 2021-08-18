@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 
@@ -25,7 +24,6 @@ N, M = MAP()
 A = LIST()
 B = LIST()
 
-# 縦横独立に、全区間総和を取る
 lsm = rsm = 0
 for i in range(N):
     lsm += A[i] * (N - i - 1)

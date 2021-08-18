@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
 import sys
 
-MOD = 1000000007  # type: int
+MOD = 1000000007
 
 
 def solve(n: int, m: int, x: "List[int]", y: "List[int]"):
@@ -24,10 +23,10 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    n = int(next(tokens))  # type: int
-    m = int(next(tokens))  # type: int
-    x = [int(next(tokens)) for _ in range(n)]  # type: "List[int]"
-    y = [int(next(tokens)) for _ in range(m)]  # type: "List[int]"
+    n = int(next(tokens))
+    m = int(next(tokens))
+    x = [int(next(tokens)) for _ in range(n)]
+    y = [int(next(tokens)) for _ in range(m)]
     solve(n, m, x, y)
 
 

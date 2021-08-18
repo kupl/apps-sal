@@ -18,12 +18,6 @@ def main():
 
     print(((totsum(x, n) * totsum(y, m)) % p))
 
-    # for j in range(2,m):
-    #     ns=(s*(y[j]-y[j-1])) % p
-    #     tot2=(tot2 + j*ns) % p
-    #     tot1=(tot2+tot1) % p
-    # print(tot1)
-
 
 def __starting_point():
     main()

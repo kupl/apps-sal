@@ -1,4 +1,3 @@
-#!python3
 n = input()
 s = input()
 
