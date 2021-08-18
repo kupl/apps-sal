@@ -5,7 +5,6 @@ def gns():
     return list(map(int, input().split()))
 
 
-# t=int(input())
 t = 1
 
 

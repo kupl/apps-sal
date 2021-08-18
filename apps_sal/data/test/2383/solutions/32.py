@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain
 
@@ -16,8 +15,8 @@ def solve(N: int, A: "List[int]"):
 
 def main():
     tokens = chain(*(line.split() for line in sys.stdin))
-    N = int(next(tokens))  # type: int
-    A = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
+    N = int(next(tokens))
+    A = [int(next(tokens)) for _ in range(N)]
     answer = solve(N, A)
     print(answer)
 

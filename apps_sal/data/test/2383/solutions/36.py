@@ -1,5 +1,3 @@
-# AtCoder Beginner Contest 148
-# D - Brick Break
 
 N = int(input())
 a = list(map(int, input().split()))

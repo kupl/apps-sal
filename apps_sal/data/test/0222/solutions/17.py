@@ -21,12 +21,10 @@ for i in x:
     y.append(int(a))
 y = list(set(y))
 y.sort(reverse=True)
-# print(y)
 f = 0
 for i in y:
     if(i != 0):
         if is_perfect_square(i):
-            # print(i)
             f = 1
             break
 if(f):

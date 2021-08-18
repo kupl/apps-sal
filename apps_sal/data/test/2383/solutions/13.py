@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def main():
     N = int(input())
     a = [int(x) for x in input().split()]

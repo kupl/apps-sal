@@ -1,4 +1,3 @@
-# 138-A
 
 a = int(input())
 s = input()

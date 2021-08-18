@@ -36,4 +36,3 @@ for state in range(1, 2 ** len(primes)):
         sol -= N // prod
 
 print(N - sol)
-# print(brute(N))

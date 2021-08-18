@@ -11,7 +11,6 @@ else:
         while num >= k**i:
             i += 1
         i -= 1
-        # print(i)
         while num:
             base_rep[j - 1][i] = num // k**i
             num = num % k**i

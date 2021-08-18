@@ -1,14 +1,13 @@
 from collections import defaultdict
 import sys
 sys.setrecursionlimit(10000000)
-# This class represents a undirected graph using adjacency list representation
 
 
 class Graph:
 
     def __init__(self, vertices):
-        self.V = vertices  # No. of vertices
-        self.graph = defaultdict(list)  # default dictionary to store graph
+        self.V = vertices
+        self.graph = defaultdict(list)
         self.visited = [False] * (self.V)
 
     def addEdge(self, gr):
@@ -27,8 +26,6 @@ class Graph:
                 return True
 
         return False
-
-    # Returns true if the graph contains a cycle, else false.
 
     def isCyclic(self, p):
         if(self.isCyclicUtil(p, -1)) == True:

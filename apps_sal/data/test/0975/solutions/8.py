@@ -1,4 +1,3 @@
-# Author: Maharshi Gor
 
 def read(type=int):
     return type(input())
