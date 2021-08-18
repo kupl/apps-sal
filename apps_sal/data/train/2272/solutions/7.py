@@ -43,7 +43,6 @@ for i in range(29):
     nb = [j % ndig for j in b]
     nb.sort()
     nb.reverse()
-    #print (now)
 
     for j in a:
 

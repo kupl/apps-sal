@@ -6,7 +6,6 @@ b = list(map(int, input().split()))
 
 m = 30
 d = []
-# d[i] = 1<<i
 for i in range(m + 1):
     d.append(1 << i)
 
@@ -19,7 +18,6 @@ for i in range(m):
 
 keta = [0] * m
 
-# しゃくとりするなら桁ごとにやるしか無い
 for i in range(m):
     aa = [ai & (d[i + 1] - 1) for ai in a]
     aa.sort()
@@ -33,9 +31,6 @@ for i in range(m):
     b3 = bisect_left(c[i], i3 - a0)
 
     for ai in aa:
-        # 尺取
-        # aiは大きくなる→境界は小さくなる
-        # 引いたあとのindexが0以上であることも必要
         while b1 - 1 >= 0 and c[i][b1 - 1] >= i1 - ai:
             b1 -= 1
         while b2 - 1 >= 0 and c[i][b2 - 1] >= i2 - ai:
@@ -45,7 +40,6 @@ for i in range(m):
         keta[i] += b2 - b1 + n - b3
     keta[i] %= 2
 
-# print(keta)
 
 ans = 0
 for i in range(m):

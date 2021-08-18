@@ -1,4 +1,3 @@
-# cook your dish here
 def bs1(arr, x):
     low = 0
     high = len(arr) - 1

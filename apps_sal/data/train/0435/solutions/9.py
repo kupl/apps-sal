@@ -1,6 +1,5 @@
 class Solution:
     def subarraysDivByK(self, A: List[int], K: int) -> int:
-        # (cs - cs[i]) % k == 0
         res = 0
         cs = 0
         seen = collections.Counter({0: 1})

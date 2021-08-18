@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 from operator import itemgetter
 n, x, y = map(int, input().strip().split())

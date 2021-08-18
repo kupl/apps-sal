@@ -1,10 +1,6 @@
 class Solution:
     def subarraysDivByK(self, A: List[int], K: int) -> int:
-        # O(n^2) solutions: build all sub, find sum, divisible by K
-
-        # O(n): store something with value % K
         '''
-        #Running sum
         a - b = n * k, a is curr_sum, b is prev_sum
         We're looking for prev_sum that can add a to -> looking for b
         b = a - n * k 

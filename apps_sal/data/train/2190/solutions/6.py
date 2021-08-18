@@ -16,11 +16,9 @@ for index, p in enumerate(psychos):
             max_time = max(max_time, stack[-1][1])
             del stack[-1]
         if stack == []:
-            # will never die, no bigger psychos to left
             stack.append((p, 0))
             time_of_death[index] = 0
         else:
-            # will die, bigger psycho to left
             stack.append((p, max_time + 1))
             time_of_death[index] = max_time + 1
 
