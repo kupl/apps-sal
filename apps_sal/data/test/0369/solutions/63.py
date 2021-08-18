@@ -1,5 +1,3 @@
-# F sugoroku
-# 貪欲にNからM以下の範囲で戻れるだけ戻ることにする
 import bisect
 safe = []
 n, m = map(int, input().split())

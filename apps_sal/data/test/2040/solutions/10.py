@@ -2,7 +2,6 @@ import sys
 def toInt(x): return int(''.join(map(str, x[-1::-1])))
 
 
-# sys.stdin=open('note.txt')
 pre = 0
 ans = [0] * 1000
 sum = 0
@@ -18,7 +17,7 @@ for n in range(int(input())):
             d -= 9 - dig
             ans[i] = 9
         print(toInt(ans))
-    else:  # d is minus
+    else:
         d = -d + 1
         d2 = 0
         for i, dig in enumerate(ans):

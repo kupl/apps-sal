@@ -1,16 +1,6 @@
 n = int(input())
 l = list(map(int, input().split()))
 x = [4, 8, 15, 16, 23, 42]
-# if(n == 0):
-# 	print(0)
-# elif(n<6):
-# 	print(n)
-# elif(n==6):
-# 	if(l==x):
-# 		print(0)
-# 	else:
-# 		print(n)
-# else:
 d = {}
 for i in x:
     d[i] = 0

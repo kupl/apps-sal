@@ -10,6 +10,3 @@ else:
     l = list(set(map(str, list(range(1, n + 1)))) - {a, b, c, d})
 
     print(' '.join([a, c] + l + [d, b] + [c, a] + l + [b, d]))
-
-
-# Made By Mostafa_Khaled

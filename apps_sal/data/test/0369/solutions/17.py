@@ -14,7 +14,6 @@ for c in S:
     else:
         cnt = 0
 
-# 後ろから見て、各マスからもっとも近い右側の0の位置を格納(S[i]=0ならi)
 ngo_pos = [0 for _ in range(N + 1)]
 most_neighbor_zero_pos = N
 for i in range(N, -1, -1):

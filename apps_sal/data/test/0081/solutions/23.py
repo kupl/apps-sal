@@ -63,8 +63,6 @@ def divisors_from_factors(F):
         D |= {f**p * d for d in D for p in range(1, F[f] + 1)}
     return D
 
-###
-
 
 A, B = list(map(int, input().split()))
 
@@ -74,17 +72,6 @@ A, B = sorted((A, B))
 def lcm(a, b):
     return a * b // gcd(a, b)
 
-#mn = 10**100
-# for k in range(0,1000000):
-#    a = A+k
-#    b = B+k
-#    l = lcm(a,b)
-#
-#    if l < mn:
-#        mn = l
-#        best = k
-# print(best,mn)
-
 
 if A == B:
     print(0)
@@ -92,7 +79,6 @@ else:
     mn = 10**100
     D = divisors(B - A)
     for t in sorted(D):
-        # A+X%T == 0
         x = -A % t
         l = lcm(A + x, B + x)
         if l < mn:
@@ -100,14 +86,3 @@ else:
             best = x
 
     print(best)
-
-
-#A,B = sorted((A,B))
-#d = B-A
-# if A%d == 0:
-#    print(0)
-# else:
-#    r = (A//d+1)*d - A
-#    a = A+r
-#    b = B+r
-#    print(r, a*b // gcd(a,b))

@@ -4,8 +4,7 @@ import heapq
 def main():
     N, M = list(map(int, input().split(' ')))
     S = input()
-    # 最短手数のdpテーブルを作る
-    T = S[::-1]  # ゴールから逆順にたどる（最後に逆にする）
+    T = S[::-1]
     dp = [-1] * (N + 1)
     que = [0] * M
     for i, t in enumerate(T):
@@ -22,7 +21,6 @@ def main():
         while len(que) < M:
             heapq.heappush(que, i)
     dp.reverse()
-    # 細切れに進んでいく
     path = list()
     target = dp[0] - 1
     cnt = 0

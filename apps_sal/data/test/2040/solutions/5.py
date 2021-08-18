@@ -1,4 +1,3 @@
-# written with help of editorial
 def get_smallest(dig_sum):
     ret = str(dig_sum % 9) + '9' * (dig_sum // 9)
     return int(ret)

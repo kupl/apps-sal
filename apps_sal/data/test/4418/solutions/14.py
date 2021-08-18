@@ -18,7 +18,6 @@ for x in a:
     waiting[pos - 1] -= 1
     if x != 42:
         waiting[pos] += 1
-# print(waiting)
 for i in range(6):
     ans += (i + 1) * waiting[i]
 print(ans)

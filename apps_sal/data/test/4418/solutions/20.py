@@ -2,7 +2,6 @@
 15
 4 8 4 8 15 16 8 16 23 15 16 4 42 23 42
 '''
-# its just a simulation
 from sys import stdin, setrecursionlimit
 import heapq
 
@@ -15,7 +14,6 @@ def refine(arr):
     return aux
 
 
-# main starts
 n = int(stdin.readline().strip())
 arr = list(map(int, stdin.readline().split()))
 arr = refine(arr)
