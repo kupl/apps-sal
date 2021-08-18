@@ -7,7 +7,6 @@ for _ in range(int(input())):
         al[ord(ele) - ord('a')] = 1
     l = len(s)
     ans = []
-    # print(al)
     for i in range(26):
         if len(ans) == l:
             break

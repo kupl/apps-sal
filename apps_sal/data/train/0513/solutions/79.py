@@ -4,7 +4,6 @@ import bisect
 def dfs(graph, root, A, res, lis):
     stack = [(root,)]
     while stack:
-        # print(stack)
         state = stack[-1]
         del stack[-1]
         u = state[0]

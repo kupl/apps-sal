@@ -1,6 +1,5 @@
 class Solution:
     def pancakeSort(self, arr: List[int]) -> List[int]:
-        # 1. find max value, flip it to first; 2. flip whole array, let max to the end.
         results = []
         end = len(arr)
 

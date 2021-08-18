@@ -15,7 +15,6 @@ def main(n, a):
     p = {}
     dp = [inf] * (n + 1)
     dp[0] = 0
-    # dp[i]:長さiのLISの末尾の数値の最小値
     maxa = max(a) + 1
 
     def dfs(v, p, dp):
@@ -23,7 +22,6 @@ def main(n, a):
         idx = bl(dp, x)
         tmp = dp[idx]
         dp[idx] = x
-        # ans[v]=idx こっちだと頂点vで終わるLISの長さになる。下が正しい
         ans[v] = bl(dp, maxa) - 1
         for nv in ki[v]:
             if nv == p:

@@ -20,7 +20,6 @@ for t in range(int(input())):
             n -= 1
             k -= 1
             flag = True
-    #  print(ans)
     if(flag and len(ans) == nn):
         for i in ans:
             print(i, end='')

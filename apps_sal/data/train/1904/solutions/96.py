@@ -15,20 +15,15 @@ class Solution:
             arr[l], arr[choice] = arr[choice], arr[l]
 
             tl, tr = l + 1, r
-            # print(tl, tr, arr[l])
-            # print(arr)
             while tl <= tr:
                 if euclidean(arr[tl]) < euclidean(arr[l]):
                     tl += 1
                     continue
                 if euclidean(arr[tl]) >= euclidean(arr[l]):
-                    # print(\"Swapping\", tl, tr)
                     arr[tl], arr[tr] = arr[tr], arr[tl]
                     tr -= 1
                     continue
             arr[l], arr[tr] = arr[tr], arr[l]
-            # print(\"Swapping\", l, tr)
-            # print(arr)
 
             partition = tr
 

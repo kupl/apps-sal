@@ -50,7 +50,6 @@ def main():
             dp[tmp] = A[now_]
             ans[now_] = bisect_left(dp, INF)
 
-    # print (vs)
     print(*ans, sep='\n')
 
 

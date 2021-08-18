@@ -5,7 +5,7 @@ class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         pq = PriorityQueue()
 
-        for p in points:  # O(nlogk)
+        for p in points:
             new_priority = -1 * (pow(p[0], 2) + pow(p[1], 2))
             if pq.qsize() == K:
                 old_priority, old_point = pq.get()

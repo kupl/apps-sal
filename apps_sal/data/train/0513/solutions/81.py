@@ -1,4 +1,3 @@
-# F
 from bisect import bisect_left, bisect_right
 import sys
 sys.setrecursionlimit(10**8)

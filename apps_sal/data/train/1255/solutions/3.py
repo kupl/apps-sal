@@ -1,4 +1,3 @@
-# cook your dish here
 letters = ['a']
 for i in range(0, 25):
     letters.append(chr(ord(letters[i]) + 1))

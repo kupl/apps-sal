@@ -16,5 +16,4 @@ class Solution:
                 max_len = 1 if max_pre is None else max(1, dp[max_pre][1] + 1)
                 overall = max(dp[i - 1][0], max_len)
                 dp[i] = (overall, max_len)
-        # print(dp)
         return len(dp) - dp[-1][0]

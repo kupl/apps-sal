@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 from bisect import bisect_left
 import sys
 readline = sys.stdin.readline
@@ -16,28 +14,23 @@ for i in range(N - 1):
 
 INF = 10**9 + 1
 
-#a = [~0,0]
-q = [0]    # ~0=-1なのだが、とにかく0を打ち消す方向をやるよ、と言うこと。うまい。
-dp = [INF] * N  # LIS
-ans = [0] * N   # iにおけるLISの長さ
-lis_len = 0   # 持ち回ってるLIS長さ変数。dpをsearchしても求まるけど、安易に野郎
-idx = [-1] * N  # iのときの操作したIDX
-old = [-1] * N  # iのときに操作する前の値。Rollbackする時に使う
-prev = [-1] * N  # 自分の呼び出しもと。グラフの行ってこいを抑止するため。
+q = [0]
+dp = [INF] * N
+ans = [0] * N
+lis_len = 0
+idx = [-1] * N
+old = [-1] * N
+prev = [-1] * N
 
 ss = 0
 while q:
     now = q.pop()
-    # 普通のdfs
     if now >= 0:
         a = A[now]
-        # LIS管理のdpに今回操作する対象のIDXを探索
         idx[now] = bisect_left(dp, a)
-        # 操作前の値とIDXを保存する
         iv = idx[now]
         old[now] = dp[idx[now]]
         x = old[now]
-        # LIS管理dpのVALUEがINFだったら、今回で長さが伸びるってこと
         if x == INF:
             lis_len += 1
         dp[iv] = a
@@ -47,19 +40,14 @@ while q:
             if nxt == prev[now]:
                 continue
             prev[nxt] = now
-            # q.append(~nxt)
-            # q.append(nxt)
             q.append((-1) * nxt)
             q.append(nxt)
-    # nowがゼロ以下なので、DPを一つRollbackする動きをする。
     else:
-        # v = ~v # ビット反転だが、これで元のNOWを復元する
         now = (-1) * now
         dp[idx[now]] = old[now]
         x = dp[idx[now]]
         if x == INF:
             lis_len -= 1
 
-# print(*ans,sep="\n")
 for a in ans:
     print(a)

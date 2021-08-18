@@ -8,7 +8,7 @@ class Solution:
 
         ans = []
         for x in range(len(A), 0, -1):
-            i = A.index(x) + 1  # x is the current unsorted largest element
+            i = A.index(x) + 1
             ans.extend([i, x])
             flip(i - 1)
             flip(x - 1)

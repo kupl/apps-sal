@@ -1,18 +1,15 @@
 class Solution:
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
 
-        # edge case
         if not points:
             return []
 
         def distance(x, y):
 
-            # Euclidean distance
             return ((x - 0)**2 + (y - 0)**2)**0.5
 
         def binsea_insert(dist, point):
 
-            # if empty, just insert and return
             if not nearest:
                 nearest.append((dist, point))
                 return
@@ -21,13 +18,11 @@ class Solution:
 
             while left <= right:
 
-                # unpack tuple
                 d, coor = nearest[right]
                 if dist >= d:
                     nearest.insert(right + 1, (dist, point))
                     return
 
-                # unpack tuple
                 d, coor = nearest[left]
 
                 if dist <= d:
@@ -36,7 +31,6 @@ class Solution:
 
                 mid = left + (right - left) // 2
 
-                # unpack tuple
                 d, coor = nearest[mid]
 
                 if dist < d:
@@ -45,7 +39,6 @@ class Solution:
                 else:
                     left = mid + 1
 
-        # sorted list of tuples
         nearest = []
 
         for point in points:

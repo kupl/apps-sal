@@ -38,18 +38,3 @@ class Solution:
             squared[i], squared[0] = squared[0], squared[i]
             points[i], points[0] = points[0], points[i]
             self.heapify(points, squared, i, 0)
-
-        # Solution_1
-#         min_dist = []
-
-#         def calculate_sqrt(x):
-#             return round(math.sqrt(x[0]**2 + x[1]**2), 2)
-
-#         for i in range(0, len(points)):
-
-#             min_dist.append((calculate_sqrt(points[i]), points[i]))
-
-#         min_dist = sorted(min_dist)
-
-
-#         return [min_dist[i][1] for i in range(K) ]
