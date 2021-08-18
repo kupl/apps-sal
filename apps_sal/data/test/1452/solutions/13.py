@@ -6,8 +6,6 @@ a = [[-1] * cols for _ in range(rows)]
 r = list(map(int, input().split()))
 c = list(map(int, input().split()))
 
-# print(np.matrix(a))
-
 
 for row in range(rows):
     for col in range(r[row]):
@@ -15,8 +13,6 @@ for row in range(rows):
 
     if(r[row] < cols):
         a[row][r[row]] = 0
-
-# print(np.matrix(a))
 
 
 for col in range(cols):
@@ -26,7 +22,6 @@ for col in range(cols):
     if(c[col] < rows):
         a[c[col]][col] = 0
 
-# print(np.matrix(a))
 
 isSol = True
 

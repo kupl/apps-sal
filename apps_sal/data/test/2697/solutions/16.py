@@ -1,4 +1,3 @@
-# cook your dish her
 start = 1
 c = 0
 end = int(input())
@@ -10,5 +9,4 @@ for val in range(start, end + 1):
                 break
         else:
             c += 1
-           # l.append(val)
 print(c)

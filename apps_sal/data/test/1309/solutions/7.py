@@ -13,5 +13,4 @@ for i in range(2 * n):
         for k in range(0, 2 * n - 2, 2):
             c += abs(b[k] - b[k + 1])
         an = min(an, c)
-        #print(an, b)
 print(an)
