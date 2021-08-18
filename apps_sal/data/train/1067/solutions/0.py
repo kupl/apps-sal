@@ -1,8 +1,4 @@
-# Fibonacci Series using
-# Optimized Method
 
-# function that returns nth
-# Fibonacci number
 MOD = 1000000007
 
 
@@ -12,7 +8,6 @@ def fib(n):
     power(F, n - 1)
     ans = [6, 2]
     return (F[0][0] * 6 + F[0][1] * 2) % MOD
-    # return F[0][0]
 
 
 def multiply(F, M):

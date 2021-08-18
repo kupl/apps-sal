@@ -12,5 +12,4 @@ class Solution:
                     if rating[i] > rating[j] and rating[j] > rating[k]:
                         teams.append(curr)
 
-        # print(teams)
         return len(teams)

@@ -44,7 +44,6 @@ for _ in range(int(input())):
     p = list(map(int, input().split()))
     a = [0] * n
 
-    # transformation
     for i in range(n):
         a[p[i] - 1] = i
 
@@ -55,17 +54,14 @@ for _ in range(int(input())):
         h = [0] * t
         for j in range(t):
             h[j] = a[i + j * (d)]
-            # print(h)
         inv_count += mergesort(h, 0, len(h) - 1)
         m[i] = h
-    # print(m)
     s = [0] * n
     for i in range(d):
         t = (n - 1 - i) // d + 1
         for j in range(t):
             s[i + j * (d)] = m[i][j]
     mb = True
-    # print('s',s)
     for i in range(n):
         if(s[i] == i):
             continue

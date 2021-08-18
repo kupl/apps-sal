@@ -1,7 +1,5 @@
 class Solution:
     def numTeams(self, ratings: List[int]) -> int:
-        # maintain a data structure where dict[index] stores another dict keyed by ranking (r) \\
-        # and stores number of rankings greater than that ranking in the rating list
         res = 0
 
         numRatings = len(ratings)
@@ -23,7 +21,6 @@ class Solution:
                     mapping_rev[index][tmpRating] = mapping_rev[index + 1][tmpRating] + 1
 
         for i, rating_i in list(enumerate(ratings)):
-            # check triplets starting with rating[i]
             for j, rating_j in list(dict(list(zip(list(range(i + 1, numRatings + 1)), ratings[i + 1:]))).items()):
                 if rating_j > rating_i:
                     res += mapping[j + 1][rating_j]

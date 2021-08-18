@@ -45,7 +45,7 @@ for _ in range(int(input())):
 
     inv_count = 0
     m = {}
-    sb = True  # sortable
+    sb = True
     for i in range(d):
         k = 0
         for j in range(i, n, d):

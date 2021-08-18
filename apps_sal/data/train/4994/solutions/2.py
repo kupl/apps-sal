@@ -6,11 +6,8 @@ def word_problem(rules: List[Tuple[str, str]], from_str: str, to_str: str, appli
         return from_str == to_str
     currentStrings = [from_str]
     for i in range(applications):
-        # create all possible next strings from current string(s), using all rules
         nextStrings = []
-        # iterate over all current strings
         for s in currentStrings:
-            # determine all possible next strings
             for rule in rules:
                 pos = 0
                 while pos < len(s) and rule[0] in s[pos:]:

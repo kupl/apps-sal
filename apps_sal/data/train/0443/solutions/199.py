@@ -1,5 +1,3 @@
-# class Solution:
-#     def numTeams(self, rating: List[int]) -> int:
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
         asc = dsc = 0

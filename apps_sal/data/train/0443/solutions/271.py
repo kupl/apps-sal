@@ -1,6 +1,5 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
-        # brute force
         n = len(rating)
         total = 0
         for i in range(n):

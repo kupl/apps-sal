@@ -3,7 +3,6 @@ class Solution:
         return self.dfs1(rating, []) + self.dfs2(rating, [])
 
     def dfs1(self, array, path):
-        #print(array, path)
         if len(path) == 3:
             return 1
         val = 0
@@ -13,7 +12,6 @@ class Solution:
         return val
 
     def dfs2(self, array, path):
-        #print(array, path)
         if len(path) == 3:
             return 1
         val = 0

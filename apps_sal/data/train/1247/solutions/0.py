@@ -46,7 +46,6 @@ for _ in range(int(input())):
             dumarr[i + j * d] = array[i][j]
         ans += v
     p = sorted(p)
-    # print(dumarr)
     if dumarr == p:
         print(ans)
     else:

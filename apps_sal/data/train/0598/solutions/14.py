@@ -1,4 +1,3 @@
-#import time
 
 line = input().split()
 N = int(line[0])

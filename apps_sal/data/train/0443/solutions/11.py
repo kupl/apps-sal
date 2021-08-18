@@ -18,9 +18,7 @@ class Solution:
                     larger_x = l[0] > prev
 
                 if ((larger_x == asc) | (prev is None)):
-                    # include this one
                     teamCount += getTeams(k - 1, l[1:], l[0], asc)
-                    # exclude this one
                 teamCount += getTeams(k, l[1:], prev, asc)
 
             return teamCount

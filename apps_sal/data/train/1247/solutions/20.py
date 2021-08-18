@@ -40,7 +40,6 @@ while tc:
         if not valid(hash_t, n + 1, d):
             print(-1)
         else:
-            # print("Valid")
             count = num_inversion(hash_t, n + 1, d)
             print(count)
     tc -= 1
