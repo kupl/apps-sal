@@ -24,8 +24,6 @@ for i in range(N):
 
 S_p.sort(reverse=True)
 S_n.sort(reverse=True)
-# print(S_p)
-# print(S_n)
 
 check = 0
 flag = True
@@ -35,7 +33,6 @@ for i in range(len(S_p)):
     else:
         flag = False
         break
-    # print(check)
 
 for i in range(len(S_n)):
     if check + S_n[i][1] - S_n[i][0] >= 0:
@@ -43,7 +40,6 @@ for i in range(len(S_n)):
     else:
         flag = False
         break
-    # print(check)
 
 if check == 0 and flag:
     flag = True

@@ -28,7 +28,7 @@ for x in order:
     c = 1
     for y in graph[x]:
         if y == parent[x]:
-            continue  # 子に対応させる
+            continue
         if c == ng:
             c += 1
         color[y] = c

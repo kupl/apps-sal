@@ -1,4 +1,3 @@
-# F - Bracket Sequencing
 import sys
 readline = sys.stdin.readline
 

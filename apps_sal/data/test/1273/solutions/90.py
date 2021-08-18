@@ -1,7 +1,6 @@
 from collections import deque
 
 N = int(input())
-# mtx = np.zeros([N, N], dtype=np.int32)
 tree = [[] for i in range(N)]
 
 key_order = [0] * (N - 1)
@@ -13,8 +12,6 @@ for i in range(N - 1):
     tree[in2].append(in1)
 
     key_order[i] = (in1, in2)
-
-# [print(i, t) for i, t in enumerate(tree)]
 
 
 def bfs(tree, p):
@@ -73,6 +70,3 @@ edge_colors = bfs(tree, 0)
 
 print(max([c for key, c in edge_colors.items()]))
 [print(edge_colors[t]) for t in key_order]
-# print(edge_colors)
-
-# show_tree(tree)

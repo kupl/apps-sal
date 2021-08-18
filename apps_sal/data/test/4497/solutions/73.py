@@ -1,4 +1,3 @@
-# B - Break Number
 def main():
     n = int(input())
 

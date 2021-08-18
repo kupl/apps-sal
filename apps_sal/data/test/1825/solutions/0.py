@@ -28,7 +28,6 @@ for _ in range(t):
     ml = max(ml, len(w) + x[-1] - 1)
 ans = "a" * ml
 ans = list(ans)
-# print(d)
 p = -1
 z = sorted(list(d.keys()))
 for i in z:
@@ -39,11 +38,9 @@ for i in z:
         else:
             leave = p - i
             f = max(i, p)
-            # print(ans,"@",d[i],p,d[i][leave::])
             for j in range(leave, len(d[i])):
                 ans[f] = d[i][j]
                 f += 1
-            # print(ans,"*")
         p = i + len(d[i])
 
 for i in ans:

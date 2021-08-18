@@ -4,14 +4,12 @@ import sys
 
 def main():
     N = int(input())
-    # TLEs were caused mostly by slow input (1s+)
-    # S = list(input() for _ in range(N))
     S = sys.stdin.read().split('\n')
     print((solve(S)))
 
 
 def get_count(args):
-    s, result = args  # messy input to work with map.
+    s, result = args
     cum_sum = 0
     for c in s:
         if c == ')':
@@ -22,15 +20,12 @@ def get_count(args):
     result[1] = result[0] + cum_sum
     return result
 
-# Made-up name, don't remember what to call this. Radix-ish
-
 
 def silly_sort(array, value_min, value_max, get_value):
     if len(array) == 0:
         return
     cache = [None for _ in range(value_max - value_min + 1)]
     for elem in array:
-        # Assume elem[0] is the value
         value = get_value(elem) - value_min
         if cache[value] is None:
             cache[value] = []

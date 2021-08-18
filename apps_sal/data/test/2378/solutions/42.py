@@ -1,4 +1,3 @@
-# classを使うのをやめてlistで実施する
 from collections import deque
 import sys
 sys.setrecursionlimit(10 ** 9)

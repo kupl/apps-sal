@@ -20,35 +20,31 @@ No = 'No'
 
 
 def main():
-    # 入力
     N = int(input())
-    up = []     # 上昇が0以上のもの
-    down = []   # 上昇が0未満のもの
+    up = []
+    down = []
     for _ in range(N):
         S = input()
-        h, b = 0, 0  # h:上昇数、b:最下点
+        h, b = 0, 0
         for s in S:
             if s == '(':
                 h += 1
             else:
                 h -= 1
                 b = min(b, h)
-        #
         if h >= 0:
             up.append((h, b))
         else:
             down.append((h, b))
-    # 演算
-    up.sort(key=lambda t: t[1], reverse=True)           # 上昇は、最下点が高いものから使う
-    down.sort(key=lambda t: t[0] - t[1], reverse=True)    # 下降は、沈み込み後の反転上昇が大きいものから使う
-    H = 0   # 現在の高さ
+    up.sort(key=lambda t: t[1], reverse=True)
+    down.sort(key=lambda t: t[0] - t[1], reverse=True)
+    H = 0
     for h, b in up + down:
-        if H + b >= 0:  # 高さが0未満にならない条件
+        if H + b >= 0:
             H += h
         else:
             print(No)
             return
-    # 出力
     if H == 0:
         print(Yes)
     else:

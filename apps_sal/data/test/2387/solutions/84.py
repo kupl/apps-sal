@@ -1,7 +1,3 @@
-# +1/-1の折れ線で表したとき
-# 「0で終わる」かつ「途中で0未満にならない」を満たせば良い
-
-# あとは貪欲を上手い事使う
 
 
 def main():
@@ -13,17 +9,12 @@ def main():
     from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     import math
-    #from math import gcd
-
-    #inf = 10**17
-    #mod = 10**9 + 7
 
     n = int(input())
     a = []
     b = []
     for _ in range(n):
         s = input().rstrip()
-        # 最終的に上がる量/最下点
         up, down = 0, 0
         for i in s:
             if i == ')':

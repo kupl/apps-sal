@@ -11,8 +11,6 @@ for _ in range(N - 1):
     graph[a - 1].append(b - 1)
     graph[b - 1].append(a - 1)
 
-# 互いに素なa,bについて、a*x+b*y=1の一つの解
-
 
 def extgcd(a, b):
     r = [1, 0, a]
@@ -23,10 +21,7 @@ def extgcd(a, b):
         w2 = [r[0] - q * w[0], r[1] - q * w[1], r[2] - q * w[2]]
         r = r2
         w = w2
-    # [x,y]
     return [w[0], w[1]]
-
-# aの逆元(mod m)を求める。(aとmは互いに素であることが前提)
 
 
 def mod_inv(a, m=mod):

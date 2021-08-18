@@ -1,4 +1,3 @@
-# f
 import sys
 sys.setrecursionlimit(2 * 10 ** 5 + 10)
 

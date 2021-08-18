@@ -1,10 +1,10 @@
 N = int(input())
 S = [input() for i in range(N)]
 
-xs1total = 0  # ((
-xs2 = []  # )((
-xs3 = []  # ))(
-xs4total = 0  # ))
+xs1total = 0
+xs2 = []
+xs3 = []
+xs4total = 0
 
 for s in S:
     n = 0
@@ -43,8 +43,6 @@ def check(xs1total, xs2, xs3, xs4total):
             return False
         t = t - x[0] + x[1]
     return t == xs4total
-
-#print(xs1total, xs2, xs3, xs4total)
 
 
 if check(xs1total, xs2, xs3, xs4total):

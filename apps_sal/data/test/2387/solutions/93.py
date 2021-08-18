@@ -1,25 +1,13 @@
 def main():
-    # IMPORT MODULE
-    #import sys
-
-    # sys.setrecursionlimit(100000)
-    #input=lambda :sys.stdin.readline().rstrip()
-
-    # f_inf=float("inf")
-    # MOD=10**9+7
 
     if 'get_ipython' in globals():
-        # SAMPLE INPUT
         n = 4
         S = ['((()))', '((((((', '))))))', '()()()']
 
     else:
-        # INPUT
         n = int(input())
-        #a, b = map(int, input().split())
         S = [input() for _ in range(n)]
 
-    # SUBMITION CODES HERE
     def CNT(A):
         tmp, Min = 0, 0
         for a in A:

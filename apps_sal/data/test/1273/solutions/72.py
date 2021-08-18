@@ -14,9 +14,9 @@ def lmp(): return list(map(int, input().split()))
 
 n = int(input())
 edge = [[] for i in range(n + 1)]
-par = [0] * (n + 1)  # i番目の頂点とその親を結ぶ辺の色
+par = [0] * (n + 1)
 par[1] = -1
-col = [0] * (n - 1)  # i番目の辺の色
+col = [0] * (n - 1)
 for i in range(n - 1):
     a, b = mp()
     edge[a].append([a, b, i])

@@ -1,4 +1,3 @@
-# Surrounded Nodes
 import sys
 sys.setrecursionlimit(10**8)
 mod = 10**9 + 7

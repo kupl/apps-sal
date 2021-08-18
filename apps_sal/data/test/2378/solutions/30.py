@@ -1,4 +1,3 @@
-# Surrounded Nodes
 from collections import deque
 import sys
 sys.setrecursionlimit(10**8)
