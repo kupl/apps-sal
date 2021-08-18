@@ -1,9 +1,7 @@
-#!python3
 
 import numpy as np
 
 
-# input
 N = int(input())
 A, B = np.zeros(N, int), np.zeros(N, int)
 for i in range(N):

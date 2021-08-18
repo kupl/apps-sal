@@ -21,7 +21,6 @@ class Solution:
             nex = [0] * 5
             for j in 'aeiou':
                 for k in valid[j]:
-                    # nex[cmap[k]] += last[cmap[j]] % (10**9+7)
                     nex[cmap[k]] += last[cmap[j]]
             last = nex
         return sum(last) % (10**9 + 7)

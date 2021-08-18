@@ -1,4 +1,3 @@
-# https://leetcode.com/problems/count-vowels-permutation/discuss/398286/Simple-Python-(With-Diagram)
 
 class Solution:
 

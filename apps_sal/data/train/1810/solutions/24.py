@@ -1,4 +1,3 @@
-# 1487. Making File Names Unique
 
 def get_names(names):
     next_index = {}
@@ -12,7 +11,6 @@ def get_names(names):
             index = next_index[name]
             while f'{name}({index})' in next_index:
                 index += 1
-            # found index
             next_index[name] = index
             new_name = f'{name}({index})'
             assert new_name not in next_index

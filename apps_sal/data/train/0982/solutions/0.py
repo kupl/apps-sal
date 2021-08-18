@@ -1,4 +1,3 @@
-# cook your code here
 n = input()
 x = len(n)
 no = list(map(int, n))

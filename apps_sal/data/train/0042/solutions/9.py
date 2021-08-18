@@ -18,7 +18,6 @@ for testcases in range(T):
                 k = int((S[i:i + j]), 2)
                 if k == 0:
                     continue
-                # print(i,j,k)
                 if zeros >= k - j:
                     ANS += 1
 

@@ -5,7 +5,6 @@ for _ in range(int(input())):
     S = list(map(int, list(input())))
     combs = 0
     maxlen = ceil(log2(len(S)))
-    # print(maxlen)
     prezeros = 0
     next1 = [0] * len(S)
     nxt = len(S) - 1
@@ -21,7 +20,6 @@ for _ in range(int(input())):
             for r in range(nxtl, min(nxtl + maxlen + 1, len(S))):
                 val = 2 * val + S[r]
                 if val == r - l + 1:
-                    # print(l, r)
                     lcomb += 1
             combs += lcomb
             continue
@@ -30,7 +28,6 @@ for _ in range(int(input())):
         for r in range(l, min(l + maxlen + 1, len(S))):
             val = 2 * val + S[r]
             if val == r - l + 1:
-                #print(l, r)
                 lcomb += 1
         combs += lcomb
         prezeros = 0

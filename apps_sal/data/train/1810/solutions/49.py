@@ -11,7 +11,7 @@ class Solution:
             current = name
             while current in used:
                 k += 1
-                current = '%s(%d)' % (name, k)  # alternative to current = name+'('+str(k)+')'
+                current = '%s(%d)' % (name, k)
             hashmap[name] = k
             result.append(current)
             used.add(current)

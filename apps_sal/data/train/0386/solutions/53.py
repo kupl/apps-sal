@@ -38,7 +38,6 @@ for a total of 6 additional permutations.
 
 class Solution:
     def countVowelPermutation(self, n: int) -> int:
-        # starting count at 2
         prev_count = [1, 2, 4, 2, 1]
 
         if n == 1:
@@ -48,20 +47,12 @@ class Solution:
             return sum(prev_count)
 
         for i in range(3, n + 1):
-            # print(prev_count)
             current_count = [0] * 5
-            # a
             current_count[0] = prev_count[1]
-            # e
             current_count[1] = prev_count[0] + prev_count[2]
-            # i
             current_count[2] = prev_count[0] + prev_count[1] + prev_count[3] + prev_count[4]
-            # o
             current_count[3] = prev_count[2] + prev_count[4]
-            # u
             current_count[4] = prev_count[0]
 
-            # print(current_count)
             prev_count = current_count
-        # print(prev_count)
         return sum(current_count) % (10**9 + 7)

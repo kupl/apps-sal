@@ -20,12 +20,10 @@ def solve(s, ans):
         else:
             start = i
 
-        # print(i,start)
         for j in range(start, n):
             curr *= 2
             if s[j] == '1':
                 curr += 1
-            # print(curr,i,j-i+1,j)
             if curr == j - i + 1:
                 count += 1
 

@@ -4,7 +4,6 @@ class Solution:
         md = 10**9 + 7
         for i in range(5):
             dp[i][0] = 1
-        # [a, e, i, o, u] => [0, 1, 2, 3, 4]
         A, E, I, O, U = 0, 1, 2, 3, 4
         for i in range(1, n):
             dp[E][i] = (dp[E][i] + dp[A][i - 1]) % md
