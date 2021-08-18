@@ -23,7 +23,6 @@ for i in range(len(cc)):
     if(cc[i] == 2):
         two.append(i)
 f = d[one[0]]
-# print(one)
 prev = [one[0]]
 if(cc[f[0][0]] == 2):
     prev.append(f[0][0])
@@ -40,7 +39,6 @@ if(cc[f[0][2]] == 3):
 res.append(prev)
 cur = []
 k = n - 3
-# print(cc)
 while k:
     for j in d[prev[1]]:
         if(prev[2] in j and prev[0] not in j):
@@ -52,7 +50,6 @@ while k:
             prev.append(v)
     res.append(prev)
     k -= 1
-# print(res)
 print(res[0][0], res[0][1], res[0][2], end=" ")
 for i in range(1, len(res)):
     print(res[i][2], end=" ")

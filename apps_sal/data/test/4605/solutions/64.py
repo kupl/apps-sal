@@ -12,8 +12,5 @@ total = 0
 for i in range(N + 1):
     c = findSumOfDigits(i)
     if a <= c <= b:
-        # print(i)
-        # print(c)
         total += i
-        # print(total)
 print(total)

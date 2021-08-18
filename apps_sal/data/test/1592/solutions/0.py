@@ -11,9 +11,6 @@ class Task:
         numberOfTasks = int(input())
         for i in range(0, numberOfTasks):
             self.tasks += [[int(x) for x in input().split(' ')]]
-        #inFile = open('input.txt', 'r')
-        # inFile.readline().rstrip()
-        #self.childs = inFile.readline().rstrip()
 
     def solve(self):
         queueSize, maxQueueSize = 0, 0
@@ -37,8 +34,6 @@ class Task:
 
     def printAnswer(self):
         print(self.answer)
-        #outFile = open('output.txt', 'w')
-        # outFile.write(self.answer)
 
 
 task = Task()

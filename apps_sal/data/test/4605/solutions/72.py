@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 n, a, b = list(map(int, input().split()))
 s = 0

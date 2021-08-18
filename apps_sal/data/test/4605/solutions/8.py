@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 
 n, a, b = map(int, input().split())
 sum = 0

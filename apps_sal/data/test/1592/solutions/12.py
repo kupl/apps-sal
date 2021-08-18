@@ -6,9 +6,3 @@ for i in range(int(input())):
     Max = max(Messages, Max)
     Last = X[0]
 print(Last + Messages, Max)
-
-# UB_CodeForces
-# Advice: Falling down is an accident, staying down is a choice
-# Location: Mashhad for few days
-# Caption: Finally happened what should be happened
-# CodeNumber: 692

@@ -5,7 +5,6 @@ a = X
 r[a] = 0
 p = [a]
 
-# M回繰り返せば，必ずかぶる
 for i in range(1, M + 1):
     an = a ** 2 % M
     if r[an] >= 0:

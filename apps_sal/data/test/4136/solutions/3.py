@@ -28,7 +28,5 @@ class InputHandlerObject(object):
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
 
-############################## SOLUTION ##############################
 a, b = g()
 print(int(a) + int(b))
-# try 6

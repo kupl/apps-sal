@@ -6,7 +6,6 @@ def solve(a, b, groups, nums, visited):
         if i not in visited:
             group = i
 
-    # print(group)
     visited.add(group)
     for i in groups[group]:
         if i != a and i != b:

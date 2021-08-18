@@ -16,9 +16,7 @@ def main():
         if i == n:
             print(at[-1])
             return
-    #aa = a[:ca]
     ata = [0] + at[:ca]
-    #ab = a[ca:]
     atb = [ata[-1]] + at[ca:]
     cb = len(atb) - 1
     na = min(n, ca)

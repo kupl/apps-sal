@@ -36,13 +36,10 @@ for i in range(2, n):
     s1 = set(adj_list[n1])
     s2 = set(adj_list[n2])
     s3 = s1 & s2
-    #print(i, n1, n2)
     if i >= 3:
         s3.remove(ans[i - 3])
 
-    #print(n1, adj_list[n1], n2, adj_list[n2], s3)
     ans.append(list(s3)[0])
-    # print(ans)
 ans2 = [ai + 1 for ai in ans]
 
 print(*ans2)

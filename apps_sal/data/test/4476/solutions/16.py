@@ -1,7 +1,6 @@
 t = int(input().strip())
 for _ in range(t):
     a, b = list(map(int, input().strip().split()))
-    #nums = [int(i) for i in input().strip().split()]
     if a == b:
         print(0)
     elif a > b:

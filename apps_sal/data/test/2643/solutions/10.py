@@ -31,7 +31,6 @@ def test():
 
 
 def __starting_point():
-    # test()
     main()
 
 

@@ -1,4 +1,3 @@
-# lista doble enlazada o(1) operaciones en los bordes es mejor que si se implementa en el propio lenguaje
 from collections import deque
 n, m = input().split()
 n = int(n)
@@ -35,11 +34,11 @@ def bfs01(queue, distance):
         pi, pj = queue.popleft()
         for i, j in [(pi, pj - 1), (pi, pj + 1), (pi - 1, pj), (pi + 1, pj)]:
             indx = idx(i, j)
-            if 0 > i or i >= n or 0 > j or j >= m or graph[indx] == '#':
-                continue
+            if 0 > i or i >= n or 0 > j or j >= m or graph[indx] == '
+            continue
             isRoad = graph[indx] == "."
             newDistance = distance[idx(pi, pj)] + (1 if isRoad else 0)
-            if distance[indx] > newDistance:  # relax
+            if distance[indx] > newDistance:
                 distance[indx] = newDistance
                 if isRoad:
                     queue.append((i, j))

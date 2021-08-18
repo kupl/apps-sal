@@ -1,10 +1,7 @@
 import sys
-#import time
 from collections import deque, Counter, defaultdict
-#from fractions import gcd
 import bisect
 import heapq
-#import math
 import itertools
 import numpy as np
 input = sys.stdin.readline
@@ -31,14 +28,10 @@ while True:
     a = x % m
     x = a * a % m
     cnt += 1
-# print(res)
 circle = nums.index(x)
 if n < circle:
     print(sum(nums[:circle]))
 else:
     times = (n - circle) // (cnt - circle)
     last = (n - circle) % (cnt - circle)
-    # print(times)
-    # print(last)
-    # print(circle)
     print(sum(nums[:circle]) + sum(nums[circle:]) * times + sum(nums[circle:circle + last]))

@@ -1,8 +1,5 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
-
-#        tmp = list([int(i) for i in (list(str(i)))])
 
 
 def main():

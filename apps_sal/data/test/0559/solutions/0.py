@@ -8,7 +8,6 @@ sys.setrecursionlimit(10 ** 7)
 P = int(input())
 A = [int(x) for x in input().split()]
 
-# k,i -> i^k
 power = np.ones((P, P), dtype=np.int64)
 for k in range(1, P):
     power[k] = power[k - 1] * np.arange(P, dtype=np.int64) % P
