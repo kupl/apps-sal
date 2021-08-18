@@ -13,9 +13,9 @@ if g < t:
 if (g - t) % k == 0:
     per = 0
     for j in range(t, g + 1, k):
-        if a[j] == '#':
-            per = 1
-            break
+        if a[j] == '
+        per = 1
+        break
     if per == 1:
         print('NO')
     else:

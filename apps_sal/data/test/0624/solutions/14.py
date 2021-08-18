@@ -18,9 +18,7 @@ def main():
         dyn_sm -= a[n - n_rm] if n_rm > 0 else 0
         dyn_avg = (dyn_sm + ((n - n_rm) * k if (n - n_rm) * k <= m - n_rm else m - n_rm)) / (n - n_rm)
         maxavg = max(maxavg, dyn_avg)
-        # print(dyn_avg)
     print(maxavg)
-    # for i in range(len(a)):
 
 
 def __starting_point():

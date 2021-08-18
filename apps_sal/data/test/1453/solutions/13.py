@@ -23,7 +23,6 @@ aa = sorted(inpl())
 
 ra = [[0] * (N // M + 3) for _ in range(M)]
 
-# ra [m][n]  : %M == m
 
 for m in range(M):
     c = m

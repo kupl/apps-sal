@@ -13,7 +13,6 @@ def main():
 
             sums.append([i, total])
 
-    # print(sums)
     ans = []
     total = 0
     count = 0

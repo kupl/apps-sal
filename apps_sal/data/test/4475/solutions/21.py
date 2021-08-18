@@ -12,14 +12,12 @@ for loop in range(tt):
         print(x * y)
         continue
 
-    # first a
     if a - x >= n:
         ans = min(ans, (a - n) * b)
     else:
         rem = n - (a - x)
         ans = min(ans, x * (b - rem))
 
-    # b
     if b - y >= n:
         ans = min(ans, (b - n) * a)
     else:
