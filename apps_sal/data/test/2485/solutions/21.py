@@ -1,4 +1,3 @@
-# https://atcoder.jp/contests/abc176/submissions/16118386
 import collections
 import sys
 import math

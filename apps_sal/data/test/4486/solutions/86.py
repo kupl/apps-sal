@@ -1,5 +1,4 @@
 s = input()
-# print(s)
 n: int = 0
 odds = ""
 
@@ -14,5 +13,4 @@ for i in s:
     else:
         pass
     n += 1
-    # nを奇数にする
 print(odds)

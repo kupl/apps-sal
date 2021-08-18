@@ -3,7 +3,6 @@ import random
 
 def solve(l, n, m):
     sl = sorted(l)
-    # print(sl)
     return min([sl[i + n - 1] - sl[i] for i in range(m - n + 1)])
 
 
@@ -19,4 +18,3 @@ def test():
 n, m = list(map(int, input().split()))
 l = list(map(int, input().split()))
 print(solve(l, n, m))
-# test()

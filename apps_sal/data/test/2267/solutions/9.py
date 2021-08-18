@@ -29,4 +29,3 @@ s = []
 for i in range(n):
     s.append(input())
 print(''.join(mergesort(s)))
-# +

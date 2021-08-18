@@ -20,14 +20,6 @@ def customCompare(x, y):
         return 0
     else:
         return 1
-    # if len(x) == len(y):
-    # 	return compareStrings(x, y)
-    # elif isPrefix(x, y):
-    # 	return compareStrings(x, y[len(x):])
-    # elif isPrefix(y, x):
-    # 	return compareStrings(x[len(y):], y)
-    # else:
-    # 	return compareStrings(x, y)
 
 
 def compareStrings(x, y):
@@ -67,15 +59,6 @@ def cmp_to_key(mycmp):
         def __ne__(self, other):
             return mycmp(self.obj, other.obj) != 0
     return K
-
-# L = ["abba", "abacaba", "bcd", "er"]
-# print(solver(L))
-
-# L2 = ['x', 'xx', 'xxa', 'xxaa', 'xxaaa']
-# print(solver(L2))
-
-# L3 = ['c', 'cb', 'cba']
-# print(solver(L3))
 
 
 main()

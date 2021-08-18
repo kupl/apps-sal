@@ -1,14 +1,4 @@
-# stdin=open('input.txt')
 
-# def input():
-# 	return stdin.readline()[:-1]
-
-# a, b = map(int, input().split())
-
-# l = list(map(int, input().split()))
-
-
-# CODE BEGINS HERE.................
 
 for t in range(int(input())):
     n = int(input())
@@ -31,5 +21,3 @@ for t in range(int(input())):
             break
 
     print(min(count1, count2))
-
-# CODE ENDS HERE....................

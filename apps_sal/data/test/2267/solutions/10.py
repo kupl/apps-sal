@@ -2,8 +2,6 @@ import functools
 import math
 import sys
 
-#n, p = map(int, input().split())
-
 
 def cmp(x, y):
     if x < y:

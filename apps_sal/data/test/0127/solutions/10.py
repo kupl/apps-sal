@@ -6,7 +6,6 @@ for _ in range(n):
 
 a.sort()
 
-# print(a)
 
 tot = 0
 for i in range(0, f):
