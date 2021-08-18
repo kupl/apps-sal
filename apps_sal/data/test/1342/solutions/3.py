@@ -6,8 +6,6 @@ a = [int(x) for x in sys.stdin.readline().split()]
 
 
 def is_valid(s, k):
-    # Ali lahko zapakiramo s steklenic v škatle velikosti k in k + 1?
-    # s = x * k + y * (k + 1) = (x + y) * k + y, kjer je 0 <= y < k
     y = s % k
     return s // k >= y
 
@@ -27,7 +25,6 @@ while k * k <= a[0]:
         best_sol = max(best_sol, k)
     k += 1
 
-# t je skupno število škatel.
 t = 1
 while t * t <= a[0]:
     k = a[0] // t
@@ -38,6 +35,5 @@ while t * t <= a[0]:
             best_sol = max(best_sol, k - 1)
     t += 1
 
-# print(best_sol, best_sol + 1)
 
 print(sum(s // (best_sol + 1) + (0 if s % (best_sol + 1) == 0 else 1) for s in a))

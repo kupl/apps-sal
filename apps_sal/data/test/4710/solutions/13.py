@@ -1,4 +1,3 @@
-# A - ABC/ARC
 def main():
     x = int(input())
 

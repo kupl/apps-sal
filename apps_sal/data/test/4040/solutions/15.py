@@ -5,10 +5,8 @@ cur = 0
 ci = 0
 mmap = [0] * n
 while cur < n + 1 and ci < len(c):
-    #print("pi =min ", cur + d," ",  n - r + 1)
 
     pi = min(cur + d, n - r + 1)
-    #print("pi = ", pi)
     for j in range(pi, pi + c[ci]):
         mmap[j - 1] = ci + 1
     cur = pi + c[ci] - 1

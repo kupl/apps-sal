@@ -20,8 +20,8 @@ for way in ways:
     coords = start + 0
     for i in instructions:
         coords += way[int(i)]
-        if not onGrid(coords) or grid[int(coords.real)][int(coords.imag)] == "#":
-            break
+        if not onGrid(coords) or grid[int(coords.real)][int(coords.imag)] == "
+        break
         if coords == end:
             count += 1
             break

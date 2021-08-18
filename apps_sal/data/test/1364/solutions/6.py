@@ -1,5 +1,4 @@
 n = int(input())
-# =map(int,input().split())
 arr = list(map(int, input().split()))
 c = [0] * 1
 c[0] = 1

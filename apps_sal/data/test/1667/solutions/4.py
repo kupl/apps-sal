@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/982/D
 
 class Union:
     def __init__(self, n):
@@ -83,7 +82,6 @@ max_length = -1
 
 for (index, val) in a:
     update(index, used, d, u)
-    #print(d, val)
 
     if len(d) == 1:
         len_ = list(d.values())[0]
@@ -93,6 +91,3 @@ for (index, val) in a:
             ans = val + 1
 
 print(ans)
-
-# 8
-# 1 12 2 11 10 3 9 4 8 5 14 6

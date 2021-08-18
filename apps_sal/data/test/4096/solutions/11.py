@@ -22,7 +22,6 @@ for u in range(len(L)):
     L = L[1:]
     n = n - 1
     p = 0
-    # print(L)
     for i in L:
         p += i
     if p >= m:

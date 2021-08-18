@@ -33,6 +33,5 @@ for i in range(N):
                 A[j][k] = 1
                 if ck_bingo(A):
                     Ans = 'Yes'
-                    # break
 
 print(Ans)

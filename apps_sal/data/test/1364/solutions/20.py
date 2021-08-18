@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/8 17:05
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : A. Sushi for Two.py
 
 from collections import Counter
 

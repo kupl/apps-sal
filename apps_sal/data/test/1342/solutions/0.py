@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sun Apr  2 22:42:34 2017
 
@@ -14,16 +13,10 @@ a.sort()
 
 def check_num(p, i):
 
-    # i = ap + b(p+1)
-    # min(a+b) <=> max(b)
-    # b(p+1) <= i
-    # b == i (mod p)
     max_b = (i // (p + 1))
     b = i % p + ((max_b - i % p) // p) * p
-    # cur = a + b
     cur = (i - b) // p
 
-    #print(cur - b, b, p)
     if b < 0:
         return None
     return cur

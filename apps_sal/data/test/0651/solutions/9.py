@@ -30,8 +30,8 @@ for i in range(4):
                     di = int(d)
                     r += dr[p[di]]
                     c += dc[p[di]]
-                    if r < 0 or r >= rows or c < 0 or c >= cols or b[r][c] == '#':
-                        break
+                    if r < 0 or r >= rows or c < 0 or c >= cols or b[r][c] == '
+                    break
                     if b[r][c] == 'E':
                         ok = 1
                 res += ok

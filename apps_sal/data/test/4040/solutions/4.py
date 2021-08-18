@@ -7,7 +7,7 @@ curr = -1
 i = 0
 flag = 0
 while(i < n):
-    if(summ == n - i):  # use all planks
+    if(summ == n - i):
         if(j == m):
             print("NO")
             flag = 1

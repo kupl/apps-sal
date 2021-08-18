@@ -1,5 +1,3 @@
-# from collections import Counter
-# from itertools import combinations
 n = int(input())
 doors = [int(i) for i in input().split()]
 left = 0

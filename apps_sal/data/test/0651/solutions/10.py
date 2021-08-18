@@ -6,13 +6,13 @@ for y in range(n):
     l = input()
     grid.append(list())
     for x in range(m):
-        grid[-1].append(l[x] == '#')
+        grid[-1].append(l[x] == '
         if l[x] == 'S':
-            sloc = (x, y)
+            sloc=(x, y)
         elif l[x] == 'E':
-            eloc = (x, y)
+            eloc=(x, y)
 
-pb = []
+pb=[]
 for a in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
     for b in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
         for c in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
@@ -20,30 +20,30 @@ for a in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
                 if len(set([a, b, c, d])) == 4 and [a, b, c, d] not in pb:
                     pb.append([a, b, c, d])
 
-s = input()
+s=input()
 
-ans = 0
+ans=0
 for mp in pb:
-    seen = False
-    works = True
-    loc = sloc
+    seen=False
+    works=True
+    loc=sloc
     for j in s:
-        j = int(j)
+        j=int(j)
         if seen:
             break
         if not works:
             break
-        nloc = (loc[0] + mp[j][0], loc[1] + mp[j][1])
+        nloc=(loc[0] + mp[j][0], loc[1] + mp[j][1])
         if min(nloc) < 0 or nloc[0] >= m or nloc[1] >= n:
-            works = False
+            works=False
             break
         if grid[nloc[1]][nloc[0]]:
-            works = False
+            works=False
             break
         if nloc == eloc:
-            seen = True
+            seen=True
             break
-        loc = nloc
+        loc=nloc
     if seen:
         ans += 1
 

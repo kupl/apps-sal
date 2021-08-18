@@ -32,7 +32,6 @@ def solve():
         if b[i] + a[i] - 1 >= p:
             b[i] = p - a[i]
         p = b[i]
-        #print(i, b[i], a[i], b[i]+a[i])
         for j in range(b[i], b[i] + a[i]):
             c[j - 1] = i + 1
     print("YES")

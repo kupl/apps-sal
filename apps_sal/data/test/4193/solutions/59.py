@@ -10,9 +10,9 @@ for i in range(3):
 
 for i in range(3):
     if L[i][0] == L[i][1] == L[i][2] == 0:
-        ans = 'Yes'  # 横
+        ans = 'Yes'
     if L[0][i] == L[1][i] == L[2][i] == 0:
-        ans = 'Yes'  # 縦
+        ans = 'Yes'
 if L[0][0] == L[1][1] == L[2][2] == 0:
     ans = 'Yes'
 if L[0][2] == L[1][1] == L[2][0] == 0:

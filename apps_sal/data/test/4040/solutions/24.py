@@ -7,7 +7,6 @@ while index >= 0:
     poses[index] = poses[index + 1] - lengths[index]
     index -= 1
 
-# print(poses)
 
 cur = 0
 ind = 0

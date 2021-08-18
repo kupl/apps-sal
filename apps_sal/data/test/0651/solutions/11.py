@@ -1,7 +1,6 @@
 import itertools
 import sys
 
-#f = open('input', 'r')
 f = sys.stdin
 ms = tuple(map(int, f.readline().split()))
 d = [(0, 1), (0, -1), (1, 0), (-1, 0)]
@@ -26,9 +25,9 @@ for dp in itertools.permutations(d):
                 failed = True
         if failed:
             break
-        if mp[cur_pos[0]][cur_pos[1]] == '#':
-            failed = True
-            break
+        if mp[cur_pos[0]][cur_pos[1]] == '
+        failed = True
+        break
         elif mp[cur_pos[0]][cur_pos[1]] == 'E':
             failed = False
             break

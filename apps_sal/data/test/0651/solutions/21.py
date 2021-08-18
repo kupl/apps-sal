@@ -11,37 +11,36 @@ def road(ins):
             return 1
         if ins[x] == 'U':
             try:
-                if ar[cur[0] + 1][cur[1]] != '#':
-                    cur = [cur[0] + 1, cur[1]]
+                if ar[cur[0] + 1][cur[1]] != '
+                cur = [cur[0] + 1, cur[1]]
                 else:
                     return 0
             except:
                 return 0
         if ins[x] == 'D':
             try:
-                if ar[cur[0] - 1][cur[1]] != '#' and cur[0] - 1 >= 0:
-                    cur = [cur[0] - 1, cur[1]]
+                if ar[cur[0] - 1][cur[1]] != '
+                cur = [cur[0] - 1, cur[1]]
                 else:
                     return 0
             except:
                 return 0
         if ins[x] == 'R':
             try:
-                if ar[cur[0]][cur[1] + 1] != '#':
-                    cur = [cur[0], cur[1] + 1]
+                if ar[cur[0]][cur[1] + 1] != '
+                cur = [cur[0], cur[1] + 1]
                 else:
                     return 0
             except:
                 return 0
         if ins[x] == 'L':
             try:
-                if ar[cur[0]][cur[1] - 1] != '#' and cur[1] - 1 >= 0:
-                    cur = [cur[0], cur[1] - 1]
+                if ar[cur[0]][cur[1] - 1] != '
+                cur = [cur[0], cur[1] - 1]
                 else:
                     return 0
             except:
                 return 0
-    # print(cur)
     if ar[cur[0]][cur[1]] == 'E':
         return 1
     else:
@@ -59,6 +58,5 @@ for x in range(n):
 s = input()
 i = 0
 for x in list(itertools.permutations(['U', 'D', 'L', 'R'])):
-    # print(list(x))
     i += road(list(x))
 print(i)

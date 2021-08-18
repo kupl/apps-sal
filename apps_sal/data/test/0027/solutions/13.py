@@ -11,7 +11,6 @@ for c in range(n // 2 + 1):
         if s1[i] != s[i]:
             b = False
             break
-    #print(c, b, curr, s1)
     if b:
         ans = min(ans, curr)
 print(ans)
