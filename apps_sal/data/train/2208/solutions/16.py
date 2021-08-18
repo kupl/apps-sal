@@ -25,7 +25,6 @@ for i in range(n):
 for _ in range(k):
     x, y = list(map(int, input().split()))
     union_sets(x - 1, y - 1)
-    # print(parent)
 
 c = 0
 for i in range(n):

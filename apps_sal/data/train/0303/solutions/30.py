@@ -12,5 +12,4 @@ class Solution:
                 else:
                     new_max = max(dp[i - 1][j - 1][1], arr[i - 1])
                     dp[i][j] = dp[i - 1][j - 1][0] - j * dp[i - 1][j - 1][1] + new_max * (j + 1), new_max
-        # print(dp)
         return max(dp[-1])[0]

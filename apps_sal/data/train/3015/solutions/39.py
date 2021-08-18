@@ -1,5 +1,4 @@
 def get_issuer(number):
-  # code your solution here
     if len(str(number)) == 15:
         if str(number)[:2] == "34" or str(number)[:2] == "37":
             res = "AMEX"

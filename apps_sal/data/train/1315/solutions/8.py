@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     n = int(input())
     arr = []
@@ -7,7 +6,6 @@ try:
     out = list(map(sorted, arr))
     dic = {}
     for elem in out:
-        # print("elem:",elem)
         dic.setdefault(tuple(elem), list()).append(1)
     for k, v in list(dic.items()):
         dic[k] = sum(v)

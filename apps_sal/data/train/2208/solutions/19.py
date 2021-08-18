@@ -7,7 +7,6 @@ def main():
 
     N, k = list(map(int, input().split()))
 
-    # union-find
     parent = [k for k in range(N)]
 
     def find(x):

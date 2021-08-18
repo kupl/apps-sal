@@ -1,5 +1,4 @@
 def get_issuer(number):
-  # code your solution here
     number = str(number)
     if (len(number) == 13):
         if(number[0] == '4'):

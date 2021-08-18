@@ -1,33 +1,5 @@
 
 
-# for n in range(3, 200, 2):
-
-#     N = 2 * n
-
-#     alpha = (2 * pi) / (2 * n)
-#     beta = (pi - alpha) / 2
-
-#     L = sin(beta) / sin(alpha)
-
-#     ans = 10 ** 10
-#     MAX = 1000
-#     for i in range(MAX):
-#         t0 = alpha * i / MAX
-
-#         xx = []
-#         yy = []
-#         for i in range(N):
-#             t = alpha * i + t0
-#             x, y = L * cos(t), L * sin(t)
-#             xx.append(x)
-#             yy.append(y)
-
-#         tmpr = max(max(xx) - min(xx), max(yy) - min(yy))
-#         ans = min(ans, tmpr)
-
-#     print(f"{n} : {ans},")
-
-
 ans = {3: 1.931851652578137,
        5: 3.1962266107498305,
        7: 4.465702135190254,

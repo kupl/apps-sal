@@ -6,8 +6,6 @@ class Solution:
             if i == 0:
                 dp[i] = A[0]
             else:
-                # A[i-k+1, ..., i-1, i] is a subarray
-                # A[0, 1, 2, ..., i-k] is previous chuck with subarray length up to K
                 for k in range(1, K + 1):
                     if i - k + 1 < 0:
                         break

@@ -11,7 +11,5 @@ for t in range(T):
         k = n // 2
         gamma = (pi / 2 - alpha * k) / 2
 
-    # print(alpha*180/pi)
-    # print(gamma * 180 / pi)
     res = R * 2 * cos(gamma)
     print(res)

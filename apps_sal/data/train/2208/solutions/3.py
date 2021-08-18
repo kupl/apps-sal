@@ -27,7 +27,6 @@ W = [1] * (n + 1)
 a, b = snack[0]
 Union(a, b)
 
-# print(Group,W)
 
 for i in range(1, k):
     if snack[i] == snack[i - 1]:
@@ -38,7 +37,6 @@ for i in range(1, k):
     if find(a) != find(b):
         Union(a, b)
 
-    # print(Group,W)
 
 SUM = sum([w - 1 for w in W])
 
