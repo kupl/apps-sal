@@ -13,12 +13,10 @@ for i in range(n // k):
     c = str(b[i] - 1) + '9' * (k - 1)
     c = int(c)
     c = max(c, -1)
-    # print(m,q,c)
     res = (m // a[i] + 1) - q // a[i] + c // a[i]
     answer.append(res)
 
 resa = 1
-# print(answer)
 if sum(answer) == 0:
     print(0)
 else:

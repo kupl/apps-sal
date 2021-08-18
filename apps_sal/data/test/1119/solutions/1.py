@@ -5,9 +5,7 @@ MOD = int(1e9 + 7)
 
 
 def modinvEuler(x, mod):
-    # if mod is prime
     return pow(x, mod - 2, mod)
-    # otherwise exponent should be totient(mod)-1
 
 
 k, pa, pb = [int(x) for x in input().split()]
@@ -23,7 +21,6 @@ mem = di()
 
 
 def f(na, ns):
-    # nonlocal k,Pa,Pb
     if ns >= k:
         return ns
     if na + ns >= k:

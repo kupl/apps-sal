@@ -33,8 +33,8 @@ def check(R):
 
 N = int(input())
 xy = [list(map(int, input().split())) for i in range(N)]
-left = 0  # False
-right = 500 * 2**0.5  # True
+left = 0
+right = 500 * 2**0.5
 while right - left > 0.000001:
     mid = (left + right) / 2
     if check(mid):

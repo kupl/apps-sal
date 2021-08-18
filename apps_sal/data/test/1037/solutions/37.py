@@ -5,10 +5,10 @@ A_l.sort(reverse=True)
 dp = []
 for _ in range(n + 1):
     dp.append([0] * (n + 1))
-for j in range(1, n + 1):  # all go bigger
+for j in range(1, n + 1):
     a, i = A_l[j - 1]
     dp[j][0] = dp[j - 1][0] + a * (n - (j - 1) - (i + 1))
-for k in range(1, n + 1):  # all go smaller
+for k in range(1, n + 1):
     a, i = A_l[k - 1]
     dp[0][k] = dp[0][k - 1] + a * ((i + 1) - (1 + (k - 1)))
 
@@ -24,5 +24,3 @@ for j in range(0, n + 1):
     k = n - j
     result = max(result, dp[j][k])
 print(result)
-# for l in range(n+1):
-#    print(dp[l])

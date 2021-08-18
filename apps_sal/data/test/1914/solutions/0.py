@@ -30,7 +30,6 @@ class AhoCorasick(object):
         Q = []
         for j in range(len(S)):
             Q.append((j, 0, 0, 0))
-            # string index, index in string, state, suff state,
         i = 0
         while(i < len(Q)):
             j, ind, v, suff = Q[i]
@@ -60,7 +59,6 @@ class AhoCorasick(object):
         for i in range(len(S)):
             self.insert_trie(S[i])
         self.set_suffix_link(S)
-        # self.printTree()
         self.set_matches()
 
     def get(self, s):
@@ -99,8 +97,6 @@ t2.build(patterns_rev)
 x1 = t1.get(t)
 x2 = t2.get(t[::-1])[::-1]
 
-# print(x1)
-# print(x2)
 
 ans = 0
 for i in range(len(x1) - 1):

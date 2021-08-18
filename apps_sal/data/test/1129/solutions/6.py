@@ -20,11 +20,7 @@ import io
 import sys
 import time
 import random
-# ~ start = time.clock()
-# ~ test ='''4
-# ~ 1 2'''
 
-# ~ sys.stdin = io.StringIO(test)
 
 n = int(input())
 x = [int(x) for x in input().split()]
@@ -34,6 +30,3 @@ if len(x) % 2 == 0:
     print(x[(len(x) - 1) // 2])
 else:
     print(x[len(x) // 2])
-
-# ~ dur = time.clock()-start
-#~ print("Time:",dur)

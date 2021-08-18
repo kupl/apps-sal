@@ -15,9 +15,6 @@ for i in range(n // k):
     if ((arb[i]) * p_k1 % ara[i] == 0):
         k = k - 1
     sum1 *= p_k // ara[i] - p_k1 * (arb[i] + 1) // ara[i] + p_k1 * (arb[i]) // ara[i] + k + 1
-    #first = p_k1 * arb[i] // ara[i] * (ara[i] + 1)
-    #print(p_k // ara[i] + k + 1, p_k1 * (arb[i] + 1) // ara[i], p_k1 * (arb[i]) // ara[i])
-    #sum1 *= p_k // ara[i] + 1 - p_k1 // first
 
     sum1 = sum1 % M
 print(sum1 % (10**9 + 7))

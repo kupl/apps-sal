@@ -1,4 +1,3 @@
-# 解法3(山登り法)
 
 import numpy as np
 

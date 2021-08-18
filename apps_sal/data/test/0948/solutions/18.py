@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 face = set('face')
 n, m = list(map(int, input().split()))

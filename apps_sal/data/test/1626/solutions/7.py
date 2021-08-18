@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 MM = 1000000007
@@ -26,4 +24,3 @@ for i in range(divmod(n, k)[0]):
 
 print(s)
 finish = time.time()
-#print(finish - start)

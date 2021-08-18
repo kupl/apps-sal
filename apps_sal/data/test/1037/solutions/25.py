@@ -1,4 +1,3 @@
-# coding: utf-8
 N = int(input())
 _A = sorted(enumerate(map(int, input().split()), 1), key=lambda x: x[1], reverse=True)
 dp = [[0] * (N + 1) for i in range(N + 1)]

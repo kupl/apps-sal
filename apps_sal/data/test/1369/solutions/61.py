@@ -1,6 +1,5 @@
 class Triangle():
     def __init__(self, A, B, C):
-        # 3点の座標
         self.A = A
         self.B = B
         self.C = C
@@ -10,29 +9,24 @@ class Triangle():
         a = ((Bx - Cx)**2 + (By - Cy)**2)**0.5
         b = ((Cx - Ax)**2 + (Cy - Ay)**2)**0.5
         c = ((Ax - Bx)**2 + (Ay - By)**2)**0.5
-        # 3辺の長さ
         self.a = a
         self.b = b
         self.c = c
-        # 外心の座標
         s = a**2 * (b**2 + c**2 - a**2)
         t = b**2 * (c**2 + a**2 - b**2)
         u = c**2 * (a**2 + b**2 - c**2)
         Ux = (s * Ax + t * Bx + u * Cx) / (s + t + u)
         Uy = (s * Ay + t * By + u * Cy) / (s + t + u)
         self.U = (Ux, Uy)
-        # 重心の座標
         self.G = ((Ax + Bx + Cx) / 3, (Ay + By + Cy) / 3)
 
 
 class Circle():
-    # 中心p、半径rの円
     def __init__(self, p, r):
         self.p = p
         self.r = r
 
     def contain(self, q):
-        # 点qを含むか判定
         px, py = self.p
         qx, qy = q
         return (px - qx)**2 + (py - qy)**2 <= self.r**2 + 10**(-7)

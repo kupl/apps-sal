@@ -4,8 +4,8 @@ N = int(input())
 XY = [tuple(map(int, input().split())) for _ in range(N)]
 
 
-def calc(r):  # 半径rが与えられたときに全てが重なるかを判定
-    lst = []  # 交点を入れるリスト
+def calc(r):
+    lst = []
     for i in range(N - 1):
         x1 = XY[i][0]
         y1 = XY[i][1]
@@ -28,7 +28,7 @@ def calc(r):  # 半径rが与えられたときに全てが重なるかを判定
                 lst.append([nx, y1 - h])
                 lst.append([nx, y1 + h])
             else:
-                a = (y2 - y1) / (x2 - x1)  # 2点を結ぶ直線の傾き
+                a = (y2 - y1) / (x2 - x1)
 
                 b = -1 / a
 
@@ -37,16 +37,13 @@ def calc(r):  # 半径rが与えられたときに全てが重なるかを判定
                 nx = h / size
                 ny = nx * b
 
-                # もとの2点の中点
                 xc = (x1 + x2) / 2
                 yc = (y1 + y2) / 2
 
                 lst.append([xc + nx, yc + ny])
                 lst.append([xc - nx, yc - ny])
-    # print (r)
-    # print (lst)
     nr = r + eps
-    for x, y in lst:  # 中心の点
+    for x, y in lst:
         flag = True
         for X, Y in XY:
             tmp = (x - X) ** 2 + (y - Y) ** 2
