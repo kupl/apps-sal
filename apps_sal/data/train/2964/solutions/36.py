@@ -1,5 +1,4 @@
 def sum_two_smallest_numbers(numbers):
-    # your code here
     min1 = 0
     min2 = 0
     max = 0

@@ -13,5 +13,5 @@ def HQ9(code):
         l.append('No more bottles of beer on the wall, no more bottles of beer.')
         l.append('Go to the store and buy some more, 99 bottles of beer on the wall.')
         s = '\n'.join(l)
-        s = s.replace('  of beer', 'no more bottles of beer')    # small trick
+        s = s.replace('  of beer', 'no more bottles of beer')
         return s

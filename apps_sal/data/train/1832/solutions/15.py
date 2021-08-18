@@ -9,10 +9,8 @@ class Solution:
         visited = [-10001] * N
         ans = 0
         while q:
-            # print(list(q))
             hp, cur = heapq.heappop(q)
             if visited[cur] != -10001:
-                #print(cur, visited[cur])
                 continue
             hp = -hp
             visited[cur] = hp

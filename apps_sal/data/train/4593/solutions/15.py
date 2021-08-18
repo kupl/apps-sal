@@ -8,4 +8,4 @@ def merge_arrays_gen(*args):
         yield arr1.pop() if not arr2 or (arr1 and arr1[-1] < arr2[-1]) else arr2.pop()
 
 
-merge_arrays = lambda *args: list(dict.fromkeys(merge_arrays_gen(*args)))  # Python 3.6+
+merge_arrays = lambda *args: list(dict.fromkeys(merge_arrays_gen(*args)))

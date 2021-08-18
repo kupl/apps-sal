@@ -30,28 +30,27 @@ class Solution:
         return ans
 
     def reachableNodes2(self, edges, M, N):
-        # graph, dijkstra, heap, dist, used(u,v)=part of new nodes covered
         graph = defaultdict(dict)
         for u, v, w in edges:
-            graph[u][v] = graph[v][u] = w  # of new nodes between u and v
+            graph[u][v] = graph[v][u] = w
 
         heap = [(0, 0)]
         dist = {0: 0}
-        used = dict()  # key=(u,v) value=covered new nodes
-        ans = 0  # final total num of nodes can be covered
+        used = dict()
+        ans = 0
 
         while heap:
             adist, anode = heapq.heappop(heap)
             if adist > dist[anode]:
                 continue
 
-            ans += 1  # add one old node in the original graph
+            ans += 1
 
             for nei, weight in graph[anode].items():
-                v = min(weight, M - adist)  # source -> anode -> nei
+                v = min(weight, M - adist)
                 used[(anode, nei)] = v
 
-                adist2 = adist + weight + 1  # cost of \"source -> anode -> nei\"
+                adist2 = adist + weight + 1
                 if adist2 < dist.get(nei, M + 1):
                     dist[nei] = adist2
                     heapq.heappush(heap, (adist2, nei))
@@ -61,8 +60,6 @@ class Solution:
         return ans
 
     def reachableNodes1(self, edges, M, N):
-        # bfs, dijkstra 都有希望过
-        # subdivisions = 细分！
 
         e = collections.defaultdict(dict)
         for i, j, l in edges:
