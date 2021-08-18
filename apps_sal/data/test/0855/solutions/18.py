@@ -2,7 +2,6 @@ import sys
 
 
 def log(s):
-    #    print(s)
     pass
 
 

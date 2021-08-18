@@ -1,4 +1,3 @@
-#!python3
 
 from collections import deque, Counter
 import array
@@ -14,19 +13,17 @@ def read_int():
 def read_int_array():
     return [int(i) for i in input().strip().split(' ')]
 
-######################################################
-
 
 vn, en = read_int_array()
-al = [[] for _ in range(vn)]  # adjacency list
+al = [[] for _ in range(vn)]
 
 
 def adj(v):
     return al[v]
 
 
-itoe = [None for _ in range(en)]  # index to edge
-for eid in range(en):  # eid - edge id
+itoe = [None for _ in range(en)]
+for eid in range(en):
     v, w = read_int_array()
     v -= 1
     w -= 1
@@ -35,17 +32,17 @@ for eid in range(en):  # eid - edge id
 
 marked = set()
 stack = set()
-etoc = {}  # edge to color
+etoc = {}
 
 
-def dfs(v):  # vertex
+def dfs(v):
     if v in marked:
         return
     marked.add(v)
     stack.add(v)
     hasbackedge = False
     for w in adj(v):
-        if w in stack:  # back edge
+        if w in stack:
             hasbackedge = True
             etoc[(v, w)] = 2
             continue

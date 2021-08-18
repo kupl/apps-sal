@@ -55,7 +55,6 @@ else:
     loc = bins(slab, 0)
     happia = happi
     count = 0
-    # print(a,b)
     b = b % s
     a = a % s
     left = b % s
@@ -74,7 +73,6 @@ else:
 
     while(loc < n and slab[loc][0] <= 0):
         loc += 1
-    # print(slab[loc][0])
     while(left > 0):
         if(slab[loc + count][1] < left):
             happib -= slab[loc + count][0] * slab[loc + count][1]
@@ -83,5 +81,4 @@ else:
             happib -= slab[loc + count][0] * left
             break
         count += 1
-    # print(happia,happib,happi)
     print(max(happia, happib))

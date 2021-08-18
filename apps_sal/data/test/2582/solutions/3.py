@@ -14,7 +14,6 @@ def main():
     p = [int(x) - 1 for x in stdin.readline().split()]
     invp = inv(p)
 
-    # Build auxiliary arrays
     nexL = [None] * n
     nexR = [None] * n
     q = deque()
@@ -30,7 +29,6 @@ def main():
         nexR[i] = n if not q else q[-1]
         q.append(i)
 
-    # Solve
     res = 0
     for i in range(0, n):
         if i - nexL[i] < nexR[i] - i:

@@ -1,4 +1,3 @@
-# 入力
 N = int(input())
 S = list(input())
 

@@ -31,13 +31,11 @@ def main():
             if qu == "0":
                 sol.append(chg)
             else:
-                # print(chg)
                 zz, p, d = list(map(int, qu.split()))
                 p -= 1
                 a[p][0] += d
                 if a[p][1] == 0 and a[p][0] > l:
                     if p > 0 and p < n - 1:
-                        # print('first')
                         if a[p - 1][1] == 0 and a[p + 1][1] == 0:
                             chg += 1
                             a[p][1] = chg
@@ -49,14 +47,12 @@ def main():
                             a[p][1] = a[p - 1][1]
                             chg -= 1
                     elif p == 0:
-                        # print('second')
                         if a[p + 1][1] == 0:
                             chg += 1
                             a[p][1] = chg
                         else:
                             a[p][1] = a[p + 1][1]
                     elif p == n - 1:
-                        # print('third')
                         if a[p - 1][1] == 0:
                             chg += 1
                             a[p][1] = chg
@@ -68,19 +64,15 @@ def main():
             if qu == "0":
                 sol.append(chg)
             else:
-                # print(chg)
                 zz, p, d = list(map(int, qu.split()))
                 p -= 1
                 a[p][0] += d
                 if a[p][0] > d:
                     chg = 1
-    # print(a,chg)
     print(*sol, sep='\n')
 
 
 def __starting_point():
-    #import profile
-    # profile.run("main()")
     main()
 
 

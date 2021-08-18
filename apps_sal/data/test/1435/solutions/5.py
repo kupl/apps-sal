@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 def count_nine(a, i):
     while i < len(a) - 1:

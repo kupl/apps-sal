@@ -12,5 +12,4 @@ while nuts > 0:
         nuts -= curbox
         curbox = vmest
         boxes += 1
-#    print(nuts)
 print(boxes)

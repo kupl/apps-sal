@@ -22,7 +22,7 @@ for i in range(1, N):
     S.append(S[i - 1] + A[i])
 
 
-def clc_shake(x):  # x以上の和
+def clc_shake(x):
     tot = 0
     for i in range(N):
         th = x - A[i]

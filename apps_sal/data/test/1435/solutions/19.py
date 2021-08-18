@@ -16,6 +16,3 @@ if(c % 2):
     a *= c // 2 + 1
 
 print(a)
-
-
-# Made By Mostafa_Khaled

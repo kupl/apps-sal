@@ -1,4 +1,3 @@
-# ez
 import math
 pown = 1
 ind = []
@@ -76,12 +75,9 @@ num = 0
 while num < maxind:
     x = q[num][0]
     y = q[num][1]
-    #print(x , y)
     p = get(x, y)
-    # print(p)
     if y - p[1] <= p[1] - x:
         for i in range(p[1], y + 1):
-            #print(i , a[i])
             if ind[p[0] - a[i]] >= x and ind[p[0] - a[i]] <= p[1]:
                 ans += 1
     else:
@@ -95,6 +91,5 @@ while num < maxind:
         q.append((p[1] + 1, y))
         maxind += 1
     num += 1
-    #print(num , maxind)
 
 print(ans)

@@ -3,14 +3,12 @@ import numpy as np
 
 
 def convolve(A, B):
-    # 畳み込み  # 要素は整数
-    # 3 つ以上の場合は一度にやった方がいい
     dtype = np.int64
     fft, ifft = np.fft.rfft, np.fft.irfft
     a, b = len(A), len(B)
     if a == b == 1:
         return np.array([A[0] * B[0]])
-    n = a + b - 1  # 返り値のリストの長さ
+    n = a + b - 1
     k = 1 << (n - 1).bit_length()
     AB = np.zeros((2, k), dtype=dtype)
     AB[0, :a] = A

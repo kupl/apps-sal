@@ -7,19 +7,19 @@ mod = 10**9 + 7
 Max = sys.maxsize
 
 
-def l():  # intのlist
+def l():
     return list(map(int, input().split()))
 
 
-def m():  # 複数文字
+def m():
     return list(map(int, input().split()))
 
 
-def onem():  # Nとかの取得
+def onem():
     return int(input())
 
 
-def s(x):  # 圧縮
+def s(x):
     a = []
     if len(x) == 0:
         return []
@@ -36,15 +36,15 @@ def s(x):  # 圧縮
     return a
 
 
-def jo(x):  # listをスペースごとに分ける
+def jo(x):
     return " ".join(map(str, x))
 
 
-def max2(x):  # 他のときもどうように作成可能
+def max2(x):
     return max(list(map(max, x)))
 
 
-def In(x, a):  # aがリスト(sorted)
+def In(x, a):
     k = bs.bisect_left(a, x)
     if k != len(a) and a[k] == x:
         return True

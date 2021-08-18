@@ -15,7 +15,6 @@ A.sort()
 
 
 def check(x):
-    # x以上の幸福度で握手した時、M回以下だとTrueを返す
     Y = np.searchsorted(A, x - A)
     return N * N - Y.sum() <= M
 
@@ -35,4 +34,3 @@ Y = np.searchsorted(A, ok - A)
 answer = (Acum[-1] - Acum[Y]).sum() + (A * (N - Y)).sum()
 answer += ng * (M - (N - Y).sum())
 print(answer)
-# 24

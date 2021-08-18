@@ -3,8 +3,8 @@ def solve():
     point123 = {(1, 1): None, (1, 2): "Bob", (1, 3): "Alice",
                 (2, 1): "Alice", (2, 2): None, (2, 3): "Bob",
                 (3, 1): "Bob", (3, 2): "Alice", (3, 3): None}
-    map123 = {}  # (a, b): (nexta, nextb)
-    cycle123 = {}  # (a, b): (cyclelen, Alicegain, Bobgain)
+    map123 = {}
+    cycle123 = {}
 
     k, a, b = [int(st) for st in input().split(" ")]
     A = [None, None, None, None]
@@ -32,8 +32,6 @@ def solve():
 
             if cycle < 10:
                 cycle123[(i, j)] = (cycle, again, bgain)
-
-    #print("Map", map123, "\nCycle", cycle123)
 
     ansA, ansB = 0, 0
     while k > 0:

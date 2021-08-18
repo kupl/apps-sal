@@ -25,6 +25,5 @@ for i in range(m):
                 add -= 1
             ans += add
         a[p] += d
-    # print(a)
 
 print(*anss, sep='\n')

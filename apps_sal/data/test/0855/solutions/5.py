@@ -1,18 +1,5 @@
-#!/usr/bin/env python3
-# encoding: utf-8
 
 
-# ----------
-# Constants
-# ----------
-
-
-# ----------
-# Functions
-# ----------
-
-# Reads a string from stdin, splits it by space chars, converts each
-# substring to int, adds it to a list and returns the list as a result.
 def get_ints():
     return [int(n) for n in input().split()]
 
@@ -30,10 +17,6 @@ def game(a, b):
     else:
         return (0, 0)
 
-
-# ----------
-# Execution start point
-# ----------
 
 def __starting_point():
     z = get_ints()
@@ -67,7 +50,6 @@ def __starting_point():
         results.append(game(a, b))
         a, b = move(alice, a, b), move(bob, a, b)
 
-    # periods
     apoint, bpoint = 0, 0
     c = len(moves) - index
     rep = (k - index) // c
@@ -78,14 +60,12 @@ def __starting_point():
     apoint *= rep
     bpoint *= rep
 
-    # after
     rem = (k - index) % c
     for i in range(rem):
         da, db = results[i + index]
         apoint += da
         bpoint += db
 
-    # before
     for res in results[:index]:
         da, db = res
         apoint += da
