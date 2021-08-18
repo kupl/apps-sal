@@ -12,8 +12,3 @@ class StreamChecker:
         self.s += letter
         self.s = self.s[-self.maxLen:]
         return any(self.s.endswith(w) for w in self.dic[letter])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

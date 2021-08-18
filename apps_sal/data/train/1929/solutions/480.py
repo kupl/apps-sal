@@ -23,7 +23,7 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.last_k.appendleft(letter)
-        if len(self.last_k) > self.k:   # maintain a window size of k
+        if len(self.last_k) > self.k:
             self.last_k.pop()
 
         curr = self.root
@@ -34,8 +34,3 @@ class StreamChecker:
             if curr.is_end:
                 return True
         return curr.is_end
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

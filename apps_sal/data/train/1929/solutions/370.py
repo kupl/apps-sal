@@ -33,8 +33,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.dequeue.insert(0, letter)
         return self.t.search(self.dequeue)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
