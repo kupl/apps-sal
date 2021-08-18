@@ -1,12 +1,8 @@
 class Solution:
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
-        # how do the distances from 1 compare to those from 0?
-        # parent, child distances??
         if N == 1:
             return [0]
-        # start with distances from the root
 
-        # build neighbors
         neighbors = {}
         for edge in edges:
             a = edge[0]
@@ -34,17 +30,6 @@ class Solution:
                 queue.append(child)
                 parent[child] = curr
 
-        # def build_children(n, p):
-        #     parent[n] = p
-        #     children[n] = []
-        #     for neighbor in neighbors[n]:
-        #         if neighbor == p:
-        #             continue
-        #         children[n].append(neighbor)
-        #         build_children(neighbor, n)
-        #     return
-        # build_children(0, None)
-
         def build_descendents(n):
             num_descendents[n] = 0
             for child in children[n]:
@@ -53,7 +38,6 @@ class Solution:
 
         build_descendents(0)
 
-        # bfs iteration to get root dist of each node
         root_dist = {0: 0}
         queue = children[0].copy()
         while queue != []:
@@ -64,7 +48,6 @@ class Solution:
             for child in children[curr]:
                 queue.append(child)
 
-        # figure out root_sum_dist
         root_sum_dist = 0
         for n in range(N):
             root_sum_dist += root_dist[n]
@@ -74,7 +57,6 @@ class Solution:
         while queue != []:
             curr = queue.pop()
 
-            # set sum_dist[curr]
             p = parent[curr]
             desc_curr = num_descendents[curr]
             other_kids_and_desc = num_descendents[p] - 1 - desc_curr

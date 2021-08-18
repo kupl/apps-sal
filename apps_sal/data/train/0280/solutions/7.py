@@ -7,7 +7,6 @@ class Solution:
 
         @lru_cache(None)
         def pp(start: int, end: int, k: int) -> int:
-            # print(\"s:\", s, k)
             if k == len(s):
                 return 0
             elif k == 1:

@@ -15,7 +15,7 @@ class Solution:
 
     def helper(self, node, parent, graph_dict, memo_dict):
         if (graph_dict[node] == [parent]):
-            return (0, 1)  # depth,num_nodes
+            return (0, 1)
         elif (node, parent) in memo_dict:
             return memo_dict[(node, parent)]
         else:
@@ -24,7 +24,6 @@ class Solution:
             for neighbor in graph_dict[node]:
                 if neighbor != parent:
                     (curr_sum, curr_nodes) = self.helper(neighbor, node, graph_dict, memo_dict)
-                 #   print((node,parent,curr_sum,curr_nodes))
                     found_sum = (1 * curr_nodes) + curr_sum + found_sum
                     num_nodes += curr_nodes
             memo_dict[(node, parent)] = (found_sum, num_nodes)

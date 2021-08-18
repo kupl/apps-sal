@@ -18,27 +18,19 @@ class Solution:
                     larger_x = l[0] > prev
 
                 if ((larger_x == asc) | (prev is None)):
-                    # include this one
                     teamCount += getTeams(k - 1, l[1:], l[0], asc)
-                    # exclude this one
                 teamCount += getTeams(k, l[1:], prev, asc)
 
                 if(0):
                     if asc:
                         if (larger_x | (prev is None)):
-                            # include this one
                             teamCount += getTeams(k - 1, l[1:], l[0], asc)
-                        # exclude this one
                         teamCount += getTeams(k, l[1:], prev, asc)
 
                     else:
                         if (larger_x == False | (prev is None)):
-                            #print(prev, l[0], larger_x)
-                            # include this one
                             teamCount += getTeams(k - 1, l[1:], l[0], asc)
-                        # exclude this one
                         teamCount += getTeams(k, l[1:], prev, asc)
-                #print('getTeams: ', k, l, prev, asc,'   result: ', teamCount)
             return teamCount
 
         return getTeams(3, rating, None, True) + getTeams(3, rating, None, False)

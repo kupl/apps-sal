@@ -3,7 +3,7 @@ class Solution:
         n = len(s)
         memo = {}
 
-        def cost(s, i, j):  # calculate the cost of transferring one substring into palindrome string
+        def cost(s, i, j):
             r = 0
             while i < j:
                 if s[i] != s[j]:

@@ -8,7 +8,7 @@ class Solution:
             return 0
 
         @lru_cache(None)
-        def cnt(left, right):  # cost to make palindrome
+        def cnt(left, right):
             if left >= right:
                 return 0
             return cnt(left + 1, right - 1) + (s[left] != s[right])

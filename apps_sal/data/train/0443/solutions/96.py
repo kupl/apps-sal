@@ -5,7 +5,6 @@ class Solution:
             for j in range(i, len(rating)):
                 for k in range(j, len(rating)):
                     if (rating[i] < rating[j] < rating[k]) or (rating[i] > rating[j] > rating[k]):
-                        #print((rating[i], rating[j],rating[k]))
                         count += 1
 
         return count

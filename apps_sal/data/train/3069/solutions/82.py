@@ -1,5 +1,4 @@
 def greet(language):
-    # your code here
     db = {'english': 'Welcome',
           'czech': 'Vitejte',
           'danish': 'Velkomst',

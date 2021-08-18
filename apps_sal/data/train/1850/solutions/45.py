@@ -20,12 +20,9 @@ class Solution:
             graph.get(edges[i][0]).append(edges[i][1])
             graph.get(edges[i][1]).append(edges[i][0])
 
-        # countgenerator
         self.count_generator(0, -1, o, graph)
 
-        # BFS
         self.bfs(N, graph, o)
-        # generating answer
 
         self.generate_answer(0, -1, o, graph, N)
         return o.ansarray

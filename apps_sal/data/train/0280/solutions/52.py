@@ -2,7 +2,7 @@ class Solution:
     def palindromePartition(self, s: str, k: int) -> int:
 
         n = len(s)
-        s = '#' + s
+        s = '
         dp = [[float('inf')] * (k + 1) for _ in range(n + 1)]
         dp[0][0] = 0
 
