@@ -10,7 +10,6 @@ class Solution:
                         last1 = i
                 else:
                     if nums[i] == 1:
-                        #                        print(i, last1)
                         if i - last1 - 1 < k:
                             return False
                         last1 = i

@@ -1,4 +1,3 @@
-# cook your dish here
 import numpy as np
 import math
 for t in range(int(input())):

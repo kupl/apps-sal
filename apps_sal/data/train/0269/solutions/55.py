@@ -2,7 +2,6 @@ class Solution:
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         last1 = -1
         tally = len(nums)
-        # print(last1)
         for idx, val in enumerate(nums):
 
             if val == 1:

@@ -1,4 +1,3 @@
-# cook your dish here
 from functools import reduce
 from math import gcd
 for _ in range(int(input())):

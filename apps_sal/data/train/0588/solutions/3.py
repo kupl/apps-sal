@@ -1,4 +1,3 @@
-# cook your dish here
 def isDivisible(a, k):
     for i in a:
         if (i % k != 0):

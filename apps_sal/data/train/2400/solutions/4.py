@@ -2,7 +2,6 @@ from itertools import groupby
 
 
 def go():
-    # n,k = map(int,input().split()
     n = int(input())
     x = list(map(int, input().split()))
 
@@ -32,12 +31,9 @@ def go():
     return v + '\n' + ' '.join(ans)
 
 
-# x,s = map(int,input().split())
 t = int(input())
-# t=1
 ans = []
 for _ in range(t):
-    # go()
     ans.append(str(go()))
 
 print('\n'.join(ans))

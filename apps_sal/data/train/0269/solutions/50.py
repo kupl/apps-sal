@@ -4,12 +4,10 @@ class Solution:
 
         for num in nums:
 
-            # See 0, have seen 1
             if num == 0 and last1 != -1:
                 last1 += 1
 
             elif num == 1 and last1 != -1:
-                # Check against k, can return False
                 if last1 < k:
                     return False
 
