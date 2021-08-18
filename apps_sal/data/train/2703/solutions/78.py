@@ -4,4 +4,3 @@ def square_sum(numbers):
         for num in numbers:
             sum += num * num
     return sum
-    # your code here

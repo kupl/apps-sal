@@ -9,10 +9,9 @@ def gap(g, m, n):
             if i % j == 0:
                 primeFlag = False
 
-        if primeFlag:  # if i prime
+        if primeFlag:
             if 1 != prime and i - prime == g:
                 return [prime, i]
             else:
                 prime = i
     return None
-    # your code

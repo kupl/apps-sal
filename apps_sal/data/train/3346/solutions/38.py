@@ -12,7 +12,6 @@ def allprimes(start, end):
 
 
 def gap(g, m, n):
-    # your code
     for i in range(m, n + 1):
         if prime(i):
             if prime(i + g):

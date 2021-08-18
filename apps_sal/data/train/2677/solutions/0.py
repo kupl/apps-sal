@@ -12,9 +12,9 @@ def manhattan(*pts):
 
 def toggle(m):
     ups, end = m.groups()
-    return f'*{ups.lower()}*{end}'                    # Toggle Shift ON if uppercase presents, and then OFF if lowercase after (or end of the string)
+    return f'*{ups.lower()}*{end}'
 
 
 def tv_remote(words):
-    reWords = re.sub(r'([A-Z][^a-z]*)([a-z]?)', toggle, words).rstrip('*')                # Strip any useless toggle OFF at the end
+    reWords = re.sub(r'([A-Z][^a-z]*)([a-z]?)', toggle, words).rstrip('*')
     return sum(manhattan(MAP[was], MAP[curr]) for was, curr in zip('a' + reWords, reWords))

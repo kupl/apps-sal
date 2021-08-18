@@ -6,8 +6,7 @@ def gap(g, m, n):
         m = m + 1
     lastprime = float("-inf")
 
-    for i in range(m, n + 1, 2):  # skip all even numbers
-        # find factors
+    for i in range(m, n + 1, 2):
         lim = math.ceil(math.sqrt(i)) + 1
         isPrime = True
         for j in range(3, lim):
@@ -16,7 +15,7 @@ def gap(g, m, n):
                 break
 
         if not isPrime:
-            continue  # skip this number if it isn't prime
+            continue
         else:
             if i - lastprime == g:
                 return [lastprime, i]

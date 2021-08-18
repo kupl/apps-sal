@@ -15,8 +15,4 @@ class Solution:
             val = 1
             for _, entry in order:
                 res = max(res, val := val + entry)
-            # count = 1
-            # for _, entry in order:
-            #     count += entry
-            #      res = max(res, count)
         return res
