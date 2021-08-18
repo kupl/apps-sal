@@ -12,7 +12,6 @@ class Solution:
                 j += 1
             dd[i] = val
 
-        # print(dd)
         ans = 0
         for w in work:
             if w > maxd:

@@ -14,9 +14,7 @@ class Solution:
             max_list[i] = max_val
 
         total = 0
-        #print(key_list, max_list)
         for w in worker:
-            #print(w, self.bisect(w, key_list, max_list))
             total += self.bisect(w, key_list, max_list)
         return total
 

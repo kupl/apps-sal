@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 for _ in range(int(input())):
     n = int(input())
@@ -36,7 +35,6 @@ for _ in range(int(input())):
     b.sort()
     c.sort(reverse=True)
     ans = b[1:] + c[:-1]
-    # print(ans)
     for i in range(1, len(ans)):
         if ans[i] == ans[i - 1]:
             f = True

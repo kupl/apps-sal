@@ -1,4 +1,3 @@
-# cook your dish here
 def check(n, p, divisor):
     product = 1
 

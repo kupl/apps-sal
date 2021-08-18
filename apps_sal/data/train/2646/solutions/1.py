@@ -13,6 +13,5 @@ for _ in range(n):
             inside = False
             continue
         elif inside:
-            found = re.search(r'\#[0-9a-fA-F]{3,6}', el)
-            if found:
-                print(found.group(0))
+            found = re.search(r'\
+            if found: print(found.group(0))

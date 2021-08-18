@@ -1,7 +1,5 @@
 class Solution:
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
-        # get best profit by difficulty and apply to each worker
-        # init memo table
         m = max(difficulty)
         dp = [0] * m
         for d, p in zip(difficulty, profit):

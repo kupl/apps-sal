@@ -21,10 +21,6 @@ class Solution:
             else:
                 mx[i] = max(mx[i - 1], p)
         total = 0
-        # print(diff2)
-        # print(profit2)
-        # print(mx)
-        # print('---')
         for w in worker:
             if w < diff2[0]:
                 continue
@@ -36,7 +32,6 @@ class Solution:
                 if i < 0:
                     continue
             max_profit = mx[i]
-            # print(w, i, mx[i])
             total += max_profit
         return total
 

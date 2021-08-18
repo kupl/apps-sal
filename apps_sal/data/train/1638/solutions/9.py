@@ -1,5 +1,5 @@
 def longest_palindrome(s):
-    tst = '#'.join('^{}$'.format(s))
+    tst = '
     n = len(tst)
     p = [0] * n
     c = 0

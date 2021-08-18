@@ -1,7 +1,6 @@
 class Solution(object):
     def smallestDistancePair(self, nums, k):
         def possible(guess):
-            # Is there k or more pairs with distance <= guess?
             count = left = 0
             for right, x in enumerate(nums):
                 while x - nums[left] > guess:
