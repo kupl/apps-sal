@@ -18,7 +18,6 @@ for T in range(t):
         zo += 1
     else:
         pass
-    # print(zo,oz)
     if(oz + zo <= 2):
         print("uniform")
     else:

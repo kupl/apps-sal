@@ -1,5 +1,4 @@
 def get_age(age):
-    # your code here
     if (age == "0 years old"):
         return 0
     elif (age == "1 years old"):

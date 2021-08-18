@@ -46,7 +46,6 @@ def normalize(nested_list: list, growing_value: int = 0) -> list:
         target_depth,
         target_length,
         fill_value=growing_value)
-    # print(len(working_list))
     return working_list
 
 

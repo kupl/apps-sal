@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 arr = list(map(int, input().split()))
 
@@ -19,7 +18,6 @@ def solve(arr, n):
             break
     if(r == 1):
         return([0, 0])
-    #print(arr[l-1:r],reversed([i for i in range(l,r+1)]))
     if (arr[l - 1:r] == [i for i in range(r, l - 1, -1)]):
         return([l, r])
     else:
