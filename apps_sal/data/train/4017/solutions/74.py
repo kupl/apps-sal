@@ -38,8 +38,3 @@ def subt(a, b):
 
 
 print((subt(7, 1)))
-
-
-# Make more functions. Refer to the description for function names.
-# The code will NOT WORK IF YOU USE names other than the ones
-# from the description

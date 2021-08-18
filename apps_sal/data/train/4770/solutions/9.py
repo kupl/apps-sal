@@ -62,8 +62,6 @@ def peak_height(mountain):
         for j in i:
             list1.append(str(j))
         list2.append(''.join(list1))
-# return list2
-########### TO SHOW A NEW MAP PRINT LIST2 ################
     if (list(the_biggest(mountain_list))) == []:
         return 0
     else:

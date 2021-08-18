@@ -1,4 +1,4 @@
-import re  # who needs random!
+import re
 
 
 def roll(desc, v=False):

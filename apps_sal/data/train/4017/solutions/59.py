@@ -19,4 +19,4 @@ def divide(a, b):
 
 
 def exponent(a, b):
-    return a**b  # I solved this Kata on  8/2/2019  01:07 AM...#Hussam'sCodingDiary
+    return a**b

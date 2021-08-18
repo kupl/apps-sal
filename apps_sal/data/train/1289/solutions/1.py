@@ -1,10 +1,8 @@
-#!/usr/bin/env python
 
 '''
 from sys import stderr
 
 def f(maxG, remaining):
-    #stderr.write('%s %s\n' % (maxG, remaining))
     if not remaining: return 1
     S = 0
     for i in xrange(len(remaining)):
@@ -27,8 +25,6 @@ def main():
     T = int(input())
     for t in range(T):
         N = int(input())
-        #stderr.write(('*'*70) + '\n')
-        # print f(-1, range(N))
         print(process(N))
 
 

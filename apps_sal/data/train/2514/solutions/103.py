@@ -3,7 +3,6 @@ class Solution:
 
         final_count = 0
         for arr_1_val in arr1:
-            # store the matches
             correct_count = 0
             for arr_2_val in arr2:
 

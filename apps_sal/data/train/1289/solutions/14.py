@@ -20,4 +20,3 @@ while (t):
     n = eval(input())
     print(moi[n])
     t -= 1
-# print(moi)
