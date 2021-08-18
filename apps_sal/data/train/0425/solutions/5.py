@@ -1,5 +1,4 @@
 class Solution:
- # @return an integer
     def divide(self, dividend, divisor):
         positive = (dividend < 0) is (divisor < 0)
         dividend, divisor = abs(dividend), abs(divisor)

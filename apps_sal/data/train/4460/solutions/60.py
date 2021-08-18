@@ -9,4 +9,3 @@ def whatday(num):
         7: 'Saturday'
     }
     return weekdays[num] if 0 < num <= 7 else 'Wrong, please enter a number between 1 and 7'
-  # Put your code here
