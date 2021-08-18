@@ -1,4 +1,3 @@
-# cook your dish here
 import copy
 for _ in range(int(input())):
     k = int(input())
@@ -21,6 +20,5 @@ for _ in range(int(input())):
     e = copy.copy(d[1:])
     d.reverse()
     d = d + e
-    # print(d)
     for i in range(len(d)):
         print(''.join(d[i]))

@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import sys
 
 boxes_number = int(sys.stdin.readline().rstrip())

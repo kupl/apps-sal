@@ -1,4 +1,3 @@
-# cook your dish here
 M = 10**9 + 7
 for _ in range(int(input())):
     n, k, m = (int(s) for s in input().split())

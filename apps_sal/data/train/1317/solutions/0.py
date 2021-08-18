@@ -93,7 +93,6 @@ Stable = [False] * R
 for r in range(R):
     walls_max_price = sum(C[r]) * K
     if walls_max_price <= abs(Rooms[r][0] - Rooms[r][1]):
-        # If we choose the cheaper team, no matter what the next rooms are the walls         we not overprice it.
         T[r] = 1 + (Rooms[r][0] > Rooms[r][1])
         Stable[r] = True
 
@@ -113,5 +112,4 @@ def try_teams():
     print(total_price())
 
 
-# try_teams()
 print(solve(0))

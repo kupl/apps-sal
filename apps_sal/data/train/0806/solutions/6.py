@@ -1,6 +1,4 @@
 import sys
-# sys.stdin = open('input.txt', 'r')
-# sys.stdout = open('output.txt', 'w')
 
 import math
 import collections
@@ -10,7 +8,6 @@ setrecursionlimit(2**20)
 M = 10**9 + 7
 
 T = int(stdin.readline())
-# T = 1
 
 
 def func(n, a):
@@ -25,11 +22,6 @@ def func(n, a):
 for _ in range(T):
     n = int(stdin.readline())
     a, b, c = list(map(int, stdin.readline().split()))
-    # a = list(map(int,stdin.readline().split()))
-    # w = list(map(int,stdin.readline().split()))
-    # q = list(map(int,stdin.readline().split()))
-    # b = list(map(int,stdin.readline().split()))
-    # s = stdin.readline().strip('\n')
     g = []
     for i in range(11):
         g.append([0, 0, 0])
@@ -54,7 +46,6 @@ for _ in range(T):
     en = len(l)
     sec = en - st
     q = int(stdin.readline())
-    # print(l)
     for i in range(q):
         qi = int(stdin.readline())
         if(qi <= st):

@@ -22,22 +22,17 @@ class Solution:
                     observed.add(c)
                     self.idx[c] = len(self.idx)
             self.free_vars.append(free_vars)
-        # print(self.free_vars)
-        # print(self.chars)
 
         return self.dfs(0, (), 0)
 
     @lru_cache(maxsize=None)
     def dfs(self, i, used_digits, carry):
-        # pemutations
         if i >= len(self.matched_chars):
-            # print('R:',used_digits)
             return not max(used_digits[self.idx[f]] == 0 for f in self.first_chars)
         free_vars = self.free_vars[i]
         perms = permutations(set(range(10)) - set(list(used_digits)), len(free_vars))
         for p in perms:
             values = tuple(list(used_digits) + list(p))
-            # check for contradiction
             nxt_carry = self.contradict(values, i, carry)
             if nxt_carry < 0:
                 continue

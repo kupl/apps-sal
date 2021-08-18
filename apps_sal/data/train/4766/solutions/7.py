@@ -2,8 +2,6 @@ from math import sqrt
 
 
 def n_closestPairs_tonum(num, k):
-    # m+n = A^2 , m-n = B^2 ,then m = (A^2+B^2)/2 , n =(A^2-B^2)/2
-    # A <= int(sqrt(num*2-1))
     bound = int(sqrt(num * 2 - 1))
     odd_sol = []
     even_sol = []
