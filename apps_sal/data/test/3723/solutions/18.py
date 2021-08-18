@@ -15,7 +15,6 @@ for p in range(2, max_s + 1):
         for i in range(p, max_s + 1, p):
             factors[i].add(p)
 
-# print(factors)
 
 for s in S:
     for p in factors[s]:

@@ -2,7 +2,6 @@ class Factorials:
     def __init__(self, n, mod):
         self.mod = mod
 
-        # self.fac[i] ≡ i! (factorial:階乗)
         self.fac = [1]
         num = 1
         for i in range(1, n + 1):
@@ -10,7 +9,6 @@ class Factorials:
             num %= mod
             self.fac.append(num)
 
-        # self.rec[i] ≡ 1 / i! (reciprocal:逆数)
         num = pow(num, mod - 2, mod)
         self.rec = [1 for i in range(n + 1)]
         self.rec[n] = num
@@ -19,11 +17,9 @@ class Factorials:
             num %= mod
             self.rec[i] = num
 
-    # comb(n, r) ≡ nCr
     def comb(self, n, r):
         return self.fac[n] * self.rec[r] * self.rec[n - r] % self.mod
 
-    # perm(n, r) ≡ nPr
     def perm(self, n, r):
         return self.fac[n] * self.rec[n - r] % self.mod
 

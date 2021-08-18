@@ -12,7 +12,6 @@ A = np.array(A, dtype=float) + np.diag([np.inf] * N)
 useless = np.zeros((N, N), dtype=bool)
 impossible = np.zeros((N, N), dtype=bool)
 for via in range(N):
-    # R[i][j]: i -> via -> j の距離
     R = sum(np.meshgrid(A[via], A[via]))
     useless |= R == A
     impossible |= R < A

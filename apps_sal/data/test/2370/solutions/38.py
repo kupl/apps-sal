@@ -8,7 +8,6 @@ graph = np.array([[0 for _ in range(n)] for _ in range(n)], dtype=float)
 for i in range(n):
     graph[i] = np.array(list(map(int, sdin().split())))
 
-# ワーシャルフロイドで最短距離出す
 shortest = floyd_warshall(graph, directed=False)
 
 

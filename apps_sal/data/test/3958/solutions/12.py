@@ -12,7 +12,6 @@ for i in range(len(l)):
             z.append(az[0])
             az.popleft()
     else:
-        # print(f)
         if len(z) == 0:
             f = 1
             break

@@ -18,7 +18,6 @@ def __starting_point():
         i += 1
 
     primes = [i for i in range(N) if lst[i]]
-    # print(len(re))
 
     auxlst = [0] * (M + 1)
     for i in lst2:
@@ -36,7 +35,6 @@ def __starting_point():
 
     result = max(1, max(result))
     print(result)
-    # to make changes
 
 
 __starting_point()

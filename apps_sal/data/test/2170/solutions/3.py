@@ -3,10 +3,10 @@ if sys.argv[-1] == 'ONLINE_JUDGE':
     import os
     import re
     with open(__file__) as f:
-        source = f.read().split('###''nbacl')
+        source = f.read().split('
     for s in source[1:]:
-        s = re.sub("'''.*", '', s)
-        sp = s.split(maxsplit=1)
+        s=re.sub("'''.*", '', s)
+        sp=s.split(maxsplit=1)
         if os.path.dirname(sp[0]):
             os.makedirs(os.path.dirname(sp[0]), exist_ok=True)
         with open(sp[0], 'w') as f:
@@ -15,11 +15,10 @@ if sys.argv[-1] == 'ONLINE_JUDGE':
     cc.compile()
 from nbmodule import solve
 
-N, M = [int(x) for x in input().split()]
-ans = solve(N, M)
+N, M=[int(x) for x in input().split()]
+ans=solve(N, M)
 print(ans)
 '''
-###nbacl nbmodule.py
 import numpy as np
 from numpy import int64
 from numba import njit

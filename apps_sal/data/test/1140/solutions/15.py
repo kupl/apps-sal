@@ -14,7 +14,6 @@ for i in range(1, n - 1):
         c1 += 1
     elif f[i] == b:
         c2 += 1
-# print(c1,c2)
 if a == b:
     summ = 0
     for i in range(n - 1, 0, -1):

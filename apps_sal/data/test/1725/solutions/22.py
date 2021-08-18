@@ -8,8 +8,6 @@ def solve(array, d):
             return -1
         array[i] //= d
 
-    # minimize sum |array_i - x|
-    # x = median
     median = round(statistics.median(array))
     moves = 0
     for el in array:

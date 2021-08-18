@@ -8,10 +8,8 @@ s.sort()
 
 
 def init_max(init_max_val):
-    # set_val
     for i in range(n):
         seg_max[i + num_max - 1] = init_max_val[i]
-    # built
     for i in range(num_max - 2, -1, -1):
         seg_max[i] = max(seg_max[2 * i + 1], seg_max[2 * i + 2])
 

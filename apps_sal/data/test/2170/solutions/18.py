@@ -1,7 +1,6 @@
 N, M = map(int, input().split())
 
 mod = 10 ** 9 + 7
-#L = 5 * 10**5
 fac = [1, 1]
 finv = [1, 1]
 inv = [0, 1]

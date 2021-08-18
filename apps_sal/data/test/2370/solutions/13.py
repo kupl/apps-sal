@@ -6,8 +6,6 @@ def main():
     input = sys.stdin.readline
     N = int(input())
     A = np.array([list(map(int, input().split())) for i in range(N)])
-    #A = [list(map(int, input().split())) for _ in range(N)]
-    #A = np.array(A)
 
     INF = 10**10
     for i in range(N):
@@ -16,7 +14,6 @@ def main():
     ans = 0
     for i in range(N):
         for j in range(i):
-            #bipas = min(map(sum, zip(A[i], A[j])))
             bipas = np.min(A[i] + A[j])
 
             if A[i][j] > bipas:

@@ -1,4 +1,3 @@
-# test
 class Combi():
     def __init__(self, N, mod):
         self.power = [1 for _ in range(N + 1)]

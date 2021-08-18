@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 n = int(input())
 jmp = list([x - 1 for x in list(map(int, input().split()))])

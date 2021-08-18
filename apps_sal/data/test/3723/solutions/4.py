@@ -7,11 +7,9 @@ for i in range(2, 100010):
     if dict[i] == []:
         j = i + i
         while j <= 100010:
-            # print(dict[j])
             tmp = dict[j]
             tmp += [i]
             dict[j] = tmp
-            # print(dict[j])
             j += i
         dict[i] = [i]
 n = input()

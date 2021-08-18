@@ -1,4 +1,3 @@
-# 二項係数、順列準備
 MAX_NUM = 5 * 10**5 + 1
 MOD = 10**9 + 7
 
@@ -32,7 +31,6 @@ def perm(n, k):
     return fac[n] * finv[n - k] % MOD
 
 
-# 主計算
 N, M = map(int, input().split())
 
 ans = 0

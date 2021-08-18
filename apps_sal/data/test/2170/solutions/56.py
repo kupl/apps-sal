@@ -29,8 +29,6 @@ MOD = 10**9 + 7
 def solve(N, M):
     fac, inv = factorials_with_inv(max(N, M), MOD)
 
-    # (M-k)!/(k!(N-k)!) * N!M!/((M-N)!^2)
-
     res = 0
     sign = True
     for k in range(N + 1):
@@ -58,7 +56,6 @@ def naive(N, M):
 def __starting_point():
     N, M = map(int, input().split())
 
-    # print(naive(N,M))
     print(solve(N, M))
 
 

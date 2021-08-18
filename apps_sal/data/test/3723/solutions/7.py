@@ -29,8 +29,6 @@ for i in s:
             while i and i % p == 0:
                 i //= p
 
-    # if i != 1:
-    #  c[i] +=1
 
 m = max(c)
 print(m)

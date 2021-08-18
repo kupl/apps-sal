@@ -11,7 +11,6 @@ def main():
     fact_inv[m] = pow(fact[m], MOD - 2, MOD)
     for i in range(m):
         fact_inv[m - i - 1] = fact_inv[m - i] * (m - i) % MOD
-    # print(fact_inv)
 
     ｍPn = fact[m] * pow(fact[m - n], MOD - 2, MOD) % MOD
 

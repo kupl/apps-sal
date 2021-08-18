@@ -18,26 +18,19 @@ def factor(n):
     if n > 1:
         res.append(n)
 
-    # print("res" ,res)
-
     return set(res)
 
 
 def Main(n):
     A = list(map(int, input().split()))[:n]
-    # print(A)
     dic = dict()
-    # print(factor(1))
 
     for p in A:
-        # print(factor(p))
         for d in factor(p):
             if d in dic.keys():
                 dic[d] += 1
             else:
                 dic[d] = 1
-
-            # print(dic)
 
     if dic:
         print(max(dic.values()))

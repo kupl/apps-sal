@@ -4,11 +4,9 @@ def RestoringRoadNetwork():
     wf = [list(map(int, input().split())) for _ in range(n)]
     ans = 0
 
-    # Warshall Floyd
     for i in range(n - 1):
         for j in range(i + 1, n):
             d = wf[i][j]
-            # kを中継したときの距離
             for k in range(n):
                 if k in (i, j):
                     continue
