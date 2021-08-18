@@ -1,4 +1,4 @@
-import math  # ;-)... (code is only to see what happens for python)
+import math
 primes, parr = [2, 3, 5, 7], []
 
 

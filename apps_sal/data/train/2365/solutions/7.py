@@ -46,7 +46,7 @@ def main():
                     if len(permut) == 1:
                         q.append(permut)
             if len(q) != 1:
-                break  # exit
+                break
             next = list(q[0])[0]
             ans.append(next)
         if len(ans) == n and check(ans, sets):
@@ -57,13 +57,6 @@ def main():
 
 
 input = sys.stdin.readline
-# sys.setrecursionlimit(2097152)
 tnum = int(input())
 for _ in range(tnum):
     main()
-
-# threading.stack_size(134217728)
-
-# main_thread = threading.Thread(target=main)
-# main_thread.start()
-# main_thread.join()

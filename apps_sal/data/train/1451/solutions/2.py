@@ -72,7 +72,6 @@ def main():
 
         decided = set()
 
-        # randomly assign directions to edges not in min span
         for t in tofix:
             indegree[t[1]] += 1
             decided.add((t[0], t[1]))
@@ -83,10 +82,6 @@ def main():
         for i in range(n):
             cf[i + 1] = set()
             pf[i + 1] = set()
-
-        # minspan finale- create tree
-        # 2 dics cf - contains each node with it's child
-        # pf - each node with it's parent
 
         for f in finale:
             u, v = f
@@ -105,7 +100,6 @@ def main():
 
         q = deque([sroot])
         st = deque()
-        # tree traversal
         while len(q) != 0:
             node = q.pop()
             st.append(node)
@@ -117,7 +111,6 @@ def main():
             if c != sroot:
                 p = pf[c]
                 if indegree[c] % 2 == 0:
-                    # outgoing
                     decided.add((c, p))
                     indegree[p] += 1
                 else:

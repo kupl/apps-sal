@@ -1,6 +1,4 @@
 def draw(waves):
-    # your code
-    # ■□
     result = ""
     height = max(waves)
     weight = len(waves)

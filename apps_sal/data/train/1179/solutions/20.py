@@ -1,4 +1,3 @@
-# cook your dish here
 from math import sqrt
 for x in range(int(input())):
     N = int(input())

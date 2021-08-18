@@ -1,4 +1,3 @@
-# q1
 n, x = list(map(int, input().split()))
 for i in range(x):
     if(n == 0):

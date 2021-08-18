@@ -1,4 +1,3 @@
-# cook your dish here
 def binary_search(n, target):
     lo = 1
     hi = n

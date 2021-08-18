@@ -7,5 +7,4 @@ class Solution:
         r, t = 0, 1
         for i in s:
             r = r * 26 + (ord(i) - 64)
-            #t *= 26
         return r

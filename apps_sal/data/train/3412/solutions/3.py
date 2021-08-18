@@ -5,7 +5,7 @@ import numpy as np
 def f(n):
     if set(primeFactors(n).values()) == {1}:
         return 1
-    return np.prod([v * k**(v - 1) for k, v in primeFactors(n).items()])   # (n_ = n*)
+    return np.prod([v * k**(v - 1) for k, v in primeFactors(n).items()])
 
 
 def primeFactors(n):

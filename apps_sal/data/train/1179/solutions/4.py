@@ -3,7 +3,6 @@ t = int(input())
 while t > 0:
     n = int(input())
     sum = (n * (n + 1)) // 2
-    # print(sum)
     if(sum % 2 != 0):
         print(0)
         t -= 1
