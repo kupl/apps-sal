@@ -18,32 +18,32 @@ for start in start_list:
     T = copy.deepcopy(S)
     L = copy.deepcopy(length)
     L[h][w] = 0
-    T[h][w] = '#'
+    T[h][w] = '
     while d:
         h, w = d.popleft()
 
         if h - 1 >= 0 and T[h - 1][w] == '.':
             d.append((h - 1, w))
             L[h - 1][w] = L[h][w] + 1
-            T[h - 1][w] = '#'
+            T[h - 1][w] = '
             ans = max(ans, L[h - 1][w])
 
         if h + 1 <= H - 1 and T[h + 1][w] == '.':
             d.append((h + 1, w))
             L[h + 1][w] = L[h][w] + 1
-            T[h + 1][w] = '#'
+            T[h + 1][w] = '
             ans = max(ans, L[h + 1][w])
 
         if w - 1 >= 0 and T[h][w - 1] == '.':
             d.append((h, w - 1))
             L[h][w - 1] = L[h][w] + 1
-            T[h][w - 1] = '#'
+            T[h][w - 1] = '
             ans = max(ans, L[h][w - 1])
 
         if w + 1 <= W - 1 and T[h][w + 1] == '.':
             d.append((h, w + 1))
             L[h][w + 1] = L[h][w] + 1
-            T[h][w + 1] = '#'
+            T[h][w + 1] = '
             ans = max(ans, L[h][w + 1])
 
 print(ans)

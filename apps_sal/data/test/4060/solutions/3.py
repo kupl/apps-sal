@@ -29,12 +29,10 @@ def regular_sums(s):
 sums = regular_sums(s)
 
 if sums[-1] == 2:
-    # x <= ia
     ia = 0
     while ia < len(sums) and sums[ia] >= 0:
         ia += 1
 
-    # x > ib
     ib = len(s) - 1
     while ib >= 0 and sums[ib] >= 2:
         ib -= 1
@@ -45,12 +43,10 @@ if sums[-1] == 2:
             k += 1
     print(k)
 elif sums[-1] == -2:
-    # x <= ia
     ia = 0
     while ia < len(sums) and sums[ia] >= 0:
         ia += 1
 
-    # x > ib
     ib = len(s) - 1
     while ib >= 0 and sums[ib] >= -2:
         ib -= 1

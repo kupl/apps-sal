@@ -14,7 +14,7 @@ def now(n, s):
         if 0 <= j < H and 0 <= k < W:
             if s[j][k] == ".":
                 t.append([j, k])
-                s[j][k] = "#"
+                s[j][k] = "
     return [t, s]
 
 
@@ -34,6 +34,6 @@ for i in range(H):
     for j in range(W):
         s = deepcopy(S)
         if S[i][j] == ".":
-            s[i][j] = "#"
+            s[i][j] = "
             ans = max(ans, bfs([[i, j]], 0, s))
 print(ans)

@@ -1,8 +1,6 @@
-# https://codeforces.com/contest/1371/problem/C
 import sys
 reader = (s.rstrip() for s in sys.stdin)
 input = reader.__next__
-# do magic here
 t = int(input())
 for _ in range(t):
     a, b, n, m = list(map(int, input().split()))

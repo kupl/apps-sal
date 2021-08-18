@@ -1,6 +1,6 @@
 from collections import deque
 h, w = map(int, input().split())
-ma = [["#" for _ in range(w + 2)] for _ in range(h + 2)]
+ma = [["
 for i in range(h):
     tmp = list(input())
     for j in range(w):
@@ -8,7 +8,7 @@ for i in range(h):
 ans = 0
 for i in range(1, h + 1):
     for j in range(1, w + 1):
-        if ma[i][j] == "#":
+        if ma[i][j] == "
             continue
         elif ma[i][j] == ".":
             p = [[-1 for _ in range(w + 2)] for _ in range(h + 2)]
@@ -31,5 +31,4 @@ for i in range(1, h + 1):
                     q.append([y, x - 1])
             for l in range(1, h + 1):
                 ans = max(ans, max(p[l]))
-            # ans = max(ans, max(max(p)))
 print(ans)

@@ -1,7 +1,7 @@
 line1 = input().split()
-n = int(line1[0])  # Num cities
-m = int(line1[1])  # Num roads
-k = int(line1[2])  # Num storagecities
+n = int(line1[0])
+m = int(line1[1])
+k = int(line1[2])
 
 roads = []
 for i in range(m):

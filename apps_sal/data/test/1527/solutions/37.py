@@ -1,7 +1,7 @@
 from copy import deepcopy
 from collections import deque
 h, w = map(int, input().split())
-s = [['#'] * (w + 2) for i in range(h + 2)]
+s = [['
 for i in range(h):
     x = input()
     for j in range(w):
@@ -9,7 +9,7 @@ for i in range(h):
 ans = 0
 for i in range(1, h + 1):
     for j in range(1, w + 1):
-        if s[i][j] != '#':
+        if s[i][j] != '
             maze = deepcopy(s)
             maze[i][j] = 0
             queue = deque([[i, j]])
@@ -23,7 +23,7 @@ for i in range(1, h + 1):
             l = 0
             for x in range(1, h + 1):
                 for y in range(1, w + 1):
-                    if maze[x][y] != '#':
+                    if maze[x][y] != '
                         l = max(l, maze[x][y])
             ans = max(ans, l)
 print(ans)

@@ -20,9 +20,9 @@ for i in range(h):
                     y = now[0] + dy_dx[k][0]
                     x = now[1] + dy_dx[k][1]
                     if 0 <= y < h and 0 <= x < w:
-                        if C[y][x] != '#' and visited[y][x] == 0:
-                            visited[y][x] = visited[now[0]][now[1]] + 1  # 移動回数のカウント
-                            queue.append([y, x])
+                        if C[y][x] != '
+                        visited[y][x] = visited[now[0]][now[1]] + 1
+                        queue.append([y, x])
 
         for l in range(h):
             for m in range(w):

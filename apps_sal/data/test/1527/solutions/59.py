@@ -8,8 +8,8 @@ def main():
 
     for r in range(row):
         for c in range(col):
-            if S[r][c] == "#":
-                continue
+            if S[r][c] == "
+            continue
             q = deque()
             q.append((r, c))
             dist = [[-1 for _ in range(col)] for _ in range(row)]
@@ -21,8 +21,8 @@ def main():
                     nr, nc = r + dr, c + dc
                     if not(0 <= nr < row and 0 <= nc < col):
                         continue
-                    if S[nr][nc] == "#":
-                        continue
+                    if S[nr][nc] == "
+                    continue
                     if dist[nr][nc] != -1:
                         continue
                     q.append((nr, nc))

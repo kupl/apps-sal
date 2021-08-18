@@ -1,8 +1,6 @@
-#from random import random, randint
 from sys import stdout, stdin
 import math
 
-#n, k = map(int, input().split())
 n = int(input())
 s = input()
 

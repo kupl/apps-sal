@@ -27,6 +27,4 @@ if len(best) == 0:
     print(-1)
 else:
     ans = ''.join(map(str, best))
-    # for val in best:
-    #     ans+=str(val)
     print(ans)

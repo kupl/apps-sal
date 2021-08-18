@@ -21,7 +21,7 @@ if max_len > 0:
                 leftover -= extra_costs[better_digit]
                 current_number[index_being_changed] = str(better_digit)
                 break
-        else:  # Not enough paint to change digits
+        else:
             break
 else:
     current_number = "-1"

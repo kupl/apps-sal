@@ -7,7 +7,6 @@ def main():
             a[i] = a[i - 1] + 1
         else:
             a[i] = a[i - 1] - 1
-    # print(a) # debug
     if a[n] != 2 and a[n] != -2:
         print(0)
         return

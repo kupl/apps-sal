@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 number = input().split(" ")
 A = int(number[0])
 B = int(number[1])
