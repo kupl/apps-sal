@@ -1,4 +1,3 @@
-# ARC109 A
 
 a, b, x, y = list(map(int, input().split()))
 

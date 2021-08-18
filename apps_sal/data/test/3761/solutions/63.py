@@ -6,12 +6,6 @@ from bisect import bisect, bisect_left, bisect_right
 from collections import defaultdict, deque
 
 
-# d = defaultdict(lambda: 0)
-# setrecursionlimit(10**7)
-# inf = float("inf")
-
-
-##### stdin ####
 def LM(t, r): return list(map(t, r))
 def R(): return stdin.readline()
 def RS(): return R().split()
@@ -24,14 +18,10 @@ def ONE_IL(): return LM(int, ONE_SL())
 def ALL_I(): return map(int, stdin)
 def ALL_IL(): return LM(int, stdin)
 
-##### tools #####
-
 
 def ap(f): return f.append
 def pll(li): print('\n'.join(LM(str, li)))
 def pljoin(li, s): print(s.join(li))
-
-##### main #####
 
 
 def main():
@@ -44,7 +34,7 @@ def main():
     dpx[0 + len(ss[0])] = True
     dpy[0] = True
 
-    direct = 1  # 0:x, 1:y
+    direct = 1
 
     for s in ss[1:]:
         tmp = dict()
@@ -60,7 +50,6 @@ def main():
                 tmp[k - n] = True
             dpy = tmp
 
-        # print(dpx, dpy)
         direct += 1
 
     if x in dpx and y in dpy:

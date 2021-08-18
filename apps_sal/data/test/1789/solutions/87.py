@@ -15,6 +15,4 @@ for ii in range(a, 1, -1):
     dpb[ii - 1] = dpa[ii] + x
     dpa[ii - 1] = min(dpa[ii] + y, dpb[ii - 1] + x)
 
-# print(dpa)
-# print(dpb)
 print((dpb[b]))

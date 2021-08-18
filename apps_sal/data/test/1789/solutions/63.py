@@ -3,13 +3,11 @@ if a == b:
     print(x)
 else:
     res = 100000000000000000
-    # sloap
     if a != 1:
         aa = a - 1
         tmp = x
         tmp += y * (aa - b)
         res = min(res, tmp)
-    # ro-ka
     tmp = x
     tmp += y * abs(a - b)
     res = min(res, tmp)

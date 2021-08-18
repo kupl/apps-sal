@@ -8,8 +8,8 @@ ans = 0
 for i in range(1, l[-1] + 1):
     temp_ans = 0
     cur = i
-    pos = size - 1  # pointer of the l array
-    while cur <= l[pos] and pos >= 0:  # no index overflow
+    pos = size - 1
+    while cur <= l[pos] and pos >= 0:
         temp_ans += cur
         pos -= 1
         if cur & 1:

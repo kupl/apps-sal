@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 ss = input().split('T')
 x, y = list(map(int, input().split()))
@@ -9,7 +8,7 @@ dpy = dict()
 dpx[0 + len(ss[0])] = True
 dpy[0] = True
 
-direct = 1  # 0:x, 1:y
+direct = 1
 
 
 for s in ss[1:]:
@@ -30,10 +29,6 @@ for s in ss[1:]:
         direct += 1
         dpy = tmp
 
-# print(x, y)
-# print(dpx, dpy)
-# print(x in dpx)
-# print(y in dpy)
 if x in dpx and y in dpy:
     print('Yes')
 else:

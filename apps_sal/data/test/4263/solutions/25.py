@@ -1,5 +1,4 @@
 s = list(input())
-# print(s)
 rmax = 0
 r = 0
 for ss in s:

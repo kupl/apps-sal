@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 s = input() + "T"
 n = len(s)
 x, y = list(map(int, input().split()))
@@ -15,14 +14,12 @@ for i in range(n):
     if tcnt == 0:
         xd.add(fcnt)
     elif tcnt % 2 == 0:
-        # x軸の移動
         tmp = set()
         for xx in xd:
             tmp.add(xx - fcnt)
             tmp.add(xx + fcnt)
         xd = tmp
     else:
-        # y軸の移動
         tmp = set()
         for yy in yd:
             tmp.add(yy - fcnt)

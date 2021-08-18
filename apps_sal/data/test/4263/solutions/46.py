@@ -1,4 +1,3 @@
-# ACGT
 S = input()
 ct = 0
 ctM = [0]

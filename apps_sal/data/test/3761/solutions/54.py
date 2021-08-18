@@ -7,7 +7,6 @@ for i in range(len(s)):
         ymove.append(s[i].count("F"))
     else:
         xmove.append(s[i].count("F"))
-# リストで持つdpだとTLEしたのでメモ化再帰で書く
 
 
 def solve(l, cor):

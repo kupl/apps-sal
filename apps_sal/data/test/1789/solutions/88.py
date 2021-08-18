@@ -1,5 +1,3 @@
-# A - Hands
-# https://atcoder.jp/contests/arc109/tasks/arc109_a
 
 a, b, x, y = list(map(int, input().split()))
 

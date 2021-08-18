@@ -43,23 +43,6 @@ def warizan(a, b):
     return a // b, a % b
 
 
-# from fractions import gcd
-# from math import gcd
-
-# def lcm(n, m):
-#     return int(n * m / gcd(n, m))
-
-
-# def coprimize(p, q):
-#     common = gcd(p, q)
-#     return (p // common, q // common)
-
-
-# def find_gcd(list_l):
-#     x = reduce(gcd, list_l)
-#     return x
-
-
 def combinations_count(n, r):
     r = min(r, n - r)
     numer = reduce(mul, list(range(n, n - r, -1)), 1)
@@ -75,9 +58,6 @@ def combinations_count_mod(n, r):
     numer = reduce(lambda x, y: x * y % mod, list(range(n, n - r, -1)), 1)
     denom = pow(reduce(lambda x, y: x * y % mod, list(range(1, r + 1)), 1), mod - 2, mod)
     return numer * denom % mod
-
-
-# def solve():
 
 
 a, b, x, y = list(map(int, input().strip().split()))

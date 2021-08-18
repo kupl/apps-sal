@@ -18,9 +18,7 @@ for nu in nums:
 for ma, c in list(mapa.items()):
     li.append(c)
 li.sort(reverse=True)
-# print(li)
 res = li[0]
-# print(nono(li, res, li[0]//2, 1))
 nu = li
 a = li[0]
 b = li[0] // 2

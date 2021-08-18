@@ -1,4 +1,3 @@
-# C - いっしょ
 def main():
     import math
     _ = int(input())
