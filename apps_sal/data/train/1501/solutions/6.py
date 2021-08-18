@@ -4,7 +4,6 @@ def mirror_down(e, r, l, u, d):
     left = l * 2
     up = u
     down = u
-    # print(edge,right,left,up,down)
     return [edge, right, left, up, down]
 
 
@@ -14,7 +13,6 @@ def mirror_up(e, r, l, u, d):
     left = l * 2
     up = d
     down = d
-    # print(edge,right,left,up,down)
     return [edge, right, left, up, down]
 
 
@@ -24,7 +22,6 @@ def mirror_left(e, r, l, u, d):
     left = l
     up = u * 2
     down = d * 2
-    # print(edge,right,left,up,down)
     return [edge, right, left, up, down]
 
 
@@ -34,7 +31,6 @@ def mirror_right(e, r, l, u, d):
     left = l
     up = u * 2
     down = d * 2
-    # print(edge,right,left,up,down)
     return [edge, right, left, up, down]
 
 

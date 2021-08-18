@@ -7,20 +7,18 @@ class Solution:
         aset = set()
         n = len(text)
 
-        thash = [0] * (n + 1)  # thash[i] is the hash value for text[0..i-1] , 从text[0]到text[i-1]都是包括的！
-        tpow = [0] * (n + 1)  # tpow[i] = base ^ i
+        thash = [0] * (n + 1)
+        tpow = [0] * (n + 1)
         tpow[0] = 1
 
         def getHash(l, r):
-            return (thash[r] - thash[l] * tpow[r - l] % mod + mod) % mod  # 快速获取一个区间的hash! 这个理解起来有难度！
-            #       全体0..r    0..l, 幂的差r-l
+            return (thash[r] - thash[l] * tpow[r - l] % mod + mod) % mod
 
         for i in range(1, n + 1):
-            # thash[i] = (thash[i-1] * base + ord(text[i-1])-ord('a')) % mod # something is wrong if we use ord(text[i-1]) - ord('a')
-            thash[i] = (thash[i - 1] * base + ord(text[i - 1])) % mod  # 简单的进位叠加，这个还算容易记住！
-            tpow[i] = tpow[i - 1] * base % mod  # 简单的进位叠加！还算容易记住！
+            thash[i] = (thash[i - 1] * base + ord(text[i - 1])) % mod
+            tpow[i] = tpow[i - 1] * base % mod
 
-        for alen in range(1, n // 2 + 1):  # abab case? 而且代码并不直观的感觉！
+        for alen in range(1, n // 2 + 1):
             l = 0
             r = alen
             counter = 0
@@ -77,7 +75,7 @@ class Solution:
             tpow[i] = tpow[i - 1] * base % mod
 
         for i in range(n):
-            for alen in range(2, n - i + 1, 2):  # i=n-1 then alen=1 is okay, i=0 then alen=n is okay; which means that i+alen=n! so alen = n - i is the upper bound
+            for alen in range(2, n - i + 1, 2):
                 mid = i + alen // 2
                 hash1 = getHash(i, mid)
                 hash2 = getHash(mid, i + alen)
@@ -92,53 +90,23 @@ class Solution:
         aset = set()
         n = len(text)
 
-        thash = [0] * (n + 1)  # thash[i] is the hash value for text[0..i-1] , 从text[0]到text[i-1]都是包括的！
-        tpow = [0] * (n + 1)  # tpow[i] = base ^ i
+        thash = [0] * (n + 1)
+        tpow = [0] * (n + 1)
         tpow[0] = 1
 
         def getHash(l, r):
-            return (thash[r] - thash[l] * tpow[r - l] % mod + mod) % mod  # 快速获取一个区间的hash! 这个理解起来有难度！
-            #       全体0..r    0..l, 幂的差r-l
+            return (thash[r] - thash[l] * tpow[r - l] % mod + mod) % mod
 
         for i in range(1, n + 1):
-            # thash[i] = (thash[i-1] * base + ord(text[i-1])-ord('a')) % mod # something is wrong if we use ord(text[i-1]) - ord('a')
-            thash[i] = (thash[i - 1] * base + ord(text[i - 1])) % mod  # 简单的进位叠加，这个还算容易记住！
-            tpow[i] = tpow[i - 1] * base % mod  # 简单的进位叠加！还算容易记住！
-
-        # 理解一下：
-        # abcd ->
-        # thash[0] = 0
-        # thash[1] = (0*29 + ord('a')) % mod = ord('a') % mod
-        # thash[2] = [ ord('a')*29 + ord('b') ] % mod
-        # thash[3] = [ ord('a')*29*29 + ord('b') * 29 + ord('c')] % mod
-        # thash[4] = [ ord('a')*29*29*29 + ord('b') * 29*29 + ord('c')*29 + ord('d')] % mod
-
-        # tpow[1] = 1*29 % mod = 29 % mod
-        # tpow[2] = 29*29 % mod
-        # tpow[3] = 29*29*29 % mod
-        # tpow[4] = 29*29*29*29 % mod
-
-        # abab 的时候
-        # thash[1] = [ ord('a') ] % mod
-        # thash[2] = [ ord('a')*29 + ord('b') ] % mod
-        # thash[3] = [ ord('a')*29*29 + ord('b') * 29 + ord('a')] % mod
-        # thash[4] = [ ord('a')*29*29*29 + ord('b') * 29*29 + ord('a')*29 + ord('b')] % mod
-        # tpow[4] = 29*29*29*29 % mod
-
-        # i=0, alen=4 -> abab
-        # mid=2
-        # so, it is:
-        # getHash(0, 2) -> (ord('a')*29 + ord('b') - 0*tpow[2] + mod) % mod
-        #               -> (ord('a')*29 + ord('b') + mod) % mod
-        # getHash(2, 4) -> (ord('a')*29*29*29 + ord('b') * 29*29 + ord('a')*29 + ord('b') - (ord('a')*29 + ord('b'))*29*29 + mod) % mod
-        #               -> (ord('a')*29 + ord('b') + mod) % mod
+            thash[i] = (thash[i - 1] * base + ord(text[i - 1])) % mod
+            tpow[i] = tpow[i - 1] * base % mod
 
         for i in range(n):
-            for alen in range(2, n - i + 1, 2):  # 遍历所有长度为偶数的子串（中间切开，然后比较左右）
+            for alen in range(2, n - i + 1, 2):
                 mid = i + alen // 2
                 hash1 = getHash(i, mid)
                 hash2 = getHash(mid, i + alen)
-                if hash1 == hash2:  # problem, even hash1 == hash2, not necessary mean that text[i,mid] = text[mid, i+alen]!
+                if hash1 == hash2:
                     aset.add(hash1)
         return len(aset)
 

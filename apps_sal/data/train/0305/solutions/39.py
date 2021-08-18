@@ -11,7 +11,6 @@ class Solution:
                 else:
                     cur = 0
                 if cur == sz:
-                    # print(text[l-sz+1:l+1])
                     res.add(text[l - sz + 1:l + 1])
                     cur -= 1
                 r += 1

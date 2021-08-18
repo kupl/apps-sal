@@ -11,16 +11,8 @@ class Solution:
 
                 if j - i <= L - j:
 
-                    # print(text[i:j])
-                    # print(text[j:2*j-i])
-
                     if text[i:j] == text[j:2 * j - i]:
-                        # print('here')
 
                         S.add(text[i:j])
-
-                        # if text[i:j] not in D:
-                        #    D[text[i:j]] = 1
-                        #    count += 1
 
         return len(S)

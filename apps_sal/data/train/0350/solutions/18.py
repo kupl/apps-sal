@@ -25,17 +25,14 @@ class Solution:
             window1.add(num)
             window2.add(num)
 
-            # At most K distinct elements
             while len(window1) > K:
                 window1.remove(A[left1])
                 left1 += 1
 
-            # At most K-1 distinct elements
             while len(window2) >= K:
                 window2.remove(A[left2])
                 left2 += 1
 
-            # At most K - At most (K-1) will give you exact K elements
             result += left2 - left1
 
         return result

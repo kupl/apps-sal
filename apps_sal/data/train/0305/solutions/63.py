@@ -8,5 +8,4 @@ class Solution:
                 s = text[start:start + l]
                 if check(text[start:start + l]):
                     ret.add(s)
-        # print(ret)
         return len(ret)

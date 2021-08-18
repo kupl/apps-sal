@@ -6,7 +6,6 @@ queue = deque([x])
 resource = {tuple(x): 0}
 while queue:
     cur = queue.popleft()
-    # print(cur)
     for ele in edge:
         if cur[ele[0]] + cur[ele[1]] in primes:
             curr = cur[0:]
@@ -27,7 +26,6 @@ for _ in range(int(input())):
         for j in line.split():
             lis.append(int(j))
     lis = tuple(lis)
-    # print(lis)
     if lis in resource:
         print(resource[lis])
     else:

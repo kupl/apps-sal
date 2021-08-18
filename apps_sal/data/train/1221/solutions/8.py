@@ -1,4 +1,3 @@
-# cook your dish here
 from math import ceil
 
 for i in range(int(input())):

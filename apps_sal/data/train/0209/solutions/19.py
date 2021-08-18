@@ -1,4 +1,3 @@
-# 1000. Minimum Cost to Merge Stones
 class Solution:
     def mergeStones(self, stones: List[int], K: int) -> int:
         N = len(stones)

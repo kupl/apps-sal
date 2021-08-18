@@ -1,4 +1,3 @@
-# cook your dish here
 depth, q = list(map(int, input().split()))
 r = 1000000007
 edges = 0

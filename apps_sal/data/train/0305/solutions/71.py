@@ -1,5 +1,4 @@
 class Solution:
-    # O(n^3) time, O(n^2) space
     def distinctEchoSubstrings(self, text: str) -> int:
 
         def is_echo(s):
