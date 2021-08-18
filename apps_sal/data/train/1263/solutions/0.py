@@ -13,5 +13,4 @@ for _ in range(int(input())):
                 reach[j + i**n] += reach[j]
             j -= 1
         i += 1
-    # print(reach)
     print(reach[-1])

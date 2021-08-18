@@ -33,10 +33,6 @@ class CodeforcesTask995ASolution:
         else:
             while not all_parked(parked):
                 moved = [False for x in range(self.n_k[0])]
-                # for p in self.parking:
-                #    print(p)
-                # print("\n")
-                # print(moves)
                 if self.parking[1][0] and not self.parking[2][0]:
                     moves.append([self.parking[1][0], 3, 1])
                     self.parking[2][0] = self.parking[1][0]

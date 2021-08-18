@@ -5,7 +5,6 @@ class Solution:
 
         def dfs(i, j, sum):
             if i < 0 or i == m or j < 0 or j == n or (i, j) in visited or grid[i][j] == 0:
-                # reach the bottom of current path
                 return sum
             visited.add((i, j))
             maxi = 0

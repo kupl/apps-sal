@@ -16,7 +16,7 @@ def sum_fracts(lst):
 
     nn = sum(lst[i][0] * (dd // lst[i][1]) for i in range(ll))
 
-    i, primes = 0, [2, 3, 5, 7, 11, 13, 17]  # it's too expensive to strip down nn and dd, so cheat with small primes
+    i, primes = 0, [2, 3, 5, 7, 11, 13, 17]
     while i < len(primes):
         n = primes[i]
         if nn % n == 0 and dd % n == 0:

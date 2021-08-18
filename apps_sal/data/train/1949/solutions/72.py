@@ -8,9 +8,7 @@ class Solution:
             maxGold = 0
             for ax, ay in action:
                 maxGold = max(getMaxGold(y + ay, x + ax, gold), maxGold)
-                #maxGold = max(getMaxGold(y+ay,x+ax,gold),maxGold)
             grid[y][x] = origin
-            # return maxGold + origin
             return maxGold
 
         action = [(1, 0), (0, 1), (-1, 0), (0, -1)]

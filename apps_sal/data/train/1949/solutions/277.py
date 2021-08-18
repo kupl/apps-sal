@@ -39,5 +39,4 @@ class Solution:
                 if counter <= 2:
                     dicts = {}
                     res = max(res, self.helper(grid, i, j, 0, dicts))
-                #print (dicts)
         return res

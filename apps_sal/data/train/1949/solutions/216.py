@@ -5,7 +5,6 @@ class Solution:
         ans = [0]
 
         def path(i, j, seen, val):
-            # print(seen)
             ans[0] = max(ans[0], val)
             adjacent = [(i + 1, j), (i - 1, j), (i, j - 1), (i, j + 1)]
             for k, l in adjacent:
@@ -18,5 +17,4 @@ class Solution:
             for j in range(n):
                 if grid[i][j]:
                     path(i, j, [(i, j)], grid[i][j])
-        # print(ans)
         return max(ans)

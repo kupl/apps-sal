@@ -11,7 +11,6 @@ class Solution:
         return self.maxGold
 
     def helper(self, x, y, grid, gold):
-        # print(x,y,grid[y][x])
         gold += grid[y][x]
         left = 0 if (x - 1 < 0) else grid[y][x - 1]
         right = 0 if (x + 1 > self.maxX) else grid[y][x + 1]

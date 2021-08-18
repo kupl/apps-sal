@@ -1,6 +1,5 @@
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
-        # dfs. from all leave nodes.
         def dfs(i, j, vis):
             res = 0
             for z1, z2 in [(-1, 0), (1, 0), (0, -1), (0, 1)]:

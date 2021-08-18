@@ -19,19 +19,14 @@ class Solution:
             newttl = ttl + grid[i][j]
 
             result[0] = max(result[0], newttl)
-            # newVis = vis.copy()
             vis[i][j] = True
 
-            # Up
             self.backtrack(grid, i - 1, j, m, n, vis, result, newttl)
 
-            # Left
             self.backtrack(grid, i, j - 1, m, n, vis, result, newttl)
 
-            # Bottom
             self.backtrack(grid, i + 1, j, m, n, vis, result, newttl)
 
-            # Right
             self.backtrack(grid, i, j + 1, m, n, vis, result, newttl)
 
             vis[i][j] = False

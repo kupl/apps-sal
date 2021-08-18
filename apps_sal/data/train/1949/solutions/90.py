@@ -5,7 +5,7 @@ class Solution:
             if x < 0 or x == len(grid) or y < 0 or y == len(grid[0]) or grid[x][y] == 0:
                 return 0
             origin = grid[x][y]
-            grid[x][y] = 0  # mark as visited
+            grid[x][y] = 0
 
             maxGold = 0
 

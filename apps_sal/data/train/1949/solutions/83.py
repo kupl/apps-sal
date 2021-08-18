@@ -1,7 +1,6 @@
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
 
-        # start with pos that dosen't have value above
         def dfs(i: int, j: int, visited: List[List[int]]) -> int:
 
             result = grid[i][j]

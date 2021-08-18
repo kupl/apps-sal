@@ -1,4 +1,3 @@
-# cook your dish here
 from difflib import get_close_matches
 for _ in range(int(input())):
     n, q = map(int, input().split())

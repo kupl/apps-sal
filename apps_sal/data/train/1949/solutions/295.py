@@ -58,7 +58,6 @@
             for j in range(self.cLen):
                 if grid[i][j] != 0:
                     ret, retPath = self.dfs(grid, i,j)
-                    #print(grid)
                     if ret > res:
                         res = ret 
                         path = retPath
@@ -130,28 +129,25 @@ class Solution:
         if not grid:
             return 0
         n, m = len(grid), len(grid[0])
-        # create vertices
         V = [(row * m) + col for row in range(n) for col in range(m) if grid[row][col] != 0]
-        # create adjacency list
         dict_ = {V[x]: x for x in range(len(V))}
         adj_list = []
         for v in V:
             tmp_adj = []
             v_row, v_col = v//m, v%m
-            if v_row != 0 and grid[v_row - 1][v_col] != 0:  # upper neighbor
+            if v_row != 0 and grid[v_row - 1][v_col] != 0:  
                 up_idx = dict_[v-m]
                 tmp_adj.append(self.neighbor(up_idx, grid[v_row-1][v_col]))
-            if v_row != (n-1) and grid[v_row + 1][v_col] != 0:  # lower neighbor
+            if v_row != (n-1) and grid[v_row + 1][v_col] != 0:  
                 dow_idx = dict_[v+m]
                 tmp_adj.append(self.neighbor(dow_idx, grid[v_row+1][v_col]))
-            if v_col != 0 and grid[v_row][v_col - 1] != 0:  # left neighbor
+            if v_col != 0 and grid[v_row][v_col - 1] != 0:  
                 left_idx = dict_[v-1]
                 tmp_adj.append(self.neighbor(left_idx, grid[v_row][v_col-1]))
-            if v_col != (m-1) and grid[v_row][v_col+1] != 0:  # right neighbor
+            if v_col != (m-1) and grid[v_row][v_col+1] != 0:  
                 right_idx = dict_[v+1]
                 tmp_adj.append(self.neighbor(right_idx, grid[v_row][v_col+1]))
             adj_list.append(tmp_adj)
-        # DFS on all vertices
         max_path = -float('inf')
         checked = [False] * len(V)
         for v_idx, v in enumerate(V):
@@ -166,24 +162,24 @@ class Solution:
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         @functools.lru_cache(None)
-        def dfs(u, visited):                # memoize on current_vertex, path
+        def dfs(u, visited):                
             subres = 0
             for v in graph[u]:
-                if (visited >> v) & 1 == 0: # if neighbor is not in path then recurse
+                if (visited >> v) & 1 == 0: 
                     subres = max(subres, dfs(v, visited | (1 << v)))
-            return vertex_gold[u] + subres  # return gold here plus the best sub-result
+            return vertex_gold[u] + subres  
 
-        vertex_gold = [] # vertex_gold[vertex_id] stores amount of gold
-        m = {}           # map of grid coordinate to vertex id
+        vertex_gold = [] 
+        m = {}           
         for i, row in enumerate(grid):
             for j, cell in enumerate(row):
                 if cell:
-                    m[i, j] = len(vertex_gold)  # populate map
-                    vertex_gold.append(cell)    # save gold
+                    m[i, j] = len(vertex_gold)  
+                    vertex_gold.append(cell)    
         graph = collections.defaultdict(list)
         for i, row in enumerate(grid):
             for j, cell in enumerate(row):
-                if cell:                    # if gold, connect vertex to neighbors
+                if cell:                    
                     for x, y in ((i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)):
                         if 0 <= x < len(grid) and 0 <= y < len(grid[0]) and grid[x][y]:
                             graph[m[i, j]].append(m[x, y])
