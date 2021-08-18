@@ -1,4 +1,3 @@
-# BINOD
 import math
 test = int(input())
 for t in range(test):
@@ -19,6 +18,3 @@ for t in range(test):
     for i in range(0, len(A), 2):
         ans += A[i]
     print(ans)
-
-
-# Binod

@@ -42,7 +42,6 @@ def traceSum(matrix, n):
 
 t = int(input())
 for i in range(t):
-    # Array Size is n
     n = int(input())
     a = []
 
@@ -52,14 +51,13 @@ for i in range(t):
 
     matrix = np.array(a).reshape(n, n)
 
-    # print(matrix)
     '''
     This worked but had a n^3 complexity and gave an error of time limit         exceeded on submission.
     trace = 0
-    for i in range(0,n):   #Row number
-     for j in  range(0,n):   #Column number
-      for k in range(0,n):   #Length of Sub-matrix
+    for i in range(0,n):   
+     for j in  range(0,n):   
+      for k in range(0,n):   
        if i+k<n and j+k<n:
-        trace = max(trace,findTrace(i,j,k))  #Check trace of every                         sub-matrix & get max
+        trace = max(trace,findTrace(i,j,k))  
         '''
     print(traceSum(matrix, n))

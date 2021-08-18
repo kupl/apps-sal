@@ -4,11 +4,9 @@ class Solution:
         for i in range(1, len(arr) + 1):
             s[i] = s[i - 1] ^ arr[i - 1]
         ans = 0
-        # print(s)
         for i in range(len(arr)):
             for j in range(i + 1, len(arr)):
                 for k in range(j, len(arr)):
-                    # print(i, j, k,  s[k + 1] ^ s[j], s[j] ^ s[i])
                     if s[k + 1] ^ s[j] == s[j] ^ s[i]:
                         ans += 1
         return ans

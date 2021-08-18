@@ -9,7 +9,6 @@ class Solution:
             mat[i][i + 1] = arr[i] ^ arr[i + 1]
             for j in range(i + 2, l):
                 mat[i][j] = mat[i][j - 1] ^ arr[j]
-        # print(mat)
         count = 0
 
         for i in range(l - 1):

@@ -1,5 +1,4 @@
 def get_planet_name(id):
-    # This doesn't work; Fix it!
     name = ""
     dict_ = {
         1: "Mercury",

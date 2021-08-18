@@ -13,5 +13,4 @@ class Solution:
                     second_part = arr[k] ^ arr[j - 1]
                     if first_part == second_part:
                         res += 1
-                        #print (i,j,k)
         return res

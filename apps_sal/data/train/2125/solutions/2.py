@@ -59,6 +59,3 @@ while i < len(D):
 
 
 print('\n'.join(str(x) + ' ' + str(y) for x, y in res))
-
-
-# Made By Mostafa_Khaled

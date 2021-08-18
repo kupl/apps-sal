@@ -5,4 +5,4 @@ for i in range(int(input())):
             print("*", end="")
         for j in range(i, s):
             print(s - j, end="")
-        print()  # cook your dish here
+        print()

@@ -1,4 +1,3 @@
-# http://codeforces.com/problemset/problem/848/B
 from collections import defaultdict
 
 
@@ -33,6 +32,5 @@ for gg in list(groups.values()):
     for ii in gg:
         destinations[ii] = table[dancers[ii]]
 
-# print(destinations)
 for dd in destinations:
     print(" ".join(dd))

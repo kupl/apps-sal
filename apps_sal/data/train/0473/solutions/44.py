@@ -12,5 +12,3 @@ class Solution:
                         ans += 1
                 l.append(v)
         return ans
-
-        # there's an O(N) algorithm
