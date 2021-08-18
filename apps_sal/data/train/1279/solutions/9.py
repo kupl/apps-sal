@@ -20,7 +20,6 @@ for _ in range(T):
         else:
             d[X[i]].append(Y[i])
 
-    # print(d)
     sum_lst = []
     for key in d.keys():
         maxi = d[key][0]

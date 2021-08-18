@@ -41,7 +41,5 @@ for _ in range(Q):
     else:
         r = R[j - 1]
     pre_ans = (min(A[j], max(B[j], a)) - B[j]) + D[j]
-    # print(pre_ans)
     pre_ans += ((-1)**(1 - j % 2)) * (t - r)
-    #print(j, t, r)
     print((min(X, max(0, pre_ans))))

@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 
 t = int(eval(input("")))

@@ -1,7 +1,5 @@
 import sys
 
-# sys.stdin = open('f1.in')
-
 
 def read_int_list():
     return list(map(int, input().split()))

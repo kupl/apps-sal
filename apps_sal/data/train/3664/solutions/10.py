@@ -5,7 +5,7 @@ def cat_mouse(x):
     there are more than three characters between 'C' and
     'm', or "Caught!" if three or fewer.
     '''
-    if abs(list(x).index('C') - list(x).index('m')) > 4:  # tests the absolute value of the differences between the characters' indices
+    if abs(list(x).index('C') - list(x).index('m')) > 4:
         return "Escaped!"
     else:
         return "Caught!"

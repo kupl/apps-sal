@@ -55,6 +55,5 @@ for i in range(L):
     else:
         SCORE += max(0, L - i - 8)
 
-    # print(SCORE)
 
 print(SCORE)

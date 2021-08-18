@@ -1,6 +1,5 @@
 def denumerate(enum_list):
     try:
-        # tuple validation
         for t in enum_list:
             if ((len(t) != 2)
                 or (not t[1].isalnum())

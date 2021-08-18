@@ -1,5 +1,4 @@
 def switch_lights(a):
-    #a=[aa[i] for i in range(len(aa))]
     i = len(a) - 1
     s = 0
     while i >= 0:

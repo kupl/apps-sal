@@ -25,10 +25,7 @@ total = 0
 
 def testsub(sub):
     for k in range(1, (len(sub) - 1) // 2 + 1):
-        # print(k)
         if sub[0] == sub[k] and sub[k] == sub[2 * k]:
-            # print(len(sli))
-            # print('true')
             return True
 
     return False
@@ -43,7 +40,6 @@ for i in range(len(s)):
 
         sli = s[i:i + lets]
         for m in range(0, len(sli) - 2):
-            # print(sli[m:])
             if testsub(sli[m:]):
                 done = 1
                 break
@@ -52,7 +48,6 @@ for i in range(len(s)):
             break
 
         lets += 1
-    # print(total,r)
     total += n - r
 
 

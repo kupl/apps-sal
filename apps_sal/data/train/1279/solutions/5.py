@@ -9,10 +9,8 @@ for _ in range(int(input())):
             d[x].append(y)
         else:
             d[x][0] = max(d[x][0], y)
-    # print(d)
 
     l = sorted(d.items(), key=itemgetter(1))[::-1]
-    # print(l)
     try:
         print(sum(l[0][1] + l[1][1] + l[2][1]))
     except:

@@ -1,9 +1,9 @@
 def string_to_number(s):
-    result = 0  # Variable to hold running total of integer to return
-    place = 1  # Decimal value of place currently being calculated
+    result = 0
+    place = 1
     i = len(s) - 1
     while i >= 0:
-        digit = s[i]  # The piece of the string being transferred
+        digit = s[i]
         if digit == '1':
             result += place
         elif digit == '2':
