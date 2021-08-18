@@ -4,7 +4,6 @@ def vert_mirror(strng):
 
 def hor_mirror(strng):
     return strng.split('\n')[::-1]
-    # your code
 
 
 def oper(fct, s):

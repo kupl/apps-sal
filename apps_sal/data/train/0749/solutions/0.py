@@ -5,7 +5,6 @@ for i in range(n):
 d = [10**9] * (n)
 q = set([int(x) for x in range(1, n)])
 d[1] = 0
-# print(q)
 
 
 def extract():

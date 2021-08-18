@@ -32,7 +32,6 @@ class Solution:
         max_prod_left = prod
 
         if prod < 0:
-            # print(max_prod_right)
             while 0 <= r:
                 prod_right = prod_right // nums[r]
                 r = r - 1
@@ -47,7 +46,6 @@ class Solution:
             while l < n:
                 prod_left = prod_left // nums[l]
                 l = l + 1
-                #print(l, prod_left,"----", nums[l], nums[l:])
                 if prod_left > max_prod_left:
                     if prod_left > 0:
                         max_prod_left = prod_left
@@ -55,5 +53,4 @@ class Solution:
                 else:
                     max_prod_left = prod_left
 
-        #print(max_prod_left, max_prod_right)
         return max(max_prod_left, max_prod_right)

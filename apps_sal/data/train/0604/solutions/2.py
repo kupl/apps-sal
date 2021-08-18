@@ -11,7 +11,6 @@ def adjacent(i, j, r, c):
             return 4
 
 
-# cook your dish here
 for _ in range(int(input())):
     r, c = map(int, input().split(" "))
     grid = []

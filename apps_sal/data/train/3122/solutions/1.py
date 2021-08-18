@@ -7,4 +7,3 @@ def chess_triangle(n, m):
         return (m * 2 - 5) * 8
     else:
         return (((2 * n - 4) * (2 * n - 4) - 1) + ((m - n) * 4 * (n - 2))) * 16
-  # coding and coding..

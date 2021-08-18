@@ -1,4 +1,3 @@
-# cook your dish here
 testcases = int(input())
 for t in range(testcases):
     n, k = map(int, input().split())

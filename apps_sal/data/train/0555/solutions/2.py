@@ -4,7 +4,6 @@ for e in range(t):
     n = int(input())
     chocolates = input().strip().split(" ")
 
-    # Sequence is working
     sequence = []
     for x in range(len(chocolates) - 2):
         if int(chocolates[x]) + int(chocolates[x + 1]) == int(chocolates[x + 2]):

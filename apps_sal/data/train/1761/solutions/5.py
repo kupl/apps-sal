@@ -18,5 +18,5 @@ def find(n):
         count -= 1
         if count == 0:
             k += 1
-            add += 1  # seq[k]-seq[k-1]
+            add += 1
             count = seq[k] - seq[k - 1]

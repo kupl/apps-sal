@@ -1,5 +1,4 @@
 def vert_mirror(strng):
-    # your code
     p = []
     s = strng.split("\n")
     for i in s:
@@ -8,7 +7,6 @@ def vert_mirror(strng):
 
 
 def hor_mirror(strng):
-    # your code
     s = strng.split("\n")
     p = s[::-1]
     return "\n".join(p)

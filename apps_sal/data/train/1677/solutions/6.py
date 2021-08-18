@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 a = list(map(int, input().strip().split()))
 b = list(map(int, input().strip().split()))
@@ -22,7 +21,6 @@ for i in range(n - 1):
                 ssumi += max(prefx[j - 1] - prefx[i], prefx[n - 1] - prefx[j] + prefx[i - 1])
             else:
                 ssumi += max(prefx[j - 1] - prefx[i], prefx[n - 1] - prefx[j])
-#        print(i,j,ssumi)
         if(ssum < ssumi):
             ssum = ssumi
 print(max(ssum, maxa))
