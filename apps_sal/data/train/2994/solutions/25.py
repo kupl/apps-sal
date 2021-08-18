@@ -1,5 +1,4 @@
 def find_digit(num, nth):
-    # your code here
     num_str = str(num)
     if nth < 1:
         return -1

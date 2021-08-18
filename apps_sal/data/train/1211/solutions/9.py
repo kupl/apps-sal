@@ -1,4 +1,3 @@
-# cook your dish here
 def Solve4():
     a = input()
     x = len(a)

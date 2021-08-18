@@ -9,12 +9,9 @@ class Solution:
             ret = float('-inf')
             s = 0
             for i in range(3):
-                # if cur + i + 1 >= len(stoneValue):
-                #     break
                 nxt = dp(cur + i + 1)
                 s += stoneValue[cur + i] if cur + i < len(stoneValue) else 0
                 ret = max(ret, s - nxt)
-            # print(cur, ret)
             return ret
 
         ans = dp(0)

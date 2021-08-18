@@ -17,7 +17,6 @@ class Solution:
             return [a, b]
 
         a, b = helper(0)
-        # print(a,b)
         if a > b:
             return 'Alice'
         elif a < b:

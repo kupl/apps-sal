@@ -15,7 +15,6 @@ class Solution:
                     base += 1
                     break
 
-        # invariant: A[:i] == B[:i]
         def dfs(i):
             if i == n:
                 return 0

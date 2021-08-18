@@ -2,7 +2,6 @@ class Solution:
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         n = len(stoneValue)
         stoneValue.insert(0, 0)
-        # dp[i] means the max score we can get when i piles have been taken
         dp = [-sys.maxsize] * (n + 1)
 
         presum = [0] * (n + 1)

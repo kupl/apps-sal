@@ -28,7 +28,6 @@ class Solution:
             return 'Tie'
 
         '''
-        # Recursion + TopDown
         rowlen=len(stones)
         index=0
         memo=[-1] * rowlen

@@ -25,15 +25,10 @@ class Solution:
     def stoneGameIII(self, A: List[int]) -> str:
         @lru_cache(None)
         def dp(i):
-            # beyond the scope, return 0
             if i >= len(A):
                 return 0
-            # if only one element left, return this value
             if i == len(A) - 1:
                 return A[-1]
-            # three actions: pick up 1, pick up 2, pick up 3.
-            # alice_score_of_alice at i =
-            #  max(action_score_of_alice - (action_score_of_bob at i+j+1) for action in 3 cases)
             res = -float('inf')
             for j in range(3):
                 if i + j < len(A):

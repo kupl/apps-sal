@@ -1,5 +1,4 @@
 def calc(a):
-    # k = 0
     res = [0] * (len(a) + 1)
 
     for k in range(1, len(a) + 1):
