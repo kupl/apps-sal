@@ -3,7 +3,6 @@ class Solution:
         dp = [[0 for j in range(len(text2))] for i in range(len(text1))]
 
         dp[0][0] = int(text1[0] == text2[0])
-        # print(dp[0][0], text1[0], text2[0], text1[0] == text2[0], int(text1[0] == text2[0]), int(True))
 
         for i in range(1, len(text1)):
             dp[i][0] = max(int(text1[i] == text2[0]), dp[i - 1][0])

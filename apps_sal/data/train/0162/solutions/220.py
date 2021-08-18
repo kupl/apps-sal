@@ -5,11 +5,9 @@ class Solution:
         s1 = 0
         s2 = 0
         s3 = 0
-        # case - match
         if text1[index1] == text2[index2]:
             s1 = self.helper(text1, text2, index1 + 1, index2 + 1, match + 1)
         else:
-            # case - did not match
             s2 = self.helper(text1, text2, index1, index2 + 1, match)
             s3 = self.helper(text1, text2, index1 + 1, index2, match)
 

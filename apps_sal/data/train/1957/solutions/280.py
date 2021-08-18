@@ -18,6 +18,5 @@ class Solution:
                             seen[(x, y)] = new_r
 
             todo = new
-        # print(dp)
         ans = min(dp[(0, 0, i)] for i in range(k + 1))
         return ans if ans < float('inf') else -1

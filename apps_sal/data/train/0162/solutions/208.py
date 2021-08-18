@@ -8,11 +8,9 @@ class Solution:
             if i1 == len(str1) or i2 == len(str2):
                 return 0
 
-            # hashing
             if cache[i1][i2] != -1:
                 return cache[i1][i2]
 
-            # the characters match, so we can keep both
             if str1[i1] == str2[i2]:
                 keep = 1 + checkPosition(i1 + 1, i2 + 1)
 

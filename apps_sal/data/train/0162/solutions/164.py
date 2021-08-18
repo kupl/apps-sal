@@ -16,7 +16,6 @@ class Solution:
             if(cache[i][j] is None):
                 cache[i][j] = max(self.memo(word1, word2, i + 1, j, cache), self.memo(word1, word2, i, j + 1, cache))
             return cache[i][j]
-        # TLE
         '''
         return self.recurse(text1,text2)
     def recurse(self, word1, word2):

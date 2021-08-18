@@ -5,7 +5,7 @@ class Solution:
 
         def get(r, c): return 0 if -1 in [r, c] else dp[r][c]
 
-        for r, c1 in enumerate(text1):  # pos, char
+        for r, c1 in enumerate(text1):
             for c, c2 in enumerate(text2):
 
                 if c1 == c2:

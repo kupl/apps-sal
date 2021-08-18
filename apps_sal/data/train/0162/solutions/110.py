@@ -11,7 +11,6 @@ class Solution:
                 return cache[(i, j)]
 
             if text1[i] == text2[j]:
-                #count += 1
                 return 1 + dfs(i + 1, j + 1, count)
 
             a = dfs(i + 1, j, count)

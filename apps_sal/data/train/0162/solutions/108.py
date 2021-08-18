@@ -16,20 +16,3 @@ class Solution:
             return memo[key]
 
         return lcs_helper(0, 0)
-
-
-#     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-#         max_count = float(\"-inf\")
-
-#         for _ in range(len(text1)):
-#             curr_count = 0
-#             left_index = 0
-#             for index in range(_,len(text1)):
-#                 char = text1[index]
-#                 if text2.find(char, left_index) != -1:
-#                     curr_count +=1
-#                     left_index = text2.find(char, left_index) + 1
-#                     remaining_string = text2[left_index:]
-#             max_count = max(max_count, curr_count)
-
-#         return max_count

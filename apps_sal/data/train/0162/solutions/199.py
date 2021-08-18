@@ -11,16 +11,6 @@ class Solution:
         n = len(text2)
         return self.dp(text1, text2, m - 1, n - 1)
 
-#         A = np.zeros((m+1, n+1),int)
-
-#         for i in range(1,m+1):
-#             for j in range(1,n+1):
-#                 if text1[i-1] == text2[j-1]:
-#                     A[i,j] = A[i-1,j-1] +1
-#                 else:
-#                     A[i,j] = max(A[i-1,j], A[i,j-1])
-#         return A[-1,-1]
-
     @lru_cache(maxsize=None)
     def dp(self, text1, text2, i, j):
         if i < 0 or j < 0:
