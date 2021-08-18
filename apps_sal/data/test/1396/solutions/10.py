@@ -1,15 +1,9 @@
 import sys
 
 f = sys.stdin
-#f = open('H:\\Portable Python 3.2.5.1\\tests\\test_445B1.txt')
 n, k, x, = list(map(int, f.readline().split()))
 
 r = [int(it) for it in f.readline().split()]
-
-
-#print(n, k, x)
-
-# print(r)
 
 
 def collaps(r, k):
@@ -33,7 +27,6 @@ def collaps(r, k):
                     max_collaps += g
                     col = r[i]
                     for kk in range(g):
-                        # print(i-1, r)
                         del r[i - 1]
                         i -= 1
                     n = len(r)
@@ -47,19 +40,17 @@ def collaps(r, k):
                 else:
                     g = 1
                     col = r[i]
-            #print(i, r, r[i],col, g, max_collaps)
             i += 1
 
         if g >= k:
             max_collaps += g
-        #print(6575, i, g, max_collaps)
         return max_collaps
 
 
 r1 = r[:]
 
 
-nn = 0  # Новый ряд
+nn = 0
 res = 0
 c1 = 0
 for m in range(len(r)):
@@ -67,12 +58,10 @@ for m in range(len(r)):
         r1 = r[:]
         r1.insert(m, x)
         c1 = collaps(r1, 3) - 1
-        #print(m, c1)
         if c1 > res:
             res = c1
         nn = 1
     elif (r[m] != x):
         nn = 0
-    # print(m, nn, c1, res)
 
 print(res)

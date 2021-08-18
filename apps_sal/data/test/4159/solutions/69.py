@@ -7,5 +7,5 @@ if A + B <= K:
 elif A < K and K < A + B:
     print(0, A + B - K, sep=' ')
 
-else:  # K<A
+else:
     print(A - K, B, sep=' ')

@@ -1,7 +1,5 @@
-# 入力を受け取る
 A, B, K = map(int, input().split())
 
-# 条件分岐に応じて式をつくる
 ret_A = A
 ret_B = B
 
@@ -15,5 +13,4 @@ else:
     ret_A = A - K
     ret_B = B
 
-# 結果を出力する
 print(ret_A, ret_B, sep=' ')

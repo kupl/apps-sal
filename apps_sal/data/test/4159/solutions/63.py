@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 
 def solve(A: int, B: int, K: int):

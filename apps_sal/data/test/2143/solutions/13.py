@@ -13,7 +13,6 @@ def main():
                 kids[s] += 1
 
     max_kids = 0
-    #print (kids)
     for i in list(kids.keys()):
         if kids[i] > max_kids:
             max_kids = kids[i]

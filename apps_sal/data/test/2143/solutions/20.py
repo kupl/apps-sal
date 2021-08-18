@@ -1,5 +1,4 @@
 def find_sum_of_two(a, n):
-    # a.sort()
     d = dict()
     for i in range(n):
         for j in range(i + 1, n):
@@ -11,7 +10,7 @@ def find_sum_of_two(a, n):
     return max(d.values())
 
 
-n = int(input())  # 2-1000
-a = [int(x) for x in input().split()]  # x:1-10^5
+n = int(input())
+a = [int(x) for x in input().split()]
 
 print(find_sum_of_two(a, n))

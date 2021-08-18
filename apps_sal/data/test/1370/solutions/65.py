@@ -1,4 +1,3 @@
-# E - Dividing Chocolate
 import numpy as np
 
 H, W, K = list(map(int, input().split()))

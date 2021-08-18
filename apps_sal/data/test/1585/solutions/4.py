@@ -1,4 +1,3 @@
-# ABC088C
 
 X, Y = map(int, input().split())
 cnt = 0

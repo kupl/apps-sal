@@ -1,5 +1,3 @@
-# author:  Taichicchi
-# created: 09.09.2020 23:20:32
 
 import sys
 

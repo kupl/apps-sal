@@ -1,20 +1,15 @@
 def column_check(grp, grp_count, choco, h, j, k):
     """ 0:成功（更新も反映）  1:失敗（区切った結果を返す） 2:不可能 """
-    # この行のグループ毎のカウント
     curr_count = [0] * len(grp_count)
-    # 数える
     for i in range(h):
         if choco[i][j] == '0':
             continue
         curr_count[grp[i]] += 1
-    # この行だけでk越えてたら現在の横の切り方では不可能
     for cc in curr_count:
         if cc > k:
             return 2
-    # ここまでの行と合わせてkを越えないかチェック
     for i, cc in enumerate(curr_count):
         grp_count[i] += cc
-        # 越えてたら、grp_countを現在の行に上書き
         if grp_count[i] > k:
             grp_count[:] = curr_count
             return 1
