@@ -1,4 +1,3 @@
-# cook your dish here
 refList = [1, 2, 3, 4, 5, 6, 7]
 t = int(input())
 for i in range(t):

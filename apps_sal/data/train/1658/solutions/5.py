@@ -2,7 +2,6 @@ from collections import defaultdict
 from fractions import Fraction
 from itertools import count
 
-# memoization, just in case
 POWER = defaultdict(list)
 F = [1]
 
@@ -14,16 +13,13 @@ def fact(x):
 
 
 def expand(x, digit):
-    # Change the floats into a fraction
     if type(x) == float:
         a, b = str(x).split('.')
         l = 10**(len(b))
         x = Fraction(int(a) * l + int(b), l)
-    # Init
     res, mini = Fraction(0), 10**(digit - 1)
     if not x in POWER:
         POWER[x].append(1)
-    # Core of the function
     for i in count():
         res += Fraction(POWER[x][i], fact(i))
         if mini <= res.numerator:

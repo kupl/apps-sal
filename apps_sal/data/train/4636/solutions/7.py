@@ -28,7 +28,8 @@ def tv_remote(words: str):
     screen_keyboard_alphanumeric = "abcde123fghij456klmno789pqrst.@0uvwxyz_/⇑ "
     symbols_map_alphanumeric = {c: (i // 8, i % 8) for i, c in enumerate(screen_keyboard_alphanumeric)}
     kb_dims = (len(screen_keyboard_alphanumeric) // 8 + 1, 8)
-    screen_keyboard_symbolic = "^~?!\'\"()-:;+&%*=<>€£$¥¤\[]{},.@§#¿¡ΦΨΩ_/⇑ "
+    screen_keyboard_symbolic = "^~?!\'\"() - :
+    + & % *= < >€£$¥¤\[]{}, .@§
     symbols_map_symbolic = {c: (i // 8, i % 8) for i, c in enumerate(screen_keyboard_symbolic)}
     common_symbols = "".join(set(screen_keyboard_alphanumeric) & set(screen_keyboard_symbolic))
 
@@ -53,7 +54,7 @@ def tv_remote(words: str):
             elif not mode.isalphanumeric():
                 words_to_type.append("⇑" * mode.switch_to_new_mode(mode.LOWERCASE) + ch)
             else:
-                words_to_type.append(ch)        # mode.isalphanumeric() and not ch.isalpha()
+                words_to_type.append(ch)
 
     words_to_type = "".join(words_to_type)
 

@@ -11,7 +11,6 @@ class Solution:
             parents[original_idx] = (idx, 0)
             return parents[idx]
 
-        # Returns false if the two elements are already in the same group
         def union(idx1, idx2):
             parent1, rank1 = find(idx1)
             parent2, rank2 = find(idx2)
@@ -24,7 +23,6 @@ class Solution:
             else:
                 parents[parent1] = (parent2, rank2 + 1)
             return True
-        # [1, 3, 3, 3]
         for idx1, idx2 in enumerate(leftChild):
             if idx2 == -1:
                 continue

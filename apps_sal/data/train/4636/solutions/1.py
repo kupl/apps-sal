@@ -1,6 +1,7 @@
 M1 = "abcde123fghij456klmno789pqrst.@0uvwxyz_/° "
 M2 = "ABCDE123FGHIJ456KLMNO789PQRST.@0UVWXYZ_/° "
-M3 = "^~?!\'\"()-:;+&%*=<>€£$¥¤\\[]{},.@§#¿¡°°°_/° "
+M3 = "^~?!\'\"() - :
++ & % *= < >€£$¥¤\\[]{}, .@§
 
 D1 = {c: divmod(i, 8) for i, c in enumerate(M1)}
 D2 = {c: divmod(i, 8) for i, c in enumerate(M2)}

@@ -21,7 +21,6 @@ class Solution:
         if not self.dfs(root, left_children, right_children, visited):
             return False
 
-        # print(visited)
         return len(visited) == n
 
     def dfs(self, root, left_children, right_children, visited):

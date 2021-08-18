@@ -3,9 +3,7 @@ from itertools import accumulate
 
 
 class Lazysegtree:
-    # RAQ
     def __init__(self, A, intv, initialize=True, segf=min):
-        # 区間は 1-indexed で管理
         self.N = len(A)
         self.N0 = 2**(self.N - 1).bit_length()
         self.intv = intv

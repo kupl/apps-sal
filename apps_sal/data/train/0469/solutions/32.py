@@ -1,4 +1,3 @@
-# 3:50
 from collections import defaultdict
 
 

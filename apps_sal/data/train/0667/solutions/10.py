@@ -8,5 +8,4 @@ for _ in range(int(input())):
         ans1 = ans * a[i]
         mini = ans1
         d = ans1
-        # p##rint(mini,d)
     print(mini)

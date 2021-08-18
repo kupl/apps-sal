@@ -24,14 +24,11 @@ class Solution:
                 indeg[v] += 1
 
         counts = Counter(indeg)
-        # multiple roots or no root
         if counts[0] > 1 or counts[0] == 0:
             return False
-        # multiple indegrees
         if any(count > 1 for count in list(counts.keys())):
             return False
 
         root = indeg.index(0)
         seen = [0] * n
-        # no cycles and dfs hits all nodes (one CC)
         return not cycle(root) and all(seen[node] == 2 for node in range(n))

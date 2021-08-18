@@ -21,15 +21,6 @@ class Solution:
             children[l] = i
             children[r] = i
 
-#         print(children)
-#         root = False
-#         for i in range(n):
-#             if i not in children:
-#                 if root:
-#                     print('Here Yoyo')
-#                     return False
-#                 root = True
-
         root = 0
         for i in range(n):
             if i not in children:
@@ -43,7 +34,6 @@ class Solution:
             cur = frontier.pop()
             if cur == -1:
                 continue
-            # print(cur)
             count += 1
             c = nodes[cur]
             if (c[0] != -1 and c[0] in seen) or (c[1] != -1 and c[1] in seen):
@@ -57,6 +47,5 @@ class Solution:
                 frontier.append(c[1])
 
         if count != n:
-            # print('Count Small-',count)
             return False
         return True

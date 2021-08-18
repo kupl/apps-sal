@@ -5,8 +5,6 @@ def main():
     s = input()
     n = len(s)
 
-    # each b contributes 1 flip to the first a before it, 2 flips to the second a before it, etc
-    # in general, if there are k 'a's before a b, then add 2^(k + 1) - 1 flips
     ans = 0
     a_ct = 0
     p = 1
