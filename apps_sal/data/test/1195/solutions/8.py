@@ -1,4 +1,3 @@
-# twoplusxorofthirdandminelement
 
 n = int(input())
 xs = [int(a) for a in input().split()]

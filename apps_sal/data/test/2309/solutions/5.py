@@ -30,7 +30,6 @@ for i in range(n):
         endwith[lastkind][c] = [i]
     else:
         endwith[lastkind][c].append(i)
-# print(endwith)
 for i in range(5):
     for key, value in list(endwith[i].items()):
         while len(value) >= 2:

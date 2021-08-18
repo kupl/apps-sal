@@ -1,7 +1,4 @@
 m, s = map(int, input().split())
-# for m in range(1, 100):
-#    for s in range(1, 100):
-# print(";;;;;;", s, m)
 ar = [0] * m
 ar[0] = 1
 sum1 = 1

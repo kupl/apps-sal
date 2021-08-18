@@ -42,9 +42,6 @@ for i in range(len(L)):
         x1, y1, dx1, dy1 = L[i]
         x2, y2, dx2, dy2 = L[j]
         if dx1 != dx2 or dy1 != dy2:
-            # print(L[i])
-            # print(L[j])
-            # print('---')
             res += 1
 
 print(res)

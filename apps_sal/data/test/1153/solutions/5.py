@@ -16,6 +16,5 @@ while 1:
         sumb = sumb + B[ukb]
         ukb += 1
     if (suma == sumb):
-        #print(suma, sumb);
         cnt = cnt + 1
 print(cnt + 1)

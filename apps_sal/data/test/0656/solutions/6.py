@@ -1,7 +1,7 @@
 n, k = list(map(int, input().split()))
 days = list(map(int, input().split()))
-a = [0 for i in range(n)]  # for < 0
-b = [0 for i in range(n)]  # for >= 0
+a = [0 for i in range(n)]
+b = [0 for i in range(n)]
 asum = 0
 ia = 0
 ib = 0
@@ -38,10 +38,7 @@ if days[len(days) - 1] >= 0:
     changes += 1
     lastb = b[ib]
 b.sort()
-# print('ia = ' + str(ia))
-# print('changes = ' + str(changes))
 curb = 0
-# take care abount choosing smth in the middle exept for last\
 seccurb = curb
 secasum = asum
 secchanges = changes

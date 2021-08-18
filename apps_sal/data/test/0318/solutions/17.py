@@ -10,5 +10,3 @@ mm %= 60
 hh %= 24
 
 print(str(hh).zfill(2) + ':' + str(mm).zfill(2))
-
-# TODO: Leading zeroes

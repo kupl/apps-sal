@@ -3,11 +3,6 @@ import math
 from functools import reduce
 from math import gcd
 
-# 2d line: ax + by + c = 0  is  (a, b, c)
-
-#          ax + by + c = 0     ((a, b, c),
-# 3d line: dx + ez + f = 0  is  (d, e, f),
-#          gy + hz + i = 0      (g, h, i))
 
 gcdm = lambda *args: reduce(gcd, args, 0)
 

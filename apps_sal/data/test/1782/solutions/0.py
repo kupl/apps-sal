@@ -9,9 +9,6 @@ class Task:
 
     def getData(self):
         self.n, self.k = [int(x) for x in input().split(' ')]
-        #inFile = open('input.txt', 'r')
-        # inFile.readline().rstrip()
-        #self.childs = inFile.readline().rstrip()
 
     def solve(self):
         n, k = self.n, self.k
@@ -34,9 +31,6 @@ class Task:
 
     def printAnswer(self):
         print(re.sub(r'[\[\],]', '', str(self.answer)))
-        # print(self.answer[:6])
-        #outFile = open('output.txt', 'w')
-        # outFile.write(self.answer)
 
 
 task = Task()

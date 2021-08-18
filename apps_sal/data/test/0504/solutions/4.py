@@ -1,4 +1,3 @@
-# coding=utf-8
 from sys import stdin
 def rd(l): return tuple(map(int, l.split()))
 

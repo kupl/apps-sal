@@ -35,7 +35,6 @@ for el in d:
         rightpair.append((d[el][i], d[el][i + 1]))
         b[el[0]][d[el][i]] -= 1
         b[el[0]][d[el][i + 1]] -= 1
-# print(b)
 for el in b:
     last1len = -1
     for ell in b[el]:
@@ -55,7 +54,5 @@ if len(rightpair) > len(leftpair):
     leftpair.extend(rightpair[t:])
     rightpair = rightpair[:t]
 print(min(len(leftpair), len(rightpair)))
-# print(leftpair)
-# print(rightpair)
 for i in range(min(len(leftpair), len(rightpair))):
     sys.stdout.write(leftpair[i][0] + ' ' + rightpair[i][0] + '\n' + leftpair[i][1] + ' ' + rightpair[i][1] + '\n')

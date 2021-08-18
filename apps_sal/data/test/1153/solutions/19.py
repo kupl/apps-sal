@@ -11,7 +11,6 @@ j = 0
 while (i < m and j < n):
     if s_a == s_b:
         count += 1
-        # print(s_a,s_b)
         i += 1
         j += 1
         if i < m and j < n:

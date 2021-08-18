@@ -1,5 +1,4 @@
 def resolve():
-    # ====input code===
     n = int(input())
     for i in range(1, 100):
         for j in range(1, 100):
@@ -9,5 +8,4 @@ def resolve():
     print(-1)
 
 
-# ================
 resolve()

@@ -2,7 +2,6 @@ from collections import deque
 
 if True:
     N = int(input())
-    # X = [[[] for _ in range(5)] for i in range(500001)]
     X = {}
 
     def calc(t):
@@ -32,18 +31,14 @@ if True:
 else:
     N = 14
     X = [[[], [], [], [], []], [['am', 'that'], ['this', 'is', 'first', 'mcdics', 'i'], [], ['the'], ['wow']], [[], [], ['round', 'proud'], [], []], [['hooray'], [], ['about'], [], []], [[], [], [], ['codeforces'], []]]
-# print("X =", X)
 A = 0
 B = 0
 Q = deque([])
 for i in X:
-    # print("X[i] =", X[i])
-    # print([len(x)//2 for x in X[i]])
     a = sum([len(x) // 2 for x in X[i]]) * 2
     b = sum([len(x) for x in X[i]]) // 2 * 2 - a
     A += a
     B += b
-    # print("a, b, A, B =", a, b, A, B)
     for j in range(5):
         while len(X[i][j]) >= 2:
             deque.appendleft(Q, X[i][j].pop())
@@ -53,7 +48,6 @@ for i in X:
         while len(X[i][j]) >= 1 and b > 0:
             deque.append(Q, X[i][j].pop())
             b -= 1
-    # print("Q =", Q)
 
 ans = min(A // 2, (A + B) // 4)
 print(ans)
