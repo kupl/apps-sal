@@ -3,7 +3,6 @@ from collections import deque
 
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        # forward pass to find invalid closed paren
         toremove = []
         openP = deque()
         for i in range(len(s)):
@@ -14,7 +13,6 @@ class Solution:
                     openP.pop()
                 else:
                     toremove.append(i)
-        # backward pass
         closeP = deque()
         for i in range(len(s)):
             if s[len(s) - i - 1] == ')':

@@ -15,5 +15,4 @@ for i in range(t):
     if(n > 3):
         for j in range(n - 3):
             f.append((f[-2] * k) + ((k - 1) * f[-1]))
-            # print(f)
         print(f[-1] % 1000000007)

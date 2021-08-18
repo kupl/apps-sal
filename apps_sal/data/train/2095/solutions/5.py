@@ -13,7 +13,7 @@ for i, a in enumerate(arr):
     if v[i]:
         continue
     v[i] = True
-    curl = [i]  # curret list
+    curl = [i]
     a -= 1
     while not v[a]:
         curl.append(a)

@@ -1,6 +1,5 @@
 class Solution:
     def maxWidthRamp(self, A: List[int]) -> int:
-        # https://blog.csdn.net/fuxuemingzhu/article/details/85223568
         N = len(A)
         stack = []
         res = 0

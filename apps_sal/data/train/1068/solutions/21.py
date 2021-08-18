@@ -1,4 +1,3 @@
-# cook your dish here
 
 def isOdd(n):
     return True if n % 2 != 0 else False

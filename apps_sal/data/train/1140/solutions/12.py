@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 t = int(input())
 
 
@@ -38,7 +36,6 @@ for _ in range(t):
         l.append(int(idx % 2))
         idx = idx / 2
         p -= 1
-        # print(l)
     for i in l:
         s = s * 2 + i
     print(s)

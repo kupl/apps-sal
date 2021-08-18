@@ -18,14 +18,3 @@ class Solution:
                 res += s[i]
 
         return res
-#         left, right, index = 0, 0, []
-#         remove_left, remove_right = 0, 0
-#         for i in range(len(s)):
-#             if s[i] == '(': left += 1
-#             elif s[i] == ')': right += 1
-#             if right > left:
-#                 remove_right += 1
-#                 right -= 1
-#                 index.append(i)
-
-#         remove_left = left - right

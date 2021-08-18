@@ -1,6 +1,5 @@
 class Solution:
     def maxWidthRamp(self, A: List[int]) -> int:
-        # stack + binary search
         descends = [(A[0], 0)]
 
         def bs(t):
@@ -18,6 +17,5 @@ class Solution:
                 descends.append((A[i], i))
             else:
                 left = bs((A[i], i))
-                # print(i, left, descends[left][1], descends)
                 rint = max(rint, i - descends[left][1])
         return rint

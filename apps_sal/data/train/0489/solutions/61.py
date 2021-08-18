@@ -17,8 +17,6 @@ class Solution:
         for pair in li:
             n = pair[0]
             i = pair[1]
-            # print(bt)
-            # print(i)
             if len(bt) == 0:
                 bt.add(i)
                 continue

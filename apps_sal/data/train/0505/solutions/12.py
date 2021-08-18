@@ -1,6 +1,5 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        # O(n) time and O(n) space - use stack to keep track of parentheses
         stack = []
         updated_s = []
         for ch in s:
