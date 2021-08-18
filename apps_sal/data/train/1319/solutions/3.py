@@ -1,5 +1,3 @@
-########################################################
-################# Template #############################
 import sys
 import math
 def Int(): return int(input())
@@ -14,8 +12,6 @@ def vsInput():
     sys.stdout = open('output.txt', 'w')
 
 
-#########################################################
-# vsInput()
 no_of_citizen, visits = Ints()
 citizen_lst = []
 maxi = 0

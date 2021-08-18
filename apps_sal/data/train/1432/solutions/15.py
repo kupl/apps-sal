@@ -45,10 +45,6 @@ for _ in range(int(input())):
     lo = sorted(do.keys())
     lz = sorted(dz.keys())
     lo = lo[::-1]
-    # print(lo)
-    # print(lz)
-    # print(do)
-    # print(dz)
     if len(lo) == 0:
         print(0)
         continue
@@ -62,7 +58,6 @@ for _ in range(int(input())):
     while((lo[i] != lz[j]) and (lo[i] > lz[j])):
         ov = lo[i]
         zv = lz[j]
-        # print(ov,zv,3)
         do[ov] = do[ov] - 1
         dz[zv] = dz[zv] - 1
 

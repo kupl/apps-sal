@@ -1,6 +1,5 @@
 class Solution:
     def winnerSquareGame(self, n: int) -> bool:
-        # cost = [-1 for _ in range(n+1)]
 
         @lru_cache(None)
         def helper(n):

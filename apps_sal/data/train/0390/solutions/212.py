@@ -19,14 +19,11 @@ class Solution:
 
         for i in range(old_len, n + 1):
             flag = 0
-           # print(\"in loop i\")
             for j in range(1, int(math.sqrt(i)) + 1):
-               # print(\"i and j are\",i,j)
                 if not self.dp[i - self.squares[j]]:
                     self.dp[i] = True
                     flag = 1
                     break
             if flag == 0:
                 self.dp[i] = False
-       # print(dp)
         return self.dp[n]

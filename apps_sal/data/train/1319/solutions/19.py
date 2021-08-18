@@ -1,4 +1,3 @@
-# cook your dish here
 import heapq
 a, b = list(map(int, input().split()))
 numList = []

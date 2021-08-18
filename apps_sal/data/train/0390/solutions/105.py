@@ -10,6 +10,6 @@ class Solution:
                 if not dfs(r - i ** 2):
                     return True
 
-            return False  # There is no i such that removing i**2 stones will win the game
+            return False
 
         return dfs(n)
