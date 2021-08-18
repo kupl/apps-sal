@@ -28,7 +28,6 @@ class DSU:
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # minimum spanning tree.
         edges = []
 
         def kruskals(N, edges):

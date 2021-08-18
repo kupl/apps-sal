@@ -19,7 +19,6 @@ class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         def distance(a, b):
             return abs(a[0] - b[0]) + abs(a[1] - b[1])
-        # build a list of edges in the form of (w, u, v)
         edges = []
         for i in range(len(points)):
             for j in range(i + 1, len(points)):

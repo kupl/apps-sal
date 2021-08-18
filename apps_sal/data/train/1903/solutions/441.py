@@ -1,6 +1,5 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # MST
         dist = []
         n = len(points)
         for i in range(n):

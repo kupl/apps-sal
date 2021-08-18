@@ -7,7 +7,6 @@ class Solution:
             for dst in range(N):
                 wt = abs(points[src][0] - points[dst][0]) + abs(points[src][1] - points[dst][1])
                 graph[src].append((dst, wt))
-                #graph[dst].append((src, wt))
 
         dist = {}
         heap = [(0, start)]

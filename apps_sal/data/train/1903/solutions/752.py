@@ -32,30 +32,3 @@ class Solution:
                 edges.append([i, j, manhattan(x, y)])
         edges.sort(key=lambda x: x[2])
         return self.kruskal(n, edges)
-
-        # graph = collections.defaultdict(list)
-        # for i in range(n):
-        #     for j in range(i + 1, n):
-        #         x, y = points[i], points[j]
-        #         graph[i].append((manhattan(x, y), j))
-        #         graph[j].append((manhattan(x, y), i))
-        # return prim(graph)
-
-
-#         def prim(graph):
-#             V = {0}
-#             edges = graph[0]
-#             heapify(edges)
-#             sum_cost = 0
-#             while edges:
-#                 cost, p2 = heappop(edges)
-#                 if p2 in V:
-#                     continue
-#                 sum_cost += cost
-#                 V.add(p2)
-#                 for new_edge in graph[p2]:
-#                     if new_edge[1] not in V:
-#                         heappush(edges, new_edge)
-#                 if len(V) == len(graph):
-#                     break
-#             return sum_cost

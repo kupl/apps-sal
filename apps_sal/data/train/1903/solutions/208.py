@@ -32,7 +32,6 @@ class Solution:
             for j in range(i + 1, n):
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 edges.append((dist, i, j))
-        # print(edges)
         edges.sort()
         res = 0
         ds = DSU(n)

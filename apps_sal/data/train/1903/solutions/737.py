@@ -20,7 +20,6 @@ class Solution:
 
         while n_edges != len(sets) - 1:
             d, i, j = edges[cur]
-            # print(i, j, sets)
             if find(i) != find(j):
                 sets[find(i)] = find(j)
                 ans += d

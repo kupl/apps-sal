@@ -1,7 +1,5 @@
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # seems dijkstra with all the neighbors connected?
-        # try minimum spanning treee
 
         to_visit = set(range(1, len(points)))
         pq = [(abs(points[0][0] - points[x][0]) + abs(points[0][1] - points[x][1]), 0, x) for x in range(1, len(points))]

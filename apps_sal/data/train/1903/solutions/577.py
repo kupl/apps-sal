@@ -17,9 +17,6 @@ class Solution:
         while n:
             w, a, b = heapq.heappop(edges)
             if not A[a].intersection(A[b]):
-                # print(\"edge:\",points[a],points[b])
-                # print(\"a's set:\" ,A[a])
-                # print(\"b's set:\", A[b])
                 B = A[a].union(A[b])
                 for b in B:
                     A[b] = B

@@ -8,7 +8,6 @@ class Solution:
         unConnSet = set()
         for i in range(len(points)):
             unConnSet.add(i)
-        # print(unConnSet)
         myHeap = []
 
         for i in range(len(points)):
@@ -16,15 +15,12 @@ class Solution:
                 lenCalc = abs(points[i][0] - points[j][0]) + abs(points[j][1] - points[i][1])
                 if lenCalc > 0:
                     myHeap.append([lenCalc, (i, j)])
-        # print(myHeap)
         myHeap.sort(key=lambda x: x[0])
-        # print(myHeap)
 
         p1 = myHeap[0][1][0]
         p2 = myHeap[0][1][1]
         connSet.add(p1)
         connSet.add(p2)
-        # print(p2)
         unConnSet.remove(p1)
         unConnSet.remove(p2)
         itt = 0

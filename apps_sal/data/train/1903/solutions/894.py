@@ -14,7 +14,6 @@ class Solution:
             if xp == yp:
                 return False
             arr[yp] = xp
-            # arr[yp]-=1
             return True
 
         for i in range(len(points)):

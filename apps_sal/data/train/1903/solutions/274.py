@@ -35,8 +35,6 @@ class Solution:
             dist, one, two = heapq.heappop(ques)
             pone = findp(one)
             ptwo = findp(two)
-            # print(dist, one, two)
-            # print(p)
             if pone != ptwo:
                 union(pone, ptwo)
                 components -= 1

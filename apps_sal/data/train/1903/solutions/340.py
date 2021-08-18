@@ -5,13 +5,11 @@ class Solution:
         n = len(points)
         heap = []
         dic = collections.defaultdict(list)
-        # calculate all the distances and put them in a heap
         for i in range(n):
             for j in range(i + 1, n):
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 dic[i].append((dist, j))
                 dic[j].append((dist, i))
-        # add edges connected to 0 to heap
         res, count, visited, heap = 0, 0, [0] * n, dic[0]
         visited[0] = 1
         heapq.heapify(heap)

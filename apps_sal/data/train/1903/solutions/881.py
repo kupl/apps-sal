@@ -13,7 +13,6 @@ class Solution:
                 d[m[(x1, y1)]].append([m[(x2, y2)], k])
                 d[m[(x2, y2)]].append([m[(x1, y1)], k])
 
-        # initialize heap for prim's
         ans = 0
         h = []
         for n, w in d[0]:

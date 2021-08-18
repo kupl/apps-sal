@@ -22,7 +22,6 @@ class Solution:
         parent[0] = -1
 
         def minKey():
-            # Initilaize min value
             min = float('inf')
             for v in range(n):
                 if key[v] < min and mstSet[v] == False:
