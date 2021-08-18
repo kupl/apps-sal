@@ -20,7 +20,6 @@ class UnionFind:
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        # helper to get a list prime factors of a given integer
         def primeFact(num):
             res = []
             n = num
@@ -42,7 +41,6 @@ class Solution:
                 res.append(int(n))
             return res
 
-        # use a dictionary to store all indexes of each factor
         uf = UnionFind(len(A))
         d = {}
         for i, num in enumerate(A):
@@ -53,9 +51,7 @@ class Solution:
                 else:
                     d[factor].append(i)
 
-        # compute unions
         for factor in d:
             for j in range(len(d[factor]) - 1):
                 uf.union(d[factor][j], d[factor][j + 1])
-        # return size of largest union
         return uf.Max

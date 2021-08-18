@@ -32,6 +32,6 @@ class Solution:
         Gp = collections.defaultdict(list)
         Gn = collections.defaultdict(list)
         for a in A:
-            pfactorization(a)  # build our graphs
+            pfactorization(a)
         seenPrimes, seenNodes = set(), set()
         return max([dfs(a) for a in A])

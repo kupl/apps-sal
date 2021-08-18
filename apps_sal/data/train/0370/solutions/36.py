@@ -2,7 +2,6 @@ class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         primes = []
         for x in range(2, int(max(A)**0.5 + 1)):
-            #isPrime = True
             for p in primes:
                 if x % p == 0:
                     isPrime = False

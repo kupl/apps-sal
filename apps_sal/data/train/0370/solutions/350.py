@@ -18,7 +18,7 @@ class Solution:
                     factors[2].add(i)
                     x //= 2
                 for n in range(3, int(sqrt(x) + 1), 2):
-                    while x % n == 0:  # n is a factor
+                    while x % n == 0:
                         factors[n].add(i)
                         x //= n
                         if x <= 1:

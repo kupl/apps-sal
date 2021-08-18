@@ -1,9 +1,7 @@
-# Start: 2020-08-30 10:49PM =>
 
 class Solution:
 
     def largestComponentSize(self, A: List[int]) -> int:
-        # initial: use union find?
 
         def get_primes_set(n):
             for i in range(2, int(math.sqrt(n)) + 1):
@@ -30,15 +28,12 @@ class Solution:
 
         seen = set()
         sizes = dict()
-        # print(primes)
         for pr in primes:
             if pr in seen:
                 continue
             sizes[pr] = 0
             to_explore = collections.deque([pr])
-            # print(pr)
             while to_explore:
-                # print(to_explore)
                 curr = to_explore.popleft()
                 if curr in seen:
                     continue

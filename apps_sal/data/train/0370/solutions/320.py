@@ -22,9 +22,6 @@ class Solution:
                         self.total_factors.append(val)
 
     def largestComponentSize(self, A: List[int]) -> int:
-        # A.sort()
-        # self.get_prime_numbers(A[-1])
-        # print(self.total_factors)
         N = max(A) + 1
         nods = {d: d for d in range(N)}
 
@@ -58,7 +55,6 @@ class Solution:
     def largestComponentSize_slow(self, A: List[int]) -> int:
         A.sort()
         self.get_prime_numbers(A[-1])
-        # print(self.total_factors)
         max_len = 0
         while len(A) > max_len:
             factors = self.get_factors(A[0])

@@ -1,6 +1,5 @@
 class Solution:
     def find(self, g, i):
-        # find the group id of element i
         if i in g:
             gid = g[i]
         else:
@@ -12,7 +11,6 @@ class Solution:
         return g[i]
 
     def merge(self, g, i, j):
-        # merge two groups
         gid = self.find(g, i)
         gjd = self.find(g, j)
         if gid != gjd:

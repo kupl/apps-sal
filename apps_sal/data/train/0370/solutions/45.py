@@ -8,7 +8,7 @@ class UF:
             self.p[x] = self.find(self.p[x])
         return self.p[x]
 
-    def unite(self, x, y):  # x and y are roots
+    def unite(self, x, y):
         if self.s[x] < self.s[y]:
             x, y = y, x
         self.p[y] = x

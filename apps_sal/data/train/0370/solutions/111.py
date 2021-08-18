@@ -11,7 +11,7 @@ class Solution:
             else:
                 primes.append(x)
 
-        factors = defaultdict(list)         # compute factors of each 'a'
+        factors = defaultdict(list)
         for a in A:
             x = a
             for p in primes:
@@ -21,7 +21,7 @@ class Solution:
                     factors[a].append(p)
                     while x % p == 0:
                         x //= p
-            if x > 1:                                   # a new prime found
+            if x > 1:
                 factors[a].append(x)
                 primes.append(x)
 

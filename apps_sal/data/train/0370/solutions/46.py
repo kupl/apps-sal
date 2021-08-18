@@ -16,9 +16,7 @@ class Solution:
                     graph[j].append(i)
                     roots.add(i)
                 j += i
-        # print(graph)
         ans = self.traverse(graph, roots, nodes)
-        # print(ans)
         return max(ans)
 
     def traverse(self, graph, roots, real_nodes):

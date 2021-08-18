@@ -28,10 +28,6 @@ class Solution:
                 while num % prime == 0:
                     num //= prime
 
-        # bipartite graph
-        # print(prime_factors)
-        # print(members)
-
         visited_primes = set()
         ans = 0
         for p in members.keys():

@@ -6,7 +6,6 @@ MAX_N = 100000
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        # compute factors
         sieve = Sieve(MAX_N)
         factors = defaultdict(list)
         for x in A:
@@ -29,7 +28,6 @@ class Solution:
         return max(Counter(uf.root(x) for x in A).values(), default=0)
         '''
 
-        # build bipartite graph from factors and values
         g = Graph()
         for factor, values in list(factors.items()):
             g.add_factor(factor)
@@ -105,7 +103,6 @@ class Sieve:
     def __init__(self, max_n):
         self.primes = self._compute_primes(max_n)
         self.factors = {p: [p] for p in self.primes}
-        # self.factors = {}
 
     def _compute_primes(self, max_n):
         primes = list()
@@ -128,7 +125,6 @@ class Sieve:
         self.factors[n] = factors = set()
         work = n
         for prime in self.primes:
-            # does not improve runtime!
             if work < prime:
                 break
 

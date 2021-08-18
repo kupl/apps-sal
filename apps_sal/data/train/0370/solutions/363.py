@@ -1,4 +1,3 @@
-# all primes less than sqrt(100000)
 primes = [
     2,
     3,
@@ -85,7 +84,6 @@ def group_by_factors(A):
     return list(groups.values())
 
 
-# TODO: this uses up about 2/3 of the runtime by itself
 def adjacencies_by_intersection(gs):
     adj = [[] for _ in range(len(gs))]
     for x in range(len(gs)):
@@ -112,7 +110,6 @@ def bfs(gs, adj, target):
                     unvisited.remove(x)
                     q.append(x)
         largest = max(largest, len(set(n for i in group for n in gs[i])))
-        # try to short circuit
         if largest >= target:
             return largest
     return largest
@@ -120,12 +117,9 @@ def bfs(gs, adj, target):
 
 class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
-        # group by prime factors and filter out singletons
         gs = [g for g in group_by_factors(A) if len(g) > 1]
 
-        # build adjacency relations
         adj = adjacencies_by_intersection(gs)
 
-        # bfs
         target = len(A) // 2
         return bfs(gs, adj, target)
