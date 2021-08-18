@@ -3,7 +3,6 @@ class Solution:
         self.res = n * m
 
         def dfs(heights, moves):
-            #print(heights, moves)
             if min(heights) == m:
 
                 self.res = min(self.res, moves)

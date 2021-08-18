@@ -8,8 +8,6 @@ class Solution:
             visited = [False] * n
             dist = [float('inf')] * n
             frontier = [(0, s)]
-            # visited[s] = True
-            # dist[s] = 0
             while not all(visited) and frontier:
                 d, s = heapq.heappop(frontier)
                 if d > distanceThreshold:

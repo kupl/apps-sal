@@ -9,22 +9,12 @@ class Solution:
             return 1
         if m % n == 0:
             return m // n
-        # split on one axis
         s1 = m * n
         for x in range(1, m // 2 + 1):
             s1 = min(s1, self.tilingRectangle(n, x) + self.tilingRectangle(n, m - x))
         for y in range(1, n // 2 + 1):
             s1 = min(s1, self.tilingRectangle(y, m) + self.tilingRectangle(n - y, m))
-        # split on both axis
         s2 = m * n
-        #    <-- yL -->
-        #    --------------------------
-        #    |        |_______________| xR
-        #    |________|__rc__|        |
-        # xL |               |        |
-        #    --------------------------
-        #                      <- yR ->
-        # rc: self.tilingRectangle(n - yL - yR, m - xL - xR)
         for xL in range(1, m // 2 + 1):
             for xR in range(1, m - xL):
                 for yL in range(1, n // 2 + 1):

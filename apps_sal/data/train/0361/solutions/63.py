@@ -9,7 +9,6 @@ class Solution:
         res = [m * n + 1]
 
         def dfs(ys, cnt):
-            # print(ys)
             key = tuple(ys)
             if key not in dp or cnt < dp[key]:
                 dp[key] = cnt
@@ -30,7 +29,6 @@ class Solution:
                 else:
                     ymax += 1
             ymax = min(ymax, m)
-            # try
             for i in range(ymax, 0, -1):
                 dfs(ys[:idx] + [ys[idx] + i] * i + ys[idx + i:], cnt + 1)
 

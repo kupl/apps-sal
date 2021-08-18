@@ -22,7 +22,6 @@ class Solution:
         min_city = None
         for i in range(n):
             closest = find_num_closest(i)
-            # print(\"city {} has {} within threshold\".format(i, closest))
             if closest <= min_val:
                 min_val = closest
                 min_city = i

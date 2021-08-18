@@ -27,14 +27,10 @@ class Solution:
         while stack:
             dLeft, source, curr = heapq.heappop(stack)
             dLeft *= -1
-            # print(dLeft, source, curr)
             for nextCity in distDict[curr]:
                 if (nextCity not in visitedDict[source] or visitedDict[source][nextCity] < (dLeft - distDict[curr][nextCity])) and distDict[curr][nextCity] <= dLeft:
                     visitedDict[source][nextCity] = dLeft - distDict[curr][nextCity]
                     heapq.heappush(stack, (-(dLeft - distDict[curr][nextCity]), source, nextCity))
-                # elif nextCity not in visitedDict[source] and distDict[curr][nextCity] == dLeft:
-                #     visitedDict[source].add(nextCity)
-        # print(visitedDict)
         ansMax = float('inf')
         ans = -1
         for city in visitedDict:

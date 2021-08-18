@@ -27,6 +27,5 @@ class Solution:
             numerator %= denominator
         if numerator == 0:
             return s + "".join(prevdigits)
-        #print(prev, prevdigits)
         i = prev.index(numerator)
         return s + "".join(prevdigits[0:i]) + "(" + "".join(prevdigits[i:]) + ")"

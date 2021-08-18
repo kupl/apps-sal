@@ -7,7 +7,6 @@ class Solution:
         dp = {}
 
         def dfs(cnt, hs):
-            # print(hs)
             if cnt > res[0]:
                 return
             key = tuple(hs)

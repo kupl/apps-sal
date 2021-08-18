@@ -24,6 +24,5 @@ class Solution:
                         distance[nei_id] = total
                         heapq.heappush(heap, (total, nei_id))
             return sum(dis <= distanceThreshold for dis in list(distance.values())) - 1
-        # print(graph.keys())
         res = {djikstra(i): i for i in range(n)}
         return res[min(res)]

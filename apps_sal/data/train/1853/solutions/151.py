@@ -5,7 +5,6 @@ class Solution:
         ans = float('inf')
         city = -1
 
-        # create adj list
         for i in edges:
             a, b, c = i
             adj[a].append((b, c))
