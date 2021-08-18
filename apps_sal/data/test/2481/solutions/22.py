@@ -10,10 +10,9 @@ for i in range(H):
     tmp = list(map(int, input().split()))
     A.append(tmp)
 
-# ワーシャルフロイド法で各数値から各数値への最小コストを求める
-for i in range(10):  # 経由する頂点
-    for j in range(10):  # 始点
-        for k in range(10):  # 終点
+for i in range(10):
+    for j in range(10):
+        for k in range(10):
             C[j][k] = min(C[j][k], C[j][i] + C[i][k])
 
 ans = 0

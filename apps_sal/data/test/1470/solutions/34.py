@@ -3,7 +3,6 @@ N = int(input())
 
 def solve(N):
     cnt = 0
-    # 11が何回使えるのか
     cnt += (N // 11) * 2
     N %= 11
 

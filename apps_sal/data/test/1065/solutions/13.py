@@ -17,9 +17,7 @@ ll best=0;
 """
 best = 0
 for i in range(D):
-    #print(n, i*k+1)
     x = min(M, (n // (i * k + 1)))
-    #print(i, x)
     score = (i + 1) * x
     best = max(best, score)
 print(best)

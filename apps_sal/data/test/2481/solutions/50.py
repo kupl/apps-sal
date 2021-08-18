@@ -4,7 +4,6 @@ a = [list(map(int, input().split())) for _ in range(h)]
 
 
 def warshall_floyd(adj_m):
-    # _dist[i][j] : i から j への最短距離
     _dist = adj_m
     for _k in range(10):
         for _i in range(10):

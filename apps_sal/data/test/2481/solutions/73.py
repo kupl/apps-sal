@@ -7,7 +7,6 @@ for k in range(n):
     for i in range(n):
         for j in range(n):
             dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
-#[print(*dist[l]) for l in range(n)]
 ans = 0
 for i in range(h):
     for j in range(w):

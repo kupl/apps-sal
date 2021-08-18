@@ -24,7 +24,6 @@ def main(a, b, c, d, info=0):
 
 def main_input(info=0):
     a, b, c, d = list(map(int, input().split()))
-    #t = [(int(x)-1,i+1) for i,x in enumerate(input().split())]
     main(a, b, c, d, info=info)
 
 

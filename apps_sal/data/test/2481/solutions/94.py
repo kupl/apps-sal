@@ -9,7 +9,6 @@ for _ in range(H):
     a = list(map(int, input().split()))
     A.append(a)
 
-# 0-9を1に変える時の最小のエネルギーをそれぞれ求める(ワーシャルフロイド法)
 for k in range(10):
     for i in range(10):
         for j in range(10):

@@ -12,7 +12,6 @@ def __starting_point():
             p += 1
     if flag == 1 and bin_str[x - 1]:
         p += 1
-    # print(p)#***
     if p == 0:
         print('0')
     else:

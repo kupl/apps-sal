@@ -1,4 +1,3 @@
-# https://atcoder.jp/contests/arc068/tasks/arc068_a
 
 x = int(input())
 

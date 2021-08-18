@@ -87,7 +87,6 @@ class UnionFind():
 
 mod = 10**9 + 7
 
-# --maincode----------------
 n = ini()
 k = []
 for i in range(n):

@@ -18,7 +18,6 @@ for i in range(n):
             break
     if not assigned:
         right = n
-    # print(i, right)
     ans = max(ans, right - i)
     if s[i] == 'S':
         cnt -= 1

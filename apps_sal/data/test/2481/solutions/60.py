@@ -10,16 +10,16 @@ def warshall_floyd(V):
 
 INF = float('inf')
 H, W = list(map(int, input().split()))
-d = [[int(i) for i in input().split()] for _ in range(10)]  # ; print(d)
+d = [[int(i) for i in input().split()] for _ in range(10)]
 a = []
 for _ in range(H):
     a.extend([int(i) for i in input().split() if i != '-1'])
-dic = Counter(a)  # ; print(a); print(dic)
+dic = Counter(a)
 
-warshall_floyd(10)  # ; print(d)
+warshall_floyd(10)
 
 ans = 0
 for key, val in list(dic.items()):
-    ans += d[key][1] * val  # ; print(key, d[key][1], val)
+    ans += d[key][1] * val
 
 print(ans)

@@ -1,5 +1,3 @@
-# Contest: Educational Codeforces Round 74 (Rated for Div. 2) (https://codeforces.com/contest/1238)
-# Problem: A: Prime Subtraction (https://codeforces.com/contest/1238/problem/A)
 
 def rint():
     return int(input())

@@ -1,5 +1,5 @@
 """
-Codeforces Round #332
+Codeforces Round 
 
 Problem 599 B. Spongebob and Joke
 
@@ -14,19 +14,12 @@ def solve(fs, bs, n, m):
     if not all(b in set_fs for b in bs):
         return ('Impossible', )
 
-    # if len(bs) != len(set_bs):
-    #     return ('Ambiguity', )
-
     ys = [f for f in fs if f in set_bs]
     if len(ys) != len(set(ys)):
         return ('Ambiguity',)
 
     d = {f: i for (i, f) in enumerate(fs, 1) if f in set_bs}
     return ('Possible', [d[b] for b in bs])
-
-
-# def p(*args, **kwargs):
-#     return print(*args, file=sys.stderr, **kwargs)
 
 
 def main():

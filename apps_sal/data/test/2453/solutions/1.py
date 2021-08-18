@@ -18,7 +18,6 @@ def readlist():
     return list(map(int, input().split()))
 
 
-# C
 N = read()
 LIST = []
 left = 0
@@ -30,7 +29,7 @@ for i in range(N):
 
 LIST.sort()
 
-cnt = [0] * (N + 1)  # DO NOT USE cnt[0]
+cnt = [0] * (N + 1)
 
 n = 1
 x = LIST[0][0]

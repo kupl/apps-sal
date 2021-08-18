@@ -16,6 +16,3 @@ for i in t * min(m, 2 * n):
     s[i] = max(s[:i + 1]) + 1
 
 print(max(s) + max((m - n * 2) * max(d), 0))
-
-
-# Made By Mostafa_Khaled

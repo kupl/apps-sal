@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from scipy.sparse.csgraph import shortest_path, dijkstra, floyd_warshall, bellman_ford, johnson
 import numpy as np
 from scipy.sparse.csgraph import shortest_path, floyd_warshall, dijkstra, bellman_ford, johnson
@@ -12,8 +11,6 @@ import bisect
 import copy
 import math
 sys.setrecursionlimit(10**6)
-
-# lis_of_lis = [[] for _ in range(N)]
 
 
 def zz(): return list(map(int, sys.stdin.readline().split()))
@@ -41,10 +38,6 @@ for i in range(H):
             continue
         num_lis[a_] += 1
     A.append(a)
-# 1->1, 2->1, 3->1 にするためのコストを計算する
-# cost = [0]*10
-# for num in range(2, 10):
-#     min_cost = C[num][1]
 a = floyd_warshall(C)
 ans = 0
 for i, num in enumerate(num_lis):

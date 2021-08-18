@@ -11,8 +11,6 @@ def get(sp, n, k, m, d):
 def __starting_point():
     k = input()
     lis = k.split(' ')
-    # print("{}\n".format(k))
-    # print("{}\n".format(lis))
     n = int(lis[0])
     k = int(lis[1])
     m = int(lis[2])

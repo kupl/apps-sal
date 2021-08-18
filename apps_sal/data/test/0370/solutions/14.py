@@ -1,8 +1,5 @@
 def e_golf(K, X, Y):
-    # 参考: https://babcs2035.hateblo.jp/entry/2019/07/29/AtCoder_Beginner_Contest_135：E_-_Golf
-    # 参考: https://atcoder.jp/contests/abc135/submissions/6607612
 
-    # x >= y >= 0 となるようにどのような座標変換を行ったか
     is_xpos_negative = is_ypos_negative = is_swap = False
     x, y = X, Y
     if x < 0:
@@ -16,7 +13,7 @@ def e_golf(K, X, Y):
         is_swap = True
 
     if (x + y) % 2 == 1 and K % 2 == 0:
-        return -1  # ゴールできない
+        return -1
 
     ans = []
     shot_min = max((x + y + K - 1) // K, 2)
@@ -38,7 +35,6 @@ def e_golf(K, X, Y):
             else:
                 ans.append((x, y + (shot_min - i) * K))
 
-    # 座標変換をしていた場合、元に戻す
     if is_swap:
         ans = [(second, first) for first, second in ans]
     if is_xpos_negative:
