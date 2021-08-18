@@ -1,4 +1,3 @@
-# C - : (Colon)
 
 import math
 

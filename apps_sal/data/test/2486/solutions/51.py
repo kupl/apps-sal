@@ -1,7 +1,5 @@
 import sys
 
-# sys.stdin = open('d1.in')
-
 
 def read_int_list():
     return list(map(int, input().split()))
@@ -27,10 +25,8 @@ def solve(n, k, a):
     lowest = None
     for i in range(n - 1, -1, -1):
         if k - a[i] <= s:
-            # a[i] is not unnecessary
             lowest = i
         else:
-            # maybe a[i] is unnecessary
             s += a[i]
     if lowest is None:
         return n

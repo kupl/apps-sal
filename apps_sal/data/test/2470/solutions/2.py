@@ -26,5 +26,3 @@ class Solution:
             s = min(s, swap[m - 1][i])
         res = min(s, keep[m - 1])
         return -1 if res >= float('inf') else res
-
-# 见花花酱视频：https://www.bilibili.com/video/av67133426/?spm_id_from=333.788.b_636f6d6d656e74.7

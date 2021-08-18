@@ -14,6 +14,3 @@ for i in range(m):
     p[b - 1] += c
 
 print(sum(i for i in p if i > 0))
-
-
-# Made By Mostafa_Khaled

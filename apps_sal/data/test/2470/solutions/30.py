@@ -23,8 +23,6 @@ class Solution:
 
             prev_with_op = min_last_value_given_operations(n - 1, ops - 1)
             b = find_larger_value_in_B(prev_with_op)
-            # dp(n - 1, ops) <= dp(n - 1, ops - 1)
-            # if dp(n - 1, ops - 1) < A[n - 1] => dp(n - 1, ops) < A[n - 1]
             if prev_with_op < A[n - 1]:
                 return min(A[n - 1], b)
             elif b <= A[n - 1]:

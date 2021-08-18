@@ -17,7 +17,6 @@ class Solution:
                 return float('inf')
             if n == 0:
                 return float('-inf')
-                # return A[n - 1] if first_n_of_A_is_sorted(n) else float('inf')
 
             ops = min(n, ops)
             return min(

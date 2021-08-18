@@ -10,6 +10,6 @@ for i in a:
         ans += 1
         tmp += i
     else:
-        ans = 0  # リセット
+        ans = 0
 
 print(ans)

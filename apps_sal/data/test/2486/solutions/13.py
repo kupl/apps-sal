@@ -12,6 +12,3 @@ for i in range(N):
     else:
         ans = 0
 print(ans)
-# 反例
-# 5 12
-# 6 4 3 2 1
