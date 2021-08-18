@@ -6,7 +6,7 @@ def solve():
         for i in tree[n]:
             ans[i] += ans[n]
             tree[i].remove(n)
-            dfs(tree, i, ans)  # 再帰関数になっている。次の木の中を探索
+            dfs(tree, i, ans)
 
     n, q = map(int, input().split())
     ab = [list(map(int, input().split())) for _ in range(n - 1)]

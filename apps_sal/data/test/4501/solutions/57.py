@@ -2,7 +2,6 @@ import numpy as np
 n, a = map(int, input().split())
 x = list(map(int, input().split()))
 
-# dp[i][j][k]：　i枚目までのカードをj枚使用して合計kを作れる組み合わせ
 dp = np.zeros((n + 1, n + 1, 3001)).astype(np.int64)
 dp[0][0][0] = 1
 

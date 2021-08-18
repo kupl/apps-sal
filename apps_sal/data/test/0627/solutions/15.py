@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from typing import Dict, List, Tuple
 
 
@@ -13,7 +12,6 @@ def print_out(res: List[int]):
 def main():
 
     n, = (int(x) for x in input().split())
-    #a = input_lst()
     s = input()
     for i in range(len(s) - 1):
         if s[i] > s[i + 1]:

@@ -1,7 +1,6 @@
 import sys
 read = sys.stdin.read
 sys.setrecursionlimit(10**7)
-#readlines = sys.stdin.readlines
 
 
 def main():
@@ -15,8 +14,6 @@ def main():
     data = tuple(map(int, read().split()))
     n, q = data[0], data[1]
     gg = {i: set() for i in range(1, n + 1)}
-    # 木なので”正しく”処理すればgg[x]へのaddは２回ではなく１回でいいはず。
-    # だがうまく行かないため、無向グラフのように２回加えて、dfs関数で各頂点を１回しかみないように対応。
     for i1, v1 in zip(data[2:n * 2:2], data[3:n * 2:2]):
         gg[v1].add(i1)
         gg[i1].add(v1)

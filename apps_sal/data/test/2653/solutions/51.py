@@ -16,7 +16,6 @@ flag = [1] * N
 t = deque()
 t.append(0)
 
-# 1(0)から順に探索していけば、自然と親→子の順番になる
 while t:
     v = t.popleft()
     flag[v] = 0

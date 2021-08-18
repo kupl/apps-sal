@@ -1,5 +1,3 @@
-# ABC135D - Digits Parade
-# digit DP
 def main():
     S = input().rstrip()
     ans, MOD = [0] * 13, 10 ** 9 + 7

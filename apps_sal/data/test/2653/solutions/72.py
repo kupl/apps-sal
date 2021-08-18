@@ -13,7 +13,6 @@ for i in range(Q):
 
 
 def dfs(g, v):
-    # nonlocal ans_cnt
     for nv in g[v]:
         if ans_cnt[nv] != -1:
             continue
@@ -25,8 +24,6 @@ ans_cnt = [-1] * N
 ans_cnt[0] = cnt[0]
 dfs(g, 0)
 
-# print(cnt)
-# print(ans_cnt)
 for i, value in enumerate(ans_cnt):
     print(value, end="")
     if i != len(ans_cnt) - 1:

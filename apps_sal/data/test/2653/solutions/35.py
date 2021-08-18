@@ -1,9 +1,7 @@
-# D - Ki TLE
 import sys
 sys.setrecursionlimit(10**7)
 N, Q = map(int, input().split())
 
-# 有向グラフ
 G = [[] for _ in range(N)]
 for _ in range(N - 1):
     a, b = map(int, input().split())
@@ -26,10 +24,8 @@ seen = [False] * N
 
 
 def dfs(v):
-    seen[v] = True  # v を訪問済みにする
-    # v から行ける各頂点 next_v について
+    seen[v] = True
     for next_v in G[v]:
-        # next_v が探索済みならスルー
         if seen[next_v] == True:
             continue
         cnt[next_v] += cnt[v]
