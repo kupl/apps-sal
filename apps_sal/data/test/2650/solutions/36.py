@@ -1,23 +1,15 @@
 from heapq import heapify, heappop, heappush
-from functools import lru_cache  # pypyでもうごく
-from itertools import accumulate  # 累積和
-from collections import Counter  # 文字列を個数カウント辞書に、
-from bisect import bisect_left, bisect, bisect_right  # 2分探索
+from functools import lru_cache
+from itertools import accumulate
+from collections import Counter
+from bisect import bisect_left, bisect, bisect_right
 from collections import deque
 from operator import itemgetter
 from copy import deepcopy as dcp
 from copy import copy, deepcopy
 import math
 import sys
-sys.setrecursionlimit(10**7)  # 再帰関数の上限,10**5以上の場合python
-# bisect_left(l,x), bisect(l,x)#aはソート済みである必要あり。aの中からx未満の要素数を返す。rightだと以下
-#deque(l), pop(), append(x), popleft(), appendleft(x)
-# listでqueの代用をするとO(N)の計算量がかかってしまうので注意
-# S=Counter(l),S.most_common(x),S.keys(),S.values(),S.items()
-# list(accumulate(l))
-# heapify(q),heappush(q,a),heappop(q) #q=heapify(q)としないこと、返り値はNone
-# import fractions#古いatcoderコンテストの場合GCDなどはここからimportする
-# @lru_cache(maxsize = None)#maxsizeは保存するデータ数の最大値、2**nが最も高効率
+sys.setrecursionlimit(10**7)
 
 
 def input(): return sys.stdin.readline()[:-1]
@@ -52,13 +44,8 @@ def T(M):
 
 def main():
     mod = 1000000007
-    # w.sort(key=itemgetter(1),reversed=True)  #二個目の要素で降順並び替え
 
-    #N = int(input())
     N, Q = map(int, input().split())
-    # A = tuple(map(int, input().split())) #1行ベクトル
-    # L = tuple(int(input()) for i in range(N)) #改行ベクトル
-    # S = tuple(tuple(map(int, input().split())) for i in range(N)) #改行行列
 
     l = [Counter() for _ in range(2 * 10**5)]
     rates = [[] for _ in range(2 * 10**5)]
@@ -93,7 +80,6 @@ def main():
             heappush(tot, (-rates[b][0], b))
 
         m, mb = tot[0]
-        # print(l[0],l[1],l[2])
         while l[mb][m] < 1 or m != -rates[mb][0]:
             heappop(tot)
 

@@ -21,38 +21,37 @@ def main():
 
     ans = []
     for i in range(q):
-        c, d = list(map(int, input().split()))  # 幼児Cが幼稚園Dに移動
-        a, b = children[c - 1]  # 幼児のレート：A、元の幼稚園：B
-        if a == -heap_each[b - 1][0]:  # 幼児がその園のトップだったとき
-            if a in all_moved:  # 全体リストから削除
+        c, d = list(map(int, input().split()))
+        a, b = children[c - 1]
+        if a == -heap_each[b - 1][0]:
+            if a in all_moved:
                 all_moved[a] += 1
             else:
                 all_moved[a] = 1
-            heappop(heap_each[b - 1])  # その幼稚園のリストから削除
-            while heap_each[b - 1]:  # 値が削除済みの園児かどうか判定:そうでないなら全体リストに値を追加
+            heappop(heap_each[b - 1])
+            while heap_each[b - 1]:
                 if heap_each[b - 1][0] in each_moved[b - 1] and each_moved[b - 1][heap_each[b - 1][0]] > 0:
                     each_moved[b - 1][heap_each[b - 1][0]] -= 1
                     heappop(heap_each[b - 1])
                     continue
                 heappush(heap_all, -heap_each[b - 1][0])
                 break
-        else:  # 幼児がその園のトップでないときは、削除リストに追加するのみ
+        else:
             if -a in each_moved[b - 1]:
                 each_moved[b - 1][-a] += 1
             else:
                 each_moved[b - 1][-a] = 1
-        # 転園先での話
-        if not heap_each[d - 1]:  # 新しい園がひとりぼっちなら
+        if not heap_each[d - 1]:
             heappush(heap_each[d - 1], -a)
             heappush(heap_all, a)
-        elif -a < heap_each[d - 1][0]:  # 新しい園でトップなら
-            if -heap_each[d - 1][0] in all_moved:  # 旧一位を全体リストから削除
+        elif -a < heap_each[d - 1][0]:
+            if -heap_each[d - 1][0] in all_moved:
                 all_moved[-heap_each[d - 1][0]] += 1
             else:
                 all_moved[-heap_each[d - 1][0]] = 1
             heappush(heap_each[d - 1], -a)
             heappush(heap_all, a)
-        else:  # 新しい園でただの人なら
+        else:
             heappush(heap_each[d - 1], -a)
         while heap_all:
             if heap_all[0] in all_moved and all_moved[heap_all[0]] > 0:

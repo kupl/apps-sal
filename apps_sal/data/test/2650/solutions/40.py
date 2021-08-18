@@ -62,7 +62,6 @@ for i in range(Q):
     TO = D[i]
     E[c] = TO
     c = A[c]
-    # 転校元での処理
     b = set_getmin(hps[FROM], dcts[FROM])
     b *= -1
     if c == b:
@@ -75,7 +74,6 @@ for i in range(Q):
     else:
         set_remove(hps[FROM], dcts[FROM], -c)
 
-    # 転校先での処理
     b = set_getmin(hps[TO], dcts[TO])
     if b != INF_MAX:
         b *= -1

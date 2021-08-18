@@ -1,8 +1,6 @@
 import math
 from functools import reduce
 
-# 最小公倍数
-
 
 def lcm_base(x, y):
     return (x * y) // math.gcd(x, y)

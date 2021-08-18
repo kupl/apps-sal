@@ -2,7 +2,6 @@ from functools import lru_cache
 N, K = list(map(int, input().split()))
 P = 998244353
 A = [K + 100] + [int(a) for a in input().split()] + [K + j for j in range(1, 10)]
-# A = [K+100] + [1, 2] + [-1 for a in range(N-4)] + [3,4]+ [K+j for j in range(1, 10)]
 
 X = [[0, 0] for _ in range(N // 2 + 5)]
 X[0][0] = 1
@@ -41,7 +40,6 @@ for j in range(2):
             pre = A[i]
             l = 0
         elif pre == A[i]:
-            # print(A)
             ans = 0
             break
         else:

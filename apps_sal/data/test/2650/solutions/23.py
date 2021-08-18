@@ -61,7 +61,7 @@ def main():
     for i, kkr in enumerate(kinder_kid_rates):
         if kkr.h:
             kkr_max = kkr.get_min()
-            each_kinder_rate_maxs.insert((kkr_max[0] * (-1), kkr_max[1], i))  # max_rate, kid_index, kinder_index
+            each_kinder_rate_maxs.insert((kkr_max[0] * (-1), kkr_max[1], i))
 
     cdl = []
     for _ in range(q):

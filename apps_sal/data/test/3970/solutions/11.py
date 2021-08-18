@@ -30,7 +30,6 @@ for i in a:
 		m += 1
 
 print(m)
-#print(s)'''
 
 n, k = list(map(int, input().split()))
 
@@ -51,5 +50,3 @@ for i in a:
         m += 1
 
 print(m)
-# print(d)
-# print(s)

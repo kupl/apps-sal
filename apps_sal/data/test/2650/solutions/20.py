@@ -4,9 +4,7 @@ def main():
     n, q = map(int, input().split())
     from collections import defaultdict
     from heapq import heappush, heappop
-    # 幼稚園ごとの園児リストをヒープで格納
     h = defaultdict(lambda: [])
-    # 幼稚園後の最強園児を格納
     saikyo = []
     A, B = [], []
     for i in range(n):
@@ -20,10 +18,8 @@ def main():
     for i in range(q):
         c, d = map(int, input().split())
         c -= 1
-        # 転園処理
         cfrom = B[c]
         B[c] = d
-        # 移動元の最強園児のチェック
         while h[cfrom]:
             x = h[cfrom][0]
             if B[x[1]] != cfrom:
@@ -32,7 +28,6 @@ def main():
             heappush(saikyo, (-x[0], x[1]))
             break
         heappush(h[d], (-A[c], c))
-        # 移動先の最強園児チェック
         while h[d]:
             x = h[d][0]
             if B[x[1]] != d:
@@ -41,7 +36,6 @@ def main():
             heappush(saikyo, (-x[0], x[1]))
             break
 
-        # saikyoの最小値を求める。
         while saikyo:
             x = saikyo[0]
 

@@ -62,7 +62,6 @@ class DeletableHeapq:
 
 
 def main():
-    # https://atcoder.jp/contests/abc170/tasks/abc170_e
     N, _, *X = list(map(int, open(0).read().split()))
     AB, CD = X[: 2 * N], X[2 * N:]
     rate, belonging = [0] * (N + 1), [0] * (N + 1)

@@ -24,7 +24,6 @@ for c, d in cd:
     a, b = ab[c - 1]
     ab[c - 1][1] = d
 
-    # 元の園について
     rate[b][a] -= 1
     if rate[b][a] == 0:
         del rate[b][a]
@@ -40,7 +39,6 @@ for c, d in cd:
         heapq.heappush(thq, top[b])
         topcnt[top[b]] += 1
 
-    # 新しい園について
     rate[d][a] += 1
     heapq.heappush(rhq[d], -a)
     if a > top[d]:
@@ -52,7 +50,6 @@ for c, d in cd:
         topcnt[top[d]] += 1
         heapq.heappush(thq, top[d])
 
-    # 最小値について
     ans = heapq.heappop(thq)
     while ans not in topcnt:
         ans = heapq.heappop(thq)

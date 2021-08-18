@@ -23,7 +23,6 @@ def getZList():
 
 
 input = sys.stdin.readline
-# sys.setrecursionlimit(1000000)
 INF = 10 ** 17
 MOD = 1000000007
 
@@ -68,7 +67,6 @@ class LazyHeap():
 
 
 N_KINDER = 200200
-# N_KINDER = 2 * (10 ** 5) + 1
 n, q = getList()
 kinder = [LazyHeap() for i in range(N_KINDER)]
 saikyo = LazyHeap()
@@ -97,12 +95,10 @@ for i in range(q):
     nxt = d
     pos_ref[c] = d
     enji_ref[c] = (mv_rate, d)
-    # 移動元についての処理
     kinder[prev].remove(mv_rate)
 
     kp, kn = kinder[prev], kinder[nxt]
     if not kp:
-        # 移動して園児0人になった場合
         saikyo_ref[prev] = 0
         saikyo.remove(-mv_rate)
     elif saikyo_ref[prev] != kp.get():
@@ -110,7 +106,6 @@ for i in range(q):
         saikyo.push(-kp.get())
         saikyo_ref[prev] = kp.get()
 
-    # 移動先についての処理
     kn.push(mv_rate)
     if mv_rate < saikyo_ref[nxt]:
         saikyo.remove(-saikyo_ref[nxt])
@@ -118,4 +113,3 @@ for i in range(q):
         saikyo_ref[nxt] = mv_rate
 
     print((saikyo.get()))
-# print(rate)

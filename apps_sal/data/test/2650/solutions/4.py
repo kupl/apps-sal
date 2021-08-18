@@ -47,11 +47,9 @@ def main():
         prev = places[child]
         rate = rates[child]
 
-        # 新しいクラスへの追加
         heapq.heappush(heap[cur], (-rate, child))
         places[child] = cur
 
-        # 最小値の検索
         while heap[prev]:
             v, i = heap[prev][0]
             if places[i] == prev:

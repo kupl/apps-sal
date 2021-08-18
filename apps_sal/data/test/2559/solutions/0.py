@@ -1,8 +1,6 @@
 import sys
 
 
-# inf = open('input.txt', 'r')
-# reader = (map(int, line.split()) for line in inf)
 reader = (list(map(int, line.split())) for line in sys.stdin)
 
 
@@ -49,5 +47,3 @@ for _ in range(t):
         g[to].append(v)
     G, B = minmaxPairs(g, costDict, n)
     print(G, B)
-
-# inf.close()

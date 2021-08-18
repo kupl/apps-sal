@@ -10,7 +10,6 @@ def main():
     n, k = list(map(int, inp.readline().split()))
     nums = list(map(int, inp.readline().split()))
     nums.sort(reverse=True)
-    # nums = set(nums)
     final = set()
     for i in range(0, n):
         mult = nums[i] * k

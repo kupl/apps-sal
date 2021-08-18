@@ -4,7 +4,6 @@ N = int(input())
 saisyo = []
 for a in range(2, N + 1):
     saisyo.append(a)
-# print(saisyo)
 
 
 def lcm_base(x, y):
