@@ -29,7 +29,5 @@ class Solution:
                 odd[i] = even[oddnext[i]]
             if evennext[i] is not None:
                 even[i] = odd[evennext[i]]
-        #print(odd, even)
 
-        #print(A, sorted_idxes, sorted_idxes_rev)
         return sum(1 for x in odd if x)

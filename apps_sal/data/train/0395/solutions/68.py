@@ -4,7 +4,7 @@ class Solution:
 
         def make(B):
             ans = [None] * N
-            stack = []  # invariant: stack is decreasing
+            stack = []
             for i in B:
                 while stack and i > stack[-1]:
                     ans[stack.pop()] = i

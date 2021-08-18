@@ -76,13 +76,6 @@ class Solution:
                 even_next[c[i - 1]] = c[j]
             i += 1
 
-
-#         print(b)
-#         print(c)
-
-#         print(odd_next)
-#         print(even_next)
-
         paths = 0
 
         for start in list(odd_next.keys()):
@@ -103,7 +96,6 @@ class Solution:
                         can_go = False
                 odd = not odd
             if index == len(a) - 1:
-                # print(start)
                 paths += 1
 
         if len(a) - 1 not in list(odd_next.keys()):
@@ -113,17 +105,3 @@ class Solution:
 
     def oddEvenJumps(self, a: List[int]) -> int:
         return self.other(a)
-
-
-#         paths = 0
-
-#         for i in range(len(a)):
-#             _ = self.can_get_to_end(a, len(a) - i, True)
-#             _ = self.can_get_to_end(a, len(a) - i, False)
-
-#         for i in range(len(a)):
-#             paths += self.can_get_to_end(a, i, True)
-
-#         Solution.memo = {}
-#         Solution.next_memo = {}
-#         return paths

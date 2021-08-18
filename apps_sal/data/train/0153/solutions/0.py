@@ -13,17 +13,15 @@ class Solution:
         length = (int)(length / 4)
 
         nums.sort(reverse=True)
-        # print(nums)
 
         if length < nums[0]:
             return False
         elif length == nums[0]:
             stack = list([(set([0]), 1, length, 1)])
         else:
-            stack = list([(set([0]), 1, length - nums[0], 2)])  # (usedIndexSet, searchStartFromIndex, target, remainRounds)
+            stack = list([(set([0]), 1, length - nums[0], 2)])
         while stack:
             usedSet, startIndex, target, remainRounds = stack.pop()
-            #print(usedSet, set(range(0, len(nums))) - usedSet, target, remainRounds)
             for i in range(len(nums) - 1, startIndex - 1, -1):
                 if i in usedSet:
                     continue
@@ -35,5 +33,4 @@ class Solution:
                         return True
                     else:
                         stack.append((usedSet | {i}, 1, length, remainRounds - 1))
-                # Else not valid path, continue
         return False

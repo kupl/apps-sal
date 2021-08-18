@@ -25,7 +25,6 @@ class Solution:
                     ls.append(count)
                     count = 1
         ls.append(count)
-        # print(ls)
         ind = 0
         ans = 0
         while(ind < len(ls)):
@@ -46,7 +45,6 @@ class Solution:
                     else:
                         if(ind < len(ls) - 1 and ind > 0):
                             ans = max(ans, max(ls[ind - 1], ls[ind + 1]))
-            # print(ans,ind)
             ind += 2
 
         return ans
