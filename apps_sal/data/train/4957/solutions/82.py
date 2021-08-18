@@ -9,6 +9,5 @@ snoopy.bark = lambda: "Woof"
 
 scoobydoo = Dog("Great Dane")
 
-# Just using lambda to make a mini function
 
 scoobydoo.bark = lambda: "Woof"

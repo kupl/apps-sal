@@ -16,6 +16,5 @@ class Solution:
             if a < mxsofar:
                 ml = i + 1
                 mxsofar = mx
-                # print(\"a=%d,mx=%d,mxsofar %d\"%(a,mx,mxsofar))
 
         return ml

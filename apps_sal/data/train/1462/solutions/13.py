@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(0, int(input())):
     s = input()
     l = s.split(" ")

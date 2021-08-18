@@ -1,8 +1,3 @@
-#import logging
-#import sys
-#sys.stdin = open("input.txt", "r")
-#sys.stdout = open("output.txt", "w")
-#logging.basicConfig(filename="test.log", level=logging.DEBUG, format="%(asctime)s: %(levelname)s: %(message)s")
 t = int(input())
 while t:
     t -= 1

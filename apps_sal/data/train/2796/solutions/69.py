@@ -1,8 +1,8 @@
 def areYouPlayingBanjo(name):
 
-    nametolist = list(name)    # Converting the string to a list
+    nametolist = list(name)
 
-    if nametolist[0] == 'R':    # Testing if first character is an 'R'
+    if nametolist[0] == 'R':
         return name + " plays banjo"
     elif nametolist[0] == 'r':
         return name + " plays banjo"

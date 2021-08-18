@@ -22,7 +22,7 @@ class Scooby(Dog):
         Dog.__init__(self, breed)
 
     def bark(self):
-        pass  # super(Dog, self).bark()
+        pass
 
 
 snoopy = Dog("Beagle")

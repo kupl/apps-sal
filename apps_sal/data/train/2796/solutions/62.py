@@ -1,5 +1,4 @@
 def areYouPlayingBanjo(name):
-    # Implement me!
     play = False
     if name != '' and name[0] in ('r', 'R'):
         play = True

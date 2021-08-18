@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 def process(N):
     if not '4' in N:
