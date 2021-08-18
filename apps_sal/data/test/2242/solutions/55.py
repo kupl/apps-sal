@@ -20,4 +20,4 @@ ans = 0
 for cnt in counts:
     ans += cnt * (cnt - 1) // 2
 
-print(ans)  # 答えの出力
+print(ans)

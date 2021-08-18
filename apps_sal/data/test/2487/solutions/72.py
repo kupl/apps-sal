@@ -12,5 +12,4 @@ for _ in range(N - 1):
         u, v = v, u
     E += u * (N - v + 1)
 
-# print(V,E)
 print((V - E))

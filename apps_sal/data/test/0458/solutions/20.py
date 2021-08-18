@@ -19,7 +19,6 @@ for y in range(1, 82):
 
             count += 1
             arr.append(p)
-            # print(p)
 print(count)
 for x in arr:
     print(x, end=" ")

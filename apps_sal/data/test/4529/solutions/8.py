@@ -22,9 +22,6 @@ for _ in range(t):
             y += 1
         else:
             y -= 1
-       # if x==0 and y==0:
-        #    print(_)
-       # print(x,y)
         try:
             xx = ss[(x, y)]
             if i + 1 - xx - 2 + 1 < mi:

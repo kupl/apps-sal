@@ -12,7 +12,6 @@ for y in range(t):
             pre[i + 1] = pre[i] + int(1e6)
         else:
             pre[i + 1] = pre[i] - int(1e6)
-    # print(pre)
     d = dict()
     ans = -1
     l = r = -1

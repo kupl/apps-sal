@@ -1,7 +1,5 @@
-# https://mirucacule.hatenablog.com/entry/2020/04/27/090908
-# https://drken1215.hatenablog.com/entry/2020/04/29/171300
 
-S = str(input())[::-1]  # 逆順で格納
+S = str(input())[::-1]
 N = len(S)
 counter = [0] * 2019
 counter[0] = 1

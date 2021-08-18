@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 n = int(input())
 es = [[0, 0]] * (n - 1)
 for i in range(n - 1):
