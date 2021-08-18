@@ -9,11 +9,11 @@ class Solution:
             if r == 1:
                 return 1
             elif r == 2:
-                return 2  # 2 * 1
+                return 2
             elif r == 3:
-                return 6  # 3 * 2 // 1
+                return 6
             elif r == 0:
-                return 5  # 4 * 3 // 2 - 1
+                return 5
 
         cFac = 2 * (N - 1)
         if N < 4:

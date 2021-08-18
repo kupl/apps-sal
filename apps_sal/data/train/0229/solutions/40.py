@@ -16,7 +16,6 @@ class Solution:
                 zero += 1
         if zero % 2 != 0:
             return False
-        # print(pos,neg)
 
         def helper(nums):
             num_sorted = sorted(list(nums.keys()), reverse=True)

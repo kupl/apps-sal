@@ -19,9 +19,8 @@ def bernoulli_number(n):
     if n == 1:
         return -0.5
     if n % 2 != 0:
-        return 0   # all odds after n=1 are 0.
+        return 0
 
-    # Built list using this same function, to avoid crazy timeout issue with server ...
     CachedList = [1, -0.5, Fraction(1, 6), 0, Fraction(-1, 30), 0, Fraction(1, 42), 0, Fraction(-1, 30), 0, Fraction(5, 66), 0,
                   Fraction(-691, 2730), 0, Fraction(7, 6), 0, Fraction(-3617, 510), 0, Fraction(43867, 798), 0,
                   Fraction(-174611, 330), 0, Fraction(854513, 138), 0, Fraction(-236364091, 2730), 0, Fraction(8553103, 6), 0,
@@ -149,9 +148,6 @@ def bernoulli_number(n):
 
     if n < len(CachedList):
         return CachedList[n]
-    # if n > 2:  #to debug daft timeout
-    #    print(n)
-    #    return 1
 
     BernoulliNumbers = [Fraction(1, 1), Fraction(1, 2)]
     Solution = Fraction(1, 1)

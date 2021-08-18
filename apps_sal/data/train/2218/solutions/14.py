@@ -30,4 +30,3 @@ for i in range(q):
         else:
             a[arr[i] - 1] = max(a2[arr[i] - 1], pay_max)
 print(*a)
-#print(' '.join([str(x) for x in a]))

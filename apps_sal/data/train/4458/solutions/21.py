@@ -2,7 +2,6 @@ import re
 
 
 def time_correct(t):
-    # messy
     if not t:
         return t
     if not re.match(r'^[0-9]{2}:[0-9]{2}:[0-9]{2}$', str(t)):

@@ -3,7 +3,6 @@ def increment_string(strng):
         return '1'
 
     print(strng)
-    # no number
     num_start = 0
     for i in reversed(list(range(len(strng)))):
         if strng[i].isdigit() == False:

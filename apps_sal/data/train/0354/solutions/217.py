@@ -1,4 +1,3 @@
-# from function
 class Solution:
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         res = 0
@@ -14,6 +13,5 @@ class Solution:
                     t += dfs(n - 1, i, 1)
                 elif i == val and count < rollMax[i]:
                     t += dfs(n - 1, val, count + 1)
-            # t%=mod
             return t
         return sum(dfs(n - 1, i, 1) for i in range(6)) % mod

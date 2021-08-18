@@ -1,4 +1,3 @@
-# Look ma! No regex!
 
 def increment_string(s):
     i, s2, n = 0, s[::-1], ''

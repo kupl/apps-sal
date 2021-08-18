@@ -12,7 +12,6 @@ class Solution:
         neg = collections.defaultdict(int)
         zero = 0
 
-        # O(n)
         for v in A:
             if v > 0:
                 pos[v] += 1
@@ -32,7 +31,6 @@ class Solution:
 
     def check(self, d):
 
-        # worst case O(n), done n times
         while d:
             v = min(d)
             if not 2 * v in d:

@@ -26,7 +26,6 @@ while check:
             at_h = childs.pop(i)
             for j in range(i, len(childs)):
                 childs[j][3] -= at_h[2]
-            # run = False
             i -= 1
         i += 1
         if i > len(childs) - 1:

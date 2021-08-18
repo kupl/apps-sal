@@ -3,8 +3,6 @@ from collections import Counter
 
 class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
-        # O(NlogN) time
-        # O(N) space
 
         if not A:
             return True

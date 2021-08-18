@@ -6,9 +6,7 @@ class Solution:
         A.sort()
         statdict = {}
         flag = True
-#        print(A)
         for i in A:
-            #            print(statdict)
             if i in statdict:
                 statdict[i] = statdict[i] + 1
             elif i < 0:

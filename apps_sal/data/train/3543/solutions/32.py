@@ -12,7 +12,6 @@ def increment_string(strng):
             del a[-1]
     s = reversed(s)
     s = ''.join(s)
-    # print('s = ' + s)
     if s == '':
         s = '0'
     c = len(s)

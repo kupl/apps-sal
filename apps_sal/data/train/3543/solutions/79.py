@@ -12,7 +12,6 @@ def increment_string(string):
         substring = ""
         number = string[::-1]
 
-    # if string and the last number are detected correctly
     number_len = len(number)
     if number_len == 0:
         number = "1"

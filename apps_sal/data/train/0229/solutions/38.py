@@ -12,8 +12,6 @@ class Solution:
             x = next(iter(B))
             freq = B.pop(x)
 
-            # print(x,freq)
-
             if x < 0:
                 if x % 2:
                     return False

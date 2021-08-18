@@ -1,6 +1,5 @@
 class Solution:
     def canReorderDoubled(self, A: List[int]) -> bool:
-        # https://blog.csdn.net/fuxuemingzhu/article/details/84925747
         A.sort()
         N = len(A)
         count = collections.Counter(A)

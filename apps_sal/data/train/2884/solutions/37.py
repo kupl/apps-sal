@@ -1,7 +1,5 @@
 def stringify(node):
     x = []
-    # if Node is None:
-    #    return 'None'
 
     while True:
         try:

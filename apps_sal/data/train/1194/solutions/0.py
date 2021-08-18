@@ -36,7 +36,6 @@ try:
             y = -(d - u)
         elif u > d:
             y = u - d
-        #  print(x,y)
         if x == 0 and y == 0:
             print(n)
             continue
