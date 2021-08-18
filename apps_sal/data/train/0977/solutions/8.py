@@ -1,4 +1,3 @@
-# cook your dish here
 def generate():
     dic = {}
     j = 122

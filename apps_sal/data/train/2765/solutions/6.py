@@ -3,7 +3,7 @@ import re
 
 def key(t):
     i, s = t
-    return (s.count('#'), s.count('.'), len(re.split(r'(?!<^)[ .#]+', s)), s != '*', i)
+    return (s.count('
 
 
 def compare(*args):

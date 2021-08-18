@@ -25,26 +25,3 @@ class Solution:
             so_far += A[idx]
             max_ = max(max_, so_far + max_from_left[idx])
         return max_
-
-#         left_acc = [0] * n
-#         left_acc[0] = A[0]
-#         for idx in range(1, n):
-#             left_acc[idx] = A[idx] + left_acc[idx - 1]
-
-
-#         right_acc = [0] * n
-#         right_acc[-1] = A[-1]
-#         for idx in range(n - 2, -1, -1):
-#             right_acc[idx] = A[idx] + right_acc[idx + 1]
-
-#         print(left_acc)
-#         print(right_acc)
-#         left, right = 0, n - 1
-#         while left < right:
-#             max_ = max(max_, left_acc[left] + right_acc[right])
-#             if left_acc[left] > right_acc[right]:
-#                 right -= 1
-#             else:
-#                 left += 1
-
-#         return max_

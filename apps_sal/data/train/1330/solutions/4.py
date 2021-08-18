@@ -1,4 +1,3 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
 t = int(input())
 for i in range(int(t)):
     A, B = list(map(int, input().split()))

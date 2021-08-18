@@ -2,8 +2,8 @@ from functools import reduce
 import re
 
 
-SIMPLE_SELECTOR_PATTERN = re.compile(r'[\s+~>]+|(\[[^[]+\]|[#\.:]?[^[\s#\.:+~>]+)')
-SPECIFICITY_PATTERN = re.compile(r'(^#)|(^[\.\[:][^:]?)|(^::|^[^#\.:[])')
+SIMPLE_SELECTOR_PATTERN = re.compile(r'[\s+~ > ]+|(\[[^[] +\]|[
+SPECIFICITY_PATTERN = re.compile(r'( ^
 
 
 def compare(a, b):

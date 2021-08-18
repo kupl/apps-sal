@@ -1,7 +1,3 @@
-# Two cases:
-# MaxSubarray = normal -> proceed normally
-# MaxSubarray = circular -> total sum - minSubarray
-# return max(maxSubarray, maxSubarraycircular
 class Solution:
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         total_sum = 0
