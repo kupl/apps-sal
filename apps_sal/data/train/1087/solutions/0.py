@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 def iscycle(E, v, EXPLORED_NODES, EXPLORED_EDGES):
     EXPLORED_NODES.add(v)

@@ -1,5 +1,4 @@
 try:
-    # cook your dish here
     t = int(input())
     for j in range(t):
         n = int(input())

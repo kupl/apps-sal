@@ -2,7 +2,6 @@ from operator import itemgetter
 t = int(input())
 for _ in range(t):
     n = int(input())
-    # d=defaultdict(list)
     l = []
     d = {}
     sum1 = 0

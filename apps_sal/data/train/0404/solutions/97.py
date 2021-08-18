@@ -11,14 +11,11 @@ class Solution:
         mval = mean(0, n - 1)
 
         for k in range(2, K + 1):
-            # print(f'k={k}')
             for i in range(n - k + 1):
                 max_val = -float('inf')
                 for mid in range(i, n - k + 1):
                     max_val = max(max_val, mean(i, mid) + old[mid + 1][n - 1])
                 new[i][n - 1] = max_val
             old, new = new, old
-            # for x in old:
-            #     print(x)
             mval = max(mval, old[0][-1])
         return mval

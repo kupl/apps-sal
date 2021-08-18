@@ -1,5 +1,4 @@
 def uni_total(string):
-    # your code here
     if string == '':
         return 0
     else:
