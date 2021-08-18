@@ -14,12 +14,10 @@ class Solution:
                     aa[i] = 0
                 if(i != 0):
                     aa[i] += aa[i - 1]
-        myfunc(ss, k)  # k[i] gives,no of distinct letters,to left of left of index i+1 in ss
+        myfunc(ss, k)
         a.clear()
-        myfunc(ss[::-1], p)  # p[i] gives,no of distinct letters,to left of left of index i+1...in ss_reverse
+        myfunc(ss[::-1], p)
         ans = 0
-        # print(k)
-        # print(p)
         for j in range(n - 1):
             if(k[j] == p[n - 1 - (j + 1)]):
                 ans += 1

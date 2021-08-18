@@ -19,7 +19,6 @@ class Solution:
             if(rDict[char] == 0):
                 rDict.pop(char)
             lDict[char] += 1
-            # print(lDict,rDict)
             if(len(rDict) == len(lDict)):
                 rst += 1
         return rst

@@ -19,7 +19,6 @@ class Solution:
             for i in range(3):
                 if i in nstate:
                     state2nums[i] = nstate[i]
-            # print(state2nums)
         print(state2nums)
         nums = sorted([k for k, v in list(state2nums[0].items()) for _ in range(v)], reverse=True)
         ret = ''.join(map(str, nums))

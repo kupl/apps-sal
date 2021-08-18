@@ -6,7 +6,6 @@ class Solution:
         for i in range(1, len(s)):
             list1 = list(result1[i - 1])
             list2 = list(result2[i - 1])
-            # print(list1, list2)
             if s[i] not in list1:
                 list1.append(s[i])
             if s[n - 1 - i] not in list2:
@@ -14,9 +13,6 @@ class Solution:
             result1.append(list1)
             result2.append(list2)
         result = 0
-        # result2.reverse()
-        # print(result1)
-        # print(result2)
         for i in range(len(s) - 1):
             if len(result1[i]) == len(result2[n - 1 - (i + 1)]):
                 result += 1

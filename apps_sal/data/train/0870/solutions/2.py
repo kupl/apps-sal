@@ -1,4 +1,3 @@
-# cook your dish here
 from operator import neg
 from collections import defaultdict, Counter
 from queue import Queue
@@ -12,8 +11,6 @@ import sys
 from sys import stdin, stdout
 import os
 sys.setrecursionlimit(pow(10, 7))
-# input=stdin.readline
-# print=stdout.write
 inf = float("inf")
 mod = pow(10, 9) + 7
 

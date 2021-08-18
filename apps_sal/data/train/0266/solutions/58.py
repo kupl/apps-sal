@@ -29,8 +29,8 @@ def naive_solution(s: str) -> int:
 
 
 def optimized(s: str) -> int:
-    prefix = Counter()  # initialize prefix as empty
-    suffix = Counter(s)  # initialize suffix as total
+    prefix = Counter()
+    suffix = Counter(s)
     count = 0
     for char in s:
         increment_counter(prefix, char)
@@ -44,5 +44,4 @@ def optimized(s: str) -> int:
 
 class Solution:
     def numSplits(self, s: str) -> int:
-        # return naive_solution(s)
         return optimized(s)

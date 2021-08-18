@@ -7,9 +7,6 @@ class Solution:
         s_r = s[::-1]
 
         for i in range(len(s)):
-            # if s[i] in set_one:
-            #     continue
-            # else:
             print((i, len(set(s[:i + 1])), len(set(s[i + 1:]))))
             if len(set(s[:i + 1])) == len(set(s[i + 1:])):
                 index_one = i
@@ -18,9 +15,6 @@ class Solution:
                 set_one.add(s[i])
 
         for i in range(len(s_r)):
-            # if s_r[i] in set_two:
-            #     continue
-            # else:
             print((i, len(set(s_r[:i + 1])), len(set(s_r[i + 1:]))))
             if len(set(s_r[:i + 1])) == len(set(s_r[i + 1:])):
                 print(i)
