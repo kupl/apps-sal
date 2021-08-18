@@ -3,8 +3,6 @@ def get_opposite_vote(vote):
 
 
 def codeforces(votes):
-    # rs = votes.count('R')
-    # ds = votes.count('D')
     blocked = {'R': 0, 'D': 0}
 
     while True:

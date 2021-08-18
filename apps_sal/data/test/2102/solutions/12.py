@@ -2,8 +2,6 @@ import sys
 import operator
 import array
 
-# -----------
-
 
 def solve():
     a = (list(map(int, input().split())))
@@ -12,13 +10,11 @@ def solve():
 
     b = (list(map(int, input().split())))
 
-    #have = [ [] ] * (n*6)
     have = []
     arr_append = have.append
     for i in range(0, n):
         for j in range(0, 6):
             arr_append((b[i] - a[j], i))
-            #have[i*6 + j] = [ b[i] - a[j], i ]
 
     have.sort(key=operator.itemgetter(0))
 
@@ -47,8 +43,6 @@ def solve():
 
     print(ans)
 
-
-# -----------
 
 def main(argv):
     solve()

@@ -1,6 +1,3 @@
-#
-# Created by Daniil Kozhanov. All rights reserved.
-#               december 2016
 
 n = int(input())
 s = input()

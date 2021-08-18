@@ -11,10 +11,9 @@ for i in range(N):
 
 s = [(s[i] - i) % K for i in range(N + 1)]
 for i in range(N + 1):
-    ans += table[s[i]]  # i番目まで取る組み合わせの数
+    ans += table[s[i]]
     table[s[i]] += 1
     if i >= K - 1:
-        # Kで割ったあまりがKを超えることはないので、期限切れのものを引く
         table[s[i - K + 1]] -= 1
 
 print(ans)

@@ -8,7 +8,6 @@ while t > 0:
         if a[i] == '0':
             z.append(i)
     y = 0
-    # print(z)
     for i in range(len(z)):
         if k - (z[i] - y) > 0:
             k -= (z[i] - y)

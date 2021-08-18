@@ -27,7 +27,6 @@ for i in range(n + 1):
         dic[anslist[i]].append(i + 1)
     else:
         dic[anslist[i]] = [1 + i]
-# answerに答えを格納することにする
 answer = 0
 for lis in dic.values():
     sublis = [lis[0]]

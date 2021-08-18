@@ -4,7 +4,6 @@ tempcity = SP[0][0]
 ans = []
 tempans = []
 for i in range(N):
-    # print(tempans)
     if tempcity == SP[i][0]:
         tempans.append([int(SP[i][1]), SP[i][2]])
     else:

@@ -6,25 +6,9 @@ for i in range(n):
     d[a[i]] = 0
 
 
-# numOdd = 0
-# for i in range(n):
-# 	d[a[i]] += 1
-
-# 	if(d[a[i]] % 2 != 0):
-# 		numOdd += 1
-
-# 	else:
-# 		numOdd -= 1
-
-# 	if(numOdd == 1):
-# 		x = i+1
-
-# print(x)
-
 x = 1
 for i in range(1, n):
     if(a[i] == a[i - 1]):
-        # print("yo")
         x = i + 1
     else:
         break

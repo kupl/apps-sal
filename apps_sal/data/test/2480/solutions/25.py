@@ -20,7 +20,6 @@ def main():
         else:
             ans += d[(accum[j] - j) % k]
             d[(accum[j] - j) % k] += 1
-        # print(d)
     return print(ans)
 
 

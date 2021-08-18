@@ -7,7 +7,6 @@ count_to_color = {}
 mx = 0
 for i in range(n):
     color = arr[i] - 1
-    # print(i, color, count_to_color)
 
     if counts[color] > 0:
         count_to_color[counts[color]].remove(color)

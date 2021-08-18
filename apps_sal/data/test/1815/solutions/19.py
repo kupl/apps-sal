@@ -45,20 +45,15 @@ freq = defaultdict(lambda: 0, freq)
 a = list(map(int, input().split()))
 m = len(set(a))
 found = []
-# calculation of freq
 for i in a:
     freq[i] += 1
     found.append(i)
-# print(freq)
 found = list(set(found))
-# print(found)
 for i in range(n - 1, -1, -1):
     if isValid(i + 1, m, freq, found) == 0 and isValid2(i + 1, m, freq, found) == 0:
         freq[a[i]] -= 1
         if freq[a[i]] == 0:
             m -= 1
     else:
-        # print(isValid(i + 1, m, freq))
-        # print(isValid2(i + 1, m, freq))
         print(i + 1)
         break

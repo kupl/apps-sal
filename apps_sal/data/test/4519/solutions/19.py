@@ -4,10 +4,6 @@ import math
 import collections
 from collections import Counter
 
-#########################
-# imgur.com/Pkt7iIf.png #
-#########################
-
 
 def sieve(n):
     prime = [True for i in range(n + 1)]

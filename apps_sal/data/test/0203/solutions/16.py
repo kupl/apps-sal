@@ -9,8 +9,6 @@ for i in range(n):
     else:
         r.append(i)
 while True:
-    # print('D',d)
-    # print('R',r)
 
     if not d:
         print('R')

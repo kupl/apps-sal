@@ -1,4 +1,3 @@
-# codeforces.com/contest/958/problem/A1
 def flipH(A, N):
     B = [[0 for i in range(N)] for j in range(N)]
     for i in range(N):

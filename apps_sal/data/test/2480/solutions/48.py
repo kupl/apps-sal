@@ -1,5 +1,3 @@
-# Rem of sum is Num
-# Reviewing problem
 
 
 from collections import defaultdict

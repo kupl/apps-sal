@@ -1,4 +1,3 @@
-# Author: Maharshi Gor
 from collections import deque
 
 

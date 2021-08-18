@@ -1,7 +1,5 @@
 from collections import defaultdict
 from math import sqrt, factorial, gcd, log2, inf, ceil
-# map(int,input().split())
-# l = list(map(int,input().split()))
 mod = 10**9 + 7
 
 
