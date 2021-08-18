@@ -18,8 +18,5 @@ for i in range(N):
         else:
             B[N - 1 - i] -= A[N - 1 - i]
             A[N - 1 - i] = 0
-    # print(A)
-    # print(B)
-    # print("=============")
 
 print((ans - sum(B)))

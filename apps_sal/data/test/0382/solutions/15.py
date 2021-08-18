@@ -1,7 +1,5 @@
-# from math import ceil
-#from sys import stdout
 
-t = 1  # int(input())
+t = 1
 for test in range(1, t + 1):
     n, m, q = list(map(int, input().split()))
     s = input()

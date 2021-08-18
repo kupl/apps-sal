@@ -12,8 +12,6 @@ a.append(0)
 def solve(l, r):
     if l > r:
         return(0)
-    # "outside" is the minimum number obtained in the previous iteration
-    # which we have to subtract from all the elements in this segment
     outside = max(a[l - 1], a[r + 1])
     mina = min(a[l:r + 1])
     min_index = a.index(mina, l, r + 1)

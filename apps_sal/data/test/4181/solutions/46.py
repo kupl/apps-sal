@@ -1,11 +1,3 @@
-#import math
-#import itertools
-#import numpy as np
-#from collections import deque
-# sys.setrecursionlimit(10 ** 6)
-#mod = 10 ** 9 + 7
-#INF = 10 ** 9
-#PI = 3.14159265358979323846
 
 def INT(): return int(input())
 def INTM(): return map(int, input().split())
@@ -29,7 +21,6 @@ def do():
         ans += min(ta, tb)
         ta = max(0, ta - tb)
         ta = min(ta, A[i + 1])
-        # print(ans,ta,tb)
     print(ans)
 
 

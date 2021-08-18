@@ -1,4 +1,3 @@
-# ABC 135 C
 N = int(input())
 A = [int(i) for i in input().split()]
 B = [int(i) for i in input().split()]

@@ -1,17 +1,3 @@
-# n=int(input())
-# ns=[int(x) for x in input().split()]
-# dp=[None]*n
-# def greater(i,num):
-#     return ns[i]+ns[i+1]>=num
-# def biSearch(t,l,r):
-#     if r-l<=1:
-#         return l
-#     m=(l+r)//2
-#     if greater(m,t)
-#
-#
-# def update(t):
-#     l=ns[t]
 n, m, q = [int(x)for x in input().split()]
 sn = input()
 sm = input()

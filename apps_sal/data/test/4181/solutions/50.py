@@ -16,6 +16,5 @@ for i in range(n):
             total += b[i]
             a[i + 1] -= b[i]
 
-    # print(total)
 
 print(total)
