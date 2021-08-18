@@ -1,6 +1,5 @@
 class Solution:
     def movesToMakeZigzag(self, nums: List[int]) -> int:
-        # do either first case or second case
         even = odd = 0
         n = len(nums)
         for i in range(n):

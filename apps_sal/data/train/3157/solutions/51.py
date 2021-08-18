@@ -5,4 +5,3 @@ def number(bus_stops):
         retval = retval - x[1]
         print((x[1]))
     return retval
-    # Good Luck!

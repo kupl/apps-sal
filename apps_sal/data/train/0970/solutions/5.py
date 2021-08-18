@@ -19,7 +19,6 @@ def find_le(a, x):
 def func():
     n = cinN()
     l = list(cin())
-    # l.sort()
     qn = cinN()
     for _ in range(qn):
         x, y = cin()

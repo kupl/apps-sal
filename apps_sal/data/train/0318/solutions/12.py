@@ -2,9 +2,7 @@ class Solution:
     def maxSizeSlices(self, w: List[int]) -> int:
         k = len(w) // 3
 
-        # last element is excluded
         dp1 = [[0] * (len(w)) for _ in range(k + 1)]
-        # first element is excluded
         dp2 = [[0] * (len(w)) for _ in range(k + 1)]
 
         for n in range(1, k + 1):

@@ -1,4 +1,3 @@
-# Made with ❤️ in Python 3 by Alvison Hunter - October 8th, 2020
 def number(bus_stops):
     try:
         last_passengers = sum(people_in - people_out for people_in, people_out in bus_stops)
