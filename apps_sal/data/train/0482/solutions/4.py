@@ -16,7 +16,6 @@ class Solution:
                     temp_res += self.helper(arr[:div])
                     temp_res += self.helper(arr[div:])
                     res = min(res, temp_res)
-                    #print (temp_res, div)
                 return res
 
     def mctFromLeafValues(self, arr: List[int]) -> int:

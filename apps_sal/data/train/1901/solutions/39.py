@@ -26,7 +26,6 @@ class Solution:
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):
                 if matrix[i][j] == 0:
-                    # check adj 4
                     adjgrp = set(matrix[r][c] for r, c in move(i, j))
                     res = max(res, sum(group_size[grp] for grp in adjgrp) + 1)
         return res

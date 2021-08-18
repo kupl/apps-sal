@@ -1,6 +1,5 @@
 class Solution:
     def mctFromLeafValues(self, arr: List[int]) -> int:
-        # solve(0, n) = min_i(max(a[:i])*max(a[i:])+solve(0, i) + solve(i, n))
         n = len(arr)
 
         @lru_cache(None)

@@ -1,7 +1,6 @@
 class Solution:
     def mctFromLeafValues(self, arr: List[int]) -> int:
 
-        # answer for subarray arr[i: j+1]
         self.cache = {}
 
         def dp(i, j):
@@ -18,7 +17,6 @@ class Solution:
                         if s1 + s2 + l1 * l2 < best_s:
                             best_p = max(l1, l2)
                             best_s = s1 + s2 + l1 * l2
-                        # print('update', i, k, k+1, j, best_p, best_s, s1, s2)
 
                     ret = best_p, best_s
 

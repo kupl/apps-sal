@@ -17,7 +17,6 @@ class Solution:
 
         if self.rank[i2] > self.rank[i1]:
             self.d[i1] = i2
-            # self.rank[i2] = self.rank[i1] + 1
         else:
             if self.rank[i1] >= self.rank[i2]:
                 self.d[i2] = i1

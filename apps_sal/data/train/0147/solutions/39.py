@@ -3,7 +3,6 @@ class Solution:
 
         MOD = 10 ** 9 + 7
 
-        #(speed, effiency)
         comb = [(speed[i], efficiency[i]) for i in range(n)]
         comb.sort(key=lambda x: -x[1])
 

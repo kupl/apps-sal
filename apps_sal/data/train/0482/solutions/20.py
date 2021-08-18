@@ -14,13 +14,9 @@ class Solution:
             k = float('inf')
             c = 0
             for i in range(lo, hi):
-                # print(\"Cutting at %s\"%i)
                 left = compute(arr, lo, i, dp)
-                # print(\"left %s,%s\"% left)
                 right = compute(arr, i + 1, hi, dp)
-                # print(\"right %s,%s\"%right)
                 t = left[0] + right[0] + left[1] * right[1]
-                # print(\"got %s\"% t)
                 if t < k:
                     k = t
                     c = max(left[1], right[1])

@@ -14,7 +14,6 @@ class Solution:
                 for k in range(i, j + 1):
                     m[i][j] = max(m[i][j], arr[k])
 
-        # print(m)
         def rec(left, right):
             if right - left == 0:
                 return 0
@@ -26,5 +25,4 @@ class Solution:
                     ans = min(ans, rec(left, k) + rec(k + 1, right) + m[left][k] * m[k + 1][right])
                 mem[(left, right)] = ans
                 return ans
-        # print(mem)
         return rec(0, n - 1)

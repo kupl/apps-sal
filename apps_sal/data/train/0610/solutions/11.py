@@ -1,4 +1,3 @@
-# cook your dish here
 for T in range(int(input())):
     n = int(input())
     ls = list(map(int, input().split()))
@@ -7,7 +6,6 @@ for T in range(int(input())):
     for i in range(n):
         if ls[i] == 1:
             lr.append(i + 1)
-    # print(lr)
     if len(lr) == 1:
         print("YES")
     else:

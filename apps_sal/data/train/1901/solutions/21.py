@@ -25,8 +25,6 @@ class Solution:
                     group_counts_[_id_] = sum([sum(l) for l in visited]) - previous_count
                     previous_count = sum([sum(l) for l in visited])
 
-        # print(group_ids_)
-        # print(group_counts_)
         biggest = 0
         hasZero = False
         for r in range(N):
