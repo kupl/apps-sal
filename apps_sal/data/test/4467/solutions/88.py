@@ -2,12 +2,11 @@ import sys
 
 
 def resolve():
-    readline = sys.stdin.readline    # 1行だけ文字列にする
+    readline = sys.stdin.readline
 
     N = int(readline())
     NN = 2 * N + 1
 
-    # 青色はx座標をlistのindex,y座標をlistのvalueとして入力，赤は逆
     red = [[] for _ in [0] * NN]
     blue = [[] for _ in [0] * NN]
     for _ in [0] * N:
@@ -17,10 +16,6 @@ def resolve():
         c, d = list(map(int, readline().split()))
         blue[c].append(d)
 
-    # 青色でvalueのy座標について降順(大きい順)でソート
-    # 赤色ではvalueのx座標について降順でソート
-    # これで青色はx座標は昇順(index)，y座標は降順(value)にソートされる
-    # 赤色はy座標が昇順(index)，x座標が降順(value)
     for i in range(NN):
         r = red[i]
         b = blue[i]
@@ -29,8 +24,6 @@ def resolve():
         r[0:0] = [i]
         b[0:0] = [i]
 
-    # 青点はx座標の昇順で，赤点はy座標の降順
-    # 最小のxの青点で最大のyを持つ赤点を選択
     ans = 0
     flag = False
     while blue:

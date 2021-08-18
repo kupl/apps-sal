@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -12,7 +11,6 @@ def main():
             b = n // a
         elif n < a:
             break
-        # a,bの最小値を記憶してくれてる？
         ans = min(ans, a + b - 2)
     print(ans)
 

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import math
 import collections
@@ -72,10 +71,7 @@ def count(lo, hi, a, b, n, nnum):
         if u % d == 0:
             y = u // d
             x = nnum - y
-            # print(x, y, countab(lo, hi, a, b, x, y, n))
-            # ans += countab(lo, hi, a, b, x, y, n)
             ans += ncr(nnum, x)
-            # print(x, y, ncr(nnum, x))
             ans %= MOD
     return ans
 
@@ -97,8 +93,6 @@ def test():
     t0 = time.time()
     print(solve(N, A, B))
     print(time.time() - t0)
-
-# print(solve(10**6, 2, 3))
 
 
 A, B, N = map(int, input().split())

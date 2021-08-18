@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 s = input()
 
 ord_s = ord(s)

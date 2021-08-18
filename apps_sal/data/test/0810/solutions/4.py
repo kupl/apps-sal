@@ -45,6 +45,3 @@ for i in t:
 
 
 print(((s % m) * f[n]) % m)
-
-
-# Made By Mostafa_Khaled

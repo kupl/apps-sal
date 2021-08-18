@@ -1,4 +1,3 @@
-#!/bin/python3
 
 a = input()
 while a:

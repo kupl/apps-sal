@@ -15,7 +15,6 @@ class Solution:
                         cost[row][col] = cost[row-1][col]+triangle[row][col]
         return min(cost[len(triangle)-1])
     '''
-    # O(n) extra space:
 
     def minimumTotal(self, triangle):
         cost = [[0 for j in range(len(triangle))] for i in range(2)]

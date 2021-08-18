@@ -19,8 +19,6 @@ AA = []
 for i in range(1, len(A)):
     AA.append(A[i] - A[i - 1])
 
-# print("A: ", A)
-# print("AA: ", AA)
 cyqs = []
 for cyq in range(1, len(A)):
     if is_cycle(AA, cyq):
