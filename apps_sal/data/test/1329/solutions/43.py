@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
@@ -46,20 +45,14 @@ def main():
     for i in range(1, N + 1):
         divisors.extend(prime_factorize(i))
     l = Counter(divisors)
-    # print(l)
-    # 約数を75個持つ X = a^p * b^q とした時、(p,q) = (0,74), (2,24), (4,14) しかない
     ans = 0
     nums = list(l.values())
-    # 74より大きい素因数の数だけ(1)のパターン
     ans += len([*[x for x in nums if x >= 74]])
 
-    # 14,4のパターン
     ans += len([*[x for x in nums if x >= 14]]) * (len([*[x for x in nums if x >= 4]]) - 1)
 
-    # 24,2のパターン
     ans += len([*[x for x in nums if x >= 24]]) * (len([*[x for x in nums if x >= 2]]) - 1)
 
-    # 4,4,2のパターン
     ans += len([*[x for x in nums if x >= 4]]) * (len([*[x for x in nums if x >= 4]]) - 1) * (len([*[x for x in nums if x >= 2]]) - 2) // 2
 
     print(ans)

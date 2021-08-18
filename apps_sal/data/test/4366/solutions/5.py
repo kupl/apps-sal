@@ -1,4 +1,3 @@
-# 057_a
 A, B = list(map(int, input().split()))
 
 if (0 <= A & A <= 23) & (0 <= B & B <= 23):

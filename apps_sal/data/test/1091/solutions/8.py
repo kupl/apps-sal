@@ -3,7 +3,6 @@
     26/01/2014
 '''
 
-# (x, y) = (offerta, tizio)
 n = int(input())
 l = [int(x) for x in input().split()]
 i = 1

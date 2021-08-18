@@ -4,9 +4,9 @@ inp = list(map(int, sys.stdin.readline().split()))
 a = inp[0]
 b = inp[1]
 
-f = 0  # the # of numbers with which first person wins
-d = 0  # the # of numbers with which second person wins
-s = 0  # draw
+f = 0
+d = 0
+s = 0
 
 for dice in range(1, 6 + 1):
     A = abs(dice - a)

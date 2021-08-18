@@ -1,4 +1,3 @@
-# cook your dish here
 def ans(n, a, b):
     if n == act:
         return 0

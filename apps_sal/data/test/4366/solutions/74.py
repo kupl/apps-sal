@@ -1,4 +1,3 @@
-# 現在A時、B時間後に始まるコンテストの開始時刻
 
 A, B = map(int, input().split())
 start = A + B

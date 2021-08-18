@@ -1,6 +1,4 @@
 from itertools import permutations
-# 3*5*5
-# (2, 4, 4) (14, 4) (2, 24) (74)
 n = int(input())
 d = [0] * (n + 1)
 for i in range(2, n + 1):

@@ -11,7 +11,6 @@ for _ in range(q):
         c *= 2
         w = h // 2 - c // 2
         pod = (h + c) // 2
-        # w/(2k+1) jak najblizej t-pod
         goal = t - pod
         if goal == 0:
             print(1)

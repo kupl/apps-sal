@@ -2,14 +2,11 @@
 研究室PCでの解答
 '''
 import math
-#import numpy as np
 import queue
 import bisect
 from collections import deque, defaultdict
 import heapq as hpq
 from sys import stdin, setrecursionlimit
-#from scipy.sparse.csgraph import dijkstra
-#from scipy.sparse import csr_matrix
 ipt = stdin.readline
 setrecursionlimit(10**7)
 mod = 10**9 + 7
@@ -18,7 +15,6 @@ mod = 10**9 + 7
 def main():
     n = int(ipt())
     d = defaultdict(int)
-    # nまでの素数の配列を返す関数
 
     def primes(n):
         if n == 1:
