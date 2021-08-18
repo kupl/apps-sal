@@ -1,6 +1,3 @@
-# f = open('input', 'r')
-# n, t = map(int, f.readline().split())
-# A = list(map(int, f.readline().split()))
 n, t = list(map(int, input().split()))
 A = list(map(int, input().split()))
 

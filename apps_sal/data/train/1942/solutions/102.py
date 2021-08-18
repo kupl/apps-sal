@@ -9,7 +9,7 @@ class Solution:
 
         for i in range(n):
             for j in range(i + 1, n):
-                if not fav[i] - fav[j]:  # then i is a subset of j
+                if not fav[i] - fav[j]:
                     rem.add(i)
                 if not fav[j] - fav[i]:
                     rem.add(j)

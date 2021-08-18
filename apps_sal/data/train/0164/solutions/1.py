@@ -21,7 +21,6 @@ class Solution:
         
         for i in range(n):
             arr[int(num[i])].append(i)
-            #print(arr)
         
         curr=0
         ans=\"\"

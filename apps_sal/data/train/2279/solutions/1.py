@@ -2,7 +2,6 @@ import os
 import sys
 from io import BytesIO, IOBase
 
-# region fastio
 BUFSIZE = 8192
 
 
@@ -98,4 +97,3 @@ def solve():
 
 
 solve()
-# print(time.time()-start_time)

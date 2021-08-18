@@ -2,7 +2,6 @@ class Solution:
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         favoriteCompanies = [[len(favoriteCompanies[i]), i, set(favoriteCompanies[i])] for i in range(len(favoriteCompanies))]
         favoriteCompanies.sort()
-        # print(favoriteCompanies)
         res = []
         for i in range(len(favoriteCompanies)):
             attendre = favoriteCompanies[i][2]

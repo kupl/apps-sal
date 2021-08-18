@@ -1,8 +1,6 @@
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
 
-        # public solution ...
-
         def dfs(pi, pj, i, j):
             visited[i][j] = True
             for ni, nj in [(i - 1, j), (i, j - 1), (i, j + 1), (i + 1, j)]:

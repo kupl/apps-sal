@@ -14,9 +14,9 @@ class Solution:
         label = [[0 for _ in range(len(grid[0]))] for _ in range(len(grid))]
 
         def dfs(pre_i, pre_j, i, j):
-            if label[i][j] == 1:  # is being visited
+            if label[i][j] == 1:
                 return True
-            if label[i][j] == -1:  # visited
+            if label[i][j] == -1:
                 return False
             label[i][j] = 1
             for ii, jj in [(i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)]:

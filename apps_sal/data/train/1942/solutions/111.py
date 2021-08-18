@@ -11,7 +11,6 @@ class Solution:
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         fc = [(sorted(e), i) for i, e in enumerate(favoriteCompanies)]
         fc = sorted(fc, key=lambda x: len(x[0]), reverse=True)
-        # print(fc)
         res = []
         for i in range(len(fc)):
             s, si = fc[i]

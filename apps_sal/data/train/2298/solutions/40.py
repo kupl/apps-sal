@@ -14,11 +14,9 @@ A_dig = 0
 for i in range(N):
     A_dig = max(A_dig, A_max_right[i] - A_min_left[i])
 
-#print(A_max_right, A_min_left, A_dig)
-
 
 def ct_edges(ma, mi, start):
-    counting_max = 1  # 0:counting max, 1:counting min
+    counting_max = 1
     i = start
     ct_max = [0]
     ct_min = []
@@ -29,13 +27,12 @@ def ct_edges(ma, mi, start):
             elif A[i] == mi:
                 ct_min.append(1)
                 counting_max = 0
-        else:  # counting min
+        else:
             if A[i] == mi:
                 ct_min[-1] += 1
             elif A[i] == ma:
                 ct_max.append(1)
                 counting_max = 1
-        #print(i, A[i], ma, mi, ct_max, ct_min)
         i -= 1
 
     if len(ct_max) != len(ct_min):
@@ -61,7 +58,6 @@ while i >= 0:
     if A_max_right[i] - A_min_left[i] != A_dig:
         i -= 1
     else:
-        # print(i)
         ct, i = ct_edges(A_max_right[i], A_min_left[i], start=i)
         ans += ct
 print(ans)

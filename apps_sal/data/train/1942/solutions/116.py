@@ -18,7 +18,6 @@ class Solution:
                     if not person in matches:
                         matches[person] = 0
                     matches[person] += 1
-            # print(i,matches)
             issubset = False
             for p, c in list(matches.items()):
                 if len(faves) == c and p != i:

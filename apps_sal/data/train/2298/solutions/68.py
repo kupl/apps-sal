@@ -1,7 +1,6 @@
 n, t = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
-# print(a)
 
 minv = a[0]
 
@@ -14,5 +13,4 @@ for i, v in enumerate(a[1:], 1):
         value[i] = v - minv
 
 maxv = max(value)
-# print(maxv)
 print((value.count(maxv)))

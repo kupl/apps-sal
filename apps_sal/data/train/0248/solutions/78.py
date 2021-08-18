@@ -6,7 +6,6 @@ class Solution:
             for j, val in enumerate(row):
                 ve[val].add((i, j))
 
-        # print(ve)
         dxy = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
         def check(k):
@@ -22,7 +21,6 @@ class Solution:
                 for dx, dy in dxy:
                     x2, y2 = x + dx, y + dy
                     if 0 <= x2 < m and 0 <= y2 < n and (x2, y2) != prev and (x2, y2) in v:
-                        # print((x2,y2), curr)
                         if dfs((x2, y2), curr):
                             return True
                 visiting.remove(curr)

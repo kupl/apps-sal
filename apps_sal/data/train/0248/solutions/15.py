@@ -1,6 +1,5 @@
 class DSU:
     def __init__(self):
-        # representer
         self.reps = {}
 
     def add(self, x):
@@ -17,7 +16,6 @@ class DSU:
 
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
-        # detect cycle, often dfs, but use dsu in this problem due to its special graph structure.
         m, n = len(grid), len(grid[0])
         dsu = DSU()
         for i in range(m):

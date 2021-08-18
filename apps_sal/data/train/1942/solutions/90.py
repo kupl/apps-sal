@@ -1,6 +1,5 @@
 class Solution:
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
-        # favoriteCompanies=sorted(favoriteCompanies,key=lambda x:len(x))
 
         ls = []
         for i in favoriteCompanies:

@@ -1,7 +1,5 @@
 class Solution:
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
-        # make companies -> person dict
-        # for each person, find if the don't have a subset
         ans = []
         favorites = defaultdict(list)
         for i, person in enumerate(favoriteCompanies):
