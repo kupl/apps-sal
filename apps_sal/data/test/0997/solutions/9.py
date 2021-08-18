@@ -9,7 +9,7 @@ l = len(s)
 s2 = ""
 for i in range(0, l):
     if s[i] == ';' or s[i] == ',':
-        s2 += "# #"
+        s2 += "
     else:
         s2 += s[i]
 sl = s2.split()
@@ -23,14 +23,14 @@ for i in range(0, l):
     l2 = len(w)
     num = 1
     if l2 != 0:
-        if w[l2 - 1] == "#":
-            w = w[:-1]
-            l2 = len(w)
+        if w[l2 - 1] == "
+        w = w[:-1]
+        l2 = len(w)
 
     if l2 != 0:
-        if w[0] == "#":
-            w = w[1:]
-            l2 = len(w)
+        if w[0] == "
+        w = w[1:]
+        l2 = len(w)
     if l2 == 0:
         num = 0
     for k in range(0, l2):

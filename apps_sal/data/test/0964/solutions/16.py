@@ -39,7 +39,6 @@ def funk(a):
         for i in range(a[5]):
             print('C' * a[4] + 'B' * a[2])
     else:
-        #~ print('-1')
         return 0
     return 1
 

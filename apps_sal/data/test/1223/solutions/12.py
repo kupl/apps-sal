@@ -7,7 +7,6 @@ P = [-1] * n
 for i, a in enumerate(A):
     P[a] = i
 
-# print(P)
 
 R = [[n] * 2 for _ in range(n)]
 q = []
@@ -26,7 +25,6 @@ for i in range(n):
     for v, j in temp:
         heapq.heappush(q, (v, j))
 
-# print(R)
 
 L = [[-1] * 2 for _ in range(n)]
 q = []
@@ -45,7 +43,6 @@ for i in reversed(list(range(n))):
     for v, j in temp:
         heapq.heappush(q, (v, j))
 
-# print(L)
 ans = 0
 for i in range(n - 1):
     p = P[i]

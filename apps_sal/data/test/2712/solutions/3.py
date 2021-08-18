@@ -1,4 +1,3 @@
-# by the authority of GOD     author: manhar singh sachdev #
 
 import os
 import sys
@@ -11,7 +10,6 @@ def main():
         print(max(a, b, c))
 
 
-# Fast IO Region
 BUFSIZE = 8192
 
 

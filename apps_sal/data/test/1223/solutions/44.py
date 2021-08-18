@@ -2,13 +2,7 @@ from bisect import bisect_left, bisect_right, insort_right
 
 
 class CubeSkipList:
-    # SkipList の層数を 3 にした感じの何か
-    # std::multiset の代用になる
     def __init__(self, values=None, sorted_=False, cube=100, seed=42):
-        # values: 初期値のリスト
-        # sorted_: 初期値がソート済みであるか
-        # square: 最大データ数の平方根
-        # seed: 乱数のシード
         inf = float("inf")
         self.rand_y = seed
         self.cube = cube
@@ -47,7 +41,7 @@ class CubeSkipList:
             layer1.append(l1)
             layer2.append(inf)
 
-    def rand_depth(self):  # 32bit xorshift
+    def rand_depth(self):
         y = self.rand_y
         y ^= y << 13 & 0xffffffff
         y ^= y >> 17
@@ -59,7 +53,7 @@ class CubeSkipList:
             return 1
         return 0
 
-    def add(self, x):  # 要素の追加  # O(cbrt(n))
+    def add(self, x):
         layer2, layer1, layer0 = self.layer2, self.layer1, self.layer0
         r = self.rand_depth()
         if r == 0:
@@ -93,7 +87,7 @@ class CubeSkipList:
             layer1.insert(idx2 + 1, l1[idx1:])
             del l1[idx1:]
 
-    def remove(self, x):  # 要素の削除  # O(cbrt(n))
+    def remove(self, x):
         raise NotImplementedError
         layer1, layer0 = self.layer1, self.layer0
         idx1 = bisect_left(layer1, x)
@@ -105,7 +99,7 @@ class CubeSkipList:
             layer0_idx1 = layer0[idx1]
             del layer0_idx1[bisect_left(layer0_idx1, x)]
 
-    def bisect_left(self, x):  # x 以上の最小の値を返す  O(log(n))
+    def bisect_left(self, x):
         raise NotImplementedError
         layer1, layer0 = self.layer1, self.layer0
         idx1 = bisect_left(layer1, x)
@@ -122,7 +116,7 @@ class CubeSkipList:
         else:
             return res
 
-    def search_higher(self, x):  # x を超える最小の値を返す  O(log(n))
+    def search_higher(self, x):
         layer2, layer1, layer0 = self.layer2, self.layer1, self.layer0
         idx2 = bisect_right(layer2, x)
         l1 = layer1[idx2]
@@ -136,7 +130,7 @@ class CubeSkipList:
             return l1[idx1]
         return l0[idx0]
 
-    def search_lower(self, x):  # x 未満の最大の値を返す  O(log(n))
+    def search_lower(self, x):
         layer2, layer1, layer0 = self.layer2, self.layer1, self.layer0
         idx2 = bisect_left(layer2, x)
         l1 = layer1[idx2]
@@ -151,9 +145,6 @@ class CubeSkipList:
         return l0[idx0 - 1]
 
     def pop(self, idx):
-        # 小さい方から idx 番目の要素を削除してその要素を返す（0-indexed）
-        # O(sqrt(n))
-        # for を回すので重め  使うなら square パラメータを大きめにするべき
         raise NotImplementedError
         layer1, layer0 = self.layer1, self.layer0
         s = -1
@@ -175,7 +166,6 @@ class CubeSkipList:
 
 
 def main():
-    # 参考: https://atcoder.jp/contests/abc140/submissions/7477790
     n = int(input())
     p = list(map(int, input().split()))
     idx = [0] * n

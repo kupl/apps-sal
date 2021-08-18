@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 n = int(input())
 p_l = list(map(int, input().split()))

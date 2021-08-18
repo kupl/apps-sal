@@ -1,5 +1,4 @@
 ''' بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ '''
-# codeforces1207A_live
 def gi(): return list(map(int, input().split()))
 
 

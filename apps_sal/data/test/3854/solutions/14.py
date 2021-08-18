@@ -4,7 +4,6 @@ input = sys.stdin.readline
 n, k = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
-#DP = [[False]*(k+2) for _ in range(k+2)]
 DP = []
 for _ in range(k + 1):
     DP.append([False for _ in range(k + 1)])

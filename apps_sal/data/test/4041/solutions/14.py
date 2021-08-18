@@ -18,12 +18,10 @@ def calc(s, t):
 
 
 A, B = calc(S, T), calc(S[::-1], T[::-1])[::-1]
-# print(A, B)
 l, r = 0, N
 while r - l > 1:
     m = (l + r) // 2
     C = [A[i] + B[i + m] for i in range(N - m + 1)]
-    # print("m, C =", m, C)
     if max(C) >= M:
         l = m
     else:

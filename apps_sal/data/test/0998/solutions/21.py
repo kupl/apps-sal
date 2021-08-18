@@ -6,7 +6,6 @@ def main():
     for i in range(n):
         if Find_x(int(x ^ i), f) == False:
             f.append(i)
-    ##print (f)
     print(len(f) - 1)
     for i in range(len(f) - 1):
         print(f[i] ^ f[i + 1], end=' ')

@@ -1,7 +1,6 @@
 N = int(input())
 P = [int(i) for i in input().split(" ")]
 
-# 各数字が何番目に入っているかを保存する
 pos = [0] * (N + 1)
 for i in range(N):
     pos[P[i]] = i + 1
@@ -9,7 +8,6 @@ for i in range(N):
 l = [0] + [i for i in range(N + 1)]
 r = [i + 1 for i in range(N + 1)] + [N + 1]
 
-# 1から順番に見ていく
 ans = 0
 for i in range(1, N + 1):
     idx = pos[i]

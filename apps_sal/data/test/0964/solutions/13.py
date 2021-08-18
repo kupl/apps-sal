@@ -18,8 +18,6 @@ second = [a, b, c]
 second.sort()
 second.reverse()
 third = [a, b, c]
-# print(first)
-# print(second)
 
 
 def swap(a):
@@ -29,13 +27,8 @@ def swap(a):
 
 
 def check_first(x):
-    # print(x)
     fla = (x[0][0] == x[1][0] + x[2][0])
-    #print(x[0][0], "==", x[1][0], "+", x[2][0])
-    # print(fla)
     flb = (x[1][1] == x[2][1] == (x[0][0] - x[0][1]))
-    #print(x[1][1], "==", x[2][1], "==", x[0][0] - x[0][1])
-    # print(flb)
     return fla and flb
 
 

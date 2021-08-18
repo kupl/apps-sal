@@ -6,7 +6,6 @@ ans = 0
 for i in range(n):
     for j in range(i, n):
         st = s[: i] + s[j + 1:]
-        # print(st)
 
         cur, ok = 0, 0
 
