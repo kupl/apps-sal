@@ -1,5 +1,4 @@
 n = int(input())
-# by count of opens
 a = dict()
 for pos in range(n):
     cur = input()

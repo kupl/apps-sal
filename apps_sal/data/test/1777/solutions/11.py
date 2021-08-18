@@ -28,23 +28,18 @@ def cntimpl(l):
                 return None
     return q
 
-###
-
 
 n = int(input())
 s = [input() for _ in range(n)]
 
-#print(n, s)
 
 v = [cnt(x) for x in s]
 
-# print(v)
 
 v = [x for x in v if x is not None]
 v.sort()
 v = collections.deque(v)
 
-# print(v)
 
 ans = 0
 while len(v) > 1:

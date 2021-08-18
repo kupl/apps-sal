@@ -4,7 +4,6 @@ n = int(input())
 starts = []
 ends = []
 fulls = 0
-# Testing Validity
 for _ in range(n):
     s = input()
     count = 0
@@ -15,7 +14,6 @@ for _ in range(n):
         else:
             count -= 1
             mn = min(mn, count)
-    #print(count, mn)
 
     if count > 0:
         if mn == 0:

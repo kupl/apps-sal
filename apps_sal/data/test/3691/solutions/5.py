@@ -14,7 +14,6 @@ while (1):
     if (now1 < xs or now2 < ys):
         arr.append((now1, now2))
         continue
-    #print(now1, now2)
     arr.append((now1, now2))
     if (dist(now1, now2, xs, ys) > t):
         break

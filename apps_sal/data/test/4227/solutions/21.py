@@ -1,4 +1,3 @@
-# 無向グラフ
 from itertools import permutations
 n, m = map(int, input().split())
 data = [[False] * n for i in range(n)]

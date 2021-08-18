@@ -1,4 +1,3 @@
-# 129a
 
 def atc_129a(input_value: str) -> int:
     PQR = input_value.split(" ")

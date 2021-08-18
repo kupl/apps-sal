@@ -1,6 +1,4 @@
-# A - Two Rectangles
 
-# A B C D
 A, B, C, D = map(int, input().split())
 
 
