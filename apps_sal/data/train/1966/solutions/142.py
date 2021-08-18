@@ -11,11 +11,8 @@ class Solution:
                     histogram[j] += 1
 
                 while histogram[j] < histogram[stack[-1]]:
-                    # print(stack)
                     stack.pop()
-                    # print(stack)
 
-                # print(stack)
                 dp[j] = dp[stack[-1]] + histogram[j] * (j - stack[-1])
                 stack.append(j)
 

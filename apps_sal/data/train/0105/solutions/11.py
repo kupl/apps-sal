@@ -1,10 +1,4 @@
-# Codeforces Round #673
-# Problem A
 import sys
-
-#
-# BEGIN TEMPLATE
-#
 
 
 def input(): return sys.stdin.readline()[:-1]
@@ -12,9 +6,6 @@ def getInt(): return int(input())
 def getIntIter(): return list(map(int, input().split()))
 def getIntList(): return list(getIntIter())
 def flush(): sys.stdout.flush()
-#
-# END TEMPLATE
-#
 
 
 for _ in range(getInt()):

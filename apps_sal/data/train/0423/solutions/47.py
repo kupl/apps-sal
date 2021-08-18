@@ -1,5 +1,3 @@
-# Brute force O(n^2) time and O(1) space
-# O(n) time and O(1) space
 class Solution:
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
         cnt = collections.Counter()

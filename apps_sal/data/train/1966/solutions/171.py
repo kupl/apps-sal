@@ -1,6 +1,4 @@
 class Solution:
-    #TC: O(row*col*row)
-    #SC: O(row*col)
     def numSubmat(self, mat: List[List[int]]) -> int:
         nums = [[0] * len(mat[0]) for _ in range(len(mat))]
         for row in range(len(mat)):
