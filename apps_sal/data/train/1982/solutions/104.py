@@ -20,12 +20,10 @@ class Solution:
 
                 r1 = set([cur])
                 r2 = pref[cur]
-                #to_visit = to_visit.difference(r2)
                 L1 = r2.copy()
                 L2 = set()
 
                 while L1:
-                    # print(r1,r2,to_visit,L1)
                     for l in L1:
                         to_visit.remove(l)
                         L = pref[l]
@@ -43,5 +41,4 @@ class Solution:
                     L2 = L2.intersection(to_visit)
                     L1 = L2
                     L2 = set()
-                # print(r1,r2)
         return True

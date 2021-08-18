@@ -1,4 +1,3 @@
-# benchmarking accepted solution
 class Solution(object):
     def possibleBipartition(self, N, dislikes):
         graph = collections.defaultdict(list)

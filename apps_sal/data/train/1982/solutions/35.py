@@ -11,11 +11,9 @@ class Solution:
             if i not in color:
                 if not self.dfs(i, color, graph, c=0):
                     return False
-        # print(color)
         return True
 
     def dfs(self, idx, color, graph, c):
-        # print((idx,c))
         color[idx] = c
         newc = 0 if c == 1 else 1
         for i in graph[idx]:

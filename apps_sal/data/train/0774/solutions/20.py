@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin
 n, k, p = map(int, stdin.readline().split())
 list1 = list(map(int, stdin.readline().split()))
@@ -16,7 +15,6 @@ for each in list2[1:]:
     else:
         dict1[each[1]] = dict1[prev[1]]
         prev = each
-# print(dict1)
 for j in range(p):
     a, b = map(int, stdin.readline().split())
     if dict1[a] == dict1[b]:

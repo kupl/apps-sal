@@ -30,7 +30,6 @@ class Solution:
         return True
 
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
-        # -1 unvisited, 0 and 1 are the 2 groups
         colors = [-1 for _ in range(N + 1)]
         graph = defaultdict(set)
         for dislike in dislikes:
@@ -43,6 +42,3 @@ class Solution:
                     return False
 
         return True
-
-        # for each dislike a,b
-        # if we want a's group to differ from b's group

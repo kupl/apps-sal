@@ -23,7 +23,6 @@ class Solution:
                 return True
 
             node = queue.pop()
-            # print(node)
 
             if node in visited:
                 return dfs(queue)
@@ -46,7 +45,6 @@ class Solution:
             return dfs(queue)
 
         for key, val in list(nodeMap.items()):
-            # print(val)
             if val in visited:
                 continue
             else:

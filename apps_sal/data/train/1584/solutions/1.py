@@ -9,10 +9,6 @@ try:
     for i in grid:
         sumrow.append(sum(i))
 
-    # targets=[]
-    # for i in range(r):
-     #   for j in range(c):
-      #      targets.append(sumrow[i] + sumcol[j] - 2*grid[i][j])
     print(max(sumrow) + max(sumcol))
 except EOFError:
     pass

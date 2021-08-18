@@ -15,7 +15,7 @@ def triangle_area(A, B, C):
 
 
 def find_biggTriang(listPoints):
-    num_points = len(listPoints)  # 1
+    num_points = len(listPoints)
     possible_count = 0
     real_count = 0
     areas = {}
