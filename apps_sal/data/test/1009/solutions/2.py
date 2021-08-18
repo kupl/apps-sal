@@ -24,7 +24,6 @@ def check(s):
 
 while (r - l > 1):
     m = (r + l + 1) // 2
-    # print(l,m,r)
     if check(m):
         r = m
     else:

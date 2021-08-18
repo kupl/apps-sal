@@ -1,4 +1,3 @@
-# ABC147
 
 S = input()
 cnt = 0

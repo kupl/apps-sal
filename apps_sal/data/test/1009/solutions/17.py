@@ -1,5 +1,4 @@
 __author__ = 'heckboy'
-#!/usr/bin/env python
 n, k = map(int, input().split())
 L = list(map(int, input().split()))
 i = 0

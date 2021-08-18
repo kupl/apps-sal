@@ -1,5 +1,3 @@
-# float型を許すな
-# numpyはpythonで
 from math import floor, ceil, pi, factorial
 from bisect import bisect_left, bisect_right
 import copy
@@ -37,9 +35,6 @@ for i in range(50):
         lis[j] += 1
     lis[ind] -= 51
     lists.append(copy.deepcopy(lis))
-    # print(lis)
-# print(lists)
-# print(lists[0])
 u = n % 50
 x = n // 50
 base = lists[50 - u - 1]

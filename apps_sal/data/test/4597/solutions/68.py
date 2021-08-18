@@ -1,4 +1,3 @@
-# ABC055B
 n = int(input())
 ans = 1
 MOD = 10**9 + 7

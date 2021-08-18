@@ -1,4 +1,3 @@
-# dame datta...
 from scipy.sparse.csgraph import floyd_warshall
 from scipy.sparse import csr_matrix
 

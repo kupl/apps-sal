@@ -1,6 +1,5 @@
 from scipy.sparse.csgraph import floyd_warshall
 
-# ダイクストラを二回行う
 N, M, L = list(map(int, input().split()))
 graph = [[float('inf')] * N for _ in range(N)]
 for _ in range(M):

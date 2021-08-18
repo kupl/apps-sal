@@ -1,4 +1,3 @@
-# scipy使う場合
 from scipy.sparse import csr_matrix
 from scipy.sparse.csgraph import floyd_warshall
 import numpy as np
@@ -6,9 +5,6 @@ import sys
 input = sys.stdin.readline
 
 n, m, l = map(int, input().split())
-
-# m行の入力から距離を値に持つ隣接行列を作成 0-indexed
-# directed:無向グラフならFalse、有向グラフならTrue
 
 
 def make_d_matrix(n, m, directed=False):

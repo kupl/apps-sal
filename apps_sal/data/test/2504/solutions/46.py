@@ -17,7 +17,6 @@ def PathInit():
 PathInit()
 for i, j, k in abc:
     Path[i - 1][j - 1] = k
-    # 双方向
     Path[j - 1][i - 1] = k
 
 Path = floyd_warshall(Path)

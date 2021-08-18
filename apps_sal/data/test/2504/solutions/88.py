@@ -15,10 +15,8 @@ queries = []
 for _ in range(Q):
     queries.append(list(map(int, input().split())))
 
-# use flord warshall to find min path between all towns
 edges = floyd_warshall(edges)
 
-# if the two towns can be travelled to on one tank, add to our fuel graph with distance 1
 for i in range(N):
     for j in range(N):
         if edges[i][j] <= L:
@@ -26,7 +24,6 @@ for i in range(N):
         else:
             edges[i][j] = 0
 
-# use flord warshall to find min number of fuel tanks to travel between two towns
 edges = floyd_warshall(edges)
 
 for query in queries:

@@ -1,5 +1,3 @@
-# (N-1)*N+K
-# N,N,N,N,--NからN-1,N-1,,,N-1はN回
 K = int(input())
 N = 50
 S = K // N
