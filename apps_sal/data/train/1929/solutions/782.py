@@ -13,7 +13,7 @@ class StreamChecker:
                 if c not in ptr:
                     ptr[c] = {}
                 ptr = ptr[c]
-            ptr['#'] = w
+            ptr['
 
     def _find_word(self, k: int) -> bool:
         ptr = self.trie
@@ -21,24 +21,17 @@ class StreamChecker:
             if c not in ptr:
                 return False
             ptr = ptr[c]
-        return '#' in ptr
+        return '
 
     def query(self, letter: str) -> bool:
-        # print(letter)
         if letter in self.trie:
             self.prefixes.append(self.trie)
         valid_prefixes, found = [], False
         for i, ptr in enumerate(self.prefixes):
-            # print(f'  {ptr}')
             if letter in ptr:
                 ptr = ptr[letter]
                 valid_prefixes.append(ptr)
-                if '#' in ptr:
+                if '
                     found = True
         self.prefixes = valid_prefixes
         return found
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

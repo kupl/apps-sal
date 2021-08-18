@@ -34,7 +34,3 @@ class StreamChecker:
         self.sb += letter
         node = self.root
         return node.check(self.sb[::-1])
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -17,7 +17,6 @@ class StreamChecker:
         w = ''
         for i in range(len(self.hist) - 1, -1, -1):
             w += self.hist[i]
-            # print(w)
             if w in self.words:
                 return True
             if w not in self.memo:

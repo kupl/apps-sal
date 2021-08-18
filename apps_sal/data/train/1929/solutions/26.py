@@ -34,8 +34,3 @@ class StreamChecker:
                 ans = ans or child.is_word
         self.candidates = new_candidates
         return ans
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

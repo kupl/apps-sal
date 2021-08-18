@@ -29,8 +29,3 @@ class StreamChecker:
             curr = curr.dict[char]
             if curr.isWord:
                 return True
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

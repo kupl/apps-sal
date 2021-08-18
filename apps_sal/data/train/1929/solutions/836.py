@@ -24,16 +24,9 @@ class StreamChecker:
         for i in range(len(self.stack) - 1, -1, -1):
             l = self.stack[i]
             if l not in T['chld']:
-                #print (letter)
                 return False
             T = T['chld'][l]
             if T['end']:
-               # print(l,letter)
                 return True
 
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

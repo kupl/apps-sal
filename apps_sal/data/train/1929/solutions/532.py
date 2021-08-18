@@ -17,8 +17,3 @@ class StreamChecker:
         history = ''.join(self.search_history)
 
         return any(history[-length:] in words_set for length, words_set in list(self.words_by_len.items()))
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
