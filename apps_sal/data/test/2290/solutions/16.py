@@ -19,7 +19,6 @@ v = [1] * (n + 1)
 c = 0
 m = 1
 for i in range(1, n + 1):
-    #print(i, m)
     if v[i]:
         s = [i]
         if i < m:

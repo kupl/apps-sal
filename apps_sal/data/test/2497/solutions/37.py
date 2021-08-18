@@ -69,9 +69,7 @@ def cand_time(plist):
 
 cand_time_x = cand_time(list(xset))
 cand_time_y = cand_time(list(yset))
-# print(cand_time_x,cand_time_y)
 cand_t = [0] + list(cand_time_x) + list(cand_time_y)
-# print(cand_t)
 
 
 def get_pos(pd, t):
@@ -93,10 +91,8 @@ for t in cand_t:
         pos_min_y = min(pos_min_y, get_pos(y2, t))
         pos_max_y = max(pos_max_y, get_pos(y2, t))
 
-    # print(t,pos_min_x,pos_max_x,pos_min_y,pos_max_y)
     t_ans = abs(pos_max_x - pos_min_x) * abs(pos_max_y - pos_min_y)
     if answer >= t_ans:
         answer = t_ans
-        # print(answer,t,abs(pos_max_x-pos_min_x),abs(pos_max_y-pos_min_y))
 
 print(answer)

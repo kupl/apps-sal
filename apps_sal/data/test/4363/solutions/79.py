@@ -7,6 +7,5 @@ for x in range(k + 1):
         if z < 0 or z > k:
             continue
         count += 1
-        # print(x, y, z)
 
 print(count)

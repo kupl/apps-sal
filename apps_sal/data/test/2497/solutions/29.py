@@ -32,7 +32,6 @@ def want(n):
         ymax = max(ymax, U_U + n)
         ymin = min(ymin, U_D + n)
 
-    #print (xmax-xmin,ymax-ymin)
     return abs(xmax - xmin) * abs(ymax - ymin)
 
 
@@ -79,7 +78,7 @@ for i in range(N):
             L_R = max(L_R, x)
             L = True
 
-        else:  # R
+        else:
 
             R_L = min(R_L, x)
             R_R = max(R_R, x)
@@ -96,7 +95,7 @@ for i in range(N):
             D_U = max(D_U, y)
             D = True
 
-        else:  # U
+        else:
 
             U_D = min(U_D, y)
             U_U = max(U_U, y)
@@ -112,8 +111,6 @@ while abs(last - ans) > 10 ** (-100):
     t1 = Decimal((t0 * 2 + t3 * 1)) / Decimal(3)
     t2 = Decimal((t0 * 1 + t3 * 2)) / Decimal(3)
 
-    #print (t1,t2,want(t1),want(t2))
-
     last = ans
 
     if want(t1) <= want(t2):
@@ -124,7 +121,6 @@ while abs(last - ans) > 10 ** (-100):
         ans = want(t2)
         t0 = t1
 
-    #print (last,ans,t1,t2)
 
 if ans <= 10 ** (-9):
     ans = 0

@@ -43,10 +43,6 @@ for x, y, t in p:
         u[1] = max(u[1], y)
         d[0] = min(d[0], y)
 
-# print(r)
-# print(l)
-# print(u)
-# print(d)
 
 timings = set([0])
 
@@ -94,7 +90,6 @@ elif d[1] >= d[0] >= d[2]:
 elif d[2] >= d[0] >= d[1]:
     timings.add(abs(d[1] - d[0]) / 2)
 
-# print(timings)
 ans = 10**30
 for t in timings:
     if t > 10**10:

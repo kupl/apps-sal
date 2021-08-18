@@ -2,10 +2,6 @@ n = int(input())
 xyd = [list(input().split()) for i in range(n)]
 xmax, ymax = [-10**9, -10**9, -10**9], [-10**9, -10**9, -10**9]
 xmin, ymin = [10**9, 10**9, 10**9], [10**9, 10**9, 10**9]
-#xmax: max(x1-t,x2,x3+t)
-#xmin: min(x1+t,x2,x3-t)
-#ymax: max(y1-t,y2,y3+t)
-#ymin: min(y1+t,y2,y3-t)
 
 
 def chp(ls, a, flg1, i):

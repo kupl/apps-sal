@@ -20,12 +20,10 @@ for x in set_s:
     mo1 = regex1.search(s)
     mo2 = regex2.search(s)
     if mo1:
-        # print(mo1.group())
         print(mo1.start() + 1, mo1.end())
         flag = 1
         break
     elif mo2:
-        # print(mo2.group())
         print(mo2.start() + 1, mo2.end())
         flag = 1
         break

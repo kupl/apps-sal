@@ -31,7 +31,6 @@ U_y = [min(UY + [INF]), max(UY + [-INF])]
 D_y = [min(DY + [INF]), max(DY + [-INF])]
 
 
-# 2点が衝突する時刻を除けば1次関数
 T = [0]
 
 for x1, x2 in itertools.product(L_x, R_x):
@@ -65,7 +64,6 @@ T.append(10 ** 9)
 
 
 def calc_x(t):
-    # t秒後の横幅
     right = fixed_x[1]
     left = fixed_x[0]
     for x in [R_x[1] + t, L_x[1] - t]:
@@ -78,7 +76,6 @@ def calc_x(t):
 
 
 def calc_y(t):
-    # t秒後の横幅
     right = fixed_y[1]
     left = fixed_y[0]
     for y in [U_y[1] + t, D_y[1] - t]:
@@ -91,16 +88,9 @@ def calc_y(t):
 
 
 def F(x1, x2, y1, y2):
-    # x は x1からx2に向かう1次関数
-    # y は y1からy2に向かう1次関数
-    # t in [0,1] で関数を作る
-    # x = (x2-x1)t + x1
-    # y = (y2-y1)t + y1
     p, q, r, s = x2 - x1, x1, y2 - y1, y1
     a, b, c = p * r, p * s + q * r, q * s
-    # f(t) = at^2 + bt + c
     if a <= 0:
-        # 直線 or 上に凸
         return min(x1 * y1, x2 * y2)
     t0 = -b / (2 * a)
     if t0 < 0 or t0 > 1:

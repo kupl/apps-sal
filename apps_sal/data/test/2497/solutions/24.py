@@ -1,7 +1,6 @@
 from scipy.optimize import fmin
 INF = 10**18
 n = int(input())
-# 0:static, 1:up, 2:down
 xpoints = [[] for _ in range(3)]
 ypoints = [[] for _ in range(3)]
 for i in range(n):

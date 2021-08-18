@@ -1,4 +1,3 @@
-# B - Sum of Three Integers
 
 k, s = list(map(int, input().split()))
 c = 0

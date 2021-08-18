@@ -1,4 +1,3 @@
-# 116a
 
 def atc_116a(input_value: str) -> int:
     tri_length = [int(ai) for ai in input_value.split(" ")]

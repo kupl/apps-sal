@@ -1,4 +1,3 @@
-# @author
 
 import sys
 
@@ -61,11 +60,9 @@ class DHarmoniousGraph:
         for g, cur, r in ccs:
             if done[g]:
                 continue
-            # print(g, cur, r, ans)
             while cur < r:
                 cur_p = find(nodes[cur])
                 r_p = find(nodes[r])
-                # print(cur, r, cur_p.val, r_p.val)
                 if cur_p != r_p:
                     ans += 1
                     done[cur_p.val] = 1

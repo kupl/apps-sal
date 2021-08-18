@@ -1,12 +1,4 @@
-#import math
-#import itertools
-#import numpy as np
 import heapq
-#from collections import deque
-# sys.setrecursionlimit(10 ** 6)
-#mod = 10 ** 9 + 7
-#INF = 10 ** 9
-#PI = 3.14159265358979323846
 
 
 def INT(): return int(input())
@@ -32,7 +24,6 @@ def do():
             heapq.heappush(h, p)
         if len(h) != 0:
             ans += heapq.heappop(h)
-        # print(ans)
     print(0 - ans)
 
 

@@ -4,7 +4,6 @@ p = 10 ** 9 + 7
 
 n, k = list(map(int, input().split()))
 
-# g: List[List[int]]
 g = [[] for _ in range(n)]
 for _ in range(n - 1):
     a, b, x = list(map(int, input().split()))

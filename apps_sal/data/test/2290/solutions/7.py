@@ -27,7 +27,6 @@ def countEdges(adj, n, m):
             comps.append((maxV, compN, 1))
 
     comps.sort()
-#     print(comps)
     opened = set()
     ctr = 0
     for v, compN, closed in comps:
@@ -40,8 +39,6 @@ def countEdges(adj, n, m):
     return ctr
 
 
-# inf = open('input.txt', 'r')
-# reader = (map(int, line.split()) for line in inf)
 reader = (list(map(int, s.split())) for s in sys.stdin)
 
 n, m = next(reader)
@@ -53,5 +50,3 @@ for _ in range(m):
 visited = [False] * (n + 1)
 ans = countEdges(adj, n, m)
 print(ans)
-
-# inf.close()

@@ -28,9 +28,7 @@ def resolve():
     for a, b in AB:
         if 0 <= M - a:
             W[M - a].append(b)
-    # print(W)
 
-    # 選択肢の少ない後ろの日付から決めていく
     ans = 0
     hq = []
     for i in reversed(W):

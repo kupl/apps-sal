@@ -9,7 +9,6 @@ for _ in range(N):
     A, B = list(map(int, input().split()))
     rinsetuList[A].append(B)
 
-# print(rinsetuList[:M+1])
 
 work_list = []
 hpq = heapq.heapify(work_list)
@@ -21,7 +20,5 @@ for rinsetu in rinsetuList[:M + 1]:
     if(len(work_list) != 0):
         ans += heapq.heappop(work_list) * (-1)
 
-#    print(ans)
-#    print(work_list)
 
 print(ans)

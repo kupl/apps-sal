@@ -1,6 +1,5 @@
 import sys
 from sys import stdin, stdout
-# sys.setrecursionlimit(300001)
 visit = []
 
 
@@ -20,7 +19,6 @@ def bfs(adj, i, m):
     return m
 
 
-# input = sys.stdin.readline()
 n, m = stdin.readline().split()
 n = int(n)
 m = int(m)

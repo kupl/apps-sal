@@ -52,7 +52,6 @@ times.sort()
 u, v = times[0]
 ans = 0
 merges = list()
-# print(times)
 for i in range(1, len(times)):
     i, j = times[i]
     if i <= v:
@@ -63,7 +62,6 @@ for i in range(1, len(times)):
         u, v = i, j
 
 merges.append([u, v])
-# print(merges)
 for u, v in merges:
     for x in range(u, v + 1):
         if x not in seen:

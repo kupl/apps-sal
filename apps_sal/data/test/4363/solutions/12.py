@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# coding:utf-8
 
 def main():
     stdIn1, stdIn2 = list(map(int, input().split()))

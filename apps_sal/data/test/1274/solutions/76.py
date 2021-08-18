@@ -24,7 +24,6 @@ def main(n, m, a, b):
     for d in range(1, m + 1):
         for job in jobList[d]:
             heappush(goodjobs, -job)
-        # print(goodjobs)
         if len(goodjobs) > 0:
             earn += heappop(goodjobs)
     return -earn

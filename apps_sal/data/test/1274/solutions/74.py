@@ -11,8 +11,6 @@ def IN(): return map(int, input().split())
 
 mod = 1000000007
 
-# +++++
-
 
 class node:
     def __init__(self, a_val, a_parent=None):
@@ -31,7 +29,7 @@ def main2():
 
     vl.sort(key=lambda x: -x[1])
     ret = 0
-    nwdl = [-1] * (m + 1)  # list(range(m+1))
+    nwdl = [-1] * (m + 1)
     for a, b in vl:
         j = m - a
         while j >= 0:
@@ -40,7 +38,6 @@ def main2():
                 ret += b
                 break
             j -= 1
-        # pa((a,b,m-a,nwdl))
     print(ret)
 
 
@@ -65,7 +62,6 @@ def main():
     print(ret)
 
 
-# +++++
 isTest = False
 
 
@@ -94,7 +90,6 @@ def __starting_point():
         isTest = True
     else:
         pass
-        #input = sys.stdin.readline
 
     ret = main()
     if ret is not None:
