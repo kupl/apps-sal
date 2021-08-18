@@ -3,7 +3,6 @@ from collections import defaultdict as dc
 from bisect import bisect_left,bisect_right,insort_left'''
 import sys
 import math
-# define of c++ as inl=input()
 mod = 10**9 + 7
 
 

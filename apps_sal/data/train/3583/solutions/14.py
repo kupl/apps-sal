@@ -1,5 +1,4 @@
 def binary_array_to_number(arr):
-    # your code
     res = 0
     li = [x for x in reversed(arr)]
     print(li)

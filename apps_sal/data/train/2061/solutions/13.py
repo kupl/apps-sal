@@ -29,8 +29,6 @@ while s < len(Q):
             Q.append((xx, yy, tt, d + 1))
     s += 1
 
-# ANS = []
-# print(D[mi+1][mi-1])
 for i in range(n):
     t = -1
     Xs = [C[i][0], C[i][2], C[i][4]]

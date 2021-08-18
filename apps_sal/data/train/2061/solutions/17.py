@@ -1,4 +1,3 @@
-# arc109d
 
 def coord1d(a, b, c):
     m = max(a, max(b, c))

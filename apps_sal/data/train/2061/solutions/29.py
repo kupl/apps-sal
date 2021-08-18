@@ -24,7 +24,6 @@ def main():
         y_same = max(abs(min_x), abs(yy)) * 2 - 1
     else:
         y_same = max(abs(min_x), abs(yy)) * 2
-    #print(x_same, y_same)
     ans = max(x_same, y_same)
 
     if x_same == y_same:

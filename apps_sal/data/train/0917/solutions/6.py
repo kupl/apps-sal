@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     n, k = [int(x) for x in input().split()]

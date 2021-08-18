@@ -81,9 +81,6 @@ while deq:
         dist[convert(c, d, c, d + ny, a, b)] = D + 1
         deq.append(convert(c, d, c, d + ny, a, b))
 
-# print(dist)
-# return
-
 
 input = sys.stdin.readline
 

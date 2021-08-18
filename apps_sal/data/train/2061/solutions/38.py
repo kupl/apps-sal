@@ -113,6 +113,4 @@ for _ in range(T):
     dx = xs[0] - gx
     dy = ys[0] - gy
 
-#	goal = (gx, gy, dx, dy)
-
     print((calc(gx, gy, dx, dy)))

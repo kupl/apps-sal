@@ -49,8 +49,6 @@ for _ in range(t):
         if dy == 1:
             ans += 1
 
-    # print(_, mx, my, dx, dy, ans)
-
     buf.append(ans)
 
 print(('\n'.join(map(str, buf))))

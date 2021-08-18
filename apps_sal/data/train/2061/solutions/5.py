@@ -2,10 +2,6 @@ import sys
 from collections import deque
 
 T = int(input())
-# 0 L
-# 1 |-
-# 2 -|
-# 3 _|
 
 
 def ku_state(p1, p2, p3):

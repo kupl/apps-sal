@@ -7,11 +7,8 @@ import heapq
 import math
 import copy
 
-# from fractions import gcd
 
 MOD = 10 ** 9 + 7
-# MOD = 998244353
-# sys.setrecursionlimit(10**8)
 
 T = int(input())
 for t in range(T):

@@ -1,4 +1,3 @@
-# cook your dish here
 
 t = int(input())
 for i in range(t):
@@ -18,7 +17,4 @@ for i in range(t):
         b += l1[b - 1]
 
         day += 1
-        # if b >= n:
-        #   print(day)
-        #  break
     print(day)

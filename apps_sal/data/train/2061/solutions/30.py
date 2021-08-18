@@ -1,4 +1,3 @@
-# ARC109-D-600
 T = int(input())
 for _ in range(T):
     ax, ay, bx, by, cx, cy = map(int, input().split())

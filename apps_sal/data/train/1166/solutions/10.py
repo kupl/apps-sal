@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 s1 = input().split(' ')
 l = []
