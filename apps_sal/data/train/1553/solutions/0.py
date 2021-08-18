@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin
 n, m = map(int, stdin.readline().split())
 forest = []

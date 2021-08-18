@@ -5,13 +5,6 @@ class Solution:
         if (n <= 2):
             return base
 
-        #best = base
-        # for i in range(n-1):
-        #    for j in range(i+1, n):
-        #        guess = switch(nums, i, j, base)
-        #        if guess > best:
-        #            best = guess
-
         inds = sorted(list(range(n)), key=lambda x: nums[x])
         return base + max(options(inds, nums))
 

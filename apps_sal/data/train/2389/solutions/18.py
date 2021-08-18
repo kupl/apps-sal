@@ -13,8 +13,6 @@ def str_list():
 def str1():
     return input()
 
-# start
-
 
 s1 = ("RGB" * 66667)[:-1]
 s2 = ("GBR" * 66667)[:-1]

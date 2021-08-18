@@ -1,7 +1,6 @@
 class Solution:
 
     def lastStoneWeightII(self, stones: List[int]) -> int:
-        # find the two groups with the smallest difference
 
         cache = {}
 

@@ -2,7 +2,6 @@ from heapq import heappush, heappop
 from collections import deque, Counter, defaultdict
 import itertools
 import sys
-#import bisect
 sys.setrecursionlimit(10**6)
 
 
@@ -37,7 +36,6 @@ for _ in range(q):
             else:
                 c[j].append(c[j][-1])
 
-    # print(c)
     for i in range(n - k + 1):
         for j in range(3):
             ans = min(c[j][i + k] - c[j][i], ans)

@@ -1,4 +1,3 @@
-# cook your dish here
 def func(n):
     sum = 0
     if k == 1:
@@ -20,7 +19,6 @@ def findPeakUtil(low, high, n):
     one = func(mid - 1)
     two = func(mid)
     three = func(mid + 1)
-    # print(one,two,three,mid)
     if (mid == 0 or one >= two) and (mid == n - 1 or three >= two):
         return mid
     elif (mid > 0 and one < two):

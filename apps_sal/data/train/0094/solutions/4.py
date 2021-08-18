@@ -5,7 +5,6 @@ for _ in range(t):
     current = 0
     for i in range(n):
         if T % 2 == 0 and l1[i] == T // 2:
-            # print("HERE")
             if current:
                 l1[i] = 0
                 current = 0

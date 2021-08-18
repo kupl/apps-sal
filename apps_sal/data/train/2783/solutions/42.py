@@ -1,5 +1,4 @@
 def get_grade(s1, s2, s3):
-    # Code here
     s = s1 + s2 + s3
     res = s / 3
     if res >= 90 and res <= 100:

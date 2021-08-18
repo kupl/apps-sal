@@ -5,8 +5,6 @@ def rests(n, b):
         rests.append(r)
     return rests
 
-# k-ary LR method (~800 ms)
-
 
 def power_mod(x, y, n, k=5):
     base, table, res = 2 << (k - 1), [1], 1
