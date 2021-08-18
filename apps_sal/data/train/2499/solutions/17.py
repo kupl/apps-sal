@@ -9,5 +9,4 @@ class Solution:
         for i in val[1:]:
             gcd = math.gcd(i, gcd)
 
-        # print(gcd)
         return gcd >= 2

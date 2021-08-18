@@ -11,6 +11,3 @@ for i in range(1, n + 2):
 for i in range(n):
     r[-i - 2] = max(r[-i - 2], r[-i - 1])
 print(' '.join(map(str, r[1:])))
-
-
-# Made By Mostafa_Khaled

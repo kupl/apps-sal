@@ -1,4 +1,3 @@
-# cook your dish here
 inputs = list(map(int, input().split()))
 N = inputs[0]
 M = inputs[1]
@@ -45,8 +44,6 @@ for i in range(N):
         else:
             list2[i][j] = 0
     first = 0
-# for row in list2:
-    # print(row)
 total = 0
 for i in range(N):
     for j in range(M):

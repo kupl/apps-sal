@@ -1,5 +1,4 @@
 import sys
-##from random import randint
 n, m, c = [int(i) for i in input().split()]
 matrix = [[0] * (m + 1) for i in range(n + 1)]
 cc = 1

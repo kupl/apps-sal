@@ -7,12 +7,6 @@ def gcd(a, b):
 
 class Solution:
     def hasGroupsSizeX(self, deck: List[int]) -> bool:
-        # arr = {}
-        # for i in range(len(deck)):
-        #     if deck[i] in arr:
-        #         arr[deck[i]] += 1
-        #     else:
-        #         arr[deck[i]] = 1
         count = list(collections.Counter(deck).values())
         list1 = list(count)
         mi = list1[0]

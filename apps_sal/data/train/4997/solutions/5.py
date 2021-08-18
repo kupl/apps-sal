@@ -30,4 +30,4 @@ def equal_sigma1(nMax):
         if find_sum_of_divisors(num) == find_sum_of_divisors(rev_num):
             found_sum += num + (rev_num if rev_num <= nMax else 0)
 
-    return found_sum  # sum of found numbers
+    return found_sum

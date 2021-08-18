@@ -1,4 +1,3 @@
-# cook your dish here
 def f(x, ud, li):
     if not ud:
         return 1

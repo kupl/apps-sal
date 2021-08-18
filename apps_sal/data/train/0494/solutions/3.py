@@ -14,9 +14,7 @@ class Solution:
 
             maxk = 1
             length = 1
-            #print(left, right)
             while(left + length <= right - length + 1):
-                # print(text[left:left+length],text[right-length+1:right+1])
                 if text[left:left + length] == text[right - length + 1:right + 1]:
                     maxk = max(maxk, dp(left + length, right - length) + 2)
 

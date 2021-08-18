@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 def array1(size):
     return [0 for _ in range(size)]
 
