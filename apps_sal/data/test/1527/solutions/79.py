@@ -7,8 +7,8 @@ ans = 0
 
 for startx in range(w):
     for starty in range(h):
-        if grid[starty][startx] == "#":
-            continue
+        if grid[starty][startx] == "
+        continue
 
         dist = [[10000] * w for _ in range(h)]
         dist[starty][startx] = 0
@@ -26,8 +26,8 @@ for startx in range(w):
 
                 if x < 0 or x >= w or y < 0 or y >= h:
                     continue
-                if grid[y][x] == "#":
-                    continue
+                if grid[y][x] == "
+                continue
 
                 newDist = dist[cury][curx] + 1
                 if newDist < dist[y][x]:

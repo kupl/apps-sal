@@ -18,12 +18,3 @@ for x in range(len(s)):
 print(y, end="")
 for x in t[::-1]:
     print(x, end="")
-# s1 = sorted(s)
-# t, u = [], []
-# for l in s1:
-# 	if l in s:
-# 		i = s.index(l)
-# 		t += s[:i]
-# 		del s[:i+1]
-# 		u.append(l)
-# print("".join(u + t[::-1]))

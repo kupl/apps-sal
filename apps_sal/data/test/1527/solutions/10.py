@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def main():
     from collections import deque
     import numpy as np
@@ -11,11 +10,10 @@ def main():
     ans = 0
     for sh in range(H):
         for sw in range(W):
-            if S[sh][sw] == '#' or seen[sh][sw]:
-                continue
+            if S[sh][sw] == '
+            continue
             seen[sh][sw] = True
             queue = deque([(sh, sw)])
-            # distance = np.zeros((H, W), dtype=np.int16)
             distance = np.full((H, W), -1, dtype=np.int16)
             distance[sh, sw] = 0
             while queue:

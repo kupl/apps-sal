@@ -59,7 +59,3 @@ def main():
 
 
 main()
-
-# argc, argv
-# wait_pid
-# sig_alarm

@@ -33,8 +33,8 @@ def bfs(start):
 answer = 0
 for i in range(H):
     for j in range(W):
-        if S[i][j] == '#':
-            continue
+        if S[i][j] == '
+        continue
         depth = bfs((i, j))
         if answer < depth:
             answer = depth

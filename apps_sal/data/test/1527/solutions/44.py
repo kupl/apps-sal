@@ -1,7 +1,7 @@
 from collections import deque
 h, w = map(int, input().split())
-s = [input() for _ in range(h)]  # マップ
-vi = [[-1 for _ in range(w)] for _ in range(h)]  # visit
+s = [input() for _ in range(h)]
+vi = [[-1 for _ in range(w)] for _ in range(h)]
 st = deque()
 
 d = [[0, 1], [-1, 0], [1, 0], [0, -1]]

@@ -14,7 +14,6 @@ def RS(): return input().rstrip().split()
 
 
 mod = 1e9 + 7
-#################################################
 n, p = RI()
 sharks = [0] * n
 for i in range(n):

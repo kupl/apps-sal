@@ -1,4 +1,3 @@
-# Design_by_JOKER
 import math
 import cmath
 

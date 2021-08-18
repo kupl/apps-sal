@@ -8,8 +8,8 @@ for i in range(H):
     maze = list(input())
     tmplst = [0] * W
     for j in range(W):
-        if maze[j] == '#':
-            tmplst[j] = -1
+        if maze[j] == '
+        tmplst[j] = -1
 
     distancelist.append(tmplst)
 

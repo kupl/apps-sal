@@ -7,7 +7,6 @@ def goukei(n):
 
 x = int(input())
 tmp = int(math.sqrt(2 * x))
-# print(tmp,goukei(tmp))
 while goukei(tmp) < x:
     tmp += 1
 

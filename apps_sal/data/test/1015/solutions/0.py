@@ -1,5 +1,3 @@
-# import numpy as npy
-# idx=sorted(idx,key=functools.cmp_to_key(cmpx))
 import bisect
 import array
 import functools

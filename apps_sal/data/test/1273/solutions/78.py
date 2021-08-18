@@ -11,7 +11,6 @@ m = len(max(tree, key=len))
 col = [0] * (n + 1)
 col[1] = 'a'
 Q = deque([1])
-# print(tree)
 ans = {}
 while Q:
     temp = Q.popleft()

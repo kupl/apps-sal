@@ -1,4 +1,3 @@
-# C problem
 import sys
 
 buffer = input().split(' ')

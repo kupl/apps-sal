@@ -24,6 +24,5 @@ a, b = arr[0][0], arr[-1][0]
 x, y = arr[0][1], arr[-1][1]
 ans += 1 - ((1 - a / x) * (1 - b / y))
 
-# print(ans)
 
 print(ans * 2000)
