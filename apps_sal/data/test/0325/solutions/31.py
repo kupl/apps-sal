@@ -51,7 +51,6 @@ class bellman_ford():
         return False
 
 
-# Coins Respawn
 sys.setrecursionlimit(10**7)
 N, M, P = map(int, input().split())
 graph = []

@@ -1,4 +1,3 @@
-#import numpy as np
 import bisect
 
 
@@ -35,8 +34,4 @@ useless = str(input()).split(' ')
 s = [int(i) for i in input().split(' ')]
 n = 10**6
 mod = 10**9 + 7
-#k = 10**5
-#s = [0]*(2*k)
-#s[0:2*k:2] = list(range(1,k+1))
-#s[1:2*k:2] = list(range(1,k+1))
 print(main(n, s, mod))

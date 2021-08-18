@@ -1,4 +1,3 @@
-#from collections import deque
 from functools import reduce
 
 n = int(input())

@@ -18,7 +18,7 @@ for i in range(h):
     if "T" in c:
         goal = (i, c.index("T"))
     for j in range(w):
-        if c[j] in ("o"):  # , "S", "T"):
+        if c[j] in ("o"):
             data.append(1)
             rs.append(i)
             cs.append(h + j)

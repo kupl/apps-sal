@@ -17,7 +17,6 @@ def main():
         a -= 1
         b -= 1
         c = -(c - P)
-        #
         to[a].append(b)
         ot[b].append(a)
         edges.append((a, b, c))
@@ -25,7 +24,6 @@ def main():
     reachableFrom0 = set()
     reachableToN = set()
 
-    # dfs
     reachableFrom0.add(0)
     nodes = [0]
     while nodes:
@@ -35,7 +33,6 @@ def main():
                 nodes.append(i)
                 reachableFrom0.add(i)
 
-    # rdfs
     reachableToN.add(N - 1)
     nodes = [N - 1]
     while nodes:

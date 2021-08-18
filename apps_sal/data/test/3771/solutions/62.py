@@ -1,4 +1,3 @@
-# 最大流
 import queue
 NUMERIC_LIMITS = 10 ** 18
 

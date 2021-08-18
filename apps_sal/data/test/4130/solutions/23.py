@@ -22,7 +22,6 @@ for i, j in sorted(d.items()):
         cnt[i + 1] = 1
 
     elif j == 1:
-        #print(cnt[i-1], cnt[i], cnt[i+1])
         if i - 1 > 0 and cnt[i - 1] == 0:
             cnt[i - 1] = 1
             continue

@@ -27,9 +27,6 @@ def solve(n, lis):
 
     return (sum(dp) - 1) % MOD
 
-###########################
-###########################
-
 
 def intRead():
     while True:

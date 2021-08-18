@@ -1,7 +1,3 @@
-# graph = [{} for _ in range(V)]
-# when there is an edge u -> v (maxflow f)
-#  graph[u][v] = f
-#  graph[v][u] = f (if undirected) 0 (if directed)
 
 import sys
 
@@ -38,7 +34,6 @@ class FordFulkerson():
                     self.Flow[nv] = min(self.Flow[v], ncap)
         return 0
 
-    # solve
     def flow(self):
         flow = 0
         while True:

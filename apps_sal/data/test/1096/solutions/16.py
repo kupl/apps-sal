@@ -1,4 +1,3 @@
-#realInput = list(map(int, input().split()))
 kingMove = list(input())
 possMoves = 3
 if kingMove[0] > "a" and kingMove[0] < "h":

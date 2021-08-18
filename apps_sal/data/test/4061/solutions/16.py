@@ -1,19 +1,11 @@
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 import math
 from math import gcd, sqrt
 
-#T = int(input())
-#N = int(input())
 s1 = input()
 N = len(s1)
 s2 = input()
 M = len(s2)
-# print(N)
-#N,M,Q = [int(x) for x in stdin.readline().split()]
-#arr = [int(x) for x in stdin.readline().split()]
 
 asc = []
 dsc = []
@@ -35,8 +27,6 @@ for i in range(len(s1) - 1, -1, -1):
         break
 
 dsc = dsc[::-1]
-# print(N,M)
-# print(asc,dsc)
 res = 0
 for i in range(M - 1):
     d = dsc[i + 1] - asc[i] - 1

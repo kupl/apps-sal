@@ -32,8 +32,6 @@ for i in range(len(s) - 1, -1, -1):
 
 L2 = L2[::-1]
 
-# print(L1)
-# print(L2)
 
 mx = -1
 for i in range(0, len(L1) - 1):

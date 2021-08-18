@@ -29,7 +29,6 @@ sys.setrecursionlimit(100000)
 
 class Dinic:
     def __init__(self):
-        # self.N = N
         self.G = defaultdict(list)
 
     def add_edge(self, fr, to, cap):
@@ -38,7 +37,6 @@ class Dinic:
         :param to: 終点
         :param cap: 容量
         """
-        # forwardの最後には、キャパのうちどれだけ使ったかが入る
         forward = [to, cap, None]
         backward = [fr, 0, forward]
         forward[-1] = backward
@@ -92,19 +90,12 @@ class Dinic:
         nexts = self.G[v]
         for edge in nexts:
             w, cap, rev = edge
-            # まだキャパがあるならば
             if cap > 0 and level[v] < level[w]:
-                # キャパが余ってるなら全部流すし
-                # カツカツならキャパのmaxまで流す
                 d = self.dfs(w, t, min(f, cap))
-                # 帰りがけに、更新
                 if d > 0:
-                    # 順方向のキャパをd下げる
-                    # 逆方向のキャパをd増やす
                     edge[1] -= d
                     rev[1] += d
                     return d
-        # 次の道が見つからなければ終了
         return 0
 
     def flow(self, s, t):
@@ -116,7 +107,6 @@ class Dinic:
         flow = 0
         INF = 10**10
         G = self.G
-        # ルートが存在する限り、続ける
         while self.bfs(s, t):
             f = INF
             while f > 0:

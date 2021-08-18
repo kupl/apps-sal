@@ -1,5 +1,3 @@
-# https://tjkendev.github.io/procon-library/python/max_flow/dinic.html
-# Dinic's algorithm
 import sys
 from collections import deque
 
@@ -62,15 +60,12 @@ class Dinic:
         return flow
 
 
-# coding: utf-8
-# Your code here!
 read = sys.stdin.read
 readline = sys.stdin.readline
 
 h, w = list(map(int, readline().split()))
 b = read().split()
 
-#g = [[] for _ in range(h+w+2)]
 
 S = h + w
 T = h + w + 1
@@ -80,25 +75,16 @@ D = Dinic(h + w + 2)
 for i in range(h):
     for j in range(w):
         if b[i][j] == "S":
-            # print("S")
             sh, sw = i, j
             D.add_edge(S, i, 200)
             D.add_edge(S, j + h, 200)
-            # g[S].append((i,200))
-            # g[S].append((j+h,200))
         elif b[i][j] == "T":
-            # print("T")
             th, tw = i, j
             D.add_edge(i, T, 200)
             D.add_edge(j + h, T, 200)
-            # g[i].append((T,200))
-            # g[j+h].append((T,200))
         elif b[i][j] == "o":
-            # print("o")
             D.add_edge(i, j + h, 1)
             D.add_edge(j + h, i, 1)
-            # g[i].append((j+h,1))
-            # g[j+h].append((i,1))
 
 
 if sh == th or sw == tw:

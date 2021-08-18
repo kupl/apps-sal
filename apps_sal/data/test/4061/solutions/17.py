@@ -1,5 +1,3 @@
-# s = "tessts"
-# t = "tet"
 from collections import defaultdict
 s = input()
 t = input()

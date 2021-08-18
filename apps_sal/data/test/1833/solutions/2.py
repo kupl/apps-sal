@@ -26,12 +26,8 @@ def solve(n, lis):
     for i in lis:
         for j in nextDiv(i):
             dp[j] += dp[j - 1]
-            # dp[j] = dp[j] % MOD
 
     return (sum(dp) - 1) % MOD
-
-###########################
-###########################
 
 
 def intRead():

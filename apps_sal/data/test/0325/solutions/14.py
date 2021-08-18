@@ -16,7 +16,6 @@ for (a, b), c in list(d.items()):
     to.append(b)
     length.append(c)
 
-# N-1→0の辺を追加してから強連結判定⇒ゴールにたどり着けない閉路を除外
 connect_check = csr_matrix(([1] * (M + 1), (frm + [N - 1], to + [0])), shape=(N, N))
 _, labels = connected_components(connect_check, connection='strong')
 label_num = labels[0]

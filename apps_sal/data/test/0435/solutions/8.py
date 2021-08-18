@@ -2,7 +2,6 @@ n, k = map(int, input().split())
 s = input()
 res = 1
 
-# to a
 i = -1
 j = 0
 cur = 0
@@ -33,7 +32,6 @@ while i < j <= n:
         j = i + 1
 res = max(res, j - i - 1)
 
-# to b
 i = -1
 j = 0
 cur = 0

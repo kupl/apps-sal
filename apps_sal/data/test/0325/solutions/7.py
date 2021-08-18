@@ -33,19 +33,18 @@ class Bellman_Ford:
         self.E = e
 
     def prepare(self):
-        self.cost = [self.inf] * self.V  # 各頂点への最小コスト
-        self.cost[self.start] = 0  # 自身への距離は0
+        self.cost = [self.inf] * self.V
+        self.cost[self.start] = 0
 
     def search(self):
         for i in range(self.V):
-            update = False  # 更新が行われたか
+            update = False
             for x, y, z in self.lis:
                 if self.cost[y] > self.cost[x] + z:
                     self.cost[y] = self.cost[x] + z
                     update = True
             if not update:
                 break
-            # 負閉路が存在
             if i == self.V - 1:
                 self.close_minus = True
                 return False

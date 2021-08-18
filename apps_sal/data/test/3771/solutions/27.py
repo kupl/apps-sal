@@ -1,4 +1,3 @@
-# Dinic's algorithm
 from collections import deque
 
 
@@ -8,7 +7,7 @@ class Dinic:
         self.G = [[] for i in range(N)]
 
     def add_edge(self, fr, to, cap):
-        forward = [to, cap, None]  # (行き先、容量、逆辺の参照)
+        forward = [to, cap, None]
         forward[2] = backward = [fr, 0, forward]
         self.G[fr].append(forward)
         self.G[to].append(backward)

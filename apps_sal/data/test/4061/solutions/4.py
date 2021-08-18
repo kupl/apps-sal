@@ -18,8 +18,6 @@ while i >= 0 and j >= 0:
         rights[j] = i
         j -= 1
     i -= 1
-# print(lefts)
-# print(rights)
 ans = max(len(s) - lefts[-1] - 1, rights[0])
 for i in range(len(t) - 1):
     ans = max(ans, rights[i + 1] - lefts[i] - 1)

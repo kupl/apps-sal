@@ -22,7 +22,6 @@ class Dinic():
         self.to[u].append([v, cap, u_index_in_to_v])
         self.to[v].append([u, 0, v_index_in_to_u])
 
-    # 無向辺の追加
     def add_undir_edge(self, u, v, cap):
         u_index_in_to_v = len(self.to[v])
         v_index_in_to_u = len(self.to[u])
@@ -75,7 +74,6 @@ class Dinic():
             res += self.dfs()
         return res
 
-    # これが出力用
     def get_max_flow(self):
         if self.max_flow == -1:
             self.max_flow = self.calculation()

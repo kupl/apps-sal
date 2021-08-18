@@ -1,4 +1,3 @@
-# maximum flow
 from collections import defaultdict
 
 

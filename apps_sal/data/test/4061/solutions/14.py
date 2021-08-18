@@ -41,8 +41,6 @@ for i in range(n - 1, -1, -1):
         idx -= 1
         backward[i] = idx + 2
 
-# print(forward)
-# print(backward)
 
 c1 = dd(int)
 c2 = dd(int)
@@ -54,7 +52,6 @@ for i in range(n):
 ans = max(c2[1] - 1, n - c1[len(pat)])
 
 
-# print(c1,c2)
 for i in range(1, len(pat)):
     ans = max(ans, abs(c1[i] - c2[i + 1]) - 1)
 

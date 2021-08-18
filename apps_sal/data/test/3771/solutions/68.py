@@ -4,7 +4,7 @@ from collections import deque
 class MF_graph(object):
     def __init__(self, n):
         self.n = n
-        self.g = [[] for _ in range(n)]  # to, rev, cap
+        self.g = [[] for _ in range(n)]
         self.pos = []
 
     def add_edge(self, frm, to, cap):
@@ -17,7 +17,6 @@ class MF_graph(object):
     def get_edge(self, i):
         e_to, e_rev, e_cap = self.g[self.pos[i][0]][self.pos[i][1]]
         re_to, _, re_cap = self.g[e_to][e_rev]
-        # from, to, cap, flow
         return (re_to, e_to, e_cap + re_cap, re_cap)
 
     def edges(self):
