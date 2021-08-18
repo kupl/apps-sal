@@ -17,7 +17,6 @@ class Solution:
                 if quo != counter:
                     result.append(quo)
 
-            # Don't have to keep calculating
             if len(result) > 4:
                 break
 

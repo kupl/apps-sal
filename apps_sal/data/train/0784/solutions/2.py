@@ -2,7 +2,6 @@ import sys
 import os
 import random
 import math
-# nonlocal defs
 n, m, p = list(map(int, input().split()))
 a = [dict() for _ in range(n)]
 for _ in range(p):

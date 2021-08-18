@@ -13,9 +13,9 @@ class Solution:
             else:
                 graph[pre] = [post]
 
-        WHITE = 0  # never explored. NOT CHECKED
-        GREY = 1  # in the stack, exploring. CHECKING
-        BLACK = 2  # finished explored and we know for a fact there's no loop originated from this. CHECKED
+        WHITE = 0
+        GREY = 1
+        BLACK = 2
         state = [WHITE for _ in range(0, n)]
 
         res = []

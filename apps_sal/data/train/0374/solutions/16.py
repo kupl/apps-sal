@@ -1,13 +1,11 @@
 class Solution:
     def shortestSuperstring(self, A: List[str]) -> str:
-        # 20*2**12 = 4092*20 = 80000
         N = len(A)
         cost = [
             [0] * N for _ in range(N)
         ]
         for i in range(N):
             for j in range(N):
-                # cost of adding A[j] to A[i]
                 cost[i][j] = math.inf
                 for k in range(len(A[i])):
                     if A[j].startswith(A[i][k:]):

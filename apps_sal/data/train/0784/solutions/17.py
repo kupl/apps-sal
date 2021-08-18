@@ -19,10 +19,7 @@ for i in range(p):
 def matrix(n, m, d):
     ans = m - 1
     l = list(reversed(sorted(d.keys())))
-    # print "l = ",l
-    # print "d = ",d
     for i in range(len(l)):
-        # print "ans = ",ans
         number = l[i]
         if number > 1:
             below = number - 1

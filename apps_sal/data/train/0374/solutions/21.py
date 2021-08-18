@@ -5,13 +5,11 @@ class Solution:
     def shortestSuperstring(self, A: List[str]) -> str:
         n = len(A)
 
-        # calculate overlap
         overlap = [[0] * n for _ in range(n)]
         for i, j in product(range(n), repeat=2):
             l = min(len(A[i]), len(A[j]))
             overlap[i][j] = max(k for k in range(l + 1) if A[i][len(A[i]) - k:] == A[j][:k])
 
-        # TSP
         dp = [[INF] * n for _ in range(1 << n)]
         prev = [[(None, None)] * n for _ in range(1 << n)]
 

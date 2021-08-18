@@ -8,7 +8,7 @@ class Solution:
             return False
 
         nodes = preorder.split(',')
-        stack = [0] if nodes[0] != '#' else []
+        stack = [0] if nodes[0] != '
         dt = {0: 2}
         i = 1
 
@@ -16,9 +16,9 @@ class Solution:
             dt[stack[-1]] -= 1
             if dt[stack[-1]] == 0:
                 stack.pop()
-            if nodes[i] != '#':
-                stack.append(i)
-                dt[i] = 2
+            if nodes[i] != '
+            stack.append(i)
+            dt[i] = 2
             i = i + 1
 
         return not stack and i == len(nodes)

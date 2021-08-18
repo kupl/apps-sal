@@ -7,11 +7,9 @@ while t > 0:
     list = []
     list.append(0)
     list.append(0)
-    # list.append(0)
     sum = 0
     ptr = 0
     for i in s:
-        # print(i)
         if(ptr + 2 > (len(s) - 1)):
             break
         else:
@@ -23,7 +21,6 @@ while t > 0:
             list.append(sum)
 
             ptr += 1
-    # print(list)
     while q > 0:
         l, r = input().split()
         l = int(l)

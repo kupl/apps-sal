@@ -1,6 +1,5 @@
 class Solution:
     def sumFourDivisors(self, nums: List[int]) -> int:
-        # find all divisor of this number and use set() to select all the distinct factors
         res = 0
         for num in nums:
             divisor_num = set()
@@ -11,7 +10,5 @@ class Solution:
 
             if len(divisor_num) == 4:
                 res += sum(divisor_num)
-
-        # capital one len(divisor_num)==3, divisor_sum.remove(num)
 
         return res

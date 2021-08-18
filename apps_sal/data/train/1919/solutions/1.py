@@ -11,13 +11,11 @@ class Solution:
         if not prerequisites:
             return [i for i in range(numCourses)]
 
-        # create graph first
         graph = [[] for _ in range(numCourses)]
         for pair in prerequisites:
             x, y = pair
             graph[x].append(y)
 
-        # call topo order
         visited, visiting, topo = set(), set(), []
         for i in range(numCourses):
             if i not in visited:

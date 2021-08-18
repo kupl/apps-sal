@@ -1,8 +1,5 @@
 class Solution:
-    # https://www.youtube.com/watch?v=u_Wc4jwrp3Q
-    # time: O(n^2 * 2 ^ n), space(n * 2 ^ n)
     def shortestSuperstring(self, A: List[str]) -> str:
-        # add string t in the end of string s. cost = # of chars can't be merged.
         def mergecost(s, t):
             c = len(t)
             for i in range(1, min(len(s), len(t))):
@@ -24,10 +21,8 @@ class Solution:
 
         for s in range(1, 1 << n):
             for i in range(n):
-                # s doesn't contain index i.
                 if not (s & (1 << i)):
                     continue
-                # connect i to prev set.
                 prev = s - (1 << i)
                 for j in range(n):
                     if dp[s][i] > dp[prev][j] + cost[j][i]:
@@ -38,7 +33,6 @@ class Solution:
             if dp[-1][i] < minCost:
                 minCost = dp[-1][i]
                 end = i
-        # the state that all nodes are visited.
         s = (1 << n) - 1
         res = ''
         while s:

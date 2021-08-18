@@ -15,7 +15,6 @@ class Solution:
                 self.inDegree = 0
                 self.outDegree = 0
 
-        # initialization
         verts = []
         for _ in range(numCourses):
             verts.append(Vert())
@@ -28,28 +27,22 @@ class Solution:
             verts[post].invAdjList.append(pre)
             verts[post].inDegree += 1
 
-        # we use DFS
-        # note that BFS is to preOrder what DFS is to postOrder
         coursesToLearn = deque()
 
         def visitCourse(index):
             """verts, coursesToLearn, visited"""
             if verts[index].visited == 2:
-                return 0  # 返回条件1: 不必要, 只是为了不重复工作
+                return 0
 
-            #判断已访问记号: 判断是否存在loop
             elif verts[index].visited == 1:
-                return 1  # the diagram is cyclic
+                return 1
 
-            #设置已访问记号: 判断是否存在loop
             verts[index].visited = 1
 
-            # recursion主体
             for i in verts[index].adjList:
                 if visitCourse(i) == 1:
                     return 1
 
-            # 返回条件2: 访问完所有children
             verts[index].visited = 2
             coursesToLearn.appendleft(index)
             return 0

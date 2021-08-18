@@ -1,4 +1,3 @@
-# cook your dish here
 for l in range(int(input())):
     p1, p2, k = list(map(int, input().split()))
     p = p1 + p2

@@ -1,6 +1,4 @@
 
-# we can memorize the path while doing dp
-# let dp[used][i] = (string length, actual string) represents the bitmask used ends with ith element.
 
 class Solution:
     def shortestSuperstring(self, A: List[str]) -> str:
@@ -40,34 +38,3 @@ class Solution:
                 if used == end - 1 and dp[used][i][0] < le:
                     le, res = dp[used][i]
         return res
-
-
-# class Solution:
-
-#     def addCost(self, from_word, to_word):
-#         n = min(len(from_word), len(to_word))
-#         cost = len(to_word)
-#         for i in range(n):
-#             if from_word[-i-1] == to_word[i]:
-#                 cost -= 1
-#         return cost
-
-#     def shortestSuperstring(self, A: List[str]) -> str:
-#         # initalize 2D adjacency matrix
-#         n = len(A)
-#         adj_mat = [[0,] * n, ] * n
-#         # travers words list, memo the cost by adj_mat
-#         for i in range(n):
-#             for j in range(n):
-#                 if r != c:
-#                     from_word, to_word = A[i], A[j]
-#                     adj_mat[i][j] = self.addCost(from_word, to_word)
-#         # DP memo, the length of start words as the initial values
-#         # dp = [len(w) for w in A] * n
-#         dp = [0, ] * n
-#         for i, w in enumerate(A):
-#             visited = {w}
-#             dp[i] = len(w)
-#             while len(visited) < n:
-#                 from_w = w
-#                 to_w = min(adj_mat[from_w])
