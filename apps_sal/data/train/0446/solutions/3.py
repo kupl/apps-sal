@@ -1,6 +1,5 @@
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
-        # heap with key to be count of each number
         d = defaultdict(int)
         for i in arr:
             d[i] += 1

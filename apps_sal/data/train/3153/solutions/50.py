@@ -5,4 +5,4 @@ def player_rank_up(pts):
         return False
 
 
-playerRankUp = player_rank_up  # camelCase bad
+playerRankUp = player_rank_up

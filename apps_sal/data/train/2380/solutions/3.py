@@ -14,7 +14,6 @@ def main():
         s = [sum(m[j]) for j in range(k)]
         s_sum = sum(s)
         ans = [0] * k
-        # 0  1  1  0  1  0  1  1  0
         for j in range(k):
             off = [0] * (R + 1)
             on = [0] * (R + 1)

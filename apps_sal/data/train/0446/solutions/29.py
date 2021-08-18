@@ -3,7 +3,6 @@ from collections import Counter
 
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
-        # im going to use a map, and we need to sort the map based on
         m = Counter(arr)
 
         for x, y in sorted(list(m.items()), key=lambda x: x[1]):

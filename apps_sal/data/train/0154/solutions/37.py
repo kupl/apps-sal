@@ -2,11 +2,6 @@ class Solution:
     def maxArea(self, h: int, w: int, horizontalCuts: List[int], verticalCuts: List[int]) -> int:
         modu = 1000000007
 
-        # horizontal- i
-        # vertical-j
-        # 横向记录0-x, x-y, y-m留下最大
-        # 竖向也一样
-
         h_max = 0
         v_max = 0
 

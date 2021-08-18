@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 l = [int(i) for i in input().split()]
 xors = []
@@ -10,7 +9,6 @@ xors.sort()
 
 upto = [0] * n
 for i in range(len(xors)):
-    # a=xors[i][0]
     b, c = xors[i][1][0], xors[i][1][1]
     upto[c] = max(upto[c], upto[b] + 1)
 
