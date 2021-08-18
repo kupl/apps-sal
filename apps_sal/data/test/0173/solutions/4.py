@@ -1,5 +1,3 @@
-# CF BAYAN WARMUP
-# B
 
 l = input()
 h = input()

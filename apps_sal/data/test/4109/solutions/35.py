@@ -5,7 +5,7 @@ n, m, x = map(int, input().split())
 CA = [list(map(int, input().split())) for _ in range(n)]
 
 ans = 10**12 + 1
-for t in product([0, 1], repeat=n):  # (1, 0, 0)
+for t in product([0, 1], repeat=n):
     cost = 0
     understanding = [0] * m
     for i, b in enumerate(t):

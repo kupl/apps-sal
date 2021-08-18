@@ -33,10 +33,8 @@ def cands(n: int):
 
 k = ni()
 
-# 1から9まで
 ans = [i for i in range(1, 10)]
 
-# 次の候補
 cur = 10
 while len(ans) < k:
     cand = cands(cur)

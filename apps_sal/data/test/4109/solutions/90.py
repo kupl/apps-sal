@@ -1,5 +1,3 @@
-# author:  Taichicchi
-# created: 14.09.2020 22:23:14
 
 import sys
 from itertools import combinations

@@ -1,6 +1,5 @@
-from sys import stdin  # ,stdout
+from sys import stdin
 input = stdin.readline
-#print = stdout.write
 
 file = open('input.txt', 'r')
 num = file.readlines()

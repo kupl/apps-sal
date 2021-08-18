@@ -19,7 +19,6 @@ def DFexplo(dictAdj, start):
 
 
 def solve(dictAdj):
-    # print(dictAdj)
     for i in range(len(H)):
         for j in range(len(V)):
             nodesReachable = DFexplo(dictAdj, (i, j))

@@ -12,7 +12,6 @@ def main():
             cost.append(0)
             for j in range(n):
                 cost[k] = cost[k] + (al[j] - i) ** 2
-                # print(cost[i])
         print((min(cost)))
 
 

@@ -1,4 +1,3 @@
-# 他の人の回答
 n, m, x = map(int, input().split())
 ca = [list(map(int, input().split())) for _ in range(n)]
 

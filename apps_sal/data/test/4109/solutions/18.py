@@ -7,12 +7,11 @@ readlines = sys.stdin.readlines
 def main():
     n, m, x = list(map(int, input().split()))
     data = np.array(read().split(), np.int64)
-    data = data.reshape(n, -1)  # dataをn行に整形
-    cost_per_cost = data[:, 0]  # data全行の0列
+    data = data.reshape(n, -1)
+    cost_per_cost = data[:, 0]
     effect_per_book = data[:, 1:]
 
     costs = np.zeros(2**n, np.int64)
-    # ability 行数：2**n(本の組み合わせパターン), 列数：アルゴリズムの数
     ability = np.zeros((2**n, m), np.int64)
     for i in range(n):
         costs[1 << i:1 << (i + 1)] = costs[:1 << i] + cost_per_cost[i]

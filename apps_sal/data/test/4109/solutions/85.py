@@ -2,7 +2,6 @@ from itertools import product
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-#import numpy as np
 
 
 def main():

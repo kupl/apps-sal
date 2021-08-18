@@ -1,8 +1,6 @@
 N = int(input())
 int_list = [int(x) for x in input().split()]
 
-# int_listの各整数をyに書き換えるときのコストの総和を計算
-
 
 def calc_cost(int_list, y):
     cost = 0

@@ -29,12 +29,9 @@ C = Counter(L)
 ANS = 0
 
 for a in A:
-    # LEN_a=len(a)
 
     for k in range(1, 11):
         x = C[k]
-        # if k==LEN_a:
-        #    x-=1
 
         ANS = (ANS + calc(a, k) * x) % mod
 

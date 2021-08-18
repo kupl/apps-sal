@@ -19,6 +19,4 @@ for i in reversed(list(range(n))):
     else:
         d[i] = min(d[j] for j in tree[i])
 
-# print(f)
-# print(d)
 print(leaves - d[0] + 1)

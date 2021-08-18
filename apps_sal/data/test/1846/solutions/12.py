@@ -1,4 +1,3 @@
-# ---------------------------------------------
 import sys
 sys.stdin = open('input.txt', 'r')
 sys.stdout = open('output.txt', 'w')
@@ -8,7 +7,6 @@ def get_int(): return int(input())
 def get_ints(): return map(int, input().split())
 def get_str(): return input()
 def get_strs(): return input().split()
-# ---------------------------------------------
 
 
 n = get_int()

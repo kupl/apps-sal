@@ -1,4 +1,3 @@
-# A
 def cin(): return map(int, input().split())
 
 

@@ -8,7 +8,7 @@ def digit_sum(s):
 def f(n):
     n = str(n)
     f_min, f_ans = float('inf'), -1
-    for i in range(len(n)):  # 上から何桁目をいじるか
+    for i in range(len(n)):
         for x in range(int(n[i]), 10):
             s = n[:i] + str(x) + '9' * (len(n) - i - 1)
             if f_min > int(s) / digit_sum(s):
