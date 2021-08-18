@@ -67,5 +67,4 @@ def numBusesToDestination_GraphTakeRouteAsNod_TLE(routes, S, T):
 
 class Solution:
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        # return numBusesToDestination_Graph_TLE(routes, S, T)
         return numBusesToDestination_GraphTakeRouteAsNod_TLE(routes, S, T)

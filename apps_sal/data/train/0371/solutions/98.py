@@ -13,7 +13,6 @@ class Solution:
             for s in routes[i]:
                 stops[s].append(i)
 
-        # bfs
         curr_layer = [i for i, x in enumerate(routes) if S in x]
         next_layer = []
         num_routes = 1

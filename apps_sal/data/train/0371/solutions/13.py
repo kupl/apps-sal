@@ -13,7 +13,6 @@ class Solution:
                     graph[i].add(j)
                     graph[j].add(i)
 
-        # Get source and destination
         for i in range(n):
             if S in routes[i]:
                 if T in routes[i]:
