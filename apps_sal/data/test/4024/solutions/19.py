@@ -1,4 +1,3 @@
-# your code goes here
 n, k = map(int, input().split())
 s = input()
 c = 0

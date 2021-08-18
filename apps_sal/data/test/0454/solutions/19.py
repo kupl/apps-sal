@@ -2,8 +2,6 @@ from collections import defaultdict
 n, k0 = map(int, input().split())
 mod = 10**9 + 7
 
-# DP[j,k]=l で,j個保留してスコアkのときの場合の数がl
-
 
 DP = defaultdict(int)
 DP[0, 0] = 1

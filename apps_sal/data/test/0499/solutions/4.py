@@ -1,6 +1,6 @@
 le = int(input())
 s = input()
-l = [0, 0, 0]  # B,G,R
+l = [0, 0, 0]
 for i in range(le):
     c = s[i]
     if c == 'B':

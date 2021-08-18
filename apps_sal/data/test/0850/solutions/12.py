@@ -1,4 +1,3 @@
-# Start writing your code here
 a = int(input())
 mas = input().split()
 count1 = 0

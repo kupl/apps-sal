@@ -4,7 +4,6 @@ a, b = list(map(int, input().split()))
 
 dang = 1
 
-#w = [x+1 for x in range(a)]
 r = [(x, set()) for x in range(a)]
 
 for i in range(b):
@@ -19,8 +18,6 @@ r = sorted(r, key=lambda x: len(x[1]), reverse=True)
 willreact = r[0][1]
 del r[0]
 
-#print('r:', r)
-#print('wr:', willreact)
 
 while len(r) > 0:
     dr = 0

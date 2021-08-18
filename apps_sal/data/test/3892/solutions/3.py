@@ -8,11 +8,8 @@ cnd = [0 for x in range(n + 1)]
 mn = [5000 for x in range(n + 1)]
 for i in range(m):
     a, b = map(int, input().split())
-    # print(a,b,dist(a,b))
     cnd[a] += 1
     mn[a] = min(mn[a], dist(a, b))
-# print(mn)
-# print(cnd)
 
 for i in range(1, n + 1):
     ans = 0

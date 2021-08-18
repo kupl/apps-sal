@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 k, a, b = [int(x) for x in input().strip().split()]
 qa = a // k
 qb = b // k

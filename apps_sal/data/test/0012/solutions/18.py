@@ -19,7 +19,6 @@ def solve():
     if g_seg:
         l.append(("G", g_seg))
         g_count += 1
-    # print(l)
     if not g_count:
         return 0
     if len(l) == 1:

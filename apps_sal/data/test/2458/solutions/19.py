@@ -1,5 +1,3 @@
-#a, b, c, d = [int(x) for x in stdin.readline().split()]
-#a, b, c, d = map( int, stdin.readline().split() )
 from sys import stdin, stdout
 modconst = 1000000007
 
