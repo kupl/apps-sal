@@ -12,7 +12,6 @@ class Solution:
             return -1
 
     def checkStartWith10(self, L, l):
-        #print(L, l)
         if len(L) != l:
             return False
 

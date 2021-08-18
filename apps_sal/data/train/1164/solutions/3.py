@@ -1,4 +1,3 @@
-# cook your dish here
 
 p, s = list(map(int, input().split()))
 

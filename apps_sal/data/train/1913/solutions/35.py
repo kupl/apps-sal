@@ -8,7 +8,6 @@ class Solution:
         if i == -1:
             return A
 
-        # find largest number just under A[i]
         k = i + 1
         j = i + 1
         while j < len(A):

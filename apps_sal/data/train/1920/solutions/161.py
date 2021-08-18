@@ -10,7 +10,6 @@ class TimeMap:
         if key not in self._data:
             return ''
 
-        # 找数组里最后一个小于给定的timestamp的数据
         arr = self._data[key]
         start, end = 0, len(arr) - 1
         while start + 1 < end:

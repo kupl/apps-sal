@@ -4,16 +4,11 @@ class Solution:
             return []
 
         i = len(A) - 1
-        # find first elt A[i - 1] > A[i], from right to left
-        # 1[9]467, find 9
-        #   i
         while i > 0 and A[i - 1] <= A[i]:
             i -= 1
         if i == 0:
-            return A  # already at the smallest permutation
+            return A
 
-        # 1[9]46[7], find first elt < A[i - 1], which is 7
-        # swap 9 and 7
         j = len(A) - 1
         while j > i and A[j] >= A[i - 1]:
             j -= 1

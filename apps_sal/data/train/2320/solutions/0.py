@@ -30,12 +30,8 @@ def main():
 
 
 def __starting_point():
-    # the following 4 lines of code are required to increase
-    # the recursion limit and stack size
-    # * if is cause any problem, comment out the lines,
-    # * and just call main()
     setrecursionlimit(10**6)
-    threading.stack_size(134217728)  # 128MB
+    threading.stack_size(134217728)
     thread = threading.Thread(target=main)
     thread.start()
 

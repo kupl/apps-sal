@@ -2,9 +2,6 @@ N, M = map(int, input().split())
 A = list(map(int, input().split()))
 a = sum(A)
 base = 10 ** 9 + 7
-# * pow(a, base-2, base) # equivalent to division by a
-
-# ans = comb(M+N, a+N)
 
 
 def fact(x):

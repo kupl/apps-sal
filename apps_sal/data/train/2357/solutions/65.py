@@ -1,6 +1,3 @@
-# Date [ 2020-12-05 22:15:25 ]
-# Problem [ d.py ]
-# Author Koki_tkg
 
 import sys
 

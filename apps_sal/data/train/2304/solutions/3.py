@@ -13,15 +13,12 @@ S = input().rstrip()
 
 LS = len(S)
 
-# 長さ、何通り
 dp = np.zeros(N + 1, dtype=np.int64)
 dp[0] = 1
 for _ in range(N):
     prev = dp
     dp = np.zeros_like(prev)
-    # 文字の追加
     dp[1:] += 2 * prev[:-1]
-    # 文字の削除
     dp[:-1] += prev[1:]
     dp[0] += prev[0]
     dp %= MOD

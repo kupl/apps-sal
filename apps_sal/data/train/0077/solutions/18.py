@@ -17,8 +17,6 @@ for q in range(int(input())):
         for j in range(3):
             w = a + j
             x = [l[k] for k in range(3) if lasta + k != w]
-            # print(w, dp[-1], x)
             ans[j] = j * b + min(x)
         dp.append(ans)
     print(min(dp[-1]))
-    # print(dp)

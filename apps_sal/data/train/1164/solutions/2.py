@@ -1,4 +1,3 @@
-# cook your dish here
 p, s = [int(i) for i in input().split()]
 scores = {}
 

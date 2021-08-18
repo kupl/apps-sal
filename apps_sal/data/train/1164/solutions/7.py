@@ -11,7 +11,6 @@ for _ in range(p):
     arr = list(zip(sc, nk))
 
     arr_sort = sorted(arr, key=itemgetter(0))
-    # print(arr)
     temp = 0
     for i in range(s - 1):
         if arr_sort[i][1] > arr_sort[i + 1][1]:

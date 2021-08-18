@@ -46,7 +46,6 @@ def main():
     elif dm == 0:
         ans = 1
     else:
-        # ans = (1 - pow(x, m+1, P)) * inv(1 - x, P) % P
         ans = comb(x + dm, dm, P)
 
     print(ans)

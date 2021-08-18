@@ -1,4 +1,3 @@
-# cook your dish here
 N, M, K = list(map(int, input().split()))
 l1 = []
 d = {}
