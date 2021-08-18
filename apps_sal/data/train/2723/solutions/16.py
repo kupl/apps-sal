@@ -1,5 +1,4 @@
 def average_string(s):
-    # your code here
     res = 0
     num = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     str = ('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine')

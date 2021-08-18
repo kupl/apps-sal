@@ -12,8 +12,6 @@ class Solution:
                 shift_times.append(ord(b) - ord(a))
             else:
                 shift_times.append((ord('z') - ord(a)) + (ord(b) - ord('a')) + 1)
-            #print(shift_times, b, a, (ord('z')-ord(b)), (ord(a)-ord('a')))
-            # pruning for unable to shift
             if shift_times[-1] > k:
                 return False
 
@@ -22,13 +20,11 @@ class Solution:
             shift_amount = shift_times[idx]
             if shift_amount == 0:
                 continue
-            # shift_times already used before, should plus wrapping
             if shift_amount in shift_used:
                 if 26 * shift_used[shift_amount] + shift_amount > k:
                     return False
                 else:
                     shift_used[shift_amount] += 1
-            # can shift normally
             else:
                 shift_used[shift_amount] = 1
         return True

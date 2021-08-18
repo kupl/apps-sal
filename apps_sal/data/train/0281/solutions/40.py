@@ -6,7 +6,6 @@ class Solution:
         if k == 0:
             return s == t
 
-        # record how many letters need to be changed, autobump step if step is found
         steps = collections.defaultdict(int)
         for sc, tc in zip(s, t):
             if sc != tc:

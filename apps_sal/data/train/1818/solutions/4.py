@@ -1,16 +1,10 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def smallestFromLeaf(self, root: TreeNode) -> str:
         def dfs(node, path):
             nonlocal ans
             if node:
                 path.append(letter_map[node.val])
-                if not node.left and not node.right:  # leaf
+                if not node.left and not node.right:
                     path_str = ''.join(reversed(path))
                     if not ans:
                         ans = path_str

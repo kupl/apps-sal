@@ -10,7 +10,6 @@ class Solution:
                         group_list.append(idx)
                         break
                 else:
-                    # new group list
                     size_map[group_size].append([idx])
         ret = []
         for k, v in list(size_map.items()):

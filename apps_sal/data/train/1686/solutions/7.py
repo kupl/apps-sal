@@ -1,4 +1,3 @@
-# cook your dish here
 R, C, d = map(int, input().split())
 table = []
 for i in range(R):
@@ -28,11 +27,8 @@ for i in range(R):
             table[j][0] = 0
         break
 answer = table.copy()
-# print(answer)
 for i in range(1, R):
     for j in range(1, C):
         if answer[i][j] != 0:
             answer[i][j] = answer[i - 1][j] + answer[i][j - 1]
 print(str(answer[R - 1][C - 1] % 20011))
-# for row in answer:
-# print(row)

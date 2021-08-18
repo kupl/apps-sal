@@ -9,9 +9,7 @@ class Solution:
         for i in range(len(nums)):
             cur_rem = (cur_rem + nums[i]) % p
             h_rem[cur_rem] = i
-            # print([rem, cur_rem, (cur_rem - rem) % p])
             if (cur_rem - rem) % p in h_rem:
-                # print([min_len, i - h_rem[(cur_rem - rem) % p]])
                 min_len = min(min_len, i - h_rem[(cur_rem - rem) % p])
         if min_len == len(nums):
             return -1

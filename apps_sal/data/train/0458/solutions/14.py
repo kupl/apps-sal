@@ -13,5 +13,4 @@ class Solution:
             t = (d + p - dp[-1]) % p
             if t in dic:
                 ret = min(ret, i - dic[t])
-        # print(dp, dic)
         return ret if ret < n else -1

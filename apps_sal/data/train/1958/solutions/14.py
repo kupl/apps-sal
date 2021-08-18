@@ -8,7 +8,6 @@ class Solution:
         for i in c:
             newlist = [j for j, val in enumerate(groupSizes) if val == i]
             if(len(newlist) > i):
-               # n = int(len(newlist)/i)
                 newlist = [newlist[j:j + i] for j in range(0, len(newlist), i)]
                 cn.extend(newlist)
             else:

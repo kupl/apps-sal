@@ -9,7 +9,6 @@ class Solution:
                 ls[i] = 26 + ls[i]
         d = {}
         ans = 0
-        # print(ls)
         for i in ls:
             if i == 0:
                 continue
@@ -20,6 +19,5 @@ class Solution:
                 ans = max(26 * d[i] + i, ans)
                 d[i] += 1
             if ans > k:
-                # print(ans, k, d)
                 return False
         return True

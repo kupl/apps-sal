@@ -17,7 +17,6 @@ class Solution:
                 rmSubl = i - preIdx
                 minSubl = min(minSubl, rmSubl)
 
-        # last one
         l_mod = prefixSum[n] % p
         if l_mod == 0:
             minSubl = 0

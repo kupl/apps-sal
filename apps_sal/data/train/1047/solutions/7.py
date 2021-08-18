@@ -1,12 +1,11 @@
-# cook your dish here
 '''
 t=int(input())
 
-l=[]                                    #array of coordinates
+l=[]                                    
 while t:
     n=int(input())
     while n:
-     coor=int(input()),int(input())  #coordinates
+     coor=int(input()),int(input())  
      l.append(coor)
      n-=1
   
@@ -29,14 +28,12 @@ import math
 
 
 def f(l):
-    # Rotate the points by 45 degrees
     l1 = []
     for i in range(len(l)):
         w = cmath.polar(l[i])
         z = cmath.rect(w[0], w[1] - cmath.pi / 4)
         l1.append(z)
 
-    # print(l1)
     l1.sort(key=lambda z: z.real)
     for i in range(len(l1) - 1):
         diff = abs(l1[i].real - l1[i + 1].real)
@@ -47,7 +44,6 @@ def f(l):
             minDiffX = diff
         else:
             minDiffX = min(diff, minDiffX)
-    # print(minDiffX)
 
     l1.sort(key=lambda x: x.imag)
     for i in range(len(l1) - 1):
@@ -59,9 +55,7 @@ def f(l):
             minDiffY = diff
         else:
             minDiffY = min(diff, minDiffY)
-    # print(minDiffY)
 
-    # print(l1)
     '''d=min(abs(l[0].real-l[1].real),abs(l[0].imag-l[1].imag))
     for i in range(1,len(l1)):
      for j in range(i+1,len(l1)):
@@ -74,13 +68,11 @@ def f(l):
 T = int(input())
 
 while T:
-    l = []  # array of coordinates
+    l = []
 
     n = int(input())
     while n:
-        # print(n)
-        t = input().split()  # coordinates
-        # print(t)
+        t = input().split()
         l.append(complex(int(t[0]), int(t[1])))
         n -= 1
 

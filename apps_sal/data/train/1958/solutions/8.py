@@ -5,10 +5,8 @@ class Solution:
 
         for i in range(len(groupSizes)):
             belongGroupCount = groupSizes[i]
-            # print(f'group: {belongGroupCount} | person i: {i}')
 
             existingGroup = groups.get(belongGroupCount)
-            # print(f'existing: {groups}, belong: {belongGroupCount}')
             if existingGroup is None:
                 groups[belongGroupCount] = []
                 existingGroup = groups.get(belongGroupCount)

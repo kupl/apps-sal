@@ -8,12 +8,8 @@ while (t > 0):
         x, y = map(int, input().split())
         d.append(y - x)
         dl.append(y + x)
-    #print("d = ",d)
-    #print("dl = ",dl)
     d = sorted(d)
     dl = sorted(dl)
-    #print("d now = ",d)
-    #print("dl now = ",dl)
     ans = abs(d[0] - d[1])
     k = 0
     while (k < n - 1):
