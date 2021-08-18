@@ -49,9 +49,6 @@ def calc(w, t, n):
     return max_length
 
 
-# def __starting_point():
-#     print(primeFactors(100))
-
 def __starting_point():
     n = int(input())
     weights = list(map(int, input().split()))

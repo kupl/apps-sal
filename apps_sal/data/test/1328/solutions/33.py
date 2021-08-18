@@ -8,7 +8,7 @@ def main():
     i, j = 0, 1
     for _ in range(N):
         ai, bi, ci = list(map(int, input().split()))
-        x = Ma * bi - Mb * ai  # Σai:Σbi=Ma:Mb<->Ma*Σbi-Mb*Σai=0
+        x = Ma * bi - Mb * ai
 
         for k in range(-MX, MX + 1):
             dp[j][k] = dp[i][k]

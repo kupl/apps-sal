@@ -30,7 +30,7 @@ else:
             arx.append(i)
     a = arx[0]
     b = arx[1]
-    if b in d2:  # a in d2
+    if b in d2:
         a, b = b, a
     x = 0
     ar1 = []

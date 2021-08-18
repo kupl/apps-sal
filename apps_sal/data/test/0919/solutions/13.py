@@ -5,7 +5,6 @@ arr = []
 for i in s:
     arr.append(i)
 arr.sort()
-# print(arr)
 wt = 0
 prev = -2
 for i in arr:

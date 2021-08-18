@@ -9,7 +9,6 @@ def cwsum(l): return [sum([x[0] for x in l]), sum([x[1] for x in l])]
 
 
 def chmin(a, b): return (a, b)[b < a]
-# cwsum = lambda l:np.sum(l,axis=0)
 
 
 def main():
@@ -17,12 +16,6 @@ def main():
     infty = 10**9
     ch = [list(map(int, input().split())) for _ in range(N)]
     p = [(-1) * Mb, Ma]
-    # cand=[v[2] for v in ch if inp(p,v[:2])==0]
-    # if cand:
-    # m1=min(cand)
-    # else:
-    # m1=infty
-    # ncand=[v for v in ch if inp(p,v[:2])!=0] #p方向への射影
     pch = [[inp(v[:2], p), v[2]] for v in ch]
     X = N * max([abs(w[0]) for w in pch])
     dp = [[infty] * (2 * X + 1) for _ in range(N)]
@@ -36,9 +29,6 @@ def main():
                 dp[i][j] = chmin(dp[i - 1][j], dp[i - 1][j - pch[i][0]] + pch[i][1])
             elif i > 0:
                 dp[i][j] = dp[i - 1][j]
-    #  print(ch)
-    #  print(pch)
-    #  print(dp)
     if dp[N - 1][X] == infty:
         print((-1))
     else:

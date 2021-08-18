@@ -19,7 +19,5 @@ for i in range(Patterns):
             value += target[x] * mult[x]
         value_ls[n] = value
     value_ls.sort(reverse=True)
-    # print(value_ls)
-    # print(mult,sum(value_ls[:Eat]))
     ans = max(ans, sum(value_ls[:Eat]))
 print(ans)

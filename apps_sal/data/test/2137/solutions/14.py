@@ -1,4 +1,3 @@
-# http://codeforces.com/contest/975/problem/D
 n, a, b = (int(x) for x in input().split())
 
 marks = 0

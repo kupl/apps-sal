@@ -2,12 +2,10 @@ import collections
 import copy
 INF = 10000
 
-# 入力
 N, Ma, Mb = map(int, input().split())
 medichine = [tuple(map(int, input().split())) for _ in range(N)]
 
 dp = {}
-# dp初期化
 dp = collections.defaultdict(lambda: INF)
 dp[0, 0] = 0
 

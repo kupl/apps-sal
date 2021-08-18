@@ -1,5 +1,3 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
 N, M = list(map(int, input().split()))
 vals = [[] for _ in range(8)]

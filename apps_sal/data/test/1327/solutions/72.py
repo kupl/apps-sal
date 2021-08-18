@@ -14,4 +14,3 @@ for X in (1, -1):
             A.sort(reverse=True)
             ans = max(ans, sum(A[:M]))
 print(ans)
-# O(NlogN)で全列挙

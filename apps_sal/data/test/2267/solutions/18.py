@@ -15,4 +15,3 @@ def cmp(x, y):
 
 
 print(''.join(sorted(a, key=cmp_to_key(cmp))))
-#print(a.sort(key = lambda x,y: cmp(x,y)))

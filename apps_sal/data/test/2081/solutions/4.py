@@ -40,7 +40,6 @@ def d(a, cmp, val):
             st.pop()
         r[i] = st[-1][1]
         st.append((v, i))
-        # print(st)
     return r
 
 
@@ -59,12 +58,6 @@ Ml = d(a, gt, (10**9))
 Mr = rr(d(b, gte, (10**9)))
 ml = d(a, lt, -(10**9))
 mr = rr(d(b, lte, -(10**9)))
-# print(a)
-# print(Ml)
-# print(Mr)
-# print(b)
-# print(ml)
-# print(mr)
 r = 0
 for i in range(n):
     r += a[i] * ((i - Ml[i]) * (Mr[i] - i) - (i - ml[i]) * (mr[i] - i))

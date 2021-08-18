@@ -1,15 +1,11 @@
-# -*- coding: utf-8 -*-
-# モジュールのインポート
 import sys
 
-# 標準入力を取得
 N, M = list(map(int, input().split()))
 cakes = []
 for n in range(N):
     cake_n = list(map(int, input().split()))
     cakes.append(cake_n)
 
-# 求解処理
 ans = -sys.maxsize
 element = 3
 for bit in range(1 << element):
@@ -27,5 +23,4 @@ for bit in range(1 << element):
 
     ans = max(ans, sum(map(abs, indicator)))
 
-# 結果出力
 print(ans)

@@ -38,7 +38,6 @@ def solve(n, s):
         print(M)
         return
 
-    # Casos dif<0 y cl>cr
     if(dif > 0):
         dif = -dif
         cl, cr = cr, cl

@@ -1,10 +1,10 @@
 import itertools
 import numpy as np
 
-bit_base = 2  # bit_base^nの全探査になる.
+bit_base = 2
 
 
-def Base_10_to_n(X, n):  # 10進数をbit_base進数に変換
+def Base_10_to_n(X, n):
     X_dumy = X
     out = ''
     while X_dumy > 0:

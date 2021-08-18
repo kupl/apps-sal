@@ -19,7 +19,6 @@ for i in range(n):
             step.add((si[0] + ai, si[1] + bi))
 
     dp = tempdp[:]
-# 28 20
 
 ans = float('inf')
 for i in range(1, min(sum(a) // ma, sum(b) // mb) + 1):

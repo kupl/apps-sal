@@ -19,7 +19,7 @@ while x[i][0] > 0:
     if i < len(x) - 1:
         if x[i][0] == x[i + 1][0]:
             x[i + 1][1] += x[i][1]
-            x[i][1] = 0  # oops
+            x[i][1] = 0
             i += 1
     diff, cnt = x[i]
     if k - ops >= cnt:
