@@ -22,7 +22,7 @@ INF = float('inf')
 mod = 10 ** 9 + 7
 
 N = INT()
-lim = N + 10  # 必要そうな階乗の限界を入れる
+lim = N + 10
 fact = [1] * (lim + 1)
 fact_inv = [1] * (lim + 1)
 for n in range(1, lim + 1):
@@ -31,7 +31,7 @@ fact_inv[lim] = pow(fact[lim], mod - 2, mod)
 for n in range(lim, 0, -1):
     fact_inv[n - 1] = (n * fact_inv[n]) % mod
 
-tree = [[] for _ in range(N + 1)]  # 1-indexed
+tree = [[] for _ in range(N + 1)]
 for _ in range(N - 1):
     a, b = MAP()
     tree[a].append(b)
@@ -53,7 +53,7 @@ while stack:
 size_d = [0] * (N + 1)
 dp_d = [1] * (N + 1)
 
-for v in order[::-1]:  # 根に遠いほうから(down方向のボトムアップ)
+for v in order[::-1]:
     dp_d[v] *= fact[size_d[v]]
     dp_d[v] %= mod
     p = parent[v]
@@ -81,7 +81,6 @@ for v in order:
     for node, c in zip(tree[v], contrib):
         if node != p:
             dp_u[node] = (c[0] * c[1] * fact[size_u[node] - 1]) % mod
-# print(dp_u)
 for xd, xu, sd, su in zip(dp_d[1:], dp_u[1:], size_d[1:], size_u[1:]):
     x = xd * xu * fact[sd + su] * fact_inv[sd] * fact_inv[su] % mod
     print(x)

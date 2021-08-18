@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
 import sys
 from collections import defaultdict
-MOD = 1000000007  # type: int
+MOD = 1000000007
 
 
 class Combination(object):
@@ -31,7 +30,6 @@ class Combination(object):
 
 
 def make_downward(E, N, s=0):
-    # BFSでdownward順を構成する
     front, back = 0, 1
     downward = [s] * N
     parent = [-1] * N
@@ -44,30 +42,22 @@ def make_downward(E, N, s=0):
             parent[u] = v
             downward[back] = u
             back += 1
-    # print(downward)
     return downward, parent
 
 
 def solve(N: int, a: "List[int]", b: "List[int]"):
-    # グラフの構築
     E = [[] for _ in range(N)]
     for aa, bb in zip(a, b):
         E[aa - 1].append(bb - 1)
         E[bb - 1].append(aa - 1)
 
-    # 組み合わせの初期化
     cmb = Combination(N)
 
-    # BFSでdownward順を構成する
     downward, parent = make_downward(E, N)
 
-    # 節点vを根とした部分木の塗り方dp[v]
     dp = [1] * N
-    # 節点vを根とした部分木のサイズsize[v]+1
     size = [0] * N
 
-    # 木DP
-    # 葉から根へ向かう探索
     for v in reversed(downward):
         for u in E[v]:
             if u == parent[v]:
@@ -80,8 +70,6 @@ def solve(N: int, a: "List[int]", b: "List[int]"):
         dp[v] *= cmb.fac[size[v]]
         dp[v] %= MOD
 
-    # 全方位木DP
-    # 根から葉へ向かう探索
     for v in downward:
         for u in E[v]:
             if u == parent[v]:
@@ -102,9 +90,9 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    a = [int()] * (N - 1)  # type: "List[int]"
-    b = [int()] * (N - 1)  # type: "List[int]"
+    N = int(next(tokens))
+    a = [int()] * (N - 1)
+    b = [int()] * (N - 1)
     for i in range(N - 1):
         a[i] = int(next(tokens))
         b[i] = int(next(tokens))

@@ -1,4 +1,3 @@
-# template
 import sys
 sys.setrecursionlimit(10**9)
 
@@ -32,26 +31,13 @@ def read_allstrs_grid(w):
     grid = list(map(list, zip(*(grid for _ in range(w)))))
     return grid
 
-# import
-# from copy import deepcopy
-# from decimal import Decimal
-# from math import ceil,floor
-# from collections import deque,Counter
-# from heapq import heapify,heappop,heappush
-# from itertools import accumulate,product,permutations,combinations,combinations_with_replacement
-# from bisect import bisect_left,bisect_right
-
-# solution
-
 
 def sol():
     return None
 
 
 def main():
-    # input data
     n, m = read_ints()
-    # solve
     if n == m == 1:
         print(1)
     elif n == 1 or m == 1:

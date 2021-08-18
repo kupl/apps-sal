@@ -19,6 +19,5 @@ for i in itertools.permutations(l, N):
         y1 = y[i[j]]
         y2 = y[i[j - 1]]
         ans += pow((x1 - x2)**2 + (y1 - y2)**2, 0.5)
-        # print(i, j, x1, y1, x2, y2)
 ans /= cnt
 print(ans)

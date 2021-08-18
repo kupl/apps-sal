@@ -1,4 +1,3 @@
-# B
 n, x = map(int, input().split())
 min_m = 1000
 count = 0

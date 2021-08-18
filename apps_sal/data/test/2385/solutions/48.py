@@ -1,18 +1,13 @@
 from functools import reduce
-# 木を単方向に
 
 
 def rerooting(n, edges, identity, merge, add_node):
-    # 全方位木 dp
-    # 参考1: https://qiita.com/keymoon/items/2a52f1b0fb7ef67fb89e
-    # 参考2: https://atcoder.jp/contests/abc160/submissions/15255726
     from functools import reduce
     G = [[] for _ in range(n)]
     for a, b in edges:
         G[a].append(b)
         G[b].append(a)
-    # step 1
-    order = []  # 行きがけ順
+    order = []
     stack = [0]
     while stack:
         v = stack.pop()
@@ -20,15 +15,12 @@ def rerooting(n, edges, identity, merge, add_node):
         for u in G[v]:
             stack.append(u)
             G[u].remove(v)
-    # 下から登る
-    dp_down = [0] * n  # 自身とその下
+    dp_down = [0] * n
     for v in order[:0:-1]:
         dp_down[v] = add_node(reduce(
             merge, (dp_down[u] for u in G[v]), identity
         ), v)
-    # step 2
-    # 上から降りる
-    dp_up = [identity] * n  # 親とその先
+    dp_up = [identity] * n
     for v in order:
         Gv = G[v]
         if len(Gv) == 0:
@@ -54,7 +46,6 @@ def rerooting(n, edges, identity, merge, add_node):
 
 class Combination:
     def __init__(self, n_max, mod=10**9 + 7):
-        # O(n_max + log(mod))
         self.mod = mod
         f = 1
         self.fac = fac = [f]
@@ -68,7 +59,7 @@ class Combination:
             facinv.append(f)
         facinv.reverse()
 
-    def __call__(self, n, r):  # self.C と同じ
+    def __call__(self, n, r):
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
 

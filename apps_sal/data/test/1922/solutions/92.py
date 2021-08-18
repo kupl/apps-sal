@@ -1,6 +1,6 @@
 import sys
 from collections import deque
-from bisect import bisect_left, bisect_right, insort_left, insort_right  # func(リスト,値)
+from bisect import bisect_left, bisect_right, insort_left, insort_right
 from heapq import heapify, heappop, heappush
 from math import *
 

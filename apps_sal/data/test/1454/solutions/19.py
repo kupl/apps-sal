@@ -6,16 +6,6 @@ for q in range(0, n):
     matrix[q] = row
 
 zero = 0
-# def when_no_zero(n,m):
-#     print("n",n,"m",m)
-#     for z in range(0,n-1):
-#         for x in range(0,m-1):
-#             if(matrix[z][x]<matrix[z][x+1] and matrix[z][x]<matrix[z+1][x]):
-#                 pass
-#             else:
-#                 print("-1")
-#                 ok = 1
-#                 break
 
 
 def no_zeros(n, m):

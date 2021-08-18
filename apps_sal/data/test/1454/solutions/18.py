@@ -21,14 +21,12 @@ for i in range(a[0]):
                 break
         except:
             cp += 1
-            # print(i,j)
         try:
             if b[i][j] >= b[i][j + 1]:
                 ans = -1
                 break
         except:
             cp += 1
-            # print(i,j)
 
 if ans == -1:
     print(-1)

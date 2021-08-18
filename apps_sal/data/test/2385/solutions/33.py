@@ -1,23 +1,17 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Apr 28 22:56:10 2020
 """
 
 import sys
-#import numpy as np
 
 sys.setrecursionlimit(10 ** 9)
-# def input():
-#    return sys.stdin.readline()[:-1]
 mod = 10**9 + 7
 
 N = int(input())
-#X, Y = map(int,input().split())
-#ab = [list(map(int,input().split())) for i in range(N-1)]
 
-fact = [1, 1]  # 元テーブル
-fact_inv = [1, 1]  # 逆元テーブル
-tmp_inv = [0, 1]  # 逆元テーブル計算用テーブル
+fact = [1, 1]
+fact_inv = [1, 1]
+tmp_inv = [0, 1]
 for i in range(2, N + 1):
     fact.append((fact[-1] * i) % mod)
     tmp_inv.append((-tmp_inv[mod % i] * (mod // i)) % mod)
@@ -29,7 +23,6 @@ def cmb(n, r, mod):
         return 0
     r = min(r, n - r)
     return fact[n] * fact_inv[r] * fact_inv[n - r] % mod
-# 逆元作成
 
 
 def inv(a, mod):

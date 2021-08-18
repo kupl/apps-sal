@@ -4,7 +4,6 @@ sys.setrecursionlimit(505050)
 
 class Combination:
     def __init__(self, n_max, mod=10**9 + 7):
-        # O(n_max + log(mod))
         self.mod = mod
         f = 1
         self.fac = fac = [f]
@@ -52,8 +51,6 @@ def dfs1(v, p):
 
 
 _, ans = dfs1(1, 0)
-# for i in range(1, N+1):
-#     print(i, dfs1(i, 0))
 
 Ans = [0] * (N + 1)
 Ans[1] = ans

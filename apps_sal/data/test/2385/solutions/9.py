@@ -11,10 +11,10 @@ def main():
             return 0
         r = min(r, n - r)
         return g1[n] * g2[r] * g2[n - r] % mod
-    mod = 10**9 + 7  # 出力の制限
-    g1 = [1, 1]  # 元テーブル
-    g2 = [1, 1]  # 逆元テーブル
-    inverse = [0, 1]  # 逆元テーブル計算用テーブル
+    mod = 10**9 + 7
+    g1 = [1, 1]
+    g2 = [1, 1]
+    inverse = [0, 1]
     for i in range(2, n + 1):
         g1.append((g1[-1] * i) % mod)
         inverse.append((-inverse[mod % i] * (mod // i)) % mod)
@@ -26,7 +26,7 @@ def main():
         a, b = a - 1, b - 1
         ki[a].append(b)
         ki[b].append(a)
-    memo = {}  # memo[(p,v)]:p->vの部分木のサイズ、整数の書き方
+    memo = {}
 
     def dfs(p, v):
         if (p, v) in memo:
@@ -83,10 +83,8 @@ def main():
                 continue
             bfs(v, nv, (n - memo[(v, nv)][0], (g1[n - 1 - memo[(v, nv)][0]] * dpl[i] * dpr[i + 1]) % mod))
     dfs(-1, 0)
-    # print(memo)
     bfs(-1, 0, 0)
     print(*ans, sep='\n')
-    # print(memo)
 
 
 def __starting_point():

@@ -1,4 +1,4 @@
-from sys import stdin, stdout  # only need for big input
+from sys import stdin, stdout
 from itertools import permutations
 
 
@@ -10,7 +10,6 @@ def solve():
     n, m = read_int_from_line()
     if n > m:
         n, m = m, n
-    # print(f'n {n} m {m}')
     if n == 1:
         if m == 1:
             print(1)

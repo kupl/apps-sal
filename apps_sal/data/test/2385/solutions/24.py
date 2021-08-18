@@ -41,7 +41,6 @@ def resolve():
             P[to] = v
             node.append(to)
 
-    # 葉のサイズを格納
     size = [1] * N
     for e in reversed(topo):
         if e == 0:

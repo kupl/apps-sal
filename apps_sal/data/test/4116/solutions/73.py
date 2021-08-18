@@ -1,4 +1,3 @@
-# for 文はどこまで含むのか、どこで抜けるのかってこと
 N = int(input())
 calculation = []
 
