@@ -5,18 +5,12 @@ class Solution:
         res = s[0]
         cur_count = 1
 
-        # Traverse string except
-        # last character
         for i in range(n):
 
-            # If current character
-            # matches with next
             if (i < n - 1
                     and s[i] == s[i + 1]):
                 cur_count += 1
 
-            # If doesn't match, update result
-            # (if required) and reset count
             else:
                 if cur_count > count:
                     count = cur_count

@@ -15,11 +15,8 @@ else:
         while(s1 < t and i < n):
             s1 += A[i]
             temp.append(A[i])
-            #print("as",A[i], s1)
             i += 1
-        # print(temp)
         if(s1 != t):
-            # print("s",s1,t)
             flag = False
             break
         else:

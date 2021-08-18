@@ -18,7 +18,6 @@ class Solution:
                         return []
                 last[e] = i
 
-        # populate drydays
         for d in drydays:
             ans[d] = 1
         return ans

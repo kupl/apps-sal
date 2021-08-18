@@ -11,11 +11,9 @@ class Solution:
                     res.append(-1)
                     lastrain[v] = k
                 else:
-                    # lakes[v] == True
                     if dry == []:
                         return []
                     else:
-                        # check if there is a dry day we can use
                         i = 0
                         found = False
                         while i < len(dry) and not found:

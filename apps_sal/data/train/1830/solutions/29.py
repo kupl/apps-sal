@@ -10,7 +10,6 @@ class Solution:
             c = a[i]
             if c:
                 if c in v:
-                   # print(i, q)
                     j = bisect.bisect(q, v[c])
                     if j == len(q):
                         return []

@@ -12,10 +12,10 @@ class Solution:
             else:
                 if rain not in last_rain:
                     last_rain[rain] = idx
-                else:  # need to find a dry
+                else:
                     i = could_dry.bisect_left(last_rain[rain])
                     if i == len(could_dry):
-                        return []  # could not find a good dry day
+                        return []
                     else:
                         day = could_dry[i]
                         dry[day] = rain

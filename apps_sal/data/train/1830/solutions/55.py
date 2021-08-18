@@ -12,9 +12,8 @@ class Solution:
                 dry_days.append(idx)
                 continue
             if lake in last_appear:
-                # find 0
                 first_0 = bisect_left(dry_days, last_appear[lake])
-                if first_0 == len(dry_days):  # not found
+                if first_0 == len(dry_days):
                     return []
                 ans[dry_days[first_0]] = lake
                 dry_days.pop(first_0)

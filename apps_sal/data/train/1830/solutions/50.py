@@ -44,12 +44,10 @@ class Solution:
                 if not sunny_day_idx:
                     return []
                 idx = binary_search(sunny_day_idx, last_day_rains_over_lake[lake])
-                # print(idx)
                 if idx == None:
                     return []
                 if sunny_day_idx[idx] > day:
                     return []
-                # print(sunny_day_idx[0],day)
                 res[sunny_day_idx[idx]] = lake
                 last_day_rains_over_lake[lake] = day
                 sunny_day_idx.pop(idx)

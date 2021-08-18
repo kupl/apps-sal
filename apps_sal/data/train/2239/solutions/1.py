@@ -1,6 +1,4 @@
-# int(input())
 
-# [int(i) for i in input().split()]
 
 import sys
 
@@ -88,15 +86,6 @@ for i in range(n):
     game.append(tmp1)
 
 
-# for v in range(n):
-
-# for w in range(n):
-
-# for last in range(27):
-
-# go(v,w,last)
-
-
 for v in range(n):
 
     s = ''
@@ -110,6 +99,3 @@ for v in range(n):
             s = s + 'B'
 
     print(s)
-
-
-# Made By Mostafa_Khaled
