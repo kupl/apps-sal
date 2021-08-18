@@ -59,14 +59,12 @@ for _ in range(t):
             period[graph[i]] = tmp
             i = graph[i]
 
-    # cycle without side road
     for i in range(n * m):
         if period[i] == 0:
             robot_cnt += 1
             if s[i // m][i % m] == "0":
                 black_cnt += 1
 
-    # cycle with road
     for i in range(n * m):
         if not is_cycle[i]:
             continue

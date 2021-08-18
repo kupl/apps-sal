@@ -1,6 +1,5 @@
 class Solution:
     def numOfSubarrays(self, arr: List[int]) -> int:
-        # dp[i]:the number of odd subarrays ended with arr[i]
         n = len(arr)
         dp = [0] * n
 

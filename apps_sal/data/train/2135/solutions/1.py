@@ -53,5 +53,4 @@ def __starting_point():
     print('YES' if solvable(p1, p2) else 'NO')
 
 
-# Made By Mostafa_Khaled
 __starting_point()

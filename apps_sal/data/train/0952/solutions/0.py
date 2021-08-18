@@ -1,4 +1,3 @@
-# cook your dish here
 str1 = int(input())
 for i in range(str1):
     l1 = []

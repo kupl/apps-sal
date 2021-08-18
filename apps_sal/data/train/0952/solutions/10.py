@@ -3,7 +3,6 @@ for i in range(int(input())):
     g = 0
     for i in a:
         p = ord(i) % 96
-        # print(i,p)
         if(p <= 3):
             g += abs(p - 1)
         elif(4 <= p <= 6):
