@@ -34,7 +34,6 @@ while tot >= 2:
     idx = idx + 1
 idx = idx + 1
 res = idx
-#print (idx)
 st = []
 tot = 0
 idx = 0

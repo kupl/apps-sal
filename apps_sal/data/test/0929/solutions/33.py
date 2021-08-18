@@ -1,6 +1,5 @@
 H, W = list(map(int, input().split()))
 a = [list(map(int, input().split())) for _ in range(H)]
-# print(a)
 q = []
 for i in range(H):
     if i % 2 == 0:
@@ -9,7 +8,6 @@ for i in range(H):
     elif i % 2 == 1:
         for j in range(W - 1, -1, -1):
             q.append([i, j])
-# print(q)
 N = 0
 ans_arr = []
 for qi in range(len(q)):

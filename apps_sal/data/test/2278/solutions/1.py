@@ -1,4 +1,3 @@
-# https://codeforces.com/contest/1166/problem/D
 def creat_r(X, k, m, p):
     q = X // p[k]
     r = X % p[k]

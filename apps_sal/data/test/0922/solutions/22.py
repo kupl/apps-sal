@@ -6,6 +6,5 @@ for x in a:
 for x in a:
     up = min(x, A - (n - 1))
     down = max(A - (tot - x), 1)
-    # print(up,down)
     print(x - (up - down + 1), end=" ")
 print()

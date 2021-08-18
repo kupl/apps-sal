@@ -34,7 +34,6 @@ while ope < h * w:
                 ans.append([th + 1, tw + 1, th + 1, tw])
             tw -= 1
     ope += 1
-# print(a)
 print((len(ans)))
 for aa in ans:
     print((*aa))

@@ -1,4 +1,3 @@
-# https://codeforces.com/problemset/problem/761/E
 def solve():
     def push(u, v, g):
         if u not in g:

@@ -5,8 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-# SOLUTION
-
 
 def main():
     s, v1, v2, t1, t2 = read()
@@ -17,8 +15,6 @@ def main():
     if l1 > l2:
         return "Second"
     return "Friendship"
-
-# HELPERS
 
 
 def read(callback=int):

@@ -6,6 +6,3 @@ for i in range(1, n):
     if a[g[i]] <= a[g[i - 1]]:
         a[g[i]] = a[g[i - 1]] + 1
 print(' '.join(map(str, a)))
-
-
-# Made By Mostafa_Khaled

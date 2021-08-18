@@ -10,13 +10,11 @@ for i in range(H):
     HW.append(sublist)
 
 
-# 行
 for i in range(h):
     for j in range(W):
         HW[i][j] = 1
 
 
-# 列
 for i in range(w):
     for j in range(H):
         if HW[j][i] == 1:

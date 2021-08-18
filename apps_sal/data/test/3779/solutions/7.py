@@ -9,6 +9,4 @@ for j in range(a):
         break
 e = math.gcd(d, b)
 print(b // e)
-#f = [i for i in range(b) if i%e == 0]
-#g = " ".join(str(k) for k in range(b) if k%e == 0)
 print(" ".join(str(k) for k in range(b) if k % e == 0))

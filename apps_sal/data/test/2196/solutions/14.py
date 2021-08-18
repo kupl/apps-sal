@@ -13,6 +13,3 @@ for e in map(int, input().split()):
     st.add(e)
 
 print(max(st) - len(st) + 1)
-
-
-# Made By Mostafa_Khaled
