@@ -52,8 +52,6 @@ class Solution:
                         relevantStartingIndices.pop(i)
 
             else:
-                # print(\"here4\")
-                # print(i)
                 lengthEndingWith[i] = 1
                 lengthStartingWith[i] = 1
 

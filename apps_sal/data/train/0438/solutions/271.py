@@ -1,4 +1,3 @@
-# https://leetcode.com/problems/find-latest-group-of-size-m/discuss/836441/Very-Easy
 
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
@@ -15,6 +14,4 @@ class Solution:
                 res = idx
             memo[i - left] = left + right + 1
             memo[i + right] = left + right + 1
-        # if m in memo.values():
-        #     res = n
         return res

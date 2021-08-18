@@ -17,7 +17,7 @@ class Solution:
                 return
             if weights[i] >= weights[j]:
                 parents[j] = i
-                weights[i] += weights[j]  # do not need to reset weights[j] to 0 since we only care about the weights at the root.
+                weights[i] += weights[j]
             else:
                 parents[i] = j
                 weights[j] += weights[i]
@@ -44,13 +44,11 @@ class Solution:
             else:
                 right = True
 
-            # print(left, right)
             if (not left) and (not right):
                 cnt[1] += 1
                 p = find(arr[i])
 
             elif left and right:
-                # combine all three
                 pleft = find(arr[i - 1])
                 pright = find(arr[i + 1])
                 size_left = weights[pleft]
@@ -69,8 +67,6 @@ class Solution:
                 cnt[size_left] -= 1
                 cnt[size_left + 1] += 1
                 union(arr[i - 1], arr[i])
-                # print(parents, weights, pleft)
-                # print(\"size_left:\", size_left)
             elif right:
                 pright = find(arr[i + 1])
                 size_right = weights[pright]
@@ -80,6 +76,5 @@ class Solution:
 
             if cnt[m] > 0:
                 last = step + 1
-            # print(cnt)
 
         return last

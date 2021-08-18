@@ -29,19 +29,15 @@ class Solution:
             ranks[num] = 1
             if num - 1 >= 0:
                 pleft = find(parents, num - 1)
-                #print('left', num, num-1, pleft)
                 if ranks[pleft] == m:
                     laststep = i
                 if ranks[pleft] > 0:
                     union(parents, ranks, num - 1, num)
             if num + 1 < n:
                 pright = find(parents, num + 1)
-                #print('right', num, num+1, pright)
                 if ranks[pright] == m:
                     laststep = i
                 if ranks[pright] > 0:
                     union(parents, ranks, num + 1, num)
 
-            #print('p:', parents)
-            #print('r:', ranks)
         return laststep

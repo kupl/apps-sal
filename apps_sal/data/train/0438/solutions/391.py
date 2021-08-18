@@ -13,12 +13,10 @@ class Solution:
 
         def join(a, b):
             ra, rb = getRepe(a), getRepe(b)
-            # print(ra,rb)
             repe[b] = ra
             sis[ra] += sis[rb]
 
         def sete(x):
-            # print('-',x)
             if x > 0 and sele[x - 1]:
                 join(x - 1, x)
             if x < n - 1 and sele[x + 1]:

@@ -4,7 +4,6 @@ class BinaryIndexedTree:
     def __init__(self, n):
         self.n = n
         self.data = [0] * (n + 1)
-        # todo: init all 1
         for i in range(1, n + 1):
             self.data[i] += 1
             tmp = i + (i & -i)

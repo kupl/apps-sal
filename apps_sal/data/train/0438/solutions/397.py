@@ -1,10 +1,10 @@
 class Solution:
     def findLatestStep(self, A: List[int], T: int, last=-1) -> int:
         seen, ok = set(), set()
-        A = [i - 1 for i in A]      # ⭐️ -1 for 0-based indexing
+        A = [i - 1 for i in A]
         N = len(A)
-        P = [i for i in range(N)]   # \\U0001f642 parent representative sets
-        L = [1] * N                 # \\U0001f925 length of each representative set
+        P = [i for i in range(N)]
+        L = [1] * N
 
         def find(x):
             if x != P[x]:
@@ -14,7 +14,7 @@ class Solution:
         def union(a, b):
             a = find(a)
             b = find(b)
-            P[b] = a                # \\U0001f517 arbitrary choice for parent representative
+            P[b] = a
             return L[a] + L[b]
         step = 1
         for i in A:
@@ -28,7 +28,7 @@ class Solution:
             if i + 1 in seen:
                 L[i] = union(i, i + 1)
             if L[i] == T:
-                ok.add(i)          # ✅ i is the parent reprentative of the set with \\U0001f3af target T length
+                ok.add(i)
             if len(ok):
                 last = step
             step += 1

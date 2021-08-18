@@ -1,7 +1,5 @@
-# 22:00
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        # 1 - n
         ret = -1
         cnt = [[] for _ in range(len(arr))]
         counter = collections.Counter()
@@ -23,6 +21,3 @@ class Solution:
                 ret = i + 1
 
         return ret
-
-# 2, 4, 0, 1, 3
-# [0, 0] [] [2, 2] [] [4, 4]

@@ -43,5 +43,5 @@ class Solution:
                     dsu.union(num, adj)
             size_count[dsu.get_size(num)] += 1
             if size_count[m] > 0:
-                ans = i  # step
+                ans = i
         return ans

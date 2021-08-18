@@ -1,7 +1,7 @@
 class Solution:
     def findLatestStep(self, arr: List[int], m: int) -> int:
         group_size = [0 for _ in range(len(arr) + 1)]
-        parent_idx = [-1 for _ in range(len(arr) + 1)]  # same for self leading, 0 for not init
+        parent_idx = [-1 for _ in range(len(arr) + 1)]
 
         res = -1
         num_same = 0

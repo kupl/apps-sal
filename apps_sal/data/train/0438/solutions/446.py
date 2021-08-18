@@ -1,5 +1,3 @@
-# https://leetcode.com/problems/find-latest-group-of-size-m/discuss/806718/Python-Clean-Union-Find-solution-with-explanation-O(N)
-# This solution utilize union by rank with 2 aims: count number of one as well as reduce the TC. One main point is that last step of group of ones of length m means we need bit set to ruin the last group of ones with length of m, or the this type of group will last until last step, so we can determine the result by determining the rank of left and right of currrent bit set. After one pass of arr, we can check if ranks of our union equal m.
 class UnionFind:
     def __init__(self, n):
         self.parents = list(range(n))
