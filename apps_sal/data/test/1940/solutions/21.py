@@ -21,7 +21,6 @@ def strs():
 
 
 def main():
-    # lines will now contain all of the input's lines in a list
     n, k = ints()
     ws = ints()
     count = ceil(sum(ceil(x / k) for x in ws) / 2)

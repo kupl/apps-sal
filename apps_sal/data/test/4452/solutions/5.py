@@ -10,7 +10,6 @@ for zz in range(int(input())):
             ans.append(t)
         n -= t
         cp *= 10
-        #print(n, t, cp)
 
     print(len(ans))
     print(*ans)

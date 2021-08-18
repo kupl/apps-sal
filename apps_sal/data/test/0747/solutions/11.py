@@ -29,7 +29,7 @@ lol0 = getBetter(h0, lolipops0[0])
 t1 = 0
 h1 = h0
 lol1 = getBetter(h0, lolipops0[1])
-t2 = 1  # ---- WARNING --------
+t2 = 1
 h2 = h0
 while(lol0[0] >= 0 or lol1[0] >= 0):
     if (lol0[0] > -1):

@@ -1,10 +1,9 @@
 multiplos_de_onze = [0, 1, 11, 111, 1111, 11111, 111111, 1111111, 11111111, 111111111, 1111111111, 11111111111,
                      111111111111, 1111111111111, 11111111111111, 111111111111111, 1111111111111111,
                      11111111111111111]
-# Entrada maxima, n maior que 1 e n menor que 10 elevado a 15
 
 
-def procura_onze(n, i):  # i = 16 - pois será a ultima posição do vetor
+def procura_onze(n, i):
     divisao = int(n / multiplos_de_onze[i])
     resto = n % multiplos_de_onze[i]
     if resto == 0:

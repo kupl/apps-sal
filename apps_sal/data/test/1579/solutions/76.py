@@ -1,5 +1,4 @@
 import sys
-# input = sys.stdin.readline
 sys.setrecursionlimit(pow(10, 6))
 
 xedges = [[] for _ in range(100001)]

@@ -21,6 +21,3 @@ for i in range(len(str(n)) + 1, 0, -1):
             d[t] = min(c + i * abs(x), d.get(t, 999))
 
 print(d[0])
-
-
-# Made By Mostafa_Khaled

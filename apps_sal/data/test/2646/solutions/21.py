@@ -95,8 +95,6 @@ class Graph:
                 next_set.append((q, t + 1))
         return dist
 
-##################################################################################################
-
 
 N, M = map(int, input().split())
 graph = Graph(N, directed=False, decrement=True, destroy=False)

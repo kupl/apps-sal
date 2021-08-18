@@ -24,7 +24,6 @@ class CodeforcesTask436ASolution:
 
     def process_task(self):
         self.candies = sorted(self.candies, key=itemgetter(2), reverse=True)
-        # print(self.candies)
         jump = self.n_x[1]
         eat = 1
         candies = [x.copy() for x in self.candies]

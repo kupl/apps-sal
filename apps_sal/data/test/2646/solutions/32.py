@@ -25,14 +25,11 @@ while len(newly_visited) > 0:
         distance[i] = distance[now] + 1
         updated_from[i] = now
 
-# i に到達できてれば distance[i] ==（0 から i までの距離）
-# i に到達できてなければ distance[i] == None
 
 """
 print(distance)
 
 for i in range(n):
-  # i から 0 に行く経路を求める
   now = i
   path = [now]
   while now != 0:

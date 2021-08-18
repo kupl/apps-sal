@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 
 [a, b, c] = list(map(int, input().split()))
 

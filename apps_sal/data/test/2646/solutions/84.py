@@ -1,13 +1,8 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain
 
-# from itertools import combinations as comb
-# form bisect import bisect_left, bisect_right, insort_left, insort_right
-# from collections import Counter
-# import numpy as np
 
-YES = "Yes"  # type: str
+YES = "Yes"
 
 
 def solve(N: int, M: int, A: "List[int]", B: "List[int]"):
@@ -40,11 +35,10 @@ def solve(N: int, M: int, A: "List[int]", B: "List[int]"):
 
 def main():
     tokens = chain(*(line.split() for line in sys.stdin))
-    # N, M, A, B = map(int, line.split())
-    N = int(next(tokens))  # type: int
-    M = int(next(tokens))  # type: int
-    A = [int()] * (M)  # type: "List[int]"
-    B = [int()] * (M)  # type: "List[int]"
+    N = int(next(tokens))
+    M = int(next(tokens))
+    A = [int()] * (M)
+    B = [int()] * (M)
     for i in range(M):
         A[i] = int(next(tokens))
         B[i] = int(next(tokens))

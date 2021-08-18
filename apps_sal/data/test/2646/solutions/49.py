@@ -26,7 +26,6 @@ while len(que) > 0:
             continue
         que.append(ne)
         ans[ne] = c
-        # print(f'ans[{ne}] = {c}')
         visited[ne] = 1
 
 for i in range(1, n):

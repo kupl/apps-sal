@@ -1,4 +1,3 @@
-# 参考にした提出:https://atcoder.jp/contests/abc168/submissions/16604668 #
 from collections import deque
 n, m = map(int, input().split())
 l = [[] for i in range(n + 1)]

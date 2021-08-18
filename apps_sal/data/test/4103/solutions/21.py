@@ -7,7 +7,6 @@ def solve():
     S = list(map(int, input().split()))
     ans = 0
     for i in range(n):
-        # print(i,b,a)
         if S[i] == 1:
             if a < a_max and b > 0:
                 b -= 1
