@@ -12,14 +12,13 @@ def solution(args: List[int]) -> str:
             res += r
             idx += inc
         else:
-            r = showInt(args, idx)  # handles separator
+            r = showInt(args, idx)
             res += r
             idx += 1
     return res
 
 
 def isRange(rng: List[int], idx: int) -> bool:
-    # a range spans at least 3 integers
     if len(rng) - 3 < idx:
         return False
 
@@ -33,8 +32,6 @@ def isRange(rng: List[int], idx: int) -> bool:
 
 
 def showRange(rng: List[int], idx: int) -> Tuple[str, int]:
-    # determine range
-    # determine if range spans until the end (for separator!)
     curr: int = idx
     length: int = len(rng)
     while rng[curr] + 1 == rng[curr + 1]:
@@ -44,7 +41,7 @@ def showRange(rng: List[int], idx: int) -> Tuple[str, int]:
 
     res: str = str(rng[idx]) + "-" + str(rng[curr])
     dist: int = curr - idx + 1
-    assert(dist >= 3)  # implied by the algorithm
+    assert(dist >= 3)
     if not atEnd(rng, curr):
         res += ","
 

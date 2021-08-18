@@ -2,7 +2,7 @@ def get_participants(handshakes):
     from math import ceil
 
     """
-        Person #1 can shake hands with (n-1) people, person #2
+        Person 
         can shake hands with (n-2) people... etc. Therefore,
         n people can at most shake hands h = n*(n-1)/2 different times.
         

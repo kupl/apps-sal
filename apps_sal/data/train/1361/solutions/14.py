@@ -1,4 +1,3 @@
-# cook your dish here
 from itertools import accumulate
 list0 = list(map(int, input().split()))
 n = list0[0]

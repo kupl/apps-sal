@@ -3,7 +3,6 @@ class User(object):
         self.name = name
         self.balance = balance
         self.checking_account = checking_account
-    # Happy coding
 
     def withdraw(self, wd):
         if not wd > self.balance:

@@ -14,6 +14,4 @@ class Solution:
             else:
                 dp_LT[n] = 1
                 dp_GT[n] = 1
-#        print(\"dp_GT \",dp_GT)
- #       print(\"dp_LT \",dp_LT)
         return max(max(dp_GT), max(dp_LT))
