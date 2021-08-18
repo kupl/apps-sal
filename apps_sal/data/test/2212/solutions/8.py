@@ -1,5 +1,4 @@
-n = int(input())  # always odd
-# takes the shape of an expanding cross
+n = int(input())
 evenNums = list(range(2, n**2 + 1, 2))
 oddNums = list(range(1, n**2 + 1, 2))
 for i in range(n):

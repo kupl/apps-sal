@@ -2,9 +2,7 @@ def index(l):
     for i in range(n):
         if l[i] > 0:
             j = (i + 1) - l[i]
-            # print(i,l[i])
             l1.append(j)
-    # print(l1)
     return(l1)
 
 
@@ -13,7 +11,6 @@ hand = [int(g) for g in input().split()]
 deck = [int(g) for g in input().split()]
 if 1 in deck:
     index2 = deck.index(1)
-    # print(index2)
 l1 = []
 buffer = deck[:]
 buffer.sort()
@@ -27,7 +24,6 @@ elif 1 in deck:
         output = (max(l2) + n + 1)
     if set(deck[:index2]) == {0}:
         li = [int(g) for g in range(1, n - index2 + 1)]
-        # print(li)
         if deck[index2:] == li:
             output = index2
         else:
@@ -35,15 +31,11 @@ elif 1 in deck:
     else:
         for i in range(index2):
             if deck[i] > 0:
-                # print(index2-i,(n-deck[i])+2)
                 if (index2 - i) >= (n - deck[i]) + 2:
-                    # print(index2-i,(n-deck[i])+2)
                     output = (l2[-1])
                 else:
                     output = (max(l2) + n + 1)
                     break
-            # else:
-                # output=11
 else:
     if max(l2) <= (-1):
         output = (n)

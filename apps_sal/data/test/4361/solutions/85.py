@@ -16,7 +16,6 @@ R_value = sort_h_list[0]
 count = 0
 ans = 10**9
 
-# 尺取り法ぽいの
 while (R_index < n):
     if (count < k):
         count += 1

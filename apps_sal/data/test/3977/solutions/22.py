@@ -20,39 +20,39 @@ k из этих вершин являются столицами государ�
 """
 
 
-def dfs(u, vis):  # поиск в глубину
+def dfs(u, vis):
     vis.add(u)
     for v in g[u]:
         if v not in vis:
             dfs(v, vis)
 
 
-n, m, k = list(map(int, list(input().split()))) 		# n-вершин, m-ребер, k-столиц
-govs_ind = list(map(int, list(input().split())))  # индексы столиц
-orig = set() 							# множество ребер (ребра - кортежи (u, v)) изначально
-countries = set(range(1, n + 1))			# множество городов
+n, m, k = list(map(int, list(input().split())))
+govs_ind = list(map(int, list(input().split())))
+orig = set()
+countries = set(range(1, n + 1))
 
-g = [[] for i in range(n + 1)]			# хранилище графа (каждый подсписок есть вершиной, которая хранит индексы другой вершини, с которой связан)
+g = [[] for i in range(n + 1)]
 
 for i in range(m):
     u, v = list(map(int, list(input().split())))
-    orig.add((u, v)) 					# добавляем ребро в множество ребер в виде кортежа (u, v)
-    g[u].append(v)						# записываем в граф все связи
+    orig.add((u, v))
+    g[u].append(v)
     g[v].append(u)
 
-gov_nods = []				# все компоненты связности
+gov_nods = []
 
 for u in govs_ind:
-    vis = set()				# множество посещенных вершин
-    dfs(u, vis)				# поиск компонент связности
+    vis = set()
+    dfs(u, vis)
     gov_nods.append(vis)
 
 
-no_govs = countries.copy()  # множество вершин, без связи и не столицы
+no_govs = countries.copy()
 
-nvoss = 0					# ?
+nvoss = 0
 for reg in gov_nods:
-    no_govs -= reg			# вычитаем из городов все, что есть компонентами связности
+    no_govs -= reg
     size = len(reg)
     nvoss += int((size * (size - 1)) / 2)
 
@@ -60,12 +60,12 @@ size = len(no_govs)
 nvoss += int((size * (size - 1)) / 2)
 
 maxi = 0
-for i in range(len(gov_nods)):						# поиск макс комп связности
+for i in range(len(gov_nods)):
     if len(gov_nods[i]) > len(gov_nods[maxi]):
         maxi = i
 max_gov = gov_nods[maxi]
 
-nvoss += len(max_gov) * len(no_govs)		# считаем макс кол-во ребер с изолир вершинами и макс комп связности
-nvoss -= len(orig)						# отнимаем изначальные ребра
+nvoss += len(max_gov) * len(no_govs)
+nvoss -= len(orig)
 
 print(nvoss)
