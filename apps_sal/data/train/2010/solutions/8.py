@@ -16,9 +16,7 @@ class Solution:
 
 
 def __starting_point():
-    # for i in range(int(si.readline().strip())):
     n = int(si.readline().strip())
-    #n,m = map(int, si.readline().strip().split())
     m = list(map(int, si.readline().strip().split()))
     S = Solution()
     print(S.bazinga(n, m))

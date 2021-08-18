@@ -1,4 +1,3 @@
-# usr/bin/python
 
 def summation(num):
     result = 0

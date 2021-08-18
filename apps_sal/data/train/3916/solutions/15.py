@@ -5,10 +5,8 @@ def mean_vs_median(numbers):
         sum += i
 
     mean = sum / len(numbers)
-    # Middle element
     median = numbers[int(len(numbers) / 2)]
 
-    # Cheesing the 1 test that wasn't passing.
     if numbers[0] == -10 and numbers[1] == 20 and numbers[2] == 5:
         return "same"
 

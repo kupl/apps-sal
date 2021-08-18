@@ -1,6 +1,5 @@
 import sys
 
-#f = open("test.in")
 f = sys.stdin
 
 while (True):

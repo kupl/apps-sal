@@ -32,5 +32,4 @@ class Solution:
             elif dp[m][n - 1] == dp[m][n]:
                 res += str2[n]
                 n -= 1
-        # print(res)
         return res[::-1]

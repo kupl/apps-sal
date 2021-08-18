@@ -4,5 +4,3 @@ def summation(num):
         sum += num
         num -= 1
     return sum
-
-#sum(i for i in a)

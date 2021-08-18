@@ -4,4 +4,3 @@ def my_first_kata(a, b):
         return a % b + b % a
     except:
         return False
-    # Flez

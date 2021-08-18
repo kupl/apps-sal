@@ -5,7 +5,6 @@ class Solution:
         if not str2:
             return str1
         l1, l2 = len(str1), len(str2)
-        # Step 1. find a longest common subsequence.
         dp = [''] * (l1 + 1)
         for j in range(l2):
             new_dp = dp[:]
@@ -15,7 +14,6 @@ class Solution:
                 elif len(dp[i + 1]) < len(new_dp[i]):
                     new_dp[i + 1] = new_dp[i]
             dp = new_dp
-        # Step 2. make a supersequences from the longest common subsequence.
         ans, i, j = '', 0, 0
         for c in dp[-1]:
             while str1[i] != c:

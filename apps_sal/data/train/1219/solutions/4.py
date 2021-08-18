@@ -28,8 +28,6 @@
 ░░░░░░░░░░░░░░░░░░░░
 """
 
-# sys.stdin = open('input.txt', 'r')
-# sys.stdout = open('output.txt', 'w')
 
 import sys
 import math
@@ -47,7 +45,7 @@ def ncr(n, r):
     r = min(r, n - r)
     numer = reduce(op.mul, list(range(n, n - r, -1)), 1)
     denom = reduce(op.mul, list(range(1, r + 1)), 1)
-    return numer // denom  # or / in Python 2
+    return numer // denom
 
 
 def prime_factors(n):
@@ -68,7 +66,7 @@ def isPowerOfTwo(x):
     return (x and (not(x & (x - 1))))
 
 
-MOD = 1000000007  # 10^9 + 7
+MOD = 1000000007
 PMOD = 998244353
 N = 10**18 + 1
 LOGN = 30
@@ -77,12 +75,5 @@ T = 1
 T = int(stdin.readline())
 for _ in range(T):
     n, m = list(map(int, stdin.readline().rstrip().split()))
-    # n = int(stdin.readline())
-    # a = list(map(int, stdin.readline().rstrip().split()))
-    # b = list(map(int, stdin.readline().rstrip().split()))
-    # s = str(stdin.readline().strip('\n'))
-    # s = list(stdin.readline().strip('\n'))
-    # m = int(stdin.readline())
-    # c = list(map(int, stdin.readline().rstrip().split()))
     p = (n * (n + 1)) // 2 - (ceil(n / 2))**2
     print(pow(m, p, MOD))
