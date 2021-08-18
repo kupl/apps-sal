@@ -47,10 +47,3 @@ class Skiplist(object):
             else:
                 cur = cur.__next__
         return b
-
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

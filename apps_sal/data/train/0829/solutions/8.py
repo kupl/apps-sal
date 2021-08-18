@@ -5,7 +5,6 @@ def abs(x):
         return x
 
 
-# cook your dish here
 precalculated = {}
 N = int(input())
 tmp = input()

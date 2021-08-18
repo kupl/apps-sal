@@ -58,10 +58,3 @@ class Skiplist:
         for i, x in enumerate(node.__next__):
             path[-1 - i].next[i] = x
         return True
-
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

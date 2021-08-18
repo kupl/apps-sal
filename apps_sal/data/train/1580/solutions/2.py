@@ -10,7 +10,6 @@ for i in range(n):
         valids = re.sub(r"[^a-z]+", '', j)
         arr.append(valids)
 
-# while('')
 while('' in arr):
     arr.remove('')
 

@@ -42,11 +42,9 @@ def hull_method(pointlist):
 
     for current_idx, current in enumerate(points[1:], 1):
 
-        # check that all other points are in the left halfplane specified by previous_point, current_point:
         hyperplanevector = current - previous
         normalvector = np.array([-hyperplanevector[1], hyperplanevector[0]])
 
-        # check whether all points are in the left halfspace of the hyperplane (= line) defined by the point "previous" and the vector "hyperplanevector"
         halfspace_check = True
         for vec in it.chain(points[current_idx + 1:, :], points[:previous_idx, :], points[previous_idx + 1: current_idx, :]):
             vec_c = vec - previous
@@ -55,16 +53,13 @@ def hull_method(pointlist):
                 break
 
         if halfspace_check:
-            # remove previous point if collinearity or duplicate would arise
             if len(outlist) >= 2:
                 if areCollinear(current, outlist[-1], outlist[-2]):
                     outlist.pop(-1)
 
-            # add current point
             outlist.append(current.tolist())
             previous_idx, previous = current_idx, current
 
-    # remove collinearities from last three outlist points or from connecting outlist points to a closed curve
     if len(outlist) >= 3:
         for i in (-2, -1, 0):
             if areCollinear(outlist[i - 1], outlist[i], outlist[i + 1]):

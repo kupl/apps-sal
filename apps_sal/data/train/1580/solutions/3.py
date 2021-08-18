@@ -1,6 +1,6 @@
 lst = []
 ans = []
-punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+punctuations = '''!()-[]{};:'"\,<>./?@
 t = int(input())
 for i in range(t):
     str = input()

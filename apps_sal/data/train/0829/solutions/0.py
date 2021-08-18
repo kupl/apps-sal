@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 from itertools import combinations
 n = int(input())
 t = list(combinations(list(map(int, input().split())), 2))
