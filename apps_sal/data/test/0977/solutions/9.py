@@ -3,7 +3,6 @@ input = stdin.readline
 n, p = list(map(int, input().split()))
 c = list(map(int, input().split()))
 dobre = []
-# na ktorym miejscu co najmniej musimy ustawic
 for x in range(1, 2001):
     dobry = True
     miejsca = []

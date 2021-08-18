@@ -5,7 +5,6 @@ A = list(map(int, input().split()))
 
 A = [0] + A + [0]
 
-# Left side
 L = [A[1]]
 tempL = A[1]
 for i in range(1, N):
@@ -13,7 +12,6 @@ for i in range(1, N):
     L.append(tempL)
 L = [0] + L
 
-# Right side
 R = [A[-2]]
 tempR = A[-2]
 for i in range(1, N):

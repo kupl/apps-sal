@@ -1,7 +1,5 @@
 import math
 
-# 1つ自由に書き換える⇒ある数を除くGCDの最大値
-# 累積GCDを事前に算出することで、ある数を除くGCDをO(N)で求められる
 
 n = int(input())
 a = list(map(int, input().split()))

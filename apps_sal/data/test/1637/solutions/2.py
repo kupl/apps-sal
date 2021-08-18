@@ -40,8 +40,6 @@ val = sum(inp[1:2 * n:2])
 for ind in range(n):
     i = order[ind]
 
-    # Do second problem together with order[:ind]
-    # Do first problem together with order[ind:]
     score[i] += val + inp[2 * i + 1] * (ind - 1) + inp[2 * i] * (n - ind - 1)
     val += inp[2 * i] - inp[2 * i + 1]
 
