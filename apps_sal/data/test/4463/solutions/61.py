@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 s = list(input())
 t = list(input())

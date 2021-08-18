@@ -1,13 +1,8 @@
-#!/usr/bin/env python3
 import sys
 from itertools import chain
 
-# import numpy as np
-# from itertools import combinations as comb
-# from bisect import bisect_left, bisect_right, insort_left, insort_right
-# from collections import Counter
 
-MOD = 1000000007  # type: int
+MOD = 1000000007
 OFFSET = 10 ** 100
 
 
@@ -19,7 +14,7 @@ def k_in_n(k, n):
 
 
 def solve(N: int, K: int):
-    keep = None  # まだ加算されていない範囲
+    keep = None
     answer = 0
     for k in range(K, N + 2):
         if keep is None:
@@ -40,11 +35,8 @@ def solve(N: int, K: int):
 
 def main():
     tokens = chain(*(line.split() for line in sys.stdin))
-    # N, K = map(int, input().split())
-    # N, K = input().strip()
-    # N, K = int(input())
-    N = int(next(tokens))  # type: int
-    K = int(next(tokens))  # type: int
+    N = int(next(tokens))
+    K = int(next(tokens))
     answer = solve(N, K)
     print(answer)
 

@@ -19,7 +19,6 @@ for i in range(N):
         curr = defaultdict(int)
         for ss in range(10 - ff):
             curr[At[ss:ss + ff]] += 1
-        # Here we check
         for key in list(curr.keys()):
             if(curr[key] == Subs[key]):
                 print(key)

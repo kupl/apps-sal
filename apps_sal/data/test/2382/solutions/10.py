@@ -40,7 +40,6 @@ def main():
     q = [a[-1]]
     a = a[:-1][::-1]
     for i in range(n):
-        # print(i,q,a)
         nq = []
         qi = 0
         na = []

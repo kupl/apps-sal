@@ -21,12 +21,10 @@ for i in range(n):
         q.append(i)
 count = 0
 ans = 0
-# print(degree)
 dp = [[0 for i in range(26)] for i in range(n)]
 while count < n and q:
     x = q.popleft()
     count += 1
-    # print(ord(l[x])-97)
     dp[x][ord(l[x]) - 97] += 1
     for i in graph[x]:
         for j in range(26):
@@ -34,7 +32,6 @@ while count < n and q:
         degree[i] -= 1
         if degree[i] == 0:
             q.append(i)
-# print(degree)
 if count != n:
     print(-1)
 else:

@@ -9,9 +9,6 @@ def main():
         t_list.append(t[i])
     s_list.sort()
     t_list.sort(reverse=True)
-    # print(s_list,t_list)
-    # if 'a'<'b':
-    #print ('Yes')
     s_l = len(s_list)
     t_l = len(t_list)
     if s_l >= t_l:

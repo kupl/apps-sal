@@ -1,4 +1,3 @@
-# 73
 
 MOD = 10**9 + 7
 x, y = list(map(int, input().split()))

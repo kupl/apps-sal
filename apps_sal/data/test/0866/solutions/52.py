@@ -16,6 +16,4 @@ if z % 3 != 0 or x - (z // 3) < 0 or y - (z // 3) < 0:
     print((0))
 else:
     z //= 3
-    # print(z)
-    # print(min(x,y)-z)
     print((nCr(z, min(x, y) - z)))
