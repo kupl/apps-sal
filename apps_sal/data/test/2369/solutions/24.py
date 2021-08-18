@@ -1,24 +1,17 @@
 import sys
-# import re
 import math
 import collections
-# import decimal
 import bisect
 import itertools
 import fractions
-# import functools
 import copy
-# import heapq
 import decimal
-# import statistics
 import queue
 
-# import numpy as np
 
 sys.setrecursionlimit(10000001)
 INF = 10 ** 16
 MOD = 10 ** 9 + 7
-# MOD = 998244353
 
 
 def ni(): return int(sys.stdin.readline())
@@ -26,19 +19,14 @@ def ns(): return list(map(int, sys.stdin.readline().split()))
 def na(): return list(map(int, sys.stdin.readline().split()))
 
 
-# ===CODE===
-# nCrの左項にはn以外も来るバージョン、1!～(n-1)!を保持
 def prepare(n, MOD):
-    # 1! - n! の計算
     f = 1
-    factorials = [1]  # 0!の分
+    factorials = [1]
     for m in range(1, n + 1):
         f *= m
         f %= MOD
         factorials.append(f)
-    # n!^-1 の計算
     inv = pow(f, MOD - 2, MOD)
-    # n!^-1 - 1!^-1 の計算
     invs = [1] * (n + 1)
     invs[n] = inv
     for m in range(n, 1, -1):

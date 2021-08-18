@@ -15,7 +15,7 @@ class Combination:
     n_max = 10**6のとき前処理は約950ms (PyPyなら約340ms, 10**7で約1800ms)
     使用例：
     comb = Combination(1000000)
-    print(comb(5, 3))  # 10
+    print(comb(5, 3))  
     """
 
     def __init__(self, n_max, mod=10**9 + 7):

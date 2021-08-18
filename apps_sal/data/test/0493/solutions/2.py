@@ -24,9 +24,7 @@ elif len(R_i) == 0:
     print(n - L_i[0] - 1)
 else:
     standing = 0
-    # there are both L and R
     if R_i[0] < L_i[0]:
-        # R comes first
         standing += R_i[0]
         if R_i[-1] > L_i[-1]:
             standing += R_i[-1] - L_i[-1] - 1
@@ -35,7 +33,6 @@ else:
         standing += num_standing(s[R_i[0]:L_i[-1] + 1])
 
     else:
-        # L comes first
         standing += R_i[0] - L_i[0] - 1
         if R_i[-1] > L_i[-1]:
             standing += R_i[-1] - L_i[-1] - 1

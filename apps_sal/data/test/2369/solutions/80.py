@@ -31,9 +31,9 @@ def modinv(a):
       res = res *li[item] %mod
     return res
 """
-fact = [1, 1]  # fact[n] = (n! mod p)
-factinv = [1, 1]  # factinv[n] = ((n!)^(-1) mod p)
-inv = [0, 1]  # factinv 計算用
+fact = [1, 1]
+factinv = [1, 1]
+inv = [0, 1]
 
 for i in range(2, N + 1):
     fact.append((fact[-1] * i) % mod)
@@ -42,7 +42,6 @@ for i in range(2, N + 1):
 
 
 def combination(n, k):
-    #foo = kaijou[n]*modinv(kaijou[k]*kaijou[n-k]%mod)%mod
     foo = fact[n] * factinv[k] * factinv[n - k] % mod
     return foo
 

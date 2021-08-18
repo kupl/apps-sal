@@ -8,7 +8,6 @@ for i in range(4):
     for j in range(n):
         row = [int(x) for x in input()]
         for k in range(n):
-            # print(i, j, k)
             if j % 2 == 0:
                 d[i][0] += abs(row1[k] - row[k])
                 d[i][1] += abs(row2[k] - row[k])
@@ -18,7 +17,6 @@ for i in range(4):
     if i < 3:
         input()
 
-# min_ = min([(d[0][0] + d[1][0] + d[2])])
 m = [0] * 6
 m[0] = d[0][0] + d[1][0] + d[2][1] + d[3][1]
 m[1] = d[0][0] + d[1][1] + d[2][0] + d[3][1]

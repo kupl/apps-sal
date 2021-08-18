@@ -1,6 +1,6 @@
 from math import ceil
 
-t = 1  # int(input())
+t = 1
 for test in range(t):
     n, k = (list(map(int, input().split())))
     (ceil(((n * 8) / k)))

@@ -1,4 +1,3 @@
-# cook your dish here
 str = input()
 m = 0
 for i in ['a', 'b', 'c']:

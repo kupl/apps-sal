@@ -7,7 +7,6 @@ dp = [0] * 1000007
 for i in range(3, 1000001):
     dp[i] = (dp[i - 1] + fac[i - 1] - 1) * i
     dp[i] %= MOD
-# print(dp[1:11])
 
 n = int(input())
 
