@@ -16,7 +16,7 @@ class Solution:
                 walk = (1 << k) - 1
                 steps2, targ2 = steps + k + 1, walk - targ
                 if walk == targ:
-                    steps2 -= 1  # No \"R\" command if already exact
+                    steps2 -= 1
 
                 if abs(targ2) <= barrier and steps2 < dist[targ2]:
                     heapq.heappush(pq, (steps2, targ2))

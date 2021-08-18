@@ -1,7 +1,6 @@
 class Solution:
     def maxUncrossedLines(self, A, B):
-        # optimization
-        commons = set(A).intersection(set(B))  # or commons = set(A) & set(B)
+        commons = set(A).intersection(set(B))
         A = [x for x in A if x in commons]
         B = [x for x in B if x in commons]
         N1, N2 = len(A), len(B)

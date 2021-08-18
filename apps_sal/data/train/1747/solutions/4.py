@@ -58,7 +58,7 @@ def crosstable(players, results):
     total_width = sum(col_width)
 
     SB_string = f"{'SB':{' '}{'^'}{width_SB_col}}".rstrip()
-    header = f"{'#':{' '}{'>'}{width_rank_col}}" + col_delimitter + f"{'Player':{' '}{'<'}{width_player_col}}" + ' ' + score_line + col_delimitter + f"{'Pts':{' '}{'^'}{width_pts_col}}" + col_delimitter + SB_string + '\n'
+    header = f"{'
     separator_line = total_width * '=' + '\n'
     totalString = header + separator_line
     for idx in range(len(players)):

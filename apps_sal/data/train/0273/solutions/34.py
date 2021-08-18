@@ -13,12 +13,10 @@ class Solution:
                 if pos == target:
                     return step
 
-                # 'A'
                 if (pos + speed, speed * 2) not in visited:
                     visited.add((pos + speed, speed * 2))
                     q.append((pos + speed, speed * 2))
 
-                # 'R'
                 if (pos > target and speed > 0) or (pos < target and speed < 0) or (pos + speed > target and speed > 0) or (pos + speed < target and speed < 0):
                     speed = -1 if speed > 0 else 1
                     if (pos, speed) not in visited:

@@ -15,7 +15,6 @@ class Solution:
 
             while A_i < len(A):
 
-                # check A match with B:
                 if A[A_i] in B_index:
                     for b_i in B_index[A[A_i]]:
                         if b_i < B_i:
