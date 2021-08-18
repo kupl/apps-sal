@@ -12,9 +12,7 @@ heapq.heapify(l)
 prev = 0
 ans = 0
 s = 0
-# print(arr,'arr')
 for i in range(n):
-    # print(l,'l',s,ans)
     while l and prev < arr[i][0]:
         s -= (l[0])
         ans += (-s)

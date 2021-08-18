@@ -1,5 +1,4 @@
 
-# 155b
 
 def atc_155b(input_value: str) -> str:
     N = int(input_value[0])

@@ -13,7 +13,6 @@ for i in range(n):
     ar[i][1] = i
 
 ar = sorted(ar, key=itemgetter(0))
-# print(ar)
 for i in range(5001):
     if(c[i] > k):
         flag = 1

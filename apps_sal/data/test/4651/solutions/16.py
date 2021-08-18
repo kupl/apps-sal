@@ -1,5 +1,4 @@
 def doit(lst):
-   # print(lst)
     n = len(lst)
     if(n <= 1):
         return(lst)

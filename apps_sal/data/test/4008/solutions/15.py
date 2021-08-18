@@ -7,7 +7,7 @@ for _ in range(5005):
 
 N, K = list(map(int, input().split()))
 arr = list(map(int, input().split()))
-index = 0  # 0 ~ K-1
+index = 0
 
 for i in range(N):
     k = 0

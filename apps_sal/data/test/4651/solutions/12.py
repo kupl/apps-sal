@@ -12,5 +12,4 @@ for c in range(ct):
                 li[j], li[j + 1] = li[j + 1], li[j]
             else:
                 break
-    # print(op)
     print(*li)

@@ -1,7 +1,5 @@
 import sys
 
-# ist s1 ein substring von s2, d.h. sind alle Buchstaben von s1 in s2 enthalten?
-
 
 def substring(s1, s2):
     s2copy = list(s2)
@@ -10,16 +8,13 @@ def substring(s1, s2):
         try:
             s2copy.remove(i)
         except:
-            # print(i,s2copy)
             return False
     return True
-
-# ist s1 ein sortedsubstring von s2, d.h. kann man durch löschen von Buchstaben s1 aus s2 erzeugen?
 
 
 def sortedsubstring(s1, s2):
     if not substring(s1, s2):
-        return False  # nicht mal substring
+        return False
     s2copy = s2[:]
     s1
     for i in s1:

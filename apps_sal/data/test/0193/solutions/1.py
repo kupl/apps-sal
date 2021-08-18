@@ -5,8 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.4.2
 """
 
-# SOLUTION
-
 
 def minimize(m):
     ad = [m[0][0] * m[3][0], m[0][0] * m[3][1] + m[0][1] * m[3][0], m[0][1] * m[3][1]]
@@ -38,13 +36,7 @@ def main():
     print(ans)
 
 
-# HELPERS
-
-
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
