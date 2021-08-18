@@ -4,7 +4,6 @@ a = [int(i) for i in input().split()]
 b = [deque([]) for i in range(n + 1)]
 for i in range(m):
     b[a[i]].append(i)
-# print(b)
 o = False
 count = 0
 indp = 0

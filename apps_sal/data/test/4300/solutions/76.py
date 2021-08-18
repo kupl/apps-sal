@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import defaultdict, Counter
 from itertools import product, groupby, count, permutations, combinations
 from math import pi, sqrt

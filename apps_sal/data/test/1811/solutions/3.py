@@ -3,8 +3,8 @@ s = input()
 long = 0
 m = 0
 for i in s:
-    if i == '#':
-        long += 1
+    if i == '
+    long += 1
     else:
         m = max(m, long)
         long = 0

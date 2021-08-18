@@ -19,7 +19,6 @@ while q:
             to_explore.append(i)
 
     if len(to_explore) == 0:
-        # leaf
         s = s + x[1] * x[2]
         continue
     n = len(to_explore)

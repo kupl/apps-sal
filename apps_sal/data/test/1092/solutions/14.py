@@ -22,5 +22,5 @@ n, x = list(map(int, input().split()))
 ls = list(map(int, input().split()))
 grid = ['.' for i in range(n)]
 for x in ls:
-    grid[x - 1] = '#'
+    grid[x - 1] = '
 print(countEndgames(grid))

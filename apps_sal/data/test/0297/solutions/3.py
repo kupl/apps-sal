@@ -46,7 +46,6 @@ def main():
         print(n, 0)
         print(0, m * t)
     else:
-        # assert(t == 4)
         print(0, 0)
         print(2 * n, 0)
         print(0, 2 * m)

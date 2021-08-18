@@ -9,7 +9,6 @@ for i in range(1, n):
 arr = [0 for i in range(n + 1)]
 q = deque()
 q.append([1, 1, 0])
-# node, probablity, path
 while q:
     x = q.pop()
     node = x[0]
@@ -20,7 +19,6 @@ while q:
             to_explore.append(i)
 
     if len(to_explore) == 0:
-        # leaf
         s = s + x[1] * x[2]
         continue
     n = len(to_explore)

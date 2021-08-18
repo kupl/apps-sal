@@ -22,7 +22,6 @@ def main():
     a_list = list(map(int, input().split(" ")))
     b_list = list(map(int, input().split(" ")))
     c_list = list(map(int, input().split(" ")))
-    #a < b < c
 
     a_sorted = list(sorted(a_list))
     b_sorted = list(sorted(b_list))

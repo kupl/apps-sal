@@ -17,7 +17,6 @@ for i in strr:
         list1 += [list0[j]]
         k = k + 1
         j = j + 1
-        # del(list0[0])
     else:
         m += str(dic[list1[k - 1]]) + " "
         del(list1[k - 1])

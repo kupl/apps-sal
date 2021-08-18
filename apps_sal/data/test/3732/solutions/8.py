@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 def main():
     x, y, m = map(int, input().split())
@@ -23,7 +22,7 @@ def main():
 
 
 def __starting_point():
-    print('{:#d}'.format(main()))
+    print('{:
 
 
 __starting_point()

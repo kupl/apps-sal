@@ -17,7 +17,6 @@ def do():
             mn = max(1900 - ratingChange[i], mn)
         else:
             mx = min(1899 - ratingChange[i], mx)
-        #print(mn, mx)
     if mn > mx:
         return "Impossible"
     else:

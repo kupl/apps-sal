@@ -4,7 +4,6 @@ b = dict()
 for i in range(len(a)):
     b[a[i]] = b.get(a[i], 0)
     b[a[i]] += 1
-    # print(b)
 
     if len(b) == n:
         print("1", end="")

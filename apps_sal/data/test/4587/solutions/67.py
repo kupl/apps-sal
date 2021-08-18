@@ -48,13 +48,3 @@ for i in range(1, N):
     C_sum[i] = C_sum[i - 1] + C_cnt[i]
 
 print((C_sum[-1]))
-
-# print(A)
-# print(B)
-# print(C)
-# print(A_cnt)
-# print(B_cnt)
-# print(C_cnt)
-# print(A_sum)
-# print(B_sum)
-# print(C_sum)

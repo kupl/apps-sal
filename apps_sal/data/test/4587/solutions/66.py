@@ -12,7 +12,6 @@ ans = 0
 for i in range(N):
     b = B[i]
     a_idx = bisect.bisect_left(A, b)
-    # print(b_idx)
     if a_idx == 0:
         continue
     c_idx = bisect.bisect_right(C, b)

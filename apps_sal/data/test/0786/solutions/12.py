@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 FIRST_DIV_START = 1900
 
@@ -9,7 +8,6 @@ def solve():
     max_rating = None
     for _ in range(n):
         c, d = list(map(int, input().split()))
-        # print("was div{}, took {} rating".format(d, c))
         if d == 2:
             if max_rating is None:
                 max_rating = FIRST_DIV_START - 1
@@ -32,7 +30,6 @@ def solve():
             min_rating += c
             if max_rating is not None:
                 max_rating += c
-        # print("min: {}, max: {}".format(min_rating, max_rating))
 
     if max_rating is None:
         return "Infinity"

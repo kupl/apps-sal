@@ -1,4 +1,3 @@
-# Author: Maharshi Gor
 import sys
 
 sys.setrecursionlimit(5000000)
@@ -34,7 +33,6 @@ for r, d in A:
         l = max(l, 1900 - diff)
     else:
         u = min(u, 1899 - diff)
-    # print(diff, d, l, u)
     diff += r
     if u < l:
         e = True

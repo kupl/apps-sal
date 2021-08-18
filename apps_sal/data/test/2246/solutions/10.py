@@ -18,7 +18,6 @@ def main():
     visited = [False for i in range(n + 1)]
     paths = []
 
-    # iterative DFS
     stack = [(1, 0, 1)]
     while len(stack):
         u, plen, prb = stack.pop()

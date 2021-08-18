@@ -21,7 +21,6 @@ for _ in range(n - 1):
     tree[v].append(u)
 leafs = [False, True] + [len(tree[x]) == 1 for x in range(2, n + 1)]
 dfs(1)
-# print(L)
 print(sum(L))
 
 """
