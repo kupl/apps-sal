@@ -8,7 +8,6 @@ def main():
 
     rank = [[None] * W for _ in range(H)]
     rank[0][0] = 0
-    # bfs
     reserved = deque([(0, 0)])
     while len(reserved) > 0:
         x, y = reserved.popleft()

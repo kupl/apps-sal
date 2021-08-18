@@ -1,5 +1,5 @@
 """
-Codeforces Round #321 (Div. 2)
+Codeforces Round 
 
 Problem 580 C. Kefa and Park
 
@@ -22,16 +22,8 @@ def solve(cats, edges, n, m):
         connected[a].add(b)
         connected[b].add(a)
 
-    # This is O(n^2)...
     def connected_to(v, visited):
         return connected[v] - visited
-
-    # print_stderr('tree:', tree)
-    # print_stderr('leaves: ', leaves)
-
-    # # n ... # of vertices
-    # # m ... max # of consecutive cats still OK
-    # # 1-based index
 
     cats = {i: cat for i, cat in enumerate(cats, 1)}
 

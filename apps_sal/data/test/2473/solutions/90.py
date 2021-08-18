@@ -11,7 +11,6 @@ N, K = lr()
 XY = [lr() for _ in range(N)]
 XY.sort()
 answer = float('inf')
-# 端の4点、まずはx軸の2点を選ぶ
 for left, right in itertools.combinations(list(range(N)), 2):
     xleft = XY[left][0]
     xright = XY[right][0]

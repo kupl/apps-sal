@@ -1,6 +1,3 @@
-#
-# abc088 d
-#
 import sys
 from io import StringIO
 import unittest
@@ -19,8 +16,7 @@ class TestClass(unittest.TestCase):
 
     def test_入力例_1(self):
         input = """3 3
-..#
-# ..
+..
 ..."""
         output = """2"""
         self.assertIO(input, output)
@@ -28,14 +24,14 @@ class TestClass(unittest.TestCase):
     def test_入力例_2(self):
         input = """10 37
 .....................................
-...#...####...####..###...###...###..
-..#.#..#...#.##....#...#.#...#.#...#.
-..#.#..#...#.#.....#...#.#...#.#...#.
-.#...#.#..##.#.....#...#.#.###.#.###.
-.#####.####..#.....#...#..##....##...
-.#...#.#...#.#.....#...#.#...#.#...#.
-.#...#.#...#.##....#...#.#...#.#...#.
-.#...#.####...####..###...###...###..
+...
+..
+..
+.
+.
+.
+.
+.
 ....................................."""
         output = """209"""
         self.assertIO(input, output)
@@ -64,7 +60,7 @@ def resolve():
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
-            if nx < 0 or nx >= W or ny < 0 or ny >= H or S[ny][nx] == "#" or F[ny][nx] != -1:
+            if nx < 0 or nx >= W or ny < 0 or ny >= H or S[ny][nx] == "
                 continue
 
             Q.append([nx, ny])
@@ -75,12 +71,11 @@ def resolve():
     else:
         NS = 0
         for s in S:
-            NS += s.count("#")
+            NS += s.count("
         print((W * H - F[H - 1][W - 1] - NS))
 
 
 def __starting_point():
-    # unittest.main()
     resolve()
 
 

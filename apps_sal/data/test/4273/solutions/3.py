@@ -18,7 +18,6 @@ for i in range(n):
 
 ans = 0
 for v in itertools.combinations(name, 3):
-    # print(v)
     ans += v[0] * v[1] * v[2]
 
 print(ans)

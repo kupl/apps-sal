@@ -17,7 +17,6 @@ tag[0] = True
 ans = 0
 while len(d) > 0:
     x, chd = d.popleft(), 0
-    #  print( ( x , con[ x ] ) )
     if con[x] > m:
         continue
     for y in v[x]:

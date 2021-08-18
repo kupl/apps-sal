@@ -14,7 +14,6 @@ for i in range(n):
     for j in range(n):
         rui[i + 1][j + 1] = rui[i + 1][j] + rui[i][j + 1] - rui[i][j] + gr[i][j]
 
-# XYの2点,3点,4点を総当たり
 ans = 10 ** 21
 for i in range(n - 1):
     for j in range(i + 1, n):

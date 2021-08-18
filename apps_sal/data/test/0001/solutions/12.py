@@ -1,4 +1,3 @@
-# This code is dedicated to Olya S.
 
 def e(x):
     s = 0

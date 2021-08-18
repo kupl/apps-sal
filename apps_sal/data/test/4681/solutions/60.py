@@ -1,4 +1,3 @@
-# 79B
 N = int(input())
 data = [2]
 data.append(1)

@@ -24,10 +24,10 @@ N, K = MAP()
 xy = [LIST() for _ in range(N)]
 ans = INF
 xy.sort()
-for l in range(N - K + 1):  # 長方形に含まれる最も左の点
-    for r in range(l + K, N + 1):  # 長方形に含まれる最も右の点
-        y = sorted(xy[l:r], key=lambda x: x[1])  # lからrの中でのyのとりうる値をソート
+for l in range(N - K + 1):
+    for r in range(l + K, N + 1):
+        y = sorted(xy[l:r], key=lambda x: x[1])
         for i in range(r - l - K + 1):
-            sq = (xy[r - 1][0] - xy[l][0]) * (y[i + K - 1][1] - y[i][1])  # 下からKこ選んだときの面積
+            sq = (xy[r - 1][0] - xy[l][0]) * (y[i + K - 1][1] - y[i][1])
             ans = min(ans, sq)
 print(ans)

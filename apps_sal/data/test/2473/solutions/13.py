@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from itertools import combinations
 import sys
 try:
@@ -27,10 +26,10 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    K = int(next(tokens))  # type: int
-    x = [int()] * (N)  # type: "List[int]"
-    y = [int()] * (N)  # type: "List[int]"
+    N = int(next(tokens))
+    K = int(next(tokens))
+    x = [int()] * (N)
+    y = [int()] * (N)
     for i in range(N):
         x[i] = int(next(tokens))
         y[i] = int(next(tokens))

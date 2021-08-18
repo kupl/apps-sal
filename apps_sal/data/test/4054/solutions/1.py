@@ -28,8 +28,6 @@ class InputHandlerObject(object):
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
 
-############################## SOLUTION ##############################
-# 1 1 2 7 4
 
 i = [1, 1, 2, 7, 4]
 a = [int(x) for x in g()]
