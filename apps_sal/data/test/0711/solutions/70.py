@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 from collections import Counter
 from scipy.special import comb

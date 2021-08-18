@@ -1,5 +1,4 @@
 ''' بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ '''
-# codeforces1208B_live
 from collections import Counter
 def gi(): return list(map(int, input().split()))
 

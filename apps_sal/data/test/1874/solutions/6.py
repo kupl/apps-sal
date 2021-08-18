@@ -7,7 +7,6 @@ def __starting_point():
     getcontext().prec = 50
 
     l3, l4, l5 = map(Decimal, input().split())
-    # print(l3,l4,l5)
 
     S3 = Decimal(sqrt(3)) * l3 * l3 / 4
     H3 = Decimal(sqrt(6)) * l3 / 3

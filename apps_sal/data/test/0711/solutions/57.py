@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 import sys
 
 
-MOD = 1000000007  # type: int
+MOD = 1000000007
 
 
 def factor(n: int):
@@ -53,8 +52,8 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    M = int(next(tokens))  # type: int
+    N = int(next(tokens))
+    M = int(next(tokens))
     solve(N, M)
 
 

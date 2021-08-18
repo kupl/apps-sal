@@ -1,6 +1,5 @@
 N, K, Q = map(int, input().split())
 
-# TLEを防ぐため加点方式にする
 attendee = [(K - Q)] * N
 A = [0] * Q
 
@@ -10,11 +9,10 @@ for i in range(Q):
 for i in range(Q):
     attendee[A[i] - 1] += 1
 
-# これだとTLE
 """
 for i in range(Q):
     attendee = list(map(lambda x: x-1, attendee))
-    attendee[A[i]-1]+=1 #添字に注意(1つずれる)
+    attendee[A[i]-1]+=1 
 """
 
 for i in range(N):

@@ -7,7 +7,6 @@ else:
     result = -1
     for i in range(k + 1):
         num = A[i] + ta
-        #print(i, num)
         left = -1
         right = m
         while left + 1 != right:

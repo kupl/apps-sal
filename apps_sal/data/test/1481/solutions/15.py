@@ -10,7 +10,6 @@ while i < n:
         j += 1
     thelist.append(newlist)
     i += 1
-# print(thelist)
 finallist = []
 x = 0
 y = 0
@@ -18,7 +17,6 @@ row = []
 while y < len(thelist) + 2:
     row.append(0)
     y += 1
-# print(row)
 finallist.append(row)
 for item in thelist:
     item_0 = [0]
@@ -30,15 +28,12 @@ for item in thelist:
     item_0.append(0)
     finallist.append(item_0)
 finallist.append(row)
-# print(finallist)
 istrue = "YES"
 i = 1
 j = 1
-# print(len(finallist))
 while i < len(finallist) - 1:
     while j < len(finallist) - 1:
         thecount = finallist[i - 1][j] + finallist[i + 1][j] + finallist[i][j - 1] + finallist[i][j + 1]
-        # print(thecount)
         if thecount % 2 == 1:
             istrue = "NO"
         j += 1

@@ -12,7 +12,6 @@ def NLI(): return list(NMI())
 def SI(): return input()
 
 
-# Nの素因数分解を辞書で返す
 def prime_fact(n):
     root = int(math.sqrt(n))
     prime_dict = {}
@@ -35,8 +34,6 @@ def combination_mod_initialize(n, MOD=10**9 + 7):
         fac[i] = fac[i - 1] * i % MOD
         inv[i] = inv[i - 1] * pow(i, -1, MOD) % MOD
     return fac, inv
-
-# 二項係数　高速
 
 
 def combination_mod(n, r, fac, inv, mod=10**9 + 7):

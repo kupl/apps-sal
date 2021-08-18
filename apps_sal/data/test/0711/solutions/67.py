@@ -3,7 +3,7 @@ MOD = 10 ** 9 + 7
 N, M = list(map(int, input().split()))
 
 
-def factoring(k):  # kを因数分解し、素因数とその個数を辞書に入れて返す。
+def factoring(k):
     import math
     dic = dict()
     n = int(math.sqrt(k)) + 2
@@ -14,7 +14,7 @@ def factoring(k):  # kを因数分解し、素因数とその個数を辞書に�
             k = k // i
         if count != 0:
             dic[i] = count
-    if k != 1:  # sqrt(k)までチェックしてもkが1になっていない --> kが素因数
+    if k != 1:
         dic[k] = 1
     return dic
 
@@ -45,7 +45,6 @@ C = Factorial(N + 100, MOD).comb
 ans = 1
 dic = factoring(M)
 for tmp in dic:
-    # print (tmp, dic[tmp])
     ans *= C(dic[tmp] + N - 1, dic[tmp])
     ans %= MOD
 

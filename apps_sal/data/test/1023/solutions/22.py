@@ -7,8 +7,6 @@ if(k >= min(m, n)):
 else:
     a.sort()
     b.sort()
-    # print(*a)
-    # print(*b)
     f, mx = 0, -1
     for i in range(0, k + 1):
         x = br(b, a[i])

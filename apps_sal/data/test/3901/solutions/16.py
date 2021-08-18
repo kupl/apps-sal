@@ -39,14 +39,12 @@ def main():
     k = N + 1
     flag = False
     while i != N and l != 2:
-        #print(i, k, l)
         div = T[i]
         for j in range(i + 1, N):
             div = math.gcd(div, T[j])
             if div == 1:
                 l = min(l, j - i + 1)
                 k = j
-                #print(" ", i, j, l)
                 break
         if div != 1:
             flag = True
@@ -56,7 +54,6 @@ def main():
             div = math.gcd(div, T[j])
             if div == 1:
                 l = min(l, k - j + 1)
-                #print("  ", j, k, l)
                 break
         if flag:
             break
@@ -69,5 +66,3 @@ def main():
 
 
 main()
-
-# 1511548364391

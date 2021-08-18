@@ -24,7 +24,6 @@ def main():
     MOD = 10**9 + 7
 
     MAX_N = 5 * (10 ** 5)
-    # comb init
     fac = [0] * MAX_N
     finv = [0] * MAX_N
     inv = [0] * MAX_N

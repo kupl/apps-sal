@@ -9,7 +9,7 @@ def main():
     N, M = ZZ()
     MAX_E = 50
 
-    fact = [1] * (N + MAX_E + 1)  # fact[n] = n!
+    fact = [1] * (N + MAX_E + 1)
     ifact = [1] * (N + MAX_E + 1)
 
     for i in range(1, N + MAX_E + 1):

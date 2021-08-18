@@ -1,6 +1,5 @@
 import sys
 from math import *
-#sys.stdin = open('inp', 'r')
 n = int(input())
 a, b = input(), input()
 ans = 0

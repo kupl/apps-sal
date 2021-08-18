@@ -1,4 +1,3 @@
-# 素因数分解して列挙する関数、約数列挙ではない！
 from collections import Counter
 
 

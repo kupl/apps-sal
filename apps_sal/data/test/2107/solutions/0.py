@@ -1,4 +1,4 @@
-def solution():  # 最大的距离来自于角落附近的点
+def solution():
     n, m, k, s = map(int, input().split())
     def dis(a, b): return abs(a[0] - b[0]) + abs(a[1] - b[1])
     corner = [(0, 0), (0, m - 1), (n - 1, 0), (n - 1, m - 1)]
