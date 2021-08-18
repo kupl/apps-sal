@@ -15,7 +15,6 @@ class ProductOfNumbers:
             else:
                 self.product.append(num * self.product[-1])
         self.n += 1
-        # print(self.product)
 
     def getProduct(self, k: int) -> int:
         if self.zero >= self.n - k:
@@ -23,9 +22,3 @@ class ProductOfNumbers:
         if k == self.n or self.n - k - 1 == self.zero:
             return self.product[-1]
         return self.product[-1] // self.product[self.n - k - 1]
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

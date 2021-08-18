@@ -23,9 +23,3 @@ class ProductOfNumbers:
             return 0
         else:
             return self.pos2Prod[tailIdx] // (self.pos2Prod[headIdx] if headIdx >= 0 else 1)
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

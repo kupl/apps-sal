@@ -2,7 +2,7 @@ class ProductOfNumbers:
 
     def __init__(self):
         self.ll = []
-        self.dd = [1]  # indexing form 1 not from 0
+        self.dd = [1]
         self.count = [0]
 
     def add(self, num: int) -> None:
@@ -32,9 +32,3 @@ class ProductOfNumbers:
                 return (self.dd[upp] // self.dd[low - 1])
             else:
                 return(0)
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

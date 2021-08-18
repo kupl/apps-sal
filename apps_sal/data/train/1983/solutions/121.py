@@ -21,9 +21,3 @@ class ProductOfNumbers:
                 prod *= n
             self.cache[tkey] = prod
         return prod
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

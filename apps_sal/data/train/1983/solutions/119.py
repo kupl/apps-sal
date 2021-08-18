@@ -16,16 +16,9 @@ class ProductOfNumbers:
         self.index += 1
 
     def getProduct(self, k: int) -> int:
-        #print(self.index, k)
         if self.zeroes and self.index - k <= self.zeroes[-1]:
             return 0
         elif k == len(self.prefix):
             return self.prefix[-1]
         else:
             return self.prefix[-1] // self.prefix[self.index - k - 1]
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

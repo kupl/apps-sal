@@ -24,9 +24,3 @@ class ProductOfNumbers:
             else:
                 ii = len(self.cumprod) - k
                 return self.numlist[ii] * self.cumprod[-1] // self.cumprod[ii]
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

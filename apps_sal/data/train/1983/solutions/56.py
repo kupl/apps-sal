@@ -20,9 +20,3 @@ class ProductOfNumbers:
         top = len(self.hash) - 1 - k
         end = len(self.hash) - 1
         return int(self.hash[end][1] / self.hash[top][1]) if k != len(self.hash) else self.hash[k - 1][1]
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

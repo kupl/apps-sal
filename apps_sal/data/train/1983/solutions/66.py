@@ -23,9 +23,3 @@ class ProductOfNumbers:
             return self.product_agg[len(self.product_agg) - 1] // self.product_agg[diff_num]
 
         return self.product_agg[len(self.product_agg) - 1]
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

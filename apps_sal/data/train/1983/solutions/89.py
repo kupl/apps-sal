@@ -19,10 +19,6 @@ class ProductOfNumbers:
         if k == 1:
             return self.nums[-1]
         l = len(self.suffixProduct) - 1
-        # print(l,k,self.zeros)
-        # for j in range(l, l-k, -1):
-        #     if j in self.zeros:
-        #         return 0
         for zi in self.zeros:
             if zi > l - k and zi <= l:
                 return 0
@@ -31,9 +27,3 @@ class ProductOfNumbers:
         else:
             dd = self.suffixProduct[-1 - k]
         return int(self.suffixProduct[-1] / dd)
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)
