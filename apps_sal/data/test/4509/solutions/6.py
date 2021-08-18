@@ -7,8 +7,6 @@ def ff(l, r, n):
 
 
 for _ in range(int(input())):
-    # n = int(input())
-    # arr = list(map(int, input().split()))
     n, k = list(map(int, input().split()))
     k -= 1
     s = 1

@@ -15,7 +15,7 @@ def meteors(n, ar, br):
     if len(differ) == 1:
         pr[differ[0][0]] = unused[0]
     elif len(differ) == 2:
-        if differ[0][1] in unused and differ[0][2] in unused and differ[1][1] in unused and differ[1][2] in unused:  # whatever is fine
+        if differ[0][1] in unused and differ[0][2] in unused and differ[1][1] in unused and differ[1][2] in unused:
             pr[differ[0][0]] = unused[0]
             pr[differ[1][0]] = unused[1]
         if differ[1][1] in unused and differ[1][2] in unused:
@@ -37,7 +37,7 @@ def meteors(n, ar, br):
                 unused.remove(differ[1][1])
                 pr[differ[0][0]] = unused[0]
     else:
-        pr = list(range(1, n + 1))  # bad input
+        pr = list(range(1, n + 1))
 
     return pr
 

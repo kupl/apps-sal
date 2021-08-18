@@ -37,6 +37,5 @@ while q > 0:
         current = [current[0], current[1] + 1, 'R']
     else:
         print(myfunction(mydict, current, second))
-    # print(current)
 
     q -= 1

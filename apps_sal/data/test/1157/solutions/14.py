@@ -17,6 +17,5 @@ for i in arr:
     dp = [a, b]
     ans[0] += a
     ans[1] += b
-    # print(dp)
 
 print(*ans[::-1])

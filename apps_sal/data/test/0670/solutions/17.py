@@ -30,4 +30,3 @@ if a != 0 and b != 0:
     res3 = abs(y1 - y) + abs(x2 - x) + sqrt(abs(x1 - x) ** 2 + abs(y2 - y) ** 2)
 
 print(min(res1, res2, res3, res4, res5))
-# print(res1, res2, res3, res4, res5)

@@ -11,7 +11,6 @@ n, m = MI()
 sws = []
 for i in range(m):
     sws.append(list(map(int, input().split())))
-# print(sws)
 ps = LI()
 ans = 0
 for i in range(2**n):
@@ -20,7 +19,6 @@ for i in range(2**n):
         sm = 0
         for k in range(1, len(sws[j])):
             sm += (i >> (sws[j][k] - 1)) % 2
-        # print(sm)
         if sm % 2 == ps[j]:
             count += 1
     if count == m:

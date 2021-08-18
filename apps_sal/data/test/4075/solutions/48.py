@@ -1,7 +1,6 @@
 n, m = map(int, input().split())
 s_lis = []
 
-# ON/OFFのパターン
 for i in range(2 ** n):
     lis = []
     for j in range(len(bin(2 ** n)) - 3):
@@ -12,15 +11,12 @@ for i in range(2 ** n):
 
     s_lis.append(lis)
 
-# 各電球の接続
 b_lis = []
 for k in range(m):
     b_lis.append(list(map(int, input().split())))
 
-# 点灯条件
 light = list(map(int, input().split()))
 
-# 各電球の合計
 cnt = 0
 for s in s_lis:
     c_lis = []

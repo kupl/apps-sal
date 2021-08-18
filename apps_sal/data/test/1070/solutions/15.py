@@ -13,10 +13,7 @@ for i in range(len(a) - 1):
         b.append(count)
 
 
-# print(b)
 if len(b) == 0:
     print(n)
-# elif max(b) == 0:
-    # print(0)
 else:
     print(max(b) + 1)

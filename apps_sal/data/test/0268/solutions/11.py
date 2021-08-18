@@ -14,12 +14,10 @@ def bi_search(a, x):
 
 
 class Bit():
-    # index-1
     def __init__(self, n):
         self.bit = [0] * (n + 1)
         self.n = n
 
-    # sum[1, i]
     def sum_prefix(self, i):
         s = 0
         while i > 0:
@@ -27,7 +25,6 @@ class Bit():
             i -= i & (-i)
         return s
 
-    # sum[l, r]
     def sum_(self, l, r):
         if l == 1:
             return self.sum_prefix(r)
@@ -50,7 +47,7 @@ for i in range(n + 1):
     if i == 0:
         continue
 
-    pos = bi_search(a, max(0, a[i] - d))  # pos,   i-k+1..,i-1,i
+    pos = bi_search(a, max(0, a[i] - d))
 
     l, r = pos - 1, i - k
 

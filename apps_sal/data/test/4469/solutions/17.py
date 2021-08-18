@@ -1,4 +1,3 @@
-# use this as the main template for python problems
 import sys
 
 

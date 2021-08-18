@@ -7,7 +7,6 @@ for i in range(M):
         if j != 0:
             s_lst[i][value - 1] = True
 p = list(map(int, input().split()))
-# print(s_lst)
 
 ans = 0
 for bit in range(2**N):
