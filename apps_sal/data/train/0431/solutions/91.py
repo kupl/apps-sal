@@ -23,9 +23,6 @@ class Solution:
                 post_val[i] = n - 1
             post_stack.append(i)
 
-        # print(pre_val)
-        # print(post_val)
-
         ans = 0
         mod_cst = 10**9 + 7
         for i in range(n):

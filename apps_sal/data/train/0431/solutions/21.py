@@ -29,9 +29,6 @@ class Solution:
             elem, idx = prev_stack.pop()
             prev_smaller[idx] = -1
 
-        # print(prev_smaller)
-        # print(next_smaller)
-
         result = 0
         for i in range(len(A)):
             left_count = i - prev_smaller[i] - 1

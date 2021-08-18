@@ -1,18 +1,14 @@
-# read input
 cases = int(input())
 caselist = []
 for i in range(0, cases):
     caselist.append(input())
 
-# iterate each case
 for j in range(0, cases):
 
-    # current case's parameters:
     current_input = caselist[j].split(' ')
     bots = int(current_input[0])
     switch = int(current_input[1])
 
-    # generate botlist and cakelist
     botlist = list(range(switch, bots)) + list(range(0, switch))
     cakelist = [False] * bots
 

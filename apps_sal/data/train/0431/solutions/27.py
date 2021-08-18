@@ -12,9 +12,6 @@ class Solution:
                 left[i] = stack[-1]
             stack.append(i)
 
-        # print(left)
-        # print(right)
-
         for i in range(length):
             res += (i - left[i]) * (right[i] - i) * A[i]
         return res % N
