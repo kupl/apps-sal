@@ -1,4 +1,3 @@
-# ababcbc
 class Solution:
     def movesToStamp(self, s, t):
         n, m, t, s, res = len(t), len(s), list(t), list(s), []

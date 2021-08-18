@@ -7,7 +7,7 @@ class Solution:
             return 0
 
         dp = [[float('inf'), float('inf')] for _ in range(n)]
-        dp[0] = [0, 1]  # [natural, swapped]
+        dp[0] = [0, 1]
 
         for i in range(1, n):
             if A[i - 1] < A[i] and B[i - 1] < B[i]:

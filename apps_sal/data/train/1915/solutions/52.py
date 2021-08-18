@@ -6,7 +6,6 @@ class Solution:
         moves = 0
 
         def match(s, t):
-            # return all(ch1 in {ch2, '?'} for ch1, ch2 in zip(s, t))
             for ch1, ch2 in zip(s, t):
                 if ch1 == '?':
                     continue

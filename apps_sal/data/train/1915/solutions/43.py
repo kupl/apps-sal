@@ -5,7 +5,6 @@ class Solution:
         target = list(target)
         cnt = 0
         candidates = [i for i in range(len(target) - len(stamp) + 1)]
-        # print(candidates)
         while cnt < len(target) and len(candidates) > 0:
             nxt = []
             for i in candidates:
@@ -19,6 +18,5 @@ class Solution:
                         target[j] = '*'
                     ret.append(i)
             candidates = nxt
-            # print(target)
 
         return ret[::-1] if cnt == len(target) else []

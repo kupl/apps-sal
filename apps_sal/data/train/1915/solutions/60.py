@@ -41,17 +41,13 @@ class Solution:
                 res.append(win_start)
                 done.add(win_start)
 
-        #print(que, matched)
-
         while que:
-            win_start = que.popleft()  # done window
-            # new windows that are affected
+            win_start = que.popleft()
 
             for nws in range(max(0, win_start - M + 1), min(nwin, win_start + M)):
-                # add the pos if not matched in new window yet
                 if nws in done:
                     continue
-                for pos in range(win_start, win_start + M):  # pos in done
+                for pos in range(win_start, win_start + M):
                     if nws <= pos < nws + M:
                         matched[nws].add(pos)
 

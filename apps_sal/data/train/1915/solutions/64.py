@@ -12,7 +12,6 @@ class Solution:
         nt = len(target)
         while target != '*' * nt:
             old_target = target
-            # greedy, keep replace current target string with possible patter
             for pattern in stamp_patterns:
                 inx = target.find(pattern)
                 if inx != -1:

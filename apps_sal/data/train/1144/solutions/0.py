@@ -42,7 +42,6 @@ for i in range(T):
         for j in range(1, n):
             if(s[j] == c):
                 count += 1
-                # print count;
                 if count > k:
                     if(j + 1 < n and s[j] == s[j + 1]):
                         if(s[j] == 1):

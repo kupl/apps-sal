@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 import sys
 sys.setrecursionlimit(10**5)

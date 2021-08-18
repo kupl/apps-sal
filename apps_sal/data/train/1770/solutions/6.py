@@ -1,21 +1,21 @@
-def path_finder(maze):  # IMPLEMENTING BFS ALGORITHM
-    mtx = list(map(list, maze.splitlines()))  # convert string to 2d array
-    R = len(mtx[0])  # number of rows or size of te mtx
-    mtx[R - 1][R - 1] = 'E'  # define the exit as 'E'
-    sr, sc = 0, 0  # starting node
-    rq, cq = [], []  # empty queue for row and column
+def path_finder(maze):
+    mtx = list(map(list, maze.splitlines()))
+    R = len(mtx[0])
+    mtx[R - 1][R - 1] = 'E'
+    sr, sc = 0, 0
+    rq, cq = [], []
     prev = [[' '] * (R) for x in range(R)]
 
     move_count = 0
     nodes_left_in_layer = 1
     nodes_in_next_layer = 0
 
-    reached_end = False  # variable used to know if exit is reached
+    reached_end = False
 
-    visited = [[False] * (R) for x in range(R)]  # Mtx to know if node visited
+    visited = [[False] * (R) for x in range(R)]
 
-    dr = [-1, 1, 0, 0]  # North, South, West direction vectors
-    dc = [0, 0, 1, -1]  # North, South, West direction vectors
+    dr = [-1, 1, 0, 0]
+    dc = [0, 0, 1, -1]
 
     rq.append(sr)
     cq.append(sc)
@@ -26,10 +26,10 @@ def path_finder(maze):  # IMPLEMENTING BFS ALGORITHM
         c = cq.pop(0)
 
         if mtx[r][c] == 'E':
-            reached_end = True  # The end has been reached
+            reached_end = True
             return move_count
 
-        for i in range(4):  # explore_neighbours
+        for i in range(4):
             rr = r + dr[i]
             cc = c + dc[i]
 
@@ -46,7 +46,7 @@ def path_finder(maze):  # IMPLEMENTING BFS ALGORITHM
             rq.append(rr)
             cq.append(cc)
             visited[rr][cc] = True
-            prev[rr][cc] = [r, c]  # keep track of the parent
+            prev[rr][cc] = [r, c]
             nodes_in_next_layer += 1
         nodes_left_in_layer -= 1
         if nodes_left_in_layer == 0:

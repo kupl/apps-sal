@@ -7,9 +7,6 @@ class Solution(object):
         ans = []
         A = []
         for i in range(N - M + 1):
-            # For each window [i, i+M),
-            # A[i] will contain info on what needs to change
-            # before we can reverse stamp at i.
 
             made, todo = set(), set()
             for j, c in enumerate(stamp):
@@ -20,8 +17,6 @@ class Solution(object):
                     todo.add(i + j)
             A.append((made, todo))
 
-            # If we can reverse stamp at i immediately,
-            # enqueue letters from this window.
             if not todo:
                 ans.append(i)
                 for j in range(i, i + len(stamp)):
@@ -29,18 +24,15 @@ class Solution(object):
                         queue.append(j)
                         done[j] = True
 
-        # For each enqueued letter,
         while queue:
             i = queue.popleft()
 
-            # For each window that is potentially affected,
-            # j: start of window
             for j in range(max(0, i - M + 1), min(N - M, i) + 1):
-                if i in A[j][1]:  # This window is affected
-                    A[j][1].discard(i)  # Remove it from todo list of this window
-                    if not A[j][1]:  # Todo list of this window is empty
+                if i in A[j][1]:
+                    A[j][1].discard(i)
+                    if not A[j][1]:
                         ans.append(j)
-                        for m in A[j][0]:  # For each letter to potentially enqueue,
+                        for m in A[j][0]:
                             if not done[m]:
                                 queue.append(m)
                                 done[m] = True

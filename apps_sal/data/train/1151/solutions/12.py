@@ -1,4 +1,3 @@
-# cook your dish here
 class Graph:
     def __init__(self, V):
         self.V = V
