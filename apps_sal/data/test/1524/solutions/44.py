@@ -1,7 +1,7 @@
 s = input()
 n = len(s)
-R = []  # the number of consecutive 'R's on and toward the left
-L = []  # the number of consecutive 'L's on and toward the right
+R = []
+L = []
 ans = []
 
 cnt = 0
@@ -23,7 +23,7 @@ for i in range(n):
     L.append(cnt)
 L.append(0)
 
-r = [0] * n  # the number of children coming from 'R' series and stay there
+r = [0] * n
 for i in range(n):
     if R[i] != 0 and R[i + 1] == 0:
         if R[i] % 2 == 1:
@@ -33,7 +33,7 @@ for i in range(n):
             r[i] = R[i] // 2
             r[i + 1] = R[i] // 2
 
-l = [0] * n  # the number of children coming from 'L' series and stay there
+l = [0] * n
 for i in range(n):
     if L[i] != 0 and L[i + 1] == 0:
         if L[i] % 2 == 1:

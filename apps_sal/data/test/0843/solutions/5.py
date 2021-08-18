@@ -9,7 +9,6 @@ while (i not in visited) and (i < n) and (i > -1):
         i += lengths[i]
     else:
         i -= lengths[i]
-    #print('new', i)
 
 if (i < n) and (i >= 0):
     print("INFINITE")

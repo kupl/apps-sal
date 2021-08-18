@@ -1,7 +1,6 @@
 a = list(input())
 ans = [0] * len(a)
 even_r, odd_r = 0, 0
-# 正直変数ガチャ
 for i in range(len(a)):
     if a[i] == "R":
         if i % 2 == 0:

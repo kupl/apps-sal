@@ -1,13 +1,12 @@
 n = int(input())
 
-a = input()  # string input
+a = input()
 count = 0
 flag = 0
 
 
 b = [int(r) for r in input().split()]
 
-# b=input().split()
 
 i = int()
 for i in range(0, n, 1):

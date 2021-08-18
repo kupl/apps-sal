@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from heapq import *
 
 a = [*list(range(1, 10))]

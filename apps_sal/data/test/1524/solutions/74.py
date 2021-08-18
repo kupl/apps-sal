@@ -1,7 +1,7 @@
 s = input()
 
 
-def rr(a):  # 圧縮された要素を保持
+def rr(a):
     ll, l = [], 1
     for i in range(len(a) - 1):
         if a[i] == a[i + 1]:

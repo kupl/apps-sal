@@ -1,6 +1,5 @@
 s = list(input())
 lens = len(s)
-# print(s)
 
 lr = [[0] * 2 for i in range(lens)]
 lrp = [0] * lens
@@ -29,7 +28,6 @@ for i in range(icnt + 1):
     ss[lrp[i]] = r1 + l2
     ss[lrp[i] - 1] = r2 + l1
 
-# print(lr[:icnt+1])
 tstr = str(ss[0])
 for i in range(1, lens):
     tstr = tstr + " " + str(ss[i])

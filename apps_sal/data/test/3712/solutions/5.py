@@ -8,7 +8,6 @@ else:
     arr = [0, 0, 0, 0, 0]
     for s in seq:
         arr[s] += 1
-    # print(arr)
 
     ans = 0
     if arr[2] >= arr[1]:
@@ -21,12 +20,10 @@ else:
         arr[1] -= arr[2]
         arr[3] += arr[2]
         arr[2] = 0
-    #print(arr, ans)
 
     ans += 2 * (arr[1] // 3)
     arr[3] += arr[1] // 3
     arr[1] %= 3
-    #print(arr, ans)
 
     if (arr[3] >= arr[1]):
         ans += arr[1]
@@ -39,7 +36,6 @@ else:
             arr[4] += arr[3]
             arr[1] -= arr[3]
             arr[3] = 0
-    #print(arr, ans)
 
     if arr[1] > 0:
         if arr[1] == 2:
@@ -56,7 +52,6 @@ else:
     ans += 2 * (arr[2] // 3)
     arr[3] += 2 * (arr[2] // 3)
     arr[2] %= 3
-    #print(arr, ans)
 
     if arr[2] > 0:
         if (arr[4] >= arr[2]):
@@ -64,20 +59,17 @@ else:
             arr[4] -= arr[2]
             arr[3] += 2 * arr[2]
             arr[2] = 0
-            #print(arr, ans)
 
             ans += 2 * (arr[2])
             arr[4] += 2 * arr[2]
             arr[3] -= arr[2]
             arr[2] = 0
-            #print(arr, ans)
         else:
             if (arr[4] > 0):
                 ans += arr[2]
                 arr[4] -= arr[2]
                 arr[3] += 2 * arr[2]
                 arr[2] = 0
-                #print(arr, ans)
             else:
                 if arr[2] == 1:
                     ans += 2 * arr[2]

@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 from collections import deque
 
 K = int(input())
