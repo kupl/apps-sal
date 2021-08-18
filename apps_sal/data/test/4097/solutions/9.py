@@ -1,6 +1,5 @@
 n = int(input())
 b = list(map(int, input().split()))
-# print(b)
 l = len(b)
 
 answer = False
@@ -22,7 +21,6 @@ else:
                         needseq = list(range(start, end - 1, diff))
                 else:
                     needseq = [start] * l
-#                print(needseq)
                 count = 0
                 for s1, s2 in zip(b, needseq):
                     if abs(s1 - s2) <= 1:

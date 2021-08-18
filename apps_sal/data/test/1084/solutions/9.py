@@ -4,11 +4,11 @@ for i in range(n):
     s = input()
     q = set()
     for j in range(len(s)):
-        if s[j] == "#":
-            q.add(j)
+        if s[j] == "
+           q.add(j)
     for j in range(len(s)):
-        if s[j] == "#":
-            if a[j] == -1:
+        if s[j] == "
+           if a[j] == -1:
                 a[j] = i
             else:
                 if b[a[j]] != q:

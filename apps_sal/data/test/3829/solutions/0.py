@@ -10,13 +10,8 @@ def main():
     m, n = read()
     print(m - sum((i / m)**n for i in range(1, m)))
 
-# NON-SOLUTION STUFF BELOW
-
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs

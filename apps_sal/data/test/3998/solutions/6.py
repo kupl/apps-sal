@@ -1,4 +1,3 @@
-# coding=utf-8
 """Codeforces 730a solution."""
 
 from operator import itemgetter
@@ -34,14 +33,11 @@ class CodeforcesTask730ASolution:
                         added = True
                         break
                 if not added:
-                    #print("edge case 1")
-                    # print(players)
                     moves.append([players[-1][0], players[0][0]])
                     players[0][1] = max(0, players[0][1] - 1)
                     players[-1][1] = max(0, players[-1][1] - 1)
                     players.sort(key=itemgetter(1), reverse=True)
                     while players[0][1] != players[-1][1] and players[1][1] != players[-1][1]:
-                        # print(players)
                         players[0][1] = max(0, players[0][1] - 1)
                         players[1][1] = max(0, players[1][1] - 1)
                         moves.append([players[0][0], players[1][0]])
@@ -55,14 +51,11 @@ class CodeforcesTask730ASolution:
                                 added = True
                                 break
                         if not added:
-                            # print(players)
-                            #print("edge case 2")
                             moves.append([players[-1][0], players[0][0]])
                             players[0][1] = max(0, players[0][1] - 1)
                             players[-1][1] = max(0, players[-1][1] - 1)
                             players.sort(key=itemgetter(1), reverse=True)
                             while players[0][1] != players[-1][1] and players[1][1] != players[-1][1]:
-                                # print(players)
                                 players[0][1] = max(0, players[0][1] - 1)
                                 players[1][1] = max(0, players[1][1] - 1)
                                 moves.append([players[0][0], players[1][0]])
@@ -76,14 +69,11 @@ class CodeforcesTask730ASolution:
                                         added = True
                                         break
                                 if not added:
-                                    # print(players)
-                                    #print("edge case 3")
                                     moves.append([players[-1][0], players[0][0]])
                                     players[0][1] = max(0, players[0][1] - 1)
                                     players[-1][1] = max(0, players[-1][1] - 1)
                                     players.sort(key=itemgetter(1), reverse=True)
                                     while players[0][1] != players[-1][1] and players[1][1] != players[-1][1]:
-                                        # print(players)
                                         players[0][1] = max(0, players[0][1] - 1)
                                         players[1][1] = max(0, players[1][1] - 1)
                                         moves.append([players[0][0], players[1][0]])
@@ -97,14 +87,11 @@ class CodeforcesTask730ASolution:
                                                 added = True
                                                 break
                                         if not added:
-                                            # print(players)
-                                            #print("edge case 4")
                                             moves.append([players[-1][0], players[0][0]])
                                             players[0][1] = max(0, players[0][1] - 1)
                                             players[-1][1] = max(0, players[-1][1] - 1)
                                             players.sort(key=itemgetter(1), reverse=True)
                                             while players[0][1] != players[-1][1] and players[1][1] != players[-1][1]:
-                                                # print(players)
                                                 players[0][1] = max(0, players[0][1] - 1)
                                                 players[1][1] = max(0, players[1][1] - 1)
                                                 moves.append([players[0][0], players[1][0]])
@@ -118,7 +105,6 @@ class CodeforcesTask730ASolution:
                                                         added = True
                                                         break
                                                 if not added:
-                                                    # print(players)
                                                     print("edge case 5")
 
             players.sort(key=itemgetter(1), reverse=True)

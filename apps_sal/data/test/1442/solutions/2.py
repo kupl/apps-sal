@@ -11,12 +11,6 @@ import copy
 from itertools import chain, dropwhile, permutations, combinations
 from collections import defaultdict, deque
 
-# Guide:
-#   1. construct complex data types while reading (e.g. graph adj list)
-#   2. avoid any non-necessary time/memory usage
-#   3. avoid templates and write more from scratch
-#   4. switch to "flat" implementations
-
 
 def VI(): return list(map(int, input().split()))
 def I(): return int(input())

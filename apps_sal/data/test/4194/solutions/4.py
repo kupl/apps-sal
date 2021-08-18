@@ -7,4 +7,3 @@ if(sum > n):
     print((-1))
 else:
     print((n - sum))
-# print(a)

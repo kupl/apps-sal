@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import collections
 
 n, s = list(map(int, input().split()))

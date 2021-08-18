@@ -19,7 +19,6 @@ while not all(i == d[0] for i in d):
             d[z] -= 1
             answer.append(''.join('1' if k == i or k == j or k == z else '0' for k in range(n)))
             continue
-    #print(i, j, max1, max2)
     d[i] = max(max1 - 1, 0)
     d[j] = max(max2 - 1, 0)
     answer.append(''.join('1' if k == i or k == j else '0' for k in range(n)))

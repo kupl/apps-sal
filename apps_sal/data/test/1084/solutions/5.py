@@ -1,6 +1,6 @@
 def main():
     n, m = list(map(int, input().split()))
-    aa, bb = [{i for i, c in enumerate(input()) if c == '#'} for _ in range(n)], []
+    aa, bb = [{i for i, c in enumerate(input()) if c == '
     for a in aa:
         if a:
             for b in bb:

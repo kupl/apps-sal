@@ -8,7 +8,6 @@ for i in range(K):
 dp = [0] * (3 * N)
 dp[0] = 1
 dp[1] = -1
-# imos
 for i in range(N):
     for l, r in M:
         dp[l + i] += dp[i]

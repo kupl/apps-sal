@@ -1,7 +1,6 @@
 N, K = map(int, input().split())
 L = [list(map(int, input().split())) for i in range(K)]
 
-#print (L)
 
 dp = [0 for i in range(N + 10)]
 sdp = [0 for i in range(N + 11)]
@@ -9,9 +8,7 @@ dp[0] = 1
 sdp[1] = 1
 
 for i in range(1, N):
-    # print('i:',i)
     for array in L:
-        #print('array loop:', array)
         if i - array[-1] < 0:
             start = 0
         else:

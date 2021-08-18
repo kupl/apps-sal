@@ -17,5 +17,3 @@ for key in sorted(dic['S'], reverse=True)[-s:]:
     print('S', key, dic['S'][key])
 for key in sorted(dic['B'], reverse=True)[:s]:
     print('B', key, dic['B'][key])
-    # for line in sorted(dic['B'])[:s]:
-    # print('B',line)

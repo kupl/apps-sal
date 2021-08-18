@@ -7,10 +7,6 @@ def readInts(): return [int(x) for x in sys.stdin.readline().split()]
 def readInt(): return int(sys.stdin.readline())
 
 
-# def print(x):
-# sys.stdout.write(str(x) + '\n')
-
-
 def solve():
     MOD = int(1e9 + 7)
     d, n = readInts()
@@ -51,7 +47,6 @@ def solve():
 
 def main():
     t = 1
-    # t = readInt()
     for _ in range(t):
         solve()
 

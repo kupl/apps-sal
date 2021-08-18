@@ -17,13 +17,11 @@ else:
                 count += 1
             d = cnt2 - cnt1
             prev = cnt2
-            #print(prev, cnt1, cnt2)
             ind1 = True
             for k in range(2, n):
                 new_d = b[k] - prev
                 if abs(new_d - d) > 1:
                     ind1 = False
-                    #print(cnt1, cnt2, d,prev, new_d, b[k])
                     break
                 else:
                     if new_d != d:

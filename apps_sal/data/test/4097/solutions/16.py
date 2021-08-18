@@ -5,9 +5,9 @@ def solve(seq):
     startings = []
     for x in (-1, 0, 1):
         for y in (-1, 0, 1):
-            start = (seq[1] + y,  # first el
-                     (seq[0] + x - seq[1] - y),  # delta
-                     int(x != 0) + int(y != 0))  # number of changes
+            start = (seq[1] + y,
+                     (seq[0] + x - seq[1] - y),
+                     int(x != 0) + int(y != 0))
             startings.append(start)
 
     changes = []
