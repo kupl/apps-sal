@@ -1,6 +1,5 @@
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
-        # Solution 1
         A.sort()
         A.append(100000)
         result = taken = 0
@@ -15,7 +14,6 @@ class Solution:
                 taken -= give
         return result
 
-        # Solution 2
         counter = collections.Counter(A)
         taken = []
         result = 0

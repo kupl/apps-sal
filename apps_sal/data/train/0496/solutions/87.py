@@ -9,5 +9,4 @@ class Solution:
                 temp = A[i]
                 A[i] = A[i - 1] + 1
                 cnt += A[i] - temp
-        # print(A)
         return cnt

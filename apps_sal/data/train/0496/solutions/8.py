@@ -12,7 +12,6 @@ class Solution:
             if x > max_num and (not taken):
                 break
             if count[x] >= 2:
-                # taken.extend([x] * (count[x] - 1))
                 taken = taken + [x] * (count[x] - 1)
             elif taken and count[x] == 0:
                 ans += x - taken.pop()

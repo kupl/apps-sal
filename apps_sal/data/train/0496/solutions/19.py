@@ -1,4 +1,3 @@
-# https://leetcode.com/problems/minimum-increment-to-make-array-unique/
 
 from typing import List
 from collections import Counter

@@ -1,5 +1,4 @@
 def my_languages(results):
-    # your code here
 
     dictCopy = results.copy()
 
@@ -13,5 +12,4 @@ def my_languages(results):
     for i in range(len(results)):
         languages.append(results[i][0])
 
-    # print(languages)
     return languages

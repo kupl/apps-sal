@@ -1,5 +1,4 @@
 def feast(beast, dish):
-    # your code here
     pass
     b = beast.replace(" ", "")
     length_b = len(b)

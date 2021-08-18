@@ -9,5 +9,4 @@ class Solution:
 
         for i in A:
             ans += find(i) - i
-            #print (n[i])
         return ans

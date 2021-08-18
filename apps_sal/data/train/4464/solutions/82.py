@@ -1,6 +1,5 @@
 def feast(beast, dish):
 
-    # your code here
     x = beast[0]
     y = dish[0]
     z = beast[-1]

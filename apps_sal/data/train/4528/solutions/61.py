@@ -16,6 +16,3 @@ def my_languages(results):
         else:
             pass
     return resultList
-
-# for i in sort_orders:
-#   print(i[0], i[1])

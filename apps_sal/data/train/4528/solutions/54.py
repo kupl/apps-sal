@@ -1,4 +1,4 @@
-def indexmax(lst):  # returns the index of a max element
+def indexmax(lst):
     maxval = 0
     maxindex = 0
     for i in range(len(lst)):

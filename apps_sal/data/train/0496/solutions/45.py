@@ -1,6 +1,5 @@
 class Solution:
     def minIncrementForUnique(self, A: List[int]) -> int:
-        # 18:31
         if not A:
             return 0
         A.sort()

@@ -6,6 +6,3 @@ class Solution:
             res += max(expect - i, 0)
             expect = max(i + 1, expect + 1)
         return res
-
-        # import collections
-        # cnt = collections.Counter(A)
