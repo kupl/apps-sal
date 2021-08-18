@@ -12,7 +12,6 @@ class Solution:
             for i in range(len(bloomDay)):
                 today = bloomDay[i]
                 if today <= days_cand:
-                    # is flower
                     flowers_per_cur_bucket += 1
                     if flowers_per_cur_bucket == k:
                         bukets += 1
@@ -22,7 +21,6 @@ class Solution:
                             return True
                     pass
                 else:
-                    # no flower today
                     flowers_per_cur_bucket = 0
                     pass
             return False
@@ -34,7 +32,6 @@ class Solution:
         while left < right:
             mid = left + (right - left) // 2
             if check(mid):
-                # add to answer, check if can do better decrease mid and look up in left part
                 right = mid
             else:
                 left = mid + 1

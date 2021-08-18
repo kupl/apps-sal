@@ -12,9 +12,6 @@ class Solution:
                 if curr == k:
                     total += 1
                     curr = 0
-                # else:
-                #     total += (curr + 1) // k
-                #     curr = (curr + 1) % k
             return total
 
         if m * k > len(bloomDay):

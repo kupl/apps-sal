@@ -18,7 +18,6 @@ class Solution:
                     if flow >= k:
                         flow = 0
                         nums += 1
-            # print(mid, nums)
             if nums >= m:
                 r = mid
             else:

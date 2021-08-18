@@ -6,7 +6,6 @@ class Solution:
         res = -1
         while (beg <= end):
             mid = beg + int((end - beg) / 2)
-            # print(mid)
             if (self.isValid(bloomDay, n, m, k, mid) >= m):
                 res = mid
                 end = mid - 1
@@ -25,5 +24,4 @@ class Solution:
             if(k1 == k):
                 boquet += 1
                 k1 = 0
-        # print(\"boquet\",boquet)
         return boquet

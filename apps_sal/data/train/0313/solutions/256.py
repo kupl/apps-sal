@@ -16,8 +16,6 @@ class Solution:
                             p += 1
                             l = 0
 
-                # print(p,c)
-
                 return p >= m
             l, r = min(b), max(b)
             while l < r:

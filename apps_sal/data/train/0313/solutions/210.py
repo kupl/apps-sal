@@ -4,7 +4,7 @@ class Solution:
             return -1
         lo, hi = min(bloomDay), max(bloomDay)
 
-        def check(d):  # check if D days is good enough for m bouquets of k flowers
+        def check(d):
             cnt, start = 0, -1
             for i, val in enumerate(bloomDay):
                 if val <= d and i - start >= k:

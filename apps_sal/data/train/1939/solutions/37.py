@@ -1,8 +1,5 @@
 class Solution:
     def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:
-        # 1. the same
-        # 2. case diff, all in lowercase then compare, hash of wordlist(low:orig.list)
-        # 3. vowel diff, same length, compare after removing? relative position info all aeiou with ' '? (compare all in lowercase)
 
         def rmvowel(word, iskeepcase=True):
             outword = ''
@@ -23,7 +20,7 @@ class Solution:
         outq = []
         for query in queries:
             if (query, 1) in wordhash:
-                outq.append(query)  # original format
+                outq.append(query)
             elif (query.lower(), 2) in wordhash:
                 outq.append(wordhash[(query.lower(), 2)][0])
             elif (rmvowel(query, False), 3) in wordhash:

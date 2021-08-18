@@ -1,11 +1,9 @@
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         '''
-        # Notes:
             k adjacent flowers
 
         '''
-        # edge case
         n = len(bloomDay)
         if n // k < m:
             return -1

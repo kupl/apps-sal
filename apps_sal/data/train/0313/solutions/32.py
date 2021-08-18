@@ -21,7 +21,6 @@ class Solution:
                 r = mid
             else:
                 l = mid + 1
-        # print(l, possible(bloomDay, l, m, k))
         if possible(bloomDay, l, m, k):
             return l
         return -1

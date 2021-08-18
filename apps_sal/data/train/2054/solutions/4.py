@@ -34,6 +34,3 @@ else:
 
     else:
         print('NO')
-
-
-# Made By Mostafa_Khaled

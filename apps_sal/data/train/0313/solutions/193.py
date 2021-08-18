@@ -4,9 +4,6 @@ class Solution:
             waitDay = (smallest + longest) // 2
             totalCount = 0
             currentCount = 0
-            # print(\"-=-=-=-=-=-=-=-=-=-=-=-=-=\")
-            # print(smallest)
-            # print(longest)
             for i in range(len(bloomDay)):
                 if bloomDay[i] <= waitDay:
                     currentCount += 1

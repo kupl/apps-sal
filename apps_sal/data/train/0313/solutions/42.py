@@ -17,7 +17,6 @@ class Solution:
             heappush(que, [-1 * bloomDay[ind], ind])
             maxArr.append(-1 * que[0][0])
 
-        # print(maxArr)
         def isValid(num):
             cnt = 0
             ind = 0
@@ -27,7 +26,6 @@ class Solution:
                     ind += k
                 else:
                     ind += 1
-            # print(\"{0} => {1}\".format(num, cnt))
             return cnt >= m
 
         low = 1

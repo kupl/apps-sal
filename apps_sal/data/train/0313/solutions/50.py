@@ -6,7 +6,7 @@ class Solution:
 
         l, r = 1, n
         while l <= r:
-            mid = (l + r) // 2  # need a threshold for collecting, binary search this threshold
+            mid = (l + r) // 2
             count, rec = 0, 0
 
             for i in range(len(bloomDay)):
@@ -20,7 +20,7 @@ class Solution:
                 else:
                     count = 0
 
-            if rec < m:  # need more bouquets, increase the mid makes it easy to collect flowers
+            if rec < m:
                 l = mid + 1
             else:
                 r = mid - 1

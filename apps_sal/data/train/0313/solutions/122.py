@@ -4,11 +4,6 @@ class Solution:
         return sum([len(list(cgen)) // adj for c, cgen in itertools.groupby(wat, key=lambda w: w <= 0) if c])
 
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        # for i in range(100):
-        #     if self.producedAfterqDays(bloomDay, k, i) >= m:
-        #         return i
-        # else:
-        #     return -1
         l = 0
         r = max(bloomDay)
         ans = -1
