@@ -10,4 +10,3 @@ for s in S:
         ans += s
 
 print((len(ans)))
-# print(ans)

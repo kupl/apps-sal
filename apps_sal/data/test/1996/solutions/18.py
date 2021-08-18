@@ -8,14 +8,11 @@ for i in range(n - 1):
     if len(let) == 1:
         flag = 1
     t, s = map(str, input().split())
-    #print(t, s)
     if t == '!':
         now = set(list(s))
         if flag == 1:
             ans += 1
         let = let.intersection(now)
-        # print(now)
-        # print(let)
     if t == '?':
         if flag == 1:
             ans += 1

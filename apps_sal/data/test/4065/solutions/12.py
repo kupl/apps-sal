@@ -15,6 +15,5 @@ for i in range(1, n):
 if ANS < count:
     ANS = count
 
-    # print(i,count,ANS)
 
 print(ANS)

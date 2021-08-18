@@ -12,9 +12,5 @@ for x in a[1:]:
     s %= 998244353
     y %= 998244353
 
-    # print(s)
-
-# print(a)
-# print(c)
 
 print(s)

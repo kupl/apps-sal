@@ -9,14 +9,14 @@ for i in range(n):
     else:
         cnt += 1
 
-cn = len(rates) - rates.count(0)  # color number
+cn = len(rates) - rates.count(0)
 if sum(rates) == 0:
     cmin = 1
 else:
-    cmin = cn  # color min
+    cmin = cn
 
 if all([x < 3200 for x in a]):
-    cmax = cn  # color max
+    cmax = cn
 else:
     cmax = cn + cnt
 

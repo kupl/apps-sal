@@ -1,4 +1,4 @@
-a, b, c, d = list(map(int, input(). split()))  # 10 9 10 10
+a, b, c, d = list(map(int, input(). split()))
 
 while True:
     c -= b

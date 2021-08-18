@@ -1,4 +1,3 @@
-# C - Colorful Leaderboard
 N = int(input())
 a = list(map(int, input().split()))
 
@@ -13,6 +12,6 @@ maxi = mini
 for j in a:
     if j >= 3200:
         maxi += 1
-if mini == 0:  # 忘れてた
+if mini == 0:
     mini = 1
 print(mini, maxi)

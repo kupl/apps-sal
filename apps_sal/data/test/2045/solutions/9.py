@@ -39,11 +39,8 @@ for i in range(1, n):
 
     mn = min(x, y)
 
-   # print(mn,str(txt[-mn:]),sep=' ')
+    mx = zalgo(s[i] + '
 
-    mx = zalgo(s[i] + '#' + ''.join((txt[-mn:])))
-
-   # print(mx,mn,sep=' ')
 
     txt.extend(s[i][mx:])
 

@@ -9,7 +9,7 @@ adj = defaultdict(list)
 nodes = set()
 
 for c1, c2 in zip(s1, s2):
-    if c1 != c2:  # add to undirected graph
+    if c1 != c2:
         adj[c1].append(c2)
         adj[c2].append(c1)
         nodes.add(c1)

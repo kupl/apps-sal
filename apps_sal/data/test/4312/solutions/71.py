@@ -4,13 +4,11 @@ def __starting_point():
 
     while True:
         if c - b <= 0:
-            # takahashi win
             print("Yes")
             break
         c -= b
 
         if a - d <= 0:
-            # aoki win
             print("No")
             break
         a -= d

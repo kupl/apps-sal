@@ -8,7 +8,6 @@ def write(x): return sys.stdout.write(x + "\n")
 
 n, k = list(map(int, input().split()))
 M = 10**9 + 7
-# 約数列挙
 
 
 def fs(n):

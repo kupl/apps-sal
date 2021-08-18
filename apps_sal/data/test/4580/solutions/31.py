@@ -1,4 +1,4 @@
-from sys import stdin, stdout  # only need for big input
+from sys import stdin, stdout
 
 
 def get_level(n):
@@ -24,8 +24,6 @@ def solve():
     max_num = min_num + level_num[8]
     if min_num < 1:
         min_num = 1
-    # if max_num > 8:
-        # max_num = 8
 
     print(min_num, max_num)
 

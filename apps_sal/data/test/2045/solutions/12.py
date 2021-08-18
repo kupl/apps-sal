@@ -37,9 +37,9 @@ for i in range(0, n):
     y = len(s[i])
 
     if x > y:
-        mx = zalgo(s[i] + '#' + ''.join((txt[x - y:x])))
+        mx = zalgo(s[i] + '
     else:
-        mx = zalgo(s[i][:y] + '#' + ''.join(txt))
+        mx=zalgo(s[i][:y] + '
 
     txt.extend(s[i][mx:])
 

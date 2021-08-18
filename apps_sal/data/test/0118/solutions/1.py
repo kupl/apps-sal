@@ -1,4 +1,3 @@
-# You lost the game.
 t, s, x = list(map(int, input().split()))
 e = x - t
 v = e % s

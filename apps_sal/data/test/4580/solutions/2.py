@@ -11,11 +11,6 @@ for i in a:
     elif i >= 3200:
         free += 1
 
-# Mans=Sans
-# if free+Sans>=8:
- #   Mans=8
-# else:
- #   Mans=Sans+free
 
 Mans = Sans + free
 if Sans == 0:
