@@ -1,4 +1,3 @@
-#!/bin/python3
 arrn = []
 arrm = []
 maxstn = -1

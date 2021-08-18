@@ -25,7 +25,7 @@ def process_moves(v, moves, n):
                     new_v = v & ~(1 << bit_pos) | (1 << (bit_pos - 1))
                 else:
                     new_v = 0
-        else:  # m == 'R'
+        else:
             if bit_pos > 0:
                 new_v = v | (1 << (bit_pos - 1))
             else:
@@ -47,8 +47,6 @@ def main():
 
 
 def __starting_point():
-    # import sys
-    # sys.stdin = open("D.txt")
     main()
 
 

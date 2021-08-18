@@ -19,5 +19,3 @@ if s_map == t_map:
     print("Yes")
 else:
     print("No")
-# print(s_map)
-# print(t_map)

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Sep  7 22:29:36 2020
 
@@ -7,7 +6,6 @@ Created on Mon Sep  7 22:29:36 2020
 N, K = map(int, input().split())
 
 P = [1 + (int(p) - 1) * 0.5 for p in input().split()]
-# print(P)
 
 tmp = sum(P[:K])
 ans = tmp

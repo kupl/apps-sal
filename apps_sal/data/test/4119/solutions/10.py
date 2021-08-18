@@ -8,9 +8,7 @@ else:
     if n == 1:
         print((dots[-1] - dots[0]))
     else:
-        # [場所, 差分]
         dot_diffs = [[i, (dots[i + 1] - dots[i])] for i in range(len(dots) - 1)]
-        # 降順でsort
         dot_diffs.sort(key=lambda x: -x[1])
         ans = 0
         for idx, i in enumerate(dot_diffs[0:(n - 1)]):

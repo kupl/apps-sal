@@ -7,14 +7,12 @@ tmp = 0
 for i in range(1000):
     tmp += i + 1
     kitai[i] = tmp / (i + 1)
-# print(kitai)
 
 total_kitai = [0] * (n + 1)
 tmp = 0
 for i in range(n):
     tmp += kitai[p[i] - 1]
     total_kitai[i + 1] = tmp
-# print(total_kitai)
 
 ans = 0
 for i in range(n - k + 1):

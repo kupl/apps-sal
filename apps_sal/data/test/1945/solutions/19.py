@@ -10,8 +10,6 @@ def main():
     res = {}
     for o, n in vals:
         if o in res:
-            # aaa bbb, bbb, ccc -> aaa ccc
-            # {bbb: aaa}
             res[n] = res[o]
             del res[o]
         else:

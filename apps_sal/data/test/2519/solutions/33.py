@@ -84,8 +84,6 @@ class UnionFind():
 mod = 10**9 + 7
 def sigma(x): return x * (x + 1) // 2
 
-# --maincode----------------
-
 
 n, k = inm()
 p = inl()

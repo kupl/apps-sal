@@ -6,7 +6,6 @@ arr2 = []
 
 for i in range(len(arr) - 1):
     if not gcd(arr[i], arr[i + 1]) == 1:
-        #print (arr[i], arr[i+1], gcd(arr[i], arr[i+1]))
         arr2.append(str(arr[i]))
         arr2.append(str(1))
     else:

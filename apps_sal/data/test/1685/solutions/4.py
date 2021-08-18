@@ -9,15 +9,6 @@ def calc_lvl(m):
         if (m - steps[lvl - 1]) % steps[lvl] == 0:
             return (lvl, ((m - steps[lvl - 1]) % (2 * steps[lvl]) == 0))
 
-# print(calc_lvl(1))
-# print(calc_lvl(3))
-# print(calc_lvl(5))
-# print(calc_lvl(7))
-# print(calc_lvl(9))
-# print(calc_lvl(11))
-# print(calc_lvl(13))
-# print(calc_lvl(15))
-
 
 for i in range(q):
     strt = int(input())

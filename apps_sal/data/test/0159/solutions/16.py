@@ -9,15 +9,10 @@ def gcd(a, b):
         return a
 
 
-# def add(a, b):
-    #k = 1
-    # while gcd(k, a) != 1
-# print(tmp_mass)
 i = 0
 c = len(mass)
 count = 0
 while i < c - 1:
-    #print(i, c)
     k = gcd(mass[i], mass[i + 1])
     if k == 1:
         i += 1

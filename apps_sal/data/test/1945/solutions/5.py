@@ -4,7 +4,6 @@ def main():
     new = []
     for _ in range(q):
         a, b = list(input().split())
-        #print(a, b)
         flag = 1
         for i in range(len(new)):
             if new[i] == a:
