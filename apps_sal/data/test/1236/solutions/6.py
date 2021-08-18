@@ -9,14 +9,14 @@ def solve():
     if n == k:
         return "Daenerys" if odds % 2 == 0 else "Stannis"
     moves = n - k
-    if moves % 2 == 0:  # equal number of moves and Daenerys moves last, stannis wants to destory all evens and have parity be good
+    if moves % 2 == 0:
         eachmove = moves // 2
         if evens <= eachmove:
             remodds = k
             if remodds % 2 == 1:
                 return "Stannis"
         return "Daenerys"
-    else:  # Stannis moves last, Danerys wants to destroy all of the odds
+    else:
         dmoves = moves // 2
         if odds <= dmoves or (evens <= dmoves and (n - moves) % 2 == 0):
             return "Daenerys"

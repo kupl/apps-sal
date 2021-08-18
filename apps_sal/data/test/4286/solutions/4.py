@@ -6,7 +6,6 @@ class UnionFind:
     def __init__(self, size):
         self._parents = list(range(size))
 
-        # number of elements rooted at i
         self._sizes = [1 for _ in range(size)]
 
     def _root(self, a):

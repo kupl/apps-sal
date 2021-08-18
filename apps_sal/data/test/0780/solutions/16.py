@@ -7,7 +7,6 @@ input = sys.stdin.readline
 def main():
     s = input().rstrip()
     opt = [[[[math.inf for _ in range(10)] for _ in range(10)] for _ in range(10)] for _ in range(10)]
-    # opt[x][y][a][b] - x-y counter, transition from a to b
     pairs = [[0 for _ in range(10)] for _ in range(10)]
     for x in range(10):
         for y in range(10):

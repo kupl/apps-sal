@@ -14,7 +14,6 @@ EDGE = EDGE_x + SP
 
 EDGE.sort(key=lambda x: x[2])
 
-# UnionFind
 
 Group = [i for i in range(n + 1)]
 

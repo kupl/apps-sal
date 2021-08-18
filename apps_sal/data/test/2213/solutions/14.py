@@ -7,6 +7,3 @@ for i in range(m):
     for j in range(i + 1, m):
 
         print(j + 1, i + 1) if k else print(i + 1, j + 1)
-
-
-# Made By Mostafa_Khaled

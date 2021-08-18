@@ -27,7 +27,7 @@ for y in range(h):
             dp[y][x] |= dp[y][x - 1] << diff
             dp[y][x] |= dp[y][x - 1] >> diff
 
-end = bin(dp[-1][-1])[2:][::-1]  # reverse
+end = bin(dp[-1][-1])[2:][::-1]
 
 candidates = [abs(i - m) for i, b in enumerate(end) if b == '1']
 ans = min(candidates)

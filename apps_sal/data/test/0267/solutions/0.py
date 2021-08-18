@@ -54,7 +54,6 @@ def sm(ln, k, m, s='', first=False):
             ans += base * i * nextc + nexta
             count += nextc
 
-#    print(ln, k, m, s, first, ans, count)
     cache[(ln, k, m, s, first)] = (ans, count)
 
     return ans, count
@@ -65,5 +64,4 @@ def call(a, k):
     return sm(len(s), k, 0, s, True)[0]
 
 
-#print(call(r, k) - call(l-1, k))
 print((call(r, k) - call(l - 1, k)) % 998244353)

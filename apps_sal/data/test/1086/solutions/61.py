@@ -14,7 +14,6 @@ for i in range(H):
 
 X = (H + W) * 80
 L = X + X + 1
-# X点持った状態から始める
 dp = [[0] * W for _ in range(H)]
 d = abs(A[0][0] - B[0][0])
 dp[0][0] = np.zeros(L, np.bool)

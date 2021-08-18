@@ -20,7 +20,7 @@ for h in range(H):
         d = abs(a - b)
         x = np.zeros(L, np.bool)
         if h != 0:
-            x[d:] |= dp[h - 1][w][:L - d]  # 正への移動
+            x[d:] |= dp[h - 1][w][:L - d]
             x[:L - d] |= dp[h - 1][w][d:]
         if w != 0:
             x[d:] |= dp[h][w - 1][:L - d]

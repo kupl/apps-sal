@@ -11,7 +11,7 @@ def solve(n, k, A, B):
             n //= k
         else:
             res += A * (n - 1)
-            n = 1  # finish loop
+            n = 1
     res += A * (n - 1)
     return res
 

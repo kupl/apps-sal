@@ -1,13 +1,7 @@
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
-# TAIWAN NUMBER ONE!!!!!!!!!!!!!!!!!!!
 from sys import stdin, stdout
 from itertools import accumulate
 
-#T = int(input())
 s = input()
-#N,M,K,Q = [int(x) for x in stdin.readline().split()]
-#arr = [int(x) for x in stdin.readline().split()]
 
 
 def computeGCD(x, y):
@@ -51,7 +45,6 @@ for x in range(10):
                     if m == 9999:
                         m = -1
                     record[(x, y, d)] = m
-            # print(x,y,d,record[(x,y,d)])
 
 data = [[0] * 10 for _ in range(10)]
 

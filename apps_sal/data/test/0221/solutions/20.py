@@ -12,16 +12,9 @@ if max > n:
     i -= (max - n)
 
 arr = []
-# if n%flip > k:
-# i = k+1
 while i <= n:
     arr.append(i)
     i += flip
-# else:
-    # i = 1
-    # while i <= n:
-    # arr.append(i)
-    # i += flip
 
 s = reduce(lambda x, y: str(x) + ' ' + str(y), arr)
 print(l)

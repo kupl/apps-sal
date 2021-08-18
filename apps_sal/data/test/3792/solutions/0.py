@@ -9,8 +9,6 @@ def mi():
 def li():
     return list(mi())
 
-# B. The Fair Nut and Strings
-
 
 n, k = mi()
 s = input().strip()

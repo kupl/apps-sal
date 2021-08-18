@@ -1,4 +1,3 @@
-#print('HARE KRISHNA')
 def I():
     return int(input())
 

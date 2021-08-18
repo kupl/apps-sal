@@ -1,5 +1,4 @@
 import sys
-# input = sys.stdin.buffer.readline
 def input(): return sys.stdin.readline().rstrip()
 
 
@@ -12,7 +11,7 @@ C = [[0] * W for _ in range(H)]
 for i in range(H):
     for j in range(W):
         C[i][j] = abs(A[i][j] - B[i][j])
-center = 80 * (H + W)  # (80+80)*80=12800
+center = 80 * (H + W)
 
 dp = [[0] * W for _ in range(H)]
 dp[0][0] = (1 << (center - C[0][0])) | (1 << (center + C[0][0]))

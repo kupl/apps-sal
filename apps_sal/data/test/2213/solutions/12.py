@@ -1,5 +1,3 @@
-# in the name of god
-# Mr_Rubick
 n, m, k = map(int, input().split())
 print(str(m * (m - 1) // 2))
 for i in range(1, m):
