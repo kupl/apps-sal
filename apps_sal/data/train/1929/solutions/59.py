@@ -9,7 +9,7 @@ class StreamChecker:
                 if not w in cur:
                     cur[w] = {}
                 cur = cur[w]
-            cur['#'] = None
+            cur['
 
     def query(self, letter: str) -> bool:
         temp = [self.trie]
@@ -17,13 +17,8 @@ class StreamChecker:
         for p in self.points:
             if letter in p:
                 p = p[letter]
-                if '#' in p:
+                if '
                     ret = True
                 temp.append(p)
         self.points = temp
         return ret
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

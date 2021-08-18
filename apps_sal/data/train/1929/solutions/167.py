@@ -9,7 +9,7 @@ class StreamChecker:
                 if ch not in node:
                     node[ch] = {}
                 node = node[ch]
-            node['#'] = {}
+            node['
 
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
@@ -17,13 +17,8 @@ class StreamChecker:
         for ch in self.stream:
             if ch in node:
                 node = node[ch]
-                if '#' in node:
+                if '
                     return True
             else:
                 return False
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

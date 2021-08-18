@@ -34,13 +34,7 @@ class StreamChecker:
             if node.isEnd:
                 return True
             if self.cache[i] not in node.children:
-                # self.cache = self.cache[i:]
                 return False
             node = node.children[self.cache[i]]
             i -= 1
         return node.isEnd
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

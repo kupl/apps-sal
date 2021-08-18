@@ -7,7 +7,7 @@ class Trie:
         for ch in word:
             cur.setdefault(ch, {})
             cur = cur[ch]
-        cur['#'] = '#'
+        cur['
 
     def find(self, word):
 
@@ -16,7 +16,7 @@ class Trie:
             if ch not in cur:
                 return False
             cur = cur[ch]
-        return '#' in cur
+        return '
 
 
 class StreamChecker:
@@ -25,16 +25,16 @@ class StreamChecker:
         for word in words:
             self.trie.add(reversed(word))
         self.max_len = max(words, key=lambda x: len(x))
-        self.buf = []
+        self.buf=[]
 
     def query(self, letter):
         self.buf.append(letter)
-        cur = self.trie.chars
+        cur=self.trie.chars
         for i in range(len(self.buf) - 1, -1, -1):
-            ch = self.buf[i]
+            ch=self.buf[i]
             if ch not in cur:
                 return False
-            if '#' in cur[ch]:
+            if '
                 return True
-            cur = cur[ch]
+            cur=cur[ch]
         return False

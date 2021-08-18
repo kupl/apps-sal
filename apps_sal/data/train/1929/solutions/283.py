@@ -9,7 +9,7 @@ class Trie:
             if i not in curr:
                 curr[i] = {}
             curr = curr[i]
-        curr['#'] = 1
+        curr['
 
     def search(self, word):
         curr = self.Trie
@@ -18,7 +18,7 @@ class Trie:
             if i not in curr:
                 return False
             else:
-                if '#' in curr[i]:
+                if '
                     return True
             curr = curr[i]
         return False
@@ -36,8 +36,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.queryStream[0:0] = letter
         return self.dictTree.search(self.queryStream)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
