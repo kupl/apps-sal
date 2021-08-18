@@ -21,13 +21,10 @@ class Solution:
         return queue, sorted_counter
 
     def isPossibleDivide(self, hand: List[int], W: int) -> bool:
-        #O(nlogn) + O(n)
         sorted_counter = OrderedDict(Counter(sorted(hand)))
 
-        #O(n) | S(unique(n))
         queue = list(sorted_counter.keys())
 
-        # O(n)
         while len(queue):
             element = queue[0]
             if not self.can_process(sorted_counter, element, W):

@@ -1,6 +1,5 @@
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
-        # longest length with end index i and diff j
         if not A:
             return 0
 

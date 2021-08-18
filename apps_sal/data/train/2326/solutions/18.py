@@ -1,4 +1,3 @@
-# coding: utf-8
 import sys
 from bisect import bisect_left, bisect_right, insort
 
@@ -6,7 +5,6 @@ from bisect import bisect_left, bisect_right, insort
 def sr(): return sys.stdin.readline().rstrip()
 def ir(): return int(sr())
 def lr(): return list(map(int, sr().split()))
-
 
 """ 
 石数最大の中で右の山から取り除く
@@ -16,7 +14,7 @@ N = ir()
 A = lr()
 A = [(x, i + 1) for i, x in enumerate(A)] + [(0, 0)]
 A.sort(reverse=True)
-answer = [0] * (N + 1)  # 1-indexed
+answer = [0] * (N + 1)
 mi = 10 ** 10
 mi_index = 10 ** 10
 for i, (x, pre_index) in enumerate(A[:-1]):

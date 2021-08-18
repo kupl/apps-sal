@@ -12,4 +12,3 @@ class Solution:
                     dp[j, b] = dp[i, b] + 1
                 res = max(res, dp[j, b])
         return res
-        # return max(dp.values())

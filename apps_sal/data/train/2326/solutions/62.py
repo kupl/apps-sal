@@ -15,7 +15,6 @@ A = list(map(int, sys.stdin.readline().split()))
 XY = [(a, i) for i, a in enumerate(A)]
 XY.sort(reverse=True)
 
-# 解説
 ans = [0] * N
 min_y = IINF
 for i, (x, y) in enumerate(XY):

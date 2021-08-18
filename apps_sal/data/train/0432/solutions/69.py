@@ -21,7 +21,6 @@ class Solution:
                 heapq.heappush(m[num + 1], curr + 1)
             else:
                 heapq.heappush(m[num], 1)
-            # print(m)
 
         for x in m:
             for i in m[x]:

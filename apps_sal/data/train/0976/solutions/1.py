@@ -1,4 +1,3 @@
-# cook your dish here
 class Stack:
     def __init__(self):
         self.items = []

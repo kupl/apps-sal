@@ -32,6 +32,5 @@ for i in it:
     if b:
         ma = max(ma, b[-1])
     j += 1
-   # print(a,b)
 
 print(ma, maa, mi)

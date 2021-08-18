@@ -33,19 +33,14 @@ while Y:
     if not R:
         R.append((y, -j))
     else:
-        #        print(y, j, R[-1])
         if y < R[-1][0] and -j < R[-1][1]:
             R.append((y, -j))
 
 
-# print(count2)
-# print(R)
 RR = [0] * N
 b = 0
 bi = 0
 for y, i in R[:]:
-    #    print(y, d[y], i, bi)
-    #    print(i, bi, count2[d[y]])
 
     RR[bi] = count2[d[y]] - b
     b = count2[d[y]]
