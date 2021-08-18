@@ -7,7 +7,6 @@ class Solution:
             if (ind == l):
                 return length
             elif (one + two == A[ind]):
-                #print(\"one, two are \" + str(one) + \" \" + str(two))
                 return loop(two, A[ind], ind + 1, length + 1)
             else:
                 return loop(one, two, ind + 1, length)

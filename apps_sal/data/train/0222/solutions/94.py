@@ -28,7 +28,5 @@ class Solution:
                     total = one_behind + two_behind
 
                 res = max(res, c)
-            # break
 
-        # print(res)
         return res

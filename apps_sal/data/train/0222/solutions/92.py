@@ -1,5 +1,4 @@
 class Solution:
-    #from collections import deafal
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         n = len(A)
         s = set(A)

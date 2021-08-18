@@ -4,7 +4,6 @@ class Solution:
         :type nums: List[int]
         :rtype: bool
         """
-        # keep track of the two minimum elements and see if we have a element that is larger than two
         if len(nums) < 3:
             return False
 

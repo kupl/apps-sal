@@ -42,7 +42,7 @@ class Solution:
                 b = A[j]
                 while (a + b) in find:
                     currLen += 1
-                    holdb = b  # you're not moving along i and j, but the actual values themselves. Because you already have the values you need in the set.
+                    holdb = b
                     b = a + b
                     a = holdb
                     res = max(currLen, res)

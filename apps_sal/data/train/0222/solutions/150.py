@@ -1,7 +1,6 @@
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         '''  
-        # intuitive, TLE
         dp = {i:[[A[i]]] for i in range(len(A))}
         res = 0
         for i in range(1, len(A)):
@@ -14,7 +13,6 @@ class Solution:
                             res = max(res, len(dp[i][-1]))
         return res
         '''
-        # kinda of like prefix sum problem
         dp = {}
         for i in range(len(A)):
             b = A[i]
@@ -25,5 +23,4 @@ class Solution:
                 elif b - a < a:
                     dp[(a, b)] = dp[(b - a, a)] + 1
         res = max(dp.values())
-        # print(dp)
         return res if res != 2 else 0

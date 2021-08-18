@@ -18,9 +18,3 @@ class Solution:
         if max_len > 2:
             return max_len
         return 0
-
-
-#         dp[i, j] = length of fib seq that ends with i, j
-
-
-#         [1,3,7,11,12,14,18]

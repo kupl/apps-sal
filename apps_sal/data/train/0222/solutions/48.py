@@ -11,7 +11,6 @@ class Solution:
                 x = A[j]
                 l = 2
                 while y in d and d[y] > j:
-                   # print(y,l)
                     z = x + y
                     x = y
                     y = z

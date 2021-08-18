@@ -4,23 +4,6 @@ class Solution:
         n = len(A)
         if n <= 2:
             return ans
-        # ind=0
-        # while True:
-        #     if ind+1==n:
-        #         break
-        #     else:
-        #         if A[ind]<A[ind+1]:
-        #             comp=\"<\"
-        #             break
-        #         elif A[ind]>A[ind+1]:
-        #             comp=\">\"
-        #             break
-        #         else:
-        #             ind+=1
-        # for j in range(ind,n-1):
-        #     if  not eval(\"A[j]\"+comp+\"=A[j+1]\"):
-        #                  return False
-        # return ans
         left = True
         right = True
         for i in range(1, n):

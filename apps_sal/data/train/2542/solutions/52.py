@@ -1,7 +1,6 @@
 class Solution:
     def isMonotonic(self, A: List[int]) -> bool:
 
-        # initial value
         mono = 0
 
         for i in range(len(A) - 1):

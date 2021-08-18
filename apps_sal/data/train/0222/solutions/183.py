@@ -6,7 +6,6 @@ class Solution:
         for i in range(len(A)):
             for j in range(i + 1, len(A)):
                 ans = max(ans, self.helper(a, A[i], A[j], cache))
-        # print(cache)
         return ans if ans > 2 else 0
 
     def helper(self, a, n1, n2, cache):

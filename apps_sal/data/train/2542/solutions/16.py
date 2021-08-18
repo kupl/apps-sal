@@ -19,4 +19,3 @@ class Solution:
                     return False
                 i += 1
             return True
-#         either we are at a spot where A[i] != A[i + 1]

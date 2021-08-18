@@ -1,6 +1,5 @@
 class Solution:
     def lenLongestFibSubseq(self, A: List[int]) -> int:
-       # a hash table
         S = set(A)
         maxLen = 0
         n = len(A)
@@ -11,11 +10,8 @@ class Solution:
                 y = A[i] + A[j]
                 length = 2
 
-                # check until next fib
-                # element is found
                 while y in S:
 
-                    # next element of fib subseq
                     z = x + y
                     x = y
                     y = z

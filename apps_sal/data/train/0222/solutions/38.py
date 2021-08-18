@@ -16,5 +16,4 @@ class Solution:
                     L, R = R - L, L
                 res = max(res, cur)
 
-                # print(A[i],A[j],cur)
         return res if res > 2 else 0

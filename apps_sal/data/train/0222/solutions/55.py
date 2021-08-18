@@ -7,7 +7,7 @@ class Solution:
 
         for i in range(len(A) - 1):
             for j in range(i + 1, len(A)):
-                a, b = A[i], A[j]  # loop all initial candidates
+                a, b = A[i], A[j]
                 c = a + b
                 length = 0
                 while c in A_dict:
