@@ -10,4 +10,3 @@ for i in range(len(n)):
 
 
 print((dp[0][len(n)]))
-# print(dp)

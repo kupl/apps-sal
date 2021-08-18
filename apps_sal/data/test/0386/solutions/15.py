@@ -23,7 +23,6 @@ for i in range(queries):
         upper = min(int(num) - 1, upper)
     elif oper == '<=':
         upper = min(int(num), upper)
-    #print(str(lower) + " " + str(upper))
     if(lower > upper):
         break
 

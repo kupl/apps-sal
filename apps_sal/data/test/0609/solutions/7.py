@@ -5,7 +5,6 @@ Created on 19.03.2014
 '''
 import sys
 
-#inp = open("input.txt")
 inp = sys.stdin
 
 x = inp.readline()

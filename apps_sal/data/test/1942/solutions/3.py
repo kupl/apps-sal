@@ -14,8 +14,6 @@ for tests in range(T):
         r -= (n - begin) * 2
         begin += 1
 
-    # print(begin,l,r)
-
     if begin == n:
         ANS = [n, 1]
     else:
@@ -30,7 +28,5 @@ for tests in range(T):
                 ANS.append(begin)
                 ANS.append(j)
             begin += 1
-
-            # print(ANS)
 
     print(*ANS[l - 1:r])

@@ -6,7 +6,6 @@ for i in range(n - 1):
     l[u] += 1
     l[v] += 1
 l = list(set(l))
-# print(l)
 if len(l) <= 2:
     print("YES")
 elif l[2] == 2:

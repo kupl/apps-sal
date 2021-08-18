@@ -4,7 +4,6 @@ people = [True] * 2 * n
 pairs = [-1] * 2 * n
 for i in range(1, 2 * n):
     i_nums = list(map(int, input().split()))
-    # print(i_nums)
     nums += list(zip(i_nums, [i] * i, range(i)))
 nums.sort(key=lambda x: x[0], reverse=True)
 for num, i, j in nums:

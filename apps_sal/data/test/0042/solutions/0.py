@@ -7,9 +7,8 @@ for c in s:
     z[-1][c] = len(z)
     z.append(z[ind][:])
 assert(len(z) == m + 1)
-z[m][0] = z[m][1] = m  # make it sticky
+z[m][0] = z[m][1] = m
 
-# how many things match directly
 dp = [0 for _ in range(m + 1)]
 dp[0] = 1
 for i in range(n):
@@ -32,7 +31,7 @@ for k in range(1, m):
             ndp[z[i][0]] += dp[i]
             ndp[z[i][1]] += dp[i]
         dp = ndp
-    for s1 in range(m):  # skip m
+    for s1 in range(m):
         v = dp[s1]
         for c in s[-k:]:
             if s1 == m:

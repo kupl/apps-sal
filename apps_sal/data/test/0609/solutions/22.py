@@ -11,7 +11,6 @@ if s[1:-1] != notdiag * len(s[1:-1]):
     result = 'NO'
 if diag == notdiag:
     result = 'NO'
-# print(result)
 
 if result == 'YES':
     for i in range(1, n):
@@ -32,8 +31,6 @@ if result == 'YES':
 
         if line != notdiag * len(line):
             result = 'NO'
-
-        #print(i, line)
 
 
 print(result)

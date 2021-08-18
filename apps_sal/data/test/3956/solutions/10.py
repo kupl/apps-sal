@@ -5,7 +5,7 @@ INV = [None] * (N + K + 2)
 for i in range(1, N + K + 2):
     INV[i] = pow(i, mod - 2, mod)
 
-Combi = [None] * (N + K + 1)  # Combi[i]=i C (K-1) を表す
+Combi = [None] * (N + K + 1)
 Combi[K - 1] = 1
 for i in range(K, N + K + 1):
     Combi[i] = Combi[i - 1] * i * INV[i - K + 1] % mod
@@ -21,15 +21,11 @@ for i in range(2, 2 + K):
     j = 1
     while N + K - 1 - j * 2 >= K - 1 and j <= x:
         CB_x = CB_x * (x - j + 1) // j
-        # print(CB_x)
         ANS += ((-1)**j) * CB_x * Combi[N + K - 1 - j * 2]
-        # print(((-1)**j)*CB_x*Combi[N+K-1-j],ANS)
         ANS = ANS % mod
 
         j += 1
-        # print(i,j,ANS)
 
-    # ANS-=x*Combi[N+K-3]
     ANSLIST.append(ANS % mod)
 
 

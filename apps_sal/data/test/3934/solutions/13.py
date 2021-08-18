@@ -7,7 +7,6 @@ for i in range(0, n - 1):
     List.append(OP)
     vertecies[OP[0] - 1] = vertecies[OP[0] - 1] + 1
     vertecies[OP[1] - 1] = vertecies[OP[1] - 1] + 1
-# print(vertecies)
 k = 0
 for i in range(0, n):
     if vertecies[i] == 2:

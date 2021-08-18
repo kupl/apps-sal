@@ -1,5 +1,3 @@
-# https://atcoder.jp/contests/abc155/submissions/10157837
-# 写経
 
 def main():
     a = [0]

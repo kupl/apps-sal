@@ -17,8 +17,6 @@ def check(mid):
     ll = len(y)
     m = 0
 
-   # if len(z)==0:
-    #    return False
     ne = max(0, (n + 1) // 2 - ll)
     if ne > len(z):
         return False

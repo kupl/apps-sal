@@ -30,6 +30,4 @@ while t > 0:
             r = mid
         else:
             l = mid
-        # print(r,l)
-        # print(r,l,sumi,ss)
     print(l)
