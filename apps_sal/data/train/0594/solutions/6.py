@@ -1,4 +1,3 @@
-# cook your dish here
 def func1(l):
     if(len(l) == 1):
         return 0

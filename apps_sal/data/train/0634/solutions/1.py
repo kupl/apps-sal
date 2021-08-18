@@ -21,7 +21,6 @@ def main():
         else:
             curr.append(c)
 
-    # Last call
     val = int(''.join(curr))
     res = max(res, val)
     print(res)

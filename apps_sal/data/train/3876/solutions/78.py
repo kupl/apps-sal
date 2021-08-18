@@ -11,4 +11,3 @@ def find(n):
                 mystr += (char)
         if char == 3:
             return(int(mystr))
-    # Code here
