@@ -1,8 +1,6 @@
 class Solution:
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
 
-       # (1,3,50),(2,4,10),(3,5,40),(3,6,70)
-
         l = [(startTime[i], endTime[i], profit[i]) for i in range(len(startTime))]
 
         l = sorted(l, key=lambda x: x[1])
@@ -27,15 +25,7 @@ class Solution:
         dp = [0] * len(startTime)
         for i in range(len(startTime)):
             dp[i] = max(dp[i - 1], l[i][2])
-            # print(dp)
             p = binarysearch(i)
-            # print(p)
-            # for j in range(i):
             if l[p][1] <= l[i][0]:
                 dp[i] = max(dp[i], dp[p] + l[i][2])
-              #  else:
-               #     break
-           # print(dp)
-        #    ma=max(ma,dp[i])
-       # print(dp)
         return dp[-1]

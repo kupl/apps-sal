@@ -1,4 +1,3 @@
-# dynamic programming + binary search
 import bisect
 
 

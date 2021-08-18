@@ -13,7 +13,7 @@ class Solution:
 
             while left <= right:
                 mid = (left + right) // 2
-                if line[i][0] < line[mid][1]:  # need prev job to end bef current
+                if line[i][0] < line[mid][1]:
                     right = mid - 1
                 else:
                     prev_profit = dp[mid]

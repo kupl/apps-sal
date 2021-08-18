@@ -15,10 +15,8 @@ class Solution:
         if i in mem:
             return mem[i]
 
-        # skip current job, and push i += 1
         profit1 = self.scheduleJobs(jobs, i + 1, mem)
 
-        # select current job, and push i after the end time of jobs[i]
         j = i + 1
         while j < len(jobs) and jobs[j][0] < jobs[i][1]:
             j += 1

@@ -19,14 +19,12 @@ for i in range(N):
     t %= mod
 for i in range(N):
     G[i] = (t * pow(F[i], mod - 2, mod)) % mod
-# print(G)
 dp = [[0] * (C + 1) for i in range(N)]
 for i in range(C + 1):
-    dp[0][i] = ((ntable[i][B[0]] - ntable[i][A[0] - 1])) % mod  # *G[0]
+    dp[0][i] = ((ntable[i][B[0]] - ntable[i][A[0] - 1])) % mod
 for i in range(1, N):
     for k in range(C + 1):
         for l in range(k + 1):
-            dp[i][k] += dp[i - 1][l] * (ntable[k - l][B[i]] - ntable[k - l][A[i] - 1])  # *G[i]
+            dp[i][k] += dp[i - 1][l] * (ntable[k - l][B[i]] - ntable[k - l][A[i] - 1])
             dp[i][k] %= mod
-# print(dp)
 print((dp[N - 1][C]))

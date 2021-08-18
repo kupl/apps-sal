@@ -14,8 +14,8 @@ for p in range(C + 1):
 dp = [[0] * (C + 1) for _ in range(N + 1)]
 dp[0][0] = 1
 for i, (a, b) in enumerate(zip(A, B)):
-    for j in range(C + 1):  # 累計でj個配ったことにする
-        for k in range(j + 1):  # i番目の子にk個あげる
+    for j in range(C + 1):
+        for k in range(j + 1):
             dp[i + 1][j] += dp[i][k] * (memo[j - k][b] - memo[j - k][a - 1])
             dp[i + 1][j] %= mod
 

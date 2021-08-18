@@ -12,7 +12,6 @@ class Solution:
             max_val = result[t - 1]
             if t in last_dict:
                 for (start, profit) in last_dict[t]:
-                    # print(last_dict[t])
                     max_val = max(result[start] + profit, max_val)
             result[t] = max_val
         return result[-1]

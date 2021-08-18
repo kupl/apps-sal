@@ -1,11 +1,9 @@
 import sys
 input = sys.stdin.readline
 
-# modを取りながらべき乗する
-
 
 def power_func(a, n, mod):
-    bi = str(format(n, "b"))  # 2進表現に
+    bi = str(format(n, "b"))
     res = 1
     for i in range(len(bi)):
         res = (res * res) % mod
