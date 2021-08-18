@@ -10,6 +10,4 @@ for i in x:
         op = op + (xx * (xx + 1) // 2)
         xx = 0
 op = op + (xx * (xx + 1) // 2)
-# xx=xx-len(x)+xx-1
-# print(xx*(xx+1)//2,xx,op)
 print(op)

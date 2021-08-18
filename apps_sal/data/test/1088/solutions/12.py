@@ -49,8 +49,6 @@ class dsu():
 
         >   O(alpha(n)) amortized
         """
-        # assert 0 <= a < self._n
-        # assert 0 <= b < self._n
         x = self.leader(a)
         y = self.leader(b)
         if x == y:
@@ -77,8 +75,6 @@ class dsu():
 
         >   O(alpha(n)) amortized
         """
-        # assert 0 <= a < self._n
-        # assert 0 <= b < self._n
         return self.leader(a) == self.leader(b)
 
     def leader(self, a):
@@ -95,7 +91,6 @@ class dsu():
 
         >   O(alpha(n)) amortized
         """
-        # assert 0 <= a < self._n
         path = []
         while self.parent_or_size[a] >= 0:
             path.append(a)
@@ -118,7 +113,6 @@ class dsu():
 
         >   O(alpha(n)) amortized
         """
-        # assert 0 <= a < self._n
         return -self.parent_or_size[self.leader(a)]
 
     def groups(self):

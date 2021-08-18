@@ -8,7 +8,6 @@ def main():
     A = [0 for n in range(N)]
     for n in range(N):
         A[n] = [int(x) for x in input().strip().split()]
-        # print(A[n])
     ans = 1
 
     def find(x):
@@ -29,7 +28,6 @@ def main():
                     c[i] = c[j]
     for i in range(N):
         find(i)
-    # print(c)
     for d in Counter(c).values():
         ans = (ans * factorial(d)) % MOD
     c = [n for n in range(N)]
@@ -45,7 +43,6 @@ def main():
                     c[i] = c[j]
     for i in range(N):
         find(i)
-    # print(c)
     for d in Counter(c).values():
         ans = (ans * factorial(d)) % MOD
 

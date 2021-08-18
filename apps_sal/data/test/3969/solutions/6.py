@@ -8,6 +8,3 @@ for i, j in enumerate(t):
     p[j] = min(p[j], min(p[: j])) - 1
 
 print(n + min(p))
-
-
-# Made By Mostafa_Khaled

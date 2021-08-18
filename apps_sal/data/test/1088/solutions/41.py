@@ -8,7 +8,6 @@ import copy
 import heapq
 import collections
 import itertools
-# input = sys.stdin.readline
 sys.setrecursionlimit(10**8)
 mod = 998244353
 def inp(): return int(input())
@@ -21,8 +20,6 @@ def inplT(n): return [tuple(input()) for _ in range(n)]
 def inpll(n): return [list(map(int, input().split())) for _ in range(n)]
 def inplt(n): return [tuple(map(int, input().split())) for _ in range(n)]
 def inplls(n): return sorted([list(map(int, input().split())) for _ in range(n)])
-
-# UnionFind
 
 
 class UnionFind():

@@ -1,5 +1,3 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
 
 class UnionFind():
     def __init__(self, n):
@@ -54,7 +52,6 @@ class UnionFind():
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 
-######
 mod = 998244353
 pr = [1]
 for i in range(1, 50):

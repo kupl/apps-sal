@@ -14,8 +14,6 @@ for i in range(n):
     else:
         r[b[i]] = [i + 1]
 
-# print(l)
-# print(r)
 
 ans = []
 for i in list(l.keys()):

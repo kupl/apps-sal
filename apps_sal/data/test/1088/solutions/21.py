@@ -6,7 +6,6 @@ class UnionFind():
         self.n = n
         self.parents = [-1] * n
 
-    # 要素xが属するグループの根を返す
     def find(self, x):
         if self.parents[x] < 0:
             return x
@@ -14,7 +13,6 @@ class UnionFind():
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
 
-    # xのグループとyのグループを併合
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
@@ -28,7 +26,6 @@ class UnionFind():
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
-    # xのグループのサイズ
     def size(self, x):
         return -self.parents[self.find(x)]
 
@@ -40,7 +37,6 @@ ans = 1
 flag = 1
 
 uf = UnionFind(n)
-# 行方向
 for r1 in range(n):
     for r2 in range(r1 + 1, n):
         for c in range(n):
@@ -58,7 +54,6 @@ for i in range(n):
 
 uf = UnionFind(n)
 
-# 列
 for c1 in range(n):
     for c2 in range(c1 + 1, n):
         for r in range(n):

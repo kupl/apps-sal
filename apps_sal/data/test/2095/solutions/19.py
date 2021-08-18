@@ -4,7 +4,6 @@ a = [[0] * n] * n
 for i in range(n):
     a[i] = list(map(int, input().split()))
 for i in range(n):
-    # print(a[i].count(2))
     if a[i].count(1) > 0:
         continue
     elif a[i].count(3) == 0:

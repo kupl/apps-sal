@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
@@ -62,7 +61,6 @@ def main():
     for i in range(N):
         rows.append(rowuf.find(i))
 
-    # print(rows)
     for l in list(Counter(rows).values()):
         ans *= a[l]
         ans %= p
@@ -79,7 +77,6 @@ def main():
     for i in range(N):
         cols.append(coluf.find(i))
 
-    # print(cols)
     for l in list(Counter(cols).values()):
         ans *= a[l]
         ans %= p

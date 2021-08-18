@@ -56,8 +56,6 @@ for i in range(N):
     for j in range(N):
         x.append(A[j][i])
     A_T.append(x)
-# print(A_T)
-# print(A)
 row_uf = UnionFind(N)
 column_uf = UnionFind(N)
 for i in range(N - 1):
@@ -66,7 +64,6 @@ for i in range(N - 1):
         row2 = A[j]
         if all([val1 + val2 <= K for val1, val2 in zip(row1, row2)]):
             row_uf.union(i, j)
-# print(row_uf.all_group_members())
 
 for i in range(N - 1):
     column1 = A_T[i]
@@ -74,7 +71,6 @@ for i in range(N - 1):
         column2 = A_T[j]
         if all([val1 + val2 <= K for val1, val2 in zip(column1, column2)]):
             column_uf.union(i, j)
-# print(column_uf.all_group_members())
 row_cnt = 1
 for root, member in row_uf.all_group_members().items():
     for i in range(len(member), 0, -1):

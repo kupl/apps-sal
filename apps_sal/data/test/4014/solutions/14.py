@@ -12,7 +12,7 @@ for i in range(m):
     res[d - 1] = m + 1
 
 for i in range(n - 1, -1, -1):
-    if res[i] > 0:  # exam
+    if res[i] > 0:
         continue
     exam_num = -1
     min_zapas = n + 1

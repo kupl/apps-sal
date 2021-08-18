@@ -23,7 +23,6 @@ def __starting_point():
                 studying.append((d[idx], idx))
             studying.sort()
 
-        # print(studying)
         if i in d:
             idx = d.index(i)
             if (i, idx) in studying:

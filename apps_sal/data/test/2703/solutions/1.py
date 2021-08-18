@@ -12,16 +12,13 @@ def no(): print('NO')
 
 
 if (path.exists('input.txt')):
-    #------------------Sublime--------------------------------------#
     sys.stdin = open('input.txt', 'r')
     sys.stdout = open('output.txt', 'w')
     def I(): return (int(input()))
     def In(): return(map(int, input().split()))
 else:
-    #------------------PYPY FAst I/o--------------------------------#
     def I(): return (int(stdin.readline()))
     def In(): return(map(int, stdin.readline().split()))
-# sys.setrecursionlimit(1500)
 
 
 def dict(a):
@@ -62,16 +59,13 @@ def main():
         for x in range(n):
             su += l[x]
             pre.append(su)
-        # print(pre)
         for x in range(Q):
             q = I()
             q *= 2
             pos = find_ge(l, q)
-            # print(pos)
             if pos == -1:
                 print(0)
             else:
-                # print(pos)
                 ans = pre[-1] - pre[pos]
                 print(ans)
     except:
@@ -83,7 +77,6 @@ P = 1000000007
 
 
 def __starting_point():
-    #for _ in range(I()):main()
     for _ in range(1):
         main()
 
