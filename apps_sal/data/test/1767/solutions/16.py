@@ -4,10 +4,6 @@ n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
-# n = 5
-# a = [1,2,4,3,2]
-# b = [2,3,3,12,1]
-
 
 def f(x, l, r):
     res = 0

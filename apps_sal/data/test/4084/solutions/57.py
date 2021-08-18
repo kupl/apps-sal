@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 N, A, B = map(int, input().split())
 
 apb = A + B

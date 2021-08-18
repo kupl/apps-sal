@@ -1,7 +1,6 @@
 N, A, B = map(int, input().split())
 
 sum = 0
-#print (N//(A+B))
 
 
 sum += A * (N // (A + B))

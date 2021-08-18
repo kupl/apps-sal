@@ -35,7 +35,6 @@ for key in dic:
 for x in [w0, w0 + 1, w0 + 2, w0 + 3]:
     if not dic[x]:
         dic[x] = [0]
-# print(dic)
 
 ans = 0
 for a in range(len(dic[w0])):

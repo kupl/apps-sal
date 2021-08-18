@@ -10,8 +10,6 @@ Input = []
 stdin = open('input.txt', 'r')
 stdout = open('output.txt', 'w')
 
-# for i, val in enumerate(array, start_i_value)
-
 
 def Out(x):
     stdout.write(str(x) + '\n')
@@ -47,8 +45,6 @@ def main():
         for j in range(i + 1, len(Lst)):
             x = date(2013, Lst[i][0], Lst[i][1])
             y = date(2013, Lst[j][0], Lst[j][1])
-
-            #print(x, y)
 
             if(x > (y - timedelta(days=Lst[j][3]))):
                 Tmp += Lst[j][2]

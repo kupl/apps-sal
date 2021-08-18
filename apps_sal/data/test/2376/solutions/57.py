@@ -18,7 +18,6 @@ for i in range(4):
         for j in range(1, s[i]):
             wvs[i][j] += wvs[i][j - 1]
     wvs[i].insert(0, 0)
-# print(wvs)
 
 ans = 0
 for i in range(s[0] + 1):

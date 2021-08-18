@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 [n, m] = input().split()
 n = int(n)
 m = int(m)

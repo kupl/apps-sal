@@ -1,4 +1,3 @@
-# 060_D
 n, W = map(int, input().split())
 w1, w2, w3, w4 = [], [], [], []
 w, v = map(int, input().split())

@@ -1,4 +1,3 @@
-# coding=utf-8
 
 def __starting_point():
     N, A, B = map(int, input().split())
