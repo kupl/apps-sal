@@ -1,5 +1,3 @@
-# cook your dish here
-# Python Program to find LCM of n elements
 
 def find_lcm(num1, num2):
     if(num1 > num2):

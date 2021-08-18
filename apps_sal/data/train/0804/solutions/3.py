@@ -1,4 +1,3 @@
-# cook your dish here
 import numpy as np
 tests = int(input())
 for _ in range(tests):

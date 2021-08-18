@@ -1,4 +1,3 @@
-# cook your dish here
 def fun(l, n, i):
     ans = 0
     no_term = n - i + 1 + i // 2
@@ -12,12 +11,10 @@ def fun(l, n, i):
     while(side != i):
         if no_term % 2 == 0:
             no_term = no_term // 2
-            # count+=1
             power *= 2
         else:
             no_term = (no_term // 2) + 1
             ans += l[side - 1]
-            # count+=1
             power *= 2
 
         side = i + (no_term - 1) * power

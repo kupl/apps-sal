@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 n = int(input())
 a = [int(i) for i in input().split()]
 dp = [[x, 0] for x in range(0, len(a))]

@@ -15,13 +15,10 @@ def chmax(a, b):
 
 
 dp = [(A[i], 0) for i in range(1 << N)]
-# print(dp)
 for i in range(N):
     for j in range(1 << N):
         if j & (1 << i):
-            # print(j,i,j|(1<<i))
             dp[j] = chmax(dp[j], dp[j ^ (1 << i)])
-# print(dp)
 ans = sum(dp[0])
 for i in range(1, 1 << N):
     t = sum(dp[i])

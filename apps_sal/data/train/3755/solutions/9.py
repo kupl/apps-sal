@@ -1,5 +1,4 @@
 def sortme(words):
-    # your code here
     arr = []
 
     if len(words) > 1:

@@ -1,4 +1,3 @@
-# Python Program to find LCM of n elements
 
 def find_lcm(num1, num2):
     if(num1 > num2):
@@ -28,6 +27,3 @@ for j in range(int(input())):
         lcm = find_lcm(lcm, l[i])
     lcm += x
     print(lcm)
-
-
-# Code contributed by Mohit Gupta_OMG

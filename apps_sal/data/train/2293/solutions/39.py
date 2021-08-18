@@ -5,8 +5,6 @@ def upd(ary, nary):
 
 
 def main1(n, a):
-    # 1<=k<=2^n-1
-    # O(n*2^n)
     dp = [[a[i], 0] for i in range(1 << n)]
     for j in range(n):
         bit = 1 << j
@@ -22,6 +20,3 @@ def main1(n, a):
 n = int(input())
 a = list(map(int, input().split()))
 main1(n, a)
-# num0=main0(n,a)
-# print(*num1,sep='\n')
-#print(*num0,sep=' ')

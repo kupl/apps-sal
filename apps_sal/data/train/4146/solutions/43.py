@@ -1,5 +1,4 @@
 def is_sorted_and_how(arr):
-    # your code here
     list_a = []
     list_d = []
     list_a = sorted(arr)

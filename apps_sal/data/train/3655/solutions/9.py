@@ -85,7 +85,6 @@ class House(object):
         return results[0] if len(results) is 1 else results if results else None
 
     def __repr__(self):
-        # return 'House({})'.format(self.floors)
         return repr(self.draw())
 
     def __str__(self):

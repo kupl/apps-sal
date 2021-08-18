@@ -120,4 +120,3 @@ from inspect import *
 for name,f in getmembers(Family, predicate=isfunction):
     if not name.startswith('__'):
         setattr(Family, name, logger(f))
-#"""

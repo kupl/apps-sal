@@ -1,5 +1,4 @@
 def target_game(arr):
-    # your code goes here
     a = 0
     b = 0
 
@@ -10,7 +9,6 @@ def target_game(arr):
         b = a + i
         a = newA
 
-    # return max of incl and excl
     if (a > b):
         return a
     else:
