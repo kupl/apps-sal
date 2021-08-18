@@ -6,17 +6,14 @@ N = int(S)
 m = len(S)
 K = int(input())
 
-# 0でない数字がちょうどK個でK桁のものを数える
 product_K = product(['1', '2', '3', '4', '5', '6', '7', '8', '9'], repeat=K)
 product_K = [int(''.join(x)) for x in product_K]
 ans = len([x for x in product_K if x <= N])
 
 if m > K:
-    # K+1桁からlen(N)-1桁までを数える
     for i in range(1, m - K):
         ans += 9**K * factorial(i + K - 1) // factorial(i) // factorial(K - 1)
 
-    # Nと同じ桁数で条件を満たすものを数える
     zero_n = m - K
     non_zero_n = K
     for i in range(m):

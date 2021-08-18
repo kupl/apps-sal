@@ -7,8 +7,8 @@ for x, y in itertools.product(range(W), range(H)):
         res = 0
         for i, j in itertools.product(range(-1, 2), range(-1, 2)):
             if 0 <= x + i and x + i < W and 0 <= y + j and y + j < H:
-                if S[y + j][x + i] == "#":
-                    res += 1
+                if S[y + j][x + i] == "
+                res += 1
 
         S[y][x] = res
 

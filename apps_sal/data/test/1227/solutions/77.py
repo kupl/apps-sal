@@ -25,7 +25,6 @@ def resolve():
     N = I()
     K = I()
 
-    # [0, N]で、non0の数字がK個あるものの数
     @functools.lru_cache
     def f(N, K):
         if N == K == 0:

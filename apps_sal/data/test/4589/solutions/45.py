@@ -1,15 +1,11 @@
 dx = [1, 0, -1, 0, 1, -1, -1, 1]
 dy = [0, 1, 0, -1, 1, 1, -1, -1]
 
-# 入力
 H, W = map(int, input().split())
 S = [input() for _ in range(H)]
 
-# Python3 では str 型の要素の書き換えはできない
-# 答えを格納する二次元配列を別途用意する ('.' のところは 0)
-result = [[0 if v == '.' else '#' for v in row] for row in S]
+result = [[0 if v == '.' else '
 
-# 各マス (i, j) について順に処理
 for i in range(H):
     for j in range(W):
         if S[i][j] != '.':
@@ -19,7 +15,7 @@ for i in range(H):
             nj = j + dy[d]
             if ni < 0 or ni >= H or nj < 0 or nj >= W:
                 continue
-            if S[ni][nj] == '#':
+            if S[ni][nj] == '
                 result[i][j] += 1
 
 for row in result:

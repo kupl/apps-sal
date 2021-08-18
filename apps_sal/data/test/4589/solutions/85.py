@@ -7,8 +7,8 @@ def sarch(i, j):
     j1 = [j - 1, j, j + 1]
     for x in range(3):
         for y in range(3):
-            if S[i1[x]][j1[y]] == "#":
-                cnt += 1
+            if S[i1[x]][j1[y]] == "
+            cnt += 1
     return cnt
 
 

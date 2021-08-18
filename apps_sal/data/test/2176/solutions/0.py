@@ -22,7 +22,6 @@ for _ in range(n):
 
 ans = fact[n]
 ans %= MOD
-# print(ans)
 
 res = 1
 for v in ca.values():
@@ -30,14 +29,12 @@ for v in ca.values():
     res %= MOD
 ans -= res
 ans %= MOD
-# print(ans)
 
 res = 1
 for v in cb.values():
     res *= fact[v]
     res %= MOD
 ans -= res
-# print(ans)
 
 seq.sort(key=lambda x: (x[0], x[1]))
 cur = seq[0][0]

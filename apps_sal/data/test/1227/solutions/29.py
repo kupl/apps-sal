@@ -25,7 +25,6 @@ k = INT()
 
 @lru_cache(None)
 def F(n, k):
-    # n以下で0でないものがちょうどk個ある数字の個数
     if n < 10:
         if k == 0:
             return 1
@@ -35,7 +34,6 @@ def F(n, k):
     q, r = divmod(n, 10)
     ret = 0
     if k >= 1:
-        # 1の位が0
         ret += F(q, k - 1) * r
         ret += F(q - 1, k - 1) * (9 - r)
     ret += F(q, k)

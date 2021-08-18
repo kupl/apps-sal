@@ -22,7 +22,6 @@ def LIST1(): return list(MAP1())
 def solve(n, k, m):
     ans = 0
     for i in range(k, m):
-        # i: 桁数
         if k == 1:
             ans += 9
         else:
@@ -73,11 +72,6 @@ def __starting_point():
     m = len(n)
 
     solve(n, k, m)
-    # solve2(n,k,m)
-    # for i in range(10000):
-    #    print(i)
-    #    if solve(str(i), k, len(str(i))) != solve2(str(i), k, len(str(i))):
-    #        break
 
 
 __starting_point()

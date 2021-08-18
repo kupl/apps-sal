@@ -25,7 +25,6 @@ k = INT()
 
 @lru_cache(None)
 def F(n, k):
-    # n以下で0でないものがちょうどk個ある数字の個数
     if n < 10:
         if k == 0:
             return 1

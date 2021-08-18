@@ -8,6 +8,6 @@ for y, x in product(range(h), range(w)):
             ny = y + dy
             nx = x + dx
             if 0 <= ny < h and 0 <= nx < w:
-                G[y][x] += G[ny][nx] == '#'
+                G[y][x] += G[ny][nx] == '
 for g in G:
     print(*g, sep='')

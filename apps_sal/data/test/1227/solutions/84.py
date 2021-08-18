@@ -2,7 +2,6 @@
 N = input()
 K = int(input())
 
-# dp[is未満][K][桁]
 dp = [[[0] * len(N) for _ in range(K + 1)] for _ in range(2)]
 dp[0][0][0] = 0
 dp[1][0][0] = 1
@@ -19,7 +18,7 @@ for i in range(1, len(N)):
 
     dp[1][0][i] = dp[1][0][i - 1]
     for k in range(1, K + 1):
-        dp[1][k][i] = dp[1][k][i - 1] + dp[1][k - 1][i - 1] * 9  # n==0のパターンとn!=0のパターン
+        dp[1][k][i] = dp[1][k][i - 1] + dp[1][k - 1][i - 1] * 9
         if n != "0":
             dp[1][k][i] += dp[0][k - 1][i - 1] * (int(n) - 1) + dp[0][k][i - 1]
 
