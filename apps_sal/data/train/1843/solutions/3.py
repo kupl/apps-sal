@@ -57,9 +57,3 @@ class TweetCounts:
             return self.quantize(per_second_tweet_counter, valid_times, D)
 
         return [0]
-
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

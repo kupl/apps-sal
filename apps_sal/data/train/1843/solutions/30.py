@@ -18,13 +18,7 @@ class TweetCounts:
         while startTime <= endTime:
             end = min(startTime + delta, endTime + 1)
             result.append(
-                bisect.bisect_left(self._tweets[tweetName], end)
-                - bisect.bisect_left(self._tweets[tweetName], startTime))
+                bisect.bisect_left(self._tweets[tweetName], end) -
+                bisect.bisect_left(self._tweets[tweetName], startTime))
             startTime += delta
         return result
-
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

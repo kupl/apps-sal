@@ -8,7 +8,7 @@ class Solution:
                 l += 1
             if not S[r].isalpha():
                 r -= 1
-            if S[l].isalpha() and S[r].isalpha():  # 因为有这一步的限制，所以上面可以只用if 不用while
+            if S[l].isalpha() and S[r].isalpha():
                 S[l], S[r] = S[r], S[l]
                 l += 1
                 r -= 1

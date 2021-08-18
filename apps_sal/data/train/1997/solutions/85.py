@@ -8,7 +8,6 @@ class Solution:
                 interval_i = intervals[i]
                 j = i - 1
                 while j >= 0:
-                    # print(interval_i, intervals[j])
                     if (intervals[j][0] <= interval_i[0]) and (intervals[j][1] >= interval_i[1]):
                         n_intervals -= 1
                         break

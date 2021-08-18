@@ -61,7 +61,3 @@ class TweetCounts:
                             count+=1
                 ans.append(count)
         return ans'''
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

@@ -29,7 +29,7 @@ def main():
         no_of_friends = int(input())
         for i in range(no_of_friends):
             graph.append(list(map(int, input().split())))
-        min_notoriety, popular = 10000000, -1  # yet another magic number
+        min_notoriety, popular = 10000000, -1
         for f in range(1, no_of_friends + 1):
             curr_not = notoriety(f, no_of_friends)
             if curr_not < min_notoriety:

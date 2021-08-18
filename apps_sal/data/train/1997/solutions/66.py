@@ -10,9 +10,7 @@ class Solution:
                 i_start, i_end = intervals[i]
                 j_start, j_end = intervals[j]
                 if i_start <= j_start and i_end >= j_end:
-                    # i covers j
                     removed.append(j)
                 elif i_start >= j_start and i_end <= j_end:
-                    # j covers i
                     removed.append(i)
         return len(intervals) - len(removed)
