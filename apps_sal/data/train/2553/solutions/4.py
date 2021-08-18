@@ -20,8 +20,6 @@ class Solution:
         else:
             idx = 25
 
-        # print(idx)
-
         p_prod = 1
         for i in range(1, idx + 1):
             p_prod = (p_prod * (i % 1000000007)) % 1000000007

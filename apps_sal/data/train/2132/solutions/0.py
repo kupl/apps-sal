@@ -67,7 +67,6 @@ def main():
         for c in e[i]:
             if c == p:
                 continue
-            # print('c',c)
             r *= m[c]
             r %= mod
             t += 1
@@ -79,13 +78,10 @@ def main():
             r *= gm[t]
         r %= mod
         m[i] = r
-        # print('r',i,p,r)
-        # print('g',gm[t],t)
         return r
 
     for qt in q[::-1]:
         for i, p in qt:
-            # print('ip', i,p)
             f(i, p)
 
     r = f(1, -1)

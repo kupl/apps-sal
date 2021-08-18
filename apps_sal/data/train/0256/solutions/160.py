@@ -4,7 +4,6 @@ import math
 class Solution:
 
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        # 1 2 3 4 5 6 7 8 9 10 11
 
         def possible(x):
             if(x == 0):

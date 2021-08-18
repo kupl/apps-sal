@@ -1,4 +1,3 @@
-# cook your dish here
 for ad in range(int(input())):
     n, k, x = list(map(int, input().split()))
     l = [0] * (k - 1)

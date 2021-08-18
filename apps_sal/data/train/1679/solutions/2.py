@@ -1,4 +1,3 @@
-# cook your dish here
 def main():
     for _ in range(int(input())):
         n, k, x = map(int, input().split())
@@ -16,10 +15,8 @@ def main():
                     return n + 1
                 return 0
             q = x ^ (compxor(k - 1))
-# print(q)
             l = [i for i in range(1, k)]
             l.append(q)
-# print(l)
             if n <= len(l):
                 print(" ".join(map(str, l[:n])))
             else:

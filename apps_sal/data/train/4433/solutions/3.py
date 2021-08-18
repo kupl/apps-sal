@@ -8,4 +8,4 @@ def logical_calc(array, op):
         else:
             res ^= x
 
-    return res  # boolean
+    return res

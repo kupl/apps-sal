@@ -6,12 +6,10 @@ for i in range(t):
     x = list(map(int, input().split()))
     my, fy = 0, 0
     check = [0] * n
-    # print check
     for j in range(n):
         if x[j] > 0 and x[j] % m == 0 and check[j] == 0:
             check[j] = 1
             my += 1
-    # print check
     for j in range(n):
         if x[j] > 0 and x[j] % f == 0 and check[j] == 0:
             check[j] = 1
@@ -26,4 +24,3 @@ for i in range(t):
             print("Both")
     else:
         print("No")
-    # print check

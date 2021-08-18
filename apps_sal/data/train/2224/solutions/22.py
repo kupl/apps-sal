@@ -1,5 +1,3 @@
-# list_int 並べて出力 print (' '.join(map(str,ans_li)))
-# list_str 並べて出力 print (' '.join(list))
 
 from collections import defaultdict
 import sys

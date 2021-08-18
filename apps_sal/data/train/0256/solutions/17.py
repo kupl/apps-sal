@@ -21,6 +21,5 @@ class Solution:
             if cur <= H:
                 k2 = k
                 res = min(res, k)
-            # print(k1,k2,k,cur)
             k = (k1 + k2) // 2
         return res
