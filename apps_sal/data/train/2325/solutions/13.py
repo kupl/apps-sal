@@ -1,9 +1,3 @@
-# a = 区間中のAの個数 % 3
-# b = 区間中のBの個数 % 3
-# (a,b)が一致する場合は変換可能
-# このグループに含まれる場合は変換可能
-# (0,1)->(2,0)->(1,2)
-# (0,2)->(2,1)->(1,0)
 
 import sys
 readline = sys.stdin.readline
@@ -39,16 +33,11 @@ ok_group = {
     ((0, 2), (2, 1), (1, 0)),
     ((1, 1), (0, 0), (2, 2))
 }
-# print("Sa",Sa)
-# print("Sb",Sb)
-# print("Ta",Ta)
-# print("Tb",Tb)
 
 for i in range(q):
     a, b, c, d = list(map(int, readline().split()))
     s = ((Sa[b] - Sa[a - 1]) % 3, (Sb[b] - Sb[a - 1]) % 3)
     t = ((Ta[d] - Ta[c - 1]) % 3, (Tb[d] - Tb[c - 1]) % 3)
-    # print(a,b,c,d,"s",s,"t",t)
     if s == t:
         print("YES")
         continue

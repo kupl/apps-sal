@@ -26,10 +26,6 @@ def LIR(row, col):
         read_all = [LI() for _ in range(row)]
         return map(list, zip(*read_all))
 
-#################
-
-# ((Aの数)-(Bの数))%3 が同じときだけ可能
-
 
 S = list(input())
 T = list(input())

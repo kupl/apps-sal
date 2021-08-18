@@ -1,4 +1,3 @@
-# cook your dish here
 def __starting_point():
     TC = int(input())
     for _ in range(TC):

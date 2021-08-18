@@ -1,4 +1,3 @@
-#!/usr/bin/env pypy3
 
 def ans(A, B):
 

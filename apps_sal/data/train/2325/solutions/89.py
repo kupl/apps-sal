@@ -1,4 +1,3 @@
-# problem solving
 import sys
 
 

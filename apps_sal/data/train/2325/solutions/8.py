@@ -5,7 +5,6 @@ def ini(): return int(sys.stdin.readline())
 def inm(): return list(map(int, sys.stdin.readline().split()))
 def inl(): return list(inm())
 def ins(): return sys.stdin.readline().rstrip()
-# debug = lambda *a, **kw: print(*a, **kw, file=sys.stderr)
 
 
 S = ins()
@@ -17,10 +16,10 @@ def solve():
     cums = [0] * (len(S) + 1)
     cumt = [0] * (len(T) + 1)
     for i, x in enumerate(S):
-        c = conv[x]  # 1 or 2
+        c = conv[x]
         cums[i + 1] = (cums[i] + c) % 3
     for i, x in enumerate(T):
-        c = conv[x]  # 1 or 2
+        c = conv[x]
         cumt[i + 1] = (cumt[i] + c) % 3
 
     q = ini()

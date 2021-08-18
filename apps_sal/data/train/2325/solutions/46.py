@@ -1,10 +1,8 @@
-# https://atcoder.jp/contests/arc071/submissions/6325840
 
 from itertools import accumulate
 
 *S, = map(lambda x: 1 if x == 'A' else 2, input())
 *T, = map(lambda x: 1 if x == 'A' else 2, input())
-# A=1,B=2
 
 acc_s = (0,) + tuple(accumulate(S))
 acc_t = (0,) + tuple(accumulate(T))

@@ -10,7 +10,6 @@ for i in range(len(S)):
 for i in range(len(T)):
     cst[i + 1] = cst[i] + (T[i] == "A") + (T[i] == "B") * 2
 
-#print(css, cst)
 
 for _ in range(int(input())):
     a, b, u, v = map(int, input().split())

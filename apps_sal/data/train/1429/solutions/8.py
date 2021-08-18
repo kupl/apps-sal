@@ -1,4 +1,3 @@
-# cook your dish here
 l = [1]
 for k in range(31):
     l.append(l[-1] * 2)

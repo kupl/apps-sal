@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import sys
 from itertools import accumulate
@@ -28,8 +27,6 @@ T = [ord(t) - 65 for t in input()]
 acc1 = [0] + list(accumulate(S))
 acc2 = [0] + list(accumulate(T))
 
-# 3つのタイプを判定(0: aが残る, 1: bが残る, 2: 何も残らない)
-
 
 def check(cnta, cntb):
     if cnta == cntb:
@@ -58,12 +55,10 @@ for _ in range(Q):
 
     ln1 = r1 - l1 + 1
     ln2 = r2 - l2 + 1
-    # 累積和を使ってO(1)でAとBの個数を取得
     cntb1 = acc1[r1] - acc1[l1 - 1]
     cnta1 = ln1 - cntb1
     cntb2 = acc2[r2] - acc2[l2 - 1]
     cnta2 = ln2 - cntb2
-    # 同じタイプかどうか判定する
     if check(cnta1, cntb1) == check(cnta2, cntb2):
         YES()
     else:

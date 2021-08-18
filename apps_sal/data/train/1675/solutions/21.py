@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 
 
@@ -26,6 +25,5 @@ for _ in range(t):
     arr.sort(key=lambda a: (a[0], a[1] * -1))
     for i in range(1, n):
         dist += calculate(arr[i - 1], arr[i])
-# print(arr[i-1],arr[i],dist)
 
     print("{:0.2f}".format(dist))
