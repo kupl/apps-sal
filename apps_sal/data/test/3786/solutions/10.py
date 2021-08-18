@@ -1,4 +1,3 @@
-# 930A
 import collections
 
 
@@ -8,7 +7,7 @@ def do():
     g = collections.defaultdict(list)
     for i, j in enumerate(nums):
         if i != j:
-            g[j].append(i)  # children
+            g[j].append(i)
     cur = [0]
     res = 0
     while cur:

@@ -1,4 +1,3 @@
-#!/usr/env python3
 
 n, m = map(int, input().split())
 a = []

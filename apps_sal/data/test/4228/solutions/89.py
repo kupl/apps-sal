@@ -1,6 +1,4 @@
 
-# ABC131
-# B Bite Eating
 N, L = list(map(int, input().split()))
 A = 0
 a = 1000

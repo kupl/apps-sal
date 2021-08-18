@@ -1,5 +1,4 @@
 N, L = list(map(int, input().split()))
-# L+i-1,i>=1
 nin = 10**6
 for i in range(N):
     if abs(L + i) < nin:

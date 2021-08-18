@@ -1,6 +1,5 @@
 from sys import stdin as fin
 
-# fin = open("ecr6a.in", "r")
 
 nums = (6, 2, 5, 5, 4, 5, 6, 3, 7, 6)
 

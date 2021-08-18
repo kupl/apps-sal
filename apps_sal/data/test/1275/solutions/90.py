@@ -6,7 +6,6 @@ def ab(v):
         return v - 1
     elif n + 2 <= v <= 2 * n:
         return 2 * n + 1 - v
-# min(v-1, 2*n+1-v) is available as contents of above def
     else:
         return 0
 

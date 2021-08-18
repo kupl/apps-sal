@@ -29,7 +29,6 @@ for ai in a:
                 left[x] = False
             today = []
 
-    # print(s)
 
 if len(c) > 0 and s == 0:
     print(str(len(c)))

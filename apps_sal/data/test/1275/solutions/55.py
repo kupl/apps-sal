@@ -3,7 +3,6 @@ def MII(): return map(int, input().split())
 
 n, k = MII()
 count = 0
-# x=a+b,y=c+d
 for x in range(2, 2 * n + 1):
     y = x - k
     if 2 <= y <= 2 * n:

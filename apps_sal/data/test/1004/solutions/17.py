@@ -2,7 +2,7 @@ n = int(input())
 
 a = list(map(int, input().split()))
 
-days = []  # when days end
+days = []
 ok = True
 
 tod = set()
@@ -10,7 +10,6 @@ now = set()
 
 
 for i in range(n):
-    #print(i, tod, now)
     if (a[i] > 0):
         if (a[i] in tod):
             ok = False

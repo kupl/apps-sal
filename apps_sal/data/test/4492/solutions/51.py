@@ -1,14 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[8]:
 
 
 N, x = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
-
-# In[9]:
 
 
 ans = 0
@@ -21,6 +14,3 @@ for i in range(N - 1):
         ans += cnt
         a[i + 1] -= cnt
 print(ans)
-
-
-# In[ ]:

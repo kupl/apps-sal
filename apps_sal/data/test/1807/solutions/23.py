@@ -2,7 +2,6 @@ def proc(x, nums):
 
     res = 0
     while x != 0:
-        # print(x)
         res += nums[x % 10]
         x //= 10
 
@@ -16,7 +15,6 @@ def __starting_point():
 
     res = 0
     s = str(list(range(a, b + 1)))
-    # print(s)
     for i in range(10):
         res += nums[i] * s.count(str(i))
 

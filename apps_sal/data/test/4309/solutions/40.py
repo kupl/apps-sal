@@ -1,4 +1,3 @@
-# B AtCoder Beginner Contest 111
 N = list(input())
 n = int("".join(N))
 ck = int(N[0] * 3)

@@ -1,4 +1,3 @@
-# nはりんごの数　りんごiの味はl＋i-1
 
 n, l = map(int, input().split())
 

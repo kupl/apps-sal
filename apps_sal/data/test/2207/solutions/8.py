@@ -1,4 +1,3 @@
-# 690 D1
 r, c = [int(i) for i in input().split()]
 for i in range(r - 1):
     input()

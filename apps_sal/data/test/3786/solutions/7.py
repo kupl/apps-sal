@@ -22,6 +22,3 @@ for i in range(n):
     ans += count[i] % 2
 
 print(ans)
-
-
-# Made By Mostafa_Khaled
