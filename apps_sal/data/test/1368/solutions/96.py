@@ -4,20 +4,16 @@ v = list(map(int, input().split()))
 
 v = sorted(v)[::-1]
 
-v_ref = sum(v[:A])  # / A
+v_ref = sum(v[:A])
 
 i = A
-## n = 1
 n_min = A
 n_max = B
 while (i < B):
-    ## v_new = (i*v_ref + v[i]) / (i+1)
     v_new = v_ref + v[i]
-    # if v_new < v_ref:
     if i * v_new < (i + 1) * v_ref:
         n_max = i
         break
-    # if v_new > v_ref:
     if i * v_new > (i + 1) * v_ref:
         n_min = i + 1
     v_ref = v_new

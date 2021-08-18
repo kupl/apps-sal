@@ -50,5 +50,4 @@ def solve():
     print(' '.join(map(str, y)))
 
 
-# for i in range(mint()):
 solve()

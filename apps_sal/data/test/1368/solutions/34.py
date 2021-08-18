@@ -18,14 +18,9 @@ def ZIP(n): return zip(*(MAP() for _ in range(n)))
 
 
 sys.setrecursionlimit(10 ** 9)
-INF = 10**6  # float('inf')
-#mod = 10 ** 9 + 7
+INF = 10**6
 mod = 998244353
-#from decimal import *
-#import numpy as np
-#decimal.getcontext().prec = 10
 
-#階乗#
 lim = 50
 fact = [1] * (lim + 1)
 for n in range(1, lim + 1):

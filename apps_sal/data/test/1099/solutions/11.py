@@ -36,8 +36,6 @@ while stack:
                 continue
             ch[u] += 1 + dp[v]
             dp[u] += ch[v]
-# print(dp)
-# print(ch)
 
 stack = [(0, -1)]
 while stack:
@@ -50,7 +48,5 @@ while stack:
         dp[v] += chvu
         ch[v] += dpvu + 1
         stack.append((v, u))
-# print(dp)
-# print(ch)
 
 print(min(dp))

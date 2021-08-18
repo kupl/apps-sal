@@ -1,4 +1,3 @@
-# mAx average set
 import math
 from collections import Counter
 n, a, b = map(int, input().split())
@@ -6,7 +5,6 @@ lists = list(map(int, input().split()))
 lists = sorted(lists)
 P = sum(lists[-a:])
 print(P / a)
-# Bことって総和がminiになっている
 J = dict(Counter(lists))
 K = dict(Counter(lists[-a:]))
 ans = 1

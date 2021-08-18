@@ -1,10 +1,8 @@
-#coding: utf-8
 import math
 import heapq
 import bisect
 import numpy as np
 from collections import Counter, deque
-#from scipy.misc import comb
 
 N, A, B = map(int, input().split())
 v = sorted(list(map(int, input().split())), reverse=True)

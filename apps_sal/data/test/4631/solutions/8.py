@@ -29,7 +29,6 @@ while low < high:
         low = mid + 1
 
 st = deque(a)
-# print(st)
 k = 0
 ans = []
 pr = 0
@@ -40,19 +39,16 @@ while m > 0:
     if st[0] - k in d and st[0] + k in d:
         st.popleft()
         continue
-    # print(ans)
     if st[0] - k not in d:
         d[st[0] - k] = 1
         m -= 1
         pr += k
         ans.append(st[0] - k)
-    # print(ans)
     if st[0] + k not in d and m > 0:
         d[st[0] + k] = 1
         m -= 1
         pr += k
         ans.append(st[0] + k)
-    # print(ans)
     st.append(st.popleft())
 
 print(pr)

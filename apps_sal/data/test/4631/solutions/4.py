@@ -1,6 +1,6 @@
 from collections import deque
 
-n, m = list(map(int, input().split()))  # tree/people
+n, m = list(map(int, input().split()))
 
 x = list(map(int, input().split()))
 

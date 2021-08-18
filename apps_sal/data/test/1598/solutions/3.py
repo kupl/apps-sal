@@ -30,7 +30,6 @@ else:
             s_lis = s_zero
             s_max = 0
         if s_lis < t_zero:
-            # print(t_01)
             while t[stack_01[-1]] == "1" or s[stack_01[-1]] == "0" or t[stack_01[-1] - 1] == "1":
                 stack_01.pop()
             t[stack_01[-1]] = "1"

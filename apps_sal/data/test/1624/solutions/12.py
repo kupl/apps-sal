@@ -7,7 +7,6 @@ def iread(): return int(input().strip())
 def viread(): return [int(_) for _ in input().strip().split()]
 
 
-# code goes here
 n = iread()
 arr = sorted(viread())
 ans = 0

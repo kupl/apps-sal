@@ -1,6 +1,5 @@
 from collections import defaultdict
 
-# Combination
 MOD = 10**17 + 3
 MAX = 2 * 10**5
 fac = [1, 1] + [0] * MAX

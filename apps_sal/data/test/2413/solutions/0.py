@@ -1,5 +1,3 @@
-# Contest: Codeforces Round #592 (Div. 2) (https://codeforces.com/contest/1244)
-# Problem: B: Rooms and Staircases (https://codeforces.com/contest/1244/problem/B)
 
 def rint():
     return int(input())
