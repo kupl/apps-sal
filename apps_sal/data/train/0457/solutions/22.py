@@ -43,5 +43,5 @@ class Solution:
             for c in coins:
                 if remain - c > 0 and (remain - c) not in visited:
                     q.append((remain - c, count + 1))
-                    visited.add(remain - c)  # to avoid going down this path if another path has already explored this
+                    visited.add(remain - c)
         return -1

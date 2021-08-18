@@ -1,4 +1,3 @@
-# I mean, if you say we found less than 50 of them, there's no point in computing them again
 lucas_lehmer = {2, 3, 5, 7, 13, 17, 19, 31, 61, 89,
                 107, 127, 521, 607, 1279, 2203, 2281,
                 3217, 4253, 4423, 9689, 9941, 11213, 19937,

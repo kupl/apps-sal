@@ -9,7 +9,6 @@ class Solution:
         change[0] = 0
         for i in range(1, amount + 1):
             for c1 in coins:
-                #print(f'i:{i}, c1:{c1}')
                 if c1 > i:
                     continue
                 c2 = change[i - c1]

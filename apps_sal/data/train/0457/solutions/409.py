@@ -5,14 +5,13 @@ class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         dict_ = set(coins)
         count = [0] * amount
-        # Top down approach
 
         def top_down(rem):
             if rem < 0:
                 return -1
             if rem == 0:
                 return 0
-            if count[rem - 1] != 0:  # cache
+            if count[rem - 1] != 0:
                 return count[rem - 1]
 
             min_ = float('inf')
@@ -24,8 +23,6 @@ class Solution:
 
             count[rem - 1] = -1 if min_ == float('inf') else min_
             return count[rem - 1]
-
-        # bottom up approach
 
         def bottom_up():
             dpa = [float('inf')] * (amount + 1)
@@ -39,4 +36,3 @@ class Solution:
             return dpa[amount] if dpa[amount] != float('inf') else -1
 
         return bottom_up()
-        # return top_down(amount)

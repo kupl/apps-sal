@@ -1,6 +1,5 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # d(m,n) indicates using upto the first m kinds of coins, the number of fewest coins needed to make up to n
         coins.sort()
         n = len(coins)
 

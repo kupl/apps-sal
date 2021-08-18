@@ -5,7 +5,7 @@ class Solution:
         dp[0] = 0
 
         for i in range(1, amount + 1):
-            k = 1e9         # K = min num of coins to reach amount i
+            k = 1e9
             for c in coins:
                 if i - c >= 0:
                     k = min(k, dp[i - c] + 1)

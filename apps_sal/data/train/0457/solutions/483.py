@@ -11,5 +11,4 @@ class Solution:
                 if coins[i - 1] <= j:
                     dp[i % 2][j] = min(dp[i % 2][j - coins[i - 1]] + 1, dp[i % 2][j])
 
-        # print(dp)
         return dp[n % 2][amount] if dp[n % 2][amount] < sys.maxsize else -1

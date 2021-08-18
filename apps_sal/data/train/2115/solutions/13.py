@@ -11,7 +11,4 @@ for i in range(n):
         D.popleft()
         if D[-1] - D[0] <= d:
             ans += (len(D) - 1) * (len(D) - 2) // 2
-    # print('i',i)
-    # print('D',D)
-    # print('ans',ans)
 print(ans)
