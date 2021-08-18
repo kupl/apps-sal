@@ -2,7 +2,6 @@
     Author: Sagar Pandey
 
 """
-# ---------------------------------------------------Import Libraries---------------------------------------------------
 import sys
 import os
 from math import sqrt, log, log2, log10, gcd, floor, pow, sin, cos, tan, pi, inf, factorial
@@ -12,18 +11,11 @@ from collections import Counter, defaultdict, deque
 from itertools import permutations
 import heapq
 from bisect import bisect_left as bl
-# If the element is already present in the list,
-# the left most position where element has to be inserted is returned.
 from bisect import bisect_right as br
 from bisect import bisect
 
-# If the element is already present in the list,
-# the right most position where element has to be inserted is r
 
-# ---------------------------------------------------Global Variables---------------------------------------------------
-# sys.setrecursionlimit(100000000)
 mod = 1000000007
-# ---------------------------------------------------Helper Functions---------------------------------------------------
 def iinp(): return int(sys.stdin.readline())
 def inp(): return sys.stdin.readline().strip()
 def strl(): return list(inp().strip().split(" "))
@@ -49,7 +41,6 @@ def permute(nums):
                 cur.pop()
                 v[i] = 0
                 i += 1
-            # while i<len(nums) and nums[i]==nums[i-1]:i+=1    # Uncomment for unique permutations
         return arr
 
     res = []
@@ -106,13 +97,10 @@ def isPrime(n):
     return True
 
 
-# -------------------------------------------------------Functions------------------------------------------------------
-
 def solve():
     a, b = mint()
     print(a ^ b)
 
 
-# -------------------------------------------------------Main Code------------------------------------------------------
 for _ in range(iinp()):
     solve()

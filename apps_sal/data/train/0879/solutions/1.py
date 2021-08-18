@@ -9,14 +9,10 @@ lt = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       [8, 6, 4, 2, 0, 8, 6, 4, 2, 0],
       [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]]
 for _ in range(int(input().strip())):
-    # print("==>>")
     l = input().strip().split(" ")
-    # print(l)
     lst = int(l[1][-1])
     f = int(l[0]) // int(l[1])
     fd = f // 10
     fm = int(f % 10)
-    #print(f, fd, fm)
-    # print(sum(lt[lst]), sum(lt[lst][:fm])))
     t = sum(lt[lst]) * fd + sum(lt[lst][:fm])
     print(t)

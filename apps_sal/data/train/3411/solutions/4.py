@@ -1,5 +1,4 @@
 def amort(rate, bal, term, num_payments):
-    # your code
     r = rate / (100 * 12)
     c = (r * bal) / (1 - pow((1 + r), -term))
 

@@ -1,4 +1,3 @@
-# cook your dish here
 
 t = 0
 try:

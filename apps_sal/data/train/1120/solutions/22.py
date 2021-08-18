@@ -5,4 +5,3 @@ for t in range(int(input())):
 
     l = [(x + y), (R - 1 - x + y), (C - y - 1 + x), (R - x + C - y - 2)]
     print(max(l))
-    # print(l)

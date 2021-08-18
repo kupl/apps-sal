@@ -1,14 +1,3 @@
-# def recur(a,st,end,ans):
-#     if st<=end:
-#         if a[st] == '?' and a[end] == "?":
-#             ans*=26
-#             return recur(a,st+1,end-1,ans)
-#         if a[st]!='?' and a[end]!='?':
-#             if a[st] == a[end]:
-#                 return recur(a,st+1,end-1,ans)
-#             return 0
-#         return recur(a,st+1,end-1,ans)
-#     return ans
 
 for _ in range(int(input())):
     a = input()

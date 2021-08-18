@@ -13,7 +13,6 @@
 n = int(input())
 for i in range(0, n):
     p = input().rstrip().split(' ')
-    # print(int(p[0]) * int(p[1]))
     A = int(p[0])
     B = int(p[1])
     C = A // B
