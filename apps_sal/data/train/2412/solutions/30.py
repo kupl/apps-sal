@@ -4,7 +4,7 @@ class Solution:
             if len(s) <= 1:
                 return s
             i = 0
-            s = s + '#'
+            s = s + '
             res = ''
             while i < len(s) - 1:
                 if s[i] != s[i + 1]:

@@ -10,6 +10,5 @@ class Solution:
 
             else:
                 stack = stack[: -1]
-            # print(stack)
 
         return ''.join(stack)

@@ -11,7 +11,7 @@ class Solution:
                 return 1
             if dp[t][x][y] != -1:
                 return dp[t][x][y]
-            if (t % 2 == 0):  # mouse's turn
+            if (t % 2 == 0):
                 flag = True
                 for i in range(len(graph[x])):
                     nxt = search(t + 1, graph[x][i], y)
@@ -25,7 +25,7 @@ class Solution:
                     return 2
                 dp[t][x][y] = 0
                 return 0
-            else:  # cat's turn
+            else:
                 flag = True
                 for i in range(len(graph[y])):
                     if graph[y][i] != 0:

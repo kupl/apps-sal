@@ -13,7 +13,7 @@ class Solution:
             return S
 
         stack = [Char(S[0])]
-        k = 2  # duplicate
+        k = 2
 
         n = len(S)
 

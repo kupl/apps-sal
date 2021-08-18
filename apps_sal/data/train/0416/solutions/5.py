@@ -1,7 +1,5 @@
 class Solution:
     def catMouseGame(self, graph: List[List[int]]) -> int:
-        # state: [M=0/C=1, Mpos, Cpos]
-        # result: 0-draw, 1-mouse win, 2-cat win
 
         cache = {}
 
@@ -23,13 +21,13 @@ class Solution:
 
         def dfs_m(s, visited):
             if 0 in graph[s[1]]:
-                return 1  # mouse-win
+                return 1
 
             cat_nbs = set([x for x in graph[s[2]] if x != 0])
             nbs = sorted_neighbor(s[1], 0)
             hold_move = 0
             for node in nbs:
-                if node == s[2] or node in cat_nbs:  # mouse-lose
+                if node == s[2] or node in cat_nbs:
                     continue
 
                 s2 = (1, node, s[2])
@@ -39,18 +37,18 @@ class Solution:
 
                 ret = dfs(s2, visited)
                 if ret == 1:
-                    return 1  # mouse-win
+                    return 1
                 if ret == 0:
                     hold_move += 1
 
             if hold_move:
-                return 0  # draw
+                return 0
             else:
-                return 2  # cat-win
+                return 2
 
         def dfs_c(s, visited):
             if s[1] in graph[s[2]]:
-                return 2  # cat-win
+                return 2
 
             nbs = sorted_neighbor(s[2], s[1])
             hold_move = 0
@@ -64,14 +62,14 @@ class Solution:
                     continue
                 ret = dfs(s2, visited)
                 if ret == 2:
-                    return 2  # cat-win
+                    return 2
                 if ret == 0:
                     hold_move += 1
 
             if hold_move:
-                return 0  # draw
+                return 0
             else:
-                return 1  # mouse-win
+                return 1
 
         INF_DIST = float('inf')
 
