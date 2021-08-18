@@ -1,6 +1,6 @@
 S = int(input())
 
-flag = [0, 0]  # [YYMM, MMYY]
+flag = [0, 0]
 l = S // 100
 r = S % 100
 if 1 <= r and r <= 12:

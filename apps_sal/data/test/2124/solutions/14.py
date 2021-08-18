@@ -4,14 +4,12 @@ t = int(input())
 for z in range(t):
     n = int(input())
     users = input().split()
-    # print(users)
     m = int(input())
     can = [[] for i in range(m)]
     ok = True
     L = []
     for i in range(m):
         l = input().split(':')
-        # print(l)
         L += [l]
         if l[0] != '?':
             can[i] = [users.index(l[0])]
@@ -19,7 +17,6 @@ for z in range(t):
             can[i] = [x for x in range(n)]
         ll = re.sub(r'[^A-Za-z0-9]', ' ', l[1]).split()
         for j in ll:
-            # print(j)
             if j in users:
                 try:
                     can[i].remove(users.index(j))

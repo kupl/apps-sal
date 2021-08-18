@@ -1,5 +1,3 @@
-# import time
-# start_time = int(round(time.time() * 1000))
 
 from math import gcd
 
@@ -18,11 +16,4 @@ la, ra, ta = list(map(int, input().split()))
 lb, rb, tb = list(map(int, input().split()))
 
 
-# print(solve(la, ra, ta, lb, rb, tb))
-# print(solve(lb, rb, tb, la, ra, ta))
-
 print(max(solve(la, ra, ta, lb, rb, tb), solve(lb, rb, tb, la, ra, ta)))
-
-
-# end_time = int(round(time.time() * 1000))
-# print('Execution Time : ', (end_time - start_time), 'ms')

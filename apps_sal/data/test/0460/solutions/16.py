@@ -1,8 +1,3 @@
-# written by sak
-#
-#	sk<3
-#
-# powered by codechef
 
 import math
 z = input()
@@ -16,7 +11,6 @@ i = i % 475
 flag = 0
 for j in range(0, 25):
     i = (i * 96 + 42) % 475
-    # print(26+i)
     if((26 + i) == p):
         print("0")
         flag = 1

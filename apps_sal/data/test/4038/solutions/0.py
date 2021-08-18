@@ -76,7 +76,6 @@ elif(n % 2 == 1 and (((sym >= (((n // 2) * (n // 2)))) and (sin == 1)))):
             ar2.append(i)
             c[i] -= 2
 
-    # print(ar)
     for i in range(n // 2):
         newm[n // 2][i] = ar2[0]
         newm[n // 2][n - i - 1] = ar2[0]

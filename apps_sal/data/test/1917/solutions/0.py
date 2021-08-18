@@ -27,7 +27,6 @@ def solve():
             if d < 0:
                 continue
             ck += min(a[i], int((3 + d**.5) / 6 + eps))
-        # print(mid, ck)
         if ck > k:
             ng = mid
         else:
@@ -37,7 +36,6 @@ def solve():
         if d < 0:
             continue
         ans[i] = min(a[i], int((3 + d**.5) / 6 + eps))
-    # print(ans)
     rk = k - sum(ans)
     l = list()
     for i in range(n):

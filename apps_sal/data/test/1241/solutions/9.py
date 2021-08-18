@@ -18,15 +18,11 @@ def get_solution(n, k, input_list):
             if value == 0:
                 zeros += 1
 
-            # print("start is {}, stop is {}, value is {}, lengt is {}, zeros is {}".format(
-            #     start, stop, value, length, zeros))
-
             if zeros > k and value == 0:
                 zeros -= 1
                 break
             else:
                 if array.length < length:
-                    # print("this one is better")
                     array = Array(length, start, stop + 1)
                 stop += 1
 
@@ -34,12 +30,8 @@ def get_solution(n, k, input_list):
             zeros -= 1
 
         start += 1
-        # while stop - start >= k:
-        #     stop -= 1
-        #     zeros -= 1 is input_list[stop] == 0
 
     return array
-    # return sorted(arrays, reverse=True)
 
 
 def solve(n, k, input_list):

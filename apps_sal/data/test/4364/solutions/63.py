@@ -1,4 +1,3 @@
-# Answer
 S = input()
 S = int(S)
 A = S // 100

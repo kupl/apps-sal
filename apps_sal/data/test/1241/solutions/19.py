@@ -47,7 +47,6 @@ def main():
 
 def __starting_point():
     main()
-    # print(gcd(100, 2))
 
 
 __starting_point()

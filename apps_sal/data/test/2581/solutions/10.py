@@ -7,19 +7,6 @@ from math import inf
 
 
 def main():
-    # a bishop has to be on a cell intercepted by even diagonals,
-    # and another on a cell intercepted by odd diagonals
-
-    # i + j is even -> white
-    # i + j is odd -> gray
-
-    # diagonal 1 -> i - j (top-left to bottom-right) (this difference is constant)
-    # diagonal 2 -> i + j (top-right to bottom-left) (this sum is constant)
-
-    # calculate the sum of each diagonal (n2)
-
-    # find the best cell (with max total) intercepted by even diagonals and the
-    # best cell (with max total) intercepted by odd diagonals
 
     n = int(input())
     chessboard = [

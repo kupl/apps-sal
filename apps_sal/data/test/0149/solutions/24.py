@@ -34,7 +34,6 @@ for k in d.keys():
 ans = 0
 arr.sort()
 for k in arr:
-    # print(k)
     if k >= l:
         ans = max(ans, k - last - 1)
         last = k

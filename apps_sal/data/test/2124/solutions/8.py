@@ -49,7 +49,7 @@ def foo():
     res = [curr]
 
     for num in list(reversed(list(range(1, m)))):
-        curr = d2[num - 1].get(curr, None)  # d2[num - 1][curr]
+        curr = d2[num - 1].get(curr, None)
         res.append(curr)
 
     res = list(reversed(res))

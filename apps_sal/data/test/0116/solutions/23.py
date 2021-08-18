@@ -1,4 +1,3 @@
-# You lost the game.
 
 l1, r1, l2, r2, k = list(map(int, input().split()))
 

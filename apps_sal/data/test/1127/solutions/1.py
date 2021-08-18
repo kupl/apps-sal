@@ -3,7 +3,6 @@ for _ in range(q):
     n = int(input())
     s = input()
     s = list(map(int, s))
-    # raze wins if odd
     r = []
     prz = []
     for i in range(n):

@@ -2,7 +2,6 @@ s = input()
 
 s1 = int(s[0] + s[1])
 s2 = int(s[2] + s[3])
-#print(s1, s2)
 L = []
 
 for i in range(1, 13):

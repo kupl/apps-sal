@@ -1,4 +1,3 @@
-# zadacha B
 a, b = list(map(int, input().split()))
 k1, k2 = list(map(int, input().split()))
 k3, k4 = list(map(int, input().split()))
