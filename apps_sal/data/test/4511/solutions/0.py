@@ -43,11 +43,6 @@ for i in range(n):
     cards[3].sort(reverse=True)
     log(cards)
 
-    # dmg[j] = max(dmg[j],
-    #              dmg[j - 1] + D(one card),
-    #              dmg[j - 2] + D(two cards),
-    #              dmg[j - 3] + D(three cards))
-    # Plus, if 1 <= j <= 3, dmg[j] = max(dmg[j], D(cards))
     new_dmg = []
     for j in range(10):
         use1 = max(cards[1][0], cards[2][0], cards[3][0])

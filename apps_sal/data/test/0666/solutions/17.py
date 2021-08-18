@@ -20,12 +20,10 @@ def binary_search(x):
 
 def solve(x):
 
-    # print("solve",x)
     if x == 0:
         return 1
 
     n = binary_search(x)
-    #print("n =",n)
 
     return int(x + 1 - n * (n + 1) // 2)
 

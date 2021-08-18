@@ -28,7 +28,6 @@ while a[l - 1] > 1:
 while a[r] > 1:
     r += 1
 print(ans)
-# print(l,r)
 
 
 def out(x, y=1):

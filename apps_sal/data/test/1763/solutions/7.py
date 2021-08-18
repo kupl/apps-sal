@@ -33,8 +33,6 @@ while indmin < N:
 
     ANS = min(ANS, calc(MINUS, PLUS, A, R, M))
 
-    # print(MINUS,PLUS,calc(MINUS,PLUS,A,R,M))
-
     indmin = indmax
     indmax += 1
 
@@ -50,8 +48,6 @@ for ave in range(max(W[0], AVE - 10**4), min(AVE + 10**4, W[-1])):
     PLUS = SW - SUM[indmax - 1] - ave * (N - indmax)
 
     ANS = min(ANS, calc(MINUS, PLUS, A, R, M))
-
-    # print(ave,indmin,indmax,MINUS,PLUS,ANS)
 
 
 print(ANS)

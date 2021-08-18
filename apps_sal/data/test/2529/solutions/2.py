@@ -1,4 +1,3 @@
-# cook your dish here
 inputs = input().split()
 amount = int(inputs[0])
 account = float(inputs[1])

@@ -1,5 +1,3 @@
-# Codeforces 262 Div. 2
-# P1
 
 l = input().split()
 n = int(l[0])

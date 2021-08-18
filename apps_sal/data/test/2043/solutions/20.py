@@ -9,7 +9,6 @@ dX = [-1, 1, 0, 0, -1, 1, -1, 1]
 dY = [0, 0, -1, 1, 1, -1, -1, 1]
 def RI(): return list(map(int, input().split()))
 def RS(): return input().rstrip().split()
-#################################################
 
 
 def findMatch(a, b):

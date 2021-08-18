@@ -1,4 +1,3 @@
-# coding:utf-8
 n, m = map(int, input().split())
 L = 1
 R = n

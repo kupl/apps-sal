@@ -12,12 +12,9 @@ if k > d and k % d != 0:
 p1 = 1.0 * k / t
 p2 = 0.5 * (d - k) / t
 p = p1 + p2
-#print(p1, p2, p)
 s = 1.0 / p
 c = int(s)
-#print(s, c)
 z = 1.0 - p * c
-# print(z)
 if z < p1:
     ans = c * d + 1.0 * z * t
 else:

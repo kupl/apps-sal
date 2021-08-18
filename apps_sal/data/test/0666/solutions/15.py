@@ -1,5 +1,3 @@
-#!/usr/bin/env pypy
-# -*- coding: utf-8 -*-
 
 import itertools
 import math

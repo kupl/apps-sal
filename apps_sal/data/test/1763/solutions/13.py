@@ -11,19 +11,16 @@ for a in aa:
 ans = 10 ** 15
 
 
-# a に揃える時のコスト
 def calc(a):
     i = bisect.bisect_right(aa, a)
     add_n = a * i - raa[i]
     rem_n = (raa[-1] - raa[i]) - (a * (N - i))
 
-    # move する
     if rem_n < add_n:
         tmp1 = rem_n * M + (add_n - rem_n) * A
     else:
         tmp1 = add_n * M + (rem_n - add_n) * R
 
-    # move しない
     tmp2 = rem_n * R + add_n * A
 
     return min(tmp1, tmp2)

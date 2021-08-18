@@ -25,7 +25,6 @@ def calc(height):
         cur += 1
 
     up, down = 0, 0
-    # print(height, cur, N, H[cur], H)
     for h in H[:cur]:
         down += (height - h)
     for h in H[cur:]:
@@ -36,10 +35,7 @@ def calc(height):
     else:
         return up * M + (down - up) * A
 
-# print(calc(8))
 
-
-# print(Hs)
 l, r = 0, max(H) + 1
 while l + 1 < r:
     cur = (l + r) // 2
@@ -47,6 +43,4 @@ while l + 1 < r:
         r = cur
     else:
         l = cur
-# print(l, r)
-# print(calc(l), calc(r))
 print(min(calc(l), calc(r)))
