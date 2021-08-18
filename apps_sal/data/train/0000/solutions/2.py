@@ -34,7 +34,6 @@ for _ in range(N):
         else:
             print(0)
     else:
-        # print(doms)
 
         _01 = 0
         _10 = 0
@@ -62,6 +61,3 @@ for _ in range(N):
             print(' '.join(list([str(x + 1) for x in _10_indexes[:need]])))
         else:
             print(-1)
-
-    # print("===")
-        # print(ceil(abs(doms.count(('0', '1')) - doms.count(('1', '0'))) - 1, 2))

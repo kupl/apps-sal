@@ -1,6 +1,5 @@
 def remove_url_anchor(url):
-    # TODO: complete
-    s = "#"
+    s = "
     l = len(url)
     pos = url.find(s)
     if pos <= l and pos > 0:

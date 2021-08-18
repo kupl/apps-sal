@@ -6,4 +6,3 @@ def is_happy(n):
             return False
         lst.append(n)
     return True
-    # Good Luck!
