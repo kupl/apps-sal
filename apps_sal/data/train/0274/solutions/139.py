@@ -1,6 +1,5 @@
 class Solution:
     def longestSubarray(self, nums: List[int], limit: int) -> int:
-        # heap maps
         max_heap, min_heap = [], []
         max_len = 0
         l = 0
@@ -20,7 +19,6 @@ class Solution:
         return max_len
 
         '''
-        # using heaps
         maxq, minq = [], []
         n = len(nums)
         

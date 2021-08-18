@@ -27,15 +27,12 @@ class Solution:
             if abs(ld[0][0] - sd[0][0]) <= limit:
                 ans = max(ans, i - start + 1)
             else:
-                # print(ld, sd, \"  ------\")
                 while abs(ld[0][0] - sd[0][0]) > limit:
                     if ld[0][1] == start:
                         ld.popleft()
                     if sd[0][1] == start:
                         sd.popleft()
                     start += 1
-                # print(ld, sd)
-                # start = min(ld[0][1], sd[0][1])
                 ans = max(ans, i - start + 1)
             i += 1
         return ans

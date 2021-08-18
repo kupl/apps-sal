@@ -10,13 +10,13 @@ class Solution:
             heapq.heappush(pqmin, (nums[end], end))
             heapq.heappush(pqmax, (-nums[end], end))
 
-            while start < end and abs(pqmax[0][0] + pqmin[0][0]) > limit:  # we will pop out numbers until max - min < limit
+            while start < end and abs(pqmax[0][0] + pqmin[0][0]) > limit:
                 start += 1
 
                 while pqmax and pqmax[0][1] < start:
-                    heapq.heappop(pqmax)  # I only care if the max number index has been passed, if yes, we should pop out all numbers before that
+                    heapq.heappop(pqmax)
                 while pqmin and pqmin[0][1] < start:
-                    heapq.heappop(pqmin)  # I only care if the min number index has been passed, if yes, we should pop out all numbers before that
+                    heapq.heappop(pqmin)
             ml = max(ml, end - start + 1)
 
         return ml

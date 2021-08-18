@@ -1,4 +1,3 @@
-# Tests whether a portion of s1 can be rearranged to match s2
 
 from collections import Counter
 

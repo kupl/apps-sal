@@ -11,7 +11,6 @@ class Solution:
         right = 0
         result = 0
         while right < len(nums):
-            # Maintain minDeque
             while minDeque and nums[right] < nums[minDeque[-1]]:
                 minDeque.pop()
             while maxDeque and nums[right] > nums[maxDeque[-1]]:

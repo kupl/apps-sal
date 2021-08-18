@@ -1,4 +1,3 @@
-# https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/discuss/721619/Python-Rust-Sliding-Window-and-Deque
 '''
 The problem description states that we need to find the window with the largest size that has max-min<=limit
 This is clearly a sliding window problem. The brute force solution is to start from each index, keep on expanding, and once the max-min is larger than limit, we break. O(n^2)

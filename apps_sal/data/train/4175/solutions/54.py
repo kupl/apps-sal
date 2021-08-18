@@ -6,5 +6,3 @@ def repeater(string, n):
         n -= 1
 
     return new_string
-
-    # Your code goes here.
