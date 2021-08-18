@@ -8,7 +8,7 @@ for T in range(N - 1):
     S_left = sum(W[:T + 1])
     S_right = sum(W[T + 1:])
 
-    difference_list.append(abs(S_left - S_right))  # 差のリストを作成
+    difference_list.append(abs(S_left - S_right))
 
     ans = min(difference_list)
 

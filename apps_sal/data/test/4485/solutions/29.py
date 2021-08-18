@@ -1,5 +1,4 @@
 N, M = map(int, input().split())
-# 隣接リスト
 g = [[] for i in range(N)]
 for i in range(M):
     a, b = map(int, input().split())

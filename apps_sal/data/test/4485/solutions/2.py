@@ -1,16 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# FileName: 	C
-# CreatedDate:  2020-09-13 15:43:14 +0900
-# LastModified: 2020-09-13 15:49:14 +0900
-#
 
 
 import os
 import sys
-# import numpy as np
-# import pandas as pd
 from collections import deque
 
 

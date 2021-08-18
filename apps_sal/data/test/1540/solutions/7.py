@@ -1,4 +1,3 @@
-#!/usr/local/bin/python3
 n, m, k = map(int, input().split())
 room = [[] for i in range(m)]
 result = [0] * n

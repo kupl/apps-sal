@@ -18,7 +18,7 @@ def solve(A):
     return (ccw or cw)
 
 
-in_file = sys.stdin  # open("A.txt", "r")
+in_file = sys.stdin
 
 q = int(in_file.readline().strip())
 for _ in range(q):

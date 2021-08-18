@@ -1,4 +1,3 @@
-# 067_a
 A, B = map(int, input().split())
 if (1 <= A and A <= 100) and (1 <= B and B <= 100):
     sum = A + B

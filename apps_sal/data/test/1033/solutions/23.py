@@ -1,8 +1,5 @@
-#!/usr/bin/env python3
 
 [n, H] = list(map(int, input().strip().split()))
-
-# first True
 
 
 def bsearch(f, xmin, xmax):

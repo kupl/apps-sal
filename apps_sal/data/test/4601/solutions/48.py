@@ -1,4 +1,3 @@
-# C - Fennec vs Monster
 
 n, k = list(map(int, input().split()))
 h = list(map(int, input().split()))

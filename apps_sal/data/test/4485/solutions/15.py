@@ -1,7 +1,4 @@
-#n = int(input())
 n, m = list(map(int, input().split()))
-#l = list(map(int,input().split()))
-#l = [list(map(int,input().split())) for i in range(n)]
 
 dic = {}
 for i in range(m):

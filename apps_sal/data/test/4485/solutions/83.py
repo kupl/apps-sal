@@ -17,7 +17,6 @@ while queue:
         if visited[k] == float("inf"):
             visited[k] = d + 1
             queue.append([k, d + 1])
-            # print(visited)
 if visited[n - 1] <= 2:
     print("POSSIBLE")
 else:

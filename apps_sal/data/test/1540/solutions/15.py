@@ -6,7 +6,7 @@ for i in range(n):
     too[i] = 0
     chat[i] = list(map(int, input().split()))
 for i in range(m):
-    chat2[i] = 0  # Korda postitati
+    chat2[i] = 0
 for i in range(k):
     x, y = list(map(int, input().split()))
     chat2[y - 1] += 1

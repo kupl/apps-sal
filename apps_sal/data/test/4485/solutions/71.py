@@ -1,6 +1,6 @@
 from collections import defaultdict
 N, M = [int(x) for x in input().split()]
-dict = defaultdict(bool)  # int/bool/list....
+dict = defaultdict(bool)
 for i in range(M):
     a, b = [int(x) for x in input().split()]
     dict[(a, b)] = True
