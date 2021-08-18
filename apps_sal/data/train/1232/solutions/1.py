@@ -47,5 +47,4 @@ while(t > 0):
             lower = mid
     print("%.5f" % (higher))
     arr = []
-    # print(higher)
     t -= 1

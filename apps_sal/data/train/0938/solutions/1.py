@@ -3,7 +3,6 @@ def func():
     for i in range(N - 1):
         for group_size in range(1, N - i):
             I = set(A[i:i + group_size])
-            # print I
             m = 0
             for j in range(i + group_size, N):
                 if(A[j] not in I):
