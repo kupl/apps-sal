@@ -1,5 +1,3 @@
-#!/usr/local/bin/python3
-# https://atcoder.jp/contests/abc066/tasks/abc066_b
 
 S = list(input())[:-2]
 

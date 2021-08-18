@@ -3,7 +3,6 @@ from sys import stdin, stdout
 
 def read_ints():
     return list(map(int, stdin.readline().split()))
-# lines = stdin.readlines()
 
 
 n, k, q = read_ints()

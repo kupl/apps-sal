@@ -5,7 +5,7 @@ def main(m):
     if m == 0:
         print("0 0")
     else:
-        x = math.floor(1 / 6 * ((12 * m - 3)**0.5 + 3))  # Approx ?...
+        x = math.floor(1 / 6 * ((12 * m - 3)**0.5 + 3))
         while True:
             d = m - (x**3 - (x - 1)**3)
             if (d < 0):
@@ -15,7 +15,6 @@ def main(m):
             else:
                 break
         s, r = divmod(d, x)
-        #print("x:{}, d:{}, s:{}, r:{}".format(x,d,s,r));
         if s == 0:
             print("{} {}".format(2 * x - r - 1, 2 * r + 2))
         elif s == 1:

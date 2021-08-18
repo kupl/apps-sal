@@ -9,9 +9,7 @@ for i in range(n):
     if s[i] == t[i]:
         continue
     k = s[i:]
-    # print(k,i)
     idx = k.find(t[i])
-    # print(i,idx)
     if(idx == -1):
         flag = 1
         break

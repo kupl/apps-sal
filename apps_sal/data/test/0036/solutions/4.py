@@ -14,7 +14,6 @@ if n == 0:
 
 l = layer(n)
 base = 3 * (l - 1) * l + 1
-# base = (2*l-1, 2)
 
 a = [2 * l, 0]
 b = [l, 2 * l]

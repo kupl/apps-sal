@@ -1,5 +1,3 @@
-# Contest: Codeforces Round #593 (Div. 2) (https://codeforces.com/contest/1236)
-# Problem: A: Stones (https://codeforces.com/contest/1236/problem/A)
 
 def rint():
     return int(input())

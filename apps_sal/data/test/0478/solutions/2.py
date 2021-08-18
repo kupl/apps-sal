@@ -1,7 +1,5 @@
 import sys
 
-# inf = open('input.txt', 'r')
-# reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
 
@@ -26,5 +24,3 @@ while code >= 97:
     else:
         code -= 1
 print(ans)
-
-# inf.close()

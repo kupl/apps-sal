@@ -1,4 +1,3 @@
-# Pye
 from os import path
 from sys import stdin, stdout
 if path.exists('inp.txt'):

@@ -15,21 +15,19 @@ def go():
 
         if s_raw.count(s[i]) != t_raw.count(s[i]) or s_raw.count(t[i]) != t_raw.count(t[i]):
 
-            ##print(s_raw.count(s[i]), t_raw.count(s[i]), s_raw.count(t[i]), t_raw.count(t[i]))
-
             print(-1)
             return
 
     moves = []
 
-    for i in range(0, n):  # indices in s
+    for i in range(0, n):
 
         if s[i] == t[i]:
             continue
 
         for j in range(i + 1, n):
 
-            if t[i] == s[j]:  # s[i] == t[j]:
+            if t[i] == s[j]:
 
                 for k in range(j - 1, i - 1, -1):
 
@@ -38,8 +36,6 @@ def go():
                     old_s_k = s[k]
                     s[k] = s[k + 1]
                     s[k + 1] = old_s_k
-
-                    # print(s)
 
                 break
 

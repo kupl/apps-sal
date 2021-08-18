@@ -6,11 +6,9 @@ l = int(sys.stdin.readline())
 s = [char for char in sys.stdin.readline()]
 t = [char for char in sys.stdin.readline()]
 for loop in range(l):
-    #print(s, t)
     i = loop
     while i < l and s[i] != t[loop]:
         i += 1
-    # print(i)
     if s[i] != t[loop]:
         print(-1)
         valid = False

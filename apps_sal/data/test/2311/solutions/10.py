@@ -40,7 +40,6 @@ for j in range(1, cou + 1):
 cou = 0
 sk = int(sqrt(k))
 su = 0
-# print(d1,d2)
 for i in range(1, sk + 1):
     if(k % i == 0):
         su += d1[i] * d2[k // i]

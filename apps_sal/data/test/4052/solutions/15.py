@@ -27,12 +27,10 @@ else:
             continue
         ind = get_index(first, second[i], i, n)
         ans += ind - i
-##        print(i, ind)
         for j in range(ind, i, -1):
             finalAns.append(j)
         temp = first.pop(ind)
         first.insert(i, temp)
-# print(first)
 
     print(ans)
     print(*finalAns)

@@ -1,6 +1,5 @@
 def go():
     n = int(input())
-    # b = list(map(int, input().split()))
     s = list(map(ord, input()))
     letters = sorted(set(s), reverse=True)
     for l in letters:
@@ -18,7 +17,6 @@ def go():
                 del s[i + 1]
             else:
                 i += 1
-    # print(''.join(map(chr,s)))
     return n - len(s)
 
 

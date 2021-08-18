@@ -1,4 +1,3 @@
-# B - ss
 def main():
     s = list(input())
 

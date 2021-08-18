@@ -5,8 +5,6 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-# SOLUTION
-
 
 def main():
     k, = read()
@@ -23,8 +21,6 @@ def main():
         ct += tm
         k -= tm * (9 - i)
     return ct
-
-# HELPERS
 
 
 def read(callback=int):
