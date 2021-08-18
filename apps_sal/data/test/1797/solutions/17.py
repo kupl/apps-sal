@@ -1,5 +1,3 @@
-# http://codeforces.com/contest/884/problem/C
-# unsolved
 from functools import lru_cache
 
 n = int(input())

@@ -19,11 +19,9 @@ while (a[0] % 2 == 0 or a[0] % 3 == 0):
         a[0] /= 2
     else:
         a[0] /= 3
-#print (a)
 for x in a:
     y = x % a[0]
     z = x / a[0]
-    #print (y,z)
     if(y == 0 and check(z)):
         continue
     else:

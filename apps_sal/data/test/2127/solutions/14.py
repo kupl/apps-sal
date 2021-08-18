@@ -12,9 +12,7 @@ while q > 0:
     if t == '+':
         mi = max(mi, min(a, b))
         ma = max(ma, max(a, b))
-        # print(mi,ma)
     elif t == '?':
-        # print(mi,ma,a,b)
         if min(a, b) >= mi and max(a, b) >= ma:
             L.append("YES")
         else:

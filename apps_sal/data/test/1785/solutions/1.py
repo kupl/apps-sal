@@ -1,5 +1,4 @@
 import sys
-# sys.stdin = open('in.txt')
 def R(): return map(int, input().split())
 
 

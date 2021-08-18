@@ -7,8 +7,6 @@ import bisect
 
 
 def main():
-    # sys.stdin = open('input.txt', 'r')
-    # sys.stdout = open('output.txt', 'w')
 
     n = list(map(int, input().split()))
     lst = list(map(int, input().split()))
@@ -49,9 +47,6 @@ def main():
 
         else:
             print(0)
-
-    # sys.stdin.close()
-    # sys.stdout.close()
 
 
 def __starting_point():

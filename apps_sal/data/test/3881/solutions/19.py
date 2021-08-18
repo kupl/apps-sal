@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 alphabet = list('abcdef')
 
@@ -24,10 +23,7 @@ for i in range(0, q):
 
 def compress(s):
     while s[0:2] in ops:
-        # print(s)
         s = ops[s[0:2]] + s[2:]
-    # print(s)
-    # print()
     return s
 
 

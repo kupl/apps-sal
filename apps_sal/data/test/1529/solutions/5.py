@@ -6,8 +6,6 @@ r3 = re.compile('^miao\.')
 
 for i in range(0, n):
     s = str(input())
-    # res1 = r1.findall( s ) )
-    # res2 = r2.findall( s ) )
     if len(r1.findall(s)) > 0:
         print('OMG>.< I don\'t know!')
     elif len(r2.findall(s)) > 0:

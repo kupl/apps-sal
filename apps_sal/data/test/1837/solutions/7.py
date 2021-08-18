@@ -9,15 +9,9 @@ def __starting_point():
             ans += 1
 
         elif int(arr[int(arr[i])]) == i:
-            # print("Matches")
-            # print(i,end=':')
-            # print(arr[int(arr[i])])
             ext = max(ext, 2)
         else:
-            # print(i,end=':')
-            # print(arr[int(arr[i])])
             ext = max(ext, 1)
-# print(ans)
     ans += ext
     print(ans)
 

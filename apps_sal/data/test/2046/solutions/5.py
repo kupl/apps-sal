@@ -1,4 +1,3 @@
-# coding: utf-8
 
 n = int(input())
 a_s = map(int, input().split())

@@ -17,7 +17,6 @@ for _ in range(int(input())):
             t = x
             x = y
             y = t
-        # print(lax,lay)
         if lax <= x and lay <= y:
             print("YES")
         else:

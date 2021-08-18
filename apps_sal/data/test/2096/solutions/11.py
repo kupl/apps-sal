@@ -22,6 +22,3 @@ for i in R:
 
 print(z[1] * z[2])
 print(' '.join(map(str, d[:n * 2])))
-
-
-# Made By Mostafa_Khaled

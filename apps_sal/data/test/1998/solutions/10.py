@@ -1,13 +1,5 @@
-"Codeforces Round #384 (Div. 2)"
+"Codeforces Round
 "C. Vladik and fractions"
-# y=int(input())
-# a=y
-# b=a+1
-# c=y*b
-# if y==1:
-#     print(-1)
-# else:
-#     print(a,b,c)
 "Technocup 2017 - Elimination Round 2"
 "D. Sea Battle"
 n, a, b, k = map(int, input().split())
@@ -35,13 +27,10 @@ if s[-1] == "0":
 min_no_spaces = (a - 1) * b
 spaces_left = n - k
 l = len(lz)
-# print(lz)
-# print(zeros)
 shotes = 0
 for i in range(len(zeros)):
     h = i * 2
     if min_no_spaces != 0:
-        # print(min_no_spaces)
         if min_no_spaces >= zeros[i]:
             min_no_spaces -= (int(zeros[i] / b)) * b
         elif min_no_spaces < zeros[i]:
@@ -50,7 +39,6 @@ for i in range(len(zeros)):
                 indexes.append(lz[h] + ((j + 1) * b))
             min_no_spaces = 0
     elif min_no_spaces == 0:
-        # print(min_no_spaces)
         shotes += int(zeros[i] / b)
         for j in range(int(zeros[i] / b)):
             indexes.append(lz[h] + ((j + 1) * b))

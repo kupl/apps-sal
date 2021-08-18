@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 n = int(input())
 snacks = list(map(int, input().split()))
 status = [False] * (n + 1)

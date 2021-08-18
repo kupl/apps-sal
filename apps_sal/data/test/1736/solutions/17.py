@@ -18,5 +18,3 @@ while j != n:
         count -= 1
 
 print(maxcount)
-
-# Время прохода - 2n

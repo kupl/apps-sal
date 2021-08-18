@@ -1,4 +1,3 @@
-# Why do we fall ? So we can learn to pick ourselves up.
 
 
 from itertools import groupby
@@ -14,7 +13,6 @@ for i in range(0, len(sg)):
         ll += len(sg[i])
     else:
         ll += len(sg[i])
-# print(hits)
 hits = hits[a - 1:]
 print(len(hits))
 print(*hits)
