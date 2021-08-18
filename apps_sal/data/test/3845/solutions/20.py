@@ -1,8 +1,7 @@
 def main():
     A, B = list(map(int, input().split()))
-    # A -> 0, B -> 1
     N = 100
-    S = [["#"] * N for _ in range(N // 2)] + [["."] * N for _ in range(N // 2, N)]
+    S = [["
     a = A - 1
     b = B - 1
     for i in range(1, N // 2 - 1, 2):
@@ -17,7 +16,7 @@ def main():
     for i in range(N // 2 + 1, N, 2):
         for j in range(0, N, 2):
             if b > 0:
-                S[i][j] = "#"
+                S[i][j] = "
                 b -= 1
             else:
                 break

@@ -1,6 +1,6 @@
 def main():
     A, B = (int(i) for i in input().split())
-    grid = [["#" if i < 50 else "."] * 100 for i in range(100)]
+    grid = [["
 
     for h in range(49):
         if h % 2 == 1:
@@ -16,7 +16,7 @@ def main():
             continue
         for w in range(0, 100, 2):
             if B > 1:
-                grid[h][w] = "#"
+                grid[h][w] = "
                 B -= 1
             else:
                 break

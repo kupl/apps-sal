@@ -1,5 +1,5 @@
 
-G = [["#"] * 100 for i in range(100)]
+G = [["
 for i in range(50, 100):
     for j in range(100):
         G[i][j] = "."
@@ -19,7 +19,7 @@ while(A > 0):
         i += 2
 i, j = 99, 0
 while(B > 0):
-    G[i][j] = "#"
+    G[i][j] = "
     B -= 1
     j += 2
     if j > 99:

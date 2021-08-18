@@ -1,13 +1,8 @@
-# input()
-# int(input())
-# map(int, input().split())
-# list(map(int, input().split()))
-# list(map(int, list(input()))) # スペースがない数字リストを読み込み
 import math
 import fractions
 import sys
 import bisect
-import heapq  # 優先度付きキュー(最小値取り出し)
+import heapq
 import collections
 from collections import Counter
 from collections import deque
@@ -19,7 +14,6 @@ from functools import lru_cache
 def sr(): return input()
 def ir(): return int(sr())
 def lr(): return list(map(int, sr().split()))
-
 
 """nを素因数分解"""
 """2以上の整数n => [[素因数, 指数], ...]の2次元リスト"""
@@ -48,7 +42,6 @@ def factorization(n):
     return arr
 
 
-# a^n
 def power(a, n, mod):
     x = 1
     while n:
@@ -59,7 +52,6 @@ def power(a, n, mod):
     return x % mod
 
 
-# n*(n-1)*...*(l+1)*l
 def kaijo(n, l, mod):
     if n == 0:
         return 1
@@ -69,8 +61,6 @@ def kaijo(n, l, mod):
         a = a * tmp % mod
         tmp -= 1
     return a
-
-# Union Find
 
 
 class UnionFind():
@@ -120,8 +110,6 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
-# 約数生成
-
 
 def make_divisors(n):
     divisors = []
@@ -134,8 +122,6 @@ def make_divisors(n):
     divisors.sort()
     return divisors
 
-# 区間更新のみ
-
 
 class kukankousin:
     def __init__(self, n):
@@ -144,8 +130,6 @@ class kukankousin:
         self.data = [None] * (2 * self.N0)
         self.INF = (-1, 2**31 - 1)
 
-    # 区間[l, r+1)の値をxに書き換える
-    # xは(t, value)という値にする (新しい値ほどtは大きくなる)
     def update(self, l, r, x):
         L = l + self.N0
         R = r + self.N0
@@ -160,8 +144,6 @@ class kukankousin:
             L >>= 1
             R >>= 1
 
-    # a_iの現在の値を取得
-
     def _query(self, k):
         k += self.N0 - 1
         s = self.INF
@@ -171,40 +153,35 @@ class kukankousin:
             k = (k - 1) // 2
         return s
 
-    # これを呼び出す
-
     def query(self, k):
         return self._query(k)[1]
 
 
 inf = 10 ** 18
 mod = 10 ** 9 + 7
-# mod = 998244353
-
-# Press the green button in the gutter to run the script.
 
 
 def __starting_point():
     a, b = lr()
     h, w = 96, 99
-    m = [['#' for j in range(w)] for i in range(h)]
+    m = [['
     for i in range(48, h):
         for j in range(w):
-            m[i][j] = '.'
+            m[i][j]= '.'
 
     for k in range(a - 1):
-        y = k // 33
-        x = k % 33
-        y = y * 3 + 1
-        x = x * 3 + 1
-        m[y][x] = '.'
+        y= k // 33
+        x= k % 33
+        y= y * 3 + 1
+        x= x * 3 + 1
+        m[y][x]= '.'
 
     for k in range(b - 1):
-        y = 16 + k // 33
-        x = k % 33
-        y = y * 3 + 1
-        x = x * 3 + 1
-        m[y][x] = '#'
+        y= 16 + k // 33
+        x= k % 33
+        y= y * 3 + 1
+        x= x * 3 + 1
+        m[y][x]= '
 
     print(h, w)
     for l in m:

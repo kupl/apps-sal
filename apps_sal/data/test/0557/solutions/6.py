@@ -19,7 +19,6 @@ files = True
 
 if getpass.getuser().lower() == 'frohe' and files:
     sys.stdin = open('test.in')
-    # sys.stdout = open('test.out', 'w')
 
 n, m = ria()
 ar = [0] * 400
@@ -29,7 +28,6 @@ for i in range(n):
     st[a] = 1
     for j in range(a + 1, b + 1):
         ar[j] = 1
-# print(ar)
 if st[0] == 1 and sum(ar[1:m + 1]) == len(ar[1:m + 1]):
     print('YES')
 else:

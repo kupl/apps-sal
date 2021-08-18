@@ -1,6 +1,4 @@
-#!python3
 
-# input
 A, B = list(map(int, input().split()))
 
 
@@ -20,12 +18,12 @@ def paint2(ans):
         for j in range(0, 100, 2):
             if b == B:
                 return
-            ans[i][j] = "#"
+            ans[i][j] = "
             b += 1
 
 
 def main():
-    ans = [["#"] * 100 for _ in range(50)] + [["."] * 100 for _ in range(50)]
+    ans = [["
     paint1(ans)
     paint2(ans)
 

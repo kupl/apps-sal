@@ -2,7 +2,7 @@
 
 A, B = list(map(int, input().split()))
 
-S = [["." if h < 50 else "#" for _ in range(100)] for h in range(100)]
+S = [["." if h < 50 else "
 
 end_black = False
 for i in range(0, 50, 2):
@@ -14,7 +14,7 @@ for i in range(0, 50, 2):
             break
 
         if j % 2 == 0:
-            S[i][j] = "#"
+            S[i][j] = "
             B -= 1
 
 

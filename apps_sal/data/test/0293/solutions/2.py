@@ -1,4 +1,3 @@
-#from time import time
 
 def solve(x):
 
@@ -29,11 +28,8 @@ def solve(x):
 
 def __starting_point():
 
-    #t1 = time()
     x = int(input())
     solve(x)
-    #t2 = time()
-    #print( "time :" , t2-t1 , "s" )
 
 
 __starting_point()

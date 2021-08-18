@@ -18,5 +18,5 @@ for i in range(b):
 print(100, 100)
 for i in range(100):
     for j in range(100):
-        print("." * m[i][j] + "#" * (1 - m[i][j]), end="")
+        print("." * m[i][j] + "
     print()

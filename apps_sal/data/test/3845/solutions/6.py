@@ -1,6 +1,6 @@
 def main():
     A, B = map(int, input().split())
-    board = [["#"] * 100 for _ in range(50)] + [["."] * 100 for _ in range(50)]
+    board = [["
 
     wc = 1
     for i in range(0, 50, 2):
@@ -17,7 +17,7 @@ def main():
         for j in range(0, 100, 2):
             if bc >= B:
                 break
-            board[i][j] = "#"
+            board[i][j] = "
             bc += 1
         if bc >= B:
             break

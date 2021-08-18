@@ -12,7 +12,7 @@ def yn(fl): return print("Yes") if fl else print("No")
 ceil = math.ceil
 a, b = ma()
 wh = "."
-bl = "#"
+bl = "
 if a > b:
     a, b = b, a
     wh, bl = bl, wh

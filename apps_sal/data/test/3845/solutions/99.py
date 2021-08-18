@@ -1,11 +1,11 @@
 print('97 97')
 A, B = map(int, input().split())
 if A > B:
-    char = ['.', '#']
+    char = ['.', '
     M = A
     m = B
 else:
-    char = ['#', '.']
+    char = ['
     M = B
     m = A
 

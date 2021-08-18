@@ -19,9 +19,6 @@ for tests in range(t):
         C.append(sorted([A[i], A[-i - 1]]))
         D.append(sorted([B[i], B[-i - 1]]))
 
-    # print(C)
-    # print(D)
-
     if sorted(C) == sorted(D):
         print("Yes")
     else:

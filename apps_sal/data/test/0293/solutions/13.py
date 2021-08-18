@@ -1,5 +1,5 @@
 """
-Codeforces Round #332 (Div. 2)
+Codeforces Round 
 
 Problem 599 D. Spongebob and Squares
 
@@ -33,10 +33,6 @@ def solve(x):
                 result.append((n + p, n))
     result.sort()
     return result
-
-
-# def p(*args, **kwargs):
-#     return print(*args, file=sys.stderr, **kwargs)
 
 
 def main():
