@@ -7,10 +7,8 @@ class Solution:
         mask, res = 0, 0
         for i in range(n):
             mask = mask ^ (1 << int(s[i]))
-            # print(bin(mask))
             for j in range(11):
                 ch_mask = 1023 & (mask ^ (1 << j))
-                # print(\"ch_mask: {} {}\".format(ch_mask,mask^(1 << j)))
                 res = max(res, i - dp[ch_mask])
             dp[mask] = min(i, dp[mask])
         return res

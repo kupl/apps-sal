@@ -32,5 +32,4 @@ class Solution:
                     if len(d[new_key]) > 0:
                         ans = max(ans, d[key][-1] - d[new_key][0])
 
-        # print(d[0])
         return ans

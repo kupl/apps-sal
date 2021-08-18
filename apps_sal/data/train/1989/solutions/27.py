@@ -26,7 +26,6 @@ class Solution:
                     ans = max(ans, idx - maskDict[match])
 
             if mask not in maskDict:
-                # only record the first position
                 maskDict[mask] = idx
 
         return ans

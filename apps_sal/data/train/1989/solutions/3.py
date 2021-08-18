@@ -19,6 +19,4 @@ class Solution:
                 if x in dp:
                     ans = max(ans, i - dp[x])
 
-            # print(a,dp,i,ans)
-
         return ans

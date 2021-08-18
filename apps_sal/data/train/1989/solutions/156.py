@@ -13,7 +13,3 @@ class Solution:
             d[cur] = min(d[cur], i)
 
         return res
-
-    # def longestAwesome(self, s: str) -> int:
-    #    curr = 0
-    #    result = 0

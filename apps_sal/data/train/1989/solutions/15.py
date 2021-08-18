@@ -1,6 +1,5 @@
 class Solution:
     def longestAwesome(self, s: str) -> int:
-        # alex wice solution
         P = [0]
         for c in s:
             x = int(c)

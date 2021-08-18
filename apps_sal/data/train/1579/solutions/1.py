@@ -1,4 +1,3 @@
-# cook your dish here
 def ortho(n, m):
     res = set()
     tot = (n * (n + 1)) // 2

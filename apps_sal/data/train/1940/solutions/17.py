@@ -7,7 +7,6 @@ class Solution:
         while head != None:
             res.append(head.val)
             head = head.__next__
-        # monotonic decreasing stack
         stack = deque()
         for i in range(len(res)):
             while stack:
@@ -17,7 +16,6 @@ class Solution:
                 else:
                     break
             stack.append(i)
-        # the positions left in stack cannot find larger elements, and assign 0
         while stack:
             pos = stack.pop()
             res[pos] = 0
