@@ -1,4 +1,3 @@
-# B - ∵∴∵
 def main():
     o = list(input())
     d = list(input())

@@ -3,7 +3,6 @@ import sys
 input = sys.stdin.readline
 
 
-# Editorial AC
 def main():
     M, K = list(map(int, input().split()))
 

@@ -1,10 +1,8 @@
-#!python3
 
 def LI():
     return list(map(int, input().split()))
 
 
-# input
 M, K = LI()
 
 

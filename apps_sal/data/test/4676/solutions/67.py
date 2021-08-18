@@ -1,4 +1,3 @@
-# 58B
 A = list(input())
 B = list(input())
 x = A[0] + B[0]

@@ -9,7 +9,6 @@ class Solution:
         candidates.sort()
         self.dfs(candidates, target, 0, [], res)
         return res
-# 60%
 
     def dfs(self, nums, target, index, path, res):
         if target < 0:
@@ -20,6 +19,6 @@ class Solution:
         for i in range(index, len(nums)):
             if i > index and nums[i] == nums[i - 1]:
                 continue
-            if nums[i] > target:  # 提升到93%
+            if nums[i] > target:
                 break
             self.dfs(nums, target - nums[i], i + 1, path + [nums[i]], res)

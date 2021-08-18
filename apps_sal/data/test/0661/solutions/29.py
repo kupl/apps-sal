@@ -18,7 +18,6 @@ def solve(M, K):
     else:
         if K >= 2**M:
             return -1
-        # (A) K ... 0 K 0 rev(...), xor(...) == K の形を作れればOK
         S = [a for a in range(2**M) if a not in (0, K)]
         if len(S) == 0 or reduce(xor, S) != K:
             return -1

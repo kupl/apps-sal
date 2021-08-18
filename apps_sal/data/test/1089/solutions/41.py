@@ -14,7 +14,7 @@ def yn(fl): return print("Yes") if fl else print("No")
 mod = 10**9 + 7
 
 
-def ncr_1(n, r, p):  # 　n>>r の場合のncr　O(r)
+def ncr_1(n, r, p):
     x = 1
     y = 1
     for i in range(r):

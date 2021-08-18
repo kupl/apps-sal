@@ -12,11 +12,9 @@ class Solution:
             for i, n in enumerate(nums):
                 if n > target:
                     continue
-                # avoid duplicate solutions
                 if i > 0 and nums[i] == nums[i - 1]:
                     continue
                 current.append(n)
-                # each num can be used only once: nums[i+1:]
                 produce(nums[i + 1:], target - n, current, output)
                 current.pop()
 

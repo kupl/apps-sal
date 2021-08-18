@@ -14,8 +14,7 @@ class Solution:
 
         results = []
 
-        def find(curr_comb, curr_sum, candidates):  # 靠副作用填充results
-            #curr_comb = curr_comb[:]
+        def find(curr_comb, curr_sum, candidates):
             for i, cand in enumerate(candidates):
 
                 if (cand + curr_sum) < target:
@@ -27,7 +26,6 @@ class Solution:
                     new_curr_comb.append(cand)
                     if new_curr_comb not in results:
                         results.append(new_curr_comb)
-                    #print(curr_comb, curr_sum, cand, 'target:',target)
                 else:
                     break
 

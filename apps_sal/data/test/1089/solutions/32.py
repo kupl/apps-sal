@@ -1,5 +1,4 @@
 def ext_euc(a, b):
-    # return x, y, gcd(a, b) s.t. ax + by = gcd(a, b)
     if b == 0:
         return 1, 0, a
     y, x, v = ext_euc(b, a % b)

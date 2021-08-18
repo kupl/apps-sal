@@ -19,9 +19,9 @@ def solve():
 
     others = comb(N * M - 2, K - 2, fact, revfact)
     pair_type = 0
-    for i in range(N):  # 縦の距離がi
+    for i in range(N):
         if i == 0:
-            for j in range(1, M):  # 横の距離がj
+            for j in range(1, M):
                 pair_type += (i + j) * (N - i) * (M - j) % mod
                 pair_type %= mod
         else:
