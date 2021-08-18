@@ -1,4 +1,3 @@
-# 😉😉
 
 def next_happy_year(year):
     y = year + 1

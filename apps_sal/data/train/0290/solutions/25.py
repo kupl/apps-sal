@@ -18,5 +18,4 @@ class Solution:
             return ans
 
         ans = dp(0, n)
-        # print(mem)
         return ans

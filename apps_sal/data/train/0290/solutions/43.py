@@ -4,8 +4,6 @@ from math import inf
 class Solution:
     def minCost(self, n: int, cuts: List[int]) -> int:
         def recurse(l, r):
-            # if r<=l:
-            #     return inf
             if self.dp.get((l, r), -1) != -1:
                 return self.dp[(l, r)]
             mnCut = inf
@@ -22,5 +20,4 @@ class Solution:
         self.dp = {}
         cuts.sort()
         mn = recurse(0, n)
-        # print(self.dp)
         return mn

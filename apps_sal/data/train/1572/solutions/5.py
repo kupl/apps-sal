@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 from operator import itemgetter
 from collections import deque

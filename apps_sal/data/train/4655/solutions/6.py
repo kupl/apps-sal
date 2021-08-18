@@ -8,4 +8,3 @@ def sort_me(arr):
     print(c)
     d = [x[0] for x in c]
     return d
-    # Good Luck!

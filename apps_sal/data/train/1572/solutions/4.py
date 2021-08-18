@@ -1,4 +1,3 @@
-# cook your dish here
 inputs = list(map(int, input().split()))
 n = inputs[0]
 A = inputs[1:n + 1]

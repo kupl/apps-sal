@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 s, p = 0, 0
 for i in range(10**6):

@@ -1,4 +1,3 @@
-# dt = {} for i in x: dt[i] = dt.get(i,0)+1
 from functools import reduce
 import sys
 input = sys.stdin.readline

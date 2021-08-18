@@ -6,17 +6,13 @@ class Solution:
             min_val = float('inf')
             cut_found = False
             for c in cuts:
-                if c > start and c < end:  # Important!!! check the boundary condition
+                if c > start and c < end:
                     left_val = dfs(start, c)
-                    # print ('Left', left_val, 'C', c)
                     right_val = dfs(c, end)
-                    # print ('Right', right_val, 'C', c)
                     min_val = min(min_val, left_val + right_val)
-                    # print (\"Left and Right\", left_val, right_val)
-                    # print (\"MIN VAL:n \", min_val)
                     cut_found = True
 
-            if not cut_found:  # If no cut is found we know that the stick cannot be split more
+            if not cut_found:
                 cache[(start, end)] = 0
             else:
                 cache[(start, end)] = end - start + min_val

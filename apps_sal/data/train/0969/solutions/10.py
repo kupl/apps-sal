@@ -1,4 +1,3 @@
-# cook your dish here
 for T in range(int(input())):
     n, ind = input().split()
     n = int(n)
@@ -10,13 +9,11 @@ for T in range(int(input())):
                 k = int(ls[1])
                 if 20 >= k:
                     laddu = laddu + (300 + (20 - k))
-                    # print(laddu)
                 else:
                     laddu = 300 + laddu
             elif ls[0] == "BUG_FOUND":
                 d = int(ls[1])
                 laddu = laddu + d
-                # print(laddu)
         else:
             if ls[0] == "TOP_CONTRIBUTOR":
                 laddu = laddu + 300

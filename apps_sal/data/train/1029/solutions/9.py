@@ -1,11 +1,10 @@
-# cook your dish here
 T = int(input())
 
 while T:
     T -= 1
     totalJobs, completedJobs = map(int, input().split())
-    iJobs = []  # incompleted jobs
-    cJobs = []  # complete jobs
+    iJobs = []
+    cJobs = []
     chef = []
     assistant = []
 

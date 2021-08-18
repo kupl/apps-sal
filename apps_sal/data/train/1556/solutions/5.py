@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     k = int(input())
     m1 = k
