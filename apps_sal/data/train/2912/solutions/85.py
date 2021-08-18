@@ -6,4 +6,3 @@ def find_multiples(integer, limit):
 
     li.pop(0)
     return li
-    # Your code here!

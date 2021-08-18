@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 p1 = []
 p2 = []

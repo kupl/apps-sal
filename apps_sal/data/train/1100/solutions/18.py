@@ -1,6 +1,3 @@
-# Author: S Mahesh Raju
-# Username: maheshraju2020
-# Date: 28/06/2020
 
 from sys import stdin, stdout
 from math import gcd, ceil, sqrt

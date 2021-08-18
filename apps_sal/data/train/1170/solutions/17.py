@@ -10,6 +10,3 @@ for _ in range(int(input())):
             res += "0"
 
     print(res)
-
-
-# cook your dish here

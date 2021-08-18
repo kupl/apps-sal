@@ -1,4 +1,3 @@
-# 1397. Find All Good Strings
 class Solution:
     def findGoodStrings(self, n: int, s1: str, s2: str, evil: str) -> int:
         e_len = len(evil)

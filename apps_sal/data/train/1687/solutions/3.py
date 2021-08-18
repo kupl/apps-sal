@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n, k = [int(x) for x in input().split()]
     if k % 4 == 0:

@@ -1,4 +1,3 @@
-# cook your code here
 t = eval(input())
 while(t):
     n = eval(input())
