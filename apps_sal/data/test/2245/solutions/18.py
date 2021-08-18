@@ -7,9 +7,7 @@ for _ in range(T):
         w = k + 2
     else:
         w = k + 1
-    # print('w', w)
     n_mod_w = n % w
-    # print('n_mod_w', n_mod_w)
     if n_mod_w % 3 in {1, 2} or n_mod_w == k:
         print('Alice')
     else:

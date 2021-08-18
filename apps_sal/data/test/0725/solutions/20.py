@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 from sys import stdin
 
@@ -12,9 +11,9 @@ def main():
         pixels = stdin_get_string_from_line().split(' ')
         for pixel in pixels:
             if pixel in colored:
-                print('#Color')
+                print('
                 return
-    print('#Black&White')
+    print('
 
     return
 

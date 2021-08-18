@@ -5,4 +5,4 @@ for _ in range(n):
     for c in ['C', 'M', 'Y']:
         if c in l:
             color = True
-print('#Color' if color else '#Black&White')
+print('

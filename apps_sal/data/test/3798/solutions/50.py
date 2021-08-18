@@ -17,8 +17,6 @@ def bisect(ng, ok, judge, eps=1):
 
 def int_product(it): return reduce(operator.mul, it, 1)
 
-# 素因数分解
-
 
 def prime_factors(n):
     i = 2
@@ -30,8 +28,6 @@ def prime_factors(n):
             yield i
     if n > 1:
         yield n
-
-# 約数列挙
 
 
 def divisors(n):

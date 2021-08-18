@@ -12,9 +12,9 @@ def main():
             black = False
 
     if black:
-        print("#Black&White")
+        print("
     else:
-        print("#Color")
+        print("
 
 
 main()

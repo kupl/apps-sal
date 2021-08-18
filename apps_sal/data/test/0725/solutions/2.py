@@ -9,6 +9,6 @@ for lig in range(nbLig):
         compteur[couleurs.index(element)] += 1
 
 if compteur[0] != 0 or compteur[1] != 0 or compteur[2] != 0:
-    print("#Color")
+    print("
 else:
-    print("#Black&White")
+    print("

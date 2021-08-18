@@ -1,4 +1,3 @@
-# A - Traveling Budget
 
 A = int(input())
 B = int(input())

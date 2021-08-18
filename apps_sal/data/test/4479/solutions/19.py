@@ -1,5 +1,3 @@
-# 5:47 -> 5:50 slowwww
-# Seems greedy: pick smallest number and flip it
 class Solution:
     def largestSumAfterKNegations(self, A: List[int], K: int) -> int:
         while K:

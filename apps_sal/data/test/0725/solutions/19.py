@@ -9,6 +9,6 @@ for i in range(n):
             f = 1
 
 if(f == 1):
-    print("#Color")
+    print("
 else:
-    print("#Black&White")
+    print("

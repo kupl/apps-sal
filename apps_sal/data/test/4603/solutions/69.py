@@ -1,4 +1,3 @@
-# 092a
 
 def atc_092a(ABCD: int) -> int:
     return min(ABCD[0], ABCD[1]) + min(ABCD[2], ABCD[3])

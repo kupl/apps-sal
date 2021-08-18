@@ -1,6 +1,4 @@
 from functools import reduce
-# https://drken1215.hatenablog.com/entry/2020/01/26/164200
-# bit_pathの参考にした
 
 
 def main():
@@ -18,7 +16,7 @@ def main():
             if e.to == par:
                 continue
             res = bit_path(curr=e.to, goal=goal, par=curr)
-            if ~res:  # -1以外
+            if ~res:
                 return res | (1 << e.edge_id)
         return -1
 

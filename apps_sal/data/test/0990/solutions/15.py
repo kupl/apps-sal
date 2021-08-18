@@ -1,4 +1,3 @@
-# https://atcoder.jp/contests/abc152/submissions/9619555
 
 import numpy as np
 import sys

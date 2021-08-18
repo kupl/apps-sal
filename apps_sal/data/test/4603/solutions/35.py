@@ -1,4 +1,3 @@
-# ABC092
 a = int(input())
 b = int(input())
 c = int(input())

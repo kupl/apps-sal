@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 def main():
     a, b, c, d = (int(input()) for i in range(4))

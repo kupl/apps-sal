@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
 
@@ -35,7 +34,6 @@ def dfs(p, v, dest):
     return False
 
 
-# edge-bitset of each constraint
 target_edge = [0] * m
 for i, (u, v) in enumerate(uv):
     ret = dfs(-1, u, v)
@@ -45,13 +43,11 @@ for i, (u, v) in enumerate(uv):
         if (uu, vv) in edge_dict:
             target_edge[i] |= (1 << edge_dict[(uu, vv)])
 
-# edge-bitset of each set of constraints
 edgest = [0] * 2**m
 for i in range(1, 2**m):
     lsb = i & (-i)
     edgest[i] = edgest[i ^ lsb] | target_edge[lsb.bit_length() - 1]
 
-# dp[set of constraints]
 dp = [0] * 2**m
 dp[0] = 1 << (n - 1)
 ans = dp[0]
