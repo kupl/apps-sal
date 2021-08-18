@@ -1,4 +1,3 @@
-# by nikkipinky
 for _ in range(int(input())):
     n = int(input())
     countPairs = dict()

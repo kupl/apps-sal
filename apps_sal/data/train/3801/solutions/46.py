@@ -2,7 +2,6 @@ import string
 
 
 def words_to_marks(s):
-    # Easy one
     letters = string.ascii_lowercase
     total = 0
 
