@@ -2,7 +2,6 @@ import unittest
 
 
 def remove_exclamation_marks(s):
-    # return ' '.join(ele.rstrip("!") for ele in s.split())
     return s.replace('!', '')
 
 

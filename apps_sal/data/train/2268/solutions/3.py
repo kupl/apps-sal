@@ -2,8 +2,6 @@ import sys
 from itertools import chain
 readline = sys.stdin.readline
 
-# 非再帰
-
 
 def scc(Edge):
     N = len(Edge)

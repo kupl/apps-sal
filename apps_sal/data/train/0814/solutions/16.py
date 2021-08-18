@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 
 while(t > 0):
@@ -8,14 +7,12 @@ while(t > 0):
     output = "No"
     totalCount = 0
     count = 0
-    # print(str1)
     for i in str1:
         if i == 0:
             count += 1
             totalCount += 1
 
         elif i == 1 and count > 0:
-            # print(count)
             if(count % 2 == 1 and totalCount != 1):
                 output = "Yes"
                 break

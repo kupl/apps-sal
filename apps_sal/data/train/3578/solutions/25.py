@@ -1,1 +1,1 @@
-def paperwork(n, m): return 0 if(n < 0 or m < 0) else n * m  # Another Stupid Comment By Mr. Stupido
+def paperwork(n, m): return 0 if(n < 0 or m < 0) else n * m

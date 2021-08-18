@@ -3,4 +3,3 @@ def paperwork(n, m):
         return n * m
     elif n < 0 or m < 0 or n == 0 or m == 0:
         return 0
-    # Happy Coding! ^_^
