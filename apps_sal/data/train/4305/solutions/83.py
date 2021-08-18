@@ -3,7 +3,6 @@ import operator
 
 
 def order_weight(strng):
-    # your code
     if strng == "":
         return ""
     else:

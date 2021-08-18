@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
     n, hour = list(map(int, input().split()))

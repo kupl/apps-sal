@@ -3,7 +3,6 @@ class Solution:
         def dp(i, j):
             if i == 0:
                 return 2 * j
-            # if j==0: return 0
             if j == 1:
                 return 2
             if (i, j) in memo:

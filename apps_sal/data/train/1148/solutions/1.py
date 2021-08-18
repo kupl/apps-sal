@@ -1,4 +1,3 @@
-# cook your dish here
 tcase = int(input())
 while tcase > 0:
     scores = []

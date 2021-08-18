@@ -2,7 +2,6 @@ l = [1]
 for i in range(1, 21):
     x = 2**i
     l.append(x)
-# print(l,len(l))
 for _ in range(int(input())):
     n, a, r = list(map(int, input().split()))
     tmi = n
@@ -14,7 +13,6 @@ for _ in range(int(input())):
             miv = l[0] * n
             tmi = 0
         else:
-            # print(l[:a])
             miv = sum(l[:a])
             tmi = tmi - a
             miv = miv + tmi * l[0]
@@ -27,7 +25,6 @@ for _ in range(int(input())):
             tma = 0
         else:
             mav = mav + sum(l[:r])
-            # print(mav)
             tma = tma - r
             mav = mav + tma * (x[ll - 1])
             tma = 0

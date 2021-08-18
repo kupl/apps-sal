@@ -9,7 +9,6 @@ for _ in range(int(input())):
         mid = (low + high) // 2
         for i in range(n):
             check += (ceil(arr[i] / mid))
-        # print(check,low,mid,high)
         if check <= h:
             high = mid
         else:

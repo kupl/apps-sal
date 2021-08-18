@@ -2,7 +2,6 @@ def order_weight(string):
     strng = string.split()
     for i in range(0, len(strng)):
         for j in range(0, len(strng)):
-            # print(strng[i],strng[j])
             if (weight(strng[i]) < weight(strng[j])):
                 pass
             elif (weight(strng[i]) == weight(strng[j])):

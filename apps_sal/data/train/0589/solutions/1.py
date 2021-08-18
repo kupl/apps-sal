@@ -5,8 +5,8 @@ for _ in range(t):
     for i in range(len(s)):
         if s[i] == '.':
             l += 1
-        if s[i] == '#':
-            if l > m:
+        if s[i] == '
+           if l > m:
                 d += 1
                 m = l
             l = 0

@@ -7,9 +7,9 @@ while t > 0:
     for i in range(len(s)):
         c = 0
         if s[i] == '.' and s[i - 1] != '.':
-            while s[i] != '#':
-                c += 1
-                i += 1
+            while s[i] != '
+            c += 1
+            i += 1
             if c > mx:
                 d += 1
                 mx = c
