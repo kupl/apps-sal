@@ -1,8 +1,5 @@
 class Solution:
-    # Time: O(len(seats))
-    # Space: O(1)
     def maxDistToClosest(self, seats: List[int]) -> int:
-        # two pointers
         s = -1
         distMax = 0
 

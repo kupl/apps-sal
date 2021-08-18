@@ -10,7 +10,6 @@ class Solution:
             new_capacity = trip[0]
             new_start, new_end = trip[1], trip[2]
             location[new_start:new_end] = [cap + new_capacity for cap in location[new_start:new_end]]
-        # print(location)
         for loc in location:
             if loc > capacity:
                 return False

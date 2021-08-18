@@ -43,7 +43,7 @@ class Solution:
             for j in range(len(grid[0])):
                 if grid[i][j] > 0:
                     startl = min(dpv[i][j], dph[i][j])
-                    if startl > maxl:  # 可能的其实边框长度要大于目前找到的最大边框
+                    if startl > maxl:
 
                         for k in range(startl, maxl, -1):
                             left = j - k + 1

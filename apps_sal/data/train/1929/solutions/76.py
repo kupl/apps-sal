@@ -10,7 +10,7 @@ class StreamChecker:
                 if not c in dic:
                     dic[c] = {}
                 dic = dic[c]
-            dic['#'] = True
+            dic['
 
         self.stack = []
 
@@ -21,7 +21,7 @@ class StreamChecker:
         dic = self.dic
 
         for c in self.stack[::-1]:
-            if '#' in dic:
+            if '
                 return True
 
             if c not in dic:
@@ -29,8 +29,4 @@ class StreamChecker:
 
             dic = dic[c]
 
-        return dic.get('#', False)
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+        return dic.get('

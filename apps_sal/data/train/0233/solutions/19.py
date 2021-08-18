@@ -14,36 +14,30 @@ class Solution:
                     new_grid[2 * i + 1][2 * j + 1] = 1
 
         def dfs(grid, i, j):
-            # starting with a seed (0 in location i,j), build up an open space
             if grid[i][j] == 1:
                 return None
-            grid[i][j] = 1  # mark as visited
-            if i < len(grid) - 1:  # (make sure i+1 exists)
-                dfs(grid, i + 1, j)  # search down
+            grid[i][j] = 1
+            if i < len(grid) - 1:
+                dfs(grid, i + 1, j)
             if j < len(grid) - 1:
-                dfs(grid, i, j + 1)  # search right
+                dfs(grid, i, j + 1)
             if i > 0:
-                dfs(grid, i - 1, j)  # search up
+                dfs(grid, i - 1, j)
             if j > 0:
-                dfs(grid, i, j - 1)  # search left
-            # search dl
+                dfs(grid, i, j - 1)
             if i < len(grid) - 1 and j > 0 and i % 2 == j % 2:
                 dfs(grid, i + 1, j - 1)
-            # search ur
             if i > 0 and j < len(grid) - 1 and i % 2 == j % 2:
                 dfs(grid, i - 1, j + 1)
-            # search dr
             if i < len(grid) - 1 and j < len(grid) - 1 and i % 2 != j % 2:
                 dfs(grid, i + 1, j + 1)
-            # search ul
             if i > 0 and j > 0 and i % 2 != j % 2:
                 dfs(grid, i - 1, j - 1)
 
-        # search for seeds
         for i in range(2 * N):
             for j in range(2 * N):
                 if new_grid[i][j] == 0:
                     count += 1
-                    dfs(new_grid, i, j)  # seed an island
+                    dfs(new_grid, i, j)
 
         return count

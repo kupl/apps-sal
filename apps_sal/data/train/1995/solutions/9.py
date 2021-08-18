@@ -3,7 +3,6 @@ class Solution:
         if not trips or len(trips) == 0 or capacity == 0:
             return False
 
-        # sorting by starting point
         trips.sort(key=lambda x: x[1])
 
         arr = []

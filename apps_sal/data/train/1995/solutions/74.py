@@ -7,7 +7,6 @@ class Solution:
                     d[j] = i[0]
                 else:
                     d[j] += i[0]
-        # print(d)
         for i in d:
             if d[i] > capacity:
                 return 0
