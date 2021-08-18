@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 import time
 
@@ -21,4 +19,3 @@ while (k <= min(h2, h3)):
 
 print(max(h2, h3))
 finish = time.time()
-#print(finish - start)

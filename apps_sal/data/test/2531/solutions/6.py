@@ -1,4 +1,3 @@
-# cook your dish here
 from itertools import combinations as c
 try:
     n = int(input())
@@ -13,7 +12,6 @@ try:
             odd.append(xx)
     o = list(c(odd, 2))
     e = list(c(even, 2))
-    # print(x,o,e)
     ctr = 0
     dt = {}
     for i in x:

@@ -20,8 +20,6 @@ temp = []
 steps = 0
 if(neg % 2 == 0):
     temp = heapq.heappop(num)
-    # print(temp[1],temp[0])
-    # print(numbers[temp[1]],x)
     if(numbers[temp[1]] < 0):
         steps = min(abs(numbers[temp[1]]) // x + 1, k)
         k -= steps
@@ -29,22 +27,16 @@ if(neg % 2 == 0):
         heapq.heappush(num, [abs(numbers[temp[1]]), temp[1]])
     else:
         steps = min((abs(numbers[temp[1]]) // x) + 1, k)
-        # print(steps)
         k -= steps
         numbers[temp[1]] -= steps * x
         heapq.heappush(num, [abs(numbers[temp[1]]), temp[1]])
 
 while(k > 0):
     temp = heapq.heappop(num)
-    # print(temp[1],temp[0])
     if(numbers[temp[1]] < 0):
-        # steps = (numbers[temp[1]]//x+1)
-        # k-=steps
         numbers[temp[1]] -= x
         heapq.heappush(num, [abs(numbers[temp[1]]), temp[1]])
     else:
-        # steps = (numbers[temp[1]]//x+1)
-        # k-=steps
         numbers[temp[1]] += x
         heapq.heappush(num, [abs(numbers[temp[1]]), temp[1]])
     k -= 1

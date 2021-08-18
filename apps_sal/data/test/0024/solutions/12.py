@@ -8,7 +8,6 @@ def f():
     for i, row in enumerate(board):
         for j, c in enumerate(row):
             if c == '.':
-                # horizonal
                 d1 = d2 = 0
                 b = j - 1
                 while b >= 0:
@@ -27,7 +26,6 @@ def f():
                 if d1 + d2 >= 4:
                     print('YES')
                     return
-                # vertical
                 d1 = d2 = 0
                 a = i - 1
                 while a >= 0:
@@ -46,7 +44,6 @@ def f():
                 if d1 + d2 >= 4:
                     print('YES')
                     return
-                # diagonal
                 d1 = d2 = 0
                 a = i - 1
                 b = j - 1
@@ -69,7 +66,6 @@ def f():
                 if d1 + d2 >= 4:
                     print('YES')
                     return
-                # another diagonal
                 d1 = d2 = 0
                 a = i + 1
                 b = j - 1

@@ -10,7 +10,6 @@ for i in range(x + 1, n):
         break
 for i in range(x - 1, 0, -1):
     if(s[i] != '0'):
-        #	print(i,s[:i],s[i:])
         ans = min(ans, int(s[:i]) + int(s[i:]))
         break
 print(ans)

@@ -30,5 +30,3 @@ for i in range(n):
         tIndexSum[t[i]] = 0
     tIndexSum[t[i]] += t[i]
     s += t[i]
-# print('s=',s)
-# print(tIndex)

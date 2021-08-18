@@ -4,7 +4,6 @@ n, x, y = map(int, input().split())
 
 g = [[] for _ in range(n)]
 
-# make graph
 for i in range(n - 1):
     g[i].append(i + 1)
     g[i + 1].append(i)

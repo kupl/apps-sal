@@ -12,7 +12,6 @@ def solve(B):
         else:
             odds.append(b)
     if len(evens) == 0:
-        # if no evens, we're gucci
         return []
 
     even_gcd = evens[0]

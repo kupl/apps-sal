@@ -1,6 +1,5 @@
 import sys
 from math import *
-#sys.stdin = open('inpA.in', 'r')
 
 n = int(input())
 a = []

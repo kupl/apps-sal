@@ -13,7 +13,7 @@ for x1 in range(10):
         if b[x1][y1] == '.':
             b[x1][y1] = 'X'
         can = False
-        for i in range(10):  # ÅÐ¶ÏÊäÓ®
+        for i in range(10):
             for j in range(10):
                 if j < 6 and b[i][j] == 'X' and b[i][j + 1] == 'X' and b[i][j + 2] == 'X' and b[i][j + 3] == 'X' and b[i][j + 4] == 'X':
                     can = True

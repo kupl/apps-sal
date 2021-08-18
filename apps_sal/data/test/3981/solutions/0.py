@@ -1,7 +1,6 @@
 import sys
 
 
-# > 0 anti-clock, < 0 clockwise, == 0 same line
 def orientation(p1, p2, p3):
     return (p2[0] - p1[0]) * (p3[1] - p1[1]) - (p2[1] - p1[1]) * (p3[0] - p1[0])
 
@@ -32,7 +31,6 @@ def dist_sq(p1, p2):
 
 
 def chull(points):
-    # let 0 element to be smallest, reorder elements
     pi = [x for x in range(len(points))]
     min_y = points[0][1]
     min_x = points[0][0]
@@ -46,14 +44,13 @@ def chull(points):
     pi[min_ind] = 0
     th = [theta(points[pi[0]], points[x]) for x in range(len(points))]
     pi.sort(key=lambda x: th[x])
-    # process equals
     unique = [pi[0], pi[1]]
     for i in range(2, len(pi)):
         if th[pi[i]] != th[unique[-1]]:
             unique.append(pi[i])
         else:
             if dist_sq(points[pi[0]], points[unique[-1]]) < dist_sq(points[pi[0]], points[pi[i]]):
-                unique[-1] = pi[i]  # put max
+                unique[-1] = pi[i]
     pi = unique
     stack = []
     for i in range(min(len(pi), 3)):
@@ -68,11 +65,11 @@ def chull(points):
                 break
             elif o < 0:
                 stack.pop()
-            else:  # ==
+            else:
                 if dist_sq(stack[-2], stack[-1]) < dist_sq(stack[-2], points[pi[i]]):
                     stack.pop()
                 else:
-                    break  # skip i-th point
+                    break
     return stack
 
 

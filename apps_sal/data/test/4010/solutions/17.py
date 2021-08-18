@@ -33,7 +33,6 @@ def solve():
     print('NO')
 
 
-# query_count = 1
 query_count = Read.int()
 while query_count:
     query_count -= 1
