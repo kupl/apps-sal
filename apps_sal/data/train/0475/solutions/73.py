@@ -7,7 +7,6 @@ class Solution:
         init = 0
         for i in range(1, n):
             track.append(track[-1] + nums[i])
-        # print(track)
         for i in range(n - 1):
             for j in range(i + 1, n):
                 allNums.append(track[j] - track[i])

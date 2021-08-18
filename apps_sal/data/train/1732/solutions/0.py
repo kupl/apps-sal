@@ -7,16 +7,16 @@ P_EQ = re.compile("(?P<eq>=)|(?P<coef>[+-]?\d*)(?P<var>[a-zA-Z]*)")
 
 def solve(*equations):
 
-    eqsMap = list(map(parse, equations))                         # Transform each string in a dict {'var': coef}
-    vars = reduce(set.union, (set(e) for e in eqsMap))         # Extract all the variables
-    vars = list(set(vars) - {''}) + ['']                         # Push the "constants" at the end of the list
+    eqsMap = list(map(parse, equations))
+    vars = reduce(set.union, (set(e) for e in eqsMap))
+    vars = list(set(vars) - {''}) + ['']
 
     if len(vars) - 1 > len(equations):
-        return None                 # Not enough equations to solve the system
+        return None
 
-    m = [[eqm[v] for v in vars] for eqm in eqsMap]              # Build the matrix
+    m = [[eqm[v] for v in vars] for eqm in eqsMap]
 
-    return solveMatrix(m, vars)                                  # Solve using Gauss elimination
+    return solveMatrix(m, vars)
 
 
 def parse(eq):
@@ -35,36 +35,36 @@ def parse(eq):
 def solveMatrix(m, vars):
 
     EPS = 1e-10
-    pivots = {}                                                  # dict of the indexes of the pivots (avoid to have to move the raws)
-    toDo = set(range(len(m)))                                  # set with the indexes of all the lines where the pivot will have to be sought for
+    pivots = {}
+    toDo = set(range(len(m)))
 
-    for y in range(len(vars) - 1):                                 # "-1" to avoid the constants
+    for y in range(len(vars) - 1):
 
         _, px = max(((abs(m[x][y]), x) for x in toDo if abs(m[x][y]) > 0), default=(-1, -1))
 
         if px == -1:
-            continue                                    # No pivot found
+            continue
         pivots[px] = y
         toDo.remove(px)
 
         maxP, m[px][y] = m[px][y], 1
-        for j in range(y + 1, len(vars)):                           # Update the line of the current pivot
+        for j in range(y + 1, len(vars)):
             m[px][j] /= maxP
             if abs(m[px][j]) < EPS:
-                m[px][j] = 0                 # Handle floating point errors
+                m[px][j] = 0
 
-        for x in range(0, len(m)):                                # Update all the lines, doing the elimination
+        for x in range(0, len(m)):
             if x == px:
-                continue                                   # Skip the line of the current pivot
+                continue
 
             coef, m[x][y] = m[x][y], 0
-            for j in range(y + 1, len(vars)):                       # Update the line of the current pivot
+            for j in range(y + 1, len(vars)):
                 m[x][j] -= coef * m[px][j]
                 if abs(m[x][j]) < EPS:
-                    m[x][j] = 0               # Handle floating point errors, again...
+                    m[x][j] = 0
 
     solvedDct = {}
-    for x in range(len(m)):                                      # Build the solution dict
+    for x in range(len(m)):
         yP = pivots.get(x, None)
         if yP is None:
             continue
@@ -72,4 +72,4 @@ def solveMatrix(m, vars):
         solvedDct[vars[yP]] = -m[x][-1]
 
     if len(solvedDct) == len(vars) - 1:
-        return solvedDct           # Valid only if all the variables have been used as pivots
+        return solvedDct

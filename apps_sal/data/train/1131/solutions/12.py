@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import Counter
 
 for j in range(int(input())):
