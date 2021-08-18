@@ -15,7 +15,6 @@ while t > 0:
     b.sort()
 
     for i in range(1, len(a)):
-        # print(ll,a[i])
         if a[i][0] == a[i - 1][0] and abs(a[i][1] - a[i - 1][1]) == 1:
             ll -= 2
     for i in range(1, len(b)):

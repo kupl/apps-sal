@@ -10,7 +10,6 @@ class Solution:
                 edges.append((dist(points[i], points[j]), i, j))
         edges.sort()
         cost = 0
-        # print(edges)
         parent = [i for i in range(n)]
         size = [1] * n
 

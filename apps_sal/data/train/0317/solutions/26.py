@@ -2,11 +2,6 @@ class Solution:
     def numPermsDISequence(self, S: str) -> int:
         n = len(S)
         mod = 10**9 + 7
-        # solns[above][below]
-        # if decreasing:
-        # answer = sum solns[above+k][below-k-1]
-        # if increasing:
-        # answer = sum solns[above-k-1][below+k]
 
         solns = [[0] * (n + 2) for _ in range(n + 2)]
         solns[0][0] = 1

@@ -1,13 +1,13 @@
 class Solution:
     def myNext(self, T):
-        next = [-1]  # a next array with first is -1
-        l = len(T)  # the kid str length
-        i, j = 0, -1  # i is last , j is first
+        next = [-1]
+        l = len(T)
+        i, j = 0, -1
         while i < l:
             if j == -1 or T[i] == T[j]:
                 i += 1
                 j += 1
-                next.append(int(j))  # the same str
+                next.append(int(j))
             else:
                 j = next[j]
         return next

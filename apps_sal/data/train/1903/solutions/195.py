@@ -39,5 +39,4 @@ class Solution:
                 ok.add(i)
                 ok.add(j)
                 total += cost
-                #print(total, i, j, usize)
         return total

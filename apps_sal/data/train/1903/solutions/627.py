@@ -31,6 +31,4 @@ class Solution:
         for w, u, v in edges:
             if uf.union(u, v):
                 res += w
-            # if uf.n_sets == 1:
-            #     break
         return res

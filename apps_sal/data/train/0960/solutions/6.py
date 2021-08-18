@@ -1,4 +1,3 @@
-# cook your dish here
 
 for _ in range(int(input())):
     n = int(input())
@@ -8,6 +7,4 @@ for _ in range(int(input())):
             print(bin(c).replace("0b", ""), end=" ")
             c += 1
 
-            # print(i+j,end="")
-            # c+=2
         print()

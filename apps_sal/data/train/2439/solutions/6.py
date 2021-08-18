@@ -36,10 +36,6 @@ class Solution:
             if haystack[i + j] == needle[j]:
                 j += 1
             else:
-                # ababdef   i=0
-                # ababc     j=4
-                # x0012
-                #   ababc   i=2,j=2
                 if nexts[j] > 0:
                     i = i + j - nexts[j]
                     j = nexts[j]

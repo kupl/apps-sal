@@ -17,7 +17,7 @@ class Solution:
         n = len(S)
 
         @lru_cache(None)
-        def dfs(i, j):  # 位置i处数字j结尾 数字j的范围是0-i
+        def dfs(i, j):
             if i == 0:
                 return 1
             elif S[i - 1] == 'D':

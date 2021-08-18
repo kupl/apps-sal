@@ -8,7 +8,7 @@ class Solution:
         r = 0
         visited = set()
         k = defaultdict(lambda: 999999999)
-        k[tuple(points[0])] = 0  # source vertex
+        k[tuple(points[0])] = 0
         for _ in range(len(points)):
             m = float('inf')
             cand = ()
@@ -22,7 +22,6 @@ class Solution:
                 p = tuple(point)
                 if p != cand and p not in visited and dist(cand[0], cand[1], p[0], p[1]) < k[p]:
                     k[p] = dist(cand[0], cand[1], p[0], p[1])
-                    # res += k[p]
         print((k, sum(k.values())))
 
         return sum(k.values())

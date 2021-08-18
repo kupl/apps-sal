@@ -29,7 +29,6 @@ class Solution:
                 edges.append([u, v, abs(points[u][0] - points[v][0]) + abs(points[u][1] - points[v][1])])
 
         def MST():
-            # Kruskals, edges sorted
             dsu = DSU(N)
             ans = 0
             for u, v, w in sorted(edges, key=lambda e: e[2]):

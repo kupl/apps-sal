@@ -8,7 +8,6 @@ for _ in range(int(input())):
         dic[(x, y)] = 1
 
     cnt = 0
-    # print(dic)
     for u in p:
         r1 = u[0]
         r2 = u[1]
@@ -30,8 +29,6 @@ for _ in range(int(input())):
 
         if fo in dic:
             s = s + 1
-
-        # print(s)
 
         re = 4 - s
         cnt = cnt + re

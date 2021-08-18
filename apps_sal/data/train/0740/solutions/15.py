@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 def binarySearch(ar, l, r, x):
     if r >= l:
         mid = (l + r) // 2

@@ -46,12 +46,3 @@ class Solution:
             return 0
         ans = self.find(haystack, needle)
         return ans[0] if ans else -1
-        # for i in range(len(haystack) - len(needle) + 1):
-        #     if haystack[i: i + len(needle)] == needle:
-        #         return i
-        # return -1
-
-        # for i in range(len(haystack) - len(needle) + 1):
-        #     if haystack[i : i + len(needle)] == needle:
-        #         return i
-        # return -1

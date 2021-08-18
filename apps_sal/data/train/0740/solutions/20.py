@@ -1,4 +1,3 @@
-# https://www.codechef.com/APRIL19B/problems/FENCE
 '''
     Author - Subhajit Das
     University of Engineering and Management, Kolkata
@@ -19,7 +18,6 @@ def main():
             field[r][c] = 1
             for dx, dy in moves:
                 nr, nc = r + dx, c + dy
-                #print(f'r: {nr}\tc: {nc}')
                 if(nr < 0 or nr >= n or nc < 0 or nc >= m):
                     ans += 1
                     continue
