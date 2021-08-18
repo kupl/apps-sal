@@ -5,8 +5,6 @@ def count_deaf_rats(town):
     right = replace_rats(right)
     return left.count("L") + right.count("R")
 
-# no clean way to use string replace, step through string 2 chars at a time
-
 
 def replace_rats(rats):
     ret_array = []

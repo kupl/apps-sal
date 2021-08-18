@@ -1,9 +1,6 @@
 from sys import stdin
 from math import ceil, gcd
 
-# Input data
-#stdin = open("input", "r")
-
 
 for _ in range(int(stdin.readline())):
     n = int(stdin.readline())

@@ -1,25 +1,10 @@
-# def find(x,y):
-#     if x==y:
-#         return 0
 
-#     if x > y:
-#       greater = x
-#     else:
-#       greater = y
 
-#     while(True):
-#       if((greater % x == 0) and (greater % y == 0)):
-#           lcm = greater
-#           break
-#       greater += 1
-#     return lcm
 def compute_gcd(x, y):
 
     while(y):
         x, y = y, x % y
     return x
-
-# This function computes LCM
 
 
 def compute_lcm(x, y):
@@ -28,7 +13,6 @@ def compute_lcm(x, y):
     return lcm
 
 
-# cook your dish here
 t = int(input())
 
 

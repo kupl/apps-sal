@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 def input_str(row):
     res = []
     for _ in range(row):
@@ -9,7 +8,6 @@ def input_str(row):
 N = int(input())
 balls = input_str(N)
 balls = sorted([sorted([int(x), int(y)]) for x, y in balls], key=lambda x: x[0])
-#rmin == min, bmax == max
 xmax = max(balls, key=lambda x: x[0])[0]
 xmin = min(balls, key=lambda x: x[0])[0]
 ymax = max(balls, key=lambda x: x[1])[1]
@@ -17,7 +15,6 @@ ymin = min(balls, key=lambda x: x[1])[1]
 res1 = (xmax - xmin) * (ymax - ymin)
 
 maxdiff = max(xmax, ymax) - min(xmin, ymin)
-#rmin == min, rmax == max
 diff = xmax - xmin
 mina = xmax
 

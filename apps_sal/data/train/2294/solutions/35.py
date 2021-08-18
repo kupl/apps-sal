@@ -14,7 +14,6 @@ def main():
     max_y = max(y_list)
     min_y = min(y_list)
 
-    # 左右に分ける解
     ans = (max_x - min_x) * (max_y - min_y)
     if y_list[0] == max_y:
         print(ans)

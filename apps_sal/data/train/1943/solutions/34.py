@@ -27,15 +27,13 @@ class Solution:
             i = intersection(a, b)
             if i:
                 result.append(i)
-            # get rid of interval with the smallest front
             if a[1] < b[1]:
                 A.pop(0)
             elif a[1] > b[1]:
                 B.pop(0)
             else:
-                A.pop(0)  # validate
+                A.pop(0)
 
-        # consolidate adjacent intervals in the result
         i = 1
         while i < len(result):
             u = union(result[i - 1], result[i])

@@ -6,9 +6,3 @@ def sort_time(arr):
         arr.remove(nxt)
         prv = nxt[1]
     return result
-
-
-# more compact but less readable:
-#    while arr:
-#        result.append(arr.pop(next((i for i, p in enumerate(arr) if p[0] >= prv), 0)))
-#        prv = result[-1][1]

@@ -1,4 +1,3 @@
-# Made By Mostafa_Khaled
 bot = True
 n = int(input())
 
@@ -15,5 +14,3 @@ for i in input()[::2]:
         s += k
 
 print(s)
-
-# Made By Mostafa_Khaled
