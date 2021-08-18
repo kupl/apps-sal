@@ -1,7 +1,7 @@
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
 
-        def calculatelen(cnt):  # length calculator
+        def calculatelen(cnt):
             if cnt == 0:
                 return 0
             elif cnt == 1:

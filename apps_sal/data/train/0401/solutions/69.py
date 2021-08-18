@@ -19,10 +19,6 @@ class Solution:
             elif i % 3 == 1:
                 m1.append(i)
 
-        # print(m1)
-        # print(m2)
-        # print(m3)
-
         total = sum(nums)
         if total % 3 == 0:
             return total

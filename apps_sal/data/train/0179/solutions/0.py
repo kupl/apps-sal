@@ -6,14 +6,12 @@ class Solution:
             return 1 + len(str(c)) if c > 1 else 1
 
         @lru_cache(None)
-        def dp(i, k):  # return {head: (len, -head_count)}
+        def dp(i, k):
             if (n - i) <= k:
-                return {}  # remove all
+                return {}
             x, res = s[i], {}
-            # remove
             if k:
                 res = dp(i + 1, k - 1)
-            # keep
             keep = dp(i + 1, k)
             t = [(1 + min((leng for leng, _ in list(keep.values())), default=0), -1)]
             if x in keep:

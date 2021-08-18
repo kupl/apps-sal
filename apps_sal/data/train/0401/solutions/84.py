@@ -12,6 +12,4 @@ class Solution:
 
             dp[i + 1][r] = max(n, dp[i + 1][r])
 
-        # print(dp)
-
         return dp[-1][0]

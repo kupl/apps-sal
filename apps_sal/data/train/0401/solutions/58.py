@@ -12,6 +12,5 @@ class Solution:
                     new_dp[new_i] = max(dp[new_i], dp[i] + v)
 
             dp = new_dp
-#            print(dp)
 
         return dp[0]

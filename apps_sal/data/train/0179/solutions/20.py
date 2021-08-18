@@ -11,7 +11,7 @@ class Solution:
                 return incr + get_length(beg + 1, last_char, n_repeat + 1, quota)
             else:
                 return min(
-                    get_length(beg + 1, last_char, n_repeat, quota - 1),  # delete this char
+                    get_length(beg + 1, last_char, n_repeat, quota - 1),
                     1 + get_length(beg + 1, s[beg], 1, quota)
                 )
         return get_length(0, '', 0, k)

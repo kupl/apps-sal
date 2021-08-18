@@ -4,7 +4,7 @@ class Solution:
         N = len(nums)
 
         @lru_cache(None)
-        def dp(i, p):  # best sumsofar at i
+        def dp(i, p):
             if i == N:
                 return 0 if p == 0 else -float('inf')
 

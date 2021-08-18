@@ -1,5 +1,4 @@
 def stringy(size):
-    # Good Luck!
     st = "1"
     i = 0
     while i < size - 1:

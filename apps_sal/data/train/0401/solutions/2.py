@@ -1,25 +1,15 @@
 
-# 1262. Greatest Sum Divisible by Three
-
-# Explanation: seen[i] means the current maximum possible sum that sum % 3 = i
-# Complexity: Time O(N), Space O(1)
 
 class Solution1:
     def maxSumDivThree(self, nums: List[int]) -> int:
         seen = [0, 0, 0]
         for a in nums:
-            for i in seen[:]:  # 这里必须用 [:] 否则 下一次迭代会使用更新后的值 计算结果不对
+            for i in seen[:]:
                 seen[(i + a) % 3] = max(seen[(i + a) % 3], i + a)
-                # print(a, i, seen)
         return seen[0]
 
-# Divide the whole list into three parts: mod_0, mod_1, mod_2.
-# Think about the sum of the original list, if it mods 3 == 0, then we can just return the sum.
-# If tot_sum % 3 == 1, then we should remove one smallest element from mod_1 or two smallest ones from mod_2.
-# If tot_sum % 3 == 2, then we should remove one smallest element from mod_2 or two smallest ones from mod_1.
 
-
-class Solution:  # （没明白。。）
+class Solution:
     def maxSumDivThree(self, nums: List[int]) -> int:
         mod_1, mod_2, res, remove = [], [], 0, float('inf')
         for i in nums:

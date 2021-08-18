@@ -12,14 +12,12 @@ class Solution:
             return res
 
         MOD = 10**9 + 7
-        # convert list of rectangles to events
         events = []
         for x1, y1, x2, y2 in rectangles:
-            events.append((x1, 0, y1, y2))  # in
-            events.append((x2, 1, y1, y2))  # out
+            events.append((x1, 0, y1, y2))
+            events.append((x2, 1, y1, y2))
         events.sort(key=lambda x: (x[0], x[1]))
 
-        # sweep to calculate area
         intervals = []
         area = 0
         prev_x = 0

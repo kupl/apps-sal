@@ -13,7 +13,7 @@ class Solution:
             if s[i] == p:
                 carry = l in [1, 9, 99]
                 return carry + dp(i + 1, k, p, l + 1)
-            else:  # min(delete s[i], keep s[i])
+            else:
                 return min(dp(i + 1, k - 1, p, l),
                            1 + dp(i + 1, k, s[i], 1))
         return dp(0, k, '', 0)
