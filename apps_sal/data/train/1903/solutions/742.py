@@ -17,12 +17,7 @@ class dsu:
         a = self.find(a)
         b = self.find(b)
         if a != b:
-            # if self.size[a] > self.size[b]:
-            #     temp = a
-            #     a = b
-            #     b = temp
             self.parent[b] = self.parent[a]
-            # self.size[a] = self.size[a] + self.size[b]
 
 
 class Solution:
@@ -40,13 +35,10 @@ class Solution:
         ans = 0
         for i in range(n):
             tree.make_set(i)
-        # print(tree.parent)
-        # print(edges)
         for i in edges:
 
             if tree.find(i[1]) != tree.find(i[2]):
                 done = done + 1
                 ans = ans + i[0]
                 tree.union(i[1], i[2])
-            # print(tree.parent)
         return ans

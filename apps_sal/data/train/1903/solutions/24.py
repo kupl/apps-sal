@@ -13,7 +13,6 @@ class Solution:
             dist, i, j = heapq.heappop(pq)
             if self.find(i, parents) == self.find(j, parents):
                 continue
-            # print(i, j, dist)
             res += dist
             self.union(i, j, parents)
 

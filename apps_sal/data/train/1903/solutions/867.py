@@ -22,7 +22,6 @@ class DSU:
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # try minimum spanning treee
 
         to_visit = set(range(1, len(points)))
         pq = [(abs(points[0][0] - points[x][0]) + abs(points[0][1] - points[x][1]), x) for x in range(1, len(points))]
@@ -38,17 +37,3 @@ class Solution:
                     heapq.heappush(pq, (abs(x - points[to][0]) + abs(y - points[to][1]), nei))
 
         return ans
-
-#     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-#         edges, ans = [], 0
-#         for i in range(len(points)):
-#             for j in range(i+1, len(points)):
-#                 edges.append((abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1]), i, j))
-
-#         edges.sort()
-#         uf = DSU(len(points))
-#         for cost, i, j in edges:
-#             if uf.find(i) != uf.find(j):
-#                 uf.union(i, j)
-#                 ans += cost
-#         return ans

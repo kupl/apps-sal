@@ -30,8 +30,6 @@ class Solution:
             for j in range(i + 1, len(points)):
                 n = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 arr.append((n, (i, j)))
-# print(ans)
-# arr=list(arr)
         arr.sort()
         for x in arr:
             i = x[1][0]

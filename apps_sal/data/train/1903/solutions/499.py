@@ -5,7 +5,7 @@ class UnionFind:
 
     def find(self, i):
         while i != self.parents[i]:
-            self.parents[i] = self.parents[self.parents[i]]  # path halving
+            self.parents[i] = self.parents[self.parents[i]]
             i = self.parents[i]
         return i
 
@@ -16,7 +16,6 @@ class UnionFind:
         if aPar == bPar:
             return False
 
-        # union by size
         if self.size[aPar] > self.size[bPar]:
             self.parents[bPar] = aPar
             self.size[aPar] += self.size[bPar]

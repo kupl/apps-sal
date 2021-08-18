@@ -31,7 +31,6 @@ class Solution:
 
         dsu = DSU(a)
 
-        # [u,v,c]
         edges = []
 
         for u, v in combinations(a, 2):

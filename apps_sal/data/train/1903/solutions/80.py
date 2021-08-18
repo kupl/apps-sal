@@ -26,14 +26,12 @@ class UnionFind:
 
 class Solution:
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # minuim spining tree
         weights = []
         for i in range(len(points) - 1):
             for j in range(i + 1, len(points)):
                 weight = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 heappush(weights, (weight, i, j))
 
-        # print(weights)
         uf = UnionFind(len(points))
         res = 0
 

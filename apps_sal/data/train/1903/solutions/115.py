@@ -7,7 +7,6 @@ class Solution:
                 (cost, starting_vertex, to)
                 for to, cost in list(graph[starting_vertex].items())
             ]
-            # print(edges)
             heapq.heapify(edges)
 
             while edges:
@@ -31,9 +30,6 @@ class Solution:
 
         mst = dict(buildmst(graph, (points[0][0], points[0][1])))
         ans = 0
-        # print(mst)
-        # for k, v in mst.items():
-        #     print(k, v)
 
         for k, v in list(mst.items()):
             for p in v:

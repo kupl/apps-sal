@@ -21,5 +21,4 @@ class Solution:
                 if d[nex] > graph[node][nex]:
                     d[nex] = graph[node][nex]
                     heapq.heappush(heap, (d[nex], nex))
-            # if cnt >= n: break
         return ans

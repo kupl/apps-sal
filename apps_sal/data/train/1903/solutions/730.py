@@ -27,17 +27,14 @@ class Solution:
         def manhatan(x1, y1, x2, y2): return (x1 - x2 if x1 > x2 else x2 - x1) + (y1 - y2 if y1 > y2 else y2 - y1)
         edges = [(manhatan(points[i][0], points[i][1], points[j][0], points[j][1]), i, j) for i in range(len(points)) for j in range(i + 1, len(points))]
         heapify(edges)
-        # print(edges)
         uf = Unifind(len(points))
         count = 0
         cost = 0
         while count < len(points) - 1:
             c, i, j = heappop(edges)
-            # if edge adds a cycle(both ends are already in)
             if uf.find(i) != uf.find(j):
                 cost += c
                 count += 1
                 uf.union(i, j)
 
-        # print(uf.arr)
         return cost

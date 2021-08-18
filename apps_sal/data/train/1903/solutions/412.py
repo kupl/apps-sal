@@ -37,29 +37,21 @@ class Graph:
         parent = []
         rank = []
 
-        # Create V subsets with single elements
         for node in range(self.V):
             parent.append(node)
             rank.append(0)
 
-        # Number of edges to be taken is equal to V-1
         while e < self.V - 1:
 
-            # Step 2: Pick the smallest edge and increment
-            # the index for next iteration
             u, v, w = self.graph[i]
             i = i + 1
             x = self.find(parent, u)
             y = self.find(parent, v)
 
-            # If including this edge does't cause cycle,
-            # include it in result and increment the index
-            # of result for next edge
             if x != y:
                 e = e + 1
                 result.append([u, v, w])
                 self.union(parent, rank, x, y)
-            # Else discard the edge
 
         return result
 

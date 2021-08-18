@@ -20,7 +20,7 @@ class Solution:
                 d[j] = min(d[j], dist(points[cur], points[j]))
 
             min_d, nxt = min((d, j) for j, d in enumerate(d))
-            d[nxt] = float('inf')  # don't count distance with self
+            d[nxt] = float('inf')
             cur = nxt
             ans += min_d
 

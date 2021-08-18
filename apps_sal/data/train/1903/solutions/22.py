@@ -6,14 +6,14 @@ class UnionFind:
 
     def find(self, p):
         if p != self.parent[p]:
-            self.parent[p] = self.find(self.parent[p])  # path compression
+            self.parent[p] = self.find(self.parent[p])
         return self.parent[p]
 
     def union(self, p, q):
         prt = self.find(p)
         qrt = self.find(q)
         if prt == qrt:
-            return False  # already connected
+            return False
         if self.rank[prt] > self.rank[qrt]:
             prt, qrt = qrt, prt
         self.parent[prt] = qrt
@@ -26,7 +26,7 @@ class Solution:
         n = len(points)
         uf = UnionFind(n)
 
-        hp = []  # min heap
+        hp = []
 
         for i in range(n):
             x, y = points[i]
