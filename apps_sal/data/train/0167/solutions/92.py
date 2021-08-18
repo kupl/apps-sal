@@ -1,12 +1,8 @@
-# K and N is suitation
-# choice: need to choose drop egg on which floor
-# use binary search to optimize complexity
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
         memo = {}
 
         def dp(K: int, N: int):
-            # base case
             if N == 0:
                 return 0
             if K == 1:

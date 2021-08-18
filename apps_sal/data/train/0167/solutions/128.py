@@ -1,6 +1,5 @@
 class Solution:
     def superEggDrop(self, K: int, N: int) -> int:
-        # dp[M][K]means that, given K eggs and M moves, what is the maximum number of floor that we can check.
         dp = [[0] * (K + 1) for i in range(N + 1)]
         for m in range(1, N + 1):
             for k in range(1, K + 1):

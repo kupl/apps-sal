@@ -13,5 +13,4 @@ class Solution:
                 while x < n + 1 and dp[k][n - x] > dp[k - 1][x - 1]:
                     x += 1
                 dp[k][n] = 1 + dp[k - 1][x - 1]
-        # print(dp)
         return dp[-1][-1]

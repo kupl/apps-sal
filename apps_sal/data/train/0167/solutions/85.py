@@ -5,7 +5,6 @@ class Solution:
             r = 1
             for i in range(1, K + 1):
                 r *= (x - i + 1) / i
-                #r //= i
                 ans += r
                 if ans >= N:
                     break

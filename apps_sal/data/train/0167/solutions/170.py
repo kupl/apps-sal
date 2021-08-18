@@ -13,9 +13,7 @@ class Solution:
                 r = N
                 while l + 1 < r:
                     mid = (l + r) // 2
-                    # if egg breaks at midpoint, try egg drop for lower floors
                     die = helper(K - 1, mid - 1)
-                    # if egg survives, try egg drop for higher floors
                     live = helper(K, N - mid)
 
                     if die < live:

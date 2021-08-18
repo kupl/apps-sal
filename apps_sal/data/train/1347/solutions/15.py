@@ -3,7 +3,6 @@ n, m = list(map(int, input().split()))
 x = list(map(int, input().split()))
 arr = []
 dic = {}
-# m=[]
 two = []
 for i in range(m):
     y = list(map(str, input().split()))
@@ -32,4 +31,3 @@ for i in arr:
     else:
      dic[a]=[y[2]]
      flag=1'''
-# if flag==0:

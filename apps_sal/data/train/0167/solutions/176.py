@@ -10,7 +10,6 @@ class Solution:
                     ans = n
                 else:
                     lo, hi = 1, n
-                    # keep a gap of 2 X values to manually check later
                     while lo + 1 < hi:
                         x = (lo + hi) // 2
                         t1 = dp(k - 1, x - 1)

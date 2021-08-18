@@ -18,7 +18,3 @@ class Solution:
                 if matrix[i][K - 1] >= N:
                     return i + 1
         print(matrix)
-
-#         for m in range(N):
-#             if matrix[m][K-1]>=N:
-#                 return m+1
