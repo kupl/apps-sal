@@ -22,7 +22,6 @@ for i in range(0, len(x) - 1):
     ans = max(r, ans)
 
 ans = max(ans, ldist(x[0], x[len(x) - 1]))
-# print(ldist(x[0], x[len(x) - 1]))
 
 h = ans // 60
 m = ans - (h * 60)

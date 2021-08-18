@@ -8,7 +8,6 @@ refs = read_ints()
 
 NO_REF = -1
 
-# To match indexes in list
 refs = [i - 1 for i in refs]
 
 read = [0] * n_messages

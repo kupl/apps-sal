@@ -1,6 +1,5 @@
 import sys
 f = sys.stdin
-#f = open("input.txt", "r")
 n, k = map(int, f.readline().strip().split())
 a = [int(i) for i in f.readline().strip().split()]
 num = [True] * n * k

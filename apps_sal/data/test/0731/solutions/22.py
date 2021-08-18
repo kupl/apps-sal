@@ -18,7 +18,6 @@ def f(a, b):
 
 w, m, k = map(int, input().split())
 w += fhelp(m - 1)
-# print(fhelp(10))
 summ = 0
 power = 1
 count = 9

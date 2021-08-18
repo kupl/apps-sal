@@ -1,4 +1,3 @@
-# ABC139 B
 
 import math
 A, B = map(int, input().split())

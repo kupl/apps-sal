@@ -1,5 +1,4 @@
 k = int(input())
-#v = list('onetwonetwooneooonetwooo')
 
 
 def pandora(v):
@@ -26,7 +25,6 @@ def pandora(v):
                 q += 1
                 z.append(i - 1 + 1)
                 v[i - 1] = 'q'
-            # print(v[i-3]+v[i-2]+v[i-1]+v[i])
     print(q)
     print(' '.join(list([str(x) for x in z])))
 

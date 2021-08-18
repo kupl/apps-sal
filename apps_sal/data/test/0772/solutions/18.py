@@ -29,12 +29,7 @@ for d in range(3):
             change(k, d + 1)
         if d != 0:
             change(k, d - 1)
-        # if d!=1:
-            # change(k,4)
         change(k, d + 3)
-        # if d==1:
-        # change(k,d+2)
-        # change(k,d+4)
 
 for d in range(3, 6):
     if j[d] % 2 != 0 and j[d] != 0:
@@ -46,17 +41,6 @@ for d in range(3, 6):
             change(k, d - 1)
         change(k, d + 3)
         change(k, d - 3)
-        # if d==4:
-        # change(k,d+2)
-        # change(k,d-4)
-        # change(k,d+4)
-        # change(k,d-2)
-        # if d==3:
-        # change(k,d+4)
-        # change(k,d-2)
-        # if d==5:
-        # change(k,d-4)
-        # change(k,d+2)
 
 for d in range(6, 9):
     if j[d] % 2 != 0 and j[d] != 0:
@@ -65,12 +49,7 @@ for d in range(6, 9):
             change(k, d + 1)
         if d != 6:
             change(k, d - 1)
-        # if d!=7:
-            # change(k,4)
         change(k, d - 3)
-        # if d==7:
-        # change(k,d-2)
-        # change(k,d-4)
 S0 = str(k[0])
 S1 = str(k[1])
 S2 = str(k[2])

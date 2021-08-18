@@ -1,7 +1,3 @@
-# Contest No.: 645
-# Problem No.: A
-# Solver:      JEMINI
-# Date:        20200526
 
 import sys
 import heapq

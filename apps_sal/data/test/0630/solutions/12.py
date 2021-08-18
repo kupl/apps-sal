@@ -9,8 +9,6 @@ arr_d_right = [0] * 100005
 
 
 def count(i, k, n):
-    # total_count = 0
-    # while True:
     if i - k > 0:
         left_ind = i - k
     else:
@@ -21,14 +19,10 @@ def count(i, k, n):
     else:
         right_ind = n - 1
 
-    # print(arr_d[:n])
-    # print(arr_d_right[:n])
-    # print('>>>>>')
     next_i = arr[i] - 1
 
     if next_i != -1:
         prev_val = arr_d[next_i]
-        #print(left_ind, right_ind)
         if left_ind <= arr_d_right[next_i]:
             left_ind = arr_d_right[next_i] + 1
     else:

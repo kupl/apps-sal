@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
 
 s = input()
 if (len(s) % 2 == 0) and (s[0] == s[-1]):

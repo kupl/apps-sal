@@ -1,6 +1,5 @@
 for q in range(int(input())):
     s = input()
-    #dell = [False] * len(s)
     ans = 0
     i = 0
     j = 0

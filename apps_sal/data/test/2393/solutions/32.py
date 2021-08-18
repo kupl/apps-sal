@@ -36,7 +36,6 @@ for i in range(t):
                 one = 0
                 if st == 'o':
                     one = 1
-        # print(one,twone,j,st,a)
     if twone == 5:
         a.append(j - 1)
     elif twone >= 3:

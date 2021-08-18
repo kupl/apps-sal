@@ -1,6 +1,6 @@
 S = input()
 
-if S[0] == S[-1]:  # 奇数手の負け
+if S[0] == S[-1]:
     if len(S) % 2 == 1:
         print('Second')
     else:

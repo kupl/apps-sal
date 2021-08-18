@@ -4,8 +4,6 @@ def main():
 def __starting_point():
     main()
 '''
-# 372
-# 1
 '''
 def main():
     from sys import stdin,stdout
@@ -21,7 +19,6 @@ def main():
 def __starting_point():
     main()
 '''
-# 2
 '''
 def main():
     from sys import stdin,stdout
@@ -65,8 +62,6 @@ def main():
 def __starting_point():
     main()
 '''
-# 373
-# 1
 
 
 def main():

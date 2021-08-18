@@ -19,11 +19,9 @@ def __starting_point():
 
     beta = 90 / n
     beta_radian = getRadian(beta)
-    #print( beta_radian )
 
     gamma = 180 / n
     gamma_radian = getRadian(gamma)
-    #print( gamma_radian )
 
     S = r * r * Decimal(sin(beta_radian)) * Decimal(sin(gamma_radian)) / Decimal(sin(beta_radian + gamma_radian))
     print(n * S)

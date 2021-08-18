@@ -16,5 +16,4 @@ a.sort()
 for i in a[::-1]:
     for j in fac(i):
         m = min(m, s + a[0] * j + i // j - a[0] - i)
-        # print(m,i,j)
 print(m)
