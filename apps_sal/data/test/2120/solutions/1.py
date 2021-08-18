@@ -1,4 +1,3 @@
-#! /usr/bin/env python
 
 n, m = [int(x) for x in input().split()]
 v = [int(x) for x in input().split()]

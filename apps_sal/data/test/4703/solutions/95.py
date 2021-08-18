@@ -12,7 +12,6 @@ for i in range(2 ** (n - 1)):
             obj.append(j)
         else:
             obj.append(-1)
-    # print(obj)
     s = ''
     s += L[0]
     for j in range(len(obj)):
@@ -22,7 +21,6 @@ for i in range(2 ** (n - 1)):
         else:
             s += '+'
             s += L[j + 1]
-    # print(s)
     idx = 0
     now = 0
 

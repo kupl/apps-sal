@@ -1,4 +1,3 @@
-#! usr/bin/env python3
 year = 0
 x = input()
 groups = input().split(" ")

@@ -1,5 +1,3 @@
-# エラトステネスの篩
-#############################################################
 def get_sieve_of_eratosthenes(n):
     if not isinstance(n, int):
         raise TypeError('n is int type.')
@@ -14,7 +12,6 @@ def get_sieve_of_eratosthenes(n):
             return prime + data
         prime.append(p)
         data = [e for e in data if e % p != 0]
-#############################################################
 
 
 primes = set(get_sieve_of_eratosthenes(10**5))

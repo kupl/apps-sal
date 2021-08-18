@@ -6,7 +6,7 @@ L, R = [list(i) for i in zip(*LR)]
 
 N = 100000
 
-A = []  # 素数なら1,素数でなければ0
+A = []
 for i in range(N + 1):
     A.append(1)
 
@@ -24,14 +24,14 @@ while i <= math.sqrt(N):
         j += 1
     i += 1
 
-S = []  # 「2017に似た数」なら1,「2017に似た数」でなければ0
+S = []
 for i in range(N + 1):
     S.append(0)
 for x in range(1, N, 2):
     if A[x] == 1 and A[(x + 1) // 2] == 1:
         S[x] = 1
 
-T = [0]  # Sの累積和
+T = [0]
 for y in range(N + 1):
     T.append(T[y] + S[y])
 del T[0]

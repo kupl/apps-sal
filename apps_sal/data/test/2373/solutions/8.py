@@ -11,5 +11,4 @@ for i in range(n):
         else:
             cnt += 1
             tmp = [i + 1, p[i]]
-#    print(p[i],tmp,cnt)
 print(cnt)

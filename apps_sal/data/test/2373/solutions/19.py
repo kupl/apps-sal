@@ -13,5 +13,4 @@ for i in range(1, n + 1):
             p[i] = p[i - 1]
             p[i - 1] = tmp
             ans += 1
-# print(p[1:])
 print(ans)

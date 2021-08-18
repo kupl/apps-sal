@@ -1,4 +1,3 @@
-# bouncipie
 def readint():
     return [int(e) for e in input().split()]
 

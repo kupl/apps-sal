@@ -8,9 +8,6 @@ Language: Python 3.3.4
 
 class IOHandlerObject(object):
     def getInput(self, mode=2):
-        # 0: String
-        # 1: List of strings
-        # 2: List of integers
         inputs = input().strip()
         if mode == 0:
             return inputs
@@ -29,7 +26,6 @@ IOHandler = IOHandlerObject()
 g = IOHandler.getInput
 w = IOHandler.writeOutput
 
-############################## SOLUTION ##############################
 n, m = g()
 v = g()
 sm = 0

@@ -10,7 +10,6 @@ def main():
     p_table = makePtable(10**5)
     p_set = set(p_table)
     Like2017 = [p for p in p_table if (p + 1) // 2 in p_set]
-    # データベースを累積和で作成
     database = np.array([0] * (10**5 + 1))
     for i in Like2017:
         database[i] = 1

@@ -1,4 +1,3 @@
-# n-1箇所に+をいれるかいれないかなのでbit全探索が可能
 s = list(input())
 ans = 0
 for bit in range(1 << len(s) - 1):

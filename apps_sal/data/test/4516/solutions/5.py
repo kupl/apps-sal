@@ -1,4 +1,3 @@
-# print(sum(map(lambda x: len(str(x).strip("47")) == 0, range(int(input()) + 1))))
 
 n, m = map(int, input().split())
 adj = [0 for _ in range(n + 1)]

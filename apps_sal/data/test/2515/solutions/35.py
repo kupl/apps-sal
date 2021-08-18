@@ -8,11 +8,9 @@ def using_sqrt(limit):
     for k in range(2, limit + 1):
         factor = 0
 
-        # 2以外の偶数は素数ではないので無視する
         if k % 2 == 0 and k != 2:
             continue
 
-        # 繰り返しの上限を対象の平方根にする
         for divisor in range(2, math.floor(math.sqrt(k)) + 1):
             if k % divisor == 0:
                 factor += 1

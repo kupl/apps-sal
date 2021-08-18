@@ -18,16 +18,12 @@ for i in range(2, ceil(sqrt(n)) + 1):
 hurui = [bool(i) for i in hurui]
 poi = [False] * (n + 1)
 for i in range(n + 1):
-    # print(i)
     poi[i] = (i % 2 == 1 and hurui[i] and hurui[(i + 1) // 2])
 poi[1] = False
-# print(poi)
 sa = [0]
 for i in range(n + 1):
     sa.append(sa[i] + poi[i])
-# print(sa[:10])
 
-# print(poi[2017])
 
 q = int(input())
 lr = [tuple(map(int, input().split())) for i in range(q)]

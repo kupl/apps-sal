@@ -25,7 +25,6 @@ dpsum = [0 for _ in range(10**5 + 5)]
 
 for i in range(3, 10**5 + 1, 2):
     if is_prime(i) and is_prime((i + 1) // 2):
-        # dp[i] = 1
         dpsum[i] = dpsum[i - 2] + 1
     else:
         dpsum[i] = dpsum[i - 2]
