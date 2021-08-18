@@ -2,7 +2,7 @@ n = int(input())
 C = [int(i) for i in input().split()]
 
 INF = 5000
-DP = [[[0] * (2) for i in range(n)] for j in range(2)]  # [width][left][L/R]
+DP = [[[0] * (2) for i in range(n)] for j in range(2)]
 
 for i in range(n - 1):
     for j in range(n - i - 1):

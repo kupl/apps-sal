@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 odd = {0: 1}
 even = {0: 1, 1: 3}
 M = 10**9 + 7

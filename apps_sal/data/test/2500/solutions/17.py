@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 N = int(input())
 
 MOD = 1000000007

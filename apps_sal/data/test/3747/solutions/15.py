@@ -5,7 +5,6 @@ from collections import Counter
 def main():
     from sys import stdin
     lines = deque(line.strip() for line in stdin.readlines())
-    # lines will now contain all of the input's lines in a list
     counts = Counter(lines[0])
     bulbasaur = Counter("Bulbasaur")
     minCount = len(lines[0])

@@ -17,7 +17,7 @@ def all_primes(n):
     return res
 
 
-def count_pow_nums(n, p):  # don't count 1
+def count_pow_nums(n, p):
     top = int(pow(n, 1.0 / p))
     if pow(top + 2, p) <= n:
         return top + 1

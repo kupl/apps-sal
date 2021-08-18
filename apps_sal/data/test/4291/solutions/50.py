@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
 
-# import
-#import math
-#import numpy as np
 N, Q = list(map(int, input().split()))
 S = input()
 lr = [list(map(int, input().split())) for _ in range(Q)]

@@ -3,8 +3,6 @@ def solve():
     a = list(map(int, input().split()))
     b = list(map(int, list(input())))
 
-    # print(A, B)
-
     LMIN = -10**9
     LMAX = 10**9
     RMIN = -10**9
@@ -22,10 +20,6 @@ def solve():
                 RMAX = min(RMAX, min(a[i], a[i - 1], a[i - 2], a[i - 3], a[i - 4]) - 1)
         else:
             pass
-
-    # print(LMIN, LMAX, RMIN, RMAX)
-
-    # l = (LMIN + LMAX)//2
 
     print(LMIN, RMAX)
 

@@ -11,7 +11,6 @@ x = A[:k]
 flag = 0
 
 for i in range(0, len(A), k):
-    # print(int(A[i:i+k]))
     if A[i:i + k] > x:
         flag = 1
         break

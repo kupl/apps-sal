@@ -6,10 +6,8 @@ pairs = set()
 
 for x in X:
     if (x - 1) in fallen:
-        #pairs.add([x-1, x])
         pairs.add((x - 1) * (n + 1) + x)
     if (x + 1) in fallen:
-        #pairs.add([x+1, x])
         pairs.add((x + 1) * (n + 1) + x)
     fallen.add(x)
 

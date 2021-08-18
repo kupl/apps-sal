@@ -1,5 +1,5 @@
 n = int(input())
-s = input() + '#'
+s = input() + '
 
 res = 0
 p = 0

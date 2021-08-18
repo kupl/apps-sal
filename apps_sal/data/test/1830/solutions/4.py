@@ -10,7 +10,6 @@ for i in range(m):
 
     c1 = len(c)
     r1 = len(r)
-    #print(c1, r1)
 
     print((n * n) - (c1 * n + ((n - c1) * r1)), end=" ")
 

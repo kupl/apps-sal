@@ -15,5 +15,4 @@ for i in range(l):
                 dp[i + 1][lj] += dp[i][j]
                 dp[i + 1][lj] %= MOD
 
-# print(dp)
 print((sum(dp[l]) % MOD))

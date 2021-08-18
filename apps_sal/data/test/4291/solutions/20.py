@@ -17,7 +17,6 @@ for i in range(0, N):
         cnt[i + 1] = cnt[i]
         wasA = False
 
-# print(cnt)
 
 for i in range(0, Q):
     l, r = map(int, input().split())

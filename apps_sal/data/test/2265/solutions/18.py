@@ -2,7 +2,6 @@ from sys import stdin
 
 
 def solve():
-    #stdin = open("C.txt")
 
     a = stdin.readline().strip()
     b = stdin.readline().strip()

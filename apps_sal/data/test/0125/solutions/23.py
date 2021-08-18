@@ -1,7 +1,3 @@
-# left, strait, right, pedastrian
-#   3
-# 4     2
-#   1
 def check_if_safe(curr_part, left_part, right_part, opposite_part):
     curr_left, curr_straight, curr_right, curr_pedastrian = curr_part
     if curr_pedastrian == 0:

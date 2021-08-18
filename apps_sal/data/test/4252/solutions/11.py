@@ -1,5 +1,3 @@
-# ANSHUL GAUTAM
-# IIIT-D
 
 
 n = int(input())

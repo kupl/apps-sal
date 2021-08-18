@@ -24,8 +24,6 @@ for i in range(aim, n):
         right[sumr] = 0
     right[sumr] += 1
 
-# print(left)
-# print(right)
 
 ans = 0
 for i in left:
