@@ -4,7 +4,6 @@ for _ in range(int(input())):
     li.sort()
     dli = dict()
     modi = 0
-    # 2*n optimiztion
     for i in li:
         if i not in dli:
             dli[i] = li.count(i)

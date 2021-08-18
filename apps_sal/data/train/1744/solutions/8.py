@@ -1,4 +1,3 @@
-# I admit, this is from Dijkstra's paper.
 def fusc(n):
     a, b = 1, 0
     while n > 0:

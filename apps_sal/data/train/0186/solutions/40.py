@@ -11,8 +11,6 @@ class Solution:
                 dp[i] = str(d[i])
             except:
                 pass
-        # print(d)
-        # print(cost)
         for i in range(1, target + 1):
             for j in cost:
                 if i - j > 0:

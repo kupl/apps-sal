@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     k = (2 * n + 1) - 1

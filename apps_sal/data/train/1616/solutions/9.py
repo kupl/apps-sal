@@ -65,5 +65,4 @@ def parseMillions(s: str):
 
 
 def parse_int(s: str):
-    #
     return parseMillions(s.replace(" and ", " "))

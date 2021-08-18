@@ -8,7 +8,6 @@ class Solution:
             for index, value in enumerate(p):
                 if value == query:
                     result.append(index)
-                    # p[0] = value
 
                     depCounter = index
                     while depCounter > 0:

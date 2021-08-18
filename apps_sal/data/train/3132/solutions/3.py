@@ -1,6 +1,5 @@
 from itertools import chain, zip_longest
 
-# Credit to falsetru for the sentinel
 sentinel = object()
 
 

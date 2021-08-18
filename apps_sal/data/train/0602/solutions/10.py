@@ -1,4 +1,3 @@
-# cook your dish here
 s = input().strip()
 
 s_arr = s.split()

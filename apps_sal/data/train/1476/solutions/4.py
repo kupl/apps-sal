@@ -1,4 +1,3 @@
-# cook your dish here
 MOD = 1000000007
 
 fact_mods = [0] * (501)

@@ -23,7 +23,6 @@ class Linked:
             return 0
         cur = self.head
         i = 0
-        # print(val)
         while cur.val != val:
             prev = cur
             cur = cur.next
@@ -37,10 +36,8 @@ class Linked:
 class Solution:
     def processQueries(self, queries: List[int], m: int) -> List[int]:
         linked = Linked(m)
-        # linked.print_me()
 
         result = []
         for num in queries:
             result.append(linked.move_to_front(num))
-            # linked.print_me()
         return result

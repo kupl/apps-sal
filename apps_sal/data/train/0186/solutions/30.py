@@ -1,4 +1,3 @@
-# 1449. From Largest Integer With Digits That Add up to Target
 
 def prune(costs):
     ans = []
@@ -16,7 +15,6 @@ def find_longest_combos(costs, start, prefix, left, max_yets):
             max_yets[0] = len(prefix)
             yield prefix[:]
     else:
-        # judge if possible to find as long
         theoretical_max_length = len(prefix) + left // costs[start]
         if theoretical_max_length < max_yets[0]:
             return
