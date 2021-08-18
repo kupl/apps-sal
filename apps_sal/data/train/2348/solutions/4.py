@@ -39,7 +39,6 @@ def main():
             if a < b:
                 ans += 1
         else:
-            # a > b
             for k in range(ln + 1)[::-1]:
                 if dpl[k][a] > b:
                     a = dpl[k][a]

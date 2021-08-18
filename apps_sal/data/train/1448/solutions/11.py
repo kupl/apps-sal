@@ -10,6 +10,5 @@ while t > 0:
             count = 0
         s = s + d
         count += 1
-        # print(s)
 
     print(s)

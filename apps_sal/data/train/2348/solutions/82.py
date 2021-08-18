@@ -22,7 +22,6 @@ for j in range(len(e[i]) - 1):
     for i in range(N):
         x = e[i][j]
         e[i][j + 1] = e[x][j]
-# print(e)
 
 
 def doubling(u, v):

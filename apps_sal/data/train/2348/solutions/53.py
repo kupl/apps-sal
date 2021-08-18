@@ -35,7 +35,6 @@ for i in range(m - 1):
 
 
 def hoge(x, y):
-    # xからk個上の頂点がy以上になる最小のkを求める
     k = 0
     for i in range(m)[::-1]:
         if 0 <= par[i][x] < y:

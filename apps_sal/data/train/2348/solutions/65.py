@@ -1,5 +1,3 @@
-# coding: utf-8
-# Your code here!
 from bisect import bisect_left, bisect_right
 import sys
 read = sys.stdin.read
@@ -23,7 +21,6 @@ for i in range(M):
     RR = [R[-1][R[-1][i]] for i in range(n)]
     R.append(RR)
 
-#for i in R: print(i)
 
 mp = iter(ab)
 for a, b in zip(mp, mp):

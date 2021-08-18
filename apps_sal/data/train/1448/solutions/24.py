@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     a, d, k, n, inc = map(int, input().split())

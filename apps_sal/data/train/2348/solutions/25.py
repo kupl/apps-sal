@@ -19,15 +19,13 @@ for i in range(1, M):
     dbp = doub[i - 1]
     for l in range(N):
         db[l] = dbp[dbp[l]]
-#print(*doub, sep="\n")
 
 
-def db_query(a, b):  # aからbへ行く時の回数
+def db_query(a, b):
     ans = 0
     tmp = a
     d = N.bit_length()
     while d >= 0:
-        #print(a,b, d,ans,tmp,doub[d][tmp])
         if doub[d][tmp] < b:
             ans += pow(2, d)
             tmp = doub[d][tmp]

@@ -36,14 +36,11 @@ def examE():
             if a >= b:
                 return res
             c = max(0, bisect.bisect_left(dp[a], b) - 1)
-            # 最低かかる2**?の日数
             a = dp[a][c]
-            # そこまで行く
             res += 2 ** c
     for _ in range(Q):
         a, b = list(map(int, input().split()))
         print((fast_day(a - 1, b - 1)))
-#    print(dp)
 
 
 def I(): return int(sys.stdin.readline())

@@ -1,4 +1,3 @@
-# seishin.py
 N = int(input())
 *X, = map(int, input().split())
 L = int(input())

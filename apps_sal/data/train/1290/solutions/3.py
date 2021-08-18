@@ -1,4 +1,3 @@
-# cook your dish here
 n = input()
 if(len(n) < 4):
     print(str(len(n)))

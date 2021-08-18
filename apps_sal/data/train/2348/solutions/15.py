@@ -1,6 +1,6 @@
 from bisect import bisect_left, bisect
 import sys
-sys.setrecursionlimit(10 ** 6)  # 変更
+sys.setrecursionlimit(10 ** 6)
 
 n = int(input())
 x = list(map(int, input().split()))
